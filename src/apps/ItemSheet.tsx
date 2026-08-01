@@ -1,0 +1,138 @@
+import { useMemo, useState } from 'react'
+import type { Brand, MenuItem } from '../data/brands'
+import { money, useCart } from '../store/cart'
+import type { CartOption } from '../store/cart'
+
+/**
+ * Bottom sheet for one menu item. Required option groups block "Add" until
+ * chosen, the same way every real ordering flow does it — otherwise the kitchen
+ * gets a ticket that says "wings" and nothing else.
+ */
+
+export function ItemSheet({
+  brand,
+  item,
+  onClose,
+}: {
+  brand: Brand
+  item: MenuItem
+  onClose: () => void
+}) {
+  const cart = useCart()
+  const [qty, setQty] = useState(1)
+  const [note, setNote] = useState('')
+  const [picked, setPicked] = useState<Record<string, string[]>>({})
+  const [closing, setClosing] = useState(false)
+
+  const groups = item.options ?? []
+
+  const toggle = (groupId: string, choiceId: string, max: number) => {
+    setPicked((p) => {
+      const cur = p[groupId] ?? []
+      if (cur.includes(choiceId)) return { ...p, [groupId]: cur.filter((c) => c !== choiceId) }
+      const next = max === 1 ? [choiceId] : [...cur, choiceId].slice(-max)
+      return { ...p, [groupId]: next }
+    })
+  }
+
+  const chosen = useMemo<CartOption[]>(() => {
+    const out: CartOption[] = []
+    for (const g of groups) {
+      for (const id of picked[g.id] ?? []) {
+        const c = g.choices.find((x) => x.id === id)
+        if (c) out.push({ groupId: g.id, choiceId: c.id, name: c.name, price: c.price })
+      }
+    }
+    return out
+  }, [groups, picked])
+
+  const missing = groups.filter((g) => g.required && (picked[g.id] ?? []).length === 0)
+  const unit = item.price + chosen.reduce((s, o) => s + o.price, 0)
+
+  const dismiss = () => {
+    setClosing(true)
+    window.setTimeout(onClose, 260)
+  }
+
+  const add = () => {
+    if (missing.length > 0) return
+    cart.add({
+      brandId: brand.id,
+      itemId: item.id,
+      name: item.name,
+      unitPrice: item.price,
+      qty,
+      options: chosen,
+      note: note.trim() || undefined,
+    })
+    dismiss()
+  }
+
+  return (
+    <div className={`sheet-layer${closing ? ' is-closing' : ''}`}>
+      <div className="sheet-scrim" onClick={dismiss} />
+      <div className="sheet">
+        <div className="sheet-grabber" onClick={dismiss} />
+        <div className="sheet-scroll">
+          <h2 className="sheet-title">{item.name}</h2>
+          <p className="sheet-desc">{item.desc}</p>
+          <p className="sheet-price">{money(item.price)}</p>
+
+          {groups.map((g) => (
+            <section className="opt-group" key={g.id}>
+              <div className="opt-head">
+                <h3>{g.name}</h3>
+                <span className={g.required ? 'opt-req' : 'opt-opt'}>
+                  {g.required ? 'Required' : `Optional${g.max && g.max > 1 ? ` · up to ${g.max}` : ''}`}
+                </span>
+              </div>
+              {g.choices.map((c) => {
+                const on = (picked[g.id] ?? []).includes(c.id)
+                return (
+                  <button
+                    key={c.id}
+                    className={`opt-row${on ? ' is-on' : ''}`}
+                    onClick={() => toggle(g.id, c.id, g.max ?? 1)}
+                  >
+                    <span className={`opt-mark${(g.max ?? 1) === 1 ? ' is-radio' : ''}`} />
+                    <span className="opt-name">{c.name}</span>
+                    {c.price > 0 && <span className="opt-price">+{money(c.price)}</span>}
+                  </button>
+                )
+              })}
+            </section>
+          ))}
+
+          <section className="opt-group">
+            <div className="opt-head">
+              <h3>Special instructions</h3>
+              <span className="opt-opt">Optional</span>
+            </div>
+            <textarea
+              className="sheet-note"
+              rows={2}
+              placeholder="Allergies, no onion, extra sauce…"
+              value={note}
+              onChange={(e) => setNote(e.target.value)}
+            />
+          </section>
+        </div>
+
+        <div className="sheet-foot">
+          <div className="qty">
+            <button onClick={() => setQty((q) => Math.max(1, q - 1))} aria-label="Decrease">
+              −
+            </button>
+            <span>{qty}</span>
+            <button onClick={() => setQty((q) => Math.min(20, q + 1))} aria-label="Increase">
+              +
+            </button>
+          </div>
+          <button className="btn-primary" onClick={add} disabled={missing.length > 0}>
+            {missing.length > 0 ? `Choose ${missing[0].name.toLowerCase()}` : `Add · ${money(unit * qty)}`}
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
