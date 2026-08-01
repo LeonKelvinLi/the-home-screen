@@ -200,17 +200,21 @@ textarea {
   background: #0a0a0c url('/wallpaper.jpg') center / cover no-repeat;
 }
 
-/* Darken behind the grid so white icon labels stay legible on the light ribbons. */
+/*
+  Legibility scrim. White labels sit on pale ribbons, so the top third needs
+  weight — but a flat black wash kills the blue, so it eases off through the
+  middle and returns only under the dock.
+*/
 .home-wallpaper::after {
   content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(0, 0, 0, 0.34) 0%,
-    rgba(0, 0, 0, 0.16) 34%,
-    rgba(0, 0, 0, 0.24) 72%,
-    rgba(0, 0, 0, 0.42) 100%
+    rgba(4, 12, 26, 0.42) 0%,
+    rgba(4, 12, 26, 0.28) 42%,
+    rgba(4, 12, 26, 0.14) 62%,
+    rgba(4, 12, 26, 0.34) 100%
   );
 }
 
@@ -233,8 +237,9 @@ textarea {
 .home-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  row-gap: 22px;
-  column-gap: 4px;
+  row-gap: 26px;
+  column-gap: 2px;
+  justify-items: center;
 }
 
 .app-icon {
@@ -246,8 +251,8 @@ textarea {
 }
 
 .app-icon:active {
-  transform: scale(0.9);
-  opacity: 0.75;
+  transform: scale(0.94);
+  opacity: 0.62;
 }
 
 /*
@@ -258,7 +263,7 @@ textarea {
 .icon-tile {
   position: relative;
   display: block;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.16)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.18));
 }
 
 /*
@@ -272,9 +277,13 @@ textarea {
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: -0.08px;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.96);
   text-align: center;
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.55);
+  /* Two tight shadows, not one soft halo: iOS labels read crisp against a
+     photo, and a 3px blur at 55% just looks like a smudge. */
+  text-shadow:
+    0 0 1px rgba(0, 0, 0, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.35);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -311,7 +320,8 @@ textarea {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.32);
+  background: rgba(255, 255, 255, 0.42);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.25);
   transition: background 200ms ease;
 }
 
@@ -329,10 +339,11 @@ textarea {
   gap: 5px;
   padding: 6px 14px 6px 12px;
   border-radius: 16px;
-  background: rgba(0, 0, 0, 0.26);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.18) inset;
+  color: rgba(255, 255, 255, 0.95);
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.1px;
@@ -355,10 +366,12 @@ textarea {
   align-items: center;
   justify-content: space-around;
   border-radius: 34px;
-  background: rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(28px) saturate(150%);
-  -webkit-backdrop-filter: blur(28px) saturate(150%);
-  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.12) inset;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(34px) saturate(180%);
+  -webkit-backdrop-filter: blur(34px) saturate(180%);
+  box-shadow:
+    0 0 0 0.5px rgba(255, 255, 255, 0.22) inset,
+    0 1px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* ---------- app window ---------- */
