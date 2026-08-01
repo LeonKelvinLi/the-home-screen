@@ -1,30 +1,36 @@
 import { useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
-import { brandById, vendorById } from '../data/brands'
+import { brandById } from '../data/brands'
 import { money, useCart } from '../store/cart'
-import { newIdempotencyKey, placeOrder } from '../lib/api'
+import { IS_LOCAL_ONLY, newIdempotencyKey, placeOrder } from '../lib/api'
 import type { PlacedOrder } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
 
 /**
  * Checkout. One card charge, N kitchens paid.
  *
- * The split shown here is the real one the server computes — platform fee comes
- * off each vendor's slice, not off the customer's total, which is how Connect
- * destination charges actually behave.
+ * Deliberately absent: the per-vendor payout breakdown. That existed here and
+ * showed the customer exactly what the platform takes from each kitchen, on top
+ * of the service fee they had already paid — and handed every vendor a
+ * screenshot to renegotiate with. It belongs on a vendor dashboard.
  */
 
 export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void }) {
   const cart = useCart()
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
+  const [address, setAddress] = useState('')
   const [placing, setPlacing] = useState(false)
   const [order, setOrder] = useState<PlacedOrder | null>(null)
   const [error, setError] = useState<string | null>(null)
   const idemKey = useRef(newIdempotencyKey())
 
   const t = cart.totals
-  const valid = name.trim().length > 1 && phone.replace(/\D/g, '').length >= 10
+  const delivering = cart.fulfilment === 'delivery'
+  const valid =
+    name.trim().length > 1 &&
+    phone.replace(/\D/g, '').length >= 10 &&
+    (!delivering || address.trim().length > 6)
 
   const submit = async () => {
     if (!valid || placing) return
@@ -36,6 +42,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
         fulfilment: cart.fulfilment,
         tipBps: cart.tipBps,
         customer: { name: name.trim(), phone: phone.trim() },
+        address: delivering ? address.trim() : undefined,
         // Stable for the life of this checkout screen, so a retry after a
         // timeout cannot print a second set of kitchen tickets.
         idempotencyKey: idemKey.current,
@@ -73,6 +80,14 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           <p className="confirm-sub">
             Ready in about {order.etaMinutes} minutes · {order.fulfilment}
           </p>
+
+          {/* Never let a local-only order look like a real one. */}
+          {order.local && (
+            <p className="local-notice">
+              <strong>Saved on this device only.</strong> No kitchen has received this order —
+              ordering goes live once the backend is connected.
+            </p>
+          )}
 
           {order.tickets.map((ticket) => {
             const brands = ticket.brandIds.map((b) => brandById(b)?.name).filter(Boolean)
@@ -119,20 +134,25 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
     >
       <div className="checkout-body">
         <section className="co-block">
-          <h3>{cart.fulfilment === 'pickup' ? 'Pickup from' : 'Deliver to'}</h3>
-          <div className="co-address">
-            {cart.fulfilment === 'pickup' ? (
-              <>
-                <strong>Hall Street Commissary</strong>
-                <span>1180 Hall St, Unit 4 · 0.8 mi away</span>
-              </>
-            ) : (
-              <>
-                <strong>Add an address</strong>
-                <span>Delivery radius 4 mi from the commissary</span>
-              </>
-            )}
-          </div>
+          <h3>{delivering ? 'Deliver to' : 'Pickup from'}</h3>
+          {delivering ? (
+            <>
+              <input
+                className="co-input"
+                placeholder="Street address, unit"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                autoComplete="street-address"
+                maxLength={160}
+              />
+              <p className="co-hint">Delivery radius is 4 miles from the commissary.</p>
+            </>
+          ) : (
+            <div className="co-address">
+              <strong>Hall Street Commissary</strong>
+              <span>Each kitchen has its own counter — your order screen shows which.</span>
+            </div>
+          )}
         </section>
 
         <section className="co-block">
@@ -143,6 +163,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
             value={name}
             onChange={(e) => setName(e.target.value)}
             autoComplete="name"
+            maxLength={100}
           />
           <input
             className="co-input"
@@ -151,47 +172,56 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
             onChange={(e) => setPhone(e.target.value)}
             inputMode="tel"
             autoComplete="tel"
+            maxLength={30}
           />
           <p className="co-hint">Texted when each kitchen finishes its part.</p>
         </section>
 
         <section className="co-block">
           <h3>Payment</h3>
-          <button className="pay-row is-on">
-            <span className="pay-mark">VISA</span>
-            <span>•••• 4242</span>
-            <span className="pay-check">✓</span>
-          </button>
-          <p className="co-hint">
-            One charge of {money(t.total)}. Kitchens are paid out separately.
-          </p>
+          {IS_LOCAL_ONLY ? (
+            <p className="local-notice">
+              <strong>Nothing is charged.</strong> Payments are not connected in this build, so
+              this order is saved on your device and no kitchen receives it.
+            </p>
+          ) : (
+            <>
+              <button className="pay-row is-on">
+                <span className="pay-mark">VISA</span>
+                <span>•••• 4242</span>
+                <span className="pay-check">✓</span>
+              </button>
+              <p className="co-hint">
+                One charge of {money(t.total)} covering all {cart.brandCount} kitchen
+                {cart.brandCount === 1 ? '' : 's'}.
+              </p>
+            </>
+          )}
         </section>
 
         <section className="co-block">
-          <h3>Where the money goes</h3>
-          {t.byVendor.map((g) => {
-            const vendor = vendorById(g.vendorId)
-            const fee = Math.round(g.subtotal * 0.1)
-            return (
-              <div className="split-row" key={g.vendorId}>
-                <div className="split-name">
-                  {g.brandIds.map((b) => brandById(b)?.name).filter(Boolean).join(' + ')}
-                  <em>{vendor?.name}</em>
-                </div>
-                <div className="split-nums">
-                  <span>{money(g.subtotal - fee)}</span>
-                  <em>after {money(fee)} platform fee</em>
-                </div>
-              </div>
-            )
-          })}
-          <p className="co-hint">
-            Vendors without completed payout onboarding are held until they finish it.
-          </p>
+          <h3>Total</h3>
+          <div className="totals">
+            <Row label="Subtotal" value={money(t.subtotal)} />
+            <Row label="Service fee" value={money(t.serviceFee)} />
+            {delivering && <Row label="Delivery" value={money(t.deliveryFee)} />}
+            <Row label="Tax" value={money(t.tax)} />
+            <Row label="Tip" value={money(t.tip)} />
+            <Row label="Total" value={money(t.total)} strong />
+          </div>
         </section>
 
         {error && <p className="co-error">{error}</p>}
       </div>
     </AppChrome>
+  )
+}
+
+function Row({ label, value, strong }: { label: string; value: string; strong?: boolean }) {
+  return (
+    <div className={`totals-row${strong ? ' is-strong' : ''}`}>
+      <span>{label}</span>
+      <span>{value}</span>
+    </div>
   )
 }

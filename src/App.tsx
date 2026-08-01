@@ -6,8 +6,7 @@ import { BrandApp } from './apps/BrandApp'
 import { CartApp } from './apps/CartApp'
 import { OrdersApp } from './apps/OrdersApp'
 import { SearchApp } from './apps/SearchApp'
-import { AccountApp, HelpApp, RewardsApp } from './apps/SimpleApps'
-import { WaterApp } from './apps/WaterApp'
+import { AccountApp, ContactApp, HelpApp, RewardsApp } from './apps/SimpleApps'
 
 /**
  * Routing table for the fake OS. An app id is either a brand id or `sys.*`.
@@ -17,7 +16,6 @@ function renderApp(appId: string, api: ShellApi) {
   if (!app) return null
 
   if (app.kind === 'brand') return <BrandApp brandId={app.brandId!} api={api} />
-  if (app.kind === 'water') return <WaterApp glyph={app.waterGlyph!} api={api} />
 
   switch (app.systemKey) {
     case 'cart':
@@ -32,6 +30,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <HelpApp api={api} />
     case 'account':
       return <AccountApp api={api} />
+    case 'contact':
+      return <ContactApp api={api} />
     default:
       return null
   }

@@ -3,7 +3,13 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 
 const here = dirname(fileURLToPath(import.meta.url))
-export const db = new Database(join(here, '..', '..', 'data.db'))
+/*
+  Configurable so a host with a mounted disk can keep the database outside the
+  deploy directory. On a host with an ephemeral filesystem (Render free tier)
+  every redeploy starts an empty database — fine for a demo, not for real orders.
+*/
+const DB_PATH = process.env.DATABASE_PATH ?? join(here, '..', '..', 'data.db')
+export const db = new Database(DB_PATH)
 
 db.pragma('journal_mode = WAL')
 db.pragma('foreign_keys = ON')
@@ -96,6 +102,8 @@ addColumn('tickets', 'tip', 'INTEGER NOT NULL DEFAULT 0')
 addColumn('tickets', 'state_changed_at', 'INTEGER NOT NULL DEFAULT 0')
 addColumn('orders', 'idempotency_key', 'TEXT')
 addColumn('vendors', 'api_token', 'TEXT')
+// Delivery was selectable and billable with nowhere to send the food.
+addColumn('orders', 'address', 'TEXT')
 
 /*
   Indexes on migrated columns must be created AFTER the ALTERs above. On an

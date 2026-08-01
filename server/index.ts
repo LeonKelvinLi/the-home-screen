@@ -21,6 +21,7 @@ const MAX_QTY = 50
 const MAX_NAME = 100
 const MAX_PHONE = 30
 const MAX_NOTE = 240
+const MAX_ADDRESS = 160
 const MAX_ORDER_TOTAL = 200_000 // $2,000
 
 /** A fat-fingered PLATFORM_FEE_BPS must not be able to mint negative payouts. */
@@ -34,8 +35,13 @@ const FEE_BPS = Math.round(rawFee)
  * Real payments are not wired up. Refuse to run in production rather than
  * quietly dispatching food against no authorization.
  */
-if (PROD && !process.env.STRIPE_SECRET_KEY) {
-  throw new Error('Refusing to start in production without STRIPE_SECRET_KEY: payments are mocked.')
+const ALLOW_MOCK = process.env.ALLOW_MOCK_PAYMENTS === '1'
+if (PROD && !process.env.STRIPE_SECRET_KEY && !ALLOW_MOCK) {
+  throw new Error(
+    'Refusing to start in production without STRIPE_SECRET_KEY.\n' +
+      'Payments are mocked: orders would reach kitchens with nothing charged.\n' +
+      'For a demo deploy set ALLOW_MOCK_PAYMENTS=1 to acknowledge this.',
+  )
 }
 
 /** The kitchen simulator must never run where real vendors are working. */
@@ -175,6 +181,7 @@ app.post('/api/orders', (req, res) => {
     ? String((body.customer as Record<string, unknown>).phone ?? '').trim()
     : ''
   const fulfilment = body.fulfilment === 'delivery' ? 'delivery' : 'pickup'
+  const address = typeof body.address === 'string' ? body.address.trim().slice(0, MAX_ADDRESS) : ''
   const tipBps = intOr(body.tipBps, 0, 0, 5000)
   const idemKey =
     typeof body.idempotencyKey === 'string' && body.idempotencyKey.length <= 80
@@ -186,6 +193,10 @@ app.post('/api/orders', (req, res) => {
   if (name.length < 2 || name.length > MAX_NAME) return res.status(400).json({ error: 'Name is required.' })
   if (phone.replace(/\D/g, '').length < 10 || phone.length > MAX_PHONE) {
     return res.status(400).json({ error: 'Valid phone required.' })
+  }
+  // A delivery order with no address is a paid ticket nobody can fulfil.
+  if (fulfilment === 'delivery' && address.length < 6) {
+    return res.status(400).json({ error: 'Delivery address required.' })
   }
 
   // Replaying the same submission must not print a second set of tickets.
@@ -296,11 +307,13 @@ app.post('/api/orders', (req, res) => {
   const write = db.transaction(() => {
     db.prepare(
       `INSERT INTO orders (id, code, customer_name, customer_phone, fulfilment, subtotal, tax,
-        service_fee, delivery_fee, tip, total, eta_minutes, payment_state, idempotency_key, created_at)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        service_fee, delivery_fee, tip, total, eta_minutes, payment_state, idempotency_key,
+        address, created_at)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     ).run(
       orderId, code, name, phone, fulfilment, subtotal, tax,
-      serviceFee, deliveryFee, tip, total, etaMinutes, 'mock', idemKey, now,
+      serviceFee, deliveryFee, tip, total, etaMinutes, 'mock', idemKey,
+      address || null, now,
     )
 
     vendorIds.forEach((vendorId, vi) => {
@@ -507,6 +520,9 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 
 app.listen(PORT, () => {
   console.log(`api + static on http://localhost:${PORT}`)
+  if (PROD && ALLOW_MOCK) {
+    console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
+  }
   if (SIMULATE_KITCHEN) console.log('kitchen simulator: ON (set SIMULATE_KITCHEN=0 to disable)')
   if (!PROD) {
     const rows = db.prepare('SELECT id, api_token FROM vendors').all() as { id: string; api_token: string }[]

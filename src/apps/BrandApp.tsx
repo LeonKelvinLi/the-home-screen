@@ -4,6 +4,7 @@ import { ItemSheet } from './ItemSheet'
 import { BrandLogo } from '../ios/BrandLogo'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
+import { readableOn } from '../ios/contrast'
 import type { MenuItem } from '../data/brands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
@@ -19,6 +20,9 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   if (!brand) return null
 
   const inCart = cart.countForBrand(brand.id)
+  // Header text must be chosen from the tint, not assumed white — several
+  // brands use light plates and were rendering white-on-white.
+  const ink = readableOn(brand.logo.bg)
 
   const jump = (i: number) => {
     setActiveCat(i)
@@ -53,23 +57,31 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
         }
       >
         <div className="brand-body" ref={bodyRef}>
-          <div className="brand-hero" style={{ background: heroBg(brand.logo.bg) }}>
+          <div
+            className="brand-hero"
+            style={{ background: heroBg(brand.logo.bg), color: ink.fg }}
+          >
             <div className="brand-hero-mark">
               <BrandLogo logo={brand.logo} size={78} />
             </div>
             <h1>{brand.name}</h1>
-            <p className="brand-tagline">{brand.tagline}</p>
-            <div className="brand-meta">
-              <span>★ {brand.rating.toFixed(1)}</span>
-              <span>·</span>
-              <span>{brand.ratingCount.toLocaleString()} ratings</span>
-              <span>·</span>
+            <p className="brand-tagline" style={{ color: ink.dim }}>
+              {brand.tagline}
+            </p>
+            <div className="brand-meta" style={{ color: ink.dim }}>
               <span>{brand.cuisine}</span>
             </div>
             <div className="brand-chips">
               <span className="chip is-open">Open now</span>
-              <span className="chip">{brand.prepMinutes} min</span>
-              <span className="chip">Pickup &amp; delivery</span>
+              <span
+                className="chip"
+                style={{
+                  background: ink.isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.08)',
+                  color: ink.fg,
+                }}
+              >
+                {brand.prepMinutes} min
+              </span>
             </div>
           </div>
 
@@ -116,6 +128,12 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               ))}
             </section>
           ))}
+
+          {brand.needsOwnerReview && (
+            <p className="brand-review-flag">
+              Menu needs owner confirmation — {brand.needsOwnerReview}
+            </p>
+          )}
 
           <p className="brand-foot">
             {brand.name} is operated independently. Prices set by the kitchen.

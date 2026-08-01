@@ -1,14 +1,22 @@
+import { BRANDS } from '../data/brands'
 import type { CartLine } from '../store/cart'
 
 /**
- * API client.
+ * Order client.
  *
- * The important rule here: a *rejection* is never treated as a *network
- * failure*. An earlier version caught both in one `catch` and fabricated a
- * local order whenever anything went wrong, so a 400 ("Unknown item" — which a
- * stale saved cart produces the moment a menu changes) showed the customer a
- * green tick for an order no kitchen ever received.
+ * This build ships FRONT-END ONLY: there is no server, so an order cannot reach
+ * a kitchen. Rather than pretend otherwise, local mode marks every order
+ * `local: true` and the UI says plainly that nobody has received it. A silent
+ * green tick for an order that goes nowhere is the one failure mode that costs
+ * a real customer a real lunch.
+ *
+ * Set VITE_API_BASE at build time to point at a real backend; every call below
+ * then goes over the wire and `local` disappears. The server in /server is
+ * written and tested but not deployed.
  */
+
+const API_BASE = (import.meta.env.VITE_API_BASE ?? '').replace(/\/$/, '')
+export const IS_LOCAL_ONLY = API_BASE === ''
 
 export class OrderRejected extends Error {
   constructor(
@@ -50,6 +58,8 @@ export interface PlacedOrder {
   etaMinutes: number
   total: number
   tickets: Ticket[]
+  /** True when this order exists only on this device. */
+  local?: boolean
 }
 
 export interface PlaceOrderInput {
@@ -57,7 +67,7 @@ export interface PlaceOrderInput {
   fulfilment: 'pickup' | 'delivery'
   tipBps: number
   customer: { name: string; phone: string }
-  /** Stable across retries of the same submission. */
+  address?: string
   idempotencyKey: string
 }
 
@@ -67,7 +77,7 @@ async function request(path: string, init?: RequestInit): Promise<Response> {
   const ctrl = new AbortController()
   const timer = setTimeout(() => ctrl.abort(), TIMEOUT_MS)
   try {
-    return await fetch(path, { ...init, signal: ctrl.signal })
+    return await fetch(`${API_BASE}${path}`, { ...init, signal: ctrl.signal })
   } catch {
     // fetch only rejects on transport failure or abort — never on 4xx/5xx.
     throw new NetworkDown()
@@ -87,6 +97,8 @@ async function errorMessage(res: Response): Promise<string> {
 }
 
 export async function placeOrder(input: PlaceOrderInput): Promise<PlacedOrder> {
+  if (IS_LOCAL_ONLY) return placeLocalOrder(input)
+
   const res = await request('/api/orders', {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
@@ -94,6 +106,7 @@ export async function placeOrder(input: PlaceOrderInput): Promise<PlacedOrder> {
       fulfilment: input.fulfilment,
       tipBps: input.tipBps,
       customer: input.customer,
+      address: input.address,
       idempotencyKey: input.idempotencyKey,
       // Send ids only. Every amount is recomputed server-side.
       lines: input.lines.map((l) => ({
@@ -105,40 +118,94 @@ export async function placeOrder(input: PlaceOrderInput): Promise<PlacedOrder> {
     }),
   })
 
+  // A rejection is never treated as a network failure: a 400 from a stale saved
+  // cart must surface, not silently become a fabricated success.
   if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
 
   const order = (await res.json()) as PlacedOrder
   if (!order?.id) throw new OrderRejected(res.status, 'Server returned an unrecognised order.')
 
-  rememberOrderId(order.id)
+  rememberOrder(order)
   return order
 }
 
-/* ---------- the customer's own order list ---------- */
+/* ---------- local-only mode ---------- */
 
-/**
- * `GET /api/orders` is vendor-scoped now (it used to hand every order on the
- * platform to anyone). Without accounts, the customer's own history is the set
- * of order ids this device has placed; each id is an unguessable capability.
- */
-const IDS_KEY = 'fb.orderIds.v1'
+const ORDERS_KEY = 'fb.orders.v2'
 
-function readIds(): string[] {
+function readLocal(): PlacedOrder[] {
   try {
-    const v = JSON.parse(localStorage.getItem(IDS_KEY) ?? '[]')
-    return Array.isArray(v) ? v.filter((x) => typeof x === 'string').slice(0, 25) : []
+    const v = JSON.parse(localStorage.getItem(ORDERS_KEY) ?? '[]')
+    return Array.isArray(v) ? (v as PlacedOrder[]).filter((o) => o && typeof o.id === 'string') : []
   } catch {
     return []
   }
 }
 
-function rememberOrderId(id: string) {
+function rememberOrder(order: PlacedOrder) {
   try {
-    localStorage.setItem(IDS_KEY, JSON.stringify([id, ...readIds().filter((x) => x !== id)].slice(0, 25)))
+    const next = [order, ...readLocal().filter((o) => o.id !== order.id)].slice(0, 25)
+    localStorage.setItem(ORDERS_KEY, JSON.stringify(next))
   } catch {
-    /* private mode — history just won't survive a reload */
+    /* private mode / quota — history just won't survive a reload */
   }
 }
+
+const TAX_BPS = 875
+const SERVICE_BPS = 500
+const DELIVERY_FEE = 399
+
+/** Mirrors the server's pricing exactly, so switching to a backend changes no totals. */
+function placeLocalOrder(input: PlaceOrderInput): PlacedOrder {
+  const byVendor = new Map<string, Ticket>()
+
+  for (const line of input.lines) {
+    const brand = BRANDS.find((b) => b.id === line.brandId)
+    if (!brand) continue
+    let t = byVendor.get(brand.vendorId)
+    if (!t) {
+      t = { vendorId: brand.vendorId, brandIds: [], lines: [], state: 'queued' }
+      byVendor.set(brand.vendorId, t)
+    }
+    if (!t.brandIds.includes(brand.id)) t.brandIds.push(brand.id)
+    t.lines.push({
+      name: line.name,
+      qty: line.qty,
+      options: line.options.map((o) => o.name),
+      note: line.note,
+    })
+  }
+
+  const subtotal = input.lines.reduce(
+    (s, l) => s + (l.unitPrice + l.options.reduce((a, o) => a + o.price, 0)) * l.qty,
+    0,
+  )
+  const prep = new Map(BRANDS.map((b) => [b.id, b.prepMinutes]))
+  const eta =
+    Math.max(...input.lines.map((l) => prep.get(l.brandId) ?? 10)) +
+    (input.fulfilment === 'delivery' ? 12 : 0)
+
+  const order: PlacedOrder = {
+    id: `o_local_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`,
+    code: `#${1000 + Math.floor(Math.random() * 8999)}`,
+    createdAt: Date.now(),
+    fulfilment: input.fulfilment,
+    etaMinutes: eta,
+    total:
+      subtotal +
+      Math.round((subtotal * TAX_BPS) / 10000) +
+      Math.round((subtotal * SERVICE_BPS) / 10000) +
+      Math.round((subtotal * input.tipBps) / 10000) +
+      (input.fulfilment === 'delivery' ? DELIVERY_FEE : 0),
+    tickets: [...byVendor.values()],
+    local: true,
+  }
+
+  rememberOrder(order)
+  return order
+}
+
+/* ---------- reading orders back ---------- */
 
 export interface OrdersResult {
   orders: PlacedOrder[]
@@ -147,13 +214,14 @@ export interface OrdersResult {
 }
 
 export async function listOrders(): Promise<OrdersResult> {
-  const ids = readIds()
-  if (ids.length === 0) return { orders: [], degraded: false }
+  const stored = readLocal()
+  if (IS_LOCAL_ONLY) return { orders: stored, degraded: false }
 
+  // With a backend, the stored ids are capabilities — re-fetch for live state.
   const settled = await Promise.allSettled(
-    ids.map(async (id) => {
-      const res = await request(`/api/orders/${encodeURIComponent(id)}`)
-      if (res.status === 404) return null // genuinely gone; drop it
+    stored.map(async (o) => {
+      const res = await request(`/api/orders/${encodeURIComponent(o.id)}`)
+      if (res.status === 404) return null
       if (!res.ok) throw new Error(String(res.status))
       return (await res.json()) as PlacedOrder
     }),
@@ -161,13 +229,14 @@ export async function listOrders(): Promise<OrdersResult> {
 
   const orders: PlacedOrder[] = []
   let degraded = false
-  for (const r of settled) {
+  settled.forEach((r, i) => {
     if (r.status === 'fulfilled') {
       if (r.value) orders.push(r.value)
     } else {
       degraded = true
+      orders.push(stored[i]) // keep the last known copy rather than dropping it
     }
-  }
+  })
 
   orders.sort((a, b) => b.createdAt - a.createdAt)
   return { orders, degraded }

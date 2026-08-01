@@ -1,10 +1,13 @@
 import { AppChrome } from './AppChrome'
-import { VENDORS } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
 
 /**
- * Placeholder surfaces so every icon on the home screen leads somewhere real.
- * Each states plainly what it will do rather than faking data.
+ * Small platform surfaces.
+ *
+ * Copy here is customer-facing, so it says what the screen does and nothing
+ * else. An earlier version leaked build notes into production — including a
+ * list of vendors marked "onboarding incomplete", which told customers the
+ * kitchens might not get paid. Anything unfinished belongs in the README.
  */
 
 export function RewardsApp({ api }: { api: ShellApi }) {
@@ -16,15 +19,20 @@ export function RewardsApp({ api }: { api: ShellApi }) {
           <span className="reward-label">points</span>
         </div>
         <p>
-          One balance across every kitchen. Earn on any order, spend on any other — the part a
-          single-restaurant app cannot do.
+          One balance across every kitchen on this home screen. Earn on any order, spend on any
+          other — the part a single-restaurant app cannot do.
         </p>
         <ul className="plain-list">
-          <li>1 point per dollar, platform-funded</li>
-          <li>Kitchens opt in to bonus multipliers</li>
-          <li>Redemption is settled against the platform, not the vendor</li>
+          <li>
+            <strong>Earning</strong>
+            One point per dollar, on every kitchen here.
+          </li>
+          <li>
+            <strong>Spending</strong>
+            Points come off the total at checkout, not off one kitchen's bill.
+          </li>
         </ul>
-        <p className="plain-note">Not built yet. Needs the accounts system first.</p>
+        <p className="plain-note">Rewards start once you have an account.</p>
       </div>
     </AppChrome>
   )
@@ -42,14 +50,17 @@ export function HelpApp({ api }: { api: ShellApi }) {
           </li>
           <li>
             <strong>Will everything be ready at once?</strong>
-            Kitchens cook in parallel. The quoted time is the slowest one.
+            Kitchens cook in parallel, so the quoted time is the slowest one.
           </li>
           <li>
-            <strong>Who do I contact about a wrong item?</strong>
-            The platform. Refunds are issued centrally and clawed back from the kitchen.
+            <strong>Where do I collect?</strong>
+            Your order screen shows a counter for each kitchen once the food is ready.
+          </li>
+          <li>
+            <strong>Something is wrong with my order</strong>
+            Use Contact in the dock. Refunds are handled centrally, not by the kitchen.
           </li>
         </ul>
-        <p className="plain-note">Support routing is not wired up yet.</p>
       </div>
     </AppChrome>
   )
@@ -60,23 +71,58 @@ export function AccountApp({ api }: { api: ShellApi }) {
     <AppChrome title="Account" onBack={api.closeApp} tint="#3F4A5A">
       <div className="plain">
         <h3>Signed out</h3>
-        <p>Orders on this device are kept locally until an account exists.</p>
+        <p>
+          Orders placed on this device are saved here. Sign in to keep them across phones and to
+          start earning rewards.
+        </p>
         <button className="btn-secondary">Sign in with phone</button>
 
-        <h3>Vendors on the platform</h3>
-        <ul className="vendor-list">
-          {VENDORS.map((v) => (
-            <li key={v.id}>
-              <span>{v.name}</span>
-              <em className={v.payoutsEnabled ? 'is-ok' : 'is-pending'}>
-                {v.payoutsEnabled ? 'payouts active' : 'onboarding incomplete'}
-              </em>
-            </li>
-          ))}
+        <h3>Add to Home Screen</h3>
+        <ul className="plain-list">
+          <li>
+            <strong>iPhone</strong>
+            Share, then “Add to Home Screen”. It then opens without a browser bar.
+          </li>
+          <li>
+            <strong>Android</strong>
+            Menu, then “Install app”.
+          </li>
+        </ul>
+      </div>
+    </AppChrome>
+  )
+}
+
+/**
+ * The dock's Phone slot. The operator's existing hub dials
+ * `tel:+10000000000` — a placeholder that was never replaced — so this screen
+ * exists rather than shipping a dial button that reaches nobody.
+ */
+export function ContactApp({ api }: { api: ShellApi }) {
+  return (
+    <AppChrome title="Contact" onBack={api.closeApp} tint="#1FAF54">
+      <div className="plain">
+        <h3>Get in touch</h3>
+        <p>
+          For anything about a live order — a missing item, a wrong item, a refund — contact the
+          platform rather than the individual kitchen.
+        </p>
+        <ul className="plain-list">
+          <li>
+            <strong>Phone</strong>
+            Not published yet.
+          </li>
+          <li>
+            <strong>Hours</strong>
+            Not published yet.
+          </li>
+          <li>
+            <strong>Pickup</strong>
+            Each order screen shows the counter for that kitchen.
+          </li>
         </ul>
         <p className="plain-note">
-          Vendor self-onboarding (Stripe Connect) is stubbed — accounts are created server-side but
-          no vendor can complete KYC yet.
+          The owner needs to supply a phone number before this goes live.
         </p>
       </div>
     </AppChrome>

@@ -1,0 +1,14 @@
+{
+  "name": "The Home Screen",
+  "short_name": "Home Screen",
+  "description": "Order from every kitchen on one home screen.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0c",
+  "theme_color": "#0a0a0c",
+  "orientation": "portrait",
+  "icons": [
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icons/beasty-h20.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

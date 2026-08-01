@@ -13,6 +13,10 @@
   --green: #30d158;
   --radius: 14px;
   --tint: #1b47d6;
+  /* Height reserved above in-app nav bars. Phone mode swaps this for the
+     device's real safe-area inset. */
+  --status-h: 54px;
+  --bottom-h: 34px;
   /*
     -apple-system first so Apple devices get genuine SF Pro — nothing imitates
     it convincingly. Inter is the self-hosted fallback everywhere else; its
@@ -64,8 +68,14 @@ textarea {
 .device {
   display: grid;
   place-items: center;
-  /* Shrink to fit short windows without touching the internal geometry. */
-  transform: scale(min(1, calc((100vh - 48px) / 892)));
+  /*
+    Shrink to fit short windows without touching the internal geometry.
+    The divisor MUST carry a unit: `calc((100vh - 48px) / 892)` is a length,
+    and scale() needs a number, so the whole declaration is silently dropped —
+    which left the dock and home indicator below the fold on any window under
+    ~900px tall, i.e. most laptops.
+  */
+  transform: scale(min(1, calc((100dvh - 48px) / 892px)));
   transform-origin: center;
 }
 
@@ -202,10 +212,12 @@ textarea {
   touch-action: pan-y;
 }
 
+/* 100%, not 393px: under phone mode the screen becomes 100vw, and a fixed
+   page width left dead space on a Pro Max and bled page 2 into page 1. */
 .home-page {
-  flex: 0 0 393px;
-  width: 393px;
-  padding: 78px 18px 0;
+  flex: 0 0 100%;
+  width: 100%;
+  padding: calc(var(--status-h) + 24px) 18px 0;
 }
 
 .home-grid {
@@ -391,8 +403,6 @@ textarea {
 .switcher-track {
   position: relative;
   display: flex;
-  gap: 14px;
-  padding-left: 41px; /* centres the first card: (393 - 283) / 2 - 14 */
   will-change: transform;
 }
 
@@ -463,6 +473,7 @@ textarea {
 
 .chrome-nav {
   flex: 0 0 auto;
+  padding-top: var(--status-h);
   padding-bottom: 10px;
   background: var(--tint);
   color: #fff;
@@ -537,7 +548,7 @@ textarea {
 
 .chrome-footer {
   flex: 0 0 auto;
-  padding: 10px 16px calc(10px + 34px);
+  padding: 10px 16px calc(10px + var(--bottom-h));
   background: rgba(249, 249, 249, 0.94);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
@@ -1009,7 +1020,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 20px calc(12px + 34px);
+  padding: 12px 20px calc(12px + var(--bottom-h));
   background: rgba(249, 249, 249, 0.94);
   border-top: 1px solid var(--line);
 }
@@ -1933,10 +1944,27 @@ textarea {
 
 /* ---------- standalone / small screens ---------- */
 
+/* =========================================================================
+   PHONE MODE
+   On a real phone the page IS the screen. Every piece of fake hardware is
+   removed — bezel, Dynamic Island, painted status bar, painted home indicator —
+   because the device already has real ones, and drawing a second set on top is
+   what makes a web app read as a mockup. Spacing switches to the true
+   safe-area insets so content clears the actual notch and home bar.
+   ========================================================================= */
+
 @media (max-width: 480px) {
+  :root {
+    /* max(): the insets are 0 in a normal browser tab, and content still needs
+       to clear Safari's own UI there. */
+    --status-h: max(env(safe-area-inset-top), 20px);
+    --bottom-h: max(env(safe-area-inset-bottom), 12px);
+  }
+
   body {
     background: #000;
     display: block;
+    overflow: hidden;
   }
 
   .device {
@@ -1948,6 +1976,7 @@ textarea {
     padding: 0;
     border-radius: 0;
     box-shadow: none;
+    background: none;
     height: 100dvh;
   }
 
@@ -1957,13 +1986,43 @@ textarea {
     border-radius: 0;
   }
 
+  /* the fake Dynamic Island */
   .screen::before {
     display: none;
   }
 
   .app-window {
-    width: 100vw;
-    height: 100dvh;
+    border-radius: 0 !important;
+  }
+
+  .dock {
+    bottom: calc(var(--bottom-h) + 6px);
+  }
+
+  .spotlight {
+    bottom: calc(var(--bottom-h) + 114px);
+  }
+
+  .page-dots {
+    bottom: calc(var(--bottom-h) + 156px);
+  }
+
+  /*
+    Sit the swipe strip ABOVE the system home-gesture area. Overlapping it means
+    iOS claims the touch, fires pointercancel, and the app never sees the
+    gesture — while the user gets thrown out to the real home screen.
+  */
+  .home-indicator-zone {
+    bottom: var(--bottom-h);
+    height: 26px;
+  }
+}
+
+/* Installed to the home screen: no browser chrome, so the real insets apply. */
+@media (display-mode: standalone) {
+  :root {
+    --status-h: max(env(safe-area-inset-top), 44px);
+    --bottom-h: max(env(safe-area-inset-bottom), 20px);
   }
 }
 
@@ -1990,4 +2049,35 @@ textarea {
 /* The item sheet stays mounted through its slide-out; stop it eating taps. */
 .sheet-layer.is-closing {
   pointer-events: none;
+}
+
+/* Flags a ported menu whose content contradicts the business name — surfaced
+   rather than hidden, so the operator fixes it before a customer finds it. */
+.brand-review-flag {
+  margin: 16px 16px 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: #fff4e5;
+  color: #92400e;
+  font-size: 12px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+/* Marks an order that exists only in this browser. Without a backend a green
+   tick alone would tell a customer their food is being cooked. */
+.local-notice {
+  margin: 0 0 14px;
+  padding: 11px 13px;
+  border-radius: 11px;
+  background: #fff4e5;
+  color: #92400e;
+  font-size: 12.5px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.local-notice strong {
+  display: block;
+  margin-bottom: 2px;
 }

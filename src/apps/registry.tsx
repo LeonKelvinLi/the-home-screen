@@ -3,30 +3,26 @@ import { BRANDS } from '../data/brands'
 import { BrandLogo } from '../ios/BrandLogo'
 import { SystemIcon } from '../ios/SystemIcon'
 import type { SystemGlyph } from '../ios/SystemIcon'
-import { WaterIcon } from '../ios/WaterIcon'
-import type { WaterGlyph } from '../ios/WaterIcon'
 
 /**
  * The home screen is data. Adding a restaurant means adding a brand — no shell
  * changes — which is the property that lets vendors self-onboard later.
  */
 
-export type SystemKey = 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account'
+export type SystemKey = 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'contact'
 
 export interface AppDef {
   id: string
   /** Full name, shown in the app switcher and in-app header. */
   name: string
-  /** Home-screen label, already truncated the way iOS truncates. */
+  /** Home-screen label, as it appears on the operator's existing hub. */
   label: string
   icon: ReactNode
-  kind: 'brand' | 'system' | 'water'
+  kind: 'brand' | 'system'
   brandId?: string
   systemKey?: SystemKey
-  waterGlyph?: WaterGlyph
   /** Drives the app-switcher card background and the in-app status bar. */
   tint: string
-  /** True when the app's header is light and needs dark status-bar glyphs. */
   statusDark?: boolean
 }
 
@@ -60,36 +56,56 @@ export const SYSTEM_APPS: AppDef[] = SYSTEM.map((s) => ({
 }))
 
 /**
- * The dock belongs to the water business that operates this home screen — it is
- * the one row visible on every page, so it advertises the owner rather than the
- * platform. Cart and Orders move to page 2; the cart stays reachable from the
- * bar pinned inside every brand app, so nothing becomes unreachable.
+ * Contact sits in the dock on the operator's existing hub as a `tel:` link, but
+ * that link is `tel:+10000000000` — a placeholder. Rather than ship a dead dial
+ * action it opens a screen that says the number is missing.
  */
-const WATER: { glyph: WaterGlyph; name: string; label: string; tint: string }[] = [
-  { glyph: 'kangen', name: 'FREE Kangen', label: 'FREE Kangen', tint: '#0C7FC4' },
-  { glyph: 'beasty', name: 'Beasty H2O Co', label: 'Beasty H2O', tint: '#22B8E6' },
-  { glyph: 'scan', name: 'Share & Scan', label: 'Share & Scan', tint: '#111111' },
-  { glyph: 'info', name: 'Info', label: 'Info', tint: '#0B0B0D' },
-]
+const CONTACT_APP: AppDef = {
+  id: 'sys.contact',
+  name: 'Contact',
+  label: 'Phone',
+  icon: <BrandLogo logo={{ imageUrl: '/icons/dock-phone.png', bg: '#1FAF54', fg: '#fff' }} />,
+  kind: 'system',
+  systemKey: 'contact',
+  tint: '#1FAF54',
+}
 
-export const WATER_APPS: AppDef[] = WATER.map((w) => ({
-  id: `h2o.${w.glyph}`,
-  name: w.name,
-  label: w.label,
-  icon: <WaterIcon glyph={w.glyph} />,
-  kind: 'water' as const,
-  waterGlyph: w.glyph,
-  tint: w.tint,
-}))
-
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, ...WATER_APPS]
+export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, CONTACT_APP]
 
 export const appById = (id: string) => ALL_APPS.find((a) => a.id === id)
 
-/** Page 1 is the restaurants. Page 2 is everything the platform itself owns. */
+const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
+
+/** Page 1 is the busiest kitchens; page 2 is the rest plus the platform's own apps. */
 export const HOME_PAGES: AppDef[][] = [
   BRAND_APPS.slice(0, 16),
   [...BRAND_APPS.slice(16), ...SYSTEM_APPS],
 ]
 
-export const DOCK_APPS: AppDef[] = WATER_APPS
+/**
+ * Dock, carried over from the operator's hub: Phone, Water, Info, Gig Work.
+ * It is the one row visible on every page, so it advertises the operator's own
+ * businesses rather than the platform.
+ *
+ * The dock art is theirs; the destinations are the same ones the old site used.
+ * "Info" pointing at the Share & Scan deli is the old site's own mapping, kept
+ * deliberately — worth querying with the owner rather than silently changing.
+ */
+export const DOCK_APPS: AppDef[] = [
+  CONTACT_APP,
+  {
+    ...brand('beastyh20')!,
+    label: 'Water',
+    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-water.png', bg: '#2C8ED6', fg: '#fff' }} />,
+  },
+  {
+    ...brand('sharescan')!,
+    label: 'Info',
+    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.png', bg: '#111111', fg: '#fff' }} />,
+  },
+  {
+    ...brand('sharetasking')!,
+    label: 'Gig Work',
+    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-gig.png', bg: '#0EA5A5', fg: '#fff' }} />,
+  },
+]

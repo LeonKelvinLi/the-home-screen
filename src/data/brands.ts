@@ -1,26 +1,38 @@
 import type { GlyphName } from './glyphs'
 
 /**
- * Fake seed catalogue. Shape matches the API payload exactly, so swapping this
- * for `GET /api/catalogue` is a one-line change in the store.
+ * Catalogue ported from the operator's existing hub at goodneighborbuilder.com.
  *
- * Multi-tenant from day one: every brand belongs to a vendor, every vendor gets
- * paid separately. A cart can span vendors; checkout splits the payment.
+ * Every brand name, tagline, brand colour, menu item, description and price
+ * below is transcribed from that site — not invented. The icon art is their
+ * own, served from /public/icons.
+ *
+ * Two things were deliberately NOT carried over:
+ *  - Ratings. The old site has none, and inventing review counts for real
+ *    businesses would be fabricating evidence about someone else's trade.
+ *  - Contact details and ordering links. They do not exist anywhere in the old
+ *    site's data model, so there was nothing to port. `prepMinutes` below is an
+ *    operational estimate by category, not sourced.
+ *
+ * Multi-tenant from day one: each business is its own vendor and gets paid
+ * separately. That matches what this actually is — independent local operators
+ * sharing one home screen, not one company's brand portfolio.
  */
 
 export type LogoTemplate = 'monogram' | 'badge' | 'glyph-word' | 'wordmark' | 'band'
 
 export interface Logo {
-  template: LogoTemplate
-  /** Background of the icon tile. Either a solid or a `a|b` linear pair. */
+  /** Vendor-supplied square artwork. Wins over the generated mark below. */
+  imageUrl?: string
+  /** Tile background. Either a solid or an `a|b` linear pair. */
   bg: string
   fg: string
   accent?: string
+  /* Generated-mark fallback, for a vendor who joins without artwork. */
+  template?: LogoTemplate
   glyph?: GlyphName
   initials?: string
-  /** Stacked wordmark lines, largest first. */
   lines?: string[]
-  /** Font stack override for the mark. */
   face?: 'grotesk' | 'slab' | 'script' | 'condensed'
 }
 
@@ -53,15 +65,22 @@ export interface Brand {
   id: string
   vendorId: string
   name: string
-  /** Truncated the way iOS truncates home-screen labels. */
+  /** Home-screen label, as it appears on the operator's existing hub. */
   iconLabel: string
   cuisine: string
   tagline: string
   logo: Logo
+  /** Estimate by category. Not sourced from the operator. */
   prepMinutes: number
-  rating: number
-  ratingCount: number
   menu: MenuCategory[]
+  /**
+   * Set where the business name and the ported menu plainly disagree — the old
+   * site tagged all 25 as `kind:"food"`, so a tax-prep firm and a sneaker brand
+   * both ended up with restaurant menus. Surfaced in the UI rather than hidden,
+   * because shipping a credit-repair company selling brisket would embarrass
+   * the operator in front of his own tenants.
+   */
+  needsOwnerReview?: string
 }
 
 export interface Vendor {
@@ -72,561 +91,337 @@ export interface Vendor {
   payoutsEnabled: boolean
 }
 
-export const VENDORS: Vendor[] = [
-  { id: 'v_hallgroup', name: 'Hall Street Kitchen Group', stripeAccountId: null, payoutsEnabled: false },
-  { id: 'v_mesa', name: 'Mesa Provisions LLC', stripeAccountId: null, payoutsEnabled: false },
-  { id: 'v_northside', name: 'Northside Hospitality', stripeAccountId: null, payoutsEnabled: false },
-  { id: 'v_solo', name: 'Marisol Vega (sole prop)', stripeAccountId: null, payoutsEnabled: false },
-  { id: 'v_pike', name: 'Pike & Co', stripeAccountId: null, payoutsEnabled: false },
-]
+interface Seed {
+  slug: string
+  name: string
+  label: string
+  cuisine: string
+  tagline: string
+  color: string
+  icon: string
+  prep: number
+  category: string
+  items: [string, string, number][]
+  review?: string
+}
 
-const opt = (
-  id: string,
-  name: string,
-  choices: [string, number][],
-  required = false,
-  max = 1,
-): MenuOptionGroup => ({
-  id,
-  name,
-  required,
-  max,
-  choices: choices.map(([n, p]) => ({ id: `${id}_${n.toLowerCase().replace(/\W+/g, '')}`, name: n, price: p })),
-})
-
-const SIZE = opt('size', 'Size', [['Regular', 0], ['Large', 250]], true)
-const SPICE = opt('spice', 'Heat level', [['Mild', 0], ['Medium', 0], ['Hot', 0], ['Screaming', 0]], true)
-const EXTRAS = opt('extras', 'Add extras', [['Extra patty', 400], ['Bacon', 250], ['Avocado', 200], ['Fried egg', 175]], false, 4)
-
-export const BRANDS: Brand[] = [
+/** Straight transcription of the source hub. Prices are cents. */
+const SEED: Seed[] = [
   {
-    id: 'b_hotbird',
-    vendorId: 'v_hallgroup',
-    name: 'Hot Bird Chicken Co',
-    iconLabel: 'Hot Bird Chi…',
-    cuisine: 'Nashville hot chicken',
-    tagline: 'Cayenne-lacquered, cooled by white bread.',
-    logo: { template: 'badge', bg: '#FFFFFF', fg: '#C92A2A', accent: '#F08C00', glyph: 'flame', face: 'condensed', lines: ['HOT BIRD'] },
-    prepMinutes: 14,
-    rating: 4.8,
-    ratingCount: 1204,
-    menu: [
-      {
-        id: 'c_sandwiches',
-        name: 'Sandwiches',
-        items: [
-          { id: 'i_hb1', name: 'The Original Hot', desc: 'Quarter-pound thigh, cayenne lacquer, pickles, comeback sauce.', price: 1200, popular: true, options: [SPICE, EXTRAS] },
-          { id: 'i_hb2', name: 'Honey Butter Bird', desc: 'Hot chicken finished with cultured honey butter on a milk bun.', price: 1350, options: [SPICE] },
-          { id: 'i_hb3', name: 'Plain Jane', desc: 'For the heat-averse. Buttermilk brined, no cayenne.', price: 1100 },
-        ],
-      },
-      {
-        id: 'c_plates',
-        name: 'Plates',
-        items: [
-          { id: 'i_hb4', name: 'Half Bird Plate', desc: 'Four pieces, white bread, pickle spears, choice of side.', price: 1900, popular: true, options: [SPICE] },
-          { id: 'i_hb5', name: 'Tender Basket', desc: 'Three tenders, crinkle fries, comeback sauce.', price: 1450, options: [SPICE] },
-        ],
-      },
-      {
-        id: 'c_sides',
-        name: 'Sides',
-        items: [
-          { id: 'i_hb6', name: 'Crinkle Fries', desc: 'Beef-tallow fried, seasoned salt.', price: 500, options: [SIZE] },
-          { id: 'i_hb7', name: 'Vinegar Slaw', desc: 'No mayo. Sharp and cold.', price: 450 },
-          { id: 'i_hb8', name: 'Mac & Cheese', desc: 'Three cheese, brown butter crumb.', price: 650 },
-        ],
-      },
+    slug: 'dingdongtogo', name: 'DingDongtogo', label: 'DingDongtogo',
+    cuisine: 'Delivery bundles', tagline: 'Delivery from the kitchen to your door',
+    color: '#F26B21', icon: 'dingdongtogo', prep: 20, category: 'Bundles',
+    items: [
+      ['Family Dinner Bundle', 'Entrée, two sides, four drinks', 4800],
+      ['Lunch Special', 'Entrée, side, drink', 1400],
+      ['Wing Party Pack', '24 wings, two sauces', 3600],
+      ['Dessert Add-On', "Chef's choice sweet", 700],
     ],
   },
   {
-    id: 'b_bosswich',
-    vendorId: 'v_hallgroup',
-    name: 'Boss Burgers',
-    iconLabel: 'Boss Burgers',
-    cuisine: 'Smash burgers',
-    tagline: 'Two patties, thin and crisp at the edge.',
-    logo: { template: 'glyph-word', bg: '#E8590C', fg: '#FFFFFF', glyph: 'burger', lines: ['BOSS'], face: 'grotesk' },
-    prepMinutes: 11,
-    rating: 4.6,
-    ratingCount: 2871,
-    menu: [
-      {
-        id: 'c_burgers',
-        name: 'Burgers',
-        items: [
-          { id: 'i_bb1', name: 'The Boss Double', desc: 'Two smashed patties, American, onion, house sauce.', price: 1250, popular: true, options: [EXTRAS] },
-          { id: 'i_bb2', name: 'Bacon Jam Single', desc: 'Single patty, bacon jam, aged cheddar, crispy shallot.', price: 1150, options: [EXTRAS] },
-          { id: 'i_bb3', name: 'Mushroom Swiss', desc: 'Roasted maitake, Swiss, garlic aioli.', price: 1300, tags: ['veg'] },
-          { id: 'i_bb4', name: 'Plain Cheeseburger', desc: 'Nothing clever. Just correct.', price: 950 },
-        ],
-      },
-      {
-        id: 'c_bbsides',
-        name: 'Sides & Drinks',
-        items: [
-          { id: 'i_bb5', name: 'Shoestring Fries', desc: 'Salted while hot.', price: 475, popular: true, options: [SIZE] },
-          { id: 'i_bb6', name: 'Fry Sauce', desc: 'Cup of the good stuff.', price: 100 },
-          { id: 'i_bb7', name: 'Vanilla Shake', desc: 'Hand-spun, thick enough to hold a straw.', price: 700, options: [SIZE] },
-          { id: 'i_bb8', name: 'Fountain Soda', desc: 'Free refills do not apply to delivery.', price: 350, options: [SIZE] },
-        ],
-      },
+    slug: 'share-scan', name: 'Share & Scan', label: 'Share & Scan',
+    cuisine: 'Grab-and-go deli', tagline: 'Grab-and-go bites and cold drinks',
+    color: '#3B82F6', icon: 'share-scan', prep: 6, category: 'Grab & Go',
+    items: [
+      ['Chicken Caesar Wrap', 'Romaine, parmesan, garlic dressing', 1100],
+      ['Turkey Club Box', 'Sandwich, chips, cookie', 1300],
+      ['Fruit Cup', 'Seasonal, fresh cut', 600],
+      ['Bottled Lemonade', 'House made, 16 oz', 400],
     ],
   },
   {
-    id: 'b_mesataco',
-    vendorId: 'v_mesa',
-    name: 'Mesa Taqueria',
-    iconLabel: 'Mesa Taqueria',
-    cuisine: 'Tacos, Sonoran',
-    tagline: 'Mesquite grill, flour tortillas pressed to order.',
-    logo: { template: 'badge', bg: '#FFFDF6', fg: '#7F1D1D', accent: '#B45309', glyph: 'taco', lines: ['MESA'], face: 'slab' },
-    prepMinutes: 9,
-    rating: 4.9,
-    ratingCount: 943,
-    menu: [
-      {
-        id: 'c_tacos',
-        name: 'Tacos',
-        items: [
-          { id: 'i_mt1', name: 'Carne Asada', desc: 'Mesquite-grilled skirt, onion, cilantro, salsa taquera.', price: 475, popular: true },
-          { id: 'i_mt2', name: 'Al Pastor', desc: 'Trompo pork, pineapple, salsa roja.', price: 450, popular: true },
-          { id: 'i_mt3', name: 'Birria', desc: 'Braised beef, consommé for dipping.', price: 550 },
-          { id: 'i_mt4', name: 'Nopales', desc: 'Grilled cactus, queso fresco, pepitas.', price: 425, tags: ['veg'] },
-        ],
-      },
-      {
-        id: 'c_bigger',
-        name: 'Bigger Plates',
-        items: [
-          { id: 'i_mt5', name: 'Sonoran Burrito', desc: 'Flour tortilla, asada, beans, cheese, guac.', price: 1400, popular: true },
-          { id: 'i_mt6', name: 'Quesabirria Trio', desc: 'Three cheese-crisped tacos, consommé.', price: 1500 },
-        ],
-      },
-      {
-        id: 'c_mtsides',
-        name: 'Sides',
-        items: [
-          { id: 'i_mt7', name: 'Chips & Salsa Roja', desc: 'Fried to order.', price: 500 },
-          { id: 'i_mt8', name: 'Elote', desc: 'Crema, cotija, chile, lime.', price: 550 },
-          { id: 'i_mt9', name: 'Horchata', desc: 'Rice, cinnamon, not too sweet.', price: 400, options: [SIZE] },
-        ],
-      },
+    slug: 'lol-catering', name: 'LOL Catering', label: 'LOL Catering',
+    cuisine: 'Event catering', tagline: 'Catering for parties, offices, and pop-ups',
+    color: '#7B2FF7', icon: 'lol-catering-featured', prep: 48, category: 'Catering',
+    items: [
+      ['Taco Bar — 25 Guests', 'Three proteins, all the fixings', 42500],
+      ['Soul Food Tray — 15 Guests', 'Entrée plus three sides', 30000],
+      ['Breakfast Spread — 20 Guests', 'Pastries, fruit, egg trays, coffee', 26000],
+      ['Dessert Table', 'Assorted sweets for 25', 17500],
     ],
   },
   {
-    id: 'b_saigon',
-    vendorId: 'v_northside',
-    name: 'Saigon Rolling',
-    iconLabel: 'Saigon Rolling',
-    cuisine: 'Vietnamese',
-    tagline: 'Broth simmered eighteen hours, every day.',
-    logo: { template: 'wordmark', bg: '#0B3B34|#08221E', fg: '#F4E9D8', accent: '#C9A227', lines: ['Saigon', 'ROLLING'], face: 'script' },
-    prepMinutes: 16,
-    rating: 4.7,
-    ratingCount: 1560,
-    menu: [
-      {
-        id: 'c_pho',
-        name: 'Phở',
-        items: [
-          { id: 'i_sg1', name: 'Phở Tái', desc: 'Rare steak, rice noodle, eighteen-hour broth.', price: 1500, popular: true, options: [SIZE] },
-          { id: 'i_sg2', name: 'Phở Gà', desc: 'Poached chicken, ginger-forward broth.', price: 1400, options: [SIZE] },
-          { id: 'i_sg3', name: 'Phở Chay', desc: 'Mushroom and charred onion broth.', price: 1350, tags: ['vegan'], options: [SIZE] },
-        ],
-      },
-      {
-        id: 'c_banhmi',
-        name: 'Bánh Mì',
-        items: [
-          { id: 'i_sg4', name: 'Thịt Nướng', desc: 'Grilled pork, pâté, pickled daikon, chili.', price: 1050, popular: true },
-          { id: 'i_sg5', name: 'Gà Nướng', desc: 'Lemongrass chicken, cucumber, cilantro.', price: 1000 },
-          { id: 'i_sg6', name: 'Đậu Hũ', desc: 'Crisped tofu, herb salad, vegan mayo.', price: 950, tags: ['vegan'] },
-        ],
-      },
-      {
-        id: 'c_sgdrinks',
-        name: 'Drinks',
-        items: [
-          { id: 'i_sg7', name: 'Cà Phê Sữa Đá', desc: 'Phin-brewed, condensed milk, ice.', price: 550, popular: true },
-          { id: 'i_sg8', name: 'Fresh Coconut', desc: 'Served in the shell.', price: 650 },
-        ],
-      },
+    slug: 'hotboys-chicken', name: 'HotBoys Chicken', label: 'HotBoys Chicken',
+    cuisine: 'Nashville hot chicken', tagline: 'Nashville-style hot chicken, fried to order',
+    color: '#F2B705', icon: 'hotboys', prep: 15, category: 'Menu',
+    items: [
+      ['Hot Chicken Sandwich', 'Buttermilk thigh, slaw, comeback sauce', 1350],
+      ['3 Piece Tender Combo', 'Tenders, fries, choice of heat', 1500],
+      ['Loaded Hot Fries', 'Chopped chicken, cheese, ranch drizzle', 1100],
+      ['Mac & Cheese', 'Baked, four cheese', 600],
     ],
   },
   {
-    id: 'b_butterpecan',
-    vendorId: 'v_solo',
-    name: 'Butter Pecan Bakery',
-    iconLabel: 'Butter Pecan',
-    cuisine: 'Bakery',
-    tagline: 'Small batch, sold out by two.',
-    logo: { template: 'badge', bg: '#FBF3E8', fg: '#5B2333', accent: '#A9748A', glyph: 'donut', lines: ['BUTTER PECAN'], face: 'slab' },
-    prepMinutes: 5,
-    rating: 4.9,
-    ratingCount: 611,
-    menu: [
-      {
-        id: 'c_pastry',
-        name: 'Pastry',
-        items: [
-          { id: 'i_bp1', name: 'Butter Pecan Roll', desc: 'The one we are named after. Order two.', price: 650, popular: true },
-          { id: 'i_bp2', name: 'Brown Butter Chocolate Chip', desc: 'Sea salt, 36-hour rest.', price: 425, popular: true },
-          { id: 'i_bp3', name: 'Morning Bun', desc: 'Laminated, orange sugar.', price: 550 },
-          { id: 'i_bp4', name: 'Sweet Potato Hand Pie', desc: 'Seasonal. Lard crust.', price: 600 },
-        ],
-      },
-      {
-        id: 'c_wholecake',
-        name: 'Whole Cakes',
-        items: [
-          { id: 'i_bp5', name: '7" Caramel Cake', desc: 'Six layers. 48-hour notice honoured but rarely needed.', price: 5800 },
-          { id: 'i_bp6', name: '7" Red Velvet', desc: 'Cream cheese, cocoa-forward.', price: 5600 },
-        ],
-      },
+    slug: 'butter-pecan', name: 'Butter Pecan', label: 'Butter Pecan',
+    cuisine: 'Ice cream & cobbler', tagline: 'Small-batch ice cream and cobblers',
+    color: '#8A5A2B', icon: 'butter-pecan', prep: 6, category: 'Sweets',
+    items: [
+      ['Butter Pecan Pint', 'The house classic, roasted pecans', 1200],
+      ['Peach Cobbler Cup', 'Warm cobbler, vanilla scoop', 900],
+      ['Banana Pudding', 'Wafers, fresh banana, whipped cream', 800],
+      ['Two Scoop Waffle Cone', 'Any two flavors', 750],
     ],
   },
   {
-    id: 'b_pikepoke',
-    vendorId: 'v_pike',
-    name: 'Pike Street Poke',
-    iconLabel: 'Pike St Poke',
-    cuisine: 'Poke, Hawaiian',
-    tagline: 'Cut in the morning, gone by dinner.',
-    logo: { template: 'glyph-word', bg: '#0E7490|#065666', fg: '#ECFEFF', glyph: 'fish', lines: ['PIKE ST'], face: 'grotesk' },
-    prepMinutes: 8,
-    rating: 4.5,
-    ratingCount: 780,
-    menu: [
-      {
-        id: 'c_bowls',
-        name: 'Bowls',
-        items: [
-          { id: 'i_pp1', name: 'Classic Ahi', desc: 'Shoyu, sweet onion, limu, sushi rice.', price: 1600, popular: true, options: [SIZE] },
-          { id: 'i_pp2', name: 'Spicy Salmon', desc: 'Chili aioli, cucumber, furikake.', price: 1650, popular: true, options: [SIZE] },
-          { id: 'i_pp3', name: 'Tofu Shoyu', desc: 'Marinated tofu, edamame, avocado.', price: 1400, tags: ['vegan'], options: [SIZE] },
-        ],
-      },
-      {
-        id: 'c_ppsides',
-        name: 'Sides',
-        items: [
-          { id: 'i_pp4', name: 'Seaweed Salad', desc: 'Sesame, rice vinegar.', price: 450 },
-          { id: 'i_pp5', name: 'Spam Musubi', desc: 'Two pieces. No apologies.', price: 500, popular: true },
-        ],
-      },
+    slug: 'baked-blooms', name: 'Baked Blooms', label: 'Baked Blooms',
+    cuisine: 'Bakery & flowers', tagline: 'Fresh bakes and flower boxes',
+    color: '#D06A8C', icon: 'baked-blooms', prep: 20, category: 'Bakery',
+    items: [
+      ['Bloom Box + 6 Cookies', 'Seasonal blooms with warm cookies', 4500],
+      ['Half Dozen Cupcakes', "Baker's choice frosting", 2400],
+      ['Cinnamon Roll Tray', 'Four jumbo rolls, cream cheese glaze', 1800],
+      ['Brownie Flight', 'Fudge, walnut, cheesecake swirl', 1200],
     ],
   },
   {
-    id: 'b_greenmob',
-    vendorId: 'v_northside',
-    name: 'Green Mob',
-    iconLabel: 'Green Mob',
-    cuisine: 'Vegan soul food',
-    tagline: 'Plant-based, still heavy.',
-    logo: { template: 'badge', bg: '#0A0A0A', fg: '#4ADE80', accent: '#4ADE80', glyph: 'leaf', lines: ['GREEN MOB'], face: 'condensed' },
-    prepMinutes: 13,
-    rating: 4.7,
-    ratingCount: 1332,
-    menu: [
-      {
-        id: 'c_mains',
-        name: 'Mains',
-        items: [
-          { id: 'i_gm1', name: 'Mob Burger', desc: 'House seitan patty, smoked gouda-style, special sauce.', price: 1400, popular: true, tags: ['vegan'] },
-          { id: 'i_gm2', name: 'Fried "Shrimp" Basket', desc: 'King oyster mushroom, old bay, remoulade.', price: 1550, tags: ['vegan'], popular: true },
-          { id: 'i_gm3', name: 'Philly Mob', desc: 'Seitan steak, peppers, cashew cheese.', price: 1500, tags: ['vegan'] },
-        ],
-      },
-      {
-        id: 'c_gmsides',
-        name: 'Sides',
-        items: [
-          { id: 'i_gm4', name: 'Collards', desc: 'Smoked without the meat.', price: 550, tags: ['vegan'] },
-          { id: 'i_gm5', name: 'Candied Yams', desc: 'Brown sugar, cinnamon.', price: 550, tags: ['vegan'] },
-          { id: 'i_gm6', name: 'Cornbread', desc: 'Two squares, maple butter.', price: 450, tags: ['vegan'] },
-        ],
-      },
+    slug: 'wildfork-foods', name: 'WildFork Foods', label: 'WildFork Foods',
+    cuisine: 'Butcher', tagline: 'Butcher-cut proteins, ready to cook',
+    color: '#C0392B', icon: 'wildfork', prep: 12, category: 'Butcher',
+    items: [
+      ['Ribeye 2-Pack', '12 oz each, hand cut', 3200],
+      ['Chicken Breast Family Pack', '4 lb, boneless skinless', 1900],
+      ['Wild Caught Salmon', 'Two 6 oz fillets', 2100],
+      ['Shrimp Skewers', 'Six garlic herb skewers', 1600],
     ],
   },
   {
-    id: 'b_dailygrind',
-    vendorId: 'v_pike',
-    name: 'Daily Grind Coffee',
-    iconLabel: 'Daily Grind',
-    cuisine: 'Coffee',
-    tagline: 'Single origin, no oat milk surcharge.',
-    logo: { template: 'monogram', bg: '#FAF6F1', fg: '#3E2723', accent: '#A1662F', initials: 'DG', lines: ['COFFEE'], face: 'slab' },
-    prepMinutes: 6,
-    rating: 4.4,
-    ratingCount: 2109,
-    menu: [
-      {
-        id: 'c_espresso',
-        name: 'Espresso',
-        items: [
-          { id: 'i_dg1', name: 'Cortado', desc: 'Equal parts. Served in glass.', price: 475, popular: true },
-          { id: 'i_dg2', name: 'Latte', desc: 'Whole, oat, or almond. No upcharge.', price: 550, popular: true, options: [SIZE] },
-          { id: 'i_dg3', name: 'Americano', desc: 'Double shot, hot water.', price: 400, options: [SIZE] },
-        ],
-      },
-      {
-        id: 'c_brew',
-        name: 'Brew & Cold',
-        items: [
-          { id: 'i_dg4', name: 'Pour Over', desc: 'Ask what is on the bar today.', price: 600 },
-          { id: 'i_dg5', name: 'Cold Brew', desc: '20-hour steep, served over one big cube.', price: 575, popular: true, options: [SIZE] },
-        ],
-      },
+    slug: 'tax-technician', name: 'Tax Technician', label: 'Tax Technician',
+    cuisine: 'Southern soul food', tagline: 'Southern plates and daily specials',
+    color: '#1F6FB2', icon: 'tax-technician', prep: 18, category: 'Plates',
+    review: 'Listed as a tax-prep business but carries a soul-food menu.',
+    items: [
+      ['Fried Catfish Plate', 'Two fillets, two sides, hush puppies', 1800],
+      ['Smothered Pork Chops', 'Onion gravy, rice, greens', 1900],
+      ['Red Beans & Rice', 'Smoked sausage, cornbread', 1400],
+      ['Peach Sweet Tea', 'Brewed fresh daily, 20 oz', 400],
     ],
   },
   {
-    id: 'b_slicehouse',
-    vendorId: 'v_hallgroup',
-    name: 'Slice House 24',
-    iconLabel: 'Slice House',
-    cuisine: 'Pizza by the slice',
-    tagline: 'Open until the dough runs out.',
-    logo: { template: 'glyph-word', bg: '#B91C1C', fg: '#FFF7ED', glyph: 'pizza', lines: ['SLICE 24'], face: 'condensed' },
-    prepMinutes: 7,
-    rating: 4.3,
-    ratingCount: 3402,
-    menu: [
-      {
-        id: 'c_slices',
-        name: 'By the Slice',
-        items: [
-          { id: 'i_sh1', name: 'Cheese Slice', desc: 'Aged mozz, 72-hour cold ferment.', price: 425, popular: true },
-          { id: 'i_sh2', name: 'Pepperoni Cup', desc: 'The kind that curls.', price: 500, popular: true },
-          { id: 'i_sh3', name: 'Grandma Square', desc: 'Sicilian pan, crushed tomato on top.', price: 525 },
-          { id: 'i_sh4', name: 'Hot Honey Soppressata', desc: 'Chili honey drizzle.', price: 575 },
-        ],
-      },
-      {
-        id: 'c_pies',
-        name: 'Whole Pies',
-        items: [
-          { id: 'i_sh5', name: '18" Cheese', desc: 'Eight slices.', price: 2200 },
-          { id: 'i_sh6', name: '18" Pepperoni', desc: 'Eight slices, cup-and-char.', price: 2500, popular: true },
-        ],
-      },
+    slug: 'credit-brothers', name: 'The Credit Brothers', label: 'The Credit Br…',
+    cuisine: 'Barbecue', tagline: 'Wood-smoked barbecue by the pound',
+    color: '#2E7D5B', icon: 'credit-brothers', prep: 18, category: 'Barbecue',
+    review: 'Listed as a credit-repair business but carries a barbecue menu.',
+    items: [
+      ['Brisket Plate', 'Half pound, two sides, pickles', 2200],
+      ['Rib Tips & Links', 'Combo basket, house sauce', 1800],
+      ['Pulled Pork Sandwich', 'Slaw, brioche bun', 1400],
+      ['Baked Beans', 'Brisket burnt ends stirred in', 600],
     ],
   },
   {
-    id: 'b_wafflebar',
-    vendorId: 'v_solo',
-    name: 'Waffles & Cream',
-    iconLabel: 'Waffles & Cr…',
-    cuisine: 'Dessert',
-    tagline: 'Liège dough, pearl sugar, torched to order.',
-    logo: { template: 'glyph-word', bg: '#FDF2F8|#FCE7F3', fg: '#831843', glyph: 'waffle', lines: ['W&C'], face: 'script' },
-    prepMinutes: 10,
-    rating: 4.8,
-    ratingCount: 522,
-    menu: [
-      {
-        id: 'c_waffles',
-        name: 'Waffles',
-        items: [
-          { id: 'i_wc1', name: 'Classic Liège', desc: 'Pearl sugar caramelised on the iron.', price: 700, popular: true },
-          { id: 'i_wc2', name: 'Strawberries & Cream', desc: 'Macerated berries, chantilly.', price: 950, popular: true },
-          { id: 'i_wc3', name: 'Biscoff Crumble', desc: 'Cookie butter, speculoos crumb.', price: 1000 },
-        ],
-      },
-      {
-        id: 'c_scoops',
-        name: 'Soft Serve',
-        items: [
-          { id: 'i_wc4', name: 'Vanilla Bean Cone', desc: 'Real vanilla, visible specks.', price: 550 },
-          { id: 'i_wc5', name: 'Waffle Sundae', desc: 'Waffle, soft serve, hot fudge.', price: 1200, popular: true },
-        ],
-      },
+    slug: 'beastmode', name: 'BEASTmode', label: 'BEASTmode',
+    cuisine: 'High-protein meals', tagline: 'High-protein meals and shakes',
+    color: '#111827', icon: 'beastmode', prep: 14, category: 'Meals',
+    items: [
+      ['Grilled Chicken & Rice Bowl', '8 oz chicken, jasmine rice, broccoli', 1400],
+      ['Steak & Sweet Potato', 'Sirloin, roasted sweet potato, greens', 1800],
+      ['Meal Prep — 5 Meals', 'Macro-tracked, chef prepared', 7000],
+      ['Recovery Shake', 'Post-workout protein blend', 900],
     ],
   },
   {
-    id: 'b_wingcart',
-    vendorId: 'v_mesa',
-    name: 'Wing Cart',
-    iconLabel: 'Wing Cart',
-    cuisine: 'Wings',
-    tagline: 'Fried twice. Sauced on request.',
-    logo: { template: 'monogram', bg: '#111827', fg: '#FBBF24', initials: 'WC', face: 'condensed' },
-    prepMinutes: 15,
-    rating: 4.5,
-    ratingCount: 1877,
-    menu: [
-      {
-        id: 'c_wings',
-        name: 'Wings',
-        items: [
-          { id: 'i_wg1', name: '6 Wings', desc: 'Choice of sauce, ranch or blue cheese.', price: 1000, popular: true, options: [opt('sauce', 'Sauce', [['Buffalo', 0], ['Lemon Pepper', 0], ['Garlic Parm', 0], ['Gochujang', 50], ['Naked', 0]], true)] },
-          { id: 'i_wg2', name: '12 Wings', desc: 'Two sauces if you want them split.', price: 1850, popular: true, options: [opt('sauce12', 'Sauce', [['Buffalo', 0], ['Lemon Pepper', 0], ['Garlic Parm', 0], ['Gochujang', 100], ['Naked', 0]], true, 2)] },
-          { id: 'i_wg3', name: '24 Wings', desc: 'Feeds three. Or one, no judgement.', price: 3400 },
-        ],
-      },
-      {
-        id: 'c_wgsides',
-        name: 'Sides',
-        items: [
-          { id: 'i_wg4', name: 'Seasoned Fries', desc: 'Tossed in wing dust.', price: 500, options: [SIZE] },
-          { id: 'i_wg5', name: 'Celery & Carrots', desc: 'The obligatory vegetables.', price: 300 },
-        ],
-      },
+    slug: 'vegan-mob', name: 'Vegan Mob', label: 'Vegan Mob',
+    cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
+    color: '#3C9D3C', icon: 'vegan-mob', prep: 16, category: 'Menu',
+    items: [
+      ['Mobfather Burrito', 'BBQ jackfruit, mac, greens', 1700],
+      ['Smoked Brisket Plate', 'Two sides, cornbread', 2200],
+      ['Vegan Gumbo', 'Okra, mushroom sausage, rice', 1500],
+      ['Mac & Greens', 'Cashew cheese mac, collards', 1100],
     ],
   },
   {
-    id: 'b_noodlebar',
-    vendorId: 'v_northside',
-    name: 'Third Ave Noodle Bar',
-    iconLabel: '3rd Ave Nood…',
-    cuisine: 'Ramen',
-    tagline: 'Tonkotsu, twelve hours, no shortcuts.',
-    logo: { template: 'badge', bg: '#F8FAFC', fg: '#0F172A', accent: '#DC2626', glyph: 'noodles', lines: ['3RD AVE'], face: 'grotesk' },
-    prepMinutes: 17,
-    rating: 4.6,
-    ratingCount: 1044,
-    menu: [
-      {
-        id: 'c_ramen',
-        name: 'Ramen',
-        items: [
-          { id: 'i_nb1', name: 'Tonkotsu', desc: 'Pork bone broth, chashu, ajitama, scallion.', price: 1700, popular: true },
-          { id: 'i_nb2', name: 'Spicy Miso', desc: 'Ground pork, corn, chili oil.', price: 1750, popular: true, options: [SPICE] },
-          { id: 'i_nb3', name: 'Shoyu Chicken', desc: 'Clear broth, lighter.', price: 1600 },
-          { id: 'i_nb4', name: 'Vegetable Shio', desc: 'Kombu-shiitake broth, seasonal veg.', price: 1550, tags: ['vegan'] },
-        ],
-      },
-      {
-        id: 'c_nbsides',
-        name: 'Small Plates',
-        items: [
-          { id: 'i_nb5', name: 'Pork Gyoza (5)', desc: 'Pan-fried, crispy skirt.', price: 800, popular: true },
-          { id: 'i_nb6', name: 'Ajitama', desc: 'Extra marinated egg.', price: 250 },
-          { id: 'i_nb7', name: 'Cucumber Sunomono', desc: 'Rice vinegar, sesame.', price: 500 },
-        ],
-      },
+    slug: 'boss-burgers', name: 'Boss.Burgers', label: 'Boss.Burgers',
+    cuisine: 'Smash burgers', tagline: 'Smash burgers with attitude',
+    color: '#B3261E', icon: 'boss-burgers', prep: 12, category: 'Burgers',
+    items: [
+      ['Boss Double Smash', 'Two patties, American, boss sauce', 1400],
+      ['Bacon Jam Burger', 'Smoked bacon jam, aged cheddar', 1600],
+      ['Crispy Chicken Burger', 'Pickles, spicy mayo', 1300],
+      ['Seasoned Fries', 'Large, house seasoning', 550],
     ],
   },
   {
-    id: 'b_baja',
-    vendorId: 'v_mesa',
-    name: 'Baja Shrimp Shack',
-    iconLabel: 'Baja Shrimp',
-    cuisine: 'Seafood',
-    tagline: 'Beer-battered, cabbage, crema, lime.',
-    logo: { template: 'glyph-word', bg: '#F2FAFF', fg: '#0369A1', glyph: 'shrimp', lines: ['BAJA'], face: 'slab' },
-    prepMinutes: 12,
-    rating: 4.4,
-    ratingCount: 688,
-    menu: [
-      {
-        id: 'c_bajatacos',
-        name: 'Tacos',
-        items: [
-          { id: 'i_bj1', name: 'Baja Shrimp Taco', desc: 'Beer-battered shrimp, cabbage, chipotle crema.', price: 550, popular: true },
-          { id: 'i_bj2', name: 'Grilled Fish Taco', desc: 'Mahi, pico, avocado.', price: 525 },
-        ],
-      },
-      {
-        id: 'c_baskets',
-        name: 'Baskets',
-        items: [
-          { id: 'i_bj3', name: 'Shrimp Basket', desc: 'Eight pieces, fries, tartar.', price: 1600, popular: true },
-          { id: 'i_bj4', name: 'Fish & Chips', desc: 'Two fillets, thick-cut fries.', price: 1550 },
-          { id: 'i_bj5', name: 'Ceviche Cup', desc: 'Lime-cured, tostada on the side.', price: 1100 },
-        ],
-      },
+    slug: 'ally-virtual', name: 'Ally Virtual', label: 'Ally Virtual',
+    cuisine: 'All-day breakfast', tagline: 'Breakfast all day, coffee bar included',
+    color: '#5A4FCF', icon: 'ally-virtual', prep: 12, category: 'Breakfast',
+    items: [
+      ['Steak & Egg Burrito', 'Potatoes, cheese, salsa roja', 1300],
+      ['Pancake Stack', 'Three buttermilk cakes, whipped butter', 1100],
+      ['Breakfast Sandwich', 'Egg, bacon, cheddar, brioche', 900],
+      ['Iced Latte', 'Double shot, 16 oz', 550],
     ],
   },
   {
-    id: 'b_deli',
-    vendorId: 'v_pike',
-    name: 'Corner Deli Co',
-    iconLabel: 'Corner Deli',
-    cuisine: 'Sandwiches',
-    tagline: 'Sliced to order. Never pre-made.',
-    logo: { template: 'band', bg: '#FEF3C7', fg: '#7C2D12', accent: '#166534', lines: ['CORNER', 'DELI CO'], face: 'condensed' },
-    prepMinutes: 9,
-    rating: 4.7,
-    ratingCount: 1421,
-    menu: [
-      {
-        id: 'c_subs',
-        name: 'Sandwiches',
-        items: [
-          { id: 'i_cd1', name: 'The Italian', desc: 'Capicola, soppressata, provolone, hot peppers.', price: 1350, popular: true, options: [SIZE] },
-          { id: 'i_cd2', name: 'Turkey Club', desc: 'Roast turkey, bacon, lettuce, tomato, mayo.', price: 1250, options: [SIZE] },
-          { id: 'i_cd3', name: 'Chicken Cutlet', desc: 'Breaded cutlet, broccoli rabe, sharp provolone.', price: 1400, popular: true },
-          { id: 'i_cd4', name: 'Eggplant Parm', desc: 'Fried eggplant, marinara, mozzarella.', price: 1200, tags: ['veg'] },
-        ],
-      },
-      {
-        id: 'c_delisides',
-        name: 'Sides',
-        items: [
-          { id: 'i_cd5', name: 'Pasta Salad', desc: 'Half pound.', price: 600 },
-          { id: 'i_cd6', name: 'Kettle Chips', desc: 'Salt and vinegar or plain.', price: 250 },
-          { id: 'i_cd7', name: 'Black Cherry Soda', desc: 'Glass bottle.', price: 350 },
-        ],
-      },
+    slug: 'jenuine-fitness', name: 'Jenuine Fitness', label: 'Jenuine Fitn…',
+    cuisine: 'Bowls & smoothies', tagline: 'Clean bowls, wraps, and smoothies',
+    color: '#E0457B', icon: 'jenuine-fitness', prep: 10, category: 'Menu',
+    review: 'Listed as a fitness business but carries a food menu.',
+    items: [
+      ['Power Greens Bowl', 'Quinoa, kale, avocado, grilled chicken', 1500],
+      ['Turkey Avocado Wrap', 'Spinach tortilla, chipotle aioli', 1300],
+      ['Açaí Bowl', 'Granola, banana, berries, honey', 1200],
+      ['Green Smoothie', 'Spinach, pineapple, ginger, 20 oz', 900],
     ],
   },
   {
-    id: 'b_birria',
-    vendorId: 'v_solo',
-    name: 'Doña Vega Birria',
-    iconLabel: 'Doña Vega',
-    cuisine: 'Birria',
-    tagline: "Marisol's recipe. Unchanged since 1997.",
-    logo: { template: 'wordmark', bg: '#7C2D12|#431407', fg: '#FED7AA', accent: '#FBBF24', lines: ['Doña', 'VEGA'], face: 'script' },
-    prepMinutes: 14,
-    rating: 5.0,
-    ratingCount: 402,
-    menu: [
-      {
-        id: 'c_birria',
-        name: 'Birria',
-        items: [
-          { id: 'i_dv1', name: 'Quesabirria (3)', desc: 'Cheese-crisped, consommé included.', price: 1500, popular: true },
-          { id: 'i_dv2', name: 'Birria Ramen', desc: 'Consommé, noodles, braised beef.', price: 1600, popular: true },
-          { id: 'i_dv3', name: 'Birria Plate', desc: 'Half pound of beef, rice, beans, tortillas.', price: 1900 },
-          { id: 'i_dv4', name: 'Consommé Only', desc: '16oz. For the purists.', price: 700 },
-        ],
-      },
+    slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitc…',
+    cuisine: 'Vietnamese', tagline: 'Vietnamese comfort, made fresh daily',
+    color: '#1E7A6B', icon: 'gao-viet', prep: 16, category: 'Menu',
+    items: [
+      ['Phở Tái', 'Rare steak, 12-hour broth', 1600],
+      ['Bánh Mì Thịt', 'Grilled pork, pâté, pickled veg', 1100],
+      ['Bún Chả', 'Grilled pork, vermicelli, herbs', 1700],
+      ['Fresh Spring Rolls', 'Two rolls, peanut sauce', 800],
     ],
   },
   {
-    id: 'b_bubble',
-    vendorId: 'v_northside',
-    name: 'Half Sugar Tea',
-    iconLabel: 'Half Sugar',
-    cuisine: 'Boba',
-    tagline: 'Tea first, sugar second.',
-    logo: { template: 'monogram', bg: '#DDD6FE|#C4B5FD', fg: '#4C1D95', initials: 'HS', face: 'grotesk' },
-    prepMinutes: 7,
-    rating: 4.6,
-    ratingCount: 2255,
-    menu: [
-      {
-        id: 'c_milktea',
-        name: 'Milk Tea',
-        items: [
-          { id: 'i_hs1', name: 'Classic Milk Tea', desc: 'Assam base, tapioca included.', price: 600, popular: true, options: [SIZE, opt('sugar', 'Sugar', [['0%', 0], ['25%', 0], ['50%', 0], ['100%', 0]], true), opt('ice', 'Ice', [['No ice', 0], ['Less ice', 0], ['Regular', 0]], true)] },
-          { id: 'i_hs2', name: 'Brown Sugar Boba', desc: 'Fresh milk, torched syrup walls.', price: 700, popular: true, options: [SIZE] },
-          { id: 'i_hs3', name: 'Taro Latte', desc: 'Real taro, not powder.', price: 675, options: [SIZE] },
-        ],
-      },
-      {
-        id: 'c_fruit',
-        name: 'Fruit Tea',
-        items: [
-          { id: 'i_hs4', name: 'Passionfruit Green', desc: 'Jasmine green, fresh passionfruit.', price: 625, options: [SIZE] },
-          { id: 'i_hs5', name: 'Strawberry Matcha', desc: 'Ceremonial matcha, strawberry purée.', price: 750, popular: true, options: [SIZE] },
-        ],
-      },
+    slug: 'beasty-h20', name: 'Beasty H20 Co', label: 'Beasty H20 Co',
+    cuisine: 'Alkaline water', tagline: 'Alkaline water for you and your dog',
+    color: '#2C8ED6', icon: 'beasty-h20', prep: 5, category: 'Water',
+    items: [
+      ['Case of 12', '500ml alkaline bottles', 2800],
+      ['5 Gallon Refill', 'Bring your jug or buy one', 1500],
+      ['Pet Bowl Bundle', 'Travel bowl plus 6 bottles', 2400],
+      ['Single Bottle', 'Grab and go', 300],
+    ],
+  },
+  {
+    slug: 'winkydinkydogs', name: 'WinkyDinkyDogs', label: 'WinkyDinkyD…',
+    cuisine: 'Hot dogs', tagline: 'Gourmet hot dogs, loaded up',
+    color: '#E8452C', icon: 'winky-dinky', prep: 10, category: 'Dogs',
+    items: [
+      ['Winky Classic', 'All beef dog, mustard, onions', 800],
+      ['Chili Cheese Dog', 'House chili, cheddar, jalapeño', 1100],
+      ['Bacon Wrapped Street Dog', 'Peppers, onions, crema', 1200],
+      ['Chili Cheese Fries', 'Full basket', 900],
+    ],
+  },
+  {
+    slug: 'tonys-style', name: "Tony's Style", label: "Tony's Style",
+    cuisine: 'New York pizza', tagline: 'New York style slices and heros',
+    color: '#0F172A', icon: 'tonys-style', prep: 14, category: 'Pizza',
+    review: 'Brand name reads as a style/barber trade but carries a pizzeria menu.',
+    items: [
+      ['Cheese Slice', 'Hand-tossed, aged mozzarella', 450],
+      ['Pepperoni Pie', '18 inch, cupped pepperoni', 2600],
+      ['Chicken Parm Hero', 'Marinara, mozzarella, toasted roll', 1400],
+      ['Garlic Knots', 'Six, parmesan and herbs', 700],
+    ],
+  },
+  {
+    slug: 'sharetasking', name: 'Sharetasking', label: 'Sharetasking',
+    cuisine: 'Party platters', tagline: 'Shareable platters for the whole crew',
+    color: '#0EA5A5', icon: 'sharetasking', prep: 25, category: 'Platters',
+    review: 'Listed on the dock as gig work but carries a catering menu.',
+    items: [
+      ['Wing Platter — 24', 'Two sauces, ranch and celery', 4200],
+      ['Slider Tray — 12', 'Beef and chicken sliders', 3800],
+      ['Nacho Mountain', 'Feeds four, queso and pico', 2400],
+      ['Loaded Fry Basket', 'Cheese, bacon, scallions', 1200],
+    ],
+  },
+  {
+    slug: 'gifted-kicks', name: 'Gifted Kicks', label: 'Gifted Kicks',
+    cuisine: 'Cheesesteaks', tagline: 'Philly cheesesteaks and fry baskets',
+    color: '#E11D48', icon: 'gifted-kicks', prep: 13, category: 'Menu',
+    review: 'Brand name reads as sneakers/retail but carries a cheesesteak menu.',
+    items: [
+      ['Classic Cheesesteak', 'Ribeye, onions, provolone', 1500],
+      ['Chicken Cheesesteak', 'Peppers, whiz, long roll', 1400],
+      ['Cheese Fry Basket', 'Whiz and fried onions', 900],
+      ['Fountain Soda', '24 oz, free refill in truck', 300],
+    ],
+  },
+  {
+    slug: 'print-on-demand', name: 'Print On Demand', label: 'Print On De…',
+    cuisine: 'Wood-fired pizza', tagline: 'Wood-fired pizzas made to order',
+    color: '#7C3AED', icon: 'print-on-demand', prep: 15, category: 'Pizza',
+    review: 'Listed as a print/merch business but carries a pizzeria menu.',
+    items: [
+      ['Margherita', 'San Marzano, fresh mozzarella, basil', 1600],
+      ['Spicy Soppressata', 'Hot honey, chili flake', 1900],
+      ['Truffle Mushroom', 'Fontina, thyme, truffle oil', 2000],
+      ['Caesar Salad', 'Shaved parmesan, torn croutons', 900],
+    ],
+  },
+  {
+    slug: 'boba', name: 'Boba', label: 'Boba',
+    cuisine: 'Boba tea', tagline: 'Milk teas, fruit teas, and toppings',
+    color: '#9C6644', icon: 'boba', prep: 8, category: 'Drinks',
+    items: [
+      ['Classic Milk Tea', 'Black tea, tapioca pearls', 650],
+      ['Taro Milk Tea', 'Real taro, creamy', 700],
+      ['Mango Green Tea', 'Fresh mango, popping boba', 700],
+      ['Brown Sugar Latte', 'Fresh milk, warm pearls', 750],
+    ],
+  },
+  {
+    slug: 'masa', name: 'Masa', label: 'Masa',
+    cuisine: 'Mexican', tagline: 'Handmade tortillas and street tacos',
+    color: '#D97706', icon: 'masa', prep: 12, category: 'Menu',
+    items: [
+      ['Taco Trio', 'Three tacos, choice of meat', 1300],
+      ['Quesabirria Plate', 'Three tacos with consomé', 1700],
+      ['Burrito', 'Rice, beans, salsa verde', 1400],
+      ['Chips & Salsa', 'Fresh fried, two salsas', 600],
+    ],
+  },
+  {
+    slug: 'waffles-cream', name: 'Waffles & Cream', label: 'Waffles & Cr…',
+    cuisine: 'Waffles & ice cream', tagline: 'Waffles, cones, and cold scoops',
+    color: '#EAB308', icon: 'waffles-cream', prep: 12, category: 'Menu',
+    items: [
+      ['Chicken & Waffles', 'Crispy tender, maple butter', 1600],
+      ['Waffle Sundae', 'Two scoops, whipped cream', 1200],
+      ['Strawberry Waffle', 'Fresh berries, cream', 1100],
+      ['Milkshake', 'Hand spun, any flavor', 800],
+    ],
+  },
+  {
+    slug: 'high-scores', name: 'High Scores', label: 'High Scores',
+    cuisine: 'Arcade snacks', tagline: 'Arcade snacks, pizza, and slushies',
+    color: '#6D28D9', icon: 'high-scores', prep: 10, category: 'Snacks',
+    items: [
+      ['Pepperoni Personal Pizza', 'Eight inch, crispy crust', 1100],
+      ['Corn Dog Basket', 'Two dogs, curly fries', 1000],
+      ['Soft Pretzel', 'Warm, salted, cheese dip', 700],
+      ['Blue Raspberry Slushie', '24 oz, extra cold', 500],
     ],
   },
 ]
+
+export const BRANDS: Brand[] = SEED.map((s) => ({
+  id: `b_${s.slug.replace(/-/g, '')}`,
+  vendorId: `v_${s.slug.replace(/-/g, '')}`,
+  name: s.name,
+  iconLabel: s.label,
+  cuisine: s.cuisine,
+  tagline: s.tagline,
+  logo: { imageUrl: `/icons/${s.icon}.png`, bg: s.color, fg: '#ffffff' },
+  prepMinutes: s.prep,
+  needsOwnerReview: s.review,
+  menu: [
+    {
+      id: `c_${s.slug.replace(/-/g, '')}`,
+      name: s.category,
+      items: s.items.map(([name, desc, price], i) => ({
+        id: `i_${s.slug.replace(/-/g, '')}_${i + 1}`,
+        name,
+        desc,
+        price,
+      })),
+    },
+  ],
+}))
+
+/** Each business is independent and is paid separately. */
+export const VENDORS: Vendor[] = SEED.map((s) => ({
+  id: `v_${s.slug.replace(/-/g, '')}`,
+  name: s.name,
+  stripeAccountId: null,
+  payoutsEnabled: false,
+}))
 
 export const brandById = (id: string) => BRANDS.find((b) => b.id === id)
 export const vendorById = (id: string) => VENDORS.find((v) => v.id === id)

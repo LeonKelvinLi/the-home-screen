@@ -84,6 +84,22 @@ export function BrandLogo({ logo, size = 60, masked = true }: Props) {
       <g clipPath={masked ? `url(#${clip})` : undefined}>
         <rect width="100" height="100" fill={flat ? from : `url(#${grad})`} />
 
+        {/*
+          Real vendor artwork wins over the generated mark. The supplied PNGs
+          are already square app tiles with their own backgrounds, so they just
+          get clipped to the squircle like any other icon.
+        */}
+        {logo.imageUrl && (
+          <image
+            href={logo.imageUrl}
+            x="0"
+            y="0"
+            width="100"
+            height="100"
+            preserveAspectRatio="xMidYMid slice"
+          />
+        )}
+
         {logo.template === 'monogram' && (
           <>
             <text

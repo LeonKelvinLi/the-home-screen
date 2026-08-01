@@ -1,5 +1,4 @@
 import type { ReactNode } from 'react'
-import { STATUS_H } from '../ios/constants'
 
 /**
  * Shared in-app layout: a large-title nav bar that condenses on scroll, a
@@ -24,7 +23,9 @@ interface Props {
 export function AppChrome({ title, subtitle, onBack, backLabel, right, footer, tint, light, children }: Props) {
   return (
     <div className={`chrome${light ? ' is-light' : ''}`} style={tint ? { ['--tint' as string]: tint } : undefined}>
-      <header className="chrome-nav" style={{ paddingTop: STATUS_H }}>
+      {/* Top inset comes from --status-h so phone mode can swap the painted
+          status bar for the device's real safe-area inset. */}
+      <header className="chrome-nav">
         <div className="chrome-nav-row">
           <div className="chrome-nav-left">
             {onBack && (

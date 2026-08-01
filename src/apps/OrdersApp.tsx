@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { BrandLogo } from '../ios/BrandLogo'
 import { brandById } from '../data/brands'
-import { listOrders } from '../lib/api'
+import { IS_LOCAL_ONLY, listOrders } from '../lib/api'
 import type { PlacedOrder } from '../lib/api'
 import { money } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
@@ -75,6 +75,11 @@ export function OrdersApp({ api }: { api: ShellApi }) {
     <AppChrome title="Orders" onBack={api.closeApp} tint="#3A3EBD">
       <div className="orders-body">
         {stale && <p className="orders-stale">Reconnecting — statuses may be out of date.</p>}
+        {IS_LOCAL_ONLY && orders.length > 0 && (
+          <p className="local-notice">
+            These are saved on this device only. No kitchen has received them yet.
+          </p>
+        )}
         {orders.map((o) => {
           const done = o.tickets.every((t) => t.state === 'collected')
           return (
@@ -96,7 +101,7 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                 </div>
               </header>
 
-              {!done && (
+              {!done && !o.local && (
                 <div className="progress">
                   {STATES.map((s, i) => {
                     // Drive off the SLOWEST kitchen. Using `some` lit the whole

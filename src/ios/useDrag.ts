@@ -20,19 +20,18 @@ export interface DragState {
 }
 
 interface Options {
-  onStart?: (e: PointerEvent | React.PointerEvent) => void
+  onStart?: (e: React.PointerEvent) => void
+  /** Fired once, on the first move that passes the threshold. */
+  onFirstMove?: () => void
   onMove?: (s: DragState) => void
   onEnd?: (s: DragState) => void
+  /**
+   * The gesture was taken away (pointercancel). Callers must snap back, not
+   * commit — see the note on `finish` below.
+   */
+  onCancel?: () => void
   /** Ignore drags that start as a tap and never pass this many px. */
   threshold?: number
-  /**
-   * Capture the pointer on pointerdown instead of on first move.
-   *
-   * Needed for small strips (the home indicator) where the pointer leaves the
-   * element immediately — no pointermove would ever reach it, so lazy capture
-   * would never arm and the gesture would die on pointerdown. Only safe on
-   * elements with no tappable children, since capture retargets pointerup.
-   */
   captureOnDown?: boolean
 }
 
@@ -45,10 +44,24 @@ const SAMPLE_MS = 90
  */
 const STALE_MS = 60
 
-export function useDrag({ onStart, onMove, onEnd, threshold = 0, captureOnDown = false }: Options) {
+export function useDrag({
+  onStart,
+  onFirstMove,
+  onMove,
+  onEnd,
+  onCancel,
+  threshold = 0,
+  captureOnDown = false,
+}: Options) {
   const active = useRef(false)
   const passed = useRef(false)
   const captured = useRef(false)
+  /**
+   * Latching the pointer id is what stops a second finger from hijacking a
+   * live drag. Without it a second touch overwrites `start`, and the first
+   * finger's next move lurches by the distance between the two fingers.
+   */
+  const pointerId = useRef<number | null>(null)
   const start = useRef({ x: 0, y: 0, t: 0 })
   const samples = useRef<{ x: number; y: number; t: number }[]>([])
 
@@ -68,14 +81,27 @@ export function useDrag({ onStart, onMove, onEnd, threshold = 0, captureOnDown =
     return { vx: (last.x - first.x) / dt, vy: (last.y - first.y) / dt }
   }, [])
 
+  const reset = useCallback(() => {
+    active.current = false
+    passed.current = false
+    captured.current = false
+    pointerId.current = null
+    samples.current = []
+  }, [])
+
   const onPointerDown = useCallback(
     (e: React.PointerEvent) => {
+      // Ignore additional fingers while a drag is in flight.
+      if (active.current) return
+
       active.current = true
       passed.current = threshold === 0
       captured.current = false
+      pointerId.current = e.pointerId
       const t = performance.now()
       start.current = { x: e.clientX, y: e.clientY, t }
       samples.current = [{ x: e.clientX, y: e.clientY, t }]
+
       // Default is NOT to capture yet: capturing here would retarget pointerup
       // to this element, and a tap on a child (an app icon) would never fire
       // its own handler. Small strips opt in via captureOnDown.
@@ -90,7 +116,7 @@ export function useDrag({ onStart, onMove, onEnd, threshold = 0, captureOnDown =
 
   const onPointerMove = useCallback(
     (e: React.PointerEvent) => {
-      if (!active.current) return
+      if (!active.current || e.pointerId !== pointerId.current) return
       const t = performance.now()
       const dx = e.clientX - start.current.x
       const dy = e.clientY - start.current.y
@@ -98,10 +124,12 @@ export function useDrag({ onStart, onMove, onEnd, threshold = 0, captureOnDown =
       samples.current.push({ x: e.clientX, y: e.clientY, t })
       if (samples.current.length > 12) samples.current.shift()
 
+      const wasPassed = passed.current
       if (!passed.current) {
         if (Math.hypot(dx, dy) < threshold) return
         passed.current = true
       }
+      if (!wasPassed) onFirstMove?.()
 
       if (!captured.current) {
         captured.current = true
@@ -113,13 +141,12 @@ export function useDrag({ onStart, onMove, onEnd, threshold = 0, captureOnDown =
       const { vx, vy } = velocity()
       onMove?.({ dx, dy, vx, vy, elapsed: t - start.current.t })
     },
-    [onMove, velocity],
+    [onMove, onFirstMove, velocity, threshold],
   )
 
-  const finish = useCallback(
+  const onPointerUp = useCallback(
     (e: React.PointerEvent) => {
-      if (!active.current) return
-      active.current = false
+      if (!active.current || e.pointerId !== pointerId.current) return
       const t = performance.now()
       const dx = e.clientX - start.current.x
       const dy = e.clientY - start.current.y
@@ -127,15 +154,29 @@ export function useDrag({ onStart, onMove, onEnd, threshold = 0, captureOnDown =
       // Also resolve when moves were coalesced away and `passed` never flipped
       // but the pointer clearly travelled — otherwise a fast flick does nothing.
       const travelled = Math.hypot(dx, dy) >= threshold
-      if (passed.current || travelled) onEnd?.({ dx, dy, vx, vy, elapsed: t - start.current.t })
+      const shouldEnd = passed.current || travelled
+      const elapsed = t - start.current.t
+      reset()
+      if (shouldEnd) onEnd?.({ dx, dy, vx, vy, elapsed })
     },
-    [onEnd, velocity, threshold],
+    [onEnd, velocity, threshold, reset],
   )
 
-  return {
-    onPointerDown,
-    onPointerMove,
-    onPointerUp: finish,
-    onPointerCancel: finish,
-  }
+  /**
+   * pointercancel is NOT a release. iOS fires it routinely — most importantly
+   * when a touch starting near the bottom edge gets claimed by the system home
+   * gesture. Treating it as a release meant an interrupted swipe committed:
+   * the app force-closed, or the home screen turned a page, on a gesture the
+   * user never finished.
+   */
+  const onPointerCancel = useCallback(
+    (e: React.PointerEvent) => {
+      if (!active.current || e.pointerId !== pointerId.current) return
+      reset()
+      onCancel?.()
+    },
+    [onCancel, reset],
+  )
+
+  return { onPointerDown, onPointerMove, onPointerUp, onPointerCancel }
 }

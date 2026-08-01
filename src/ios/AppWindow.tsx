@@ -1,5 +1,6 @@
-import { ICON_RADIUS_RATIO, SCREEN_H, SCREEN_RADIUS, SCREEN_W } from './constants'
+import { ICON_RADIUS_RATIO, SCREEN_RADIUS } from './constants'
 import type { IconRect } from './AppIcon'
+import type { ScreenSize } from './ScreenSize'
 
 /**
  * Geometry for the app-open animation.
@@ -15,14 +16,21 @@ export interface WindowTransform {
   opacity: number
 }
 
-export function collapsed(origin: IconRect): WindowTransform {
-  const s = origin.size / SCREEN_W
-  const left = origin.left
-  const top = origin.top + origin.size / 2 - (SCREEN_H * s) / 2
+function geometry(origin: IconRect, screen: ScreenSize) {
+  const s = origin.width / screen.w
+  return {
+    s,
+    left: origin.left,
+    top: origin.top + origin.height / 2 - (screen.h * s) / 2,
+  }
+}
+
+export function collapsed(origin: IconRect, screen: ScreenSize): WindowTransform {
+  const { s, left, top } = geometry(origin, screen)
   return {
     transform: `translate3d(${left}px, ${top}px, 0) scale(${s})`,
     // Rendered radius is multiplied by the scale, so divide it back out.
-    borderRadius: (origin.size * ICON_RADIUS_RATIO) / s,
+    borderRadius: (origin.width * ICON_RADIUS_RATIO) / s,
     opacity: 0,
   }
 }
@@ -34,18 +42,20 @@ export const expanded: WindowTransform = {
 }
 
 /** p=0 is fully open, p=1 is fully collapsed onto the icon. */
-export function lerp(origin: IconRect, p: number): WindowTransform {
-  const c = collapsed(origin)
-  const s = origin.size / SCREEN_W
-  const left = origin.left
-  const top = origin.top + origin.size / 2 - (SCREEN_H * s) / 2
+export function lerp(origin: IconRect, screen: ScreenSize, p: number): WindowTransform {
+  const { s, left, top } = geometry(origin, screen)
 
   const sc = 1 + (s - 1) * p
-  const tx = left * p
-  const ty = top * p
   return {
-    transform: `translate3d(${tx}px, ${ty}px, 0) scale(${sc})`,
-    borderRadius: SCREEN_RADIUS + (c.borderRadius - SCREEN_RADIUS) * p,
+    transform: `translate3d(${left * p}px, ${top * p}px, 0) scale(${sc})`,
+    /*
+      Interpolate the RENDERED radius, then divide by the current scale.
+      Lerping the pre-division value instead left the corner up to 31% too
+      round through the middle of the collapse — correct only at the endpoints,
+      which is exactly where it is hardest to notice and easiest to ship.
+    */
+    borderRadius:
+      (SCREEN_RADIUS * (1 - p) + origin.width * ICON_RADIUS_RATIO * p) / sc,
     // Content only starts fading in the last third of the collapse.
     opacity: p > 0.66 ? 1 - (p - 0.66) / 0.34 : 1,
   }

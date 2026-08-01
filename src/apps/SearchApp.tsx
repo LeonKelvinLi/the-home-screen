@@ -92,7 +92,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
                 <span>
                   <strong>{b.name}</strong>
                   <em>
-                    {b.cuisine} · ★ {b.rating.toFixed(1)} · {b.prepMinutes} min
+                    {b.cuisine} · {b.prepMinutes} min
                   </em>
                 </span>
               </button>

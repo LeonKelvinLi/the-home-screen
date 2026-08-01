@@ -51,7 +51,12 @@ export const MAX_QTY = 50
 
 const STORAGE_KEY = 'fb.cart.v1'
 
-const initialState: State = { lines: [], tipBps: 1800, fulfilment: 'pickup' }
+/*
+  No pre-selected tip on pickup. An 18% default turned a $9.25 counter-collection
+  order into $12.19, with the tip row below the fold and only the inflated total
+  on the sticky bar. Switching to delivery opts into 15%.
+*/
+const initialState: State = { lines: [], tipBps: 0, fulfilment: 'pickup' }
 
 /**
  * Restore the saved cart, dropping anything that is no longer orderable.
@@ -131,7 +136,17 @@ function reducer(state: State, action: Action): State {
     case 'tip':
       return { ...state, tipBps: action.bps }
     case 'fulfilment':
-      return { ...state, fulfilment: action.mode }
+      return {
+        ...state,
+        fulfilment: action.mode,
+        // Only move the tip if the customer has not set one themselves.
+        tipBps:
+          state.tipBps === 0 && action.mode === 'delivery'
+            ? 1500
+            : action.mode === 'pickup' && state.tipBps === 1500
+              ? 0
+              : state.tipBps,
+      }
   }
 }
 

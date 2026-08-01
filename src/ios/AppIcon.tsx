@@ -2,10 +2,28 @@ import { useRef } from 'react'
 import type { ReactNode } from 'react'
 import { ICON_SIZE } from './constants'
 
+/** Width and height are separate so non-square origins (the Spotlight pill) work. */
 export interface IconRect {
   left: number
   top: number
-  size: number
+  width: number
+  height: number
+}
+
+/** Measure an element in the fake screen's own unscaled coordinate space. */
+export function rectInScreen(el: HTMLElement): IconRect | null {
+  const screen = el.closest('.screen') as HTMLElement | null
+  if (!screen) return null
+  const s = screen.getBoundingClientRect()
+  const r = el.getBoundingClientRect()
+  // The device may be CSS-scaled to fit the window; undo that when measuring.
+  const k = screen.offsetWidth === 0 ? 1 : s.width / screen.offsetWidth
+  return {
+    left: (r.left - s.left) / k,
+    top: (r.top - s.top) / k,
+    width: r.width / k,
+    height: r.height / k,
+  }
 }
 
 interface Props {
@@ -22,24 +40,13 @@ export function AppIcon({ icon, label, badge, onOpen, hideLabel }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
   const startY = useRef(0)
+  /** Set by a pointer-driven open so the synthesised click does not re-fire. */
+  const handledByPointer = useRef(false)
 
-  const handleUp = (e: React.PointerEvent) => {
-    if (!pressed.current) return
-    pressed.current = false
-    // A swipe that began on an icon is a page swipe, not a tap.
-    if (Math.abs(e.clientY - startY.current) > 8) return
-
-    const el = ref.current
-    const screen = el?.closest('.screen') as HTMLElement | null
-    const tile = el?.querySelector('.icon-tile') as HTMLElement | null
-    if (!screen || !tile) return
-
-    const s = screen.getBoundingClientRect()
-    const r = tile.getBoundingClientRect()
-    // The device is CSS-scaled to fit the window; undo that when measuring.
-    const k = screen.offsetWidth === 0 ? 1 : s.width / screen.offsetWidth
-
-    onOpen({ left: (r.left - s.left) / k, top: (r.top - s.top) / k, size: r.width / k })
+  const open = () => {
+    const tile = ref.current?.querySelector('.icon-tile') as HTMLElement | null
+    const rect = tile && rectInScreen(tile)
+    if (rect) onOpen(rect)
   }
 
   return (
@@ -48,15 +55,40 @@ export function AppIcon({ icon, label, badge, onOpen, hideLabel }: Props) {
       className="app-icon"
       onPointerDown={(e) => {
         pressed.current = true
+        handledByPointer.current = false
         startY.current = e.clientY
       }}
       onPointerCancel={() => (pressed.current = false)}
-      onPointerUp={handleUp}
+      onPointerUp={(e) => {
+        if (!pressed.current) return
+        pressed.current = false
+        // A swipe that began on an icon is a page swipe, not a tap.
+        if (Math.abs(e.clientY - startY.current) > 8) return
+        handledByPointer.current = true
+        open()
+      }}
+      /*
+        onClick as well as onPointerUp: pointer events alone left icons dead to
+        the keyboard and to VoiceOver, whose activation delivers a synthesised
+        click with no pointer sequence at all. The ref guard keeps a real mouse
+        tap from opening the app twice.
+      */
+      onClick={() => {
+        if (handledByPointer.current) {
+          handledByPointer.current = false
+          return
+        }
+        open()
+      }}
       aria-label={label}
     >
       <span className="icon-tile" style={{ width: ICON_SIZE, height: ICON_SIZE }}>
         {icon}
-        {badge ? <span className="icon-badge">{badge > 99 ? '99+' : badge}</span> : null}
+        {badge ? (
+          <span className="icon-badge" aria-label={`${badge} in cart`}>
+            {badge > 99 ? '99+' : badge}
+          </span>
+        ) : null}
       </span>
       {!hideLabel && <span className="icon-label">{label}</span>}
     </button>

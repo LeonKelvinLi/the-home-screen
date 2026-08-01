@@ -7,6 +7,7 @@ import { collapsed, expanded, lerp } from './AppWindow'
 import type { WindowTransform } from './AppWindow'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
+import { ScreenSizeProvider, useMeasuredScreen } from './ScreenSize'
 import { appById } from '../apps/registry'
 import {
   CLOSE_MS,
@@ -32,32 +33,83 @@ interface Props {
   renderApp: (appId: string, api: ShellApi) => ReactNode
 }
 
-/** Centre of the screen, used when an app is opened without a tapped icon. */
-const CENTER: IconRect = { left: SCREEN_W / 2 - 30, top: SCREEN_H / 2 - 30, size: 60 }
+/**
+ * True when the page IS the phone rather than a phone drawn inside a desktop
+ * window. In that mode every piece of fake hardware is dropped — no bezel, no
+ * Dynamic Island, no painted status bar — because the device already has real
+ * ones and drawing a second set on top looks like a toy.
+ */
+function useIsPhone(): boolean {
+  const [phone, setPhone] = useState(
+    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 480px)').matches,
+  )
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 480px)')
+    const on = () => setPhone(mq.matches)
+    mq.addEventListener('change', on)
+    return () => mq.removeEventListener('change', on)
+  }, [])
+  return phone
+}
 
 export function Device({ renderApp }: Props) {
   const [phase, setPhase] = useState<Phase>('home')
   const [appId, setAppId] = useState<string | null>(null)
-  const [origin, setOrigin] = useState<IconRect>(CENTER)
+  const [origin, setOrigin] = useState<IconRect | null>(null)
   const [style, setStyle] = useState<WindowTransform>(expanded)
   const [animating, setAnimating] = useState(false)
   const [recents, setRecents] = useState<string[]>([])
 
-  const dragging = useRef(false)
-  const timers = useRef<number[]>([])
+  const screenRef = useRef<HTMLDivElement>(null)
+  const screen = useMeasuredScreen(screenRef)
+  const isPhone = useIsPhone()
 
+  /** Where each app was last opened from, so it collapses back into its own icon. */
+  const origins = useRef(new Map<string, IconRect>())
+  const timers = useRef<number[]>([])
+  /** Bumped on every transition; stale timer callbacks check it and bail. */
+  const generation = useRef(0)
+
+  const centre = useCallback(
+    (): IconRect => ({ left: screen.w / 2 - 30, top: screen.h / 2 - 30, width: 60, height: 60 }),
+    [screen.w, screen.h],
+  )
+
+  const clearTimers = useCallback(() => {
+    timers.current.forEach(clearTimeout)
+    timers.current = []
+  }, [])
+
+  useEffect(() => clearTimers, [clearTimers])
+
+  /**
+   * Schedule work that belongs to the CURRENT transition only.
+   *
+   * Without the generation check, closing an app and immediately opening
+   * another let the close timer fire mid-open: it unmounted the new app and
+   * left the home screen blurred and scaled with nothing on top of it, stuck
+   * until another app was opened.
+   */
   const after = useCallback((ms: number, fn: () => void) => {
-    const t = window.setTimeout(fn, ms)
+    const gen = generation.current
+    const t = window.setTimeout(() => {
+      if (generation.current !== gen) return
+      fn()
+    }, ms)
     timers.current.push(t)
   }, [])
 
-  useEffect(() => () => timers.current.forEach(clearTimeout), [])
-
   const openApp = useCallback(
-    (id: string, rect: IconRect = CENTER) => {
+    (id: string, rect?: IconRect) => {
+      generation.current++
+      clearTimers()
+
+      const from = rect ?? origins.current.get(id) ?? centre()
+      origins.current.set(id, from)
+
       setAppId(id)
-      setOrigin(rect)
-      setStyle(collapsed(rect))
+      setOrigin(from)
+      setStyle(collapsed(from, screen))
       setAnimating(false)
       setPhase('opening')
       setRecents((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8))
@@ -74,143 +126,171 @@ export function Device({ renderApp }: Props) {
         }),
       )
     },
-    [after],
+    [after, clearTimers, centre, screen],
   )
 
   const closeApp = useCallback(() => {
     if (!appId) return
+    generation.current++
+    clearTimers()
+
+    const from = origin ?? origins.current.get(appId) ?? centre()
     setPhase('closing')
     setAnimating(true)
-    setStyle({ ...collapsed(origin), opacity: 0 })
+    setStyle({ ...collapsed(from, screen), opacity: 0 })
     after(CLOSE_MS, () => {
       setAnimating(false)
       setAppId(null)
       setPhase('home')
       setStyle(expanded)
     })
-  }, [appId, origin, after])
+  }, [appId, origin, after, clearTimers, centre, screen])
 
-  const toSwitcher = useCallback(() => {
-    setAnimating(false)
-    setPhase('switcher')
-  }, [])
+  const snapBack = useCallback(() => {
+    generation.current++
+    clearTimers()
+    setAnimating(true)
+    setStyle(expanded)
+    after(CLOSE_MS, () => setAnimating(false))
+  }, [after, clearTimers])
 
   /** Home-indicator gesture: flick up closes, slow drag up opens the switcher. */
   const homeGesture = useDrag({
     threshold: 6,
     captureOnDown: true,
-    onStart: () => {
-      dragging.current = true
-      setAnimating(false)
-    },
+    // Deliberately NOT on start: a bare tap used to cancel the running open
+    // animation, snapping the app from 85% to full size in a single frame.
+    onFirstMove: () => setAnimating(false),
     onMove: ({ dy }) => {
-      if (!dragging.current || !appId) return
+      if (!appId || !origin) return
       const p = Math.max(0, Math.min(1, -dy / 420))
-      setStyle(lerp(origin, p))
+      setStyle(lerp(origin, screen, p))
     },
+    onCancel: snapBack,
     onEnd: ({ dy, vy }) => {
-      dragging.current = false
       if (!appId) return
       const up = -dy
       const speed = -vy
 
       if (up > 40 && speed < SWITCHER_VELOCITY && speed > -0.3) {
+        generation.current++
+        clearTimers()
+        setAnimating(false)
         setStyle(expanded)
-        toSwitcher()
+        setPhase('switcher')
         return
       }
       if (up > DISMISS_COMMIT_PX || speed > DISMISS_VELOCITY) {
         closeApp()
         return
       }
-      setAnimating(true)
-      setStyle(expanded)
-      after(CLOSE_MS, () => setAnimating(false))
+      snapBack()
     },
   })
 
   const api: ShellApi = {
-    openApp: (id) => openApp(id, CENTER),
+    openApp: (id) => openApp(id),
     closeApp,
     currentAppId: appId,
   }
 
   const app = appId ? appById(appId) : null
-  const showApp = appId !== null && phase !== 'switcher'
+  const inSwitcher = phase === 'switcher'
+  const mounted = appId !== null
   // On close the home screen comes back forward as the app shrinks into it.
   const homeReceding = phase === 'opening' || phase === 'open'
 
   return (
-    <div className="device">
-      <div className="device-frame">
-        <div className="screen" style={{ width: SCREEN_W, height: SCREEN_H }}>
-          <HomeScreen onOpen={openApp} receding={homeReceding} />
+    <ScreenSizeProvider value={screen}>
+      <div className={`device${isPhone ? ' is-phone' : ''}`}>
+        <div className="device-frame">
+          <div
+            className="screen"
+            ref={screenRef}
+            style={isPhone ? undefined : { width: SCREEN_W, height: SCREEN_H }}
+          >
+            <HomeScreen onOpen={openApp} receding={homeReceding} />
 
-          {phase === 'switcher' && (
-            <AppSwitcher
-              recents={recents}
-              renderApp={renderApp}
-              api={api}
-              onPick={(id) => {
-                const a = appById(id)
-                if (!a) return
-                setPhase('open')
-                setAppId(id)
-                setStyle(expanded)
-                setRecents((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8))
-              }}
-              onClose={(id) => setRecents((r) => r.filter((x) => x !== id))}
-              onDismiss={() => {
-                setAppId(null)
-                setPhase('home')
-                setStyle(expanded)
-              }}
-            />
-          )}
+            {inSwitcher && (
+              <AppSwitcher
+                recents={recents}
+                renderApp={renderApp}
+                api={api}
+                onPick={(id) => {
+                  generation.current++
+                  clearTimers()
+                  setAppId(id)
+                  // Without this the app collapsed into whichever icon was
+                  // tapped most recently, which could be a different app.
+                  setOrigin(origins.current.get(id) ?? centre())
+                  setStyle(expanded)
+                  setAnimating(false)
+                  setPhase('open')
+                  setRecents((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8))
+                }}
+                onClose={(id) => setRecents((r) => r.filter((x) => x !== id))}
+                onDismiss={() => {
+                  generation.current++
+                  clearTimers()
+                  setAppId(null)
+                  setPhase('home')
+                  setStyle(expanded)
+                }}
+              />
+            )}
 
-          {showApp && app && (
-            <div
-              className="app-window"
-              style={{
-                transform: style.transform,
-                borderRadius: style.borderRadius,
-                transition: animating
-                  ? `transform ${phase === 'closing' ? CLOSE_MS : OPEN_MS}ms ${EASE_IOS}, border-radius ${
-                      phase === 'closing' ? CLOSE_MS : OPEN_MS
-                    }ms ${EASE_IOS}`
-                  : 'none',
-              }}
-            >
+            {mounted && app && (
+              /*
+                Kept mounted (just hidden) while the switcher is up. Unmounting
+                threw away the app's scroll position, route and half-filled
+                checkout fields every time the switcher was opened.
+              */
               <div
-                className="app-content"
+                className="app-window"
+                aria-hidden={inSwitcher}
                 style={{
-                  opacity: style.opacity,
-                  transition: animating ? `opacity ${OPEN_MS * 0.5}ms linear` : 'none',
+                  width: screen.w,
+                  height: screen.h,
+                  transform: style.transform,
+                  borderRadius: style.borderRadius,
+                  visibility: inSwitcher ? 'hidden' : 'visible',
+                  transition: animating
+                    ? `transform ${phase === 'closing' ? CLOSE_MS : OPEN_MS}ms ${EASE_IOS}, border-radius ${
+                        phase === 'closing' ? CLOSE_MS : OPEN_MS
+                      }ms ${EASE_IOS}`
+                    : 'none',
                 }}
               >
-                {renderApp(appId!, api)}
+                <div
+                  className="app-content"
+                  style={{
+                    opacity: style.opacity,
+                    transition: animating ? `opacity ${OPEN_MS * 0.5}ms linear` : 'none',
+                  }}
+                >
+                  {renderApp(appId!, api)}
+                </div>
               </div>
+            )}
+
+            {/* Real phones already have a status bar. Drawing a second one on
+                top of it is the fastest way to look like a mockup. */}
+            {!isPhone && (
+              <div className="status-layer">
+                <StatusBar dark={mounted && !inSwitcher ? app?.statusDark : false} />
+              </div>
+            )}
+
+            <div
+              className="home-indicator-zone"
+              style={{ pointerEvents: mounted && !inSwitcher ? 'auto' : 'none' }}
+              {...(mounted && !inSwitcher ? homeGesture : {})}
+            >
+              {!isPhone && <div className="home-indicator" />}
             </div>
-          )}
-
-          <div className="status-layer">
-            <StatusBar dark={showApp ? app?.statusDark : false} />
-          </div>
-
-          {/*
-            No onClick here: a drag that starts and ends on this strip also
-            fires a click, which would instantly dismiss the switcher the drag
-            just opened. The switcher is dismissed by its own backdrop.
-          */}
-          <div
-            className="home-indicator-zone"
-            style={{ pointerEvents: showApp ? 'auto' : 'none' }}
-            {...(showApp ? homeGesture : {})}
-          >
-            <div className="home-indicator" />
           </div>
         </div>
       </div>
-    </div>
+    </ScreenSizeProvider>
   )
 }
