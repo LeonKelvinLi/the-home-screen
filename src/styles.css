@@ -184,6 +184,16 @@ textarea {
   filter: blur(3px);
 }
 
+/*
+  Fully covered by an app. `content-visibility: hidden` drops it from painting
+  and compositing entirely — otherwise the blur, 35 icon drop-shadows and two
+  backdrop blurs are all still recomputed behind every scroll frame.
+*/
+.home.is-hidden {
+  content-visibility: hidden;
+  pointer-events: none;
+}
+
 .home-wallpaper {
   position: absolute;
   inset: 0;
@@ -482,9 +492,8 @@ textarea {
 }
 
 .chrome.is-light .chrome-nav {
-  background: rgba(249, 249, 249, 0.92);
+  background: #f9f9f9;
   color: var(--ink);
-  backdrop-filter: blur(20px);
 }
 
 .chrome-nav-row {
@@ -541,17 +550,19 @@ textarea {
 .chrome-body {
   flex: 1 1 auto;
   overflow-y: auto;
-  overscroll-behavior: contain;
+  overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
+  /* Promote to its own layer so scrolling never repaints the chrome around it. */
+  transform: translateZ(0);
+  /* Clear the sticky category bar when jumping to a section. */
+  scroll-padding-top: 52px;
 }
 
 .chrome-footer {
   flex: 0 0 auto;
   padding: 10px 16px calc(10px + var(--bottom-h));
-  background: rgba(249, 249, 249, 0.94);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #f9f9f9;
   border-top: 1px solid var(--line);
 }
 
@@ -624,11 +635,15 @@ textarea {
   gap: 8px;
   padding: 10px 16px;
   overflow-x: auto;
-  background: rgba(242, 242, 247, 0.94);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
+  /*
+    Opaque, not a backdrop blur. This bar is sticky over the scrolling menu, so
+    a live blur is re-rasterised on every scroll frame — and the body behind it
+    is flat #f2f2f7, so the blur was buying nothing visible.
+  */
+  background: #f2f2f7;
   border-bottom: 1px solid var(--line);
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .cat-tabs::-webkit-scrollbar {

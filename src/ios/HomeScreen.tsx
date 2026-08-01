@@ -11,9 +11,11 @@ interface Props {
   onOpen: (appId: string, rect: IconRect) => void
   /** Home icons fade and push back while an app opens on top of them. */
   receding: boolean
+  /** Fully covered by an app — skip painting it altogether. */
+  hidden?: boolean
 }
 
-export function HomeScreen({ onOpen, receding }: Props) {
+export function HomeScreen({ onOpen, receding, hidden }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
   const [page, setPage] = useState(0)
@@ -71,7 +73,7 @@ export function HomeScreen({ onOpen, receding }: Props) {
   const offset = -page * screen.w + dx
 
   return (
-    <div className={`home${receding ? ' is-receding' : ''}`}>
+    <div className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''}`}>
       {/*
         Wallpaper parallax: iOS drifts the wallpaper a fraction of the page
         distance rather than pinning it, which is what gives the home screen

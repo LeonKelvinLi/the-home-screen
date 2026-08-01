@@ -199,6 +199,19 @@ export function Device({ renderApp }: Props) {
   const mounted = appId !== null
   // On close the home screen comes back forward as the app shrinks into it.
   const homeReceding = phase === 'opening' || phase === 'open'
+  /*
+    Once the app fully covers the screen the home screen is invisible but still
+    composited — a blur filter, a drop-shadow per icon and two backdrop blurs,
+    all recomputed behind every scroll. Taking it out of painting entirely is
+    the single biggest scrolling win.
+  */
+  const homeHidden = phase === 'open'
+  /*
+    A transform on the scroll container's ancestor disables native momentum
+    scrolling in iOS Safari. While the app is open and settled there is no
+    animation to drive, so drop the transform and let the platform scroll.
+  */
+  const settled = phase === 'open' && !animating
 
   return (
     <ScreenSizeProvider value={screen}>
@@ -209,7 +222,7 @@ export function Device({ renderApp }: Props) {
             ref={screenRef}
             style={isPhone ? undefined : { width: SCREEN_W, height: SCREEN_H }}
           >
-            <HomeScreen onOpen={openApp} receding={homeReceding} />
+            <HomeScreen onOpen={openApp} receding={homeReceding} hidden={homeHidden} />
 
             {inSwitcher && (
               <AppSwitcher
@@ -251,8 +264,11 @@ export function Device({ renderApp }: Props) {
                 style={{
                   width: screen.w,
                   height: screen.h,
-                  transform: style.transform,
-                  borderRadius: style.borderRadius,
+                  transform: settled ? undefined : style.transform,
+                  borderRadius: settled ? undefined : style.borderRadius,
+                  // will-change only while a tween is actually running; holding
+                  // it permanently pins a compositor layer for no benefit.
+                  willChange: animating ? 'transform, border-radius' : 'auto',
                   visibility: inSwitcher ? 'hidden' : 'visible',
                   transition: animating
                     ? `transform ${phase === 'closing' ? CLOSE_MS : OPEN_MS}ms ${EASE_IOS}, border-radius ${
