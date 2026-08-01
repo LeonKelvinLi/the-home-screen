@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { brandById, vendorById } from '../data/brands'
 import { money, useCart } from '../store/cart'
-import { placeOrder } from '../lib/api'
+import { newIdempotencyKey, placeOrder } from '../lib/api'
 import type { PlacedOrder } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
 
@@ -21,6 +21,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
   const [placing, setPlacing] = useState(false)
   const [order, setOrder] = useState<PlacedOrder | null>(null)
   const [error, setError] = useState<string | null>(null)
+  const idemKey = useRef(newIdempotencyKey())
 
   const t = cart.totals
   const valid = name.trim().length > 1 && phone.replace(/\D/g, '').length >= 10
@@ -35,7 +36,13 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
         fulfilment: cart.fulfilment,
         tipBps: cart.tipBps,
         customer: { name: name.trim(), phone: phone.trim() },
+        // Stable for the life of this checkout screen, so a retry after a
+        // timeout cannot print a second set of kitchen tickets.
+        idempotencyKey: idemKey.current,
       })
+      // placeOrder records the id locally before returning, so the order is
+      // recoverable in Orders even if this screen is torn down mid-flight
+      // (swiping home during the request unmounts the whole app window).
       setOrder(placed)
       cart.clear()
     } catch (e) {

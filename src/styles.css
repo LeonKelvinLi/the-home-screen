@@ -1973,3 +1973,21 @@ textarea {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Shown when order polling is failing, so a blank list is not mistaken for
+   "you have no orders". */
+.orders-stale {
+  margin: 0 0 12px;
+  padding: 9px 12px;
+  border-radius: 10px;
+  background: #fff2e0;
+  color: #b45309;
+  font-size: 12.5px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* The item sheet stays mounted through its slide-out; stop it eating taps. */
+.sheet-layer.is-closing {
+  pointer-events: none;
+}

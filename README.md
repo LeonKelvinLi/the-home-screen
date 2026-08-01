@@ -74,10 +74,34 @@ and it is the fastest way to make a fake home screen look fake.
 SF Pro; Inter is the bundled fallback. Logo faces are named explicitly so a mark
 never changes shape depending on the device.
 
+## Kitchen API
+
+Each vendor gets a bearer token, printed on boot in development:
+
+```bash
+curl -H "Authorization: Bearer vt_…" localhost:8787/api/orders
+curl -X POST localhost:8787/api/tickets/<id>/state \
+     -H "Authorization: Bearer vt_…" -H 'content-type: application/json' \
+     -d '{"state":"cooking"}'
+```
+
+`GET /api/orders` returns only that vendor's tickets. Transitions are
+forward-only (`queued → cooking → ready → collected`) and use compare-and-swap,
+so two terminals cannot both advance the same ticket.
+
+Customers never hit that endpoint — `GET /api/orders/:id` is the public lookup,
+and the unguessable order id is the capability. The customer-facing shape omits
+`platformFee` and `vendorPayout` entirely.
+
 ## Known gaps before this takes real money
 
-- `GET /api/orders` returns every order on the platform with no authentication.
-- No rate limiting on order creation.
-- The offline fallback in `src/lib/api.ts` fabricates a local order when the
-  server is unreachable, so a customer can see a confirmation for an order no
-  kitchen received. Fine for a demo, wrong for production.
+- **No payment.** Refuses to boot with `NODE_ENV=production` unless
+  `STRIPE_SECRET_KEY` is set, so it cannot silently dispatch food against no
+  authorization — but the Stripe call itself is still not written.
+- **No customer accounts.** Order history is the set of ids on the device.
+- **No rate limiting** on order creation. Bounded by `MAX_LINES` and
+  `MAX_ORDER_TOTAL`, not by request rate.
+- **Vendor tokens are static** and printed to stdout in dev. Fine for a
+  commissary, not for self-serve vendor onboarding.
+- **Tax is one flat 8.75%.** Real marketplaces need per-vendor rates, since each
+  vendor is usually seller of record for their own lines.

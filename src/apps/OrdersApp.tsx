@@ -11,15 +11,38 @@ const STATES = ['queued', 'cooking', 'ready', 'collected'] as const
 
 export function OrdersApp({ api }: { api: ShellApi }) {
   const [orders, setOrders] = useState<PlacedOrder[] | null>(null)
+  const [stale, setStale] = useState(false)
 
   useEffect(() => {
     let alive = true
-    listOrders().then((o) => alive && setOrders(o))
-    // Kitchens advance tickets on their own; poll so the customer sees it.
-    const t = window.setInterval(() => listOrders().then((o) => alive && setOrders(o)), 6000)
+    let timer = 0
+
+    /*
+      Self-chaining rather than setInterval: a poll slower than the interval
+      used to overlap, and an older response landing after a newer one made
+      tickets visibly regress from `ready` back to `cooking`.
+    */
+    const tick = async () => {
+      let result
+      try {
+        result = await listOrders()
+      } catch {
+        if (alive) setStale(true)
+        if (alive) timer = window.setTimeout(tick, 6000)
+        return
+      }
+      if (!alive) return
+      // Never let a failed lookup overwrite good data with an empty list.
+      if (!result.degraded || result.orders.length > 0) setOrders(result.orders)
+      else setOrders((prev) => prev ?? [])
+      setStale(result.degraded)
+      timer = window.setTimeout(tick, 6000)
+    }
+
+    tick()
     return () => {
       alive = false
-      clearInterval(t)
+      clearTimeout(timer)
     }
   }, [])
 
@@ -51,6 +74,7 @@ export function OrdersApp({ api }: { api: ShellApi }) {
   return (
     <AppChrome title="Orders" onBack={api.closeApp} tint="#3A3EBD">
       <div className="orders-body">
+        {stale && <p className="orders-stale">Reconnecting — statuses may be out of date.</p>}
         {orders.map((o) => {
           const done = o.tickets.every((t) => t.state === 'collected')
           return (
@@ -69,16 +93,18 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                 </div>
                 <div className="order-right">
                   <span className="order-total">{money(o.total)}</span>
-                  {o.offline && <em className="order-offline">local</em>}
                 </div>
               </header>
 
               {!done && (
                 <div className="progress">
-                  {STATES.map((s) => {
-                    const reached = o.tickets.some((t) => STATES.indexOf(t.state) >= STATES.indexOf(s))
+                  {STATES.map((s, i) => {
+                    // Drive off the SLOWEST kitchen. Using `some` lit the whole
+                    // bar as soon as one of three kitchens was ready, telling
+                    // the customer to collect food nobody had started.
+                    const slowest = Math.min(...o.tickets.map((t) => STATES.indexOf(t.state)))
                     return (
-                      <span key={s} className={`progress-step${reached ? ' is-on' : ''}`}>
+                      <span key={s} className={`progress-step${i <= slowest ? ' is-on' : ''}`}>
                         {s}
                       </span>
                     )

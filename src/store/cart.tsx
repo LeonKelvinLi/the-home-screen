@@ -42,24 +42,65 @@ type Action =
   | { type: 'clear' }
   | { type: 'tip'; bps: number }
   | { type: 'fulfilment'; mode: 'pickup' | 'delivery' }
-  | { type: 'hydrate'; state: State }
 
 const TAX_BPS = 875 // 8.75%
 const DELIVERY_FEE = 399
 const SERVICE_BPS = 500
+/** Mirrors the server's per-line clamp. */
+export const MAX_QTY = 50
 
 const STORAGE_KEY = 'fb.cart.v1'
 
 const initialState: State = { lines: [], tipBps: 1800, fulfilment: 'pickup' }
 
-/** Same item + same options collapses into one line, like every real cart. */
+/**
+ * Restore the saved cart, dropping anything that is no longer orderable.
+ *
+ * A persisted cart outlives the catalogue: an item removed from the menu would
+ * otherwise sit in the cart forever and make every checkout fail server-side.
+ * Also defends against a corrupted `lines` value, which used to crash the whole
+ * app on every load with no way out but clearing site data.
+ */
+function loadState(): State {
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (!raw) return initialState
+    const parsed = JSON.parse(raw) as Partial<State>
+
+    const lines = Array.isArray(parsed.lines)
+      ? parsed.lines.filter(
+          (l): l is CartLine =>
+            !!l &&
+            typeof l.lineId === 'string' &&
+            typeof l.itemId === 'string' &&
+            typeof l.qty === 'number' &&
+            l.qty > 0 &&
+            Array.isArray(l.options) &&
+            !!brandById(l.brandId),
+        )
+      : []
+
+    return {
+      lines,
+      tipBps: typeof parsed.tipBps === 'number' ? parsed.tipBps : initialState.tipBps,
+      fulfilment: parsed.fulfilment === 'delivery' ? 'delivery' : 'pickup',
+    }
+  } catch {
+    return initialState
+  }
+}
+
+/**
+ * Same item + same options collapses into one line, like every real cart.
+ * Keyed on brandId too: item ids are unique across the seed catalogue today,
+ * but the moment two vendors both define `fries` the lines would merge and one
+ * kitchen would get a ticket the other gets paid for.
+ */
 const signature = (l: Omit<CartLine, 'lineId'>) =>
-  `${l.itemId}:${l.options.map((o) => o.choiceId).sort().join(',')}:${l.note ?? ''}`
+  `${l.brandId}:${l.itemId}:${l.options.map((o) => o.choiceId).sort().join(',')}:${l.note ?? ''}`
 
 function reducer(state: State, action: Action): State {
   switch (action.type) {
-    case 'hydrate':
-      return action.state
     case 'add': {
       const sig = signature(action.line)
       const existing = state.lines.find((l) => signature(l) === sig)
@@ -75,8 +116,9 @@ function reducer(state: State, action: Action): State {
       return { ...state, lines: [...state.lines, { ...action.line, lineId }] }
     }
     case 'qty': {
+      // Server clamps qty to 50; quoting 60 and ordering 50 would misprice.
       const next = state.lines
-        .map((l) => (l.lineId === action.lineId ? { ...l, qty: l.qty + action.delta } : l))
+        .map((l) => (l.lineId === action.lineId ? { ...l, qty: Math.min(MAX_QTY, l.qty + action.delta) } : l))
         .filter((l) => l.qty > 0)
       return { ...state, lines: next }
     }
@@ -168,16 +210,14 @@ interface CartApi extends State {
 const CartContext = createContext<CartApi | null>(null)
 
 export function CartProvider({ children }: { children: ReactNode }) {
-  const [state, dispatch] = useReducer(reducer, initialState)
-
-  useEffect(() => {
-    try {
-      const raw = localStorage.getItem(STORAGE_KEY)
-      if (raw) dispatch({ type: 'hydrate', state: { ...initialState, ...JSON.parse(raw) } })
-    } catch {
-      /* corrupted cart is not worth crashing over */
-    }
-  }, [])
+  /*
+    Hydrating in the initializer rather than an effect. As an effect it raced
+    the persist effect below: both ran in the same commit, so persist wrote the
+    still-empty initial state over the saved cart before the hydrate dispatch
+    was processed. Under StrictMode's double-invoke that wiped the cart on every
+    single reload. An initializer is pure and runs before the first paint.
+  */
+  const [state, dispatch] = useReducer(reducer, undefined, loadState)
 
   useEffect(() => {
     try {

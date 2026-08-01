@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import type { Brand, MenuItem } from '../data/brands'
 import { money, useCart } from '../store/cart'
 import type { CartOption } from '../store/cart'
@@ -23,6 +23,9 @@ export function ItemSheet({
   const [note, setNote] = useState('')
   const [picked, setPicked] = useState<Record<string, string[]>>({})
   const [closing, setClosing] = useState(false)
+  const closeTimer = useRef(0)
+
+  useEffect(() => () => clearTimeout(closeTimer.current), [])
 
   const groups = item.options ?? []
 
@@ -50,12 +53,15 @@ export function ItemSheet({
   const unit = item.price + chosen.reduce((s, o) => s + o.price, 0)
 
   const dismiss = () => {
+    if (closing) return
     setClosing(true)
-    window.setTimeout(onClose, 260)
+    closeTimer.current = window.setTimeout(onClose, 260)
   }
 
   const add = () => {
-    if (missing.length > 0) return
+    // The sheet stays mounted for a 260ms slide-out, so without this guard a
+    // fast double-tap on Add silently doubles the quantity.
+    if (closing || missing.length > 0) return
     cart.add({
       brandId: brand.id,
       itemId: item.id,
@@ -111,6 +117,7 @@ export function ItemSheet({
             <textarea
               className="sheet-note"
               rows={2}
+              maxLength={240}
               placeholder="Allergies, no onion, extra sauce…"
               value={note}
               onChange={(e) => setNote(e.target.value)}

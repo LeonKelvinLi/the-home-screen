@@ -7,6 +7,7 @@ export const db = new Database(join(here, '..', '..', 'data.db'))
 
 db.pragma('journal_mode = WAL')
 db.pragma('foreign_keys = ON')
+db.pragma('busy_timeout = 5000')
 
 /**
  * Multi-tenant from the first migration. `vendor_id` on every row that carries
@@ -20,6 +21,7 @@ CREATE TABLE IF NOT EXISTS vendors (
   stripe_account_id TEXT,
   payouts_enabled   INTEGER NOT NULL DEFAULT 0,
   fee_bps           INTEGER NOT NULL DEFAULT 1000,
+  api_token         TEXT,
   created_at        INTEGER NOT NULL
 );
 
@@ -38,6 +40,7 @@ CREATE TABLE IF NOT EXISTS orders (
   eta_minutes    INTEGER NOT NULL,
   payment_intent TEXT,
   payment_state  TEXT NOT NULL DEFAULT 'mock',
+  idempotency_key TEXT,
   created_at     INTEGER NOT NULL
 );
 
@@ -71,4 +74,37 @@ CREATE INDEX IF NOT EXISTS idx_tickets_order  ON tickets(order_id);
 CREATE INDEX IF NOT EXISTS idx_tickets_vendor ON tickets(vendor_id, state);
 CREATE INDEX IF NOT EXISTS idx_lines_ticket   ON ticket_lines(ticket_id);
 CREATE INDEX IF NOT EXISTS idx_orders_created ON orders(created_at DESC);
+`)
+
+/**
+ * Additive migrations. SQLite has no `ADD COLUMN IF NOT EXISTS`, so check
+ * pragma first — this file runs on every boot against an existing data.db.
+ */
+function addColumn(table: string, column: string, decl: string) {
+  const cols = db.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[]
+  if (!cols.some((c) => c.name === column)) {
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${decl}`)
+  }
+}
+
+// Tax and tip are collected per order but owed per vendor. Without these the
+// platform silently keeps both — see the allocation in index.ts.
+addColumn('tickets', 'tax', 'INTEGER NOT NULL DEFAULT 0')
+addColumn('tickets', 'tip', 'INTEGER NOT NULL DEFAULT 0')
+// The kitchen simulator must measure from the last transition, not from order
+// creation, or it stampedes over whatever a real kitchen just entered.
+addColumn('tickets', 'state_changed_at', 'INTEGER NOT NULL DEFAULT 0')
+addColumn('orders', 'idempotency_key', 'TEXT')
+addColumn('vendors', 'api_token', 'TEXT')
+
+/*
+  Indexes on migrated columns must be created AFTER the ALTERs above. On an
+  existing data.db the CREATE TABLE is a no-op, so an index declared alongside
+  it would reference a column that does not exist yet.
+*/
+db.exec(`
+  UPDATE tickets SET state_changed_at = created_at WHERE state_changed_at = 0;
+  CREATE INDEX IF NOT EXISTS idx_tickets_open ON tickets(state, state_changed_at);
+  CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_idem ON orders(idempotency_key)
+    WHERE idempotency_key IS NOT NULL;
 `)
