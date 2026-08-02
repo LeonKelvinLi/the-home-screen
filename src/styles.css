@@ -201,12 +201,19 @@ textarea {
   content: '';
   position: absolute;
   inset: 0;
+  /*
+    Night cityscape: the sky behind the icon grid is already dark, so the top
+    barely needs a scrim. Weight goes to the illuminated skyline band and the
+    light trails under the dock — the only bright areas white text has to
+    survive. Over-darkening a night photo just turns it grey.
+  */
   background: linear-gradient(
     180deg,
-    rgba(4, 12, 26, 0.42) 0%,
-    rgba(4, 12, 26, 0.28) 42%,
-    rgba(4, 12, 26, 0.14) 62%,
-    rgba(4, 12, 26, 0.34) 100%
+    rgba(0, 0, 0, 0.12) 0%,
+    rgba(0, 0, 0, 0.14) 34%,
+    rgba(0, 0, 0, 0.26) 56%,
+    rgba(0, 0, 0, 0.3) 76%,
+    rgba(0, 0, 0, 0.42) 100%
   );
 }
 
