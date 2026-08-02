@@ -49,13 +49,20 @@ function uid(logo: Logo): string {
 
 interface Props {
   logo: Logo
-  /** Rendered pixel size. */
+  /** Rendered pixel size. Ignored when `fill` is set. */
   size?: number
   /** Icon tiles get the squircle; in-app headers can render the mark alone. */
   masked?: boolean
+  /**
+   * Stretch to the parent instead of `size`. Only the home grid wants this,
+   * where the tile edge changes with the device class. Applying it globally
+   * made every in-list logo resolve 100% against its flex row — a 44px mark
+   * rendered at 337px and overflowed the screen.
+   */
+  fill?: boolean
 }
 
-export function BrandLogo({ logo, size = 60, masked = true }: Props) {
+export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Props) {
   const { from, to, flat } = parseBg(logo.bg)
   const id = uid(logo)
   const face = FACE[logo.face ?? 'grotesk']
@@ -68,9 +75,11 @@ export function BrandLogo({ logo, size = 60, masked = true }: Props) {
       width={size}
       height={size}
       viewBox="0 0 100 100"
-      /* width:100% lets the tile drive the size on the home grid, where the
-         icon edge changes with the device class. */
-      style={{ display: 'block', overflow: 'visible', width: '100%', height: '100%' }}
+      style={
+        fill
+          ? { display: 'block', overflow: 'visible', width: '100%', height: '100%' }
+          : { display: 'block', overflow: 'visible' }
+      }
       aria-hidden="true"
     >
       <defs>

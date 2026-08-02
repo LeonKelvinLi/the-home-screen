@@ -32,7 +32,15 @@ const TILES: Record<SystemGlyph, [string, string]> = {
   gear: ['#9AA0A6', '#6E7378'],
 }
 
-export function SystemIcon({ glyph, size = ICON_SIZE }: { glyph: SystemGlyph; size?: number }) {
+export function SystemIcon({
+  glyph,
+  size = ICON_SIZE,
+  fill = false,
+}: {
+  glyph: SystemGlyph
+  size?: number
+  fill?: boolean
+}) {
   const [a, b] = TILES[glyph]
   const gid = `sys-${glyph}`
   return (
@@ -40,7 +48,11 @@ export function SystemIcon({ glyph, size = ICON_SIZE }: { glyph: SystemGlyph; si
       width={size}
       height={size}
       viewBox="0 0 100 100"
-      style={{ display: 'block', borderRadius: size * 0.2237, width: '100%', height: '100%' }}
+      style={{
+        display: 'block',
+        borderRadius: size * 0.2237,
+        ...(fill ? { width: '100%', height: '100%' } : null),
+      }}
       aria-hidden="true"
     >
       <defs>

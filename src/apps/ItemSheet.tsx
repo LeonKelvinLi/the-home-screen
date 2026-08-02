@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useDrag } from '../ios/useDrag'
 import type { Brand, MenuItem } from '../data/brands'
 import { money, useCart } from '../store/cart'
 import type { CartOption } from '../store/cart'
@@ -23,6 +24,8 @@ export function ItemSheet({
   const [note, setNote] = useState('')
   const [picked, setPicked] = useState<Record<string, string[]>>({})
   const [closing, setClosing] = useState(false)
+  const [dragY, setDragY] = useState(0)
+  const [dragging, setDragging] = useState(false)
   const closeTimer = useRef(0)
 
   useEffect(() => () => clearTimeout(closeTimer.current), [])
@@ -58,6 +61,27 @@ export function ItemSheet({
     closeTimer.current = window.setTimeout(onClose, 260)
   }
 
+  /*
+    Drag-to-dismiss. The grabber was decorative — it only had an onClick, so
+    dragging it 200px did nothing, which is the first thing anyone tries on a
+    sheet. Downward only, with resistance if you pull up.
+  */
+  const sheetDrag = useDrag({
+    threshold: 6,
+    captureOnDown: true,
+    onStart: () => setDragging(true),
+    onMove: ({ dy }) => setDragY(dy > 0 ? dy : dy * 0.2),
+    onCancel: () => {
+      setDragging(false)
+      setDragY(0)
+    },
+    onEnd: ({ dy, vy }) => {
+      setDragging(false)
+      setDragY(0)
+      if (dy > 110 || vy > 0.6) dismiss()
+    },
+  })
+
   const add = () => {
     // The sheet stays mounted for a 260ms slide-out, so without this guard a
     // fast double-tap on Add silently doubles the quantity.
@@ -76,9 +100,21 @@ export function ItemSheet({
 
   return (
     <div className={`sheet-layer${closing ? ' is-closing' : ''}`}>
-      <div className="sheet-scrim" onClick={dismiss} />
-      <div className="sheet">
-        <div className="sheet-grabber" onClick={dismiss} />
+      <div
+        className="sheet-scrim"
+        onClick={dismiss}
+        style={dragging ? { opacity: Math.max(0.15, 0.4 - dragY / 900) } : undefined}
+      />
+      <div
+        className="sheet"
+        style={{
+          transform: dragY ? `translate3d(0, ${dragY}px, 0)` : undefined,
+          transition: dragging ? 'none' : undefined,
+        }}
+      >
+        <div className="sheet-grab-area" {...sheetDrag}>
+          <div className="sheet-grabber" />
+        </div>
         <div className="sheet-scroll">
           <h2 className="sheet-title">{item.name}</h2>
           <p className="sheet-desc">{item.desc}</p>
