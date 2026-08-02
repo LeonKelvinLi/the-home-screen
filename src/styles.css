@@ -573,9 +573,12 @@ textarea {
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
-  /* Promote to its own layer so scrolling never repaints the chrome around it. */
-  transform: translateZ(0);
-  /* Clear the sticky category bar when jumping to a section. */
+  /*
+    Deliberately NOT promoted with translateZ(0). Forcing a layer on a scroll
+    container can push iOS Safari onto main-thread scrolling and kill the
+    momentum, which reads as lag on a real phone even though a desktop profile
+    looks fine. The chrome around it is opaque now, so there is nothing to gain.
+  */
   scroll-padding-top: 52px;
 }
 
@@ -2219,10 +2222,14 @@ textarea {
   Showing the inline title and the large title at the same time is the tell
   that a web app is imitating the bar rather than reproducing it.
 */
+/*
+  Opaque, not a live blur. This bar sits over the scroll area, so a
+  backdrop-filter here is re-rasterised on every scroll frame — the same cost
+  already removed from the category bar and the cart bar. The content behind is
+  flat #f2f2f7, so the blur bought nothing visible.
+*/
 .nav-bar.is-collapsed {
-  background: rgba(249, 249, 249, 0.82);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: #f9f9f9;
   box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.18);
 }
 
@@ -2280,7 +2287,7 @@ textarea {
   overscroll-behavior-y: contain;
   -webkit-overflow-scrolling: touch;
   touch-action: pan-y;
-  transform: translateZ(0);
+  /* See .chrome-body — no layer promotion on a scroll container. */
   padding-bottom: 28px;
 }
 
@@ -2453,9 +2460,7 @@ textarea {
   flex: 0 0 auto;
   display: flex;
   padding-bottom: calc(var(--bottom-h) + var(--gesture-h));
-  background: rgba(249, 249, 249, 0.82);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: #f9f9f9;
   box-shadow: 0 -0.5px 0 rgba(0, 0, 0, 0.18);
 }
 
@@ -2727,7 +2732,6 @@ textarea {
 .navstack-layer {
   position: absolute;
   inset: 0;
-  will-change: transform;
 }
 
 /* The incoming screen casts a shadow on its leading edge, as UIKit does. */
@@ -2747,9 +2751,7 @@ textarea {
 .nav-footer {
   flex: 0 0 auto;
   padding: 10px 16px calc(10px + var(--bottom-h) + var(--gesture-h));
-  background: rgba(249, 249, 249, 0.94);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: #f9f9f9;
   box-shadow: 0 -0.5px 0 rgba(0, 0, 0, 0.18);
 }
 

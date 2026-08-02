@@ -34,6 +34,8 @@ const COLLAPSE_AT = 28
 export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, children }: Props) {
   const [collapsed, setCollapsed] = useState(false)
   const raf = useRef(0)
+  /** Mirrors `collapsed` so the scroll handler can bail without a re-render. */
+  const collapsedRef = useRef(false)
 
   return (
     <div className="nav-screen">
@@ -62,7 +64,10 @@ export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, 
           if (raf.current) return
           raf.current = requestAnimationFrame(() => {
             raf.current = 0
-            setCollapsed(top > COLLAPSE_AT)
+            const next = top > COLLAPSE_AT
+            if (next === collapsedRef.current) return
+            collapsedRef.current = next
+            setCollapsed(next)
           })
         }}
       >

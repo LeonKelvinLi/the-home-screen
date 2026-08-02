@@ -97,18 +97,11 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
       className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
     >
       {/*
-        Wallpaper parallax: iOS drifts the wallpaper a fraction of the page
-        distance rather than pinning it, which is what gives the home screen
-        depth. The scale must cover the total drift or the far page exposes a
-        bare strip down the edge.
+        Pinned, not parallaxed. The drift was a nice idea on a real device but
+        on a page it reads as the background sliding around under the icons,
+        and it forced a scale-up that softened the photo for no gain.
       */}
-      <div
-        className="home-wallpaper"
-        style={{
-          transform: `translate3d(${offset * 0.06}px,0,0) scale(${1 + 0.13 * (pages.length - 1)})`,
-          transition: dragging ? 'none' : `transform ${PAGE_MS}ms ${EASE_IOS}`,
-        }}
-      />
+      <div className="home-wallpaper" />
 
       <div
         className="home-pager"
