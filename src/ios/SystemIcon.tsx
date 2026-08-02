@@ -1,35 +1,68 @@
 import { ICON_SIZE } from './constants'
 
 /**
- * Icons for the platform's own apps (cart, orders, rewards, help).
- * Deliberately drawn like iOS system apps — flat gradient tile, one white
- * glyph — so they read as part of the OS rather than as another restaurant.
+ * Icons for the platform's own apps.
+ *
+ * Built to the craft standard Apple's system icons use rather than copying
+ * their artwork: a soft vertical gradient (never flat), a specular highlight
+ * across the top third, a glyph carrying a real drop shadow so it sits *on*
+ * the tile instead of being punched out of it, and optical sizing — the glyph
+ * occupies ~54% of the tile, which is what stops it looking cramped or
+ * oversized next to a real app.
+ *
+ * The glyph shapes are ours. Apple's specific icon artwork is theirs.
  */
 
 export type SystemGlyph = 'bag' | 'receipt' | 'star' | 'help' | 'search' | 'person' | 'gear'
 
-const PATHS: Record<SystemGlyph, string> = {
-  bag: 'M30 26h40a4 4 0 0 1 4 3.6l5 42A6 6 0 0 1 73 78H27a6 6 0 0 1-6-6.4l5-42A4 4 0 0 1 30 26Zm5 8-4 36h38l-4-36ZM38 22a12 12 0 0 1 24 0v10a3 3 0 0 1-6 0V22a6 6 0 0 0-12 0v10a3 3 0 0 1-6 0Z',
-  receipt:
-    'M28 14h44a3 3 0 0 1 3 3v68a3 3 0 0 1-4.5 2.6L60 80l-10 6-10-6-10.5 7.6A3 3 0 0 1 25 85V17a3 3 0 0 1 3-3Zm3 6v59l7-5a3 3 0 0 1 3 0l9 5 9-5a3 3 0 0 1 3 0l7 5V20Zm7 11h24a3 3 0 0 1 0 6H38a3 3 0 0 1 0-6Zm0 14h24a3 3 0 0 1 0 6H38a3 3 0 0 1 0-6Zm0 14h16a3 3 0 0 1 0 6H38a3 3 0 0 1 0-6Z',
-  star: 'm50 16 10.3 21.4 23.2 3.2-16.9 16.3 4.1 23.3L50 69.2 29.3 80.2l4.1-23.3L16.5 40.6l23.2-3.2Z',
-  help: 'M50 12a38 38 0 1 1 0 76 38 38 0 0 1 0-76Zm0 8a30 30 0 1 0 0 60 30 30 0 0 0 0-60Zm0 44a4.5 4.5 0 1 1 0 9 4.5 4.5 0 0 1 0-9Zm0-32c7.7 0 14 5.6 14 12.6 0 5.2-2.6 7.9-6.6 10.6-3 2-3.9 3-3.9 5.3a3.5 3.5 0 0 1-7 0c0-5 2.4-7.6 6.6-10.4 3.2-2.2 3.9-3.3 3.9-5.5 0-3-3.1-5.6-7-5.6s-7 2.6-7 5.6a3.5 3.5 0 0 1-7 0C36 37.6 42.3 32 50 32Z',
-  search:
-    'M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z',
-  person:
-    'M50 18a17 17 0 1 1 0 34 17 17 0 0 1 0-34Zm0 8a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 32c16 0 29 9.5 29 21.2A2.8 2.8 0 0 1 76 82H24a2.8 2.8 0 0 1-3-2.8C21 67.5 34 58 50 58Zm0 8c-11 0-19.5 5.4-21 10h42c-1.5-4.6-10-10-21-10Z',
-  gear:
-    'M44.4 12h11.2a3 3 0 0 1 2.9 2.3l1.4 5.7a31 31 0 0 1 5.6 3.3l5.6-1.8a3 3 0 0 1 3.5 1.4l5.6 9.7a3 3 0 0 1-.6 3.7l-4.3 4a31 31 0 0 1 0 6.5l4.3 4a3 3 0 0 1 .6 3.7l-5.6 9.7a3 3 0 0 1-3.5 1.4l-5.6-1.8a31 31 0 0 1-5.6 3.3l-1.4 5.7a3 3 0 0 1-2.9 2.3H44.4a3 3 0 0 1-2.9-2.3l-1.4-5.7a31 31 0 0 1-5.6-3.3l-5.6 1.8a3 3 0 0 1-3.5-1.4l-5.6-9.7a3 3 0 0 1 .6-3.7l4.3-4a31 31 0 0 1 0-6.5l-4.3-4a3 3 0 0 1-.6-3.7l5.6-9.7a3 3 0 0 1 3.5-1.4l5.6 1.8a31 31 0 0 1 5.6-3.3l1.4-5.7A3 3 0 0 1 44.4 12ZM50 36a14 14 0 1 0 0 28 14 14 0 0 0 0-28Z',
+/**
+ * Gear outline with rounded teeth, generated rather than hand-drawn so the
+ * teeth stay evenly spaced and the two gears in the Settings icon match.
+ */
+function gear(cx: number, cy: number, rOuter: number, rInner: number, teeth: number): string {
+  const pts: string[] = []
+  const step = (Math.PI * 2) / teeth
+  // Each tooth is a trapezoid: narrow at the tip, wider at the root.
+  const tipHalf = step * 0.19
+  const rootHalf = step * 0.31
+
+  for (let i = 0; i < teeth; i++) {
+    const a = i * step
+    const p = (r: number, ang: number) =>
+      `${(cx + r * Math.cos(ang)).toFixed(2)} ${(cy + r * Math.sin(ang)).toFixed(2)}`
+    pts.push(`${i === 0 ? 'M' : 'L'}${p(rInner, a - rootHalf)}`)
+    pts.push(`L${p(rOuter, a - tipHalf)}`)
+    pts.push(`L${p(rOuter, a + tipHalf)}`)
+    pts.push(`L${p(rInner, a + rootHalf)}`)
+    // Arc along the root circle to the next tooth.
+    pts.push(`A${rInner} ${rInner} 0 0 1 ${p(rInner, a + step - rootHalf)}`)
+  }
+  return `${pts.join('')}Z`
 }
 
+/*
+  Both gears must sit inside the squircle, not the bounding box — a tooth that
+  clears the 100x100 viewBox can still be sliced off by the corner curve.
+  The pair is offset so the small gear meshes into the large one's upper right.
+*/
+const GEAR_MAIN = gear(45, 56, 30, 22.5, 9)
+const GEAR_SMALL = gear(69, 32, 14, 10.5, 8)
+
+/** Tile gradients, using iOS system colour pairs. */
 const TILES: Record<SystemGlyph, [string, string]> = {
-  bag: ['#2F6BFF', '#1B47D6'],
-  receipt: ['#5B5FE8', '#3A3EBD'],
-  star: ['#FF9F0A', '#F06A00'],
-  help: ['#48484A', '#2C2C2E'],
-  search: ['#30D158', '#1DA345'],
-  person: ['#64748B', '#3F4A5A'],
-  gear: ['#9AA0A6', '#6E7378'],
+  bag: ['#3B8BFF', '#0A5BE0'],
+  receipt: ['#7A78F0', '#4B49CC'],
+  star: ['#FFB340', '#F58500'],
+  help: ['#FFD426', '#FF9F0A'],
+  search: ['#8E9298', '#5A5E63'],
+  person: ['#F5F2ED', '#DCD5CA'],
+  gear: ['#B9BDC3', '#75797E'],
+}
+
+/** Glyph colour. Most are white; the light tiles need a dark mark. */
+const INK: Partial<Record<SystemGlyph, string>> = {
+  person: '#7D7469',
+  help: '#7A4B00',
 }
 
 export function SystemIcon({
@@ -42,7 +75,9 @@ export function SystemIcon({
   fill?: boolean
 }) {
   const [a, b] = TILES[glyph]
-  const gid = `sys-${glyph}`
+  const ink = INK[glyph] ?? '#fff'
+  const uid = `sys-${glyph}`
+
   return (
     <svg
       width={size}
@@ -56,14 +91,94 @@ export function SystemIcon({
       aria-hidden="true"
     >
       <defs>
-        <linearGradient id={gid} x1="0" y1="0" x2="0" y2="1">
+        <linearGradient id={`${uid}-bg`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={a} />
           <stop offset="100%" stopColor={b} />
         </linearGradient>
+
+        {/* Specular highlight: brightest at the very top, gone by 45%. */}
+        <linearGradient id={`${uid}-gloss`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stopColor="#fff" stopOpacity="0.26" />
+          <stop offset="45%" stopColor="#fff" stopOpacity="0.04" />
+          <stop offset="100%" stopColor="#fff" stopOpacity="0" />
+        </linearGradient>
+
+        {/* Depth under the glyph. Apple's marks are never flat cut-outs. */}
+        <filter id={`${uid}-shadow`} x="-25%" y="-25%" width="150%" height="150%">
+          <feDropShadow dx="0" dy="1.4" stdDeviation="1.6" floodColor="#000" floodOpacity="0.18" />
+        </filter>
+
+        {/* Gear teeth catch light on the upper edge. */}
+        <linearGradient id={`${uid}-metal`} x1="0" y1="0" x2="0.25" y2="1">
+          <stop offset="0%" stopColor="#ffffff" />
+          <stop offset="100%" stopColor="#E4E6E9" />
+        </linearGradient>
       </defs>
-      <rect width="100" height="100" fill={`url(#${gid})`} />
-      <path d={PATHS[glyph]} fill="#fff" />
-      <rect width="100" height="50" fill="#fff" opacity="0.07" />
+
+      <rect width="100" height="100" fill={`url(#${uid}-bg)`} />
+      <rect width="100" height="100" fill={`url(#${uid}-gloss)`} />
+
+      <g filter={`url(#${uid}-shadow)`} fill={ink}>
+        {glyph === 'bag' && (
+          <>
+            {/* Handle drawn as a stroke so it reads at 60px, body as a solid. */}
+            <path
+              d="M38 34v-3a12 12 0 0 1 24 0v3"
+              fill="none"
+              stroke={ink}
+              strokeWidth="6"
+              strokeLinecap="round"
+            />
+            <path d="M29 34h42a5 5 0 0 1 5 4.6l3.4 33A7 7 0 0 1 72.4 79H27.6a7 7 0 0 1-7-7.4l3.4-33a5 5 0 0 1 5-4.6Z" />
+            <path
+              d="M29 34h42a5 5 0 0 1 5 4.6l3.4 33A7 7 0 0 1 72.4 79H27.6a7 7 0 0 1-7-7.4l3.4-33a5 5 0 0 1 5-4.6Z"
+              fill="#000"
+              opacity="0.07"
+              transform="translate(0 3)"
+              style={{ mixBlendMode: 'multiply' }}
+            />
+          </>
+        )}
+
+        {glyph === 'receipt' && (
+          <>
+            <path d="M28 20h44a4 4 0 0 1 4 4v54a3 3 0 0 1-4.6 2.5L61 74l-11 7-11-7-10.4 6.5A3 3 0 0 1 24 78V24a4 4 0 0 1 4-4Z" />
+            <g fill={a} opacity="0.9">
+              <rect x="34" y="33" width="32" height="5.5" rx="2.75" />
+              <rect x="34" y="45" width="32" height="5.5" rx="2.75" />
+              <rect x="34" y="57" width="21" height="5.5" rx="2.75" />
+            </g>
+          </>
+        )}
+
+        {glyph === 'star' && (
+          <path d="M50 19.5a3 3 0 0 1 2.7 1.7l7.6 15.5 17.1 2.5a3 3 0 0 1 1.7 5.1L66.7 56.4l2.9 17a3 3 0 0 1-4.4 3.2L50 68.6 34.8 76.6a3 3 0 0 1-4.4-3.2l2.9-17-12.4-12.1a3 3 0 0 1 1.7-5.1l17.1-2.5 7.6-15.5A3 3 0 0 1 50 19.5Z" />
+        )}
+
+        {glyph === 'help' && (
+          <path d="M50.6 22c11.2 0 19.8 7.4 19.8 17.6 0 7.1-3.4 11.3-9.6 15.4-4.2 2.8-5.4 4.4-5.4 7.6a5.4 5.4 0 0 1-10.8 0c0-7.3 3.4-11.3 9.6-15.4 4.4-2.9 5.4-4.4 5.4-7.6 0-4-3.9-7.2-9-7.2s-9 3.2-9 7.2a5.4 5.4 0 0 1-10.8 0C30.8 29.4 39.4 22 50.6 22ZM50 68.6a6.4 6.4 0 1 1 0 12.8 6.4 6.4 0 0 1 0-12.8Z" />
+        )}
+
+        {glyph === 'search' && (
+          <path d="M43.5 19a24.5 24.5 0 0 1 19.2 39.7l17.6 17.6a5 5 0 0 1-7.1 7.1L55.6 65.8A24.5 24.5 0 1 1 43.5 19Zm0 10a14.5 14.5 0 1 0 0 29 14.5 14.5 0 0 0 0-29Z" />
+        )}
+
+        {glyph === 'person' && (
+          <>
+            <circle cx="50" cy="38" r="15" />
+            <path d="M50 57c15.5 0 27.5 9.2 27.5 20.6A2.4 2.4 0 0 1 75 80H25a2.4 2.4 0 0 1-2.5-2.4C22.5 66.2 34.5 57 50 57Z" />
+          </>
+        )}
+
+        {glyph === 'gear' && (
+          <>
+            <path d={GEAR_SMALL} fill={`url(#${uid}-metal)`} opacity="0.82" />
+            <circle cx="69" cy="32" r="4.6" fill={b} opacity="0.82" />
+            <path d={GEAR_MAIN} fill={`url(#${uid}-metal)`} />
+            <circle cx="45" cy="56" r="10" fill={b} />
+          </>
+        )}
+      </g>
     </svg>
   )
 }
