@@ -1,58 +1,40 @@
 import type { ReactNode } from 'react'
+import { NavScreen } from '../ios/ui/NavScreen'
 
 /**
- * Shared in-app layout: a large-title nav bar that condenses on scroll, a
- * scrollable body inset for the status bar and home indicator, and an optional
- * pinned footer for the cart bar.
+ * Shim over NavScreen.
+ *
+ * This used to hand-roll its own bar: an opaque tinted fill with a 16px
+ * centred title that never changed on scroll. Delegating means every screen
+ * gets the real behaviour — a 34pt large title that collapses to a 17pt inline
+ * one, a bar that stays transparent until it does, and a back button that
+ * names the screen you came from — without each app being rewritten.
+ *
+ * `tint` is deliberately ignored. iOS navigation bars take the system material,
+ * not a brand colour; brand colour belongs to the content below (see the hero
+ * in BrandApp).
  */
 
 interface Props {
   title: string
+  /** Rendered under the large title, as iOS does on Mail and Files. */
   subtitle?: string
-  /** Left slot — usually a back chevron. */
   onBack?: () => void
+  /** The PREVIOUS screen's name — not "Back" and not this screen's name. */
   backLabel?: string
   right?: ReactNode
   footer?: ReactNode
-  /** Tinted nav bars (brand pages) get light text. */
+  /** Retained for call sites; no longer paints the bar. */
   tint?: string
   light?: boolean
   children: ReactNode
 }
 
-export function AppChrome({ title, subtitle, onBack, backLabel, right, footer, tint, light, children }: Props) {
+export function AppChrome({ title, subtitle, onBack, backLabel, right, footer, children }: Props) {
   return (
-    <div className={`chrome${light ? ' is-light' : ''}`} style={tint ? { ['--tint' as string]: tint } : undefined}>
-      {/* Top inset comes from --status-h so phone mode can swap the painted
-          status bar for the device's real safe-area inset. */}
-      <header className="chrome-nav">
-        <div className="chrome-nav-row">
-          <div className="chrome-nav-left">
-            {onBack && (
-              <button className="chrome-back" onClick={onBack}>
-                <svg width="12" height="20" viewBox="0 0 12 20" aria-hidden="true">
-                  <path
-                    d="M10 1 2 10l8 9"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2.4"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                {backLabel && <span>{backLabel}</span>}
-              </button>
-            )}
-          </div>
-          <div className="chrome-nav-title">{title}</div>
-          <div className="chrome-nav-right">{right}</div>
-        </div>
-        {subtitle && <div className="chrome-nav-sub">{subtitle}</div>}
-      </header>
-
-      <div className="chrome-body">{children}</div>
-
-      {footer && <div className="chrome-footer">{footer}</div>}
-    </div>
+    <NavScreen title={title} backTitle={backLabel ?? 'Home'} onBack={onBack} right={right} footer={footer}>
+      {subtitle && <p className="nav-subtitle">{subtitle}</p>}
+      {children}
+    </NavScreen>
   )
 }

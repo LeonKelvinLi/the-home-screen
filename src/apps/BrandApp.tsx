@@ -64,7 +64,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             <div className="brand-hero-mark">
               <BrandLogo logo={brand.logo} size={78} />
             </div>
-            <h1>{brand.name}</h1>
+            {/* No <h1> here: the nav large title already states the name, and
+                two headings is the thing that reads as a web page. */}
             <p className="brand-tagline" style={{ color: ink.dim }}>
               {brand.tagline}
             </p>
@@ -85,6 +86,9 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           </div>
 
+          {/* A single-category menu needs no tab bar — one lone pill that
+              repeats the section heading below it is pure noise. */}
+          {brand.menu.length > 1 && (
           <nav className="cat-tabs">
             {brand.menu.map((c, i) => (
               <button
@@ -96,10 +100,11 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               </button>
             ))}
           </nav>
+          )}
 
           {brand.menu.map((cat) => (
             <section className="menu-cat" id={`cat-${cat.id}`} key={cat.id}>
-              <h2>{cat.name}</h2>
+              {brand.menu.length > 1 && <h2>{cat.name}</h2>}
               {cat.items.map((item) => (
                 <button className="menu-row" key={item.id} onClick={() => setSheetItem(item)}>
                   <span className="menu-row-text">

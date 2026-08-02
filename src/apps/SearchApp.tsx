@@ -1,5 +1,6 @@
 import { useMemo, useState } from 'react'
 import { AppChrome } from './AppChrome'
+import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS } from '../data/brands'
 import { money } from '../store/cart'
@@ -95,6 +96,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
                     {b.cuisine} · {b.prepMinutes} min
                   </em>
                 </span>
+                <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
               </button>
             ))}
           </>
@@ -110,6 +112,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
                       <strong>{b.name}</strong>
                       <em>{b.cuisine}</em>
                     </span>
+                    <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
                   </button>
                 ))}
               </>
@@ -127,6 +130,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
                       <span>{h.desc}</span>
                     </span>
                     <span className="search-item-price">{money(h.price)}</span>
+                    <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
                   </button>
                 ))}
               </>

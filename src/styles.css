@@ -27,6 +27,12 @@
   --status-h: 54px;
   --bottom-h: 34px;
   /*
+    Height of the swipe-to-home strip. It sits above app content, so anything
+    pinned to the bottom must clear it or the strip silently eats the tap —
+    the Add button in the item sheet was intercepted this way.
+  */
+  --gesture-h: 22px;
+  /*
     -apple-system first so Apple devices get genuine SF Pro — nothing imitates
     it convincingly. Inter is the self-hosted fallback everywhere else; its
     metrics are close enough that layout does not shift between the two.
@@ -568,7 +574,7 @@ textarea {
 
 .chrome-footer {
   flex: 0 0 auto;
-  padding: 10px 16px calc(10px + var(--bottom-h));
+  padding: 10px 16px calc(10px + var(--bottom-h) + var(--gesture-h));
   background: #f9f9f9;
   border-top: 0.5px solid var(--line);
 }
@@ -1046,7 +1052,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 12px 20px calc(12px + var(--bottom-h));
+  padding: 12px 20px calc(12px + var(--bottom-h) + var(--gesture-h));
   background: rgba(249, 249, 249, 0.94);
   border-top: 0.5px solid var(--line);
 }
@@ -2059,7 +2065,7 @@ textarea {
   */
   .home-indicator-zone {
     bottom: var(--bottom-h);
-    height: 26px;
+    height: var(--gesture-h);
   }
 }
 
@@ -2439,7 +2445,7 @@ textarea {
 .ios-tabbar {
   flex: 0 0 auto;
   display: flex;
-  padding-bottom: var(--bottom-h);
+  padding-bottom: calc(var(--bottom-h) + var(--gesture-h));
   background: rgba(249, 249, 249, 0.82);
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -2700,4 +2706,51 @@ textarea {
   width: 36px;
   height: 5px;
   border-radius: 2.5px;
+}
+
+/* ---------- navigation stack ---------- */
+
+.navstack {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  touch-action: pan-y;
+}
+
+.navstack-layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+/* The incoming screen casts a shadow on its leading edge, as UIKit does. */
+.navstack-layer.is-pushed {
+  box-shadow: -8px 0 24px -6px rgba(0, 0, 0, 0.28);
+}
+
+/* Subtitle under the large title, as Mail and Files use. */
+.nav-subtitle {
+  margin: -4px 0 4px;
+  padding: 0 16px;
+  font-size: 15px;
+  letter-spacing: -0.24px;
+  color: var(--muted);
+}
+
+.nav-footer {
+  flex: 0 0 auto;
+  padding: 10px 16px calc(10px + var(--bottom-h) + var(--gesture-h));
+  background: rgba(249, 249, 249, 0.94);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 -0.5px 0 rgba(0, 0, 0, 0.18);
+}
+
+/* A tab bar brings its own inset; don't pad it twice. */
+.nav-footer:has(.ios-tabbar) {
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
 }

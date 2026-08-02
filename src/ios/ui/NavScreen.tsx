@@ -70,7 +70,12 @@ export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, 
         {children}
       </div>
 
-      {footer}
+      {/*
+        Footers need the chrome padding, including clearance for the
+        swipe-to-home strip. Rendering `footer` raw put a pinned button flush
+        against that strip, which then silently ate the tap.
+      */}
+      {footer && <div className="nav-footer">{footer}</div>}
     </div>
   )
 }

@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { CheckoutApp } from './CheckoutApp'
+import { NavStack } from '../ios/ui/NavStack'
+import { useScreenSize } from '../ios/ScreenSize'
 import { BrandLogo } from '../ios/BrandLogo'
 import { brandById, vendorById } from '../data/brands'
 import { lineTotal, money, useCart } from '../store/cart'
@@ -14,9 +16,31 @@ import type { ShellApi } from '../ios/Device'
 
 export function CartApp({ api }: { api: ShellApi }) {
   const cart = useCart()
+  const screen = useScreenSize()
   const [checkout, setCheckout] = useState(false)
 
-  if (checkout) return <CheckoutApp api={api} onBack={() => setCheckout(false)} />
+  /*
+    Checkout is PUSHED, not swapped. Returning <CheckoutApp/> from state made
+    the transition instant — one screen replaced by another with no motion and
+    no way back except a button. NavStack gives it the iOS push and the
+    left-edge back-swipe.
+  */
+  if (checkout || cart.lines.length > 0) {
+    return (
+      <NavStack
+        width={screen.w}
+        onPop={() => setCheckout(false)}
+        pushed={checkout ? <CheckoutApp api={api} onBack={() => setCheckout(false)} /> : null}
+        root={<CartRoot api={api} onCheckout={() => setCheckout(true)} />}
+      />
+    )
+  }
+
+  return <CartRoot api={api} onCheckout={() => setCheckout(true)} />
+}
+
+function CartRoot({ api, onCheckout }: { api: ShellApi; onCheckout: () => void }) {
+  const cart = useCart()
 
   if (cart.lines.length === 0) {
     return (
@@ -44,7 +68,7 @@ export function CartApp({ api }: { api: ShellApi }) {
       onBack={api.closeApp}
       tint="#1B47D6"
       footer={
-        <button className="cartbar is-solid" onClick={() => setCheckout(true)}>
+        <button className="cartbar is-solid" onClick={onCheckout}>
           <span className="cartbar-label">Checkout</span>
           <span className="cartbar-total">{money(t.total)}</span>
         </button>
