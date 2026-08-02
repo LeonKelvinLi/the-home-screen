@@ -68,7 +68,9 @@ export function BrandLogo({ logo, size = 60, masked = true }: Props) {
       width={size}
       height={size}
       viewBox="0 0 100 100"
-      style={{ display: 'block', overflow: 'visible' }}
+      /* width:100% lets the tile drive the size on the home grid, where the
+         icon edge changes with the device class. */
+      style={{ display: 'block', overflow: 'visible', width: '100%', height: '100%' }}
       aria-hidden="true"
     >
       <defs>

@@ -6,7 +6,7 @@ import { ICON_SIZE } from './constants'
  * glyph — so they read as part of the OS rather than as another restaurant.
  */
 
-export type SystemGlyph = 'bag' | 'receipt' | 'star' | 'help' | 'search' | 'person'
+export type SystemGlyph = 'bag' | 'receipt' | 'star' | 'help' | 'search' | 'person' | 'gear'
 
 const PATHS: Record<SystemGlyph, string> = {
   bag: 'M30 26h40a4 4 0 0 1 4 3.6l5 42A6 6 0 0 1 73 78H27a6 6 0 0 1-6-6.4l5-42A4 4 0 0 1 30 26Zm5 8-4 36h38l-4-36ZM38 22a12 12 0 0 1 24 0v10a3 3 0 0 1-6 0V22a6 6 0 0 0-12 0v10a3 3 0 0 1-6 0Z',
@@ -18,6 +18,8 @@ const PATHS: Record<SystemGlyph, string> = {
     'M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z',
   person:
     'M50 18a17 17 0 1 1 0 34 17 17 0 0 1 0-34Zm0 8a9 9 0 1 0 0 18 9 9 0 0 0 0-18Zm0 32c16 0 29 9.5 29 21.2A2.8 2.8 0 0 1 76 82H24a2.8 2.8 0 0 1-3-2.8C21 67.5 34 58 50 58Zm0 8c-11 0-19.5 5.4-21 10h42c-1.5-4.6-10-10-21-10Z',
+  gear:
+    'M44.4 12h11.2a3 3 0 0 1 2.9 2.3l1.4 5.7a31 31 0 0 1 5.6 3.3l5.6-1.8a3 3 0 0 1 3.5 1.4l5.6 9.7a3 3 0 0 1-.6 3.7l-4.3 4a31 31 0 0 1 0 6.5l4.3 4a3 3 0 0 1 .6 3.7l-5.6 9.7a3 3 0 0 1-3.5 1.4l-5.6-1.8a31 31 0 0 1-5.6 3.3l-1.4 5.7a3 3 0 0 1-2.9 2.3H44.4a3 3 0 0 1-2.9-2.3l-1.4-5.7a31 31 0 0 1-5.6-3.3l-5.6 1.8a3 3 0 0 1-3.5-1.4l-5.6-9.7a3 3 0 0 1 .6-3.7l4.3-4a31 31 0 0 1 0-6.5l-4.3-4a3 3 0 0 1-.6-3.7l5.6-9.7a3 3 0 0 1 3.5-1.4l5.6 1.8a31 31 0 0 1 5.6-3.3l1.4-5.7A3 3 0 0 1 44.4 12ZM50 36a14 14 0 1 0 0 28 14 14 0 0 0 0-28Z',
 }
 
 const TILES: Record<SystemGlyph, [string, string]> = {
@@ -27,6 +29,7 @@ const TILES: Record<SystemGlyph, [string, string]> = {
   help: ['#48484A', '#2C2C2E'],
   search: ['#30D158', '#1DA345'],
   person: ['#64748B', '#3F4A5A'],
+  gear: ['#9AA0A6', '#6E7378'],
 }
 
 export function SystemIcon({ glyph, size = ICON_SIZE }: { glyph: SystemGlyph; size?: number }) {
@@ -37,7 +40,7 @@ export function SystemIcon({ glyph, size = ICON_SIZE }: { glyph: SystemGlyph; si
       width={size}
       height={size}
       viewBox="0 0 100 100"
-      style={{ display: 'block', borderRadius: size * 0.2237 }}
+      style={{ display: 'block', borderRadius: size * 0.2237, width: '100%', height: '100%' }}
       aria-hidden="true"
     >
       <defs>

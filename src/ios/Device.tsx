@@ -15,8 +15,6 @@ import {
   DISMISS_VELOCITY,
   EASE_IOS,
   OPEN_MS,
-  SCREEN_H,
-  SCREEN_W,
   SWITCHER_VELOCITY,
 } from './constants'
 
@@ -33,25 +31,6 @@ interface Props {
   renderApp: (appId: string, api: ShellApi) => ReactNode
 }
 
-/**
- * True when the page IS the phone rather than a phone drawn inside a desktop
- * window. In that mode every piece of fake hardware is dropped — no bezel, no
- * Dynamic Island, no painted status bar — because the device already has real
- * ones and drawing a second set on top looks like a toy.
- */
-function useIsPhone(): boolean {
-  const [phone, setPhone] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia('(max-width: 480px)').matches,
-  )
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 480px)')
-    const on = () => setPhone(mq.matches)
-    mq.addEventListener('change', on)
-    return () => mq.removeEventListener('change', on)
-  }, [])
-  return phone
-}
-
 export function Device({ renderApp }: Props) {
   const [phase, setPhase] = useState<Phase>('home')
   const [appId, setAppId] = useState<string | null>(null)
@@ -62,7 +41,13 @@ export function Device({ renderApp }: Props) {
 
   const screenRef = useRef<HTMLDivElement>(null)
   const screen = useMeasuredScreen(screenRef)
-  const isPhone = useIsPhone()
+  /*
+    The page is always the device — never a phone drawn inside a desktop window.
+    Narrow viewports get an iPhone home screen, wide ones get an iPad one. No
+    bezel, no Dynamic Island, no painted status bar anywhere: a real device
+    already has those, and a browser window has its own chrome.
+  */
+  const isPad = screen.device === 'pad'
 
   /** Where each app was last opened from, so it collapses back into its own icon. */
   const origins = useRef(new Map<string, IconRect>())
@@ -215,13 +200,9 @@ export function Device({ renderApp }: Props) {
 
   return (
     <ScreenSizeProvider value={screen}>
-      <div className={`device${isPhone ? ' is-phone' : ''}`}>
+      <div className={`device is-${screen.device}`}>
         <div className="device-frame">
-          <div
-            className="screen"
-            ref={screenRef}
-            style={isPhone ? undefined : { width: SCREEN_W, height: SCREEN_H }}
-          >
+          <div className="screen" ref={screenRef}>
             <HomeScreen onOpen={openApp} receding={homeReceding} hidden={homeHidden} />
 
             {inSwitcher && (
@@ -289,9 +270,12 @@ export function Device({ renderApp }: Props) {
               </div>
             )}
 
-            {/* Real phones already have a status bar. Drawing a second one on
-                top of it is the fastest way to look like a mockup. */}
-            {!isPhone && (
+            {/*
+              A status bar only makes sense on the wide layout, where the page
+              is standing in for a tablet rather than sitting inside a real
+              phone that already draws one.
+            */}
+            {isPad && (
               <div className="status-layer">
                 <StatusBar dark={mounted && !inSwitcher ? app?.statusDark : false} />
               </div>
@@ -302,7 +286,7 @@ export function Device({ renderApp }: Props) {
               style={{ pointerEvents: mounted && !inSwitcher ? 'auto' : 'none' }}
               {...(mounted && !inSwitcher ? homeGesture : {})}
             >
-              {!isPhone && <div className="home-indicator" />}
+              {isPad && <div className="home-indicator" />}
             </div>
           </div>
         </div>

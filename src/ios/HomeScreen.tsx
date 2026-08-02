@@ -1,9 +1,10 @@
-import { useRef, useState } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { DOCK_APPS, HOME_PAGES } from '../apps/registry'
+import { DOCK_APPS, ORDERED_APPS } from '../apps/registry'
+import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { EASE_IOS, PAGE_COMMIT_PX, PAGE_MS } from './constants'
 
@@ -22,12 +23,31 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
   const [dx, setDx] = useState(0)
   const [dragging, setDragging] = useState(false)
   const pageRef = useRef(0)
-  pageRef.current = page
   const spotlightRef = useRef<HTMLButtonElement>(null)
   /** Locked on the first move so a vertical drag can never turn a page. */
   const axis = useRef<'x' | 'y' | null>(null)
 
-  const pages = HOME_PAGES
+  /**
+   * Paginate against the REAL grid rather than a fixed count. A phone gets
+   * 4 columns over two pages; a desktop window gets 8 columns and everything
+   * lands on one page, which is what stops a wide display looking half empty.
+   */
+  const pages = useMemo<AppDef[][]>(() => {
+    const cols = screen.columns
+    const rowPitch = screen.iconSize + 40
+    const topPad = screen.device === 'pad' ? 96 : 96
+    const bottomReserve = screen.device === 'pad' ? 190 : 210
+    const rows = Math.max(3, Math.floor((screen.h - topPad - bottomReserve) / rowPitch))
+    const perPage = Math.max(cols, cols * rows)
+
+    const out: AppDef[][] = []
+    for (let i = 0; i < ORDERED_APPS.length; i += perPage) out.push(ORDERED_APPS.slice(i, i + perPage))
+    return out.length ? out : [[]]
+  }, [screen.columns, screen.iconSize, screen.h, screen.device])
+
+  // Never strand the user on a page that no longer exists after a resize.
+  const safePage = Math.min(page, pages.length - 1)
+  pageRef.current = safePage
 
   const settle = (next: number) => {
     setDragging(false)
@@ -66,14 +86,16 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
 
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
-    if (appId.startsWith('sys.') || appId.startsWith('h2o.')) return 0
+    if (appId.startsWith('sys.')) return 0
     return cart.countForBrand(appId)
   }
 
-  const offset = -page * screen.w + dx
+  const offset = -safePage * screen.w + dx
 
   return (
-    <div className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''}`}>
+    <div
+      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
+    >
       {/*
         Wallpaper parallax: iOS drifts the wallpaper a fraction of the page
         distance rather than pinning it, which is what gives the home screen
@@ -102,14 +124,18 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
             outside the viewport and the browser scrolled the overflow-hidden
             screen sideways with no way to scroll it back.
           */
-          <div className="home-page" key={i} {...(i === page ? {} : { inert: '' })}>
-            <div className="home-grid">
+          <div className="home-page" key={i} {...(i === safePage ? {} : { inert: '' })}>
+            <div
+              className="home-grid"
+              style={{ gridTemplateColumns: `repeat(${screen.columns}, 1fr)` }}
+            >
               {apps.map((app) => (
                 <AppIcon
                   key={app.id}
                   icon={app.icon}
                   label={app.label}
                   badge={badgeFor(app.id)}
+                  size={screen.iconSize}
                   onOpen={(rect) => onOpen(app.id, rect)}
                 />
               ))}
@@ -118,11 +144,13 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
         ))}
       </div>
 
-      <div className="page-dots">
-        {pages.map((_, i) => (
-          <span key={i} className={`dot${i === page ? ' is-on' : ''}`} />
-        ))}
-      </div>
+      {pages.length > 1 && (
+        <div className="page-dots">
+          {pages.map((_, i) => (
+            <span key={i} className={`dot${i === safePage ? ' is-on' : ''}`} />
+          ))}
+        </div>
+      )}
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <button
@@ -147,6 +175,7 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
             icon={app.icon}
             label={app.label}
             badge={badgeFor(app.id)}
+            size={screen.iconSize}
             hideLabel
             onOpen={(rect) => onOpen(app.id, rect)}
           />

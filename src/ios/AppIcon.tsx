@@ -34,9 +34,11 @@ interface Props {
   /** Measured at tap time so the app can zoom out of this exact icon. */
   onOpen: (rect: IconRect) => void
   hideLabel?: boolean
+  /** Tile edge in px; iPad icons are larger than iPhone ones. */
+  size?: number
 }
 
-export function AppIcon({ icon, label, badge, onOpen, hideLabel }: Props) {
+export function AppIcon({ icon, label, badge, onOpen, hideLabel, size = ICON_SIZE }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
   const startY = useRef(0)
@@ -82,7 +84,7 @@ export function AppIcon({ icon, label, badge, onOpen, hideLabel }: Props) {
       }}
       aria-label={label}
     >
-      <span className="icon-tile" style={{ width: ICON_SIZE, height: ICON_SIZE }}>
+      <span className="icon-tile" style={{ width: size, height: size }}>
         {icon}
         {badge ? (
           <span className="icon-badge" aria-label={`${badge} in cart`}>

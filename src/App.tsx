@@ -1,12 +1,15 @@
 import { Device } from './ios/Device'
 import type { ShellApi } from './ios/Device'
 import { CartProvider } from './store/cart'
+import { SettingsProvider } from './store/settings'
 import { appById } from './apps/registry'
 import { BrandApp } from './apps/BrandApp'
 import { CartApp } from './apps/CartApp'
 import { OrdersApp } from './apps/OrdersApp'
 import { SearchApp } from './apps/SearchApp'
-import { AccountApp, ContactApp, HelpApp, RewardsApp } from './apps/SimpleApps'
+import { AccountApp, HelpApp, RewardsApp } from './apps/SimpleApps'
+import { SettingsApp } from './apps/SettingsApp'
+import { PhoneApp } from './apps/PhoneApp'
 
 /**
  * Routing table for the fake OS. An app id is either a brand id or `sys.*`.
@@ -30,8 +33,10 @@ function renderApp(appId: string, api: ShellApi) {
       return <HelpApp api={api} />
     case 'account':
       return <AccountApp api={api} />
-    case 'contact':
-      return <ContactApp api={api} />
+    case 'phone':
+      return <PhoneApp api={api} />
+    case 'settings':
+      return <SettingsApp api={api} />
     default:
       return null
   }
@@ -39,8 +44,10 @@ function renderApp(appId: string, api: ShellApi) {
 
 export default function App() {
   return (
-    <CartProvider>
-      <Device renderApp={renderApp} />
-    </CartProvider>
+    <SettingsProvider>
+      <CartProvider>
+        <Device renderApp={renderApp} />
+      </CartProvider>
+    </SettingsProvider>
   )
 }

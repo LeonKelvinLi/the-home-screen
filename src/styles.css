@@ -65,34 +65,26 @@ textarea {
 
 /* ---------- device ---------- */
 
+/*
+  The page IS the device. There is no drawn bezel at any size: a narrow window
+  is an iPhone home screen, a wide one is an iPad home screen. A 393px phone
+  floating in the middle of a 1440px display reads as a mockup, not a product.
+*/
 .device {
-  display: grid;
-  place-items: center;
-  /*
-    Shrink to fit short windows without touching the internal geometry.
-    The divisor MUST carry a unit: `calc((100vh - 48px) / 892)` is a length,
-    and scale() needs a number, so the whole declaration is silently dropped —
-    which left the dock and home indicator below the fold on any window under
-    ~900px tall, i.e. most laptops.
-  */
-  transform: scale(min(1, calc((100dvh - 48px) / 892px)));
-  transform-origin: center;
+  width: 100vw;
+  height: 100dvh;
 }
 
 .device-frame {
-  padding: 12px;
-  border-radius: 59px;
-  background: linear-gradient(150deg, #6f7278 0%, #2f3136 22%, #55585e 48%, #26282c 78%, #6b6e74 100%);
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.35) inset,
-    0 40px 90px -20px rgba(0, 0, 0, 0.75),
-    0 0 0 1px rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
 }
 
 .screen {
   position: relative;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
-  border-radius: 47px;
   background: #000;
   isolation: isolate;
   touch-action: none;
@@ -129,21 +121,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 6px;
-}
-
-/* Dynamic Island */
-.screen::before {
-  content: '';
-  position: absolute;
-  top: 11px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 125px;
-  height: 36px;
-  border-radius: 20px;
-  background: #000;
-  z-index: 70;
-  pointer-events: none;
 }
 
 /* ---------- home indicator ---------- */
@@ -2109,4 +2086,562 @@ textarea {
 .local-notice strong {
   display: block;
   margin-bottom: 2px;
+}
+
+/* =========================================================================
+   iPAD LAYOUT
+   Wide viewports get a genuine tablet home screen — more columns, larger
+   icons, a centred floating dock — rather than a phone layout stretched.
+   ========================================================================= */
+
+.device.is-pad .home-page {
+  padding: calc(var(--status-h) + 34px) clamp(24px, 6vw, 120px) 0;
+}
+
+.device.is-pad .home-grid {
+  row-gap: 34px;
+  column-gap: clamp(8px, 2vw, 28px);
+  justify-items: center;
+}
+
+.device.is-pad .icon-label {
+  max-width: 120px;
+  font-size: 13px;
+  letter-spacing: -0.1px;
+}
+
+.device.is-pad .icon-tile {
+  filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.32)) drop-shadow(0 0 1px rgba(0, 0, 0, 0.14));
+}
+
+/* iPadOS docks are a centred pill sized to their contents, not a full-width bar. */
+.device.is-pad .dock {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: auto;
+  gap: clamp(14px, 2.4vw, 34px);
+  height: auto;
+  padding: 14px clamp(16px, 2vw, 26px);
+  border-radius: 30px;
+  bottom: 22px;
+  justify-content: center;
+}
+
+.device.is-pad .spotlight {
+  bottom: 132px;
+}
+
+.device.is-pad .page-dots {
+  bottom: 178px;
+}
+
+/* An app fills the display, as it does on iPad. */
+.device.is-pad .app-window {
+  border-radius: 0;
+}
+
+/* =========================================================================
+   iOS UI KIT — inset-grouped lists, switches, tab bars, nav screens
+   ========================================================================= */
+
+.nav-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f7;
+}
+
+.nav-bar {
+  position: relative;
+  z-index: 5;
+  flex: 0 0 auto;
+  padding-top: var(--status-h);
+  background: transparent;
+  transition: background 200ms ease, box-shadow 200ms ease;
+}
+
+/*
+  The bar only gains its material once the large title has scrolled away.
+  Showing the inline title and the large title at the same time is the tell
+  that a web app is imitating the bar rather than reproducing it.
+*/
+.nav-bar.is-collapsed {
+  background: rgba(249, 249, 249, 0.82);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 0.5px 0 rgba(0, 0, 0, 0.18);
+}
+
+.nav-bar-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 8px;
+}
+
+.nav-bar-title {
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 180ms ease;
+  white-space: nowrap;
+}
+
+.nav-bar.is-collapsed .nav-bar-title {
+  opacity: 1;
+}
+
+.nav-bar-right {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.nav-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 44px;
+  padding: 0 8px;
+  color: #007aff;
+  font-size: 17px;
+  letter-spacing: -0.4px;
+}
+
+.nav-back:active {
+  opacity: 0.4;
+}
+
+.nav-sticky {
+  flex: 0 0 auto;
+  padding: 0 16px 8px;
+}
+
+.nav-scroll {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-y;
+  transform: translateZ(0);
+  padding-bottom: 28px;
+}
+
+/* 34pt bold, iOS large title. */
+.nav-large-title {
+  margin: 0;
+  padding: 4px 16px 8px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.9px;
+  line-height: 1.15;
+}
+
+.ios-section {
+  margin: 22px 0 0;
+}
+
+.ios-section-header {
+  margin: 0 0 7px;
+  padding: 0 32px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: -0.08px;
+  text-transform: uppercase;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.ios-section-footer {
+  margin: 7px 0 0;
+  padding: 0 32px;
+  font-size: 13px;
+  line-height: 1.38;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.ios-list {
+  margin: 0 16px;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.ios-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  /* 44pt is the iOS minimum hit target; rows with a detail line grow past it. */
+  min-height: 44px;
+  padding: 11px 16px;
+  background: #fff;
+  text-align: left;
+  font-size: 17px;
+  letter-spacing: -0.4px;
+  color: var(--ink);
+}
+
+/*
+  Separator inset to align under the LABEL, clearing any icon — a full-bleed
+  line is the most common giveaway in an iOS imitation.
+*/
+.ios-row + .ios-row::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 16px;
+  right: 0;
+  height: 0.5px;
+  background: rgba(60, 60, 67, 0.29);
+}
+
+.ios-row:has(.ios-row-icon) + .ios-row::before {
+  left: 60px;
+}
+
+.ios-row.is-tappable:active {
+  background: #d1d1d6;
+}
+
+.ios-row.is-destructive .ios-row-label {
+  color: #ff3b30;
+}
+
+.ios-row:disabled {
+  opacity: 0.35;
+}
+
+.ios-row-icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 29px;
+  height: 29px;
+  border-radius: 6.5px;
+}
+
+.ios-row-body {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.ios-row-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ios-row-detail {
+  font-size: 13px;
+  letter-spacing: -0.08px;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.ios-row-value {
+  flex: 0 0 auto;
+  font-size: 17px;
+  letter-spacing: -0.4px;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.ios-row-check {
+  color: #007aff;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ios-row-chevron {
+  display: flex;
+  flex: 0 0 auto;
+  margin-left: -2px;
+}
+
+/* iOS switch: 51x31 with a 27 knob. The proportions carry the recognition. */
+.ios-switch {
+  position: relative;
+  flex: 0 0 auto;
+  width: 51px;
+  height: 31px;
+  border-radius: 16px;
+  background: rgba(120, 120, 128, 0.16);
+  transition: background 220ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.ios-switch.is-on {
+  background: #34c759;
+}
+
+.ios-switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15), 0 1px 1px rgba(0, 0, 0, 0.16);
+  transition: transform 220ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.ios-switch.is-on .ios-switch-knob {
+  transform: translateX(20px);
+}
+
+/* ---------- tab bar ---------- */
+
+.ios-tabbar {
+  flex: 0 0 auto;
+  display: flex;
+  padding-bottom: var(--bottom-h);
+  background: rgba(249, 249, 249, 0.82);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: 0 -0.5px 0 rgba(0, 0, 0, 0.18);
+}
+
+.ios-tab {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  min-height: 49px;
+  padding: 7px 0 2px;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.ios-tab.is-on {
+  color: #007aff;
+}
+
+.ios-tab-icon {
+  position: relative;
+}
+
+.ios-tab-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06px;
+}
+
+.ios-tab-badge {
+  position: absolute;
+  top: -4px;
+  right: -10px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+}
+
+/* ---------- phone app ---------- */
+
+.phone-keypad-screen {
+  justify-content: flex-end;
+  background: #f2f2f7;
+  padding-top: var(--status-h);
+}
+
+.keypad-display {
+  flex: 0 0 auto;
+  min-height: 62px;
+  padding: 8px 20px 0;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 300;
+  letter-spacing: -0.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.keypad {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(10px, 2.4vh, 18px) clamp(20px, 8vw, 34px);
+  justify-items: center;
+  padding: 8px clamp(24px, 12vw, 60px) 12px;
+}
+
+.keypad-key {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: rgba(120, 120, 128, 0.14);
+  line-height: 1;
+}
+
+.keypad-key:active {
+  background: rgba(120, 120, 128, 0.32);
+}
+
+.keypad-digit {
+  font-size: 33px;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+}
+
+.keypad-letters {
+  margin-top: 2px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.6px;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.keypad-actions {
+  flex: 0 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  padding: 4px clamp(24px, 12vw, 60px) 0;
+}
+
+.keypad-spacer {
+  display: grid;
+  place-items: center;
+  min-height: 74px;
+}
+
+.keypad-call {
+  display: grid;
+  place-items: center;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: #34c759;
+}
+
+.keypad-call:disabled {
+  background: rgba(52, 199, 89, 0.35);
+}
+
+.keypad-delete {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+.keypad-note {
+  flex: 0 0 auto;
+  margin: 6px 0 10px;
+  padding: 0 28px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  text-align: center;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.contact-mark {
+  display: block;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 auto;
+}
+
+.phone-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 90px 32px;
+  text-align: center;
+}
+
+.phone-empty p {
+  margin: 0;
+  font-size: 17px;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.phone-empty-sub {
+  font-size: 13px !important;
+}
+
+/* Wide viewports get a landscape crop; cover-fitting the portrait file zoomed
+   so far in that the composition was lost. */
+@media (min-width: 700px) {
+  .home-wallpaper {
+    background-image: url('/wallpaper-wide.jpg');
+  }
+
+  /*
+    iPadOS constrains list content to a readable width instead of stretching a
+    row 1400px wide with the chevron marooned at the far edge.
+  */
+  .device.is-pad .ios-list,
+  .device.is-pad .nav-large-title,
+  .device.is-pad .ios-section-header,
+  .device.is-pad .ios-section-footer,
+  .device.is-pad .nav-bar-row {
+    max-width: 704px;
+    margin-inline: auto;
+  }
+
+  .device.is-pad .ios-list {
+    border-radius: 12px;
+  }
+
+  .device.is-pad .chrome-body > *,
+  .device.is-pad .checkout-body,
+  .device.is-pad .cart-body,
+  .device.is-pad .orders-body,
+  .device.is-pad .search-body,
+  .device.is-pad .plain {
+    max-width: 704px;
+    margin-inline: auto;
+  }
+
+  /* A full-width sheet on a 1440px display is a wall; iPad centres it. */
+  .device.is-pad .sheet {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    width: min(560px, 92vw);
+    border-radius: 14px;
+  }
+}
+
+/* The keypad is a phone-sized control; centre it rather than spreading the
+   columns across a 1440px display. */
+@media (min-width: 700px) {
+  .device.is-pad .keypad,
+  .device.is-pad .keypad-actions,
+  .device.is-pad .keypad-display,
+  .device.is-pad .keypad-note {
+    max-width: 340px;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .device.is-pad .keypad {
+    gap: 16px 26px;
+  }
+
+  .device.is-pad .ios-tabbar {
+    max-width: 704px;
+    margin-inline: auto;
+  }
 }

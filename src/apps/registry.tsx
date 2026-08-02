@@ -9,7 +9,8 @@ import type { SystemGlyph } from '../ios/SystemIcon'
  * changes — which is the property that lets vendors self-onboard later.
  */
 
-export type SystemKey = 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'contact'
+export type SystemKey =
+  | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
 
 export interface AppDef {
   id: string
@@ -33,6 +34,7 @@ const SYSTEM: { key: SystemKey; name: string; label: string; glyph: SystemGlyph;
   { key: 'help', name: 'Help', label: 'Help', glyph: 'help', tint: '#2C2C2E' },
   { key: 'search', name: 'Search', label: 'Search', glyph: 'search', tint: '#1DA345' },
   { key: 'account', name: 'Account', label: 'Account', glyph: 'person', tint: '#3F4A5A' },
+  { key: 'settings', name: 'Settings', label: 'Settings', glyph: 'gear', tint: '#8E8E93' },
 ]
 
 export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
@@ -60,27 +62,28 @@ export const SYSTEM_APPS: AppDef[] = SYSTEM.map((s) => ({
  * that link is `tel:+10000000000` — a placeholder. Rather than ship a dead dial
  * action it opens a screen that says the number is missing.
  */
-const CONTACT_APP: AppDef = {
-  id: 'sys.contact',
-  name: 'Contact',
+const PHONE_APP: AppDef = {
+  id: 'sys.phone',
+  name: 'Phone',
   label: 'Phone',
   icon: <BrandLogo logo={{ imageUrl: '/icons/dock-phone.png', bg: '#1FAF54', fg: '#fff' }} />,
   kind: 'system',
-  systemKey: 'contact',
+  systemKey: 'phone',
   tint: '#1FAF54',
 }
 
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, CONTACT_APP]
+export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP]
 
 export const appById = (id: string) => ALL_APPS.find((a) => a.id === id)
 
 const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
 
-/** Page 1 is the busiest kitchens; page 2 is the rest plus the platform's own apps. */
-export const HOME_PAGES: AppDef[][] = [
-  BRAND_APPS.slice(0, 16),
-  [...BRAND_APPS.slice(16), ...SYSTEM_APPS],
-]
+/**
+ * One ordered list. The home screen paginates it against the real grid, so a
+ * phone gets 4x6 across two pages and an iPad-width window gets 8 columns on
+ * one — rather than a fixed 16-per-page that leaves a desktop half empty.
+ */
+export const ORDERED_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS]
 
 /**
  * Dock, carried over from the operator's hub: Phone, Water, Info, Gig Work.
@@ -92,7 +95,7 @@ export const HOME_PAGES: AppDef[][] = [
  * deliberately — worth querying with the owner rather than silently changing.
  */
 export const DOCK_APPS: AppDef[] = [
-  CONTACT_APP,
+  PHONE_APP,
   {
     ...brand('beastyh20')!,
     label: 'Water',
