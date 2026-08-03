@@ -24,7 +24,10 @@ services:
     plan: starter
     region: oregon
     branch: main
-    buildCommand: npm ci && npm run build
+    # --include=dev is load-bearing: NODE_ENV=production (set below, correctly,
+    # for the runtime) makes npm omit devDependencies, which strips tsc and vite
+    # and fails the build with "tsc: command not found".
+    buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
     healthCheckPath: /api/catalogue
     autoDeploy: true
