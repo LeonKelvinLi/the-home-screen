@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { BRANDS } from '../data/brands'
+import { BRANDS, brandById } from '../data/brands'
 import { OPEN_SLOTS } from '../lib/api'
 import { BrandLogo } from '../ios/BrandLogo'
 import { SystemIcon } from '../ios/SystemIcon'
@@ -97,11 +97,31 @@ export const appById = (id: string) => ALL_APPS.find((a) => a.id === id)
 const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
 
 /**
- * One ordered list. The home screen paginates it against the real grid, so a
- * phone gets 4x6 across two pages and an iPad-width window gets 8 columns on
- * one — rather than a fixed 16-per-page that leaves a desktop half empty.
+ * Page groups. Each group STARTS a new page; a long group spills onto further
+ * pages of its own. This replaced one flat list because ordering alone could
+ * not hold the split — page size is computed from the real grid, so on a wide
+ * window the non-food entries simply flowed up onto page one.
+ *
+ * Page 1 is everything you can order food or drink from. Page 2 is everything
+ * else. The cost is that a wide display no longer packs all 39 icons onto one
+ * page: page one now ends after the last kitchen even if there is room left.
+ * That is the point of the split, not a regression.
  */
-export const ORDERED_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, ...SLOT_APPS]
+const isOrderable = (a: AppDef) => a.kind === 'brand' && !brandById(a.id)?.contactOnly
+
+const CURIO = BRAND_APPS.filter((a) => a.id === 'b_curio')
+const KITCHENS = BRAND_APPS.filter(isOrderable)
+const OTHER_BRANDS = BRAND_APPS.filter((a) => !isOrderable(a) && a.id !== 'b_curio')
+
+export const APP_GROUPS: AppDef[][] = [
+  KITCHENS,
+  // Curio last, after the reserve slots, because that is where the operator
+  // wants it. Worth knowing it therefore sits behind eight blank tiles.
+  [...OTHER_BRANDS, ...SYSTEM_APPS, ...SLOT_APPS, ...CURIO],
+]
+
+/** Flat order, kept for anything that just wants every home-screen app. */
+export const ORDERED_APPS: AppDef[] = APP_GROUPS.flat()
 
 /**
  * Dock, carried over from the operator's hub: Phone, Water, Info, Gig Work.

@@ -3,7 +3,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { DOCK_APPS, ORDERED_APPS } from '../apps/registry'
+import { APP_GROUPS, DOCK_APPS } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { EASE_IOS, PAGE_COMMIT_PX, PAGE_MS } from './constants'
@@ -40,8 +40,14 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
     const rows = Math.max(3, Math.floor((screen.h - topPad - bottomReserve) / rowPitch))
     const perPage = Math.max(cols, cols * rows)
 
+    // Paginate each group separately so a group always begins a fresh page.
+    // A single flat list let page two's icons flow up onto page one whenever
+    // the grid had room, which is exactly what the split exists to prevent.
     const out: AppDef[][] = []
-    for (let i = 0; i < ORDERED_APPS.length; i += perPage) out.push(ORDERED_APPS.slice(i, i + perPage))
+    for (const group of APP_GROUPS) {
+      if (!group.length) continue
+      for (let i = 0; i < group.length; i += perPage) out.push(group.slice(i, i + perPage))
+    }
     return out.length ? out : [[]]
   }, [screen.columns, screen.iconSize, screen.h, screen.device])
 
