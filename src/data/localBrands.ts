@@ -291,19 +291,18 @@ export const LOCAL_SEED: LocalSeed[] = [
     slug: 'pod-dtg',
     name: 'POD DTG',
     label: 'POD DTG',
-    cuisine: 'Custom apparel printing',
-    tagline: 'Print on demand, direct to garment.',
+    cuisine: 'Print on demand',
+    tagline: 'Print on demand.',
     color: '#0A0A0A',
     icon: 'pod-dtg',
     prep: 0,
     category: 'Shop',
-    // No products and no link, on purpose. This entry existed once carrying a
-    // wood-fired pizza menu ported from the old hub, which is why it was
-    // removed — a printer is not a pizzeria. It comes back with its real mark
-    // and nothing invented around it. The operator has the URL; probing the
-    // obvious domains found nothing resolving.
-    contactOnly:
-      'POD DTG prints custom apparel, direct to garment. Not a kitchen, and their ordering link is not connected here yet.',
+    // Name and mark only, by the operator's instruction — it is a print-on-
+    // demand brand and there is nothing to order through this app. Phrased as
+    // settled rather than pending, so the tile does not read as unfinished.
+    // This entry previously carried a wood-fired pizza menu ported from the old
+    // hub, which is why it was removed once; a printer is not a pizzeria.
+    contactOnly: 'POD DTG is a print-on-demand brand, not a kitchen. Nothing to order here.',
     items: [],
   },
 ]
