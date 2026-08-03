@@ -46,6 +46,8 @@ export interface LocalSeed {
   siteNote?: string
   /** Button label on a contact-only brand. Defaults to "Open their page". */
   siteCta?: string
+  /** Kitchen's own dietary description, e.g. ['Halal']. Never a certification. */
+  dietary?: string[]
   /**
    * Their posted prices already contain sales tax, so checkout must not add it
    * again. Backed out for the vendor's records rather than ignored — they

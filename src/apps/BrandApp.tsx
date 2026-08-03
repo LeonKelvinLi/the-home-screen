@@ -74,8 +74,21 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
             {/* prepMinutes is an estimate by category, not sourced, so it is
                 hedged — and suppressed entirely where there is nothing to cook. */}
-            {brand.prepMinutes > 0 && !brand.contactOnly && (
+            {((brand.prepMinutes > 0 && !brand.contactOnly) || brand.dietary?.length) && (
               <div className="brand-chips">
+                {brand.dietary?.map((d) => (
+                  <span
+                    className="chip"
+                    key={d}
+                    style={{
+                      background: ink.isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.08)',
+                      color: ink.fg,
+                    }}
+                  >
+                    {d}
+                  </span>
+                ))}
+                {brand.prepMinutes > 0 && !brand.contactOnly && (
                 <span
                   className="chip"
                   style={{
@@ -85,6 +98,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 >
                   usually ~{brand.prepMinutes} min
                 </span>
+                )}
               </div>
             )}
           </div>

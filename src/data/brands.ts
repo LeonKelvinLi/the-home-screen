@@ -130,6 +130,19 @@ export interface Brand {
   siteNote?: string
   /** Button label on a contact-only brand. Defaults to "Open their page". */
   siteCta?: string
+  /**
+   * Dietary descriptors the kitchen states about itself — "Halal", "Vegan",
+   * "Gluten free".
+   *
+   * These are the kitchen's own description and are rendered as plain tags.
+   * They must NEVER be rendered as a certification seal, and no certifying
+   * body may be named here. A customer who keeps halal or has an allergy is
+   * relying on this, and a stock "CERTIFIED" badge over an uncertified kitchen
+   * is the one kind of wrong that actually hurts someone. If a kitchen ever
+   * does hold a real certificate, that needs its own field carrying the
+   * certifier's name so it can be checked, not this one.
+   */
+  dietary?: string[]
 }
 
 export interface Vendor {
@@ -199,6 +212,8 @@ interface Seed {
   siteCta?: string
   /** Posted prices already contain sales tax. */
   taxIncluded?: boolean
+  /** Kitchen's own dietary description. Never a certification claim. */
+  dietary?: string[]
 }
 
 /** Straight transcription of the source hub. Prices are cents. */
@@ -455,6 +470,7 @@ export const BRANDS: Brand[] = [
     contactOnly: s.contactOnly,
     siteNote: s.siteNote,
     siteCta: s.siteCta,
+    dietary: s.dietary,
   })),
   ...SEED.map(fromSeed),
 ]
