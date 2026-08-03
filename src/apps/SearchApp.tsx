@@ -18,6 +18,8 @@ interface Hit {
   desc: string
   price: number
   logo: (typeof BRANDS)[number]['logo']
+  /** Price still needs confirming with the business. */
+  flagged: boolean
 }
 
 export function SearchApp({ api }: { api: ShellApi }) {
@@ -46,6 +48,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
               desc: it.desc,
               price: it.price,
               logo: b.logo,
+              flagged: Boolean(b.pricesEstimated || b.needsOwnerReview),
             })
           }
         }
@@ -93,7 +96,9 @@ export function SearchApp({ api }: { api: ShellApi }) {
                 <span>
                   <strong>{b.name}</strong>
                   <em>
-                    {b.cuisine} · {b.prepMinutes} min
+                    {b.cuisine}
+                    {b.prepMinutes > 0 && !b.contactOnly && ` · ~${b.prepMinutes} min`}
+                    {b.needsOwnerReview && ' · unconfirmed'}
                   </em>
                 </span>
                 <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
@@ -129,7 +134,10 @@ export function SearchApp({ api }: { api: ShellApi }) {
                       <em>{h.brandName}</em>
                       <span>{h.desc}</span>
                     </span>
-                    <span className="search-item-price">{money(h.price)}</span>
+                    <span className="search-item-price">
+                      {money(h.price)}
+                      {h.flagged && <em className="search-item-flag">to confirm</em>}
+                    </span>
                     <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
                   </button>
                 ))}

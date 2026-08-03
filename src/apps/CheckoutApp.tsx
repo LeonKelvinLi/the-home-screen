@@ -89,8 +89,8 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
             </p>
           ) : !PAYMENTS_LIVE ? (
             <p className="local-notice">
-              <strong>Nothing has been charged.</strong> The kitchen has your order — pay at the
-              counter when you collect.
+              <strong>Nothing has been charged.</strong> Your order is recorded, but no kitchen
+              display is connected yet — call the kitchen to confirm before you travel.
             </p>
           ) : null}
 
@@ -150,12 +150,18 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
                 autoComplete="street-address"
                 maxLength={160}
               />
-              <p className="co-hint">Delivery radius is 4 miles from the commissary.</p>
+              <p className="co-hint">
+                Each kitchen delivers from its own address. Confirm they reach you before
+                ordering.
+              </p>
             </>
           ) : (
             <div className="co-address">
-              <strong>Hall Street Commissary</strong>
-              <span>Each kitchen has its own counter — your order screen shows which.</span>
+              <strong>Collect from each kitchen</strong>
+              <span>
+                These are separate businesses in different cities, not one building. Your order
+                screen lists the address for each.
+              </span>
             </div>
           )}
         </section>
@@ -179,7 +185,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
             autoComplete="tel"
             maxLength={30}
           />
-          <p className="co-hint">Texted when each kitchen finishes its part.</p>
+          <p className="co-hint">So the kitchen can reach you about your order.</p>
         </section>
 
         <section className="co-block">

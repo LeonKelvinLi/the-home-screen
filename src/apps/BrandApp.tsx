@@ -72,19 +72,26 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             <div className="brand-meta" style={{ color: ink.dim }}>
               <span>{brand.cuisine}</span>
             </div>
-            <div className="brand-chips">
-              <span className="chip is-open">Open now</span>
-              <span
-                className="chip"
-                style={{
-                  background: ink.isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.08)',
-                  color: ink.fg,
-                }}
-              >
-                {brand.prepMinutes} min
-              </span>
-            </div>
+            {/* prepMinutes is an estimate by category, not sourced, so it is
+                hedged — and suppressed entirely where there is nothing to cook. */}
+            {brand.prepMinutes > 0 && !brand.contactOnly && (
+              <div className="brand-chips">
+                <span
+                  className="chip"
+                  style={{
+                    background: ink.isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.08)',
+                    color: ink.fg,
+                  }}
+                >
+                  usually ~{brand.prepMinutes} min
+                </span>
+              </div>
+            )}
           </div>
+
+          {brand.pricesEstimated && (
+            <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
+          )}
 
           {/* A single-category menu needs no tab bar — one lone pill that
               repeats the section heading below it is pure noise. */}
@@ -126,6 +133,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                       desc={item.desc}
                       bg={brand.logo.bg}
                       fg={brand.logo.fg}
+                      imageUrl={item.imageUrl}
                     />
                     <span className="menu-row-add">+</span>
                   </span>
@@ -152,10 +160,6 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           )}
 
-          {brand.pricesEstimated && (
-            <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
-          )}
-
           {brand.orderUrl && !brand.contactOnly && (
             <p className="brand-foot">
               <a href={brand.orderUrl} target="_blank" rel="noreferrer">
@@ -170,8 +174,11 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </p>
           )}
 
+          {/* Do not claim the kitchen set these prices on the brands whose own
+              data says they came off a delivery platform with a markup. */}
           <p className="brand-foot">
-            {brand.name} is operated independently. Prices set by the kitchen.
+            {brand.name} is operated independently.{' '}
+            {brand.pricesEstimated ? 'Prices here still need confirming with them.' : 'Prices set by the kitchen.'}
           </p>
         </div>
       </AppChrome>

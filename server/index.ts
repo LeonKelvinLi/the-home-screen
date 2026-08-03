@@ -1,5 +1,6 @@
 import express from 'express'
-import { randomBytes, timingSafeEqual } from 'node:crypto'
+import type { NextFunction, Request, Response } from 'express'
+import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { dirname, join } from 'node:path'
 import { db } from './db/schema'
@@ -21,6 +22,50 @@ const FALLBACK_TAX_BPS = 725
 const SERVICE_BPS = 500
 const DELIVERY_FEE = 399
 
+/**
+ * Per-IP token bucket for the two anonymous write routes.
+ *
+ * Measured before this existed: a single connection sustained 127 orders/sec
+ * (19k kitchen tickets) and 2,765 applications/sec, growing the database at
+ * ~2.5 MB/s. Render's disk is 1 GB, so one laptop filled it in about seven
+ * minutes, after which no real order could be written at all. Nothing else in
+ * the stack would have caught it: the health check reads in-memory constants
+ * and never touches the database, so the service reports healthy straight
+ * through a total order-intake outage.
+ *
+ * In-process and therefore per-instance — fine at one instance, and the thing
+ * to replace first if this ever scales out.
+ */
+function rateLimiter(perMinute: number, burst: number) {
+  const buckets = new Map<string, { tokens: number; last: number }>()
+  const RATE = perMinute / 60000
+
+  return (req: Request, res: Response, next: NextFunction) => {
+    const now = Date.now()
+    // Render terminates TLS upstream, so req.ip is the proxy without this.
+    const key = String(req.get('x-forwarded-for') ?? '').split(',')[0].trim() || req.ip || 'unknown'
+
+    // Bound the map itself, or the limiter becomes the memory leak.
+    if (buckets.size > 10000) {
+      for (const [k, v] of buckets) if (now - v.last > 120000) buckets.delete(k)
+      if (buckets.size > 10000) buckets.clear()
+    }
+
+    const b = buckets.get(key) ?? { tokens: burst, last: now }
+    b.tokens = Math.min(burst, b.tokens + (now - b.last) * RATE)
+    b.last = now
+
+    if (b.tokens < 1) {
+      buckets.set(key, b)
+      res.setHeader('Retry-After', '60')
+      return res.status(429).json({ error: 'Too many requests. Try again shortly.' })
+    }
+    b.tokens -= 1
+    buckets.set(key, b)
+    next()
+  }
+}
+
 /** Hard ceilings. Every one of these is reachable by an anonymous POST. */
 const MAX_LINES = 60
 const MAX_QTY = 50
@@ -38,20 +83,44 @@ if (!Number.isFinite(rawFee) || rawFee < 0 || rawFee > 10000) {
 const FEE_BPS = Math.round(rawFee)
 
 /**
- * Real payments are not wired up. Refuse to run in production rather than
- * quietly dispatching food against no authorization.
+ * Real payments are not wired up. Nothing here creates a PaymentIntent and
+ * `stripe` is never imported, so every order is recorded `payment_state=mock`.
+ *
+ * PAYMENTS_WIRED is a source-level constant, NOT an env var, and that is the
+ * whole point. The previous guard keyed off the mere presence of
+ * STRIPE_SECRET_KEY, so an operator following render.yaml's own instruction
+ * ("set STRIPE_SECRET_KEY when payments are wired") satisfied the check,
+ * silenced the mock-payments warning, and still charged nobody — while the
+ * client showed "One charge of $X". The safety net failed open at exactly the
+ * moment it was needed. A key cannot prove a charge path exists; only code
+ * can, so this flips when the charge code lands and not before.
  */
+const PAYMENTS_WIRED = false
 const ALLOW_MOCK = process.env.ALLOW_MOCK_PAYMENTS === '1'
-if (PROD && !process.env.STRIPE_SECRET_KEY && !ALLOW_MOCK) {
+if (PROD && !PAYMENTS_WIRED && !ALLOW_MOCK) {
   throw new Error(
-    'Refusing to start in production without STRIPE_SECRET_KEY.\n' +
-      'Payments are mocked: orders would reach kitchens with nothing charged.\n' +
+    'Refusing to start in production: payments are not implemented.\n' +
+      'Orders would reach kitchens with nothing charged.\n' +
       'For a demo deploy set ALLOW_MOCK_PAYMENTS=1 to acknowledge this.',
   )
 }
+if (process.env.STRIPE_SECRET_KEY && !PAYMENTS_WIRED) {
+  console.warn(
+    'STRIPE_SECRET_KEY is set but no charge path exists. It is being ignored.',
+  )
+}
 
-/** The kitchen simulator must never run where real vendors are working. */
-const SIMULATE_KITCHEN = process.env.SIMULATE_KITCHEN !== '0' && !PROD
+/**
+ * The kitchen simulator must never run where real vendors are working.
+ *
+ * render.yaml sets SIMULATE_KITCHEN=1, which was a no-op under the old
+ * `&& !PROD`: in production every ticket stayed `queued` forever, so the
+ * customer's progress bar never moved and the confirmation screen's claim
+ * that the kitchen had the order was false. Honour the flag, and shout about
+ * it, so a demo deploy can show real movement and nobody mistakes it for a
+ * kitchen actually working the ticket.
+ */
+const SIMULATE_KITCHEN = process.env.SIMULATE_KITCHEN === '1'
 
 /* ---------- vendor bootstrap ---------- */
 
@@ -133,6 +202,20 @@ for (const brand of BRANDS) {
   }
 }
 
+/**
+ * Health check. Deliberately touches the database: the catalogue alone is
+ * served from memory, so it reported healthy while order intake was dead.
+ */
+app.get('/api/health', (_req, res) => {
+  try {
+    db.prepare('SELECT count(*) AS n FROM orders').get()
+    res.json({ ok: true })
+  } catch (err) {
+    console.error('health: database unreadable', err)
+    res.status(503).json({ ok: false })
+  }
+})
+
 app.get('/api/catalogue', (_req, res) => {
   res.json({ vendors: VENDORS, brands: BRANDS })
 })
@@ -175,7 +258,7 @@ function intOr(value: unknown, fallback: number, lo: number, hi: number): number
   return Math.max(lo, Math.min(hi, Math.floor(n)))
 }
 
-app.post('/api/orders', (req, res) => {
+app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const body = req.body
 
@@ -189,10 +272,16 @@ app.post('/api/orders', (req, res) => {
   const fulfilment = body.fulfilment === 'delivery' ? 'delivery' : 'pickup'
   const address = typeof body.address === 'string' ? body.address.trim().slice(0, MAX_ADDRESS) : ''
   const tipBps = intOr(body.tipBps, 0, 0, 5000)
-  const idemKey =
-    typeof body.idempotencyKey === 'string' && body.idempotencyKey.length <= 80
-      ? body.idempotencyKey
-      : null
+  // A caller who sends a key believes replays are protected. Silently
+  // dropping a malformed one (too long, empty, a number) turned that belief
+  // into two real orders, so a bad key is now an error rather than a no-op.
+  let idemKey: string | null = null
+  if (body.idempotencyKey !== undefined && body.idempotencyKey !== null) {
+    if (typeof body.idempotencyKey !== 'string' || body.idempotencyKey.length < 8 || body.idempotencyKey.length > 80) {
+      return res.status(400).json({ error: 'idempotencyKey must be a string of 8 to 80 characters.' })
+    }
+    idemKey = body.idempotencyKey
+  }
 
   if (lines.length === 0) return res.status(400).json({ error: 'Cart is empty.' })
   if (lines.length > MAX_LINES) return res.status(400).json({ error: `Too many lines (max ${MAX_LINES}).` })
@@ -205,12 +294,27 @@ app.post('/api/orders', (req, res) => {
     return res.status(400).json({ error: 'Delivery address required.' })
   }
 
-  // Replaying the same submission must not print a second set of tickets.
+  // Replaying the same submission must not print a second set of tickets —
+  // but a key reused with a DIFFERENT cart is not a replay, it is a new order.
+  // Returning the first order for it made the client show a green tick and
+  // clear the cart, destroying the second order with nothing sent to any
+  // kitchen. Bind the key to a digest of what was actually ordered.
+  const requestDigest = createHash('sha256')
+    .update(JSON.stringify({ lines, fulfilment, tipBps, address, name, phone }))
+    .digest('hex')
+
   if (idemKey) {
-    const prior = db.prepare('SELECT id FROM orders WHERE idempotency_key = ?').get(idemKey) as
-      | { id: string }
-      | undefined
-    if (prior) return res.status(200).json(readOrder(prior.id, { forCustomer: true }))
+    const prior = db
+      .prepare('SELECT id, request_digest FROM orders WHERE idempotency_key = ?')
+      .get(idemKey) as { id: string; request_digest: string | null } | undefined
+    if (prior) {
+      if (prior.request_digest && prior.request_digest !== requestDigest) {
+        return res.status(409).json({
+          error: 'This idempotency key was already used for a different order.',
+        })
+      }
+      return res.status(200).json(readOrder(prior.id, { forCustomer: true }))
+    }
   }
 
   type Priced = {
@@ -324,12 +428,12 @@ app.post('/api/orders', (req, res) => {
     db.prepare(
       `INSERT INTO orders (id, code, customer_name, customer_phone, fulfilment, subtotal, tax,
         service_fee, delivery_fee, tip, total, eta_minutes, payment_state, idempotency_key,
-        address, created_at)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        address, request_digest, created_at)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     ).run(
       orderId, code, name, phone, fulfilment, subtotal, tax,
       serviceFee, deliveryFee, tip, total, etaMinutes, 'mock', idemKey,
-      address || null, now,
+      address || null, requestDigest, now,
     )
 
     vendorIds.forEach((vendorId, vi) => {
@@ -393,9 +497,20 @@ app.get('/api/orders', (req, res) => {
   res.json(ids.map((r) => readOrder(r.id, { vendorId })).filter(Boolean))
 })
 
-/** Customer-facing lookup. The unguessable order id is the capability. */
+/**
+ * Customer-facing lookup. The unguessable order id is the capability.
+ *
+ * A vendor also holds order ids for any cart they were part of, and this route
+ * takes no auth — so before scoping, a kitchen could replay an id from its own
+ * queue here and read every competitor's line items on that order. Cross-
+ * referenced against the public catalogue that is the competitor's exact
+ * revenue on every shared cart, which is the product's whole premise. An
+ * authenticated vendor now sees only its own ticket; an anonymous caller (the
+ * customer, who already knows what they ordered) still sees the whole order.
+ */
 app.get('/api/orders/:id', (req, res) => {
-  const order = readOrder(req.params.id, { forCustomer: true })
+  const vendorId = authVendor(req)
+  const order = readOrder(req.params.id, { forCustomer: true, ...(vendorId ? { vendorId } : {}) })
   if (!order) return res.status(404).json({ error: 'Not found' })
   res.json(order)
 })
@@ -532,7 +647,7 @@ const MAX_APP_FIELD = 120
  * purpose — a half-filled lead from a food truck is still a lead — but bounded,
  * because this is an unauthenticated write like the order endpoint.
  */
-app.post('/api/applications', (req, res) => {
+app.post('/api/applications', rateLimiter(6, 3), (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const b = req.body
   const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_APP_FIELD) : '')
@@ -555,12 +670,73 @@ app.post('/api/applications', (req, res) => {
     Date.now(),
   )
 
+  notifyLead({
+    business,
+    contact,
+    cuisine: str(b.cuisine),
+    city: str(b.city),
+    social: str(b.social),
+  })
+
   res.status(201).json({ ok: true })
 })
 
-/** Operator-facing. Reuses the vendor bearer token rather than a second scheme. */
+/**
+ * Deliver a new lead to a human.
+ *
+ * Without this the form wrote a database row and stopped. Nothing emailed,
+ * nothing alerted, and the only read route needs a token — so a food truck
+ * could apply and the operator would never find out. A lead nobody sees is
+ * the same as no form at all.
+ *
+ * LEAD_WEBHOOK_URL takes a Slack or Discord incoming webhook, or any
+ * automation endpoint (Zapier, Make, an email relay). Unset, this falls back
+ * to the server log, which the operator can at least read in Render.
+ * Delivery is best-effort and deliberately never fails the request: the lead
+ * is already committed to disk, and a webhook outage must not tell a
+ * prospective vendor their application was rejected.
+ */
+function notifyLead(lead: Record<string, string>) {
+  const line = `NEW VENDOR LEAD  ${lead.business} | ${lead.contact}` +
+    `${lead.cuisine ? ` | ${lead.cuisine}` : ''}${lead.city ? ` | ${lead.city}` : ''}` +
+    `${lead.social ? ` | ${lead.social}` : ''}`
+  console.log(line)
+
+  const url = process.env.LEAD_WEBHOOK_URL
+  if (!url) return
+
+  const timeout = AbortSignal.timeout(8000)
+  fetch(url, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    // `text` is what Slack and Discord both read; the fields are there for
+    // anything that wants structure.
+    body: JSON.stringify({ text: line, ...lead }),
+    signal: timeout,
+  }).catch((err) => console.error('lead webhook failed (lead is saved):', String(err)))
+}
+
+/**
+ * Operator-facing lead list.
+ *
+ * This used to accept any vendor bearer token. Applications belong to the
+ * operator, not to vendors, and the table has no owner column to scope by —
+ * so every one of the 32 competing kitchens could read every prospective
+ * vendor's name, city, phone and email and poach the pipeline. It now takes a
+ * separate operator token, and if none is configured the route does not exist
+ * rather than falling back to something weaker.
+ */
+const OPERATOR_TOKEN = process.env.OPERATOR_TOKEN ?? ''
 app.get('/api/applications', (req, res) => {
-  if (!authVendor(req)) return res.status(401).json({ error: 'Vendor token required.' })
+  if (OPERATOR_TOKEN.length < 16) {
+    return res.status(503).json({ error: 'No operator token configured.' })
+  }
+  const sent = String(req.get('authorization') ?? '').replace(/^Bearer /, '')
+  const a = Buffer.from(sent)
+  const b = Buffer.from(OPERATOR_TOKEN)
+  if (a.length !== b.length || !timingSafeEqual(a, b)) {
+    return res.status(401).json({ error: 'Operator token required.' })
+  }
   res.json(db.prepare('SELECT * FROM applications ORDER BY created_at DESC LIMIT 200').all())
 })
 
@@ -577,10 +753,14 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
 
 app.listen(PORT, () => {
   console.log(`api + static on http://localhost:${PORT}`)
-  if (PROD && ALLOW_MOCK) {
+  if (!PAYMENTS_WIRED) {
     console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
   }
-  if (SIMULATE_KITCHEN) console.log('kitchen simulator: ON (set SIMULATE_KITCHEN=0 to disable)')
+  if (SIMULATE_KITCHEN) {
+    console.warn('*** KITCHEN SIMULATOR ON: ticket states advance on a timer, not by a kitchen. ***')
+  } else if (PROD) {
+    console.warn('*** No kitchen display exists. Tickets will stay queued until one does. ***')
+  }
   if (!PROD) {
     const rows = db.prepare('SELECT id, api_token FROM vendors').all() as { id: string; api_token: string }[]
     console.log('vendor tokens (dev only):')

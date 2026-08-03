@@ -270,8 +270,13 @@ export async function listOrders(): Promise<OrdersResult> {
 /* ---------- vendor applications ---------- */
 
 /**
- * Empty slots advertised on the last home-screen page. Real, not theatre:
- * every accepted vendor takes one, so the number has to come down.
+ * How many blank tiles are drawn on the last home-screen page.
+ *
+ * This is literally true — SLOT_APPS is generated from it — but it is NOT a
+ * quota, and nothing decrements it when a vendor joins. The old comment here
+ * claimed the number "has to come down", which would have made the Reserve
+ * screen read as manufactured scarcity. Say what it is: room on the grid,
+ * added as needed.
  */
 export const OPEN_SLOTS = 8
 

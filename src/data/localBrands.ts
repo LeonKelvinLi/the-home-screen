@@ -25,7 +25,8 @@ export interface LocalSeed {
   icon: string
   prep: number
   category: string
-  items: [string, string, number][]
+  /** name, description, cents, and the basename of a vendor-supplied photo in /food. */
+  items: [string, string, number, string?][]
   /** Real ordering link, where one exists. */
   orderUrl?: string
   site?: string
@@ -79,16 +80,16 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(213) 570-7497',
     address: '288 9th Avenue Suite A, Oakland',
     items: [
-      ['Baco Cheeseburger', 'Ground beef, smoked bacon, cheddar, onions, BBQ and moo moo sauce', 1400],
+      ['Baco Cheeseburger', 'Ground beef, smoked bacon, cheddar, onions, BBQ and moo moo sauce', 1400, 'lumpia-baco-cheeseburger'],
       ['Chicken Tinola', 'Ground chicken, chayote, ginger, jalapeño, spinach, shoyu aioli', 1300],
-      ['Bicol Express Pork & Shrimp', 'Spicy coconut pork and shrimp, Shanghai style, sweet chili', 1300],
+      ['Bicol Express Pork & Shrimp', 'Spicy coconut pork and shrimp, Shanghai style, sweet chili', 1300, 'lumpia-bicol-express'],
       ["Earl's Turkey & Veggies", 'Ground turkey, cabbage, carrots, potatoes, peas, sweet chili', 1300],
       ['TLC Veggie', 'Chopped kale, roasted potatoes, roasted garlic and mushrooms', 1200],
       ['Peach Mango Cobbler', 'Caramelised peach and mango, jackfruit, cinnamon wonton strips', 1200],
-      ['Adobo Seasoned Wings', 'Six twice-fried jumbo wings in secret dry adobo seasoning', 1500],
-      ['Filipino BBQ Wings', 'Six twice-fried jumbo wings, Filipino BBQ sauce, ranch', 1500],
+      ['Adobo Seasoned Wings', 'Six twice-fried jumbo wings in secret dry adobo seasoning', 1500, 'lumpia-adobo-wings'],
+      ['Filipino BBQ Wings', 'Six twice-fried jumbo wings, Filipino BBQ sauce, ranch', 1500, 'lumpia-bbq-wings'],
       ['Butter Garlic Shrimp Pancit', 'Pancit noodles with butter garlic shrimp', 1500],
-      ['Filipino Mac-Ghetti', 'Cheese mac, Filipino sweet spaghetti sauce, ground beef, cheddar', 600],
+      ['Filipino Mac-Ghetti', 'Cheese mac, Filipino sweet spaghetti sauce, ground beef, cheddar', 600, 'lumpia-macghetti'],
     ],
   },
   {
@@ -138,13 +139,15 @@ export const LOCAL_SEED: LocalSeed[] = [
     address: '917 Washington St, Oakland',
     pricesEstimated:
       'These are DoorDash listing prices, which carry the platform markup. Counter prices at the shop are lower — confirm before charging.',
+    // Descriptions are the shop's own wording, not a paraphrase.
     items: [
-      ['The Breadwinner Club', 'Their signature stacked club sandwich', 1950],
-      ['Tuna Sub', 'House tuna on a sub roll', 1835],
-      ['Tuna Melt', 'Tuna melted with cheese, pressed', 1835],
-      ['Turkey Pesto Panini', 'Turkey and pesto, pressed', 1720],
-      ['Turkey & Swiss', 'Turkey and Swiss, built to order', 1720],
-      ['Build Your Own Sandwich', 'Pick your bread, meat, cheese and toppings', 1610],
+      ['Crab Melt', 'Lump crab, swiss cheese, tomato, on toasted ciabatta', 2185, 'bread-winners-crab-melt'],
+      ['The Breadwinner Club', 'Smoked turkey, black forest ham, applewood smoked bacon, cheddar, lettuce, tomato and garlic aioli on sourdough', 1950, 'bread-winners-club'],
+      ['Tuna Sub', 'Housemade tuna salad, provolone, shredded lettuce, tomato, red onion, pickles, on a french roll', 1835, 'bread-winners-tuna-sub'],
+      ['Tuna Melt', 'Housemade tuna salad, melted and pressed', 1835],
+      ['Turkey & Swiss', 'Roasted turkey, swiss cheese, lettuce, tomato, chipotle aioli on sourdough', 1720, 'bread-winners-turkey-swiss'],
+      ['Turkey Pesto Panini', 'Roasted turkey, provolone, tomato, spinach, pesto aioli on ciabatta', 1720, 'bread-winners-turkey-pesto'],
+      ['BYO Sandwich', 'Choose your own adventure', 1610, 'bread-winners-byo'],
     ],
   },
   {
@@ -154,7 +157,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     cuisine: 'Soul food, Asian fusion',
     tagline: 'Southern soul food crossed with Asian fusion, sold as pop-ups and catering.',
     color: '#E8508D',
-    icon: '',
+    icon: 'rains-plates',
     prep: 25,
     category: 'Menu',
     site: 'https://www.instagram.com/rains_plates/',
@@ -163,9 +166,9 @@ export const LOCAL_SEED: LocalSeed[] = [
     pricesEstimated:
       'DoorDash listing prices, which carry the platform markup — and their DoorDash store currently shows as inactive. Message @rains_plates to confirm what is on today.',
     items: [
-      ['Party Wings Meal', 'About 1 lb, marinated 24 hours, fried naked, your choice of sauce, side, bread and dip', 1950],
-      ['2 Jumbo Shrimp Skewers Meal', '8 pieces, marinated 24 hours, pan seared, choice of sauce, side, bread and dip', 2150],
-      ['Tender Tri Tip Meal', '7 oz marinated in 10 spices for 48 hours, choice of sauce, side, bread and dip', 2150],
+      ['Party Wings Meal', 'About 1 lb, marinated 24 hours, fried naked, your choice of sauce, side, bread and dip', 1950, 'rains-plates-party-wings'],
+      ['2 Jumbo Shrimp Skewers Meal', '8 pieces, marinated 24 hours, pan seared, choice of sauce, side, bread and dip', 2150, 'rains-plates-shrimp-skewers'],
+      ['Tender Tri Tip Meal', '7 oz marinated in 10 spices for 48 hours, choice of sauce, side, bread and dip', 2150, 'rains-plates-tri-tip'],
       ['Candied Yams', 'Side', 650],
       ['French Fries', 'Side', 600],
       ['Jasmine Rice', 'Side', 400],

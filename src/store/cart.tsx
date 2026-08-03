@@ -2,6 +2,7 @@ import { createContext, useContext, useEffect, useMemo, useReducer } from 'react
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
 import { taxForVendorSubtotals } from '../lib/tax'
+import { SETTINGS_KEY } from './settings'
 
 /**
  * One cart across every brand. This is the whole point of the product: a
@@ -32,6 +33,8 @@ export interface CartLine {
 interface State {
   lines: CartLine[]
   tipBps: number
+  /** True once the customer has chosen a tip themselves, including None. */
+  tipTouched: boolean
   fulfilment: 'pickup' | 'delivery'
 }
 
@@ -56,7 +59,7 @@ const STORAGE_KEY = 'fb.cart.v1'
   order into $12.19, with the tip row below the fold and only the inflated total
   on the sticky bar. Switching to delivery opts into 15%.
 */
-const initialState: State = { lines: [], tipBps: 0, fulfilment: 'pickup' }
+const initialState: State = { lines: [], tipBps: 0, tipTouched: false, fulfilment: 'pickup' }
 
 /**
  * Restore the saved cart, dropping anything that is no longer orderable.
@@ -66,10 +69,40 @@ const initialState: State = { lines: [], tipBps: 0, fulfilment: 'pickup' }
  * Also defends against a corrupted `lines` value, which used to crash the whole
  * app on every load with no way out but clearing site data.
  */
+/**
+ * Seed a fresh cart from Settings.
+ *
+ * "Default Tip" and default fulfilment were read only by the screen that drew
+ * them, so the footer's promise that they are "applied when you open the cart"
+ * was false and the cart always started at pickup with no tip. Read the same
+ * localStorage key the settings store writes, rather than threading a provider
+ * — the cart's reducer is initialised before any provider tree is available.
+ */
+function settingsSeed(): { tipBps: number; fulfilment: 'pickup' | 'delivery' } {
+  try {
+    const raw = localStorage.getItem(SETTINGS_KEY)
+    if (!raw) return { tipBps: 0, fulfilment: 'pickup' }
+    const p = JSON.parse(raw) as { defaultTipBps?: unknown; defaultFulfilment?: unknown }
+    return {
+      tipBps:
+        typeof p.defaultTipBps === 'number' && p.defaultTipBps >= 0 && p.defaultTipBps <= 5000
+          ? Math.floor(p.defaultTipBps)
+          : 0,
+      fulfilment: p.defaultFulfilment === 'delivery' ? 'delivery' : 'pickup',
+    }
+  } catch {
+    return { tipBps: 0, fulfilment: 'pickup' }
+  }
+}
+
 function loadState(): State {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return initialState
+    // No saved cart: this is a fresh one, so the customer's defaults apply.
+    if (!raw) {
+      const seed = settingsSeed()
+      return { ...initialState, tipBps: seed.tipBps, fulfilment: seed.fulfilment }
+    }
     const parsed = JSON.parse(raw) as Partial<State>
 
     const lines = Array.isArray(parsed.lines)
@@ -88,10 +121,12 @@ function loadState(): State {
     return {
       lines,
       tipBps: typeof parsed.tipBps === 'number' ? parsed.tipBps : initialState.tipBps,
+      tipTouched: parsed.tipTouched === true,
       fulfilment: parsed.fulfilment === 'delivery' ? 'delivery' : 'pickup',
     }
   } catch {
-    return initialState
+    const seed = settingsSeed()
+    return { ...initialState, tipBps: seed.tipBps, fulfilment: seed.fulfilment }
   }
 }
 
@@ -110,15 +145,23 @@ function reducer(state: State, action: Action): State {
       const sig = signature(action.line)
       const existing = state.lines.find((l) => signature(l) === sig)
       if (existing) {
+        // Clamp on add too, not just on the stepper. Three taps of "Add · 20"
+        // built a line of 60 and quoted $345.75; the server clamped to 50 and
+        // charged $288.13, and the gap only showed up at the counter.
         return {
           ...state,
           lines: state.lines.map((l) =>
-            l.lineId === existing.lineId ? { ...l, qty: l.qty + action.line.qty } : l,
+            l.lineId === existing.lineId
+              ? { ...l, qty: Math.min(MAX_QTY, l.qty + action.line.qty) }
+              : l,
           ),
         }
       }
       const lineId = `l_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`
-      return { ...state, lines: [...state.lines, { ...action.line, lineId }] }
+      return {
+        ...state,
+        lines: [...state.lines, { ...action.line, qty: Math.min(MAX_QTY, action.line.qty), lineId }],
+      }
     }
     case 'qty': {
       // Server clamps qty to 50; quoting 60 and ordering 50 would misprice.
@@ -134,18 +177,21 @@ function reducer(state: State, action: Action): State {
     case 'clear':
       return { ...state, lines: [] }
     case 'tip':
-      return { ...state, tipBps: action.bps }
+      return { ...state, tipBps: action.bps, tipTouched: true }
     case 'fulfilment':
       return {
         ...state,
         fulfilment: action.mode,
-        // Only move the tip if the customer has not set one themselves.
-        tipBps:
-          state.tipBps === 0 && action.mode === 'delivery'
+        // Only move the tip if the customer has not chosen one themselves.
+        // Testing `tipBps === 0` could not tell "never set" from "tapped None"
+        // — which is a real button — so declining a tip and then switching to
+        // delivery silently added 15% back. The mirror case removed a tip the
+        // customer had chosen. Track the choice explicitly instead.
+        tipBps: state.tipTouched
+          ? state.tipBps
+          : action.mode === 'delivery'
             ? 1500
-            : action.mode === 'pickup' && state.tipBps === 1500
-              ? 0
-              : state.tipBps,
+            : 0,
       }
   }
 }

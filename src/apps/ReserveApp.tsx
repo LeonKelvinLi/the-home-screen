@@ -18,6 +18,14 @@ import type { ShellApi } from '../ios/Device'
  * every slot filled is one fewer icon on the page.
  */
 
+/**
+ * Only actual kitchens. BRANDS includes a skate shop and a dog breeder, so
+ * counting all of them called them Bay Area kitchens on a page pitching to a
+ * food truck — and put their logos up as proof of participating kitchens.
+ */
+const KITCHENS = BRANDS.filter((b) => !b.contactOnly && b.menu.some((c) => c.items.length > 0))
+const KITCHEN_COUNT = KITCHENS.length
+
 export function ReserveApp({ api }: { api: ShellApi }) {
   const [name, setName] = useState('')
   const [cuisine, setCuisine] = useState('')
@@ -71,7 +79,8 @@ export function ReserveApp({ api }: { api: ShellApi }) {
           </div>
           <h2>{name.trim()}</h2>
           <p className="confirm-sub">
-            We have your details. Someone will reach out about a slot on this home screen.
+            Your details are saved and the operator has been sent them. Nothing is committed yet
+            — a slot is confirmed only once they reply to you directly.
           </p>
           <button className="btn-secondary" onClick={api.closeApp}>
             Back to home
@@ -93,18 +102,18 @@ export function ReserveApp({ api }: { api: ShellApi }) {
       }
     >
       <p className="reserve-lead">
-        Put your kitchen on the home screen customers already have. One tap from their phone,
-        alongside {BRANDS.length} other Bay Area kitchens.
+        Put your kitchen on this home screen. One tap from a customer's phone, alongside{' '}
+        {KITCHEN_COUNT} other local kitchens.
       </p>
 
       {/* Proof before pitch: their real logos, not a claim about them. */}
       <div className="reserve-proof">
-        {BRANDS.slice(0, 12).map((b) => (
+        {KITCHENS.slice(0, 12).map((b) => (
           <span className="reserve-proof-mark" key={b.id}>
             <BrandLogo logo={b.logo} size={34} />
           </span>
         ))}
-        <span className="reserve-proof-more">+{BRANDS.length - 12}</span>
+        <span className="reserve-proof-more">+{KITCHEN_COUNT - 12}</span>
       </div>
 
       <ListSection header="What you get">
@@ -118,21 +127,24 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         <ListRow
           icon="creditcard.fill"
           iconBg="#34C759"
-          label="Your prices, your payout"
-          detail="You set the menu. You are paid separately from every other kitchen"
+          label="Your prices, your menu"
+          detail="You set your own items and prices. Nobody else edits them"
           chevron={false}
         />
         <ListRow
           icon="star.fill"
           iconBg="#FF9500"
           label="A shared cart"
-          detail="Customers order from you and three other kitchens in one checkout"
+          detail="One cart and one checkout across every kitchen here"
           chevron={false}
         />
       </ListSection>
 
-      <ListSection header="Availability" footer={`${OPEN_SLOTS} slots are open on the last page.`}>
-        <ListRow label="Kitchens on the platform" value={String(BRANDS.length)} chevron={false} />
+      <ListSection
+        header="Availability"
+        footer={`${OPEN_SLOTS} blank tiles are waiting on the last page. Not a limit — more are added as kitchens join.`}
+      >
+        <ListRow label="Kitchens on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
         <ListRow label="Open slots" value={String(OPEN_SLOTS)} chevron={false} />
       </ListSection>
 

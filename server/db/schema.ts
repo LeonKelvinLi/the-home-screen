@@ -121,6 +121,9 @@ addColumn('orders', 'idempotency_key', 'TEXT')
 addColumn('vendors', 'api_token', 'TEXT')
 // Delivery was selectable and billable with nowhere to send the food.
 addColumn('orders', 'address', 'TEXT')
+// Binds an idempotency key to the cart it was used for, so reusing a key with
+// a different order is a 409 rather than a silently discarded order.
+addColumn('orders', 'request_digest', 'TEXT')
 
 /*
   Indexes on migrated columns must be created AFTER the ALTERs above. On an

@@ -120,6 +120,12 @@ export function ItemSheet({
           <p className="sheet-desc">{item.desc}</p>
           <p className="sheet-price">{money(item.price)}</p>
 
+          {/* This is where the price is accepted, so the caveat has to be here
+              and not only at the bottom of the menu page behind it. */}
+          {brand.pricesEstimated && (
+            <p className="sheet-flag">Needs confirming — {brand.pricesEstimated}</p>
+          )}
+
           {groups.map((g) => (
             <section className="opt-group" key={g.id}>
               <div className="opt-head">

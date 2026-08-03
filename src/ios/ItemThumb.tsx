@@ -53,6 +53,7 @@ export function ItemThumb({
   bg,
   fg,
   size = 78,
+  imageUrl,
 }: {
   name: string
   desc?: string
@@ -60,7 +61,23 @@ export function ItemThumb({
   bg: string
   fg: string
   size?: number
+  /** The vendor's own photo, when one was sourced. */
+  imageUrl?: string
 }) {
+  if (imageUrl) {
+    return (
+      <img
+        src={imageUrl}
+        alt=""
+        width={size}
+        height={size}
+        loading="lazy"
+        decoding="async"
+        style={{ display: 'block', width: size, height: size, objectFit: 'cover' }}
+      />
+    )
+  }
+
   const glyph = glyphFor(name, desc)
   const [a, b] = bg.split('|')
   const seed = hash(name)

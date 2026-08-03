@@ -14,26 +14,25 @@ export interface Settings {
   defaultFulfilment: 'pickup' | 'delivery'
   /** Preselected tip in basis points. */
   defaultTipBps: number
-  /** Text me when each kitchen finishes. */
-  orderUpdates: boolean
-  /** Haptic feedback on supported devices. */
-  haptics: boolean
-  /** Show dietary tags on menu rows. */
-  showDietary: boolean
-  /** Round every order up to the nearest dollar for the tip. */
-  roundUp: boolean
 }
+
+/*
+ * Removed rather than left on screen: orderUpdates (no notification or SMS
+ * code exists), haptics (no haptics code, and iOS Safari has no vibrate),
+ * showDietary (no item in either data file sets tags, so it toggled nothing)
+ * and roundUp (never implemented). Each was read only by the screen that drew
+ * it. A toggle that does nothing teaches the customer that controls here are
+ * decorative, which is exactly what the note above says not to do.
+ */
 
 const DEFAULTS: Settings = {
   defaultFulfilment: 'pickup',
   defaultTipBps: 0,
-  orderUpdates: true,
-  haptics: true,
-  showDietary: true,
-  roundUp: false,
 }
 
-const KEY = 'fb.settings.v1'
+/** Also read by the cart, which seeds itself from these. */
+export const SETTINGS_KEY = 'fb.settings.v1'
+const KEY = SETTINGS_KEY
 
 function load(): Settings {
   try {
@@ -43,10 +42,6 @@ function load(): Settings {
     return {
       defaultFulfilment: p.defaultFulfilment === 'delivery' ? 'delivery' : 'pickup',
       defaultTipBps: typeof p.defaultTipBps === 'number' ? p.defaultTipBps : DEFAULTS.defaultTipBps,
-      orderUpdates: p.orderUpdates ?? DEFAULTS.orderUpdates,
-      haptics: p.haptics ?? DEFAULTS.haptics,
-      showDietary: p.showDietary ?? DEFAULTS.showDietary,
-      roundUp: p.roundUp ?? DEFAULTS.roundUp,
     }
   } catch {
     return DEFAULTS

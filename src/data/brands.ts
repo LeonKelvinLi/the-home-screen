@@ -46,6 +46,13 @@ export interface MenuItem {
   popular?: boolean
   tags?: string[]
   options?: MenuOptionGroup[]
+  /**
+   * The vendor's OWN photo of this dish, saved locally under /food.
+   * Never a stock or generated image: a picture of food this kitchen does not
+   * actually serve is as much an invented fact as an invented price. Items
+   * without a sourced photo fall back to the generated glyph.
+   */
+  imageUrl?: string
 }
 
 export interface MenuOptionGroup {
@@ -150,7 +157,7 @@ interface Seed {
   icon: string
   prep: number
   category: string
-  items: [string, string, number][]
+  items: [string, string, number, string?][]
   review?: string
 }
 
@@ -463,11 +470,12 @@ const fromSeed = (s: Seed): Brand => ({
     {
       id: `c_${s.slug.replace(/-/g, '')}`,
       name: s.category,
-      items: s.items.map(([name, desc, price], i) => ({
+      items: s.items.map(([name, desc, price, photo], i) => ({
         id: `i_${s.slug.replace(/-/g, '')}_${i + 1}`,
         name,
         desc,
         price,
+        imageUrl: photo ? `/food/${photo}.jpg` : undefined,
       })),
     },
   ],

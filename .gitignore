@@ -3,4 +3,8 @@ dist
 .env
 *.db
 *.db-journal
+# WAL and shm carry live row data — including vendor bearer tokens — so the
+# bare *.db rule was not enough. Both were tracked until this was caught.
+*.db-wal
+*.db-shm
 .DS_Store

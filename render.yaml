@@ -29,7 +29,7 @@ services:
     # and fails the build with "tsc: command not found".
     buildCommand: npm ci --include=dev && npm run build
     startCommand: npm start
-    healthCheckPath: /api/catalogue
+    healthCheckPath: /api/health
     autoDeploy: true
     envVars:
       - key: NODE_ENV
@@ -49,6 +49,16 @@ services:
       - key: SIMULATE_KITCHEN
         value: "1"
       - key: STRIPE_SECRET_KEY
+        sync: false
+      # Guards the operator-only applications list. Without it that route 503s,
+      # which is the safe default — it used to accept any vendor's token and
+      # hand every competitor the whole lead pipeline.
+      - key: OPERATOR_TOKEN
+        generateValue: true
+      # Where a new food-truck application actually lands. A Slack or Discord
+      # incoming webhook, or any automation URL. Leave unset and leads only
+      # reach the server log — they are never lost, but nobody is told.
+      - key: LEAD_WEBHOOK_URL
         sync: false
     disk:
       name: orders
