@@ -134,6 +134,36 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </section>
           ))}
 
+          {/* No published menu: show how to actually reach them instead of an
+              empty list or an invented one. */}
+          {brand.contactOnly && (
+            <div className="brand-contact">
+              <p>{brand.contactOnly}</p>
+              {brand.phone && (
+                <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}>
+                  Call {brand.phone}
+                </a>
+              )}
+              {brand.site && (
+                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer">
+                  Open their page
+                </a>
+              )}
+            </div>
+          )}
+
+          {brand.pricesEstimated && (
+            <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
+          )}
+
+          {brand.orderUrl && !brand.contactOnly && (
+            <p className="brand-foot">
+              <a href={brand.orderUrl} target="_blank" rel="noreferrer">
+                They also take orders on their own site
+              </a>
+            </p>
+          )}
+
           {brand.needsOwnerReview && (
             <p className="brand-review-flag">
               Menu needs owner confirmation — {brand.needsOwnerReview}

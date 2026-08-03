@@ -2810,3 +2810,30 @@ textarea {
 .app-icon .slot-hint {
   opacity: 0.85;
 }
+
+/* A business with no published menu still gets a real page — showing how to
+   reach them, never an invented menu. */
+.brand-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 18px 16px 4px;
+  padding: 18px 16px;
+  border-radius: var(--radius);
+  background: var(--paper);
+  text-align: center;
+}
+
+.brand-contact p {
+  margin: 0 0 4px;
+  font-size: 15px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.brand-contact a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.4;
+}

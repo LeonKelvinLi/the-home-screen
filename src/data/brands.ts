@@ -1,4 +1,5 @@
 import type { GlyphName } from './glyphs'
+import { LOCAL_SEED } from './localBrands'
 
 /**
  * Catalogue ported from the operator's existing hub at goodneighborbuilder.com.
@@ -73,6 +74,20 @@ export interface Brand {
   /** Estimate by category. Not sourced from the operator. */
   prepMinutes: number
   menu: MenuCategory[]
+  /** Their own site, where one exists. */
+  site?: string
+  /** A real ordering link (Toast, their own checkout), where one exists. */
+  orderUrl?: string
+  phone?: string
+  address?: string
+  /** Set when a whole menu is triangulated rather than published at source. */
+  pricesEstimated?: string
+  /**
+   * Set when no menu is published anywhere. The brand still gets an icon and a
+   * page, but shows how to reach them instead of an invented menu — and three
+   * of these are not restaurants at all.
+   */
+  contactOnly?: string
   /**
    * Set where the business name and the ported menu plainly disagree — the old
    * site tagged all 25 as `kind:"food"`, so a tax-prep firm and a sneaker brand
@@ -391,14 +406,23 @@ const SEED: Seed[] = [
   },
 ]
 
-export const BRANDS: Brand[] = SEED.map((s) => ({
+const fromSeed = (s: Seed): Brand => ({
   id: `b_${s.slug.replace(/-/g, '')}`,
   vendorId: `v_${s.slug.replace(/-/g, '')}`,
   name: s.name,
   iconLabel: s.label,
   cuisine: s.cuisine,
   tagline: s.tagline,
-  logo: { imageUrl: `/icons/${s.icon}.png`, bg: s.color, fg: '#ffffff' },
+  logo: s.icon
+    ? { imageUrl: `/icons/${s.icon}.png`, bg: s.color, fg: '#ffffff' }
+    : // No verifiable artwork: draw a monogram rather than link a missing file.
+      {
+        bg: s.color,
+        fg: '#ffffff',
+        template: 'monogram' as const,
+        initials: s.name.replace(/[^A-Za-z ]/g, '').split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase(),
+        face: 'grotesk' as const,
+      },
   prepMinutes: s.prep,
   needsOwnerReview: s.review,
   menu: [
@@ -413,10 +437,27 @@ export const BRANDS: Brand[] = SEED.map((s) => ({
       })),
     },
   ],
-}))
+})
+
+/**
+ * Verified local businesses first — they are the real ones, so they take the
+ * front of the grid. The ported hub entries follow.
+ */
+export const BRANDS: Brand[] = [
+  ...LOCAL_SEED.map((s) => ({
+    ...fromSeed(s as unknown as Seed),
+    site: s.site,
+    orderUrl: s.orderUrl,
+    phone: s.phone,
+    address: s.address,
+    pricesEstimated: s.pricesEstimated,
+    contactOnly: s.contactOnly,
+  })),
+  ...SEED.map(fromSeed),
+]
 
 /** Each business is independent and is paid separately. */
-export const VENDORS: Vendor[] = SEED.map((s) => ({
+export const VENDORS: Vendor[] = [...LOCAL_SEED, ...SEED].map((s) => ({
   id: `v_${s.slug.replace(/-/g, '')}`,
   name: s.name,
   stripeAccountId: null,
