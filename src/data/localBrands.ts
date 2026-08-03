@@ -113,7 +113,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       ['Bockwurst', 'Half pork, half veal, milk and eggs', 475],
       ['the Wienie', 'Veggie. Wheat protein, bell peppers, fennel, eggplant, fresh garlic', 475],
       ['Lemon Chicken', 'Chicken, fresh lemon and garlic. Low salt, low fat, no preservatives', 475],
-      ['Mango with Jalapeno', 'Chicken, mango, jalapeño pepper', 475],
+      ['Mango with Jalapeno', 'From Chef Bruce Aidell. Chicken, mango, jalapeño pepper, cilantro and paprika', 475],
       ['Bratwurst', 'German. Pork and marjoram, genuine old world taste', 500],
       ['Potato Salad', 'Side', 250],
       ['Chili on any dog', 'Add chili to any sausage', 100],
