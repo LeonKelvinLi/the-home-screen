@@ -422,7 +422,20 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
 
   const now = Date.now()
   const orderId = `o_${now.toString(36)}${randomBytes(6).toString('hex')}`
-  const code = `#${1000 + Math.floor(Math.random() * 8999)}`
+  // A counter code only has to be unique among orders still being worked, so
+  // reuse an old number freely but never one that is live right now. Purely
+  // random over 8,999 values collides with even odds after ~112 orders.
+  const activeCodes = new Set(
+    (
+      db
+        .prepare("SELECT DISTINCT o.code AS code FROM orders o JOIN tickets t ON t.order_id = o.id WHERE t.state != 'collected'")
+        .all() as { code: string }[]
+    ).map((r) => r.code),
+  )
+  let code = `#${1000 + Math.floor(Math.random() * 8999)}`
+  for (let i = 0; i < 40 && activeCodes.has(code); i++) {
+    code = `#${1000 + Math.floor(Math.random() * 8999)}`
+  }
 
   const write = db.transaction(() => {
     db.prepare(
@@ -747,7 +760,19 @@ app.get('*', (_req, res) => res.sendFile(join(here, '..', 'dist', 'index.html'))
 
 /** Never return a stack trace: it leaks absolute paths and the dependency tree. */
 app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
-  console.error('unhandled:', err)
+  // body-parser marks its own failures. Reporting them as 500 told the customer
+  // the server had broken when in fact their request was malformed or too
+  // large, and left them unable to tell whether an order had been created.
+  const e = err as { status?: number; type?: string; message?: string }
+  if (e?.type === 'entity.too.large') {
+    return res.status(413).json({ error: 'That request is too large.' })
+  }
+  if (e?.status === 400 || e?.type === 'entity.parse.failed') {
+    return res.status(400).json({ error: 'That request could not be read.' })
+  }
+  // Log the error only, never the request: the body carries the customer's
+  // name, phone and address, and this goes to the hosting provider's log.
+  console.error('unhandled:', e?.message ?? err)
   res.status(500).json({ error: 'Internal error' })
 })
 
