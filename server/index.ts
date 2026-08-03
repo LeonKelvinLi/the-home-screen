@@ -507,6 +507,47 @@ if (SIMULATE_KITCHEN) {
   }, 5000)
 }
 
+/* ---------- vendor applications ---------- */
+
+const MAX_APP_FIELD = 120
+
+/**
+ * From the reserve slots on the last home-screen page. Kept permissive on
+ * purpose — a half-filled lead from a food truck is still a lead — but bounded,
+ * because this is an unauthenticated write like the order endpoint.
+ */
+app.post('/api/applications', (req, res) => {
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const b = req.body
+  const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_APP_FIELD) : '')
+
+  const business = str(b.business)
+  const contact = str(b.contact)
+  if (business.length < 2) return res.status(400).json({ error: 'Business name is required.' })
+  if (contact.length < 5) return res.status(400).json({ error: 'A phone or email is required.' })
+
+  db.prepare(
+    `INSERT INTO applications (id, business, cuisine, contact, city, social, created_at)
+     VALUES (?,?,?,?,?,?,?)`,
+  ).run(
+    `ap_${randomBytes(8).toString('hex')}`,
+    business,
+    str(b.cuisine) || null,
+    contact,
+    str(b.city) || null,
+    str(b.social) || null,
+    Date.now(),
+  )
+
+  res.status(201).json({ ok: true })
+})
+
+/** Operator-facing. Reuses the vendor bearer token rather than a second scheme. */
+app.get('/api/applications', (req, res) => {
+  if (!authVendor(req)) return res.status(401).json({ error: 'Vendor token required.' })
+  res.json(db.prepare('SELECT * FROM applications ORDER BY created_at DESC LIMIT 200').all())
+})
+
 /* ---------- static ---------- */
 
 app.use(express.static(join(here, '..', 'dist')))

@@ -2763,3 +2763,50 @@ textarea {
   backdrop-filter: none;
   -webkit-backdrop-filter: none;
 }
+
+/* ---------- reserve a spot ---------- */
+
+.reserve-lead {
+  margin: 0 16px 18px;
+  font-size: 17px;
+  line-height: 1.45;
+  letter-spacing: -0.4px;
+  color: var(--muted);
+}
+
+/* Their real logos, overlapped like a stack of faces — proof the platform is
+   populated, before any claim about it. */
+.reserve-proof {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 4px;
+}
+
+.reserve-proof-mark {
+  display: block;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+}
+
+.reserve-proof-mark:not(:first-child) {
+  margin-left: -11px;
+}
+
+.reserve-proof-mark svg {
+  border-radius: 8px;
+  box-shadow: 0 0 0 2px #f2f2f7;
+}
+
+.reserve-proof-more {
+  margin-left: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+/* An empty slot should read as available, not broken. */
+.app-icon .slot-hint {
+  opacity: 0.85;
+}

@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { brandById } from '../data/brands'
 import { money, useCart } from '../store/cart'
-import { IS_LOCAL_ONLY, newIdempotencyKey, placeOrder } from '../lib/api'
+import { IS_LOCAL_ONLY, PAYMENTS_LIVE, newIdempotencyKey, placeOrder } from '../lib/api'
 import type { PlacedOrder } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
 
@@ -82,12 +82,17 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           </p>
 
           {/* Never let a local-only order look like a real one. */}
-          {order.local && (
+          {order.local ? (
             <p className="local-notice">
               <strong>Saved on this device only.</strong> No kitchen has received this order —
               ordering goes live once the backend is connected.
             </p>
-          )}
+          ) : !PAYMENTS_LIVE ? (
+            <p className="local-notice">
+              <strong>Nothing has been charged.</strong> The kitchen has your order — pay at the
+              counter when you collect.
+            </p>
+          ) : null}
 
           {order.tickets.map((ticket) => {
             const brands = ticket.brandIds.map((b) => brandById(b)?.name).filter(Boolean)
@@ -179,10 +184,12 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
 
         <section className="co-block">
           <h3>Payment</h3>
-          {IS_LOCAL_ONLY ? (
+          {!PAYMENTS_LIVE ? (
             <p className="local-notice">
-              <strong>Nothing is charged.</strong> Payments are not connected in this build, so
-              this order is saved on your device and no kitchen receives it.
+              <strong>Nothing is charged.</strong>{' '}
+              {IS_LOCAL_ONLY
+                ? 'Payments are not connected, so this order is saved on your device and no kitchen receives it.'
+                : 'Card payments are not connected yet. Your order does reach the kitchen — settle up at the counter.'}
             </p>
           ) : (
             <>

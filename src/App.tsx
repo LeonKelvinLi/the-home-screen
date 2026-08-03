@@ -10,6 +10,7 @@ import { SearchApp } from './apps/SearchApp'
 import { AccountApp, HelpApp, RewardsApp } from './apps/SimpleApps'
 import { SettingsApp } from './apps/SettingsApp'
 import { PhoneApp } from './apps/PhoneApp'
+import { ReserveApp } from './apps/ReserveApp'
 
 /**
  * Routing table for the fake OS. An app id is either a brand id or `sys.*`.
@@ -37,6 +38,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <PhoneApp api={api} />
     case 'settings':
       return <SettingsApp api={api} />
+    case 'reserve':
+      return <ReserveApp api={api} />
     default:
       return null
   }

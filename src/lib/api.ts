@@ -16,7 +16,22 @@ import type { CartLine } from '../store/cart'
  */
 
 const API_BASE = (import.meta.env.VITE_API_BASE ?? '').replace(/\/$/, '')
-export const IS_LOCAL_ONLY = API_BASE === ''
+
+/**
+ * Two independent switches, because they fail differently.
+ *
+ * ORDERING_LIVE  — the order reaches a kitchen. Off means it lives only in this
+ *                  browser, and every surface has to say so.
+ * PAYMENTS_LIVE  — a card is actually charged. Off while ordering is on is a
+ *                  real state (the kitchen cooks, nothing is billed) and the
+ *                  customer must be told that too, not shown a fake card row.
+ *
+ * Inferred from an explicit flag rather than from an empty API_BASE, because
+ * same-origin is a legitimate base and would otherwise read as "no backend".
+ */
+export const ORDERING_LIVE = import.meta.env.VITE_ORDERING === 'live'
+export const PAYMENTS_LIVE = import.meta.env.VITE_PAYMENTS === 'live'
+export const IS_LOCAL_ONLY = !ORDERING_LIVE
 
 export class OrderRejected extends Error {
   constructor(
@@ -240,6 +255,43 @@ export async function listOrders(): Promise<OrdersResult> {
 
   orders.sort((a, b) => b.createdAt - a.createdAt)
   return { orders, degraded }
+}
+
+/* ---------- vendor applications ---------- */
+
+/**
+ * Empty slots advertised on the last home-screen page. Real, not theatre:
+ * every accepted vendor takes one, so the number has to come down.
+ */
+export const OPEN_SLOTS = 8
+
+export interface ApplicationInput {
+  business: string
+  cuisine: string
+  contact: string
+  city: string
+  social: string
+}
+
+export async function submitApplication(input: ApplicationInput): Promise<void> {
+  if (IS_LOCAL_ONLY) {
+    // Keep it rather than drop it — a lead is worth more than an order.
+    try {
+      const key = 'fb.applications.v1'
+      const prev = JSON.parse(localStorage.getItem(key) ?? '[]')
+      localStorage.setItem(key, JSON.stringify([{ ...input, at: Date.now() }, ...prev].slice(0, 50)))
+    } catch {
+      /* private mode */
+    }
+    return
+  }
+
+  const res = await request('/api/applications', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  })
+  if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
 }
 
 export const newIdempotencyKey = () =>

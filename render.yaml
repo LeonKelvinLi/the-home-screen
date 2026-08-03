@@ -1,38 +1,53 @@
-# Render blueprint — static site, front-end only.
+# Render blueprint — one Node service serving both the API and the built client.
 #
-# This deploy has NO backend. Orders are saved in the browser and no kitchen
-# receives them; the UI says so on the checkout and order screens. The Express +
-# SQLite server in /server is written and tested but deliberately not deployed.
+# Single service on purpose: the Express app already serves ./dist with an SPA
+# catch-all, so the client and API share an origin and there is no CORS surface
+# and no second deploy to keep in step.
 #
-# To connect it later: deploy the server separately, then rebuild this site with
-# VITE_API_BASE set to its URL. Every order then goes over the wire and the
-# local-only notices disappear on their own.
+# TWO THINGS TO KNOW
+#
+# 1. ORDERING IS LIVE, PAYMENTS ARE NOT. VITE_ORDERING=live routes orders to the
+#    server and real kitchen tickets are written. VITE_PAYMENTS is deliberately
+#    absent, so the UI tells the customer nothing is charged and to settle at the
+#    counter. ALLOW_MOCK_PAYMENTS=1 is the matching server-side acknowledgement —
+#    without it the server refuses to boot in production, which is the intended
+#    safety net. Remove both and set STRIPE_SECRET_KEY when payments are wired.
+#
+# 2. THE DISK IS LOAD-BEARING. Render's filesystem is ephemeral without one, so
+#    every redeploy would silently start an empty database and lose live orders
+#    and vendor applications.
 
 services:
   - type: web
     name: the-home-screen
-    runtime: static
+    runtime: node
+    plan: starter
+    region: oregon
     branch: main
     buildCommand: npm ci && npm run build
-    staticPublishPath: ./dist
+    startCommand: npm start
+    healthCheckPath: /api/catalogue
     autoDeploy: true
-    # Single-page app: every path must serve index.html or a deep link 404s.
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
-    headers:
-      # Hashed filenames, so the assets are safe to cache hard.
-      - path: /assets/*
-        name: Cache-Control
-        value: public, max-age=31536000, immutable
-      - path: /fonts/*
-        name: Cache-Control
-        value: public, max-age=31536000, immutable
-      - path: /icons/*
-        name: Cache-Control
-        value: public, max-age=604800
-      # index.html must never be cached, or a deploy takes hours to reach users.
-      - path: /index.html
-        name: Cache-Control
-        value: no-cache
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Build-time: baked into the client bundle by Vite.
+      - key: VITE_ORDERING
+        value: live
+      - key: ALLOW_MOCK_PAYMENTS
+        value: "1"
+      - key: PLATFORM_FEE_BPS
+        value: "1000"
+      - key: DATABASE_PATH
+        value: /var/data/data.db
+      # Tickets advance on a timer so the demo has something truthful to show.
+      # Set to 0 the moment a real kitchen display exists, or the simulator will
+      # overwrite what the kitchen entered.
+      - key: SIMULATE_KITCHEN
+        value: "1"
+      - key: STRIPE_SECRET_KEY
+        sync: false
+    disk:
+      name: orders
+      mountPath: /var/data
+      sizeGB: 1

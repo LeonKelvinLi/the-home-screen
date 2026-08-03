@@ -1,7 +1,9 @@
 import type { ReactNode } from 'react'
 import { BRANDS } from '../data/brands'
+import { OPEN_SLOTS } from '../lib/api'
 import { BrandLogo } from '../ios/BrandLogo'
 import { SystemIcon } from '../ios/SystemIcon'
+import { SlotIcon } from '../ios/SlotIcon'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
 /**
@@ -11,6 +13,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
+  | 'reserve'
 
 export interface AppDef {
   id: string
@@ -72,7 +75,22 @@ const PHONE_APP: AppDef = {
   tint: '#1FAF54',
 }
 
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP]
+/**
+ * Empty slots close the last page. Every one is a live pitch to the next food
+ * truck: same silhouette as a real icon, unfilled, opening the reserve screen.
+ * They sit last so a customer never wades through them to reach a kitchen.
+ */
+export const SLOT_APPS: AppDef[] = Array.from({ length: OPEN_SLOTS }, (_, i) => ({
+  id: `slot.${i}`,
+  name: 'Reserve a Spot',
+  label: 'Available',
+  icon: <SlotIcon fill />,
+  kind: 'system' as const,
+  systemKey: 'reserve' as const,
+  tint: '#1C1C1E',
+}))
+
+export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, ...SLOT_APPS]
 
 export const appById = (id: string) => ALL_APPS.find((a) => a.id === id)
 
@@ -83,7 +101,7 @@ const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
  * phone gets 4x6 across two pages and an iPad-width window gets 8 columns on
  * one — rather than a fixed 16-per-page that leaves a desktop half empty.
  */
-export const ORDERED_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS]
+export const ORDERED_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, ...SLOT_APPS]
 
 /**
  * Dock, carried over from the operator's hub: Phone, Water, Info, Gig Work.

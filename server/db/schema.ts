@@ -80,6 +80,23 @@ CREATE INDEX IF NOT EXISTS idx_tickets_order  ON tickets(order_id);
 CREATE INDEX IF NOT EXISTS idx_tickets_vendor ON tickets(vendor_id, state);
 CREATE INDEX IF NOT EXISTS idx_lines_ticket   ON ticket_lines(ticket_id);
 CREATE INDEX IF NOT EXISTS idx_orders_created ON orders(created_at DESC);
+
+-- Vendor applications from the empty slots on the last home-screen page.
+-- A lead is worth more than an order, so this is deliberately forgiving:
+-- only a name and a contact are required.
+CREATE TABLE IF NOT EXISTS applications (
+  id         TEXT PRIMARY KEY,
+  business   TEXT NOT NULL,
+  cuisine    TEXT,
+  contact    TEXT NOT NULL,
+  city       TEXT,
+  social     TEXT,
+  state      TEXT NOT NULL DEFAULT 'new'
+             CHECK (state IN ('new','contacted','accepted','declined')),
+  created_at INTEGER NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_applications_new ON applications(state, created_at DESC);
 `)
 
 /**
