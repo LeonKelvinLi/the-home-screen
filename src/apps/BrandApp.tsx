@@ -93,6 +93,10 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
           )}
 
+          {/* Says plainly that this is a selection, not their whole menu —
+              which it is not, for every partner but top dog. */}
+          {brand.menuNote && <p className="menu-note">{brand.menuNote}</p>}
+
           {/* A single-category menu needs no tab bar — one lone pill that
               repeats the section heading below it is pure noise. */}
           {brand.menu.length > 1 && (
@@ -160,13 +164,21 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           )}
 
-          {brand.orderUrl && !brand.contactOnly && (
+          {/* A partner-specific reason to visit their own site. Falls back to
+              naming the destination honestly when there is nothing to add. */}
+          {brand.siteNote && !brand.contactOnly ? (
+            <p className="brand-foot">
+              <a href={brand.site ?? brand.orderUrl} target="_blank" rel="noreferrer">
+                {brand.siteNote}
+              </a>
+            </p>
+          ) : brand.orderUrl && !brand.contactOnly ? (
             <p className="brand-foot">
               <a href={brand.orderUrl} target="_blank" rel="noreferrer">
                 They also take orders on {orderHost(brand.orderUrl)}
               </a>
             </p>
-          )}
+          ) : null}
 
           {brand.needsOwnerReview && (
             <p className="brand-review-flag">

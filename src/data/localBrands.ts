@@ -36,6 +36,14 @@ export interface LocalSeed {
   pricesEstimated?: string
   /** Set when no menu is published anywhere. No items are invented. */
   contactOnly?: string
+  /**
+   * The stocked subset, by item name. Everything not listed stays in `items`
+   * but is not sold — three to five per partner keeps stock space and prep
+   * load manageable across many kitchens. Omit to offer the whole menu.
+   */
+  offer?: string[]
+  /** Replaces the generic "they also take orders on X" footer. */
+  siteNote?: string
 }
 
 export const LOCAL_SEED: LocalSeed[] = [
@@ -52,6 +60,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://topdoghotdogs.com',
     phone: '(510) 843-5967',
     address: '2534 Durant Ave, Berkeley',
+    // Deliberately no `offer`: the operator wants top dog's full menu, unlike
+    // the other partners where only three to five items are stocked.
     pricesEstimated:
       'top dog does not publish counter prices. $5.00 is corroborated by a Postmates listing and their own 2026 catering worksheet, but confirm with the shop. Card and contactless payments have a $5 minimum.',
     items: [
@@ -79,6 +89,16 @@ export const LOCAL_SEED: LocalSeed[] = [
     orderUrl: 'https://order.toasttab.com/online/thelumpiacompany',
     phone: '(213) 570-7497',
     address: '288 9th Avenue Suite A, Oakland',
+    // The five their own site puts photos against — their choice of what to
+    // showcase, which is the closest thing to a popularity signal they publish.
+    offer: [
+      'Baco Cheeseburger',
+      'Bicol Express Pork & Shrimp',
+      'Adobo Seasoned Wings',
+      'Filipino BBQ Wings',
+      'Filipino Mac-Ghetti',
+    ],
+    siteNote: 'See their full menu and order direct at thelumpiacompany.com',
     items: [
       ['Baco Cheeseburger', 'Ground beef, smoked bacon, cheddar, onions, BBQ and moo moo sauce', 1400, 'lumpia-baco-cheeseburger'],
       ['Chicken Tinola', 'Ground chicken, chayote, ginger, jalapeño, spinach, shoyu aioli', 1300],
@@ -106,8 +126,12 @@ export const LOCAL_SEED: LocalSeed[] = [
     orderUrl: 'https://bulapiesfiji.com/menu',
     phone: '(707) 563-8422',
     address: '2568 Springs Rd, Vallejo',
+    // Named by the operator. Their full menu stays below for when it widens.
+    offer: ['Beef Stew Pie', 'Butter Chicken Pie', 'Mince & Cheese Pie', 'Kumquat Limemade'],
+    siteNote:
+      'Discover more favorites and even order frozen pies shipped directly to your door by visiting bulapiesfiji.com',
     items: [
-      ['Beef Stew Pie', 'Tender ground beef, peas, carrots and potatoes', 1000],
+      ['Beef Stew Pie', 'Tender ground beef, peas, carrots and potatoes', 1000, 'bula-beef-stew'],
       ['Butter Chicken Pie', 'Creamy buttery sauce with a hint of heat', 1100],
       ['Homestyle Chicken', 'Tender chicken and broccoli in a flaky crust', 1000],
       ['Mince & Cheese Pie', 'Minced meat and melted cheese, the softest cheeseburger', 1000],
@@ -139,6 +163,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     address: '917 Washington St, Oakland',
     pricesEstimated:
       'These are DoorDash listing prices, which carry the platform markup. Counter prices at the shop are lower — confirm before charging.',
+    // Taken from DoorDash's "Most Ordered" section, in the order it lists
+    // them — actual order counts rather than a guess at what sells.
+    offer: ['BYO Sandwich', 'The Breadwinner Club', 'Crab Melt', 'Tuna Sub', 'Turkey & Swiss'],
+    siteNote: 'See their full menu and order direct on DoorDash',
     // Descriptions are the shop's own wording, not a paraphrase.
     items: [
       ['Crab Melt', 'Lump crab, swiss cheese, tomato, on toasted ciabatta', 2185, 'bread-winners-crab-melt'],
@@ -165,6 +193,9 @@ export const LOCAL_SEED: LocalSeed[] = [
     address: 'Pinole',
     pricesEstimated:
       'DoorDash listing prices, which carry the platform markup — and their DoorDash store currently shows as inactive. Message @rains_plates to confirm what is on today.',
+    // The three meals, plus the side that is theirs rather than generic.
+    offer: ['Party Wings Meal', '2 Jumbo Shrimp Skewers Meal', 'Tender Tri Tip Meal', 'Candied Yams'],
+    siteNote: 'See what is on this week at instagram.com/rains_plates',
     items: [
       ['Party Wings Meal', 'About 1 lb, marinated 24 hours, fried naked, your choice of sauce, side, bread and dip', 1950, 'rains-plates-party-wings'],
       ['2 Jumbo Shrimp Skewers Meal', '8 pieces, marinated 24 hours, pan seared, choice of sauce, side, bread and dip', 2150, 'rains-plates-shrimp-skewers'],

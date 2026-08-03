@@ -2870,3 +2870,13 @@ textarea {
   letter-spacing: 0.01em;
   color: #B25000;
 }
+
+/* The curated-menu line. Reads as merchandising, not as a warning — the
+   price-confirmation flag above it is the one that has to look cautionary. */
+.menu-note {
+  margin: 14px 16px 2px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}

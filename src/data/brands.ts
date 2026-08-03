@@ -116,6 +116,18 @@ export interface Brand {
    * the operator in front of his own tenants.
    */
   needsOwnerReview?: string
+  /**
+   * Line above the menu. Every partner carries one: the list is a curated
+   * selection, not their full menu, and the customer should be told that
+   * before they wonder where the rest went.
+   */
+  menuNote?: string
+  /**
+   * Replaces the generic "they also take orders on X" footer. Per-brand
+   * because the reason to visit a partner's own site differs — only one of
+   * them ships frozen pies.
+   */
+  siteNote?: string
 }
 
 export interface Vendor {
@@ -172,6 +184,10 @@ interface Seed {
   category: string
   items: [string, string, number, string?][]
   review?: string
+  /** Stocked subset, by item name. Omit to offer the whole menu. */
+  offer?: string[]
+  /** Replaces the generic "they also take orders on X" footer. */
+  siteNote?: string
 }
 
 /** Straight transcription of the source hub. Prices are cents. */
@@ -365,6 +381,9 @@ const SEED: Seed[] = [
   },
 ]
 
+/** One line, every partner. Curated menus are the whole model here. */
+export const MENU_NOTE = "Choose from this week's favorites!"
+
 const fromSeed = (s: Seed): Brand => ({
   id: `b_${s.slug.replace(/-/g, '')}`,
   vendorId: `v_${s.slug.replace(/-/g, '')}`,
@@ -384,17 +403,28 @@ const fromSeed = (s: Seed): Brand => ({
       },
   prepMinutes: s.prep,
   needsOwnerReview: s.review,
+  menuNote: s.items.length > 0 ? MENU_NOTE : undefined,
   menu: [
     {
       id: `c_${s.slug.replace(/-/g, '')}`,
       name: s.category,
-      items: s.items.map(([name, desc, price, photo], i) => ({
-        id: `i_${s.slug.replace(/-/g, '')}_${i + 1}`,
-        name,
-        desc,
-        price,
-        imageUrl: photo ? `/food/${photo}.jpg` : undefined,
-      })),
+      /*
+        `offer` is the stocked subset. The full researched menu stays in the
+        data on purpose — it was read off each business's own site and is
+        expensive to reproduce — so widening the offer later is a one-line
+        change rather than another round of research. Item ids stay tied to
+        the item's position in the FULL list, so trimming the offer never
+        silently repoints an id at a different dish.
+      */
+      items: s.items
+        .map(([name, desc, price, photo], i) => ({
+          id: `i_${s.slug.replace(/-/g, '')}_${i + 1}`,
+          name,
+          desc,
+          price,
+          imageUrl: photo ? `/food/${photo}.jpg` : undefined,
+        }))
+        .filter((it) => !s.offer || s.offer.includes(it.name)),
     },
   ],
 })
@@ -412,6 +442,7 @@ export const BRANDS: Brand[] = [
     address: s.address,
     pricesEstimated: s.pricesEstimated,
     contactOnly: s.contactOnly,
+    siteNote: s.siteNote,
   })),
   ...SEED.map(fromSeed),
 ]
