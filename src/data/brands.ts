@@ -13,10 +13,13 @@ import { LOCAL_SEED } from './localBrands'
  * Tony's Style, Gifted Kicks, Print On Demand) and two confirmed non-food
  * businesses (Midnite Theories, a skate shop; Sin City Pits, a dog breeder).
  * Listing a tax preparer as a soul-food kitchen is a claim about someone
- * else's trade that we cannot stand behind. Only removed where that is not in
- * doubt — Jenuine Fitness and BEASTmode keep their menus, because a fitness
- * brand genuinely does sell bowls and shakes, and Sharetasking stays because
- * it is one of the four dock icons the operator asked for.
+ * else's trade that we cannot stand behind. Jenuine Fitness, BEASTmode and Sharetasking
+ * were removed in a second pass at the operator's direction: a fitness brand
+ * and a gig-work platform, whose food menus are plausible but unverified.
+ *
+ * Sharetasking was the dock's "Gig Work" destination, so the dock is now three
+ * icons rather than four. That is valid — iOS docks hold up to four, not
+ * exactly four — but it is a deliberate consequence, not an oversight.
  *
  * Two things were deliberately NOT carried over:
  *  - Ratings. The old site has none, and inventing review counts for real
@@ -251,17 +254,6 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'beastmode', name: 'BEASTmode', label: 'BEASTmode',
-    cuisine: 'High-protein meals', tagline: 'High-protein meals and shakes',
-    color: '#111827', icon: 'beastmode', prep: 14, category: 'Meals',
-    items: [
-      ['Grilled Chicken & Rice Bowl', '8 oz chicken, jasmine rice, broccoli', 1400],
-      ['Steak & Sweet Potato', 'Sirloin, roasted sweet potato, greens', 1800],
-      ['Meal Prep — 5 Meals', 'Macro-tracked, chef prepared', 7000],
-      ['Recovery Shake', 'Post-workout protein blend', 900],
-    ],
-  },
-  {
     slug: 'vegan-mob', name: 'Vegan Mob', label: 'Vegan Mob',
     cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
     color: '#3C9D3C', icon: 'vegan-mob', prep: 16, category: 'Menu',
@@ -295,18 +287,6 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'jenuine-fitness', name: 'Jenuine Fitness', label: 'Jenuine Fitn…',
-    cuisine: 'Bowls & smoothies', tagline: 'Clean bowls, wraps, and smoothies',
-    color: '#E0457B', icon: 'jenuine-fitness', prep: 10, category: 'Menu',
-    review: 'Listed as a fitness business but carries a food menu.',
-    items: [
-      ['Power Greens Bowl', 'Quinoa, kale, avocado, grilled chicken', 1500],
-      ['Turkey Avocado Wrap', 'Spinach tortilla, chipotle aioli', 1300],
-      ['Açaí Bowl', 'Granola, banana, berries, honey', 1200],
-      ['Green Smoothie', 'Spinach, pineapple, ginger, 20 oz', 900],
-    ],
-  },
-  {
     slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitc…',
     cuisine: 'Vietnamese', tagline: 'Vietnamese comfort, made fresh daily',
     color: '#1E7A6B', icon: 'gao-viet', prep: 16, category: 'Menu',
@@ -337,18 +317,6 @@ const SEED: Seed[] = [
       ['Chili Cheese Dog', 'House chili, cheddar, jalapeño', 1100],
       ['Bacon Wrapped Street Dog', 'Peppers, onions, crema', 1200],
       ['Chili Cheese Fries', 'Full basket', 900],
-    ],
-  },
-  {
-    slug: 'sharetasking', name: 'Sharetasking', label: 'Sharetasking',
-    cuisine: 'Party platters', tagline: 'Shareable platters for the whole crew',
-    color: '#0EA5A5', icon: 'sharetasking', prep: 25, category: 'Platters',
-    review: 'Listed on the dock as gig work but carries a catering menu.',
-    items: [
-      ['Wing Platter — 24', 'Two sauces, ranch and celery', 4200],
-      ['Slider Tray — 12', 'Beef and chicken sliders', 3800],
-      ['Nacho Mountain', 'Feeds four, queso and pico', 2400],
-      ['Loaded Fry Basket', 'Cheese, bacon, scallions', 1200],
     ],
   },
   {

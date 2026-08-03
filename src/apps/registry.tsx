@@ -111,6 +111,11 @@ export const ORDERED_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, ...SLOT_AP
  * The dock art is theirs; the destinations are the same ones the old site used.
  * "Info" pointing at the Share & Scan deli is the old site's own mapping, kept
  * deliberately — worth querying with the owner rather than silently changing.
+ *
+ * Three icons, not four: the old site's fourth was "Gig Work" pointing at
+ * Sharetasking, which has been removed as a non-food business. Restoring it
+ * means restoring that brand — these lookups use a non-null assertion, so a
+ * dock entry naming a slug that no longer exists crashes the home screen.
  */
 export const DOCK_APPS: AppDef[] = [
   PHONE_APP,
@@ -123,10 +128,5 @@ export const DOCK_APPS: AppDef[] = [
     ...brand('sharescan')!,
     label: 'Info',
     icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.png', bg: '#111111', fg: '#fff' }} fill />,
-  },
-  {
-    ...brand('sharetasking')!,
-    label: 'Gig Work',
-    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-gig.png', bg: '#0EA5A5', fg: '#fff' }} fill />,
   },
 ]
