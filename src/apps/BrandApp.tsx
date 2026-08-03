@@ -158,7 +158,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               )}
               {brand.site && (
                 <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer">
-                  Open their page
+                  {brand.siteCta ?? 'Open their page'}
                 </a>
               )}
             </div>

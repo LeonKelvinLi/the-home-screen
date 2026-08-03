@@ -128,6 +128,8 @@ export interface Brand {
    * them ships frozen pies.
    */
   siteNote?: string
+  /** Button label on a contact-only brand. Defaults to "Open their page". */
+  siteCta?: string
 }
 
 export interface Vendor {
@@ -188,6 +190,8 @@ interface Seed {
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
   siteNote?: string
+  /** Button label on a contact-only brand. */
+  siteCta?: string
 }
 
 /** Straight transcription of the source hub. Prices are cents. */
@@ -443,6 +447,7 @@ export const BRANDS: Brand[] = [
     pricesEstimated: s.pricesEstimated,
     contactOnly: s.contactOnly,
     siteNote: s.siteNote,
+    siteCta: s.siteCta,
   })),
   ...SEED.map(fromSeed),
 ]

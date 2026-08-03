@@ -44,6 +44,31 @@ export interface LocalSeed {
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
   siteNote?: string
+  /** Button label on a contact-only brand. Defaults to "Open their page". */
+  siteCta?: string
+}
+
+/**
+ * trycurio.app, tagged so a visit that started here is attributable.
+ *
+ * The landing site's own analytics.js reads utm_source / utm_medium /
+ * utm_campaign / utm_content / utm_term on arrival, persists them to
+ * localStorage (last non-empty touch wins) and feeds them to GA4 — so these
+ * exact parameter names are what it already understands. Nothing custom is
+ * needed, and inventing a different scheme would land as "direct" traffic.
+ *
+ * `placement` distinguishes where in this app the tap came from, so a home
+ * screen icon and a future in-cart promo can be told apart without minting a
+ * second campaign.
+ */
+export function trackedCurioLink(placement: string): string {
+  const params = new URLSearchParams({
+    utm_source: 'the-home-screen',
+    utm_medium: 'referral',
+    utm_campaign: 'food-truck',
+    utm_content: placement,
+  })
+  return `https://trycurio.app/?${params.toString()}`
 }
 
 export const LOCAL_SEED: LocalSeed[] = [
@@ -89,15 +114,12 @@ export const LOCAL_SEED: LocalSeed[] = [
     orderUrl: 'https://order.toasttab.com/online/thelumpiacompany',
     phone: '(213) 570-7497',
     address: '288 9th Avenue Suite A, Oakland',
-    // The five their own site puts photos against — their choice of what to
-    // showcase, which is the closest thing to a popularity signal they publish.
-    offer: [
-      'Baco Cheeseburger',
-      'Bicol Express Pork & Shrimp',
-      'Adobo Seasoned Wings',
-      'Filipino BBQ Wings',
-      'Filipino Mac-Ghetti',
-    ],
+    // Rolls only — the wings, pancit and mac-ghetti are off. Two of these three
+    // are the ones their own site puts photos against; TLC Veggie is the third
+    // because a shared cart across kitchens needs one vegetarian option and the
+    // other rolls are all meat. Swap it for Chicken Tinola or Earl's Turkey if
+    // the kitchen would rather.
+    offer: ['Baco Cheeseburger', 'Bicol Express Pork & Shrimp', 'TLC Veggie'],
     siteNote: 'See their full menu and order direct at thelumpiacompany.com',
     items: [
       ['Baco Cheeseburger', 'Ground beef, smoked bacon, cheddar, onions, BBQ and moo moo sauce', 1400, 'lumpia-baco-cheeseburger'],
@@ -204,5 +226,42 @@ export const LOCAL_SEED: LocalSeed[] = [
       ['French Fries', 'Side', 600],
       ['Jasmine Rice', 'Side', 400],
     ],
+  },
+  {
+    slug: 'elemonkey',
+    name: 'Elemonkey',
+    label: 'Elemonkey',
+    cuisine: 'Apparel',
+    tagline: 'Constant Elevation. Streetwear out of San Francisco.',
+    color: '#0A0A0A',
+    icon: 'elemonkey',
+    prep: 0,
+    category: 'Shop',
+    site: 'https://www.elemonkey.com/',
+    // No menu is invented here. elemonkey.com is password-protected, so
+    // nothing about what they sell or what it costs can be read at source.
+    // The icon is their own mark, lifted from their site's own uploads at
+    // 800x800 and composited on black — not a redraw and not a generated
+    // approximation, either of which would be a different brand's identity.
+    contactOnly:
+      'Elemonkey is a San Francisco streetwear label, not a kitchen. Their store is invite-only, so there is nothing to order here.',
+    siteCta: 'Visit elemonkey.com',
+    items: [],
+  },
+  {
+    slug: 'curio',
+    name: 'Curio',
+    label: 'Curio',
+    cuisine: 'Reading app',
+    tagline: 'Turn scrolling into rabbit holes worth reading.',
+    color: '#1A0B2E',
+    icon: 'curio',
+    prep: 0,
+    category: 'App',
+    site: trackedCurioLink('home-screen-icon'),
+    contactOnly:
+      'Curio is an iOS app, not a kitchen. Full-screen cards on psychology, mysteries, forgotten history and strange science — a better way to scroll while you wait for your order.',
+    siteCta: 'Open Curio',
+    items: [],
   },
 ]
