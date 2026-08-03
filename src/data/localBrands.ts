@@ -52,7 +52,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(510) 843-5967',
     address: '2534 Durant Ave, Berkeley',
     pricesEstimated:
-      'top dog has never published counter prices. These are triangulated from their own catering sheet and an archived delivery menu — confirm before taking payment.',
+      'top dog does not publish counter prices. $5.00 is corroborated by a Postmates listing and their own 2026 catering worksheet, but confirm with the shop. Card and contactless payments have a $5 minimum.',
     items: [
       ['top dog Frankfurter', 'All beef, kosher style', 500],
       ['Garlic Frankfurter', 'Three-quarter beef, quarter pork, fresh garlic', 500],
@@ -128,15 +128,24 @@ export const LOCAL_SEED: LocalSeed[] = [
     name: 'Bread Winners',
     label: 'Bread Winners',
     cuisine: 'Sandwiches',
-    tagline: 'An Oakland sandwich company. Open six days a week, 11am to 4pm.',
+    tagline: 'An Oakland sandwich company. Sandwiches, salads, juices and smoothies, Monday to Saturday.',
     color: '#E0A32E',
     icon: 'bread-winners',
     prep: 12,
     category: 'Sandwiches',
     site: 'https://www.instagram.com/breadwinnersoak/',
-    contactOnly:
-      'Bread Winners publish their menu on Instagram rather than a site. Message @breadwinnersoak to order.',
-    items: [],
+    orderUrl: 'https://www.doordash.com/store/bread-winners-oakland-llc-oakland-39886361/',
+    address: '917 Washington St, Oakland',
+    pricesEstimated:
+      'These are DoorDash listing prices, which carry the platform markup. Counter prices at the shop are lower — confirm before charging.',
+    items: [
+      ['The Breadwinner Club', 'Their signature stacked club sandwich', 1950],
+      ['Tuna Sub', 'House tuna on a sub roll', 1835],
+      ['Tuna Melt', 'Tuna melted with cheese, pressed', 1835],
+      ['Turkey Pesto Panini', 'Turkey and pesto, pressed', 1720],
+      ['Turkey & Swiss', 'Turkey and Swiss, built to order', 1720],
+      ['Build Your Own Sandwich', 'Pick your bread, meat, cheese and toppings', 1610],
+    ],
   },
   {
     slug: 'rains-plates',
@@ -151,9 +160,16 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://www.instagram.com/rains_plates/',
     phone: '(510) 630-8739',
     address: 'Pinole',
-    contactOnly:
-      'The menu changes with each pop-up and is announced on Instagram. Message @rains_plates for what is on today.',
-    items: [],
+    pricesEstimated:
+      'DoorDash listing prices, which carry the platform markup — and their DoorDash store currently shows as inactive. Message @rains_plates to confirm what is on today.',
+    items: [
+      ['Party Wings Meal', 'About 1 lb, marinated 24 hours, fried naked, your choice of sauce, side, bread and dip', 1950],
+      ['2 Jumbo Shrimp Skewers Meal', '8 pieces, marinated 24 hours, pan seared, choice of sauce, side, bread and dip', 2150],
+      ['Tender Tri Tip Meal', '7 oz marinated in 10 spices for 48 hours, choice of sauce, side, bread and dip', 2150],
+      ['Candied Yams', 'Side', 650],
+      ['French Fries', 'Side', 600],
+      ['Jasmine Rice', 'Side', 400],
+    ],
   },
   {
     slug: 'midnite-theories',

@@ -159,7 +159,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {brand.orderUrl && !brand.contactOnly && (
             <p className="brand-foot">
               <a href={brand.orderUrl} target="_blank" rel="noreferrer">
-                They also take orders on their own site
+                They also take orders on {orderHost(brand.orderUrl)}
               </a>
             </p>
           )}
@@ -179,6 +179,19 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
       {sheetItem && <ItemSheet brand={brand} item={sheetItem} onClose={() => setSheetItem(null)} />}
     </>
   )
+}
+
+/** Name the destination honestly — a DoorDash link is not "their own site". */
+function orderHost(url: string): string {
+  const host = url.replace(/^https?:\/\//, '').split('/')[0].replace(/^www\./, '')
+  const known: Record<string, string> = {
+    'doordash.com': 'DoorDash',
+    'order.toasttab.com': 'Toast',
+    'ubereats.com': 'Uber Eats',
+    'postmates.com': 'Postmates',
+    'instagram.com': 'Instagram',
+  }
+  return known[host] ?? `their own site (${host})`
 }
 
 /** Hero uses the logo's own colours so every brand page feels like its own app. */

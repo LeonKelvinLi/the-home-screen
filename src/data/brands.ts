@@ -104,6 +104,40 @@ export interface Vendor {
   /** Populated once the vendor finishes Stripe Connect onboarding. */
   stripeAccountId: string | null
   payoutsEnabled: boolean
+  /**
+   * Sales tax charged on this vendor's food, in basis points.
+   *
+   * California charges prepared-food tax at the SELLER's location, not the
+   * buyer's, so this belongs to the vendor and not to the order. A cart
+   * spanning Berkeley and Vallejo is genuinely taxed at two different rates.
+   */
+  taxBps: number
+}
+
+/**
+ * Combined state + county + district rates by city.
+ *
+ * CONFIRM AGAINST CDTFA BEFORE TURNING PAYMENTS ON. These are the published
+ * combined rates for each vendor's city, but rates change by district vote and
+ * under-collecting is the vendor's liability, not ours. `DEFAULT_TAX_BPS` is
+ * the California statewide minimum and is deliberately the safest wrong answer
+ * for a vendor whose address we do not yet hold — it under-collects, which
+ * shows up as a shortfall rather than as an overcharge to a customer.
+ */
+const DEFAULT_TAX_BPS = 725
+const CITY_TAX_BPS: Record<string, number> = {
+  Berkeley: 1025,
+  Oakland: 1025,
+  Vallejo: 925,
+  Pinole: 975,
+}
+
+function taxBpsFor(address?: string): number {
+  if (!address) return DEFAULT_TAX_BPS
+  for (const [city, bps] of Object.entries(CITY_TAX_BPS)) {
+    if (address.includes(city)) return bps
+  }
+  return DEFAULT_TAX_BPS
 }
 
 interface Seed {
@@ -462,6 +496,7 @@ export const VENDORS: Vendor[] = [...LOCAL_SEED, ...SEED].map((s) => ({
   name: s.name,
   stripeAccountId: null,
   payoutsEnabled: false,
+  taxBps: taxBpsFor((s as { address?: string }).address),
 }))
 
 export const brandById = (id: string) => BRANDS.find((b) => b.id === id)

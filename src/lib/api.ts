@@ -1,4 +1,5 @@
 import { BRANDS } from '../data/brands'
+import { taxForVendorSubtotals } from './tax'
 import type { CartLine } from '../store/cart'
 
 /**
@@ -166,7 +167,6 @@ function rememberOrder(order: PlacedOrder) {
   }
 }
 
-const TAX_BPS = 875
 const SERVICE_BPS = 500
 const DELIVERY_FEE = 399
 
@@ -191,10 +191,18 @@ function placeLocalOrder(input: PlaceOrderInput): PlacedOrder {
     })
   }
 
-  const subtotal = input.lines.reduce(
-    (s, l) => s + (l.unitPrice + l.options.reduce((a, o) => a + o.price, 0)) * l.qty,
-    0,
-  )
+  const lineTotal = (l: (typeof input.lines)[number]) =>
+    (l.unitPrice + l.options.reduce((a, o) => a + o.price, 0)) * l.qty
+  const subtotal = input.lines.reduce((s, l) => s + lineTotal(l), 0)
+
+  // Tax is per seller, so it needs subtotals grouped by vendor, which the
+  // ticket shape does not carry.
+  const vendorSubtotals = new Map<string, number>()
+  for (const l of input.lines) {
+    const brand = BRANDS.find((b) => b.id === l.brandId)
+    if (!brand) continue
+    vendorSubtotals.set(brand.vendorId, (vendorSubtotals.get(brand.vendorId) ?? 0) + lineTotal(l))
+  }
   const prep = new Map(BRANDS.map((b) => [b.id, b.prepMinutes]))
   const eta =
     Math.max(...input.lines.map((l) => prep.get(l.brandId) ?? 10)) +
@@ -208,7 +216,9 @@ function placeLocalOrder(input: PlaceOrderInput): PlacedOrder {
     etaMinutes: eta,
     total:
       subtotal +
-      Math.round((subtotal * TAX_BPS) / 10000) +
+      taxForVendorSubtotals(
+        [...vendorSubtotals].map(([vendorId, subtotal]) => ({ vendorId, subtotal })),
+      ) +
       Math.round((subtotal * SERVICE_BPS) / 10000) +
       Math.round((subtotal * input.tipBps) / 10000) +
       (input.fulfilment === 'delivery' ? DELIVERY_FEE : 0),

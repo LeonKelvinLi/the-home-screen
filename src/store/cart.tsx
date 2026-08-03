@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useReducer } from 'react'
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
+import { taxForVendorSubtotals } from '../lib/tax'
 
 /**
  * One cart across every brand. This is the whole point of the product: a
@@ -43,7 +44,6 @@ type Action =
   | { type: 'tip'; bps: number }
   | { type: 'fulfilment'; mode: 'pickup' | 'delivery' }
 
-const TAX_BPS = 875 // 8.75%
 const DELIVERY_FEE = 399
 const SERVICE_BPS = 500
 /** Mirrors the server's per-line clamp. */
@@ -189,7 +189,7 @@ function computeTotals(state: State): Totals {
 
   const byVendor = [...byVendorMap.values()]
   const subtotal = byVendor.reduce((s, g) => s + g.subtotal, 0)
-  const tax = Math.round((subtotal * TAX_BPS) / 10000)
+  const tax = taxForVendorSubtotals(byVendor)
   const serviceFee = subtotal === 0 ? 0 : Math.round((subtotal * SERVICE_BPS) / 10000)
   const deliveryFee = subtotal === 0 || state.fulfilment === 'pickup' ? 0 : DELIVERY_FEE
   const tip = Math.round((subtotal * state.tipBps) / 10000)

@@ -11,7 +11,13 @@ app.use(express.json({ limit: '256kb' }))
 
 const PORT = Number(process.env.PORT ?? 8787)
 const PROD = process.env.NODE_ENV === 'production'
-const TAX_BPS = 875
+/**
+ * Fallback only. Real tax is per-vendor (`vendor.taxBps`) because California
+ * charges prepared-food tax at the seller's location — a cart spanning two
+ * cities is genuinely taxed at two rates. This is used only if a vendor row
+ * somehow predates that column.
+ */
+const FALLBACK_TAX_BPS = 725
 const SERVICE_BPS = 500
 const DELIVERY_FEE = 399
 
@@ -279,7 +285,20 @@ app.post('/api/orders', (req, res) => {
   }
 
   const subtotal = priced.reduce((s, p) => s + p.unit * p.qty, 0)
-  const tax = Math.round((subtotal * TAX_BPS) / 10000)
+
+  // Each vendor is taxed at its own city's rate, so the order-level tax is the
+  // sum of the per-vendor amounts rather than a rate applied to the whole cart.
+  // That also makes the split exact by construction — no allocation needed.
+  const vendorIds = [...groups.keys()]
+  const vendorSubtotals = vendorIds.map((id) =>
+    groups.get(id)!.reduce((s, p) => s + p.unit * p.qty, 0),
+  )
+  const taxShare = vendorIds.map((id, i) => {
+    const bps = VENDORS.find((v) => v.id === id)?.taxBps ?? FALLBACK_TAX_BPS
+    return Math.round((vendorSubtotals[i] * bps) / 10000)
+  })
+  const tax = taxShare.reduce((a, b) => a + b, 0)
+
   const serviceFee = Math.round((subtotal * SERVICE_BPS) / 10000)
   const deliveryFee = fulfilment === 'delivery' ? DELIVERY_FEE : 0
   const tip = Math.round((subtotal * tipBps) / 10000)
@@ -289,11 +308,8 @@ app.post('/api/orders', (req, res) => {
     return res.status(400).json({ error: 'Order exceeds the maximum value.' })
   }
 
-  // Tax and tip are collected once on the order but owed per vendor. Allocate
-  // by vendor subtotal so the parts sum back to the order-level figure exactly.
-  const vendorIds = [...groups.keys()]
-  const vendorSubtotals = vendorIds.map((id) => groups.get(id)!.reduce((s, p) => s + p.unit * p.qty, 0))
-  const taxShare = allocate(tax, vendorSubtotals)
+  // Tip is one figure entered by the customer against the whole cart, so it
+  // still has to be split by subtotal with the parts summing back exactly.
   const tipShare = allocate(tip, vendorSubtotals)
 
   const brandPrep = new Map(BRANDS.map((b) => [b.id, b.prepMinutes]))
