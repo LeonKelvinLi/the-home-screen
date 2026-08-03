@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db } from './db/schema'
 import { BRANDS, VENDORS } from '../src/data/brands'
+import { addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -468,11 +469,13 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
   const vendorSubtotals = vendorIds.map((id) =>
     groups.get(id)!.reduce((s, p) => s + p.unit * p.qty, 0),
   )
-  const taxShare = vendorIds.map((id, i) => {
-    const bps = VENDORS.find((v) => v.id === id)?.taxBps ?? FALLBACK_TAX_BPS
-    return Math.round((vendorSubtotals[i] * bps) / 10000)
-  })
-  const tax = taxShare.reduce((a, b) => a + b, 0)
+  // Two kinds of tax. `added` is charged on top; `embedded` is already inside
+  // a tax-inclusive vendor's price and is recorded, not charged. Charging the
+  // second kind would overcharge every line that vendor sells.
+  const addedTax = vendorIds.map((id, i) => addedTaxFor(id, vendorSubtotals[i]))
+  const embeddedTax = vendorIds.map((id, i) => embeddedTaxFor(id, vendorSubtotals[i]))
+  const taxShare = vendorIds.map((_, i) => addedTax[i] + embeddedTax[i])
+  const tax = addedTax.reduce((a, b) => a + b, 0)
 
   const serviceFee = Math.round((subtotal * SERVICE_BPS) / 10000)
   const deliveryFee = fulfilment === 'delivery' ? DELIVERY_FEE : 0
@@ -531,7 +534,11 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
       const brandIds = [...new Set(list.map((p) => p.brandId))]
       // The tip belongs to the kitchen, not the platform. The fee is taken on
       // food only, never on tax or tip.
-      const payout = vSubtotal - platformFee + taxShare[vi] + tipShare[vi]
+      //
+      // Only ADDED tax is handed over. A tax-inclusive vendor's tax already
+      // travelled inside vSubtotal, so adding its share again here would pay
+      // them the same money twice — 894 instead of 810 on a $9.00 order.
+      const payout = vSubtotal - platformFee + addedTax[vi] + tipShare[vi]
 
       db.prepare(
         `INSERT INTO tickets (id, order_id, vendor_id, brand_ids, subtotal, platform_fee,

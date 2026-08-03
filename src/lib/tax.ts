@@ -12,8 +12,32 @@ import { VENDORS } from '../data/brands'
 export const FALLBACK_TAX_BPS = 725
 
 export function taxForVendorSubtotals(byVendor: { vendorId: string; subtotal: number }[]): number {
-  return byVendor.reduce((sum, g) => {
-    const bps = VENDORS.find((v) => v.id === g.vendorId)?.taxBps ?? FALLBACK_TAX_BPS
-    return sum + Math.round((g.subtotal * bps) / 10000)
-  }, 0)
+  return byVendor.reduce((sum, g) => sum + addedTaxFor(g.vendorId, g.subtotal), 0)
+}
+
+/**
+ * Tax to ADD to a vendor's line total at checkout.
+ *
+ * Zero for a vendor whose posted prices already contain it. top dog's board
+ * states its prices include tax, so adding Berkeley's 10.25% on top would
+ * overcharge every customer on every sausage.
+ */
+export function addedTaxFor(vendorId: string, subtotal: number): number {
+  const v = VENDORS.find((x) => x.id === vendorId)
+  if (v?.taxIncluded) return 0
+  return Math.round((subtotal * (v?.taxBps ?? FALLBACK_TAX_BPS)) / 10000)
+}
+
+/**
+ * Tax already sitting INSIDE a tax-inclusive vendor's price.
+ *
+ * Nothing is charged for this — it is recorded on the ticket because the
+ * vendor still owes it, it just travelled in the price the customer saw.
+ * subtotal - subtotal/(1+rate), which is not the same as subtotal x rate.
+ */
+export function embeddedTaxFor(vendorId: string, subtotal: number): number {
+  const v = VENDORS.find((x) => x.id === vendorId)
+  if (!v?.taxIncluded) return 0
+  const rate = (v.taxBps ?? FALLBACK_TAX_BPS) / 10000
+  return subtotal - Math.round(subtotal / (1 + rate))
 }

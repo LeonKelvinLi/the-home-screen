@@ -146,6 +146,11 @@ export interface Vendor {
    * spanning Berkeley and Vallejo is genuinely taxed at two different rates.
    */
   taxBps: number
+  /**
+   * Their posted prices already contain sales tax. Checkout must not add it a
+   * second time — doing so overcharges the customer on every line.
+   */
+  taxIncluded: boolean
 }
 
 /**
@@ -192,6 +197,8 @@ interface Seed {
   siteNote?: string
   /** Button label on a contact-only brand. */
   siteCta?: string
+  /** Posted prices already contain sales tax. */
+  taxIncluded?: boolean
 }
 
 /** Straight transcription of the source hub. Prices are cents. */
@@ -459,6 +466,7 @@ export const VENDORS: Vendor[] = [...LOCAL_SEED, ...SEED].map((s) => ({
   stripeAccountId: null,
   payoutsEnabled: false,
   taxBps: taxBpsFor((s as { address?: string }).address),
+  taxIncluded: (s as { taxIncluded?: boolean }).taxIncluded === true,
 }))
 
 export const brandById = (id: string) => BRANDS.find((b) => b.id === id)

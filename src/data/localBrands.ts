@@ -46,6 +46,12 @@ export interface LocalSeed {
   siteNote?: string
   /** Button label on a contact-only brand. Defaults to "Open their page". */
   siteCta?: string
+  /**
+   * Their posted prices already contain sales tax, so checkout must not add it
+   * again. Backed out for the vendor's records rather than ignored — they
+   * still owe it, it is just already inside the price the customer sees.
+   */
+  taxIncluded?: boolean
 }
 
 /**
@@ -85,19 +91,34 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://topdoghotdogs.com',
     phone: '(510) 843-5967',
     address: '2534 Durant Ave, Berkeley',
+    taxIncluded: true,
     // Deliberately no `offer`: the operator wants top dog's full menu, unlike
     // the other partners where only three to five items are stocked.
+    //
+    // Prices are from a photograph of their in-store board (2026-08), and the
+    // item wording is their own from topdoghotdogs.com/themenu.html. Both are
+    // primary sources, so these are no longer triangulated — the earlier
+    // $5.00/$5.25 came off a Postmates listing and carried that platform's
+    // markup. The board runs a single ditto column: $4.75 from the Garlic
+    // Frankfurter down to Lemon Chicken.
     pricesEstimated:
-      'top dog does not publish counter prices. $5.00 is corroborated by a Postmates listing and their own 2026 catering worksheet, but confirm with the shop. Card and contactless payments have a $5 minimum.',
+      'Their board reads that prices INCLUDE tax, so nothing further is added at checkout. Worth confirming with the shop before taking real money. Card and contactless payments have a $5 minimum.',
     items: [
-      ['top dog Frankfurter', 'All beef, kosher style', 500],
-      ['Garlic Frankfurter', 'Three-quarter beef, quarter pork, fresh garlic', 500],
-      ['Bratwurst', 'Pork and marjoram, genuine old world taste', 500],
-      ['Smoked Chicken Apple', 'Chicken with juicy bits of apple, low salt', 500],
-      ['Mango with Jalapeno', 'Chicken, mango and jalapeño pepper', 525],
-      ['Lemon Chicken', 'Chicken, fresh lemon and garlic, no preservatives', 525],
-      ['the Wienie', 'Wheat protein, bell peppers, fennel, eggplant, garlic', 500],
-      ['Six Pack To-Go', 'Six sausages and six buns, uncooked, to take home', 1600],
+      ['top dog Frankfurter', 'All beef, kosher style', 450],
+      ['Garlic Frankfurter', 'Three-quarter beef, quarter pork, fresh garlic', 475],
+      ['Hot Link', 'Louisiana style. Beef and four kinds of pepper, h-h-hottt', 475],
+      ['Smoked Chicken Apple', 'Chicken with juicy bits of apple, low salt', 475],
+      ['Calabrese', 'Italian. Pork, paprika, chili, fennel, semi-hot', 475],
+      ['Kielbasa', 'Polish. Two-thirds pork, one-third beef, hearty', 475],
+      ['Bockwurst', 'Half pork, half veal, milk and eggs', 475],
+      ['the Wienie', 'Veggie. Wheat protein, bell peppers, fennel, eggplant, fresh garlic', 475],
+      ['Lemon Chicken', 'Chicken, fresh lemon and garlic. Low salt, low fat, no preservatives', 475],
+      ['Mango with Jalapeno', 'Chicken, mango, jalapeño pepper', 475],
+      ['Bratwurst', 'German. Pork and marjoram, genuine old world taste', 500],
+      ['Potato Salad', 'Side', 250],
+      ['Chili on any dog', 'Add chili to any sausage', 100],
+      ['Chili, 10 oz', 'Cup', 200],
+      ['Chili, 16 oz', 'Bowl', 300],
     ],
   },
   {
