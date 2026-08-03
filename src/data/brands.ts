@@ -8,6 +8,16 @@ import { LOCAL_SEED } from './localBrands'
  * below is transcribed from that site — not invented. The icon art is their
  * own, served from /public/icons.
  *
+ * Seven entries have been removed rather than carried over: five whose names
+ * state a trade their menu contradicts (Tax Technician, The Credit Brothers,
+ * Tony's Style, Gifted Kicks, Print On Demand) and two confirmed non-food
+ * businesses (Midnite Theories, a skate shop; Sin City Pits, a dog breeder).
+ * Listing a tax preparer as a soul-food kitchen is a claim about someone
+ * else's trade that we cannot stand behind. Only removed where that is not in
+ * doubt — Jenuine Fitness and BEASTmode keep their menus, because a fitness
+ * brand genuinely does sell bowls and shakes, and Sharetasking stays because
+ * it is one of the four dock icons the operator asked for.
+ *
  * Two things were deliberately NOT carried over:
  *  - Ratings. The old site has none, and inventing review counts for real
  *    businesses would be fabricating evidence about someone else's trade.
@@ -241,30 +251,6 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'tax-technician', name: 'Tax Technician', label: 'Tax Technician',
-    cuisine: 'Southern soul food', tagline: 'Southern plates and daily specials',
-    color: '#1F6FB2', icon: 'tax-technician', prep: 18, category: 'Plates',
-    review: 'Listed as a tax-prep business but carries a soul-food menu.',
-    items: [
-      ['Fried Catfish Plate', 'Two fillets, two sides, hush puppies', 1800],
-      ['Smothered Pork Chops', 'Onion gravy, rice, greens', 1900],
-      ['Red Beans & Rice', 'Smoked sausage, cornbread', 1400],
-      ['Peach Sweet Tea', 'Brewed fresh daily, 20 oz', 400],
-    ],
-  },
-  {
-    slug: 'credit-brothers', name: 'The Credit Brothers', label: 'The Credit Br…',
-    cuisine: 'Barbecue', tagline: 'Wood-smoked barbecue by the pound',
-    color: '#2E7D5B', icon: 'credit-brothers', prep: 18, category: 'Barbecue',
-    review: 'Listed as a credit-repair business but carries a barbecue menu.',
-    items: [
-      ['Brisket Plate', 'Half pound, two sides, pickles', 2200],
-      ['Rib Tips & Links', 'Combo basket, house sauce', 1800],
-      ['Pulled Pork Sandwich', 'Slaw, brioche bun', 1400],
-      ['Baked Beans', 'Brisket burnt ends stirred in', 600],
-    ],
-  },
-  {
     slug: 'beastmode', name: 'BEASTmode', label: 'BEASTmode',
     cuisine: 'High-protein meals', tagline: 'High-protein meals and shakes',
     color: '#111827', icon: 'beastmode', prep: 14, category: 'Meals',
@@ -354,18 +340,6 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'tonys-style', name: "Tony's Style", label: "Tony's Style",
-    cuisine: 'New York pizza', tagline: 'New York style slices and heros',
-    color: '#0F172A', icon: 'tonys-style', prep: 14, category: 'Pizza',
-    review: 'Brand name reads as a style/barber trade but carries a pizzeria menu.',
-    items: [
-      ['Cheese Slice', 'Hand-tossed, aged mozzarella', 450],
-      ['Pepperoni Pie', '18 inch, cupped pepperoni', 2600],
-      ['Chicken Parm Hero', 'Marinara, mozzarella, toasted roll', 1400],
-      ['Garlic Knots', 'Six, parmesan and herbs', 700],
-    ],
-  },
-  {
     slug: 'sharetasking', name: 'Sharetasking', label: 'Sharetasking',
     cuisine: 'Party platters', tagline: 'Shareable platters for the whole crew',
     color: '#0EA5A5', icon: 'sharetasking', prep: 25, category: 'Platters',
@@ -375,30 +349,6 @@ const SEED: Seed[] = [
       ['Slider Tray — 12', 'Beef and chicken sliders', 3800],
       ['Nacho Mountain', 'Feeds four, queso and pico', 2400],
       ['Loaded Fry Basket', 'Cheese, bacon, scallions', 1200],
-    ],
-  },
-  {
-    slug: 'gifted-kicks', name: 'Gifted Kicks', label: 'Gifted Kicks',
-    cuisine: 'Cheesesteaks', tagline: 'Philly cheesesteaks and fry baskets',
-    color: '#E11D48', icon: 'gifted-kicks', prep: 13, category: 'Menu',
-    review: 'Brand name reads as sneakers/retail but carries a cheesesteak menu.',
-    items: [
-      ['Classic Cheesesteak', 'Ribeye, onions, provolone', 1500],
-      ['Chicken Cheesesteak', 'Peppers, whiz, long roll', 1400],
-      ['Cheese Fry Basket', 'Whiz and fried onions', 900],
-      ['Fountain Soda', '24 oz, free refill in truck', 300],
-    ],
-  },
-  {
-    slug: 'print-on-demand', name: 'Print On Demand', label: 'Print On De…',
-    cuisine: 'Wood-fired pizza', tagline: 'Wood-fired pizzas made to order',
-    color: '#7C3AED', icon: 'print-on-demand', prep: 15, category: 'Pizza',
-    review: 'Listed as a print/merch business but carries a pizzeria menu.',
-    items: [
-      ['Margherita', 'San Marzano, fresh mozzarella, basil', 1600],
-      ['Spicy Soppressata', 'Hot honey, chili flake', 1900],
-      ['Truffle Mushroom', 'Fontina, thyme, truffle oil', 2000],
-      ['Caesar Salad', 'Shaved parmesan, torn croutons', 900],
     ],
   },
   {

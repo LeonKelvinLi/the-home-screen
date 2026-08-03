@@ -26,7 +26,7 @@ npm start          # http://localhost:8787
 - **iOS shell** — home grid with two pages, wallpaper parallax, Spotlight pill,
   dock, live status bar, app-open zoom, swipe-to-home, and an app switcher with
   live (not screenshotted) cards.
-- **Ordering** — 32 real businesses, menus with required/optional choice
+- **Ordering** — 25 real businesses, menus with required/optional choice
   groups, per-item notes, one cart across all of them.
 - **Checkout** — server re-prices every line, splits the order into one ticket
   per vendor, computes the platform fee per vendor, and stores it.
@@ -39,12 +39,12 @@ the port and is not true now — leaving it there was dangerous in both
 directions, because it invited someone to replace real transcribed data
 wholesale while treating unverified data as safe.
 
-- **`src/data/brands.ts` — 25 brands, 100 items.** Transcribed from the
+- **`src/data/brands.ts` — 20 brands, 80 items.** Transcribed from the
   operator's own hub at goodneighborbuilder.com. Verified by diffing against
   that site's live bundle: 98 of 98 parseable items match on name *and* price
   exactly. Seven of these businesses look, by name, like they are not food
   businesses at all; those carry `needsOwnerReview` and the UI says so.
-- **`src/data/localBrands.ts` — 7 businesses, 45 items.** Researched
+- **`src/data/localBrands.ts` — 5 businesses, 45 items.** Researched
   individually and read off each business's own site or listing. Where a menu
   came from a delivery platform the prices carry that platform's markup, so the
   brand carries `pricesEstimated` and every screen that shows a price says it
