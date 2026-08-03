@@ -4,6 +4,13 @@ export const SCREEN_H = 852
 
 /** Corner radius of the display itself, and of an app icon (iOS squircle ratio). */
 export const SCREEN_RADIUS = 47
+
+/**
+ * The widest viewport still treated as a phone. Must stay in step with the
+ * `@media (max-width: 480px)` block in styles.css — they were 700 and 480, and
+ * the band between them rendered a phone grid inside tablet chrome.
+ */
+export const PHONE_MAX = 481
 export const ICON_RADIUS_RATIO = 0.2237
 
 export const ICON_SIZE = 60
@@ -31,3 +38,10 @@ export const DISMISS_COMMIT_PX = 90
 export const DISMISS_VELOCITY = 0.55
 /** Below this velocity at release, an upward swipe opens the app switcher. */
 export const SWITCHER_VELOCITY = 0.12
+
+/**
+ * The switcher needs a LONGER pull than going home, not a shorter one, plus a
+ * pause at the top. Anything less and the switcher swallows every hesitant
+ * swipe, which is how this behaved before.
+ */
+export const SWITCHER_COMMIT_PX = 110

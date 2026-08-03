@@ -150,6 +150,11 @@ export function useDrag({
       const t = performance.now()
       const dx = e.clientX - start.current.x
       const dy = e.clientY - start.current.y
+      // The release point is a real sample and the freshest one there is.
+      // Without it, a genuine fast flick whose pointerup trailed its last
+      // pointermove by more than STALE_MS read as velocity 0 — so a hard
+      // flick home was scored as a slow drag and opened the switcher instead.
+      samples.current.push({ x: e.clientX, y: e.clientY, t })
       const { vx, vy } = velocity(t)
       // Also resolve when moves were coalesced away and `passed` never flipped
       // but the pointer clearly travelled — otherwise a fast flick does nothing.

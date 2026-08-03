@@ -1,4 +1,5 @@
 import { ICON_SIZE } from './constants'
+import { SQUIRCLE_100 } from './squircle'
 
 /**
  * Icons for the platform's own apps.
@@ -85,12 +86,17 @@ export function SystemIcon({
       viewBox="0 0 100 100"
       style={{
         display: 'block',
-        borderRadius: size * 0.2237,
         ...(fill ? { width: '100%', height: '100%' } : null),
       }}
       aria-hidden="true"
     >
       <defs>
+        {/* The same superellipse the brand icons clip to, so the two silhouettes
+            match exactly on the grid and in the dock. Clipping in the SVG also
+            makes the shape scale-independent, which border-radius was not. */}
+        <clipPath id={`${uid}-clip`}>
+          <path d={SQUIRCLE_100} />
+        </clipPath>
         <linearGradient id={`${uid}-bg`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={a} />
           <stop offset="100%" stopColor={b} />
@@ -115,6 +121,7 @@ export function SystemIcon({
         </linearGradient>
       </defs>
 
+      <g clipPath={`url(#${uid}-clip)`}>
       <rect width="100" height="100" fill={`url(#${uid}-bg)`} />
       <rect width="100" height="100" fill={`url(#${uid}-gloss)`} />
 
@@ -178,6 +185,7 @@ export function SystemIcon({
             <circle cx="45" cy="56" r="10" fill={b} />
           </>
         )}
+      </g>
       </g>
     </svg>
   )

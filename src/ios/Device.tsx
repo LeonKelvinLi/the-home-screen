@@ -3,7 +3,7 @@ import type { ReactNode } from 'react'
 import { HomeScreen } from './HomeScreen'
 import { StatusBar } from './StatusBar'
 import { AppSwitcher } from './AppSwitcher'
-import { collapsed, expanded, lerp } from './AppWindow'
+import { collapsed, expanded, expandedFor, lerp } from './AppWindow'
 import type { WindowTransform } from './AppWindow'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
@@ -13,9 +13,9 @@ import {
   CLOSE_MS,
   DISMISS_COMMIT_PX,
   DISMISS_VELOCITY,
-  EASE_IOS,
   OPEN_MS,
   SWITCHER_VELOCITY,
+  SWITCHER_COMMIT_PX,
 } from './constants'
 
 export interface ShellApi {
@@ -84,6 +84,58 @@ export function Device({ renderApp }: Props) {
     timers.current.push(t)
   }, [])
 
+  /**
+   * rAF tween through `lerp`, matching EASE_IOS. p=1 is collapsed onto the
+   * icon, p=0 is fully open — the same parameterisation the drag uses.
+   */
+  const tweenTo = useCallback(
+    (from: IconRect, toOpen: boolean, ms: number, done?: () => void) => {
+      const gen = generation.current
+      const startedAt = performance.now()
+      // cubic-bezier(0.32, 0.72, 0, 1) sampled by Newton iteration on x.
+      const ease = (t: number) => {
+        const cx = 3 * 0.32
+        const bx = 3 * (0 - 0.32) - cx
+        const ax = 1 - cx - bx
+        const cy = 3 * 0.72
+        const by = 3 * (1 - 0.72) - cy
+        const ay = 1 - cy - by
+        let x = t
+        for (let i = 0; i < 6; i++) {
+          const fx = ((ax * x + bx) * x + cx) * x - t
+          const d = (3 * ax * x + 2 * bx) * x + cx
+          if (Math.abs(d) < 1e-6) break
+          x -= fx / d
+        }
+        return ((ay * x + by) * x + cy) * x
+      }
+
+      let finished = false
+      const finish = () => {
+        if (finished || generation.current !== gen) return
+        finished = true
+        done?.()
+      }
+
+      const step = () => {
+        if (finished || generation.current !== gen) return
+        const raw = Math.min(1, (performance.now() - startedAt) / ms)
+        const e = ease(raw)
+        setStyle(lerp(from, screen, toOpen ? 1 - e : e))
+        if (raw < 1) requestAnimationFrame(step)
+        else finish()
+      }
+      requestAnimationFrame(step)
+
+      // rAF does not fire in a background tab. Without this, backgrounding the
+      // page mid-launch leaves the window frozen at whatever scale it reached
+      // and the app never becomes usable. The timer still runs, so it lands the
+      // final state even if not a single frame was painted.
+      after(ms + 40, finish)
+    },
+    [screen, after],
+  )
+
   const openApp = useCallback(
     (id: string, rect?: IconRect) => {
       generation.current++
@@ -99,19 +151,25 @@ export function Device({ renderApp }: Props) {
       setPhase('opening')
       setRecents((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8))
 
+      const land = () => {
+        setStyle(expandedFor(screen))
+        setPhase('open')
+      }
+
       // Two frames: one to commit the collapsed style, one to start the tween.
       requestAnimationFrame(() =>
-        requestAnimationFrame(() => {
-          setAnimating(true)
-          setStyle(expanded)
-          after(OPEN_MS, () => {
-            setAnimating(false)
-            setPhase('open')
-          })
-        }),
+        requestAnimationFrame(() => tweenTo(from, true, OPEN_MS, land)),
       )
+
+      // Scheduled OUTSIDE the rAF on purpose. A hidden tab fires no animation
+      // frames at all, so the callbacks above never run and the app was left
+      // frozen at icon size, unusable, until something else opened. iOS Safari
+      // hides the tab whenever the user switches apps, so this is an ordinary
+      // path, not an edge case. `after` is generation-guarded, and `land` is
+      // idempotent, so the normal case just lands the same state twice.
+      after(OPEN_MS + 60, land)
     },
-    [after, clearTimers, centre, screen],
+    [after, clearTimers, centre, screen, tweenTo],
   )
 
   const closeApp = useCallback(() => {
@@ -121,21 +179,19 @@ export function Device({ renderApp }: Props) {
 
     const from = origin ?? origins.current.get(appId) ?? centre()
     setPhase('closing')
-    setAnimating(true)
-    setStyle({ ...collapsed(from, screen), opacity: 0 })
-    after(CLOSE_MS, () => {
-      setAnimating(false)
+    tweenTo(from, false, CLOSE_MS, () => {
+      setStyle({ ...collapsed(from, screen), opacity: 0 })
       setAppId(null)
       setPhase('home')
-      setStyle(expanded)
+      setStyle(expandedFor(screen))
     })
-  }, [appId, origin, after, clearTimers, centre, screen])
+  }, [appId, origin, clearTimers, centre, screen, tweenTo])
 
   const snapBack = useCallback(() => {
     generation.current++
     clearTimers()
     setAnimating(true)
-    setStyle(expanded)
+    setStyle(expandedFor(screen))
     after(CLOSE_MS, () => setAnimating(false))
   }, [after, clearTimers])
 
@@ -157,11 +213,19 @@ export function Device({ renderApp }: Props) {
       const up = -dy
       const speed = -vy
 
-      if (up > 40 && speed < SWITCHER_VELOCITY && speed > -0.3) {
+      // Order matters, and so does the distance. The switcher used to be
+      // tested first at up > 40 — less than half the 90px needed to go home —
+      // so every slow drag between 40 and 90px opened the switcher and could
+      // never reach the home screen. `speed > -0.3` also admitted a drag that
+      // had reversed downward, i.e. a cancel. iOS wants the opposite: a short
+      // swipe cancels, a long swipe goes home, and a long swipe you PAUSE on
+      // opens the switcher. Require both the longer distance and a real dwell.
+      const dwelling = Math.abs(speed) < SWITCHER_VELOCITY
+      if (up > SWITCHER_COMMIT_PX && dwelling) {
         generation.current++
         clearTimers()
         setAnimating(false)
-        setStyle(expanded)
+        setStyle(expandedFor(screen))
         setPhase('switcher')
         return
       }
@@ -217,7 +281,7 @@ export function Device({ renderApp }: Props) {
                   // Without this the app collapsed into whichever icon was
                   // tapped most recently, which could be a different app.
                   setOrigin(origins.current.get(id) ?? centre())
-                  setStyle(expanded)
+                  setStyle(expandedFor(screen))
                   setAnimating(false)
                   setPhase('open')
                   setRecents((r) => [id, ...r.filter((x) => x !== id)].slice(0, 8))
@@ -228,7 +292,7 @@ export function Device({ renderApp }: Props) {
                   clearTimers()
                   setAppId(null)
                   setPhase('home')
-                  setStyle(expanded)
+                  setStyle(expandedFor(screen))
                 }}
               />
             )}
@@ -246,23 +310,23 @@ export function Device({ renderApp }: Props) {
                   width: screen.w,
                   height: screen.h,
                   transform: settled ? undefined : style.transform,
-                  borderRadius: settled ? undefined : style.borderRadius,
+                  borderRadius: style.borderRadius,
                   // will-change only while a tween is actually running; holding
                   // it permanently pins a compositor layer for no benefit.
-                  willChange: animating ? 'transform, border-radius' : 'auto',
+                  willChange: settled ? 'auto' : 'transform, border-radius',
                   visibility: inSwitcher ? 'hidden' : 'visible',
-                  transition: animating
-                    ? `transform ${phase === 'closing' ? CLOSE_MS : OPEN_MS}ms ${EASE_IOS}, border-radius ${
-                        phase === 'closing' ? CLOSE_MS : OPEN_MS
-                      }ms ${EASE_IOS}`
-                    : 'none',
+                  // No CSS transition on transform or border-radius: the rAF
+                  // tween writes both every frame, correctly related to each
+                  // other. Letting CSS interpolate them independently is what
+                  // ballooned the corner through the middle of a launch.
+                  transition: 'none',
                 }}
               >
                 <div
                   className="app-content"
                   style={{
                     opacity: style.opacity,
-                    transition: animating ? `opacity ${OPEN_MS * 0.5}ms linear` : 'none',
+                    transition: 'none',
                   }}
                 >
                   {renderApp(appId!, api)}

@@ -1203,8 +1203,9 @@ textarea {
 }
 
 .cart-group-mark svg {
-  border-radius: 6px;
-  box-shadow: 0 0 0 1.5px #fff;
+  /* drop-shadow follows the squircle's alpha; box-shadow followed the
+     rounded-rect box and left a ring proud of the corners. */
+  filter: drop-shadow(0 0 0.5px #fff) drop-shadow(0 0 1.5px #fff);
   display: block;
 }
 
@@ -1668,7 +1669,9 @@ textarea {
 
 .order-ticket-marks svg:not(:first-child) {
   margin-left: -8px;
-  box-shadow: 0 0 0 1.5px #fff;
+  /* drop-shadow follows the squircle's alpha; box-shadow followed the
+     rounded-rect box and left a ring proud of the corners. */
+  filter: drop-shadow(0 0 0.5px #fff) drop-shadow(0 0 1.5px #fff);
 }
 
 .order-ticket-body {
@@ -1713,16 +1716,21 @@ textarea {
 }
 
 .search-clear {
-  width: 44px;
-  height: 44px;
-  margin-right: -12px;
-  border-radius: 50%;
-  background-clip: content-box;
+  /* 44pt hit target, 20px of visible dot. The shorthand has to come BEFORE
+     background-clip or it resets it — that is what turned this into a disc. */
+  width: 20px;
+  height: 20px;
+  box-sizing: content-box;
   padding: 12px;
+  margin: -12px -12px -12px 0;
   background: rgba(60, 60, 67, 0.3);
+  background-clip: content-box;
+  border-radius: 50%;
   color: #fff;
-  font-size: 15px;
-  line-height: 19px;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  flex: 0 0 auto;
 }
 
 .search-h {
@@ -2057,9 +2065,10 @@ textarea {
     display: none;
   }
 
-  .app-window {
-    border-radius: 0 !important;
-  }
+  /* No border-radius override here. It used to be `0 !important`, which beat
+     the inline radius from Device.tsx and made the app grow out of a SQUARE on
+     phones — the one device this is imitating — leaving the whole radius
+     interpolation in AppWindow.tsx as dead code. */
 
   .dock {
     bottom: calc(var(--bottom-h) + 6px);
@@ -2800,8 +2809,9 @@ textarea {
 }
 
 .reserve-proof-mark svg {
-  border-radius: 8px;
-  box-shadow: 0 0 0 2px #f2f2f7;
+  /* drop-shadow follows the squircle's alpha; box-shadow followed the
+     rounded-rect box and left a ring proud of the corners. */
+  filter: drop-shadow(0 0 0.5px #f2f2f7) drop-shadow(0 0 2px #f2f2f7);
 }
 
 .reserve-proof-more {

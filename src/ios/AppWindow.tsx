@@ -35,6 +35,15 @@ export function collapsed(origin: IconRect, screen: ScreenSize): WindowTransform
   }
 }
 
+/** Resting state. `radius` comes from the screen so a full-bleed phone, whose
+ *  display is square, does not rest on a 47px corner it does not have. */
+export const expandedFor = (screen: ScreenSize): WindowTransform => ({
+  transform: 'translate3d(0px, 0px, 0) scale(1)',
+  borderRadius: screen.radius,
+  opacity: 1,
+})
+
+/** Fallback for the initial state, before the screen has been measured. */
 export const expanded: WindowTransform = {
   transform: 'translate3d(0px, 0px, 0) scale(1)',
   borderRadius: SCREEN_RADIUS,
@@ -55,7 +64,7 @@ export function lerp(origin: IconRect, screen: ScreenSize, p: number): WindowTra
       which is exactly where it is hardest to notice and easiest to ship.
     */
     borderRadius:
-      (SCREEN_RADIUS * (1 - p) + origin.width * ICON_RADIUS_RATIO * p) / sc,
+      (screen.radius * (1 - p) + origin.width * ICON_RADIUS_RATIO * p) / sc,
     // Content only starts fading in the last third of the collapse.
     opacity: p > 0.66 ? 1 - (p - 0.66) / 0.34 : 1,
   }

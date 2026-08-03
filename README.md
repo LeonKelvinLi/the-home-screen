@@ -26,20 +26,47 @@ npm start          # http://localhost:8787
 - **iOS shell** — home grid with two pages, wallpaper parallax, Spotlight pill,
   dock, live status bar, app-open zoom, swipe-to-home, and an app switcher with
   live (not screenshotted) cards.
-- **Ordering** — 16 fake restaurants, menus with required/optional choice
+- **Ordering** — 32 real businesses, menus with required/optional choice
   groups, per-item notes, one cart across all of them.
 - **Checkout** — server re-prices every line, splits the order into one ticket
   per vendor, computes the platform fee per vendor, and stores it.
 - **Orders** — ticket states advance on a timer and the client polls them.
 
-## What is deliberately fake
+## Where the data comes from
 
-- Every brand, menu and price in `src/data/brands.ts`. Replace wholesale.
-- Payment. `payment_state` is `mock`; no card is charged. The Stripe Connect
-  split is computed and stored but never submitted.
-- The kitchen. A `setInterval` in `server/index.ts` walks tickets
-  queued → cooking → ready → collected so the tracking screen has something
-  truthful to show. A real kitchen display replaces it.
+This section used to say every brand and price was fake. That was true before
+the port and is not true now — leaving it there was dangerous in both
+directions, because it invited someone to replace real transcribed data
+wholesale while treating unverified data as safe.
+
+- **`src/data/brands.ts` — 25 brands, 100 items.** Transcribed from the
+  operator's own hub at goodneighborbuilder.com. Verified by diffing against
+  that site's live bundle: 98 of 98 parseable items match on name *and* price
+  exactly. Seven of these businesses look, by name, like they are not food
+  businesses at all; those carry `needsOwnerReview` and the UI says so.
+- **`src/data/localBrands.ts` — 7 businesses, 45 items.** Researched
+  individually and read off each business's own site or listing. Where a menu
+  came from a delivery platform the prices carry that platform's markup, so the
+  brand carries `pricesEstimated` and every screen that shows a price says it
+  needs confirming. Two of these are not restaurants and have no menu at all.
+- **Dish photos in `public/food`** are the vendors' own, saved from their own
+  listings. Never stock, never generated: a picture of food a kitchen does not
+  serve is as much an invented fact as an invented price.
+- **No ratings or review counts anywhere.** Inventing them for a real business
+  would be fabricating evidence about someone else's trade.
+
+## What is still not real
+
+- Payment. `payment_state` is `mock`; no card is charged, and `stripe` is never
+  imported. `PAYMENTS_WIRED` in `server/index.ts` is a source constant, not an
+  env var, precisely so that setting `STRIPE_SECRET_KEY` cannot make the app
+  believe a charge path exists.
+- The kitchen. No kitchen display exists and no vendor has been issued a token,
+  so in production tickets stay `queued`. `SIMULATE_KITCHEN=1` walks them
+  queued → cooking → ready → collected for a demo, and shouts in the log that
+  it is doing so.
+- `prepMinutes` is an estimate by category, not sourced, and is hedged in the
+  UI rather than shown as a fact.
 
 ## Not built yet
 
