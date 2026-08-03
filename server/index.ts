@@ -2,16 +2,86 @@ import express from 'express'
 import type { NextFunction, Request, Response } from 'express'
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
+import { dirname, join, sep } from 'node:path'
 import { db } from './db/schema'
 import { BRANDS, VENDORS } from '../src/data/brands'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const app = express()
-app.use(express.json({ limit: '256kb' }))
 
 const PORT = Number(process.env.PORT ?? 8787)
 const PROD = process.env.NODE_ENV === 'production'
+
+/*
+ * Render terminates TLS upstream and forwards over http, so without this
+ * req.ip is the proxy's address, req.protocol is always 'http', and every
+ * visitor shares one rate-limit bucket. `1` — not `true` — because trusting
+ * the whole chain lets a caller spoof their own address in X-Forwarded-For
+ * and evade the limiter entirely.
+ */
+app.set('trust proxy', 1)
+
+// Advertising the framework and version only helps someone pick an exploit.
+app.disable('x-powered-by')
+
+/** Force HTTPS in production. Render redirects too; this closes the gap if a
+ *  custom domain is ever attached without that setting. */
+app.use((req, res, next) => {
+  if (PROD && req.protocol !== 'https') {
+    return res.redirect(308, `https://${req.get('host')}${req.originalUrl}`)
+  }
+  next()
+})
+
+/**
+ * Security headers.
+ *
+ * Written out rather than pulled from a package: it is a dozen headers, each
+ * one needs a reason recorded next to it, and this is a payment-adjacent
+ * service where a new dependency is its own risk.
+ */
+const CSP = [
+  // Nothing loads from anywhere but this origin unless listed below.
+  "default-src 'self'",
+  // No inline <script> exists in the built index.html, so scripts need no
+  // unsafe-inline — the one exception that actually matters for XSS.
+  "script-src 'self'",
+  // React writes ~20 style={{}} props as inline style attributes, which do
+  // need unsafe-inline. Far less dangerous than allowing it for scripts.
+  "style-src 'self' 'unsafe-inline'",
+  // data: covers the generated SVG marks.
+  "img-src 'self' data:",
+  "font-src 'self'",
+  // The API is same-origin, so nothing should ever call out.
+  "connect-src 'self'",
+  "manifest-src 'self'",
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  // Clickjacking: nobody frames a checkout page for a good reason.
+  "frame-ancestors 'none'",
+].join('; ')
+
+app.use((_req, res, next) => {
+  res.setHeader('Content-Security-Policy', CSP)
+  res.setHeader('X-Content-Type-Options', 'nosniff')
+  res.setHeader('X-Frame-Options', 'DENY')
+  // Do not leak which brand page a customer came from to a partner's site.
+  res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
+  // Nothing here needs a camera, mic, or location.
+  res.setHeader(
+    'Permissions-Policy',
+    'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()',
+  )
+  res.setHeader('Cross-Origin-Opener-Policy', 'same-origin')
+  res.setHeader('Cross-Origin-Resource-Policy', 'same-origin')
+  if (PROD) {
+    res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
+  }
+  next()
+})
+
+app.use(express.json({ limit: '256kb' }))
 /**
  * Fallback only. Real tax is per-vendor (`vendor.taxBps`) because California
  * charges prepared-food tax at the seller's location — a cart spanning two
@@ -42,8 +112,9 @@ function rateLimiter(perMinute: number, burst: number) {
 
   return (req: Request, res: Response, next: NextFunction) => {
     const now = Date.now()
-    // Render terminates TLS upstream, so req.ip is the proxy without this.
-    const key = String(req.get('x-forwarded-for') ?? '').split(',')[0].trim() || req.ip || 'unknown'
+    // `trust proxy` is set to 1, so req.ip is the real client and cannot be
+    // spoofed by stuffing extra hops into X-Forwarded-For.
+    const key = req.ip || 'unknown'
 
     // Bound the map itself, or the limiter becomes the memory leak.
     if (buckets.size > 10000) {
@@ -216,7 +287,7 @@ app.get('/api/health', (_req, res) => {
   }
 })
 
-app.get('/api/catalogue', (_req, res) => {
+app.get('/api/catalogue', rateLimiter(60, 20), (_req, res) => {
   res.json({ vendors: VENDORS, brands: BRANDS })
 })
 
@@ -495,7 +566,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
  * anyone, which handed each vendor their competitors' revenue and the
  * commission rate the platform charges them.
  */
-app.get('/api/orders', (req, res) => {
+app.get('/api/orders', rateLimiter(120, 30), (req, res) => {
   const vendorId = authVendor(req)
   if (!vendorId) return res.status(401).json({ error: 'Vendor token required.' })
 
@@ -521,9 +592,10 @@ app.get('/api/orders', (req, res) => {
  * authenticated vendor now sees only its own ticket; an anonymous caller (the
  * customer, who already knows what they ordered) still sees the whole order.
  */
-app.get('/api/orders/:id', (req, res) => {
+app.get('/api/orders/:id', rateLimiter(120, 40), (req, res) => {
   const vendorId = authVendor(req)
-  const order = readOrder(req.params.id, { forCustomer: true, ...(vendorId ? { vendorId } : {}) })
+  const orderId = String(req.params.id)
+  const order = readOrder(orderId, { forCustomer: true, ...(vendorId ? { vendorId } : {}) })
   if (!order) return res.status(404).json({ error: 'Not found' })
   res.json(order)
 })
@@ -536,7 +608,7 @@ const NEXT_STATE: Record<string, string[]> = {
 }
 
 /** Kitchen-facing: advance a ticket. Vendor-scoped, forward-only. */
-app.post('/api/tickets/:id/state', (req, res) => {
+app.post('/api/tickets/:id/state', rateLimiter(120, 30), (req, res) => {
   const vendorId = authVendor(req)
   if (!vendorId) return res.status(401).json({ error: 'Vendor token required.' })
 
@@ -740,7 +812,7 @@ function notifyLead(lead: Record<string, string>) {
  * rather than falling back to something weaker.
  */
 const OPERATOR_TOKEN = process.env.OPERATOR_TOKEN ?? ''
-app.get('/api/applications', (req, res) => {
+app.get('/api/applications', rateLimiter(20, 10), (req, res) => {
   if (OPERATOR_TOKEN.length < 16) {
     return res.status(503).json({ error: 'No operator token configured.' })
   }
@@ -755,8 +827,31 @@ app.get('/api/applications', (req, res) => {
 
 /* ---------- static ---------- */
 
-app.use(express.static(join(here, '..', 'dist')))
-app.get('*', (_req, res) => res.sendFile(join(here, '..', 'dist', 'index.html')))
+app.use(
+  express.static(join(here, '..', 'dist'), {
+    // Vite fingerprints everything under /assets, so those can be cached hard.
+    // index.html must never be, or a client keeps calling a deployed-away API.
+    setHeaders: (res, path) => {
+      if (path.includes(`${sep}assets${sep}`)) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+      } else if (path.endsWith('.html')) {
+        res.setHeader('Cache-Control', 'no-store')
+      }
+    },
+  }),
+)
+
+/**
+ * An unmatched /api path is an error, not a page. The SPA catch-all below used
+ * to answer it with index.html and a 200, so a client calling a typo'd or
+ * removed endpoint got HTML and a success code and could not tell.
+ */
+app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
+
+app.get('*', (_req, res) => {
+  res.setHeader('Cache-Control', 'no-store')
+  res.sendFile(join(here, '..', 'dist', 'index.html'))
+})
 
 /** Never return a stack trace: it leaks absolute paths and the dependency tree. */
 app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
