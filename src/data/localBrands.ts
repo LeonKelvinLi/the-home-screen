@@ -287,4 +287,23 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteCta: 'Open Curio',
     items: [],
   },
+  {
+    slug: 'pod-dtg',
+    name: 'POD DTG',
+    label: 'POD DTG',
+    cuisine: 'Custom apparel printing',
+    tagline: 'Print on demand, direct to garment.',
+    color: '#0A0A0A',
+    icon: 'pod-dtg',
+    prep: 0,
+    category: 'Shop',
+    // No products and no link, on purpose. This entry existed once carrying a
+    // wood-fired pizza menu ported from the old hub, which is why it was
+    // removed — a printer is not a pizzeria. It comes back with its real mark
+    // and nothing invented around it. The operator has the URL; probing the
+    // obvious domains found nothing resolving.
+    contactOnly:
+      'POD DTG prints custom apparel, direct to garment. Not a kitchen, and their ordering link is not connected here yet.',
+    items: [],
+  },
 ]
