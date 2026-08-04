@@ -6,6 +6,11 @@
     <meta name="theme-color" content="#0b0b0f" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- The text iOS prints UNDER the icon on Add to Home Screen. It takes this
+         meta tag in preference to the manifest's short_name, and falls back to
+         <title> if neither is set — which is why it used to read "The Home
+         Screen" across two lines. -->
+    <meta name="apple-mobile-web-app-title" content="BEASTY" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <title>The Home Screen</title>
