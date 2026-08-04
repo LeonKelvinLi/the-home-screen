@@ -192,7 +192,7 @@ textarea {
 .home-wallpaper {
   position: absolute;
   inset: 0;
-  background: #0a0a0c url('/wallpaper.jpg') center / cover no-repeat;
+  background: #0a0a0c url('/wallpaper.webp') center / cover no-repeat;
 }
 
 /*
@@ -224,7 +224,8 @@ textarea {
   position: absolute;
   inset: 0;
   display: flex;
-  will-change: transform;
+  /* will-change is applied inline only while a turn is in flight — see
+     HomeScreen. Holding it permanently pins a layer for the whole session. */
   touch-action: pan-y;
 }
 
@@ -2655,7 +2656,7 @@ textarea {
    so far in that the composition was lost. */
 @media (min-width: 700px) {
   .home-wallpaper {
-    background-image: url('/wallpaper-wide.jpg');
+    background-image: url('/wallpaper-wide.webp');
   }
 
   /*
@@ -2916,4 +2917,35 @@ textarea {
   font-size: 11px;
   line-height: 1.3;
   color: #8A8A8E;
+}
+
+/* ---------- page-turn performance ----------
+
+   The dock and the Spotlight pill are translucent, and what sits behind them
+   is the icon grid — which MOVES during a page turn. A backdrop-filter whose
+   source is moving must be re-rasterised every single frame, and the dock's is
+   a 40px blur across the full width. On a 120Hz display that is the one thing
+   that will not hold the frame budget.
+
+   While a page is turning, swap both to a flat translucent fill. The blur
+   returns the moment the page settles. Mid-swipe, at speed, the difference is
+   not perceptible — a dropped frame is.                                      */
+
+.home.is-paging .dock {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: rgba(28, 28, 32, 0.62);
+}
+
+.home.is-paging .spotlight {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  background: rgba(60, 60, 68, 0.42);
+}
+
+/* The wallpaper is pinned and never moves, so it must not be dragged into a
+   repaint by the pager above it. */
+.home-wallpaper {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }

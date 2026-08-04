@@ -69,7 +69,7 @@ const PHONE_APP: AppDef = {
   id: 'sys.phone',
   name: 'Phone',
   label: 'Phone',
-  icon: <BrandLogo logo={{ imageUrl: '/icons/dock-phone.png', bg: '#1FAF54', fg: '#fff' }} fill />,
+  icon: <BrandLogo logo={{ imageUrl: '/icons/dock-phone.webp', bg: '#1FAF54', fg: '#fff' }} fill />,
   kind: 'system',
   systemKey: 'phone',
   tint: '#1FAF54',
@@ -142,11 +142,11 @@ export const DOCK_APPS: AppDef[] = [
   {
     ...brand('beastyh20')!,
     label: 'Water',
-    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-water.png', bg: '#2C8ED6', fg: '#fff' }} fill />,
+    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-water.webp', bg: '#2C8ED6', fg: '#fff' }} fill />,
   },
   {
     ...brand('sharescan')!,
     label: 'Info',
-    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.png', bg: '#111111', fg: '#fff' }} fill />,
+    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.webp', bg: '#111111', fg: '#fff' }} fill />,
   },
 ]

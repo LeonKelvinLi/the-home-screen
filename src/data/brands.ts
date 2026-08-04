@@ -438,7 +438,7 @@ const fromSeed = (s: Seed): Brand => ({
   cuisine: s.cuisine,
   tagline: s.tagline,
   logo: s.icon
-    ? { imageUrl: `/icons/${s.icon}.png`, bg: s.color, fg: '#ffffff' }
+    ? { imageUrl: `/icons/${s.icon}.webp`, bg: s.color, fg: '#ffffff' }
     : // No verifiable artwork: draw a monogram rather than link a missing file.
       {
         bg: s.color,
@@ -468,7 +468,7 @@ const fromSeed = (s: Seed): Brand => ({
           name,
           desc,
           price,
-          imageUrl: photo ? `/food/${photo.replace(/^~/, '')}.jpg` : undefined,
+          imageUrl: photo ? `/food/${photo.replace(/^~/, '')}.webp` : undefined,
         // A leading ~ in the seed marks the picture as an illustration.
         imageIsIllustration: photo ? photo.startsWith('~') : undefined,
         }))

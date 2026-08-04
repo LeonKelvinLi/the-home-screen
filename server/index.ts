@@ -840,9 +840,21 @@ app.use(
     // index.html must never be, or a client keeps calling a deployed-away API.
     setHeaders: (res, path) => {
       if (path.includes(`${sep}assets${sep}`)) {
+        // Vite fingerprints these, so they can never go stale.
         res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
       } else if (path.endsWith('.html')) {
         res.setHeader('Cache-Control', 'no-store')
+      } else if (/\.(webp|png|jpe?g|svg|woff2?)$/i.test(path)) {
+        // Images and fonts are NOT fingerprinted — the filename is the dish or
+        // the brand — so they cannot be immutable. They were being served
+        // max-age=0, which made every repeat visit re-request all 74 of them.
+        // A day of caching plus a week of stale-while-revalidate means a
+        // returning customer paints instantly and still picks up a changed
+        // photo on the next load.
+        res.setHeader(
+          'Cache-Control',
+          'public, max-age=86400, stale-while-revalidate=604800',
+        )
       }
     },
   }),

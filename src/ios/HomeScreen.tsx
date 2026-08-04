@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
@@ -55,7 +55,27 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
   const safePage = Math.min(page, pages.length - 1)
   pageRef.current = safePage
 
+  /**
+   * True while a page turn is on screen — through the drag AND the settle
+   * transition after it. Used to suspend the dock and Spotlight backdrop
+   * blurs, which otherwise re-rasterise on every frame because the thing
+   * behind them is the moving icon grid. A 40px blur recomputed 120 times a
+   * second is the single most expensive thing in a page turn.
+   */
+  const [moving, setMoving] = useState(false)
+  const moveTimer = useRef<number | undefined>(undefined)
+  const startMoving = () => {
+    window.clearTimeout(moveTimer.current)
+    setMoving(true)
+  }
+  const endMoving = (afterMs: number) => {
+    window.clearTimeout(moveTimer.current)
+    moveTimer.current = window.setTimeout(() => setMoving(false), afterMs)
+  }
+  useEffect(() => () => window.clearTimeout(moveTimer.current), [])
+
   const settle = (next: number) => {
+    endMoving(PAGE_MS + 40)
     setDragging(false)
     setPage(next)
     setDx(0)
@@ -64,7 +84,10 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
 
   const drag = useDrag({
     threshold: 10,
-    onStart: () => setDragging(true),
+    onStart: () => {
+      startMoving()
+      setDragging(true)
+    },
     onMove: ({ dx, dy }) => {
       if (!axis.current) axis.current = Math.abs(dy) > Math.abs(dx) * 1.4 ? 'y' : 'x'
       if (axis.current === 'y') return
@@ -100,7 +123,9 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
 
   return (
     <div
-      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
+      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''}${
+        moving ? ' is-paging' : ''
+      } is-${screen.device}`}
     >
       {/*
         Pinned, not parallaxed. The drift was a nice idea on a real device but
@@ -115,6 +140,10 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
         style={{
           transform: `translate3d(${offset}px,0,0)`,
           transition: dragging ? 'none' : `transform ${PAGE_MS}ms ${EASE_IOS}`,
+          // Promote to its own layer only while it is actually moving. Holding
+          // will-change permanently pins a compositor layer for the whole
+          // session and costs memory for nothing between swipes.
+          willChange: moving ? 'transform' : 'auto',
         }}
       >
         {pages.map((apps, i) => (

@@ -24,8 +24,12 @@ import type { Logo } from '../data/brands'
  */
 const FACE: Record<NonNullable<Logo['face']>, string> = {
   grotesk: 'Inter, "Helvetica Neue", system-ui, sans-serif',
-  slab: '"Roboto Slab", Rockwell, Georgia, serif',
-  script: '"Great Vibes", "Snell Roundhand", "Apple Chancery", cursive',
+  // Roboto Slab and Great Vibes were shipped as webfonts and never used by
+  // any brand — 208 KB for a code path nothing reaches. These now fall back to
+  // faces every device already has, so the option still works without a
+  // download.
+  slab: 'Rockwell, Georgia, "Times New Roman", serif',
+  script: '"Snell Roundhand", "Apple Chancery", "Segoe Script", cursive',
   condensed: 'Oswald, "Arial Narrow", Impact, sans-serif',
 }
 
