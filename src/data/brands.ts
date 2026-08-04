@@ -60,12 +60,20 @@ export interface MenuItem {
   tags?: string[]
   options?: MenuOptionGroup[]
   /**
-   * The vendor's OWN photo of this dish, saved locally under /food.
-   * Never a stock or generated image: a picture of food this kitchen does not
-   * actually serve is as much an invented fact as an invented price. Items
-   * without a sourced photo fall back to the generated glyph.
+   * Picture of the dish, saved locally under /food.
+   *
+   * Two provenances, and the difference is declared rather than hidden:
+   *  - the vendor's OWN photo, taken from their own listing (default)
+   *  - a generated illustration, where the vendor publishes no photo at all
+   *
+   * A generated image is built from research into how THAT restaurant actually
+   * plates THAT dish, but it is still not a photograph of the plate a customer
+   * will be handed. So it is labelled in the UI. Passing one off as the
+   * vendor's own would be the same class of wrong as an invented price.
    */
   imageUrl?: string
+  /** True when imageUrl is a generated illustration, not the vendor's photo. */
+  imageIsIllustration?: boolean
 }
 
 export interface MenuOptionGroup {
@@ -460,7 +468,9 @@ const fromSeed = (s: Seed): Brand => ({
           name,
           desc,
           price,
-          imageUrl: photo ? `/food/${photo}.jpg` : undefined,
+          imageUrl: photo ? `/food/${photo.replace(/^~/, '')}.jpg` : undefined,
+        // A leading ~ in the seed marks the picture as an illustration.
+        imageIsIllustration: photo ? photo.startsWith('~') : undefined,
         }))
         .filter((it) => !s.offer || s.offer.includes(it.name)),
     },

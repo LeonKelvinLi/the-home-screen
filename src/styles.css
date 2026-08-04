@@ -2906,3 +2906,14 @@ textarea {
   line-height: 1.4;
   color: #7A6222;
 }
+
+/* Marks a dish picture as a generated illustration rather than the kitchen's
+   own photo. Quiet, but present on every row that needs it — a customer should
+   never think they are looking at the plate they will be handed. */
+.menu-row-illus {
+  display: block;
+  margin-top: 2px;
+  font-size: 11px;
+  line-height: 1.3;
+  color: #8A8A8E;
+}

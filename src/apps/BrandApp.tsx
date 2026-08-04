@@ -143,6 +143,9 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                       ))}
                     </span>
                     <span className="menu-row-desc">{item.desc}</span>
+                    {item.imageIsIllustration && (
+                      <span className="menu-row-illus">Illustration, not their photo</span>
+                    )}
                     <span className="menu-row-price">{money(item.price)}</span>
                   </span>
                   <span className="menu-row-thumb">
