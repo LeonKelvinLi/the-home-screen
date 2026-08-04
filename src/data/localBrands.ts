@@ -99,6 +99,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     // Deliberately no `offer`: the operator wants top dog's full menu, unlike
     // the other partners where only three to five items are stocked.
     //
+    // Every sausage carries top dog's OWN studio photograph, served the way
+    // they actually serve it: the sausage overhanging a French roll split into
+    // two separate planks, toasted cut-side down. Nothing here is generated.
+    //
     // Prices are from a photograph of their in-store board (2026-08), and the
     // item wording is their own from topdoghotdogs.com/themenu.html. Both are
     // primary sources, so these are no longer triangulated — the earlier
@@ -108,17 +112,17 @@ export const LOCAL_SEED: LocalSeed[] = [
     pricesEstimated:
       'Their board reads that prices INCLUDE tax, so nothing further is added at checkout. Worth confirming with the shop before taking real money. Card and contactless payments have a $5 minimum.',
     items: [
-      ['top dog Frankfurter', 'All beef, kosher style', 450],
-      ['Garlic Frankfurter', 'Three-quarter beef, quarter pork, fresh garlic', 475],
-      ['Hot Link', 'Louisiana style. Beef and four kinds of pepper, h-h-hottt', 475],
-      ['Smoked Chicken Apple', 'Chicken with juicy bits of apple, low salt', 475],
-      ['Calabrese', 'Italian. Pork, paprika, chili, fennel, semi-hot', 475],
-      ['Kielbasa', 'Polish. Two-thirds pork, one-third beef, hearty', 475],
-      ['Bockwurst', 'Half pork, half veal, milk and eggs', 475],
-      ['the Wienie', 'Veggie. Wheat protein, bell peppers, fennel, eggplant, fresh garlic', 475],
-      ['Lemon Chicken', 'Chicken, fresh lemon and garlic. Low salt, low fat, no preservatives', 475],
-      ['Mango with Jalapeno', 'From Chef Bruce Aidell. Chicken, mango, jalapeño pepper, cilantro and paprika', 475],
-      ['Bratwurst', 'German. Pork and marjoram, genuine old world taste', 500],
+      ['top dog Frankfurter', 'All beef, kosher style', 450, 'topdog-frankfurter'],
+      ['Garlic Frankfurter', 'Three-quarter beef, quarter pork, fresh garlic', 475, 'topdog-garlic-frankfurter'],
+      ['Hot Link', 'Louisiana style. Beef and four kinds of pepper, h-h-hottt', 475, 'topdog-hot-link'],
+      ['Smoked Chicken Apple', 'Chicken with juicy bits of apple, low salt', 475, 'topdog-smoked-chicken-apple'],
+      ['Calabrese', 'Italian. Pork, paprika, chili, fennel, semi-hot', 475, 'topdog-calabrese'],
+      ['Kielbasa', 'Polish. Two-thirds pork, one-third beef, hearty', 475, 'topdog-kielbasa'],
+      ['Bockwurst', 'Half pork, half veal, milk and eggs', 475, 'topdog-bockwurst'],
+      ['the Wienie', 'Veggie. Wheat protein, bell peppers, fennel, eggplant, fresh garlic', 475, 'topdog-wienie'],
+      ['Lemon Chicken', 'Chicken, fresh lemon and garlic. Low salt, low fat, no preservatives', 475, 'topdog-lemon-chicken'],
+      ['Mango with Jalapeno', 'From Chef Bruce Aidell. Chicken, mango, jalapeño pepper, cilantro and paprika', 475, 'topdog-mango-jalapeno'],
+      ['Bratwurst', 'German. Pork and marjoram, genuine old world taste', 500, 'topdog-bratwurst'],
       ['Potato Salad', 'Side', 250],
       ['Chili on any dog', 'Add chili to any sausage', 100],
       ['Chili, 10 oz', 'Cup', 200],
