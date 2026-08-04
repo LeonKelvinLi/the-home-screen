@@ -268,10 +268,20 @@ export const LOCAL_SEED: LocalSeed[] = [
     // The icon is their own mark, lifted from their site's own uploads at
     // 800x800 and composited on black — not a redraw and not a generated
     // approximation, either of which would be a different brand's identity.
-    contactOnly:
-      'Elemonkey is a San Francisco streetwear label, not a kitchen. Their store is invite-only, so there is nothing to order here.',
-    siteCta: 'Visit elemonkey.com',
-    items: [],
+    // Real products at real prices, but READ FROM AN ARCHIVED CAPTURE of their
+    // storefront (Oct 2025) because they have since closed it behind an
+    // invite-only gate on purpose. That is why the flag below is blunt: these
+    // are not confirmed current, and the shop is not open to the public.
+    pricesEstimated:
+      'From their last public storefront in October 2025, not confirmed current. Elemonkey is invite-only now, so confirm with them before ordering.',
+    siteNote: 'Visit elemonkey.com',
+    items: [
+      ['ELEMONKEY Embroidered Polo, black', 'Embroidered polo', 7000],
+      ['ELEMONKEY Embroidered Polo, white', 'Embroidered polo', 7000],
+      ['Elemonkey Snap Back Hat, red', 'One size', 4000],
+      ['Elemonkey Snap Back Hat, white', 'One size', 4000],
+      ['Elemonkey Snap Back Hat, black', 'One size', 4000],
+    ],
   },
   {
     slug: 'curio',
@@ -466,12 +476,13 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Shop',
     site: 'https://poofofalchemy.com',
     // One product, one price, read from their own Shopify storefront and
-    // confirmed identical across their own products.json endpoints. Not a food
-    // business, so it sits with the other non-kitchen tiles.
-    contactOnly:
-      'Poof of Alchemy sell a copper water wand, not food. Their single product is $41.00 for a two-pack, direct from their own store.',
-    siteCta: 'Visit poofofalchemy.com',
-    items: [],
+    // confirmed identical across their own products.json endpoints — so it is
+    // orderable rather than contact-only. Not food, so it still sits with the
+    // non-kitchen tiles.
+    siteNote: 'See it on their own store at poofofalchemy.com',
+    items: [
+      ['Copper Water Wand', 'Two per pack. A solid copper rod for your own bottle or glass', 4100],
+    ],
   },
   {
     slug: 'allis-dog-walking',
