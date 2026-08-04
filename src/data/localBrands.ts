@@ -48,6 +48,8 @@ export interface LocalSeed {
   siteCta?: string
   /** Kitchen's own dietary description, e.g. ['Halal']. Never a certification. */
   dietary?: string[]
+  /** Partner discount. Headline states the guaranteed floor, not a range. */
+  perk?: { headline: string; detail: string }
   /**
    * Their posted prices already contain sales tax, so checkout must not add it
    * again. Backed out for the vendor's records rather than ignored — they
@@ -303,6 +305,33 @@ export const LOCAL_SEED: LocalSeed[] = [
     // This entry previously carried a wood-fired pizza menu ported from the old
     // hub, which is why it was removed once; a printer is not a pizzeria.
     contactOnly: 'POD DTG is a print-on-demand brand, not a kitchen. Nothing to order here.',
+    items: [],
+  },
+  {
+    slug: 'hybrid-workz',
+    name: 'Hybrid Workz',
+    label: 'Hybrid Workz',
+    cuisine: 'Toyota hybrid service',
+    tagline: 'Toyota hybrid service and maintenance, Fremont.',
+    color: '#8C1D24',
+    icon: '',
+    prep: 0,
+    category: 'Service',
+    site: 'https://www.instagram.com/hybridworkz/',
+    phone: '(510) 399-9140',
+    address: '45554 Industrial Place, Unit 8, Fremont, CA 94538',
+    // Every detail here is transcribed from their own Instagram bio. No
+    // services and no prices are listed because they publish none — a repair
+    // quote depends on the car, and inventing a price list for a shop would be
+    // worse here than anywhere else on this home screen.
+    perk: {
+      headline: '10% off for BEASTY EATS customers',
+      detail:
+        'Up to 25% on larger jobs, at the shop\u2019s discretion. Mention BEASTY EATS when you book.',
+    },
+    contactOnly:
+      'Hybrid Workz service Toyota hybrids \u2014 they are a garage, not a kitchen, so there is nothing to order here. Call or message them to book.',
+    siteCta: 'Message @hybridworkz',
     items: [],
   },
 ]

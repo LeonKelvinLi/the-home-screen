@@ -143,6 +143,16 @@ export interface Brand {
    * certifier's name so it can be checked, not this one.
    */
   dietary?: string[]
+  /**
+   * A partner perk — a discount this business honours for customers who came
+   * from here.
+   *
+   * `headline` must state what EVERY customer is guaranteed. A range like
+   * "10-25% off" reads as 25% to everyone, and whoever gets 10% feels
+   * short-changed at the counter — which lands on the partner, not on us. Lead
+   * with the floor and put the upside in `detail`.
+   */
+  perk?: { headline: string; detail: string }
 }
 
 export interface Vendor {
@@ -214,6 +224,8 @@ interface Seed {
   taxIncluded?: boolean
   /** Kitchen's own dietary description. Never a certification claim. */
   dietary?: string[]
+  /** Partner discount. Headline states the guaranteed floor. */
+  perk?: { headline: string; detail: string }
 }
 
 /** Straight transcription of the source hub. Prices are cents. */
@@ -471,6 +483,7 @@ export const BRANDS: Brand[] = [
     siteNote: s.siteNote,
     siteCta: s.siteCta,
     dietary: s.dietary,
+    perk: s.perk,
   })),
   ...SEED.map(fromSeed),
 ]

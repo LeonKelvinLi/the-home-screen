@@ -160,6 +160,16 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </section>
           ))}
 
+          {/* A discount the partner honours at their own counter. Sits above
+              the contact block because for a service partner it is the whole
+              reason the tile was opened. */}
+          {brand.perk && (
+            <div className="brand-perk">
+              <strong>{brand.perk.headline}</strong>
+              <span>{brand.perk.detail}</span>
+            </div>
+          )}
+
           {/* No published menu: show how to actually reach them instead of an
               empty list or an invented one. */}
           {brand.contactOnly && (
