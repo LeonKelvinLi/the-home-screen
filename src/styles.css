@@ -336,15 +336,17 @@ textarea {
   position: absolute;
   left: 50%;
   bottom: 134px;
-  transform: translateX(-50%);
+  transform: translateX(-50%) translateZ(0);
   display: flex;
   align-items: center;
   gap: 5px;
   padding: 6px 14px 6px 12px;
   border-radius: 16px;
   background: rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  will-change: backdrop-filter;
+  backface-visibility: hidden;
   box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.18) inset;
   color: rgba(255, 255, 255, 0.95);
   font-size: 14px;
@@ -369,9 +371,18 @@ textarea {
   align-items: center;
   justify-content: space-around;
   border-radius: 34px;
-  background: rgba(120, 130, 150, 0.28);
-  backdrop-filter: blur(40px) saturate(160%) brightness(1.05);
-  -webkit-backdrop-filter: blur(40px) saturate(160%) brightness(1.05);
+  background: rgba(120, 130, 150, 0.30);
+  backdrop-filter: blur(24px) saturate(150%);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  /* Own compositor layer, promoted up front rather than at scroll time.
+     Without this the dock is re-rasterised together with the grid moving
+     behind it, which is what makes a blurred bar strobe while scrolling —
+     and promoting it lazily causes a one-frame flash as the layer is
+     created. `will-change` names the property that actually changes
+     underneath it, so the layer is kept alive between turns. */
+  transform: translateZ(0);
+  will-change: backdrop-filter;
+  backface-visibility: hidden;
   box-shadow:
     0 0.5px 0 rgba(255, 255, 255, 0.3) inset,
     0 0 0 0.5px rgba(255, 255, 255, 0.14) inset,
@@ -2188,7 +2199,11 @@ textarea {
 .device.is-pad .dock {
   left: 50%;
   right: auto;
-  transform: translateX(-50%);
+  /* translateZ(0) has to be carried through here. `transform` is a single
+     property, so writing translateX alone silently dropped the layer
+     promotion declared on .dock — on the one layout where the dock is
+     widest and the blur costs most. */
+  transform: translateX(-50%) translateZ(0);
   width: auto;
   gap: clamp(14px, 2.4vw, 34px);
   height: auto;
@@ -2931,17 +2946,13 @@ textarea {
    returns the moment the page settles. Mid-swipe, at speed, the difference is
    not perceptible — a dropped frame is.                                      */
 
-.home.is-paging .dock {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  background: rgba(28, 28, 32, 0.62);
-}
+/* NO backdrop-filter toggling here.
 
-.home.is-paging .spotlight {
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-  background: rgba(60, 60, 68, 0.42);
-}
+   Suspending the blur during a page turn did cut the per-frame cost, but
+   swapping a 40px blur to a flat fill and back is a visible pop on every
+   swipe — trading dropped frames for a flicker, which is the worse of the
+   two. The cost is dealt with below instead, by making the blur cheaper and
+   giving it its own layer, so it can stay on continuously.                  */
 
 /* The wallpaper is pinned and never moves, so it must not be dragged into a
    repaint by the pager above it. */

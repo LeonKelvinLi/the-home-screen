@@ -57,10 +57,12 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
 
   /**
    * True while a page turn is on screen — through the drag AND the settle
-   * transition after it. Used to suspend the dock and Spotlight backdrop
-   * blurs, which otherwise re-rasterise on every frame because the thing
-   * behind them is the moving icon grid. A 40px blur recomputed 120 times a
-   * second is the single most expensive thing in a page turn.
+   * transition after it.
+   *
+   * This no longer touches the dock's blur. Suspending it mid-turn did cut the
+   * per-frame cost, but the swap was a visible flicker on every swipe, which
+   * is worse than the frames it saved. The blur now stays on continuously and
+   * is cheaper instead. What remains here is the pager's own layer promotion.
    */
   const [moving, setMoving] = useState(false)
   const moveTimer = useRef<number | undefined>(undefined)
@@ -123,9 +125,7 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
 
   return (
     <div
-      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''}${
-        moving ? ' is-paging' : ''
-      } is-${screen.device}`}
+      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
     >
       {/*
         Pinned, not parallaxed. The drift was a nice idea on a real device but
