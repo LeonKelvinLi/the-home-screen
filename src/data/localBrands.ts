@@ -473,4 +473,32 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteCta: 'Visit poofofalchemy.com',
     items: [],
   },
+  {
+    slug: 'allis-dog-walking',
+    name: "Alli's Dog Walking & Petsitting",
+    label: "Alli's Dog Walking",
+    cuisine: 'Dog walking, pet sitting',
+    tagline: 'Dog walking and pet sitting. Philadelphia and southern New Jersey.',
+    color: '#111111',
+    // No icon file: their logo is not published anywhere fetchable. The
+    // generated monogram is the honest placeholder — asking an image model for
+    // "her logo" would produce a convincing fake of a real mark, which is a
+    // worse problem than not having it yet.
+    icon: '',
+    prep: 0,
+    category: 'Service',
+    phone: '(856) 360-5288',
+    address: 'Philadelphia and southern New Jersey',
+    // NO WEBSITE. allisdogwalking.com no longer resolves at all (NXDOMAIN), so
+    // linking it would send customers to a browser error. The phone number is
+    // the only route that works, and it is verified against her Yelp listing.
+    //
+    // Her own description of the work is quoted as hers rather than asserted as
+    // a qualification: no licence, bonding or insurance is published anywhere,
+    // and care of animals with medical needs is not a claim to make on someone
+    // else's behalf.
+    contactOnly:
+      "Alli walks dogs and pet-sits \u2014 not a kitchen, so there is nothing to order here. She describes her service as specialising in dogs with medical, behavioural and social needs. She works in Philadelphia and southern New Jersey, not the Bay Area. Call to arrange.",
+    items: [],
+  },
 ]
