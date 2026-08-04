@@ -319,10 +319,20 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Service',
     site: 'https://www.instagram.com/hybridworkz/',
     phone: '(510) 399-9140',
-    address: '45554 Industrial Place, Unit 8, Fremont, CA 94538',
-    // Every detail here is transcribed from their own Instagram bio. No
-    // services and no prices are listed because they publish none — a repair
-    // quote depends on the car, and inventing a price list for a shop would be
+    // ADDRESS DELIBERATELY OMITS THE STREET NUMBER.
+    //
+    // Two conflict, and both come from surfaces the business itself controls:
+    // their Instagram bio says "45554 industrial place unit 8", their
+    // owner-verified Google Business Profile says "45450 Industrial Pl". Both
+    // street numbers are real, about 100 m apart on the same road, and Google's
+    // own map pin sits on 45450. Publishing either one sends somebody to the
+    // wrong unit, so publish neither until a phone call settles it — the phone
+    // number is verified and gets the customer there.
+    address: 'Industrial Pl, Fremont, CA 94538',
+    // No services and no prices are listed because they publish none. This was
+    // checked, not assumed: all 56 of their Instagram captions were read and
+    // there is not a single price on any surface they control. A repair quote
+    // depends on the car, and inventing a price list for a garage would be
     // worse here than anywhere else on this home screen.
     perk: {
       headline: '10% off for BEASTY EATS customers',
@@ -330,7 +340,7 @@ export const LOCAL_SEED: LocalSeed[] = [
         'Up to 25% on larger jobs, at the shop\u2019s discretion. Mention BEASTY EATS when you book.',
     },
     contactOnly:
-      'Hybrid Workz service Toyota hybrids \u2014 they are a garage, not a kitchen, so there is nothing to order here. Call or message them to book.',
+      'Hybrid Workz service Toyota hybrids \u2014 a garage, not a kitchen, so there is nothing to order here. They take bookings by phone or DM only. Confirm the unit number when you call: their Instagram and their Google listing give different street numbers on the same road.',
     siteCta: 'Message @hybridworkz',
     items: [],
   },
