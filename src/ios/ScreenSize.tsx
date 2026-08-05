@@ -37,7 +37,13 @@ function metricsFor(w: number): Pick<ScreenSize, 'device' | 'iconSize' | 'column
   // and square. It used to be 700 here, so 481-699px got a 4-column phone grid
   // with tablet chrome and an invisible 34px tap-swallowing strip at the
   // bottom. The two numbers have to be the same one.
-  if (w < PHONE_MAX) return { device: 'phone', iconSize: 60, columns: 4, radius: 0 }
+  /*
+    56, not 60. Four pixels off the tile is the difference between five rows of
+    icons and six on a 390x844 screen — twenty apps a page against twenty-four
+    — and it leaves the band above the page dots wide enough for the city label
+    to stay at full size. Seven per cent smaller, twenty per cent more apps.
+  */
+  if (w < PHONE_MAX) return { device: 'phone', iconSize: 56, columns: 4, radius: 0 }
   if (w < 900) return { device: 'pad', iconSize: 72, columns: 5, radius: SCREEN_RADIUS }
   if (w < 1180) return { device: 'pad', iconSize: 76, columns: 6, radius: SCREEN_RADIUS }
   return { device: 'pad', iconSize: 78, columns: 8, radius: SCREEN_RADIUS }

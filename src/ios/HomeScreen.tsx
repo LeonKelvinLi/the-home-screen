@@ -6,7 +6,14 @@ import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, BLANK_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
-import { EASE_IOS, PAGE_COMMIT_PX, PAGE_MS } from './constants'
+import {
+  EASE_IOS,
+  ICON_LABEL_H,
+  PAGE_COMMIT_PX,
+  PAGE_MS,
+  ROW_GAP_PAD,
+  ROW_GAP_PHONE,
+} from './constants'
 import { DEFAULT_CITY, detectCity, savedCity } from '../lib/place'
 
 interface Props {
@@ -98,9 +105,30 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
    */
   const pages = useMemo<AppDef[][]>(() => {
     const cols = screen.columns
-    const rowPitch = screen.iconSize + 40
-    const topPad = screen.device === 'pad' ? 96 : 96
-    const bottomReserve = screen.device === 'pad' ? 190 : 210
+    /*
+      Pitch from the REAL parts, not a round number.
+
+      This was `iconSize + 40`, which came to 100 while the rendered pitch was
+      105 — the tile, the label under it, and the row gap. Guessing five pixels
+      low per row is how a grid ends up one row taller than the space it has.
+    */
+    const rowGap = screen.device === 'pad' ? ROW_GAP_PAD : ROW_GAP_PHONE
+    const rowPitch = screen.iconSize + ICON_LABEL_H + rowGap
+    /*
+      Where the grid actually starts.
+
+      Both branches were 96. On a phone the grid begins at 44 — the page pads
+      by `--status-h + 24`, and --status-h collapses to a 20px minimum there
+      rather than the 54px default. Reserving 96 threw away 52px at the top,
+      which is most of a row: the phone showed five where six fit.
+    */
+    const topPad = screen.device === 'pad' ? 96 : 44
+    /*
+      Room kept below the grid: the city label, the page dots, the Spotlight
+      pill and the dock. Measured against the rendered layout rather than
+      estimated — at 210 the phone reserved more than it needed and lost a row.
+    */
+    const bottomReserve = screen.device === 'pad' ? 190 : 196
     const rows = Math.max(3, Math.floor((screen.h - topPad - bottomReserve) / rowPitch))
     const perPage = Math.max(cols, cols * rows)
 

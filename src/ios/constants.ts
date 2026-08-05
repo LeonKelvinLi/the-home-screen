@@ -14,6 +14,26 @@ export const PHONE_MAX = 481
 export const ICON_RADIUS_RATIO = 0.2237
 
 export const ICON_SIZE = 60
+
+/**
+ * Vertical space BETWEEN icon rows, phone and pad.
+ *
+ * Kept here rather than only in the stylesheet because HomeScreen has to know
+ * it: the number of rows a page holds is computed from the real pitch, and if
+ * these two ever disagree the grid either overflows the screen or leaves a row
+ * of empty space. They must be changed together.
+ *
+ * The phone gap was 26, which fitted five rows on a 390x844 screen where iOS
+ * fits six. 18 buys the sixth row: four more apps per page.
+ */
+export const ROW_GAP_PHONE = 18
+export const ROW_GAP_PAD = 34
+
+/**
+ * Everything under the tile in one icon: the gap to the label, plus the label
+ * itself. Measured, not guessed — 7px gap and a 13px line.
+ */
+export const ICON_LABEL_H = 20
 export const GRID_COLS = 4
 export const GRID_ROWS = 6
 
