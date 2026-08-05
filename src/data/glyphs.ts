@@ -1,5 +1,5 @@
 /**
- * Food glyphs used inside generated restaurant logos.
+ * Glyphs used inside generated restaurant logos.
  * All paths are drawn on a 100x100 viewBox, centred, and expect `fill="currentColor"`.
  * Kept as flat strings so a logo is data, not JSX — brands come from the DB later.
  */
@@ -21,6 +21,10 @@ export type GlyphName =
   | 'chef'
   | 'shrimp'
   | 'waffle'
+  | 'bottle'
+  | 'box'
+  | 'shirt'
+  | 'cup'
 
 export const GLYPHS: Record<GlyphName, string> = {
   // stacked bun / patty / bun with sesame dots
@@ -82,4 +86,25 @@ export const GLYPHS: Record<GlyphName, string> = {
   // waffle
   waffle:
     'M22 22h56a4 4 0 0 1 4 4v48a4 4 0 0 1-4 4H22a4 4 0 0 1-4-4V26a4 4 0 0 1 4-4Zm4 8v12h14V30Zm22 0v12h14V30Zm22 0v12h4V30ZM26 50v12h14V50Zm22 0v12h14V50Zm22 0v12h4V50ZM26 70v2h14v-2Zm22 0v2h14v-2Z',
+
+  /*
+    Non-food glyphs. Without these a water company fell through to the food
+    pool and shipped a burger on a bottle of water.
+  */
+
+  // bottle with a water band
+  bottle:
+    'M43 11h14a5 5 0 0 1 0 10H43a5 5 0 0 1 0-10Zm2 14h10v6c0 2.6 1.3 5 3.5 6.4A20 20 0 0 1 68 54v28a9 9 0 0 1-9 9H41a9 9 0 0 1-9-9V54a20 20 0 0 1 9.5-16.6c2.2-1.4 3.5-3.8 3.5-6.4v-6Zm3 6h-2v-1c-1 3.6-3.3 6.7-6.5 8.7A14 14 0 0 0 39 54v28a2 2 0 0 0 2 2h18a2 2 0 0 0 2-2V54a14 14 0 0 0-6.5-11.9c-3.2-2-5.5-5.1-6.5-8.7ZM39 61h22v10H39Z',
+
+  // carton
+  box:
+    'M16 30h68a4 4 0 0 1 4 4v48a4 4 0 0 1-4 4H16a4 4 0 0 1-4-4V34a4 4 0 0 1 4-4Zm4 8v40h60V38ZM12 30V18a4 4 0 0 1 4-4h68a4 4 0 0 1 4 4v12Zm31 8h14v18l-7-5-7 5Z',
+
+  // tee
+  shirt:
+    'M37 15h26l21 11a4 4 0 0 1 2 5l-7 16a4 4 0 0 1-5 2l-4-2v33a4 4 0 0 1-4 4H34a4 4 0 0 1-4-4V47l-4 2a4 4 0 0 1-5-2l-7-16a4 4 0 0 1 2-5Zm7 3a6 6 0 0 0 12 0Z',
+
+  // tumbler
+  cup:
+    'M22 12h56a4 4 0 0 1 0 8H22a4 4 0 0 1 0-8Zm6 12h44a4 4 0 0 1 4 4.5l-6 48A10 10 0 0 1 60 85H40a10 10 0 0 1-10-8.5l-6-48A4 4 0 0 1 28 24Zm4.5 8 5.5 43.5a2 2 0 0 0 2 1.5h20a2 2 0 0 0 2-1.5L67.5 32Z',
 }

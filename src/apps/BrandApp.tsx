@@ -154,6 +154,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                       desc={item.desc}
                       bg={brand.logo.bg}
                       fg={brand.logo.fg}
+                      cuisine={brand.cuisine}
                       imageUrl={item.imageUrl}
                     />
                     <span className="menu-row-add">+</span>

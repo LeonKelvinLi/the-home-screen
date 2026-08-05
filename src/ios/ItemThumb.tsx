@@ -11,6 +11,23 @@ import type { GlyphName } from '../data/glyphs'
  * else changes.
  */
 
+/*
+  Non-food matches run FIRST. A water company's "Case of 12" and "Single
+  Bottle" match nothing in the food list, fell through to the food pool, and
+  shipped a pizza and a burger on bottles of water.
+*/
+const GOODS_KEYWORDS: [RegExp, GlyphName][] = [
+  // Most specific object first: a "Pet Bowl Bundle" is a bowl before it is
+  // one of the six bottles its description happens to mention.
+  [/bowl|mug|tumbler|flask|copper|wand|drinkware/i, 'cup'],
+  [/bottle|gallon|refill|alkaline|jug/i, 'bottle'],
+  [/tee|t-shirt|shirt|polo|hoodie|crewneck|sweat|hat|cap|apparel|tote|sticker/i, 'shirt'],
+]
+
+/* Container words, goods sellers ONLY. A butcher's "Ribeye 2-Pack" is a steak,
+   not a cardboard box, and this rule ran ahead of the food list until it was. */
+const CONTAINER = /case|pack|bundle|box|crate|carton|kit|set of/i
+
 const KEYWORDS: [RegExp, GlyphName][] = [
   [/burger|patty|smash|cheeseburger/i, 'burger'],
   [/taco|birria|quesabirria|nopales|pastor|asada/i, 'taco'],
@@ -31,6 +48,13 @@ const KEYWORDS: [RegExp, GlyphName][] = [
 ]
 
 const POOL: GlyphName[] = ['chef', 'burger', 'noodles', 'taco', 'leaf', 'donut', 'fish', 'pizza']
+/* What a non-food seller falls back to. Never a dish. */
+const GOODS_POOL: GlyphName[] = ['box', 'bottle', 'shirt', 'cup']
+
+/* Sellers whose catalogue is goods or a service, not dishes. Matched against
+   the brand's own cuisine line, which is the only kind marker the data has. */
+const NOT_FOOD =
+  /water|apparel|drinkware|print on demand|service|repair|hybrid|walking|pet sitting|app$|reading app/i
 
 function hash(s: string): number {
   let h = 2166136261
@@ -41,10 +65,18 @@ function hash(s: string): number {
   return Math.abs(h)
 }
 
-export function glyphFor(name: string, desc = ''): GlyphName {
+export function glyphFor(name: string, desc = '', cuisine = ''): GlyphName {
   const hay = `${name} ${desc}`
-  for (const [re, g] of KEYWORDS) if (re.test(hay)) return g
-  return POOL[hash(name) % POOL.length]
+  const goods = NOT_FOOD.test(cuisine)
+
+  for (const [re, g] of GOODS_KEYWORDS) if (re.test(hay)) return g
+  if (goods && CONTAINER.test(hay)) return 'box'
+  // A goods seller never reaches the dish list — "Pet Bowl Bundle" is not a
+  // bowl of noodles, and guessing wrong there is worse than a generic box.
+  if (!goods) for (const [re, g] of KEYWORDS) if (re.test(hay)) return g
+
+  const pool = goods ? GOODS_POOL : POOL
+  return pool[hash(name) % pool.length]
 }
 
 export function ItemThumb({
@@ -54,6 +86,7 @@ export function ItemThumb({
   fg,
   size = 78,
   imageUrl,
+  cuisine,
 }: {
   name: string
   desc?: string
@@ -63,6 +96,8 @@ export function ItemThumb({
   size?: number
   /** The vendor's own photo, when one was sourced. */
   imageUrl?: string
+  /** The brand's own cuisine line — decides food glyphs versus goods glyphs. */
+  cuisine?: string
 }) {
   if (imageUrl) {
     return (
@@ -78,7 +113,7 @@ export function ItemThumb({
     )
   }
 
-  const glyph = glyphFor(name, desc)
+  const glyph = glyphFor(name, desc, cuisine)
   const [a, b] = bg.split('|')
   const seed = hash(name)
   // Rotate the gradient per item so neighbouring rows never look identical.
