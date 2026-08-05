@@ -27,7 +27,7 @@ interface Props {
 }
 
 export function IntroScreen({ onEnter, onWater }: Props) {
-  const [panel, setPanel] = useState<'none' | 'phone' | 'share' | 'about'>('none')
+  const [panel, setPanel] = useState<'none' | 'phone' | 'share'>('none')
   const [copied, setCopied] = useState(false)
 
   const share = async () => {
@@ -52,25 +52,36 @@ export function IntroScreen({ onEnter, onWater }: Props) {
   }
 
   return (
-    <div className={`intro${panel === 'about' ? ' is-reading' : ''}`}>
+    <div className="intro">
       <div className="intro-mark">
         <img src="/biggie.webp" alt="" className="intro-biggie" draggable={false} />
         <p className="intro-word">
           <span>BEASTY</span>
           <span>EATS</span>
         </p>
+        <p className="intro-where">Richmond, California</p>
+      </div>
 
-        {/*
-          The byline is the way into the story, rather than a fifth tile in the
-          dock. Someone arriving here wants food; the reason the business exists
-          should be one tap away, not competing with the way in.
-        */}
-        <button
-          className="intro-byline"
-          onClick={() => setPanel(panel === 'about' ? 'none' : 'about')}
-        >
-          Richmond, California · Our story
-        </button>
+      {/*
+        Open, not behind a tap. This is why the business exists, and a landing
+        page that makes you hunt for that is just a splash screen.
+
+        Written in Glenn's own voice and kept close to how he tells it. The tone
+        stays plain deliberately — no eulogy, no adjectives doing the feeling
+        for the reader. Biggie has died; the dog on this screen is a memorial,
+        not a mascot, which is worth knowing before anyone edits that artwork.
+      */}
+      <div className="intro-story">
+        <p>I&rsquo;m Glenn Malicdem, and I built this in Richmond.</p>
+        <p>
+          I had a dog called Biggie. Walking him is how I got to know this place. The same
+          streets every day, the same people, the small businesses you only ever find on foot.
+        </p>
+        <p>Biggie is in heaven now, watching me work hard for him.</p>
+        <p>
+          This is for the places we walked past. One screen to find them, one cart to order
+          from all of them.
+        </p>
       </div>
 
       <div className="intro-dock">
@@ -117,26 +128,6 @@ export function IntroScreen({ onEnter, onWater }: Props) {
       {panel === 'share' && (
         <div className="intro-panel">
           <p>{window.location.origin}</p>
-        </div>
-      )}
-
-      {/*
-        Written in Glenn's own voice and kept close to how he tells it. The dog
-        on this screen is a memorial, so the tone stays plain — no eulogy, no
-        adjectives doing the feeling for the reader.
-      */}
-      {panel === 'about' && (
-        <div className="intro-panel is-about">
-          <p>I&rsquo;m Glenn Malicdem, and I built this in Richmond.</p>
-          <p>
-            I had a dog called Biggie. Walking him is how I got to know this place. The same
-            streets every day, the same people, the small businesses you only ever find on foot.
-          </p>
-          <p>Biggie is in heaven now, watching me work hard for him.</p>
-          <p>
-            This is for the places we walked past. One screen to find them, one cart to order
-            from all of them.
-          </p>
         </div>
       )}
 

@@ -7,6 +7,7 @@ import { APP_GROUPS, BLANK_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { EASE_IOS, PAGE_COMMIT_PX, PAGE_MS } from './constants'
+import { CITY } from '../lib/place'
 
 interface Props {
   onOpen: (appId: string, rect: IconRect) => void
@@ -225,6 +226,13 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
           </div>
         ))}
       </div>
+
+      {/*
+        Where you are, in the iOS lock-screen manner: set faint, in glass, above
+        the dots. It is orientation, not a control — nobody should feel invited
+        to tap it. See lib/place.ts for why the city is fixed for now.
+      */}
+      <div className="home-city">{CITY}</div>
 
       {pages.length > 1 && (
         <div className="page-dots">

@@ -3046,14 +3046,61 @@ textarea {
   background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
 }
 
+/*
+  City label, iOS lock-screen manner: a wide-tracked line in glass, sitting
+  above the page dots.
+
+  Faint on purpose. It answers "where am I ordering from" for anyone who
+  wonders and stays out of the way of everyone who does not, so it is set at
+  the weight of a caption rather than a heading — and it takes no pointer
+  events, because it is information, not a button.
+*/
+.home-city {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--bottom-h) + 186px);
+  transform: translateX(-50%) translateZ(0);
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px) saturate(140%);
+  -webkit-backdrop-filter: blur(12px) saturate(140%);
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 6;
+  animation: city-in 700ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both;
+}
+
+@keyframes city-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(6px); }
+  to   { opacity: 1; transform: translateX(-50%) translateZ(0); }
+}
+
+/* It belongs to the home screen, so it recedes with it when an app opens. */
+.home.is-receding .home-city {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-city {
+    animation: none;
+  }
+}
+
 /* ---------- intro / landing ----------
 
    Shown before the home screen. Brand-first: their yellow, their dog, their
-   wordmark, and four ways in.
+   wordmark, the story, and four ways in.
 
-   The ground is a gradient rather than one flat fill, and the action row is a
-   floating glass bar rather than four separate plates — flat colour plus flat
-   tiles is what made the first pass read as a placeholder.                    */
+   The story is open, not behind a tap — it is why the business exists. That
+   makes the screen tall, so it scrolls on a short phone rather than clipping.  */
 
 .intro {
   /* Fixed, not absolute: the intro renders above the shell rather than inside
@@ -3063,40 +3110,55 @@ textarea {
   z-index: 90;
   color: #141414;
   background:
-    radial-gradient(120% 80% at 50% 4%, #ffe94a 0%, #f8d800 42%, #eec400 100%),
+    radial-gradient(120% 80% at 50% 2%, #ffe94a 0%, #f8d800 44%, #eec400 100%),
     #f6d800;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 4vh, 30px);
-  padding: calc(28px + env(safe-area-inset-top)) 20px
-    calc(26px + var(--bottom-h) + var(--gesture-h));
-  overflow: hidden;
+  gap: clamp(12px, 2.4vh, 20px);
+  padding: calc(24px + env(safe-area-inset-top)) 20px
+    calc(22px + var(--bottom-h) + var(--gesture-h));
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
   animation: intro-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-/* Warm bloom behind the dog. Gives the flat ground somewhere to fall away to,
-   which is most of what separates this from a solid-colour splash. */
-.intro::before {
+/*
+  Warm bloom behind the dog, and a vignette to settle the corners. Both FIXED
+  rather than absolute: the intro scrolls on a short screen, and a backdrop
+  that scrolls with the content stops reading as light and starts reading as a
+  shape someone drew.
+*/
+.intro::before,
+.intro::after {
   content: '';
-  position: absolute;
-  left: 50%;
-  top: 26%;
-  width: min(150vw, 620px);
-  aspect-ratio: 1;
-  transform: translate(-50%, -50%);
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 62%);
+  position: fixed;
   pointer-events: none;
 }
 
-/* Vignette, so the corners settle and the composition holds the centre. */
+.intro::before {
+  left: 50%;
+  top: 22%;
+  width: min(150vw, 640px);
+  aspect-ratio: 1;
+  margin-left: -320px;
+  transform: translateY(-50%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 62%);
+  /* Slow breath. Long enough that it never reads as a pulse, just as light
+     that is not quite still. */
+  animation: intro-bloom 9s ease-in-out infinite;
+}
+
 .intro::after {
-  content: '';
-  position: absolute;
   inset: 0;
-  background: radial-gradient(105% 75% at 50% 42%, transparent 55%, rgba(120, 92, 0, 0.16) 100%);
-  pointer-events: none;
+  background: radial-gradient(105% 78% at 50% 38%, transparent 54%, rgba(120, 92, 0, 0.18) 100%);
+}
+
+@keyframes intro-bloom {
+  0%, 100% { opacity: 0.85; transform: translateY(-50%) scale(1); }
+  50%      { opacity: 1;    transform: translateY(-50%) scale(1.08); }
 }
 
 @keyframes intro-in {
@@ -3108,24 +3170,48 @@ textarea {
 .intro > * {
   position: relative;
   z-index: 1;
+  flex: 0 0 auto;
 }
 
 /*
-  Staggered entrance. Each block arrives a beat after the one above it, which
-  is what makes a landing screen feel authored rather than simply painted.
+  Staggered entrance, one beat per block. A landing page that paints all at
+  once reads as a static image; arriving in order reads as authored.
 */
-.intro-mark,
-.intro-dock,
+.intro-biggie,
+.intro-word span,
+.intro-where,
+.intro-story p,
+.intro-btn,
 .intro-enter {
-  animation: intro-rise 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.intro-mark  { animation-delay: 60ms; }
-.intro-dock  { animation-delay: 170ms; }
-.intro-enter { animation-delay: 250ms; }
+.intro-biggie          { animation-delay: 40ms; }
+.intro-word span:first-child { animation-delay: 200ms; }
+.intro-word span:last-child  { animation-delay: 280ms; }
+.intro-where           { animation-delay: 350ms; }
+.intro-story p:nth-child(1) { animation-delay: 430ms; }
+.intro-story p:nth-child(2) { animation-delay: 500ms; }
+.intro-story p:nth-child(3) { animation-delay: 570ms; }
+.intro-story p:nth-child(4) { animation-delay: 640ms; }
+.intro-btn:nth-child(1) { animation-delay: 700ms; }
+.intro-btn:nth-child(2) { animation-delay: 760ms; }
+.intro-btn:nth-child(3) { animation-delay: 820ms; }
+.intro-btn:nth-child(4) { animation-delay: 880ms; }
+.intro-enter           { animation-delay: 940ms; }
 
 @keyframes intro-rise {
-  from { opacity: 0; transform: translateY(16px) scale(0.97); }
+  from { opacity: 0; transform: translateY(18px) scale(0.96); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* The bar itself fades in under its tiles, so they do not appear on nothing. */
+.intro-dock {
+  animation: intro-dock-in 620ms cubic-bezier(0.16, 1, 0.3, 1) 620ms both;
+}
+
+@keyframes intro-dock-in {
+  from { opacity: 0; transform: translateY(22px) scale(0.97); }
   to   { opacity: 1; transform: none; }
 }
 
@@ -3142,17 +3228,33 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(6px, 1.6vh, 14px);
+  gap: clamp(4px, 1vh, 10px);
 }
 
 .intro-biggie {
-  /* Sized by HEIGHT, not width: the artwork is portrait (355x520), so a width
-     of 210 rendered a 308px-tall dog that swallowed a third of the screen. */
-  height: clamp(120px, 22vh, 190px);
+  /* Sized by HEIGHT, not width: the artwork is portrait (355x520), so sizing
+     by width rendered a 308px-tall dog that swallowed a third of the screen. */
+  height: clamp(96px, 16vh, 150px);
   width: auto;
   display: block;
   /* Grounds him on the yellow instead of letting him float. */
   filter: drop-shadow(0 14px 22px rgba(120, 92, 0, 0.28));
+}
+
+/*
+  He drifts, very slightly, once he has arrived. Six seconds and five pixels —
+  enough that the screen is never quite still, nowhere near enough to read as
+  a bouncing graphic. It waits out the entrance so the two do not fight.
+*/
+.intro-biggie {
+  animation:
+    intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) 40ms both,
+    intro-float 6s ease-in-out 900ms infinite;
+}
+
+@keyframes intro-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-6px); }
 }
 
 .intro-word {
@@ -3160,12 +3262,16 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  line-height: 0.84;
+  line-height: 0.86;
   font-family: 'Helvetica Neue', Inter, system-ui, sans-serif;
   font-weight: 800;
   font-stretch: condensed;
   letter-spacing: -0.035em;
-  font-size: clamp(40px, 12.5vw, 66px);
+  font-size: clamp(32px, 10vw, 52px);
+}
+
+.intro-word span {
+  display: block;
 }
 
 /*
@@ -3179,28 +3285,48 @@ textarea {
   text-indent: 0.2em;
 }
 
-/* Quiet by design. It sits under a wordmark that has already shouted. */
-.intro-byline {
-  margin-top: 4px;
-  padding: 8px 12px;
-  min-height: 36px;
-  border-radius: 999px;
-  color: rgba(20, 20, 20, 0.62);
-  font-size: 12.5px;
+.intro-where {
+  margin: 2px 0 0;
+  font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  transition: background 160ms ease, color 160ms ease;
-}
-
-.intro-byline:active {
-  background: rgba(20, 20, 20, 0.09);
-  color: #141414;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 20, 0.5);
 }
 
 /*
-  One floating bar rather than four separate plates. Frosted, so it picks up
-  the bloom behind it and reads as a surface sitting above the ground.
+  The story. Ranged left because it is four paragraphs of prose, on a card that
+  is lighter than the dock so it reads as paper rather than as another control.
 */
+.intro-story {
+  width: min(100%, 400px);
+  padding: 16px 18px;
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  background: rgba(255, 255, 255, 0.34);
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  box-shadow:
+    0 12px 28px rgba(120, 92, 0, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.intro-story p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.8);
+}
+
+/* The opening line names him; it carries the weight of the rest. */
+.intro-story p:first-child {
+  font-weight: 700;
+  color: #141414;
+}
+
 /*
   DARK glass, not light. A white-tinted bar over a yellow ground just reads as
   a paler yellow — the panel disappeared and the yellow EATS icon inside it had
@@ -3212,8 +3338,8 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(4px, 1.5vw, 10px);
   width: min(100%, 400px);
-  padding: 10px;
-  border-radius: 30px;
+  padding: 9px;
+  border-radius: 28px;
   background: rgba(16, 16, 16, 0.94);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow:
@@ -3228,29 +3354,38 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  padding: 12px 4px 10px;
-  border-radius: 21px;
+  gap: 7px;
+  padding: 11px 4px 9px;
+  border-radius: 20px;
   color: #f4f4f4;
   /* 44pt minimum, per the platform, not per what fits. */
-  min-height: 74px;
-  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
+  min-height: 70px;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
 }
 
 .intro-btn:active {
-  transform: scale(0.93);
+  transform: scale(0.92);
   background: rgba(255, 255, 255, 0.12);
 }
 
 /*
   The EATS tile is the app icon itself — the yellow ground and black Biggie
-  already signed off on — not a recoloured button. Yellow on yellow needs the
-  ring, or the icon has no edge.
+  already signed off on — not a recoloured button.
 */
 .intro-btn.is-primary {
   background: linear-gradient(170deg, #ffe63d, #f2cf00);
   color: #141414;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+  /* A slow glow after everything has landed, so the way in keeps announcing
+     itself without anything moving. */
+  animation:
+    intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) 760ms both,
+    intro-pulse 3.4s ease-in-out 1600ms infinite;
+}
+
+@keyframes intro-pulse {
+  0%, 100% { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), 0 0 0 0 rgba(255, 255, 255, 0); }
+  50%      { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), 0 0 0 5px rgba(255, 255, 255, 0.16); }
 }
 
 .intro-btn.is-primary:active {
@@ -3259,7 +3394,7 @@ textarea {
 
 .intro-btn em {
   font-style: normal;
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.03em;
 }
@@ -3271,14 +3406,14 @@ textarea {
 .intro-btn-dog {
   display: block;
   /* Black mark on the yellow ground — no inversion; the icon is as approved. */
-  height: 26px;
+  height: 24px;
   width: auto;
 }
 
 .intro-panel {
   width: min(100%, 400px);
-  padding: 15px 18px;
-  border-radius: 20px;
+  padding: 13px 16px;
+  border-radius: 18px;
   background: rgba(255, 255, 255, 0.42);
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 10px 24px rgba(120, 92, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.7);
@@ -3306,58 +3441,6 @@ textarea {
 }
 
 /*
-  Four paragraphs of prose, so it breaks the panel's centred single-line
-  layout: ranged left to read, and capped with its own scroll so a long story
-  never pushes the way in off a short screen.
-*/
-.intro-panel.is-about {
-  text-align: left;
-  gap: 10px;
-  /* Still capped, but only as a backstop for a very short screen — the mark
-     shrinks to make room first, so the story normally fits whole. */
-  max-height: 52vh;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
-}
-
-/*
-  Reading mode. Biggie and the wordmark give up their room to the story rather
-  than the story being cut off mid-sentence in a box under them — which is a
-  bad way to read any paragraph and a worse way to read this one.
-*/
-.intro.is-reading .intro-biggie {
-  height: clamp(64px, 10vh, 100px);
-}
-
-.intro.is-reading .intro-word {
-  font-size: clamp(24px, 7vw, 34px);
-}
-
-.intro.is-reading .intro-byline {
-  color: #141414;
-  background: rgba(20, 20, 20, 0.09);
-}
-
-.intro-biggie,
-.intro-word {
-  transition: height 320ms cubic-bezier(0.16, 1, 0.3, 1),
-    font-size 320ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.intro-panel.is-about p {
-  font-size: 13.5px;
-  line-height: 1.55;
-  color: rgba(20, 20, 20, 0.8);
-}
-
-/* The opening line names him; it carries the weight of the rest. */
-.intro-panel.is-about p:first-child {
-  font-weight: 700;
-  color: #141414;
-}
-
-/*
   A second solid black pill under a solid black bar stacked two heavy blocks on
   top of each other. This is the quiet way in; the lit EATS tile is the loud
   one.
@@ -3366,7 +3449,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 9px;
-  padding: 14px 30px;
+  padding: 13px 30px;
   border-radius: 999px;
   background: transparent;
   border: 1.5px solid rgba(20, 20, 20, 0.28);
@@ -3374,8 +3457,8 @@ textarea {
   font-size: 15.5px;
   font-weight: 800;
   letter-spacing: 0.01em;
-  min-height: 48px;
-  transition: transform 160ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
+  min-height: 46px;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
 }
 
 .intro-enter:active {
@@ -3383,22 +3466,34 @@ textarea {
   background: rgba(20, 20, 20, 0.09);
 }
 
+/* The arrow leans the way the button goes, every few seconds. */
 .intro-enter svg {
-  transition: transform 220ms cubic-bezier(0.16, 1, 0.3, 1);
+  animation: intro-nudge 3s ease-in-out 1800ms infinite;
 }
 
-.intro-enter:active svg {
-  transform: translateX(3px);
+@keyframes intro-nudge {
+  0%, 72%, 100% { transform: translateX(0); }
+  82%           { transform: translateX(4px); }
 }
 
+/*
+  Everything above is decoration. Someone who asked the system for less motion
+  gets the composition and none of the movement.
+*/
 @media (prefers-reduced-motion: reduce) {
   .intro,
   .intro.is-leaving,
-  .intro-mark,
+  .intro::before,
+  .intro-biggie,
+  .intro-word span,
+  .intro-where,
+  .intro-story p,
   .intro-dock,
+  .intro-btn,
+  .intro-btn.is-primary,
   .intro-enter,
+  .intro-enter svg,
   .intro-panel {
-    animation-duration: 0.01ms;
-    animation-delay: 0ms;
+    animation: none;
   }
 }
