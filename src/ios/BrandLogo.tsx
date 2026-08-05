@@ -1,5 +1,6 @@
 import { GLYPHS } from '../data/glyphs'
 import { SQUIRCLE_100 } from './squircle'
+import { readableOn } from './contrast'
 import type { Logo } from '../data/brands'
 
 /**
@@ -73,6 +74,20 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
   const accent = logo.accent ?? logo.fg
   const clip = `clip-${id}`
   const grad = `grad-${id}`
+  /*
+    A monogram with no strapline was still laying out for one: the initials sat
+    at y=47 with a rule under them at y=68 and nothing below, so the mark rode
+    high in a tile that looked a third empty. Hybrid Workz and Alli's Dog
+    Walking both render this way.
+  */
+  const strapline = logo.lines?.[0]
+  /* Two initials at 40 ran nearly edge to edge, against this file's own rule
+     that a mark sits ON the tile with margin. */
+  const initialSize = (logo.initials?.length ?? 0) > 2 ? 30 : 34
+  /* The hairline exists to give a tile an edge against the wallpaper. A dark
+     tile on a dark wallpaper got a BLACK hairline and therefore no edge at all,
+     which is what made POD DTG's black artwork read as floating letters. */
+  const edge = readableOn(logo.bg).isDark ? 'rgba(255,255,255,0.16)' : 'rgba(0,0,0,0.10)'
 
   return (
     <svg
@@ -119,33 +134,39 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
           <>
             <text
               x="50"
-              y="47"
+              y={strapline ? 45 : 48}
               textAnchor="middle"
               dominantBaseline="central"
               fill={logo.fg}
               fontFamily={face}
-              fontSize="40"
+              fontSize={initialSize}
               fontWeight="800"
               letterSpacing="-1.5"
             >
               {logo.initials}
             </text>
-            <rect x="34" y="68" width="32" height="2.5" rx="1.25" fill={accent} opacity="0.9" />
-            {logo.lines?.[0] && (
-              <text
-                x="50"
-                y="80"
-                textAnchor="middle"
-                dominantBaseline="central"
-                fill={accent}
-                fontFamily={FACE.grotesk}
-                fontSize="7.5"
-                fontWeight="700"
-                letterSpacing="1.6"
-                opacity="0.85"
-              >
-                {logo.lines[0]}
-              </text>
+            {/* The rule reads as a divider ABOVE a strapline. With nothing under
+                it, it is just a dash floating in empty space — so it goes. */}
+            {strapline ? (
+              <>
+                <rect x="34" y="66" width="32" height="2.5" rx="1.25" fill={accent} opacity="0.9" />
+                <text
+                  x="50"
+                  y="79"
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill={accent}
+                  fontFamily={FACE.grotesk}
+                  fontSize="7.5"
+                  fontWeight="700"
+                  letterSpacing="1.6"
+                  opacity="0.85"
+                >
+                  {strapline}
+                </text>
+              </>
+            ) : (
+              <rect x="40" y="67" width="20" height="2.5" rx="1.25" fill={accent} opacity="0.55" />
             )}
           </>
         )}
@@ -275,8 +296,8 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
           </>
         )}
 
-        {/* Light icons need a hairline or they float on a dark wallpaper. */}
-        <path d={SQUIRCLE_100} fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1" />
+        {/* Every tile needs an edge against the wallpaper — see `edge` above. */}
+        <path d={SQUIRCLE_100} fill="none" stroke={edge} strokeWidth="1" />
       </g>
     </svg>
   )

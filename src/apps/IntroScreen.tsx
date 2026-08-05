@@ -61,7 +61,7 @@ export function IntroScreen({ onEnter, onWater }: Props) {
         </p>
       </div>
 
-      <div className="intro-actions">
+      <div className="intro-dock">
         <button className="intro-btn" onClick={() => setPanel(panel === 'phone' ? 'none' : 'phone')}>
           <Glyph kind="phone" />
           <em>Phone</em>
@@ -110,6 +110,9 @@ export function IntroScreen({ onEnter, onWater }: Props) {
 
       <button className="intro-enter" onClick={onEnter}>
         Enter
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M4 12h15M13 6l6 6-6 6" />
+        </svg>
       </button>
     </div>
   )

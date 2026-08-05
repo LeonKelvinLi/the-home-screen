@@ -3,7 +3,8 @@ import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS } from '../data/brands'
-import { OPEN_SLOTS, submitApplication } from '../lib/api'
+import { submitApplication } from '../lib/api'
+import { BLANK_PAGES } from './registry'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -14,8 +15,10 @@ import type { ShellApi } from '../ios/Device'
  * order is proof first (25 kitchens, their real logos), then the offer, then
  * the form — not a form on an empty page.
  *
- * The scarcity is real, not theatre: OPEN_SLOTS is derived from the grid, and
- * every slot filled is one fewer icon on the page.
+ * No scarcity claim. There are four full pages of blank tiles now, so a count
+ * of "open slots" would be both wrong and a pressure tactic — and the number
+ * would change with the device's grid anyway. Room available is the honest
+ * framing.
  */
 
 /**
@@ -142,10 +145,10 @@ export function ReserveApp({ api }: { api: ShellApi }) {
 
       <ListSection
         header="Availability"
-        footer={`${OPEN_SLOTS} blank tiles are waiting on the last page. Not a limit — more are added as kitchens join.`}
+        footer={`${BLANK_PAGES} full pages of blank tiles sit after the last app. There is no queue and no cap.`}
       >
         <ListRow label="Kitchens on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
-        <ListRow label="Open slots" value={String(OPEN_SLOTS)} chevron={false} />
+        <ListRow label="Open slots" value="Room available" chevron={false} />
       </ListSection>
 
       <ListSection header="Your details" footer="Name and a way to reach you are enough to start.">

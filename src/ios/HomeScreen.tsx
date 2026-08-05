@@ -3,7 +3,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, DOCK_APPS } from '../apps/registry'
+import { APP_GROUPS, BLANK_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { EASE_IOS, PAGE_COMMIT_PX, PAGE_MS } from './constants'
@@ -48,6 +48,19 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
       if (!group.length) continue
       for (let i = 0; i < group.length; i += perPage) out.push(group.slice(i, i + perPage))
     }
+
+    /*
+      Blank pages close the home screen. Filled here rather than in the registry
+      because a full page is however many icons THIS grid fits, and that is only
+      known once the screen has been measured.
+
+      Keys are page-scoped so a tile's id stays stable across a resize on its own
+      page, instead of every slot renumbering when the row count changes.
+    */
+    for (let p = 0; p < BLANK_PAGES; p++) {
+      out.push(Array.from({ length: perPage }, (_, i) => makeSlot(`${p}-${i}`)))
+    }
+
     return out.length ? out : [[]]
   }, [screen.columns, screen.iconSize, screen.h, screen.device])
 
@@ -172,6 +185,21 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
             screen sideways with no way to scroll it back.
           */
           <div className="home-page" key={i} {...(i === safePage ? {} : { inert: '' })}>
+            {/*
+              Only pages next to this one draw their icons.
+
+              The pager is one flex row 100% per page wide, so with seven pages
+              it is a single 700%-wide composited layer — about 8000px across at
+              phone DPR. Every icon on every page was rasterised into it, and a
+              surface that size is past what a phone GPU keeps in one texture,
+              so it re-tiles mid-turn. That is the sub-30fps swipe.
+
+              A page outside the window keeps its box (flex sizing is on the
+              wrapper) and drops its contents. Three pages of icons paint instead
+              of seven, and the two neighbours are always ready because a turn
+              only ever moves one page.
+            */}
+            {Math.abs(i - safePage) <= 1 && (
             <div
               className="home-grid"
               style={{ gridTemplateColumns: `repeat(${screen.columns}, 1fr)` }}
@@ -187,6 +215,7 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
                 />
               ))}
             </div>
+            )}
           </div>
         ))}
       </div>

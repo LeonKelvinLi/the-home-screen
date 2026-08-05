@@ -2,40 +2,43 @@ import { ICON_SIZE } from './constants'
 import { SQUIRCLE_100 } from './squircle'
 
 /**
- * An empty slot on the last home-screen page.
+ * An empty slot on the blank home-screen pages.
  *
  * Drawn as a dashed squircle rather than a grey box so it reads as *reserved
  * space in a working system* — the same silhouette as every real icon, just
  * unfilled. A solid placeholder would read as a broken image, which is the
  * opposite of the message: these slots are the pitch to the next food truck.
+ *
+ * Rendered as ONE background image rather than as inline SVG. Four blank pages
+ * put eighty of these on screen, and eighty inline copies is eighty DOM trees
+ * of four nodes each, every one rasterised separately into the pager's layer.
+ * As a data URI it is a single decoded image the compositor reuses for every
+ * tile — same pixels, a fraction of the work.
  */
+
+const svg =
+  `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>` +
+  `<path d='${SQUIRCLE_100}' fill='rgba(255,255,255,0.09)'/>` +
+  `<path d='${SQUIRCLE_100}' fill='none' stroke='rgba(255,255,255,0.55)' stroke-width='2.5' stroke-dasharray='7 6' stroke-linecap='round'/>` +
+  `<path d='M50 33v34M33 50h34' stroke='rgba(255,255,255,0.75)' stroke-width='5.5' stroke-linecap='round'/>` +
+  `</svg>`
+
+/* Built once at module load. encodeURIComponent rather than base64: it keeps
+   the markup readable in devtools and avoids base64's 33% size tax. */
+export const SLOT_IMAGE = `url("data:image/svg+xml,${encodeURIComponent(svg)}")`
+
 export function SlotIcon({ size = ICON_SIZE, fill = false }: { size?: number; fill?: boolean }) {
   return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 100 100"
+    <span
       aria-hidden="true"
       style={{
         display: 'block',
-        ...(fill ? { width: '100%', height: '100%' } : null),
+        width: fill ? '100%' : size,
+        height: fill ? '100%' : size,
+        backgroundImage: SLOT_IMAGE,
+        backgroundSize: '100% 100%',
+        backgroundRepeat: 'no-repeat',
       }}
-    >
-      <path d={SQUIRCLE_100} fill="rgba(255,255,255,0.09)" />
-      <path
-        d={SQUIRCLE_100}
-        fill="none"
-        stroke="rgba(255,255,255,0.55)"
-        strokeWidth="2.5"
-        strokeDasharray="7 6"
-        strokeLinecap="round"
-      />
-      <path
-        d="M50 33v34M33 50h34"
-        stroke="rgba(255,255,255,0.75)"
-        strokeWidth="5.5"
-        strokeLinecap="round"
-      />
-    </svg>
+    />
   )
 }

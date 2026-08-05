@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
-import { OPEN_SLOTS } from '../lib/api'
 import { BrandLogo } from '../ios/BrandLogo'
 import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
@@ -76,23 +75,39 @@ const PHONE_APP: AppDef = {
 }
 
 /**
- * Empty slots close the last page. Every one is a live pitch to the next food
- * truck: same silhouette as a real icon, unfilled, opening the reserve screen.
- * They sit last so a customer never wades through them to reach a kitchen.
+ * An empty slot: same silhouette as a real icon, unfilled, opening the reserve
+ * screen. Every one is a live pitch to the next food truck.
  */
-export const SLOT_APPS: AppDef[] = Array.from({ length: OPEN_SLOTS }, (_, i) => ({
-  id: `slot.${i}`,
+export const makeSlot = (key: string | number): AppDef => ({
+  id: `slot.${key}`,
   name: 'Reserve a Spot',
   label: 'Available',
   icon: <SlotIcon fill />,
-  kind: 'system' as const,
-  systemKey: 'reserve' as const,
+  kind: 'system',
+  systemKey: 'reserve',
   tint: '#1C1C1E',
-}))
+})
 
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, ...SLOT_APPS]
+/**
+ * Blank pages after the last app, by the operator's instruction.
+ *
+ * A COUNT of pages, not of tiles, because a page holds however many icons the
+ * device's grid fits — four columns on a phone, eight on a wide window. The
+ * grid is measured at runtime, so HomeScreen fills these; the registry only
+ * says how many there are.
+ */
+export const BLANK_PAGES = 4
 
-export const appById = (id: string) => ALL_APPS.find((a) => a.id === id)
+export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP]
+
+/*
+  Slot ids are generated per page at render time, so they cannot all be listed
+  here. Synthesising one on lookup keeps a blank tile tappable no matter how
+  many pages the grid ends up drawing — without it, tapping a tile on a blank
+  page would resolve to nothing and the reserve screen would never open.
+*/
+export const appById = (id: string) =>
+  ALL_APPS.find((a) => a.id === id) ?? (id.startsWith('slot.') ? makeSlot(id.slice(5)) : undefined)
 
 const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
 
@@ -115,9 +130,10 @@ const OTHER_BRANDS = BRAND_APPS.filter((a) => !isOrderable(a) && a.id !== 'b_cur
 
 export const APP_GROUPS: AppDef[][] = [
   KITCHENS,
-  // Curio last, after the reserve slots, because that is where the operator
-  // wants it. Worth knowing it therefore sits behind eight blank tiles.
-  [...OTHER_BRANDS, ...SYSTEM_APPS, ...SLOT_APPS, ...CURIO],
+  // Curio is the LAST app, by the operator's instruction. The reserve slots
+  // used to sit between it and the system apps, which buried it behind eight
+  // blank tiles; they now live on the blank pages that follow instead.
+  [...OTHER_BRANDS, ...SYSTEM_APPS, ...CURIO],
 ]
 
 /** Flat order, kept for anything that just wants every home-screen app. */
