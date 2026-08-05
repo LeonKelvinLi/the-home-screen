@@ -14,9 +14,14 @@ interface Props {
   receding: boolean
   /** Fully covered by an app — skip painting it altogether. */
   hidden?: boolean
+  /**
+   * Still visible but not reachable — the app switcher is over it. `hidden`
+   * would also blank the wallpaper the switcher shows through.
+   */
+  inert?: boolean
 }
 
-export function HomeScreen({ onOpen, receding, hidden }: Props) {
+export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
   const [page, setPage] = useState(0)
@@ -158,6 +163,7 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
   return (
     <div
       className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
+      {...(inert ? { inert: '' } : {})}
     >
       {/*
         Pinned, not parallaxed. The drift was a nice idea on a real device but

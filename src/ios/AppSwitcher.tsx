@@ -162,7 +162,14 @@ export function AppSwitcher({ recents, renderApp, api, onPick, onClose, onDismis
                 <span className="switcher-card-icon">{app.icon}</span>
                 <span>{app.name}</span>
               </div>
-              <div className="switcher-card-shot">
+              {/*
+                A card is a PICTURE of an app, not a working copy of it. Every
+                card renders the real screen, so without this a Tab key walked
+                into the buttons and fields of every recent app behind the
+                switcher — and a tap that landed on one of them acted on that
+                app instead of selecting the card.
+              */}
+              <div className="switcher-card-shot" {...{ inert: '' }}>
                 <div
                   className="switcher-card-inner"
                   style={{ width: screen.w, height: screen.h, transform: `scale(${CARD_SCALE})` }}

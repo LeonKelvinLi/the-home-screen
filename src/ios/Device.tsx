@@ -327,7 +327,7 @@ export function Device({ renderApp, openOnMount }: Props) {
       <div className={`device is-${screen.device}`}>
         <div className="device-frame">
           <div className="screen" ref={screenRef}>
-            <HomeScreen onOpen={openApp} receding={homeReceding} hidden={homeHidden} />
+            <HomeScreen onOpen={openApp} receding={homeReceding} hidden={homeHidden} inert={inSwitcher} />
 
             {inSwitcher && (
               <AppSwitcher
