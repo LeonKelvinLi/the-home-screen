@@ -3178,6 +3178,93 @@ textarea {
   }
 }
 
+/* ---------- Share & Scan ---------- */
+
+.share {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 20px 30px;
+}
+
+.share-lead {
+  margin: 0;
+  max-width: 30ch;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/*
+  White, always. A QR is read by contrast between dark modules and a light
+  ground, so this card does not follow the app's surface colour — it is part of
+  the code, not decoration around it.
+*/
+.share-card {
+  width: min(100%, 320px);
+  padding: 22px;
+  border-radius: 26px;
+  background: #fff;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+.share-qr {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.share-qr > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /* Nearest-neighbour: a QR is a grid of hard squares, and any smoothing at
+     the module edges is exactly what makes a code fail to read. */
+  image-rendering: pixelated;
+}
+
+/*
+  Biggie over the middle, on a white plate with a little breathing room.
+
+  Sized at 22% of the code. Error correction H recovers about 30%, so this is
+  well inside what the code can lose — but the plate has to be white and the
+  edges clean, because a mark that bleeds into the modules costs more than its
+  own area.
+*/
+.share-qr-mark {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 22%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: #fff;
+  border-radius: 22%;
+}
+
+.share-qr-mark img {
+  width: 74%;
+  height: auto;
+  display: block;
+}
+
+.share-url {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #141416;
+}
+
+.share-actions {
+  width: min(100%, 320px);
+}
+
 /* ---------- BEASTY Designs ---------- */
 
 .designs {

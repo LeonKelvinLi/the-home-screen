@@ -14,7 +14,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
-  | 'reserve' | 'designs'
+  | 'reserve' | 'designs' | 'share'
 
 export interface AppDef {
   id: string
@@ -144,7 +144,20 @@ export const DESIGNS_APP: AppDef = {
 }
 export const DESIGNS_APP_ID = DESIGNS_APP.id
 
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, DESIGNS_APP]
+/*
+  Share & Scan. Lives in the dock, so it is not in the grid list either.
+*/
+export const SHARE_APP: AppDef = {
+  id: 'sys.share',
+  name: 'Share & Scan',
+  label: 'Share & Scan',
+  icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.webp', bg: '#111111', fg: '#fff' }} fill />,
+  kind: 'system',
+  systemKey: 'share',
+  tint: '#111111',
+}
+
+export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, DESIGNS_APP, SHARE_APP]
 
 /*
   Slot ids are generated per page at render time, so they cannot all be listed
@@ -216,9 +229,12 @@ export const DOCK_APPS: AppDef[] = [
     label: 'Water',
     icon: <BrandLogo logo={{ imageUrl: '/icons/dock-water.webp', bg: '#2C8ED6', fg: '#fff' }} fill />,
   },
-  {
-    ...brand('sharescan')!,
-    label: 'Info',
-    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.webp', bg: '#111111', fg: '#fff' }} fill />,
-  },
+  /*
+    Share & Scan, and it now IS share and scan.
+
+    This slot used to open the Share & Scan deli's brand page — a menu, which is
+    neither of the two things its name says. It opens a QR code that takes
+    anyone who scans it to the site.
+  */
+  SHARE_APP,
 ]
