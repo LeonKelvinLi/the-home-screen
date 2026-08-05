@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { Symbol } from './Symbol'
 
@@ -31,11 +31,35 @@ interface Props {
 
 const COLLAPSE_AT = 28
 
+/*
+  Where each screen was left, keyed by title.
+
+  iOS keeps an app's scroll position when you leave and come back; this shell
+  threw it away, so a customer who opened an item halfway down top dog's
+  fifteen-item board and pressed Back landed at the top of the board again and
+  had to find their place. Module-level so it survives the unmount — the whole
+  screen is torn down when its app closes.
+*/
+const scrollMemory = new Map<string, number>()
+
 export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, children }: Props) {
   const [collapsed, setCollapsed] = useState(false)
   const raf = useRef(0)
   /** Mirrors `collapsed` so the scroll handler can bail without a re-render. */
   const collapsedRef = useRef(false)
+  const scroller = useRef<HTMLDivElement>(null)
+
+  /* Restore before paint, or the screen shows the top for one frame and jumps. */
+  useLayoutEffect(() => {
+    const top = scrollMemory.get(title)
+    if (!top || !scroller.current) return
+    scroller.current.scrollTop = top
+    collapsedRef.current = top > COLLAPSE_AT
+    setCollapsed(collapsedRef.current)
+  }, [title])
+
+  /* A queued frame that lands after unmount would set state on a dead screen. */
+  useEffect(() => () => cancelAnimationFrame(raf.current), [])
 
   return (
     <div className="nav-screen">
@@ -58,9 +82,11 @@ export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, 
 
       <div
         className="nav-scroll"
+        ref={scroller}
         onScroll={(e) => {
           // Coalesce to one read per frame; onScroll fires far more often.
           const top = (e.target as HTMLElement).scrollTop
+          scrollMemory.set(title, top)
           if (raf.current) return
           raf.current = requestAnimationFrame(() => {
             raf.current = 0

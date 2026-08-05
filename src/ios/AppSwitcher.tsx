@@ -29,14 +29,34 @@ export function AppSwitcher({ recents, renderApp, api, onPick, onClose, onDismis
   const [index, setIndex] = useState(0)
   const [dx, setDx] = useState(0)
   const [dragging, setDragging] = useState(false)
-  const [flungUp, setFlungUp] = useState<string | null>(null)
+  /*
+    A LIST, not one id. Flinging a second card before the first one's 220ms
+    close had run overwrote the single slot: the first timer still fired, its
+    setFlungUp(null) cleared the SECOND card's flung state mid-flight, and that
+    card popped back into the rail before disappearing a moment later.
+  */
+  const [flungUp, setFlungUp] = useState<string[]>([])
+  /* Same list, readable synchronously from inside a gesture handler. */
+  const flungRef = useRef<string[]>([])
   const [cardDy, setCardDy] = useState(0)
   const idxRef = useRef(0)
   idxRef.current = index
   const axis = useRef<'x' | 'y' | null>(null)
-  const flingTimer = useRef(0)
+  const flingTimers = useRef<number[]>([])
 
-  useEffect(() => () => clearTimeout(flingTimer.current), [])
+  useEffect(() => () => flingTimers.current.forEach((t) => clearTimeout(t)), [])
+
+  /*
+    Keep the selected card in range whenever the rail shrinks.
+
+    This used to be clamped inside the fling handler against `recents.length`
+    captured when the fling started — already stale by the time the timer ran,
+    and wrong by more than one after two flings. Reacting to the real length
+    is correct however many cards leave.
+  */
+  useEffect(() => {
+    setIndex((i) => Math.max(0, Math.min(i, recents.length - 1)))
+  }, [recents.length])
 
   const cardW = screen.w * CARD_SCALE
   const cardH = screen.h * CARD_SCALE
@@ -68,14 +88,26 @@ export function AppSwitcher({ recents, renderApp, api, onPick, onClose, onDismis
       axis.current = null
 
       if (a === 'y') {
-        const id = recents[idxRef.current]
+        /*
+          Target the first card that is NOT already on its way out.
+
+          A flung card is not removed for 220ms while it animates, so a second
+          fling inside that window resolved to the same id and threw the same
+          card away twice — two flicks, one app closed. Skipping the leavers
+          means the card that visually slid under the thumb is the one that
+          goes, which is what the gesture looks like it is doing.
+        */
+        const id = recents.filter((r) => !flungRef.current.includes(r))[idxRef.current]
         if (id && (-dy > 110 || -vy > 0.6)) {
-          setFlungUp(id)
-          flingTimer.current = window.setTimeout(() => {
+          flungRef.current = [...flungRef.current, id]
+          setFlungUp(flungRef.current)
+          const t = window.setTimeout(() => {
             onClose(id)
-            setFlungUp(null)
-            setIndex((i) => Math.max(0, Math.min(i, recents.length - 2)))
+            flungRef.current = flungRef.current.filter((x) => x !== id)
+            setFlungUp(flungRef.current)
+            flingTimers.current = flingTimers.current.filter((x) => x !== t)
           }, 220)
+          flingTimers.current.push(t)
         }
         setCardDy(0)
         return
@@ -113,7 +145,7 @@ export function AppSwitcher({ recents, renderApp, api, onPick, onClose, onDismis
           const app = appById(id)
           if (!app) return null
           const active = i === index
-          const leaving = flungUp === id
+          const leaving = flungUp.includes(id)
           return (
             <div
               className={`switcher-card${active ? ' is-active' : ''}${leaving ? ' is-leaving' : ''}`}

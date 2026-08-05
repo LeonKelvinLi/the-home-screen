@@ -1,10 +1,11 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS } from '../data/brands'
 import { money } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
+import { OPEN_MS } from '../ios/constants'
 
 /**
  * Search across every kitchen at once. This is the argument for the whole
@@ -23,6 +24,21 @@ interface Hit {
 }
 
 export function SearchApp({ api }: { api: ShellApi }) {
+  /*
+    Focus AFTER the launch animation, not on mount.
+
+    `autoFocus` fires while the window is still scaling up out of the icon. iOS
+    raises the keyboard on focus, which resizes the visual viewport mid-flight
+    and makes the open stutter — and on a phone the keyboard covering the
+    results is the wrong first frame anyway.
+  */
+  const field = useRef<HTMLInputElement>(null)
+  useEffect(() => {
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    const t = window.setTimeout(() => field.current?.focus(), reduced ? 0 : OPEN_MS + 60)
+    return () => window.clearTimeout(t)
+  }, [])
+
   const [q, setQ] = useState('')
 
   const { brandHits, itemHits } = useMemo(() => {
@@ -67,10 +83,10 @@ export function SearchApp({ api }: { api: ShellApi }) {
             <path d="M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z" />
           </svg>
           <input
+            ref={field}
             placeholder="Dishes, cuisines, kitchens"
             value={q}
             onChange={(e) => setQ(e.target.value)}
-            autoFocus
           />
           {q && (
             <button className="search-clear" onClick={() => setQ('')} aria-label="Clear">

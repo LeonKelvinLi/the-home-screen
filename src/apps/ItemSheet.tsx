@@ -77,8 +77,16 @@ export function ItemSheet({
     },
     onEnd: ({ dy, vy }) => {
       setDragging(false)
+      /*
+        Keep the drag offset when dismissing. Resetting it first put the sheet
+        back at rest in the SAME commit that added .is-closing, so a sheet
+        dragged 200px down snapped up to its resting position and only then
+        slid away. `sheet-down` declares only a `to`, so its implicit `from` is
+        whatever transform is on the element — leaving dragY in place makes the
+        close continue from exactly where the finger let go.
+      */
+      if (dy > 110 || vy > 0.6) return dismiss()
       setDragY(0)
-      if (dy > 110 || vy > 0.6) dismiss()
     },
   })
 

@@ -700,9 +700,11 @@ textarea {
   flex: 0 0 auto;
   display: inline-flex;
   align-items: center;
-  min-height: 34px;
-  padding: 7px 14px;
-  border-radius: 16px;
+  /* 44px, the platform minimum. 34 was a comfortable-looking pill that missed
+     often enough to matter on a category rail you scrub with a thumb. */
+  min-height: 44px;
+  padding: 7px 15px;
+  border-radius: 18px;
   background: rgba(120, 120, 128, 0.12);
   font-size: 13.5px;
   font-weight: 600;
@@ -1768,8 +1770,9 @@ textarea {
 }
 
 .search-sugg button {
-  min-height: 36px;
-  padding: 8px 13px;
+  /* 44px, the platform minimum — see .cat-tab. */
+  min-height: 44px;
+  padding: 8px 14px;
   border-radius: 15px;
   background: var(--paper);
   font-size: 13.5px;

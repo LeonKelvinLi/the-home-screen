@@ -9,6 +9,7 @@ import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { ScreenSizeProvider, useMeasuredScreen } from './ScreenSize'
 import { appById } from '../apps/registry'
+import { motionMs } from './motion'
 import {
   CLOSE_MS,
   DISMISS_COMMIT_PX,
@@ -159,8 +160,9 @@ export function Device({ renderApp, openOnMount }: Props) {
       }
 
       // Two frames: one to commit the collapsed style, one to start the tween.
+      const openMs = motionMs(OPEN_MS)
       requestAnimationFrame(() =>
-        requestAnimationFrame(() => tweenTo(from, true, OPEN_MS, land)),
+        requestAnimationFrame(() => tweenTo(from, true, openMs, land)),
       )
 
       // Scheduled OUTSIDE the rAF on purpose. A hidden tab fires no animation
@@ -169,7 +171,7 @@ export function Device({ renderApp, openOnMount }: Props) {
       // hides the tab whenever the user switches apps, so this is an ordinary
       // path, not an edge case. `after` is generation-guarded, and `land` is
       // idempotent, so the normal case just lands the same state twice.
-      after(OPEN_MS + 60, land)
+      after(openMs + 60, land)
     },
     [after, clearTimers, centre, screen, tweenTo],
   )
@@ -181,7 +183,7 @@ export function Device({ renderApp, openOnMount }: Props) {
 
     const from = origin ?? origins.current.get(appId) ?? centre()
     setPhase('closing')
-    tweenTo(from, false, CLOSE_MS, () => {
+    tweenTo(from, false, motionMs(CLOSE_MS), () => {
       setStyle({ ...collapsed(from, screen), opacity: 0 })
       setAppId(null)
       setPhase('home')
@@ -194,7 +196,7 @@ export function Device({ renderApp, openOnMount }: Props) {
     clearTimers()
     setAnimating(true)
     setStyle(expandedFor(screen))
-    after(CLOSE_MS, () => setAnimating(false))
+    after(motionMs(CLOSE_MS), () => setAnimating(false))
   }, [after, clearTimers])
 
   /*
