@@ -23,12 +23,15 @@ export function wallpaperFor(city: string | null | undefined): string {
 }
 
 /*
-  The generic Bay Bridge shot, used for anywhere without its own picture.
+  San Francisco, for anyone who declines location or whose city we have no
+  picture for.
 
-  A customer in a city we have no wallpaper for gets a Bay Area night rather
-  than a black screen or, worse, a landmark from somewhere they are not.
+  It is the one landmark in the set that reads as "the Bay Area" rather than as
+  a specific suburb, so a customer who never shares their location still gets
+  something that belongs to where this marketplace operates — and someone in an
+  unlisted city is not shown a landmark from a town they are not in.
 */
-const FALLBACK = '/wallpaper.webp'
+const FALLBACK = '/wallpapers/san-francisco.webp'
 
 /*
   Cities with their own wallpaper on disk. A Set rather than a directory listing

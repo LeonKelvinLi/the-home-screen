@@ -296,7 +296,7 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   /* Must stay in step with ROW_GAP_PHONE in ios/constants.ts — HomeScreen
      computes how many rows fit from that number. See the note there. */
-  row-gap: 18px;
+  row-gap: 13px;
   column-gap: 2px;
   justify-items: center;
 }
@@ -389,10 +389,10 @@ textarea {
 }
 
 .spotlight {
-  position: absolute;
-  left: 50%;
-  bottom: 134px;
-  transform: translateX(-50%) translateZ(0);
+  /* Positioned by .home-bar now, not by itself. */
+  position: relative;
+  flex: 0 0 auto;
+  transform: translateZ(0);
   display: flex;
   align-items: center;
   gap: 5px;
@@ -413,7 +413,7 @@ textarea {
 
 .spotlight:active {
   opacity: 0.6;
-  transform: translateX(-50%) scale(0.95);
+  transform: scale(0.95);
 }
 
 .dock {
@@ -2145,12 +2145,18 @@ textarea {
     bottom: calc(var(--bottom-h) + 6px);
   }
 
-  .spotlight {
-    bottom: calc(var(--bottom-h) + 114px);
+  /*
+    The Spotlight pill no longer positions itself — it sits in .home-bar with
+    the city label. Overriding `bottom` here left it absolutely placed at the
+    old height, on top of the seventh row of icons, while the city sat alone
+    further down.
+  */
+  .home-bar {
+    bottom: calc(var(--bottom-h) + 108px);
   }
 
   .page-dots {
-    bottom: calc(var(--bottom-h) + 156px);
+    bottom: calc(var(--bottom-h) + 150px);
   }
 
   /*
@@ -3082,114 +3088,75 @@ textarea {
 }
 
 /*
-  City label, in the iOS lock-screen manner.
+  Where you are, and the way to search, on one row.
 
-  Not a pill any more. What makes a lock-screen clock read the way it does is
-  three things and none of them is a container: it is LARGE, it is set in a
-  light weight of the system face, and it is translucent enough that the
-  wallpaper shows through the strokes.
+  The city label used to own a band between the last icon row and the page
+  dots. That band was worth a whole row of apps — four more businesses on the
+  page — so it shares the Spotlight row instead and costs nothing vertically.
 
-  The face matters. -apple-system first gets real SF Pro Display on an iPhone,
-  which is the actual lock-screen typeface and carries weights down to 100.
-  Inter is only self-hosted here at 400 and up, so on anything else this lands
-  at 400 and simply looks a little heavier — the shape survives, the weight
-  does not, and that is the right way round.
+  The trade is size: it cannot be lock-screen large down here. It keeps the
+  weight, the glass and the tracking, and gives up the scale.
 */
-.home-city {
+.home-bar {
   position: absolute;
   left: 50%;
-  /*
-    Centred in the band between the last icon row and the page dots. With six
-    rows instead of five that band is 84px, so the label is sized and placed to
-    sit inside it rather than over the bottom row of apps.
-  */
-  bottom: calc(var(--bottom-h) + 174px);
+  bottom: calc(var(--bottom-h) + 116px);
   transform: translateX(-50%) translateZ(0);
-  max-width: calc(100% - 32px);
-  padding: 2px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: calc(100% - 24px);
+  z-index: 6;
+}
+
+.home-city {
+  flex: 0 1 auto;
+  min-width: 0;
+  padding: 6px 13px;
+  border-radius: 999px;
   font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, Inter, system-ui, sans-serif;
-  /*
-    Heavy, not light. The lock-screen clock in the reference is a bold face —
-    the glass treatment is what makes it read as delicate, not a thin weight.
-    Set light, it looked like a caption that had been enlarged.
-  */
+  /* Heavy, as on the lock screen. At this size the weight is the only part of
+     that look still available, so it is the part worth keeping. */
   font-weight: 700;
-  letter-spacing: -0.01em;
+  font-size: 13px;
+  letter-spacing: 0.1em;
   line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
-  /*
-    Glass, not paint. The gradient is clipped to the glyphs and none of its
-    stops is fully opaque, so the wallpaper reads through the strokes — bright
-    along the top edge, thinner through the middle, picking up again at the
-    foot, which is how a lit glass letterform behaves.
-  */
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.96) 0%,
-    rgba(255, 255, 255, 0.62) 46%,
-    rgba(255, 255, 255, 0.86) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  /*
-    drop-shadow, NOT text-shadow. A text-shadow paints behind the glyph box,
-    and with a transparent fill it would show through as a solid silhouette and
-    fill in every counter. A filter applies to the clipped result instead.
-  */
-  filter: drop-shadow(0 3px 14px rgba(0, 0, 0, 0.55));
-
-  z-index: 6;
-  transition: opacity 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
-  animation: city-in 800ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both;
-}
-
-/*
-  Four steps, chosen so the label occupies about the same width whatever it
-  says. A clock is always four or five glyphs; a place name is seven for
-  HAYWARD and nineteen for SOUTH SAN FRANCISCO.
-*/
-.home-city.is-xl { font-size: clamp(38px, 14vw, 58px); }
-.home-city.is-lg { font-size: clamp(30px, 11.2vw, 46px); }
-.home-city.is-md { font-size: clamp(23px, 8.4vw, 35px); }
-.home-city.is-sm { font-size: clamp(18px, 6.2vw, 27px); }
-
-/*
-  A note is a sentence, and a sentence set at clock size is not a clock. It
-  drops back to a caption on a plate, where it can wrap and be read.
-*/
-.home-city.is-note {
-  font-size: 11.5px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  padding: 6px 13px;
-  border-radius: 999px;
-  background: rgba(0, 0, 0, 0.42);
-  -webkit-background-clip: border-box;
-  background-clip: border-box;
-  color: rgba(255, 255, 255, 0.9);
-  filter: none;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  color: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.14);
+  border: 0.5px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 200ms ease;
+  animation: city-in 700ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both;
 }
 
 .home-city:active {
-  transform: translateX(-50%) scale(0.96);
-  opacity: 0.75;
+  transform: scale(0.94);
+  background: rgba(255, 255, 255, 0.24);
+}
+
+/* A note is a sentence and needs room to be read, so it may shrink to fit. */
+.home-city.is-note {
+  letter-spacing: 0.04em;
+  font-weight: 600;
 }
 
 @keyframes city-in {
-  from { opacity: 0; transform: translateX(-50%) translateY(10px) scale(0.96); }
-  to   { opacity: 1; transform: translateX(-50%) translateZ(0); }
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to   { opacity: 1; transform: none; }
 }
 
 /* Breathes while the fix is in flight, so a slow GPS does not look frozen. */
 .home-city.is-locating {
-  animation: city-in 800ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both,
+  animation: city-in 700ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both,
     city-wait 1.3s ease-in-out infinite;
 }
 
@@ -3199,8 +3166,9 @@ textarea {
 }
 
 /* It belongs to the home screen, so it recedes with it when an app opens. */
-.home.is-receding .home-city {
+.home.is-receding .home-bar {
   opacity: 0;
+  transition: opacity 200ms ease;
 }
 
 @media (prefers-reduced-motion: reduce) {

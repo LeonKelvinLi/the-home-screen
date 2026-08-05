@@ -24,9 +24,9 @@ export const ICON_SIZE = 60
  * of empty space. They must be changed together.
  *
  * The phone gap was 26, which fitted five rows on a 390x844 screen where iOS
- * fits six. 18 buys the sixth row: four more apps per page.
+ * fits six. 13 fits seven: twenty-eight apps a page against twenty.
  */
-export const ROW_GAP_PHONE = 18
+export const ROW_GAP_PHONE = 13
 export const ROW_GAP_PAD = 34
 
 /**

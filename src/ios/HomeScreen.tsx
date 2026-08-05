@@ -30,22 +30,6 @@ interface Props {
   inert?: boolean
 }
 
-/*
-  Type size by name length.
-
-  A clock is always four or five glyphs wide, so it can be set once and left.
-  A place name is not: HAYWARD is seven characters and SOUTH SAN FRANCISCO is
-  nineteen, and one size that suits both suits neither. Four steps, so the label
-  fills about the same width whatever it says.
-*/
-function citySize(name: string): 'xl' | 'lg' | 'md' | 'sm' {
-  const n = name.length
-  if (n <= 7) return 'xl'
-  if (n <= 10) return 'lg'
-  if (n <= 14) return 'md'
-  return 'sm'
-}
-
 export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
@@ -125,11 +109,12 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
     */
     const topPad = screen.device === 'pad' ? 96 : 44
     /*
-      Room kept below the grid: the city label, the page dots, the Spotlight
-      pill and the dock. Measured against the rendered layout rather than
-      estimated — at 210 the phone reserved more than it needed and lost a row.
+      Room kept below the grid: the page dots, the Spotlight row and the dock.
+
+      No longer includes a band for the city label — that moved into the
+      Spotlight row, which is what freed the seventh row of apps.
     */
-    const bottomReserve = screen.device === 'pad' ? 190 : 196
+    const bottomReserve = screen.device === 'pad' ? 190 : 172
     const rows = Math.max(3, Math.floor((screen.h - topPad - bottomReserve) / rowPitch))
     const perPage = Math.max(cols, cols * rows)
 
@@ -314,29 +299,6 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
         ))}
       </div>
 
-      {/*
-        Where you are, in the iOS lock-screen manner: faint, wide-tracked, in
-        glass, above the dots.
-
-        Tappable, and ONLY tappable — nothing here asks for a location on load.
-        A permission sheet in front of someone who has not seen a menu yet
-        costs more than a city name is worth.
-      */}
-      <button
-        className={[
-          'home-city',
-          locating ? 'is-locating' : '',
-          // A sentence set at clock size is not a clock. Notes drop to caption.
-          cityNote ? 'is-note' : `is-${citySize(city)}`,
-        ]
-          .filter(Boolean)
-          .join(' ')}
-        onClick={findCity}
-        aria-label={`Showing ${city}. Tap to use your location.`}
-      >
-        {cityNote ?? (locating ? 'Locating' : city)}
-      </button>
-
       {pages.length > 1 && (
         <div className="page-dots">
           {pages.map((_, i) => (
@@ -344,6 +306,32 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
           ))}
         </div>
       )}
+
+      {/*
+        One row: where you are, and the way to search.
+
+        The city label used to have a band of its own between the last icon row
+        and the page dots, and that band was worth a whole row of apps. Sharing
+        the Spotlight row costs nothing vertically. The trade is size — it
+        cannot be lock-screen large down here — so it keeps the weight and the
+        glass and gives up the scale.
+
+        Tappable, and ONLY tappable: nothing asks for a location on load.
+      */}
+      <div className="home-bar">
+        <button
+          className={[
+            'home-city',
+            locating ? 'is-locating' : '',
+            cityNote ? 'is-note' : '',
+          ]
+            .filter(Boolean)
+            .join(' ')}
+          onClick={findCity}
+          aria-label={`Showing ${city}. Tap to use your location.`}
+        >
+          {cityNote ?? (locating ? 'Locating' : city)}
+        </button>
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <button
@@ -360,6 +348,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
         </svg>
         Search
       </button>
+      </div>
 
       <div className="dock">
         {DOCK_APPS.map((app) => (
