@@ -17,7 +17,11 @@ const KEY = 'ths.city'
 export function savedCity(): string | null {
   try {
     const v = localStorage.getItem(KEY)
-    return v && v.trim() ? v : null
+    if (!v || !v.trim()) return null
+    /* Clamped on the way OUT as well as in. Nothing stops a person, an
+       extension, or a stray script from putting five thousand characters under
+       this key, and the label is a single unwrapped line across the screen. */
+    return v.trim().slice(0, 40)
   } catch {
     // Safari in private mode throws on localStorage rather than returning null.
     return null

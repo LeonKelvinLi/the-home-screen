@@ -44,12 +44,23 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const [city, setCity] = useState(() => savedCity() ?? DEFAULT_CITY)
   const [locating, setLocating] = useState(false)
   const [cityNote, setCityNote] = useState<string | null>(null)
+  /*
+    The re-entry guard has to be a REF, not the state above.
+
+    Three taps in one tick all read `locating` before React has re-rendered any
+    of them, so an impatient customer fired three geolocation requests and
+    three relay calls, burning the rate limit for nothing. A ref updates on the
+    same line it is set.
+  */
+  const locatingRef = useRef(false)
 
   const findCity = async () => {
-    if (locating) return
+    if (locatingRef.current) return
+    locatingRef.current = true
     setLocating(true)
     setCityNote(null)
     const r = await detectCity()
+    locatingRef.current = false
     setLocating(false)
     if (r.ok) return setCity(r.city)
     // Say which of the two it was. "Location is off" and "we could not reach

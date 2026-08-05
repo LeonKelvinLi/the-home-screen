@@ -3072,6 +3072,12 @@ textarea {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   white-space: nowrap;
+  /* A long place name must never run off the screen. Clamping the stored value
+     to 40 characters is not enough on its own: 40 characters of wide-tracked
+     uppercase measures 414px on a 390px phone. */
+  max-width: calc(100% - 48px);
+  overflow: hidden;
+  text-overflow: ellipsis;
   z-index: 6;
   min-height: 26px;
   transition: color 200ms ease, background 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1);

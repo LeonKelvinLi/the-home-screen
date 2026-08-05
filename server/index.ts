@@ -400,8 +400,19 @@ const CITY_TTL = 24 * 60 * 60 * 1000
   city it already had; nothing here is load-bearing.
 */
 app.get('/api/city', rateLimiter(30, 10), async (req, res) => {
-  const lat = Number(req.query.lat)
-  const lon = Number(req.query.lon)
+  /*
+    Reject an ABSENT or empty parameter before parsing it. Number('') is 0, not
+    NaN, so `?lat=&lon=` used to sail through validation as (0, 0) — Null
+    Island, in the Atlantic — and the label would confidently read
+    "ATLANTIC OCEAN".
+  */
+  const raw = (v: unknown) => (typeof v === 'string' && v.trim() ? v.trim() : null)
+  const latRaw = raw(req.query.lat)
+  const lonRaw = raw(req.query.lon)
+  if (!latRaw || !lonRaw) return res.status(400).json({ error: 'bad coordinates' })
+
+  const lat = Number(latRaw)
+  const lon = Number(lonRaw)
   if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) {
     return res.status(400).json({ error: 'bad coordinates' })
   }
