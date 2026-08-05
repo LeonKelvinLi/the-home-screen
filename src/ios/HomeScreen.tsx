@@ -7,7 +7,7 @@ import { APP_GROUPS, BLANK_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { EASE_IOS, PAGE_COMMIT_PX, PAGE_MS } from './constants'
-import { CITY } from '../lib/place'
+import { DEFAULT_CITY, detectCity, savedCity } from '../lib/place'
 
 interface Props {
   onOpen: (appId: string, rect: IconRect) => void
@@ -32,6 +32,37 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const spotlightRef = useRef<HTMLButtonElement>(null)
   /** Locked on the first move so a vertical drag can never turn a page. */
   const axis = useRef<'x' | 'y' | null>(null)
+
+  /*
+    Location label.
+
+    Seeded from whatever this device settled on before, so a returning customer
+    is never asked twice — the permission prompt happens on the first tap and
+    never again. Read in the initialiser rather than an effect so the label
+    never flashes the default first.
+  */
+  const [city, setCity] = useState(() => savedCity() ?? DEFAULT_CITY)
+  const [locating, setLocating] = useState(false)
+  const [cityNote, setCityNote] = useState<string | null>(null)
+
+  const findCity = async () => {
+    if (locating) return
+    setLocating(true)
+    setCityNote(null)
+    const r = await detectCity()
+    setLocating(false)
+    if (r.ok) return setCity(r.city)
+    // Say which of the two it was. "Location is off" and "we could not reach
+    // the lookup" need different things from the customer.
+    setCityNote(
+      r.reason === 'denied'
+        ? 'Location is off for this site'
+        : r.reason === 'unsupported'
+          ? 'This browser cannot share a location'
+          : 'Could not work out where you are',
+    )
+    window.setTimeout(() => setCityNote(null), 3200)
+  }
 
   /**
    * Paginate against the REAL grid rather than a fixed count. A phone gets
@@ -228,11 +259,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
       </div>
 
       {/*
-        Where you are, in the iOS lock-screen manner: set faint, in glass, above
-        the dots. It is orientation, not a control — nobody should feel invited
-        to tap it. See lib/place.ts for why the city is fixed for now.
+        Where you are, in the iOS lock-screen manner: faint, wide-tracked, in
+        glass, above the dots.
+
+        Tappable, and ONLY tappable — nothing here asks for a location on load.
+        A permission sheet in front of someone who has not seen a menu yet
+        costs more than a city name is worth.
       */}
-      <div className="home-city">{CITY}</div>
+      <button
+        className={`home-city${locating ? ' is-locating' : ''}`}
+        onClick={findCity}
+        aria-label={`Showing ${city}. Tap to use your location.`}
+      >
+        {cityNote ?? (locating ? 'Locating' : city)}
+      </button>
 
       {pages.length > 1 && (
         <div className="page-dots">

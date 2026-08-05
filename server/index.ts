@@ -69,10 +69,15 @@ app.use((_req, res, next) => {
   res.setHeader('X-Frame-Options', 'DENY')
   // Do not leak which brand page a customer came from to a partner's site.
   res.setHeader('Referrer-Policy', 'strict-origin-when-cross-origin')
-  // Nothing here needs a camera, mic, or location.
+  /*
+    geolocation=(self), not (). The home screen's city label can resolve where
+    the customer actually is, but only when they TAP it — never on load. The
+    header has to allow the origin or that tap fails with a policy violation
+    rather than a permission prompt. Everything else stays denied.
+  */
   res.setHeader(
     'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()',
+    'camera=(), microphone=(), geolocation=(self), payment=(), usb=(), interest-cohort=()',
   )
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin')
   res.setHeader('Cross-Origin-Resource-Policy', 'same-origin')
@@ -290,6 +295,162 @@ app.get('/api/health', (_req, res) => {
 
 app.get('/api/catalogue', rateLimiter(60, 20), (_req, res) => {
   res.json({ vendors: VENDORS, brands: BRANDS })
+})
+
+/*
+  Turn a coordinate into a city name, for the home screen's location label.
+
+  Relayed through here rather than called from the browser, for two reasons:
+
+  1. CSP stays `connect-src 'self'`. Letting the page call a third party
+     directly would mean widening that for every script on the page, which is a
+     real loss on a service that takes card details, in exchange for a label.
+  2. The customer's browser never talks to the geocoder, so their IP, headers
+     and coordinates are not handed to a company they did not choose.
+
+  Coordinates are rounded to three decimals — about 110 metres. Two decimals
+  was a kilometre, which sounds safer and is not: it put a Dublin coordinate
+  over the line into Pleasanton and named the wrong city with full confidence.
+  What actually protects the customer here is the relay, not the rounding —
+  their IP and headers never reach the geocoder, so the coordinate arrives
+  attached to nobody.
+
+  Free and keyless. If it is ever down or rate-limited the client keeps the
+  city it already had; nothing here is load-bearing.
+*/
+/*
+  Pull the MUNICIPALITY out of the geocoder's answer.
+
+  Neither obvious field works on its own, and both fail in ways that look
+  right:
+
+  - `city` is the metro area. It calls Oakland, Berkeley, Fremont and Richmond
+    all "San Francisco", which is worse than saying nothing.
+  - `locality` is the real place almost everywhere, but inside San Francisco it
+    returns a neighbourhood ("Mission-Bernal") and in New York a borough.
+
+  The administrative hierarchy is the reliable one. OSM adminLevel 8 is the
+  municipality, so that wins. San Francisco has no level 8 at all — it is a
+  consolidated city and county, which sits at level 6 — so a level 6 that
+  describes itself as a city is the fallback. That fallback is only ever
+  reached when there is no level 8, which is why it does not turn Oakland into
+  San Francisco.
+*/
+interface AdminArea {
+  name?: unknown
+  description?: unknown
+  adminLevel?: unknown
+}
+
+function pickCity(j: Record<string, unknown>): string | null {
+  const str = (v: unknown) => (typeof v === 'string' && v.trim() ? v.trim() : null)
+
+  const info = j.localityInfo as { administrative?: AdminArea[] } | undefined
+  const admin = Array.isArray(info?.administrative) ? info!.administrative : []
+
+  const level = (n: number) => admin.filter((a) => a.adminLevel === n)
+
+  /*
+    A point near a boundary lists EVERY neighbouring municipality at level 8 —
+    Dublin's civic centre comes back as [Pleasanton, Dublin], in that order, so
+    taking the first named the wrong city. `locality` is the geocoder's own
+    answer for the specific point, so it breaks the tie.
+  */
+  const municipalities = level(8)
+    .map((a) => str(a.name))
+    .filter((n): n is string => Boolean(n))
+  if (municipalities.length) {
+    const locality = str(j.locality)
+    return municipalities.find((n) => n === locality) ?? municipalities[0]
+  }
+
+  const consolidated = level(6)
+    .filter((a) => /\bcity\b/i.test(String(a.description ?? '')))
+    .map((a) => str(a.name))
+    .find(Boolean)
+  if (consolidated) return consolidated
+
+  return str(j.locality) ?? str(j.city) ?? str(j.principalSubdivision)
+}
+
+/* Rounded coordinate -> city. The free geocoder rate-limits a burst hard, and
+   neighbours share a rounded coordinate, so this absorbs most of the traffic. */
+const cityCache = new Map<string, { city: string; at: number }>()
+const CITY_TTL = 24 * 60 * 60 * 1000
+
+/*
+  Turn a coordinate into a city name, for the home screen's location label.
+
+  Relayed through here rather than called from the browser, for two reasons:
+
+  1. CSP stays `connect-src 'self'`. Letting the page call a third party
+     directly would mean widening that for every script on the page, which is a
+     real loss on a service that takes card details, in exchange for a label.
+  2. The customer's browser never talks to the geocoder, so their IP, headers
+     and coordinates are not handed to a company they did not choose.
+
+  Coordinates are rounded to three decimals — about 110 metres. Two decimals
+  was a kilometre, which sounds safer and is not: it put a Dublin coordinate
+  over the line into Pleasanton and named the wrong city with full confidence.
+  What actually protects the customer here is the relay, not the rounding —
+  their IP and headers never reach the geocoder, so the coordinate arrives
+  attached to nobody.
+
+  Free and keyless. If it is ever down or rate-limited the client keeps the
+  city it already had; nothing here is load-bearing.
+*/
+app.get('/api/city', rateLimiter(30, 10), async (req, res) => {
+  const lat = Number(req.query.lat)
+  const lon = Number(req.query.lon)
+  if (!Number.isFinite(lat) || !Number.isFinite(lon) || Math.abs(lat) > 90 || Math.abs(lon) > 180) {
+    return res.status(400).json({ error: 'bad coordinates' })
+  }
+
+  const round = (n: number) => Math.round(n * 1000) / 1000
+  const key = `${round(lat)},${round(lon)}`
+
+  const hit = cityCache.get(key)
+  if (hit && Date.now() - hit.at < CITY_TTL) {
+    res.setHeader('Cache-Control', 'private, max-age=86400')
+    return res.json({ city: hit.city })
+  }
+
+  const url =
+    'https://api-bdc.net/data/reverse-geocode-client' +
+    `?latitude=${round(lat)}&longitude=${round(lon)}&localityLanguage=en`
+
+  try {
+    // Never let a slow third party hold a request open.
+    const ctl = new AbortController()
+    const timer = setTimeout(() => ctl.abort(), 4000)
+    const r = await fetch(url, { signal: ctl.signal })
+    clearTimeout(timer)
+    if (!r.ok) throw new Error(`geocoder returned ${r.status}`)
+
+    const j = (await r.json()) as Record<string, unknown>
+
+    /*
+      REJECT an IP-derived answer. Given parameters it does not like, this
+      endpoint does not fail — it silently geolocates the CALLER and returns
+      that with the same shape. Called from a server, the caller is the server,
+      so every customer in the country would be confidently told they are in
+      whatever city the host sits in.
+    */
+    if (j.lookupSource !== 'coordinates') {
+      throw new Error(`geocoder fell back to ${String(j.lookupSource)}`)
+    }
+
+    const city = pickCity(j)
+    if (!city) throw new Error('geocoder named no place')
+
+    const trimmed = city.slice(0, 40)
+    cityCache.set(key, { city: trimmed, at: Date.now() })
+    res.setHeader('Cache-Control', 'private, max-age=86400')
+    res.json({ city: trimmed })
+  } catch (err) {
+    console.error('city: reverse geocode failed', err)
+    res.status(502).json({ error: 'lookup failed' })
+  }
 })
 
 /* ---------- money helpers ---------- */
