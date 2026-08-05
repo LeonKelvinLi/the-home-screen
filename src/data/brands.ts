@@ -509,4 +509,8 @@ export const VENDORS: Vendor[] = [...LOCAL_SEED, ...SEED].map((s) => ({
 }))
 
 export const brandById = (id: string) => BRANDS.find((b) => b.id === id)
+/* Look one up by its seed slug. Ids are derived (`b_` + de-hyphenated slug), so
+   spelling one out by hand elsewhere silently breaks if a slug ever changes. */
+export const brandIdBySlug = (slug: string) =>
+  BRANDS.find((b) => b.id === `b_${slug.replace(/-/g, '')}`)?.id ?? null
 export const vendorById = (id: string) => VENDORS.find((v) => v.id === id)

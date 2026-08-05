@@ -28,10 +28,12 @@ export interface ShellApi {
 type Phase = 'home' | 'opening' | 'open' | 'closing' | 'switcher'
 
 interface Props {
+  /** Open this app as soon as the shell mounts, e.g. straight from the intro. */
+  openOnMount?: string | null
   renderApp: (appId: string, api: ShellApi) => ReactNode
 }
 
-export function Device({ renderApp }: Props) {
+export function Device({ renderApp, openOnMount }: Props) {
   const [phase, setPhase] = useState<Phase>('home')
   const [appId, setAppId] = useState<string | null>(null)
   const [origin, setOrigin] = useState<IconRect | null>(null)
@@ -194,6 +196,22 @@ export function Device({ renderApp }: Props) {
     setStyle(expandedFor(screen))
     after(CLOSE_MS, () => setAnimating(false))
   }, [after, clearTimers])
+
+  /*
+    Open straight into an app when the intro asked for one — "Water" on the
+    landing screen goes to the home screen AND opens Beasty H20, rather than
+    dropping the customer on the grid to find it themselves.
+
+    Guarded on a measured screen: the launch animation computes its geometry
+    from the screen size, and running it against the pre-measurement default
+    makes the window fly in from the wrong place.
+  */
+  const launched = useRef(false)
+  useEffect(() => {
+    if (!openOnMount || launched.current || screen.w <= 0) return
+    launched.current = true
+    openApp(openOnMount)
+  }, [openOnMount, screen.w, openApp])
 
   /** Home-indicator gesture: flick up closes, slow drag up opens the switcher. */
   const homeGesture = useDrag({

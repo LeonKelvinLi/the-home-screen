@@ -1,6 +1,9 @@
+import { useState } from 'react'
+import { IntroScreen } from './apps/IntroScreen'
 import { Device } from './ios/Device'
 import type { ShellApi } from './ios/Device'
 import { CartProvider } from './store/cart'
+import { brandIdBySlug } from './data/brands'
 import { SettingsProvider } from './store/settings'
 import { appById } from './apps/registry'
 import { BrandApp } from './apps/BrandApp'
@@ -46,10 +49,33 @@ function renderApp(appId: string, api: ShellApi) {
 }
 
 export default function App() {
+  /*
+    The landing screen sits in front of the shell, not inside it — the home
+    screen is the product, and it should not be paying to mount a page the
+    customer is about to dismiss.
+
+    `openOn` is how "Water" reaches past the intro: entering and opening Beasty
+    H20 is one tap, not two.
+  */
+  const [entered, setEntered] = useState(false)
+  const [openOn, setOpenOn] = useState<string | null>(null)
+
+  if (!entered) {
+    return (
+      <IntroScreen
+        onEnter={() => setEntered(true)}
+        onWater={() => {
+          setOpenOn(brandIdBySlug('beasty-h20'))
+          setEntered(true)
+        }}
+      />
+    )
+  }
+
   return (
     <SettingsProvider>
       <CartProvider>
-        <Device renderApp={renderApp} />
+        <Device renderApp={renderApp} openOnMount={openOn} />
       </CartProvider>
     </SettingsProvider>
   )
