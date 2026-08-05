@@ -143,6 +143,21 @@ textarea {
 
 /* ---------- home indicator ---------- */
 
+/*
+  Left-edge back-swipe target. Narrow, so it never competes with content, and
+  stopping short of the home-indicator strip at the bottom — that strip sets
+  touch-action: none, and where the two overlapped it swallowed the gesture.
+*/
+.back-edge-zone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  bottom: calc(var(--bottom-h) + var(--gesture-h));
+  z-index: 79;
+  touch-action: pan-y;
+}
+
 .home-indicator-zone {
   position: absolute;
   left: 0;
@@ -2109,7 +2124,22 @@ textarea {
     iOS claims the touch, fires pointercancel, and the app never sees the
     gesture — while the user gets thrown out to the real home screen.
   */
-  .home-indicator-zone {
+  /*
+  Left-edge back-swipe target. Narrow, so it never competes with content, and
+  stopping short of the home-indicator strip at the bottom — that strip sets
+  touch-action: none, and where the two overlapped it swallowed the gesture.
+*/
+.back-edge-zone {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  bottom: calc(var(--bottom-h) + var(--gesture-h));
+  z-index: 79;
+  touch-action: pan-y;
+}
+
+.home-indicator-zone {
     bottom: var(--bottom-h);
     height: var(--gesture-h);
   }

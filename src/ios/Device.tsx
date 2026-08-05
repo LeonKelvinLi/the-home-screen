@@ -176,6 +176,10 @@ export function Device({ renderApp, openOnMount }: Props) {
     [after, clearTimers, centre, screen, tweenTo],
   )
 
+  /* Held in a ref so the edge gesture below can call it without taking it as
+     a dependency, which would reorder half the component. */
+  const closeAppRef = useRef<(() => void) | null>(null)
+
   const closeApp = useCallback(() => {
     if (!appId) return
     generation.current++
@@ -190,6 +194,8 @@ export function Device({ renderApp, openOnMount }: Props) {
       setStyle(expandedFor(screen))
     })
   }, [appId, origin, clearTimers, centre, screen, tweenTo])
+
+  closeAppRef.current = closeApp
 
   const snapBack = useCallback(() => {
     generation.current++
@@ -216,6 +222,40 @@ export function Device({ renderApp, openOnMount }: Props) {
   }, [openOnMount, screen.w, openApp])
 
   /** Home-indicator gesture: flick up closes, slow drag up opens the switcher. */
+  /*
+    Back-swipe from the left edge.
+
+    There was none: the only way out of an app was the Back button in the bar,
+    a target at the very top of the screen that a thumb has to stretch for. iOS
+    has trained everyone that dragging in from the left edge goes back, and in
+    the bottom-left corner the swipe hit the home-indicator strip instead,
+    which has touch-action: none and swallowed it entirely.
+
+    The window follows the finger with resistance, then either snaps back or
+    runs the normal close-to-icon animation.
+  */
+  const [backDx, setBackDx] = useState(0)
+  const [backDragging, setBackDragging] = useState(false)
+
+  const backGesture = useDrag({
+    threshold: 8,
+    onStart: () => setBackDragging(true),
+    onMove: ({ dx }) => {
+      // Rightward only; pulling left resists rather than tearing the window
+      // off the other edge.
+      setBackDx(dx > 0 ? dx : dx * 0.15)
+    },
+    onCancel: () => {
+      setBackDragging(false)
+      setBackDx(0)
+    },
+    onEnd: ({ dx, vx }) => {
+      setBackDragging(false)
+      setBackDx(0)
+      if (dx > 70 || vx > 0.3) closeAppRef.current?.()
+    },
+  })
+
   const homeGesture = useDrag({
     threshold: 6,
     captureOnDown: true,
@@ -329,17 +369,31 @@ export function Device({ renderApp, openOnMount }: Props) {
                 style={{
                   width: screen.w,
                   height: screen.h,
-                  transform: settled ? undefined : style.transform,
+                  transform: settled
+                    ? backDx
+                      ? `translate3d(${backDx}px,0,0)`
+                      : undefined
+                    : style.transform,
                   borderRadius: style.borderRadius,
                   // will-change only while a tween is actually running; holding
                   // it permanently pins a compositor layer for no benefit.
-                  willChange: settled ? 'auto' : 'transform, border-radius',
+                  willChange: settled && !backDx ? 'auto' : 'transform, border-radius',
                   visibility: inSwitcher ? 'hidden' : 'visible',
-                  // No CSS transition on transform or border-radius: the rAF
-                  // tween writes both every frame, correctly related to each
-                  // other. Letting CSS interpolate them independently is what
-                  // ballooned the corner through the middle of a launch.
-                  transition: 'none',
+                  /*
+                    No CSS transition while a tween is running: the rAF tween
+                    writes transform and radius every frame, correctly related
+                    to each other, and letting CSS interpolate them
+                    independently is what ballooned the corner through the
+                    middle of a launch.
+
+                    A settled window is not being tweened, so an incomplete
+                    back-swipe can spring home on a transition instead of
+                    snapping there in one frame.
+                  */
+                  transition:
+                    settled && !backDragging
+                      ? 'transform 280ms cubic-bezier(0.32, 0.72, 0, 1)'
+                      : 'none',
                 }}
               >
                 <div
@@ -363,6 +417,12 @@ export function Device({ renderApp, openOnMount }: Props) {
               <div className="status-layer">
                 <StatusBar dark={mounted && !inSwitcher ? app?.statusDark : false} />
               </div>
+            )}
+
+            {/* Above the indicator strip in the corner they overlap, or the
+                strip's touch-action: none eats the swipe. */}
+            {mounted && app && !inSwitcher && phase === 'open' && (
+              <div className="back-edge-zone" {...backGesture} />
             )}
 
             <div
