@@ -116,6 +116,25 @@ export function ItemSheet({
           <div className="sheet-grabber" />
         </div>
         <div className="sheet-scroll">
+          {/* The dish, at the moment the customer decides. A -lg variant is
+              fetched here rather than the 256px thumbnail from the menu row,
+              which would be soft blown up to sheet width. It loads only when
+              the sheet opens, so it never touches first paint. */}
+          {item.imageUrl && (
+            <div className="sheet-hero">
+              <img
+                src={item.imageUrl.replace(/\.webp$/, '-lg.webp')}
+                alt=""
+                loading="eager"
+                decoding="async"
+                draggable={false}
+              />
+              {item.imageIsIllustration && (
+                <span className="sheet-hero-illus">Illustration, not their photo</span>
+              )}
+            </div>
+          )}
+
           <h2 className="sheet-title">{item.name}</h2>
           <p className="sheet-desc">{item.desc}</p>
           <p className="sheet-price">{money(item.price)}</p>
