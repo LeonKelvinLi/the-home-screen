@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { BLANK_PAGES } from './registry'
 import { LISTED_KITCHENS } from '../data/brands'
-import { GLYPHS } from '../data/glyphs'
 
 /**
  * The landing screen, shown before the home screen.
@@ -29,13 +28,26 @@ interface Props {
   onWater: () => void
   /** Enter and land straight on the Reserve screen. */
   onJoin: () => void
-  /** Enter and land straight on BEASTY Designs. */
-  onDesigns: () => void
 }
 
-export function IntroScreen({ onEnter, onWater, onJoin, onDesigns }: Props) {
+export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
   const [panel, setPanel] = useState<'none' | 'phone' | 'share'>('none')
   const [copied, setCopied] = useState(false)
+  const [leaving, setLeaving] = useState(false)
+
+  /*
+    Play the card out before handing over, the way a setup sheet drops away
+    rather than blinking out. Guarded so a double tap cannot queue two exits.
+
+    Reduced motion skips it: someone who asked for less movement should not be
+    made to wait 280ms for movement they are not getting.
+  */
+  const leave = (then: () => void) => {
+    if (leaving) return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return then()
+    setLeaving(true)
+    window.setTimeout(then, 280)
+  }
 
   const share = async () => {
     const url = window.location.origin
@@ -58,15 +70,55 @@ export function IntroScreen({ onEnter, onWater, onJoin, onDesigns }: Props) {
     }
   }
 
+  /*
+    Laid out as an iOS setup card — the sheet that slides up when you open an
+    AirPods case next to a phone.
+
+    That pattern is a scrolling body with ONE pinned action at the bottom. It
+    is the right shape here for a practical reason as well as a stylistic one:
+    the story, the pitch and the four shortcuts had grown past a single screen,
+    and pinning the way in means it can never scroll out of reach however much
+    copy is added above it.
+  */
   return (
-    <div className="intro">
+    <div className={`intro${leaving ? ' is-leaving' : ''}`}>
+      <div className="intro-card">
+        <div className="intro-scroll">
       <div className="intro-mark">
-        <img src="/biggie.webp" alt="" className="intro-biggie" draggable={false} />
+        <span className="intro-stage">
+          <img src="/biggie.webp" alt="" className="intro-biggie" draggable={false} />
+        </span>
         <p className="intro-word">
           <span>BEASTY</span>
           <span>EATS</span>
         </p>
         <p className="intro-where">Richmond, California</p>
+        <p className="intro-sub">
+          Every local kitchen on one home screen. One cart, one checkout.
+        </p>
+      </div>
+
+      <div className="intro-dock">
+        <button className="intro-btn" onClick={() => setPanel(panel === 'phone' ? 'none' : 'phone')}>
+          <Glyph kind="phone" />
+          <em>Phone</em>
+        </button>
+
+        {/* The primary. Sized and coloured so it is obviously the way in. */}
+        <button className="intro-btn is-primary" onClick={() => leave(onEnter)}>
+          <Glyph kind="eats" />
+          <em>EATS</em>
+        </button>
+
+        <button className="intro-btn" onClick={() => leave(onWater)}>
+          <Glyph kind="water" />
+          <em>Water</em>
+        </button>
+
+        <button className="intro-btn" onClick={share}>
+          <Glyph kind="share" />
+          <em>{copied ? 'Copied' : 'Share'}</em>
+        </button>
       </div>
 
       {/*
@@ -100,7 +152,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onDesigns }: Props) {
         tiles genuinely exist. NOTHING about cost — no fee has ever been agreed,
         and "free to list" is a commercial term, not a design decision.
       */}
-      <button className="intro-join" onClick={onJoin}>
+      <button className="intro-join" onClick={() => leave(onJoin)}>
         <span className="intro-join-head">Run a local business?</span>
         <span className="intro-join-body">
           Your own icon on this home screen, your own menu, your own prices, alongside{' '}
@@ -113,53 +165,6 @@ export function IntroScreen({ onEnter, onWater, onJoin, onDesigns }: Props) {
           </svg>
         </span>
       </button>
-
-      {/*
-        BEASTY Designs. Its own button rather than a line in the join section:
-        the two pitch different things to the same person — a tile on this
-        screen, and a website of their own — and folding them together makes
-        both vaguer.
-
-        The mark is drawn in glyphs.ts, not imported. The reference for it was
-        a Vecteezy stock file, which is licensed artwork and not ours to ship.
-      */}
-      <button className="intro-designs" onClick={onDesigns}>
-        <span className="intro-designs-mark">
-          <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
-            <path d={GLYPHS.design} fill="currentColor" fillRule="evenodd" />
-          </svg>
-        </span>
-        <span className="intro-designs-text">
-          <span className="intro-designs-name">BEASTY Designs</span>
-          <span className="intro-designs-sub">Websites, apps and online ordering</span>
-        </span>
-        <svg className="intro-designs-go" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M5 12h13M12 6l6 6-6 6" />
-        </svg>
-      </button>
-
-      <div className="intro-dock">
-        <button className="intro-btn" onClick={() => setPanel(panel === 'phone' ? 'none' : 'phone')}>
-          <Glyph kind="phone" />
-          <em>Phone</em>
-        </button>
-
-        {/* The primary. Sized and coloured so it is obviously the way in. */}
-        <button className="intro-btn is-primary" onClick={onEnter}>
-          <Glyph kind="eats" />
-          <em>EATS</em>
-        </button>
-
-        <button className="intro-btn" onClick={onWater}>
-          <Glyph kind="water" />
-          <em>Water</em>
-        </button>
-
-        <button className="intro-btn" onClick={share}>
-          <Glyph kind="share" />
-          <em>{copied ? 'Copied' : 'Share'}</em>
-        </button>
-      </div>
 
       {panel === 'phone' && (
         <div className="intro-panel">
@@ -185,12 +190,17 @@ export function IntroScreen({ onEnter, onWater, onJoin, onDesigns }: Props) {
         </div>
       )}
 
-      <button className="intro-enter" onClick={onEnter}>
-        Enter
-        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-          <path d="M4 12h15M13 6l6 6-6 6" />
-        </svg>
-      </button>
+        </div>
+
+        <div className="intro-action">
+          <button className="intro-enter" onClick={() => leave(onEnter)}>
+            Enter
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <path d="M4 12h15M13 6l6 6-6 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   )
 }

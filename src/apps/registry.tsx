@@ -3,6 +3,8 @@ import { BRANDS, brandById } from '../data/brands'
 import { BrandLogo } from '../ios/BrandLogo'
 import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
+import { SQUIRCLE_100 } from '../ios/squircle'
+import { GLYPHS } from '../data/glyphs'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
 /**
@@ -109,18 +111,36 @@ export const BLANK_PAGES = 4
 export const RESERVE_APP_ID = 'slot.join'
 
 /*
-  BEASTY Designs. Reachable from the landing page, and NOT on the home grid —
-  the grid belongs to the businesses, and a services pitch competing with them
-  for a customer's attention is the wrong order.
+  BEASTY Designs — an app on the grid, not a button on the landing page.
+
+  The mark is the drawn monitor-and-pencil glyph on the brand yellow, matching
+  every other tile's squircle rather than being a system symbol in disguise.
 */
+const DesignsIcon = () => (
+  <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+    <defs>
+      <clipPath id="clip-designs">
+        <path d={SQUIRCLE_100} />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#clip-designs)">
+      <rect width="100" height="100" fill="#f6d800" />
+      <g transform="translate(50 50) scale(0.66) translate(-50 -50)">
+        <path d={GLYPHS.design} fill="#141414" fillRule="evenodd" />
+      </g>
+      <path d={SQUIRCLE_100} fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1" />
+    </g>
+  </svg>
+)
+
 export const DESIGNS_APP: AppDef = {
   id: 'sys.designs',
   name: 'BEASTY Designs',
-  label: 'Designs',
-  icon: <SystemIcon glyph="bag" fill />,
+  label: 'BEASTY Designs',
+  icon: <DesignsIcon />,
   kind: 'system',
   systemKey: 'designs',
-  tint: '#141414',
+  tint: '#f6d800',
 }
 export const DESIGNS_APP_ID = DESIGNS_APP.id
 
@@ -169,7 +189,7 @@ export const APP_GROUPS: AppDef[][] = [
   // Curio is the LAST app, by the operator's instruction. The reserve slots
   // used to sit between it and the system apps, which buried it behind eight
   // blank tiles; they now live on the blank pages that follow instead.
-  [...OTHER_BRANDS, ...SYSTEM_APPS, ...CURIO],
+  [...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
 ]
 
 /** Flat order, kept for anything that just wants every home-screen app. */

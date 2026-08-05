@@ -3318,11 +3318,13 @@ textarea {
 
 /* ---------- intro / landing ----------
 
-   Shown before the home screen. Brand-first: their yellow, their dog, their
-   wordmark, the story, and four ways in.
+   Laid out as an iOS setup card: the sheet that slides up when an AirPods case
+   is opened next to a phone. A lit stage with the product on it, the name, and
+   ONE pinned action at the bottom.
 
-   The story is open, not behind a tap — it is why the business exists. That
-   makes the screen tall, so it scrolls on a short phone rather than clipping.  */
+   The pinned action is practical as well as stylistic — the story, the pitch
+   and the four shortcuts outgrew a single screen, and pinning the way in means
+   it can never scroll out of reach however much copy is added above it.       */
 
 .intro {
   /* Fixed, not absolute: the intro renders above the shell rather than inside
@@ -3332,64 +3334,15 @@ textarea {
   z-index: 90;
   color: #141414;
   background:
-    radial-gradient(120% 80% at 50% 2%, #ffe94a 0%, #f8d800 44%, #eec400 100%),
+    radial-gradient(120% 80% at 50% 0%, #ffe94a 0%, #f6d800 46%, #e8bf00 100%),
     #f6d800;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  /*
-    NOT justify-content: center.
-
-    Centred flex content that overflows spills past BOTH edges, and the part
-    above the top edge cannot be scrolled to — the scroll range starts at the
-    container's top, not the content's. Biggie's head was cut off with no way
-    to reach it. Auto margins centre the same way when there is room and
-    collapse to nothing when there is not, so the top stays reachable.
-  */
-  justify-content: flex-start;
-  gap: clamp(10px, 1.8vh, 16px);
-  padding: calc(20px + env(safe-area-inset-top)) 20px
-    calc(22px + var(--bottom-h) + var(--gesture-h));
-  overflow-y: auto;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  animation: intro-in 380ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-/*
-  Warm bloom behind the dog, and a vignette to settle the corners. Both FIXED
-  rather than absolute: the intro scrolls on a short screen, and a backdrop
-  that scrolls with the content stops reading as light and starts reading as a
-  shape someone drew.
-*/
-.intro::before,
-.intro::after {
-  content: '';
-  position: fixed;
-  pointer-events: none;
-}
-
-.intro::before {
-  left: 50%;
-  top: 22%;
-  width: min(150vw, 640px);
-  aspect-ratio: 1;
-  margin-left: -320px;
-  transform: translateY(-50%);
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 62%);
-  /* Slow breath. Long enough that it never reads as a pulse, just as light
-     that is not quite still. */
-  animation: intro-bloom 9s ease-in-out infinite;
-}
-
-.intro::after {
-  inset: 0;
-  background: radial-gradient(105% 78% at 50% 38%, transparent 54%, rgba(120, 92, 0, 0.18) 100%);
-}
-
-@keyframes intro-bloom {
-  0%, 100% { opacity: 0.85; transform: translateY(-50%) scale(1); }
-  50%      { opacity: 1;    transform: translateY(-50%) scale(1.08); }
+  align-items: flex-end;
+  justify-content: center;
+  padding: max(14px, env(safe-area-inset-top)) 12px
+    calc(12px + var(--bottom-h) + var(--gesture-h));
+  overflow: hidden;
+  animation: intro-in 300ms ease both;
 }
 
 @keyframes intro-in {
@@ -3397,212 +3350,157 @@ textarea {
   to   { opacity: 1; }
 }
 
-/* Everything real sits above the two gradient pseudo-elements. */
-.intro > * {
+/* Vignette, so the card has something to sit against. */
+.intro::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(100% 70% at 50% 34%, transparent 52%, rgba(120, 92, 0, 0.2) 100%);
+  pointer-events: none;
+}
+
+/*
+  The card. Rises from the bottom edge the way a setup sheet does, on a curve
+  that overshoots very slightly — that overshoot is most of what separates a
+  sheet that "springs" from one that merely slides.
+*/
+.intro-card {
   position: relative;
   z-index: 1;
-  flex: 0 0 auto;
-}
-
-.intro > *:first-child { margin-top: auto; }
-.intro > *:last-child  { margin-bottom: auto; }
-
-/*
-  Staggered entrance, one beat per block. A landing page that paints all at
-  once reads as a static image; arriving in order reads as authored.
-*/
-.intro-biggie,
-.intro-word span,
-.intro-where,
-.intro-story p,
-.intro-join,
-.intro-designs,
-.intro-btn,
-.intro-enter {
-  animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.intro-biggie          { animation-delay: 40ms; }
-.intro-word span:first-child { animation-delay: 200ms; }
-.intro-word span:last-child  { animation-delay: 280ms; }
-.intro-where           { animation-delay: 350ms; }
-.intro-story p:nth-child(1) { animation-delay: 430ms; }
-.intro-story p:nth-child(2) { animation-delay: 500ms; }
-.intro-story p:nth-child(3) { animation-delay: 570ms; }
-.intro-story p:nth-child(4) { animation-delay: 640ms; }
-.intro-join            { animation-delay: 710ms; }
-.intro-designs         { animation-delay: 770ms; }
-.intro-btn:nth-child(1) { animation-delay: 780ms; }
-.intro-btn:nth-child(2) { animation-delay: 840ms; }
-.intro-btn:nth-child(3) { animation-delay: 900ms; }
-.intro-btn:nth-child(4) { animation-delay: 960ms; }
-.intro-enter           { animation-delay: 1020ms; }
-
-@keyframes intro-rise {
-  from { opacity: 0; transform: translateY(18px) scale(0.96); }
-  to   { opacity: 1; transform: none; }
-}
-
-/* The bar itself fades in under its tiles, so they do not appear on nothing. */
-.intro-dock {
-  animation: intro-dock-in 620ms cubic-bezier(0.16, 1, 0.3, 1) 700ms both;
-}
-
-/*
-  The pitch to the next business. Set apart from the story above it — a dashed
-  edge, echoing the blank tiles it is talking about, so it reads as an invitation
-  to fill something rather than as another paragraph.
-*/
-.intro-join {
-  width: min(100%, 400px);
-  padding: 13px 16px 12px;
-  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  text-align: left;
-  background: rgba(255, 255, 255, 0.2);
-  border: 1.5px dashed rgba(20, 20, 20, 0.28);
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease,
-    border-color 180ms ease;
+  width: min(100%, 440px);
+  max-height: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    0 30px 70px rgba(80, 62, 0, 0.3),
+    0 2px 0 rgba(255, 255, 255, 0.7) inset;
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  animation: card-rise 760ms cubic-bezier(0.22, 1.05, 0.36, 1) 80ms both;
 }
 
-.intro-join:active {
-  transform: scale(0.98);
-  background: rgba(255, 255, 255, 0.36);
-  border-color: rgba(20, 20, 20, 0.45);
-}
-
-.intro-join-head {
-  font-size: 13.5px;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-  color: #141414;
-}
-
-.intro-join-body {
-  font-size: 12.5px;
-  line-height: 1.45;
-  color: rgba(20, 20, 20, 0.72);
-}
-
-/*
-  BEASTY Designs. Dark rather than dashed: the join card above it is an empty
-  tile waiting to be filled, and this is a service that already exists. Two
-  different offers should not look like the same card twice.
-*/
-.intro-designs {
-  width: min(100%, 400px);
-  padding: 12px 14px;
-  border-radius: 20px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  text-align: left;
-  background: rgba(16, 16, 16, 0.94);
-  color: #f6d800;
-  box-shadow: 0 14px 30px rgba(80, 62, 0, 0.28);
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease;
-}
-
-.intro-designs:active {
-  transform: scale(0.98);
-  background: rgba(16, 16, 16, 1);
-}
-
-/* The mark sits on the brand yellow, the way it will on a business card. */
-.intro-designs-mark {
-  flex: 0 0 auto;
-  display: grid;
-  place-items: center;
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  background: #f6d800;
-  color: #141414;
-}
-
-.intro-designs-text {
-  flex: 1 1 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-  min-width: 0;
-}
-
-.intro-designs-name {
-  font-size: 14px;
-  font-weight: 800;
-  letter-spacing: 0.01em;
-}
-
-.intro-designs-sub {
-  font-size: 11.5px;
-  line-height: 1.35;
-  color: rgba(246, 216, 0, 0.62);
-}
-
-.intro-designs-go {
-  flex: 0 0 auto;
-  opacity: 0.6;
-}
-
-.intro-join-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 3px;
-  font-size: 12.5px;
-  font-weight: 800;
-  color: #141414;
-}
-
-@keyframes intro-dock-in {
-  from { opacity: 0; transform: translateY(22px) scale(0.97); }
+@keyframes card-rise {
+  from { opacity: 0; transform: translateY(64px) scale(0.96); }
   to   { opacity: 1; transform: none; }
 }
 
 .intro.is-leaving {
-  animation: intro-out 260ms cubic-bezier(0.32, 0.72, 0, 1) both;
+  animation: intro-out 280ms ease both;
   pointer-events: none;
 }
 
+.intro.is-leaving .intro-card {
+  animation: card-drop 280ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
 @keyframes intro-out {
-  to { opacity: 0; transform: scale(0.985); }
+  to { opacity: 0; }
+}
+
+@keyframes card-drop {
+  to { opacity: 0; transform: translateY(40px) scale(0.97); }
+}
+
+.intro-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(10px, 1.8vh, 16px);
+  padding: 22px 18px 18px;
+}
+
+/* Hide the bar; the card edge already says it moves. */
+.intro-scroll::-webkit-scrollbar {
+  display: none;
 }
 
 .intro-mark {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(4px, 1vh, 10px);
-}
-
-.intro-biggie {
-  /* Sized by HEIGHT, not width: the artwork is portrait (355x520), so sizing
-     by width rendered a 308px-tall dog that swallowed a third of the screen. */
-  height: clamp(84px, 13vh, 124px);
-  width: auto;
-  display: block;
-  /* Grounds him on the yellow instead of letting him float. */
-  filter: drop-shadow(0 14px 22px rgba(120, 92, 0, 0.28));
+  gap: 6px;
 }
 
 /*
-  He drifts, very slightly, once he has arrived. Six seconds and five pixels —
-  enough that the screen is never quite still, nowhere near enough to read as
-  a bouncing graphic. It waits out the entrance so the two do not fight.
+  The lit stage the product stands on. A soft pool of light with a shadow under
+  it — an AirPods card reads as a photograph of an object because of exactly
+  these two things, not because of the render.
 */
+.intro-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 6px 30px 12px;
+}
+
+.intro-stage::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  width: 230px;
+  height: 230px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 232, 60, 0.85) 0%, rgba(255, 232, 60, 0) 66%);
+  animation: stage-glow 7s ease-in-out infinite;
+}
+
+/* Contact shadow on the floor, so he stands rather than hovers. */
+.intro-stage::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 96px;
+  height: 13px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background: radial-gradient(ellipse, rgba(90, 70, 0, 0.34) 0%, rgba(90, 70, 0, 0) 72%);
+  animation: stage-shadow 6s ease-in-out 900ms infinite;
+}
+
+@keyframes stage-glow {
+  0%, 100% { opacity: 0.75; transform: translate(-50%, -50%) scale(1); }
+  50%      { opacity: 1;    transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* Tightens as he rises, the way a real contact shadow does. */
+@keyframes stage-shadow {
+  0%, 100% { opacity: 0.85; transform: translateX(-50%) scaleX(1); }
+  50%      { opacity: 0.5;  transform: translateX(-50%) scaleX(0.82); }
+}
+
 .intro-biggie {
+  position: relative;
+  /* Sized by HEIGHT: the artwork is portrait (355x520), so sizing by width
+     rendered a 308px-tall dog that swallowed a third of the screen. */
+  height: clamp(96px, 15vh, 140px);
+  width: auto;
+  display: block;
+  filter: drop-shadow(0 10px 14px rgba(120, 92, 0, 0.22));
+  /*
+    He drifts once he has arrived — six seconds, six pixels. Enough that the
+    card is never quite still, nowhere near enough to read as a bouncing
+    graphic. It waits out the entrance so the two do not fight.
+  */
   animation:
-    intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) 40ms both,
-    intro-float 6s ease-in-out 900ms infinite;
+    intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both,
+    intro-float 6s ease-in-out 1100ms infinite;
 }
 
 @keyframes intro-float {
   0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-6px); }
+  50%      { transform: translateY(-7px); }
 }
 
 .intro-word {
@@ -3615,7 +3513,7 @@ textarea {
   font-weight: 800;
   font-stretch: condensed;
   letter-spacing: -0.035em;
-  font-size: clamp(28px, 8.6vw, 46px);
+  font-size: clamp(30px, 9vw, 46px);
 }
 
 .intro-word span {
@@ -3634,39 +3532,65 @@ textarea {
 }
 
 .intro-where {
-  margin: 2px 0 0;
-  font-size: 11.5px;
+  margin: 3px 0 0;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(20, 20, 20, 0.5);
+  color: rgba(20, 20, 20, 0.45);
+}
+
+/* The one line that says what this is, in the setup-card manner. */
+.intro-sub {
+  margin: 2px 0 0;
+  max-width: 30ch;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.45;
+  color: rgba(20, 20, 20, 0.62);
 }
 
 /*
-  The story. Ranged left because it is four paragraphs of prose, on a card that
-  is lighter than the dock so it reads as paper rather than as another control.
+  Staggered entrance, one beat per block. A card that paints all at once reads
+  as an image; arriving in order reads as authored.
 */
+.intro-word span,
+.intro-where,
+.intro-sub,
+.intro-story,
+.intro-join,
+.intro-dock {
+  animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.intro-word span:first-child { animation-delay: 420ms; }
+.intro-word span:last-child  { animation-delay: 490ms; }
+.intro-where { animation-delay: 550ms; }
+.intro-sub   { animation-delay: 610ms; }
+.intro-dock  { animation-delay: 670ms; }
+.intro-story { animation-delay: 740ms; }
+.intro-join  { animation-delay: 800ms; }
+
+@keyframes intro-rise {
+  from { opacity: 0; transform: translateY(14px) scale(0.97); }
+  to   { opacity: 1; transform: none; }
+}
+
 .intro-story {
-  width: min(100%, 400px);
-  padding: 16px 18px;
-  border-radius: 22px;
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  gap: 9px;
-  background: rgba(255, 255, 255, 0.34);
-  border: 1px solid rgba(255, 255, 255, 0.55);
-  box-shadow:
-    0 12px 28px rgba(120, 92, 0, 0.14),
-    inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  gap: 8px;
+  background: rgba(20, 20, 20, 0.045);
 }
 
 .intro-story p {
   margin: 0;
-  font-size: 13px;
+  font-size: 12.5px;
   line-height: 1.5;
-  color: rgba(20, 20, 20, 0.8);
+  color: rgba(20, 20, 20, 0.72);
 }
 
 /* The opening line names him; it carries the weight of the rest. */
@@ -3676,25 +3600,60 @@ textarea {
 }
 
 /*
-  DARK glass, not light. A white-tinted bar over a yellow ground just reads as
-  a paler yellow — the panel disappeared and the yellow EATS icon inside it had
-  nothing to be brighter than. Dark inverts that: the bar recedes and the icon
-  becomes the one lit object on the screen.
+  The pitch to the next business. Dashed, echoing the blank tiles it is talking
+  about, so it reads as an invitation to fill something.
+*/
+.intro-join {
+  width: 100%;
+  padding: 13px 15px 12px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  background: rgba(246, 216, 0, 0.16);
+  border: 1.5px dashed rgba(20, 20, 20, 0.24);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease;
+}
+
+.intro-join:active {
+  transform: scale(0.98);
+  background: rgba(246, 216, 0, 0.3);
+}
+
+.intro-join-head {
+  font-size: 13px;
+  font-weight: 800;
+  color: #141414;
+}
+
+.intro-join-body {
+  font-size: 12px;
+  line-height: 1.45;
+  color: rgba(20, 20, 20, 0.66);
+}
+
+.intro-join-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #141414;
+}
+
+/*
+  Four shortcuts, kept QUIET. A setup card has one loud action; these sit on
+  the card surface rather than on a bar of their own, so nothing competes with
+  the pinned button below.
 */
 .intro-dock {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: clamp(4px, 1.5vw, 10px);
-  width: min(100%, 400px);
-  padding: 9px;
-  border-radius: 28px;
-  background: rgba(16, 16, 16, 0.94);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    0 18px 38px rgba(80, 62, 0, 0.34),
-    inset 0 1px 0 rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(18px) saturate(1.3);
-  -webkit-backdrop-filter: blur(18px) saturate(1.3);
+  gap: 6px;
+  width: 100%;
 }
 
 .intro-btn {
@@ -3702,38 +3661,26 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 7px;
-  padding: 11px 4px 9px;
-  border-radius: 20px;
-  color: #f4f4f4;
+  gap: 6px;
+  padding: 10px 4px 8px;
+  border-radius: 18px;
+  color: #141414;
+  background: rgba(20, 20, 20, 0.045);
   /* 44pt minimum, per the platform, not per what fits. */
-  min-height: 70px;
+  min-height: 66px;
   transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
 }
 
 .intro-btn:active {
   transform: scale(0.92);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(20, 20, 20, 0.1);
 }
 
-/*
-  The EATS tile is the app icon itself — the yellow ground and black Biggie
-  already signed off on — not a recoloured button.
-*/
+/* The EATS tile is the app icon itself — the yellow ground and black Biggie
+   already signed off on — not a recoloured button. */
 .intro-btn.is-primary {
   background: linear-gradient(170deg, #ffe63d, #f2cf00);
-  color: #141414;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
-  /* A slow glow after everything has landed, so the way in keeps announcing
-     itself without anything moving. */
-  animation:
-    intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) 760ms both,
-    intro-pulse 3.4s ease-in-out 1600ms infinite;
-}
-
-@keyframes intro-pulse {
-  0%, 100% { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), 0 0 0 0 rgba(255, 255, 255, 0); }
-  50%      { box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45), 0 0 0 5px rgba(255, 255, 255, 0.16); }
+  box-shadow: 0 4px 12px rgba(180, 150, 0, 0.35);
 }
 
 .intro-btn.is-primary:active {
@@ -3742,9 +3689,9 @@ textarea {
 
 .intro-btn em {
   font-style: normal;
-  font-size: 11px;
+  font-size: 10.5px;
   font-weight: 700;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 .intro-btn.is-primary em {
@@ -3753,29 +3700,24 @@ textarea {
 
 .intro-btn-dog {
   display: block;
-  /* Black mark on the yellow ground — no inversion; the icon is as approved. */
-  height: 24px;
+  height: 23px;
   width: auto;
 }
 
 .intro-panel {
-  width: min(100%, 400px);
-  padding: 13px 16px;
+  width: 100%;
+  padding: 12px 15px;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.42);
-  border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 10px 24px rgba(120, 92, 0, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(20, 20, 20, 0.045);
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 5px;
   text-align: center;
   animation: intro-rise 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .intro-panel a {
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
   color: #141414;
   text-decoration: none;
@@ -3783,45 +3725,72 @@ textarea {
 
 .intro-panel p {
   margin: 0;
-  font-size: 13px;
+  font-size: 12.5px;
   line-height: 1.45;
-  color: rgba(20, 20, 20, 0.72);
+  color: rgba(20, 20, 20, 0.68);
 }
 
 /*
-  A second solid black pill under a solid black bar stacked two heavy blocks on
-  top of each other. This is the quiet way in; the lit EATS tile is the loud
-  one.
+  The pinned action, in the setup-card manner: one button, always in reach,
+  with a hairline over it that only appears once there is something scrolled
+  underneath.
 */
+.intro-action {
+  flex: 0 0 auto;
+  padding: 12px 18px calc(14px + env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(20, 20, 20, 0.07);
+  background: rgba(255, 255, 255, 0.5);
+  animation: intro-rise 600ms cubic-bezier(0.16, 1, 0.3, 1) 850ms both;
+}
+
 .intro-enter {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 9px;
-  padding: 13px 30px;
+  padding: 16px 24px;
   border-radius: 999px;
-  background: transparent;
-  border: 1.5px solid rgba(20, 20, 20, 0.28);
-  color: #141414;
-  font-size: 15.5px;
+  background: #141414;
+  color: #f6d800;
+  font-size: 16px;
   font-weight: 800;
-  letter-spacing: 0.01em;
-  min-height: 46px;
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
+  min-height: 52px;
+  box-shadow: 0 10px 22px rgba(60, 46, 0, 0.28);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .intro-enter:active {
-  transform: scale(0.96);
-  background: rgba(20, 20, 20, 0.09);
+  transform: scale(0.975);
 }
 
-/* The arrow leans the way the button goes, every few seconds. */
+/* A sheen crossing the button every few seconds — the one flourish on the
+   screen's only loud control. */
+.intro-enter::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 44%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+  animation: enter-sheen 4.5s ease-in-out 1900ms infinite;
+}
+
+@keyframes enter-sheen {
+  0%, 62%, 100% { left: -50%; }
+  86%           { left: 110%; }
+}
+
 .intro-enter svg {
-  animation: intro-nudge 3s ease-in-out 1800ms infinite;
+  position: relative;
+  animation: intro-nudge 3.4s ease-in-out 2100ms infinite;
 }
 
 @keyframes intro-nudge {
-  0%, 72%, 100% { transform: translateX(0); }
-  82%           { transform: translateX(4px); }
+  0%, 74%, 100% { transform: translateX(0); }
+  84%           { transform: translateX(4px); }
 }
 
 /*
@@ -3830,18 +3799,19 @@ textarea {
 */
 @media (prefers-reduced-motion: reduce) {
   .intro,
-  .intro.is-leaving,
-  .intro::before,
+  .intro.is-leaving .intro-card,
+  .intro-card,
+  .intro-stage::before,
+  .intro-stage::after,
   .intro-biggie,
   .intro-word span,
   .intro-where,
-  .intro-story p,
+  .intro-sub,
+  .intro-story,
   .intro-join,
-  .intro-designs,
   .intro-dock,
-  .intro-btn,
-  .intro-btn.is-primary,
-  .intro-enter,
+  .intro-action,
+  .intro-enter::after,
   .intro-enter svg,
   .intro-panel {
     animation: none;
