@@ -22,6 +22,22 @@ interface Props {
   inert?: boolean
 }
 
+/*
+  Type size by name length.
+
+  A clock is always four or five glyphs wide, so it can be set once and left.
+  A place name is not: HAYWARD is seven characters and SOUTH SAN FRANCISCO is
+  nineteen, and one size that suits both suits neither. Four steps, so the label
+  fills about the same width whatever it says.
+*/
+function citySize(name: string): 'xl' | 'lg' | 'md' | 'sm' {
+  const n = name.length
+  if (n <= 7) return 'xl'
+  if (n <= 10) return 'lg'
+  if (n <= 14) return 'md'
+  return 'sm'
+}
+
 export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
@@ -278,7 +294,14 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
         costs more than a city name is worth.
       */}
       <button
-        className={`home-city${locating ? ' is-locating' : ''}`}
+        className={[
+          'home-city',
+          locating ? 'is-locating' : '',
+          // A sentence set at clock size is not a clock. Notes drop to caption.
+          cityNote ? 'is-note' : `is-${citySize(city)}`,
+        ]
+          .filter(Boolean)
+          .join(' ')}
         onClick={findCity}
         aria-label={`Showing ${city}. Tap to use your location.`}
       >

@@ -3047,52 +3047,105 @@ textarea {
 }
 
 /*
-  City label, iOS lock-screen manner: a wide-tracked line in glass, sitting
-  above the page dots.
+  City label, in the iOS lock-screen manner.
 
-  Faint on purpose. It answers "where am I ordering from" for anyone who
-  wonders and stays out of the way of everyone who does not, so it is set at
-  the weight of a caption rather than a heading — and it takes no pointer
-  events, because it is information, not a button.
+  Not a pill any more. What makes a lock-screen clock read the way it does is
+  three things and none of them is a container: it is LARGE, it is set in a
+  light weight of the system face, and it is translucent enough that the
+  wallpaper shows through the strokes.
+
+  The face matters. -apple-system first gets real SF Pro Display on an iPhone,
+  which is the actual lock-screen typeface and carries weights down to 100.
+  Inter is only self-hosted here at 400 and up, so on anything else this lands
+  at 400 and simply looks a little heavier — the shape survives, the weight
+  does not, and that is the right way round.
 */
 .home-city {
   position: absolute;
   left: 50%;
-  bottom: calc(var(--bottom-h) + 186px);
+  bottom: calc(var(--bottom-h) + 190px);
   transform: translateX(-50%) translateZ(0);
-  padding: 5px 13px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 0.5px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(12px) saturate(140%);
-  -webkit-backdrop-filter: blur(12px) saturate(140%);
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
+  max-width: calc(100% - 32px);
+  padding: 4px 10px;
+  font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, Inter, system-ui, sans-serif;
+  /* SF Pro goes this light; Inter will land at 400 and that is fine. */
+  font-weight: 300;
+  letter-spacing: 0.035em;
+  line-height: 1;
   text-transform: uppercase;
   white-space: nowrap;
-  /* A long place name must never run off the screen. Clamping the stored value
-     to 40 characters is not enough on its own: 40 characters of wide-tracked
-     uppercase measures 414px on a 390px phone. */
-  max-width: calc(100% - 48px);
   overflow: hidden;
   text-overflow: ellipsis;
+
+  /*
+    Glass, not paint. The gradient is clipped to the glyphs and none of its
+    stops is fully opaque, so the wallpaper reads through the strokes — bright
+    along the top edge, thinner through the middle, picking up again at the
+    foot, which is how a lit glass letterform behaves.
+  */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96) 0%,
+    rgba(255, 255, 255, 0.62) 46%,
+    rgba(255, 255, 255, 0.86) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  /*
+    drop-shadow, NOT text-shadow. A text-shadow paints behind the glyph box,
+    and with a transparent fill it would show through as a solid silhouette and
+    fill in every counter. A filter applies to the clipped result instead.
+  */
+  filter: drop-shadow(0 2px 10px rgba(0, 0, 0, 0.45));
+
   z-index: 6;
-  min-height: 26px;
-  transition: color 200ms ease, background 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
-  animation: city-in 700ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both;
+  transition: opacity 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
+  animation: city-in 800ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both;
+}
+
+/*
+  Four steps, chosen so the label occupies about the same width whatever it
+  says. A clock is always four or five glyphs; a place name is seven for
+  HAYWARD and nineteen for SOUTH SAN FRANCISCO.
+*/
+.home-city.is-xl { font-size: clamp(34px, 12.5vw, 52px); }
+.home-city.is-lg { font-size: clamp(28px, 10vw, 42px); }
+.home-city.is-md { font-size: clamp(22px, 7.6vw, 32px); }
+.home-city.is-sm { font-size: clamp(17px, 5.6vw, 24px); }
+
+/*
+  A note is a sentence, and a sentence set at clock size is not a clock. It
+  drops back to a caption on a plate, where it can wrap and be read.
+*/
+.home-city.is-note {
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.42);
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  color: rgba(255, 255, 255, 0.9);
+  filter: none;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .home-city:active {
-  transform: translateX(-50%) scale(0.94);
-  background: rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.9);
+  transform: translateX(-50%) scale(0.96);
+  opacity: 0.75;
+}
+
+@keyframes city-in {
+  from { opacity: 0; transform: translateX(-50%) translateY(10px) scale(0.96); }
+  to   { opacity: 1; transform: translateX(-50%) translateZ(0); }
 }
 
 /* Breathes while the fix is in flight, so a slow GPS does not look frozen. */
 .home-city.is-locating {
-  animation: city-in 700ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both,
+  animation: city-in 800ms cubic-bezier(0.16, 1, 0.3, 1) 240ms both,
     city-wait 1.3s ease-in-out infinite;
 }
 
@@ -3101,15 +3154,9 @@ textarea {
   50%      { opacity: 0.45; }
 }
 
-@keyframes city-in {
-  from { opacity: 0; transform: translateX(-50%) translateY(6px); }
-  to   { opacity: 1; transform: translateX(-50%) translateZ(0); }
-}
-
 /* It belongs to the home screen, so it recedes with it when an app opens. */
 .home.is-receding .home-city {
   opacity: 0;
-  transition: opacity 200ms ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -3117,38 +3164,6 @@ textarea {
   .home-city.is-locating {
     animation: none;
   }
-}
-
-/*
-  A quoted service row. Same shape as a menu row so the screen still reads as
-  one system, but flat: no press state and no add target, because there is
-  nothing to press.
-*/
-.menu-row.is-quote {
-  cursor: default;
-  align-items: flex-start;
-}
-
-.menu-row.is-quote:active {
-  transform: none;
-  background: #fff;
-}
-
-.menu-row.is-quote .menu-row-price {
-  /* A range is longer than a price and must not be squeezed onto two lines. */
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-}
-
-/* States that the numbers below are quotes before anyone reads one as a fee. */
-.brand-quote-note {
-  margin: 0 0 14px;
-  padding: 11px 13px;
-  border-radius: 12px;
-  background: rgba(0, 122, 255, 0.09);
-  color: #0a4a9e;
-  font-size: 12.5px;
-  line-height: 1.45;
 }
 
 /* ---------- BEASTY Designs ---------- */
