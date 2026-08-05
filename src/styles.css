@@ -3179,6 +3179,24 @@ textarea {
   text-indent: 0.2em;
 }
 
+/* Quiet by design. It sits under a wordmark that has already shouted. */
+.intro-byline {
+  margin-top: 4px;
+  padding: 8px 12px;
+  min-height: 36px;
+  border-radius: 999px;
+  color: rgba(20, 20, 20, 0.62);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.intro-byline:active {
+  background: rgba(20, 20, 20, 0.09);
+  color: #141414;
+}
+
 /*
   One floating bar rather than four separate plates. Frosted, so it picks up
   the bloom behind it and reads as a surface sitting above the ground.
@@ -3285,6 +3303,58 @@ textarea {
   font-size: 13px;
   line-height: 1.45;
   color: rgba(20, 20, 20, 0.72);
+}
+
+/*
+  Four paragraphs of prose, so it breaks the panel's centred single-line
+  layout: ranged left to read, and capped with its own scroll so a long story
+  never pushes the way in off a short screen.
+*/
+.intro-panel.is-about {
+  text-align: left;
+  gap: 10px;
+  /* Still capped, but only as a backstop for a very short screen — the mark
+     shrinks to make room first, so the story normally fits whole. */
+  max-height: 52vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/*
+  Reading mode. Biggie and the wordmark give up their room to the story rather
+  than the story being cut off mid-sentence in a box under them — which is a
+  bad way to read any paragraph and a worse way to read this one.
+*/
+.intro.is-reading .intro-biggie {
+  height: clamp(64px, 10vh, 100px);
+}
+
+.intro.is-reading .intro-word {
+  font-size: clamp(24px, 7vw, 34px);
+}
+
+.intro.is-reading .intro-byline {
+  color: #141414;
+  background: rgba(20, 20, 20, 0.09);
+}
+
+.intro-biggie,
+.intro-word {
+  transition: height 320ms cubic-bezier(0.16, 1, 0.3, 1),
+    font-size 320ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.intro-panel.is-about p {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(20, 20, 20, 0.8);
+}
+
+/* The opening line names him; it carries the weight of the rest. */
+.intro-panel.is-about p:first-child {
+  font-weight: 700;
+  color: #141414;
 }
 
 /*
