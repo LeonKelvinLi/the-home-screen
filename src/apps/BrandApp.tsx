@@ -111,6 +111,10 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               which it is not, for every partner but top dog. */}
           {brand.menuNote && <p className="menu-note">{brand.menuNote}</p>}
 
+          {/* How to actually start, stated before the prices rather than under
+              them, because "these are quotes" changes how the list is read. */}
+          {brand.quoteOnly && <p className="brand-quote-note">{brand.quoteOnly}</p>}
+
           {/* A single-category menu needs no tab bar — one lone pill that
               repeats the section heading below it is pure noise. */}
           {brand.menu.length > 1 && (
@@ -130,8 +134,19 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {brand.menu.map((cat) => (
             <section className="menu-cat" id={`cat-${cat.id}`} key={cat.id}>
               {brand.menu.length > 1 && <h2>{cat.name}</h2>}
-              {cat.items.map((item) => (
-                <button className="menu-row" key={item.id} onClick={() => setSheetItem(item)}>
+              {cat.items.map((item) => {
+                /*
+                  Quoted work is a PRICE LIST, not a menu. No add button, no
+                  item sheet, and nothing that could put a $650 website in a
+                  cart next to a hot dog.
+                */
+                const Row = brand.quoteOnly ? 'div' : 'button'
+                return (
+                <Row
+                  className={`menu-row${brand.quoteOnly ? ' is-quote' : ''}`}
+                  key={item.id}
+                  {...(brand.quoteOnly ? {} : { onClick: () => setSheetItem(item) })}
+                >
                   <span className="menu-row-text">
                     <span className="menu-row-name">
                       {item.name}
@@ -146,21 +161,25 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                     {item.imageIsIllustration && (
                       <span className="menu-row-illus">Illustration, not their photo</span>
                     )}
-                    <span className="menu-row-price">{money(item.price)}</span>
+                    {/* A range, where a range is what is actually quoted. */}
+                    <span className="menu-row-price">{item.priceLabel ?? money(item.price)}</span>
                   </span>
-                  <span className="menu-row-thumb">
-                    <ItemThumb
-                      name={item.name}
-                      desc={item.desc}
-                      bg={brand.logo.bg}
-                      fg={brand.logo.fg}
-                      cuisine={brand.cuisine}
-                      imageUrl={item.imageUrl}
-                    />
-                    <span className="menu-row-add">+</span>
-                  </span>
-                </button>
-              ))}
+                  {!brand.quoteOnly && (
+                    <span className="menu-row-thumb">
+                      <ItemThumb
+                        name={item.name}
+                        desc={item.desc}
+                        bg={brand.logo.bg}
+                        fg={brand.logo.fg}
+                        cuisine={brand.cuisine}
+                        imageUrl={item.imageUrl}
+                      />
+                      <span className="menu-row-add">+</span>
+                    </span>
+                  )}
+                </Row>
+                )
+              })}
             </section>
           ))}
 
@@ -174,14 +193,26 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           )}
 
-          {/* No published menu: show how to actually reach them instead of an
-              empty list or an invented one. */}
-          {brand.contactOnly && (
+          {/*
+            How to actually reach them.
+
+            Two cases, not one: a business with no published menu, and a
+            business whose work is quoted rather than ordered. Both need a real
+            route out of the app, and the quoted one needs it MOST — the whole
+            screen is a price list with no way to buy anything.
+          */}
+          {(brand.contactOnly || brand.quoteOnly) && (
             <div className="brand-contact">
-              <p>{brand.contactOnly}</p>
+              {brand.contactOnly && <p>{brand.contactOnly}</p>}
+              {brand.quoteOnly && <p>Start with a free consultation.</p>}
               {brand.phone && (
                 <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}>
                   Call {brand.phone}
+                </a>
+              )}
+              {brand.email && (
+                <a className="btn-secondary" href={`mailto:${brand.email}`}>
+                  Email {brand.email}
                 </a>
               )}
               {brand.site && (
@@ -218,7 +249,11 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               data says they came off a delivery platform with a markup. */}
           <p className="brand-foot">
             {brand.name} is operated independently.{' '}
-            {brand.pricesEstimated ? 'Prices here still need confirming with them.' : 'Prices set by the kitchen.'}
+            {brand.quoteOnly
+              ? 'Ranges are indicative; the quote is what counts.'
+              : brand.pricesEstimated
+                ? 'Prices here still need confirming with them.'
+                : 'Prices set by the kitchen.'}
           </p>
         </div>
       </AppChrome>

@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { BLANK_PAGES } from './registry'
+import { LISTED_KITCHENS } from '../data/brands'
 
 /**
  * The landing screen, shown before the home screen.
@@ -24,9 +26,11 @@ export const OPERATOR_EMAIL: string = ''
 interface Props {
   onEnter: () => void
   onWater: () => void
+  /** Enter and land straight on the Reserve screen. */
+  onJoin: () => void
 }
 
-export function IntroScreen({ onEnter, onWater }: Props) {
+export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
   const [panel, setPanel] = useState<'none' | 'phone' | 'share'>('none')
   const [copied, setCopied] = useState(false)
 
@@ -83,6 +87,29 @@ export function IntroScreen({ onEnter, onWater }: Props) {
           from all of them.
         </p>
       </div>
+
+      {/*
+        The pitch to the next business, on the front door rather than eight
+        pages deep.
+
+        Every claim here is one the Reserve screen already makes and the app can
+        actually keep: your own icon, your own prices, and however many blank
+        tiles genuinely exist. NOTHING about cost — no fee has ever been agreed,
+        and "free to list" is a commercial term, not a design decision.
+      */}
+      <button className="intro-join" onClick={onJoin}>
+        <span className="intro-join-head">Run a local business?</span>
+        <span className="intro-join-body">
+          Your own icon on this home screen, your own menu, your own prices, alongside{' '}
+          {LISTED_KITCHENS.length} local businesses. {BLANK_PAGES} pages of blank tiles are waiting.
+        </span>
+        <span className="intro-join-cta">
+          Claim a tile
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M5 12h13M12 6l6 6-6 6" />
+          </svg>
+        </span>
+      </button>
 
       <div className="intro-dock">
         <button className="intro-btn" onClick={() => setPanel(panel === 'phone' ? 'none' : 'phone')}>

@@ -3119,6 +3119,38 @@ textarea {
   }
 }
 
+/*
+  A quoted service row. Same shape as a menu row so the screen still reads as
+  one system, but flat: no press state and no add target, because there is
+  nothing to press.
+*/
+.menu-row.is-quote {
+  cursor: default;
+  align-items: flex-start;
+}
+
+.menu-row.is-quote:active {
+  transform: none;
+  background: #fff;
+}
+
+.menu-row.is-quote .menu-row-price {
+  /* A range is longer than a price and must not be squeezed onto two lines. */
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* States that the numbers below are quotes before anyone reads one as a fee. */
+.brand-quote-note {
+  margin: 0 0 14px;
+  padding: 11px 13px;
+  border-radius: 12px;
+  background: rgba(0, 122, 255, 0.09);
+  color: #0a4a9e;
+  font-size: 12.5px;
+  line-height: 1.45;
+}
+
 /* ---------- intro / landing ----------
 
    Shown before the home screen. Brand-first: their yellow, their dog, their
@@ -3141,8 +3173,8 @@ textarea {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: clamp(12px, 2.4vh, 20px);
-  padding: calc(24px + env(safe-area-inset-top)) 20px
+  gap: clamp(10px, 1.8vh, 16px);
+  padding: calc(20px + env(safe-area-inset-top)) 20px
     calc(22px + var(--bottom-h) + var(--gesture-h));
   overflow-y: auto;
   overflow-x: hidden;
@@ -3206,6 +3238,7 @@ textarea {
 .intro-word span,
 .intro-where,
 .intro-story p,
+.intro-join,
 .intro-btn,
 .intro-enter {
   animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -3219,11 +3252,12 @@ textarea {
 .intro-story p:nth-child(2) { animation-delay: 500ms; }
 .intro-story p:nth-child(3) { animation-delay: 570ms; }
 .intro-story p:nth-child(4) { animation-delay: 640ms; }
-.intro-btn:nth-child(1) { animation-delay: 700ms; }
-.intro-btn:nth-child(2) { animation-delay: 760ms; }
-.intro-btn:nth-child(3) { animation-delay: 820ms; }
-.intro-btn:nth-child(4) { animation-delay: 880ms; }
-.intro-enter           { animation-delay: 940ms; }
+.intro-join            { animation-delay: 710ms; }
+.intro-btn:nth-child(1) { animation-delay: 780ms; }
+.intro-btn:nth-child(2) { animation-delay: 840ms; }
+.intro-btn:nth-child(3) { animation-delay: 900ms; }
+.intro-btn:nth-child(4) { animation-delay: 960ms; }
+.intro-enter           { animation-delay: 1020ms; }
 
 @keyframes intro-rise {
   from { opacity: 0; transform: translateY(18px) scale(0.96); }
@@ -3232,7 +3266,56 @@ textarea {
 
 /* The bar itself fades in under its tiles, so they do not appear on nothing. */
 .intro-dock {
-  animation: intro-dock-in 620ms cubic-bezier(0.16, 1, 0.3, 1) 620ms both;
+  animation: intro-dock-in 620ms cubic-bezier(0.16, 1, 0.3, 1) 700ms both;
+}
+
+/*
+  The pitch to the next business. Set apart from the story above it — a dashed
+  edge, echoing the blank tiles it is talking about, so it reads as an invitation
+  to fill something rather than as another paragraph.
+*/
+.intro-join {
+  width: min(100%, 400px);
+  padding: 13px 16px 12px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1.5px dashed rgba(20, 20, 20, 0.28);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease,
+    border-color 180ms ease;
+}
+
+.intro-join:active {
+  transform: scale(0.98);
+  background: rgba(255, 255, 255, 0.36);
+  border-color: rgba(20, 20, 20, 0.45);
+}
+
+.intro-join-head {
+  font-size: 13.5px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #141414;
+}
+
+.intro-join-body {
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+.intro-join-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 3px;
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #141414;
 }
 
 @keyframes intro-dock-in {
@@ -3259,7 +3342,7 @@ textarea {
 .intro-biggie {
   /* Sized by HEIGHT, not width: the artwork is portrait (355x520), so sizing
      by width rendered a 308px-tall dog that swallowed a third of the screen. */
-  height: clamp(96px, 16vh, 150px);
+  height: clamp(84px, 13vh, 124px);
   width: auto;
   display: block;
   /* Grounds him on the yellow instead of letting him float. */
@@ -3292,7 +3375,7 @@ textarea {
   font-weight: 800;
   font-stretch: condensed;
   letter-spacing: -0.035em;
-  font-size: clamp(32px, 10vw, 52px);
+  font-size: clamp(28px, 8.6vw, 46px);
 }
 
 .intro-word span {
@@ -3513,6 +3596,7 @@ textarea {
   .intro-word span,
   .intro-where,
   .intro-story p,
+  .intro-join,
   .intro-dock,
   .intro-btn,
   .intro-btn.is-primary,

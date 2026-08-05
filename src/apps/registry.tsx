@@ -98,6 +98,16 @@ export const makeSlot = (key: string | number): AppDef => ({
  */
 export const BLANK_PAGES = 4
 
+/*
+  The Reserve screen as a destination, for anything that wants to open it
+  without a blank tile being tapped — the landing page's join section does.
+
+  Not in ALL_APPS and not on the grid: it must not become a home-screen icon.
+  appById resolves any slot.* id, so this opens the same screen a blank tile
+  does.
+*/
+export const RESERVE_APP_ID = 'slot.join'
+
 export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP]
 
 /*
@@ -122,7 +132,17 @@ const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
  * page: page one now ends after the last kitchen even if there is room left.
  * That is the point of the split, not a regression.
  */
-const isOrderable = (a: AppDef) => a.kind === 'brand' && !brandById(a.id)?.contactOnly
+/*
+  Page 1 is what you can order food and drink from.
+
+  `quoteOnly` has to be excluded as well as `contactOnly`: a software studio has
+  a priced list and no contactOnly flag, so it read as orderable and landed on
+  page one among the kitchens.
+*/
+const isOrderable = (a: AppDef) => {
+  const b = brandById(a.id)
+  return a.kind === 'brand' && !b?.contactOnly && !b?.quoteOnly
+}
 
 const CURIO = BRAND_APPS.filter((a) => a.id === 'b_curio')
 const KITCHENS = BRAND_APPS.filter(isOrderable)

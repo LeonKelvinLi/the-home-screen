@@ -4,6 +4,7 @@ import { Device } from './ios/Device'
 import type { ShellApi } from './ios/Device'
 import { CartProvider } from './store/cart'
 import { brandIdBySlug } from './data/brands'
+import { RESERVE_APP_ID } from './apps/registry'
 import { SettingsProvider } from './store/settings'
 import { appById } from './apps/registry'
 import { BrandApp } from './apps/BrandApp'
@@ -66,6 +67,10 @@ export default function App() {
         onEnter={() => setEntered(true)}
         onWater={() => {
           setOpenOn(brandIdBySlug('beasty-h20'))
+          setEntered(true)
+        }}
+        onJoin={() => {
+          setOpenOn(RESERVE_APP_ID)
           setEntered(true)
         }}
       />

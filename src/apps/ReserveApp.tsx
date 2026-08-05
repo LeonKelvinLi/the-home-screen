@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
 import { BrandLogo } from '../ios/BrandLogo'
-import { BRANDS } from '../data/brands'
+import { LISTED_KITCHENS } from '../data/brands'
 import { submitApplication } from '../lib/api'
 import { BLANK_PAGES } from './registry'
 import type { ShellApi } from '../ios/Device'
@@ -22,11 +22,12 @@ import type { ShellApi } from '../ios/Device'
  */
 
 /**
- * Only actual kitchens. BRANDS includes a skate shop and a dog breeder, so
+ * Researched partners only, and "businesses" rather than "kitchens" — the set
+ * includes an apparel label and a drinkware maker. BRANDS also includes
  * counting all of them called them Bay Area kitchens on a page pitching to a
  * food truck — and put their logos up as proof of participating kitchens.
  */
-const KITCHENS = BRANDS.filter((b) => !b.contactOnly && b.menu.some((c) => c.items.length > 0))
+const KITCHENS = LISTED_KITCHENS
 const KITCHEN_COUNT = KITCHENS.length
 
 export function ReserveApp({ api }: { api: ShellApi }) {
@@ -105,8 +106,8 @@ export function ReserveApp({ api }: { api: ShellApi }) {
       }
     >
       <p className="reserve-lead">
-        Put your kitchen on this home screen. One tap from a customer's phone, alongside{' '}
-        {KITCHEN_COUNT} other local kitchens.
+        Put your business on this home screen. One tap from a customer's phone, alongside{' '}
+        {KITCHEN_COUNT} other local businesses.
       </p>
 
       {/* Proof before pitch: their real logos, not a claim about them. */}
@@ -147,7 +148,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         header="Availability"
         footer={`${BLANK_PAGES} full pages of blank tiles sit after the last app. There is no queue and no cap.`}
       >
-        <ListRow label="Kitchens on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
+        <ListRow label="Businesses on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
         <ListRow label="Open slots" value="Room available" chevron={false} />
       </ListSection>
 

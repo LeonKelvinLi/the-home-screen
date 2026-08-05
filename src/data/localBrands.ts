@@ -46,6 +46,15 @@ export interface LocalSeed {
   siteNote?: string
   /** Button label on a contact-only brand. Defaults to "Open their page". */
   siteCta?: string
+  /** Published contact address, where the business publishes one. */
+  email?: string
+  /**
+   * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere.
+   * The string explains how to actually start.
+   */
+  quoteOnly?: string
+  /** Several priced sections rather than one. Used instead of `items`. */
+  groups?: { name: string; items: [string, string, number, string][] }[]
   /** Kitchen's own dietary description, e.g. ['Halal']. Never a certification. */
   dietary?: string[]
   /** Partner discount. Headline states the guaranteed floor, not a range. */
@@ -514,6 +523,106 @@ export const LOCAL_SEED: LocalSeed[] = [
     // else's behalf.
     contactOnly:
       "Alli walks dogs and pet-sits \u2014 not a kitchen, so there is nothing to order here. She describes her service as specialising in dogs with medical, behavioural and social needs. She works in Philadelphia and southern New Jersey, not the Bay Area. Call to arrange.",
+    items: [],
+  },
+  {
+    /*
+      Leon Kelvin Li's own practice, added at the operator's request — he asked
+      for the work and the pricing to sit on this home screen.
+
+      Branding is taken from noctilucenty.github.io, which calls itself
+      "Noctilucente", rather than invented. Every price below is his own,
+      quoted verbatim as a RANGE, because that is how he quotes them.
+
+      quoteOnly, so nothing here can reach the cart. A $650 website in the same
+      basket as a $4.50 frankfurter would be absurd, and the checkout would try
+      to charge it.
+    */
+    slug: 'noctilucente',
+    name: 'Noctilucente',
+    label: 'Noctilucente',
+    cuisine: 'Software studio',
+    tagline: 'Custom software and AI systems for businesses. Built by Leon Kelvin Li.',
+    color: '#101828|#1D2939',
+    icon: '',
+    prep: 0,
+    category: 'Software',
+    site: 'https://noctilucenty.github.io/',
+    siteCta: 'See the portfolio',
+    siteNote: 'See past work and case studies at noctilucenty.github.io',
+    phone: '(510) 826-7735',
+    email: 'leondragon3798@gmail.com',
+    quoteOnly:
+      'Every project is quoted after a conversation, so nothing here is ordered through the app. Prices are ranges because scope decides the number, not the category. The consultation is free.',
+    perk: {
+      headline: '10% off every service',
+      detail: 'For anyone who finds him through this home screen. Applies to the whole list below.',
+    },
+    groups: [
+      {
+        name: 'AI & automation',
+        items: [
+          ['AI call agent', 'Answers the phone around the clock, books appointments, takes messages', 200000, '$2,000-10,000+'],
+          ['AI support chatbot', 'Answers customer questions on your site instead of an inbox that waits until Monday', 100000, '$1,000-5,000+'],
+          ['AI knowledge base', 'Your manuals, SOPs and PDFs become an assistant that answers with the source it used', 300000, '$3,000-15,000+'],
+          ['AI assistant for staff', 'Your team asks it instead of asking each other, or guessing', 300000, '$3,000-15,000+'],
+          ['AI research agent', 'Gathers and summarises what you would otherwise pay someone to read', 300000, '$3,000-20,000+'],
+          ['AI sales and lead qualifier', 'Works new enquiries out of hours and hands you the ones worth calling', 250000, '$2,500-10,000+'],
+          ['AI voice assistant', 'Spoken, not typed, for hands-busy work', 300000, '$3,000-15,000+'],
+          ['Document processing and OCR', 'Invoices, forms and scans read into your system without retyping', 200000, '$2,000-8,000+'],
+        ],
+      },
+      {
+        name: 'Custom software',
+        items: [
+          ['Business management system', 'One system for the whole operation instead of five that disagree', 800000, '$8,000-50,000+'],
+          ['CRM', 'Every customer, quote and follow-up in one place', 300000, '$3,000-20,000+'],
+          ['Inventory management', 'Know what you actually have, without a stocktake', 300000, '$3,000-20,000+'],
+          ['Booking and scheduling', 'Customers book themselves, into slots you control', 150000, '$1,500-10,000+'],
+          ['Customer portal', 'Your customers check their own orders, invoices and history', 300000, '$3,000-15,000+'],
+          ['Employee dashboard', 'What each person needs to do today, without being asked', 200000, '$2,000-10,000+'],
+          ['Admin dashboard', 'The controls to run it all, built for whoever actually runs it', 200000, '$2,000-8,000+'],
+        ],
+      },
+      {
+        name: 'Web & mobile',
+        items: [
+          ['Business website', 'A site that brings in work, not a brochure nobody reads', 65000, '$650-3,000+'],
+          ['Online store', 'Sell online, with payments, stock and shipping wired together', 200000, '$2,000-10,000+'],
+          ['iOS and Android app', 'A real app on both stores, not a website in a wrapper', 500000, '$5,000-30,000+'],
+          ['Installable web app', 'Works like an app from a link, with no store approval to wait on', 200000, '$2,000-10,000+'],
+        ],
+      },
+      {
+        name: 'Integrations',
+        items: [
+          ['Payments', 'Stripe and card payments wired into what you already use', 50000, '$500-3,000+'],
+          ['Accounting', 'QuickBooks or Xero, kept in step without anyone exporting a spreadsheet', 100000, '$1,000-5,000+'],
+          ['Google Workspace automation', 'Sheets, Drive, Calendar and Gmail doing the admin themselves', 50000, '$500-3,000+'],
+          ['Messaging', 'Meta, WhatsApp and SMS connected to your own systems', 100000, '$1,000-5,000+'],
+          ['Custom API', 'When two systems need to talk and nothing off the shelf does it', 100000, '$1,000-8,000+'],
+        ],
+      },
+      {
+        name: 'Business automation',
+        items: [
+          ['Workflow automation', 'The repetitive part of the day, done without anyone doing it', 150000, '$1,500-10,000+'],
+          ['Lead generation', 'Finds and sorts prospects so you call the right ones', 200000, '$2,000-8,000+'],
+          ['Automated follow-ups', 'Nobody falls through the cracks because someone forgot', 100000, '$1,000-5,000+'],
+          ['Quotes and invoices', 'Raised, sent and chased on their own', 100000, '$1,000-5,000+'],
+          ['Report generation', 'The report that took a morning, on a schedule', 100000, '$1,000-4,000+'],
+        ],
+      },
+      {
+        name: 'Data & analytics',
+        items: [
+          ['Executive dashboard', 'The numbers you actually decide on, on one screen', 200000, '$2,000-10,000+'],
+          ['KPI platform', 'Targets tracked continuously instead of at month end', 300000, '$3,000-15,000+'],
+          ['Customer insights', 'Who buys what, how often, and who is about to stop', 200000, '$2,000-8,000+'],
+          ['AI reporting', 'Reports that explain the change, not just show it', 200000, '$2,000-10,000+'],
+        ],
+      },
+    ],
     items: [],
   },
 ]

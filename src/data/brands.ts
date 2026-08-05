@@ -56,6 +56,15 @@ export interface MenuItem {
   desc: string
   /** Cents. */
   price: number
+  /**
+   * What to PRINT instead of the price.
+   *
+   * A service quoted at "$2,000-10,000+" has no single price. `price` still
+   * holds the low bound so the data stays sortable and comparable, but showing
+   * it alone would read as a fixed fee and understate the job by a factor of
+   * five.
+   */
+  priceLabel?: string
   popular?: boolean
   tags?: string[]
   options?: MenuOptionGroup[]
@@ -124,6 +133,14 @@ export interface Brand {
    * the operator in front of his own tenants.
    */
   needsOwnerReview?: string
+  /**
+   * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere:
+   * a $650 website must never end up in a cart next to a hot dog, and the
+   * checkout must never try to charge one. The string explains how to start.
+   */
+  quoteOnly?: string
+  /** Published contact address, where the business publishes one. */
+  email?: string
   /**
    * Line above the menu. Every partner carries one: the list is a curated
    * selection, not their full menu, and the customer should be told that
@@ -234,6 +251,25 @@ interface Seed {
   dietary?: string[]
   /** Partner discount. Headline states the guaranteed floor. */
   perk?: { headline: string; detail: string }
+  /**
+   * Several priced sections rather than one. Used instead of `items`.
+   */
+  groups?: ServiceGroup[]
+  /**
+   * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere:
+   * a $650 website must never end up in a cart next to a hot dog, and the
+   * checkout must never try to charge one. The string is shown to explain how
+   * to actually start.
+   */
+  quoteOnly?: string
+}
+
+/** name, description, low bound in cents, printed range. */
+type ServiceItem = [string, string, number, string]
+
+interface ServiceGroup {
+  name: string
+  items: ServiceItem[]
 }
 
 /** Straight transcription of the source hub. Prices are cents. */
@@ -449,8 +485,23 @@ const fromSeed = (s: Seed): Brand => ({
       },
   prepMinutes: s.prep,
   needsOwnerReview: s.review,
-  menuNote: s.items.length > 0 ? MENU_NOTE : undefined,
-  menu: [
+  quoteOnly: s.quoteOnly,
+  // "This week's favourites" is a food line. A service catalogue is not a
+  // rotating special, and nothing about it changes weekly.
+  menuNote: s.quoteOnly ? undefined : s.items.length > 0 ? MENU_NOTE : undefined,
+  menu: s.groups
+    ? s.groups.map((g, gi) => ({
+        id: `c_${s.slug.replace(/-/g, '')}_${gi + 1}`,
+        name: g.name,
+        items: g.items.map(([name, desc, price, priceLabel], i) => ({
+          id: `i_${s.slug.replace(/-/g, '')}_${gi + 1}_${i + 1}`,
+          name,
+          desc,
+          price,
+          priceLabel,
+        })),
+      }))
+    : [
     {
       id: `c_${s.slug.replace(/-/g, '')}`,
       name: s.category,
@@ -494,6 +545,7 @@ export const BRANDS: Brand[] = [
     siteCta: s.siteCta,
     dietary: s.dietary,
     perk: s.perk,
+    email: s.email,
   })),
   ...SEED.map(fromSeed),
 ]
@@ -507,6 +559,31 @@ export const VENDORS: Vendor[] = [...LOCAL_SEED, ...SEED].map((s) => ({
   taxBps: taxBpsFor((s as { address?: string }).address),
   taxIncluded: (s as { taxIncluded?: boolean }).taxIncluded === true,
 }))
+
+/*
+  Kitchens we can point a PROSPECTIVE PARTNER at.
+
+  Researched entries only — LOCAL_SEED, the businesses whose menus and prices
+  were sourced from their own published material. The ported hub entries are
+  excluded on purpose: counting them takes the figure from 11 to 27 and more
+  than doubles the size of the network in a pitch, on the strength of menus
+  nobody confirmed. Overstating that to someone deciding whether to join is the
+  one number here it would be worst to get wrong.
+
+  Shared so the Reserve screen and the landing page count the same way — two
+  places quoting different figures is the kind of thing a partner notices.
+*/
+const RESEARCHED = new Set(LOCAL_SEED.map((s) => `b_${s.slug.replace(/-/g, '')}`))
+
+export const LISTED_KITCHENS = BRANDS.filter(
+  (b) =>
+    RESEARCHED.has(b.id) &&
+    !b.contactOnly &&
+    // A software practice quoting projects is not a business a food truck is
+    // being invited to stand alongside.
+    !b.quoteOnly &&
+    b.menu.some((c) => c.items.length > 0),
+)
 
 export const brandById = (id: string) => BRANDS.find((b) => b.id === id)
 /* Look one up by its seed slug. Ids are derived (`b_` + de-hyphenated slug), so
