@@ -4,7 +4,7 @@ import { Device } from './ios/Device'
 import type { ShellApi } from './ios/Device'
 import { CartProvider } from './store/cart'
 import { brandIdBySlug } from './data/brands'
-import { RESERVE_APP_ID } from './apps/registry'
+import { DESIGNS_APP_ID, RESERVE_APP_ID } from './apps/registry'
 import { SettingsProvider } from './store/settings'
 import { appById } from './apps/registry'
 import { BrandApp } from './apps/BrandApp'
@@ -15,6 +15,7 @@ import { AccountApp, HelpApp, RewardsApp } from './apps/SimpleApps'
 import { SettingsApp } from './apps/SettingsApp'
 import { PhoneApp } from './apps/PhoneApp'
 import { ReserveApp } from './apps/ReserveApp'
+import { DesignsApp } from './apps/DesignsApp'
 
 /**
  * Routing table for the fake OS. An app id is either a brand id or `sys.*`.
@@ -44,6 +45,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <SettingsApp api={api} />
     case 'reserve':
       return <ReserveApp api={api} />
+    case 'designs':
+      return <DesignsApp api={api} />
     default:
       return null
   }
@@ -71,6 +74,10 @@ export default function App() {
         }}
         onJoin={() => {
           setOpenOn(RESERVE_APP_ID)
+          setEntered(true)
+        }}
+        onDesigns={() => {
+          setOpenOn(DESIGNS_APP_ID)
           setEntered(true)
         }}
       />

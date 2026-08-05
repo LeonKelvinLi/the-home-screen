@@ -12,7 +12,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
-  | 'reserve'
+  | 'reserve' | 'designs'
 
 export interface AppDef {
   id: string
@@ -108,7 +108,23 @@ export const BLANK_PAGES = 4
 */
 export const RESERVE_APP_ID = 'slot.join'
 
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP]
+/*
+  BEASTY Designs. Reachable from the landing page, and NOT on the home grid —
+  the grid belongs to the businesses, and a services pitch competing with them
+  for a customer's attention is the wrong order.
+*/
+export const DESIGNS_APP: AppDef = {
+  id: 'sys.designs',
+  name: 'BEASTY Designs',
+  label: 'Designs',
+  icon: <SystemIcon glyph="bag" fill />,
+  kind: 'system',
+  systemKey: 'designs',
+  tint: '#141414',
+}
+export const DESIGNS_APP_ID = DESIGNS_APP.id
+
+export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, DESIGNS_APP]
 
 /*
   Slot ids are generated per page at render time, so they cannot all be listed

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BLANK_PAGES } from './registry'
 import { LISTED_KITCHENS } from '../data/brands'
+import { GLYPHS } from '../data/glyphs'
 
 /**
  * The landing screen, shown before the home screen.
@@ -28,9 +29,11 @@ interface Props {
   onWater: () => void
   /** Enter and land straight on the Reserve screen. */
   onJoin: () => void
+  /** Enter and land straight on BEASTY Designs. */
+  onDesigns: () => void
 }
 
-export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
+export function IntroScreen({ onEnter, onWater, onJoin, onDesigns }: Props) {
   const [panel, setPanel] = useState<'none' | 'phone' | 'share'>('none')
   const [copied, setCopied] = useState(false)
 
@@ -109,6 +112,30 @@ export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
             <path d="M5 12h13M12 6l6 6-6 6" />
           </svg>
         </span>
+      </button>
+
+      {/*
+        BEASTY Designs. Its own button rather than a line in the join section:
+        the two pitch different things to the same person — a tile on this
+        screen, and a website of their own — and folding them together makes
+        both vaguer.
+
+        The mark is drawn in glyphs.ts, not imported. The reference for it was
+        a Vecteezy stock file, which is licensed artwork and not ours to ship.
+      */}
+      <button className="intro-designs" onClick={onDesigns}>
+        <span className="intro-designs-mark">
+          <svg viewBox="0 0 100 100" width="34" height="34" aria-hidden="true">
+            <path d={GLYPHS.design} fill="currentColor" fillRule="evenodd" />
+          </svg>
+        </span>
+        <span className="intro-designs-text">
+          <span className="intro-designs-name">BEASTY Designs</span>
+          <span className="intro-designs-sub">Websites, apps and online ordering</span>
+        </span>
+        <svg className="intro-designs-go" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M5 12h13M12 6l6 6-6 6" />
+        </svg>
       </button>
 
       <div className="intro-dock">

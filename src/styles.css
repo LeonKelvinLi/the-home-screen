@@ -3151,6 +3151,171 @@ textarea {
   line-height: 1.45;
 }
 
+/* ---------- BEASTY Designs ---------- */
+
+.designs {
+  padding: 0 0 28px;
+}
+
+.designs-hero {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px 20px;
+  background: linear-gradient(160deg, #ffe63d, #f2cf00);
+  color: #141414;
+}
+
+.designs-mark {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 68px;
+  height: 68px;
+  border-radius: 19px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.designs-lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 600;
+}
+
+.designs-h {
+  margin: 22px 20px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.designs-tiers,
+.designs-work {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.designs-tier,
+.designs-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 14px 15px;
+  border-radius: 16px;
+  background: #fff;
+}
+
+.designs-tier-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.designs-tier-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.designs-tier-price {
+  font-size: 15px;
+  font-weight: 800;
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.designs-tier-detail,
+.designs-item-detail {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.designs-note {
+  margin: 10px 20px 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.designs-item-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+/* Whose project it is, said before what it does. */
+.designs-item-whose {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #b25000;
+}
+
+.designs-item-link {
+  margin-top: 2px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--blue);
+  text-decoration: none;
+}
+
+.designs-plan {
+  margin: 0 16px;
+  padding: 16px 16px 14px;
+  border-radius: 16px;
+  background: #141414;
+  color: #f4f4f4;
+}
+
+.designs-plan-price {
+  display: block;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #f6d800;
+}
+
+.designs-plan-price em {
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(246, 216, 0, 0.6);
+}
+
+.designs-plan ul {
+  margin: 10px 0 0;
+  padding: 0 0 0 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.designs-plan li {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.designs-plan li strong {
+  color: #fff;
+}
+
+.designs-plan-foot {
+  margin: 12px 0 0;
+  padding-top: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+}
+
 /* ---------- intro / landing ----------
 
    Shown before the home screen. Brand-first: their yellow, their dog, their
@@ -3172,7 +3337,16 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /*
+    NOT justify-content: center.
+
+    Centred flex content that overflows spills past BOTH edges, and the part
+    above the top edge cannot be scrolled to — the scroll range starts at the
+    container's top, not the content's. Biggie's head was cut off with no way
+    to reach it. Auto margins centre the same way when there is room and
+    collapse to nothing when there is not, so the top stays reachable.
+  */
+  justify-content: flex-start;
   gap: clamp(10px, 1.8vh, 16px);
   padding: calc(20px + env(safe-area-inset-top)) 20px
     calc(22px + var(--bottom-h) + var(--gesture-h));
@@ -3230,6 +3404,9 @@ textarea {
   flex: 0 0 auto;
 }
 
+.intro > *:first-child { margin-top: auto; }
+.intro > *:last-child  { margin-bottom: auto; }
+
 /*
   Staggered entrance, one beat per block. A landing page that paints all at
   once reads as a static image; arriving in order reads as authored.
@@ -3239,6 +3416,7 @@ textarea {
 .intro-where,
 .intro-story p,
 .intro-join,
+.intro-designs,
 .intro-btn,
 .intro-enter {
   animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
@@ -3253,6 +3431,7 @@ textarea {
 .intro-story p:nth-child(3) { animation-delay: 570ms; }
 .intro-story p:nth-child(4) { animation-delay: 640ms; }
 .intro-join            { animation-delay: 710ms; }
+.intro-designs         { animation-delay: 770ms; }
 .intro-btn:nth-child(1) { animation-delay: 780ms; }
 .intro-btn:nth-child(2) { animation-delay: 840ms; }
 .intro-btn:nth-child(3) { animation-delay: 900ms; }
@@ -3306,6 +3485,67 @@ textarea {
   font-size: 12.5px;
   line-height: 1.45;
   color: rgba(20, 20, 20, 0.72);
+}
+
+/*
+  BEASTY Designs. Dark rather than dashed: the join card above it is an empty
+  tile waiting to be filled, and this is a service that already exists. Two
+  different offers should not look like the same card twice.
+*/
+.intro-designs {
+  width: min(100%, 400px);
+  padding: 12px 14px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  background: rgba(16, 16, 16, 0.94);
+  color: #f6d800;
+  box-shadow: 0 14px 30px rgba(80, 62, 0, 0.28);
+  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease;
+}
+
+.intro-designs:active {
+  transform: scale(0.98);
+  background: rgba(16, 16, 16, 1);
+}
+
+/* The mark sits on the brand yellow, the way it will on a business card. */
+.intro-designs-mark {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: #f6d800;
+  color: #141414;
+}
+
+.intro-designs-text {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.intro-designs-name {
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+}
+
+.intro-designs-sub {
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: rgba(246, 216, 0, 0.62);
+}
+
+.intro-designs-go {
+  flex: 0 0 auto;
+  opacity: 0.6;
 }
 
 .intro-join-cta {
@@ -3597,6 +3837,7 @@ textarea {
   .intro-where,
   .intro-story p,
   .intro-join,
+  .intro-designs,
   .intro-dock,
   .intro-btn,
   .intro-btn.is-primary,

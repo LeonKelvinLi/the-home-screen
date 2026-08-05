@@ -25,6 +25,7 @@ export type GlyphName =
   | 'box'
   | 'shirt'
   | 'cup'
+  | 'design'
 
 export const GLYPHS: Record<GlyphName, string> = {
   // stacked bun / patty / bun with sesame dots
@@ -103,6 +104,21 @@ export const GLYPHS: Record<GlyphName, string> = {
   // tee
   shirt:
     'M37 15h26l21 11a4 4 0 0 1 2 5l-7 16a4 4 0 0 1-5 2l-4-2v33a4 4 0 0 1-4 4H34a4 4 0 0 1-4-4V47l-4 2a4 4 0 0 1-5-2l-7-16a4 4 0 0 1 2-5Zm7 3a6 6 0 0 0 12 0Z',
+
+  /*
+    Monitor and pencil, for BEASTY Designs.
+
+    Drawn here rather than imported. The reference sent over was a Vecteezy
+    stock file, which is licensed artwork and not ours to ship in a commercial
+    product; the monitor-and-pencil idiom itself is generic. Drawing it also
+    means it inherits the same weight and corner language as every other glyph
+    instead of sitting in the set as an obvious import.
+
+    Uses fill-rule evenodd — the screen well and the pencil's lead channel are
+    knockouts, not separate shapes.
+  */
+  design:
+    'M8 16h56a6 6 0 0 1 6 6v34a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6Zm0 7a1 1 0 0 0-1 1v6h58v-6a1 1 0 0 0-1-1ZM7 35v21a1 1 0 0 0 1 1h56a1 1 0 0 0 1-1V35ZM12 26a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM12 40h48v4H12Zm0 8h20v4H12Zm0 7h20v4H12Zm26-7h22v11H38ZM28 62h16v6h8a3 3 0 0 1 0 6H20a3 3 0 0 1 0-6h8ZM84 12a7 7 0 0 1 7 7v3H77v-3a7 7 0 0 1 7-7ZM77 26h14v34H77ZM77 64h14L84 78ZM80 30h8v26h-8Z',
 
   // tumbler
   cup:
