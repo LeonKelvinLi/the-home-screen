@@ -6,6 +6,7 @@ import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, BLANK_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
+import { Wallpaper } from './Wallpaper'
 import {
   EASE_IOS,
   ICON_LABEL_H,
@@ -257,7 +258,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
         on a page it reads as the background sliding around under the icons,
         and it forced a scale-up that softened the photo for no gain.
       */}
-      <div className="home-wallpaper" />
+      <Wallpaper city={city} />
 
       <div
         className="home-pager"

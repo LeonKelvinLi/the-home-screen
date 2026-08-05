@@ -204,10 +204,42 @@ textarea {
   pointer-events: none;
 }
 
+/*
+  Two stacked layers, so a change of city crossfades instead of cutting. The
+  container holds the black underneath; the layers hold the pictures.
+*/
 .home-wallpaper {
   position: absolute;
   inset: 0;
-  background: #0a0a0c url('/wallpaper.webp') center / cover no-repeat;
+  background: #0a0a0c;
+}
+
+.home-wallpaper-layer {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*
+  The incoming picture starts invisible and is faded up over the one already
+  there. Nine hundred milliseconds: long enough to read as the place changing
+  rather than the screen glitching, short enough not to feel broken.
+*/
+.home-wallpaper-layer.is-incoming {
+  opacity: 0;
+  animation: wallpaper-fade 900ms ease forwards;
+}
+
+@keyframes wallpaper-fade {
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-wallpaper-layer.is-incoming {
+    animation-duration: 0.01ms;
+  }
 }
 
 /*
