@@ -91,7 +91,24 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
       setDragging(true)
     },
     onMove: ({ dx, dy }) => {
-      if (!axis.current) axis.current = Math.abs(dy) > Math.abs(dx) * 1.4 ? 'y' : 'x'
+      /*
+        Decide the axis from a gesture that has actually travelled, not from
+        the first pointermove.
+        
+        This was locking on the very first sample — the noisiest one there is.
+        A horizontal swipe that begins with a few pixels of vertical drift, 
+        which is most of them on a handheld phone, locked to 'y' and then did
+        nothing at all however far the finger went. That is the "sometimes it
+        just will not turn" case.
+        
+        The bar is also much higher now. The home grid paginates to fit and has
+        NOTHING to scroll vertically, so a vertical lock buys nothing and costs
+        a dead gesture; it takes a genuinely vertical drag (2.5x) to claim one.
+      */
+      const travelled = Math.hypot(dx, dy)
+      if (!axis.current && travelled > 12) {
+        axis.current = Math.abs(dy) > Math.abs(dx) * 2.5 ? 'y' : 'x'
+      }
       if (axis.current === 'y') return
       const p = pageRef.current
       // Rubber-band at the ends.
@@ -105,7 +122,9 @@ export function HomeScreen({ onOpen, receding, hidden }: Props) {
       if (axis.current === 'y') return settle(pageRef.current)
 
       const p = pageRef.current
-      const flick = Math.abs(vx) > 0.35
+      // A flick should turn the page on intent, not on distance. 0.25 is a
+      // comfortable thumb flick; the old 0.35 asked for a deliberate throw.
+      const flick = Math.abs(vx) > 0.25
       if (!flick && Math.abs(dx) <= PAGE_COMMIT_PX) return settle(p)
 
       // Direction comes from the flick when there is one: dragging left then

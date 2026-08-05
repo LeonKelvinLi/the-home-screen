@@ -32,7 +32,15 @@ export const CLOSE_MS = 380
 export const PAGE_MS = 340
 
 /** Distance a swipe must travel before it commits instead of snapping back. */
-export const PAGE_COMMIT_PX = 70
+/**
+ * How far a slow drag must travel to turn the page.
+ *
+ * Was 70px, which is nearly a fifth of a 393px phone — far enough that a
+ * one-handed thumb swipe often did not reach it and the page snapped back.
+ * 44px is about a thumb's comfortable arc and still well clear of a tap.
+ * A flick turns the page at any distance; this only governs a slow drag.
+ */
+export const PAGE_COMMIT_PX = 44
 export const DISMISS_COMMIT_PX = 90
 /** Above this upward velocity (px/ms) a short swipe still goes home. */
 export const DISMISS_VELOCITY = 0.55
