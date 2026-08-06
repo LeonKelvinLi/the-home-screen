@@ -30,6 +30,14 @@ export default function App() {
   */
   const [entered, setEntered] = useState(false)
   const [openOn, setOpenOn] = useState<string | null>(null)
+  /*
+    Bumped on every return from the app, and used as IntroScreen's key.
+
+    Without it React can reconcile the returning screen against the one it
+    remembers and preserve its state, which would drop someone straight onto the
+    finished BEASTY screen with no takeover. The key guarantees a fresh mount.
+  */
+  const [visit, setVisit] = useState(0)
 
   /*
     Warm the two things the home screen needs, while the landing page is on
@@ -61,24 +69,45 @@ export default function App() {
     return () => window.clearTimeout(t)
   }, [entered])
 
+  /*
+    Entering pushes a history entry, so the phone's own back gesture comes back
+    here rather than leaving the site.
+
+    That is also how the takeover replays: IntroScreen is unmounted while the
+    app is open, so returning mounts a fresh one and it runs from the top. No
+    replay flag, no reset — the animation is a property of the screen existing,
+    which is the whole reason it can be trusted to look the same every time.
+  */
+  const enter = (appId: string | null = null) => {
+    setOpenOn(appId)
+    setEntered(true)
+    try {
+      window.history.pushState({ hs: 'app' }, '')
+    } catch {
+      /* history unavailable — back simply leaves, as it did before */
+    }
+  }
+
+  useEffect(() => {
+    const back = () => {
+      setEntered(false)
+      setOpenOn(null)
+      setVisit((v) => v + 1)
+    }
+    window.addEventListener('popstate', back)
+    return () => window.removeEventListener('popstate', back)
+  }, [])
+
   if (!entered) {
     return (
       <IntroScreen
-        onEnter={() => setEntered(true)}
-        onWater={() => {
-          setOpenOn(BEASTY_H20)
-          setEntered(true)
-        }}
-        onJoin={() => {
-          setOpenOn(RESERVE)
-          setEntered(true)
-        }}
+        key={visit}
+        onEnter={() => enter()}
+        onWater={() => enter(BEASTY_H20)}
+        onJoin={() => enter(RESERVE)}
         /* The keypad opens several apps directly — Designs, the membership and
            the account screen are all one key rather than a tap into the grid. */
-        onOpen={(appId) => {
-          setOpenOn(appId)
-          setEntered(true)
-        }}
+        onOpen={(appId) => enter(appId)}
       />
     )
   }

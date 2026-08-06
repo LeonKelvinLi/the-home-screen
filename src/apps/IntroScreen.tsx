@@ -5,7 +5,7 @@ import { StatusBar } from '../ios/StatusBar'
 import { BEASTY_DIGITS, DIALER_KEYS } from './dialer/keys'
 import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES } from './dialer/copy'
-import { PANEL_MARKS } from './dialer/glyphs'
+import { EnterMark, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
 
@@ -55,7 +55,7 @@ type Stage = 'stock' | 'converting' | 'beasty'
 
 /** The tab bar, in both of its lives. Index-matched. */
 const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Keypad', 'Contacts', 'Voicemail']
-const TAB_LABELS = ['About', 'Careers', 'BEASTY', 'Contact', 'Join']
+const TAB_LABELS = ['About', 'Careers', 'BEASTY', 'Contact', 'Reviews']
 
 export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   const reduced =
@@ -277,7 +277,14 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
           onClick={() => press({ kind: 'enter' })}
           aria-label={stage === 'beasty' ? 'Enter BEASTY' : 'Call'}
         >
-          <PhoneFill size={34} color="#fff" />
+          {/* Same button, same place, same green — but a handset means "call"
+              and this one enters an app, so once the pretence is over it says
+              what it does. */}
+          {stage === 'beasty' ? (
+            <EnterMark size={33} />
+          ) : (
+            <PhoneFill size={34} color="#fff" />
+          )}
         </button>
       </div>
 
@@ -305,12 +312,18 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
           and the number of cities with tiles still open once it is not. A made
           up "38" that stayed put would be the one dishonest thing on screen.
         */}
+        {/*
+          Voicemail becomes Reviews: what customers say, left for whoever comes
+          next. The 38 badge is the stock screen's unread count and it belongs
+          to the pretence — it goes when the pretence does, because there are no
+          reviews yet and a number over an empty page is a lie about the page.
+        */}
         <Tab
-          icon={<VoicemailFill />}
+          icon={stage === 'beasty' ? <ReviewsMark /> : <VoicemailFill />}
           label={tabText(4)}
           name={TAB_LABELS[4]}
-          badge={stage === 'beasty' ? CITY_PAGES.length : 38}
-          onClick={() => press({ kind: 'panel', page: 'careers' })}
+          badge={stage === 'beasty' ? undefined : 38}
+          onClick={() => press({ kind: 'panel', page: 'reviews' })}
         />
       </nav>
 

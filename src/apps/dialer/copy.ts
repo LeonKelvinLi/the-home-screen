@@ -38,9 +38,29 @@ interface Page {
   needsGlenn?: string
 }
 
-type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers'
+type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews'
 
 export const PAGES: Record<PageKey, Page> = {
+  /*
+    What the Voicemail tab becomes: customers' own words about the businesses on
+    the screen.
+
+    EMPTY, and it says so. Nobody has left one. A reviews page seeded with
+    anything at all — samples, placeholders, a rating out of five — is the
+    single most tempting thing on this app to fake and the single worst thing to
+    be caught faking, because every review is a claim about a real business that
+    the business did not make.
+  */
+  reviews: {
+    title: 'Reviews',
+    body: [
+      'This is where customers say what they thought — of a kitchen, of an order, of the whole thing. Like a voicemail, left for whoever comes next.',
+      'There are none yet. Nobody has left one, so there is nothing here to read, and nothing has been written in to fill the space. When a review appears on this page it will be because a customer left it.',
+    ],
+    needsGlenn:
+      'How a customer leaves one, and whether reviews are attached to a business or to BEASTY as a whole — there is no way to submit one yet.',
+  },
+
   /*
     The long version of the story panel on the intro screen. Same facts, told
     with room: Richmond, the walks, the dog, and why any of that produced an app.

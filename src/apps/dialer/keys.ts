@@ -28,7 +28,14 @@ export type KeyAction =
   /** The share sheet, or a clipboard copy where there is no sheet. */
   | { kind: 'share' }
 
-export type PanelPage = 'about' | 'contacts' | 'bprf' | 'collabs' | 'donations' | 'careers'
+export type PanelPage =
+  | 'about'
+  | 'contacts'
+  | 'bprf'
+  | 'collabs'
+  | 'donations'
+  | 'careers'
+  | 'reviews'
 
 export interface DialerKey {
   digit: string
@@ -49,6 +56,12 @@ export interface DialerKey {
 */
 export const WATER_URL = 'https://sites.leadconnectorhq.com/preview/55t9dqsHgip4EweddfjR'
 
+/*
+  Key 2 was CONTACTS and the operator cut it as redundant — the tab bar already
+  carries a Contact tab. It goes to the water company's Instagram instead.
+*/
+export const INSTAGRAM_URL = 'https://www.instagram.com/beastyh2oco'
+
 /** App ids the keypad can open directly, without going via the grid. */
 const DESIGNS = 'sys.designs'
 const MEMBERS = 'sys.members'
@@ -56,7 +69,7 @@ const ACCOUNT = 'sys.account'
 
 export const DIALER_KEYS: DialerKey[] = [
   { digit: '1', label: 'ABOUT', action: { kind: 'panel', page: 'about' } },
-  { digit: '2', letters: 'ABC', label: 'CONTACTS', action: { kind: 'panel', page: 'contacts' } },
+  { digit: '2', letters: 'ABC', label: 'INSTAGRAM', action: { kind: 'external', url: INSTAGRAM_URL } },
   { digit: '3', letters: 'DEF', label: 'BPRF', action: { kind: 'panel', page: 'bprf' } },
   // Goods is the marketplace itself — every business on the home screen.
   { digit: '4', letters: 'GHI', label: 'GOODS', action: { kind: 'enter' } },
