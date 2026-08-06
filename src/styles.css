@@ -3197,6 +3197,49 @@ textarea {
   text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
 
+/*
+  The operator's own contact card, at the top of Contacts.
+
+  iOS puts My Card there and gives it more weight than a list row, because it
+  is who you are rather than someone you know. Same idea: a mark, a name, and
+  where they are, above the list.
+*/
+.operator-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 18px 20px 22px;
+}
+
+.operator-avatar {
+  display: grid;
+  place-items: center;
+  width: 82px;
+  height: 82px;
+  border-radius: 24px;
+  background: linear-gradient(170deg, #ffe63d, #f2cf00);
+  box-shadow: 0 6px 16px rgba(180, 150, 0, 0.3);
+}
+
+.operator-avatar img {
+  height: 54px;
+  width: auto;
+  display: block;
+}
+
+.operator-name {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #141416;
+}
+
+.operator-where {
+  font-size: 13px;
+  color: var(--muted);
+}
+
 /* ---------- Share & Scan ---------- */
 
 .share {

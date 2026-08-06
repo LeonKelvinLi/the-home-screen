@@ -7,14 +7,21 @@ import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
+import { OPERATOR, hasOperatorContact, telHref } from '../lib/operator'
 
 /**
  * Phone, laid out the way iOS lays it out: a five-item tab bar, a keypad with
  * letters under the digits, and a contact list grouped alphabetically.
  *
- * The operator's existing hub dials `tel:+10000000000` from the dock — a
+ * It opens on CONTACTS, with the operator's own card at the top, the way iOS
+ * Contacts puts My Card above the list. Someone tapping Phone in the dock wants
+ * to reach Beasty Eats, not a keypad.
+ *
+ * The operator's existing hub dials `tel:+10000000000` from that dock — a
  * placeholder that was never replaced. Rather than ship a button that reaches
- * nobody, the call action is disabled and says the number is not published.
+ * nobody, every call action here is disabled while lib/operator.ts is blank and
+ * says so. Fill that file in and the card, the tap-to-call and the mailto all
+ * come alive together.
  */
 
 type Tab = 'favourites' | 'recents' | 'contacts' | 'keypad' | 'voicemail'
@@ -52,7 +59,7 @@ function formatNumber(d: string): string {
 }
 
 export function PhoneApp({ api }: { api: ShellApi }) {
-  const [tab, setTab] = useState<Tab>('keypad')
+  const [tab, setTab] = useState<Tab>('contacts')
   const [digits, setDigits] = useState('')
 
   const tabBar = <TabBar items={TABS} active={tab} onSelect={setTab} />
@@ -110,9 +117,41 @@ export function PhoneApp({ api }: { api: ShellApi }) {
       const letter = b.name[0].toUpperCase()
       groups.set(letter, [...(groups.get(letter) ?? []), b])
     }
+    const live = hasOperatorContact()
 
     return (
       <NavScreen title="Contacts" onBack={api.closeApp} backTitle="Home" footer={tabBar}>
+        {/*
+          The operator's own card, above the list — iOS puts My Card there and
+          it is who someone tapping Phone in the dock is trying to reach.
+        */}
+        <div className="operator-card">
+          <span className="operator-avatar">
+            <img src="/biggie.webp" alt="" draggable={false} />
+          </span>
+          <span className="operator-name">{OPERATOR.name}</span>
+          <span className="operator-where">{OPERATOR.city}</span>
+        </div>
+
+        <ListSection
+          footer={
+            live
+              ? undefined
+              : 'The phone line and email are not connected yet. Every kitchen below can still be opened.'
+          }
+        >
+          {OPERATOR.phone ? (
+            <ListRow label="Phone" value={OPERATOR.phone} href={telHref(OPERATOR.phone)} />
+          ) : (
+            <ListRow label="Phone" value="Not connected yet" chevron={false} />
+          )}
+          {OPERATOR.email ? (
+            <ListRow label="Email" value={OPERATOR.email} href={`mailto:${OPERATOR.email}`} />
+          ) : (
+            <ListRow label="Email" value="Not connected yet" chevron={false} />
+          )}
+        </ListSection>
+
         {[...groups.entries()].map(([letter, brands]) => (
           <ListSection key={letter} header={letter}>
             {brands.map((b) => (

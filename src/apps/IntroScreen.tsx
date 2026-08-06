@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { CITY_PAGES } from './registry'
 import { LISTED_KITCHENS } from '../data/brands'
+import { OPERATOR, telHref } from '../lib/operator'
 
 /**
  * The landing screen, shown before the home screen.
@@ -11,17 +12,6 @@ import { LISTED_KITCHENS } from '../data/brands'
  * link on.
  */
 
-/*
- * OPERATOR CONTACT — FILL THESE IN.
- *
- * Deliberately empty rather than filled with a plausible-looking number. The
- * old hub shipped `tel:+10000000000`, which is a dead dial that looks live,
- * and a customer who taps a fake number and reaches nobody is worse off than
- * one who is told the line is not connected yet. The Phone panel below reads
- * whichever of these is set and says so plainly when neither is.
- */
-export const OPERATOR_PHONE: string = ''
-export const OPERATOR_EMAIL: string = ''
 
 interface Props {
   onEnter: () => void
@@ -168,12 +158,10 @@ export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
 
       {panel === 'phone' && (
         <div className="intro-panel">
-          {OPERATOR_PHONE || OPERATOR_EMAIL ? (
+          {OPERATOR.phone || OPERATOR.email ? (
             <>
-              {OPERATOR_PHONE && (
-                <a href={`tel:${OPERATOR_PHONE.replace(/[^0-9+]/g, '')}`}>{OPERATOR_PHONE}</a>
-              )}
-              {OPERATOR_EMAIL && <a href={`mailto:${OPERATOR_EMAIL}`}>{OPERATOR_EMAIL}</a>}
+              {OPERATOR.phone && <a href={telHref(OPERATOR.phone)}>{OPERATOR.phone}</a>}
+              {OPERATOR.email && <a href={`mailto:${OPERATOR.email}`}>{OPERATOR.email}</a>}
             </>
           ) : (
             <p>

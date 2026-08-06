@@ -42,6 +42,12 @@ interface RowProps {
   /** Second line under the label. */
   detail?: ReactNode
   onClick?: () => void
+  /**
+   * Renders the row as a link — a `tel:` or `mailto:` a contact row has to be
+   * able to hand to the OS. A button cannot do that: the phone dialler and the
+   * mail composer open from a real anchor, not from JS navigation.
+   */
+  href?: string
   /** Show a disclosure chevron. Implied by onClick unless explicitly false. */
   chevron?: boolean
   /** Trailing control (switch, etc). Suppresses the chevron. */
@@ -58,20 +64,23 @@ export function ListRow({
   value,
   detail,
   onClick,
+  href,
   chevron,
   accessory,
   destructive,
   disabled,
 }: RowProps) {
-  const showChevron = chevron ?? (!!onClick && !accessory)
-  const Tag = onClick ? 'button' : 'div'
+  const tappable = !!onClick || !!href
+  const showChevron = chevron ?? (tappable && !accessory)
+  const Tag = href ? 'a' : onClick ? 'button' : 'div'
 
   return (
     <Tag
-      className={`ios-row${onClick ? ' is-tappable' : ''}${destructive ? ' is-destructive' : ''}`}
+      className={`ios-row${tappable ? ' is-tappable' : ''}${destructive ? ' is-destructive' : ''}`}
+      {...(href && !disabled ? { href } : null)}
       onClick={disabled ? undefined : onClick}
-      disabled={onClick && disabled ? true : undefined}
-      type={onClick ? 'button' : undefined}
+      disabled={onClick && !href && disabled ? true : undefined}
+      type={onClick && !href ? 'button' : undefined}
     >
       {icon && (
         <span className="ios-row-icon" style={{ background: iconBg }}>
