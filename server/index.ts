@@ -122,10 +122,31 @@ function rateLimiter(perMinute: number, burst: number) {
     // spoofed by stuffing extra hops into X-Forwarded-For.
     const key = req.ip || 'unknown'
 
-    // Bound the map itself, or the limiter becomes the memory leak.
+    /*
+      Bound the map itself, or the limiter becomes the memory leak — but shed
+      the RIGHT entries.
+
+      `buckets.clear()` discarded every bucket including those currently being
+      throttled, handing them back a full burst. That made the limiter fail
+      OPEN under exactly the pressure it exists for: an attacker with an IPv6
+      /64 keeps the map above the cap with entries younger than the 120s sweep,
+      forcing a clear that resets their own throttle. Evict oldest-first
+      instead, and never evict a bucket that is still in deficit.
+    */
     if (buckets.size > 10000) {
       for (const [k, v] of buckets) if (now - v.last > 120000) buckets.delete(k)
-      if (buckets.size > 10000) buckets.clear()
+      if (buckets.size > 10000) {
+        let excess = buckets.size - 9000
+        // Insertion order is oldest-first; a throttled bucket is kept whatever
+        // its age, because forgetting it is what the attacker wants.
+        for (const [k, v] of buckets) {
+          if (excess <= 0) break
+          if (v.tokens >= 1) {
+            buckets.delete(k)
+            excess--
+          }
+        }
+      }
     }
 
     const b = buckets.get(key) ?? { tokens: burst, last: now }
@@ -150,6 +171,15 @@ const MAX_NAME = 100
 const MAX_PHONE = 30
 const MAX_NOTE = 240
 const MAX_ADDRESS = 160
+/*
+  Every other collection on this route is capped; this one was not, and was
+  bounded only by the 256kb body limit — about 14,000 entries per line, each
+  costing a linear scan of the item's option groups. Not reachable today only
+  because nothing in the catalogue defines options yet, so the first choice id
+  400s. That is an accident, not a defence, and it stops being true the moment
+  one option group is added.
+*/
+const MAX_OPTIONS = 20
 const MAX_ORDER_TOTAL = 200_000 // $2,000
 
 /** A fat-fingered PLATFORM_FEE_BPS must not be able to mint negative payouts. */
@@ -255,6 +285,17 @@ interface IndexedItem {
 const priceIndex = new Map<string, IndexedItem>()
 
 for (const brand of BRANDS) {
+  /*
+    Quoted work is not for sale, and the client saying so is not enough.
+
+    A `quoteOnly` brand's prices are RANGES ("$650-3,000+") flattened to their
+    low bound for display. BrandApp suppresses add-to-cart, but the server built
+    its index from the same menu, so a hand-written POST bought a $650 website
+    outright — an order and a vendor ticket for work whose price does not exist
+    yet. Anything not orderable in the UI must not be orderable at all.
+  */
+  if (brand.quoteOnly) continue
+
   for (const cat of brand.menu) {
     for (const item of cat.items) {
       const options = new Map<string, number>()
@@ -283,14 +324,35 @@ for (const brand of BRANDS) {
  * Health check. Deliberately touches the database: the catalogue alone is
  * served from memory, so it reported healthy while order intake was dead.
  */
+/*
+  Two changes from the obvious version, both because better-sqlite3 is
+  SYNCHRONOUS and shares the one Node thread with order intake.
+
+  `SELECT count(*) FROM orders` scans the whole table and grows with lifetime
+  order count, and this route had no rate limit at all — so a flood here stalled
+  the event loop and took down the thing it exists to report on. It is also
+  Render's health-check path, so it cannot simply be removed or limited into
+  failing. Instead: a probe that is O(1) whatever the table size, and a cached
+  result so a burst costs one query per second rather than one per request.
+*/
+let healthAt = 0
+let healthOk = true
+
 app.get('/api/health', (_req, res) => {
-  try {
-    db.prepare('SELECT count(*) AS n FROM orders').get()
-    res.json({ ok: true })
-  } catch (err) {
-    console.error('health: database unreadable', err)
-    res.status(503).json({ ok: false })
+  const now = Date.now()
+  if (now - healthAt > 1000) {
+    try {
+      // Reads the schema and touches the file; does not scan the table.
+      db.prepare('SELECT id FROM orders LIMIT 1').get()
+      healthOk = true
+    } catch (err) {
+      console.error('health: database unreadable', err)
+      healthOk = false
+    }
+    healthAt = now
   }
+  if (!healthOk) return res.status(503).json({ ok: false })
+  res.json({ ok: true })
 })
 
 app.get('/api/catalogue', rateLimiter(60, 20), (_req, res) => {
@@ -377,6 +439,32 @@ function pickCity(j: Record<string, unknown>): string | null {
    neighbours share a rounded coordinate, so this absorbs most of the traffic. */
 const cityCache = new Map<string, { city: string; at: number }>()
 const CITY_TTL = 24 * 60 * 60 * 1000
+/*
+  Bound the cache, the same way the rate limiter bounds its own map.
+
+  Keys are 3-decimal coordinate pairs, so the space is effectively unbounded and
+  the only eviction was a per-entry TTL nothing ever swept. The Bay Area needs a
+  few thousand entries at most; anything past this is somebody walking the
+  coordinate space, and each miss also costs an outbound call to a keyless
+  geocoder that will ban this server's IP long before memory becomes the
+  problem. Evict oldest-first rather than clearing, so a flood cannot wipe the
+  warm entries real customers are hitting.
+*/
+const CITY_CACHE_MAX = 5000
+
+function rememberCity(key: string, city: string) {
+  if (cityCache.size >= CITY_CACHE_MAX) {
+    const now = Date.now()
+    for (const [k, v] of cityCache) if (now - v.at > CITY_TTL) cityCache.delete(k)
+    let excess = cityCache.size - Math.floor(CITY_CACHE_MAX * 0.9)
+    // Map iterates in insertion order, so this is oldest-first.
+    for (const k of cityCache.keys()) {
+      if (excess-- <= 0) break
+      cityCache.delete(k)
+    }
+  }
+  cityCache.set(key, { city, at: Date.now() })
+}
 
 /*
   Turn a coordinate into a city name, for the home screen's location label.
@@ -455,7 +543,7 @@ app.get('/api/city', rateLimiter(30, 10), async (req, res) => {
     if (!city) throw new Error('geocoder named no place')
 
     const trimmed = city.slice(0, 40)
-    cityCache.set(key, { city: trimmed, at: Date.now() })
+    rememberCity(key, trimmed)
     res.setHeader('Cache-Control', 'private, max-age=86400')
     res.json({ city: trimmed })
   } catch (err) {
@@ -580,6 +668,9 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
 
     const qty = intOr(raw.qty, 1, 1, MAX_QTY)
     const rawOptions = Array.isArray(raw.options) ? raw.options : []
+    if (rawOptions.length > MAX_OPTIONS) {
+      return res.status(400).json({ error: `Too many options (max ${MAX_OPTIONS}).` })
+    }
 
     // Group choices so `max` and `required` can actually be enforced. Without
     // this you can send `size_large` five times and be charged five times.
@@ -671,11 +762,31 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
   // A counter code only has to be unique among orders still being worked, so
   // reuse an old number freely but never one that is live right now. Purely
   // random over 8,999 values collides with even odds after ~112 orders.
+  /*
+    Bounded by TIME, not by ticket state.
+
+    The old query was `WHERE t.state != 'collected'` — an inequality on the
+    leading index column, so a scan of tickets joined to orders, run
+    synchronously on every order placement. With SIMULATE_KITCHEN off (which is
+    where this goes the moment a real kitchen display exists) tickets never
+    leave `queued`, so the set never shrinks: the scan grows with lifetime order
+    count, and once distinct active codes approach 8,999 the retry loop below
+    gives up and two live orders share a counter code.
+
+    A counter code only has to be unique among orders being worked NOW, and
+    nobody is working a two-day-old ticket. Bounding on created_at keeps the
+    working set small forever and uses the range index.
+  */
+  const CODE_WINDOW_MS = 48 * 60 * 60 * 1000
   const activeCodes = new Set(
     (
       db
-        .prepare("SELECT DISTINCT o.code AS code FROM orders o JOIN tickets t ON t.order_id = o.id WHERE t.state != 'collected'")
-        .all() as { code: string }[]
+        .prepare(
+          `SELECT DISTINCT o.code AS code FROM orders o
+           JOIN tickets t ON t.order_id = o.id
+           WHERE o.created_at > ? AND t.state != 'collected'`,
+        )
+        .all(now - CODE_WINDOW_MS) as { code: string }[]
     ).map((r) => r.code),
   )
   let code = `#${1000 + Math.floor(Math.random() * 8999)}`
@@ -701,7 +812,19 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
       const feeBps =
         (db.prepare('SELECT fee_bps FROM vendors WHERE id = ?').get(vendorId) as { fee_bps: number } | undefined)
           ?.fee_bps ?? FEE_BPS
-      const platformFee = Math.round((vSubtotal * feeBps) / 10000)
+      /*
+        Charge the fee on FOOD, which is what the comment below has always
+        claimed and what the vendor agreement is.
+
+        For a normal vendor `vSubtotal` is pre-tax, so the two are the same
+        thing. For a tax-inclusive vendor the sales tax is travelling inside
+        vSubtotal, and taking 10% of that billed the kitchen for a cut of money
+        it merely collects and remits to CDTFA — on a $9.00 order, 90c instead
+        of 82c, an effective take of 11.03%. The embedded figure was already
+        computed a few lines up and simply was not subtracted here.
+      */
+      const feeBase = vSubtotal - embeddedTax[vi]
+      const platformFee = Math.round((feeBase * feeBps) / 10000)
       const ticketId = `t_${randomBytes(8).toString('hex')}`
       const brandIds = [...new Set(list.map((p) => p.brandId))]
       // The tip belongs to the kitchen, not the platform. The fee is taken on
@@ -838,6 +961,29 @@ function readOrder(id: string, opts: ReadOpts = {}) {
     fulfilment: o.fulfilment,
     etaMinutes: o.eta_minutes,
     total: o.total,
+    /*
+      Say it on the order itself, not just in a build flag.
+
+      With SIMULATE_KITCHEN on, tickets march queued -> cooking -> ready on a
+      timer. The client's only caveat was gated on IS_LOCAL_ONLY, which is false
+      in production, so a live customer watched the bar reach "ready" about a
+      minute after ordering and could drive out for food nobody had started.
+      The screen can only tell the truth if the server tells it which it is.
+    */
+    simulated: SIMULATE_KITCHEN,
+    /*
+      The customer is told the phone number is "so the kitchen can reach you",
+      and a delivery order is refused without an address — then neither was ever
+      returned to anyone, including the authenticated vendor working the ticket.
+      PII kept with no reader is the worst of both. The vendor queue gets it;
+      the customer's own view still does not need it echoed back.
+    */
+    ...(opts.forCustomer
+      ? {}
+      : {
+          customer: { name: o.customer_name, phone: o.customer_phone },
+          address: o.address || undefined,
+        }),
     tickets: tickets.map((t) => {
       const lines = db
         .prepare('SELECT * FROM ticket_lines WHERE ticket_id = ?')
@@ -960,10 +1106,25 @@ app.post('/api/applications', rateLimiter(6, 3), (req, res) => {
  * is already committed to disk, and a webhook outage must not tell a
  * prospective vendor their application was rejected.
  */
+/*
+  Neutralise Slack/Discord markup in a field that came off a public form.
+
+  Every field here is attacker-supplied and goes into the `text` of a message
+  the operator trusts. Slack parses mrkdwn in `text` by default, so an
+  application submitted as `<!channel> URGENT` pinged the whole workspace, and
+  `<https://evil.example/|Approve this vendor>` rendered as a clickable link
+  with attacker-chosen anchor text. `<`, `>` and `&` are the whole grammar for
+  both of Slack's link forms and its broadcast tokens; entity-escaping them is
+  what Slack's own docs prescribe, and Discord renders them literally.
+*/
+const slackSafe = (s: string) =>
+  s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+
 function notifyLead(lead: Record<string, string>) {
-  const line = `NEW VENDOR LEAD  ${lead.business} | ${lead.contact}` +
-    `${lead.cuisine ? ` | ${lead.cuisine}` : ''}${lead.city ? ` | ${lead.city}` : ''}` +
-    `${lead.social ? ` | ${lead.social}` : ''}`
+  const f = (v: string) => slackSafe(v)
+  const line = `NEW VENDOR LEAD  ${f(lead.business)} | ${f(lead.contact)}` +
+    `${lead.cuisine ? ` | ${f(lead.cuisine)}` : ''}${lead.city ? ` | ${f(lead.city)}` : ''}` +
+    `${lead.social ? ` | ${f(lead.social)}` : ''}`
   console.log(line)
 
   const url = process.env.LEAD_WEBHOOK_URL
@@ -974,8 +1135,9 @@ function notifyLead(lead: Record<string, string>) {
     method: 'POST',
     headers: { 'content-type': 'application/json' },
     // `text` is what Slack and Discord both read; the fields are there for
-    // anything that wants structure.
-    body: JSON.stringify({ text: line, ...lead }),
+    // anything that wants structure. `mrkdwn: false` is belt-and-braces on top
+    // of the escaping above — Slack honours it, other consumers ignore it.
+    body: JSON.stringify({ text: line, mrkdwn: false, ...lead }),
     signal: timeout,
   }).catch((err) => console.error('lead webhook failed (lead is saved):', String(err)))
 }

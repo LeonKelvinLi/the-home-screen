@@ -36,7 +36,24 @@ interface State {
   /** True once the customer has chosen a tip themselves, including None. */
   tipTouched: boolean
   fulfilment: 'pickup' | 'delivery'
+  /**
+   * The idempotency key for THIS cart's submission, persisted with it.
+   *
+   * It used to be a `useRef` inside CheckoutApp, which mints a new one every
+   * mount — and checkout is mounted conditionally, so backing out or swiping
+   * home destroyed it. That is exactly the moment it is needed: a request that
+   * times out at 15s may still have reached the server, the client never
+   * learned the order id, and the customer retries with a full cart. A fresh
+   * key made that a second order, a second set of kitchen tickets, and (once
+   * cards are wired) a second charge. Cleared with the cart, because a new cart
+   * genuinely is a new order.
+   */
+  submitKey: string
 }
+
+/** Fresh key for a fresh cart. Same shape as the server's 8-80 char rule. */
+const newSubmitKey = () =>
+  `ik_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 12)}`
 
 type Action =
   | { type: 'add'; line: Omit<CartLine, 'lineId'> }
@@ -59,7 +76,13 @@ const STORAGE_KEY = 'fb.cart.v1'
   order into $12.19, with the tip row below the fold and only the inflated total
   on the sticky bar. Switching to delivery opts into 15%.
 */
-const initialState: State = { lines: [], tipBps: 0, tipTouched: false, fulfilment: 'pickup' }
+const initialState: State = {
+  lines: [],
+  tipBps: 0,
+  tipTouched: false,
+  fulfilment: 'pickup',
+  submitKey: newSubmitKey(),
+}
 
 /**
  * Restore the saved cart, dropping anything that is no longer orderable.
@@ -105,17 +128,45 @@ function loadState(): State {
     }
     const parsed = JSON.parse(raw) as Partial<State>
 
+    /*
+      Revalidate against the CURRENT catalogue, not just the brand.
+
+      Checking `brandById` alone left two ways to poison a saved cart. An item
+      withdrawn from a menu (narrowing a brand's stocked `offer` is a one-line
+      change and happens often) kept its line, and the server rejects the whole
+      order with "Unknown item: ..." — every checkout attempt fails, and nothing
+      in the cart UI removes the bad line, so the only escape is wiping the cart
+      from Settings. And a corrected price kept the OLD one, so the customer was
+      quoted a total the server would not honour.
+
+      So: drop lines whose item no longer exists, and reprice the rest from the
+      catalogue. Repricing rather than dropping is deliberate — the customer
+      still wants the food, and they see the real number before paying.
+    */
+    const priced = new Map<string, { name: string; price: number }>()
+    for (const b of BRANDS) {
+      for (const cat of b.menu) {
+        for (const it of cat.items) priced.set(it.id, { name: it.name, price: it.price })
+      }
+    }
+
     const lines = Array.isArray(parsed.lines)
-      ? parsed.lines.filter(
-          (l): l is CartLine =>
-            !!l &&
-            typeof l.lineId === 'string' &&
-            typeof l.itemId === 'string' &&
-            typeof l.qty === 'number' &&
-            l.qty > 0 &&
-            Array.isArray(l.options) &&
-            !!brandById(l.brandId),
-        )
+      ? parsed.lines
+          .filter(
+            (l): l is CartLine =>
+              !!l &&
+              typeof l.lineId === 'string' &&
+              typeof l.itemId === 'string' &&
+              typeof l.qty === 'number' &&
+              l.qty > 0 &&
+              Array.isArray(l.options) &&
+              !!brandById(l.brandId) &&
+              priced.has(l.itemId),
+          )
+          .map((l) => {
+            const now = priced.get(l.itemId)!
+            return now.price === l.unitPrice ? l : { ...l, name: now.name, unitPrice: now.price }
+          })
       : []
 
     return {
@@ -123,6 +174,11 @@ function loadState(): State {
       tipBps: typeof parsed.tipBps === 'number' ? parsed.tipBps : initialState.tipBps,
       tipTouched: parsed.tipTouched === true,
       fulfilment: parsed.fulfilment === 'delivery' ? 'delivery' : 'pickup',
+      // Keep the saved key so a retry after a timeout is still a retry. A cart
+      // that lost its key gets a new one rather than an empty string.
+      submitKey: typeof parsed.submitKey === 'string' && parsed.submitKey.length >= 8
+        ? parsed.submitKey
+        : newSubmitKey(),
     }
   } catch {
     const seed = settingsSeed()
@@ -175,7 +231,9 @@ function reducer(state: State, action: Action): State {
     case 'clearBrand':
       return { ...state, lines: state.lines.filter((l) => l.brandId !== action.brandId) }
     case 'clear':
-      return { ...state, lines: [] }
+      // New cart, new key — otherwise the next order would be deduplicated
+      // against the one just placed and silently return the old receipt.
+      return { ...state, lines: [], submitKey: newSubmitKey() }
     case 'tip':
       return { ...state, tipBps: action.bps, tipTouched: true }
     case 'fulfilment':

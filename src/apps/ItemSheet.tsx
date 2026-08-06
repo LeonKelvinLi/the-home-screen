@@ -27,8 +27,71 @@ export function ItemSheet({
   const [dragY, setDragY] = useState(0)
   const [dragging, setDragging] = useState(false)
   const closeTimer = useRef(0)
+  const sheetRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => () => clearTimeout(closeTimer.current), [])
+
+  /*
+    Keyboard and screen-reader handling for the sheet.
+
+    Without this the sheet was reachable but not escapable: it had no keyboard
+    exit, nothing behind it was hidden, and focus was never moved in — so Tab
+    walked straight past it into the menu rows under the scrim and could open a
+    second sheet on top of the first. Anyone not using a touchscreen was stuck,
+    and if the item had a required option group the only button was disabled
+    until a choice they could not reach was made.
+
+    Three parts: move focus in on open, hide the rest of the app from assistive
+    tech while it is up, and put it back where it came from on close.
+  */
+  useEffect(() => {
+    const sheet = sheetRef.current
+    if (!sheet) return
+    const returnTo = document.activeElement as HTMLElement | null
+
+    const app = sheet.closest('.app-window') ?? document.getElementById('root')
+    const siblings = app
+      ? ([...app.children].filter((c) => !c.contains(sheet)) as HTMLElement[])
+      : []
+    for (const el of siblings) el.setAttribute('inert', '')
+
+    const first = sheet.querySelector<HTMLElement>(
+      'button:not([disabled]), a[href], input, textarea, [tabindex]:not([tabindex="-1"])',
+    )
+    ;(first ?? sheet).focus({ preventScroll: true })
+
+    return () => {
+      for (const el of siblings) el.removeAttribute('inert')
+      returnTo?.focus?.({ preventScroll: true })
+    }
+  }, [])
+
+  /** Escape closes; Tab cycles inside rather than escaping to the menu behind. */
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation()
+      dismiss()
+      return
+    }
+    if (e.key !== 'Tab') return
+    const sheet = sheetRef.current
+    if (!sheet) return
+    const focusable = [
+      ...sheet.querySelectorAll<HTMLElement>(
+        'button:not([disabled]), a[href], input, textarea, [tabindex]:not([tabindex="-1"])',
+      ),
+    ].filter((el) => el.offsetParent !== null)
+    if (focusable.length === 0) return
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
 
   const groups = item.options ?? []
 
@@ -115,6 +178,14 @@ export function ItemSheet({
       />
       <div
         className="sheet"
+        ref={sheetRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label={item.name}
+        onKeyDown={onKeyDown}
+        // Focus target of last resort, for a sheet whose only button is
+        // disabled because a required option has not been chosen yet.
+        tabIndex={-1}
         style={{
           transform: dragY ? `translate3d(0, ${dragY}px, 0)` : undefined,
           transition: dragging ? 'none' : undefined,

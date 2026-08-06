@@ -18,9 +18,15 @@ export const MEMBERSHIP = {
   yearlySaving: 60,
   yearlyPercent: 25,
 
+  /*
+    "One membership, every business on this home screen" was not true and could
+    not be made true by us — an offer is the business's to agree, and one has.
+    "Participating" is the whole qualifier, so it has to survive the second
+    sentence too.
+  */
   lead:
-    'Become a member and get loyalty offers from every participating business. ' +
-    'One membership, every business on this home screen.',
+    'One membership, good at every participating business on this home screen. ' +
+    'More are being signed up.',
 
   benefits: [
     'Loyalty offers at every participating business.',

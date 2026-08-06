@@ -44,9 +44,16 @@ export function HelpApp({ api }: { api: ShellApi }) {
       <div className="plain">
         <h3>Common questions</h3>
         <ul className="plain-list">
+          {/*
+            These four answers described an app that does not exist: "one
+            pickup" (they are separate businesses in seven cities), a "counter
+            for each kitchen" (no counter is in the schema or the UI), and
+            "Contact in the dock" (ContactApp is written but never routed; the
+            dock is Phone, Water, Orders, Share). Answer for the app as built.
+          */}
           <li>
             <strong>Can I order from more than one kitchen?</strong>
-            Yes — that is the point. One cart, one payment, one pickup.
+            Yes — that is the point. One cart, one checkout, however many kitchens.
           </li>
           <li>
             <strong>Will everything be ready at once?</strong>
@@ -54,11 +61,13 @@ export function HelpApp({ api }: { api: ShellApi }) {
           </li>
           <li>
             <strong>Where do I collect?</strong>
-            Your order screen shows a counter for each kitchen once the food is ready.
+            From each kitchen directly — these are separate businesses in different cities, not
+            one building. Your order screen lists the address and number for each.
           </li>
           <li>
             <strong>Something is wrong with my order</strong>
-            Use Contact in the dock. Refunds are handled centrally, not by the kitchen.
+            Call the kitchen on the number shown against it on your order screen. Nothing is
+            charged in the app yet, so there is nothing for us to refund.
           </li>
         </ul>
       </div>

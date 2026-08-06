@@ -536,7 +536,12 @@ const fromSeed = (s: Seed): Brand => ({
   quoteOnly: s.quoteOnly,
   // "This week's favourites" is a food line. A service catalogue is not a
   // rotating special, and nothing about it changes weekly.
-  menuNote: s.quoteOnly ? undefined : s.items.length > 0 ? MENU_NOTE : undefined,
+  //
+  // Nor is it a line to put over a menu the business never published: on a
+  // brand flagged for owner review it sat directly above items invented for
+  // scaffolding, presenting them as this week's picks.
+  menuNote:
+    s.quoteOnly || s.review ? undefined : s.items.length > 0 ? MENU_NOTE : undefined,
   menu: s.groups
     ? s.groups.map((g, gi) => ({
         id: `c_${s.slug.replace(/-/g, '')}_${gi + 1}`,

@@ -18,6 +18,13 @@ interface Hit {
   itemName: string
   desc: string
   price: number
+  /**
+   * What the brand page prints instead of the number, where the number alone
+   * would lie. Quoted work carries a RANGE ("$650-3,000+") flattened to its low
+   * bound for sorting; search rendered the low bound as a fixed fee and
+   * understated the job by a factor of five.
+   */
+  priceLabel?: string
   logo: (typeof BRANDS)[number]['logo']
   /** Price still needs confirming with the business. */
   flagged: boolean
@@ -63,6 +70,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
               itemName: it.name,
               desc: it.desc,
               price: it.price,
+              priceLabel: it.priceLabel,
               logo: b.logo,
               flagged: Boolean(b.pricesEstimated || b.needsOwnerReview),
             })
@@ -151,7 +159,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
                       <span>{h.desc}</span>
                     </span>
                     <span className="search-item-price">
-                      {money(h.price)}
+                      {h.priceLabel ?? money(h.price)}
                       {h.flagged && <em className="search-item-flag">to confirm</em>}
                     </span>
                     <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />

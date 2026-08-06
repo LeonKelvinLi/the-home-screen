@@ -22,6 +22,11 @@ export function Gem({ size = 18 }: { size?: number }) {
   )
 }
 
+/** Businesses that have actually agreed a member offer. */
+const WITH_OFFERS = LISTED_KITCHENS.filter((b) => b.offers?.welcome || b.offers?.loyalty)
+const OFFER_COUNT = WITH_OFFERS.length
+const OFFER_PARTNER = WITH_OFFERS[0]?.name ?? ''
+
 export function MembersApp({ api }: { api: ShellApi }) {
   const m = MEMBERSHIP
 
@@ -65,8 +70,20 @@ export function MembersApp({ api }: { api: ShellApi }) {
             <li key={b}>{b}</li>
           ))}
         </ul>
+        {/*
+          Count the businesses that have AGREED an offer, not the ones listed.
+
+          LISTED_KITCHENS.length is 10; exactly one partner has set `offers`,
+          because an offer on a partner's page is a promise made in their name
+          and none of the others have agreed one. "Good at 10 businesses" sold a
+          membership against nine promises nobody had made.
+        */}
         <p className="members-note">
-          Good at {LISTED_KITCHENS.length} businesses today, and at every one that joins after.
+          {OFFER_COUNT === 0
+            ? 'No business has agreed an offer yet. This is what the programme will look like once they do.'
+            : OFFER_COUNT === 1
+              ? `Good at ${OFFER_PARTNER} today, with more partners being signed up.`
+              : `Good at ${OFFER_COUNT} businesses today, and at every one that joins after.`}
         </p>
 
         <h2 className="members-h">Where the money goes</h2>

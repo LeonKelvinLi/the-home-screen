@@ -1,8 +1,8 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { brandById } from '../data/brands'
 import { money, useCart } from '../store/cart'
-import { IS_LOCAL_ONLY, PAYMENTS_LIVE, newIdempotencyKey, placeOrder } from '../lib/api'
+import { IS_LOCAL_ONLY, PAYMENTS_LIVE, placeOrder } from '../lib/api'
 import type { PlacedOrder } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
 
@@ -23,7 +23,6 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
   const [placing, setPlacing] = useState(false)
   const [order, setOrder] = useState<PlacedOrder | null>(null)
   const [error, setError] = useState<string | null>(null)
-  const idemKey = useRef(newIdempotencyKey())
 
   const t = cart.totals
   const delivering = cart.fulfilment === 'delivery'
@@ -43,9 +42,11 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
         tipBps: cart.tipBps,
         customer: { name: name.trim(), phone: phone.trim() },
         address: delivering ? address.trim() : undefined,
-        // Stable for the life of this checkout screen, so a retry after a
-        // timeout cannot print a second set of kitchen tickets.
-        idempotencyKey: idemKey.current,
+        // Stable for the life of the CART, not this screen. A ref here was
+        // reminted every mount, and backing out of checkout unmounts it — so
+        // the retry after a timeout arrived with a new key and became a second
+        // order. It lives in the cart store now and is cleared with the cart.
+        idempotencyKey: cart.submitKey,
       })
       // placeOrder records the id locally before returning, so the order is
       // recoverable in Orders even if this screen is torn down mid-flight

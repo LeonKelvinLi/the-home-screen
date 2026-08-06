@@ -80,6 +80,20 @@ export function OrdersApp({ api }: { api: ShellApi }) {
             These are saved on this device only. No kitchen has received them yet.
           </p>
         )}
+        {/*
+          NOT gated on IS_LOCAL_ONLY. That was the bug: in production ordering is
+          live, so the notice above never rendered, while the server was still
+          advancing tickets on a timer — the bar below reached "ready" a minute
+          after ordering and nobody had told the customer it was a demo. This
+          reads the flag off the order itself, so it appears exactly when the
+          statuses are not real.
+        */}
+        {!IS_LOCAL_ONLY && orders.some((o) => o.simulated) && (
+          <p className="local-notice">
+            Order statuses on this screen are a demonstration and move on a timer. Do not set
+            out to collect until the kitchen has confirmed with you directly.
+          </p>
+        )}
         {orders.map((o) => {
           const done = o.tickets.every((t) => t.state === 'collected')
           return (
@@ -136,6 +150,27 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                         </span>
                       ))}
                     </div>
+                    {/*
+                      Checkout tells a pickup customer "your order screen lists
+                      the address for each" — and it did not. These are separate
+                      businesses in seven different cities, so without this the
+                      customer has nowhere to go. The data was already there;
+                      nothing rendered it. Phone too, where the business
+                      publishes one, since that is how you chase a late order.
+                    */}
+                    {o.fulfilment === 'pickup' &&
+                      t.brandIds.map((bid) => {
+                        const b = brandById(bid)
+                        if (!b?.address) return null
+                        return (
+                          <div className="order-ticket-where" key={`w-${bid}`}>
+                            <span>{b.address}</span>
+                            {b.phone && (
+                              <a href={`tel:${b.phone.replace(/[^0-9+]/g, '')}`}>{b.phone}</a>
+                            )}
+                          </div>
+                        )
+                      })}
                   </div>
                   <span className={`ticket-state is-${t.state}`}>{t.state}</span>
                 </div>

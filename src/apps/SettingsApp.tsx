@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
-import { BRANDS } from '../data/brands'
+import { LISTED_KITCHENS } from '../data/brands'
 import { useSettings } from '../store/settings'
 import { useCart } from '../store/cart'
 import { IS_LOCAL_ONLY, ORDERING_LIVE, PAYMENTS_LIVE } from '../lib/api'
@@ -118,11 +118,24 @@ export function SettingsApp({ api }: { api: ShellApi }) {
   }
 
   if (page === 'about') {
-    const items = BRANDS.reduce((n, b) => n + b.menu.reduce((m, c) => m + c.items.length, 0), 0)
+    /*
+      Count the LISTED partners, not every row in the catalogue.
+
+      BRANDS.length is 32 and includes a dog walker, a car garage, a print-on-
+      demand shop, a software studio and seventeen entries whose menus were
+      never sourced. Printing it as "Kitchens" more than triples the size of the
+      network on the strength of menus nobody confirmed — the one number
+      data/brands.ts says at length must not be used. Menu items are counted
+      over the same list for the same reason.
+    */
+    const items = LISTED_KITCHENS.reduce(
+      (n, b) => n + b.menu.reduce((m, c) => m + c.items.length, 0),
+      0,
+    )
     return (
       <NavScreen title="About" backTitle="Settings" onBack={() => setPage('root')}>
         <ListSection>
-          <ListRow label="Kitchens" value={String(BRANDS.length)} chevron={false} />
+          <ListRow label="Kitchens" value={String(LISTED_KITCHENS.length)} chevron={false} />
           <ListRow label="Menu Items" value={String(items)} chevron={false} />
           <ListRow label="Version" value="0.1.0" chevron={false} />
         </ListSection>

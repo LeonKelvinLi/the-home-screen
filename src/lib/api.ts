@@ -76,6 +76,13 @@ export interface PlacedOrder {
   tickets: Ticket[]
   /** True when this order exists only on this device. */
   local?: boolean
+  /**
+   * True when the server is advancing ticket states on a timer rather than a
+   * kitchen doing it. The screens must say so: a progress bar that reaches
+   * "ready" on its own, with nothing said, sends someone out for food nobody
+   * has started cooking.
+   */
+  simulated?: boolean
 }
 
 export interface PlaceOrderInput {
@@ -238,13 +245,40 @@ export interface OrdersResult {
   degraded: boolean
 }
 
+/**
+ * Orders that can still change state. A collected order is finished, so
+ * re-fetching it every six seconds forever buys nothing.
+ */
+const isSettled = (o: PlacedOrder) =>
+  o.tickets.length > 0 && o.tickets.every((t) => t.state === 'collected')
+
+/*
+  How many live lookups one poll may spend.
+
+  The route allows 120/min burst 40, which is 12 tokens per 6-second poll — and
+  this fanned out one request per stored order, up to 25. Any repeat customer
+  with more than 12 saved orders was in permanent deficit: from the third poll
+  on, roughly half the lookups 429'd, `degraded` latched, and the "Reconnecting"
+  banner never cleared while stale copies were shown as if live. No attacker
+  needed, just arithmetic against a good customer.
+*/
+const POLL_BUDGET = 8
+
 export async function listOrders(): Promise<OrdersResult> {
   const stored = readLocal()
   if (IS_LOCAL_ONLY) return { orders: stored, degraded: false }
 
   // With a backend, the stored ids are capabilities — re-fetch for live state.
+  // Newest first, and only the ones that can still move, so the budget is spent
+  // on the order the customer is actually watching.
+  const live = stored
+    .filter((o) => !isSettled(o))
+    .sort((a, b) => b.createdAt - a.createdAt)
+    .slice(0, POLL_BUDGET)
+  const liveIds = new Set(live.map((o) => o.id))
+
   const settled = await Promise.allSettled(
-    stored.map(async (o) => {
+    live.map(async (o) => {
       const res = await request(`/api/orders/${encodeURIComponent(o.id)}`)
       if (res.status === 404) return null
       if (!res.ok) throw new Error(String(res.status))
@@ -252,14 +286,16 @@ export async function listOrders(): Promise<OrdersResult> {
     }),
   )
 
-  const orders: PlacedOrder[] = []
+  // Everything not re-fetched is either finished or older than the budget —
+  // its last known copy is still correct, so show it rather than hiding it.
+  const orders: PlacedOrder[] = stored.filter((o) => !liveIds.has(o.id))
   let degraded = false
   settled.forEach((r, i) => {
     if (r.status === 'fulfilled') {
       if (r.value) orders.push(r.value)
     } else {
       degraded = true
-      orders.push(stored[i]) // keep the last known copy rather than dropping it
+      orders.push(live[i]) // keep the last known copy rather than dropping it
     }
   })
 

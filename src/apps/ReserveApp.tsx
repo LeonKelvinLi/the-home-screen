@@ -82,9 +82,16 @@ export function ReserveApp({ api }: { api: ShellApi }) {
             </svg>
           </div>
           <h2>{name.trim()}</h2>
+          {/*
+            "the operator has been sent them" was a claim about a delivery this
+            screen cannot see. The alert goes out over LEAD_WEBHOOK_URL, which
+            is set by hand and is very likely unset — in which case the lead
+            lands in a server log nobody reads. Saved is something we know;
+            delivered is not, so only claim the first.
+          */}
           <p className="confirm-sub">
-            Your details are saved and the operator has been sent them. Nothing is committed yet
-            — a slot is confirmed only once they reply to you directly.
+            Your details are saved. Nothing is committed yet — a slot is confirmed only once the
+            operator replies to you directly.
           </p>
           <button className="btn-secondary" onClick={api.closeApp}>
             Back to home
@@ -117,7 +124,10 @@ export function ReserveApp({ api }: { api: ShellApi }) {
             <BrandLogo logo={b.logo} size={34} />
           </span>
         ))}
-        <span className="reserve-proof-more">+{KITCHEN_COUNT - 12}</span>
+        {/* Only when there are actually more. There are 10 listed partners and
+            room for 12 marks, so this printed a literal "+-2" on the screen a
+            prospective business is shown. */}
+        {KITCHEN_COUNT > 12 && <span className="reserve-proof-more">+{KITCHEN_COUNT - 12}</span>}
       </div>
 
       <ListSection header="What you get">

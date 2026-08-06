@@ -289,7 +289,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             {brand.name} is operated independently.{' '}
             {brand.quoteOnly
               ? 'Ranges are indicative; the quote is what counts.'
-              : brand.pricesEstimated
+              : brand.pricesEstimated || brand.needsOwnerReview
                 ? 'Prices here still need confirming with them.'
                 : 'Prices set by the kitchen.'}
           </p>
