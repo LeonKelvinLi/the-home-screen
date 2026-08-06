@@ -90,33 +90,9 @@ export const makeSlot = (key: string | number): AppDef => ({
   tint: '#1C1C1E',
 })
 
-/**
- * One page per city the operator is opening in, in his order.
- *
- * Each starts EMPTY — a grid of blank tiles waiting for the businesses he
- * recruits there. That is deliberate: a city page with nothing on it is an
- * honest statement that nobody has signed up there yet, and it is the thing he
- * shows a prospective business to say "this space is yours".
- *
- * The nine here are the ones he marked to do first. The rest of his list —
- * San Rafael, Pinole, Hercules, Hayward, Fremont, Dublin, Walnut Creek, San
- * Mateo, Daly City, Milpitas, Palo Alto, Sunnyvale, Pleasanton, Pittsburg,
- * Oakley, El Cerrito — goes in the same array when he says.
- *
- * A page holds however many tiles the device's grid fits, which is only known
- * once the screen is measured, so HomeScreen fills them; this only names them.
- */
-export const CITY_PAGES = [
-  'Oakland',
-  'Richmond',
-  'Berkeley',
-  'Albany',
-  'Concord',
-  'San Jose',
-  'Livermore',
-  'Antioch',
-  'Brentwood',
-] as const
+/* Moved to data/cities.ts — plain data, so the landing page can read the count
+   without dragging this file's icons and JSX into the first response. */
+export { CITY_PAGES } from '../data/cities'
 
 /*
   The Reserve screen as a destination, for anything that wants to open it

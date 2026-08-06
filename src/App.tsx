@@ -1,59 +1,23 @@
-import { useState } from 'react'
+import { Suspense, lazy, useEffect, useState } from 'react'
 import { IntroScreen } from './apps/IntroScreen'
-import { Device } from './ios/Device'
-import type { ShellApi } from './ios/Device'
-import { CartProvider } from './store/cart'
-import { brandIdBySlug } from './data/brands'
-import { RESERVE_APP_ID } from './apps/registry'
-import { SettingsProvider } from './store/settings'
-import { appById } from './apps/registry'
-import { BrandApp } from './apps/BrandApp'
-import { CartApp } from './apps/CartApp'
-import { OrdersApp } from './apps/OrdersApp'
-import { SearchApp } from './apps/SearchApp'
-import { AccountApp, HelpApp, RewardsApp } from './apps/SimpleApps'
-import { SettingsApp } from './apps/SettingsApp'
-import { PhoneApp } from './apps/PhoneApp'
-import { ReserveApp } from './apps/ReserveApp'
-import { DesignsApp } from './apps/DesignsApp'
-import { ShareApp } from './apps/ShareApp'
+import { savedCity } from './lib/place'
+import { wallpaperFor } from './ios/Wallpaper'
 
-/**
- * Routing table for the fake OS. An app id is either a brand id or `sys.*`.
- */
-function renderApp(appId: string, api: ShellApi) {
-  const app = appById(appId)
-  if (!app) return null
+/*
+  The shell — the fake OS, twelve apps and the whole catalogue — is loaded on
+  its own rather than bundled into the first response.
 
-  if (app.kind === 'brand') return <BrandApp brandId={app.brandId!} api={api} />
+  It is 270KB of JavaScript that a customer used to download before they had
+  seen anything, while looking at a landing page that needs none of it. It is
+  fetched in the background the moment the landing page appears, so it is
+  almost always ready before anyone taps Enter; splitting it costs nothing at
+  the moment of the tap and saves the wait before the first paint.
+*/
+const Shell = lazy(() => import('./Shell'))
 
-  switch (app.systemKey) {
-    case 'cart':
-      return <CartApp api={api} />
-    case 'orders':
-      return <OrdersApp api={api} />
-    case 'search':
-      return <SearchApp api={api} />
-    case 'rewards':
-      return <RewardsApp api={api} />
-    case 'help':
-      return <HelpApp api={api} />
-    case 'account':
-      return <AccountApp api={api} />
-    case 'phone':
-      return <PhoneApp api={api} />
-    case 'settings':
-      return <SettingsApp api={api} />
-    case 'reserve':
-      return <ReserveApp api={api} />
-    case 'designs':
-      return <DesignsApp api={api} />
-    case 'share':
-      return <ShareApp api={api} />
-    default:
-      return null
-  }
-}
+/** Resolve which brand the Water button opens without pulling in the catalogue. */
+const BEASTY_H20 = 'b_beastyh20'
+const RESERVE = 'slot.join'
 
 export default function App() {
   /*
@@ -67,27 +31,61 @@ export default function App() {
   const [entered, setEntered] = useState(false)
   const [openOn, setOpenOn] = useState<string | null>(null)
 
+  /*
+    Warm the two things the home screen needs, while the landing page is on
+    screen and the connection is otherwise idle: the shell's own chunk, and the
+    wallpaper for whichever city this device settled on.
+
+    The wallpaper is the single largest asset in the app and it used to be
+    fetched only once the home screen mounted, which is the worst possible
+    moment — the customer is already looking at a black rectangle. Fetching it
+    during the seconds they spend reading the landing page moves that wait to
+    where nobody is waiting.
+  */
+  useEffect(() => {
+    if (entered) return
+    const warm = () => {
+      import('./Shell')
+      new Image().src = wallpaperFor(savedCity())
+    }
+    // requestIdleCallback where it exists, so this never competes with the
+    // landing page's own paint. Safari still lacks it.
+    const ric = (window as { requestIdleCallback?: (cb: () => void) => number })
+      .requestIdleCallback
+    if (ric) {
+      const handle = ric(warm)
+      return () => (window as { cancelIdleCallback?: (h: number) => void })
+        .cancelIdleCallback?.(handle)
+    }
+    const t = window.setTimeout(warm, 400)
+    return () => window.clearTimeout(t)
+  }, [entered])
+
   if (!entered) {
     return (
       <IntroScreen
         onEnter={() => setEntered(true)}
         onWater={() => {
-          setOpenOn(brandIdBySlug('beasty-h20'))
+          setOpenOn(BEASTY_H20)
           setEntered(true)
         }}
         onJoin={() => {
-          setOpenOn(RESERVE_APP_ID)
+          setOpenOn(RESERVE)
           setEntered(true)
         }}
       />
     )
   }
 
+  /*
+    The fallback is the brand yellow, not a spinner. By the time anyone reaches
+    it the chunk is normally already warm, so this is a single frame on a slow
+    connection — and a flash of the brand colour reads as the app opening,
+    where a spinner reads as a wait.
+  */
   return (
-    <SettingsProvider>
-      <CartProvider>
-        <Device renderApp={renderApp} openOnMount={openOn} />
-      </CartProvider>
-    </SettingsProvider>
+    <Suspense fallback={<div className="shell-loading" />}>
+      <Shell openOn={openOn} />
+    </Suspense>
   )
 }

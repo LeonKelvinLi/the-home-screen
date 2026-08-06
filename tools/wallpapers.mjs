@@ -33,11 +33,20 @@ const W = 1320
 const H = 2868
 
 /*
-  Quality 92, not 82. These are night photographs: almost all of every frame is
-  a smooth dark gradient, which is the hardest thing for a lossy codec and the
-  first place banding shows. 82 put visible steps in the sky.
+  A SIZE BUDGET, not a fixed quality.
+
+  One quality setting across nineteen photographs produced a 4.5x spread — 241KB
+  for the Golden Gate against 1.1MB for Walnut Creek — because complexity, not
+  quality, is what decides the size. Most of those extra bytes were spent
+  encoding film grain in a night sky, which nobody looks at and which costs the
+  same as real detail.
+
+  Binary-searching the highest quality that fits the budget spends bits where
+  they are needed and stops everywhere else, so no city is four times slower to
+  load than another. 62 is the floor: below it, dark gradients start to band.
 */
-const QUALITY = 92
+const TARGET_BYTES = 230 * 1024
+const FLOOR_QUALITY = 62
 
 async function fetchAndEncode(slug, url) {
   const res = await fetch(url)
@@ -75,10 +84,25 @@ async function fetchAndEncode(slug, url) {
   ])
   await run('/usr/bin/python3', [
     '-c',
-    `from PIL import Image
-Image.open("${tmp}.big.png").convert("RGB").save(
-    "${path.join(OUT, `${slug}.webp`)}", "WEBP", quality=${QUALITY}, method=6
-)`,
+    `import io
+from PIL import Image
+im = Image.open("${tmp}.big.png").convert("RGB")
+
+def encode(q):
+    b = io.BytesIO()
+    im.save(b, "WEBP", quality=q, method=6)
+    return b.getvalue()
+
+lo, hi, best = ${FLOOR_QUALITY}, 92, None
+while lo <= hi:
+    mid = (lo + hi) // 2
+    data = encode(mid)
+    if len(data) <= ${TARGET_BYTES}:
+        best = data
+        lo = mid + 1
+    else:
+        hi = mid - 1
+open("${path.join(OUT, `${slug}.webp`)}", "wb").write(best or encode(${FLOOR_QUALITY}))`,
   ])
   await run('/bin/rm', ['-f', tmp, `${tmp}.png`, `${tmp}.big.png`])
 }

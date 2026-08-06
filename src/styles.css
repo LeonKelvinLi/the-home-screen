@@ -3530,6 +3530,14 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* The shell's own chunk arriving. Brand yellow, not a spinner — normally one
+   frame, and a flash of the brand reads as the app opening. */
+.shell-loading {
+  position: fixed;
+  inset: 0;
+  background: #f6d800;
+}
+
 /* ---------- intro / landing ----------
 
    Laid out as an iOS setup card: the sheet that slides up when an AirPods case
