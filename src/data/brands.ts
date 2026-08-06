@@ -239,6 +239,8 @@ interface Seed {
   category: string
   items: [string, string, number, string?][]
   review?: string
+  /** A page of theirs that actually resolves. Verified before it goes in. */
+  site?: string
   /** Stocked subset, by item name. Omit to offer the whole menu. */
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
@@ -395,12 +397,48 @@ const SEED: Seed[] = [
       ['Fresh Spring Rolls', 'Two rolls, peanut sauce', 800],
     ],
   },
+  /*
+    BEASTY H20 CO — THE OPERATOR'S OWN BUSINESS, AND ITS MENU HERE IS INVENTED.
+
+    Researched 2026-08-05. Nothing below was ever published by them:
+
+    - Their Instagram is @beastyh2oco (1,334 followers, 7,340 following, bio
+      "Changing lives with Kangen"). It is a REPURPOSED PERSONAL ACCOUNT — the
+      reachable grid runs Jan 2019 to Mar 2022 and not one post mentions water,
+      Kangen, bottles, gallons, bowls or a price. There are no product
+      photographs anywhere, which is why none were added.
+    - beastyh2oco.com is registered but DEAD: every path 301s away to unrelated
+      sites. Only the homepage was ever archived, and its checkout carried a
+      Stripe TEST key, so it never took a real payment.
+    - No price of any kind exists on any source. "Case of 12", "5 Gallon
+      Refill", "Pet Bowl Bundle" and "Single Bottle" came from the original
+      scaffold, not from them. Their own word for the product is "bags".
+    - The tagline "Alkaline water for you and your dog" also appears nowhere in
+      their material.
+    - Their archived site says they serve EAST Contra Costa — Bay Point,
+      Pittsburg, Antioch, Oakley, Brentwood, Discovery Bay — not Richmond.
+      Richmond is the owner's own origin, not the stated service area.
+
+    It is an Enagic/Kangen business, and their marketing makes health claims
+    ("the best and healthiest option for drinking water", "many beneficial
+    health properties") that are NOT established. None of it is reproduced
+    here, and none of it should be: it would be this app asserting a health
+    claim on a real company's behalf.
+
+    Left in place with the prices flagged rather than deleted, because it is the
+    operator's own company and he is the one who knows the real numbers.
+  */
   {
     slug: 'beasty-h20', name: 'Beasty H20 Co', label: 'Beasty H20 Co',
-    cuisine: 'Alkaline water', tagline: 'Alkaline water for you and your dog',
+    cuisine: 'Alkaline water', tagline: 'Kangen water, delivered',
     color: '#2C8ED6', icon: 'beasty-h20', prep: 5, category: 'Water',
+    // The only page of theirs that resolves. beastyh2oco.com is dead.
+    site: 'https://www.instagram.com/beastyh2oco/',
+    siteNote: 'See Beasty H20 on Instagram (@beastyh2oco)',
+    review:
+      'these prices and item names were never published by Beasty H20 and need confirming. Their own word for the product is "bags", and no price appears on their site or Instagram.',
     items: [
-      ['Case of 12', '500ml alkaline bottles', 2800],
+      ['Case of 12', '500ml bottles', 2800],
       ['5 Gallon Refill', 'Bring your jug or buy one', 1500],
       ['Pet Bowl Bundle', 'Travel bowl plus 6 bottles', 2400],
       ['Single Bottle', 'Grab and go', 300],
@@ -485,6 +523,8 @@ const fromSeed = (s: Seed): Brand => ({
       },
   prepMinutes: s.prep,
   needsOwnerReview: s.review,
+  site: s.site,
+  siteNote: s.siteNote,
   quoteOnly: s.quoteOnly,
   // "This week's favourites" is a food line. A service catalogue is not a
   // rotating special, and nothing about it changes weekly.
