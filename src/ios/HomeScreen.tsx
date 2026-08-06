@@ -355,6 +355,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
                   key={app.id}
                   icon={app.icon}
                   label={app.label}
+                  name={app.name}
                   badge={badgeFor(app.id)}
                   size={screen.iconSize}
                   onOpen={(rect) => onOpen(app.id, rect)}
@@ -423,6 +424,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
             key={app.id}
             icon={app.icon}
             label={app.label}
+            name={app.name}
             badge={badgeFor(app.id)}
             size={screen.iconSize}
             hideLabel

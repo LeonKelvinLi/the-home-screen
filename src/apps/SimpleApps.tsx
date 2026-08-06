@@ -18,21 +18,24 @@ export function RewardsApp({ api }: { api: ShellApi }) {
           <span className="reward-points">0</span>
           <span className="reward-label">points</span>
         </div>
+        {/*
+          THIS PROGRAMME DOES NOT EXIST YET.
+
+          The screen used to state an earn rate ("one point per dollar"), a
+          redemption rule ("points come off the total at checkout") and a
+          balance. There is no points field in the data model, no accrual
+          anywhere in the cart, and no redemption line in the checkout totals —
+          so all three were descriptions of software nobody has written, sitting
+          over a permanent zero. Describe the intent, and say it is the intent.
+        */}
         <p>
-          One balance across every kitchen on this home screen. Earn on any order, spend on any
-          other — the part a single-restaurant app cannot do.
+          The idea is one balance across every kitchen on this home screen — earn on any order,
+          spend on any other. That is the part a single-restaurant app cannot do.
         </p>
-        <ul className="plain-list">
-          <li>
-            <strong>Earning</strong>
-            One point per dollar, on every kitchen here.
-          </li>
-          <li>
-            <strong>Spending</strong>
-            Points come off the total at checkout, not off one kitchen's bill.
-          </li>
-        </ul>
-        <p className="plain-note">Rewards start once you have an account.</p>
+        <p className="plain-note">
+          It is not built yet. Nothing is earning, this balance will stay at zero, and no rate or
+          redemption has been set. Ordering is unaffected.
+        </p>
       </div>
     </AppChrome>
   )
@@ -62,12 +65,13 @@ export function HelpApp({ api }: { api: ShellApi }) {
           <li>
             <strong>Where do I collect?</strong>
             From each kitchen directly — these are separate businesses in different cities, not
-            one building. Your order screen lists the address and number for each.
+            one building. Your order screen lists an address and a number wherever the business
+            publishes them; not all of them do yet.
           </li>
           <li>
             <strong>Something is wrong with my order</strong>
-            Call the kitchen on the number shown against it on your order screen. Nothing is
-            charged in the app yet, so there is nothing for us to refund.
+            Where the kitchen publishes a number it is shown against your order — call them
+            directly. Nothing is charged in the app yet, so there is nothing to refund.
           </li>
         </ul>
       </div>
@@ -84,7 +88,11 @@ export function AccountApp({ api }: { api: ShellApi }) {
           Orders placed on this device are saved here. Sign in to keep them across phones and to
           start earning rewards.
         </p>
-        <button className="btn-secondary">Sign in with phone</button>
+        {/* Disabled, not silent. It had no handler at all, so Settings' first
+            row led to a button that did nothing when pressed. */}
+        <button className="btn-secondary" disabled>
+          Sign in with phone — not connected yet
+        </button>
 
         <h3>Add to Home Screen</h3>
         <ul className="plain-list">
@@ -127,7 +135,7 @@ export function ContactApp({ api }: { api: ShellApi }) {
           </li>
           <li>
             <strong>Pickup</strong>
-            Each order screen shows the counter for that kitchen.
+            Your order screen lists each kitchen, with an address where they publish one.
           </li>
         </ul>
         <p className="plain-note">

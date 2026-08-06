@@ -171,8 +171,11 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             ))}
           </ListSection>
         ))}
+        {/* Seven of the brands in this very list publish a number. Saying none
+            do sent people away from information the app already holds. */}
         <p className="ios-section-footer">
-          Numbers are not published. Tapping a kitchen opens its menu.
+          Tapping a kitchen opens its menu. Where a business publishes a number, it is on that
+          page.
         </p>
       </NavScreen>
     )

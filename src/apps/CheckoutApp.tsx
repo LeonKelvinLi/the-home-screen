@@ -159,9 +159,12 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           ) : (
             <div className="co-address">
               <strong>Collect from each kitchen</strong>
+              {/* "lists the address for each" was not true: 17 of 32 brands
+                  carry neither an address nor a phone, so an order spanning
+                  two kitchens could show one and nothing for the other. */}
               <span>
                 These are separate businesses in different cities, not one building. Your order
-                screen lists the address for each.
+                screen lists an address where the business publishes one.
               </span>
             </div>
           )}
@@ -196,7 +199,11 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
               <strong>Nothing is charged.</strong>{' '}
               {IS_LOCAL_ONLY
                 ? 'Payments are not connected, so this order is saved on your device and no kitchen receives it.'
-                : 'Card payments are not connected yet. Your order does reach the kitchen — settle up at the counter.'}
+                : /* The confirmation screen one tap later says "no kitchen
+                     display is connected yet — call the kitchen to confirm
+                     before you travel". This is shown BEFORE committing, so it
+                     was the optimistic half of a contradiction. */
+                  'Card payments are not connected yet. Your order is recorded, but no kitchen display is connected — call them to confirm before you travel.'}
             </p>
           ) : (
             <>

@@ -310,6 +310,13 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
       </div>
 
       {panel && (
+        <>
+          {/* Tapping outside was a no-op: there was no backdrop element at all,
+              so the only exits were the close button and the tab bar. */}
+          <div className="dialer-scrim" onClick={() => setPanel(null)} aria-hidden="true" />
+        </>
+      )}
+      {panel && (
         <Panel
           page={panel}
           onShare={share}

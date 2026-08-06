@@ -30,6 +30,15 @@ interface Props {
   /** Whatever draws the tile: a brand logo, or a system app glyph. */
   icon: ReactNode
   label: string
+  /**
+   * The full name, for assistive tech.
+   *
+   * `label` is truncated to fit under a 60px tile — "Gao Viet Kitc…",
+   * "WinkyDinkyD…", "Waffles & Cr…" — and it was doing double duty as the
+   * accessible name, so a screen reader announced the ellipsis. Sighted users
+   * get the short one because they can see the icon; nobody else can.
+   */
+  name?: string
   badge?: number
   /** Measured at tap time so the app can zoom out of this exact icon. */
   onOpen: (rect: IconRect) => void
@@ -38,7 +47,7 @@ interface Props {
   size?: number
 }
 
-function AppIconBase({ icon, label, badge, onOpen, hideLabel, size = ICON_SIZE }: Props) {
+function AppIconBase({ icon, label, name, badge, onOpen, hideLabel, size = ICON_SIZE }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
   const startY = useRef(0)
@@ -82,7 +91,7 @@ function AppIconBase({ icon, label, badge, onOpen, hideLabel, size = ICON_SIZE }
         }
         open()
       }}
-      aria-label={label}
+      aria-label={name ?? label}
     >
       <span className="icon-tile" style={{ width: size, height: size }}>
         {icon}

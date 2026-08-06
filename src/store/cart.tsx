@@ -1,7 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useReducer } from 'react'
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
-import { taxForVendorSubtotals } from '../lib/tax'
+import { feeBaseFor, taxForVendorSubtotals } from '../lib/tax'
 import { SETTINGS_KEY } from './settings'
 
 /**
@@ -294,9 +294,12 @@ function computeTotals(state: State): Totals {
   const byVendor = [...byVendorMap.values()]
   const subtotal = byVendor.reduce((s, g) => s + g.subtotal, 0)
   const tax = taxForVendorSubtotals(byVendor)
-  const serviceFee = subtotal === 0 ? 0 : Math.round((subtotal * SERVICE_BPS) / 10000)
+  // Charged on food, not on a tax-inclusive vendor's embedded sales tax. See
+  // feeBaseFor. Identical to `subtotal` unless such a vendor is in the cart.
+  const feeBase = feeBaseFor(byVendor)
+  const serviceFee = subtotal === 0 ? 0 : Math.round((feeBase * SERVICE_BPS) / 10000)
   const deliveryFee = subtotal === 0 || state.fulfilment === 'pickup' ? 0 : DELIVERY_FEE
-  const tip = Math.round((subtotal * state.tipBps) / 10000)
+  const tip = Math.round((feeBase * state.tipBps) / 10000)
 
   return {
     subtotal,

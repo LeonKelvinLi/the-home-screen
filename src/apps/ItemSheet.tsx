@@ -218,10 +218,22 @@ export function ItemSheet({
           <p className="sheet-desc">{item.desc}</p>
           <p className="sheet-price">{money(item.price)}</p>
 
-          {/* This is where the price is accepted, so the caveat has to be here
-              and not only at the bottom of the menu page behind it. */}
+          {/*
+            This is where the price is accepted, so the caveat has to be here
+            and not only at the bottom of the menu page behind it.
+
+            BOTH flags, not just pricesEstimated. The one brand whose data says
+            in as many words that its menu was invented — no published price of
+            any kind exists for it anywhere — carries `needsOwnerReview` and not
+            `pricesEstimated`, so this sheet showed its name, its invented price
+            and an Add button with nothing else on the screen. That is the exact
+            failure the comment above was written to prevent.
+          */}
           {brand.pricesEstimated && (
             <p className="sheet-flag">Needs confirming — {brand.pricesEstimated}</p>
+          )}
+          {brand.needsOwnerReview && (
+            <p className="sheet-flag">Not confirmed by {brand.name} — {brand.needsOwnerReview}</p>
           )}
 
           {groups.map((g) => (

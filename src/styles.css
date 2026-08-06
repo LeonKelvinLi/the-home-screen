@@ -3408,7 +3408,10 @@ textarea {
 .members-note {
   margin: 10px 20px 0;
   font-size: 12.5px;
-  color: rgba(20, 20, 20, 0.58);
+  /* 0.58 measured 4.02:1 on the membership yellow, under the 4.5 minimum, on
+     the one line that tells a customer how many businesses honour the offer.
+     0.72 gives 6.12. */
+  color: rgba(20, 20, 20, 0.72);
 }
 
 .members-charity {
@@ -4228,9 +4231,15 @@ textarea {
 }
 
 .dialer-panel-close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
+  /* Sticky, not absolute. Absolute inside an overflow-y container scrolls with
+     the content: at the end of the Careers page it sat 95px above the panel's
+     own top, entirely gone. BPRF, Collabs and Donations open only from a key
+     the panel covers, so once scrolled there was no way out at all on a phone,
+     which has no Escape key. */
+  position: sticky;
+  top: 0;
+  float: right;
+  margin: -8px -8px 0 0;
   width: 44px;
   height: 44px;
   border: 0;
@@ -4528,6 +4537,17 @@ textarea {
   align-items: center;
   gap: 10px;
   margin-bottom: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  padding-bottom: 8px;
+  /* The card's own background, so the title does not have text scrolling
+     under it. */
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.97) 78%,
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .dialer-panel-head h2 {
@@ -4662,6 +4682,79 @@ textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .dialer-toast {
+    animation: none;
+  }
+}
+
+/*
+  Landscape, and any window shorter than about 560px.
+
+  The scale is driven by whichever of width and height is tighter, so a wide
+  short window drives it from height and the keys get small — but the menu
+  labels underneath are floored at 8.5px and do not shrink with them. At
+  844x390 the labels broke out of their circles onto the yellow, where black-on-
+  yellow ink measured 1.19:1 and was effectively invisible, and neighbouring
+  labels collided.
+
+  The label is the point of the screen, so it does not get shrunk into
+  illegibility. The keys get their own smaller floor, the label drops to the
+  short form, and below that the label goes entirely rather than spilling — a
+  digit with nothing under it is still a working key.
+*/
+@media (max-height: 560px) {
+  .dialer-key-sub {
+    height: calc(10 * var(--u));
+  }
+
+  .dialer.is-converting .dialer-key-sub,
+  .dialer.is-beasty .dialer-key-sub {
+    font-size: 7.5px;
+    letter-spacing: 0;
+    text-indent: 0;
+    /* Never wider than the circle it sits in. */
+    max-width: 92%;
+    overflow: hidden;
+    text-overflow: clip;
+  }
+
+  .dialer-foot {
+    display: none;
+  }
+}
+
+/*
+  Below this the circles are too small for any label at a legible size, so the
+  pad shows digits alone. Every key keeps its aria-label, so the destination is
+  still announced and still reachable — it is the drawing that gives up, not
+  the function.
+*/
+@media (max-height: 430px) {
+  .dialer-key-sub {
+    display: none;
+  }
+
+  .dialer-sub {
+    display: none;
+  }
+}
+
+/* Behind a panel, so tapping away closes it the way every sheet does. */
+.dialer-scrim {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: rgba(20, 14, 0, 0.24);
+  animation: scrim-in 200ms ease both;
+}
+
+@keyframes scrim-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-scrim {
     animation: none;
   }
 }

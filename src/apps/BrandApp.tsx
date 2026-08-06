@@ -107,6 +107,19 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {brand.pricesEstimated && (
             <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
           )}
+          {/*
+            Above the menu, not below it.
+
+            This flag used to render after the entire item list, so on the one
+            brand whose menu is admittedly invented a customer read four prices
+            first and the warning last. A caveat that arrives after the decision
+            is decoration.
+          */}
+          {brand.needsOwnerReview && (
+            <p className="brand-review-flag">
+              Menu needs owner confirmation — {brand.needsOwnerReview}
+            </p>
+          )}
 
           {/* Says plainly that this is a selection, not their whole menu —
               which it is not, for every partner but top dog. */}
@@ -277,21 +290,21 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </p>
           ) : null}
 
-          {brand.needsOwnerReview && (
-            <p className="brand-review-flag">
-              Menu needs owner confirmation — {brand.needsOwnerReview}
-            </p>
-          )}
-
           {/* Do not claim the kitchen set these prices on the brands whose own
               data says they came off a delivery platform with a markup. */}
           <p className="brand-foot">
             {brand.name} is operated independently.{' '}
-            {brand.quoteOnly
-              ? 'Ranges are indicative; the quote is what counts.'
-              : brand.pricesEstimated || brand.needsOwnerReview
-                ? 'Prices here still need confirming with them.'
-                : 'Prices set by the kitchen.'}
+            {/* Four of these are not kitchens and have no prices at all — a dog
+                walker, a garage, a print shop and an iOS app. "Prices set by the
+                kitchen" sat two sentences under "there is nothing to order
+                here". */}
+            {brand.contactOnly
+              ? 'Contact them directly.'
+              : brand.quoteOnly
+                ? 'Ranges are indicative; the quote is what counts.'
+                : brand.pricesEstimated || brand.needsOwnerReview
+                  ? 'Prices here still need confirming with them.'
+                  : 'Prices set by the kitchen.'}
           </p>
         </div>
       </AppChrome>

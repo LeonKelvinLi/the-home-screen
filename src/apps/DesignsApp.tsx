@@ -49,7 +49,15 @@ const WORK = [
     name: 'The Home Screen',
     whose: 'Built for Beasty Eats — this app',
     detail:
-      'The thing you are holding. Every local business gets an icon, one cart spans all of them, one checkout pays them all. Live, with real orders.',
+      /*
+      Was "one checkout pays them all. Live, with real orders." Nothing pays
+      anyone: PAYMENTS_WIRED is false, every order is written payment_state
+      'mock', all 32 vendors are minted with payoutsEnabled false, and no
+      kitchen display exists. This is the screen a business owner is recruited
+      on, and it was the only place in the app claiming otherwise — the same
+      file says "nothing is charged through this app" twice.
+    */
+    'The thing you are holding. Every local business gets an icon, one cart spans all of them, one checkout. Orders are recorded; card payments are not connected yet.',
     href: null,
   },
   {

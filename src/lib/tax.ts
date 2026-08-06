@@ -41,3 +41,18 @@ export function embeddedTaxFor(vendorId: string, subtotal: number): number {
   const rate = (v.taxBps ?? FALLBACK_TAX_BPS) / 10000
   return subtotal - Math.round(subtotal / (1 + rate))
 }
+
+/**
+ * The base the service fee and the tip are charged on.
+ *
+ * FOOD, not food-plus-embedded-tax. For every ordinary vendor the subtotal is
+ * already pre-tax and this changes nothing. For a tax-inclusive vendor the
+ * sales tax is travelling inside the posted price, so charging 5% service and a
+ * percentage tip on the raw subtotal billed the customer a service fee and a
+ * tip on money that is simply passed to CDTFA. Small — 4c and 13c on a $23
+ * order — but it is charged on every order that vendor is in, and the platform
+ * fee already excludes the same amount for the same reason.
+ */
+export function feeBaseFor(byVendor: { vendorId: string; subtotal: number }[]): number {
+  return byVendor.reduce((sum, g) => sum + g.subtotal - embeddedTaxFor(g.vendorId, g.subtotal), 0)
+}

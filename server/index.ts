@@ -740,9 +740,13 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
   const taxShare = vendorIds.map((_, i) => addedTax[i] + embeddedTax[i])
   const tax = addedTax.reduce((a, b) => a + b, 0)
 
-  const serviceFee = Math.round((subtotal * SERVICE_BPS) / 10000)
+  // Charged on food, not on a tax-inclusive vendor's embedded sales tax — the
+  // same base the platform fee already uses. Equal to `subtotal` unless such a
+  // vendor is in the cart. The client computes this identically.
+  const feeBase = subtotal - embeddedTax.reduce((a, b) => a + b, 0)
+  const serviceFee = Math.round((feeBase * SERVICE_BPS) / 10000)
   const deliveryFee = fulfilment === 'delivery' ? DELIVERY_FEE : 0
-  const tip = Math.round((subtotal * tipBps) / 10000)
+  const tip = Math.round((feeBase * tipBps) / 10000)
   const total = subtotal + tax + serviceFee + deliveryFee + tip
 
   if (total > MAX_ORDER_TOTAL) {

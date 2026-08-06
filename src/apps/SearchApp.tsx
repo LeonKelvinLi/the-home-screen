@@ -139,7 +139,13 @@ export function SearchApp({ api }: { api: ShellApi }) {
                     <BrandLogo logo={b.logo} size={44} />
                     <span>
                       <strong>{b.name}</strong>
-                      <em>{b.cuisine}</em>
+                      {/* The idle "All kitchens" list below appends this and the
+                          search results did not, so searching for a brand hid a
+                          flag that browsing to it showed. */}
+                      <em>
+                        {b.cuisine}
+                        {b.needsOwnerReview && ' · unconfirmed'}
+                      </em>
                     </span>
                     <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
                   </button>
@@ -149,7 +155,10 @@ export function SearchApp({ api }: { api: ShellApi }) {
 
             {itemHits.length > 0 && (
               <>
-                <h3 className="search-h">Dishes</h3>
+                {/* Not "Dishes": Noctilucente's quoted services land in this
+                    list too, and "Business website · $650-3,000+" filed under
+                    Dishes is a category error on a food app. */}
+                <h3 className="search-h">Items</h3>
                 {itemHits.map((h, i) => (
                   <button className="search-item" key={i} onClick={() => api.openApp(h.brandId)}>
                     <BrandLogo logo={h.logo} size={36} />
