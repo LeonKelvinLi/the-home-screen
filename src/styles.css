@@ -296,7 +296,7 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   /* Must stay in step with ROW_GAP_PHONE in ios/constants.ts — HomeScreen
      computes how many rows fit from that number. See the note there. */
-  row-gap: 20px;
+  row-gap: 13px;
   column-gap: 2px;
   justify-items: center;
 }

@@ -165,14 +165,50 @@ export const DESIGNS_APP_ID = DESIGNS_APP.id
 /*
   Share & Scan. Lives in the dock, so it is not in the grid list either.
 */
+/*
+  A scan mark, not the "i" it borrowed.
+
+  It shared the Info tile while it stood in that slot. Now that Info is back in
+  its own place, two docked icons carrying the same picture would be a coin
+  toss — so this draws what it does: framing corners around a code.
+*/
+const ScanIcon = () => (
+  <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+    <defs>
+      <clipPath id="clip-scan">
+        <path d={SQUIRCLE_100} />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#clip-scan)">
+      <rect width="100" height="100" fill="#141414" />
+      {/* Framing corners — the universal "point a camera here" shape. */}
+      <g fill="none" stroke="#f6d800" strokeWidth="6" strokeLinecap="round">
+        <path d="M22 36V26a4 4 0 0 1 4-4h10" />
+        <path d="M64 22h10a4 4 0 0 1 4 4v10" />
+        <path d="M78 64v10a4 4 0 0 1-4 4H64" />
+        <path d="M36 78H26a4 4 0 0 1-4-4V64" />
+      </g>
+      {/* A few modules, enough to read as a code without pretending to be one. */}
+      <g fill="#ffffff">
+        <rect x="36" y="36" width="11" height="11" rx="2" />
+        <rect x="53" y="36" width="11" height="11" rx="2" />
+        <rect x="36" y="53" width="11" height="11" rx="2" />
+        <rect x="53" y="53" width="5" height="5" rx="1.5" />
+        <rect x="59" y="59" width="5" height="5" rx="1.5" />
+      </g>
+      <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
+    </g>
+  </svg>
+)
+
 export const SHARE_APP: AppDef = {
   id: 'sys.share',
   name: 'Share & Scan',
   label: 'Share & Scan',
-  icon: <BrandLogo logo={{ imageUrl: '/icons/dock-info.webp', bg: '#111111', fg: '#fff' }} fill />,
+  icon: <ScanIcon />,
   kind: 'system',
   systemKey: 'share',
-  tint: '#111111',
+  tint: '#141414',
 }
 
 export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, DESIGNS_APP, SHARE_APP]
@@ -235,10 +271,10 @@ export const ORDERED_APPS: AppDef[] = APP_GROUPS.flat()
  * "Info" pointing at the Share & Scan deli is the old site's own mapping, kept
  * deliberately — worth querying with the owner rather than silently changing.
  *
- * Three icons, not four: the old site's fourth was "Gig Work" pointing at
- * Sharetasking, which has been removed as a non-food business. Restoring it
- * means restoring that brand — these lookups use a non-null assertion, so a
- * dock entry naming a slug that no longer exists crashes the home screen.
+ * Four icons: Phone, Water, Info, Share & Scan. The old site's fourth was "Gig
+ * Work" pointing at Sharetasking, which was removed as a non-food business;
+ * Share & Scan takes that slot instead. These lookups use a non-null assertion,
+ * so a dock entry naming a slug that no longer exists crashes the home screen.
  */
 export const DOCK_APPS: AppDef[] = [
   PHONE_APP,
@@ -248,11 +284,22 @@ export const DOCK_APPS: AppDef[] = [
     icon: <BrandLogo logo={{ imageUrl: '/icons/dock-water.webp', bg: '#2C8ED6', fg: '#fff' }} fill />,
   },
   /*
-    Share & Scan, and it now IS share and scan.
+    Orders, not the old "Info" slot.
 
-    This slot used to open the Share & Scan deli's brand page — a menu, which is
-    neither of the two things its name says. It opens a QR code that takes
-    anyone who scans it to the site.
+    Info pointed at the Share & Scan DELI, and putting it back next to the real
+    Share & Scan gave the dock two buttons whose screens are both titled
+    "Share & Scan" — the deli genuinely has that name. Worse, that deli is one
+    of the ported entries whose menu nobody sourced, and the tile it used is
+    Beasty H20's own marketing QR rather than a deli's logo.
+
+    Orders is real, useful to a returning customer, and collides with nothing.
+    The deli is untouched and still on the grid.
+  */
+  SYSTEM_APPS.find((a) => a.systemKey === 'orders')!,
+  /*
+    Share & Scan in the fourth slot, and it now IS share and scan: a QR code
+    that takes anyone who scans it to the site, rather than the deli menu that
+    used to sit under this name.
   */
   SHARE_APP,
 ]

@@ -38,15 +38,15 @@ function metricsFor(w: number): Pick<ScreenSize, 'device' | 'iconSize' | 'column
   // with tablet chrome and an invisible 34px tap-swallowing strip at the
   // bottom. The two numbers have to be the same one.
   /*
-    60 — the iOS standard, back in full.
+    66 — LARGER than the iOS standard 60, on purpose.
 
-    Seven rows at 52px fitted twenty-eight apps but the tiles were small enough
-    that the logos stopped being readable at a glance, which is the one job an
-    icon has. Six rows of four is twenty-four, and moving the city label down
-    beside the Spotlight pill freed enough height that the sixth row and the
-    full-size tile now coexist. Nothing had to be given up for it.
+    Every icon here is a small business's logo, most of them wordmarks with fine
+    lettering, and they have to be recognised rather than merely located. Apple
+    sizes for apps whose marks were drawn for 60px; these were drawn for a shop
+    front. The extra six pixels come out of the row gap, not out of the row
+    count, so it is still twenty-four a page.
   */
-  if (w < PHONE_MAX) return { device: 'phone', iconSize: 60, columns: 4, radius: 0 }
+  if (w < PHONE_MAX) return { device: 'phone', iconSize: 66, columns: 4, radius: 0 }
   if (w < 900) return { device: 'pad', iconSize: 72, columns: 5, radius: SCREEN_RADIUS }
   if (w < 1180) return { device: 'pad', iconSize: 76, columns: 6, radius: SCREEN_RADIUS }
   return { device: 'pad', iconSize: 78, columns: 8, radius: SCREEN_RADIUS }

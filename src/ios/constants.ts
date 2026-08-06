@@ -24,10 +24,10 @@ export const ICON_SIZE = 60
  * of empty space. They must be changed together.
  *
  * The phone gap was 26, which fitted five rows on a 390x844 screen where iOS
- * fits six. 20 fits six rows at the full 60px tile — twenty-four apps a page,
- * and the icons stay big enough to recognise.
+ * fits six. 13 keeps six rows while the tile grows to 66 — bigger than Apple's
+ * own, because these are shop logos rather than app marks.
  */
-export const ROW_GAP_PHONE = 20
+export const ROW_GAP_PHONE = 13
 export const ROW_GAP_PAD = 34
 
 /**
