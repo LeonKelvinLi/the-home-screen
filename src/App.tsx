@@ -73,6 +73,12 @@ export default function App() {
           setOpenOn(RESERVE)
           setEntered(true)
         }}
+        /* The keypad opens several apps directly — Designs, the membership and
+           the account screen are all one key rather than a tap into the grid. */
+        onOpen={(appId) => {
+          setOpenOn(appId)
+          setEntered(true)
+        }}
       />
     )
   }

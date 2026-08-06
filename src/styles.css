@@ -3809,487 +3809,732 @@ textarea {
   background: #f6d800;
 }
 
-/* ---------- intro / landing ----------
+/* ---------- landing: the dialer ----------
 
-   Laid out as an iOS setup card: the sheet that slides up when an AirPods case
-   is opened next to a phone. A lit stage with the product on it, the name, and
-   ONE pinned action at the bottom.
+   Two screens in one. For the first few seconds this is the phone's own Phone
+   app, as closely as a web page can manage it; then it converts into ours. The
+   operator's idea, and the reason a dial pad is the right front door: BEASTY is
+   2-3-2-7-8-9 on a telephone keypad.
 
-   The pinned action is practical as well as stylistic — the story, the pitch
-   and the four shortcuts outgrew a single screen, and pinning the way in means
-   it can never scroll out of reach however much copy is added above it.       */
-
-.intro {
-  /* Fixed, not absolute: the intro renders above the shell rather than inside
-     it, so there is no positioned ancestor to resolve against. */
-  position: fixed;
-  inset: 0;
-  z-index: 90;
-  color: #141414;
-  background:
-    radial-gradient(120% 80% at 50% 0%, #ffe94a 0%, #f6d800 46%, #e8bf00 100%),
-    #f6d800;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: max(14px, env(safe-area-inset-top)) 12px
-    calc(12px + var(--bottom-h) + var(--gesture-h));
-  overflow: hidden;
-  animation: intro-in 300ms ease both;
-}
-
-@keyframes intro-in {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-
-/* Vignette, so the card has something to sit against. */
-.intro::after {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: radial-gradient(100% 70% at 50% 34%, transparent 52%, rgba(120, 92, 0, 0.2) 100%);
-  pointer-events: none;
-}
-
-/*
-  The card. Rises from the bottom edge the way a setup sheet does, on a curve
-  that overshoots very slightly — that overshoot is most of what separates a
-  sheet that "springs" from one that merely slides.
+   Every measurement below is from a 1320x2868 screenshot of the real thing,
+   divided by 3 and expressed against a 440x956pt viewport, then scaled to the
+   actual viewport width. Fixed pixel sizes would be right on one phone only.
 */
-.intro-card {
-  position: relative;
-  z-index: 1;
+
+.dialer {
+  /* Fixed, not absolute: this renders above the shell rather than inside it,
+     and an absolutely positioned root would scroll with the page behind it. */
+  position: fixed;
+  inset: 0;
+  z-index: 40;
   display: flex;
   flex-direction: column;
-  width: min(100%, 440px);
-  max-height: 100%;
-  border-radius: 40px;
+  align-items: center;
+  font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, Inter, system-ui, sans-serif;
+
+  /* The one number everything else is derived from: the viewport as a fraction
+     of the 440pt reference the measurements were taken against. */
+  --u: calc(min(100vw, 440px) / 440);
+
+  --key-size: calc(78 * var(--u));
+  --key-gap-x: calc(22 * var(--u));
+  --key-gap-y: calc(12 * var(--u));
+  --digit-size: calc(33 * var(--u));
+  --letter-size: calc(10 * var(--u));
+
+  /* Stock iOS light. */
+  --page: #ffffff;
+  --key-fill: #e4e4e6;
+  --key-ink: #000000;
+  --key-sub: rgba(0, 0, 0, 0.92);
+  --call-fill: #34c759;
+  --tab-off: #999a9e;
+  --tab-on: #007aff;
+
+  background: var(--page);
+  color: var(--key-ink);
+  transition: background 900ms cubic-bezier(0.32, 0.72, 0, 1);
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.75);
-  box-shadow:
-    0 30px 70px rgba(80, 62, 0, 0.3),
-    0 2px 0 rgba(255, 255, 255, 0.7) inset;
-  backdrop-filter: blur(24px) saturate(1.4);
-  -webkit-backdrop-filter: blur(24px) saturate(1.4);
-  animation: card-rise 760ms cubic-bezier(0.22, 1.05, 0.36, 1) 80ms both;
 }
 
-@keyframes card-rise {
-  from { opacity: 0; transform: translateY(64px) scale(0.96); }
-  to   { opacity: 1; transform: none; }
+/* Ours. The wash between the two is the whole reveal, so it is the one
+   transition on this screen that is deliberately slow. */
+.dialer.is-converting,
+.dialer.is-beasty {
+  --page: #f6d800;
+  --key-fill: #141416;
+  --key-ink: #ffffff;
+  --key-sub: rgba(255, 255, 255, 0.66);
+  --call-fill: #1db954;
+  --tab-off: rgba(20, 20, 22, 0.62);
+  --tab-on: #141416;
+  background: linear-gradient(178deg, #ffe63d 0%, #f6d800 46%, #eec400 100%);
 }
 
-.intro.is-leaving {
-  animation: intro-out 280ms ease both;
+.dialer.is-leaving {
+  animation: dialer-out 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+
+@keyframes dialer-out {
+  to {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+}
+
+/* Hardware, so it never reacts to anything. */
+.dialer-island {
+  position: absolute;
+  top: calc(11 * var(--u));
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(125 * var(--u));
+  height: calc(37 * var(--u));
+  border-radius: 999px;
+  background: #000;
   pointer-events: none;
 }
 
-.intro.is-leaving .intro-card {
-  animation: card-drop 280ms cubic-bezier(0.32, 0.72, 0, 1) both;
+.dialer .statusbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-@keyframes intro-out {
-  to { opacity: 0; }
-}
+/* ---------- the number field ---------- */
 
-@keyframes card-drop {
-  to { opacity: 0; transform: translateY(40px) scale(0.97); }
-}
-
-.intro-scroll {
+.dialer-display {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Centred, not bottom-pinned. A real keypad has nothing here so either works;
+     once the wordmark and the dog are in it, bottom-pinning left a third of the
+     screen empty above them. */
+  justify-content: center;
+  gap: calc(6 * var(--u));
+  width: 100%;
+  padding: calc(var(--status-h) + 8px) 20px calc(12 * var(--u));
   min-height: 0;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior: contain;
+}
+
+.dialer-number {
+  font-size: calc(36 * var(--u));
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  min-height: calc(44 * var(--u));
+  color: #000;
+  transition: color 900ms ease;
+}
+
+/* Near-black on the yellow, NOT the white the keys switched to: white on
+   #f6d800 measures 1.72:1, on the largest word on the screen. */
+.dialer.is-converting .dialer-number,
+.dialer.is-beasty .dialer-number {
+  color: #141416;
+}
+
+/* Stage two puts the business in the space the real thing leaves empty. */
+.dialer-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: clamp(10px, 1.8vh, 16px);
-  padding: 22px 18px 18px;
+  gap: calc(6 * var(--u));
+  margin-top: calc(10 * var(--u));
+  opacity: 0;
+  transform: translateY(10px) scale(0.96);
+  transition:
+    opacity 520ms ease 320ms,
+    transform 620ms cubic-bezier(0.32, 0.72, 0, 1) 320ms;
+  pointer-events: none;
 }
 
-/* Hide the bar; the card edge already says it moves. */
-.intro-scroll::-webkit-scrollbar {
-  display: none;
+.dialer.is-beasty .dialer-brand {
+  opacity: 1;
+  transform: none;
 }
 
-.intro-mark {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
+.dialer-biggie {
+  width: calc(74 * var(--u));
+  height: calc(74 * var(--u));
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(90, 60, 0, 0.28));
+}
+
+.dialer-word {
+  margin: 0;
+  font-size: calc(30 * var(--u));
+  font-weight: 800;
+  letter-spacing: 0.055em;
+  color: #141416;
 }
 
 /*
-  The lit stage the product stands on. A soft pool of light with a shadow under
-  it — an AirPods card reads as a photograph of an object because of exactly
-  these two things, not because of the render.
+  Biggie and the strapline are the business, so neither may appear while the
+  screen is still pretending to be the phone's own — a real keypad has nothing
+  in this space. They arrive with the takeover.
 */
-.intro-stage {
+.dialer-biggie,
+.dialer-sub {
+  opacity: 0;
+  transform: translateY(8px);
+  transition:
+    opacity 480ms ease 340ms,
+    transform 560ms cubic-bezier(0.32, 0.72, 0, 1) 340ms;
+  pointer-events: none;
+}
+
+.dialer.is-beasty .dialer-biggie,
+.dialer.is-beasty .dialer-sub {
+  opacity: 1;
+  transform: none;
+}
+
+.dialer-biggie {
+  width: calc(64 * var(--u));
+  height: calc(64 * var(--u));
+  object-fit: contain;
+  filter: drop-shadow(0 6px 16px rgba(90, 60, 0, 0.3));
+}
+
+.dialer-sub {
+  margin: 0;
+  max-width: 20em;
+  text-align: center;
+  font-size: calc(12.5 * var(--u));
+  font-weight: 650;
+  line-height: 1.35;
+  /* 0.78 clears 4.5:1 against both ends of the yellow gradient. */
+  color: rgba(20, 20, 22, 0.78);
+}
+
+/* ---------- the keypad ---------- */
+
+.dialer-keys {
+  display: grid;
+  grid-template-columns: repeat(3, var(--key-size));
+  column-gap: var(--key-gap-x);
+  row-gap: var(--key-gap-y);
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.dialer-key {
+  width: var(--key-size);
+  height: var(--key-size);
+  border: 0;
+  border-radius: 50%;
+  background: var(--key-fill);
+  color: var(--key-ink);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: calc(1 * var(--u));
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background 900ms ease,
+    color 900ms ease,
+    transform 120ms ease;
+}
+
+.dialer-key:active {
+  /* iOS lightens the key rather than shrinking it. */
+  filter: brightness(1.35);
+}
+
+.dialer.is-beasty .dialer-key:active {
+  filter: brightness(1.9);
+}
+
+.dialer-key-digit {
+  font-size: var(--digit-size);
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+/*
+  The row under the digit: phone letters, then the operator's menu.
+
+  Its height is reserved whether or not there is text in it, because key 1, *
+  and # carry nothing on a real phone and gain a label on this one — without a
+  reserved row those three keys would resize mid-takeover and drag the grid
+  with them.
+*/
+.dialer-key-sub {
+  height: calc(12 * var(--u));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 100%;
+  font-size: var(--letter-size);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-indent: 0.1em;
+  line-height: 1;
+  color: var(--key-sub);
+  white-space: nowrap;
+  /* DIAMOND and CONTACTS are longer than any phone triplet. Shrinking the
+     glyphs beats wrapping them or letting them escape the circle. */
+  transform: scale(min(1, 1));
+  font-variant-numeric: tabular-nums;
+}
+
+/* The longer labels only appear once the screen is ours, so the squeeze can
+   be applied there rather than to ABC and DEF. */
+.dialer.is-converting .dialer-key-sub,
+.dialer.is-beasty .dialer-key-sub {
+  font-size: calc(8.6 * var(--u));
+  letter-spacing: 0.055em;
+  text-indent: 0.055em;
+}
+
+/* Lit while BEASTY is spelled out across the pad. */
+.dialer-key.is-lit {
+  background: #141416;
+  color: #ffe63d;
+  transform: scale(1.1);
+}
+
+.dialer-key.is-lit .dialer-key-sub {
+  color: rgba(255, 230, 61, 0.8);
+}
+
+/* ---------- call ---------- */
+
+.dialer-call-row {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min(100vw, 440px);
+  margin-top: calc(16 * var(--u));
+  flex: 0 0 auto;
+}
+
+.dialer-call {
+  width: var(--key-size);
+  height: var(--key-size);
+  border: 0;
+  border-radius: 50%;
+  background: var(--call-fill);
   display: grid;
   place-items: center;
-  padding: 6px 30px 12px;
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition:
+    background 900ms ease,
+    transform 140ms ease;
 }
 
-.intro-stage::before {
-  content: '';
+.dialer-call:active {
+  transform: scale(0.93);
+}
+
+/* iOS puts delete to the right of the call button, and only once there is
+   something to delete. */
+.dialer-del {
   position: absolute;
-  left: 50%;
-  top: 46%;
-  width: 230px;
-  height: 230px;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 232, 60, 0.85) 0%, rgba(255, 232, 60, 0) 66%);
-  animation: stage-glow 7s ease-in-out infinite;
-}
-
-/* Contact shadow on the floor, so he stands rather than hovers. */
-.intro-stage::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  width: 96px;
-  height: 13px;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background: radial-gradient(ellipse, rgba(90, 70, 0, 0.34) 0%, rgba(90, 70, 0, 0) 72%);
-  animation: stage-shadow 6s ease-in-out 900ms infinite;
-}
-
-@keyframes stage-glow {
-  0%, 100% { opacity: 0.75; transform: translate(-50%, -50%) scale(1); }
-  50%      { opacity: 1;    transform: translate(-50%, -50%) scale(1.1); }
-}
-
-/* Tightens as he rises, the way a real contact shadow does. */
-@keyframes stage-shadow {
-  0%, 100% { opacity: 0.85; transform: translateX(-50%) scaleX(1); }
-  50%      { opacity: 0.5;  transform: translateX(-50%) scaleX(0.82); }
-}
-
-.intro-biggie {
-  position: relative;
-  /* Sized by HEIGHT: the artwork is portrait (355x520), so sizing by width
-     rendered a 308px-tall dog that swallowed a third of the screen. */
-  height: clamp(96px, 15vh, 140px);
-  width: auto;
-  display: block;
-  filter: drop-shadow(0 10px 14px rgba(120, 92, 0, 0.22));
-  /*
-    He drifts once he has arrived — six seconds, six pixels. Enough that the
-    card is never quite still, nowhere near enough to read as a bouncing
-    graphic. It waits out the entrance so the two do not fight.
-  */
-  animation:
-    intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) 300ms both,
-    intro-float 6s ease-in-out 1100ms infinite;
-}
-
-@keyframes intro-float {
-  0%, 100% { transform: translateY(0); }
-  50%      { transform: translateY(-7px); }
-}
-
-.intro-word {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 0.86;
-  font-family: 'Helvetica Neue', Inter, system-ui, sans-serif;
-  font-weight: 800;
-  font-stretch: condensed;
-  letter-spacing: -0.035em;
-  font-size: clamp(30px, 9vw, 46px);
-}
-
-.intro-word span {
-  display: block;
-}
-
-/* The operator's own description of the company, under the mark. */
-.intro-sub {
-  margin: 6px 0 0;
-  max-width: 26ch;
-  text-align: center;
-  font-size: 13.5px;
-  font-weight: 600;
-  line-height: 1.4;
-  color: rgba(20, 20, 20, 0.66);
-}
-
-/*
-  Staggered entrance, one beat per block. A card that paints all at once reads
-  as an image; arriving in order reads as authored.
-*/
-.intro-word span,
-.intro-sub,
-.intro-story,
-.intro-join,
-.intro-dock {
-  animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.intro-word span { animation-delay: 420ms; }
-.intro-sub   { animation-delay: 520ms; }
-.intro-dock  { animation-delay: 670ms; }
-.intro-story { animation-delay: 740ms; }
-.intro-join  { animation-delay: 800ms; }
-
-@keyframes intro-rise {
-  from { opacity: 0; transform: translateY(14px) scale(0.97); }
-  to   { opacity: 1; transform: none; }
-}
-
-.intro-story {
-  width: 100%;
-  padding: 14px 15px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background: rgba(20, 20, 20, 0.045);
-}
-
-.intro-story p {
-  margin: 0;
-  font-size: 12.5px;
-  line-height: 1.5;
-  color: rgba(20, 20, 20, 0.72);
-}
-
-/* The opening line names him; it carries the weight of the rest. */
-.intro-story p:first-child {
-  font-weight: 700;
-  color: #141414;
-}
-
-/*
-  The pitch to the next business. Dashed, echoing the blank tiles it is talking
-  about, so it reads as an invitation to fill something.
-*/
-.intro-join {
-  width: 100%;
-  padding: 13px 15px 12px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
-  text-align: left;
-  background: rgba(246, 216, 0, 0.16);
-  border: 1.5px dashed rgba(20, 20, 20, 0.24);
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 180ms ease;
-}
-
-.intro-join:active {
-  transform: scale(0.98);
-  background: rgba(246, 216, 0, 0.3);
-}
-
-.intro-join-head {
-  font-size: 13px;
-  font-weight: 800;
-  color: #141414;
-}
-
-.intro-join-body {
-  font-size: 12px;
-  line-height: 1.45;
-  color: rgba(20, 20, 20, 0.66);
-}
-
-.intro-join-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  margin-top: 3px;
-  font-size: 12.5px;
-  font-weight: 800;
-  color: #141414;
-}
-
-/*
-  Four shortcuts, kept QUIET. A setup card has one loud action; these sit on
-  the card surface rather than on a bar of their own, so nothing competes with
-  the pinned button below.
-*/
-.intro-dock {
+  right: calc(50% - var(--key-size) * 1.5 - var(--key-gap-x));
+  width: var(--key-size);
+  height: var(--key-size);
+  border: 0;
+  background: none;
+  color: var(--key-ink);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 6px;
-  width: 100%;
+  place-items: center;
+  cursor: pointer;
+  opacity: 0.85;
+  -webkit-tap-highlight-color: transparent;
 }
 
-.intro-btn {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 4px 8px;
-  border-radius: 18px;
-  color: #141414;
-  background: rgba(20, 20, 20, 0.045);
-  /* 44pt minimum, per the platform, not per what fits. */
-  min-height: 66px;
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background 160ms ease;
+/* ---------- panels ---------- */
+
+.dialer-panel {
+  position: absolute;
+  left: 50%;
+  bottom: calc(104 * var(--u));
+  transform: translateX(-50%);
+  width: min(92vw, 400px);
+  /* Tall enough that the longer pages do not cut mid-sentence, which reads as
+     broken rather than as scrollable. */
+  max-height: min(62vh, 560px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 20px 20px 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: saturate(180%) blur(24px);
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  box-shadow: 0 18px 50px rgba(40, 28, 0, 0.26);
+  animation: dialer-panel-in 260ms cubic-bezier(0.32, 0.72, 0, 1) both;
+  z-index: 3;
 }
 
-.intro-btn:active {
-  transform: scale(0.92);
-  background: rgba(20, 20, 20, 0.1);
+@keyframes dialer-panel-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 14px);
+  }
 }
 
-/* The EATS tile is the app icon itself — the yellow ground and black Biggie
-   already signed off on — not a recoloured button. */
-.intro-btn.is-primary {
-  background: linear-gradient(170deg, #ffe63d, #f2cf00);
-  box-shadow: 0 4px 12px rgba(180, 150, 0, 0.35);
+.dialer-panel p {
+  margin: 0 0 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #1a1a1c;
 }
 
-.intro-btn.is-primary:active {
-  background: linear-gradient(170deg, #ffe63d, #f2cf00);
+.dialer-panel p:first-of-type {
+  font-weight: 650;
 }
 
-.intro-btn em {
-  font-style: normal;
-  font-size: 10.5px;
-  font-weight: 700;
-  letter-spacing: 0.02em;
-}
-
-.intro-btn.is-primary em {
-  font-weight: 800;
-}
-
-.intro-btn-dog {
+.dialer-panel a {
   display: block;
-  height: 23px;
-  width: auto;
-}
-
-.intro-panel {
-  width: 100%;
-  padding: 12px 15px;
-  border-radius: 18px;
-  background: rgba(20, 20, 20, 0.045);
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  text-align: center;
-  animation: intro-rise 320ms cubic-bezier(0.16, 1, 0.3, 1) both;
-}
-
-.intro-panel a {
+  margin-bottom: 8px;
   font-size: 16px;
-  font-weight: 700;
-  color: #141414;
+  font-weight: 650;
+  color: #0a6cff;
   text-decoration: none;
 }
 
-.intro-panel p {
-  margin: 0;
-  font-size: 12.5px;
-  line-height: 1.45;
-  color: rgba(20, 20, 20, 0.68);
-}
-
-/*
-  The pinned action, in the setup-card manner: one button, always in reach,
-  with a hairline over it that only appears once there is something scrolled
-  underneath.
-*/
-.intro-action {
-  flex: 0 0 auto;
-  padding: 12px 18px calc(14px + env(safe-area-inset-bottom));
-  border-top: 1px solid rgba(20, 20, 20, 0.07);
-  background: rgba(255, 255, 255, 0.5);
-  animation: intro-rise 600ms cubic-bezier(0.16, 1, 0.3, 1) 850ms both;
-}
-
-.intro-enter {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 9px;
-  padding: 16px 24px;
-  border-radius: 999px;
-  background: #141414;
-  color: #f6d800;
-  font-size: 16px;
-  font-weight: 800;
-  min-height: 52px;
-  box-shadow: 0 10px 22px rgba(60, 46, 0, 0.28);
-  transition: transform 200ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.intro-enter:active {
-  transform: scale(0.975);
-}
-
-/* A sheen crossing the button every few seconds — the one flourish on the
-   screen's only loud control. */
-/*
-  The sheen animated `left`, which asks the browser to lay the page out again on
-  every frame, forever. transform is composited — same look, none of the work.
-*/
-.intro-enter::after {
-  content: '';
+.dialer-panel-close {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  width: 44%;
-  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.16), transparent);
-  will-change: transform;
-  animation: enter-sheen 4.5s ease-in-out 1900ms infinite;
+  top: 8px;
+  right: 8px;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 
-@keyframes enter-sheen {
-  0%, 62%, 100% { transform: translateX(-120%); }
-  86%           { transform: translateX(340%); }
+.dialer-panel-action {
+  margin-top: 6px;
+  min-height: 44px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #141416;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
-.intro-enter svg {
+/* ---------- tab bar ---------- */
+
+.dialer-tabs {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 440px;
+  padding: calc(9 * var(--u)) 0 0;
+  margin-top: calc(18 * var(--u));
+  border-top: 0.5px solid rgba(0, 0, 0, 0.14);
+  flex: 0 0 auto;
+}
+
+.dialer-tab {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: calc(3 * var(--u));
+  min-height: 50px;
+  border: 0;
+  background: none;
+  color: var(--tab-off);
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 900ms ease;
+}
+
+.dialer-tab.is-selected {
+  color: var(--tab-on);
+}
+
+.dialer-tab-icon {
   position: relative;
-  animation: intro-nudge 3.4s ease-in-out 2100ms infinite;
+  display: grid;
+  place-items: center;
+  height: calc(27 * var(--u));
 }
 
-@keyframes intro-nudge {
-  0%, 74%, 100% { transform: translateX(0); }
-  84%           { transform: translateX(4px); }
+.dialer-badge {
+  position: absolute;
+  top: calc(-7 * var(--u));
+  right: calc(-14 * var(--u));
+  min-width: calc(19 * var(--u));
+  height: calc(19 * var(--u));
+  padding: 0 calc(5 * var(--u));
+  border-radius: 999px;
+  background: #ff3b30;
+  color: #fff;
+  font-size: calc(12 * var(--u));
+  font-weight: 700;
+  line-height: calc(19 * var(--u));
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.dialer-tab-label {
+  font-size: calc(10.5 * var(--u));
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+}
+
+.dialer-foot {
+  margin: calc(7 * var(--u)) 0 calc(2 * var(--u));
+  font-size: calc(11 * var(--u));
+  font-weight: 600;
+  color: rgba(20, 20, 22, 0.62);
+  opacity: 0;
+  transition: opacity 520ms ease 420ms;
+}
+
+.dialer.is-beasty .dialer-foot {
+  opacity: 1;
+}
+
+.dialer-home {
+  width: calc(140 * var(--u));
+  height: 5px;
+  margin: calc(8 * var(--u)) 0 calc(9 * var(--u));
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.85);
+  flex: 0 0 auto;
 }
 
 /*
-  Everything above is decoration. Someone who asked the system for less motion
-  gets the composition and none of the movement.
+  Someone who asked the system for less motion gets the composition and none of
+  the performance — the screen is simply ours from the first frame.
 */
 @media (prefers-reduced-motion: reduce) {
-  .intro,
-  .intro.is-leaving .intro-card,
-  .intro-card,
-  .intro-stage::before,
-  .intro-stage::after,
-  .intro-biggie,
-  .intro-word span,
-  .intro-sub,
-  .intro-story,
-  .intro-join,
-  .intro-dock,
-  .intro-action,
-  .intro-enter::after,
-  .intro-enter svg,
-  .intro-panel {
+  .dialer,
+  .dialer-brand,
+  .dialer-key,
+  .dialer-call,
+  .dialer-tab,
+  .dialer-tab-label > span,
+  .dialer-foot,
+  .dialer-number {
+    transition: none;
+  }
+
+  .dialer-panel,
+  .dialer.is-leaving {
+    animation: none;
+  }
+}
+
+/* ---------- the takeover ----------
+
+   The operator asked for it to feel "like being hacked", and smooth. Those pull
+   against each other: a real glitch is jitter, and jitter on a phone reads as a
+   dropped frame rather than as an effect.
+
+   So the violence is in the COLOUR and the TEXT, and the geometry stays still.
+   A scanline sweeps once, the screen splits into red and cyan for a few frames,
+   and every label resolves out of noise — but nothing moves position, so it
+   holds a solid frame rate and never looks broken. Everything below animates
+   transform, opacity or filter only; nothing here can trigger layout.
+*/
+
+.dialer-glitch {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+  pointer-events: none;
+  overflow: hidden;
+  /* Two passes of the flicker across the length of the takeover. */
+  animation: glitch-flicker 1500ms steps(1, end) both;
+}
+
+/* The scanline: one bright band travelling top to bottom, once. */
+.dialer-glitch::before {
+  content: '';
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  height: 22%;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.9) 42%,
+    rgba(120, 240, 255, 0.55) 52%,
+    transparent
+  );
+  mix-blend-mode: overlay;
+  animation: glitch-sweep 900ms cubic-bezier(0.5, 0, 0.2, 1) both;
+}
+
+/* The horizontal tear: a couple of bands that shift sideways and vanish. */
+.dialer-glitch::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0 3px,
+    rgba(0, 0, 0, 0.055) 3px 4px
+  );
+  opacity: 0;
+  animation: glitch-lines 1500ms ease-out both;
+}
+
+@keyframes glitch-sweep {
+  from {
+    transform: translateY(-120%);
+  }
+  to {
+    transform: translateY(520%);
+  }
+}
+
+@keyframes glitch-lines {
+  0% { opacity: 0; }
+  8% { opacity: 1; }
+  70% { opacity: 0.7; }
+  100% { opacity: 0; }
+}
+
+/* The whole screen, tinted and split for a handful of frames. Applied to the
+   layer rather than to the content, so no text is re-rasterised. */
+@keyframes glitch-flicker {
+  0%, 100% { background: transparent; }
+  3% { background: rgba(255, 60, 90, 0.13); }
+  6% { background: rgba(60, 230, 255, 0.11); }
+  9% { background: transparent; }
+  27% { background: rgba(255, 230, 61, 0.16); }
+  30% { background: transparent; }
+  46% { background: rgba(60, 230, 255, 0.08); }
+  49% { background: transparent; }
+}
+
+/*
+  Chromatic aberration on the keypad while it is being taken over. A shadow
+  pair, not a filter: filters on this many elements cost a repaint per frame,
+  text-shadow is drawn once into the same layer.
+*/
+.dialer.is-converting .dialer-key-digit,
+.dialer.is-converting .dialer-key-sub,
+.dialer.is-converting .dialer-number {
+  animation: glitch-split 1500ms ease-out both;
+}
+
+@keyframes glitch-split {
+  0% { text-shadow: none; }
+  6% { text-shadow: -2px 0 rgba(255, 0, 70, 0.85), 2px 0 rgba(0, 220, 255, 0.85); }
+  14% { text-shadow: 2px 0 rgba(255, 0, 70, 0.7), -2px 0 rgba(0, 220, 255, 0.7); }
+  30% { text-shadow: -1px 0 rgba(255, 0, 70, 0.5), 1px 0 rgba(0, 220, 255, 0.5); }
+  55% { text-shadow: -1px 0 rgba(255, 0, 70, 0.22), 1px 0 rgba(0, 220, 255, 0.22); }
+  100% { text-shadow: none; }
+}
+
+/* The number field lands last and hardest — this is the word being spelled. */
+.dialer.is-beasty .dialer-number {
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  animation: number-land 620ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@keyframes number-land {
+  from {
+    opacity: 0.3;
+    transform: scale(0.9);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* ---------- panels ---------- */
+
+.dialer-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.dialer-panel-head h2 {
+  flex: 1;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 750;
+  letter-spacing: -0.01em;
+  color: #141416;
+}
+
+.dialer-panel-mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(20, 20, 22, 0.06);
+  color: #141416;
+  flex: 0 0 auto;
+}
+
+.dialer-panel-body p:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Fades the last line rather than slicing it, so a long page reads as
+   scrollable instead of as broken. */
+.dialer-panel::after {
+  content: '';
+  position: sticky;
+  bottom: -18px;
+  display: block;
+  height: 26px;
+  margin: 0 -20px -18px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.92), transparent);
+  pointer-events: none;
+}
+
+/*
+  What the operator still has to supply, shown rather than buried in a comment.
+  It reads as a note on the page because that is exactly what it is — the page
+  is not finished, and saying so is better than quietly sounding finished.
+*/
+.dialer-panel-flag {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 214, 0, 0.22);
+  border: 1px solid rgba(160, 120, 0, 0.28);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #4a3600;
+  font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-glitch,
+  .dialer-glitch::before,
+  .dialer-glitch::after,
+  .dialer.is-converting .dialer-key-digit,
+  .dialer.is-converting .dialer-key-sub,
+  .dialer.is-converting .dialer-number,
+  .dialer.is-beasty .dialer-number {
     animation: none;
   }
 }
