@@ -4039,9 +4039,16 @@ textarea {
 /* ---------- the number field ---------- */
 
 .dialer-display {
-  /* basis 0, so it shares the slack with .dialer-spacer rather than taking it
-     all — that is what centres the keypad. */
-  flex: 1 1 0;
+  /*
+    Shares the slack with .dialer-spacer, but takes the larger share.
+
+    Even 1:1 put the pad dead centre, which sat too high — a dial pad belongs
+    near the thumb, and iOS itself weights this 73:27. 1.9:1 lands at about
+    65:35, between the two: clearly lower than centre without the hole under the
+    call button that the strict iOS proportion leaves once browser chrome has
+    eaten from both ends.
+  */
+  flex: 1.9 1 0;
   display: flex;
   flex-direction: column;
   align-items: center;

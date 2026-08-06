@@ -40,11 +40,13 @@ interface Props {
 /**
  * How long the stock keypad holds before it is taken over.
  *
- * Three seconds, which is the operator's number and is about right: long enough
- * to stop reading it as a loading state and start wondering why the link opened
- * a dial pad, short enough that nobody taps away.
+ * Long enough to stop reading as a loading state and start reading as "why has
+ * this link opened a dial pad", short enough that nobody taps away first. Three
+ * seconds was the original brief and proved too long once the takeover itself
+ * grew to 2.6s — the whole sequence ran to nearly six seconds before anyone
+ * could do anything.
  */
-const HOLD_MS = 3000
+const HOLD_MS = 1800
 /** One key lights per step while BEASTY is spelled across the pad. */
 const SPELL_STEP_MS = 150
 /** The pad is corrupted for this long before BEASTY starts appearing on it. */
