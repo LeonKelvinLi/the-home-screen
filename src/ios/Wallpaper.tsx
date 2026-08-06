@@ -42,7 +42,10 @@ const FALLBACK = '/wallpapers/san-francisco.webp'
 */
 const CITY_WALLPAPERS = new Set<string>([
   'alameda',
+  'albany',
+  'antioch',
   'berkeley',
+  'brentwood',
   'concord',
   'dublin',
   'fremont',
