@@ -124,7 +124,17 @@ export function CareersMark({ size = 24 }: MarkProps) {
  * A map rather than a switch so the panel component stays generic — adding a
  * page is a line here and a line in copy.ts, and nothing else changes.
  */
+/** Favorites — the same star the tab carries, solid and slightly squat. */
+export function StarMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
+      <path d="M12 2.4 15 8.9l7.1.85-5.25 4.85 1.4 7-6.25-3.5-6.25 3.5 1.4-7L1.9 9.75 9 8.9Z" />
+    </svg>
+  )
+}
+
 export const PANEL_MARKS: Record<PanelPage, (props: MarkProps) => JSX.Element> = {
+  favorites: StarMark,
   about: DogMark,
   contacts: PhoneMark,
   bprf: PurpleRibbon,

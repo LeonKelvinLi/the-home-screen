@@ -36,6 +36,7 @@ export type PanelPage =
   | 'donations'
   | 'careers'
   | 'reviews'
+  | 'favorites'
 
 export interface DialerKey {
   digit: string

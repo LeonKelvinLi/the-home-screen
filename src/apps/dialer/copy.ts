@@ -38,9 +38,30 @@ interface Page {
   needsGlenn?: string
 }
 
-type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews'
+type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews' | 'favorites'
 
 export const PAGES: Record<PageKey, Page> = {
+  /*
+    The star keeps its stock name because it is going to do the stock thing:
+    the operator wants a star on each partner's page that a customer taps as
+    they visit, so the places they liked are here to come back to.
+
+    NOT BUILT. There is no favourites field, nothing writes one and nothing
+    reads one — so this page says what the tab is for and says it is not working
+    yet. The alternative was a tab called Favorites that opens something else,
+    which teaches a customer that the labels on this screen do not mean what
+    they say.
+  */
+  favorites: {
+    title: 'Favorites',
+    body: [
+      'Somewhere to keep the places you liked. The idea is a star on each business you open, tapped as you go, so the ones worth returning to are all in one list instead of somewhere in your memory.',
+      'It is not working yet — nothing is being saved, and this list will stay empty until the star appears on the business pages. Everything else on the keypad works now.',
+    ],
+    needsGlenn:
+      'Whether a favourite is kept on the device or on an account — an account would carry it between phones, and there is no sign-in yet.',
+  },
+
   /*
     What the Voicemail tab becomes: customers' own words about the businesses on
     the screen.

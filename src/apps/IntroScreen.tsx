@@ -58,7 +58,7 @@ type Stage = 'stock' | 'converting' | 'beasty'
 
 /** The tab bar, in both of its lives. Index-matched. */
 const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicemail']
-const TAB_LABELS = ['About', 'Careers', 'Contact', 'BEASTY', 'Reviews']
+const TAB_LABELS = ['Favorites', 'Careers', 'Contact', 'BEASTY', 'Reviews']
 
 export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   const reduced =
@@ -366,7 +366,10 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         their stock labels through the performance and pick up ours after.
       */}
       <nav className="dialer-tabs" aria-label="BEASTY">
-        <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'about' })} />
+        {/* Keeps the stock name because it is going to do the stock thing — a star
+            on each partner's page, tapped as you visit. About is still one tap
+            away on key 1, so nothing is lost by giving this tab back. */}
+        <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'favorites' })} />
         <Tab icon={<RecentsClock />} label={tabText(1)} name={TAB_LABELS[1]} onClick={() => press({ kind: 'panel', page: 'careers' })} />
         <Tab icon={<PersonCircleFill />} label={tabText(2)} name={TAB_LABELS[2]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
         <Tab icon={<KeypadGrid />} label={tabText(3)} name={TAB_LABELS[3]} selected onClick={() => press()} />
