@@ -3928,10 +3928,104 @@ textarea {
   --tab-off: #a2a2a2;
   --tab-on: #007aff;
 
-  background: var(--page);
+  /* Black, always. This is the screen with no picture on it; .dialer-crt is
+     the picture, and it carries the white or the yellow. */
+  background: #000;
   color: var(--key-ink);
-  transition: background 900ms cubic-bezier(0.32, 0.72, 0, 1);
   overflow: hidden;
+}
+
+/*
+  The picture.
+
+  Collapses like a CRT powering off — to a bright horizontal line, then a dot —
+  and opens back out the same way. Doing it on a wrapper rather than on the root
+  is what lets the black underneath be a real absence rather than a fade: there
+  is nothing behind the picture but the off screen.
+
+  transform and filter only, both composited, so a full-screen collapse costs no
+  layout and no repaint of the twelve keys inside it.
+*/
+.dialer-crt {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--page);
+  transform-origin: 50% 50%;
+  will-change: transform, filter;
+  transition: background 900ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* Power down: vertical collapse to a searing line, then the line to a dot. */
+.dialer.is-down .dialer-crt {
+  animation: crt-off 750ms cubic-bezier(0.6, 0, 0.9, 0.2) both;
+}
+
+@keyframes crt-off {
+  0% {
+    transform: scaleY(1) scaleX(1);
+    filter: brightness(1) contrast(1);
+  }
+  38% {
+    transform: scaleY(0.55) scaleX(1);
+    filter: brightness(1.5) contrast(1.4);
+  }
+  62% {
+    transform: scaleY(0.014) scaleX(1);
+    filter: brightness(4.5) contrast(2.4);
+  }
+  78% {
+    transform: scaleY(0.01) scaleX(0.62);
+    filter: brightness(6) contrast(3);
+  }
+  100% {
+    transform: scaleY(0.006) scaleX(0.002);
+    filter: brightness(9) contrast(4);
+    opacity: 0;
+  }
+}
+
+/* Held dark. Nothing on screen at all — this silence is doing the most work in
+   the sequence, so it is not decorated. */
+.dialer.is-black .dialer-crt {
+  opacity: 0;
+  transform: scaleY(0.006) scaleX(0.002);
+}
+
+/*
+  Power up, and deliberately SLOWER than the power-down. A television takes
+  longer to warm than it does to die, and the difference is most of why the
+  return reads as something coming back to life.
+*/
+.dialer.is-up .dialer-crt {
+  animation: crt-on 950ms cubic-bezier(0.16, 0.9, 0.3, 1) both;
+}
+
+@keyframes crt-on {
+  0% {
+    opacity: 0;
+    transform: scaleY(0.006) scaleX(0.002);
+    filter: brightness(9) contrast(4);
+  }
+  14% {
+    opacity: 1;
+    transform: scaleY(0.01) scaleX(0.55);
+    filter: brightness(7) contrast(3);
+  }
+  30% {
+    transform: scaleY(0.016) scaleX(1);
+    filter: brightness(5) contrast(2.2);
+  }
+  58% {
+    transform: scaleY(0.5) scaleX(1);
+    filter: brightness(1.9) contrast(1.3);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+    filter: brightness(1) contrast(1);
+  }
 }
 
 /* Ours. The wash between the two is the whole reveal, so it is the one
@@ -3945,7 +4039,7 @@ textarea {
   stock white and the grey keys through the first burst means the glitch is
   happening to the PHONE'S OWN keypad, and the brand is what breaks through it.
 */
-.dialer.is-converting,
+.dialer.is-up,
 .dialer.is-beasty {
   --page: #f6d800;
   --key-fill: #141416;
@@ -3954,20 +4048,28 @@ textarea {
   --call-fill: #1db954;
   --tab-off: rgba(20, 20, 22, 0.72);
   --tab-on: #141416;
+  background: none;
+}
+
+/*
+  The brand arrives on the picture, and INSTANTLY — the screen was dark, so
+  there is nothing to transition from and nothing for the eye to catch changing.
+  Everything that used to be a slow wash is now hidden by the blackout, which is
+  the whole reason the blackout is there.
+*/
+.dialer.is-up .dialer-crt,
+.dialer.is-beasty .dialer-crt {
   background: linear-gradient(178deg, #ffe63d 0%, #f6d800 46%, #eec400 100%);
-  transition: background 900ms cubic-bezier(0.32, 0.72, 0, 1) 620ms;
+  transition: none;
 }
 
-/* Settled, and on a return visit: no delay, so nothing lags. */
-.dialer.is-beasty {
-  transition: background 200ms linear;
-}
-
-/* The pad flips with the page rather than ahead of it. */
-.dialer.is-converting .dialer-key,
-.dialer.is-converting .dialer-key-sub,
-.dialer.is-converting .dialer-tab {
-  transition-delay: 620ms;
+.dialer.is-up .dialer-key,
+.dialer.is-up .dialer-key-sub,
+.dialer.is-up .dialer-tab,
+.dialer.is-beasty .dialer-key,
+.dialer.is-beasty .dialer-key-sub,
+.dialer.is-beasty .dialer-tab {
+  transition: none;
 }
 
 /*
@@ -4080,7 +4182,7 @@ textarea {
 
 /* Near-black on the yellow, NOT the white the keys switched to: white on
    #f6d800 measures 1.72:1, on the largest word on the screen. */
-.dialer.is-converting .dialer-number,
+.dialer.is-corrupt .dialer-number,
 .dialer.is-beasty .dialer-number {
   color: #141416;
 }
@@ -4199,7 +4301,7 @@ textarea {
   CONTACTS is the longest at eight characters and measures ~47px at the floor,
   inside even a 52px key.
 */
-.dialer.is-converting .dialer-key-sub,
+.dialer.is-corrupt .dialer-key-sub,
 .dialer.is-beasty .dialer-key-sub {
   font-size: clamp(8.5px, calc(10 * var(--u)), 11px);
   letter-spacing: 0.02em;
@@ -4508,7 +4610,7 @@ textarea {
   z-index: 6;
   pointer-events: none;
   overflow: hidden;
-  animation: glitch-flicker 2600ms steps(1, end) both;
+  animation: glitch-flicker 1900ms steps(1, end) both;
 }
 
 /*
@@ -4531,19 +4633,19 @@ textarea {
 }
 
 .glitch-band:nth-child(1) {
-  animation: band-a 2600ms steps(1, end) both;
+  animation: band-a 1900ms steps(1, end) both;
 }
 
 .glitch-band:nth-child(2) {
   height: 4%;
-  animation: band-b 2600ms steps(1, end) both;
+  animation: band-b 1900ms steps(1, end) both;
 }
 
 .glitch-band:nth-child(3) {
   height: 11%;
   backdrop-filter: invert(1) saturate(3);
   -webkit-backdrop-filter: invert(1) saturate(3);
-  animation: band-c 2600ms steps(1, end) both;
+  animation: band-c 1900ms steps(1, end) both;
 }
 
 /* Top, height and horizontal shove all snap together. The gaps between the
@@ -4618,7 +4720,7 @@ textarea {
     rgba(0, 0, 0, 0.055) 3px 4px
   );
   opacity: 0;
-  animation: glitch-lines 2600ms ease-out both;
+  animation: glitch-lines 1900ms ease-out both;
 }
 
 @keyframes glitch-sweep {
@@ -4663,10 +4765,10 @@ textarea {
   pair, not a filter: filters on this many elements cost a repaint per frame,
   text-shadow is drawn once into the same layer.
 */
-.dialer.is-converting .dialer-key-digit,
-.dialer.is-converting .dialer-key-sub,
-.dialer.is-converting .dialer-number {
-  animation: glitch-split 2600ms ease-out both;
+.dialer.is-corrupt .dialer-key-digit,
+.dialer.is-corrupt .dialer-key-sub,
+.dialer.is-corrupt .dialer-number {
+  animation: glitch-split 1900ms ease-out both;
 }
 
 @keyframes glitch-split {
@@ -4780,9 +4882,9 @@ textarea {
   .dialer-glitch::before,
   .dialer-glitch::after,
   .glitch-band,
-  .dialer.is-converting .dialer-key-digit,
-  .dialer.is-converting .dialer-key-sub,
-  .dialer.is-converting .dialer-number,
+  .dialer.is-corrupt .dialer-key-digit,
+  .dialer.is-corrupt .dialer-key-sub,
+  .dialer.is-corrupt .dialer-number,
   .dialer.is-beasty .dialer-number {
     animation: none;
   }
@@ -4875,7 +4977,7 @@ textarea {
     height: calc(10 * var(--u));
   }
 
-  .dialer.is-converting .dialer-key-sub,
+  .dialer.is-corrupt .dialer-key-sub,
   .dialer.is-beasty .dialer-key-sub {
     font-size: 7.5px;
     letter-spacing: 0;
@@ -4931,4 +5033,262 @@ textarea {
   flex: 1 1 0;
   min-height: 0;
   pointer-events: none;
+}
+
+/*
+  BEASTY arriving.
+
+  Each letter drops in out of focus and slightly oversize, staggered — it is the
+  first thing on the far side of the blackout, so it gets to land rather than
+  simply be there. The overshoot is small on purpose: the drama in this sequence
+  is the dark, and a bouncy wordmark would argue with it.
+*/
+.dialer-letter {
+  display: inline-block;
+  animation: letter-land 620ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes letter-land {
+  0% {
+    opacity: 0;
+    transform: translateY(-14px) scale(1.5);
+    filter: blur(7px);
+  }
+  55% {
+    opacity: 1;
+    filter: blur(0);
+  }
+  72% {
+    transform: translateY(0) scale(0.965);
+  }
+  100% {
+    transform: none;
+    filter: none;
+  }
+}
+
+/* The dog comes up with the word rather than before it. */
+.dialer.is-beasty .dialer-biggie {
+  animation: biggie-land 700ms cubic-bezier(0.16, 1, 0.3, 1) 260ms both;
+}
+
+@keyframes biggie-land {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.86);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-crt,
+  .dialer.is-down .dialer-crt,
+  .dialer.is-up .dialer-crt,
+  .dialer-letter,
+  .dialer.is-beasty .dialer-biggie {
+    animation: none;
+  }
+}
+
+/*
+  The bloom behind BEASTY.
+
+  A single radial flare that blows out and dies as the letters land. Sits behind
+  them, does not affect layout, and is removed from the DOM the moment the
+  screen leaves — this is the one frame the sequence is allowed to be loud.
+*/
+.dialer-bloom {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 62vmin;
+  height: 62vmin;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.92) 0%,
+    rgba(255, 246, 170, 0.55) 34%,
+    rgba(255, 230, 61, 0) 68%
+  );
+  animation: bloom 720ms cubic-bezier(0.12, 0.8, 0.3, 1) both;
+  z-index: 0;
+}
+
+@keyframes bloom {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  22% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0.72);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.5);
+  }
+}
+
+/* The word sits above its own flare. */
+.dialer-number,
+.dialer-biggie {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-bloom {
+    display: none;
+  }
+}
+
+/* ---------- the boot back up ----------
+
+   Everything below happens in the 950ms the picture takes to open, and none of
+   it touches layout: opacity, transform and box-shadow only.
+*/
+
+/*
+  The dot the picture collapsed into, still glowing and decaying. Positioned on
+  the root rather than the picture, because the picture is scaled to nothing by
+  this point and anything inside it would be scaled away with it.
+*/
+.dialer-phosphor {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #fffdf0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 2;
+  animation: phosphor 2200ms cubic-bezier(0.2, 0, 0.5, 1) both;
+}
+
+@keyframes phosphor {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 rgba(255, 253, 240, 0);
+  }
+  22% {
+    opacity: 1;
+    box-shadow: 0 0 26px 7px rgba(255, 253, 240, 0.65);
+  }
+  46% {
+    opacity: 0.5;
+    box-shadow: 0 0 14px 3px rgba(255, 240, 150, 0.3);
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 0 4px 0 rgba(255, 230, 61, 0);
+  }
+}
+
+/*
+  The tube warming: a vignette and scanline texture over the picture that lifts
+  as it comes up. Sells the return as a screen powering on rather than a
+  crossfade, and it is one element that never repaints anything under it.
+*/
+.dialer.is-up .dialer-crt::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9;
+  background:
+    repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.14) 0 1px, transparent 1px 3px),
+    radial-gradient(ellipse at center, transparent 42%, rgba(0, 0, 0, 0.55) 100%);
+  animation: tube-warm 950ms ease-out both;
+}
+
+@keyframes tube-warm {
+  0% { opacity: 1; }
+  60% { opacity: 0.55; }
+  100% { opacity: 0; }
+}
+
+/*
+  The pad boots row by row rather than simply being there when the picture
+  opens. Four rows, 70ms apart — enough to read as a system coming up, short
+  enough that it is over before anyone could want to touch it.
+*/
+.dialer.is-up .dialer-key,
+.dialer.is-beasty .dialer-key {
+  animation: key-boot 460ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.dialer.is-up .dialer-key:nth-child(-n + 3),
+.dialer.is-beasty .dialer-key:nth-child(-n + 3) { animation-delay: 120ms; }
+.dialer.is-up .dialer-key:nth-child(n + 4):nth-child(-n + 6),
+.dialer.is-beasty .dialer-key:nth-child(n + 4):nth-child(-n + 6) { animation-delay: 190ms; }
+.dialer.is-up .dialer-key:nth-child(n + 7):nth-child(-n + 9),
+.dialer.is-beasty .dialer-key:nth-child(n + 7):nth-child(-n + 9) { animation-delay: 260ms; }
+.dialer.is-up .dialer-key:nth-child(n + 10),
+.dialer.is-beasty .dialer-key:nth-child(n + 10) { animation-delay: 330ms; }
+
+@keyframes key-boot {
+  from {
+    opacity: 0;
+    transform: scale(0.72);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* The way in arrives last, after the pad it belongs to. */
+.dialer.is-up .dialer-call,
+.dialer.is-beasty .dialer-call {
+  animation: call-boot 520ms cubic-bezier(0.16, 1, 0.3, 1) 430ms both;
+}
+
+@keyframes call-boot {
+  from {
+    opacity: 0;
+    transform: scale(0.55);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* And the tab bar under it. */
+.dialer.is-up .dialer-tab,
+.dialer.is-beasty .dialer-tab {
+  animation: tab-boot 480ms ease-out 520ms both;
+}
+
+@keyframes tab-boot {
+  from {
+    opacity: 0;
+    transform: translateY(9px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-phosphor,
+  .dialer.is-up .dialer-crt::after,
+  .dialer.is-up .dialer-key,
+  .dialer.is-beasty .dialer-key,
+  .dialer.is-up .dialer-call,
+  .dialer.is-beasty .dialer-call,
+  .dialer.is-up .dialer-tab,
+  .dialer.is-beasty .dialer-tab {
+    animation: none;
+  }
 }

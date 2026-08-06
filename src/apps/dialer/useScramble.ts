@@ -30,6 +30,16 @@ export interface ScrambleOptions {
   duration?: number
   /** Delay before the whole set starts, in ms. */
   delay?: number
+  /**
+   * False to scramble WITHOUT ever landing on the target.
+   *
+   * The corruption phase runs on the phone's own white keypad, before the
+   * screen blacks out — so if the labels resolved there, the customer would
+   * read the whole menu before the reveal and the blackout would be paying off
+   * something already spent. They churn instead, and the answer arrives on the
+   * other side of the dark.
+   */
+  resolve?: boolean
 }
 
 /**
@@ -40,7 +50,7 @@ export interface ScrambleOptions {
 export function useScramble(
   targets: string[],
   active: boolean,
-  { stagger = 34, duration = 460, delay = 0 }: ScrambleOptions = {},
+  { stagger = 34, duration = 460, delay = 0, resolve = true }: ScrambleOptions = {},
 ): string[] {
   const [out, setOut] = useState<string[]>(() => targets.map(() => ''))
   /*
@@ -70,7 +80,17 @@ export function useScramble(
         lastWrite = now
         const next = list.map((target, i) => {
           const p = (elapsed - i * stagger) / duration
-          if (p >= 1) return target
+          if (p >= 1 && resolve) return target
+          if (!resolve) {
+            // Churn every character, forever, at the target's own length so
+            // nothing reflows.
+            if (elapsed - i * stagger <= 0) return ''
+            let noise = ''
+            for (let c = 0; c < target.length; c++) {
+              noise += CHARS[(Math.random() * CHARS.length) | 0]
+            }
+            return noise
+          }
           allDone = false
           if (p <= 0) return ''
           // Lock characters left to right; the rest is noise, kept to the
@@ -84,10 +104,10 @@ export function useScramble(
         })
         setOut(next)
       } else {
-        allDone = list.every((_, i) => elapsed - i * stagger >= duration)
+        allDone = resolve && list.every((_, i) => elapsed - i * stagger >= duration)
       }
 
-      if (allDone) {
+      if (allDone && resolve) {
         setOut(latest.current)
         return
       }
@@ -96,7 +116,7 @@ export function useScramble(
 
     raf = requestAnimationFrame(tick)
     return () => cancelAnimationFrame(raf)
-  }, [active, stagger, duration, delay])
+  }, [active, stagger, duration, delay, resolve])
 
   return out
 }

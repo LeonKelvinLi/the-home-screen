@@ -49,16 +49,37 @@ interface Props {
  * could do anything.
  */
 const HOLD_MS = 1800
-/** One key lights per step while BEASTY is spelled across the pad. */
+/*
+  The takeover, in four acts.
+
+  The whole point of the shape is that the corruption happens to the PHONE'S OWN
+  white keypad, and then the screen dies before anything is revealed — so the
+  answer arrives out of the dark rather than fading up underneath the noise. An
+  earlier version washed to yellow while the labels were still resolving, which
+  showed the customer the menu and the brand at the same time as the glitch, and
+  spent the surprise before the blackout could pay it off.
+
+    corrupt  the white keypad is attacked; something dials 2-3-2-7-8-9 on its
+             own; every label churns but NEVER settles
+    down     the screen collapses the way a CRT powers off — to a bright line,
+             then a dot
+    black    nothing. This is the longest silence in the sequence and it is
+             doing the most work
+    up       the picture opens back out, and it is ours
+*/
+const CORRUPT_MS = 1900
+const DOWN_MS = 750
+const BLACK_MS = 1800
+const UP_MS = 950
+
+/** One key lights per step while something dials BEASTY across the pad. */
 const SPELL_STEP_MS = 150
-/** The pad is corrupted for this long before BEASTY starts appearing on it. */
-const SPELL_DELAY_MS = 700
-/** Total length of the takeover, after which the screen is simply ours. */
-const CONVERT_MS = 2600
+/** How long the pad is corrupted before the dialling starts. */
+const SPELL_DELAY_MS = 420
 /** Idle time on the settled screen before it enters on the customer's behalf. */
 const AUTO_ENTER_MS = 5000
 
-type Stage = 'stock' | 'converting' | 'beasty'
+type Stage = 'stock' | 'corrupt' | 'down' | 'black' | 'up' | 'beasty'
 
 /** The tab bar, in both of its lives. Index-matched. */
 const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicemail']
@@ -86,6 +107,25 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
   useEffect(() => () => timers.current.forEach(clearTimeout), [])
 
   /*
+    The takeover's own timers, tracked separately so a skip can cancel exactly
+    those and nothing else.
+
+    Without this, tapping during the blackout set the stage to 'beasty' and then
+    a still-pending timer fired setStage('up') on top of it — so the screen went
+    BACKWARDS into the power-up it had just been told to skip. Clearing every
+    timer instead would also kill the handoff and the toast.
+  */
+  const seqTimers = useRef<number[]>([])
+  const seq = (fn: () => void, ms: number) => {
+    seqTimers.current.push(window.setTimeout(fn, ms))
+  }
+  const cancelSeq = () => {
+    seqTimers.current.forEach(clearTimeout)
+    seqTimers.current = []
+  }
+  useEffect(() => cancelSeq, [])
+
+  /*
     The takeover is driven from an EFFECT keyed on the stage, not from inside a
     setState updater.
 
@@ -97,11 +137,14 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
     transition, which is what this actually wants.
   */
   useEffect(() => {
-    if (stage !== 'converting') return
+    if (stage !== 'corrupt') return
     for (let i = 1; i <= BEASTY_DIGITS.length; i++) {
-      later(() => setSpelled(i), SPELL_DELAY_MS + i * SPELL_STEP_MS)
+      seq(() => setSpelled(i), SPELL_DELAY_MS + i * SPELL_STEP_MS)
     }
-    later(() => setStage('beasty'), CONVERT_MS)
+    seq(() => setStage('down'), CORRUPT_MS)
+    seq(() => setStage('black'), CORRUPT_MS + DOWN_MS)
+    seq(() => setStage('up'), CORRUPT_MS + DOWN_MS + BLACK_MS)
+    seq(() => setStage('beasty'), CORRUPT_MS + DOWN_MS + BLACK_MS + UP_MS)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stage])
 
@@ -136,7 +179,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
   /** The scheduled opening. A touch can pre-empt it; see `skip`. */
   useEffect(() => {
     if (reduced) return
-    later(() => setStage((s) => (s === 'stock' ? 'converting' : s)), HOLD_MS)
+    later(() => setStage((s) => (s === 'stock' ? 'corrupt' : s)), HOLD_MS)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
@@ -153,6 +196,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
   */
   const skip = (): boolean => {
     if (stage === 'beasty') return false
+    cancelSeq()
     setStage('beasty')
     setSpelled(BEASTY_DIGITS.length)
     return true
@@ -247,20 +291,34 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
     until you dial — then it types BEASTY out as the keys light, and keeps it.
   */
   const display =
-    stage === 'stock' ? '' : stage === 'converting' ? BEASTY_DIGITS.slice(0, spelled) : 'BEASTY'
+    stage === 'stock'
+      ? ''
+      : stage === 'corrupt'
+        ? BEASTY_DIGITS.slice(0, spelled)
+        : stage === 'beasty' || stage === 'up'
+          ? 'BEASTY'
+          : ''
 
   /*
     The takeover itself: every label under every digit resolves out of noise,
     staggered across the pad, while the keys spelling BEASTY light underneath.
     The tab bar goes last so the eye finishes at the bottom of the screen.
   */
-  const taking = stage === 'converting'
-  const keyLabels = useScramble(
-    DIALER_KEYS.map((k) => k.label),
-    taking,
-    { stagger: 62, duration: 780, delay: 320 },
-  )
-  const tabLabels = useScramble(TAB_LABELS, taking, { stagger: 70, duration: 620, delay: 1500 })
+  const taking = stage === 'corrupt'
+  /* resolve: false — they churn and never land. The answer is on the far side
+     of the blackout, not before it. */
+  const keyLabels = useScramble(DIALER_KEYS.map((k) => k.label), taking, {
+    stagger: 55,
+    duration: 500,
+    delay: 180,
+    resolve: false,
+  })
+  const tabLabels = useScramble(TAB_LABELS, taking, {
+    stagger: 60,
+    duration: 420,
+    delay: 700,
+    resolve: false,
+  })
 
   /*
     During the takeover, show the resolving text; before and after, the truth.
@@ -270,13 +328,14 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
     once, which looks like a bug rather than like something being overwritten
     key by key.
   */
+  const ours = stage === 'up' || stage === 'beasty'
   const keyText = (i: number) => {
-    if (stage === 'beasty') return DIALER_KEYS[i].label
+    if (ours) return DIALER_KEYS[i].label
     if (!taking) return DIALER_KEYS[i].letters
     return keyLabels[i] || DIALER_KEYS[i].letters
   }
   const tabText = (i: number) => {
-    if (stage === 'beasty') return TAB_LABELS[i]
+    if (ours) return TAB_LABELS[i]
     if (!taking) return STOCK_TAB_LABELS[i]
     return tabLabels[i] || STOCK_TAB_LABELS[i]
   }
@@ -301,6 +360,19 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
         over the top of everything for the length of it. Decorative, mounted
         only while it runs, and never in the way of a tap.
       */}
+      {/*
+        The phosphor.
+
+        1.8 seconds of absolutely flat black on a web page does not read as
+        drama, it reads as a bug — the page looks like it failed. A real tube
+        does not go dark instantly either: the dot the picture collapsed into
+        keeps glowing and decays. This is that glow, and it is the difference
+        between "the screen died" and "the site is broken".
+      */}
+      {(stage === 'down' || stage === 'black') && (
+        <span className="dialer-phosphor" aria-hidden="true" />
+      )}
+
       {taking && (
         <div className="dialer-glitch" aria-hidden="true">
           {/*
@@ -317,123 +389,148 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true
         </div>
       )}
 
-      <div className="dialer-display">
-        {/* Biggie has died; the dog on this screen is a memorial, not a mascot,
-            which is worth knowing before anyone edits that artwork. */}
-        <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
-        {/*
-          aria-live only once the screen has settled. While it is converting the
-          field changes seven times in 1.5s, which queued seven announcements —
-          "2", "2 3", "2 3 2"… — at a screen-reader user for a decorative effect.
-        */}
+      {/*
+        The picture itself, so it can be collapsed and reopened as one thing.
+
+        The root behind it is BLACK — it is the screen being off. Everything
+        that is "the display" lives in here and carries its own background, so
+        the power-down reveals black rather than fading to it, and the power-up
+        opens onto yellow that was never visible before.
+      */}
+      <div className="dialer-crt">
+        <div className="dialer-display">
+          {/* Biggie has died; the dog on this screen is a memorial, not a mascot,
+              which is worth knowing before anyone edits that artwork. */}
+          <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
+          {/*
+            aria-live only once the screen has settled. While it is converting the
+            field changes seven times in 1.5s, which queued seven announcements —
+            "2", "2 3", "2 3 2"… — at a screen-reader user for a decorative effect.
+          */}
+          {/*
+            The word lands letter by letter when the picture comes back, rather
+            than simply being there. It is the first thing on the other side of
+            the blackout, so it gets to arrive.
+          */}
+          {/* One pulse of light behind the word as it lands, gone in half a
+            second. The screen has just come back from dead, so it gets one
+            moment of being a bit too bright. */}
+        {stage === 'beasty' && <span className="dialer-bloom" aria-hidden="true" />}
         <div className="dialer-number" aria-live={stage === 'beasty' ? 'polite' : 'off'}>
-          {display}
+            {ours
+              ? display.split('').map((ch, i) => (
+                  <span key={i} className="dialer-letter" style={{ animationDelay: `${i * 62}ms` }}>
+                    {ch}
+                  </span>
+                ))
+              : display}
+          </div>
         </div>
-      </div>
 
-      <div className="dialer-keys">
-        {DIALER_KEYS.map((k, i) => (
+        <div className="dialer-keys">
+          {DIALER_KEYS.map((k, i) => (
+            <button
+              key={k.digit}
+              className={`dialer-key${isLit(stage, spelled, i) ? ' is-lit' : ''}`}
+              onClick={() => press(k.action)}
+              aria-label={stage === 'beasty' ? `${k.digit}. ${k.label}` : k.digit}
+            >
+              <span className="dialer-key-digit">
+                {k.digit === '*' ? <Asterisk /> : k.digit}
+              </span>
+              {/* One element, whose text is rewritten as it resolves. Reserving
+                  the row's height means no key moves while it does. */}
+              <span className="dialer-key-sub">{keyText(i)}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="dialer-call-row">
+          {/*
+            The way in. Green in both lives — the operator's own mock keeps it
+            green, and it is the same button in the same place, so nobody has to
+            find it again after the screen changes under them.
+          */}
           <button
-            key={k.digit}
-            className={`dialer-key${isLit(stage, spelled, i) ? ' is-lit' : ''}`}
-            onClick={() => press(k.action)}
-            aria-label={stage === 'beasty' ? `${k.digit}. ${k.label}` : k.digit}
+            className="dialer-call"
+            onClick={() => press({ kind: 'enter' })}
+            aria-label={stage === 'beasty' ? 'Enter BEASTY' : 'Call'}
           >
-            <span className="dialer-key-digit">
-              {k.digit === '*' ? <Asterisk /> : k.digit}
-            </span>
-            {/* One element, whose text is rewritten as it resolves. Reserving
-                the row's height means no key moves while it does. */}
-            <span className="dialer-key-sub">{keyText(i)}</span>
+            {/* Same button, same place, same green — but a handset means "call"
+                and this one enters an app, so once the pretence is over it says
+                what it does. */}
+            {stage === 'beasty' ? (
+              <EnterMark size={33} />
+            ) : (
+              <PhoneFill size={34} color="#fff" />
+            )}
           </button>
-        ))}
+        </div>
+
+        {/*
+          The other half of the centring.
+
+          `.dialer-display` above the keypad is a growing flex item, so on its own
+          it swallowed every spare pixel and the pad rode high with a hole beneath
+          it. This grows at the same rate, so the slack splits evenly and the
+          keypad sits centred between the top of the viewport and the tab bar.
+        */}
+        <div className="dialer-spacer" aria-hidden="true" />
+
+        {panel && (
+          <>
+            {/* Tapping outside was a no-op: there was no backdrop element at all,
+                so the only exits were the close button and the tab bar. */}
+            <div className="dialer-scrim" onClick={() => setPanel(null)} aria-hidden="true" />
+          </>
+        )}
+        {panel && (
+          <Panel
+            page={panel}
+            onShare={share}
+            onJoin={() => leave(onJoin)}
+            onWater={() => leave(onWater)}
+            onClose={() => setPanel(null)}
+          />
+        )}
+
+        {/*
+          Five tabs, because that is what the screen it imitates has. They keep
+          their stock labels through the performance and pick up ours after.
+        */}
+        <nav className="dialer-tabs" aria-label="BEASTY">
+          {/* Keeps the stock name because it is going to do the stock thing — a star
+              on each partner's page, tapped as you visit. About is still one tap
+              away on key 1, so nothing is lost by giving this tab back. */}
+          <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'favorites' })} />
+          <Tab icon={<RecentsClock />} label={tabText(1)} name={TAB_LABELS[1]} onClick={() => press({ kind: 'panel', page: 'careers' })} />
+          <Tab icon={<PersonCircleFill />} label={tabText(2)} name={TAB_LABELS[2]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
+          <Tab icon={<KeypadGrid />} label={tabText(3)} name={TAB_LABELS[3]} selected onClick={() => press()} />
+          {/*
+            The badge is the stock screen's unread count while it is pretending,
+            and the number of cities with tiles still open once it is not. A made
+            up "38" that stayed put would be the one dishonest thing on screen.
+          */}
+          {/*
+            Voicemail becomes Reviews: what customers say, left for whoever comes
+            next. The 38 badge is the stock screen's unread count and it belongs
+            to the pretence — it goes when the pretence does, because there are no
+            reviews yet and a number over an empty page is a lie about the page.
+          */}
+          <Tab
+            icon={stage === 'beasty' ? <ReviewsMark /> : <VoicemailFill />}
+            label={tabText(4)}
+            name={TAB_LABELS[4]}
+            badge={stage === 'beasty' ? undefined : 38}
+            onClick={() => press({ kind: 'panel', page: 'reviews' })}
+          />
+        </nav>
+
+        <p className="dialer-foot">
+          {PARTNER_COUNT} local businesses. Open tiles in {CITY_PAGES.length} cities.
+        </p>
+        <div className="dialer-home" aria-hidden="true" />
       </div>
-
-      <div className="dialer-call-row">
-        {/*
-          The way in. Green in both lives — the operator's own mock keeps it
-          green, and it is the same button in the same place, so nobody has to
-          find it again after the screen changes under them.
-        */}
-        <button
-          className="dialer-call"
-          onClick={() => press({ kind: 'enter' })}
-          aria-label={stage === 'beasty' ? 'Enter BEASTY' : 'Call'}
-        >
-          {/* Same button, same place, same green — but a handset means "call"
-              and this one enters an app, so once the pretence is over it says
-              what it does. */}
-          {stage === 'beasty' ? (
-            <EnterMark size={33} />
-          ) : (
-            <PhoneFill size={34} color="#fff" />
-          )}
-        </button>
-      </div>
-
-      {/*
-        The other half of the centring.
-
-        `.dialer-display` above the keypad is a growing flex item, so on its own
-        it swallowed every spare pixel and the pad rode high with a hole beneath
-        it. This grows at the same rate, so the slack splits evenly and the
-        keypad sits centred between the top of the viewport and the tab bar.
-      */}
-      <div className="dialer-spacer" aria-hidden="true" />
-
-      {panel && (
-        <>
-          {/* Tapping outside was a no-op: there was no backdrop element at all,
-              so the only exits were the close button and the tab bar. */}
-          <div className="dialer-scrim" onClick={() => setPanel(null)} aria-hidden="true" />
-        </>
-      )}
-      {panel && (
-        <Panel
-          page={panel}
-          onShare={share}
-          onJoin={() => leave(onJoin)}
-          onWater={() => leave(onWater)}
-          onClose={() => setPanel(null)}
-        />
-      )}
-
-      {/*
-        Five tabs, because that is what the screen it imitates has. They keep
-        their stock labels through the performance and pick up ours after.
-      */}
-      <nav className="dialer-tabs" aria-label="BEASTY">
-        {/* Keeps the stock name because it is going to do the stock thing — a star
-            on each partner's page, tapped as you visit. About is still one tap
-            away on key 1, so nothing is lost by giving this tab back. */}
-        <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'favorites' })} />
-        <Tab icon={<RecentsClock />} label={tabText(1)} name={TAB_LABELS[1]} onClick={() => press({ kind: 'panel', page: 'careers' })} />
-        <Tab icon={<PersonCircleFill />} label={tabText(2)} name={TAB_LABELS[2]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
-        <Tab icon={<KeypadGrid />} label={tabText(3)} name={TAB_LABELS[3]} selected onClick={() => press()} />
-        {/*
-          The badge is the stock screen's unread count while it is pretending,
-          and the number of cities with tiles still open once it is not. A made
-          up "38" that stayed put would be the one dishonest thing on screen.
-        */}
-        {/*
-          Voicemail becomes Reviews: what customers say, left for whoever comes
-          next. The 38 badge is the stock screen's unread count and it belongs
-          to the pretence — it goes when the pretence does, because there are no
-          reviews yet and a number over an empty page is a lie about the page.
-        */}
-        <Tab
-          icon={stage === 'beasty' ? <ReviewsMark /> : <VoicemailFill />}
-          label={tabText(4)}
-          name={TAB_LABELS[4]}
-          badge={stage === 'beasty' ? undefined : 38}
-          onClick={() => press({ kind: 'panel', page: 'reviews' })}
-        />
-      </nav>
-
-      <p className="dialer-foot">
-        {PARTNER_COUNT} local businesses. Open tiles in {CITY_PAGES.length} cities.
-      </p>
-      <div className="dialer-home" aria-hidden="true" />
 
       {toast && (
         <div className="dialer-toast" role="status">
@@ -478,7 +575,7 @@ function Asterisk() {
  * Match on the pad INDEX of the letter currently being spelled instead.
  */
 function isLit(stage: Stage, spelled: number, index: number): boolean {
-  if (stage !== 'converting' || spelled === 0) return false
+  if (stage !== 'corrupt' || spelled === 0) return false
   const digit = BEASTY_DIGITS[spelled - 1]
   return DIALER_KEYS[index]?.digit === digit
 }
