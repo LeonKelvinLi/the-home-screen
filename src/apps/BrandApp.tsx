@@ -8,6 +8,7 @@ import { readableOn } from '../ios/contrast'
 import type { MenuItem } from '../data/brands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
+import { Gem } from './MembersApp'
 
 /** One restaurant's menu — the screen an icon tap actually lands on. */
 export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
@@ -182,6 +183,43 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               })}
             </section>
           ))}
+
+          {/*
+            What this business gives BEASTY members.
+
+            Under the menu, not over it: someone who opened a kitchen came for
+            the food, and an offer they cannot use without a membership should
+            not be the first thing between them and it.
+          */}
+          {(brand.offers?.welcome || brand.offers?.loyalty) && (
+            <div className="brand-offers">
+              {brand.offers.welcome && (
+                <div className="brand-offer">
+                  <span className="brand-offer-head">
+                    <Gem size={15} />
+                    Welcome offer
+                  </span>
+                  <span className="brand-offer-body">{brand.offers.welcome}</span>
+                  <span className="brand-offer-when">First visit, once.</span>
+                </div>
+              )}
+              {brand.offers.loyalty && (
+                <div className="brand-offer">
+                  <span className="brand-offer-head">
+                    <Gem size={15} />
+                    Loyalty offer
+                  </span>
+                  <span className="brand-offer-body">{brand.offers.loyalty}</span>
+                  <span className="brand-offer-when">
+                    Active BEASTY members only, every visit.
+                  </span>
+                </div>
+              )}
+              <button className="brand-offer-cta" onClick={() => api.openApp('sys.members')}>
+                About BEASTY members
+              </button>
+            </div>
+          )}
 
           {/* A discount the partner honours at their own counter. Sits above
               the contact block because for a service partner it is the whole

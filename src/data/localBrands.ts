@@ -49,6 +49,11 @@ export interface LocalSeed {
   /** Published contact address, where the business publishes one. */
   email?: string
   /**
+   * What this business gives BEASTY members: `welcome` once on a first visit,
+   * `loyalty` on every visit. Only set once THAT business has agreed it.
+   */
+  offers?: { welcome?: string; loyalty?: string }
+  /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere.
    * The string explains how to actually start.
    */
@@ -139,6 +144,16 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
   },
   {
+    /*
+      The only partner with agreed member offers so far, from the operator's own
+      mock-up. Every other partner's `offers` stays unset until they have agreed
+      one — an offer on a partner's page is a promise made in their name.
+    */
+    offers: {
+      welcome:
+        'Choose any one of our specialty drinks to pair with each meal, free on your first visit.',
+      loyalty: '10% off your entire order, any visit.',
+    },
     slug: 'lumpia-company',
     name: 'The Lumpia Company',
     label: 'Lumpia Co',

@@ -141,6 +141,8 @@ export interface Brand {
   quoteOnly?: string
   /** Published contact address, where the business publishes one. */
   email?: string
+  /** What this business gives BEASTY members. See the Seed note. */
+  offers?: { welcome?: string; loyalty?: string }
   /**
    * Line above the menu. Every partner carries one: the list is a curated
    * selection, not their full menu, and the customer should be told that
@@ -254,8 +256,14 @@ interface Seed {
   /** Partner discount. Headline states the guaranteed floor. */
   perk?: { headline: string; detail: string }
   /**
-   * Several priced sections rather than one. Used instead of `items`.
+   * What this business gives BEASTY members.
+   *
+   * `welcome` is once, on a customer's first visit. `loyalty` is every visit,
+   * for as long as their membership is active. Both are the business's own
+   * commitment, so both stay empty until that business has actually agreed one
+   * — an offer printed on a partner's page is a promise made in their name.
    */
+  offers?: { welcome?: string; loyalty?: string }
   groups?: ServiceGroup[]
   /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere:
@@ -586,6 +594,7 @@ export const BRANDS: Brand[] = [
     dietary: s.dietary,
     perk: s.perk,
     email: s.email,
+    offers: s.offers,
   })),
   ...SEED.map(fromSeed),
 ]

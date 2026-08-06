@@ -14,7 +14,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
-  | 'reserve' | 'designs' | 'share'
+  | 'reserve' | 'designs' | 'share' | 'members'
 
 export interface AppDef {
   id: string
@@ -177,6 +177,39 @@ const ScanIcon = () => (
   </svg>
 )
 
+/*
+  BEASTY members. On the grid, because a customer has to be able to find it —
+  it is the operator's own product, not a business listed on the marketplace.
+*/
+const GemIcon = () => (
+  <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+    <defs>
+      <clipPath id="clip-members">
+        <path d={SQUIRCLE_100} />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#clip-members)">
+      <rect width="100" height="100" fill="#141414" />
+      <g transform="translate(50 50) scale(2.4) translate(-12 -12)">
+        <path d="M6.2 3h11.6l4.2 5.4-10 12.4L2 8.4Z" fill="#5AC8FA" />
+        <path d="M6.2 3 2 8.4h20l-4.2-5.4Z" fill="#7FD9FF" />
+        <path d="M12 20.8 2 8.4h20Z" fill="#39B3F0" />
+      </g>
+      <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.16)" strokeWidth="1" />
+    </g>
+  </svg>
+)
+
+export const MEMBERS_APP: AppDef = {
+  id: 'sys.members',
+  name: 'BEASTY members',
+  label: 'Members',
+  icon: <GemIcon />,
+  kind: 'system',
+  systemKey: 'members',
+  tint: '#141414',
+}
+
 export const SHARE_APP: AppDef = {
   id: 'sys.share',
   name: 'Share & Scan',
@@ -187,7 +220,14 @@ export const SHARE_APP: AppDef = {
   tint: '#141414',
 }
 
-export const ALL_APPS: AppDef[] = [...BRAND_APPS, ...SYSTEM_APPS, PHONE_APP, DESIGNS_APP, SHARE_APP]
+export const ALL_APPS: AppDef[] = [
+  ...BRAND_APPS,
+  ...SYSTEM_APPS,
+  PHONE_APP,
+  DESIGNS_APP,
+  SHARE_APP,
+  MEMBERS_APP,
+]
 
 /*
   Slot ids are generated per page at render time, so they cannot all be listed
@@ -232,7 +272,7 @@ export const APP_GROUPS: AppDef[][] = [
   // Curio is the LAST app, by the operator's instruction. The reserve slots
   // used to sit between it and the system apps, which buried it behind eight
   // blank tiles; they now live on the blank pages that follow instead.
-  [...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
+  [MEMBERS_APP, ...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
 ]
 
 /** Flat order, kept for anything that just wants every home-screen app. */

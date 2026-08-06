@@ -3253,6 +3253,238 @@ textarea {
   color: var(--muted);
 }
 
+/* ---------- BEASTY members ---------- */
+
+.gem {
+  flex: 0 0 auto;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.25));
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 32px;
+}
+
+.members-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 4px 22px 22px;
+}
+
+.members-gem {
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 24px;
+  background: #141414;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.28);
+}
+
+.members-lead {
+  margin: 0;
+  max-width: 32ch;
+  text-align: center;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.78);
+}
+
+/* Two prices side by side, so the yearly saving is a comparison rather than a
+   claim. The number, not the percentage, is what a member can check. */
+.members-plans {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.members-plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 14px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.members-plan.is-best {
+  background: #141414;
+  border-color: #141414;
+}
+
+.members-plan-tag {
+  align-self: flex-start;
+  margin-bottom: 2px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f6d800;
+  color: #141414;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.members-plan-price {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #141414;
+}
+
+.members-plan.is-best .members-plan-price {
+  color: #f6d800;
+}
+
+.members-plan-price em {
+  font-style: normal;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.65;
+}
+
+.members-plan-note {
+  font-size: 11.5px;
+  line-height: 1.35;
+  color: rgba(20, 20, 20, 0.6);
+}
+
+.members-plan.is-best .members-plan-note {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.members-h {
+  margin: 24px 20px 8px;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 20, 0.5);
+}
+
+.members-list {
+  margin: 0;
+  padding: 0 20px 0 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.members-list li {
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.82);
+}
+
+.members-note {
+  margin: 10px 20px 0;
+  font-size: 12.5px;
+  color: rgba(20, 20, 20, 0.58);
+}
+
+.members-charity {
+  margin: 0 16px;
+  padding: 14px 15px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.members-charity p {
+  margin: 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.82);
+}
+
+/* An unverified claim about where money goes, marked as such. */
+.members-charity-flag {
+  margin-top: 8px !important;
+  padding-top: 8px;
+  border-top: 1px solid rgba(20, 20, 20, 0.12);
+  font-size: 11.5px !important;
+  color: #8a4b00 !important;
+}
+
+.members-cta {
+  margin: 26px 16px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.members-cta .btn-primary[disabled] {
+  background: rgba(20, 20, 20, 0.28);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.members-cta-note {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.55);
+}
+
+/* ---------- member offers on a brand page ---------- */
+
+.brand-offers {
+  margin: 6px 16px 18px;
+  padding: 14px 15px;
+  border-radius: 18px;
+  background: #141414;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.brand-offer {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.brand-offer-head {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #f6d800;
+}
+
+.brand-offer-body {
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* The condition, never smaller than the offer is generous. */
+.brand-offer-when {
+  font-size: 11.5px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.brand-offer-cta {
+  align-self: flex-start;
+  padding: 9px 15px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-size: 12.5px;
+  font-weight: 700;
+  min-height: 38px;
+}
+
+.brand-offer-cta:active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
 /* ---------- Share & Scan ---------- */
 
 /*
@@ -3755,34 +3987,15 @@ textarea {
   display: block;
 }
 
-/*
-  Optically match the two words. EATS is four characters against six, so left
-  alone the lockup tapers; tracking it out squares the block off. The indent
-  cancels the trailing space the tracking adds after the final S, which would
-  otherwise push the word left of centre.
-*/
-.intro-word span:last-child {
-  letter-spacing: 0.2em;
-  text-indent: 0.2em;
-}
-
-.intro-where {
-  margin: 3px 0 0;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(20, 20, 20, 0.45);
-}
-
-/* The one line that says what this is, in the setup-card manner. */
+/* The operator's own description of the company, under the mark. */
 .intro-sub {
-  margin: 2px 0 0;
-  max-width: 30ch;
+  margin: 6px 0 0;
+  max-width: 26ch;
   text-align: center;
-  font-size: 13px;
-  line-height: 1.45;
-  color: rgba(20, 20, 20, 0.62);
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+  color: rgba(20, 20, 20, 0.66);
 }
 
 /*
@@ -3790,7 +4003,6 @@ textarea {
   as an image; arriving in order reads as authored.
 */
 .intro-word span,
-.intro-where,
 .intro-sub,
 .intro-story,
 .intro-join,
@@ -3798,10 +4010,8 @@ textarea {
   animation: intro-rise 700ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.intro-word span:first-child { animation-delay: 420ms; }
-.intro-word span:last-child  { animation-delay: 490ms; }
-.intro-where { animation-delay: 550ms; }
-.intro-sub   { animation-delay: 610ms; }
+.intro-word span { animation-delay: 420ms; }
+.intro-sub   { animation-delay: 520ms; }
 .intro-dock  { animation-delay: 670ms; }
 .intro-story { animation-delay: 740ms; }
 .intro-join  { animation-delay: 800ms; }
@@ -4046,7 +4256,6 @@ textarea {
   .intro-stage::after,
   .intro-biggie,
   .intro-word span,
-  .intro-where,
   .intro-sub,
   .intro-story,
   .intro-join,

@@ -77,14 +77,12 @@ export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
         <span className="intro-stage">
           <img src="/biggie.webp" alt="" className="intro-biggie" draggable={false} />
         </span>
+        {/* BEASTY alone. The company is not only food, so "EATS" narrowed it —
+            the line underneath is the operator's own description of it. */}
         <p className="intro-word">
           <span>BEASTY</span>
-          <span>EATS</span>
         </p>
-        <p className="intro-where">Richmond, California</p>
-        <p className="intro-sub">
-          Every local kitchen on one home screen. One cart, one checkout.
-        </p>
+        <p className="intro-sub">Supply of Goods, Services &amp; awesome Company</p>
       </div>
 
       <div className="intro-dock">
@@ -93,10 +91,11 @@ export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
           <em>Phone</em>
         </button>
 
-        {/* The primary. Sized and coloured so it is obviously the way in. */}
+        {/* The primary. Sized and coloured so it is obviously the way in.
+            Labelled BEASTY, not EATS — the company is not only food. */}
         <button className="intro-btn is-primary" onClick={() => leave(onEnter)}>
           <Glyph kind="eats" />
-          <em>EATS</em>
+          <em>BEASTY</em>
         </button>
 
         <button className="intro-btn" onClick={() => leave(onWater)}>
