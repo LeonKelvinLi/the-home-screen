@@ -3816,9 +3816,18 @@ textarea {
    operator's idea, and the reason a dial pad is the right front door: BEASTY is
    2-3-2-7-8-9 on a telephone keypad.
 
-   Every measurement below is from a 1320x2868 screenshot of the real thing,
-   divided by 3 and expressed against a 440x956pt viewport, then scaled to the
-   actual viewport width. Fixed pixel sizes would be right on one phone only.
+   Every measurement below was taken off a 1320x2868 screenshot of the real
+   thing by scanning pixels, divided by 3, and expressed against the 440x956pt
+   viewport that implies — then scaled to whatever viewport this actually runs
+   on. Fixed pixel sizes would be right on exactly one phone.
+
+   ONE THING FROM THAT SCREENSHOT IS DELIBERATELY NOT COPIED: the device it came
+   from has the Bold Text accessibility setting turned on. Its digits measure at
+   SF weight ~877, its tab labels at ~745, and the system-drawn status clock —
+   which is fixed at Semibold 600 — measures ~880, which is how you can tell.
+   Copying those weights would bake somebody's accessibility setting into every
+   customer's screen. The SIZES are honoured exactly; the weights are the stock
+   ones underneath.
 */
 
 .dialer {
@@ -3836,19 +3845,27 @@ textarea {
      of the 440pt reference the measurements were taken against. */
   --u: calc(min(100vw, 440px) / 440);
 
-  --key-size: calc(78 * var(--u));
-  --key-gap-x: calc(22 * var(--u));
-  --key-gap-y: calc(12 * var(--u));
-  --digit-size: calc(33 * var(--u));
-  --letter-size: calc(10 * var(--u));
+  /*
+    Measured, not guessed. Key diameter is 88 of 440 — exactly 20% of the
+    viewport — with a 24pt column gap and a 20pt row gap, which are NOT the same
+    number. 3x88 + 2x24 = 312, leaving symmetric 64pt margins.
+  */
+  --key-size: calc(88 * var(--u));
+  --key-gap-x: calc(24 * var(--u));
+  --key-gap-y: calc(20 * var(--u));
+  /* The call button really is 1pt smaller than a key. Measured three ways. */
+  --call-size: calc(87 * var(--u));
+  --digit-size: calc(41 * var(--u));
+  --letter-size: calc(12 * var(--u));
 
-  /* Stock iOS light. */
+  /* Stock iOS light, sampled as 10x10 patch means. Every one had zero variance,
+     so these are the exact fills rather than an average over antialiasing. */
   --page: #ffffff;
-  --key-fill: #e4e4e6;
+  --key-fill: #e5e5e5;
   --key-ink: #000000;
-  --key-sub: rgba(0, 0, 0, 0.92);
+  --key-sub: #000000;
   --call-fill: #34c759;
-  --tab-off: #999a9e;
+  --tab-off: #a2a2a2;
   --tab-on: #007aff;
 
   background: var(--page);
@@ -3885,11 +3902,13 @@ textarea {
 /* Hardware, so it never reacts to anything. */
 .dialer-island {
   position: absolute;
-  top: calc(11 * var(--u));
+  top: calc(13.7 * var(--u));
   left: 50%;
   transform: translateX(-50%);
+  /* Idle. The reference's island is 169pt wide because it is showing a Live
+     Activity; 125 x 37.3 is what it collapses to. */
   width: calc(125 * var(--u));
-  height: calc(37 * var(--u));
+  height: calc(37.3 * var(--u));
   border-radius: 999px;
   background: #000;
   pointer-events: none;
@@ -4053,7 +4072,9 @@ textarea {
 
 .dialer-key-digit {
   font-size: var(--digit-size);
-  font-weight: 500;
+  /* 400, not the ~877 the reference measures at — that device has Bold Text on.
+     The SIZE is the measured one; the weight is what iOS draws without it. */
+  font-weight: 400;
   line-height: 1;
   font-variant-numeric: tabular-nums;
 }
@@ -4113,13 +4134,14 @@ textarea {
   align-items: center;
   justify-content: center;
   width: min(100vw, 440px);
-  margin-top: calc(16 * var(--u));
+  /* Measured: 25.8pt from the bottom of the * row to the top of the button. */
+  margin-top: calc(25.8 * var(--u));
   flex: 0 0 auto;
 }
 
 .dialer-call {
-  width: var(--key-size);
-  height: var(--key-size);
+  width: var(--call-size);
+  height: var(--call-size);
   border: 0;
   border-radius: 50%;
   background: var(--call-fill);
@@ -4239,9 +4261,13 @@ textarea {
   justify-content: space-around;
   width: 100%;
   max-width: 440px;
-  padding: calc(9 * var(--u)) 0 0;
-  margin-top: calc(18 * var(--u));
-  border-top: 0.5px solid rgba(0, 0, 0, 0.14);
+  /* Measured: 79.2pt of empty from the bottom of the call button to the top of
+     the tab bar, then 5.3pt before the icons. */
+  padding: calc(5.3 * var(--u)) 0 0;
+  margin-top: calc(79.2 * var(--u));
+  /* No hairline. Scanning the reference's tab-bar band finds nothing but the
+     five icons, five labels and the badge — no separator, no material, and no
+     pill behind the selected tab. Selection is signalled by colour alone. */
   flex: 0 0 auto;
 }
 
@@ -4269,29 +4295,35 @@ textarea {
   position: relative;
   display: grid;
   place-items: center;
-  height: calc(27 * var(--u));
+  height: calc(25.3 * var(--u));
+}
+
+.dialer-tab-icon svg {
+  width: calc(25.3 * var(--u));
+  height: calc(25.3 * var(--u));
 }
 
 .dialer-badge {
   position: absolute;
-  top: calc(-7 * var(--u));
-  right: calc(-14 * var(--u));
-  min-width: calc(19 * var(--u));
-  height: calc(19 * var(--u));
+  top: calc(-6 * var(--u));
+  right: calc(-13 * var(--u));
+  min-width: calc(18 * var(--u));
+  height: calc(18 * var(--u));
   padding: 0 calc(5 * var(--u));
-  border-radius: 999px;
+  border-radius: calc(9 * var(--u));
   background: #ff3b30;
   color: #fff;
   font-size: calc(12 * var(--u));
   font-weight: 700;
-  line-height: calc(19 * var(--u));
+  line-height: calc(18 * var(--u));
   text-align: center;
   font-variant-numeric: tabular-nums;
 }
 
 .dialer-tab-label {
-  font-size: calc(10.5 * var(--u));
-  font-weight: 600;
+  font-size: calc(10 * var(--u));
+  /* 500, the stock weight. The reference measures ~745 because of Bold Text. */
+  font-weight: 500;
   letter-spacing: 0.005em;
   white-space: nowrap;
 }
@@ -4310,9 +4342,10 @@ textarea {
 }
 
 .dialer-home {
-  width: calc(140 * var(--u));
+  /* Measured 157 x 5.0pt, 8pt clear of the bottom edge. */
+  width: calc(157 * var(--u));
   height: 5px;
-  margin: calc(8 * var(--u)) 0 calc(9 * var(--u));
+  margin: calc(6 * var(--u)) 0 calc(8 * var(--u));
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.85);
   flex: 0 0 auto;
