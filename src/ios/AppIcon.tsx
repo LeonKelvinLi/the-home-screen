@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { memo, useRef } from 'react'
 import type { ReactNode } from 'react'
 import { ICON_SIZE } from './constants'
 
@@ -38,7 +38,7 @@ interface Props {
   size?: number
 }
 
-export function AppIcon({ icon, label, badge, onOpen, hideLabel, size = ICON_SIZE }: Props) {
+function AppIconBase({ icon, label, badge, onOpen, hideLabel, size = ICON_SIZE }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
   const startY = useRef(0)
@@ -96,3 +96,11 @@ export function AppIcon({ icon, label, badge, onOpen, hideLabel, size = ICON_SIZ
     </button>
   )
 }
+
+/*
+  Memoised, because the home screen re-renders on every page commit and there
+  are twenty-four of these on a page. Nothing here changes unless its own props
+  do — the icon element is stable, the label is a string, and the badge is a
+  number.
+*/
+export const AppIcon = memo<Props>(AppIconBase)

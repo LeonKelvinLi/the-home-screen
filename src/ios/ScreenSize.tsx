@@ -38,15 +38,16 @@ function metricsFor(w: number): Pick<ScreenSize, 'device' | 'iconSize' | 'column
   // with tablet chrome and an invisible 34px tap-swallowing strip at the
   // bottom. The two numbers have to be the same one.
   /*
-    66 — LARGER than the iOS standard 60, on purpose.
+    64 — LARGER than the iOS standard 60, on purpose.
 
     Every icon here is a small business's logo, most of them wordmarks with fine
     lettering, and they have to be recognised rather than merely located. Apple
     sizes for apps whose marks were drawn for 60px; these were drawn for a shop
-    front. The extra six pixels come out of the row gap, not out of the row
-    count, so it is still twenty-four a page.
+    front. 66 fitted, but only with the rows squeezed to a 13px gap, and the
+    grid read as one solid block. 64 with a 16px gap keeps most of the size and
+    lets the rows breathe. Still twenty-four a page, still six rows.
   */
-  if (w < PHONE_MAX) return { device: 'phone', iconSize: 66, columns: 4, radius: 0 }
+  if (w < PHONE_MAX) return { device: 'phone', iconSize: 64, columns: 4, radius: 0 }
   if (w < 900) return { device: 'pad', iconSize: 72, columns: 5, radius: SCREEN_RADIUS }
   if (w < 1180) return { device: 'pad', iconSize: 76, columns: 6, radius: SCREEN_RADIUS }
   return { device: 'pad', iconSize: 78, columns: 8, radius: SCREEN_RADIUS }

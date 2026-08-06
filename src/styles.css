@@ -267,10 +267,21 @@ textarea {
   );
 }
 
+/*
+  The pager is ONE SCREEN wide, not one screen per page.
+
+  It used to be a flex row at 100% per page, so with twelve pages it was a
+  single element 4,680px across — and the operator's city list would take it
+  past 10,000. A composited surface that size is past what a phone GPU holds in
+  one texture, so it tiles and re-rasterises mid-swipe.
+
+  Pages are positioned by index instead, and only the three around the current
+  one are rendered at all, so the painted area is three screens however many
+  cities get added.
+*/
 .home-pager {
   position: absolute;
   inset: 0;
-  display: flex;
   /* will-change is applied inline only while a turn is in flight — see
      HomeScreen. Holding it permanently pins a layer for the whole session. */
   touch-action: pan-y;
@@ -279,7 +290,10 @@ textarea {
 /* 100%, not 393px: under phone mode the screen becomes 100vw, and a fixed
    page width left dead space on a Pro Max and bled page 2 into page 1. */
 .home-page {
-  flex: 0 0 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
   width: 100%;
   padding: calc(var(--status-h) + 24px) 18px 0;
   /*
@@ -296,7 +310,7 @@ textarea {
   grid-template-columns: repeat(4, 1fr);
   /* Must stay in step with ROW_GAP_PHONE in ios/constants.ts — HomeScreen
      computes how many rows fit from that number. See the note there. */
-  row-gap: 13px;
+  row-gap: 18px;
   column-gap: 2px;
   justify-items: center;
 }
@@ -2146,21 +2160,16 @@ textarea {
   }
 
   /*
-    The Spotlight pill no longer positions itself — it sits in .home-bar with
-    the city label. Overriding `bottom` here left it absolutely placed at the
-    old height, on top of the seventh row of icons, while the city sat alone
-    further down.
+    .home-bar is NOT set here. Its base rule sits ~950 lines below this block
+    with the same specificity, so anything written here loses to it — a rule
+    that looks like it works and does not. It is set at the base instead.
   */
-  .home-bar {
-    bottom: calc(var(--bottom-h) + 162px);
-  }
-
   .spotlight {
     bottom: calc(var(--bottom-h) + 108px);
   }
 
   .page-dots {
-    bottom: calc(var(--bottom-h) + 150px);
+    bottom: calc(var(--bottom-h) + 148px);
   }
 
   /*
@@ -3106,7 +3115,9 @@ textarea {
 .home-bar {
   position: absolute;
   left: 50%;
-  bottom: calc(var(--bottom-h) + 168px);
+  /* This is the rule that governs on a phone — see the note in the phone media
+     query, which cannot override it. */
+  bottom: calc(var(--bottom-h) + 164px);
   transform: translateX(-50%) translateZ(0);
   display: flex;
   align-items: center;
@@ -3990,19 +4001,25 @@ textarea {
 
 /* A sheen crossing the button every few seconds — the one flourish on the
    screen's only loud control. */
+/*
+  The sheen animated `left`, which asks the browser to lay the page out again on
+  every frame, forever. transform is composited — same look, none of the work.
+*/
 .intro-enter::after {
   content: '';
   position: absolute;
   top: 0;
   bottom: 0;
+  left: 0;
   width: 44%;
   background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.16), transparent);
+  will-change: transform;
   animation: enter-sheen 4.5s ease-in-out 1900ms infinite;
 }
 
 @keyframes enter-sheen {
-  0%, 62%, 100% { left: -50%; }
-  86%           { left: 110%; }
+  0%, 62%, 100% { transform: translateX(-120%); }
+  86%           { transform: translateX(340%); }
 }
 
 .intro-enter svg {

@@ -40,8 +40,22 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
   const [page, setPage] = useState(0)
-  const [dx, setDx] = useState(0)
   const [dragging, setDragging] = useState(false)
+  /*
+    The finger's offset lives in a REF and is written straight to the node, not
+    held in state.
+
+    It used to be state, so every pointermove re-rendered HomeScreen — three
+    pages of icons, each one calling into the cart context for its badge. A
+    120Hz screen delivers a pointermove every 8ms, so a page turn was asking for
+    roughly seventy component renders per frame. That is what made a swipe feel
+    like ten frames a second.
+
+    Nothing about the gesture needs React: it is one transform on one element.
+    React is told once, on release, which page won.
+  */
+  const dxRef = useRef(0)
+  const pagerRef = useRef<HTMLDivElement>(null)
   const pageRef = useRef(0)
   const spotlightRef = useRef<HTMLButtonElement>(null)
   /** Locked on the first move so a vertical drag can never turn a page. */
@@ -185,12 +199,23 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   }
   useEffect(() => () => window.clearTimeout(moveTimer.current), [])
 
+  /** Write the pager's transform now, without waiting for a render. */
+  const paint = (offset: number, animate: boolean) => {
+    const el = pagerRef.current
+    if (!el) return
+    el.style.transition = animate ? `transform ${PAGE_MS}ms ${EASE_IOS}` : 'none'
+    el.style.transform = `translate3d(${offset}px,0,0)`
+  }
+
   const settle = (next: number) => {
     endMoving(PAGE_MS + 40)
+    dxRef.current = 0
+    axis.current = null
+    // Animate to the committed page from wherever the finger left it, then let
+    // the re-render land on the same value it is already showing.
+    paint(-next * screen.w, true)
     setDragging(false)
     setPage(next)
-    setDx(0)
-    axis.current = null
   }
 
   const drag = useDrag({
@@ -222,7 +247,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
       const p = pageRef.current
       // Rubber-band at the ends.
       const overscroll = (p === 0 && dx > 0) || (p === pages.length - 1 && dx < 0)
-      setDx(overscroll ? dx * 0.32 : dx)
+      dxRef.current = overscroll ? dx * 0.32 : dx
+      paint(-p * screen.w + dxRef.current, false)
     },
     onCancel: () => settle(pageRef.current),
     onEnd: ({ dx, vx }) => {
@@ -249,7 +275,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
     return cart.countForBrand(appId)
   }
 
-  const offset = -safePage * screen.w + dx
+  const offset = -safePage * screen.w
 
   return (
     <div
@@ -265,6 +291,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
 
       <div
         className="home-pager"
+        ref={pagerRef}
         {...drag}
         style={{
           transform: `translate3d(${offset}px,0,0)`,
@@ -275,13 +302,29 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
           willChange: moving ? 'transform' : 'auto',
         }}
       >
-        {pages.map((page, i) => (
+        {pages.map((page, i) => {
+          /*
+            Only the current page and its two neighbours exist in the DOM.
+
+            A turn only ever moves one page, so both neighbours are always ready;
+            everything else would only be widening the composited surface. This
+            is what keeps the painted area at three screens whether there are
+            twelve pages or thirty.
+          */
+          if (Math.abs(i - safePage) > 1) return null
+          return (
           /*
             `inert` on off-screen pages: without it, tabbing reached an icon
             outside the viewport and the browser scrolled the overflow-hidden
             screen sideways with no way to scroll it back.
           */
-          <div className="home-page" key={i} {...(i === safePage ? {} : { inert: '' })}>
+          <div
+            className="home-page"
+            key={i}
+            /* Positioned by index, since they are no longer laid out in a row. */
+            style={{ transform: `translate3d(${i * 100}%,0,0)` }}
+            {...(i === safePage ? {} : { inert: '' })}
+          >
             {/*
               Only pages next to this one draw their icons.
 
@@ -296,7 +339,6 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
               of seven, and the two neighbours are always ready because a turn
               only ever moves one page.
             */}
-            {Math.abs(i - safePage) <= 1 && (
             <>
             {/* An empty city page has to say WHICH city, or it is nine
                 identical grids of plus signs. */}
@@ -317,9 +359,9 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
               ))}
             </div>
             </>
-            )}
           </div>
-        ))}
+          )
+        })}
       </div>
 
       {pages.length > 1 && (

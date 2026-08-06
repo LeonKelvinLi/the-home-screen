@@ -24,10 +24,10 @@ export const ICON_SIZE = 60
  * of empty space. They must be changed together.
  *
  * The phone gap was 26, which fitted five rows on a 390x844 screen where iOS
- * fits six. 13 keeps six rows while the tile grows to 66 — bigger than Apple's
- * own, because these are shop logos rather than app marks.
+ * fits six. 16 at a 64px tile is the balance: bigger than Apple's 60, and the
+ * rows no longer touching. 13 fitted 66 but the grid read as one solid block.
  */
-export const ROW_GAP_PHONE = 13
+export const ROW_GAP_PHONE = 16
 export const ROW_GAP_PAD = 34
 
 /**
