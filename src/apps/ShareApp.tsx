@@ -42,7 +42,7 @@ export function ShareApp({ api }: { api: ShellApi }) {
   }
 
   return (
-    <AppChrome title="Share & Scan" onBack={api.closeApp}>
+    <AppChrome title="Share & Scan" onBack={api.closeApp} className="is-beasty">
       <div className="share">
         <p className="share-lead">Point a phone camera at this to open Beasty Eats.</p>
 

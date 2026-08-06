@@ -3242,6 +3242,34 @@ textarea {
 
 /* ---------- Share & Scan ---------- */
 
+/*
+  The brand's own ground, not the system grey.
+
+  The QR card stays WHITE inside it, and that is not a style choice: a code is
+  read by contrast between dark modules and a light ground, and yellow behind
+  the modules is exactly how a code stops scanning. The page is yellow; the
+  code sits on white.
+*/
+.nav-screen.is-beasty {
+  background: linear-gradient(178deg, #ffe63d 0%, #f6d800 46%, #eec400 100%);
+}
+
+.nav-screen.is-beasty .nav-bar.is-collapsed {
+  background: rgba(246, 216, 0, 0.92);
+  backdrop-filter: blur(18px) saturate(150%);
+  -webkit-backdrop-filter: blur(18px) saturate(150%);
+}
+
+/* Ink, not the system blue — on yellow the blue back button reads as a bug. */
+.nav-screen.is-beasty .nav-back {
+  color: #141414;
+}
+
+.nav-screen.is-beasty .nav-large-title,
+.nav-screen.is-beasty .nav-bar-title {
+  color: #141414;
+}
+
 .share {
   display: flex;
   flex-direction: column;
@@ -3256,7 +3284,7 @@ textarea {
   text-align: center;
   font-size: 14px;
   line-height: 1.45;
-  color: var(--muted);
+  color: rgba(20, 20, 20, 0.7);
 }
 
 /*
@@ -3269,7 +3297,7 @@ textarea {
   padding: 22px;
   border-radius: 26px;
   background: #fff;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+  box-shadow: 0 14px 34px rgba(120, 92, 0, 0.28);
 }
 
 .share-qr {
@@ -3320,7 +3348,17 @@ textarea {
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.01em;
-  color: #141416;
+  color: rgba(20, 20, 20, 0.78);
+}
+
+/* Black on yellow, not the system blue. */
+.nav-screen.is-beasty .btn-primary {
+  background: #141414;
+  color: #f6d800;
+}
+
+.nav-screen.is-beasty .brand-foot {
+  color: rgba(20, 20, 20, 0.55);
 }
 
 .share-actions {

@@ -27,12 +27,21 @@ interface Props {
   /** Retained for call sites; no longer paints the bar. */
   tint?: string
   light?: boolean
+  /** Extra class on the screen, for an app that paints its own ground. */
+  className?: string
   children: ReactNode
 }
 
-export function AppChrome({ title, subtitle, onBack, backLabel, right, footer, children }: Props) {
+export function AppChrome({ title, subtitle, onBack, backLabel, right, footer, className, children }: Props) {
   return (
-    <NavScreen title={title} backTitle={backLabel ?? 'Home'} onBack={onBack} right={right} footer={footer}>
+    <NavScreen
+      title={title}
+      backTitle={backLabel ?? 'Home'}
+      onBack={onBack}
+      right={right}
+      footer={footer}
+      className={className}
+    >
       {subtitle && <p className="nav-subtitle">{subtitle}</p>}
       {children}
     </NavScreen>

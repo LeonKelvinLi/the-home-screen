@@ -26,6 +26,8 @@ interface Props {
   footer?: ReactNode
   /** Fixed below the bar, outside the scroll area (a search field, say). */
   stickyTop?: ReactNode
+  /** Extra class on the screen, for an app that paints its own ground. */
+  className?: string
   children: ReactNode
 }
 
@@ -42,7 +44,7 @@ const COLLAPSE_AT = 28
 */
 const scrollMemory = new Map<string, number>()
 
-export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, children }: Props) {
+export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, className, children }: Props) {
   const [collapsed, setCollapsed] = useState(false)
   const raf = useRef(0)
   /** Mirrors `collapsed` so the scroll handler can bail without a re-render. */
@@ -62,13 +64,15 @@ export function NavScreen({ title, backTitle, onBack, right, footer, stickyTop, 
   useEffect(() => () => cancelAnimationFrame(raf.current), [])
 
   return (
-    <div className="nav-screen">
+    <div className={`nav-screen${className ? ` ${className}` : ''}`}>
       <header className={`nav-bar${collapsed ? ' is-collapsed' : ''}`}>
         <div className="nav-bar-row">
           <div className="nav-bar-left">
             {onBack && (
               <button className="nav-back" onClick={onBack}>
-                <Symbol name="chevron.left" size={17} color="#007AFF" weight={2.6} />
+                {/* currentColor, not a hardcoded blue: a screen that paints its own
+                    ground has to be able to recolour the chevron with the label. */}
+                <Symbol name="chevron.left" size={17} weight={2.6} />
                 {backTitle && <span>{backTitle}</span>}
               </button>
             )}
