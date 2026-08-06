@@ -4,7 +4,7 @@ import { ListRow, ListSection } from '../ios/ui/List'
 import { BrandLogo } from '../ios/BrandLogo'
 import { LISTED_KITCHENS } from '../data/brands'
 import { submitApplication } from '../lib/api'
-import { BLANK_PAGES } from './registry'
+import { CITY_PAGES } from './registry'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -146,7 +146,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
 
       <ListSection
         header="Availability"
-        footer={`${BLANK_PAGES} full pages of blank tiles sit after the last app. There is no queue and no cap.`}
+        footer={`A page of open tiles for each of ${CITY_PAGES.length} cities. There is no queue and no cap.`}
       >
         <ListRow label="Businesses on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
         <ListRow label="Open slots" value="Room available" chevron={false} />

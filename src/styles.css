@@ -3178,6 +3178,25 @@ textarea {
   }
 }
 
+/*
+  The city's name on its own empty page.
+
+  Without it, nine pages of identical plus signs are indistinguishable and the
+  page dots are the only clue you have moved. Set quietly — this is a label on
+  a waiting room, not a headline.
+*/
+.home-page-city {
+  margin: 0 0 14px;
+  text-align: center;
+  font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, Inter, system-ui, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.5);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+}
+
 /* ---------- Share & Scan ---------- */
 
 .share {

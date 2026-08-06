@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BLANK_PAGES } from './registry'
+import { CITY_PAGES } from './registry'
 import { LISTED_KITCHENS } from '../data/brands'
 
 /**
@@ -156,7 +156,7 @@ export function IntroScreen({ onEnter, onWater, onJoin }: Props) {
         <span className="intro-join-head">Run a local business?</span>
         <span className="intro-join-body">
           Your own icon on this home screen, your own menu, your own prices, alongside{' '}
-          {LISTED_KITCHENS.length} local businesses. {BLANK_PAGES} pages of blank tiles are waiting.
+          {LISTED_KITCHENS.length} local businesses. Open tiles in {CITY_PAGES.length} cities.
         </span>
         <span className="intro-join-cta">
           Claim a tile

@@ -3,7 +3,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, BLANK_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
+import { APP_GROUPS, CITY_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -16,6 +16,12 @@ import {
   ROW_GAP_PHONE,
 } from './constants'
 import { DEFAULT_CITY, detectCity, savedCity } from '../lib/place'
+
+/** A home-screen page. `city` is set on the empty pages waiting for a city. */
+interface Page {
+  apps: AppDef[]
+  city?: string
+}
 
 interface Props {
   onOpen: (appId: string, rect: IconRect) => void
@@ -88,7 +94,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
    * 4 columns over two pages; a desktop window gets 8 columns and everything
    * lands on one page, which is what stops a wide display looking half empty.
    */
-  const pages = useMemo<AppDef[][]>(() => {
+  const pages = useMemo<Page[]>(() => {
     const cols = screen.columns
     /*
       Pitch from the REAL parts, not a round number.
@@ -121,25 +127,37 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
     // Paginate each group separately so a group always begins a fresh page.
     // A single flat list let page two's icons flow up onto page one whenever
     // the grid had room, which is exactly what the split exists to prevent.
-    const out: AppDef[][] = []
+    const out: Page[] = []
     for (const group of APP_GROUPS) {
       if (!group.length) continue
-      for (let i = 0; i < group.length; i += perPage) out.push(group.slice(i, i + perPage))
+      for (let i = 0; i < group.length; i += perPage)
+        out.push({ apps: group.slice(i, i + perPage) })
     }
 
     /*
-      Blank pages close the home screen. Filled here rather than in the registry
-      because a full page is however many icons THIS grid fits, and that is only
-      known once the screen has been measured.
+      Then one page per city, each an empty grid waiting for the businesses the
+      operator recruits there.
 
-      Keys are page-scoped so a tile's id stays stable across a resize on its own
-      page, instead of every slot renumbering when the row count changes.
+      Filled here rather than in the registry because a full page is however
+      many tiles THIS grid fits, and that is only known once the screen has been
+      measured. Keys are scoped by city so a tile's id stays stable across a
+      resize instead of every slot renumbering when the row count changes.
     */
-    for (let p = 0; p < BLANK_PAGES; p++) {
-      out.push(Array.from({ length: perPage }, (_, i) => makeSlot(`${p}-${i}`)))
+    /*
+      One row FEWER on a city page. The city's name sits above its grid and has
+      to come out of the same height as everything else — at the full count the
+      last row's labels ran into the location label at the bottom of the screen.
+    */
+    const cityPerPage = Math.max(cols, perPage - cols)
+    for (const cityName of CITY_PAGES) {
+      const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+      out.push({
+        city: cityName,
+        apps: Array.from({ length: cityPerPage }, (_, i) => makeSlot(`${key}-${i}`)),
+      })
     }
 
-    return out.length ? out : [[]]
+    return out.length ? out : [{ apps: [] }]
   }, [screen.columns, screen.iconSize, screen.h, screen.device])
 
   // Never strand the user on a page that no longer exists after a resize.
@@ -257,7 +275,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
           willChange: moving ? 'transform' : 'auto',
         }}
       >
-        {pages.map((apps, i) => (
+        {pages.map((page, i) => (
           /*
             `inert` on off-screen pages: without it, tabbing reached an icon
             outside the viewport and the browser scrolled the overflow-hidden
@@ -279,11 +297,15 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
               only ever moves one page.
             */}
             {Math.abs(i - safePage) <= 1 && (
+            <>
+            {/* An empty city page has to say WHICH city, or it is nine
+                identical grids of plus signs. */}
+            {page.city && <p className="home-page-city">{page.city}</p>}
             <div
               className="home-grid"
               style={{ gridTemplateColumns: `repeat(${screen.columns}, 1fr)` }}
             >
-              {apps.map((app) => (
+              {page.apps.map((app) => (
                 <AppIcon
                   key={app.id}
                   icon={app.icon}
@@ -294,6 +316,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
                 />
               ))}
             </div>
+            </>
             )}
           </div>
         ))}
