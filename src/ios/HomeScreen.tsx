@@ -308,13 +308,12 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
       )}
 
       {/*
-        One row: where you are, and the way to search.
+        Where you are, on its own line above the page dots.
 
-        The city label used to have a band of its own between the last icon row
-        and the page dots, and that band was worth a whole row of apps. Sharing
-        the Spotlight row costs nothing vertically. The trade is size — it
-        cannot be lock-screen large down here — so it keeps the weight and the
-        glass and gives up the scale.
+        It shared the Spotlight row while the grid was seven rows deep, because
+        every pixel of that band was worth apps. Back at six rows and the full
+        tile size there is 56px of clear band, so it gets its own line again and
+        the grid loses nothing.
 
         Tappable, and ONLY tappable: nothing asks for a location on load.
       */}
@@ -332,6 +331,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
         >
           {cityNote ?? (locating ? 'Locating' : city)}
         </button>
+      </div>
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <button
@@ -348,7 +348,6 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
         </svg>
         Search
       </button>
-      </div>
 
       <div className="dock">
         {DOCK_APPS.map((app) => (

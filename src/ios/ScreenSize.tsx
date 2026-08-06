@@ -38,19 +38,15 @@ function metricsFor(w: number): Pick<ScreenSize, 'device' | 'iconSize' | 'column
   // with tablet chrome and an invisible 34px tap-swallowing strip at the
   // bottom. The two numbers have to be the same one.
   /*
-    52, against the iOS standard 60.
+    60 — the iOS standard, back in full.
 
-    That is what buys the seventh row: seven rows of four is twenty-eight apps
-    a page, against twenty at the standard size, and every business on this
-    marketplace then lands on ONE page with nothing to swipe for. The label
-    under each tile is unchanged, so the name is as readable as it ever was;
-    only the artwork is smaller.
-
-    It is the deliberate trade on this screen — density over tile size — and
-    the reason the city label moved down beside the Spotlight pill, since its
-    old band was worth a row on its own.
+    Seven rows at 52px fitted twenty-eight apps but the tiles were small enough
+    that the logos stopped being readable at a glance, which is the one job an
+    icon has. Six rows of four is twenty-four, and moving the city label down
+    beside the Spotlight pill freed enough height that the sixth row and the
+    full-size tile now coexist. Nothing had to be given up for it.
   */
-  if (w < PHONE_MAX) return { device: 'phone', iconSize: 52, columns: 4, radius: 0 }
+  if (w < PHONE_MAX) return { device: 'phone', iconSize: 60, columns: 4, radius: 0 }
   if (w < 900) return { device: 'pad', iconSize: 72, columns: 5, radius: SCREEN_RADIUS }
   if (w < 1180) return { device: 'pad', iconSize: 76, columns: 6, radius: SCREEN_RADIUS }
   return { device: 'pad', iconSize: 78, columns: 8, radius: SCREEN_RADIUS }
