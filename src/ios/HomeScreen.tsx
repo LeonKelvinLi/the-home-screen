@@ -122,12 +122,15 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
     /*
       Where the grid actually starts.
 
-      Both branches were 96. On a phone the grid begins at 44 — the page pads
-      by `--status-h + 24`, and --status-h collapses to a 20px minimum there
-      rather than the 54px default. Reserving 96 threw away 52px at the top,
-      which is most of a row: the phone showed five where six fit.
+      Both branches were 96. On a phone the grid begins at 32 — the page pads by
+      `--status-h + 12`, and --status-h collapses to a 20px minimum there rather
+      than the 54px default. Reserving 96 threw away most of a row.
+
+      THIS NUMBER MIRRORS THE CSS. `.home-page`'s padding-top and this constant
+      have to agree, or the row count is computed against a grid that starts
+      somewhere else — which is exactly how a 25px row gap silently cost a row.
     */
-    const topPad = screen.device === 'pad' ? 96 : 44
+    const topPad = screen.device === 'pad' ? 96 : 32
     /*
       Room kept below the grid: the page dots, the Spotlight row and the dock.
 
