@@ -21,9 +21,13 @@
  *  - REFERRALS. A finder's fee has been floated and nothing has been agreed, so
  *    no page promises one.
  *
- * No counts are printed. The app derives "10 businesses" and "9 cities" from the
- * real lists and checks them on mount; a number frozen into a paragraph would go
- * stale the day someone signs up, with nothing to catch it.
+ * No counts are printed here. The screen prints two — "9 cities" is derived from
+ * CITY_PAGES.length and is always right; "10 businesses" is PARTNER_COUNT, a
+ * literal, because reading the real list would drag the whole catalogue into the
+ * landing page's bundle. Shell compares the two on mount, but behind
+ * import.meta.env.DEV, so that check is stripped from the production build and a
+ * drift would ship silently. Either way, a count frozen into a PARAGRAPH is
+ * worse: nothing checks it at all.
  */
 
 interface Page {
@@ -48,7 +52,19 @@ export const PAGES: Record<PageKey, Page> = {
     body: [
       'BEASTY is Glenn Malicdem, working out of Richmond, California. The line under the name — Supply of Goods, Services and awesome Company — is his own, and he means all three parts of it.',
       'He had a dog called Biggie. Walking Biggie is how he got to know this place: the same streets every day, the same people, the small businesses you only ever find on foot. Biggie is gone now. The way Glenn says it, Biggie is in heaven, watching him work hard for him. The dog on the front screen is Biggie. He is a memorial, not a mascot.',
-      'The app is that walk, put on a phone. Every icon is a local business. Open one and you are in their menu at their prices — they set those themselves, and nobody else edits them. One cart runs across all of them, so ordering from three places is one checkout instead of three.',
+      /*
+        Scoped, because the unscoped version was false four different ways.
+
+        Not every icon is a business — the grid also carries Cart, Orders,
+        Search, Settings and nine pages of empty tiles. Not all of them are
+        local: Alli's Dog Walking says in its own data that it works in
+        Philadelphia and southern New Jersey. Four have no menu at all
+        (contactOnly, items: []), so they open on a contact card. And one cart
+        does not span all of them: Noctilucente is quoteOnly and suppresses
+        add-to-cart everywhere. ReserveApp states this correctly as "across
+        every kitchen here"; that qualifier is what was missing.
+      */
+      'The app is that walk, put on a phone. Most of the icons are kitchens, and opening one puts you in their menu at their prices — they set those themselves, and nobody else edits them. One cart runs across every kitchen on the screen, so ordering from three of them is one checkout instead of three. A few icons are not kitchens and open on a contact card instead.',
       'It opens on a dial pad because BEASTY is what the keys spell: 2-3-2-7-8-9. Behind it are pages for Oakland, Richmond, Berkeley and the other Bay Area cities on Glenn’s list. Most of them start empty. An empty page is the honest version — it means nobody there has signed up yet, and it is what he shows a business owner to say the space is theirs.',
     ],
   },
@@ -84,7 +100,14 @@ export const PAGES: Record<PageKey, Page> = {
       'The home screen is not only restaurants. Kitchens and food trucks are most of it, but there is an apparel label on there and someone making drinkware. If you run something local, or you make things about local places, there is probably a shape of this that fits.',
       'Nothing is set. No rates, no split, no exclusivity, no minimum — none of that has been agreed with anyone, so treat this as an invitation to talk rather than an offer. Terms get agreed with Glenn directly, before anything runs.',
       'Worth raising: two businesses on the screen running something together, a creator who wants to shoot the places on it, an event with a few of them on one bill. Come with what you have in mind and what you would want out of it.',
-      'There is no published phone line or email yet. The one inbox that works today is the Reserve a Spot screen — leave your name, a way to reach you, and what you are proposing. Your details are saved there, and Glenn replies himself.',
+      /*
+        The form has five fixed fields — business name, what you cook, phone or
+        email, city, Instagram — and no free-text box, so it cannot take "what
+        you are proposing". Ask for what it can actually hold, and say the rest
+        happens on the call. The panel now carries a button that opens it; it
+        used to name the form and give no way to reach it.
+      */
+      'There is no published phone line or email yet. The one inbox that works today is the Reserve a Spot screen. It asks for a business name, what you make, a phone or email, and your city — there is nowhere to type the proposal itself, so put the short version in the "what you make" line and save the rest for when Glenn calls. He replies himself.',
     ],
     needsGlenn:
       'A published phone number or email for collaboration inquiries, and what he is actually prepared to offer a collaborator, before this can be more than a conversation.',

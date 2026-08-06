@@ -3907,13 +3907,16 @@ textarea {
   --key-ink: #ffffff;
   --key-sub: rgba(255, 255, 255, 0.66);
   --call-fill: #1db954;
-  --tab-off: rgba(20, 20, 22, 0.62);
+  --tab-off: rgba(20, 20, 22, 0.72);
   --tab-on: #141416;
   background: linear-gradient(178deg, #ffe63d 0%, #f6d800 46%, #eec400 100%);
 }
 
 .dialer.is-leaving {
   animation: dialer-out 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  /* Invisible AND untouchable. Without this a second tap during the fade could
+     open the water site in a new tab while the app entered behind it. */
+  pointer-events: none;
 }
 
 @keyframes dialer-out {
@@ -3980,41 +3983,6 @@ textarea {
    #f6d800 measures 1.72:1, on the largest word on the screen. */
 .dialer.is-converting .dialer-number,
 .dialer.is-beasty .dialer-number {
-  color: #141416;
-}
-
-/* Stage two puts the business in the space the real thing leaves empty. */
-.dialer-brand {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: calc(6 * var(--u));
-  margin-top: calc(10 * var(--u));
-  opacity: 0;
-  transform: translateY(10px) scale(0.96);
-  transition:
-    opacity 520ms ease 320ms,
-    transform 620ms cubic-bezier(0.32, 0.72, 0, 1) 320ms;
-  pointer-events: none;
-}
-
-.dialer.is-beasty .dialer-brand {
-  opacity: 1;
-  transform: none;
-}
-
-.dialer-biggie {
-  width: calc(74 * var(--u));
-  height: calc(74 * var(--u));
-  object-fit: contain;
-  filter: drop-shadow(0 6px 14px rgba(90, 60, 0, 0.28));
-}
-
-.dialer-word {
-  margin: 0;
-  font-size: calc(30 * var(--u));
-  font-weight: 800;
-  letter-spacing: 0.055em;
   color: #141416;
 }
 
@@ -4128,19 +4096,24 @@ textarea {
   line-height: 1;
   color: var(--key-sub);
   white-space: nowrap;
-  /* DIAMOND and CONTACTS are longer than any phone triplet. Shrinking the
-     glyphs beats wrapping them or letting them escape the circle. */
-  transform: scale(min(1, 1));
   font-variant-numeric: tabular-nums;
 }
 
-/* The longer labels only appear once the screen is ours, so the squeeze can
-   be applied there rather than to ABC and DEF. */
+/*
+  The longer labels only appear once the screen is ours, so the squeeze is
+  applied there rather than to ABC and DEF.
+
+  Floored at 8.5px. `calc(8.6 * var(--u))` alone gave 7.6px on an iPhone 15 and
+  6.3px on a 320pt phone — half the size of the smallest normal UI text, next
+  to a 36px digit, for the substitution the whole screen is built around.
+  CONTACTS is the longest at eight characters and measures ~47px at the floor,
+  inside even a 52px key.
+*/
 .dialer.is-converting .dialer-key-sub,
 .dialer.is-beasty .dialer-key-sub {
-  font-size: calc(8.6 * var(--u));
-  letter-spacing: 0.055em;
-  text-indent: 0.055em;
+  font-size: clamp(8.5px, calc(10 * var(--u)), 11px);
+  letter-spacing: 0.02em;
+  text-indent: 0.02em;
 }
 
 /* Lit while BEASTY is spelled out across the pad. */
@@ -4185,23 +4158,6 @@ textarea {
 
 .dialer-call:active {
   transform: scale(0.93);
-}
-
-/* iOS puts delete to the right of the call button, and only once there is
-   something to delete. */
-.dialer-del {
-  position: absolute;
-  right: calc(50% - var(--key-size) * 1.5 - var(--key-gap-x));
-  width: var(--key-size);
-  height: var(--key-size);
-  border: 0;
-  background: none;
-  color: var(--key-ink);
-  display: grid;
-  place-items: center;
-  cursor: pointer;
-  opacity: 0.85;
-  -webkit-tap-highlight-color: transparent;
 }
 
 /* ---------- panels ---------- */
@@ -4358,9 +4314,11 @@ textarea {
 
 .dialer-foot {
   margin: calc(7 * var(--u)) 0 calc(2 * var(--u));
-  font-size: calc(11 * var(--u));
+  font-size: 11px;
   font-weight: 600;
-  color: rgba(20, 20, 22, 0.62);
+  /* 0.62 measured 4.28:1 where this actually sits on the gradient, under the
+     4.5 minimum on 11px text. 0.72 gives 5.41. */
+  color: rgba(20, 20, 22, 0.72);
   opacity: 0;
   transition: opacity 520ms ease 420ms;
 }
@@ -4385,7 +4343,6 @@ textarea {
 */
 @media (prefers-reduced-motion: reduce) {
   .dialer,
-  .dialer-brand,
   .dialer-key,
   .dialer-call,
   .dialer-tab,
@@ -4626,5 +4583,42 @@ textarea {
   .dialer-number {
     font-size: calc(32 * var(--u));
     min-height: calc(36 * var(--u));
+  }
+}
+
+/*
+  Confirmation for the share key.
+
+  Pressing # SHARE copies the link where navigator.share does not exist — which
+  on desktop is every visitor — and said nothing at all, because the only
+  feedback lived inside the Contacts panel.
+*/
+.dialer-toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(120 * var(--u));
+  transform: translateX(-50%);
+  z-index: 8;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(20, 20, 22, 0.92);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 650;
+  white-space: nowrap;
+  box-shadow: 0 10px 30px rgba(40, 28, 0, 0.3);
+  animation: toast-in 200ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, 10px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-toast {
+    animation: none;
   }
 }

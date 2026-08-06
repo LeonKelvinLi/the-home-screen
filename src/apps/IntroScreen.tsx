@@ -12,22 +12,21 @@ import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, Voicem
 /**
  * The landing screen: a dialer that starts as the phone's own and becomes ours.
  *
- * For the first few seconds this is the stock iOS Phone keypad, as faithfully
+ * For the first three seconds this is the stock iOS Phone keypad, as faithfully
  * as a web page can manage — white, grey keys, green call button, five standard
  * tabs. That is deliberate and it is the operator's idea: someone opening the
- * link should wonder for a moment why they are looking at a dial pad. Then it
- * converts. The keys spelling BEASTY light in order (2-3-2-7-8-9) and the small
- * letters under every digit turn into his menu — ABC becomes CONTACTS, DEF
- * becomes BPRF, and so on down the pad.
+ * link should wonder for a moment why they are looking at a dial pad. Then it is
+ * taken over. The keys spelling BEASTY light in order (2-3-2-7-8-9) and the
+ * small letters under every digit resolve into his menu — ABC becomes CONTACTS,
+ * DEF becomes BPRF, and so on down the pad.
  *
  * That substitution is the whole design. A telephone keypad has carried a
  * twelve-item menu under its digits since the 1960s, so a customer already
  * knows how to read it; the screen only has to change the words.
  *
- * Nothing is hidden behind the delay: no data is collected during it, every
- * control works throughout, and touching anything skips straight to the end.
- * Reduced motion skips the performance entirely — someone who asked for less
- * movement should not be made to sit through a set piece.
+ * Nothing is hidden behind the delay: no data is collected during it, and any
+ * touch skips the performance and lands on the finished screen immediately.
+ * Reduced motion never sees it at all.
  */
 
 interface Props {
@@ -67,7 +66,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   /** How many of the six BEASTY keys have lit so far. */
   const [spelled, setSpelled] = useState(reduced ? BEASTY_DIGITS.length : 0)
   const [panel, setPanel] = useState<PanelPage | null>(null)
-  const [copied, setCopied] = useState(false)
+  const [toast, setToast] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
   const timers = useRef<number[]>([])
 
@@ -78,37 +77,66 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   useEffect(() => () => timers.current.forEach(clearTimeout), [])
 
   /*
-    Run the conversion. Guarded, so the scheduled hold and an impatient tap
-    cannot both start it and land two overlapping transitions.
-  */
-  const convert = () => {
-    setStage((s) => {
-      if (s !== 'stock') return s
-      for (let i = 1; i <= BEASTY_DIGITS.length; i++) {
-        later(() => setSpelled(i), i * SPELL_STEP_MS)
-      }
-      later(() => setStage('beasty'), CONVERT_MS)
-      return 'converting'
-    })
-  }
+    The takeover is driven from an EFFECT keyed on the stage, not from inside a
+    setState updater.
 
+    Scheduling those seven timers inside the updater looked tidy and was wrong:
+    React deliberately calls updater functions twice under StrictMode to surface
+    impurity, and both calls saw `stage === 'stock'`, so the guard did not stop
+    the second run and fourteen timers were queued. It survived only because
+    every one of them happened to be idempotent. An effect runs once per real
+    transition, which is what this actually wants.
+  */
+  useEffect(() => {
+    if (stage !== 'converting') return
+    for (let i = 1; i <= BEASTY_DIGITS.length; i++) {
+      later(() => setSpelled(i), i * SPELL_STEP_MS)
+    }
+    later(() => setStage('beasty'), CONVERT_MS)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stage])
+
+  /** The scheduled opening. A touch can pre-empt it; see `skip`. */
   useEffect(() => {
     if (reduced) return
-    later(convert, HOLD_MS)
-    // Once, on mount: this is the screen's own opening, not a reaction to
-    // anything the customer does.
+    later(() => setStage((s) => (s === 'stock' ? 'converting' : s)), HOLD_MS)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   /*
+    Any touch before the screen has settled skips to the settled screen.
+
+    The first build ran the takeover instead, which left the most obvious target
+    on the page — a pixel-perfect replica of the green Call button — doing
+    nothing for 1.5s when someone pressed it, and then nothing again when they
+    pressed it a second time. A person who has decided to act should not be made
+    to sit through an animation they did not ask for. Returns true when it
+    handled the press, so the caller knows not to also run the action: the
+    screen has just changed under their finger and the next press is theirs.
+  */
+  const skip = (): boolean => {
+    if (stage === 'beasty') return false
+    setStage('beasty')
+    setSpelled(BEASTY_DIGITS.length)
+    return true
+  }
+
+  /*
     Play the screen out before handing over, the way a call ends rather than
-    blinking away. Guarded so a double tap cannot queue two exits.
+    blinking away. `leaving` also turns off pointer events in CSS — without that
+    the screen stayed hit-testable while invisible, so a second tap during the
+    fade could open the water site in a new tab while the app entered behind it.
   */
   const leave = (then: () => void) => {
     if (leaving) return
     if (reduced) return then()
     setLeaving(true)
     later(then, 300)
+  }
+
+  const say = (message: string) => {
+    setToast(message)
+    later(() => setToast(null), 2000)
   }
 
   const share = async () => {
@@ -123,14 +151,18 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
     }
     try {
       await navigator.clipboard.writeText(url)
-      setCopied(true)
-      later(() => setCopied(false), 1800)
+      // Say so. This used to set a flag rendered only inside the Contacts
+      // panel, so pressing # SHARE from the keypad copied the link and showed
+      // nothing — which on desktop is every visitor, since navigator.share is
+      // not there to take over.
+      say('Link copied')
     } catch {
       setPanel('contacts')
     }
   }
 
   const run = (action: KeyAction) => {
+    if (leaving) return
     switch (action.kind) {
       case 'panel':
         setPanel((p) => (p === action.page ? null : action.page))
@@ -147,13 +179,8 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
     }
   }
 
-  /** Any deliberate touch during the stock phase ends it early. */
   const press = (action?: KeyAction) => {
-    if (stage === 'stock') {
-      convert()
-      return
-    }
-    if (stage === 'converting') return
+    if (skip()) return
     if (action) run(action)
   }
 
@@ -165,15 +192,9 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
     stage === 'stock' ? '' : stage === 'converting' ? BEASTY_DIGITS.slice(0, spelled) : 'BEASTY'
 
   /*
-    The takeover itself.
-
-    Every label under every digit resolves out of noise, staggered across the
-    pad, while the keys spelling BEASTY light in order underneath. The tab bar
-    goes last so the eye finishes at the bottom of the screen rather than in the
-    middle of it.
-
-    `taking` gates all of it, and is false under reduced motion — where the
-    labels are simply correct from the first frame.
+    The takeover itself: every label under every digit resolves out of noise,
+    staggered across the pad, while the keys spelling BEASTY light underneath.
+    The tab bar goes last so the eye finishes at the bottom of the screen.
   */
   const taking = stage === 'converting'
   const keyLabels = useScramble(
@@ -186,10 +207,10 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   /*
     During the takeover, show the resolving text; before and after, the truth.
 
-    A label that has not started resolving yet keeps its OLD text rather than
-    going blank. The first build blanked them, and the whole pad lost its
-    letters at once while the wave crossed it — which looks like a bug rather
-    than like something being overwritten key by key.
+    A label that has not started resolving keeps its OLD text rather than going
+    blank. The first build blanked them and the whole pad lost its letters at
+    once, which looks like a bug rather than like something being overwritten
+    key by key.
   */
   const keyText = (i: number) => {
     if (stage === 'beasty') return DIALER_KEYS[i].label
@@ -209,8 +230,8 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
       <div className="dialer-island" aria-hidden="true" />
       {/*
         The takeover's own layer: a scanline sweep and a colour-split flicker,
-        over the top of everything for the length of the conversion. Purely
-        decorative, mounted only while it runs, and never in the way of a tap.
+        over the top of everything for the length of it. Decorative, mounted
+        only while it runs, and never in the way of a tap.
       */}
       {taking && <div className="dialer-glitch" aria-hidden="true" />}
 
@@ -218,7 +239,12 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         {/* Biggie has died; the dog on this screen is a memorial, not a mascot,
             which is worth knowing before anyone edits that artwork. */}
         <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
-        <div className="dialer-number" aria-live="polite">
+        {/*
+          aria-live only once the screen has settled. While it is converting the
+          field changes seven times in 1.5s, which queued seven announcements —
+          "2", "2 3", "2 3 2"… — at a screen-reader user for a decorative effect.
+        */}
+        <div className="dialer-number" aria-live={stage === 'beasty' ? 'polite' : 'off'}>
           {display}
         </div>
         <p className="dialer-sub">Supply of Goods, Services &amp; awesome Company</p>
@@ -242,9 +268,9 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
 
       <div className="dialer-call-row">
         {/*
-          The way in. Green while this is pretending to be the phone's own
-          keypad, ours once it is not — but the same button in the same place,
-          so nobody has to find it again after the screen changes under them.
+          The way in. Green in both lives — the operator's own mock keeps it
+          green, and it is the same button in the same place, so nobody has to
+          find it again after the screen changes under them.
         */}
         <button
           className="dialer-call"
@@ -258,7 +284,6 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
       {panel && (
         <Panel
           page={panel}
-          copied={copied}
           onShare={share}
           onJoin={() => leave(onJoin)}
           onWater={() => leave(onWater)}
@@ -271,10 +296,10 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         their stock labels through the performance and pick up ours after.
       */}
       <nav className="dialer-tabs" aria-label="BEASTY">
-        <Tab icon={<StarFill />} label={tabText(0)} onClick={() => press({ kind: 'panel', page: 'about' })} />
-        <Tab icon={<RecentsClock />} label={tabText(1)} onClick={() => press({ kind: 'panel', page: 'careers' })} />
-        <Tab icon={<KeypadGrid />} label={tabText(2)} selected onClick={() => press()} />
-        <Tab icon={<PersonCircleFill />} label={tabText(3)} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
+        <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'about' })} />
+        <Tab icon={<RecentsClock />} label={tabText(1)} name={TAB_LABELS[1]} onClick={() => press({ kind: 'panel', page: 'careers' })} />
+        <Tab icon={<KeypadGrid />} label={tabText(2)} name={TAB_LABELS[2]} selected onClick={() => press()} />
+        <Tab icon={<PersonCircleFill />} label={tabText(3)} name={TAB_LABELS[3]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
         {/*
           The badge is the stock screen's unread count while it is pretending,
           and the number of cities with tiles still open once it is not. A made
@@ -283,6 +308,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         <Tab
           icon={<VoicemailFill />}
           label={tabText(4)}
+          name={TAB_LABELS[4]}
           badge={stage === 'beasty' ? CITY_PAGES.length : 38}
           onClick={() => press({ kind: 'panel', page: 'careers' })}
         />
@@ -292,6 +318,12 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         {PARTNER_COUNT} local businesses. Open tiles in {CITY_PAGES.length} cities.
       </p>
       <div className="dialer-home" aria-hidden="true" />
+
+      {toast && (
+        <div className="dialer-toast" role="status">
+          {toast}
+        </div>
+      )}
     </div>
   )
 }
@@ -310,26 +342,67 @@ function isLit(stage: Stage, spelled: number, index: number): boolean {
 
 function Panel({
   page,
-  copied,
   onShare,
   onJoin,
   onWater,
   onClose,
 }: {
   page: PanelPage
-  copied: boolean
   onShare: () => void
   onJoin: () => void
   onWater: () => void
   onClose: () => void
 }) {
   const Mark = PANEL_MARKS[page]
+  const card = useRef<HTMLDivElement>(null)
+
+  /*
+    Make it behave like the dialog it claims to be.
+
+    It carried role="dialog" and none of the behaviour: focus was never moved
+    in, Escape did nothing, and it renders after the twelve keys in DOM order —
+    so activating "1 ABOUT" put content on screen that a keyboard user then had
+    to tab past thirteen controls to reach, while the panel visually covered the
+    keys they were tabbing through.
+  */
+  useEffect(() => {
+    const el = card.current
+    if (!el) return
+    const returnTo = document.activeElement as HTMLElement | null
+    const first = el.querySelector<HTMLElement>('button, a[href]')
+    ;(first ?? el).focus({ preventScroll: true })
+    return () => returnTo?.focus?.({ preventScroll: true })
+  }, [])
+
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (e.key === 'Escape') {
+      e.stopPropagation()
+      onClose()
+      return
+    }
+    if (e.key !== 'Tab') return
+    const el = card.current
+    if (!el) return
+    const focusable = [...el.querySelectorAll<HTMLElement>('button, a[href]')].filter(
+      (n) => n.offsetParent !== null,
+    )
+    if (focusable.length === 0) return
+    const first = focusable[0]
+    const last = focusable[focusable.length - 1]
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault()
+      last.focus()
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault()
+      first.focus()
+    }
+  }
 
   // Contacts is the one page with no written copy: the operator has not
   // connected a line yet, and inventing one would be the worst kind of filler.
-  if (page === 'contacts') {
-    return (
-      <Shell title="Contacts" mark={<Mark size={22} />} onClose={onClose}>
+  const body =
+    page === 'contacts' ? (
+      <>
         {OPERATOR.phone || OPERATOR.email ? (
           <>
             {OPERATOR.phone && <a href={telHref(OPERATOR.phone)}>{OPERATOR.phone}</a>}
@@ -342,50 +415,48 @@ function Panel({
           </p>
         )}
         <button className="dialer-panel-action" onClick={onShare}>
-          {copied ? 'Link copied' : 'Share BEASTY'}
+          Share BEASTY
         </button>
-      </Shell>
+      </>
+    ) : (
+      <>
+        {PAGES[page].body.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+        {/* Shown, not hidden in a comment. A page that needs the operator's
+            detail before it is true says so where he will see it. */}
+        {PAGES[page].needsGlenn && <p className="dialer-panel-flag">{PAGES[page].needsGlenn}</p>}
+        {/* Careers and Collabs both send people to the same form, so both need
+            the button. Collabs used to name it and give no way to reach it. */}
+        {(page === 'careers' || page === 'collabs') && (
+          <button className="dialer-panel-action" onClick={onJoin}>
+            {page === 'collabs' ? 'Open Reserve a Spot' : 'Claim a tile'}
+          </button>
+        )}
+        {page === 'donations' && (
+          <button className="dialer-panel-action" onClick={onWater}>
+            See BEASTY H20
+          </button>
+        )}
+      </>
     )
-  }
 
-  const copy = PAGES[page]
-  return (
-    <Shell title={copy.title} mark={<Mark size={22} />} onClose={onClose}>
-      {copy.body.map((p) => (
-        <p key={p}>{p}</p>
-      ))}
-      {/* Shown, not hidden in a comment. A page that needs the operator's
-          detail before it is true says so where he will see it. */}
-      {copy.needsGlenn && <p className="dialer-panel-flag">{copy.needsGlenn}</p>}
-      {page === 'careers' && (
-        <button className="dialer-panel-action" onClick={onJoin}>
-          Claim a tile
-        </button>
-      )}
-      {page === 'donations' && (
-        <button className="dialer-panel-action" onClick={onWater}>
-          See BEASTY H20
-        </button>
-      )}
-    </Shell>
-  )
-}
+  const title = page === 'contacts' ? 'Contacts' : PAGES[page].title
 
-function Shell({
-  title,
-  mark,
-  onClose,
-  children,
-}: {
-  title: string
-  mark: React.ReactNode
-  onClose: () => void
-  children: React.ReactNode
-}) {
   return (
-    <div className="dialer-panel" role="dialog" aria-label={title}>
+    <div
+      className="dialer-panel"
+      role="dialog"
+      aria-modal="true"
+      aria-label={title}
+      ref={card}
+      tabIndex={-1}
+      onKeyDown={onKeyDown}
+    >
       <div className="dialer-panel-head">
-        <span className="dialer-panel-mark">{mark}</span>
+        <span className="dialer-panel-mark">
+          <Mark size={22} />
+        </span>
         <h2>{title}</h2>
         <button className="dialer-panel-close" onClick={onClose} aria-label="Close">
           <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" aria-hidden="true">
@@ -393,7 +464,7 @@ function Shell({
           </svg>
         </button>
       </div>
-      <div className="dialer-panel-body">{children}</div>
+      <div className="dialer-panel-body">{body}</div>
     </div>
   )
 }
@@ -401,23 +472,33 @@ function Shell({
 function Tab({
   icon,
   label,
+  name,
   selected,
   badge,
   onClick,
 }: {
   icon: React.ReactNode
   label: string
+  /** The settled name, so the accessible name is never a scrambled string. */
+  name: string
   selected?: boolean
   badge?: number
   onClick: () => void
 }) {
   return (
-    <button className={`dialer-tab${selected ? ' is-selected' : ''}`} onClick={onClick}>
+    <button
+      className={`dialer-tab${selected ? ' is-selected' : ''}`}
+      onClick={onClick}
+      aria-label={name}
+      aria-current={selected ? 'page' : undefined}
+    >
       <span className="dialer-tab-icon">
         {icon}
         {badge !== undefined && <span className="dialer-badge">{badge}</span>}
       </span>
-      <span className="dialer-tab-label">{label}</span>
+      <span className="dialer-tab-label" aria-hidden="true">
+        {label}
+      </span>
     </button>
   )
 }
