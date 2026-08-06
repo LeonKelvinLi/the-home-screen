@@ -4086,12 +4086,11 @@ textarea {
 }
 
 /*
-  Biggie and the strapline are the business, so neither may appear while the
-  screen is still pretending to be the phone's own — a real keypad has nothing
-  in this space. They arrive with the takeover.
+  Biggie is the business, so he does not appear while the screen is still
+  pretending to be the phone's own — a real keypad has nothing in this space.
+  He arrives with the takeover.
 */
-.dialer-biggie,
-.dialer-sub {
+.dialer-biggie {
   opacity: 0;
   transform: translateY(8px);
   transition:
@@ -4100,8 +4099,7 @@ textarea {
   pointer-events: none;
 }
 
-.dialer.is-beasty .dialer-biggie,
-.dialer.is-beasty .dialer-sub {
+.dialer.is-beasty .dialer-biggie {
   opacity: 1;
   transform: none;
 }
@@ -4111,17 +4109,6 @@ textarea {
   height: calc(64 * var(--u));
   object-fit: contain;
   filter: drop-shadow(0 6px 16px rgba(90, 60, 0, 0.3));
-}
-
-.dialer-sub {
-  margin: 0;
-  max-width: 20em;
-  text-align: center;
-  font-size: calc(12.5 * var(--u));
-  font-weight: 650;
-  line-height: 1.35;
-  /* 0.78 clears 4.5:1 against both ends of the yellow gradient. */
-  color: rgba(20, 20, 22, 0.78);
 }
 
 /* ---------- the keypad ---------- */
@@ -4812,22 +4799,19 @@ textarea {
   words: the wordmark and the operator's own strapline both carry meaning a
   photograph does not. Below that, the strapline drops to one line.
 
-  820, not 740. The brand block needs about 155px at full scale and the height
-  ratio only leaves it ~120 once the width is generous — which is every landscape
-  window and a 430x790 phone in a browser. Those were clipping the strapline.
+  600, not 820. That threshold was set when the block also carried the operator's
+  strapline and needed ~155px; with the strapline gone it is the dog and the
+  wordmark only, about 110px, so he fits on everything down to a small phone.
+  The operator wants Biggie above the pad, so he stays as long as there is room
+  for him.
 */
-@media (max-height: 820px) {
+@media (max-height: 600px) {
   .dialer-biggie {
     display: none;
   }
 }
 
 @media (max-height: 600px) {
-  .dialer-sub {
-    font-size: calc(11 * var(--u));
-    max-width: none;
-  }
-
   .dialer-number {
     font-size: calc(32 * var(--u));
     min-height: calc(36 * var(--u));
@@ -4918,9 +4902,6 @@ textarea {
     display: none;
   }
 
-  .dialer-sub {
-    display: none;
-  }
 }
 
 /* Behind a panel, so tapping away closes it the way every sheet does. */

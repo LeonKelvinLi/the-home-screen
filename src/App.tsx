@@ -163,6 +163,10 @@ export default function App() {
       {(!entered || handoff) && (
         <IntroScreen
           key={visit}
+          /* Auto-enter is first-visit only: someone who pressed back to get
+             here came deliberately, and pushing them forward again would be a
+             loop with no way out. */
+          autoEnter={visit === 0}
           onEnter={() => enter()}
           onWater={() => enter(BEASTY_H20)}
           onJoin={() => enter(RESERVE)}

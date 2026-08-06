@@ -133,8 +133,18 @@ export function StarMark({ size = 24 }: MarkProps) {
   )
 }
 
+/** Supply — a stacked crate, for the goods side rather than the kitchens. */
+export function SupplyMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M2.6 7.4 12 3.1l9.4 4.3v9.2L12 20.9 2.6 16.6Zm9.4 2.2 5.9-2.7L12 4.5 6.1 6.9Zm1.2 2.1v6.6l6-2.7V9Zm-2.4 0L4.8 9v6.6l6 2.7Z" />
+    </svg>
+  )
+}
+
 export const PANEL_MARKS: Record<PanelPage, (props: MarkProps) => JSX.Element> = {
   favorites: StarMark,
+  supply: SupplyMark,
   about: DogMark,
   contacts: PhoneMark,
   bprf: PurpleRibbon,

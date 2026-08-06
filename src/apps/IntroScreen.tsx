@@ -35,6 +35,8 @@ interface Props {
   onJoin: () => void
   /** Enter and land on a named app — the keypad opens several directly. */
   onOpen: (appId: string) => void
+  /** False on a return visit, so the idle countdown does not re-arm. */
+  autoEnter?: boolean
 }
 
 /**
@@ -53,6 +55,8 @@ const SPELL_STEP_MS = 150
 const SPELL_DELAY_MS = 700
 /** Total length of the takeover, after which the screen is simply ours. */
 const CONVERT_MS = 2600
+/** Idle time on the settled screen before it enters on the customer's behalf. */
+const AUTO_ENTER_MS = 5000
 
 type Stage = 'stock' | 'converting' | 'beasty'
 
@@ -60,7 +64,7 @@ type Stage = 'stock' | 'converting' | 'beasty'
 const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicemail']
 const TAB_LABELS = ['Favorites', 'Careers', 'Contact', 'BEASTY', 'Reviews']
 
-export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
+export function IntroScreen({ onEnter, onWater, onJoin, onOpen, autoEnter = true }: Props) {
   const reduced =
     typeof window !== 'undefined' &&
     window.matchMedia('(prefers-reduced-motion: reduce)').matches
@@ -71,6 +75,8 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   const [panel, setPanel] = useState<PanelPage | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
+  /** Cleared by the first touch, so the auto-enter never re-arms. */
+  const [firstVisit, setFirstVisit] = useState(autoEnter)
   const timers = useRef<number[]>([])
 
   /** Every timer goes through here so unmount can clear all of them. */
@@ -98,6 +104,34 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
     later(() => setStage('beasty'), CONVERT_MS)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stage])
+
+  /*
+    Auto-enter, five seconds after the screen settles, if nobody has touched it.
+
+    FIRST VISIT ONLY, and cancelled by any touch. Someone who pressed back to
+    get to this screen came here deliberately, and shoving them forward again
+    five seconds later would be a loop they cannot get out of — which is exactly
+    the trap the history handling was fixed to remove. `visit` is 0 only on the
+    first mount of a session.
+  */
+  const autoRef = useRef(0)
+  const cancelAuto = () => {
+    if (autoRef.current) {
+      clearTimeout(autoRef.current)
+      autoRef.current = 0
+    }
+  }
+  useEffect(() => cancelAuto, [])
+
+  useEffect(() => {
+    if (stage !== 'beasty' || !firstVisit || panel) return
+    autoRef.current = window.setTimeout(() => {
+      autoRef.current = 0
+      leave(onEnter)
+    }, AUTO_ENTER_MS)
+    return cancelAuto
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [stage, panel])
 
   /** The scheduled opening. A touch can pre-empt it; see `skip`. */
   useEffect(() => {
@@ -200,6 +234,10 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   }
 
   const press = (action?: KeyAction) => {
+    // A person who touched the screen is deciding for themselves. Cancel the
+    // countdown permanently rather than restarting it.
+    cancelAuto()
+    setFirstVisit(false)
     if (skip()) return
     if (action) run(action)
   }
@@ -291,7 +329,6 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         <div className="dialer-number" aria-live={stage === 'beasty' ? 'polite' : 'off'}>
           {display}
         </div>
-        <p className="dialer-sub">Supply of Goods, Services &amp; awesome Company</p>
       </div>
 
       <div className="dialer-keys">

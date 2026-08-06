@@ -38,9 +38,25 @@ interface Page {
   needsGlenn?: string
 }
 
-type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews' | 'favorites'
+type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews' | 'favorites' | 'supply'
 
 export const PAGES: Record<PageKey, Page> = {
+  /*
+    Key 4. The operator renamed it from GOODS to SUPPLY and said he would add
+    the contact for it when he can — so there is a name and an intent and no
+    detail whatsoever. Do not invent a product list, a minimum order or a lead
+    time to fill the page out.
+  */
+  supply: {
+    title: 'Supply',
+    body: [
+      'The supply side of the business — goods rather than the kitchens on the home screen.',
+      'There is nothing to show here yet. Glenn is adding a contact for it, and until he does this page has no way to reach anyone and nothing to order.',
+    ],
+    needsGlenn:
+      'What Supply covers and a way to reach it — a phone, an email or a form. Nothing here can be written until one of those exists.',
+  },
+
   /*
     The star keeps its stock name because it is going to do the stock thing:
     the operator wants a star on each partner's page that a customer taps as

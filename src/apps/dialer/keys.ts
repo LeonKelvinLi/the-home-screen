@@ -37,6 +37,7 @@ export type PanelPage =
   | 'careers'
   | 'reviews'
   | 'favorites'
+  | 'supply'
 
 export interface DialerKey {
   digit: string
@@ -72,15 +73,21 @@ export const DIALER_KEYS: DialerKey[] = [
   { digit: '1', label: 'ABOUT', action: { kind: 'panel', page: 'about' } },
   { digit: '2', letters: 'ABC', label: 'INSTAGRAM', action: { kind: 'external', url: INSTAGRAM_URL } },
   { digit: '3', letters: 'DEF', label: 'BPRF', action: { kind: 'panel', page: 'bprf' } },
-  // Goods is the marketplace itself — every business on the home screen.
-  { digit: '4', letters: 'GHI', label: 'GOODS', action: { kind: 'enter' } },
-  { digit: '5', letters: 'JKL', label: 'DESIGNS', action: { kind: 'enter', app: DESIGNS } },
+  /*
+    SUPPLY, not GOODS, and it is not the marketplace — the operator is adding a
+    contact for it and has not supplied one yet. The marketplace is the green
+    button, which is where every dialer puts "go".
+  */
+  { digit: '4', letters: 'GHI', label: 'SUPPLY', action: { kind: 'panel', page: 'supply' } },
+  // SERVICES rather than DESIGNS: the page behind it covers more than design.
+  { digit: '5', letters: 'JKL', label: 'SERVICES', action: { kind: 'enter', app: DESIGNS } },
   { digit: '6', letters: 'MNO', label: 'WATER', action: { kind: 'external', url: WATER_URL } },
   { digit: '7', letters: 'PQRS', label: 'COLLABS', action: { kind: 'panel', page: 'collabs' } },
   { digit: '8', letters: 'TUV', label: 'DONATE', action: { kind: 'panel', page: 'donations' } },
   { digit: '9', letters: 'WXYZ', label: 'CAREERS', action: { kind: 'panel', page: 'careers' } },
-  // The operator calls this one "Biggie's Diamond membership".
-  { digit: '*', label: 'DIAMOND', action: { kind: 'enter', app: MEMBERS } },
+  // Biggie's Diamond membership — labelled MEMBERSHIP, which is what a customer
+  // who has never heard of it is looking for.
+  { digit: '*', label: 'MEMBERSHIP', action: { kind: 'enter', app: MEMBERS } },
   { digit: '0', letters: '+', label: 'SIGN IN', action: { kind: 'enter', app: ACCOUNT } },
   { digit: '#', label: 'SHARE', action: { kind: 'share' } },
 ]
