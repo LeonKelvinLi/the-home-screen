@@ -3841,9 +3841,33 @@ textarea {
   align-items: center;
   font-family: -apple-system, 'SF Pro Display', BlinkMacSystemFont, Inter, system-ui, sans-serif;
 
-  /* The one number everything else is derived from: the viewport as a fraction
-     of the 440pt reference the measurements were taken against. */
-  --u: calc(min(100vw, 440px) / 440);
+  /*
+    The one number everything else is derived from: this viewport as a fraction
+    of the 440x956pt reference the measurements were taken against.
+
+    Constrained by BOTH axes, not just width. Width alone was right on a modern
+    iPhone and wrong on anything short: a 360x640 device is proportionally much
+    wider than the reference, so a width-derived scale produced a keypad taller
+    than the screen and the wordmark landed on top of the keys. Taking the
+    smaller of the two ratios makes the whole composition scale as one piece and
+    fit whatever it is given.
+  */
+  --u: min(calc(min(100vw, 440px) / 440), calc(min(100vh, 956px) / 956));
+
+  /*
+    The chrome does NOT scale, at all.
+
+    Tab labels, icons, the badge and the home indicator are fixed sizes in iOS
+    whatever the device — only the keypad block breathes. Scaling them with
+    everything else took the tab labels to about 6px on a small phone.
+
+    Note --u is a LENGTH, not a ratio: `min(100vw, 440px) / 440` divides a px
+    value, so it computes to something like 0.669px. That is deliberate and it
+    is why every use of it is `calc(N * var(--u))` — but it also means these
+    cannot be floored with `max(var(--u), 0.84)`, which mixes a length with a
+    number and is invalid. Fixed pixels instead, which is what they should have
+    been.
+  */
 
   /*
     Measured, not guessed. Key diameter is 88 of 440 — exactly 20% of the
@@ -3934,8 +3958,12 @@ textarea {
   justify-content: center;
   gap: calc(6 * var(--u));
   width: 100%;
-  padding: calc(var(--status-h) + 8px) 20px calc(12 * var(--u));
+  /* Clear of the island, which sits at 13.7pt + 37.3pt tall. */
+  padding: max(calc(var(--status-h) + 8px), 62px) 20px calc(12 * var(--u));
   min-height: 0;
+  /* Backstop. The brand must never spill onto the keypad, whatever it is
+     given — clipped is recoverable, overlapping is not. */
+  overflow: hidden;
 }
 
 .dialer-number {
@@ -4295,33 +4323,33 @@ textarea {
   position: relative;
   display: grid;
   place-items: center;
-  height: calc(25.3 * var(--u));
+  height: 25.3px;
 }
 
 .dialer-tab-icon svg {
-  width: calc(25.3 * var(--u));
-  height: calc(25.3 * var(--u));
+  width: 25.3px;
+  height: 25.3px;
 }
 
 .dialer-badge {
   position: absolute;
-  top: calc(-6 * var(--u));
-  right: calc(-13 * var(--u));
-  min-width: calc(18 * var(--u));
-  height: calc(18 * var(--u));
-  padding: 0 calc(5 * var(--u));
-  border-radius: calc(9 * var(--u));
+  top: -6px;
+  right: -13px;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 9px;
   background: #ff3b30;
   color: #fff;
-  font-size: calc(12 * var(--u));
+  font-size: 12px;
   font-weight: 700;
-  line-height: calc(18 * var(--u));
+  line-height: 18px;
   text-align: center;
   font-variant-numeric: tabular-nums;
 }
 
 .dialer-tab-label {
-  font-size: calc(10 * var(--u));
+  font-size: 10px;
   /* 500, the stock weight. The reference measures ~745 because of Bold Text. */
   font-weight: 500;
   letter-spacing: 0.005em;
@@ -4343,7 +4371,7 @@ textarea {
 
 .dialer-home {
   /* Measured 157 x 5.0pt, 8pt clear of the bottom edge. */
-  width: calc(157 * var(--u));
+  width: 157px;
   height: 5px;
   margin: calc(6 * var(--u)) 0 calc(8 * var(--u));
   border-radius: 999px;
@@ -4569,5 +4597,34 @@ textarea {
   .dialer.is-converting .dialer-number,
   .dialer.is-beasty .dialer-number {
     animation: none;
+  }
+}
+
+/*
+  Short screens.
+
+  The brand block — dog, wordmark, strapline — is sized against the 440x956
+  reference, and on a 360x640 device the space above the keypad is about 90px
+  where that block wants 100. It was clipping.
+
+  The dog goes first, because it is the only one of the three that is not
+  words: the wordmark and the operator's own strapline both carry meaning a
+  photograph does not. Below that, the strapline drops to one line.
+*/
+@media (max-height: 740px) {
+  .dialer-biggie {
+    display: none;
+  }
+}
+
+@media (max-height: 600px) {
+  .dialer-sub {
+    font-size: calc(11 * var(--u));
+    max-width: none;
+  }
+
+  .dialer-number {
+    font-size: calc(32 * var(--u));
+    min-height: calc(36 * var(--u));
   }
 }
