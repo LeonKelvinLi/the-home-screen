@@ -46,9 +46,11 @@ interface Props {
  */
 const HOLD_MS = 3000
 /** One key lights per step while BEASTY is spelled across the pad. */
-const SPELL_STEP_MS = 95
+const SPELL_STEP_MS = 150
+/** The pad is corrupted for this long before BEASTY starts appearing on it. */
+const SPELL_DELAY_MS = 700
 /** Total length of the takeover, after which the screen is simply ours. */
-const CONVERT_MS = 1500
+const CONVERT_MS = 2600
 
 type Stage = 'stock' | 'converting' | 'beasty'
 
@@ -89,7 +91,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   useEffect(() => {
     if (stage !== 'converting') return
     for (let i = 1; i <= BEASTY_DIGITS.length; i++) {
-      later(() => setSpelled(i), i * SPELL_STEP_MS)
+      later(() => setSpelled(i), SPELL_DELAY_MS + i * SPELL_STEP_MS)
     }
     later(() => setStage('beasty'), CONVERT_MS)
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -130,7 +132,14 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
     if (leaving) return
     if (reduced) return then()
     setLeaving(true)
-    later(then, 300)
+    /*
+      Hand over IMMEDIATELY and let this screen fade over the top.
+
+      Waiting 300ms first meant the home screen only began mounting once the
+      dialer was already gone, so the two never overlapped and the join was a
+      cut. App keeps this component alive for the length of the fade.
+    */
+    then()
   }
 
   const say = (message: string) => {
@@ -209,9 +218,9 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   const keyLabels = useScramble(
     DIALER_KEYS.map((k) => k.label),
     taking,
-    { stagger: 38, duration: 420, delay: 180 },
+    { stagger: 62, duration: 780, delay: 320 },
   )
-  const tabLabels = useScramble(TAB_LABELS, taking, { stagger: 46, duration: 380, delay: 620 })
+  const tabLabels = useScramble(TAB_LABELS, taking, { stagger: 70, duration: 620, delay: 1500 })
 
   /*
     During the takeover, show the resolving text; before and after, the truth.
@@ -252,7 +261,21 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         over the top of everything for the length of it. Decorative, mounted
         only while it runs, and never in the way of a tap.
       */}
-      {taking && <div className="dialer-glitch" aria-hidden="true" />}
+      {taking && (
+        <div className="dialer-glitch" aria-hidden="true">
+          {/*
+            Three bands that invert and shove what is behind them sideways.
+
+            backdrop-filter, so they corrupt the real pixels underneath rather
+            than drawing a picture of corruption on top — that is the difference
+            between reading as a broken signal and reading as a decoration. They
+            are composited, so they cost no layout and no repaint of the keypad.
+          */}
+          <span className="glitch-band" />
+          <span className="glitch-band" />
+          <span className="glitch-band" />
+        </div>
+      )}
 
       <div className="dialer-display">
         {/* Biggie has died; the dog on this screen is a memorial, not a mascot,
@@ -308,6 +331,16 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
           )}
         </button>
       </div>
+
+      {/*
+        The other half of the centring.
+
+        `.dialer-display` above the keypad is a growing flex item, so on its own
+        it swallowed every spare pixel and the pad rode high with a hole beneath
+        it. This grows at the same rate, so the slack splits evenly and the
+        keypad sits centred between the top of the viewport and the tab bar.
+      */}
+      <div className="dialer-spacer" aria-hidden="true" />
 
       {panel && (
         <>

@@ -19,6 +19,9 @@ const Shell = lazy(() => import('./Shell'))
 const BEASTY_H20 = 'b_beastyh20'
 const RESERVE = 'slot.join'
 
+/** How long the dialer and the home screen overlap during the cross-fade. */
+const HANDOFF_MS = 620
+
 export default function App() {
   /*
     The landing screen sits in front of the shell, not inside it — the home
@@ -50,6 +53,17 @@ export default function App() {
     finished BEASTY screen with no takeover. The key guarantees a fresh mount.
   */
   const [visit, setVisit] = useState(0)
+  /*
+    True while the dialer is still on screen, fading, with the home screen
+    already mounted and coming up underneath it.
+
+    The handoff used to be a swap: the dialer faded to nothing over 300ms, THEN
+    unmounted, and only then did the shell mount and start its own entrance —
+    so there was a hole in the middle where neither screen was really there. A
+    cross-fade needs both alive at once, which means the shell has to mount at
+    the START of the fade rather than at the end of it.
+  */
+  const [handoff, setHandoff] = useState(false)
 
   /*
     Warm the two things the home screen needs, while the landing page is on
@@ -93,6 +107,8 @@ export default function App() {
   const enter = (appId: string | null = null) => {
     setOpenOn(appId)
     setEntered(true)
+    setHandoff(true)
+    window.setTimeout(() => setHandoff(false), HANDOFF_MS)
     try {
       // Idempotent. Pushing unconditionally grew the stack by one entry every
       // time somebody entered, went back and entered again.
@@ -125,19 +141,7 @@ export default function App() {
     return () => window.removeEventListener('popstate', onPop)
   }, [])
 
-  if (!entered) {
-    return (
-      <IntroScreen
-        key={visit}
-        onEnter={() => enter()}
-        onWater={() => enter(BEASTY_H20)}
-        onJoin={() => enter(RESERVE)}
-        /* The keypad opens several apps directly — Designs, the membership and
-           the account screen are all one key rather than a tap into the grid. */
-        onOpen={(appId) => enter(appId)}
-      />
-    )
-  }
+
 
   /*
     The fallback is the brand yellow, not a spinner. By the time anyone reaches
@@ -146,8 +150,28 @@ export default function App() {
     where a spinner reads as a wait.
   */
   return (
-    <Suspense fallback={<div className="shell-loading" />}>
-      <Shell openOn={openOn} />
-    </Suspense>
+    <>
+      {entered && (
+        <Suspense fallback={<div className="shell-loading" />}>
+          {/* `is-arriving` scales it up from just under full size while the
+              dialer dissolves off the top of it. */}
+          <div className={handoff ? 'shell-enter is-arriving' : 'shell-enter'}>
+            <Shell openOn={openOn} />
+          </div>
+        </Suspense>
+      )}
+      {(!entered || handoff) && (
+        <IntroScreen
+          key={visit}
+          onEnter={() => enter()}
+          onWater={() => enter(BEASTY_H20)}
+          onJoin={() => enter(RESERVE)}
+          /* The keypad opens several apps directly — Designs, the membership
+             and the account screen are all one key rather than a tap into the
+             grid. */
+          onOpen={(appId) => enter(appId)}
+        />
+      )}
+    </>
   )
 }

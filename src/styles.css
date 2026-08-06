@@ -3936,6 +3936,15 @@ textarea {
 
 /* Ours. The wash between the two is the whole reveal, so it is the one
    transition on this screen that is deliberately slow. */
+/*
+  The wash to brand colour is DELAYED, not immediate.
+
+  Without the delay the yellow arrived in the first frame of the takeover, so a
+  customer saw the answer before they saw anything go wrong — the corruption
+  then read as decoration on a screen that had already changed. Holding the
+  stock white and the grey keys through the first burst means the glitch is
+  happening to the PHONE'S OWN keypad, and the brand is what breaks through it.
+*/
 .dialer.is-converting,
 .dialer.is-beasty {
   --page: #f6d800;
@@ -3946,26 +3955,93 @@ textarea {
   --tab-off: rgba(20, 20, 22, 0.72);
   --tab-on: #141416;
   background: linear-gradient(178deg, #ffe63d 0%, #f6d800 46%, #eec400 100%);
+  transition: background 900ms cubic-bezier(0.32, 0.72, 0, 1) 620ms;
 }
 
+/* Settled, and on a return visit: no delay, so nothing lags. */
+.dialer.is-beasty {
+  transition: background 200ms linear;
+}
+
+/* The pad flips with the page rather than ahead of it. */
+.dialer.is-converting .dialer-key,
+.dialer.is-converting .dialer-key-sub,
+.dialer.is-converting .dialer-tab {
+  transition-delay: 620ms;
+}
+
+/*
+  The handoff into the home screen.
+
+  The dialer dissolves UPWARD and slightly out of focus while the home screen
+  rises into place underneath it — the two overlap for the whole 620ms, so there
+  is never a frame with neither on screen. Scale and blur rather than a plain
+  opacity fade, because a straight fade between two full-screen layouts reads as
+  a slideshow; a dissolve reads as one surface becoming another.
+*/
 .dialer.is-leaving {
-  animation: dialer-out 300ms cubic-bezier(0.4, 0, 1, 1) forwards;
+  animation: dialer-out 620ms cubic-bezier(0.32, 0.72, 0, 1) forwards;
   /* Invisible AND untouchable. Without this a second tap during the fade could
      open the water site in a new tab while the app entered behind it. */
   pointer-events: none;
+  z-index: 45;
 }
 
 @keyframes dialer-out {
-  to {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+  55% {
+    opacity: 0.42;
+    transform: scale(1.07);
+    filter: blur(3px);
+  }
+  100% {
     opacity: 0;
-    transform: scale(1.04);
+    transform: scale(1.14);
+    filter: blur(9px);
+  }
+}
+
+/* The home screen coming up under it. */
+.shell-enter {
+  position: fixed;
+  inset: 0;
+}
+
+.shell-enter.is-arriving {
+  animation: shell-in 620ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+@keyframes shell-in {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer.is-leaving,
+  .shell-enter.is-arriving {
+    animation: none;
   }
 }
 
 /* ---------- the number field ---------- */
 
 .dialer-display {
-  flex: 1 1 auto;
+  /* basis 0, so it shares the slack with .dialer-spacer rather than taking it
+     all — that is what centres the keypad. */
+  flex: 1 1 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4155,6 +4231,9 @@ textarea {
   align-items: center;
   justify-content: center;
   width: min(100vw, 440px);
+  /* Guarantees clear air under the button even when the spacer collapses to
+     nothing on a short screen. */
+  margin-bottom: calc(20 * var(--u));
   /* Measured: 25.8pt from the bottom of the * row to the top of the button. */
   margin-top: calc(25.8 * var(--u));
   flex: 0 0 auto;
@@ -4271,10 +4350,20 @@ textarea {
   justify-content: space-around;
   width: 100%;
   max-width: 440px;
-  /* Measured: 79.2pt of empty from the bottom of the call button to the top of
-     the tab bar, then 5.3pt before the icons. */
+  /*
+    `auto`, not a measured 79.2pt.
+
+    iOS bottom-weights this composition — 221pt of empty above the keypad and
+    81pt below — which is right on a full-height phone screen and wrong in a
+    browser, where the chrome eats from both ends and the pad ends up riding
+    high with a hole under it. `margin-top: auto` splits the leftover space
+    against the flexible display area above instead, so the keypad and the call
+    button sit centred between the top of the viewport and the tab bar whatever
+    height they are given. The minimum keeps the two apart when there is nothing
+    to share out.
+  */
   padding: calc(5.3 * var(--u)) 0 0;
-  margin-top: calc(79.2 * var(--u));
+  margin-top: 0;
   /* No hairline. Scanning the reference's tab-bar band finds nothing but the
      five icons, five labels and the badge — no separator, no material, and no
      pill behind the selected tab. Selection is signalled by colour alone. */
@@ -4425,8 +4514,85 @@ textarea {
   z-index: 6;
   pointer-events: none;
   overflow: hidden;
-  /* Two passes of the flicker across the length of the takeover. */
-  animation: glitch-flicker 1500ms steps(1, end) both;
+  animation: glitch-flicker 2600ms steps(1, end) both;
+}
+
+/*
+  The corruption bands.
+
+  Each is a horizontal slice that INVERTS and shoves the real pixels behind it,
+  via backdrop-filter — so it corrupts the actual keypad rather than drawing a
+  picture of corruption over it. steps() on the position keeps them snapping
+  between places the way a broken signal does, instead of sliding, which reads
+  as an effect rather than a fault. Composited: no layout, no repaint of the pad.
+*/
+.glitch-band {
+  position: absolute;
+  left: -6%;
+  right: -6%;
+  height: 7%;
+  backdrop-filter: invert(1) hue-rotate(70deg);
+  -webkit-backdrop-filter: invert(1) hue-rotate(70deg);
+  opacity: 0;
+}
+
+.glitch-band:nth-child(1) {
+  animation: band-a 2600ms steps(1, end) both;
+}
+
+.glitch-band:nth-child(2) {
+  height: 4%;
+  animation: band-b 2600ms steps(1, end) both;
+}
+
+.glitch-band:nth-child(3) {
+  height: 11%;
+  backdrop-filter: invert(1) saturate(3);
+  -webkit-backdrop-filter: invert(1) saturate(3);
+  animation: band-c 2600ms steps(1, end) both;
+}
+
+/* Top, height and horizontal shove all snap together. The gaps between the
+   keyframes are where the screen is briefly clean, which is what makes the
+   corrupted frames read as interruptions rather than as texture. */
+@keyframes band-a {
+  0%, 100% { opacity: 0; }
+  2% { opacity: 1; top: 18%; transform: translateX(-14px); }
+  5% { opacity: 0; }
+  11% { opacity: 1; top: 62%; transform: translateX(20px); }
+  14% { opacity: 0; }
+  26% { opacity: 1; top: 41%; transform: translateX(-9px); }
+  29% { opacity: 0; }
+  47% { opacity: 1; top: 74%; transform: translateX(12px); }
+  50% { opacity: 0; }
+  63% { opacity: 1; top: 30%; transform: translateX(-6px); }
+  66% { opacity: 0; }
+}
+
+@keyframes band-b {
+  0%, 100% { opacity: 0; }
+  4% { opacity: 1; top: 52%; transform: translateX(26px); }
+  6% { opacity: 0; }
+  19% { opacity: 1; top: 12%; transform: translateX(-22px); }
+  21% { opacity: 0; }
+  38% { opacity: 1; top: 80%; transform: translateX(16px); }
+  40% { opacity: 0; }
+  57% { opacity: 1; top: 35%; transform: translateX(-11px); }
+  59% { opacity: 0; }
+  72% { opacity: 1; top: 66%; transform: translateX(7px); }
+  74% { opacity: 0; }
+}
+
+@keyframes band-c {
+  0%, 100% { opacity: 0; }
+  1% { opacity: 0.9; top: 0%; transform: translateX(0); }
+  3% { opacity: 0; }
+  15% { opacity: 0.75; top: 44%; transform: translateX(-18px); }
+  17% { opacity: 0; }
+  33% { opacity: 0.65; top: 22%; transform: translateX(10px); }
+  35% { opacity: 0; }
+  54% { opacity: 0.5; top: 58%; transform: translateX(-8px); }
+  56% { opacity: 0; }
 }
 
 /* The scanline: one bright band travelling top to bottom, once. */
@@ -4444,7 +4610,7 @@ textarea {
     transparent
   );
   mix-blend-mode: overlay;
-  animation: glitch-sweep 900ms cubic-bezier(0.5, 0, 0.2, 1) both;
+  animation: glitch-sweep 1100ms cubic-bezier(0.5, 0, 0.2, 1) 2 both;
 }
 
 /* The horizontal tear: a couple of bands that shift sideways and vanish. */
@@ -4458,7 +4624,7 @@ textarea {
     rgba(0, 0, 0, 0.055) 3px 4px
   );
   opacity: 0;
-  animation: glitch-lines 1500ms ease-out both;
+  animation: glitch-lines 2600ms ease-out both;
 }
 
 @keyframes glitch-sweep {
@@ -4481,13 +4647,21 @@ textarea {
    layer rather than to the content, so no text is re-rasterised. */
 @keyframes glitch-flicker {
   0%, 100% { background: transparent; }
-  3% { background: rgba(255, 60, 90, 0.13); }
-  6% { background: rgba(60, 230, 255, 0.11); }
-  9% { background: transparent; }
-  27% { background: rgba(255, 230, 61, 0.16); }
-  30% { background: transparent; }
-  46% { background: rgba(60, 230, 255, 0.08); }
-  49% { background: transparent; }
+  2% { background: rgba(255, 60, 90, 0.16); }
+  4% { background: rgba(60, 230, 255, 0.13); }
+  6% { background: transparent; }
+  13% { background: rgba(0, 0, 0, 0.5); }
+  15% { background: transparent; }
+  22% { background: rgba(255, 230, 61, 0.2); }
+  24% { background: transparent; }
+  36% { background: rgba(255, 60, 90, 0.1); }
+  38% { background: transparent; }
+  49% { background: rgba(0, 0, 0, 0.34); }
+  51% { background: transparent; }
+  62% { background: rgba(60, 230, 255, 0.09); }
+  64% { background: transparent; }
+  78% { background: rgba(255, 230, 61, 0.12); }
+  80% { background: transparent; }
 }
 
 /*
@@ -4498,15 +4672,18 @@ textarea {
 .dialer.is-converting .dialer-key-digit,
 .dialer.is-converting .dialer-key-sub,
 .dialer.is-converting .dialer-number {
-  animation: glitch-split 1500ms ease-out both;
+  animation: glitch-split 2600ms ease-out both;
 }
 
 @keyframes glitch-split {
   0% { text-shadow: none; }
-  6% { text-shadow: -2px 0 rgba(255, 0, 70, 0.85), 2px 0 rgba(0, 220, 255, 0.85); }
-  14% { text-shadow: 2px 0 rgba(255, 0, 70, 0.7), -2px 0 rgba(0, 220, 255, 0.7); }
-  30% { text-shadow: -1px 0 rgba(255, 0, 70, 0.5), 1px 0 rgba(0, 220, 255, 0.5); }
-  55% { text-shadow: -1px 0 rgba(255, 0, 70, 0.22), 1px 0 rgba(0, 220, 255, 0.22); }
+  4% { text-shadow: -3px 0 rgba(255, 0, 70, 0.9), 3px 0 rgba(0, 220, 255, 0.9); }
+  9% { text-shadow: 3px 0 rgba(255, 0, 70, 0.8), -3px 0 rgba(0, 220, 255, 0.8); }
+  16% { text-shadow: -2px 0 rgba(255, 0, 70, 0.7), 2px 0 rgba(0, 220, 255, 0.7); }
+  24% { text-shadow: 4px 0 rgba(255, 0, 70, 0.55), -4px 0 rgba(0, 220, 255, 0.55); }
+  38% { text-shadow: -2px 0 rgba(255, 0, 70, 0.45), 2px 0 rgba(0, 220, 255, 0.45); }
+  55% { text-shadow: 2px 0 rgba(255, 0, 70, 0.3), -2px 0 rgba(0, 220, 255, 0.3); }
+  75% { text-shadow: -1px 0 rgba(255, 0, 70, 0.16), 1px 0 rgba(0, 220, 255, 0.16); }
   100% { text-shadow: none; }
 }
 
@@ -4608,6 +4785,7 @@ textarea {
   .dialer-glitch,
   .dialer-glitch::before,
   .dialer-glitch::after,
+  .glitch-band,
   .dialer.is-converting .dialer-key-digit,
   .dialer.is-converting .dialer-key-sub,
   .dialer.is-converting .dialer-number,
@@ -4757,4 +4935,12 @@ textarea {
   .dialer-scrim {
     animation: none;
   }
+}
+
+/* Grows at the same rate as .dialer-display, so the space above and below the
+   keypad stays even. See the comment beside it in IntroScreen. */
+.dialer-spacer {
+  flex: 1 1 0;
+  min-height: 0;
+  pointer-events: none;
 }
