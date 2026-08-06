@@ -3835,6 +3835,10 @@ textarea {
      and an absolutely positioned root would scroll with the page behind it. */
   position: fixed;
   inset: 0;
+  /* Belt and braces with `inset: 0` — on iOS a fixed element can still be laid
+     out against the large viewport while the chrome is showing. */
+  height: 100vh;
+  height: 100dvh;
   z-index: 40;
   display: flex;
   flex-direction: column;
@@ -3852,7 +3856,36 @@ textarea {
     smaller of the two ratios makes the whole composition scale as one piece and
     fit whatever it is given.
   */
-  --u: min(calc(min(100vw, 440px) / 440), calc(min(100vh, 956px) / 956));
+  /*
+    Two things at once.
+
+    dvh, NOT vh. In mobile Safari `100vh` is the height with the browser chrome
+    HIDDEN — the largest the viewport ever gets — so a layout sized against it
+    overflows by the height of the URL bar and the toolbar for as long as they
+    are showing. On a real iPhone that was about 180px of overflow: the keypad
+    sat too low and the tab bar was pushed miles from the call button. `dvh`
+    tracks the viewport that actually exists. The vh line stays first as the
+    fallback for anything too old to know dvh.
+
+    And the height term divides by 826, not by 956.
+
+    826 is what the composition actually needs at scale 1, measured rather than
+    assumed: 604 for the part that scales (four key rows at 412, the call button
+    and its gap at 112.8, the gap below it at 79.2) plus 222 for the brand block
+    and the chrome under the tab bar. Dividing by the full 956 treated the empty
+    band above the keypad — 221pt on a real iPhone, and pure slack — as though
+    it had to be preserved, which shrank the keys well below what the width
+    could carry: 64px keys on a screen with room for 78, the difference dumped
+    into more empty space.
+
+    A fixed subtraction like (100dvh - 215px) / 604 was the previous attempt and
+    is wrong at both ends, because the brand block scales too: it over-reserves
+    when u is small and under-reserves when u approaches 1, which put the
+    wordmark on the keypad at 430x790 and again on a landscape desktop. A single
+    ratio has no such seam.
+  */
+  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 826));
+  --u: min(calc(min(100vw, 440px) / 440), calc(100dvh / 826));
 
   /*
     The chrome does NOT scale, at all.
@@ -3926,28 +3959,6 @@ textarea {
   }
 }
 
-/* Hardware, so it never reacts to anything. */
-.dialer-island {
-  position: absolute;
-  top: calc(13.7 * var(--u));
-  left: 50%;
-  transform: translateX(-50%);
-  /* Idle. The reference's island is 169pt wide because it is showing a Live
-     Activity; 125 x 37.3 is what it collapses to. */
-  width: calc(125 * var(--u));
-  height: calc(37.3 * var(--u));
-  border-radius: 999px;
-  background: #000;
-  pointer-events: none;
-}
-
-.dialer .statusbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-}
-
 /* ---------- the number field ---------- */
 
 .dialer-display {
@@ -3961,8 +3972,10 @@ textarea {
   justify-content: center;
   gap: calc(6 * var(--u));
   width: 100%;
-  /* Clear of the island, which sits at 13.7pt + 37.3pt tall. */
-  padding: max(calc(var(--status-h) + 8px), 62px) 20px calc(12 * var(--u));
+  /* No status bar to clear any more, but keep the top safe-area inset so the
+     brand does not sit under a notch when this is installed to the home screen
+     and runs without browser chrome. */
+  padding: calc(env(safe-area-inset-top, 0px) + 14px) 20px calc(12 * var(--u));
   min-height: 0;
   /* Backstop. The brand must never spill onto the keypad, whatever it is
      given — clipped is recoverable, overlapping is not. */
@@ -4083,6 +4096,10 @@ textarea {
   reserved row those three keys would resize mid-takeover and drag the grid
   with them.
 */
+.dialer-key-sub:empty {
+  display: none;
+}
+
 .dialer-key-sub {
   height: calc(12 * var(--u));
   display: flex;
@@ -4279,18 +4296,25 @@ textarea {
   position: relative;
   display: grid;
   place-items: center;
-  height: 25.3px;
+  height: 27px;
 }
 
 .dialer-tab-icon svg {
-  width: 25.3px;
-  height: 25.3px;
+  width: 27px;
+  height: 27px;
+}
+
+/* The voicemail symbol is much wider than it is tall — 34 x 15.7 in the
+   reference — so the square box the other four share renders it small. */
+.dialer-tab:last-child .dialer-tab-icon svg {
+  width: 34px;
+  height: 34px;
 }
 
 .dialer-badge {
   position: absolute;
-  top: -6px;
-  right: -13px;
+  top: -4px;
+  right: -22px;
   min-width: 18px;
   height: 18px;
   padding: 0 5px;
@@ -4312,8 +4336,18 @@ textarea {
   white-space: nowrap;
 }
 
+/*
+  The line under the tab bar.
+
+  `visibility` rather than `opacity`, and the row is collapsed while hidden: at
+  opacity 0 it still occupied 20px between the tab bar and the home indicator,
+  which pushed the whole keypad and call button 16pt up the screen relative to
+  the real thing. Position is not something an invisible element gets to change.
+*/
 .dialer-foot {
-  margin: calc(7 * var(--u)) 0 calc(2 * var(--u));
+  margin: 0;
+  height: 0;
+  overflow: hidden;
   font-size: 11px;
   font-weight: 600;
   /* 0.62 measured 4.28:1 where this actually sits on the gradient, under the
@@ -4325,13 +4359,18 @@ textarea {
 
 .dialer.is-beasty .dialer-foot {
   opacity: 1;
+  height: auto;
+  margin: calc(6 * var(--u)) 0 calc(2 * var(--u));
 }
 
 .dialer-home {
   /* Measured 157 x 5.0pt, 8pt clear of the bottom edge. */
   width: 157px;
   height: 5px;
-  margin: calc(6 * var(--u)) 0 calc(8 * var(--u));
+  /* 12 above, 8 below. Collapsing the hidden footer freed 20px and the keypad
+     needed 16 of them; this parks the other 4 under the tab bar, where the real
+     thing keeps it. */
+  margin: calc(12 * var(--u)) 0 calc(8 * var(--u));
   border-radius: 999px;
   background: rgba(0, 0, 0, 0.85);
   flex: 0 0 auto;
@@ -4567,8 +4606,12 @@ textarea {
   The dog goes first, because it is the only one of the three that is not
   words: the wordmark and the operator's own strapline both carry meaning a
   photograph does not. Below that, the strapline drops to one line.
+
+  820, not 740. The brand block needs about 155px at full scale and the height
+  ratio only leaves it ~120 once the width is generous — which is every landscape
+  window and a 430x790 phone in a browser. Those were clipping the strapline.
 */
-@media (max-height: 740px) {
+@media (max-height: 820px) {
   .dialer-biggie {
     display: none;
   }

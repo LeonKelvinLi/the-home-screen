@@ -28,7 +28,19 @@ export default function App() {
     `openOn` is how "Water" reaches past the intro: entering and opening Beasty
     H20 is one tap, not two.
   */
-  const [entered, setEntered] = useState(false)
+  /*
+    Seeded FROM HISTORY, not from false.
+
+    A reload inside the app used to come back on the landing page while the
+    browser was still sitting on the app's history entry — so Back did not
+    leave, it replayed the animation, and the next Enter pushed yet another
+    entry. Three cycles of enter/reload/enter measured five Back presses to
+    escape the site, four of which did nothing but restart a three-second
+    animation. That is a trap, and it is the one thing this must not be.
+  */
+  const [entered, setEntered] = useState(
+    () => typeof window !== 'undefined' && window.history.state?.hs === 'app',
+  )
   const [openOn, setOpenOn] = useState<string | null>(null)
   /*
     Bumped on every return from the app, and used as IntroScreen's key.
@@ -82,20 +94,35 @@ export default function App() {
     setOpenOn(appId)
     setEntered(true)
     try {
-      window.history.pushState({ hs: 'app' }, '')
+      // Idempotent. Pushing unconditionally grew the stack by one entry every
+      // time somebody entered, went back and entered again.
+      if (window.history.state?.hs !== 'app') window.history.pushState({ hs: 'app' }, '')
     } catch {
       /* history unavailable — back simply leaves, as it did before */
     }
   }
 
+  /*
+    Read the entry the browser actually landed on, rather than assuming any
+    traversal means "leaving".
+
+    Assuming it broke Forward: after Back, pressing Forward put the browser on
+    the app's entry while this handler had already dropped us to the landing
+    page — so the two disagreed, and from there Back replayed the animation
+    instead of leaving.
+  */
   useEffect(() => {
-    const back = () => {
-      setEntered(false)
-      setOpenOn(null)
-      setVisit((v) => v + 1)
+    const onPop = (e: PopStateEvent) => {
+      const inApp = ((e.state ?? window.history.state) as { hs?: string } | null)?.hs === 'app'
+      setEntered(inApp)
+      if (!inApp) {
+        setOpenOn(null)
+        // Fresh mount, so the takeover runs again — which is the point.
+        setVisit((v) => v + 1)
+      }
     }
-    window.addEventListener('popstate', back)
-    return () => window.removeEventListener('popstate', back)
+    window.addEventListener('popstate', onPop)
+    return () => window.removeEventListener('popstate', onPop)
   }, [])
 
   if (!entered) {

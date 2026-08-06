@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { CITY_PAGES, PARTNER_COUNT } from '../data/cities'
 import { OPERATOR, telHref } from '../lib/operator'
-import { StatusBar } from '../ios/StatusBar'
 import { BEASTY_DIGITS, DIALER_KEYS } from './dialer/keys'
 import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES } from './dialer/copy'
@@ -54,8 +53,8 @@ const CONVERT_MS = 1500
 type Stage = 'stock' | 'converting' | 'beasty'
 
 /** The tab bar, in both of its lives. Index-matched. */
-const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Keypad', 'Contacts', 'Voicemail']
-const TAB_LABELS = ['About', 'Careers', 'BEASTY', 'Contact', 'Reviews']
+const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicemail']
+const TAB_LABELS = ['About', 'Careers', 'Contact', 'BEASTY', 'Reviews']
 
 export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
   const reduced =
@@ -170,9 +169,19 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
       case 'enter':
         return leave(() => (action.app ? onOpen(action.app) : onEnter()))
       case 'external':
-        // noopener/noreferrer: this leaves for a site on someone else's
-        // platform, and it must not get a handle back to this window.
-        window.open(action.url, '_blank', 'noopener,noreferrer')
+        /*
+          A real anchor click, not window.open.
+
+          window.open is what a popup blocker blocks, and blocked it returned
+          silently — key 2 and key 6 simply did nothing, with no message. Worse,
+          the obvious guard does not work: with `noopener` the spec says
+          window.open returns null even on SUCCESS, so there is nothing to test.
+          A synthesised click on an <a target="_blank"> is treated as the user
+          navigating and is not blocked, and rel carries the same protection —
+          this leaves for a site on someone else's platform and must not hand
+          it a handle back to this window.
+        */
+        openExternally(action.url)
         return
       case 'share':
         void share()
@@ -225,9 +234,19 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
 
   return (
     <div className={`dialer is-${stage}${leaving ? ' is-leaving' : ''}`}>
-      <StatusBar dark />
-      {/* Hardware, so it never reacts to anything. */}
-      <div className="dialer-island" aria-hidden="true" />
+      {/*
+        NO FAKE STATUS BAR, AND NO DYNAMIC ISLAND.
+
+        Both were here and both were wrong the moment this ran on a real phone:
+        the device already draws a status bar and a notch above the browser, so
+        the page drew a second clock and a second island directly underneath the
+        real ones. Two status bars is the thing that breaks the illusion, not
+        the thing that creates it — and they were costing ~90px of height on the
+        one screen that has none to spare.
+
+        The shell behind this keeps its own StatusBar, and that is right: there
+        the app IS the phone screen. Here it is a page in a browser.
+      */}
       {/*
         The takeover's own layer: a scanline sweep and a colour-split flicker,
         over the top of everything for the length of it. Decorative, mounted
@@ -258,7 +277,9 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
             onClick={() => press(k.action)}
             aria-label={stage === 'beasty' ? `${k.digit}. ${k.label}` : k.digit}
           >
-            <span className="dialer-key-digit">{k.digit}</span>
+            <span className="dialer-key-digit">
+              {k.digit === '*' ? <Asterisk /> : k.digit}
+            </span>
             {/* One element, whose text is rewritten as it resolves. Reserving
                 the row's height means no key moves while it does. */}
             <span className="dialer-key-sub">{keyText(i)}</span>
@@ -305,8 +326,8 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
       <nav className="dialer-tabs" aria-label="BEASTY">
         <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'about' })} />
         <Tab icon={<RecentsClock />} label={tabText(1)} name={TAB_LABELS[1]} onClick={() => press({ kind: 'panel', page: 'careers' })} />
-        <Tab icon={<KeypadGrid />} label={tabText(2)} name={TAB_LABELS[2]} selected onClick={() => press()} />
-        <Tab icon={<PersonCircleFill />} label={tabText(3)} name={TAB_LABELS[3]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
+        <Tab icon={<PersonCircleFill />} label={tabText(2)} name={TAB_LABELS[2]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
+        <Tab icon={<KeypadGrid />} label={tabText(3)} name={TAB_LABELS[3]} selected onClick={() => press()} />
         {/*
           The badge is the stock screen's unread count while it is pretending,
           and the number of cities with tiles still open once it is not. A made
@@ -338,6 +359,33 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
         </div>
       )}
     </div>
+  )
+}
+
+/** Open a link the way a person clicking one would, so nothing blocks it. */
+function openExternally(url: string) {
+  const a = document.createElement('a')
+  a.href = url
+  a.target = '_blank'
+  a.rel = 'noopener noreferrer'
+  document.body.appendChild(a)
+  a.click()
+  a.remove()
+}
+
+/**
+ * The keypad asterisk.
+ *
+ * Not the ASCII one. U+002A is a five-armed glyph that sits high in the em box,
+ * against the cap line — on a 88pt key it measured half the size of the digits
+ * beside it and 13pt above the centre. A phone keypad draws a six-armed star,
+ * optically centred, the same visual weight as a numeral.
+ */
+function Asterisk() {
+  return (
+    <svg viewBox="0 0 24 24" width="0.55em" height="0.55em" fill="currentColor" aria-hidden="true">
+      <path d="M12 1.6a1.9 1.9 0 0 1 1.9 1.9v5.24l4.54-2.62a1.9 1.9 0 1 1 1.9 3.3L15.8 12l4.54 2.62a1.9 1.9 0 1 1-1.9 3.3L13.9 15.3v5.24a1.9 1.9 0 1 1-3.8 0V15.3l-4.54 2.62a1.9 1.9 0 1 1-1.9-3.3L8.2 12 3.66 9.38a1.9 1.9 0 1 1 1.9-3.3L10.1 8.7V3.5A1.9 1.9 0 0 1 12 1.6Z" />
+    </svg>
   )
 }
 
