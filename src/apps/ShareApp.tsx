@@ -26,7 +26,7 @@ export function ShareApp({ api }: { api: ShellApi }) {
     // desktop browser, where the sheet does not exist.
     if (navigator.share) {
       try {
-        await navigator.share({ title: 'Beasty Eats', url: SITE })
+        await navigator.share({ title: 'BEASTY', url: SITE })
         return
       } catch {
         /* dismissed — fall through to copy */
@@ -44,7 +44,7 @@ export function ShareApp({ api }: { api: ShellApi }) {
   return (
     <AppChrome title="Share & Scan" onBack={api.closeApp} className="is-beasty">
       <div className="share">
-        <p className="share-lead">Point a phone camera at this to open Beasty Eats.</p>
+        <p className="share-lead">Point a phone camera at this to open BEASTY.</p>
 
         {/*
           White card, and a generous margin around the code.

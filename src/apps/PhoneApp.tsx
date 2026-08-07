@@ -15,7 +15,7 @@ import { OPERATOR, hasOperatorContact, telHref } from '../lib/operator'
  *
  * It opens on CONTACTS, with the operator's own card at the top, the way iOS
  * Contacts puts My Card above the list. Someone tapping Phone in the dock wants
- * to reach Beasty Eats, not a keypad.
+ * to reach BEASTY, not a keypad.
  *
  * The operator's existing hub dials `tel:+10000000000` from that dock — a
  * placeholder that was never replaced. Rather than ship a button that reaches

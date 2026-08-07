@@ -373,9 +373,9 @@ export const LOCAL_SEED: LocalSeed[] = [
     // depends on the car, and inventing a price list for a garage would be
     // worse here than anywhere else on this home screen.
     perk: {
-      headline: '10% off for BEASTY EATS customers',
+      headline: '10% off for BEASTY customers',
       detail:
-        'Up to 25% on larger jobs, at the shop\u2019s discretion. Mention BEASTY EATS when you book.',
+        'Up to 25% on larger jobs, at the shop\u2019s discretion. Mention BEASTY when you book.',
     },
     contactOnly:
       'Hybrid Workz service Toyota hybrids \u2014 a garage, not a kitchen, so there is nothing to order here. They take bookings by phone or DM only. Confirm the unit number when you call: their Instagram and their Google listing give different street numbers on the same road.',

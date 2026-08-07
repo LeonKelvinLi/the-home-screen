@@ -47,7 +47,7 @@ const TIERS = [
 const WORK = [
   {
     name: 'The Home Screen',
-    whose: 'Built for Beasty Eats — this app',
+    whose: 'Built for BEASTY — this app',
     detail:
       /*
       Was "one checkout pays them all. Live, with real orders." Nothing pays
@@ -174,7 +174,7 @@ export function DesignsApp({ api }: { api: ShellApi }) {
         </div>
 
         <p className="brand-foot">
-          BEASTY Designs is the design and software side of Beasty Eats. Prices above are fixed
+          BEASTY Designs is the design and software side of BEASTY. Prices above are fixed
           tiers; anything custom is quoted on its own.
         </p>
       </div>

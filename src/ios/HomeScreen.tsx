@@ -403,20 +403,45 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
       </div>
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
-      <button
-        ref={spotlightRef}
-        className="spotlight"
-        onClick={() => {
-          const el = spotlightRef.current
-          const rect = el && rectInScreen(el)
-          if (rect) onOpen('sys.search', rect)
-        }}
-      >
-        <svg width="12" height="12" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor">
-          <path d="M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z" />
-        </svg>
-        Search
-      </button>
+      <div className="spotlight-row">
+        {/*
+          Back to the landing screen, beside Search rather than in it.
+
+          Browser back does this too, but that is the gesture people use to LEAVE
+          a site — and the opening sequence is the thing anyone showing this app
+          to someone else wants to replay. Deliberately quiet: the same glass as
+          the Spotlight pill, no label, sized to the pill's own height so it
+          reads as furniture rather than as a control competing with the grid.
+
+          It goes through history rather than a state flag, so the button and the
+          browser cannot disagree about which entry we are on — that
+          disagreement is what made back a trap the first time.
+        */}
+        <button
+          className="spotlight-back"
+          onClick={() => window.history.back()}
+          aria-label="Back to the landing screen"
+        >
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M11 5l-7 7 7 7M4 12h16" />
+          </svg>
+        </button>
+
+        <button
+          ref={spotlightRef}
+          className="spotlight"
+          onClick={() => {
+            const el = spotlightRef.current
+            const rect = el && rectInScreen(el)
+            if (rect) onOpen('sys.search', rect)
+          }}
+        >
+          <svg width="12" height="12" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor">
+            <path d="M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z" />
+          </svg>
+          Search
+        </button>
+      </div>
 
       <div className="dock">
         {DOCK_APPS.map((app) => (

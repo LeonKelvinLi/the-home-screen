@@ -16,7 +16,7 @@
  * the moment these are non-empty.
  */
 export const OPERATOR = {
-  name: 'Beasty Eats',
+  name: 'BEASTY',
   /** Richmond, California. The city is public; the street address is not. */
   city: 'Richmond, California',
   /** e.g. '(510) 555-0134' */

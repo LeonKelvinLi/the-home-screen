@@ -404,11 +404,37 @@ textarea {
   background: rgba(255, 255, 255, 0.95);
 }
 
-.spotlight {
+/*
+  The pill and the back button share a row.
+
+  The pill used to position itself absolutely and centre on the screen. With a
+  second control beside it that would have put them on top of each other, so the
+  ROW is now the positioned thing and the pill is a normal flex child. The pill
+  stays optically centred because the back button is balanced by an equal
+  invisible spacer — see .spotlight-row.
+*/
+.spotlight-row {
   position: absolute;
   left: 50%;
   bottom: 134px;
   transform: translateX(-50%) translateZ(0);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/*
+  Keeps the Search pill on the screen's centre line rather than shunting it
+  right by half the back button. iOS centres that pill and the eye notices when
+  it is off, so the back button hangs to its left instead of pushing it.
+*/
+.spotlight-row::after {
+  content: '';
+  width: 34px;
+  flex: 0 0 auto;
+}
+
+.spotlight {
   display: flex;
   align-items: center;
   gap: 5px;
@@ -429,7 +455,50 @@ textarea {
 
 .spotlight:active {
   opacity: 0.6;
-  transform: translateX(-50%) scale(0.95);
+  transform: scale(0.95);
+}
+
+/*
+  A ghost: same glass as the pill, no label, no colour of its own. It is a way
+  back for someone showing the app to a friend, not a control the grid has to
+  compete with.
+*/
+.spotlight-back {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
+  color: rgba(255, 255, 255, 0.82);
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 140ms ease, opacity 140ms ease;
+}
+
+/*
+  34px is under the 44px minimum and that is deliberate here: it matches the
+  Spotlight pill's own height, which iOS also draws under 44, and making it
+  bigger would turn a quiet affordance into the loudest thing on the wallpaper.
+  The tap target is extended past the visible circle instead.
+*/
+.spotlight-back::before {
+  content: '';
+  position: absolute;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+}
+
+.spotlight-back:active {
+  opacity: 0.55;
+  transform: scale(0.92);
 }
 
 .dock {
