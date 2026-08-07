@@ -3872,10 +3872,12 @@ textarea {
 
     And the height term divides by 826, not by 956.
 
-    826 is what the composition actually needs at scale 1, measured rather than
+    900 is what the composition actually needs at scale 1, measured rather than
     assumed: 604 for the part that scales (four key rows at 412, the call button
-    and its gap at 112.8, the gap below it at 79.2) plus 222 for the brand block
-    and the chrome under the tab bar. Dividing by the full 956 treated the empty
+    and its gap at 112.8, the gap below it at 79.2) plus 296 for the brand block
+    and the chrome under the tab bar. It was 826 until the dog grew to 82 and
+    the block with it — at that size the wordmark landed on the keypad on a
+    360x640 and a 393x700 phone. Dividing by the full 956 treated the empty
     band above the keypad — 221pt on a real iPhone, and pure slack — as though
     it had to be preserved, which shrank the keys well below what the width
     could carry: 64px keys on a screen with room for 78, the difference dumped
@@ -3887,8 +3889,8 @@ textarea {
     wordmark on the keypad at 430x790 and again on a landscape desktop. A single
     ratio has no such seam.
   */
-  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 826));
-  --u: min(calc(min(100vw, 440px) / 440), calc(100dvh / 826));
+  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 900));
+  --u: min(calc(min(100vw, 440px) / 440), calc(100dvh / 900));
 
   /*
     The chrome does NOT scale, at all.
@@ -4171,11 +4173,11 @@ textarea {
 }
 
 .dialer-number {
-  font-size: calc(36 * var(--u));
+  font-size: calc(31 * var(--u));
   font-weight: 400;
   letter-spacing: 0.01em;
   line-height: 1.1;
-  min-height: calc(44 * var(--u));
+  min-height: calc(38 * var(--u));
   color: #000;
   transition: color 900ms ease;
 }
@@ -4207,10 +4209,12 @@ textarea {
 }
 
 .dialer-biggie {
-  width: calc(64 * var(--u));
-  height: calc(64 * var(--u));
+  /* 82, up from 64. The dog is the mark and the wordmark is the caption, which
+     is the operator's read and the right one — he was competing with it. */
+  width: calc(82 * var(--u));
+  height: calc(82 * var(--u));
   object-fit: contain;
-  filter: drop-shadow(0 6px 16px rgba(90, 60, 0, 0.3));
+  filter: drop-shadow(0 7px 18px rgba(90, 60, 0, 0.32));
 }
 
 /* ---------- the keypad ---------- */
@@ -4786,7 +4790,9 @@ textarea {
 /* The number field lands last and hardest — this is the word being spelled. */
 .dialer.is-beasty .dialer-number {
   font-weight: 800;
-  letter-spacing: 0.1em;
+  /* 0.02em, down from 0.1. Wide tracking made BEASTY read as six separate
+     letters under the dog rather than one word beside him. */
+  letter-spacing: 0.02em;
   animation: number-land 620ms cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
@@ -4915,8 +4921,8 @@ textarea {
 
 @media (max-height: 600px) {
   .dialer-number {
-    font-size: calc(32 * var(--u));
-    min-height: calc(36 * var(--u));
+    font-size: calc(27 * var(--u));
+    min-height: calc(32 * var(--u));
   }
 }
 

@@ -72,7 +72,8 @@ const ACCOUNT = 'sys.account'
 export const DIALER_KEYS: DialerKey[] = [
   { digit: '1', label: 'ABOUT', action: { kind: 'panel', page: 'about' } },
   { digit: '2', letters: 'ABC', label: 'INSTAGRAM', action: { kind: 'external', url: INSTAGRAM_URL } },
-  { digit: '3', letters: 'DEF', label: 'BPRF', action: { kind: 'panel', page: 'bprf' } },
+  // FOUNDATION, not BPRF — an initialism nobody outside the business can read.
+  { digit: '3', letters: 'DEF', label: 'FOUNDATION', action: { kind: 'panel', page: 'bprf' } },
   /*
     SUPPLY, not GOODS, and it is not the marketplace — the operator is adding a
     contact for it and has not supplied one yet. The marketplace is the green
