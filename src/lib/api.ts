@@ -336,3 +336,38 @@ export async function submitApplication(input: ApplicationInput): Promise<void> 
 
 export const newIdempotencyKey = () =>
   `ik_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 12)}`
+
+/* ---------- calendar ---------- */
+
+export interface PartnerEvent {
+  id: string
+  /** Local YYYY-MM-DD. A day, not a moment — see the note in db/schema.ts. */
+  date: string
+  brandId: string
+  title: string
+  detail?: string
+  time?: string
+  postedBy: 'operator' | 'partner'
+}
+
+/**
+ * What the businesses have on, for one month.
+ *
+ * Returns an empty list rather than throwing when the backend is not there:
+ * the calendar is a secondary surface and a customer who opened it should get a
+ * month they can read, not an error. The screen distinguishes "nothing posted"
+ * from "could not reach the server" using `ok`.
+ */
+export async function listEvents(
+  from: string,
+  to: string,
+): Promise<{ events: PartnerEvent[]; ok: boolean }> {
+  if (IS_LOCAL_ONLY) return { events: [], ok: true }
+  try {
+    const res = await request(`/api/events?from=${from}&to=${to}`)
+    if (!res.ok) return { events: [], ok: false }
+    return { events: (await res.json()) as PartnerEvent[], ok: true }
+  } catch {
+    return { events: [], ok: false }
+  }
+}

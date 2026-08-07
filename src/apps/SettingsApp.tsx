@@ -194,6 +194,26 @@ export function SettingsApp({ api }: { api: ShellApi }) {
         />
       </ListSection>
 
+      {/*
+        A deliberate way back to the landing screen.
+
+        Browser back already does it, but that is a gesture people use to LEAVE a
+        site, not to look at something again — and the takeover is the thing
+        everyone wants to show someone. This is the button for that. It goes
+        through history rather than a state flag so the two routes cannot
+        disagree about which entry the browser is on, which is the bug that made
+        back a trap the first time.
+      */}
+      <ListSection footer="Replays the opening sequence from the start.">
+        <ListRow
+          icon="arrow.clockwise"
+          iconBg="#E5A200"
+          label="Back to the landing screen"
+          chevron={false}
+          onClick={() => window.history.back()}
+        />
+      </ListSection>
+
       <ListSection>
         <ListRow
           icon="hand.raised.fill"

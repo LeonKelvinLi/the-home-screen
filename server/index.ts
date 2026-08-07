@@ -1170,6 +1170,113 @@ app.get('/api/applications', rateLimiter(20, 10), (req, res) => {
   res.json(db.prepare('SELECT * FROM applications ORDER BY created_at DESC LIMIT 200').all())
 })
 
+/* ---------- calendar ---------- */
+
+/** Reused by the two operator-only routes below. */
+function isOperator(req: Request): boolean {
+  if (OPERATOR_TOKEN.length < 16) return false
+  const sent = String(req.get('authorization') ?? '').replace(/^Bearer /, '')
+  const a = Buffer.from(sent)
+  const b = Buffer.from(OPERATOR_TOKEN)
+  return a.length === b.length && timingSafeEqual(a, b)
+}
+
+const DATE_RE = /^\d{4}-\d{2}-\d{2}$/
+const MAX_EVENT_TITLE = 70
+const MAX_EVENT_DETAIL = 200
+const MAX_EVENT_TIME = 40
+
+/**
+ * What the businesses have on, for a month at a time.
+ *
+ * Public and unauthenticated, because it is what the calendar screen draws. The
+ * range is required and clamped: without it the first thing anyone would do is
+ * ask for every event ever posted, and the calendar never needs more than the
+ * month it is showing.
+ */
+app.get('/api/events', rateLimiter(120, 40), (req, res) => {
+  const from = String(req.query.from ?? '')
+  const to = String(req.query.to ?? '')
+  if (!DATE_RE.test(from) || !DATE_RE.test(to)) {
+    return res.status(400).json({ error: 'from and to must be YYYY-MM-DD.' })
+  }
+  if (to < from) return res.status(400).json({ error: 'to must not precede from.' })
+
+  const rows = db
+    .prepare(
+      `SELECT id, date, brand_id, title, detail, time_text, posted_by
+       FROM events WHERE date >= ? AND date <= ? ORDER BY date, created_at LIMIT 400`,
+    )
+    .all(from, to) as Record<string, unknown>[]
+
+  res.setHeader('Cache-Control', 'public, max-age=60')
+  res.json(
+    rows.map((r) => ({
+      id: r.id,
+      date: r.date,
+      brandId: r.brand_id,
+      title: r.title,
+      detail: r.detail ?? undefined,
+      time: r.time_text ?? undefined,
+      postedBy: r.posted_by,
+    })),
+  )
+})
+
+/**
+ * Post one. OPERATOR ONLY.
+ *
+ * An event is a claim made in a named business's name, on a specific date, that
+ * a customer can act on — somebody reads it and drives there. So it is not an
+ * anonymous write like an order or an application: until each partner has a
+ * login of their own, the only person who can put words in their mouth is the
+ * operator, relaying what they told him.
+ *
+ * `brandId` must name a real brand. Without that check the calendar would
+ * happily carry an event for a business that does not exist on the app, which
+ * is a listing nobody can verify and nobody can take down.
+ */
+app.post('/api/events', rateLimiter(30, 10), (req, res) => {
+  if (OPERATOR_TOKEN.length < 16) {
+    return res.status(503).json({ error: 'No operator token configured.' })
+  }
+  if (!isOperator(req)) return res.status(401).json({ error: 'Operator token required.' })
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+
+  const b = req.body
+  const date = String(b.date ?? '')
+  const brandId = String(b.brandId ?? '')
+  const title = String(b.title ?? '').trim().slice(0, MAX_EVENT_TITLE)
+  const detail = String(b.detail ?? '').trim().slice(0, MAX_EVENT_DETAIL)
+  const time = String(b.time ?? '').trim().slice(0, MAX_EVENT_TIME)
+
+  if (!DATE_RE.test(date)) return res.status(400).json({ error: 'date must be YYYY-MM-DD.' })
+  if (title.length < 2) return res.status(400).json({ error: 'A title is required.' })
+  if (!BRANDS.some((x) => x.id === brandId)) {
+    return res.status(400).json({ error: 'Unknown business.' })
+  }
+
+  const id = `ev_${randomBytes(8).toString('hex')}`
+  db.prepare(
+    `INSERT INTO events (id, date, brand_id, title, detail, time_text, posted_by, created_at)
+     VALUES (?,?,?,?,?,?,'operator',?)`,
+  ).run(id, date, brandId, title, detail || null, time || null, Date.now())
+
+  res.status(201).json({ id, date, brandId, title, detail: detail || undefined, time: time || undefined })
+})
+
+/** Take one down. Operator only, and deliberately easy — a wrong date on a real
+ *  business's special needs removing in one action, not a support ticket. */
+app.delete('/api/events/:id', rateLimiter(30, 10), (req, res) => {
+  if (OPERATOR_TOKEN.length < 16) {
+    return res.status(503).json({ error: 'No operator token configured.' })
+  }
+  if (!isOperator(req)) return res.status(401).json({ error: 'Operator token required.' })
+  const info = db.prepare('DELETE FROM events WHERE id = ?').run(String(req.params.id))
+  if (info.changes === 0) return res.status(404).json({ error: 'Not found' })
+  res.status(204).end()
+})
+
 /* ---------- static ---------- */
 
 app.use(

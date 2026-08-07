@@ -97,6 +97,35 @@ CREATE TABLE IF NOT EXISTS applications (
 );
 
 CREATE INDEX IF NOT EXISTS idx_applications_new ON applications(state, created_at DESC);
+
+/*
+  What a business has on, on a given day.
+
+  The date column is a plain local YYYY-MM-DD rather than a timestamp, on
+  purpose: a
+  special that runs "Friday" runs on the shop's Friday, and storing an instant
+  would make it start at a different hour for anyone reading it from a different
+  timezone. A day is not a moment.
+
+  posted_by records who put it there. Partners cannot post yet — there is no
+  per-business login — so today every row is the operator relaying what a
+  business told him. When self-serve exists this is what distinguishes the two,
+  and it matters: an event is a claim made in a business's name.
+*/
+CREATE TABLE IF NOT EXISTS events (
+  id         TEXT PRIMARY KEY,
+  date       TEXT NOT NULL,
+  brand_id   TEXT NOT NULL,
+  title      TEXT NOT NULL,
+  detail     TEXT,
+  time_text  TEXT,
+  posted_by  TEXT NOT NULL DEFAULT 'operator'
+             CHECK (posted_by IN ('operator','partner')),
+  created_at INTEGER NOT NULL
+);
+
+-- The calendar always reads a date range, never the whole table.
+CREATE INDEX IF NOT EXISTS idx_events_date ON events(date);
 `)
 
 /**

@@ -1,7 +1,8 @@
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { AppChrome } from './AppChrome'
-import { LISTED_KITCHENS } from '../data/brands'
-import { EVENTS } from '../data/events'
+import { LISTED_KITCHENS, brandById } from '../data/brands'
+import { listEvents } from '../lib/api'
+import type { PartnerEvent } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -55,7 +56,30 @@ export function CalendarApp({ api }: { api: ShellApi }) {
     ]
   }, [shown])
 
-  const eventsOn = (key: string) => EVENTS.filter((e) => e.date === key)
+  /*
+    Loaded per month, not all at once. `reachable` separates "nobody has posted
+    anything" from "we could not ask" — telling a customer the month is empty
+    when the server was simply unreachable is a different and worse thing to be
+    wrong about.
+  */
+  const [events, setEvents] = useState<PartnerEvent[]>([])
+  const [reachable, setReachable] = useState(true)
+
+  useEffect(() => {
+    let alive = true
+    const first = dayKey(new Date(shown.getFullYear(), shown.getMonth(), 1))
+    const last = dayKey(new Date(shown.getFullYear(), shown.getMonth() + 1, 0))
+    void listEvents(first, last).then((r) => {
+      if (!alive) return
+      setEvents(r.events)
+      setReachable(r.ok)
+    })
+    return () => {
+      alive = false
+    }
+  }, [shown])
+
+  const eventsOn = (key: string) => events.filter((e) => e.date === key)
   const pickedEvents = picked ? eventsOn(picked) : []
   const todayKey = dayKey(today)
 
@@ -104,28 +128,34 @@ export function CalendarApp({ api }: { api: ShellApi }) {
         <div className="cal-day">
           {pickedEvents.length > 0 ? (
             pickedEvents.map((e) => (
-              <button className="cal-event" key={e.id} onClick={() => e.brandId && api.openApp(e.brandId)}>
+              <button className="cal-event" key={e.id} onClick={() => api.openApp(e.brandId)}>
                 <span className="cal-event-when">{e.time ?? 'All day'}</span>
                 <span className="cal-event-text">
                   <strong>{e.title}</strong>
-                  <em>{e.business}</em>
+                  <em>{brandById(e.brandId)?.name ?? 'A business on this screen'}</em>
                   {e.detail && <span>{e.detail}</span>}
                 </span>
               </button>
             ))
           ) : (
             <div className="cal-empty">
-              <p>Nothing posted for this day.</p>
+              <p>{reachable ? 'Nothing posted for this day.' : 'Could not load the calendar.'}</p>
               {/*
                 Says why it is empty rather than leaving a customer to assume the
                 businesses have nothing on. They may well have — there is simply
                 no way for them to tell us yet.
               */}
-              <p className="cal-empty-note">
-                This is where the {LISTED_KITCHENS.length} businesses on the home screen will post a
-                special, a pop-up or a one-day menu. None of them can post yet, so the calendar is
-                empty everywhere — not just today.
-              </p>
+              {reachable ? (
+                <p className="cal-empty-note">
+                  This is where the {LISTED_KITCHENS.length} businesses on the home screen post a
+                  special, a pop-up or a one-day menu. Nothing has been posted for this day.
+                </p>
+              ) : (
+                <p className="cal-empty-note">
+                  The connection failed, so this month could not be checked. It does not mean the
+                  businesses have nothing on.
+                </p>
+              )}
             </div>
           )}
         </div>
