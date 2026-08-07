@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
 import { BrandLogo } from '../ios/BrandLogo'
+import { CalendarIcon } from '../ios/CalendarIcon'
 import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
 import { SQUIRCLE_100 } from '../ios/squircle'
@@ -14,7 +15,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
-  | 'reserve' | 'designs' | 'share' | 'members'
+  | 'reserve' | 'designs' | 'share' | 'members' | 'calendar'
 
 export interface AppDef {
   id: string
@@ -220,6 +221,33 @@ export const SHARE_APP: AppDef = {
   tint: '#141414',
 }
 
+/**
+ * The calendar, in the dock where the water droplet was.
+ *
+ * Water moved to key 6 of the landing dialer and to its own tile on the grid, so
+ * the dock slot was carrying a second route to a page that already has two. The
+ * calendar is what the operator wants there: the partners run one-day things —
+ * a special, a pop-up, a market stall — and until now there was nowhere on the
+ * app to say so, which meant the only way to find out was to walk past.
+ */
+const CALENDAR_APP: AppDef = {
+  id: 'sys.calendar',
+  name: 'Calendar',
+  label: 'Calendar',
+  icon: <CalendarIcon />,
+  kind: 'system' as const,
+  systemKey: 'calendar' as const,
+  tint: '#E5433B',
+}
+
+/*
+  Everything `appById` can resolve.
+
+  A dock entry that is not in here renders as nothing: the home screen recedes,
+  an empty window opens, and the customer is looking at a blank screen with no
+  error anywhere. That is exactly what the calendar did until it was added —
+  being in DOCK_APPS is what draws the icon, being in here is what makes it open.
+*/
 export const ALL_APPS: AppDef[] = [
   ...BRAND_APPS,
   ...SYSTEM_APPS,
@@ -227,6 +255,7 @@ export const ALL_APPS: AppDef[] = [
   DESIGNS_APP,
   SHARE_APP,
   MEMBERS_APP,
+  CALENDAR_APP,
 ]
 
 /*
@@ -237,8 +266,6 @@ export const ALL_APPS: AppDef[] = [
 */
 export const appById = (id: string) =>
   ALL_APPS.find((a) => a.id === id) ?? (id.startsWith('slot.') ? makeSlot(id.slice(5)) : undefined)
-
-const brand = (slug: string) => BRAND_APPS.find((a) => a.id === `b_${slug}`)
 
 /**
  * Page groups. Each group STARTS a new page; a long group spills onto further
@@ -294,11 +321,7 @@ export const ORDERED_APPS: AppDef[] = APP_GROUPS.flat()
  */
 export const DOCK_APPS: AppDef[] = [
   PHONE_APP,
-  {
-    ...brand('beastyh20')!,
-    label: 'Water',
-    icon: <BrandLogo logo={{ imageUrl: '/icons/dock-water.webp', bg: '#2C8ED6', fg: '#fff' }} fill />,
-  },
+  CALENDAR_APP,
   /*
     Orders, not the old "Info" slot.
 

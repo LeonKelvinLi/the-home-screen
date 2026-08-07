@@ -5292,3 +5292,172 @@ textarea {
     animation: none;
   }
 }
+
+/* ---------- calendar ----------
+
+   A month at a time, with what the businesses on the home screen have on. The
+   grid is a plain 7-column CSS grid rather than a table: every cell is a button
+   and the header row is decoration, so a table's semantics would be a lie about
+   what is in it.
+*/
+
+.cal {
+  padding: 0 16px 24px;
+}
+
+.cal-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 14px;
+}
+
+.cal-title {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #141416;
+}
+
+.cal-nav {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  color: #e5433b;
+  cursor: pointer;
+}
+
+.cal-weekdays,
+.cal-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+}
+
+.cal-weekdays {
+  padding-bottom: 6px;
+}
+
+.cal-weekdays span {
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.cal-cell {
+  position: relative;
+  aspect-ratio: 1;
+  /* 44px even on a narrow phone: seven columns of a 320px screen is 45px, so
+     this is the one grid in the app where the minimum is actually tight. */
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.cal-cell.is-blank {
+  pointer-events: none;
+}
+
+.cal-num {
+  font-size: 16px;
+  font-weight: 500;
+  color: #141416;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Today is red type, the way iOS marks it — the filled circle is reserved for
+   the day you actually picked, so the two never compete. */
+.cal-cell.is-today .cal-num {
+  color: #e5433b;
+  font-weight: 700;
+}
+
+.cal-cell.is-picked {
+  background: #e5433b;
+}
+
+.cal-cell.is-picked .cal-num {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Only ever drawn where something is genuinely posted. */
+.cal-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #e5433b;
+}
+
+.cal-cell.is-picked .cal-dot {
+  background: #fff;
+}
+
+.cal-day {
+  margin-top: 18px;
+  border-top: 0.5px solid rgba(60, 60, 67, 0.2);
+  padding-top: 16px;
+}
+
+.cal-event {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  min-height: 44px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(120, 120, 128, 0.09);
+  text-align: left;
+  cursor: pointer;
+}
+
+.cal-event-when {
+  flex: 0 0 62px;
+  font-size: 13px;
+  font-weight: 650;
+  color: #e5433b;
+}
+
+.cal-event-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 13px;
+}
+
+.cal-event-text strong {
+  font-size: 15px;
+  font-weight: 650;
+  color: #141416;
+}
+
+.cal-event-text em {
+  font-style: normal;
+  color: rgba(60, 60, 67, 0.7);
+}
+
+.cal-empty p {
+  margin: 0 0 8px;
+  font-size: 15px;
+  color: rgba(60, 60, 67, 0.75);
+}
+
+.cal-empty-note {
+  font-size: 13px !important;
+  line-height: 1.5;
+  color: rgba(60, 60, 67, 0.6) !important;
+}
