@@ -15,7 +15,7 @@ import {
   ROW_GAP_PAD,
   ROW_GAP_PHONE,
 } from './constants'
-import { DEFAULT_CITY, detectCity, savedCity } from '../lib/place'
+import { DEFAULT_CITY } from '../lib/place'
 
 /** A home-screen page. `city` is set on the empty pages waiting for a city. */
 interface Page {
@@ -34,9 +34,13 @@ interface Props {
    * would also blank the wallpaper the switcher shows through.
    */
   inert?: boolean
+  /** A city name to move to, set when Search asks for one. */
+  jumpToCity?: string | null
+  /** Called once the jump has been made, so the request is not repeated. */
+  onJumped?: () => void
 }
 
-export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
+export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJumped }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
   const [page, setPage] = useState(0)
@@ -62,46 +66,16 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
   const axis = useRef<'x' | 'y' | null>(null)
 
   /*
-    Location label.
+    The wallpaper follows the PAGE, not a detected location.
 
-    Seeded from whatever this device settled on before, so a returning customer
-    is never asked twice — the permission prompt happens on the first tap and
-    never again. Read in the initialiser rather than an effect so the label
-    never flashes the default first.
+    There used to be a faint city label at the bottom that resolved where the
+    customer actually was, and the wallpaper followed it. The operator has cut
+    the label, which takes the only control that could trigger a lookup with it
+    — so rather than freeze on whichever city a device happened to settle on
+    once, the photograph is now simply the city whose page you are looking at.
+    That makes all nineteen wallpapers reachable by swiping instead of by
+    standing somewhere, and page one keeps the default.
   */
-  const [city, setCity] = useState(() => savedCity() ?? DEFAULT_CITY)
-  const [locating, setLocating] = useState(false)
-  const [cityNote, setCityNote] = useState<string | null>(null)
-  /*
-    The re-entry guard has to be a REF, not the state above.
-
-    Three taps in one tick all read `locating` before React has re-rendered any
-    of them, so an impatient customer fired three geolocation requests and
-    three relay calls, burning the rate limit for nothing. A ref updates on the
-    same line it is set.
-  */
-  const locatingRef = useRef(false)
-
-  const findCity = async () => {
-    if (locatingRef.current) return
-    locatingRef.current = true
-    setLocating(true)
-    setCityNote(null)
-    const r = await detectCity()
-    locatingRef.current = false
-    setLocating(false)
-    if (r.ok) return setCity(r.city)
-    // Say which of the two it was. "Location is off" and "we could not reach
-    // the lookup" need different things from the customer.
-    setCityNote(
-      r.reason === 'denied'
-        ? 'Location is off for this site'
-        : r.reason === 'unsupported'
-          ? 'This browser cannot share a location'
-          : 'Could not work out where you are',
-    )
-    window.setTimeout(() => setCityNote(null), 3200)
-  }
 
   /**
    * Paginate against the REAL grid rather than a fixed count. A phone gets
@@ -179,6 +153,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
 
   // Never strand the user on a page that no longer exists after a resize.
   const safePage = Math.min(page, pages.length - 1)
+  /* Page one has no city of its own, so it keeps the default photograph. */
+  const city = pages[safePage]?.city ?? DEFAULT_CITY
+
+  /*
+    Search asked for a city. Move there and tell the shell it is done, so the
+    request cannot fire again on the next render.
+  */
+  useEffect(() => {
+    if (!jumpToCity) return
+    const i = pages.findIndex((p) => p.city?.toLowerCase() === jumpToCity.toLowerCase())
+    if (i >= 0) setPage(i)
+    onJumped?.()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [jumpToCity, pages.length])
   pageRef.current = safePage
 
   /**
@@ -375,32 +363,6 @@ export function HomeScreen({ onOpen, receding, hidden, inert }: Props) {
           ))}
         </div>
       )}
-
-      {/*
-        Where you are, on its own line above the page dots.
-
-        It shared the Spotlight row while the grid was seven rows deep, because
-        every pixel of that band was worth apps. Back at six rows and the full
-        tile size there is 56px of clear band, so it gets its own line again and
-        the grid loses nothing.
-
-        Tappable, and ONLY tappable: nothing asks for a location on load.
-      */}
-      <div className="home-bar">
-        <button
-          className={[
-            'home-city',
-            locating ? 'is-locating' : '',
-            cityNote ? 'is-note' : '',
-          ]
-            .filter(Boolean)
-            .join(' ')}
-          onClick={findCity}
-          aria-label={`Showing ${city}. Tap to use your location.`}
-        >
-          {cityNote ?? (locating ? 'Locating' : city)}
-        </button>
-      </div>
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <div className="spotlight-row">

@@ -24,6 +24,14 @@ export interface ShellApi {
   closeApp: () => void
   /** Route inside the currently open app (menu -> item -> checkout). */
   currentAppId: string | null
+  /**
+   * Close whatever is open and move the home screen to a city's page.
+   *
+   * Search uses it: typing "Oakland" should take you to Oakland, which is the
+   * thing a customer means by searching for a place. The shell owns the page
+   * because the home screen is behind the app window, not inside it.
+   */
+  goToCity: (city: string) => void
 }
 
 type Phase = 'home' | 'opening' | 'open' | 'closing' | 'switcher'
@@ -297,10 +305,20 @@ export function Device({ renderApp, openOnMount }: Props) {
     },
   })
 
+  /*
+    A city the home screen has been asked to move to, held here rather than in
+    HomeScreen because the request comes from an app on top of it.
+  */
+  const [jumpCity, setJumpCity] = useState<string | null>(null)
+
   const api: ShellApi = {
     openApp: (id) => openApp(id),
     closeApp,
     currentAppId: appId,
+    goToCity: (city) => {
+      setJumpCity(city)
+      closeApp()
+    },
   }
 
   const app = appId ? appById(appId) : null
@@ -327,7 +345,14 @@ export function Device({ renderApp, openOnMount }: Props) {
       <div className={`device is-${screen.device}`}>
         <div className="device-frame">
           <div className="screen" ref={screenRef}>
-            <HomeScreen onOpen={openApp} receding={homeReceding} hidden={homeHidden} inert={inSwitcher} />
+            <HomeScreen
+              onOpen={openApp}
+              receding={homeReceding}
+              hidden={homeHidden}
+              inert={inSwitcher}
+              jumpToCity={jumpCity}
+              onJumped={() => setJumpCity(null)}
+            />
 
             {inSwitcher && (
               <AppSwitcher

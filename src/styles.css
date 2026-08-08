@@ -5536,3 +5536,15 @@ textarea {
   line-height: 1.5;
   color: rgba(60, 60, 67, 0.6) !important;
 }
+
+/* A city result in Search: same row as a kitchen, with a pin instead of a logo. */
+.search-brand.is-city .search-city-mark {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  background: rgba(29, 163, 69, 0.12);
+  color: #1da345;
+}

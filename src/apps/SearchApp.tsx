@@ -3,6 +3,7 @@ import { AppChrome } from './AppChrome'
 import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS } from '../data/brands'
+import { CITY_PAGES } from '../data/cities'
 import { money } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
 import { OPEN_MS } from '../ios/constants'
@@ -48,9 +49,19 @@ export function SearchApp({ api }: { api: ShellApi }) {
 
   const [q, setQ] = useState('')
 
-  const { brandHits, itemHits } = useMemo(() => {
+  const { cityHits, brandHits, itemHits } = useMemo(() => {
     const term = q.trim().toLowerCase()
-    if (term.length < 2) return { brandHits: [], itemHits: [] as Hit[] }
+    if (term.length < 2) return { cityHits: [], brandHits: [], itemHits: [] as Hit[] }
+
+    /*
+      Cities first, because a place is a different KIND of answer.
+
+      Typing "Oakland" almost never means "find me a business with Oakland in
+      its name" — it means take me to Oakland. So a city match jumps the home
+      screen to that city's page rather than returning a list, which is what the
+      operator asked for and what the pages were built to be.
+    */
+    const cityHits = CITY_PAGES.filter((c) => c.toLowerCase().includes(term))
 
     const brandHits = BRANDS.filter(
       (b) =>
@@ -78,10 +89,12 @@ export function SearchApp({ api }: { api: ShellApi }) {
         }
       }
     }
-    return { brandHits, itemHits: itemHits.slice(0, 30) }
+    return { cityHits, brandHits, itemHits: itemHits.slice(0, 30) }
   }, [q])
 
-  const suggestions = ['tacos', 'wings', 'vegan', 'boba', 'burger', 'coffee', 'ramen']
+  /* A city among the suggestions, so the behaviour is discoverable rather than
+     something you have to already know about. */
+  const suggestions = ['tacos', 'wings', 'Oakland', 'vegan', 'boba', 'Berkeley', 'coffee']
 
   return (
     <AppChrome title="Search" onBack={api.closeApp} tint="#1DA345">
@@ -92,7 +105,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
           </svg>
           <input
             ref={field}
-            placeholder="Dishes, cuisines, kitchens"
+            placeholder="Dishes, kitchens, cities"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           />
@@ -131,6 +144,26 @@ export function SearchApp({ api }: { api: ShellApi }) {
           </>
         ) : (
           <>
+            {cityHits.length > 0 && (
+              <>
+                <h3 className="search-h">Cities</h3>
+                {cityHits.map((c) => (
+                  <button className="search-brand is-city" key={c} onClick={() => api.goToCity(c)}>
+                    <span className="search-city-mark" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+                        <path d="M12 2.2a7.2 7.2 0 0 1 7.2 7.2c0 4.9-5.4 11-6.6 12.3a.8.8 0 0 1-1.2 0C10.2 20.4 4.8 14.3 4.8 9.4A7.2 7.2 0 0 1 12 2.2Zm0 4.4a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z" />
+                      </svg>
+                    </span>
+                    <span>
+                      <strong>{c}</strong>
+                      <em>Go to the {c} page</em>
+                    </span>
+                    <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
+                  </button>
+                ))}
+              </>
+            )}
+
             {brandHits.length > 0 && (
               <>
                 <h3 className="search-h">Kitchens</h3>
@@ -177,7 +210,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
               </>
             )}
 
-            {brandHits.length === 0 && itemHits.length === 0 && (
+            {cityHits.length === 0 && brandHits.length === 0 && itemHits.length === 0 && (
               <div className="empty">
                 <h2>Nothing for “{q}”</h2>
                 <p>Try a dish, a cuisine, or a kitchen name.</p>
