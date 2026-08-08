@@ -22,7 +22,15 @@ export interface LocalSeed {
   cuisine: string
   tagline: string
   color: string
-  icon: string
+  /**
+   * Basename of their artwork in /public/icons.
+   *
+   * OPTIONAL, because a partner can join before they send a logo — and the
+   * fallback in brands.ts already draws a monogram on their own colour. What
+   * must never happen is naming a file that is not there, which renders a
+   * broken image on the grid: worse than no logo at all.
+   */
+  icon?: string
   prep: number
   category: string
   /** name, description, cents, and the basename of a vendor-supplied photo in /food. */
@@ -51,8 +59,14 @@ export interface LocalSeed {
   /**
    * What this business gives BEASTY members: `welcome` once on a first visit,
    * `loyalty` on every visit. Only set once THAT business has agreed it.
+   *
+   * `mock: true` means the operator asked to SEE the design and the business
+   * has agreed nothing. The app labels those on screen rather than letting them
+   * read as terms — an offer on a partner's page is a promise made in their
+   * name, and a mockup that looks identical to an agreed one is how a customer
+   * ends up asking a counter to honour something nobody promised.
    */
-  offers?: { welcome?: string; loyalty?: string }
+  offers?: { welcome?: string; loyalty?: string; mock?: boolean }
   /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere.
    * The string explains how to actually start.
@@ -141,6 +155,78 @@ export const LOCAL_SEED: LocalSeed[] = [
       ['Chili on any dog', 'Add chili to any sausage', 100, '~topdog-chili-on-a-dog'],
       ['Chili, 10 oz', 'Cup', 200, '~topdog-chili-10oz'],
       ['Chili, 16 oz', 'Bowl', 300, '~topdog-chili-16oz'],
+    ],
+  },
+  {
+    /*
+      JOJO'S HOT CHICKEN — BRANHAM, and the branch matters.
+
+      They run TWO San Jose locations off one domain: Branham (this one) and
+      Downtown on E William St. The menus are separately priced and the prices
+      embedded on their own HOMEPAGE are the DOWNTOWN set — Combo 1 at $15.99
+      against Branham's $16.99, Halftime $10.99 against $11.99. Anything
+      scraping the front page would list this shop wrong by a dollar on several
+      items. Every price below came from their first-party menu API for the
+      Branham slug specifically, on 2026-08-08.
+
+      For the same reason none of it came from DoorDash or Uber Eats, which
+      carry a 17-25% markup here: Combo 1 is $19.99 there against $16.99 direct,
+      and the banana pudding is $7.99 against $5.99.
+
+      Two things NOT copied across: 1587 Kooser Rd is their old address and is
+      still live on Yelp and Uber Eats — they moved. And their own back office
+      still classifies them as a food truck, a leftover from the truck days;
+      Branham is a permitted fixed storefront.
+
+      Sunday is left out of nothing because no hours are shown anywhere in this
+      app, but for the record it is unresolved: their site says 11-8, their back
+      office says closed, their Instagram says closed. Confirm before printing.
+    */
+    slug: 'jojos-hot-chicken',
+    name: "Jojo's Hot Chicken",
+    label: "Jojo's",
+    cuisine: 'Nashville hot chicken',
+    tagline: 'Nashville-style hot chicken, hand-breaded, with seven spice levels from none to Reaper.',
+    color: '#C41E24',
+    /*
+      NO `icon`. We do not have their artwork, and pointing at a file that is
+      not there renders a broken image on the grid — worse than no logo at all.
+      Leaving it unset draws the monogram fallback on their own red instead.
+      Swap in /icons/jojos-hot-chicken.webp the moment they send one.
+    */
+    prep: 15,
+    category: 'Hot chicken',
+    site: 'https://www.jojoshotchicken.com',
+    orderUrl: 'https://www.jojoshotchicken.com/menu',
+    phone: '(408) 499-0916',
+    address: '1601 Branham Ln #10, San Jose',
+    email: 'Jojoshotchicken@gmail.com',
+    /*
+      A MOCKUP. The operator asked to see what a welcome and a loyalty offer
+      would look like on a new partner's page; Jojo's has agreed neither, and
+      the app says so on the page rather than letting the design pass for terms.
+    */
+    offers: {
+      mock: true,
+      welcome: 'A side of fries with your first order.',
+      loyalty: '10% off any combo, every visit.',
+    },
+    offer: ['Combo 1', 'Combo 2', 'Bowl'],
+    siteNote: 'Order direct at jojoshotchicken.com — pick the Branham location.',
+    items: [
+      ['Combo 1', '2 sliders, fries and a side of Jojo sauce', 1699],
+      ['Combo 2', '2 tenders, toast, fries and a side of Jojo sauce', 1499],
+      ['Combo 3', '1 slider, 1 tender, fries and a side of Jojo sauce', 1599],
+      ['Halftime', '1 slider or tender with fries and Jojo sauce', 1199],
+      ['Bowl', 'Seasoned fries with chopped chicken, Jojo sauce, pickles and coleslaw', 1499],
+      ['Slider', 'One hand-breaded chicken slider', 799],
+      ['Tender', 'One hand-breaded chicken tender', 599],
+      ['Fries', 'Seasoned fries', 599],
+      ['Slaw', 'Coleslaw', 399],
+      ['Pickles', 'House pickles', 299],
+      ['Banana Pudding', 'House banana pudding', 599],
+      ["Cookies N' Cream Pudding", 'House cookies and cream pudding', 599],
+      ['Fountain Drink', 'Fountain soda', 299],
     ],
   },
   {

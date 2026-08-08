@@ -5885,3 +5885,32 @@ textarea {
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.72);
 }
+
+/*
+  A mocked-up offer.
+
+  Deliberately unlike an agreed one: the block loses its brand tint for a plain
+  dashed outline, so the difference is visible from across the room rather than
+  needing the label to be read. The label itself carries enough contrast to be
+  the first thing noticed in the block.
+*/
+.brand-offers.is-mock {
+  background: rgba(120, 120, 128, 0.08);
+  border: 1.5px dashed rgba(60, 60, 67, 0.35);
+}
+
+.brand-offer-mock {
+  margin: 0 0 12px;
+  padding: 9px 11px;
+  border-radius: 10px;
+  background: rgba(255, 149, 0, 0.16);
+  font-size: 12.5px;
+  line-height: 1.45;
+  font-weight: 650;
+  color: #8a3d00;
+}
+
+.brand-offers.is-mock .brand-offer-head,
+.brand-offers.is-mock .brand-offer-body {
+  opacity: 0.72;
+}

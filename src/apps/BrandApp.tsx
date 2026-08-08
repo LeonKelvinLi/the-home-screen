@@ -205,7 +205,23 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             not be the first thing between them and it.
           */}
           {(brand.offers?.welcome || brand.offers?.loyalty) && (
-            <div className="brand-offers">
+            <div className={`brand-offers${brand.offers.mock ? ' is-mock' : ''}`}>
+              {/*
+                A mockup says so, at the top, before the terms it is mocking.
+
+                The operator asks to see what an offer would look like on a new
+                partner's page. Rendered identically to an agreed one, that
+                design is how a customer ends up asking a counter to honour
+                something the business never promised — so it is labelled, and
+                the label is the first thing in the block rather than a footnote
+                under it.
+              */}
+              {brand.offers.mock && (
+                <p className="brand-offer-mock">
+                  Example only — {brand.name} has not agreed these. This is what an offer would
+                  look like here.
+                </p>
+              )}
               {brand.offers.welcome && (
                 <div className="brand-offer">
                   <span className="brand-offer-head">
@@ -228,9 +244,11 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   </span>
                 </div>
               )}
-              <button className="brand-offer-cta" onClick={() => api.openApp('sys.members')}>
-                About BEASTY members
-              </button>
+              {!brand.offers.mock && (
+                <button className="brand-offer-cta" onClick={() => api.openApp('sys.members')}>
+                  About BEASTY members
+                </button>
+              )}
             </div>
           )}
 

@@ -142,7 +142,7 @@ export interface Brand {
   /** Published contact address, where the business publishes one. */
   email?: string
   /** What this business gives BEASTY members. See the Seed note. */
-  offers?: { welcome?: string; loyalty?: string }
+  offers?: { welcome?: string; loyalty?: string; mock?: boolean }
   /**
    * Line above the menu. Every partner carries one: the list is a curated
    * selection, not their full menu, and the customer should be told that
@@ -263,7 +263,7 @@ interface Seed {
    * commitment, so both stay empty until that business has actually agreed one
    * — an offer printed on a partner's page is a promise made in their name.
    */
-  offers?: { welcome?: string; loyalty?: string }
+  offers?: { welcome?: string; loyalty?: string; mock?: boolean }
   groups?: ServiceGroup[]
   /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere:

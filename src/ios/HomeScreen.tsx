@@ -184,28 +184,22 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     }
 
     /*
-      Then one page per city, each an empty grid waiting for the businesses the
-      operator recruits there.
+      Then TWO pages per city, goods then services, each an empty grid waiting
+      for the businesses the operator recruits there.
 
-      Filled here rather than in the registry because a full page is however
-      many tiles THIS grid fits, and that is only known once the screen has been
-      measured. Keys are scoped by city so a tile's id stays stable across a
-      resize instead of every slot renumbering when the row count changes.
-    */
-    /*
-      TWO pages per city, goods then services — twenty-four spots on each, the
-      operator's number, and the same categories in the same order in every
-      city. A customer who learns that the second tile on Oakland's goods page
-      is Mexican food knows where to look in Richmond, and a business owner
-      being pitched can be shown the exact tile that would be theirs.
+      One page per city put a barber and a sushi bar in the same grid, which is
+      neither how the operator sells it — "Supply of Goods, Services & awesome
+      Company" — nor how anyone looks for either of them. Twenty-four spots on
+      each, his number, and the same categories in the same order in every city:
+      a customer who learns that the second tile on Oakland's goods page is
+      Mexican food knows where to look in Richmond, and a business owner being
+      pitched can be shown the exact tile that would be theirs.
 
-      One page per city meant a barber and a sushi bar competing for the same
-      grid, which is neither how the operator sells it — "Supply of Goods,
-      Services & awesome Company" — nor how anybody looks for either of them.
-
-      The page's own word goes into the id rather than only into the heading:
-      the tile is rebuilt from its id alone when it is tapped, so an id that
-      does not say which page it came from cannot say which category it is.
+      Built here rather than in the registry because the tiles are sized to the
+      page, and that is only known once the screen has been measured. Ids are
+      scoped by city AND by page, so a tile keeps its own id across a resize —
+      and so a tapped tile can be resolved back to a category, which is all
+      makeSlot has to go on.
     */
     for (const cityName of CITY_PAGES) {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
