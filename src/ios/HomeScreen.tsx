@@ -4,7 +4,7 @@ import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
-import { SPOTS_PER_CITY } from '../data/slots'
+import { SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -21,7 +21,22 @@ import { DEFAULT_CITY } from '../lib/place'
 /** A home-screen page. `city` is set on the empty pages waiting for a city. */
 interface Page {
   apps: AppDef[]
+  /**
+   * The city's name on its own, never "Oakland · Goods".
+   *
+   * The wallpaper and Search's jump-to-a-city both key off this, and a city now
+   * has two pages — so the half that distinguishes them is kept separate rather
+   * than folded into the name they both match on.
+   */
   city?: string
+  /** Goods or Services. Only a city page has one. */
+  section?: string
+  /**
+   * Tile edge and row gap for THIS page, where the page cannot use the screen's
+   * own. Only a city page sets them — see where the pages are built.
+   */
+  tile?: number
+  rowGap?: number
 }
 
 interface Props {
@@ -116,6 +131,48 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     const rows = Math.max(3, Math.floor((screen.h - topPad - bottomReserve) / rowPitch))
     const perPage = Math.max(cols, cols * rows)
 
+    /*
+      A CITY page cannot paginate to fit, so its tiles shrink instead.
+
+      Everywhere else the count follows the grid: however many icons fit, fit.
+      A city page is the operator's fixed twenty-four — that sameness is the
+      whole product — so on a short phone it is the tile that has to give way.
+      It was not giving way: at the standard 105px pitch six rows need 694px
+      below the heading, a 640px-tall phone has 404, and four tiles were drawn
+      past the dock and off the bottom of the screen.
+
+      The room is measured against the SAME bottomReserve the main grid honours,
+      which is the page dots, the Spotlight pill and the dock. The hard-coded
+      count had been quietly overrunning it and drawing the last row of labels
+      under the dots even on a tall phone.
+
+      The gap is spent before the tile: rows packed tighter cost nothing, a
+      smaller tile costs a tap target. Both are capped at the screen's own
+      numbers, so a phone with the room keeps the 66px tile the operator asked
+      for and nothing moves.
+    */
+    /*
+      The city name's own band — a 15px line plus its margin.
+
+      MIRRORS .home-page-city in styles.css, for the same reason topPad mirrors
+      .home-page's padding: the grid below it is sized from what is left, and a
+      heading measured wrong is a row measured wrong.
+    */
+    const headingH = 32
+    /* Tighter than this and the rows read as one block rather than as a grid. */
+    const minRowGap = 6
+    /* Below this a tile is no longer something a thumb can hit. A window this
+       short has no room for a home screen at all, but it should end up cramped
+       rather than with tiles of negative width. */
+    const minTile = 28
+    const slotRows = Math.ceil(SPOTS_PER_PAGE / cols)
+    const slotPitch = Math.min(rowPitch, (screen.h - topPad - headingH - bottomReserve) / slotRows)
+    const slotGap = Math.max(minRowGap, Math.min(rowGap, slotPitch - screen.iconSize - ICON_LABEL_H))
+    const slotTile = Math.max(
+      minTile,
+      Math.min(screen.iconSize, Math.floor(slotPitch - ICON_LABEL_H - slotGap)),
+    )
+
     // Paginate each group separately so a group always begins a fresh page.
     // A single flat list let page two's icons flow up onto page one whenever
     // the grid had room, which is exactly what the split exists to prevent.
@@ -136,23 +193,31 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       resize instead of every slot renumbering when the row count changes.
     */
     /*
-      TWENTY-FOUR spots on every city page — the operator's number, and the same
-      twenty-four categories in the same order on all of them. A customer who
-      learns that slot 2 is Mexican food in Oakland knows where to look in
-      Richmond, and a business owner being pitched can be shown the exact tile
-      that would be theirs.
+      TWO pages per city, goods then services — twenty-four spots on each, the
+      operator's number, and the same categories in the same order in every
+      city. A customer who learns that the second tile on Oakland's goods page
+      is Mexican food knows where to look in Richmond, and a business owner
+      being pitched can be shown the exact tile that would be theirs.
 
-      A city page used to hold one row fewer than the main grid, because the
-      city's name sits above it and the location label used to sit below. That
-      label is gone, which gives the row back — so the full set fits on a phone
-      rather than spilling onto a second page.
+      One page per city meant a barber and a sushi bar competing for the same
+      grid, which is neither how the operator sells it — "Supply of Goods,
+      Services & awesome Company" — nor how anybody looks for either of them.
+
+      The page's own word goes into the id rather than only into the heading:
+      the tile is rebuilt from its id alone when it is tapped, so an id that
+      does not say which page it came from cannot say which category it is.
     */
     for (const cityName of CITY_PAGES) {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-      out.push({
-        city: cityName,
-        apps: Array.from({ length: SPOTS_PER_CITY }, (_, i) => makeSlot(`${key}-${i}`)),
-      })
+      for (const slotPage of SLOT_PAGES) {
+        out.push({
+          city: cityName,
+          section: slotPage.heading,
+          tile: slotTile,
+          rowGap: slotGap,
+          apps: slotPage.categories.map((_, i) => makeSlot(`${key}-${slotPage.kind}-${i}`)),
+        })
+      }
     }
 
     return out.length ? out : [{ apps: [] }]
@@ -338,12 +403,25 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
               only ever moves one page.
             */}
             <>
-            {/* An empty city page has to say WHICH city, or it is nine
-                identical grids of plus signs. */}
-            {page.city && <p className="home-page-city">{page.city}</p>}
+            {/* An empty city page has to say WHICH city, or it is eighteen
+                identical grids of plus signs — and now WHICH of the city's two
+                pages, since goods and services are otherwise the same grid of
+                dashed outlines under the same photograph. One line, so the
+                heading's height and the tile math under it are unchanged. */}
+            {page.city && (
+              <p className="home-page-city">
+                {page.city}
+                {page.section && ` · ${page.section}`}
+              </p>
+            )}
             <div
               className="home-grid"
-              style={{ gridTemplateColumns: `repeat(${screen.columns}, 1fr)` }}
+              style={{
+                gridTemplateColumns: `repeat(${screen.columns}, 1fr)`,
+                /* A city page carries its own, having been sized to fit a
+                   fixed twenty-four. Everything else keeps the stylesheet's. */
+                ...(page.rowGap === undefined ? {} : { rowGap: page.rowGap }),
+              }}
             >
               {page.apps.map((app) => (
                 <AppIcon
@@ -352,7 +430,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
                   label={app.label}
                   name={app.name}
                   badge={badgeFor(app.id)}
-                  size={screen.iconSize}
+                  size={page.tile ?? screen.iconSize}
                   onOpen={(rect) => onOpen(app.id, rect)}
                 />
               ))}

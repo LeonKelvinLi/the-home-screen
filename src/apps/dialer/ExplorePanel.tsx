@@ -78,8 +78,9 @@ export function ExplorePanel({
       <div className="explore-more">
         <h3>Still filling up</h3>
         <p>
-          {CITY_PAGES.length} cities have pages with open spots on them — twenty-four categories
-          each, from burgers to barbers. Nobody has taken most of them yet.
+          {CITY_PAGES.length} cities have pages with open spots on them — forty-eight categories
+          each, goods on one page and services on the next, from burgers to barbers. Nobody has
+          taken most of them yet.
         </p>
         <button className="dialer-panel-action" onClick={() => onCity(CITY_PAGES[0])}>
           See the open spots

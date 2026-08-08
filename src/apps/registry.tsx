@@ -6,7 +6,7 @@ import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
 import { SQUIRCLE_100 } from '../ios/squircle'
 import { GLYPHS } from '../data/glyphs'
-import { SLOT_CATEGORIES } from '../data/slots'
+import { categoriesFor } from '../data/slots'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
 /**
@@ -80,18 +80,25 @@ const PHONE_APP: AppDef = {
 
 /**
  * An empty slot: same silhouette as a real icon, unfilled, opening the reserve
- * screen. Every one is a live pitch to the next food truck.
+ * screen. Every one is a live pitch to the next business — a food truck on a
+ * goods page, a barber on a services one.
  */
 export const makeSlot = (key: string | number): AppDef => {
   /*
-    A slot id looks like `oakland-6`, and the trailing number is the operator's
-    own numbering of the twenty-four categories. Reading it back out is what
-    lets a tile know it is the Italian spot without the page having to thread
-    the category through — appById synthesises these on lookup, so there is
-    nowhere else to carry it.
+    A slot id looks like `oakland-goods-5`: the city, WHICH of its two pages,
+    and the position on it. Reading those back out is what lets a tile know it
+    is the Italian spot without the page having to thread the category through
+    — appById synthesises these on lookup, so there is nowhere else to carry it.
+
+    The page word is not decoration. Both pages number their spots from zero, so
+    a bare `oakland-5` is ambiguous the moment there are two lists, and the one
+    it would resolve against is whichever happens to be first — a barber's spot
+    labelled Italian. Read from the END, because a city slug has hyphens of its
+    own (`san-jose-services-5`).
   */
-  const n = Number(String(key).split('-').pop())
-  const cat = Number.isFinite(n) ? SLOT_CATEGORIES[n] : undefined
+  const parts = String(key).split('-')
+  const n = Number(parts.pop())
+  const cat = Number.isFinite(n) ? categoriesFor(parts.pop())?.[n] : undefined
   return {
     id: `slot.${key}`,
     name: cat ? `${cat.name} — spot available` : 'Reserve a Spot',
