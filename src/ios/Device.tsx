@@ -9,6 +9,8 @@ import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { ScreenSizeProvider, useMeasuredScreen } from './ScreenSize'
 import { appById } from '../apps/registry'
+import { rememberVisit } from '../lib/recents'
+import { brandById } from '../data/brands'
 import { motionMs } from './motion'
 import {
   CLOSE_MS,
@@ -154,6 +156,25 @@ export function Device({ renderApp, openOnMount }: Props) {
 
       const from = rect ?? origins.current.get(id) ?? centre()
       origins.current.set(id, from)
+
+      /*
+        Remember BUSINESSES only. A customer's recents list is not improved by
+        Settings or the cart turning up in it, and this is the one choke point
+        every open goes through — the grid, the dock, the switcher, the landing
+        keypad and Search all end here.
+      */
+      const opened = appById(id)
+      if (opened?.kind === 'brand') {
+        const b = brandById(id)
+        if (b) {
+          rememberVisit({
+            id: b.id,
+            name: b.name,
+            cuisine: b.cuisine,
+            color: b.logo.bg.split('|')[0],
+          })
+        }
+      }
 
       setAppId(id)
       setOrigin(from)

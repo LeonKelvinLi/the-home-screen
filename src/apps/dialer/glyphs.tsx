@@ -147,9 +147,30 @@ export function SupplyMark({ size = 24 }: MarkProps) {
   )
 }
 
+/** Recent — a clock, matching the tab it heads. */
+export function ClockMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M12 1.4a10.6 10.6 0 1 1 0 21.2 10.6 10.6 0 0 1 0-21.2Zm0 3a7.6 7.6 0 1 0 0 15.2 7.6 7.6 0 0 0 0-15.2Z" />
+      <path d="M10.9 6.3a1.1 1.1 0 0 1 2.2 0v5.2l3.4 2a1.1 1.1 0 0 1-1.1 1.9l-4-2.3a1.1 1.1 0 0 1-.5-1Z" />
+    </svg>
+  )
+}
+
+/** Scan — a camera with the framing corners that say "point this at a code". */
+export function CameraMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M9.1 2.6h5.8a2 2 0 0 1 1.7 1l.8 1.3h3.2a2.8 2.8 0 0 1 2.8 2.8v10a2.8 2.8 0 0 1-2.8 2.8H3.4a2.8 2.8 0 0 1-2.8-2.8v-10a2.8 2.8 0 0 1 2.8-2.8h3.2l.8-1.3a2 2 0 0 1 1.7-1Zm2.9 5.5a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 2.6a2.4 2.4 0 1 1 0 4.8 2.4 2.4 0 0 1 0-4.8Z" />
+    </svg>
+  )
+}
+
 export const PANEL_MARKS: Record<PanelPage, (props: MarkProps) => JSX.Element> = {
   favorites: StarMark,
   supply: SupplyMark,
+  recent: ClockMark,
+  camera: CameraMark,
   about: DogMark,
   contacts: PhoneMark,
   bprf: PurpleRibbon,

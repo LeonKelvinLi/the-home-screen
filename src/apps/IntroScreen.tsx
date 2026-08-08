@@ -4,7 +4,9 @@ import { OPERATOR, telHref } from '../lib/operator'
 import { BEASTY_DIGITS, DIALER_KEYS } from './dialer/keys'
 import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES } from './dialer/copy'
-import { EnterMark, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
+import { recentVisits, whenLabel } from '../lib/recents'
+import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
+import { CameraMark, EnterMark, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
 
@@ -77,7 +79,10 @@ const HOLD_MS = 1800
 const CORRUPT_MS = 2400
 const DOWN_MS = 750
 const BLACK_MS = 1800
-const UP_MS = 950
+/* 1400, up from 950 — the operator wants the picture to take its time coming
+   back. It was already slower than the power-down on purpose; this widens the
+   gap, which is what makes the return read as warming rather than switching. */
+const UP_MS = 1400
 
 /** One key lights per step while something dials BEASTY across the pad. */
 const SPELL_STEP_MS = 150
@@ -88,7 +93,14 @@ type Stage = 'stock' | 'corrupt' | 'down' | 'black' | 'up' | 'beasty'
 
 /** The tab bar, in both of its lives. Index-matched. */
 const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicemail']
-const TAB_LABELS = ['Favorites', 'Careers', 'Contact', 'BEASTY', 'Reviews']
+/*
+  Recent and Scan, not Careers and Contact.
+
+  Careers was already key 9 — the operator spotted it on the landing page twice
+  — and a tab slot is for something opened every visit rather than once. Recent
+  keeps the stock clock doing the stock thing, and Scan is the camera.
+*/
+const TAB_LABELS = ['Favorites', 'Recent', 'Scan', 'BEASTY', 'Reviews']
 
 export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Props) {
   const reduced =
@@ -102,6 +114,8 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
   const [panel, setPanel] = useState<PanelPage | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
+  /** True when a touch cut the sequence short, so nothing animates in after. */
+  const [skipped, setSkipped] = useState(false)
   const timers = useRef<number[]>([])
 
   /** Every timer goes through here so unmount can clear all of them. */
@@ -182,6 +196,16 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
   const skip = (): boolean => {
     if (stage === 'beasty') return false
     cancelSeq()
+    /*
+      Mark it, so the boot-in is suppressed too.
+
+      Setting the settled stage also fires every arrival animation — the keys
+      boot in row by row, the call button and tab bar follow, the wordmark lands
+      and a flare blows out. A tap 160ms in showed three olive半-transparent
+      keys, no tab bar, half a wordmark and a white flare: an animation the
+      person had just asked not to see.
+    */
+    setSkipped(true)
     setStage('beasty')
     setSpelled(BEASTY_DIGITS.length)
     return true
@@ -322,7 +346,11 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
   }
 
   return (
-    <div className={`dialer is-${stage}${leaving ? ' is-leaving' : ''}`}>
+    <div
+      className={`dialer is-${stage}${leaving ? ' is-leaving' : ''}${
+        skipped || reduced ? ' is-instant' : ''
+      }`}
+    >
       {/*
         NO FAKE STATUS BAR, AND NO DYNAMIC ISLAND.
 
@@ -396,7 +424,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
           {/* One pulse of light behind the word as it lands, gone in half a
             second. The screen has just come back from dead, so it gets one
             moment of being a bit too bright. */}
-        {stage === 'beasty' && <span className="dialer-bloom" aria-hidden="true" />}
+        {stage === 'beasty' && !skipped && <span className="dialer-bloom" aria-hidden="true" />}
         <div className="dialer-number" aria-live={stage === 'beasty' ? 'polite' : 'off'}>
             {ours
               ? display.split('').map((ch, i) => (
@@ -472,6 +500,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
             onJoin={() => leave(onJoin)}
             onWater={() => leave(onWater)}
             onClose={() => setPanel(null)}
+            onOpenBrand={(id) => leave(() => onOpen(id))}
           />
         )}
 
@@ -484,8 +513,22 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
               on each partner's page, tapped as you visit. About is still one tap
               away on key 1, so nothing is lost by giving this tab back. */}
           <Tab icon={<StarFill />} label={tabText(0)} name={TAB_LABELS[0]} onClick={() => press({ kind: 'panel', page: 'favorites' })} />
-          <Tab icon={<RecentsClock />} label={tabText(1)} name={TAB_LABELS[1]} onClick={() => press({ kind: 'panel', page: 'careers' })} />
-          <Tab icon={<PersonCircleFill />} label={tabText(2)} name={TAB_LABELS[2]} onClick={() => press({ kind: 'panel', page: 'contacts' })} />
+          {/* Recent, not Careers — Careers is already key 9, and the clock keeps
+              doing what a clock on a phone's second tab does. */}
+          <Tab
+            icon={<RecentsClock />}
+            label={tabText(1)}
+            name={TAB_LABELS[1]}
+            onClick={() => press({ kind: 'panel', page: 'recent' })}
+          />
+          {/* The camera. A code scanner rather than a photo app: point it at a
+              partner's code and it opens that business. */}
+          <Tab
+            icon={ours ? <CameraMark /> : <PersonCircleFill />}
+            label={tabText(2)}
+            name={TAB_LABELS[2]}
+            onClick={() => press({ kind: 'panel', page: 'camera' })}
+          />
           <Tab icon={<KeypadGrid />} label={tabText(3)} name={TAB_LABELS[3]} selected onClick={() => press()} />
           {/*
             The badge is the stock screen's unread count while it is pretending,
@@ -499,10 +542,14 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
             reviews yet and a number over an empty page is a lie about the page.
           */}
           <Tab
-            icon={stage === 'beasty' ? <ReviewsMark /> : <VoicemailFill />}
+            icon={ours ? <ReviewsMark /> : <VoicemailFill />}
             label={tabText(4)}
             name={TAB_LABELS[4]}
-            badge={stage === 'beasty' ? undefined : 38}
+            /* `ours`, not `beasty`. Keyed on the settled stage the invented "38"
+             survived the whole 950ms power-up, sitting on the fully branded
+             screen over a tab already labelled Reviews — the one thing on it
+             that was not true. */
+          badge={ours ? undefined : 38}
             onClick={() => press({ kind: 'panel', page: 'reviews' })}
           />
         </nav>
@@ -561,18 +608,137 @@ function isLit(stage: Stage, spelled: number, index: number): boolean {
   return DIALER_KEYS[index]?.digit === digit
 }
 
+/**
+ * One business, with the star that promotes it to Favorites.
+ *
+ * The star is a separate button INSIDE the row rather than a swipe or a long
+ * press, because both of those are invisible — a customer has to be told they
+ * exist. A visible outline that fills when tapped needs no explaining.
+ */
+function BrandRow({
+  brand,
+  onOpen,
+  onStarred,
+}: {
+  /* The stored snapshot, NOT a catalogue lookup — see lib/recents.ts. */
+  brand: { brandId: string; name: string; cuisine: string; color: string }
+  onOpen: (brandId: string) => void
+  onStarred?: () => void
+}) {
+  const [starred, setStarred] = useState(() => isFavorite(brand.brandId))
+  return (
+    <div className="explore-row-wrap">
+      <button className="explore-row" onClick={() => onOpen(brand.brandId)}>
+        <span className="explore-mark" style={{ background: brand.color }} />
+        <span className="explore-text">
+          <strong>{brand.name}</strong>
+          <em>{brand.cuisine}</em>
+        </span>
+      </button>
+      <button
+        className={`explore-star${starred ? ' is-on' : ''}`}
+        aria-label={starred ? `Remove ${brand.name} from Favorites` : `Add ${brand.name} to Favorites`}
+        aria-pressed={starred}
+        onClick={() => {
+          setStarred(toggleFavorite(brand))
+          onStarred?.()
+        }}
+      >
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+          <path
+            d="M12 2.6 15 8.9l7 .85-5.2 4.85 1.4 7L12 18.15 5.8 21.6l1.4-7L2 9.75l7-.85Z"
+            fill={starred ? 'currentColor' : 'none'}
+            stroke="currentColor"
+            strokeWidth="1.9"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+  )
+}
+
+/**
+ * Favorites — the ones starred from Recent or from a business's own page.
+ */
+function FavoritesPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
+  const [ids, setIds] = useState(() => favorites())
+  if (ids.length === 0) {
+    return (
+      <>
+        <p>No favourites yet.</p>
+        <p className="dialer-panel-quiet">
+          Open a business, and if it was worth going back to, tap its star — on the Recent tab or
+          on the business itself. Kept on this phone only, so it will not follow you to another
+          one.
+        </p>
+      </>
+    )
+  }
+  return (
+    <>
+      {ids.map((f) => (
+        <BrandRow key={f.brandId} brand={f} onOpen={onOpen} onStarred={() => setIds(favorites())} />
+      ))}
+    </>
+  )
+}
+
+/**
+ * Recent — the businesses this device has actually opened.
+ *
+ * Grouped by day rather than listed flat, because "Today" and "Yesterday" are
+ * what a person is looking for when they open a recents list. Reads
+ * localStorage only; see lib/recents.ts for why that is worth saying out loud.
+ */
+function RecentPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
+  const visits = recentVisits()
+
+  if (visits.length === 0) {
+    return (
+      <>
+        <p>Nothing here yet.</p>
+        <p className="dialer-panel-quiet">
+          The businesses you open show up here, newest first, so you can get back to one without
+          hunting the grid for it. Kept on this phone only — nothing is sent anywhere.
+        </p>
+      </>
+    )
+  }
+
+  /* One heading per day, in order, rather than a heading on every row. */
+  let lastLabel = ''
+  return (
+    <>
+      {visits.map((v) => {
+        const label = whenLabel(v.at)
+        const heading = label === lastLabel ? null : ((lastLabel = label), label)
+        return (
+          <div key={v.brandId}>
+            {heading && <h3 className="dialer-panel-h">{heading}</h3>}
+            <BrandRow brand={v} onOpen={onOpen} />
+          </div>
+        )
+      })}
+    </>
+  )
+}
+
 function Panel({
   page,
   onShare,
   onJoin,
   onWater,
   onClose,
+  onOpenBrand,
 }: {
   page: PanelPage
   onShare: () => void
   onJoin: () => void
   onWater: () => void
   onClose: () => void
+  /** Enter the app on a business's page, from the Recent list. */
+  onOpenBrand: (brandId: string) => void
 }) {
   const Mark = PANEL_MARKS[page]
   const card = useRef<HTMLDivElement>(null)
@@ -619,10 +785,20 @@ function Panel({
     }
   }
 
+  /* Recent is a LIST of this device's own visits, not prose, so it renders a
+     component rather than paragraphs from copy.ts. */
+  const listBody =
+    page === 'recent' ? (
+      <RecentPanel onOpen={onOpenBrand} />
+    ) : page === 'favorites' ? (
+      <FavoritesPanel onOpen={onOpenBrand} />
+    ) : null
+
   // Contacts is the one page with no written copy: the operator has not
   // connected a line yet, and inventing one would be the worst kind of filler.
   const body =
-    page === 'contacts' ? (
+    listBody ??
+    (page === 'contacts' ? (
       <>
         {OPERATOR.phone || OPERATOR.email ? (
           <>
@@ -641,12 +817,16 @@ function Panel({
       </>
     ) : (
       <>
-        {PAGES[page].body.map((p) => (
+        {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].body.map((p) => (
           <p key={p}>{p}</p>
         ))}
         {/* Shown, not hidden in a comment. A page that needs the operator's
             detail before it is true says so where he will see it. */}
-        {PAGES[page].needsGlenn && <p className="dialer-panel-flag">{PAGES[page].needsGlenn}</p>}
+        {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].needsGlenn && (
+          <p className="dialer-panel-flag">
+            {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].needsGlenn}
+          </p>
+        )}
         {/* Careers and Collabs both send people to the same form, so both need
             the button. Collabs used to name it and give no way to reach it. */}
         {(page === 'careers' || page === 'collabs') && (
@@ -660,9 +840,16 @@ function Panel({
           </button>
         )}
       </>
-    )
+    ))
 
-  const title = page === 'contacts' ? 'Contacts' : PAGES[page].title
+  const title =
+    page === 'contacts'
+      ? 'Contacts'
+      : page === 'recent'
+        ? 'Recent'
+        : page === 'favorites'
+          ? 'Favorites'
+        : PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].title
 
   return (
     <div

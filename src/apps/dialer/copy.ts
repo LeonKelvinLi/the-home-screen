@@ -38,9 +38,31 @@ interface Page {
   needsGlenn?: string
 }
 
-type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews' | 'favorites' | 'supply'
+type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews' | 'supply' | 'camera'
 
 export const PAGES: Record<PageKey, Page> = {
+  /*
+    The camera.
+
+    It is a QR scanner, and that is the surprise: on a food app the camera is
+    normally for photographing your dinner. Here it points at the code in a
+    partner's window, on a flyer, or on somebody else's phone, and opens that
+    business — which is what makes the Share & Scan code the app already
+    generates worth printing.
+
+    NOT BUILT. Nothing is captured, nothing is uploaded, and the camera is never
+    switched on until someone taps to start it.
+  */
+  camera: {
+    title: 'Scan',
+    body: [
+      'Point the camera at a BEASTY code — in a shop window, on a flyer, on somebody else’s screen — and it opens that business straight away. No app to install and nothing to type.',
+      'It is not switched on yet. When it is, the camera only runs while this screen is open, nothing is recorded, and no picture leaves the phone: a code is read and the app moves on.',
+    ],
+    needsGlenn:
+      'Window stickers or cards carrying each partner’s code — the scanner is worth nothing until there is something out there to scan.',
+  },
+
   /*
     Key 4. The operator renamed it from GOODS to SUPPLY and said he would add
     the contact for it when he can — so there is a name and an intent and no
@@ -55,27 +77,6 @@ export const PAGES: Record<PageKey, Page> = {
     ],
     needsGlenn:
       'What Supply covers and a way to reach it — a phone, an email or a form. Nothing here can be written until one of those exists.',
-  },
-
-  /*
-    The star keeps its stock name because it is going to do the stock thing:
-    the operator wants a star on each partner's page that a customer taps as
-    they visit, so the places they liked are here to come back to.
-
-    NOT BUILT. There is no favourites field, nothing writes one and nothing
-    reads one — so this page says what the tab is for and says it is not working
-    yet. The alternative was a tab called Favorites that opens something else,
-    which teaches a customer that the labels on this screen do not mean what
-    they say.
-  */
-  favorites: {
-    title: 'Favorites',
-    body: [
-      'Somewhere to keep the places you liked. The idea is a star on each business you open, tapped as you go, so the ones worth returning to are all in one list instead of somewhere in your memory.',
-      'It is not working yet — nothing is being saved, and this list will stay empty until the star appears on the business pages. Everything else on the keypad works now.',
-    ],
-    needsGlenn:
-      'Whether a favourite is kept on the device or on an account — an account would carry it between phones, and there is no sign-in yet.',
   },
 
   /*

@@ -38,6 +38,8 @@ export type PanelPage =
   | 'reviews'
   | 'favorites'
   | 'supply'
+  | 'recent'
+  | 'camera'
 
 export interface DialerKey {
   digit: string

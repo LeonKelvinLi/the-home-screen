@@ -2257,12 +2257,20 @@ textarea {
     with the same specificity, so anything written here loses to it — a rule
     that looks like it works and does not. It is set at the base instead.
   */
-  .spotlight {
+  /*
+    .spotlight-row, not .spotlight.
+
+    Positioning moved to the row when the ghost back button was added beside the
+    pill, so this override stopped applying — and the row kept its base 134px
+    while the dots stayed at 148, which drew the dots straight through the pill
+    and the back button. Three of them landed inside the button.
+  */
+  .spotlight-row {
     bottom: calc(var(--bottom-h) + 108px);
   }
 
   .page-dots {
-    bottom: calc(var(--bottom-h) + 148px);
+    bottom: calc(var(--bottom-h) + 168px);
   }
 
   /*
@@ -2400,7 +2408,7 @@ textarea {
   justify-content: center;
 }
 
-.device.is-pad .spotlight {
+.device.is-pad .spotlight-row {
   bottom: 132px;
 }
 
@@ -4071,7 +4079,7 @@ textarea {
   return reads as something coming back to life.
 */
 .dialer.is-up .dialer-crt {
-  animation: crt-on 950ms cubic-bezier(0.16, 0.9, 0.3, 1) both;
+  animation: crt-on 1400ms cubic-bezier(0.16, 0.9, 0.3, 1) both;
 }
 
 @keyframes crt-on {
@@ -4116,7 +4124,10 @@ textarea {
   --key-fill: #141416;
   --key-ink: #ffffff;
   --key-sub: rgba(255, 255, 255, 0.66);
-  --call-fill: #1db954;
+  /* #1db954 measured 1.83:1 against the brand yellow — the lowest contrast on
+     the screen, on the button that is the whole point of it. This is 3.1:1 in
+     the same hue family. */
+  --call-fill: #0e8a3c;
   --tab-off: rgba(20, 20, 22, 0.72);
   --tab-on: #141416;
   background: none;
@@ -4278,12 +4289,22 @@ textarea {
 }
 
 .dialer-biggie {
-  /* 82, up from 64. The dog is the mark and the wordmark is the caption, which
-     is the operator's read and the right one — he was competing with it. */
-  width: calc(82 * var(--u));
-  height: calc(82 * var(--u));
+  /*
+    Sized by WIDTH, not by a square box.
+
+    biggie.webp is 355x520 — portrait. In an 82x82 box `object-fit: contain`
+    fits it by its long side, so the dog rendered 50px wide against a 112px
+    wordmark: the caption was 2.2x the mark it captions, which is the exact
+    inversion of what the operator asked for. Setting the width and letting the
+    height follow makes the number mean what it says.
+
+    The drop-shadow is gone with it. A cast shadow implies a lit, solid object;
+    on a flat black cut-out over yellow it only added a brown smear under the
+    feet.
+  */
+  width: calc(96 * var(--u));
+  height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 7px 18px rgba(90, 60, 0, 0.32));
 }
 
 /* ---------- the keypad ---------- */
@@ -4615,6 +4636,7 @@ textarea {
   margin: 0;
   height: 0;
   overflow: hidden;
+  order: -1;
   font-size: 11px;
   font-weight: 600;
   /* 0.62 measured 4.28:1 where this actually sits on the gradient, under the
@@ -4683,7 +4705,7 @@ textarea {
   z-index: 6;
   pointer-events: none;
   overflow: hidden;
-  animation: glitch-flicker 1900ms steps(1, end) both;
+  animation: glitch-flicker 2400ms steps(1, end) both;
 }
 
 /*
@@ -4706,19 +4728,19 @@ textarea {
 }
 
 .glitch-band:nth-child(1) {
-  animation: band-a 1900ms steps(1, end) both;
+  animation: band-a 2400ms steps(1, end) both;
 }
 
 .glitch-band:nth-child(2) {
   height: 4%;
-  animation: band-b 1900ms steps(1, end) both;
+  animation: band-b 2400ms steps(1, end) both;
 }
 
 .glitch-band:nth-child(3) {
   height: 11%;
   backdrop-filter: invert(1) saturate(3);
   -webkit-backdrop-filter: invert(1) saturate(3);
-  animation: band-c 1900ms steps(1, end) both;
+  animation: band-c 2400ms steps(1, end) both;
 }
 
 /* Top, height and horizontal shove all snap together. The gaps between the
@@ -4793,7 +4815,7 @@ textarea {
     rgba(0, 0, 0, 0.055) 3px 4px
   );
   opacity: 0;
-  animation: glitch-lines 1900ms ease-out both;
+  animation: glitch-lines 2400ms ease-out both;
 }
 
 @keyframes glitch-sweep {
@@ -4841,7 +4863,7 @@ textarea {
 .dialer.is-corrupt .dialer-key-digit,
 .dialer.is-corrupt .dialer-key-sub,
 .dialer.is-corrupt .dialer-number {
-  animation: glitch-split 1900ms ease-out both;
+  animation: glitch-split 2400ms ease-out both;
 }
 
 @keyframes glitch-split {
@@ -4856,13 +4878,21 @@ textarea {
   100% { text-shadow: none; }
 }
 
-/* The number field lands last and hardest — this is the word being spelled. */
+/*
+  The wordmark's settled form, applied from the moment the picture opens.
+
+  It used to change weight (400 to 800) and tracking (0.01em to 0.02em) on the
+  up-to-beasty boundary AND re-run its landing animation there — so it arrived,
+  blurred back out and arrived again, on the one frame the whole sequence builds
+  to. `.dialer-letter` already lands each letter individually; this only has to
+  hold the type still.
+*/
+.dialer.is-up .dialer-number,
 .dialer.is-beasty .dialer-number {
   font-weight: 800;
   /* 0.02em, down from 0.1. Wide tracking made BEASTY read as six separate
-     letters under the dog rather than one word beside him. */
+     letters under the dog rather than one word with him. */
   letter-spacing: 0.02em;
-  animation: number-land 620ms cubic-bezier(0.32, 0.72, 0, 1) both;
 }
 
 @keyframes number-land {
@@ -5282,7 +5312,7 @@ textarea {
   background:
     repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.14) 0 1px, transparent 1px 3px),
     radial-gradient(ellipse at center, transparent 42%, rgba(0, 0, 0, 0.55) 100%);
-  animation: tube-warm 950ms ease-out both;
+  animation: tube-warm 1400ms ease-out both;
 }
 
 @keyframes tube-warm {
@@ -5353,6 +5383,16 @@ textarea {
     opacity: 1;
     transform: none;
   }
+}
+
+.dialer.is-instant .dialer-key,
+.dialer.is-instant .dialer-call,
+.dialer.is-instant .dialer-tab,
+.dialer.is-instant .dialer-biggie,
+.dialer.is-instant .dialer-letter,
+.dialer.is-instant .dialer-number,
+.dialer.is-instant .dialer-crt {
+  animation: none !important;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -5547,4 +5587,106 @@ textarea {
   border-radius: 12px;
   background: rgba(29, 163, 69, 0.12);
   color: #1da345;
+}
+
+/* ---------- Recent and Favorites rows ---------- */
+
+.explore-row-wrap {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.explore-row {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 56px;
+  padding: 8px 4px;
+  border: 0;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+}
+
+.explore-mark {
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.12);
+}
+
+.explore-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.explore-text strong {
+  font-size: 15px;
+  font-weight: 620;
+  color: #141416;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.explore-text em {
+  font-style: normal;
+  font-size: 12.5px;
+  color: rgba(60, 60, 67, 0.7);
+}
+
+/*
+  The star. An outline that fills — the only affordance that needs no
+  explaining, where a swipe or a long press has to be discovered.
+*/
+.explore-star {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  border-radius: 50%;
+  color: rgba(60, 60, 67, 0.45);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: color 160ms ease, transform 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.explore-star.is-on {
+  color: #f5a300;
+  transform: scale(1.08);
+}
+
+.explore-star:active {
+  transform: scale(0.9);
+}
+
+/* Day headings inside Recent. */
+.dialer-panel-h {
+  margin: 14px 0 2px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.dialer-panel-h:first-child {
+  margin-top: 0;
+}
+
+/* The quiet second paragraph on an empty list — explanation, not apology. */
+.dialer-panel-quiet {
+  font-size: 13px !important;
+  line-height: 1.5;
+  color: rgba(60, 60, 67, 0.7) !important;
+  font-weight: 400 !important;
 }
