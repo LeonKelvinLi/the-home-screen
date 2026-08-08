@@ -5732,3 +5732,156 @@ textarea {
   color: rgba(60, 60, 67, 0.7) !important;
   font-weight: 400 !important;
 }
+
+/* ---------- member card ----------
+
+   The one screen a customer holds up to a stranger, so it is built to be read
+   at arm's length across a counter: a big quiet code, a big quiet QR, and
+   everything that is only a simulation labelled as one.
+*/
+
+.member-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 8px 20px 32px;
+}
+
+.member-lead {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 22, 0.82);
+}
+
+/* The card face. White, because a scanner wants maximum local contrast and the
+   brand yellow underneath it is not that. */
+.member-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 26px 22px 20px;
+  border-radius: 22px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(90, 60, 0, 0.18);
+}
+
+.member-qr-img {
+  width: min(58vw, 214px);
+  height: min(58vw, 214px);
+  display: grid;
+  place-items: center;
+}
+
+.member-qr-img svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Read aloud when the camera will not focus, so it is set for legibility over
+   a counter rather than for looks: tabular figures, wide tracking, big. */
+.member-code {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  color: #141416;
+}
+
+.member-preview {
+  margin: 2px 0 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  color: rgba(20, 20, 22, 0.35);
+}
+
+.member-stats {
+  display: flex;
+  gap: 10px;
+}
+
+.member-stats > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  padding: 14px 8px;
+  border-radius: 16px;
+  background: rgba(20, 20, 22, 0.08);
+}
+
+.member-stats strong {
+  font-size: 26px;
+  font-weight: 800;
+  color: #141416;
+  font-variant-numeric: tabular-nums;
+}
+
+.member-stats span {
+  font-size: 12px;
+  font-weight: 650;
+  color: rgba(20, 20, 22, 0.68);
+}
+
+.member-h {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 22, 0.68);
+}
+
+.member-sim {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.member-sim-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 48px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(20, 20, 22, 0.08);
+  font-size: 15px;
+  font-weight: 620;
+  color: #141416;
+  text-align: left;
+  cursor: pointer;
+}
+
+.member-sim-mark {
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  border-radius: 7px;
+  box-shadow: inset 0 0 0 0.5px rgba(0, 0, 0, 0.14);
+}
+
+/*
+  The honest bit. 0.72 on the yellow measures above 4.5:1 — this is the sentence
+  that stops someone believing they have earned something they have not, so it
+  is not allowed to be the quietest thing on the screen.
+*/
+.member-fineprint {
+  margin: 4px 0 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 22, 0.72);
+}
+
+.member-card .co-input {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}

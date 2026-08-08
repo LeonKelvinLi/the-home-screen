@@ -102,8 +102,13 @@ export function MembersApp({ api }: { api: ShellApi }) {
         </div>
 
         <div className="members-cta">
-          <button className="btn-primary" disabled>
-            Sign-ups not open yet
+          {/* The card is a working preview and reachable now; the PAID
+              membership is not, and the two must not be confused. */}
+          <button className="btn-primary" onClick={() => api.openApp('sys.membercard')}>
+            See the member card
+          </button>
+          <button className="btn-secondary" disabled>
+            Paid sign-ups not open yet
           </button>
           <p className="members-cta-note">
             Card payments are not connected, so nothing can be charged and no membership can start

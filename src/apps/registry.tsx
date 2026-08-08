@@ -16,7 +16,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
-  | 'reserve' | 'designs' | 'share' | 'members' | 'calendar'
+  | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard'
 
 export interface AppDef {
   id: string
@@ -260,6 +260,21 @@ const CALENDAR_APP: AppDef = {
   error anywhere. That is exactly what the calendar did until it was added —
   being in DOCK_APPS is what draws the icon, being in here is what makes it open.
 */
+/*
+  The member card. Reached from the membership screen rather than the grid —
+  it is a thing you show, not a place you browse, and it only means anything
+  once you have one.
+*/
+export const MEMBER_CARD_APP: AppDef = {
+  id: 'sys.membercard',
+  name: 'Member card',
+  label: 'Card',
+  icon: <GemIcon />,
+  kind: 'system',
+  systemKey: 'membercard',
+  tint: '#f6d800',
+}
+
 export const ALL_APPS: AppDef[] = [
   ...BRAND_APPS,
   ...SYSTEM_APPS,
@@ -267,6 +282,7 @@ export const ALL_APPS: AppDef[] = [
   DESIGNS_APP,
   SHARE_APP,
   MEMBERS_APP,
+  MEMBER_CARD_APP,
   CALENDAR_APP,
 ]
 
