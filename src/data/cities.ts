@@ -35,4 +35,4 @@ export const CITY_PAGES = [
  * list on mount and complains in the console if they ever drift, so this cannot
  * quietly go stale.
  */
-export const PARTNER_COUNT = 11
+export const PARTNER_COUNT = 12

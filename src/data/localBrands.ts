@@ -159,6 +159,69 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     /*
+      TEQUILA'S TAQUERÍA — LIVERMORE AVE, and the branch matters again.
+
+      Three shops: Livermore Ave (this one), Vasco Rd, and San Jose. Each has
+      its own menu PDF. Livermore Ave and Vasco Rd price identically across all
+      111 shared items — but SAN JOSE differs on 34 of 38, and always cheaper:
+      Super Taco 5.50 against 6.50 here, Super Botana 44.99 against 54.99.
+      Every price below is off the Livermore Ave PDF specifically.
+
+      THE $16.99 QUESABIRRIA IN THEIR INSTAGRAM POST IS THE SAN JOSE PRICE. The
+      Livermore Ave menu lists it at 19.99, and without the rice and beans the
+      post advertises. That single post is exactly how a listing ends up three
+      dollars under the counter price.
+
+      Nothing came from DoorDash, Uber Eats, Grubhub, Yelp or the aggregator
+      sites that carry this menu.
+
+      Their own branch page prints the ZIP as 94551. That is the Vasco Rd ZIP —
+      downtown Livermore is 94550, and their homepage says so twice. Copy-paste
+      on their end.
+
+      THE MICHELADAS ARE MISSING ON PURPOSE. "La Capital de la Super Michelada"
+      is their own tagline and their signature product, and the Livermore Ave
+      PDF has no michelada page at all — the Vasco Rd and San Jose menus do.
+      Those prices belong to other shops and are not carried over. Ask them.
+    */
+    slug: 'tequilas-taqueria',
+    name: "Tequila's Taquería",
+    label: "Tequila's",
+    cuisine: 'Mexican, seafood, botanas',
+    tagline: 'Family-run since 1996. Tacos, seafood and the botanas they are known for.',
+    color: '#17773E',
+    prep: 20,
+    category: 'Tacos',
+    site: 'https://tequilastaqueria.net',
+    orderUrl: 'https://tequilastaqueria.net/livermore-ave-orders/',
+    phone: '(925) 371-1191',
+    address: '160 S Livermore Ave, Livermore',
+    email: 'livermoreave@tequilastaqueria.net',
+    offer: ['Super Taco', 'Super Burrito', 'Quesabirrias'],
+    siteNote: 'Order direct at tequilastaqueria.net — pick the Livermore Ave shop.',
+    items: [
+      ['Soft Taco', 'One soft taco, your choice of meat', 399],
+      ['Super Taco', 'Loaded soft taco, your choice of meat', 650],
+      ['Fish Taco', 'One fish taco', 675],
+      ['Quesabirrias', 'Three corn tortillas, barbacoa birria and melted cheese', 1999],
+      ['Super Burrito', 'Rice, beans, cheese, salsa and your choice of meat', 1699],
+      ['Super Burrito Mojado', 'Super burrito under sauce and melted cheese', 1799],
+      ['Burrito Bowl', 'Everything in a super burrito, no tortilla', 1699],
+      ['Super Quesadilla', 'Large quesadilla with meat and toppings', 1199],
+      ['Super Nachos', 'Chips, beans, cheese, meat and toppings', 1699],
+      ['Carne Asada', 'Grilled steak with rice, beans and tortillas', 2399],
+      ['Birria', 'Slow-cooked birria with consommé', 2499],
+      ['Camarones a la Diabla', 'Prawns in diabla sauce', 2499],
+      ['Cocktail de Camarón', 'Prawn cocktail', 2399],
+      ['Botana Especial', 'Mixed seafood botana for the table', 2699],
+      ['Chilaquiles Rojos', 'Red chilaquiles', 1899],
+      ['Breakfast Burrito', 'Eggs, potato and cheese', 999],
+      ['Homemade Flan', 'House flan', 799],
+      ['Horchata', 'Aguas frescas, regular', 425],
+    ],
+  },
+  {
+    /*
       JOJO'S HOT CHICKEN — BRANHAM, and the branch matters.
 
       They run TWO San Jose locations off one domain: Branham (this one) and
