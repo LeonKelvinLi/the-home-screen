@@ -210,7 +210,16 @@ export function SettingsApp({ api }: { api: ShellApi }) {
           iconBg="#E5A200"
           label="Back to the landing screen"
           chevron={false}
-          onClick={() => window.history.back()}
+          onClick={() => {
+            // The marker App reads to tell a deliberate replay from an
+            // ordinary back. Cleared as soon as it is read.
+            try {
+              sessionStorage.setItem('hs.replay', '1')
+            } catch {
+              /* private mode — it will simply land settled */
+            }
+            window.history.back()
+          }}
         />
       </ListSection>
 

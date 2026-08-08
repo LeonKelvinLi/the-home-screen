@@ -35,6 +35,15 @@ interface Props {
   onJoin: () => void
   /** Enter and land on a named app — the keypad opens several directly. */
   onOpen: (appId: string) => void
+  /**
+   * Start on the finished screen, with no takeover.
+   *
+   * Coming BACK from the app is the ordinary case and it should be instant —
+   * sitting through seven seconds every time you tap back is a toll, not a
+   * treat. The sequence still plays on a first visit, and Settings has a row
+   * that replays it deliberately.
+   */
+  skipIntro?: boolean
 }
 
 /**
@@ -81,10 +90,11 @@ type Stage = 'stock' | 'corrupt' | 'down' | 'black' | 'up' | 'beasty'
 const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicemail']
 const TAB_LABELS = ['Favorites', 'Careers', 'Contact', 'BEASTY', 'Reviews']
 
-export function IntroScreen({ onEnter, onWater, onJoin, onOpen }: Props) {
+export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Props) {
   const reduced =
-    typeof window !== 'undefined' &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    skipIntro ||
+    (typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches)
 
   const [stage, setStage] = useState<Stage>(reduced ? 'beasty' : 'stock')
   /** How many of the six BEASTY keys have lit so far. */

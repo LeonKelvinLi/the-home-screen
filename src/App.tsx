@@ -64,6 +64,15 @@ export default function App() {
     the START of the fade rather than at the end of it.
   */
   const [handoff, setHandoff] = useState(false)
+  /*
+    True when the landing screen should open already-settled.
+
+    Set on every return from the app, and cleared only by the Settings row that
+    exists to replay the opening — that row leaves a marker in sessionStorage
+    before calling history.back(), which is the one signal that distinguishes
+    "show me that again" from "take me back".
+  */
+  const [skipIntro, setSkipIntro] = useState(false)
 
   /*
     Warm the two things the home screen needs, while the landing page is on
@@ -133,7 +142,15 @@ export default function App() {
       setEntered(inApp)
       if (!inApp) {
         setOpenOn(null)
-        // Fresh mount, so the takeover runs again — which is the point.
+        let replay = false
+        try {
+          replay = sessionStorage.getItem('hs.replay') === '1'
+          sessionStorage.removeItem('hs.replay')
+        } catch {
+          /* private mode — default to the fast path */
+        }
+        setSkipIntro(!replay)
+        // Fresh mount either way, so a replay genuinely starts from the top.
         setVisit((v) => v + 1)
       }
     }
@@ -170,6 +187,7 @@ export default function App() {
              and the account screen are all one key rather than a tap into the
              grid. */
           onOpen={(appId) => enter(appId)}
+          skipIntro={skipIntro}
         />
       )}
     </>

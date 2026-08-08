@@ -4,6 +4,7 @@ import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
+import { SPOTS_PER_CITY } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -135,16 +136,22 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       resize instead of every slot renumbering when the row count changes.
     */
     /*
-      One row FEWER on a city page. The city's name sits above its grid and has
-      to come out of the same height as everything else — at the full count the
-      last row's labels ran into the location label at the bottom of the screen.
+      TWENTY-FOUR spots on every city page — the operator's number, and the same
+      twenty-four categories in the same order on all of them. A customer who
+      learns that slot 2 is Mexican food in Oakland knows where to look in
+      Richmond, and a business owner being pitched can be shown the exact tile
+      that would be theirs.
+
+      A city page used to hold one row fewer than the main grid, because the
+      city's name sits above it and the location label used to sit below. That
+      label is gone, which gives the row back — so the full set fits on a phone
+      rather than spilling onto a second page.
     */
-    const cityPerPage = Math.max(cols, perPage - cols)
     for (const cityName of CITY_PAGES) {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
       out.push({
         city: cityName,
-        apps: Array.from({ length: cityPerPage }, (_, i) => makeSlot(`${key}-${i}`)),
+        apps: Array.from({ length: SPOTS_PER_CITY }, (_, i) => makeSlot(`${key}-${i}`)),
       })
     }
 

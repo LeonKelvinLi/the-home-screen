@@ -6,6 +6,7 @@ import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
 import { SQUIRCLE_100 } from '../ios/squircle'
 import { GLYPHS } from '../data/glyphs'
+import { SLOT_CATEGORIES } from '../data/slots'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
 /**
@@ -81,15 +82,26 @@ const PHONE_APP: AppDef = {
  * An empty slot: same silhouette as a real icon, unfilled, opening the reserve
  * screen. Every one is a live pitch to the next food truck.
  */
-export const makeSlot = (key: string | number): AppDef => ({
-  id: `slot.${key}`,
-  name: 'Reserve a Spot',
-  label: 'Available',
-  icon: <SlotIcon fill />,
-  kind: 'system',
-  systemKey: 'reserve',
-  tint: '#1C1C1E',
-})
+export const makeSlot = (key: string | number): AppDef => {
+  /*
+    A slot id looks like `oakland-6`, and the trailing number is the operator's
+    own numbering of the twenty-four categories. Reading it back out is what
+    lets a tile know it is the Italian spot without the page having to thread
+    the category through — appById synthesises these on lookup, so there is
+    nowhere else to carry it.
+  */
+  const n = Number(String(key).split('-').pop())
+  const cat = Number.isFinite(n) ? SLOT_CATEGORIES[n] : undefined
+  return {
+    id: `slot.${key}`,
+    name: cat ? `${cat.name} — spot available` : 'Reserve a Spot',
+    label: cat ? cat.label : 'Available',
+    icon: <SlotIcon fill />,
+    kind: 'system',
+    systemKey: 'reserve',
+    tint: '#1C1C1E',
+  }
+}
 
 /* Moved to data/cities.ts — plain data, so the landing page can read the count
    without dragging this file's icons and JSX into the first response. */
