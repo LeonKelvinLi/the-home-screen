@@ -11,11 +11,44 @@
   */
   --ink: #000;
   --paper: #fff;
-  --muted: rgba(60, 60, 67, 0.6);
-  --tertiary: rgba(60, 60, 67, 0.3);
+  /*
+    NOT Apple's values any more, and deliberately so.
+
+    iOS secondary label is rgba(60,60,67,0.6) and tertiary is 0.3, and those are
+    what these were. Measured against the pixels they actually composite onto,
+    secondary came out at 3.44:1 and tertiary at 1.71:1 — both under the 4.5:1
+    floor for body text, tertiary by a factor of nearly three.
+
+    Apple can afford that. This app cannot, for two reasons.
+
+    Secondary is what every menu item's description is drawn in — what is in the
+    food. Someone ordering lunch outdoors on a three-year-old phone has to be
+    able to read whether the torta has beans in it. That is not decoration.
+
+    Tertiary is worse, because of WHAT is written in it: "this is a working
+    preview", "no business has agreed an offer yet", "nothing can be charged",
+    "prices are the operator's estimate". Every honest caveat in this app was
+    rendered in the single least legible colour on the screen. A disclosure
+    nobody can read is not a disclosure, and the fact that it happened by
+    inheriting a system palette rather than by intent does not change how it
+    lands on someone who later says they were never told.
+
+    Both now clear 4.5:1 on white AND on the #F2F2F7 grouped-list grey, which
+    are the two surfaces they land on. The hierarchy survives — secondary is
+    still visibly darker than tertiary — it is just carried by a smaller gap
+    plus the size and weight differences that were always there too.
+  */
+  --muted: rgba(60, 60, 67, 0.8);
+  --tertiary: rgba(60, 60, 67, 0.73);
   --line: rgba(60, 60, 67, 0.29);
   --line-strong: rgba(60, 60, 67, 0.36);
   --blue: #007aff;
+  /*
+    #007aff is 3.59:1 on white — fine as a FILL with white text on it, under the
+    floor as text itself. Back buttons and inline links use this instead; it
+    reads as the same blue and clears 5.6:1.
+  */
+  --blue-text: #0062d6;
   /* #30d158 is the DARK-mode green; light mode is #34C759. */
   --green: #34c759;
   --orange: #ff9500;
@@ -1430,7 +1463,7 @@ textarea {
   padding: 12px;
   font-size: 13.5px;
   font-weight: 600;
-  color: var(--blue);
+  color: var(--blue-text);
 }
 
 .tip-block {
@@ -2492,7 +2525,8 @@ textarea {
   gap: 5px;
   min-height: 44px;
   padding: 0 8px;
-  color: #007aff;
+  /* Was #007aff at 3.59:1. This is the only way back out of a brand page. */
+  color: var(--blue-text);
   font-size: 17px;
   letter-spacing: -0.4px;
 }
@@ -3827,7 +3861,7 @@ textarea {
   margin-top: 2px;
   font-size: 12.5px;
   font-weight: 700;
-  color: var(--blue);
+  color: var(--blue-text);
   text-decoration: none;
 }
 

@@ -74,7 +74,9 @@ export const GOODS_CATEGORIES: SlotCategory[] = [
   { n: 15, name: 'Grocery and market', label: 'Grocery' },
   { n: 16, name: 'Butcher and seafood', label: 'Butcher' },
   { n: 17, name: 'Liquor and wine', label: 'Liquor' },
-  { n: 18, name: 'Dog boutique', label: 'Dog shop' },
+  /* Widened from "Dog boutique" to seat a breeder without renumbering the
+     list — see data/placements.ts. The label under the tile is unchanged. */
+  { n: 18, name: 'Dog boutique and breeder', label: 'Dog shop' },
   { n: 19, name: 'Art gallery', label: 'Art' },
   { n: 20, name: 'Clothing brand or boutique', label: 'Clothing' },
   { n: 21, name: 'Shoe boutique', label: 'Shoes' },

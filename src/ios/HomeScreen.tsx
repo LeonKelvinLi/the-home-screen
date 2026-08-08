@@ -3,7 +3,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, CITY_PAGES, DOCK_APPS, makeSlot } from '../apps/registry'
+import { APP_GROUPS, CITY_PAGES, DOCK_APPS, appForSlot, makeSlot } from '../apps/registry'
 import { SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
@@ -209,7 +209,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           section: slotPage.heading,
           tile: slotTile,
           rowGap: slotGap,
-          apps: slotPage.categories.map((_, i) => makeSlot(`${key}-${slotPage.kind}-${i}`)),
+          apps: slotPage.categories.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${i}`)),
         })
       }
     }

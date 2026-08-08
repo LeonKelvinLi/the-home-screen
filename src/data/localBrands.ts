@@ -159,6 +159,62 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     /*
+      SIN CITY PITS, LLC — and it is not a barbecue joint.
+
+      The name reads as BBQ and it is not: "Pits" means pit bulls. This is an
+      American Pitbull Terrier kennel in Las Vegas run by Chris Cabral, breeding
+      dogs and running a canine semen cryobank. Their own site has no menu, no
+      food, no ordering platform and no /menu route — the navigation is
+      about, gallery, breedings, puppies, males, females, ancestors, blog.
+      Checked across four of their own pages before writing any of this down.
+
+      NOT A SINGLE PRICE EXISTS ANYWHERE ON THEIR SITE. /puppies says only that
+      "Payment is required to lock in your future puppy" and sends buyers to ask.
+      So this is contactOnly with an empty menu — the correct outcome, not a gap
+      to fill. A puppy is not a thing to put a made-up number on.
+
+      THEIR CONTACT PAGE STILL HAS THE SITE BUILDER'S DUMMY DATA ON IT. It lists
+      555-555-5555 alongside (702) 531-4960, and mymail@mailservice.com
+      alongside two real-looking addresses. Only the number that is obviously
+      theirs is carried over. The email is left off entirely: three are
+      published, nothing indicates which is read, and a message into an
+      unmonitored inbox is worse than no address at all.
+
+      NO STREET ADDRESS IS PUBLISHED — the ZIP 89141 is all there is, consistent
+      across every page. They also claim to be "home based in Las Vegas and
+      Colorado" without giving the Colorado location, so neither a street line
+      nor a second city is stated here.
+
+      HOURS ARE NOT CARRIED OVER. The site says "Monday-Sunday OPEN 24hrs",
+      which is template filler on a home kennel, not opening hours.
+
+      The two Instagram links were both unreadable — Instagram blocks crawlers
+      and stories expire in 24 hours — so nothing from them is recorded. The
+      handle in the story URL is how the business was confirmed.
+    */
+    slug: 'sin-city-pits',
+    name: 'Sin City Pits',
+    label: 'Sin City Pits',
+    cuisine: 'Pitbull kennel and breeder',
+    tagline: 'American Pitbull Terrier breeder in Las Vegas. Est. 2012.',
+    color: '#B3131B|#1A1A1A',
+    // No icon file. Their wordmark is published on their own site, which is
+    // exactly why it is not reproduced here — redrawing a real business's mark
+    // with an image model produces a convincing fake of it.
+    icon: '',
+    prep: 0,
+    category: 'Service',
+    site: 'https://www.sincitypits.com/',
+    siteCta: 'See their dogs',
+    siteNote: 'Litters, pedigrees and availability are on sincitypits.com',
+    phone: '(702) 531-4960',
+    address: 'Las Vegas, NV 89141',
+    contactOnly:
+      'Sin City Pits breeds American Pitbull Terriers and runs a canine semen bank \u2014 not a kitchen, so there is nothing to order here. They publish no prices at all: litters, stud fees and shipping are quoted by conversation. Call them, or start on their site.',
+    items: [],
+  },
+  {
+    /*
       TEQUILA'S TAQUERÍA — LIVERMORE AVE, and the branch matters again.
 
       Three shops: Livermore Ave (this one), Vasco Rd, and San Jose. Each has

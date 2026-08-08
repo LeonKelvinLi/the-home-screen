@@ -123,7 +123,7 @@ export const PAGES: Record<PageKey, Page> = {
         every kitchen here"; that qualifier is what was missing.
       */
       'The app is that walk, put on a phone. Most of the icons are kitchens, and opening one puts you in their menu at their prices — they set those themselves, and nobody else edits them. One cart runs across every kitchen on the screen, so ordering from three of them is one checkout instead of three. A few icons are not kitchens and open on a contact card instead.',
-      'It opens on a dial pad because BEASTY is what the keys spell: 2-3-2-7-8-9. Behind it are pages for Oakland, Richmond, Berkeley and the other Bay Area cities on Glenn’s list. Most of them start empty. An empty page is the honest version — it means nobody there has signed up yet, and it is what he shows a business owner to say the space is theirs.',
+      'It opens on a dial pad because BEASTY is what the keys spell: 2-3-2-7-8-9. Behind it are pages for Oakland, Richmond, Berkeley and the rest of Glenn’s list — nine Bay Area cities and, now, Las Vegas. Most of them start empty. An empty page is the honest version — it means nobody there has signed up yet, and it is what he shows a business owner to say the space is theirs.',
     ],
   },
 
@@ -199,7 +199,7 @@ export const PAGES: Record<PageKey, Page> = {
   careers: {
     title: 'Bring a business onto the app',
     body: [
-      'This page is for a customer who knows a business that belongs on the home screen. The ones that fit are small and run by the people who own them, in one of the cities with a page waiting — Oakland, Richmond, Berkeley and the rest of the Bay Area list. Food is most of it: kitchens, food trucks, small counters. It is not only food. There is an apparel label and a drinkware maker on there already.',
+      'This page is for a customer who knows a business that belongs on the home screen. The ones that fit are small and run by the people who own them, in one of the cities with a page waiting — Oakland, Richmond, Berkeley, the rest of the Bay Area list, and Las Vegas. Food is most of it: kitchens, food trucks, small counters. It is not only food. There is an apparel label and a drinkware maker on there already.',
       'Three things make an icon possible. Their own menu or product list with their own prices, which they set and nobody else edits. A logo, or any clean image of their mark. And one person who answers a phone or an email.',
       'To send one, open Reserve a Spot and fill it in: the business name, what they make, a phone or email, their city, and an Instagram handle if they have one. A name and a way to reach them is enough to start. There is no queue and no cap, so a good business is not competing with anyone else for a place.',
       'After that it goes to Glenn and he contacts them himself. Nothing is committed until he has — a spot is real only once he has spoken to the owner. Worth telling them a referral is on the way, so the call is not a cold one.',

@@ -25,6 +25,15 @@ export const CITY_PAGES = [
   'Livermore',
   'Antioch',
   'Brentwood',
+  /*
+    THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
+
+    Every other page on this list is within about an hour of Richmond, which is
+    what made "the Bay Area cities on Glenn's list" a true sentence. It is not
+    one any more, and the copy that said it has been changed rather than left to
+    quietly mislead a business owner reading it in Nevada.
+  */
+  'Las Vegas',
 ] as const
 
 /**

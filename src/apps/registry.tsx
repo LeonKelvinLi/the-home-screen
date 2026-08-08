@@ -6,6 +6,7 @@ import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
 import { SQUIRCLE_100 } from '../ios/squircle'
 import { GLYPHS } from '../data/glyphs'
+import { CITY_PLACEMENTS } from '../data/placements'
 import { categoriesFor } from '../data/slots'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
@@ -113,6 +114,27 @@ export const makeSlot = (key: string | number): AppDef => {
 /* Moved to data/cities.ts — plain data, so the landing page can read the count
    without dragging this file's icons and JSX into the first response. */
 export { CITY_PAGES } from '../data/cities'
+
+/**
+ * The app for a slot: the business that has taken it, or the empty outline.
+ *
+ * City pages call this instead of makeSlot so that a claimed spot draws the
+ * real business — its logo, its name, opening its real page — while every
+ * unclaimed one stays a dashed outline. An id in the placements map that
+ * matches no known brand falls back to the empty tile rather than throwing:
+ * a typo should leave a spot looking unsold, not take the home screen down.
+ */
+export const appForSlot = (key: string | number): AppDef => {
+  const claimed = CITY_PLACEMENTS[String(key)]
+  if (claimed) {
+    const app = ALL_APPS.find((a) => a.id === claimed)
+    if (app) return app
+    if (import.meta.env.DEV) {
+      console.warn(`[placements] ${key} points at unknown brand ${claimed}; drawing an empty spot`)
+    }
+  }
+  return makeSlot(key)
+}
 
 /*
   The Reserve screen as a destination, for anything that wants to open it
