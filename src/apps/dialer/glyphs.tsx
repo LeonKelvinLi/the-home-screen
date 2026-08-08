@@ -83,14 +83,19 @@ export function ReviewsMark({ size = 24 }: MarkProps) {
  * The way in, once the screen stops pretending to be a phone.
  *
  * The green button keeps its position and its colour, but a handset means
- * "call" and this button enters an app. An arrow going through a doorway is
- * what it actually does.
+ * "call" and this button enters an app. Drawn to the operator's reference: a
+ * rounded doorway open on its left side, and a thick arrow going through the
+ * gap. Heavier strokes than the first version, which read as thin at the size
+ * it is actually used.
  */
 export function EnterMark({ size = 24 }: MarkProps) {
   return (
-    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
-      <path d="M13.4 2.6h5.2a2.8 2.8 0 0 1 2.8 2.8v13.2a2.8 2.8 0 0 1-2.8 2.8h-5.2a1.4 1.4 0 0 1 0-2.8h4.4a.8.8 0 0 0 .8-.8V6.2a.8.8 0 0 0-.8-.8h-4.4a1.4 1.4 0 0 1 0-2.8Z" />
-      <path d="M9.5 6.6a1.4 1.4 0 0 1 2 0l4.4 4.4a1.4 1.4 0 0 1 0 2l-4.4 4.4a1.4 1.4 0 1 1-2-2l2-2H3.6a1.4 1.4 0 0 1 0-2.8h7.9l-2-2a1.4 1.4 0 0 1 0-2Z" />
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      {/* The doorway: a rounded square with its left wall cut away, so the
+          arrow has somewhere to enter. */}
+      <path d="M12.9 1.7h5.6a3.8 3.8 0 0 1 3.8 3.8v13a3.8 3.8 0 0 1-3.8 3.8h-5.6a1.55 1.55 0 0 1 0-3.1h5.2a1.3 1.3 0 0 0 1.3-1.3V6.1a1.3 1.3 0 0 0-1.3-1.3h-5.2a1.55 1.55 0 0 1 0-3.1Z" />
+      {/* The arrow. */}
+      <path d="M10.55 5.9a1.55 1.55 0 0 1 2.2 0l5 5a1.55 1.55 0 0 1 0 2.2l-5 5a1.55 1.55 0 1 1-2.2-2.2l2.35-2.35H3.3a1.55 1.55 0 0 1 0-3.1h9.6L10.55 8.1a1.55 1.55 0 0 1 0-2.2Z" />
     </svg>
   )
 }

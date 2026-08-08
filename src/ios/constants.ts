@@ -27,7 +27,16 @@ export const ICON_SIZE = 60
  * fits six. 25 at a 60px tile: the room comes from the page's top padding and
  * from four pixels of tile, so the grid reads as rows rather than a block.
  */
-export const ROW_GAP_PHONE = 25
+/*
+  19, down from 25.
+
+  The phone tile went 60 to 66 at the operator's request. Row pitch is tile +
+  label + gap, so at the old gap a page lost a whole row and dropped from 24
+  icons to 20 — a change he did not ask for and would notice. 66 + 20 + 19 is
+  105, exactly the pitch it was at 60 + 20 + 25, so the tiles are bigger, the
+  page still holds six rows, and the density is unchanged.
+*/
+export const ROW_GAP_PHONE = 19
 export const ROW_GAP_PAD = 34
 
 /**

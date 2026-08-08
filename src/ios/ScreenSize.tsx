@@ -47,7 +47,7 @@ function metricsFor(w: number): Pick<ScreenSize, 'device' | 'iconSize' | 'column
     At 60 the rows get a 20px gap and the columns get 28px, and the whole thing
     reads as a grid again. Twenty-four a page, six rows, unchanged.
   */
-  if (w < PHONE_MAX) return { device: 'phone', iconSize: 60, columns: 4, radius: 0 }
+  if (w < PHONE_MAX) return { device: 'phone', iconSize: 66, columns: 4, radius: 0 }
   if (w < 900) return { device: 'pad', iconSize: 72, columns: 5, radius: SCREEN_RADIUS }
   if (w < 1180) return { device: 'pad', iconSize: 76, columns: 6, radius: SCREEN_RADIUS }
   return { device: 'pad', iconSize: 78, columns: 8, radius: SCREEN_RADIUS }
