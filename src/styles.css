@@ -4079,7 +4079,7 @@ textarea {
   return reads as something coming back to life.
 */
 .dialer.is-up .dialer-crt {
-  animation: crt-on 1400ms cubic-bezier(0.16, 0.9, 0.3, 1) both;
+  animation: crt-on 1800ms cubic-bezier(0.16, 0.9, 0.3, 1) both;
 }
 
 @keyframes crt-on {
@@ -5172,9 +5172,28 @@ textarea {
   }
 }
 
-/* The dog comes up with the word rather than before it. */
+/*
+  The dog arrives with the word, then keeps breathing.
+
+  Two animations on one element: the landing runs once, and the float takes over
+  when it finishes — chained by delay rather than by a class change, so nothing
+  has to be scheduled in JavaScript. Slow and small on purpose: 3.4s and 5px is
+  a mark that is alive, where anything faster is a mark that is fidgeting.
+*/
 .dialer.is-beasty .dialer-biggie {
-  animation: biggie-land 700ms cubic-bezier(0.16, 1, 0.3, 1) 260ms both;
+  animation:
+    biggie-land 700ms cubic-bezier(0.16, 1, 0.3, 1) 260ms both,
+    biggie-float 3400ms ease-in-out 960ms infinite;
+}
+
+@keyframes biggie-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
 }
 
 @keyframes biggie-land {
@@ -5276,7 +5295,7 @@ textarea {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 2;
-  animation: phosphor 2200ms cubic-bezier(0.2, 0, 0.5, 1) both;
+  animation: phosphor 3000ms cubic-bezier(0.2, 0, 0.5, 1) both;
 }
 
 @keyframes phosphor {
@@ -5312,7 +5331,7 @@ textarea {
   background:
     repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0.14) 0 1px, transparent 1px 3px),
     radial-gradient(ellipse at center, transparent 42%, rgba(0, 0, 0, 0.55) 100%);
-  animation: tube-warm 1400ms ease-out both;
+  animation: tube-warm 1800ms ease-out both;
 }
 
 @keyframes tube-warm {
@@ -5388,14 +5407,37 @@ textarea {
 .dialer.is-instant .dialer-key,
 .dialer.is-instant .dialer-call,
 .dialer.is-instant .dialer-tab,
-.dialer.is-instant .dialer-biggie,
 .dialer.is-instant .dialer-letter,
 .dialer.is-instant .dialer-number,
 .dialer.is-instant .dialer-crt {
   animation: none !important;
 }
 
+/*
+  The dog keeps breathing even when the arrival is skipped.
+
+  Suppressing everything on `.dialer-biggie` took the continuous float with the
+  one-shot landing, so anyone who tapped to skip — or came back from the app,
+  which now lands settled — got a motionless mark. The landing is what should be
+  skipped; being alive is not an entrance.
+*/
+.dialer.is-instant .dialer-biggie {
+  animation: biggie-float 3400ms ease-in-out infinite !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
+  /*
+    !important, because the rule it has to beat carries one.
+
+    `.dialer.is-instant .dialer-biggie` uses !important to keep the float alive
+    through a skip, and !important wins on cascade order regardless of where the
+    rule sits. Someone who asked the system for less movement outranks that, so
+    this needs the same weight — see the declaration below.
+  */
+  .dialer.is-instant .dialer-biggie {
+    animation: none !important;
+  }
+
   .dialer-phosphor,
   .dialer.is-up .dialer-crt::after,
   .dialer.is-up .dialer-key,

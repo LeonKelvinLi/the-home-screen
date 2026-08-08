@@ -78,11 +78,15 @@ const HOLD_MS = 1800
 */
 const CORRUPT_MS = 2400
 const DOWN_MS = 750
-const BLACK_MS = 1800
-/* 1400, up from 950 — the operator wants the picture to take its time coming
-   back. It was already slower than the power-down on purpose; this widens the
-   gap, which is what makes the return read as warming rather than switching. */
-const UP_MS = 1400
+/* 2800. The operator asked for another second of dark "to build more distress
+   and confusion" — and he is right that the silence is the part doing the work.
+   Any touch still skips the whole thing. */
+const BLACK_MS = 2800
+/* 1800. It was already slower than the 750ms power-down on purpose; at nearly
+   two and a half times it, the return reads as a tube warming rather than a
+   screen switching on — which is the whole difference the operator is asking
+   for when he says it opens too quick. */
+const UP_MS = 1800
 
 /** One key lights per step while something dials BEASTY across the pad. */
 const SPELL_STEP_MS = 150
