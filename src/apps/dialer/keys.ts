@@ -86,9 +86,9 @@ export const DIALER_KEYS: DialerKey[] = [
   { digit: '7', letters: 'PQRS', label: 'COLLABS', action: { kind: 'panel', page: 'collabs' } },
   { digit: '8', letters: 'TUV', label: 'DONATE', action: { kind: 'panel', page: 'donations' } },
   { digit: '9', letters: 'WXYZ', label: 'CAREERS', action: { kind: 'panel', page: 'careers' } },
-  // Biggie's Diamond membership — labelled MEMBERSHIP, which is what a customer
-  // who has never heard of it is looking for.
-  { digit: '*', label: 'MEMBERSHIP', action: { kind: 'enter', app: MEMBERS } },
+  // Biggie's Diamond membership. MEMBERS, not MEMBERSHIP — seven characters
+  // instead of ten, so it sits comfortably in the key at any size.
+  { digit: '*', label: 'MEMBERS', action: { kind: 'enter', app: MEMBERS } },
   { digit: '0', letters: '+', label: 'SIGN IN', action: { kind: 'enter', app: ACCOUNT } },
   { digit: '#', label: 'SHARE', action: { kind: 'share' } },
 ]
