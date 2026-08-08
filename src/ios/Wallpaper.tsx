@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { CITY_PAGES } from '../data/cities'
 
 /**
  * The home-screen wallpaper, which changes with the city.
@@ -19,8 +20,49 @@ export function wallpaperFor(city: string | null | undefined): string {
     .replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
-  return CITY_WALLPAPERS.has(slug) ? `/wallpapers/${slug}.webp` : FALLBACK
+  if (CITY_WALLPAPERS.has(slug)) return `/wallpapers/${slug}.webp`
+  /*
+    A city with its own PAGE but no photograph yet gets the neutral one, not
+    San Francisco.
+
+    The San Francisco fallback works for someone whose location we do not have:
+    it says "this marketplace is a Bay Area thing" and claims nothing about
+    where they are. It stops working the moment a city has a page of its own,
+    because then the Golden Gate is sitting at the top of a screen headed LAS
+    VEGAS, telling a Nevada business owner we do not know the difference. Las
+    Vegas was the first page outside California and turned that into a live
+    defect the same day it was added.
+
+    The placeholder is a plain dark gradient with no landmark and no text in it,
+    which is the honest picture for "we have not shot this city yet" — and it
+    keeps the icon and label contrast identical to the photographs.
+  */
+  return PAGED_CITIES.has(slug) ? PLACEHOLDER : FALLBACK
 }
+
+/*
+  Neutral, generated here rather than photographed — see tools/wallpapers.mjs
+  for the real ones. Named with a leading underscore so it sorts away from the
+  cities and nobody mistakes it for one.
+*/
+const PLACEHOLDER = '/wallpapers/_placeholder.webp'
+
+/**
+ * Cities that have a home-screen page, lowercased and slugged.
+ *
+ * Derived from CITY_PAGES rather than typed out again, so adding a city can
+ * never quietly reintroduce the wrong-landmark bug.
+ */
+const PAGED_CITIES = new Set(
+  CITY_PAGES.map((c) =>
+    c
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
+      .replace(/[^a-z0-9]+/g, '-')
+      .replace(/^-|-$/g, ''),
+  ),
+)
 
 /*
   San Francisco, for anyone who declines location or whose city we have no
