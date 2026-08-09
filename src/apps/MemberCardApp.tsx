@@ -9,6 +9,8 @@ import {
   leave,
   makeCode,
   member,
+  useWelcome,
+  welcomeAvailable,
 } from '../lib/member'
 import { LISTED_KITCHENS } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
@@ -151,21 +153,60 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           cannot afford.
         */}
         <h2 className="member-h">Simulate a shop scanning you</h2>
+        {/*
+          EVERY listed business, not the first four.
+
+          slice(0, 4) meant a visit could only ever be recorded at four of the
+          thirteen, so the places-visited count on the profile — the number that
+          whole page is built around — could not go above four however much
+          somebody used the app. An arbitrary cap on the only thing that feeds
+          the headline figure.
+        */}
         <div className="member-sim">
-          {LISTED_KITCHENS.slice(0, 4).map((b) => (
-            <button
-              key={b.id}
-              className="member-sim-row"
-              onClick={() => {
-                const r = checkIn(b.id)
-                setM(member())
-                say(r.ok ? `+1 point at ${b.name}` : `Already counted at ${b.name} today`)
-              }}
-            >
-              <span className="member-sim-mark" style={{ background: b.logo.bg.split('|')[0] }} />
-              <span>{b.name}</span>
-            </button>
-          ))}
+          {LISTED_KITCHENS.map((b) => {
+            const offer = b.offers?.welcome && !b.offers?.mock ? b.offers.welcome : null
+            const canWelcome = offer ? welcomeAvailable(b.id) : false
+            return (
+              <button
+                key={b.id}
+                className="member-sim-row"
+                onClick={() => {
+                  const r = checkIn(b.id)
+                  /*
+                    The welcome offer is spent on the FIRST visit and never
+                    again — which is what "welcome" means, and is the half of
+                    the operator's design that existed in lib/member.ts with
+                    nothing anywhere calling it.
+                  */
+                  const used = canWelcome ? useWelcome(b.id) : false
+                  setM(member())
+                  if (used) say(`Welcome offer honoured at ${b.name}`)
+                  else say(r.ok ? `+1 point at ${b.name}` : `Already counted at ${b.name} today`)
+                }}
+              >
+                <span className="member-sim-mark" style={{ background: b.logo.bg.split('|')[0] }} />
+                <span>{b.name}</span>
+                {/* Inline rather than a class: a workflow is editing styles.css
+                    concurrently and one small badge is not worth the collision. */}
+                {canWelcome && (
+                  <span
+                    style={{
+                      marginLeft: 'auto',
+                      padding: '2px 8px',
+                      borderRadius: 8,
+                      background: 'rgba(48, 209, 88, 0.18)',
+                      color: '#1a6b2e',
+                      fontSize: 11,
+                      fontWeight: 700,
+                      letterSpacing: '0.04em',
+                    }}
+                  >
+                    WELCOME
+                  </span>
+                )}
+              </button>
+            )
+          })}
         </div>
 
         <button

@@ -27,7 +27,13 @@ import { PARTNER_COUNT } from './data/cities'
   pitch to a prospective business is exactly the kind of stale constant nobody
   notices.
 */
-if (import.meta.env.DEV && LISTED_KITCHENS.length !== PARTNER_COUNT) {
+/*
+  Not DEV-only any more. This drifted to 13 against a real 12 and shipped that
+  way, because the only thing watching was a warning nobody runs a dev server to
+  see. One integer comparison at module load is worth a wrong number in the
+  pitch showing up in a production log.
+*/
+if (LISTED_KITCHENS.length !== PARTNER_COUNT) {
   console.warn(
     `PARTNER_COUNT is ${PARTNER_COUNT} but there are ${LISTED_KITCHENS.length} listed partners. ` +
       'Update PARTNER_COUNT in src/data/cities.ts.',
