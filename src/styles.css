@@ -879,7 +879,12 @@ textarea {
 }
 
 .cat-tab.is-on {
-  background: var(--blue);
+  /*
+    The darker blue, not #007aff. White on #007aff measures 4.02:1 at this size
+    — under the 4.5 floor — and this pill is how you know which part of a menu
+    you are looking at. 5.6:1 here.
+  */
+  background: var(--blue-text);
   color: #fff;
 }
 
@@ -6091,4 +6096,34 @@ textarea {
 
 .brand-clip-link:active {
   opacity: 0.86;
+}
+
+/* ---------- tap targets on the Spotlight row ---------- */
+
+/*
+  Both of these are drawn at iOS's own sizes and both are under the 44pt
+  minimum as HIT AREAS — the back circle is 34x34 and the Search pill 29 tall.
+  On a native home screen that is fine because the OS grows the touch region
+  past the artwork; on the web nothing does it for you, so a thumb lands beside
+  the control and nothing happens.
+
+  A transparent ::after grows the region without touching the artwork, so both
+  still look exactly like the iOS originals and both now answer a real thumb.
+  Not padding or min-height: either would change the pill's drawn geometry,
+  which is the one thing that must not move.
+*/
+.spotlight,
+.spotlight-back {
+  position: relative;
+}
+
+.spotlight::after,
+.spotlight-back::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max(100%, 44px);
+  height: 44px;
 }
