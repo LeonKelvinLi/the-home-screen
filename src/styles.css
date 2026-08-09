@@ -4054,8 +4054,35 @@ textarea {
     is a trade the operator should make deliberately rather than one buried in a
     stylesheet.
   */
-  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 830));
-  --u: min(calc(min(100vw, 440px) / 440), calc(100dvh / 830));
+  /*
+    THE SAFE-AREA INSET COMES OFF THE HEIGHT BUDGET FIRST.
+
+    This divided the whole of dvh by 830 and then .dialer-display added
+    env(safe-area-inset-top) as padding on top — so on any phone with a notch or
+    a Dynamic Island the layout was scaled to fill a screen taller than the one
+    it had, by exactly the inset. Something then had to give, and overflow:hidden
+    on the brand block meant the thing that gave was the bottom half of the
+    BEASTY wordmark, on every real iPhone, while measuring perfectly clean in
+    every emulator I had — because emulated env() insets are zero.
+
+    Measured with the inset forced to 44 and 59: the content ran 28 to 59pt past
+    the bottom of the screen. Subtracting the insets before dividing is what
+    makes the number honest, and it costs nothing on a device that has none.
+
+    830 became 860 for the remainder. Subtracting the inset fixes most of it but
+    not all, because the tab bar and the honest-count line are fixed pixels that
+    do not scale with u — so a short screen with a big island still ran 16pt
+    over. Swept against insets of 0, 44 and 59 across six viewports in both
+    engines: 860 is the first that clears it, worst case 1pt on a 360x620 phone
+    with a 59pt island, which is not a device pairing that exists.
+  */
+  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 860));
+  --u: min(
+    calc(min(100vw, 440px) / 440),
+    calc(
+      (100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) / 860
+    )
+  );
 
   /*
     The chrome does NOT scale, at all.
@@ -4320,7 +4347,22 @@ textarea {
     call button that the strict iOS proportion leaves once browser chrome has
     eaten from both ends.
   */
-  flex: 1.9 1 0;
+  /*
+    flex-basis AUTO and shrink ZERO — not basis 0 with a min-height.
+
+    This was `1.9 1 0` plus `min-height: min-content`, which measures clean in
+    Chrome at every viewport and still clipped the wordmark on a real iPhone.
+    Basis 0 means the box's base size is nothing and it is sized purely out of
+    leftover space; min-content was the only thing flooring it, and intrinsic
+    sizing on a flex item is exactly where WebKit and Blink disagree. Testing it
+    headless said fixed when it was not.
+
+    Basis auto makes the base size the content itself, and shrink 0 stops
+    anything compressing it below that. No intrinsic keyword is involved, so
+    there is nothing left for a browser to disagree about. It still grows by its
+    1.9 share of free space, so the pad sits where it did.
+  */
+  flex: 1.9 0 auto;
   /*
     Never smaller than the dog and the wordmark it contains.
 
@@ -4352,12 +4394,21 @@ textarea {
     top off Biggie's head — the box was 96pt tall holding 170pt of content, so
     the dog started 19pt above his own container and got cut there.
 
-    min-content makes the box fit what is in it, so neither happens. The
-    overflow guard stays as a backstop for a viewport too short for any of
-    this, where clipping really is the better of two bad options.
+    The overflow guard is GONE, and that is the actual fix.
+
+    It was added when the failure was the wordmark printing through the 1-2-3
+    row, on the reasoning that clipped beats overlapping. That reasoning is what
+    kept beheading BEASTY on a real iPhone: whenever this box came out shorter
+    than its contents for any reason — and I could not reproduce which reason,
+    across two engines, four viewports and three safe-area insets — the clip
+    silently took the bottom off the wordmark instead of showing it.
+
+    With flex-basis auto and shrink 0 above, the box IS its content's height, so
+    there is nothing to overflow and nothing for a clip to do except hide a
+    symptom I cannot see from here. Removing it means that if some device does
+    size this differently, the wordmark is drawn rather than cut in half.
   */
   min-height: min-content;
-  overflow: hidden;
 }
 
 .dialer-number {
