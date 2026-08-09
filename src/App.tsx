@@ -42,9 +42,34 @@ export default function App() {
     animation. That is a trap, and it is the one thing this must not be.
   */
   const [entered, setEntered] = useState(
-    () => typeof window !== 'undefined' && window.history.state?.hs === 'app',
+    () =>
+      typeof window !== 'undefined' &&
+      (window.history.state?.hs === 'app' ||
+        /^b_[a-z0-9]{2,40}$/.test(new URLSearchParams(window.location.search).get('b') ?? '')),
   )
-  const [openOn, setOpenOn] = useState<string | null>(null)
+  /*
+    A shared business link, honoured on arrival.
+
+    Every business page has a Share button and it hands out `/?b=<brandId>` —
+    which nothing read, so someone who was sent "look at The Yard" landed on the
+    generic intro and had to go find it. A share button whose link does not open
+    the thing you shared is worse than no share button.
+
+    Arriving this way skips the takeover on purpose: the animation is for
+    someone meeting BEASTY, not for someone a friend just sent to a menu.
+
+    Validated by SHAPE, not against the catalogue. Importing brandById here
+    would pull the whole catalogue into the first response, which is the exact
+    cost PARTNER_COUNT exists to avoid — so the id is pattern-checked and the
+    Shell resolves it, falling back to the home screen if it names nothing.
+  */
+  const shared = (() => {
+    if (typeof window === 'undefined') return null
+    const id = new URLSearchParams(window.location.search).get('b')
+    return id && /^b_[a-z0-9]{2,40}$/.test(id) ? id : null
+  })()
+
+  const [openOn, setOpenOn] = useState<string | null>(shared)
   /*
     Bumped on every return from the app, and used as IntroScreen's key.
 

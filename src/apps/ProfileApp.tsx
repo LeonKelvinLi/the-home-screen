@@ -95,10 +95,20 @@ export function ProfileApp({ api }: { api: ShellApi }) {
     api.openApp(id)
   }
 
-  const shareProfile = async () => {
-    const url = `${location.origin}/?p=me`
+  /*
+    Shares the APP, and says so on the button.
+
+    It used to share `/?p=me`, a URL nothing reads — so "Share" on a profile
+    handed someone a link that opened the generic intro. There is no account
+    system, so a profile has no address to send anyone to; pretending otherwise
+    with a button labelled Share is a small lie told at the exact moment
+    somebody is trying to show a friend their page. When profiles have real
+    URLs this becomes the real thing and the label goes back.
+  */
+  const shareApp = async () => {
+    const url = location.origin
     try {
-      if (navigator.share) await navigator.share({ title: p.name || 'My BEASTY profile', url })
+      if (navigator.share) await navigator.share({ title: 'BEASTY', url })
       else await navigator.clipboard.writeText(url)
     } catch {
       /* Dismissed the sheet. Not an error worth a message. */
@@ -179,8 +189,8 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           <button className="btn-primary prof-action" onClick={() => setSheet('avatar')}>
             Edit profile
           </button>
-          <button className="btn-secondary prof-action" onClick={shareProfile}>
-            Share
+          <button className="btn-secondary prof-action" onClick={shareApp}>
+            Share the app
           </button>
         </div>
 
