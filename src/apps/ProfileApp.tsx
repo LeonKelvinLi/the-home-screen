@@ -6,12 +6,14 @@ import { member, isMember } from '../lib/member'
 import { favorites } from '../lib/favorites'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { brandById } from '../data/brands'
+import { CITY_PAGES } from '../data/cities'
 import { readableOn } from '../ios/contrast'
 import {
   profile as readProfile,
   saveProfile,
   downscalePhoto,
   placesVisited,
+  cityOf,
   DEFAULT_PET,
   type Profile,
 } from '../lib/profile'
@@ -53,6 +55,20 @@ export function ProfileApp({ api }: { api: ShellApi }) {
   */
   const visitedIds = placesVisited(m.checkIns)
   const visited = visitedIds.map((id) => brandById(id)).filter(Boolean)
+
+  /*
+    Places AND cities, because one number does not say the same thing as two.
+
+    Nine places in one town and nine places across five is a different kind of
+    exploring, and the second is the one that makes somebody want to beat it.
+    Costs the customer nothing to produce — it is read off addresses we already
+    hold. A business whose city cannot be resolved honestly is left out of the
+    city count rather than counted as its own, so this can undercount and can
+    never overcount.
+  */
+  const cities = new Set(
+    visited.map((b) => cityOf((b as { address?: string }).address, CITY_PAGES)).filter(Boolean),
+  )
 
   const favs = favorites()
   const topNine = favs.slice(0, 9)
@@ -149,6 +165,13 @@ export function ProfileApp({ api }: { api: ShellApi }) {
               <Gem size={18} />
               <span>[{visited.length}]</span>
             </button>
+
+            {cities.size > 0 && (
+              <p className="prof-spread">
+                {visited.length} {visited.length === 1 ? 'place' : 'places'} across {cities.size}{' '}
+                {cities.size === 1 ? 'city' : 'cities'}
+              </p>
+            )}
           </div>
         </header>
 

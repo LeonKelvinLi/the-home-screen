@@ -150,3 +150,42 @@ export function placesVisited(checkIns: string[]): string[] {
   }
   return [...ids]
 }
+
+/**
+ * The city an address is in, or '' when it cannot be told honestly.
+ *
+ * The addresses in this catalogue are not one format. Some end in the city
+ * ("2534 Durant Ave, Berkeley"), some end in a state and a ZIP ("Las Vegas, NV
+ * 89141", "Industrial Pl, Fremont, CA 94538"), one is a bare city ("Pinole")
+ * and one is a region rather than a city at all ("Philadelphia and southern New
+ * Jersey"). Taking the last comma segment — the obvious approach — returns
+ * "NV 89141" for Las Vegas, which would then be counted as its own city.
+ *
+ * So a KNOWN city wins first, matched against the list the app already has
+ * pages for. The fallback only accepts a segment with no digits that is not a
+ * two-letter state code, and returns nothing rather than guessing — a place
+ * that cannot be resolved is left out of the count instead of inflating it.
+ */
+export function cityOf(address: string | undefined, known: readonly string[]): string {
+  if (!address) return ''
+  const parts = address.split(',').map((s) => s.trim()).filter(Boolean)
+  for (const part of parts) {
+    const hit = known.find((c) => part.toLowerCase() === c.toLowerCase())
+    if (hit) return hit
+  }
+  /*
+    Not one of ours, so read it from the END rather than the start.
+
+    Scanning forwards returns "Industrial Pl" for "Industrial Pl, Fremont, CA
+    94538" — a street, counted as a city. US addresses put the city last or
+    second-to-last, so drop a trailing state-and-ZIP and take what is before it.
+  */
+  const tail = [...parts].reverse()
+  for (const part of tail) {
+    if (/^[A-Z]{2}\s+\d{4,5}(-\d{4})?$/.test(part)) continue
+    if (/^[A-Z]{2}$/.test(part)) continue
+    if (/\d/.test(part)) continue
+    return part
+  }
+  return ''
+}

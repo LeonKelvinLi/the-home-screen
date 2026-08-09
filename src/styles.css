@@ -6806,3 +6806,9 @@ textarea {
     0 0 0 3px var(--paper),
     0 0 0 6px var(--blue-text);
 }
+
+.prof-spread {
+  margin: 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
