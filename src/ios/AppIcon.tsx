@@ -91,12 +91,17 @@ function AppIconBase({ icon, label, name, badge, onOpen, hideLabel, size = ICON_
         }
         open()
       }}
-      aria-label={name ?? label}
+      // The count has to be in the BUTTON's label: a button's own aria-label
+      // overrides every descendant, so the badge's label was silently dropped
+      // and the cart icon announced as just "Cart".
+      aria-label={badge ? `${name ?? label}, ${badge} in cart` : (name ?? label)}
     >
       <span className="icon-tile" style={{ width: size, height: size }}>
         {icon}
+        {/* aria-hidden: the count is carried by the button's own label above,
+            and an aria-label on a generic span is invalid regardless. */}
         {badge ? (
-          <span className="icon-badge" aria-label={`${badge} in cart`}>
+          <span className="icon-badge" aria-hidden="true">
             {badge > 99 ? '99+' : badge}
           </span>
         ) : null}

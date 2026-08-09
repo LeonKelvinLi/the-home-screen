@@ -194,6 +194,20 @@ export function ItemSheet({
         <div className="sheet-grab-area" {...sheetDrag}>
           <div className="sheet-grabber" />
         </div>
+        {/*
+          A REAL CLOSE BUTTON, because there was not one.
+
+          The three ways out were a click on the scrim, a pointer drag on the
+          grabber, and Escape. The scrim is a SIBLING of this dialog, so
+          aria-modal deliberately hides it from assistive tech — which left a
+          VoiceOver-on-touch user who opened the wrong dish with no exposed way
+          out and no keyboard to press Escape with.
+        */}
+        <button className="sheet-close" onClick={dismiss} aria-label={`Close ${item.name}`}>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true">
+            <path d="M6 6l12 12M18 6L6 18" />
+          </svg>
+        </button>
         <div className="sheet-scroll">
           {/* The dish, at the moment the customer decides. A -lg variant is
               fetched here rather than the 256px thumbnail from the menu row,
@@ -271,6 +285,7 @@ export function ItemSheet({
               rows={2}
               maxLength={240}
               placeholder="Allergies, no onion, extra sauce…"
+          aria-label="Allergies, no onion, extra sauce…"
               value={note}
               onChange={(e) => setNote(e.target.value)}
             />

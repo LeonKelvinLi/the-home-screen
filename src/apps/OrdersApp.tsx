@@ -172,7 +172,16 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                         )
                       })}
                   </div>
-                  <span className={`ticket-state is-${t.state}`}>{t.state}</span>
+                  {/*
+                    Announced when it changes, not only drawn.
+
+                    These march queued -> cooking -> ready on a six-second poll.
+                    Nothing told a screen-reader user their food was ready; they
+                    would have had to keep re-reading the page to find out.
+                  */}
+                  <span className={`ticket-state is-${t.state}`} aria-live="polite">
+                    {t.state}
+                  </span>
                 </div>
               ))}
             </section>

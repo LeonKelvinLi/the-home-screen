@@ -166,6 +166,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         <input
           className="co-input"
           placeholder="Business name"
+          aria-label="Business name"
           value={name}
           onChange={(e) => setName(e.target.value)}
           maxLength={80}
@@ -173,6 +174,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         <input
           className="co-input"
           placeholder="What you cook"
+          aria-label="What you cook"
           value={cuisine}
           onChange={(e) => setCuisine(e.target.value)}
           maxLength={60}
@@ -180,6 +182,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         <input
           className="co-input"
           placeholder="Phone or email"
+          aria-label="Phone or email"
           value={contact}
           onChange={(e) => setContact(e.target.value)}
           maxLength={100}
@@ -187,6 +190,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         <input
           className="co-input"
           placeholder="City"
+          aria-label="City"
           value={city}
           onChange={(e) => setCity(e.target.value)}
           maxLength={60}
@@ -194,13 +198,19 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         <input
           className="co-input"
           placeholder="Instagram (optional)"
+          aria-label="Instagram (optional)"
           value={social}
           onChange={(e) => setSocial(e.target.value)}
           maxLength={80}
         />
       </ListSection>
 
-      {error && <p className="co-error">{error}</p>}
+      {/* Spoken, not just drawn — see CheckoutApp. */}
+      {error && (
+        <p className="co-error" role="alert">
+          {error}
+        </p>
+      )}
     </NavScreen>
   )
 }

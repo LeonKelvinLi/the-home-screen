@@ -106,6 +106,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
           <input
             ref={field}
             placeholder="Dishes, kitchens, cities"
+          aria-label="Dishes, kitchens, cities"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           />

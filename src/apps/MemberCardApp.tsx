@@ -72,6 +72,7 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           <input
             className="co-input"
             placeholder="Your initials"
+          aria-label="Your initials"
             value={initials}
             onChange={(e) => setInitials(e.target.value)}
             maxLength={4}
@@ -80,6 +81,7 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           <input
             className="co-input"
             placeholder="Last 4 of your phone"
+          aria-label="Last 4 of your phone"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             inputMode="numeric"

@@ -31,6 +31,22 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
     phone.replace(/\D/g, '').length >= 10 &&
     (!delivering || address.trim().length > 6)
 
+  /*
+    WHY the button is dim, in the button.
+
+    It said "Place order" and stayed disabled, and nothing on the screen ever
+    stated that a phone number needs ten digits. A disabled button is also out
+    of the tab order, so a keyboard user never lands on it to discover it is
+    dim. ItemSheet already does this ("Choose a size"); checkout did not.
+  */
+  const missing = !name.trim() || name.trim().length <= 1
+    ? 'your name'
+    : phone.replace(/\D/g, '').length < 10
+      ? 'a 10-digit phone number'
+      : delivering && address.trim().length <= 6
+        ? 'a delivery address'
+        : null
+
   const submit = async () => {
     if (!valid || placing) return
     setPlacing(true)
@@ -133,7 +149,9 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
       tint="#1B47D6"
       footer={
         <button className="cartbar is-solid" onClick={submit} disabled={!valid || placing}>
-          <span className="cartbar-label">{placing ? 'Placing…' : 'Place order'}</span>
+          <span className="cartbar-label">
+            {placing ? 'Placing…' : missing ? `Add ${missing}` : 'Place order'}
+          </span>
           <span className="cartbar-total">{money(t.total)}</span>
         </button>
       }
@@ -146,6 +164,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
               <input
                 className="co-input"
                 placeholder="Street address, unit"
+          aria-label="Street address, unit"
                 value={address}
                 onChange={(e) => setAddress(e.target.value)}
                 autoComplete="street-address"
@@ -175,6 +194,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           <input
             className="co-input"
             placeholder="Name for the order"
+          aria-label="Name for the order"
             value={name}
             onChange={(e) => setName(e.target.value)}
             autoComplete="name"
@@ -183,6 +203,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           <input
             className="co-input"
             placeholder="Mobile number"
+          aria-label="Mobile number"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             inputMode="tel"
@@ -232,7 +253,16 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           </div>
         </section>
 
-        {error && <p className="co-error">{error}</p>}
+        {/*
+          role="alert" so a failed order is SPOKEN. Without it placeOrder throws,
+          focus stays on the submit button, nothing is announced, and the
+          customer walks away believing the order went through.
+        */}
+        {error && (
+          <p className="co-error" role="alert">
+            {error}
+          </p>
+        )}
       </div>
     </AppChrome>
   )
