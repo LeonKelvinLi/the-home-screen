@@ -288,6 +288,8 @@ interface ServiceGroup {
 const SEED: Seed[] = [
   {
     slug: 'dingdongtogo', name: 'DingDongtogo', label: 'DingDongtogo',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Delivery bundles', tagline: 'Delivery from the kitchen to your door',
     color: '#F26B21', icon: 'dingdongtogo', prep: 20, category: 'Bundles',
     items: [
@@ -299,6 +301,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'share-scan', name: 'Share & Scan', label: 'Share & Scan',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Grab-and-go deli', tagline: 'Grab-and-go bites and cold drinks',
     color: '#3B82F6', icon: 'share-scan', prep: 6, category: 'Grab & Go',
     items: [
@@ -310,6 +314,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'lol-catering', name: 'LOL Catering', label: 'LOL Catering',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Event catering', tagline: 'Catering for parties, offices, and pop-ups',
     color: '#7B2FF7', icon: 'lol-catering-featured', prep: 48, category: 'Catering',
     items: [
@@ -321,6 +327,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'hotboys-chicken', name: 'HotBoys Chicken', label: 'HotBoys Chicken',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Nashville hot chicken', tagline: 'Nashville-style hot chicken, fried to order',
     color: '#F2B705', icon: 'hotboys', prep: 15, category: 'Menu',
     items: [
@@ -332,6 +340,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'butter-pecan', name: 'Butter Pecan', label: 'Butter Pecan',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Ice cream & cobbler', tagline: 'Small-batch ice cream and cobblers',
     color: '#8A5A2B', icon: 'butter-pecan', prep: 6, category: 'Sweets',
     items: [
@@ -343,6 +353,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'baked-blooms', name: 'Baked Blooms', label: 'Baked Blooms',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Bakery & flowers', tagline: 'Fresh bakes and flower boxes',
     color: '#D06A8C', icon: 'baked-blooms', prep: 20, category: 'Bakery',
     items: [
@@ -354,6 +366,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'wildfork-foods', name: 'WildFork Foods', label: 'WildFork Foods',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Butcher', tagline: 'Butcher-cut proteins, ready to cook',
     color: '#C0392B', icon: 'wildfork', prep: 12, category: 'Butcher',
     items: [
@@ -365,6 +379,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'vegan-mob', name: 'Vegan Mob', label: 'Vegan Mob',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
     color: '#3C9D3C', icon: 'vegan-mob', prep: 16, category: 'Menu',
     items: [
@@ -376,6 +392,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'boss-burgers', name: 'Boss.Burgers', label: 'Boss.Burgers',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Smash burgers', tagline: 'Smash burgers with attitude',
     color: '#B3261E', icon: 'boss-burgers', prep: 12, category: 'Burgers',
     items: [
@@ -387,6 +405,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'ally-virtual', name: 'Ally Virtual', label: 'Ally Virtual',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'All-day breakfast', tagline: 'Breakfast all day, coffee bar included',
     color: '#5A4FCF', icon: 'ally-virtual', prep: 12, category: 'Breakfast',
     items: [
@@ -398,6 +418,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitc…',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Vietnamese', tagline: 'Vietnamese comfort, made fresh daily',
     color: '#1E7A6B', icon: 'gao-viet', prep: 16, category: 'Menu',
     items: [
@@ -456,6 +478,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'winkydinkydogs', name: 'WinkyDinkyDogs', label: 'WinkyDinkyD…',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Hot dogs', tagline: 'Gourmet hot dogs, loaded up',
     color: '#E8452C', icon: 'winky-dinky', prep: 10, category: 'Dogs',
     items: [
@@ -467,6 +491,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'boba', name: 'Boba', label: 'Boba',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Boba tea', tagline: 'Milk teas, fruit teas, and toppings',
     color: '#9C6644', icon: 'boba', prep: 8, category: 'Drinks',
     items: [
@@ -478,6 +504,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'masa', name: 'Masa', label: 'Masa',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Mexican', tagline: 'Handmade tortillas and street tacos',
     color: '#D97706', icon: 'masa', prep: 12, category: 'Menu',
     items: [
@@ -489,6 +517,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'waffles-cream', name: 'Waffles & Cream', label: 'Waffles & Cr…',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Waffles & ice cream', tagline: 'Waffles, cones, and cold scoops',
     color: '#EAB308', icon: 'waffles-cream', prep: 12, category: 'Menu',
     items: [
@@ -500,6 +530,8 @@ const SEED: Seed[] = [
   },
   {
     slug: 'high-scores', name: 'High Scores', label: 'High Scores',
+    review:
+      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Arcade snacks', tagline: 'Arcade snacks, pizza, and slushies',
     color: '#6D28D9', icon: 'high-scores', prep: 10, category: 'Snacks',
     items: [

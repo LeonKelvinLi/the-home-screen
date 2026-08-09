@@ -314,7 +314,9 @@ export const LOCAL_SEED: LocalSeed[] = [
     name: "Jonny's Italian Ice",
     label: "Jonny's",
     cuisine: 'Italian ice, soft serve',
-    tagline: 'Italian ice made fresh daily, and organic soft serve.',
+    /* "Organic" is a USDA-regulated term and this is their claim, not a
+       verified fact, so it is attributed the way their other claim is. */
+    tagline: 'Italian ice made fresh daily. They describe their soft serve as organic.',
     color: '#D6212B|#8E1119',
     icon: '',
     prep: 0,

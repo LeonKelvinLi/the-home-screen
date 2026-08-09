@@ -79,7 +79,7 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
           </div>
           <h2>{order.code}</h2>
           <p className="confirm-sub">
-            Ready in about {order.etaMinutes} minutes · {order.fulfilment}
+            Usually ready in about {order.etaMinutes} minutes · {order.fulfilment}
           </p>
 
           {/* Never let a local-only order look like a real one. */}

@@ -135,7 +135,9 @@ export function SettingsApp({ api }: { api: ShellApi }) {
     return (
       <NavScreen title="About" backTitle="Settings" onBack={() => setPage('root')}>
         <ListSection>
-          <ListRow label="Kitchens" value={String(LISTED_KITCHENS.length)} chevron={false} />
+          {/* "Businesses", not "Kitchens" — the count includes an apparel label and a
+              drinkware maker. ReserveApp fixed this wording already. */}
+          <ListRow label="Businesses" value={String(LISTED_KITCHENS.length)} chevron={false} />
           <ListRow label="Menu Items" value={String(items)} chevron={false} />
           <ListRow label="Version" value="0.1.0" chevron={false} />
         </ListSection>

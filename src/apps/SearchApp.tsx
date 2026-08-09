@@ -126,7 +126,9 @@ export function SearchApp({ api }: { api: ShellApi }) {
                 </button>
               ))}
             </div>
-            <h3 className="search-h">All kitchens</h3>
+            {/* Not all kitchens: the list includes a software studio, a dog walker and
+                a breeder. */}
+            <h3 className="search-h">All businesses</h3>
             {BRANDS.map((b) => (
               <button className="search-brand" key={b.id} onClick={() => api.openApp(b.id)}>
                 <BrandLogo logo={b.logo} size={44} />

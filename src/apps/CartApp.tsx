@@ -88,7 +88,10 @@ function CartRoot({ api, onCheckout }: { api: ShellApi; onCheckout: () => void }
         </div>
 
         <p className="eta">
-          Ready in about <strong>{cart.etaMinutes} min</strong>
+          {/* "usually" — prepMinutes is an estimate by category that no kitchen
+              supplied, and no kitchen has seen this order yet. BrandApp hedges
+              it; the screens where someone decides when to leave did not. */}
+          Usually ready in about <strong>{cart.etaMinutes} min</strong>
           {cart.brandCount > 1 && ' — kitchens cook in parallel'}
         </p>
 

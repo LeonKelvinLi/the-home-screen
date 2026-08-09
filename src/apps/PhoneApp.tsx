@@ -182,10 +182,21 @@ export function PhoneApp({ api }: { api: ShellApi }) {
   }
 
   if (tab === 'favourites') {
-    const favourites = BRANDS.slice(0, 6)
+    /*
+      The first six ORDERABLE businesses, not the first six of everything.
+
+      This was BRANDS.slice(0, 6), which is catalogue order, so the list headed
+      "the kitchens the operator features" opened with a Las Vegas pit bull
+      kennel and a shop with no menu. Nothing is curated here and calling it
+      featured was a claim about the operator and about those businesses; the
+      footer now says what it actually is.
+    */
+    const favourites = BRANDS.filter(
+      (b) => !b.contactOnly && !b.quoteOnly && b.menu.some((c) => c.items.length > 0),
+    ).slice(0, 6)
     return (
       <NavScreen title="Favourites" onBack={api.closeApp} backTitle="Home" footer={tabBar}>
-        <ListSection footer="Favourites are the kitchens the operator features. Tap one to open its menu.">
+        <ListSection footer="The first few businesses on the home screen, not a curated list. Tap one to open its menu.">
           {favourites.map((b) => (
             <ListRow
               key={b.id}
