@@ -72,8 +72,16 @@ export interface LocalSeed {
    * The string explains how to actually start.
    */
   quoteOnly?: string
-  /** Several priced sections rather than one. Used instead of `items`. */
-  groups?: { name: string; items: [string, string, number, string][] }[]
+  /**
+   * Several priced sections rather than one. Used instead of `items`.
+   *
+   * The fourth element is an optional priceLabel that OVERRIDES the formatted
+   * cents — Noctilucente quotes ranges ("$2,000-10,000+") and needs it. A
+   * business with exact prices does not, so it is optional here exactly as it
+   * is on `items`. It was required, which forced a fake label onto every item
+   * of any brand that simply had real prices.
+   */
+  groups?: { name: string; items: [string, string, number, string?][] }[]
   /** Kitchen's own dietary description, e.g. ['Halal']. Never a certification. */
   dietary?: string[]
   /** Partner discount. Headline states the guaranteed floor, not a range. */
@@ -156,6 +164,144 @@ export const LOCAL_SEED: LocalSeed[] = [
       ['Chili, 10 oz', 'Cup', 200, '~topdog-chili-10oz'],
       ['Chili, 16 oz', 'Bowl', 300, '~topdog-chili-16oz'],
     ],
+  },
+  {
+    /*
+      THE YARD — DOWNTOWN BRENTWOOD, a burger counter on a converted gas station
+      lot with a licensed cocktail bar on it.
+
+      Every price is off their own two menu PDFs, both linked from
+      brentwoodyard.com and both served from the same GoDaddy asset id as their
+      logo — so they are assets of the exact site their Instagram bio links to.
+      Nothing came from DoorDash, Uber Eats, Grubhub or Yelp.
+
+      IDENTITY WAS THE RISK HERE. There is a national "The Yard" food hall brand
+      and a "The Yard Milkshake Bar" franchise, and neither is this. This one is
+      independent, run by the family behind Attraversiamo in the same town —
+      which is why "Attra sauce" and "Attra ranch" run through the menu. The
+      state licence register has exactly one Yard in Brentwood: 652897, type 47,
+      at 200 Oak St.
+
+      THE MENU IS DATED FEB 2026 AND THE COCKTAIL CARD DEC 2025. They are the
+      current published versions, but they are five and eight months old, and a
+      price that moved at the till since then is the one way this listing hurts
+      them. Worth a call before anyone leans on these numbers.
+
+      NO PHONE EXISTS. Not on their site, not anywhere — they take a contact
+      form only, so there is no number to print. No ordering link either: they
+      do take-out in person and third-party delivery, and pointing an "order
+      online" button at something they do not run would send their customers
+      somewhere they did not choose.
+
+      Beer and wine are published as "MP" with no number, and the mocktails and
+      brunch have no published prices at all, so none of them are listed.
+
+      ZIP 94513 is from the state licence register, not from them.
+    */
+    slug: 'the-yard-brentwood',
+    name: 'The Yard',
+    label: 'The Yard',
+    cuisine: 'Smash burgers, cocktails',
+    tagline: 'Burgers and a cocktail bar on the old gas station lot downtown.',
+    color: '#2F2A24|#171310',
+    icon: '',
+    prep: 15,
+    category: 'Burgers',
+    site: 'https://brentwoodyard.com',
+    siteCta: 'See the menu',
+    siteNote:
+      'Open Thursday to Monday, 11:30am to 8:30pm, and CLOSED Tuesday and Wednesday. Walk up and order \u2014 no reservations, and card only, they take no cash.',
+    address: '200 Oak Street, Brentwood',
+    offer: ['Liberty Smash Burger', 'Chicken Sando', 'Pickle Spritz'],
+    /*
+      Their own, printed on their own menu next to the Liberty Lions mascot —
+      not a mock offer and not one we invented. Quoted close to their wording.
+    */
+    perk: {
+      headline: 'Liberty faculty and students get 10% off',
+      detail: 'Printed on their own menu. Ask at the counter.',
+    },
+    /* Priced in `groups` below; `items` stays empty, as on every grouped brand. */
+    items: [],
+    groups: [
+      {
+        name: 'Burgers',
+        items: [
+          ['Liberty Smash Burger', 'Angus beef, Attra sauce, pickles, grilled onions and American cheese on a Martins potato bun', 800],
+          ['Liberty Double', 'The smash burger, doubled', 1100],
+          ['Liberty Smash Burger and Fries', 'The smash burger with fries', 1200],
+          ['Chicken Sando', 'Double battered buttermilk brined fried chicken thighs, shredduce, pickles, Mike\u2019s hot honey, Attra ranch', 1100],
+        ],
+      },
+      {
+        name: 'Sides and plates',
+        items: [
+          ['Filthy Fries', 'American cheese, caramelized onions, pepperoncinis, Attra sauce, chives', 900],
+          ['French Fries', '', 400],
+          ['Yard Bowl', 'Brown rice, four veg and rotating add-ins', 1100],
+          ['Yard Salad', 'Mixed greens and rotating add-ins', 1100],
+          ['Steak Frites', 'Medium rare steak, fries, chimichurri, pickled onions, jalapenos, chives. Limited quantity', 2000],
+        ],
+      },
+      {
+        name: 'Cocktails',
+        items: [
+          ['Pickle Spritz', 'Gin, pickle juice, soda water, dill. Their own words: the burger\u2019s best friend', 1400],
+          ['Root Beer Old Fashioned', 'Rye whiskey, housemade root beer syrup, Attra bitters blend', 1400],
+          ['Pepperoncini Margarita', 'Blanco tequila, pepperoncini juice, lime, agave', 1400],
+          ['Yard Smash', 'Cucumber vodka, strawberry, lemon, orange, basil', 1400],
+          ['Brentwood Corn Fest', 'Vodka, lemon, jalapeno, creamed corn puree, elote rim', 1400],
+          ['Basic Not Boring', 'Margarita, Old Fashioned, Moscow Mule or any well drink', 1100],
+        ],
+      },
+    ],
+  },
+  {
+    /*
+      JONNY'S ITALIAN ICE — listed with NO MENU, on purpose.
+
+      Their website is a "Launching Soon" placeholder with a contact form and
+      nothing else. There is no ordering storefront and their Instagram has
+      never posted a price. There is no first-party menu in existence online, so
+      there is nothing here to list and a menu would have to be invented.
+
+      THINGS THAT LOOK LIKE PRICES AND FACTS AND ARE NOT:
+      - "starts at just $3" is from an influencer reel, not the shop. Not used.
+      - "The BEST ICECREAM in the Bay Area?", "#1 ICECREAM in the Bay Area?" and
+        "BREAKING NEWS THE BEST ICECREAM IN SUNNYVALE" are all video titles on
+        their own account. None is a rating, ranking or award, and none is
+        rendered as one here.
+      - "Jelati" is what a councilmember and an influencer call the layered item,
+        but it is Jeremiah's Italian Ice's own branded term and no first-party
+        Jonny's source uses it. Printing a competitor's trademark on this
+        owner's listing is not a small mistake, so the word does not appear.
+      - "Vegan" and "dairy-free" are repeated widely and never by the business.
+      - facebook.com/jonnysitalianice is a DIFFERENT shop in Ipswich. Not linked.
+
+      No phone and no email are published anywhere, which is why neither is here.
+      ZIP 94087 is not owner-published either — it comes from Apple Maps and from
+      the neighbouring Falafel Stop's own site giving 1325 on the same road.
+
+      Hours are first-party, from their Instagram bio, and Apple Maps agrees
+      exactly. The soft-serve-plus-Italian-ice claim is theirs and is attributed
+      to them rather than asserted.
+    */
+    slug: 'jonnys-italian-ice',
+    name: "Jonny's Italian Ice",
+    label: "Jonny's",
+    cuisine: 'Italian ice, soft serve',
+    tagline: 'Italian ice made fresh daily, and organic soft serve.',
+    color: '#D6212B|#8E1119',
+    icon: '',
+    prep: 0,
+    category: 'Ice cream',
+    site: 'https://jonnysitalianice.com',
+    siteCta: 'See their Instagram',
+    siteNote: 'Their site is still a placeholder. Instagram is where they post.',
+    address: '1323 Sunnyvale Saratoga Rd, Sunnyvale',
+    contactOnly:
+      'A walk-up counter, so there is nothing to order here. They publish no menu and no prices anywhere \u2014 not on their site, which is still a placeholder, and not on Instagram \u2014 so rather than guess at them, this lists where they are and when they are open. Open Monday to Thursday noon to 11pm, and Friday to Sunday noon to midnight. They say they are the first in Sunnyvale to put soft serve and Italian ice in the same cup.',
+    items: [],
   },
   {
     /*
