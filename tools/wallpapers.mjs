@@ -49,7 +49,33 @@ const TARGET_BYTES = 230 * 1024
 const FLOOR_QUALITY = 62
 
 async function fetchAndEncode(slug, url) {
-  const res = await fetch(url)
+  /*
+    Wikimedia's user-agent policy refuses anonymous clients, and most of these
+    now come from Commons — a bare fetch() gets a 403 with an HTML body, which
+    then fails further down as "not an image" and looks like a bad URL.
+  */
+  /*
+    Retry with backoff, because Commons rate-limits a run of these.
+
+    Fetching seven wallpapers in a row earns a 429 about three in, and the
+    whole run then dies on the fourth — having already written the first three,
+    so a rerun re-downloads what it has. Waiting and retrying is the difference
+    between "one command does the set" and babysitting it.
+  */
+  let res
+  for (let attempt = 0; ; attempt++) {
+    res = await fetch(url, {
+      headers: {
+        'User-Agent':
+          'the-home-screen/1.0 (city wallpapers; contact via github.com/Noctilucenty/the-home-screen)',
+        Accept: 'image/*',
+      },
+    })
+    if (res.status !== 429 || attempt >= 5) break
+    const wait = 2000 * 2 ** attempt
+    console.log(`  ${slug}: rate limited, waiting ${wait / 1000}s`)
+    await new Promise((r) => setTimeout(r, wait))
+  }
   if (!res.ok) throw new Error(`${slug}: download failed ${res.status}`)
   const raw = Buffer.from(await res.arrayBuffer())
 
@@ -110,7 +136,15 @@ open("${path.join(OUT, `${slug}.webp`)}", "wb").write(best or encode(${FLOOR_QUA
 /* Rewrite the Set in Wallpaper.tsx from what is actually on disk, so the code
    and the folder can never disagree. */
 async function writeManifest() {
-  const files = (await readdir(OUT)).filter((f) => f.endsWith('.webp')).sort()
+  /*
+    Underscore-prefixed files are not cities. _placeholder.webp is the neutral
+    background a paged city gets before it has been shot, and the manifest
+    listing it as a city meant wallpaperFor('_placeholder') would have resolved
+    — harmless today, wrong the moment anything iterates the set as a city list.
+  */
+  const files = (await readdir(OUT))
+    .filter((f) => f.endsWith('.webp') && !f.startsWith('_'))
+    .sort()
   const slugs = files.map((f) => f.replace(/\.webp$/, ''))
   const src = path.join(ROOT, 'src/ios/Wallpaper.tsx')
   const text = await import('node:fs/promises').then((m) => m.readFile(src, 'utf8'))
@@ -132,6 +166,8 @@ if (args.length % 2 !== 0) {
 await mkdir(OUT, { recursive: true })
 for (let i = 0; i < args.length; i += 2) {
   await fetchAndEncode(args[i], args[i + 1])
+  // Courtesy gap so a whole set does not trip the limiter in the first place.
+  if (i + 2 < args.length) await new Promise((r) => setTimeout(r, 1500))
   console.log('encoded', args[i])
 }
 const slugs = await writeManifest()

@@ -242,6 +242,22 @@ export function SettingsApp({ api }: { api: ShellApi }) {
           label="About"
           onClick={() => setPage('about')}
         />
+        {/*
+          Photo credits, and not merely as a courtesy.
+
+          Five of the city wallpapers are CC BY-SA. Cropping them to phone size
+          makes an adaptation, which carries the same licence and REQUIRES the
+          photographer be named — so this row is a licence condition rather than
+          a nicety, and it has to exist wherever those pictures ship. The full
+          table, including the ones with no obligation, is the linked file.
+        */}
+        <ListRow
+          icon="paintbrush.fill"
+          iconBg="#34C759"
+          label="Photo credits"
+          detail="Who took the city wallpapers, and under what licence"
+          onClick={() => window.open('/wallpapers/CREDITS.md', '_blank', 'noopener')}
+        />
       </ListSection>
     </NavScreen>
   )
