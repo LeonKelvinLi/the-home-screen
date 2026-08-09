@@ -104,7 +104,17 @@ const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicema
   — and a tab slot is for something opened every visit rather than once. Recent
   keeps the stock clock doing the stock thing, and Scan is the camera.
 */
-const TAB_LABELS = ['Favorites', 'Recent', 'Scan', 'BEASTY', 'Reviews']
+/*
+  Slot four was BEASTY, and BEASTY is the screen you are already looking at — a
+  tab that selects the current page, doing nothing when tapped. The operator
+  spotted it as wasted space and he was right, so it is the profile now.
+
+  It only becomes the profile AFTER the takeover. While the screen is still
+  pretending to be the phone's own dialer it stays the keypad tab, selected,
+  because a stock iOS dialer has a Keypad tab that is lit and that illusion is
+  the whole opening.
+*/
+const TAB_LABELS = ['Favorites', 'Recent', 'Scan', 'Profile', 'Reviews']
 
 export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Props) {
   const reduced =
@@ -533,7 +543,15 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
             name={TAB_LABELS[2]}
             onClick={() => press({ kind: 'panel', page: 'camera' })}
           />
-          <Tab icon={<KeypadGrid />} label={tabText(3)} name={TAB_LABELS[3]} selected onClick={() => press()} />
+          <Tab
+            icon={ours ? <PersonCircleFill /> : <KeypadGrid />}
+            label={tabText(3)}
+            name={TAB_LABELS[3]}
+            /* Lit only while it is still the stock keypad tab. Once it is the
+               profile it is a place to go, not a statement of where you are. */
+            selected={!ours}
+            onClick={() => (ours ? leave(() => onOpen('sys.profile')) : press())}
+          />
           {/*
             The badge is the stock screen's unread count while it is pretending,
             and the number of cities with tiles still open once it is not. A made
