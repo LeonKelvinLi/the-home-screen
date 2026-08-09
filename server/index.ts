@@ -964,7 +964,17 @@ function readOrder(id: string, opts: ReadOpts = {}) {
     createdAt: o.created_at,
     fulfilment: o.fulfilment,
     etaMinutes: o.eta_minutes,
-    total: o.total,
+    /*
+      The WHOLE-ORDER total goes to the customer only.
+
+      /api/orders/:id was scoped so a kitchen replaying an id from its own queue
+      could not read a competitor's lines, but this field sat above that branch
+      and went out on the vendor queue unconditionally. A vendor holding its own
+      subtotal, tax, tip, fee and payout plus the order total can bound what the
+      other kitchens on a shared cart sold to within a few percent. Same leak
+      the id route closed, one field higher up.
+    */
+    ...(opts.vendorId ? {} : { total: o.total }),
     /*
       Say it on the order itself, not just in a build flag.
 

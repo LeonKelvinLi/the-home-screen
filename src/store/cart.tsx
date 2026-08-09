@@ -195,7 +195,33 @@ function loadState(): State {
 const signature = (l: Omit<CartLine, 'lineId'>) =>
   `${l.brandId}:${l.itemId}:${l.options.map((o) => o.choiceId).sort().join(',')}:${l.note ?? ''}`
 
+/*
+  Actions that change WHAT IS BEING ORDERED, and therefore make it a different
+  order as far as the server's idempotency digest is concerned.
+
+  The digest is over {lines, fulfilment, tipBps, address, name, phone}. The key
+  only rotated on `clear`, so this sequence wedged checkout permanently: submit
+  times out (the order may well have committed server-side) -> customer goes
+  back, bumps a quantity or switches the tip from none to 18% -> retry -> 409
+  "already used for a different order", and every attempt after it 409s too. The
+  only escape was emptying the cart, which the error text does not suggest and
+  which costs them the cart.
+
+  Rotating the key on exactly these actions keeps idempotency doing its job — a
+  true retry, with nothing touched, still sends the same key and is still
+  deduped — while a genuinely edited order gets a key of its own.
+*/
+const REORDERS: Action['type'][] = ['add', 'qty', 'remove', 'clearBrand', 'tip', 'fulfilment']
+
 function reducer(state: State, action: Action): State {
+  if (REORDERS.includes(action.type)) {
+    const next = baseReducer(state, action)
+    return next === state ? state : { ...next, submitKey: newSubmitKey() }
+  }
+  return baseReducer(state, action)
+}
+
+function baseReducer(state: State, action: Action): State {
   switch (action.type) {
     case 'add': {
       const sig = signature(action.line)

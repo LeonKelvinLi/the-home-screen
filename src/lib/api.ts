@@ -1,5 +1,5 @@
 import { BRANDS } from '../data/brands'
-import { taxForVendorSubtotals } from './tax'
+import { taxForVendorSubtotals, feeBaseFor } from './tax'
 import type { CartLine } from '../store/cart'
 
 /**
@@ -215,19 +215,38 @@ function placeLocalOrder(input: PlaceOrderInput): PlacedOrder {
     Math.max(...input.lines.map((l) => prep.get(l.brandId) ?? 10)) +
     (input.fulfilment === 'delivery' ? 12 : 0)
 
+  const localFeeBase = feeBaseFor(
+    [...vendorSubtotals].map(([vendorId, subtotal]) => ({ vendorId, subtotal })),
+  )
+
   const order: PlacedOrder = {
     id: `o_local_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 8)}`,
     code: `#${1000 + Math.floor(Math.random() * 8999)}`,
     createdAt: Date.now(),
     fulfilment: input.fulfilment,
     etaMinutes: eta,
+    /*
+      Fee and tip come off feeBase, NOT off subtotal.
+
+      This function's docstring says it mirrors the server's pricing exactly and
+      it had stopped doing so. A vendor with taxIncluded prices already has tax
+      inside its subtotal; the cart, the checkout screen and the server all back
+      that out before charging a percentage on top, and this did not. On a real
+      cart with top dog in it the customer approved $27.46 and the order was
+      recorded as $27.90 — 44c apart, on the screen that tells them what they
+      paid.
+
+      Local mode is dev-only (o_local is tree-shaken out of the live build), so
+      no customer was charged this. It is still the number a preview build shows
+      the operator when he checks the maths.
+    */
     total:
       subtotal +
       taxForVendorSubtotals(
         [...vendorSubtotals].map(([vendorId, subtotal]) => ({ vendorId, subtotal })),
       ) +
-      Math.round((subtotal * SERVICE_BPS) / 10000) +
-      Math.round((subtotal * input.tipBps) / 10000) +
+      Math.round((localFeeBase * SERVICE_BPS) / 10000) +
+      Math.round((localFeeBase * input.tipBps) / 10000) +
       (input.fulfilment === 'delivery' ? DELIVERY_FEE : 0),
     tickets: [...byVendor.values()],
     local: true,
