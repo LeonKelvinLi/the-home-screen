@@ -808,7 +808,9 @@ textarea {
   margin: 0 0 10px;
   font-size: 13.5px;
   line-height: 1.4;
-  opacity: 0.82;
+  /* 0.82 measured 4.38:1 on a mid-tone brand colour and would be worse on a
+     lighter one. This is the line describing what the business actually is. */
+  opacity: 0.95;
 }
 
 .brand-meta {
@@ -816,7 +818,8 @@ textarea {
   justify-content: center;
   gap: 6px;
   font-size: 12.5px;
-  opacity: 0.8;
+  /* Same reason as the tagline: sits on the brand's own colour, which varies. */
+  opacity: 0.95;
 }
 
 .brand-chips {
@@ -829,7 +832,14 @@ textarea {
 .chip {
   padding: 2px 10px;
   border-radius: 11px;
-  background: rgba(255, 255, 255, 0.18);
+  /*
+    A DARK scrim, not a white one. The text on these chips is white and the
+    chip sat on 18% white over the brand's colour, which lightens the backing
+    and pushed white-on-white to 4.32:1 — the lighter the brand's colour, the
+    worse it got. Darkening the chip instead makes it more legible on every
+    brand rather than only on the dark ones.
+  */
+  background: rgba(0, 0, 0, 0.3);
   font-size: 11.5px;
   font-weight: 600;
 }
@@ -1019,7 +1029,9 @@ textarea {
   min-height: 50px;
   padding: 15px 16px;
   border-radius: 15px;
-  background: var(--blue);
+  /* White on #007aff is 4.02:1. This bar carries the total someone is about to
+     be charged, so it uses the darker blue: 5.6:1. */
+  background: var(--blue-text);
   color: #fff;
   font-size: 17px;
   font-weight: 600;
@@ -2576,7 +2588,7 @@ textarea {
   font-weight: 400;
   letter-spacing: -0.08px;
   text-transform: uppercase;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .ios-section-footer {
@@ -2584,7 +2596,7 @@ textarea {
   padding: 0 32px;
   font-size: 13px;
   line-height: 1.38;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .ios-list {
@@ -2665,14 +2677,14 @@ textarea {
 .ios-row-detail {
   font-size: 13px;
   letter-spacing: -0.08px;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .ios-row-value {
   flex: 0 0 auto;
   font-size: 17px;
   letter-spacing: -0.4px;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .ios-row-check {
@@ -2736,11 +2748,12 @@ textarea {
   gap: 3px;
   min-height: 49px;
   padding: 7px 0 2px;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .ios-tab.is-on {
-  color: #007aff;
+  /* #007aff is 3.59:1 on white; this is the selected tab. */
+  color: var(--blue-text);
 }
 
 .ios-tab-icon {
@@ -2822,7 +2835,7 @@ textarea {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 1.6px;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .keypad-actions {
@@ -2866,7 +2879,7 @@ textarea {
   font-size: 12.5px;
   line-height: 1.4;
   text-align: center;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .contact-row {
@@ -2894,7 +2907,7 @@ textarea {
 .phone-empty p {
   margin: 0;
   font-size: 17px;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .phone-empty-sub {
@@ -5609,7 +5622,7 @@ textarea {
   text-align: center;
   font-size: 11px;
   font-weight: 600;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .cal-cell {
@@ -5723,7 +5736,7 @@ textarea {
 .cal-empty-note {
   font-size: 13px !important;
   line-height: 1.5;
-  color: rgba(60, 60, 67, 0.6) !important;
+  color: var(--muted) !important;
 }
 
 /* A city result in Search: same row as a kitchen, with a pin instead of a logo. */
@@ -5825,7 +5838,7 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: rgba(60, 60, 67, 0.6);
+  color: var(--muted);
 }
 
 .dialer-panel-h:first-child {

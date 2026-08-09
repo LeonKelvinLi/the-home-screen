@@ -23,7 +23,15 @@ export function Gem({ size = 18 }: { size?: number }) {
 }
 
 /** Businesses that have actually agreed a member offer. */
-const WITH_OFFERS = LISTED_KITCHENS.filter((b) => b.offers?.welcome || b.offers?.loyalty)
+/*
+  AGREED offers only. `mock` means the operator asked to see the design and the
+  business agreed nothing, and this filter did not exclude them — so a mocked-up
+  offer was counted on the one screen that asks someone for $20 a month. The
+  comment below already said to count agreed ones; the code did not.
+*/
+const WITH_OFFERS = LISTED_KITCHENS.filter(
+  (b) => !b.offers?.mock && (b.offers?.welcome || b.offers?.loyalty),
+)
 const OFFER_COUNT = WITH_OFFERS.length
 const OFFER_PARTNER = WITH_OFFERS[0]?.name ?? ''
 

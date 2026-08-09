@@ -222,7 +222,21 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteNote:
       'Open Thursday to Monday, 11:30am to 8:30pm, and CLOSED Tuesday and Wednesday. Walk up and order \u2014 no reservations, and card only, they take no cash.',
     address: '200 Oak Street, Brentwood',
-    offer: ['Liberty Smash Burger', 'Chicken Sando', 'Pickle Spritz'],
+    /*
+      NOTHING HERE IS ORDERABLE, and the menu is shown anyway.
+
+      They run no online ordering of their own — their site says walk up and
+      order, cash not accepted — so a cart button here would send someone's
+      money down a route the business does not have. And six of these are
+      cocktails from a type 47 on-premises licence: this app has no age
+      verification anywhere, so putting spirits in a shared delivery cart is not
+      something to fix with a filter.
+
+      quoteOnly is the mechanism that shows the full priced menu and suppresses
+      add-to-cart everywhere, client and server, so it is what this uses.
+    */
+    quoteOnly:
+      'The Yard takes orders at the counter, not through an app \u2014 so this is their menu to read, not to order from. Walk up and order; they are card only and take no cash. The cocktails are served on the premises.',
     /*
       Their own, printed on their own menu next to the Liberty Lions mascot —
       not a mock offer and not one we invented. Quoted close to their wording.
@@ -526,7 +540,21 @@ export const LOCAL_SEED: LocalSeed[] = [
       mock-up. Every other partner's `offers` stays unset until they have agreed
       one — an offer on a partner's page is a promise made in their name.
     */
+    /*
+      THE OPERATOR'S MOCK-UP, not this business's agreement.
+
+      The commit that introduced these said so outright — his mock-up is the
+      only place the terms exist. Nothing records The Lumpia Company agreeing
+      them, and the welcome offer gives away "any one of our specialty drinks"
+      when they have no drinks anywhere in their menu, so it could not be
+      honoured even if someone tried. Written in their first person, it read as
+      their promise.
+
+      `mock` makes the app label it as an example on screen and keeps it out of
+      the count the membership screen sells against.
+    */
     offers: {
+      mock: true,
       welcome:
         'Choose any one of our specialty drinks to pair with each meal, free on your first visit.',
       loyalty: '10% off your entire order, any visit.',

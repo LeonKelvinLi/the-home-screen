@@ -549,13 +549,24 @@ const fromSeed = (s: Seed): Brand => ({
     ? s.groups.map((g, gi) => ({
         id: `c_${s.slug.replace(/-/g, '')}_${gi + 1}`,
         name: g.name,
-        items: g.items.map(([name, desc, price, priceLabel], i) => ({
-          id: `i_${s.slug.replace(/-/g, '')}_${gi + 1}_${i + 1}`,
-          name,
-          desc,
-          price,
-          priceLabel,
-        })),
+        items: g.items
+          .map(([name, desc, price, priceLabel], i) => ({
+            id: `i_${s.slug.replace(/-/g, '')}_${gi + 1}_${i + 1}`,
+            name,
+            desc,
+            price,
+            priceLabel,
+          }))
+          /*
+            The stock list applies here too.
+
+            This filter existed only on the `items` branch below, so any brand
+            using `groups` silently offered its ENTIRE menu no matter what
+            `offer` said. That is not a cosmetic difference: it put six of The
+            Yard's cocktails into a shared delivery cart with no age check, from
+            a business whose own licence in this file is type 47 — on-premises.
+          */
+          .filter((it) => !s.offer || s.offer.includes(it.name)),
       }))
     : [
     {
