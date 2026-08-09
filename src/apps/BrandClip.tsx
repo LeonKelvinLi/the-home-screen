@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { BrandLogo } from '../ios/BrandLogo'
+import type { Logo } from '../data/brands'
 
 /**
  * A business's own video on their page.
@@ -8,14 +10,17 @@ import { useEffect, useRef, useState } from 'react'
  * `src` is footage the business gave us, sitting on our own origin. That plays
  * inline, muted and looping, the way a clip on a menu page should.
  *
- * `href` alone is a link to a post on somebody else's platform — an Instagram
- * reel, usually. We cannot embed those: there is no public embed that works
- * without a token, the iframe route is blocked, and pointing an <img> or
- * <video> at Instagram's CDN is both fragile and not ours to do. So that mode
- * draws a card that says where it goes and goes there. It deliberately does NOT
- * imitate a video thumbnail with a play triangle over a still, because a
- * control that looks like it plays here and instead leaves the app is a small
- * lie told to every customer who taps it.
+ * `href` alone is a post on somebody else's platform — an Instagram reel,
+ * usually. We cannot embed those: there is no public embed that works without a
+ * token, the iframe route is blocked, and pointing an <img> or <video> at
+ * Instagram's CDN is both fragile and not ours to do.
+ *
+ * SO THE PREVIEW IS BUILT FROM WHAT WE OWN. The thumbnail is the business's own
+ * colours and their own mark, in reel shape. That is deliberate on two counts:
+ * it reads as video instantly because the SHAPE carries the meaning, and it can
+ * never be mistaken for a still from a video we do not have. A scraped frame
+ * under a play triangle would look better and would be a small lie — this tile
+ * is obviously a plate, and the label says where it goes before it is tapped.
  *
  * `credit` is required in both modes. It is their footage, and whose it is gets
  * said on screen rather than assumed.
@@ -34,15 +39,33 @@ export interface Clip {
   platform?: string
 }
 
-export function BrandClip({ clip, tint }: { clip: Clip; tint: string }) {
+/** Multiply a hex towards black. Used to give a one-colour brand a gradient. */
+function darken(hex: string, amount: number): string {
+  const m = /^#?([\da-f]{6})$/i.exec(hex.trim())
+  if (!m) return hex
+  const n = parseInt(m[1], 16)
+  const f = 1 - amount
+  const c = [(n >> 16) & 255, (n >> 8) & 255, n & 255].map((v) => Math.round(v * f))
+  return `rgb(${c[0]}, ${c[1]}, ${c[2]})`
+}
+
+/** The play triangle, in the same frosted glass as the Spotlight pill. */
+function PlayMark({ size = 40 }: { size?: number }) {
+  return (
+    <span className="clip-play" style={{ width: size, height: size }}>
+      <svg viewBox="0 0 24 24" width={size * 0.42} height={size * 0.42} aria-hidden="true">
+        {/* Nudged right by a point: a triangle centred on its bounding box
+            reads as sitting left of centre inside a circle. */}
+        <path d="M9 5.5v13l10.5-6.5Z" fill="currentColor" />
+      </svg>
+    </span>
+  )
+}
+
+export function BrandClip({ clip, logo }: { clip: Clip; logo: Logo }) {
   const ref = useRef<HTMLVideoElement | null>(null)
   const [reduced, setReduced] = useState(false)
 
-  /*
-    Autoplay is a preference, not a default. Someone who has asked their phone
-    for less movement gets a still frame and a real play button instead — the
-    element keeps its controls in that case so there is a way to start it.
-  */
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
     setReduced(mq.matches)
@@ -52,12 +75,10 @@ export function BrandClip({ clip, tint }: { clip: Clip; tint: string }) {
   }, [])
 
   /*
-    Play only while it is on screen.
-
-    preload="none" and an observer rather than autoplay, so scrolling past a
-    brand page does not pull a video down a phone connection that nobody
-    watched. Pausing off-screen matters as much as starting on-screen: a looping
-    clip left running above the fold is a battery drain nobody asked for.
+    Play only while it is on screen. preload="none" and an observer rather than
+    autoplay, so scrolling past a brand page does not pull a video down a phone
+    connection nobody watched — and a looping clip left running above the fold
+    is a battery drain nobody asked for.
   */
   useEffect(() => {
     const el = ref.current
@@ -95,23 +116,63 @@ export function BrandClip({ clip, tint }: { clip: Clip; tint: string }) {
   if (!clip.href) return null
 
   const platform = clip.platform ?? 'Instagram'
+  const [from, to] = logo.bg.split('|')
+  /*
+    Depth even when the brand only has ONE colour.
+
+    Half the partners define a single flat hex, so `linear-gradient(a, a)` gave
+    a dead swatch — and on Tequila's that swatch was the same green as the hero
+    forty pixels above it, so the tile read as a hole in the page rather than as
+    a poster. Deriving a darker end means every tile has a light source.
+  */
+  const deep = to ?? darken(from, 0.42)
+
   return (
+    /*
+      A POSTER, not a list row.
+
+      The first pass was a thumbnail with two lines of text and a chevron beside
+      it, which is the exact shape of every other row in this app and of every
+      generated card on the internet — it read as a component rather than as
+      something belonging to this business. This is full width, in their own
+      colours, with the type laid over the image the way a video card actually
+      works. Nothing else on a brand page looks like it.
+    */
     <a
-      className="brand-clip-link"
+      className="clip-card"
       href={clip.href}
       target="_blank"
       rel="noopener noreferrer"
-      style={{ background: tint }}
+      style={{ background: `linear-gradient(152deg, ${from}, ${deep})` }}
     >
-      <span className="brand-clip-link-glyph" aria-hidden="true">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-          <path d="M7 17 17 7M17 7H8M17 7v9" />
-        </svg>
+      {/* Their mark, oversized and running off two edges, as a poster crops one
+          rather than centring it on a plate. */}
+      <span className="clip-mark" aria-hidden="true">
+        <BrandLogo logo={logo} size={230} />
       </span>
-      <span className="brand-clip-link-text">
-        <strong>Watch their clip on {platform}</strong>
-        {/* Says it leaves, before the tap, not after. */}
-        <em>{clip.credit} — opens {platform}</em>
+
+      {/* The only thing here that says "video" without pretending to be a frame
+          of one: a still tile reads as an image, a moving highlight does not. */}
+      <span className="clip-sheen" aria-hidden="true" />
+
+      {/* The bottom-up scrim every video poster has — it is what the type sits
+          on, so the words stay legible whatever colour the business chose. */}
+      <span className="clip-scrim" aria-hidden="true" />
+
+      <span className="clip-body">
+        <PlayMark />
+        <span className="clip-text">
+          <strong>Watch their clip</strong>
+          {/* Says it leaves, before the tap rather than after. */}
+          <em>
+            {clip.credit} · opens {platform}
+          </em>
+        </span>
+      </span>
+
+      {/* The shape of the thing on the other end, stated rather than mimicked. */}
+      <span className="clip-tag" aria-hidden="true">
+        REEL
       </span>
     </a>
   )

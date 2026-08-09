@@ -130,7 +130,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             goes after anything that qualifies the prices, because a caveat that
             arrives after the video is a caveat nobody read.
           */}
-          {brand.clip && <BrandClip clip={brand.clip} tint={brand.logo.bg.split('|')[0]} />}
+          {brand.clip && <BrandClip clip={brand.clip} logo={brand.logo} />}
 
           {/* Says plainly that this is a selection, not their whole menu —
               which it is not, for every partner but top dog. */}

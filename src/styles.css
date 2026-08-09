@@ -6125,54 +6125,6 @@ textarea {
   color: var(--muted);
 }
 
-/*
-  The link-out card. Deliberately NOT a play triangle over a still frame: it
-  leaves the app, and it says so before it is tapped rather than after.
-*/
-.brand-clip-link {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 14px;
-  padding: 14px 16px;
-  border-radius: var(--radius);
-  color: #fff;
-  text-decoration: none;
-}
-
-.brand-clip-link-glyph {
-  display: grid;
-  place-items: center;
-  width: 38px;
-  height: 38px;
-  flex: 0 0 auto;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.18);
-}
-
-.brand-clip-link-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.brand-clip-link-text strong {
-  font-size: 15px;
-  font-weight: 600;
-}
-
-.brand-clip-link-text em {
-  font-style: normal;
-  font-size: 12px;
-  /* On the brand's own colour, so it is held well clear of the 4.5:1 floor
-     rather than faded the way a caption normally would be. */
-  color: rgba(255, 255, 255, 0.88);
-}
-
-.brand-clip-link:active {
-  opacity: 0.86;
-}
 
 /* ---------- tap targets on the Spotlight row ---------- */
 
@@ -6262,4 +6214,146 @@ textarea {
 
 .sheet-close:active {
   background: rgba(120, 120, 128, 0.24);
+}
+
+/* ---------- the clip preview ---------- */
+
+/*
+  A POSTER, not a list row.
+
+  The first pass was a thumbnail with two lines of text and a chevron — the same
+  shape as every other row in this app, and the shape every generated card on
+  the internet has. It read as a component rather than as this business's. This
+  is full width and painted in their own two colours, so it looks different on
+  every partner's page, and the type sits over the image the way a video card
+  actually works.
+*/
+.clip-card {
+  position: relative;
+  display: block;
+  /* 16:9. At 16:10 it stood 269px tall and pushed the first price off a small
+     phone; the poster reads the same at this ratio and gives 27px back. */
+  aspect-ratio: 16 / 9;
+  /* Inset to match the rest of the page. Full-bleed made it the one element on
+     a brand page touching both screen edges, which read as a mistake rather
+     than as emphasis. */
+  margin: 0 16px 16px;
+  border-radius: 18px;
+  overflow: hidden;
+  isolation: isolate;
+  text-decoration: none;
+  color: #fff;
+  box-shadow: 0 10px 26px -14px rgba(0, 0, 0, 0.5);
+}
+
+.clip-mark {
+  position: absolute;
+  top: -26%;
+  right: -12%;
+  opacity: 0.3;
+  transform: rotate(-9deg);
+  pointer-events: none;
+}
+
+.clip-sheen {
+  position: absolute;
+  inset: -40% -120%;
+  background: linear-gradient(
+    76deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.22) 50%,
+    transparent 58%
+  );
+  animation: clip-sweep 4.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes clip-sweep {
+  0%,
+  60% {
+    transform: translate3d(-36%, 0, 0);
+  }
+  100% {
+    transform: translate3d(36%, 0, 0);
+  }
+}
+
+.clip-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.08) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+.clip-body {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.clip-play {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  /* Solid white rather than frosted glass. On a dark brand colour the frosted
+     version went grey and the triangle stopped reading as a control. */
+  background: #fff;
+  color: #141416;
+  box-shadow: 0 2px 10px -2px rgba(0, 0, 0, 0.4);
+}
+
+.clip-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.clip-text strong {
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+  /* On the scrim, not on the brand colour, so this holds at any brand
+     lightness rather than only on the dark ones. */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+.clip-text em {
+  font-style: normal;
+  font-size: 12.5px;
+  line-height: 1.3;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Says what is on the other end rather than imitating it. */
+.clip-tag {
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.42);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  color: rgba(255, 255, 255, 0.94);
+}
+
+.clip-card:active {
+  filter: brightness(0.94);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clip-sheen {
+    animation: none !important;
+    opacity: 0.45;
+  }
 }
