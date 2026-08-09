@@ -1326,7 +1326,9 @@ textarea {
   min-height: 50px;
   padding: 15px;
   border-radius: 14px;
-  background: var(--blue);
+  /* White on #007aff is 4.02:1 and this is every primary action in the app —
+     Add to cart, Place order, Done. 5.6:1 on the darker blue. */
+  background: var(--blue-text);
   color: #fff;
   font-size: 17px;
   font-weight: 600;
@@ -6458,6 +6460,8 @@ textarea {
 }
 
 .prof-name {
+  /* It is a button that opens an editor, so it gets a real target. */
+  min-height: 44px;
   border: 0;
   background: none;
   padding: 0;
