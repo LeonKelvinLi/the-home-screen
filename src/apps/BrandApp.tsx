@@ -16,6 +16,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const brand = brandById(brandId)
   const cart = useCart()
   const [sheetItem, setSheetItem] = useState<MenuItem | null>(null)
+  const [shared, setShared] = useState(false)
   const [activeCat, setActiveCat] = useState(0)
   const bodyRef = useRef<HTMLDivElement>(null)
 
@@ -63,6 +64,44 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             className="brand-hero"
             style={{ background: heroBg(brand.logo.bg), color: ink.fg }}
           >
+            {/*
+              Share, on every business page, where a customer already is when
+              they decide someone else needs to see this. Top-right of the hero
+              rather than at the bottom of the menu: the moment you want to send
+              a place to somebody is the moment you arrive, not after scrolling
+              past nine prices.
+
+              Web Share gives the real iOS sheet; the clipboard is the fallback
+              on a desktop browser that has none.
+            */}
+            <button
+              className="brand-share"
+              onClick={async () => {
+                const url = `${location.origin}/?b=${encodeURIComponent(brand.id)}`
+                try {
+                  if (navigator.share) await navigator.share({ title: brand.name, url })
+                  else {
+                    await navigator.clipboard.writeText(url)
+                    setShared(true)
+                    window.setTimeout(() => setShared(false), 2000)
+                  }
+                } catch {
+                  /* Sheet dismissed. Not an error worth a message. */
+                }
+              }}
+              aria-label={`Share ${brand.name}`}
+              style={{ color: ink.fg }}
+            >
+              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 15V3M12 3 8 7M12 3l4 4" />
+                <path d="M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" />
+              </svg>
+            </button>
+            {shared && (
+              <span className="brand-share-toast" role="status">
+                Link copied
+              </span>
+            )}
             <div className="brand-hero-mark">
               <BrandLogo logo={brand.logo} size={78} />
             </div>

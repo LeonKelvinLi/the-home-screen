@@ -1,0 +1,451 @@
+import { useRef, useState } from 'react'
+import { AppChrome } from './AppChrome'
+import { PetAvatarArt, SPECIES, COATS, BACKDROPS, ACCESSORIES } from './PetAvatar'
+import { Gem } from './MembersApp'
+import { member, isMember } from '../lib/member'
+import { favorites } from '../lib/favorites'
+import { recentVisits, whenLabel } from '../lib/recents'
+import { brandById } from '../data/brands'
+import { readableOn } from '../ios/contrast'
+import {
+  profile as readProfile,
+  saveProfile,
+  downscalePhoto,
+  placesVisited,
+  DEFAULT_PET,
+  type Profile,
+} from '../lib/profile'
+import type { ShellApi } from '../ios/Device'
+
+/**
+ * Someone's profile: where they have been, and what they liked.
+ *
+ * The operator's brief was explicit about what this is NOT — no followers, no
+ * following, no counts that measure popularity. It is a page other people can
+ * be nosey at. So everything on it is a place you can tap through to, and
+ * nothing on it is a score about the person.
+ *
+ * ON THIS DEVICE ONLY. There is no account system and no server-side profile in
+ * this app, so nothing here is visible to anybody else yet — this is a working
+ * preview of a shared profile, not a shared one. The page says that in the one
+ * place someone would otherwise assume differently, because filling in a
+ * profile believing strangers can already see it is a bad surprise to hand
+ * somebody later.
+ */
+
+type Sheet = null | 'avatar' | 'visited' | 'recent' | 'top'
+
+export function ProfileApp({ api }: { api: ShellApi }) {
+  const [p, setP] = useState<Profile>(() => readProfile())
+  const [sheet, setSheet] = useState<Sheet>(null)
+  const [editingName, setEditingName] = useState(false)
+  const [nameDraft, setNameDraft] = useState(() => readProfile().name)
+  const [photoError, setPhotoError] = useState<string | null>(null)
+  const fileRef = useRef<HTMLInputElement | null>(null)
+
+  const m = member()
+  const joined = isMember() ? new Date(m.joinedAt).getFullYear() : null
+
+  /*
+    The diamond count is PLACES, not visits and not points. Someone who went to
+    the same taqueria nine times has been to one place, and the number beside
+    their name is a claim about how much of the map they have seen.
+  */
+  const visitedIds = placesVisited(m.checkIns)
+  const visited = visitedIds.map((id) => brandById(id)).filter(Boolean)
+
+  const favs = favorites()
+  const topNine = favs.slice(0, 9)
+  const recents = recentVisits()
+  const topSpot = p.topSpotId ? brandById(p.topSpotId) : undefined
+
+  const update = (next: Partial<Profile>) => setP(saveProfile(next))
+  const setPet = (patch: Partial<Profile['pet']>) =>
+    update({ kind: 'pet', pet: { ...(p.pet ?? DEFAULT_PET), ...patch } })
+
+  const pickPhoto = async (file?: File) => {
+    if (!file) return
+    setPhotoError(null)
+    try {
+      const dataUrl = await downscalePhoto(file)
+      update({ kind: 'photo', photo: dataUrl })
+    } catch (e) {
+      setPhotoError(e instanceof Error ? e.message : 'That image could not be read.')
+    }
+  }
+
+  const openBrand = (id: string) => {
+    setSheet(null)
+    api.openApp(id)
+  }
+
+  const shareProfile = async () => {
+    const url = `${location.origin}/?p=me`
+    try {
+      if (navigator.share) await navigator.share({ title: p.name || 'My BEASTY profile', url })
+      else await navigator.clipboard.writeText(url)
+    } catch {
+      /* Dismissed the sheet. Not an error worth a message. */
+    }
+  }
+
+  return (
+    <AppChrome title="Profile" onBack={api.closeApp}>
+      <div className="prof">
+        <header className="prof-head">
+          <button
+            className="prof-avatar"
+            onClick={() => setSheet('avatar')}
+            aria-label="Edit profile picture"
+          >
+            {p.kind === 'photo' && p.photo ? (
+              <img src={p.photo} alt="" className="prof-photo" />
+            ) : p.kind === 'pet' ? (
+              <PetAvatarArt pet={p.pet} size={96} />
+            ) : (
+              <span className="prof-avatar-empty" aria-hidden="true">
+                <PetAvatarArt pet={DEFAULT_PET} size={96} />
+              </span>
+            )}
+            <span className="prof-avatar-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+                <path d="M9 3l-1.6 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.4L15 3H9Zm3 5.5A5.5 5.5 0 1 1 6.5 14 5.5 5.5 0 0 1 12 8.5Zm0 2A3.5 3.5 0 1 0 15.5 14 3.5 3.5 0 0 0 12 10.5Z" />
+              </svg>
+            </span>
+          </button>
+
+          <div className="prof-id">
+            {editingName ? (
+              <input
+                className="co-input prof-name-input"
+                value={nameDraft}
+                onChange={(e) => setNameDraft(e.target.value)}
+                onBlur={() => {
+                  update({ name: nameDraft.trim().slice(0, 40) })
+                  setEditingName(false)
+                }}
+                placeholder="Your name"
+                aria-label="Your name"
+                maxLength={40}
+                autoFocus
+              />
+            ) : (
+              <button className="prof-name" onClick={() => setEditingName(true)}>
+                {p.name || 'Add your name'}
+              </button>
+            )}
+
+            {/*
+              The count, tappable, exactly as the operator drew it. It opens the
+              list of places rather than a number going up — the whole point is
+              that someone else can tap through and go there themselves.
+            */}
+            <button
+              className="prof-count"
+              onClick={() => setSheet(sheet === 'visited' ? null : 'visited')}
+              aria-expanded={sheet === 'visited'}
+              aria-label={`${visited.length} places visited. Show the list.`}
+            >
+              <Gem size={18} />
+              <span>[{visited.length}]</span>
+            </button>
+          </div>
+        </header>
+
+        <div className="prof-actions">
+          <button className="btn-primary prof-action" onClick={() => setSheet('avatar')}>
+            Edit profile
+          </button>
+          <button className="btn-secondary prof-action" onClick={shareProfile}>
+            Share
+          </button>
+        </div>
+
+        {/* Where they have been, opened from the count above. */}
+        {sheet === 'visited' && (
+          <section className="prof-drop">
+            <h2 className="prof-h">Places visited</h2>
+            {visited.length === 0 ? (
+              <p className="prof-empty">
+                No check-ins yet. Scanning a business&rsquo;s code on a visit is what fills this in.
+              </p>
+            ) : (
+              <div className="prof-chiprow">
+                {visited.map((b) => (
+                  <button className="prof-chip" key={b!.id} onClick={() => openBrand(b!.id)}>
+                    <span
+                      className="prof-chip-dot"
+                      style={{ background: b!.logo.bg.split('|')[0] }}
+                      aria-hidden="true"
+                    />
+                    {b!.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </section>
+        )}
+
+        {/* The single favourite, top billing, edited in one tap. */}
+        <section className="prof-top">
+          <div className="prof-top-head">
+            <h2 className="prof-h">Number one spot</h2>
+            <button className="prof-edit" onClick={() => setSheet(sheet === 'top' ? null : 'top')}>
+              {topSpot ? 'Change' : 'Choose'}
+            </button>
+          </div>
+          {topSpot ? (
+            <button className="prof-top-card" onClick={() => openBrand(topSpot.id)}>
+              <span
+                className="prof-top-mark"
+                style={{ background: topSpot.logo.bg.split('|')[0] }}
+                aria-hidden="true"
+              />
+              <span className="prof-top-text">
+                <strong>{topSpot.name}</strong>
+                <em>{topSpot.cuisine}</em>
+              </span>
+            </button>
+          ) : (
+            <p className="prof-empty">Nothing picked yet.</p>
+          )}
+
+          {sheet === 'top' && (
+            <div className="prof-picker">
+              {(favs.length ? favs : recents).map((f) => {
+                const id = 'brandId' in f ? f.brandId : (f as { brandId: string }).brandId
+                return (
+                  <button
+                    key={id}
+                    className="prof-picker-row"
+                    onClick={() => {
+                      update({ topSpotId: id })
+                      setSheet(null)
+                    }}
+                  >
+                    <span
+                      className="prof-chip-dot"
+                      style={{ background: f.color }}
+                      aria-hidden="true"
+                    />
+                    {f.name}
+                  </button>
+                )
+              })}
+              {favs.length === 0 && recents.length === 0 && (
+                <p className="prof-empty">
+                  Star a business, or open one, and it becomes pickable here.
+                </p>
+              )}
+            </div>
+          )}
+        </section>
+
+        {/* The nine, as drawn: a 3x3 of tiles other people can tap through. */}
+        <section>
+          <h2 className="prof-h">Top 9 favourites</h2>
+          <div className="prof-grid">
+            {Array.from({ length: 9 }).map((_, i) => {
+              const f = topNine[i]
+              if (!f)
+                return (
+                  <span className="prof-tile is-empty" key={i} aria-hidden="true">
+                    {i + 1}
+                  </span>
+                )
+              return (
+                <button
+                  className="prof-tile"
+                  key={f.brandId}
+                  style={{ background: f.color }}
+                  onClick={() => openBrand(f.brandId)}
+                  aria-label={f.name}
+                >
+                  {/*
+                    Ink chosen from the tile's own colour, not always white.
+                    top dog's yellow is #FFF33E and white on it is unreadable —
+                    the same helper the brand hero uses picks near-black there
+                    and white on the dark ones.
+                  */}
+                  <span
+                    className="prof-tile-name"
+                    style={{ color: readableOn(f.color).fg }}
+                  >
+                    {f.name}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+          {favs.length === 0 && (
+            <p className="prof-empty">
+              The star on a business&rsquo;s page puts it here.
+            </p>
+          )}
+        </section>
+
+        {/* Recent, as a drop-down rather than a permanent list. */}
+        <section>
+          <button
+            className="prof-recent-toggle"
+            onClick={() => setSheet(sheet === 'recent' ? null : 'recent')}
+            aria-expanded={sheet === 'recent'}
+          >
+            Recent visits
+            <span className="prof-recent-count">{recents.length}</span>
+          </button>
+          {sheet === 'recent' && (
+            <div className="prof-drop">
+              {recents.length === 0 ? (
+                <p className="prof-empty">Nothing opened yet.</p>
+              ) : (
+                recents.map((r) => (
+                  <button
+                    className="prof-picker-row"
+                    key={r.brandId + r.at}
+                    onClick={() => openBrand(r.brandId)}
+                  >
+                    <span className="prof-chip-dot" style={{ background: r.color }} aria-hidden="true" />
+                    <span className="prof-picker-name">{r.name}</span>
+                    <span className="prof-when">{whenLabel(r.at)}</span>
+                  </button>
+                ))
+              )}
+            </div>
+          )}
+        </section>
+
+        {/*
+          The member line. It states what is TRUE of this device — joined, or
+          not — rather than printing a badge nobody has earned. The prompt below
+          it is the operator's idea and it goes to the page that already says
+          paid sign-ups are not open, so it cannot promise a membership that
+          cannot be bought yet.
+        */}
+        <div className="prof-member">
+          {joined ? (
+            <p className="prof-member-line">
+              <Gem size={16} /> Member since {joined}
+            </p>
+          ) : (
+            <button className="prof-member-cta" onClick={() => api.openApp('sys.members')}>
+              <Gem size={16} />
+              <span>Tap here to become a member</span>
+            </button>
+          )}
+        </div>
+
+        <p className="prof-fineprint">
+          This profile is on this phone only. There are no accounts in the app yet, so nothing here
+          has been sent anywhere and nobody else can see it — it is a preview of what a shared
+          profile will look like. No followers, no following, and no numbers about you: everything
+          on this page is a place someone can tap and go to.
+        </p>
+
+        {sheet === 'avatar' && (
+          <section className="prof-editor">
+            <h2 className="prof-h">Profile picture</h2>
+
+            <div className="prof-editor-modes">
+              <button
+                className={`prof-mode${p.kind === 'photo' ? ' is-on' : ''}`}
+                onClick={() => fileRef.current?.click()}
+              >
+                A photo of your pet
+              </button>
+              <button
+                className={`prof-mode${p.kind === 'pet' ? ' is-on' : ''}`}
+                onClick={() => update({ kind: 'pet' })}
+              >
+                Build a cartoon pet
+              </button>
+            </div>
+
+            {/*
+              Never uploaded. The file is read, drawn to a canvas at 256px and
+              kept as a data URL on this device — see lib/profile.ts for why the
+              downscale is not optional.
+            */}
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/*"
+              className="prof-file"
+              aria-label="Choose a photo of your pet"
+              onChange={(e) => void pickPhoto(e.target.files?.[0])}
+            />
+            {photoError && (
+              <p className="co-error" role="alert">
+                {photoError}
+              </p>
+            )}
+
+            {p.kind === 'pet' && (
+              <div className="prof-pet-editor">
+                <div className="prof-pet-preview">
+                  <PetAvatarArt pet={p.pet} size={112} />
+                </div>
+
+                <h3 className="prof-sub">Animal</h3>
+                <div className="prof-opts">
+                  {SPECIES.map((s) => (
+                    <button
+                      key={s.key}
+                      className={`prof-opt${p.pet.species === s.key ? ' is-on' : ''}`}
+                      onClick={() => setPet({ species: s.key })}
+                    >
+                      {s.label}
+                    </button>
+                  ))}
+                </div>
+
+                <h3 className="prof-sub">Coat</h3>
+                <div className="prof-swatches">
+                  {COATS.map((c) => (
+                    <button
+                      key={c}
+                      className={`prof-sw${p.pet.coat === c ? ' is-on' : ''}`}
+                      style={{ background: c }}
+                      onClick={() => setPet({ coat: c })}
+                      aria-label={`Coat ${c}`}
+                    />
+                  ))}
+                </div>
+
+                <h3 className="prof-sub">Background</h3>
+                <div className="prof-swatches">
+                  {BACKDROPS.map((c) => (
+                    <button
+                      key={c}
+                      className={`prof-sw${p.pet.backdrop === c ? ' is-on' : ''}`}
+                      style={{ background: c }}
+                      onClick={() => setPet({ backdrop: c })}
+                      aria-label={`Background ${c}`}
+                    />
+                  ))}
+                </div>
+
+                <h3 className="prof-sub">Extra</h3>
+                <div className="prof-opts">
+                  {ACCESSORIES.map((a) => (
+                    <button
+                      key={a.key || 'none'}
+                      className={`prof-opt${p.pet.accessory === a.key ? ' is-on' : ''}`}
+                      onClick={() => setPet({ accessory: a.key })}
+                    >
+                      {a.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <button className="btn-primary" onClick={() => setSheet(null)}>
+              Done
+            </button>
+          </section>
+        )}
+      </div>
+    </AppChrome>
+  )
+}

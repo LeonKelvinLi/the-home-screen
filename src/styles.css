@@ -6357,3 +6357,452 @@ textarea {
     opacity: 0.45;
   }
 }
+
+/* ---------- share, on a business page ---------- */
+
+.brand-hero {
+  position: relative;
+}
+
+.brand-share {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  padding: 0;
+}
+
+.brand-share:active {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.brand-share-toast {
+  position: absolute;
+  top: 58px;
+  right: 12px;
+  padding: 6px 10px;
+  border-radius: 9px;
+  background: rgba(20, 20, 22, 0.86);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ---------- profile ---------- */
+
+.prof {
+  padding: 16px 16px 28px;
+}
+
+.prof-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.prof-avatar {
+  position: relative;
+  flex: 0 0 auto;
+  width: 96px;
+  height: 96px;
+  border: 0;
+  border-radius: 50%;
+  overflow: visible;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.prof-avatar .pet-art,
+.prof-photo {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+/* No picture chosen yet: the default pet, dimmed, so the shape of the thing
+   is obvious before anyone has set one. */
+.prof-avatar-empty {
+  display: block;
+  opacity: 0.42;
+}
+
+.prof-avatar-badge {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #141416;
+  color: #fff;
+  box-shadow: 0 0 0 3px var(--paper);
+}
+
+.prof-id {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.prof-name {
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-name-input {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* The count, drawn as the operator drew it: gem then [n]. */
+.prof-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  align-self: flex-start;
+  min-height: 44px;
+  border: 0;
+  background: none;
+  padding: 0;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-actions {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 8px;
+}
+
+.prof-action {
+  flex: 1 1 0;
+}
+
+.prof-h {
+  margin: 20px 0 8px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.2px;
+}
+
+.prof-sub {
+  margin: 14px 0 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.prof-empty {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  color: var(--muted);
+}
+
+.prof-drop {
+  padding: 4px 0 8px;
+}
+
+.prof-chiprow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prof-chip,
+.prof-picker-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 22px;
+  background: #f1f1f4;
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-picker-row {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  justify-content: flex-start;
+}
+
+.prof-picker-name {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.prof-when {
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.prof-chip-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 4px;
+  flex: 0 0 auto;
+}
+
+.prof-top-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.prof-edit {
+  min-height: 44px;
+  border: 0;
+  background: none;
+  padding: 0 2px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--blue-text);
+  cursor: pointer;
+}
+
+.prof-top-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--paper);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+}
+
+.prof-top-mark {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  flex: 0 0 auto;
+}
+
+.prof-top-text {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  min-width: 0;
+}
+
+.prof-top-text strong {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.prof-top-text em {
+  font-style: normal;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* The 3x3, as drawn. */
+.prof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.prof-tile {
+  position: relative;
+  aspect-ratio: 1;
+  border: 0;
+  border-radius: 18px;
+  display: grid;
+  place-items: end start;
+  padding: 8px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.prof-tile-name {
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.2;
+  /* Colour comes from readableOn in the component; the shadow is dropped with
+     it, because a black shadow under near-black ink on a yellow tile is just
+     mud. Depth comes from the tile, not from the type. */
+  text-align: left;
+}
+
+.prof-tile.is-empty {
+  display: grid;
+  place-items: center;
+  background: #ececf0;
+  color: var(--tertiary);
+  font-size: 15px;
+  font-weight: 700;
+  border: 1.5px dashed rgba(60, 60, 67, 0.22);
+}
+
+.prof-recent-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 20px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 12px;
+  background: #f1f1f4;
+  font-size: 15.5px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-recent-count {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.prof-member {
+  margin: 22px 0 6px;
+}
+
+.prof-member-line,
+.prof-member-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-size: 15.5px;
+  font-weight: 600;
+}
+
+.prof-member-cta {
+  min-height: 44px;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--blue-text);
+  cursor: pointer;
+}
+
+.prof-fineprint {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* ---------- the picture editor ---------- */
+
+.prof-editor {
+  margin-top: 22px;
+  padding: 14px;
+  border-radius: 16px;
+  background: #f1f1f4;
+}
+
+.prof-editor-modes {
+  display: flex;
+  gap: 8px;
+}
+
+.prof-mode {
+  flex: 1 1 0;
+  min-height: 46px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--paper);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-mode.is-on {
+  background: var(--blue-text);
+  color: #fff;
+}
+
+/* The input is driven by the button above it; it must stay reachable by the
+   keyboard rather than display:none, which would take it out of the tab order. */
+.prof-file {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.prof-pet-preview {
+  display: grid;
+  place-items: center;
+  padding: 12px 0 4px;
+}
+
+.prof-opts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.prof-opt {
+  min-height: 44px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 22px;
+  background: var(--paper);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-opt.is-on {
+  background: var(--blue-text);
+  color: #fff;
+}
+
+.prof-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.prof-sw {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1) inset;
+}
+
+.prof-sw.is-on {
+  box-shadow:
+    0 0 0 3px var(--paper),
+    0 0 0 6px var(--blue-text);
+}

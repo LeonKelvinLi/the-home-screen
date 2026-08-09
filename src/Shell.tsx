@@ -16,6 +16,7 @@ import { ShareApp } from './apps/ShareApp'
 import { MembersApp } from './apps/MembersApp'
 import { CalendarApp } from './apps/CalendarApp'
 import { MemberCardApp } from './apps/MemberCardApp'
+import { ProfileApp } from './apps/ProfileApp'
 import { LISTED_KITCHENS } from './data/brands'
 import { PARTNER_COUNT } from './data/cities'
 
@@ -79,6 +80,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <CalendarApp api={api} />
     case 'membercard':
       return <MemberCardApp api={api} />
+    case 'profile':
+      return <ProfileApp api={api} />
     default:
       return null
   }

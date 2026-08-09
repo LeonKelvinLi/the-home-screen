@@ -17,7 +17,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
-  | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard'
+  | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
 
 export interface AppDef {
   id: string
@@ -294,6 +294,23 @@ const CALENDAR_APP: AppDef = {
   it is a thing you show, not a place you browse, and it only means anything
   once you have one.
 */
+/** A head and shoulders on the tile, in the app's flat icon language. */
+function ProfileIcon() {
+  return (
+    <svg viewBox="0 0 100 100" width="100" height="100" aria-hidden="true">
+      <defs>
+        <linearGradient id="profg" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#6FD3FF" />
+          <stop offset="1" stopColor="#2B9BE0" />
+        </linearGradient>
+      </defs>
+      <rect width="100" height="100" rx="22" fill="url(#profg)" />
+      <circle cx="50" cy="41" r="14" fill="#fff" />
+      <path d="M24 80a26 26 0 0 1 52 0Z" fill="#fff" />
+    </svg>
+  )
+}
+
 export const MEMBER_CARD_APP: AppDef = {
   id: 'sys.membercard',
   name: 'Member card',
@@ -302,6 +319,23 @@ export const MEMBER_CARD_APP: AppDef = {
   kind: 'system',
   systemKey: 'membercard',
   tint: '#f6d800',
+}
+
+/*
+  Someone's own profile — where they have been and what they liked.
+
+  On the grid rather than buried in Settings, because the operator's whole idea
+  for it is that it is a page OTHER people look at. A profile you have to go
+  hunting for is a profile nobody fills in.
+*/
+export const PROFILE_APP: AppDef = {
+  id: 'sys.profile',
+  name: 'Profile',
+  label: 'Profile',
+  icon: <ProfileIcon />,
+  kind: 'system',
+  systemKey: 'profile',
+  tint: '#5AC8FA',
 }
 
 export const ALL_APPS: AppDef[] = [
@@ -313,6 +347,7 @@ export const ALL_APPS: AppDef[] = [
   MEMBERS_APP,
   MEMBER_CARD_APP,
   CALENDAR_APP,
+  PROFILE_APP,
 ]
 
 /*
@@ -356,7 +391,10 @@ export const APP_GROUPS: AppDef[][] = [
   // Curio is the LAST app, by the operator's instruction. The reserve slots
   // used to sit between it and the system apps, which buried it behind eight
   // blank tiles; they now live on the blank pages that follow instead.
-  [MEMBERS_APP, ...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
+  // PROFILE_APP sits beside MEMBERS: they are the two pages about the person
+  // rather than about a business, and the profile is only worth filling in if
+  // it is somewhere you trip over rather than somewhere you go looking.
+  [PROFILE_APP, MEMBERS_APP, ...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
 ]
 
 /** Flat order, kept for anything that just wants every home-screen app. */
