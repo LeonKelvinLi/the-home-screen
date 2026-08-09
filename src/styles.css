@@ -3999,9 +3999,33 @@ textarea {
     when u is small and under-reserves when u approaches 1, which put the
     wordmark on the keypad at 430x790 and again on a landscape desktop. A single
     ratio has no such seam.
+
+    THE DENOMINATOR IS 790, NOT 900.
+
+    900 was the design height and it over-reserved by about a hundred points.
+    Measured on a real 430x752 Safari viewport, the content stopped at 730 and
+    the keypad came out 261pt wide against 430 — 60.7% of the screen, where iOS
+    is 70.9%. The missing space was not being used by anything: it sat as flex
+    slack, roughly 78pt of it in one gap between the call button and the tab
+    bar. So the pad was shrunk to fit a height nothing occupied, which is what
+    "small compared to iOS" looks like when you measure it.
+
+    830 came off a sweep, not a guess. Denominator against dog width, measured
+    on a 430x752 viewport, keeping only the combinations where nothing clips,
+    nothing overlaps and the tab bar stays on screen:
+
+      D=830, dog 96u -> keys 65.7%, dog 87px   <- this one
+      D=810, dog 80u -> keys 67.4%, dog 74px
+      D=790, dog 74u -> keys 69.1%, dog 70px
+
+    Every extra point of keypad below 830 has to be paid for out of Biggie, and
+    he was made big on purpose. 830 buys back five points of keypad — 60.7% to
+    65.7%, against the 70.9% iOS uses — and costs the dog nothing. Going further
+    is a trade the operator should make deliberately rather than one buried in a
+    stylesheet.
   */
-  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 900));
-  --u: min(calc(min(100vw, 440px) / 440), calc(100dvh / 900));
+  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 830));
+  --u: min(calc(min(100vw, 440px) / 440), calc(100dvh / 830));
 
   /*
     The chrome does NOT scale, at all.
@@ -4267,6 +4291,15 @@ textarea {
     eaten from both ends.
   */
   flex: 1.9 1 0;
+  /*
+    Never smaller than the dog and the wordmark it contains.
+
+    flex-shrink was free to squeeze this box below its own content, and with
+    justify-content:center the overflow spilled both ways — so the BEASTY
+    wordmark printed straight through the 1-2-3 row. It measured 9pt of overlap
+    at 430x752 and 11pt at 390x664, worse the shorter the screen, which is why
+    it looked fine in the mockup and broken on a phone.
+  */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4280,9 +4313,20 @@ textarea {
      brand does not sit under a notch when this is installed to the home screen
      and runs without browser chrome. */
   padding: calc(env(safe-area-inset-top, 0px) + 14px) 20px calc(12 * var(--u));
-  min-height: 0;
-  /* Backstop. The brand must never spill onto the keypad, whatever it is
-     given — clipped is recoverable, overlapping is not. */
+  /*
+    Never smaller than the dog and the wordmark inside it.
+
+    This was min-height:0 with overflow:hidden, chosen when the alternative was
+    the wordmark printing through the 1-2-3 row: clipped beats overlapping. But
+    it only ever hid the symptom, and the moment the keypad grew it took the
+    top off Biggie's head — the box was 96pt tall holding 170pt of content, so
+    the dog started 19pt above his own container and got cut there.
+
+    min-content makes the box fit what is in it, so neither happens. The
+    overflow guard stays as a backstop for a viewport too short for any of
+    this, where clipping really is the better of two bad options.
+  */
+  min-height: min-content;
   overflow: hidden;
 }
 
@@ -4294,6 +4338,7 @@ textarea {
   min-height: calc(38 * var(--u));
   color: #000;
   transition: color 900ms ease;
+  flex: 0 0 auto;
 }
 
 /* Near-black on the yellow, NOT the white the keys switched to: white on
@@ -4338,7 +4383,20 @@ textarea {
   */
   width: calc(96 * var(--u));
   height: auto;
+  /*
+    A ceiling in viewport units, because u alone cannot see how short the screen
+    is once the keypad has taken its share.
+
+    On a 390x664 or 360x620 viewport the dog stayed at his full height and
+    pushed the tab bar 4 to 8pt off the bottom, where overflow:hidden quietly
+    ate it. Capping his height lets him give up a few points on a short phone
+    instead of costing the tab bar, and it does nothing at all on a normal one —
+    at 430x752 and above the natural height is already under this.
+  */
+  max-height: 14dvh;
   object-fit: contain;
+  /* Part of the same fix: a shrunk dog pulled the wordmark up into the keys. */
+  flex: 0 0 auto;
 }
 
 /* ---------- the keypad ---------- */
@@ -4683,7 +4741,17 @@ textarea {
 .dialer.is-beasty .dialer-foot {
   opacity: 1;
   height: auto;
-  margin: calc(6 * var(--u)) 0 calc(2 * var(--u));
+  /* 3, not 6: giving the badge its real height cost the tab bar 2pt on a
+     360x620 screen, and this is cheaper to give back than keypad. */
+  margin: calc(3 * var(--u)) 0 calc(2 * var(--u));
+  /*
+    height:auto is not enough on its own. As a flex item this was free to shrink
+    and the tighter keypad squeezed it to 4pt tall, so the one line stating how
+    many businesses are real and how many cities are empty rendered as a sliver
+    of cut-off text. That line is the honest count — it does not get to be the
+    thing that gives way when space is short.
+  */
+  flex: 0 0 auto;
 }
 
 .dialer-home {
