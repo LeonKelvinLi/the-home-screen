@@ -139,6 +139,7 @@ export interface Brand {
    * checkout must never try to charge one. The string explains how to start.
    */
   quoteOnly?: string
+  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
   /** Published contact address, where the business publishes one. */
   email?: string
   /** What this business gives BEASTY members. See the Seed note. */
@@ -272,6 +273,7 @@ interface Seed {
    * to actually start.
    */
   quoteOnly?: string
+  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
 }
 
 /** name, description, low bound in cents, printed range. */
@@ -534,6 +536,7 @@ const fromSeed = (s: Seed): Brand => ({
   site: s.site,
   siteNote: s.siteNote,
   quoteOnly: s.quoteOnly,
+  clip: s.clip,
   // "This week's favourites" is a food line. A service catalogue is not a
   // rotating special, and nothing about it changes weekly.
   //

@@ -2,6 +2,7 @@ import { useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { ItemSheet } from './ItemSheet'
 import { BrandLogo } from '../ios/BrandLogo'
+import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { readableOn } from '../ios/contrast'
@@ -120,6 +121,16 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               Menu needs owner confirmation — {brand.needsOwnerReview}
             </p>
           )}
+
+          {/*
+            Their clip sits above the menu, under the caveats.
+
+            It is the business showing you their own room and their own food,
+            which is the thing a list of names and prices cannot do — but it
+            goes after anything that qualifies the prices, because a caveat that
+            arrives after the video is a caveat nobody read.
+          */}
+          {brand.clip && <BrandClip clip={brand.clip} tint={brand.logo.bg.split('|')[0]} />}
 
           {/* Says plainly that this is a selection, not their whole menu —
               which it is not, for every partner but top dog. */}

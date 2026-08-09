@@ -92,6 +92,15 @@ export interface LocalSeed {
    * still owe it, it is just already inside the price the customer sees.
    */
   taxIncluded?: boolean
+  /**
+   * A clip of theirs for the page. See apps/BrandClip.tsx.
+   *
+   * `src` is footage they gave us, sitting on our origin, and plays inline.
+   * `href` alone is a post on someone else's platform, which we cannot embed
+   * and do not pretend to — it draws a card that says where it goes. `credit`
+   * is required either way: it is their video, and whose it is gets said.
+   */
+  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
 }
 
 /**
@@ -199,6 +208,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       ZIP 94513 is from the state licence register, not from them.
     */
     slug: 'the-yard-brentwood',
+    clip: { href: 'https://www.instagram.com/reel/DV7TYKVCGdl/', credit: 'Filmed by The Yard', platform: 'Instagram' },
     name: 'The Yard',
     label: 'The Yard',
     cuisine: 'Smash burgers, cocktails',
@@ -339,6 +349,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       handle in the story URL is how the business was confirmed.
     */
     slug: 'sin-city-pits',
+    clip: { href: 'https://www.instagram.com/reel/DbYsH_viR_a/', credit: 'Filmed by Sin City Pits', platform: 'Instagram' },
     name: 'Sin City Pits',
     label: 'Sin City Pits',
     cuisine: 'Pitbull kennel and breeder',
@@ -387,6 +398,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       Those prices belong to other shops and are not carried over. Ask them.
     */
     slug: 'tequilas-taqueria',
+    clip: { href: 'https://www.instagram.com/reel/DbmH3wLFV9U/', credit: 'Filmed by Tequila\u2019s Taqueria', platform: 'Instagram' },
     name: "Tequila's Taquería",
     label: "Tequila's",
     cuisine: 'Mexican, seafood, botanas',

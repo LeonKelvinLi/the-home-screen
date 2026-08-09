@@ -6016,3 +6016,79 @@ textarea {
 .brand-offers.is-mock .brand-offer-body {
   opacity: 0.72;
 }
+
+/* ---------- a business's own clip on their page ---------- */
+
+.brand-clip {
+  margin: 0 0 14px;
+}
+
+/*
+  9:16, because that is what a phone shoots and what these are. Letting the
+  element size itself to the file meant a portrait reel pushed the entire menu
+  below the fold on arrival.
+*/
+.brand-clip-video {
+  display: block;
+  width: 100%;
+  max-height: 62vh;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: var(--radius);
+  background: #000;
+}
+
+.brand-clip-credit {
+  margin: 6px 2px 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/*
+  The link-out card. Deliberately NOT a play triangle over a still frame: it
+  leaves the app, and it says so before it is tapped rather than after.
+*/
+.brand-clip-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+  padding: 14px 16px;
+  border-radius: var(--radius);
+  color: #fff;
+  text-decoration: none;
+}
+
+.brand-clip-link-glyph {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.brand-clip-link-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.brand-clip-link-text strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.brand-clip-link-text em {
+  font-style: normal;
+  font-size: 12px;
+  /* On the brand's own colour, so it is held well clear of the 4.5:1 floor
+     rather than faded the way a caption normally would be. */
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.brand-clip-link:active {
+  opacity: 0.86;
+}
