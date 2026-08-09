@@ -325,10 +325,24 @@ export const LOCAL_SEED: LocalSeed[] = [
       would look like on a new partner's page; Jojo's has agreed neither, and
       the app says so on the page rather than letting the design pass for terms.
     */
+    /*
+      THE OPERATOR'S OWN EXAMPLE WORDING, and still mock.
+
+      He asked for "a BOGO welcome offer as an example", then "free fountain
+      soda with refills with any meal purchase" as the loyalty side. Both are
+      his, written as a demonstration of the shape an offer takes — Jojo's has
+      not agreed either of them, which is what `mock` says and why the app
+      prints the caveat next to them.
+
+      Buy-one-get-one needs a subject or it is unbounded, so it names the
+      sandwich rather than the whole menu. An unqualified BOGO on a $16.99
+      combo is not what anyone means by it, and this text is the thing a
+      customer would hold them to.
+    */
     offers: {
       mock: true,
-      welcome: 'A side of fries with your first order.',
-      loyalty: '10% off any combo, every visit.',
+      welcome: 'Buy one sandwich, get one free on your first visit.',
+      loyalty: 'Free fountain soda, with refills, on any meal.',
     },
     offer: ['Combo 1', 'Combo 2', 'Bowl'],
     siteNote: 'Order direct at jojoshotchicken.com — pick the Branham location.',

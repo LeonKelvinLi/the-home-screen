@@ -123,7 +123,7 @@ export const PAGES: Record<PageKey, Page> = {
         every kitchen here"; that qualifier is what was missing.
       */
       'The app is that walk, put on a phone. Most of the icons are kitchens, and opening one puts you in their menu at their prices — they set those themselves, and nobody else edits them. One cart runs across every kitchen on the screen, so ordering from three of them is one checkout instead of three. A few icons are not kitchens and open on a contact card instead.',
-      'It opens on a dial pad because BEASTY is what the keys spell: 2-3-2-7-8-9. Behind it are pages for Oakland, Richmond, Berkeley and the rest of Glenn’s list — nine Bay Area cities and, now, Las Vegas. Most of them start empty. An empty page is the honest version — it means nobody there has signed up yet, and it is what he shows a business owner to say the space is theirs.',
+      'It opens on a dial pad because BEASTY is what the keys spell: 2-3-2-7-8-9. Behind it are pages for Oakland, Richmond, Berkeley and the rest of Glenn’s list — the Bay Area cities he is opening in, and Las Vegas. Most of them start empty. An empty page is the honest version — it means nobody there has signed up yet, and it is what he shows a business owner to say the space is theirs.',
     ],
   },
 

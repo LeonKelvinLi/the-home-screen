@@ -26,6 +26,21 @@ export const CITY_PAGES = [
   'Antioch',
   'Brentwood',
   /*
+    The South Bay and Peninsula run, added from the operator's own landmark
+    list: Shoreline for Mountain View, Great America for Santa Clara, Hoover
+    Tower for Palo Alto. None of them has a photograph on disk yet, so each
+    draws the neutral placeholder rather than another city's landmark — see
+    ios/Wallpaper.tsx.
+  */
+  'Sunnyvale',
+  'Cupertino',
+  'Santa Clara',
+  'Mountain View',
+  'Palo Alto',
+  'Saratoga',
+  'Redwood City',
+  'San Mateo',
+  /*
     THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
 
     Every other page on this list is within about an hour of Richmond, which is
