@@ -205,21 +205,64 @@ export interface Vendor {
 }
 
 /**
- * Combined state + county + district rates by city.
+ * Combined state + county + district rates by city, in basis points.
  *
- * CONFIRM AGAINST CDTFA BEFORE TURNING PAYMENTS ON. These are the published
- * combined rates for each vendor's city, but rates change by district vote and
- * under-collecting is the vendor's liability, not ours. `DEFAULT_TAX_BPS` is
- * the California statewide minimum and is deliberately the safest wrong answer
- * for a vendor whose address we do not yet hold — it under-collects, which
- * shows up as a shortfall rather than as an overcharge to a customer.
+ * THESE ARE FROM CDTFA. Every rate below is transcribed from "California City &
+ * County Sales & Use Tax Rates", effective 1 July 2026, and each was read at the
+ * source twice by different people before it went in — last confirmed
+ * 2026-08-09. The "confirm before turning payments on" gate this comment used to
+ * carry is met, for these cities only.
+ *
+ * Two of the four rates this table already held were wrong, both in the
+ * direction that costs the vendor: Oakland sat at 1025 against a real 1075, and
+ * Pinole at 975 against a real 1025. Every Oakland and Pinole order would have
+ * under-collected. That is why a plausible-looking rate is not good enough here
+ * — the shortfall is the vendor's liability, not ours, and nothing in the app
+ * surfaces it.
+ *
+ * They expire. CDTFA republishes quarterly and district taxes change by local
+ * vote, so a rate that is right in July is not self-evidently right in October.
+ * Re-read the source; do not carry these forward on trust.
+ *
+ * A city NOT listed here still falls to `DEFAULT_TAX_BPS`, the California
+ * statewide minimum, and so still under-collects — for most Bay Area cities by
+ * two to three points. That is deliberately the safest wrong answer for a vendor
+ * whose rate we do not hold: it shows up as a shortfall the operator can settle,
+ * rather than as an overcharge already taken off a customer's card. Guessing a
+ * city in would trade that for the one error we cannot undo.
  */
 const DEFAULT_TAX_BPS = 725
 const CITY_TAX_BPS: Record<string, number> = {
   Berkeley: 1025,
-  Oakland: 1025,
+  Oakland: 1075,
   Vallejo: 925,
-  Pinole: 975,
+  Pinole: 1025,
+  Brentwood: 875,
+  Livermore: 1025,
+  'San Jose': 1000,
+  Pittsburg: 925,
+  Dublin: 1025,
+  /*
+    Matching is by substring, so a STREET can impersonate a city. The live risk
+    is the Las Vegas partner in LOCAL_SEED: Las Vegas's best-known street is
+    Fremont Street, and an address on it would be taxed at Fremont, California's
+    rate — on a vendor California cannot tax at all. No Nevada key can catch
+    that, because the address would genuinely contain "Fremont".
+  */
+  Fremont: 1025,
+  Sunnyvale: 975,
+  Richmond: 975,
+  Hayward: 1075,
+  'San Leandro': 1075,
+  /*
+    Alameda is LAST and the position is load-bearing. `taxBpsFor` returns the
+    first key the address contains, and "Alameda" is a county name and a street
+    name ("The Alameda", San Jose) as well as a city. Checked early it would bill
+    a San Jose address at Alameda's 10.75% — an overcharge, the direction this
+    file exists to avoid. Every other Alameda County city sits above it and takes
+    the match first.
+  */
+  Alameda: 1075,
 }
 
 function taxBpsFor(address?: string): number {

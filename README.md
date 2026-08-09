@@ -1,11 +1,16 @@
-# One Kitchen
+# BEASTY
 
-A web app that behaves like an iPhone home screen. Each icon is a restaurant's
-logo; tapping it opens that restaurant's menu. One cart spans every kitchen, one
+A web app that behaves like an iPhone home screen. Each icon is a business's
+logo; tapping it opens that business's menu. One cart spans every kitchen, one
 checkout pays them all, and each vendor is paid separately.
 
-Built for a ghost-kitchen operator running several brands out of one commissary,
-with room for third-party trucks to join later.
+The browser tab reads "The Home Screen"; the name iOS prints under the icon on
+Add to Home Screen is BEASTY. Both are deliberate — see the comment in
+`index.html`.
+
+Built for an operator putting independent local businesses onto one home
+screen: the brands from his own hub, Bay Area businesses researched one at a
+time, and two pages of empty reservable tiles for each city he is opening in.
 
 ## Run it
 
@@ -23,14 +28,30 @@ npm start          # http://localhost:8787
 
 ## What works
 
-- **iOS shell** — home grid with two pages, wallpaper parallax, Spotlight pill,
-  dock, live status bar, app-open zoom, swipe-to-home, and an app switcher with
-  live (not screenshotted) cards.
-- **Ordering** — 22 real businesses, menus with required/optional choice
-  groups, per-item notes, one cart across all of them.
-- **Checkout** — server re-prices every line, splits the order into one ticket
-  per vendor, computes the platform fee per vendor, and stores it.
-- **Orders** — ticket states advance on a timer and the client polls them.
+- **iOS shell** — home grid ordered kitchens first and everything else second,
+  each group paginated to fit the screen, followed by two reserve pages (Goods
+  and Services) for each of 18 cities. Wallpaper parallax, Spotlight pill,
+  dock, live status bar, app-open zoom, swipe-to-home, and an app switcher
+  whose cards hold the real app rendered small and inert rather than a
+  screenshot.
+- **Ordering** — 37 businesses, 29 of them orderable. 174 priced items, of
+  which 126 sit on a menu you can order from. Per-item notes, one cart across
+  all of them. Required/optional choice groups are wired end to end — item
+  sheet, cart key, server pricing — but nothing in the catalogue defines one
+  yet, so the path is untravelled and the first choice id posted would 400.
+- **Checkout** — server re-prices every line, taxes each vendor at its own
+  city's rate, splits the order into one ticket per vendor, computes the
+  platform fee per vendor (10% by default, `PLATFORM_FEE_BPS`) and stores it.
+  A 5% service fee and any tip are charged on the food total. Pickup or
+  delivery; delivery adds a flat $3.99 and 12 minutes to the ETA.
+- **Orders** — under `SIMULATE_KITCHEN=1` ticket states advance on a timer, and
+  the client polls them every six seconds.
+- **Reserve slots** — every city page carries 24 empty tiles, each one a live
+  pitch to the next business. Tapping one opens the reserve screen,
+  `POST /api/applications` records who asked, and `LEAD_WEBHOOK_URL` puts it in
+  front of a human rather than leaving it in a table nobody reads.
+- **Calendar** — what the businesses have on, stored server-side. Reading is
+  public; writing and deleting need `OPERATOR_TOKEN`.
 
 ## Where the data comes from
 
@@ -40,18 +61,40 @@ directions, because it invited someone to replace real transcribed data
 wholesale while treating unverified data as safe.
 
 - **`src/data/brands.ts` — 17 brands, 68 items.** Transcribed from the
-  operator's own hub at goodneighborbuilder.com. Verified by diffing against
-  that site's live bundle: 98 of 98 parseable items match on name *and* price
-  exactly. Seven of these businesses look, by name, like they are not food
-  businesses at all; those carry `needsOwnerReview` and the UI says so.
-- **`src/data/localBrands.ts` — 5 businesses, 45 items.** Researched
-  individually and read off each business's own site or listing. Where a menu
-  came from a delivery platform the prices carry that platform's markup, so the
-  brand carries `pricesEstimated` and every screen that shows a price says it
-  needs confirming. Two of these are not restaurants and have no menu at all.
-- **Dish photos in `public/food`** are the vendors' own, saved from their own
-  listings. Never stock, never generated: a picture of food a kitchen does not
-  serve is as much an invented fact as an invented price.
+  operator's own hub at goodneighborbuilder.com. The port was checked against
+  that site's live bundle at the time — 98 of 98 parseable items matching on
+  name *and* price — but nothing in this repo reproduces that diff, so treat it
+  as a claim about a past check rather than something you can re-run. **Every
+  one of the 17 carries `needsOwnerReview`**: the hub tagged all 25 of its
+  entries as food, so a tax-prep firm and a sneaker brand both arrived with
+  restaurant menus, and none of these menus has been confirmed by the business
+  itself. Entries whose stated trade the ported menu contradicted were dropped
+  rather than carried over, and two of them were later re-researched from
+  source into `localBrands.ts`. The UI says all of this on the brand's own page.
+- **`src/data/localBrands.ts` — 20 businesses, 106 items on offer.** Researched
+  individually and read off each business's own site or listing. The file holds
+  167 researched rows; the rest stay in the data but are not stocked, so
+  widening an offer later is a one-line change rather than another round of
+  research. Where a menu came from a delivery platform the prices carry that
+  platform's markup, so the brand carries `pricesEstimated` — four do — and
+  every screen that shows a price says it needs confirming. Six carry
+  `contactOnly` and have no menu at all; five of those six are not restaurants.
+  Two more are `quoteOnly` — a menu to read rather than order from, because one
+  takes its orders at the counter and the other quotes every job.
+- **Dish photos in `public/food`.** Forty-six items carry one, and the two
+  provenances are declared rather than hidden: 25 are the vendor's own, saved
+  from their own listing; 21 are generated illustrations, used only where the
+  vendor publishes no photo, and labelled "Illustration, not their photo" on
+  every screen they appear. Never stock, and a generated one is never passed
+  off as the vendor's. A picture of food a kitchen does not serve is as much an
+  invented fact as an invented price.
+- **City wallpapers in `public/wallpapers`** are 28 city files plus a neutral
+  placeholder, and they are not all the same kind of thing. Nine are licensed
+  photographs, each checked against the licence stated on its own hosting page;
+  five of those nine are CC BY-SA, which is copyleft, so those files are not
+  exclusively ours and the attribution in `public/wallpapers/CREDITS.md` has to
+  travel with them. The other 19 are generated. A city with a page but no
+  photograph yet draws the placeholder rather than another town's landmark.
 - **No ratings or review counts anywhere.** Inventing them for a real business
   would be fabricating evidence about someone else's trade.
 
@@ -67,14 +110,21 @@ wholesale while treating unverified data as safe.
   it is doing so.
 - `prepMinutes` is an estimate by category, not sourced, and is hedged in the
   UI rather than shown as a fact.
+- Membership and the profile. `src/lib/member.ts` and `src/lib/profile.ts` are
+  localStorage only — no server, no card, nothing charged. Both partner offers
+  in the catalogue are flagged `mock`, meaning the operator asked to see the
+  design and the business has agreed nothing; the app labels them on screen
+  rather than letting them read as terms.
 
 ## Not built yet
 
 - Accounts and sign-in. Orders are keyed to a phone number typed at checkout.
-- Vendor onboarding and Stripe Connect KYC. Vendors exist in the DB with
+- Vendor onboarding and Stripe Connect KYC. `POST /api/applications` captures a
+  business that wants a slot, but vendors exist in the DB with
   `payouts_enabled = 0` and no way to complete verification.
-- Delivery addresses, scheduling, cancellation, refunds, receipts.
-- Any authentication on the API — see the security notes below.
+- Scheduling, cancellation, refunds, receipts.
+- Any customer-facing authentication — see the security notes below. The
+  vendor and operator routes do carry bearer tokens.
 
 ## Architecture notes
 
@@ -89,17 +139,32 @@ the menu price.
 `vendor_id`. Opening the platform to outside trucks is a policy change, not a
 schema migration.
 
-**Icons are SVG, not images.** `src/ios/BrandLogo.tsx` renders each mark from
-data, so the catalogue is one JSON payload and icons stay sharp at any size.
-When vendors upload real artwork this component gains an `imageUrl` branch.
+**Tax belongs to the vendor, not to the order.** California taxes prepared food
+at the seller's location, so the rate sits on `Vendor.taxBps` and a cart
+spanning two cities is genuinely taxed at two rates — the order-level figure is
+a sum, not a percentage of the whole. Seven rates are live across the
+catalogue, from 7.25% up to 10.75%, and they are assigned by matching the
+vendor's address against a city table: 15 of the 37 brands hold an address, and
+the other 22 fall back to the statewide 7.25%. One vendor's posted prices
+already include tax, so checkout adds none and records the embedded amount
+instead; that amount is also taken out of the base the service fee, tip and
+platform fee are charged on. `src/lib/tax.ts` is called by both the client
+display and the server charge, because a customer shown one number and billed
+another is the worst version of this bug.
+
+**Icons are drawn, or the vendor's own artwork.** `src/ios/BrandLogo.tsx`
+renders a squircle in SVG and either clips the vendor's supplied square tile
+into it — 28 of the 37 brands — or draws a monogram from data for the other
+nine. A business that joins before it sends a logo still gets a sharp icon
+rather than a broken image, which is worse than no logo at all.
 
 **The squircle is real.** `src/ios/squircle.ts` generates a superellipse rather
 than using `border-radius`. Side by side the rounded-rect corner looks pinched,
 and it is the fastest way to make a fake home screen look fake.
 
 **Fonts are self-hosted.** `-apple-system` first so Apple devices get genuine
-SF Pro; Inter is the bundled fallback. Logo faces are named explicitly so a mark
-never changes shape depending on the device.
+SF Pro; Inter is the bundled fallback and is the face every generated mark
+uses, so a logo never changes shape depending on the device.
 
 ## Kitchen API
 
@@ -118,17 +183,35 @@ so two terminals cannot both advance the same ticket.
 
 Customers never hit that endpoint — `GET /api/orders/:id` is the public lookup,
 and the unguessable order id is the capability. The customer-facing shape omits
-`platformFee` and `vendorPayout` entirely.
+`platformFee` and `vendorPayout` entirely. That route is vendor-scoped too: a
+kitchen replaying an id from its own queue sees only its own ticket, never a
+competitor's lines on the same cart.
 
 ## Known gaps before this takes real money
 
 - **No payment.** Refuses to boot with `NODE_ENV=production` unless
-  `STRIPE_SECRET_KEY` is set, so it cannot silently dispatch food against no
-  authorization — but the Stripe call itself is still not written.
+  `ALLOW_MOCK_PAYMENTS=1` acknowledges it, so it cannot silently dispatch food
+  against no authorization — but the Stripe call itself is still not written.
+  The guard used to key off `STRIPE_SECRET_KEY` and failed open the moment an
+  operator set one: a key cannot prove a charge path exists, only code can.
 - **No customer accounts.** Order history is the set of ids on the device.
-- **No rate limiting** on order creation. Bounded by `MAX_LINES` and
-  `MAX_ORDER_TOTAL`, not by request rate.
+- **Rate limiting is in-process.** Order creation is capped at 30/min per IP
+  with a burst of 10, and applications at 6/min with a burst of 3; orders are
+  also bounded by `MAX_LINES` and `MAX_ORDER_TOTAL`. The token buckets live in
+  one process's memory, so this is the first thing to replace if it ever scales
+  past a single instance.
 - **Vendor tokens are static** and printed to stdout in dev. Fine for a
   commissary, not for self-serve vendor onboarding.
-- **Tax is one flat 8.75%.** Real marketplaces need per-vendor rates, since each
-  vendor is usually seller of record for their own lines.
+- **The tax table is right today and expires.** The rates in
+  `src/data/brands.ts` are transcribed from CDTFA's July 2026 table and were
+  last confirmed 2026-08-09, so the old "confirm before payments go on" gate is
+  met for the cities listed — but CDTFA republishes quarterly and district
+  rates change by local vote, so they have to be re-read rather than carried
+  forward on trust. Three holes remain either way. Matching is by address
+  substring, so a street can impersonate a city. Twenty-two of the 37 brands
+  hold no address and fall back to the statewide 7.25%, which under-collects
+  for most Bay Area cities — deliberately the safest wrong answer, since a
+  shortfall can be settled and an overcharge already taken off a customer's
+  card cannot. And two brands are not in California at all, where a California
+  rate is simply the wrong tax; both are contact-only today, so neither can be
+  ordered from.

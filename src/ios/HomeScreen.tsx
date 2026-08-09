@@ -80,6 +80,42 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   const spotlightRef = useRef<HTMLButtonElement>(null)
   /** Locked on the first move so a vertical drag can never turn a page. */
   const axis = useRef<'x' | 'y' | null>(null)
+  /**
+   * The dot buttons, so a turn can put focus on the one it landed on.
+   *
+   * Not polish. The page being LEFT gets `inert` in the same commit, and an
+   * inert subtree blurs whatever inside it held focus — so a keyboard user who
+   * pages away from an app icon is dropped on document.body, `.home` stops
+   * receiving keydown, and the SECOND arrow press does nothing at all.
+   */
+  const dotsRef = useRef<(HTMLButtonElement | null)[]>([])
+  /**
+   * A drag has passed useDrag's threshold since the last pointerdown, so the
+   * click that lands after the release is that gesture's tail, not a tap.
+   *
+   * The dots row forwards its pointers to the pager (see .page-dots below), so
+   * without this a swipe that began on a dot would settle on the page it
+   * dragged to and then be overruled by a click on the dot it started from.
+   */
+  const dragged = useRef(false)
+  /** What the live region says. Never drawn — see .home-live. */
+  const [announce, setAnnounce] = useState('')
+  /**
+   * The page the live region has already been told about, or null before the
+   * first commit.
+   *
+   * Compared rather than counted. A "have I run before" flag is the StrictMode
+   * trap: the double-invoked mount effect runs twice with the ref surviving in
+   * between, so the second pass reads as a page turn and the app announces
+   * "Page 1 of 39" to someone who has not moved yet.
+   */
+  const announcedFor = useRef<number | null>(null)
+  /**
+   * The turn came from a dot, so focus moved to it and a reader has already
+   * read its label. Without this the live region says it a second time, and
+   * arrowing quickly through thirty-nine pages stutters.
+   */
+  const spokenByFocus = useRef(false)
 
   /*
     The wallpaper follows the PAGE, not a detected location.
@@ -222,6 +258,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   /* Page one has no city of its own, so it keeps the default photograph. */
   const city = pages[safePage]?.city ?? DEFAULT_CITY
 
+  /**
+   * What a dot is called, and what the live region says.
+   *
+   * A comma, not the "·" the heading draws: the separator on screen is
+   * typography, and a reader either skips it or says "middle dot". The app
+   * pages get a bare "Page 2 of 39" — a Page record carries no name for them,
+   * and calling one "Apps" would be making something up.
+   */
+  const pageLabel = (i: number) => {
+    const p = pages[i]
+    const where = p?.city ? `, ${p.city}${p.section ? `, ${p.section}` : ''}` : ''
+    return `Page ${i + 1} of ${pages.length}${where}`
+  }
+
   /*
     Search asked for a city. Move there and tell the shell it is done, so the
     request cannot fire again on the next render.
@@ -233,6 +283,31 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     onJumped?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [jumpToCity, pages.length])
+
+  /*
+    Say which page we landed on, wherever the turn came from — a dot, an arrow
+    key, a swipe, or Search jumping to a city. Keyed off safePage rather than
+    off each caller, so a new way of turning a page cannot forget to announce.
+
+    Held until the turn is over, for two reasons. The sentence is only true once
+    the page has arrived; and writing state in the same frame as a settle would
+    put a second full render of three pages of icons inside the 340ms the
+    animation is running, which is the cost this file spends the drag refs
+    avoiding. React runs the previous cleanup first, so holding an arrow key
+    down announces the page it stops on rather than every page it passed.
+  */
+  useEffect(() => {
+    const was = announcedFor.current
+    announcedFor.current = safePage
+    if (was === null || was === safePage) return
+    if (spokenByFocus.current) {
+      spokenByFocus.current = false
+      return
+    }
+    const t = window.setTimeout(() => setAnnounce(pageLabel(safePage)), PAGE_MS)
+    return () => window.clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [safePage])
   pageRef.current = safePage
 
   /**
@@ -278,10 +353,14 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   const drag = useDrag({
     threshold: 10,
     onStart: () => {
+      dragged.current = false
       startMoving()
       setDragging(true)
     },
     onMove: ({ dx, dy }) => {
+      // Past the threshold, so this pointer is a gesture and the click it ends
+      // with must not also be read as a tap on a dot.
+      dragged.current = true
       /*
         Decide the axis from a gesture that has actually travelled, not from
         the first pointermove.
@@ -326,6 +405,94 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     },
   })
 
+  /**
+   * Move to a page from a control rather than from a finger.
+   *
+   * Deliberately NOT `settle`. That function exists to reconcile a node the
+   * drag has been painting by hand back into React state — it writes
+   * el.style.transform directly and clears the axis lock. Nothing has been
+   * painted here, so plain state plus the transition already declared on
+   * .home-pager is the entire job. It is the path Search's jump-to-a-city has
+   * always taken.
+   *
+   * The index is ABSOLUTE and clamped against the current page count. A
+   * functional setPage(p => p + 1) would read a `page` that a resize may have
+   * left stranded past the end of the list — safePage clamps it for display but
+   * never writes it back — and the clamp would then swallow the move: press
+   * Right, nothing happens, forever.
+   */
+  const goToPage = (next: number, focusDot = false) => {
+    const to = Math.max(0, Math.min(pages.length - 1, next))
+    /*
+      Focus BEFORE the state change. The page being left goes inert in the same
+      commit and an inert subtree blurs what it contains, so moving focus
+      afterwards is a race with that blur; moving it first means there is
+      nothing left inside the inert page to lose.
+    */
+    if (focusDot) dotsRef.current[to]?.focus()
+    if (to === pageRef.current) return
+    // Layer promotion for the length of the turn, the same as a swipe gets.
+    startMoving()
+    endMoving(PAGE_MS + 40)
+    /*
+      useDrag only reports the END of a gesture that passed its threshold, so a
+      plain tap anywhere on the home screen leaves `dragging` true and the pager
+      pinned at `transition: none` until the next real swipe. Clearing it here is
+      what makes a dot animate its turn rather than teleport when the last thing
+      the customer did was tap something.
+    */
+    setDragging(false)
+    spokenByFocus.current = focusDot
+    setPage(to)
+  }
+
+  /**
+   * Arrow keys page, and only from the home screen's own focus.
+   *
+   * A React handler on the home root rather than a window listener, and that IS
+   * the scoping: a key pressed in an app window, in the item sheet or in the
+   * switcher is in a different subtree and never bubbles here. The item sheet in
+   * particular inerts only its siblings INSIDE .app-window — the home screen is
+   * outside that, so a window listener would have paged the grid underneath a
+   * sheet that had trapped Tab specifically to stop exactly that.
+   *
+   * receding/hidden are checked as well, because focus does NOT leave the home
+   * screen when an app opens: the icon that was tapped keeps it for the whole
+   * launch animation.
+   *
+   * `dragging` is deliberately not checked. useDrag never ends a gesture that
+   * stayed under its 10px threshold, so a plain tap leaves that flag true until
+   * the next real swipe — guarding on it would kill the arrow keys after the
+   * first tap anywhere. A key pressed mid-swipe resolves harmlessly instead:
+   * settle() reads pageRef, which is whatever the key just committed.
+   */
+  const onKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
+    if (receding || hidden || inert) return
+    if (e.defaultPrevented) return
+    // Cmd/Alt+Arrow is browser history, and this app deliberately routes its own
+    // way out through history.back() — stealing it would close the exit.
+    if (e.metaKey || e.ctrlKey || e.altKey || e.shiftKey) return
+
+    const target = e.target as HTMLElement | null
+    if (target?.isContentEditable) return
+    if (target?.closest('input, textarea, select')) return
+
+    const onDots = !!target?.closest('.page-dots')
+    let to: number | null = null
+    if (e.key === 'ArrowRight') to = pageRef.current + 1
+    else if (e.key === 'ArrowLeft') to = pageRef.current - 1
+    else if (onDots && e.key === 'Home') to = 0
+    else if (onDots && e.key === 'End') to = pages.length - 1
+    if (to === null) return
+
+    e.preventDefault()
+    /*
+      Only pull focus when it is standing on ground that is about to go inert.
+      Focus on the dock or on Search survives the turn and should stay put.
+    */
+    goToPage(to, onDots || !!target?.closest('.home-pager'))
+  }
+
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
     if (appId.startsWith('sys.')) return 0
@@ -337,6 +504,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   return (
     <div
       className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
+      onKeyDown={onKeyDown}
       {...(inert ? { inert: '' } : {})}
     >
       {/*
@@ -436,12 +604,60 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       </div>
 
       {pages.length > 1 && (
-        <div className="page-dots">
+        /*
+          The row forwards its pointers to the pager, with the SAME hook
+          instance the pager uses.
+
+          .page-dots is a sibling of .home-pager painted after it, so every
+          pointerdown that lands on this row is swallowed before the drag
+          handlers see it. That has always cost a 7px strip; each dot now
+          answers a 44pt-tall thumb (see .dot::after), which would have made the
+          dead strip six times taller. Forwarding hands the whole band back
+          instead — a swipe that begins on the dots turns the page exactly as
+          one that begins on the grid, because useDrag paints the pager by ref
+          and never looks at which element it was bound to.
+        */
+        <div className="page-dots" role="group" aria-label="Home screen pages" {...drag}>
           {pages.map((_, i) => (
-            <span key={i} className={`dot${i === safePage ? ' is-on' : ''}`} />
+            <button
+              key={i}
+              ref={(el) => {
+                dotsRef.current[i] = el
+              }}
+              className={`dot${i === safePage ? ' is-on' : ''}`}
+              /*
+                ONE tab stop for the whole row, arrows to move inside it. Two
+                pages per city and seventeen cities make thirty-nine dots, so a
+                stop each would drop thirty-nine of them between the last app
+                icon and Search — worse for a keyboard than no dots at all.
+              */
+              tabIndex={i === safePage ? 0 : -1}
+              aria-current={i === safePage ? 'page' : undefined}
+              aria-label={pageLabel(i)}
+              onClick={(e) => {
+                /*
+                  detail is 0 when a button is activated from the keyboard and
+                  1+ when a pointer released on it. Only a pointer-driven click
+                  can be the tail of a drag, and the flag is not cleared until
+                  the next pointerdown — so without this half of the test, Enter
+                  on a dot would do nothing for anyone who had ever swiped.
+                */
+                if (e.detail > 0 && dragged.current) return
+                goToPage(i, true)
+              }}
+            />
           ))}
         </div>
       )}
+
+      {/*
+        Rendered from the first commit and left EMPTY. A live region that appears
+        at the same moment as its text is not reliably announced — there was
+        nothing there to be watched changing.
+      */}
+      <p className="home-live" role="status">
+        {announce}
+      </p>
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <div className="spotlight-row">
