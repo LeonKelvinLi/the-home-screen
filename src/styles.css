@@ -664,6 +664,17 @@ textarea {
     up with the home bar instead of sitting behind it.
   */
   bottom: calc(var(--bottom-h) + var(--gesture-h) + 8px);
+  /*
+    ...and clear of the DOCK, which sits 26px up and stands 92px tall. The
+    first version rode just above the home strip and landed squarely over the
+    dock — covering Phone, Calendar, Orders and Scan, the four things always
+    on screen, with a prompt about installing the app. A coach mark that
+    blocks the app it is coaching you to install is worse than none.
+
+    The tail still points down: the share button it refers to lives in
+    Safari's own toolbar, below this viewport entirely.
+  */
+  bottom: calc(26px + 92px + var(--gesture-h) + 10px);
   pointer-events: none;
 }
 
