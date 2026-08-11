@@ -147,10 +147,16 @@ export const appForSlot = (key: string | number): AppDef => {
 export const RESERVE_APP_ID = 'slot.join'
 
 /*
-  BEASTY Designs — an app on the grid, not a button on the landing page.
+  BEASTY Designs — in the dock, at the operator's instruction.
 
-  The mark is the drawn monitor-and-pencil glyph on the brand yellow, matching
-  every other tile's squircle rather than being a system symbol in disguise.
+  BLACK TILE, YELLOW MARK, his ask, and it is the right way round for the dock:
+  the yellow-on-black inverts the old black-on-yellow, which read as a bright
+  slab next to Phone's white and the Scan tile's black. The glyph is the drawn
+  monitor-and-pencil, clipped to the same squircle as every other tile.
+
+  The hairline edge flips too. A 10%-black stroke was drawn to keep a yellow
+  tile off a light wallpaper; on a black tile it is invisible, so it becomes a
+  low white one for the same job.
 */
 const DesignsIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
@@ -158,13 +164,17 @@ const DesignsIcon = () => (
       <clipPath id="clip-designs">
         <path d={SQUIRCLE_100} />
       </clipPath>
+      <linearGradient id="designs-bg" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stopColor="#1E1E22" />
+        <stop offset="1" stopColor="#0C0C0E" />
+      </linearGradient>
     </defs>
     <g clipPath="url(#clip-designs)">
-      <rect width="100" height="100" fill="#f6d800" />
+      <rect width="100" height="100" fill="url(#designs-bg)" />
       <g transform="translate(50 50) scale(0.66) translate(-50 -50)">
-        <path d={GLYPHS.design} fill="#141414" fillRule="evenodd" />
+        <path d={GLYPHS.design} fill="#f6d800" fillRule="evenodd" />
       </g>
-      <path d={SQUIRCLE_100} fill="none" stroke="rgba(0,0,0,0.10)" strokeWidth="1" />
+      <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
     </g>
   </svg>
 )
