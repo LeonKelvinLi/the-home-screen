@@ -463,16 +463,39 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
               <button
                 className="dialer-domain-bar"
                 onClick={() => setDomainOpen((o) => !o)}
+                onKeyDown={(e) => {
+                  // Escape is what everything else in this app closes with.
+                  if (e.key === 'Escape' && domainOpen) {
+                    e.stopPropagation()
+                    setDomainOpen(false)
+                  }
+                }}
                 aria-expanded={domainOpen}
+                aria-controls="beasty-pages-note"
               >
                 BEASTY PAGES
               </button>
               {domainOpen && (
-                <div className="dialer-domain-drop" role="note">
-                  A familiar screen filled with small businesses waiting to be discovered —
-                  growing pages of BEASTY affiliates throughout the Bay Area that share support
-                  for a great cause. <em>Just tap away.</em>
-                </div>
+                <>
+                  {/*
+                    A scrim, because the panel sits over the keypad with nothing
+                    behind it to catch a tap. Opened once, it could not be
+                    closed: tapping away did nothing, Escape did nothing, and
+                    the panel swallowed taps meant for 1 ABOUT and 2 INSTAGRAM
+                    underneath it. Transparent, so the keypad stays visible —
+                    this is a dismiss target, not a dimmer.
+                  */}
+                  <div
+                    className="dialer-domain-scrim"
+                    onClick={() => setDomainOpen(false)}
+                    aria-hidden="true"
+                  />
+                  <div className="dialer-domain-drop" role="note" id="beasty-pages-note">
+                    A familiar screen filled with small businesses waiting to be discovered —
+                    growing pages of local shops, kitchens and trades across the Bay Area.{' '}
+                    <em>Just tap away.</em>
+                  </div>
+                </>
               )}
             </div>
           )}

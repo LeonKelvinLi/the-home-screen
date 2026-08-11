@@ -169,7 +169,11 @@ export function SearchApp({ api }: { api: ShellApi }) {
 
             {brandHits.length > 0 && (
               <>
-                <h3 className="search-h">Kitchens</h3>
+                {/* Not "Kitchens": the catalogue now includes an injury
+                    attorney, a chiropractor, a barbershop, a contractor and a
+                    dog breeder. The other two headings in this file were fixed
+                    for exactly this and this one was missed. */}
+                <h3 className="search-h">Businesses</h3>
                 {brandHits.map((b) => (
                   <button className="search-brand" key={b.id} onClick={() => api.openApp(b.id)}>
                     <BrandLogo logo={b.logo} size={44} />

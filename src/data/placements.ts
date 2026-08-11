@@ -13,10 +13,20 @@
  * 17. Getting that wrong seats a business in the wrong category's tile, so
  * there is a test below the map that refuses to let it happen quietly.
  *
- * A placement is a CLAIM ABOUT A REAL AGREEMENT. An empty city page is an
- * honest statement that nobody there has signed up; putting a business on one
- * says they have. Nothing goes in this map that the operator has not actually
- * agreed with the owner.
+ * A placement is a CLAIM THAT A BUSINESS BELONGS IN THAT SPOT — and the
+ * strength of that claim now differs by source, which this file used to
+ * pretend it did not.
+ *
+ * Two kinds live here. A RESEARCHED partner seated in its own city is seated
+ * on its own published address: Tequila's in Livermore because Livermore is
+ * where their menu says they are. A ROSTER seat comes from the operator's
+ * numbered list and means only that HE has put them there — most have agreed
+ * nothing, which is why every one of their pages says he is still gathering
+ * their details and why none of them carries the business's real artwork.
+ *
+ * The distinction matters because the product sells a numbered spot as taken.
+ * It must stay visible in the data rather than being smoothed into one word,
+ * and a seat must never be dressed up as more than its source supports.
  */
 
 import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from './roster'
@@ -60,7 +70,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods-8': 'b_jojoshotchicken', //     Wings
   'brentwood-goods-0': 'b_theyardbrentwood', //   Burgers
   'sunnyvale-goods-11': 'b_jonnysitalianice', //  Ice cream
-  'dublin-goods-3': 'b_pippal', //                Indian
+  /* Pippal's seat is Dublin, which is on the operator's expansion list but not
+     yet in CITY_PAGES — so this key never resolves to a rendered page. Left in
+     place deliberately: it is correct the day Dublin gets a page, and removing
+     it would silently lose a placement he already made. */
+  'dublin-goods-3': 'b_pippal', //                Indian (page pending)
   'vallejo-goods-13': 'b_grindcafe707', //        Coffee
 
   /* The operator's own city placements from his messages, seated where his

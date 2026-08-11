@@ -6389,9 +6389,25 @@ textarea {
   on white.
 */
 :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-  outline: 2px solid var(--blue-text);
+  /*
+    TWO rings, not one. A single blue outline measured about 2:1 against the
+    night photographs the city and flagship pages use — on the first page of
+    the product a keyboard user could not tell which of twenty-four businesses
+    they were on. The white outer ring carries the contrast on dark artwork and
+    the dark inner one carries it on light, so the pair survives any wallpaper
+    without knowing which one is behind it.
+  */
+  outline: 2px solid #ffffff;
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(20, 20, 22, 0.85);
   border-radius: 6px;
+}
+
+/* On plain light chrome the white ring would vanish; there the blue is right. */
+.nav-screen :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible,
+.sheet :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 2px solid var(--blue-text);
+  box-shadow: none;
 }
 
 .dialer :where(button, a, [tabindex]):focus-visible,
@@ -7067,7 +7083,9 @@ textarea {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.08em;
-  color: rgba(20, 20, 22, 0.55);
+  /* 3.34:1 at 0.55 — the one line on the sheet carrying the brand claim was
+     the least readable thing on it. 0.78 measures over 6:1. */
+  color: rgba(20, 20, 22, 0.78);
 }
 
 /* ---------- the BEASTY PAGES bar on the dialer ---------- */
@@ -7202,4 +7220,30 @@ textarea {
     animation: none !important;
     opacity: 0.35;
   }
+}
+
+/*
+  The dismiss target behind the BEASTY PAGES panel. Transparent on purpose —
+  the keypad must stay visible under it, so this catches the tap without
+  dimming what it covers. Sits under the panel and over the keys.
+*/
+.dialer-domain-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+}
+
+/*
+  44pt, drawn at 34. The bar was a 34pt strip (26 on a short screen) and it is
+  the only disclosure control on the landing page; the same transparent ::after
+  the Spotlight pill uses grows the target without moving the artwork.
+*/
+.dialer-domain-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  height: 44px;
 }

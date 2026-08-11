@@ -295,6 +295,16 @@ for (const brand of BRANDS) {
     yet. Anything not orderable in the UI must not be orderable at all.
   */
   if (brand.quoteOnly) continue
+  /*
+    contactOnly too, and not only because those menus are empty today.
+
+    The roster seeds are name-only by design and the operator's stated plan is
+    to fill their details in later — the first time an item lands on one of
+    them it would enter the price index and become orderable, from a business
+    that has agreed nothing and has no way to receive the order. The UI has
+    always refused to sell these; the server never checked.
+  */
+  if (brand.contactOnly) continue
 
   for (const cat of brand.menu) {
     for (const item of cat.items) {

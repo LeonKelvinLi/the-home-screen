@@ -121,6 +121,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
    * arrowing quickly through thirty-nine pages stutters.
    */
   const spokenByFocus = useRef(false)
+  /** A dot that could not be focused because the window had not slid to it. */
+  const wantsDotFocus = useRef<number | null>(null)
 
   /*
     The wallpaper follows the PAGE, not a detected location.
@@ -273,6 +275,14 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
 
   // Never strand the user on a page that no longer exists after a resize.
   const safePage = Math.min(page, pages.length - 1)
+  /*
+    The visible slice of the dot row. Clamped at both ends so the window stops
+    sliding at the first and last page rather than running off — otherwise the
+    row jitters by a dot as you reach either end.
+  */
+  const DOT_WINDOW = 9
+  const dotFrom = Math.max(0, Math.min(safePage - (DOT_WINDOW >> 1), pages.length - DOT_WINDOW))
+  const dotTo = Math.min(pages.length - 1, dotFrom + DOT_WINDOW - 1)
   /* Page one has no city of its own, so it keeps the default photograph. */
   const city = pages[safePage]?.city ?? DEFAULT_CITY
   /* Yellow sheets bring their own paper; everything else follows the city. */
@@ -329,6 +339,17 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [safePage])
   pageRef.current = safePage
+
+  /*
+    Land the focus a jump could not place. Runs after the dot row has
+    re-rendered around the new page, which is the earliest the element exists.
+  */
+  useEffect(() => {
+    const want = wantsDotFocus.current
+    if (want === null) return
+    wantsDotFocus.current = null
+    dotsRef.current[want]?.focus({ preventScroll: true })
+  }, [safePage])
 
   /**
    * True while a page turn is on screen — through the drag AND the settle
@@ -452,7 +473,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     // preventScroll for the same reason the off-screen pages are inert: the
     // screen is overflow:hidden with no way to scroll it back, so nothing here
     // is allowed to ask the browser to bring something into view.
-    if (focusDot) dotsRef.current[to]?.focus({ preventScroll: true })
+    if (focusDot) {
+      const dot = dotsRef.current[to]
+      if (dot) dot.focus({ preventScroll: true })
+      /*
+        The target dot may not be MOUNTED yet: the row only renders the nine
+        around the current page, so a jump beyond that window — End, Home, or
+        arrowing off the edge — asks for a dot that does not exist until the
+        window slides in the next commit. Focusing before the state change is
+        still right for the common case (see above), so the miss is recorded
+        and an effect picks it up once the dot is really there. Without this,
+        End moved the page and dropped focus to the body.
+      */
+      else wantsDotFocus.current = to
+    }
     if (to === pageRef.current) return
     // Layer promotion for the length of the turn, the same as a swipe gets.
     startMoving()
@@ -645,7 +679,23 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           and never looks at which element it was bound to.
         */
         <div className="page-dots" role="group" aria-label="Home screen pages" {...drag}>
-          {pages.map((_, i) => (
+          {/*
+            A WINDOW of dots, not all of them.
+
+            The row renders one dot per page with a fixed 8px gap and no wrap.
+            At 39 pages that fit. The city work took it to 105, which needs
+            832px of gap alone inside a 393px row — so flexbox shrank every dot
+            to ZERO width and the page indicator silently ceased to exist.
+            Measured: 105 dots, 105 of them 0px wide, 0 visible.
+
+            105 dots would be unreadable even if they fit, so this shows the
+            nine around wherever you are: enough to feel movement and position
+            within the run of pages you are actually swiping through, and it
+            stays a fixed width no matter how many cities get added later.
+            The full page count still reaches assistive tech through each dot's
+            own label ("Page 42 of 105") and the live region.
+          */}
+          {pages.map((_, i) => (i < dotFrom || i > dotTo ? null : (
             <button
               key={i}
               ref={(el) => {
@@ -673,7 +723,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
                 goToPage(i, true)
               }}
             />
-          ))}
+          )))}
         </div>
       )}
 

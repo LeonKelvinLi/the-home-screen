@@ -278,7 +278,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(707) 563-8320',
     address: '402 Tuolumne St, Vallejo',
     contactOnly:
-      'A family-owned café — the famous ube iced latte is theirs. Their menu lives on their own ordering site, which blocks the tools used to build this page, so rather than copy prices from delivery apps nothing is listed here yet: order on their site or call. Hours by local consensus, worth confirming: Mon-Fri 7am-2pm, Sat 8am-1pm, closed Sunday. Friday Sept 4: "Revive Unplugged" on the back patio, 6-10pm, $45 with dinner.',
+      'A family-owned café — the famous ube iced latte is theirs. Their menu lives on their own ordering site, which blocks the tools used to build this page, so rather than copy prices from delivery apps nothing is listed here yet: order on their site or call. Hours by local consensus, worth confirming: Mon-Fri 7am-2pm, Sat 8am-1pm, closed Sunday. They run ticketed Friday nights on the back patio with Revive next door \u2014 dates and prices are on their Instagram.',
     items: [],
   },
   {

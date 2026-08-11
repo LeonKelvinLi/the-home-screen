@@ -71,9 +71,11 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('smash-burgers-bros', 'Smash Burgers Bros', 'Smash Bros', 'Smash burgers', '#7A2E12', {
     logoTemplate: 'glyph-word', logoGlyph: 'burger', logoLines: ['SMASH'],
   }),
-  seed('meadowlark-dairy', 'Meadowlark Dairy', 'Meadowlark', 'Drive-thru dairy, est. 1919', '#1F5FA6', {
-    /* Their own line: est. 1919. A badge with the soft-serve they are known for. */
-    logoTemplate: 'badge', logoGlyph: 'softserve', logoLines: ['EST. 1919'], logoFace: 'slab',
+  seed('meadowlark-dairy', 'Meadowlark Dairy', 'Meadowlark', 'Drive-thru dairy', '#1F5FA6', {
+    /* The badge carries their NAME, not the date. 1919 is real and on their own
+       site, but a mark reading only "EST. 1919" states a fact about them while
+       the page underneath says we are claiming nothing about them. */
+    logoTemplate: 'badge', logoGlyph: 'softserve', logoLines: ['MEADOWLARK'], logoFace: 'slab',
     site: 'https://meadowlarkdairy.com/',
     phone: '(925) 846-2261',
     address: '57 W Neal St, Pleasanton',
@@ -119,8 +121,17 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('high-tech-car-audio', 'High Tech Car Audio', 'High Tech', 'Car audio', '#232A5C', {
     logoTemplate: 'band', logoLines: ['HIGH TECH', 'CAR AUDIO'], logoFace: 'condensed',
   }),
-  seed('rock-n-jump', "Rock n' Jump", "Rock n' Jump", '', '#7A1FA2', {
-    logoTemplate: 'band', logoLines: ['ROCK', 'N\u2019 JUMP'],
+  /*
+    ROCKIN' JUMP, not "Rock n' Jump". The operator's roster has the second
+    spelling; the business is a national trampoline-park franchise trading as
+    Rockin' Jump with a Concord location, and rocknjump.com does not resolve
+    while rockinjump.com does. The same rule already applied one entry above
+    for Midnite Theories: where his note and the business disagree about the
+    business's own name, the business wins. No band mark — a generated lockup
+    of a franchise's name is theirs to make, not ours.
+  */
+  seed('rock-n-jump', "Rockin' Jump", "Rockin' Jump", 'Trampoline park', '#7A1FA2', {
+    logoInitials: 'RJ',
   }),
   seed('dj-rev-roc', 'DJ Rev ROC', 'DJ Rev ROC', 'DJ', '#141416', {
     logoInitials: 'DJ', logoFace: 'condensed', logoAccent: '#f6d800',
@@ -135,8 +146,17 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('rosebary-car-care', 'Rosebary Car Care', 'Rosebary', 'Car care', '#6B1D2A', {
     logoTemplate: 'badge', logoLines: ['ROSEBARY'], logoFace: 'slab',
   }),
+  /*
+    NO WORDMARK HERE, deliberately. The band read "SHIN / INJURY LAW", which is
+    a trading name this practice does not use — the operator's roster says
+    "ANDREW SHIN injury, attorney" and nothing more. Attorney trade names are
+    regulated in California, and a generated lockup of an invented firm name is
+    the worst version of the mark problem: it looks like their branding and it
+    names a business that does not exist. Initials only until he confirms how
+    the practice actually trades.
+  */
   seed('andrew-shin-law', 'Andrew Shin', 'Andrew Shin', 'Injury attorney', '#26323F', {
-    logoTemplate: 'wordmark', logoLines: ['SHIN', 'INJURY LAW'], logoFace: 'slab',
+    logoInitials: 'AS', logoFace: 'slab',
   }),
   seed('winter-white-carwash', 'Winter White Car Wash & Detail', 'Winter White', 'Mobile car wash', '#274B77', {
     /* The domain the operator sent is their SUPPLIES store; the wash service
@@ -206,7 +226,13 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   seed('the-hangout-breakfast', 'The Hangout', 'The Hangout', 'Breakfast', '#12263F', {
     // Their own mark, not a generated monogram — the header logo fetched from their site: https://static.wixstatic.com/media/4498e5_d17e57814acd47d6829b1586449b2574~mv2.png
-    icon: 'the-hangout',
+    /*
+      THEIR REAL LOGO IS NOT USED HERE. the-hangout.webp is their genuine mark,
+      fetched from their own site — which is exactly why it does not go on a
+      tile for a business that has agreed nothing. Their artwork on a seat the
+      app calls taken reads as a partnership to anyone who sees it, including
+      them. The file stays in public/icons ready for the moment they say yes.
+    */
     site: 'https://www.thehangoutbreakfast.com/',
     contactOnly:
       'Breakfast and brunch, two locations: 2217 Morello Ave, Pleasant Hill (925 671-9925) ' +
