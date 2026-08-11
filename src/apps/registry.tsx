@@ -295,18 +295,37 @@ const CALENDAR_APP: AppDef = {
   once you have one.
 */
 /** A head and shoulders on the tile, in the app's flat icon language. */
+/*
+  Sized and clipped like every other tile, which it was not.
+
+  It carried width="100" height="100" as attributes, so it rendered at a fixed
+  100px whatever size the grid asked for — on the system page it stood visibly
+  larger than its neighbours and broke the row. And it used rx="22", a plain
+  rounded rectangle, in an app where every single other tile is the superellipse
+  in squircle.ts. One wrong corner among forty right ones is exactly the kind
+  of thing that reads as generic.
+*/
 function ProfileIcon() {
   return (
-    <svg viewBox="0 0 100 100" width="100" height="100" aria-hidden="true">
+    <svg
+      viewBox="0 0 100 100"
+      aria-hidden="true"
+      style={{ display: 'block', width: '100%', height: '100%' }}
+    >
       <defs>
         <linearGradient id="profg" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#6FD3FF" />
           <stop offset="1" stopColor="#2B9BE0" />
         </linearGradient>
+        <clipPath id="clip-profile">
+          <path d={SQUIRCLE_100} />
+        </clipPath>
       </defs>
-      <rect width="100" height="100" rx="22" fill="url(#profg)" />
-      <circle cx="50" cy="41" r="14" fill="#fff" />
-      <path d="M24 80a26 26 0 0 1 52 0Z" fill="#fff" />
+      <g clipPath="url(#clip-profile)">
+        <rect width="100" height="100" fill="url(#profg)" />
+        <circle cx="50" cy="41" r="14" fill="#fff" />
+        <path d="M24 80a26 26 0 0 1 52 0Z" fill="#fff" />
+      </g>
     </svg>
   )
 }
@@ -395,7 +414,12 @@ const OTHER_BRANDS = BRAND_APPS.filter((a) => {
 export const APP_GROUPS: AppDef[][] = [
   // Curio stays LAST, by the operator's standing instruction. PROFILE beside
   // MEMBERS: the two pages about the person rather than about a business.
-  [PROFILE_APP, MEMBERS_APP, ...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
+  /*
+    DESIGNS_APP is not here any more: it moved into the dock, and the dock is
+    on every page. Phone, Calendar and Share are absent for the same reason —
+    an app that is always on screen does not also take a grid tile.
+  */
+  [PROFILE_APP, MEMBERS_APP, ...OTHER_BRANDS, ...SYSTEM_APPS, ...CURIO],
 ]
 
 /** Flat order, kept for anything that just wants every home-screen app. */
@@ -417,24 +441,25 @@ export const ORDERED_APPS: AppDef[] = APP_GROUPS.flat()
  */
 export const DOCK_APPS: AppDef[] = [
   PHONE_APP,
+  /*
+    BEASTY Designs takes the second slot, by the operator's instruction, and
+    Calendar shifts right into the one Orders held.
+
+    ORDERS COMES OUT OF THE DOCK. It is the screen a customer watches while
+    food they have already paid for is being made, so I flagged the cost of
+    burying it before doing this: it is now one swipe away on the system page
+    instead of always visible. What keeps that acceptable is that the two
+    moments you actually need it still hand it to you — the confirmation
+    screen's own button opens it (CheckoutApp), and an order in progress keeps
+    its bar on screen. A returning customer with nothing cooking loses nothing
+    but a shortcut.
+  */
+  DESIGNS_APP,
   CALENDAR_APP,
   /*
-    Orders, not the old "Info" slot.
-
-    Info pointed at the Share & Scan DELI, and putting it back next to the real
-    Share & Scan gave the dock two buttons whose screens are both titled
-    "Share & Scan" — the deli genuinely has that name. Worse, that deli is one
-    of the ported entries whose menu nobody sourced, and the tile it used is
-    Beasty H20's own marketing QR rather than a deli's logo.
-
-    Orders is real, useful to a returning customer, and collides with nothing.
-    The deli is untouched and still on the grid.
-  */
-  SYSTEM_APPS.find((a) => a.systemKey === 'orders')!,
-  /*
-    Share & Scan in the fourth slot, and it now IS share and scan: a QR code
-    that takes anyone who scans it to the site, rather than the deli menu that
-    used to sit under this name.
+    Share & Scan keeps the fourth slot: a QR that takes anyone who scans it to
+    the site, rather than the deli menu that used to sit under this name.
   */
   SHARE_APP,
 ]
+
