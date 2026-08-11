@@ -60,23 +60,46 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('midnight-theories', 'Midnite Theories', 'Midnite Th…', 'Skate shop', '#1C1C2E', {
     site: 'https://midnitetheories.com/',
     address: '1215 Polk St, San Francisco',
+    logoTemplate: 'band', logoLines: ['MIDNITE', 'THEORIES'], logoFace: 'condensed',
   }),
-  seed('downtown-bbq', 'Downtown BBQ', 'Downtown BBQ', 'Barbecue', '#4A2313'),
-  seed('eat', 'EAT', 'EAT', '', '#2F2F31'),
-  seed('smash-burgers-bros', 'Smash Burgers Bros', 'Smash Bros', 'Smash burgers', '#7A2E12'),
+  seed('downtown-bbq', 'Downtown BBQ', 'Downtown BBQ', 'Barbecue', '#4A2313', {
+    logoTemplate: 'badge', logoGlyph: 'flame', logoLines: ['DOWNTOWN BBQ'], logoFace: 'slab',
+  }),
+  seed('eat', 'EAT', 'EAT', '', '#2F2F31', {
+    logoInitials: 'EAT', logoFace: 'slab',
+  }),
+  seed('smash-burgers-bros', 'Smash Burgers Bros', 'Smash Bros', 'Smash burgers', '#7A2E12', {
+    logoTemplate: 'glyph-word', logoGlyph: 'burger', logoLines: ['SMASH'],
+  }),
   seed('meadowlark-dairy', 'Meadowlark Dairy', 'Meadowlark', 'Drive-thru dairy, est. 1919', '#1F5FA6', {
+    /* Their own line: est. 1919. A badge with the soft-serve they are known for. */
+    logoTemplate: 'badge', logoGlyph: 'softserve', logoLines: ['EST. 1919'], logoFace: 'slab',
     site: 'https://meadowlarkdairy.com/',
     phone: '(925) 846-2261',
     address: '57 W Neal St, Pleasanton',
   }),
-  seed('harumi-ayce', 'Harumi', 'Harumi', 'All-you-can-eat', '#8E1119'),
-  seed('lucky-seven', 'Lucky Seven', 'Lucky Seven', '', '#B3131B'),
+  seed('harumi-ayce', 'Harumi', 'Harumi', 'All-you-can-eat', '#8E1119', {
+    logoTemplate: 'band', logoLines: ['HARUMI', 'AYCE'],
+  }),
+  seed('lucky-seven', 'Lucky Seven', 'Lucky Seven', '', '#B3131B', {
+    logoInitials: '7', logoFace: 'slab',
+  }),
   // ---- from BEASTY • SERVICES ----
-  seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F'),
-  seed('lucky-barbershop', 'Lucky Barbershop', 'Lucky Barber', 'Barbershop', '#14532D'),
-  seed('frank-jr-english', 'Frank Jr. English', 'Frank Jr.', 'General contractor', '#4B3A2A'),
-  seed('paintgo', 'PaintGo', 'PaintGo', 'Painting', '#1F6FB2'),
+  seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
+    logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',
+  }),
+  seed('lucky-barbershop', 'Lucky Barbershop', 'Lucky Barber', 'Barbershop', '#14532D', {
+    /* Script over a small-caps line — the classic barbershop pairing. */
+    logoTemplate: 'wordmark', logoLines: ['Lucky', 'BARBERSHOP'], logoFace: 'script',
+  }),
+  seed('frank-jr-english', 'Frank Jr. English', 'Frank Jr.', 'General contractor', '#4B3A2A', {
+    logoInitials: 'FJ', logoFace: 'slab',
+  }),
+  seed('paintgo', 'PaintGo', 'PaintGo', 'Painting', '#1F6FB2', {
+    logoTemplate: 'glyph-word', logoGlyph: 'design', logoLines: ['PAINTGO'],
+  }),
   seed('ubreakifix', 'uBreakiFix', 'uBreakiFix', 'Device repair', '#0E7A5F', {
+    logoInitials: 'uB',
     site: 'https://www.ubreakifix.com/locations/elcerrito',
     /* No Richmond store exists; the nearest is El Cerrito, on Richmond's
        border, from the chain's own locator. */
@@ -85,25 +108,51 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   seed('marina-bay-media', 'Marina Bay Media', 'Marina Bay', 'Media', '#0F3B57', {
     site: 'https://www.marinabaymedia.com/',
+    logoTemplate: 'band', logoLines: ['MARINA BAY', 'MEDIA'], logoFace: 'condensed',
   }),
-  seed('german-auto-sport', 'German Auto Sport', 'German Auto', 'Auto repair', '#22262B'),
-  seed('bob-valentines-electric', "Bob Valentine's", "Bob Valentine's", 'Electrician', '#B36A00'),
-  seed('high-tech-car-audio', 'High Tech Car Audio', 'High Tech', 'Car audio', '#232A5C'),
-  seed('rock-n-jump', "Rock n' Jump", "Rock n' Jump", '', '#7A1FA2'),
-  seed('dj-rev-roc', 'DJ Rev ROC', 'DJ Rev ROC', 'DJ', '#141416'),
-  seed('pet-show-grooming', 'Pet Show Grooming', 'Pet Show', 'Mobile pet grooming', '#0E6B6B'),
-  seed('dr-comics-mr-games', 'Dr. Comics and Mr. Games', 'Dr. Comics', 'Comics and games', '#5C2A83'),
-  seed('rosebary-car-care', 'Rosebary Car Care', 'Rosebary', 'Car care', '#6B1D2A'),
-  seed('andrew-shin-law', 'Andrew Shin', 'Andrew Shin', 'Injury attorney', '#26323F'),
+  seed('german-auto-sport', 'German Auto Sport', 'German Auto', 'Auto repair', '#22262B', {
+    logoTemplate: 'badge', logoLines: ['GERMAN AUTO'], logoFace: 'condensed',
+  }),
+  seed('bob-valentines-electric', "Bob Valentine's", "Bob Valentine's", 'Electrician', '#B36A00', {
+    logoTemplate: 'wordmark', logoLines: ['BOB', 'VALENTINE\u2019S'], logoFace: 'slab',
+  }),
+  seed('high-tech-car-audio', 'High Tech Car Audio', 'High Tech', 'Car audio', '#232A5C', {
+    logoTemplate: 'band', logoLines: ['HIGH TECH', 'CAR AUDIO'], logoFace: 'condensed',
+  }),
+  seed('rock-n-jump', "Rock n' Jump", "Rock n' Jump", '', '#7A1FA2', {
+    logoTemplate: 'band', logoLines: ['ROCK', 'N\u2019 JUMP'],
+  }),
+  seed('dj-rev-roc', 'DJ Rev ROC', 'DJ Rev ROC', 'DJ', '#141416', {
+    logoInitials: 'DJ', logoFace: 'condensed', logoAccent: '#f6d800',
+  }),
+  seed('pet-show-grooming', 'Pet Show Grooming', 'Pet Show', 'Mobile pet grooming', '#0E6B6B', {
+    logoTemplate: 'badge', logoLines: ['PET SHOW'], logoFace: 'slab',
+  }),
+  seed('dr-comics-mr-games', 'Dr. Comics and Mr. Games', 'Dr. Comics', 'Comics and games', '#5C2A83', {
+    /* Slab ran 103 units wide in a 100-unit tile; condensed fits. */
+    logoTemplate: 'band', logoLines: ['DR. COMICS', 'MR. GAMES'], logoFace: 'condensed',
+  }),
+  seed('rosebary-car-care', 'Rosebary Car Care', 'Rosebary', 'Car care', '#6B1D2A', {
+    logoTemplate: 'badge', logoLines: ['ROSEBARY'], logoFace: 'slab',
+  }),
+  seed('andrew-shin-law', 'Andrew Shin', 'Andrew Shin', 'Injury attorney', '#26323F', {
+    logoTemplate: 'wordmark', logoLines: ['SHIN', 'INJURY LAW'], logoFace: 'slab',
+  }),
   seed('winter-white-carwash', 'Winter White Car Wash & Detail', 'Winter White', 'Mobile car wash', '#274B77', {
     /* The domain the operator sent is their SUPPLIES store; the wash service
        itself lives at winterwhitecarwash.com, so the tile links the service. */
     site: 'https://winterwhitecarwash.com/',
     phone: '(385) 222-6186',
+    logoTemplate: 'band', logoLines: ['WINTER', 'WHITE'], logoAccent: '#BFE3FF',
   }),
-  seed('inter-chiro', 'Inter Chiro', 'Inter Chiro', 'Chiropractor', '#155E75'),
-  seed('george-pro-landscape', 'George Professional Landscape', 'George Landsc…', 'Landscaping', '#2F5D33'),
+  seed('inter-chiro', 'Inter Chiro', 'Inter Chiro', 'Chiropractor', '#155E75', {
+    logoFace: 'slab',
+  }),
+  seed('george-pro-landscape', 'George Professional Landscape', 'George Landsc…', 'Landscaping', '#2F5D33', {
+    logoTemplate: 'glyph-word', logoGlyph: 'leaf', logoLines: ['GEORGE'], logoFace: 'slab',
+  }),
   seed('rene-custom-cabinetry', 'Rene Custom Cabinetry', 'Rene Cabinetry', 'Custom cabinetry', '#5B4632', {
+    logoTemplate: 'wordmark', logoLines: ['RENE', 'CABINETRY'], logoFace: 'slab',
     /* The one detail his roster carried: a phone number, his own note. */
     phone: '(510) 754-1927',
     contactOnly:
@@ -112,6 +161,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   // ---- sent separately with placements ----
   seed('jdi-auto-detailing', 'JDI Auto Detailing', 'JDI Detailing', 'Mobile auto detailing', '#1B2B45', {
+    logoTemplate: 'wordmark', logoLines: ['JDI', 'DETAILING'], logoFace: 'condensed',
     site: 'https://www.jdidetailing.com/',
     contactOnly:
       'Mobile detailing based in Brentwood — their own Instagram describes premium mobile ' +
@@ -135,10 +185,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     and seating a Fresno business in Concord is worse than an empty spot.
   */
   seed('perfect-nine-events', 'Perfect Nine', 'Perfect Nine', 'Mobile mini golf events', '#701A3C', {
+    /* The ninth hole, as the mark. */
+    logoInitials: '9',
     site: 'https://www.perfectnineevents.com/',
     phone: '(510) 953-5757',
   }),
   seed('the-model-bakery', 'The Model Bakery', 'Model Bakery', 'Bakery', '#8A5A18', {
+    logoTemplate: 'badge', logoLines: ['MODEL BAKERY'], logoFace: 'slab',
     site: 'https://www.themodelbakery.com/',
     phone: '(707) 259-1128',
     /* Four locations; the operator's "Napa" seat is their Oxbow Market stand —
@@ -146,11 +199,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: 'Oxbow Market, 644 1st St, Napa',
   }),
   seed('town-futurist-media', 'TOWNFUTURIST MEDIA', 'Town Futurist', 'Video production', '#233329', {
+    logoTemplate: 'band', logoLines: ['TOWN', 'FUTURIST'], logoFace: 'condensed',
     site: 'https://www.townfuturistmedia.com/',
     phone: '(510) 269-0433',
     address: '755 Baywood Dr, Petaluma',
   }),
   seed('the-hangout-breakfast', 'The Hangout', 'The Hangout', 'Breakfast', '#12263F', {
+    // Their own mark, not a generated monogram — the header logo fetched from their site: https://static.wixstatic.com/media/4498e5_d17e57814acd47d6829b1586449b2574~mv2.png
+    icon: 'the-hangout',
     site: 'https://www.thehangoutbreakfast.com/',
     contactOnly:
       'Breakfast and brunch, two locations: 2217 Morello Ave, Pleasant Hill (925 671-9925) ' +
@@ -159,6 +215,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'gathered, and prices will only ever come from the right location’s own menu.',
   }),
   seed('happy-bay-paws', 'Happy Bay Paws', 'Happy Bay Paws', 'Mobile dog grooming', '#D8590F', {
+    logoTemplate: 'band', logoLines: ['HAPPY BAY', 'PAWS'],
     site: 'https://happybaypawsca.com/',
     phone: '(650) 730-0424',
     contactOnly:
@@ -167,6 +224,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'The operator is gathering the rest.',
   }),
   seed('x-noodle-dumpling', 'X Noodles & Dumplings', 'X Noodles', 'Handcrafted noodles, dumplings', '#141416', {
+    logoTemplate: 'glyph-word', logoGlyph: 'noodles', logoLines: ['X'],
     phone: '(925) 626-8866',
     address: '1185 2nd St, Ste G, Brentwood',
     contactOnly:

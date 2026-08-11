@@ -279,20 +279,30 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
             >
               {logo.lines?.[1]}
             </text>
-            <text
-              x="50"
-              y="72"
-              textAnchor="middle"
-              dominantBaseline="central"
-              fill={logo.fg}
-              fontFamily={FACE.grotesk}
-              fontSize="6.5"
-              fontWeight="600"
-              letterSpacing="1.8"
-              opacity="0.7"
-            >
-              EST 1998
-            </text>
+            {/*
+              Only a REAL third line renders here. This slot used to print a
+              hardcoded "EST 1998" as filler flavour — which was fine when the
+              template only ever drew invented scaffold brands, and became a
+              fabricated founding date on real businesses the moment the band
+              was used for actual ones. Meadowlark's real "EST. 1919" belongs
+              here; nobody else's fiction does.
+            */}
+            {logo.lines?.[2] && (
+              <text
+                x="50"
+                y="72"
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill={logo.fg}
+                fontFamily={FACE.grotesk}
+                fontSize="6.5"
+                fontWeight="600"
+                letterSpacing="1.8"
+                opacity="0.7"
+              >
+                {logo.lines[2]}
+              </text>
+            )}
           </>
         )}
 

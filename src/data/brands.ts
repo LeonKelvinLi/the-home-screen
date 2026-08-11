@@ -287,6 +287,12 @@ function taxBpsFor(address?: string): number {
 }
 
 interface Seed {
+  logoTemplate?: LogoTemplate
+  logoGlyph?: GlyphName
+  logoLines?: string[]
+  logoFace?: 'grotesk' | 'slab' | 'script' | 'condensed'
+  logoAccent?: string
+  logoInitials?: string
   slug: string
   name: string
   label: string
@@ -611,13 +617,20 @@ const fromSeed = (s: Seed): Brand => ({
   tagline: s.tagline,
   logo: s.icon
     ? { imageUrl: `/icons/${s.icon}.webp`, bg: s.color, fg: '#ffffff' }
-    : // No verifiable artwork: draw a monogram rather than link a missing file.
+    : // No verifiable artwork: draw a generated mark rather than link a
+      // missing file. Seeds may art-direct it (template, face, glyph, lines);
+      // the untouched default stays the plain monogram.
       {
         bg: s.color,
         fg: '#ffffff',
-        template: 'monogram' as const,
-        initials: s.name.replace(/[^A-Za-z ]/g, '').split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase(),
-        face: 'grotesk' as const,
+        template: (s.logoTemplate ?? 'monogram') as LogoTemplate,
+        glyph: s.logoGlyph as GlyphName | undefined,
+        lines: s.logoLines,
+        accent: s.logoAccent,
+        initials:
+          s.logoInitials ??
+          s.name.replace(/[^A-Za-z0-9 ]/g, '').split(' ').map((w) => w[0]).join('').slice(0, 2).toUpperCase(),
+        face: (s.logoFace ?? 'grotesk') as NonNullable<Logo['face']>,
       },
   prepMinutes: s.prep,
   needsOwnerReview: s.review,

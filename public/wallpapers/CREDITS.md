@@ -4,7 +4,11 @@ Every photograph below was checked against the licence stated on its own hosting
 page before it was used, and each file here is a crop and downscale of that
 original to 1320x2868.
 
-**Five of these are CC BY-SA, which is copyleft.** Cropping and resizing makes an
+The operator picked these subjects himself — his links were Six Flags for
+Vallejo and downtown First Street for Benicia, but pointed at copyrighted
+stock; the files here are the same subjects from legally licensed sources.
+
+**Most of these are CC BY or CC BY-SA, which require attribution.** Cropping and resizing makes an
 adaptation, so the adapted file in this folder carries the same CC BY-SA licence
 as its source. That does not affect the app around it — a collection is not an
 adaptation — but it does mean these particular image files are not exclusively
@@ -23,11 +27,11 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `redwood-city.webp` | Fox Theatre | Youwei liang, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `san-mateo.webp` | Downtown San Mateo at night | mliu92, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
 | `las-vegas.webp` | The Strip at night | Yelderberry, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
-| `vallejo.webp` | Mare Island smokestack at night | Almonroth, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
+| `vallejo.webp` | Six Flags Discovery Kingdom at dusk, across Lake Chabot | ray_explores, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
 CC BY-SA 2.0: https://creativecommons.org/licenses/by-sa/2.0
-CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0
+CC BY 2.0: https://creativecommons.org/licenses/by/2.0
 
 ## No attribution required
 
@@ -39,7 +43,7 @@ Credited anyway, because someone took these and it costs nothing to say so.
 | `santa-clara.webp` | Mission Santa Clara de Asís | Public domain | Carol M. Highsmith, Library of Congress |
 | `saratoga.webp` | Hakone Gardens | Public domain | Daderot, via Wikimedia Commons |
 | `palo-alto.webp` | Hoover Tower at night | Pexels Licence | Zetong Li |
-| `benicia.webp` | Benicia Capitol State Historic Park | CC0 1.0 | Lhimec, via Wikimedia Commons |
+| `benicia.webp` | First Street, downtown Benicia | CC0 1.0 | Lhimec, via Wikimedia Commons |
 
 ## Generated, not photographed
 

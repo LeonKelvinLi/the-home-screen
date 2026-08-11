@@ -93,6 +93,26 @@ export interface LocalSeed {
    */
   taxIncluded?: boolean
   /**
+   * Generated-mark art direction, for a business with no artwork yet.
+   *
+   * Without these every artless brand renders the same flat monogram, and a
+   * page of twenty-four identical monograms is what a template looks like,
+   * not what a street of small businesses looks like. The five templates and
+   * four faces in BrandLogo exist exactly for this; a seed picks the mark
+   * that suits the trade — script for a barbershop, a stripe band for car
+   * audio, a badge for a café — and the fallback stays monogram.
+   *
+   * STILL NOT THEIR LOGO. These are openly generated marks in the app's own
+   * system; nothing here imitates a real business's actual branding, which is
+   * the line that must never be crossed.
+   */
+  logoTemplate?: 'monogram' | 'badge' | 'glyph-word' | 'wordmark' | 'band'
+  logoGlyph?: string
+  logoLines?: string[]
+  logoFace?: 'grotesk' | 'slab' | 'script' | 'condensed'
+  logoAccent?: string
+  logoInitials?: string
+  /**
    * A clip of theirs for the page. See apps/BrandClip.tsx.
    *
    * `src` is footage they gave us, sitting on our origin, and plays inline.
@@ -185,6 +205,9 @@ export const LOCAL_SEED: LocalSeed[] = [
       title, not a verifiable award, and it is not rendered anywhere as one.
     */
     slug: 'larb-thai-tapas',
+    logoTemplate: 'wordmark',
+    logoLines: ['Larb', 'THAI & TAPAS'],
+    logoFace: 'script',
     name: 'Larb Thai Food & Tapas',
     label: 'Larb Thai',
     cuisine: 'Thai, Isan',
@@ -226,6 +249,10 @@ export const LOCAL_SEED: LocalSeed[] = [
       a squatter risk worth telling the owners about, and never linked here.
     */
     slug: 'grind-cafe-707',
+    logoTemplate: 'badge',
+    logoGlyph: 'coffee',
+    logoLines: ['THE GRIND'],
+    logoFace: 'slab',
     name: 'The Grind Café',
     label: 'Grind Café',
     cuisine: 'Coffee, breakfast',
@@ -265,6 +292,8 @@ export const LOCAL_SEED: LocalSeed[] = [
       exist on any of their four territory pages.
     */
     slug: 'pet-butler-walnut-creek',
+    logoTemplate: 'band',
+    logoLines: ['PET', 'BUTLER'],
     name: 'Pet Butler of Walnut Creek',
     label: 'Pet Butler',
     cuisine: 'Pet waste removal',

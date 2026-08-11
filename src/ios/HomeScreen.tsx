@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { AddToHomeCoach } from './AddToHomeCoach'
 import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
@@ -740,6 +741,14 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           />
         ))}
       </div>
+
+      {/*
+        The install nudge, mounted HERE and nowhere higher on purpose: its
+        few-seconds clock can only start once the home screen exists — never
+        over the dialer or the landing page — and living inside .home it
+        recedes, hides and goes inert with everything else when an app opens.
+      */}
+      <AddToHomeCoach />
     </div>
   )
 }

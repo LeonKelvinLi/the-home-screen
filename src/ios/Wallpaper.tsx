@@ -129,7 +129,19 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
   const timer = useRef(0)
 
   useEffect(() => {
-    if (target === shown) return
+    if (target === shown) {
+      /*
+        A stale incoming layer must be torn down here, not ignored. Two page
+        turns inside the 900ms fade hit this: turn one sets the yellow sheet as
+        `incoming` and starts the swap timer; turn two lands back on a page
+        whose wallpaper equals `shown`, the cleanup cancels that timer, and
+        this early return then left the yellow layer sitting on top of the
+        correct photograph indefinitely — the whole screen wore the wrong
+        paper until some third page changed the target.
+      */
+      setIncoming((prev) => (prev === null ? prev : null))
+      return
+    }
 
     let cancelled = false
     const img = new Image()
