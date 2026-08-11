@@ -429,7 +429,10 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       afterwards is a race with that blur; moving it first means there is
       nothing left inside the inert page to lose.
     */
-    if (focusDot) dotsRef.current[to]?.focus()
+    // preventScroll for the same reason the off-screen pages are inert: the
+    // screen is overflow:hidden with no way to scroll it back, so nothing here
+    // is allowed to ask the browser to bring something into view.
+    if (focusDot) dotsRef.current[to]?.focus({ preventScroll: true })
     if (to === pageRef.current) return
     // Layer promotion for the length of the turn, the same as a swipe gets.
     startMoving()

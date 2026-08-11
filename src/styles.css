@@ -459,13 +459,22 @@ textarea {
   every point belongs to exactly one dot, and the dead ground between dots is
   gone. It mirrors that `gap` and has to be changed with it.
 
-  HEIGHT reaches down rather than centring, and the 8px above is a measured
-  ceiling, not a taste. Downward the only thing in the way is the Spotlight row,
-  which is painted after this one and therefore wins its own overlap. Upward is
-  the last row of app icons, and how close they come depends on the window: the
-  grid fits whole rows and keeps the remainder, so at 393x624 it ends 10.6px
-  above the dots. A centred 44px band would have taken the bottom of those
-  labels, and a thumb aiming at a business would have turned a page instead.
+  HEIGHT is all downward — top: 0 — and that is measured, not taste. Above the
+  dots is the last row of tiles, and a CITY page cannot paginate: it shrinks
+  twenty-four tiles to fit and lands hard against this row. Measured on the city
+  pages: 7.2px of clear air at 393x852, 5.8px at 390x844, and at 360x640 and
+  320x568 the tiles already overlap the dots. Reaching up by even a few pixels
+  would put this band over the bottom of those labels, and because .page-dots is
+  painted after .home-pager it would WIN — a thumb aiming at a business would
+  have turned a page instead. Starting at the dot's own top edge means the band
+  claims nothing above the ground the row already occupied.
+
+  Downward, the far end runs into the Spotlight row's own 44pt region. That row
+  is painted after this one and takes the overlap back on the dots it covers,
+  which is the right way round: the pill keeps all 44 of its own, and the dozen
+  or so dots behind it keep 28 on a phone and 14 on the pad and desktop layouts,
+  where the row sits closer under the dots. Nothing else is between here and the
+  dock.
 */
 .dot {
   position: relative;
@@ -476,8 +485,8 @@ textarea {
   position: absolute;
   left: -4px;
   right: -4px;
-  top: -8px;
-  bottom: -29px;
+  top: 0;
+  bottom: -37px;
 }
 
 /*
