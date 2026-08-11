@@ -157,7 +157,17 @@ export const LOCAL_SEED: LocalSeed[] = [
     icon: 'top-dog',
     prep: 7,
     category: 'Grilled Sausages',
-    site: 'https://topdoghotdogs.com',
+    /*
+      http, NOT https, and that is not a typo.
+
+      Their TLS certificate is self-signed and expired on 29 Dec 2019 — over
+      https every browser stops a customer with a full-page "this connection is
+      not private" warning before the site ever loads, which is a worse
+      introduction to a real business than no link at all. Plain http serves
+      the site fine (200). Worth telling them: their certificate has been dead
+      for years and their own customers will be seeing that warning too.
+    */
+    site: 'http://topdoghotdogs.com',
     phone: '(510) 843-5967',
     address: '2534 Durant Ave, Berkeley',
     taxIncluded: true,
