@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db } from './db/schema'
 import { BRANDS, VENDORS } from '../src/data/brands'
-import { addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
+import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
 
 const here = dirname(fileURLToPath(import.meta.url))
 const app = express()
@@ -94,7 +94,7 @@ app.use(express.json({ limit: '256kb' }))
  * cities is genuinely taxed at two rates. This is used only if a vendor row
  * somehow predates that column.
  */
-const FALLBACK_TAX_BPS = 725
+/* Imported, not re-declared — this is the copy that charges a card. */
 const SERVICE_BPS = 500
 const DELIVERY_FEE = 399
 

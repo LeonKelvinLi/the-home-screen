@@ -1,4 +1,4 @@
-import { VENDORS } from '../data/brands'
+import { DEFAULT_TAX_BPS, VENDORS } from '../data/brands'
 
 /**
  * Sales tax for a cart, charged at each SELLER's rate.
@@ -9,7 +9,8 @@ import { VENDORS } from '../data/brands'
  * the server charge call this, because a customer shown one number and billed
  * another is the worst version of this bug.
  */
-export const FALLBACK_TAX_BPS = 725
+/* Re-exported, not re-declared. See DEFAULT_TAX_BPS in data/brands.ts. */
+export const FALLBACK_TAX_BPS = DEFAULT_TAX_BPS
 
 export function taxForVendorSubtotals(byVendor: { vendorId: string; subtotal: number }[]): number {
   return byVendor.reduce((sum, g) => sum + addedTaxFor(g.vendorId, g.subtotal), 0)

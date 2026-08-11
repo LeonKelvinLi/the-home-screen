@@ -231,7 +231,17 @@ export interface Vendor {
  * rather than as an overcharge already taken off a customer's card. Guessing a
  * city in would trade that for the one error we cannot undo.
  */
-const DEFAULT_TAX_BPS = 725
+/*
+  ONE definition, exported, because there were three.
+
+  This, FALLBACK_TAX_BPS in lib/tax.ts and another in server/index.ts all read
+  725 independently, and none imported the others — so if the California
+  statewide minimum ever moved, two of the three would have gone stale in
+  silence, and the stale one that matters is the server's, because that is the
+  copy that charges a card. It lives here because lib/tax already imports from
+  this file; the reverse would be a cycle.
+*/
+export const DEFAULT_TAX_BPS = 725
 const CITY_TAX_BPS: Record<string, number> = {
   Berkeley: 1025,
   Oakland: 1075,
