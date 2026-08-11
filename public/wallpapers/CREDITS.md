@@ -27,10 +27,24 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `redwood-city.webp` | Fox Theatre | Youwei liang, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `san-mateo.webp` | Downtown San Mateo at night | mliu92, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
 | `las-vegas.webp` | The Strip at night | Yelderberry, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
-| `vallejo.webp` | Six Flags Discovery Kingdom at dusk, across Lake Chabot | ray_explores, CC BY 2.0, via Wikimedia Commons — cropped and resized |
+| `pleasant-hill.webp` | Soldiers Monument, Boyd Road | Checkingfax, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `el-cerrito.webp` | El Cerrito from Albany Hill | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
 CC BY-SA 2.0: https://creativecommons.org/licenses/by-sa/2.0
+
+## Attribution required (CC BY)
+
+Attribution is required; unlike CC BY-SA these carry no share-alike obligation,
+so the cropped file is not itself copyleft.
+
+| File | Subject | Credit |
+|---|---|---|
+| `vallejo.webp` | Six Flags Discovery Kingdom at dusk | ray_explores, CC BY 2.0, via Wikimedia Commons — cropped and resized |
+| `petaluma.webp` | Volpi's Ristorante, downtown Petaluma, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
+| `napa.webp` | Angele Restaurant, Napa riverfront, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
+
+CC BY 4.0: https://creativecommons.org/licenses/by/4.0
 CC BY 2.0: https://creativecommons.org/licenses/by/2.0
 
 ## No attribution required
@@ -69,8 +83,13 @@ was a Beniamino Bufano sculpture.
 
 ## Where the gaps are
 
-Sunnyvale, Santa Clara, Saratoga and Redwood City are daytime shots, against a
-set that is otherwise night. No freely licensed night photograph of a landmark
+Sunnyvale, Santa Clara, Saratoga, Redwood City, Pleasant Hill and El Cerrito are
+daytime shots, against a set that is otherwise night. Pleasant Hill and El
+Cerrito are daytime because NO night or dusk photograph of either city exists
+under an acceptable licence anywhere searched — Commons by category, geosearch
+and EXIF sweep, plus Unsplash, Pexels and Pixabay. Two specific subjects have
+nothing at all and were dropped rather than substituted: the Cerrito Theater
+marquee and Napa's Uptown Theatre marquee. No freely licensed night photograph of a landmark
 in those four exists on Wikimedia Commons, Unsplash, Pexels or Pixabay — that
 was searched by category, by full text and by coordinates, and the gap is real
 rather than a search failure. Grading one of them to look like night would still
