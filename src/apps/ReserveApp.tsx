@@ -29,6 +29,8 @@ import type { ShellApi } from '../ios/Device'
  */
 const KITCHENS = LISTED_KITCHENS
 const KITCHEN_COUNT = KITCHENS.length
+/** Those with real vendor artwork — the only ones the proof row may show. */
+const WITH_ART = KITCHENS.filter((b) => b.logo.imageUrl)
 
 export function ReserveApp({ api }: { api: ShellApi }) {
   const [name, setName] = useState('')
@@ -117,9 +119,16 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         {KITCHEN_COUNT} other local businesses.
       </p>
 
-      {/* Proof before pitch: their real logos, not a claim about them. */}
+      {/*
+        Proof before pitch — but NOT "their real logos", which this comment used
+        to say and which was never true of all of them. Several of these twelve
+        have no artwork and render the app's own generated mark, so a row sold
+        as evidence of who has joined was partly the app drawing its own
+        pictures. Filtered to businesses that actually supplied artwork: fewer
+        marks, all of them real.
+      */}
       <div className="reserve-proof">
-        {KITCHENS.slice(0, 12).map((b) => (
+        {KITCHENS.filter((b) => b.logo.imageUrl).slice(0, 12).map((b) => (
           <span className="reserve-proof-mark" key={b.id}>
             <BrandLogo logo={b.logo} size={34} />
           </span>
@@ -127,7 +136,9 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         {/* Only when there are actually more. There are 10 listed partners and
             room for 12 marks, so this printed a literal "+-2" on the screen a
             prospective business is shown. */}
-        {KITCHEN_COUNT > 12 && <span className="reserve-proof-more">+{KITCHEN_COUNT - 12}</span>}
+        {WITH_ART.length > 12 && (
+          <span className="reserve-proof-more">+{WITH_ART.length - 12}</span>
+        )}
       </div>
 
       <ListSection header="What you get">

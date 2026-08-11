@@ -271,6 +271,8 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
               y="50"
               textAnchor="middle"
               dominantBaseline="central"
+              /* The line sits ON the accent band, so it takes the tile colour back —
+                 which is only readable when the band is the darker of the two. */
               fill={from}
               fontFamily={face}
               fontSize="12.5"

@@ -241,7 +241,9 @@ export const ROSTER_SEED: LocalSeed[] = [
       'gathered, and prices will only ever come from the right location’s own menu.',
   }),
   seed('happy-bay-paws', 'Happy Bay Paws', 'Happy Bay Paws', 'Mobile dog grooming', '#D8590F', {
-    logoTemplate: 'band', logoLines: ['HAPPY BAY', 'PAWS'],
+    /* White on their orange measured 3.92:1; the band's own dark plate carries
+       the name instead, and the orange stays the tile. */
+    logoTemplate: 'band', logoLines: ['HAPPY BAY', 'PAWS'], logoAccent: '#7A2F06',
     site: 'https://happybaypawsca.com/',
     phone: '(650) 730-0424',
     contactOnly:

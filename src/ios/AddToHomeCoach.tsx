@@ -101,6 +101,24 @@ export function AddToHomeCoach() {
   }, [eligible])
 
   useEffect(() => {
+    if (!shown) return
+    /*
+      The bubble sits ON the Spotlight line — see .a2hs-layer for why that is
+      the only band on a full page that is chrome rather than content — so that
+      row stands down while it is up. Without this they occupy the same strip
+      and the Search pill reads through the card.
+
+      A class on the root rather than a `:has()` selector or a prop threaded up
+      into HomeScreen: `:has()` is iOS 15.4+, and while this bubble only ever
+      shows in Safari, a layout that silently reverts to overlapping on an older
+      phone is exactly the kind of regression nobody would see reported.
+    */
+    const root = document.documentElement
+    root.classList.add('a2hs-open')
+    return () => root.classList.remove('a2hs-open')
+  }, [shown])
+
+  useEffect(() => {
     if (!shown || held) return
     /*
       Retire untouched WITHOUT writing the key. Ignored is not declined: an

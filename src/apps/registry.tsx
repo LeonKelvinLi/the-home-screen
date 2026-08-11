@@ -324,17 +324,27 @@ function ProfileIcon() {
     >
       <defs>
         <linearGradient id="profg" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#6FD3FF" />
-          <stop offset="1" stopColor="#2B9BE0" />
+          <stop offset="0" stopColor="#1E1E22" />
+          <stop offset="1" stopColor="#0C0C0E" />
         </linearGradient>
         <clipPath id="clip-profile">
           <path d={SQUIRCLE_100} />
         </clipPath>
       </defs>
+      {/*
+        Black and brand yellow, matching Designs and Scan.
+
+        It was the last stock-iOS blue in the app — a borrowed system colour
+        sitting among tiles that are otherwise either a real business's own
+        mark or drawn in this product's language, which is exactly what makes
+        a set look assembled rather than designed. Yellow on this black is
+        about 15:1.
+      */}
       <g clipPath="url(#clip-profile)">
         <rect width="100" height="100" fill="url(#profg)" />
-        <circle cx="50" cy="41" r="14" fill="#fff" />
-        <path d="M24 80a26 26 0 0 1 52 0Z" fill="#fff" />
+        <circle cx="50" cy="41" r="14" fill="#F6D800" />
+        <path d="M24 80a26 26 0 0 1 52 0Z" fill="#F6D800" />
+        <path d={SQUIRCLE_100} fill="none" stroke="rgba(255,255,255,0.14)" strokeWidth="1" />
       </g>
     </svg>
   )
@@ -364,7 +374,7 @@ export const PROFILE_APP: AppDef = {
   icon: <ProfileIcon />,
   kind: 'system',
   systemKey: 'profile',
-  tint: '#5AC8FA',
+  tint: '#141416',
 }
 
 export const ALL_APPS: AppDef[] = [
