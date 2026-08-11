@@ -560,7 +560,12 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
 
   return (
     <div
-      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}`}
+      /*
+        `has-yellow-page` so the Spotlight row can change ink with the paper.
+        That row lives outside .home-pager, so it cannot inherit anything from
+        the page it is sitting over — it has to be told.
+      */
+      className={`home${receding ? ' is-receding' : ''}${hidden ? ' is-hidden' : ''} is-${screen.device}${pages[safePage]?.yellow ? ' has-yellow-page' : ''}`}
       onKeyDown={onKeyDown}
       {...(inert ? { inert: '' } : {})}
     >

@@ -176,10 +176,19 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
       .decode()
       .then(reveal)
       .catch(() => {
-        // decode() rejects on some older Safari versions even when the image is
-        // fine, and on a genuine 404. Fall back to onload rather than never
-        // changing the wallpaper at all.
-        if (img.complete) return reveal()
+        /*
+          decode() rejects on some older Safari versions even when the image is
+          fine, and on a genuine 404. Fall back to onload rather than never
+          changing the wallpaper at all.
+
+          naturalWidth, NOT complete. A failed request is `complete` too — it
+          finished, it just failed — so testing complete alone revealed the
+          broken URL and swapped the base layer to it, and the onerror branch
+          below could never run. A 404 on one wallpaper left the screen with no
+          photograph at all until some other page changed the target. Only a
+          decoded image has a non-zero natural width.
+        */
+        if (img.complete && img.naturalWidth > 0) return reveal()
         img.onload = reveal
         img.onerror = () => {
           /* Leave the current wallpaper up. A missing file is not worth a

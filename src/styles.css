@@ -2137,6 +2137,11 @@ textarea {
 
 /* ---------- search ---------- */
 
+/*
+  The whole bar is the target, not the 20px text strip inside it. The wrapper
+  is a plain div, so a tap on its padding hit the div and the keyboard never
+  came up; the input now fills it.
+*/
 .search-field {
   display: flex;
   align-items: center;
@@ -2404,7 +2409,10 @@ textarea {
   padding: 30px;
   margin-bottom: 18px;
   border-radius: 18px;
-  background: linear-gradient(150deg, #ff9f0a, #f06a00);
+  background: linear-gradient(150deg, #b25c00, #8a3d00);
+  /* The orange was #ff9f0a->#f06a00 and white on it measured under the floor
+     for both text sizes — the balance and its unit are the only two things on
+     this screen. Same hue, taken dark enough to carry white. */
   color: #fff;
 }
 
@@ -3984,7 +3992,9 @@ textarea {
 }
 
 .nav-screen.is-beasty .brand-foot {
-  color: rgba(20, 20, 20, 0.55);
+  /* 3.63:1 at 0.55, on the sentence explaining what the QR actually does —
+     the screen an owner is shown when the operator pitches. 0.8 clears it. */
+  color: rgba(20, 20, 20, 0.8);
 }
 
 .share-actions {
@@ -6129,7 +6139,9 @@ textarea {
 .dialer-panel-quiet {
   font-size: 13px !important;
   line-height: 1.5;
-  color: rgba(60, 60, 67, 0.7) !important;
+/* 4.32:1 on the panel's cream — this is the paragraph that explains how to
+     add a favourite, i.e. the only part worth reading when the list is empty. */
+  color: rgba(60, 60, 67, 0.82) !important;
   font-weight: 400 !important;
 }
 
@@ -7246,4 +7258,27 @@ textarea {
   right: 0;
   transform: translateY(-50%);
   height: 44px;
+}
+
+
+/* ---------- chrome legibility on the yellow sheets ---------- */
+
+/*
+  The Spotlight row and back arrow are white-on-glass, tuned for a night
+  photograph. Over the yellow paper the same glass composites to under 3:1 —
+  Search stays in exactly the same place and becomes unreadable one swipe from
+  where it was fine. On yellow they take dark ink and a light plate instead.
+*/
+.home.has-yellow-page .spotlight,
+.home.has-yellow-page .spotlight-back {
+  background: rgba(20, 20, 22, 0.82);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+
+.search-field input {
+  flex: 1 1 auto;
+  min-height: 40px;
+  align-self: stretch;
 }
