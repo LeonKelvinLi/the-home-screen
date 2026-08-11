@@ -4153,18 +4153,24 @@ textarea {
     the bottom of the screen. Subtracting the insets before dividing is what
     makes the number honest, and it costs nothing on a device that has none.
 
-    830 became 860 for the remainder. Subtracting the inset fixes most of it but
-    not all, because the tab bar and the honest-count line are fixed pixels that
-    do not scale with u — so a short screen with a big island still ran 16pt
-    over. Swept against insets of 0, 44 and 59 across six viewports in both
-    engines: 860 is the first that clears it, worst case 1pt on a 360x620 phone
-    with a 59pt island, which is not a device pairing that exists.
+    830 became 860 for the remainder, because the tab bar and the honest-count
+    line are fixed pixels that do not scale with u — swept against insets of 0,
+    44 and 59 across six viewports in both engines.
+
+    THE 50px IS THE BEASTY PAGES BAR, subtracted rather than divided in. The
+    bar is fixed-height chrome (34pt pill plus its gaps), and raising the
+    denominator to cover it — the first attempt — under-reserved on every
+    small screen: fixed content cannot be amortised across a ratio, which is
+    the exact lesson the safe-area inset taught two fixes ago. 42 was the
+    bar's own box and still ran 3-7pt over on 360-390pt screens once the
+    column's gaps around it were counted; 50 is what the sweep actually
+    clears at, all thirty cells green in both engines.
   */
-  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 860));
+  --u: min(calc(min(100vw, 440px) / 440), calc(100vh / 900));
   --u: min(
     calc(min(100vw, 440px) / 440),
     calc(
-      (100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) / 860
+      (100dvh - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) / 900
     )
   );
 
@@ -6897,4 +6903,138 @@ textarea {
   margin: 0;
   font-size: 13.5px;
   color: var(--muted);
+}
+
+/* ---------- the yellow BEASTY pages ---------- */
+
+/*
+  Dark ink on the brand yellow. Every label on a normal page is white over a
+  night photograph; on a yellow sheet white text is unreadable, so the page
+  flips its whole ink set rather than each label being patched individually.
+*/
+.home-page.is-yellow .icon-label {
+  color: #141416;
+  text-shadow: none;
+}
+
+.home-page.is-yellow .home-page-city {
+  color: rgba(20, 20, 22, 0.78);
+  text-shadow: none;
+}
+
+/*
+  The dashed open-spot tiles draw their outline INSIDE their SVG in white — on
+  yellow they vanish. The SVG cannot be recoloured from here, so the tile gets
+  a dark plate behind it, which reads as the same dashed outline sitting on a
+  printed page.
+*/
+.home-page.is-yellow .icon-tile {
+  background: rgba(20, 20, 22, 0.82);
+  border-radius: 24%;
+}
+
+/* The brand line under the heading: the domain claim, in ink. */
+.home-page.is-yellow .home-page-domain {
+  margin: -2px 0 0;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: rgba(20, 20, 22, 0.55);
+}
+
+/* ---------- the BEASTY PAGES bar on the dialer ---------- */
+
+.dialer-domain {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/*
+  Black pill, yellow type, per the operator's spec — and the same left-to-right
+  glow he liked on the old ENTER bar, so it reads as the one tappable thing in
+  the brand block.
+*/
+.dialer-domain-bar {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 34px;
+  padding: 0 18px;
+  border: 0;
+  border-radius: 17px;
+  background: #141416;
+  color: #f6d800;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  cursor: pointer;
+}
+
+.dialer-domain-bar::after {
+  content: '';
+  position: absolute;
+  inset: -40% -120%;
+  background: linear-gradient(
+    76deg,
+    transparent 42%,
+    rgba(246, 216, 0, 0.28) 50%,
+    transparent 58%
+  );
+  animation: clip-sweep 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/*
+  The dropdown floats over the keypad rather than reflowing it — the keypad's
+  height budget is measured to the point (see --u) and a bubble that pushed it
+  would re-clip the wordmark this file only just stopped clipping.
+*/
+.dialer-domain-drop {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 6;
+  width: min(320px, 84vw);
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: #141416;
+  color: #fff;
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-align: left;
+  box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.45);
+}
+
+.dialer-domain-drop em {
+  font-style: normal;
+  font-weight: 700;
+  color: #f6d800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dialer-domain-bar::after {
+    animation: none !important;
+    opacity: 0.4;
+  }
+}
+
+/*
+  On a genuinely short screen the bar gives back the 8pt the sweep still
+  showed missing at 360x620 — the same deal Biggie already makes at 600:
+  fixed chrome shrinks before content clips. Everywhere else it is untouched.
+*/
+@media (max-height: 660px) {
+  .dialer-domain-bar {
+    min-height: 26px;
+    font-size: 11.5px;
+    padding: 0 14px;
+    border-radius: 13px;
+  }
 }

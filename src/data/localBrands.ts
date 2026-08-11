@@ -176,6 +176,87 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     /*
+      THE GRIND CAFÉ — VALLEJO, and not one publishable menu price.
+
+      Their first-party menu exists at thegrindcafeorders.com and that site
+      returns 403 to every automated fetch, including robots.txt — it blocks
+      bots, not people. So the menu is EMPTY here rather than reconstructed
+      from DoorDash-fed aggregators, whose numbers were found floating in
+      search results and rejected. A human with a browser can read the real
+      menu in a minute; until then, listing none is the honest state.
+
+      Single location, checked: 402 Tuolumne St and nothing else, anywhere.
+      The "707" is the area code as brand. Two collisions excluded by hand —
+      The Grind Cafe on Haight St in SF is a different business, and "The
+      Grind Coffee House" is a CLOSED predecessor at this same address whose
+      stale listings must never be merged into this one.
+
+      The phone is from Visit Vallejo's business-submitted restaurant-week
+      page (which links their Instagram), corroborated twice — their own IG
+      publishes no number. Hours below are a three-source consensus, not
+      first-party, and say so on screen.
+
+      Their old domain yourgrindcafe707.com is parked and "may be for sale" —
+      a squatter risk worth telling the owners about, and never linked here.
+    */
+    slug: 'grind-cafe-707',
+    name: 'The Grind Café',
+    label: 'Grind Café',
+    cuisine: 'Coffee, breakfast',
+    tagline:
+      'Family-owned. Specialty espressos, made-to-order breakfast burritos, hand-crafted sandwiches and homemade pastries.',
+    color: '#4A2C17|#221108',
+    icon: '',
+    prep: 0,
+    category: 'Coffee',
+    site: 'https://thegrindcafeorders.com/en-US',
+    siteCta: 'Order on their site',
+    siteNote: 'Their own ordering site. If it will not load in-app, open it in your browser.',
+    phone: '(707) 563-8320',
+    address: '402 Tuolumne St, Vallejo',
+    contactOnly:
+      'A family-owned café — the famous ube iced latte is theirs. Their menu lives on their own ordering site, which blocks the tools used to build this page, so rather than copy prices from delivery apps nothing is listed here yet: order on their site or call. Hours by local consensus, worth confirming: Mon-Fri 7am-2pm, Sat 8am-1pm, closed Sunday. Friday Sept 4: "Revive Unplugged" on the back patio, 6-10pm, $45 with dinner.',
+    items: [],
+  },
+  {
+    /*
+      PET BUTLER OF WALNUT CREEK — a franchise territory, and the listing is
+      strictly the TERRITORY'S facts, not the franchisor's.
+
+      Local: the name, owner-operator Jason Varas de Valdes, the phone below,
+      a 23-city service area (Walnut Creek, Concord, Pleasant Hill, Brentwood,
+      Antioch, Dublin, San Ramon and more), and @petbutler_walnutcreek.
+      Corporate, deliberately left out: the 800 number, info@petbutler.com,
+      and the "dog walking / pet sitting" lines that appear only in the
+      franchisor's sitewide template — unconfirmed as offered locally.
+
+      NO ADDRESS ON PURPOSE. No first-party page publishes one; the Treat
+      Blvd office that aggregators show is never theirs in their own words,
+      and a service-area business with a pinned address on a tile reads as a
+      shop you can walk into.
+
+      Quote-only pricing is the finding, not a gap — zero dollar figures
+      exist on any of their four territory pages.
+    */
+    slug: 'pet-butler-walnut-creek',
+    name: 'Pet Butler of Walnut Creek',
+    label: 'Pet Butler',
+    cuisine: 'Pet waste removal',
+    tagline: 'Residential and commercial pet waste removal. Serving Pets & Their People.',
+    color: '#1D4F91|#12315B',
+    icon: '',
+    prep: 0,
+    category: 'Service',
+    site: 'https://www.petbutler.com/locations/walnut-creek-california-pet-services/',
+    siteCta: 'Get a quote',
+    siteNote: 'Quotes run through the form on their own territory page.',
+    phone: '(925) 291-7415',
+    contactOnly:
+      'A service-area business, not a shop \u2014 which is why there is no address here. They scoop yards weekly or bi-weekly and run commercial pet-waste stations, across Walnut Creek, Concord, Pleasant Hill and about twenty more East Bay cities. Pricing is quoted per yard: call, or use the form on their page.',
+    items: [],
+  },
+  {
+    /*
       THE YARD — DOWNTOWN BRENTWOOD, a burger counter on a converted gas station
       lot with a licensed cocktail bar on it.
 

@@ -156,7 +156,7 @@ export function ReserveApp({ api }: { api: ShellApi }) {
 
       <ListSection
         header="Availability"
-        footer={`Two pages of open tiles for each of ${CITY_PAGES.length} cities, goods and services. There is no queue and no cap.`}
+        footer={`Goods and services pages for each of ${CITY_PAGES.length} cities, and the yellow BEASTY pages behind them for everyone after the first twenty-four. There is no queue and no cap.`}
       >
         <ListRow label="Businesses on the platform" value={String(KITCHEN_COUNT)} chevron={false} />
         <ListRow label="Open slots" value="Room available" chevron={false} />

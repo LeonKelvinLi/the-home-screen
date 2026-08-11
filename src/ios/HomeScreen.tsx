@@ -31,6 +31,10 @@ interface Page {
   city?: string
   /** Goods or Services. Only a city page has one. */
   section?: string
+  /** Wallpaper override for pages that are not a place (the yellow sheets). */
+  wall?: string
+  /** Dark-ink treatment for the yellow BEASTY pages. */
+  yellow?: boolean
   /**
    * Tile edge and row gap for THIS page, where the page cannot use the screen's
    * own. Only a city page sets them — see where the pages are built.
@@ -213,6 +217,30 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     // A single flat list let page two's icons flow up onto page one whenever
     // the grid had room, which is exactly what the split exists to prevent.
     const out: Page[] = []
+
+    /*
+      The operator's flagship pages open the app — BEASTY · Goods, its yellow
+      page, BEASTY · Services, its yellow page — ahead of everything, because
+      that is the product he is selling. The system page follows, then the
+      cities. buildCity is one function so a flagship page and a city page can
+      never drift apart in shape.
+    */
+    const buildCity = (cityName: string) => {
+      const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+      for (const slotPage of SLOT_PAGES) {
+        out.push({
+          city: cityName,
+          section: slotPage.heading,
+          tile: slotTile,
+          rowGap: slotGap,
+          ...(slotPage.yellow ? { wall: '/wallpapers/_beasty-pages.webp', yellow: true } : {}),
+          apps: slotPage.categories.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${i}`)),
+        })
+      }
+    }
+
+    buildCity('BEASTY')
+
     for (const group of APP_GROUPS) {
       if (!group.length) continue
       for (let i = 0; i < group.length; i += perPage)
@@ -237,18 +265,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       and so a tapped tile can be resolved back to a category, which is all
       makeSlot has to go on.
     */
-    for (const cityName of CITY_PAGES) {
-      const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-      for (const slotPage of SLOT_PAGES) {
-        out.push({
-          city: cityName,
-          section: slotPage.heading,
-          tile: slotTile,
-          rowGap: slotGap,
-          apps: slotPage.categories.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${i}`)),
-        })
-      }
-    }
+    for (const cityName of CITY_PAGES) buildCity(cityName)
 
     return out.length ? out : [{ apps: [] }]
   }, [screen.columns, screen.iconSize, screen.h, screen.device])
@@ -257,6 +274,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   const safePage = Math.min(page, pages.length - 1)
   /* Page one has no city of its own, so it keeps the default photograph. */
   const city = pages[safePage]?.city ?? DEFAULT_CITY
+  /* Yellow sheets bring their own paper; everything else follows the city. */
+  const wall = pages[safePage]?.wall
 
   /**
    * What a dot is called, and what the live region says.
@@ -515,7 +534,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
         on a page it reads as the background sliding around under the icons,
         and it forced a scale-up that softened the photo for no gain.
       */}
-      <Wallpaper city={city} />
+      <Wallpaper city={city} src={wall} />
 
       <div
         className="home-pager"
@@ -547,7 +566,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             screen sideways with no way to scroll it back.
           */
           <div
-            className="home-page"
+            className={`home-page${page.yellow ? ' is-yellow' : ''}`}
             key={i}
             /* Positioned by index, since they are no longer laid out in a row. */
             style={{ transform: `translate3d(${i * 100}%,0,0)` }}
@@ -579,6 +598,10 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
                 {page.section && ` · ${page.section}`}
               </p>
             )}
+            {/* The yellow sheets carry the domain, because the yellow IS the
+                claim: the operator wants every one of them to read as a page
+                of BEASTYpages.com. */}
+            {page.yellow && <p className="home-page-domain">BEASTYPAGES.COM</p>}
             <div
               className="home-grid"
               style={{

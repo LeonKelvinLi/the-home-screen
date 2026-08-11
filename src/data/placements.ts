@@ -19,8 +19,26 @@
  * agreed with the owner.
  */
 
+import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from './roster'
+
+/*
+  The flagship pages are DERIVED from the roster arrays rather than typed out
+  again — his numbered list is the single source of which business sits in
+  which spot, and a hand-copied duplicate here is exactly the kind of pair
+  that drifts.
+*/
+const flagship: Record<string, string> = {}
+BEASTY_GOODS_ROSTER.forEach((id, i) => {
+  if (id) flagship[`beasty-goods-${i}`] = id
+})
+BEASTY_SERVICES_ROSTER.forEach((id, i) => {
+  if (id) flagship[`beasty-services-${i}`] = id
+})
+
 /** Slot key (no `slot.` prefix) to the brand id that has taken it. */
 export const CITY_PLACEMENTS: Record<string, string> = {
+  ...flagship,
+
   /*
     Sin City Pits, in the dog spot on the Las Vegas goods page.
 
@@ -31,4 +49,38 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     would have moved every tile in every city to fix one.
   */
   'las-vegas-goods-17': 'b_sincitypits',
+
+  /*
+    Researched partners seated in their own cities, each in the category the
+    operator's taxonomy gives them. A seat is a claim the business is in that
+    city, which for these comes from their own published address.
+  */
+  'livermore-goods-1': 'b_tequilastaqueria', //   Mexican
+  'livermore-goods-5': 'b_glasshouzz', //         Italian (pizza)
+  'san-jose-goods-8': 'b_jojoshotchicken', //     Wings
+  'brentwood-goods-0': 'b_theyardbrentwood', //   Burgers
+  'sunnyvale-goods-11': 'b_jonnysitalianice', //  Ice cream
+  'dublin-goods-3': 'b_pippal', //                Indian
+  'vallejo-goods-13': 'b_grindcafe707', //        Coffee
+
+  /* The operator's own city placements from his messages, seated where his
+     renamed categories put them. */
+  'brentwood-services-7': 'b_jdiautodetailing', //   Detailer
+  'berkeley-services-7': 'b_jnwdetailing', //        Detailer
+  'berkeley-services-19': 'b_perfectnineevents', //  Events
+  'brentwood-goods-2': 'b_xnoodledumpling', //       Asian
+  'napa-goods-12': 'b_themodelbakery', //            Bakery
+  'petaluma-services-12': 'b_townfuturistmedia', //  Photo/Video — a video production house
+
+  /*
+    Businesses with no fitting category go on the yellow overflow page rather
+    than being crammed under a wrong label: a waste-removal service is not
+    "Cleaning", a two-city breakfast house is not "Sandwiches", and a mobile
+    groomer with no fixed city is not anywhere at all — the operator filed it
+    under BEASTY itself.
+  */
+  'walnut-creek-services2-0': 'b_petbutlerwalnutcreek',
+  'beasty-services2-0': 'b_happybaypaws',
+  'pleasant-hill-goods2-0': 'b_thehangoutbreakfast',
+  'walnut-creek-goods2-0': 'b_thehangoutbreakfast',
 }

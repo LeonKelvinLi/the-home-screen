@@ -41,6 +41,19 @@ export const CITY_PAGES = [
   'Redwood City',
   'San Mateo',
   /*
+    The second wave, from the operator's own placements: Vallejo (The Grind
+    Café, Bula Pies), Benicia, Walnut Creek and Pleasant Hill (The Hangout, Pet
+    Butler's territory), Napa (The Model Bakery), Petaluma (Town Futurist).
+    None has a photograph yet except Walnut Creek, so the rest draw the neutral
+    placeholder rather than another city's landmark.
+  */
+  'Vallejo',
+  'Benicia',
+  'Walnut Creek',
+  'Pleasant Hill',
+  'Napa',
+  'Petaluma',
+  /*
     THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
 
     Every other page on this list is within about an hour of Richmond, which is

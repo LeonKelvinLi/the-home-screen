@@ -1,5 +1,6 @@
 import type { GlyphName } from './glyphs'
 import { LOCAL_SEED } from './localBrands'
+import { ROSTER_SEED } from './roster'
 
 /**
  * Catalogue ported from the operator's existing hub at goodneighborbuilder.com.
@@ -140,6 +141,8 @@ export interface Brand {
    */
   quoteOnly?: string
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
+  /** A name-only seat from the operator's roster. Kept off the catalogue page. */
+  rosterOnly?: boolean
   /** Published contact address, where the business publishes one. */
   email?: string
   /** What this business gives BEASTY members. See the Seed note. */
@@ -685,6 +688,20 @@ const fromSeed = (s: Seed): Brand => ({
  * front of the grid. The ported hub entries follow.
  */
 export const BRANDS: Brand[] = [
+  /*
+    Roster seeds ride the same mapping as researched brands but carry
+    `rosterOnly`, which keeps them off the catalogue page in the registry —
+    they are reachable through the flagship BEASTY pages that seat them, and
+    through search. They are name-only placeholders by the operator's explicit
+    instruction, and each of their pages says so.
+  */
+  ...ROSTER_SEED.map((s) => ({
+    ...fromSeed(s as unknown as Seed),
+    site: s.site,
+    phone: s.phone,
+    contactOnly: s.contactOnly,
+    rosterOnly: true,
+  })),
   ...LOCAL_SEED.map((s) => ({
     ...fromSeed(s as unknown as Seed),
     site: s.site,

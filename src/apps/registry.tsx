@@ -370,30 +370,31 @@ export const appById = (id: string) =>
  * page: page one now ends after the last kitchen even if there is room left.
  * That is the point of the split, not a regression.
  */
-/*
-  Page 1 is what you can order food and drink from.
-
-  `quoteOnly` has to be excluded as well as `contactOnly`: a software studio has
-  a priced list and no contactOnly flag, so it read as orderable and landed on
-  page one among the kitchens.
-*/
-const isOrderable = (a: AppDef) => {
-  const b = brandById(a.id)
-  return a.kind === 'brand' && !b?.contactOnly && !b?.quoteOnly
-}
 
 const CURIO = BRAND_APPS.filter((a) => a.id === 'b_curio')
-const KITCHENS = BRAND_APPS.filter(isOrderable)
-const OTHER_BRANDS = BRAND_APPS.filter((a) => !isOrderable(a) && a.id !== 'b_curio')
+
+/*
+  The old page one — every orderable kitchen in catalogue order — is gone, by
+  the operator's instruction: "the home screen will have just BEASTY • GOODS
+  (1st 24) … BEASTY • SERVICES (1st 24)", each with a yellow page behind it.
+  Those flagship pages are built in HomeScreen from his numbered roster via
+  the placements map, so a brand seated there (or on a city page) would show
+  twice if it also stayed here.
+
+  What remains on this page is everything WITHOUT a seat: the system apps,
+  and the few brands neither on his roster nor placed in a city. Roster-only
+  name seeds are excluded outright — their tile IS their seat.
+*/
+const SEATED = new Set(Object.values(CITY_PLACEMENTS))
+const OTHER_BRANDS = BRAND_APPS.filter((a) => {
+  if (a.id === 'b_curio') return false
+  if (SEATED.has(a.id)) return false
+  return !brandById(a.id)?.rosterOnly
+})
 
 export const APP_GROUPS: AppDef[][] = [
-  KITCHENS,
-  // Curio is the LAST app, by the operator's instruction. The reserve slots
-  // used to sit between it and the system apps, which buried it behind eight
-  // blank tiles; they now live on the blank pages that follow instead.
-  // PROFILE_APP sits beside MEMBERS: they are the two pages about the person
-  // rather than about a business, and the profile is only worth filling in if
-  // it is somewhere you trip over rather than somewhere you go looking.
+  // Curio stays LAST, by the operator's standing instruction. PROFILE beside
+  // MEMBERS: the two pages about the person rather than about a business.
   [PROFILE_APP, MEMBERS_APP, ...OTHER_BRANDS, DESIGNS_APP, ...SYSTEM_APPS, ...CURIO],
 ]
 

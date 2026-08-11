@@ -86,6 +86,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'alameda',
   'albany',
   'antioch',
+  'benicia',
   'berkeley',
   'brentwood',
   'concord',
@@ -110,11 +111,17 @@ const CITY_WALLPAPERS = new Set<string>([
   'saratoga',
   'sunnyvale',
   'union-city',
+  'vallejo',
   'walnut-creek',
 ])
 
-export function Wallpaper({ city }: { city: string | null }) {
-  const target = wallpaperFor(city)
+/*
+  `src` overrides the city lookup for pages that are not a place at all — the
+  yellow BEASTY PAGES overflow sheets. The crossfade machinery below neither
+  knows nor cares where the path came from.
+*/
+export function Wallpaper({ city, src }: { city: string | null; src?: string }) {
+  const target = src ?? wallpaperFor(city)
   /** What is currently painted. Only ever changes once the next one is ready. */
   const [shown, setShown] = useState(target)
   /** The incoming picture, faded up over the top once it has decoded. */

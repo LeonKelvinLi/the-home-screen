@@ -126,6 +126,8 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
   /** How many of the six BEASTY keys have lit so far. */
   const [spelled, setSpelled] = useState(reduced ? BEASTY_DIGITS.length : 0)
   const [panel, setPanel] = useState<PanelPage | null>(null)
+  /** The BEASTY PAGES bar's dropdown. Closed on every fresh arrival. */
+  const [domainOpen, setDomainOpen] = useState(false)
   const [toast, setToast] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
   /** True when a touch cut the sequence short, so nothing animates in after. */
@@ -448,6 +450,32 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                 ))
               : display}
           </div>
+          {/*
+            The domain, below the wordmark, exactly where the operator drew it —
+            and only once the screen is OURS. A stock dialer has no branded bar,
+            and the takeover is the whole opening.
+
+            His copy, lightly repaired for grammar and closed with the line he
+            picked as the motto.
+          */}
+          {ours && (
+            <div className="dialer-domain">
+              <button
+                className="dialer-domain-bar"
+                onClick={() => setDomainOpen((o) => !o)}
+                aria-expanded={domainOpen}
+              >
+                BEASTY PAGES
+              </button>
+              {domainOpen && (
+                <div className="dialer-domain-drop" role="note">
+                  A familiar screen filled with small businesses waiting to be discovered —
+                  growing pages of BEASTY affiliates throughout the Bay Area that share support
+                  for a great cause. <em>Just tap away.</em>
+                </div>
+              )}
+            </div>
+          )}
         </div>
 
         <div className="dialer-keys">

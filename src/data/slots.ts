@@ -71,9 +71,9 @@ export const GOODS_CATEGORIES: SlotCategory[] = [
   { n: 12, name: 'Ice cream shop', label: 'Ice cream' },
   { n: 13, name: 'Bakery', label: 'Bakery' },
   { n: 14, name: 'Coffee shop', label: 'Coffee' },
-  { n: 15, name: 'Grocery and market', label: 'Grocery' },
-  { n: 16, name: 'Butcher and seafood', label: 'Butcher' },
-  { n: 17, name: 'Liquor and wine', label: 'Liquor' },
+  { n: 15, name: 'Boba shop', label: 'Boba' },
+  { n: 16, name: 'Cookie shop', label: 'Cookies' },
+  { n: 17, name: 'Donut shop', label: 'Donuts' },
   /* Widened from "Dog boutique" to seat a breeder without renumbering the
      list — see data/placements.ts. The label under the tile is unchanged. */
   { n: 18, name: 'Dog boutique and breeder', label: 'Dog shop' },
@@ -82,7 +82,7 @@ export const GOODS_CATEGORIES: SlotCategory[] = [
   { n: 21, name: 'Shoe boutique', label: 'Shoes' },
   { n: 22, name: 'Skate and bike shop', label: 'Skate' },
   { n: 23, name: 'Thrift and vintage', label: 'Thrift' },
-  { n: 24, name: 'Bookshop', label: 'Books' },
+  { n: 24, name: 'Toy shop', label: 'Toys' },
 ]
 
 /**
@@ -106,28 +106,40 @@ export const SERVICE_CATEGORIES: SlotCategory[] = [
   { n: 4, name: 'Tattoo shop', label: 'Tattoo' },
   { n: 5, name: 'Gym', label: 'Gym' },
   { n: 6, name: 'Mechanics and smog', label: 'Mechanic' },
-  { n: 7, name: 'Auto body and paint', label: 'Auto body' },
-  { n: 8, name: 'Car wash and detailing', label: 'Car wash' },
+  { n: 7, name: 'Car audio', label: 'Car Audio' },
+  { n: 8, name: 'Auto detailing', label: 'Detailer' },
   { n: 9, name: 'Phone and device repair', label: 'Phone fix' },
-  { n: 10, name: 'Dry cleaning and laundry', label: 'Laundry' },
+  { n: 10, name: 'Dry cleaning', label: 'Dry clean' },
   { n: 11, name: 'Tailor and alterations', label: 'Tailor' },
   { n: 12, name: 'Local print shop', label: 'Print' },
-  { n: 13, name: 'Photo and video studio', label: 'Photo' },
+  { n: 13, name: 'Photo and video', label: 'Photo/Video' },
   { n: 14, name: 'Florist', label: 'Flowers' },
   { n: 15, name: 'Pet grooming', label: 'Grooming' },
   { n: 16, name: 'Veterinary clinic', label: 'Vet' },
-  { n: 17, name: 'Pharmacy', label: 'Pharmacy' },
-  { n: 18, name: 'Optician and eyewear', label: 'Optician' },
-  { n: 19, name: 'Dentist', label: 'Dentist' },
-  { n: 20, name: 'Locksmith', label: 'Locksmith' },
+  { n: 17, name: 'Massage', label: 'Massage' },
+  { n: 18, name: 'DJ', label: 'DJ' },
+  { n: 19, name: 'Dog breeder', label: 'Breeder' },
+  { n: 20, name: 'Event coordinator', label: 'Events' },
   { n: 21, name: 'House cleaning', label: 'Cleaning' },
-  { n: 22, name: 'Landscaping and gardening', label: 'Garden' },
+  { n: 22, name: 'Gardener', label: 'Gardener' },
   { n: 23, name: 'Handyman and home repair', label: 'Handyman' },
-  { n: 24, name: 'Movers and hauling', label: 'Movers' },
+  { n: 24, name: 'Contractor', label: 'Contractor' },
 ]
 
-/** Which of a city's two pages a set of spots belongs to. */
-export type SlotPageKind = 'goods' | 'services'
+/**
+ * The open spots on a yellow page. No categories on purpose: the operator's
+ * pitch is that page one is the numbered, categorised real estate and the
+ * yellow pages behind it hold "the businesses that didn't act in time" —
+ * unlimited, uncategorised, first come first served.
+ */
+export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) => ({
+  n: i + 1,
+  name: 'Open spot',
+  label: 'Available',
+}))
+
+/** Which of a city's pages a set of spots belongs to. */
+export type SlotPageKind = 'goods' | 'goods2' | 'services' | 'services2'
 
 export interface SlotPage {
   /**
@@ -142,6 +154,12 @@ export interface SlotPage {
   /** Follows the city on the page heading: OAKLAND · SERVICES. */
   heading: string
   categories: SlotCategory[]
+  /**
+   * A BEASTY PAGES overflow page: yellow wallpaper, dark ink, open spots.
+   * The yellow is the brand claim — the operator wants every page after a
+   * city's first to read as a page of BEASTYpages.com.
+   */
+  yellow?: true
 }
 
 /**
@@ -153,7 +171,16 @@ export interface SlotPage {
  */
 export const SLOT_PAGES: SlotPage[] = [
   { kind: 'goods', heading: 'Goods', categories: GOODS_CATEGORIES },
+  /*
+    The yellow page rides directly behind the page it overflows, so a customer
+    swiping past a full Goods page lands on where the latecomers go — which is
+    exactly the order the operator sells it in. One yellow page each for now,
+    by his instruction ("only include the next page blank"); more get added
+    when a city actually fills.
+  */
+  { kind: 'goods2', heading: 'More goods', categories: OPEN_SPOTS, yellow: true },
   { kind: 'services', heading: 'Services', categories: SERVICE_CATEGORIES },
+  { kind: 'services2', heading: 'More services', categories: OPEN_SPOTS, yellow: true },
 ]
 
 /** The categories on a city page, or nothing if the id names no known page. */
