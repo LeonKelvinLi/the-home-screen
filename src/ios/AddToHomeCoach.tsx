@@ -84,6 +84,8 @@ export function AddToHomeCoach() {
      the key this component writes itself, and it only writes on the way out. */
   const [eligible] = useState(shouldCoach)
   const [shown, setShown] = useState(false)
+  /** Someone is on it — focus inside, or a pointer over it. Pauses the clock. */
+  const [held, setHeld] = useState(false)
 
   useEffect(() => {
     if (!eligible) return
@@ -99,15 +101,25 @@ export function AddToHomeCoach() {
   }, [eligible])
 
   useEffect(() => {
-    if (!shown) return
+    if (!shown || held) return
     /*
       Retire untouched WITHOUT writing the key. Ignored is not declined: an
       unnoticed bubble gets another chance on a later visit, where an
       explicitly dismissed one never comes back.
+
+      `held` stops the clock the moment anyone is actually dealing with this —
+      focus inside it or a pointer over it. A fixed twelve seconds with no way
+      to pause is WCAG 2.2.1, and the real cost was measured rather than
+      theoretical: this component mounts LAST on the home screen, so its
+      Dismiss button is the 116th of 117 screen-reader stops. A VoiceOver user
+      swiping toward it needs roughly thirty-five seconds to arrive at a bubble
+      that disappears in twelve — meaning they could never answer it, never
+      write the key, and would be shown the same prompt on every single visit,
+      while a sighted user silences it with one tap.
     */
     const t = window.setTimeout(() => setShown(false), HIDE_MS)
     return () => window.clearTimeout(t)
-  }, [shown])
+  }, [shown, held])
 
   if (!eligible) return null
 
@@ -126,7 +138,18 @@ export function AddToHomeCoach() {
     <div className="a2hs-layer" role="status">
       {shown && (
         /* Any tap on the bubble is an answer: remembered, closed. */
-        <div className="a2hs-coach" onClick={dismiss}>
+        <div
+          className="a2hs-coach"
+          onClick={dismiss}
+          onFocusCapture={() => setHeld(true)}
+          onBlurCapture={(e) => {
+            // Only release when focus has actually left the bubble, not when
+            // it moves between the text and the close button inside it.
+            if (!e.currentTarget.contains(e.relatedTarget as Node | null)) setHeld(false)
+          }}
+          onPointerEnter={() => setHeld(true)}
+          onPointerLeave={() => setHeld(false)}
+        >
           <img className="a2hs-icon" src="/apple-touch-icon.png" alt="" />
           <p className="a2hs-text">
             Tap the{' '}

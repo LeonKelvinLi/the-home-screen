@@ -571,6 +571,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       */}
       <Wallpaper city={city} src={wall} />
 
+      {/*
+        The install nudge. Still inside .home, so its clock can only start once
+        the home screen exists — never over the dialer — and it recedes, hides
+        and goes inert with everything else when an app opens.
+
+        FIRST among the children, though, where it used to be last. It is
+        absolutely positioned so the order costs the layout nothing, and it
+        cost a screen-reader user everything: mounted last, its Dismiss button
+        was the 116th of 117 stops, about thirty-five seconds of swiping from a
+        bubble that retires in twelve. Announced early, it can actually be
+        answered.
+      */}
+      <AddToHomeCoach />
+
       <div
         className="home-pager"
         ref={pagerRef}
@@ -792,13 +806,6 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
         ))}
       </div>
 
-      {/*
-        The install nudge, mounted HERE and nowhere higher on purpose: its
-        few-seconds clock can only start once the home screen exists — never
-        over the dialer or the landing page — and living inside .home it
-        recedes, hides and goes inert with everything else when an app opens.
-      */}
-      <AddToHomeCoach />
     </div>
   )
 }
