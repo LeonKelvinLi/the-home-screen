@@ -70,6 +70,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'berkeley-services-19': 'b_perfectnineevents', //  Events
   'brentwood-goods-2': 'b_xnoodledumpling', //       Asian
   'napa-goods-12': 'b_themodelbakery', //            Bakery
+  'el-cerrito-goods-2': 'b_larbthaitapas', //        Asian
+  /* uBreakiFix's own locator puts their nearest store at El Cerrito Plaza —
+     seated the moment the city page existed. Phone fix is its category. */
+  'el-cerrito-services-8': 'b_ubreakifix',
   'petaluma-services-12': 'b_townfuturistmedia', //  Photo/Video — a video production house
 
   /*

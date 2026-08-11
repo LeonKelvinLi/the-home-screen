@@ -176,6 +176,32 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     /*
+      LARB THAI FOOD & TAPAS — EL CERRITO. Sent by the operator 2026-08-10
+      ("El Cerrito • Goods"), listed from their own Instagram bio and site
+      link only: name, the family-table line, and 10166 San Pablo Ave. No menu
+      research has run yet, so nothing is priced here.
+
+      Their reels carry "VOTED BEST ASIAN RESTAURANT IN EL CERRITO" — a video
+      title, not a verifiable award, and it is not rendered anywhere as one.
+    */
+    slug: 'larb-thai-tapas',
+    name: 'Larb Thai Food & Tapas',
+    label: 'Larb Thai',
+    cuisine: 'Thai, Isan',
+    tagline:
+      'A taste of Thailand\u2019s Northeast \u2014 authentic Isan flavors, straight from our family table to yours.',
+    color: '#141416|#3A2A18',
+    icon: '',
+    prep: 0,
+    category: 'Thai',
+    site: 'https://www.larbthaitapas.com/',
+    address: '10166 San Pablo Ave, El Cerrito',
+    contactOnly:
+      'Family-run Isan Thai \u2014 their own words: from our family table to yours. Their menu has not been researched yet, so nothing is priced here; their site is the place to order until it is.',
+    items: [],
+  },
+  {
+    /*
       THE GRIND CAFÉ — VALLEJO, and not one publishable menu price.
 
       Their first-party menu exists at thegrindcafeorders.com and that site

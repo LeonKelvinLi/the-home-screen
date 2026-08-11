@@ -53,6 +53,9 @@ export const CITY_PAGES = [
   'Pleasant Hill',
   'Napa',
   'Petaluma',
+  /* Larb Thai's home, sent 2026-08-10 — and uBreakiFix's nearest store
+     already sat here waiting for the page to exist. */
+  'El Cerrito',
   /*
     THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
 
