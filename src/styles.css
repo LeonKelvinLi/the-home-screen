@@ -7224,6 +7224,50 @@ textarea {
   border-radius: 24%;
 }
 
+/*
+  The folded black corner, on every yellow sheet.
+
+  The operator's ask, once his logo mark landed on the same device: "if we
+  incorporate that same black fold on every yellow page, it will be concise
+  with BEASTY yellow pages." So it is deliberately the mark's own gesture at
+  page scale — the sheet reads as a torn-out page of the directory the icon is
+  a picture of.
+
+  BELOW the status bar rather than at the true corner. A triangle at top:0
+  paints under the clock and the battery, which on a white-on-black status bar
+  is unreadable rather than decorative. Starting at --status-h costs nothing:
+  the fold still reads as the corner of the PAGE, which is exactly what begins
+  there.
+
+  Two layers, because a flat triangle reads as a shape rather than a fold: the
+  black is the back of the sheet showing through, and the lighter diagonal is
+  the crease catching light along it.
+*/
+.home-page.is-yellow::before {
+  content: '';
+  position: absolute;
+  top: var(--status-h);
+  right: 0;
+  width: 58px;
+  height: 58px;
+  background: #141416;
+  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  pointer-events: none;
+}
+
+.home-page.is-yellow::after {
+  content: '';
+  position: absolute;
+  top: var(--status-h);
+  right: 0;
+  width: 58px;
+  height: 58px;
+  /* The crease itself: a hairline of the sheet's own yellow, lifted, running
+     along the diagonal the fold turns on. */
+  background: linear-gradient(225deg, transparent calc(50% - 1px), rgba(255, 255, 255, 0.32) 50%, transparent calc(50% + 1px));
+  pointer-events: none;
+}
+
 /* The brand line under the heading: the domain claim, in ink. */
 .home-page.is-yellow .home-page-domain {
   margin: -2px 0 0;
