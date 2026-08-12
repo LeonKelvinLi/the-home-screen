@@ -82,6 +82,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      renamed categories put them. */
   'brentwood-services-7': 'b_jdiautodetailing', //   Detailer
   'berkeley-services-7': 'b_jnwdetailing', //        Detailer
+  'concord-services-7': 'b_diabloautodetailing', //  Detailer
   'berkeley-services-19': 'b_perfectnineevents', //  Events
   'brentwood-goods-2': 'b_xnoodledumpling', //       Asian
   'napa-goods-12': 'b_themodelbakery', //            Bakery

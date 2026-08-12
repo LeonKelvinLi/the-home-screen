@@ -314,6 +314,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'MB', logoFace: 'condensed',
     site: 'https://majesticboutique.co/',
   }),
+  /* Sent 2026-08-10 with "Concord • Services" and missed in that batch — the
+     third detailer on his list, after JDI in Brentwood and J&W in Berkeley. */
+  seed('diablo-auto-detailing', 'Diablo Auto Detailing', 'Diablo Detail', 'Auto detailing', '#1A2C4A', {
+    logoTemplate: 'monogram', logoInitials: 'DD', logoFace: 'condensed',
+    site: 'https://diabloautodetailing.com/',
+  }),
   seed('suptea-lab', 'SupTea Lab', 'SupTea Lab', 'Boba tea', '#8A6A2F', {
     logoTemplate: 'monogram', logoInitials: 'ST', logoFace: 'condensed',
     site: 'https://suptealaboakland.square.site/',
