@@ -28,8 +28,14 @@ const R = 22
  * 45-degree diagonal. The fold is then symmetric BY CONSTRUCTION: one number
  * used twice, no eyeballed control point that can drift, and it holds at every
  * size the mark is ever drawn at.
+ *
+ * 22.5 is HIS size, measured off public/icons/beasty-pages-mark.png rather than
+ * chosen — and measuring it is what found the thing he was pointing at. His
+ * fold reaches 22.3% along the top edge and 22.7% down the right. Four parts in
+ * a thousand, invisible until you look for it, and he looked for it. One number
+ * used twice cannot do that.
  */
-const F = 30
+const F = 22.5
 
 /** A, where the cut leaves the top edge. */
 const AX = 100 - F
@@ -71,19 +77,24 @@ const TILE = [
 const FOLD = `M ${AX} 0 L 100 ${BY} L ${AX} ${BY} Z`
 
 /**
- * Biggie is 355x520. Fitted by height inside the tile, then centred.
+ * Biggie is 355x520, placed to match the operator's own mark rather than to my
+ * taste — his file is in public/icons/beasty-pages-mark.png and these numbers
+ * are measured off it.
  *
- * 54 and not the 66 this started at. At 66 he ran to within a few units of the
- * bottom edge and his head crossed under the turned corner, so the two marks
- * fought each other in the one part of the tile where the fold needs to be
- * legible. Smaller reads as deliberate; touching the frame reads as a mistake.
+ * His dog occupies 23.4% to 70.7% across and 17.2% to 86.4% down. That is 69
+ * tall, which at Biggie's aspect gives 47.1 wide against the 47.3 measured off
+ * his art — the same artwork at the same scale, which is the confirmation the
+ * measurement is right rather than a coincidence of two eyeballed numbers.
+ *
+ * NOT centred: he sits about three units left of it. That is deliberate in his
+ * drawing and it works, because the turned corner takes visual weight out of
+ * the top right and the dog leans back against it. Centring him by arithmetic
+ * made the tile look like it was falling to the right.
  */
-const DOG_H = 58
+const DOG_H = 69
 const DOG_W = (DOG_H * 355) / 520
-const DOG_X = (100 - DOG_W) / 2
-/* Below the geometric centre. The turned corner takes visual weight out of the
-   top right, so centring him by arithmetic left the tile looking bottom-heavy. */
-const DOG_Y = 24
+const DOG_X = 23.4
+const DOG_Y = 17.2
 
 export function PagesMark({ className }: { className?: string }) {
   return (

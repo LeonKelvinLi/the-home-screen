@@ -31,6 +31,7 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `el-cerrito.webp` | El Cerrito from Albany Hill | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 | `crockett.webp` | Al Zampa and Carquinez Bridges | Joe Futrelle, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
 | `vacaville.webp` | The Nut Tree carousel | Noah_Loverbear, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
+| `milpitas.webp` | Milpitas from the air | formulanone, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
 CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0
@@ -61,6 +62,7 @@ Credited anyway, because someone took these and it costs nothing to say so.
 | `saratoga.webp` | Hakone Gardens | Public domain | Daderot, via Wikimedia Commons |
 | `palo-alto.webp` | Hoover Tower at night | Pexels Licence | Zetong Li |
 | `benicia.webp` | First Street, downtown Benicia | CC0 1.0 | Lhimec, via Wikimedia Commons |
+| `san-ramon.webp` | San Ramon City Hall | CC0 1.0 | Mx. Granger, via Wikimedia Commons |
 
 ## Generated, not photographed
 
