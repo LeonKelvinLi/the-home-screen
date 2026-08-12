@@ -5830,6 +5830,25 @@ textarea {
   z-index: 1;
 }
 
+/*
+  The mark version of him — a square tile, where the bare cut-out was portrait.
+
+  Sized by HEIGHT rather than width, and to the height the cut-out actually
+  occupied rather than to its 96-wide box. Keeping the old width would have made
+  the tile a third taller than the dog ever was and pushed the wordmark into the
+  keypad, which is the same failure the width note above records from the other
+  direction.
+*/
+.dialer-biggie-mark {
+  width: auto;
+  height: calc(96 * var(--u));
+  max-height: 14dvh;
+  aspect-ratio: 1;
+  /* The drawn tile carries its own edge, so it does not need the object-fit
+     the raster did — but the height ceiling still applies on a short phone. */
+  object-fit: unset;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dialer-bloom {
     display: none;
@@ -7403,13 +7422,15 @@ textarea {
   bar already runs, so the two glows are literally the same movement.
 */
 .dock .app-icon[aria-label^='BEASTY Designs'] .icon-tile,
-.dock .app-icon[aria-label^='Designs'] .icon-tile {
+.dock .app-icon[aria-label^='Designs'] .icon-tile,
+.dock .app-icon[aria-label^='Share & Scan'] .icon-tile {
   position: relative;
   overflow: hidden;
 }
 
 .dock .app-icon[aria-label^='BEASTY Designs'] .icon-tile::after,
-.dock .app-icon[aria-label^='Designs'] .icon-tile::after {
+.dock .app-icon[aria-label^='Designs'] .icon-tile::after,
+.dock .app-icon[aria-label^='Share & Scan'] .icon-tile::after {
   content: '';
   position: absolute;
   inset: -40% -120%;
@@ -7423,9 +7444,23 @@ textarea {
   pointer-events: none;
 }
 
+/*
+  Scan gets the same sweep, on his ask — "can you put that glowing thing on the
+  scan button like you did on BEASTYDesigns".
+
+  Offset by half the cycle so the two do not pulse together. Side by side in a
+  four-icon dock, two lights flashing in step read as one animation the dock is
+  doing rather than two things each asking to be tapped, which is the opposite
+  of the point.
+*/
+.dock .app-icon[aria-label^='Share & Scan'] .icon-tile::after {
+  animation-delay: -2.1s;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .dock .app-icon[aria-label^='BEASTY Designs'] .icon-tile::after,
-  .dock .app-icon[aria-label^='Designs'] .icon-tile::after {
+  .dock .app-icon[aria-label^='Designs'] .icon-tile::after,
+  .dock .app-icon[aria-label^='Share & Scan'] .icon-tile::after {
     animation: none !important;
     opacity: 0.35;
   }

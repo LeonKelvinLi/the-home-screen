@@ -314,6 +314,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'MB', logoFace: 'condensed',
     site: 'https://majesticboutique.co/',
   }),
+  seed('suptea-lab', 'SupTea Lab', 'SupTea Lab', 'Boba tea', '#8A6A2F', {
+    logoTemplate: 'monogram', logoInitials: 'ST', logoFace: 'condensed',
+    site: 'https://suptealaboakland.square.site/',
+    address: '3349 Grand Ave, Oakland',
+    contactOnly:
+      'Sent 2026-08-12 with the operator’s note that they need a website — the Square page ' +
+      'above is what they have. Nothing else is listed yet.',
+  }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
     site: 'http://emyscannoli.com/',

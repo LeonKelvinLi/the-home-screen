@@ -103,6 +103,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'vacaville-goods-12': 'b_emyscannoli', //       Bakery
   'benicia-goods-0': 'b_beniciagrill', //         Burgers and hot dogs — an American grill
   'crockett-goods-19': 'b_majesticboutique', //   Clothing brand or boutique
+  /* Sent 2026-08-12, on their own published address on Grand Ave. */
+  'oakland-goods-14': 'b_suptealab', //           Boba shop
 
   /*
     Businesses with no fitting category go on the yellow overflow page rather
