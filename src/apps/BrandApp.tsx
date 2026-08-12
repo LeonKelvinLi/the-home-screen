@@ -144,6 +144,35 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             )}
           </div>
 
+          {/*
+            Where they are, and one tap to get there — the operator's ask, and
+            the address was not on this page at all before it.
+
+            Only when there IS a published address. A mobile business has no
+            fixed place to be, and sending someone to navigate to a groomer who
+            drives to them would be worse than showing nothing: the button is
+            absent rather than disabled, because a greyed-out Directions button
+            reads as a bug in the app rather than a fact about the business.
+          */}
+          {brand.address && (
+            <div className="brand-where">
+              <p className="brand-address">{brand.address}</p>
+              <a
+                className="btn-secondary brand-directions"
+                href={mapsHref(brand.address, brand.name)}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`Directions to ${brand.name}`}
+              >
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11Z" />
+                  <circle cx="12" cy="10" r="2.6" />
+                </svg>
+                Directions
+              </a>
+            </div>
+          )}
+
           {brand.pricesEstimated && (
             <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
           )}
@@ -380,6 +409,27 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
       {sheetItem && <ItemSheet brand={brand} item={sheetItem} onClose={() => setSheetItem(null)} />}
     </>
   )
+}
+
+/**
+ * A directions link the customer's own phone will open in its own map.
+ *
+ * The operator asked for Apple Maps, and on an iPhone that is exactly what
+ * maps.apple.com does — the OS hands the URL straight to the Maps app rather
+ * than opening a web page. It is the RIGHT answer only on Apple platforms
+ * though: the same link on Android renders Apple's web map, which cannot hand
+ * off to the navigation app that phone actually has. So the platform picks.
+ *
+ * The name rides along with the address because an address alone can land on
+ * the wrong side of a building; with the business name attached, Maps resolves
+ * to the business's own pin where it knows it. Both are encoded — an
+ * unencoded "2190 Contra Costa Blvd, Pleasant Hill" breaks on its comma.
+ */
+function mapsHref(address: string, name: string): string {
+  const q = encodeURIComponent(`${name}, ${address}`)
+  const apple =
+    typeof navigator !== 'undefined' && /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent)
+  return apple ? `https://maps.apple.com/?q=${q}` : `https://www.google.com/maps/search/?api=1&query=${q}`
 }
 
 /** Name the destination honestly — a DoorDash link is not "their own site". */

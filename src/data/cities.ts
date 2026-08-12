@@ -57,6 +57,26 @@ export const CITY_PAGES = [
      already sat here waiting for the page to exist. */
   'El Cerrito',
   /*
+    The 2026-08-11 run, each one opened by a business the operator sent with
+    the city already written next to it: Mimi's Chocolates for Dublin, One
+    House Bistro for San Ramon, Majestic Boutique for Crockett, INTL Kitchen
+    for Milpitas, Banh Mi Xpress and Emy's Cannoli for Vacaville.
+
+    Dublin also closes an open loop. Pippāl has been seated at dublin-goods-3
+    since his earlier list, on a key that resolved to nothing because the city
+    had no page — the placement was left in deliberately, waiting for exactly
+    this. It renders from today.
+
+    He sent landmark photographs for Vacaville (the Nut Tree) and Crockett (the
+    C&H sugar refinery); neither is on disk yet, so both draw the neutral
+    placeholder rather than another town's landmark.
+  */
+  'Dublin',
+  'San Ramon',
+  'Crockett',
+  'Milpitas',
+  'Vacaville',
+  /*
     THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
 
     Every other page on this list is within about an hour of Richmond, which is

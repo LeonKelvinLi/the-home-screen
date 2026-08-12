@@ -260,6 +260,67 @@ export const ROSTER_SEED: LocalSeed[] = [
       'anywhere the tools could read, so nothing is priced here — the operator is ' +
       'gathering the rest.',
   }),
+
+  /*
+    ---- the 2026-08-11 run ----
+
+    Ten businesses sent one after another across a single evening, each with
+    its city and page written beside the link ("Vacaville • Goods", "Crockett •
+    Goods"). Same rules as everything above: the name, the city he gave, the
+    link he sent, and nothing else. No menu, no hours, no prices. Where an
+    address or a descriptor appears below it is quoted from the business's own
+    Instagram header in the screenshot he attached, and nowhere else.
+
+    Five of them opened a city that did not exist yet — see data/cities.ts.
+  */
+  seed('mimis-chocolates', 'Mimi’s Chocolates', 'Mimi’s', 'Chocolate shop', '#4A2C17', {
+    logoTemplate: 'monogram', logoInitials: 'MC', logoFace: 'script',
+    site: 'https://mimischocolates.com/',
+  }),
+  seed('pho-de-nguyen', 'Pho De Nguyen', 'Pho De Ng…', 'Vietnamese, pho', '#7A1F1F', {
+    logoTemplate: 'monogram', logoInitials: 'PN', logoFace: 'slab',
+    site: 'https://www.instagram.com/phodenguyen',
+    contactOnly:
+      'Sent by the operator with no website and no logo of their own — his note calls that ' +
+      'the opportunity rather than the problem. Nothing is listed here yet.',
+  }),
+  seed('maymays-cravings', 'Maymay’s Cravings', 'Maymay’s', 'Filipino desserts', '#8C2F5A', {
+    logoTemplate: 'monogram', logoInitials: 'MC', logoFace: 'script',
+    site: 'https://order.online/store/35787203',
+  }),
+  seed('banh-mi-xpress', 'Banh Mi Xpress', 'Banh Mi X…', 'Vietnamese sandwiches', '#1F5F3F', {
+    logoTemplate: 'monogram', logoInitials: 'BX', logoFace: 'condensed',
+    site: 'https://www.banhmixpress.net/',
+  }),
+  seed('royale-eatery', 'The Royale Eatery', 'The Royale', 'Contemporary American', '#14141A', {
+    logoTemplate: 'monogram', logoInitials: 'R', logoFace: 'script',
+    site: 'https://www.theroyaleeatery.com/',
+    address: '2190 Contra Costa Blvd, Pleasant Hill',
+  }),
+  seed('one-house-bistro', 'One House Bistro', 'One House', 'Bistro, brunch and dinner', '#6B5426', {
+    logoTemplate: 'monogram', logoInitials: 'OH', logoFace: 'grotesk',
+    site: 'https://www.instagram.com/onehouse.sr',
+    address: '2468 San Ramon Valley Blvd, San Ramon',
+  }),
+  seed('benicia-grill', 'Benicia Grill', 'Benicia Grill', 'American grill', '#8C3A1E', {
+    logoTemplate: 'monogram', logoInitials: 'BG', logoFace: 'slab',
+    site: 'http://www.benicia-grill.com/',
+  }),
+  seed('intl-kitchen', 'INTL Kitchen', 'INTL Kitchen', 'Asian takeout', '#C0261F', {
+    logoTemplate: 'glyph-word', logoGlyph: 'noodles', logoLines: ['INTL'],
+    site: 'https://intlkitchen.com/',
+  }),
+  seed('majestic-boutique', 'Majestic Boutique', 'Majestic', 'Clothing boutique', '#2B2440', {
+    logoTemplate: 'monogram', logoInitials: 'MB', logoFace: 'condensed',
+    site: 'https://majesticboutique.co/',
+  }),
+  seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
+    logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
+    site: 'http://emyscannoli.com/',
+    contactOnly:
+      'The operator filed this one as a MOBILE service rather than a shop, so no address is ' +
+      'shown — it does not have one fixed place to be. Nothing else is listed yet.',
+  }),
 ]
 
 /**

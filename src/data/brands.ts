@@ -712,6 +712,15 @@ export const BRANDS: Brand[] = [
     ...fromSeed(s as unknown as Seed),
     site: s.site,
     phone: s.phone,
+    /*
+      `address` was missing from this list, and the omission was silent: X
+      Noodles has carried a published street address in roster.ts since it was
+      added and none of it ever reached the brand. It matters more now that a
+      page draws a Directions button from exactly this field — without it the
+      three roster businesses that DO publish an address would be the only ones
+      on the app that could not be navigated to.
+    */
+    address: s.address,
     contactOnly: s.contactOnly,
     rosterOnly: true,
   })),

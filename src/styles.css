@@ -3416,6 +3416,46 @@ textarea {
 
 /* A business with no published menu still gets a real page — showing how to
    reach them, never an invented menu. */
+/*
+  Where the business is, and the way to get there. A row rather than the
+  stacked card .brand-contact uses: this sits directly under the hero on every
+  page that has an address, including the ones that also have a full menu below
+  it, so it has to read as a line of information with an action on the end
+  rather than as another call-to-action block competing with Add to cart.
+*/
+.brand-where {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 16px 2px;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: var(--paper);
+}
+
+.brand-address {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+/* Auto width and no stretch: the shared .btn-secondary is a full-width block
+   button, which here would push the address onto its own line and turn a row
+   into a card. */
+.brand-directions {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  width: auto;
+  padding: 9px 14px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
 .brand-contact {
   display: flex;
   flex-direction: column;

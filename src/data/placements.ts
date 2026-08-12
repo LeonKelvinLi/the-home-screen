@@ -70,11 +70,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods-8': 'b_jojoshotchicken', //     Wings
   'brentwood-goods-0': 'b_theyardbrentwood', //   Burgers
   'sunnyvale-goods-11': 'b_jonnysitalianice', //  Ice cream
-  /* Pippal's seat is Dublin, which is on the operator's expansion list but not
-     yet in CITY_PAGES — so this key never resolves to a rendered page. Left in
-     place deliberately: it is correct the day Dublin gets a page, and removing
-     it would silently lose a placement he already made. */
-  'dublin-goods-3': 'b_pippal', //                Indian (page pending)
+  /* Pippāl's seat was a dead key for weeks: Dublin was on the operator's
+     expansion list but had no page, so this resolved to nothing. It was left in
+     deliberately rather than deleted, on the grounds that it would be correct
+     the day Dublin got a page. Mimi's Chocolates brought that day on
+     2026-08-11, and this has rendered ever since. */
+  'dublin-goods-3': 'b_pippal', //                Indian
   'vallejo-goods-13': 'b_grindcafe707', //        Coffee
 
   /* The operator's own city placements from his messages, seated where his
@@ -91,12 +92,40 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'petaluma-services-12': 'b_townfuturistmedia', //  Photo/Video — a video production house
 
   /*
+    The 2026-08-11 run. Each of these came with its city and page already
+    written beside the link, so the city and the page are HIS; only the
+    numbered spot within the page is a reading of his own category list.
+  */
+  'san-mateo-goods-2': 'b_phodenguyen', //        Asian — a pho house
+  'milpitas-goods-2': 'b_intlkitchen', //         Asian — takeout, per their own mark
+  'walnut-creek-goods-10': 'b_maymayscravings', //Filipino
+  'vacaville-goods-6': 'b_banhmixpress', //       Sandwiches — a banh mi shop
+  'vacaville-goods-12': 'b_emyscannoli', //       Bakery
+  'benicia-goods-0': 'b_beniciagrill', //         Burgers and hot dogs — an American grill
+  'crockett-goods-19': 'b_majesticboutique', //   Clothing brand or boutique
+
+  /*
     Businesses with no fitting category go on the yellow overflow page rather
     than being crammed under a wrong label: a waste-removal service is not
     "Cleaning", a two-city breakfast house is not "Sandwiches", and a mobile
     groomer with no fixed city is not anywhere at all — the operator filed it
     under BEASTY itself.
+
+    Three from the 2026-08-11 run land here for the same reason, and it is
+    worth being plain about which: the goods list is a list of CUISINES, and a
+    restaurant that does not cook one of them has nowhere to sit. The Royale
+    Eatery is contemporary American fine dining and One House Bistro is a
+    brunch-and-dinner bistro — putting either under "Burgers and hot dogs",
+    the only American-shaped spot on the page, would print "Burgers" under a
+    tasting plate. Mimi's is a chocolatier, and "Bakery" is a different trade.
+
+    All three are on their city's page and reachable; they are simply on the
+    yellow one. Say the word and any of them moves to a numbered spot — that is
+    a category call, and the categories are the operator's.
   */
+  'pleasant-hill-goods2-1': 'b_royaleeatery',
+  'san-ramon-goods2-0': 'b_onehousebistro',
+  'dublin-goods2-0': 'b_mimischocolates',
   'walnut-creek-services2-0': 'b_petbutlerwalnutcreek',
   'beasty-services2-0': 'b_happybaypaws',
   'pleasant-hill-goods2-0': 'b_thehangoutbreakfast',
