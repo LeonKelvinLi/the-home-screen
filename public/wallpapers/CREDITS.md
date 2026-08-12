@@ -29,8 +29,11 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `las-vegas.webp` | The Strip at night | Yelderberry, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `pleasant-hill.webp` | Soldiers Monument, Boyd Road | Checkingfax, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `el-cerrito.webp` | El Cerrito from Albany Hill | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
+| `crockett.webp` | Al Zampa and Carquinez Bridges | Joe Futrelle, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
+| `vacaville.webp` | The Nut Tree carousel | Noah_Loverbear, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
+CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0
 CC BY-SA 2.0: https://creativecommons.org/licenses/by-sa/2.0
 
 ## Attribution required (CC BY)
@@ -80,6 +83,25 @@ regardless of who owns the building; a photograph of a copyrighted sculpture is
 a derivative work no matter what licence the photograph itself carries. One
 otherwise-good Redwood City candidate was dropped for exactly this — its subject
 was a Beniamino Bufano sculpture.
+
+## The two the operator picked himself, 2026-08-11
+
+He sent a DuckDuckGo image link for each — the Nut Tree for Vacaville and the
+C&H sugar refinery for Crockett. Both pointed at copyrighted stock (Expedia and
+KQED/Getty), so neither file could be used; the subjects here are the same ones
+from Commons instead.
+
+Crockett is the Carquinez bridges rather than the sugar refinery. The only
+usable refinery photograph on Commons is 1024x768 — a third of the pixels this
+frame needs, and upscaling it would look worse than no photograph at all. The
+bridges are the other thing Crockett is, they sit in the same frame as the
+refinery from most angles, and the tower makes a far better portrait crop.
+
+Vacaville is 465KB against the 230KB the encoder aims for. It hit the quality
+floor and still came out large, because the picture is midday foliage and
+gravel — thousands of small high-contrast edges, which is the worst case for
+any codec. It is not a quality setting that can be turned down without banding
+the sky; it is what that photograph costs. Only Vacaville's own page pays it.
 
 ## Where the gaps are
 

@@ -290,14 +290,31 @@ textarea {
     light trails under the dock — the only bright areas white text has to
     survive. Over-darkening a night photo just turns it grey.
   */
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.12) 0%,
-    rgba(0, 0, 0, 0.14) 34%,
-    rgba(0, 0, 0, 0.26) 56%,
-    rgba(0, 0, 0, 0.3) 76%,
-    rgba(0, 0, 0, 0.42) 100%
-  );
+  /*
+    Two layers. The gradient is the night tuning, unchanged. Under it sits a
+    FLAT wash whose alpha is --wall-boost, set per picture by Wallpaper.tsx
+    from the wallpaper's own measured brightness — zero on every night photo,
+    so those pages composite exactly as they did before, and rising to the cap
+    on a midday one. The flat one is second in the list, which paints it
+    beneath: the gradient still does the shaping, this only sets the floor.
+
+    Why it has to be per-picture rather than one stronger gradient for all: the
+    scrim that rescues Sunnyvale would turn the Golden Gate into a grey rectangle.
+  */
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.12) 0%,
+      rgba(0, 0, 0, 0.14) 34%,
+      rgba(0, 0, 0, 0.26) 56%,
+      rgba(0, 0, 0, 0.3) 76%,
+      rgba(0, 0, 0, 0.42) 100%
+    ),
+    rgba(0, 0, 0, var(--wall-boost, 0));
+  /* The wash follows a crossfade rather than snapping the instant the path
+     changes, so a page turn between two differently lit cities dims across the
+     same 900ms the pictures take. */
+  transition: background-color 900ms ease;
 }
 
 /*

@@ -11,15 +11,58 @@ import { CITY_PAGES } from '../data/cities'
  * from one finished picture to another.
  */
 
-/** Where a city's wallpaper lives, if it has one. */
-export function wallpaperFor(city: string | null | undefined): string {
-  if (!city) return FALLBACK
-  const slug = city
+/** City name to the slug both wallpaper sets are keyed by. */
+function slugOf(city: string): string {
+  return city
     .toLowerCase()
     .normalize('NFD')
     .replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '')
+}
+
+/**
+ * How much EXTRA black this city's wallpaper needs behind the icon labels.
+ *
+ * The scrim in styles.css was tuned on night cityscapes, where the sky behind
+ * the grid is already dark. Every daytime photograph added since fails under
+ * it, and not marginally: measured per label with the glyphs hidden, the
+ * Golden Gate flagship's worst label is 7.29:1 against the 4.5 floor, while
+ * Sunnyvale's is 1.56:1 with twenty of its twenty-four labels failing. White
+ * text on a midday sky is the whole of the problem.
+ *
+ * WALLPAPER_LUMA is measured from the pixels by tools/wallpapers.mjs — the
+ * 90th-percentile luminance of the band the icon grid sits in. Run the tool;
+ * never hand-edit it.
+ *
+ * The arithmetic. White on a background of luminance L clears 4.5:1 when L is
+ * at or under 0.183. The existing gradient already contributes roughly 0.20 in
+ * the grid band, so what is left for this to do is
+ *
+ *     (1 - 0.20) x (1 - boost) x L  <=  0.183      ->  boost >= 1 - 0.229 / L
+ *
+ * which is zero for anything already dark enough and rises with the picture.
+ * Capped at 0.72: past that a photograph stops being a photograph, and a page
+ * that dark is worth reshooting rather than dimming further.
+ */
+export function wallpaperScrim(city: string | null | undefined, src?: string): number {
+  /*
+    An explicit `src` overrides the city — that is how the yellow overflow
+    sheets are drawn. Yellow is emphatically light, but those pages already
+    flip their whole ink set to dark rather than leaning on the scrim, so they
+    must NOT also get this: two fixes for one problem would black out a sheet
+    whose labels are already dark on purpose.
+  */
+  if (src || !city) return 0
+  const luma = WALLPAPER_LUMA[slugOf(city)]
+  if (!luma) return 0
+  return Math.max(0, Math.min(0.72, Math.round((1 - 0.229 / luma) * 1000) / 1000))
+}
+
+/** Where a city's wallpaper lives, if it has one. */
+export function wallpaperFor(city: string | null | undefined): string {
+  if (!city) return FALLBACK
+  const slug = slugOf(city)
   if (CITY_WALLPAPERS.has(slug)) return `/wallpapers/${slug}.webp`
   /*
     A city with its own PAGE but no photograph yet gets the neutral one, not
@@ -76,6 +119,50 @@ const PAGED_CITIES = new Set(
 const FALLBACK = '/wallpapers/san-francisco.webp'
 
 /*
+  How bright each wallpaper is where the icon grid sits, 0 to 1. Written by
+  tools/wallpapers.mjs from the pixels; see wallpaperScrim above for what is
+  done with it. Not a list anybody should edit by hand.
+*/
+const WALLPAPER_LUMA: Record<string, number> = {
+  'alameda': 0.0579,
+  'albany': 0.3361,
+  'antioch': 0.1512,
+  'benicia': 0.7348,
+  'berkeley': 0.4055,
+  'brentwood': 0.1876,
+  'concord': 0.1182,
+  'crockett': 0.4493,
+  'cupertino': 0.1332,
+  'dublin': 0.1286,
+  'el-cerrito': 0.5688,
+  'fremont': 0.2932,
+  'hayward': 0.243,
+  'las-vegas': 0.2447,
+  'livermore': 0.1914,
+  'mountain-view': 0.6558,
+  'napa': 0.4555,
+  'oakland': 0.152,
+  'palo-alto': 0.4024,
+  'petaluma': 0.3013,
+  'pittsburg': 0.3559,
+  'pleasant-hill': 0.6176,
+  'pleasanton': 0.1428,
+  'redwood-city': 0.3412,
+  'richmond': 0.1471,
+  'san-francisco': 0.1044,
+  'san-jose': 0.1683,
+  'san-leandro': 0.2606,
+  'san-mateo': 0.2877,
+  'santa-clara': 0.3034,
+  'saratoga': 0.4386,
+  'sunnyvale': 0.6687,
+  'union-city': 0.2196,
+  'vacaville': 0.5131,
+  'vallejo': 0.6293,
+  'walnut-creek': 0.2214,
+}
+
+/*
   Cities with their own wallpaper on disk. A Set rather than a directory listing
   because the browser cannot list a directory, and a missing file would
   otherwise fail as a blank screen instead of falling back.
@@ -90,6 +177,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'berkeley',
   'brentwood',
   'concord',
+  'crockett',
   'cupertino',
   'dublin',
   'el-cerrito',
@@ -115,6 +203,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'saratoga',
   'sunnyvale',
   'union-city',
+  'vacaville',
   'vallejo',
   'walnut-creek',
 ])
@@ -204,8 +293,16 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
 
   useEffect(() => () => window.clearTimeout(timer.current), [])
 
+  /*
+    Follows `shown`, not `target` — the dimming has to travel with the picture
+    it belongs to. Keyed off the incoming one instead, a swap from a night city
+    to a midday one would black out the OLD photograph for the length of the
+    fade and then lift as the bright one arrived, which is precisely backwards.
+  */
+  const boost = wallpaperScrim(cityOfPath(shown), src)
+
   return (
-    <div className="home-wallpaper">
+    <div className="home-wallpaper" style={{ '--wall-boost': boost } as React.CSSProperties}>
       <div className="home-wallpaper-layer" style={{ backgroundImage: `url('${shown}')` }} />
       {incoming && (
         <div
@@ -215,6 +312,18 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
       )}
     </div>
   )
+}
+
+/**
+ * The slug back out of a wallpaper path, so the dimming can follow the picture
+ * actually on screen rather than the city prop.
+ *
+ * They part company during a page turn: `shown` is still the old city's
+ * photograph for the 900ms the fade takes, while `city` is already the new one.
+ */
+function cityOfPath(path: string): string | null {
+  const m = /\/wallpapers\/([^/]+)\.webp$/.exec(path)
+  return m && !m[1].startsWith('_') ? m[1] : null
 }
 
 /** Must match the CSS transition on .home-wallpaper-layer.is-incoming. */

@@ -146,14 +146,82 @@ async function writeManifest() {
     .filter((f) => f.endsWith('.webp') && !f.startsWith('_'))
     .sort()
   const slugs = files.map((f) => f.replace(/\.webp$/, ''))
+
+  /*
+    Which of these are LIGHT, measured rather than eyeballed.
+
+    The legibility scrim in styles.css was tuned on night cityscapes, where the
+    sky behind the grid is already dark. Every daytime photograph that has been
+    added since fails under it: measured per label with the glyphs hidden, the
+    Golden Gate flagship's worst label sits at 7.29:1 while Sunnyvale's is
+    1.56:1 with twenty of twenty-four under the 4.5 floor. That is not a fact
+    about any one picture, it is what happens when white text meets a midday
+    sky, so the page needs to know which kind of photograph it is showing.
+
+    The measurement is the 90th-percentile luminance of the BAND THE ICON GRID
+    SITS IN — 12% to 82% of the height — not the whole frame. A night skyline
+    with a bright strip of headlights along the very bottom is still a dark
+    page to read against, and averaging the whole image would call it light.
+    The 90th percentile rather than the mean because a label only has to
+    survive the bright part it happens to land on.
+  */
+  const brightness = JSON.parse(
+    (
+      await run('/usr/bin/python3', [
+        '-c',
+        `import json
+from PIL import Image
+
+def srgb(v):
+    v /= 255.0
+    return v / 12.92 if v <= 0.04045 else ((v + 0.055) / 1.055) ** 2.4
+
+out = {}
+for slug in ${JSON.stringify(slugs)}:
+    im = Image.open("${OUT}/%s.webp" % slug).convert("RGB")
+    w, h = im.size
+    band = im.crop((0, int(h * 0.12), w, int(h * 0.82))).resize((60, 120))
+    px = sorted(
+        0.2126 * srgb(r) + 0.7152 * srgb(g) + 0.0722 * srgb(b)
+        for r, g, b in band.getdata()
+    )
+    out[slug] = round(px[int(len(px) * 0.9)], 4)
+print(json.dumps(out))`,
+      ])
+    ).stdout,
+  )
+
+  /*
+    The NUMBER is published, not a light/dark verdict.
+
+    A threshold was written here first and thrown away, because the measured
+    set does not have two populations to separate. It is a continuum: 0.058 for
+    Alameda at night, through Las Vegas at 0.245 and Fremont at 0.293, up to
+    Benicia's 0.735 in full sun. The widest gap anywhere in the middle is 0.028,
+    so any cut line is arbitrary, and a page either side of it would get either
+    no help or the full treatment for a hair's difference in encoding.
+
+    So the app scales the scrim from the value instead. See wallpaperScrim in
+    ios/Wallpaper.tsx for the arithmetic, which is the same one used to derive
+    these: how much extra black it takes to bring THIS picture under the
+    luminance white text needs.
+  */
   const src = path.join(ROOT, 'src/ios/Wallpaper.tsx')
   const text = await import('node:fs/promises').then((m) => m.readFile(src, 'utf8'))
   const list = slugs.map((s) => `  '${s}',`).join('\n')
-  const next = text.replace(
-    /const CITY_WALLPAPERS = new Set<string>\(\[[\s\S]*?\]\)/,
-    `const CITY_WALLPAPERS = new Set<string>([\n${list}\n])`,
-  )
+  const lumaList = slugs.map((s) => `  '${s}': ${brightness[s]},`).join('\n')
+  const next = text
+    .replace(
+      /const CITY_WALLPAPERS = new Set<string>\(\[[\s\S]*?\]\)/,
+      `const CITY_WALLPAPERS = new Set<string>([\n${list}\n])`,
+    )
+    .replace(
+      /const WALLPAPER_LUMA: Record<string, number> = \{[\s\S]*?\n\}/,
+      `const WALLPAPER_LUMA: Record<string, number> = {\n${lumaList}\n}`,
+    )
   await writeFile(src, next)
+  const bright = slugs.filter((s) => brightness[s] > 0.3).length
+  console.log(`luma: ${slugs.length} measured, ${bright} above 0.30`)
   return slugs
 }
 
