@@ -659,7 +659,11 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             <div
               className="home-grid"
               style={{
-                gridTemplateColumns: `repeat(${screen.columns}, 1fr)`,
+                /* minmax(0, 1fr), never a bare 1fr — the auto floor under a
+                   bare one is the label's min-content width and it pushed the
+                   fourth column off a 320px screen. The stylesheet's copy of
+                   this carries the full account of it. */
+                gridTemplateColumns: `repeat(${screen.columns}, minmax(0, 1fr))`,
                 /* A city page carries its own, having been sized to fit a
                    fixed twenty-four. Everything else keeps the stylesheet's. */
                 ...(page.rowGap === undefined ? {} : { rowGap: page.rowGap }),

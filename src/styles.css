@@ -342,12 +342,50 @@ textarea {
 
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /*
+    minmax(0, ...) and not a bare 1fr. A bare `1fr` is `minmax(auto, 1fr)`, and
+    that auto floor is the item's MIN-CONTENT width — which for these is a
+    nowrap label capped at 82px. On a 320px phone the grid box is 284px and the
+    four columns resolved to 82 82 80.2 75.6, so the row measured 326px and the
+    fourth column hung 42px off the side of the screen: six tiles on the page
+    were cut in half, and the ones under them could not be tapped at all.
+    Nothing above 360px showed it, which is why it survived this long.
+
+    The zero floor lets a column go narrower than its label; the label gives way
+    with the ellipsis it already had. The real fix is BOTH halves — this and the
+    max-width on .icon-label — because a column that may shrink does not help if
+    the thing inside it still refuses to.
+
+    HomeScreen sets this property inline for the real column count. Keep the two
+    in step: this is the fallback, that one is what a phone actually renders.
+  */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   /* Must stay in step with ROW_GAP_PHONE in ios/constants.ts — HomeScreen
      computes how many rows fit from that number. See the note there. */
   row-gap: 18px;
   column-gap: 2px;
-  justify-items: center;
+  /*
+    Stretch, not centre. Centring sizes each tile to its own content, so a long
+    name made that one item wider than its column and it spilled over its
+    neighbours however narrow the column was allowed to get. Stretched, the item
+    IS the column, and .app-icon centres its own tile and label inside it — the
+    same picture, but one that cannot overhang.
+  */
+  justify-items: stretch;
+}
+
+/*
+  Small phones get a real column gap. Two pixels is right when the labels are
+  shorter than their columns and the white space is a gift from the layout, but
+  once the columns are narrow enough that every label truncates and fills its
+  own, the names close up into one another — "Bula Pies Fiji Bread Winn…" reads
+  as a single line at 320px. Seven pixels buys the separation back; it costs a
+  few characters of a name that was already being truncated.
+*/
+@media (max-width: 359px) {
+  .home-grid {
+    column-gap: 7px;
+  }
 }
 
 .app-icon {
@@ -380,7 +418,10 @@ textarea {
   from truncating a character early.
 */
 .icon-label {
-  max-width: 82px;
+  /* 82px is the look; 100% is the guard. Whichever is smaller wins, so on a
+     narrow phone the label truncates to its column instead of pushing the
+     column wider than the screen — see .home-grid for what that cost. */
+  max-width: min(82px, 100%);
   font-size: 11px;
   font-weight: 400;
   line-height: 1.1;
@@ -2710,11 +2751,10 @@ textarea {
   /* ROW_GAP_PAD in ios/constants.ts. */
   row-gap: 34px;
   column-gap: clamp(8px, 2vw, 28px);
-  justify-items: center;
 }
 
 .device.is-pad .icon-label {
-  max-width: 120px;
+  max-width: min(120px, 100%);
   font-size: 13px;
   letter-spacing: -0.1px;
 }
