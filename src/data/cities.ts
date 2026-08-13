@@ -77,6 +77,26 @@ export const CITY_PAGES = [
   'Milpitas',
   'Vacaville',
   /*
+    The 2026-08-12 run — a single evening in which his Instagram algorithm,
+    in his words, "is just giving me exactly what I need". Six more cities,
+    each opened by a business he sent with the city written beside the link:
+    Polly Ann and House of Thai for San Francisco, Lavanta and Kaisen Don for
+    San Leandro, The Sandwich Monkey for Foster City, Bober Tea for Martinez,
+    Great Impasta for Danville, Sola Salons for Pleasanton.
+
+    San Francisco is a city page now as well as the fallback wallpaper. Those
+    are different jobs and it is worth being clear they do not collide: the
+    Golden Gate is what someone sees when we do NOT know their city, and it
+    goes on being that. This just means the Bay's biggest city can finally hold
+    businesses of its own rather than only standing in for everywhere else.
+  */
+  'San Francisco',
+  'San Leandro',
+  'Pleasanton',
+  'Foster City',
+  'Martinez',
+  'Danville',
+  /*
     THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
 
     Every other page on this list is within about an hour of Richmond, which is

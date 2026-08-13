@@ -108,6 +108,51 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'oakland-goods-14': 'b_suptealab', //           Boba shop
 
   /*
+    The 2026-08-12 run. Six cities opened with it — San Francisco, San Leandro,
+    Pleasanton, Foster City, Martinez and Danville — each by a business he sent
+    with the city already written beside the link.
+  */
+  'san-francisco-goods-2': 'b_houseofthai', //    Asian — a Thai kitchen on Larkin
+  'san-francisco-goods-11': 'b_pollyann', //      Ice cream
+  'san-francisco-goods-12': 'b_udessertstory', // Bakery — a dessert shop
+  'san-leandro-goods-4': 'b_kaisendon', //        Sushi
+  'san-leandro-goods-9': 'b_lavanta', //          Mediterranean
+  'berkeley-goods-1': 'b_soltaqueria', //         Mexican
+  'benicia-goods-12': 'b_onehousebakery', //      Bakery
+  'foster-city-goods-6': 'b_sandwichmonkey', //   Sandwiches
+  'oakland-goods-10': 'b_senorsisig', //          Filipino
+  'oakland-goods-13': 'b_jollycafe', //           Coffee
+  'oakland-goods-16': 'b_donutfarm', //           Donuts
+  'walnut-creek-goods-11': 'b_milkyflakes', //    Ice cream
+  'martinez-goods-14': 'b_bobertea', //           Boba
+  'redwood-city-goods-5': 'b_pizzeriacardamomo', // Italian
+  'danville-goods-5': 'b_greatimpasta', //        Italian
+  'brentwood-goods-3': 'b_chutneys', //           Indian
+  'concord-goods-12': 'b_frenchspot', //          Bakery
+  'walnut-creek-services-15': 'b_joybound', //    Veterinary clinic
+  'san-ramon-services-2': 'b_bodylinesdayspa', // Massage and spa
+  'pleasanton-services-0': 'b_solasalons', //     Barber and salon
+
+  /*
+    His friend's six, on the flagship yellow sheets by his own instruction:
+    "place them all on the yellow pages of BEASTY • Goods & Services."
+
+    Also the honest place for them. He gave no city for any of these, and a
+    numbered city spot is a claim that a business is IN that city — the yellow
+    sheets claim nothing but that they are on his list.
+  */
+  'beasty-goods2-0': 'b_santaclarasuperkitchen',
+  'beasty-goods2-1': 'b_willybillysmokedmeat',
+  'beasty-goods2-2': 'b_redchili',
+  'beasty-goods2-3': 'b_banhmioven',
+  'beasty-services2-1': 'b_adzeela',
+  'beasty-services2-2': 'b_allyvirtual',
+
+  /* No fitting cuisine: "shakes things up with exciting flavors and dishes for
+     every palate" is a cafe that is not one of the twenty-four. Yellow sheet. */
+  'san-francisco-goods2-0': 'b_thefarmacy',
+
+  /*
     Businesses with no fitting category go on the yellow overflow page rather
     than being crammed under a wrong label: a waste-removal service is not
     "Cleaning", a two-city breakfast house is not "Sandwiches", and a mobile

@@ -314,6 +314,166 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'MB', logoFace: 'condensed',
     site: 'https://majesticboutique.co/',
   }),
+  /*
+    ---- the 2026-08-12 run ----
+
+    Twenty-odd in one evening. Same rules as everything above: his name, his
+    city, his link, and nothing invented. Addresses and one-line descriptors
+    are quoted from the business's own Instagram header in the screenshot he
+    attached, never from anywhere else, and several of these have no website at
+    all — he flags those himself as the ones worth selling one to.
+  */
+  seed('lavanta', 'Lavanta', 'Lavanta', 'Mediterranean', '#2E4A34', {
+    logoTemplate: 'monogram', logoInitials: 'LV', logoFace: 'condensed',
+    site: 'https://www.eatlavanta.com/',
+  }),
+  /* His link was tetsujinsushi.com; the screenshot in the same message is
+     @kaisendon1939 on Marina Blvd. Named for the shop in the picture, with the
+     link he sent — worth him confirming which of the two he means. */
+  seed('kaisen-don', 'Kaisen Don', 'Kaisen Don', 'Sushi', '#1B1B22', {
+    logoTemplate: 'monogram', logoInitials: 'KD', logoFace: 'grotesk',
+    site: 'https://www.tetsujinsushi.com/',
+    address: '1042 Marina Blvd, San Leandro',
+  }),
+  seed('polly-ann', 'Polly Ann Ice Cream', 'Polly Ann', 'Ice cream', '#C0335E', {
+    logoTemplate: 'monogram', logoInitials: 'PA', logoFace: 'script',
+    site: 'https://www.pollyann.com/',
+    address: '3138 Noriega St, San Francisco',
+  }),
+  seed('house-of-thai', 'House Of Thai', 'House Of Thai', 'Thai', '#7A2418', {
+    logoTemplate: 'monogram', logoInitials: 'HT', logoFace: 'slab',
+    site: 'https://www.houseofthaisf.com/',
+    address: '901 Larkin St, San Francisco',
+  }),
+  seed('u-dessert-story', 'U Dessert Story', 'U Dessert', 'Dessert shop', '#20202A', {
+    logoTemplate: 'monogram', logoInitials: 'U', logoFace: 'grotesk',
+    site: 'https://www.udessertstory.com/',
+    address: '3489 16th St, San Francisco',
+  }),
+  seed('the-farmacy', 'The Farmacy', 'The Farmacy', 'Cafe', '#1F4030', {
+    logoTemplate: 'monogram', logoInitials: 'TF', logoFace: 'grotesk',
+    site: 'https://www.farmacysf.com/',
+  }),
+  seed('sol-taqueria', 'Sol Taqueria', 'Sol Taqueria', 'Mexican', '#B4531B', {
+    logoTemplate: 'monogram', logoInitials: 'ST', logoFace: 'slab',
+    site: 'https://www.soltaqueriaberkeley.com/',
+  }),
+  seed('one-house-bakery', 'One House Bakery', 'One House Bak…', 'Bakery', '#6B4A22', {
+    logoTemplate: 'monogram', logoInitials: 'OH', logoFace: 'script',
+    site: 'https://onehousebakery.com/',
+    address: '918 1st St, Benicia',
+  }),
+  seed('sandwich-monkey', 'The Sandwich Monkey', 'Sandwich Mo…', 'Sandwiches', '#8A5A18', {
+    logoTemplate: 'monogram', logoInitials: 'SM', logoFace: 'slab',
+    site: 'https://thesandwichmonkey.com/',
+    address: '3 Plaza View Ln, Foster City',
+  }),
+  seed('senor-sisig', 'Señor Sisig', 'Señor Sisig', 'Filipino', '#B0201F', {
+    logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'condensed',
+    site: 'https://www.senorsisig.com/',
+  }),
+  seed('jolly-cafe', 'Jolly Cafe', 'Jolly Cafe', 'Coffee', '#8C6A3F', {
+    logoTemplate: 'monogram', logoInitials: 'JC', logoFace: 'script',
+    phone: '(510) 454-9899',
+    address: '1004 Webster St, Oakland',
+    contactOnly:
+      'Sent 2026-08-12 with his note that they need a website — they have none, which is why ' +
+      'the only route here is the phone number from their own Instagram header.',
+  }),
+  seed('donut-farm', 'Donut Farm', 'Donut Farm', 'Organic donuts', '#1A1A1E', {
+    logoTemplate: 'monogram', logoInitials: 'DF', logoFace: 'grotesk',
+    contactOnly:
+      'Sent 2026-08-12 with "no website yet". Their own Instagram lists shops on Adeline St ' +
+      'and Gilman St; the operator filed them under Oakland, so that is where they sit.',
+  }),
+  seed('milky-flakes', 'Milky Flakes', 'Milky Flakes', 'Sweet treats', '#C8912A', {
+    logoTemplate: 'monogram', logoInitials: 'MF', logoFace: 'script',
+    address: '1399 N Main St, Walnut Creek',
+    contactOnly:
+      'A new store, sent 2026-08-12 with "no website yet" — their own Instagram is the only ' +
+      'thing published about them so far.',
+  }),
+  seed('bober-tea', 'Bober Tea & Mochi', 'Bober Tea', 'Boba and mochi donuts', '#C2508A', {
+    logoTemplate: 'monogram', logoInitials: 'BT', logoFace: 'grotesk',
+    phone: '279-900-8046',
+    address: '1029 Arnold Dr, Suite 10, Martinez',
+    contactOnly:
+      'A new store, sent 2026-08-12 with "needs website". Phone and address are from their ' +
+      'own Instagram header; nothing else is listed.',
+  }),
+  seed('pizzeria-cardamomo', 'Pizzeria Cardamomo', 'Cardamomo', 'Pizza', '#3E1F1A', {
+    logoTemplate: 'monogram', logoInitials: 'PC', logoFace: 'slab',
+    site: 'https://pizzeriacardamomo.com/',
+    contactOnly:
+      'Sent 2026-08-12 with his note "needs branding work. No logo" — so this tile is a ' +
+      'monogram rather than their mark, because they do not have one.',
+  }),
+  seed('great-impasta', 'Great Impasta', 'Great Impasta', 'Italian', '#2E4A2A', {
+    logoTemplate: 'monogram', logoInitials: 'GI', logoFace: 'script',
+    site: 'https://greatimpastadanville.com/',
+  }),
+  seed('chutneys', 'Chutneys', 'Chutneys', 'Indian', '#8A4A12', {
+    logoTemplate: 'monogram', logoInitials: 'CH', logoFace: 'slab',
+    site: 'https://chutneys.ai/',
+  }),
+  seed('french-spot', 'The French Spot', 'French Spot', 'French bakery', '#243A6B', {
+    logoTemplate: 'monogram', logoInitials: 'FS', logoFace: 'script',
+    site: 'https://www.thefrenchspotsf.com/',
+  }),
+  seed('joybound', 'Joybound People & Pets', 'Joybound', 'Animal welfare, vet clinic', '#1F5E5A', {
+    logoTemplate: 'monogram', logoInitials: 'JB', logoFace: 'grotesk',
+    site: 'https://linktr.ee/joyboundpeopleandpets',
+    contactOnly:
+      'Sent 2026-08-12 with "needs website" and marked a potential BPRF candidate. They are ' +
+      'an animal-welfare organisation that also runs a community clinic, which is why they ' +
+      'sit under the veterinary spot rather than grooming.',
+  }),
+  seed('bodylines-day-spa', 'Bodylines Day Spa', 'Bodylines', 'Day spa', '#4A2C52', {
+    logoTemplate: 'monogram', logoInitials: 'BD', logoFace: 'script',
+    site: 'https://www.bodylinesdayspa.com/',
+  }),
+  seed('sola-salons', 'Sola Salons East Bay', 'Sola Salons', 'Salon studios', '#1C1C24', {
+    logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'condensed',
+    site: 'https://linktr.ee/solasalonseastbay',
+    contactOnly:
+      'Three locations, and his note says they look like they need a website at some point. ' +
+      'Seated on one page for now rather than three, until he says which.',
+  }),
+
+  /*
+    His friend's six, all sent at once with one instruction: "If you can place
+    them all on the yellow pages of BEASTY • Goods & Services; we can start
+    filling in those yellow spots with these to fill in spots to look like we
+    are growing."
+      — so they go on the flagship yellow sheets rather than into a city, which
+    is also the honest place for them: he gave no city for any of these, and a
+    numbered city spot is a claim about where a business is.
+  */
+  seed('santa-clara-super-kitchen', 'Santa Clara Super Kitchen', 'Super Kitchen', 'Kitchen', '#7A2A1E', {
+    logoTemplate: 'monogram', logoInitials: 'SK', logoFace: 'condensed',
+    site: 'https://santaclarasuperkitchen.com/',
+  }),
+  seed('willy-billy-smoked-meat', 'Willy Billy Smoked Meat', 'Willy Billy', 'Smoked meat', '#4A2416', {
+    logoTemplate: 'monogram', logoInitials: 'WB', logoFace: 'slab',
+    site: 'https://willybillysmokedmeat.com/',
+  }),
+  seed('red-chili', 'Red Chili', 'Red Chili', 'Restaurant', '#A31E1E', {
+    logoTemplate: 'monogram', logoInitials: 'RC', logoFace: 'slab',
+    site: 'https://redchilirestaurants.com/',
+  }),
+  seed('banh-mi-oven', 'Banh Mi Oven', 'Banh Mi Oven', 'Vietnamese sandwiches', '#286B3A', {
+    logoTemplate: 'monogram', logoInitials: 'BO', logoFace: 'condensed',
+    site: 'https://banhmioven.us/',
+  }),
+  seed('adzeela', 'Adzeela', 'Adzeela', 'Advertising', '#212938', {
+    logoTemplate: 'monogram', logoInitials: 'AZ', logoFace: 'grotesk',
+    site: 'https://adzeela.com/',
+  }),
+  seed('ally-virtual', 'Ally Virtual', 'Ally Virtual', 'Virtual assistance', '#1E3A52', {
+    logoTemplate: 'monogram', logoInitials: 'AV', logoFace: 'grotesk',
+    site: 'https://allyvirtual.com/',
+  }),
+
   /* Sent 2026-08-10 with "Concord • Services" and missed in that batch — the
      third detailer on his list, after JDI in Brentwood and J&W in Berkeley. */
   seed('diablo-auto-detailing', 'Diablo Auto Detailing', 'Diablo Detail', 'Auto detailing', '#1A2C4A', {

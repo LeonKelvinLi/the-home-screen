@@ -47,8 +47,10 @@ so the cropped file is not itself copyleft.
 | `vallejo.webp` | Six Flags Discovery Kingdom at dusk | ray_explores, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 | `petaluma.webp` | Volpi's Ristorante, downtown Petaluma, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `napa.webp` | Angele Restaurant, Napa riverfront, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
+| `martinez.webp` | Benicia-Martinez Bridge | MARELBU, CC BY 3.0, via Wikimedia Commons — cropped and resized |
 
 CC BY 4.0: https://creativecommons.org/licenses/by/4.0
+CC BY 3.0: https://creativecommons.org/licenses/by/3.0
 CC BY 2.0: https://creativecommons.org/licenses/by/2.0
 
 ## No attribution required
@@ -63,6 +65,7 @@ Credited anyway, because someone took these and it costs nothing to say so.
 | `palo-alto.webp` | Hoover Tower at night | Pexels Licence | Zetong Li |
 | `benicia.webp` | First Street, downtown Benicia | CC0 1.0 | Lhimec, via Wikimedia Commons |
 | `san-ramon.webp` | San Ramon City Hall | CC0 1.0 | Mx. Granger, via Wikimedia Commons |
+| `danville.webp` | Las Trampas Wilderness Regional Preserve | CC0 1.0 | Mx. Granger, via Wikimedia Commons |
 
 ## Generated, not photographed
 
@@ -104,6 +107,17 @@ floor and still came out large, because the picture is midday foliage and
 gravel — thousands of small high-contrast edges, which is the worst case for
 any codec. It is not a quality setting that can be turned down without banding
 the sky; it is what that photograph costs. Only Vacaville's own page pays it.
+
+## Foster City has no photograph, and that is not a search failure
+
+He sent a Foster City background link on 2026-08-12 and it is the one city in
+this batch with nothing usable behind it. Commons has exactly two Foster City
+photographs of any size — the pylons and a shot under the bridge — and both are
+about 2288x1712. A portrait crop out of a frame that wide is 788 pixels across,
+which then has to be blown up 1.7x to fill this one. Upscaling a photograph is
+visible in a way that a plain gradient is not, so Foster City keeps the neutral
+placeholder until somebody shoots it. Searched by category, by full text and by
+subject.
 
 ## Where the gaps are
 

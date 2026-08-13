@@ -158,12 +158,24 @@ async function writeManifest() {
     about any one picture, it is what happens when white text meets a midday
     sky, so the page needs to know which kind of photograph it is showing.
 
-    The measurement is the 90th-percentile luminance of the BAND THE ICON GRID
-    SITS IN — 12% to 82% of the height — not the whole frame. A night skyline
-    with a bright strip of headlights along the very bottom is still a dark
-    page to read against, and averaging the whole image would call it light.
-    The 90th percentile rather than the mean because a label only has to
-    survive the bright part it happens to land on.
+    The measurement is a percentile of the luminance in the BAND THE ICON GRID
+    SITS IN — 12% to 82% of the height — not of the whole frame. A night skyline
+    with a strip of headlights along the very bottom is still a dark page to
+    read against, and averaging the whole image would call it light.
+
+    97th percentile, not the 90th it started at, and the change was forced by
+    measurement rather than taste. At the 90th, San Leandro scored 0.26 — solidly
+    "dark" — and still had six of its twenty-four labels under the floor, because
+    the failures are LOCAL: a lit sign, a white building, a patch of sky between
+    the towers. A label does not land on the average of a photograph, it lands on
+    one spot, so the number has to describe the bright spots rather than the bulk.
+    Moving to the 97th took San Leandro to zero, Richmond from two to zero and
+    Oakland from three to one.
+
+    It costs vibrancy on the night photographs, which now carry a real scrim
+    where they used to carry almost none. That trade is deliberate: ten labels
+    nobody could read across three cities, against pictures that are dimmer but
+    still plainly pictures.
   */
   const brightness = JSON.parse(
     (
@@ -185,7 +197,7 @@ for slug in ${JSON.stringify(slugs)}:
         0.2126 * srgb(r) + 0.7152 * srgb(g) + 0.0722 * srgb(b)
         for r, g, b in band.getdata()
     )
-    out[slug] = round(px[int(len(px) * 0.9)], 4)
+    out[slug] = round(px[int(len(px) * 0.97)], 4)
 print(json.dumps(out))`,
       ])
     ).stdout,
