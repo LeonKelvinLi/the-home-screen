@@ -45,9 +45,20 @@ interface Props {
   hideLabel?: boolean
   /** Tile edge in px; iPad icons are larger than iPhone ones. */
   size?: number
+  /** A business that travels to the customer — see MOBILE in apps/registry. */
+  mobile?: boolean
 }
 
-function AppIconBase({ icon, label, name, badge, onOpen, hideLabel, size = ICON_SIZE }: Props) {
+function AppIconBase({
+  icon,
+  label,
+  name,
+  badge,
+  onOpen,
+  hideLabel,
+  size = ICON_SIZE,
+  mobile,
+}: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
   const startY = useRef(0)
@@ -94,9 +105,24 @@ function AppIconBase({ icon, label, name, badge, onOpen, hideLabel, size = ICON_
       // The count has to be in the BUTTON's label: a button's own aria-label
       // overrides every descendant, so the badge's label was silently dropped
       // and the cart icon announced as just "Cart".
-      aria-label={badge ? `${name ?? label}, ${badge} in cart` : (name ?? label)}
+      /*
+        "Mobile" is spoken, not just coloured. The ring below is the whole of
+        the signal for a sighted customer and none of it for anyone else, and a
+        colour that carries meaning on its own is the oldest accessibility
+        failure there is.
+      */
+      aria-label={[
+        name ?? label,
+        mobile ? 'mobile, comes to you' : '',
+        badge ? `${badge} in cart` : '',
+      ]
+        .filter(Boolean)
+        .join(', ')}
     >
-      <span className="icon-tile" style={{ width: size, height: size }}>
+      <span
+        className={`icon-tile${mobile ? ' is-mobile' : ''}`}
+        style={{ width: size, height: size }}
+      >
         {icon}
         {/* aria-hidden: the count is carried by the button's own label above,
             and an aria-label on a generic span is invalid regardless. */}

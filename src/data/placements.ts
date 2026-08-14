@@ -148,9 +148,21 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-services2-1': 'b_adzeela',
   'beasty-services2-2': 'b_allyvirtual',
 
-  /* No fitting cuisine: "shakes things up with exciting flavors and dishes for
-     every palate" is a cafe that is not one of the twenty-four. Yellow sheet. */
-  'san-francisco-goods2-0': 'b_thefarmacy',
+  /*
+    The three that were on yellow sheets, now on page one in the nearest slot —
+    see the note above for why the objection to that did not hold. Each is the
+    closest of the twenty-four rather than an exact fit, and each is a call he
+    can overrule in one line:
+
+      The Royale Eatery   contemporary American  -> Burgers and hot dogs
+      One House Bistro    brunch and dinner      -> Burgers and hot dogs
+      Mimi's Chocolates   chocolatier            -> Bakery
+      The Farmacy         cafe                   -> Coffee shop
+  */
+  'pleasant-hill-goods-0': 'b_royaleeatery',
+  'san-ramon-goods-0': 'b_onehousebistro',
+  'dublin-goods-12': 'b_mimischocolates',
+  'san-francisco-goods-13': 'b_thefarmacy',
 
   /*
     Businesses with no fitting category go on the yellow overflow page rather
@@ -159,21 +171,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     groomer with no fixed city is not anywhere at all — the operator filed it
     under BEASTY itself.
 
-    Three from the 2026-08-11 run land here for the same reason, and it is
-    worth being plain about which: the goods list is a list of CUISINES, and a
-    restaurant that does not cook one of them has nowhere to sit. The Royale
-    Eatery is contemporary American fine dining and One House Bistro is a
-    brunch-and-dinner bistro — putting either under "Burgers and hot dogs",
-    the only American-shaped spot on the page, would print "Burgers" under a
-    tasting plate. Mimi's is a chocolatier, and "Bakery" is a different trade.
+    Three from the 2026-08-11 run were parked here on the argument that the
+    goods list is a list of CUISINES, so a restaurant that cooks none of them
+    has nowhere honest to sit — the worry being that seating a tasting-plate
+    bistro under "Burgers and hot dogs" would print BURGERS beneath it.
 
-    All three are on their city's page and reachable; they are simply on the
-    yellow one. Say the word and any of them moves to a numbered spot — that is
-    a category call, and the categories are the operator's.
+    That worry was simply wrong about how the grid renders. A CLAIMED spot
+    draws the business's own name; the category label only shows while the tile
+    is still empty. Banh Mi Xpress reads "Banh Mi X…" and not "Sandwiches",
+    Majestic reads "Majestic" and not "Clothing". Nothing on screen ever
+    announces the category, so the nearest slot costs a seated business
+    nothing, and page one is where he sells from. All three moved.
   */
-  'pleasant-hill-goods2-1': 'b_royaleeatery',
-  'san-ramon-goods2-0': 'b_onehousebistro',
-  'dublin-goods2-0': 'b_mimischocolates',
   'walnut-creek-services2-0': 'b_petbutlerwalnutcreek',
   'beasty-services2-0': 'b_happybaypaws',
   'pleasant-hill-goods2-0': 'b_thehangoutbreakfast',

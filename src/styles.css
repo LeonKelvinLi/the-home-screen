@@ -434,6 +434,37 @@ textarea {
   soft shadow rather than a hard one. Slight negative tracking keeps long names
   from truncating a character early.
 */
+/*
+  The mobile ring — his colour code, for businesses that travel to the customer.
+
+  Teal on purpose, and specifically NOT the brand yellow. Yellow already means
+  "this is BEASTY's own" on this screen: the Designs tile, the Scan tile, every
+  yellow overflow page. A second meaning on the same colour weakens both.
+
+  Drawn as a box-shadow rather than a border so it costs no layout. A border
+  would push twenty-four icons a pixel further apart on any page that happens
+  to contain one mobile business, and this grid is measured to the pixel a few
+  rules above. Two rings, with a hairline of near-black between tile and
+  colour, so it reads on a white logo as clearly as on a black one.
+
+  Never the only signal: AppIcon puts "mobile, comes to you" in the button's
+  accessible name, because a colour that carries meaning alone is the oldest
+  accessibility failure there is.
+*/
+.icon-tile.is-mobile {
+  /*
+    The radius has to be set HERE, not inherited. .icon-tile is a bare span —
+    the rounding a tile appears to have is drawn inside the logo's own SVG, so
+    a box-shadow on the span traces a square and the ring came out as a hard
+    rectangle around a squircle. 24% is the same figure the yellow pages use
+    for the plate behind their dashed tiles.
+  */
+  border-radius: 24%;
+  box-shadow:
+    0 0 0 2px rgba(10, 12, 14, 0.55),
+    0 0 0 4px #14c3c9;
+}
+
 .icon-label {
   /* 82px is the look; 100% is the guard. Whichever is smaller wins, so on a
      narrow phone the label truncates to its column instead of pushing the
@@ -3440,6 +3471,29 @@ textarea {
   it, so it has to read as a line of information with an action on the end
   rather than as another call-to-action block competing with Add to cart.
 */
+/* The mobile line, carrying the same teal as the home-screen ring so the two
+   read as one idea rather than two unrelated decorations. */
+.brand-mobile {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 14px 16px 2px;
+  padding: 11px 14px;
+  border-radius: var(--radius);
+  background: var(--paper);
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
+.brand-mobile-dot {
+  flex: 0 0 auto;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #14c3c9;
+}
+
 .brand-where {
   display: flex;
   align-items: center;

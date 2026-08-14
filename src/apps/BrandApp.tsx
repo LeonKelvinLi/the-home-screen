@@ -154,6 +154,20 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             absent rather than disabled, because a greyed-out Directions button
             reads as a bug in the app rather than a fact about the business.
           */}
+          {/*
+            The other half of the mobile ring on the home screen: the ring says
+            "this one is different", this says how. It stands in for the address
+            block below rather than sitting beside it — a business that travels
+            has no address to show and no directions to give, and saying so is
+            more useful than an empty space where other pages have a map link.
+          */}
+          {!brand.address && /\bmobile\b/i.test(brand.cuisine) && (
+            <p className="brand-mobile">
+              <span className="brand-mobile-dot" aria-hidden="true" />
+              Mobile — they come to you, so there is no shop to visit.
+            </p>
+          )}
+
           {brand.address && (
             <div className="brand-where">
               <p className="brand-address">{brand.address}</p>

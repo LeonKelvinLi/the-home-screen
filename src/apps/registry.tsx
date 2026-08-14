@@ -32,7 +32,26 @@ export interface AppDef {
   /** Drives the app-switcher card background and the in-app status bar. */
   tint: string
   statusDark?: boolean
+  /** A business that travels to the customer. See MOBILE below. */
+  mobile?: true
 }
+
+/**
+ * Does this business come to you?
+ *
+ * The operator's problem, in his words: "I've seen a lot of Mobile businesses
+ * but not sure what city to list them in." A mobile groomer has no city, so
+ * whichever page it lands on is slightly a lie — and a customer scanning a
+ * grid has no way to tell it apart from the shop next to it.
+ *
+ * READ FROM THE DESCRIPTOR rather than kept as a hand-maintained list. Every
+ * one of these already says so in its own one-liner, because that line is
+ * quoted from what the business calls itself: "Mobile dog grooming", "Mobile
+ * car wash", "Mobile mini golf events". A second list would be a second thing
+ * to forget to update, and it would disagree with the visible text the day
+ * somebody did.
+ */
+const MOBILE = /\bmobile\b/i
 
 const SYSTEM: { key: SystemKey; name: string; label: string; glyph: SystemGlyph; tint: string }[] = [
   { key: 'cart', name: 'Cart', label: 'Cart', glyph: 'bag', tint: '#1B47D6' },
@@ -52,6 +71,7 @@ export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
   kind: 'brand' as const,
   brandId: b.id,
   tint: b.logo.bg.split('|')[0],
+  ...(MOBILE.test(b.cuisine) ? { mobile: true as const } : {}),
 }))
 
 export const SYSTEM_APPS: AppDef[] = SYSTEM.map((s) => ({

@@ -327,10 +327,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'LV', logoFace: 'condensed',
     site: 'https://www.eatlavanta.com/',
   }),
-  /* His link was tetsujinsushi.com; the screenshot in the same message is
-     @kaisendon1939 on Marina Blvd. Named for the shop in the picture, with the
-     link he sent — worth him confirming which of the two he means. */
-  seed('kaisen-don', 'Kaisen Don', 'Kaisen Don', 'Sushi', '#1B1B22', {
+  /* His link said tetsujinsushi.com and the screenshot in the same message was
+     @kaisendon1939, which looked like two businesses. It is one: that site
+     trades as "Sushi | Tetsujin Kaisen Don" and prints this same Marina Blvd
+     address. Checked rather than assumed, because seating a business under
+     another's website is the kind of error nobody catches later. */
+  seed('kaisen-don', 'Kaisen Don', 'Kaisen Don', 'Sushi and donburi', '#1B1B22', {
     logoTemplate: 'monogram', logoInitials: 'KD', logoFace: 'grotesk',
     site: 'https://www.tetsujinsushi.com/',
     address: '1042 Marina Blvd, San Leandro',
