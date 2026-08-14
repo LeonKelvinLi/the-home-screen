@@ -29,12 +29,7 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `las-vegas.webp` | The Strip at night | Yelderberry, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `pleasant-hill.webp` | Soldiers Monument, Boyd Road | Checkingfax, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `el-cerrito.webp` | El Cerrito from Albany Hill | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
-| `crockett.webp` | Al Zampa and Carquinez Bridges | Joe Futrelle, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
-| `vacaville.webp` | The Nut Tree carousel | Noah_Loverbear, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 | `milpitas.webp` | Milpitas from the air | formulanone, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
-| `foster-city.webp` | The Foster City lagoon | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
-| `danville.webp` | Hartz Avenue, downtown Danville | Danvilleca, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
-| `lafayette.webp` | BART near El Curtola Road | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
 CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0
@@ -51,7 +46,6 @@ so the cropped file is not itself copyleft.
 | `petaluma.webp` | Volpi's Ristorante, downtown Petaluma, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `napa.webp` | Angele Restaurant, Napa riverfront, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `martinez.webp` | Benicia-Martinez Bridge | MARELBU, CC BY 3.0, via Wikimedia Commons — cropped and resized |
-| `orinda.webp` | The Orinda Theatre sign | Erica Fischer, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 | `pinole.webp` | Downtown Pinole | John Martinez Pavliga, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 
 CC BY 4.0: https://creativecommons.org/licenses/by/4.0
@@ -112,33 +106,52 @@ gravel — thousands of small high-contrast edges, which is the worst case for
 any codec. It is not a quality setting that can be turned down without banding
 the sky; it is what that photograph costs. Only Vacaville's own page pays it.
 
-## Matching his links instead of replacing them
+## THE OPERATOR'S OWN IMAGES — not freely licensed, and not ours
 
-From 2026-08-14, the rule is his: use the wallpaper from the link he sends.
+**Read this before shipping to an app store or a new domain.**
 
-Every link he has sent is a small landscape thumbnail — 454x604 for Orinda,
-1200x630 for Lafayette, 1024x680 for Danville, 1280x718 for Foster City. A
-portrait crop out of any of them is under 340 pixels wide and needs blowing up
-four to five times to fill this frame, which is visibly mushy on a phone. So
-the file cannot be the one he linked.
+From 2026-08-14 the instruction is his and it is unambiguous: "always use the
+wallpaper from the link he sends." The six files below are therefore the exact
+photographs he linked, not substitutes for them. Every one is third-party
+copyrighted stock. None carries a licence that permits commercial reuse, and
+none was cleared with its owner.
 
-What CAN be his is the SUBJECT, and that turns out to be the part that matters.
-His links are how he chooses what a city looks like, and each one is now
-matched to the same subject at a size that works:
-
-| City | What he picked | What is here |
+| File | City | Where his link pointed |
 |---|---|---|
-| Orinda | the Orinda Theatre marquee | the Orinda Theatre sign |
-| Lafayette | the DOWNTOWN LAFAYETTE arch | no free photograph of the arch exists; the BART cut through the hills instead |
-| Foster City | the lagoon with kayaks | the lagoon |
-| Danville | a tree-lined downtown street | Hartz Avenue, downtown |
-| Vacaville | the Nut Tree | the Nut Tree carousel |
-| Crockett | the C&H refinery | the Carquinez bridges, the refinery being 1024x768 everywhere |
+| `orinda.webp` | Orinda | cdn.sfstation.com — SF Station |
+| `lafayette.webp` | Lafayette | cdn.getyourguide.com — GetYourGuide |
+| `foster-city.webp` | Foster City | media-production.lp-cdn.com |
+| `danville.webp` | Danville | eastbaytimes.com |
+| `crockett.webp` | Crockett | cdn.kqed.org — KQED, credited Getty |
+| `vacaville.webp` | Vacaville | cable-car-guy.com |
 
-Foster City was written up here as having no usable photograph at all. That was
-wrong, and searching by HIS subject rather than by the city name is what found
-it: an 11724x3806 panorama of the lagoon. Only the Lafayette arch is still
-unmatched.
+The realistic exposure is a takedown notice, and the realistic cost of clearing
+it later is one afternoon: each of these is one line in this file and one run of
+`node tools/wallpapers.mjs <slug> <url>` to swap. Four of the six had a properly
+licensed equivalent on Wikimedia Commons and were shipping it until today — the
+Carquinez bridges for Crockett, the Nut Tree carousel for Vacaville, the lagoon
+for Foster City, Hartz Avenue for Danville. Those are the fallbacks if anyone
+ever objects.
+
+Everything ELSE in this folder is licensed properly and stays that way.
+
+## They were too small, so they are super-resolved
+
+Every link he sends is a small landscape thumbnail — 454x604 for Orinda,
+1200x630 for Lafayette, 800x600 for Vacaville. This frame is 1320x2868
+PORTRAIT, so the usable part of a wide thumbnail is a narrow vertical slice: a
+1200x630 image yields 289 pixels across, needing a 4.5x blow-up. That is what
+made them unusable and why they were being replaced.
+
+`tools/upscale.py` runs EDSR x4 over anything that would need more than a 1.15x
+stretch, before the crop. It is a super-resolution network rather than a
+sharpen or a better resize — side by side at 4x on the Orinda frame it holds
+the neon tubing as edges where Lanczos turns it into a glow. The encoder calls
+it automatically; nothing to remember.
+
+It is slow. Six of these took ten minutes, most of it Orinda and Vacaville,
+which start smallest and therefore have the most to invent. That is a fine
+trade for something run once per city.
 
 ## Where the gaps are
 

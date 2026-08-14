@@ -62,6 +62,19 @@ async function fetchAndEncode(slug, url) {
     so a rerun re-downloads what it has. Waiting and retrying is the difference
     between "one command does the set" and babysitting it.
   */
+  /*
+    A LOCAL PATH is accepted as well as a URL. Some of the hosts the operator
+    links to — CDNs in front of magazines and booking sites — refuse this
+    script's user agent outright, and arguing with them one at a time is not
+    the job. Downloading by hand and passing the file is the escape hatch.
+  */
+  if (!/^https?:\/\//.test(url)) {
+    const local = path.resolve(url)
+    const tmp0 = path.join(OUT, `${slug}.src`)
+    await run('/bin/cp', [local, tmp0])
+    return finishEncode(slug, tmp0)
+  }
+
   let res
   for (let attempt = 0; ; attempt++) {
     res = await fetch(url, {
@@ -82,8 +95,60 @@ async function fetchAndEncode(slug, url) {
   const tmp = path.join(OUT, `${slug}.src`)
   await writeFile(tmp, raw)
 
+  return finishEncode(slug, tmp)
+}
+
+/* Everything after the bytes are on disk, shared by the URL and local paths. */
+async function finishEncode(slug, tmp) {
   // sips ships with macOS and handles HEIC/PNG/JPEG without a dependency.
   await run('/usr/bin/sips', ['-s', 'format', 'png', tmp, '--out', `${tmp}.png`])
+
+  /*
+    SUPER-RESOLVE FIRST, when the source is too small to fill the frame.
+
+    The operator's rule is to use the wallpaper from the link he sends, and
+    every link he sends is a small landscape thumbnail — 454x604 for Orinda,
+    1200x630 for Lafayette. This frame is 1320x2868 PORTRAIT, so the usable
+    part of a wide thumbnail is a narrow vertical slice of it: a 1200x630 image
+    yields 289 pixels across. Resampling that up four or five times is what
+    "blown up" looks like, and it was the reason his links were being replaced
+    rather than used.
+
+    So anything that would need more than a light stretch goes through EDSR x4
+    first — a network trained to invent plausible detail, not a sharpen and not
+    a better resize. Compared side by side at 4x on his Orinda frame it holds
+    the neon tubing as edges where Lanczos turns it to a glow.
+
+    The threshold is deliberately not 1.0. Every photograph here is downscaled
+    from something larger, and a few per cent of stretch is invisible; running
+    the network on a frame that barely needs it costs a minute and changes
+    nothing. 1.15 is where a resample starts to show on a phone.
+  */
+  const srcW = Number(
+    (await run('/usr/bin/sips', ['-g', 'pixelWidth', `${tmp}.png`])).stdout.match(/pixelWidth: (\d+)/)?.[1],
+  )
+  const srcH = Number(
+    (await run('/usr/bin/sips', ['-g', 'pixelHeight', `${tmp}.png`])).stdout.match(/pixelHeight: (\d+)/)?.[1],
+  )
+  /* The cover-crop below fills by whichever axis falls short, so the stretch
+     this frame will actually suffer is the larger of the two ratios. */
+  const stretch = Math.max(W / srcW, H / srcH)
+  if (stretch > 1.15) {
+    console.log(`  ${slug}: ${srcW}x${srcH} needs ${stretch.toFixed(2)}x — super-resolving`)
+    /*
+      The HOMEBREW python, not /usr/bin/python3 which every other call here
+      uses. Only one of them has OpenCV: the system one ships Pillow, which is
+      all the encode below needs, and cv2 lives in the Homebrew tree. Calling
+      the wrong one fails with ModuleNotFoundError halfway through a run, after
+      the download and before anything is written.
+    */
+    await run('/opt/homebrew/bin/python3', [
+      path.join(ROOT, 'tools/upscale.py'),
+      `${tmp}.png`,
+      `${tmp}.sr.png`,
+    ])
+    await run('/bin/mv', [`${tmp}.sr.png`, `${tmp}.png`])
+  }
 
   /*
     ffmpeg rather than a plain PIL resize.

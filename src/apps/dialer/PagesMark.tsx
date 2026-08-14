@@ -20,28 +20,34 @@
  */
 
 /**
- * TWO sheets — the page, and one page behind it. Not three.
+ * TWO LAYERS INSIDE ONE ICON — not two icons overlapping.
  *
- * Three was tried and the operator's verdict was "don't make it 3d, only one
- * page below and it will be fine". He is right: each extra sliver adds another
- * parallel edge, and by the third the mark stops reading as a directory with a
- * page behind it and starts reading as a rendering of a stack — a perspective
- * drawing, which is a different kind of thing from a flat brand mark. One
- * sheet behind says "there is more" and stops.
+ * The operator's correction: "make it as one icon, like two layers, but still
+ * inside one icon." The version before this offset both sheets so their union
+ * was a stepped, non-square silhouette; on a home screen full of squircles that
+ * reads as a picture OF two icons rather than as one icon.
  *
- * Each is SHEET across, offset by STEP up and to the right, so the pair still
- * fills the 100x100 the mark is drawn in. Up and to the RIGHT specifically,
- * because that is where the front sheet's corner is turned — offset any other
- * way and the sliver shows on an edge the fold does nothing with, leaving two
- * unrelated devices instead of one. This way the fold opens onto the page
- * behind it.
+ * So the BACK sheet is the icon. It fills the whole 100x100 and its rounded
+ * square is the outline everything else lives inside. The FRONT sheet is inset
+ * from the top and right by STEP, flush left and bottom, which leaves the back
+ * one showing as an edge along two sides — layered, but never breaking the
+ * single rounded-square boundary.
+ *
+ * Inset on the TOP and RIGHT specifically, because that is the corner the front
+ * sheet's fold turns. The fold then opens onto the layer behind it instead of
+ * onto nothing, which is what ties the two devices into one mark.
  */
-const SHEETS = 2
-const STEP = 6
-const SHEET = 100 - STEP * (SHEETS - 1)
+const STEP = 8
 
-/** Corner radius, in proportion to a sheet rather than to the whole mark. */
-const R = SHEET * 0.22
+/** The back layer IS the icon: full bounds, and the only outer silhouette. */
+const BACK = { x: 0, y: 0, size: 100 }
+/** The front sheet, inset from the top and right, flush left and bottom. */
+const FRONT = { x: 0, y: STEP, size: 100 - STEP }
+
+/** Corner radius, as a proportion of whichever layer is being drawn — so the
+    inner page's corners stay in step with the icon's own rather than being a
+    fraction of a size it no longer has. */
+const RADIUS = 0.22
 
 /**
  * How far the fold reaches from the corner along BOTH edges, which is the whole
@@ -57,13 +63,10 @@ const R = SHEET * 0.22
  * fold reaches 22.3% along the top edge and 22.7% down the right. Four parts in
  * a thousand, invisible until you look for it, and he looked for it.
  */
-const F = SHEET * 0.225
-
-/** Where each sheet's top-left corner sits. Index 0 is the front one. */
-const originOf = (i: number) => ({ x: STEP * i, y: STEP * (SHEETS - 1 - i) })
+const F = FRONT.size * 0.225
 
 /**
- * One sheet as a single closed path, corner cut included.
+ * One layer as a single closed path, corner cut included.
  *
  * ONE path is the fix for the missing space in the outline. The version he was
  * looking at was a rounded rectangle with a triangle laid over its corner: two
@@ -72,38 +75,38 @@ const originOf = (i: number) => ({ x: STEP * i, y: STEP * (SHEETS - 1 - i) })
  * segment of the outline, so a single stroke travels the entire silhouette and
  * closes on itself. There is no seam left to leave open.
  *
- * `cut` is false for the sheets behind: only the top one is dog-eared. Three
- * folded corners would read as three separate marks rather than one directory.
+ * `cut` is false for the back layer: only the front page is dog-eared. Two
+ * folded corners would read as two marks rather than one page on another.
  */
-function sheetPath(i: number, cut: boolean): string {
-  const { x, y } = originOf(i)
-  const r = x + SHEET
-  const b = y + SHEET
+function sheetPath(layer: { x: number; y: number; size: number }, cut: boolean): string {
+  const { x, y, size } = layer
+  const rad = size * RADIUS
+  const r = x + size
+  const b = y + size
   return [
-    `M ${x + R} ${y}`,
-    cut ? `H ${r - F}` : `H ${r - R}`,
-    cut ? `L ${r} ${y + F}` : `A ${R} ${R} 0 0 1 ${r} ${y + R}`,
-    `V ${b - R}`,
-    `A ${R} ${R} 0 0 1 ${r - R} ${b}`,
-    `H ${x + R}`,
-    `A ${R} ${R} 0 0 1 ${x} ${b - R}`,
-    `V ${y + R}`,
-    `A ${R} ${R} 0 0 1 ${x + R} ${y}`,
+    `M ${x + rad} ${y}`,
+    cut ? `H ${r - F}` : `H ${r - rad}`,
+    cut ? `L ${r} ${y + F}` : `A ${rad} ${rad} 0 0 1 ${r} ${y + rad}`,
+    `V ${b - rad}`,
+    `A ${rad} ${rad} 0 0 1 ${r - rad} ${b}`,
+    `H ${x + rad}`,
+    `A ${rad} ${rad} 0 0 1 ${x} ${b - rad}`,
+    `V ${y + rad}`,
+    `A ${rad} ${rad} 0 0 1 ${x + rad} ${y}`,
     'Z',
   ].join(' ')
 }
 
 /**
- * The turned-down corner of the front sheet, lying inside it along the cut.
+ * The turned-down corner of the front page, lying inside it along the cut.
  *
  * Its third point is the corner reflected across the cut, which for a cut
  * meeting both edges at F lands exactly on that corner's diagonal — so the flap
  * is its own mirror image, for any F.
  */
 function foldPath(): string {
-  const { x, y } = originOf(0)
-  const r = x + SHEET
-  return `M ${r - F} ${y} L ${r} ${y + F} L ${r - F} ${y + F} Z`
+  const r = FRONT.x + FRONT.size
+  return `M ${r - F} ${FRONT.y} L ${r} ${FRONT.y + F} L ${r - F} ${FRONT.y + F} Z`
 }
 
 /**
@@ -116,15 +119,12 @@ function foldPath(): string {
  * Proportions of a SHEET, not of the mark, so he keeps his place on the front
  * page now that the page is smaller than the whole drawing.
  */
-const DOG_H = SHEET * 0.69
+const DOG_H = FRONT.size * 0.69
 const DOG_W = (DOG_H * 355) / 520
-const DOG_X = originOf(0).x + SHEET * 0.234
-const DOG_Y = originOf(0).y + SHEET * 0.172
+const DOG_X = FRONT.x + FRONT.size * 0.234
+const DOG_Y = FRONT.y + FRONT.size * 0.172
 
 export function PagesMark({ className }: { className?: string }) {
-  /* Back to front, so each sheet laps over the one behind it. */
-  const behind = Array.from({ length: SHEETS - 1 }, (_, k) => SHEETS - 1 - k)
-
   return (
     /*
       Padded by 3 on every side so the stroke has somewhere to live. A stroke
@@ -155,22 +155,19 @@ export function PagesMark({ className }: { className?: string }) {
         </linearGradient>
         {/* Keeps the dog off the fold and off the rounded corners. */}
         <clipPath id="pm-clip">
-          <path d={sheetPath(0, true)} />
+          <path d={sheetPath(FRONT, true)} />
         </clipPath>
       </defs>
 
-      {behind.map((i) => (
-        <path
-          key={i}
-          d={sheetPath(i, false)}
-          fill="url(#pm-back)"
-          stroke="#0B0B0D"
-          strokeWidth="3.4"
-          strokeLinejoin="round"
-        />
-      ))}
+      <path
+        d={sheetPath(BACK, false)}
+        fill="url(#pm-back)"
+        stroke="#0B0B0D"
+        strokeWidth="3.4"
+        strokeLinejoin="round"
+      />
 
-      <path d={sheetPath(0, true)} fill="url(#pm-tile)" />
+      <path d={sheetPath(FRONT, true)} fill="url(#pm-tile)" />
 
       <image
         href="/biggie.webp"
@@ -190,7 +187,7 @@ export function PagesMark({ className }: { className?: string }) {
         including along the cut, which is the part that was missing.
       */}
       <path
-        d={sheetPath(0, true)}
+        d={sheetPath(FRONT, true)}
         fill="none"
         stroke="#0B0B0D"
         strokeWidth="3.4"
