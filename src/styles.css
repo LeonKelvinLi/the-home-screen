@@ -7329,9 +7329,27 @@ textarea {
   the fold still reads as the corner of the PAGE, which is exactly what begins
   there.
 
-  Two layers, because a flat triangle reads as a shape rather than a fold: the
-  black is the back of the sheet showing through, and the lighter diagonal is
-  the crease catching light along it.
+  IT WAS DRAWN INSIDE OUT and the operator caught it: "this corner is supposed
+  to be another way, like how it works here" — pointing at the app mark, where
+  the corner is CUT AWAY and the turned-down flap lies over the page. Here the
+  black had been filling the corner itself, which is the opposite: a solid
+  triangle stuck onto the sheet rather than a sheet with its corner turned.
+
+  So the square splits along the crease, which runs from the top edge down to
+  the right edge, and the two halves do opposite jobs.
+
+  ::before is the corner region beyond the crease — the part of THIS page that
+  is no longer there. What shows through it is the next sheet down, which is
+  the rest of his ask: "make it look like there is another page below the
+  corner, almost like a more yellow pages." It is a shadow rather than a colour
+  so it works on the yellow wallpaper without having to match its exact
+  yellow — darkest against the crease where the turned corner would cast on it,
+  lifting toward the page's own corner.
+
+  ::after is the flap: the BACK of this sheet, turned down and lying on itself.
+  Dark like the mark's, lighter along the crease where it catches the light and
+  darkest at the tip, with a drop-shadow so it sits above the page rather than
+  in it.
 */
 .home-page.is-yellow::before {
   content: '';
@@ -7340,8 +7358,18 @@ textarea {
   right: 0;
   width: 58px;
   height: 58px;
-  background: #141416;
-  clip-path: polygon(100% 0, 100% 100%, 0 0);
+  /* The corner: top-left of the crease, across the top edge, down the right. */
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  /*
+    PAPER, not a shadow wash. A translucent black over the sheet only makes the
+    same yellow dimmer, which reads as a smudge; an opaque yellow of its own
+    reads as a second sheet. Keyed off the wallpaper's actual colour — the file
+    measures #F4D701 at this corner, and the page's own scrim brings that to
+    about #D7BD01 on screen. So the sheet below is a shade under that at its
+    lit end and considerably under it in the shadow the turned corner throws,
+    which is what makes it read as being BEHIND rather than beside.
+  */
+  background: linear-gradient(45deg, #a88c00 0%, #d3bc12 46%, #f0da35 100%);
   pointer-events: none;
 }
 
@@ -7352,9 +7380,16 @@ textarea {
   right: 0;
   width: 58px;
   height: 58px;
-  /* The crease itself: a hairline of the sheet's own yellow, lifted, running
-     along the diagonal the fold turns on. */
-  background: linear-gradient(225deg, transparent calc(50% - 1px), rgba(255, 255, 255, 0.32) 50%, transparent calc(50% + 1px));
+  /* The flap: the mirror of the corner across the crease. */
+  clip-path: polygon(0 0, 100% 100%, 0 100%);
+  /*
+    The first stop is a hairline, not a gradient step — the lit edge of the
+    crease itself, where the sheet bends and catches the light. Without it the
+    flap butts against the sheet below with no seam and the whole thing flattens
+    back into one dark triangle, which is the note he raised in the first place.
+  */
+  background: linear-gradient(225deg, #f0da35 0 2px, #2b2b31 3.5px, #111116 58%, #0b0b0d 100%);
+  filter: drop-shadow(-3px 3px 4px rgba(0, 0, 0, 0.45));
   pointer-events: none;
 }
 

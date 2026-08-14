@@ -450,15 +450,24 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
             second. The screen has just come back from dead, so it gets one
             moment of being a bit too bright. */}
         {stage === 'beasty' && !skipped && <span className="dialer-bloom" aria-hidden="true" />}
-        <div className="dialer-number" aria-live={stage === 'beasty' ? 'polite' : 'off'}>
-            {ours
-              ? display.split('').map((ch, i) => (
-                  <span key={i} className="dialer-letter" style={{ animationDelay: `${i * 62}ms` }}>
-                    {ch}
-                  </span>
-                ))
-              : display}
-          </div>
+          {/*
+            The wordmark is GONE once the screen is ours, on the operator's
+            note: "there are already two BEASTY there and it can come across as
+            redundant." He is right — the mark above it is the brand and the bar
+            below it says BEASTY PAGES, so the word between them was the third
+            time of asking in a column three items tall.
+
+            The element stays for the stages before the takeover, because that
+            is a dialled number and not a wordmark. What it loses with it is the
+            letter-by-letter landing, which was the beat the takeover turned on;
+            the mark now carries that moment instead, fading and lifting in on
+            the same cue.
+          */}
+          {!ours && (
+            <div className="dialer-number" aria-live="off">
+              {display}
+            </div>
+          )}
           {/*
             The domain, below the wordmark, exactly where the operator drew it —
             and only once the screen is OURS. A stock dialer has no branded bar,
