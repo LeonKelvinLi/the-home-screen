@@ -7405,6 +7405,22 @@ textarea {
   color: rgba(20, 20, 22, 0.78);
 }
 
+/*
+  The Y, in the brand yellow — "it will reflect as BEASTY(ellow)pages.com
+  subconsciously".
+
+  Outlined, and that is the whole difficulty of the idea: this line sits on a
+  yellow sheet, so a yellow letter among dark ones is not a subtle joke, it is a
+  missing letter. The stroke is what keeps it a letter. -webkit-text-stroke
+  rather than a shadow because a stroke is symmetric — a shadow only shows on
+  the side it falls, which at 11px reads as a printing error.
+*/
+.home-page.is-yellow .home-page-domain-y {
+  color: #f6d800;
+  -webkit-text-stroke: 0.7px rgba(20, 20, 22, 0.85);
+  paint-order: stroke fill;
+}
+
 /* ---------- the BEASTY PAGES bar on the dialer ---------- */
 
 .dialer-domain {

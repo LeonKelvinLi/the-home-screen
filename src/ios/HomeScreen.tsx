@@ -655,7 +655,22 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             {/* The yellow sheets carry the domain, because the yellow IS the
                 claim: the operator wants every one of them to read as a page
                 of BEASTYpages.com. */}
-            {page.yellow && <p className="home-page-domain">BEASTYPAGES.COM</p>}
+            {/*
+              His wordplay, from 2026-08-09: "have it all in a black font and
+              just make Y yellow. It will reflect as BEASTY(ellow)pages.com
+              subconsciously."
+
+              The Y is the hinge of the whole name and it had never been drawn.
+              It gets the brand yellow with a dark outline rather than bare
+              yellow — bare yellow on a yellow sheet is an invisible letter, and
+              a word with a hole in it reads as a font that failed to load
+              rather than as a joke.
+            */}
+            {page.yellow && (
+              <p className="home-page-domain">
+                BEAST<span className="home-page-domain-y">Y</span>PAGES.COM
+              </p>
+            )}
             <div
               className="home-grid"
               style={{
