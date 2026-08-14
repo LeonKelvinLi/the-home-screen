@@ -20,15 +20,23 @@
  */
 
 /**
- * Three sheets, each SHEET across, each STEP up and to the right of the one in
- * front of it — so the whole stack still fills the 100x100 the mark is drawn in.
+ * TWO sheets — the page, and one page behind it. Not three.
  *
- * Up and to the RIGHT specifically, because that is where the front sheet's
- * corner is turned. A stack offset any other way would show its slivers on an
- * edge the fold does nothing with, and the two devices would just be two
- * devices. This way the fold opens onto the page behind it.
+ * Three was tried and the operator's verdict was "don't make it 3d, only one
+ * page below and it will be fine". He is right: each extra sliver adds another
+ * parallel edge, and by the third the mark stops reading as a directory with a
+ * page behind it and starts reading as a rendering of a stack — a perspective
+ * drawing, which is a different kind of thing from a flat brand mark. One
+ * sheet behind says "there is more" and stops.
+ *
+ * Each is SHEET across, offset by STEP up and to the right, so the pair still
+ * fills the 100x100 the mark is drawn in. Up and to the RIGHT specifically,
+ * because that is where the front sheet's corner is turned — offset any other
+ * way and the sliver shows on an edge the fold does nothing with, leaving two
+ * unrelated devices instead of one. This way the fold opens onto the page
+ * behind it.
  */
-const SHEETS = 3
+const SHEETS = 2
 const STEP = 6
 const SHEET = 100 - STEP * (SHEETS - 1)
 
@@ -131,12 +139,14 @@ export function PagesMark({ className }: { className?: string }) {
           <stop offset="0" stopColor="#FFE85C" />
           <stop offset="1" stopColor="#F0C000" />
         </linearGradient>
-        {/* The sheets behind sit in the front one's shadow, and further back is
-            further down. Two stops rather than a flat fill so a deep stack does
-            not read as a flat band of colour. */}
-        <linearGradient id="pm-back" x1="0" y1="0" x2="0.4" y2="1">
-          <stop offset="0" stopColor="#E8CA3A" />
-          <stop offset="1" stopColor="#C79E00" />
+        {/* The page behind, as a FLAT tone. It was a gradient while there were
+            two of them, which is what made the mark read as a perspective
+            drawing of a stack rather than as an icon — shading is what says
+            "three-dimensional". One flat shade under the front sheet's gradient
+            says "there is another page" and nothing more. */}
+        <linearGradient id="pm-back" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#DDB800" />
+          <stop offset="1" stopColor="#DDB800" />
         </linearGradient>
         {/* The underside of a turned page catches least light at the tip. */}
         <linearGradient id="pm-fold" x1="1" y1="0" x2="0" y2="1">
