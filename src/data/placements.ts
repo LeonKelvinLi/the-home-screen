@@ -147,6 +147,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-3': 'b_banhmioven',
   'beasty-services2-1': 'b_adzeela',
   'beasty-services2-2': 'b_allyvirtual',
+  /* "Mobile Bay Area", his words — no city, so no city page. */
+  'beasty-services2-3': 'b_eaglepetgrooming',
+
+  /* ---- 2026-08-13 ---- */
+  'lafayette-goods-0': 'b_kababburger', //   Burgers and hot dogs
+  'pinole-goods-10': 'b_sweetpipers', //     Filipino — ube and buko pie
 
   /*
     The three that were on yellow sheets, now on page one in the nearest slot —

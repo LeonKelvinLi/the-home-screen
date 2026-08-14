@@ -476,6 +476,29 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://allyvirtual.com/',
   }),
 
+  /* ---- 2026-08-13 ---- */
+  seed('kabab-burger', 'Kabab Burger', 'Kabab Burger', 'Kebab and burgers', '#7A3A12', {
+    logoTemplate: 'monogram', logoInitials: 'KB', logoFace: 'slab',
+    site: 'https://kabab-burger.co/',
+  }),
+  seed('sweet-pipers', 'Sweet Pipers', 'Sweet Pipers', 'Filipino desserts', '#6B3A7A', {
+    logoTemplate: 'monogram', logoInitials: 'SP', logoFace: 'script',
+    phone: '(510) 398-9544',
+    address: '2352 A San Pablo Ave, Pinole',
+    contactOnly:
+      'Sent 2026-08-13 with "no website". Their own Instagram: tropical delicacies, Bay Area ' +
+      'Ube Fest 2026 winner for best dessert, taking pre-orders. Phone and address are theirs; ' +
+      'nothing else is listed.',
+  }),
+  /* "Mobile Bay Area" — his words, and no city with it. The descriptor says
+     mobile, which is what earns the ring on the grid and the line on their
+     page; see MOBILE in apps/registry. Seated on the BEASTY sheet rather than
+     in a city, for the same reason Happy Bay Paws is: they are not in one. */
+  seed('eagle-pet-grooming', 'Eagle Pet Grooming', 'Eagle Pet', 'Mobile pet grooming', '#1F4A6B', {
+    logoTemplate: 'monogram', logoInitials: 'EP', logoFace: 'condensed',
+    site: 'https://eaglepetgrooming.com/',
+  }),
+
   /* Sent 2026-08-10 with "Concord • Services" and missed in that batch — the
      third detailer on his list, after JDI in Brentwood and J&W in Berkeley. */
   seed('diablo-auto-detailing', 'Diablo Auto Detailing', 'Diablo Detail', 'Auto detailing', '#1A2C4A', {

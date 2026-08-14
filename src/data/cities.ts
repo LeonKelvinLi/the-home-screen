@@ -97,6 +97,18 @@ export const CITY_PAGES = [
   'Martinez',
   'Danville',
   /*
+    2026-08-13: Kabab Burger opens Lafayette and Sweet Pipers opens Pinole.
+    Orinda arrived as a landmark link with no business behind it yet — a page
+    he wants ready rather than a spot he has sold, which is exactly what an
+    empty city page is for.
+
+    Pinole finally comes off the "the rest of his list" line in the note above,
+    where it has sat since this file was written.
+  */
+  'Lafayette',
+  'Orinda',
+  'Pinole',
+  /*
     THE FIRST CITY OUTSIDE THE BAY AREA, and outside California.
 
     Every other page on this list is within about an hour of Richmond, which is

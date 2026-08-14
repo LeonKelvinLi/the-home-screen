@@ -32,6 +32,9 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `crockett.webp` | Al Zampa and Carquinez Bridges | Joe Futrelle, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
 | `vacaville.webp` | The Nut Tree carousel | Noah_Loverbear, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 | `milpitas.webp` | Milpitas from the air | formulanone, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
+| `foster-city.webp` | The Foster City lagoon | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `danville.webp` | Hartz Avenue, downtown Danville | Danvilleca, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `lafayette.webp` | BART near El Curtola Road | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
 CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0
@@ -48,6 +51,8 @@ so the cropped file is not itself copyleft.
 | `petaluma.webp` | Volpi's Ristorante, downtown Petaluma, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `napa.webp` | Angele Restaurant, Napa riverfront, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `martinez.webp` | Benicia-Martinez Bridge | MARELBU, CC BY 3.0, via Wikimedia Commons — cropped and resized |
+| `orinda.webp` | The Orinda Theatre sign | Erica Fischer, CC BY 2.0, via Wikimedia Commons — cropped and resized |
+| `pinole.webp` | Downtown Pinole | John Martinez Pavliga, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 
 CC BY 4.0: https://creativecommons.org/licenses/by/4.0
 CC BY 3.0: https://creativecommons.org/licenses/by/3.0
@@ -65,7 +70,6 @@ Credited anyway, because someone took these and it costs nothing to say so.
 | `palo-alto.webp` | Hoover Tower at night | Pexels Licence | Zetong Li |
 | `benicia.webp` | First Street, downtown Benicia | CC0 1.0 | Lhimec, via Wikimedia Commons |
 | `san-ramon.webp` | San Ramon City Hall | CC0 1.0 | Mx. Granger, via Wikimedia Commons |
-| `danville.webp` | Las Trampas Wilderness Regional Preserve | CC0 1.0 | Mx. Granger, via Wikimedia Commons |
 
 ## Generated, not photographed
 
@@ -108,16 +112,33 @@ gravel — thousands of small high-contrast edges, which is the worst case for
 any codec. It is not a quality setting that can be turned down without banding
 the sky; it is what that photograph costs. Only Vacaville's own page pays it.
 
-## Foster City has no photograph, and that is not a search failure
+## Matching his links instead of replacing them
 
-He sent a Foster City background link on 2026-08-12 and it is the one city in
-this batch with nothing usable behind it. Commons has exactly two Foster City
-photographs of any size — the pylons and a shot under the bridge — and both are
-about 2288x1712. A portrait crop out of a frame that wide is 788 pixels across,
-which then has to be blown up 1.7x to fill this one. Upscaling a photograph is
-visible in a way that a plain gradient is not, so Foster City keeps the neutral
-placeholder until somebody shoots it. Searched by category, by full text and by
-subject.
+From 2026-08-14, the rule is his: use the wallpaper from the link he sends.
+
+Every link he has sent is a small landscape thumbnail — 454x604 for Orinda,
+1200x630 for Lafayette, 1024x680 for Danville, 1280x718 for Foster City. A
+portrait crop out of any of them is under 340 pixels wide and needs blowing up
+four to five times to fill this frame, which is visibly mushy on a phone. So
+the file cannot be the one he linked.
+
+What CAN be his is the SUBJECT, and that turns out to be the part that matters.
+His links are how he chooses what a city looks like, and each one is now
+matched to the same subject at a size that works:
+
+| City | What he picked | What is here |
+|---|---|---|
+| Orinda | the Orinda Theatre marquee | the Orinda Theatre sign |
+| Lafayette | the DOWNTOWN LAFAYETTE arch | no free photograph of the arch exists; the BART cut through the hills instead |
+| Foster City | the lagoon with kayaks | the lagoon |
+| Danville | a tree-lined downtown street | Hartz Avenue, downtown |
+| Vacaville | the Nut Tree | the Nut Tree carousel |
+| Crockett | the C&H refinery | the Carquinez bridges, the refinery being 1024x768 everywhere |
+
+Foster City was written up here as having no usable photograph at all. That was
+wrong, and searching by HIS subject rather than by the city name is what found
+it: an 11724x3806 panorama of the lagoon. Only the Lafayette arch is still
+unmatched.
 
 ## Where the gaps are
 
