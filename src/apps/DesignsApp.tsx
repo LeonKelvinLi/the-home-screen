@@ -21,25 +21,25 @@ import type { ShellApi } from '../ios/Device'
 const TIERS = [
   {
     name: 'Starter site',
-    price: '$650',
+    price: '$325',
     detail:
       'One page, built for a phone first. Hours, map, your menu or services, and a button that dials you. Live in about two weeks.',
   },
   {
     name: 'Full site',
-    price: '$1,500',
+    price: '$750',
     detail:
       'Several pages on your own domain, your photos, contact forms, and set up properly so Google can find you.',
   },
   {
     name: 'Site and online ordering',
-    price: '$2,500',
+    price: '$1,250',
     detail:
       'Everything above, plus customers order and pay on your site. If you are a restaurant not set up for pickup or delivery orders yet, that is what this does.',
   },
   {
     name: 'Your own app',
-    price: 'from $5,000',
+    price: 'from $2,500',
     detail: 'iOS and Android. Your icon on a customer’s home screen, not a website in a wrapper.',
   },
 ]
