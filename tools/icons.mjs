@@ -9,15 +9,60 @@
 
   So it no longer reproduces the mark: it lifts the real one out of the page and
   photographs it. Same component, same renderer, no second copy of the geometry
-  to fall out of step. Run against a served build:
+  to fall out of step.
 
-    npx vite preview --port 5214
-    node tools/icons.mjs http://localhost:5214 public
+    npm run icons
+
+  It serves the build itself on a port it has just confirmed is free, rather
+  than being handed one. The first version of this wanted a preview server
+  started separately and a port passed in, which failed twice in a row the only
+  time anyone ran it: the port was already taken so vite silently moved to the
+  next one, and backgrounding the server meant the render started before it was
+  listening. A tool run once every few months should not need either of those
+  to go right.
 */
 import { webkit } from 'playwright'
+import { spawn } from 'node:child_process'
+import { createServer } from 'node:net'
 import { writeFileSync } from 'node:fs'
+import path from 'node:path'
 
-const [origin, out] = process.argv.slice(2)
+const ROOT = path.resolve(import.meta.dirname, '..')
+const OUT = path.join(ROOT, 'public')
+
+/** A port the OS has just told us is free, rather than one we hoped was. */
+const freePort = () =>
+  new Promise((resolve, reject) => {
+    const s = createServer()
+    s.on('error', reject)
+    s.listen(0, () => {
+      const { port } = s.address()
+      s.close(() => resolve(port))
+    })
+  })
+
+const port = await freePort()
+const preview = spawn(
+  'npx',
+  ['vite', 'preview', '--port', String(port), '--strictPort'],
+  { cwd: ROOT, stdio: 'ignore' },
+)
+/* --strictPort so it fails loudly rather than drifting to another port and
+   leaving this script talking to nothing. */
+process.on('exit', () => preview.kill())
+
+const origin = `http://localhost:${port}`
+for (let i = 0; ; i++) {
+  try {
+    const r = await fetch(origin + '/')
+    if (r.ok) break
+  } catch {
+    /* not listening yet */
+  }
+  if (i > 60) throw new Error(`vite preview never came up on ${port}`)
+  await new Promise((r) => setTimeout(r, 250))
+}
+const out = OUT
 
 /*
   `pad` is the margin of bare yellow around the mark, as a percentage.
@@ -81,3 +126,4 @@ for (const [name, size, pad] of SIZES) {
   await c.close()
 }
 await browser.close()
+preview.kill()
