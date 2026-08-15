@@ -129,19 +129,28 @@ function foldPath(): string {
 }
 
 /**
- * Biggie is 355x520, placed to match the operator's own mark rather than to my
- * taste — his file is public/icons/beasty-pages-mark.png and these are measured
- * off it: 23.4% to 70.7% across, 17.2% to 86.4% down. That height at Biggie's
- * aspect gives 47.1 wide against the 47.3 measured off his art, which is the
- * confirmation the numbers are read and not guessed.
+ * Biggie is 355x520 and fills his frame edge to edge — no transparent margin
+ * to account for, so where he sits is purely these numbers.
  *
- * Proportions of a SHEET, not of the mark, so he keeps his place on the front
- * page now that the page is smaller than the whole drawing.
+ * His width and height come from the operator's own mark: 23.4% to 70.7%
+ * across, 69 tall, which at Biggie's aspect gives 47.1 wide against the 47.3
+ * measured off that file. Read rather than guessed.
+ *
+ * VERTICALLY CENTRED, though, which his file was not and this was not until
+ * now. It sat at 17.2% down with a note arguing the turned corner takes weight
+ * out of the top right so the dog should hang a little low to compensate. That
+ * held while the mark was a stack with a large fold; with one page and a small
+ * fold there is nothing left to compensate for, and it measured 17.2 above
+ * against 13.8 below — visibly low, which is what he spotted. Centring is now
+ * arithmetic off DOG_H so it cannot drift again if the dog is ever resized.
  */
 const DOG_H = FRONT.size * 0.69
 const DOG_W = (DOG_H * 355) / 520
+/* Left of centre by about three units, which IS from his drawing and stays:
+   the fold sits top right, and the dog leaning back against it is what keeps
+   the tile from looking like it is falling that way. */
 const DOG_X = FRONT.x + FRONT.size * 0.234
-const DOG_Y = FRONT.y + FRONT.size * 0.172
+const DOG_Y = FRONT.y + (FRONT.size - DOG_H) / 2
 
 export function PagesMark({ className }: { className?: string }) {
   return (
