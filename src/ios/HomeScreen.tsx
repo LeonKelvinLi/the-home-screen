@@ -209,7 +209,25 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
        rather than with tiles of negative width. */
     const minTile = 28
     const slotRows = Math.ceil(SPOTS_PER_PAGE / cols)
-    const slotPitch = Math.min(rowPitch, (screen.h - topPad - headingH - bottomReserve) / slotRows)
+    /*
+      AIR, on top of the reserve.
+
+      bottomReserve is the height the dots, the Spotlight pill and the dock
+      occupy — so measuring against it alone means the grid is allowed to end
+      exactly where the dots begin, and it did: measured on the built page, the
+      last row of labels finished 7px above the dots at 393pt and 6px at 390.
+      Not an overlap by the arithmetic, and unmistakably too tight to look at,
+      which is what the operator said.
+
+      The grid gives this up before the tile does. At 393pt the pitch drops from
+      100 to 96 and the row gap absorbs all four pixels, so the tile stays the
+      66px he asked for and only the space between rows changes.
+    */
+    const slotAir = 40
+    const slotPitch = Math.min(
+      rowPitch,
+      (screen.h - topPad - headingH - bottomReserve - slotAir) / slotRows,
+    )
     const slotGap = Math.max(minRowGap, Math.min(rowGap, slotPitch - screen.iconSize - ICON_LABEL_H))
     const slotTile = Math.max(
       minTile,

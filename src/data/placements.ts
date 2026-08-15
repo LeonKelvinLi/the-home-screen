@@ -150,6 +150,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* "Mobile Bay Area", his words — no city, so no city page. */
   'beasty-services2-3': 'b_eaglepetgrooming',
 
+  /* ---- 2026-08-15 ---- */
+  'pleasanton-goods-5': 'b_gayninetiespizza', // Italian — pizza and pasta
+
   /* ---- 2026-08-14 ---- */
   /* His best friend's business, and he asked for it in both places. */
   'san-francisco-services-19': 'b_bayareacharters', // Events

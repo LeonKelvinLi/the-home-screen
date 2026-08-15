@@ -328,6 +328,19 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
           style={{ backgroundImage: `url('${incoming}')` }}
         />
       )}
+      {/*
+        The black band the dock sits on — the operator asked for "this black
+        background space like on this homescreen", pointing at iOS, where the
+        dock has a ground of its own rather than floating on the picture.
+
+        It lives INSIDE the wallpaper rather than beside it, and that is the
+        whole reason it works. As a child of .home it would have been the last
+        element in the DOM and painted over the dock and the icons; giving it a
+        negative z-index instead would have put it behind the photograph. Here
+        it is simply the layer after the pictures and before everything else,
+        with no z-index anywhere to disagree about.
+      */}
+      <div className="home-wallpaper-dock" />
     </div>
   )
 }

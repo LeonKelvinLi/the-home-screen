@@ -737,6 +737,31 @@ textarea {
 /* ---------- add-to-home-screen coach ---------- */
 
 /*
+  The dock's own ground. Tall enough to hold the dock (26px up, 92px high) and
+  the strip below it, so the band reads as a shelf the dock stands on rather
+  than a stripe behind it.
+
+  Hard-edged at the top, not faded. iOS does not blur this boundary and neither
+  should we — a gradient here reads as a mistake in the photograph rather than
+  as part of the furniture.
+*/
+.home-wallpaper-dock {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /*
+    128, not 140. The Spotlight row sits 134 up from the bottom, so a taller
+    band cut straight through the back arrow and the Search pill and left them
+    half black-on-black. This clears it by six pixels: the pill keeps the
+    picture behind it, the dock keeps its ground.
+  */
+  height: calc(26px + 92px + 10px);
+  background: #000;
+  pointer-events: none;
+}
+
+/*
   The install nudge's live region. Present and empty from the home screen's
   first commit (see AddToHomeCoach.tsx for why), so it must paint nothing and
   swallow nothing: pointer events live on the bubble alone, never on a layer
@@ -7412,6 +7437,28 @@ textarea {
   background: linear-gradient(225deg, #f0da35 0 1.5px, #2b2b31 2.5px, #111116 58%, #0b0b0d 100%);
   filter: drop-shadow(-2px 2px 3px rgba(0, 0, 0, 0.4));
   pointer-events: none;
+}
+
+/*
+  A rule across the top of every yellow sheet — "would you mind adding this
+  line above? Looks better with it."
+
+  He is right, and it is doing more than decoration: the sheets are meant to
+  read as pages out of a printed directory, and a printed page has a head rule.
+  It also gives the turned corner something to be a corner OF, which it did not
+  have while the sheet's top edge was just where the yellow started.
+
+  Below the status bar for the same reason the fold is: at the true top it runs
+  under the clock and the battery.
+*/
+.home-page.is-yellow .home-page-city::before {
+  content: '';
+  position: absolute;
+  top: calc(var(--status-h) - 10px);
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #141416;
 }
 
 /* The brand line under the heading: the domain claim, in ink. */

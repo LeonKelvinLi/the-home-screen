@@ -476,6 +476,18 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://allyvirtual.com/',
   }),
 
+  /* ---- 2026-08-15 ---- */
+  /* Spotted on a delivery, and his note was "in desperate need of everything" —
+     no website, so the tile is a monogram and the address is the only thing
+     here besides the name. */
+  seed('gay-nineties-pizza', 'Gay Nineties Pizza & Pasta Co.', 'Gay Nineties', 'Pizza and pasta', '#1F4A2E', {
+    logoTemplate: 'monogram', logoInitials: '90', logoFace: 'slab',
+    address: '288 Main St, Pleasanton',
+    contactOnly:
+      'Sent 2026-08-15 with no website of their own — their Instagram is all that is published. ' +
+      'Nothing else is listed.',
+  }),
+
   /* ---- 2026-08-14 ---- */
   /* His best friend's, and the one he asked to show her — so the mark is the
      anchor on its own, as he asked, rather than initials. */
