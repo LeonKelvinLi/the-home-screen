@@ -5004,7 +5004,32 @@ textarea {
 */
 .dialer.is-corrupt .dialer-key-sub,
 .dialer.is-beasty .dialer-key-sub {
-  font-size: clamp(8.5px, calc(10 * var(--u)), 11px);
+  /*
+    SIZED TO THE LABEL'S LENGTH, and to the key rather than to the viewport.
+
+    The note above is out of date and was the whole bug: it reasons about
+    CONTACTS "the longest at eight characters", but the labels have since grown
+    to INSTAGRAM and FOUNDATION at nine and ten. A fixed size that fitted eight
+    does not fit ten.
+
+    And a key is a CIRCLE, so what a label has to fit is not the diameter but
+    the chord where it sits — measured at a consistent 0.79 of the key's width,
+    because the label hangs below centre under the digit. FOUNDATION was over
+    that chord at every size tested: by 2.3px at 393pt, 4.6px at 360 and 17.7px
+    at 320.
+
+    key-size / length falls out of that: text width runs about 0.72 of
+    font-size per character at this weight and spacing, so fitting 0.92 of a
+    0.79 chord gives a coefficient of 1.0. Short labels are unaffected — they
+    hit the 11px ceiling exactly as before, so nothing that already fitted has
+    shrunk.
+
+    The 7px floor is a legibility floor, not a fitting one. Below it this stops
+    being text a person can read, and on the very smallest phones FOUNDATION
+    simply cannot be both inside a 55px circle and readable. There it stays at
+    the floor and slightly overhangs, which is the better of two bad options.
+  */
+  font-size: clamp(7px, calc(var(--key-size) / var(--sub-len, 8)), 11px);
   letter-spacing: 0.02em;
   text-indent: 0.02em;
 }
@@ -7451,7 +7476,17 @@ textarea {
 .dialer-domain-bar {
   position: relative;
   overflow: hidden;
-  display: inline-flex;
+  /*
+    inline-GRID with two equal tracks, not inline-flex.
+
+    flex: 1 on the halves looked like it would even them and does not: this bar
+    is shrink-to-fit, so its width comes from the two words' own widths and the
+    free space left to distribute is zero. BEASTY is the longer word, so the
+    seam sat right of centre. Two 1fr grid tracks size to the WIDER item and
+    then match, which is the 50/50 he asked for.
+  */
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
   align-items: stretch;
   min-height: 34px;
   padding: 0;
@@ -7474,7 +7509,6 @@ textarea {
   words optically placed within their own colour.
 */
 .dialer-domain-half {
-  flex: 1 1 0;
   display: inline-flex;
   align-items: center;
   justify-content: center;

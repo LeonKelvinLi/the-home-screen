@@ -558,8 +558,20 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                 {k.digit === '*' ? <Asterisk /> : k.digit}
               </span>
               {/* One element, whose text is rewritten as it resolves. Reserving
-                  the row's height means no key moves while it does. */}
-              <span className="dialer-key-sub">{keyText(i)}</span>
+                  the row's height means no key moves while it does.
+
+                  --sub-len is how long the label currently is, handed to CSS so
+                  the type can be sized to fit the KEY rather than to a fixed
+                  number. A key is a circle, so the room a label actually has is
+                  the chord where it sits, which is narrower than the diameter —
+                  and the labels grew from ABC and DEF to FOUNDATION without the
+                  size ever being revisited. */}
+              <span
+                className="dialer-key-sub"
+                style={{ '--sub-len': (keyText(i) ?? '').length || 1 } as React.CSSProperties}
+              >
+                {keyText(i)}
+              </span>
             </button>
           ))}
         </div>
