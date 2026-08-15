@@ -40,38 +40,31 @@
 const STEP = 5
 
 /**
- * THREE layers: the page, and two behind it — his 13:00 note, "can you put two
- * yellow pages behind the front one, just make them somewhat closer to each
- * other". STEP came down from 8 to 5 for the "closer" half of that.
+ * ONE page. Not a stack.
  *
- * The backmost layer fills the full 100x100 and IS the icon's silhouette; each
- * one in front is inset a further STEP from the top and right, flush left and
- * bottom. So the stack lives entirely INSIDE one rounded square — the earlier
- * version offset them outward and the union came out stepped and non-square,
- * which on a screen full of squircles reads as a picture of three icons rather
- * than as one.
+ * His 2026-08-15 verdict, after two rounds of stacking it: "no need for other
+ * pages. That's already a given." He is right — the fold alone says the thing
+ * is a page out of something, and the extra sheets were spending the mark's
+ * whole right-hand side saying it twice.
  *
- * Inset on the top and right because that is the corner the front page's fold
- * turns: the fold then opens onto the layer behind it rather than onto nothing.
+ * LAYERS is kept rather than inlined because the geometry below is written for
+ * any number of them, and this has now been 3, 2 and 1 in three days.
  */
-const LAYERS = 3
+const LAYERS = 1
 const layerAt = (depth: number) => ({
   x: 0,
   y: STEP * depth,
   size: 100 - STEP * depth,
 })
-/** Depth 0 is the backmost and draws the icon's outline; the last is the page
-    the dog and the fold live on. */
 const FRONT = layerAt(LAYERS - 1)
 
 /**
- * Corner radius as a proportion of whichever layer is drawn, so an inner page's
- * corners stay in step with the icon's own.
+ * Corner radius as a proportion of whichever layer is drawn.
  *
- * SQUARE at the top right on the layers behind — "make the second page have a
- * right angle as well". It is the one corner of theirs anybody sees, and a
- * rounded one there makes them read as more app tiles stacked up. A right angle
- * reads as paper, which is what they are.
+ * The top right is a RIGHT ANGLE — "square off the corner here". Every other
+ * corner keeps the app-icon rounding. That corner is where the page is turned
+ * down, and paper does not round off where it folds: squaring it is what makes
+ * the dog-ear read as a dog-ear rather than as a triangle drawn on a tile.
  */
 const RADIUS = 0.22
 
@@ -89,7 +82,7 @@ const RADIUS = 0.22
  * fold reaches 22.3% along the top edge and 22.7% down the right. Four parts in
  * a thousand, invisible until you look for it, and he looked for it.
  */
-const F = FRONT.size * 0.225
+const F = FRONT.size * 0.185
 
 /**
  * One layer as a single closed path, corner cut included.
@@ -104,15 +97,15 @@ const F = FRONT.size * 0.225
  * `cut` is false for the back layer: only the front page is dog-eared. Two
  * folded corners would read as two marks rather than one page on another.
  */
-function sheetPath(layer: { x: number; y: number; size: number }, cut: boolean): string {
+function sheetPath(layer: { x: number; y: number; size: number }): string {
   const { x, y, size } = layer
   const rad = size * RADIUS
   const r = x + size
   const b = y + size
   return [
     `M ${x + rad} ${y}`,
-    cut ? `H ${r - F}` : `H ${r}`,
-    cut ? `L ${r} ${y + F}` : `V ${y}`,
+    `H ${r}`,
+    `V ${y}`,
     `V ${b - rad}`,
     `A ${rad} ${rad} 0 0 1 ${r - rad} ${b}`,
     `H ${x + rad}`,
@@ -165,15 +158,6 @@ export function PagesMark({ className }: { className?: string }) {
           <stop offset="0" stopColor="#FFE85C" />
           <stop offset="1" stopColor="#F0C000" />
         </linearGradient>
-        {/* The page behind, as a FLAT tone. It was a gradient while there were
-            two of them, which is what made the mark read as a perspective
-            drawing of a stack rather than as an icon — shading is what says
-            "three-dimensional". One flat shade under the front sheet's gradient
-            says "there is another page" and nothing more. */}
-        <linearGradient id="pm-back" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#DDB800" />
-          <stop offset="1" stopColor="#DDB800" />
-        </linearGradient>
         {/* The underside of a turned page catches least light at the tip. */}
         <linearGradient id="pm-fold" x1="1" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor="#2A2A30" />
@@ -181,24 +165,11 @@ export function PagesMark({ className }: { className?: string }) {
         </linearGradient>
         {/* Keeps the dog off the fold and off the rounded corners. */}
         <clipPath id="pm-clip">
-          <path d={sheetPath(FRONT, true)} />
+          <path d={sheetPath(FRONT)} />
         </clipPath>
       </defs>
 
-      {/* Back to front, so each page laps over the one behind it. The last of
-          these is the layer the front page sits directly on. */}
-      {Array.from({ length: LAYERS - 1 }, (_, d) => (
-        <path
-          key={d}
-          d={sheetPath(layerAt(d), false)}
-          fill="url(#pm-back)"
-          stroke="#0B0B0D"
-          strokeWidth="3.4"
-          strokeLinejoin="round"
-        />
-      ))}
-
-      <path d={sheetPath(FRONT, true)} fill="url(#pm-tile)" />
+      <path d={sheetPath(FRONT)} fill="url(#pm-tile)" />
 
       <image
         href="/biggie.webp"
@@ -218,13 +189,13 @@ export function PagesMark({ className }: { className?: string }) {
         including along the cut, which is the part that was missing.
       */}
       <path
-        d={sheetPath(FRONT, true)}
+        d={sheetPath(FRONT)}
         fill="none"
         stroke="#0B0B0D"
-        strokeWidth="3.4"
+        strokeWidth="2.04"
         strokeLinejoin="round"
       />
-      <path d={foldPath()} fill="none" stroke="#0B0B0D" strokeWidth="3.4" strokeLinejoin="round" />
+      <path d={foldPath()} fill="none" stroke="#0B0B0D" strokeWidth="2.04" strokeLinejoin="round" />
     </svg>
   )
 }

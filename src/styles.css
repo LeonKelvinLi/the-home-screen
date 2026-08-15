@@ -7356,20 +7356,21 @@ textarea {
   position: absolute;
   top: var(--status-h);
   right: 0;
-  width: 58px;
-  height: 58px;
-  /* The corner: top-left of the crease, across the top edge, down the right. */
-  clip-path: polygon(0 0, 100% 0, 100% 100%);
+  width: 42px;
+  height: 42px;
   /*
-    PAPER, not a shadow wash. A translucent black over the sheet only makes the
-    same yellow dimmer, which reads as a smudge; an opaque yellow of its own
-    reads as a second sheet. Keyed off the wallpaper's actual colour — the file
-    measures #F4D701 at this corner, and the page's own scrim brings that to
-    about #D7BD01 on screen. So the sheet below is a shade under that at its
-    lit end and considerably under it in the shadow the turned corner throws,
-    which is what makes it read as being BEHIND rather than beside.
+    THE CORNER IS LEFT ALONE — "is it possible to match that yellow?"
+
+    It used to paint its own yellow here to stand for the sheet below, and no
+    mixed colour ever quite matched the wallpaper: the page's yellow is a
+    photograph under a scrim, so any flat value drifts from it as the scrim
+    changes. Painting nothing matches exactly and cannot come apart, because
+    what shows through IS the page.
+
+    The element stays rather than being deleted so the flap below has a sibling
+    to be positioned against, and so the fold is still one idea in one place.
   */
-  background: linear-gradient(45deg, #a88c00 0%, #d3bc12 46%, #f0da35 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%);
   pointer-events: none;
 }
 
@@ -7378,18 +7379,13 @@ textarea {
   position: absolute;
   top: var(--status-h);
   right: 0;
-  width: 58px;
-  height: 58px;
-  /* The flap: the mirror of the corner across the crease. */
+  width: 42px;
+  height: 42px;
+  /* The flap: the mirror of the corner across the crease. 42px rather than 66 —
+     "reduce the size of this fold". */
   clip-path: polygon(0 0, 100% 100%, 0 100%);
-  /*
-    The first stop is a hairline, not a gradient step — the lit edge of the
-    crease itself, where the sheet bends and catches the light. Without it the
-    flap butts against the sheet below with no seam and the whole thing flattens
-    back into one dark triangle, which is the note he raised in the first place.
-  */
-  background: linear-gradient(225deg, #f0da35 0 2px, #2b2b31 3.5px, #111116 58%, #0b0b0d 100%);
-  filter: drop-shadow(-3px 3px 4px rgba(0, 0, 0, 0.45));
+  background: linear-gradient(225deg, #f0da35 0 1.5px, #2b2b31 2.5px, #111116 58%, #0b0b0d 100%);
+  filter: drop-shadow(-2px 2px 3px rgba(0, 0, 0, 0.4));
   pointer-events: none;
 }
 
@@ -7469,10 +7465,20 @@ textarea {
   cursor: pointer;
 }
 
+/*
+  FIFTY-FIFTY — "can you even out this pill 50/50?"
+
+  Each half was sized to its own word, and BEASTY is the longer of the two, so
+  the seam sat well right of centre. flex:1 with equal basis splits the pill by
+  the BAR rather than by the type, and centring inside each half keeps both
+  words optically placed within their own colour.
+*/
 .dialer-domain-half {
+  flex: 1 1 0;
   display: inline-flex;
   align-items: center;
-  padding: 0 16px;
+  justify-content: center;
+  padding: 0 14px;
 }
 
 .dialer-domain-half.is-light {
@@ -7518,6 +7524,18 @@ textarea {
   font-size: 13.5px;
   line-height: 1.5;
   text-align: left;
+  /*
+    A first-line indent, his ask: "put an indent on the paragraph so it will
+    push the 'and' to the 2nd line so the paragraph will be more balanced and
+    symmetrical." Indenting the first line is what moves that break — a margin
+    would move every line together and change nothing about where words fall.
+
+    2.8em is measured, not picked. Below 2.2 "and" stays on line one; above 3.4
+    "local" goes with it and the balance he is after is lost the other way. The
+    middle of that band is the value least likely to flip back on a phone whose
+    font metrics round differently.
+  */
+  text-indent: 2.8em;
   box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.45);
 }
 
@@ -7530,6 +7548,9 @@ textarea {
 */
 .dialer-domain-domain {
   display: block;
+  /* Not indented: it is a centred line of its own, and text-indent on the
+     paragraph would otherwise shove it off centre by 1.6em. */
+  text-indent: 0;
   margin-top: 10px;
   padding-top: 9px;
   border-top: 1px solid rgba(255, 255, 255, 0.14);
