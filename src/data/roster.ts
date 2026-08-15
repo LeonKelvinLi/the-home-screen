@@ -476,6 +476,91 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://allyvirtual.com/',
   }),
 
+  /* ---- 2026-08-14 ---- */
+  /* His best friend's, and the one he asked to show her — so the mark is the
+     anchor on its own, as he asked, rather than initials. */
+  seed('bay-area-charters', 'Bay Area Charters', 'Bay Area Cha…', 'Boat charters', '#123A5C', {
+    logoTemplate: 'glyph-word', logoGlyph: 'anchor', logoLines: [''],
+    site: 'https://www.bayareacharters.com/',
+  }),
+  seed('breaktime-tea', 'Breaktime Tea', 'Breaktime Tea', 'Bubble tea', '#C2607A', {
+    logoTemplate: 'monogram', logoInitials: 'BT', logoFace: 'script',
+    site: 'https://order.online/store/breaktime-tea---concord-concord-24472557/',
+    address: '790 Oak Grove Rd, Ste C-1, Concord',
+    /*
+      A WORKED EXAMPLE, at his request: "can you make this happy hour special
+      as the loyalty offer as an example for this page? Make the welcome offer
+      just a regular BOGO free."
+
+      The loyalty line is their real, published promotion, quoted off their own
+      post rather than invented — everyday 2-4pm, buy two get one free on milk
+      tea and fresh tea. The welcome line is his, and it is the one that is
+      genuinely made up, which is what `mock` is for: the page prints a caveat
+      saying these are examples and nothing has been agreed.
+    */
+    offers: {
+      mock: true,
+      welcome: 'Buy one drink, get one free on your first visit.',
+      loyalty: 'Their happy hour, every day 2-4pm: buy two, get one free on milk tea and fresh tea.',
+    },
+  }),
+  seed('babs-delta-diner', 'Babs Delta Diner', 'Babs Diner', 'Homestyle diner', '#8C2018', {
+    logoTemplate: 'monogram', logoInitials: 'BD', logoFace: 'script',
+    address: '134 Robles Way, Vallejo',
+    contactOnly:
+      'Sent 2026-08-14 with his note that they need a website. Their own Instagram: a diner in ' +
+      'Glen Cove, rooted in Suisun, serving homestyle favourites. Nothing else is listed.',
+  }),
+  seed('simply-soups', 'Simply Soups', 'Simply Soups', 'Soups and deli', '#5C1A1A', {
+    logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'slab',
+    address: '3103 Delta Fair Blvd, Antioch',
+    contactOnly:
+      'Sent 2026-08-14 with "has no website, needs a logo revamp too" — so this tile is a ' +
+      'monogram rather than their mark, deliberately. Their own Instagram calls them a deli.',
+  }),
+  seed('cafe-noir-oak', 'Cafe Noir', 'Cafe Noir', 'Comfort food', '#1A1A1E', {
+    logoTemplate: 'monogram', logoInitials: 'N', logoFace: 'script',
+    site: 'https://www.cafenoiroak.com/',
+    address: '1620 18th St, Stall B, Oakland',
+  }),
+  seed('jump-and-roll', 'Jump & Roll', 'Jump & Roll', 'Party rentals', '#2A5C8C', {
+    logoTemplate: 'monogram', logoInitials: 'JR', logoFace: 'condensed',
+    site: 'https://itsjumpandroll.com/',
+  }),
+  seed('urban-air', 'Urban Air', 'Urban Air', 'Adventure park', '#1F3A6B', {
+    logoTemplate: 'monogram', logoInitials: 'UA', logoFace: 'condensed',
+    site: 'https://www.urbanair.com/',
+  }),
+  seed('eight-acres', 'Eight Acres Kitchen & Bar', 'Eight Acres', 'Kitchen and bar', '#3A4A2A', {
+    logoTemplate: 'monogram', logoInitials: '8', logoFace: 'slab',
+    site: 'http://www.eightacresbrentwood.com/',
+    address: 'Brentwood',
+  }),
+  seed('las-lomas-rib-palace', 'Las Lomas Rib Palace', 'Las Lomas', 'Peruvian and BBQ ribs', '#7A1F14', {
+    logoTemplate: 'monogram', logoInitials: 'LL', logoFace: 'slab',
+    phone: '(925) 499-7105',
+    contactOnly:
+      'Sent 2026-08-14 with "needs website". Their own Instagram: authentic Peruvian cuisine and ' +
+      'BBQ pork ribs, a home business in Antioch, open Saturdays only and pre-order thirty ' +
+      'minutes ahead. No address is published, so none is shown.',
+  }),
+  seed('playland-707', 'Playland 707', 'Playland 707', 'Paintball', '#2A5C2A', {
+    logoTemplate: 'monogram', logoInitials: 'P7', logoFace: 'condensed',
+    site: 'https://www.playland707.com/paintball/',
+  }),
+  seed('chip-cookies', 'Chip Cookies', 'Chip Cookies', 'Cookies', '#6B4A2A', {
+    logoTemplate: 'monogram', logoInitials: 'CC', logoFace: 'script',
+    site: 'https://www.chipcookies.co/',
+  }),
+  seed('macs-old-house', 'Mac’s Old House', 'Mac’s', 'Steakhouse', '#6B1A1A', {
+    logoTemplate: 'monogram', logoInitials: 'M', logoFace: 'script',
+    site: 'https://www.macsoldhouse.com/',
+  }),
+  seed('philomena-pizza', 'Philomena Pizza', 'Philomena', 'Pizza', '#2E4A2A', {
+    logoTemplate: 'monogram', logoInitials: 'PP', logoFace: 'slab',
+    site: 'https://order.philomenapizza.com/',
+  }),
+
   /* ---- 2026-08-13 ---- */
   seed('kabab-burger', 'Kabab Burger', 'Kabab Burger', 'Kebab and burgers', '#7A3A12', {
     logoTemplate: 'monogram', logoInitials: 'KB', logoFace: 'slab',
@@ -569,7 +654,11 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_eat', //                   9  EAT (also goods #10 — same business, his call)
   'b_germanautosport', //       10 German Auto Sport
   'b_bobvalentineselectric', // 11 Bob Valentine's electrician
-  'b_hightechcaraudio', //      12 High Tech Car Audio
+  /* Bay Area Charters takes this seat, on his 2026-08-14 note: put it on the
+     BEASTY page "in place of high-tech audio. You can move high-tech audio to
+     the El Cerrito page." High Tech Car Audio is seated there now, on the Car
+     audio spot, so it keeps a page rather than losing one. */
+  'b_bayareacharters', //       12 Bay Area Charters
   'b_rocknjump', //             13 Rock n' Jump
   'b_djrevroc', //              14 DJ Rev ROC
   'b_petshowgrooming', //       15 Pet Show Grooming - mobile

@@ -721,6 +721,15 @@ export const BRANDS: Brand[] = [
       on the app that could not be navigated to.
     */
     address: s.address,
+    /*
+      Offers reach a roster brand too, which they did not before. The operator
+      asked for Breaktime Tea's real happy hour to stand as a worked example of
+      a loyalty offer, and that business is a roster seat — so without this the
+      offers were set in the data and rendered nowhere. They still carry `mock`,
+      which is what puts the caveat on the page: no roster business has agreed
+      anything.
+    */
+    offers: s.offers,
     contactOnly: s.contactOnly,
     rosterOnly: true,
   })),

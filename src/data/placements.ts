@@ -150,6 +150,32 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* "Mobile Bay Area", his words — no city, so no city page. */
   'beasty-services2-3': 'b_eaglepetgrooming',
 
+  /* ---- 2026-08-14 ---- */
+  /* His best friend's business, and he asked for it in both places. */
+  'san-francisco-services-19': 'b_bayareacharters', // Events
+  /* Displaced from the BEASTY services page by Bay Area Charters, and given a
+     page of its own rather than dropped — his instruction, verbatim. */
+  'el-cerrito-services-6': 'b_hightechcaraudio', //   Car audio
+
+  'concord-goods-14': 'b_breaktimetea', //            Boba
+  'vallejo-goods-0': 'b_babsdeltadiner', //           Burgers — a homestyle diner
+  'antioch-goods-6': 'b_simplysoups', //              Sandwiches — a deli
+  'antioch-goods-0': 'b_macsoldhouse', //             Burgers — a steakhouse
+  'oakland-goods-0': 'b_cafenoiroak', //              Burgers — comfort food
+  'oakland-goods-5': 'b_philomenapizza', //           Italian
+  'oakland-services-19': 'b_jumpandroll', //          Events — party rentals
+  'concord-services-4': 'b_urbanair', //              Gym — an adventure park
+  'petaluma-services-4': 'b_playland707', //          Gym — paintball
+  'brentwood-goods-15': 'b_chipcookies', //           Cookies
+
+  /*
+    No fitting cuisine, so the yellow sheet rather than a wrong label. Eight
+    Acres is a kitchen and bar and Brentwood's American spot is already The
+    Yard; Las Lomas is Peruvian and BBQ ribs, and there is neither on the list.
+  */
+  'brentwood-goods2-1': 'b_eightacres',
+  'antioch-goods2-0': 'b_laslomasribpalace',
+
   /* ---- 2026-08-13 ---- */
   'lafayette-goods-0': 'b_kababburger', //   Burgers and hot dogs
   'pinole-goods-10': 'b_sweetpipers', //     Filipino — ube and buko pie

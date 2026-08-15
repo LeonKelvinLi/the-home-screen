@@ -26,6 +26,7 @@ export type GlyphName =
   | 'shirt'
   | 'cup'
   | 'design'
+  | 'anchor'
 
 export const GLYPHS: Record<GlyphName, string> = {
   // stacked bun / patty / bun with sesame dots
@@ -117,6 +118,18 @@ export const GLYPHS: Record<GlyphName, string> = {
     Uses fill-rule evenodd — the screen well and the pencil's lead channel are
     knockouts, not separate shapes.
   */
+  /*
+    Anchor — ring, shank, stock and two flukes.
+
+    Drawn for Bay Area Charters, whose owner is a friend of the operator's and
+    who he asked to see it with "the anchor by itself". The ring is a filled
+    annulus rather than a stroked circle: every glyph here is one fill path, and
+    the inner circle is wound the same way as the outer one, which the nonzero
+    rule these render under leaves as a hole.
+  */
+  anchor:
+    'M50 8a13 13 0 0 1 6 24.6V40h13a4 4 0 0 1 0 8H56v33.5c9-1.3 16.6-7.4 19.6-15.8l-6.8 2.3a4 4 0 0 1-2.6-7.6l15-5a4 4 0 0 1 5.3 3.8c0 18-13.6 32.9-31.2 34.6a4 4 0 0 1-.6.1h-1.4a4 4 0 0 1-.6-.1C35.1 91.9 21.5 77 21.5 59a4 4 0 0 1 5.3-3.8l15 5a4 4 0 0 1-2.6 7.6l-6.8-2.3C35.4 74.1 43 80.2 52 81.5V48H31a4 4 0 0 1 0-8h13v-7.4A13 13 0 0 1 50 8Zm0 8a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z',
+
   design:
     'M8 16h56a6 6 0 0 1 6 6v34a6 6 0 0 1-6 6H8a6 6 0 0 1-6-6V22a6 6 0 0 1 6-6Zm0 7a1 1 0 0 0-1 1v6h58v-6a1 1 0 0 0-1-1ZM7 35v21a1 1 0 0 0 1 1h56a1 1 0 0 0 1-1V35ZM12 26a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Zm8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM12 40h48v4H12Zm0 8h20v4H12Zm0 7h20v4H12Zm26-7h22v11H38ZM28 62h16v6h8a3 3 0 0 1 0 6H20a3 3 0 0 1 0-6h8ZM84 12a7 7 0 0 1 7 7v3H77v-3a7 7 0 0 1 7-7ZM77 26h14v34H77ZM77 64h14L84 78ZM80 30h8v26h-8Z',
 
