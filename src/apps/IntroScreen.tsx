@@ -8,6 +8,7 @@ import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { PagesMark } from './dialer/PagesMark'
+import { Gem } from './MembersApp'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
 
@@ -491,7 +492,17 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                 aria-expanded={domainOpen}
                 aria-controls="beasty-pages-note"
               >
-                BEASTY PAGES
+                {/*
+                  Split down the middle, his design: "the left side is a yellow
+                  bar with BEASTY in black font and the right side just the way
+                  it is. Basically like a yellow black pill."
+
+                  Two spans rather than one string with a background trick, so
+                  each half owns its own colours and the seam lands exactly
+                  between the words at any font size.
+                */}
+                <span className="dialer-domain-half is-light">BEASTY</span>
+                <span className="dialer-domain-half is-dark">PAGES</span>
               </button>
               {domainOpen && (
                 <>
@@ -508,10 +519,26 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                     onClick={() => setDomainOpen(false)}
                     aria-hidden="true"
                   />
+                  {/*
+                    His revision, 2026-08-14, near enough verbatim — and the
+                    domain moved in here with it. It used to print on every
+                    city's yellow sheet; his call was "eliminate it completely
+                    on the yellow pages for each city... as long as it's on the
+                    landing page somewhere I think that will do", then "put it
+                    in the centre of the drop-down bubble".
+
+                    The gem is the drawn one rather than the emoji character he
+                    typed, for the same reason the member card uses it: an emoji
+                    renders as a different object on every platform, and this one
+                    means a membership tier.
+                  */}
                   <div className="dialer-domain-drop" role="note" id="beasty-pages-note">
-                    A familiar screen filled with small businesses waiting to be discovered —
-                    growing pages of local shops, kitchens and trades across the Bay Area.{' '}
-                    <em>Just tap away.</em>
+                    A familiar screen filled with local gems and viral eats await your discovery.
+                    Explore growing pages of BEASTY{' '}
+                    <Gem size={13} /> affiliates and save money with your support.
+                    <span className="dialer-domain-domain">
+                      BEASTYPAGES.com • Just a tap away<sup>™</sup>
+                    </span>
                   </div>
                 </>
               )}

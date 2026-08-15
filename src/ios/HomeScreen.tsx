@@ -656,21 +656,16 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
                 claim: the operator wants every one of them to read as a page
                 of BEASTYpages.com. */}
             {/*
-              His wordplay, from 2026-08-09: "have it all in a black font and
-              just make Y yellow. It will reflect as BEASTY(ellow)pages.com
-              subconsciously."
+              The domain line is GONE from the city sheets, on his call: "you
+              can eliminate it completely on the yellow pages for each city...
+              as long as it's on the landing page somewhere I think that will
+              do." It lives in the landing page's drop-down bubble now.
 
-              The Y is the hinge of the whole name and it had never been drawn.
-              It gets the brand yellow with a dark outline rather than bare
-              yellow — bare yellow on a yellow sheet is an invisible letter, and
-              a word with a hole in it reads as a font that failed to load
-              rather than as a joke.
+              His yellow-Y wordplay went with it — BEAST(Y)PAGES.COM, the Y in
+              brand yellow — which had been drawn here and nowhere else. If the
+              domain ever comes back to a page, that treatment is in the history
+              alongside the .home-page-domain-y rule kept in styles.css.
             */}
-            {page.yellow && (
-              <p className="home-page-domain">
-                BEAST<span className="home-page-domain-y">Y</span>PAGES.COM
-              </p>
-            )}
             <div
               className="home-grid"
               style={{

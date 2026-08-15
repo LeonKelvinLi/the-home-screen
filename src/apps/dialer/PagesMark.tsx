@@ -20,7 +20,7 @@
  */
 
 /**
- * TWO LAYERS INSIDE ONE ICON — not two icons overlapping.
+ * LAYERS INSIDE ONE ICON — not several icons overlapping.
  *
  * The operator's correction: "make it as one icon, like two layers, but still
  * inside one icon." The version before this offset both sheets so their union
@@ -37,16 +37,42 @@
  * sheet's fold turns. The fold then opens onto the layer behind it instead of
  * onto nothing, which is what ties the two devices into one mark.
  */
-const STEP = 8
+const STEP = 5
 
-/** The back layer IS the icon: full bounds, and the only outer silhouette. */
-const BACK = { x: 0, y: 0, size: 100 }
-/** The front sheet, inset from the top and right, flush left and bottom. */
-const FRONT = { x: 0, y: STEP, size: 100 - STEP }
+/**
+ * THREE layers: the page, and two behind it — his 13:00 note, "can you put two
+ * yellow pages behind the front one, just make them somewhat closer to each
+ * other". STEP came down from 8 to 5 for the "closer" half of that.
+ *
+ * The backmost layer fills the full 100x100 and IS the icon's silhouette; each
+ * one in front is inset a further STEP from the top and right, flush left and
+ * bottom. So the stack lives entirely INSIDE one rounded square — the earlier
+ * version offset them outward and the union came out stepped and non-square,
+ * which on a screen full of squircles reads as a picture of three icons rather
+ * than as one.
+ *
+ * Inset on the top and right because that is the corner the front page's fold
+ * turns: the fold then opens onto the layer behind it rather than onto nothing.
+ */
+const LAYERS = 3
+const layerAt = (depth: number) => ({
+  x: 0,
+  y: STEP * depth,
+  size: 100 - STEP * depth,
+})
+/** Depth 0 is the backmost and draws the icon's outline; the last is the page
+    the dog and the fold live on. */
+const FRONT = layerAt(LAYERS - 1)
 
-/** Corner radius, as a proportion of whichever layer is being drawn — so the
-    inner page's corners stay in step with the icon's own rather than being a
-    fraction of a size it no longer has. */
+/**
+ * Corner radius as a proportion of whichever layer is drawn, so an inner page's
+ * corners stay in step with the icon's own.
+ *
+ * SQUARE at the top right on the layers behind — "make the second page have a
+ * right angle as well". It is the one corner of theirs anybody sees, and a
+ * rounded one there makes them read as more app tiles stacked up. A right angle
+ * reads as paper, which is what they are.
+ */
 const RADIUS = 0.22
 
 /**
@@ -85,8 +111,8 @@ function sheetPath(layer: { x: number; y: number; size: number }, cut: boolean):
   const b = y + size
   return [
     `M ${x + rad} ${y}`,
-    cut ? `H ${r - F}` : `H ${r - rad}`,
-    cut ? `L ${r} ${y + F}` : `A ${rad} ${rad} 0 0 1 ${r} ${y + rad}`,
+    cut ? `H ${r - F}` : `H ${r}`,
+    cut ? `L ${r} ${y + F}` : `V ${y}`,
     `V ${b - rad}`,
     `A ${rad} ${rad} 0 0 1 ${r - rad} ${b}`,
     `H ${x + rad}`,
@@ -159,13 +185,18 @@ export function PagesMark({ className }: { className?: string }) {
         </clipPath>
       </defs>
 
-      <path
-        d={sheetPath(BACK, false)}
-        fill="url(#pm-back)"
-        stroke="#0B0B0D"
-        strokeWidth="3.4"
-        strokeLinejoin="round"
-      />
+      {/* Back to front, so each page laps over the one behind it. The last of
+          these is the layer the front page sits directly on. */}
+      {Array.from({ length: LAYERS - 1 }, (_, d) => (
+        <path
+          key={d}
+          d={sheetPath(layerAt(d), false)}
+          fill="url(#pm-back)"
+          stroke="#0B0B0D"
+          strokeWidth="3.4"
+          strokeLinejoin="round"
+        />
+      ))}
 
       <path d={sheetPath(FRONT, true)} fill="url(#pm-tile)" />
 

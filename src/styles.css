@@ -7432,26 +7432,57 @@ textarea {
 }
 
 /*
-  Black pill, yellow type, per the operator's spec — and the same left-to-right
-  glow he liked on the old ENTER bar, so it reads as the one tappable thing in
-  the brand block.
+  A YELLOW-AND-BLACK PILL, split down the middle — his design: "the left side is
+  a yellow bar with BEASTY in black font and the right side just the way it is.
+  Basically like a yellow black pill." It keeps the left-to-right glow he liked
+  on the old ENTER bar, so it still reads as the one tappable thing in the
+  brand block.
+
+  The halves carry their own colours rather than the bar carrying one and a
+  pseudo-element painting over half of it. That way the seam lands exactly
+  between the two words at any font size, and the sweep still clips to the
+  pill's own rounded ends.
+
+  No padding on the bar itself: each half pads its own side, so the two colours
+  meet flush in the middle with nothing between them.
+
+  THE OUTLINE IS NOT DECORATION. This pill sits on the yellow landing screen, so
+  a yellow half against a yellow page has no edge at all — the shape reads as a
+  black tag with the word BEASTY floating loose to the left of it. The perimeter
+  is what makes it one object, and it is the same black outline he asked to see
+  on the mark. A ring rather than a border, so adding it costs no layout.
 */
 .dialer-domain-bar {
   position: relative;
   overflow: hidden;
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  align-items: stretch;
   min-height: 34px;
-  padding: 0 18px;
+  padding: 0;
   border: 0;
   border-radius: 17px;
   background: #141416;
-  color: #f6d800;
+  box-shadow: 0 0 0 2px #141416;
   font-size: 13px;
   font-weight: 700;
   letter-spacing: 0.14em;
   cursor: pointer;
+}
+
+.dialer-domain-half {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.dialer-domain-half.is-light {
+  background: #f6d800;
+  color: #141416;
+}
+
+.dialer-domain-half.is-dark {
+  background: #141416;
+  color: #f6d800;
 }
 
 .dialer-domain-bar::after {
@@ -7488,6 +7519,29 @@ textarea {
   line-height: 1.5;
   text-align: left;
   box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.45);
+}
+
+/*
+  The domain, centred on its own line at the foot of the bubble — where he asked
+  for it once it came off the city sheets. Its own line rather than trailing the
+  sentence: it is a claim about the whole product, not the end of a thought
+  about local gems, and centred text after a left-set paragraph only reads as
+  deliberate when it is clearly separate.
+*/
+.dialer-domain-domain {
+  display: block;
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #f6d800;
+}
+
+/* The gem sits on the text baseline rather than the line box's. */
+.dialer-domain-drop svg {
+  vertical-align: -2px;
 }
 
 .dialer-domain-drop em {
