@@ -22,6 +22,8 @@
   to go right.
 */
 import { webkit } from 'playwright'
+import { createHash } from 'node:crypto'
+import { readFileSync } from 'node:fs'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { writeFileSync } from 'node:fs'
@@ -127,3 +129,38 @@ for (const [name, size, pad] of SIZES) {
 }
 await browser.close()
 preview.kill()
+
+/*
+  STAMP THE ICON URLS WITH THE PICTURE'S OWN HASH.
+
+  iOS snapshots apple-touch-icon at the moment a shortcut is added to the home
+  screen and never looks at it again, and browsers cache it hard besides. So the
+  operator was still looking at a three-layer stack on his phone days after the
+  mark became one page — the file on the server was right the whole time, and
+  nothing about it had changed identity, so nothing went and got it.
+
+  A hash of the rendered icon in the query string fixes the half that can be
+  fixed: the URL changes exactly when the picture changes, never otherwise, so
+  caches refetch and a re-add picks up the new art. An already-installed
+  shortcut still has to be removed and re-added — that part is iOS and there is
+  no trick for it.
+
+  Written by the tool rather than bumped by hand, because a version anyone has
+  to remember is a version that will be forgotten on the run that matters.
+*/
+const stamp = createHash('sha256')
+  .update(readFileSync(`${OUT}/apple-touch-icon.png`))
+  .digest('hex')
+  .slice(0, 8)
+
+for (const file of [`${ROOT}/index.html`, `${OUT}/manifest.webmanifest`]) {
+  const before = readFileSync(file, 'utf8')
+  const after = before.replace(
+    /(\/(?:apple-touch-icon|icon-192|icon-512|icon-maskable-512)\.png)(\?v=[a-f0-9]+)?/g,
+    `$1?v=${stamp}`,
+  )
+  if (after !== before) {
+    writeFileSync(file, after)
+    console.log(`stamped ${file.split('/').pop()} v=${stamp}`)
+  }
+}

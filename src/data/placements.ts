@@ -151,6 +151,20 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-services2-3': 'b_eaglepetgrooming',
 
   /* ---- 2026-08-15 ---- */
+  'san-jose-services-19': 'b_bloomballoon', //    Events — balloon design for parties
+  'san-francisco-goods-8': 'b_brasabros', //      Wings — Peruvian rotisserie chicken
+
+  /*
+    Yes Moment is an Event Planner by their own bio and Events is exactly its
+    category — but San Francisco's Events spot is Bay Area Charters, which the
+    operator asked for by name and wanted to show the owner. Rather than move
+    his friend's business to make room, the proposal planner takes the yellow
+    sheet, where it is on the city's pages and reachable. His call to swap them
+    if he would rather.
+  */
+  'san-francisco-services2-0': 'b_yesmoment',
+
+
   'pleasanton-goods-5': 'b_gayninetiespizza', // Italian — pizza and pasta
 
   /* ---- 2026-08-14 ---- */

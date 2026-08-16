@@ -7401,10 +7401,23 @@ textarea {
   darkest at the tip, with a drop-shadow so it sits above the page rather than
   in it.
 */
+/*
+  --sheet-rule is where the head rule sits, and the fold is positioned from it
+  rather than from the status bar. They were set independently and drifted ten
+  pixels apart, which is the gap the operator spotted: "would you mind raising
+  that, making that triangle touch the line?" Tied to one value they cannot
+  disagree again, and RULE_H below is the rule's own thickness so the triangle
+  starts exactly where the line stops.
+*/
+.home-page.is-yellow {
+  --sheet-rule: calc(var(--status-h) - 10px);
+  --sheet-rule-h: 2px;
+}
+
 .home-page.is-yellow::before {
   content: '';
   position: absolute;
-  top: var(--status-h);
+  top: calc(var(--sheet-rule) + var(--sheet-rule-h));
   right: 0;
   width: 42px;
   height: 42px;
@@ -7427,7 +7440,7 @@ textarea {
 .home-page.is-yellow::after {
   content: '';
   position: absolute;
-  top: var(--status-h);
+  top: calc(var(--sheet-rule) + var(--sheet-rule-h));
   right: 0;
   width: 42px;
   height: 42px;
@@ -7454,10 +7467,10 @@ textarea {
 .home-page.is-yellow .home-page-city::before {
   content: '';
   position: absolute;
-  top: calc(var(--status-h) - 10px);
+  top: var(--sheet-rule);
   left: 0;
   right: 0;
-  height: 2px;
+  height: var(--sheet-rule-h);
   background: #141416;
 }
 

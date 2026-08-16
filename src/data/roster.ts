@@ -477,6 +477,26 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
 
   /* ---- 2026-08-15 ---- */
+  /* He filed this under San Jose; their own Instagram gives a Milpitas street
+     address. The address stays as published, because that is the one the
+     Directions button sends somebody to — worth him confirming which city he
+     means, since the two disagree. */
+  seed('bloom-balloon', 'Bloom Balloon', 'Bloom Balloon', 'Balloon design', '#C2508A', {
+    logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'script',
+    site: 'https://bloomballoon.com/connect',
+    address: '1090 S Milpitas Blvd, Milpitas',
+  }),
+  seed('yes-moment', 'Yes Moment', 'Yes Moment', 'Proposal and engagement planner', '#A3184A', {
+    logoTemplate: 'monogram', logoInitials: 'YM', logoFace: 'script',
+    site: 'https://yes-moment.com/',
+  }),
+  seed('brasa-bros', 'Brasa Bros', 'Brasa Bros', 'Peruvian rotisserie chicken', '#C24A18', {
+    logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'condensed',
+    site: 'https://www.brasa-bros.com/',
+    address: '1001 S Van Ness Ave, San Francisco',
+  }),
+
+
   /* Spotted on a delivery, and his note was "in desperate need of everything" —
      no website, so the tile is a monogram and the address is the only thing
      here besides the name. */
