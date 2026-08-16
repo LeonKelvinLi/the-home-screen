@@ -208,36 +208,43 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
        short has no room for a home screen at all, but it should end up cramped
        rather than with tiles of negative width. */
     const minTile = 28
-    const slotRows = Math.ceil(SPOTS_PER_PAGE / cols)
     /*
-      A LITTLE air on top of the reserve, and only a little.
+      HOW MANY ROWS THIS SCREEN CAN HOLD AT A DECENT SIZE — not how many the
+      spots need.
 
-      This was 40 and it was the wrong shape of fix. bottomReserve is the height
-      the dots, the pill and the dock occupy, so measuring against it alone let
-      the grid end exactly where the dots begin. Buying clearance out of the
-      grid, though, buys it out of the TILE on any phone-sized viewport: the row
-      gap is already at its floor there, so every pixel taken from the pitch is a
-      pixel off the icon. In Safari, where the chrome eats a hundred points of
-      height, that took the tile from 49px to 43 and on a shorter phone to 38.
-      Small tiles under full-width labels, which is what "all broken" looked
-      like.
+      A city page used to force all twenty-four into six rows whatever the
+      screen was, and shrink the tile until they fitted. In Safari, where the
+      chrome takes a hundred points of height, that meant 47px icons under
+      full-width labels: "the icons look too small". The operator's answer was
+      the right one — "if needed remove the last row, so that it behaves like an
+      iPhone home screen" — because that IS what a home screen does. It never
+      shrinks an icon to make a page hold more; it fills the page at the proper
+      size and the rest goes to the next one.
 
-      Almost all of the clearance now comes from moving the DOTS down eighteen
-      pixels instead — see .page-dots, where there was 33px of unused space. That
-      costs nothing. What is left here is 12, which on a tall screen the row gap
-      absorbs entirely and on a short one costs two pixels of tile rather than
-      six.
+      So the rows come from the height, the tile keeps its size, and any spots
+      that do not fit flow onto a continuation page. On a tall screen nothing
+      changes: six rows fit, all twenty-four are on one page, and this reduces
+      to what it always did.
     */
     const slotAir = 12
-    const slotPitch = Math.min(
-      rowPitch,
-      (screen.h - topPad - headingH - bottomReserve - slotAir) / slotRows,
-    )
+    const slotRoom = screen.h - topPad - headingH - bottomReserve - slotAir
+    /*
+      52 is the floor for "looks like a home screen". Below it the label is
+      nearly as wide as the icon above it, which is the exact thing being
+      complained about. It is only a floor — where there is room the tile is the
+      operator's own 66.
+    */
+    const niceTile = 52
+    const nicePitch = niceTile + ICON_LABEL_H + minRowGap
+    const slotRows = Math.max(3, Math.min(Math.ceil(SPOTS_PER_PAGE / cols), Math.floor(slotRoom / nicePitch)))
+    const slotPitch = Math.min(rowPitch, slotRoom / slotRows)
     const slotGap = Math.max(minRowGap, Math.min(rowGap, slotPitch - screen.iconSize - ICON_LABEL_H))
     const slotTile = Math.max(
       minTile,
       Math.min(screen.iconSize, Math.floor(slotPitch - ICON_LABEL_H - slotGap)),
     )
+    /** How many numbered spots fit on one page of this city, at this size. */
+    const slotsPerPage = cols * slotRows
 
     // Paginate each group separately so a group always begins a fresh page.
     // A single flat list let page two's icons flow up onto page one whenever
@@ -254,14 +261,36 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     const buildCity = (cityName: string) => {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
       for (const slotPage of SLOT_PAGES) {
-        out.push({
-          city: cityName,
-          section: slotPage.heading,
-          tile: slotTile,
-          rowGap: slotGap,
-          ...(slotPage.yellow ? { wall: '/wallpapers/_beasty-pages.webp', yellow: true } : {}),
-          apps: slotPage.categories.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${i}`)),
-        })
+        /*
+          Chunked, and the INDEX IS GLOBAL. A slot's id is its position in the
+          operator's category list, not its position on the page it happens to
+          land on — his number 18 has to stay number 18 whether it is the
+          eighteenth tile of one page or the second of a continuation. Numbering
+          per chunk would silently reseat every business on any screen short
+          enough to split.
+        */
+        /*
+          The yellow sheets never continue onto a second page. Their twenty-four
+          blanks are not a promise of anything — they are "there is room here" —
+          so on a short screen they simply show one page's worth rather than
+          splitting and doubling how far anyone has to swipe. The NUMBERED pages
+          do continue, because every one of those spots is a specific business
+          or a specific category and none of them can be dropped.
+        */
+        const total = slotPage.yellow
+          ? Math.min(slotPage.categories.length, slotsPerPage)
+          : slotPage.categories.length
+        for (let from = 0; from < total; from += slotsPerPage) {
+          const chunk = slotPage.categories.slice(from, Math.min(from + slotsPerPage, total))
+          out.push({
+            city: cityName,
+            section: slotPage.heading,
+            tile: slotTile,
+            rowGap: slotGap,
+            ...(slotPage.yellow ? { wall: '/wallpapers/_beasty-pages.webp', yellow: true } : {}),
+            apps: chunk.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${from + i}`)),
+          })
+        }
       }
     }
 
