@@ -507,7 +507,21 @@ textarea {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 176px;
+  /*
+    158, down from 176.
+
+    The dots sat 187px up from the bottom while the grid above them was sized
+    against a 172px reserve, so the grid was entitled to fifteen pixels the dots
+    were already using. Every fix for that had been taken out of the GRID —
+    which on a phone-sized viewport comes straight off the tile, because the row
+    gap is already at its floor there and has nothing left to give.
+
+    Moving the dots instead costs nothing at all. There is 33px of clear space
+    between them and the Spotlight row, so they can drop eighteen and still
+    leave fifteen; the grid gets that eighteen for free and the tiles keep their
+    size.
+  */
+  bottom: 158px;
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -2713,8 +2727,21 @@ textarea {
     bottom: calc(var(--bottom-h) + 108px);
   }
 
+  /*
+    150, down from 168 — eighteen pixels closer to the Spotlight row.
+
+    The grid above is sized against a reserve that stopped short of where the
+    dots actually sat, so the last row of labels was entitled to space the dots
+    were already using. Every previous attempt at that clearance was taken out
+    of the grid, and on a phone that comes straight off the TILE: the row gap is
+    at its floor there, so a smaller pitch is a smaller icon, not a tighter one.
+
+    Moving the dots costs nothing. They sat 33px clear of the Spotlight row, so
+    dropping eighteen still leaves fifteen — and the grid gets those eighteen
+    without the tile paying for them.
+  */
   .page-dots {
-    bottom: calc(var(--bottom-h) + 168px);
+    bottom: calc(var(--bottom-h) + 150px);
   }
 
   /*

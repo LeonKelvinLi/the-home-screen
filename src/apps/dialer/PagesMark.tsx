@@ -61,10 +61,17 @@ const FRONT = layerAt(LAYERS - 1)
 /**
  * Corner radius as a proportion of whichever layer is drawn.
  *
- * The top right is a RIGHT ANGLE — "square off the corner here". Every other
- * corner keeps the app-icon rounding. That corner is where the page is turned
- * down, and paper does not round off where it folds: squaring it is what makes
- * the dog-ear read as a dog-ear rather than as a triangle drawn on a tile.
+ * ALL FOUR corners are rounded — "also make the top right corner with radius".
+ *
+ * It was squared for a day, on the earlier note to "square off the corner
+ * here", and the reasoning then was that paper does not round off where it
+ * folds. Round wins on the actual screen: this sits in a row of app icons, and
+ * one square corner reads as a rendering fault rather than as a detail.
+ *
+ * The fold is CLIPPED to the sheet because of it. With a square corner the flap
+ * ended exactly on the tile's edge; against an arc its outer point falls
+ * outside the boundary, so it is clipped to the same path the tile draws and
+ * conforms to the curve.
  */
 const RADIUS = 0.22
 
@@ -104,8 +111,8 @@ function sheetPath(layer: { x: number; y: number; size: number }): string {
   const b = y + size
   return [
     `M ${x + rad} ${y}`,
-    `H ${r}`,
-    `V ${y}`,
+    `H ${r - rad}`,
+    `A ${rad} ${rad} 0 0 1 ${r} ${y + rad}`,
     `V ${b - rad}`,
     `A ${rad} ${rad} 0 0 1 ${r - rad} ${b}`,
     `H ${x + rad}`,
@@ -190,7 +197,7 @@ export function PagesMark({ className }: { className?: string }) {
         preserveAspectRatio="xMidYMid meet"
       />
 
-      <path d={foldPath()} fill="url(#pm-fold)" />
+      <path d={foldPath()} fill="url(#pm-fold)" clipPath="url(#pm-clip)" />
 
       {/*
         The outline goes on LAST and unfilled, so it sits over the sheet, the
@@ -204,7 +211,14 @@ export function PagesMark({ className }: { className?: string }) {
         strokeWidth="2.04"
         strokeLinejoin="round"
       />
-      <path d={foldPath()} fill="none" stroke="#0B0B0D" strokeWidth="2.04" strokeLinejoin="round" />
+      <path
+        d={foldPath()}
+        fill="none"
+        stroke="#0B0B0D"
+        strokeWidth="2.04"
+        strokeLinejoin="round"
+        clipPath="url(#pm-clip)"
+      />
     </svg>
   )
 }

@@ -210,20 +210,25 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     const minTile = 28
     const slotRows = Math.ceil(SPOTS_PER_PAGE / cols)
     /*
-      AIR, on top of the reserve.
+      A LITTLE air on top of the reserve, and only a little.
 
-      bottomReserve is the height the dots, the Spotlight pill and the dock
-      occupy — so measuring against it alone means the grid is allowed to end
-      exactly where the dots begin, and it did: measured on the built page, the
-      last row of labels finished 7px above the dots at 393pt and 6px at 390.
-      Not an overlap by the arithmetic, and unmistakably too tight to look at,
-      which is what the operator said.
+      This was 40 and it was the wrong shape of fix. bottomReserve is the height
+      the dots, the pill and the dock occupy, so measuring against it alone let
+      the grid end exactly where the dots begin. Buying clearance out of the
+      grid, though, buys it out of the TILE on any phone-sized viewport: the row
+      gap is already at its floor there, so every pixel taken from the pitch is a
+      pixel off the icon. In Safari, where the chrome eats a hundred points of
+      height, that took the tile from 49px to 43 and on a shorter phone to 38.
+      Small tiles under full-width labels, which is what "all broken" looked
+      like.
 
-      The grid gives this up before the tile does. At 393pt the pitch drops from
-      100 to 96 and the row gap absorbs all four pixels, so the tile stays the
-      66px he asked for and only the space between rows changes.
+      Almost all of the clearance now comes from moving the DOTS down eighteen
+      pixels instead — see .page-dots, where there was 33px of unused space. That
+      costs nothing. What is left here is 12, which on a tall screen the row gap
+      absorbs entirely and on a short one costs two pixels of tile rather than
+      six.
     */
-    const slotAir = 40
+    const slotAir = 12
     const slotPitch = Math.min(
       rowPitch,
       (screen.h - topPad - headingH - bottomReserve - slotAir) / slotRows,
