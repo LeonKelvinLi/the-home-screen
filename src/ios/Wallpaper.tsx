@@ -340,7 +340,18 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
         it is simply the layer after the pictures and before everything else,
         with no z-index anywhere to disagree about.
       */}
-      <div className="home-wallpaper-dock" />
+      {/*
+        NOT on the yellow sheets. He asked for the black ground under the dock
+        pointing at iOS, and then, seeing it on a yellow page: "it's dark behind
+        the bottom 4 tabs, that should be yellow too." Both are right for their
+        own page. A photograph ends and the dock stands on something; a SHEET
+        does not end above the dock, it runs to the edge of the paper, and a
+        black bar across the bottom of one reads as the page being cut off.
+
+        `src` is only ever set by the yellow sheets, which is the same signal
+        wallpaperScrim keys off a few lines up.
+      */}
+      {!src && <div className="home-wallpaper-dock" />}
     </div>
   )
 }

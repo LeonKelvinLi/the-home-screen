@@ -347,7 +347,14 @@ textarea {
   width: 100%;
   /* 12, not 24. The grid had no use for that band and the rows did — every
      pixel here is a pixel of air between icon rows further down. */
-  padding: calc(var(--status-h) + 12px) 18px 0;
+  /*
+    The side margin is narrower than it looks like it should be, and that is
+    deliberate: iOS puts LESS at the edges of a home screen and MORE between the
+    icons than feels natural written down. At 393pt it runs about 15 at the
+    sides against 33 between columns. Pulling the padding in is what pays for
+    the gap below without shrinking anything.
+  */
+  padding: calc(var(--status-h) + 12px) clamp(10px, 3.2vw, 18px) 0;
   /*
     Seven pages sit in one flex row. Containment tells the browser each page's
     layout and paint stop at its own box, so an off-screen page costs nothing
@@ -380,7 +387,21 @@ textarea {
   /* Must stay in step with ROW_GAP_PHONE in ios/constants.ts — HomeScreen
      computes how many rows fit from that number. See the note there. */
   row-gap: 18px;
-  column-gap: 2px;
+  /*
+    SPACED LIKE A HOME SCREEN — "then space the apps out like an iphone".
+
+    2px was not the real gap: the columns are 1fr, so most of the space between
+    two icons was leftover column width rather than the gap itself, and the
+    labels ended up nearly touching while the tiles sat in the middle of fat
+    columns. Measured at 393pt that gave about 24px between icons where iOS
+    gives 33.
+
+    6vw tracks the screen instead of a fixed number, because the thing being
+    matched is proportional: 23.6px at 393, 21.6 at 360, 25.8 at 430. The floor
+    keeps a 320pt phone from losing its columns entirely and the ceiling stops a
+    tablet from drifting apart.
+  */
+  column-gap: clamp(8px, 6vw, 28px);
   /*
     Stretch, not centre. Centring sizes each tile to its own content, so a long
     name made that one item wider than its column and it spilled over its
