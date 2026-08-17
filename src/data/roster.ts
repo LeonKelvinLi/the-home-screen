@@ -58,6 +58,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      skate goods, safety gear. His roster spells it Midnight; the shop spells
      it Midnite, and the shop wins. */
   seed('midnight-theories', 'Midnite Theories', 'Midnite Th…', 'Skate shop', '#1C1C2E', {
+    icon: 'midnight-theories',
     /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
        qualifying condition IS the offer. mock until the business signs it. */
     offers: {
@@ -81,6 +82,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'glyph-word', logoGlyph: 'burger', logoLines: ['SMASH'],
   }),
   seed('meadowlark-dairy', 'Meadowlark Dairy', 'Meadowlark', 'Drive-thru dairy', '#1F5FA6', {
+    icon: 'meadowlark-dairy',
     /* The badge carries their NAME, not the date. 1919 is real and on their own
        site, but a mark reading only "EST. 1919" states a fact about them while
        the page underneath says we are claiming nothing about them. */
@@ -118,6 +120,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'glyph-word', logoGlyph: 'design', logoLines: ['PAINTGO'],
   }),
   seed('ubreakifix', 'uBreakiFix', 'uBreakiFix', 'Device repair', '#0E7A5F', {
+    icon: 'ubreakifix',
     logoInitials: 'uB',
     site: 'https://www.ubreakifix.com/locations/elcerrito',
     /* No Richmond store exists; the nearest is El Cerrito, on Richmond's
@@ -126,6 +129,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     phone: '(510) 570-2863',
   }),
   seed('marina-bay-media', 'Marina Bay Media', 'Marina Bay', 'Media', '#0F3B57', {
+    icon: 'marina-bay-media',
     site: 'https://www.marinabaymedia.com/',
     logoTemplate: 'band', logoLines: ['MARINA BAY', 'MEDIA'], logoFace: 'condensed',
   }),
@@ -176,6 +180,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoInitials: 'AS', logoFace: 'slab',
   }),
   seed('winter-white-carwash', 'Winter White Car Wash & Detail', 'Winter White', 'Mobile car wash', '#274B77', {
+    icon: 'winter-white-carwash',
     /* The domain the operator sent is their SUPPLIES store; the wash service
        itself lives at winterwhitecarwash.com, so the tile links the service. */
     site: 'https://winterwhitecarwash.com/',
@@ -222,12 +227,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     and seating a Fresno business in Concord is worse than an empty spot.
   */
   seed('perfect-nine-events', 'Perfect Nine', 'Perfect Nine', 'Mobile mini golf events', '#701A3C', {
+    icon: 'perfect-nine-events',
     /* The ninth hole, as the mark. */
     logoInitials: '9',
     site: 'https://www.perfectnineevents.com/',
     phone: '(510) 953-5757',
   }),
   seed('the-model-bakery', 'The Model Bakery', 'Model Bakery', 'Bakery', '#8A5A18', {
+    icon: 'the-model-bakery',
     logoTemplate: 'badge', logoLines: ['MODEL BAKERY'], logoFace: 'slab',
     site: 'https://www.themodelbakery.com/',
     phone: '(707) 259-1128',
@@ -258,6 +265,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'gathered, and prices will only ever come from the right location’s own menu.',
   }),
   seed('happy-bay-paws', 'Happy Bay Paws', 'Happy Bay Paws', 'Mobile dog grooming', '#D8590F', {
+    icon: 'happy-bay-paws',
     /* White on their orange measured 3.92:1; the band's own dark plate carries
        the name instead, and the orange stays the tile. */
     logoTemplate: 'band', logoLines: ['HAPPY BAY', 'PAWS'], logoAccent: '#7A2F06',
@@ -291,6 +299,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     Five of them opened a city that did not exist yet — see data/cities.ts.
   */
   seed('mimis-chocolates', 'Mimi’s Chocolates', 'Mimi’s', 'Chocolate shop', '#4A2C17', {
+    icon: 'mimis-chocolates',
     logoTemplate: 'monogram', logoInitials: 'MC', logoFace: 'script',
     site: 'https://mimischocolates.com/',
   }),
@@ -310,6 +319,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.banhmixpress.net/',
   }),
   seed('royale-eatery', 'The Royale Eatery', 'The Royale', 'Contemporary American', '#14141A', {
+    icon: 'royale-eatery',
     logoTemplate: 'monogram', logoInitials: 'R', logoFace: 'script',
     site: 'https://www.theroyaleeatery.com/',
     address: '2190 Contra Costa Blvd, Pleasant Hill',
@@ -320,14 +330,17 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '2468 San Ramon Valley Blvd, San Ramon',
   }),
   seed('benicia-grill', 'Benicia Grill', 'Benicia Grill', 'American grill', '#8C3A1E', {
+    icon: 'benicia-grill',
     logoTemplate: 'monogram', logoInitials: 'BG', logoFace: 'slab',
     site: 'http://www.benicia-grill.com/',
   }),
   seed('intl-kitchen', 'INTL Kitchen', 'INTL Kitchen', 'Asian takeout', '#C0261F', {
+    icon: 'intl-kitchen',
     logoTemplate: 'glyph-word', logoGlyph: 'noodles', logoLines: ['INTL'],
     site: 'https://intlkitchen.com/',
   }),
   seed('majestic-boutique', 'Majestic Boutique', 'Majestic', 'Clothing boutique', '#2B2440', {
+    icon: 'majestic-boutique',
     logoTemplate: 'monogram', logoInitials: 'MB', logoFace: 'condensed',
     site: 'https://majesticboutique.co/',
   }),
@@ -355,6 +368,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '1042 Marina Blvd, San Leandro',
   }),
   seed('polly-ann', 'Polly Ann Ice Cream', 'Polly Ann', 'Ice cream', '#C0335E', {
+    icon: 'polly-ann',
     logoTemplate: 'monogram', logoInitials: 'PA', logoFace: 'script',
     site: 'https://www.pollyann.com/',
     address: '3138 Noriega St, San Francisco',
@@ -365,11 +379,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '901 Larkin St, San Francisco',
   }),
   seed('u-dessert-story', 'U Dessert Story', 'U Dessert', 'Dessert shop', '#20202A', {
+    icon: 'u-dessert-story',
     logoTemplate: 'monogram', logoInitials: 'U', logoFace: 'grotesk',
     site: 'https://www.udessertstory.com/',
     address: '3489 16th St, San Francisco',
   }),
   seed('the-farmacy', 'The Farmacy', 'The Farmacy', 'Cafe', '#1F4030', {
+    icon: 'the-farmacy',
     logoTemplate: 'monogram', logoInitials: 'TF', logoFace: 'grotesk',
     site: 'https://www.farmacysf.com/',
   }),
@@ -378,16 +394,19 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.soltaqueriaberkeley.com/',
   }),
   seed('one-house-bakery', 'One House Bakery', 'One House Bak…', 'Bakery', '#6B4A22', {
+    icon: 'one-house-bakery',
     logoTemplate: 'monogram', logoInitials: 'OH', logoFace: 'script',
     site: 'https://onehousebakery.com/',
     address: '918 1st St, Benicia',
   }),
   seed('sandwich-monkey', 'The Sandwich Monkey', 'Sandwich Mo…', 'Sandwiches', '#8A5A18', {
+    icon: 'sandwich-monkey',
     logoTemplate: 'monogram', logoInitials: 'SM', logoFace: 'slab',
     site: 'https://thesandwichmonkey.com/',
     address: '3 Plaza View Ln, Foster City',
   }),
   seed('senor-sisig', 'Señor Sisig', 'Señor Sisig', 'Filipino', '#B0201F', {
+    icon: 'senor-sisig',
     logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'condensed',
     site: 'https://www.senorsisig.com/',
   }),
@@ -436,6 +455,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://chutneys.ai/',
   }),
   seed('french-spot', 'The French Spot', 'French Spot', 'French bakery', '#243A6B', {
+    icon: 'french-spot',
     logoTemplate: 'monogram', logoInitials: 'FS', logoFace: 'script',
     site: 'https://www.thefrenchspotsf.com/',
   }),
@@ -469,14 +489,17 @@ export const ROSTER_SEED: LocalSeed[] = [
     numbered city spot is a claim about where a business is.
   */
   seed('santa-clara-super-kitchen', 'Santa Clara Super Kitchen', 'Super Kitchen', 'Kitchen', '#7A2A1E', {
+    icon: 'santa-clara-super-kitchen',
     logoTemplate: 'monogram', logoInitials: 'SK', logoFace: 'condensed',
     site: 'https://santaclarasuperkitchen.com/',
   }),
   seed('willy-billy-smoked-meat', 'Willy Billy Smoked Meat', 'Willy Billy', 'Smoked meat', '#4A2416', {
+    icon: 'willy-billy-smoked-meat',
     logoTemplate: 'monogram', logoInitials: 'WB', logoFace: 'slab',
     site: 'https://willybillysmokedmeat.com/',
   }),
   seed('red-chili', 'Red Chili', 'Red Chili', 'Restaurant', '#A31E1E', {
+    icon: 'red-chili',
     logoTemplate: 'monogram', logoInitials: 'RC', logoFace: 'slab',
     site: 'https://redchilirestaurants.com/',
   }),
@@ -485,6 +508,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://banhmioven.us/',
   }),
   seed('adzeela', 'Adzeela', 'Adzeela', 'Advertising', '#212938', {
+    icon: 'adzeela',
     logoTemplate: 'monogram', logoInitials: 'AZ', logoFace: 'grotesk',
     site: 'https://adzeela.com/',
   }),
@@ -498,6 +522,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      covering the Bay Area" — so no city, and the descriptor says mobile, which
      is what earns the teal ring and the "comes to you" line. */
   seed('rocket-mc-tow', 'Rocket MC Tow', 'Rocket MC Tow', 'Mobile motorcycle towing', '#8C1A1A', {
+    icon: 'rocket-mc-tow',
     logoTemplate: 'monogram', logoInitials: 'RT', logoFace: 'condensed',
     site: 'https://www.rocketmctow.com/',
     phone: '(925) 517-5551',
@@ -510,6 +535,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      then. Seated where he put it, with the discrepancy written down rather
      than an address invented to settle it. */
   seed('chiquo-and-eva', 'Chiquo & Eva’s', 'Chiquo & Eva', 'Wagyu steakhouse', '#4A1414', {
+    icon: 'chiquo-and-eva',
     logoTemplate: 'monogram', logoInitials: 'CE', logoFace: 'script',
     site: 'https://www.chiquoandeva.com/',
   }),
@@ -527,15 +553,18 @@ export const ROSTER_SEED: LocalSeed[] = [
      Directions button sends somebody to — worth him confirming which city he
      means, since the two disagree. */
   seed('bloom-balloon', 'Bloom Balloon', 'Bloom Balloon', 'Balloon design', '#C2508A', {
+    icon: 'bloom-balloon',
     logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'script',
     site: 'https://bloomballoon.com/connect',
     address: '1090 S Milpitas Blvd, Milpitas',
   }),
   seed('yes-moment', 'Yes Moment', 'Yes Moment', 'Proposal and engagement planner', '#A3184A', {
+    icon: 'yes-moment',
     logoTemplate: 'monogram', logoInitials: 'YM', logoFace: 'script',
     site: 'https://yes-moment.com/',
   }),
   seed('brasa-bros', 'Brasa Bros', 'Brasa Bros', 'Peruvian rotisserie chicken', '#C24A18', {
+    icon: 'brasa-bros',
     logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'condensed',
     site: 'https://www.brasa-bros.com/',
     address: '1001 S Van Ness Ave, San Francisco',
@@ -557,6 +586,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* His best friend's, and the one he asked to show her — so the mark is the
      anchor on its own, as he asked, rather than initials. */
   seed('bay-area-charters', 'Bay Area Charters', 'Bay Area Cha…', 'Boat charters', '#123A5C', {
+    icon: 'bay-area-charters',
     logoTemplate: 'glyph-word', logoGlyph: 'anchor', logoLines: [''],
     site: 'https://www.bayareacharters.com/',
   }),
@@ -596,6 +626,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'monogram rather than their mark, deliberately. Their own Instagram calls them a deli.',
   }),
   seed('cafe-noir-oak', 'Cafe Noir', 'Cafe Noir', 'Comfort food', '#1A1A1E', {
+    icon: 'cafe-noir-oak',
     logoTemplate: 'monogram', logoInitials: 'N', logoFace: 'script',
     site: 'https://www.cafenoiroak.com/',
     address: '1620 18th St, Stall B, Oakland',
@@ -605,10 +636,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://itsjumpandroll.com/',
   }),
   seed('urban-air', 'Urban Air', 'Urban Air', 'Adventure park', '#1F3A6B', {
+    icon: 'urban-air',
     logoTemplate: 'monogram', logoInitials: 'UA', logoFace: 'condensed',
     site: 'https://www.urbanair.com/',
   }),
   seed('eight-acres', 'Eight Acres Kitchen & Bar', 'Eight Acres', 'Kitchen and bar', '#3A4A2A', {
+    icon: 'eight-acres',
     logoTemplate: 'monogram', logoInitials: '8', logoFace: 'slab',
     site: 'http://www.eightacresbrentwood.com/',
     address: 'Brentwood',
@@ -622,14 +655,17 @@ export const ROSTER_SEED: LocalSeed[] = [
       'minutes ahead. No address is published, so none is shown.',
   }),
   seed('playland-707', 'Playland 707', 'Playland 707', 'Paintball', '#2A5C2A', {
+    icon: 'playland-707',
     logoTemplate: 'monogram', logoInitials: 'P7', logoFace: 'condensed',
     site: 'https://www.playland707.com/paintball/',
   }),
   seed('chip-cookies', 'Chip Cookies', 'Chip Cookies', 'Cookies', '#6B4A2A', {
+    icon: 'chip-cookies',
     logoTemplate: 'monogram', logoInitials: 'CC', logoFace: 'script',
     site: 'https://www.chipcookies.co/',
   }),
   seed('macs-old-house', 'Mac’s Old House', 'Mac’s', 'Steakhouse', '#6B1A1A', {
+    icon: 'macs-old-house',
     logoTemplate: 'monogram', logoInitials: 'M', logoFace: 'script',
     site: 'https://www.macsoldhouse.com/',
   }),
@@ -640,6 +676,7 @@ export const ROSTER_SEED: LocalSeed[] = [
 
   /* ---- 2026-08-13 ---- */
   seed('kabab-burger', 'Kabab Burger', 'Kabab Burger', 'Kebab and burgers', '#7A3A12', {
+    icon: 'kabab-burger',
     logoTemplate: 'monogram', logoInitials: 'KB', logoFace: 'slab',
     site: 'https://kabab-burger.co/',
   }),
@@ -676,6 +713,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'above is what they have. Nothing else is listed yet.',
   }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
+    icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
     site: 'http://emyscannoli.com/',
     contactOnly:

@@ -13,3 +13,6 @@ dist
 # tracking it meant `git status` was never clean after a typecheck and the diff
 # carried a blob nobody reads.
 *.tsbuildinfo
+
+# Python bytecode from the tools/ scripts
+__pycache__/

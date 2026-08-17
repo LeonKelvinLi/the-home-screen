@@ -224,7 +224,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     tagline:
       'A taste of Thailand\u2019s Northeast \u2014 authentic Isan flavors, straight from our family table to yours.',
     color: '#141416|#3A2A18',
-    icon: '',
+    icon: 'larb-thai-tapas',
     prep: 0,
     category: 'Thai',
     site: 'https://www.larbthaitapas.com/',
@@ -309,7 +309,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     cuisine: 'Pet waste removal',
     tagline: 'Residential and commercial pet waste removal. Serving Pets & Their People.',
     color: '#1D4F91|#12315B',
-    icon: '',
+    icon: 'pet-butler-walnut-creek',
     prep: 0,
     category: 'Service',
     site: 'https://www.petbutler.com/locations/walnut-creek-california-pet-services/',
@@ -511,16 +511,19 @@ export const LOCAL_SEED: LocalSeed[] = [
       handle in the story URL is how the business was confirmed.
     */
     slug: 'sin-city-pits',
+    icon: 'sin-city-pits',
     clip: { href: 'https://www.instagram.com/reel/DbYsH_viR_a/', credit: 'Filmed by Sin City Pits', platform: 'Instagram' },
     name: 'Sin City Pits',
     label: 'Sin City Pits',
     cuisine: 'Pitbull kennel and breeder',
     tagline: 'American Pitbull Terrier breeder in Las Vegas. Est. 2012.',
     color: '#B3131B|#1A1A1A',
-    // No icon file. Their wordmark is published on their own site, which is
-    // exactly why it is not reproduced here — redrawing a real business's mark
-    // with an image model produces a convincing fake of it.
-    icon: '',
+    /*
+      Their own wordmark, downloaded from sincitypits.com — not redrawn. The
+      distinction is the whole rule: an image model asked for a real business's
+      logo returns a convincing fake of it, so a mark is either theirs or it is
+      the generated monogram, never an imitation.
+    */
     prep: 0,
     category: 'Service',
     site: 'https://www.sincitypits.com/',
@@ -560,6 +563,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       Those prices belong to other shops and are not carried over. Ask them.
     */
     slug: 'tequilas-taqueria',
+    icon: 'tequilas-taqueria',
     clip: { href: 'https://www.instagram.com/reel/DbmH3wLFV9U/', credit: 'Filmed by Tequila\u2019s Taqueria', platform: 'Instagram' },
     name: "Tequila's Taquería",
     label: "Tequila's",
@@ -1099,7 +1103,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     cuisine: 'Copper drinkware',
     tagline: 'A solid copper wand for your own bottle or glass.',
     color: '#B87333',
-    icon: '',
+    icon: 'poof-of-alchemy',
     prep: 0,
     category: 'Shop',
     site: 'https://poofofalchemy.com',
@@ -1159,7 +1163,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     cuisine: 'Software studio',
     tagline: 'Custom software and AI systems for businesses. Built by Leon Kelvin Li.',
     color: '#101828|#1D2939',
-    icon: '',
+    icon: 'noctilucente',
     prep: 0,
     category: 'Software',
     site: 'https://noctilucenty.github.io/',
