@@ -58,7 +58,16 @@ export const ROSTER_SEED: LocalSeed[] = [
      skate goods, safety gear. His roster spells it Midnight; the shop spells
      it Midnite, and the shop wins. */
   seed('midnight-theories', 'Midnite Theories', 'Midnite Th…', 'Skate shop', '#1C1C2E', {
-    site: 'https://midnitetheories.com/',
+    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: '30% off any in-store purchase.',
+      loyalty: '10% off your in-store purchase, any visit.',
+    },
+    /* The collections page, which is what he linked — it lands on what they
+       actually sell rather than on a splash. */
+    site: 'https://www.midnitetheories.com/collections/all',
     address: '1215 Polk St, San Francisco',
     logoTemplate: 'band', logoLines: ['MIDNITE', 'THEORIES'], logoFace: 'condensed',
   }),
@@ -81,6 +90,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '57 W Neal St, Pleasanton',
   }),
   seed('harumi-ayce', 'Harumi', 'Harumi', 'All-you-can-eat', '#8E1119', {
+    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: '$10 off each all-you-can-eat, no limit on your first visit.',
+      loyalty: 'A free can of soda with any purchase, any visit.',
+    },
+    site: 'https://www.yelp.com/biz/harumi-sushi-and-hibachi-livermore',
     logoTemplate: 'band', logoLines: ['HARUMI', 'AYCE'],
   }),
   seed('lucky-seven', 'Lucky Seven', 'Lucky Seven', '', '#B3131B', {

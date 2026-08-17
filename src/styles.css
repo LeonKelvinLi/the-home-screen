@@ -3647,6 +3647,65 @@ textarea {
 
 /* The curated-menu line. Reads as merchandising, not as a warning — the
    price-confirmation flag above it is the one that has to look cautionary. */
+/*
+  The week's picks as a disclosure bar. Collapsed, it is one line the height of
+  the note it replaces; open, it lists three names and nothing else — no prices,
+  because the prices are directly below and repeating them here would make the
+  bar a second menu rather than a signpost to the first.
+*/
+.menu-picks {
+  margin: 0 16px 10px;
+}
+
+.menu-picks-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+
+/* The chevron turns rather than swapping glyph, so the control reads as one
+   thing in two states instead of two controls. */
+.menu-picks-bar svg {
+  flex: 0 0 auto;
+  transition: transform 180ms ease;
+}
+
+.menu-picks-bar.is-open svg {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-picks-bar svg {
+    transition: none;
+  }
+}
+
+.menu-picks-list {
+  margin: 8px 0 0;
+  padding: 0 14px;
+  list-style: none;
+  display: grid;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.menu-picks-list li::before {
+  content: '·';
+  margin-right: 8px;
+}
+
 .menu-note {
   margin: 14px 16px 2px;
   font-size: 15px;

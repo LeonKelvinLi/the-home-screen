@@ -25,12 +25,25 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   /* brand?.id, not brand.id — brandById can return undefined and the guard for
      that is below these hooks, which cannot move above them. */
   const [starred, setStarred] = useState(() => isFavorite(brand?.id ?? ''))
+  /** The week's picks, collapsed by default. See the bar below. */
+  const [picksOpen, setPicksOpen] = useState(false)
   const [activeCat, setActiveCat] = useState(0)
   const bodyRef = useRef<HTMLDivElement>(null)
 
   if (!brand) return null
 
   const inCart = cart.countForBrand(brand.id)
+  /*
+    The week's three, taken from the MENU rather than from a new field.
+
+    `offer` on a seed is already the operator's stocked subset — it is the
+    filter that decides which of a partner's items are carried at all, which is
+    exactly the list he means by "top 3 favorites of the week". Reading the
+    built menu means the bar can never disagree with the prices under it, and
+    his lists (Bula's mince, pot roast and brisket; any 3 cookies) need no
+    second place to live.
+  */
+  const picks = brand.menu.flatMap((c) => c.items).slice(0, 3)
   // Header text must be chosen from the tint, not assumed white — several
   // brands use light plates and were rendering white-on-white.
   const ink = readableOn(brand.logo.bg)
@@ -255,7 +268,41 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
 
           {/* Says plainly that this is a selection, not their whole menu —
               which it is not, for every partner but top dog. */}
-          {brand.menuNote && <p className="menu-note">{brand.menuNote}</p>}
+          {/*
+            A BAR THAT DROPS DOWN, not a line of text — "make that 'Choose
+            from…' a bar that drops down the top 3 favorites, so it can be out
+            of the way." What it is getting out of the way OF is the offers
+            below it, which are the reason a member opened this page.
+
+            Collapsed by default and it names the count, so the bar says what is
+            behind it rather than making anyone open it to find out. When a
+            brand has no picks listed it stays the plain line it always was —
+            there is nothing to drop down.
+          */}
+          {brand.menuNote &&
+            (picks.length ? (
+              <div className="menu-picks">
+                <button
+                  className={`menu-picks-bar${picksOpen ? ' is-open' : ''}`}
+                  onClick={() => setPicksOpen((o) => !o)}
+                  aria-expanded={picksOpen}
+                >
+                  <span>{brand.menuNote}</span>
+                  <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="M6 9l6 6 6-6" />
+                  </svg>
+                </button>
+                {picksOpen && (
+                  <ul className="menu-picks-list">
+                    {picks.map((it) => (
+                      <li key={it.id}>{it.name}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ) : (
+              <p className="menu-note">{brand.menuNote}</p>
+            ))}
 
           {/* How to actually start, stated before the prices rather than under
               them, because "these are quotes" changes how the list is read. */}

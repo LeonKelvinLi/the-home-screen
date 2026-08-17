@@ -401,7 +401,15 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'butter-pecan', name: 'Butter Pecan', label: 'Butter Pecan',
+    slug: 'butter-pecan',    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: 'Buy a dozen and get half a dozen free.',
+      loyalty: 'Buy 2, get 1 cookie free, every visit.',
+    },
+    site: 'https://www.butterpecanbakeshop.com/',
+ name: 'Butter Pecan', label: 'Butter Pecan',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Ice cream & cobbler', tagline: 'Small-batch ice cream and cobblers',
@@ -565,7 +573,15 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'masa', name: 'Masa', label: 'Masa',
+    slug: 'masa',    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: 'A free tamale or street taco with each $15 or more spent. Unlimited on your first visit.',
+      loyalty: 'A free can of soda with any purchase, any visit.',
+    },
+    site: 'https://www.ordermasatamalesandtacos.com/',
+ name: 'Masa', label: 'Masa',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Mexican', tagline: 'Handmade tortillas and street tacos',
@@ -646,6 +662,14 @@ const fromSeed = (s: Seed): Brand => ({
   // scaffolding, presenting them as this week's picks.
   menuNote:
     s.quoteOnly || s.review ? undefined : s.items.length > 0 ? MENU_NOTE : undefined,
+  /*
+    Offers travel from the seed here too, not only from the roster and local
+    lists. Without this the operator's sheets for Butter Pecan and Masa were set
+    in the data and rendered nowhere — the same silent gap `address` and the
+    roster's own `offers` each had, which is three times now that a field has
+    been added to a seed and forgotten in one of the three mappings.
+  */
+  offers: s.offers,
   menu: s.groups
     ? s.groups.map((g, gi) => ({
         id: `c_${s.slug.replace(/-/g, '')}_${gi + 1}`,

@@ -741,7 +741,15 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
   },
   {
-    slug: 'bula-pies',
+    slug: 'bula-pies',    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: 'Buy 6 frozen pies to take home and get any 2 freshly baked free.',
+      loyalty: 'A free specialty drink with any 2 pies, frozen or baked.',
+    },
+    /* His top three for the week, named in his own message. */
+
     name: 'Bula Pies Fiji',
     label: 'Bula Pies Fiji',
     cuisine: 'Fijian meat pies',
@@ -755,7 +763,17 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(707) 563-8422',
     address: '2568 Springs Rd, Vallejo',
     // Named by the operator. Their full menu stays below for when it widens.
-    offer: ['Beef Stew Pie', 'Butter Chicken Pie', 'Mince & Cheese Pie', 'Kumquat Limemade'],
+    /*
+      His top three for the week, 2026-08-16: "Minced Meat & Cheese, Pot Roast
+      and BBQ Brisket Top 3."
+
+      Two map exactly. POT ROAST DOES NOT EXIST on the menu transcribed from
+      their site, and no price for one exists anywhere here, so the Beef Stew
+      Pie stands in — tender beef, peas, carrots and potatoes, which is a pot
+      roast in a crust. Worth him confirming, because the alternative was
+      inventing an item and a price for somebody else's kitchen.
+    */
+    offer: ['Mince & Cheese Pie', 'Beef Stew Pie', 'Smoked Brisket Pie'],
     siteNote:
       'Discover more favorites and even order frozen pies shipped directly to your door by visiting bulapiesfiji.com',
     items: [
@@ -834,7 +852,14 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
   },
   {
-    slug: 'elemonkey',
+    slug: 'elemonkey',    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: 'An invite-only 30% off your first purchase.',
+      loyalty: 'Free shipping on any $100 or more online during a drop. Code BPRPFREESHIP.',
+    },
+
     name: 'Elemonkey',
     label: 'Elemonkey',
     cuisine: 'Apparel',
@@ -936,7 +961,14 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
-    slug: 'paulo-sausage',
+    slug: 'paulo-sausage',    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
+       qualifying condition IS the offer. mock until the business signs it. */
+    offers: {
+      mock: true,
+      welcome: 'Buy any 3lb and get 1lb of your choice free.',
+      loyalty: 'A cannoli with any purchase, every visit.',
+    },
+
     name: 'Paulo Sausage Co',
     label: 'Paulo Sausage',
     cuisine: 'Italian sandwiches, sausage',
