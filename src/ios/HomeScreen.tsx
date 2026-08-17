@@ -225,6 +225,21 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
       that do not fit flow onto a continuation page. On a tall screen nothing
       changes: six rows fit, all twenty-four are on one page, and this reduces
       to what it always did.
+
+      THIS IS IN TENSION WITH "the first 48 spots are the first two pages", and
+      the tension is worth understanding before touching either side.
+
+      That claim is what SLOT_PAGES was reordered for, and it holds exactly when
+      the grid seats all 24 — which it does INSTALLED, at the full screen
+      height, on every phone from a 13 mini up. In Safari, where the chrome
+      costs about 160 points, a 15 seats 20 and Goods spills onto a second page:
+      the order is still every numbered page before every yellow one, but the
+      count moves.
+
+      Forcing six rows anyway would restore the count and cost the size: at
+      393x690 the tile computes to 47px, which is precisely the number the
+      operator rejected above, and on a small phone in Safari it hits the 28px
+      floor. So the count gives way and the size does not.
     */
     const slotAir = 12
     const slotRoom = screen.h - topPad - headingH - bottomReserve - slotAir
@@ -252,11 +267,12 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     const out: Page[] = []
 
     /*
-      The operator's flagship pages open the app — BEASTY · Goods, its yellow
-      page, BEASTY · Services, its yellow page — ahead of everything, because
-      that is the product he is selling. The system page follows, then the
-      cities. buildCity is one function so a flagship page and a city page can
-      never drift apart in shape.
+      The operator's flagship pages open the app — BEASTY · Goods, BEASTY ·
+      Services, then their two yellow pages — ahead of everything, because that
+      is the product he is selling. The system page follows, then the cities.
+      buildCity is one function so a flagship page and a city page can never
+      drift apart in shape, and so the order below is fixed in exactly one
+      place: SLOT_PAGES.
     */
     const buildCity = (cityName: string) => {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
@@ -303,8 +319,9 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     }
 
     /*
-      Then TWO pages per city, goods then services, each an empty grid waiting
-      for the businesses the operator recruits there.
+      Then four pages per city: the two numbered ones — goods, then services —
+      which together hold the first 48 spots he sells, followed by the two
+      yellow pages of openly available room.
 
       One page per city put a barber and a sushi bar in the same grid, which is
       neither how the operator sells it — "Supply of Goods, Services & awesome

@@ -156,8 +156,9 @@ export interface SlotPage {
   categories: SlotCategory[]
   /**
    * A BEASTY PAGES overflow page: yellow wallpaper, dark ink, open spots.
-   * The yellow is the brand claim — the operator wants every page after a
-   * city's first to read as a page of BEASTYpages.com.
+   * The yellow is the brand claim — every page after a city's two numbered
+   * ones reads as a page of BEASTYpages.com, and the colour is what tells a
+   * customer at a glance that the spots on it are still available.
    */
   yellow?: true
 }
@@ -170,16 +171,28 @@ export interface SlotPage {
  * order and on the word in the id, and they are in different files.
  */
 export const SLOT_PAGES: SlotPage[] = [
-  { kind: 'goods', heading: 'Goods', categories: GOODS_CATEGORIES },
   /*
-    The yellow page rides directly behind the page it overflows, so a customer
-    swiping past a full Goods page lands on where the latecomers go — which is
-    exactly the order the operator sells it in. One yellow page each for now,
-    by his instruction ("only include the next page blank"); more get added
-    when a city actually fills.
+    BOTH NUMBERED PAGES FIRST, then both yellow ones.
+
+    The yellow page used to ride directly behind the page it overflowed —
+    Goods, more goods, Services, more services — on the reasoning that a
+    customer swiping past a full Goods page should land on where the latecomers
+    go. That reasoning was about the customer, and it broke the operator's
+    pitch, which is the thing these pages exist for.
+
+    He sells "the first 48 spots in your city". Interleaved, those 48 spots
+    spanned pages one, THREE and a bit, with a page of blanks in the middle — so
+    the number he quotes did not correspond to anything a business owner could
+    be shown. Goods then Services makes the first 48 spots exactly the first two
+    pages, and everything after them is openly marked available.
+  */
+  { kind: 'goods', heading: 'Goods', categories: GOODS_CATEGORIES },
+  { kind: 'services', heading: 'Services', categories: SERVICE_CATEGORIES },
+  /*
+    One yellow page each for now, by his instruction ("only include the next
+    page blank"); more get added when a city actually fills.
   */
   { kind: 'goods2', heading: 'More goods', categories: OPEN_SPOTS, yellow: true },
-  { kind: 'services', heading: 'Services', categories: SERVICE_CATEGORIES },
   { kind: 'services2', heading: 'More services', categories: OPEN_SPOTS, yellow: true },
 ]
 
