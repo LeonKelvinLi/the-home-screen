@@ -182,7 +182,7 @@ export const ROSTER_SEED: LocalSeed[] = [
   // ---- sent separately with placements ----
   seed('jdi-auto-detailing', 'JDI Auto Detailing', 'JDI Detailing', 'Mobile auto detailing', '#1B2B45', {
     logoTemplate: 'wordmark', logoLines: ['JDI', 'DETAILING'], logoFace: 'condensed',
-    site: 'https://www.jdidetailing.com/',
+    site: 'https://jdidetailing.com/',
     contactOnly:
       'Mobile detailing based in Brentwood — their own Instagram describes premium mobile ' +
       'detailing, ceramic coatings and paint enhancement. The operator is gathering the rest; ' +
@@ -474,6 +474,34 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('ally-virtual', 'Ally Virtual', 'Ally Virtual', 'Virtual assistance', '#1E3A52', {
     logoTemplate: 'monogram', logoInitials: 'AV', logoFace: 'grotesk',
     site: 'https://allyvirtual.com/',
+  }),
+
+  /* ---- 2026-08-16 ---- */
+  /* "Not sure what city to put it in though because it's a mobile service
+     covering the Bay Area" — so no city, and the descriptor says mobile, which
+     is what earns the teal ring and the "comes to you" line. */
+  seed('rocket-mc-tow', 'Rocket MC Tow', 'Rocket MC Tow', 'Mobile motorcycle towing', '#8C1A1A', {
+    logoTemplate: 'monogram', logoInitials: 'RT', logoFace: 'condensed',
+    site: 'https://www.rocketmctow.com/',
+    phone: '(925) 517-5551',
+    contactOnly:
+      'Emergency motorcycle towing and transport, licensed and insured, open 24/7 across the Bay ' +
+      'Area — quoted from their own Instagram. No fixed address, because they come to you.',
+  }),
+  /* He filed this under Benicia; their own site says American Canyon, and that
+     they open at the end of 2026 with at-home steakhouse experiences until
+     then. Seated where he put it, with the discrepancy written down rather
+     than an address invented to settle it. */
+  seed('chiquo-and-eva', 'Chiquo & Eva’s', 'Chiquo & Eva', 'Wagyu steakhouse', '#4A1414', {
+    logoTemplate: 'monogram', logoInitials: 'CE', logoFace: 'script',
+    site: 'https://www.chiquoandeva.com/',
+  }),
+  seed('cajun-crack-n', 'Cajun Crack N', 'Cajun Crack N', 'Cajun seafood boil', '#A3241A', {
+    logoTemplate: 'monogram', logoInitials: 'CC', logoFace: 'slab',
+    site: 'https://m.yelp.com/biz/cajun-crack-n-concord-concord-2',
+    contactOnly:
+      'Sent 2026-08-16 with "needs website" — the Yelp page above is what they have. Nothing ' +
+      'else is listed.',
   }),
 
   /* ---- 2026-08-15 ---- */

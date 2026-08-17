@@ -18,29 +18,76 @@ import type { ShellApi } from '../ios/Device'
  * client". So each item says whose it is.
  */
 
+/*
+  PRICES BACK UP, with the discount doing the work instead — his suggestion and
+  a better one than mine: "keep them the way they were before so businesses
+  understand the value of your skill set, then put 1/2 off when they sign up as
+  a Affiliate. That way they feel like they're getting a deal."
+
+  Halving the list price to win customers taught a business owner that the work
+  is worth half. The same money changes hands either way; only what it says
+  about the work is different.
+
+  "Starting at" on every line, also his: it leaves room to negotiate for a job
+  "as crazy as mine", and it is honest — every one of these is a floor rather
+  than a fixed number.
+*/
 const TIERS = [
   {
     name: 'Starter site',
-    price: '$325',
+    price: 'from $650',
     detail:
       'One page, built for a phone first. Hours, map, your menu or services, and a button that dials you. Live in about two weeks.',
   },
   {
     name: 'Full site',
-    price: '$750',
+    price: 'from $1,500',
     detail:
       'Several pages on your own domain, your photos, contact forms, and set up properly so Google can find you.',
   },
   {
     name: 'Site and online ordering',
-    price: '$1,250',
+    price: 'from $2,500',
     detail:
       'Everything above, plus customers order and pay on your site. If you are a restaurant not set up for pickup or delivery orders yet, that is what this does.',
   },
   {
     name: 'Your own app',
-    price: 'from $2,500',
+    price: 'from $5,000',
     detail: 'iOS and Android. Your icon on a customer’s home screen, not a website in a wrapper.',
+  },
+  {
+    name: 'Branding and logo',
+    price: 'from $400',
+    detail:
+      'A mark, colours and type that hold together everywhere they are used — on a sign, on a shirt, and on a tile the size of your thumbnail.',
+  },
+]
+
+/*
+  Add-ons rather than tiers, on his read: "maybe put SEO as add-ons or
+  something like that." They are bought alongside a site rather than instead of
+  one, and a business owner reading a price list wants the four shapes of job
+  first.
+
+  Each says what it is FOR in plain words. His note on why: some people do not
+  know what these letters mean and "think I might be scamming them".
+*/
+const ADDONS = [
+  {
+    name: 'SEO',
+    price: 'from $150',
+    detail: 'So people searching for what you do actually find you.',
+  },
+  {
+    name: 'GEO',
+    price: 'from $75',
+    detail: 'So the AI assistants people now ask for recommendations know you exist.',
+  },
+  {
+    name: 'CRM setup',
+    price: 'from $250',
+    detail: 'Enquiries, bookings and customers in one place instead of across three phones.',
   },
 ]
 
@@ -104,9 +151,34 @@ export function DesignsApp({ api }: { api: ShellApi }) {
             </div>
           ))}
         </div>
+        <h2 className="designs-h">Add-ons</h2>
+        <div className="designs-tiers">
+          {ADDONS.map((t) => (
+            <div className="designs-tier" key={t.name}>
+              <span className="designs-tier-top">
+                <span className="designs-tier-name">{t.name}</span>
+                <span className="designs-tier-price">{t.price}</span>
+              </span>
+              <span className="designs-tier-detail">{t.detail}</span>
+            </div>
+          ))}
+        </div>
+
+        {/*
+          The affiliate discount, which is the whole reason the prices went back
+          up. Stated as a rule rather than shown as a struck-through number on
+          every line: a price list that prints two figures for everything reads
+          as a sale, and this is a membership perk.
+        */}
+        <p className="designs-offer">
+          <strong>Half off all of it</strong> for BEASTY Affiliates. Every price above is the
+          standard rate; members pay 50%.
+        </p>
+
         <p className="designs-note">
           Fixed quote before anything starts, and nothing is charged through this app. If your job
-          does not look like one of these, say so and it gets priced on its own.
+          does not look like one of these, say so and it gets priced on its own. No design is out of
+          reach or too crazy — look at the website you are on.
         </p>
 
         <h2 className="designs-h">Work</h2>

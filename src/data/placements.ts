@@ -150,6 +150,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* "Mobile Bay Area", his words — no city, so no city page. */
   'beasty-services2-3': 'b_eaglepetgrooming',
 
+  /* ---- 2026-08-16 ---- */
+  /* No city — "it's a mobile service covering the Bay Area", his words. */
+  'beasty-services2-4': 'b_rocketmctow',
+  /*
+    Neither has a category on his list. Chiquo & Eva's is a Wagyu steakhouse and
+    Benicia's only American-shaped spot is already Benicia Grill; Cajun Crack N
+    is a seafood boil and there is no seafood on the page at all. Yellow sheets
+    rather than a wrong label, same as Eight Acres and Las Lomas — and his to
+    move if he would rather they were on page one.
+  */
+  'benicia-goods2-0': 'b_chiquoandeva',
+  'concord-goods2-0': 'b_cajuncrackn',
+
   /* ---- 2026-08-15 ---- */
   'san-jose-services-19': 'b_bloomballoon', //    Events — balloon design for parties
   'san-francisco-goods-8': 'b_brasabros', //      Wings — Peruvian rotisserie chicken

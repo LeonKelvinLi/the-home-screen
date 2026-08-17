@@ -537,7 +537,10 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                     Explore growing pages of BEASTY{' '}
                     <Gem size={13} /> affiliates and save money with your support.
                     <span className="dialer-domain-domain">
-                      BEASTYPAGES.com • Just a tap away<sup>™</sup>
+                      BEASTYPAGES.com{' '}
+                      <span className="dialer-domain-tagline">
+                        • Just a tap away<sup>™</sup>
+                      </span>
                     </span>
                   </div>
                 </>

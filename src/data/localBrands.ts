@@ -1021,6 +1021,21 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://www.glasshouzzusa.com/',
     orderUrl: 'https://glasshouzz.toast.site/order/glass-houzz-4575-livermore-outlets-drive',
     address: '4575 Livermore Outlets Drive, Livermore',
+    /*
+      From the operator's own "Glass Houzz x Biggie" sheet, quoted rather than
+      paraphrased — the free side is tied to a 14 inch or larger pizza and the
+      drink to a menu-item purchase, and both of those conditions are the whole
+      offer. An unqualified "free side" is not what either party agreed.
+
+      `mock` until Glass Houzz confirms it themselves. He has drafted this and
+      the page says so; the difference between a draft he wrote and a deal they
+      signed is exactly the difference this flag exists to keep visible.
+    */
+    offers: {
+      mock: true,
+      welcome: 'A free side of your choice with any 14 inch or larger pizza.',
+      loyalty: 'A free fountain drink with each menu item, any visit.',
+    },
     // Prices from their OWN Toast ordering site. DoorDash runs about 25% higher
     // on the same items, measured across fifteen of them, so it was not used.
     // Pizzas are sold by size; the 14 inch price is listed and named as such so

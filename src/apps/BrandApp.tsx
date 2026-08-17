@@ -6,6 +6,7 @@ import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { readableOn } from '../ios/contrast'
+import { isFavorite, toggleFavorite } from '../lib/favorites'
 import type { MenuItem } from '../data/brands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
@@ -17,6 +18,13 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const cart = useCart()
   const [sheetItem, setSheetItem] = useState<MenuItem | null>(null)
   const [shared, setShared] = useState(false)
+  /*
+    Read once at mount rather than on every render: localStorage is synchronous
+    and this screen re-renders on every scroll of the menu below it.
+  */
+  /* brand?.id, not brand.id — brandById can return undefined and the guard for
+     that is below these hooks, which cannot move above them. */
+  const [starred, setStarred] = useState(() => isFavorite(brand?.id ?? ''))
   const [activeCat, setActiveCat] = useState(0)
   const bodyRef = useRef<HTMLDivElement>(null)
 
@@ -65,11 +73,42 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             style={{ background: heroBg(brand.logo.bg), color: ink.fg }}
           >
             {/*
-              Share, on every business page, where a customer already is when
-              they decide someone else needs to see this. Top-right of the hero
-              rather than at the bottom of the menu: the moment you want to send
-              a place to somebody is the moment you arrive, not after scrolling
-              past nine prices.
+              STAR, beside Share — the operator's ask, and it closes a loop that
+              already half existed: Recent fills itself from what you open and a
+              star promotes a place into Favorites, which is how the two tabs on
+              the landing screen differ. Until now the only way to star anything
+              was from a Recent row, so a business you opened from search could
+              not be kept at all.
+            */}
+            <button
+              className={`brand-star${starred ? ' is-on' : ''}`}
+              onClick={() =>
+                setStarred(
+                  toggleFavorite({
+                    brandId: brand.id,
+                    name: brand.name,
+                    cuisine: brand.cuisine,
+                    /* The snapshot stores a COLOUR, not the logo object — see
+                       favorites.ts: the landing screen draws this list and
+                       pulling brand art in there would drag the whole catalogue
+                       into the first chunk a customer downloads. */
+                    color: brand.logo.bg.split('|')[0],
+                  }),
+                )
+              }
+              aria-pressed={starred}
+              aria-label={starred ? `Remove ${brand.name} from favourites` : `Save ${brand.name} to favourites`}
+              style={{ color: ink.fg }}
+            >
+              <svg viewBox="0 0 24 24" width="19" height="19" fill={starred ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+                <path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.6 9.7l5.8-.8Z" />
+              </svg>
+            </button>
+            {/*
+              Share, where a customer already is when they decide someone else
+              needs to see this. Top-right of the hero rather than the foot of
+              the menu: the moment you want to send a place to somebody is the
+              moment you arrive, not after scrolling past nine prices.
 
               Web Share gives the real iOS sheet; the clipboard is the fallback
               on a desktop browser that has none.

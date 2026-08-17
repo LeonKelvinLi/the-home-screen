@@ -61,17 +61,18 @@ const FRONT = layerAt(LAYERS - 1)
 /**
  * Corner radius as a proportion of whichever layer is drawn.
  *
- * ALL FOUR corners are rounded — "also make the top right corner with radius".
+ * The top right is a RIGHT ANGLE. Three other corners keep the app-icon
+ * rounding.
  *
- * It was squared for a day, on the earlier note to "square off the corner
- * here", and the reasoning then was that paper does not round off where it
- * folds. Round wins on the actual screen: this sits in a row of app icons, and
- * one square corner reads as a rendering fault rather than as a detail.
+ * This has been square, then round, then square again, and the operator's
+ * reason for landing here is the one that settles it: "pages from a book are
+ * square, plus the pages on the screen are square." The mark is a page out of
+ * the directory and the yellow sheets it stands for have square corners at that
+ * fold, so rounding it made the icon disagree with the thing it represents.
  *
- * The fold is CLIPPED to the sheet because of it. With a square corner the flap
- * ended exactly on the tile's edge; against an arc its outer point falls
- * outside the boundary, so it is clipped to the same path the tile draws and
- * conforms to the curve.
+ * The fold is still clipped to the sheet. It costs nothing against a right
+ * angle, and it means the corner can go back to an arc without the flap
+ * spilling over the edge again.
  */
 const RADIUS = 0.22
 
@@ -84,12 +85,15 @@ const RADIUS = 0.22
  * 45-degree diagonal. The fold is symmetric BY CONSTRUCTION — one number used
  * twice, no eyeballed control point that can drift, true at every size.
  *
- * 22.5% is HIS size, measured off public/icons/beasty-pages-mark.png rather
- * than chosen, and measuring it is what found the thing he was pointing at: his
- * fold reaches 22.3% along the top edge and 22.7% down the right. Four parts in
- * a thousand, invisible until you look for it, and he looked for it.
+ * 20.5%, up from 18.5 — "maybe make the triangle a tad bit bigger. Not much
+ * bigger." Two points, which is a tad.
+ *
+ * The original 22.5% was measured off his own artwork rather than chosen, and
+ * measuring it is what found the thing he had spotted by eye: his fold reached
+ * 22.3% along the top edge and 22.7% down the right. Four parts in a thousand,
+ * invisible unless you go looking, and he went looking.
  */
-const F = FRONT.size * 0.185
+const F = FRONT.size * 0.205
 
 /**
  * One layer as a single closed path, corner cut included.
@@ -111,8 +115,8 @@ function sheetPath(layer: { x: number; y: number; size: number }): string {
   const b = y + size
   return [
     `M ${x + rad} ${y}`,
-    `H ${r - rad}`,
-    `A ${rad} ${rad} 0 0 1 ${r} ${y + rad}`,
+    `H ${r}`,
+    `V ${y}`,
     `V ${b - rad}`,
     `A ${rad} ${rad} 0 0 1 ${r - rad} ${b}`,
     `H ${x + rad}`,

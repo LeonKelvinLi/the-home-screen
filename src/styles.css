@@ -4367,6 +4367,25 @@ textarea {
   color: var(--muted);
 }
 
+/*
+  The member discount. Yellow on the app's own dark card, because it is the one
+  line on this screen that is an offer rather than a fact — and it has to read
+  as belonging to BEASTY rather than to the price list above it.
+*/
+.designs-offer {
+  margin: 14px 16px 0;
+  padding: 12px 14px;
+  border-radius: var(--radius);
+  background: #141416;
+  color: #f6d800;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.designs-offer strong {
+  font-weight: 800;
+}
+
 .designs-note {
   margin: 10px 20px 0;
   font-size: 12px;
@@ -5991,10 +6010,13 @@ textarea {
   keypad, which is the same failure the width note above records from the other
   direction.
 */
+/* Bigger, and the pill below it smaller — "the icon might be a bit bigger and
+   the bar just a touch smaller if you can." 108 from 96 for the mark, and the
+   ceiling lifts with it or a short phone would cap away the change. */
 .dialer-biggie-mark {
   width: auto;
-  height: calc(96 * var(--u));
-  max-height: 14dvh;
+  height: calc(108 * var(--u));
+  max-height: 16dvh;
   aspect-ratio: 1;
   /* The drawn tile carries its own edge, so it does not need the object-fit
      the raster did — but the height ceiling still applies on a short phone. */
@@ -6933,6 +6955,34 @@ textarea {
   position: relative;
 }
 
+/*
+  The star sits to the LEFT of share, on the same 44pt circle. Both are absolute
+  in the hero, so without its own offset it would land exactly on top of the
+  share button — one control invisible under another.
+
+  Filled when it is on, outline when it is off, which is the only difference
+  between the two states: colour alone would put the whole signal on a hue, and
+  this button is over a different brand colour on every page.
+*/
+.brand-star {
+  position: absolute;
+  top: 10px;
+  right: 60px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  padding: 0;
+}
+
+.brand-star.is-on {
+  background: rgba(255, 255, 255, 0.28);
+}
+
 .brand-share {
   position: absolute;
   top: 10px;
@@ -7596,13 +7646,13 @@ textarea {
   display: inline-grid;
   grid-template-columns: 1fr 1fr;
   align-items: stretch;
-  min-height: 34px;
+  min-height: 31px;
   padding: 0;
   border: 0;
-  border-radius: 17px;
+  border-radius: 16px;
   background: #141416;
   box-shadow: 0 0 0 2px #141416;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.14em;
   cursor: pointer;
@@ -7620,7 +7670,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 14px;
+  padding: 0 12px;
 }
 
 .dialer-domain-half.is-light {
@@ -7699,6 +7749,17 @@ textarea {
   text-align: center;
   font-weight: 700;
   letter-spacing: 0.02em;
+  /* White for the domain, yellow kept for the motto — "BEASTYpages.com in
+     white might be better, just a tap away is fine in yellow." The domain is
+     the address and reads as information; the motto is the brand talking. */
+  color: #fff;
+  /* The hanging indent above is a paragraph rule and would push this line
+     1ch off its own centre. */
+  padding-left: 0;
+  margin-left: -1ch;
+}
+
+.dialer-domain-tagline {
   color: #f6d800;
 }
 

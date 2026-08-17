@@ -341,17 +341,16 @@ export function Wallpaper({ city, src }: { city: string | null; src?: string }) 
         with no z-index anywhere to disagree about.
       */}
       {/*
-        NOT on the yellow sheets. He asked for the black ground under the dock
-        pointing at iOS, and then, seeing it on a yellow page: "it's dark behind
-        the bottom 4 tabs, that should be yellow too." Both are right for their
-        own page. A photograph ends and the dock stands on something; a SHEET
-        does not end above the dock, it runs to the edge of the paper, and a
-        black bar across the bottom of one reads as the page being cut off.
+        The dock's ground, on EVERY page including the yellow sheets — "don't
+        forget to put the black wall on the bottom too."
 
-        `src` is only ever set by the yellow sheets, which is the same signal
-        wallpaperScrim keys off a few lines up.
+        It was taken off the sheets for a day on the reasoning that a page runs
+        to the edge of the paper rather than stopping above the dock. His call
+        is the other way and it is his mark: the black band is what the dock
+        stands on, and it reads as part of the furniture rather than as the page
+        being cut off. One rule everywhere is also simply one rule.
       */}
-      {!src && <div className="home-wallpaper-dock" />}
+      <div className="home-wallpaper-dock" />
     </div>
   )
 }
