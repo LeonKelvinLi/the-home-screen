@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { InstallGuide } from './InstallGuide'
 
 /**
  * The nudge to install — the coach mark the operator's old site showed: a
@@ -86,6 +87,8 @@ export function AddToHomeCoach() {
   const [shown, setShown] = useState(false)
   /** Someone is on it — focus inside, or a pointer over it. Pauses the clock. */
   const [held, setHeld] = useState(false)
+  /** The full guide, opened from the bubble rather than shown unasked. */
+  const [guide, setGuide] = useState(false)
 
   useEffect(() => {
     if (!eligible) return
@@ -158,7 +161,21 @@ export function AddToHomeCoach() {
         /* Any tap on the bubble is an answer: remembered, closed. */
         <div
           className="a2hs-coach"
-          onClick={dismiss}
+          /*
+            Tapping the bubble now OPENS THE GUIDE rather than only dismissing
+            it. The bubble named a button that has since moved — the operator
+            spotted it on his own phone — and a one-line prompt cannot both name
+            a control accurately across iOS versions and stay one line. So the
+            bubble asks, and the guide shows.
+
+            It is still remembered as answered either way: somebody who opens
+            the guide has engaged with the offer, and being asked again on the
+            next visit would be the same nag.
+          */
+          onClick={() => {
+            markSeen()
+            setGuide(true)
+          }}
           onFocusCapture={() => setHeld(true)}
           onBlurCapture={(e) => {
             // Only release when focus has actually left the bubble, not when
@@ -170,27 +187,20 @@ export function AddToHomeCoach() {
         >
           <img className="a2hs-icon" src="/apple-touch-icon.png" alt="" />
           <p className="a2hs-text">
-            Tap the{' '}
-            <svg
-              className="a2hs-share"
-              viewBox="0 0 24 24"
-              width="15"
-              height="15"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.9"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M8 8.5H6.75A1.75 1.75 0 0 0 5 10.25v8A1.75 1.75 0 0 0 6.75 20h10.5A1.75 1.75 0 0 0 19 18.25v-8A1.75 1.75 0 0 0 17.25 8.5H16" />
-              <path d="M12 14.5V3.8M8.6 6.9 12 3.5l3.4 3.4" />
-            </svg>
-            {/* The glyph carries the meaning for eyes; this carries it for a reader. */}
-            <span className="a2hs-sr">share icon</span> below, then{' '}
-            <strong>“Add to Home Screen.”</strong>
+            Keep BEASTY on your home screen. <strong>Tap to see how</strong> — three taps and it
+            opens like an app.
           </p>
-          <button className="a2hs-close" aria-label="Dismiss" onClick={dismiss}>
+          {/* stopPropagation, or closing the bubble would bubble up to the card
+              behind it and open the guide — the one control whose whole job is
+              "no thanks" would have done the opposite. */}
+          <button
+            className="a2hs-close"
+            aria-label="Dismiss"
+            onClick={(e) => {
+              e.stopPropagation()
+              dismiss()
+            }}
+          >
             <svg viewBox="0 0 26 26" width="26" height="26" aria-hidden="true">
               <circle cx="13" cy="13" r="13" fill="rgba(120, 120, 128, 0.14)" />
               <path
@@ -204,6 +214,7 @@ export function AddToHomeCoach() {
           </button>
         </div>
       )}
+      {guide && <InstallGuide onClose={() => setGuide(false)} />}
     </div>
   )
 }

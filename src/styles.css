@@ -7956,3 +7956,292 @@ textarea {
   min-height: 40px;
   align-self: stretch;
 }
+
+/* ---------- the install guide ---------- */
+
+/*
+  Shown when someone asks how to install, from the coach mark's own button. A
+  drawn phone rather than a screenshot of Safari: a screenshot ages the day
+  Apple ships a new toolbar, and it would also put a picture of somebody else's
+  interface inside ours.
+*/
+.ig-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  /*
+    Explicit, because this renders inside .a2hs-layer — which sets
+    pointer-events: none so an empty live region never swallows a tap on the
+    home screen. Inherited, that would have made the whole guide unclickable:
+    visible, animating, and dead to the finger.
+  */
+  pointer-events: auto;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.55);
+  animation: ig-fade 200ms ease both;
+}
+
+.ig {
+  width: min(340px, 100%);
+  max-height: 88dvh;
+  overflow: auto;
+  padding: 20px 18px 16px;
+  border-radius: 22px;
+  background: var(--paper, #fff);
+  color: var(--ink, #111);
+  box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.6);
+  animation: ig-rise 320ms cubic-bezier(0.32, 0.72, 0, 1) both;
+}
+
+.ig-title {
+  margin: 0 0 4px;
+  font-size: 19px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.ig-sub {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--muted, #6b6b70);
+}
+
+.ig-stage {
+  display: grid;
+  place-items: center;
+  padding: 10px 0 14px;
+}
+
+/* The phone. Its own aspect rather than a fixed height, so the drawing scales
+   with the card on a small screen instead of overflowing it. */
+.ig-phone {
+  position: relative;
+  width: 148px;
+  aspect-ratio: 148 / 250;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  background: #101014;
+  padding: 6px;
+  overflow: hidden;
+}
+
+.ig-screen {
+  position: absolute;
+  inset: 6px 6px 34px;
+  border-radius: 14px;
+  background: linear-gradient(160deg, #F7DE3A, #EFCB16);
+  overflow: hidden;
+}
+
+.ig-grid {
+  position: absolute;
+  inset: 0;
+  padding: 12px 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  align-content: start;
+  opacity: 0;
+  transition: opacity 320ms ease;
+}
+
+.ig-grid.is-in {
+  opacity: 1;
+}
+
+.ig-app {
+  aspect-ratio: 1;
+  border-radius: 9px;
+  background: rgba(0, 0, 0, 0.13);
+}
+
+/* Ours lands last and stays lit — the payoff of the whole sequence. */
+.ig-app.is-ours {
+  background: #141416;
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.35);
+}
+
+.ig-grid.is-in .ig-app.is-ours {
+  animation: ig-pop 420ms cubic-bezier(0.34, 1.56, 0.64, 1) 120ms both;
+}
+
+/* The share sheet, rising from the bottom of the drawn screen. */
+.ig-sheet {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 8px;
+  display: grid;
+  gap: 6px;
+  border-radius: 12px 12px 0 0;
+  background: #f4f4f6;
+  transform: translateY(100%);
+  transition: transform 380ms cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+.ig-sheet.is-up {
+  transform: none;
+}
+
+.ig-row {
+  height: 14px;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.ig-row.is-target {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  height: auto;
+  padding: 5px 6px;
+  background: #141416;
+  color: #f6d800;
+  font-size: 7.5px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.ig-row-mark {
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+  background: #f6d800;
+}
+
+.ig-bar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 22px;
+  margin-top: auto;
+  padding: 0 4px;
+}
+
+.ig-bar-url {
+  flex: 1;
+  height: 16px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.ig-bar-btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/*
+  The tap. A ring that expands and fades rather than a finger illustration —
+  a drawn hand is the wrong scale on a 148px phone and reads as clip art.
+*/
+.ig-bar-btn.is-tapped::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #f6d800;
+  animation: ig-tap 1200ms ease-out infinite;
+}
+
+.ig-steps {
+  margin: 0 0 14px;
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+  font-size: 13.5px;
+  line-height: 1.45;
+  color: var(--muted, #6b6b70);
+}
+
+/* The live step darkens rather than changing size: a list that reflows every
+   2.6 seconds is harder to read than one that does not move at all. */
+.ig-steps li.is-on {
+  color: var(--ink, #111);
+}
+
+.ig-steps em {
+  display: block;
+  font-style: normal;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.ig-done {
+  width: 100%;
+  padding: 12px;
+  border: 0;
+  border-radius: 14px;
+  background: #141416;
+  color: #f6d800;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@keyframes ig-fade {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes ig-rise {
+  from { opacity: 0; transform: translateY(16px) scale(0.97) }
+  to { opacity: 1; transform: none }
+}
+
+@keyframes ig-tap {
+  0% { transform: scale(0.7); opacity: 0 }
+  35% { opacity: 1 }
+  100% { transform: scale(1.5); opacity: 0 }
+}
+
+@keyframes ig-pop {
+  from { transform: scale(0.4); opacity: 0 }
+  to { transform: none; opacity: 1 }
+}
+
+/*
+  Reduced motion gets the same guide with nothing moving: the step loop is not
+  started, the sheet is already up and the grid already in, so all three states
+  are visible at once rather than one at a time. Nobody loses the instructions
+  to an accessibility setting.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .ig-scrim,
+  .ig,
+  .ig-grid.is-in .ig-app.is-ours {
+    animation: none;
+  }
+
+  .ig-sheet {
+    transform: none;
+    transition: none;
+  }
+
+  .ig-grid {
+    opacity: 1;
+    transition: none;
+  }
+
+  .ig-bar-btn.is-tapped::after {
+    animation: none;
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  .ig-steps li {
+    color: var(--ink, #111);
+  }
+}
