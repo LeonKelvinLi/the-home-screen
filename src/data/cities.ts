@@ -135,6 +135,26 @@ export const CITY_PAGES = [
   'San Rafael',
   'San Pablo',
   'Philadelphia',
+  /*
+    ARIZONA — the second region, not more of the first.
+
+    "All Arizona cities to create ASAP", his note, in his order: the Phoenix
+    metro from the centre outwards. He is talking to Bernie about running it,
+    and wants "a website release simultaneous from the Bay Area and AZ", so
+    these are pages he needs ready rather than spots already sold.
+
+    Every one is empty on purpose. Not one of them has a business yet, and an
+    empty numbered page is exactly what he sells from — 48 spots with nobody in
+    them is the pitch, not a gap.
+  */
+  'Phoenix',
+  'Scottsdale',
+  'Tempe',
+  'Mesa',
+  'Surprise',
+  'Goodyear',
+  'Chandler',
+  'Glendale',
 ] as const
 
 /**

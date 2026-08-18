@@ -6823,9 +6823,28 @@ textarea {
   color: #8a3d00;
 }
 
-.brand-offers.is-mock .brand-offer-head,
+/*
+  DARK INK ON THE MOCK CARD. It inherits white from the agreed variant, which
+  is white on a near-white plate — the offer text rendered at roughly 1.1:1 and
+  the condition line was invisible. An `opacity: 0.72` on top of that, meant to
+  make a mock read as provisional, was removing another quarter of what little
+  contrast was left.
+
+  Provisional is already carried by the dashed outline and the amber label, and
+  those are the parts the design intends to do that job. The words themselves
+  get full contrast: this is the exact block the operator puts in front of a
+  business owner to show them what an offer would look like.
+*/
+.brand-offers.is-mock .brand-offer-head {
+  color: #7a4a00;
+}
+
 .brand-offers.is-mock .brand-offer-body {
-  opacity: 0.72;
+  color: rgba(28, 28, 30, 0.92);
+}
+
+.brand-offers.is-mock .brand-offer-when {
+  color: rgba(60, 60, 67, 0.7);
 }
 
 /* ---------- a business's own clip on their page ---------- */

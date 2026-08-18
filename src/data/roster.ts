@@ -72,8 +72,45 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '1215 Polk St, San Francisco',
     logoTemplate: 'band', logoLines: ['MIDNITE', 'THEORIES'], logoFace: 'condensed',
   }),
-  seed('downtown-bbq', 'Downtown BBQ', 'Downtown BBQ', 'Barbecue', '#4A2313', {
+  /*
+    Filled out 2026-08-18 on a deadline of his: "I'm delivering to this
+    restaurant tomorrow and I want to show him of a potential offer. Can you
+    redo his icon and add his direction button."
+
+    Everything here comes from their own Instagram profile and their own logo
+    file, both of which he sent. It stays a roster seat — no menu or prices are
+    republished — but it is no longer a bare placeholder, because the placeholder
+    is what he would have been showing the owner.
+  */
+  seed('downtown-bbq', 'Downtown BBQ', 'Downtown BBQ', 'Barbecue', '#1E3055', {
+    icon: 'downtown-bbq',
     logoTemplate: 'badge', logoGlyph: 'flame', logoLines: ['DOWNTOWN BBQ'], logoFace: 'slab',
+    site: 'https://downtownbarbecue.co',
+    address: '610 3rd St, Santa Rosa, CA',
+    clip: {
+      href: 'https://www.instagram.com/reel/DYvfsi_TWcd/',
+      credit: 'Filmed by Downtown Barbecue',
+      platform: 'Instagram',
+    },
+    /*
+      His mock-up, headed "Example:" in his own note, so it carries `mock` —
+      he is showing the owner what an offer would look like, not reporting one
+      the owner has agreed.
+
+      "dessert" is spelled correctly here and "desert" in his note. That is the
+      one edit: he is putting this in front of the owner tomorrow, and a
+      misspelling on the pitch costs him more than the quote is worth.
+    */
+    offers: {
+      mock: true,
+      welcome: 'Get a FREE side & dessert with any $60+ meal purchase for your 1st visit!',
+      loyalty: 'Get a FREE $8 side or dessert with any $40+ meal purchase on any visit!',
+    },
+    /* Replaces the generic roster note, which said he was still gathering their
+       details — he has them now, and the page shows them. */
+    contactOnly:
+      'Dine-in, take out or delivery, 11am to 9pm daily, with happy hour from 3 to 6 — their ' +
+      'own words. The menu and prices are on their site rather than repeated here.',
   }),
   seed('eat', 'EAT', 'EAT', '', '#2F2F31', {
     logoInitials: 'EAT', logoFace: 'slab',

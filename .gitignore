@@ -16,3 +16,6 @@ dist
 
 # Python bytecode from the tools/ scripts
 __pycache__/
+
+# Throwaway verification scripts (need the repo node_modules to resolve)
+.verify/
