@@ -18,6 +18,8 @@ import {
   ROW_GAP_PHONE,
 } from './constants'
 import { DEFAULT_CITY } from '../lib/place'
+import { ICON_LUMA, WALLPAPER_TILT } from '../data/luma'
+import { wallpaperFor } from './Wallpaper'
 
 /** A home-screen page. `city` is set on the empty pages waiting for a city. */
 interface Page {
@@ -269,6 +271,61 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     /** How many numbered spots fit on one page of this city, at this size. */
     const slotsPerPage = cols * slotRows
 
+    /**
+     * How bright a tile is, 0 to 1.
+     *
+     * A real logo is measured from its own file at build time. A generated
+     * monogram has no file, so it is measured from the colour it is drawn on —
+     * which is very nearly the whole tile, the initials being a few percent of
+     * it.
+     */
+    const tileLuma = (app: AppDef): number => {
+      const file = /\/icons\/([a-z0-9-]+)\.webp/.exec(
+        (app.icon as { props?: { logo?: { imageUrl?: string } } })?.props?.logo?.imageUrl ?? '',
+      )
+      const measured = file && ICON_LUMA[file[1]]
+      if (measured !== undefined && measured !== null) return measured
+      const hex = /^#([0-9a-f]{6})/i.exec(app.tint ?? '')
+      if (!hex) return 0.5
+      const ch = (v: number) => {
+        const x = v / 255
+        return x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4
+      }
+      const n = parseInt(hex[1], 16)
+      return 0.2126 * ch(n >> 16) + 0.7152 * ch((n >> 8) & 255) + 0.0722 * ch(n & 255)
+    }
+
+    /**
+     * Put the dark tiles where the wallpaper is light.
+     *
+     * The operator's ask, in his words: "can you switch around those icons, so
+     * the dark icons are in the lighter space of the wallpaper." A black tile
+     * on the dark water at the foot of the Golden Gate photograph disappears;
+     * the same tile against the sky does not.
+     *
+     * ONLY ON A PAGE WHERE EVERY TILE IS A REAL BUSINESS. A city page is mostly
+     * empty numbered spots and those are categorised — services 1 is Barber in
+     * every city, which is the whole basis of "the number 18 spot in your city".
+     * Sorting those by brightness would shuffle the categories and break the
+     * thing he sells. The flagship BEASTY sheets are fully seated, so there is
+     * nothing there to scramble.
+     *
+     * Slot ids are untouched either way: this reorders what is DRAWN, not what
+     * anything is keyed by, so every placement still resolves to the same
+     * business.
+     */
+    const litOrder = (apps: AppDef[], city: string): AppDef[] => {
+      if (apps.some((a) => a.kind !== 'brand')) return apps
+      const slug = /\/wallpapers\/([a-z0-9-]+)\.webp/.exec(wallpaperFor(city))?.[1]
+      const tilt = (slug && WALLPAPER_TILT[slug]) || 0
+      /* A flat wallpaper has no lighter space to aim at, so his own order
+         stands rather than being churned for a difference nobody can see. */
+      if (Math.abs(tilt) < 0.03) return apps
+      return [...apps].sort((a, b) =>
+        tilt > 0 ? tileLuma(a) - tileLuma(b) : tileLuma(b) - tileLuma(a),
+      )
+    }
+
     // Paginate each group separately so a group always begins a fresh page.
     // A single flat list let page two's icons flow up onto page one whenever
     // the grid had room, which is exactly what the split exists to prevent.
@@ -312,7 +369,10 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             tile: slotTile,
             rowGap: slotGap,
             ...(slotPage.yellow ? { wall: '/wallpapers/_beasty-pages.webp', yellow: true } : {}),
-            apps: chunk.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${from + i}`)),
+            apps: litOrder(
+              chunk.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${from + i}`)),
+              cityName,
+            ),
           })
         }
       }
