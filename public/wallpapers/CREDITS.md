@@ -30,6 +30,8 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `pleasant-hill.webp` | Soldiers Monument, Boyd Road | Checkingfax, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `el-cerrito.webp` | El Cerrito from Albany Hill | Pi.1415926535, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
 | `milpitas.webp` | Milpitas from the air | formulanone, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
+| `san-rafael.webp` | Mission San Rafael Arcángel | Frank Schulenburg, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `goodyear.webp` | Goodyear Ballpark | NWSPhoenix, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 
 CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0
 CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0
@@ -47,6 +49,9 @@ so the cropped file is not itself copyleft.
 | `napa.webp` | Angele Restaurant, Napa riverfront, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `martinez.webp` | Benicia-Martinez Bridge | MARELBU, CC BY 3.0, via Wikimedia Commons — cropped and resized |
 | `pinole.webp` | Downtown Pinole | John Martinez Pavliga, CC BY 2.0, via Wikimedia Commons — cropped and resized |
+| `philadelphia.webp` | Philadelphia skyline at night | Andrew Parlette, CC BY 2.0, via Wikimedia Commons — cropped and resized |
+| `chandler.webp` | Village of Gila Springs, Chandler | Kevin Dooley, CC BY 2.0, via Wikimedia Commons — cropped and resized |
+| `glendale.webp` | State Farm Stadium, Glendale | James Larrison, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 
 CC BY 4.0: https://creativecommons.org/licenses/by/4.0
 CC BY 3.0: https://creativecommons.org/licenses/by/3.0
@@ -64,6 +69,7 @@ Credited anyway, because someone took these and it costs nothing to say so.
 | `palo-alto.webp` | Hoover Tower at night | Pexels Licence | Zetong Li |
 | `benicia.webp` | First Street, downtown Benicia | CC0 1.0 | Lhimec, via Wikimedia Commons |
 | `san-ramon.webp` | San Ramon City Hall | CC0 1.0 | Mx. Granger, via Wikimedia Commons |
+| `surprise.webp` | Surprise Lake | CC0 1.0 | RandomMainstream, via Wikimedia Commons |
 
 ## Generated, not photographed
 
@@ -111,7 +117,7 @@ the sky; it is what that photograph costs. Only Vacaville's own page pays it.
 **Read this before shipping to an app store or a new domain.**
 
 From 2026-08-14 the instruction is his and it is unambiguous: "always use the
-wallpaper from the link he sends." The seven files below are therefore the exact
+wallpaper from the link he sends." The eleven files below are therefore the exact
 photographs he linked, not substitutes for them. Every one is third-party
 copyrighted stock. None carries a licence that permits commercial reuse, and
 none was cleared with its owner.
@@ -125,6 +131,10 @@ none was cleared with its owner.
 | `crockett.webp` | Crockett | cdn.kqed.org — KQED, credited Getty |
 | `vacaville.webp` | Vacaville | cable-car-guy.com |
 | `san-pablo.webp` | San Pablo | rwjf.scene7.com — Robert Wood Johnson Foundation, credited to Bud Glick |
+| `phoenix.webp` | Phoenix | i.etsystatic.com — an Etsy seller's listing photograph |
+| `scottsdale.webp` | Scottsdale | admin.onlyinyourstate.com — Only In Your State |
+| `tempe.webp` | Tempe | i.pinimg.com — Pinterest, original photographer unknown |
+| `mesa.webp` | Mesa | i.pinimg.com — Pinterest, original photographer unknown |
 
 The realistic exposure is a takedown notice, and the realistic cost of clearing
 it later is one afternoon: each of these is one line in this file and one run of
@@ -168,3 +178,11 @@ was searched by category, by full text and by coordinates, and the gap is real
 rather than a search failure. Grading one of them to look like night would still
 be an adaptation, so the ShareAlike obligation would follow it. Shooting them is
 the only clean upgrade.
+
+The Arizona set added 2026-08-18 is daytime for the same reason and one more:
+the four he linked himself are the subjects he chose, and the rule is to use
+the link he sends. Glendale is the weakest of the ten — a road with the stadium
+behind it rather than the stadium — and it is there because no freely licensed
+photograph of the building itself, at a size a portrait crop survives, turned up
+under a licence that permits commercial use. It is honestly Glendale, which is
+the bar, but it is the one to replace first if he sends a link.
