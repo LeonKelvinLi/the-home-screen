@@ -752,6 +752,15 @@ export const ROSTER_SEED: LocalSeed[] = [
       welcome: 'Get a FREE 9 day trial on your 1st visit only!',
       loyalty: 'Get 10% off your monthly membership rate.',
     },
+    /* His own photograph of the gym, sent with "maybe add this to their page?"
+       — and the reason it works is his: "the logo is in the back[g]round". A
+       group shot under their own banner says what the place is in a way the
+       mark alone cannot. Cropped down, as he offered. */
+    photo: {
+      src: '/photos/jenuine-fitness.webp',
+      credit: 'Photo from Jenuine Fitness',
+      alt: 'Members of Jenuine Fitness gathered under the gym’s banner on the training floor',
+    },
     contactOnly:
       'Strength and endurance, Glutecamp, circuit training and a Hyrox training club, in their ' +
       'own words. Class times and membership rates are on their own site.',

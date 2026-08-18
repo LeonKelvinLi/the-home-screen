@@ -8341,3 +8341,32 @@ textarea {
     color: var(--ink, #111);
   }
 }
+
+/*
+  A business's own photograph on its page.
+
+  Full-bleed inside the card stack and capped by ASPECT rather than by height:
+  a tall group shot and a wide storefront both have to sit in the same column
+  without one of them taking over the screen, and object-fit keeps either from
+  being stretched to fit.
+*/
+.brand-photo {
+  margin: 14px 0 0;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(120, 120, 128, 0.12);
+}
+
+.brand-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+}
+
+.brand-photo figcaption {
+  padding: 8px 14px 10px;
+  font-size: 12px;
+  line-height: 1.35;
+  color: rgba(60, 60, 67, 0.6);
+}

@@ -121,6 +121,16 @@ export interface LocalSeed {
    * is required either way: it is their video, and whose it is gets said.
    */
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
+  /**
+   * One photograph of the business, on our own origin.
+   *
+   * Not a menu-item picture and not a logo — the room, the team, the queue
+   * outside. `credit` is required for the same reason a clip's is: it is their
+   * photograph, and whose it is gets said rather than assumed. `alt` is
+   * required because a decorative empty alt would be a lie about a photo that
+   * is carrying real information about the place.
+   */
+  photo?: { src: string; credit: string; alt: string }
 }
 
 /**

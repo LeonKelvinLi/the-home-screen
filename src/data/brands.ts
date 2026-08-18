@@ -114,6 +114,8 @@ export interface Brand {
   menu: MenuCategory[]
   /** Their own site, where one exists. */
   site?: string
+  /** One photograph of the place, ours to serve. See LocalSeed.photo. */
+  photo?: { src: string; credit: string; alt: string }
   /** A real ordering link (Toast, their own checkout), where one exists. */
   orderUrl?: string
   phone?: string
@@ -336,6 +338,8 @@ interface Seed {
    */
   quoteOnly?: string
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
+  /** One photograph of the place. See LocalSeed.photo. */
+  photo?: { src: string; credit: string; alt: string }
 }
 
 /** name, description, low bound in cents, printed range. */
@@ -654,6 +658,7 @@ const fromSeed = (s: Seed): Brand => ({
   siteNote: s.siteNote,
   quoteOnly: s.quoteOnly,
   clip: s.clip,
+  photo: s.photo,
   // "This week's favourites" is a food line. A service catalogue is not a
   // rotating special, and nothing about it changes weekly.
   //

@@ -266,6 +266,22 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           */}
           {brand.clip && <BrandClip clip={brand.clip} logo={brand.logo} />}
 
+          {/*
+            One photograph of the place, same slot and same reasoning as the
+            clip: it shows the room, which a name and a price list cannot, and
+            it sits after anything that qualifies what is above it.
+
+            The credit is drawn, not hidden in a title attribute — it is their
+            photograph. `alt` is real text rather than an empty decorative one,
+            because this picture is carrying information about the business.
+          */}
+          {brand.photo && (
+            <figure className="brand-photo">
+              <img src={brand.photo.src} alt={brand.photo.alt} loading="lazy" decoding="async" />
+              <figcaption>{brand.photo.credit}</figcaption>
+            </figure>
+          )}
+
           {/* Says plainly that this is a selection, not their whole menu —
               which it is not, for every partner but top dog. */}
           {/*
