@@ -712,6 +712,99 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Sent 2026-08-12 with the operator’s note that they need a website — the Square page ' +
       'above is what they have. Nothing else is listed yet.',
   }),
+  /*
+    Three more from the same 2026-08-18 evening, each sent as an Instagram
+    profile with the city and page written under it.
+  */
+  seed('stella-pastry', 'Stella Pastry & Cafe', 'Stella Pastry', 'Italian pastry', '#3E5C82', {
+    icon: 'stella-pastry',
+    logoTemplate: 'monogram', logoInitials: 'SP', logoFace: 'script',
+    /* The Yelp short link is what he sent; their own site was not in the
+       message and is not guessed at here. */
+    site: 'https://yelp.to/7H6kl4WghI',
+    siteCta: 'See them on Yelp',
+    address: '446 Columbus Ave, San Francisco',
+    contactOnly:
+      'Their own words from Instagram: the House of Sacripantina, authentic Italian pastry made ' +
+      'from scratch since 1942. No menu or prices are listed here yet.',
+  }),
+  /* "MOBILE SERVICE", in his message. The word `Mobile` in the descriptor is
+     what earns the ring on the grid and the line on their page — see MOBILE in
+     apps/registry — so it is in the descriptor rather than in a second list. */
+  seed('i-snapped-photo-booths', 'i.snapped Photo Booths', 'i.snapped', 'Mobile photo booth rental', '#B0208C', {
+    icon: 'i-snapped-photo-booths',
+    logoTemplate: 'monogram', logoInitials: 'iS', logoFace: 'condensed',
+    site: 'https://www.i-snappedphotobooths.com/',
+    contactOnly:
+      'Their own words: a woman-owned and Black-led photo booth rental for events, parties and ' +
+      'celebrations, serving the Bay Area and San Joaquin County. Nothing is priced here.',
+  }),
+  seed('jenuine-fitness', 'Jenuine Fitness', 'Jenuine Fit', 'Gym', '#1A1A1C', {
+    icon: 'jenuine-fitness',
+    logoTemplate: 'monogram', logoInitials: 'JF', logoFace: 'condensed',
+    site: 'https://jenuinefitness.com/',
+    /* "Please add directions" — this is the field the Directions button reads. */
+    address: '1085 Broadway Ave, San Pablo, CA 94806',
+    /* His words, and his own caveat with them: "This will be a mock offer until
+       I speak to my boy that owns it." */
+    offers: {
+      mock: true,
+      welcome: 'Get a FREE 9 day trial on your 1st visit only!',
+      loyalty: 'Get 10% off your monthly membership rate.',
+    },
+    contactOnly:
+      'Strength and endurance, Glutecamp, circuit training and a Hyrox training club, in their ' +
+      'own words. Class times and membership rates are on their own site.',
+  }),
+  /*
+    The operator's cousin's shop, sent 2026-08-18 with the address, the Booksy
+    booking link and both offers written out.
+
+    SEATED IN SAN PABLO, ADDRESSED IN RICHMOND, and the two are not a mistake.
+    12246 San Pablo Ave is a Richmond address and Richmond already has a page;
+    he asked for "his own city of San Pablo, CA" anyway, which is his call
+    about how he sells that street. The page draws the real address, so a
+    customer navigating there is never sent to the wrong town.
+
+    contactOnly because Booksy holds the prices and they are not republished
+    here — a haircut price copied across and left to go stale is worse than a
+    booking link that is always current.
+  */
+  seed('magic-juans', 'Magic Juan’s Barbershop', 'Magic Juan’s', 'Barbershop', '#A81E27', {
+    icon: 'magic-juans',
+    logoTemplate: 'monogram', logoInitials: 'MJ', logoFace: 'script',
+    site: 'https://booksy.com/en-us/instant-experiences/widget/249276?instant_experiences_enabled=true&id_ix=true&utm_source=ig&utm_medium=social&utm_content=link_in_bio',
+    siteCta: 'Book on Booksy',
+    siteNote: 'Cuts, prices and availability are on their Booksy page.',
+    address: '12246 San Pablo Ave, Richmond, CA 94805',
+    /*
+      THE ONLY OFFER IN THE APP THAT IS NOT MOCK.
+
+      Every other one carries `mock` because the operator wrote it and the
+      business has not signed it. He said the opposite about this one, in as
+      many words: "This offer is real and will be live once the website is
+      done. This will be the lead example I will use when I recruit
+      barbershops." It is his cousin's shop and he has spoken to him.
+
+      Quoted from his SECOND message, not his first — he sent a simpler pair at
+      02:32 and then "I just edited the offers a bit" nine minutes later. The
+      tiers are the offer: an adult rate and a youth/student rate are two
+      different promises, and collapsing them into one would misprice it.
+    */
+    offers: {
+      welcome:
+        'Get $15 off an Adult haircut and/or $10 off Youth & Student haircut on your 1st ' +
+        'booksy appointment only.',
+      loyalty:
+        'Get $10 off an Adult haircut or $5 off Youth and/or Student haircut on any booksy ' +
+        'appointment anytime.',
+    },
+    /* The stock "nothing here is a claim about them" line cannot be used on
+       this one: the offer above it IS a claim, and a real one he has agreed
+       with the shop. It says what is actually missing instead. */
+    contactOnly:
+      'Booking, prices and availability are on their Booksy page — no prices are listed here.',
+  }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
@@ -780,9 +873,10 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_drcomicsmrgames', //       16 Dr. Comics and Mr. Games
   'b_rosebarycarcare', //       17 Rosebary Car Care
   'b_highscores', //            18 High Scores arcade
-  /* His #19 repeats Ding DongToGo, already seated at #1. Open until he names
-     a different business for it. */
-  null,
+  /* His #19 repeated Ding DongToGo, already seated at #1, and was left open
+     until he named a different business for it. He did, on 2026-08-18: "Move
+     LOL catering to BEASTY Services". */
+  'b_lolcatering', //           19 LOL Catering
   'b_andrewshinlaw', //         20 ANDREW SHIN injury, attorney
   'b_winterwhitecarwash', //    21 Winter White mobile Car Wash
   'b_interchiro', //            22 Inter Chiro

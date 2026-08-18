@@ -114,7 +114,11 @@ export const SERVICE_CATEGORIES: SlotCategory[] = [
   { n: 12, name: 'Local print shop', label: 'Print' },
   { n: 13, name: 'Photo and video', label: 'Photo/Video' },
   { n: 14, name: 'Florist', label: 'Flowers' },
-  { n: 15, name: 'Pet grooming', label: 'Grooming' },
+  /* Widened from "Pet grooming" to seat a dog walker without renumbering the
+     list — the same move n=18 on the goods page made for a breeder. The label
+     is unchanged because a label is only ever read on an UNCLAIMED spot: a
+     seated business draws its own name. */
+  { n: 15, name: 'Pet grooming and walking', label: 'Grooming' },
   { n: 16, name: 'Veterinary clinic', label: 'Vet' },
   { n: 17, name: 'Massage', label: 'Massage' },
   { n: 18, name: 'DJ', label: 'DJ' },

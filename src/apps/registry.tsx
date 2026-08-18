@@ -18,6 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
+  | 'supply'
 
 export interface AppDef {
   id: string
@@ -34,6 +35,14 @@ export interface AppDef {
   statusDark?: boolean
   /** A business that travels to the customer. See MOBILE below. */
   mobile?: true
+  /**
+   * Jump to a home-screen PAGE rather than open a window.
+   *
+   * The dock's BEASTY set points at the flagship sheets, and those are pages of
+   * the home screen itself — there is no window to open. Named by the city a
+   * Page carries, which is what HomeScreen already matches on for Search.
+   */
+  page?: string
 }
 
 /**
@@ -397,6 +406,48 @@ export const PROFILE_APP: AppDef = {
   tint: '#141416',
 }
 
+/** The BEASTY Supply Co tile: his Shopify store, in the dock's BEASTY set. */
+const SupplyIcon = () => (
+  <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+    <rect width="100" height="100" fill="#111" />
+    <path
+      d="M28 36h44l4 40H24l4-40Z"
+      fill="none"
+      stroke="#FFE63D"
+      strokeWidth="6"
+      strokeLinejoin="round"
+    />
+    <path d="M39 43V32a11 11 0 0 1 22 0v11" fill="none" stroke="#FFE63D" strokeWidth="6" strokeLinecap="round" />
+  </svg>
+)
+
+export const SUPPLY_APP: AppDef = {
+  id: 'sys.supply',
+  name: 'BEASTY Supply Co',
+  label: 'Supply Co',
+  icon: <SupplyIcon />,
+  kind: 'system',
+  systemKey: 'supply',
+  tint: '#111111',
+}
+
+/**
+ * BEASTY · Goods, the flagship sheet — a PAGE, not a window.
+ *
+ * It carries `page` rather than a systemKey because there is nothing to open:
+ * the destination is the first page of the home screen the dock is sitting on.
+ */
+export const GOODS_APP: AppDef = {
+  id: 'sys.goods',
+  name: 'BEASTY Goods',
+  label: 'BSTY Goods',
+  icon: <BrandLogo logo={{ imageUrl: '/apple-touch-icon.png', bg: '#FFE63D', fg: '#111' }} fill />,
+  kind: 'system',
+  tint: '#FFE63D',
+  statusDark: true,
+  page: 'BEASTY',
+}
+
 export const ALL_APPS: AppDef[] = [
   ...BRAND_APPS,
   ...SYSTEM_APPS,
@@ -407,6 +458,8 @@ export const ALL_APPS: AppDef[] = [
   MEMBER_CARD_APP,
   CALENDAR_APP,
   PROFILE_APP,
+  SUPPLY_APP,
+  GOODS_APP,
 ]
 
 /*
@@ -430,8 +483,6 @@ export const appById = (id: string) =>
  * That is the point of the split, not a regression.
  */
 
-const CURIO = BRAND_APPS.filter((a) => a.id === 'b_curio')
-
 /*
   The old page one — every orderable kitchen in catalogue order — is gone, by
   the operator's instruction: "the home screen will have just BEASTY • GOODS
@@ -446,20 +497,48 @@ const CURIO = BRAND_APPS.filter((a) => a.id === 'b_curio')
 */
 const SEATED = new Set(Object.values(CITY_PLACEMENTS))
 const OTHER_BRANDS = BRAND_APPS.filter((a) => {
-  if (a.id === 'b_curio') return false
   if (SEATED.has(a.id)) return false
   return !brandById(a.id)?.rosterOnly
 })
 
+/*
+  THE SYSTEM PAGE IS BEING EMPTIED, on his 2026-08-18 instruction: "I'm slowly
+  trying to get rid of this page." He sent it back with red crosses on thirteen
+  tiles, and they leave by three different routes.
+
+  MOVED TO THE DOCK — Profile, Help, Account and Settings. Not deleted: the dock
+  is on every page and a grid tile is on one, so these are more reachable now
+  than they were. See DOCK_SETS.
+
+  MOVED TO A CITY — Hybrid Workz, Baked Blooms, Boba, Waffles & Cream, LOL
+  Catering, Noctilucente and Alli's Dog Walking, each to the page he named.
+  Nothing here excludes them: this page draws every brand WITHOUT a seat, so
+  giving them one in data/placements.ts is what takes them off it.
+
+  RETIRED — the four in RETIRED below, crossed out with nowhere to go.
+
+  Cart, Orders, Rewards and Search are gone from the grid outright. Cart and
+  Orders still OPEN — checkout pushes you to Orders, and the cart bar appears
+  when there is something in it — they simply no longer hold a tile of their
+  own. Search is the pill above the dock and always was.
+*/
+const RETIRED = new Set([
+  'b_wildforkfoods',
+  'b_bossburgers',
+  /* The brand keeps its page and its dock tile in the BEASTY set; only the
+     grid tile goes. */
+  'b_beastyh20',
+  'b_sharescan',
+])
+
+/*
+  Curio's standing "stays LAST" instruction is moot now: it has a seat on the
+  BEASTY services sheet, so it is not on this page at all. The special case that
+  held it back from OTHER_BRANDS goes with it — a seated brand belongs to its
+  seat, and keeping the exception would have drawn Curio twice.
+*/
 export const APP_GROUPS: AppDef[][] = [
-  // Curio stays LAST, by the operator's standing instruction. PROFILE beside
-  // MEMBERS: the two pages about the person rather than about a business.
-  /*
-    DESIGNS_APP is not here any more: it moved into the dock, and the dock is
-    on every page. Phone, Calendar and Share are absent for the same reason —
-    an app that is always on screen does not also take a grid tile.
-  */
-  [PROFILE_APP, MEMBERS_APP, ...OTHER_BRANDS, ...SYSTEM_APPS, ...CURIO],
+  [...OTHER_BRANDS.filter((a) => !RETIRED.has(a.id))],
 ]
 
 /** Flat order, kept for anything that just wants every home-screen app. */
@@ -479,27 +558,47 @@ export const ORDERED_APPS: AppDef[] = APP_GROUPS.flat()
  * Share & Scan takes that slot instead. These lookups use a non-null assertion,
  * so a dock entry naming a slug that no longer exists crashes the home screen.
  */
-export const DOCK_APPS: AppDef[] = [
-  PHONE_APP,
-  /*
-    BEASTY Designs takes the second slot, by the operator's instruction, and
-    Calendar shifts right into the one Orders held.
+const byId = (id: string): AppDef => {
+  const found = BRAND_APPS.find((a) => a.id === id)
+  /* Loud rather than blank: a dock entry naming a brand that no longer exists
+     would otherwise draw an empty square and open nothing. */
+  if (!found) throw new Error(`DOCK_SETS names a brand that does not exist: ${id}`)
+  return found
+}
 
-    ORDERS COMES OUT OF THE DOCK. It is the screen a customer watches while
-    food they have already paid for is being made, so I flagged the cost of
-    burying it before doing this: it is now one swipe away on the system page
-    instead of always visible. What keeps that acceptable is that the two
-    moments you actually need it still hand it to you — the confirmation
-    screen's own button opens it (CheckoutApp), and an order in progress keeps
-    its bar on screen. A returning customer with nothing cooking loses nothing
-    but a shortcut.
-  */
-  DESIGNS_APP,
-  CALENDAR_APP,
-  /*
-    Share & Scan keeps the fourth slot: a QR that takes anyone who scans it to
-    the site, rather than the deli menu that used to sit under this name.
-  */
-  SHARE_APP,
+/**
+ * The dock, in three sets of four, switched by the round buttons beside Search.
+ *
+ * His design, sent 2026-08-18: "Add 3 round buttons to the right of Search bar
+ * on Home Screen. Default is 1. When 2 or 3 is pressed it will flip to that set
+ * of 4 icons."
+ *
+ * This is what empties the system page. Profile, Help, Account and Settings all
+ * used to be tiles on it and he crossed every one of them out — not because
+ * they are going away, but because the dock is on EVERY page and a grid tile is
+ * only on one. Twelve slots that follow the customer around are worth more than
+ * twelve that have to be found.
+ *
+ * A set is four, always. The row is a fixed piece of furniture at the bottom of
+ * the screen, and a set of three or five would resize the thing that is meant
+ * to be the one constant on the page.
+ */
+export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
+  { key: 'you', name: 'Your stuff', apps: [PROFILE_APP, DESIGNS_APP, CALENDAR_APP, SHARE_APP] },
+  {
+    key: 'beasty',
+    name: 'BEASTY',
+    /* His four: BSTY Goods, BEASTYh2o, EAT (coming soon), BEASTYSupplyCo.
+       EAT carries no "coming soon" on the tile because the dock hides labels —
+       its own page already says he is still gathering the details. */
+    apps: [GOODS_APP, byId('b_beastyh20'), byId('b_eat'), SUPPLY_APP],
+  },
+  { key: 'help', name: 'Help', apps: [PHONE_APP, ...SYSTEM_APPS.filter((a) =>
+      ['sys.account', 'sys.help', 'sys.settings'].includes(a.id))
+      .sort((a, b) => ['sys.account', 'sys.help', 'sys.settings'].indexOf(a.id) -
+        ['sys.account', 'sys.help', 'sys.settings'].indexOf(b.id))] },
 ]
+
+/** The set the home screen opens on — his "Default is 1". */
+export const DOCK_APPS: AppDef[] = DOCK_SETS[0].apps
 

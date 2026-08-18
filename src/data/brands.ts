@@ -726,38 +726,22 @@ const fromSeed = (s: Seed): Brand => ({
  */
 export const BRANDS: Brand[] = [
   /*
-    Roster seeds ride the same mapping as researched brands but carry
-    `rosterOnly`, which keeps them off the catalogue page in the registry —
-    they are reachable through the flagship BEASTY pages that seat them, and
-    through search. They are name-only placeholders by the operator's explicit
-    instruction, and each of their pages says so.
+    Roster seeds and researched seeds are BOTH LocalSeed, so they go through one
+    mapping. They used to have two, listing the passthrough fields separately,
+    and the drift was not hypothetical: `address` was missing from the roster
+    list for weeks while X Noodles carried a published street address that never
+    reached its page, `offers` was missing until Breaktime Tea's happy hour
+    rendered nowhere, and `siteCta` was missing when Magic Juan's "Book on
+    Booksy" button came out reading "Open their page".
+
+    Three of the same bug in one file is a sign the shape is wrong rather than
+    that people keep being careless, so there is one list now. A roster brand
+    differs from a researched one by `rosterOnly` and by nothing else.
   */
-  ...ROSTER_SEED.map((s) => ({
-    ...fromSeed(s as unknown as Seed),
-    site: s.site,
-    phone: s.phone,
-    /*
-      `address` was missing from this list, and the omission was silent: X
-      Noodles has carried a published street address in roster.ts since it was
-      added and none of it ever reached the brand. It matters more now that a
-      page draws a Directions button from exactly this field — without it the
-      three roster businesses that DO publish an address would be the only ones
-      on the app that could not be navigated to.
-    */
-    address: s.address,
-    /*
-      Offers reach a roster brand too, which they did not before. The operator
-      asked for Breaktime Tea's real happy hour to stand as a worked example of
-      a loyalty offer, and that business is a roster seat — so without this the
-      offers were set in the data and rendered nowhere. They still carry `mock`,
-      which is what puts the caveat on the page: no roster business has agreed
-      anything.
-    */
-    offers: s.offers,
-    contactOnly: s.contactOnly,
-    rosterOnly: true,
-  })),
-  ...LOCAL_SEED.map((s) => ({
+  ...[
+    ...ROSTER_SEED.map((s) => [s, true] as const),
+    ...LOCAL_SEED.map((s) => [s, false] as const),
+  ].map(([s, rosterOnly]) => ({
     ...fromSeed(s as unknown as Seed),
     site: s.site,
     orderUrl: s.orderUrl,
@@ -771,6 +755,7 @@ export const BRANDS: Brand[] = [
     perk: s.perk,
     email: s.email,
     offers: s.offers,
+    ...(rosterOnly ? { rosterOnly: true as const } : {}),
   })),
   ...SEED.map(fromSeed),
 ]

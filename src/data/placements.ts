@@ -134,6 +134,54 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'pleasanton-services-0': 'b_solasalons', //     Barber and salon
 
   /*
+    2026-08-18. Five moves off the system page, each with the city and the page
+    written next to it in his own message, plus his cousin's shop opening San
+    Pablo. Moving them here is what takes them OFF that page: the grid draws
+    every brand WITHOUT a seat, so a placement is the removal.
+  */
+  'fremont-services-5': 'b_hybridworkz', //        Mechanics and smog — "Toyota hybrid service"
+  'san-rafael-goods-12': 'b_bakedblooms', //       Bakery
+  'richmond-goods-11': 'b_wafflescream', //        Ice cream shop
+  'richmond-goods-14': 'b_boba', //                Boba shop
+  /* Dog walking, on the spot widened from "Pet grooming" to hold it — see
+     data/slots.ts. Philadelphia exists as a page from today. */
+  'philadelphia-services-14': 'b_allisdogwalking', // Pet grooming and walking
+  /* Magic Juan's, the operator's cousin. Seated in San Pablo at his request;
+     the shop's real address is in Richmond and its page shows that. */
+  'san-pablo-services-0': 'b_magicjuans', //       Barber and salon
+  /*
+    Noctilucente onto the BEASTY services sheet, on "feel free to move your app
+    to BEASTY • Services". The numbered Services page had exactly one opening
+    (#19) and LOL Catering took it, so this lands on the yellow sheet behind
+    it — the nearest seat to what he asked for. Say the word and they swap.
+  */
+  'beasty-services2-5': 'b_noctilucente',
+  /*
+    Curio joins it, which is what finally empties the system page.
+
+    His two sentences are "feel free to move your app to BEASTY • Services" and
+    "you can eliminate your website since your working under BEASTYdesigns", and
+    BOTH of Leon's tiles could be either one: Curio is literally an app, and
+    Noctilucente is the studio with the website. Rather than guess which is
+    moved and which is deleted, both move and neither is deleted — the page ends
+    up empty either way, and nothing that would have to be rebuilt is thrown
+    away on a coin flip. One word from him settles it.
+  */
+  'beasty-services2-6': 'b_curio',
+  /*
+    The 02:47-03:03 run, three more businesses with the page written under each.
+
+    Stella Pastry takes ITALIAN rather than Bakery: San Francisco's bakery spot
+    is already U Dessert Story's, and Stella describes itself as authentic
+    Italian pastry, so the spot it does fit is on the page he named.
+  */
+  'san-francisco-goods-5': 'b_stellapastry', //       Italian
+  'san-francisco-services-12': 'b_isnappedphotobooths', // Photo and video — mobile
+  /* Jenuine Fitness onto the BEASTY services sheet, the page he named. The
+     numbered page is full, so this is the yellow sheet behind it. */
+  'beasty-services2-7': 'b_jenuinefitness',
+
+  /*
     His friend's six, on the flagship yellow sheets by his own instruction:
     "place them all on the yellow pages of BEASTY • Goods & Services."
 

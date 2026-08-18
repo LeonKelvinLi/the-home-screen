@@ -117,6 +117,24 @@ export const CITY_PAGES = [
     quietly mislead a business owner reading it in Nevada.
   */
   'Las Vegas',
+  /*
+    2026-08-18. Four opened in one message, three of them by a business he
+    asked to have moved onto a page that did not exist yet: Hybrid Workz to
+    Fremont, Baked Blooms to San Rafael, Alli's Dog Walking to Philadelphia.
+
+    San Pablo is his cousin's — Magic Juan's Barbershop, at 12246 San Pablo
+    Ave. The shop's own address is in RICHMOND, and Richmond already has a
+    page; he asked for San Pablo anyway ("would you mind putting him on his
+    own city of San Pablo, CA"), which is his call to make about how he sells
+    the street. The address on the business's page stays the real one.
+
+    Philadelphia is the second city outside the Bay Area and the second
+    outside California — see the note on Las Vegas above.
+  */
+  'Fremont',
+  'San Rafael',
+  'San Pablo',
+  'Philadelphia',
 ] as const
 
 /**

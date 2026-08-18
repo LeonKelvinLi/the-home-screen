@@ -4,7 +4,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, CITY_PAGES, DOCK_APPS, appForSlot } from '../apps/registry'
+import { APP_GROUPS, CITY_PAGES, DOCK_SETS, appForSlot } from '../apps/registry'
 import { SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
@@ -65,6 +65,14 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   const cart = useCart()
   const screen = useScreenSize()
   const [page, setPage] = useState(0)
+  /*
+    Which of the three dock sets is showing — his "Default is 1".
+
+    Deliberately NOT persisted. The dock is the one fixed thing on the screen,
+    and a customer who left it on Help last week should not come back to a home
+    screen whose bottom row is a support menu.
+  */
+  const [dockSet, setDockSet] = useState(0)
   const [dragging, setDragging] = useState(false)
   /*
     The finger's offset lives in a REF and is written straight to the node, not
@@ -878,10 +886,38 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           </svg>
           Search
         </button>
+
+        {/*
+          His three round buttons, right of Search: "Default is 1. When 2 or 3
+          is pressed it will flip to that set of 4 icons."
+
+          The DIGIT is what he drew and it is what the dock is switched by, so
+          the digit is what is printed. It carries no meaning on its own, which
+          is why each button's accessible name is the set it opens — a reader
+          hears "BEASTY, dock set 2 of 3" rather than "2".
+
+          Not tabs. A tab panel implies the thing below is the panel, and the
+          thing below is the dock — furniture that is present on every page and
+          never disappears. These are three toggles over one row, so that is
+          what they are announced as.
+        */}
+        <div className="dock-switch" role="group" aria-label="Dock">
+          {DOCK_SETS.map((set, i) => (
+            <button
+              key={set.key}
+              className={`dock-switch-btn${i === dockSet ? ' is-on' : ''}`}
+              aria-pressed={i === dockSet}
+              aria-label={`${set.name}, dock set ${i + 1} of ${DOCK_SETS.length}`}
+              onClick={() => setDockSet(i)}
+            >
+              {i + 1}
+            </button>
+          ))}
+        </div>
       </div>
 
       <div className="dock">
-        {DOCK_APPS.map((app) => (
+        {DOCK_SETS[dockSet].apps.map((app) => (
           <AppIcon
             key={app.id}
             icon={app.icon}
@@ -890,7 +926,16 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             badge={badgeFor(app.id)}
             size={screen.iconSize}
             hideLabel
-            onOpen={(rect) => onOpen(app.id, rect)}
+            /*
+              A dock entry carrying `page` is a PAGE, not a window — BSTY Goods
+              is the flagship sheet of the very screen the dock sits on, so
+              opening a window over it would cover the thing being asked for.
+            */
+            onOpen={(rect) => {
+              if (!app.page) return onOpen(app.id, rect)
+              const i = pages.findIndex((pg) => pg.city === app.page)
+              if (i >= 0) goToPage(i)
+            }}
           />
         ))}
       </div>

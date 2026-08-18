@@ -145,3 +145,32 @@ export function ContactApp({ api }: { api: ShellApi }) {
     </AppChrome>
   )
 }
+
+/**
+ * BEASTY Supply Co — his Shopify store, in the dock's BEASTY set.
+ *
+ * THE STORE URL HAS NOT BEEN SENT. He named the tile "BEASTYSupplyCo (Shopify)"
+ * and nothing else, and there is no Shopify address anywhere in this repo. So
+ * this says so rather than guessing one: a plausible-looking myshopify link
+ * that 404s is worse than an honest empty screen, because a customer who taps a
+ * dead store blames the store.
+ *
+ * Same treatment PhoneApp gives the unpublished phone number. Send the link and
+ * this screen becomes a redirect with no other change.
+ */
+export function SupplyApp({ api }: { api: ShellApi }) {
+  return (
+    <AppChrome title="BEASTY Supply Co" onBack={api.closeApp} tint="#111111">
+      <div className="plain">
+        <p>
+          BEASTY Supply Co is the operator&rsquo;s own shop &mdash; merch and supplies, run on
+          Shopify, separate from the kitchens and services on the home screen.
+        </p>
+        <p className="plain-note">
+          The store link has not been published yet, so there is nothing to open from here. Every
+          other tile in this dock set works.
+        </p>
+      </div>
+    </AppChrome>
+  )
+}

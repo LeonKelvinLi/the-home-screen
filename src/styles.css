@@ -664,12 +664,26 @@ textarea {
 
 /*
   Keeps the Search pill on the screen's centre line rather than shunting it
-  right by half the back button. iOS centres that pill and the eye notices when
-  it is off, so the back button hangs to its left instead of pushing it.
+  right by the furniture beside it. iOS centres that pill and the eye notices
+  when it is off.
+
+  The spacer used to be 34px on the RIGHT, balancing the back button on the
+  left. The three dock buttons now sit on the right and are the widest piece of
+  furniture in the row, so the balance flipped: the spacer moved to the left and
+  is sized to make what is left of Search equal what is right of it. Derived
+  from --switch-w rather than typed as a number, so resizing the buttons cannot
+  silently pull the pill off centre.
+
+    left  = spacer + gap + back(34) + gap
+    right = gap + switch group
 */
-.spotlight-row::after {
+.spotlight-row {
+  --switch-w: 88px;
+}
+
+.spotlight-row::before {
   content: '';
-  width: 34px;
+  width: calc(var(--switch-w) - 34px - 8px);
   flex: 0 0 auto;
 }
 
@@ -2356,6 +2370,88 @@ textarea {
   border-radius: 11px;
   background: rgba(120, 120, 128, 0.14);
   color: var(--muted);
+}
+
+/*
+  The three dock buttons. Same glass as the Spotlight pill beside them, because
+  they are the same kind of thing: chrome that sits over a photograph and must
+  stay legible on any of forty-five of them.
+
+  26px each with a 5px gap comes to the 88px --switch-w above. Their TAP TARGET
+  is padded out to 44px with a pseudo-element rather than by growing the circle
+  — three 44px circles in a row would be wider than the Search pill and would
+  read as the main control on the screen, which they are not.
+*/
+.dock-switch {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 0 0 auto;
+  width: var(--switch-w);
+}
+
+.dock-switch-btn {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
+  color: rgba(255, 255, 255, 0.82);
+  font: 600 13px/1 -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 140ms ease, color 140ms ease, transform 140ms ease;
+}
+
+/* The 44px target, invisible, centred on the 26px circle. */
+.dock-switch-btn::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+.dock-switch-btn:active {
+  transform: scale(0.9);
+}
+
+/* The set you are on, filled rather than outlined — the same solid-on-glass
+   treatment the page dots use for the current page. */
+.dock-switch-btn.is-on {
+  background: rgba(255, 255, 255, 0.92);
+  color: #1c1c1e;
+  box-shadow: none;
+}
+
+/*
+  On the yellow sheets, the same flip the Spotlight pill takes: white-on-glass
+  composites to under 3:1 over that paper.
+*/
+.home.has-yellow-page .dock-switch-btn {
+  /* DARK PLATE, WHITE INK — the same flip the Spotlight pill takes beside it.
+     The first attempt kept dark ink and only tinted the plate, which put
+     near-black text on a dark wash over yellow: the two inactive buttons read
+     as smudges while the active one was crisp. */
+  background: rgba(20, 20, 22, 0.5);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: none;
+}
+
+.home.has-yellow-page .dock-switch-btn.is-on {
+  background: rgba(20, 20, 22, 0.92);
+  color: #ffffff;
 }
 
 .search-field input {
