@@ -191,6 +191,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'brentwood-goods-10': 'b_houseofsilog', //   Filipino food
   'beasty-goods2-4': 'b_smashburgersbros',
   'beasty-services2-8': 'b_interchiro',
+  /* 1-Up Retro opens Sacramento. Toy shop is the closest of his 24 — a game
+     store is not on the list, and widening a category for one seat would
+     renumber a page he sells by number. */
+  'sacramento-goods-23': 'b_1upretro', //      Toy shop
 
   /*
     His friend's six, on the flagship yellow sheets by his own instruction:

@@ -155,6 +155,13 @@ export const CITY_PAGES = [
   'Goodyear',
   'Chandler',
   'Glendale',
+  /*
+    Sacramento, 2026-08-19, opened by 1-Up Retro on J Street. He met a friend in
+    Folsom the same week who "might be in charge of recruiting all of Sacramento
+    & Folsom area when we're ready to launch" — this is the first seat in that
+    region rather than a page held open for it.
+  */
+  'Sacramento',
 ] as const
 
 /**

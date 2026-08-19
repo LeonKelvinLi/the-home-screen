@@ -958,6 +958,27 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Murals, logos and custom art across the Bay Area and the 209, by Franklin Guardado. ' +
       'Murals start around $1.2k, his own figure. Quotes are by enquiry — he publishes no site.',
   }),
+  /*
+    1-Up Retro, Sacramento — "Sacramento • Goods", 2026-08-19.
+
+    Their icon is their own artwork RESTACKED, on his ask: "can you possibly
+    reconfigure there icon button to have the 1up centered above RETRO". Their
+    lockup runs side by side, which is right on a shopfront and wrong in a
+    square — horizontal, the whole thing has to shrink until neither half reads.
+    Nothing is redrawn: both elements are lifted out of their own file at full
+    resolution and re-placed, so the cyan, the mushroom and the letterforms are
+    theirs.
+  */
+  seed('1up-retro', '1-Up Retro', '1-Up Retro', 'Retro video game store', '#7DE1EC', {
+    icon: '1up-retro',
+    logoTemplate: 'monogram', logoInitials: '1UP', logoFace: 'condensed',
+    site: 'https://www.1upretrogaming.com/',
+    address: '2325 J Street, Sacramento, CA',
+    phone: '(916) 706-2358',
+    contactOnly:
+      'A retro-modern video game store in midtown Sacramento — buy, sell and trade, seven days ' +
+      'a week, in their own words. Stock changes daily and is not listed here.',
+  }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
