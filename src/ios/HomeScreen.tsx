@@ -315,15 +315,40 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
      * business.
      */
     const litOrder = (apps: AppDef[], city: string): AppDef[] => {
-      if (apps.some((a) => a.kind !== 'brand')) return apps
+      /*
+        FLAGSHIP SHEETS ONLY. A city page's numbered spots are categorised —
+        services 1 is Barber in every city — and that is the whole basis of
+        "the number 18 spot in your city". Reordering those would shuffle the
+        categories and break the thing he sells. The BEASTY sheets are his own
+        showcase, so they are his to arrange.
+
+        This used to test "is every tile a real business" instead, which had the
+        same effect right up until it did not: bumping Smash Bros to the yellow
+        sheet left one open seat, the test saw a non-brand tile, and the whole
+        page silently fell back to roster order. His brightness request stopped
+        applying to the exact page he asked about, and nothing failed.
+      */
+      if (city !== 'BEASTY') return apps
       const slug = /\/wallpapers\/([a-z0-9-]+)\.webp/.exec(wallpaperFor(city))?.[1]
       const tilt = (slug && WALLPAPER_TILT[slug]) || 0
       /* A flat wallpaper has no lighter space to aim at, so his own order
          stands rather than being churned for a difference nobody can see. */
       if (Math.abs(tilt) < 0.03) return apps
-      return [...apps].sort((a, b) =>
-        tilt > 0 ? tileLuma(a) - tileLuma(b) : tileLuma(b) - tileLuma(a),
-      )
+
+      /*
+        Only the BUSINESSES move. An open seat keeps its index, because on
+        these sheets an empty tile still draws its category and sliding it
+        somewhere else would relabel a spot he may already have sold.
+      */
+      const seats = apps.map((a, i) => [a, i] as const).filter(([a]) => a.kind === 'brand')
+      const sorted = seats
+        .map(([a]) => a)
+        .sort((a, b) => (tilt > 0 ? tileLuma(a) - tileLuma(b) : tileLuma(b) - tileLuma(a)))
+      const out = [...apps]
+      seats.forEach(([, at], n) => {
+        out[at] = sorted[n]
+      })
+      return out
     }
 
     // Paginate each group separately so a group always begins a fresh page.
@@ -417,9 +442,29 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     sliding at the first and last page rather than running off — otherwise the
     row jitters by a dot as you reach either end.
   */
-  const DOT_WINDOW = 9
-  const dotFrom = Math.max(0, Math.min(safePage - (DOT_WINDOW >> 1), pages.length - DOT_WINDOW))
-  const dotTo = Math.min(pages.length - 1, dotFrom + DOT_WINDOW - 1)
+  /*
+    DOTS FOR THIS CITY, not a window over every page in the app.
+
+    They used to show the nine around wherever you were, out of 208. That was
+    already a compromise — 208 dots do not fit and would say nothing if they
+    did — but a sliding window of nine says something actively unhelpful: it
+    looks like a position in a short list and it is a position in a very long
+    one, and it changes which pages it covers as you move.
+
+    A city is the unit that means anything: Goods, Services, More goods, More
+    services. Four dots tell you exactly where you are inside the place you are
+    looking at, and they stop lying about how far you have to go. How far you
+    have to go across 208 pages is not a dot problem — see the note on the
+    heading, which is what actually jumps.
+
+    The app-group pages carry no city, so they get their own run.
+  */
+  const dotGroup = (i: number) => pages[i]?.city ?? '\u0000apps'
+  const here = dotGroup(safePage)
+  let dotFrom = safePage
+  while (dotFrom > 0 && dotGroup(dotFrom - 1) === here) dotFrom--
+  let dotTo = safePage
+  while (dotTo < pages.length - 1 && dotGroup(dotTo + 1) === here) dotTo++
   /* Page one has no city of its own, so it keeps the default photograph. */
   const city = pages[safePage]?.city ?? DEFAULT_CITY
   /* Yellow sheets bring their own paper; everything else follows the city. */
@@ -922,13 +967,26 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           browser cannot disagree about which entry we are on — that
           disagreement is what made back a trap the first time.
         */}
+        {/*
+          A HOUSE, not a left arrow — "create a home button like you see there
+          to bring people back to the landing page."
+
+          Same behaviour it always had: it goes through history rather than a
+          state flag, so the button and the browser can never disagree about
+          which entry we are on. Only the glyph changed, and it changed because
+          a left arrow now sits four inches away doing something completely
+          different — stepping a page — and two arrows meaning two things is
+          how a control gets pressed by mistake.
+        */}
         <button
           className="spotlight-back"
           onClick={() => window.history.back()}
           aria-label="Back to the landing screen"
         >
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <path d="M11 5l-7 7 7 7M4 12h16" />
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M3 11.2 12 4l9 7.2" />
+            <path d="M5.5 9.6V19a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1V9.6" />
+            <path d="M9.8 20v-5.2h4.4V20" />
           </svg>
         </button>
 
@@ -945,6 +1003,44 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             <path d="M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z" />
           </svg>
           Search
+        </button>
+
+        {/*
+          STEP ARROWS, in the margins either side of the row.
+
+          His idea, and his reason: "rather than scrolling left or right...
+          just have these buttons on the left and right to move from one page
+          to another. Just tap away."
+
+          They sit in the screen's own margins rather than in the flex row
+          because that is where he drew them and because the row is already
+          carrying Search and three dock buttons — adding two more to the flow
+          on a 393px screen would squeeze the pill that is meant to be the
+          obvious control.
+
+          A swipe still works. This is a second way in, not a replacement:
+          tapping is easier to demo, easier on a laptop, and easier for anyone
+          who finds a precise horizontal drag hard.
+        */}
+        <button
+          className="page-step is-prev"
+          onClick={() => goToPage(safePage - 1)}
+          disabled={safePage === 0}
+          aria-label="Previous page"
+        >
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M15 5l-7 7 7 7" />
+          </svg>
+        </button>
+        <button
+          className="page-step is-next"
+          onClick={() => goToPage(safePage + 1)}
+          disabled={safePage === pages.length - 1}
+          aria-label="Next page"
+        >
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+            <path d="M9 5l7 7-7 7" />
+          </svg>
         </button>
 
         {/*

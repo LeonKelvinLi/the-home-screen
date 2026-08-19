@@ -654,11 +654,18 @@ textarea {
 */
 .spotlight-row {
   position: absolute;
-  left: 50%;
+  /*
+    FULL WIDTH, contents centred — it used to be shrink-to-fit and centred by a
+    translate. The step arrows live in this row's margins, so the row has to
+    reach the screen edges for there to be any margin for them to live in.
+  */
+  left: 0;
+  right: 0;
   bottom: 134px;
-  transform: translateX(-50%) translateZ(0);
+  transform: translateZ(0);
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -8388,4 +8395,79 @@ textarea {
   font-size: 12px;
   line-height: 1.35;
   color: rgba(60, 60, 67, 0.6);
+}
+
+/*
+  The two step arrows, in the screen's margins either side of the Spotlight row.
+
+  Absolutely positioned rather than laid out in the row: the row already holds
+  the back-home button, the Search pill and three dock buttons, and on a 393px
+  screen adding two more to the flow would squeeze the pill that is meant to be
+  the obvious control. The margins beside it are empty, which is exactly where
+  the operator drew these.
+
+  36px circles with a 44px tap target, the same trick the dock buttons use — a
+  44px circle either side would frame the row like a media player and pull the
+  eye away from Search.
+*/
+.page-step {
+  position: absolute;
+  top: 50%;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: opacity 140ms ease, transform 140ms ease, background 140ms ease;
+}
+
+.page-step.is-prev {
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.page-step.is-next {
+  right: 10px;
+  transform: translateY(-50%);
+}
+
+.page-step::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+.page-step:active {
+  transform: translateY(-50%) scale(0.9);
+}
+
+/*
+  At the ends of the run the arrow STAYS but stops working, rather than
+  disappearing. A control that vanishes moves everything beside it and leaves
+  the customer wondering what they did; one that dims explains itself.
+*/
+.page-step:disabled {
+  opacity: 0.32;
+  cursor: default;
+}
+
+/* Over the yellow sheets, the same dark-plate flip Search and the dock
+   buttons take — white-on-glass composites to under 3:1 on that paper. */
+.home.has-yellow-page .page-step {
+  background: rgba(20, 20, 22, 0.5);
+  color: rgba(255, 255, 255, 0.95);
+  box-shadow: none;
 }
