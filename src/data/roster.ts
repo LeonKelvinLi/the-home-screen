@@ -668,9 +668,16 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.cafenoiroak.com/',
     address: '1620 18th St, Stall B, Oakland',
   }),
-  seed('jump-and-roll', 'Jump & Roll', 'Jump & Roll', 'Party rentals', '#2A5C8C', {
+  /* "BEASTY • Oakland / Mobile", 2026-08-19. Already seated in Oakland; what
+     was missing was their own badge and the word Mobile in the descriptor,
+     which is what draws the ring — see MOBILE in apps/registry. */
+  seed('jump-and-roll', 'Jump & Roll', 'Jump & Roll', 'Mobile soft play and bounce rentals', '#B87C7C', {
+    icon: 'jump-and-roll',
     logoTemplate: 'monogram', logoInitials: 'JR', logoFace: 'condensed',
     site: 'https://itsjumpandroll.com/',
+    contactOnly:
+      'Premium soft play and modern bouncers for parties and celebrations across the Bay Area, ' +
+      'in their own words. Packages and availability are on their own site.',
   }),
   seed('urban-air', 'Urban Air', 'Urban Air', 'Adventure park', '#1F3A6B', {
     icon: 'urban-air',
@@ -851,6 +858,80 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'Booking, prices and availability are on their Booksy page — no prices are listed here.',
   }),
+  /*
+    The 2026-08-18/19 run. Each arrived as a link or an Instagram profile with
+    the city and page written under it, and each keeps its own artwork.
+  */
+  seed('quickly-benicia', 'Quickly Benicia', 'Quickly', 'Boba tea', '#F08A1E', {
+    icon: 'quickly-benicia',
+    logoTemplate: 'monogram', logoInitials: 'Q', logoFace: 'condensed',
+    site: 'https://www.quicklybenicia.com/',
+    /* "Mock up discount. This restaurant, my boy owns a BENICIA." — his note,
+       so the offer is his draft and the shop has agreed nothing. */
+    offers: {
+      mock: true,
+      welcome: 'Get a family discount of 25% off your purchase for your 1st visit!',
+      loyalty: 'Get 10% off your purchase on any visit!',
+    },
+    contactOnly:
+      'Drinks and prices are on their own site — nothing is listed here.',
+  }),
+  /*
+    Sala Thai, Richmond. "My friend DAVE owns this and I just spoke to him and
+    he's excited to sign up already" — the first owner who has said yes before
+    being shown a page, which is why this one is worth getting right.
+
+    His "Needs website" is a note to himself about selling them one, not a gap
+    in the data: salathairichmond.com exists and is where their logo came from.
+  */
+  seed('sala-thai', 'Sala Thai', 'Sala Thai', 'Thai food', '#8B1A2B', {
+    icon: 'sala-thai',
+    logoTemplate: 'monogram', logoInitials: 'ST', logoFace: 'script',
+    site: 'https://salathairichmond.com/',
+    contactOnly:
+      'Their menu and hours are on their own site and their Facebook page. Nothing is priced ' +
+      'here yet.',
+  }),
+  /*
+    SIA Collective — "BEASTY • Goods, replace EAT tile please". A streetwear
+    label with no shop to walk into, which is exactly the case he raised in the
+    same breath: "we should have a dedicated color for online only stores."
+    Nothing marks that yet; see the note in apps/registry.
+  */
+  seed('sia-collective', 'SIA Collective', 'SIA', 'Streetwear, online only', '#111114', {
+    icon: 'sia-collective',
+    logoTemplate: 'monogram', logoInitials: 'SIA', logoFace: 'condensed',
+    site: 'https://siacollective.com/',
+    contactOnly:
+      'An online-only label — there is no shop to visit. Drops and sizing are on their own ' +
+      'site and their Instagram.',
+  }),
+  seed('house-of-silog', 'House of Silog', 'House of Silog', 'Filipino fusion', '#1C1C1E', {
+    icon: 'house-of-silog',
+    logoTemplate: 'monogram', logoInitials: 'HS', logoFace: 'slab',
+    /* No site of their own — he flagged it "Needs website". The ordering page
+       is what they publish, so that is what the button opens. */
+    site: 'https://order.online/business/house-of-silog-brentwood',
+    siteCta: 'Order online',
+    address: '7760 Brentwood Blvd, Suite D, Brentwood, CA',
+    contactOnly:
+      'Inside the Filipino Streetfood Hub, Wednesday to Friday 11am to 9pm and Saturday noon ' +
+      'to 9pm, in their own words. Also on DoorDash and Uber Eats.',
+  }),
+  /*
+    Frank2Artistic — "BEASTY • Services, Murals. No website. I'm going to try to
+    hit them up about a website."
+
+    Takes the numbered seat Inter Chiro vacates, on his "you can bump ic to
+    yellow pages" in the same message.
+  */
+  seed('frank2artistic', 'Frank2Artistic', 'Frank2Artistic', 'Murals and custom art', '#E8621A', {
+    icon: 'frank2artistic',
+    logoTemplate: 'monogram', logoInitials: 'F2', logoFace: 'condensed',
+    contactOnly:
+      'Murals, logos and custom art across the Bay Area and the 209, by Franklin Guardado. ' +
+      'Murals start around $1.2k, his own figure. Quotes are by enquiry — he publishes no site.',
+  }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
@@ -879,12 +960,16 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_downtownbbq', //      7  Downtown BBQ
   'b_glasshouzz', //       8  Glass Houzz
   'b_pippal', //           9  Pippal
-  'b_eat', //              10 EAT
+  /* SIA Collective takes this seat, on "BEASTY • Goods, replace EAT tile
+     please". EAT keeps its services seat at #9 and its place in the dock. */
+  'b_siacollective', //    10 SIA Collective
   'b_paulosausage', //     11 Paulo Sausage Co
   'b_lumpiacompany', //    12 Lumpia Company
   'b_hotboyschicken', //   13 Hot boys
   'b_sincitypits', //      14 Sin City Pits
-  'b_smashburgersbros', // 15 Smash Burgers Bros
+  /* "Can you bump SMASH burgers into the more goods space" — moved to the
+     yellow sheet in data/placements.ts, so this seat is open again. */
+  null, //                 15 open
   'b_butterpecan', //      16 Butter Pecan bake shop
   'b_veganmob', //         17 Vegan Mob
   'b_poofofalchemy', //    18 Poof of Alchemy
@@ -925,7 +1010,9 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_lolcatering', //           19 LOL Catering
   'b_andrewshinlaw', //         20 ANDREW SHIN injury, attorney
   'b_winterwhitecarwash', //    21 Winter White mobile Car Wash
-  'b_interchiro', //            22 Inter Chiro
+  /* "You can bump ic to yellow pages" — Inter Chiro moved to the yellow sheet
+     and Frank2Artistic takes the seat it leaves. */
+  'b_frank2artistic', //        22 Frank2Artistic
   'b_georgeprolandscape', //    23 George Professional Landscape
   'b_renecustomcabinetry', //   24 Rene Custom Cabinetry
 ]

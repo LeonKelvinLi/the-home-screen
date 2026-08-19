@@ -182,6 +182,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-services2-7': 'b_jenuinefitness',
 
   /*
+    2026-08-19. Three new city seats, and the two he asked to be bumped onto
+    the yellow sheets — "can you bump SMASH burgers into the more goods space"
+    and "you can bump ic to yellow pages".
+  */
+  'benicia-goods-14': 'b_quicklybenicia', //   Boba shop
+  'richmond-goods-2': 'b_salathai', //         Asian food
+  'brentwood-goods-10': 'b_houseofsilog', //   Filipino food
+  'beasty-goods2-4': 'b_smashburgersbros',
+  'beasty-services2-8': 'b_interchiro',
+
+  /*
     His friend's six, on the flagship yellow sheets by his own instruction:
     "place them all on the yellow pages of BEASTY • Goods & Services."
 
