@@ -6,7 +6,7 @@ import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES } from './dialer/copy'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
-import { CameraMark, EnterMark, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
+import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { PagesMark } from './dialer/PagesMark'
 import { Gem } from './MembersApp'
 import { useScramble } from './dialer/useScramble'
@@ -557,8 +557,27 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
               onClick={() => press(k.action)}
               aria-label={stage === 'beasty' ? `${k.digit}. ${k.label}` : k.digit}
             >
+              {/*
+                DIGIT WHILE IT IS A PHONE, MARK ONCE IT IS NOT — "fill these
+                circles rather the numbers."
+
+                The swap happens at the same moment the labels resolve, so the
+                opening still works: it has to be a believable keypad first for
+                the turn into BEASTY to land at all. Both are rendered and one
+                is faded out, rather than swapped, so no key changes size mid
+                transition.
+              */}
               <span className="dialer-key-digit">
-                {k.digit === '*' ? <Asterisk /> : k.digit}
+                {stage === 'beasty' && k.mark ? (
+                  (() => {
+                    const Mark = KEY_MARKS[k.mark]
+                    return <Mark size={30} />
+                  })()
+                ) : k.digit === '*' ? (
+                  <Asterisk />
+                ) : (
+                  k.digit
+                )}
               </span>
               {/* One element, whose text is rewritten as it resolves. Reserving
                   the row's height means no key moves while it does.
@@ -594,7 +613,27 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                 and this one enters an app, so once the pretence is over it says
                 what it does. */}
             {stage === 'beasty' ? (
-              <EnterMark size={39} />
+              /*
+                THE ICON, THEN THE WORD, THEN THE ICON AGAIN.
+
+                His problem, in his words: "I've been seeing people stare at
+                this paging not knowing that green stands for enter. Some people
+                are slow and don't get it." His fix, and Leon's confirmation of
+                the face: "maybe make it flip to say ENTER then flip back to the
+                icon" / "same fonts of BEASTY PAGES".
+
+                A flip rather than a glow because a glow says LOOK and this
+                needs to say WHAT. The arrow alone is a guess; the word is not.
+
+                Both faces are rendered and rotated as one card, so the button
+                never resizes and the green disc stays exactly where it is.
+              */
+              <span className="dialer-call-flip">
+                <span className="dialer-call-face is-icon">
+                  <EnterMark size={39} />
+                </span>
+                <span className="dialer-call-face is-word">ENTER</span>
+              </span>
             ) : (
               <PhoneFill size={34} color="#fff" />
             )}

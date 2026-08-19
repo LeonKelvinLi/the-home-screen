@@ -28,6 +28,11 @@ export type KeyAction =
   /** The share sheet, or a clipboard copy where there is no sheet. */
   | { kind: 'share' }
 
+/** A drawn mark in dialer/glyphs. Kept as a name so this file stays data. */
+export type MarkName =
+  | 'info' | 'instagram' | 'ribbon' | 'supply' | 'design' | 'droplet'
+  | 'collabs' | 'donate' | 'careers' | 'diamond' | 'signin' | 'share'
+
 export type PanelPage =
   | 'about'
   | 'contacts'
@@ -43,6 +48,16 @@ export type PanelPage =
 
 export interface DialerKey {
   digit: string
+  /**
+   * Which drawn mark fills the circle once the keypad stops pretending.
+   *
+   * His ask: "fill these circles rather the numbers." The digit still shows
+   * while the screen is a telephone — that pretence is the whole opening — and
+   * the mark replaces it at the moment the labels resolve, so the reveal now
+   * changes the key as well as the word under it. Named here rather than in
+   * IntroScreen so the twelve keys and their twelve pictures stay in one list.
+   */
+  mark?: MarkName
   /** What a real phone prints under the digit. Blank on 1, * and #. */
   letters?: string
   /** What this phone prints instead. */
@@ -72,27 +87,27 @@ const MEMBERS = 'sys.members'
 const ACCOUNT = 'sys.account'
 
 export const DIALER_KEYS: DialerKey[] = [
-  { digit: '1', label: 'ABOUT', action: { kind: 'panel', page: 'about' } },
-  { digit: '2', letters: 'ABC', label: 'INSTAGRAM', action: { kind: 'external', url: INSTAGRAM_URL } },
+  { digit: '1', label: 'ABOUT', mark: 'info', action: { kind: 'panel', page: 'about' } },
+  { digit: '2', letters: 'ABC', label: 'INSTAGRAM', mark: 'instagram', action: { kind: 'external', url: INSTAGRAM_URL } },
   // FOUNDATION, not BPRF — an initialism nobody outside the business can read.
-  { digit: '3', letters: 'DEF', label: 'FOUNDATION', action: { kind: 'panel', page: 'bprf' } },
+  { digit: '3', letters: 'DEF', label: 'FOUNDATION', mark: 'ribbon', action: { kind: 'panel', page: 'bprf' } },
   /*
     SUPPLY, not GOODS, and it is not the marketplace — the operator is adding a
     contact for it and has not supplied one yet. The marketplace is the green
     button, which is where every dialer puts "go".
   */
-  { digit: '4', letters: 'GHI', label: 'SUPPLY', action: { kind: 'panel', page: 'supply' } },
+  { digit: '4', letters: 'GHI', label: 'SUPPLY', mark: 'supply', action: { kind: 'panel', page: 'supply' } },
   // SERVICES rather than DESIGNS: the page behind it covers more than design.
-  { digit: '5', letters: 'JKL', label: 'SERVICES', action: { kind: 'enter', app: DESIGNS } },
-  { digit: '6', letters: 'MNO', label: 'WATER', action: { kind: 'external', url: WATER_URL } },
-  { digit: '7', letters: 'PQRS', label: 'COLLABS', action: { kind: 'panel', page: 'collabs' } },
-  { digit: '8', letters: 'TUV', label: 'DONATE', action: { kind: 'panel', page: 'donations' } },
-  { digit: '9', letters: 'WXYZ', label: 'CAREERS', action: { kind: 'panel', page: 'careers' } },
+  { digit: '5', letters: 'JKL', label: 'SERVICES', mark: 'design', action: { kind: 'enter', app: DESIGNS } },
+  { digit: '6', letters: 'MNO', label: 'WATER', mark: 'droplet', action: { kind: 'external', url: WATER_URL } },
+  { digit: '7', letters: 'PQRS', label: 'COLLABS', mark: 'collabs', action: { kind: 'panel', page: 'collabs' } },
+  { digit: '8', letters: 'TUV', label: 'DONATE', mark: 'donate', action: { kind: 'panel', page: 'donations' } },
+  { digit: '9', letters: 'WXYZ', label: 'CAREERS', mark: 'careers', action: { kind: 'panel', page: 'careers' } },
   // Biggie's Diamond membership. MEMBERS, not MEMBERSHIP — seven characters
   // instead of ten, so it sits comfortably in the key at any size.
-  { digit: '*', label: 'MEMBERS', action: { kind: 'enter', app: MEMBERS } },
-  { digit: '0', letters: '+', label: 'SIGN IN', action: { kind: 'enter', app: ACCOUNT } },
-  { digit: '#', label: 'SHARE', action: { kind: 'share' } },
+  { digit: '*', label: 'MEMBERS', mark: 'diamond', action: { kind: 'enter', app: MEMBERS } },
+  { digit: '0', letters: '+', label: 'SIGN IN', mark: 'signin', action: { kind: 'enter', app: ACCOUNT } },
+  { digit: '#', label: 'SHARE', mark: 'share', action: { kind: 'share' } },
 ]
 
 /*

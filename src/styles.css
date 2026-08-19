@@ -7909,6 +7909,23 @@ textarea {
     font metrics round differently.
   */
   text-indent: 2.8em;
+  /*
+    AND THE OTHER THREE LINES, which is what he asked for next: "can you tap
+    space once for each word in 2nd, 3rd and 4th line… for 'and', 'growing' and
+    'save'. This will center the paragraph."
+
+    His literal version cannot be built. A space at the start of a wrapped line
+    is collapsed by every browser, so typing one before those words would move
+    nothing — and a non-breaking space would glue each word to the line above
+    and change the wrap entirely, which is the opposite of what he wants.
+
+    `text-wrap: balance` is the mechanism for what he is actually after. It
+    evens the line lengths across the whole block instead of nudging one break
+    at one screen width, so the paragraph reads symmetrical on his phone and on
+    every other one. The first-line indent above still does its job on top of
+    it — that break is his and stays deliberate.
+  */
+  text-wrap: balance;
   box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.45);
 }
 
@@ -8543,4 +8560,60 @@ textarea {
   .brand-film video {
     display: none;
   }
+}
+
+/*
+  The green key, flipping between its arrow and the word ENTER.
+
+  People were staring at it without pressing it — green plus an arrow is a guess
+  unless you already know. The word is not a guess. It flips rather than glows
+  because a glow only says "look", and looking was never the problem.
+*/
+.dialer-call-flip {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: call-flip 6s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.dialer-call-face {
+  grid-area: 1 / 1;
+  display: grid;
+  place-items: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  color: #fff;
+}
+
+/* The word is set in Oswald — the BEASTY PAGES face — and pre-rotated so it
+   reads the right way round on the back of the card. */
+.dialer-call-face.is-word {
+  transform: rotateY(180deg);
+  font-family: Oswald, 'Arial Narrow', system-ui, sans-serif;
+  font-weight: 600;
+  font-size: calc(var(--call-size) * 0.235);
+  letter-spacing: 0.06em;
+  line-height: 1;
+}
+
+/*
+  Two beats on the arrow, one on the word, and the turn itself is quick. A
+  button that spends half its life mid-rotation reads as broken rather than as
+  an instruction.
+*/
+@keyframes call-flip {
+  0%, 42% { transform: rotateY(0deg); }
+  50%, 84% { transform: rotateY(180deg); }
+  92%, 100% { transform: rotateY(360deg); }
+}
+
+/*
+  Anyone who has asked for less motion gets the WORD, permanently — not the
+  arrow. They are the reader most likely to need the label, and the whole point
+  of this is that the arrow alone does not explain itself.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .dialer-call-flip { animation: none; transform: rotateY(180deg); }
 }

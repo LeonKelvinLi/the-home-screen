@@ -1,5 +1,5 @@
 import { Diamond, PurpleRibbon } from './marks'
-import type { PanelPage } from './keys'
+import type { MarkName, PanelPage } from './keys'
 
 /**
  * The marks that head each panel the keypad opens.
@@ -166,6 +166,81 @@ export function CameraMark({ size = 24 }: MarkProps) {
   )
 }
 
+/*
+  ────────────────────────────────────────────────────────────────────────────
+  KEY MARKS — the twelve that fill the keypad circles once the phone stops
+  pretending to be a phone.
+
+  Same rule as everything above: he sent stock references off freepik, pluspng,
+  vecteezy and icons8 for what each one should DEPICT. None is shipped or
+  traced. These draw the same objects in the language the rest of this file
+  already speaks — one weight, one 24px box, filled paths that survive being
+  rendered at 26px inside a circle.
+*/
+
+/** About — the universal i, because that is the one he sent. */
+export function InfoMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M12 1.6a10.4 10.4 0 1 0 0 20.8 10.4 10.4 0 0 0 0-20.8Zm0 2.4a8 8 0 1 1 0 16 8 8 0 0 1 0-16Z" />
+      <circle cx="12" cy="7.4" r="1.5" />
+      <path d="M10.6 10.4h2.8v7.2h-2.8z" />
+    </svg>
+  )
+}
+
+/** Instagram — the rounded square, lens and flash. */
+export function InstagramMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M7.6 2.4h8.8A5.2 5.2 0 0 1 21.6 7.6v8.8a5.2 5.2 0 0 1-5.2 5.2H7.6a5.2 5.2 0 0 1-5.2-5.2V7.6A5.2 5.2 0 0 1 7.6 2.4Zm0 2.4A2.8 2.8 0 0 0 4.8 7.6v8.8a2.8 2.8 0 0 0 2.8 2.8h8.8a2.8 2.8 0 0 0 2.8-2.8V7.6a2.8 2.8 0 0 0-2.8-2.8Z" />
+      <path d="M12 6.9a5.1 5.1 0 1 0 0 10.2 5.1 5.1 0 0 0 0-10.2Zm0 2.4a2.7 2.7 0 1 1 0 5.4 2.7 2.7 0 0 1 0-5.4Z" />
+      <circle cx="17.3" cy="6.7" r="1.25" />
+    </svg>
+  )
+}
+
+/** Water — a droplet. His own H20 mark puts the dog inside one; at 26px the dog
+    is mud, so the key takes the droplet alone and the tile keeps the dog. */
+export function DropletMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
+      <path d="M12 2.2c3.6 4.2 6.6 7.9 6.6 11.4A6.6 6.6 0 0 1 5.4 13.6C5.4 10.1 8.4 6.4 12 2.2Z" />
+    </svg>
+  )
+}
+
+/** Services — a screen with a pencil, which is what BEASTY Designs sells. */
+export function DesignMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M2.6 4.2h14.2v2.4H5v8.2h11.8v2.4H2.6Z" />
+      <path d="M6.8 8.4h7.4v1.7H6.8zm0 3.2h5.2v1.7H6.8z" />
+      <path d="M19.4 5.2l2.2 1.6-.9 1.3-2.2-1.6zM18 7.4l2.2 1.6-3.6 5-2.6.9.5-2.7z" />
+    </svg>
+  )
+}
+
+/** Share — a box with an arrow leaving it. */
+export function ShareMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor" fillRule="evenodd">
+      <path d="M3.6 9.2h4.2v2.4H6v8h12v-8h-1.8V9.2h4.2v12.8H3.6Z" />
+      <path d="M12 1.6l5.2 5.2-1.7 1.7-2.3-2.3v9.2h-2.4V6.2L8.5 8.5 6.8 6.8Z" />
+    </svg>
+  )
+}
+
+/** Sign in — a person, distinct from the ENTER arrow on the green button. */
+export function SignInMark({ size = 24 }: MarkProps) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
+      <circle cx="12" cy="7.6" r="4.2" />
+      <path d="M12 13.4c4.4 0 7.8 2.6 7.8 5.9v1.3H4.2v-1.3c0-3.3 3.4-5.9 7.8-5.9Z" />
+    </svg>
+  )
+}
+
 export const PANEL_MARKS: Record<PanelPage, (props: MarkProps) => JSX.Element> = {
   favorites: StarMark,
   supply: SupplyMark,
@@ -181,3 +256,22 @@ export const PANEL_MARKS: Record<PanelPage, (props: MarkProps) => JSX.Element> =
 }
 
 export { Diamond, PurpleRibbon }
+
+/**
+ * The twelve key marks, by name. Keyed off DialerKey.mark so keys.ts can stay
+ * data and never import artwork.
+ */
+export const KEY_MARKS: Record<MarkName, (props: MarkProps) => JSX.Element> = {
+  info: InfoMark,
+  instagram: InstagramMark,
+  ribbon: PurpleRibbon,
+  supply: SupplyMark,
+  design: DesignMark,
+  droplet: DropletMark,
+  collabs: CollabsMark,
+  donate: DonateMark,
+  careers: CareersMark,
+  diamond: Diamond,
+  signin: SignInMark,
+  share: ShareMark,
+}
