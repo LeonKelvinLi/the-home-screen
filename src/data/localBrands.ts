@@ -522,7 +522,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     */
     slug: 'sin-city-pits',
     icon: 'sin-city-pits',
-    clip: { href: 'https://www.instagram.com/reel/DbYsH_viR_a/', credit: 'Filmed by Sin City Pits', platform: 'Instagram' },
+    clip: { src: '/clips/sin-city-pits.mp4', poster: '/clips/sin-city-pits-poster.webp', href: 'https://www.instagram.com/reel/DbYsH_viR_a/', credit: 'Filmed by Sin City Pits', platform: 'Instagram' },
     name: 'Sin City Pits',
     label: 'Sin City Pits',
     cuisine: 'Pitbull kennel and breeder',

@@ -8471,3 +8471,76 @@ textarea {
   color: rgba(255, 255, 255, 0.95);
   box-shadow: none;
 }
+
+/*
+  A business's own reel, playing behind their mark on their page.
+
+  The hero was a flat band of brand colour. Where a business has given us
+  footage, it plays there instead — muted and looping, cover-cropped, with a
+  scrim over it so the mark and the tagline keep a predictable floor to sit on.
+*/
+.brand-hero.has-film {
+  position: relative;
+  isolation: isolate;
+}
+
+.brand-film {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.brand-film-still {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-film video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /*
+    COVER, not contain. These are 9:16 reels and the band is short and wide, so
+    contain would letterbox a portrait clip into a strip and show more empty
+    plate than film.
+  */
+  object-fit: cover;
+  display: block;
+  /* Chrome on the video element itself is not ours to style and must never
+     appear — this is a background, not a player. */
+  pointer-events: none;
+}
+
+/*
+  The scrim is what makes the text legible over ANY frame of ANY clip. Slightly
+  heavier at the top and bottom, where the star, the share button and the
+  tagline sit, and lighter through the middle so the film is still visible
+  behind the mark.
+*/
+.brand-film-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.62) 0%,
+    rgba(0, 0, 0, 0.44) 38%,
+    rgba(0, 0, 0, 0.5) 72%,
+    rgba(0, 0, 0, 0.68) 100%
+  );
+}
+
+/*
+  Anyone who has asked for less motion gets the poster frame and nothing moving.
+  A looping clip behind text is exactly what that setting is for.
+*/
+@media (prefers-reduced-motion: reduce) {
+  .brand-film video {
+    display: none;
+  }
+}

@@ -82,9 +82,58 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
       >
         <div className="brand-body" ref={bodyRef}>
           <div
-            className="brand-hero"
+            className={`brand-hero${brand.clip?.src ? ' has-film' : ''}`}
             style={{ background: heroBg(brand.logo.bg), color: ink.fg }}
           >
+            {/*
+              THEIR OWN FOOTAGE, BEHIND THE MARK.
+
+              The operator asked "is it possible to add this video too?" and it
+              first shipped as a card that opened Instagram. His follow-up is
+              the better idea: play it here, instead of the flat colour.
+
+              Muted, looping, playsinline, autoplay — the only combination iOS
+              and Android will start without a tap, and the right one anyway: a
+              band behind a logo that started making noise would be a fault.
+              The poster paints first so the band is never briefly empty on a
+              slow connection, and the whole thing is aria-hidden because it is
+              decoration; the reel a customer can actually watch, with sound, is
+              still the card further down.
+
+              preload="none" would save bytes but defeat the point — the band
+              would stay flat until the file arrived. "metadata" gets the poster
+              and the first frames without pulling the whole clip up front.
+            */}
+            {brand.clip?.src && (
+              <div className="brand-film" aria-hidden="true">
+                {/*
+                  The poster is a real <img> UNDER the video, not the video's
+                  own poster attribute. Two reasons: it paints while the clip is
+                  still arriving, and it is what remains when prefers-reduced-
+                  motion hides the video — that rule first shipped hiding the
+                  film and leaving an empty band, because the fallback was a CSS
+                  background nothing ever set.
+                */}
+                {brand.clip.poster && <img className="brand-film-still" src={brand.clip.poster} alt="" />}
+                <video
+                  src={brand.clip.src}
+                  poster={brand.clip.poster}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  tabIndex={-1}
+                />
+                {/*
+                  A scrim, not an opacity on the video. Dimming the film itself
+                  would also dim it toward the page behind rather than toward
+                  black, and the mark and tagline on top need a predictable
+                  floor to stay legible against whatever frame is showing.
+                */}
+                <span className="brand-film-scrim" />
+              </div>
+            )}
             {/*
               STAR, beside Share — the operator's ask, and it closes a loop that
               already half existed: Recent fills itself from what you open and a

@@ -87,7 +87,15 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'badge', logoGlyph: 'flame', logoLines: ['DOWNTOWN BBQ'], logoFace: 'slab',
     site: 'https://downtownbarbecue.co',
     address: '610 3rd St, Santa Rosa, CA',
+    /*
+      `src` as well as `href` now: the file is on our own origin so it can play
+      behind their mark in the hero, and the link is kept so the card below
+      still opens the real post — with sound, and with their caption and their
+      follower count around it, which the muted loop cannot carry.
+    */
     clip: {
+      src: '/clips/downtown-bbq.mp4',
+      poster: '/clips/downtown-bbq-poster.webp',
       href: 'https://www.instagram.com/reel/DYvfsi_TWcd/',
       credit: 'Filmed by Downtown Barbecue',
       platform: 'Instagram',
