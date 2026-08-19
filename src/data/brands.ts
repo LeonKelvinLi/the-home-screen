@@ -478,19 +478,6 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'ally-virtual', name: 'Ally Virtual', label: 'Ally Virtual',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'All-day breakfast', tagline: 'Breakfast all day, coffee bar included',
-    color: '#5A4FCF', icon: 'ally-virtual', prep: 12, category: 'Breakfast',
-    items: [
-      ['Steak & Egg Burrito', 'Potatoes, cheese, salsa roja', 1300],
-      ['Pancake Stack', 'Three buttermilk cakes, whipped butter', 1100],
-      ['Breakfast Sandwich', 'Egg, bacon, cheddar, brioche', 900],
-      ['Iced Latte', 'Double shot, 16 oz', 550],
-    ],
-  },
-  {
     slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitc…',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',

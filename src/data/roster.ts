@@ -549,9 +549,27 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'AZ', logoFace: 'grotesk',
     site: 'https://adzeela.com/',
   }),
+  /*
+    THIS IS THE ONLY ALLY VIRTUAL. There used to be a second entry on the same
+    slug in brands.ts — one of the ported hub records — describing them as an
+    all-day breakfast place and carrying four priced menu items, right down to
+    a steak and egg burrito at $13. Ally Virtual is a virtual assistance
+    company. The old site tagged all 25 ported records as food, which is the
+    same fault the Brand type already documents ("a tax-prep firm and a sneaker
+    brand both ended up with restaurant menus"), and this one additionally
+    collided on the slug so the two fought over one id.
+
+    It was removed rather than corrected: inventing a menu and prices for a real
+    business is the one thing this app must never do, and there was nothing in
+    that record worth keeping except the icon, which is now here.
+  */
   seed('ally-virtual', 'Ally Virtual', 'Ally Virtual', 'Virtual assistance', '#1E3A52', {
+    icon: 'ally-virtual',
     logoTemplate: 'monogram', logoInitials: 'AV', logoFace: 'grotesk',
     site: 'https://allyvirtual.com/',
+    contactOnly:
+      'Virtual assistance — there is nothing to order here. What they do and what it costs are ' +
+      'on their own site.',
   }),
 
   /* ---- 2026-08-16 ---- */
