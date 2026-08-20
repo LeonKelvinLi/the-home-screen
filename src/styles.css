@@ -744,6 +744,7 @@ textarea {
   compete with.
 */
 .spotlight-back {
+  position: relative;
   width: 34px;
   height: 34px;
   flex: 0 0 auto;
@@ -770,6 +771,14 @@ textarea {
 */
 .spotlight-back::before {
   content: '';
+  /* 44px of catchable area on a 34px circle — see .spotlight-glass. */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+  z-index: 0;
   position: absolute;
   width: 46px;
   height: 46px;
@@ -6871,7 +6880,13 @@ textarea {
 }
 
 .brand-offers.is-mock .brand-offer-when {
-  color: rgba(60, 60, 67, 0.7);
+  /*
+    0.85, not 0.7. At 0.7 this measured 4.06:1 — under the 4.5 that 12px text
+    needs, and the audit was right to call it: the condition IS the offer
+    ("first visit, once", "active members only"), so it is the last line that
+    should be hard to read.
+  */
+  color: rgba(60, 60, 67, 0.85);
 }
 
 /* ---------- a business's own clip on their page ---------- */
@@ -8674,6 +8689,25 @@ textarea {
   -webkit-tap-highlight-color: transparent;
   transition: transform 140ms ease;
 }
+/*
+  A 44px TAP TARGET on a 34px circle, the same trick the dock buttons and the
+  page arrows already use. These two shipped without it and measured 34x34 —
+  under the minimum, and inconsistent with every neighbour in the same row.
+  Growing the circle instead would make three big discs crowd the Search pill
+  they are meant to sit quietly beside.
+*/
+.spotlight-glass { position: relative; }
+
+.spotlight-glass::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
 .spotlight-glass:active { transform: scale(0.9); }
 .home.has-yellow-page .spotlight-glass {
   background: rgba(20, 20, 22, 0.82);
