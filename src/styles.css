@@ -8710,3 +8710,36 @@ textarea {
   color: #1b62ff;
   text-decoration: none;
 }
+
+/*
+  A RED RING: this business publishes no website.
+
+  His prospect list, drawn on the grid — "the ones without a web presence are
+  our 1st potential clients". Same construction as the aqua mobile ring beside
+  it: a dark ring first, then the colour. The dark ring is what makes either of
+  them survive both a night photograph and the yellow sheets, where a bare
+  coloured outline would sink into one or the other.
+
+  Red against aqua rather than red against green: those two are the pair a
+  red-green colour deficiency cannot separate, and these two are far apart for
+  every common type. It is still never the only signal — the tile says "no
+  website" out loud, above.
+*/
+.icon-tile.is-nosite {
+  border-radius: 24%;
+  box-shadow:
+    0 0 0 2px rgba(10, 12, 14, 0.55),
+    0 0 0 4px #ff3b30;
+}
+
+/*
+  BOTH — a mobile business that also has no site. One of these exists today and
+  more will, so it draws both rings rather than silently dropping one: aqua
+  inside for the customer, red outside for him.
+*/
+.icon-tile.is-mobile.is-nosite {
+  box-shadow:
+    0 0 0 2px rgba(10, 12, 14, 0.55),
+    0 0 0 4px #14c3c9,
+    0 0 0 6px #ff3b30;
+}

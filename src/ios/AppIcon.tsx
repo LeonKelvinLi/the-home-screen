@@ -47,6 +47,8 @@ interface Props {
   size?: number
   /** A business that travels to the customer — see MOBILE in apps/registry. */
   mobile?: boolean
+  /** No website anywhere — the operator's prospect list. */
+  noSite?: boolean
 }
 
 function AppIconBase({
@@ -58,6 +60,7 @@ function AppIconBase({
   hideLabel,
   size = ICON_SIZE,
   mobile,
+  noSite,
 }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
@@ -114,13 +117,16 @@ function AppIconBase({
       aria-label={[
         name ?? label,
         mobile ? 'mobile, comes to you' : '',
+        /* Spoken for the same reason "mobile" is: a ring is the whole of the
+           signal for a sighted customer and none of it for anyone else. */
+        noSite ? 'no website' : '',
         badge ? `${badge} in cart` : '',
       ]
         .filter(Boolean)
         .join(', ')}
     >
       <span
-        className={`icon-tile${mobile ? ' is-mobile' : ''}`}
+        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}`}
         style={{ width: size, height: size }}
       >
         {icon}

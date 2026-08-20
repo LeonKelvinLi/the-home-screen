@@ -36,6 +36,19 @@ export interface AppDef {
   /** A business that travels to the customer. See MOBILE below. */
   mobile?: true
   /**
+   * This business publishes no website at all.
+   *
+   * The operator's own words about them: "the ones without a web presence are
+   * our 1st potential clients." So the grid marks them — a red ring, beside the
+   * aqua one that means mobile — and he can read his prospect list straight off
+   * the home screen instead of opening forty-five pages to find it.
+   *
+   * Derived from `site` rather than kept as a list. A second list would be a
+   * second thing to forget, and it would disagree with the visible Website
+   * button the day somebody added one.
+   */
+  noSite?: true
+  /**
    * Jump to a home-screen PAGE rather than open a window.
    *
    * The dock's BEASTY set points at the flagship sheets, and those are pages of
@@ -81,6 +94,7 @@ export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
   brandId: b.id,
   tint: b.logo.bg.split('|')[0],
   ...(MOBILE.test(b.cuisine) ? { mobile: true as const } : {}),
+  ...(b.site ? {} : { noSite: true as const }),
 }))
 
 export const SYSTEM_APPS: AppDef[] = SYSTEM.map((s) => ({
