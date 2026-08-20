@@ -1,40 +1,39 @@
-"""Build a landing photograph from one of Biggie's posts.
+"""Build a landing photograph from a screenshot of one of Biggie's posts.
 
-    /opt/homebrew/bin/python3 tools/make-landing-photo.py CbeQ8X4uCkn 4
     /opt/homebrew/bin/python3 tools/make-landing-photo.py --all
+    /opt/homebrew/bin/python3 tools/make-landing-photo.py ~/Desktop/IMG_2205.png 1
 
-THE OPERATOR SWAPS THESE EVERY WEEK OR TWO, which is why this is a tool and not
-something done by hand once. Give it a gallery shortcode and a slot number and
-it produces `public/landing/biggie-N.webp` at the size the phone actually asks
-for.
+THE WHOLE INSTAGRAM POST, not a crop of the picture inside it. His instruction:
+"keep the entire Instagram background with it. Basically put it on there exactly
+like as you see with the dates and BEASTY_pages above." So the handle, the
+avatar, the likes, his caption and the date all stay — that context is the point,
+because half these posts have people in them he wants recognised.
 
-WHAT LIMITS THIS, and it is worth knowing before anyone tries to improve it.
-The landing photo is full-bleed and the screen wants a 0.46-aspect slice. Every
-one of these posts is about 1200 tall and square-ish, so the tallest slice of
-that shape is 554 pixels wide — from ALL of them, regardless of their stated
-width. A 3x phone paints 1179. So every landing photo is a 2.13x enlargement and
-NOTHING DOWNSTREAM CAN CHANGE THAT: the first attempt at fixing this shipped
-1290px files and they were measurably softer on screen than the 900px ones they
-replaced, because both carry the same 554 pixels of real information and the
-bigger file simply spends more bytes saying so.
+TWO STRIPS COME OUT, and neither is Instagram.
 
-The one real fix is more pixels in the SOURCE — original camera files from the
-operator, rather than what Instagram serves back. Worth asking for.
+  * The iOS status bar. His clock, his carrier and his battery percentage are
+    not part of the post and have no business on a customer's screen. Found by
+    the dynamic island, which is the one reliably dark thing up there.
 
-So what this does is make the most of 554: EDSR x4, a clean area downsample to
-the device's exact pixel grid, and a light unsharp mask to put back the acutance
-any enlargement costs. Landing on 1179x2556 exactly means an iPhone 15 at 3x
-paints it 1:1 with no resampling at all, which is the crispest presentation the
-available information allows.
+  * "View insights" / "Boost post". That row is Instagram's CREATOR UI and is
+    visible only to whoever owns the account. A customer seeing "Boost post"
+    under a photograph would reasonably think the button was theirs to press.
+    Found by the solid blue pill on an otherwise pale row — a test that has to
+    include the pale row, because one of these posts is a photograph of a blue
+    dog and the button hunt found it instead.
 
-EDSR is doing less work here than it looks. On sources this soft it measures
-level with bicubic; it is kept because it costs nothing at build time and does
-no harm, not because it is rescuing anything. The gallery thumbnails are a
-different case again and are deliberately left alone — see
-public/gallery/CREDITS.md.
+WHY THIS BEATS THE CROP IT REPLACES. The previous version cut a 0.46-aspect
+slice out of the square post, which no source could fill: every one of them gave
+554 pixels for a screen that paints 1179, a 2.13x enlargement. A screenshot is
+1320 wide to begin with, so the card DOWNSCALES to 1179 and paints sharp.
 
-Tiled at 256px with 16px of overlap because EDSR on a 554x1200 plate at once
-needs more memory than it is worth, and the seams show without the overlap.
+The page is drawn with `background-size: contain` rather than `cover`, so the
+whole card is always on screen whatever the viewport — "the entire Instagram
+background" is not kept by cropping it. The letterbox uses the chrome colour
+sampled from the file itself.
+
+Prints the foot brightness of each, which decides whether that picture wants the
+light tab bar or the dark one. See LANDING_PHOTOS in src/apps/IntroScreen.tsx.
 """
 
 import argparse
@@ -45,97 +44,160 @@ import cv2
 import numpy as np
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-MODEL = os.path.join(ROOT, "tools", "sr-models", "EDSR_x4.pb")
-GALLERY = os.path.join(ROOT, "public", "gallery")
 OUT = os.path.join(ROOT, "public", "landing")
 
-# 393pt x 3 is an iPhone 15's real pixel grid. Matching it exactly means the
-# common case paints 1:1; a Pro Max stretches this by 9%, which is nothing next
-# to the 2.13x already baked in, and is not worth 40% more bytes on every phone.
-W, H = 1179, 2556
+W = 1179                      # an iPhone 15's real pixel grid, 393pt at 3x
 
-# From the top, not the middle. These are portraits of a dog and the centre of a
-# square post is his chest; a third down puts his head in the upper half of the
-# screen, which is where the wordmark is not.
-ANCHOR = 0.32
-
-# Which post each slot came from, so `--all` can rebuild the set as it stands.
-SLOTS = {1: "CbeRyb1OCcZ", 2: "BvAKMQqh79w", 3: "BvCLGJIn_pg", 4: "CbeQ8X4uCkn"}
-
-TILE, OVERLAP, SCALE = 256, 16, 4
-
-
-def upscale(img, sr):
-    h, w = img.shape[:2]
-    out = np.zeros((h * SCALE, w * SCALE, 3), np.uint8)
-    for y in range(0, h, TILE):
-        for x in range(0, w, TILE):
-            y0, x0 = max(0, y - OVERLAP), max(0, x - OVERLAP)
-            y1, x1 = min(h, y + TILE + OVERLAP), min(w, x + TILE + OVERLAP)
-            big = sr.upsample(img[y0:y1, x0:x1])
-            # Trim the overlap back off in destination coordinates.
-            ty, tx = (y - y0) * SCALE, (x - x0) * SCALE
-            th = min(TILE, h - y) * SCALE
-            tw = min(TILE, w - x) * SCALE
-            out[y * SCALE:y * SCALE + th, x * SCALE:x * SCALE + tw] = big[ty:ty + th, tx:tx + tw]
-    return out
+# His picks, in the order they rotate. 2205 is first because he sent it after
+# the other three with "This one is better".
+#
+# 2200 IS NOT IN HERE AND THAT IS THE POINT. He sent 2200, 2205 and 2209 as
+# three separate pictures; they are three screenshots of THE SAME POST — same
+# caption, same 19 likes, same 24 January 2019. Taking him at his word would
+# have put one post in two of four slots and made the rotation look broken. 2201
+# takes the seat, which was his own fourth pick anyway.
+SLOTS = {
+    1: "1956_IMG_2205.png",
+    2: "1907_IMG_2199.png",
+    3: "1907_IMG_2202.png",
+    4: "1907_IMG_2201.png",
+}
+POSTS = os.environ.get(
+    "BEASTY_POSTS",
+    "/private/tmp/claude-501/-Users-leon/65b00703-f0ad-4535-98e3-27d8a7170959/scratchpad/msgs",
+)
 
 
-def build(code, slot, sr):
-    src = os.path.join(GALLERY, f"{code}.webp")
-    if not os.path.exists(src):
-        sys.exit(f"no such post: {src}")
+def status_bar_height(im):
+    """Bottom of the dynamic island, plus the gap under it.
+
+    THE FIRST CONTIGUOUS DARK BLOCK, not the last dark row. Taking the last one
+    worked on posts whose picture starts low and failed on the rest: a dark
+    photograph beginning at y=330 is also "a row with lots of dark pixels", so
+    the cut landed in the middle of the account row and beheaded the handle this
+    whole exercise exists to keep.
+    """
+    g = cv2.cvtColor(im, cv2.COLOR_BGR2GRAY)
+    rows = np.where((g[:400] < 60).sum(axis=1) > 300)[0]
+    if not len(rows):
+        return 0
+    end = rows[0]
+    for y in rows:
+        if y - end <= 5:
+            end = y
+        else:
+            break
+    return int(end) + 14
+
+
+def _blue(im):
+    return cv2.inRange(cv2.cvtColor(im, cv2.COLOR_BGR2HSV), (100, 140, 140), (125, 255, 255))
+
+
+def insights_band(im):
+    """(top, bottom) of the creator-only row, or None if this is not a post.
+
+    Found as a CONNECTED BLOB rather than by counting blue per row. Row-counting
+    found the button and then lost it again wherever the "View insights" text on
+    the left broke the pale-row test, so the band came out 31px of a 96px row and
+    left most of "Boost post" on screen. A blob has one set of bounds.
+    """
+    h, w = im.shape[:2]
+    n, lab, stats, _ = cv2.connectedComponentsWithStats(_blue(im), 8)
+    best = None
+    for i in range(1, n):
+        x, y, bw, bh, area = stats[i]
+        # A solid pill on the right-hand side, roughly a row tall.
+        if bw > 250 and 55 < bh < 140 and x > w * 0.45 and area > bw * bh * 0.6:
+            if best is None or y < best[0]:
+                best = (y, y + bh)
+    if best is None:
+        return None
+    pad = 26                       # the row's own padding, above and below
+    return max(0, best[0] - pad), min(h, best[1] + pad)
+
+
+def account_row_top(im, after=0):
+    """Row where a post's own header starts — its avatar, less the row padding.
+
+    Their avatar is a saturated yellow disc at the far left and appears once per
+    post, which makes it both the top of this card and the top of the next one.
+    """
+    h, w = im.shape[:2]
+    hsv = cv2.cvtColor(im[:, : int(w * 0.12)], cv2.COLOR_BGR2HSV)
+    yellow = cv2.inRange(hsv, (20, 120, 150), (35, 255, 255))
+    rows = [int(y) for y in np.where(yellow.sum(axis=1) // 255 > 30)[0] if y > after]
+    return max(0, rows[0] - 30) if rows else None
+
+
+def next_post_top(im, after):
+    """Row where the FOLLOWING post's header starts, so the card ends at the date.
+
+    Their avatar is a saturated yellow disc at the far left, and it appears once
+    per post. The first one belongs to this post; the second is where the next
+    begins, and everything from there down is somebody else's picture.
+    """
+    h, w = im.shape[:2]
+    hsv = cv2.cvtColor(im[:, : int(w * 0.12)], cv2.COLOR_BGR2HSV)
+    yellow = cv2.inRange(hsv, (20, 120, 150), (35, 255, 255))
+    rows = np.where(yellow.sum(axis=1) // 255 > 30)[0]
+    rows = [int(y) for y in rows if y > after]
+    if not rows:
+        return h
+    return max(0, rows[0] - 30)
+
+
+def build(src, slot):
     im = cv2.imread(src, cv2.IMREAD_COLOR)
-    sh, sw = im.shape[:2]
+    if im is None:
+        sys.exit(f"cannot read {src}")
+    """
+    THE CARD STARTS AT THE ACCOUNT ROW, not at the top of the screenshot.
 
-    # The tallest crop of the right shape this source can give, anchored high.
-    cw = min(sw, int(round(sh * W / H)))
-    ch = int(round(cw * H / W))
-    if ch > sh:
-        ch, cw = sh, int(round(sh * W / H))
-    x = (sw - cw) // 2
-    y = int(round((sh - ch) * ANCHOR))
-    crop = im[y:y + ch, x:x + cw]
+    Above it sits Instagram's own "< Posts / beasty_pages" nav, which says the
+    handle a second time and, being pale, showed straight through the
+    translucent mark that sits over this exact spot. Dropping it loses nothing
+    he asked to keep — "BEASTY_pages above" is the account row, avatar and all —
+    and it takes the clutter out from behind the wordmark.
+    """
+    top = account_row_top(im, status_bar_height(im)) or status_bar_height(im)
+    band = insights_band(im)
+    if band is None:
+        print(f"  slot {slot}: no Boost-post row found — is this a post screenshot?")
+        card = im[top:next_post_top(im, top + 400)]
+    else:
+        end = next_post_top(im, band[1])
+        card = np.vstack([im[top:band[0]], im[band[1]:end]])
 
-    big = upscale(crop, sr)
-    final = cv2.resize(big, (W, H), interpolation=cv2.INTER_AREA)
-
-    # Gentle, and gentle on purpose. Any enlargement costs acutance and a light
-    # unsharp mask puts it back; a heavy one draws bright rims round the dog
-    # against the sky, which is worse than the softness it set out to cure.
-    blur = cv2.GaussianBlur(final, (0, 0), 1.2)
-    final = cv2.addWeighted(final, 1.55, blur, -0.55, 0)
+    h = int(round(card.shape[0] * W / card.shape[1]))
+    card = cv2.resize(card, (W, h), interpolation=cv2.INTER_AREA)
 
     dst = os.path.join(OUT, f"biggie-{slot}.webp")
     before = os.path.getsize(dst) if os.path.exists(dst) else 0
-    cv2.imwrite(dst, final, [cv2.IMWRITE_WEBP_QUALITY, 82])
+    cv2.imwrite(dst, card, [cv2.IMWRITE_WEBP_QUALITY, 86])
 
-    sharp = lambda a: cv2.Laplacian(cv2.cvtColor(a, cv2.COLOR_BGR2GRAY), cv2.CV_32F).var()
-    direct = cv2.resize(crop, (W, H), interpolation=cv2.INTER_CUBIC)
-    print(f"  biggie-{slot}  <- {code}  crop {cw}x{ch} -> {W}x{H}  "
+    chrome = np.median(card[:6, :6].reshape(-1, 3), axis=0).astype(int)
+    foot = cv2.cvtColor(card[int(h * 0.82):], cv2.COLOR_BGR2GRAY).mean()
+    print(f"  biggie-{slot}  <- {os.path.basename(src)}  {W}x{h}  "
           f"{before // 1024}KB -> {os.path.getsize(dst) // 1024}KB  "
-          f"sharpness {sharp(direct):.0f} (bicubic) -> {sharp(final):.0f} (EDSR)")
+          f"chrome #{chrome[2]:02x}{chrome[1]:02x}{chrome[0]:02x}  "
+          f"foot {foot:5.1f} -> {'LIGHT (dark tab bar)' if foot > 140 else 'dark (light tab bar)'}")
 
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("code", nargs="?", help="gallery shortcode, e.g. CbeQ8X4uCkn")
-    ap.add_argument("slot", nargs="?", type=int, help="landing slot, 1-4")
-    ap.add_argument("--all", action="store_true", help="rebuild every slot from SLOTS")
+    ap.add_argument("src", nargs="?", help="path to a post screenshot")
+    ap.add_argument("slot", nargs="?", type=int)
+    ap.add_argument("--all", action="store_true")
     a = ap.parse_args()
-
-    sr = cv2.dnn_superres.DnnSuperResImpl_create()
-    sr.readModel(MODEL)
-    sr.setModel("edsr", SCALE)
     os.makedirs(OUT, exist_ok=True)
-
     if a.all:
-        for slot, code in sorted(SLOTS.items()):
-            build(code, slot, sr)
-    elif a.code and a.slot:
-        build(a.code, a.slot, sr)
+        for slot, name in sorted(SLOTS.items()):
+            build(os.path.join(POSTS, name), slot)
+    elif a.src and a.slot:
+        build(os.path.expanduser(a.src), a.slot)
     else:
-        ap.error("give a shortcode and a slot, or --all")
+        ap.error("give a screenshot and a slot, or --all")
 
 
 if __name__ == "__main__":

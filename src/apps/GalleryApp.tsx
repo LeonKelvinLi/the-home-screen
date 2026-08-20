@@ -28,11 +28,21 @@ export function GalleryApp({ api }: { api: ShellApi }) {
             <div className="gal-grid">
               {shots.map((s) => (
                 <figure className="gal-item" key={s.src}>
-                  {/* The picture links to its own post, so his caption can
-                      always be checked against the thing he actually wrote. */}
-                  <a href={s.href} target="_blank" rel="noreferrer">
+                  {/*
+                    The picture links to its own post, so his caption can always
+                    be checked against the thing he actually wrote — WHERE THERE
+                    IS ONE. The seventeen that arrived as screenshots carry no
+                    shortcode and therefore no link, and an anchor with no href
+                    is not a link: it looks identical, takes the tap and does
+                    nothing. A plain image says what it is.
+                  */}
+                  {s.href ? (
+                    <a href={s.href} target="_blank" rel="noreferrer">
+                      <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
+                    </a>
+                  ) : (
                     <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
-                  </a>
+                  )}
                   <figcaption>
                     <time dateTime={s.taken}>{DAY.format(new Date(s.taken + 'T00:00:00Z'))}</time>
                     {s.caption && <span>{s.caption}</span>}
@@ -50,8 +60,8 @@ export function GalleryApp({ api }: { api: ShellApi }) {
           hiding behind a spinner.
         */}
         <p className="gal-note">
-          Twelve posts from @beasty_pages, with the captions as written. Instagram does not let
-          these update themselves, so newer ones are added by hand.
+          Twenty-nine posts from @beasty_pages, with the captions as written. Instagram does not
+          let these update themselves, so newer ones are added by hand.
         </p>
         <a className="gal-link" href="https://www.instagram.com/beasty_pages/" target="_blank" rel="noreferrer">
           See them all on Instagram

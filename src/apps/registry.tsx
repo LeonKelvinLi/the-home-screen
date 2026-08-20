@@ -94,7 +94,9 @@ export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
   brandId: b.id,
   tint: b.logo.bg.split('|')[0],
   ...(MOBILE.test(b.cuisine) ? { mobile: true as const } : {}),
-  ...(b.site ? {} : { noSite: true as const }),
+  // No link at all, OR a link that is only a placeholder — both belong on his
+  // prospect list. See Brand.needsSite.
+  ...(b.site && !b.needsSite ? {} : { noSite: true as const }),
 }))
 
 export const SYSTEM_APPS: AppDef[] = SYSTEM.map((s) => ({

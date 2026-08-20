@@ -147,8 +147,34 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.yelp.com/biz/harumi-sushi-and-hibachi-livermore',
     logoTemplate: 'band', logoLines: ['HARUMI', 'AYCE'],
   }),
-  seed('lucky-seven', 'Lucky Seven', 'Lucky Seven', '', '#B3131B', {
-    logoInitials: '7', logoFace: 'slab',
+  /*
+    Lucky Three Seven, Oakland. Filled out 2026-08-20 from the Instagram profile
+    and the logo he sent — "Oakland • Goods & update BEASTY • goods".
+
+    THE NAME WAS WRONG HERE. It was read off one of his list screenshots as
+    "Lucky Seven"; the business is Lucky Three Seven, @luckythreeseven. The slug
+    moved with it, and the seat below moved with the slug.
+
+    THE LINK IS A GOFUNDME AND THAT IS DELIBERATE. "Please attach this as their
+    website link for now", followed by "They need a website. Note" — so the seat
+    carries the fundraiser AND stays on the red-outline prospect list. That is
+    what `needsSite` exists for: without it, the stopgap link would have quietly
+    taken them off the list he prospects from.
+
+    Trade is Filipino, from their OWN billing rather than a guess off the name —
+    the mark reads "XL LUMPIA & G-FIRE WINGS" and their pinned highlight is how
+    to pronounce tocino.
+  */
+  seed('lucky-three-seven', 'Lucky Three Seven', 'Lucky 3 Seven', 'Filipino food', '#0B0B0D', {
+    icon: 'lucky-three-seven',
+    site: 'https://www.gofundme.com/f/my-brothers-wish-for-kiah',
+    siteCta: 'Open their GoFundMe',
+    needsSite: true,
+    address: '2868 Fruitvale Ave, Oakland, CA',
+    contactOnly:
+      'Filipino food in Fruitvale — lumpia and wings, by their own billing. They have no ' +
+      'website yet, so the link goes to the family fundraiser the owner is running, which is ' +
+      'what the operator asked it to point at for now. Nothing else is listed.',
   }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
@@ -1125,7 +1151,7 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_meadowlarkdairy', //  21 Meadowlark Dairy
   'b_masa', //             22 Masa
   'b_harumiayce', //       23 Harumi - AYCE
-  'b_luckyseven', //       24 Lucky Seven
+  'b_luckythreeseven', //  24 Lucky Three Seven
 ]
 
 export const BEASTY_SERVICES_ROSTER: (string | null)[] = [

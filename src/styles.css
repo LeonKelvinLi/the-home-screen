@@ -8961,11 +8961,21 @@ textarea {
   his idea is simply all four layers going transparent — there is never a frame
   of bare page between the two states.
 */
+/*
+  CONTAIN, NOT COVER — "keep the entire Instagram background with it".
+
+  These are whole Instagram cards now: handle and avatar above, his caption and
+  the date below. Cover crops to fill, which on a card this tall throws away
+  precisely the two things he asked to keep, and throws away a different pair on
+  every viewport. Contain fits the whole card on any screen and letterboxes with
+  the chrome colour sampled from the file, so the fill is invisible against it.
+*/
 .dialer-photo {
   position: absolute;
   inset: 0;
-  background-size: cover;
-  background-position: center 32%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   opacity: 0;
   /* Out slower than in: a picture arriving should feel deliberate and a picture
      leaving should not snap the yellow back like a fault. */
@@ -9042,7 +9052,7 @@ textarea {
   one is dark grey on the page itself, so it gets a shadow while a picture is
   behind it. Without it "SUPPLY" and "WATER" disappear into a dog.
 */
-.dialer.is-photo .dialer-key-sub {
+.dialer.is-photo:not(.is-lightphoto) .dialer-key-sub {
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
@@ -9059,13 +9069,19 @@ textarea {
   the parent never reached the labels — the icons went white and the words under
   them stayed dark, which was worse than leaving both alone. Overriding the
   variables carries the selected state with it for free.
+
+  AND IT ONLY APPLIES TO DARK PICTURES. Written when every landing photograph
+  was a dog against foliage; the Instagram cards that replaced them are
+  near-white at the foot, where white ink with a dark halo is not a treatment,
+  it is an erasure. `.is-lightphoto` comes from a measurement of each file's
+  bottom fifth rather than from anybody's eye — see LANDING_PHOTOS.
 */
-.dialer.is-photo {
+.dialer.is-photo:not(.is-lightphoto) {
   --tab-off: rgba(255, 255, 255, 0.88);
   --tab-on: #ffffff;
 }
 
-.dialer.is-photo .dialer-tabs {
+.dialer.is-photo:not(.is-lightphoto) .dialer-tabs {
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
 }
 

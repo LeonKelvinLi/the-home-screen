@@ -279,6 +279,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'oakland-goods-0': 'b_cafenoiroak', //              Burgers — comfort food
   'oakland-goods-5': 'b_philomenapizza', //           Italian
   'oakland-services-19': 'b_jumpandroll', //          Events — party rentals
+
+  /*
+    Lucky Three Seven, on "Oakland • Goods", 2026-08-20.
+
+    SEATED IN CHICKEN WINGS RATHER THAN FILIPINO, and not because the trade is
+    in doubt. Filipino food is index 10 and Señor Sisig already holds it in
+    Oakland; a category holds one business per city, and bumping a seated one to
+    make room is his call and not mine. Wings is not a consolation either — the
+    mark itself reads "XL LUMPIA & G-FIRE WINGS", so half their own billing is
+    the category they are sitting in. Worth confirming with him.
+  */
+  'oakland-goods-8': 'b_luckythreeseven', //          Chicken wings
   'concord-services-4': 'b_urbanair', //              Gym — an adventure park
   'petaluma-services-4': 'b_playland707', //          Gym — paintball
   'brentwood-goods-15': 'b_chipcookies', //           Cookies

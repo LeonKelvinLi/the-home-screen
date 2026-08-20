@@ -12,22 +12,32 @@ import { Gem } from './MembersApp'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
 /**
- * Biggie, cropped to the landing screen's shape.
+ * Biggie's posts, WHOLE — the Instagram card, not a crop of the picture in it.
  *
  * His idea: "make the landing page flip from a Biggie picture to yellow every
- * two seconds… every time it flips into a picture just use a different picture.
- * Have at least 3 different pictures rotating."
+ * two seconds… Have at least 3 different pictures rotating." Then, once he saw
+ * it: "keep the entire Instagram background with it. Basically put it on there
+ * exactly like as you see with the dates and BEASTY_pages above."
  *
- * Four rather than his minimum of three — the fourth costs nothing and makes
- * the rotation less obviously a loop. All from his own feed, and all shots
- * where the DOG is the subject: the rest of that account is sneakers, a Lakers
- * jersey and film crews, which say nothing behind a wordmark about him.
+ * So the handle, the avatar, the likes, his caption and the date all stay. That
+ * context is the point — "there are a lot of prominent people in these
+ * pictures", and a bare crop threw away the part that proves it.
+ *
+ * `bg` is the letterbox. These are drawn with `background-size: contain`, since
+ * "the entire Instagram background" is not kept by cropping it, and the colour
+ * is sampled from the file so the fill is invisible against the card.
+ *
+ * `light` is MEASURED, not judged: tools/make-landing-photo.py prints the mean
+ * brightness of the bottom fifth of each card, which is the strip the tab bar
+ * sits on. Instagram's chrome is near-white, and the tab bar inverts to white
+ * ink when a picture is up — the treatment written for dark photographs of
+ * dogs, which on these would be white-on-white. See .dialer.is-lightphoto.
  */
 const LANDING_PHOTOS = [
-  '/landing/biggie-2.webp',
-  '/landing/biggie-1.webp',
-  '/landing/biggie-3.webp',
-  '/landing/biggie-4.webp',
+  { src: '/landing/biggie-1.webp', bg: '#f5f6f5', light: true },
+  { src: '/landing/biggie-2.webp', bg: '#f5f6f5', light: true },
+  { src: '/landing/biggie-3.webp', bg: '#f5f6f5', light: true },
+  { src: '/landing/biggie-4.webp', bg: '#f5f6f5', light: true },
 ]
 
 
@@ -434,7 +444,9 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
 
   return (
     <div
-      className={`dialer is-${stage}${photo !== null ? ' is-photo' : ''}${leaving ? ' is-leaving' : ''}${
+      className={`dialer is-${stage}${photo !== null ? ' is-photo' : ''}${
+        photo !== null && LANDING_PHOTOS[photo].light ? ' is-lightphoto' : ''
+      }${leaving ? ' is-leaving' : ''}${
         skipped || reduced ? ' is-instant' : ''
       }`}
     >
@@ -499,11 +511,15 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
           stays painted underneath, so the cross-fade has something to fade to
           and there is never a frame of bare page between the two.
         */}
-        {LANDING_PHOTOS.map((src, i) => (
+        {LANDING_PHOTOS.map((p, i) => (
           <span
-            key={src}
+            key={p.src}
             className={`dialer-photo${photo === i ? ' is-on' : ''}`}
-            style={i <= reached + 1 ? { backgroundImage: `url(${src})` } : undefined}
+            style={
+              i <= reached + 1
+                ? { backgroundImage: `url(${p.src})`, backgroundColor: p.bg }
+                : undefined
+            }
             aria-hidden="true"
           />
         ))}

@@ -38,6 +38,15 @@ export interface LocalSeed {
   /** Real ordering link, where one exists. */
   orderUrl?: string
   site?: string
+  /**
+   * Keep them on the red-outline prospect list even though `site` is set.
+   *
+   * For a business whose only link is a stopgap — a GoFundMe, a Linktree, a
+   * booking widget — where the operator still wants them shown as needing a
+   * real website. Without this the outline is derived from `!site` alone and a
+   * placeholder link silently takes them off the list he prospects from.
+   */
+  needsSite?: true
   phone?: string
   address?: string
   /** Set when the whole menu is triangulated rather than published. */

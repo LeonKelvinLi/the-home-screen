@@ -1,8 +1,8 @@
 /**
  * BEASTY's own feed, in the window beside the home button.
  *
- * Twelve posts off instagram.com/beasty_pages — the operator's own account, so
- * this is his material on his own app rather than anybody else's borrowed.
+ * Twenty-nine posts off instagram.com/beasty_pages — the operator's own account,
+ * so this is his material on his own app rather than anybody else's borrowed.
  *
  * EVERY CAPTION HERE IS HIS. Not a summary of the post and not a story written
  * to fit the picture: the words he typed under it, trimmed only where a tag
@@ -122,6 +122,125 @@ export const GALLERY: GalleryShot[] = [
     alt: 'Two people standing in a sneaker shop with a brown pit bull sitting between them',
     caption: '#TBT At Flight Club.',
     href: post('BvAJUaWhzQk'),
+  },
+
+  /*
+    SEVENTEEN MORE, from the batch he sent on 2026-08-20 — "Can you go ahead and
+    put all these pictures in the gallery as well." He sent twenty; 2205 and
+    2209 are the same post as 2200, and one of the Berkeley shots was sent
+    twice. Three duplicates, deduplicated by caption, date and like count.
+
+    THESE HAVE NO `href` AND THAT IS A REAL LOSS, not an oversight. The twelve
+    above were downloaded from Instagram, so each carries its shortcode and its
+    caption can be checked against the source. These arrived as SCREENSHOTS,
+    which carry no shortcode, so the captions below were transcribed off the
+    picture by eye. They are his words and they were read carefully — but they
+    are the only ones here that nobody can verify with a tap, so they are the
+    ones worth re-reading if anything ever looks wrong.
+
+    "There are a lot of prominent people in these pictures", which is why the
+    alt text names who is in frame where Instagram's own tags name them.
+  */
+  {
+    src: '/gallery/2019-03-15-minna-gallery.webp',
+    taken: '2019-03-15',
+    alt: 'A wall of photographs and posters at 111 Minna Gallery, a woman in red in front of them',
+    caption: '#FBF HBD to this beautiful individual! @laovegan',
+  },
+  {
+    src: '/gallery/2019-03-14-flight-club.webp',
+    taken: '2019-03-14',
+    alt: 'Two people in a sneaker shop with a pit bull on a lead between them, tagged @chrisbrownofficial and @badgalriri',
+    caption: '#TBT @chrisbrownofficial @badgalriri',
+  },
+  {
+    src: '/gallery/2019-02-07-tbt-biggie.webp',
+    taken: '2019-02-07',
+    alt: 'Biggie sitting on concrete in a blue collar and lead, head turned to one side',
+    caption: '#TBT #BEASTY #BIGGIE #GOTTI #BIGGIEGOTTI #RIP #BIP',
+  },
+  {
+    src: '/gallery/2019-02-03-beauty-and-beasty.webp',
+    taken: '2019-02-03',
+    alt: 'A woman sitting on a step beside a pit bull, both facing the camera',
+    caption: '#BEAUTY & #BEASTY #BFF',
+  },
+  {
+    src: '/gallery/2019-01-24-hollywood-hills.webp',
+    taken: '2019-01-24',
+    alt: 'A man in a red and white track jacket sitting on a rail with a pit bull on a chain lead, the frame mirrored',
+    caption: '2 BEASTY Individuals #beasty #BEASTY #xxlbully #gotti #hollywood #legends',
+  },
+  {
+    src: '/gallery/2019-01-24-blue-nose.webp',
+    taken: '2019-01-24',
+    alt: 'Two blue-nose pit bulls nose to nose, the frame mirrored and tinted blue',
+    caption: '#bluenose to nose #BEASTY #BIGGIEGOTTI #RIP #BIP',
+  },
+  {
+    src: '/gallery/2019-01-24-telegraph-berkeley.webp',
+    taken: '2019-01-24',
+    alt: 'A man crouching beside a pit bull on Telegraph Avenue in Berkeley',
+    caption: '#TBT #filthydripped #BEASTY #BIGGIE #BIGGIEGOTTI #GOTTI #GOTTILINE',
+  },
+  {
+    src: '/gallery/2019-01-24-huf.webp',
+    taken: '2019-01-24',
+    alt: 'A man in a hoodie inside the Huf skate shop, shelves of shoes behind him, a pit bull at his feet',
+    caption: '#TBT #HUF #BEASTY #BIGGIE #GOTTI #BIGGIEGOTTI #GOTTILINE',
+  },
+  {
+    src: '/gallery/2019-01-24-live-beasty.webp',
+    taken: '2019-01-24',
+    alt: 'A yellow LIVE BEASTY BiGGiE GOTTi wordmark on black, a dog silhouette inside the letters',
+  },
+  {
+    src: '/gallery/2019-01-18-biggie-gotti.webp',
+    taken: '2019-01-18',
+    alt: 'Biggie standing up against a balcony rail in a harness and chain lead',
+    caption: '#FBF Biggie Gotti',
+  },
+  {
+    src: '/gallery/2019-01-18-flight-club-2008.webp',
+    taken: '2019-01-18',
+    alt: 'Two men in red T-shirts holding two pit bulls on chain leads inside Flight Club, the frame mirrored',
+    caption: '#FBF 2008',
+  },
+  {
+    src: '/gallery/2019-01-18-lacma.webp',
+    taken: '2019-01-18',
+    alt: 'Two people with pit bulls in front of the lamp posts at LACMA, the frame mirrored',
+    caption: '#FBF 2008',
+  },
+  {
+    src: '/gallery/2019-01-18-melrose.webp',
+    taken: '2019-01-18',
+    alt: 'A man in a baseball cap crouching beside a pit bull on Melrose Avenue',
+    caption: '#FBF 2008',
+  },
+  {
+    src: '/gallery/2019-01-18-sportie-la.webp',
+    taken: '2019-01-18',
+    alt: 'A black and white photograph of a woman kneeling beside a pit bull in a shoe shop',
+    caption: '#FBF',
+  },
+  {
+    src: '/gallery/2019-01-17-nicky-diamonds.webp',
+    taken: '2019-01-17',
+    alt: 'A group at a restaurant table with a pit bull lying on the floor in front of them',
+    caption: '#TBT Nicky Diamonds',
+  },
+  {
+    src: '/gallery/2019-01-16-ten-year-challenge.webp',
+    taken: '2019-01-16',
+    alt: 'A four-panel collage of people and pit bulls, a ten-year comparison',
+    caption: '#10yearchallenge Why the fuck not… Here’s my entry.',
+  },
+  {
+    src: '/gallery/2018-11-30-hbd-richmond.webp',
+    taken: '2018-11-30',
+    alt: 'A man in a white T-shirt holding a pit bull on a chain lead, the frame mirrored',
+    caption: 'HBD to my boy Richmond!!! @rtbrothas',
   },
 ]
 

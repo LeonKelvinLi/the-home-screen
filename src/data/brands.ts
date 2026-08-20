@@ -114,6 +114,16 @@ export interface Brand {
   menu: MenuCategory[]
   /** Their own site, where one exists. */
   site?: string
+  /**
+   * Still wanted: a real website, even though `site` points somewhere.
+   *
+   * The red outline is the operator's PROSPECT LIST — "the ones without a web
+   * presence" — so it has to survive a stopgap link. Lucky Three Seven's only
+   * link is a GoFundMe he asked to attach "for now", and he followed it with
+   * "They need a website. Note". Deriving the outline from `!site` alone would
+   * have quietly taken them off the list the moment the stopgap went in.
+   */
+  needsSite?: true
   /** One photograph of the place, ours to serve. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
   /** A real ordering link (Toast, their own checkout), where one exists. */
@@ -308,6 +318,8 @@ interface Seed {
   review?: string
   /** A page of theirs that actually resolves. Verified before it goes in. */
   site?: string
+  /** Keep them on the red-outline prospect list even though `site` is set. */
+  needsSite?: true
   /** Stocked subset, by item name. Omit to offer the whole menu. */
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
@@ -642,6 +654,7 @@ const fromSeed = (s: Seed): Brand => ({
   prepMinutes: s.prep,
   needsOwnerReview: s.review,
   site: s.site,
+  needsSite: s.needsSite,
   siteNote: s.siteNote,
   quoteOnly: s.quoteOnly,
   clip: s.clip,
@@ -736,6 +749,7 @@ export const BRANDS: Brand[] = [
   ].map(([s, rosterOnly]) => ({
     ...fromSeed(s as unknown as Seed),
     site: s.site,
+    needsSite: s.needsSite,
     orderUrl: s.orderUrl,
     phone: s.phone,
     address: s.address,
