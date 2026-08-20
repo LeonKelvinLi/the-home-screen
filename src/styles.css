@@ -1139,108 +1139,18 @@ textarea {
 
 /* ---------- shared in-app chrome ---------- */
 
-.chrome {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  background: #f2f2f7;
-}
 
-.chrome-nav {
-  flex: 0 0 auto;
-  padding-top: var(--status-h);
-  padding-bottom: 10px;
-  background: var(--tint);
-  color: #fff;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
-  z-index: 5;
-}
 
-.chrome.is-light .chrome-nav {
-  background: #f9f9f9;
-  color: var(--ink);
-}
 
-.chrome-nav-row {
-  display: grid;
-  grid-template-columns: 68px 1fr 68px;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
-}
 
-.chrome-nav-title {
-  font-size: 16px;
-  font-weight: 600;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
 
-.chrome-nav-sub {
-  padding: 2px 16px 0;
-  font-size: 12.5px;
-  text-align: center;
-  opacity: 0.72;
-}
 
-.chrome-nav-right {
-  display: flex;
-  justify-content: flex-end;
-}
 
 /* iOS minimum hit target is 44x44. This was a 12x20 chevron with no padding. */
-.chrome-back {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 4px;
-  min-width: 44px;
-  min-height: 44px;
-  margin-left: -8px;
-  padding: 0 8px;
-  font-size: 17px;
-  letter-spacing: -0.4px;
-  opacity: 0.95;
-}
 
-.chrome-back:active {
-  opacity: 0.55;
-}
 
-.chrome-pill {
-  min-width: 44px;
-  height: 44px;
-  padding: 0 8px;
-  border-radius: 13px;
-  background: rgba(255, 255, 255, 0.24);
-  font-size: 13px;
-  font-weight: 700;
-}
 
-.chrome-body {
-  flex: 1 1 auto;
-  overflow-y: auto;
-  overscroll-behavior-y: contain;
-  -webkit-overflow-scrolling: touch;
-  touch-action: pan-y;
-  /*
-    Deliberately NOT promoted with translateZ(0). Forcing a layer on a scroll
-    container can push iOS Safari onto main-thread scrolling and kill the
-    momentum, which reads as lag on a real phone even though a desktop profile
-    looks fine. The chrome around it is opaque now, so there is nothing to gain.
-  */
-  scroll-padding-top: 52px;
-}
 
-.chrome-footer {
-  flex: 0 0 auto;
-  padding: 10px 16px calc(10px + var(--bottom-h) + var(--gesture-h));
-  background: #f9f9f9;
-  border-top: 0.5px solid var(--line);
-}
 
 /* ---------- brand app ---------- */
 

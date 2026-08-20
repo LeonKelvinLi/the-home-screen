@@ -44,18 +44,13 @@ export const ROW_GAP_PAD = 34
  * itself. Measured, not guessed — 7px gap and a 13px line.
  */
 export const ICON_LABEL_H = 20
-export const GRID_COLS = 4
-export const GRID_ROWS = 6
 
-export const STATUS_H = 54
-export const HOME_INDICATOR_H = 34
 
 /**
  * Apple's transition curve. Not a real spring, but it is the curve UIKit's
  * sheet and app-open animations read as, and it stays GPU-composited.
  */
 export const EASE_IOS = 'cubic-bezier(0.32, 0.72, 0, 1)'
-export const EASE_OUT = 'cubic-bezier(0.16, 1, 0.3, 1)'
 
 export const OPEN_MS = 420
 export const CLOSE_MS = 380
