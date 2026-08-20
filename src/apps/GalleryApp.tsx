@@ -20,7 +20,7 @@ export function GalleryApp({ api }: { api: ShellApi }) {
   const months = byMonth(GALLERY)
 
   return (
-    <AppChrome title="Biggie" onBack={api.closeApp} tint="#141416">
+    <AppChrome title="BEASTY" onBack={api.closeApp} tint="#141416">
       <div className="gal">
         {months.map(([key, shots]) => (
           <section className="gal-month" key={key}>
@@ -28,7 +28,11 @@ export function GalleryApp({ api }: { api: ShellApi }) {
             <div className="gal-grid">
               {shots.map((s) => (
                 <figure className="gal-item" key={s.src}>
-                  <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
+                  {/* The picture links to its own post, so his caption can
+                      always be checked against the thing he actually wrote. */}
+                  <a href={s.href} target="_blank" rel="noreferrer">
+                    <img src={s.src} alt={s.alt} loading="lazy" decoding="async" />
+                  </a>
                   <figcaption>
                     <time dateTime={s.taken}>{DAY.format(new Date(s.taken + 'T00:00:00Z'))}</time>
                     {s.caption && <span>{s.caption}</span>}
@@ -46,8 +50,8 @@ export function GalleryApp({ api }: { api: ShellApi }) {
           hiding behind a spinner.
         */}
         <p className="gal-note">
-          More of these live on Instagram. They are not pulled in automatically — Instagram does
-          not allow it — so they are added here by hand.
+          Twelve posts from @beasty_pages, with the captions as written. Instagram does not let
+          these update themselves, so newer ones are added by hand.
         </p>
         <a className="gal-link" href="https://www.instagram.com/beasty_pages/" target="_blank" rel="noreferrer">
           See them all on Instagram
