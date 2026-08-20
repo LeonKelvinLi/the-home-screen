@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import { AppChrome } from './AppChrome'
+import { InstallGuide } from '../ios/InstallGuide'
+import { canInstall } from '../lib/install'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -42,9 +45,46 @@ export function RewardsApp({ api }: { api: ShellApi }) {
 }
 
 export function HelpApp({ api }: { api: ShellApi }) {
+  const [guide, setGuide] = useState(false)
+  const offer = canInstall()
+
   return (
     <AppChrome title="Help" onBack={api.closeApp} tint="#2C2C2E">
       <div className="plain">
+        {/*
+          THE PERMANENT DOOR TO INSTALLING.
+
+          The bubble on the home screen is a nudge and it is the right shape for
+          one — quiet, once, gone if ignored. What it should never have been is
+          the ONLY route. The operator asked "when does the add to homescreen
+          thing pop up? I've seen it once but when does it pop up?", which is
+          the question of somebody who wants to show it to a business owner on
+          demand and cannot make it come back.
+
+          So it lives here too, permanently, where a person goes when they want
+          to know how something works. First on the page because installing is
+          the most valuable thing anyone can do in this app: installed, the page
+          gets the whole screen and all 24 tiles fit, which is what makes "the
+          first 48 spots are the first two pages" literally true.
+
+          It disappears entirely once the app IS installed, so it can never nag
+          somebody who has already done it, and it is hidden where the guide
+          would be wrong — it draws Safari's own toolbar, and that flow does not
+          exist on Android, on desktop, or in an in-app browser.
+        */}
+        {offer && (
+          <button className="install-row" onClick={() => setGuide(true)}>
+            <span className="install-row-text">
+              <strong>Add BEASTY to your home screen</strong>
+              <em>Three taps. It opens full screen, like an app.</em>
+            </span>
+            <span className="install-row-go" aria-hidden="true">
+              ›
+            </span>
+          </button>
+        )}
+        {guide && <InstallGuide onClose={() => setGuide(false)} />}
+
         <h3>Common questions</h3>
         <ul className="plain-list">
           {/*

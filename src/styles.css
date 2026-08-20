@@ -8911,3 +8911,46 @@ textarea {
   .reels { scroll-behavior: auto; }
   .reel-hint { animation: none; }
 }
+
+/*
+  The install row in Help — the permanent way in, beside the bubble that only
+  ever appears once.
+
+  Loud enough to be the first thing on the page and quiet enough not to look
+  like an advert: it is an answer to a question somebody came here with, not a
+  banner. Uses the brand yellow only for the chevron, so it reads as a row that
+  goes somewhere rather than a call to action shouting on a support screen.
+*/
+.install-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 0 18px;
+  padding: 14px 14px 15px;
+  border: 0;
+  border-radius: 14px;
+  background: #141416;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.install-row-text { display: flex; flex-direction: column; gap: 3px; flex: 1 1 auto; }
+.install-row-text strong { font-size: 15px; font-weight: 650; }
+.install-row-text em {
+  font-style: normal;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.66);
+}
+
+.install-row-go {
+  flex: 0 0 auto;
+  font-size: 22px;
+  line-height: 1;
+  color: #f6d800;
+}
+
+.install-row:active { opacity: 0.85; }

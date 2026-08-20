@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { InstallGuide } from './InstallGuide'
+import { markDismissed, markLooked, shouldOffer } from '../lib/install'
 
 /**
  * The nudge to install — the coach mark the operator's old site showed: a
@@ -13,16 +14,9 @@ import { InstallGuide } from './InstallGuide'
  */
 
 /**
- * Once per device, same shape as the other fb.* keys. Written on a tap — an
- * ANSWER — and deliberately never on the timeout: a bubble nobody noticed has
- * not been declined, so it keeps one more chance on a later visit.
- */
-const KEY = 'fb.a2hs.v1'
-
-/**
- * "After a few seconds of entry" — the operator's timing. Late enough that
- * the customer is looking at the screen they would be installing rather than
- * the tail of the dialer handoff, early enough to still catch a first visit.
+ * "A few seconds of entry" — the operator's timing. Late enough that the
+ * customer is looking at the screen they would be installing rather than the
+ * tail of the dialer handoff, early enough to still catch a first visit.
  */
 const SHOW_MS = 4000
 
@@ -30,60 +24,10 @@ const SHOW_MS = 4000
  * its own, before a helpful bubble hardens into furniture. */
 const HIDE_MS = 12000
 
-/** Is the one sentence this bubble says actually true on this device? */
-function shouldCoach(): boolean {
-  const ua = navigator.userAgent
-
-  /*
-    iPhone/iPad Safari only. The instruction names Safari's share button and
-    the tail points at Safari's bottom bar — on Android, on desktop, in any
-    other browser, that flow does not exist in that form, so showing the
-    bubble would be directions to a control that is not there.
-  */
-  if (!/iPhone|iPad/.test(ua)) return false
-  /*
-    Every browser on iOS wears the iPhone UA. The ones that are not Safari
-    either brand themselves (CriOS/FxiOS/EdgiOS) or drop the Safari token the
-    real one always carries (the in-app webviews) — and none of them draw the
-    share button where the tail points.
-  */
-  if (!/Safari\//.test(ua) || /CriOS|FxiOS|EdgiOS/.test(ua)) return false
-
-  /*
-    Already installed: the bubble would be asking for what has been done.
-    navigator.standalone is Safari's own flag; display-mode is the standard
-    one the manifest requests. Either alone is enough to bail.
-  */
-  if ((navigator as Navigator & { standalone?: boolean }).standalone === true) return false
-  if (window.matchMedia('(display-mode: standalone)').matches) return false
-
-  /*
-    Answered once before. try/catch because Safari in private mode throws on
-    localStorage rather than returning null — there the answer cannot be
-    remembered, and offering again some visit is the lesser harm than a read
-    error taking the whole home screen down with it.
-  */
-  try {
-    if (localStorage.getItem(KEY) !== null) return false
-  } catch {
-    /* nothing saved that could say no */
-  }
-  return true
-}
-
-/** The answer, remembered — this is what "once per device" hangs on. */
-function markSeen(): void {
-  try {
-    localStorage.setItem(KEY, '1')
-  } catch {
-    /* private mode — it will simply offer once more on another visit */
-  }
-}
-
 export function AddToHomeCoach() {
   /* Decided once, at mount. Nothing in the verdict changes mid-session except
      the key this component writes itself, and it only writes on the way out. */
-  const [eligible] = useState(shouldCoach)
+  const [eligible] = useState(shouldOffer)
   const [shown, setShown] = useState(false)
   /** Someone is on it — focus inside, or a pointer over it. Pauses the clock. */
   const [held, setHeld] = useState(false)
@@ -145,7 +89,7 @@ export function AddToHomeCoach() {
   if (!eligible) return null
 
   const dismiss = () => {
-    markSeen()
+    markDismissed()
     setShown(false)
   }
 
@@ -173,7 +117,11 @@ export function AddToHomeCoach() {
             next visit would be the same nag.
           */
           onClick={() => {
-            markSeen()
+            /* COUNTED, NOT CLOSED. This used to write the same key a dismissal
+               writes, so reading the instructions and deciding to install later
+               retired the offer for good — which is exactly how the operator
+               ended up asking when it appears, having seen it once. */
+            markLooked()
             setGuide(true)
           }}
           onFocusCapture={() => setHeld(true)}
