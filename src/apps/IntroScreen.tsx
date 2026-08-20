@@ -567,7 +567,24 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
                 is faded out, rather than swapped, so no key changes size mid
                 transition.
               */}
-              <span className="dialer-key-digit">
+              {/*
+                THE SPIN. His ask: "make each number starting from #1 to spin a
+                few times until it settles into the icon you created. Maybe do
+                it all at once with all the numbers?"
+
+                All at once, but not in lockstep — each key is delayed by its
+                own index, so the row reads as a departure board rolling over
+                rather than twelve things doing one thing. `--spin-i` carries
+                that index to CSS; the keyframes are there.
+
+                The digit and the mark are BOTH mounted and the card is flipped,
+                which is what lets a number turn into a picture without either
+                the key or the label moving a pixel while it happens.
+              */}
+              <span
+                className="dialer-key-digit"
+                style={{ '--spin-i': i } as React.CSSProperties}
+              >
                 {stage === 'beasty' && k.mark ? (
                   (() => {
                     const Mark = KEY_MARKS[k.mark]

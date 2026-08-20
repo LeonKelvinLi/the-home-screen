@@ -162,6 +162,9 @@ export const CITY_PAGES = [
     region rather than a page held open for it.
   */
   'Sacramento',
+  /* Folsom, sent with Sacramento the same minute — the two his Folsom friend
+     may end up recruiting together. */
+  'Folsom',
 ] as const
 
 /**

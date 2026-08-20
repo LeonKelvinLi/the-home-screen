@@ -117,7 +117,7 @@ the sky; it is what that photograph costs. Only Vacaville's own page pays it.
 **Read this before shipping to an app store or a new domain.**
 
 From 2026-08-14 the instruction is his and it is unambiguous: "always use the
-wallpaper from the link he sends." The twelve files below are therefore the exact
+wallpaper from the link he sends." The fourteen files below are therefore the exact
 photographs he linked, not substitutes for them. Every one is third-party
 copyrighted stock. None carries a licence that permits commercial reuse, and
 none was cleared with its owner.
@@ -136,6 +136,7 @@ none was cleared with its owner.
 | `tempe.webp` | Tempe | i.pinimg.com — Pinterest, original photographer unknown |
 | `mesa.webp` | Mesa | i.pinimg.com — Pinterest, original photographer unknown |
 | `sacramento.webp` | Sacramento | thumbs.dreamstime.com — Dreamstime stock, the California State Capitol |
+| `folsom.webp` | Folsom | media-cdn.tripadvisor.com — TripAdvisor listing photo |
 
 The realistic exposure is a takedown notice, and the realistic cost of clearing
 it later is one afternoon: each of these is one line in this file and one run of

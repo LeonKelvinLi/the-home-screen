@@ -195,6 +195,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      store is not on the list, and widening a category for one seat would
      renumber a page he sells by number. */
   'sacramento-goods-23': 'b_1upretro', //      Toy shop
+  'berkeley-goods-11': 'b_scoopnchill', //     Ice cream shop
+  'oakland-goods-1': 'b_alpastorpapi', //      Mexican food
 
   /*
     His friend's six, on the flagship yellow sheets by his own instruction:

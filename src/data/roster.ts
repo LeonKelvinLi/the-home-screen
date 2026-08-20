@@ -979,6 +979,31 @@ export const ROSTER_SEED: LocalSeed[] = [
       'A retro-modern video game store in midtown Sacramento — buy, sell and trade, seven days ' +
       'a week, in their own words. Stock changes daily and is not listed here.',
   }),
+  seed('scoop-n-chill', 'Scoop N Chill', 'Scoop N Chill', 'Gelato and ice cream', '#F4A8C0', {
+    icon: 'scoop-n-chill',
+    logoTemplate: 'monogram', logoInitials: 'SC', logoFace: 'condensed',
+    address: '2122 Shattuck Ave, Berkeley, CA',
+    /* "Needs new website", his note — they publish an Instagram and nothing
+       else, so there is no site button and the red ring earns itself. */
+    contactOnly:
+      'Gelato, ice cream, milkshakes, crepes and croffles in downtown Berkeley, in their own ' +
+      'words. Nothing is priced here.',
+  }),
+  /*
+    Al Pastor Papi — "Oakland • Goods", his words. THEIR ADDRESS IS IN SAN
+    FRANCISCO: 232 O'Farrell St, which their own Instagram states. Seated where
+    he asked and addressed where they are, the same way Magic Juan's is; worth
+    a word with him in case he meant a second location.
+  */
+  seed('al-pastor-papi', 'Al Pastor Papi', 'Al Pastor Papi', 'Mexican grill', '#E8197F', {
+    icon: 'al-pastor-papi',
+    logoTemplate: 'monogram', logoInitials: 'AP', logoFace: 'condensed',
+    site: 'https://www.alpastorpapisf.com/',
+    address: '232 O’Farrell St, San Francisco, CA',
+    contactOnly:
+      'Est. 2018. Tuesday to Thursday 11 to 8, Friday and Saturday 11 to 9, in their own words. ' +
+      'The menu is on their own site.',
+  }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
