@@ -1,4 +1,5 @@
 import { Device } from './ios/Device'
+import { GalleryApp } from './apps/GalleryApp'
 import type { ShellApi } from './ios/Device'
 import { CartProvider } from './store/cart'
 import { SettingsProvider } from './store/settings'
@@ -90,6 +91,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <ProfileApp api={api} />
     case 'supply':
       return <SupplyApp api={api} />
+    case 'gallery':
+      return <GalleryApp api={api} />
     default:
       return null
   }

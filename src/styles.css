@@ -681,8 +681,12 @@ textarea {
   from --switch-w rather than typed as a number, so resizing the buttons cannot
   silently pull the pill off centre.
 
-    left  = spacer + gap + back(34) + gap
+    left  = spacer + gap + gallery(34) + gap + home(34) + gap
     right = gap + switch group
+
+  Two buttons on the left now, not one — Biggie's window joined the home
+  button, and the spacer shrank by exactly one button and one gap to keep the
+  pill where it was.
 */
 .spotlight-row {
   --switch-w: 88px;
@@ -690,7 +694,7 @@ textarea {
 
 .spotlight-row::before {
   content: '';
-  width: calc(var(--switch-w) - 34px - 8px);
+  width: calc(var(--switch-w) - (34px + 8px) * 2);
   flex: 0 0 auto;
 }
 
@@ -8616,4 +8620,93 @@ textarea {
 */
 @media (prefers-reduced-motion: reduce) {
   .dialer-call-flip { animation: none; transform: rotateY(180deg); }
+}
+
+/*
+  Biggie's window. Same glass as the home button beside it, but its OWN class —
+  it briefly borrowed .spotlight-back, which made every rule and every check
+  that meant "the home button" match two elements instead of one.
+*/
+.spotlight-glass {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
+  color: rgba(255, 255, 255, 0.88);
+  cursor: pointer;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 140ms ease;
+}
+.spotlight-glass:active { transform: scale(0.9); }
+.home.has-yellow-page .spotlight-glass {
+  background: rgba(20, 20, 22, 0.82);
+  color: #ffffff;
+  box-shadow: none;
+}
+
+/* ---------- Biggie's gallery ---------- */
+.gal { padding: 4px 16px 28px; display: flex; flex-direction: column; gap: 26px; }
+
+.gal-month-head {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+/*
+  Auto-fit rather than a fixed column count: one picture should not sit alone in
+  a third of the width looking like a mistake, and a phone and an iPad want
+  different counts from the same rule.
+*/
+.gal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(148px, 1fr));
+  gap: 12px;
+}
+
+.gal-item { margin: 0; display: flex; flex-direction: column; gap: 6px; }
+
+.gal-item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 14px;
+  background: rgba(120, 120, 128, 0.12);
+  display: block;
+}
+
+.gal-item figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  line-height: 1.35;
+}
+.gal-item time { font-weight: 600; color: rgba(60, 60, 67, 0.9); }
+.gal-item figcaption span { color: rgba(60, 60, 67, 0.6); }
+
+.gal-note {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.gal-link {
+  align-self: flex-start;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b62ff;
+  text-decoration: none;
 }

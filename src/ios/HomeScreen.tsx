@@ -4,7 +4,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, CITY_PAGES, DOCK_SETS, appForSlot } from '../apps/registry'
+import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, appForSlot } from '../apps/registry'
 import { SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
@@ -93,6 +93,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   const pagerRef = useRef<HTMLDivElement>(null)
   const pageRef = useRef(0)
   const spotlightRef = useRef<HTMLButtonElement>(null)
+  const galleryRef = useRef<HTMLButtonElement>(null)
   /** Locked on the first move so a vertical drag can never turn a page. */
   const axis = useRef<'x' | 'y' | null>(null)
   /**
@@ -967,6 +968,33 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           browser cannot disagree about which entry we are on — that
           disagreement is what made back a trap the first time.
         */}
+        {/*
+          BIGGIE'S WINDOW, left of home — his ask: "add a window svg icon next
+          to the home icon on the left where we will put biggie (the dog)… it
+          should open another window within the web."
+
+          It opens over the home screen the same way every other app does, so
+          "another window" is literal rather than a new browser tab: leaving the
+          site to show somebody the dog it is named after would be the wrong
+          direction of travel.
+        */}
+        <button
+          className="spotlight-glass is-gallery"
+          onClick={() => {
+            const el = galleryRef.current
+            const rect = el && rectInScreen(el)
+            if (rect) onOpen(GALLERY_APP.id, rect)
+          }}
+          ref={galleryRef}
+          aria-label="Biggie’s pictures"
+        >
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+            <rect x="2.6" y="4.2" width="18.8" height="15.6" rx="3.2" />
+            <circle cx="16.1" cy="9.4" r="1.9" fill="currentColor" stroke="none" />
+            <path d="M3.4 16.6l4.9-5.2 4.4 4.6 2.6-2.4 4.6 4.4" strokeLinecap="round" />
+          </svg>
+        </button>
+
         {/*
           A HOUSE, not a left arrow — "create a home button like you see there
           to bring people back to the landing page."

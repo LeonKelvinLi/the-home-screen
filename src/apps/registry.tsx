@@ -18,7 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply'
+  | 'supply' | 'gallery'
 
 export interface AppDef {
   id: string
@@ -437,6 +437,32 @@ export const SUPPLY_APP: AppDef = {
  * It carries `page` rather than a systemKey because there is nothing to open:
  * the destination is the first page of the home screen the dock is sitting on.
  */
+/**
+ * Biggie's gallery — the window beside the home button.
+ *
+ * Drawn rather than taken from the stock sheet he sent: a frame with a horizon
+ * and a sun, which is the picture-gallery convention he pointed at, in the flat
+ * single-weight language the rest of this app's chrome already speaks.
+ */
+const GalleryIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
+       strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2.6" y="4.2" width="18.8" height="15.6" rx="3.2" />
+    <circle cx="16.1" cy="9.4" r="1.9" fill="currentColor" stroke="none" />
+    <path d="M3.4 16.6l4.9-5.2 4.4 4.6 2.6-2.4 4.6 4.4" strokeLinecap="round" />
+  </svg>
+)
+
+export const GALLERY_APP: AppDef = {
+  id: 'sys.gallery',
+  name: 'Biggie',
+  label: 'Biggie',
+  icon: <GalleryIcon />,
+  kind: 'system',
+  systemKey: 'gallery',
+  tint: '#141416',
+}
+
 export const GOODS_APP: AppDef = {
   id: 'sys.goods',
   name: 'BEASTY Goods',
@@ -460,6 +486,7 @@ export const ALL_APPS: AppDef[] = [
   PROFILE_APP,
   SUPPLY_APP,
   GOODS_APP,
+  GALLERY_APP,
 ]
 
 /*
