@@ -18,7 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply' | 'gallery'
+  | 'supply' | 'gallery' | 'watch'
 
 export interface AppDef {
   id: string
@@ -477,6 +477,25 @@ export const GALLERY_APP: AppDef = {
   tint: '#141416',
 }
 
+/** Watch — a play head in a frame, beside the gallery. */
+const WatchIcon = () => (
+  <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor"
+       strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+    <rect x="2.6" y="4.6" width="18.8" height="14.8" rx="3.2" />
+    <path d="M10.2 9.4l5.2 3.1-5.2 3.1V9.4Z" fill="currentColor" stroke="none" />
+  </svg>
+)
+
+export const WATCH_APP: AppDef = {
+  id: 'sys.watch',
+  name: 'Watch',
+  label: 'Watch',
+  icon: <WatchIcon />,
+  kind: 'system',
+  systemKey: 'watch',
+  tint: '#0b0b0d',
+}
+
 export const GOODS_APP: AppDef = {
   id: 'sys.goods',
   name: 'BEASTY Goods',
@@ -501,6 +520,7 @@ export const ALL_APPS: AppDef[] = [
   SUPPLY_APP,
   GOODS_APP,
   GALLERY_APP,
+  WATCH_APP,
 ]
 
 /*

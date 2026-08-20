@@ -1,0 +1,34 @@
+/**
+ * The reels the video window plays, newest first.
+ *
+ * Read from the BRANDS themselves rather than kept as a second list: a clip is
+ * already a property of a business, and a separate list would be a second thing
+ * to forget and would disagree with the brand page the day one was pulled.
+ *
+ * Only clips with `src` qualify. A clip that is only an `href` lives on
+ * somebody else's platform and cannot be played here — it opens out from the
+ * business's own page instead, which is what that card is for.
+ */
+import { BRANDS } from './brands'
+
+export interface Reel {
+  brandId: string
+  name: string
+  /** One line under the name — what the business is. */
+  line: string
+  src: string
+  poster?: string
+  credit: string
+  /** The original post, where there is one. */
+  href?: string
+}
+
+export const REELS: Reel[] = BRANDS.filter((b) => b.clip?.src).map((b) => ({
+  brandId: b.id,
+  name: b.name,
+  line: b.cuisine,
+  src: b.clip!.src!,
+  poster: b.clip!.poster,
+  credit: b.clip!.credit,
+  href: b.clip!.href,
+}))

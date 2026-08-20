@@ -4,7 +4,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, appForSlot } from '../apps/registry'
+import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
@@ -94,6 +94,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   const pageRef = useRef(0)
   const spotlightRef = useRef<HTMLButtonElement>(null)
   const galleryRef = useRef<HTMLButtonElement>(null)
+  const watchRef = useRef<HTMLButtonElement>(null)
   /** Locked on the first move so a vertical drag can never turn a page. */
   const axis = useRef<'x' | 'y' | null>(null)
   /**
@@ -993,6 +994,28 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
             <rect x="2.6" y="4.2" width="18.8" height="15.6" rx="3.2" />
             <circle cx="16.1" cy="9.4" r="1.9" fill="currentColor" stroke="none" />
             <path d="M3.4 16.6l4.9-5.2 4.4 4.6 2.6-2.4 4.6 4.4" strokeLinecap="round" />
+          </svg>
+        </button>
+
+        {/*
+          WATCH, beside the gallery — the operator's ask for a video button that
+          plays instantly instead of handing somebody off to Instagram and
+          making them wait through a login. His reason, in his words: "most
+          people have a short attention span."
+        */}
+        <button
+          className="spotlight-glass is-watch"
+          onClick={() => {
+            const el = watchRef.current
+            const rect = el && rectInScreen(el)
+            if (rect) onOpen(WATCH_APP.id, rect)
+          }}
+          ref={watchRef}
+          aria-label="Watch"
+        >
+          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+            <rect x="2.6" y="4.6" width="18.8" height="14.8" rx="3.2" />
+            <path d="M10.2 9.4l5.2 3.1-5.2 3.1V9.4Z" fill="currentColor" stroke="none" />
           </svg>
         </button>
 

@@ -648,10 +648,31 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* ---- 2026-08-14 ---- */
   /* His best friend's, and the one he asked to show her — so the mark is the
      anchor on its own, as he asked, rather than initials. */
-  seed('bay-area-charters', 'Bay Area Charters', 'Bay Area Cha…', 'Boat charters', '#123A5C', {
+  /*
+    Updated 2026-08-19 from the contact page he sent — and it corrected a real
+    error, not just added detail. This was filed as "Boat charters" under an
+    ANCHOR. They are Bay Area Charter Bus Rental: coaches, not boats. The name
+    alone was doing the guessing, and the guess was wrong for as long as nobody
+    had looked at their site.
+
+    Their old domain is dead too; the live one is bayarea-charters.com.
+  */
+  seed('bay-area-charters', 'Bay Area Charters', 'Bay Area Cha…', 'Charter bus rental', '#171717', {
     icon: 'bay-area-charters',
     logoTemplate: 'glyph-word', logoGlyph: 'anchor', logoLines: [''],
-    site: 'https://www.bayareacharters.com/',
+    site: 'https://bayarea-charters.com/',
+    address: '3150 Hilltop Mall Rd, Richmond, CA 94806',
+    phone: '(510) 964-4476',
+    email: 'chartersbayarea@gmail.com',
+    /* His draft, from the sheet he sent — mock until they sign it. */
+    offers: {
+      mock: true,
+      welcome: 'Get a family discount of 20% off your 1st bus rental for any occasion.',
+      loyalty: 'Get 10% off your bus rental anytime!',
+    },
+    contactOnly:
+      'Charter buses and group transportation, Monday to Friday 9am to 5pm, closed weekends — ' +
+      'their own hours. Quotes are by enquiry rather than listed.',
   }),
   seed('breaktime-tea', 'Breaktime Tea', 'Breaktime Tea', 'Bubble tea', '#C2607A', {
     logoTemplate: 'monogram', logoInitials: 'BT', logoFace: 'script',

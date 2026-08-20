@@ -197,6 +197,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'sacramento-goods-23': 'b_1upretro', //      Toy shop
   'berkeley-goods-11': 'b_scoopnchill', //     Ice cream shop
   'oakland-goods-1': 'b_alpastorpapi', //      Mexican food
+  /*
+    Bay Area Charters into Richmond too, on "add it to Richmond • Services" —
+    and Richmond is where they actually are, 3150 Hilltop Mall Rd. Event
+    coordinator is the nearest of the 24: group transport for events is what
+    they sell, and there is no transport spot on his list. They keep the San
+    Francisco seat from an earlier instruction, which is now the odd one out
+    given their address — worth a word with him.
+  */
+  'richmond-services-19': 'b_bayareacharters', // Event coordinator
 
   /*
     His friend's six, on the flagship yellow sheets by his own instruction:

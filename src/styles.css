@@ -684,18 +684,34 @@ textarea {
     left  = spacer + gap + gallery(34) + gap + home(34) + gap
     right = gap + switch group
 
-  Two buttons on the left now, not one — Biggie's window joined the home
-  button, and the spacer shrank by exactly one button and one gap to keep the
-  pill where it was.
+  THREE buttons on the left now — Watch, Biggie's window and home — and their
+  126px now OUTWEIGHS the 88px of dock buttons on the right. So the spacer can
+  no longer live on one fixed side: with three, it belongs on the RIGHT, and
+  with one it belonged on the left.
+
+  Both pseudo-elements exist and each is clamped at zero, so whichever side is
+  short gets the difference and the other collapses. Adding a fourth button
+  cannot shove Search off centre again — which is exactly what adding the third
+  did, by 19px, because the spacer was a subtraction that had gone negative and
+  silently clamped.
 */
 .spotlight-row {
   --switch-w: 88px;
+  --left-buttons: 3;
+  --left-w: calc((34px + 8px) * var(--left-buttons));
+  --right-w: calc(var(--switch-w) + 8px);
 }
 
 .spotlight-row::before {
   content: '';
-  width: calc(var(--switch-w) - (34px + 8px) * 2);
   flex: 0 0 auto;
+  width: max(0px, calc(var(--right-w) - var(--left-w)));
+}
+
+.spotlight-row::after {
+  content: '';
+  flex: 0 0 auto;
+  width: max(0px, calc(var(--left-w) - var(--right-w)));
 }
 
 .spotlight {
@@ -8780,4 +8796,118 @@ textarea {
 */
 @media (prefers-reduced-motion: reduce) {
   .dialer.is-beasty .dialer-key-digit { animation: none; }
+}
+
+/* ---------- Watch: businesses' own reels, full bleed ---------- */
+
+/*
+  The scroller IS the pager. Scroll-snap does the paging natively, which is
+  smoother than any handler and, more importantly, makes a flung scroll land on
+  a clip rather than halfway between two.
+*/
+.reels {
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  background: #0b0b0d;
+  /* The status bar sits over this, so the first clip must not start under it. */
+  margin: 0;
+}
+
+.reel {
+  position: relative;
+  height: 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  overflow: hidden;
+  display: block;
+}
+
+.reel video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  /* COVER: these are 9:16 and so is the window, but a clip shot at another
+     ratio must fill rather than letterbox into black bars. */
+  object-fit: cover;
+  background: #0b0b0d;
+}
+
+/*
+  A scrim only at the foot, where the text is. A full-height wash would dim the
+  thing somebody opened this to watch.
+*/
+.reel-scrim {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 46%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.45) 46%, transparent 100%);
+  pointer-events: none;
+}
+
+.reel-meta {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 26px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #fff;
+}
+
+/* The name is a BUTTON: seeing a business's reel and not being able to reach
+   the business would be the one thing this screen must not do. */
+.reel-name {
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  padding: 0;
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
+}
+.reel-name::after {
+  content: ' ›';
+  opacity: 0.7;
+}
+
+.reel-line { margin: 0; font-size: 14px; color: rgba(255, 255, 255, 0.82); }
+
+/* Whose footage it is, said on the clip rather than assumed. */
+.reel-credit { margin: 4px 0 0; font-size: 11.5px; color: rgba(255, 255, 255, 0.6); }
+
+/*
+  Said once, on the first clip only. A permanent "scroll for more" is furniture;
+  one that appears on arrival and never again is an instruction.
+*/
+.reel-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 118px;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  animation: reel-hint-out 400ms ease 3.4s both;
+}
+
+@keyframes reel-hint-out {
+  to { opacity: 0; transform: translate(-50%, 6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reels { scroll-behavior: auto; }
+  .reel-hint { animation: none; }
 }
