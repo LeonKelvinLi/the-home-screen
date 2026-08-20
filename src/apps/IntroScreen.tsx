@@ -159,6 +159,18 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
     state carries both halves of the alternation and they cannot disagree.
   */
   const [photo, setPhoto] = useState<number | null>(null)
+  /*
+    The highest picture reached, so the ones after it are not fetched yet.
+
+    All four used to be given a background-image at mount. A hidden element is
+    still a rendered one, so the browser pulled every file at once — and once
+    these were rebuilt at the phone's real pixel grid that became 669KB
+    arriving before the first flip, on a screen whose entire job is the first
+    few seconds. Now it holds the current picture and the NEXT one, which is
+    two seconds of warning: far more than a decode needs, and the flip has
+    never been seen to arrive empty.
+  */
+  const [reached, setReached] = useState(0)
   const [toast, setToast] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
   /** True when a touch cut the sequence short, so nothing animates in after. */
@@ -218,7 +230,13 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
       n += 1
       // Odd beats show a picture, even beats the yellow — so each picture gets
       // its own turn and no two in a row are the same.
-      setPhoto(n % 2 ? Math.floor(n / 2) % LANDING_PHOTOS.length : null)
+      if (n % 2) {
+        const i = Math.floor(n / 2) % LANDING_PHOTOS.length
+        setPhoto(i)
+        setReached((r) => Math.max(r, i))
+      } else {
+        setPhoto(null)
+      }
     }, 2000)
     return () => window.clearInterval(t)
   }, [stage])
@@ -485,7 +503,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
           <span
             key={src}
             className={`dialer-photo${photo === i ? ' is-on' : ''}`}
-            style={{ backgroundImage: `url(${src})` }}
+            style={i <= reached + 1 ? { backgroundImage: `url(${src})` } : undefined}
             aria-hidden="true"
           />
         ))}

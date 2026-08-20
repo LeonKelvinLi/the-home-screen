@@ -19,3 +19,9 @@ __pycache__/
 
 # Throwaway verification scripts (need the repo node_modules to resolve)
 .verify/
+
+# Scratch scripts written straight into the repo root, and the folder a script
+# creates when its output path comes out undefined. Both have been committed by
+# accident before; neither belongs to this project.
+/_*.mjs
+/undefined/

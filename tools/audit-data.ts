@@ -8,6 +8,14 @@
   `siteCta` missing from the same mapping so a button read the wrong words; a
   duplicate slug quietly forking a business into two; icons referenced that were
   never written. None of those fail a typecheck.
+
+  RUN IT WITH THE APP'S TSCONFIG:
+
+      npx tsx --tsconfig tsconfig.app.json tools/audit-data.ts
+
+  Plain `npx tsx tools/audit-data.ts` dies on "React is not defined" — it picks
+  up the root tsconfig, which does not carry the `react-jsx` runtime, and this
+  audit imports the registry, which is full of JSX. The flag is the whole fix.
 */
 import { BRANDS, brandById } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'

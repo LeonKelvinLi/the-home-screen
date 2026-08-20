@@ -189,7 +189,15 @@ export function PagesMark({ className }: { className?: string }) {
         </clipPath>
       </defs>
 
-      <path d={sheetPath(FRONT)} fill="url(#pm-tile)" />
+      {/*
+        The sheet is a CLASS rather than a bare path because the landing screen
+        turns it translucent while a photograph is behind it. Only this path
+        goes: the dog, the fold and the outline stay fully opaque, so the yellow
+        becomes a tinted window and the artwork on it stays crisp. Fading the
+        whole mark instead washes the dog out to grey, which is the one thing on
+        the tile that has to stay black.
+      */}
+      <path className="pm-sheet" d={sheetPath(FRONT)} fill="url(#pm-tile)" />
 
       <image
         href="/biggie.webp"

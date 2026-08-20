@@ -8384,10 +8384,17 @@ textarea {
   The dots line above has nothing on it but four or five dots. The arrows are
   the same distance apart, still at the screen's edges, still the first thing a
   thumb finds — and nothing is underneath them.
+
+  SEVEN PIXELS LOWER THAN FIRST DRAWN, because the labels reach further down
+  than the installed view suggested. At 393x852 there was clearance; in Safari,
+  where the viewport is 690 tall and the grid packs tighter, the arrows clipped
+  the last row's names by 3px — the operator caught it on "Sin City Pits". The
+  clearance is now measured on the SHORTEST viewport rather than the tallest,
+  which is the one that was lying.
 */
 .page-step {
   position: absolute;
-  top: -10px;
+  top: -3px;
   width: 36px;
   height: 36px;
   display: grid;
@@ -8395,7 +8402,9 @@ textarea {
   padding: 0;
   border: 0;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.16);
+  /* Denser than first drawn, on his note. At 0.16 over a busy wallpaper the
+     disc read as a smudge rather than a button. */
+  background: rgba(255, 255, 255, 0.26);
   backdrop-filter: blur(14px) saturate(160%);
   -webkit-backdrop-filter: blur(14px) saturate(160%);
   box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
@@ -8442,7 +8451,7 @@ textarea {
 /* Over the yellow sheets, the same dark-plate flip Search and the dock
    buttons take — white-on-glass composites to under 3:1 on that paper. */
 .home.has-yellow-page .page-step {
-  background: rgba(20, 20, 22, 0.5);
+  background: rgba(20, 20, 22, 0.62);
   color: rgba(255, 255, 255, 0.95);
   box-shadow: none;
 }
@@ -8980,9 +8989,47 @@ textarea {
   designed does not vanish along with the colour.
 */
 .dialer.is-photo .dialer-domain-half.is-dark {
-  background: #f6d800;
   color: #141416;
   box-shadow: inset 1px 0 0 rgba(20, 20, 22, 0.28);
+}
+
+/*
+  THE YELLOW GOES TRANSLUCENT WHILE A PICTURE IS UP — the operator's note, and
+  it is the change that stops the mark and the pill reading as two stickers laid
+  on a photograph. The picture carries on through them; they tint it instead of
+  covering it.
+
+  One variable drives both, because they have to agree: a tile at one strength
+  and a pill at another reads as a mistake rather than a treatment. The value is
+  not a taste call. Measured against the worst pixels any of the four
+  photographs put behind them, 0.62 is the most transparent that still clears
+  4.5:1 for the black ink and the black dog — and 0.62 is therefore the wrong
+  number to ship, because it passes with nothing to spare and HE SWAPS THE
+  PHOTOGRAPHS EVERY WEEK OR TWO. The next one he picks is not in this test. At
+  0.72 the same worst case measures about 5.7:1, which leaves room for a darker
+  picture to arrive without anyone having to re-check this.
+
+  Only the plates move. The dog, the fold, the outline and the type stay fully
+  opaque — fading those too washes the artwork to grey, which loses the one
+  thing on the tile that has to stay black.
+*/
+.dialer.is-photo {
+  --plate-a: 0.72;
+}
+
+.dialer.is-photo .dialer-domain-half.is-light,
+.dialer.is-photo .dialer-domain-half.is-dark {
+  background: rgba(246, 216, 0, var(--plate-a));
+}
+
+.dialer.is-photo .pm-sheet {
+  fill-opacity: var(--plate-a);
+}
+
+/* Matches the 420ms the plates and the tab bar already cross-fade on, so the
+   whole flip moves as one gesture rather than as four things arriving. */
+.pm-sheet {
+  transition: fill-opacity 420ms ease;
 }
 
 .dialer-domain-half {
