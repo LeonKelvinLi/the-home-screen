@@ -131,6 +131,51 @@ export const SERVICE_CATEGORIES: SlotCategory[] = [
 ]
 
 /**
+ * BEASTY · Online — the third numbered sheet, and only on his own pages.
+ *
+ * His idea, in his words: "we need to create maybe an BEASTY • Online page
+ * after BEASTY • Services dedicated to brands that ship products. We can charge
+ * them less for their spot. The idea is to fill the 24 spots with well known
+ * brands that will give our platform clout."
+ *
+ * WHY IT IS NOT A CITY PAGE. A brand that ships has no city, which is the whole
+ * point of it — seating one in Oakland would be a claim that it is in Oakland.
+ * Every city keeps its 48 numbered spots and its two yellow sheets exactly as
+ * they are, so "the first 48 spots are the first two pages" survives untouched.
+ * This sheet exists once, on the pages he sells from.
+ *
+ * Categorised like the other two rather than left as bare numbers, for the same
+ * reason: a spot is pitchable when it is "the sneakers spot" and not when it is
+ * "number nine". These twenty-four are the things a small brand actually ships.
+ */
+export const ONLINE_CATEGORIES: SlotCategory[] = [
+  { n: 1, name: 'Streetwear and apparel', label: 'Apparel' },
+  { n: 2, name: 'Sneakers and footwear', label: 'Sneakers' },
+  { n: 3, name: 'Hats and headwear', label: 'Hats' },
+  { n: 4, name: 'Bags and luggage', label: 'Bags' },
+  { n: 5, name: 'Jewellery', label: 'Jewellery' },
+  { n: 6, name: 'Eyewear', label: 'Eyewear' },
+  { n: 7, name: 'Watches', label: 'Watches' },
+  { n: 8, name: 'Skincare and beauty', label: 'Skincare' },
+  { n: 9, name: 'Grooming and barber supply', label: 'Grooming' },
+  { n: 10, name: 'Supplements and nutrition', label: 'Supplements' },
+  { n: 11, name: 'Coffee and tea', label: 'Coffee' },
+  { n: 12, name: 'Hot sauce and condiments', label: 'Sauces' },
+  { n: 13, name: 'Snacks and sweets', label: 'Snacks' },
+  { n: 14, name: 'Car parts and performance', label: 'Car parts' },
+  { n: 15, name: 'Moto and cycling gear', label: 'Moto' },
+  { n: 16, name: 'Skate and surf', label: 'Skate' },
+  { n: 17, name: 'Fitness equipment', label: 'Fitness' },
+  { n: 18, name: 'Pet goods', label: 'Pet goods' },
+  { n: 19, name: 'Home and candles', label: 'Home' },
+  { n: 20, name: 'Art prints and posters', label: 'Art' },
+  { n: 21, name: 'Music and vinyl', label: 'Vinyl' },
+  { n: 22, name: 'Games and collectibles', label: 'Games' },
+  { n: 23, name: 'Tools and hardware', label: 'Tools' },
+  { n: 24, name: 'Tech and accessories', label: 'Tech' },
+]
+
+/**
  * The open spots on a yellow page. No categories on purpose: the operator's
  * pitch is that page one is the numbered, categorised real estate and the
  * yellow pages behind it hold "the businesses that didn't act in time" —
@@ -143,7 +188,7 @@ export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) => (
 }))
 
 /** Which of a city's pages a set of spots belongs to. */
-export type SlotPageKind = 'goods' | 'goods2' | 'services' | 'services2'
+export type SlotPageKind = 'goods' | 'goods2' | 'services' | 'services2' | 'online'
 
 export interface SlotPage {
   /**
@@ -200,9 +245,25 @@ export const SLOT_PAGES: SlotPage[] = [
   { kind: 'services2', heading: 'More services', categories: OPEN_SPOTS, yellow: true },
 ]
 
+/**
+ * The flagship's own run: the two numbered sheets, then ONLINE, then the yellow
+ * pages. "After BEASTY • Services", which is where he asked for it.
+ *
+ * A separate list rather than a flag on SLOT_PAGES, because the difference is
+ * real: a city sells 48 local spots and this sells 24 more that belong to
+ * nowhere. Cities are untouched by it.
+ */
+export const BEASTY_SHEETS: SlotPage[] = [
+  SLOT_PAGES[0],
+  SLOT_PAGES[1],
+  { kind: 'online', heading: 'Online', categories: ONLINE_CATEGORIES },
+  SLOT_PAGES[2],
+  SLOT_PAGES[3],
+]
+
 /** The categories on a city page, or nothing if the id names no known page. */
 export const categoriesFor = (kind: string | undefined): SlotCategory[] | undefined =>
-  SLOT_PAGES.find((p) => p.kind === kind)?.categories
+  BEASTY_SHEETS.find((p) => p.kind === kind)?.categories
 
 /**
  * The most spots a single city page holds — his twenty-four.

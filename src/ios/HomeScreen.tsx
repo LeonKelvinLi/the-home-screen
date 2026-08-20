@@ -5,7 +5,7 @@ import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
-import { SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
+import { BEASTY_SHEETS, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -368,7 +368,13 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
     */
     const buildCity = (cityName: string) => {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
-      for (const slotPage of SLOT_PAGES) {
+      /*
+        The flagship carries one sheet the cities do not: BEASTY · Online, for
+        brands that ship. A city's 48 numbered spots and its two yellow sheets
+        are exactly as they were, so "the first 48 are the first two pages"
+        still holds everywhere it is sold.
+      */
+      for (const slotPage of cityName === 'BEASTY' ? BEASTY_SHEETS : SLOT_PAGES) {
         /*
           Chunked, and the INDEX IS GLOBAL. A slot's id is its position in the
           operator's category list, not its position on the page it happens to

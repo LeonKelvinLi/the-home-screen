@@ -8447,9 +8447,22 @@ textarea {
   44px circle either side would frame the row like a media player and pull the
   eye away from Search.
 */
+/*
+  THE ARROWS SIT ON THE DOTS LINE, not on the Search row.
+
+  They started in the Search row's margins, which worked while that row held a
+  back button, Search and three dock buttons. It now also holds Watch and
+  Biggie's window — about 378px of content on a 393px screen — so there are no
+  margins left, and the left arrow was drawing on top of the gallery button.
+  Padding the row could not fix that: the content overflows the padding.
+
+  The dots line above has nothing on it but four or five dots. The arrows are
+  the same distance apart, still at the screen's edges, still the first thing a
+  thumb finds — and nothing is underneath them.
+*/
 .page-step {
   position: absolute;
-  top: 50%;
+  top: -10px;
   width: 36px;
   height: 36px;
   display: grid;
@@ -8469,12 +8482,12 @@ textarea {
 
 .page-step.is-prev {
   left: 10px;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
 }
 
 .page-step.is-next {
   right: 10px;
-  transform: translateY(-50%);
+  transform: translateY(-100%);
 }
 
 .page-step::before {
@@ -8488,7 +8501,7 @@ textarea {
 }
 
 .page-step:active {
-  transform: translateY(-50%) scale(0.9);
+  transform: translateY(-100%) scale(0.9);
 }
 
 /*
