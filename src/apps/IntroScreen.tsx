@@ -11,6 +11,25 @@ import { PagesMark } from './dialer/PagesMark'
 import { Gem } from './MembersApp'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
+/**
+ * Biggie, cropped to the landing screen's shape.
+ *
+ * His idea: "make the landing page flip from a Biggie picture to yellow every
+ * two seconds… every time it flips into a picture just use a different picture.
+ * Have at least 3 different pictures rotating."
+ *
+ * Four rather than his minimum of three — the fourth costs nothing and makes
+ * the rotation less obviously a loop. All from his own feed, and all shots
+ * where the DOG is the subject: the rest of that account is sneakers, a Lakers
+ * jersey and film crews, which say nothing behind a wordmark about him.
+ */
+const LANDING_PHOTOS = [
+  '/landing/biggie-2.webp',
+  '/landing/biggie-1.webp',
+  '/landing/biggie-3.webp',
+  '/landing/biggie-4.webp',
+]
+
 
 /**
  * The landing screen: a dialer that starts as the phone's own and becomes ours.
@@ -130,6 +149,16 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
   const [panel, setPanel] = useState<PanelPage | null>(null)
   /** The BEASTY PAGES bar's dropdown. Closed on every fresh arrival. */
   const [domainOpen, setDomainOpen] = useState(false)
+  /*
+    THE LANDING FLIP, his idea: "make the landing page flip from a Biggie
+    picture to yellow every two seconds… every time it flips into a picture just
+    use a different picture. Have at least 3 different pictures rotating."
+
+    Four, cropped from his own Instagram to the phone's shape. `photo` is null
+    while the yellow is showing and an index while a picture is, so one piece of
+    state carries both halves of the alternation and they cannot disagree.
+  */
+  const [photo, setPhoto] = useState<number | null>(null)
   const [toast, setToast] = useState<string | null>(null)
   const [leaving, setLeaving] = useState(false)
   /** True when a touch cut the sequence short, so nothing animates in after. */
@@ -172,6 +201,28 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
     every one of them happened to be idempotent. An effect runs once per real
     transition, which is what this actually wants.
   */
+  useEffect(() => {
+    /*
+      Only once the screen is BEASTY's. Flipping during the takeover would fight
+      the animation that is the whole opening, and there is nothing to flip
+      to before the yellow exists.
+
+      Held on yellow for anyone who asked for less motion: a full-screen change
+      every two seconds is precisely what that setting is about, and the
+      wordmark reads on the yellow, which is its designed state.
+    */
+    if (stage !== 'beasty') return
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    let n = 0
+    const t = window.setInterval(() => {
+      n += 1
+      // Odd beats show a picture, even beats the yellow — so each picture gets
+      // its own turn and no two in a row are the same.
+      setPhoto(n % 2 ? Math.floor(n / 2) % LANDING_PHOTOS.length : null)
+    }, 2000)
+    return () => window.clearInterval(t)
+  }, [stage])
+
   useEffect(() => {
     if (stage !== 'corrupt') return
     for (let i = 1; i <= BEASTY_DIGITS.length; i++) {
@@ -365,7 +416,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
 
   return (
     <div
-      className={`dialer is-${stage}${leaving ? ' is-leaving' : ''}${
+      className={`dialer is-${stage}${photo !== null ? ' is-photo' : ''}${leaving ? ' is-leaving' : ''}${
         skipped || reduced ? ' is-instant' : ''
       }`}
     >
@@ -425,6 +476,19 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
         opens onto yellow that was never visible before.
       */}
       <div className="dialer-crt">
+        {/*
+          The picture, over the yellow rather than instead of it: the yellow
+          stays painted underneath, so the cross-fade has something to fade to
+          and there is never a frame of bare page between the two.
+        */}
+        {LANDING_PHOTOS.map((src, i) => (
+          <span
+            key={src}
+            className={`dialer-photo${photo === i ? ' is-on' : ''}`}
+            style={{ backgroundImage: `url(${src})` }}
+            aria-hidden="true"
+          />
+        ))}
         <div className="dialer-display">
           {/* Biggie has died; the dog on this screen is a memorial, not a mascot,
               which is worth knowing before anyone edits that artwork.

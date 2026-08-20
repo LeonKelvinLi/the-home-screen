@@ -8939,3 +8939,89 @@ textarea {
 }
 
 .install-row:active { opacity: 0.85; }
+
+/* ---------- the landing flip: Biggie, then yellow, every two seconds ---------- */
+
+/*
+  Each picture is its own layer, all four mounted, one faded in at a time. A
+  single layer whose background-image changed would flash the yellow underneath
+  on every swap while the next file decoded; four layers pre-decode after the
+  first cycle and cross-fade cleanly from then on.
+
+  The yellow gradient stays painted below them, so the "flip to yellow" half of
+  his idea is simply all four layers going transparent — there is never a frame
+  of bare page between the two states.
+*/
+.dialer-photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center 32%;
+  opacity: 0;
+  /* Out slower than in: a picture arriving should feel deliberate and a picture
+     leaving should not snap the yellow back like a fault. */
+  transition: opacity 620ms ease;
+  pointer-events: none;
+}
+
+.dialer-photo.is-on {
+  opacity: 1;
+  transition: opacity 420ms ease;
+}
+
+/*
+  THE WORDMARK ANSWERS THE FLIP — "when it flips to the picture, the word pages
+  will go from yellow font to black font".
+
+  Taken literally, black text on the black half is invisible, so the half turns
+  yellow with it: the pill goes solid yellow and PAGES is black on it, which is
+  exactly the change he described and the only version of it that can be read.
+  The seam between the halves stays, drawn as a hairline, so the split he
+  designed does not vanish along with the colour.
+*/
+.dialer.is-photo .dialer-domain-half.is-dark {
+  background: #f6d800;
+  color: #141416;
+  box-shadow: inset 1px 0 0 rgba(20, 20, 22, 0.28);
+}
+
+.dialer-domain-half {
+  transition: background 420ms ease, color 420ms ease, box-shadow 420ms ease;
+}
+
+/*
+  The keys keep their own plate through the flip. They are near-black discs and
+  they read on a photograph as well as on the yellow — but the LABEL under each
+  one is dark grey on the page itself, so it gets a shadow while a picture is
+  behind it. Without it "SUPPLY" and "WATER" disappear into a dog.
+*/
+.dialer.is-photo .dialer-key-sub {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/*
+  THE TAB BAR HAS TO INVERT, not just take a shadow.
+
+  It is dark ink designed for the yellow, and the foot of these photographs is
+  foliage and pavement — mid-tone, busy, and almost exactly as dark as the ink.
+  A shadow alone was the first attempt and it was not enough: dark-on-mid-green
+  stayed unreadable with a halo round it.
+
+  Done by overriding the two COLOUR VARIABLES rather than by setting `color` on
+  the container. .dialer-tab reads `var(--tab-off)` itself, so inheritance from
+  the parent never reached the labels — the icons went white and the words under
+  them stayed dark, which was worse than leaving both alone. Overriding the
+  variables carries the selected state with it for free.
+*/
+.dialer.is-photo {
+  --tab-off: rgba(255, 255, 255, 0.88);
+  --tab-on: #ffffff;
+}
+
+.dialer.is-photo .dialer-tabs {
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+.dialer-tab {
+  transition: color 420ms ease;
+}
