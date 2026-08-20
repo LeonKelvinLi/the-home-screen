@@ -268,15 +268,6 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('george-pro-landscape', 'George Professional Landscape', 'George Landsc…', 'Landscaping', '#2F5D33', {
     logoTemplate: 'glyph-word', logoGlyph: 'leaf', logoLines: ['GEORGE'], logoFace: 'slab',
   }),
-  seed('rene-custom-cabinetry', 'Rene Custom Cabinetry', 'Rene Cabinetry', 'Custom cabinetry', '#5B4632', {
-    logoTemplate: 'wordmark', logoLines: ['RENE', 'CABINETRY'], logoFace: 'slab',
-    /* The one detail his roster carried: a phone number, his own note. */
-    phone: '(510) 754-1927',
-    contactOnly:
-      'On the operator’s roster. The number here is from his own note — the rest of ' +
-      'the business’s details are still being gathered, so nothing else is listed yet.',
-  }),
-  // ---- sent separately with placements ----
   seed('jdi-auto-detailing', 'JDI Auto Detailing', 'JDI Detailing', 'Mobile auto detailing', '#1B2B45', {
     logoTemplate: 'wordmark', logoLines: ['JDI', 'DETAILING'], logoFace: 'condensed',
     site: 'https://jdidetailing.com/',
@@ -1055,6 +1046,33 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Est. 2018. Tuesday to Thursday 11 to 8, Friday and Saturday 11 to 9, in their own words. ' +
       'The menu is on their own site.',
   }),
+  /*
+    Rywire, 2026-08-20 — "BEASTY • Services. I painted this guys CRX back when
+    he was a nobody. Now he's worth millions."
+
+    Motorsport wiring harnesses, PDM and chassis wiring, 107k followers. He is
+    reaching out to them; nothing here claims they have agreed anything.
+
+    HIS VIDEO IS A LINK, NOT A FILE. He asked to "play video on page" and the
+    YouTube download is blocked — three different client strategies all came
+    back 403 or no-format. So the clip carries `href` alone, which draws the
+    credited card that opens the source, exactly as it did for every reel before
+    one could be downloaded. Add `src` and `poster` and it plays behind their
+    mark and in Watch with no other change.
+  */
+  seed('rywire', 'Rywire', 'Rywire', 'Motorsport wiring harnesses', '#111111', {
+    icon: 'rywire',
+    logoTemplate: 'wordmark', logoLines: ['RY', 'WIRE'], logoFace: 'grotesk',
+    site: 'https://www.rywire.com/',
+    clip: {
+      href: 'https://youtu.be/YVkl1zTsnxQ',
+      credit: 'Filmed by Rywire',
+      platform: 'YouTube',
+    },
+    contactOnly:
+      'Motorsport wiring harnesses, PDM and chassis wiring solutions, in their own words. ' +
+      'Products and pricing are on their own site — they ship rather than serve a counter.',
+  }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
@@ -1137,5 +1155,8 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
      and Frank2Artistic takes the seat it leaves. */
   'b_frank2artistic', //        22 Frank2Artistic
   'b_georgeprolandscape', //    23 George Professional Landscape
-  'b_renecustomcabinetry', //   24 Rene Custom Cabinetry
+  /* Rene Custom Cabinetry was here and is GONE — "bump out Rene and complete
+     remove him. He's not ready." Removed rather than benched: a seat held for
+     somebody who is not coming is a spot he cannot sell. Rywire takes it. */
+  'b_rywire', //                24 Rywire
 ]
