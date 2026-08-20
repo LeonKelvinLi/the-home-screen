@@ -1053,18 +1053,24 @@ export const ROSTER_SEED: LocalSeed[] = [
     Motorsport wiring harnesses, PDM and chassis wiring, 107k followers. He is
     reaching out to them; nothing here claims they have agreed anything.
 
-    HIS VIDEO IS A LINK, NOT A FILE. He asked to "play video on page" and the
-    YouTube download is blocked — three different client strategies all came
-    back 403 or no-format. So the clip carries `href` alone, which draws the
-    credited card that opens the source, exactly as it did for every reel before
-    one could be downloaded. Add `src` and `poster` and it plays behind their
-    mark and in Watch with no other change.
+    HIS VIDEO PLAYS ON THE PAGE. The first attempt failed — three yt-dlp client
+    strategies all came back 403 or no-format — and the fix was simply a newer
+    build: the nightly pulls it where the release could not.
+
+    IT IS AN EXCERPT, 194s to 218s of a 6m16s film, and which 24 seconds was a
+    real choice. The rest is interviews and end credits, and a talking head with
+    the sound off is a still photograph that happens to blink. This stretch is
+    the car on a desert road with the camera rigged to it: moving, and about
+    what they actually build. Picked off a frame sweep of the whole film rather
+    than by taking the opening. The full thing is one tap away on the card.
   */
   seed('rywire', 'Rywire', 'Rywire', 'Motorsport wiring harnesses', '#111111', {
     icon: 'rywire',
     logoTemplate: 'wordmark', logoLines: ['RY', 'WIRE'], logoFace: 'grotesk',
     site: 'https://www.rywire.com/',
     clip: {
+      src: '/clips/rywire.mp4',
+      poster: '/clips/rywire-poster.webp',
       href: 'https://youtu.be/YVkl1zTsnxQ',
       credit: 'Filmed by Rywire',
       platform: 'YouTube',

@@ -8501,6 +8501,22 @@ textarea {
 .brand-film-scrim {
   position: absolute;
   inset: 0;
+  /*
+    LEFT AS IT WAS, and that is the finding rather than an omission.
+
+    A pixel measurement of the hero text across eight frames of each loop first
+    reported Downtown BBQ at 1.99:1 and the scrim was deepened to fix it. The
+    measurement was wrong: it took the 92nd percentile luminance inside the
+    text's box, and for a short word in a wide box the glyphs are a few percent
+    of the pixels, so it never reached them — it compared background to
+    background. Darkening the scrim made the box MORE uniform and the number
+    went DOWN, which is what exposed it.
+
+    Measured properly — brightest 0.3% against the median — the original ramp
+    gives Downtown BBQ 6.9:1, Rywire 8.5:1 and Sin City Pits 8.6:1. All clear.
+    So the deepening was reverted: it dimmed the film on every page to fix
+    something that was never broken, and the film is the thing he asked for.
+  */
   background: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.62) 0%,
@@ -8508,6 +8524,18 @@ textarea {
     rgba(0, 0, 0, 0.5) 72%,
     rgba(0, 0, 0, 0.68) 100%
   );
+}
+
+/*
+  A shadow on the glyphs is KEPT, though. Unlike the scrim it costs nothing on
+  a dark frame — there is nothing for it to darken — and it protects the letter
+  edges on whichever frame happens to be brightest, which a band-average scrim
+  cannot do. It lifts the worst case without touching the film.
+*/
+.brand-hero.has-film .brand-tagline,
+.brand-hero.has-film .brand-meta,
+.brand-hero.has-film h1 {
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.75);
 }
 
 /*
