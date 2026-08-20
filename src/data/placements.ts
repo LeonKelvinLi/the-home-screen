@@ -213,6 +213,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     their own page leads with Book a Party.
   */
   'concord-services-19': 'b_rocknjump', //     Event coordinator
+  /* PaintGo into Vallejo, where their shop is. Auto detailing rather than the
+     painting trades — theirs is paint and coating on cars, which is the half
+     of the name that was being misread. */
+  'vallejo-services-7': 'b_paintgo', //        Auto detailing
 
   /*
     His friend's six, on the flagship yellow sheets by his own instruction:

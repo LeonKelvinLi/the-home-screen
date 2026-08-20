@@ -161,8 +161,24 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('frank-jr-english', 'Frank Jr. English', 'Frank Jr.', 'General contractor', '#4B3A2A', {
     logoInitials: 'FJ', logoFace: 'slab',
   }),
-  seed('paintgo', 'PaintGo', 'PaintGo', 'Painting', '#1F6FB2', {
+  /*
+    Filled out 2026-08-20 from their own site and listing — "update on BEASTY &
+    Vallejo • Services. Please add directions as well."
+
+    "Painting" was the guess the name invited and it was the wrong trade: they
+    do exotic paint systems, ceramic coating, detailing and window tinting on
+    CARS. The blue was a guess too. Their wordmark sits on their own grey, which
+    is what he asked for — "maybe put Paint Go on that gray background".
+  */
+  seed('paintgo', 'PaintGo', 'PaintGo', 'Auto paint, ceramic coating and tinting', '#8A9093', {
+    icon: 'paintgo',
     logoTemplate: 'glyph-word', logoGlyph: 'design', logoLines: ['PAINTGO'],
+    site: 'https://www.paintgonorcal.com/',
+    address: '1640 Lewis Brown Dr, Vallejo, CA 94589',
+    phone: '(707) 805-3334',
+    contactOnly:
+      'Exotic paint systems, ceramic coating, detailing and window tinting across Northern ' +
+      'California, in their own words. Open 9am to 6pm. Quotes are by enquiry.',
   }),
   seed('ubreakifix', 'uBreakiFix', 'uBreakiFix', 'Device repair', '#0E7A5F', {
     icon: 'ubreakifix',
