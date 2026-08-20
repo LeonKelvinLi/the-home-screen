@@ -206,6 +206,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     given their address — worth a word with him.
   */
   'richmond-services-19': 'b_bayareacharters', // Event coordinator
+  /*
+    Rockin' Jump into Concord, where their park is. NOT the Gym spot — Urban
+    Air already has it on exactly the same reasoning, and two adventure parks
+    cannot share one numbered seat. Event coordinator is the better fit anyway:
+    their own page leads with Book a Party.
+  */
+  'concord-services-19': 'b_rocknjump', //     Event coordinator
 
   /*
     His friend's six, on the flagship yellow sheets by his own instruction:

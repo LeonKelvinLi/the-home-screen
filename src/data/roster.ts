@@ -196,8 +196,22 @@ export const ROSTER_SEED: LocalSeed[] = [
     business's own name, the business wins. No band mark — a generated lockup
     of a franchise's name is theirs to make, not ours.
   */
-  seed('rock-n-jump', "Rockin' Jump", "Rockin' Jump", 'Trampoline park', '#7A1FA2', {
+  /*
+    Filled out 2026-08-20 from the Concord location page he sent — "update on
+    BEASTY as well as add to Concord • Services". Their own mark replaces the
+    RJ monogram, and the purple it was drawn on was a guess: their colour is
+    orange.
+  */
+  seed('rock-n-jump', "Rockin' Jump", "Rockin' Jump", 'Trampoline park', '#F26722', {
+    icon: 'rock-n-jump',
     logoInitials: 'RJ',
+    site: 'https://rockinjump.com/concord/',
+    address: '1631 Challenge Dr, Concord, CA 94520',
+    phone: '(925) 332-0285',
+    email: 'Concord-CA@RockinJump.com',
+    contactOnly:
+      'A trampoline park in Concord. Park prices, hours, parties and waivers are all on their ' +
+      'own site, which is where they change.',
   }),
   seed('dj-rev-roc', 'DJ Rev ROC', 'DJ Rev ROC', 'DJ', '#141416', {
     logoInitials: 'DJ', logoFace: 'condensed', logoAccent: '#f6d800',
