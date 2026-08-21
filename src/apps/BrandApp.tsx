@@ -203,8 +203,19 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 Link copied
               </span>
             )}
-            <div className="brand-hero-mark">
-              <BrandLogo logo={brand.logo} size={78} />
+            <div className={`brand-hero-mark${brand.pageMark ? ' is-wordmark' : ''}`}>
+              {/*
+                A WIDE LOCKUP GETS TO BE WIDE. Where a business has given us
+                their full wordmark, the page shows that rather than the square
+                tile — see Brand.pageMark. The tile still exists and is still
+                the icon on the home screen; this is the one place with room
+                for the whole thing.
+              */}
+              {brand.pageMark ? (
+                <img className="brand-hero-wordmark" src={brand.pageMark} alt={brand.name} />
+              ) : (
+                <BrandLogo logo={brand.logo} size={78} />
+              )}
             </div>
             {/* No <h1> here: the nav large title already states the name, and
                 two headings is the thing that reads as a web page. */}

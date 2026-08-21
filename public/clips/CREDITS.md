@@ -13,6 +13,7 @@ possible use, and still one that needs a record.
 | `sin-city-pits.mp4` | Sin City Pits, Las Vegas | instagram.com/reel/DbYsH_viR_a |
 | `rywire.mp4` | Rywire, motorsport wiring | youtu.be/YVkl1zTsnxQ — **an excerpt**, 194s–218s of 6m16s |
 | `lucky-three-seven.mp4` | Lucky Three Seven, Oakland | instagram.com/reel/DBw6bNGv2nD — **an excerpt**, 6s–22s of 49s |
+| `frank2artistic.mp4` | Frank2Artistic, murals | instagram.com/p/DbHaTU6suQw — whole, 15s |
 
 **LUCKY THREE SEVEN IS THE ODD ONE AND IT MATTERS.** The other three are films
 by, or with, the business they sit on. This one is @thetastebud's — a food
@@ -66,3 +67,19 @@ The hero film is decoration and is marked `aria-hidden`. It must never become
 the only way to see a business's video, because it carries no sound, no caption
 and no attribution of its own — the credited card below it is what does that
 job, and it stays.
+
+## Two reels arrived the same week and only one plays here
+
+Both were the artist or owner talking to camera. **Frank2Artistic's plays** — it
+is fifteen seconds and a mural he painted for Tato's Cantina fills the middle of
+it, so there is work on screen and not only somebody describing work. **The
+Grind Café's does not** — two and a half minutes of two people announcing an
+event, ending on a flyer, with no b-roll anywhere in it to cut to instead. A
+hero film here is muted, and a talking head with the sound off is a still
+photograph that happens to blink.
+
+The Grind's is a card that opens the real post; what went on their page instead
+was the event itself, with the date and the price off their own flyer. See
+`src/data/localBrands.ts`.
+
+That is the test for the next one: **is there anything in it but a face?**

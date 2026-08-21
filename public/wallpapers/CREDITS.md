@@ -8,6 +8,20 @@ The operator picked these subjects himself — his links were Six Flags for
 Vallejo and downtown First Street for Benicia, but pointed at copyrighted
 stock; the files here are the same subjects from legally licensed sources.
 
+CASTRO VALLEY IS THE FIRST ONE OF HIS THAT WAS ALREADY LICENSED. His link
+pointed at Commons rather than at stock, so the subject is exactly his pick: the
+Three Crosses on the hill above I-580, which is what a search for "Castro Valley
+landmarks" returns first. **It is only 579x1000**, so it is enlarged 2.87x —
+much more than anything else here. It survives it because the subject is sky and
+three white verticals, which is about the only kind of picture that does; if it
+ever looks soft to him, that is why, and there is no larger copy of that
+photograph anywhere on Commons.
+
+Santa Rosa had no link at all — he simply named the page — so the subject is
+mine: 4th Street in the historic district, under CC0. The first search hit was a
+close-up of a painted utility pole reading "Santa Rosa Downtown", which is
+lovely and completely wrong behind twenty-four icons.
+
 Newark went the same way on 2026-08-21 — his link was a DuckDuckGo result
 pointing at a dreamplaymedia.com file, which is a working photographer's
 copyrighted stock. The file here is the Newark salt ponds from Commons under
@@ -37,11 +51,13 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | File | Subject | Source |
 |---|---|---|
 | `newark.webp` | Salt ponds at Newark, California | Alfred Twu, CC0, via Wikimedia Commons |
+| `santa-rosa.webp` | Shops on 4th Street, historic district, Santa Rosa | CC0, via Wikimedia Commons |
 
 ## Attribution required (CC BY-SA)
 
 | File | Subject | Credit |
 |---|---|---|
+| `castro-valley.webp` | The Three Crosses, Castro Valley | John at English Wikipedia, CC BY 2.5, via Wikimedia Commons |
 | `american-canyon.webp` | Jack & Bernice Newell Open Space Preserve, American Canyon | Kiddo27, CC BY-SA 4.0, via Wikimedia Commons |
 | `cupertino.webp` | Apple Park at night | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `mountain-view.webp` | Shoreline Amphitheatre | GualdimG, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |

@@ -9088,3 +9088,36 @@ textarea {
 .dialer-tab {
   transition: color 420ms ease;
 }
+
+/*
+  A business's full wordmark at the head of their page, where one exists.
+
+  Constrained by WIDTH and left to find its own height: these lockups run
+  anywhere from 3:1 to 8:1, and a fixed height would print one at half the size
+  of the next. 78px was the square tile's size and is meaningless to a shape
+  this wide, so the cap is a share of the page instead.
+*/
+/*
+  THE PLATE COMES OFF AND THE MARK MOVES DOWN.
+
+  .brand-hero-mark is a rounded, shadowed tile — right for a square icon, wrong
+  round a lockup that already has its own ground. And the share and favourite
+  controls sit at top:10px of this hero, 44px tall: a centred 78%-wide wordmark
+  ran straight under them and the star landed in the middle of "MEDIA".
+*/
+.brand-hero-mark.is-wordmark {
+  display: block;
+  width: 100%;
+  margin-top: 54px;
+  border-radius: 0;
+  overflow: visible;
+  box-shadow: none;
+}
+
+.brand-hero-wordmark {
+  display: block;
+  width: min(72%, 290px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 6px;
+}

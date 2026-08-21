@@ -112,6 +112,16 @@ export interface Brand {
   /** Estimate by category. Not sourced from the operator. */
   prepMinutes: number
   menu: MenuCategory[]
+  /**
+   * A wide wordmark to head the page with, INSTEAD of the square icon.
+   *
+   * His ask for Marina Bay Media: "put that on their page on the top the whole
+   * thing that says Marina Bay media rather than the icon on the page". A tile
+   * has to be square and their lockup is 6:1, so the icon can only ever carry
+   * the MBM monogram — the page has room for the name and the strapline, and a
+   * business shown their own page should see the whole thing.
+   */
+  pageMark?: string
   /** Their own site, where one exists. */
   site?: string
   /**
@@ -318,6 +328,8 @@ interface Seed {
   review?: string
   /** A page of theirs that actually resolves. Verified before it goes in. */
   site?: string
+  /** A wide wordmark to head the page with, instead of the square icon. */
+  pageMark?: string
   /** Keep them on the red-outline prospect list even though `site` is set. */
   needsSite?: true
   /** Stocked subset, by item name. Omit to offer the whole menu. */
@@ -653,6 +665,7 @@ const fromSeed = (s: Seed): Brand => ({
       },
   prepMinutes: s.prep,
   needsOwnerReview: s.review,
+  pageMark: s.pageMark,
   site: s.site,
   needsSite: s.needsSite,
   siteNote: s.siteNote,
@@ -749,6 +762,7 @@ export const BRANDS: Brand[] = [
   ].map(([s, rosterOnly]) => ({
     ...fromSeed(s as unknown as Seed),
     site: s.site,
+    pageMark: s.pageMark,
     needsSite: s.needsSite,
     orderUrl: s.orderUrl,
     phone: s.phone,

@@ -316,6 +316,26 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     automotive repair shop, pet grooming for a groomer — so neither needed the
     yellow page or a widened label.
   */
+  /*
+    The 2026-08-21 afternoon run.
+
+    GOLDEN STATE BALLERZ SITS IN THE MIDDLE ON PURPOSE — "please place this spot
+    anywhere in the middle" — so it takes index 12 of twenty-four rather than
+    the streetwear slot at the top that its trade would suggest. The category
+    under a CLAIMED tile never renders, so the seat costs them nothing and the
+    position is his to choose. It is the first business on BEASTY • Online.
+
+    Classy Canine's takes two seats, which is his own pattern for a business he
+    wants on the flagship as well as at home.
+  */
+  'beasty-online-12': 'b_goldenstateballerz',
+  'beasty-services2-9': 'b_unitedcurbpainting',
+  'beasty-services2-10': 'b_classycanines',
+  'castro-valley-services-14': 'b_classycanines', //   Pet grooming and walking
+  'pleasanton-services-23': 'b_oneillssignature', //   Contractor
+  'walnut-creek-services-4': 'b_trufusionwalnutcreek', // Gym
+  'santa-rosa-services-19': 'b_camachospartyrentals', // Event coordinator
+
   'newark-services-5': 'b_almasautotires', //          Mechanics and smog
   'brentwood-services-14': 'b_gofrette', //            Pet grooming and walking
 

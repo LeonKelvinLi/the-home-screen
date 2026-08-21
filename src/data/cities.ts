@@ -149,6 +149,15 @@ export const CITY_PAGES = [
   */
   'Newark',
   /*
+    Castro Valley and Santa Rosa, 2026-08-21. Castro Valley came with Classy
+    Canine's Wiggle Rumps and its own landmark link; Santa Rosa he simply named
+    as a page — "Santa Rosa • services" — for Camacho's Party Rentals, which is
+    the first business to open a city here without him sending a wallpaper for
+    it.
+  */
+  'Castro Valley',
+  'Santa Rosa',
+  /*
     ARIZONA — the second region, not more of the first.
 
     "All Arizona cities to create ASAP", his note, in his order: the Phoenix

@@ -37,6 +37,8 @@ export interface LocalSeed {
   items: [string, string, number, string?][]
   /** Real ordering link, where one exists. */
   orderUrl?: string
+  /** A wide wordmark to head the page with, instead of the square icon. */
+  pageMark?: string
   site?: string
   /**
    * Keep them on the red-outline prospect list even though `site` is set.

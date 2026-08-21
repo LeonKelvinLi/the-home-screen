@@ -261,6 +261,61 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Dog grooming and daycare, by their own billing \u2014 "Grooming & Daycare" is on their ' +
       'mark. Nothing is priced here yet; book or ask on their own site.',
   }),
+  /*
+    The 2026-08-21 afternoon run — six businesses in ninety minutes, each sent
+    with the page written beside it.
+  */
+  seed('golden-state-ballerz', 'Golden State Ballerz', 'GSB', 'Football gear', '#F2F2F2', {
+    icon: 'golden-state-ballerz',
+    site: 'https://golden-state-ballerz.myshopify.com/',
+    contactOnly:
+      'Football gear, in their own words: "next-gen gear for the ones who play different". ' +
+      'They ship, which is what the Online page is for. Nothing is priced here yet.',
+  }),
+  seed('united-curb-painting', 'United Curb Painting', 'United Curb', 'Curb painting', '#1B6FD1', {
+    icon: 'united-curb-painting',
+    site: 'https://unitedcurbpainting.com/',
+    contactOnly:
+      'Curb address painting across the Bay Area and the Central Valley, in their own words. ' +
+      'They take bookings by text on 530-360-1105. Nothing is priced here yet.',
+  }),
+  seed('classy-canines', "Classy Canine's Wiggle Rumps", 'Wiggle Rumps', 'Pet grooming', '#F6D9E4', {
+    icon: 'classy-canines',
+    site: 'https://www.classycanineswigglerumps.com/',
+    address: '2602 Castro Valley Blvd, Castro Valley, CA',
+    contactOnly:
+      'A grooming salon with luxury mobile grooming, pet retail and dog training, by their own ' +
+      'billing. Book on their own site. Nothing is priced here yet.',
+  }),
+  seed('oneills-signature', "O'Neills Signature Sports", "O'Neills", 'Turf and pavers', '#EDEDED', {
+    icon: 'oneills-signature',
+    site: 'https://paversandturf.com/',
+    address: '6200 Stoneridge Mall Rd #300, Pleasanton, CA',
+    contactOnly:
+      'A landscape company, and by their own description a premium sports installer and ' +
+      'designer for the greater Bay Area — turf and pavers. Quotes are by enquiry.',
+  }),
+  seed('trufusion-walnut-creek', 'TruFusion Walnut Creek', 'TruFusion', 'Bootcamp, pilates and yoga', '#141416', {
+    icon: 'trufusion-walnut-creek',
+    site: 'https://trufusion.com/',
+    address: '1675 Olympic Blvd, Walnut Creek, CA',
+    contactOnly:
+      'Bootcamp, pilates, yoga and reformer classes, from their own listing. Class times and ' +
+      'membership prices are on their site \u2014 nothing is copied here.',
+  }),
+  /*
+    "This place needs a website", so Camacho's carries `needsSite` and keeps the
+    red outline. Their own line is "we are the #1 in the Bay area", which is a
+    marketing claim and stays off the page as one.
+  */
+  seed('camachos-party-rentals', "Camacho's Party Rentals", "Camacho's", 'Party rentals', '#F7C948', {
+    icon: 'camachos-party-rentals',
+    needsSite: true,
+    phone: '(707) 308-8935',
+    contactOnly:
+      'Party rentals in Santa Rosa \u2014 bounce houses, tents and event kit, from their own ' +
+      'feed. They answer in English and Spanish. No website yet: call or message them.',
+  }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',
@@ -300,10 +355,25 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '210 El Cerrito Plaza, El Cerrito',
     phone: '(510) 570-2863',
   }),
-  seed('marina-bay-media', 'Marina Bay Media', 'Marina Bay', 'Media', '#0F3B57', {
+  /*
+    Marina Bay Media's own artwork, 2026-08-21 — "would you please crop this for
+    their icon and you can put that on their page on the top the whole thing
+    that says Marina Bay media rather than the icon on the page".
+
+    So there are two files. The icon is the MBM monogram and the wave, which is
+    all a square can hold; the page carries the full lockup with MAKE WAVES.
+    Both are lifted from their own site — the drawn `band` template that stood
+    in for a logo until now is gone.
+
+    THE COLOUR MOVED WITH THEM. It was a dark navy, chosen when the tile was
+    type on a plate. Their mark is navy ON CREAM, so a cream ground is what
+    their own artwork was drawn for; the old navy would have put a cream
+    rectangle in the middle of a dark blue hero.
+  */
+  seed('marina-bay-media', 'Marina Bay Media', 'Marina Bay', 'Media', '#F7F4EC', {
     icon: 'marina-bay-media',
+    pageMark: '/marks/marina-bay-media.webp',
     site: 'https://www.marinabaymedia.com/',
-    logoTemplate: 'band', logoLines: ['MARINA BAY', 'MEDIA'], logoFace: 'condensed',
   }),
   seed('german-auto-sport', 'German Auto Sport', 'German Auto', 'Auto repair', '#22262B', {
     logoTemplate: 'badge', logoLines: ['GERMAN AUTO'], logoFace: 'condensed',
@@ -1107,6 +1177,27 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('frank2artistic', 'Frank2Artistic', 'Frank2Artistic', 'Murals and custom art', '#E8621A', {
     icon: 'frank2artistic',
     logoTemplate: 'monogram', logoInitials: 'F2', logoFace: 'condensed',
+    /*
+      His own reel, added 2026-08-21 — "can you add this to his page? Also the
+      video gallery? Without it having to go to Instagram and all."
+
+      IT PLAYS INLINE, so it does both jobs at once: the video window reads
+      REELS straight off any brand carrying a `src`, so a clip on his page is a
+      clip in the gallery with nothing else to remember.
+
+      Fifteen seconds, and unlike the other talking-to-camera reel this week it
+      earns the loop — a mural he painted for Tato's Cantina fills the middle of
+      it, so the work is on screen and not only described. Muted, as every hero
+      film here is; the card underneath still opens the post with his voice on
+      it.
+    */
+    clip: {
+      src: '/clips/frank2artistic.mp4',
+      poster: '/clips/frank2artistic-poster.webp',
+      href: 'https://www.instagram.com/p/DbHaTU6suQw/',
+      credit: 'Filmed by Frank2Artistic',
+      platform: 'Instagram',
+    },
     contactOnly:
       'Murals, logos and custom art across the Bay Area and the 209, by Franklin Guardado. ' +
       'Murals start around $1.2k, his own figure. Quotes are by enquiry — he publishes no site.',
