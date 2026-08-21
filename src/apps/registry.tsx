@@ -94,8 +94,24 @@ export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
   brandId: b.id,
   tint: b.logo.bg.split('|')[0],
   ...(MOBILE.test(b.cuisine) ? { mobile: true as const } : {}),
-  // No link at all, OR a link that is only a placeholder — both belong on his
-  // prospect list. See Brand.needsSite.
+  /*
+    No link at all, OR a link that is only a placeholder — both belong on his
+    prospect list. See Brand.needsSite.
+
+    THIS OUTLINE IS ONLY EVER AS GOOD AS THE `site` FIELD, which is a record of
+    what we have LOOKED UP, not of what exists. On 2026-08-21 twenty-four of the
+    outlined businesses were checked by hand and FIFTEEN of them had a perfectly
+    good website — Vegan Mob, HotBoys, Gay Nineties, WinkyDinkyDogs and eleven
+    more. The operator uses this outline to decide who to pitch, so every one of
+    those was a wasted call waiting to happen, and any mail-merge opening with
+    "I noticed you don't have a website" would have been wrong three times in
+    five.
+
+    All fifteen now carry a verified site and have dropped off. The ones left
+    are either checked-and-genuinely-siteless or NOT YET CHECKED — and the
+    honest thing is that the tile cannot tell those two apart. Check before
+    pitching.
+  */
   ...(b.site && !b.needsSite ? {} : { noSite: true as const }),
 }))
 

@@ -417,6 +417,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'hotboys-chicken', name: 'HotBoys Chicken', label: 'HotBoys Chicken',
+    site: 'https://worldfamoushotboys.com/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Nashville hot chicken', tagline: 'Nashville-style hot chicken, fried to order',
@@ -451,6 +452,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'baked-blooms', name: 'Baked Blooms', label: 'Baked Blooms',
+    site: 'https://bakedblooms.com/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Bakery & flowers', tagline: 'Fresh bakes and flower boxes',
@@ -464,6 +466,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'wildfork-foods', name: 'WildFork Foods', label: 'WildFork Foods',
+    site: 'https://wildforkfoods.com/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Butcher', tagline: 'Butcher-cut proteins, ready to cook',
@@ -477,6 +480,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'vegan-mob', name: 'Vegan Mob', label: 'Vegan Mob',
+    site: 'https://veganmob.biz/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
@@ -503,6 +507,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitc…',
+    site: 'https://gaovietkitchen.com/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Vietnamese', tagline: 'Vietnamese comfort, made fresh daily',
@@ -563,6 +568,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'winkydinkydogs', name: 'WinkyDinkyDogs', label: 'WinkyDinkyD…',
+    site: 'https://winkydinkydogs.com/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Hot dogs', tagline: 'Gourmet hot dogs, loaded up',
@@ -623,6 +629,7 @@ const SEED: Seed[] = [
   },
   {
     slug: 'high-scores', name: 'High Scores', label: 'High Scores',
+    site: 'https://www.highscoresarcade.com/',
     review:
       'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
     cuisine: 'Arcade snacks', tagline: 'Arcade snacks, pizza, and slushies',

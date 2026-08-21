@@ -309,6 +309,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     marketing claim and stays off the page as one.
   */
   seed('camachos-party-rentals', "Camacho's Party Rentals", "Camacho's", 'Party rentals', '#F7C948', {
+    site: 'https://camachospartyrentals.com/',
     icon: 'camachos-party-rentals',
     needsSite: true,
     phone: '(707) 308-8935',
@@ -376,6 +377,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.marinabaymedia.com/',
   }),
   seed('german-auto-sport', 'German Auto Sport', 'German Auto', 'Auto repair', '#22262B', {
+    site: 'https://gasberkeleyrepair.com/',
     logoTemplate: 'badge', logoLines: ['GERMAN AUTO'], logoFace: 'condensed',
   }),
   seed('bob-valentines-electric', "Bob Valentine's", "Bob Valentine's", 'Electrician', '#B36A00', {
@@ -417,6 +419,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'badge', logoLines: ['PET SHOW'], logoFace: 'slab',
   }),
   seed('dr-comics-mr-games', 'Dr. Comics and Mr. Games', 'Dr. Comics', 'Comics and games', '#5C2A83', {
+    site: 'https://drcomicsmrgames.tumblr.com/',
     /* Slab ran 103 units wide in a 100-unit tile; condensed fits. */
     logoTemplate: 'band', logoLines: ['DR. COMICS', 'MR. GAMES'], logoFace: 'condensed',
   }),
@@ -433,6 +436,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     the practice actually trades.
   */
   seed('andrew-shin-law', 'Andrew Shin', 'Andrew Shin', 'Injury attorney', '#26323F', {
+    site: 'https://www.injuryattorneydirect.com/',
     logoInitials: 'AS', logoFace: 'slab',
   }),
   seed('winter-white-carwash', 'Winter White Car Wash & Detail', 'Winter White', 'Mobile car wash', '#274B77', {
@@ -666,6 +670,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'the only route here is the phone number from their own Instagram header.',
   }),
   seed('donut-farm', 'Donut Farm', 'Donut Farm', 'Organic donuts', '#1A1A1E', {
+    site: 'https://donutfarmberkeley.com/',
     logoTemplate: 'monogram', logoInitials: 'DF', logoFace: 'grotesk',
     contactOnly:
       'Sent 2026-08-12 with "no website yet". Their own Instagram lists shops on Adeline St ' +
@@ -679,6 +684,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'thing published about them so far.',
   }),
   seed('bober-tea', 'Bober Tea & Mochi', 'Bober Tea', 'Boba and mochi donuts', '#C2508A', {
+    site: 'https://boberteaus.com/',
     logoTemplate: 'monogram', logoInitials: 'BT', logoFace: 'grotesk',
     phone: '279-900-8046',
     address: '1029 Arnold Dr, Suite 10, Martinez',
@@ -840,6 +846,7 @@ export const ROSTER_SEED: LocalSeed[] = [
      no website, so the tile is a monogram and the address is the only thing
      here besides the name. */
   seed('gay-nineties-pizza', 'Gay Nineties Pizza & Pasta Co.', 'Gay Nineties', 'Pizza and pasta', '#1F4A2E', {
+    site: 'https://www.gayninetiespizza.com/',
     logoTemplate: 'monogram', logoInitials: '90', logoFace: 'slab',
     address: '288 Main St, Pleasanton',
     contactOnly:
@@ -898,6 +905,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     },
   }),
   seed('babs-delta-diner', 'Babs Delta Diner', 'Babs Diner', 'Homestyle diner', '#8C2018', {
+    site: 'https://www.babsdeltadiner.com/',
     logoTemplate: 'monogram', logoInitials: 'BD', logoFace: 'script',
     address: '134 Robles Way, Vallejo',
     contactOnly:
@@ -905,6 +913,7 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Glen Cove, rooted in Suisun, serving homestyle favourites. Nothing else is listed.',
   }),
   seed('simply-soups', 'Simply Soups', 'Simply Soups', 'Soups and deli', '#5C1A1A', {
+    site: 'https://simplysoupsandmore.com/',
     logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'slab',
     address: '3103 Delta Fair Blvd, Antioch',
     contactOnly:
