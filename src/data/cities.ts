@@ -158,6 +158,11 @@ export const CITY_PAGES = [
   'Castro Valley',
   'Santa Rosa',
   /*
+    Fairfield, opened 2026-08-21 by Boudreaux Cajun Steak House — "Fairfield •
+    Goods". The operator delivers for their food truck every other week.
+  */
+  'Fairfield',
+  /*
     ARIZONA — the second region, not more of the first.
 
     "All Arizona cities to create ASAP", his note, in his order: the Phoenix

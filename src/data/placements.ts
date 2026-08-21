@@ -336,6 +336,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'walnut-creek-services-4': 'b_trufusionwalnutcreek', // Gym
   'santa-rosa-services-19': 'b_camachospartyrentals', // Event coordinator
 
+  /*
+    Boudreaux opens Fairfield. Cajun is not one of the twenty-four goods
+    categories and inventing one would renumber spots he has already sold, so
+    they take the American comfort-food slot at index 0 — the same reading that
+    put Café Noir in Oakland's. A claimed tile prints their name, never the
+    category.
+  */
+  'fairfield-goods-0': 'b_boucajun', //                Burgers — comfort food
+
   'newark-services-5': 'b_almasautotires', //          Mechanics and smog
   'brentwood-services-14': 'b_gofrette', //            Pet grooming and walking
 

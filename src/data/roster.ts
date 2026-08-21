@@ -317,6 +317,33 @@ export const ROSTER_SEED: LocalSeed[] = [
       'Party rentals in Santa Rosa \u2014 bounce houses, tents and event kit, from their own ' +
       'feed. They answer in English and Spanish. No website yet: call or message them.',
   }),
+  /*
+    Boudreaux Cajun Steak House, Fairfield — "these guys need a whole lot of
+    help. I deliver for them maybe every other week they have a food truck.
+    Fairfield • Goods", 2026-08-21.
+
+    THE RESTAURANT IS NOT OPEN YET and the page has to say so. Their own site
+    puts 814 Texas Street "currently under construction"; what is running today
+    is the food truck and catering, around the Bay Area and Sacramento. An
+    address on a tile reads as somewhere you can walk into, so this one is
+    written as the address of the building being fitted out, not of a place to
+    turn up at tonight.
+
+    THE ICON IS A PLACEHOLDER AND IS NOT THEIR ARTWORK. See
+    public/icons/CREDITS.md — the operator's words were "we will just put them
+    in there to fill space for now until I deliver to them again".
+  */
+  seed('bou-cajun', 'Boudreaux Cajun Steak House', 'Boudreaux', 'Cajun and steaks', '#141110', {
+    icon: 'bou-cajun',
+    site: 'https://www.boucajun.com/',
+    phone: '(844) 305-2260',
+    address: '814 Texas Street, Fairfield, CA 94533',
+    contactOnly:
+      'New Orleans Cajun cooking — a food truck and catering around the Bay Area and ' +
+      'Sacramento, in their own words. THE TEXAS STREET RESTAURANT IS STILL UNDER ' +
+      'CONSTRUCTION and not open to the public; call or check their site for where the truck ' +
+      'is. Nothing is priced here yet.',
+  }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',

@@ -6,8 +6,15 @@ from their name and colour.
 
 **No logo here was drawn or redrawn by an image model.** Asking one for
 "the <business> logo" returns a confident forgery of a real company's
-trademark. A business either has their own mark here or has the generated
-monogram — there is no third case.
+trademark. That rule has not moved.
+
+There used to be a line here saying a business either has their own mark or
+has the generated monogram, "there is no third case". As of 2026-08-21 there
+is exactly one third case and it is listed at the bottom of this file: a
+STOCK TEMPLATE standing in until the business's own artwork arrives. It is
+recorded rather than quietly filed with the real ones, because the difference
+between "their logo" and "a logo we put there" is the whole point of this
+document.
 
 These are third-party trademarks, reproduced to identify each business on
 its own listing. If a business asks for theirs to be removed, delete the
@@ -94,3 +101,33 @@ uses a lower-ranked candidate that is genuinely theirs:
 Thirty-one businesses publish no site, so there is nothing to download and
 they keep the generated monogram. Per the operator these are the first
 sales targets, not a gap to paper over with invented artwork.
+
+
+## Placeholders — NOT the business's own artwork (1)
+
+| Business | File | What it actually is |
+| --- | --- | --- |
+| Boudreaux Cajun Steak House | `bou-cajun.webp` | A stock logo template, picked off a design site |
+
+The operator's instruction was explicit and so is the status: *"we will just
+put them in there to fill space for now until I deliver to them again"*. He
+chose this one himself — "the one in the middle" of three the developer sent
+him — after deciding against commissioning anything, on the grounds that
+*"they're invested on their branding with their food truck"*.
+
+**It happens to carry their real name.** Boudreaux Cajun Steak House is what
+they are actually called, so the wordmark is not a lie about who they are. It
+is still not their mark.
+
+**Two placeholder fields were removed rather than filled.** The template read
+"EST. 20XX" and "LOUISIANA, USA". The first is an unfilled blank; the second
+is false for a Fairfield food truck. Both were inpainted out — the surrounding
+paper grain reconstructed, nothing drawn in. A founding year was NOT
+substituted: the operator sent "EST 99'" alongside a screenshot about
+Boudreaux's Cajun Kitchen, which is a different Cajun business, and putting an
+unverified year on a real company is the kind of small invention this file
+exists to prevent.
+
+**To replace it:** drop in their real artwork under the same filename. The
+tile picks it up with no other change, and this section should then be
+deleted along with the row above.

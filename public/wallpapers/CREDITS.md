@@ -58,6 +58,7 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | File | Subject | Credit |
 |---|---|---|
 | `castro-valley.webp` | The Three Crosses, Castro Valley | John at English Wikipedia, CC BY 2.5, via Wikimedia Commons |
+| `fairfield.webp` | Texas Street, downtown Fairfield | Sarah Stierch, CC BY 4.0, via Wikimedia Commons |
 | `american-canyon.webp` | Jack & Bernice Newell Open Space Preserve, American Canyon | Kiddo27, CC BY-SA 4.0, via Wikimedia Commons |
 | `cupertino.webp` | Apple Park at night | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `mountain-view.webp` | Shoreline Amphitheatre | GualdimG, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
