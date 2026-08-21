@@ -136,6 +136,13 @@ export const CITY_PAGES = [
   'San Pablo',
   'Philadelphia',
   /*
+    American Canyon, opened 2026-08-21 by Forno Piombo — "BEASTY • More Goods
+    and American Canyon city", with their address at 120 Klamath Ct. Napa
+    County's southern end, and the fourth city opened by one business arriving
+    with a place written beside it.
+  */
+  'American Canyon',
+  /*
     ARIZONA — the second region, not more of the first.
 
     "All Arizona cities to create ASAP", his note, in his order: the Phoenix

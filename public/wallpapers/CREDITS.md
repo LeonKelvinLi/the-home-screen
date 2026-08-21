@@ -8,6 +8,12 @@ The operator picked these subjects himself — his links were Six Flags for
 Vallejo and downtown First Street for Benicia, but pointed at copyrighted
 stock; the files here are the same subjects from legally licensed sources.
 
+American Canyon went the same way on 2026-08-21: his link was a DuckDuckGo
+result pointing at an Expedia CDN file, which is third-party stock. The file
+here is the Newell Open Space Preserve — hills at the southern end of Napa
+County, inside American Canyon itself — from Commons under CC BY-SA 4.0. Same
+place, licence that survives contact with a commercial product.
+
 **Most of these are CC BY or CC BY-SA, which require attribution.** Cropping and resizing makes an
 adaptation, so the adapted file in this folder carries the same CC BY-SA licence
 as its source. That does not affect the app around it — a collection is not an
@@ -22,6 +28,7 @@ third-party copyrighted stock that cannot ship in a commercial product.
 
 | File | Subject | Credit |
 |---|---|---|
+| `american-canyon.webp` | Jack & Bernice Newell Open Space Preserve, American Canyon | Kiddo27, CC BY-SA 4.0, via Wikimedia Commons |
 | `cupertino.webp` | Apple Park at night | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `mountain-view.webp` | Shoreline Amphitheatre | GualdimG, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `redwood-city.webp` | Fox Theatre | Youwei liang, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |

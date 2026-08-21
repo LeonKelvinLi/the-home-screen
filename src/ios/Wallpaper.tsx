@@ -128,6 +128,7 @@ const FALLBACK = '/wallpapers/san-francisco.webp'
 const WALLPAPER_LUMA: Record<string, number> = {
   'alameda': 0.0753,
   'albany': 0.4747,
+  'american-canyon': 0.6444,
   'antioch': 0.2427,
   'benicia': 0.8373,
   'berkeley': 0.5791,
@@ -195,6 +196,7 @@ const WALLPAPER_LUMA: Record<string, number> = {
 const CITY_WALLPAPERS = new Set<string>([
   'alameda',
   'albany',
+  'american-canyon',
   'antioch',
   'benicia',
   'berkeley',

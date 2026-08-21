@@ -291,6 +291,27 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     the category they are sitting in. Worth confirming with him.
   */
   'oakland-goods-8': 'b_luckythreeseven', //          Chicken wings
+
+  /*
+    Forno Piombo, on "BEASTY • More Goods and American Canyon city", 2026-08-21.
+
+    THE FLAGSHIP SEAT IS YELLOW BECAUSE HE SAID SO — "BEASTY • More Goods" is
+    his own words, and the flagship list is his numbering to spend.
+
+    AMERICAN CANYON'S IS PAGE ONE, and the first version of this had it on the
+    yellow page too, which was the mistake the note below already records: a
+    claimed tile draws the business's own name and never the category, so the
+    nearest slot costs a seated business nothing, and page one is where he
+    sells from. Putting the city's ONLY business on page three would have left
+    the page he shows people blank. Italian is the nearest — an Italian pizza
+    oven, from a company with an Italian name — and nothing on screen will ever
+    say the word.
+
+    This also OPENS AMERICAN CANYON: their address, 120 Klamath Ct, is the
+    reason that city exists now.
+  */
+  'beasty-goods2-5': 'b_fornopiombo',
+  'american-canyon-goods-5': 'b_fornopiombo', //       Italian
   'concord-services-4': 'b_urbanair', //              Gym — an adventure park
   'petaluma-services-4': 'b_playland707', //          Gym — paintball
   'brentwood-goods-15': 'b_chipcookies', //           Cookies

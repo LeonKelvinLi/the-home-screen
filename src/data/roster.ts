@@ -201,6 +201,32 @@ export const ROSTER_SEED: LocalSeed[] = [
       'website yet, so the link goes to the family fundraiser the owner is running, which is ' +
       'what the operator asked it to point at for now. Nothing else is listed.',
   }),
+  /*
+    Forno Piombo, American Canyon — "BEASTY • More Goods and American Canyon
+    city", 2026-08-21, from their Instagram profile and the product page he
+    linked. Verified account, 16.4K followers, and their own line is "we design
+    the highest quality and best performing pizza ovens in the world".
+
+    THEY MAKE THE OVEN, they do not cook on it, which is why they sit on a
+    yellow page in both places rather than in a numbered food category. None of
+    the twenty-four fits an oven manufacturer and inventing one would move every
+    tile in every city to fit one business. He named "More Goods" himself for
+    the flagship; American Canyon follows the same reasoning.
+
+    Worth raising: BEASTY • Online was created for exactly this — "brands that
+    ship products" — and this is one. His instruction said More Goods, so that
+    is where it is.
+  */
+  seed('forno-piombo', 'Forno Piombo', 'Forno Piombo', 'Pizza ovens', '#F5F5F5', {
+    icon: 'forno-piombo',
+    site: 'https://fornopiombo.com/products/tiled-roman-80',
+    siteCta: 'See the Tiled Roman 80',
+    address: '120 Klamath Ct, American Canyon, CA',
+    contactOnly:
+      'Handmade pizza ovens, in their own words: "we design the highest quality and best ' +
+      'performing pizza ovens in the world". The link goes to the Tiled Roman 80, which is the ' +
+      'model the operator sent. Nothing else is listed yet.',
+  }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',
