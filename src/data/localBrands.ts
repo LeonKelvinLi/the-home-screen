@@ -274,6 +274,11 @@ export const LOCAL_SEED: LocalSeed[] = [
       publishes no number. Hours below are a three-source consensus, not
       first-party, and say so on screen.
 
+      HOURS ARE NO LONGER A GUESS. They were "by local consensus, worth
+      confirming" for weeks. Their own event flyer, 2026-08-21, gives Mon-Fri
+      7am-2pm and Sat 8am-1pm as the hours you can buy a ticket at the counter,
+      which is first-party and matches the consensus exactly. Stated plainly now.
+
       Their old domain yourgrindcafe707.com is parked and "may be for sale" —
       a squatter risk worth telling the owners about, and never linked here.
     */
@@ -296,8 +301,30 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteNote: 'Their own ordering site. If it will not load in-app, open it in your browser.',
     phone: '(707) 563-8320',
     address: '402 Tuolumne St, Vallejo',
+    /*
+      THE VIDEO IS A CARD, NOT A BACKGROUND FILM, and that is a judgement he may
+      want to overrule.
+
+      "Can you update their page with this video?" — their own reel, announcing
+      Friday Nights at The Grind. It is two of them talking to camera for two
+      and a half minutes and ending on the flyer. The hero film plays MUTED,
+      because no mobile browser will autoplay otherwise, and a talking head with
+      the sound off is a still photograph that happens to blink. There is no
+      b-roll in it to cut instead — every frame is the two of them.
+
+      So it goes where a talking video belongs: the card that opens the real
+      post, with its sound and its caption. What went on the page instead is the
+      thing the video is actually FOR — the date, the price and what the ticket
+      buys, which this listing has been telling people to go and find on
+      Instagram ever since it was written.
+    */
+    clip: {
+      href: 'https://www.instagram.com/reel/DcRs0cKSUwJ/',
+      credit: 'Filmed by The Grind Café',
+      platform: 'Instagram',
+    },
     contactOnly:
-      'A family-owned café — the famous ube iced latte is theirs. Their menu lives on their own ordering site, which blocks the tools used to build this page, so rather than copy prices from delivery apps nothing is listed here yet: order on their site or call. Hours by local consensus, worth confirming: Mon-Fri 7am-2pm, Sat 8am-1pm, closed Sunday. They run ticketed Friday nights on the back patio with Revive next door \u2014 dates and prices are on their Instagram.',
+      'A family-owned café — the famous ube iced latte is theirs. Their menu lives on their own ordering site, which blocks the tools used to build this page, so rather than copy prices from delivery apps nothing is listed here yet: order on their site or call. Mon-Fri 7am-2pm, Sat 8am-1pm, closed Sunday. FRIDAY NIGHTS AT THE GRIND — Revive Unplugged, run with Revive Ministry next door: Friday 4 September 2026, 6pm to 10pm, $45 a ticket including a buffet dinner, with a DJ, dominoes, Uno and Connect 4, and the coffee bar open all night. Smoke-free and alcohol-free. Tickets by Cash App to $TheGrindCafe or Venmo to @thegrindcafe with your full name and the number of tickets, or in person at the café. All of that is off their own flyer.',
     items: [],
   },
   {
