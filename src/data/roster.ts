@@ -167,6 +167,31 @@ export const ROSTER_SEED: LocalSeed[] = [
   */
   seed('lucky-three-seven', 'Lucky Three Seven', 'Lucky 3 Seven', 'Filipino food', '#0B0B0D', {
     icon: 'lucky-three-seven',
+    /*
+      THE FILM IS AN EXCERPT AND IT HAD TO BE. He sent one reel and asked for it
+      on their page. It is not their film and not a film about them: it is
+      @thetastebud's "Filipino Food Finds Bay Area — East Bay Edition", a
+      round-up of SEVERAL restaurants. Twenty-three seconds in it moves to
+      Toppings Too, and later to Parekoy — so running it whole would have put two
+      other Filipino restaurants on Lucky Three Seven's own listing, which is
+      the one thing a business being shown their page must never see.
+
+      Six seconds to twenty-two is theirs end to end: the storefront and their
+      menu board, their kitchen, their wings. Checked frame by frame rather than
+      trusted, because the cost of getting it wrong lands on the operator in
+      person.
+
+      Credit goes to the film-maker, not the restaurant. Unlike the other three
+      clips — a delivery customer of his, and a man whose car he painted — there
+      is no stated relationship here, just a link. Worth him confirming.
+    */
+    clip: {
+      src: '/clips/lucky-three-seven.mp4',
+      poster: '/clips/lucky-three-seven-poster.webp',
+      href: 'https://www.instagram.com/reel/DBw6bNGv2nD/',
+      credit: 'Filmed by @thetastebud',
+      platform: 'Instagram',
+    },
     site: 'https://www.gofundme.com/f/my-brothers-wish-for-kiah',
     siteCta: 'Open their GoFundMe',
     needsSite: true,

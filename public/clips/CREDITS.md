@@ -12,8 +12,24 @@ possible use, and still one that needs a record.
 | `downtown-bbq.mp4` | Downtown Barbecue, Santa Rosa | instagram.com/reel/DYvfsi_TWcd |
 | `sin-city-pits.mp4` | Sin City Pits, Las Vegas | instagram.com/reel/DbYsH_viR_a |
 | `rywire.mp4` | Rywire, motorsport wiring | youtu.be/YVkl1zTsnxQ — **an excerpt**, 194s–218s of 6m16s |
+| `lucky-three-seven.mp4` | Lucky Three Seven, Oakland | instagram.com/reel/DBw6bNGv2nD — **an excerpt**, 6s–22s of 49s |
 
-All three links came from the operator, who has a relationship with each —
+**LUCKY THREE SEVEN IS THE ODD ONE AND IT MATTERS.** The other three are films
+by, or with, the business they sit on. This one is @thetastebud's — a food
+writer's round-up, "Filipino Food Finds Bay Area, East Bay Edition" — and the
+operator sent the link with no relationship stated to either party. It is used
+the same narrow way and credited to the film-maker rather than the restaurant,
+but it is the one clip here nobody has told us we may use. Worth him confirming.
+
+**AND IT COULD NOT RUN WHOLE.** That reel visits several restaurants: at 23
+seconds it is Toppings Too, and later Parekoy. Running it entire would have put
+two other Filipino restaurants on Lucky Three Seven's own listing, which is the
+single thing a business owner being shown their page must never see. Six seconds
+to twenty-two is theirs end to end — the storefront and their menu board, their
+kitchen, their wings — checked frame by frame rather than trusted, because the
+cost of getting that wrong lands on the operator in person.
+
+The other three links came from the operator, who has a relationship with each —
 Downtown Barbecue is a delivery customer of his and he showed them their page in
 person, and he painted Rywire's owner's car years before either of them was
 known. None of the three handed the file over directly, which is the difference
