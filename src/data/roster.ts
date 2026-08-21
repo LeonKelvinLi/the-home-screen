@@ -227,6 +227,40 @@ export const ROSTER_SEED: LocalSeed[] = [
       'performing pizza ovens in the world". The link goes to the Tiled Roman 80, which is the ' +
       'model the operator sent. Nothing else is listed yet.',
   }),
+  /*
+    Almas Auto & Tires, Newark — sent 2026-08-21 with "Needs website updated",
+    which is why they carry `needsSite` even though almasautoandtiresca.com
+    exists and resolves. The red outline is his PROSPECT list, and a business
+    whose site he wants rebuilt belongs on it exactly as much as one with no
+    site at all. That is a wider reading than the flag was written for; he
+    opened it himself with this message.
+
+    Verified account, 1,664 followers. The service list below is theirs off
+    their own bio, in their own order.
+  */
+  seed('almas-auto-tires', 'Almas Auto & Tires', 'Almas Auto', 'Mechanic and tires', '#F2F2F2', {
+    icon: 'almas-auto-tires',
+    site: 'https://almasautoandtiresca.com',
+    needsSite: true,
+    address: '6110 Jarvis Ave, Newark, CA 94560',
+    contactOnly:
+      'An automotive repair shop, in their own words: auto repair, tires and rims, suspension, ' +
+      'tinting and wrap/PPF, diagnostics, full service and vehicle storage. Nothing is priced ' +
+      'here \u2014 none of it has been confirmed with them yet.',
+  }),
+  /*
+    Gofrette Pamper & Play, Brentwood — "Brentwood • Services", 2026-08-21, from
+    their Instagram and gofrette.com. A groomer and daycare, which is the one
+    category on his services list that fits without any stretching at all.
+  */
+  seed('gofrette', 'Gofrette Pamper & Play', 'Gofrette', 'Pet grooming and daycare', '#FBF3F1', {
+    icon: 'gofrette',
+    site: 'https://www.gofrette.com/',
+    address: '50 Eagle Rock Way STE B, Brentwood, CA',
+    contactOnly:
+      'Dog grooming and daycare, by their own billing \u2014 "Grooming & Daycare" is on their ' +
+      'mark. Nothing is priced here yet; book or ask on their own site.',
+  }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',

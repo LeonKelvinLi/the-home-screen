@@ -310,6 +310,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     This also OPENS AMERICAN CANYON: their address, 120 Klamath Ct, is the
     reason that city exists now.
   */
+  /*
+    Almas Auto & Tires opens Newark, and Gofrette takes Brentwood's groomer
+    spot. Both land in the category their own bio names — mechanics for an
+    automotive repair shop, pet grooming for a groomer — so neither needed the
+    yellow page or a widened label.
+  */
+  'newark-services-5': 'b_almasautotires', //          Mechanics and smog
+  'brentwood-services-14': 'b_gofrette', //            Pet grooming and walking
+
   'beasty-goods2-5': 'b_fornopiombo',
   'american-canyon-goods-5': 'b_fornopiombo', //       Italian
   'concord-services-4': 'b_urbanair', //              Gym — an adventure park

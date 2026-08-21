@@ -8,6 +8,14 @@ The operator picked these subjects himself — his links were Six Flags for
 Vallejo and downtown First Street for Benicia, but pointed at copyrighted
 stock; the files here are the same subjects from legally licensed sources.
 
+Newark went the same way on 2026-08-21 — his link was a DuckDuckGo result
+pointing at a dreamplaymedia.com file, which is a working photographer's
+copyrighted stock. The file here is the Newark salt ponds from Commons under
+**CC0**, so that one needs no attribution at all and is listed below only so
+nobody has to wonder. Worth knowing: the highest-resolution "Newark" photograph
+Commons has is a skyline panorama of Newark, NEW JERSEY, and it would have gone
+in unnoticed.
+
 American Canyon went the same way on 2026-08-21: his link was a DuckDuckGo
 result pointing at an Expedia CDN file, which is third-party stock. The file
 here is the Newell Open Space Preserve — hills at the southern end of Napa
@@ -23,6 +31,12 @@ ours and the attribution below has to travel with them.
 Nothing here came from TripAdvisor, Yelp, Pinterest, Freepik, Patch or
 simpleviewcms. Those were the sources originally suggested and all of them are
 third-party copyrighted stock that cannot ship in a commercial product.
+
+## No attribution required (CC0 / public domain)
+
+| File | Subject | Source |
+|---|---|---|
+| `newark.webp` | Salt ponds at Newark, California | Alfred Twu, CC0, via Wikimedia Commons |
 
 ## Attribution required (CC BY-SA)
 
