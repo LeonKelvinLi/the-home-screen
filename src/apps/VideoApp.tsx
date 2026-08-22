@@ -39,6 +39,14 @@ const SPEAKER_ON = (
   </svg>
 )
 
+const SHARE_ICON = (
+  <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor"
+       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M12 15V3M12 3 8 7M12 3l4 4" />
+    <path d="M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" />
+  </svg>
+)
+
 export function VideoApp({ api }: { api: ShellApi }) {
   const wrap = useRef<HTMLDivElement>(null)
   const [live, setLive] = useState(0)
@@ -53,6 +61,8 @@ export function VideoApp({ api }: { api: ShellApi }) {
     and put the phone down.
   */
   const [sound, setSound] = useState(false)
+  /** Which reel just had its link copied, for the toast. Null when none. */
+  const [shared, setShared] = useState<string | null>(null)
 
   useEffect(() => {
     const root = wrap.current
@@ -158,6 +168,44 @@ export function VideoApp({ api }: { api: ShellApi }) {
             {/* The scrim is a separate layer so the film is never dimmed toward
                 the page behind it — only toward black, predictably. */}
             <span className="reel-scrim" aria-hidden="true" />
+            {/*
+              SHARE SENDS THEM TO THE BUSINESS, not to a video player.
+
+              "Is it possible to add a share button to these all the video
+              pages?" — the link is the brand's own `?b=` deep link, which is
+              the one URL this app has that survives being pasted somewhere
+              else. A link to the video window alone would open a scroller at
+              whatever clip happened to be first; a link to the business opens
+              their page with their film playing on it, which is the thing
+              worth sending.
+
+              Same mechanism as the brand page's own share: Web Share gives the
+              real iOS sheet, clipboard is the desktop fallback.
+            */}
+            <button
+              className="reel-share"
+              onClick={async () => {
+                const url = `${location.origin}/?b=${encodeURIComponent(r.brandId)}`
+                try {
+                  if (navigator.share) await navigator.share({ title: r.name, url })
+                  else {
+                    await navigator.clipboard.writeText(url)
+                    setShared(r.src)
+                    window.setTimeout(() => setShared(null), 2000)
+                  }
+                } catch {
+                  /* Sheet dismissed. Not an error worth a message. */
+                }
+              }}
+              aria-label={`Share ${r.name}`}
+            >
+              {SHARE_ICON}
+            </button>
+            {shared === r.src && (
+              <span className="reel-share-toast" role="status">
+                Link copied
+              </span>
+            )}
             <div className="reel-meta">
               <button className="reel-name" onClick={() => api.openApp(r.brandId)}>
                 {r.name}

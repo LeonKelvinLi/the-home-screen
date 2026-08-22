@@ -9201,3 +9201,53 @@ textarea {
 .reel-sound:active .reel-sound-badge {
   background: rgba(11, 11, 13, 0.78);
 }
+
+/*
+  Share, beside the speaker badge on a reel.
+
+  Both sit top-right in a row. z-index 3 puts them above .reel-sound, which is
+  the full-frame tap target — without that, tapping share would toggle the
+  sound instead, because the sound layer covers every pixel of the reel.
+*/
+.reel-share {
+  position: absolute;
+  top: 14px;
+  right: 60px;
+  z-index: 3;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(11, 11, 13, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 160ms ease;
+}
+
+.reel-share:active {
+  background: rgba(11, 11, 13, 0.78);
+}
+
+.reel-share-toast {
+  position: absolute;
+  top: 58px;
+  right: 14px;
+  z-index: 3;
+  padding: 6px 10px;
+  border-radius: 9px;
+  background: rgba(20, 20, 22, 0.86);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* The speaker badge has to clear the share button too. */
+.reel-sound-badge {
+  z-index: 3;
+}
