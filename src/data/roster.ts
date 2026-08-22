@@ -372,6 +372,66 @@ export const ROSTER_SEED: LocalSeed[] = [
       'A yoga studio on Lone Tree Way. Class times, styles and membership prices are on ' +
       'their own site — nothing is copied here.',
   }),
+  /*
+    Macstalgia — "let's put this in the middle of the online page for the hell
+    of it bro", 2026-08-22.
+
+    NOBODY HAS AGREED ANYTHING HERE. He had DM'd them minutes before: "I just
+    dm'd this person. Lets see if I can lock them in to selling on our
+    platform." The seat is a hope, which is exactly what every roster tile
+    already says on its own page, so it needs no special wording — but it is
+    worth knowing before anyone treats this as a partner.
+
+    Their logo is their own, off macstalgia.com. Framed vinyl; they ship, which
+    is what the Online page is for.
+  */
+  seed('macstalgia', 'Macstalgia', 'Macstalgia', 'Framed vinyl', '#0E0C0A', {
+    icon: 'macstalgia',
+    site: 'https://www.macstalgia.com/',
+    contactOnly:
+      'Framed vinyl records, in their own words "a bohemian collection for the gold dust ' +
+      'soul". They ship worldwide. Nothing is priced here yet.',
+  }),
+  /*
+    Healthy Spot Berkeley — "Berkeley • Services", 2026-08-22. Two shops, both
+    theirs: North Berkeley on Walnut St and Rockridge on College Ave. The
+    address below is the Berkeley one, since that is the page they sit on.
+  */
+  seed('healthy-spot-berkeley', 'Healthy Spot Berkeley', 'Healthy Spot', 'Pet store and grooming', '#3E9B3E', {
+    icon: 'healthy-spot-berkeley',
+    site: 'https://linktr.ee/healthyspotnorcal',
+    siteCta: 'Open their links',
+    address: '1510 Walnut St, Berkeley, CA',
+    contactOnly:
+      'A pet store serving the Bay since 2019, in their own words — "for your pet\u2019s needs, ' +
+      'from mind, body, to bowl". They also have a Rockridge shop at 3206 College Ave. ' +
+      'Nothing is priced here yet.',
+  }),
+  /*
+    The Barrel Bistro & Wine Bar — "San Mateo • Goods", 2026-08-22, with "try
+    and crop the icon in that logo as big as possible if you may please". Their
+    mark is a disc, so it fills the tile edge to edge with nothing trimmed.
+  */
+  seed('barrel-bistro', 'The Barrel Bistro & Wine Bar', 'The Barrel', 'Wine bar and bistro', '#141013', {
+    icon: 'barrel-bistro',
+    site: 'https://www.thebarrelbistrowinebar.com/',
+    address: '246 South B Street, San Mateo, CA',
+    contactOnly:
+      'A wine bar and bistro — "exceptional wines and delicious bites, brunch, dinner and ' +
+      'everything in between", their own line. Nothing is priced here yet.',
+  }),
+  /*
+    Bay Area Power Wash Pros opens Oakley, 2026-08-22 — "these are like brand
+    new! lol", and the account is: one post, three followers. The free-estimate
+    number is theirs and is the only way to reach them, so it is the page.
+  */
+  seed('bay-area-power-wash', 'Bay Area Power Wash Pros', 'Power Wash Pros', 'Pressure washing', '#141A38', {
+    icon: 'bay-area-power-wash',
+    phone: '(925) 726-8577',
+    contactOnly:
+      'Soft washing for houses and pressure washing for driveways, in their own words, around ' +
+      'Oakley. They quote free by call or text. No website yet.',
+  }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',

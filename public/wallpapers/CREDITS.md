@@ -51,6 +51,7 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | File | Subject | Source |
 |---|---|---|
 | `newark.webp` | Salt ponds at Newark, California | Alfred Twu, CC0, via Wikimedia Commons |
+| `oakley.webp` | City Hall, Oakley | CC0, via Wikimedia Commons |
 | `santa-rosa.webp` | Shops on 4th Street, historic district, Santa Rosa | CC0, via Wikimedia Commons |
 
 ## Attribution required (CC BY-SA)

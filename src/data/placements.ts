@@ -349,6 +349,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'milpitas-services-19': 'b_bloomballoon', //         Event coordinator
   'brentwood-services-4': 'b_yogasixbrentwood', //     Gym
 
+  /*
+    MACSTALGIA GOES IN THE MIDDLE BECAUSE HE ASKED — "the middle of the online
+    page for the hell of it" — so index 11, beside Golden State Ballerz at 12,
+    rather than "Music and vinyl" at 20 which is what they actually sell. The
+    category under a claimed tile never renders, so the position is his to spend
+    and the trade is not lost by spending it.
+  */
+  'beasty-online-11': 'b_macstalgia',
+  'berkeley-services-14': 'b_healthyspotberkeley', //  Pet grooming and walking
+  'san-mateo-goods-5': 'b_barrelbistro', //            Italian — bistro
+  'oakley-services-20': 'b_bayareapowerwash', //       House cleaning
+
   'newark-services-5': 'b_almasautotires', //          Mechanics and smog
   'brentwood-services-14': 'b_gofrette', //            Pet grooming and walking
 

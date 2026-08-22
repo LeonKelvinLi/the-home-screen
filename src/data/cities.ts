@@ -163,6 +163,12 @@ export const CITY_PAGES = [
   */
   'Fairfield',
   /*
+    Oakley, opened 2026-08-22 by Bay Area Power Wash Pros. He first said BEASTY
+    • Services and corrected himself a minute later — "actually Oakley •
+    Services rather".
+  */
+  'Oakley',
+  /*
     ARIZONA — the second region, not more of the first.
 
     "All Arizona cities to create ASAP", his note, in his order: the Phoenix

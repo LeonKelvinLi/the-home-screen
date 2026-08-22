@@ -103,6 +103,10 @@ they keep the generated monogram. Per the operator these are the first
 sales targets, not a gap to paper over with invented artwork.
 
 
+Macstalgia's mark was downloaded from macstalgia.com itself; the rest of the
+2026-08-22 batch came off the businesses' own Instagram profile pictures, which
+is the same first-party artwork by a different route.
+
 ## Placeholders — NOT the business's own artwork (1)
 
 | Business | File | What it actually is |
