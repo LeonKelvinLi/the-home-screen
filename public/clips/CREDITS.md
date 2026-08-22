@@ -43,11 +43,26 @@ the state the app was in until 19 Aug 2026.
 
 ## What was changed from the original
 
-Downscaled to 540px wide, H.264 at CRF 28, `faststart`, **and the audio track
-removed entirely**. The hero plays muted because no mobile browser will autoplay
-otherwise, so shipping a soundtrack nobody can hear would be bytes on every page
-view. A viewer who wants the sound, the caption and the follower count still
-gets them from the card below the hero, which opens the real post.
+Downscaled to 540px wide, H.264 at CRF 28, `faststart`, **and the audio kept**,
+AAC at 96k.
+
+IT USED TO BE STRIPPED, and that was wrong. The argument was that the hero band
+plays muted — no mobile browser autoplays otherwise — so a soundtrack nobody can
+hear is bytes on every page view. True of the hero. But the same files feed the
+WATCH WINDOW, which is a full-screen player somebody opened on purpose, and
+there a silent reel is just a worse reel. The files had no audio track at all,
+so there was nothing to turn on: "audio is not working" was exactly right.
+
+Now they carry sound and the window works the way every app it imitates does —
+**silent until tapped, then it stays on**. Autoplay is still only permitted
+while muted, so a reel has to START silent whatever anyone prefers; a tap is a
+user gesture and that is what unlocks it. The preference is per-visit, not
+per-clip.
+
+**The hero band stays silent** and did not change. It is `aria-hidden`
+decoration behind a logo, and a strip of colour that started talking would be a
+fault. About 200KB per clip for the audio, which is the price of the window
+being worth opening.
 
 Posters are the first frame, encoded as WebP.
 

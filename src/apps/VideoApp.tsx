@@ -23,9 +23,36 @@ import type { ShellApi } from '../ios/Device'
  * on screen and pauses the rest, which is what keeps a long list cheap and what
  * makes "autoplay when open" true rather than aspirational.
  */
+const SPEAKER_OFF = (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M11 5 6 9H3v6h3l5 4V5Z" fill="currentColor" stroke="none" />
+    <path d="m16 9 5 6M21 9l-5 6" />
+  </svg>
+)
+
+const SPEAKER_ON = (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+       strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M11 5 6 9H3v6h3l5 4V5Z" fill="currentColor" stroke="none" />
+    <path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13" />
+  </svg>
+)
+
 export function VideoApp({ api }: { api: ShellApi }) {
   const wrap = useRef<HTMLDivElement>(null)
   const [live, setLive] = useState(0)
+  /*
+    SILENT UNTIL TAPPED, then it stays on — Instagram's behaviour, and the only
+    one browsers allow. Autoplay is permitted ONLY while muted, so a reel has to
+    start silent whatever we would prefer; sound can then be turned on because a
+    tap is a user gesture and that is what unlocks it.
+
+    The preference is per-visit, not per-clip. Turning the sound on for one reel
+    and having the next one arrive silent is the thing that makes people give up
+    and put the phone down.
+  */
+  const [sound, setSound] = useState(false)
 
   useEffect(() => {
     const root = wrap.current
@@ -58,6 +85,31 @@ export function VideoApp({ api }: { api: ShellApi }) {
     return () => io.disconnect()
   }, [])
 
+  /*
+    Applied in an effect rather than as a `muted` prop.
+
+    React sets `muted` as a PROPERTY on first mount and then leaves it alone —
+    it is one of the attributes it does not reliably re-apply — so a re-render
+    with muted={false} can leave a video silently muted. Writing it to every
+    element directly is the version that actually works.
+
+    If a browser refuses to play unmuted, the clip drops back to silent instead
+    of freezing on a paused frame.
+  */
+  useEffect(() => {
+    const root = wrap.current
+    if (!root) return
+    for (const v of root.querySelectorAll('video')) {
+      v.muted = !sound
+      if (!v.paused) {
+        void v.play().catch(() => {
+          v.muted = true
+          setSound(false)
+        })
+      }
+    }
+  }, [sound, live])
+
   if (!REELS.length) {
     return (
       <AppChrome title="Watch" onBack={api.closeApp} tint="#0b0b0d">
@@ -87,6 +139,22 @@ export function VideoApp({ api }: { api: ShellApi }) {
               preload={i === 0 ? 'auto' : 'metadata'}
               autoPlay={i === 0}
             />
+            {/*
+              THE WHOLE FRAME IS THE BUTTON, which is what a thumb expects here
+              and what every app this one is imitating does. It sits above the
+              scrim and below the caption, so tapping the business's name still
+              opens their page rather than toggling the sound.
+            */}
+            <button
+              className="reel-sound"
+              onClick={() => setSound((on) => !on)}
+              aria-pressed={sound}
+              aria-label={sound ? `Mute ${r.name}` : `Play sound for ${r.name}`}
+            >
+              <span className="reel-sound-badge" aria-hidden="true">
+                {sound ? SPEAKER_ON : SPEAKER_OFF}
+              </span>
+            </button>
             {/* The scrim is a separate layer so the film is never dimmed toward
                 the page behind it — only toward black, predictably. */}
             <span className="reel-scrim" aria-hidden="true" />

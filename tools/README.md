@@ -9,6 +9,7 @@ exist because the fault they look for has shipped from this repo at least once.
     python3 tools/audit-code.py                                # dead files, stray logs, orphan CSS
     npx tsx --tsconfig tsconfig.app.json tools/audit-data.ts    # roster claims that could be false
     node   tools/audit-hero-ink.mjs                            # text over a business's own film
+    node   tools/audit-reel-sound.mjs                          # the watch window actually has sound
 
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app
 themselves, so run `npm run build` first if you have just changed source.

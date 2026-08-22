@@ -8844,6 +8844,15 @@ textarea {
 
 .reel-meta {
   position: absolute;
+  /*
+    ABOVE the full-frame sound toggle, so the business's name still opens their
+    page while everywhere else turns the sound on. Declared here rather than in
+    a second .reel-meta rule further down: that version also re-declared
+    `position: relative`, which cancelled the absolute placement below and
+    dropped the caption to the top of the reel, under the nav title and over the
+    speaker badge. One rule owns the position.
+  */
+  z-index: 2;
   left: 18px;
   right: 18px;
   bottom: 26px;
@@ -9120,4 +9129,49 @@ textarea {
   height: auto;
   margin: 0 auto;
   border-radius: 6px;
+}
+
+/*
+  TAP ANYWHERE TO HEAR IT — the reel's whole frame is the sound toggle.
+
+  A button rather than an onClick on the section, so it is reachable by keyboard
+  and announces its state. It sits UNDER .reel-meta in the stack, which is what
+  keeps the business's name tappable: the name opens their page, everywhere else
+  toggles the sound.
+*/
+.reel-sound {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/*
+  The speaker badge sits top-right, where every app this one imitates puts it.
+  Its own dark disc, because it lands on whatever the film happens to be showing
+  and white-on-anything is not a contrast guarantee.
+*/
+.reel-sound-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(11, 11, 13, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  transition: background 160ms ease;
+}
+
+.reel-sound:active .reel-sound-badge {
+  background: rgba(11, 11, 13, 0.78);
 }
