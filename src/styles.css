@@ -8988,7 +8988,12 @@ textarea {
   opacity: 0;
   /* Out slower than in: a picture arriving should feel deliberate and a picture
      leaving should not snap the yellow back like a fault. */
-  transition: opacity 620ms ease;
+  /*
+    OUT MUCH SLOWER THAN IN — "can the transition fade to the yellow slow down a
+    bit". A picture arriving should feel deliberate; a picture leaving should
+    not snap the yellow back like a fault, and at 620ms it still did.
+  */
+  transition: opacity 1100ms ease;
   pointer-events: none;
 }
 
@@ -9034,11 +9039,32 @@ textarea {
 */
 .dialer.is-photo {
   --plate-a: 0.72;
+  /*
+    The glass, and 0.55 is measured rather than chosen. Black type over an
+    unblurred photograph bottoms out at 1.98:1 on the Hollywood Hills post,
+    where the letters land on a dark jacket. Blurred and lifted, the floor is
+    0.50 for 4.5:1; 0.55 measures 6.14:1, which leaves room for a darker
+    picture to arrive — and he changes them every week or two.
+  */
+  --pill-a: 0.55;
 }
 
 .dialer.is-photo .dialer-domain-half.is-light,
 .dialer.is-photo .dialer-domain-half.is-dark {
-  background: rgba(246, 216, 0, var(--plate-a));
+  /*
+    TRANSPARENT, NOT YELLOW — his note, and it is the better call: over a whole
+    Instagram card the yellow plate read as a sticker laid on somebody else's
+    post. The pill becomes glass, so the picture runs straight through it.
+
+    Frosted rather than plain see-through. Black type on an unblurred photograph
+    has no contrast guarantee at all — it depends on whatever pixel happens to
+    be under each letter — and the blur plus a thin white lift turns busy
+    picture into flat ground while still reading as transparent. Measured, not
+    judged: see tools/audit-landing-flip.mjs.
+  */
+  background: rgba(255, 255, 255, var(--pill-a));
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
 }
 
 .dialer.is-photo .pm-sheet {

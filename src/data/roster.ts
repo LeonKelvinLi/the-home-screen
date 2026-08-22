@@ -344,6 +344,34 @@ export const ROSTER_SEED: LocalSeed[] = [
       'CONSTRUCTION and not open to the public; call or check their site for where the truck ' +
       'is. Nothing is priced here yet.',
   }),
+  /*
+    Bloom Balloon, Milpitas — "Milpitas • Services", 2026-08-22. Verified
+    account, 14.3K followers. Their bio leads with "2000+ happy customers" and
+    "5 stars on Yelp and Google", which are marketing claims and stay off the
+    page as claims; what is on it is what they do.
+  */
+  seed('bloom-balloon', 'Bloom Balloon', 'Bloom Balloon', 'Balloon design', '#5FC8C4', {
+    icon: 'bloom-balloon',
+    site: 'https://bloomballoon.com/connect',
+    address: '1090 S Milpitas Blvd, Milpitas, CA',
+    contactOnly:
+      'Balloon design for birthdays, baby showers and graduations, in their own words. ' +
+      'Enquire on their own site. Nothing is priced here yet.',
+  }),
+  /*
+    YogaSix East Contra Costa, Brentwood — "Brentwood • Services", 2026-08-22.
+    He sent two marks and said "either one"; the disc is the one that survives
+    being a square tile 148px across, where the horizontal wordmark could only
+    shrink until neither half read.
+  */
+  seed('yogasix-brentwood', 'YogaSix East Contra Costa', 'YogaSix', 'Yoga studio', '#F0A090', {
+    icon: 'yogasix-brentwood',
+    site: 'https://www.yogasix.com/location/east-contra-costa',
+    address: '5471 Lone Tree Way #110, Brentwood, CA',
+    contactOnly:
+      'A yoga studio on Lone Tree Way. Class times, styles and membership prices are on ' +
+      'their own site — nothing is copied here.',
+  }),
   // ---- from BEASTY • SERVICES ----
   seed('roman-trailer-iron', 'Roman Trailer & Iron Work', 'Roman Iron', 'Trailer and iron work', '#3B3B3F', {
     logoTemplate: 'band', logoLines: ['ROMAN', 'IRON WORK'], logoFace: 'condensed',

@@ -240,6 +240,10 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
       n += 1
       // Odd beats show a picture, even beats the yellow — so each picture gets
       // its own turn and no two in a row are the same.
+      //
+      // Three seconds a beat, on his note. Two was a touch quick to read a
+      // caption and a date before it moved on, which is most of why the whole
+      // Instagram card is there.
       if (n % 2) {
         const i = Math.floor(n / 2) % LANDING_PHOTOS.length
         setPhoto(i)
@@ -247,7 +251,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
       } else {
         setPhoto(null)
       }
-    }, 2000)
+    }, 3000)
     return () => window.clearInterval(t)
   }, [stage])
 

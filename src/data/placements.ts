@@ -345,6 +345,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   */
   'fairfield-goods-0': 'b_boucajun', //                Burgers — comfort food
 
+  /* 2026-08-22. Both land in the category their own bio names. */
+  'milpitas-services-19': 'b_bloomballoon', //         Event coordinator
+  'brentwood-services-4': 'b_yogasixbrentwood', //     Gym
+
   'newark-services-5': 'b_almasautotires', //          Mechanics and smog
   'brentwood-services-14': 'b_gofrette', //            Pet grooming and walking
 
