@@ -1262,9 +1262,14 @@ export const ROSTER_SEED: LocalSeed[] = [
       credit: 'Filmed by Frank2Artistic',
       platform: 'Instagram',
     },
+    /* His own contact card, off his profile, 2026-08-22 — "can you add these
+       contacts on Frank the artists page". */
+    phone: '(510) 919-7577',
+    email: 'frank2artistic@gmail.com',
     contactOnly:
       'Murals, logos and custom art across the Bay Area and the 209, by Franklin Guardado. ' +
-      'Murals start around $1.2k, his own figure. Quotes are by enquiry — he publishes no site.',
+      'Murals start around $1.2k, his own figure. Quotes are by enquiry — call or email him ' +
+      'directly; he publishes no site.',
   }),
   /*
     1-Up Retro, Sacramento — "Sacramento • Goods", 2026-08-19.
