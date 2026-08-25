@@ -399,6 +399,41 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods-13': 'b_thefarmacy',
 
   /*
+    Rico Rico Taco, sent as "Oakland • Goods" and "San Ramon • Goods" on
+    2026-08-25.
+
+    SEATED IN SAN RAMON ONLY. Mexican food is index 1 and Al Pastor Papi
+    already holds it in Oakland — one business per category per city, and
+    bumping a seated one is his call, not mine. San Ramon's Mexican spot was
+    open, and it is the location he actually flagged as news: their second
+    shop opened at City Center Bishop Ranch. Their Oakland seat is his to
+    decide.
+  */
+  'san-ramon-goods-1': 'b_ricoricotaco', //           Mexican
+
+  /*
+    The 2026-08-25 run. Five sent in one morning, each with the city and page
+    he wants them on.
+
+    THREE SEAT WHERE THEY BELONG. Isla trades in Pleasant Hill and Filipino
+    food was open there; JAC does landscaping and Gardener was open in San
+    Francisco; Flowers Valley is a florist with a Concord address and Concord's
+    florist spot was empty.
+
+    TWO DO NOT, both for the same reason: the event-coordinator spot in their
+    city is already held. Camacho's has Santa Rosa and Bay Area Charters has
+    San Francisco, and bumping a seated business is his call, not mine. Fun
+    Cloud went to DJ, the only other performer seat; Petal & Pebbles went to
+    Florist, which is what half her posted work actually is. Both are worth
+    confirming with him.
+  */
+  'pleasant-hill-goods-10': 'b_islafilipino', //       Filipino food
+  'san-francisco-services-21': 'b_jacdreamscapes', //  Gardener
+  'concord-services-13': 'b_flowersvalley', //         Florist
+  'santa-rosa-services-17': 'b_funcloudevents', //     DJ - see above
+  'san-francisco-services-13': 'b_petalandpebbles', // Florist - see above
+
+  /*
     Businesses with no fitting category go on the yellow overflow page rather
     than being crammed under a wrong label: a waste-removal service is not
     "Cleaning", a two-city breakfast house is not "Sandwiches", and a mobile

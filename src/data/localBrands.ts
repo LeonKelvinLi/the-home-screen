@@ -1292,4 +1292,174 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    /*
+      RICO RICO TACO — sent by the operator 2026-08-25 as "Oakland • Goods"
+      and "San Ramon • Goods", with "Just opened new location in San Ramon".
+
+      NO PRICES, and their menu is not the reason. They publish the whole thing
+      — every taco, every filling, in their own words — and put a number
+      against none of it. The only dollar figure anywhere on the site is a
+      Chronicle pull-quote about meals under $20, which is a critic's line and
+      not a price list. So the descriptions below are theirs and the menu here
+      stays unpriced rather than triangulated.
+    */
+    slug: 'rico-rico-taco',
+    logoTemplate: 'wordmark',
+    logoLines: ['Rico Rico', 'TACO'],
+    logoFace: 'script',
+    name: 'Rico Rico Taco',
+    label: 'Rico Rico',
+    cuisine: 'Mexican, tacos',
+    tagline: 'Un Taco Al Día es La Llave De La Alegría',
+    color: '#131417|#7A1B22',
+    prep: 0,
+    category: 'Mexican',
+    site: 'https://www.ricoricotaco.com/',
+    phone: '(510) 922-8262',
+    address: '3205 Lakeshore Ave, Oakland, CA 94610',
+    contactOnly:
+      'Tacos, burritos, bowls, quesadillas and huarachitos — al pastor, carnitas, carne asada, camarón, pescado, pollo asado, and nopales and hongo for anyone off the meat. They publish the menu but not the prices, so nothing is priced here; ordering goes through their own site. A second location opened at City Center Bishop Ranch in San Ramon.',
+    items: [],
+  },
+  {
+    /*
+      ISLA FILIPINO RESTAURANT — "Pleasant Hill • Goods", 2026-08-25.
+
+      He sent their hiring page; the business is the restaurant. They run
+      several Bay Area rooms and the Pleasant Hill one trades as Isla Grand
+      Restaurant Bar & Banquet, so that is the address and number here — the
+      Directions button has to reach the branch he actually sold.
+
+      NOT ONE PRICE ANYWHERE on their site, so nothing is priced here.
+    */
+    slug: 'isla-filipino',
+    logoTemplate: 'wordmark',
+    logoLines: ['Isla', 'FILIPINO RESTAURANT'],
+    logoFace: 'script',
+    name: 'Isla Filipino Restaurant',
+    label: 'Isla',
+    cuisine: 'Filipino',
+    tagline: 'Kapampangan cooking from the Philippines\u2019 culinary capital.',
+    color: '#131417|#1E5A4C',
+    prep: 0,
+    category: 'Filipino',
+    site: 'https://www.islafilipinorestaurant.com/',
+    phone: '(925) 849-6255',
+    address: '548 Contra Costa Blvd., STE M, Pleasant Hill, CA 94523',
+    contactOnly:
+      'Sisig Kapampangan and the Isla Ultimate Boodle Fight, from a kitchen whose chef was born and raised in Pampanga. The Pleasant Hill room is Isla Grand Restaurant Bar & Banquet and takes event bookings. They publish no prices, so nothing is priced here.',
+    items: [],
+  },
+  {
+    /*
+      JAC DREAMSCAPES — "San Francisco • Services", 2026-08-25.
+
+      Landscape and hardscape, not a shop, so there is nothing to price and
+      nothing to stock. Seated under Gardener, which is the nearest thing the
+      services list has to what they do.
+    */
+    slug: 'jac-dreamscapes',
+    logoTemplate: 'wordmark',
+    logoLines: ['JAC', 'DREAMSCAPES'],
+    logoFace: 'condensed',
+    name: 'JAC Dreamscapes',
+    label: 'JAC',
+    cuisine: 'Landscaping and hardscaping',
+    tagline: 'Concept renderings through to flawless execution.',
+    color: '#12140F|#2F5D34',
+    prep: 0,
+    category: 'Gardener',
+    site: 'https://jacdreamscapes.com/',
+    phone: '(510) 255-9561',
+    contactOnly:
+      'End-to-end landscape architecture in their own words: Italian porcelain terraces, hand-carved stone walls, planting that blends native flora with exotic specimens. Work is quoted after they walk the property, so nothing is priced here.',
+    siteCta: 'Open their site',
+    items: [],
+  },
+  {
+    /*
+      FUN CLOUD EVENTS — "Santa Rosa • Services", 2026-08-25.
+
+      SEATED UNDER DJ, NOT EVENT COORDINATOR. Camacho's Party Rentals already
+      holds Santa Rosa's event spot and bumping a seated business is his call.
+      DJ is the list's only other performer slot and these are performers — an
+      eight-foot transformer, mascots, balloon twisting, a bubble show. Worth
+      him confirming.
+    */
+    slug: 'fun-cloud-events',
+    logoTemplate: 'wordmark',
+    logoLines: ['Fun Cloud', 'EVENTS'],
+    logoFace: 'grotesk',
+    name: 'Fun Cloud Events',
+    label: 'Fun Cloud',
+    cuisine: 'Kids party entertainers',
+    tagline: 'The gift of precious childhood, for children and parents.',
+    color: '#101322|#2B6FD6',
+    prep: 0,
+    category: 'DJ',
+    site: 'https://www.funcloudevents.com/',
+    phone: '(669) 233-5085',
+    email: 'info@funcloudevents.com',
+    contactOnly:
+      'Children\u2019s party entertainment across the Bay Area, Napa and Santa Rosa: balloon twisting, a bubble show, nerf battles, mascots, and a live show built around an eight-foot transformer. Booked by enquiry, so nothing is priced here.',
+    items: [],
+  },
+  {
+    /*
+      THE FLOWERS VALLEY — "Concord • Services", 2026-08-25.
+
+      Their own billing is "San Francisco's top wedding and event florist"
+      while the address they publish is in Concord, which is the city he sent
+      and the city they sit in. Both are true: the shop is in Concord and the
+      weddings are in the city.
+    */
+    slug: 'flowers-valley',
+    logoTemplate: 'wordmark',
+    logoLines: ['Flowers', 'VALLEY'],
+    logoFace: 'script',
+    name: 'The Flowers Valley',
+    label: 'Flowers Valley',
+    cuisine: 'Florist',
+    tagline: 'Luxury floral design for weddings and corporate events.',
+    color: '#14100F|#8E2F55',
+    prep: 0,
+    category: 'Florist',
+    site: 'https://www.theflowersvalley.com/',
+    phone: '(707) 893-6686',
+    email: 'info@theflowersvalley.com',
+    address: '1170 Burnett Ave, Suite E, Concord, CA',
+    contactOnly:
+      'Wedding and event florals, plus a corporate flower subscription. Every arrangement is quoted to the event, so nothing is priced here.',
+    items: [],
+  },
+  {
+    /*
+      PETAL & PEBBLES — "San Francisco • Services", 2026-08-25, sent with
+      "Needs Website. Looks like she's new to Instagram."
+
+      NO SITE ON PURPOSE — she has none, and that is the whole reason he sent
+      her. `needsSite` is not set because the outline is derived from the
+      absence of `site` and there is nothing here to override.
+
+      SEATED UNDER FLORIST, NOT EVENT COORDINATOR. Bay Area Charters holds San
+      Francisco's event spot. Florist is the nearest free seat and not a
+      stretch — the installations she posts are floral and balloon work. Worth
+      him confirming.
+    */
+    slug: 'petal-and-pebbles',
+    logoTemplate: 'wordmark',
+    logoLines: ['Petal &', 'PEBBLES'],
+    logoFace: 'script',
+    name: 'Petal & Pebbles',
+    label: 'Petal & Pebbles',
+    cuisine: 'Event decor and styling',
+    tagline: 'Your dream event deserves more than decor \u2014 it deserves an experience.',
+    color: '#141014|#A8763F',
+    prep: 0,
+    category: 'Florist',
+    contactOnly:
+      'Custom decor, catering, and event styling and coordination in San Francisco, in her own words. She has no website yet and takes enquiries through Instagram, so nothing is priced here.',
+    items: [],
+  },
 ]

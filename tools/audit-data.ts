@@ -20,7 +20,7 @@
 import { BRANDS, brandById } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
-import { GOODS_CATEGORIES, SERVICE_CATEGORIES, OPEN_SPOTS } from '../src/data/slots'
+import { GOODS_CATEGORIES, SERVICE_CATEGORIES, OPEN_SPOTS, ONLINE_CATEGORIES } from '../src/data/slots'
 import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
 
@@ -41,15 +41,28 @@ for (const b of BRANDS) seen.set(b.id, (seen.get(b.id) ?? 0) + 1)
 for (const [id, n] of seen) if (n > 1) err(`brand id ${id} appears ${n}× — two seeds share a slug`)
 
 // ---- 2. every placement resolves, and lands in range ----------------------
+/*
+  Every page kind, and how many spots it has.
+
+  `online` was missing, so the two businesses seated on BEASTY - Online were
+  reported as malformed keys — the audit calling a real, rendering page a typo.
+  The alternation below is BUILT from these keys rather than written out again,
+  so adding the next page kind here is the only edit needed.
+*/
 const KINDS: Record<string, number> = {
   goods: GOODS_CATEGORIES.length,
   services: SERVICE_CATEGORIES.length,
   goods2: OPEN_SPOTS.length,
   services2: OPEN_SPOTS.length,
+  online: ONLINE_CATEGORIES.length,
 }
+/* Longest first, so `goods2` is not eaten by `goods`. */
+const KEY_RE = new RegExp(
+  `^(.+)-(${Object.keys(KINDS).sort((a, b) => b.length - a.length).join('|')})-(\\d+)$`,
+)
 const seatOf = new Map<string, string[]>()
 for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {
-  const m = /^(.+)-(goods2|services2|goods|services)-(\d+)$/.exec(key)
+  const m = KEY_RE.exec(key)
   if (!m) {
     err(`placement key is not <city>-<kind>-<n>: ${key}`)
     continue
@@ -63,7 +76,7 @@ for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {
 }
 for (const [id, keys] of seatOf) {
   if (keys.length < 2) continue
-  const cities = new Set(keys.map((k) => k.replace(/-(goods|services)2?-\d+$/, '')))
+  const cities = new Set(keys.map((k) => k.replace(/-(goods2|services2|goods|services|online)-\d+$/, '')))
   /*
     A business on a BEASTY flagship sheet AND in its own city is intended — the
     flagship is the operator's showcase and the city page is where it lives.

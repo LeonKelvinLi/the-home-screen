@@ -349,6 +349,16 @@ export const ROSTER_SEED: LocalSeed[] = [
     account, 14.3K followers. Their bio leads with "2000+ happy customers" and
     "5 stars on Yelp and Google", which are marketing claims and stay off the
     page as claims; what is on it is what they do.
+
+    SENT TWICE. He first filed them on 2026-08-15 under San Jose, then again a
+    week later under Milpitas, and each send wrote its own seed — same slug,
+    same business, two records. Only one could ever win, silently, because the
+    id is derived from the slug; this is the one that survives, being the
+    later send and the one carrying their published address.
+
+    They are still seated on BOTH city pages. Their own address is in
+    Milpitas, so San Jose is worth him confirming — but which city he sells
+    them into is his call, not a thing to quietly drop.
   */
   seed('bloom-balloon', 'Bloom Balloon', 'Bloom Balloon', 'Balloon design', '#5FC8C4', {
     icon: 'bloom-balloon',
@@ -934,16 +944,6 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
 
   /* ---- 2026-08-15 ---- */
-  /* He filed this under San Jose; their own Instagram gives a Milpitas street
-     address. The address stays as published, because that is the one the
-     Directions button sends somebody to — worth him confirming which city he
-     means, since the two disagree. */
-  seed('bloom-balloon', 'Bloom Balloon', 'Bloom Balloon', 'Balloon design', '#C2508A', {
-    icon: 'bloom-balloon',
-    logoTemplate: 'monogram', logoInitials: 'BB', logoFace: 'script',
-    site: 'https://bloomballoon.com/connect',
-    address: '1090 S Milpitas Blvd, Milpitas',
-  }),
   seed('yes-moment', 'Yes Moment', 'Yes Moment', 'Proposal and engagement planner', '#A3184A', {
     icon: 'yes-moment',
     logoTemplate: 'monogram', logoInitials: 'YM', logoFace: 'script',
