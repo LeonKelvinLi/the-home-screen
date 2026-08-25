@@ -93,19 +93,27 @@ export function VoicemailFill({ size = 24, color = "currentColor" }: GlyphProps)
   );
 }
 
-/** Green call button — stands in for phone.fill, handset tilted the way iOS draws it */
+/**
+ * Green call button — the handset.
+ *
+ * IT DID NOT READ AS A PHONE. The old one was a 4.4-wide stroked arc with a
+ * rounded rectangle at each end, and at the size this actually renders (34px)
+ * the three merged into one fat crescent. The operator's words: "is there
+ * anyway you can fix this call button? It looks a little suspicious lol" — and
+ * he is right, an unreadable glyph on the one green button that starts
+ * everything is worse than no glyph.
+ *
+ * So it is one filled silhouette now, the shape every phone on earth uses:
+ * earpiece, tapered waist, mouthpiece, drawn as a single path so nothing can
+ * merge with anything. It stays legible from 20px up.
+ */
 export function PhoneFill({ size = 24, color = "currentColor" }: GlyphProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" color={color} aria-hidden="true" focusable="false">
       <path
-        d="M5.8 7C5 12.2 9 17.6 17.6 17.9"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="4.4"
-        strokeLinecap="round"
+        fill="currentColor"
+        d="M7.6 3.3c.6-.6 1.6-.6 2.2 0l2.5 2.5c.6.6.6 1.6 0 2.2L10.7 9.6c-.3.3-.4.8-.2 1.2a12 12 0 0 0 4.7 4.7c.4.2.9.1 1.2-.2l1.6-1.6c.6-.6 1.6-.6 2.2 0l2.5 2.5c.6.6.6 1.6 0 2.2l-1.2 1.2c-1 1-2.5 1.4-3.9 1a20.5 20.5 0 0 1-13.6-13.6c-.4-1.4 0-2.9 1-3.9L7.6 3.3Z"
       />
-      <rect x="3" y="4.4" width="5.8" height="5" rx="1.8" fill="currentColor" transform="rotate(-32 5.9 6.9)" />
-      <rect x="15" y="15.4" width="5.8" height="5" rx="1.8" fill="currentColor" transform="rotate(-32 17.9 17.9)" />
     </svg>
   );
 }

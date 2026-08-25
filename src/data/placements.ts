@@ -410,6 +410,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     decide.
   */
   'san-ramon-goods-1': 'b_ricoricotaco', //           Mexican
+  /* Khaki, "San Ramon - Goods", 2026-08-25. Indian was open there. */
+  'san-ramon-goods-3': 'b_khaki', //                 Indian food
 
   /*
     The 2026-08-25 run. Five sent in one morning, each with the city and page

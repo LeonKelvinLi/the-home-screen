@@ -696,14 +696,39 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
     today it read "Not connected yet" on both rows, and a first slot pointing
     at a dead line is worse than not having it there.
   */
-  { key: 'you', name: 'Your stuff', apps: [PHONE_APP, DESIGNS_APP, PROFILE_APP, CALENDAR_APP] },
+  /*
+    HIS ORDER, in two messages on 2026-08-25.
+
+    "move the BEASTY designs to 2. Contact to 1." then, seeing the result,
+    "you can put the share button back where it was before" — before being
+    slot 4, which is where it sat until Contact arrived and pushed the row
+    along.
+
+    The dock holds four, so putting Share back costs one. CALENDAR GOES, not
+    Profile: Profile is where a member's QR and referral code live and the
+    whole membership is sold on sharing that code, while the calendar is the
+    least load-bearing of the four. It is still on the home grid.
+  */
+  { key: 'you', name: 'Your stuff', apps: [PHONE_APP, DESIGNS_APP, PROFILE_APP, SHARE_APP] },
   {
     key: 'beasty',
     name: 'BEASTY',
     /* His four: BSTY Goods, BEASTYh2o, EAT (coming soon), BEASTYSupplyCo.
        EAT carries no "coming soon" on the tile because the dock hides labels —
        its own page already says he is still gathering the details. */
-    apps: [GOODS_APP, byId('b_beastyh20'), byId('b_eat'), SUPPLY_APP],
+    /*
+      DESIGNS TAKES THE FIRST SLOT, his instruction on 2026-08-25: "you can put
+      BEASTY designs in place of the BEASTY pages icon."
+
+      The icon that was there is BEASTY Goods, drawn on the app's own
+      apple-touch-icon — which is why he read it as the BEASTY PAGES mark: it
+      is literally the site's own icon, sitting in his product dock among four
+      of his brands and looking like the app rather than like a product.
+
+      BEASTY Goods keeps its place in ALL_APPS and on the home grid; it is the
+      dock slot it loses, and Designs is a thing he sells.
+    */
+    apps: [DESIGNS_APP, byId('b_beastyh20'), byId('b_eat'), SUPPLY_APP],
   },
   { key: 'help', name: 'Help', apps: [PHONE_APP, ...SYSTEM_APPS.filter((a) =>
       ['sys.account', 'sys.help', 'sys.settings'].includes(a.id))

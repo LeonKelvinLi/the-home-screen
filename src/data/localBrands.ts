@@ -1525,4 +1525,35 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteCta: 'Call PJ\u2019s',
     items: [],
   },
+  {
+    /*
+      KHAKI \u2014 "San Ramon \u2022 Goods", 2026-08-25.
+
+      THE ICON IS THEIR OWN MARK ON THEIR OWN COLOUR, which is what he asked
+      for: "make the logo bigger in the icon" or "grab the logo from this and
+      make the entire circle that color". The terracotta is sampled off their
+      own page (#AD523D) and the wordmark is lifted from it rather than redrawn
+      \u2014 a logo is theirs and is never regenerated.
+
+      Their site publishes no prices, so nothing is priced here. The 4.9-from-
+      291-reviews line on their homepage is a Google rating and stays off, the
+      same as every other business's star claim.
+    */
+    slug: 'khaki',
+    name: 'Khaki',
+    label: 'Khaki',
+    cuisine: 'Modern Indian',
+    tagline: 'Bar and Indian canteen.',
+    color: '#17100E|#AD523D',
+    icon: 'khaki',
+    prep: 0,
+    category: 'Indian',
+    site: 'https://www.wearekhaki.com/',
+    phone: '(925) 359-6794',
+    email: 'manager@wearekhaki.com',
+    address: '6000 Bollinger Canyon Rd, 2nd Floor Unit 2601, San Ramon, CA 94583',
+    contactOnly:
+      'Modern Indian in San Ramon, with a vegetarian-forward menu their own site says is never an afterthought, and a bar built on Indian whiskies and gins, spice infusions and pickled elements. Lunch, dinner and private events. They publish no prices, so nothing is priced here \u2014 order or book on their own site.',
+    items: [],
+  },
 ]
