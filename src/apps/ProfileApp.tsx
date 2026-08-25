@@ -1,5 +1,6 @@
 import { useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
+import { MemberPanel } from './MemberPanel'
 import { PetAvatarArt, SPECIES, COATS, BACKDROPS, ACCESSORIES } from './PetAvatar'
 import { Gem } from './MembersApp'
 import { member, isMember } from '../lib/member'
@@ -193,6 +194,16 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             Share the app
           </button>
         </div>
+
+        {/*
+          THEIR CODE AND WHAT IT HAS EARNED — his "the User gets their own
+          personalized QR code assigned to their profile page".
+
+          Above the visited/favourites sections rather than below them: it is the
+          thing that pays them for opening this screen, and it renders nothing at
+          all for a visitor who has not signed up, so it costs them no space.
+        */}
+        <MemberPanel />
 
         {/* Where they have been, opened from the count above. */}
         {sheet === 'visited' && (

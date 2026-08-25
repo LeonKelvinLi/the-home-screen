@@ -1,4 +1,7 @@
+import { useState } from 'react'
 import { AppChrome } from './AppChrome'
+import { useGate } from '../lib/gate'
+import { chooseTier } from '../lib/account'
 import {
   MEMBERSHIP,
   TIERS,
@@ -86,6 +89,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
                   <li key={perk}>{perk}</li>
                 ))}
               </ul>
+              <ChooseTier id={t.id} name={t.name} />
             </div>
           ))}
         </div>
@@ -147,5 +151,68 @@ export function MembersApp({ api }: { api: ShellApi }) {
         </div>
       </div>
     </AppChrome>
+  )
+}
+
+/**
+ * Take a membership.
+ *
+ * WHAT THIS DOES NOT DO IS THE POINT. It records the choice and asks the server
+ * for a payment link; it never says anybody has paid. `tier_status` comes back
+ * 'pending' and stays there until a payment provider moves it, so a member who
+ * taps this sees "chosen, not yet paid" rather than a perk they have not bought.
+ *
+ * WHEN NO LINK IS CONFIGURED it says so plainly instead of opening nothing.
+ * Silence on a button that should have taken $39 reads as a broken app, and the
+ * honest version — "not connected yet" — is also the version that does not
+ * take money the operator cannot yet receive.
+ */
+function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
+  const { account, setAccount } = useGate()
+  const [busy, setBusy] = useState(false)
+  const [note, setNote] = useState<string | null>(null)
+
+  if (!account) {
+    return <p className="members-signedout">Sign up free first, then choose a membership.</p>
+  }
+
+  const mine = account.tier === id
+  const pending = mine && account.tierStatus === 'pending'
+
+  async function choose() {
+    if (busy) return
+    setBusy(true)
+    const r = await chooseTier(id)
+    setBusy(false)
+    if (!r) {
+      setNote('Could not do that just now. Try again in a moment.')
+      return
+    }
+    setAccount(r.account)
+    if (r.paymentLink) {
+      // Their own tab: leaving the app entirely would lose the session they
+      // just used, and Stripe sends them back when they are done.
+      window.open(r.paymentLink, '_blank', 'noopener')
+      setNote(null)
+      return
+    }
+    setNote(
+      `${name} is on your account. Payments are not connected yet, so nothing has been charged — ` +
+        'the operator will be in touch to arrange it.',
+    )
+  }
+
+  return (
+    <>
+      <button className="btn-primary members-choose" onClick={choose} disabled={busy}>
+        {busy ? 'One moment…' : mine ? `${name} chosen` : `Choose ${name}`}
+      </button>
+      {pending && !note && (
+        <p className="members-pending">
+          Chosen, not yet paid. Nothing has been charged.
+        </p>
+      )}
+      {note && <p className="members-pending">{note}</p>}
+    </>
   )
 }

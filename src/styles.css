@@ -9406,3 +9406,81 @@ textarea {
   font-size: 13px;
   line-height: 1.4;
 }
+
+/* ---------- the member's own code and what it earned ---------- */
+
+.mp { display: flex; flex-direction: column; gap: 4px; }
+
+/*
+  The code beside the QR, not under it. Most people SEND a referral link rather
+  than have it scanned, so the readable code and the share button have to be as
+  prominent as the square — a QR alone is useless in a text message.
+*/
+.mp-qr {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.mp-qr img {
+  width: 116px;
+  height: 116px;
+  flex: none;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.mp-qr-side { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+
+/* Monospaced and spaced out: this gets read aloud and typed in by staff. */
+.mp-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.mp-lead { margin: 0; font-size: 13px; line-height: 1.4; color: var(--muted); }
+
+.mp-stats { display: flex; gap: 8px; }
+
+.mp-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 6px;
+  border-radius: 12px;
+  background: rgba(120, 120, 128, 0.1);
+}
+
+.mp-stat-n { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+
+.mp-stat-l {
+  font-size: 11.5px;
+  text-align: center;
+  color: var(--muted);
+}
+
+.mp-next { margin: 10px 0 0; font-size: 14px; font-weight: 600; }
+
+.mp-note { margin: 6px 0 0; font-size: 12.5px; line-height: 1.45; color: var(--tertiary); }
+
+/* ---------- choosing a membership ---------- */
+
+.members-choose { margin-top: 10px; width: 100%; }
+
+.members-pending {
+  margin: 8px 0 0;
+  padding: 11px 12px;
+  border-radius: 10px;
+  background: rgba(246, 216, 0, 0.16);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.members-signedout { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
