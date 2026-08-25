@@ -5,13 +5,46 @@
    failure this guards against — a working API and no way to reach it looks
    exactly like a finished feature from the server side. */
 import { chromium } from 'playwright'
+/*
+  Sign a page in through the real two-step flow.
+
+  The code is scraped from the server's own log, which is where it goes when no
+  email provider is configured — it is never in an HTTP response, and an audit
+  that could read it from one would be proving the opposite of what it should.
+*/
+async function signIn(page, fields, logPath) {
+  const { readFileSync } = await import('node:fs')
+  const started = await page.evaluate(async (f) => {
+    const r = await fetch('/api/members/start', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      credentials: 'same-origin', body: JSON.stringify(f),
+    })
+    return r.status
+  }, fields)
+  if (started !== 202) throw new Error(`start returned ${started}`)
+  const line = readFileSync(logPath, 'utf8').split('\n')
+    .filter((l) => l.includes(`[login-code] ${fields.email} `)).pop()
+  const code = line && line.match(/ (\d{6}) /)?.[1]
+  if (!code) throw new Error('no login code was logged')
+  return page.evaluate(async ({ email, code }) => {
+    const r = await fetch('/api/members/verify', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      credentials: 'same-origin', body: JSON.stringify({ email, code }),
+    })
+    return r.ok ? await r.json() : null
+  }, { email: fields.email, code })
+}
+
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { rmSync } from 'node:fs'
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
 for (const f of ['/tmp/mui.db','/tmp/mui.db-wal','/tmp/mui.db-shm']) { try { rmSync(f,{force:true}) } catch {} }
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:'ignore',env:{...process.env,PORT:String(port),DATABASE_PATH:'/tmp/mui.db',ALLOW_MOCK_PAYMENTS:'1',NODE_ENV:'development'}})
+const LOG='/tmp/audit-mui.log'
+try { rmSync(LOG,{force:true}) } catch {}
+const out=(await import('node:fs')).openSync(LOG,'a')
+const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,PORT:String(port),DATABASE_PATH:'/tmp/mui.db',ALLOW_MOCK_PAYMENTS:'1',NODE_ENV:'development'}})
 const base=`http://localhost:${port}`
 for(let i=0;i<80;i++){try{if((await fetch(base+'/api/health')).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}
 const b=await chromium.launch()
@@ -20,11 +53,8 @@ const bad=[]
 p.on('response',r=>{const l=`${r.status()} ${r.url().replace(base,'')}`; if(r.status()>=400 && l!=='401 /api/members/me') bad.push(l)})
 
 await p.goto(base,{waitUntil:'domcontentloaded'})
-const code = await p.evaluate(async()=>{
-  const r=await fetch('/api/members',{method:'POST',headers:{'content-type':'application/json'},credentials:'same-origin',
-    body:JSON.stringify({name:'Mira Solis',email:`mira${Date.now()}@example.com`})})
-  return (await r.json()).referralCode
-})
+const acct = await signIn(p, { name: 'Mira Solis', email: `mira${Date.now()}@example.com` }, LOG)
+const code = acct?.referralCode
 await p.goto(base,{waitUntil:'networkidle'})
 await p.click('[aria-label="Enter BEASTY"]'); await p.waitForTimeout(2600)
 

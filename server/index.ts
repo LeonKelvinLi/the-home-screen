@@ -1,6 +1,6 @@
 import express from 'express'
 import type { NextFunction, Request, Response } from 'express'
-import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
+import { createHash, randomBytes, randomInt, timingSafeEqual } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db } from './db/schema'
@@ -88,7 +88,24 @@ app.use((_req, res, next) => {
   next()
 })
 
-app.use(express.json({ limit: '256kb' }))
+/*
+  JSON EVERYWHERE EXCEPT THE STRIPE WEBHOOK.
+
+  Stripe signs the exact bytes it sent, so verification needs the raw body — and
+  a global express.json() consumes the stream before any route-level raw parser
+  can see it. The webhook then fails signature checks forever with "payload must
+  be a string or Buffer", which looks like a Stripe misconfiguration and is not:
+  every real payment would sit at 'pending' and nobody would ever go active.
+
+  Found by sending a CORRECTLY signed event, not by checking that a forged one
+  was refused. A rejection test passes just as happily when nothing can ever be
+  accepted.
+*/
+const parseJson = express.json({ limit: '256kb' })
+app.use((req, res, next) => {
+  if (req.path === '/api/stripe/webhook') return next()
+  parseJson(req, res, next)
+})
 /**
  * Fallback only. Real tax is per-vendor (`vendor.taxBps`) because California
  * charges prepared-food tax at the seller's location — a cart spanning two
@@ -1492,45 +1509,196 @@ function memberPayload(m: MemberRow) {
 }
 
 /**
- * Sign up. Free, and it is what unlocks the rest of the app.
+ * EMAIL, for one-time codes.
  *
- * A referral code in the body credits the referrer. It is looked up rather than
- * trusted: an unknown code signs the member up anyway with no referrer, because
- * refusing a sign-up over a mistyped code costs a member to protect nothing.
+ * Sent with fetch against a provider's HTTP API rather than by adding an SMTP
+ * client: it is one request, and this service already writes its own security
+ * headers rather than pulling a package for them. RESEND_API_KEY is what the
+ * operator sets; anything else with a JSON send endpoint is a two-line change.
+ *
+ * WITH NO KEY CONFIGURED THE CODE IS LOGGED TO THE SERVER AND NOWHERE ELSE.
+ * It is never returned to the client, not even in development. A response
+ * carrying the code would be a complete authentication bypass for anybody who
+ * can read a network tab, and "it is only in dev" is exactly how that ships.
  */
-app.post('/api/members', rateLimiter(8, 4), (req, res) => {
+async function sendLoginCode(email: string, code: string, purpose: string): Promise<boolean> {
+  const key = process.env.RESEND_API_KEY
+  const from = process.env.OTP_FROM_EMAIL
+  const subject = `${code} is your BEASTY code`
+  const line =
+    purpose === 'signup'
+      ? 'Enter this code to finish signing up for BEASTY.'
+      : 'Enter this code to sign in to BEASTY on this device.'
+  const text = `${line}\n\n${code}\n\nIt expires in 10 minutes. If you did not ask for it, ignore this email.`
+
+  if (!key || !from) {
+    console.log(`[login-code] ${email} ${code} (${purpose}) — email not configured, not delivered`)
+    return false
+  }
+  try {
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
+      body: JSON.stringify({ from, to: [email], subject, text }),
+      signal: AbortSignal.timeout(8000),
+    })
+    if (!r.ok) {
+      // The status, never the body: a provider error can echo the payload back.
+      console.error('login-code email failed:', r.status)
+      return false
+    }
+    return true
+  } catch (err) {
+    console.error('login-code email failed:', String(err))
+    return false
+  }
+}
+
+/** Six digits. Read aloud, typed on a phone keypad, and never a word. */
+function newLoginCode(): string {
+  // randomInt over a modulo of randomBytes: 256 does not divide 1e6, so the
+  // modulo would make low codes very slightly likelier.
+  const n = randomInt(0, 1_000_000)
+  return String(n).padStart(6, '0')
+}
+
+const CODE_TTL_MS = 10 * 60 * 1000
+const MAX_CODE_ATTEMPTS = 5
+
+/**
+ * Step one: ask for a code.
+ *
+ * ONE ENDPOINT FOR SIGN-UP AND SIGN-IN, and the response is identical for both.
+ * Telling the caller which one this was would be a membership oracle — anybody
+ * could type addresses in and learn who is a BEASTY member. The server knows
+ * the difference and records it; the answer does not.
+ */
+app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const b = req.body
   const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MEMBER_FIELD_MAX) : '')
 
-  const name = str(b.name)
   const email = str(b.email).toLowerCase()
-  if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
-  // Deliberately loose. The strict-looking patterns reject real addresses, and
-  // nothing here depends on the address being deliverable yet.
+  // Deliberately loose. Strict-looking patterns reject real addresses.
   if (!/^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(email)) {
     return res.status(400).json({ error: 'A valid email is required.' })
   }
 
+  /*
+    THE NAME IS VALIDATED BEFORE ANYBODY IS LOOKED UP, and that ordering is the
+    whole point.
+
+    It used to be required only for a sign-up, which meant a one-character name
+    came back 400 for an unknown address and 202 for a registered one — a
+    membership oracle in a status code. Anybody could have typed addresses in
+    and learned who is a BEASTY member.
+
+    So the rule is the same for both, and the client sends a name either way.
+    An existing member's stored name is not overwritten by it.
+  */
+  const name = str(b.name)
+  if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+
   const existing = db.prepare('SELECT id FROM members WHERE email = ?').get(email) as
     | { id: string }
     | undefined
-  if (existing) {
-    /*
-      Signing in an existing email WITHOUT proving ownership is account
-      takeover, so this refuses rather than helpfully logging them in. The
-      message says what to do instead.
-    */
-    return res.status(409).json({
-      error: 'That email is already a member. Open the app on the device you signed up on.',
-    })
+  const purpose = existing ? 'signin' : 'signup'
+
+  const code = newLoginCode()
+  const now = Date.now()
+  db.prepare(
+    `INSERT INTO login_codes
+       (email, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
+        attempts, created_at, expires_at)
+     VALUES (?,?,?,?,?,?,?,0,?,?)
+     ON CONFLICT(email) DO UPDATE SET
+       code_hash = excluded.code_hash,
+       purpose = excluded.purpose,
+       pending_name = excluded.pending_name,
+       pending_instagram = excluded.pending_instagram,
+       pending_phone = excluded.pending_phone,
+       pending_ref = excluded.pending_ref,
+       attempts = 0,
+       created_at = excluded.created_at,
+       expires_at = excluded.expires_at`,
+  ).run(
+    email,
+    hashToken(code),
+    purpose,
+    name || null,
+    str(b.instagram).replace(/^@+/, '') || null,
+    str(b.phone) || null,
+    str(b.ref).toUpperCase() || null,
+    now,
+    now + CODE_TTL_MS,
+  )
+
+  const delivered = await sendLoginCode(email, code, purpose)
+  res.status(202).json({ sent: true, delivered, minutes: CODE_TTL_MS / 60000 })
+})
+
+/**
+ * Step two: prove the address, and be signed in.
+ *
+ * This is the only path that creates a member. Nothing exists until the code
+ * comes back, so an abandoned sign-up leaves no half-account and no address
+ * squatting on the UNIQUE index that its real owner might need later.
+ */
+app.post('/api/members/verify', rateLimiter(12, 6), (req, res) => {
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const email = typeof req.body.email === 'string' ? req.body.email.trim().toLowerCase() : ''
+  const code = typeof req.body.code === 'string' ? req.body.code.replace(/\D/g, '') : ''
+  if (!email || code.length !== 6) return res.status(400).json({ error: 'Enter the 6-digit code.' })
+
+  const row = db.prepare('SELECT * FROM login_codes WHERE email = ?').get(email) as
+    | {
+        email: string
+        code_hash: string
+        purpose: string
+        pending_name: string | null
+        pending_instagram: string | null
+        pending_phone: string | null
+        pending_ref: string | null
+        attempts: number
+        expires_at: number
+      }
+    | undefined
+
+  // One message for missing, expired and exhausted alike. Distinguishing them
+  // tells an attacker which addresses have a code outstanding.
+  const dead = () => res.status(400).json({ error: 'That code is wrong or has expired.' })
+  if (!row) return dead()
+  if (row.expires_at < Date.now() || row.attempts >= MAX_CODE_ATTEMPTS) {
+    db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
+    return dead()
   }
 
-  const instagram = str(b.instagram).replace(/^@+/, '') || null
-  const phone = str(b.phone) || null
-  const code = str(b.ref).toUpperCase()
-  const referrer = code
-    ? (db.prepare('SELECT id FROM members WHERE referral_code = ?').get(code) as
+  /*
+    timingSafeEqual over the HASHES, not the codes. Comparing hashes keeps both
+    sides a fixed 64 bytes, so the length check that timingSafeEqual demands can
+    never itself leak anything about the real code.
+  */
+  const want = Buffer.from(row.code_hash, 'hex')
+  const got = Buffer.from(hashToken(code), 'hex')
+  if (want.length !== got.length || !timingSafeEqual(want, got)) {
+    db.prepare('UPDATE login_codes SET attempts = attempts + 1 WHERE email = ?').run(email)
+    return dead()
+  }
+
+  db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
+
+  const existing = db.prepare('SELECT * FROM members WHERE email = ?').get(email) as
+    | MemberRow
+    | undefined
+
+  if (existing) {
+    startSession(res, existing.id)
+    return res.json(memberPayload(existing))
+  }
+
+  const refCode = row.pending_ref ?? ''
+  const referrer = refCode
+    ? (db.prepare('SELECT id FROM members WHERE referral_code = ?').get(refCode) as
         | { id: string }
         | undefined)
     : undefined
@@ -1539,14 +1707,22 @@ app.post('/api/members', rateLimiter(8, 4), (req, res) => {
   db.prepare(
     `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, created_at)
      VALUES (?,?,?,?,?,?,?,?)`,
-  ).run(id, name, email, instagram, phone, newReferralCode(), referrer?.id ?? null, Date.now())
-
+  ).run(
+    id,
+    row.pending_name ?? 'Member',
+    email,
+    row.pending_instagram,
+    row.pending_phone,
+    newReferralCode(),
+    referrer?.id ?? null,
+    Date.now(),
+  )
   // Their referrer may have just crossed a milestone.
   if (referrer) syncRaffleTickets(referrer.id)
 
   startSession(res, id)
-  const row = db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
-  res.status(201).json(memberPayload(row))
+  const fresh = db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
+  res.status(201).json(memberPayload(fresh))
 })
 
 /** Who am I. The client calls this on boot to decide whether to gate. */
@@ -1605,6 +1781,98 @@ app.post('/api/members/tier', rateLimiter(12, 6), (req, res) => {
     paymentsConfigured: !!link,
   })
 })
+
+/**
+ * STRIPE WEBHOOK — the only thing in this codebase that may mark a member paid.
+ *
+ * A Payment Link is handed out by /api/members/tier with
+ * `client_reference_id=<member id>` appended, and that parameter is the entire
+ * join: it is how a completed checkout is matched back to a row here. Without
+ * it a payment is an anonymous amount of money and tier_status could never
+ * leave 'pending'.
+ *
+ * THE SIGNATURE IS VERIFIED AND THE ROUTE DOES NOT EXIST WITHOUT A SECRET.
+ * An unverified webhook is a public endpoint that grants paid memberships to
+ * anybody who can POST JSON — so if STRIPE_WEBHOOK_SECRET is unset this is
+ * never registered at all, rather than falling back to trusting the body.
+ *
+ * express.raw, not express.json: the signature is computed over the exact bytes
+ * Stripe sent, and a parsed-then-restringified body will not match.
+ */
+if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
+  app.post(
+    '/api/stripe/webhook',
+    express.raw({ type: 'application/json', limit: '1mb' }),
+    async (req, res) => {
+      let event: { type: string; data: { object: Record<string, unknown> } }
+      try {
+        const { default: Stripe } = await import('stripe')
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+        event = stripe.webhooks.constructEvent(
+          req.body as Buffer,
+          req.get('stripe-signature') ?? '',
+          process.env.STRIPE_WEBHOOK_SECRET as string,
+        ) as unknown as typeof event
+      } catch (err) {
+        // A bad signature is the normal shape of an attack, not an outage.
+        console.error('stripe webhook rejected:', String(err).slice(0, 120))
+        return res.status(400).json({ error: 'Bad signature.' })
+      }
+
+      const obj = event.data?.object ?? {}
+      const memberId = typeof obj.client_reference_id === 'string' ? obj.client_reference_id : ''
+
+      /*
+        ACTIVATE ON PAYMENT, LAPSE ON FAILURE OR CANCELLATION. Subscriptions
+        stop for dull reasons — an expired card, a bank decline — and a
+        membership that stays 'active' after the money stops is the app telling
+        an affiliate to honour an offer nobody is paying for.
+      */
+      if (event.type === 'checkout.session.completed' && memberId) {
+        /*
+          THE CUSTOMER ID IS STORED HERE OR THE LAPSE PATH IS DEAD. Subscription
+          events carry no client_reference_id — that belongs to the checkout
+          session — so `customer` is the only durable link back to this row. Set
+          it on the way in and a cancellation months later still finds them;
+          forget it and memberships silently stay 'active' forever after the
+          money stops, which is the app telling an affiliate to honour an offer
+          nobody is paying for.
+        */
+        const customer = typeof obj.customer === 'string' ? obj.customer : null
+        db.prepare(
+          "UPDATE members SET tier_status = 'active', tier_since = ?, stripe_customer = COALESCE(?, stripe_customer) WHERE id = ?",
+        ).run(Date.now(), customer, memberId)
+        console.log('membership active:', memberId)
+      } else if (
+        event.type === 'customer.subscription.deleted' ||
+        event.type === 'invoice.payment_failed'
+      ) {
+        /*
+          These events carry no client_reference_id — it belongs to the checkout
+          session, not the subscription. The customer id is the durable link, so
+          it is stored on activation and matched here.
+        */
+        const customer = typeof obj.customer === 'string' ? obj.customer : ''
+        if (customer) {
+          db.prepare("UPDATE members SET tier_status = 'lapsed' WHERE stripe_customer = ?").run(
+            customer,
+          )
+          console.log('membership lapsed:', customer)
+        }
+      }
+
+      // 200 quickly whatever happened: Stripe retries anything else, and a
+      // retry storm over an event we do not act on helps nobody.
+      res.json({ received: true })
+    },
+  )
+  console.log('stripe webhook mounted')
+} else if (process.env.STRIPE_PAYMENT_LINK_PASS || process.env.STRIPE_PAYMENT_LINK_DIAMOND) {
+  console.warn(
+    'Payment links are configured but STRIPE_WEBHOOK_SECRET/STRIPE_SECRET_KEY are not, ' +
+      'so nothing can mark a member paid. They will stay pending after checkout.',
+  )
+}
 
 /**
  * Their QR, as an SVG.

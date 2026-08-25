@@ -112,18 +112,50 @@ export async function fetchAccount(): Promise<AccountState> {
   }
 }
 
-export type SignUpResult = { ok: true; account: Account } | { ok: false; error: string }
+export type StartResult =
+  | { ok: true; delivered: boolean; minutes: number }
+  | { ok: false; error: string }
 
-export async function signUp(fields: SignUp): Promise<SignUpResult> {
+/**
+ * Step one: ask for a code.
+ *
+ * ONE CALL FOR BOTH SIGNING UP AND SIGNING BACK IN, and the answer is the same
+ * either way. The server knows which it was; saying so would let anybody type
+ * addresses in and learn who is a BEASTY member.
+ *
+ * `delivered: false` means the server has no email provider configured — the
+ * code exists but nobody received it. That has to be shown, not swallowed:
+ * a code screen that can never be satisfied is worse than an honest failure.
+ */
+export async function startSignUp(fields: SignUp): Promise<StartResult> {
   try {
-    const r = await fetch('/api/members', {
+    const r = await fetch('/api/members/start', {
       method: 'POST',
       headers: json,
       credentials: 'same-origin',
       body: JSON.stringify({ ...fields, ref: pendingReferral() ?? undefined }),
     })
     const body = await r.json().catch(() => ({}))
-    if (!r.ok) return { ok: false, error: body?.error ?? 'Could not sign you up just now.' }
+    if (!r.ok) return { ok: false, error: body?.error ?? 'Could not send a code just now.' }
+    return { ok: true, delivered: !!body.delivered, minutes: body.minutes ?? 10 }
+  } catch {
+    return { ok: false, error: 'No connection. Try again in a moment.' }
+  }
+}
+
+export type VerifyResult = { ok: true; account: Account } | { ok: false; error: string }
+
+/** Step two: prove the address. This is the only call that creates a member. */
+export async function verifyCode(email: string, code: string): Promise<VerifyResult> {
+  try {
+    const r = await fetch('/api/members/verify', {
+      method: 'POST',
+      headers: json,
+      credentials: 'same-origin',
+      body: JSON.stringify({ email, code }),
+    })
+    const body = await r.json().catch(() => ({}))
+    if (!r.ok) return { ok: false, error: body?.error ?? 'That code did not work.' }
     clearReferral()
     return { ok: true, account: body as Account }
   } catch {

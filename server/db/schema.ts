@@ -139,6 +139,9 @@ CREATE TABLE IF NOT EXISTS members (
   tier          TEXT NOT NULL DEFAULT 'free' CHECK (tier IN ('free','pass','diamond')),
   tier_status   TEXT NOT NULL DEFAULT 'none' CHECK (tier_status IN ('none','pending','active','lapsed')),
   tier_since    INTEGER,
+  -- Set when a checkout completes. The durable link for subscription events,
+  -- which carry no client_reference_id of their own.
+  stripe_customer TEXT,
   created_at    INTEGER NOT NULL
 );
 
@@ -150,6 +153,40 @@ CREATE INDEX IF NOT EXISTS idx_members_code ON members(referral_code);
   vendor api_token gets. A stolen database read must not hand somebody a working
   login.
 */
+/**
+ * ONE-TIME CODES, for both signing up and signing back in.
+ *
+ * Emailing a code is what makes a SECOND DEVICE safe. Before this, the session
+ * cookie was the only credential, so signing in anywhere else was impossible and
+ * had to be refused — "type your email to sign in" with no proof of ownership
+ * would hand anybody an account, with its referral credit and its raffle
+ * tickets, for the price of guessing an address. A code proves the address.
+ *
+ * THE CODE IS STORED HASHED, like every other credential here. A stolen
+ * database read must not hand somebody a working login.
+ *
+ * The pending_* columns hold what a NEW member typed while they wait for their
+ * code. Nothing is written to members until the address is proven, so an
+ * abandoned sign-up leaves no half-account and no email address squatting on a
+ * UNIQUE index that the real owner might later need.
+ *
+ * attempts is a lockout, not a counter. Five wrong guesses kills the code —
+ * six digits is a million combinations, which is plenty against a human and
+ * nothing at all against a script left running overnight.
+ */
+CREATE TABLE IF NOT EXISTS login_codes (
+  email             TEXT PRIMARY KEY,
+  code_hash         TEXT NOT NULL,
+  purpose           TEXT NOT NULL CHECK (purpose IN ('signup','signin')),
+  pending_name      TEXT,
+  pending_instagram TEXT,
+  pending_phone     TEXT,
+  pending_ref       TEXT,
+  attempts          INTEGER NOT NULL DEFAULT 0,
+  created_at        INTEGER NOT NULL,
+  expires_at        INTEGER NOT NULL
+);
+
 CREATE TABLE IF NOT EXISTS member_sessions (
   token_hash TEXT PRIMARY KEY,
   member_id  TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
@@ -223,6 +260,14 @@ addColumn('orders', 'address', 'TEXT')
 // Binds an idempotency key to the cart it was used for, so reusing a key with
 // a different order is a 409 rather than a silently discarded order.
 addColumn('orders', 'request_digest', 'TEXT')
+/*
+  The live database already has `members` from the deploy before this one, and
+  CREATE TABLE IF NOT EXISTS does not add columns to a table that exists. Without
+  this line the webhook's UPDATE ... WHERE stripe_customer would throw on every
+  subscription event in production while passing perfectly on a fresh local db —
+  the exact shape of bug that only appears after deploying.
+*/
+addColumn('members', 'stripe_customer', 'TEXT')
 
 /*
   Indexes on migrated columns must be created AFTER the ALTERs above. On an

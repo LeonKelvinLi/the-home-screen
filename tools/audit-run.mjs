@@ -8,6 +8,36 @@
 */
 import { chromium } from 'playwright'
 import { spawn } from 'node:child_process'
+/*
+  Sign a page in through the real two-step flow.
+
+  The code is scraped from the server's own log, which is where it goes when no
+  email provider is configured — it is never in an HTTP response, and an audit
+  that could read it from one would be proving the opposite of what it should.
+*/
+async function signIn(page, fields, logPath) {
+  const { readFileSync } = await import('node:fs')
+  const started = await page.evaluate(async (f) => {
+    const r = await fetch('/api/members/start', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      credentials: 'same-origin', body: JSON.stringify(f),
+    })
+    return r.status
+  }, fields)
+  if (started !== 202) throw new Error(`start returned ${started}`)
+  const line = readFileSync(logPath, 'utf8').split('\n')
+    .filter((l) => l.includes(`[login-code] ${fields.email} `)).pop()
+  const code = line && line.match(/ (\d{6}) /)?.[1]
+  if (!code) throw new Error('no login code was logged')
+  return page.evaluate(async ({ email, code }) => {
+    const r = await fetch('/api/members/verify', {
+      method: 'POST', headers: { 'content-type': 'application/json' },
+      credentials: 'same-origin', body: JSON.stringify({ email, code }),
+    })
+    return r.ok ? await r.json() : null
+  }, { email: fields.email, code })
+}
+
 import { createServer } from 'node:net'
 
 const freePort = () =>
@@ -41,7 +71,8 @@ const srv = spawn('npx', ['tsx', 'server/index.ts'], {
     ALLOW_MOCK_PAYMENTS: '1',
     NODE_ENV: 'development',
   },
-  stdio: 'ignore',
+  stdio: ['ignore', (await import('node:fs')).openSync('/tmp/audit-run.log','a'),
+          (await import('node:fs')).openSync('/tmp/audit-run.log','a')],
 })
 const base = `http://localhost:${port}`
 for (let i = 0; i < 60; i++) {
@@ -94,18 +125,9 @@ p.on('response', (r) => {
   real endpoint is also a free check that sign-up works on every run.
 */
 await p.goto(base, { waitUntil: 'domcontentloaded' })
-const signedUp = await p.evaluate(async () => {
-  const r = await fetch('/api/members', {
-    method: 'POST',
-    headers: { 'content-type': 'application/json' },
-    credentials: 'same-origin',
-    body: JSON.stringify({ name: 'Audit Runner', email: `audit${Date.now()}@example.com` }),
-  })
-  return r.status
-})
-if (signedUp !== 201) {
-  console.log(`ERROR sign-up returned ${signedUp}; the rest of this audit cannot run signed in`)
-}
+const account = await signIn(p, { name: 'Audit Runner', email: `audit${Date.now()}@example.com` },
+  '/tmp/audit-run.log')
+if (!account) console.log('ERROR sign-in failed; the rest of this audit cannot run signed in')
 await p.goto(base, { waitUntil: 'networkidle' })
 await p.click('[aria-label="Enter BEASTY"]')
 await p.waitForTimeout(2800)

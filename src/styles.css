@@ -9484,3 +9484,15 @@ textarea {
 }
 
 .members-signedout { margin: 8px 0 0; font-size: 13px; color: var(--muted); }
+
+/*
+  The code box. Wide-spaced and centred, because six digits copied off an email
+  get checked digit by digit — and 22px keeps it well clear of the 16px floor
+  under which iOS zooms the whole page on focus.
+*/
+.join-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 22px;
+  letter-spacing: 0.4em;
+  text-align: center;
+}

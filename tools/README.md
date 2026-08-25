@@ -14,6 +14,8 @@ exist because the fault they look for has shipped from this repo at least once.
     node   tools/audit-gate.mjs                                # six doors shut signed out, directory still open
     node   tools/audit-referral.mjs                            # a shared QR link credits the sharer
     node   tools/audit-member-ui.mjs                           # the QR is on the profile, a tier can be taken
+    node   tools/audit-otp.mjs                                 # login codes: private, single-use, no oracle
+    node   tools/audit-payments.mjs                            # pending -> active -> lapsed, forgeries refused
 
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app
 themselves, so run `npm run build` first if you have just changed source.

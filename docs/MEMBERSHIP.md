@@ -12,7 +12,9 @@ out in two different currencies.
 | Referral codes, QR, credit | **working** |
 | Raffle tickets | **working** |
 | Discount arithmetic | **working** |
-| Taking $39 or $59 | **not connected** — see below |
+| Email codes (OTP) | **working** — needs a provider key to deliver |
+| Sign-in on a second device | **working** |
+| Taking $39 or $59 | **wired** — needs Stripe keys, see below |
 
 `tier_status` never leaves `pending` on its own. Nothing in this codebase may
 mark a member paid; only a payment provider may, and none is wired.
@@ -28,10 +30,30 @@ The server appends `?client_reference_id=<member id>` to whichever link it hands
 back. **That parameter is the whole join** — without it a completed payment
 cannot be matched to a member and `tier_status` could never move off `pending`.
 
-Still to build after the links exist: a `POST /api/stripe/webhook` that verifies
-the signature, reads `client_reference_id`, and sets `tier_status = 'active'`.
-Until it does, a member who pays stays `pending` and the app will not show them
-a paid perk — which is the correct way round to be wrong.
+### The webhook
+
+    STRIPE_SECRET_KEY=sk_live_xxxxxxxx
+    STRIPE_WEBHOOK_SECRET=whsec_xxxxxxxx
+
+Point Stripe at `POST /api/stripe/webhook` for `checkout.session.completed`,
+`customer.subscription.deleted` and `invoice.payment_failed`.
+
+**Without both secrets the route is not registered at all.** An unverified
+webhook is a public endpoint that grants paid memberships to anybody who can
+POST JSON, so it does not fall back to trusting the body — it does not exist.
+
+`checkout.session.completed` also stores the Stripe **customer id**, and that is
+load-bearing: subscription events carry no `client_reference_id`, so the customer
+is the only durable link back. Without it a cancellation could never be matched
+and memberships would stay `active` forever after the money stopped — the app
+telling an affiliate to honour an offer nobody is paying for.
+
+**One trap already caught here:** a global `express.json()` consumed the request
+body before signature verification could see the raw bytes, so every correctly
+signed webhook failed with "payload must be a string or Buffer". Real payments
+would have sat at `pending` forever while a forged-webhook test passed happily.
+The webhook path is excluded from the JSON parser, and `tools/audit-payments.mjs`
+now asserts **both** directions — forgeries refused *and* real events accepted.
 
 ## The two currencies, and why they are computed apart
 
@@ -46,19 +68,35 @@ Both come off one referral count and they stop at different points:
 same function. Two copies of that arithmetic disagreeing about somebody's money
 is the kind of bug that gets noticed from outside.
 
-## No passwords, and no email-only sign-in
+## One-time codes
 
-He asked for name, email, Instagram and an optional phone. So the session cookie
-set at sign-up **is** the credential, and it follows that:
+No passwords. A six-digit code emailed to the address proves it belongs to them,
+which is what makes signing in on a **second device** safe — the thing that had
+to be refused before this existed.
 
-* this device stays signed in;
-* another device cannot, and is told why;
-* an existing email is **refused**, not signed in.
+    RESEND_API_KEY=re_xxxxxxxx
+    OTP_FROM_EMAIL=beasty@yourdomain.com
 
-That last one is deliberate and must stay. "Type your email to sign in" with no
-password would let anybody take over any member — including their referral
-credit and their raffle tickets — by guessing an address. The fix is email
-verification, not a shortcut.
+**With no key set, the code is written to the server log and delivered nowhere.**
+It is never returned in an HTTP response, not even in development — a response
+carrying the code would be a complete authentication bypass for anyone who can
+read a network tab, and "it is only in dev" is exactly how that ships. The
+sign-up screen says plainly when delivery is not configured.
+
+Properties `tools/audit-otp.mjs` holds to:
+
+* the code never reaches the client;
+* no member row exists until the address is proved, so an abandoned sign-up
+  leaves no half-account squatting on the email's UNIQUE index;
+* one use only;
+* five wrong guesses kill the code — **including for the real one arriving
+  afterwards**;
+* **no membership oracle.** `/api/members/start` answers identically whether the
+  address is registered or not. That one is not theoretical: an earlier version
+  required a name only for new sign-ups, so a one-character name returned 400
+  for an unknown address and 202 for a registered one. Anybody could have typed
+  addresses in and learned who is a member. The name is now validated before
+  anyone is looked up.
 
 ## The gate fails OPEN
 
