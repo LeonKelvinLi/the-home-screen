@@ -5287,7 +5287,10 @@ textarea {
   max-height: min(62vh, 560px);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  padding: 20px 20px 18px;
+  /* No top padding: the sticky header carries it instead. With padding here,
+     the header's sticky box started below it and scrolled content showed in
+     the gap above the title. */
+  padding: 0 20px 18px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: saturate(180%) blur(24px);
@@ -5749,16 +5752,19 @@ textarea {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 12px;
   position: sticky;
   top: 0;
   z-index: 2;
-  padding-bottom: 8px;
+  /* Spans the full card width and carries the card's top padding itself, so
+     the scrollport begins exactly at the title. On a page long enough to
+     scroll — About, now — a heading used to ride up into the gap above it. */
+  margin: 0 -20px 12px;
+  padding: 20px 20px 8px;
   /* The card's own background, so the title does not have text scrolling
      under it. */
   background: linear-gradient(
     to bottom,
-    rgba(255, 255, 255, 0.97) 78%,
+    rgba(255, 255, 255, 0.99) 82%,
     rgba(255, 255, 255, 0)
   );
 }
@@ -9495,4 +9501,133 @@ textarea {
   font-size: 22px;
   letter-spacing: 0.4em;
   text-align: center;
+}
+
+/* ---- About: chapters that drop down --------------------------------------
+   His words for the problem: the About text should not "completely fill the
+   whole page with all these paragraphs". Each of his bold headings is a row
+   that opens.
+
+   The row is a real button at 48px, which is above the 44px the design audit
+   holds every control to — this is the one control on the page a thumb hits
+   repeatedly. */
+.panel-chapters {
+  margin-top: 14px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.panel-chapter {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.panel-chapter-head {
+  width: 100%;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 2px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  /* Explicit, not inherited. The panel only ever set a colour on its <p>, so
+     `color: inherit` here picked up the page's white text and every chapter
+     heading rendered as a ghost — readable in the DOM, invisible on glass. */
+  color: #1a1a1c;
+}
+.panel-chapter-name {
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+/* His parenthetical under a heading — "(It began with Luna….)" — kept on the
+   same row so a closed chapter still reads as his line, not just a label. */
+.panel-chapter-name em {
+  display: block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12.5px;
+  opacity: 0.62;
+  margin-top: 2px;
+}
+.panel-chapter-chev {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  opacity: 0.5;
+  transition: transform 0.18s ease;
+}
+.panel-chapter.is-open .panel-chapter-chev {
+  transform: rotate(180deg);
+}
+.panel-chapter-body {
+  padding: 0 2px 14px;
+}
+.panel-chapter-body p {
+  margin: 0 0 10px;
+}
+.panel-chapter-body p:last-child {
+  margin-bottom: 0;
+}
+/* Biggie's pedigree: short lines, not prose, so it is set as lines. */
+.panel-facts {
+  margin: 12px 0 0;
+  padding: 12px 14px;
+  list-style: none;
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.045);
+  font-size: 13px;
+  line-height: 1.5;
+  color: #1a1a1c;
+}
+.panel-facts li + li {
+  margin-top: 3px;
+}
+.panel-chapter-after {
+  margin-top: 12px !important;
+  font-weight: 700;
+}
+.panel-figure {
+  margin: 12px 0 0;
+}
+/* Capped, and cropped from the top. It is a tall phone screenshot and at full
+   height it pushed his next chapter two scrolls down; the part that carries
+   the story is the listing title and the two names, which are at the top. */
+.panel-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+.panel-figure figcaption {
+  margin-top: 7px;
+  font-size: 12px;
+  line-height: 1.45;
+  opacity: 0.66;
+}
+.panel-signoff {
+  margin-top: 16px !important;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+/* His closing quote, laid out in the four lines he laid it out in. */
+.panel-quote {
+  margin: 14px 0 0;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(0, 0, 0, 0.045);
+  border-left: 3px solid rgba(255, 214, 0, 0.85);
+  font-size: 14.5px;
+  line-height: 1.5;
+  font-weight: 700;
+  font-style: italic;
+  color: #1a1a1c;
+}
+.panel-quote span {
+  display: block;
 }

@@ -3,7 +3,7 @@ import { CITY_PAGES, PARTNER_COUNT } from '../data/cities'
 import { OPERATOR, telHref } from '../lib/operator'
 import { BEASTY_DIGITS, DIALER_KEYS } from './dialer/keys'
 import type { KeyAction, PanelPage } from './dialer/keys'
-import { PAGES } from './dialer/copy'
+import { PAGES, type AboutSection } from './dialer/copy'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
@@ -1076,6 +1076,72 @@ function Panel({
     }
   }
 
+  /**
+ * The About page's chapters, closed until tapped.
+ *
+ * His instruction: the bold headings in his text should "drop down" so the
+ * page is not a wall of paragraphs. So every chapter starts closed and the
+ * reader opens what they want to read.
+ *
+ * A real <button> per row rather than a div with a click handler, and the open
+ * state on aria-expanded — the panel already traps Tab across
+ * `button, a[href]`, so these join that cycle for free and a screen reader is
+ * told whether a row is open instead of having to guess from the arrow.
+ *
+ * The closed rows are not display:none'd away; they are unmounted. A phone
+ * reading this has no reason to lay out seven chapters it is not showing.
+ */
+function PanelSections({ sections }: { sections?: AboutSection[] }) {
+  const [open, setOpen] = useState<string | null>(null)
+  if (!sections?.length) return null
+  return (
+    <div className="panel-chapters">
+      {sections.map((sec) => {
+        const isOpen = open === sec.head
+        return (
+          <div className={`panel-chapter${isOpen ? ' is-open' : ''}`} key={sec.head}>
+            <button
+              type="button"
+              className="panel-chapter-head"
+              aria-expanded={isOpen}
+              onClick={() => setOpen(isOpen ? null : sec.head)}
+            >
+              <span className="panel-chapter-name">
+                {sec.head}
+                {sec.sub && <em>{sec.sub}</em>}
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="panel-chapter-chev">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            {isOpen && (
+              <div className="panel-chapter-body">
+                {sec.body.map((t) => (
+                  <p key={t}>{t}</p>
+                ))}
+                {sec.figure && (
+                  <figure className="panel-figure">
+                    <img src={sec.figure.src} alt={sec.figure.alt} loading="lazy" />
+                    <figcaption>{sec.figure.caption}</figcaption>
+                  </figure>
+                )}
+                {sec.facts && (
+                  <ul className="panel-facts">
+                    {sec.facts.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ul>
+                )}
+                {sec.after && <p className="panel-chapter-after">{sec.after}</p>}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
   /* Recent is a LIST of this device's own visits, not prose, so it renders a
      component rather than paragraphs from copy.ts. */
   const listBody =
@@ -1111,12 +1177,29 @@ function Panel({
         {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].body.map((p) => (
           <p key={p}>{p}</p>
         ))}
+        <PanelSections
+          sections={PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].sections}
+        />
         {/* Shown, not hidden in a comment. A page that needs the operator's
             detail before it is true says so where he will see it. */}
         {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].needsGlenn && (
           <p className="dialer-panel-flag">
             {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].needsGlenn}
           </p>
+        )}
+        {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].signoff && (
+          <p className="panel-signoff">
+            {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].signoff}
+          </p>
+        )}
+        {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].quote && (
+          <blockquote className="panel-quote">
+            {PAGES[page as Exclude<PanelPage, 'contacts' | 'recent' | 'favorites'>].quote!.map(
+              (line) => (
+                <span key={line}>{line}</span>
+              ),
+            )}
+          </blockquote>
         )}
         {/* Careers and Collabs both send people to the same form, so both need
             the button. Collabs used to name it and give no way to reach it. */}

@@ -36,6 +36,34 @@ interface Page {
   body: string[]
   /** What the operator still has to supply. Absent means nothing is missing. */
   needsGlenn?: string
+  /**
+   * Collapsed chapters, shown under `body` as tap-to-open rows.
+   *
+   * His instruction, and the reason for it: the About text runs to seven
+   * chapters and "it doesn't completely fill the whole page with all these
+   * paragraphs". Each bold heading he wrote becomes a closed row; the reader
+   * opens the ones they want. The intro above stays open, so the page still
+   * says what it is before anybody taps anything.
+   */
+  sections?: AboutSection[]
+  /** A last line under everything, set apart. His sign-off. */
+  signoff?: string
+  /** His closing pull quote, laid out as he laid it out. */
+  quote?: string[]
+}
+
+export interface AboutSection {
+  /** The bold heading, exactly as he wrote it. */
+  head: string
+  /** His parenthetical under a heading, where he wrote one. */
+  sub?: string
+  body: string[]
+  /** A block of short lines rather than prose — Biggie's pedigree. */
+  facts?: string[]
+  /** One line after the facts, standing alone. */
+  after?: string
+  /** A picture inside the chapter, with whose it is and what it shows. */
+  figure?: { src: string; alt: string; caption: string }
 }
 
 type PageKey = 'about' | 'bprf' | 'collabs' | 'donations' | 'careers' | 'reviews' | 'supply' | 'camera'
@@ -107,24 +135,95 @@ export const PAGES: Record<PageKey, Page> = {
   */
   about: {
     title: 'About BEASTY',
-    body: [
-      'BEASTY is Glenn Malicdem, working out of Richmond, California. The line under the name — Supply of Goods, Services and awesome Company — is his own, and he means all three parts of it.',
-      'He had a dog called Biggie. Walking Biggie is how he got to know this place: the same streets every day, the same people, the small businesses you only ever find on foot. Biggie is gone now. The way Glenn says it, Biggie is in heaven, watching him work hard for him. The dog on the front screen is Biggie. He is a memorial, not a mascot.',
-      /*
-        Scoped, because the unscoped version was false four different ways.
+    /*
+      HIS WORDS, not a retelling of them. He emailed this on 2026-08-25 as the
+      About for the landing page and asked for it to be proofread and
+      published; only unambiguous spelling was touched (set fourth -> set
+      forth, have past -> have passed). The opening line carries the revision
+      he sent separately over iMessage the same morning: "live with the ones
+      you love", not "be with".
 
-        Not every icon is a business — the grid also carries Cart, Orders,
-        Search, Settings and nine pages of empty tiles. Not all of them are
-        local: Alli's Dog Walking says in its own data that it works in
-        Philadelphia and southern New Jersey. Four have no menu at all
-        (contactOnly, items: []), so they open on a contact card. And one cart
-        does not span all of them: Noctilucente is quoteOnly and suppresses
-        add-to-cart everywhere. ReserveApp states this correctly as "across
-        every kitchen here"; that qualifier is what was missing.
-      */
-      'The app is that walk, put on a phone. Most of the icons are kitchens, and opening one puts you in their menu at their prices — they set those themselves, and nobody else edits them. One cart runs across every kitchen on the screen, so ordering from three of them is one checkout instead of three. A few icons are not kitchens and open on a contact card instead.',
-      'It opens on a dial pad because BEASTY is what the keys spell: 2-3-2-7-8-9. Behind it are pages for Oakland, Richmond, Berkeley and the rest of Glenn’s list — the Bay Area cities he is opening in, and Las Vegas. Most of them start empty. An empty page is the honest version — it means nobody there has signed up yet, and it is what he shows a business owner to say the space is theirs.',
+      TWO THINGS IN HERE ARE HIS TO SETTLE, and neither is a typo to quietly
+      fix, because both are claims about his own life and his own brand:
+        - The dates disagree. He gives his birthday as the 9th of March, says
+          the litter came on the 7th, calls that "2 days before", and then
+          calls it "just one day before".
+        - The closing quote swears. He wrote it that way and framed it as a
+          pull quote, so it is set as one.
+    */
+    body: [
+      'The Universe, it\u2019s such a mysterious thing. Once you understand how it all works, life is much more of a beautiful place to live with the ones you love.',
+      'The BEASTY brand is the brainchild of a dog owner who came to fully understand the true laws of attraction and placed a wish to the Universe on the beginning days of 2005.',
+      'The prayer, \u201cI wish for the biggest male Pitbull with a big head, a brindle coat like his mother and the most calm and gentle demeanor from a BEAST a family would grow with love.\u201d',
     ],
+    sections: [
+      {
+        head: 'The Story',
+        sub: '(It began with Luna\u2026.)',
+        body: [
+          'Luna is where it starts. What follows is the litter she carried, and the one puppy out of twelve that the whole of BEASTY is named for.',
+        ],
+      },
+      {
+        head: 'The Blessing',
+        body: [
+          'The Blessing came to be just 2 days before the dog owner\u2019s birthday which was on the 9th of March. (Ironically the day of Biggie Smalls passing in 97\u2019 which was the inspiration for Biggie\u2019s name to be). A healthy litter of 12 puppies was birthed by Luna on the same day as her owner\u2019s birthday on the 7th of March. 10 healthy puppies were born that day & after midnight the last 2 were born of which the last one just happened to be the 2nd runt of her litter which ultimately became the Beast named Biggie \u201cillah-than-most\u201d Gotti. 3/8/05',
+        ],
+      },
+      {
+        head: 'The Gratitude',
+        body: [
+          'The Gratitude at that point was immense and surreal. The odds of months & months of prayers answered and delivered to you just one day before your birthday truly strengthens your faith in God and the Universe.',
+        ],
+      },
+      {
+        head: 'The Mission',
+        body: [
+          'The Mission was now set into play. How does one thank God and the universe for such a blessing? It was quite simple, share him to the world and use his presence to give back to other animals in need.',
+        ],
+      },
+      {
+        head: 'The Plan',
+        body: [
+          'The Plan was to raise money from proceeds from Calendar sales. So in the summer of 2008 the owner set forth on a mission to create a Tribute to Hip Hop Calendar with the help of over 24 small business sponsors which watched Biggie grow from the runt of his litter to the Beast of his siblings by 20-25lbs. As the saying goes, the best things come in small packages.',
+        ],
+        facts: [
+          'Biggie 3/8/05',
+          'Direct son of \u201cNotorious Juan Gotti\u201d',
+          '3 x UKC Purple Ribbon bred',
+          'XL Bully APBT',
+          '110 lbs, Brindle Coat & 24\u201d Head',
+          'with the personality of a cool & calm demeanor reminiscent of the late and great Notorious Biggie Smalls.',
+        ],
+        after: 'God is Good all the time.',
+      },
+      {
+        head: 'The Future',
+        body: [
+          'The Future is now, 18 years have passed with many ups and downs from what life is expected. All it took was the burning desire to execute a dream that was once placed many years ago. From the memorable quote from an old time favorite film, Field of Dreams, \u201cif you build it, they will come\u2026\u201d.',
+        ],
+      },
+      {
+        head: 'The Build',
+        body: [
+          'The Build was destined from how it began. A Facebook page dedicated to a dog named Biggie Gotti is where it started. Decades later a Facebook marketplace ad was placed,',
+        ],
+        figure: {
+          src: '/photos/beasty-marketplace.webp',
+          alt: 'A Facebook Marketplace conversation headed "Leon \u00b7 I build websites for small businesses that bring more customers", with two members listed: Leon Kelvin Li and Biggie Gotti.',
+          caption: 'The Marketplace ad, and the two names on the thread it started.',
+        },
+      },
+      {
+        head: 'BEASTY PAGES',
+        sub: '(8/1/26)',
+        body: [
+          '8/1/26, BEASTY PAGES was born. A BEASTY idea is met by a BEASTY individual named Leon and what you see here is how BEASTY PAGES has come to be. Crazy far-fetched ideas make the world what they are today. Electric cars, Ai robots, Cryptocurrency and now a uniquely designed platform envisioned by a dog owner of a BEAST and built by Leon, a \u201cwebsite for small businesses that bring more customers.\u201d',
+        ],
+      },
+    ],
+    signoff: 'BEASTYPAGES.com \u00b7 Just a tap away \u2122',
+    quote: ['The Universe, ain\u2019t', 'it a motherfucker.', 'God is good.', 'All the time.'],
   },
 
   /*
