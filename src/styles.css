@@ -9631,3 +9631,23 @@ textarea {
 .panel-quote span {
   display: block;
 }
+
+/* A membership Stripe has confirmed, said in a colour that is not the same as
+   "not yet paid" — the two used to render identically. */
+.members-pending.is-active {
+  color: #0b5c2e;
+  font-weight: 700;
+}
+.members-pending a {
+  color: inherit;
+  font-weight: 700;
+}
+
+/* Operator hint inside a customer-facing error. Dev builds only — see JoinApp. */
+.join-dev {
+  display: block;
+  margin-top: 4px;
+  font-style: normal;
+  font-weight: 600;
+  opacity: 0.75;
+}

@@ -135,22 +135,44 @@ export function MembersApp({ api }: { api: ShellApi }) {
           )}
         </div>
 
-        <div className="members-cta">
-          {/* The card is a working preview and reachable now; the PAID
-              membership is not, and the two must not be confused. */}
-          <button className="btn-primary" onClick={() => api.openApp('sys.membercard')}>
-            See the member card
-          </button>
-          <button className="btn-secondary" disabled>
-            Paid sign-ups not open yet
-          </button>
-          <p className="members-cta-note">
-            Card payments are not connected, so nothing can be charged and no membership can start
-            yet. Every term above would be shown again, and confirmed, before any money moved.
-          </p>
-        </div>
+        <MembersFooterCta api={api} />
       </div>
     </AppChrome>
+  )
+}
+
+/**
+ * The bottom of the membership page.
+ *
+ * IT USED TO CONTRADICT THE BUTTONS ABOVE IT. This block carried a disabled
+ * "Paid sign-ups not open yet" and a paragraph stating card payments were not
+ * connected — both written before checkout existed, and neither aware that the
+ * two Choose buttons further up the same screen now open a real Stripe
+ * checkout. A page that offers to take $39 at the top and says it cannot at
+ * the bottom is a page nobody trusts with a card.
+ *
+ * So the claim is no longer written down. `paymentsConfigured` comes from the
+ * server on every member response and says whether a Payment Link exists, and
+ * this reads it. Signed out it says neither thing, because it does not know.
+ */
+function MembersFooterCta({ api }: { api: ShellApi }) {
+  const { account } = useGate()
+  const live = account && account.paymentsConfigured
+  return (
+    <div className="members-cta">
+      {/* Reachable whatever the payment state — it is a preview of the card,
+          not a purchase. */}
+      <button className="btn-primary" onClick={() => api.openApp('sys.membercard')}>
+        See the member card
+      </button>
+      <p className="members-cta-note">
+        {live
+          ? 'Checkout is Stripe. Your card details are entered on Stripe\u2019s own page and never reach this app. A membership starts when Stripe confirms the payment, not when you tap.'
+          : account
+            ? 'Card payments are not connected yet, so nothing can be charged and no membership can start. Choosing a tier records it and the operator will be in touch.'
+            : 'Sign up free first. Every term above is shown again, and confirmed, before any money moves.'}
+      </p>
+    </div>
   )
 }
 
@@ -171,6 +193,8 @@ function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
   const { account, setAccount } = useGate()
   const [busy, setBusy] = useState(false)
   const [note, setNote] = useState<string | null>(null)
+  /* Set only when window.open was refused, so the link can be offered. */
+  const [link, setLink] = useState<string | null>(null)
 
   if (!account) {
     return <p className="members-signedout">Sign up free first, then choose a membership.</p>
@@ -178,6 +202,8 @@ function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
 
   const mine = account.tier === id
   const pending = mine && account.tierStatus === 'pending'
+  const active = mine && account.tierStatus === 'active'
+  const lapsed = mine && account.tierStatus === 'lapsed'
 
   async function choose() {
     if (busy) return
@@ -190,10 +216,22 @@ function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
     }
     setAccount(r.account)
     if (r.paymentLink) {
-      // Their own tab: leaving the app entirely would lose the session they
-      // just used, and Stripe sends them back when they are done.
-      window.open(r.paymentLink, '_blank', 'noopener')
-      setNote(null)
+      /*
+        Their own tab, and the app keeps the session they just proved.
+
+        `noopener` because the opened page must not get a handle on this one.
+        The window may also be blocked — a popup blocker, or a browser that
+        refuses window.open outside a direct gesture — and a blocked checkout
+        used to be silent, indistinguishable from one that worked. So the
+        return value is checked and the link is offered instead.
+      */
+      const w = window.open(r.paymentLink, '_blank', 'noopener')
+      setLink(w ? null : r.paymentLink)
+      setNote(
+        w
+          ? 'Checkout is open in another tab. Come back here when Stripe is done and this page will catch up on its own.'
+          : null,
+      )
       return
     }
     setNote(
@@ -202,17 +240,56 @@ function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
     )
   }
 
+  const label = active
+    ? `${name} active`
+    : lapsed
+      ? `Restart ${name}`
+      : mine
+        ? `${name} chosen`
+        : `Choose ${name}`
+
   return (
     <>
-      <button className="btn-primary members-choose" onClick={choose} disabled={busy}>
-        {busy ? 'One moment…' : mine ? `${name} chosen` : `Choose ${name}`}
+      <button
+        className="btn-primary members-choose"
+        onClick={choose}
+        disabled={busy || active}
+        aria-live="polite"
+      >
+        {busy ? 'One moment…' : label}
       </button>
+      {/*
+        Each state says a different true thing. Before, every one of them read
+        "chosen, not yet paid" — including a membership Stripe had confirmed,
+        which told a paying member their payment had not landed.
+      */}
+      {active && !note && (
+        <p className="members-pending is-active">Paid and active. Thank you.</p>
+      )}
+      {lapsed && !note && (
+        <p className="members-pending">
+          This lapsed — Stripe reported the subscription ended. Restarting opens checkout again.
+        </p>
+      )}
       {pending && !note && (
         <p className="members-pending">
-          Chosen, not yet paid. Nothing has been charged.
+          {account.paymentsConfigured
+            ? 'Chosen, not yet paid. Nothing has been charged until you finish checkout.'
+            : 'Chosen, not yet paid. Nothing has been charged.'}
         </p>
       )}
       {note && <p className="members-pending">{note}</p>}
+      {/* The fallback when the tab was blocked. A real link, because that is
+          the one thing a popup blocker cannot stop. */}
+      {link && (
+        <p className="members-pending">
+          Your browser blocked the checkout tab.{' '}
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            Open checkout
+          </a>
+          .
+        </p>
+      )}
     </>
   )
 }

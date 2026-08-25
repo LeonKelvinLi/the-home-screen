@@ -1480,6 +1480,45 @@ function syncRaffleTickets(memberId: string): void {
 }
 
 /** Everything the client needs about the signed-in member, in one shape. */
+/**
+ * The Payment Link for a tier, with the member stitched into it.
+ *
+ * `client_reference_id` is the entire join between a payment and a row here —
+ * without it a completed checkout is an anonymous amount of money and
+ * tier_status could never leave 'pending'.
+ *
+ * `prefilled_email` is not decoration. The member has already proved this
+ * address with a code; making them retype it at Stripe is both a step to drop
+ * out at and a chance to pay under a DIFFERENT address, which is how a receipt
+ * ends up somewhere the account cannot be matched to.
+ *
+ * Built with URL rather than string concatenation because a Payment Link may
+ * already carry a query string, and `?a=b?c=d` silently loses the second one.
+ */
+function paymentLinkFor(tierId: string, member: { id: string; email: string }): string | null {
+  const base =
+    tierId === 'pass'
+      ? process.env.STRIPE_PAYMENT_LINK_PASS
+      : tierId === 'diamond'
+        ? process.env.STRIPE_PAYMENT_LINK_DIAMOND
+        : undefined
+  if (!base) return null
+  try {
+    const u = new URL(base)
+    u.searchParams.set('client_reference_id', member.id)
+    u.searchParams.set('prefilled_email', member.email)
+    return u.toString()
+  } catch {
+    /* A malformed link in the environment must not take the endpoint down with
+       it. Treated as unconfigured, which is the state the UI already handles. */
+    return null
+  }
+}
+
+/** Whether a checkout can be opened at all. Both tiers need their own link. */
+const paymentsLive = () =>
+  !!process.env.STRIPE_PAYMENT_LINK_PASS || !!process.env.STRIPE_PAYMENT_LINK_DIAMOND
+
 function memberPayload(m: MemberRow) {
   syncRaffleTickets(m.id)
   const { referrals } = db
@@ -1499,6 +1538,13 @@ function memberPayload(m: MemberRow) {
     name: m.name,
     email: m.email,
     instagram: m.instagram,
+    /*
+      Carried on EVERY member response, not just the one that hands out a link.
+      The membership screen has to say whether it can take a payment before
+      anybody taps — it used to learn that only from the reply to a tap, so it
+      rendered "not connected yet" even when both links were live.
+    */
+    paymentsConfigured: paymentsLive(),
     referralCode: m.referral_code,
     tier: m.tier,
     tierStatus: m.tier_status,
@@ -1764,21 +1810,10 @@ app.post('/api/members/tier', rateLimiter(12, 6), (req, res) => {
     m.id,
   )
 
-  const link =
-    tier.id === 'pass'
-      ? process.env.STRIPE_PAYMENT_LINK_PASS
-      : process.env.STRIPE_PAYMENT_LINK_DIAMOND
-
   const row = db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
   res.json({
     ...memberPayload(row),
-    /*
-      client_reference_id is how a Stripe Payment Link tells us WHO paid when
-      the webhook lands. Without it a payment cannot be matched to a member and
-      tier_status could never leave 'pending'.
-    */
-    paymentLink: link ? `${link}?client_reference_id=${encodeURIComponent(m.id)}` : null,
-    paymentsConfigured: !!link,
+    paymentLink: paymentLinkFor(tier.id, { id: m.id, email: row.email }),
   })
 })
 

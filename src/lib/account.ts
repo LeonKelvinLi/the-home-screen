@@ -35,6 +35,8 @@ export interface Account {
   referrals: number
   raffleTickets: { total: number; unused: number }
   rewards: Rewards
+  /** Whether the server has a Payment Link to send anybody to. */
+  paymentsConfigured: boolean
 }
 
 export interface SignUp {

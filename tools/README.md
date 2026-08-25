@@ -19,6 +19,7 @@ exist because the fault they look for has shipped from this repo at least once.
     node   tools/audit-otp.mjs                                 # login codes: private, single-use, no oracle
     node   tools/audit-payments.mjs                            # pending -> active -> lapsed, forgeries refused
     node   tools/audit-about.mjs                               # About: chapters closed until tapped, picture loads
+    node   tools/audit-login.mjs                               # sign-in: reissue a code, no env names on screen
 
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app
 themselves, so run `npm run build` first if you have just changed source.

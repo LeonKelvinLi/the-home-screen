@@ -55,6 +55,30 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
     void refresh()
   }, [refresh])
 
+  /*
+    RE-ASK WHEN THE TAB COMES BACK, which is what makes checkout finish.
+
+    Paying happens in Stripe's tab, and the thing that marks a member active is
+    a webhook the browser never sees. So the member paid, came back, and the
+    screen still read "chosen, not yet paid" until they reloaded by hand —
+    which looks exactly like a payment that failed, on the screen where that is
+    the most expensive thing it could look like.
+
+    Only when the account is already loaded and only on becoming visible, so
+    this is not a poll: a signed-out visitor switching tabs asks nothing.
+  */
+  useEffect(() => {
+    const onVisible = () => {
+      if (document.visibilityState === 'visible' && state !== 'offline' && state) void refresh()
+    }
+    document.addEventListener('visibilitychange', onVisible)
+    window.addEventListener('focus', onVisible)
+    return () => {
+      document.removeEventListener('visibilitychange', onVisible)
+      window.removeEventListener('focus', onVisible)
+    }
+  }, [refresh, state])
+
   const gate = useCallback(
     (key: GateKey, go: () => void) => {
       /*

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { startSignUp, verifyCode, pendingReferral, type Account } from '../lib/account'
 import { useGate } from '../lib/gate'
@@ -42,14 +42,43 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   const [step, setStep] = useState<'details' | 'code'>('details')
   const [code, setCode] = useState('')
   const [undelivered, setUndelivered] = useState(false)
+  /*
+    A code that never arrives used to be a dead end.
+
+    The only way to get another was Back, then retype four fields, because
+    nothing on the code step could ask for one. Mail is late, it lands in spam,
+    an address gets a typo — and every one of those ended the sign-up. So the
+    code step can send another, on a cooldown so it cannot be leant on.
+  */
+  const [cooldown, setCooldown] = useState(0)
+  const [resent, setResent] = useState(false)
+  /* Counts down the 10 minutes the server gives the code, so "it expired" is
+     something the screen says before the server has to. */
+  const [expiresIn, setExpiresIn] = useState(0)
+  const timer = useRef<number | null>(null)
   const ref = pendingReferral()
+
+  /* One interval drives both counters. Cleared on unmount, so leaving the
+     screen mid-countdown does not leave it running. */
+  useEffect(() => {
+    if (step !== 'code') return
+    timer.current = window.setInterval(() => {
+      setCooldown((c) => (c > 0 ? c - 1 : 0))
+      setExpiresIn((t) => (t > 0 ? t - 1 : 0))
+    }, 1000)
+    return () => {
+      if (timer.current) window.clearInterval(timer.current)
+      timer.current = null
+    }
+  }, [step])
+
+  const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 
   const ready = name.trim().length >= 2 && /^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(email.trim())
 
-  async function askForCode(e: React.FormEvent) {
-    e.preventDefault()
-    if (!ready || busy) return
-    setBusy(true)
+  /* The one send, called by the details form and by Resend. Both need the same
+     handling of a failure, and two copies of it drift. */
+  async function send(): Promise<boolean> {
     setError(null)
     const r = await startSignUp({
       name: name.trim(),
@@ -57,13 +86,35 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
       instagram: instagram.trim() || undefined,
       phone: phone.trim() || undefined,
     })
-    setBusy(false)
     if (!r.ok) {
       setError(r.error)
-      return
+      return false
     }
     setUndelivered(!r.delivered)
-    setStep('code')
+    setCooldown(30)
+    setExpiresIn(600)
+    return true
+  }
+
+  async function askForCode(e: React.FormEvent) {
+    e.preventDefault()
+    if (!ready || busy) return
+    setBusy(true)
+    const ok = await send()
+    setBusy(false)
+    if (ok) setStep('code')
+  }
+
+  async function resend() {
+    if (busy || cooldown > 0) return
+    setBusy(true)
+    setResent(false)
+    const ok = await send()
+    setBusy(false)
+    if (ok) {
+      setResent(true)
+      setCode('')
+    }
   }
 
   async function submitCode(e: React.FormEvent) {
@@ -82,8 +133,10 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     api.closeApp()
   }
 
+  /* Titled for both. This screen is sign-up and sign-in and the server decides
+     which; a title that named one would be wrong half the time. */
   return (
-    <AppChrome title="Sign up" onBack={api.closeApp} tint="#141416">
+    <AppChrome title="Sign in or join" onBack={api.closeApp} tint="#141416">
       {step === 'details' ? (
         <form className="join" onSubmit={askForCode}>
           <p className="join-lead">
@@ -166,8 +219,22 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
       ) : (
         <form className="join" onSubmit={submitCode}>
           <p className="join-lead">
-            We sent a six-digit code to <strong>{email.trim()}</strong>. It is good for 10 minutes.
+            We sent a six-digit code to <strong>{email.trim()}</strong>.{' '}
+            {expiresIn > 0 ? (
+              <>
+                It expires in <strong>{mmss(expiresIn)}</strong>.
+              </>
+            ) : (
+              'That code has expired — send another below.'
+            )}
           </p>
+
+          {/* Said once, then it stops nagging. */}
+          {resent && !error && (
+            <p className="join-ref" role="status">
+              A new code is on its way. The older one no longer works.
+            </p>
+          )}
 
           {/*
             SAID OUT LOUD WHEN NOTHING WAS SENT. The server has no email
@@ -177,8 +244,20 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
           */}
           {undelivered && (
             <p className="join-error" role="alert">
-              Email is not connected on the server yet, so the code could not be delivered. The
-              operator needs to set RESEND_API_KEY and OTP_FROM_EMAIL.
+              We could not send it — email is not connected on this site yet, so nothing has
+              arrived and nothing is wrong with your address.
+              {/*
+                THE ENV VAR NAMES ARE FOR THE OPERATOR AND ONLY IN DEV.
+
+                This paragraph used to name RESEND_API_KEY and OTP_FROM_EMAIL to
+                whoever was signing up. A customer cannot act on a server
+                variable, and printing internal configuration at somebody trying
+                to make an account is both useless to them and a detail about
+                the deployment they have no reason to be handed.
+              */}
+              {import.meta.env.DEV && (
+                <em className="join-dev"> Set RESEND_API_KEY and OTP_FROM_EMAIL.</em>
+              )}
             </p>
           )}
 
@@ -211,6 +290,21 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             {busy ? 'Checking…' : 'Confirm'}
           </button>
 
+          {/*
+            The way out of a code that never came, and the reason this screen
+            is not a dead end any more. Disabled on a cooldown rather than
+            hidden — a button that vanishes reads as a bug, and one that says
+            how long is a button somebody waits for.
+          */}
+          <button
+            className="gate-later"
+            type="button"
+            onClick={resend}
+            disabled={busy || cooldown > 0}
+          >
+            {cooldown > 0 ? `Send another code in ${cooldown}s` : 'Send another code'}
+          </button>
+
           <button
             className="gate-later"
             type="button"
@@ -218,6 +312,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               setStep('details')
               setError(null)
               setCode('')
+              setResent(false)
             }}
           >
             Use a different email

@@ -15,6 +15,7 @@ out in two different currencies.
 | Email codes (OTP) | **working** — needs a provider key to deliver |
 | Sign-in on a second device | **working** |
 | Taking $39 or $59 | **wired** — needs Stripe keys, see below |
+| Reissuing a login code | **working** — the code step can send another, on a 30s cooldown |
 
 `tier_status` never leaves `pending` on its own. Nothing in this codebase may
 mark a member paid; only a payment provider may, and none is wired.
@@ -26,9 +27,22 @@ Two Stripe Payment Links, one per tier, then two environment variables:
     STRIPE_PAYMENT_LINK_PASS=https://buy.stripe.com/xxxxxxxx
     STRIPE_PAYMENT_LINK_DIAMOND=https://buy.stripe.com/yyyyyyyy
 
-The server appends `?client_reference_id=<member id>` to whichever link it hands
-back. **That parameter is the whole join** — without it a completed payment
-cannot be matched to a member and `tier_status` could never move off `pending`.
+The server adds two parameters to whichever link it hands back:
+
+| Parameter | Why |
+|---|---|
+| `client_reference_id` | The member id. **This is the whole join** — without it a completed payment cannot be matched to a member and `tier_status` could never move off `pending`. |
+| `prefilled_email` | The address the member already proved with a code. Saves a step, and stops a receipt landing under a different address that cannot be matched back. |
+
+They are added with `URL`, not string concatenation, so a Payment Link that
+already carries a query string — Stripe's dashboard hands those out — keeps it.
+Appending `?…` to a link that already had one produces a single unreadable
+value and a payment that can never be matched.
+
+`paymentsConfigured` rides on **every** member response, not just the one that
+hands out a link, because the membership screen has to know whether it can take
+a payment before anybody taps. It used to learn that only from the reply to a
+tap, so it rendered "not connected yet" underneath two working buttons.
 
 ### The webhook
 

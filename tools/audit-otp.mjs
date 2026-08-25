@@ -80,6 +80,24 @@ for(let i=0;i<5;i++) await post('/api/members/verify',{email:'bo@example.com',co
 const afterLock=await post('/api/members/verify',{email:'bo@example.com',code:boReal})
 check(afterLock.status===400,'THE REAL CODE STILL WORKED AFTER FIVE WRONG GUESSES')
 
+/*
+  7. RESENDING, which the code screen now offers and which has to actually
+  replace the code rather than issue a second working one.
+
+  A screen with a Resend button that leaves the old code valid quietly doubles
+  every guess an attacker gets, and one that issues nothing leaves the member
+  exactly as stuck as before the button existed.
+*/
+await post('/api/members/start',{name:'Ada Vance',email:'vance-resend@example.com'})
+const first=codeFor('vance-resend@example.com')
+await post('/api/members/start',{name:'Ada Vance',email:'vance-resend@example.com'})
+const second=codeFor('vance-resend@example.com')
+check(!!second && second!==first,'resending did not issue a new code')
+const oldOne=await post('/api/members/verify',{email:'vance-resend@example.com',code:first})
+check(oldOne.status===400,'THE PREVIOUS CODE STILL WORKED AFTER A RESEND')
+const newOne=await post('/api/members/verify',{email:'vance-resend@example.com',code:second})
+check(newOne.status===201,'the resent code did not work')
+
 srv.kill()
 if(fails.length){ console.log('FAIL:\n  - '+fails.join('\n  - ')); process.exit(1) }
-console.log('PASS: codes are private, single-use, non-revealing and rate-limited.')
+console.log('PASS: codes are private, single-use, non-revealing, rate-limited, and a resend replaces the last one.')
