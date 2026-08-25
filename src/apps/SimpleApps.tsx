@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { InstallGuide } from '../ios/InstallGuide'
 import { canInstall } from '../lib/install'
+import { useGate } from '../lib/gate'
+import { signOut as apiSignOut } from '../lib/account'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -119,7 +121,70 @@ export function HelpApp({ api }: { api: ShellApi }) {
   )
 }
 
+/** Shown signed in or out — the instructions do not depend on who they are. */
+function AddToHomeScreen() {
+  return (
+    <>
+      <h3>Add to Home Screen</h3>
+      <ul className="plain-list">
+        <li>
+          <strong>iPhone</strong>
+          Share, then “Add to Home Screen”. It then opens without a browser bar.
+        </li>
+        <li>
+          <strong>Android</strong>
+          Menu, then “Install app”.
+        </li>
+      </ul>
+    </>
+  )
+}
+
+function useAccountActions() {
+  const { account, setAccount } = useGate()
+  return {
+    account,
+    signOut: async () => {
+      await apiSignOut()
+      setAccount(null)
+    },
+  }
+}
+
+/**
+ * The account screen — and the one place somebody looks when they want to sign
+ * in, which is why the dead button that used to live here mattered.
+ *
+ * It said "sign in with phone — not connected yet" and was disabled, which was
+ * honest right up until sign-in existed. Then it became the app telling a
+ * member there is no way in, on the very screen built to let them in. A code
+ * emailed to their address is now the way, and it works on a phone they have
+ * never opened this on.
+ */
 export function AccountApp({ api }: { api: ShellApi }) {
+  const { account, signOut } = useAccountActions()
+
+  if (account) {
+    return (
+      <AppChrome title="Account" onBack={api.closeApp} tint="#3F4A5A">
+        <div className="plain">
+          <h3>Signed in</h3>
+          <p>
+            {account.name} — {account.email}
+          </p>
+          <p>
+            Your referral code is <strong>{account.referralCode}</strong>. Your profile has the QR
+            and what it has earned.
+          </p>
+          <button className="btn-secondary" onClick={signOut}>
+            Sign out on this device
+          </button>
+          <AddToHomeScreen />
+        </div>
+      </AppChrome>
+    )
+  }
+
   return (
     <AppChrome title="Account" onBack={api.closeApp} tint="#3F4A5A">
       <div className="plain">
@@ -128,23 +193,15 @@ export function AccountApp({ api }: { api: ShellApi }) {
           Orders placed on this device are saved here. Sign in to keep them across phones and to
           start earning rewards.
         </p>
-        {/* Disabled, not silent. It had no handler at all, so Settings' first
-            row led to a button that did nothing when pressed. */}
-        <button className="btn-secondary" disabled>
-          Sign in with phone — not connected yet
+        <button className="btn-primary" onClick={() => api.openApp('sys.join')}>
+          Sign in or sign up
         </button>
+        <p className="plain-fine">
+          We email you a six-digit code. No password, and it works on a phone you have never
+          opened this on.
+        </p>
 
-        <h3>Add to Home Screen</h3>
-        <ul className="plain-list">
-          <li>
-            <strong>iPhone</strong>
-            Share, then “Add to Home Screen”. It then opens without a browser bar.
-          </li>
-          <li>
-            <strong>Android</strong>
-            Menu, then “Install app”.
-          </li>
-        </ul>
+        <AddToHomeScreen />
       </div>
     </AppChrome>
   )
