@@ -24,6 +24,16 @@ exist because the fault they look for has shipped from this repo at least once.
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app
 themselves, so run `npm run build` first if you have just changed source.
 
+## Checking what is actually live
+
+    node tools/live-check.mjs "Send another code" "Sign in or join"
+
+Follows the entry bundle to every chunk it imports and greps all of them, then
+exits non-zero if any string is absent. Use it instead of grepping
+`assets/index-*.js` by hand: the app is code-split, so the landing screen is in
+the entry and everything behind the home screen — sign-in, Account, membership —
+is in `Shell-*.js`. Grepping only the entry reports a landed deploy as missing.
+
 ## Rebuilding the landing photographs
 
     /opt/homebrew/bin/python3 tools/make-landing-photo.py --all
