@@ -20,9 +20,25 @@ exist because the fault they look for has shipped from this repo at least once.
     node   tools/audit-payments.mjs                            # pending -> active -> lapsed, forgeries refused
     node   tools/audit-about.mjs                               # About: chapters closed until tapped, picture loads
     node   tools/audit-login.mjs                               # sign-in: reissue a code, no env names on screen
+    node   tools/audit-journey.mjs                             # the whole journey in one session, 22 steps
+    node   tools/live-smoke.mjs                                # production, read-only, creates nothing
 
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app
 themselves, so run `npm run build` first if you have just changed source.
+
+## Everything, in one run
+
+    bash tools/audit-all.sh          # all seventeen
+    bash tools/audit-all.sh fast     # skip the slow page walks
+
+Builds first (three audits serve `dist/` and would otherwise test the previous
+build), rebuilds the data-audit bundle, records each audit's own exit code
+rather than a pipeline's, and prints the tail of anything that failed. It also
+reaps the `tsx` servers each audit leaves behind — left to pile up they starve
+later runs and page loads start timing out.
+
+`tools/audit-journey.mjs` is the one that tests the joins rather than a seam:
+one browser session, stranger to lapsed member, 22 steps in order.
 
 ## Checking what is actually live
 
