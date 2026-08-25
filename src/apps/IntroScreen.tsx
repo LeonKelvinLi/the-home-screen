@@ -1119,6 +1119,9 @@ function PanelSections({ sections }: { sections?: AboutSection[] }) {
                 {sec.body.map((t) => (
                   <p key={t}>{t}</p>
                 ))}
+                {/* A chapter he has not written yet says so, rather than
+                    opening onto nothing or onto something written for him. */}
+                {sec.pending && <p className="panel-chapter-pending">{sec.pending}</p>}
                 {sec.figure && (
                   <figure className="panel-figure">
                     <img src={sec.figure.src} alt={sec.figure.alt} loading="lazy" />

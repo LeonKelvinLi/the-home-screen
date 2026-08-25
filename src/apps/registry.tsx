@@ -683,7 +683,20 @@ const byId = (id: string): AppDef => {
  * to be the one constant on the page.
  */
 export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
-  { key: 'you', name: 'Your stuff', apps: [PROFILE_APP, DESIGNS_APP, CALENDAR_APP, SHARE_APP] },
+  /*
+    HIS ORDER, 2026-08-25: "move the BEASTY designs to 2. Contact to 1."
+
+    Contact takes the first slot and Designs keeps the second. Profile and
+    Calendar shift right behind them; Share & Scan comes off, because the dock
+    holds four and this is the set he looks at most. Sharing is still on the
+    keypad's # key and on every business page's own Share button, so nothing
+    became unreachable — it stopped being one of the four he sells from.
+
+    Contact first is also the change that matters now that it works: until
+    today it read "Not connected yet" on both rows, and a first slot pointing
+    at a dead line is worse than not having it there.
+  */
+  { key: 'you', name: 'Your stuff', apps: [PHONE_APP, DESIGNS_APP, PROFILE_APP, CALENDAR_APP] },
   {
     key: 'beasty',
     name: 'BEASTY',

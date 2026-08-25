@@ -60,6 +60,14 @@ export interface AboutSection {
   body: string[]
   /** A block of short lines rather than prose — Biggie's pedigree. */
   facts?: string[]
+  /**
+   * Said in place of a body he has not written yet.
+   *
+   * A chapter with an empty body and no explanation renders as a heading that
+   * opens onto nothing, which reads as broken. This says whose it is and that
+   * it is coming.
+   */
+  pending?: string
   /** One line after the facts, standing alone. */
   after?: string
   /** A picture inside the chapter, with whose it is and what it shows. */
@@ -160,9 +168,20 @@ export const PAGES: Record<PageKey, Page> = {
       {
         head: 'The Story',
         sub: '(It began with Luna\u2026.)',
-        body: [
-          'Luna is where it starts. What follows is the litter she carried, and the one puppy out of twelve that the whole of BEASTY is named for.',
-        ],
+        /*
+          HIS TO WRITE, AND NOT WRITTEN YET.
+
+          His email gave this chapter a heading and a parenthetical and no
+          body, and on 2026-08-25 he said so: "I have to write this one out
+          another time and we can fill it in when it's done."
+
+          The sentence that was here was MINE — a plausible bridge about Luna
+          and the litter, in his voice, on his own life. That is the one thing
+          this file must not contain. It is gone, and the chapter says it is
+          coming rather than pretending to be finished.
+        */
+        body: [],
+        pending: 'Glenn is writing this chapter. It goes in as soon as he sends it.',
       },
       {
         head: 'The Blessing',
@@ -178,8 +197,10 @@ export const PAGES: Record<PageKey, Page> = {
       },
       {
         head: 'The Mission',
+        /* His revision, 2026-08-25: "miracle" not "blessing", "his legend"
+           not "his presence", and "others & animals" not "other animals". */
         body: [
-          'The Mission was now set into play. How does one thank God and the universe for such a blessing? It was quite simple, share him to the world and use his presence to give back to other animals in need.',
+          'The Mission was now set into play. How does one thank God and the universe for such a miracle? It was quite simple, share him to the world and use his legend to give back to others & animals in need.',
         ],
       },
       {
@@ -295,15 +316,64 @@ export const PAGES: Record<PageKey, Page> = {
     NO FEE, NO COMMISSION, NO REWARD. He has floated the idea. Nothing is agreed,
     and a promise made on this page would be his to honor.
   */
+  /*
+    CAREERS, revamped on his instruction 2026-08-25.
+
+    His words: "Can you just put looking for affiliates for Website referrals
+    like you told me. Keep it simple to the point and put your contact." Then:
+    "what you wrote there right now just have it drop down. And then create
+    another drop down for make some money now." And: "Maybe you can put they
+    get a bonus of some kind if they refer 3 referrals within the same month
+    or something. It's to your discretion."
+
+    SO THE PAGE LEADS WITH THE PAID OFFER and the old text — bringing a
+    business onto the app, which is a different ask and pays nothing — is now
+    a chapter under it rather than the whole page.
+
+    THE MONEY HERE IS LEON'S, NOT BEASTY'S, and the page says so in the first
+    line of the chapter. A commission paid by the person building the site is
+    not a BEASTY programme, and a reader who assumes it is would be owed it by
+    the wrong person.
+
+    The numbers are his to honour and mine to state exactly: 15% of $349 is
+    $52.35, and it is written as $52 because that is the figure quoted. The
+    three-in-a-month bonus was left to my discretion and is set at $100, which
+    is a round number on top of $157 in commission rather than a share of
+    anything that needs its own arithmetic.
+  */
   careers: {
-    title: 'Bring a business onto the app',
+    title: 'Make some money with BEASTY',
     body: [
-      'This page is for a customer who knows a business that belongs on the home screen. The ones that fit are small and run by the people who own them, in one of the cities with a page waiting — Oakland, Richmond, Berkeley, the rest of the Bay Area list, and Las Vegas. Food is most of it: kitchens, food trucks, small counters. It is not only food. There is an apparel label and a drinkware maker on there already.',
-      'Three things make an icon possible. Their own menu or product list with their own prices, which they set and nobody else edits. A logo, or any clean image of their mark. And one person who answers a phone or an email.',
-      'To send one, open Reserve a Spot and fill it in: the business name, what they make, a phone or email, their city, and an Instagram handle if they have one. A name and a way to reach them is enough to start. There is no queue and no cap, so a good business is not competing with anyone else for a place.',
-      'After that it goes to Glenn and he contacts them himself. Nothing is committed until he has — a spot is real only once he has spoken to the owner. Worth telling them a referral is on the way, so the call is not a cold one.',
+      'Two ways, and they are different jobs. One pays a commission for every website you bring in. The other puts a business you rate onto the home screen, and pays nothing — it is for somebody who wants their neighbourhood on here.',
     ],
-    needsGlenn:
-      'Whether the person sending a referral gets anything for it — he has floated the idea and nothing is agreed — and where referrals should go if the Reserve a Spot form is not the right inbox.',
+    sections: [
+      {
+        head: 'Make some money now',
+        sub: '(website referrals)',
+        body: [
+          'Leon builds the websites behind BEASTY PAGES and is looking for people to bring him work. This is his offer and his money, not a BEASTY programme — he pays it, and he is who you deal with.',
+          'A website is $349. You get 15% of every one that sells, which is about $52 a referral, paid on the sale rather than on the introduction.',
+          'Refer three in the same calendar month and there is a $100 bonus on top — so three is $157 in commission plus $100, not $157.',
+          'Who to look for: any business with no website, or one that has not been touched in years. Most of the red-outlined businesses on the city pages are exactly that, and they are already a list.',
+        ],
+        facts: [
+          'Website: $349',
+          'Your commission: 15%, about $52 a sale',
+          'Three in one month: $100 bonus',
+          'Paid by Leon, on the sale',
+        ],
+        after: 'Leon Kelvin Li — splk3798@gmail.com',
+      },
+      {
+        head: 'Bring a business onto the app',
+        sub: '(no commission)',
+        body: [
+          'This one is for a customer who knows a business that belongs on the home screen. The ones that fit are small and run by the people who own them, in one of the cities with a page waiting — Oakland, Richmond, Berkeley, the rest of the Bay Area list, and Las Vegas. Food is most of it: kitchens, food trucks, small counters. It is not only food. There is an apparel label and a drinkware maker on there already.',
+          'Three things make an icon possible. Their own menu or product list with their own prices, which they set and nobody else edits. A logo, or any clean image of their mark. And one person who answers a phone or an email.',
+          'To send one, open Reserve a Spot and fill it in: the business name, what they make, a phone or email, their city, and an Instagram handle if they have one. A name and a way to reach them is enough to start. There is no queue and no cap, so a good business is not competing with anyone else for a place.',
+          'After that it goes to Glenn and he contacts them himself. Nothing is committed until he has — a spot is real only once he has spoken to the owner. Worth telling them a referral is on the way, so the call is not a cold one.',
+        ],
+      },
+    ],
   },
 }

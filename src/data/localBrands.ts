@@ -1462,4 +1462,67 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Custom decor, catering, and event styling and coordination in San Francisco, in her own words. She has no website yet and takes enquiries through Instagram, so nothing is priced here.',
     items: [],
   },
+  {
+    /*
+      STAN'S DONUT SHOP — "Santa Clara \u2022 Goods", 2026-08-25.
+
+      Their site publishes the address, the number and a line about stepping
+      back in time, and no prices anywhere \u2014 so nothing is priced here. The
+      copyright on it reads 2019, which is worth knowing before anybody is told
+      the hours are current; the address and number are what the Directions and
+      Call buttons use and both are first-party.
+    */
+    slug: 'stans-donut-shop',
+    logoTemplate: 'wordmark',
+    logoLines: ['Stan\u2019s', 'DONUT SHOP'],
+    logoFace: 'script',
+    name: 'Stan\u2019s Donut Shop',
+    label: 'Stan\u2019s',
+    cuisine: 'Donuts',
+    tagline: 'Take a step back in time.',
+    color: '#141013|#B4477A',
+    prep: 0,
+    category: 'Donuts',
+    site: 'https://www.stansdonutshop.com/',
+    phone: '408.296.5982',
+    address: '2628 Homestead Rd, Santa Clara, CA 95051',
+    contactOnly:
+      'A Santa Clara donut shop, in their own words: take a step back in time. They publish no prices, so nothing is priced here \u2014 their site is where to order until they do.',
+    items: [],
+  },
+  {
+    /*
+      PJ'S JUNK REMOVAL \u2014 Fairfield, sent 2026-08-25 with "this family needs
+      a proper website".
+
+      NO SITE, ON PURPOSE. They have a Facebook page and an Instagram and no
+      website of their own, which is the whole reason he sent them. The red
+      outline is derived from the absence of `site`, so there is nothing here
+      to override.
+
+      THE AWARD IS NOT PRINTED. Their bio says "Voted 7X Solano's BEST Hauler
+      from 2018 - 2025", which is a claim about a poll nobody here has seen \u2014
+      the same rule Bloom Balloon's "5 stars on Yelp and Google" fell under.
+      What is on the page is what they do and who they are.
+
+      SEATED ON THE YELLOW OVERFLOW PAGE. Junk removal is not "House cleaning"
+      and it is not "Handyman"; the services list has no waste category, and
+      Pet Butler set the precedent for exactly this.
+    */
+    slug: 'pjs-junk-removal',
+    name: 'PJ\u2019s Junk Removal',
+    label: 'PJ\u2019s',
+    cuisine: 'Junk removal and hauling',
+    tagline: 'Licensed and insured, small family owned and operated.',
+    color: '#0A0A0B|#3A3A3E',
+    icon: 'pjs-junk-removal',
+    prep: 0,
+    category: 'Junk removal',
+    phone: '707-656-9208',
+    address: 'Fairfield, Solano County',
+    contactOnly:
+      'Junk removal and hauling across Solano County, run by Phillip Samano and his family \u2014 licensed and insured, in their own words. Every job is quoted on what there is to take, so nothing is priced here. Call them.',
+    siteCta: 'Call PJ\u2019s',
+    items: [],
+  },
 ]

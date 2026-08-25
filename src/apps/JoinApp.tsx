@@ -22,6 +22,32 @@ import type { ShellApi } from '../ios/Device'
  * knows; the form does not, because a screen that said "welcome back" would be
  * a membership oracle for anybody typing addresses into it.
  */
+/**
+ * The top of the sign-in screen.
+ *
+ * It was a bare form on a grey field. This is the door to the whole thing —
+ * the gate sends people here from six places — so it now looks like BEASTY's
+ * door and says which of the two steps you are on. Two steps with no marker
+ * is the version where somebody types a code and wonders what else is coming.
+ */
+function JoinHead({ step }: { step: 'details' | 'code' }) {
+  return (
+    <div className="join-head">
+      <span className="join-mark" aria-hidden="true">
+        <img src="/biggie.webp" alt="" />
+      </span>
+      <ol className="join-steps" aria-label={`Step ${step === 'details' ? 1 : 2} of 2`}>
+        <li className={step === 'details' ? 'is-on' : 'is-done'}>
+          <b>1</b> Your details
+        </li>
+        <li className={step === 'code' ? 'is-on' : ''}>
+          <b>2</b> Your code
+        </li>
+      </ol>
+    </div>
+  )
+}
+
 export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) => void }) {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -133,10 +159,24 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     api.closeApp()
   }
 
-  /* Titled for both. This screen is sign-up and sign-in and the server decides
-     which; a title that named one would be wrong half the time. */
+  /*
+    THE TITLE IS THE PAGE HEADING, not a nav label — AppChrome renders it as
+    iOS's 34pt large title that collapses on scroll. So this screen had two
+    headlines stacked: its own and the chrome's. The chrome's carries the step
+    now, which is also what iOS does when a screen changes what it is for.
+
+    "Join BEASTY" rather than "Sign up": the screen is sign-up AND sign-in and
+    the server deliberately never tells it which, so a title naming one would
+    be wrong half the time. Joining covers both without leaking whether an
+    address is already a member.
+  */
   return (
-    <AppChrome title="Sign in or join" onBack={api.closeApp} tint="#141416">
+    <AppChrome
+      title={step === 'details' ? 'Join BEASTY' : 'Check your email'}
+      onBack={api.closeApp}
+      tint="#141416"
+    >
+      <JoinHead step={step} />
       {step === 'details' ? (
         <form className="join" onSubmit={askForCode}>
           <p className="join-lead">
@@ -261,20 +301,40 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             </p>
           )}
 
-          <label className="join-field">
-            <span>Your code</span>
+          {/*
+            SIX BOXES, ONE INPUT.
+
+            Six separate inputs is the usual way and it breaks the two things
+            that matter most on a phone: iOS autofill puts the whole code into
+            one field, and pasting a code from the mail app does the same. So
+            there is a single real input carrying autocomplete="one-time-code",
+            drawn transparent, and the boxes underneath render its value. The
+            keyboard, the autofill and the paste all land on the real field.
+          */}
+          <div className="join-otp" data-filled={code.length}>
             <input
               value={code}
               onChange={(e) => setCode(e.target.value.replace(/\D/g, '').slice(0, 6))}
               inputMode="numeric"
               autoComplete="one-time-code"
               enterKeyHint="done"
-              placeholder="000000"
               className="join-code"
+              aria-label="The six-digit code we emailed you"
+              maxLength={6}
               autoFocus
               required
             />
-          </label>
+            <div className="join-otp-boxes" aria-hidden="true">
+              {[0, 1, 2, 3, 4, 5].map((i) => (
+                <span
+                  key={i}
+                  className={`join-otp-box${i === code.length ? ' is-next' : ''}${code[i] ? ' is-set' : ''}`}
+                >
+                  {code[i] ?? ''}
+                </span>
+              ))}
+            </div>
+          </div>
 
           {error && (
             <p className="join-error" role="alert">

@@ -9359,11 +9359,21 @@ textarea {
   color: var(--tertiary);
 }
 
-/* "as optional" is his word for two of these, so it is on the label. */
+/* "as optional" is his word for two of these, so it is on the label \u2014 but as
+   a marker beside the field name, not as part of it. Set in the same weight
+   and colour it read as one phrase: "Instagram optional". */
 .join-field em {
   font-style: normal;
-  font-weight: 500;
-  color: var(--muted);
+  font-weight: 600;
+  font-size: 10.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tertiary);
+  background: var(--line);
+  border-radius: 5px;
+  padding: 2px 5px;
+  margin-left: 6px;
+  vertical-align: 1px;
 }
 
 .join-field input {
@@ -9650,4 +9660,133 @@ textarea {
   font-style: normal;
   font-weight: 600;
   opacity: 0.75;
+}
+
+/* A chapter whose body is still with the operator. Set apart so it does not
+   read as his writing — because it is not. */
+.panel-chapter-pending {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 214, 0, 0.22);
+  border: 1px solid rgba(160, 120, 0, 0.28);
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #4a3600;
+  font-weight: 600;
+}
+
+/* ---- Sign in: the front door ---------------------------------------------
+   The gate sends people here from six places, so this is the most-arrived-at
+   screen in the app after the home screen. It was a bare form on a grey field. */
+.join-head {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 18px 2px;
+  text-align: center;
+}
+.join-mark {
+  width: 66px;
+  height: 66px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: #F6D800;
+  box-shadow: 0 8px 22px rgba(160, 130, 0, 0.28);
+}
+.join-mark img {
+  width: 76%;
+  height: 76%;
+  object-fit: contain;
+}
+/* Two steps, said once. Without it somebody types a code and wonders what
+   else is coming. */
+.join-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 2px 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--tertiary);
+}
+.join-steps li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.join-steps li + li::before {
+  content: '';
+  width: 16px;
+  height: 1px;
+  background: var(--line);
+  margin-right: 2px;
+}
+.join-steps b {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 11.5px;
+  font-weight: 800;
+  background: var(--line);
+  color: var(--tertiary);
+}
+.join-steps .is-on { color: var(--ink); }
+.join-steps .is-on b { background: #F6D800; color: #141416; }
+.join-steps .is-done b { background: #141416; color: #F6D800; }
+
+/* Six boxes, one real input — see JoinApp. The input sits over the boxes,
+   invisible, so autofill and paste still land on a single field. */
+.join-otp {
+  position: relative;
+  height: 62px;
+}
+.join-otp .join-code {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /* Not opacity alone: a field with no size cannot be tapped, and this has to
+     be the tap target across all six boxes. */
+  border: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  cursor: pointer;
+}
+.join-otp-boxes {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 8px;
+}
+.join-otp-box {
+  display: grid;
+  place-items: center;
+  border: 1.5px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+  font-size: 24px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink);
+  transition: border-color 0.14s ease, background 0.14s ease;
+}
+.join-otp-box.is-set {
+  border-color: #141416;
+}
+/* Where the next digit lands. The only moving part on the screen. */
+.join-otp .join-code:focus-visible ~ .join-otp-boxes .join-otp-box.is-next {
+  border-color: #1B47D6;
+  box-shadow: 0 0 0 3px rgba(27, 71, 214, 0.16);
+}
+@media (prefers-reduced-motion: reduce) {
+  .join-otp-box { transition: none; }
 }

@@ -1,6 +1,11 @@
 /**
  * The operator's own contact details.
  *
+ * FILLED IN 2026-08-25, by him, in the thread: "510-789-3205 /
+ * Glennmalicdem78@gmail.com — can you put my information here?" Everything
+ * that reads this switched on at the same moment, which is what the note
+ * below promised.
+ *
  * ONE source. The Phone app's contact card and the intro screen's Phone panel
  * both read this, so there is exactly one place to fill in and no way for two
  * screens to show different numbers.
@@ -19,10 +24,8 @@ export const OPERATOR = {
   name: 'BEASTY',
   /** Richmond, California. The city is public; the street address is not. */
   city: 'Richmond, California',
-  /** e.g. '(510) 555-0134' */
-  phone: '',
-  /** e.g. 'hello@beastyeats.com' */
-  email: '',
+  phone: '510-789-3205',
+  email: 'Glennmalicdem78@gmail.com',
 } as const
 
 /** True once there is anything a customer could actually reach. */

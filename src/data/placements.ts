@@ -433,6 +433,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'santa-rosa-services-17': 'b_funcloudevents', //     DJ - see above
   'san-francisco-services-13': 'b_petalandpebbles', // Florist - see above
 
+  /* Stan's Donut Shop, "Santa Clara - Goods", 2026-08-25. Donuts was open in
+     Santa Clara, and so was the whole city — this is its first tile. */
+  'santa-clara-goods-16': 'b_stansdonutshop', //       Donut shop
+
   /*
     Businesses with no fitting category go on the yellow overflow page rather
     than being crammed under a wrong label: a waste-removal service is not
@@ -453,6 +457,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     nothing, and page one is where he sells from. All three moved.
   */
   'walnut-creek-services2-0': 'b_petbutlerwalnutcreek',
+  /* PJ's Junk Removal, Fairfield, 2026-08-25. Same argument as Pet Butler:
+     hauling is not cleaning and not handyman, and there is no waste category
+     to put it in. */
+  'fairfield-services2-0': 'b_pjsjunkremoval',
   'beasty-services2-0': 'b_happybaypaws',
   'pleasant-hill-goods2-0': 'b_thehangoutbreakfast',
   'walnut-creek-goods2-0': 'b_thehangoutbreakfast',
