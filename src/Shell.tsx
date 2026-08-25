@@ -15,6 +15,7 @@ import { PhoneApp } from './apps/PhoneApp'
 import { ReserveApp } from './apps/ReserveApp'
 import { DesignsApp } from './apps/DesignsApp'
 import { ShareApp } from './apps/ShareApp'
+import { JoinApp } from './apps/JoinApp'
 import { MembersApp } from './apps/MembersApp'
 import { CalendarApp } from './apps/CalendarApp'
 import { MemberCardApp } from './apps/MemberCardApp'
@@ -82,6 +83,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <DesignsApp api={api} />
     case 'share':
       return <ShareApp api={api} />
+    case 'join':
+      return <JoinApp api={api} />
     case 'members':
       return <MembersApp api={api} />
     case 'calendar':

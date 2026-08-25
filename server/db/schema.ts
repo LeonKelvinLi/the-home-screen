@@ -112,6 +112,76 @@ CREATE INDEX IF NOT EXISTS idx_applications_new ON applications(state, created_a
   business told him. When self-serve exists this is what distinguishes the two,
   and it matters: an event is a claim made in a business's name.
 */
+/**
+ * MEMBERS, and the three things that hang off a referral.
+ *
+ * "referral_code" is on the member row rather than a table of its own because
+ * it is one per member for life — it is printed into their QR and shared, so it
+ * must never be reissued.
+ *
+ * "referred_by" is the whole referral graph. Counting a member's referrals is
+ * one indexed COUNT against this column, which is why there is no separate
+ * referrals table to drift out of step with it.
+ *
+ * TIER IS NOT PROOF OF PAYMENT. It records which membership they chose; nothing
+ * here charges a card. "tier_status" stays 'pending' until a payment provider
+ * says otherwise, so the app can never show somebody a paid perk on the
+ * strength of them having clicked a button.
+ */
+CREATE TABLE IF NOT EXISTS members (
+  id            TEXT PRIMARY KEY,
+  name          TEXT NOT NULL,
+  email         TEXT NOT NULL UNIQUE,
+  instagram     TEXT,
+  phone         TEXT,
+  referral_code TEXT NOT NULL UNIQUE,
+  referred_by   TEXT REFERENCES members(id),
+  tier          TEXT NOT NULL DEFAULT 'free' CHECK (tier IN ('free','pass','diamond')),
+  tier_status   TEXT NOT NULL DEFAULT 'none' CHECK (tier_status IN ('none','pending','active','lapsed')),
+  tier_since    INTEGER,
+  created_at    INTEGER NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_members_referred_by ON members(referred_by);
+CREATE INDEX IF NOT EXISTS idx_members_code ON members(referral_code);
+
+/*
+  A session is a hashed token, never the token itself — the same treatment the
+  vendor api_token gets. A stolen database read must not hand somebody a working
+  login.
+*/
+CREATE TABLE IF NOT EXISTS member_sessions (
+  token_hash TEXT PRIMARY KEY,
+  member_id  TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  created_at INTEGER NOT NULL,
+  expires_at INTEGER NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_sessions_member ON member_sessions(member_id);
+
+/**
+ * Raffle tickets, one row each.
+ *
+ * Rows rather than a counter on the member, because "these may be saved and
+ * used to enter anytime for our monthly raffle event" means a ticket is a thing
+ * with a life: earned, then later spent on a named draw. A counter cannot say
+ * which draw a ticket went into.
+ *
+ * "earned_at_referral" is the referral count that triggered it — 3, 6, 9 — so
+ * the same milestone can never mint two tickets.
+ */
+CREATE TABLE IF NOT EXISTS raffle_tickets (
+  id                 TEXT PRIMARY KEY,
+  member_id          TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  earned_at_referral INTEGER NOT NULL,
+  created_at         INTEGER NOT NULL,
+  used_at            INTEGER,
+  used_for           TEXT,
+  UNIQUE (member_id, earned_at_referral)
+);
+
+CREATE INDEX IF NOT EXISTS idx_tickets_member ON raffle_tickets(member_id);
+
 CREATE TABLE IF NOT EXISTS events (
   id         TEXT PRIMARY KEY,
   date       TEXT NOT NULL,

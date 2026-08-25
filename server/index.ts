@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db } from './db/schema'
 import { BRANDS, VENDORS } from '../src/data/brands'
+import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
 
 const here = dirname(fileURLToPath(import.meta.url))
@@ -1324,6 +1325,309 @@ app.use(
     },
   }),
 )
+
+/* ------------------------------------------------------------------ members */
+
+/**
+ * ACCOUNTS, MEMBERSHIP TIERS, REFERRALS AND RAFFLE TICKETS.
+ *
+ * From the operator's brief of 2026-08-24. The shape of it: signing up is free
+ * and unlocks the app; a paid tier on top of that is what an affiliate honours.
+ * Every member carries a referral code, and referrals pay out in two different
+ * currencies that stop at different points — see src/data/membership.ts, which
+ * owns that arithmetic for both the client and this file.
+ *
+ * NO PASSWORDS, BECAUSE HE ASKED FOR NONE: "sign up for free by entering their
+ * basic information like name, email, Instagram account name and phone number
+ * as optional". So the session cookie set at sign-up IS the credential.
+ *
+ * THAT HAS A CONSEQUENCE WORTH STATING PLAINLY: there is no way to sign in from
+ * a second device, and there must not be one until email verification exists.
+ * "Type your email to sign in" with no password would let anybody take over any
+ * member's account — including their referral credit and their raffle tickets —
+ * by guessing an address. A missing feature is recoverable; that is not.
+ */
+
+const MEMBER_FIELD_MAX = 120
+const SESSION_DAYS = 180
+const SESSION_COOKIE = 'beasty_member'
+
+/** Their sharable code. No vowels or lookalikes: it gets read off a screen. */
+const CODE_ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ'
+function newReferralCode(): string {
+  for (let attempt = 0; attempt < 12; attempt++) {
+    const bytes = randomBytes(8)
+    let code = ''
+    for (let i = 0; i < 8; i++) code += CODE_ALPHABET[bytes[i] % CODE_ALPHABET.length]
+    const taken = db.prepare('SELECT 1 FROM members WHERE referral_code = ?').get(code)
+    if (!taken) return code
+  }
+  throw new Error('could not allocate a referral code')
+}
+
+const hashToken = (t: string) => createHash('sha256').update(t).digest('hex')
+
+/*
+  Set on the response directly rather than pulling in cookie-parser: it is two
+  headers and this service takes payment details nowhere near it, so a new
+  dependency is its own risk. httpOnly keeps it away from any script; SameSite
+  Lax still sends it on the top-level navigation a shared referral link is.
+*/
+function startSession(res: Response, memberId: string): void {
+  const token = randomBytes(32).toString('base64url')
+  const now = Date.now()
+  db.prepare(
+    'INSERT INTO member_sessions (token_hash, member_id, created_at, expires_at) VALUES (?,?,?,?)',
+  ).run(hashToken(token), memberId, now, now + SESSION_DAYS * 864e5)
+  res.cookie?.(SESSION_COOKIE, token, {
+    httpOnly: true,
+    sameSite: 'lax',
+    secure: PROD,
+    maxAge: SESSION_DAYS * 864e5,
+    path: '/',
+  })
+  if (!res.cookie) {
+    const bits = [
+      `${SESSION_COOKIE}=${token}`,
+      'HttpOnly',
+      'SameSite=Lax',
+      `Max-Age=${SESSION_DAYS * 86400}`,
+      'Path=/',
+    ]
+    if (PROD) bits.push('Secure')
+    res.setHeader('Set-Cookie', bits.join('; '))
+  }
+}
+
+function readCookie(req: Request, name: string): string | null {
+  const raw = req.headers.cookie
+  if (!raw) return null
+  for (const part of raw.split(';')) {
+    const eq = part.indexOf('=')
+    if (eq < 0) continue
+    if (part.slice(0, eq).trim() === name) return decodeURIComponent(part.slice(eq + 1).trim())
+  }
+  return null
+}
+
+interface MemberRow {
+  id: string
+  name: string
+  email: string
+  instagram: string | null
+  phone: string | null
+  referral_code: string
+  referred_by: string | null
+  tier: string
+  tier_status: string
+  tier_since: number | null
+  created_at: number
+}
+
+function memberFromRequest(req: Request): MemberRow | null {
+  const token = readCookie(req, SESSION_COOKIE)
+  if (!token) return null
+  const row = db
+    .prepare(
+      `SELECT m.* FROM member_sessions s
+       JOIN members m ON m.id = s.member_id
+       WHERE s.token_hash = ? AND s.expires_at > ?`,
+    )
+    .get(hashToken(token), Date.now()) as MemberRow | undefined
+  return row ?? null
+}
+
+/**
+ * Mint any raffle tickets the member has earned but not been given.
+ *
+ * Driven off the referral COUNT rather than off an increment at sign-up time,
+ * so it is idempotent: the UNIQUE (member_id, earned_at_referral) means running
+ * this twice cannot mint the same milestone twice, and a referral that arrives
+ * while the server is restarting is still counted the next time anyone looks.
+ */
+function syncRaffleTickets(memberId: string): void {
+  const { n } = db
+    .prepare('SELECT COUNT(*) AS n FROM members WHERE referred_by = ?')
+    .get(memberId) as { n: number }
+  const earned = Math.floor(n / 3)
+  const insert = db.prepare(
+    `INSERT OR IGNORE INTO raffle_tickets (id, member_id, earned_at_referral, created_at)
+     VALUES (?,?,?,?)`,
+  )
+  const run = db.transaction(() => {
+    for (let m = 1; m <= earned; m++) {
+      insert.run(`rt_${randomBytes(8).toString('hex')}`, memberId, m * 3, Date.now())
+    }
+  })
+  run()
+}
+
+/** Everything the client needs about the signed-in member, in one shape. */
+function memberPayload(m: MemberRow) {
+  syncRaffleTickets(m.id)
+  const { referrals } = db
+    .prepare('SELECT COUNT(*) AS referrals FROM members WHERE referred_by = ?')
+    .get(m.id) as { referrals: number }
+  const tickets = db
+    .prepare(
+      `SELECT COUNT(*) AS total,
+              SUM(CASE WHEN used_at IS NULL THEN 1 ELSE 0 END) AS unused
+       FROM raffle_tickets WHERE member_id = ?`,
+    )
+    .get(m.id) as { total: number; unused: number | null }
+  const tier = TIERS.find((t) => t.id === m.tier)
+  const rewards = rewardsFor(referrals, tier)
+  return {
+    id: m.id,
+    name: m.name,
+    email: m.email,
+    instagram: m.instagram,
+    referralCode: m.referral_code,
+    tier: m.tier,
+    tierStatus: m.tier_status,
+    referrals,
+    raffleTickets: { total: tickets.total ?? 0, unused: tickets.unused ?? 0 },
+    rewards,
+  }
+}
+
+/**
+ * Sign up. Free, and it is what unlocks the rest of the app.
+ *
+ * A referral code in the body credits the referrer. It is looked up rather than
+ * trusted: an unknown code signs the member up anyway with no referrer, because
+ * refusing a sign-up over a mistyped code costs a member to protect nothing.
+ */
+app.post('/api/members', rateLimiter(8, 4), (req, res) => {
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const b = req.body
+  const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MEMBER_FIELD_MAX) : '')
+
+  const name = str(b.name)
+  const email = str(b.email).toLowerCase()
+  if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+  // Deliberately loose. The strict-looking patterns reject real addresses, and
+  // nothing here depends on the address being deliverable yet.
+  if (!/^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(email)) {
+    return res.status(400).json({ error: 'A valid email is required.' })
+  }
+
+  const existing = db.prepare('SELECT id FROM members WHERE email = ?').get(email) as
+    | { id: string }
+    | undefined
+  if (existing) {
+    /*
+      Signing in an existing email WITHOUT proving ownership is account
+      takeover, so this refuses rather than helpfully logging them in. The
+      message says what to do instead.
+    */
+    return res.status(409).json({
+      error: 'That email is already a member. Open the app on the device you signed up on.',
+    })
+  }
+
+  const instagram = str(b.instagram).replace(/^@+/, '') || null
+  const phone = str(b.phone) || null
+  const code = str(b.ref).toUpperCase()
+  const referrer = code
+    ? (db.prepare('SELECT id FROM members WHERE referral_code = ?').get(code) as
+        | { id: string }
+        | undefined)
+    : undefined
+
+  const id = `mb_${randomBytes(8).toString('hex')}`
+  db.prepare(
+    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, created_at)
+     VALUES (?,?,?,?,?,?,?,?)`,
+  ).run(id, name, email, instagram, phone, newReferralCode(), referrer?.id ?? null, Date.now())
+
+  // Their referrer may have just crossed a milestone.
+  if (referrer) syncRaffleTickets(referrer.id)
+
+  startSession(res, id)
+  const row = db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
+  res.status(201).json(memberPayload(row))
+})
+
+/** Who am I. The client calls this on boot to decide whether to gate. */
+app.get('/api/members/me', rateLimiter(60, 20), (req, res) => {
+  const m = memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  res.json(memberPayload(m))
+})
+
+/** Sign out on this device. */
+app.post('/api/members/signout', rateLimiter(20, 10), (req, res) => {
+  const token = readCookie(req, SESSION_COOKIE)
+  if (token) db.prepare('DELETE FROM member_sessions WHERE token_hash = ?').run(hashToken(token))
+  res.setHeader('Set-Cookie', `${SESSION_COOKIE}=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax`)
+  res.json({ ok: true })
+})
+
+/**
+ * Choose a tier.
+ *
+ * RECORDS THE CHOICE AND HANDS BACK A PAYMENT LINK. It does not charge and it
+ * does not mark anybody paid: `tier_status` goes to 'pending' and only a
+ * payment provider may move it to 'active'. Until STRIPE_PAYMENT_LINK_* are
+ * configured the response says so, and the client shows that rather than
+ * pretending a checkout exists.
+ */
+app.post('/api/members/tier', rateLimiter(12, 6), (req, res) => {
+  const m = memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const id = typeof req.body.tier === 'string' ? req.body.tier : ''
+  const tier = TIERS.find((t) => t.id === id)
+  if (!tier) return res.status(400).json({ error: 'Unknown membership.' })
+
+  db.prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ? WHERE id = ?').run(
+    tier.id,
+    'pending',
+    Date.now(),
+    m.id,
+  )
+
+  const link =
+    tier.id === 'pass'
+      ? process.env.STRIPE_PAYMENT_LINK_PASS
+      : process.env.STRIPE_PAYMENT_LINK_DIAMOND
+
+  const row = db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
+  res.json({
+    ...memberPayload(row),
+    /*
+      client_reference_id is how a Stripe Payment Link tells us WHO paid when
+      the webhook lands. Without it a payment cannot be matched to a member and
+      tier_status could never leave 'pending'.
+    */
+    paymentLink: link ? `${link}?client_reference_id=${encodeURIComponent(m.id)}` : null,
+    paymentsConfigured: !!link,
+  })
+})
+
+/**
+ * Their QR, as an SVG.
+ *
+ * SVG rather than a PNG data URL: it is a fraction of the bytes, it stays crisp
+ * when somebody holds a phone up to a screen to scan it, and it needs no
+ * canvas. The encoded value is the app's own origin with ?ref= — a normal link
+ * that works when tapped as well as when scanned, because most people will send
+ * it rather than show it.
+ */
+app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
+  const m = memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  const origin = PROD ? `https://${req.get('host')}` : `${req.protocol}://${req.get('host')}`
+  const url = `${origin}/?ref=${m.referral_code}`
+  try {
+    const { toString } = await import('qrcode')
+    const svg = await toString(url, { type: 'svg', margin: 1, width: 512 })
+    res.type('image/svg+xml').set('Cache-Control', 'private, max-age=3600').send(svg)
+  } catch {
+    res.status(500).json({ error: 'Could not draw the code.' })
+  }
+})
 
 /**
  * An unmatched /api path is an error, not a page. The SPA catch-all below used

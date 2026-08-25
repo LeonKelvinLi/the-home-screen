@@ -250,6 +250,20 @@ export function Device({ renderApp, openOnMount }: Props) {
     openApp(openOnMount)
   }, [openOnMount, screen.w, openApp])
 
+  /*
+    The gate's "Sign up free" button, which lives outside this tree.
+
+    An event rather than a prop: the prompt is rendered by GateProvider at the
+    very top of the app, above the device frame, so there is no path to pass a
+    callback down — and threading `openApp` back up through App would tie the
+    two together for one button.
+  */
+  useEffect(() => {
+    const join = () => openApp('sys.join')
+    window.addEventListener('beasty:join', join)
+    return () => window.removeEventListener('beasty:join', join)
+  }, [openApp])
+
   /** Home-indicator gesture: flick up closes, slow drag up opens the switcher. */
   /*
     Back-swipe from the left edge.

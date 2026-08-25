@@ -9251,3 +9251,158 @@ textarea {
 .reel-sound-badge {
   z-index: 3;
 }
+
+/* ---------- the sign-up gate ---------- */
+
+/*
+  "A quick prompt will pop up to direct them to the sign up page." A sheet from
+  the bottom rather than a centred dialog: it is the shape a phone uses for a
+  thing you dismiss, and it leaves the screen they tapped visible behind it, so
+  the app still reads as browsable rather than shut.
+*/
+.gate {
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: flex-end;
+}
+
+.gate-scrim {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  padding: 0;
+  background: rgba(11, 11, 13, 0.5);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  cursor: pointer;
+}
+
+.gate-card {
+  position: relative;
+  width: 100%;
+  padding: 22px 20px calc(22px + env(safe-area-inset-bottom));
+  border-radius: 22px 22px 0 0;
+  background: var(--paper);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: gate-rise 260ms cubic-bezier(0.2, 0.8, 0.3, 1);
+}
+
+@keyframes gate-rise {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: none; opacity: 1; }
+}
+
+.gate-what {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.gate-lead {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+.gate-later {
+  border: 0;
+  background: none;
+  padding: 8px;
+  font: inherit;
+  font-size: 14.5px;
+  color: var(--muted);
+  cursor: pointer;
+}
+
+/* Reduced motion: the sheet still arrives, it just does not travel. */
+@media (prefers-reduced-motion: reduce) {
+  .gate-card { animation: none; }
+}
+
+/* ---------- sign up ---------- */
+
+.join {
+  padding: 16px 18px calc(24px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.join-lead { margin: 0; font-size: 15px; line-height: 1.45; color: var(--muted); }
+
+.join-ref {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(246, 216, 0, 0.16);
+  font-size: 13.5px;
+  line-height: 1.4;
+}
+
+.join-field { display: flex; flex-direction: column; gap: 6px; }
+
+.join-field > span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tertiary);
+}
+
+/* "as optional" is his word for two of these, so it is on the label. */
+.join-field em {
+  font-style: normal;
+  font-weight: 500;
+  color: var(--muted);
+}
+
+.join-field input {
+  font: inherit;
+  font-size: 16px; /* under 16px iOS zooms the whole page on focus */
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-radius: 11px;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.join-field input:focus-visible {
+  outline: 2px solid #1B47D6;
+  outline-offset: 1px;
+}
+
+.join-error {
+  margin: 0;
+  font-size: 14px;
+  color: #C0261B;
+}
+
+.join-fine {
+  margin: 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: var(--tertiary);
+}
+
+/* ---------- membership tiers ---------- */
+
+.members-plan-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.members-plan-perks {
+  margin: 6px 0 0;
+  padding-left: 17px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  line-height: 1.4;
+}

@@ -1,3 +1,4 @@
+import { GateProvider } from './lib/gate'
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { IntroScreen } from './apps/IntroScreen'
 import { savedCity } from './lib/place'
@@ -192,7 +193,7 @@ export default function App() {
     where a spinner reads as a wait.
   */
   return (
-    <>
+    <GateProvider>
       {entered && (
         <Suspense fallback={<div className="shell-loading" />}>
           {/* `is-arriving` scales it up from just under full size while the
@@ -215,6 +216,6 @@ export default function App() {
           skipIntro={skipIntro}
         />
       )}
-    </>
+    </GateProvider>
   )
 }

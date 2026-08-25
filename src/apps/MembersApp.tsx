@@ -1,5 +1,10 @@
 import { AppChrome } from './AppChrome'
-import { MEMBERSHIP } from '../data/membership'
+import {
+  MEMBERSHIP,
+  TIERS,
+  PER_MILESTONE_REFERRALS,
+  DISCOUNT_PER_MILESTONE,
+} from '../data/membership'
 import { LISTED_KITCHENS } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
 
@@ -49,35 +54,52 @@ export function MembersApp({ api }: { api: ShellApi }) {
         </div>
 
         {/*
-          Two prices, side by side, with the saving stated as a number rather
-          than a percentage — "$60 off" is the thing a member can check.
+          TWO TIERS, HIS. Price, then what the card honours, then the referral
+          reward — in that order because that is the order somebody decides in:
+          what it costs, what it gets me, what it gets me back.
+
+          The perks are per tier rather than one shared list, because the whole
+          difference between $39 and $59 lives in them.
         */}
         <div className="members-plans">
-          <div className="members-plan">
-            <span className="members-plan-price">
-              ${m.monthly}
-              <em>/month</em>
-            </span>
-            <span className="members-plan-note">Autopay, cancel any time</span>
-          </div>
-          <div className="members-plan is-best">
-            <span className="members-plan-tag">Save ${m.yearlySaving}</span>
-            <span className="members-plan-price">
-              ${m.yearly}
-              <em>/year</em>
-            </span>
-            <span className="members-plan-note">
-              {m.yearlyPercent}% off paying monthly
-            </span>
-          </div>
+          {TIERS.map((t) => (
+            <div key={t.id} className={`members-plan${t.id === 'diamond' ? ' is-best' : ''}`}>
+              {t.id === 'diamond' && (
+                <span className="members-plan-tag">
+                  <Gem size={13} /> Both offers
+                </span>
+              )}
+              <span className="members-plan-name">{t.name}</span>
+              <span className="members-plan-price">
+                ${t.monthly}
+                <em>/month</em>
+              </span>
+              <span className="members-plan-note">
+                Honours {t.honours} at any affiliate, with no limit each month.
+              </span>
+              <span className="members-plan-note">
+                Refer {PER_MILESTONE_REFERRALS} and take ${DISCOUNT_PER_MILESTONE} off next month
+                — up to ${t.discountCap} for {t.discountCapReferrals} sign-ups.
+              </span>
+              <ul className="members-plan-perks">
+                {t.perks.map((perk) => (
+                  <li key={perk}>{perk}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
         </div>
 
-        <h2 className="members-h">What you get</h2>
-        <ul className="members-list">
-          {m.benefits.map((b) => (
-            <li key={b}>{b}</li>
-          ))}
-        </ul>
+        {/*
+          SAID ONCE, PLAINLY, RATHER THAN PER TIER. Raffle tickets are the one
+          reward with no ceiling and it is easy to miss that beside a capped
+          discount, so it gets its own line in his own numbers.
+        */}
+        <p className="members-note">
+          Raffle tickets have no limit: one for every {PER_MILESTONE_REFERRALS} sign-ups, so 30
+          referrals is 10 tickets. Save them and enter any monthly raffle.
+        </p>
+
         {/*
           Count the businesses that have AGREED an offer, not the ones listed.
 

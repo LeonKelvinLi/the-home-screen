@@ -5,6 +5,7 @@ import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
+import { useGate } from '../lib/gate'
 import { BEASTY_SHEETS, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
@@ -66,6 +67,12 @@ interface Props {
 export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJumped }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
+  /*
+    THE GATE, from his "New Users" note. A signed-out visitor keeps the first
+    two flagship pages and every business on them; the six doors below raise the
+    sign-up prompt instead of opening.
+  */
+  const { gate } = useGate()
   const [page, setPage] = useState(0)
   /*
     Which of the three dock sets is showing — his "Default is 1".
@@ -991,7 +998,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           onClick={() => {
             const el = galleryRef.current
             const rect = el && rectInScreen(el)
-            if (rect) onOpen(GALLERY_APP.id, rect)
+            if (rect) gate('gallery', () => onOpen(GALLERY_APP.id, rect))
           }}
           ref={galleryRef}
           aria-label="Biggie’s pictures"
@@ -1014,7 +1021,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           onClick={() => {
             const el = watchRef.current
             const rect = el && rectInScreen(el)
-            if (rect) onOpen(WATCH_APP.id, rect)
+            if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
           }}
           ref={watchRef}
           aria-label="Watch"
@@ -1054,7 +1061,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           onClick={() => {
             const el = spotlightRef.current
             const rect = el && rectInScreen(el)
-            if (rect) onOpen('sys.search', rect)
+            if (rect) gate('search', () => onOpen('sys.search', rect))
           }}
         >
           <svg width="12" height="12" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor">
@@ -1092,7 +1099,10 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
         </button>
         <button
           className="page-step is-next"
-          onClick={() => goToPage(safePage + 1)}
+          /* "When they tap the right arrow to view more city's" — forward only.
+             Going BACK is never gated: it would trap a visitor on whatever page
+             they had reached with no way out. */
+          onClick={() => gate('cities', () => goToPage(safePage + 1))}
           disabled={safePage === pages.length - 1}
           aria-label="Next page"
         >
@@ -1122,7 +1132,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
               className={`dock-switch-btn${i === dockSet ? ' is-on' : ''}`}
               aria-pressed={i === dockSet}
               aria-label={`${set.name}, dock set ${i + 1} of ${DOCK_SETS.length}`}
-              onClick={() => setDockSet(i)}
+              onClick={() => gate('dock', () => setDockSet(i))}
             >
               {i + 1}
             </button>
@@ -1146,7 +1156,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
               opening a window over it would cover the thing being asked for.
             */
             onOpen={(rect) => {
-              if (!app.page) return onOpen(app.id, rect)
+              // "or any of them lower 4 buttons" — the dock row itself.
+              if (!app.page) return gate('profile', () => onOpen(app.id, rect))
               const i = pages.findIndex((pg) => pg.city === app.page)
               if (i >= 0) goToPage(i)
             }}

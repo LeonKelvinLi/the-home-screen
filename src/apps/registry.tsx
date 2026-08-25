@@ -18,7 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply' | 'gallery' | 'watch'
+  | 'supply' | 'gallery' | 'watch' | 'join'
 
 export interface AppDef {
   id: string
@@ -313,6 +313,24 @@ const GemIcon = () => (
   </svg>
 )
 
+/**
+ * The sign-up screen.
+ *
+ * Not on the home grid and not in the dock: it is reached from the gate prompt
+ * and from the members screen. A visitor who has not hit a locked door has no
+ * reason to be asked for their email, and an icon that says "sign up" on a
+ * screen they are free to browse reads as a wall.
+ */
+export const JOIN_APP: AppDef = {
+  id: 'sys.join',
+  name: 'Sign up',
+  label: 'Sign up',
+  icon: <GemIcon />,
+  kind: 'system',
+  systemKey: 'join',
+  tint: '#141416',
+}
+
 export const MEMBERS_APP: AppDef = {
   id: 'sys.members',
   name: 'BEASTY members',
@@ -539,6 +557,8 @@ export const ALL_APPS: AppDef[] = [
   GOODS_APP,
   GALLERY_APP,
   WATCH_APP,
+  /* Reachable by id even though it is on no grid: the gate prompt opens it. */
+  JOIN_APP,
 ]
 
 /*
