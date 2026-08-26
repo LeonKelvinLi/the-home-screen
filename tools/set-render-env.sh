@@ -48,8 +48,16 @@ done < "$FILE"
 if [ "$APPLY" != "--apply" ]; then
   echo
   echo "Nothing was changed. Re-run with --apply to set them."
-else
-  echo
-  echo "Render redeploys on an env change. Watch it with:"
-  echo "  node tools/live-check.mjs 'Join BEASTY'"
+  exit 0
 fi
+
+# THE DEPLOY IS NOT AUTOMATIC. Changing an environment variable in Render's
+# dashboard restarts the service; doing it through the API does NOT. The
+# variables were set, the running process never saw them, and the server went
+# on reporting delivered:false for seventeen minutes while everything looked
+# correct from the outside. So this asks for the deploy itself.
+echo
+echo "Triggering a deploy so the running process picks them up..."
+/usr/bin/curl -s --max-time 30 -X POST   -H "Authorization: Bearer $KEY" -H 'content-type: application/json'   -d '{"clearCache":"do_not_clear"}'   "https://api.render.com/v1/services/$SERVICE/deploys" |   /opt/homebrew/bin/python3 -c "import sys,json; d=json.load(sys.stdin); print('  deploy', d.get('id'), d.get('status'))"
+echo
+echo "Watch it with:  node tools/live-check.mjs 'Join BEASTY'"

@@ -1556,4 +1556,126 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Modern Indian in San Ramon, with a vegetarian-forward menu their own site says is never an afterthought, and a bar built on Indian whiskies and gins, spice infusions and pickled elements. Lunch, dinner and private events. They publish no prices, so nothing is priced here \u2014 order or book on their own site.',
     items: [],
   },
+  {
+    /*
+      CAMBODIAN STREET FOOD \u2014 "Oakland \u2022 Goods", 2026-08-25, with "we ate
+      here and it was Hella good. They need a website and some better presence."
+
+      NO SITE, which is the point of sending them. Address, hours and their own
+      description are off their Instagram, and the YouTube link is the one in
+      THEIR OWN bio \u2014 not a video someone found, the video they chose to
+      represent themselves with.
+    */
+    slug: 'cambodian-street-food',
+    /* Their own mark, lifted from their profile and upscaled — with
+       Instagram's story ring cut off it, because that gradient is Instagram's
+       UI and not one line of their logo. */
+    icon: 'cambodian-street-food',
+    name: 'Cambodian Street Food',
+    label: 'Cambodian SF',
+    cuisine: 'Cambodian',
+    tagline: 'Cambodia\u2019s fusion, locally and affordable.',
+    color: '#14100C|#B4472A',
+    prep: 0,
+    category: 'Asian',
+    phone: '',
+    address: '2045 Foothill Blvd, Oakland, CA',
+    contactOnly:
+      'Cambodian street food on Foothill Boulevard \u2014 in their own words, designed to bring the taste of Cambodia\u2019s fusion locally and affordable to everyone. Open Monday to Saturday 11am-7pm and Sunday 11am-5pm, closed Tuesdays. They publish no prices and have no website yet, so nothing is priced here.',
+    clip: {
+      href: 'https://www.youtube.com/watch?v=6xSaVABbB9s',
+      platform: 'YouTube',
+      credit: 'The video from their own Instagram bio.',
+    },
+    items: [],
+  },
+  {
+    /*
+      AU LOUNGE \u2014 "Oakland \u2022 Goods", 2026-08-25.
+
+      A lounge, not a kitchen, and the goods list is a list of cuisines \u2014 so
+      it sits on the yellow overflow page rather than being filed under one.
+      Their site publishes an address and a number and nothing else; the
+      copyright on it reads 2015, which is worth knowing before anybody is told
+      the hours are current, because it does not state any.
+    */
+    slug: 'au-lounge',
+    logoTemplate: 'wordmark',
+    logoLines: ['Au', 'OAKLAND'],
+    logoFace: 'script',
+    name: 'Au Lounge',
+    label: 'Au Lounge',
+    cuisine: 'Lounge and events',
+    tagline: 'Broadway, Oakland.',
+    color: '#0E0D0C|#8C7326',
+    prep: 0,
+    category: 'Lounge',
+    site: 'https://www.auoakland.com/',
+    phone: '510.893.1411',
+    address: '2430 Broadway, Oakland, CA 94612',
+    contactOnly:
+      'A lounge on Broadway in downtown Oakland, taking corporate reservations through their own site. They publish no menu and no prices, so nothing is priced here \u2014 call them.',
+    siteCta: 'Open their site',
+    items: [],
+  },
+  {
+    /*
+      OFIE'S KITCHEN \u2014 "Concord \u2022 Goods", 2026-08-26. A food truck, so the
+      address is the number rather than a door; they trade at Epidemic Ales
+      among other places, which their own reviews mention and their site does
+      not fix to one spot.
+    */
+    slug: 'ofies-kitchen',
+    /* THEIR OWN ARTWORK, off their own site at full size — the hand-drawn
+       globe with the spoon and fork, not a wordmark typeset to stand in for
+       one. A generated mark is only ever a placeholder for this. */
+    icon: 'ofies-kitchen',
+    name: 'Ofie\u2019s Kitchen',
+    label: 'Ofie\u2019s',
+    cuisine: 'Burgers, food truck',
+    tagline: 'Where food meets fun.',
+    color: '#131211|#C4562A',
+    prep: 0,
+    category: 'Burgers',
+    site: 'https://ofieskitchen.com/',
+    phone: '925-962-7158',
+    email: 'ofieskitchen@gmail.com',
+    address: '1044 Shary Circle, Concord, CA',
+    contactOnly:
+      'A Concord food truck \u2014 burgers and more, in their own words: where food meets fun. They also trade at Epidemic Ales, so their own site and Instagram are where to find them on a given day. They publish no prices, so nothing is priced here.',
+    clip: {
+      href: 'https://www.instagram.com/reel/DcckUJ9zv_g/',
+      platform: 'Instagram',
+      credit: 'Their reel, on Instagram.',
+    },
+    items: [],
+  },
+  {
+    /*
+      HD PARTY SF \u2014 "San Francisco \u2022 Goods", 2026-08-26.
+
+      HIS PAGE, NOT MINE TO SECOND-GUESS: he said Goods. They rent LED and wood
+      dance floors and supply DJs, which is a service by any reading, but the
+      goods list is cuisines and retail and there is no seat for it there
+      either \u2014 so it goes on the yellow overflow page of the page he named.
+      Worth him confirming it should not be under Services instead.
+    */
+    slug: 'hd-party-sf',
+    logoTemplate: 'wordmark',
+    logoLines: ['HD Party', 'SF'],
+    logoFace: 'condensed',
+    name: 'HD Party SF',
+    label: 'HD Party',
+    cuisine: 'Event enhancements',
+    tagline: 'LED floors, DJs and more.',
+    color: '#0C0D14|#3B4CD6',
+    prep: 0,
+    category: 'Events',
+    site: 'https://hdpartysf.com/',
+    address: 'San Francisco, California',
+    contactOnly:
+      'Event enhancements in San Francisco: LED and wood dance floor rental, DJs and more. Everything is quoted to the event, so nothing is priced here \u2014 enquire on their own site.',
+    siteCta: 'Open their site',
+    items: [],
+  },
 ]

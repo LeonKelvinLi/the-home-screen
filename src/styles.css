@@ -9790,3 +9790,54 @@ textarea {
 @media (prefers-reduced-motion: reduce) {
   .join-otp-box { transition: none; }
 }
+
+/* The week's picks, with the price beside each — his instruction, so the bar
+   is worth opening rather than teasing a menu already on the page. */
+.menu-picks-list li {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+.menu-picks-name { min-width: 0; }
+.menu-picks-price {
+  flex: none;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  opacity: 0.9;
+}
+
+/* The clip's own bar. The poster keeps its full bleed once opened — it is a
+   poster, and boxing it inside a card would make it a thumbnail again. */
+.brand-clip-drop .clip-card {
+  margin-top: 10px;
+}
+
+/*
+  The dog once the takeover has run, with no tile under him.
+
+  His instruction: "make beasty pages background all transparent and the logo
+  too only keeping the dog." Losing the tile also lost the tile's SIZING — the
+  mark was a 108u square and the dog inside it had padding, while the bare
+  cut-out is portrait and sized by width, so he came back a third taller and
+  climbed out of the picture into the header above it.
+
+  So he is sized by HEIGHT here, to about the height he occupied inside the
+  tile. Width follows the portrait ratio and the ceiling still applies, because
+  a short phone is what the width note above was written for.
+*/
+.dialer.is-beasty .dialer-biggie {
+  width: auto;
+  height: calc(82 * var(--u));
+  max-height: 13dvh;
+  object-fit: contain;
+  /*
+    The 26u the tile used to occupy and he does not.
+
+    Without it the whole column moves up by the difference and the BEASTY PAGES
+    pill lands on "Hollywood Hills" in the header above the picture. The dog is
+    smaller than the tile was; the space the tile held is kept, so nothing else
+    on the screen moves.
+  */
+  margin-bottom: calc(26 * var(--u));
+}

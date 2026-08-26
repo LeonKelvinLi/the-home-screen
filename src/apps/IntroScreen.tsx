@@ -7,7 +7,6 @@ import { PAGES, type AboutSection } from './dialer/copy'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
-import { PagesMark } from './dialer/PagesMark'
 import { Gem } from './MembersApp'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
@@ -528,17 +527,22 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
           />
         ))}
         <div className="dialer-display">
-          {/* Biggie has died; the dog on this screen is a memorial, not a mascot,
-              which is worth knowing before anyone edits that artwork.
+          {/*
+            Biggie has died; the dog on this screen is a memorial, not a mascot,
+            which is worth knowing before anyone edits that artwork.
 
-              He wears the tile once the screen is OURS, and is a bare cut-out
-              before that. The mark is the brand's; a stock iPhone dialer has no
-              business showing it, and the takeover is the whole opening. */}
-          {ours ? (
-            <PagesMark className="dialer-biggie dialer-biggie-mark" />
-          ) : (
-            <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
-          )}
+            THE TILE IS GONE, on Leon's instruction: "make beasty pages
+            background all transparent and the logo too only keeping the dog."
+            He wore a yellow sheet with a turned corner once the takeover ran,
+            and it sat over a photograph — so the brand mark was a solid tile
+            covering the picture it was supposed to sit on. Now he is the same
+            bare cut-out in both states and the photograph runs behind him
+            unbroken.
+
+            PagesMark is left in the tree rather than deleted; it is his drawn
+            mark and the only thing that changed is where it is used.
+          */}
+          <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
           {/*
             aria-live only once the screen has settled. While it is converting the
             field changes seven times in 1.5s, which queued seven announcements —

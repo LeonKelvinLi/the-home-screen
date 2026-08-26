@@ -440,6 +440,22 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'santa-clara-goods-16': 'b_stansdonutshop', //       Donut shop
 
   /*
+    The late run of 2026-08-25/26. Two seat on page one and two do not.
+
+    Cambodian Street Food takes Oakland's Asian spot and Ofie's takes Concord's
+    burgers, both of which were empty. Au Lounge and HD Party SF have nowhere
+    honest to sit — the goods list is cuisines and retail, and a lounge is
+    neither, and neither is a dance-floor rental — so they go on the yellow
+    overflow page of the city he named rather than being filed under a wrong
+    label. HD Party is worth confirming: he said Goods and they read as a
+    service.
+  */
+  'oakland-goods-2': 'b_cambodianstreetfood', //       Asian food
+  'concord-goods-0': 'b_ofieskitchen', //              Burgers
+  'oakland-goods2-0': 'b_aulounge',
+  'san-francisco-goods2-0': 'b_hdpartysf',
+
+  /*
     Businesses with no fitting category go on the yellow overflow page rather
     than being crammed under a wrong label: a waste-removal service is not
     "Cleaning", a two-city breakfast house is not "Sandwiches", and a mobile

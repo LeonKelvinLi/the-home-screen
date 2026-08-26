@@ -27,6 +27,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const [starred, setStarred] = useState(() => isFavorite(brand?.id ?? ''))
   /** The week's picks, collapsed by default. See the bar below. */
   const [picksOpen, setPicksOpen] = useState(false)
+  /** Their video, behind a bar — see the clip block below. */
+  const [clipOpen, setClipOpen] = useState(false)
   const [activeCat, setActiveCat] = useState(0)
   const bodyRef = useRef<HTMLDivElement>(null)
 
@@ -324,7 +326,31 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             goes after anything that qualifies the prices, because a caveat that
             arrives after the video is a caveat nobody read.
           */}
-          {brand.clip && <BrandClip clip={brand.clip} logo={brand.logo} />}
+          {/*
+            COLLAPSED, on his instruction: "the video clip would be a drop down
+            to view the video so it doesn't take up the whole page."
+
+            He is right about the cost. The clip renders as a full-bleed poster
+            and on a phone it took most of a screen, which pushed the menu of
+            the business it belongs to below the fold. Behind a bar it is one
+            line until somebody wants it, and the bar says there is a video
+            rather than making them scroll to find out.
+          */}
+          {brand.clip && (
+            <div className="menu-picks brand-clip-drop">
+              <button
+                className={`menu-picks-bar${clipOpen ? ' is-open' : ''}`}
+                onClick={() => setClipOpen((o) => !o)}
+                aria-expanded={clipOpen}
+              >
+                <span>Watch their video</span>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              {clipOpen && <BrandClip clip={brand.clip} logo={brand.logo} />}
+            </div>
+          )}
 
           {/*
             One photograph of the place, same slot and same reasoning as the
@@ -368,10 +394,28 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                     <path d="M6 9l6 6 6-6" />
                   </svg>
                 </button>
+                {/*
+                  THE ITEMS, NOT JUST THEIR NAMES. His instruction: "include
+                  these menu items on the drop-down for the top three favorites
+                  as a standard." A list of three bare names is a teaser for a
+                  menu that is already on the same page; with the price beside
+                  each one the bar is worth opening on its own.
+
+                  A brand that quotes rather than sells shows no figure, the
+                  same as its rows further down — priceLabel carries the range
+                  where there is one.
+                */}
                 {picksOpen && (
                   <ul className="menu-picks-list">
                     {picks.map((it) => (
-                      <li key={it.id}>{it.name}</li>
+                      <li key={it.id}>
+                        <span className="menu-picks-name">{it.name}</span>
+                        {!brand.quoteOnly && (
+                          <span className="menu-picks-price">
+                            {it.priceLabel ?? money(it.price)}
+                          </span>
+                        )}
+                      </li>
                     ))}
                   </ul>
                 )}
@@ -379,6 +423,67 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             ) : (
               <p className="menu-note">{brand.menuNote}</p>
             ))}
+
+          {/*
+            What this business gives BEASTY members.
+
+            OVER THE MENU, ON HIS INSTRUCTION AND AGAINST THE EARLIER ONE. It
+            sat under the menu on the argument that someone who opened a
+            kitchen came for the food. He overruled it with a reason about the
+            business rather than the page: "as soon as they enter the page the
+            first thing they see will be the welcome offers without having to
+            scroll down… I imagine users will skim through everyone's page just
+            to view the offers with their low attention span."
+
+            That is what the membership is sold on, so it goes first.
+          */}
+          {(brand.offers?.welcome || brand.offers?.loyalty) && (
+            <div className={`brand-offers${brand.offers.mock ? ' is-mock' : ''}`}>
+              {/*
+                A mockup says so, at the top, before the terms it is mocking.
+
+                The operator asks to see what an offer would look like on a new
+                partner's page. Rendered identically to an agreed one, that
+                design is how a customer ends up asking a counter to honour
+                something the business never promised — so it is labelled, and
+                the label is the first thing in the block rather than a footnote
+                under it.
+              */}
+              {brand.offers.mock && (
+                <p className="brand-offer-mock">
+                  Example only — {brand.name} has not agreed these. This is what an offer would
+                  look like here.
+                </p>
+              )}
+              {brand.offers.welcome && (
+                <div className="brand-offer">
+                  <span className="brand-offer-head">
+                    <Gem size={15} />
+                    Welcome offer
+                  </span>
+                  <span className="brand-offer-body">{brand.offers.welcome}</span>
+                  <span className="brand-offer-when">First visit, once.</span>
+                </div>
+              )}
+              {brand.offers.loyalty && (
+                <div className="brand-offer">
+                  <span className="brand-offer-head">
+                    <Gem size={15} />
+                    Loyalty offer
+                  </span>
+                  <span className="brand-offer-body">{brand.offers.loyalty}</span>
+                  <span className="brand-offer-when">
+                    Active BEASTY members only, every visit.
+                  </span>
+                </div>
+              )}
+              {!brand.offers.mock && (
+                <button className="brand-offer-cta" onClick={() => api.openApp('sys.members')}>
+                  About BEASTY members
+                </button>
+              )}
+            </div>
+          )}
 
           {/* How to actually start, stated before the prices rather than under
               them, because "these are quotes" changes how the list is read. */}
@@ -452,60 +557,6 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </section>
           ))}
 
-          {/*
-            What this business gives BEASTY members.
-
-            Under the menu, not over it: someone who opened a kitchen came for
-            the food, and an offer they cannot use without a membership should
-            not be the first thing between them and it.
-          */}
-          {(brand.offers?.welcome || brand.offers?.loyalty) && (
-            <div className={`brand-offers${brand.offers.mock ? ' is-mock' : ''}`}>
-              {/*
-                A mockup says so, at the top, before the terms it is mocking.
-
-                The operator asks to see what an offer would look like on a new
-                partner's page. Rendered identically to an agreed one, that
-                design is how a customer ends up asking a counter to honour
-                something the business never promised — so it is labelled, and
-                the label is the first thing in the block rather than a footnote
-                under it.
-              */}
-              {brand.offers.mock && (
-                <p className="brand-offer-mock">
-                  Example only — {brand.name} has not agreed these. This is what an offer would
-                  look like here.
-                </p>
-              )}
-              {brand.offers.welcome && (
-                <div className="brand-offer">
-                  <span className="brand-offer-head">
-                    <Gem size={15} />
-                    Welcome offer
-                  </span>
-                  <span className="brand-offer-body">{brand.offers.welcome}</span>
-                  <span className="brand-offer-when">First visit, once.</span>
-                </div>
-              )}
-              {brand.offers.loyalty && (
-                <div className="brand-offer">
-                  <span className="brand-offer-head">
-                    <Gem size={15} />
-                    Loyalty offer
-                  </span>
-                  <span className="brand-offer-body">{brand.offers.loyalty}</span>
-                  <span className="brand-offer-when">
-                    Active BEASTY members only, every visit.
-                  </span>
-                </div>
-              )}
-              {!brand.offers.mock && (
-                <button className="brand-offer-cta" onClick={() => api.openApp('sys.members')}>
-                  About BEASTY members
-                </button>
-              )}
-            </div>
-          )}
 
           {/* A discount the partner honours at their own counter. Sits above
               the contact block because for a service partner it is the whole
