@@ -484,4 +484,22 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-services2-0': 'b_happybaypaws',
   'pleasant-hill-goods2-0': 'b_thehangoutbreakfast',
   'walnut-creek-goods2-0': 'b_thehangoutbreakfast',
+
+  /*
+    2026-08-26. Four he sent in one morning, three of them "needs website".
+
+    Papi Clary's takes Concord's Filipino spot, BloomZephyr takes Santa Clara's
+    bakery spot, and No Last Call takes the flagship's event coordinator seat
+    from Andrew Shin — "Bump AS to yellow pages" — who moves to the yellow
+    sheet below.
+
+    CRUSHED IS IN THE WRONG TRADE AND IT IS FLAGGED, not smoothed over. Boba is
+    the only drinks spot the twenty-four have and they sell lemonade. His to
+    move if he wants them somewhere else; widening the category would renumber
+    every goods page in the app to fix one seat.
+  */
+  'concord-goods-10': 'b_papiclaryskitchen', //        Filipino food
+  'san-jose-goods-14': 'b_crushedlemonade', //         Boba shop — they sell lemonade
+  'santa-clara-goods-12': 'b_bloomzephyr', //          Bakery
+  'beasty-services2-11': 'b_andrewshinlaw',
 }

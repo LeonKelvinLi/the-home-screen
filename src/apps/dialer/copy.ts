@@ -156,15 +156,31 @@ export const PAGES: Record<PageKey, Page> = {
         - The dates disagree. He gives his birthday as the 9th of March, says
           the litter came on the 7th, calls that "2 days before", and then
           calls it "just one day before".
-        - The closing quote swears. He wrote it that way and framed it as a
-          pull quote, so it is set as one.
+        - The closing quote swore. He censored it himself on the 26th and
+          it is set exactly as he censored it.
+    */
+    /*
+      ONE paragraph stays open. His instruction, 2026-08-26: "you can leave the
+      universe the way it is, but can you please drop down the BEASTY & the
+      prayer too?" So the Universe is the page's open line and the two that
+      followed it are the first two chapters, in his order.
     */
     body: [
       'The Universe, it\u2019s such a mysterious thing. Once you understand how it all works, life is much more of a beautiful place to live with the ones you love.',
-      'The BEASTY brand is the brainchild of a dog owner who came to fully understand the true laws of attraction and placed a wish to the Universe on the beginning days of 2005.',
-      'The prayer, \u201cI wish for the biggest male Pitbull with a big head, a brindle coat like his mother and the most calm and gentle demeanor from a BEAST a family would grow with love.\u201d',
     ],
     sections: [
+      {
+        head: 'The BEASTY Brand',
+        body: [
+          'The BEASTY brand is the brainchild of a dog owner who came to fully understand the true laws of attraction and placed a wish to the Universe on the beginning days of 2005.',
+        ],
+      },
+      {
+        head: 'The Prayer',
+        body: [
+          '\u201cI wish for the biggest male Pitbull with a big head, a brindle coat like his mother and the most calm and gentle demeanor from a BEAST a family would grow with love.\u201d',
+        ],
+      },
       {
         head: 'The Story',
         sub: '(It began with Luna\u2026.)',
@@ -244,7 +260,10 @@ export const PAGES: Record<PageKey, Page> = {
       },
     ],
     signoff: 'BEASTYPAGES.com \u00b7 Just a tap away \u2122',
-    quote: ['The Universe, ain\u2019t', 'it a motherfucker.', 'God is good.', 'All the time.'],
+    /* Revised by him, 2026-08-26: "in hindsight, I think we should keep this
+       thing PG lol". The word is his censoring, character for character, and
+       the block is centred because he asked for that in the same message. */
+    quote: ['The Universe, ain\u2019t', 'it a motherf\u2014\u2014-', 'God is good.', 'All the time.'],
   },
 
   /*

@@ -1714,4 +1714,156 @@ export const LOCAL_SEED: LocalSeed[] = [
     },
     items: [],
   },
+  {
+    /*
+      PAPI CLARY'S KITCHEN \u2014 "Concord \u2022 Goods", 2026-08-26, "Needs Website".
+
+      Filipino, not Mexican, and the seat follows the bio rather than the
+      photographs. Their grid leads with birria and pastor tacos, which would
+      read as the Mexican spot; their bio leads with the Ilocos empanada, the
+      chef bills himself as Chef Clary, and adobo is on the same grid. Ilocos
+      is a province, not a dish description \u2014 that is a Filipino kitchen
+      cooking a Bay Area menu, and Filipino food was the free seat.
+
+      NOTHING IS PRICED. Their catering flyer says $16 a head, but that is a
+      party minimum of fifty people with a travelling fee, not a menu, and no
+      dish on their page carries a price anywhere. Their hours and address are
+      their own bio, verbatim.
+    */
+    slug: 'papi-clarys-kitchen',
+    icon: 'papi-clarys-kitchen',
+    name: "Papi Clary's Kitchen",
+    label: "Papi Clary's",
+    cuisine: 'Filipino',
+    tagline: 'Ilocos empanada and tacos, Concord.',
+    color: '#0E0E0E|#C9A227',
+    prep: 0,
+    category: 'Filipino',
+    phone: '',
+    /* THEIR INSTAGRAM IS THE LINK, and `needsSite` keeps them on his red-outline
+       list anyway. Without a link the page told people to go to their Instagram
+       and gave them no way to get there; without the flag, pointing at a social
+       profile would have quietly taken them off the list he prospects from —
+       and he sent them precisely because they need a website. */
+    site: 'https://www.instagram.com/papiclaryskitchen/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    address: '2186 Solano Way, Concord, CA',
+    contactOnly:
+      'Chef Clary cooks Ilocos empanada, birria and adobo out of Solano Way in Concord, and caters parties. Open Wednesday to Saturday, 11am to 9:30pm; closed Monday and Tuesday. They have no website and publish no dish prices, so nothing is priced here \u2014 their Instagram is where to reach them.',
+    items: [],
+  },
+  {
+    /*
+      CRUSHED HANDCRAFTED LEMONADE \u2014 "San Jose \u2022 Goods", 2026-08-26,
+      "Needs Website".
+
+      SEATED IN THE WRONG TRADE, AND HE SHOULD KNOW. Boba shop is the drinks
+      spot on the goods sheet and there is no lemonade or juice spot among the
+      twenty-four. This is not boba. It is the closest seat that exists and it
+      was free, and the alternative \u2014 widening the category \u2014 renumbers a
+      page he sells by number. His to move.
+
+      Their $7-all-day flyer is a single day's post, not a price list, so it is
+      not carried here as a price.
+    */
+    slug: 'crushed-lemonade',
+    icon: 'crushed-lemonade',
+    name: 'Crushed Handcrafted Lemonade',
+    label: 'Crushed',
+    cuisine: 'Lemonade',
+    tagline: 'Fair-style lemonade, San Jose.',
+    color: '#0D0D0D|#F2C230',
+    prep: 0,
+    category: 'Boba',
+    phone: '',
+    /* NO ADDRESS ON PURPOSE. An address renders a Directions button, and theirs
+       would point at the city of San Jose: their pick-up spot moves and they
+       post each one. A button that opens a map to a whole city is worse than
+       no button. The city is in the tagline and the prose instead. */
+    /* THEIR INSTAGRAM IS THE LINK, and `needsSite` keeps them on his red-outline
+       list anyway. Without a link the page told people to go to their Instagram
+       and gave them no way to get there; without the flag, pointing at a social
+       profile would have quietly taken them off the list he prospects from —
+       and he sent them precisely because they need a website. */
+    site: 'https://www.instagram.com/crushed_bayarea/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Fair-style lemonade made to order around San Jose and the Bay, plus private events and catering. Pick-up spots move day to day and they post each one, so there is no fixed address here. They have no website and no standing price list, so nothing is priced \u2014 their Instagram is where to reach them.',
+    items: [],
+  },
+  {
+    /*
+      BLOOMZEPHYR \u2014 "Santa Clara \u2022 Goods", 2026-08-26, "Needs Website".
+
+      Bakery, because the bouquets are made of marshmallow. Florist is a
+      SERVICES category and he put them on the goods sheet, which is right: they
+      sell a made thing, not an arrangement service. A licensed cottage food
+      kitchen turning out edible bouquets is a confectioner, and bakery is the
+      seat the twenty-four have for that.
+
+      THE LICENCE IS THEIRS AND IS SAID AS THEIRS. Their bio says "Licensed CA
+      Cottage Food Business". This app licenses nobody, so it is repeated as
+      their statement.
+
+      Their sizes are named in their own highlights \u2014 S, M, XL, Box S \u2014 and
+      no price is attached to any of them anywhere, so none is attached here.
+    */
+    slug: 'bloomzephyr',
+    icon: 'bloomzephyr',
+    name: 'BloomZephyr',
+    label: 'BloomZephyr',
+    cuisine: 'Marshmallow bouquets',
+    tagline: 'Handmade marshmallow bouquets, Santa Clara.',
+    color: '#3B2A55|#D8CCEA',
+    prep: 0,
+    category: 'Bakery',
+    phone: '',
+    /* NO ADDRESS, AND THIS ONE IS NOT A DESIGN CALL. Their bio says the
+       kitchen is their home. A Directions button on a home address is not
+       something to publish because a field exists for it, and they publish no
+       shopfront to send anyone to. */
+    /* THEIR INSTAGRAM IS THE LINK, and `needsSite` keeps them on his red-outline
+       list anyway. Without a link the page told people to go to their Instagram
+       and gave them no way to get there; without the flag, pointing at a social
+       profile would have quietly taken them off the list he prospects from —
+       and he sent them precisely because they need a website. */
+    site: 'https://www.instagram.com/bloom_zephyr/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Marshmallow bouquets piped by hand in a home kitchen in Santa Clara, in their own words a licensed CA cottage food business. They take orders by direct message and publish no prices, so nothing is priced here \u2014 their Instagram is where to reach them.',
+    items: [],
+  },
+  {
+    /*
+      NO LAST CALL BARTENDING \u2014 "BEASTY \u2022 Services", 2026-08-26, and in the
+      same breath "Bump AS to yellow pages": Andrew Shin's seat, which is the
+      event coordinator spot. An injury attorney was sitting in it; a mobile bar
+      built for weddings and parties is what the spot is actually for.
+
+      THEY HAVE A SITE, so no red outline. nolastcallbartending.com is their
+      own, and the trade line is their own Facebook category and bio.
+
+      NO PRICES. Mobile bar work is quoted per event \u2014 head count, hours,
+      whether it is a full bar \u2014 and they publish no rate card. So this page
+      says what they do and sends people to them.
+    */
+    slug: 'no-last-call-bartending',
+    icon: 'no-last-call-bartending',
+    name: 'NO LAST CALL Bartending',
+    label: 'No Last Call',
+    cuisine: 'Mobile bartending',
+    tagline: 'Mobile bar for weddings and parties.',
+    color: '#0B0708|#E03A2F',
+    prep: 0,
+    category: 'Events',
+    phone: '',
+    site: 'https://nolastcallbartending.com/',
+    contactOnly:
+      'Adina Mercado\u2019s mobile bar, working the Bay Area and the Central Valley: weddings, birthdays, corporate events and private parties, full bar setups, signature cocktails and mixology classes. Every event is quoted, so nothing is priced here \u2014 their site is where to start.',
+    siteCta: 'Open their site',
+    items: [],
+  },
 ]

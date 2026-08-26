@@ -5314,7 +5314,16 @@ textarea {
   color: #1a1a1c;
 }
 
-.dialer-panel p:first-of-type {
+/*
+  THE LEDE, AND ONLY THE LEDE.
+
+  `:first-of-type` is scoped to a parent, so this used to match the first <p>
+  inside every opened chapter as well as the page's opening line — and since
+  most of his chapters are a single paragraph, the whole chapter rendered bold.
+  That is the glitch he reported on the About page on 2026-08-26: "a glitch
+  with all the drop downs". The child combinator holds it to the intro.
+*/
+.dialer-panel-body > p:first-of-type {
   font-weight: 650;
 }
 
@@ -5753,6 +5762,7 @@ textarea {
   align-items: center;
   gap: 10px;
   position: sticky;
+  /* `sticky` is a positioned value, so ::after below anchors to this box. */
   top: 0;
   z-index: 2;
   /* Spans the full card width and carries the card's top padding itself, so
@@ -5760,13 +5770,31 @@ textarea {
      scroll — About, now — a heading used to ride up into the gap above it. */
   margin: 0 -20px 12px;
   padding: 20px 20px 8px;
-  /* The card's own background, so the title does not have text scrolling
-     under it. */
-  background: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.99) 82%,
-    rgba(255, 255, 255, 0)
-  );
+  /*
+     SOLID, not a gradient.
+
+     This was a white gradient fading to transparent over its last 18%. Sitting
+     on a card that carries its own backdrop-filter, it composited far weaker
+     than its alpha suggested: a scrolled paragraph was legible straight across
+     "About BEASTY". Measured on a 393px viewport with the panel scrolled 200px
+     — his second complaint on the 26th, and the same one.
+
+     The fade that stopped the text hard-cutting at the title now lives in the
+     strip below, where it overlaps nothing.
+  */
+  background: #fff;
+}
+
+/* The soft edge under the title, clear of the title itself. */
+.dialer-panel-head::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 12px;
+  background: linear-gradient(to bottom, #fff, rgba(255, 255, 255, 0));
+  pointer-events: none;
 }
 
 .dialer-panel-head h2 {
@@ -5789,7 +5817,7 @@ textarea {
   flex: 0 0 auto;
 }
 
-.dialer-panel-body p:last-of-type {
+.dialer-panel-body > p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -9684,15 +9712,27 @@ textarea {
 /* His closing quote, laid out in the four lines he laid it out in. */
 .panel-quote {
   margin: 14px 0 0;
-  padding: 14px 16px;
+  /* Centred at his request, 2026-08-26: "if you can center it in the space
+     that would be better." A left rail on a centred block reads as a mistake,
+     so the yellow moved to a short bar above it. */
+  padding: 18px 16px;
   border-radius: 14px;
   background: rgba(0, 0, 0, 0.045);
-  border-left: 3px solid rgba(255, 214, 0, 0.85);
   font-size: 14.5px;
-  line-height: 1.5;
+  line-height: 1.55;
   font-weight: 700;
   font-style: italic;
   color: #1a1a1c;
+  text-align: center;
+}
+.panel-quote::before {
+  content: '';
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin: 0 auto 12px;
+  border-radius: 2px;
+  background: rgba(255, 214, 0, 0.85);
 }
 .panel-quote span {
   display: block;

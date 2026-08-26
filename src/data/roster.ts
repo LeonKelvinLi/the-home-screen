@@ -1486,7 +1486,11 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
      until he named a different business for it. He did, on 2026-08-18: "Move
      LOL catering to BEASTY Services". */
   'b_lolcatering', //           19 LOL Catering
-  'b_andrewshinlaw', //         20 ANDREW SHIN injury, attorney
+  /* "Bump AS to yellow pages", 2026-08-26. Andrew Shin moves to the yellow
+     sheet and No Last Call takes the seat — which is the event coordinator
+     spot, and a mobile bar for weddings is what that spot is for. An injury
+     attorney was never the trade this number sells. */
+  'b_nolastcallbartending', //  20 NO LAST CALL Bartending
   'b_winterwhitecarwash', //    21 Winter White mobile Car Wash
   /* "You can bump ic to yellow pages" — Inter Chiro moved to the yellow sheet
      and Frank2Artistic takes the seat it leaves. */

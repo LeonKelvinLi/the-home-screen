@@ -2,6 +2,7 @@
    Hit-tested by clicking the real row, because a heading that renders and does
    not respond is exactly the failure this is for. */
 import { chromium } from 'playwright'
+import { PNG } from 'pngjs'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
@@ -100,11 +101,55 @@ const header = await p.evaluate(()=>{
   const above=[...document.querySelectorAll('.panel-chapter-head, .dialer-panel p')]
     .filter(n=>{const r=n.getBoundingClientRect(); return r.top >= pr.top - 1 && r.bottom <= hr.top + 1})
     .map(n=>(n.textContent||'').trim().slice(0,24))
-  /* And the title must actually paint over what slides under it. */
-  const el=document.elementFromPoint(hr.left+hr.width/2, hr.top+12)
-  return { gap: Math.round(hr.top - pr.top), above, opaque: !!el && head.contains(el) }
+  const marks=[...document.querySelectorAll('.dialer-panel-mark, .dialer-panel-head h2, .dialer-panel-close')]
+    .map(n=>{const r=n.getBoundingClientRect(); return {x:Math.floor(r.left-hr.left)-3, y:Math.floor(r.top-hr.top)-3,
+                                                       w:Math.ceil(r.width)+6, h:Math.ceil(r.height)+6}})
+  return { gap: Math.round(hr.top - pr.top), above,
+           box: {x:Math.round(hr.left), y:Math.round(hr.top), w:Math.round(hr.width), h:Math.round(hr.height)},
+           marks }
 })
-console.log('above title   :', JSON.stringify(header))
+console.log('above title   :', JSON.stringify({gap:header.gap, above:header.above}))
+
+/*
+  DOES THE TITLE ACTUALLY PAINT OVER WHAT SCROLLS UNDER IT?
+
+  This used to ask elementFromPoint whether the header was on top, and it always
+  said yes — hit-testing does not care about alpha. So a header whose background
+  was a white gradient fading to transparent passed this audit while a whole
+  paragraph read straight through "About BEASTY". He found it; the audit did
+  not. It measures pixels now.
+
+  The header strip is captured with a long chapter scrolled under it and every
+  pixel outside the mark, the title and the close button must be the card's own
+  white. Text bleeding through drops those pixels well below the threshold.
+*/
+const strip = PNG.sync.read(await p.screenshot({clip: {x: header.box.x, y: header.box.y, width: header.box.w, height: header.box.h}}))
+const scale = strip.width / header.box.w
+let darkest = 255, dark = 0
+/*
+  Two exclusions, and neither is slack in the threshold.
+
+  The card's rounded corners are page background showing past the card, and its
+  left and right edges are three antialiased pixels blending card into page.
+  Both are the card's own outline. His copy starts 20px inside it, so anything
+  bleeding through lands nowhere near either.
+*/
+const R = 24 * scale, EDGE = 3 * scale
+const masked = (x, y) =>
+  x < EDGE || x > strip.width - EDGE ||
+  (y < R && (x < R || x > strip.width - R)) ||
+  header.marks.some(m =>
+    x >= m.x*scale && x <= (m.x+m.w)*scale && y >= m.y*scale && y <= (m.y+m.h)*scale)
+for (let y = 0; y < strip.height; y++) {
+  for (let x = 0; x < strip.width; x++) {
+    if (masked(x, y)) continue
+    const i = (strip.width*y + x) << 2
+    const lum = 0.299*strip.data[i] + 0.587*strip.data[i+1] + 0.114*strip.data[i+2]
+    if (lum < darkest) darkest = Math.round(lum)
+    if (lum < 232) dark++
+  }
+}
+console.log('title pixels  : darkest', darkest, '| below 232:', dark)
 
 await p.evaluate(()=>{const h=[...document.querySelectorAll('.panel-chapter-head')].find(x=>/The Plan/.test(x.textContent||''));h?.click()})
 await p.waitForTimeout(400)
@@ -112,12 +157,25 @@ const plan = await p.evaluate(()=>({
   facts: [...document.querySelectorAll('.panel-facts li')].map(l=>l.textContent),
   after: document.querySelector('.panel-chapter-after')?.textContent?.trim() ?? null,
   stillOne: [...document.querySelectorAll('.panel-chapter-head')].filter(h=>h.getAttribute('aria-expanded')==='true').length,
+  /* The intro is the page's lede and is set heavier. A chapter is body copy.
+     `.dialer-panel p:first-of-type` matched BOTH, so every chapter he opened
+     came up bold — his words, "a glitch with all the drop downs". */
+  chapterWeight: Number(getComputedStyle(document.querySelector('.panel-chapter-body p')).fontWeight),
+  introWeight: Number(getComputedStyle(document.querySelector('.dialer-panel-body > p')).fontWeight),
 }))
 console.log('The Plan      :', plan.facts.length, 'facts |', JSON.stringify(plan.after), '| open at once:', plan.stillOne)
+console.log('weights       : intro', plan.introWeight, '| chapter', plan.chapterWeight)
 await b.close(); srv.kill()
 
 const fails=[]
-if(closed.heads.length!==8) fails.push(`expected 8 chapters, got ${closed.heads.length}`)
+/* Ten since 2026-08-26: "you can leave the universe the way it is, but can you
+   please drop down the BEASTY & the prayer too?" The Universe stays as the open
+   intro; the two paragraphs that followed it became the first two chapters. */
+const WANT = ['The BEASTY Brand','The Prayer','The Story','The Blessing','The Gratitude',
+              'The Mission','The Plan','The Future','The Build','BEASTY PAGES']
+if(JSON.stringify(closed.heads)!==JSON.stringify(WANT))
+  fails.push(`chapters are ${JSON.stringify(closed.heads)}, expected ${JSON.stringify(WANT)}`)
+if(closed.intro!==2) fails.push(`the intro is ${closed.intro-1} paragraphs plus the sign-off, expected 1`)
 if(!closed.expanded.every(v=>v==='false')) fails.push('a chapter was open before anything was tapped')
 if(closed.bodiesRendered!==0) fails.push('closed chapters still render their paragraphs')
 if(!closed.signoff?.includes('BEASTYPAGES.com')) fails.push('the sign-off is missing')
@@ -133,7 +191,9 @@ if(plan.after!=='God is Good all the time.') fails.push('his line after the pedi
 if(plan.stillOne!==1) fails.push('two chapters were open at once')
 if(header?.gap !== 0) fails.push(`the title is ${header?.gap}px below the card's top edge — content shows in the gap`)
 if(header?.above.length) fails.push('content is showing above the title: '+header.above.join(', '))
-if(!header?.opaque) fails.push('the title does not paint over the content scrolling under it')
+if(darkest < 200) fails.push(`text is showing through the title \u2014 darkest pixel ${darkest}, floor 200`)
+if(dark > strip.width*strip.height*0.02) fails.push(`${dark} pixels of the title strip are tinted by content scrolling under it`)
+if(plan.chapterWeight >= plan.introWeight) fails.push(`an opened chapter is set at weight ${plan.chapterWeight}, the same as the lede \u2014 the drop-downs are rendering bold`)
 if(bad.length) fails.push('failed requests: '+[...new Set(bad)].join(', '))
 if(fails.length){ console.log('\nFAIL: '+fails.join('; ')); process.exit(1) }
-console.log('\nPASS: eight chapters, closed until tapped, with the picture and the sign-off.')
+console.log('\nPASS: ten chapters, closed until tapped, an opaque title and body-weight copy.')
