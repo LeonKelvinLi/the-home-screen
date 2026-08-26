@@ -336,6 +336,8 @@ interface Seed {
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
   siteNote?: string
+  /** Overrides the picks bar and forces it to render. See localBrands.ts. */
+  menuNote?: string
   /** Button label on a contact-only brand. */
   siteCta?: string
   /** Posted prices already contain sales tax. */
@@ -685,8 +687,12 @@ const fromSeed = (s: Seed): Brand => ({
   // Nor is it a line to put over a menu the business never published: on a
   // brand flagged for owner review it sat directly above items invented for
   // scaffolding, presenting them as this week's picks.
-  menuNote:
-    s.quoteOnly || s.review ? undefined : s.items.length > 0 ? MENU_NOTE : undefined,
+  /* A seed's own line wins, and brings the bar with it — see `menuNote` in
+     localBrands.ts for the one case that needs it. `review` still silences
+     everything, because those items are scaffolding, not a menu. */
+  menuNote: s.review
+    ? undefined
+    : (s.menuNote ?? (s.quoteOnly ? undefined : s.items.length > 0 ? MENU_NOTE : undefined)),
   /*
     Offers travel from the seed here too, not only from the roster and local
     lists. Without this the operator's sheets for Butter Pecan and Masa were set

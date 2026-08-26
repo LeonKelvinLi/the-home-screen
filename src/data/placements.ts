@@ -502,4 +502,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods-14': 'b_crushedlemonade', //         Boba shop — they sell lemonade
   'santa-clara-goods-12': 'b_bloomzephyr', //          Bakery
   'beasty-services2-11': 'b_andrewshinlaw',
+  /* Hey Yogurt opens San Mateo on September 1 \u2014 the ice cream spot, and the
+     page he is taking to them. */
+  'san-mateo-goods-11': 'b_heyyogurt', //              Ice cream shop
 }

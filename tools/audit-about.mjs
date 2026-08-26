@@ -27,10 +27,20 @@ await p.goto(base,{waitUntil:'networkidle'})
   acting on the key. So this presses, checks, and presses again if the panel is
   not up. Waiting a fixed time instead would pass or fail on machine speed.
 */
+/*
+  WAIT FOR THE THING, NOT FOR A NUMBER.
+
+  These were fixed sleeps, and they held right up until the audits started
+  running four and six at a time: six chromiums and six node servers on a busy
+  machine pushed a 500ms animation past 500ms and this audit reported that
+  tapping a chapter opened nothing. That was the clock, not the app. Every wait
+  below is now a condition with a ceiling, so a slow machine waits longer and a
+  broken one still fails.
+*/
 await p.click('[aria-label="1"]')
-await p.waitForTimeout(3000)
+await p.waitForSelector('[aria-label="1. ABOUT"]', { timeout: 15000 })
 await p.click('[aria-label="1. ABOUT"]')
-await p.waitForTimeout(900)
+await p.waitForSelector('.panel-chapter-head', { timeout: 15000 })
 const closed = await p.evaluate(()=>({
   title: document.querySelector('.dialer-panel-h, h2')?.textContent?.trim() ?? null,
   intro: document.querySelectorAll('.dialer-panel p, .panel-signoff').length,
@@ -70,7 +80,12 @@ const hit = await p.evaluate(async ()=>{
 console.log('The Build hit :', JSON.stringify(hit))
 
 await p.evaluate(()=>{const h=[...document.querySelectorAll('.panel-chapter-head')].find(x=>/The Build/.test(x.textContent||''));h?.click()})
-await p.waitForTimeout(500)
+/* The chapter's body, and the picture inside it actually decoded — an <img>
+   that exists but has not loaded is what the flake reported as a missing file. */
+await p.waitForFunction(() => {
+  const img = document.querySelector('.panel-figure img')
+  return !!img && img.complete && img.naturalWidth > 0
+}, null, { timeout: 15000 }).catch(() => {})
 const opened = await p.evaluate(()=>{
   const img=document.querySelector('.panel-figure img')
   return { bodies: document.querySelectorAll('.panel-chapter-body').length,
@@ -152,7 +167,8 @@ for (let y = 0; y < strip.height; y++) {
 console.log('title pixels  : darkest', darkest, '| below 232:', dark)
 
 await p.evaluate(()=>{const h=[...document.querySelectorAll('.panel-chapter-head')].find(x=>/The Plan/.test(x.textContent||''));h?.click()})
-await p.waitForTimeout(400)
+await p.waitForFunction(() => document.querySelectorAll('.panel-facts li').length > 0,
+  null, { timeout: 15000 }).catch(() => {})
 const plan = await p.evaluate(()=>({
   facts: [...document.querySelectorAll('.panel-facts li')].map(l=>l.textContent),
   after: document.querySelector('.panel-chapter-after')?.textContent?.trim() ?? null,

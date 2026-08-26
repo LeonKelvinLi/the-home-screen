@@ -133,13 +133,29 @@ window.__audit = (() => {
         })
     },
     /* Text cut off by a box built for shorter text. */
+    /*
+      TWO DIFFERENT THINGS, and lumping them together buried the one that
+      matters. Text that runs past a box which hides the overflow and shows no
+      ellipsis is GONE with nothing on screen to say so. Text that ellipsises is
+      doing what it was told to: a tile label under a long business name reads
+      "WinkyDinkyD…" on purpose, exactly as an app name does on iOS, and
+      reporting that as a fault every run trained the eye to skip the whole
+      line. silent is the defect; trimmed is reported as a count so it stays
+      visible without drowning it.
+    */
     clipped() {
-      return [...document.querySelectorAll('*')].filter(e => {
+      const over = [...document.querySelectorAll('*')].filter(e => {
         if (!e.offsetParent || e.children.length) return false
         const cs = getComputedStyle(e)
         if (cs.overflow === 'visible' && cs.textOverflow !== 'ellipsis') return false
         return e.scrollWidth > e.clientWidth + 2 || e.scrollHeight > e.clientHeight + 2
-      }).map(e => ({ text: (e.textContent||'').trim().slice(0,30), cls: String(e.className).slice(0,26) }))
+      })
+      const at = e => ({ text: (e.textContent||'').trim().slice(0,30), cls: String(e.className).slice(0,26) })
+      const ell = e => {
+        const cs = getComputedStyle(e)
+        return cs.textOverflow === 'ellipsis' && cs.overflow !== 'visible' && cs.whiteSpace === 'nowrap'
+      }
+      return { silent: over.filter(e => !ell(e)).map(at), trimmed: over.filter(ell).map(at) }
     },
     /* Two controls drawing on the same pixels. */
     overlaps() {
@@ -191,7 +207,24 @@ for (const [label, w, h] of SIZES) {
 
   const t = await p.evaluate(() => window.__audit.targets())
   const small = t.filter((x) => Math.min(x.w, x.h) > 0 && Math.min(x.w, x.h) < 44)
-  const worst = [...new Map(small.map((x) => [x.cls, x])).values()].sort((a, c) => Math.min(a.w, a.h) - Math.min(c.w, c.h))
+  /*
+    THE PAGE DOTS ARE HELD TO WHAT THEY CAN REACH, NOT TO 44.
+
+    Nine dots share one row. Nine 44px targets need 396px and the phone is 393
+    wide, so the minimum is unreachable by arithmetic, and widening one dot only
+    steals from its neighbour — a tap would turn to the wrong page. What is
+    still worth protecting is that each dot owns its full pitch and a 44px band
+    vertically, which is what makes the row usable at all; below that it has
+    given up something it could have had. Everything else answers 44.
+  */
+  const dots = small.filter((x) => /\bdot\b/.test(x.cls))
+  for (const d of dots) {
+    if (d.h < 44) warn(`${label}: a page dot is only ${d.h}px tall — its band should be 44`)
+    else if (d.w < 15) warn(`${label}: a page dot is only ${d.w}px wide, under its own 15px pitch`)
+  }
+  if (dots.length) note(`${label}: ${dots.length} page dots at ${dots[0].w}x${dots[0].h} — the row cannot fit 44px each`)
+  const rest = small.filter((x) => !/\bdot\b/.test(x.cls))
+  const worst = [...new Map(rest.map((x) => [x.cls, x])).values()].sort((a, c) => Math.min(a.w, a.h) - Math.min(c.w, c.h))
   for (const x of worst.slice(0, 4))
     warn(`${label}: "${x.name || x.cls}" hit area ${x.w}x${x.h} — under the 44px minimum`)
 
@@ -201,8 +234,9 @@ for (const [label, w, h] of SIZES) {
     err(`${label}: "${x.text}" at ${x.ratio}:1 (${Math.round(x.size)}px/${x.weight})`)
 
   const cl = await p.evaluate(() => window.__audit.clipped())
-  const uniq = [...new Map(cl.map((x) => [x.cls, x])).values()]
-  for (const x of uniq.slice(0, 3)) warn(`${label}: "${x.text}" is clipped (.${x.cls})`)
+  const uniq = [...new Map(cl.silent.map((x) => [x.cls, x])).values()]
+  for (const x of uniq.slice(0, 3)) warn(`${label}: "${x.text}" is cut off with no ellipsis (.${x.cls})`)
+  if (cl.trimmed.length) note(`${label}: ${cl.trimmed.length} label(s) ellipsised to fit, as designed`)
 
   note(`${label}: ${t.length} controls, ${small.length} under 44px, ${ov.length} overlaps`)
   await p.close()

@@ -107,12 +107,24 @@ export function VoicemailFill({ size = 24, color = "currentColor" }: GlyphProps)
  * earpiece, tapered waist, mouthpiece, drawn as a single path so nothing can
  * merge with anything. It stays legible from 20px up.
  */
+/*
+ * The receiver, closed on itself.
+ *
+ * The outer corner used to be a straight chord back to the start point, which
+ * cut a flat notch out of the earpiece — a chewed-looking handset at the 34px
+ * the call button actually draws it at. It is an arc now, so the corner is a
+ * corner.
+ *
+ * NOT Apple's symbol. SF Symbols are licensed for Apple's own platforms, not
+ * for shipping inside a web app, so this is a handset drawn in the same visual
+ * language rather than their file.
+ */
 export function PhoneFill({ size = 24, color = "currentColor" }: GlyphProps) {
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" color={color} aria-hidden="true" focusable="false">
       <path
         fill="currentColor"
-        d="M7.6 3.3c.6-.6 1.6-.6 2.2 0l2.5 2.5c.6.6.6 1.6 0 2.2L10.7 9.6c-.3.3-.4.8-.2 1.2a12 12 0 0 0 4.7 4.7c.4.2.9.1 1.2-.2l1.6-1.6c.6-.6 1.6-.6 2.2 0l2.5 2.5c.6.6.6 1.6 0 2.2l-1.2 1.2c-1 1-2.5 1.4-3.9 1a20.5 20.5 0 0 1-13.6-13.6c-.4-1.4 0-2.9 1-3.9L7.6 3.3Z"
+        d="M7.6 3.3c.6-.6 1.6-.6 2.2 0l2.5 2.5c.6.6.6 1.6 0 2.2L10.7 9.6c-.3.3-.4.8-.2 1.2a12 12 0 0 0 4.7 4.7c.4.2.9.1 1.2-.2l1.6-1.6c.6-.6 1.6-.6 2.2 0l2.5 2.5c.6.6.6 1.6 0 2.2l-1.2 1.2c-1 1-2.5 1.4-3.9 1a20.5 20.5 0 0 1-13.6-13.6c-.4-1.4 0-2.9 1-3.9A3.4 3.4 0 0 1 7.6 3.3Z"
       />
     </svg>
   );

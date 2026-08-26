@@ -63,6 +63,18 @@ export interface LocalSeed {
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
   siteNote?: string
+  /**
+   * Overrides the bar over the picks drop-down, and forces it to render.
+   *
+   * The computed line is "Choose from this week's favorites!", suppressed on a
+   * `quoteOnly` brand because a service catalogue is not a rotating special.
+   * That rule also silenced a case it was never aimed at: a SHOP that publishes
+   * a real menu and no prices. Hey Yogurt lists every flavour they make and a
+   * price for none of them, so their menu is real, `quoteOnly` is the honest
+   * way to carry it, and the operator still asked for the three-favourite bar.
+   * Setting this says the line in words that fit the business.
+   */
+  menuNote?: string
   /** Button label on a contact-only brand. Defaults to "Open their page". */
   siteCta?: string
   /** Published contact address, where the business publishes one. */
@@ -1864,6 +1876,55 @@ export const LOCAL_SEED: LocalSeed[] = [
     contactOnly:
       'Adina Mercado\u2019s mobile bar, working the Bay Area and the Central Valley: weddings, birthdays, corporate events and private parties, full bar setups, signature cocktails and mixology classes. Every event is quoted, so nothing is priced here \u2014 their site is where to start.',
     siteCta: 'Open their site',
+    items: [],
+  },
+  {
+    /*
+      HEY YOGURT \u2014 "San Mateo \u2022 Goods", 2026-08-26, and his brief with it:
+      "can you add any top three of your favorites on a drop-down and let's get
+      this page ready to present?"
+
+      THEY ARE NOT OPEN YET. Their own post gives the San Mateo grand opening as
+      September 1 with a BOGO on the same flavour, and today is the 26th of
+      August. The page says opening, not open \u2014 he is presenting this to them
+      before the doors do, and a page that has them trading already is the one
+      thing that would embarrass him in the room.
+
+      THE MENU IS REAL AND THE PRICES ARE NOT PUBLISHED. Every flavour below is
+      on their own menu page under their own headings; not one of them carries a
+      figure there, on Yelp, or on their Instagram. So the rows say the price is
+      in store, which is where it is, and `quoteOnly` keeps a cart away from a
+      menu nobody has priced. The three picks are three they hearted themselves.
+
+      NO RATING. Yelp shows one. It is Yelp's, not theirs, and this app does not
+      republish other people's scores as though they were a fact about the shop.
+    */
+    slug: 'hey-yogurt',
+    icon: 'hey-yogurt',
+    name: 'Hey Yogurt',
+    label: 'Hey Yogurt',
+    cuisine: 'Frozen yogurt',
+    tagline: 'Fruit and matcha yogurt smoothies, San Mateo.',
+    color: '#F1D127|#141414',
+    prep: 0,
+    category: 'Ice cream',
+    phone: '(650) 523-5599',
+    address: '310 S San Mateo Dr, San Mateo, CA 94401',
+    site: 'https://www.heyyogurtus.com/',
+    siteNote: 'Their full flavour list is on heyyogurtus.com',
+    menuNote: 'Three they picked themselves',
+    quoteOnly:
+      'Opening at 310 S San Mateo Dr on September 1, with a buy-one-get-one on the same flavour. They publish every flavour they make and a price for none of them, so nothing is priced here \u2014 ask at the counter.',
+    groups: [
+      {
+        name: 'Yogurt smoothie',
+        items: [
+          ['Mango', 'Fruit flavor', 0, 'In store'],
+          ['Strawberry', 'Fruit flavor', 0, 'In store'],
+          ['Matcha & Strawberry', 'Matcha flavor', 0, 'In store'],
+        ],
+      },
+    ],
     items: [],
   },
 ]
