@@ -7782,7 +7782,16 @@ textarea {
   padding: 0;
   border: 0;
   border-radius: 16px;
-  background: #141416;
+  /*
+    OUTLINED, NOT FILLED — the same correction as the tile above it, in the
+    same message: "beasty pages background is gray it should be transparent too
+    with the outline."
+
+    It was a solid near-black plate, which over a photograph read as a grey
+    slab. The ring is what carries the shape now, and it keeps the 2px it
+    already had so nothing moves.
+  */
+  background: transparent;
   box-shadow: 0 0 0 2px #141416;
   font-size: 12px;
   font-weight: 700;
@@ -9018,9 +9027,30 @@ textarea {
   The seam between the halves stays, drawn as a hairline, so the split he
   designed does not vanish along with the colour.
 */
+.dialer.is-photo .dialer-domain-half.is-dark,
+.dialer.is-photo .dialer-domain-half.is-light {
+  /*
+    White with its own edge, so the letters do not depend on what the
+    photograph happens to be doing behind them. The seam between the halves
+    goes light for the same reason the ink did.
+  */
+  color: #fff;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.85),
+    0 0 6px rgba(0, 0, 0, 0.55);
+}
+
 .dialer.is-photo .dialer-domain-half.is-dark {
-  color: #141416;
-  box-shadow: inset 1px 0 0 rgba(20, 20, 22, 0.28);
+  box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.34);
+}
+
+/* The ring is the only thing left drawing the pill, so it gets a light outer
+   edge as well — a near-black ring alone disappears into a dark photograph,
+   which would leave the words floating with no shape at all. */
+.dialer.is-photo .dialer-domain-bar {
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.92),
+    0 1px 6px rgba(0, 0, 0, 0.35);
 }
 
 /*
@@ -9068,13 +9098,39 @@ textarea {
     picture into flat ground while still reading as transparent. Measured, not
     judged: see tools/audit-landing-flip.mjs.
   */
-  background: rgba(255, 255, 255, var(--pill-a));
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  background: transparent;
+  /*
+    NO PLATE AT ALL — his correction: "beasty pages background is gray it
+    should be transparent too with the outline… just outline and transparent
+    inside thats all."
+
+    THE WHITE LIFT IS WHAT MADE IT GREY, and removing it is not free: measured
+    on his four photographs, black type with no plate behind it lands at
+    2.59:1 on biggie-3, where 4.5:1 is the floor. So the plate does not come
+    back — the INK changes instead. White letters carrying their own dark edge
+    read on a bright sky and on a dark jacket alike, which is the one thing a
+    fixed-colour type on a plate could never do, and it is why the plate
+    existed rather than being decoration.
+
+    The blur goes with it. A backdrop blur on a transparent element still
+    smears the picture behind the pill, which is visible as a soft rectangle —
+    exactly the "background" he is asking to be rid of.
+  */
 }
 
-.dialer.is-photo .pm-sheet {
-  fill-opacity: var(--plate-a);
+/*
+  THE SHEET IS EMPTY ONCE THE SCREEN IS OURS. His words: "just outline and
+  transparent inside thats all."
+
+  It used to fade to --plate-a over a photograph, which is a tinted window
+  rather than a transparent one — the picture came through dimmed and the tile
+  still read as a yellow object sitting on it. At zero the drawn edge, the
+  turned corner and the dog are the whole mark and the photograph behind is
+  untouched.
+*/
+.dialer.is-photo .pm-sheet,
+.dialer.is-beasty .pm-sheet {
+  fill-opacity: 0;
 }
 
 /* Matches the 420ms the plates and the tab bar already cross-fade on, so the

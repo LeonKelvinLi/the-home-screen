@@ -8,6 +8,7 @@ import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { Gem } from './MembersApp'
+import { PagesMark } from './dialer/PagesMark'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
 /**
@@ -531,18 +532,25 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
             Biggie has died; the dog on this screen is a memorial, not a mascot,
             which is worth knowing before anyone edits that artwork.
 
-            THE TILE IS GONE, on Leon's instruction: "make beasty pages
-            background all transparent and the logo too only keeping the dog."
-            He wore a yellow sheet with a turned corner once the takeover ran,
-            and it sat over a photograph — so the brand mark was a solid tile
-            covering the picture it was supposed to sit on. Now he is the same
-            bare cut-out in both states and the photograph runs behind him
-            unbroken.
+            THE TILE IS AN OUTLINE, NOT A FILL — his correction, twice: "make
+            beasty pages background all transparent", then "the app outline must
+            stay i was just talking about the background… just outline and
+            transparent inside thats all."
 
-            PagesMark is left in the tree rather than deleted; it is his drawn
-            mark and the only thing that changed is where it is used.
+            I read the first one as the whole mark and took the tile away
+            entirely. It is not the mark he wanted gone, it is the yellow behind
+            it: the sheet is transparent now and the drawn edge, the turned
+            corner and the dog all stay, so the photograph shows through the
+            tile instead of being covered by it.
+
+            He wears it once the screen is OURS and is a bare cut-out before
+            that. A stock iPhone dialer has no business showing the brand.
           */}
-          <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
+          {ours ? (
+            <PagesMark className="dialer-biggie dialer-biggie-mark" />
+          ) : (
+            <img src="/biggie.webp" alt="" className="dialer-biggie" draggable={false} />
+          )}
           {/*
             aria-live only once the screen has settled. While it is converting the
             field changes seven times in 1.5s, which queued seven announcements —
