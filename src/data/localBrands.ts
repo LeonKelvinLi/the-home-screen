@@ -1678,4 +1678,40 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteCta: 'Open their site',
     items: [],
   },
+  {
+    /*
+      HOUSE OF RAHA \u2014 "Fremont \u2022 Goods", 2026-08-26, "needs website".
+
+      NO SITE, which is why he sent them: Instagram is the whole presence.
+      Address, trade and the halal line are their own bio, and the icon is
+      their own mark with Instagram's story ring painted out \u2014 that gradient
+      and the white gap inside it are Instagram's chrome, not one line of
+      theirs.
+
+      THE HALAL LINE IS THEIRS AND IS QUOTED AS THEIRS. Their bio says "Zabiha
+      Halal certified vendors" \u2014 a claim about who they buy from. This app
+      does not certify anybody, so it is repeated as their statement and the
+      dietary tag stays the plain word.
+    */
+    slug: 'house-of-raha',
+    icon: 'house-of-raha',
+    name: 'House of Raha',
+    label: 'House of Raha',
+    cuisine: 'Pan Asian',
+    tagline: 'Pan Asian cuisine, Fremont.',
+    color: '#12100C|#C89A5B',
+    prep: 0,
+    category: 'Asian',
+    phone: '',
+    address: '4137 Bay Street, Fremont, CA',
+    dietary: ['Halal'],
+    contactOnly:
+      'Pan Asian cooking on Bay Street in Fremont, doing private events, catering and reservations. In their own words their vendors are Zabiha Halal certified. They have no website yet and publish no prices, so nothing is priced here \u2014 their Instagram is where to reach them.',
+    clip: {
+      href: 'https://www.instagram.com/reel/Dbq3kjRPWEg/',
+      platform: 'Instagram',
+      credit: 'Their reel, on Instagram.',
+    },
+    items: [],
+  },
 ]

@@ -451,6 +451,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     service.
   */
   'oakland-goods-2': 'b_cambodianstreetfood', //       Asian food
+  /* House of Raha, "Fremont - Goods", 2026-08-26. Asian was open in Fremont. */
+  'fremont-goods-2': 'b_houseofraha', //               Asian food
   'concord-goods-0': 'b_ofieskitchen', //              Burgers
   'oakland-goods2-0': 'b_aulounge',
   'san-francisco-goods2-0': 'b_hdpartysf',
