@@ -9888,14 +9888,19 @@ textarea {
 }
 
 /* The week's picks, with the price beside each — his instruction, so the bar
-   is worth opening rather than teasing a menu already on the page. */
+   is worth opening rather than teasing a menu already on the page.
+
+   `space-between` puts the name left and the price right, which is right until
+   a brand has no price to show: Hey Yogurt publishes a menu and no figures, so
+   every pick slid over to the right margin and sat there under a bullet on the
+   left. The name takes the free space instead, so it stays where the eye is
+   whether or not anything follows it. */
 .menu-picks-list li {
   display: flex;
   align-items: baseline;
-  justify-content: space-between;
   gap: 12px;
 }
-.menu-picks-name { min-width: 0; }
+.menu-picks-name { min-width: 0; flex: 1 1 auto; }
 .menu-picks-price {
   flex: none;
   font-variant-numeric: tabular-nums;
