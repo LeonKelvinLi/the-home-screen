@@ -1927,4 +1927,149 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  /*
+    2026-08-26, the second batch of the day. Six he sent between 9 and 10pm.
+
+    Two of them are auto detailers in different cities, which is the first time
+    the same trade has been seated twice — they do not collide because a slot
+    key is per city, and Antioch and Fremont are different pages.
+  */
+  {
+    slug: 'golden-auto-muffler',
+    icon: 'golden-auto-muffler',
+    name: 'Golden Auto Muffler & Brake Service',
+    label: 'Golden Auto',
+    cuisine: 'Muffler and brake shop',
+    tagline: 'Exhaust, brakes and alignment on Folsom at 6th.',
+    color: '#44443C|#EFC400',
+    prep: 0,
+    category: 'Mechanics and smog',
+    phone: '(415) 543-8899',
+    address: '998 Folsom St, San Francisco, CA 94107',
+    site: 'https://www.goldenautomuffler.com/',
+    siteNote:
+      'They have a second shop at 7360 Mission St, Daly City — (650) 992-6766',
+    contactOnly:
+      'An exhaust and brake shop on Folsom at 6th, open Monday to Friday 9am to 5pm and closed at weekends; the Daly City shop opens Monday to Saturday. They fit high-performance and dual exhaust, do custom bending, wheel alignment, suspension, struts, shocks, clutches, brakes, catalytic converters, tune-ups and on-board diagnostics, and are authorised dealers for Flowmaster, Borla and Magnaflow. Hablamos español. They publish no prices, so nothing is priced here — call the shop.',
+    items: [],
+  },
+  {
+    slug: 'affinage-boards',
+    icon: 'affinage-boards',
+    name: 'Affinage Boards',
+    label: 'Affinage',
+    cuisine: 'Charcuterie and grazing',
+    tagline: 'Artisanal grazing boards and tables, delivered.',
+    color: '#EFE7E0|#2A2A28',
+    prep: 0,
+    category: 'Charcuterie and grazing',
+    phone: '(650) 741-1087',
+    /* NO ADDRESS ON PURPOSE. They are mobile and publish a delivery footprint
+       rather than a shopfront, so a Directions button would have nowhere to
+       send anyone. */
+    site: 'https://www.affinageboards.com/',
+    siteNote:
+      'Same-day delivery if you call (650) 741-1087 before 2pm',
+    /*
+      THEIR PRICES, FROM THEIR OWN SHOP, AND NO CART.
+
+      These three are read straight off their published catalogue, so they are
+      real. `quoteOnly` still suppresses add-to-cart everywhere: ordering here
+      is live, and writing a real kitchen ticket against a caterer who has
+      agreed nothing is exactly the harm that flag exists to prevent.
+    */
+    quoteOnly:
+      'A small woman-owned business making cheese and charcuterie boxes, platters and flat-lay tables, delivering to San Francisco, San Mateo, Santa Clara, Alameda, Marin and Contra Costa. These are their own published prices; events are quoted on what you need, so order through their shop rather than here.',
+    menuNote: 'Three from their own shop',
+    groups: [
+      {
+        name: 'Boards and boxes',
+        items: [
+          ['Nibble and Graze Box', 'Their box for two to three', 6000],
+          ['The Signature', 'Their signature grazing board', 9000],
+          ['Charcuterie Cups', 'Individually portioned, per cup', 1500],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'clean-asere',
+    icon: 'clean-asere',
+    name: 'Clean Asere Car Detailing',
+    label: 'Clean Asere',
+    cuisine: 'Auto detailing',
+    tagline: 'Paint correction and ceramic coating, East Bay.',
+    color: '#141414|#E8712A',
+    prep: 0,
+    category: 'Auto detailing',
+    /* NO WEBSITE AT ALL, which is why the operator sent them: their Instagram
+       is the only link, and `needsSite` keeps them on his red-outline list. */
+    site: 'https://www.instagram.com/clean_asere/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Paint correction, ceramic coating and full interior and exterior detailing across the East Bay. They take appointments by DM and have no website, no published phone number and no published prices, so nothing is priced here — their Instagram is where to reach them.',
+    items: [],
+  },
+  {
+    slug: 'doubletake-auto-spa',
+    icon: 'doubletake-auto-spa',
+    name: 'DoubleTake Auto Spa',
+    label: 'DoubleTake',
+    cuisine: 'Auto detailing and paint protection',
+    tagline: 'PPF, ceramic coating and tint on Christy Street.',
+    color: '#0B0B0B|#D42027',
+    prep: 0,
+    category: 'Auto detailing',
+    phone: '(510) 472-4181',
+    address: '43122 Christy St, Fremont, CA 94538',
+    site: 'https://dtautospaprotection.com/',
+    contactOnly:
+      'Paint protection film, ceramic coating, window tint, paint correction and detailing in Fremont, open Monday to Saturday 10am to 6pm. XPEL certified, with work aimed at Tesla, Porsche, BMW, Mercedes, Rivian and exotics. Every job starts from a free consultation and is quoted on the vehicle, so nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'antonios-hauling',
+    icon: 'antonios-hauling',
+    name: 'Antonio Hauling SF',
+    label: 'Antonio’s',
+    cuisine: 'Junk removal and hauling',
+    tagline: 'Family owned and run junk removal, Vallejo.',
+    color: '#0A0C0A|#E8892B',
+    prep: 0,
+    category: 'Junk removal',
+    phone: '(415) 579-8538',
+    address: 'Lexington Dr, Vallejo, CA',
+    email: 'antonioshaulingsf@gmail.com',
+    site: 'https://antonioshaulingsf.com/',
+    contactOnly:
+      'A family owned and run junk removal service working out of Vallejo: junk and debris, furniture and appliances, yard waste and dirt, construction debris and demolition, residential and commercial cleanouts, storage units and estates. Every job is quoted on what there is to take — they ask you to get an estimate — so nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'oasis-wine-lounge',
+    icon: 'oasis-wine-lounge',
+    name: 'Oasis Wine Lounge',
+    label: 'Oasis',
+    cuisine: 'Mediterranean',
+    tagline: 'Kabobs, cocktails and wine on Main Street.',
+    color: '#111111|#FFFFFF',
+    prep: 0,
+    category: 'Mediterranean',
+    phone: '(925) 417-8438',
+    address: '780 Main St, Pleasanton, CA 94566',
+    site: 'https://oasiswinelounge.com/',
+    /*
+      NOTHING IS PRICED HERE AND THAT IS DELIBERATE.
+
+      Their site has a menu page, but it is still the WordPress theme's demo
+      content: Latin filler text under a sushi menu, on a Mediterranean
+      restaurant. Copying a price off it would put a made-up number on a real
+      business's page. Their real menu is not published in any usable form.
+    */
+    contactOnly:
+      'Mediterranean cooking on Main Street in downtown Pleasanton — kabobs, vegetarian dishes, cocktails and a wine list — open seven days, 11:30am to 9pm, with social hour every day from 2pm to 5pm. Their own menu page has not been finished, so no dish is priced here. Call them or book a table.',
+    items: [],
+  },
 ]

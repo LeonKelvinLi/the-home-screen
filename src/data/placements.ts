@@ -502,7 +502,30 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods-14': 'b_crushedlemonade', //         Boba shop — they sell lemonade
   'santa-clara-goods-12': 'b_bloomzephyr', //          Bakery
   'beasty-services2-11': 'b_andrewshinlaw',
-  /* Hey Yogurt opens San Mateo on September 1 \u2014 the ice cream spot, and the
+  /* Hey Yogurt opens San Mateo on September 1 — the ice cream spot, and the
      page he is taking to them. */
   'san-mateo-goods-11': 'b_heyyogurt', //              Ice cream shop
+  /*
+    2026-08-26, evening. Six more, and two of the seats needed a judgment call.
+
+    ANTONIO'S HAULING IS ON THE YELLOW SHEET, not page one, and the operator
+    labelled it "Vallejo • Goods". There is no goods category a junk
+    removal service can honestly sit in — the twenty-four are food and
+    retail — and this is the same call already made for PJ's Junk Removal
+    in Fairfield: hauling is not cleaning and not handyman, and there is no
+    waste category. His to move.
+
+    AFFINAGE IS ON THE YELLOW SHEET for the opposite reason: the seat that fits
+    a caterer, San Francisco's event coordinator spot, is already Bay Area
+    Charters'. Reseating a business that is already placed to make room is not
+    a call this file gets to make on its own.
+
+    The other four land exactly where their trade does.
+  */
+  'san-francisco-services-5': 'b_goldenautomuffler', //  Mechanics and smog
+  'antioch-services-7': 'b_cleanasere', //               Auto detailing
+  'fremont-services-7': 'b_doubletakeautospa', //        Auto detailing
+  'pleasanton-goods-9': 'b_oasiswinelounge', //          Mediterranean
+  'vallejo-services2-0': 'b_antonioshauling', //         no waste category, same as PJ's
+  'san-francisco-services2-1': 'b_affinageboards', //    caterer; the events seat is taken
 }
