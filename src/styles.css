@@ -946,6 +946,23 @@ textarea {
 }
 
 /*
+  THE PAGE DOTS STAND DOWN TOO, for the same reason and one this file missed.
+
+  Spotlight was taken out of the way because the bubble stands where it stands,
+  but the dots live in that band as well and paint OVER the card — five white
+  circles ghosted straight through the words "Tap to see how", on a white
+  background, which reads as a rendering fault rather than a control. The card
+  is only supposed to borrow chrome; a piece of chrome left on top of it is the
+  same mistake as one left underneath.
+
+  Visibility, not display, exactly as above: the dots are positioned and come
+  straight back when the bubble goes, so there is nothing to reflow.
+*/
+.a2hs-open .page-dots {
+  visibility: hidden;
+}
+
+/*
   The small-phone cut. An iPhone SE gives the same six rows of icons as a Pro
   Max in two hundred fewer pixels, so the band this card lives in is 75px there
   against the 77px the full-size card needs — two pixels short, which put it

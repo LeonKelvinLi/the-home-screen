@@ -47,6 +47,7 @@ export -f _one
 JOBS=(
   "data node .verify/audit-data.mjs"
   "code /opt/homebrew/bin/python3 tools/audit-code.py"
+  "icons /opt/homebrew/bin/python3 tools/audit-icons.py"
   "gate node tools/audit-gate.mjs"
   "otp node tools/audit-otp.mjs"
   "login node tools/audit-login.mjs"
