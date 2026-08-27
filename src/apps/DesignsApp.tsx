@@ -93,7 +93,7 @@ const ADDONS = [
 
 const WORK = [
   {
-    name: 'The Home Screen',
+    name: 'beastypages.com',
     whose: 'Built for BEASTY — this app',
     detail:
       /*

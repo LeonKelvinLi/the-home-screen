@@ -4,9 +4,8 @@ A web app that behaves like an iPhone home screen. Each icon is a business's
 logo; tapping it opens that business's menu. One cart spans every kitchen, one
 checkout pays them all, and each vendor is paid separately.
 
-The browser tab reads "The Home Screen"; the name iOS prints under the icon on
-Add to Home Screen is BEASTY. Both are deliberate — see the comment in
-`index.html`.
+The browser tab reads "BEASTY PAGES"; the shorter name iOS prints under the icon
+on Add to Home Screen is BEASTY. See the comment in `index.html`.
 
 Built for an operator putting independent local businesses onto one home
 screen: the brands from his own hub, Bay Area businesses researched one at a
