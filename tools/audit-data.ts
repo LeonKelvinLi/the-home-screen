@@ -20,7 +20,13 @@
 import { BRANDS, brandById } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
-import { GOODS_CATEGORIES, SERVICE_CATEGORIES, OPEN_SPOTS, ONLINE_CATEGORIES } from '../src/data/slots'
+import {
+  GOODS_CATEGORIES,
+  SERVICE_CATEGORIES,
+  OPEN_SPOTS,
+  ONLINE_CATEGORIES,
+  INDIVIDUAL_SPOTS,
+} from '../src/data/slots'
 import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
 
@@ -55,6 +61,7 @@ const KINDS: Record<string, number> = {
   goods2: OPEN_SPOTS.length,
   services2: OPEN_SPOTS.length,
   online: ONLINE_CATEGORIES.length,
+  individuals: INDIVIDUAL_SPOTS.length,
 }
 /* Longest first, so `goods2` is not eaten by `goods`. */
 const KEY_RE = new RegExp(
@@ -76,7 +83,14 @@ for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {
 }
 for (const [id, keys] of seatOf) {
   if (keys.length < 2) continue
-  const cities = new Set(keys.map((k) => k.replace(/-(goods2|services2|goods|services|online)-\d+$/, '')))
+  /* Built from KINDS for the same reason KEY_RE is: a hand-written copy of the
+     page kinds here went stale the moment `individuals` was added, and would
+     have derived the "city" as `beasty-individuals` and reported a business as
+     seated in two cities. */
+  const CITY_RE = new RegExp(
+    `-(${Object.keys(KINDS).sort((a, b) => b.length - a.length).join('|')})-\\d+$`,
+  )
+  const cities = new Set(keys.map((k) => k.replace(CITY_RE, '')))
   /*
     A business on a BEASTY flagship sheet AND in its own city is intended — the
     flagship is the operator's showcase and the city page is where it lives.

@@ -4139,6 +4139,27 @@ textarea {
   color: rgba(255, 255, 255, 0.6);
 }
 
+/*
+  THE DARK CARD ONLY RECOLOURED HALF OF ITSELF.
+
+  is-best repaints the card #141414 and lifted the price and the note off it,
+  but the plan NAME and the PERKS were left inheriting the page's dark ink — so
+  the tier's own name, and every line of what you get for the money, rendered
+  near-black on near-black. It was there before the tier was renamed; putting a
+  drawn mark in the middle of the name is what made it obvious.
+
+  White for the name because it is a heading, and 0.82 for the perks so they
+  sit below the name without dropping to the note's quieter 0.6 — these are the
+  reasons somebody pays, not a footnote.
+*/
+.members-plan.is-best .members-plan-name {
+  color: #ffffff;
+}
+
+.members-plan.is-best .members-plan-perks {
+  color: rgba(255, 255, 255, 0.82);
+}
+
 .members-h {
   margin: 24px 20px 8px;
   font-size: 12.5px;

@@ -187,8 +187,36 @@ export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) => (
   label: 'Available',
 }))
 
+/*
+  BEASTY • INDIVIDUALS — twenty-four numbered spots for people, not shops.
+
+  His ask of 2026-08-27: "I want to start finding artists and support their
+  work … Artists need help being recognized for their work and selling their
+  art", and the page goes "after BEASTY • Online".
+
+  NUMBERED BUT NOT CATEGORISED, and that is deliberate rather than lazy. The
+  goods and services sheets carry his twenty-four trades because he sells "the
+  Mexican spot in Oakland"; he has named no list of artistic disciplines, and
+  inventing one — painter, sculptor, poet — would be putting a product
+  structure in his mouth. A numbered spot still sells the same way.
+
+  NOT YELLOW: this is a page-one sheet he is recruiting onto, not an overflow
+  page of what nobody claimed in time.
+*/
+export const INDIVIDUAL_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) => ({
+  n: i + 1,
+  name: 'Open spot',
+  label: 'Available',
+}))
+
 /** Which of a city's pages a set of spots belongs to. */
-export type SlotPageKind = 'goods' | 'goods2' | 'services' | 'services2' | 'online'
+export type SlotPageKind =
+  | 'goods'
+  | 'goods2'
+  | 'services'
+  | 'services2'
+  | 'online'
+  | 'individuals'
 
 export interface SlotPage {
   /**
@@ -257,6 +285,9 @@ export const BEASTY_SHEETS: SlotPage[] = [
   SLOT_PAGES[0],
   SLOT_PAGES[1],
   { kind: 'online', heading: 'Online', categories: ONLINE_CATEGORIES },
+  /* "We can create this page after BEASTY • Online" — his words, and this is
+     that position. Cities are untouched by it, exactly as Online is. */
+  { kind: 'individuals', heading: 'Individuals', categories: INDIVIDUAL_SPOTS },
   SLOT_PAGES[2],
   SLOT_PAGES[3],
 ]

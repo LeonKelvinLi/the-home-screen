@@ -2072,4 +2072,55 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Mediterranean cooking on Main Street in downtown Pleasanton — kabobs, vegetarian dishes, cocktails and a wine list — open seven days, 11:30am to 9pm, with social hour every day from 2pm to 5pm. Their own menu page has not been finished, so no dish is priced here. Call them or book a table.',
     items: [],
   },
+  {
+    slug: 'serrano-turf-landscape',
+    icon: 'serrano-turf-landscape',
+    name: 'Serrano Turf Landscape',
+    label: 'Serrano Turf',
+    cuisine: 'Turf, concrete and pavers',
+    tagline: 'Turf, concrete and pavers across the Bay Area.',
+    color: '#141414|#6B4A2F',
+    prep: 0,
+    category: 'Contractor',
+    phone: '(925) 848-8085',
+    /* THEIR OWN WORDS: "Located in Brentwood", "We work most of the Bay Area".
+       The operator seated them in Antioch, which is next door — flagged in
+       placements.ts rather than silently moved. */
+    address: 'Brentwood, CA',
+    site: 'https://www.instagram.com/serranoslandscape/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Turf, concrete and pavers, run out of Brentwood and working most of the Bay Area. Every job starts with a free estimate quoted on the yard, so nothing is priced here. They have no website — their Instagram is where to reach them, and the phone number is on it.',
+    items: [],
+  },
+  /*
+    THE FIRST NAME ON BEASTY • INDIVIDUALS, and the first entry here who is a
+    PERSON rather than a shop. Two things follow from that and neither is
+    optional.
+
+    SHE HAS AGREED NOTHING. The operator found her and wants to ask; nothing on
+    her page may read as her having joined, endorsed BEASTY, or agreed a price.
+    Same rule as every roster seat, and it matters more for an individual.
+
+    NO CONTACT DETAILS. A shop publishes a phone number because it wants calls
+    at the counter. A person's page here carries only what she already publishes
+    to the whole internet: her own site and her work.
+  */
+  {
+    slug: 'naya-green',
+    icon: 'naya-green',
+    name: 'Naya Green',
+    label: 'Naya Green',
+    cuisine: 'Artist',
+    tagline: 'Painting and poetry, saving up for a cathedral.',
+    color: '#141414|#E6E6E6',
+    prep: 0,
+    category: 'Artist',
+    site: 'https://www.nayagreenart.com/',
+    siteCta: 'See her work',
+    contactOnly:
+      'An artist working in painting and poetry, who describes herself as saving up to buy an old cathedral and turn it into an eccentric LIFEpaintingpoetry museum. Her work is on nayagreenart.com. BEASTY has not spoken to her yet — this spot is held, not taken, and nothing here is an arrangement she has agreed.',
+    items: [],
+  },
 ]

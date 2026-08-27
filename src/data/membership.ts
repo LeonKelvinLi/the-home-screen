@@ -2,13 +2,21 @@
  * BEASTY membership — the operator's own programme, in two tiers.
  *
  * EVERY NUMBER AND EVERY LINE OF COPY HERE IS HIS, quoted from the brief of
- * 2026-08-24. The arithmetic is checked rather than trusted, because a reward
- * that does not add up is the first thing a member notices:
+ * 2026-08-24 and revised by his marked-up screenshot of 2026-08-27. The
+ * arithmetic is checked rather than trusted, because a reward that does not add
+ * up is the first thing a member notices:
  *
- *   Biggie's PASS  — "up to $30 off … up to 9 friends", "$10 off per 3".
- *                    9 / 3 = 3 milestones, 3 x $10 = $30. Agrees.
- *   BEASTY DIAMOND — "up to $40 off … up to 12 friends", "$10 off per 3".
- *                    12 / 3 = 4 milestones, 4 x $10 = $40. Agrees.
+ *   BIGGIE PASS — "up to $30 off … up to 9 friends", "$10 off per 3".
+ *                 9 / 3 = 3 milestones, 3 x $10 = $30. Agrees.
+ *   BEASTY PASS — "up to $40 off … up to 12 friends", "$10 off per 3".
+ *                 12 / 3 = 4 milestones, 4 x $10 = $40. Agrees.
+ *
+ * THE CAPS NOW EXCEED THE PRICE, AND THAT IS FLAGGED RATHER THAN QUIETLY FIXED.
+ * His revision moved the monthly price to $9 and $19 but left the referral
+ * ceilings at $30 and $40, so nine sign-ups earn more discount than a month
+ * costs. `rewardsFor` still returns his number; nothing here decides on his
+ * behalf what a member is owed past a free month. Either the caps come down or
+ * the surplus needs a rule — his call, and it needs one before money moves.
  *
  * THE DISCOUNT IS CAPPED AND THE RAFFLE TICKETS ARE NOT, and that distinction
  * is the whole reason both are computed separately from one referral count. His
@@ -24,7 +32,16 @@
 
 export interface Tier {
   id: 'pass' | 'diamond'
+  /** Plain text, for anywhere a drawn mark cannot go: the account record, aria. */
   name: string
+  /*
+    HIS NAMES CARRY A MARK IN THE MIDDLE — a purple ribbon on one, the diamond
+    on the other — so the two halves are stored either side of it. Drawn, never
+    an emoji, for the same reason the diamond beside the hero always was.
+  */
+  nameLead: string
+  nameTail: string
+  mark: 'ribbon' | 'gem'
   monthly: number
   /** What the member's card honours at an affiliate. */
   honours: string
@@ -42,26 +59,32 @@ export const DISCOUNT_PER_MILESTONE = 10
 export const TIERS: Tier[] = [
   {
     id: 'pass',
-    name: "Biggie's PASS",
-    monthly: 39,
-    honours: "Biggie's PASS offer",
+    name: 'BIGGIE PASS',
+    nameLead: 'BIGGIE',
+    nameTail: 'PASS',
+    mark: 'ribbon',
+    monthly: 9,
+    honours: 'the Loyalty offer',
     discountCap: 30,
     discountCapReferrals: 9,
     perks: [
-      "Unlimited use of your membership to honour Biggie's PASS offers from any BEASTY affiliate.",
+      'Unlimited use of your membership to honour Loyalty offers from any BEASTY affiliate.',
       'One BEASTY raffle ticket for every 3 membership referrals. No limit on referrals — refer 30 and receive 10 tickets.',
       'Raffle tickets can be saved and used to enter any monthly raffle event.',
     ],
   },
   {
     id: 'diamond',
-    name: 'BEASTY DIAMOND PASS',
-    monthly: 59,
-    honours: "both the DIAMOND and Biggie's PASS offers",
+    name: 'BEASTY PASS',
+    nameLead: 'BEASTY',
+    nameTail: 'PASS',
+    mark: 'gem',
+    monthly: 19,
+    honours: 'both the Loyalty and Welcome offers',
     discountCap: 40,
     discountCapReferrals: 12,
     perks: [
-      'Unlimited use of your membership to honour both DIAMOND and PASS offers from any BEASTY affiliate.',
+      'Unlimited use of your membership to honour both Loyalty and Welcome offers from any BEASTY affiliate.',
       'One BEASTY raffle ticket for every 3 membership referrals. No limit on referrals — refer 30 and receive 10 tickets.',
       'Raffle tickets can be saved and used to enter any monthly raffle event.',
       /*
@@ -124,10 +147,10 @@ export const GATED = {
 export type GateKey = keyof typeof GATED
 
 export const MEMBERSHIP = {
-  name: 'BEASTY members',
+  name: 'Become a Member',
   lead:
-    'One membership, honoured at every participating BEASTY affiliate. ' +
-    'Sign up free to explore the whole directory.',
+    'One membership, honoured at every participating BEASTY Affiliates. ' +
+    'Sign up is free to explore hidden gems in the whole directory.',
   /*
     A CHARITY CLAIM, and it is the operator's to substantiate. The brief says
     proceeds go to "Biggie's Purple Ribbon Foundation*" — with an asterisk whose

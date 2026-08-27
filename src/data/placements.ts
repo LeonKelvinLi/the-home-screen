@@ -528,4 +528,24 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'pleasanton-goods-9': 'b_oasiswinelounge', //          Mediterranean
   'vallejo-services2-0': 'b_antonioshauling', //         no waste category, same as PJ's
   'san-francisco-services2-1': 'b_affinageboards', //    caterer; the events seat is taken
+  /*
+    2026-08-27. Serrano Turf Landscape, sent as "Antioch • Services".
+
+    THEY ARE IN BRENTWOOD, by their own bio, and work most of the Bay Area.
+    Antioch is the next town over and the operator's own call, so the seat
+    stands — but it is written down here rather than left to look like
+    their published address.
+
+    Contractor rather than Gardener: turf, concrete and pavers is hardscaping,
+    not garden maintenance.
+  */
+  'antioch-services-23': 'b_serranoturflandscape', // Contractor
+  /*
+    BEASTY • INDIVIDUALS opens with Naya Green, 2026-08-27.
+
+    HELD, NOT TAKEN. He asked to "put Naya Green under her icon" so he can go
+    and ask her; she has agreed nothing, and her page says so in as many words.
+    The sheet itself is numbered but uncategorised — see INDIVIDUAL_SPOTS.
+  */
+  'beasty-individuals-0': 'b_nayagreen',
 }

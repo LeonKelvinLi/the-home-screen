@@ -30,6 +30,31 @@ export function Gem({ size = 18 }: { size?: number }) {
   )
 }
 
+/*
+  The purple awareness ribbon he put in the middle of the BIGGIE name, drawn
+  for the same reason the diamond is: an emoji is somebody else's typeface and
+  renders differently on every device the operator shows this on.
+
+  Purple on purpose and not decoration — it is Biggie's Purple Ribbon
+  Foundation, the charity the membership's proceeds are said to go to. His
+  words on the revision: "the purple will stand out and coincides with our
+  foundation."
+*/
+export function Ribbon({ size = 18 }: { size?: number }) {
+  return (
+    <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" className="ribbon">
+      {/* the two tails, crossing below the loop */}
+      <path d="M10.1 13.4 6.2 21.2l3-.5 1.6 2.4 3.1-6.2Z" fill="#7B4BC4" />
+      <path d="M13.9 13.4 17.8 21.2l-3-.5-1.6 2.4-3.1-6.2Z" fill="#8E5BD8" />
+      {/* the loop itself */}
+      <path
+        d="M12 1.6c2.6 0 4.6 2 4.6 4.4 0 2.1-1.2 3.7-2.6 5.6l-2 2.7-2-2.7C8.6 9.7 7.4 8.1 7.4 6 7.4 3.6 9.4 1.6 12 1.6Zm0 2.2c-1.4 0-2.4 1-2.4 2.2 0 1.3.8 2.4 2.4 4.6 1.6-2.2 2.4-3.3 2.4-4.6 0-1.2-1-2.2-2.4-2.2Z"
+        fill="#8E5BD8"
+      />
+    </svg>
+  )
+}
+
 /** Businesses that have actually agreed a member offer. */
 /*
   AGREED offers only. `mock` means the operator asked to see the design and the
@@ -47,7 +72,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
   const m = MEMBERSHIP
 
   return (
-    <AppChrome title="BEASTY members" onBack={api.closeApp} className="is-beasty">
+    <AppChrome title={m.name} onBack={api.closeApp} className="is-beasty">
       <div className="members">
         <div className="members-hero">
           <span className="members-gem">
@@ -72,7 +97,11 @@ export function MembersApp({ api }: { api: ShellApi }) {
                   <Gem size={13} /> Both offers
                 </span>
               )}
-              <span className="members-plan-name">{t.name}</span>
+              {/* His mark sits INSIDE the name, between the two words. */}
+              <span className="members-plan-name">
+                {t.nameLead} {t.mark === 'gem' ? <Gem size={20} /> : <Ribbon size={20} />}{' '}
+                {t.nameTail}
+              </span>
               <span className="members-plan-price">
                 ${t.monthly}
                 <em>/month</em>
@@ -80,8 +109,13 @@ export function MembersApp({ api }: { api: ShellApi }) {
               <span className="members-plan-note">
                 Honours {t.honours} at any affiliate, with no limit each month.
               </span>
+              {/* Bold, and it leads with the condition — "Maybe in bold so they
+                  really read it", his note of 2026-08-27. */}
               <span className="members-plan-note">
-                Refer {PER_MILESTONE_REFERRALS} and take ${DISCOUNT_PER_MILESTONE} off next month
+                <strong>
+                  When you refer {PER_MILESTONE_REFERRALS}, take ${DISCOUNT_PER_MILESTONE} off next
+                  month
+                </strong>{' '}
                 — up to ${t.discountCap} for {t.discountCapReferrals} sign-ups.
               </span>
               <ul className="members-plan-perks">
