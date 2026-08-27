@@ -561,4 +561,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-online-0': 'b_facetfine', //           Apparel
   'beasty-individuals-1': 'b_lyricsborn',
   'beasty-individuals-2': 'b_plo',
+  /* Pawddle, 2026-08-27. BEASTY • Online's pet goods spot, with a MOCK welcome
+     offer he asked for so he has something to show them. */
+  'beasty-online-17': 'b_pawddle', //            Pet goods
 }

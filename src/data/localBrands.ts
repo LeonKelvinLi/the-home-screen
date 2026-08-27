@@ -2245,4 +2245,47 @@ export const LOCAL_SEED: LocalSeed[] = [
       'A Bay Area rapper and producer. His own site is still largely the template it was built from — the contact details on it are Squarespace’s placeholders, not his — so only his music and shows are pointed to here. BEASTY has not spoken to him yet: this spot is held, not taken.',
     items: [],
   },
+  {
+    slug: 'pawddle',
+    icon: 'pawddle',
+    name: 'Pawddle',
+    label: 'Pawddle',
+    cuisine: 'Dog life jackets and gear',
+    tagline: 'Dog life jackets — bring your dog on every adventure.',
+    color: '#F1EFE7|#4B3A7A',
+    prep: 0,
+    category: 'Pet goods',
+    /* The operator sent their Linktree; this is the shop it points at, which is
+       where the prices below actually are. */
+    site: 'https://pawddles.store/',
+    siteNote: 'Their links also live at linktr.ee/pawddledogs',
+    /*
+      THE OFFER IS A MOCKUP AND THE APP SAYS SO.
+
+      His words: "If you can create a welcome offer of 15% off as an example
+      that would be great. That way when I can reach out to them, they can see
+      how their page might potentially look like." `mock: true` is exactly that
+      case — the app labels it on screen instead of letting it read as terms,
+      because an offer on a partner's page is a promise made in their name.
+    */
+    offers: { welcome: '15% off your first order', mock: true },
+    clip: {
+      href: 'https://www.instagram.com/reel/Dccj3_ZRmkr/',
+      credit: 'Posted by Pawddle',
+      platform: 'Instagram',
+    },
+    quoteOnly:
+      'Dog life jackets and gear, made to fit every breed and to keep a dog safe in the water. These are their own published prices; buy them on pawddles.store. BEASTY has not spoken to them yet — this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Pawddle Splash Vest', 'Dog life jacket, sizes vary', 2999, '$29.99-$37.99'],
+          ['Funny Dog Face Mask', 'Their other product', 3499],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]
