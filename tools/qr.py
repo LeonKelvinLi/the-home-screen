@@ -24,7 +24,7 @@ from pathlib import Path
 
 import segno
 
-URL = sys.argv[1] if len(sys.argv) > 1 else "https://the-home-screen.onrender.com"
+URL = sys.argv[1] if len(sys.argv) > 1 else "https://beastypages.com"
 OUT = Path(__file__).resolve().parent.parent / "public" / "qr.svg"
 
 code = segno.make(URL, error="h")

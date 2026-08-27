@@ -16,7 +16,7 @@ import type { ShellApi } from '../ios/Device'
  */
 
 /** Must match the URL baked into public/qr.svg by tools/qr.py. */
-const SITE = 'https://the-home-screen.onrender.com'
+const SITE = 'https://beastypages.com'
 
 export function ShareApp({ api }: { api: ShellApi }) {
   const [copied, setCopied] = useState(false)
