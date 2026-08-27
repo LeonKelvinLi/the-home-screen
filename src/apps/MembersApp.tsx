@@ -5,6 +5,7 @@ import { chooseTier } from '../lib/account'
 import {
   MEMBERSHIP,
   TIERS,
+  fullyReferredPrice,
   PER_MILESTONE_REFERRALS,
   DISCOUNT_PER_MILESTONE,
 } from '../data/membership'
@@ -109,14 +110,24 @@ export function MembersApp({ api }: { api: ShellApi }) {
               <span className="members-plan-note">
                 Honours {t.honours} at any affiliate, with no limit each month.
               </span>
-              {/* Bold, and it leads with the condition — "Maybe in bold so they
-                  really read it", his note of 2026-08-27. */}
+              {/*
+                HIS REVISION OF 2026-08-27, near enough word for word:
+
+                  "ONLY $9/next month when you refer 9 new member sign ups for
+                   each month. - $10 credit for each 3 new members that sign up.
+                   Kindly share to $AVE!"
+
+                Bold on the headline because he asked for it — "Maybe in bold so
+                they really read it". The $9 is DERIVED from the price and the
+                cap, never typed, so the offer and the arithmetic cannot drift.
+              */}
               <span className="members-plan-note">
                 <strong>
-                  When you refer {PER_MILESTONE_REFERRALS}, take ${DISCOUNT_PER_MILESTONE} off next
-                  month
+                  ONLY ${fullyReferredPrice(t)} next month when you refer {t.discountCapReferrals}{' '}
+                  new member sign-ups.
                 </strong>{' '}
-                — up to ${t.discountCap} for {t.discountCapReferrals} sign-ups.
+                ${DISCOUNT_PER_MILESTONE} credit for each {PER_MILESTONE_REFERRALS} new members
+                that sign up. Kindly share to $AVE!
               </span>
               <ul className="members-plan-perks">
                 {t.perks.map((perk) => (

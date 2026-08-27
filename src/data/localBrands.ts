@@ -2123,4 +2123,126 @@ export const LOCAL_SEED: LocalSeed[] = [
       'An artist working in painting and poetry, who describes herself as saving up to buy an old cathedral and turn it into an eccentric LIFEpaintingpoetry museum. Her work is on nayagreenart.com. BEASTY has not spoken to her yet — this spot is held, not taken, and nothing here is an arrangement she has agreed.',
     items: [],
   },
+  {
+    slug: 'love-thai',
+    icon: 'love-thai',
+    name: 'Love Thai Restaurant',
+    label: 'Love Thai',
+    cuisine: 'Thai',
+    tagline: 'Thai cooking on Ygnacio Valley Road, women owned.',
+    color: '#E9342A|#FFFFFF',
+    prep: 0,
+    category: 'Asian',
+    phone: '(925) 524-0768',
+    address: '5434 Ygnacio Valley Rd STE 90, Concord, CA 94521',
+    site: 'https://www.doyoulovethaiconcord.com/',
+    siteNote: 'They take orders on doyoulovethaiconcord.com',
+    menuNote: 'Six they put on their own front page',
+    /*
+      NOTHING IS PRICED, AND THE ONE PRICE ON THEIR SITE IS A TRAP.
+
+      Their homepage shows a cart holding "Cotton Jump Suit, 2 x $15.00" — that
+      is the Squarespace demo content nobody cleared out, not a dish and not a
+      price. Their real prices live behind the online-ordering flow. The six
+      dishes below are the ones they name themselves on the front page.
+    */
+    quoteOnly:
+      'Thai cooking in Concord, women owned and operated, with dine-in, take-out and a patio. Closed Tuesdays. They take orders through their own site and publish no dish prices on it, so nothing is priced here.',
+    groups: [
+      {
+        name: 'What they put out front',
+        items: [
+          ['Pad Thai', 'Their front page', 0, 'On their site'],
+          ['Panang Curry', 'Their front page', 0, 'On their site'],
+          ['Pad Kee Mao', 'Their front page', 0, 'On their site'],
+          ['Pineapple Chicken', 'Their front page', 0, 'On their site'],
+          ['Orange Beef', 'Their front page', 0, 'On their site'],
+          ['Classic Thai Fried Rice', 'Their front page', 0, 'On their site'],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    /*
+      NO `icon`, ON PURPOSE. Their site carries photographs and no wordmark, and
+      their Instagram picture is a photograph of two people — not a logo, and
+      not something to put on a directory tile for them. The app draws its own
+      openly-generated mark instead, which is exactly what that fallback is for.
+      Swap it the moment they send artwork.
+    */
+    slug: 'facet-fine',
+    name: 'Facet Fine',
+    label: 'Facet',
+    cuisine: 'One-size jumpsuits and swimwear',
+    tagline: 'One-size Jump-Hers, rompers and handmade bikinis.',
+    color: '#141414|#C9A227',
+    logoTemplate: 'wordmark',
+    logoFace: 'condensed',
+    logoLines: ['FACET', 'FINE'],
+    prep: 0,
+    category: 'Apparel',
+    site: 'https://facetfine.com/',
+    /* Their own published prices, and no cart: ordering here is live and they
+       have agreed nothing, so buying happens on their shop. */
+    quoteOnly:
+      'A Los Angeles designer making one-size jumpsuits, rompers, dresses and handmade bikinis. These are their own published prices; buy them on facetfine.com.',
+    menuNote: 'Three from their own shop',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Ribbed BLACK sheer', 'One size 0-16', 9800],
+          ['Ribbed sheer HIGH-V Jump-Her', 'One size 0-16', 11100],
+          ['SENSATION Laser-Cut Dress', 'Metallic, laser cut', 12500],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'lyrics-born',
+    icon: 'lyrics-born',
+    name: 'Lyrics Born',
+    label: 'Lyrics Born',
+    cuisine: 'Hip-hop artist',
+    tagline: 'Bay Area hip-hop — records, shows and a variety store.',
+    color: '#0A0A0A|#EDEDED',
+    prep: 0,
+    category: 'Artist',
+    site: 'https://www.lyricsborn.com/',
+    siteCta: 'See his tour dates',
+    /* HIS POST, ON HIS PLATFORM. `href` with no `src` draws a card that opens
+       Instagram rather than pretending to embed it. Re-hosting the video here
+       would need the file from him and his permission — neither exists. */
+    clip: {
+      href: 'https://www.instagram.com/reel/DcMBVjYvYrC/',
+      credit: 'Posted by Lyrics Born',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'A Bay Area hip-hop artist, also known as Sticky Rice, with records, tour dates and a variety store of his own at lyricsborn.com. BEASTY has not spoken to him yet — this spot is held, not taken, and nothing here is an arrangement he has agreed.',
+    items: [],
+  },
+  {
+    slug: 'p-lo',
+    icon: 'p-lo',
+    name: 'P-Lo',
+    label: 'P-Lo',
+    cuisine: 'Rapper and producer',
+    tagline: 'Bay Area rapper and producer.',
+    color: '#2D3690|#FFFFFF',
+    prep: 0,
+    category: 'Artist',
+    site: 'https://p-lo.com/',
+    siteCta: 'See his site',
+    clip: {
+      href: 'https://www.instagram.com/reel/DcBzdqRteQZ/',
+      credit: 'Posted by P-Lo',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'A Bay Area rapper and producer. His own site is still largely the template it was built from — the contact details on it are Squarespace’s placeholders, not his — so only his music and shows are pointed to here. BEASTY has not spoken to him yet: this spot is held, not taken.',
+    items: [],
+  },
 ]

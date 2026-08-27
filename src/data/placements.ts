@@ -548,4 +548,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     The sheet itself is numbered but uncategorised — see INDIVIDUAL_SPOTS.
   */
   'beasty-individuals-0': 'b_nayagreen',
+  /*
+    2026-08-27, evening. Four more, and two of them are artists.
+
+    Lyrics Born and P-Lo take the next two Individuals spots. Both carry a link
+    to the reel he sent rather than the video itself: the clip field only plays
+    footage sitting on our own origin, and re-hosting an artist's video would
+    need the file and their permission. Neither has agreed anything yet, and
+    both pages say so.
+  */
+  'concord-goods-2': 'b_lovethai', //            Asian food
+  'beasty-online-0': 'b_facetfine', //           Apparel
+  'beasty-individuals-1': 'b_lyricsborn',
+  'beasty-individuals-2': 'b_plo',
 }

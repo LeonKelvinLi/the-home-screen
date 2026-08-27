@@ -11,12 +11,18 @@
  *   BEASTY PASS — "up to $40 off … up to 12 friends", "$10 off per 3".
  *                 12 / 3 = 4 milestones, 4 x $10 = $40. Agrees.
  *
- * THE CAPS NOW EXCEED THE PRICE, AND THAT IS FLAGGED RATHER THAN QUIETLY FIXED.
- * His revision moved the monthly price to $9 and $19 but left the referral
- * ceilings at $30 and $40, so nine sign-ups earn more discount than a month
- * costs. `rewardsFor` still returns his number; nothing here decides on his
- * behalf what a member is owed past a free month. Either the caps come down or
- * the surplus needs a rule — his call, and it needs one before money moves.
+ * THE $9 AND $19 ON HIS MARKUP ARE WHAT YOU PAY AFTER REFERRALS, NOT THE PRICE.
+ *
+ * They were read as new monthly prices once and shipped that way for a few
+ * hours. His follow-up spells it out — "ONLY $9/next month when you refer 9 new
+ * member sign ups" — and the arithmetic settles it either way:
+ *
+ *   $39 - (9 / 3) x $10 = $9    exactly the number he wrote on the BIGGIE card
+ *   $59 - (12 / 3) x $10 = $19  exactly the number he wrote on the BEASTY card
+ *
+ * So `monthly` stays his real price and the discounted figure is DERIVED below
+ * rather than typed, because two numbers that must agree and are entered twice
+ * are two numbers that will disagree.
  *
  * THE DISCOUNT IS CAPPED AND THE RAFFLE TICKETS ARE NOT, and that distinction
  * is the whole reason both are computed separately from one referral count. His
@@ -63,7 +69,7 @@ export const TIERS: Tier[] = [
     nameLead: 'BIGGIE',
     nameTail: 'PASS',
     mark: 'ribbon',
-    monthly: 9,
+    monthly: 39,
     honours: 'the Loyalty offer',
     discountCap: 30,
     discountCapReferrals: 9,
@@ -79,7 +85,7 @@ export const TIERS: Tier[] = [
     nameLead: 'BEASTY',
     nameTail: 'PASS',
     mark: 'gem',
-    monthly: 19,
+    monthly: 59,
     honours: 'both the Loyalty and Welcome offers',
     discountCap: 40,
     discountCapReferrals: 12,
@@ -97,6 +103,25 @@ export const TIERS: Tier[] = [
     ],
   },
 ]
+
+/**
+ * What a member pays next month having earned the whole referral discount.
+ *
+ * His headline: "ONLY $9/next month when you refer 9 new member sign ups for
+ * each month." Derived from the price and the cap, so it cannot drift from
+ * them, and asserted below because a wrong number here is a wrong price on a
+ * page that asks for money.
+ */
+export const fullyReferredPrice = (t: Tier) => t.monthly - t.discountCap
+
+for (const t of TIERS) {
+  if (fullyReferredPrice(t) < 0) {
+    throw new Error(
+      `${t.name}: the referral cap ($${t.discountCap}) is more than a month costs ` +
+        `($${t.monthly}) — that would owe the member money`,
+    )
+  }
+}
 
 export const tierById = (id: string): Tier | undefined => TIERS.find((t) => t.id === id)
 
