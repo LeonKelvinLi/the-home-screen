@@ -3,7 +3,7 @@ import type { NextFunction, Request, Response } from 'express'
 import { createHash, randomBytes, randomInt, timingSafeEqual } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
-import { db } from './db/schema'
+import { db, migrate } from './db/schema'
 import { BRANDS, VENDORS } from '../src/data/brands'
 import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
@@ -258,19 +258,32 @@ const upsertVendor = db.prepare(
      -- rows that predate the api_token column still have NULL and need one.
      api_token = COALESCE(vendors.api_token, excluded.api_token)`,
 )
-for (const v of VENDORS) {
-  // fee_bps DOES follow the env var, so changing the take rate is not a silent
-  // no-op on an existing database.
-  upsertVendor.run(v.id, v.name, FEE_BPS, `vt_${randomBytes(24).toString('hex')}`, Date.now())
+/*
+  SEEDED AT BOOT, NOT AT IMPORT — and after the schema exists.
+
+  With SQLite the tables were built by a side effect of importing the schema
+  module, so a top-level upsert was safe. Postgres cannot do that: creating
+  tables is async, an import cannot be awaited, and this loop would have run
+  against a database with no `vendors` table on the very first deploy. It is
+  now part of `start()` below, in order, behind `await migrate()`.
+*/
+async function seedVendors() {
+  for (const v of VENDORS) {
+    // fee_bps DOES follow the env var, so changing the take rate is not a
+    // silent no-op on an existing database.
+    await upsertVendor.run(
+      v.id, v.name, FEE_BPS, `vt_${randomBytes(24).toString('hex')}`, Date.now(),
+    )
+  }
 }
 
 /** Constant-time bearer check, scoped to one vendor row. */
-function authVendor(req: express.Request): string | null {
+async function authVendor(req: express.Request): Promise<string | null> {
   const header = req.get('authorization') ?? ''
   const token = header.startsWith('Bearer ') ? header.slice(7) : ''
   if (token.length < 8) return null
 
-  const rows = db.prepare('SELECT id, api_token FROM vendors WHERE api_token IS NOT NULL').all() as {
+  const rows = await db.prepare('SELECT id, api_token FROM vendors WHERE api_token IS NOT NULL').all() as {
     id: string
     api_token: string
   }[]
@@ -366,12 +379,12 @@ for (const brand of BRANDS) {
 let healthAt = 0
 let healthOk = true
 
-app.get('/api/health', (_req, res) => {
+app.get('/api/health', async (_req, res) => {
   const now = Date.now()
   if (now - healthAt > 1000) {
     try {
       // Reads the schema and touches the file; does not scan the table.
-      db.prepare('SELECT id FROM orders LIMIT 1').get()
+      await db.prepare('SELECT id FROM orders LIMIT 1').get()
       healthOk = true
     } catch (err) {
       console.error('health: database unreadable', err)
@@ -618,7 +631,7 @@ function intOr(value: unknown, fallback: number, lo: number, hi: number): number
   return Math.max(lo, Math.min(hi, Math.floor(n)))
 }
 
-app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
+app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const body = req.body
 
@@ -664,7 +677,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
     .digest('hex')
 
   if (idemKey) {
-    const prior = db
+    const prior = await db
       .prepare('SELECT id, request_digest FROM orders WHERE idempotency_key = ?')
       .get(idemKey) as { id: string; request_digest: string | null } | undefined
     if (prior) {
@@ -673,7 +686,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
           error: 'This idempotency key was already used for a different order.',
         })
       }
-      return res.status(200).json(readOrder(prior.id, { forCustomer: true }))
+      return res.status(200).json(await readOrder(prior.id, { forCustomer: true }))
     }
   }
 
@@ -812,7 +825,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
   const CODE_WINDOW_MS = 48 * 60 * 60 * 1000
   const activeCodes = new Set(
     (
-      db
+      await db
         .prepare(
           `SELECT DISTINCT o.code AS code FROM orders o
            JOIN tickets t ON t.order_id = o.id
@@ -826,7 +839,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
     code = `#${1000 + Math.floor(Math.random() * 8999)}`
   }
 
-  const write = db.transaction(() => {
+  const write = db.transaction(async () => {
     db.prepare(
       `INSERT INTO orders (id, code, customer_name, customer_phone, fulfilment, subtotal, tax,
         service_fee, delivery_fee, tip, total, eta_minutes, payment_state, idempotency_key,
@@ -838,11 +851,16 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
       address || null, requestDigest, now,
     )
 
-    vendorIds.forEach((vendorId, vi) => {
+    /*
+      A for-of, not forEach. forEach discards whatever its callback returns, so
+      an async callback would leave every ticket insert running unawaited after
+      COMMIT — the order written and its kitchen tickets missing, intermittently.
+    */
+    for (const [vi, vendorId] of vendorIds.entries()) {
       const list = groups.get(vendorId)!
       const vSubtotal = vendorSubtotals[vi]
       const feeBps =
-        (db.prepare('SELECT fee_bps FROM vendors WHERE id = ?').get(vendorId) as { fee_bps: number } | undefined)
+        (await db.prepare('SELECT fee_bps FROM vendors WHERE id = ?').get(vendorId) as { fee_bps: number } | undefined)
           ?.fee_bps ?? FEE_BPS
       /*
         Charge the fee on FOOD, which is what the comment below has always
@@ -867,7 +885,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
       // them the same money twice — 894 instead of 810 on a $9.00 order.
       const payout = vSubtotal - platformFee + addedTax[vi] + tipShare[vi]
 
-      db.prepare(
+      await db.prepare(
         `INSERT INTO tickets (id, order_id, vendor_id, brand_ids, subtotal, platform_fee,
           vendor_payout, tax, tip, state, state_changed_at, created_at)
          VALUES (?,?,?,?,?,?,?,?,?,'queued',?,?)`,
@@ -877,7 +895,7 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
       )
 
       for (const p of list) {
-        db.prepare(
+        await db.prepare(
           `INSERT INTO ticket_lines (id, ticket_id, brand_id, item_id, name, qty, unit, options, note)
            VALUES (?,?,?,?,?,?,?,?,?)`,
         ).run(
@@ -886,13 +904,18 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
           JSON.stringify(p.options), p.note ?? null,
         )
       }
-    })
+    }
   })
 
-  // IMMEDIATE: this transaction reads (fee_bps) before it writes, which is the
-  // classic deferred-transaction upgrade deadlock once there is a second writer.
-  write.immediate()
-  res.status(201).json(readOrder(orderId, { forCustomer: true }))
+  /*
+    SQLite needed IMMEDIATE here: this transaction reads fee_bps before it
+    writes, which is the classic deferred-transaction upgrade deadlock once
+    there is a second writer. Postgres has no such mode and no such upgrade —
+    a transaction takes its snapshot at the first statement — so the plain
+    BEGIN it already runs inside is the stronger guarantee.
+  */
+  await write()
+  res.status(201).json(await readOrder(orderId, { forCustomer: true }))
 })
 
 /**
@@ -900,11 +923,11 @@ app.post('/api/orders', rateLimiter(30, 10), (req, res) => {
  * anyone, which handed each vendor their competitors' revenue and the
  * commission rate the platform charges them.
  */
-app.get('/api/orders', rateLimiter(120, 30), (req, res) => {
-  const vendorId = authVendor(req)
+app.get('/api/orders', rateLimiter(120, 30), async (req, res) => {
+  const vendorId = await authVendor(req)
   if (!vendorId) return res.status(401).json({ error: 'Vendor token required.' })
 
-  const ids = db
+  const ids = await db
     .prepare(
       `SELECT DISTINCT o.id FROM orders o
        JOIN tickets t ON t.order_id = o.id
@@ -912,7 +935,9 @@ app.get('/api/orders', rateLimiter(120, 30), (req, res) => {
     )
     .all(vendorId) as { id: string }[]
 
-  res.json(ids.map((r) => readOrder(r.id, { vendorId })).filter(Boolean))
+  /* Promise.all, not map alone: each readOrder is async now and an unresolved
+     promise would serialise as {} to every vendor polling their queue. */
+  res.json((await Promise.all(ids.map((r) => readOrder(r.id, { vendorId })))).filter(Boolean))
 })
 
 /**
@@ -926,10 +951,10 @@ app.get('/api/orders', rateLimiter(120, 30), (req, res) => {
  * authenticated vendor now sees only its own ticket; an anonymous caller (the
  * customer, who already knows what they ordered) still sees the whole order.
  */
-app.get('/api/orders/:id', rateLimiter(120, 40), (req, res) => {
-  const vendorId = authVendor(req)
+app.get('/api/orders/:id', rateLimiter(120, 40), async (req, res) => {
+  const vendorId = await authVendor(req)
   const orderId = String(req.params.id)
-  const order = readOrder(orderId, { forCustomer: true, ...(vendorId ? { vendorId } : {}) })
+  const order = await readOrder(orderId, { forCustomer: true, ...(vendorId ? { vendorId } : {}) })
   if (!order) return res.status(404).json({ error: 'Not found' })
   res.json(order)
 })
@@ -942,8 +967,8 @@ const NEXT_STATE: Record<string, string[]> = {
 }
 
 /** Kitchen-facing: advance a ticket. Vendor-scoped, forward-only. */
-app.post('/api/tickets/:id/state', rateLimiter(120, 30), (req, res) => {
-  const vendorId = authVendor(req)
+app.post('/api/tickets/:id/state', rateLimiter(120, 30), async (req, res) => {
+  const vendorId = await authVendor(req)
   if (!vendorId) return res.status(401).json({ error: 'Vendor token required.' })
 
   const body = isObj(req.body) ? req.body : {}
@@ -952,7 +977,7 @@ app.post('/api/tickets/:id/state', rateLimiter(120, 30), (req, res) => {
     return res.status(400).json({ error: 'Bad state' })
   }
 
-  const ticket = db.prepare('SELECT vendor_id, state FROM tickets WHERE id = ?').get(req.params.id) as
+  const ticket = await db.prepare('SELECT vendor_id, state FROM tickets WHERE id = ?').get(req.params.id) as
     | { vendor_id: string; state: string }
     | undefined
   if (!ticket) return res.status(404).json({ error: 'Not found' })
@@ -962,7 +987,7 @@ app.post('/api/tickets/:id/state', rateLimiter(120, 30), (req, res) => {
   }
 
   // Compare-and-swap on the observed state so two terminals cannot both advance.
-  const info = db
+  const info = await db
     .prepare('UPDATE tickets SET state = ?, state_changed_at = ? WHERE id = ? AND vendor_id = ? AND state = ?')
     .run(state, Date.now(), req.params.id, vendorId, ticket.state)
   if (info.changes === 0) return res.status(409).json({ error: 'Ticket changed underneath you.' })
@@ -976,14 +1001,14 @@ interface ReadOpts {
   vendorId?: string
 }
 
-function readOrder(id: string, opts: ReadOpts = {}) {
-  const o = db.prepare('SELECT * FROM orders WHERE id = ?').get(id) as Record<string, unknown> | undefined
+async function readOrder(id: string, opts: ReadOpts = {}) {
+  const o = await db.prepare('SELECT * FROM orders WHERE id = ?').get(id) as Record<string, unknown> | undefined
   if (!o) return null
 
   const tickets = (
     opts.vendorId
-      ? db.prepare('SELECT * FROM tickets WHERE order_id = ? AND vendor_id = ?').all(id, opts.vendorId)
-      : db.prepare('SELECT * FROM tickets WHERE order_id = ?').all(id)
+      ? await db.prepare('SELECT * FROM tickets WHERE order_id = ? AND vendor_id = ?').all(id, opts.vendorId)
+      : await db.prepare('SELECT * FROM tickets WHERE order_id = ?').all(id)
   ) as Record<string, unknown>[]
 
   return {
@@ -1026,8 +1051,8 @@ function readOrder(id: string, opts: ReadOpts = {}) {
           customer: { name: o.customer_name, phone: o.customer_phone },
           address: o.address || undefined,
         }),
-    tickets: tickets.map((t) => {
-      const lines = db
+    tickets: await Promise.all(tickets.map(async (t) => {
+      const lines = await db
         .prepare('SELECT * FROM ticket_lines WHERE ticket_id = ?')
         .all(t.id) as Record<string, unknown>[]
       return {
@@ -1051,7 +1076,7 @@ function readOrder(id: string, opts: ReadOpts = {}) {
           note: l.note ?? undefined,
         })),
       }
-    }),
+    })),
   }
 }
 
@@ -1064,10 +1089,10 @@ function readOrder(id: string, opts: ReadOpts = {}) {
  * simulator stampedes over whatever a real kitchen just entered.
  */
 if (SIMULATE_KITCHEN) {
-  setInterval(() => {
+  setInterval(async () => {
     try {
       const due: Record<string, number> = { queued: 12, cooking: 45, ready: 120 }
-      const rows = db
+      const rows = await db
         .prepare(
           `SELECT id, state, state_changed_at FROM tickets
            WHERE state IN ('queued','cooking','ready')`,
@@ -1195,7 +1220,7 @@ function notifyLead(lead: Record<string, string>) {
  * rather than falling back to something weaker.
  */
 const OPERATOR_TOKEN = process.env.OPERATOR_TOKEN ?? ''
-app.get('/api/applications', rateLimiter(20, 10), (req, res) => {
+app.get('/api/applications', rateLimiter(20, 10), async (req, res) => {
   if (OPERATOR_TOKEN.length < 16) {
     return res.status(503).json({ error: 'No operator token configured.' })
   }
@@ -1205,7 +1230,7 @@ app.get('/api/applications', rateLimiter(20, 10), (req, res) => {
   if (a.length !== b.length || !timingSafeEqual(a, b)) {
     return res.status(401).json({ error: 'Operator token required.' })
   }
-  res.json(db.prepare('SELECT * FROM applications ORDER BY created_at DESC LIMIT 200').all())
+  res.json(await db.prepare('SELECT * FROM applications ORDER BY created_at DESC LIMIT 200').all())
 })
 
 /* ---------- calendar ---------- */
@@ -1232,7 +1257,7 @@ const MAX_EVENT_TIME = 40
  * ask for every event ever posted, and the calendar never needs more than the
  * month it is showing.
  */
-app.get('/api/events', rateLimiter(120, 40), (req, res) => {
+app.get('/api/events', rateLimiter(120, 40), async (req, res) => {
   const from = String(req.query.from ?? '')
   const to = String(req.query.to ?? '')
   if (!DATE_RE.test(from) || !DATE_RE.test(to)) {
@@ -1240,7 +1265,7 @@ app.get('/api/events', rateLimiter(120, 40), (req, res) => {
   }
   if (to < from) return res.status(400).json({ error: 'to must not precede from.' })
 
-  const rows = db
+  const rows = await db
     .prepare(
       `SELECT id, date, brand_id, title, detail, time_text, posted_by
        FROM events WHERE date >= ? AND date <= ? ORDER BY date, created_at LIMIT 400`,
@@ -1305,12 +1330,12 @@ app.post('/api/events', rateLimiter(30, 10), (req, res) => {
 
 /** Take one down. Operator only, and deliberately easy — a wrong date on a real
  *  business's special needs removing in one action, not a support ticket. */
-app.delete('/api/events/:id', rateLimiter(30, 10), (req, res) => {
+app.delete('/api/events/:id', rateLimiter(30, 10), async (req, res) => {
   if (OPERATOR_TOKEN.length < 16) {
     return res.status(503).json({ error: 'No operator token configured.' })
   }
   if (!isOperator(req)) return res.status(401).json({ error: 'Operator token required.' })
-  const info = db.prepare('DELETE FROM events WHERE id = ?').run(String(req.params.id))
+  const info = await db.prepare('DELETE FROM events WHERE id = ?').run(String(req.params.id))
   if (info.changes === 0) return res.status(404).json({ error: 'Not found' })
   res.status(204).end()
 })
@@ -1371,12 +1396,12 @@ const SESSION_COOKIE = 'beasty_member'
 
 /** Their sharable code. No vowels or lookalikes: it gets read off a screen. */
 const CODE_ALPHABET = '23456789ABCDEFGHJKLMNPQRSTUVWXYZ'
-function newReferralCode(): string {
+async function newReferralCode(): Promise<string> {
   for (let attempt = 0; attempt < 12; attempt++) {
     const bytes = randomBytes(8)
     let code = ''
     for (let i = 0; i < 8; i++) code += CODE_ALPHABET[bytes[i] % CODE_ALPHABET.length]
-    const taken = db.prepare('SELECT 1 FROM members WHERE referral_code = ?').get(code)
+    const taken = await db.prepare('SELECT 1 FROM members WHERE referral_code = ?').get(code)
     if (!taken) return code
   }
   throw new Error('could not allocate a referral code')
@@ -1441,10 +1466,10 @@ interface MemberRow {
   created_at: number
 }
 
-function memberFromRequest(req: Request): MemberRow | null {
+async function memberFromRequest(req: Request): Promise<MemberRow | null> {
   const token = readCookie(req, SESSION_COOKIE)
   if (!token) return null
-  const row = db
+  const row = await db
     .prepare(
       `SELECT m.* FROM member_sessions s
        JOIN members m ON m.id = s.member_id
@@ -1462,21 +1487,25 @@ function memberFromRequest(req: Request): MemberRow | null {
  * this twice cannot mint the same milestone twice, and a referral that arrives
  * while the server is restarting is still counted the next time anyone looks.
  */
-function syncRaffleTickets(memberId: string): void {
-  const { n } = db
+async function syncRaffleTickets(memberId: string): Promise<void> {
+  const { n } = await db
     .prepare('SELECT COUNT(*) AS n FROM members WHERE referred_by = ?')
     .get(memberId) as { n: number }
   const earned = Math.floor(n / 3)
   const insert = db.prepare(
-    `INSERT OR IGNORE INTO raffle_tickets (id, member_id, earned_at_referral, created_at)
-     VALUES (?,?,?,?)`,
+    /* ON CONFLICT DO NOTHING is Postgres's INSERT OR IGNORE. The UNIQUE
+       (member_id, earned_at_referral) is what stops a milestone minting a
+       second ticket, and it is what lets this loop re-run harmlessly. */
+    `INSERT INTO raffle_tickets (id, member_id, earned_at_referral, created_at)
+     VALUES (?,?,?,?)
+     ON CONFLICT (member_id, earned_at_referral) DO NOTHING`,
   )
-  const run = db.transaction(() => {
+  const run = db.transaction(async () => {
     for (let m = 1; m <= earned; m++) {
-      insert.run(`rt_${randomBytes(8).toString('hex')}`, memberId, m * 3, Date.now())
+      await insert.run(`rt_${randomBytes(8).toString('hex')}`, memberId, m * 3, Date.now())
     }
   })
-  run()
+  await run()
 }
 
 /** Everything the client needs about the signed-in member, in one shape. */
@@ -1519,12 +1548,12 @@ function paymentLinkFor(tierId: string, member: { id: string; email: string }): 
 const paymentsLive = () =>
   !!process.env.STRIPE_PAYMENT_LINK_PASS || !!process.env.STRIPE_PAYMENT_LINK_DIAMOND
 
-function memberPayload(m: MemberRow) {
-  syncRaffleTickets(m.id)
-  const { referrals } = db
+async function memberPayload(m: MemberRow) {
+  await syncRaffleTickets(m.id)
+  const { referrals } = await db
     .prepare('SELECT COUNT(*) AS referrals FROM members WHERE referred_by = ?')
     .get(m.id) as { referrals: number }
-  const tickets = db
+  const tickets = await db
     .prepare(
       `SELECT COUNT(*) AS total,
               SUM(CASE WHEN used_at IS NULL THEN 1 ELSE 0 END) AS unused
@@ -1645,7 +1674,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   const name = str(b.name)
   if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
 
-  const existing = db.prepare('SELECT id FROM members WHERE email = ?').get(email) as
+  const existing = await db.prepare('SELECT id FROM members WHERE email = ?').get(email) as
     | { id: string }
     | undefined
   const purpose = existing ? 'signin' : 'signup'
@@ -1690,13 +1719,13 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
  * comes back, so an abandoned sign-up leaves no half-account and no address
  * squatting on the UNIQUE index that its real owner might need later.
  */
-app.post('/api/members/verify', rateLimiter(12, 6), (req, res) => {
+app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const email = typeof req.body.email === 'string' ? req.body.email.trim().toLowerCase() : ''
   const code = typeof req.body.code === 'string' ? req.body.code.replace(/\D/g, '') : ''
   if (!email || code.length !== 6) return res.status(400).json({ error: 'Enter the 6-digit code.' })
 
-  const row = db.prepare('SELECT * FROM login_codes WHERE email = ?').get(email) as
+  const row = await db.prepare('SELECT * FROM login_codes WHERE email = ?').get(email) as
     | {
         email: string
         code_hash: string
@@ -1715,7 +1744,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), (req, res) => {
   const dead = () => res.status(400).json({ error: 'That code is wrong or has expired.' })
   if (!row) return dead()
   if (row.expires_at < Date.now() || row.attempts >= MAX_CODE_ATTEMPTS) {
-    db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
+    await db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
     return dead()
   }
 
@@ -1727,24 +1756,24 @@ app.post('/api/members/verify', rateLimiter(12, 6), (req, res) => {
   const want = Buffer.from(row.code_hash, 'hex')
   const got = Buffer.from(hashToken(code), 'hex')
   if (want.length !== got.length || !timingSafeEqual(want, got)) {
-    db.prepare('UPDATE login_codes SET attempts = attempts + 1 WHERE email = ?').run(email)
+    await db.prepare('UPDATE login_codes SET attempts = attempts + 1 WHERE email = ?').run(email)
     return dead()
   }
 
-  db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
+  await db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
 
-  const existing = db.prepare('SELECT * FROM members WHERE email = ?').get(email) as
+  const existing = await db.prepare('SELECT * FROM members WHERE email = ?').get(email) as
     | MemberRow
     | undefined
 
   if (existing) {
     startSession(res, existing.id)
-    return res.json(memberPayload(existing))
+    return res.json(await memberPayload(existing))
   }
 
   const refCode = row.pending_ref ?? ''
   const referrer = refCode
-    ? (db.prepare('SELECT id FROM members WHERE referral_code = ?').get(refCode) as
+    ? (await db.prepare('SELECT id FROM members WHERE referral_code = ?').get(refCode) as
         | { id: string }
         | undefined)
     : undefined
@@ -1759,29 +1788,29 @@ app.post('/api/members/verify', rateLimiter(12, 6), (req, res) => {
     email,
     row.pending_instagram,
     row.pending_phone,
-    newReferralCode(),
+    await newReferralCode(),
     referrer?.id ?? null,
     Date.now(),
   )
   // Their referrer may have just crossed a milestone.
-  if (referrer) syncRaffleTickets(referrer.id)
+  if (referrer) await syncRaffleTickets(referrer.id)
 
   startSession(res, id)
-  const fresh = db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
-  res.status(201).json(memberPayload(fresh))
+  const fresh = await db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
+  res.status(201).json(await memberPayload(fresh))
 })
 
 /** Who am I. The client calls this on boot to decide whether to gate. */
-app.get('/api/members/me', rateLimiter(60, 20), (req, res) => {
-  const m = memberFromRequest(req)
+app.get('/api/members/me', rateLimiter(60, 20), async (req, res) => {
+  const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
-  res.json(memberPayload(m))
+  res.json(await memberPayload(m))
 })
 
 /** Sign out on this device. */
-app.post('/api/members/signout', rateLimiter(20, 10), (req, res) => {
+app.post('/api/members/signout', rateLimiter(20, 10), async (req, res) => {
   const token = readCookie(req, SESSION_COOKIE)
-  if (token) db.prepare('DELETE FROM member_sessions WHERE token_hash = ?').run(hashToken(token))
+  if (token) await db.prepare('DELETE FROM member_sessions WHERE token_hash = ?').run(hashToken(token))
   res.setHeader('Set-Cookie', `${SESSION_COOKIE}=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax`)
   res.json({ ok: true })
 })
@@ -1795,24 +1824,24 @@ app.post('/api/members/signout', rateLimiter(20, 10), (req, res) => {
  * configured the response says so, and the client shows that rather than
  * pretending a checkout exists.
  */
-app.post('/api/members/tier', rateLimiter(12, 6), (req, res) => {
-  const m = memberFromRequest(req)
+app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
+  const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const id = typeof req.body.tier === 'string' ? req.body.tier : ''
   const tier = TIERS.find((t) => t.id === id)
   if (!tier) return res.status(400).json({ error: 'Unknown membership.' })
 
-  db.prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ? WHERE id = ?').run(
+  await db.prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ? WHERE id = ?').run(
     tier.id,
     'pending',
     Date.now(),
     m.id,
   )
 
-  const row = db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
+  const row = await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
   res.json({
-    ...memberPayload(row),
+    ...(await memberPayload(row)),
     paymentLink: paymentLinkFor(tier.id, { id: m.id, email: row.email }),
   })
 })
@@ -1889,7 +1918,7 @@ if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
         */
         const customer = typeof obj.customer === 'string' ? obj.customer : ''
         if (customer) {
-          db.prepare("UPDATE members SET tier_status = 'lapsed' WHERE stripe_customer = ?").run(
+          await db.prepare("UPDATE members SET tier_status = 'lapsed' WHERE stripe_customer = ?").run(
             customer,
           )
           console.log('membership lapsed:', customer)
@@ -1919,7 +1948,7 @@ if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
  * it rather than show it.
  */
 app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
-  const m = memberFromRequest(req)
+  const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
   const origin = PROD ? `https://${req.get('host')}` : `${req.protocol}://${req.get('host')}`
   const url = `${origin}/?ref=${m.referral_code}`
@@ -1962,19 +1991,36 @@ app.use((err: unknown, _req: express.Request, res: express.Response, _next: expr
   res.status(500).json({ error: 'Internal error' })
 })
 
-app.listen(PORT, () => {
-  console.log(`api + static on http://localhost:${PORT}`)
-  if (!PAYMENTS_WIRED) {
-    console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
-  }
-  if (SIMULATE_KITCHEN) {
-    console.warn('*** KITCHEN SIMULATOR ON: ticket states advance on a timer, not by a kitchen. ***')
-  } else if (PROD) {
-    console.warn('*** No kitchen display exists. Tickets will stay queued until one does. ***')
-  }
-  if (!PROD) {
-    const rows = db.prepare('SELECT id, api_token FROM vendors').all() as { id: string; api_token: string }[]
-    console.log('vendor tokens (dev only):')
-    for (const r of rows) console.log(`  ${r.id}  ${r.api_token}`)
-  }
+/*
+  Nothing serves until the schema is there and the vendors are seeded. Listening
+  first would answer requests against missing tables for the first few hundred
+  milliseconds of every cold start — the kind of failure that only ever shows up
+  in production, and only sometimes.
+*/
+async function start() {
+  await migrate()
+  await seedVendors()
+    app.listen(PORT, async () => {
+    console.log(`api + static on http://localhost:${PORT}`)
+    if (!PAYMENTS_WIRED) {
+      console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
+    }
+    if (SIMULATE_KITCHEN) {
+      console.warn('*** KITCHEN SIMULATOR ON: ticket states advance on a timer, not by a kitchen. ***')
+    } else if (PROD) {
+      console.warn('*** No kitchen display exists. Tickets will stay queued until one does. ***')
+    }
+    if (!PROD) {
+      const rows = await db.prepare('SELECT id, api_token FROM vendors').all() as { id: string; api_token: string }[]
+      console.log('vendor tokens (dev only):')
+      for (const r of rows) console.log(`  ${r.id}  ${r.api_token}`)
+    }
+  })
+}
+
+/* Any failure here is fatal and must be loud: a server that came up without
+   its schema would answer every request with a database error. */
+start().catch((err) => {
+  console.error('failed to start:', err)
+  process.exit(1)
 })

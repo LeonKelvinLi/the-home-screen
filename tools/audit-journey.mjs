@@ -23,6 +23,8 @@ import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { createHmac } from 'node:crypto'
 import { rmSync, readFileSync, openSync } from 'node:fs'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('journey')
 
 const freePort = () =>
   new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
@@ -32,7 +34,7 @@ const DB = '/tmp/audit-journey.db', LOG = '/tmp/audit-journey.log', SECRET = 'wh
 for (const f of [DB, DB + '-wal', DB + '-shm', LOG]) { try { rmSync(f, { force: true }) } catch {} }
 const out = openSync(LOG, 'a')
 const srv = spawn('npx', ['tsx', 'server/index.ts'], { stdio: ['ignore', out, out], env: { ...process.env,
-  PORT: String(port), DATABASE_PATH: DB, NODE_ENV: 'development',
+  PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development',
   STRIPE_SECRET_KEY: 'sk_test_journey', STRIPE_WEBHOOK_SECRET: SECRET,
   STRIPE_PAYMENT_LINK_PASS: 'https://buy.stripe.com/journeypass',
   STRIPE_PAYMENT_LINK_DIAMOND: 'https://buy.stripe.com/journeydiamond?utm_source=beasty' } })

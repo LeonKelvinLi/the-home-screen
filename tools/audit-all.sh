@@ -44,6 +44,22 @@ _one() {
 }
 export -f _one
 
+# The audits talk to Postgres now, each to its own throwaway database. Locally
+# that is a container; set TEST_DATABASE_URL to point somewhere else. Checked
+# here rather than in ten separate audits, so the failure says what is wrong
+# once instead of ten confusing connection errors at random.
+: "${TEST_DATABASE_URL:=postgres://beasty:beasty@localhost:55432/postgres}"
+export TEST_DATABASE_URL
+if ! node -e "
+const pg=require('pg');const c=new pg.Client({connectionString:process.env.TEST_DATABASE_URL});
+c.connect().then(()=>c.end()).then(()=>process.exit(0)).catch(()=>process.exit(1))
+" 2>/dev/null; then
+  echo "No Postgres at TEST_DATABASE_URL. Start one with:"
+  echo "  docker run -d --name beasty-pg -e POSTGRES_PASSWORD=beasty -e POSTGRES_USER=beasty \\"
+  echo "    -e POSTGRES_DB=beasty -p 55432:5432 postgres:16-alpine"
+  exit 1
+fi
+
 JOBS=(
   "data node .verify/audit-data.mjs"
   "code /opt/homebrew/bin/python3 tools/audit-code.py"

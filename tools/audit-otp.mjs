@@ -8,12 +8,14 @@
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { rmSync, readFileSync } from 'node:fs'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('otp')
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
 const DB='/tmp/audit-otp.db', LOG='/tmp/audit-otp.log'
 for (const f of [DB,DB+'-wal',DB+'-shm',LOG]) { try { rmSync(f,{force:true}) } catch {} }
 const out=(await import('node:fs')).openSync(LOG,'a')
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,PORT:String(port),DATABASE_PATH:DB,ALLOW_MOCK_PAYMENTS:'1',NODE_ENV:'development'}})
+const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,PORT:String(port),DATABASE_URL: TESTDB.url,ALLOW_MOCK_PAYMENTS:'1',NODE_ENV:'development'}})
 const B=`http://localhost:${port}`
 for(let i=0;i<80;i++){try{if((await fetch(B+'/api/health')).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}
 

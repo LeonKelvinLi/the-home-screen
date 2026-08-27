@@ -14,13 +14,16 @@ import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { createHmac } from 'node:crypto'
 import { rmSync, readFileSync, openSync } from 'node:fs'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('payments')
+const TESTDB1 = await freshTestDb('payments1')
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
 const DB='/tmp/audit-pay.db', LOG='/tmp/audit-pay.log', SECRET='whsec_audit'
 for (const f of [DB,DB+'-wal',DB+'-shm',LOG]) { try { rmSync(f,{force:true}) } catch {} }
 const out=openSync(LOG,'a')
 const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
-  PORT:String(port), DATABASE_PATH:DB, ALLOW_MOCK_PAYMENTS:'1', NODE_ENV:'development',
+  PORT:String(port), DATABASE_URL: TESTDB.url, ALLOW_MOCK_PAYMENTS:'1', NODE_ENV:'development',
   STRIPE_SECRET_KEY:'sk_test_audit', STRIPE_WEBHOOK_SECRET:SECRET,
   STRIPE_PAYMENT_LINK_PASS:'https://buy.stripe.com/auditpass',
   /* Deliberately carries a query string already — Stripe's dashboard hands
@@ -114,7 +117,7 @@ for (const f of [DB2,DB2+'-wal',DB2+'-shm']) { try { rmSync(f,{force:true}) } ca
 const LOG2='/tmp/audit-pay2.log'
 try { rmSync(LOG2,{force:true}) } catch {}
 const out2=openSync(LOG2,'a')
-const env2={...process.env, PORT:String(port2), DATABASE_PATH:DB2, NODE_ENV:'development'}
+const env2={...process.env, PORT:String(port2), DATABASE_URL: TESTDB1.url, NODE_ENV:'development'}
 delete env2.STRIPE_PAYMENT_LINK_PASS; delete env2.STRIPE_PAYMENT_LINK_DIAMOND
 delete env2.STRIPE_SECRET_KEY; delete env2.STRIPE_WEBHOOK_SECRET
 const srv2=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out2,out2],env:env2})

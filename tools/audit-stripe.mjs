@@ -19,6 +19,8 @@ import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { createHmac } from 'node:crypto'
 import { rmSync, readFileSync, openSync } from 'node:fs'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('stripe')
 
 const WEBHOOK_SECRET = 'whsec_audit_only_not_a_real_secret'
 const fail = []
@@ -36,7 +38,7 @@ const srv = spawn('npx', ['tsx', 'server/index.ts'], {
   env: {
     ...process.env,
     PORT: String(port),
-    DATABASE_PATH: '/tmp/stripe-audit.db',
+    DATABASE_URL: TESTDB.url,
     NODE_ENV: 'development',
     ALLOW_MOCK_PAYMENTS: '1',
     /* Test-shaped values. The secret key is only ever used to construct the

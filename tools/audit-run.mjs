@@ -39,6 +39,8 @@ async function signIn(page, fields, logPath) {
 }
 
 import { createServer } from 'node:net'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('run')
 
 const freePort = () =>
   new Promise((r) => {
@@ -67,7 +69,7 @@ const srv = spawn('npx', ['tsx', 'server/index.ts'], {
   env: {
     ...process.env,
     PORT: String(port),
-    DATABASE_PATH: '/tmp/audit-run.db',
+    DATABASE_URL: TESTDB.url,
     ALLOW_MOCK_PAYMENTS: '1',
     NODE_ENV: 'development',
   },

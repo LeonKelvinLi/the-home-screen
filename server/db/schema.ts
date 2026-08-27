@@ -1,26 +1,149 @@
-import Database from 'better-sqlite3'
-import { fileURLToPath } from 'node:url'
-import { dirname, join } from 'node:path'
-
-const here = dirname(fileURLToPath(import.meta.url))
 /*
-  Configurable so a host with a mounted disk can keep the database outside the
-  deploy directory. On a host with an ephemeral filesystem (Render free tier)
-  every redeploy starts an empty database — fine for a demo, not for real orders.
-*/
-const DB_PATH = process.env.DATABASE_PATH ?? join(here, '..', '..', 'data.db')
-export const db = new Database(DB_PATH)
+  POSTGRES, NOT A FILE ON A DISK.
 
-db.pragma('journal_mode = WAL')
-db.pragma('foreign_keys = ON')
-db.pragma('busy_timeout = 5000')
+  Every account lived in a SQLite file on one Render disk. That is a single
+  machine, no point-in-time restore, and a redeploy onto a host without that
+  disk starts an empty database with every member gone. Accounts are the one
+  thing here that cannot be rebuilt from the repo, so they belong in a managed
+  database with backups.
+
+  The call sites keep their shape — `db.prepare(sql).get(...)` — because
+  rewriting thirty-five queries into a new query builder at the same time as
+  changing databases would make any resulting bug impossible to attribute. What
+  changed is that they are async now, so they are awaited.
+*/
+import { AsyncLocalStorage } from 'node:async_hooks'
+import pg from 'pg'
+
+/*
+  BIGINT COMES BACK AS A STRING BY DEFAULT, and every timestamp here is
+  `Date.now()`. Left alone, `created_at` arrives as "1787812345678", string
+  comparison decides which session is expired, and arithmetic on referral
+  milestones silently concatenates. node-postgres does this because an int8 can
+  exceed IEEE-754's exact range; ours are milliseconds since 1970, which stays
+  exact until the year 287396.
+*/
+pg.types.setTypeParser(pg.types.builtins.INT8, (v) => (v === null ? null : Number(v)))
+
+const url = process.env.DATABASE_URL
+if (!url) {
+  throw new Error(
+    'DATABASE_URL is not set. Accounts live in Postgres now; there is no file to fall back to.',
+  )
+}
+
+export const pool = new pg.Pool({
+  connectionString: url,
+  /*
+    Render's managed Postgres terminates TLS with its own certificate chain.
+    Verification is off for that host and only that host, and never when a CA
+    bundle is supplied — an unverified connection to somebody else's database
+    is not something to leave switchable by accident.
+  */
+  ssl: /\brender\.com\b/.test(url) && !process.env.PGSSLROOTCERT
+    ? { rejectUnauthorized: false }
+    : undefined,
+  max: Number(process.env.PGPOOL_MAX ?? 10),
+  idleTimeoutMillis: 30_000,
+  connectionTimeoutMillis: 10_000,
+})
+
+pool.on('error', (err) => {
+  // An idle client dying is normal on a managed host; it must not take the
+  // process with it.
+  console.error('postgres idle client error:', String(err).slice(0, 200))
+})
+
+/*
+  Which client a query runs on. Inside `db.transaction` every query has to go to
+  the ONE checked-out client that holds the open transaction — a query that
+  wandered back to the pool would run outside it and commit on its own, which is
+  the bug that makes a "transaction" a decoration.
+*/
+const current = new AsyncLocalStorage<pg.PoolClient>()
+
+/*
+  `?` to `$1`. The queries were written for SQLite's positional placeholders and
+  are left that way, because rewriting every one by hand is a chance to
+  misnumber one. There is no `?` inside a string literal in any query here; if
+  one is ever added, it needs quoting-aware substitution instead.
+*/
+const toPg = (sql: string) => {
+  let n = 0
+  return sql.replace(/\?/g, () => `$${++n}`)
+}
+
+export interface Stmt {
+  get<T = any>(...args: unknown[]): Promise<T | undefined>
+  all<T = any>(...args: unknown[]): Promise<T[]>
+  run(...args: unknown[]): Promise<{ changes: number }>
+}
+
+const exec = async (text: string, args: unknown[]) => {
+  const client = current.getStore()
+  return client ? client.query(text, args) : pool.query(text, args)
+}
+
+export const db = {
+  prepare(sql: string): Stmt {
+    const text = toPg(sql)
+    return {
+      async get<T>(...args: unknown[]) {
+        return (await exec(text, args)).rows[0] as T | undefined
+      },
+      async all<T>(...args: unknown[]) {
+        return (await exec(text, args)).rows as T[]
+      },
+      async run(...args: unknown[]) {
+        const r = await exec(text, args)
+        return { changes: r.rowCount ?? 0 }
+      },
+    }
+  },
+
+  /** Run raw SQL, for schema work only. */
+  async exec(sql: string) {
+    await exec(sql, [])
+  },
+
+  /**
+   * Everything inside runs on one client, inside one transaction, and rolls
+   * back together. The returned function is async — better-sqlite3's was not,
+   * and every caller had to change.
+   */
+  transaction<A extends unknown[], R>(fn: (...args: A) => Promise<R>) {
+    return async (...args: A): Promise<R> => {
+      const client = await pool.connect()
+      try {
+        await client.query('BEGIN')
+        const out = await current.run(client, () => fn(...args))
+        await client.query('COMMIT')
+        return out
+      } catch (err) {
+        try {
+          await client.query('ROLLBACK')
+        } catch {
+          /* the client is already broken; the original error is the useful one */
+        }
+        throw err
+      } finally {
+        client.release()
+      }
+    }
+  },
+}
 
 /**
  * Multi-tenant from the first migration. `vendor_id` on every row that carries
  * money is the difference between opening the platform to other trucks later
  * and rewriting the schema later.
+ *
+ * EVERY TIMESTAMP IS BIGINT. They are `Date.now()` milliseconds — about 1.79e12
+ * — and Postgres `integer` stops at 2.15e9, so `integer` would have thrown on
+ * the first insert. Money stays `integer`: it is in cents and nobody is taking
+ * a twenty-billion-dollar order.
  */
-db.exec(`
+export const SCHEMA = `
 CREATE TABLE IF NOT EXISTS vendors (
   id                TEXT PRIMARY KEY,
   name              TEXT NOT NULL,
@@ -28,7 +151,7 @@ CREATE TABLE IF NOT EXISTS vendors (
   payouts_enabled   INTEGER NOT NULL DEFAULT 0,
   fee_bps           INTEGER NOT NULL DEFAULT 1000,
   api_token         TEXT,
-  created_at        INTEGER NOT NULL
+  created_at        BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS orders (
@@ -47,7 +170,9 @@ CREATE TABLE IF NOT EXISTS orders (
   payment_intent TEXT,
   payment_state  TEXT NOT NULL DEFAULT 'mock',
   idempotency_key TEXT,
-  created_at     INTEGER NOT NULL
+  address        TEXT,
+  request_digest TEXT,
+  created_at     BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS tickets (
@@ -61,7 +186,10 @@ CREATE TABLE IF NOT EXISTS tickets (
   platform_fee  INTEGER NOT NULL,
   vendor_payout INTEGER NOT NULL,
   transfer_id   TEXT,
-  created_at    INTEGER NOT NULL
+  tax           INTEGER NOT NULL DEFAULT 0,
+  tip           INTEGER NOT NULL DEFAULT 0,
+  state_changed_at BIGINT NOT NULL DEFAULT 0,
+  created_at    BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS ticket_lines (
@@ -81,9 +209,6 @@ CREATE INDEX IF NOT EXISTS idx_tickets_vendor ON tickets(vendor_id, state);
 CREATE INDEX IF NOT EXISTS idx_lines_ticket   ON ticket_lines(ticket_id);
 CREATE INDEX IF NOT EXISTS idx_orders_created ON orders(created_at DESC);
 
--- Vendor applications from the empty slots on the last home-screen page.
--- A lead is worth more than an order, so this is deliberately forgiving:
--- only a name and a contact are required.
 CREATE TABLE IF NOT EXISTS applications (
   id         TEXT PRIMARY KEY,
   business   TEXT NOT NULL,
@@ -91,43 +216,12 @@ CREATE TABLE IF NOT EXISTS applications (
   contact    TEXT NOT NULL,
   city       TEXT,
   social     TEXT,
-  state      TEXT NOT NULL DEFAULT 'new'
-             CHECK (state IN ('new','contacted','accepted','declined')),
-  created_at INTEGER NOT NULL
+  state      TEXT NOT NULL DEFAULT 'new',
+  created_at BIGINT NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS idx_applications_new ON applications(state, created_at DESC);
 
-/*
-  What a business has on, on a given day.
-
-  The date column is a plain local YYYY-MM-DD rather than a timestamp, on
-  purpose: a
-  special that runs "Friday" runs on the shop's Friday, and storing an instant
-  would make it start at a different hour for anyone reading it from a different
-  timezone. A day is not a moment.
-
-  posted_by records who put it there. Partners cannot post yet — there is no
-  per-business login — so today every row is the operator relaying what a
-  business told him. When self-serve exists this is what distinguishes the two,
-  and it matters: an event is a claim made in a business's name.
-*/
-/**
- * MEMBERS, and the three things that hang off a referral.
- *
- * "referral_code" is on the member row rather than a table of its own because
- * it is one per member for life — it is printed into their QR and shared, so it
- * must never be reissued.
- *
- * "referred_by" is the whole referral graph. Counting a member's referrals is
- * one indexed COUNT against this column, which is why there is no separate
- * referrals table to drift out of step with it.
- *
- * TIER IS NOT PROOF OF PAYMENT. It records which membership they chose; nothing
- * here charges a card. "tier_status" stays 'pending' until a payment provider
- * says otherwise, so the app can never show somebody a paid perk on the
- * strength of them having clicked a button.
- */
 CREATE TABLE IF NOT EXISTS members (
   id            TEXT PRIMARY KEY,
   name          TEXT NOT NULL,
@@ -137,43 +231,23 @@ CREATE TABLE IF NOT EXISTS members (
   referral_code TEXT NOT NULL UNIQUE,
   referred_by   TEXT REFERENCES members(id),
   tier          TEXT NOT NULL DEFAULT 'free' CHECK (tier IN ('free','pass','diamond')),
-  tier_status   TEXT NOT NULL DEFAULT 'none' CHECK (tier_status IN ('none','pending','active','lapsed')),
-  tier_since    INTEGER,
-  -- Set when a checkout completes. The durable link for subscription events,
-  -- which carry no client_reference_id of their own.
+  tier_status   TEXT NOT NULL DEFAULT 'none'
+                CHECK (tier_status IN ('none','pending','active','lapsed')),
+  tier_since    BIGINT,
   stripe_customer TEXT,
-  created_at    INTEGER NOT NULL
+  created_at    BIGINT NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS idx_members_referred_by ON members(referred_by);
 CREATE INDEX IF NOT EXISTS idx_members_code ON members(referral_code);
 
 /*
-  A session is a hashed token, never the token itself — the same treatment the
-  vendor api_token gets. A stolen database read must not hand somebody a working
-  login.
+  ONE-TIME CODES, for both signing up and signing back in. Stored HASHED, like
+  every other credential here: a stolen database read must not hand somebody a
+  working login. The pending_* columns hold what a new member typed while they
+  wait, so an abandoned sign-up leaves no half-account squatting on the UNIQUE
+  email index. attempts is a lockout, not a counter.
 */
-/**
- * ONE-TIME CODES, for both signing up and signing back in.
- *
- * Emailing a code is what makes a SECOND DEVICE safe. Before this, the session
- * cookie was the only credential, so signing in anywhere else was impossible and
- * had to be refused — "type your email to sign in" with no proof of ownership
- * would hand anybody an account, with its referral credit and its raffle
- * tickets, for the price of guessing an address. A code proves the address.
- *
- * THE CODE IS STORED HASHED, like every other credential here. A stolen
- * database read must not hand somebody a working login.
- *
- * The pending_* columns hold what a NEW member typed while they wait for their
- * code. Nothing is written to members until the address is proven, so an
- * abandoned sign-up leaves no half-account and no email address squatting on a
- * UNIQUE index that the real owner might later need.
- *
- * attempts is a lockout, not a counter. Five wrong guesses kills the code —
- * six digits is a million combinations, which is plenty against a human and
- * nothing at all against a script left running overnight.
- */
 CREATE TABLE IF NOT EXISTS login_codes (
   email             TEXT PRIMARY KEY,
   code_hash         TEXT NOT NULL,
@@ -183,36 +257,54 @@ CREATE TABLE IF NOT EXISTS login_codes (
   pending_phone     TEXT,
   pending_ref       TEXT,
   attempts          INTEGER NOT NULL DEFAULT 0,
-  created_at        INTEGER NOT NULL,
-  expires_at        INTEGER NOT NULL
+  created_at        BIGINT NOT NULL,
+  expires_at        BIGINT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS member_sessions (
   token_hash TEXT PRIMARY KEY,
   member_id  TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
-  created_at INTEGER NOT NULL,
-  expires_at INTEGER NOT NULL
+  created_at BIGINT NOT NULL,
+  expires_at BIGINT NOT NULL
 );
 
 CREATE INDEX IF NOT EXISTS idx_sessions_member ON member_sessions(member_id);
 
-/**
- * Raffle tickets, one row each.
- *
- * Rows rather than a counter on the member, because "these may be saved and
- * used to enter anytime for our monthly raffle event" means a ticket is a thing
- * with a life: earned, then later spent on a named draw. A counter cannot say
- * which draw a ticket went into.
- *
- * "earned_at_referral" is the referral count that triggered it — 3, 6, 9 — so
- * the same milestone can never mint two tickets.
- */
+/*
+  A LINKED SIGN-IN PROVIDER — Google, Facebook or Apple.
+
+  Its own table rather than columns on members, because one person may link
+  more than one, and because the provider's id for them is the only durable
+  key: an email can change at the provider and must not silently orphan or,
+  worse, merge two accounts.
+
+  UNIQUE (provider, subject) is the whole safety property. subject is the
+  provider's own stable id for that user — Google's sub, Apple's sub,
+  Facebook's id — never the email.
+*/
+CREATE TABLE IF NOT EXISTS member_identities (
+  id          TEXT PRIMARY KEY,
+  member_id   TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  provider    TEXT NOT NULL CHECK (provider IN ('google','facebook','apple')),
+  subject     TEXT NOT NULL,
+  email       TEXT,
+  created_at  BIGINT NOT NULL,
+  UNIQUE (provider, subject)
+);
+
+CREATE INDEX IF NOT EXISTS idx_identities_member ON member_identities(member_id);
+
+/*
+  Raffle tickets, one row each — a ticket is a thing with a life: earned, then
+  later spent on a named draw. earned_at_referral is the referral count that
+  triggered it, so the same milestone can never mint two tickets.
+*/
 CREATE TABLE IF NOT EXISTS raffle_tickets (
   id                 TEXT PRIMARY KEY,
   member_id          TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
   earned_at_referral INTEGER NOT NULL,
-  created_at         INTEGER NOT NULL,
-  used_at            INTEGER,
+  created_at         BIGINT NOT NULL,
+  used_at            BIGINT,
   used_for           TEXT,
   UNIQUE (member_id, earned_at_referral)
 );
@@ -228,55 +320,40 @@ CREATE TABLE IF NOT EXISTS events (
   time_text  TEXT,
   posted_by  TEXT NOT NULL DEFAULT 'operator'
              CHECK (posted_by IN ('operator','partner')),
-  created_at INTEGER NOT NULL
+  created_at BIGINT NOT NULL
 );
 
--- The calendar always reads a date range, never the whole table.
 CREATE INDEX IF NOT EXISTS idx_events_date ON events(date);
-`)
+
+/*
+  Additive migrations. Postgres has ADD COLUMN IF NOT EXISTS, so unlike the
+  SQLite version this needs no pragma inspection — but it still has to run
+  after the CREATEs, because on an existing database CREATE TABLE IF NOT EXISTS
+  is a no-op and adds nothing.
+*/
+ALTER TABLE tickets ADD COLUMN IF NOT EXISTS tax INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE tickets ADD COLUMN IF NOT EXISTS tip INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE tickets ADD COLUMN IF NOT EXISTS state_changed_at BIGINT NOT NULL DEFAULT 0;
+ALTER TABLE orders  ADD COLUMN IF NOT EXISTS idempotency_key TEXT;
+ALTER TABLE orders  ADD COLUMN IF NOT EXISTS address TEXT;
+ALTER TABLE orders  ADD COLUMN IF NOT EXISTS request_digest TEXT;
+ALTER TABLE vendors ADD COLUMN IF NOT EXISTS api_token TEXT;
+ALTER TABLE members ADD COLUMN IF NOT EXISTS stripe_customer TEXT;
+
+UPDATE tickets SET state_changed_at = created_at WHERE state_changed_at = 0;
+
+CREATE INDEX IF NOT EXISTS idx_tickets_open ON tickets(state, state_changed_at);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_idem ON orders(idempotency_key)
+  WHERE idempotency_key IS NOT NULL;
+`
 
 /**
- * Additive migrations. SQLite has no `ADD COLUMN IF NOT EXISTS`, so check
- * pragma first — this file runs on every boot against an existing data.db.
+ * Create everything, once, before the server serves anything.
+ *
+ * Awaited at boot rather than run at import: an import cannot be awaited, so a
+ * top-level schema build would race the first request and fail intermittently
+ * on a cold start — the worst kind of bug to reproduce.
  */
-function addColumn(table: string, column: string, decl: string) {
-  const cols = db.prepare(`PRAGMA table_info(${table})`).all() as { name: string }[]
-  if (!cols.some((c) => c.name === column)) {
-    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${decl}`)
-  }
+export async function migrate() {
+  await pool.query(SCHEMA)
 }
-
-// Tax and tip are collected per order but owed per vendor. Without these the
-// platform silently keeps both — see the allocation in index.ts.
-addColumn('tickets', 'tax', 'INTEGER NOT NULL DEFAULT 0')
-addColumn('tickets', 'tip', 'INTEGER NOT NULL DEFAULT 0')
-// The kitchen simulator must measure from the last transition, not from order
-// creation, or it stampedes over whatever a real kitchen just entered.
-addColumn('tickets', 'state_changed_at', 'INTEGER NOT NULL DEFAULT 0')
-addColumn('orders', 'idempotency_key', 'TEXT')
-addColumn('vendors', 'api_token', 'TEXT')
-// Delivery was selectable and billable with nowhere to send the food.
-addColumn('orders', 'address', 'TEXT')
-// Binds an idempotency key to the cart it was used for, so reusing a key with
-// a different order is a 409 rather than a silently discarded order.
-addColumn('orders', 'request_digest', 'TEXT')
-/*
-  The live database already has `members` from the deploy before this one, and
-  CREATE TABLE IF NOT EXISTS does not add columns to a table that exists. Without
-  this line the webhook's UPDATE ... WHERE stripe_customer would throw on every
-  subscription event in production while passing perfectly on a fresh local db —
-  the exact shape of bug that only appears after deploying.
-*/
-addColumn('members', 'stripe_customer', 'TEXT')
-
-/*
-  Indexes on migrated columns must be created AFTER the ALTERs above. On an
-  existing data.db the CREATE TABLE is a no-op, so an index declared alongside
-  it would reference a column that does not exist yet.
-*/
-db.exec(`
-  UPDATE tickets SET state_changed_at = created_at WHERE state_changed_at = 0;
-  CREATE INDEX IF NOT EXISTS idx_tickets_open ON tickets(state, state_changed_at);
-  CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_idem ON orders(idempotency_key)
-    WHERE idempotency_key IS NOT NULL;
-`)

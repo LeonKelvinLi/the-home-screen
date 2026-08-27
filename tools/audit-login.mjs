@@ -11,6 +11,8 @@ import { chromium } from 'playwright'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { rmSync, readFileSync, openSync } from 'node:fs'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('login')
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
 const DB='/tmp/audit-login.db', LOG='/tmp/audit-login.log'
@@ -19,7 +21,7 @@ const out=openSync(LOG,'a')
 /* Links configured, because the screen under test is the one that has to say
    so — with none set it would pass by saying nothing. */
 const srv=spawn('npx',['tsx','server/index.ts'],{stdio:['ignore',out,out],env:{...process.env,
-  PORT:String(port), DATABASE_PATH:DB, NODE_ENV:'development',
+  PORT:String(port), DATABASE_URL: TESTDB.url, NODE_ENV:'development',
   STRIPE_PAYMENT_LINK_PASS:'https://buy.stripe.com/loginpass',
   STRIPE_PAYMENT_LINK_DIAMOND:'https://buy.stripe.com/logindiamond'}})
 const base=`http://localhost:${port}`

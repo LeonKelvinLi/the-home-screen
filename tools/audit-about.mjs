@@ -5,9 +5,11 @@ import { chromium } from 'playwright'
 import { PNG } from 'pngjs'
 import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
+import { freshTestDb } from './pgtest.mjs'
+const TESTDB = await freshTestDb('about')
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
-const srv=spawn('npx',['tsx','server/index.ts'],{stdio:'ignore',env:{...process.env,PORT:String(port),DATABASE_PATH:'/tmp/about.db',NODE_ENV:'development'}})
+const srv=spawn('npx',['tsx','server/index.ts'],{stdio:'ignore',env:{...process.env,PORT:String(port),DATABASE_URL: TESTDB.url,NODE_ENV:'development'}})
 const base=`http://localhost:${port}`
 for(let i=0;i<80;i++){try{if((await fetch(base+'/api/health')).ok)break}catch{await new Promise(r=>setTimeout(r,250))}}
 const b=await chromium.launch()
