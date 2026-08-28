@@ -638,4 +638,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-services2-6': 'b_olesiacakestudio', // a class, not a bakery
   'beasty-online-14': 'b_glowpaws', //            pet seat taken
   'beasty-online-15': 'b_drypup', //              pet seat taken; same owner as above
+  /* PuppiePack, 2026-08-28 00:55 — the sixth pet business on a sheet with one
+     pet seat. Same note as GlowPaws and DryPup applies. */
+  'beasty-online-16': 'b_puppiepack',
 }

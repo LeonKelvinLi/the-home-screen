@@ -3001,4 +3001,45 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'puppiepack',
+    name: 'PuppiePack',
+    label: 'PuppiePack',
+    cuisine: 'Pet carrier backpacks',
+    tagline: 'A mesh carrier backpack for small and medium pets.',
+    color: '#1B1B1F|#F2A93B',
+    prep: 0,
+    category: 'Pet goods',
+    site: 'https://www.puppiepack.store/',
+    clip: {
+      href: 'https://www.instagram.com/reel/DbtLc7eROjF/',
+      credit: 'Posted by PuppiePack',
+      platform: 'Instagram',
+    },
+    /*
+      NO ICON AND NOTHING PROMOTIONAL, for the same reasons as GlowPaws and
+      DryPup. The only images on their site are their storefront builder's own
+      theme assets — shipping a ShopBase theme file as their app icon would be
+      the Astra mistake again — so the app draws its own mark until they send
+      artwork.
+
+      Their domain was registered 2026-06-23, two months ago, and the store runs
+      on ShopBase. That is not disqualifying and it is not hidden here; it is
+      why nothing on this page repeats their marketing. The product and the
+      price are theirs and real.
+    */
+    logoTemplate: 'badge',
+    logoFace: 'grotesk',
+    logoInitials: 'PP',
+    quoteOnly:
+      'A breathable mesh carrier backpack for small and medium pets, up to about nine kilos, sold direct online. This is their own published price. BEASTY has not spoken to them: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [['Carrier backpack', 'Their published price', 9998]],
+      },
+    ],
+    items: [],
+  },
 ]
