@@ -840,7 +840,7 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
   }
 
   const write = db.transaction(async () => {
-    db.prepare(
+    await db.prepare(
       `INSERT INTO orders (id, code, customer_name, customer_phone, fulfilment, subtotal, tax,
         service_fee, delivery_fee, tip, total, eta_minutes, payment_state, idempotency_key,
         address, request_digest, created_at)
@@ -1104,7 +1104,7 @@ if (SIMULATE_KITCHEN) {
         if ((now - r.state_changed_at) / 1000 <= due[r.state]) continue
         const next = NEXT_STATE[r.state]?.[0]
         if (!next) continue
-        db.prepare(
+        await db.prepare(
           'UPDATE tickets SET state = ?, state_changed_at = ? WHERE id = ? AND state = ?',
         ).run(next, now, r.id, r.state)
       }
@@ -1124,7 +1124,7 @@ const MAX_APP_FIELD = 120
  * purpose — a half-filled lead from a food truck is still a lead — but bounded,
  * because this is an unauthenticated write like the order endpoint.
  */
-app.post('/api/applications', rateLimiter(6, 3), (req, res) => {
+app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
   const b = req.body
   const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_APP_FIELD) : '')
@@ -1134,7 +1134,7 @@ app.post('/api/applications', rateLimiter(6, 3), (req, res) => {
   if (business.length < 2) return res.status(400).json({ error: 'Business name is required.' })
   if (contact.length < 5) return res.status(400).json({ error: 'A phone or email is required.' })
 
-  db.prepare(
+  await db.prepare(
     `INSERT INTO applications (id, business, cuisine, contact, city, social, created_at)
      VALUES (?,?,?,?,?,?,?)`,
   ).run(
@@ -1299,7 +1299,7 @@ app.get('/api/events', rateLimiter(120, 40), async (req, res) => {
  * happily carry an event for a business that does not exist on the app, which
  * is a listing nobody can verify and nobody can take down.
  */
-app.post('/api/events', rateLimiter(30, 10), (req, res) => {
+app.post('/api/events', rateLimiter(30, 10), async (req, res) => {
   if (OPERATOR_TOKEN.length < 16) {
     return res.status(503).json({ error: 'No operator token configured.' })
   }
@@ -1320,7 +1320,7 @@ app.post('/api/events', rateLimiter(30, 10), (req, res) => {
   }
 
   const id = `ev_${randomBytes(8).toString('hex')}`
-  db.prepare(
+  await db.prepare(
     `INSERT INTO events (id, date, brand_id, title, detail, time_text, posted_by, created_at)
      VALUES (?,?,?,?,?,?,'operator',?)`,
   ).run(id, date, brandId, title, detail || null, time || null, Date.now())
@@ -1415,10 +1415,10 @@ const hashToken = (t: string) => createHash('sha256').update(t).digest('hex')
   dependency is its own risk. httpOnly keeps it away from any script; SameSite
   Lax still sends it on the top-level navigation a shared referral link is.
 */
-function startSession(res: Response, memberId: string): void {
+async function startSession(res: Response, memberId: string): Promise<void> {
   const token = randomBytes(32).toString('base64url')
   const now = Date.now()
-  db.prepare(
+  await db.prepare(
     'INSERT INTO member_sessions (token_hash, member_id, created_at, expires_at) VALUES (?,?,?,?)',
   ).run(hashToken(token), memberId, now, now + SESSION_DAYS * 864e5)
   res.cookie?.(SESSION_COOKIE, token, {
@@ -1681,7 +1681,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
 
   const code = newLoginCode()
   const now = Date.now()
-  db.prepare(
+  await db.prepare(
     `INSERT INTO login_codes
        (email, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
         attempts, created_at, expires_at)
@@ -1767,7 +1767,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     | undefined
 
   if (existing) {
-    startSession(res, existing.id)
+    await startSession(res, existing.id)
     return res.json(await memberPayload(existing))
   }
 
@@ -1779,7 +1779,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     : undefined
 
   const id = `mb_${randomBytes(8).toString('hex')}`
-  db.prepare(
+  await db.prepare(
     `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, created_at)
      VALUES (?,?,?,?,?,?,?,?)`,
   ).run(
@@ -1795,7 +1795,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   // Their referrer may have just crossed a milestone.
   if (referrer) await syncRaffleTickets(referrer.id)
 
-  startSession(res, id)
+  await startSession(res, id)
   const fresh = await db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
   res.status(201).json(await memberPayload(fresh))
 })
@@ -1844,6 +1844,106 @@ app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
     ...(await memberPayload(row)),
     paymentLink: paymentLinkFor(tier.id, { id: m.id, email: row.email }),
   })
+})
+
+
+/* ---------- likes, saves and shares ---------- */
+
+/*
+  THE COUNTS THE OPERATOR ASKED FOR, and the reason they are computed here
+  rather than in the browser.
+
+  His ask: a heart, and a number on the heart, the star and the share — "It
+  would definitely tell our Affiliates how much users see them and like, add to
+  favorites and share their page." Favourites were localStorage until now, which
+  is per-device and per-browser: there was no honest number to show anybody.
+
+  ONE ROW PER ACTOR PER BRAND PER KIND. The count is how many PEOPLE, never how
+  many taps. A business owner is going to be shown these numbers, and a figure
+  that a bored thumb can run up is not evidence of anything.
+*/
+const DEVICE_COOKIE = 'beasty_device'
+const SIGNAL_KINDS = new Set(['like', 'favourite', 'share'])
+
+/**
+ * Who is doing this — the member if signed in, otherwise the device.
+ *
+ * The device token is minted here and set httpOnly: the client never needs to
+ * read it, and a value the page cannot see is a value a page cannot forge into
+ * somebody else's. Stored hashed, like every other token in this file.
+ */
+function actorFor(req: Request, res: Response, memberId: string | null): string {
+  if (memberId) return `m:${memberId}`
+  let device = readCookie(req, DEVICE_COOKIE)
+  if (!device) {
+    device = randomBytes(16).toString('base64url')
+    res.cookie?.(DEVICE_COOKIE, device, {
+      httpOnly: true,
+      sameSite: 'lax',
+      secure: PROD,
+      maxAge: 365 * 864e5,
+      path: '/',
+    })
+  }
+  return `d:${hashToken(device)}`
+}
+
+async function signalCounts(brandId: string, actor: string) {
+  const rows = await db
+    .prepare('SELECT kind, COUNT(*) AS n FROM brand_signals WHERE brand_id = ? GROUP BY kind')
+    .all(brandId) as { kind: string; n: number }[]
+  const mine = await db
+    .prepare('SELECT kind FROM brand_signals WHERE brand_id = ? AND actor = ?')
+    .all(brandId, actor) as { kind: string }[]
+  const count = { like: 0, favourite: 0, share: 0 }
+  for (const r of rows) if (r.kind in count) (count as any)[r.kind] = Number(r.n)
+  return {
+    counts: count,
+    mine: {
+      like: mine.some((m) => m.kind === 'like'),
+      favourite: mine.some((m) => m.kind === 'favourite'),
+      share: mine.some((m) => m.kind === 'share'),
+    },
+  }
+}
+
+app.get('/api/brands/:id/signals', rateLimiter(240, 60), async (req, res) => {
+  const brandId = String(req.params.id)
+  const m = await memberFromRequest(req)
+  const actor = actorFor(req, res, m?.id ?? null)
+  res.json(await signalCounts(brandId, actor))
+})
+
+/*
+  Toggle for a heart or a star; a share is recorded once and stays.
+
+  Un-sharing is not a thing that happened — the page did go out — so the row is
+  left alone rather than letting a second tap of Share decrement a number an
+  affiliate is being shown.
+*/
+app.post('/api/brands/:id/signals/:kind', rateLimiter(60, 20), async (req, res) => {
+  const brandId = String(req.params.id)
+  const kind = String(req.params.kind)
+  if (!SIGNAL_KINDS.has(kind)) return res.status(400).json({ error: 'Unknown signal.' })
+
+  const m = await memberFromRequest(req)
+  const actor = actorFor(req, res, m?.id ?? null)
+  const existing = await db
+    .prepare('SELECT id FROM brand_signals WHERE brand_id = ? AND kind = ? AND actor = ?')
+    .get(brandId, kind, actor) as { id: string } | undefined
+
+  if (existing && kind !== 'share') {
+    await db.prepare('DELETE FROM brand_signals WHERE id = ?').run(existing.id)
+  } else if (!existing) {
+    await db
+      .prepare(
+        `INSERT INTO brand_signals (id, brand_id, kind, actor, member_id, created_at)
+         VALUES (?,?,?,?,?,?)
+         ON CONFLICT (brand_id, kind, actor) DO NOTHING`,
+      )
+      .run(`bs_${randomBytes(8).toString('hex')}`, brandId, kind, actor, m?.id ?? null, Date.now())
+  }
+  res.json(await signalCounts(brandId, actor))
 })
 
 /**
@@ -1903,7 +2003,7 @@ if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
           nobody is paying for.
         */
         const customer = typeof obj.customer === 'string' ? obj.customer : null
-        db.prepare(
+        await db.prepare(
           "UPDATE members SET tier_status = 'active', tier_since = ?, stripe_customer = COALESCE(?, stripe_customer) WHERE id = ?",
         ).run(Date.now(), customer, memberId)
         console.log('membership active:', memberId)

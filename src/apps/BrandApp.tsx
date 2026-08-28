@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { ItemSheet } from './ItemSheet'
 import { BrandLogo } from '../ios/BrandLogo'
@@ -7,6 +7,8 @@ import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { readableOn } from '../ios/contrast'
 import { isFavorite, toggleFavorite } from '../lib/favorites'
+import { EMPTY_SIGNALS, formatCount, readSignals, sendSignal } from '../lib/signals'
+import type { SignalKind, Signals } from '../lib/signals'
 import type { MenuItem } from '../data/brands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
@@ -25,6 +27,38 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   /* brand?.id, not brand.id — brandById can return undefined and the guard for
      that is below these hooks, which cannot move above them. */
   const [starred, setStarred] = useState(() => isFavorite(brand?.id ?? ''))
+  /*
+    The counts the operator asked for, three times. They come from the server
+    because a favourite used to be localStorage — real for the one phone that
+    set it and meaningless to the business being shown the number.
+
+    `null` until the first read lands, so a page never flashes a zero it has not
+    actually checked.
+  */
+  const [signals, setSignals] = useState<Signals | null>(null)
+  useEffect(() => {
+    let live = true
+    if (!brand?.id) return
+    void readSignals(brand.id).then((s) => { if (live) setSignals(s) })
+    return () => { live = false }
+  }, [brand?.id])
+
+  const tap = async (kind: SignalKind) => {
+    if (!brand?.id) return
+    // Optimistic, then corrected by the server's own answer: a tap that waits on
+    // a round trip feels broken on a phone.
+    setSignals((prev) => {
+      const base = prev ?? EMPTY_SIGNALS
+      if (kind === 'share' && base.mine.share) return base
+      const on = kind !== 'share' && base.mine[kind]
+      return {
+        counts: { ...base.counts, [kind]: Math.max(0, base.counts[kind] + (on ? -1 : 1)) },
+        mine: { ...base.mine, [kind]: !on },
+      }
+    })
+    const fresh = await sendSignal(brand.id, kind)
+    if (fresh) setSignals(fresh)
+  }
   /** The week's picks, collapsed by default. See the bar below. */
   const [picksOpen, setPicksOpen] = useState(false)
   /** Their video, behind a bar — see the clip block below. */
@@ -144,62 +178,109 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               was from a Recent row, so a business you opened from search could
               not be kept at all.
             */}
-            <button
-              className={`brand-star${starred ? ' is-on' : ''}`}
-              onClick={() =>
-                setStarred(
-                  toggleFavorite({
-                    brandId: brand.id,
-                    name: brand.name,
-                    cuisine: brand.cuisine,
-                    /* The snapshot stores a COLOUR, not the logo object — see
-                       favorites.ts: the landing screen draws this list and
-                       pulling brand art in there would drag the whole catalogue
-                       into the first chunk a customer downloads. */
-                    color: brand.logo.bg.split('|')[0],
-                  }),
-                )
-              }
-              aria-pressed={starred}
-              aria-label={starred ? `Remove ${brand.name} from favourites` : `Save ${brand.name} to favourites`}
-              style={{ color: ink.fg }}
-            >
-              <svg viewBox="0 0 24 24" width="19" height="19" fill={starred ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.6 9.7l5.8-.8Z" />
-              </svg>
-            </button>
             {/*
-              Share, where a customer already is when they decide someone else
-              needs to see this. Top-right of the hero rather than the foot of
-              the menu: the moment you want to send a place to somebody is the
-              moment you arrive, not after scrolling past nine prices.
+              One row, not three absolutely-positioned circles.
 
-              Web Share gives the real iOS sheet; the clipboard is the fallback
-              on a desktop browser that has none.
+              The counts made the old layout impossible: each control was pinned
+              to its own `right:` offset, and a number that grows from 0 to 1.2k
+              changes the width of the thing it sits in. A flex row lets them size
+              themselves and keeps the gaps even whatever the numbers say.
             */}
-            <button
-              className="brand-share"
-              onClick={async () => {
-                const url = `${location.origin}/?b=${encodeURIComponent(brand.id)}`
-                try {
-                  if (navigator.share) await navigator.share({ title: brand.name, url })
-                  else {
-                    await navigator.clipboard.writeText(url)
-                    setShared(true)
-                    window.setTimeout(() => setShared(false), 2000)
+            <div className="brand-acts">
+              {/*
+                THE HEART, and the numbers beside all three.
+
+                Both are his asks — "can you add a 🤍 button so users can like?"
+                and "add the numerical count for all these buttons" — and he left
+                the placement to me: "I'm not sure where you wanna put the ❤️.
+                Use your best judgment."
+
+                Heart, star, share, in that order, because that is the order of
+                commitment: like it, keep it, send it to somebody. The heart goes
+                first because it is the cheapest tap and the one most people will
+                make, and putting the cheapest action nearest the thumb is what
+                every app he is comparing this to does.
+              */}
+              <button
+                className={`brand-like${signals?.mine.like ? ' is-on' : ''}`}
+                onClick={() => void tap('like')}
+                aria-pressed={!!signals?.mine.like}
+                aria-label={signals?.mine.like ? `Unlike ${brand.name}` : `Like ${brand.name}`}
+                style={{ color: ink.fg }}
+              >
+                <svg viewBox="0 0 24 24" width="19" height="19" fill={signals?.mine.like ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 20.3 4.7 13a4.6 4.6 0 0 1 0-6.5 4.6 4.6 0 0 1 6.5 0l.8.8.8-.8a4.6 4.6 0 0 1 6.5 0 4.6 4.6 0 0 1 0 6.5Z" />
+                </svg>
+                {signals && <span className="brand-act-n">{formatCount(signals.counts.like)}</span>}
+              </button>
+              <button
+                className={`brand-star${starred ? ' is-on' : ''}`}
+                onClick={() => {
+                  /* Two things now: the server-side count an affiliate is shown,
+                     and the local Favorites list the landing screen draws from.
+                     They are deliberately separate — the list has to work with no
+                     network, and the count has to be true across every device. */
+                  void tap('favourite')
+                  setStarred(
+                    toggleFavorite({
+                      brandId: brand.id,
+                      name: brand.name,
+                      cuisine: brand.cuisine,
+                      /* The snapshot stores a COLOUR, not the logo object — see
+                         favorites.ts: the landing screen draws this list and
+                         pulling brand art in there would drag the whole catalogue
+                         into the first chunk a customer downloads. */
+                      color: brand.logo.bg.split('|')[0],
+                    }),
+                  )
+                }}
+                aria-pressed={starred}
+                aria-label={starred ? `Remove ${brand.name} from favourites` : `Save ${brand.name} to favourites`}
+                style={{ color: ink.fg }}
+              >
+                <svg viewBox="0 0 24 24" width="19" height="19" fill={starred ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 3.6l2.6 5.3 5.8.8-4.2 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8L3.6 9.7l5.8-.8Z" />
+                </svg>
+                {signals && <span className="brand-act-n">{formatCount(signals.counts.favourite)}</span>}
+              </button>
+              {/*
+                Share, where a customer already is when they decide someone else
+                needs to see this. Top-right of the hero rather than the foot of
+                the menu: the moment you want to send a place to somebody is the
+                moment you arrive, not after scrolling past nine prices.
+
+                Web Share gives the real iOS sheet; the clipboard is the fallback
+                on a desktop browser that has none.
+              */}
+              <button
+                className="brand-share"
+                onClick={async () => {
+                  const url = `${location.origin}/?b=${encodeURIComponent(brand.id)}`
+                  /* Counted before the sheet opens: iOS never tells the page
+                     whether somebody actually sent it, so the honest thing to
+                     count is the intent, once per person. */
+                  void tap('share')
+                  try {
+                    if (navigator.share) await navigator.share({ title: brand.name, url })
+                    else {
+                      await navigator.clipboard.writeText(url)
+                      setShared(true)
+                      window.setTimeout(() => setShared(false), 2000)
+                    }
+                  } catch {
+                    /* Sheet dismissed. Not an error worth a message. */
                   }
-                } catch {
-                  /* Sheet dismissed. Not an error worth a message. */
-                }
-              }}
-              aria-label={`Share ${brand.name}`}
-              style={{ color: ink.fg }}
-            >
-              <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M12 15V3M12 3 8 7M12 3l4 4" />
-                <path d="M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" />
-              </svg>
-            </button>
+                }}
+                aria-label={`Share ${brand.name}`}
+                style={{ color: ink.fg }}
+              >
+                <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M12 15V3M12 3 8 7M12 3l4 4" />
+                  <path d="M4 13v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-6" />
+                </svg>
+                {signals && <span className="brand-act-n">{formatCount(signals.counts.share)}</span>}
+              </button>
+            </div>
             {shared && (
               <span className="brand-share-toast" role="status">
                 Link copied

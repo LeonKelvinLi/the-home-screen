@@ -69,6 +69,7 @@ JOBS=(
   "login node tools/audit-login.mjs"
   "payments node tools/audit-payments.mjs"
   "stripe node tools/audit-stripe.mjs"
+  "signals node tools/audit-signals.mjs"
   "referral node tools/audit-referral.mjs"
   "member-ui node tools/audit-member-ui.mjs"
   "about node tools/audit-about.mjs"

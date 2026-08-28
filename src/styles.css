@@ -1176,7 +1176,15 @@ textarea {
 }
 
 .brand-hero {
-  padding: 22px 20px 20px;
+  /*
+    64px of top padding, not 22: the like/save/share row lives in that band.
+
+    It was two 44px circles pinned to the right and the centred mark cleared
+    them easily. Three pills carrying counts reach much further left, and at
+    22px the heart sat on top of the business's own logo. The row gets its own
+    strip and the mark starts under it.
+  */
+  padding: 64px 20px 20px;
   color: #fff;
   text-align: center;
 }
@@ -7162,39 +7170,67 @@ textarea {
   between the two states: colour alone would put the whole signal on a hue, and
   this button is over a different brand colour on every page.
 */
-.brand-star {
+/*
+  LIKE, SAVE, SHARE — one row, each carrying its own count.
+
+  These used to be two circles pinned to their own `right:` offsets. A count
+  that grows from 0 to 1.2k changes the width of the control it lives in, so
+  fixed offsets would have them drifting into each other. A flex row sizes each
+  pill to its own number and keeps the gaps even.
+
+  44px MINIMUM ON THE SHORT SIDE, still. A pill grows sideways with its number
+  and never shrinks below the height a fingertip needs — the design audit checks
+  this and it is the reason the padding is expressed around a 44px core rather
+  than as a total.
+*/
+.brand-acts {
   position: absolute;
   top: 10px;
-  right: 60px;
-  width: 44px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+}
+
+.brand-like,
+.brand-star,
+.brand-share {
+  min-width: 44px;
   height: 44px;
-  display: grid;
-  place-items: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
   border: 0;
-  border-radius: 50%;
+  border-radius: 22px;
   background: rgba(255, 255, 255, 0.16);
   cursor: pointer;
-  padding: 0;
+  padding: 0 12px;
+  /* backdrop-filter, because these sit over a photograph on most brands and a
+     flat 16% white goes invisible on a pale hero. */
+  backdrop-filter: blur(8px);
+}
+
+/* The number. Tabular figures so a count ticking 9 -> 10 does not jog the
+   icon beside it. */
+.brand-act-n {
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+.brand-like.is-on {
+  background: rgba(255, 255, 255, 0.28);
 }
 
 .brand-star.is-on {
   background: rgba(255, 255, 255, 0.28);
 }
 
-.brand-share {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border: 0;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.16);
-  cursor: pointer;
-  padding: 0;
-}
+
 
 .brand-share:active {
   background: rgba(255, 255, 255, 0.28);

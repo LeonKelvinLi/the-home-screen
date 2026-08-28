@@ -311,6 +311,39 @@ CREATE TABLE IF NOT EXISTS raffle_tickets (
 
 CREATE INDEX IF NOT EXISTS idx_tickets_member ON raffle_tickets(member_id);
 
+/*
+  LIKES, SAVES AND SHARES — the counts the operator asked for three times.
+
+  His reason, in his words: "It would definitely tell our Affiliates how much
+  users see them and like, add to favorites and share their page." So these are
+  numbers a business owner will be shown, which decides two things about how
+  they are counted.
+
+  ONE ROW PER ACTOR PER BRAND PER KIND, enforced by the UNIQUE below. A count is
+  "how many people", never "how many taps" — a number a bored thumb can inflate
+  is not evidence of anything, and showing it to an affiliate would be a lie
+  with a specific victim.
+
+  brand_id is NOT a foreign key: brands live in the repo, not in this database,
+  so there is no table to point at. It is their stable id string.
+
+  actor is a member id when somebody is signed in, and otherwise a hash of a
+  random per-device token the client stores. Hashed because it is written on
+  every tap and never needs to be read back — the same treatment sessions and
+  login codes get.
+*/
+CREATE TABLE IF NOT EXISTS brand_signals (
+  id         TEXT PRIMARY KEY,
+  brand_id   TEXT NOT NULL,
+  kind       TEXT NOT NULL CHECK (kind IN ('like','favourite','share')),
+  actor      TEXT NOT NULL,
+  member_id  TEXT REFERENCES members(id) ON DELETE SET NULL,
+  created_at BIGINT NOT NULL,
+  UNIQUE (brand_id, kind, actor)
+);
+
+CREATE INDEX IF NOT EXISTS idx_signals_brand ON brand_signals(brand_id, kind);
+
 CREATE TABLE IF NOT EXISTS events (
   id         TEXT PRIMARY KEY,
   date       TEXT NOT NULL,
