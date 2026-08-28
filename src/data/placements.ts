@@ -606,4 +606,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-services2-2': 'b_emporiumsf', //  arcade bar; no category fits
   'daly-city-goods-5': 'b_kingswcpizza', //        Italian, nearest of a bad set
   'beasty-online-19': 'b_petersdesigncompany', //  Art prints; held, not taken
+  /* Tiny Wheels, 2026-08-28, approved with its reviews and its trademarked
+     variant names stripped — see the long note on the seed. Home rather than
+     Pet goods only because Pawddle took Pet goods first. */
+  'beasty-online-18': 'b_tinywheels',
+  /*
+    2026-08-28, the three he sent as pictures with no link. All three are
+    "needs a website" businesses, which is why he sent them.
+
+    TWO SOFT PLAY COMPANIES IN ONE CITY on the same night — The Bubble House and
+    Tot Spot. Worth him knowing before he pitches both, since neither knows
+    about the other.
+  */
+  'beasty-online-13': 'b_fruitsbyheart', //        dead domain; snacks seat taken
+  'san-francisco-services2-3': 'b_thebubblehouse',
+  'san-francisco-services2-4': 'b_totspotsoftplay',
 }

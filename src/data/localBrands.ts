@@ -2715,4 +2715,144 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'tiny-wheels',
+    icon: 'tiny-wheels',
+    name: 'Tiny Wheels',
+    label: 'Tiny Wheels',
+    cuisine: 'Dog beds',
+    tagline: 'A car-shaped bed for small dogs.',
+    color: '#121212|#B57EDC',
+    prep: 0,
+    /*
+      PET GOODS IS TAKEN BY PAWDDLE, so this sits in the home spot. A dog bed is
+      furniture as much as it is pet kit, and the alternative was bumping a
+      business that was seated first.
+    */
+    category: 'Pet goods',
+    email: 'Tinywheelsco@outlook.com',
+    site: 'https://tinywheelspets.com/',
+    clip: {
+      href: 'https://www.instagram.com/reel/Dcg6A7npkpj/',
+      credit: 'Posted by Tiny Wheels',
+      platform: 'Instagram',
+    },
+    /*
+      WHAT IS DELIBERATELY NOT ON THIS PAGE, and why.
+
+      THEIR REVIEWS. The product was published to their store on 2026-08-23 and
+      the page carries dozens of "Verified" reviews dated months earlier, one
+      dated in the FUTURE with the body text "NA", and four different totals for
+      how many customers they have. None of it can be true, and republishing it
+      would put a false claim on BEASTY's own domain.
+
+      THEIR VARIANT NAMES. The bed is sold in versions called G-Wagon, Cayenne,
+      GT3, Urus, Roma and 488 Pista — Mercedes, Porsche, Lamborghini and Ferrari
+      trademarks. Reprinting those here would hand somebody else's legal problem
+      to the operator. The bed is described by what it is instead.
+
+      Their support hours are CET and the storefront defaults to Spain, so this
+      is a European operation selling in dollars, not a Bay Area business.
+    */
+    quoteOnly:
+      'A one-product online store selling a car-shaped bed for small dogs, made to order, with an optional wall mount. These are their own published prices. The shop opened in late August 2026 and is run from Europe — support is Monday to Friday, 9am to 6pm CET. BEASTY has not spoken to them: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Luxury dog bed', 'Made to order, several styles', 8999],
+          ['Wall mount set', 'Optional', 1495],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'fruits-byheart',
+    icon: 'fruits-byheart',
+    name: 'Fruits Byheart',
+    label: 'Fruits Byheart',
+    cuisine: 'Fruit displays for events',
+    tagline: 'Carved fruit displays and grazing tables, California.',
+    color: '#101010|#E8E8E8',
+    prep: 0,
+    /*
+      NO CATEGORY FITS, and the nearest is taken. Carved fruit displays for
+      events are closest to Snacks and sweets, which Golden State Ballerz holds
+      — an apparel brand in the snacks seat. Rather than bump a business that
+      was seated first, this takes a free spot on the same sheet he asked for.
+      His to rearrange.
+    */
+    category: 'Fruit displays',
+    /*
+      THEIR DOMAIN IS DEAD. fruitsbyheart.com is the link in their own bio and
+      it does not resolve at all — no DNS record — which is exactly why the
+      operator flagged them as needing their website updated. Their Instagram
+      is the only thing that works, so that is what this links to, and
+      `needsSite` keeps them on his red-outline list.
+    */
+    site: 'https://www.instagram.com/fruitsbyheart/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Carved fruit displays and grazing tables for weddings and events, working across California — they call it Love At First Bite. They take enquiries by DM. The domain in their bio, fruitsbyheart.com, does not resolve, and they publish no prices, so nothing is priced here. BEASTY has not spoken to them: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'the-bubble-house',
+    icon: 'the-bubble-house',
+    name: 'The Bubble House',
+    label: 'Bubble House',
+    cuisine: 'Soft play and bounce house hire',
+    tagline: 'Soft play sets and white bounce houses for parties.',
+    color: '#F3D3DD|#3A2A30',
+    prep: 0,
+    /*
+      Event coordinator is the nearest of the twenty-four and it is already Bay
+      Area Charters'. A soft play hire company is not an event coordinator
+      anyway — they drop off a set, they do not run the party — so this takes an
+      open spot rather than a wrong label.
+    */
+    category: 'Soft play hire',
+    site: 'https://www.instagram.com/__thebubblehouse__/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    /*
+      NO ICON OF THEIRS EXISTS. The operator's own instruction was "Maybe crop a
+      tile of this image for there icon for now" — so the tile is a crop of
+      their own photograph of a set, not a logo, and it is a stand-in until they
+      have one. He also said they are in "desperate need of a website,
+      branding/logo", which is the whole reason they are on his list.
+    */
+    contactOnly:
+      'Luxe soft play sets and white bounce houses hired out for children’s parties. They take bookings by DM and have no website, no published phone and no published prices, so nothing is priced here. BEASTY has not spoken to them: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'tot-spot-soft-play',
+    icon: 'tot-spot-soft-play',
+    name: 'Tot Spot Soft Play Rentals',
+    label: 'Tot Spot',
+    cuisine: 'Soft play and bounce house hire',
+    tagline: 'Luxe soft play and mini bounce houses, Bay Area.',
+    color: '#5B2D8E|#F4A6C0',
+    prep: 0,
+    category: 'Soft play hire',
+    /*
+      A GOOGLE FORM IS NOT A WEBSITE. Their only link is forms.gle — the exact
+      stopgap `needsSite` exists for. Linking the form would take a customer
+      straight into a booking request with nothing to look at first, so this
+      points at their Instagram and keeps them on the red-outline list.
+
+      Second soft play company in the same city, the same night — worth him
+      knowing before he pitches both.
+    */
+    site: 'https://www.instagram.com/totspotsoftplay/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Luxe soft play sets and mini bounce houses for parties, working the SF Bay Area and beyond. Bookings go through a Google form linked from their Instagram; they have no website and publish no prices, so nothing is priced here. BEASTY has not spoken to them: this spot is held, not taken.',
+    items: [],
+  },
 ]
