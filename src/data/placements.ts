@@ -659,4 +659,22 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-individuals-3': 'b_eatwithsie', //       a creator, not a shop
   'petaluma-goods-0': 'b_griffodistillery', //     first distillery on the app
   'san-pablo-goods-0': 'b_rockincrawfish', //      no seafood category
+  /*
+    2026-08-28, the four he sent as pictures with no link.
+
+    SWEET PIPERS WAS ALREADY HERE — "Update in Pinole please" meant their new
+    logo, not a new listing. They have sat at pinole-goods-10 since 08-13; the
+    update is the tile, which now carries the round Tropical Treats badge they
+    replaced the old one with. Adding them again created a duplicate brand id
+    and the data audit refused it, which is exactly what that check is for.
+
+    TWO OF THEM ARE THE PEOPLE BEHIND SHOPS ALREADY ON THE APP: Al Freshko
+    designs Elemonkey and Lloyd de Vera owns Quickly Benicia, both of which have
+    their own seats. That is the Individuals sheet working as intended — the
+    shop and the person are different entries, and his note was that a stage
+    name under the tile is enough.
+  */
+  'oakley-services-7': 'b_eastbaytinting', //      no window tint category
+  'beasty-individuals-4': 'b_alfreshko',
+  'beasty-individuals-5': 'b_lloyddevera',
 }

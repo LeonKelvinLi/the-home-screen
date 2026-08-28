@@ -3201,4 +3201,68 @@ export const LOCAL_SEED: LocalSeed[] = [
       'A Cajun seafood boil on El Portal Drive — crawfish, crab, shrimp, clams and oysters with sides, plus wings, gumbo and fried Oreos. They also have a kitchen in Oakland. Their own site carries no menu, no prices, no phone and no hours, and their ordering runs through a delivery app, so nothing is priced here.',
     items: [],
   },
+  {
+    slug: 'east-bay-tinting',
+    icon: 'east-bay-tinting',
+    name: 'East Bay Tinting',
+    label: 'East Bay Tint',
+    cuisine: 'Window tinting',
+    tagline: 'Automotive, home and commercial window tint, Oakley.',
+    color: '#141414|#C0272D',
+    prep: 0,
+    /* Auto detailing is the nearest of the twenty-four; there is no window
+       tinting or vinyl wrap entry, and they do homes and shopfronts as well as
+       cars, so the label undersells them. */
+    category: 'Auto detailing',
+    address: 'Oakley, CA',
+    /* A LINKTREE IS THEIR ONLY LINK, which is why he sent them. Their prices
+       are quoted by DM — "DM for pricing" is their own line. */
+    site: 'https://www.instagram.com/eastbaytinting/',
+    siteCta: 'See their Instagram',
+    needsSite: true,
+    contactOnly:
+      'Window tinting in Oakley — cars, homes and commercial glass, plus head and tail light tint and vinyl wrap. Open Monday to Saturday, 10am to 6pm. They quote by DM and publish no prices, so nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'al-freshko',
+    icon: 'al-freshko',
+    name: 'Al Freshko',
+    /* "There stage name under it will suffice" — his instruction, 2026-08-28. */
+    label: 'Al Freshko',
+    cuisine: 'Designer',
+    tagline: 'Designer behind Elemonkey, San Francisco.',
+    color: '#141414|#D8352A',
+    prep: 0,
+    category: 'Designer',
+    site: 'https://www.elemonkey.com/',
+    siteCta: 'See his work',
+    /*
+      HIS FACE IS THE TILE, because he asked for it: "Lets use there pics for
+      there icon button". He has no personal mark — Elemonkey's red monkey is
+      the brand's, and Elemonkey is already seated on its own.
+    */
+    contactOnly:
+      'The designer behind Elemonkey, who goes by Al Freshko. Elemonkey has its own spot on the app; this is the person. BEASTY has not spoken to him: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'lloyd-de-vera',
+    icon: 'lloyd-de-vera',
+    name: 'Lloyd de Vera',
+    label: 'Lloyd de Vera',
+    cuisine: 'Owner and artrepreneur',
+    tagline: 'Artrepreneur, and the owner of Quickly Benicia.',
+    color: '#1A1A1A|#E4B23C',
+    prep: 0,
+    category: 'Artrepreneur',
+    site: 'https://quicklybenicia.com/',
+    siteCta: 'See Quickly Benicia',
+    /* Quickly Benicia already has its own seat on the Benicia page; this is the
+       person who owns it, on the sheet meant for people. His own words for
+       himself are "artrepreneur" and "all pride, no apology". */
+    contactOnly:
+      'An artist and owner who calls himself an artrepreneur, behind Quickly Benicia on Southampton Road. The shop has its own spot on the app; this is the person. BEASTY has not spoken to him: this spot is held, not taken.',
+    items: [],
+  },
 ]
