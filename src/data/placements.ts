@@ -677,4 +677,35 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'oakley-services-7': 'b_eastbaytinting', //      no window tint category
   'beasty-individuals-4': 'b_alfreshko',
   'beasty-individuals-5': 'b_lloyddevera',
+  /*
+    2026-08-28, the overnight run. Twelve, and the category list creaked again.
+
+    ASIAN BOX AND STATE BIRD DO NOT NEED WEBSITES. He sent a SpotOn ordering
+    link and a link-in-bio; both sit on top of full real sites. Third and
+    fourth time this week — Fire Slice and Emporium were the others.
+
+    SIX OF THESE HAVE NO CATEGORY among the twenty-four: a bottle shop, a
+    cycleboat, a contemporary Californian restaurant, and four people. His own
+    note when he sent SIPS — "I guess unique alcohol businesses can have a place
+    on the page as well" — is the same observation from the other side.
+
+    DIAMOND SUPPLY CO IS HERE WITH NOTHING ON IT. Their real store 403s to
+    everything, so there is no catalogue, no logo and no colours to read. The
+    domain he sent on 08-03 was a counterfeit registered five months ago; this
+    is the real one he sent on 08-28, and the page stays empty rather than being
+    filled from a reseller — which is exactly the route the fake would have
+    taken in.
+  */
+  'san-jose-goods-0': 'b_doughburger', //          Burgers
+  'san-francisco-goods2-1': 'b_asianbox', //       SF's Asian seat is House of Thai's
+  'benicia-goods2-2': 'b_sipsbottleemporium', //   no bottle shop category
+  'alameda-services-0': 'b_bayareabrewboat', //    no boat category; opens Alameda
+  'san-francisco-goods2-2': 'b_statebirdprovisions',
+  'beasty-individuals-6': 'b_larryjune',
+  'beasty-online-1': 'b_midnightorganic',
+  'beasty-individuals-7': 'b_nickydiamonds',
+  'beasty-online-2': 'b_diamondsupplyco',
+  'beasty-individuals-8': 'b_showbanga',
+  'beasty-individuals-9': 'b_iamsu',
+  'beasty-individuals-10': 'b_beastmode', //       "Bay Area Icon" — Marshawn Lynch
 }

@@ -209,6 +209,12 @@ export const CITY_PAGES = [
   */
   'Pittsburg',
   /*
+    ALAMEDA, 2026-08-28, opened by Bay Area Brew Boat — the cycleboat sails from
+    Marina Village and he filed it "Alameda • Services", which had nowhere to
+    land until now.
+  */
+  'Alameda',
+  /*
     DALY CITY, 2026-08-27, opened by Kings WC Pizza. His note, and it is the
     reason he remembered it: "Totally forgot about the city. This is the
     Filipino capital of the world. Every morning it's foggy in this city because

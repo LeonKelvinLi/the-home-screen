@@ -3265,4 +3265,400 @@ export const LOCAL_SEED: LocalSeed[] = [
       'An artist and owner who calls himself an artrepreneur, behind Quickly Benicia on Southampton Road. The shop has its own spot on the app; this is the person. BEASTY has not spoken to him: this spot is held, not taken.',
     items: [],
   },
+  {
+    slug: 'dough-burger',
+    icon: 'dough-burger',
+    name: 'Dough Burger',
+    label: 'Dough Burger',
+    cuisine: 'Halal smash burgers',
+    tagline: 'Halal smash burgers and shakes, open past midnight.',
+    color: '#0B0B0B|#FF1616',
+    prep: 0,
+    category: 'Burgers',
+    phone: '(408) 320-2573',
+    address: '1751 N First St, San Jose, CA 95112',
+    site: 'https://www.doughburger.com/',
+    siteNote: 'Second shop at 1476 N Milpitas Blvd, Milpitas',
+    menuNote: 'A few of theirs',
+    /*
+      TWO THINGS OFF THEIR PAGE ARE NOT REPEATED HERE. Their hero carries an
+      unsourced "5.0 Rated Excellent" and a third-party review widget; neither
+      belongs on somebody else's site. Their merch grid also lists a "Pendant"
+      at $1,800 in stock while the $20 shirt is out — a real catalogue product,
+      but not something to put beside a $5.99 burger without asking.
+    */
+    quoteOnly:
+      'A halal smash burger shop on North First Street, open to 1.30am and to 3am at weekends, with a second counter in Milpitas. These are their own published prices.',
+    groups: [
+      {
+        name: 'Burgers',
+        items: [
+          ['Single DoughBurger', 'From', 599],
+          ['Double DoughBurger', 'From', 699],
+          ['Triple DoughBurger', 'From', 799],
+        ],
+      },
+      {
+        name: 'Sides',
+        items: [
+          ['Smash Fries', 'Their price', 599],
+          ['Milk Shake', 'Their price', 699],
+          ['Root Beer Float', 'Their price', 599],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'asian-box',
+    icon: 'asian-box',
+    name: 'Asian Box',
+    label: 'Asian Box',
+    cuisine: 'Vietnamese-inspired',
+    tagline: 'Build-your-own rice and noodle boxes, all gluten free.',
+    color: '#1C3F4E|#F1B51C',
+    prep: 0,
+    /* San Francisco's Asian seat is House of Thai's, so this takes the second
+       sheet rather than displacing them. */
+    category: 'Asian',
+    phone: '(415) 288-3688',
+    address: '2031 Chestnut St, San Francisco, CA 94123',
+    email: 'info@asianbox.com',
+    /*
+      THEY DO NOT NEED A WEBSITE — he sent a SpotOn ordering link, which is the
+      Chestnut Street branch's ordering page sitting on top of a full real site.
+      Same correction as Emporium and Fire Slice.
+
+      AND THEY PUBLISH ALMOST NO PRICES: their whole menu is listed with
+      descriptions and no figures, bar two salads. Ordering routes to SpotOn and
+      order.online, and a marketplace price is not their price, so only the two
+      they publish are here.
+    */
+    site: 'https://www.asianbox.com/',
+    siteNote: 'Also at the Asian Art Museum and SFO Terminal G',
+    menuNote: 'The only two they price',
+    quoteOnly:
+      'A Vietnamese-inspired counter on Chestnut Street where you build a box of rice, noodles or salad, from an entirely gluten-free kitchen. Open 10.30am to 9pm, to 8pm on Sunday. They publish their menu without prices, so only the two they do price are shown; their own site notes a service charge of up to 5% on all bills.',
+    groups: [
+      {
+        name: 'What they price',
+        items: [
+          ["The Chef's Salad, chicken", 'Their published price', 1549],
+          ["The Chef's Salad, steak", 'Their published price', 1679],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'sips-bottle-emporium',
+    icon: 'sips-bottle-emporium',
+    name: 'SIPS The Bottle Emporium',
+    label: 'SIPS',
+    cuisine: 'Bottle shop',
+    tagline: 'Rare whiskey, additive-free tequila and wine, Benicia.',
+    color: '#0A0A0A|#FFD814',
+    prep: 0,
+    /* No bottle shop, liquor, wine or bar entry exists among the twenty-four.
+       His own note when he sent it: "I guess unique alcohol businesses can have
+       a place on the page as well." They can; the category list has to catch up. */
+    category: 'Bottle shop',
+    phone: '(707) 334-5757',
+    address: '736 1st St, Benicia, CA 94510',
+    email: 'Info@sendsips.com',
+    site: 'https://www.sipsca.com/',
+    siteNote: 'Second shop at 1399 University Ave, Berkeley',
+    menuNote: 'A few of theirs',
+    /* NO HOURS: their own page is headed "Locations & Hours" and lists none. */
+    quoteOnly:
+      'A bottle shop on First Street dealing in rare and allocated whiskey, additive-free tequila, wine and champagne, with craft beer and cigars — started in 2022, with a second shop in Berkeley. Over-21s only: age is checked at the till and an adult signature is required on delivery, they ship domestically but never to a PO box, and they will not ship where a buyer’s own state forbids it. These are their own published prices.',
+    groups: [
+      {
+        name: 'Bourbon and rye',
+        items: [
+          ['Buffalo Trace', '750ml', 1999],
+          ['Colonel E.H. Taylor Small Batch', '750ml', 6999],
+          ["Blanton's Single Barrel", '750ml', 8999],
+        ],
+      },
+      {
+        name: 'Tequila',
+        items: [
+          ['Flecha Azul Blanco', '750ml', 2999],
+          ['Arette Reposado, their barrel select', '750ml', 6499],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'bay-area-brew-boat',
+    name: 'Bay Area Brew Boat',
+    label: 'Brew Boat',
+    cuisine: 'Cycleboat cruises',
+    tagline: 'Pedal-powered BYOB cruises on the Oakland Estuary.',
+    color: '#1E223E|#23AADD',
+    prep: 0,
+    /* No boat tour, cruise or party-boat entry exists. Event coordinator would
+       misdescribe them — they run the vessel, they do not plan the party. */
+    category: 'Cycleboat cruises',
+    phone: '(510) 345-0456',
+    /* 1070, not 1030. Their own Terms block says 1030 Marina Village Pkwy while
+       every other page on the site says 1070. Worth telling them. */
+    address: 'Marina Village Yacht Harbor, 1070 Marina Village Pkwy, Alameda, CA 94501',
+    email: 'info@bayareabrewboat.com',
+    site: 'https://bayareabrewboat.com/',
+    /* NO ICON: the largest logo they publish is 150x150, which is smaller than
+       the tile renders at. Ask them for the vector. */
+    logoTemplate: 'badge',
+    logoFace: 'grotesk',
+    logoInitials: 'BB',
+    menuNote: 'Their own published prices',
+    quoteOnly:
+      'A pedal-powered cycleboat running 90-minute BYOB cruises on the Oakland Estuary for up to sixteen, out of Marina Village in Alameda with a licensed captain, Wednesday to Sunday. Bring beer, wine, cider or canned cocktails — four drinks a head, no glass and no spirits. Public sailings are over-21 and need eight seats to go. These are their own published prices.',
+    groups: [
+      {
+        name: 'Sailings',
+        items: [
+          ['A seat on a public tour', 'Plus booking fee', 6000],
+          ['Private charter', 'Up to sixteen, from, plus booking fee', 59000],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'state-bird-provisions',
+    icon: 'state-bird-provisions',
+    name: 'State Bird Provisions',
+    label: 'State Bird',
+    cuisine: 'Contemporary Californian',
+    tagline: 'Small plates from roving carts, on Fillmore.',
+    color: '#4E926D|#B1A1CE',
+    prep: 0,
+    /* No American, Californian or general-restaurant entry among the
+       twenty-four — the list is built from cuisines and this is not one of
+       them. Second sheet rather than a wrong label. */
+    category: 'Contemporary Californian',
+    phone: '(415) 795-1272',
+    address: '1529 Fillmore St, San Francisco, CA 94115',
+    email: 'info@statebirdsf.com',
+    /* THEY DO NOT NEED A WEBSITE either — he sent a link-in-bio and their real
+       site is a full one. Their page also carries James Beard and Michelin
+       marks; those are third-party trademarks and are not reproduced here. */
+    site: 'https://www.statebirdsf.com',
+    menuNote: 'From their sample menu',
+    quoteOnly:
+      'A Fillmore Street restaurant serving small provisions from roving carts alongside larger plates — it started as a way of serving quail. Open from 5.30pm, to 10pm and to 10.30pm at weekends. Their menus change and are published as samples; these are prices from theirs. Their menu notes 6.5% added to each check for San Francisco employer mandates.',
+    groups: [
+      {
+        name: 'From the carts',
+        items: [
+          ['Hog Island oysters', 'Kohlrabi kraut and sesame', 500],
+          ['Black sesame duck gyoza', 'Their price', 600],
+          ['Smoked trout chip’n’dip', 'Their price', 1500],
+        ],
+      },
+      {
+        name: 'Larger',
+        items: [
+          ['CA state bird with provisions', 'Tart onions and parmesan, half or whole', 2400, '$24 / $48'],
+          ['Hand cut noodles', 'Their price', 3200],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'larry-june',
+    name: 'Larry June',
+    label: 'Larry June',
+    cuisine: 'Rapper',
+    tagline: 'San Francisco rapper, and the name behind Midnight Organic.',
+    color: '#0C3F23|#F69220',
+    prep: 0,
+    category: 'Rapper',
+    /*
+      larryjune.com IS A PARKED GODADDY SALE PAGE — it resolves, but it is a
+      114-byte lander that redirects to a domain-for-sale screen. Linking it
+      would send people to an advert. His working web presence is Midnight
+      Organic, which has its own spot on the Online sheet.
+
+      No icon: there is no first-party square photograph of him on anything he
+      controls, and using a press shot found elsewhere is not ours to do.
+    */
+    logoTemplate: 'wordmark',
+    logoFace: 'condensed',
+    logoLines: ['LARRY', 'JUNE'],
+    site: 'https://midnightorganic.com/',
+    siteCta: 'See Midnight Organic',
+    contactOnly:
+      'A San Francisco rapper and songwriter. Midnight Organic is his brand and has its own spot on the app. BEASTY has not spoken to him: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'midnight-organic',
+    icon: 'midnight-organic',
+    name: 'Midnight Organic',
+    label: 'Midnight Org',
+    cuisine: 'Clothing and accessories',
+    tagline: 'Larry June’s clothing and accessories line.',
+    color: '#0C3F23|#F69220',
+    prep: 0,
+    category: 'Streetwear and apparel',
+    site: 'https://midnightorganic.com/',
+    menuNote: 'A few from their shop',
+    /* "His brand", not "owned by him": their own page description ties the
+       shop to Larry June, but no page states ownership outright. */
+    quoteOnly:
+      'Larry June’s clothing and accessories line — hoodies, tees, track wear, eyewear and small goods. These are their own published prices. BEASTY has not spoken to them: this spot is held, not taken.',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Bay Love Tee', 'Their published price', 3500],
+          ['Bay Love Hoodie', 'Their published price', 9000],
+          ['Signature 5-panel snapback', 'Their published price', 3000],
+          ['Midnight Optics "The Unc" sunglasses', 'Their published price', 9000],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'nicky-diamonds',
+    name: 'Nicky Diamonds',
+    label: 'Nicky Diamonds',
+    cuisine: 'Founder, Diamond Supply Co',
+    tagline: 'Founder of Diamond Supply Co.',
+    color: '#141414|#7BD3E8',
+    prep: 0,
+    category: 'Founder',
+    logoTemplate: 'wordmark',
+    logoFace: 'condensed',
+    logoLines: ['NICKY', 'DIAMONDS'],
+    site: 'https://www.diamondsupplyco.com/',
+    siteCta: 'See Diamond Supply Co',
+    contactOnly:
+      'Nick Tershay, who founded the skate and streetwear brand Diamond Supply Co. BEASTY has not spoken to him: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'diamond-supply-co',
+    name: 'Diamond Supply Co',
+    label: 'Diamond Supply',
+    cuisine: 'Skate and streetwear',
+    tagline: 'Skate and streetwear, founded by Nicky Diamonds.',
+    color: '#141414|#7BD3E8',
+    prep: 0,
+    category: 'Streetwear and apparel',
+    /*
+      THE DOMAIN HE SENT FIRST WAS A COUNTERFEIT. On 2026-08-03 the link was
+      diamondssupplyco.com — double S, registered 2026-03-31 through Regery,
+      calling itself the "Official Clothing Website" — against the real
+      diamondsupplyco.com, registered in 2000. The fake sells "Diamod Ape" and
+      "Diamon Eiffel Tower" hoodies and uses Puma, AC/DC, Modelo and Bape as
+      variant names. It is not linked from anywhere in this app. He sent the
+      real one on 08-28 and that is what is here.
+
+      NOTHING IS PRICED AND THERE IS NO ICON, because their real store returns
+      403 to everything — no catalogue, no logo file, no brand colours could be
+      read. Filling that gap from a reseller or an aggregator is exactly how the
+      counterfeit would have got in, so it stays empty until they publish or
+      somebody asks them.
+    */
+    logoTemplate: 'wordmark',
+    logoFace: 'condensed',
+    logoLines: ['DIAMOND', 'SUPPLY CO'],
+    site: 'https://www.diamondsupplyco.com/',
+    siteCta: 'See their store',
+    contactOnly:
+      'The skate and streetwear brand Nicky Diamonds founded, which began in skateboard hardware. Their store does not serve its pages to anything but a browser, so nothing is priced here and no artwork of theirs is used. BEASTY has not spoken to them: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'show-banga',
+    name: 'Show Banga',
+    label: 'Show Banga',
+    cuisine: 'Rapper',
+    tagline: 'San Francisco rapper and producer.',
+    color: '#141414|#D8B24A',
+    prep: 0,
+    category: 'Rapper',
+    /* showbanga.com is not a site — it is a frameset that forwards to his
+       Instagram. Linked as what it is: his Instagram. */
+    logoTemplate: 'wordmark',
+    logoFace: 'condensed',
+    logoLines: ['SHOW', 'BANGA'],
+    site: 'https://www.instagram.com/showy4mayor/',
+    siteCta: 'See his Instagram',
+    needsSite: true,
+    contactOnly:
+      'A San Francisco rapper, songwriter and producer. His own domain forwards to his Instagram rather than serving a site, so that is what this links to. BEASTY has not spoken to him: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'iamsu',
+    icon: 'iamsu',
+    name: 'IAMSU!',
+    label: 'IAMSU!',
+    cuisine: 'Rapper and producer',
+    tagline: 'Bay Area rapper and producer, and IAMSUMMER.',
+    color: '#0A0A0A|#EDEDED',
+    prep: 0,
+    category: 'Rapper and producer',
+    /*
+      LINKED TO THE STORE ROOT, NOT THE LINK HE SENT. His was
+      /products/digital-product — Shopify's generic default handle, which gets
+      reused, so whatever sits behind that URL will change without notice.
+    */
+    site: 'https://theeyesonmestore.com/',
+    siteCta: 'See his store',
+    menuNote: 'A few from his store',
+    quoteOnly:
+      'A Bay Area rapper and producer, part of HBK Gang, who runs the IAMSUMMER festival. His own store sells his records, the festival films and HBK goods. These are its own published prices. BEASTY has not spoken to him: this spot is held, not taken.',
+    groups: [
+      {
+        name: 'From his store',
+        items: [
+          ['Young California 3', 'Digital album', 399],
+          ['KILT 2', 'Digital album', 999],
+          ['IAMSUMMER: Enjoy The Ride', 'Concert film', 999],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'beastmode',
+    icon: 'beastmode',
+    name: 'BEASTMODE',
+    label: 'BEASTMODE',
+    cuisine: 'Athlete and entrepreneur',
+    tagline: 'Marshawn Lynch — Beast Mode. Always Town bidness.',
+    color: '#0A0A0A|#BDA360',
+    prep: 0,
+    category: 'Athlete and entrepreneur',
+    /*
+      "BAY AREA ICON", his words, and the link he sent carried no name — it was
+      link.me/beastmode. Established from that page's own outbound links: his
+      YouTube, his X account and his family foundation, all published on it.
+      Not guessed and not taken from a database.
+    */
+    site: 'https://www.beastmodeonline.com/',
+    siteCta: 'See the store',
+    menuNote: 'A few from the store',
+    quoteOnly:
+      'Marshawn Lynch — retired NFL running back, now an entrepreneur, actor and philanthropist, and the Beast Mode brand. His own bio leads with Cal and "Always Town Bidness". These are the store’s own published prices. BEASTY has not spoken to him: this spot is held, not taken.',
+    groups: [
+      {
+        name: 'From the store',
+        items: [
+          ['Ombre Sweatpant', 'Their published price', 9500],
+          ['Old English Zip Hoodie', 'Their published price', 12000],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]
