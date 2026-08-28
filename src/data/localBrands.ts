@@ -4243,4 +4243,59 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    /*
+      NOT SEATED, AND THE REASON HAS A DATE ON IT: A MODAL ON THEIR OWN
+      HOMEPAGE READS "We are closing on August 31st!"
+
+      He sent this on 2026-08-25 as "Oakland - Goods" and it was missed; the gap
+      check found it three days later, by which point their own site was
+      announcing the closure four days out. Putting it on the grid would mean a
+      customer tapping an open restaurant this week and a closed one next week,
+      and no business that is closing is going to buy a spot. So the research is
+      here in full and the seat is not: adding it is one line in placements.ts
+      if Glenn knows something the modal does not.
+
+      Their own markup spells it "Home  of Chicken & Waffles" with a doubled
+      space, eleven times, including the page title and the logo alt text. The
+      badge itself spells the word AND.
+    */
+    slug: 'home-of-chicken-and-waffles',
+    name: 'Home of Chicken and Waffles',
+    label: 'Chicken & Waffles',
+    cuisine: 'Soul food',
+    tagline: 'Fourth Street, Oakland. Closing 31 August 2026.',
+    color: '#9F5E40|#FADE96',
+    prep: 0,
+    category: 'Soul food',
+    phone: '(510) 836-4446',
+    address: '247 4th St, Oakland, CA 94607',
+    email: 'derreckhcw@gmail.com',
+    site: 'https://homeofchickenandwaffles.com/',
+    siteNote: 'Closing 31 August 2026, per their own homepage',
+    menuNote: 'Their published prices',
+    quoteOnly:
+      'A long-running Oakland soul food restaurant near Jack London Square, founded by Derreck B Johnson, whose plates are all named after family and friends. Open 11am to 10pm every day but Wednesday. Their own homepage says they close on 31 August 2026. These are their published prices, and the ninety-odd dishes on their menu each carry a person’s name.',
+    groups: [
+      {
+        name: 'Plates',
+        items: [
+          ["Naima's Catfish", 'Their published price', 2295],
+          ["Renaldi's Request", 'Their published price', 2125],
+          ["Pretty Patricia's Salad", 'Their published price', 1995],
+          ["Angie's Delight", 'Their published price', 1925],
+        ],
+      },
+      {
+        name: 'Smaller, and sweet',
+        items: [
+          ["Aladrienne's Nachos", 'Their published price', 1499],
+          ["Ernestine's Wings", 'Their published price', 1299],
+          ['Caramel Cake', 'Their published price', 1050],
+          ['Macaroni & Cheese', 'Their published price', 795],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]

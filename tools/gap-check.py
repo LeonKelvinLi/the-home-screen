@@ -37,6 +37,10 @@ NOT_A_SITE = {
     'x.com', 'twitter.com', 'link.clover.com', 'duckduckgo.com', 'dafont.com',
     'distrokid.com', 'gofundme.com', 'booksy.com', 'bau.edu', 'brandingcompass.com',
     'icloud.com', 'app.vidiq.com', 'sites.leadconnectorhq.com', 'order.spoton.com',
+    # Coding classes for his son, 2026-08-20 — he sent one, Leon sent the other.
+    # A conversation, not a listing. Kept named rather than silently dropped, so
+    # a future run does not rediscover them as a gap.
+    'hackingtons.com', 'thecoderschool.com',
     'order.online', 'beastypages.com', 'the-home-screen.onrender.com',
     'leonkelvinli.onrender.com', 'allis-dog-walking.onrender.com',
 }
@@ -44,6 +48,13 @@ NOT_A_SITE = {
 # He spent an evening pricing domain names for the brand itself — dozens of
 # beasty*/bsty* variants in a row. They are not businesses.
 BRAND_SHOPPING = re.compile(r'^(beasty|bsty|beausty)[a-z]*$')
+
+# EVERY file that holds a business, and the reason this is a named constant.
+# The first version of this listed three of them by hand and left out roster.ts,
+# which holds a third of the catalogue — so it reported Kaisen Don and JDI Auto
+# Detailing as never added when both had been seated for weeks. A gap check that
+# reads only some of the data invents gaps.
+SEED_FILES = ('localBrands.ts', 'brands.ts', 'roster.ts', 'placements.ts')
 
 norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
 
@@ -77,13 +88,13 @@ def host_of(url: str) -> str:
 def raw_data() -> str:
     return ' '.join(
         open(os.path.join(ROOT, 'src/data', n)).read()
-        for n in ('localBrands.ts', 'brands.ts', 'placements.ts')
+        for n in SEED_FILES
     ).lower()
 
 
 def haystack() -> str:
     parts = []
-    for name in ('localBrands.ts', 'brands.ts', 'placements.ts'):
+    for name in SEED_FILES:
         parts.append(open(os.path.join(ROOT, 'src/data', name)).read())
     parts.append(' '.join(os.listdir(os.path.join(ROOT, 'public/icons'))))
     return norm(' '.join(parts))

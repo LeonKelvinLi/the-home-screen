@@ -742,4 +742,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-goods2-0': 'b_jackiesplace',
   'beasty-individuals-11': 'b_richierich',
   'beasty-individuals-12': 'b_mbnel', //                Stockton, so nowhere rather than a wrong city
+
+  /*
+    RYWIRE HAS BEEN BUILT SINCE 2026-08-20 AND WAS NEVER GIVEN A SEAT. Seed,
+    icon, and a 24-second cut of their own film with a poster frame, all sitting
+    in the repo doing nothing because this line was missing. The gap check does
+    not catch that class of miss — the link matched the data — so it took
+    reading his message again to notice he had labelled it "BEASTY - Services"
+    and nobody had acted on the label.
+
+    Santa Ana, Orange County, four hundred miles from here, which is exactly why
+    BEASTY rather than a city: these sheets belong to nowhere in particular, and
+    the alternative was putting a Southern California shop on an East Bay page.
+  */
+  'beasty-services2-15': 'b_rywire',
 }
