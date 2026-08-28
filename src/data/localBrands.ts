@@ -4298,4 +4298,151 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'pacific-pet-grooming',
+    icon: 'pacific-pet-grooming',
+    name: 'Pacific Pet Grooming',
+    label: 'Pacific Pet',
+    cuisine: 'Mobile pet grooming',
+    tagline: 'Two salon buses, five towns, a timetable.',
+    color: '#0A0A0A|#FFC509',
+    prep: 0,
+    category: 'Pet grooming and walking',
+    phone: '(415) 424-0600',
+    email: 'pacificpetgrooming@gmail.com',
+    site: 'https://pacificpetgroomingca.com/',
+    siteNote:
+      'Bus 1: Pacifica Mon/Wed/Fri, Daly City Tue/Thu. Bus 2: South SF Mon/Wed/Sat, SF Tue/Thu, San Bruno Fri',
+    menuNote: 'Their published prices',
+    /*
+      HE FILED IT "MOBILE" AND IT IS NOT QUITE THAT. They are not a
+      come-to-you groomer and they are not a shop: two salon buses park at
+      fixed public spots on a weekly rotation and the customer brings the dog
+      to the bus. Their own words are "Find Our Salon Bus Near You" and "view
+      daily parked locations and book your slot". Calling it mobile grooming
+      would have someone waiting at home for a van.
+
+      NO ADDRESS, because there is no premises — the five parking spots are in
+      siteNote instead, each of which their own site phrases as "Near". NO
+      HOURS: they publish days of the week per location and no times at all.
+
+      NOT REPUBLISHED: "Top Rated Groomers", twice, with no rating, platform or
+      number anywhere behind it.
+    */
+    quoteOnly:
+      'Two dog-grooming salon buses working a weekly rotation through Pacifica, Daly City, South San Francisco, San Francisco and San Bruno, taking booked appointments on board at fixed public parking spots. These are their own published prices, which run by dog size; the small figure is a dog up to twelve inches and the large is over twenty-one.',
+    groups: [
+      {
+        name: 'Full grooming',
+        items: [
+          ['Dog Full Grooming, small', 'Up to 12 inches', 10200],
+          ['Dog Full Grooming, x-large', '21 inches and over', 19000],
+        ],
+      },
+      {
+        name: 'Baths and the rest',
+        items: [
+          ['Dog Bath Package, small', 'Up to 12 inches', 6500],
+          ['Dog Bath Package, x-large', '21 inches and over', 12500],
+          ['Dog Bath, basic, small', 'Up to 12 inches', 5500],
+          ['Anal Gland Expression', 'Large to x-large', 4000],
+          ['Dog Nails Trim, small', 'Up to 12 inches', 2000],
+          ['Flea Shampoo', 'Preventive', 1300],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'mcar',
+    icon: 'mcar',
+    /* HIS LABEL WAS THE DOMAIN AGAIN — the seventh this week. mcarppf.com
+       belongs to "Mcar"; their logo shield reads MCAR and their own written
+       form is "Mcar - PPF and Window Tinting", where the second half is a
+       description of the trade and not part of the name. */
+    name: 'Mcar',
+    label: 'Mcar',
+    cuisine: 'PPF and window tint',
+    tagline: 'Paint protection, tint, ceramic and wraps.',
+    color: '#FAFAFA|#0000FF',
+    prep: 0,
+    /* No paint-protection or window-tint seat exists among the twenty-four.
+       Auto detailing is the nearest honest one, and it opens San Bruno. */
+    category: 'Auto detailing',
+    phone: '(415) 528-8182',
+    address: '301 San Bruno Ave E, San Bruno, CA 94066',
+    email: 'contact@mcarppf.com',
+    site: 'https://mcarppf.com/',
+    siteNote: 'Also Burlingame, Belmont and 42 12th St, San Francisco',
+    /*
+      HE SENT ONE LOCATION AND THEY HAVE FOUR — San Bruno, Burlingame, Belmont
+      and San Francisco, all four in the footer of every page. Two of them are
+      cities that opened today.
+
+      THEIR CONTACT PAGE CONTRADICTS ITS OWN FOOTER: the body of it lists three
+      shops, "Shop 1 / Shop 2 / Shop 3", while the footer directly beneath adds
+      the fourth. Their Burlingame number is a 408 in a 650 city. Neither is
+      published here beyond the San Bruno address and number, which is the pair
+      their site is consistent about.
+
+      NO HOURS, although they nearly publish some: "Opening Hours: 8:30 AM to
+      6PM" appears seven times and never once says which days. NO PRICES at all.
+
+      Their own service list carries four typos — "PPF Instalation", "Vinil
+      Wraps", "Custom T-Shits", "Carwrap Desing" — and the site is built in
+      Brazilian Portuguese underneath, so its date picker reads Seg/Ter/Qua and
+      a map label says "Estados Unidos". Not reproduced; worth their knowing.
+    */
+    quoteOnly:
+      'An automotive appearance shop doing paint protection film, window tint, ceramic coating and vehicle wraps, with a side line in custom shirt and sign printing, across four Peninsula and San Francisco locations. They publish no prices and quote each car.',
+    items: [],
+  },
+  {
+    slug: 'underdogs-cantina',
+    icon: 'underdogs-cantina',
+    name: 'Underdogs Cantina',
+    label: 'Underdogs',
+    cuisine: 'Taqueria and sports bar',
+    tagline: 'Three floors across from Oracle Park.',
+    color: '#FCFAF6|#EC8923',
+    prep: 0,
+    category: 'Mexican food',
+    phone: '(415) 416-6873',
+    address: '128 King St, San Francisco, CA 94107',
+    email: 'catering-orders@underdogscantina.com',
+    site: 'https://underdogscantina.com/',
+    siteNote: 'Mon and Sun 11am-9pm, Tue-Sat 11am-10pm; 10am on Giants day games',
+    menuNote: 'The two they price',
+    /*
+      SINGLE LOCATION, CHECKED. There are other Underdogs rooms in San
+      Francisco; this site claims none of them. Every mention of the name on
+      this domain is 128 King Street, there is no location switcher and no link
+      to a sibling, so nothing here is merged with anything else.
+
+      THEIR MENU HAS NO PRICES ON IT — about sixty dishes with descriptions and
+      dietary tags and not one number. The only two figures on the whole site
+      are the weekly specials below.
+
+      THE HAPPY HOUR CARRIES AN EXCEPTION their Instagram bio drops: it is
+      Monday to Friday 4.30 to 6, EXCEPT on Giants home games, when a separate
+      game-day happy hour runs from first pitch to the seventh-inning stretch.
+      Printing the bio version would have someone turn up on a game day for a
+      price that is not running.
+
+      A 4.5% charge is added to cover San Francisco employment costs, in their
+      own words, and it is here because a bill is not what a menu says it is.
+    */
+    quoteOnly:
+      'A three-level taqueria and sports bar directly across from Oracle Park, serving tacos, burritos and breakfast until 3pm, with an arcade mezzanine. Happy hour runs Monday to Friday 4.30 to 6 except on Giants home games, when it runs from first pitch to the seventh-inning stretch instead. Their menu carries no prices; these two weekly specials are the only figures they publish, and a 4.5% charge is added to every bill to cover San Francisco employment costs.',
+    groups: [
+      {
+        name: 'The two they price',
+        items: [
+          ['Wings, any flavour', 'Wednesdays, 4.30pm to 10pm', 100],
+          ['House margarita', 'Tuesdays, 7.30pm to 8pm', 100],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]

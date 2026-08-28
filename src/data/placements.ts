@@ -756,4 +756,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     the alternative was putting a Southern California shop on an East Bay page.
   */
   'beasty-services2-15': 'b_rywire',
+
+  /*
+    2026-08-28 afternoon. Three businesses, and the seven cities he opened for
+    them — Pacific Pet Grooming parks in five of the seven, Mcar has shops in
+    two.
+
+    PACIFIC PET GROOMING IS ON BEASTY BECAUSE IT IS IN FIVE PLACES AT ONCE. He
+    filed it "Mobile", which is what these sheets are for: a business that
+    belongs to no single city page. BEASTY - Services being full is why it
+    lands on the yellow one.
+  */
+  'beasty-services2-16': 'b_pacificpetgrooming', // five cities, one timetable
+  'san-bruno-services-7': 'b_mcar', //             Auto detailing; no tint seat exists
+  'san-francisco-goods-1': 'b_underdogscantina', // Mexican food
 }

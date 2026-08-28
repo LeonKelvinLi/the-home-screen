@@ -9,6 +9,7 @@ import { BrandApp } from './apps/BrandApp'
 import { CartApp } from './apps/CartApp'
 import { OrdersApp } from './apps/OrdersApp'
 import { SearchApp } from './apps/SearchApp'
+import { NewsApp } from './apps/NewsApp'
 import { AccountApp, HelpApp, RewardsApp, SupplyApp } from './apps/SimpleApps'
 import { SettingsApp } from './apps/SettingsApp'
 import { PhoneApp } from './apps/PhoneApp'
@@ -69,6 +70,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <SearchApp api={api} />
     case 'rewards':
       return <RewardsApp api={api} />
+    case 'news':
+      return <NewsApp api={api} />
     case 'help':
       return <HelpApp api={api} />
     case 'account':

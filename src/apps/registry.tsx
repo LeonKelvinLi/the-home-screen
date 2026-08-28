@@ -18,7 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply' | 'gallery' | 'watch' | 'join'
+  | 'supply' | 'gallery' | 'watch' | 'join' | 'news'
 
 export interface AppDef {
   id: string
@@ -83,6 +83,9 @@ const SYSTEM: { key: SystemKey; name: string; label: string; glyph: SystemGlyph;
   { key: 'search', name: 'Search', label: 'Search', glyph: 'search', tint: '#1DA345' },
   { key: 'account', name: 'Account', label: 'Account', glyph: 'person', tint: '#3F4A5A' },
   { key: 'settings', name: 'Settings', label: 'Settings', glyph: 'gear', tint: '#8E8E93' },
+  /* His idea of 2026-08-28. What a directory has news about is the directory
+     changing — see data/news.ts, which is where an entry gets added. */
+  { key: 'news', name: 'News', label: 'News', glyph: 'news', tint: '#E8C800' },
 ]
 
 export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
@@ -730,10 +733,24 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
     */
     apps: [DESIGNS_APP, byId('b_beastyh20'), byId('b_eat'), SUPPLY_APP],
   },
-  { key: 'help', name: 'Help', apps: [PHONE_APP, ...SYSTEM_APPS.filter((a) =>
-      ['sys.account', 'sys.help', 'sys.settings'].includes(a.id))
-      .sort((a, b) => ['sys.account', 'sys.help', 'sys.settings'].indexOf(a.id) -
-        ['sys.account', 'sys.help', 'sys.settings'].indexOf(b.id))] },
+  /*
+    NEWS TAKES PHONE'S SLOT HERE, and only here.
+
+    The home grid is city pages end to end — every tile on it is a business —
+    so a platform app is reachable through the dock or through Search and
+    nowhere else. His news icon had to go in one of the three sets of four.
+
+    Phone was the one to lose because it is the only app that appears TWICE:
+    it opens set 1 as well, and it is on the keypad's own screen. Nothing
+    became unreachable, which is not true of any other icon in this set.
+
+    Reversible in one line, and worth asking him: if he would rather News sat
+    in set 1 next to Profile, that is the swap.
+  */
+  { key: 'help', name: 'Help', apps: [...SYSTEM_APPS.filter((a) =>
+      ['sys.news', 'sys.account', 'sys.help', 'sys.settings'].includes(a.id))
+      .sort((a, b) => ['sys.news', 'sys.account', 'sys.help', 'sys.settings'].indexOf(a.id) -
+        ['sys.news', 'sys.account', 'sys.help', 'sys.settings'].indexOf(b.id))] },
 ]
 
 /** The set the home screen opens on — his "Default is 1". */

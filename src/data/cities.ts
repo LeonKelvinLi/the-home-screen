@@ -227,6 +227,26 @@ export const CITY_PAGES = [
     been East Bay and Peninsula until now.
   */
   'Rohnert Park',
+  /*
+    THE PENINSULA RUN, 2026-08-28. Seven landmark searches in seven minutes —
+    Pacifica, San Bruno, South San Francisco, Burlingame, Menlo Park, Los Gatos,
+    Sausalito — and then the businesses that explain them: Pacific Pet Grooming
+    parks its salon bus in five of these, and Mcar has shops in two.
+
+    None has a photograph on disk on the day it is added, so each draws the
+    neutral placeholder rather than another city's landmark. Every one of his
+    seven links pointed at copyrighted stock — TripAdvisor, Dreamstime, Getty
+    via Canva, simpleview — so the subjects are his and the files, when they
+    land, come from somewhere the licence survives a commercial product. See
+    public/wallpapers/CREDITS.md, which has said the same thing since Vallejo.
+  */
+  'Pacifica',
+  'San Bruno',
+  'South San Francisco',
+  'Burlingame',
+  'Menlo Park',
+  'Los Gatos',
+  'Sausalito',
 ] as const
 
 /**

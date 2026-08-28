@@ -53,6 +53,7 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `newark.webp` | Salt ponds at Newark, California | Alfred Twu, CC0, via Wikimedia Commons |
 | `oakley.webp` | City Hall, Oakley | CC0, via Wikimedia Commons |
 | `santa-rosa.webp` | Shops on 4th Street, historic district, Santa Rosa | CC0, via Wikimedia Commons |
+| `pacifica.webp` | Under Pacifica Municipal Pier at sunset | Romain Guy, CC0, via Wikimedia Commons |
 
 ## Attribution required (CC BY-SA)
 
@@ -62,6 +63,10 @@ third-party copyrighted stock that cannot ship in a commercial product.
 | `fairfield.webp` | Texas Street, downtown Fairfield | Sarah Stierch, CC BY 4.0, via Wikimedia Commons |
 | `american-canyon.webp` | Jack & Bernice Newell Open Space Preserve, American Canyon | Kiddo27, CC BY-SA 4.0, via Wikimedia Commons |
 | `cupertino.webp` | Apple Park at night | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `menlo-park.webp` | The 1867 Caltrain depot at night, Menlo Park | Patrick Nouhailler's…, CC BY-SA 3.0, via Wikimedia Commons — cropped and resized |
+| `los-gatos.webp` | Santa Cruz Avenue at West Main Street, downtown Los Gatos | Ramkumar Menon, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `sausalito.webp` | Richardson Bay at dusk, Sausalito hillside beyond | E bailey, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
+| `burlingame.webp` | Burlingame Avenue at El Camino Real, downtown Burlingame | FASTILY, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `mountain-view.webp` | Shoreline Amphitheatre | GualdimG, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `redwood-city.webp` | Fox Theatre | Youwei liang, CC BY-SA 4.0, via Wikimedia Commons — cropped and resized |
 | `san-mateo.webp` | Downtown San Mateo at night | mliu92, CC BY-SA 2.0, via Wikimedia Commons — cropped and resized |
@@ -83,6 +88,8 @@ so the cropped file is not itself copyleft.
 
 | File | Subject | Credit |
 |---|---|---|
+| `san-bruno.webp` | The Ridge Trail east, San Bruno Mountain | Tim Adams, CC BY 3.0, via Wikimedia Commons — cropped and resized |
+| `south-san-francisco.webp` | The hillside sign, South San Francisco | Taro the Shiba Inu, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 | `vallejo.webp` | Six Flags Discovery Kingdom at dusk | ray_explores, CC BY 2.0, via Wikimedia Commons — cropped and resized |
 | `petaluma.webp` | Volpi's Ristorante, downtown Petaluma, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
 | `napa.webp` | Angele Restaurant, Napa riverfront, at night | Sarah Stierch, CC BY 4.0 — cropped and resized |
@@ -227,3 +234,61 @@ behind it rather than the stadium — and it is there because no freely licensed
 photograph of the building itself, at a size a portrait crop survives, turned up
 under a licence that permits commercial use. It is honestly Glendale, which is
 the bar, but it is the one to replace first if he sends a link.
+
+## The Peninsula run, 2026-08-28
+
+Seven landmark searches in seven minutes — Pacifica, San Bruno, South San
+Francisco, Burlingame, Menlo Park, Los Gatos, Sausalito. **Every one of the
+seven links pointed at copyrighted stock**: TripAdvisor, Dreamstime, Getty via
+Canva, simpleview cloudinary, californiabeaches.com, noehill.com,
+visitlosgatosca.com. So the subjects are his and the files are Commons, which
+is what this document has said since Vallejo.
+
+MENLO PARK NEEDED THE CALIFORNIA CHECK MORE THAN ANY OTHER CITY HERE. Edison's
+laboratory was in Menlo Park, NEW JERSEY, and it is the more famous of the two
+by a distance. The file that shipped carries GPS 37.454931, -122.182344 — 1100
+Merrill Street — and the depot's own sign is legible in frame, which is about
+as settled as this gets. Same trap as Newark, whose best Commons photograph is
+a skyline of New Jersey.
+
+SAUSALITO SHIPPED THE RUNNER-UP ON PURPOSE. The higher-scoring frame was the
+Bridgeway seawall looking at San Francisco — a beautiful picture of somewhere
+else, with Sausalito being the ground you stand on. Richardson Bay at dusk has
+Sausalito's own hillside in it, and it is the calmest image in the entire set:
+a warm gradient sky, a mirror-flat bay, and a dark band at the bottom exactly
+where the dock sits.
+
+Commons has eleven Carol M. Highsmith frames of the Sausalito houseboats at
+7360x4912 and **public domain** — the best-licensed, highest-resolution
+material found in any of these searches. None of them shipped: hand-painted
+hulls, hand-lettered signs, overhead power lines and docks full of gear are
+maximum clutter behind twenty-four icons. Worth knowing they are there for any
+other purpose.
+
+## Two calls worth knowing about, 2026-08-28
+
+**HIS SAN BRUNO LANDMARK IS IN SOUTH SAN FRANCISCO.** He linked San Bruno Point
+Park; it is at Forbes Boulevard and DNA Way, in the biotech district east of
+101, which is South San Francisco — confirmed by the City of San Bruno's own
+parks page, which lists all nineteen of its parks and has no such park on it.
+South San Francisco is the very next city in this same batch, so shipping it
+would have put one city's landmark on another's page and double-booked the
+subject. San Bruno Mountain is the substitute: it carries the city's name and
+dominates its skyline, though the state park itself sits mostly in Brisbane,
+Daly City and unincorporated county. Same class of trap as the Newark, New
+Jersey skyline.
+
+**THE SOUTH SAN FRANCISCO SIGN CANNOT FIT, AND SHIPS ANYWAY.** The lettering
+spans about three quarters of the frame and a 1:2.17 portrait crop keeps about
+a third of it, so it reads SOUTH / N FRANCIS / NDUSTRIAL. Both alternatives are
+worse: an off-centre crop loses the flag letters, and the one frame that holds
+the whole hill renders the sign as a white smudge. No photograph on Commons can
+hold that sign whole in this aspect ratio — it is a geometry limit, not a
+search failure — and the truncated version is still unmistakably that hillside.
+
+**The tool's super-resolver had to be gated harder to encode it.** EDSR x4 was
+being run on a 2592x1944 original needing 1.48x; it burned twenty CPU-minutes
+without finishing, twice. The threshold was written for the 454x604 thumbnails
+he sends, where the model earns its time. It now also requires a source under
+1600px on the short side — a small frame still goes through EDSR, a
+nearly-large-enough one gets a resample.

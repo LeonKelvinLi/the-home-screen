@@ -133,7 +133,24 @@ async function finishEncode(slug, tmp) {
   /* The cover-crop below fills by whichever axis falls short, so the stretch
      this frame will actually suffer is the larger of the two ratios. */
   const stretch = Math.max(W / srcW, H / srcH)
-  if (stretch > 1.15) {
+  /*
+    EDSR IS FOR SMALL SOURCES, AND ONLY FOR SMALL SOURCES.
+
+    The threshold above was set against what the operator sends: 454x604
+    thumbnails off a search page, where a network genuinely invents detail that
+    a resample cannot. Pointed at a 2592x1944 Commons original needing 1.48x it
+    ran for over twenty CPU-minutes without finishing, twice, and had to be
+    killed — EDSR x4 is quadratic in pixels and this frame is thirty times the
+    area it was tuned on.
+
+    A source already close to frame size does not need a trained network to
+    gain half again; a cubic resample at that ratio is not visible behind a
+    scrim and twenty-four icons. So the gate is BOTH conditions now: enough
+    stretch to show, AND a source small enough that the model has something to
+    add. Neither has been relaxed — a 454x604 frame still goes through EDSR.
+  */
+  const SMALL_ENOUGH_FOR_SR = 1600 // px on the short side
+  if (stretch > 1.15 && Math.min(srcW, srcH) < SMALL_ENOUGH_FOR_SR) {
     console.log(`  ${slug}: ${srcW}x${srcH} needs ${stretch.toFixed(2)}x — super-resolving`)
     /*
       The HOMEBREW python, not /usr/bin/python3 which every other call here
