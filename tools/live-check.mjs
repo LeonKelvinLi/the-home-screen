@@ -35,18 +35,32 @@ const html = await get(base + '/')
 const entries = [...new Set([...html.matchAll(/assets\/[A-Za-z0-9_-]+\.js/g)].map((m) => m[0]))]
 if (!entries.length) { console.error('no /assets/*.js referenced by index.html'); process.exit(2) }
 
-/* Follow the entry to the chunks it imports. One hop is enough here — Shell is
-   imported by the entry — but the set is deduped so a deeper graph is safe. */
+/*
+  Follow the WHOLE import graph, not one hop.
+
+  This used to fetch the chunks the entry names and stop — it scanned those for
+  further imports only in the sense that it never looked at them. Vite splits
+  more than once: the entry imports Shell, Shell imports the screens, and a
+  string that only exists inside JoinApp is two hops down. On 2026-08-28 that
+  reported "Sign in or join" MISSING from a deploy that was serving it, which
+  is the exact false negative this file was written to prevent, one level
+  deeper than the version that prevented it.
+
+  A worklist rather than a loop over `entries`, so the depth stops mattering.
+*/
 const seen = new Set(entries)
 const bodies = []
-for (const path of entries) {
-  const src = await get(`${base}/${path}`)
+const queue = [...entries]
+while (queue.length) {
+  const path = queue.shift()
+  let src
+  try { src = await get(`${base}/${path}`) } catch { continue }
   bodies.push(src)
   for (const m of src.matchAll(/[A-Za-z0-9_-]+-[A-Za-z0-9_-]{8}\.js/g)) {
     const name = `assets/${m[0]}`
     if (seen.has(name)) continue
     seen.add(name)
-    try { bodies.push(await get(`${base}/${name}`)) } catch { /* not a real chunk */ }
+    queue.push(name)
   }
 }
 const all = bodies.join('\n')
