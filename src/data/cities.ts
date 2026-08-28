@@ -198,6 +198,23 @@ export const CITY_PAGES = [
   /* Folsom, sent with Sacramento the same minute — the two his Folsom friend
      may end up recruiting together. */
   'Folsom',
+  /*
+    PITTSBURG, and it is spelled without the h.
+
+    He wrote "BEASTY • Pittsburgh" twice on 2026-08-23, sending two businesses
+    that both "need a proper website" — and there was no page for either to land
+    on, so both asks sat unactioned for four days. The California city is
+    Pittsburg; Pittsburgh is Pennsylvania. Spelled correctly here because the
+    page heading is what a business in that city reads.
+  */
+  'Pittsburg',
+  /*
+    DALY CITY, 2026-08-27, opened by Kings WC Pizza. His note, and it is the
+    reason he remembered it: "Totally forgot about the city. This is the
+    Filipino capital of the world. Every morning it's foggy in this city because
+    all the families are cooking their rice."
+  */
+  'Daly City',
 ] as const
 
 /**
