@@ -648,4 +648,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     BEASTY sheet AND in its own city is the intended shape, not a duplicate.
   */
   'pittsburg-goods-6': 'b_paulosausage', //        Sandwiches
+  /*
+    2026-08-28, 01:01-01:28. THREE OF THESE FOUR HAVE NO CATEGORY among the
+    twenty-four — BBQ, a distillery and a Cajun seafood boil are none of them,
+    and the operator spotted it himself on Griffo ("1st distillery on the
+    page"). They take open spots rather than wrong labels. The list needs rows,
+    which is his call.
+  */
+  'benicia-goods2-1': 'b_traballosbackyardbbq', // no BBQ category
+  'beasty-individuals-3': 'b_eatwithsie', //       a creator, not a shop
+  'petaluma-goods-0': 'b_griffodistillery', //     first distillery on the app
+  'san-pablo-goods-0': 'b_rockincrawfish', //      no seafood category
 }

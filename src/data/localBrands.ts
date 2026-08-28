@@ -3052,4 +3052,153 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'traballos-backyard-bbq',
+    name: 'Traballo’s Backyard BBQ',
+    label: 'Traballo’s',
+    cuisine: 'Backyard BBQ',
+    tagline: 'Smoked brisket, ribs and hot links on Bayshore Road.',
+    color: '#0A0A0A|#F2F2F2',
+    prep: 0,
+    /* No BBQ or smokehouse entry exists in the twenty-four, so this takes an
+       open spot rather than being filed under Burgers because a burger appears
+       in one of their photos. Their menu is smoked-meat plates. */
+    category: 'Backyard BBQ',
+    phone: '(707) 342-7748',
+    address: '3001 Bayshore Rd Ste 1, Benicia, CA 94510',
+    site: 'https://traballosbackyardbbq.com/',
+    /*
+      NO ICON, AND THIS ONE IS IMPORTANT.
+
+      The obvious pick — the transparent 1024px badge used on every page of
+      their site — has four errors baked into the artwork: it reads "BACKKYARD",
+      "3001 Beyshove Rd", "Benicta CA" and "@Backyardbbg707". Their own footer,
+      contact page and Instagram all say Backyard, Bayshore, Benicia and
+      @backyardbbq707. Their T-SHIRT artwork carries the correct wording, so the
+      site badge is a corrupted regeneration of the real mark.
+
+      Publishing it would put a misspelled address and a dead Instagram handle
+      on their page. The app draws its own mark until they send a clean file.
+    */
+    logoTemplate: 'badge',
+    logoFace: 'slab',
+    logoInitials: 'TB',
+    contactOnly:
+      'Family-run backyard BBQ on Bayshore Road in Benicia — pulled pork, brisket, ribs, tri tip, chicken and hot links, as one, two or three-meat plates with sides, plus breakfast and catering. Open Tuesday to Saturday, 6am to 4pm. They publish no prices of their own — their ordering runs through a delivery app, which marks prices up — so nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'eat-with-sie',
+    icon: 'eat-with-sie',
+    name: 'Eat With Sie',
+    label: 'Eat With Sie',
+    cuisine: 'Food and lifestyle creator',
+    tagline: 'Bay Area food, beauty and lifestyle creator.',
+    color: '#1A1A1A|#E8E2DC',
+    prep: 0,
+    category: 'Creator',
+    /*
+      A PERSON, WHICH IS WHY SHE IS ON THIS SHEET. Sienna is a food, beauty and
+      lifestyle creator in the Bay Area — she is paid to recommend other
+      people's products, and sells nothing of her own, so there is nothing to
+      price and no shop to link.
+
+      A LINKTREE IS ALL SHE HAS. eatwithsie.com and .co do not resolve. The
+      operator's "needs a website" call is right, and `needsSite` keeps her on
+      that list.
+    */
+    site: 'https://linktr.ee/eatwithsie',
+    siteCta: 'See her links',
+    needsSite: true,
+    contactOnly:
+      'A Bay Area food, beauty and lifestyle creator, posting on Instagram, TikTok and YouTube as @eatwithsie. She recommends other people’s products rather than selling her own, so nothing is priced here. BEASTY has not spoken to her: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'griffo-distillery',
+    icon: 'griffo-distillery',
+    name: 'Griffo Distillery',
+    label: 'Griffo',
+    cuisine: 'Craft distillery',
+    tagline: 'Gin, whiskey and brandy from Scott Street, Petaluma.',
+    color: '#404041|#9E702A',
+    prep: 0,
+    /* THE FIRST DISTILLERY ON THE APP, and there is no distillery, spirits or
+       bar entry among the twenty-four — the operator noticed this himself when
+       he sent it. Open spot rather than a wrong label; the list needs a row. */
+    category: 'Distillery',
+    phone: '(707) 879-8755',
+    address: '1320 Scott St, Suite A, Petaluma, CA 94954',
+    email: 'info@griffodistillery.com',
+    site: 'https://griffodistillery.com/',
+    siteNote: 'Bonded Distillery DSP-CA-20051',
+    menuNote: 'A few of theirs',
+    /*
+      PRICES ARE THEIRS, MINUS TWO THAT ARE NOT PRODUCTS. Their public product
+      feed also carries a "Processing Fee" at $476.99 and a "Custom Distilling
+      Customer Invoice" at $1,000 — internal invoicing SKUs that are published
+      by accident. Anything that pulls their catalogue automatically will render
+      those next to the gin. Excluded deliberately, and worth telling them.
+
+      The .65 endings are theirs: California excise tax is folded into the shelf
+      price, as their own canned-cocktail label spells out.
+    */
+    quoteOnly:
+      'A craft distillery and tasting bar on Scott Street making gin, whiskey, vodka, brandy and a cold brew coffee liqueur, with tours, tastings and private events. Tasting bar Thursday 5-9pm, Friday and Saturday 2-7pm, Sunday 1-6pm, though it closes for private events — check their calendar. They ship across the US except AR, MI, MT, MS, SD, TN and UT, through licensed third-party retailers. Over-21s only. These are their own published prices.',
+    groups: [
+      {
+        name: 'Bottles',
+        items: [
+          ['Scott Street Gin', 'Their published price', 3565],
+          ['Vodka', 'Their published price', 3065],
+          ['Stony Point Whiskey', 'Their published price', 4665],
+          ['Cold Brew Coffee Liqueur', 'A 33-proof liqueur, not coffee', 3365],
+        ],
+      },
+      {
+        name: 'At the distillery',
+        items: [['Tour and tasting', 'Per guest, five spirits', 3000]],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'rockin-crawfish',
+    name: 'Rockin’ Crawfish',
+    label: 'Crawfish',
+    cuisine: 'Cajun seafood boil',
+    tagline: 'Crawfish, crab and shrimp boils on El Portal Drive.',
+    color: '#6A0719|#4E2011',
+    prep: 0,
+    /* No seafood, Cajun or crab-boil entry exists in the twenty-four. */
+    category: 'Cajun seafood',
+    address: '2300 El Portal Dr L, San Pablo, CA 94806',
+    email: 'Info@therockincrawfish.com',
+    /*
+      THEY DO HAVE A WEBSITE — the operator assumed DoorDash was all they had.
+      It is two pages with no menu on it, and both "Order Now" buttons lead to
+      the same delivery listing, so his instinct that they need a real one is
+      right even though the premise was wrong.
+
+      NO PHONE AND NO HOURS. Their site publishes neither, their Instagram is
+      private, and the numbers and hours circulating belong to aggregators. NO
+      PRICES either: their own menu is not published anywhere, and the only
+      source is the delivery storefront, which marks prices up — this project
+      already measured a flat $3.00 added to every overlapping Paulo Sausage
+      item. Those have to come from the owner.
+
+      NO ICON: their logo file is a full illustrated scene with a plank wall and
+      a lantern baked in, on an opaque JPEG. It cannot sit on any background but
+      its own.
+    */
+    logoTemplate: 'badge',
+    logoFace: 'slab',
+    logoInitials: 'RC',
+    site: 'https://therockincrawfish.com/',
+    needsSite: true,
+    siteCta: 'See their site',
+    contactOnly:
+      'A Cajun seafood boil on El Portal Drive — crawfish, crab, shrimp, clams and oysters with sides, plus wings, gumbo and fried Oreos. They also have a kitchen in Oakland. Their own site carries no menu, no prices, no phone and no hours, and their ordering runs through a delivery app, so nothing is priced here.',
+    items: [],
+  },
 ]
