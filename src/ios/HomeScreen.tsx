@@ -1156,8 +1156,27 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
               opening a window over it would cover the thing being asked for.
             */
             onOpen={(rect) => {
-              // "or any of them lower 4 buttons" — the dock row itself.
-              if (!app.page) return gate('profile', () => onOpen(app.id, rect))
+              /*
+                "or any of them lower 4 buttons" — the dock row itself, gated
+                as a group, but named one at a time. Four tiles sharing the
+                `profile` key meant all four answered a tap with "Open your
+                profile", which was wrong for three of them and got worse the
+                day News took a slot.
+              */
+              /*
+                NEWS IS PUBLIC, and that is the point of it.
+
+                "This will be public for all users and affiliates to view. Only
+                BEASTY Affiliates can access and use this feature" — reading is
+                open, posting is not. A page whose job is to keep people coming
+                back daily cannot be the thing they have to sign up to see; it
+                is the reason to sign up.
+
+                Everything else in the row is still gated, which is his own
+                note: "any of them lower 4 buttons".
+              */
+              if (app.systemKey === 'news') return onOpen(app.id, rect)
+              if (!app.page) return gate('profile', () => onOpen(app.id, rect), `Open ${app.name}`)
               const i = pages.findIndex((pg) => pg.city === app.page)
               if (i >= 0) goToPage(i)
             }}

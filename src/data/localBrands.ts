@@ -2246,7 +2246,25 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Artist',
     site: 'https://p-lo.com/',
     siteCta: 'See his site',
+    /*
+      "Can you isolate P-Lo for his icon logo please? Also, if you can play this
+      video below, but clip the video." — 2026-08-27, and the second half of it
+      was lost to a line-by-line read of the thread.
+
+      IT PLAYS ON THE PAGE NOW. `src` is footage on our own origin and plays
+      inline; `href` alone only draws a card that opens Instagram. yt-dlp needed
+      no format filter — asking for best[height<=1080] came back "requested
+      format is not available" on a 1440x1080 VP9 reel, and plain yt-dlp merged
+      it fine.
+
+      TWENTY-FOUR SECONDS OF THIRTY, and which twenty-four was measured rather
+      than taken from the top: a one-frame-per-second sweep of the whole reel,
+      picking the window with the most movement in it. It starts one second in.
+      The full post is still one tap away on the card.
+    */
     clip: {
+      src: '/clips/p-lo.mp4',
+      poster: '/clips/p-lo-poster.webp',
       href: 'https://www.instagram.com/reel/DcBzdqRteQZ/',
       credit: 'Posted by P-Lo',
       platform: 'Instagram',
@@ -3470,7 +3488,18 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    /*
+      HIS INSTRUCTION, 2026-08-28: "Lets use there pics for there icon button."
+
+      These four shipped with no icon and a generated mark, on my own reading
+      that a photograph of a person is not an app icon. That reading was wrong
+      twice over: he asked for the opposite in as many words, and the sheet
+      already worked that way — Naya Green and Al Freshko have been photographs
+      since it was created. Cropped from the screenshots he sent, inside the
+      Instagram story ring rather than around it.
+    */
     slug: 'larry-june',
+    icon: 'larry-june',
     name: 'Larry June',
     label: 'Larry June',
     cuisine: 'Rapper',
@@ -3526,7 +3555,18 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    /*
+      HIS INSTRUCTION, 2026-08-28: "Lets use there pics for there icon button."
+
+      These four shipped with no icon and a generated mark, on my own reading
+      that a photograph of a person is not an app icon. That reading was wrong
+      twice over: he asked for the opposite in as many words, and the sheet
+      already worked that way — Naya Green and Al Freshko have been photographs
+      since it was created. Cropped from the screenshots he sent, inside the
+      Instagram story ring rather than around it.
+    */
     slug: 'nicky-diamonds',
+    icon: 'nicky-diamonds',
     name: 'Nicky Diamonds',
     label: 'Nicky Diamonds',
     cuisine: 'Founder, Diamond Supply Co',
@@ -3577,7 +3617,18 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    /*
+      HIS INSTRUCTION, 2026-08-28: "Lets use there pics for there icon button."
+
+      These four shipped with no icon and a generated mark, on my own reading
+      that a photograph of a person is not an app icon. That reading was wrong
+      twice over: he asked for the opposite in as many words, and the sheet
+      already worked that way — Naya Green and Al Freshko have been photographs
+      since it was created. Cropped from the screenshots he sent, inside the
+      Instagram story ring rather than around it.
+    */
     slug: 'show-banga',
+    icon: 'show-banga',
     name: 'Show Banga',
     label: 'Show Banga',
     cuisine: 'Rapper',
@@ -4196,7 +4247,18 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    /*
+      HIS INSTRUCTION, 2026-08-28: "Lets use there pics for there icon button."
+
+      These four shipped with no icon and a generated mark, on my own reading
+      that a photograph of a person is not an app icon. That reading was wrong
+      twice over: he asked for the opposite in as many words, and the sheet
+      already worked that way — Naya Green and Al Freshko have been photographs
+      since it was created. Cropped from the screenshots he sent, inside the
+      Instagram story ring rather than around it.
+    */
     slug: 'mbnel',
+    icon: 'mbnel',
     /*
       NO ICON. He publishes no wordmark and no logo — his avatar and banner are
       photographs of him, and a photograph of a person is not an app icon. The

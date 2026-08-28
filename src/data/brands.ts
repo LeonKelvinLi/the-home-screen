@@ -366,6 +366,17 @@ interface Seed {
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
   /** One photograph of the place. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
+  /*
+    A STREET ADDRESS AND A PHONE, which Brand has carried all along and Seed
+    could not set. It came up when he asked to "update page with address and
+    link tree" for a kitchen in this file rather than in localBrands, and the
+    first attempt wrote a `links` array that TypeScript accepted in one file
+    and rejected in this one — the local seeds are not checked for excess
+    properties and these are.
+  */
+  address?: string
+  phone?: string
+
 }
 
 /** name, description, low bound in cents, printed range. */
@@ -506,8 +517,31 @@ const SEED: Seed[] = [
       Their three five-star testimonials cite no platform at all and are not
       reproduced.
     */
+    /*
+      "Update page with address and link tree" — his instruction, 2026-08-28,
+      and it was read as the line above it and lost.
+
+      THE ADDRESS IS THE ONE THEY PUBLISH THEMSELVES ON INSTAGRAM, which is
+      what he was looking at when he asked. It is not the only one they give:
+      their website's header and structured data say 9 Grand Ave, Oakland, the
+      About paragraph on that same page says 1199 El Camino Real in San Bruno,
+      and the ordering flow calls the entity VEGAN MOB SAN BRUNO LLC. Three
+      addresses, one business. His is shown and the disagreement is said out
+      loud rather than hidden behind a choice nobody can check.
+    */
+    address: '496 Lake Park Ave, Oakland, CA 94610',
+    phone: '(415) 513-5120',
+    /*
+      THE LINKTREE GOES IN siteNote, because `links` is not a field.
+
+      It was written as `links: [{ label, href }]` first and TypeScript said
+      nothing — the seed arrays are not checked for excess properties, so an
+      invented field compiles, renders nothing, and looks done. The house
+      pattern for a second address is a sentence in siteNote; Pawddle carries
+      its Linktree the same way.
+    */
     siteNote:
-      'Their own pages give three different addresses; ask them which room is open',
+      'Their links also live at linktr.ee/veganmob1. Their own site gives two other addresses — 9 Grand Ave, Oakland and 1199 El Camino Real, San Bruno — so it is worth asking which room is open.',
     cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
     color: '#3C9D3C', icon: 'vegan-mob', prep: 16, category: 'Menu',
     items: [
@@ -703,6 +737,8 @@ const fromSeed = (s: Seed): Brand => ({
   needsOwnerReview: s.review,
   pageMark: s.pageMark,
   site: s.site,
+  address: s.address,
+  phone: s.phone,
   needsSite: s.needsSite,
   siteNote: s.siteNote,
   quoteOnly: s.quoteOnly,

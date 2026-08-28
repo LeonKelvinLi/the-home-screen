@@ -382,6 +382,31 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           )}
 
+          {/*
+            A PHONE NUMBER, WHEREVER THEY PUBLISH ONE.
+
+            This used to appear only inside the contact block, which renders for
+            a business with no menu or one whose work is quoted. So a restaurant
+            with a full price list and a published telephone number had no way
+            to be telephoned — Vegan Mob publishes (415) 513-5120 and the page
+            showed it nowhere. A directory exists to connect somebody to a
+            business; the number is the oldest way that happens.
+
+            Not repeated for the two kinds that already carry it below.
+          */}
+          {brand.phone && !brand.contactOnly && !brand.quoteOnly && (
+            <a
+              className="brand-call"
+              href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}
+              aria-label={`Call ${brand.name}`}
+            >
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 3h3.5l1.8 4.4-2.2 1.6a12 12 0 0 0 5.9 5.9l1.6-2.2L20 14.5V18a2 2 0 0 1-2.2 2A16.5 16.5 0 0 1 3 5.2 2 2 0 0 1 5 3Z" />
+              </svg>
+              {brand.phone}
+            </a>
+          )}
+
           {brand.pricesEstimated && (
             <p className="brand-review-flag">Prices need confirming — {brand.pricesEstimated}</p>
           )}

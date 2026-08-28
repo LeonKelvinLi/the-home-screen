@@ -27,7 +27,7 @@ interface GateValue {
   account: Account | null
   loading: boolean
   /** Run `go` if they may, otherwise raise the prompt. Returns whether it ran. */
-  gate: (key: GateKey, go: () => void) => boolean
+  gate: (key: GateKey, go: () => void, what?: string) => boolean
   setAccount: (a: Account | null) => void
   refresh: () => Promise<void>
 }
@@ -39,7 +39,7 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true)
   const account = state === 'offline' ? null : state
   const reachable = state !== 'offline'
-  const [asking, setAsking] = useState<GateKey | null>(null)
+  const [asking, setAsking] = useState<{ key: GateKey; what?: string } | null>(null)
 
   const refresh = useCallback(async () => {
     setState(await fetchAccount())
@@ -80,7 +80,21 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
   }, [refresh, state])
 
   const gate = useCallback(
-    (key: GateKey, go: () => void) => {
+    /*
+      `what` NAMES THE THING THAT WAS TAPPED, for the cases where one key
+      covers several destinations.
+
+      The dock is the only one: his note gates "any of them lower 4 buttons" as
+      a group, so all four shared the `profile` key — and therefore all four
+      said "Open your profile". Tapping BEASTY Designs, Share & Scan, or (once
+      it existed) News was answered with a prompt about somebody's profile.
+
+      It does not weaken the reason GATED exists. The copy for a key still
+      lives in one place; this is the app's OWN name for itself, the same
+      string the tile is labelled with, so the prompt cannot drift from the
+      thing it is about.
+    */
+    (key: GateKey, go: () => void, what?: string) => {
       /*
         WHILE LOADING, LET THEM THROUGH. The alternative is showing a sign-up
         prompt to a paying member because their session lookup had not landed
@@ -101,7 +115,7 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
         go()
         return true
       }
-      setAsking(key)
+      setAsking({ key, what })
       return false
     },
     [loading, account],
@@ -117,7 +131,7 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
       {children}
       {asking && (
         <GatePrompt
-          what={GATED[asking]}
+          what={asking.what ?? GATED[asking.key]}
           onClose={() => setAsking(null)}
           onJoin={() => {
             setAsking(null)

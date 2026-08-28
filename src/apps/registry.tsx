@@ -85,7 +85,7 @@ const SYSTEM: { key: SystemKey; name: string; label: string; glyph: SystemGlyph;
   { key: 'settings', name: 'Settings', label: 'Settings', glyph: 'gear', tint: '#8E8E93' },
   /* His idea of 2026-08-28. What a directory has news about is the directory
      changing — see data/news.ts, which is where an entry gets added. */
-  { key: 'news', name: 'News', label: 'News', glyph: 'news', tint: '#E8C800' },
+  { key: 'news', name: 'News', label: 'News', glyph: 'news', tint: '#141416' },
 ]
 
 export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
@@ -722,22 +722,25 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
     least load-bearing of the four. It is still on the home grid.
   */
   /*
-    NEWS MOVES INTO SET 1, NEXT TO PROFILE — his call, 2026-08-28, after seeing
-    it sit in the utilities set.
+    HIS ORDER, WRITTEN OUT, 2026-08-28:
 
-    The dock holds four, so something had to leave, and it is Phone again for
-    the same reason as before: it is the only app in any set that appears
-    twice, and it goes straight back to set 3 where it started. Designs,
-    Profile and Share all keep the positions he set himself on 2026-08-25 —
-    "move the BEASTY designs to 2", then "you can put the share button back
-    where it was before".
+      "1. News, profile, calendar, QR share
+       2. Leave as is
+       3. Leave as is"
 
-    WHAT HE LOSES IS CONTACT IN SLOT 1, which was also his instruction that
-    day. Nothing became unreachable — Phone opens from set 3 and from the
-    keypad screen — but it is the one thing here that contradicts something he
-    asked for, and he should be the one to decide it stays that way.
+    Left to right, in that order. Two earlier passes at this put News third and
+    then kept Designs in the row, neither of which is what he asked for.
+
+    DESIGNS LEAVES SET 1 and Calendar takes the third slot. Designs is still in
+    set 2, where he put it himself ("you can put BEASTY designs in place of the
+    BEASTY pages icon"), and still on the home grid; it is the dock slot it
+    loses. Calendar comes back for a reason he gave: the News page has a button
+    through to the calendar, and an affiliate posting about a future event puts
+    that event on it, so the two belong next to each other.
+
+    Phone is back in set 3, where it was before any of this.
   */
-  { key: 'you', name: 'Your stuff', apps: [DESIGNS_APP, PROFILE_APP, newsApp(), SHARE_APP] },
+  { key: 'you', name: 'Your stuff', apps: [newsApp(), PROFILE_APP, CALENDAR_APP, SHARE_APP] },
   {
     key: 'beasty',
     name: 'BEASTY',

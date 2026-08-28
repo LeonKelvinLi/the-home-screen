@@ -60,35 +60,33 @@ const TILES: Record<SystemGlyph, [string, string]> = {
   person: ['#F5F2ED', '#DCD5CA'],
   gear: ['#B9BDC3', '#75797E'],
   /*
-    NOT AN iOS SYSTEM PAIR — this is BEASTY's own yellow, and deliberately.
+    THE DOCK'S OWN LANGUAGE, WHICH THIS DID NOT SPEAK AT FIRST.
 
     He asked for a news icon and sent an image search for one. A clip-art PNG
     off a search page would sit on the grid next to a hundred and sixty real
-    business logos and read as clip art, and its licence is nobody's guess but
-    the person who drew it. Drawn here instead, in the same craft as the other
-    six: vertical gradient, specular top third, glyph with a real shadow.
+    business logos and read as clip art, and its licence is nobody's guess.
+    Drawn here instead, in the same craft as the other six.
 
-    Four were drawn and this is the one that is theirs rather than anyone's —
-    the masthead rule is the same yellow as the BEASTY PAGES overflow sheets,
-    so it belongs to this product instead of to every news app ever made. The
-    other three are folded newspaper, megaphone and stacked pages; swapping is
-    this table and the path below.
+    The first version was a masthead knocked out of BEASTY's yellow, and it was
+    wrong twice over. Every other tile in that dock — Designs, Profile, Share —
+    is a near-black tile with a yellow glyph, so a solid yellow one was the odd
+    one out in a row of four. And the masthead's bars read as a generic card or
+    a layout, not as news: he looked straight at it and said he could not see
+    the news icon.
 
-    THE EXACT YELLOW IS SAMPLED FROM _beasty-pages.webp, not picked. First cut
-    used the same amber pair as Help, and the two tiles sat in one dock of four
-    looking like a rendering error. The BEASTY PAGES sheet is #E8C800 — a
-    lemon rather than an amber — which reads as theirs and separates cleanly
-    from Help at dock size.
+    So: near-black tile sampled off the live dock, yellow glyph, and a FOLDED
+    newspaper — the second page turned back behind the first is the shape that
+    says newspaper on its own, without a word on it.
   */
-  news: ['#F7DC1E', '#E8C800'],
+  news: ['#1A1A1D', '#0E0E10'],
 }
 
 /** Glyph colour. Most are white; the light tiles need a dark mark. */
 const INK: Partial<Record<SystemGlyph, string>> = {
   person: '#7D7469',
   help: '#7A4B00',
-  // Near-black on the yellow, so the masthead is knocked out in their colour.
-  news: '#141414',
+  // Yellow on near-black, which is what the other three dock tiles are.
+  news: '#F7D400',
 }
 
 export function SystemIcon({
@@ -193,16 +191,32 @@ export function SystemIcon({
 
         {glyph === 'news' && (
           <>
-            {/* Sheet, then the yellow knocked back out of it: masthead bar, a
-                lead picture, two lines beside it, and two full-width lines. */}
-            <path d="M20 24a4 4 0 0 1 4-4h52a4 4 0 0 1 4 4v52a4 4 0 0 1-4 4H24a4 4 0 0 1-4-4V24Z" />
-            <g fill="#FFD400">
-              <rect x="27" y="28" width="46" height="11" rx="2.5" />
-              <rect x="27" y="45" width="20" height="16" rx="2.5" />
-              <rect x="51" y="45" width="22" height="4" rx="2" />
-              <rect x="51" y="53" width="22" height="4" rx="2" />
-              <rect x="27" y="66" width="46" height="4" rx="2" />
+            {/*
+              DRAWN, NOT FILLED. Two earlier passes were solid yellow slabs and
+              he could not tell what either was — the second one he looked
+              straight at and said he could not see a news icon.
+
+              The curled edge is what does the work: a sheet whose right side
+              rolls back on itself is a newspaper and nothing else, at any size.
+              Line-art rather than a slab also puts it in the same family as
+              Designs and Share & Scan, which are both drawn in strokes.
+            */}
+            <g
+              fill="none"
+              stroke={ink}
+              strokeWidth="6.5"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            >
+              <path d="M24 28a4 4 0 0 1 4-4h34a4 4 0 0 1 4 4v40a8 8 0 0 0 8 8H32a8 8 0 0 1-8-8V28Z" />
+              <path d="M66 44h6a4 4 0 0 1 4 4v20a8 8 0 0 1-8 8" />
             </g>
+            {/* Masthead, a lead picture, its two lines, and one line under. */}
+            <rect x="32" y="33" width="26" height="6" rx="2" />
+            <rect x="32" y="46" width="11" height="10" rx="2" />
+            <rect x="47" y="46" width="11" height="3.4" rx="1.7" />
+            <rect x="47" y="53" width="11" height="3.4" rx="1.7" />
+            <rect x="32" y="62" width="26" height="3.4" rx="1.7" />
           </>
         )}
 

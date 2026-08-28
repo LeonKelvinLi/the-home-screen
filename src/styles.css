@@ -10073,37 +10073,143 @@ textarea {
 }
 
 /* ---------- News ----------
-   A feed, not a page of prose: the date is small and grey, the headline
-   carries the weight, and the row of business logos under an item is tappable
-   because the icons ARE the news. */
-.news { padding: 4px 0 28px; }
-.news-item {
-  padding: 18px 0 20px;
-  border-bottom: 1px solid var(--hairline, rgba(60, 60, 67, 0.16));
-}
-.news-item:last-of-type { border-bottom: 0; }
-.news-date {
-  margin: 0 0 4px;
-  font-size: 12px;
+   A feed people are meant to open daily, so it reads as cards under day
+   dividers rather than as a wall of paragraphs. The first version was a plain
+   list — date, headline, body, logos, repeat — and looked like a changelog. */
+.news { padding: 2px 0 30px; }
+
+/* The call row on a brand page that also has a menu. Quiet — the menu is what
+   the page is for — but present, which it was not. */
+.brand-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0 0 14px;
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: var(--card, rgba(120, 120, 128, 0.12));
+  font-size: 14.5px;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  color: inherit;
+  text-decoration: none;
+}
+.brand-call:active { opacity: 0.65; }
+
+.news-intro {
+  margin: 0 0 14px;
+  font-size: 14.5px;
+  line-height: 1.45;
+  color: var(--muted, #6b7076);
+}
+
+/* His "direct calendar button", at the top, as a row rather than a bare link:
+   it is a destination, and it is the other half of what this page is for. */
+.news-calendar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 13px 14px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--card, rgba(120, 120, 128, 0.12));
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.news-calendar:active { opacity: 0.65; }
+.news-calendar > span { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.news-calendar strong { font-size: 15.5px; font-weight: 600; }
+.news-calendar small { font-size: 12.5px; line-height: 1.3; color: var(--muted, #6b7076); }
+.news-chev { color: var(--muted, #9a9ea4); flex: none; }
+
+.news-day {
+  margin: 22px 0 9px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: var(--muted, #6b7076);
 }
-.news-headline { margin: 0 0 6px; font-size: 20px; font-weight: 700; line-height: 1.2; }
-.news-body { margin: 0; line-height: 1.45; }
+.news-feed > section:first-child .news-day { margin-top: 4px; }
+
+.news-card {
+  padding: 15px 15px 16px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+  background: var(--card, rgba(120, 120, 128, 0.1));
+}
+
+.news-card-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 9px;
+}
+
+/* The kind of news, said before the headline. Colour carries meaning here, so
+   every one of these also says its name in words. */
+.news-kind {
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #141416;
+  background: #E8C800;
+}
+.news-kind.is-event { background: #7FC4FF; }
+.news-kind.is-sale { background: #FF9F4A; }
+.news-kind.is-opening { background: #7BD88F; }
+.news-kind.is-closure { background: #FF8C8C; }
+.news-kind.is-collab { background: #C9A7FF; }
+.news-kind.is-raffle { background: #FFD966; }
+.news-kind.is-affiliate { background: #A8E6D0; }
+
+.news-author {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--muted, #6b7076);
+  cursor: pointer;
+}
+.news-author.is-beasty { cursor: default; letter-spacing: 0.06em; }
+
+.news-headline { margin: 0 0 5px; font-size: 19px; font-weight: 700; line-height: 1.22; }
+.news-body { margin: 0; font-size: 14.5px; line-height: 1.45; }
+
+.news-when {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 10px 0 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--muted, #6b7076);
+}
+
 .news-brands {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px 12px;
-  margin-top: 14px;
+  gap: 12px 10px;
+  margin-top: 13px;
 }
 .news-brand {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  width: 62px;
+  gap: 4px;
+  width: 58px;
   padding: 0;
   border: 0;
   background: none;
@@ -10113,7 +10219,7 @@ textarea {
   -webkit-tap-highlight-color: transparent;
 }
 .news-brand span {
-  font-size: 10.5px;
+  font-size: 10px;
   line-height: 1.15;
   text-align: center;
   color: var(--muted, #6b7076);
@@ -10124,3 +10230,21 @@ textarea {
   overflow: hidden;
 }
 .news-brand:active { opacity: 0.6; }
+
+.news-empty { margin: 18px 0; color: var(--muted, #6b7076); }
+
+.news-archive-toggle {
+  display: block;
+  width: 100%;
+  margin: 20px 0 4px;
+  padding: 11px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--card, rgba(120, 120, 128, 0.1));
+  font: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--muted, #6b7076);
+  cursor: pointer;
+}
+.news-feed.is-archived { opacity: 0.72; }

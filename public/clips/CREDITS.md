@@ -98,3 +98,20 @@ was the event itself, with the date and the price off their own flyer. See
 `src/data/localBrands.ts`.
 
 That is the test for the next one: **is there anything in it but a face?**
+
+## p-lo.mp4 — added 2026-08-28
+
+His instruction on 2026-08-27 was two lines and the second was read as noise:
+"Can you isolate P-Lo for his icon logo please? Also, if you can play this video
+below, but clip the video." The icon was done; the clip was not, and the page
+carried a card that opened Instagram instead of footage that plays on it.
+
+Source: the reel at instagram.com/reel/DcBzdqRteQZ, P-Lo's own post, credited
+on the card. Twenty-four seconds of thirty, and which twenty-four was measured:
+a one-frame-per-second sweep of the whole reel, taking the window with the most
+movement in it. It starts one second in.
+
+**yt-dlp needs no format filter here.** `-f "best[height<=1080]"` came back
+"requested format is not available" against a 1440x1080 VP9 reel that plain
+yt-dlp merged without complaint. That failure looks like the post being
+unavailable and is not.

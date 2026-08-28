@@ -773,4 +773,30 @@ export const CITY_PLACEMENTS: Record<string, string> = {
 
   /* 2026-08-28, late: "Dublin • Goods". Dublin's Indian seat is Pippal's. */
   'dublin-goods2-0': 'b_biryaniz',
+
+  /* "Bump poof of Alchemy to yellow goods pages" — his words, 2026-08-28.
+     It gives up seat 18 on the numbered BEASTY Goods sheet. */
+  'beasty-goods2-9': 'b_poofofalchemy',
+
+  /*
+    FOUR INSTRUCTIONS THAT WERE READ AS ONE LINE EACH AND WERE TWO.
+
+    His messages are often two lines and the second is a second placement. A
+    filter reading this thread line by line kept only the first, so each of
+    these shipped with half of what he asked for. The fetcher writes one
+    message per line now.
+
+      "BEASTY - Services / San Jose - Services"  -> Audio Accessories Mobile,
+      which lists San Jose in its own service area, so the city seat is honest
+      as well as instructed.
+
+      "Mobile / San Bruno - Services"  -> Pacific Pet Grooming, whose Bus 2
+      parks at Commodore Park in San Bruno on Fridays. Its own timetable.
+
+      "BEASTY - Online / BEASTY - Individuals"  -> Crayone, which is both: the
+      store is Online and Rigel Juratovac is the artist behind it.
+  */
+  'san-jose-services-6': 'b_audioaccessoriesmobile', //  Car audio, and BEASTY too
+  'san-bruno-services-14': 'b_pacificpetgrooming', //    Pet grooming; Fridays
+  'beasty-individuals-13': 'b_crayone', //               the artist, beside his store
 }

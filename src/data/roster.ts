@@ -1452,7 +1452,10 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   null, //                 15 open
   'b_butterpecan', //      16 Butter Pecan bake shop
   'b_veganmob', //         17 Vegan Mob
-  'b_poofofalchemy', //    18 Poof of Alchemy
+  /* "Bump poof of Alchemy to yellow goods pages", 2026-08-28 — same move as
+     Smash Burgers above, and for the same reason: the seat is his to reassign.
+     Reseated on beasty-goods2 in data/placements.ts, so 18 is open again. */
+  null, //                 18 open
   'b_gaovietkitchen', //   19 Gao
   'b_elemonkey', //        20 Elemonkey
   'b_meadowlarkdairy', //  21 Meadowlark Dairy
