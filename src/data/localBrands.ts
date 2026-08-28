@@ -2288,4 +2288,135 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'aglow-outdoor-lighting',
+    icon: 'aglow-outdoor-lighting',
+    /* THEY DO NOT CALL THEMSELVES "A GLOW LIGHTS" — that is the domain. Every
+       instance on their own site reads Aglow Outdoor Lighting. */
+    name: 'Aglow Outdoor Lighting',
+    label: 'Aglow Lights',
+    cuisine: 'Permanent outdoor lighting',
+    tagline: 'App-controlled permanent lighting on rooflines and peaks.',
+    color: '#5F12B8|#FF6A00',
+    prep: 0,
+    category: 'Contractor',
+    phone: '(925) 307-4324',
+    /*
+      NO ADDRESS, AND THAT IS THE POINT. They publish none — the footer says
+      only "Proudly serving the Bay Area" — and they list roughly eighty cities
+      across five regions. Pleasanton is one of them, not where they are.
+    */
+    site: 'https://aglowlights.com/',
+    siteNote: 'They serve most of the Bay Area, not one town',
+    quoteOnly:
+      'Permanent architectural LED lighting fitted to rooflines, peaks and columns, controlled from an app, open seven days 6am to 9pm. From their own FAQ: most residential installations run between $2,000 and $5,000, with a lifetime workmanship warranty and a three-year product warranty. Every job is quoted on the house, so nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'fire-slice-pizza',
+    icon: 'fire-slice-pizza',
+    name: 'Fire Slice Pizza',
+    label: 'Fire Slice',
+    cuisine: 'Pizza, halal meats',
+    tagline: 'Family-owned pizzeria on Clayton Road, halal meats.',
+    color: '#C82127|#2B5672',
+    prep: 0,
+    category: 'Italian',
+    phone: '(925) 270-3107',
+    address: '2705 Clayton Rd, Concord, CA 94519',
+    email: 'Fireslicepizza925@gmail.com',
+    /*
+      THE OPERATOR'S NOTE WAS "This business needs a proper website and branding
+      logo as well." Both turned out to exist: fireslicepizzeria.com is live and
+      their wordmark is a finished 1200px file. What the site actually needs is a
+      tidy-up — the footer still says "© 2035", a button on the homepage is
+      labelled "@wix", and all four policy pages are unedited Wix boilerplate
+      with "[enter organization / business name]" still in the brackets. Worth
+      telling them; not a reason to call them website-less.
+    */
+    site: 'https://www.fireslicepizzeria.com',
+    siteNote: 'They take orders through Toast',
+    contactOnly:
+      'A family-owned pizzeria on Clayton Road in Concord, making pizza with halal meats, open seven days — 11am to 10pm, and to midnight on Friday and Saturday. Their menu and prices live on their Toast ordering page, which blocks the tools used to build this page, so rather than copy prices from a delivery app nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'cryo-canine',
+    icon: 'cryo-canine',
+    name: 'Cryo Canine Semen Bank',
+    label: 'Cryo Canine',
+    cuisine: 'Canine reproduction lab',
+    tagline: 'Stud semen collection, freezing and storage, Las Vegas.',
+    color: '#5E86C4|#52B8E9',
+    prep: 0,
+    /*
+      NO CATEGORY IN THE TWENTY-FOUR REALLY FITS. This is a cryogenic semen bank
+      serving breeders, not a clinic treating pets — but the work is clinical
+      (collection, microscopy, progesterone assay, insemination), so Veterinary
+      clinic is the least wrong seat. "Dog breeder" would be actively false:
+      they do not breed or sell dogs. His to move.
+    */
+    category: 'Canine reproduction',
+    phone: '(725) 306-1508',
+    address: 'Las Vegas, NV',
+    /*
+      THEIR PUBLISHED EMAIL IS "cryocaniesb@gmail.com" AND IT LOOKS MISSPELLED —
+      "canie" is missing the n of canine. Reproducing it would send a customer
+      nowhere, and correcting it would invent an address they never published,
+      so it is omitted and the phone number carries the page. Worth telling them.
+    */
+    site: 'https://cryocanine.com/',
+    quoteOnly:
+      'A canine reproduction lab in Las Vegas working with breeders: semen collection, analysis, freezing and long-term storage, artificial insemination, and fertility timing. These are their own published prices. The same owner runs Sin City Pits.',
+    menuNote: 'Their own published prices',
+    groups: [
+      {
+        name: 'Lab work',
+        items: [
+          ['Semen analysis', 'Their published price', 10000],
+          ['Collection and freezing', 'Collections that do not freeze are $150', 35000],
+          ['Collection and insemination', 'Their published price', 15000],
+          ['Fresh collection and ship', 'Shipping is charged on top', 25000],
+        ],
+      },
+      {
+        name: 'Storage',
+        items: [
+          ['Frozen storage, per year', 'Up to 12 straws, then $5 a straw', 10000],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'lavish-paws',
+    icon: 'lavish-paws',
+    name: 'Lavish Paws',
+    label: 'Lavish Paws',
+    cuisine: 'Dog supplements',
+    tagline: 'Lab-formulated supplements for dogs.',
+    color: '#232323|#F6AB4A',
+    prep: 0,
+    category: 'Supplements and nutrition',
+    email: 'info@lavishpaws.co',
+    /* No address and no phone published. Their footer has a "Call us :" label
+       with nothing after it, which reads as broken — worth telling them. */
+    site: 'https://lavishpaws.co/',
+    quoteOnly:
+      'Six lab-formulated supplements for dogs, sold direct from their own shop. These are their own published prices, tax inclusive as their site states. Same owner as Sin City Pits and Cryo Canine.',
+    menuNote: 'Their whole range',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Hip & Joint', 'Their published price', 5799],
+          ['Multivitamin', 'Their published price', 3999],
+          ['Wild Alaskan Salmon Oil', 'Their published price', 3399],
+          ['Probiotics', 'Their published price', 2899],
+          ['Lavish Paws Bundle', 'Their bundle, was $162.96', 12999],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]

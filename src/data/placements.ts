@@ -564,4 +564,24 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* Pawddle, 2026-08-27. BEASTY • Online's pet goods spot, with a MOCK welcome
      offer he asked for so he has something to show them. */
   'beasty-online-17': 'b_pawddle', //            Pet goods
+  /*
+    2026-08-27, from the 08-23 and 08-26 backlog. Three of these four needed a
+    judgment call recorded rather than smoothed over.
+
+    AGLOW IS NOT A PLEASANTON BUSINESS. He said "Pleasanton • Services"; they
+    publish no address at all and list about eighty cities. Seated where he asked
+    and flagged on their own page. Handyman rather than Contractor only because
+    O'Neills already holds Pleasanton's contractor spot.
+
+    CRYO CANINE HAS NO HONEST CATEGORY. A cryogenic semen bank for breeders is
+    not a vet clinic and definitely not a "dog breeder" — they neither breed nor
+    sell dogs. Veterinary clinic is the least wrong of twenty-four. His to move.
+
+    LAVISH PAWS WANTED ONLINE'S PET GOODS SPOT, which Pawddle took earlier
+    tonight. Supplements is what they actually sell, so that is where they sit.
+  */
+  'pleasanton-services-22': 'b_aglowoutdoorlighting', // Handyman; contractor taken
+  'concord-goods-5': 'b_fireslicepizza', //             Italian
+  'las-vegas-services-15': 'b_cryocanine', //           nearest seat, not a good one
+  'beasty-online-9': 'b_lavishpaws', //                 Supplements and nutrition
 }
