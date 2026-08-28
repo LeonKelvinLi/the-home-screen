@@ -1596,6 +1596,32 @@ async function memberPayload(m: MemberRow) {
  * carrying the code would be a complete authentication bypass for anybody who
  * can read a network tab, and "it is only in dev" is exactly how that ships.
  */
+/**
+ * Why the sign-in email cannot reach a customer, or null if it can.
+ *
+ * RESEND'S SHARED SENDER ONLY DELIVERS TO THE ACCOUNT OWNER. `onboarding@resend.dev`
+ * is their testing address: mail to the address that owns the Resend account
+ * goes through, and mail to anybody else is refused. Configured that way in
+ * production, the operator can sign in, every customer is told to check an
+ * email that will never arrive, and nothing anywhere says why — the key is
+ * valid, the API answers 200, and the only symptom is silence.
+ *
+ * Found in production on 2026-08-28 with a valid key, a from-address of
+ * "BEASTY <onboarding@resend.dev>", and no verified domain on the account.
+ *
+ * The fix is not code: verify a domain in Resend (beastypages.com), add the
+ * DNS records it prints, and point OTP_FROM_EMAIL at an address on it.
+ */
+export function loginEmailProblem(): string | null {
+  const key = process.env.RESEND_API_KEY
+  const from = process.env.OTP_FROM_EMAIL
+  if (!key || !from) return 'RESEND_API_KEY or OTP_FROM_EMAIL is unset — no login email can be sent.'
+  if (/@resend\.dev\b/i.test(from)) {
+    return `OTP_FROM_EMAIL sends from resend.dev, which only delivers to the Resend account owner. Every other customer will be told to check an email that never arrives. Verify a domain in Resend and send from it.`
+  }
+  return null
+}
+
 async function sendLoginCode(email: string, code: string, purpose: string): Promise<boolean> {
   const key = process.env.RESEND_API_KEY
   const from = process.env.OTP_FROM_EMAIL
@@ -2104,6 +2130,12 @@ async function start() {
     console.log(`api + static on http://localhost:${PORT}`)
     if (!PAYMENTS_WIRED) {
       console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
+    }
+    const mail = loginEmailProblem()
+    if (mail) {
+      // Loud, and loudest in production: this one is invisible from the outside
+      // until a customer cannot get in, and then it looks like a broken form.
+      console.warn(`*** SIGN-IN EMAIL WILL NOT REACH CUSTOMERS: ${mail} ***`)
     }
     if (SIMULATE_KITCHEN) {
       console.warn('*** KITCHEN SIMULATOR ON: ticket states advance on a timer, not by a kitchen. ***')

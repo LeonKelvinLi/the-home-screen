@@ -172,7 +172,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   */
   return (
     <AppChrome
-      title={step === 'details' ? 'Join BEASTY' : 'Check your email'}
+      title={step === 'details' ? 'Sign in or join' : 'Check your email'}
       onBack={api.closeApp}
       tint="#141416"
     >
@@ -181,6 +181,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
         <form className="join" onSubmit={askForCode}>
           <p className="join-lead">
             Free, and it opens the whole directory — every city, the reels, the gallery and search.
+            <strong> Already a member? This is also how you sign in.</strong> We email a six-digit
+            code either way; there is no password.
           </p>
 
           {/* Said where it matters. A referred sign-up is the referrer's credit. */}
@@ -200,6 +202,18 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               enterKeyHint="next"
               required
             />
+            {/*
+              WHY A SIGN-IN ASKS FOR A NAME, said rather than left to be
+              wondered at. The server requires it whether or not the address is
+              already a member, on purpose: when it was required only for new
+              accounts, a short name came back 400 for a stranger and 202 for a
+              member, and that difference was a membership oracle anybody could
+              have typed addresses into. An existing member's stored name is
+              never overwritten by what is typed here.
+            */}
+            <small className="join-hint">
+              Asked of everyone. If you are already a member, yours stays as it is.
+            </small>
           </label>
 
           <label className="join-field">

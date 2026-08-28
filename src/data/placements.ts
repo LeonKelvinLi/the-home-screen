@@ -770,4 +770,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-services2-16': 'b_pacificpetgrooming', // five cities, one timetable
   'san-bruno-services-7': 'b_mcar', //             Auto detailing; no tint seat exists
   'san-francisco-goods-1': 'b_underdogscantina', // Mexican food
+
+  /* 2026-08-28, late: "Dublin • Goods". Dublin's Indian seat is Pippal's. */
+  'dublin-goods2-0': 'b_biryaniz',
 }

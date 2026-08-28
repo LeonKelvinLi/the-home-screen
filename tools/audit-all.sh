@@ -66,6 +66,10 @@ JOBS=(
   "icons /opt/homebrew/bin/python3 tools/audit-icons.py"
   "gate node tools/audit-gate.mjs"
   "otp node tools/audit-otp.mjs"
+  # The properties either side of the code itself — a code going stale, a
+  # session going stale, signing out actually ending it on the server, and the
+  # one configuration mistake that makes the whole flow useless in production.
+  "auth node tools/audit-auth.mjs"
   "login node tools/audit-login.mjs"
   "payments node tools/audit-payments.mjs"
   "stripe node tools/audit-stripe.mjs"

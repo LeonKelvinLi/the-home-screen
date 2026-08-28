@@ -9513,6 +9513,22 @@ textarea {
   color: var(--muted);
 }
 
+.gate-fine {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--muted);
+  text-align: center;
+}
+
+.join-hint {
+  display: block;
+  margin-top: 5px;
+  font-size: 12.5px;
+  line-height: 1.35;
+  color: var(--muted);
+}
+
 .gate-later {
   border: 0;
   background: none;

@@ -4445,4 +4445,34 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'biryaniz',
+    icon: 'biryaniz',
+    name: 'Biryaniz',
+    label: 'Biryaniz',
+    cuisine: 'Indian',
+    tagline: 'Biryani, catering and takeaway. Village Parkway.',
+    color: '#FAFAFA|#40A040',
+    prep: 0,
+    /* Dublin's Indian seat is Pippal's. Yellow sheet rather than a second
+       Indian tile on the numbered page. */
+    category: 'Indian food',
+    phone: '(925) 556-9999',
+    address: '6830 Village Parkway, Dublin, CA 94568',
+    site: 'https://www.biryaniz.com/',
+    siteNote:
+      'Mon-Thu 11.30am-2.30pm and 5.30pm-10pm, Fri to 11.30pm, Sat and Sun 11am-10pm',
+    /*
+      NO PRICES ANYWHERE. Their homepage and their menu page carry not one
+      dollar figure between them — checked both, and both load identically to a
+      browser user-agent and to plain curl, so nothing is being hidden behind a
+      firewall the way Vegan Mob's was.
+
+      NOT REPUBLISHED: "Best Indian catering Dublin", which names no rating, no
+      publication and no award.
+    */
+    quoteOnly:
+      'An Indian kitchen on Village Parkway in Dublin doing biryani, takeaway and catering for weddings, corporate events and family gatherings. They serve a midday and an evening service on weekdays and run straight through at weekends. They publish no prices.',
+    items: [],
+  },
 ]

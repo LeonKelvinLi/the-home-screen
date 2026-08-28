@@ -156,16 +156,33 @@ function GatePrompt({
   }, [onClose])
 
   return (
-    <div className="gate" role="dialog" aria-modal="true" aria-label="Sign up to continue">
+    <div className="gate" role="dialog" aria-modal="true" aria-label="Sign in or sign up to continue">
       <button className="gate-scrim" onClick={onClose} aria-label="Not now" />
       <div className="gate-card">
         <p className="gate-what">{what}</p>
         <p className="gate-lead">
-          Sign up free to open the whole directory — every city, the reels, the gallery and search.
+          Free, and it opens the whole directory — every city, the reels, the gallery and search.
         </p>
+        {/*
+          ONE BUTTON, NAMED FOR BOTH THINGS IT DOES.
+
+          It said "Sign up free" and nothing else, so a member who already had
+          an account and was looking for a way back in was shown a wall that
+          only offered to make them a second one. The screen behind it has
+          always been sign-in as well as sign-up — the server decides which
+          from the address, deliberately without telling anyone — but nothing
+          on the way in said so.
+
+          Still one button rather than two, because two would need to know
+          which one you are, and finding that out is exactly the membership
+          oracle the server refuses to be.
+        */}
         <button className="btn-primary" onClick={onJoin}>
-          Sign up free
+          Sign in or sign up free
         </button>
+        <p className="gate-fine">
+          Already a member? Same button. We email you a six-digit code; there is no password.
+        </p>
         <button className="gate-later" onClick={onClose}>
           Keep looking around
         </button>

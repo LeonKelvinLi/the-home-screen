@@ -326,8 +326,10 @@ const GemIcon = () => (
  */
 export const JOIN_APP: AppDef = {
   id: 'sys.join',
-  name: 'Sign up',
-  label: 'Sign up',
+  /* One screen does both, so it cannot be called after only one of them.
+     Named "Sign up" it told a returning member the app had no way back in. */
+  name: 'Sign in or join',
+  label: 'Sign in',
   icon: <GemIcon />,
   kind: 'system',
   systemKey: 'join',
