@@ -1035,6 +1035,16 @@ export const LOCAL_SEED: LocalSeed[] = [
 
     name: 'Paulo Sausage Co',
     label: 'Paulo Sausage',
+    /* "Can you please add this video to Paulo Sausage Co? Drop down plz." —
+       2026-08-28. href with no src, like every other reel here: it is his post
+       on his platform, and the drop-down bar opens it rather than pretending to
+       embed it. He adds "I deliver for them weekly so they're definitely going
+       to be on board", which is a reason to expect a yes, not a yes. */
+    clip: {
+      href: 'https://www.instagram.com/reel/DaboslhTtv9/',
+      credit: 'Posted by Paulo Sausage Co',
+      platform: 'Instagram',
+    },
     cuisine: 'Italian sandwiches, sausage',
     tagline: 'Traditionally made sausage and specialty Italian sandwiches. Pittsburg.',
     color: '#111111',

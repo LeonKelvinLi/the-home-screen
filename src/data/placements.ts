@@ -641,4 +641,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* PuppiePack, 2026-08-28 00:55 — the sixth pet business on a sheet with one
      pet seat. Same note as GlowPaws and DryPup applies. */
   'beasty-online-16': 'b_puppiepack',
+  /*
+    Paulo Sausage Co lands in Pittsburg, 2026-08-28. Their published address is
+    2951 Harbor Street, Pittsburg — they were on the flagship sheet with no city
+    page to sit in until the Pittsburg page existed this week. A business on a
+    BEASTY sheet AND in its own city is the intended shape, not a duplicate.
+  */
+  'pittsburg-goods-6': 'b_paulosausage', //        Sandwiches
 }
