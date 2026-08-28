@@ -2855,4 +2855,150 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Luxe soft play sets and mini bounce houses for parties, working the SF Bay Area and beyond. Bookings go through a Google form linked from their Instagram; they have no website and publish no prices, so nothing is priced here. BEASTY has not spoken to them: this spot is held, not taken.',
     items: [],
   },
+  {
+    /* "Make It Moment" is only the domain — they call themselves Moment.Us. */
+    slug: 'moment-us',
+    icon: 'moment-us',
+    name: 'Moment.Us',
+    label: 'Moment.Us',
+    cuisine: 'Photo and video for events',
+    tagline: 'Photo booths, Glambot and portrait lounges for events.',
+    color: '#141414|#F3F3F3',
+    prep: 0,
+    /* Photo and video is San Francisco's seat and I-Snapped holds it, so this
+       takes an open spot rather than bumping a business seated first. */
+    category: 'Photo and video',
+    phone: '(425) 224-3854',
+    email: 'hello@makeitmoment.us',
+    /* NO ADDRESS: they publish none. And they are SEATTLE-FIRST — their own
+       header reads "Seattle, SF Bay Area & beyond", the FAQ says "our Seattle
+       studio", and the phone is a Washington 425 number. The operator filed
+       them under San Francisco, which is fair as a service area and wrong as a
+       home base. */
+    site: 'https://www.makeitmoment.us',
+    siteNote: 'Seattle-based; they cover the Bay Area too',
+    menuNote: 'Their own published prices',
+    quoteOnly:
+      'Photo booths and cinematic video activations for weddings, corporate events and brand launches — including a robotic-arm Glambot and portrait lounges. Based in Seattle and working the Bay Area. These are their own published starting prices; every booking is quoted on the event.',
+    groups: [
+      {
+        name: 'From their own price list',
+        items: [
+          ['The Classic • Digital', 'From', 95000],
+          ['The Classic', 'From', 130000],
+          ['The Icon', 'From', 150000],
+          ['Glambot', 'From', 270000],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'olesia-cake-studio',
+    icon: 'olesia-cake-studio',
+    name: 'Olesia Cake Studio',
+    label: 'Olesia Cake',
+    cuisine: 'Cake decorating classes',
+    tagline: 'Hands-on cake and cupcake classes on 16th Street.',
+    color: '#2E302F|#FAF8F3',
+    prep: 0,
+    /* They sell a CLASS, not a cake. No listed category covers a workshop, and
+       filing them under Bakery would have people turning up expecting to buy
+       something baked. Open spot instead. */
+    category: 'Cake decorating classes',
+    address: '2940 16th St #322, San Francisco, CA 94103',
+    email: 'info@olesiacake.com',
+    site: 'https://www.olesiacake.com/workshop',
+    menuNote: 'Their own published prices',
+    quoteOnly:
+      'A cake studio on 16th Street running hands-on cake and cupcake decorating classes, plus private and corporate sessions. These are their own published prices; classes are booked by the date on their site.',
+    groups: [
+      {
+        name: 'Classes',
+        items: [
+          ['Mini Heart Cake + Mimosas', 'Their published price', 15900],
+          ['Sip & Decorate with Mimosas', 'Their published price', 12900],
+          ['Private cake class', 'Per person, ten minimum', 15500],
+          ['Private cupcake class', 'Per person, ten minimum', 13500],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'glowpaws',
+    icon: 'glowpaws',
+    name: 'GlowPaws',
+    label: 'GlowPaws',
+    cuisine: 'LED dog boots',
+    tagline: 'Light-up boots and collar for walking a dog at night.',
+    color: '#06172D|#1E90FF',
+    prep: 0,
+    category: 'Pet goods',
+    site: 'https://valenio.store/products/glow-paws',
+    /*
+      SAME OWNER AS DRYPUP, AND HE SHOULD KNOW BEFORE HE PITCHES BOTH. The legal
+      pages on valenio.store and relunio.store carry the same name, tax ID,
+      street address, phone and Gmail — one sole trader in Pudahuel, Chile,
+      running two single-product Shopify funnels. They are not two businesses.
+
+      NOTHING PROMOTIONAL FROM EITHER STORE IS REPEATED HERE. Their ratings
+      ("4.9/5, 4,000+ happy dog parents" on a product forty days old), their
+      countdown timers, their "going viral" line and the trademark symbol they
+      claim without a registration are all left off. The product and the price
+      are real; the marketing around them is not evidence of anything.
+    */
+    quoteOnly:
+      'LED-lit boots and a matching collar for walking a dog after dark, sold direct. These are their own published prices. The shop is run from Chile and sells in dollars; the same owner runs DryPup. BEASTY has not spoken to them: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['LED dog boots', 'Sizes XS to 4XL', 3995],
+          ['LED collar', 'Their price', 1495],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'drypup',
+    icon: 'drypup',
+    name: 'DryPup',
+    label: 'DryPup',
+    cuisine: 'Dog drying bag',
+    tagline: 'A hands-free drying bag for a dog after a bath.',
+    color: '#0E3A52|#238CC4',
+    prep: 0,
+    category: 'Pet goods',
+    site: 'https://relunio.store/products/drypup-hands-free-dog-drying-bag',
+    clip: {
+      href: 'https://www.instagram.com/reel/DcZdfdTQLhX/',
+      credit: 'Posted by DryPup',
+      platform: 'Instagram',
+    },
+    /*
+      THE REVIEWS ON THIS PRODUCT CANNOT BE REAL and none of them appear here.
+      The product record was created 2026-08-22; all forty "Verified" reviews on
+      its page are dated BEFORE that, the earliest by about nineteen months, and
+      the page gives three different review totals. The same three reviewer names
+      head the GlowPaws page in the same order, several review bodies talk about
+      cats on a dog product, and one praises "the best pet grooming tool on
+      Shopify". Same owner as GlowPaws — see that seed.
+    */
+    quoteOnly:
+      'A fabric drying bag you attach a hair dryer to, for drying a dog after a bath. These are their own published prices. The shop is run from Chile and sells in dollars; the same owner runs GlowPaws. BEASTY has not spoken to them: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Drying bag', 'Sizes S to XL', 2995],
+          ['Buy two, get one', 'Their bundle', 5985],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]

@@ -621,4 +621,21 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-online-13': 'b_fruitsbyheart', //        dead domain; snacks seat taken
   'san-francisco-services2-3': 'b_thebubblehouse',
   'san-francisco-services2-4': 'b_totspotsoftplay',
+  /*
+    2026-08-28, the last four of the night.
+
+    ONE PET SEAT, FIVE PET BUSINESSES. BEASTY • Online has a single Pet goods
+    spot and now carries Pawddle, Lavish Paws, Tiny Wheels, GlowPaws and DryPup.
+    Pawddle holds the real seat; the rest sit where there was room. That is a
+    structural problem with the twenty-four, not a placement mistake, and it is
+    his to decide.
+
+    GLOWPAWS AND DRYPUP ARE ONE PERSON. Their legal pages carry the same name,
+    tax ID, address, phone and Gmail — one sole trader in Chile running two
+    single-product funnels. He should know that before he pitches both.
+  */
+  'san-francisco-services2-5': 'b_momentus', //   photo/video seat taken by I-Snapped
+  'san-francisco-services2-6': 'b_olesiacakestudio', // a class, not a bakery
+  'beasty-online-14': 'b_glowpaws', //            pet seat taken
+  'beasty-online-15': 'b_drypup', //              pet seat taken; same owner as above
 }
