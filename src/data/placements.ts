@@ -584,4 +584,26 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'concord-goods-5': 'b_fireslicepizza', //             Italian
   'las-vegas-services-15': 'b_cryocanine', //           nearest seat, not a good one
   'beasty-online-9': 'b_lavishpaws', //                 Supplements and nutrition
+  /*
+    2026-08-28. Eight from the backlog and tonight, researched off their own
+    sites. THREE OF THE NAMES HE SENT WERE WRONG and are corrected on their
+    pages: "Pour A On Wheels" is Poura on Wheels, "MRM Home Services" is
+    Mr. M Home Services, "Pho Sho Dough" is Phosho Dough.
+
+    THREE HAVE NO HONEST CATEGORY among the twenty-four. A mobile bar, an
+    arcade bar and a design studio are none of them, so they take open spots on
+    a yellow sheet rather than being filed under something they are not.
+
+    KINGS TAKES DALY CITY'S ITALIAN SEAT and that is the nearest of a bad set:
+    there is no pizza category and no Brazilian one, and Brazilian is what they
+    lead with.
+  */
+  'beasty-services2-12': 'b_pouraonwheels', //     mobile bar; no category fits
+  'berkeley-goods-12': 'b_milkcloudbakery', //     Bakery
+  'beasty-services2-13': 'b_mrmhomeservices', //   Handyman, not house cleaning
+  'beasty-goods2-6': 'b_phoshodough', //           Asian food
+  'san-francisco-goods-9': 'b_karamsf', //         Mediterranean
+  'san-francisco-services2-2': 'b_emporiumsf', //  arcade bar; no category fits
+  'daly-city-goods-5': 'b_kingswcpizza', //        Italian, nearest of a bad set
+  'beasty-online-19': 'b_petersdesigncompany', //  Art prints; held, not taken
 }

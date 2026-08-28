@@ -2419,4 +2419,300 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    /* THEY ARE "POURA ON WHEELS", one word. The operator wrote "Pour A On
+       Wheels"; their site, logo, footer and schema all say Poura. */
+    slug: 'poura-on-wheels',
+    icon: 'poura-on-wheels',
+    name: 'Poura on Wheels',
+    label: 'Poura',
+    cuisine: 'Mobile bar',
+    tagline: 'A mobile bar on a three-wheeler, for weddings and events.',
+    color: '#183925|#B99A58',
+    prep: 0,
+    /* NO CATEGORY IN THE TWENTY-FOUR FITS A MOBILE BAR. There is no catering,
+       bartending or bar entry. Seated on the yellow sheet rather than filed
+       under "Event coordinator", which they are not — they serve drinks at
+       events, they do not run them. */
+    category: 'Mobile bar and beverage catering',
+    phone: '(408) 334-2231',
+    email: 'hello@pouraonwheels.com',
+    /* No address on purpose: they are mobile and publish none. They list SF,
+       San Jose and Pleasanton plus six counties as their service area. */
+    site: 'https://pouraonwheels.com/',
+    quoteOnly:
+      'A mobile bar built on a Piaggio Ape three-wheeler, with six taps, for weddings, corporate events and parties across the Bay Area. Their own site says packages start at $750 and everything else is quoted on the event; they do not supply the alcohol, and they carry general and liquor liability insurance. Nothing else is priced here because they publish nothing else.',
+    items: [],
+  },
+  {
+    slug: 'milk-cloud-bakery',
+    icon: 'milk-cloud-bakery',
+    name: 'Milk Cloud Bakery',
+    label: 'Milk Cloud',
+    cuisine: 'Japanese-style bakery',
+    tagline: 'Shokupan, fruit sandos and Basque cheesecake, Berkeley.',
+    color: '#0B0B0B|#A9DBF6',
+    prep: 0,
+    category: 'Bakery',
+    phone: '(415) 589-9239',
+    address: '2701 Eighth St, Suite 116, Berkeley, CA 94710',
+    email: 'hello@milkcloudbakery.com',
+    site: 'https://milkcloudbakery.com/',
+    siteNote: 'Their rotating menu is on Instagram',
+    menuNote: 'What they bake',
+    /*
+      NO HOURS AND NO PRICES, BOTH BECAUSE THEY PUBLISH NEITHER. Their site says
+      in as many words "Our hours are currently rotating! We'll keep you
+      posted!", and there is not a single price anywhere on it. Their pop-up
+      calendar lists one date that has already passed and was never confirmed,
+      so it is not surfaced here either.
+    */
+    quoteOnly:
+      'A soft-opening bakery on Eighth Street run by Elizabeth, making Japanese-style shokupan, fruit sandos and Basque cheesecakes with organic A2 milk and honey. Their hours are still rotating and they publish no prices, so nothing is priced here — their Instagram carries the current menu.',
+    groups: [
+      {
+        name: 'What they bake',
+        items: [
+          ['Regular Shokupan', 'Japanese milk bread', 0, 'Ask'],
+          ['Kaya Swirl Shokupan', 'Homemade kaya jam, pandan and coconut cream', 0, 'Ask'],
+          ['Strawberry Sando', 'With black sesame cream', 0, 'Ask'],
+          ['Crème Brûlée Basque Cheesecake', 'Vanilla bean and candied orange', 0, 'Ask'],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    /* "MRM Home Services" was the operator's shorthand. Their own site header,
+       footer, domain and schema all say Mr. M Home Services — though their body
+       copy still calls them Mr. M CLEANING Services in places, which is worth
+       telling them. */
+    slug: 'mr-m-home-services',
+    icon: 'mr-m-home-services',
+    name: 'Mr. M Home Services',
+    label: 'Mr. M',
+    cuisine: 'Exterior home maintenance',
+    tagline: 'Windows, gutters, solar panels and roofline lighting.',
+    color: '#0B2E4A|#E07D28',
+    prep: 0,
+    /* Handyman rather than House cleaning: every job they do is OUTSIDE the
+       house — windows, gutters, solar panels, permanent roofline lighting.
+       "House cleaning" would read as interior domestic work and be wrong. */
+    category: 'Handyman and home repair',
+    phone: '(510) 283-4022',
+    address: '111 Hogan Ct, Walnut Creek, CA 94598',
+    email: 'info@mrmhomeservices.com',
+    site: 'https://www.mrmhomeservices.com/',
+    contactOnly:
+      'Exterior home maintenance across the East Bay: window cleaning, gutter cleaning, solar panel cleaning, and permanent architectural roofline lighting. Open Monday to Saturday 8am to 5pm, closed Sunday. Every job starts from a free estimate, so nothing is priced here.',
+    items: [],
+  },
+  {
+    /* "Phosho Dough", one word — their own title tag and logo. */
+    slug: 'phosho-dough',
+    /* NO ICON FILE. The only logo they publish is 132x132, a JPEG, and on a
+       baked-in white square — upscaling it would look muddy and the white
+       cannot be keyed out. The app draws its own mark on their green until
+       they send artwork. */
+    logoTemplate: 'badge',
+    logoFace: 'grotesk',
+    logoInitials: 'PD',
+    name: 'Phosho Dough',
+    label: 'Phosho Dough',
+    cuisine: 'Vietnamese',
+    tagline: 'Phở, bún and bánh mì for pickup, Oakland and Berkeley.',
+    color: '#558632|#FFFFFF',
+    prep: 0,
+    category: 'Asian',
+    address: '6601 Telegraph Ave, Oakland, CA 94609',
+    /* SQUARE SUBDOMAIN, NO DOMAIN OF THEIR OWN — which is exactly why the
+       operator sent them. `needsSite` keeps them on his red-outline list. */
+    site: 'https://phoshodough.square.site/',
+    siteCta: 'Order on their Square page',
+    needsSite: true,
+    siteNote: 'Second pickup counter at 1235 San Pablo Ave, Berkeley',
+    menuNote: 'A few of theirs',
+    quoteOnly:
+      'A Vietnamese counter with two pickup locations — Telegraph Avenue in Oakland and San Pablo Avenue in Berkeley — doing phở and hủ tiếu, vermicelli bowls, bánh mì and rice plates. Pickup only; they publish no phone and no hours. These are their own prices, from their own store.',
+    groups: [
+      {
+        name: 'Noodle soups',
+        items: [
+          ['Phở tái', 'Fresh sliced beef', 1450],
+          ['Phở bò viên', 'Beef ball', 1450],
+          ['Hủ tiếu gà xé', 'Shredded chicken', 1450],
+        ],
+      },
+      {
+        name: 'Bánh mì',
+        items: [
+          ['Grilled Pork', 'Their price', 1050],
+          ['Lemongrass Beef', 'Their price', 1050],
+          ['Grilled Shrimp', 'Their price', 1150],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'karam-sf',
+    icon: 'karam-sf',
+    name: 'Karam Mediterranean Cuisine',
+    label: 'Karam',
+    cuisine: 'Mediterranean, halal',
+    tagline: 'Halal shawarma, kebabs and mezze on Polk Street.',
+    color: '#DF0707|#FFFEF6',
+    prep: 0,
+    category: 'Mediterranean',
+    address: '1725 Polk St, San Francisco, CA',
+    site: 'https://www.karam-sf.com/',
+    /*
+      NO HOURS HERE, DELIBERATELY. Their own site says "Wednesday-Monday:
+      12AM-10PM", which is midnight to 10pm and cannot be what they mean — their
+      Toast page says 12PM and their own promo says 12PM-5PM. Publishing "12AM"
+      would repeat their typo and publishing "12PM" would invent a correction.
+      Worth telling them; their page titles also still say "My Site 15".
+    */
+    menuNote: 'A few of theirs',
+    quoteOnly:
+      'A family-run halal Middle Eastern kitchen on Polk Street — shawarma wraps, kebabs, mezze and stews. Closed Tuesdays. These are their own published prices.',
+    groups: [
+      {
+        name: 'Wraps',
+        items: [
+          ['Chicken Shawarma', 'Their price', 1500],
+          ['Beef & Lamb Shawerma', 'Their price', 1600],
+          ['Falafel', 'Their price', 1500],
+        ],
+      },
+      {
+        name: 'Mezze',
+        items: [
+          ['Hummus', 'Their price', 900],
+          ['Baba Ghanouj', 'Their price', 1000],
+          ['Muhamara', 'Their price', 1200],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'emporium-sf',
+    icon: 'emporium-sf',
+    name: 'Emporium San Francisco',
+    label: 'Emporium',
+    cuisine: 'Arcade bar',
+    tagline: 'Arcade, pinball and live music in the old Harding Theater.',
+    color: '#0F0F0F|#FF00FF',
+    prep: 0,
+    /* No category fits a 21+ arcade bar and music venue. Yellow sheet rather
+       than filing them under something they are not. */
+    category: 'Arcade bar and venue',
+    address: '616 Divisadero St, San Francisco, CA 94117',
+    /*
+      NO PHONE. Their page shows a 504 number — Louisiana, where they have
+      another venue — while the structured data on the SAME page gives a 773
+      Chicago number. Neither is a Bay Area code, so neither goes on this page
+      until they say which is right.
+
+      AND THEY DO NOT NEED A WEBSITE. The operator sent a Linktree and tagged it
+      "needs website"; the Linktree is a link-in-bio and their real page is a
+      full location page on the chain's own site.
+    */
+    site: 'https://www.emporiumarcadebar.com/locations/san-francisco',
+    quoteOnly:
+      'A 21-and-over arcade bar and live music venue in the hundred-year-old Harding Theater — cabinets, pinball, pool, shuffleboard and skee ball, with DJs and a stage. Open 4pm to 2am on weekdays and from 2pm at weekends. Tokens are 25c and most games take one to four; unlimited tokens are $20 a head on a confirmed reservation. They publish no food or drink prices.',
+    items: [],
+  },
+  {
+    slug: 'kings-wc-pizza',
+    name: 'Kings West Coast Pizzeria',
+    label: 'Kings',
+    cuisine: 'Brazilian-American pizza',
+    tagline: 'Brazilian and West Coast pizza on Mission Street.',
+    color: '#080404|#F7F1E3',
+    prep: 0,
+    /*
+      NO ICON YET, AND IT IS NOT AN OVERSIGHT. Their site's header "logo" is a
+      1200px illustration of a bear on a scooter crossing the Golden Gate — at
+      tile size it reads as a cropped photograph, not a mark. Their real
+      circular badge exists on the restaurant wall and on the delivery box
+      inside that illustration, but is published nowhere as a file. Ask them for
+      it; the app draws its own mark until then.
+
+      Italian is the nearest of the twenty-four and it is not a good fit: there
+      is no pizza category and no Brazilian one, and Brazilian is what they lead
+      with — feijoada, picanha, catupiry, brigadeiro, açaí.
+    */
+    logoTemplate: 'badge',
+    logoFace: 'slab',
+    logoInitials: 'KP',
+    category: 'Italian',
+    phone: '(415) 605-4242',
+    address: '6540 Mission St, Daly City, CA 94014',
+    email: 'kingspizzeriawc@gmail.com',
+    site: 'https://kingswcpizza.com/',
+    clip: {
+      href: 'https://www.instagram.com/reel/DH4_CuVuxm9/',
+      credit: 'Posted by Kings West Coast Pizzeria',
+      platform: 'Instagram',
+    },
+    menuNote: 'A few of theirs',
+    quoteOnly:
+      'A Brazilian-American pizzeria on Mission Street started by two brothers, open 11am to 10pm seven days — West Coast and Brazilian pizzas, dessert pizzas, pasta, wings and homemade flan. Their lunch special runs to 5pm on weekdays. These are their own published prices.',
+    groups: [
+      {
+        name: 'Pizza',
+        items: [
+          ['Plain Cheese', 'From', 1499],
+          ['Pepperoni', 'From', 1599],
+          ['Calabresa', 'From', 2299],
+          ['Chicken Catupiry', 'From', 2299],
+        ],
+      },
+      {
+        name: 'Dessert pizza',
+        items: [
+          ['Beijinho', 'From', 1999],
+          ['Brigadeiro', 'From', 2299],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'peters-design-company',
+    icon: 'peters-design-company',
+    name: 'Peters Design Company',
+    label: 'PDCo',
+    cuisine: 'Branding and design',
+    tagline: 'A branding and design studio, Minneapolis.',
+    color: '#141414|#FF6800',
+    prep: 0,
+    category: 'Branding and design',
+    email: 'allan@allanpeters.com',
+    site: 'https://www.petersdesigncompany.com/',
+    siteCta: 'See their work',
+    /*
+      HELD, NOT TAKEN, AND HE IS NOT LOCAL. The operator wants to ask him to
+      headline the Online page and possibly design BSTY Goods branding — nothing
+      has been asked and nothing agreed. They are a two-person husband-and-wife
+      company in the Minneapolis suburbs, not a San Francisco freelancer, and
+      they publish no rate for design work at all.
+    */
+    quoteOnly:
+      'A branding and design company run by Allan and Maria Peters out of the Minneapolis suburbs — logos, brand identity, posters and icons. The prices below are from their own shop; they publish no rate for design work. BEASTY has not spoken to them: this spot is held, not taken.',
+    menuNote: 'From their shop',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Posters and art prints', 'Their published price', 3000],
+          ['T-shirts', 'Their published price', 2500],
+          ['Hoodies', 'Their published price', 4500],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]
