@@ -84,6 +84,11 @@ if [ "${1:-}" != "fast" ]; then
     "contrast node tools/audit-contrast.mjs"
     "reel-sound node tools/audit-reel-sound.mjs"
     "reel-share node tools/audit-reel-share.mjs"
+    # Last, and the slowest by a distance: it opens every screen in the app in
+    # turn rather than proving one thing about one of them. PHONE ONLY here —
+    # --wide walks the whole app a second time at tablet width and roughly
+    # doubles the suite. Run that by hand when a layout changes.
+    "ux node tools/audit-ux.mjs"
   )
 fi
 

@@ -4083,9 +4083,28 @@ textarea {
 
 /* Two prices side by side, so the yearly saving is a comparison rather than a
    claim. The number, not the percentage, is what a member can check. */
+/*
+  TWO COLUMNS ONLY WHERE TWO COLUMNS FIT.
+
+  This was a hard `1fr 1fr` at every width. On a 393px phone that is 175px of
+  text per card, and the body copy came out at four or five words a line —
+  "Unlimited use of / your membership to / honour Loyalty offers / from any
+  BEASTY / affiliate." is five lines for one sentence. Measured at about
+  eighteen characters a line against the forty-five that is the low end of
+  readable.
+
+  `auto-fit` with a 260px floor rather than a media query, because this app
+  draws a device frame: a query would test the browser window while the cards
+  are laid out inside a phone-shaped box that may be much narrower. The track
+  size asks the only question that matters — is there room for two of these —
+  and answers it wherever the grid actually is.
+
+  Side by side is still what happens the moment there is room, which is the
+  whole point of a pricing table. It is a phone that cannot hold one.
+*/
 .members-plans {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 10px;
   padding: 0 16px;
 }
@@ -9396,6 +9415,26 @@ textarea {
 
 .reel-share:active {
   background: rgba(11, 11, 13, 0.78);
+}
+
+/*
+  A 44pt hit region around a 36px disc, with nothing drawn moving.
+
+  Same transparent ::after as .dot and .spotlight. The disc is 36px because it
+  matches the speaker badge beside it and both were sized to the artwork; the
+  thumb aiming at it deserves the full 44. Four pixels a side is what that
+  costs, and the speaker badge starts ten pixels away, so the two regions still
+  do not meet.
+
+  Found by tools/audit-ux.mjs, which measures the union of a control's box with
+  any absolutely-positioned pseudo-element precisely so this technique reads as
+  the fix it is rather than as a control that is still too small.
+*/
+.reel-share::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
 }
 
 .reel-share-toast {

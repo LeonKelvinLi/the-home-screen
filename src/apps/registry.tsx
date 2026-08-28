@@ -668,6 +668,13 @@ const byId = (id: string): AppDef => {
   return found
 }
 
+/** The News tile, by id — SYSTEM_APPS is built from a list, not named exports. */
+const newsApp = (): AppDef => {
+  const found = SYSTEM_APPS.find((a) => a.id === 'sys.news')
+  if (!found) throw new Error('DOCK_SETS names sys.news and it is not registered')
+  return found
+}
+
 /**
  * The dock, in three sets of four, switched by the round buttons beside Search.
  *
@@ -712,7 +719,23 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
     whole membership is sold on sharing that code, while the calendar is the
     least load-bearing of the four. It is still on the home grid.
   */
-  { key: 'you', name: 'Your stuff', apps: [PHONE_APP, DESIGNS_APP, PROFILE_APP, SHARE_APP] },
+  /*
+    NEWS MOVES INTO SET 1, NEXT TO PROFILE — his call, 2026-08-28, after seeing
+    it sit in the utilities set.
+
+    The dock holds four, so something had to leave, and it is Phone again for
+    the same reason as before: it is the only app in any set that appears
+    twice, and it goes straight back to set 3 where it started. Designs,
+    Profile and Share all keep the positions he set himself on 2026-08-25 —
+    "move the BEASTY designs to 2", then "you can put the share button back
+    where it was before".
+
+    WHAT HE LOSES IS CONTACT IN SLOT 1, which was also his instruction that
+    day. Nothing became unreachable — Phone opens from set 3 and from the
+    keypad screen — but it is the one thing here that contradicts something he
+    asked for, and he should be the one to decide it stays that way.
+  */
+  { key: 'you', name: 'Your stuff', apps: [DESIGNS_APP, PROFILE_APP, newsApp(), SHARE_APP] },
   {
     key: 'beasty',
     name: 'BEASTY',
@@ -733,24 +756,10 @@ export const DOCK_SETS: { key: string; name: string; apps: AppDef[] }[] = [
     */
     apps: [DESIGNS_APP, byId('b_beastyh20'), byId('b_eat'), SUPPLY_APP],
   },
-  /*
-    NEWS TAKES PHONE'S SLOT HERE, and only here.
-
-    The home grid is city pages end to end — every tile on it is a business —
-    so a platform app is reachable through the dock or through Search and
-    nowhere else. His news icon had to go in one of the three sets of four.
-
-    Phone was the one to lose because it is the only app that appears TWICE:
-    it opens set 1 as well, and it is on the keypad's own screen. Nothing
-    became unreachable, which is not true of any other icon in this set.
-
-    Reversible in one line, and worth asking him: if he would rather News sat
-    in set 1 next to Profile, that is the swap.
-  */
-  { key: 'help', name: 'Help', apps: [...SYSTEM_APPS.filter((a) =>
-      ['sys.news', 'sys.account', 'sys.help', 'sys.settings'].includes(a.id))
-      .sort((a, b) => ['sys.news', 'sys.account', 'sys.help', 'sys.settings'].indexOf(a.id) -
-        ['sys.news', 'sys.account', 'sys.help', 'sys.settings'].indexOf(b.id))] },
+  { key: 'help', name: 'Help', apps: [PHONE_APP, ...SYSTEM_APPS.filter((a) =>
+      ['sys.account', 'sys.help', 'sys.settings'].includes(a.id))
+      .sort((a, b) => ['sys.account', 'sys.help', 'sys.settings'].indexOf(a.id) -
+        ['sys.account', 'sys.help', 'sys.settings'].indexOf(b.id))] },
 ]
 
 /** The set the home screen opens on — his "Default is 1". */

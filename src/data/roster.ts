@@ -1407,8 +1407,10 @@ export const ROSTER_SEED: LocalSeed[] = [
       platform: 'YouTube',
     },
     contactOnly:
-      'Motorsport wiring harnesses, PDM and chassis wiring solutions, in their own words. ' +
-      'Products and pricing are on their own site — they ship rather than serve a counter.',
+      'A Santa Ana shop, four hundred miles south of here, building tucked and Mil-Spec ' +
+      'engine wiring harnesses, power distribution modules and brake and clutch line kits ' +
+      'for Honda and Porsche builds. They are on BEASTY rather than on a city page because ' +
+      'they ship rather than serve a counter; products and pricing are on their own site.',
   }),
   seed('emys-cannoli', 'Emy’s Cannoli', 'Emy’s Cann…', 'Cannoli, mobile', '#5C3210', {
     icon: 'emys-cannoli',
