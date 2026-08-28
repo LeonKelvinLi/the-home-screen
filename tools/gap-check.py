@@ -1,0 +1,140 @@
+#!/usr/bin/env python3
+"""
+Every link Glenn ever sent, against everything the app actually lists.
+
+He sends a business as a screenshot and a link, in a thread that is now several
+thousand messages long, and a batch gets processed by reading the tail. Anything
+he sent while a previous batch was being built can fall through the gap silently
+— nothing errors, the business simply never appears. This is the check that
+finds those, and it is worth running after every batch.
+
+MATCHING IS DELIBERATELY LOOSE. A domain is rarely spelled the way the business
+is: houseofthaisf.com is "House of Thai", thefrenchspotsf.com is "The French
+Spot", banhmiovenus.com is "Banh Mi Oven". So both sides are reduced to
+lowercase letters and digits, common decorations are stripped off the front and
+back, and a prefix of seven characters or more counts as a match. It over-
+matches rather than under-matches on purpose: a false "already listed" is one
+line to check by hand, a false "missing" wastes a research agent.
+
+    python3 tools/gap-check.py
+"""
+import os
+import re
+import sqlite3
+import sys
+
+CHAT = 2366
+ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..')
+
+# Link shorteners, social profiles, map pins, and the tools we use ourselves.
+# None of these is a business's own site, so none of them can be "missing".
+NOT_A_SITE = {
+    'youtu.be', 'youtube.com', 'm.youtube.com', 'instagram.com', 'l.instagram.com',
+    'linktr.ee', 'link.me', 'bio.site', 'buy.stripe.com', 'facebook.com', 'tiktok.com',
+    'vm.tiktok.com', 'maps.app.goo.gl', 'goo.gl', 'g.co', 'maps.google.com', 'apple.co',
+    'music.apple.com', 'open.spotify.com', 'docs.google.com', 'forms.gle', 'a.co',
+    'amazon.com', 'yelp.com', 'yelp.to', 'm.yelp.com', 'photos.app.goo.gl', 'share.google',
+    'x.com', 'twitter.com', 'link.clover.com', 'duckduckgo.com', 'dafont.com',
+    'distrokid.com', 'gofundme.com', 'booksy.com', 'bau.edu', 'brandingcompass.com',
+    'icloud.com', 'app.vidiq.com', 'sites.leadconnectorhq.com', 'order.spoton.com',
+    'order.online', 'beastypages.com', 'the-home-screen.onrender.com',
+    'leonkelvinli.onrender.com', 'allis-dog-walking.onrender.com',
+}
+
+# He spent an evening pricing domain names for the brand itself — dozens of
+# beasty*/bsty* variants in a row. They are not businesses.
+BRAND_SHOPPING = re.compile(r'^(beasty|bsty|beausty)[a-z]*$')
+
+norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
+
+
+def links() -> list[str]:
+    path = os.path.expanduser('~/Library/Messages/chat.db')
+    db = sqlite3.connect(f'file:{path}?mode=ro', uri=True)
+    blob = []
+    for text, filename in db.execute(
+        """SELECT m.text, a.filename FROM message m
+           JOIN chat_message_join c ON c.message_id = m.ROWID
+           LEFT JOIN message_attachment_join maj ON maj.message_id = m.ROWID
+           LEFT JOIN attachment a ON a.ROWID = maj.attachment_id
+           WHERE c.chat_id = ?""", (CHAT,)):
+        blob.append((text or '') + ' ' + (filename or ''))
+    # A link he sends as a rich preview has no `text` at all; the URL is inside
+    # the archived NSAttributedString, which is where most of them live.
+    for (body,) in db.execute(
+        """SELECT attributedBody FROM message m
+           JOIN chat_message_join c ON c.message_id = m.ROWID
+           WHERE c.chat_id = ? AND attributedBody IS NOT NULL""", (CHAT,)):
+        blob.append(body.decode('utf-8', 'ignore'))
+    return re.findall(r'https?://[^\s\)\]"\'<>\x00-\x1f]+', ' '.join(blob))
+
+
+def host_of(url: str) -> str:
+    h = re.sub(r'^https?://', '', url).split('/')[0].lower()
+    return h[4:] if h.startswith('www.') else h
+
+
+def raw_data() -> str:
+    return ' '.join(
+        open(os.path.join(ROOT, 'src/data', n)).read()
+        for n in ('localBrands.ts', 'brands.ts', 'placements.ts')
+    ).lower()
+
+
+def haystack() -> str:
+    parts = []
+    for name in ('localBrands.ts', 'brands.ts', 'placements.ts'):
+        parts.append(open(os.path.join(ROOT, 'src/data', name)).read())
+    parts.append(' '.join(os.listdir(os.path.join(ROOT, 'public/icons'))))
+    return norm(' '.join(parts))
+
+
+def listed(host: str, pool: str, raw: str) -> bool:
+    # STRONGEST SIGNAL FIRST: a seed that records `site:` carries the host
+    # verbatim, so a plain substring test settles it. This is what catches the
+    # short names — "p-lo" and "sips" are too short for the prefix rule below
+    # and were reported missing while sitting in the file.
+    if host in raw:
+        return True
+    base = host.rsplit('.', 1)[0]
+    base = re.sub(r'\.(framer\.website|square\.site|myshopify|onrender)$', '', base)
+    base = norm(base)
+    # A domain decorates the name at both ends: "the"/"eat"/"its"/"try"/"order"
+    # in front, a city or state behind. Try the bare stem as well as the whole.
+    stems = {base}
+    stems.add(re.sub(r'^(the|eat|its|try|order|new|shop|store|my|go)', '', base))
+    for s in list(stems):
+        stems.add(re.sub(r'(sf|ca|sj|oakland|berkeley|danville|norcal|bayarea|restaurants?|store|shop|online)$', '', s))
+    for s in stems:
+        for length in range(len(s), 6, -1):
+            if s[:length] in pool:
+                return True
+    return False
+
+
+def main() -> int:
+    pool, raw = haystack(), raw_data()
+    seen, hosts = set(), []
+    for url in links():
+        h = host_of(url)
+        if h in NOT_A_SITE or h.endswith(('.google.com', '.apple.com', '.icloud.com', '.gstatic.com')):
+            continue
+        if BRAND_SHOPPING.match(h.rsplit('.', 1)[0]) or 'beastypapers' in h:
+            continue
+        # Typed-URL fragments and truncations from the message archive.
+        if h in {'company.com', 'co.com', 'pages.com'} or 'whttpurl' in h:
+            continue
+        if h in seen:
+            continue
+        seen.add(h)
+        hosts.append(h)
+
+    missing = [h for h in hosts if not listed(h, pool, raw)]
+    print(f'{len(hosts)} business sites sent in the thread; {len(missing)} not represented in the data.')
+    for h in missing:
+        print('  -', h)
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

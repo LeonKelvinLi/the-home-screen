@@ -483,15 +483,42 @@ const SEED: Seed[] = [
   {
     slug: 'vegan-mob', name: 'Vegan Mob', label: 'Vegan Mob',
     site: 'https://veganmob.biz/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
+    /*
+      THESE ARE NOW THEIR OWN PRICES. What was here before was transcribed from
+      goodneighborbuilder.com and this file said so — four dishes and four
+      numbers nobody had ever checked. Every line below is off veganmob.biz's
+      own menu page, read on 2026-08-28.
+
+      HE FILED THIS ONE "NEEDS WEBSITE", AND IT WAS THE FIFTH SUCH LABEL THIS
+      WEEK THAT WAS WRONG. veganmob.biz is live; it sits behind a Cloudflare
+      managed challenge that returns 403 to anything with a browser user-agent
+      and 200 to a plain curl one. Anyone checking a site the obvious way sees a
+      403 and concludes it is dead. That is almost certainly what happened to
+      the other four, and it is worth checking a "dead" site both ways before
+      telling him it is dead.
+
+      NO ADDRESS IS CARRIED HERE, and it would be wrong if it were: their header
+      and structured data say 9 Grand Ave, Oakland; the About paragraph on the
+      same page says 1199 El Camino Real, San Bruno; their Instagram says 496
+      Lake Park Ave, Oakland. Three addresses, one business, and the ordering
+      flow names the entity VEGAN MOB SAN BRUNO LLC. Somebody has to ask them.
+
+      Their three five-star testimonials cite no platform at all and are not
+      reproduced.
+    */
+    siteNote:
+      'Their own pages give three different addresses; ask them which room is open',
     cuisine: 'Plant-based BBQ', tagline: 'Plant-based BBQ and soul food',
     color: '#3C9D3C', icon: 'vegan-mob', prep: 16, category: 'Menu',
     items: [
-      ['Mobfather Burrito', 'BBQ jackfruit, mac, greens', 1700],
-      ['Smoked Brisket Plate', 'Two sides, cornbread', 2200],
-      ['Vegan Gumbo', 'Okra, mushroom sausage, rice', 1500],
-      ['Mac & Greens', 'Cashew cheese mac, collards', 1100],
+      ['Mob Plate', 'Their published price, from', 2530],
+      ['Combo Plate', 'Their published price', 4400],
+      ['Mob Burger with Fries', 'Their published price', 2090],
+      ['Barbequito', 'Their published price', 1870],
+      ["Da' Renz Po' Boy", 'Their published price', 1760],
+      ['Brisket', 'Their published price', 1430],
+      ['Smackaroni', 'Their published price', 1210],
+      ['Mob Fries', 'Their published price', 770],
     ],
   },
   {

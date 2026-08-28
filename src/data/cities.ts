@@ -221,6 +221,12 @@ export const CITY_PAGES = [
     all the families are cooking their rice."
   */
   'Daly City',
+  /*
+    ROHNERT PARK, 2026-08-28, opened by Fours Media. Sonoma County, and the
+    first city on this list north of the Golden Gate — the network's shape has
+    been East Bay and Peninsula until now.
+  */
+  'Rohnert Park',
 ] as const
 
 /**

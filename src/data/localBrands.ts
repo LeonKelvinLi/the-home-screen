@@ -3661,4 +3661,586 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    slug: 'beat-drop-fitness',
+    icon: 'beat-drop-fitness',
+    name: 'Beat Drop Fitness',
+    label: 'Beat Drop',
+    cuisine: 'Fitness studio',
+    tagline: 'EDM-scored classes on a club sound system, Van Ness.',
+    color: '#141018|#63BC48',
+    prep: 0,
+    category: 'Gym',
+    phone: '(415) 757-0471',
+    address: '2001 Van Ness Ave, Suite 100, San Francisco, CA 94109',
+    email: 'info@beatdropfitness.com',
+    /* THE LINK HE SENT WAS /links, A LINK-IN-BIO PAGE. The real site is the
+       root, with a schedule, six class pages, a team and a memberships page.
+       Fifth time this month. */
+    site: 'https://www.beatdropfitness.com/',
+    menuNote: 'Their published rates',
+    /* NO OPENING HOURS: they publish class windows, not shop hours — mornings
+       6-8am and evenings 5-7pm, and that is what the sentence says. */
+    quoteOnly:
+      'A Pacific Heights studio running sculpt, Pilates, cycling, HIIT, dance cardio and yoga to EDM in rooms built by club sound designers, with resident DJs on some weekend sessions. Classes run mornings between 6 and 8 and evenings between 5 and 7. These are their own published rates; unlimited members are charged $15 for a late cancellation or a no-show.',
+    groups: [
+      {
+        name: 'By the week',
+        items: [
+          ['One Movement', '1 credit per 7 days', 2500],
+          ['Two Movements', 'per week', 3500],
+          ['Three Movements', 'per week', 4500],
+          ['Unlimited Movements', 'per week', 5000],
+          ['Drop In', 'one class', 3000],
+        ],
+      },
+      {
+        name: 'Packs and the founding offer',
+        items: [
+          ['The Opener Pack', '5 movements, $28 a class, 3 months', 14000],
+          ['The Headliner Pack', '10 movements, $26 a class, 6 months', 26000],
+          ['Founding Member Special', 'Unlimited classes, per month', 9900],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'fours-media',
+    icon: 'fours-media',
+    name: 'Fours Media',
+    label: 'Fours',
+    cuisine: 'Creative agency',
+    tagline: 'Brand work and paid media from one senior team.',
+    color: '#F2EFE8|#111110',
+    prep: 0,
+    /* Photo and video is the honest half of what they do — they shoot as well
+       as buy media — and there is no agency or marketing seat among the
+       twenty-four. Opens Rohnert Park, the first city north of the bridge. */
+    category: 'Photo and video',
+    phone: '(707) 206-2504',
+    address: '1500 Valley House Dr, Rohnert Park, CA 94928',
+    email: 'services@foursmedia.com',
+    site: 'https://foursmedia.com/',
+    siteNote: 'Studio by appointment; Mon-Fri 9am-6pm PT',
+    /*
+      TWO PHONE NUMBERS AND TWO EMAILS ARE PUBLISHED AT ONCE. Their header
+      carries (707) 634-8521 and hello@foursmedia.com; their footer and contact
+      card carry (707) 206-2504 and services@foursmedia.com under the heading
+      "Other ways to reach us". The pair presented as the way to reach them is
+      the pair listed here. Worth Glenn asking which they want printed.
+
+      NOT REPUBLISHED: their homepage badge reads "Voted Best in the Bay Area /
+      Best Creative Agency 2026" and names no awarding body, while their own
+      ideas page states the actual award — North Bay Bohemian's Best Digital
+      Creative Services, April 2026. Also left out: "300+ clients", "10k+
+      projects delivered" and "7.3x avg. ROAS", against an About page listing
+      eight people. Ten thousand projects since 2018 is about three and a half
+      a day, every day, and an unverifiable number is not worth reprinting.
+    */
+    quoteOnly:
+      'A Bay Area creative and performance agency keeping brand work and paid media under one senior in-house team — strategy, identity, video and photo production, paid social and search, SEO, web build and analytics. They publish no rates; their own description of the model is that you pay for what you use.',
+    items: [],
+  },
+  {
+    slug: 'sinmex-auto-body',
+    icon: 'sinmex-auto-body',
+    /* Their own site spells it four ways — SINMEX Auto Body Inc, SINMEX Auto
+       Body, Sin-Mex Auto Body and Sin-Mex Auto Body Shop — and the logo sets
+       the first letter as a dollar sign, "$INMEX". The schema and page title
+       agree on the version used here. */
+    name: 'SINMEX Auto Body',
+    label: 'SINMEX',
+    cuisine: 'Auto body',
+    tagline: 'Collision and paint on International, Oakland.',
+    color: '#FFFFFF|#FDA43E',
+    prep: 0,
+    /* Collision repair is not Mechanics and smog and it is not Auto detailing.
+       Yellow sheet rather than a widened category, the PJ's Junk Removal rule. */
+    category: 'Auto body',
+    address: '4028 International Blvd, Oakland, CA 94601',
+    /*
+      THE LINK HE SENT IS A DEAD DOMAIN. sinmexautobody.com is not registered at
+      all — no NS, no SOA, and the registry returns no match. Their real site is
+      sinmex.org, and every canonical, og:url and og:image on it still points at
+      the unregistered name, so their own social previews are broken links.
+
+      NO PHONE AND NO HOURS ARE PUBLISHED HERE, deliberately, because the site
+      cannot be trusted on either. It carries a live call button on a reserved
+      fictional number, tel:+15105550123 — 555-01xx exists so it can never
+      connect. Its working number, (510) 561-0710, does not match the (510)
+      434-1993 on the shop's own Yelp, BBB and Facebook listings; a call-tracking
+      number is the likely explanation but nobody has asked them. Hours appear
+      three different ways on one site (9-6 and 8-6 weekdays; 10-3 and 9-3
+      Saturday), and the founding year four ways (1995, 1998, "over 20 years",
+      "over 25 years"). Its nineteen reviews are all five stars, all
+      "FirstName Initial.", and dated with hardcoded strings like "2 weeks ago"
+      that will never age — placeholder copy, not reviews.
+
+      The address is the one thing corroborated by Yelp, BBB and their own
+      Facebook, so the address is what this page says. Glenn should confirm the
+      number and the hours with the owner before either goes up.
+    */
+    site: 'https://sinmex.org/',
+    quoteOnly:
+      'A family-run Oakland collision shop on International Boulevard doing accident and frame repair, paint matching and refinishing, dent and bumper work, glass replacement and insurance claims, on foreign and domestic cars. Their own site publishes no prices and offers a free estimate; its phone number and hours contradict themselves and are left off this page until the shop confirms them.',
+    items: [],
+  },
+  {
+    slug: 'palace-games',
+    icon: 'palace-games',
+    name: 'Palace Games',
+    label: 'Palace Games',
+    cuisine: 'Escape rooms',
+    tagline: 'Escape to play. Play to escape. Palace of Fine Arts.',
+    color: '#1A1410|#FF0000',
+    prep: 0,
+    /* No escape room, arcade or attraction seat exists. Same yellow sheet as
+       Emporium, for the same reason. */
+    category: 'Escape rooms',
+    phone: '(415) 997-8522',
+    address: '3362 Palace Drive, San Francisco, CA 94123',
+    site: 'https://palace-games.com/',
+    menuNote: 'Their published prices',
+    /* NO HOURS: their FAQ says only that available slots show when you click a
+       booking button. */
+    quoteOnly:
+      'Four escape rooms in the Palace of Fine Arts running 80 to 120 minute private puzzle games for groups of four to eight, with a sixteen-person game room for events. Slots are shown at booking rather than as opening hours. These are their own published prices; the booking fee is non-refundable.',
+    groups: [
+      {
+        name: 'What they charge',
+        items: [
+          ['Escape room reservation', 'Per room, taxes and fees included', 42500],
+          ['Game Room, 90 minutes', 'Up to 16 guests', 19500],
+          ['Booking fee', 'Per room, non-refundable', 2500],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'crayone',
+    /*
+      ONE WORD. He sent it as "Cray One"; the store header, the og:site_name and
+      the vendor field on all sixty-three products spell it Crayone.
+
+      NO ICON. The only mark they serve is a 1200x628 opaque black banner —
+      a wide JPEG with no transparency, which is a header image, not a logo. The
+      app draws its own mark rather than cropping theirs into a square.
+    */
+    name: 'Crayone',
+    label: 'Crayone',
+    cuisine: 'Streetwear',
+    tagline: 'Graffiti-lettered jackets, boots and beanies, by Rigel Juratovac.',
+    color: '#000000|#D0D0D0',
+    prep: 0,
+    category: 'Streetwear and apparel',
+    phone: '510-502-6667',
+    email: 'crayone@crayone.com',
+    site: 'https://crayone.myshopify.com/',
+    siteNote: 'Artist site at crayone.com',
+    menuNote: 'A few of theirs',
+    /*
+      THREE THINGS ARE DELIBERATELY NOT REPUBLISHED.
+
+      Sixteen of his product titles put a TM on marks he does not own — Giants,
+      Warriors, 49ers, and SFFD. Only the products that assert nothing are
+      listed here. The disclaimer he pastes onto them makes the point by
+      itself: the MLB text naming the San Francisco Giants is pasted onto the
+      Warriors and 49ers jackets too, disclaiming the wrong league.
+
+      Twenty-six of the sixty-three products carry images generated in ChatGPT
+      — the filenames say so, several stamped this week — so a buyer cannot
+      tell a rendering from a photograph of a garment. Nothing here reproduces
+      those images.
+
+      He is the real artist, not a reseller: crayone.com was registered in 2002,
+      the store's legal contact is his own name, and the work is his own
+      lettering. Delivery is his own stated four to six weeks.
+    */
+    quoteOnly:
+      'The direct-to-consumer store of Rigel Juratovac, a Bay Area graffiti writer working since the 1980s, selling puffer jackets, boots, beanies and jerseys printed with his own hand-style lettering. These are his own published prices; his shipping page allows four to six weeks for delivery.',
+    groups: [
+      {
+        name: 'Outerwear and boots',
+        items: [
+          ['DownLow Jacket B-boy', 'Black, white and red accents', 27000],
+          ['Graffiti Boots by Crayone', '001', 23000],
+          ['Bay Connection Boots', 'White tag over black', 20172],
+          ['Bay Connection Jacket', 'DownLow, black on black', 16500],
+          ['4 Elements Camo Jacket', 'Collar raglan sleeve, white zipper', 15000],
+        ],
+      },
+      {
+        name: 'Smaller things',
+        items: [
+          ['Bay Connection Beanie', 'White tag over black', 2999],
+          ['Custom NamePlate Jewelry', 'Made to order', 59900],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'transform-fx-fitness',
+    icon: 'transform-fx-fitness',
+    name: 'Transform FX Fitness',
+    label: 'Transform FX',
+    cuisine: 'Fitness studio',
+    tagline: '45-minute coached classes, Adobe Street, Concord.',
+    color: '#FAFAFA|#D34E2B',
+    prep: 0,
+    /* Concord's Gym seat is Urban Air's. Yellow sheet. */
+    category: 'Gym',
+    phone: '(925) 289-8042',
+    address: '1865 Adobe St, Unit A, Concord, CA 94520',
+    email: 'ale@tfxfitnessconcord.com',
+    /* He sent only the Instagram. The site was found from the email domain in
+       their own bio and confirmed by the address, phone and class length all
+       matching. Their logo wordmark reads "FX - FITNESS TRANSFORMATION CENTER",
+       a different word order from the name they trade under everywhere else. */
+    site: 'https://tfxfitnessconcord.com/',
+    siteNote: 'Mon-Fri 5am, 6am, 7am and 5pm, 6.30pm, 7.30pm; Sat 8am and 9am',
+    menuNote: 'What they price',
+    /*
+      MEMBERSHIP PRICES ARE NOT PUBLISHED. The six-week challenge, the six-month
+      and the one-year unlimited all carry a call to action and no figure, so
+      none is invented here. The $67 is the one price on the site.
+
+      NOT REPUBLISHED: their coupon page runs a countdown next to the fixed
+      words "Only 3 COUPONS LEFT", which is page copy rather than a count of
+      anything, and stacks unsourced "(Value: $197)" anchors against the price.
+    */
+    quoteOnly:
+      'A Concord gym trading since 2009, running 45-minute coached strength and conditioning classes on a fixed timetable — weekday mornings at 5, 6 and 7, evenings at 5, 6.30 and 7.30, Saturdays at 8 and 9, and a meditation session every other Sunday. Only the challenge and the merchandise carry published prices; the memberships do not.',
+    groups: [
+      {
+        name: 'What they price',
+        items: [
+          ['Transform Your Body in 30 Days', 'Their 30-day challenge', 6700],
+          ["Women's Racerback Tank", 'Their shop', 2250],
+          ["Transform Men's Tank", 'Their shop', 2200],
+          ['Mesh Black Snap-back', 'Their shop', 1950],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'crossfit-sweat-shop',
+    icon: 'crossfit-sweat-shop',
+    /* Their own logo, page titles and footer read "Crossfit Sweat Shop" —
+       lowercase f, two words. Their body copy and review widget read "CrossFit
+       Sweat Shop". The one-word "Sweatshop" that he sent appears only inside
+       member-written reviews, never in their own artwork. Their spelling. */
+    name: 'Crossfit Sweat Shop',
+    label: 'Sweat Shop',
+    cuisine: 'CrossFit gym',
+    tagline: 'Coached classes and HYROX, Autocenter Drive.',
+    color: '#FFFFFF|#000000',
+    prep: 0,
+    /* Walnut Creek's Gym seat is TruFusion's. Yellow sheet. */
+    category: 'Gym',
+    phone: '(925) 818-1908',
+    address: '1401 Autocenter Dr, Walnut Creek, CA 94597',
+    email: 'info@crossfitsweatshop.com',
+    site: 'https://crossfitsweatshop.com/',
+    siteNote: 'Classes seven days, earliest 6am, latest 7.30pm',
+    /*
+      NO PRICES, AND THIS IS THE MOST DANGEROUS PAGE OF THE BATCH. Their
+      /pricing/ page is unedited WordPress theme demo content: it is wrapped in
+      live Lorem Ipsum, prices are written "19,90$" and "49,00$" in the European
+      style, the features are Zumba and sauna access, and it counts "87 Studios
+      around the world" and "298.000 active members" for a single gym in Walnut
+      Creek. A scraper would have put a global chain's numbers on a local gym.
+      Their schedule page separately shows "$ 90 Starting Price" attached to
+      nothing, contradicting it. No real price exists on this site.
+
+      Their reviews ARE real — an embedded Google widget, 5.0 from 103, with
+      full names and dates — but they are Google's to show, not ours to reprint.
+    */
+    quoteOnly:
+      'A Walnut Creek gym running coached CrossFit group classes seven days a week, from six in the morning to half past seven at night, and an official HYROX training club. They publish a class timetable rather than opening hours, and no membership price: the page that looks like one is their website theme’s demo content.',
+    items: [],
+  },
+  {
+    slug: 'plark-playspace',
+    /* NO ICON: they have no website, so there is no logo file anywhere. Their
+       Instagram avatar is a photograph on an expiring CDN URL, which is not a
+       brand asset. The app draws its own mark. */
+    name: 'Plark PlaySpace',
+    label: 'Plark',
+    cuisine: 'Play space',
+    tagline: 'Kids play, parents work. Valley View, Richmond.',
+    color: '#F5F3EF|#2B6CB0',
+    prep: 0,
+    /* A supervised play room with desks is not a Gym and not childcare; there
+       is no seat for it. Same yellow sheet as Tot Spot Soft Play in SF. */
+    category: 'Play space',
+    address: '4805 Valley View, Richmond, CA 94803',
+    menuNote: 'What they publish',
+    /*
+      THEY HAVE NO WEBSITE. The only link they publish is a Stripe checkout
+      page, which is a payment form and is not listed here as a site. Nothing
+      else resolves: plarkplayspace.com and nine other spellings are all
+      unregistered.
+
+      NOT LINKED: plarkinc.com is titled "Plark | Play + Work", which sounds
+      exactly right, but its entire content is a West Contra Costa flag football
+      league — no address, no mention of Valley View or Richmond, and no link in
+      either direction. It may well be the same operator. Nobody has confirmed
+      it, so it stays off the page.
+
+      No phone and no hours are published anywhere, and there is not one
+      third-party review of them in existence. Everything here is from their own
+      Instagram.
+    */
+    quoteOnly:
+      'A drop-in room on Valley View pairing a supervised childrens play area with desk space, so a parent can work while their child plays. Sold as a day pass, a monthly membership, or a private birthday booking. These two prices are the only ones they publish; they publish no phone number and no hours.',
+    groups: [
+      {
+        name: 'What they publish',
+        items: [
+          ['Daily drop in', 'Their published price', 2000],
+          ['Monthly', 'Their published price', 13999],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'audio-accessories-mobile',
+    icon: 'audio-accessories-mobile',
+    /* HIS LABEL WAS THE DOMAIN, NOT THE NAME. caraudiobayarea.com is an SEO
+       domain; their own logo and footer read Audio Accessories Mobile. Sixth
+       name correction this week. */
+    name: 'Audio Accessories Mobile',
+    label: 'Audio Acc.',
+    cuisine: 'Mobile car audio',
+    tagline: 'They come to you. Stereos, cameras, kill switches.',
+    color: '#121212|#38D3E0',
+    prep: 0,
+    category: 'Car audio',
+    phone: '(408) 324-6605',
+    site: 'https://caraudiobayarea.com/',
+    siteNote: 'Mon-Fri 9am-5pm, Sat 9am-4pm, closed Sunday',
+    /*
+      NO ADDRESS, because they publish none — they drive to the customer, and
+      list San Francisco, San Jose, Oakland, Fremont, Sunnyvale, Milpitas,
+      Gilroy, Tracy and Livermore as the area they cover. BEASTY rather than one
+      city for the same reason, and the yellow sheet because BEASTY's twenty-four
+      Services seats are full.
+
+      NO PRICES: quote only, and their schema's "$$" is not a price. Their three
+      testimonials are credited only "Michael R., San Francisco" and the like,
+      with no platform or date, so none is reprinted.
+
+      Their site returns 403 to an ordinary browser user-agent — a firewall rule,
+      not an outage. Any crawler pointed at it will silently see nothing.
+    */
+    quoteOnly:
+      'A mobile installer that drives to a home or office anywhere in the Bay Area to fit car stereos, speakers, amplifiers, dash and backup cameras and anti-theft kill switches. They publish no rates and quote each job.',
+    items: [],
+  },
+  {
+    slug: 'jackies-place',
+    icon: 'jackies-place',
+    name: "Jackie's Place",
+    label: "Jackie's Place",
+    cuisine: 'Soul food',
+    tagline: 'Fried fish and chicken, two First Street rooms.',
+    color: '#FAFAFA|#ED1C24',
+    prep: 0,
+    category: 'Soul food',
+    phone: '(408) 490-4653',
+    address: '840 N First St, San Jose, CA 95112',
+    email: 'info@jackiesplacesj.com',
+    site: 'https://www.jackiesplacesj.com/',
+    siteNote: 'Second room, SoFA: 321 S First St, (408) 564-5144',
+    /*
+      NO PRICES, and there is nothing to be done about it: their whole menu page
+      is PNG artwork — dish names and photographs, no numbers anywhere — and
+      ordering hands off to Toast. Their own spelling on the section headings is
+      "SHARABLES".
+    */
+    quoteOnly:
+      'A Black woman-owned, family-run San Jose soul food restaurant with two rooms on First Street, serving fried fish and chicken plates, barbecue-topped shareables and sides, with a bar, a bakery and a catering and events operation. North First opens Wednesday to Saturday 11am to 9pm and Sunday to 7pm; SoFA opens Wednesday and Thursday to 7pm, Friday and Saturday to 9pm, Sunday to 7pm. Both are closed Monday and Tuesday. They publish their menu without prices.',
+    items: [],
+  },
+  {
+    slug: 'citybachi',
+    icon: 'citybachi',
+    /* ONE WORD, capital C and B — their logo, their title, their og:site_name.
+       He sent it as "City Bachi". And it is in PITTSBURG, not San Francisco:
+       their own artwork gives 4080 Railroad Ave. He filed it under BEASTY, so
+       BEASTY is where it sits, but Pittsburg has free Goods seats if he would
+       rather it were local. */
+    name: 'CityBachi',
+    label: 'CityBachi',
+    cuisine: 'Hibachi and sushi',
+    tagline: 'Hibachi burritos and rolls, 5pm to 1am.',
+    color: '#110003|#F51100',
+    prep: 0,
+    category: 'Hibachi',
+    phone: '(925) 705-9420',
+    address: '4080 Railroad Ave, Pittsburg, CA 94565',
+    site: 'https://www.citybachi.com/',
+    siteNote: 'Text your order; open Tuesday to Sunday 5pm-1am',
+    menuNote: 'Their published prices',
+    /*
+      NOT REPUBLISHED: "BEST HIBACHI & SUSHI IN THE BAY AREA" and "FAMOUS
+      HIBACHI GRILL" — superlatives with no rating, publication or award behind
+      them anywhere on the site.
+
+      A LANDMINE FOR ANY SCRAPER: their page source still carries the Square
+      Online template's stock banner text, "Our restaurant has been serving the
+      Fresno community since 1968 with our delicious Middle Eastern cuisine".
+      It is flagged hidden so a visitor never sees it, but it is sitting in the
+      page state waiting to be read as their description. It is not.
+    */
+    quoteOnly:
+      'A hibachi and sushi kitchen on Railroad Avenue in Pittsburg selling grilled protein combos, hibachi burritos, noodle plates and rolls for late-night pickup, with a hibachi catering truck and party trays. Orders go in by text. These are their own published prices; catering is quoted on proteins, servers and headcount.',
+    groups: [
+      {
+        name: 'Hibachi',
+        items: [
+          ['Hibachi Burrito, chicken', 'Their published price', 1700],
+          ['Hibachi Burrito, NY steak', 'Their published price', 2000],
+          ['1 Item Combo, lobster', 'Their published price', 2600],
+          ['VIP 4 Item Combo', 'Each', 4500],
+        ],
+      },
+      {
+        name: 'Sushi',
+        items: [
+          ['Sushi Box', '4 rolls, plus tax, limited-time', 6000],
+          ['Mar y Tierra Roll', 'Their published price', 2000],
+          ['CityBachi Roll', 'Their published price', 1600],
+          ['Hot Cheeto Bombz', '3 pieces', 1400],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'sugarmurals',
+    icon: 'sugarmurals',
+    /* ONE WORD, ALL CAPS — that is the wordmark, the schema name and the
+       og:site_name. The icon is their own square SM favicon rather than a crop
+       of the wordmark, which is what "enlarge logo as much as possible in tile"
+       actually wants: a mark that was drawn to be square, filling the tile. */
+    name: 'SUGARMURALS',
+    label: 'SUGARMURALS',
+    cuisine: 'Mural studio',
+    tagline: 'Hand-painted murals, inside and out.',
+    color: '#000000|#FFFFFF',
+    prep: 0,
+    /* No mural, sign-painting or art seat among the twenty-four. */
+    category: 'Murals',
+    email: 'Hello@SugarMurals.com',
+    site: 'https://www.sugarmurals.com/',
+    /*
+      NO PRICES AT ALL — not a rate card, not a square-foot figure, not a
+      minimum. NO PHONE: they publish none; the contact form and the email are
+      the only ways in.
+
+      NOT REPEATED: their footer sets a registered-trademark mark after the
+      name. Nobody has checked a registration, so this page does not carry it.
+    */
+    quoteOnly:
+      'A San Francisco studio hand-painting custom murals inside and out — restaurants, offices, shops, schools and homes across Northern California. They publish no prices and no phone number; projects start with an email or their contact form.',
+    items: [],
+  },
+  {
+    slug: 'richie-rich',
+    icon: 'richie-rich',
+    name: 'Richie Rich',
+    label: 'Richie Rich',
+    cuisine: 'Rapper',
+    tagline: 'Oakland, since the early nineties.',
+    color: '#0A0A0A|#C4A289',
+    prep: 0,
+    category: 'Individuals',
+    /*
+      HIS STORE IS dubbleworldwide.com, WHICH IS NOT THE ONE ON HIS LINKTREE.
+      The Linktree's "See Full Shop" button opens Linktree's own affiliate wall
+      — Babbel, Fabletics, Hulu, HelloFresh and about thirty more — with not one
+      Richie Rich product on it, and Linktree's auto-written blurb tells visitors
+      to "explore the products within their Shop page for merchandise", which is
+      untrue. His real store's footer carries the same Instagram and Twitter
+      handles as his verified profile, so the store below is his.
+
+      His Linktree also has a live button to rollingbeancoffee.com, which is not
+      a registered domain. Not linked here.
+    */
+    site: 'https://dubbleworldwide.com/',
+    menuNote: 'From his own store',
+    /*
+      HIS RATES ARE DELIBERATELY UNPRICED. Booking and features both run through
+      his own forms, both labelled "offer based", and the last field on each is
+      a budget or an offer. He names no fee anywhere, so neither does this.
+    */
+    quoteOnly:
+      'An Oakland rapper working since the early nineties, whose album Richard came out in 2025 and who still records with Bay Area peers. Nothing here is claimed on his behalf: booking and features go through his own forms and he prices neither, calling both offer-based. These are the prices from his own store.',
+    groups: [
+      {
+        name: 'From his own store',
+        items: [
+          ['Hoodie', 'Five designs, his own store', 7500],
+          ["Let's Ride Tee", 'His own store', 4000],
+          ['T-shirt', 'Five designs, his own store', 3500],
+          ['Richard, autographed CD', 'Limited edition', 3500],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'mbnel',
+    /*
+      NO ICON. He publishes no wordmark and no logo — his avatar and banner are
+      photographs of him, and a photograph of a person is not an app icon. The
+      interlocking MB monogram belongs to Marque Brand, his clothing line, and
+      putting a clothing brand's mark on a page about the person would be
+      attributing one to the other. The app draws its own mark.
+
+      AND HE IS FROM STOCKTON, not the Bay Area — every primary source says so,
+      including his own streaming bios. He sits on BEASTY - Individuals, which
+      belongs to nowhere in particular, rather than in a city that is not his.
+    */
+    name: 'MBNel',
+    label: 'MBNel',
+    cuisine: 'Rapper',
+    tagline: 'Stockton. Forever II, 2026.',
+    color: '#101010|#627E9A',
+    prep: 0,
+    category: 'Individuals',
+    /*
+      THE MERCH LINK ON HIS OWN CHANNEL IS DEAD. mbnel.com is registered but its
+      nameservers refuse every query, so it resolves nowhere. The store moved to
+      marquebrand.us, which is provably the same shop — Shopify still reports its
+      internal handle as mbnel-com.myshopify.com — so that is the link here.
+
+      NOT LINKED: a listing calling itself the "Official store of the MBNEL-
+      T Shirt" on a domain that does not resolve and has no whois record, which
+      has cloned his label's real product title. It is linked from nothing he
+      owns.
+    */
+    site: 'https://www.marquebrand.us/',
+    siteNote: 'Label store at store.empi.re',
+    menuNote: 'From his label store',
+    quoteOnly:
+      'A rapper from Stockton signed through Muddy Boyz and EMPIRE, whose most recent album Forever II came out in 2026. Nothing is claimed on his behalf. These prices are from his label store; his own clothing line prices its pieces separately.',
+    groups: [
+      {
+        name: 'From his label store',
+        items: [
+          ['I Am A Child Of The Trenches Tee', 'Black or white, with download', 3000],
+          ['Matte Black Water Bottle', 'With download', 1500],
+          ['Blue and Black Wristband', 'With download', 1200],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]

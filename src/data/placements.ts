@@ -708,4 +708,38 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-individuals-8': 'b_showbanga',
   'beasty-individuals-9': 'b_iamsu',
   'beasty-individuals-10': 'b_beastmode', //       "Bay Area Icon" — Marshawn Lynch
+  /*
+    2026-08-28, the overnight batch. Fourteen from him, and a gap check that
+    found three he sent weeks ago and nobody ever added.
+
+    SIX OF THE FOURTEEN HAVE NO SEAT ON A NUMBERED PAGE. Escape rooms, a mural
+    studio, a collision shop, a co-working play room, and two gyms in cities
+    whose one Gym seat is already sold. They go on the yellow sheets rather than
+    into a widened category — the PJ's Junk Removal rule.
+
+    BEASTY - SERVICES IS FULL. All twenty-four seats are gone, so the next
+    business he files under it lands on the yellow sheet by arithmetic, not by
+    judgement. BEASTY - Goods has one seat left, and it is Boba shop. He should
+    know both.
+
+    THREE NAMES HE SENT WERE THE DOMAIN, NOT THE BUSINESS: Car Audio Bay Area is
+    Audio Accessories Mobile, Cray One is Crayone, City Bachi is CityBachi.
+    And sinmexautobody.com is not a registered domain at all.
+  */
+  'san-francisco-services-4': 'b_beatdropfitness', //   Gym
+  'rohnert-park-services-12': 'b_foursmedia', //        Photo and video; opens Rohnert Park
+  'oakland-services2-0': 'b_sinmexautobody', //         collision, not Mechanics and not Detailing
+  'san-francisco-services2-7': 'b_palacegames', //      escape rooms; no category
+  'san-francisco-services2-8': 'b_sugarmurals', //      murals; no category
+  'concord-services2-0': 'b_transformfxfitness', //     Gym seat is Urban Air's
+  'walnut-creek-services2-1': 'b_crossfitsweatshop', // Gym seat is TruFusion's
+  'richmond-services2-0': 'b_plarkplayspace', //        play space; the Tot Spot precedent
+  'beasty-services2-14': 'b_audioaccessoriesmobile', // BEASTY Services is full
+  'beasty-goods2-7': 'b_crayone', //                    all three apparel seats taken
+  'beasty-goods2-8': 'b_citybachi', //                  he filed it BEASTY; the shop is Pittsburg
+  /* Soul food has no seat: San Jose's Chicken wings is JoJo's and Cookie shop
+     is not what they are. Yellow sheet. */
+  'san-jose-goods2-0': 'b_jackiesplace',
+  'beasty-individuals-11': 'b_richierich',
+  'beasty-individuals-12': 'b_mbnel', //                Stockton, so nowhere rather than a wrong city
 }
