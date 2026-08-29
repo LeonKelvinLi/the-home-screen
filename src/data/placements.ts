@@ -805,4 +805,21 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      numbered BEASTY Goods sheet has only Boba and Dog boutique open and it is
      a pizzeria, so the yellow one. */
   'beasty-goods2-10': 'b_kingswcpizza',
+
+  /* 2026-08-29. A dessert counter, a Greek counter and a photo booth — none of
+     the three has a seat among the twenty-four, and the two food ones are in
+     cities whose nearest category is already sold. */
+  'walnut-creek-goods2-1': 'b_thesweetspot', //   Ice cream is Milky Flakes'
+  'san-francisco-goods2-3': 'b_gyroking', //      Mediterranean is Karam's
+  'beasty-services2-17': 'b_baymemoriesbooth', // BEASTY - Services is full
+
+  /* The 29th, later. Four kitchens and a DJ. Three of the four are in cities
+     whose nearest category is already sold, which is now the ordinary case
+     rather than the exception — Oakland alone has Vietnamese and hot pot
+     queueing behind one Asian food seat. */
+  'oakland-goods2-1': 'b_tayho', //             Asian food is Cambodian Street Food's
+  'oakland-goods2-2': 'b_kungfumala', //        hot pot has no seat at all
+  'dublin-goods2-1': 'b_baithak', //            Indian is Pippal's, the yellow one Biryaniz
+  'san-francisco-goods2-4': 'b_ruaymitr', //    Asian food is House of Thai's
+  'beasty-individuals-14': 'b_djlex',
 }

@@ -35,13 +35,21 @@ echo "Asking Resend to verify beastypages.com..."
 curl -s -X POST -H "Authorization: Bearer $RESEND_KEY" \
   "https://api.resend.com/domains/$DOMAIN_ID/verify" > /dev/null
 
-for i in $(seq 1 30); do
+# PATIENCE, BECAUSE THE FAILURE IS A CACHE AND NOT A MISTAKE.
+#
+# Resend checks the record the moment a domain is added — before it exists —
+# and caches the miss. On 2026-08-29 the DKIM TXT was byte-identical to what
+# Resend asked for, single, correct at ns69.domaincontrol.com and visible from
+# both Google and Cloudflare, and Resend still said pending for twenty minutes.
+# MX and SPF verified immediately; only the one it had already looked for and
+# not found stayed stuck. So this waits an hour rather than ten minutes.
+for i in $(seq 1 60); do
   status=$(curl -s -H "Authorization: Bearer $RESEND_KEY" \
     "https://api.resend.com/domains/$DOMAIN_ID" \
     | python3 -c "import json,sys;print(json.load(sys.stdin).get('status'))")
   echo "  [$i] $status"
   [ "$status" = "verified" ] && break
-  sleep 20
+  sleep 60
 done
 
 if [ "$status" != "verified" ]; then
@@ -64,10 +72,20 @@ with urllib.request.urlopen(req) as r:
 PY
 
 echo "Deploying, because an API env change does not restart the service..."
-curl -s -X POST -H "Authorization: Bearer $RENDER_KEY" -H "Content-Type: application/json" \
+# The reply is read defensively: on 2026-08-29 this printed a JSON traceback
+# over a deploy that had in fact been queued, which reads as a failure and is
+# not. The status code is the thing that says whether it worked.
+code=$(curl -s -o /tmp/render-deploy.json -w '%{http_code}' \
+  -X POST -H "Authorization: Bearer $RENDER_KEY" -H "Content-Type: application/json" \
   -d '{"clearCache":"do_not_clear"}' \
-  "https://api.render.com/v1/services/$SERVICE/deploys" \
-  | python3 -c "import json,sys;d=json.load(sys.stdin);print('  deploy',d.get('id'),d.get('status'))"
+  "https://api.render.com/v1/services/$SERVICE/deploys")
+if [ "$code" = "201" ] || [ "$code" = "200" ]; then
+  python3 -c "import json;d=json.load(open('/tmp/render-deploy.json'));print('  deploy',d.get('id'),d.get('status'))" 2>/dev/null \
+    || echo "  deploy queued (http $code)"
+else
+  echo "  DEPLOY REQUEST FAILED, http $code — set it off by hand in the Render dashboard"
+  head -c 200 /tmp/render-deploy.json; echo
+fi
 
 echo
 echo "Done. Sign-in codes will reach any address from the next deploy."

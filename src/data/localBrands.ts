@@ -4556,4 +4556,219 @@ export const LOCAL_SEED: LocalSeed[] = [
       'An Indian kitchen on Village Parkway in Dublin doing biryani, takeaway and catering for weddings, corporate events and family gatherings. They serve a midday and an evening service on weekdays and run straight through at weekends. They publish no prices.',
     items: [],
   },
+  {
+    slug: 'the-sweet-spot',
+    icon: 'the-sweet-spot',
+    /* Their own Instagram and their site title both say "The Sweet Spot". The
+       WC is only in the square.site address he sent. */
+    name: 'The Sweet Spot',
+    label: 'Sweet Spot',
+    cuisine: 'Dessert shop',
+    tagline: 'Cups, pancakes and crepes. Sunnyvale Avenue.',
+    color: '#FF9BD2|#FFD23F',
+    prep: 0,
+    /* A dessert counter serving crepes and pancakes to order is not the Bakery
+       seat and the Ice cream one is Milky Flakes'. Yellow sheet. */
+    category: 'Dessert shop',
+    phone: '(925) 999-6394',
+    address: '1512 Sunnyvale Ave, Walnut Creek, CA 94597',
+    site: 'https://thesweetspotwc.square.site/',
+    siteNote: 'Closed Mondays',
+    /*
+      NO PRICES, AND THEY DO PUBLISH SOME. Their Square Online menu renders in
+      JavaScript: the served HTML carries the figures — 9.50 through 19.99 —
+      with no way to tell which belongs to which dish. Numbers without the names
+      they go with are worse than no numbers, so none are here. Their own
+      ordering page has them beside the right things.
+
+      NOT REPUBLISHED: "The Bay Area's favorite dessert spot", which is their
+      own line and cites nothing.
+    */
+    quoteOnly:
+      'A dessert counter on Sunnyvale Avenue in Walnut Creek doing cups, pancakes and crepes, closed on Mondays. Their prices are on their own ordering page.',
+    items: [],
+  },
+  {
+    slug: 'gyro-king',
+    icon: 'gyro-king',
+    name: 'Gyro King',
+    label: 'Gyro King',
+    cuisine: 'Greek',
+    tagline: 'Gyro wraps and plates on Grove Street.',
+    color: '#FAFAFA|#0060A0',
+    prep: 0,
+    /* San Francisco's Mediterranean seat is Karam's. Yellow sheet. */
+    category: 'Greek',
+    phone: '(415) 621-8313',
+    address: '25 Grove Street, San Francisco, CA 94102',
+    site: 'https://www.gyrokingca.com/',
+    siteNote: 'Mon-Fri 10.30am-7.45pm, Sat and Sun 10.45am-7.45pm',
+    /*
+      THE DISHES ARE THEIRS AND THE PRICES ARE NOT PUBLISHED, so they are named
+      in the sentence rather than listed as items. The first cut put them in a
+      priced group at zero, which draws four dishes at $0.00 — an invented price
+      is bad and a free one is worse.
+
+      NOT REPUBLISHED: their page title claims "Best Greek in San Francisco",
+      which cites nothing.
+    */
+    quoteOnly:
+      'A Greek counter on Grove Street doing gyro wraps and plates, open from half past ten until quarter to eight every day. The four they name themselves are the Lamb and Beef Gyro Wrap, the Chicken Gyro Wrap, the Chicken Gyro Plate and the Vegan Falafel Wrap. They publish no prices.',
+    items: [],
+  },
+  {
+    slug: 'bay-memories-booth',
+    icon: 'bay-memories-booth',
+    /* "Bay Memories Booth" on their own badge and in their Instagram name; the
+       Wix page title runs it together as Baymemoriesbooth. */
+    name: 'Bay Memories Booth',
+    label: 'Bay Memories',
+    cuisine: 'Mobile photo booth',
+    tagline: 'DSLR booths and instant prints, across the Bay.',
+    color: '#0B0B0D|#E01B24',
+    prep: 0,
+    /* BEASTY - Services is full, so the yellow sheet. A photo booth that
+       travels to the event is why he filed it BEASTY and not one city. */
+    category: 'Photo booth',
+    site: 'https://www.baymemories.com/',
+    siteNote: 'Instagram at baymemories_booth',
+    /*
+      HIS NOTE WAS "I think his business needs a website because their link
+      isn't working" — and the site itself is fine. baymemories.com returns 200
+      to a browser user-agent and to plain curl alike, four megabytes of it.
+      What is broken is the link in their Instagram bio, which is a different
+      thing to tell them and a much easier one to fix.
+
+      NO PRICES: their packages page publishes none. NO ADDRESS: they travel.
+    */
+    quoteOnly:
+      'A Bay Area photo booth hire for weddings, birthdays and events, shooting on DSLR cameras with studio lighting rather than tablets, with unlimited instant prints and custom photo-strip templates and backdrops. They publish packages rather than prices, and they come to the event.',
+    items: [],
+  },
+  {
+    slug: 'tay-ho',
+    icon: 'tay-ho',
+    /* Their own logo sets it with the diacritics: Tây Hồ, over OAKLAND. */
+    name: 'Tây Hồ',
+    label: 'Tây Hồ',
+    cuisine: 'Vietnamese',
+    tagline: 'Vietnamese, Oakland.',
+    color: '#FFFFFF|#2AA6E0',
+    prep: 0,
+    /* Oakland's Asian food seat is Cambodian Street Food's. Yellow sheet. */
+    category: 'Vietnamese',
+    site: 'https://tayhooakland.com/',
+    /*
+      NOTHING BUT THE NAME AND THE TRADE, because their site cannot be read.
+      tayhooakland.com sits behind a Cloudflare interstitial that answers 403 to
+      a browser user-agent, to plain curl and to Googlebot alike — the page that
+      comes back is "Just a moment...". No address, no hours, no menu and no
+      prices are published here because none could be seen, not because they do
+      not have them.
+    */
+    quoteOnly:
+      'A Vietnamese kitchen in Oakland. Their own site is behind a bot check that will not answer, so nothing beyond their name is listed here yet.',
+    items: [],
+  },
+  {
+    slug: 'baithak',
+    icon: 'baithak',
+    name: 'Baithak',
+    label: 'Baithak',
+    cuisine: 'Indian',
+    tagline: 'Kebabs, curries and biryani. Dublin Boulevard.',
+    color: '#FAFAFA|#D2691E',
+    prep: 0,
+    /* Dublin's Indian seat is Pippal's and the yellow sheet's first is
+       Biryaniz. This is the second Indian kitchen on that overflow page, which
+       is a thing worth him knowing rather than a problem. */
+    category: 'Indian food',
+    phone: '(925) 361-0862',
+    address: '4590 Dublin Blvd, Dublin, CA 94568',
+    site: 'https://baithak.us/',
+    siteNote: 'Instagram at Baithak.dublin',
+    /*
+      A WARM LEAD, IN HIS OWN WORDS: "I deliver for them. They're aware and
+      waiting to sign on." Nothing on this page claims they have agreed
+      anything, and no price is shown because their site publishes none.
+    */
+    quoteOnly:
+      'An Indian restaurant on Dublin Boulevard doing kebabs, curries and biryani. They publish no prices; their site takes table reservations.',
+    items: [],
+  },
+  {
+    slug: 'ruay-mitr',
+    icon: 'ruay-mitr',
+    name: 'Ruay Mitr',
+    label: 'Ruay Mitr',
+    cuisine: 'Thai',
+    tagline: 'Thai chicken and rice, San Francisco.',
+    color: '#FFFCF6|#5E7A5E',
+    prep: 0,
+    /* San Francisco's Asian food seat is House of Thai's. Yellow sheet. */
+    category: 'Thai',
+    phone: '(415) 274-9942',
+    site: 'https://www.ruaymitrsf.com/',
+    siteNote: 'Instagram at ruaymitr_sf',
+    /*
+      THEIR PAGE TITLE IS THEIR WIX TEMPLATE'S NAME. The site returns
+      "Home | Purement" — Purement is the theme, not the restaurant, and a
+      description read off that title would have named the wrong business
+      entirely. The name here is the wordmark on their own page.
+
+      NO ADDRESS AND NO PRICES: neither is published.
+    */
+    quoteOnly:
+      'A Thai kitchen in San Francisco; their own photographs are of chicken and rice. They publish a phone number and no address, and no prices.',
+    items: [],
+  },
+  {
+    slug: 'kung-fu-mala',
+    icon: 'kung-fu-mala',
+    /* Their own profile sets it in both scripts: KUNG FU MALA 쿵푸마라. */
+    name: 'Kung Fu Mala',
+    label: 'Kung Fu Mala',
+    cuisine: 'Hot pot',
+    tagline: 'Hot pot on Telegraph until midnight, daily.',
+    color: '#FAF3E6|#C1272D',
+    prep: 0,
+    /* Oakland's Asian food seat is Cambodian Street Food's and Tây Hồ takes the
+       first yellow one. Hot pot has no seat of its own. */
+    category: 'Hot pot',
+    phone: '(510) 817-4665',
+    address: '4419 Telegraph Ave, Oakland, CA 94609',
+    siteNote: 'Free private parking; Instagram at kungfumala',
+    needsSite: true,
+    /*
+      HIS NOTE WAS "Needs website pilot program" — this is one for the pilot,
+      and everything here is from their own Instagram: hot pot, half past eleven
+      until midnight, open daily, free private parking, Telegraph Avenue.
+      No prices are published anywhere.
+    */
+    quoteOnly:
+      'A hot pot restaurant on Telegraph Avenue, open every day from half past eleven in the morning until midnight, with free private parking. They have no website yet and publish no prices.',
+    items: [],
+  },
+  {
+    slug: 'dj-lex',
+    icon: 'dj-lex',
+    name: 'DJ Lex',
+    label: 'DJ Lex',
+    cuisine: 'DJ',
+    tagline: 'Bay Area DJ.',
+    color: '#FFFFFF|#111111',
+    prep: 0,
+    category: 'Individuals',
+    site: 'https://www.officialdjlex.com/',
+    siteNote: 'Instagram at officialdjlex',
+    /*
+      HELD, NOT TAKEN, like everybody else on this sheet. Their own site is a
+      Squarespace with an about page and no rates on it, so none is shown; the
+      icon is the script Lex monogram from their own artwork rather than a
+      photograph, because for once there is a wordmark to use.
+    */
+    quoteOnly:
+      'A Bay Area DJ. Nothing here is claimed on their behalf and they publish no rates; their own site is the way to reach them.',
+    items: [],
+  },
 ]
