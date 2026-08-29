@@ -60,13 +60,15 @@ const get = (p) => fetch(base + p, { headers: { cookie: cookie() } }).then(keep)
 
 try {
   // --- sign a member in through the real flow -----------------------------
-  const email = `payer${Date.now()}@example.com`
-  const started = await post('/api/members/start', { name: 'Ada Payer', email })
+  /* By phone, like the screens. A member who signed up by SMS has no address,
+     which is the point of the assertion below. */
+  const email = `+1510555${String(Date.now()).slice(-4)}`
+  const started = await post('/api/members/start', { name: 'Ada Payer', phone: email })
   if (started.status !== 202) throw new Error(`start ${started.status}`)
   const line = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${email} `)).pop()
   const code = line && line.match(/ (\d{6}) /)?.[1]
   if (!code) throw new Error('no login code logged')
-  const acct = await (await post('/api/members/verify', { email, code })).json()
+  const acct = await (await post('/api/members/verify', { phone: email, code })).json()
   const memberId = acct?.id ?? acct?.member?.id
   ok(!!memberId, `signed in, member id present`)
 
@@ -76,7 +78,16 @@ try {
   ok(link.startsWith('https://buy.stripe.com/test_pass'), 'tier choice returns the operator Payment Link')
   ok(new URL(link).searchParams.get('client_reference_id') === memberId,
      'the link carries client_reference_id — the webhook can tell who paid')
-  ok(new URL(link).searchParams.get('prefilled_email') === email, 'the link prefills their email')
+  /*
+    NO PREFILL FOR A PHONE-ONLY MEMBER, and that is correct rather than a
+    regression. searchParams.set would otherwise have written the string "null"
+    into the checkout for every SMS sign-up. client_reference_id is what
+    actually matches the payment back to the account.
+  */
+  ok(new URL(link).searchParams.get('prefilled_email') === null,
+     'no empty email is pushed into the checkout for a phone-only member')
+  ok(new URL(link).searchParams.get('client_reference_id') === acct.id,
+     'the link still carries the id that matches a payment to the account')
   ok(new URL(link).searchParams.get('utm_source') === 'beasty',
      "a link's own query string survives (URL, not string concatenation)")
   const me1 = await (await get('/api/members/me')).json()

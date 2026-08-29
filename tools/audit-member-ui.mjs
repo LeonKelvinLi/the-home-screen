@@ -12,6 +12,12 @@ import { chromium } from 'playwright'
   email provider is configured — it is never in an HTTP response, and an audit
   that could read it from one would be proving the opposite of what it should.
 */
+/*
+  SIGNING IN BY PHONE, because the screens do — "we want only SMS", 2026-08-29.
+  555-01xx is the reserved fictional exchange: right in a test, wrong in
+  production. audit-auth still covers the email path, which the server keeps
+  open for the accounts that predate the change.
+*/
 async function signIn(page, fields, logPath) {
   const { readFileSync } = await import('node:fs')
   const started = await page.evaluate(async (f) => {
@@ -23,16 +29,16 @@ async function signIn(page, fields, logPath) {
   }, fields)
   if (started !== 202) throw new Error(`start returned ${started}`)
   const line = readFileSync(logPath, 'utf8').split('\n')
-    .filter((l) => l.includes(`[login-code] ${fields.email} `)).pop()
+    .filter((l) => l.includes(`[login-code] ${fields.phone} `)).pop()
   const code = line && line.match(/ (\d{6}) /)?.[1]
   if (!code) throw new Error('no login code was logged')
-  return page.evaluate(async ({ email, code }) => {
+  return page.evaluate(async ({ phone, code }) => {
     const r = await fetch('/api/members/verify', {
       method: 'POST', headers: { 'content-type': 'application/json' },
-      credentials: 'same-origin', body: JSON.stringify({ email, code }),
+      credentials: 'same-origin', body: JSON.stringify({ phone, code }),
     })
     return r.ok ? await r.json() : null
-  }, { email: fields.email, code })
+  }, { phone: fields.phone, code })
 }
 
 import { spawn } from 'node:child_process'
@@ -55,8 +61,8 @@ const bad=[]
 p.on('response',r=>{const l=`${r.status()} ${r.url().replace(base,'')}`; if(r.status()>=400 && l!=='401 /api/members/me') bad.push(l)})
 
 await p.goto(base,{waitUntil:'domcontentloaded'})
-const acctEmail = `mira${Date.now()}@example.com`
-const acct = await signIn(p, { name: 'Mira Solis', email: acctEmail }, LOG)
+const acctEmail = `+1510555${String(Date.now()).slice(-4)}`
+const acct = await signIn(p, { name: 'Mira Solis', phone: acctEmail }, LOG)
 const code = acct?.referralCode
 await p.goto(base,{waitUntil:'networkidle'})
 await p.click('[aria-label="Enter BEASTY"]'); await p.waitForTimeout(2600)
@@ -124,7 +130,7 @@ console.log('reaches join   :', reachedJoin)
 
 // Sign back in for the tier check below, which needs a member.
 await p.goto(base+'/',{waitUntil:'domcontentloaded'})
-const back = await signIn(p, { name: 'Mira Solis', email: acctEmail }, LOG)
+const back = await signIn(p, { name: 'Mira Solis', phone: acctEmail }, LOG)
 if (!back) throw new Error('could not sign back in')
 
 // --- members: choosing a tier must reach the server

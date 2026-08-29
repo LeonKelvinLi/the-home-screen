@@ -1535,7 +1535,16 @@ function paymentLinkFor(tierId: string, member: { id: string; email: string }): 
   try {
     const u = new URL(base)
     u.searchParams.set('client_reference_id', member.id)
-    u.searchParams.set('prefilled_email', member.email)
+    /*
+      ONLY WHEN THERE IS ONE. Since sign-in moved to SMS a member can have no
+      email at all, and `searchParams.set` would have written the string "null"
+      into the checkout — Stripe would show it in the field, the customer would
+      have to clear it, and any receipt sent to it goes nowhere.
+
+      client_reference_id above is what actually matches the payment back to
+      the account, so dropping this costs a prefilled field and nothing else.
+    */
+    if (member.email) u.searchParams.set('prefilled_email', member.email)
     return u.toString()
   } catch {
     /* A malformed link in the environment must not take the endpoint down with
@@ -1565,7 +1574,12 @@ async function memberPayload(m: MemberRow) {
   return {
     id: m.id,
     name: m.name,
+    /* BOTH, AND EITHER MAY BE NULL. Since sign-in moved to SMS a member can
+       have a number and no address, or — if they joined before the change — an
+       address and no number. Every screen that says who is signed in has to
+       cope with that, so it is given both rather than one. */
     email: m.email,
+    phone: m.phone,
     instagram: m.instagram,
     /*
       Carried on EVERY member response, not just the one that hands out a link.
@@ -1597,6 +1611,36 @@ async function memberPayload(m: MemberRow) {
  * can read a network tab, and "it is only in dev" is exactly how that ships.
  */
 /**
+ * A US phone number, in the one shape everything downstream agrees on.
+ *
+ * E.164 — a plus, a country code, then digits. Everything the customer types is
+ * normalised to it before it is looked up, stored or sent to, because the same
+ * person will type (510) 789-3205, 510-789-3205 and 5107893205 on three
+ * different days and all three have to be one account. The uniqueness index on
+ * members.phone is only worth anything if what goes into it is canonical.
+ *
+ * TEN DIGITS IS ASSUMED TO BE +1, which is a decision and not a law: this is a
+ * Bay Area directory and every number in it so far is American. Anything with
+ * a leading + is taken as already international and only cleaned up.
+ */
+export function toE164(raw: string): string | null {
+  const trimmed = raw.trim()
+  if (trimmed.startsWith('+')) {
+    const digits = trimmed.slice(1).replace(/\D/g, '')
+    return digits.length >= 8 && digits.length <= 15 ? `+${digits}` : null
+  }
+  const d = trimmed.replace(/\D/g, '')
+  if (d.length === 10) return `+1${d}`
+  if (d.length === 11 && d.startsWith('1')) return `+${d}`
+  return null
+}
+
+/** How a code is shown back to somebody: the last four, never the whole thing. */
+export function maskPhone(e164: string): string {
+  return e164.length > 4 ? `\u2022\u2022\u2022 ${e164.slice(-4)}` : e164
+}
+
+/**
  * Why the sign-in email cannot reach a customer, or null if it can.
  *
  * RESEND'S SHARED SENDER ONLY DELIVERS TO THE ACCOUNT OWNER. `onboarding@resend.dev`
@@ -1618,6 +1662,144 @@ export function loginEmailProblem(): string | null {
   if (!key || !from) return 'RESEND_API_KEY or OTP_FROM_EMAIL is unset — no login email can be sent.'
   if (/@resend\.dev\b/i.test(from)) {
     return `OTP_FROM_EMAIL sends from resend.dev, which only delivers to the Resend account owner. Every other customer will be told to check an email that never arrives. Verify a domain in Resend and send from it.`
+  }
+  return null
+}
+
+/**
+ * The code, by SMS.
+ *
+ * Twilio's plain Messages API rather than their Verify service, deliberately.
+ * Verify would generate, send and check the code for us and skip the carrier
+ * registration — but it would also take ownership of the properties this
+ * codebase already proves in tools/audit-otp.mjs and tools/audit-auth.mjs: five
+ * wrong guesses locks it, a resend kills the previous code, a used code cannot
+ * be replayed, an expired one is refused, and no reply anywhere tells an
+ * attacker whether a number is a member. Those are ours and they are tested.
+ *
+ * IT WILL NOT DELIVER UNTIL A2P 10DLC IS REGISTERED. Since February 2025 the US
+ * carriers block unregistered application-to-person traffic on ten-digit
+ * numbers outright — the API returns success and the message is dropped, which
+ * is the same silent failure the resend.dev sender had. loginSmsProblem() says
+ * so at boot, and there is nothing in code that can fix it.
+ */
+/**
+ * Twilio Verify: the bridge that works before the carriers say yes.
+ *
+ * WHY THERE ARE TWO WAYS TO SEND. Raw SMS keeps the one-time code ours — five
+ * wrong guesses locks it, a resend kills the last one, a used code cannot be
+ * replayed — all of which tools/audit-otp.mjs proves on every run. But it does
+ * not deliver at all until A2P 10DLC is registered, and Twilio's own guidance
+ * is that campaign vetting now takes one to three weeks.
+ *
+ * Verify needs none of that: "Verify does not require A2P registration or
+ * sender provisioning" is Twilio's wording. The cost is that Twilio generates
+ * and checks the code, so the properties above become theirs rather than ours
+ * and cannot be tested from here. They implement the same ones.
+ *
+ * So: Verify while the campaign is pending, raw SMS after it clears. Setting
+ * TWILIO_VERIFY_SERVICE_SID chooses Verify; clearing it goes back. Nothing
+ * else in the app knows which was used.
+ */
+const VERIFY_SID = () => process.env.TWILIO_VERIFY_SERVICE_SID ?? ''
+
+async function twilioVerifyStart(phone: string): Promise<boolean> {
+  const sid = process.env.TWILIO_ACCOUNT_SID
+  const token = process.env.TWILIO_AUTH_TOKEN
+  if (!sid || !token || !VERIFY_SID()) return false
+  try {
+    const r = await fetch(`https://verify.twilio.com/v2/Services/${VERIFY_SID()}/Verifications`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${sid}:${token}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({ To: phone, Channel: 'sms' }).toString(),
+      signal: AbortSignal.timeout(10_000),
+    })
+    if (!r.ok) { console.error('verify start failed:', r.status); return false }
+    return true
+  } catch (err) {
+    console.error('verify start failed:', String(err).slice(0, 160))
+    return false
+  }
+}
+
+/** Returns true only when Twilio says the code was right. */
+async function twilioVerifyCheck(phone: string, code: string): Promise<boolean> {
+  const sid = process.env.TWILIO_ACCOUNT_SID
+  const token = process.env.TWILIO_AUTH_TOKEN
+  if (!sid || !token || !VERIFY_SID()) return false
+  try {
+    const r = await fetch(`https://verify.twilio.com/v2/Services/${VERIFY_SID()}/VerificationCheck`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${sid}:${token}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({ To: phone, Code: code }).toString(),
+      signal: AbortSignal.timeout(10_000),
+    })
+    if (!r.ok) return false
+    const body = (await r.json()) as { status?: string }
+    return body.status === 'approved'
+  } catch (err) {
+    console.error('verify check failed:', String(err).slice(0, 160))
+    return false
+  }
+}
+
+async function sendLoginCodeSms(phone: string, code: string, purpose: string): Promise<boolean> {
+  const sid = process.env.TWILIO_ACCOUNT_SID
+  const token = process.env.TWILIO_AUTH_TOKEN
+  const from = process.env.TWILIO_FROM_NUMBER
+  const line =
+    purpose === 'signup'
+      ? `${code} is your BEASTY code. Enter it to finish signing up.`
+      : `${code} is your BEASTY code. Enter it to sign in.`
+  const body = `${line} It expires in 10 minutes. If you did not ask for it, ignore this.`
+
+  if (!sid || !token || !from) {
+    console.log(`[login-code] ${phone} ${code} (${purpose}) — SMS not configured, not delivered`)
+    return false
+  }
+  try {
+    const r = await fetch(`https://api.twilio.com/2010-04-01/Accounts/${sid}/Messages.json`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Basic ${Buffer.from(`${sid}:${token}`).toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: new URLSearchParams({ To: phone, From: from, Body: body }).toString(),
+      signal: AbortSignal.timeout(10_000),
+    })
+    if (!r.ok) {
+      // The number is never logged with the code beside it on a failure path.
+      console.error('login-code sms failed:', r.status)
+      return false
+    }
+    return true
+  } catch (err) {
+    console.error('login-code sms failed:', String(err).slice(0, 160))
+    return false
+  }
+}
+
+/**
+ * Why an SMS code cannot reach a customer, or null if it can.
+ *
+ * The same shape as loginEmailProblem, and for the same reason: this class of
+ * failure is invisible from the outside until somebody cannot get in.
+ */
+export function loginSmsProblem(): string | null {
+  const account = process.env.TWILIO_ACCOUNT_SID && process.env.TWILIO_AUTH_TOKEN
+  if (!account) return 'TWILIO_ACCOUNT_SID or TWILIO_AUTH_TOKEN is unset — no sign-in SMS can be sent.'
+  if (!process.env.TWILIO_VERIFY_SERVICE_SID && !process.env.TWILIO_FROM_NUMBER) {
+    return 'Neither TWILIO_VERIFY_SERVICE_SID nor TWILIO_FROM_NUMBER is set — there is no way to send a code.'
+  }
+  if (process.env.TWILIO_VERIFY_SERVICE_SID) return null // Verify needs no registration
+  if (process.env.A2P_10DLC_REGISTERED !== '1') {
+    return 'A2P_10DLC_REGISTERED is not 1. US carriers drop unregistered app-to-person SMS silently, so codes may never arrive. Set it once the campaign is approved.'
   }
   return null
 }
@@ -1679,10 +1861,32 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   const b = req.body
   const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MEMBER_FIELD_MAX) : '')
 
-  const email = str(b.email).toLowerCase()
-  // Deliberately loose. Strict-looking patterns reject real addresses.
-  if (!/^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(email)) {
-    return res.status(400).json({ error: 'A valid email is required.' })
+  /*
+    A PHONE NUMBER IS THE IDENTITY NOW — "we want only SMS", 2026-08-29.
+
+    Email is still accepted, and it has to be: the accounts that existed before
+    today were created with one and no phone, and refusing it would lock those
+    people out of their own membership. What changed is which one the sign-up
+    screen offers, and that is the client's business rather than this route's.
+  */
+  const rawPhone = str(b.phone)
+  const rawEmail = str(b.email).toLowerCase()
+  let destination = ''
+  let channel: 'sms' | 'email' = 'sms'
+
+  if (rawPhone) {
+    const e164 = toE164(rawPhone)
+    if (!e164) return res.status(400).json({ error: 'Enter a mobile number we can text.' })
+    destination = e164
+  } else if (rawEmail) {
+    // Deliberately loose. Strict-looking patterns reject real addresses.
+    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(rawEmail)) {
+      return res.status(400).json({ error: 'A valid email is required.' })
+    }
+    destination = rawEmail
+    channel = 'email'
+  } else {
+    return res.status(400).json({ error: 'Enter a mobile number.' })
   }
 
   /*
@@ -1690,9 +1894,9 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     whole point.
 
     It used to be required only for a sign-up, which meant a one-character name
-    came back 400 for an unknown address and 202 for a registered one — a
-    membership oracle in a status code. Anybody could have typed addresses in
-    and learned who is a BEASTY member.
+    came back 400 for an unknown destination and 202 for a registered one — a
+    membership oracle in a status code. Anybody could have typed numbers in and
+    learned who is a BEASTY member.
 
     So the rule is the same for both, and the client sends a name either way.
     An existing member's stored name is not overwritten by it.
@@ -1700,19 +1904,24 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   const name = str(b.name)
   if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
 
-  const existing = await db.prepare('SELECT id FROM members WHERE email = ?').get(email) as
-    | { id: string }
-    | undefined
+  const existing = await db
+    .prepare(
+      channel === 'sms'
+        ? 'SELECT id FROM members WHERE phone = ?'
+        : 'SELECT id FROM members WHERE email = ?',
+    )
+    .get(destination) as { id: string } | undefined
   const purpose = existing ? 'signin' : 'signup'
 
   const code = newLoginCode()
   const now = Date.now()
   await db.prepare(
     `INSERT INTO login_codes
-       (email, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
+       (destination, channel, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
         attempts, created_at, expires_at)
-     VALUES (?,?,?,?,?,?,?,0,?,?)
-     ON CONFLICT(email) DO UPDATE SET
+     VALUES (?,?,?,?,?,?,?,?,0,?,?)
+     ON CONFLICT(destination) DO UPDATE SET
+       channel = excluded.channel,
        code_hash = excluded.code_hash,
        purpose = excluded.purpose,
        pending_name = excluded.pending_name,
@@ -1723,19 +1932,27 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
        created_at = excluded.created_at,
        expires_at = excluded.expires_at`,
   ).run(
-    email,
+    destination,
+    channel,
     hashToken(code),
     purpose,
     name || null,
     str(b.instagram).replace(/^@+/, '') || null,
-    str(b.phone) || null,
+    channel === 'sms' ? destination : str(b.phone) || null,
     str(b.ref).toUpperCase() || null,
     now,
     now + CODE_TTL_MS,
   )
 
-  const delivered = await sendLoginCode(email, code, purpose)
-  res.status(202).json({ sent: true, delivered, minutes: CODE_TTL_MS / 60000 })
+  const delivered =
+    channel !== 'sms'
+      ? await sendLoginCode(destination, code, purpose)
+      : VERIFY_SID()
+        /* Twilio made and sent its own code; ours stays in the row unused, so
+           a later switch back to raw SMS needs no migration. */
+        ? await twilioVerifyStart(destination)
+        : await sendLoginCodeSms(destination, code, purpose)
+  res.status(202).json({ sent: true, delivered, channel, minutes: CODE_TTL_MS / 60000 })
 })
 
 /**
@@ -1747,11 +1964,19 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
  */
 app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
-  const email = typeof req.body.email === 'string' ? req.body.email.trim().toLowerCase() : ''
+  /*
+    THE SAME DESTINATION THE CODE WENT TO. A phone number is normalised to E.164
+    on the way in exactly as it was on the way out, so the row is found whether
+    the customer retyped it with brackets, dashes or neither.
+  */
+  const rawPhone = typeof req.body.phone === 'string' ? req.body.phone : ''
+  const rawEmail = typeof req.body.email === 'string' ? req.body.email.trim().toLowerCase() : ''
+  const destination = rawPhone ? (toE164(rawPhone) ?? '') : rawEmail
+  const byPhone = !!rawPhone
   const code = typeof req.body.code === 'string' ? req.body.code.replace(/\D/g, '') : ''
-  if (!email || code.length !== 6) return res.status(400).json({ error: 'Enter the 6-digit code.' })
+  if (!destination || code.length !== 6) return res.status(400).json({ error: 'Enter the 6-digit code.' })
 
-  const row = await db.prepare('SELECT * FROM login_codes WHERE email = ?').get(email) as
+  const row = await db.prepare('SELECT * FROM login_codes WHERE destination = ?').get(destination) as
     | {
         email: string
         code_hash: string
@@ -1770,7 +1995,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   const dead = () => res.status(400).json({ error: 'That code is wrong or has expired.' })
   if (!row) return dead()
   if (row.expires_at < Date.now() || row.attempts >= MAX_CODE_ATTEMPTS) {
-    await db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
+    await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
     return dead()
   }
 
@@ -1779,18 +2004,26 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     sides a fixed 64 bytes, so the length check that timingSafeEqual demands can
     never itself leak anything about the real code.
   */
+  /*
+    WHO OWNS THE CODE DEPENDS ON WHICH ROAD IT TOOK. With Verify configured
+    Twilio generated it and only Twilio can say whether it is right; the row
+    here still carries our own unused code and its attempt counter, so the
+    lockout below applies either way and a switch back needs no migration.
+  */
+  const okByVerify = byPhone && VERIFY_SID() ? await twilioVerifyCheck(destination, code) : null
   const want = Buffer.from(row.code_hash, 'hex')
   const got = Buffer.from(hashToken(code), 'hex')
-  if (want.length !== got.length || !timingSafeEqual(want, got)) {
-    await db.prepare('UPDATE login_codes SET attempts = attempts + 1 WHERE email = ?').run(email)
+  const matches = okByVerify === null ? want.length === got.length && timingSafeEqual(want, got) : okByVerify
+  if (!matches) {
+    await db.prepare('UPDATE login_codes SET attempts = attempts + 1 WHERE destination = ?').run(destination)
     return dead()
   }
 
-  await db.prepare('DELETE FROM login_codes WHERE email = ?').run(email)
+  await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
 
-  const existing = await db.prepare('SELECT * FROM members WHERE email = ?').get(email) as
-    | MemberRow
-    | undefined
+  const existing = await db
+    .prepare(byPhone ? 'SELECT * FROM members WHERE phone = ?' : 'SELECT * FROM members WHERE email = ?')
+    .get(destination) as MemberRow | undefined
 
   if (existing) {
     await startSession(res, existing.id)
@@ -1811,9 +2044,11 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   ).run(
     id,
     row.pending_name ?? 'Member',
-    email,
+    /* Whichever one they proved. The other stays null until they give it —
+       an account keyed by a phone number has no email to invent. */
+    byPhone ? null : destination,
     row.pending_instagram,
-    row.pending_phone,
+    byPhone ? destination : row.pending_phone,
     await newReferralCode(),
     referrer?.id ?? null,
     Date.now(),
@@ -2130,6 +2365,11 @@ async function start() {
     console.log(`api + static on http://localhost:${PORT}`)
     if (!PAYMENTS_WIRED) {
       console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
+    }
+    /* SMS is the way in now, so its problems are the loud ones. */
+    const sms = loginSmsProblem()
+    if (sms) {
+      console.warn(`*** SIGN-IN SMS WILL NOT REACH CUSTOMERS: ${sms} ***`)
     }
     const mail = loginEmailProblem()
     if (mail) {

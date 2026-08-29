@@ -42,11 +42,29 @@ const codeFor = (email) => {
   const m = last && last.match(/ (\d{6}) /)
   return m ? m[1] : null
 }
+/*
+  THREE NUMBERS, EACH USED THROUGHOUT — "we want only SMS", 2026-08-29.
+
+  Named constants rather than literals repeated at every call site, because the
+  identity has to be the SAME string in the start body, in the log scan and in
+  the verify body; a fresh one per call silently turns every assertion into a
+  test of an account that does not exist. 555-01xx is the reserved fictional
+  exchange: right in a test, wrong in production.
+*/
+const stamp = String(Date.now()).slice(-5)
+const ADA = `+1510555${stamp.slice(-4)}`
+const BO = `+1510554${stamp.slice(-4)}`
+const RESEND = `+1510553${stamp.slice(-4)}`
+/* Still an address, on purpose: the oracle check needs a destination that is
+   certainly not a member, and the email path stays open for the accounts that
+   predate the change. */
+const STRANGER = 'nobody-here@example.com'
+
 const fails=[]
 const check=(cond,msg)=>{ if(!cond) fails.push(msg) }
 
 // 1. the code never reaches the client
-const start=await post('/api/members/start',{name:'Ada Vance',email:'ada@example.com'})
+const start=await post('/api/members/start',{name:'Ada Vance',phone:ADA})
 check(start.status===202,'start did not accept')
 check(!JSON.stringify(start.body).match(/\d{6}/),'THE CODE WAS RETURNED TO THE CLIENT')
 
@@ -55,31 +73,31 @@ const before=await fetch(B+'/api/members/me').then(r=>r.status)
 check(before===401,'a session existed before the code was confirmed')
 
 // 3. a wrong code is refused, the right one works
-const wrong=await post('/api/members/verify',{email:'ada@example.com',code:'000000'})
+const wrong=await post('/api/members/verify',{phone:ADA,code:'000000'})
 check(wrong.status===400,'a wrong code was accepted')
-const real=codeFor('ada@example.com')
+const real=codeFor(ADA)
 check(!!real,'no code was generated')
-const good=await post('/api/members/verify',{email:'ada@example.com',code:real})
+const good=await post('/api/members/verify',{phone:ADA,code:real})
 check(good.status===201,'the real code did not sign her up')
 check(!!good.cookie,'no session cookie was set')
 
 // 4. single use
-const replay=await post('/api/members/verify',{email:'ada@example.com',code:real})
+const replay=await post('/api/members/verify',{phone:ADA,code:real})
 check(replay.status===400,'THE CODE WAS REUSABLE')
 
 // 5. no membership oracle
 // A ONE-CHARACTER NAME, deliberately: the difference used to show up only for
 // an invalid name, where one path demanded it and the other did not.
-const known=await post('/api/members/start',{name:'x',email:'ada@example.com'})
-const unknown=await post('/api/members/start',{name:'x',email:'nobody-here@example.com'})
+const known=await post('/api/members/start',{name:'x',phone:ADA})
+const unknown=await post('/api/members/start',{name:'x',email:STRANGER})
 check(known.status===unknown.status && JSON.stringify(known.body)===JSON.stringify(unknown.body),
   'the response reveals who is already a member')
 
 // 6. lockout, and it survives the real code arriving after
-await post('/api/members/start',{name:'Bo Reed',email:'bo@example.com'})
-const boReal=codeFor('bo@example.com')
-for(let i=0;i<5;i++) await post('/api/members/verify',{email:'bo@example.com',code:'11111'+i})
-const afterLock=await post('/api/members/verify',{email:'bo@example.com',code:boReal})
+await post('/api/members/start',{name:'Bo Reed',phone:BO})
+const boReal=codeFor(BO)
+for(let i=0;i<5;i++) await post('/api/members/verify',{phone:BO,code:'11111'+i})
+const afterLock=await post('/api/members/verify',{phone:BO,code:boReal})
 check(afterLock.status===400,'THE REAL CODE STILL WORKED AFTER FIVE WRONG GUESSES')
 
 /*
@@ -90,14 +108,14 @@ check(afterLock.status===400,'THE REAL CODE STILL WORKED AFTER FIVE WRONG GUESSE
   every guess an attacker gets, and one that issues nothing leaves the member
   exactly as stuck as before the button existed.
 */
-await post('/api/members/start',{name:'Ada Vance',email:'vance-resend@example.com'})
-const first=codeFor('vance-resend@example.com')
-await post('/api/members/start',{name:'Ada Vance',email:'vance-resend@example.com'})
-const second=codeFor('vance-resend@example.com')
+await post('/api/members/start',{name:'Ada Vance',phone:RESEND})
+const first=codeFor(RESEND)
+await post('/api/members/start',{name:'Ada Vance',phone:RESEND})
+const second=codeFor(RESEND)
 check(!!second && second!==first,'resending did not issue a new code')
-const oldOne=await post('/api/members/verify',{email:'vance-resend@example.com',code:first})
+const oldOne=await post('/api/members/verify',{phone:RESEND,code:first})
 check(oldOne.status===400,'THE PREVIOUS CODE STILL WORKED AFTER A RESEND')
-const newOne=await post('/api/members/verify',{email:'vance-resend@example.com',code:second})
+const newOne=await post('/api/members/verify',{phone:RESEND,code:second})
 check(newOne.status===201,'the resent code did not work')
 
 srv.kill()

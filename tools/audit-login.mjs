@@ -31,7 +31,11 @@ const b=await chromium.launch()
 const p=await b.newPage({viewport:{width:393,height:852},deviceScaleFactor:2})
 const bad=[]
 p.on('response',r=>{const l=`${r.status()} ${r.url().replace(base,'')}`; if(r.status()>=400 && l!=='401 /api/members/me') bad.push(l)})
-const email=`late${Date.now()}@example.com`
+/* A number, because the form asks for one — "we want only SMS", 2026-08-29.
+   The submit button is gated on a valid one, so an address here leaves it
+   permanently disabled and the click times out saying "element is not
+   enabled", which reads like a broken button and is a stale test. */
+const email=`+1510563${String(Date.now()).slice(-4)}`
 const codeFor=()=>{const l=readFileSync(LOG,'utf8').split('\n').filter(x=>x.includes(`[login-code] ${email} `)).pop();return l&&l.match(/ (\d{6}) /)?.[1]}
 
 /*
@@ -57,7 +61,7 @@ console.log('reached form  :', reached)
 
 // Fill the details and ask for a code.
 await p.fill('.join-field input[autocomplete="name"]', 'Ola Bright')
-await p.fill('.join-field input[type="email"]', email)
+await p.fill('.join-field input[type="tel"]', email)
 await p.click('form.join button[type="submit"]')
 await p.waitForTimeout(900)
 const first = codeFor()

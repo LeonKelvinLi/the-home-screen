@@ -53,6 +53,9 @@ const hook=async(payload,sign=true)=>{
 }
 
 // a member, verified by code
+/* PAT KEEPS AN EMAIL, deliberately: the accounts that predate SMS still have
+   one, and the prefill below is only correct for them. Sam signs up by phone
+   further down, which is what the screens do now. */
 await post('/api/members/start',{name:'Pat Osei',email:'pat@example.com'})
 const line=readFileSync(LOG,'utf8').split('\n').filter(l=>l.includes('[login-code] pat@example.com ')).pop()
 const code=line && line.match(/ (\d{6}) /)?.[1]
@@ -132,10 +135,11 @@ const post2=async(p,body,cookie)=>{
   }
   throw new Error('rate limited for the whole run')
 }
-await post2('/api/members/start',{name:'Sam Reyes',email:'sam@example.com'})
-const l2=readFileSync(LOG2,'utf8').split('\n').filter(l=>l.includes('[login-code] sam@example.com ')).pop()
+const samPhone = `+1510556${String(Date.now()).slice(-4)}`
+await post2('/api/members/start',{name:'Sam Reyes',phone:samPhone})
+const l2=readFileSync(LOG2,'utf8').split('\n').filter(l=>l.includes(`[login-code] ${samPhone} `)).pop()
 const c2=l2 && l2.match(/ (\d{6}) /)?.[1]
-const v2=await post2('/api/members/verify',{email:'sam@example.com',code:c2})
+const v2=await post2('/api/members/verify',{phone:samPhone,code:c2})
 const jar2=(v2.cookie||'').split(';')[0]
 const t2=await post2('/api/members/tier',{tier:'pass'},jar2)
 check(t2.body.paymentLink===null,'a payment link was handed out with none configured')

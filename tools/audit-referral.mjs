@@ -9,6 +9,13 @@ import { spawn } from 'node:child_process'
 import { createServer } from 'node:net'
 import { rmSync, readFileSync, openSync } from 'node:fs'
 import { freshTestDb } from './pgtest.mjs'
+
+/* NINETY SECONDS ON THE DOOR, not the default thirty.
+
+   The landing screen counts down before it draws its Enter button, and under
+   the suite's parallelism on a loaded machine that countdown outruns a 30s
+   auto-wait. Both of these passed standalone and failed inside audit-all.sh,
+   which is the signature of a timeout rather than a defect. */
 const TESTDB = await freshTestDb('referral')
 const freePort=()=>new Promise(r=>{const s=createServer();s.listen(0,()=>{const{port}=s.address();s.close(()=>r(port))})})
 const port=await freePort()
@@ -31,7 +38,7 @@ const join = async (url, name, email) => {
   const ctx = await b.newContext({viewport:{width:393,height:852}})
   const p = await ctx.newPage()
   await p.goto(url,{waitUntil:'networkidle'})
-  await p.click('[aria-label="Enter BEASTY"]'); await p.waitForTimeout(2500)
+  await p.click('[aria-label="Enter BEASTY"]', { timeout: 90000 }); await p.waitForTimeout(2500)
   await p.click('.spotlight'); await p.waitForTimeout(400)
   await p.click('.gate-card .btn-primary'); await p.waitForTimeout(900)
   await p.fill('.join-field:nth-of-type(1) input', name)
@@ -47,12 +54,15 @@ const join = async (url, name, email) => {
   return { ctx, p, a }
 }
 
-const owner = await join(base, 'Rae Okafor', 'rae@example.com')
+/* Field two on the join form is the mobile number now, and this fills by
+   position, so it only needed the values to change. */
+const stamp = String(Date.now()).slice(-4)
+const owner = await join(base, 'Rae Okafor', `+1510557${stamp}`)
 if (!owner.a) { console.log('FAIL: the referrer never signed up'); await b.close(); srv.kill(); process.exit(1) }
 console.log('referrer         :', owner.a.name, '| code', owner.a.referralCode)
 const link = `${base}/?ref=${owner.a.referralCode}`
 
-for (const [n,e] of [['Friend One','one@example.com'],['Friend Two','two@example.com'],['Friend Three','three@example.com']]) {
+for (const [n,e] of [['Friend One',`+1510558${stamp}`],['Friend Two',`+1510559${stamp}`],['Friend Three',`+1510560${stamp}`]]) {
   const f = await join(link, n, e)
   if (!f.a) { console.log(`FAIL: ${n} never signed up`); await b.close(); srv.kill(); process.exit(1) }
   await f.ctx.close()

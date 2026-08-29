@@ -25,6 +25,16 @@ import { openSync, readFileSync } from 'node:fs'
 import { freshTestDb } from './pgtest.mjs'
 import pg from 'pg'
 
+/*
+  THE AUDITS SIGN IN BY PHONE, because the screens do — "we want only SMS",
+  2026-08-29. The server still accepts an email so the accounts that existed
+  before then are not locked out, and audit-auth still proves that path; every
+  other audit here walks the road a customer actually walks.
+
+  555-01xx is the reserved fictional exchange: the right thing in a test and
+  the wrong thing in production.
+*/
+
 const freePort = () =>
   new Promise((r) => {
     const s = createServer()
@@ -69,9 +79,9 @@ const post = async (path, body, cookie) => {
   a token rather than pretending the throttle is a defect. Refill is 8/min, so
   a token arrives every 7.5 seconds.
 */
-const startCode = async (name, email) => {
+const startCode = async (name, phone) => {
   for (let attempt = 0; attempt < 10; attempt++) {
-    const r = await post('/api/members/start', { name, email })
+    const r = await post('/api/members/start', { name, phone })
     if (r.status !== 429) return r
     await new Promise((res) => setTimeout(res, 8000))
   }
@@ -107,33 +117,46 @@ try {
   // ---- 1b. the limiter itself, proved before it gets in the way ----------
   {
     const burst = []
-    for (let i = 0; i < 7; i++) burst.push(await post('/api/members/start', { name: 'Burst Bob', email: `burst${i}${Date.now()}@example.com` }))
+    for (let i = 0; i < 7; i++) burst.push(await post('/api/members/start', { name: 'Burst Bob', phone: `+1510552${String(Date.now()).slice(-3)}${i}` }))
     check(burst.some((r) => r.status === 429), 'a burst of sign-up requests from one address is throttled')
     check(burst[0].status === 202, 'and the first of them still went through')
   }
 
-  const stale = `stale${Date.now()}@example.com`
+  const stale = `+1510555${String(Date.now()).slice(-4)}`
   await startCode('Stale Sam', stale)
   const staleCode = codeFor(stale)
   check(!!staleCode, 'a code is issued')
   {
     const c = new pg.Client({ connectionString: TESTDB.url })
     await c.connect()
-    await c.query('UPDATE login_codes SET expires_at = $1 WHERE email = $2', [Date.now() - 1000, stale])
+    await c.query('UPDATE login_codes SET expires_at = $1 WHERE destination = $2', [Date.now() - 1000, stale])
     await c.end()
   }
-  const expired = await post('/api/members/verify', { email: stale, code: staleCode })
+  const expired = await post('/api/members/verify', { phone: stale, code: staleCode })
   check(expired.status === 400, 'AN EXPIRED CODE IS REFUSED')
-  const afterExpiry = await post('/api/members/verify', { email: stale, code: staleCode })
+  const afterExpiry = await post('/api/members/verify', { phone: stale, code: staleCode })
   check(afterExpiry.status === 400, 'and stays refused when tried again')
 
-  // ---- 3. the address is the address, whatever the shift key did ----------
-  const mixed = `Mixed${Date.now()}@Example.COM`
-  await startCode('Mixed Case', mixed)
-  const mixedCode = codeFor(mixed.toLowerCase())
-  check(!!mixedCode, 'an address typed in mixed case still issues a code')
-  const lower = await post('/api/members/verify', { email: mixed.toLowerCase(), code: mixedCode ?? '' })
-  check(lower.status === 201, 'and the lower-case form of it signs them in')
+  /*
+    3. THE NUMBER IS THE NUMBER, HOWEVER IT WAS TYPED.
+
+    This replaces the mixed-case email test and is the same property one layer
+    down: the same person types (510) 555-0123, 510-555-0123, 5105550123 and
+    +15105550123 on four different days, and all four have to be one account.
+    Normalisation to E.164 happens on the way in AND on the way back, so the
+    code can be requested in one shape and confirmed in another.
+
+    If this ever fails, the uniqueness index on members.phone is meaningless —
+    the same person would be able to create an account per punctuation style.
+  */
+  const tail = String(Date.now()).slice(-4)
+  const typed = `(510) 551-${tail}`
+  const e164 = `+1510551${tail}`
+  await startCode('Punctuation Pat', typed)
+  const punctCode = codeFor(e164)
+  check(!!punctCode, 'a number typed with brackets and a dash is stored in E.164')
+  const lower = await post('/api/members/verify', { phone: `510-551-${tail}`, code: punctCode ?? '' })
+  check(lower.status === 201, 'AND CONFIRMING IT IN A DIFFERENT SHAPE SIGNS THEM IN')
   const session = sessionCookie(lower.setCookie)
 
   // ---- 4. the cookie a session rides on -----------------------------------
@@ -151,9 +174,9 @@ try {
   check(afterOut.status === 401, 'THE OLD COOKIE IS DEAD AFTER SIGNING OUT, server-side')
 
   // ---- 6. a session that has aged out -------------------------------------
-  const aged = `aged${Date.now()}@example.com`
+  const aged = `+1510555${String(Date.now()).slice(-4)}`
   await startCode('Aged Ann', aged)
-  const agedIn = await post('/api/members/verify', { email: aged, code: codeFor(aged) ?? '' })
+  const agedIn = await post('/api/members/verify', { phone: aged, code: codeFor(aged) ?? '' })
   const agedCookie = sessionCookie(agedIn.setCookie)
   {
     const c = new pg.Client({ connectionString: TESTDB.url })
@@ -165,21 +188,21 @@ try {
   check(agedOut.status === 401, 'AN EXPIRED SESSION IS REFUSED')
 
   // ---- 7. signing in on a second device does not evict the first ----------
-  const two = `two${Date.now()}@example.com`
+  const two = `+1510555${String(Date.now()).slice(-4)}`
   await startCode('Two Devices', two)
-  const dev1 = await post('/api/members/verify', { email: two, code: codeFor(two) ?? '' })
+  const dev1 = await post('/api/members/verify', { phone: two, code: codeFor(two) ?? '' })
   const c1 = sessionCookie(dev1.setCookie)
   await startCode('Two Devices', two)
-  const dev2 = await post('/api/members/verify', { email: two, code: codeFor(two) ?? '' })
+  const dev2 = await post('/api/members/verify', { phone: two, code: codeFor(two) ?? '' })
   const c2 = sessionCookie(dev2.setCookie)
   check(!!c1 && !!c2 && c1 !== c2, 'a second device gets its own session')
   const stillIn = await fetch(base + '/api/members/me', { headers: { cookie: c1 } })
   check(stillIn.ok, 'and the first device is still signed in')
 
   // ---- 8. the start route will not take just anything ---------------------
-  const noEmail = await startCode('No Email', 'not-an-address')
-  check(noEmail.status === 400, `a malformed address is refused (got ${noEmail.status})`)
-  const noName = await startCode('x', `n${Date.now()}@example.com`)
+  const noEmail = await startCode('No Number', '12345')
+  check(noEmail.status === 400, `a number that is too short is refused (got ${noEmail.status})`)
+  const noName = await startCode('x', `+1510555${String(Date.now()).slice(-4)}`)
   check(noName.status === 400, `a one-character name is refused for everyone, which is what keeps it from being an oracle (got ${noName.status})`)
 } finally {
   srv.kill()

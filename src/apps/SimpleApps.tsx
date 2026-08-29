@@ -170,7 +170,10 @@ export function AccountApp({ api }: { api: ShellApi }) {
         <div className="plain">
           <h3>Signed in</h3>
           <p>
-            {account.name} — {account.email}
+            {/* Whichever they are known by. This showed account.email, which is
+                null for anybody who signed up by SMS — the row read
+                "Rae Solis — " with nothing after the dash. */}
+            {account.name} — {account.phone ?? account.email}
           </p>
           <p>
             Your referral code is <strong>{account.referralCode}</strong>. Your profile has the QR

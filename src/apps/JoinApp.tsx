@@ -100,7 +100,20 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
 
   const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
 
-  const ready = name.trim().length >= 2 && /^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(email.trim())
+  /*
+    ENABLED ON A NUMBER, NOT AN ADDRESS. This still gated on the email regex
+    after the field changed, which left the button permanently dead: nothing on
+    the screen asks for an email any more, so nothing could ever satisfy it.
+
+    The test is deliberately loose and matches the server's: ten digits, or
+    eleven starting with a one, or anything with a leading plus. A stricter
+    pattern here would refuse numbers the server would have accepted, and the
+    customer would have no idea which part it disliked.
+  */
+  const digits = phone.replace(/\D/g, '')
+  const phoneLooksRight =
+    phone.trim().startsWith('+') ? digits.length >= 8 : digits.length === 10 || (digits.length === 11 && digits.startsWith('1'))
+  const ready = name.trim().length >= 2 && phoneLooksRight
 
   /* The one send, called by the details form and by Resend. Both need the same
      handling of a failure, and two copies of it drift. */
@@ -108,9 +121,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     setError(null)
     const r = await startSignUp({
       name: name.trim(),
-      email: email.trim(),
+      phone: phone.trim(),
       instagram: instagram.trim() || undefined,
-      phone: phone.trim() || undefined,
     })
     if (!r.ok) {
       setError(r.error)
@@ -148,7 +160,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     if (code.replace(/\D/g, '').length !== 6 || busy) return
     setBusy(true)
     setError(null)
-    const r = await verifyCode(email.trim(), code)
+    const r = await verifyCode(phone.trim(), code)
     setBusy(false)
     if (!r.ok) {
       setError(r.error)
@@ -172,7 +184,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   */
   return (
     <AppChrome
-      title={step === 'details' ? 'Sign in or join' : 'Check your email'}
+      title={step === 'details' ? 'Sign in or join' : 'Check your texts'}
       onBack={api.closeApp}
       tint="#141416"
     >
@@ -181,8 +193,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
         <form className="join" onSubmit={askForCode}>
           <p className="join-lead">
             Free, and it opens the whole directory — every city, the reels, the gallery and search.
-            <strong> Already a member? This is also how you sign in.</strong> We email a six-digit
-            code either way; there is no password.
+            <strong> Already a member? This is also how you sign in.</strong> We text you a
+            six-digit code either way; there is no password.
           </p>
 
           {/* Said where it matters. A referred sign-up is the referrer's credit. */}
@@ -216,17 +228,28 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             </small>
           </label>
 
+          {/*
+            THE MOBILE NUMBER IS THE ACCOUNT — "we want only SMS", 2026-08-29.
+
+            `autoComplete="tel"` and `inputMode="tel"` together are what make
+            this one tap on a phone: iOS offers the number it knows and puts up
+            the keypad rather than the alphabet.
+          */}
           <label className="join-field">
-            <span>Email</span>
+            <span>Mobile number</span>
             <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              autoComplete="email"
-              inputMode="email"
+              type="tel"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              autoComplete="tel"
+              inputMode="tel"
+              placeholder="(510) 555-0123"
               enterKeyHint="next"
               required
             />
+            <small className="join-hint">
+              We text you a six-digit code. Standard message rates apply.
+            </small>
           </label>
 
           <label className="join-field">
@@ -242,16 +265,18 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             />
           </label>
 
+          {/* Optional, and only so a member has somewhere to be sent a receipt.
+              It is not what signs them in and never was, after today. */}
           <label className="join-field">
             <span>
-              Phone <em>optional</em>
+              Email <em>optional</em>
             </span>
             <input
-              type="tel"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              autoComplete="tel"
-              inputMode="tel"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              autoComplete="email"
+              inputMode="email"
             />
           </label>
 
@@ -298,8 +323,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
           */}
           {undelivered && (
             <p className="join-error" role="alert">
-              We could not send it — email is not connected on this site yet, so nothing has
-              arrived and nothing is wrong with your address.
+              We could not send it — texting is not connected on this site yet, so nothing has
+              arrived and nothing is wrong with your number.
               {/*
                 THE ENV VAR NAMES ARE FOR THE OPERATOR AND ONLY IN DEV.
 
@@ -310,7 +335,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
                 the deployment they have no reason to be handed.
               */}
               {import.meta.env.DEV && (
-                <em className="join-dev"> Set RESEND_API_KEY and OTP_FROM_EMAIL.</em>
+                <em className="join-dev"> Set TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and TWILIO_FROM_NUMBER.</em>
               )}
             </p>
           )}

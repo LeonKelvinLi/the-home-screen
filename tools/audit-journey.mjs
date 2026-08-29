@@ -101,13 +101,13 @@ step('4  the directory is still open behind it', gated.tilesStillThere > 10)
 // ---- 3. sign up, through the screens rather than the API ------------------
 await p.keyboard.press('Escape')
 await p.waitForTimeout(400)
-const email = `journey${Date.now()}@example.com`
+const email = `+1510561${String(Date.now()).slice(-4)}`
 await p.evaluate(() => window.dispatchEvent(new CustomEvent('beasty:join')))
 await p.waitForTimeout(1200)
 step('5  the sign-in form opens', !!(await p.$('form.join')))
 
 await p.fill('.join-field input[autocomplete="name"]', 'Rae Journey')
-await p.fill('.join-field input[type="email"]', email)
+await p.fill('.join-field input[type="tel"]', email)
 await p.click('form.join button[type="submit"]')
 await p.waitForTimeout(1200)
 const c1 = codeFor(email)
@@ -148,7 +148,7 @@ step('10 the code shown is theirs', prof.code === me?.referralCode, `${prof.code
 const fctx = await b.newContext({ viewport: { width: 393, height: 852 } })
 const friend = await fctx.newPage()
 await friend.goto(`${base}/?ref=${me.referralCode}`, { waitUntil: 'networkidle' })
-const femail = `friend${Date.now()}@example.com`
+const femail = `+1510562${String(Date.now()).slice(-4)}`
 /*
   The referral rides in the BODY, put there by the client from sessionStorage —
   it is not a cookie and the server never sees the URL. So the friend has to
@@ -157,12 +157,12 @@ const femail = `friend${Date.now()}@example.com`
 */
 const fr = await friend.evaluate(async (e) => {
   const ref = sessionStorage.getItem('fb.ref.v1')
-  const r = await fetch('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify({ name: 'Sam Friend', email: e, ref: ref ?? undefined }) })
+  const r = await fetch('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify({ name: 'Sam Friend', phone: e, ref: ref ?? undefined }) })
   return { status: r.status, ref }
 }, femail)
 const fcode = codeFor(femail)
 await friend.evaluate(async ({ e, c }) => {
-  await fetch('/api/members/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify({ email: e, code: c }) })
+  await fetch('/api/members/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, credentials: 'same-origin', body: JSON.stringify({ phone: e, code: c }) })
 }, { e: femail, c: fcode })
 await friend.close(); await fctx.close()
 const credited = await p.evaluate(async () => (await fetch('/api/members/me', { credentials: 'same-origin' })).json())
@@ -176,7 +176,9 @@ const chosen = await p.evaluate(async () => {
 step('12 choosing a tier stays pending', chosen.tierStatus === 'pending')
 const link = chosen.paymentLink ? new URL(chosen.paymentLink) : null
 step('13 the link carries the member', link?.searchParams.get('client_reference_id') === me.id, `${link?.searchParams.get('client_reference_id')} vs ${me.id}`)
-step('14 the link prefills their address', link?.searchParams.get('prefilled_email') === email, `${link?.searchParams.get('prefilled_email')} vs ${email}`)
+/* A member who signed up by SMS has no address to prefill; the id that
+   matches the payment back to them is what has to be there. */
+step('14 the link carries the id that matches the payment', link?.searchParams.get('client_reference_id') === me?.id, String(link?.searchParams.get('client_reference_id')))
 step('15 the link keeps its own query string', link?.searchParams.get('utm_source') === 'beasty')
 
 // ---- 8. Stripe confirms, and the screen catches up on its own ------------

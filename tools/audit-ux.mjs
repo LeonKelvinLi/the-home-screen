@@ -307,7 +307,7 @@ try {
       An audit that dies tells you less than one that says "I could not sign in"
       and keeps going.
     */
-    const email = `ux${Date.now()}${vp.name}@example.com`
+    const email = `+1510564${String(Date.now()).slice(-4)}`
     let signedIn = false
     for (let attempt = 0; attempt < 2 && !signedIn; attempt++) {
       await p.keyboard.press('Escape')
@@ -324,7 +324,7 @@ try {
       }
       await inspect(p, tag('join'))
       await name.fill('Rae UX')
-      await p.locator('.join-field input[type="email"]').first().fill(email)
+      await p.locator('.join-field input[type="tel"]').first().fill(email)
       await p.locator('form.join button[type="submit"]').first().click()
       await p.waitForTimeout(1500)
       const code = codeFor(email)

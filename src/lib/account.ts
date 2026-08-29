@@ -27,7 +27,10 @@ export interface Rewards {
 export interface Account {
   id: string
   name: string
-  email: string
+  /* Whichever one they signed in with. A member who joined by SMS has a phone
+     and no email; one who joined before the change has the reverse. */
+  email: string | null
+  phone: string | null
   instagram: string | null
   referralCode: string
   tier: 'free' | 'pass' | 'diamond'
@@ -41,9 +44,15 @@ export interface Account {
 
 export interface SignUp {
   name: string
-  email: string
-  instagram?: string
+  /*
+    A MOBILE NUMBER IS WHAT THE SCREEN ASKS FOR NOW — "we want only SMS".
+    `email` stays on the type and stays optional because the accounts that
+    existed before the change were created with one and no number, and the
+    server still accepts it so those people can get back in.
+  */
   phone?: string
+  email?: string
+  instagram?: string
 }
 
 const json = { 'content-type': 'application/json' }
@@ -125,8 +134,8 @@ export type StartResult =
  * either way. The server knows which it was; saying so would let anybody type
  * addresses in and learn who is a BEASTY member.
  *
- * `delivered: false` means the server has no email provider configured — the
- * code exists but nobody received it. That has to be shown, not swallowed:
+ * `delivered: false` means the server could not send it — no SMS provider
+ * configured, or the carrier refused it. The code exists and nobody received it. That has to be shown, not swallowed:
  * a code screen that can never be satisfied is worse than an honest failure.
  */
 export async function startSignUp(fields: SignUp): Promise<StartResult> {
@@ -147,14 +156,22 @@ export async function startSignUp(fields: SignUp): Promise<StartResult> {
 
 export type VerifyResult = { ok: true; account: Account } | { ok: false; error: string }
 
-/** Step two: prove the address. This is the only call that creates a member. */
-export async function verifyCode(email: string, code: string): Promise<VerifyResult> {
+/** Step two: prove the number. This is the only call that creates a member. */
+export async function verifyCode(destination: string, code: string): Promise<VerifyResult> {
   try {
     const r = await fetch('/api/members/verify', {
       method: 'POST',
       headers: json,
       credentials: 'same-origin',
-      body: JSON.stringify({ email, code }),
+      /*
+        A NUMBER GOES BACK AS `phone` AND AN ADDRESS AS `email`, because the
+        server looks the member up in a different column for each. Told apart
+        by the @ rather than by a flag threaded through three components: the
+        two are never ambiguous and a flag can be passed wrong.
+      */
+      body: JSON.stringify(
+        destination.includes('@') ? { email: destination, code } : { phone: destination, code },
+      ),
     })
     const body = await r.json().catch(() => ({}))
     if (!r.ok) return { ok: false, error: body?.error ?? 'That code did not work.' }

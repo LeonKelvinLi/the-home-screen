@@ -387,6 +387,67 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_orders_idem ON orders(idempotency_key)
  * top-level schema build would race the first request and fail intermittently
  * on a cold start — the worst kind of bug to reproduce.
  */
+/**
+ * Changes to tables that already exist, in the order they were made.
+ *
+ * SCHEMA above only ever CREATEs, so it cannot alter a table that is already
+ * out there with rows in it. Everything here has to be safe to run on every
+ * boot, because it does: `IF NOT EXISTS`, or a guard that checks the current
+ * shape first. Nothing here drops a column or a table — a migration that can
+ * lose data is one bad deploy away from losing it.
+ */
+const MIGRATIONS = `
+/*
+  A PHONE NUMBER IS AN IDENTITY NOW, 2026-08-29, by the operator's decision:
+  "we want only SMS".
+
+  Both columns stay and both are optional. Email is not dropped, because the
+  accounts that exist were created with one and no phone, and a NOT NULL phone
+  would orphan them; phone is not required either, because a member who signed
+  up by email before today still has to be able to get in. What changed is that
+  either one can now be the thing you are known by, and the sign-up screen only
+  offers the phone.
+
+  The uniqueness is a PARTIAL index rather than a UNIQUE constraint, because a
+  plain UNIQUE on a nullable column would still be right in Postgres — NULLs do
+  not collide — but says less about the intent. This one says: at most one
+  member per phone number, and any number of members without one.
+*/
+ALTER TABLE members ALTER COLUMN email DROP NOT NULL;
+
+CREATE UNIQUE INDEX IF NOT EXISTS idx_members_phone
+  ON members (phone) WHERE phone IS NOT NULL;
+
+/*
+  A CODE IS KEYED BY WHATEVER IT WAS SENT TO, not by an email address.
+
+  Renamed rather than added-and-copied: login_codes holds nothing but
+  in-flight one-time codes, every row expires within ten minutes, and the
+  column is its primary key. A rename keeps the key and the index; adding a
+  second column would leave two ways to find a row and a choice to get wrong.
+*/
+DO $$ BEGIN
+  IF EXISTS (
+    SELECT 1 FROM information_schema.columns
+    WHERE table_schema = 'public' AND table_name = 'login_codes' AND column_name = 'email'
+  ) THEN
+    ALTER TABLE login_codes RENAME COLUMN email TO destination;
+  END IF;
+END $$;
+
+/* Which way it went out, so a resend uses the same road and the audit can tell
+   an SMS code from an emailed one. */
+ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS channel TEXT NOT NULL DEFAULT 'sms';
+`
+
+/**
+ * Create everything, once, before the server serves anything.
+ *
+ * Awaited at boot rather than run at import: an import cannot be awaited, so a
+ * top-level schema build would race the first request and fail intermittently
+ * on a cold start — the worst kind of bug to reproduce.
+ */
 export async function migrate() {
   await pool.query(SCHEMA)
+  await pool.query(MIGRATIONS)
 }
