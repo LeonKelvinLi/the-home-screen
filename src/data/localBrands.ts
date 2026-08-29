@@ -3387,6 +3387,14 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://www.sipsca.com/',
     siteNote: 'Second shop at 1399 University Ave, Berkeley',
     menuNote: 'A few of theirs',
+    /*
+      "PLAY VIDEO ON PAGE PLZ" — 2026-08-28, and it cannot be honoured from
+      what he sent. The link was an Instagram STORY,
+      instagram.com/stories/sipsca/3973366113505000482, and stories expire after
+      twenty-four hours: yt-dlp now answers "this content is unreachable", and
+      no cookie fixes a story that no longer exists. If he still wants it on the
+      page he needs to send the file itself, or a permanent post.
+    */
     /* NO HOURS: their own page is headed "Locations & Hours" and lists none. */
     quoteOnly:
       'A bottle shop on First Street dealing in rare and allocated whiskey, additive-free tequila, wine and champagne, with craft beer and cigars — started in 2022, with a second shop in Berkeley. Over-21s only: age is checked at the till and an adult signature is required on delivery, they ship domestically but never to a PO box, and they will not ship where a buyer’s own state forbids it. These are their own published prices.',

@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { upcoming } from '../data/news'
 import { AppChrome } from './AppChrome'
 import { LISTED_KITCHENS, brandById } from '../data/brands'
 import { listEvents } from '../lib/api'
@@ -71,7 +72,31 @@ export function CalendarApp({ api }: { api: ShellApi }) {
     const last = dayKey(new Date(shown.getFullYear(), shown.getMonth() + 1, 0))
     void listEvents(first, last).then((r) => {
       if (!alive) return
-      setEvents(r.events)
+      /*
+        NEWS WITH A DATE ON IT LANDS HERE TOO.
+
+        His spec: "when an affiliate posts news about an upcoming future event,
+        that event will be posted on the calendar." A post carrying an
+        eventDate is that event, so the two screens cannot disagree — the news
+        page says something is happening and this is where you come to see when.
+
+        Merged rather than written into the events table, because a news post
+        and a calendar entry are one fact: copying it would let them drift the
+        moment a post is edited. Ids are prefixed so nothing can collide with a
+        real event, and anything outside the month on screen is dropped.
+      */
+      const fromNews = upcoming()
+        .filter((n) => n.eventDate! >= first && n.eventDate! <= last)
+        .map((n) => ({
+          id: `news:${n.date}:${n.headline}`,
+          date: n.eventDate!,
+          brandId: n.authorId ?? '',
+          title: n.headline,
+          detail: n.body,
+          postedBy: 'partner' as const,
+        }))
+      const seen = new Set(r.events.map((e) => e.id))
+      setEvents([...r.events, ...fromNews.filter((e) => !seen.has(e.id))])
       setReachable(r.ok)
     })
     return () => {

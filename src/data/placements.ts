@@ -799,4 +799,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-jose-services-6': 'b_audioaccessoriesmobile', //  Car audio, and BEASTY too
   'san-bruno-services-14': 'b_pacificpetgrooming', //    Pet grooming; Fridays
   'beasty-individuals-13': 'b_crayone', //               the artist, beside his store
+
+  /* "BEASTY - Goods / Daly City" — the fourth two-line placement. It has held
+     the Daly City seat since the 27th; this is the half that was missed. The
+     numbered BEASTY Goods sheet has only Boba and Dog boutique open and it is
+     a pizzeria, so the yellow one. */
+  'beasty-goods2-10': 'b_kingswcpizza',
 }

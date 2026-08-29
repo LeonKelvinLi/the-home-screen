@@ -30,14 +30,39 @@ const gateShows = async (sel,label) => {
   await p.waitForTimeout(300)
   return !!up
 }
-console.log('SIGNED OUT — the six doors:')
+console.log('SIGNED OUT — the six doors, and the one that is not a door:')
 const r = {}
 r.cities = await gateShows('.page-step.is-next','right arrow')
 r.watch  = await gateShows('[aria-label*="Watch"]','watch tab')
 r.gallery= await gateShows('.spotlight-glass.is-gallery','gallery tab')
 r.dock   = await gateShows('.dock-switch-btn:nth-child(2)','dock 2')
 r.search = await gateShows('.spotlight','search bar')
-r.lower  = await gateShows('.dock .icon-tile','a lower dock button')
+/*
+  A GATED DOCK BUTTON, NAMED RATHER THAN COUNTED.
+
+  This was `.dock .icon-tile`, the first tile in the row — which was true until
+  2026-08-28, when his revised order put News in slot 1 and News is the one
+  tile in that row he asked to be public. The audit then reported the app
+  broken for doing exactly what he asked.
+
+  Profile is the gated one it tests now, and News gets its own assertion below,
+  so both of his rules are held rather than one of them being an accident of
+  which tile happens to be first.
+*/
+r.lower  = await gateShows('[aria-label="Profile"]','a lower dock button')
+
+/*
+  "This will be public for all users and affiliates to view." News is the
+  exception in that row and it has to STAY the exception: a gate that creeps
+  back onto it puts the one page built to bring people back daily behind the
+  thing it exists to sell.
+*/
+await p.click('[aria-label="News"]').catch(()=>{})
+await p.waitForTimeout(700)
+r.newsOpen = !(await p.$('.gate-card')) && !!(await p.$('.news-feed, .news-calendar'))
+console.log(`  ${'News is public'.padEnd(22)} opens: ${r.newsOpen?'YES':'no'}`)
+const backHome = await p.$('button:has-text("Home")')
+if (backHome) { await backHome.click(); await p.waitForTimeout(800) }
 
 console.log('\nSIGNED OUT — what must STILL work:')
 const tiles = await p.$$('.home-page .icon-tile')

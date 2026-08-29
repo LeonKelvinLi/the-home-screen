@@ -52,6 +52,30 @@ export const KIND_LABEL: Record<NewsKind, string> = {
 
 const ITEMS: NewsItem[] = [
   {
+    /*
+      A REAL DATE, FROM THEIR OWN HOMEPAGE. A modal on
+      homeofchickenandwaffles.com reads "We are closing on August 31st!" — his
+      spec lists "upcoming openings/closures" as exactly the kind of thing this
+      page carries, and it is the most useful thing the directory can tell
+      somebody this week.
+
+      It is also what proves the calendar wiring: this is the only post with an
+      eventDate, so it is the one that has to appear on the calendar as well.
+      The restaurant itself is seeded and deliberately not seated — a tile for a
+      room that shuts on Sunday would be wrong by Monday — but a dated notice
+      that it is closing is right either way.
+    */
+    date: '2026-08-28',
+    kind: 'closure',
+    headline: 'Home of Chicken and Waffles closes on Sunday',
+    body:
+      'Their own site says 31 August. A long-running Oakland soul food room near ' +
+      'Jack London Square, founded by Derreck B Johnson, with every plate named after ' +
+      'family or a friend. Open 11am to 10pm until then, closed Wednesday.',
+    eventDate: '2026-08-31',
+    brands: ['b_homeofchickenandwaffles'],
+  },
+  {
     date: '2026-08-28',
     kind: 'affiliate',
     headline: 'Seventeen businesses joined this week',
