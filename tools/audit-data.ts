@@ -20,6 +20,7 @@
 import { BRANDS, brandById } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
+import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
 import {
   GOODS_CATEGORIES,
   SERVICE_CATEGORIES,
@@ -186,6 +187,46 @@ const emptyCities = (CITY_PAGES as readonly string[]).filter(
 )
 note(`${filled} of ${spots} numbered spots filled (${((filled / spots) * 100).toFixed(1)}%)`)
 note(`${emptyCities.length} of ${(CITY_PAGES as readonly string[]).length} cities have nothing on them`)
+
+// ---- 9. the news rules, checked on their boundaries ----------------------
+/*
+  BOTH OF THESE ARE ONLY EVER WRONG ON A BOUNDARY, which is the day nobody
+  happens to run the app. One of them already shipped wrong: dayLabel collapsed
+  every date that was not in the past to "Today", so a closure on the 31st read
+  as Today on the 29th — on the one card whose whole job is to say when.
+
+  Fixed clocks, not Date.now(), for the same reason `currentNews` takes one.
+*/
+{
+  const day = 86_400_000
+  const now = Date.UTC(2026, 7, 29) // 29 August 2026
+
+  for (const [iso, want] of [
+    ['2026-08-29', 'Today'],
+    ['2026-08-28', 'Yesterday'],
+    ['2026-08-30', 'Tomorrow'],
+    ['2026-08-31', '31 August'],
+    ['2026-08-20', '20 August'],
+  ] as const) {
+    const got = dayLabel(iso, now)
+    if (got !== want) err(`dayLabel(${iso}) said "${got}", expected "${want}"`)
+  }
+
+  /* Thirty days on the front page, and the thirtieth day is still on it. */
+  const onTheEdge = new Date(now - ARCHIVE_DAYS * day).toISOString().slice(0, 10)
+  const justOver = new Date(now - (ARCHIVE_DAYS + 1) * day).toISOString().slice(0, 10)
+  const live = currentNews(now).map((n) => n.date)
+  const old = archivedNews(now).map((n) => n.date)
+  if (live.some((d) => d < onTheEdge)) err(`a post older than ${ARCHIVE_DAYS} days is still on the front page`)
+  if (old.some((d) => d >= onTheEdge)) err('a post inside the archive window was archived early')
+  if (currentNews(now).length + archivedNews(now).length === 0) err('the news feed has nothing in it at all')
+  note(`news: ${live.length} live, ${old.length} archived, cut at ${onTheEdge} (${justOver} would be archived)`)
+
+  /* An event dated in the past must not sit on the calendar as upcoming. */
+  const stale = upcoming(now).filter((n) => n.eventDate! < new Date(now - day).toISOString().slice(0, 10))
+  if (stale.length) err(`${stale.length} news event(s) dated in the past are still listed as upcoming`)
+  note(`news: ${upcoming(now).length} dated event(s) reach the calendar`)
+}
 
 // ---- report --------------------------------------------------------------
 const order = { ERROR: 0, WARN: 1, NOTE: 2 }
