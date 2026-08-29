@@ -4331,6 +4331,17 @@ export const LOCAL_SEED: LocalSeed[] = [
       badge itself spells the word AND.
     */
     slug: 'home-of-chicken-and-waffles',
+    /*
+      THEIR MARK, ON THEIR DARK RATHER THAN THEIR BROWN. The logo they serve is
+      only 217x189, so it went through tools/upscale.py first — premultiplied,
+      EDSR x4, then down to the tile, which is what that tool is for. Gold on
+      their brown lost the ring lettering entirely at icon size; #303030 is the
+      other colour in their own palette and it holds every word.
+
+      It has an icon because it has a card on the News page. It still has no
+      seat: a tile for a room that shuts on Sunday would be wrong by Monday.
+    */
+    icon: 'home-of-chicken-and-waffles',
     name: 'Home of Chicken and Waffles',
     label: 'Chicken & Waffles',
     cuisine: 'Soul food',
