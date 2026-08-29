@@ -247,6 +247,13 @@ export const CITY_PAGES = [
   'Menlo Park',
   'Los Gatos',
   'Sausalito',
+  /* BELMONT, 2026-08-29, opened by Vale Nails — and he sent a Belmont landmark
+     search in the same breath, so a wallpaper is expected. Mcar's third shop is
+     here too, on Harbor Boulevard. */
+  'Belmont',
+  /* UNION CITY, 2026-08-29, opened by Firebunz. There is a union-city
+     wallpaper on disk already — it was built before the city page existed. */
+  'Union City',
 ] as const
 
 /**

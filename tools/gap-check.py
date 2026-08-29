@@ -43,6 +43,8 @@ NOT_A_SITE = {
     'hackingtons.com', 'thecoderschool.com',
     # Leon's own pilot-program page, not a business he sent to be listed.
     'bstypilotprogram.onrender.com',
+    # Booking and payment platforms a business sits behind, not the business.
+    'book.peek.com', 'link.com',
     'order.online', 'beastypages.com', 'the-home-screen.onrender.com',
     'leonkelvinli.onrender.com', 'allis-dog-walking.onrender.com',
 }

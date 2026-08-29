@@ -822,4 +822,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'dublin-goods2-1': 'b_baithak', //            Indian is Pippal's, the yellow one Biryaniz
   'san-francisco-goods2-4': 'b_ruaymitr', //    Asian food is House of Thai's
   'beasty-individuals-14': 'b_djlex',
+
+  /* The 29th, evening. Belmont opens for Vale Nails. */
+  'redwood-city-goods-10': 'b_pamilya', //      Filipino food
+  'union-city-goods-0': 'b_firebunz', //        Burgers
+  'belmont-services-1': 'b_valenails', //       Nail salon; opens Belmont
+  'beasty-services2-18': 'b_beautybybellez',
+  'beasty-goods2-11': 'b_pawsnug', //           Pet goods on Online is Pawddle's
+  'san-jose-services-14': 'b_theyappyhourclub', // Pet grooming and walking
 }

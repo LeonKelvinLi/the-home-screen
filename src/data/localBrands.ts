@@ -4771,4 +4771,154 @@ export const LOCAL_SEED: LocalSeed[] = [
       'A Bay Area DJ. Nothing here is claimed on their behalf and they publish no rates; their own site is the way to reach them.',
     items: [],
   },
+  {
+    slug: 'pamilya',
+    /* Their own page title is "Pamilya - Modern Filipino Comfort Food"; the
+       domain adds Kitchen and their site does not. */
+    name: 'Pamilya',
+    label: 'Pamilya',
+    cuisine: 'Filipino',
+    tagline: 'Modern Filipino comfort food, Redwood City.',
+    color: '#FAFAFA|#B3261E',
+    prep: 0,
+    category: 'Filipino food',
+    phone: '(650) 362-4166',
+    site: 'https://pamilyakitchen.com/',
+    siteNote: 'Instagram at pamilya_sf',
+    /* NO ICON: the only image they serve as a mark is a photograph of the room.
+       NO ADDRESS OR PRICES: neither is published on the site. */
+    quoteOnly:
+      'A modern Filipino kitchen in Redwood City. They publish a phone number and no address, and no prices.',
+    items: [],
+  },
+  {
+    slug: 'firebunz',
+    icon: 'firebunz',
+    /* One word on their own logo and in their page title: Firebunz. */
+    name: 'Firebunz',
+    label: 'Firebunz',
+    cuisine: 'Smash burgers',
+    tagline: 'Thin patties, melty cheese. Made to order.',
+    color: '#101010|#C00000',
+    prep: 0,
+    category: 'Burgers and hot dogs',
+    site: 'https://www.firebunz.com/',
+    siteNote: 'Instagram at firebunz',
+    /* The tagline is their own meta description, word for word. No address,
+       hours or prices are published. */
+    quoteOnly:
+      'A smash burger kitchen in Union City, in their own words thin patties and melty cheese made to order. They publish no address and no prices.',
+    items: [],
+  },
+  {
+    slug: 'vale-nails',
+    /* Their own artwork reads VALE NAILS in capitals. */
+    name: 'VALE NAILS',
+    label: 'Vale Nails',
+    cuisine: 'Nail salon',
+    tagline: 'Nails and classes, Belmont.',
+    color: '#FAFAFA|#C08497',
+    prep: 0,
+    category: 'Nail salon',
+    site: 'https://valenailsus.com/',
+    /*
+      NO ADDRESS, HOURS OR PRICES, and not because they hide them: their site is
+      a Vagaro booking page that renders everything in JavaScript, so the served
+      HTML has the headings — "Our Location", "Our Hours" — with nothing under
+      them. They also run classes and sell gift certificates.
+
+      NO ICON: they serve no logo file at all.
+    */
+    quoteOnly:
+      'A nail salon in Belmont that also runs classes and sells gift certificates. Their booking page loads its address, hours and prices in the browser, so none of it is repeated here.',
+    items: [],
+  },
+  {
+    slug: 'beauty-by-bellez',
+    name: 'Beauty by Bellez',
+    label: 'Beauty by Bellez',
+    cuisine: 'Beauty',
+    tagline: 'Bay Area beauty.',
+    color: '#FAFAFA|#C9A7FF',
+    prep: 0,
+    category: 'Beauty',
+    phone: '(510) 604-4210',
+    site: 'https://aantonio321.wixsite.com/beautybybellez',
+    needsSite: true,
+    siteNote: 'Instagram at beautybybellez',
+    /*
+      HE ASKED FOR TWO THINGS HERE, 2026-08-29: "Needs proper Website" and
+      "can you ask Chat to create a quick logo for her to put".
+
+      The site is a wixsite.com subdomain rather than her own domain, which is
+      why it carries needsSite. THE LOGO IS NOT DRAWN YET — making one for a
+      business that has none is a different thing from reproducing one that
+      exists, and it is his to approve before it goes on her tile. Until then
+      the app draws its own mark from her initials.
+    */
+    quoteOnly:
+      'A Bay Area beauty business. Nothing is claimed on her behalf; she publishes no prices, and her site is a free Wix subdomain rather than her own address.',
+    items: [],
+  },
+  {
+    slug: 'pawsnug',
+    name: 'PawSnug',
+    label: 'PawSnug',
+    cuisine: 'Pet goods',
+    tagline: 'A hoodie you carry the dog in.',
+    color: '#FAFAFA|#7BA05B',
+    prep: 0,
+    category: 'Pet goods',
+    site: 'https://pawsnug.us/',
+    menuNote: 'Their two listings',
+    /*
+      SIX DAYS OLD, AND EVERY DEFAULT LEFT IN. Their Shopify vendor field is
+      literally "My Store" and their page title ends "– My Store"; the product
+      image is called File_001.png; the catalogue holds exactly two things and
+      one of them is "Priority Shipping!" at $2.99, which is a delivery charge
+      sold as a product. The two listings were published on 23 and 25 August
+      2026.
+
+      None of that is proof of anything, and together it is the shape a
+      dropshipped single-product store takes. It is listed with the product and
+      the price and nothing else — no claims, no reviews, no description beyond
+      what the title says it is — which is the Tiny Wheels treatment.
+    */
+    quoteOnly:
+      'An online store selling one thing, a hoodie with a pouch to carry a small dog in. It opened in the last week of August 2026 and still carries its shop template’s defaults, so nothing about it is described here beyond what it lists.',
+    groups: [
+      {
+        name: 'Their two listings',
+        items: [
+          ['PawSnug Pet Carrier Hoodie', 'Their published price', 4499],
+          ['Priority Shipping', 'Sold as a product', 299],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'the-yappy-hour-club',
+    name: 'The Yappy Hour Club',
+    label: 'Yappy Hour',
+    cuisine: 'Dog walking',
+    tagline: 'Walks and drop-in visits, San Jose.',
+    color: '#FAFAFA|#4A9D8F',
+    prep: 0,
+    category: 'Pet grooming and walking',
+    site: 'https://theyappyhourclub.wixsite.com/my-site-1',
+    needsSite: true,
+    siteNote: 'Instagram at theyappyhourclub',
+    /*
+      A FREE WIX SUBDOMAIN, and the path is still my-site-1 — the default Wix
+      hands out. That is why it carries needsSite: the business is real, the
+      address it lives at is a placeholder.
+
+      Their own words for what they do: walks with one-on-one attention and
+      sniff breaks, and drop-in visits. No prices are published.
+    */
+    quoteOnly:
+      'A San Jose dog walking service doing walks and drop-in visits, in their own words with one-on-one attention and plenty of sniff breaks. They publish no prices, and their site is still on a free Wix subdomain.',
+    items: [],
+  },
 ]
