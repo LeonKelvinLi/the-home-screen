@@ -182,10 +182,21 @@ export function newsDate(iso: string, now: number = Date.now()): string {
   })
 }
 
-/** "Today" and "Yesterday" earn their own words; everything else is its date. */
+/**
+ * "Today", "Yesterday" and "Tomorrow" earn their own words; everything else is
+ * its date.
+ *
+ * FUTURE DATES ARE THE POINT OF THE THIRD ONE. This function is used for the
+ * day a post landed AND for the day an event happens, and the first version
+ * collapsed everything not in the past to "Today" — so a closure on the 31st
+ * read as "Today" on the 29th, on a card whose whole job was to say when.
+ */
 export function dayLabel(iso: string, now: number = Date.now()): string {
-  const days = Math.round((Date.UTC(new Date(now).getUTCFullYear(), new Date(now).getUTCMonth(), new Date(now).getUTCDate()) - toUtc(iso)) / dayMs)
-  if (days <= 0) return 'Today'
+  const d = new Date(now)
+  const today = Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), d.getUTCDate())
+  const days = Math.round((today - toUtc(iso)) / dayMs)
+  if (days === 0) return 'Today'
   if (days === 1) return 'Yesterday'
+  if (days === -1) return 'Tomorrow'
   return newsDate(iso, now)
 }
