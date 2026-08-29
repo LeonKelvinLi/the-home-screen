@@ -64,6 +64,20 @@ export interface LocalSeed {
   /** Replaces the generic "they also take orders on X" footer. */
   siteNote?: string
   /**
+   * Their Instagram handle, without the @, and only where he has approved it.
+   *
+   * HIS ASK, 2026-08-29: "do you think these pages should have a direct
+   * Instagram link? If so, we can make it an extra feature on a higher tier
+   * membership... You don't have to do it to all of them. We just need to put
+   * it on a few good ones as an example."
+   *
+   * So this is DELIBERATELY SPARSE. It is a paid feature he sells, not a field
+   * to fill in everywhere the research happened to turn up a handle — several
+   * seeds mention one in siteNote and do not carry this, which is the
+   * difference between knowing a handle and having sold the button.
+   */
+  instagram?: string
+  /**
    * Overrides the bar over the picks drop-down, and forces it to render.
    *
    * The computed line is "Choose from this week's favorites!", suppressed on a
@@ -4631,7 +4645,7 @@ export const LOCAL_SEED: LocalSeed[] = [
        travels to the event is why he filed it BEASTY and not one city. */
     category: 'Photo booth',
     site: 'https://www.baymemories.com/',
-    siteNote: 'Instagram at baymemories_booth',
+    instagram: 'baymemories_booth',
     /*
       HIS NOTE WAS "I think his business needs a website because their link
       isn't working" — and the site itself is fine. baymemories.com returns 200
@@ -4686,7 +4700,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(925) 361-0862',
     address: '4590 Dublin Blvd, Dublin, CA 94568',
     site: 'https://baithak.us/',
-    siteNote: 'Instagram at Baithak.dublin',
+    instagram: 'Baithak.dublin',
     /*
       A WARM LEAD, IN HIS OWN WORDS: "I deliver for them. They're aware and
       waiting to sign on." Nothing on this page claims they have agreed
@@ -4709,7 +4723,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Thai',
     phone: '(415) 274-9942',
     site: 'https://www.ruaymitrsf.com/',
-    siteNote: 'Instagram at ruaymitr_sf',
+    instagram: 'ruaymitr_sf',
     /*
       THEIR PAGE TITLE IS THEIR WIX TEMPLATE'S NAME. The site returns
       "Home | Purement" — Purement is the theme, not the restaurant, and a
@@ -4737,7 +4751,11 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Hot pot',
     phone: '(510) 817-4665',
     address: '4419 Telegraph Ave, Oakland, CA 94609',
-    siteNote: 'Free private parking; Instagram at kungfumala',
+    /* The parking is a reason to visit; the handle is a link. They were one
+       string, so the footer read "Instagram at kungfumala" and went to the
+       website. Split. */
+    siteNote: 'Free private parking',
+    instagram: 'kungfumala',
     needsSite: true,
     /*
       HIS NOTE WAS "Needs website pilot program" — this is one for the pilot,
@@ -4760,7 +4778,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     prep: 0,
     category: 'Individuals',
     site: 'https://www.officialdjlex.com/',
-    siteNote: 'Instagram at officialdjlex',
+    instagram: 'officialdjlex',
     /*
       HELD, NOT TAKEN, like everybody else on this sheet. Their own site is a
       Squarespace with an about page and no rates on it, so none is shown; the
@@ -4784,7 +4802,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Filipino food',
     phone: '(650) 362-4166',
     site: 'https://pamilyakitchen.com/',
-    siteNote: 'Instagram at pamilya_sf',
+    instagram: 'pamilya_sf',
     /* NO ICON: the only image they serve as a mark is a photograph of the room.
        NO ADDRESS OR PRICES: neither is published on the site. */
     quoteOnly:
@@ -4803,7 +4821,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     prep: 0,
     category: 'Burgers and hot dogs',
     site: 'https://www.firebunz.com/',
-    siteNote: 'Instagram at firebunz',
+    instagram: 'firebunz',
     /* The tagline is their own meta description, word for word. No address,
        hours or prices are published. */
     quoteOnly:
@@ -4845,7 +4863,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(510) 604-4210',
     site: 'https://aantonio321.wixsite.com/beautybybellez',
     needsSite: true,
-    siteNote: 'Instagram at beautybybellez',
+    instagram: 'beautybybellez',
     /*
       HE ASKED FOR TWO THINGS HERE, 2026-08-29: "Needs proper Website" and
       "can you ask Chat to create a quick logo for her to put".
@@ -4908,7 +4926,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Pet grooming and walking',
     site: 'https://theyappyhourclub.wixsite.com/my-site-1',
     needsSite: true,
-    siteNote: 'Instagram at theyappyhourclub',
+    instagram: 'theyappyhourclub',
     /*
       A FREE WIX SUBDOMAIN, and the path is still my-site-1 — the default Wix
       hands out. That is why it carries needsSite: the business is real, the
@@ -4919,6 +4937,118 @@ export const LOCAL_SEED: LocalSeed[] = [
     */
     quoteOnly:
       'A San Jose dog walking service doing walks and drop-in visits, in their own words with one-on-one attention and plenty of sniff breaks. They publish no prices, and their site is still on a free Wix subdomain.',
+    items: [],
+  },
+  {
+    slug: 'pink-onion',
+    name: 'Pink Onion',
+    label: 'Pink Onion',
+    cuisine: 'Italian',
+    tagline: 'Pizza, pasta and panini on 14th.',
+    color: '#1B1218|#F0679F',
+    prep: 0,
+    category: 'Italian',
+    phone: '(415) 529-2635',
+    address: '64 14th St, San Francisco, CA 94103',
+    site: 'https://www.pinkonionpizza.com/',
+    /*
+      HIS, 2026-08-29: "San Francisco \u2022 Goods / That place my daughter went to."
+
+      Address, phone and the hours are theirs, off their own front page: 64
+      14th St, 415.529.2635, open 4\u201310 every day. NO PRICES: their MENU link
+      does not resolve to a page \u2014 /menu is a 404 on their own site \u2014 so
+      there is no published price list to copy and none is invented.
+
+      NO FOUNDER NAMED HERE ON PURPOSE. Their front page says "Founded by
+      Francesco LoCoco and Matt Coric" in one paragraph and "run by Matthew
+      Coric and Nallely Quintero Udave" in the next. Both are their words and
+      they disagree, so the page says family-owned and leaves the names to
+      them. Worth mentioning to them, along with the dead menu link.
+    */
+    quoteOnly:
+      'A family-owned Italian kitchen on 14th Street in San Francisco: sixteen-plus pizzas, pasta and panini, with beer and wine on tap. Open 4\u201310 every day. Their own menu link does not resolve, so no prices are listed here.',
+    items: [],
+  },
+  {
+    slug: 'alora-social',
+    name: 'Alora Social',
+    label: 'Alora Social',
+    cuisine: 'Mediterranean',
+    tagline: 'Mediterranean at City Center, San Ramon.',
+    color: '#0F1A17|#C9A227',
+    prep: 0,
+    category: 'Mediterranean',
+    site: 'https://www.visitalora.com/alora-social',
+    /*
+      HIS, 2026-08-29: "San Ramon \u2022 Goods".
+
+      THEIR SITE WOULD NOT SERVE A PAGE. Every page returns 403 behind a
+      Cloudflare bot check \u2014 cf-mitigated: challenge \u2014 in a plain request
+      and in a real browser, so no address, no hours and no prices were taken
+      from it, and none are guessed.
+
+      What IS here comes from the one file they serve unchallenged, their own
+      sitemap: pages for mediterranean-restaurant-san-ramon, handmade pasta,
+      happy hour and brunch at City Center Bishop Ranch, plus a second room,
+      Alora Pier 3, in San Francisco. That is enough to know which category
+      they belong in and nothing more, which is why this page carries no
+      detail. Ask them for the address, the hours and a logo.
+    */
+    quoteOnly:
+      'A Mediterranean restaurant and bar at City Center in San Ramon, with a second room on the San Francisco waterfront. Their site does not serve to us, so nothing here is copied from it beyond what they belong under.',
+    items: [],
+  },
+  {
+    slug: 'napa-pedal-crusher',
+    name: 'Napa Pedal Crusher',
+    label: 'Pedal Crusher',
+    cuisine: 'Party bike tours',
+    tagline: 'A sixteen-seat pedal bar around downtown Napa.',
+    color: '#141A22|#E8503A',
+    prep: 0,
+    /* No tour, bike or party-boat category exists on the services sheet, the
+       same gap Bay Area Brew Boat fell into \u2014 see data/placements.ts. Event
+       coordinator would misdescribe them: they drive the bike, they do not
+       plan your party. */
+    category: 'Party bike tours',
+    phone: '(707) 812-8602',
+    address: '1004 Clinton Street, Napa, CA 94559',
+    site: 'https://www.napapedalcrusher.com/',
+    /*
+      HIS, 2026-08-29: "Needs a proper website / Napa \u2022 Services."
+
+      NOT FLAGGED needsSite, AND HE SHOULD KNOW WHY. The link he sent is a
+      peek.com booking widget, which is what made it look like they had no site
+      of their own. They do: napapedalcrusher.com is their own domain, with
+      their tours, their prices and their address on it. Flagging them would
+      put a business that already has a real site on the list he prospects
+      from.
+
+      Both prices are floors in their own words \u2014 "Starting at $623" for the
+      whole bike and "Starting at $45/Seat" \u2014 so they are labelled as floors
+      rather than printed as a price somebody could hold them to.
+    */
+    quoteOnly:
+      'A sixteen-seat pedal-powered party bike touring downtown Napa, two hours with a captain, booked for the whole bike or by the seat.',
+    groups: [
+      {
+        name: 'Two hours, with a captain',
+        items: [
+          [
+            'Private party, the whole bike',
+            'Groups of 8 to 16, the bike to yourselves.',
+            62300,
+            'from $623',
+          ],
+          [
+            'Individual seats',
+            'One to sixteen seats on a shared ride.',
+            4500,
+            'from $45 a seat',
+          ],
+        ],
+      },
+    ],
     items: [],
   },
 ]

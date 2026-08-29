@@ -1420,6 +1420,48 @@ textarea {
   text-align: center;
 }
 
+/*
+  THE INSTAGRAM ROW — a paid feature, so it has to look like one.
+
+  It sits between the contact block and the small print, at the width of the
+  page's other cards rather than as a third grey button in a stack: he sells
+  this on a higher tier and a row nobody notices is a row nobody buys. The
+  gradient is Instagram's own, which is the one place on a partner page where
+  another brand's colour is the correct answer.
+*/
+.brand-ig {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 24px 0;
+  padding: 13px 15px;
+  border-radius: 15px;
+  color: #ffffff;
+  text-decoration: none;
+  background: linear-gradient(96deg, #405DE6, #B833A6 46%, #F35C4B 78%, #FCB045);
+}
+
+.brand-ig-mark {
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.brand-ig span {
+  display: flex;
+  flex-direction: column;
+  font-size: 13.5px;
+  font-weight: 650;
+  line-height: 1.25;
+}
+
+.brand-ig em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 500;
+  opacity: 0.86;
+}
+
 /* ---------- cart bar ---------- */
 
 .cartbar {
@@ -9626,14 +9668,86 @@ textarea {
   text-transform: uppercase;
 }
 
+/*
+  THE PERKS ARE ROWS YOU OPEN, NOT A PARAGRAPH YOU SCROLL.
+
+  They were four full sentences under a price. Two plans of that pushed the
+  second card's perks off the bottom of a phone, and the two cards only mean
+  anything read against each other. So each perk shows its point on one line
+  and holds his sentence until it is tapped: everything on both cards is on
+  screen at once, and the detail costs one tap instead of a scroll.
+
+  No disc and no left padding — every row is a button now, and a bullet in
+  front of a control reads as decoration on something you are meant to press.
+*/
 .members-plan-perks {
-  margin: 6px 0 0;
-  padding-left: 17px;
+  margin: 8px 0 0;
+  padding-left: 0;
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 5px;
   font-size: 13px;
   line-height: 1.4;
+}
+
+/* A hairline between rows, tinted from the ink so it works on the white card
+   and on the dark one without a second rule for each. */
+.members-perk + .members-perk {
+  /* The fallback is a translucent grey rather than currentColor: a browser
+     without color-mix would otherwise take the first line literally and rule
+     every row with a solid black bar. */
+  border-top: 1px solid rgba(128, 128, 128, 0.28);
+  border-color: color-mix(in srgb, currentColor 14%, transparent);
+}
+
+.members-perk-head {
+  width: 100%;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 0;
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  font-weight: 650;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.members-perk-label {
+  flex: 1;
+}
+
+.members-perk-chev {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  opacity: 0.6;
+  transition: transform 160ms ease;
+}
+
+.members-perk.is-open .members-perk-chev {
+  transform: rotate(180deg);
+  opacity: 0.9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .members-perk-chev {
+    transition: none;
+  }
+}
+
+.members-perk-body {
+  margin: 0;
+  padding: 0 22px 11px 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  font-weight: 400;
+  opacity: 0.78;
 }
 
 /* ---------- the member's own code and what it earned ---------- */

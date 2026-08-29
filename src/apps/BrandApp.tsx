@@ -704,6 +704,38 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           )}
 
+          {/*
+            A DIRECT LINE TO THEIR INSTAGRAM, where he has sold one.
+
+            His ask, 2026-08-29: "do you think these pages should have a direct
+            Instagram link? If so, we can make it an extra feature on a higher
+            tier membership... put it on a few good ones as an example."
+
+            OUTSIDE the contact block on purpose. That block only renders for a
+            business with no menu or with quoted work, and a kitchen with a
+            price list is exactly the kind of page whose Instagram is worth
+            following. So this stands on its own and appears on any page that
+            carries a handle.
+          */}
+          {brand.instagram && (
+            <a
+              className="brand-ig"
+              href={`https://www.instagram.com/${brand.instagram}/`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="brand-ig-mark">
+                <rect x="3" y="3" width="18" height="18" rx="5.4" fill="none" stroke="currentColor" strokeWidth="1.9" />
+                <circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" strokeWidth="1.9" />
+                <circle cx="17.4" cy="6.6" r="1.25" fill="currentColor" />
+              </svg>
+              <span>
+                {brand.name} on Instagram
+                <em>@{brand.instagram}</em>
+              </span>
+            </a>
+          )}
+
           {/* A partner-specific reason to visit their own site. Falls back to
               naming the destination honestly when there is nothing to add. */}
           {brand.siteNote && !brand.contactOnly ? (

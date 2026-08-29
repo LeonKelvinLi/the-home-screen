@@ -830,4 +830,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-services2-18': 'b_beautybybellez',
   'beasty-goods2-11': 'b_pawsnug', //           Pet goods on Online is Pawddle's
   'san-jose-services-14': 'b_theyappyhourclub', // Pet grooming and walking
+
+  /* The 29th, late. Two he sent that had not been seated, and one that had
+     been missed entirely: the pedal bike went by as a peek.com booking link
+     between two other businesses and never got a seat. */
+  'san-francisco-goods2-5': 'b_pinkonion', //     Italian on page one is Stella Pastry's
+  'san-ramon-goods-9': 'b_alorasocial', //        Mediterranean; opens San Ramon's
+  'napa-services-0': 'b_napapedalcrusher', //     no tour or bike category; opens Napa
 }

@@ -25,6 +25,25 @@ npm run build
 npm start          # http://localhost:8787
 ```
 
+## Check it
+
+```bash
+npm run build                 # the audits serve dist/, so build first
+node tools/audit-all.mjs      # every audit, three at a time
+node tools/audit-all.mjs about members   # or just the ones whose name matches
+python3 tools/gap-check.py    # every link he ever sent, against the catalogue
+```
+
+Each audit starts its own server, its own test database and its own browser, so
+none of them needs anything running first. **They serve `dist/`** — a source
+change you have not built is a change they cannot see, and the failure looks
+like a bug that is still there after you fixed it.
+
+`audit-all.mjs` grades on exit code AND on each audit printing its own sign-off.
+The earlier way of running these piped them to `grep FAIL || echo "ALL PASS"`,
+which reported ALL PASS for a suite that had been killed: no output means no
+FAIL line. Silence is not a pass.
+
 ## What works
 
 - **iOS shell** — home grid ordered kitchens first and everything else second,

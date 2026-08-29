@@ -10,6 +10,7 @@ import {
   DISCOUNT_PER_MILESTONE,
 } from '../data/membership'
 import { LISTED_KITCHENS } from '../data/brands'
+import type { Perk } from '../data/membership'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -68,6 +69,49 @@ const WITH_OFFERS = LISTED_KITCHENS.filter(
 )
 const OFFER_COUNT = WITH_OFFERS.length
 const OFFER_PARTNER = WITH_OFFERS[0]?.name ?? ''
+
+/**
+ * A perk: its point, always readable, and his full sentence one tap away.
+ *
+ * The two plans only mean something side by side — the whole difference
+ * between $39 and $59 is in these lists — and four long sentences under each
+ * price pushed the second plan off the bottom of the phone. Now every point on
+ * both cards is on screen at once and you open the one you want explained.
+ *
+ * Each row owns its own open state, so several can be open together: someone
+ * comparing the two cards is reading across them, not down one.
+ *
+ * DECLARED HERE, AT MODULE SCOPE, AND NOT INSIDE MembersApp. A component
+ * declared in a render body is a new function every render, so React remounts
+ * it and its state resets. That is the About page glitch Glenn reported, and
+ * tools/audit-nested-components.mjs now fails the build over it.
+ */
+function PerkRow({ perk }: { perk: Perk }) {
+  const [open, setOpen] = useState(false)
+  return (
+    <li className={`members-perk${open ? ' is-open' : ''}`}>
+      <button
+        type="button"
+        className="members-perk-head"
+        aria-expanded={open}
+        onClick={() => setOpen((v) => !v)}
+      >
+        <span className="members-perk-label">{perk.label}</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true" className="members-perk-chev">
+          <path
+            d="M7 10l5 5 5-5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.4"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      {open && <p className="members-perk-body">{perk.detail}</p>}
+    </li>
+  )
+}
 
 export function MembersApp({ api }: { api: ShellApi }) {
   const m = MEMBERSHIP
@@ -131,7 +175,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
               </span>
               <ul className="members-plan-perks">
                 {t.perks.map((perk) => (
-                  <li key={perk}>{perk}</li>
+                  <PerkRow key={perk.label} perk={perk} />
                 ))}
               </ul>
               <ChooseTier id={t.id} name={t.name} />

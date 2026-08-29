@@ -20,7 +20,11 @@
  * Exits non-zero if any string is missing, so it can gate a wait-loop.
  */
 const args = process.argv.slice(2)
-let base = 'https://the-home-screen.onrender.com'
+/* beastypages.com, not the Render URL. Both answer and both serve the same
+   build, but the onrender address is the old one Glenn was still using on
+   2026-08-29 when he could not sign in, and Leon means to retire it. A check
+   should verify the address people are actually sent to. */
+let base = 'https://beastypages.com'
 const i = args.indexOf('--url')
 if (i !== -1) { base = args[i + 1]; args.splice(i, 2) }
 if (!args.length) { console.error('usage: live-check.mjs [--url URL] <string>...'); process.exit(2) }

@@ -84,9 +84,38 @@ def links() -> list[str]:
     return re.findall(r'https?://[^\s\)\]"\'<>\x00-\x1f]+', ' '.join(blob))
 
 
+# A booking widget carries the business's own domain in its query string.
+# peek.com uses ?dh=, and the pattern is general enough that any host-shaped
+# parameter value is worth preferring over the widget's own host.
+EMBEDDED_HOST = re.compile(
+    r'[?&](?:dh|domain|host|site|url|shop|merchant)=(?:https?%3A%2F%2F|https?://)?'
+    r'(?:www\.)?([a-z0-9-]+(?:\.[a-z0-9-]+)+)', re.I)
+
+
 def host_of(url: str) -> str:
+    """
+    The business's own host, looking THROUGH a booking widget when there is one.
+
+    THIS IS THE HOLE NAPA PEDAL CRUSHER FELL THROUGH. He sent them as a
+    book.peek.com link, book.peek.com is on NOT_A_SITE because a booking widget
+    is not a business, and so the check dropped the URL and reported no gap
+    while the business sat unlisted for a day. The widget's own URL named the
+    business the whole time: ...&dh=www.napapedalcrusher.com. So read that
+    first, and only fall back to the host in front of the slash.
+
+    Everything a booking host hides is a business he asked for, so a check that
+    cannot see through one is not a check.
+    """
     h = re.sub(r'^https?://', '', url).split('/')[0].lower()
-    return h[4:] if h.startswith('www.') else h
+    if h.startswith('www.'):
+        h = h[4:]
+    if h in NOT_A_SITE:
+        inner = EMBEDDED_HOST.search(url)
+        if inner:
+            found = inner.group(1).lower()
+            if found not in NOT_A_SITE and found != h:
+                return found
+    return h
 
 
 def raw_data() -> str:

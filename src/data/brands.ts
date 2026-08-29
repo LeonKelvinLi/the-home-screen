@@ -184,6 +184,20 @@ export interface Brand {
   /** Button label on a contact-only brand. Defaults to "Open their page". */
   siteCta?: string
   /**
+   * Their Instagram handle, without the @, and only where he has approved it.
+   *
+   * HIS ASK, 2026-08-29: "do you think these pages should have a direct
+   * Instagram link? If so, we can make it an extra feature on a higher tier
+   * membership... You don't have to do it to all of them. We just need to put
+   * it on a few good ones as an example."
+   *
+   * So this is DELIBERATELY SPARSE. It is a paid feature he sells, not a field
+   * to fill in everywhere the research happened to turn up a handle — several
+   * seeds mention one in siteNote and do not carry this, which is the
+   * difference between knowing a handle and having sold the button.
+   */
+  instagram?: string
+  /**
    * Dietary descriptors the kitchen states about itself — "Halal", "Vegan",
    * "Gluten free".
    *
@@ -336,6 +350,8 @@ interface Seed {
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
   siteNote?: string
+  /** Their Instagram handle, without the @. See the Brand type above. */
+  instagram?: string
   /** Overrides the picks bar and forces it to render. See localBrands.ts. */
   menuNote?: string
   /** Button label on a contact-only brand. */
@@ -741,6 +757,7 @@ const fromSeed = (s: Seed): Brand => ({
   phone: s.phone,
   needsSite: s.needsSite,
   siteNote: s.siteNote,
+  instagram: s.instagram,
   quoteOnly: s.quoteOnly,
   clip: s.clip,
   photo: s.photo,
@@ -846,6 +863,7 @@ export const BRANDS: Brand[] = [
     pricesEstimated: s.pricesEstimated,
     contactOnly: s.contactOnly,
     siteNote: s.siteNote,
+    instagram: s.instagram,
     siteCta: s.siteCta,
     dietary: s.dietary,
     perk: s.perk,

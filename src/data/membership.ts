@@ -55,7 +55,24 @@ export interface Tier {
   discountCap: number
   /** How many sign-ups reach that ceiling. */
   discountCapReferrals: number
-  perks: string[]
+  perks: Perk[]
+}
+
+/**
+ * One thing the card gets you: a line you can read at a glance, and the whole
+ * sentence underneath it.
+ *
+ * The perks were four long sentences stacked under a price, so the second plan
+ * started below the fold and nobody compared them — which is the only reason
+ * the two are next to each other. The label is what shows; the detail is one
+ * tap away. Both are his words; the label is his sentence cut to its point,
+ * never a new promise.
+ */
+export type Perk = {
+  /** The line that is always visible. Short enough not to wrap on a phone. */
+  label: string
+  /** His full sentence, shown when the row is opened. */
+  detail: string
 }
 
 /** $10 off for every 3 sign-ups, and 1 raffle ticket for every 3. His numbers. */
@@ -74,9 +91,21 @@ export const TIERS: Tier[] = [
     discountCap: 30,
     discountCapReferrals: 9,
     perks: [
-      'Unlimited use of your membership to honour Loyalty offers from any BEASTY affiliate.',
-      'One BEASTY raffle ticket for every 3 membership referrals. No limit on referrals — refer 30 and receive 10 tickets.',
-      'Raffle tickets can be saved and used to enter any monthly raffle event.',
+      {
+        label: 'Unlimited Loyalty offers',
+        detail:
+          'Unlimited use of your membership to honour Loyalty offers from any BEASTY affiliate.',
+      },
+      {
+        label: 'A raffle ticket per 3 referrals',
+        detail:
+          'One BEASTY raffle ticket for every 3 membership referrals. No limit on referrals — refer 30 and receive 10 tickets.',
+      },
+      {
+        label: 'Tickets keep for any monthly raffle',
+        detail:
+          'Raffle tickets can be saved and used to enter any monthly raffle event.',
+      },
     ],
   },
   {
@@ -90,16 +119,33 @@ export const TIERS: Tier[] = [
     discountCap: 40,
     discountCapReferrals: 12,
     perks: [
-      'Unlimited use of your membership to honour both Loyalty and Welcome offers from any BEASTY affiliate.',
-      'One BEASTY raffle ticket for every 3 membership referrals. No limit on referrals — refer 30 and receive 10 tickets.',
-      'Raffle tickets can be saved and used to enter any monthly raffle event.',
+      {
+        label: 'Unlimited Loyalty and Welcome offers',
+        detail:
+          'Unlimited use of your membership to honour both Loyalty and Welcome offers from any BEASTY affiliate.',
+      },
+      {
+        label: 'A raffle ticket per 3 referrals',
+        detail:
+          'One BEASTY raffle ticket for every 3 membership referrals. No limit on referrals — refer 30 and receive 10 tickets.',
+      },
+      {
+        label: 'Tickets keep for any monthly raffle',
+        detail:
+          'Raffle tickets can be saved and used to enter any monthly raffle event.',
+      },
+
       /*
         HIS WORDS, AND THE HEDGE IS HIS TOO: "20% discount on any BEASTY Goods
         purchase from our up-and-coming website." The site does not exist yet,
         so the perk is printed as the future thing he described rather than as
         something a member can use on the day they pay.
       */
-      '20% off any BEASTY Goods purchase from the up-and-coming BEASTY website.',
+      {
+        label: '20% off BEASTY Goods',
+        detail:
+          '20% off any BEASTY Goods purchase from the up-and-coming BEASTY website.',
+      },
     ],
   },
 ]
