@@ -98,6 +98,31 @@ const opened = await p.evaluate(()=>{
 })
 console.log('after tap     :', JSON.stringify(opened))
 
+/*
+  IT HAS TO STILL BE OPEN A MOMENT LATER.
+
+  Glenn: "when you tap a drop-down, it doesn't stay on." Everything above this
+  passed while that was true, because it all reads aria-expanded in the same
+  breath as the click. The chapter did open. It closed itself about three
+  seconds later, when the landing screen swapped its photo, re-rendered the
+  panel, and remounted the chapters with empty state.
+
+  So this waits for a re-render to actually happen — the .dialer class toggles
+  is-photo on every swap, which is the parent re-rendering where we can see it
+  — and only then asks whether the chapter survived. If no swap arrives the
+  check reports that instead of quietly passing on a page that never moved.
+*/
+const before = await p.evaluate(()=>document.querySelector('.dialer')?.className ?? '')
+const rerendered = await p.waitForFunction(
+  (was)=>((document.querySelector('.dialer')?.className ?? '').includes('is-photo')) !== was.includes('is-photo'),
+  before, { timeout: 9000 },
+).then(()=>true).catch(()=>false)
+const survived = await p.evaluate(()=>({
+  expandedCount: [...document.querySelectorAll('.panel-chapter-head')].filter(h=>h.getAttribute('aria-expanded')==='true').length,
+  bodies: document.querySelectorAll('.panel-chapter-body').length,
+}))
+console.log('after a re-render:', JSON.stringify({rerendered, ...survived}))
+
 // The Plan carries the pedigree block.
 /*
   Nothing may show above the sticky title while the page is scrolled.
@@ -204,6 +229,9 @@ if((hit?.height??0)<44) fails.push(`chapter row is ${hit?.height}px, under the 4
 if(opened.expandedCount!==1) fails.push('tapping did not open exactly one chapter')
 if(!opened.imgLoaded) fails.push('the Facebook post picture did not load')
 if(!opened.caption) fails.push('the picture has no caption')
+if(!rerendered) fails.push('the landing photo never swapped in 9s \u2014 could not provoke a parent re-render, so the stays-open check proved nothing')
+else if(survived.expandedCount!==1) fails.push('a chapter closed itself when the panel re-rendered \u2014 the drop-down does not stay open')
+else if(survived.bodies!==1) fails.push('the opened chapter kept aria-expanded but lost its body on re-render')
 if(plan.facts.length!==6) fails.push(`Biggie's pedigree is ${plan.facts.length} lines, expected 6`)
 if(plan.after!=='God is Good all the time.') fails.push('his line after the pedigree is missing')
 if(plan.stillOne!==1) fails.push('two chapters were open at once')

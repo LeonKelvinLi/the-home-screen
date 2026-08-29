@@ -1027,6 +1027,87 @@ function RecentPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
   )
 }
 
+/**
+ * The About page's chapters, closed until tapped.
+ *
+ * His instruction: the bold headings in his text should "drop down" so the
+ * page is not a wall of paragraphs. So every chapter starts closed and the
+ * reader opens what they want to read.
+ *
+ * A real <button> per row rather than a div with a click handler, and the open
+ * state on aria-expanded — the panel already traps Tab across
+ * `button, a[href]`, so these join that cycle for free and a screen reader is
+ * told whether a row is open instead of having to guess from the arrow.
+ *
+ * The closed rows are not display:none'd away; they are unmounted. A phone
+ * reading this has no reason to lay out seven chapters it is not showing.
+ *
+ * WHY THIS LIVES AT MODULE SCOPE, AND MUST STAY HERE.
+ *
+ * It used to be declared inside Panel. That reads fine and is broken: a
+ * function declared in a render body is a NEW function on every render, so
+ * React treats it as a different component, throws the old one away and mounts
+ * a fresh one -- with fresh state. The landing screen swaps its photo on a
+ * three-second interval, which re-renders Panel, which wiped `open`. So a
+ * chapter opened on tap and shut itself within three seconds. That is exactly
+ * the glitch Glenn reported. The audit missed it because it read aria-expanded
+ *  straight after the click, inside the three seconds.
+ */
+function PanelSections({ sections }: { sections?: AboutSection[] }) {
+  const [open, setOpen] = useState<string | null>(null)
+  if (!sections?.length) return null
+  return (
+    <div className="panel-chapters">
+      {sections.map((sec) => {
+        const isOpen = open === sec.head
+        return (
+          <div className={`panel-chapter${isOpen ? ' is-open' : ''}`} key={sec.head}>
+            <button
+              type="button"
+              className="panel-chapter-head"
+              aria-expanded={isOpen}
+              onClick={() => setOpen(isOpen ? null : sec.head)}
+            >
+              <span className="panel-chapter-name">
+                {sec.head}
+                {sec.sub && <em>{sec.sub}</em>}
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="panel-chapter-chev">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            {isOpen && (
+              <div className="panel-chapter-body">
+                {sec.body.map((t) => (
+                  <p key={t}>{t}</p>
+                ))}
+                {/* A chapter he has not written yet says so, rather than
+                    opening onto nothing or onto something written for him. */}
+                {sec.pending && <p className="panel-chapter-pending">{sec.pending}</p>}
+                {sec.figure && (
+                  <figure className="panel-figure">
+                    <img src={sec.figure.src} alt={sec.figure.alt} loading="lazy" />
+                    <figcaption>{sec.figure.caption}</figcaption>
+                  </figure>
+                )}
+                {sec.facts && (
+                  <ul className="panel-facts">
+                    {sec.facts.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ul>
+                )}
+                {sec.after && <p className="panel-chapter-after">{sec.after}</p>}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+
 function Panel({
   page,
   onShare,
@@ -1087,75 +1168,6 @@ function Panel({
       first.focus()
     }
   }
-
-  /**
- * The About page's chapters, closed until tapped.
- *
- * His instruction: the bold headings in his text should "drop down" so the
- * page is not a wall of paragraphs. So every chapter starts closed and the
- * reader opens what they want to read.
- *
- * A real <button> per row rather than a div with a click handler, and the open
- * state on aria-expanded — the panel already traps Tab across
- * `button, a[href]`, so these join that cycle for free and a screen reader is
- * told whether a row is open instead of having to guess from the arrow.
- *
- * The closed rows are not display:none'd away; they are unmounted. A phone
- * reading this has no reason to lay out seven chapters it is not showing.
- */
-function PanelSections({ sections }: { sections?: AboutSection[] }) {
-  const [open, setOpen] = useState<string | null>(null)
-  if (!sections?.length) return null
-  return (
-    <div className="panel-chapters">
-      {sections.map((sec) => {
-        const isOpen = open === sec.head
-        return (
-          <div className={`panel-chapter${isOpen ? ' is-open' : ''}`} key={sec.head}>
-            <button
-              type="button"
-              className="panel-chapter-head"
-              aria-expanded={isOpen}
-              onClick={() => setOpen(isOpen ? null : sec.head)}
-            >
-              <span className="panel-chapter-name">
-                {sec.head}
-                {sec.sub && <em>{sec.sub}</em>}
-              </span>
-              <svg viewBox="0 0 24 24" aria-hidden="true" className="panel-chapter-chev">
-                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-            {isOpen && (
-              <div className="panel-chapter-body">
-                {sec.body.map((t) => (
-                  <p key={t}>{t}</p>
-                ))}
-                {/* A chapter he has not written yet says so, rather than
-                    opening onto nothing or onto something written for him. */}
-                {sec.pending && <p className="panel-chapter-pending">{sec.pending}</p>}
-                {sec.figure && (
-                  <figure className="panel-figure">
-                    <img src={sec.figure.src} alt={sec.figure.alt} loading="lazy" />
-                    <figcaption>{sec.figure.caption}</figcaption>
-                  </figure>
-                )}
-                {sec.facts && (
-                  <ul className="panel-facts">
-                    {sec.facts.map((f) => (
-                      <li key={f}>{f}</li>
-                    ))}
-                  </ul>
-                )}
-                {sec.after && <p className="panel-chapter-after">{sec.after}</p>}
-              </div>
-            )}
-          </div>
-        )
-      })}
-    </div>
-  )
-}
 
   /* Recent is a LIST of this device's own visits, not prose, so it renders a
      component rather than paragraphs from copy.ts. */
