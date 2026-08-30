@@ -66,24 +66,33 @@ const run = (file) => new Promise((res) => {
     clearTimeout(t)
     writeFileSync(`${dir}/${file}.log`, out)
     const said = passLine(file, out)
-    res({ file, code, said, out, secs: Math.round((Date.now() - started) / 1000) })
+    /* Exit 2 means the audit could not run for want of something it will not
+       invent — a Stripe test key, say. That is not a pass and not a failure;
+       calling it either would be a lie, so it is reported as skipped and named
+       in the summary so nobody reads a green run as fuller than it was. */
+    res({ file, code, said, out, skipped: code === 2, secs: Math.round((Date.now() - started) / 1000) })
   })
 })
+
+const out_first = (o) => o.split('\n').map((l) => l.trim()).find((l) => l.startsWith('SKIP'))
 
 const results = []
 const queue = [...list]
 const workers = Array.from({ length: 3 }, async () => {
   for (let f = queue.shift(); f; f = queue.shift()) {
     const r = await run(f)
-    const ok = r.code === 0 && r.said
+    const ok = r.skipped || (r.code === 0 && r.said)
     results.push({ ...r, ok })
-    console.log(`${ok ? 'pass' : 'FAIL'}  ${r.file.padEnd(30)} ${String(r.secs).padStart(4)}s  exit ${r.code}${r.said ? '' : '  (no PASS line)'}`)
+    const tag = r.skipped ? 'skip' : ok ? 'pass' : 'FAIL'
+    const why = r.skipped ? '  ' + (out_first(r.out) ?? '') : r.said ? '' : '  (no PASS line)'
+    console.log(`${tag}  ${r.file.padEnd(30)} ${String(r.secs).padStart(4)}s  exit ${r.code}${why}`)
   }
 })
 await Promise.all(workers)
 
 const failed = results.filter((r) => !r.ok)
-console.log(`\n${results.length - failed.length} passed, ${failed.length} failed`)
+const skipped = results.filter((r) => r.skipped)
+console.log(`\n${results.length - failed.length - skipped.length} passed, ${failed.length} failed${skipped.length ? `, ${skipped.length} skipped (${skipped.map((s) => s.file).join(', ')})` : ''}`)
 for (const f of failed) {
   console.log(`\n--- ${f.file} (${dir}/${f.file}.log)`)
   console.log(f.out.trim().split('\n').slice(-14).join('\n'))
