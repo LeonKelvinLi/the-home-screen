@@ -157,7 +157,26 @@ if(signedOut.btns.some(b=>b.disabled)) fails.push('Account still shows a dead bu
 if(/not connected yet/i.test(signedOut.body)) fails.push('Account still says sign-in is not connected')
 if(!reachedJoin) fails.push('the Account sign-in button does not reach the sign-up form')
 if(chose.status!==200||chose.tierStatus!=='pending') fails.push('choosing a tier did not record as pending')
-if(chose.paymentsConfigured) fails.push('payments reported configured with no link set')
+/*
+  PAYMENTS ARE CONFIGURED EXACTLY WHEN A LINK IS, and this checks the
+  relationship rather than either fixed state.
+
+  It used to assert a flat `paymentsConfigured === false`, written when no
+  Stripe link existed anywhere and the only honest answer was no. The moment
+  the links were created it failed on correct behaviour, and the tempting fix —
+  deleting the line — would have left the screen free to advertise a checkout
+  it cannot open, which is the exact bug the assertion was guarding.
+*/
+const wantLink = process.env.STRIPE_PAYMENT_LINK_DIAMOND
+if (wantLink) {
+  if (!chose.paymentsConfigured) fails.push('a payment link is configured but the screen says payments are not')
+  else if (!chose.link) fails.push('payments report configured and no link came back')
+  else if (!chose.link.startsWith(wantLink)) fails.push(`the tier opened ${chose.link.split('?')[0]}, not its configured link`)
+  else if (!new URL(chose.link).searchParams.get('client_reference_id')) fails.push('the checkout link does not carry the member id, so a payment could never be matched back')
+} else {
+  if (chose.paymentsConfigured) fails.push('payments reported configured with no link set')
+  if (chose.link) fails.push('a checkout link came back with none configured')
+}
 if(bad.length) fails.push('failed requests: '+[...new Set(bad)].join(', '))
 if(fails.length){ console.log('\nFAIL: '+fails.join('; ')); process.exit(1) }
 console.log('\nPASS: Account signs in and out, the QR is on the profile, and a tier can be taken (as pending).')
