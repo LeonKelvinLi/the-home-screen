@@ -64,7 +64,23 @@ node tools/audit-membership-billing.mjs
    to an assistant, and none of them are in this repo or in any log.** Glenn
    enters them himself at `https://dashboard.stripe.com/`.
 2. Once `charges_enabled` is true, recreate the five objects above in **live**
-   mode. It is the same four API calls; ten minutes.
+   mode with one command:
+
+   ```bash
+   export STRIPE_SECRET_KEY=sk_live_...     # from the live API keys page
+   node tools/stripe-setup.mjs              # shows what it would do
+   node tools/stripe-setup.mjs --write      # makes it
+   ```
+
+   It reads the prices from `TIERS` in `src/data/membership.ts` rather than
+   carrying its own copy, so the amounts cannot drift from the screen that
+   shows them. It is idempotent by metadata — re-running finds what it made and
+   leaves it alone — and it REFUSES to build live objects on an account that
+   cannot charge, which would otherwise leave unusable links to clean up.
+
+   It writes the four values to `.stripe-live.env` (chmod 600, gitignored)
+   rather than printing them, because one of them is the webhook signing
+   secret. Delete that file once the values are on Render.
 3. Set four environment variables on the Render service
    (`srv-d9nusqdaeets73cnca50`) and **trigger a deploy** — the Render API does
    not restart a service when its environment changes, so a value set without a
