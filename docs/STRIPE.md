@@ -81,14 +81,27 @@ node tools/audit-membership-billing.mjs
    It writes the four values to `.stripe-live.env` (chmod 600, gitignored)
    rather than printing them, because one of them is the webhook signing
    secret. Delete that file once the values are on Render.
-3. Set four environment variables on the Render service
+3. Set **three** environment variables on the Render service
    (`srv-d9nusqdaeets73cnca50`) and **trigger a deploy** — the Render API does
    not restart a service when its environment changes, so a value set without a
    deploy is a value the running process never sees:
-   - `STRIPE_SECRET_KEY` (live)
    - `STRIPE_WEBHOOK_SECRET` (from the live webhook endpoint)
    - `STRIPE_PAYMENT_LINK_PASS`
    - `STRIPE_PAYMENT_LINK_DIAMOND`
+
+   **NOT the secret key.** The server never calls the Stripe API; its only use
+   of the SDK is `webhooks.constructEvent`, an HMAC over the raw body against
+   the SIGNING secret. Verified rather than assumed: it passes with a
+   placeholder key, and the whole money-path audit passes with no key in the
+   environment. A full-access live key sitting in a public web service that
+   makes no API calls is something to leak, not something to need. The live
+   secret key is for the one-off setup run in step 2 and should not outlive it.
+
+   **Revealing that key cannot be automated, by design.** Stripe refuses to
+   uncover a live secret key without a real human gesture — a coordinate click,
+   a keyboard press and an in-page `.click()` all leave it masked. Somebody has
+   to press "Reveal live key" themselves. That is the account protecting
+   itself; do not go looking for a way around it.
 4. Flip `PAYMENTS_WIRED` in `server/index.ts` only when the ORDER path is
    wired. It is a source constant, not an env var, precisely so that setting a
    Stripe key cannot convince the app a charge path exists that nobody wrote.
