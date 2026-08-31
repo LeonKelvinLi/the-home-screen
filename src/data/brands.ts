@@ -1,5 +1,6 @@
 import type { GlyphName } from './glyphs'
 import { LOCAL_SEED } from './localBrands'
+import type { BrandPanel } from './localBrands'
 import { ROSTER_SEED } from './roster'
 
 /**
@@ -197,6 +198,8 @@ export interface Brand {
    * difference between knowing a handle and having sold the button.
    */
   instagram?: string
+  /** Drop-downs on their page: pictures, or a list of shops. */
+  panels?: BrandPanel[]
   /**
    * Dietary descriptors the kitchen states about itself — "Halal", "Vegan",
    * "Gluten free".
@@ -352,6 +355,8 @@ interface Seed {
   siteNote?: string
   /** Their Instagram handle, without the @. See the Brand type above. */
   instagram?: string
+  /** Drop-downs on their page: pictures, or a list of shops. */
+  panels?: BrandPanel[]
   /** Overrides the picks bar and forces it to render. See localBrands.ts. */
   menuNote?: string
   /** Button label on a contact-only brand. */
@@ -456,27 +461,6 @@ const SEED: Seed[] = [
       ['3 Piece Tender Combo', 'Tenders, fries, choice of heat', 1500],
       ['Loaded Hot Fries', 'Chopped chicken, cheese, ranch drizzle', 1100],
       ['Mac & Cheese', 'Baked, four cheese', 600],
-    ],
-  },
-  {
-    slug: 'butter-pecan',    /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
-       qualifying condition IS the offer. mock until the business signs it. */
-    offers: {
-      mock: true,
-      welcome: 'Buy a dozen and get half a dozen free.',
-      loyalty: 'Buy 2, get 1 cookie free, every visit.',
-    },
-    site: 'https://www.butterpecanbakeshop.com/',
- name: 'Butter Pecan', label: 'Butter Pecan',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Ice cream & cobbler', tagline: 'Small-batch ice cream and cobblers',
-    color: '#8A5A2B', icon: 'butter-pecan', prep: 6, category: 'Sweets',
-    items: [
-      ['Butter Pecan Pint', 'The house classic, roasted pecans', 1200],
-      ['Peach Cobbler Cup', 'Warm cobbler, vanilla scoop', 900],
-      ['Banana Pudding', 'Wafers, fresh banana, whipped cream', 800],
-      ['Two Scoop Waffle Cone', 'Any two flavors', 750],
     ],
   },
   {
@@ -758,6 +742,7 @@ const fromSeed = (s: Seed): Brand => ({
   needsSite: s.needsSite,
   siteNote: s.siteNote,
   instagram: s.instagram,
+  panels: s.panels,
   quoteOnly: s.quoteOnly,
   clip: s.clip,
   photo: s.photo,
@@ -864,6 +849,7 @@ export const BRANDS: Brand[] = [
     contactOnly: s.contactOnly,
     siteNote: s.siteNote,
     instagram: s.instagram,
+    panels: s.panels,
     siteCta: s.siteCta,
     dietary: s.dietary,
     perk: s.perk,

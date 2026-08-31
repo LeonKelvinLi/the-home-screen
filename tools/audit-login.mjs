@@ -61,7 +61,12 @@ console.log('reached form  :', reached)
 
 // Fill the details and ask for a code.
 await p.fill('.join-field input[autocomplete="name"]', 'Ola Bright')
+/* BOTH FIELDS, because which one is required now depends on what the
+   deployment can actually deliver — a number when texting is configured, an
+   address when it is not. Filling only the number left the submit button
+   disabled here the day the fallback shipped. A real visitor gives both. */
 await p.fill('.join-field input[type="tel"]', email)
+await p.fill('.join-field input[type="email"]', `${email.replace(/\D/g, '')}@example.invalid`)
 await p.click('form.join button[type="submit"]')
 await p.waitForTimeout(900)
 const first = codeFor()

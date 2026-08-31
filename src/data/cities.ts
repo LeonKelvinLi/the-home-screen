@@ -11,9 +11,10 @@
  * it is an honest statement that nobody has signed up yet, and it is the thing
  * he shows a prospective business to say "this space is yours".
  *
- * The rest of his list — San Rafael, Pinole, Hercules, Hayward, Fremont,
- * Dublin, Walnut Creek, San Mateo, Daly City, Milpitas, Palo Alto, Sunnyvale,
- * Pleasanton, Pittsburg, Oakley, El Cerrito — goes in here when he says.
+ * The rest of his list — Hercules, Daly City, Pittsburg, Oakley — goes in here
+ * when he says. Hayward came off this line on 2026-08-30 ("Forgot your own city
+ * bro"); the others had already been built and were left listed here as though
+ * they had not been.
  */
 export const CITY_PAGES = [
   'Oakland',
@@ -254,6 +255,44 @@ export const CITY_PAGES = [
   /* UNION CITY, 2026-08-29, opened by Firebunz. There is a union-city
      wallpaper on disk already — it was built before the city page existed. */
   'Union City',
+  /*
+    2026-08-30, and this run is FIVE LANDMARK LINKS AND NO BUSINESSES — pages
+    he wants standing before he sells into them, which is what an empty city
+    page is for. He opened with "Forgot your own city bro" over a Hayward
+    search, and Hayward has indeed been sitting unbuilt on the "rest of his
+    list" line at the top of this file since the day it was written. It comes
+    off that line here.
+
+    TWO OF THESE ARE NEIGHBOURHOODS, NOT CITIES. West Oakland is in Oakland and
+    North Berkeley is in Berkeley, and both of those already have their own
+    page — so a business in either will now see two pages it could belong to.
+    That is the San Pablo decision again: he asked for it, how he sells a
+    street is his call, and a business's own page still carries its real
+    address. Worth him knowing the overlap exists rather than discovering it
+    when the same shop turns up twice.
+
+    No photograph is on disk for any of the five, so each draws the neutral
+    placeholder rather than another town's landmark. All five of his links
+    pointed at material somebody else owns — the city's own site for Hayward,
+    Pixar Post for the Emeryville studio sign, Expedia for Piedmont, the
+    Chronicle for West Oakland, a travel blog for North Berkeley — so the
+    subjects are his and the files, when they land, come from somewhere the
+    licence survives a commercial product. See public/wallpapers/CREDITS.md.
+  */
+  'Hayward',
+  'Emeryville',
+  'Piedmont',
+  'West Oakland',
+  'North Berkeley',
+  /*
+    SUNOL, for Elliston Vineyards — the winery he delivers to weekly and wants
+    "to lock in". He sent it with no city beside it, which is unusual for him,
+    and their own address is 463 Kilkare Rd, Sunol. They describe themselves as
+    in "the historic Livermore Valley Wine Country" and Livermore has had a
+    page since the first run, so the temptation was to seat them there. Their
+    address is what a customer navigates to, so Sunol gets the page.
+  */
+  'Sunol',
 ] as const
 
 /**

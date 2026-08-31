@@ -729,9 +729,59 @@ export const ROSTER_SEED: LocalSeed[] = [
     attached, never from anywhere else, and several of these have no website at
     all — he flags those himself as the ones worth selling one to.
   */
+  /*
+    LAVANTA IS NO LONGER A ROSTER STUB, 2026-08-30. He sent them again with
+    "San Leandro • Goods", and their own site publishes an address, a number
+    and three PDF menus with real prices on them — so the roster line about
+    still gathering their details had stopped being true, and it is overridden
+    below rather than left to say something false on their page.
+
+    NO HOURS, and this is the thing to ask them. Their site publishes two
+    schedules that cannot both hold: brunch Friday to Sunday from 9am, and
+    dining Friday to Sunday from 11am. Nothing reconciles them, so neither is
+    printed.
+
+    NO INSTAGRAM. Their footer prints the words Facebook, Instagram and TikTok
+    and attaches no link to any of them — dead labels, not handles, so there is
+    nothing to link to.
+
+    TWO THINGS WORTH TELLING THEM. Their "ORDER ONLINE" button goes to a Toast
+    page whose account is still named "moussaka" at this same address, which
+    looks like a rebrand nobody finished; and their "Contact Us" link goes to
+    their own homepage, because no contact page exists.
+
+    Prices are the dine-in menu. Their catering PDF prices several of the same
+    dishes lower — Moussaka $36 against $42 — so these are the sit-down prices,
+    not the only prices they charge.
+  */
   seed('lavanta', 'Lavanta', 'Lavanta', 'Mediterranean', '#2E4A34', {
     logoTemplate: 'monogram', logoInitials: 'LV', logoFace: 'condensed',
     site: 'https://www.eatlavanta.com/',
+    category: 'Mediterranean',
+    contactOnly: undefined,
+    tagline: 'Mezze, lamb and wine, San Leandro.',
+    phone: '(510) 822-5329',
+    address: '599 Dutton Ave, San Leandro, CA 94577',
+    items: [
+      ['Tzatziki', '', 1400],
+      ['Dolmadakia Yialantzi', '', 1400],
+      ['Grilled Halloumi', '', 1600],
+      ['Aegean Saganaki', '', 2400],
+      ['Grilled Octopus', '', 2800],
+      ['Lamb Ragù Pappardelle', '', 3200],
+      ['Lamb Moussaka', '', 4200],
+      ['Grilled Lamb Chops', '', 4800],
+    ],
+    offer: ['Grilled Halloumi', 'Grilled Octopus', 'Lamb Moussaka', 'Grilled Lamb Chops'],
+    panels: [
+      {
+        head: 'Also on their menu',
+        body: [
+          'A prix fixe at $49 a head, three courses, Monday to Thursday 11:30 to 4. A 20% gratuity is added.',
+          'Catering from a separate menu, $400 minimum with a $100 delivery fee.',
+        ],
+      },
+    ],
   }),
   /* His link said tetsujinsushi.com and the screenshot in the same message was
      @kaisendon1939, which looked like two businesses. It is one: that site

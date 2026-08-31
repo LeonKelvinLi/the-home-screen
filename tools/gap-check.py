@@ -41,6 +41,9 @@ NOT_A_SITE = {
     # A conversation, not a listing. Kept named rather than silently dropped, so
     # a future run does not rediscover them as a gap.
     'hackingtons.com', 'thecoderschool.com',
+    # A bike route he sent while the two of them were planning a ride on
+    # 2026-08-30. A route planner, not a business he wants listed.
+    'komoot.com',
     # Leon's own pilot-program page, not a business he sent to be listed.
     'bstypilotprogram.onrender.com',
     # Booking and payment platforms a business sits behind, not the business.

@@ -1849,6 +1849,25 @@ const CODE_TTL_MS = 10 * 60 * 1000
 const MAX_CODE_ATTEMPTS = 5
 
 /**
+ * WHICH WAY IN ACTUALLY WORKS, asked before anybody types anything.
+ *
+ * Sign-in moved to SMS and this deployment has no SMS provider, so the form
+ * asked every visitor for a phone number, sent nothing, and told them texting
+ * was not connected. Glenn's nephew hit it on 2026-08-31; it had been that way
+ * for every new sign-up since the change went out. Email was configured the
+ * whole time and the server would have used it — the form simply never offered
+ * it.
+ *
+ * So the client asks first and requests whatever can be delivered. Booleans
+ * only: which vendor, which key and why not are the operator's business and
+ * are already shouted into the log at boot.
+ */
+app.get('/api/members/channels', (_req, res) => {
+  res.json({ sms: !loginSmsProblem(), email: !loginEmailProblem() })
+})
+
+
+/**
  * Step one: ask for a code.
  *
  * ONE ENDPOINT FOR SIGN-UP AND SIGN-IN, and the response is identical for both.
@@ -1874,19 +1893,35 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   let destination = ''
   let channel: 'sms' | 'email' = 'sms'
 
-  if (rawPhone) {
-    const e164 = toE164(rawPhone)
-    if (!e164) return res.status(400).json({ error: 'Enter a mobile number we can text.' })
+  const e164 = rawPhone ? toE164(rawPhone) : null
+  if (rawPhone && !e164) return res.status(400).json({ error: 'Enter a mobile number we can text.' })
+  // Deliberately loose. Strict-looking patterns reject real addresses.
+  const emailOk = !!rawEmail && /^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(rawEmail)
+  if (rawEmail && !emailOk) return res.status(400).json({ error: 'A valid email is required.' })
+  if (!e164 && !emailOk) return res.status(400).json({ error: 'Enter a mobile number.' })
+
+  /*
+    SEND IT THE WAY THAT CAN ACTUALLY ARRIVE.
+
+    This used to be "a phone number means SMS", with no thought about whether
+    SMS worked. Sign-in moved to SMS on a deployment with no SMS provider and a
+    working email one, so every sign-up that gave a number — which the form
+    then insisted on — chose a channel that could not deliver, while the
+    address that could sat in the same request being ignored. Nobody could join
+    for two days. Glenn's nephew is who reported it, and he had given both.
+
+    So a number is still preferred when texting works, and otherwise the code
+    goes to the address that does. A number with nothing else still takes the
+    SMS road, because failing there is at least honest about the only way in
+    the visitor offered.
+  */
+  const canText = !loginSmsProblem()
+  const canMail = !loginEmailProblem()
+  if (e164 && (canText || !emailOk || !canMail)) {
     destination = e164
-  } else if (rawEmail) {
-    // Deliberately loose. Strict-looking patterns reject real addresses.
-    if (!/^[^@\s]+@[^@\s.]+\.[^@\s]+$/.test(rawEmail)) {
-      return res.status(400).json({ error: 'A valid email is required.' })
-    }
+  } else {
     destination = rawEmail
     channel = 'email'
-  } else {
-    return res.status(400).json({ error: 'Enter a mobile number.' })
   }
 
   /*

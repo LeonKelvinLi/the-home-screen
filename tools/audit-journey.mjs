@@ -107,7 +107,12 @@ await p.waitForTimeout(1200)
 step('5  the sign-in form opens', !!(await p.$('form.join')))
 
 await p.fill('.join-field input[autocomplete="name"]', 'Rae Journey')
+/* BOTH FIELDS, because which one is required now depends on what the
+   deployment can actually deliver — a number when texting is configured, an
+   address when it is not. Filling only the number left the submit button
+   disabled here the day the fallback shipped. A real visitor gives both. */
 await p.fill('.join-field input[type="tel"]', email)
+await p.fill('.join-field input[type="email"]', `${email.replace(/\D/g, '')}@example.invalid`)
 await p.click('form.join button[type="submit"]')
 await p.waitForTimeout(1200)
 const c1 = codeFor(email)

@@ -325,6 +325,9 @@ try {
       await inspect(p, tag('join'))
       await name.fill('Rae UX')
       await p.locator('.join-field input[type="tel"]').first().fill(email)
+      /* Both: which is required depends on the channel the server can use. */
+      await p.locator('.join-field input[type="email"]').first()
+        .fill(`${email.replace(/\D/g, '')}@example.invalid`)
       await p.locator('form.join button[type="submit"]').first().click()
       await p.waitForTimeout(1500)
       const code = codeFor(email)

@@ -1,6 +1,13 @@
 import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
-import { startSignUp, verifyCode, pendingReferral, type Account } from '../lib/account'
+import {
+  startSignUp,
+  verifyCode,
+  pendingReferral,
+  loginChannels,
+  type Account,
+  type LoginChannels,
+} from '../lib/account'
 import { useGate } from '../lib/gate'
 import type { ShellApi } from '../ios/Device'
 
@@ -69,6 +76,29 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   const [code, setCode] = useState('')
   const [undelivered, setUndelivered] = useState(false)
   /*
+    WHICH WAY IN THIS DEPLOYMENT CAN ACTUALLY USE.
+
+    Sign-in moved to SMS while the server had no SMS provider, so this form
+    asked everyone for a phone number and nothing was ever sent — Glenn's
+    nephew on 2026-08-31, and every other new sign-up since the change. Email
+    was configured the whole time and the server would have used it; the form
+    just never offered it. So the form asks the server first and requests
+    whatever can be delivered, rather than assuming.
+  */
+  const [channels, setChannels] = useState<LoginChannels>({ sms: false, email: true })
+  /* The channel the code ACTUALLY took, so the next screen can name the right
+     destination instead of printing whichever field it felt like. */
+  const [sentTo, setSentTo] = useState<'sms' | 'email'>('email')
+  useEffect(() => {
+    let alive = true
+    loginChannels().then((c) => alive && setChannels(c))
+    return () => {
+      alive = false
+    }
+  }, [])
+  /* Text if it works, otherwise mail. */
+  const byText = channels.sms
+  /*
     A code that never arrives used to be a dead end.
 
     The only way to get another was Back, then retype four fields, because
@@ -113,7 +143,10 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   const digits = phone.replace(/\D/g, '')
   const phoneLooksRight =
     phone.trim().startsWith('+') ? digits.length >= 8 : digits.length === 10 || (digits.length === 11 && digits.startsWith('1'))
-  const ready = name.trim().length >= 2 && phoneLooksRight
+  /* An address good enough to be worth a round trip; the server checks it
+     properly. Only the field that will actually be used is required. */
+  const emailLooksRight = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.trim())
+  const ready = name.trim().length >= 2 && (byText ? phoneLooksRight : emailLooksRight)
 
   /* The one send, called by the details form and by Resend. Both need the same
      handling of a failure, and two copies of it drift. */
@@ -121,7 +154,11 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     setError(null)
     const r = await startSignUp({
       name: name.trim(),
-      phone: phone.trim(),
+      /* Both are sent when both are filled — the server picks the channel and
+         keeps the other as the member's detail. What must never happen again
+         is sending only the one this form guessed at. */
+      ...(phone.trim() ? { phone: phone.trim() } : {}),
+      ...(email.trim() ? { email: email.trim() } : {}),
       instagram: instagram.trim() || undefined,
     })
     if (!r.ok) {
@@ -129,6 +166,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
       return false
     }
     setUndelivered(!r.delivered)
+    setSentTo(r.channel)
     setCooldown(30)
     setExpiresIn(600)
     return true
@@ -184,7 +222,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
   */
   return (
     <AppChrome
-      title={step === 'details' ? 'Sign in or join' : 'Check your texts'}
+      title={step === 'details' ? 'Sign in or join' : sentTo === 'sms' ? 'Check your texts' : 'Check your email'}
       onBack={api.closeApp}
       tint="#141416"
     >
@@ -193,8 +231,9 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
         <form className="join" onSubmit={askForCode}>
           <p className="join-lead">
             Free, and it opens the whole directory — every city, the reels, the gallery and search.
-            <strong> Already a member? This is also how you sign in.</strong> We text you a
-            six-digit code either way; there is no password.
+            <strong> Already a member? This is also how you sign in.</strong>{' '}
+            {byText ? 'We text you' : 'We email you'} a six-digit code either way; there is no
+            password.
           </p>
 
           {/* Said where it matters. A referred sign-up is the referrer's credit. */}
@@ -236,7 +275,9 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             the keypad rather than the alphabet.
           */}
           <label className="join-field">
-            <span>Mobile number</span>
+            <span>
+              Mobile number {!byText && <em>optional</em>}
+            </span>
             <input
               type="tel"
               value={phone}
@@ -245,10 +286,12 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               inputMode="tel"
               placeholder="(510) 555-0123"
               enterKeyHint="next"
-              required
+              required={byText}
             />
             <small className="join-hint">
-              We text you a six-digit code. Standard message rates apply.
+              {byText
+                ? 'We text you a six-digit code. Standard message rates apply.'
+                : 'Kept on your account. The code goes to your email.'}
             </small>
           </label>
 
@@ -265,11 +308,15 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             />
           </label>
 
-          {/* Optional, and only so a member has somewhere to be sent a receipt.
-              It is not what signs them in and never was, after today. */}
+          {/*
+            REQUIRED OR NOT DEPENDING ON WHAT CAN ACTUALLY SEND. With texting
+            configured this is where a receipt goes and nothing more; without
+            it, this is the way in and asking for it as an afterthought is what
+            left everybody stranded on the code screen.
+          */}
           <label className="join-field">
             <span>
-              Email <em>optional</em>
+              Email {byText && <em>optional</em>}
             </span>
             <input
               type="email"
@@ -277,7 +324,11 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               onChange={(e) => setEmail(e.target.value)}
               autoComplete="email"
               inputMode="email"
+              required={!byText}
             />
+            {!byText && (
+              <small className="join-hint">We email you a six-digit code. No password.</small>
+            )}
           </label>
 
           {error && (
@@ -298,7 +349,8 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
       ) : (
         <form className="join" onSubmit={submitCode}>
           <p className="join-lead">
-            We sent a six-digit code to <strong>{email.trim()}</strong>.{' '}
+            We sent a six-digit code to{' '}
+            <strong>{sentTo === 'sms' ? phone.trim() : email.trim()}</strong>.{' '}
             {expiresIn > 0 ? (
               <>
                 It expires in <strong>{mmss(expiresIn)}</strong>.
@@ -323,8 +375,9 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
           */}
           {undelivered && (
             <p className="join-error" role="alert">
-              We could not send it — texting is not connected on this site yet, so nothing has
-              arrived and nothing is wrong with your number.
+              {sentTo === 'sms'
+                ? 'We could not send it — texting is not connected on this site yet, so nothing has arrived and nothing is wrong with your number.'
+                : 'We could not send it — email is not connected on this site yet, so nothing has arrived and nothing is wrong with your address.'}
               {/*
                 THE ENV VAR NAMES ARE FOR THE OPERATOR AND ONLY IN DEV.
 
@@ -335,7 +388,12 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
                 the deployment they have no reason to be handed.
               */}
               {import.meta.env.DEV && (
-                <em className="join-dev"> Set TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and TWILIO_FROM_NUMBER.</em>
+                <em className="join-dev">
+                  {' '}
+                  {sentTo === 'sms'
+                    ? 'Set TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN and TWILIO_FROM_NUMBER.'
+                    : 'Set RESEND_API_KEY and OTP_FROM_EMAIL.'}
+                </em>
               )}
             </p>
           )}
@@ -414,7 +472,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               setResent(false)
             }}
           >
-            Use a different email
+            {byText ? 'Use a different number' : 'Use a different email'}
           </button>
         </form>
       )}

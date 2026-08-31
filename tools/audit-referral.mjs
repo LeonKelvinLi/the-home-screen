@@ -42,7 +42,11 @@ const join = async (url, name, email) => {
   await p.click('.spotlight'); await p.waitForTimeout(400)
   await p.click('.gate-card .btn-primary'); await p.waitForTimeout(900)
   await p.fill('.join-field:nth-of-type(1) input', name)
-  await p.fill('.join-field:nth-of-type(2) input', email)
+  /* By TYPE, not by position, and both of them. Which field is required now
+     follows what the deployment can deliver, and nth-of-type(2) silently means
+     a different box the moment the form's order changes. */
+  await p.fill('.join-field input[type="tel"]', email)
+  await p.fill('.join-field input[type="email"]', `${email.replace(/\D/g, '')}@example.invalid`)
   await p.click('form.join button[type=submit]')
   await p.waitForSelector('.join-code',{timeout:15000})
   const code = codeFor(email)

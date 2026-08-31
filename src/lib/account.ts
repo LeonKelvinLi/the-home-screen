@@ -124,8 +124,29 @@ export async function fetchAccount(): Promise<AccountState> {
 }
 
 export type StartResult =
-  | { ok: true; delivered: boolean; minutes: number }
+  | { ok: true; delivered: boolean; minutes: number; channel: 'sms' | 'email' }
   | { ok: false; error: string }
+
+/** Which ways in can actually deliver. See /api/members/channels. */
+export type LoginChannels = { sms: boolean; email: boolean }
+
+/**
+ * Ask before showing the form which field to ask for.
+ *
+ * Fails OPEN to email, because that is the one this deployment has always had
+ * configured and a sign-up screen that renders nothing is worse than one that
+ * asks for the wrong thing.
+ */
+export async function loginChannels(): Promise<LoginChannels> {
+  try {
+    const r = await fetch('/api/members/channels', { credentials: 'same-origin' })
+    if (!r.ok) return { sms: false, email: true }
+    const b = await r.json()
+    return { sms: !!b.sms, email: !!b.email }
+  } catch {
+    return { sms: false, email: true }
+  }
+}
 
 /**
  * Step one: ask for a code.
@@ -148,7 +169,15 @@ export async function startSignUp(fields: SignUp): Promise<StartResult> {
     })
     const body = await r.json().catch(() => ({}))
     if (!r.ok) return { ok: false, error: body?.error ?? 'Could not send a code just now.' }
-    return { ok: true, delivered: !!body.delivered, minutes: body.minutes ?? 10 }
+    /* The channel the server ACTUALLY used, not the one the form assumed. The
+       screen names the destination the code went to, and it was naming the
+       email while the code went by text. */
+    return {
+      ok: true,
+      delivered: !!body.delivered,
+      minutes: body.minutes ?? 10,
+      channel: body.channel === 'email' ? 'email' : 'sms',
+    }
   } catch {
     return { ok: false, error: 'No connection. Try again in a moment.' }
   }

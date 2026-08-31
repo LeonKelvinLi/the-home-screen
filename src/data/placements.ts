@@ -837,4 +837,39 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-5': 'b_pinkonion', //     Italian on page one is Stella Pastry's
   'san-ramon-goods-9': 'b_alorasocial', //        Mediterranean; opens San Ramon's
   'napa-services-0': 'b_napapedalcrusher', //     no tour or bike category; opens Napa
+
+  /* The 30th. Six he sent overnight, and five new cities opened the same day
+     for landmark links with no business behind them yet. */
+  'richmond-goods-0': 'b_johnnyboi', //           Burgers; his screenshot, no link
+  'napa-goods-10': 'b_carabao', //                Filipino food
+  'brentwood-goods-13': 'b_brunchandbloom', //    Coffee shop; a brunch cafe
+  'pittsburg-services-7': 'b_autodesignpro', //   Auto detailing; they lead with wraps
+  'san-ramon-services-7': 'b_precisionshine', //  Auto detailing, mobile
+  /* No winery or venue category exists, the same gap the Brew Boat and the
+     pedal bike fell into. Opens Sunol, which is their real address. */
+  'sunol-services-0': 'b_ellistonvineyards',
+
+  /*
+    BUTTER PECAN, ON EVERY CITY IT HAS A SHOP IN — his ask of 2026-08-30: "can
+    you look up all their other locations in the bay and get each one on their
+    own City's page basically identical."
+
+    Six, not the "like 5-6" he guessed, and each address is theirs. The same
+    brand id is seated seven times, which is how a business with more than one
+    shop already works here (Bay Area Charters sits on Richmond and San
+    Francisco); the page lists all six addresses rather than pretending the
+    Pinole one is the only door.
+
+    ANTIOCH IS SEATED BUT NOT OPEN. It is the one he is visiting, and their own
+    site says only "Coming soon!" with no address, no phone and no hours — they
+    are running a grand-opening list for it. The seat is held; the page says
+    what is true.
+  */
+  'pinole-goods-12': 'b_butterpecan', //          Bakery
+  'emeryville-goods-12': 'b_butterpecan',
+  'pleasant-hill-goods-12': 'b_butterpecan',
+  'fairfield-goods-12': 'b_butterpecan',
+  'vallejo-goods-12': 'b_butterpecan',
+  'hayward-goods-12': 'b_butterpecan',
+  'antioch-goods-12': 'b_butterpecan', //         coming soon, per their own site
 }

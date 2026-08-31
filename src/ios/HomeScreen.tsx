@@ -1093,7 +1093,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           disabled={safePage === 0}
           aria-label="Previous page"
         >
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M15 5l-7 7 7 7" />
           </svg>
         </button>
@@ -1106,7 +1106,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           disabled={safePage === pages.length - 1}
           aria-label="Next page"
         >
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <path d="M9 5l7 7-7 7" />
           </svg>
         </button>

@@ -15,6 +15,15 @@
  *    items. Three of these are not restaurants at all.
  */
 
+/** One drop-down on a business's page. See `panels` below. */
+export type BrandPanel = {
+  head: string
+  /** Paragraphs, or one line per address. */
+  body?: string[]
+  /** Their own photographs. `src` is a basename under /food. */
+  photos?: { src: string; alt: string; caption?: string }[]
+}
+
 export interface LocalSeed {
   slug: string
   name: string
@@ -77,6 +86,22 @@ export interface LocalSeed {
    * difference between knowing a handle and having sold the button.
    */
   instagram?: string
+  /**
+   * Things that drop down on their page: a heading, and what is under it.
+   *
+   * His ask for Butter Pecan, 2026-08-30: "get the top 3 cookies pictures to
+   * drop down when you press the button. No need for price or anything." So a
+   * panel can hold pictures with no prices attached — which is the point, and
+   * why this is not another `groups`.
+   *
+   * It is also where a business with more than one shop lists them, because a
+   * bakery with six addresses cannot put them in `address`, which is one line.
+   *
+   * Closed until tapped, like the About chapters. Photographs must be the
+   * business's own; a stock or generated picture of a product they do not sell
+   * is as much an invented fact as an invented price.
+   */
+  panels?: BrandPanel[]
   /**
    * Overrides the bar over the picks drop-down, and forces it to render.
    *
@@ -5050,5 +5075,386 @@ export const LOCAL_SEED: LocalSeed[] = [
       },
     ],
     items: [],
+  },
+  {
+    slug: 'auto-design-pro',
+    /*
+      SINGULAR. Their domain is autodesignpros.com and he filed them as "Auto
+      Design Pros", but the wordmark, every line of their own copy and their
+      BBB listing all read AUTO DESIGN PRO. Only the domain is plural.
+    */
+    name: 'AUTO DESIGN PRO',
+    label: 'Auto Design Pro',
+    cuisine: 'Vinyl wrap',
+    tagline: 'Wraps, tint and paint protection, Pittsburg.',
+    color: '#101114|#C8102E',
+    prep: 0,
+    /*
+      Four real trades and one seat. Their own footer lists vinyl wraps and
+      graphic design, Ceramic Pro, window tinting, and detail and paint
+      correction — and the services sheet has a seat for detailing, none for
+      wraps. Wrapping leads their page and is what they are known for, so it
+      leads here; the seat they take is the detailing one, which is genuinely
+      theirs too. Worth him knowing they are wider than the tile says.
+    */
+    category: 'Auto detailing',
+    phone: '(925) 635-6021',
+    address: '40 N Parkside Dr., Pittsburg, CA 94565',
+    email: 'info@autodesignpros.com',
+    site: 'https://www.autodesignpros.com/',
+    /*
+      NO PRICES ANYWHERE ON THEIR SITE. They name every tier in detail —
+      Ceramic Pro Sport through Gold, Xpel Ultimate Plus and Stealth, three
+      levels of detail — and attach a figure to none of them: "priced to supply
+      you with the level of protection you desire".
+
+      NO ICON: the largest mark they serve is 256x75, which is narrower than
+      the tile renders at. Ask them for the vector.
+
+      WORTH TELLING THEM, and it is a pilot-program opening. Their page title
+      and every piece of their structured data begins with the literal word
+      "site" — an unreplaced placeholder, so the business has no correct name
+      in its own metadata anywhere Google can read it. Their footer still says
+      2018 and their newest upload is 2022.
+    */
+    quoteOnly:
+      'A Pittsburg shop doing vehicle wraps and commercial graphics, Ceramic Pro coatings, window tinting, and detailing and paint correction. Every package is named on their own site and none of them is priced there, so nothing is priced here.',
+    items: [],
+  },
+  {
+    slug: 'precision-shine',
+    name: 'Precision Shine Detailing',
+    label: 'Precision Shine',
+    cuisine: 'Mobile detailing',
+    tagline: 'They bring the detail to your driveway.',
+    color: '#12141A|#C8A84B',
+    prep: 0,
+    category: 'Auto detailing',
+    phone: '(925) 309-0972',
+    email: 'precisionshinedetailing925@gmail.com',
+    instagram: 'precisionshinedetailing',
+    site: 'https://precisionshinedetailings.com/',
+    /*
+      NO ADDRESS, AND THAT IS THE POINT. "Mobile service. We come to you. No
+      drop-off" — they publish a city and a radius, not a street: San Ramon and
+      roughly twenty miles of Tri-Valley. His note said "Mobile" and their own
+      site says the same.
+
+      THE PRICES BELOW ARE FLOORS, and their own site is inconsistent about
+      that in a way worth knowing: every visible page reads "From $90", while
+      the structured data they publish for search engines writes the same
+      numbers as flat prices. Anything ingesting their schema imports the wrong
+      kind of number. Theirs are floors, so ours say so.
+
+      THEIR 5.0 RATING IS NOT REPEATED HERE. It appears only inside their own
+      structured data with nothing on the page behind it, which is a business
+      asserting a rating about itself, not a rating.
+
+      NO ICON: they serve no raster mark at all, only an SVG favicon, and the
+      picture their own share tag points at is the site builder's stock logo.
+    */
+    quoteOnly:
+      'A mobile detailer working San Ramon and the Tri-Valley, roughly a twenty-mile radius, bringing their own water, power and lighting to you. Prices start where these say and go up with the size and the state of the car.',
+    groups: [
+      {
+        name: 'Detailing, from',
+        items: [
+          ['Exterior Detail', 'Wash, decontaminate, dress and protect the outside.', 9000, 'from $90'],
+          ['Interior Detail', 'Inside out: vacuum, surfaces, glass.', 13500, 'from $135'],
+          ['Full Detail', 'Their most-booked option, inside and out.', 16500, 'from $165'],
+        ],
+      },
+      {
+        name: 'Paint correction, from',
+        items: [
+          ['Enhancement Polish', 'Single stage.', 29900, 'from $299'],
+          ['Correction Polish', 'Two stage.', 59900, 'from $599'],
+          ['Show-Level Correction', 'Three stage.', 100000, 'from $1,000'],
+        ],
+      },
+      {
+        name: 'Ceramic coating, from',
+        items: [
+          ['Essential', 'Two-year warranty.', 50000, 'from $500'],
+          ['Professional', 'Five-year warranty.', 69900, 'from $699'],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'carabao',
+    name: 'Carabao',
+    label: 'Carabao',
+    cuisine: 'Filipino',
+    tagline: 'Filipino cooking, twelve tables, Napa.',
+    color: '#14110E|#C6763B',
+    prep: 0,
+    category: 'Filipino food',
+    phone: '(707) 699-1220',
+    address: '145 C Gasser Drive, Napa, CA 94559',
+    email: 'contact@carabaonapa.com',
+    instagram: 'carabaonapa',
+    site: 'https://carabaonapa.com/',
+    /*
+      NO HOURS HERE, DELIBERATELY, and this is the one thing to ask them.
+      Their site publishes two schedules at once: the footer on every page
+      still says dinner Tuesday to Saturday, while the homepage announces new
+      hours from September — Thursday to Monday, closed Tuesday and Wednesday.
+      Both are live today. Printing either would be printing the wrong one for
+      half the week, so neither is printed.
+
+      Their menu prices are written as bare numbers with no dollar sign, which
+      is their style; they are dollars.
+
+      THEIR WINE LIST IS UNPRICED — about ninety bottles rendered with an empty
+      price column. Nothing is inferred from it.
+    */
+    items: [
+      ['Adobo Deviled Egg', '', 800],
+      ['Pork Lumpia', '', 1200],
+      ['Sisig Tacos', '', 1500],
+      ['Kinilaw', '', 2200],
+      ['Barako Ribs', '', 2400],
+      ['Sizzling Sisig', '', 2900],
+      ['Crispy Kare Kare', '', 4200],
+      ['Bistek', '', 6900],
+    ],
+  },
+  {
+    slug: 'elliston-vineyards',
+    name: 'Elliston Vineyards',
+    label: 'Elliston',
+    cuisine: 'Winery',
+    tagline: 'A stone mansion and a tasting room, Sunol.',
+    color: '#1B1710|#B08D57',
+    prep: 0,
+    category: 'Winery',
+    phone: '(925) 862-2377',
+    address: '463 Kilkare Rd, Sunol, CA 94586',
+    email: 'info@elliston.com',
+    instagram: 'ellistonvineyards',
+    site: 'https://ellistonvineyards.com/',
+    /*
+      HIS READ WAS WRONG AND IT IS WORTH SAYING SO. He sent a Linktree and
+      thought "looks like they might need a website" — but the Linktree is a
+      social bio, not their site. ellistonvineyards.com is a full Shopify
+      store, and elliston.com redirects into it, which is also why their email
+      is on a different domain than their website.
+
+      They do have rot he could pitch against: their Tickets collection is
+      empty while the nav advertises it, their food-menu page renders a heading
+      and nothing else, /pages/visit 404s, and their tasting page misspells
+      "Sommelier" and "Approximately". That is a maintenance pitch, not a build.
+
+      Weddings and events are quoted, never priced — they publish room
+      capacities and an enquiry form. Only the two tastings carry a number.
+    */
+    quoteOnly:
+      'A winery and event venue in the Sunol hills: a historic stone mansion, lawns, and the Terrace Room, which seats a hundred and fifty. Tastings are priced; weddings, corporate and social events are quoted.',
+    groups: [
+      {
+        name: 'Tastings, per person',
+        items: [
+          ['Sommelier Tasting', 'About an hour. Weekends.', 8500],
+          ['Afternoon Tea', 'About ninety minutes. Two orders minimum per party.', 3900, '$39 to $56'],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'brunch-and-bloom',
+    /* An ampersand, which is how they write it everywhere. His note said "and". */
+    name: 'Brunch & Bloom',
+    label: 'Brunch & Bloom',
+    cuisine: 'Brunch cafe',
+    tagline: 'Artisan coffee and scratch brunch, Brentwood.',
+    color: '#F7F3EC|#5C7F53',
+    prep: 0,
+    category: 'Coffee shop',
+    phone: '(925) 240-4916',
+    address: '2540 Sand Creek Road, Suite A5, Brentwood, CA 94513',
+    email: 'info@brunchandbloomartisancafe.com',
+    instagram: 'brunchandbloomcafe',
+    site: 'https://brunchandbloom.cloveronline.com/',
+    needsSite: true,
+    /*
+      THE BEST WEBSITE PROSPECT ON THIS SHEET, and for an unusual reason: they
+      have already bought one. brunchandbloomartisancafe.com is theirs — it is
+      the domain their own email runs on, and the mail works — but the site
+      behind it returns a Wix "connect your domain" error at both the apex and
+      www. They are paying for a domain and a builder that were never joined
+      up, and their Instagram link has given up and points at the ordering
+      page. They decided they wanted a site and did not land it.
+
+      DO NOT LINK brunchandbloom.com. That is a different brunch place with the
+      same name in Humble, Texas.
+
+      The suite number comes from their own Instagram; the Clover address
+      record omits it.
+    */
+    items: [
+      ['Brunch & Bloom Classic', '', 1700],
+      ['Garden Shakshuka', '', 1800],
+      ['Golden Harvest Hash', '', 1900],
+      ['Cali Avocado Toast', '', 1600],
+      ['Coastal Lox Toast', '', 1900],
+      ['California Breakfast Waffle', '', 1800],
+      ['Smoky Hot Chicken Sammie', '', 1800],
+      ['Orchard Cobb Salad', '', 1800],
+    ],
+    offer: [
+      'Brunch & Bloom Classic',
+      'Garden Shakshuka',
+      'Cali Avocado Toast',
+      'California Breakfast Waffle',
+    ],
+  },
+  {
+    slug: 'johnny-boi',
+    /* Plural on their own site; their Instagram name is singular. */
+    name: 'Johnny Boi Smash Burgers',
+    label: 'Johnny Boi',
+    cuisine: 'Smash burgers',
+    tagline: 'Smash burgers on Tewksbury, Point Richmond.',
+    color: '#101A38|#C9A227',
+    prep: 0,
+    category: 'Burgers and hot dogs',
+    phone: '(510) 260-0291',
+    /* Point Richmond is the postal form; their ordering site and Instagram
+       both just say Richmond, which is the page they sit on. */
+    address: '201 Tewksbury Avenue, Point Richmond, CA 94801',
+    email: 'infojohnnyboi@gmail.com',
+    instagram: 'johnnyboi_smash',
+    site: 'https://johnnyboismash.com/',
+    /*
+      A STOREFRONT, not a truck — he sent only an Instagram screenshot, and
+      their own site settles it: a fixed address, dine-in, reservations, a jobs
+      page and a mural people mention.
+
+      "shredduce" is theirs and appears three times consistently, so it is not
+      corrected here. The typos on their menu page are theirs too and are not
+      reproduced: their descriptions spell caramelised onions correctly two
+      lines above the heading that does not.
+
+      Trompo is on their menu as "Coming Soon" with no price, so it is not
+      listed.
+    */
+    items: [
+      ['Johnny Boi', '', 900],
+      ['Fat Boi', '', 1200],
+      ['Cowboi', '', 1300],
+      ['Fasho Spicy', '', 1100],
+      ['Burger Bowl', '', 800],
+      ['Mac N\' Cheese & Bacon Bits', '', 600],
+      ['Onion Rings', '', 500],
+      ['Garlic Parm Wings', '', 1200],
+    ],
+    offer: ['Johnny Boi', 'Fat Boi', 'Cowboi', 'Fasho Spicy'],
+  },
+  {
+    slug: 'butter-pecan',
+    icon: 'butter-pecan',
+    name: 'Butter Pecan Bakeshop',
+    label: 'Butter Pecan',
+    cuisine: 'Cookie bakery',
+    tagline: 'Cookies by the half dozen, six shops.',
+    color: '#8A5A2B|#E8C39E',
+    prep: 6,
+    category: 'Bakery',
+    phone: '(510) 283-5140',
+    address: '1889 San Pablo Ave, Pinole, CA 94564',
+    site: 'https://www.butterpecanbakeshop.com/',
+    instagram: 'butterpecanbakeshop',
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-08-30, on his "can you redo their page".
+
+      WHAT WAS HERE WAS NOT THEIRS. This was one of the seventeen ported from
+      goodneighborbuilder.com, and it described an ice cream shop: "Ice cream &
+      cobbler", a Butter Pecan Pint, a Peach Cobbler Cup, a Two Scoop Waffle
+      Cone. Butter Pecan Bakeshop sells cookies. Not one of those four items
+      exists on their menu and the trade was wrong, so the whole entry went and
+      this was written from butterpecanbakeshop.com instead. That is also why
+      the owner-review flag is gone: there is nothing left on this page that
+      nobody confirmed.
+
+      HIS THREE FLAVOURS, UNDER THEIR OWN NAMES. He asked for "Banana Pudding,
+      Buterpecan & Dark Chocolate Chip w/sea salt". Only the first is what the
+      bakery calls it. Theirs are Banana Pudding, BROWN Butter Pecan (three
+      words — "Butter Pecan" alone is the shop, not a cookie) and Dark
+      Chocolate & Sea Salt (no "Chip"). Their names are used, because a page
+      that renames a business's own products is the same mistake as inventing
+      them.
+
+      THE DARK CHOCOLATE PHOTO IS FILED UNDER THE WRONG NAME ON THEIR SERVER —
+      brown_butter_pecan_1200x1200_....png is the sea-salt cookie, and its own
+      alt text says so. Looked at rather than assumed from the filename.
+
+      They publish boxes, not single cookies, so there is no per-cookie price
+      here. Their FAQ still says four locations and their Contact page still
+      lists an old Pinole number; the store pages are newer and are what these
+      come from.
+    */
+    panels: [
+      {
+        head: 'The three he picked',
+        photos: [
+          {
+            src: 'butter-pecan-banana-pudding.webp',
+            alt: 'A Banana Pudding cookie',
+            caption: 'Banana Pudding',
+          },
+          {
+            src: 'butter-pecan-brown-butter-pecan.webp',
+            alt: 'A Brown Butter Pecan cookie',
+            caption: 'Brown Butter Pecan',
+          },
+          {
+            src: 'butter-pecan-dark-choc-sea-salt.webp',
+            alt: 'A Dark Chocolate and Sea Salt cookie',
+            caption: 'Dark Chocolate & Sea Salt',
+          },
+        ],
+      },
+      {
+        head: 'Where they are',
+        body: [
+          'Pinole — 1889 San Pablo Ave, (510) 283-5140',
+          'Emeryville — 6472 Hollis St, (510) 817-4630',
+          'Pleasant Hill — 2360 Monument Blvd Suite C, (925) 483-2956',
+          'Fairfield — 846 Texas St, (707) 759-4170',
+          'Vallejo — 3272 Sonoma Blvd Suite 1, (707) 731-2562',
+          'Hayward — 22656 Mission Blvd, (510) 274-5035',
+          'Antioch — coming soon. They are running a grand-opening list for it and have published no address yet.',
+          'Every shop keeps the same hours: 10 to 7 on weekdays, 10 to 5 at weekends.',
+        ],
+      },
+      {
+        head: 'Every flavour they make',
+        body: [
+          'Dark Chocolate & Sea Salt, Brown Butter Pecan, Cookies & Cream, Banana Pudding, Oatmeal Raisin Pecan, Dark Chocolate Walnut, Banana Toffee, Strawberries & Cream, Walnut Brownie, Birthday Cake, Tea Cake Cookie, and Pecan Pie.',
+        ],
+      },
+    ],
+    items: [
+      ['Make a box — half dozen', 'Six, chosen by you.', 2300],
+      ['Make a box — one dozen', 'Twelve, chosen by you.', 3900],
+      ['Best Sellers Pack — 6', '', 2300],
+      ['Best Sellers Pack — 12', '', 3900],
+      ['Chocolate Lover Box — 6', '', 2300],
+      ['Southern Classics Box — 6', '', 2300],
+      ['Nut Lovers Box — 6', '', 2300],
+      ["Kid's Pick Box — 6", '', 2300],
+      ['Wine & Cookie Pairing Box — 12', '', 5000],
+      ['Catering — 50 cookies', '', 15000],
+      ['Catering — 100 cookies', '', 29000],
+    ],
+    offer: [
+      'Make a box — half dozen',
+      'Make a box — one dozen',
+      'Best Sellers Pack — 12',
+      'Wine & Cookie Pairing Box — 12',
+    ],
   },
 ]

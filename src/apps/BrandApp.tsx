@@ -10,11 +10,70 @@ import { isFavorite, toggleFavorite } from '../lib/favorites'
 import { EMPTY_SIGNALS, formatCount, readSignals, sendSignal } from '../lib/signals'
 import type { SignalKind, Signals } from '../lib/signals'
 import type { MenuItem } from '../data/brands'
+import type { BrandPanel } from '../data/localBrands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
 import { Gem } from './MembersApp'
 
 /** One restaurant's menu — the screen an icon tap actually lands on. */
+/**
+ * A drop-down on a business's page: its heading, and what is under it.
+ *
+ * His ask for Butter Pecan, 2026-08-30: "get the top 3 cookies pictures to
+ * drop down when you press the button. No need for price or anything." The
+ * pictures are the business's own product photographs, so they are shown at
+ * the size those files actually are — theirs are cut-outs about 250px across,
+ * and blowing one up to fill a phone is how a real photo starts looking fake.
+ *
+ * DECLARED AT MODULE SCOPE. A component declared inside a render body is a new
+ * function every render, so React remounts it and its state resets — that was
+ * the About-page glitch, and tools/audit-nested-components.mjs fails the build
+ * over it now.
+ */
+function BrandPanels({ panels }: { panels?: BrandPanel[] }) {
+  const [open, setOpen] = useState<string | null>(null)
+  if (!panels?.length) return null
+  return (
+    <div className="brand-panels">
+      {panels.map((p) => {
+        const isOpen = open === p.head
+        return (
+          <div className={`brand-panel${isOpen ? ' is-open' : ''}`} key={p.head}>
+            <button
+              type="button"
+              className="brand-panel-head"
+              aria-expanded={isOpen}
+              onClick={() => setOpen(isOpen ? null : p.head)}
+            >
+              <span>{p.head}</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" className="brand-panel-chev">
+                <path d="M7 10l5 5 5-5" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </button>
+            {isOpen && (
+              <div className="brand-panel-body">
+                {p.photos && (
+                  <ul className="brand-panel-photos">
+                    {p.photos.map((ph) => (
+                      <li key={ph.src}>
+                        <img src={`/food/${ph.src}`} alt={ph.alt} loading="lazy" />
+                        {ph.caption && <span>{ph.caption}</span>}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                {p.body?.map((line) => (
+                  <p key={line}>{line}</p>
+                ))}
+              </div>
+            )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
 export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const brand = brandById(brandId)
   const cart = useCart()
@@ -703,6 +762,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               )}
             </div>
           )}
+
+          <BrandPanels panels={brand.panels} />
 
           {/*
             A DIRECT LINE TO THEIR INSTAGRAM, where he has sold one.

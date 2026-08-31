@@ -142,13 +142,14 @@ const WALLPAPER_LUMA: Record<string, number> = {
   'danville': 0.7612,
   'dublin': 0.2826,
   'el-cerrito': 0.7142,
+  'emeryville': 0.8124,
   'fairfield': 0.6303,
   'folsom': 0.7354,
   'foster-city': 0.8568,
   'fremont': 0.4978,
   'glendale': 0.6404,
   'goodyear': 0.9823,
-  'hayward': 0.3556,
+  'hayward': 0.8064,
   'lafayette': 0.4328,
   'las-vegas': 0.3848,
   'livermore': 0.3455,
@@ -160,6 +161,7 @@ const WALLPAPER_LUMA: Record<string, number> = {
   'mountain-view': 0.7351,
   'napa': 0.5719,
   'newark': 0.7163,
+  'north-berkeley': 0.7411,
   'oakland': 0.288,
   'oakley': 0.9642,
   'orinda': 0.9048,
@@ -168,6 +170,7 @@ const WALLPAPER_LUMA: Record<string, number> = {
   'petaluma': 0.4516,
   'philadelphia': 0.6233,
   'phoenix': 0.8188,
+  'piedmont': 0.663,
   'pinole': 0.4472,
   'pittsburg': 0.5532,
   'pleasant-hill': 0.8686,
@@ -196,6 +199,7 @@ const WALLPAPER_LUMA: Record<string, number> = {
   'vacaville': 0.9493,
   'vallejo': 0.7821,
   'walnut-creek': 0.3634,
+  'west-oakland': 0.6789,
 }
 
 /*
@@ -222,6 +226,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'danville',
   'dublin',
   'el-cerrito',
+  'emeryville',
   'fairfield',
   'folsom',
   'foster-city',
@@ -240,6 +245,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'mountain-view',
   'napa',
   'newark',
+  'north-berkeley',
   'oakland',
   'oakley',
   'orinda',
@@ -248,6 +254,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'petaluma',
   'philadelphia',
   'phoenix',
+  'piedmont',
   'pinole',
   'pittsburg',
   'pleasant-hill',
@@ -276,6 +283,7 @@ const CITY_WALLPAPERS = new Set<string>([
   'vacaville',
   'vallejo',
   'walnut-creek',
+  'west-oakland',
 ])
 
 /*
