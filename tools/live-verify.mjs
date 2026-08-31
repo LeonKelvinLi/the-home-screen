@@ -75,6 +75,40 @@ console.log('instagram     :', JSON.stringify(ig))
 if (!ig) fails.push('the Instagram button is not on the live Bay Memories page')
 else if (ig.href !== 'https://www.instagram.com/baymemories_booth/') fails.push(`the Instagram button points at ${ig.href}`)
 
+// ---- the way in, which was dead for two days -----------------------------
+/*
+  READ-ONLY ON PURPOSE. Nothing here submits the form: a real submission on
+  beastypages.com creates a member row and sends a real person's address a real
+  code. So this asks the server which channels work and checks the form is
+  asking for the one that does — which is exactly the mismatch that stranded
+  Glenn's nephew.
+*/
+const chans = await (await fetch(base + '/api/members/channels')).json().catch(() => null)
+console.log('channels      :', JSON.stringify(chans))
+if (!chans) fails.push('/api/members/channels did not answer — the form cannot know what works')
+else if (!chans.sms && !chans.email) fails.push('NEITHER texting nor email is configured live — nobody can sign in at all')
+
+await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+const enter = p.locator('[aria-label="Enter BEASTY"]').first()
+try { await enter.waitFor({ state: 'visible', timeout: 15000 }); await enter.click(); await p.waitForTimeout(2600) } catch { await p.waitForTimeout(1200) }
+if (await p.locator('[aria-label="Enter BEASTY"]').count()) { await enter.click().catch(() => {}); await p.waitForTimeout(2600) }
+await p.evaluate(() => window.dispatchEvent(new CustomEvent('beasty:join')))
+await p.waitForSelector('.join', { timeout: 20000 }).catch(() => {})
+const form = await p.evaluate(() => ({
+  tel: document.querySelector('.join input[type=tel]')?.required ?? null,
+  email: document.querySelector('.join input[type=email]')?.required ?? null,
+  lead: document.querySelector('.join-lead')?.textContent?.replace(/\s+/g, ' ').trim().slice(0, 90) ?? '',
+}))
+console.log('join form     :', JSON.stringify(form))
+if (form.tel === null) fails.push('the sign-in form did not render')
+else if (chans) {
+  if (chans.sms && form.tel !== true) fails.push('texting works live but the form does not require a number')
+  if (!chans.sms && form.email !== true) fails.push('texting does NOT work live and the form does not require an email — this is the bug that stranded Glenn’s nephew')
+  if (!chans.sms && form.tel === true) fails.push('the form still insists on a number that nothing can text')
+  const promises = form.lead.includes('We text you')
+  if (promises !== !!chans.sms) fails.push(`the form promises ${promises ? 'a text' : 'an email'} and the server can only send ${chans.sms ? 'a text' : 'an email'}`)
+}
+
 // ---- the membership copy, in whichever chunk carries it ------------------
 const html = await (await fetch(base + '/')).text()
 const seen = new Set()
