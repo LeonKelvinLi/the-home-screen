@@ -2259,7 +2259,20 @@ app.post('/api/brands/:id/signals/:kind', rateLimiter(60, 20), async (req, res) 
  * express.raw, not express.json: the signature is computed over the exact bytes
  * Stripe sent, and a parsed-then-restringified body will not match.
  */
-if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
+/*
+  THE SIGNING SECRET IS ENOUGH, AND AN API KEY IS NOT WANTED HERE.
+
+  This used to demand STRIPE_SECRET_KEY as well, which meant a full-access live
+  key had to sit in the environment of a public web service that never makes a
+  single Stripe API call. Verifying a webhook is an HMAC over the raw body
+  against STRIPE_WEBHOOK_SECRET; the SDK instance below is a namespace for that
+  function and nothing else — checked, not assumed: constructEvent verifies
+  correctly with a placeholder key and a real signing secret.
+
+  So the key is optional, and when it is absent the placeholder is used. Less
+  in the environment to leak, and one fewer thing to rotate.
+*/
+if (process.env.STRIPE_WEBHOOK_SECRET) {
   app.post(
     '/api/stripe/webhook',
     express.raw({ type: 'application/json', limit: '1mb' }),
@@ -2267,7 +2280,8 @@ if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
       let event: { type: string; data: { object: Record<string, unknown> } }
       try {
         const { default: Stripe } = await import('stripe')
-        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string)
+        /* Never used to call Stripe. See the note above the mount. */
+        const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? 'sk_unused_webhook_verification_only')
         event = stripe.webhooks.constructEvent(
           req.body as Buffer,
           req.get('stripe-signature') ?? '',
@@ -2329,8 +2343,8 @@ if (process.env.STRIPE_WEBHOOK_SECRET && process.env.STRIPE_SECRET_KEY) {
   console.log('stripe webhook mounted')
 } else if (process.env.STRIPE_PAYMENT_LINK_PASS || process.env.STRIPE_PAYMENT_LINK_DIAMOND) {
   console.warn(
-    'Payment links are configured but STRIPE_WEBHOOK_SECRET/STRIPE_SECRET_KEY are not, ' +
-      'so nothing can mark a member paid. They will stay pending after checkout.',
+    'Payment links are configured but STRIPE_WEBHOOK_SECRET is not, so nothing can mark a ' +
+      'member paid. They will stay pending after checkout.',
   )
 }
 
