@@ -198,7 +198,19 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     if (code.replace(/\D/g, '').length !== 6 || busy) return
     setBusy(true)
     setError(null)
-    const r = await verifyCode(phone.trim(), code)
+    /*
+      THE DESTINATION THE CODE ACTUALLY WENT TO, not the phone field.
+
+      This said phone.trim() unconditionally. When texting is not configured
+      the code goes to the EMAIL and the phone box is optional, so most people
+      left it empty — and an empty destination made the server answer "Enter
+      the 6-digit code", which is what a person sees after typing the right six
+      digits. Leon hit it, and Glenn had been hitting it for two days.
+
+      `sentTo` is what the server said it used, so this can no longer disagree
+      with where the code went.
+    */
+    const r = await verifyCode(sentTo === 'sms' ? phone.trim() : email.trim(), code)
     setBusy(false)
     if (!r.ok) {
       setError(r.error)

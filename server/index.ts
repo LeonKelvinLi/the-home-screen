@@ -1828,13 +1828,33 @@ async function sendLoginCode(email: string, code: string, purpose: string): Prom
     if (!r.ok) {
       // The status, never the body: a provider error can echo the payload back.
       console.error('login-code email failed:', r.status)
+      devCode(email, code, purpose)
       return false
     }
     return true
   } catch (err) {
     console.error('login-code email failed:', String(err))
+    devCode(email, code, purpose)
     return false
   }
+}
+
+/**
+ * The code, in the log, ONLY when the send failed and ONLY outside production.
+ *
+ * A provider that rejects a send leaves a valid code in the database that
+ * nobody can reach, which in development means sign-in is simply impossible
+ * and every test that walks the real form dies at the code box. The unconfigured
+ * branch above has always printed it for that reason; a FAILED send is the same
+ * predicament and was silent.
+ *
+ * PROD IS EXCLUDED and that is the whole point. A login code in a production
+ * log is a credential sitting in a log aggregator, readable by anybody who can
+ * read logs, for ten minutes at a time. Never there.
+ */
+function devCode(dest: string, code: string, purpose: string) {
+  if (PROD) return
+  console.log(`[login-code] ${dest} ${code} (${purpose}) — send failed, printed for development only`)
 }
 
 /** Six digits. Read aloud, typed on a phone keypad, and never a word. */

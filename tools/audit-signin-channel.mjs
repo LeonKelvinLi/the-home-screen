@@ -35,19 +35,38 @@ const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0
    report SMS as configured, which is exactly the state being tested. */
 const WORLDS = [
   {
+    /*
+      NO RESEND KEY, DELIBERATELY. With one set the server hands the code to
+      Resend and — correctly — never logs it, so this audit could not read it
+      back and could not finish signing in. Without one the code is logged and
+      the whole path is testable. The FORM does not care either way: it asks
+      for an email whenever texting cannot deliver, which is exactly what
+      production does, so what is exercised here is what runs there.
+    */
     name: 'email only (production today)',
+    /* Configured, so the server CHOOSES email — which is the path being
+       tested. The key is fake, so the send fails and the code is printed by
+       the development-only branch, which is how it gets read back below. */
     env: { RESEND_API_KEY: 're_test_notreal', OTP_FROM_EMAIL: 'BEASTY <hello@beastypages.com>' },
     wants: 'email',
+    canFinish: true,
   },
   {
+    /*
+      Verify-backed, which is how this would really be configured — Twilio
+      makes and checks its own code, so ours is never logged and a sign-in
+      cannot be completed here without calling Twilio for real. This world
+      therefore checks the SHAPE of the form and stops, and says so rather than
+      pretending it proved more.
+    */
     name: 'sms configured',
     env: {
-      RESEND_API_KEY: 're_test_notreal', OTP_FROM_EMAIL: 'BEASTY <hello@beastypages.com>',
       TWILIO_ACCOUNT_SID: 'AC0000000000000000000000000000dead',
       TWILIO_AUTH_TOKEN: 'notreal',
       TWILIO_VERIFY_SERVICE_SID: 'VA0000000000000000000000000000beef',
     },
     wants: 'sms',
+    canFinish: false,
   },
 ]
 
@@ -130,6 +149,43 @@ for (const world of WORLDS) {
     if (blamesText !== wantTel) fails.push(`${world.name}: the failure blames ${blamesText ? 'texting' : 'email'} on the ${wantTel ? 'sms' : 'email'} path`)
   }
   if (codeStep.back && /number/.test(codeStep.back) !== wantTel) fails.push(`${world.name}: "${codeStep.back}" offers the wrong field`)
+
+  /*
+    AND THEN ACTUALLY FINISH SIGNING IN — this is the half that was missing.
+
+    The checks above stop at the code screen, which is why they passed while
+    typing the RIGHT six digits still answered "Enter the 6-digit code". The
+    confirm handler sent the phone field as the destination no matter which
+    channel had been used, so on the email path it sent an empty string, the
+    server had nothing to look the code up by, and it rejected a correct code.
+    Leon hit it on 2026-09-01; Glenn had been hitting it since the 30th.
+
+    So the real code is read out of the server's own log — for the destination
+    the server SAID it used, not the one this test would have guessed — typed
+    into the boxes, and confirmed. A member has to exist at the end of it.
+  */
+  const dest = wantTel ? phone : email
+  const line = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${dest} `)).pop()
+  const realCode = line?.match(/ (\d{6}) /)?.[1]
+  if (!world.canFinish) {
+    console.log('signed in    : not attempted — Twilio Verify owns the code in this world')
+  } else if (!realCode) {
+    fails.push(`${world.name}: no code was logged for ${dest}, the destination the server reported`)
+  } else {
+    await p.locator('.join-code').fill(realCode)
+    await p.waitForTimeout(300)
+    await p.locator('.join button[type=submit]').click()
+    await p.waitForTimeout(2000)
+    const after = await p.evaluate(async () => {
+      const r = await fetch('/api/members/me', { credentials: 'same-origin' })
+      return { status: r.status, body: r.ok ? await r.json() : null,
+               stillOnCode: !!document.querySelector('.join-code'),
+               error: document.querySelector('.join-error')?.textContent?.trim() ?? null }
+    })
+    console.log(`signed in    : ${after.status} ${after.body?.name ?? ''} ${after.error ? '| ' + after.error : ''}`)
+    if (after.status !== 200) fails.push(`${world.name}: the RIGHT code did not sign anybody in — /api/members/me is ${after.status}${after.error ? ` and the form says "${after.error}"` : ''}`)
+    if (after.stillOnCode) fails.push(`${world.name}: the right code was entered and the form is still asking for a code`)
+  }
 
   await b.close(); srv.kill(); await TESTDB.drop?.()
 }
