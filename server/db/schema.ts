@@ -438,6 +438,13 @@ END $$;
 /* Which way it went out, so a resend uses the same road and the audit can tell
    an SMS code from an emailed one. */
 ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS channel TEXT NOT NULL DEFAULT 'sms';
+
+/*
+  Whether the last send of this code actually left the building, kept so that a
+  rapid second request can answer honestly without sending again. See the reuse
+  window in /api/members/start.
+*/
+ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS delivered BOOLEAN NOT NULL DEFAULT TRUE;
 `
 
 /**

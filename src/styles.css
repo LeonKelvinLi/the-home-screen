@@ -9723,6 +9723,21 @@ textarea {
   color: var(--muted);
 }
 
+/*
+  NOTHING ON THE CODE STEP MAY MOVE WHEN A SECOND TICKS.
+
+  Two countdowns re-render every second — "It expires in 9:59" in the lead and
+  "Send another code in 27s" on the resend button. Both used to change width
+  with their digits, which reflowed the buttons below them once a second — so a
+  finger aiming at "Use a different email" landed on whatever had shifted into
+  that spot by the time the tap landed. That is the "it jumps back to the
+  verification code" Glenn and Leon both hit, reproduced exactly with a
+  coordinate click and absent with a node click.
+
+  So the buttons fill the row (their box no longer depends on their text), the
+  digits are tabular so 9:59 and 0:01 are the same width, and the join form's
+  own controls stop being a moving target.
+*/
 .gate-later {
   border: 0;
   background: none;
@@ -9731,6 +9746,17 @@ textarea {
   font-size: 14.5px;
   color: var(--muted);
   cursor: pointer;
+  font-variant-numeric: tabular-nums;
+}
+
+.join .gate-later {
+  display: block;
+  width: 100%;
+  min-height: 44px;
+}
+
+.join-lead strong {
+  font-variant-numeric: tabular-nums;
 }
 
 /* Reduced motion: the sheet still arrives, it just does not travel. */

@@ -172,11 +172,20 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     return true
   }
 
+  /*
+    A REF, NOT ONLY STATE, GUARDS THE DOUBLE-FIRE. `busy` is state, and two
+    taps in the same beat both read it false — the production log shows starts
+    two seconds apart from one person. The ref flips synchronously, so the
+    second dispatch sees it.
+  */
+  const inflight = useRef(false)
   async function askForCode(e: React.FormEvent) {
     e.preventDefault()
-    if (!ready || busy) return
+    if (!ready || busy || inflight.current) return
+    inflight.current = true
     setBusy(true)
     const ok = await send()
+    inflight.current = false
     setBusy(false)
     if (ok) setStep('code')
   }
@@ -240,7 +249,7 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
     >
       <JoinHead step={step} />
       {step === 'details' ? (
-        <form className="join" onSubmit={askForCode}>
+        <form className="join" key="details" onSubmit={askForCode}>
           <p className="join-lead">
             Free, and it opens the whole directory — every city, the reels, the gallery and search.
             <strong> Already a member? This is also how you sign in.</strong>{' '}
@@ -359,7 +368,20 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
           </p>
         </form>
       ) : (
-        <form className="join" onSubmit={submitCode}>
+        /*
+          KEYED, AND THE KEYS ARE LOAD-BEARING. Without them React sees one
+          <form> in both branches and REUSES its DOM nodes when the step flips
+          — including the button under the user's finger. Tapping "Use a
+          different email" flipped the step mid-click, the pressed node morphed
+          into this details form's SUBMIT button, and the browser then ran the
+          click's default action against what the node had become: it submitted
+          the form. So the tap that asked to go back also re-sent a code to the
+          old address and bounced straight back to the code screen — Glenn's
+          "it jumps back to the verification code", and the phantom starts in
+          the production log. Distinct keys make the flip unmount one form and
+          mount the other, so a mid-click morph cannot happen.
+        */
+        <form className="join" key="code" onSubmit={submitCode}>
           <p className="join-lead">
             We sent a six-digit code to{' '}
             <strong>{sentTo === 'sms' ? phone.trim() : email.trim()}</strong>.{' '}
@@ -482,6 +504,10 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
               setError(null)
               setCode('')
               setResent(false)
+              /* The failure banner belongs to the LAST address. Carrying it
+                 onto a fresh attempt tells someone their new address is broken
+                 before anything has been tried against it. */
+              setUndelivered(false)
             }}
           >
             {byText ? 'Use a different number' : 'Use a different email'}

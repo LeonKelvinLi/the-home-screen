@@ -1866,6 +1866,11 @@ function newLoginCode(): string {
 }
 
 const CODE_TTL_MS = 10 * 60 * 1000
+/* Starts closer together than this reuse the outstanding code. Under the
+   client's 30s resend cooldown on purpose — see the note in /start. Tunable
+   from the environment so a test can hold the window open or shut; production
+   never sets it. */
+const RESEND_REUSE_MS = Number(process.env.RESEND_REUSE_MS ?? 25_000)
 const MAX_CODE_ATTEMPTS = 5
 
 /**
@@ -1968,8 +1973,62 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     .get(destination) as { id: string } | undefined
   const purpose = existing ? 'signin' : 'signup'
 
-  const code = newLoginCode()
   const now = Date.now()
+
+  /*
+    A CODE THAT IS STILL GOOD IS NOT REPLACED BY A RAPID RETRY.
+
+    Every request here used to mint a fresh code, which silently killed the one
+    before it. The production logs of 2026-09-01 show what that does: fifty-six
+    starts in fifteen minutes from two frustrated people, each one invalidating
+    the code already in their inbox — so every email that arrived was dead by
+    the time it was opened, which from the chair reads as "we are not receiving
+    any codes". The rapid repeats came from double-taps and from a code screen
+    whose layout shifted under the finger, but the server letting each of them
+    poison the last is what turned a UI stumble into a lockout.
+
+    So a start within RESEND_REUSE_MS of the previous one, for the same
+    destination and purpose, updates the pending details and sends NOTHING —
+    the email already in flight carries a code that still works, and the reply
+    reports the delivery result of that send. The window is under the client's
+    30-second resend cooldown, so a deliberate "Send another code" still mints
+    a fresh one; only the machine-gun path is absorbed.
+
+    The code cannot be re-sent inside the window even if that were wanted:
+    only its hash is stored.
+  */
+  const prior = await db
+    .prepare('SELECT purpose, created_at, expires_at, delivered FROM login_codes WHERE destination = ?')
+    .get(destination) as
+    | { purpose: string; created_at: number; expires_at: number; delivered: boolean }
+    | undefined
+  if (
+    prior &&
+    prior.purpose === purpose &&
+    prior.expires_at > now &&
+    now - prior.created_at < RESEND_REUSE_MS
+  ) {
+    await db.prepare(
+      `UPDATE login_codes SET
+         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?
+       WHERE destination = ?`,
+    ).run(
+      name || null,
+      str(b.instagram).replace(/^@+/, '') || null,
+      channel === 'sms' ? destination : str(b.phone) || null,
+      str(b.ref).toUpperCase() || null,
+      destination,
+    )
+    return res.status(202).json({
+      sent: true,
+      delivered: prior.delivered,
+      channel,
+      minutes: Math.max(1, Math.round((prior.expires_at - now) / 60000)),
+      reused: true,
+    })
+  }
+
+  const code = newLoginCode()
   await db.prepare(
     `INSERT INTO login_codes
        (destination, channel, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
@@ -2007,6 +2066,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
            a later switch back to raw SMS needs no migration. */
         ? await twilioVerifyStart(destination)
         : await sendLoginCodeSms(destination, code, purpose)
+  /* Recorded so a reused start inside the window can answer honestly. */
+  await db.prepare('UPDATE login_codes SET delivered = ? WHERE destination = ?').run(delivered, destination)
   res.status(202).json({ sent: true, delivered, channel, minutes: CODE_TTL_MS / 60000 })
 })
 
