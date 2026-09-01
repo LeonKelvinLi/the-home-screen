@@ -5457,4 +5457,456 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Wine & Cookie Pairing Box — 12',
     ],
   },
+  {
+    slug: 'delah-coffee',
+    name: 'Delah Coffee House',
+    label: 'Delah Coffee',
+    cuisine: 'Arabic coffee',
+    tagline: 'Arabic coffee, tea and cakes on West Grand.',
+    color: '#0E1A14|#C8A45C',
+    prep: 0,
+    category: 'Coffee shop',
+    address: '420 W Grand Ave, Oakland, CA 94612',
+    instagram: 'delah.coffee.oakland',
+    needsSite: true,
+    /*
+      HIS, 2026-08-31: "Oakland • Goods" and then "Definitely needs a website."
+      He is right — there is no site at all, only the Instagram, which is why
+      everything here comes from their own profile and their own posts.
+
+      NO HOURS, AND THEY ARE THE ONES TO ASK. Their bio says Sunday to Thursday
+      7am to 11pm and Friday and Saturday until midnight; their own "New
+      Opening Hours" post says Monday to Thursday 7am to 11pm and Saturday and
+      Sunday until midnight. Those cannot both be right, and neither is printed
+      here rather than picking the one that happens to be newer.
+
+      A SECOND SHOP IS HINTED AND NOT LISTED. One of their posts footers
+      "Oakland & San Francisco Sansome St, California", but no San Francisco
+      address is published anywhere, so only the Oakland one is here. Worth
+      asking him.
+    */
+    quoteOnly:
+      'An Arabic coffee house on West Grand in Oakland: coffee, tea, cakes and pastries, with hummus and falafel baskets. They publish no prices and have no website — only their Instagram.',
+    items: [],
+  },
+  {
+    slug: 'port-of-peri-peri-sf',
+    name: 'The Port of Peri Peri',
+    label: 'Peri Peri SF',
+    cuisine: 'Peri peri chicken',
+    tagline: 'Flame-grilled peri peri on 3rd Street.',
+    color: '#1A0C0E|#C8102E',
+    prep: 0,
+    category: 'Chicken wings',
+    phone: '(415) 340-7373',
+    address: '737 3rd St, San Francisco, CA',
+    instagram: 'sfperiperi',
+    needsSite: true,
+    /*
+      HIS, 2026-08-31: "San Francisco • Goods", sent as a screenshot with no
+      link, so everything here is off their own Instagram profile.
+
+      NO WEBSITE OF THEIR OWN. Their bio lists five delivery platforms —
+      DoorDash, UberEats, Grubhub, Postmates and Chownow — and no site, which
+      is exactly the shape he prospects. The brand exists in other states; this
+      entry is the San Francisco shop and its own number.
+
+      THE DIETARY TAG IS THEIRS, NOT OURS: their bio says HALAL and ZABIHA.
+      Printed as their own description and never as a certification.
+
+      They write their own cuisine as "Portugese"; the correct spelling is used
+      here because it is our sentence, not a quotation of theirs.
+    */
+    dietary: ['Halal'],
+    quoteOnly:
+      'A Portuguese peri peri chicken restaurant on 3rd Street in San Francisco, open 11am to 10pm on weekdays and to 11pm Friday to Sunday. They publish no prices of their own; every order goes through a delivery platform.',
+    items: [],
+  },
+  {
+    slug: 'weasy',
+    /*
+      "WEASY", NOT "WEASY PET". The domain is weasypet.com and he sent it as
+      that, but the store calls itself Weasy throughout — Weasy US on the
+      storefront, Weasy LLC in the policies. "Weasy Pet" appears once, mid-
+      sentence, in the refund policy. Their name is theirs.
+    */
+    name: 'Weasy',
+    label: 'Weasy',
+    cuisine: 'Dog potty system',
+    tagline: 'A smart indoor bathroom for the dog.',
+    color: '#12100E|#8FB98A',
+    prep: 0,
+    /* Pet goods is Pawddle's seat, the same wall Glow Paws, DryPup and
+       PuppiePack hit. Seated on a free number and noted, per that precedent. */
+    category: 'Pet goods',
+    phone: '(407) 752-0424',
+    address: '1255 LaQuinta Dr, Suite 220, Unit B5, Orlando, FL 32809',
+    site: 'https://weasypet.com/',
+    /*
+      EVERY PRICE HERE IS A SALE PRICE. Almost the whole catalogue carries a
+      compare-at, which is permanent-discount pricing rather than a sale; the
+      numbers below are what you actually pay today, and the "from" ones are
+      the cheapest of several variants.
+
+      TWO THINGS TO ASK THEM, both on their own site. Their support address is
+      support@weasy.com.br on every page and support@weasy.com in the Terms —
+      two different addresses for the same job. And their homepage says "SHARK
+      TANK ... we received offers from two sharks", which only the About page
+      clarifies was Shark Tank BRAZIL; an American reading the homepage alone
+      would take it for the US show.
+
+      NO INSTAGRAM. They link no social account at all.
+    */
+    items: [
+      ['Weasy Smart Potty', 'From, across twelve variants.', 16990],
+      ['Weasy Bag', 'One price, small through large.', 5990],
+      ['Weasy Bag Refill', 'From.', 2990],
+      ['Leg-Lifter Wall', 'From.', 4990],
+      ['Weasy Bowl — Slow Feeder', '', 1990],
+      ['Weasy Potty Training', '', 1990],
+    ],
+    offer: ['Weasy Smart Potty', 'Weasy Bag', 'Leg-Lifter Wall', 'Weasy Bowl — Slow Feeder'],
+  },
+  {
+    slug: 'seatmate',
+    name: 'SeatMate',
+    label: 'SeatMate',
+    cuisine: 'Pet furniture',
+    tagline: 'A chair for the dog, next to yours.',
+    color: '#141210|#C2A98B',
+    prep: 0,
+    category: 'Pet goods',
+    instagram: 'seatmatechairs',
+    site: 'https://seatmate.shop/',
+    /*
+      THE SAME CHAIR COSTS FIVE DIFFERENT AMOUNTS depending on its colour —
+      $200 to $299 — and the "was" price is $400 for four of them and $425 for
+      the grey. Their site gives no reason. Only the in-stock colourways are
+      listed here.
+
+      NINETEEN SPARE-PART SKUS ARE NOT LISTED, deliberately. They sit in the
+      store's product feed, are absent from its own sitemap and 404 on the
+      storefront, and ten of them are priced at zero — back-office warranty
+      parts, not things anybody can buy. Putting them on a page would invent a
+      shop that does not exist.
+
+      Their About page renders its heading and no words at all. Worth a mention.
+    */
+    items: [
+      ['Pet Office Chair — Black Faux Fur', '', 26500],
+      ['Pet Office Chair — Grey Faux Fur', '', 26000],
+      ['Pet Office Chair — Black Bouclé', '', 26000],
+      ['Split Ottoman Dog Ramp', 'Black, grey or tan bouclé.', 15000],
+      ['Replacement Seat — Black Bouclé', '', 9900],
+    ],
+    offer: [
+      'Pet Office Chair — Black Faux Fur',
+      'Pet Office Chair — Black Bouclé',
+      'Split Ottoman Dog Ramp',
+    ],
+  },
+  {
+    slug: 'houndsy',
+    name: 'Houndsy',
+    label: 'Houndsy',
+    cuisine: 'Kibble dispenser',
+    tagline: 'Mid-century kibble storage that pours.',
+    color: '#171310|#B98A5A',
+    prep: 0,
+    category: 'Pet goods',
+    instagram: 'houndsyofficial',
+    site: 'https://www.houndsy.com/',
+    /*
+      NO ADDRESS AND NO PHONE, and that is not an omission here — they publish
+      neither, anywhere. Contact page, about, terms, refunds, shipping, footer:
+      an email address and a form, and nothing else. Their own site does not
+      say what city they are in.
+
+      UNUSUALLY, THE FLAGSHIP IS NOT DISCOUNTED. Both dispensers are at list
+      with no compare-at, which is the opposite of the other two brands on this
+      sheet.
+
+      WHAT YOU CAN ACTUALLY BUY IS THINNER THAN THE CATALOGUE. Every Oak,
+      Walnut and solid-black Furniture Series variant is sold out; two of the
+      Water Bowl configurations are gone, which is why its real entry price is
+      $56.25 and not the $45 the page implies. The Smart Kibble Sensor sold out
+      inside a week and is not listed here.
+    */
+    email: 'hello@houndsy.com',
+    items: [
+      ['Kibble Dispenser — Essential Series', '', 17900],
+      ['Kibble Dispenser — Furniture Series', 'Black and walnut, or white and walnut.', 24500],
+      ['Water Bowl', 'From, cheapest in stock.', 5625],
+      ['Silicone Mat', '', 5000],
+      ['Kibble Dispenser Legs', '', 2500],
+      ['Stainless Steel Pet Bowls', 'Any of seven sizes.', 2000],
+    ],
+    offer: [
+      'Kibble Dispenser — Essential Series',
+      'Kibble Dispenser — Furniture Series',
+      'Water Bowl',
+      'Silicone Mat',
+    ],
+  },
+  {
+    slug: 'the-company-barber',
+    name: 'The Company Barber',
+    label: 'Company Barber',
+    cuisine: 'Barbershop',
+    tagline: 'Fades and straight-razor shaves, two shops.',
+    color: '#131313|#B08A4A',
+    prep: 0,
+    category: 'Barber and salon',
+    phone: '(510) 894-3432',
+    address: '3833 Peralta Blvd, Suite D, Fremont, CA 94536',
+    email: 'thecompanybarber@gmail.com',
+    instagram: 'thecompanybarber',
+    site: 'https://www.thecompanybarber.com/',
+    /*
+      HIS TWO CITIES WERE RIGHT — "Fremont • Services / Union city • Services".
+      They run two shops, and their own site tags each barber with the one they
+      cut at. Peralta Blvd is Fremont, Whipple Rd is Union City; the pages sit
+      on both, and the pair must never be swapped.
+
+      NO PRICES, AND THAT IS A BUG ON THEIR SIDE RATHER THAN A CHOICE. Their
+      Services page embeds a Schedulicity widget whose host does not resolve in
+      DNS at all, so the page renders a heading and nothing under it. They are
+      mid-migration to Vagaro and the old booking host is gone. That is worth
+      telling them: their services page has been blank for anyone who visits.
+
+      CASH ONLY, in their own shop policy. Worth saying before somebody drives
+      to Fremont.
+
+      They also disagree with themselves about their own awards — the homepage
+      claims Best Barber Shop in Fremont 2024 and 2025, the About page says
+      2024, 2025 and 2026 — so no award is repeated here.
+    */
+    quoteOnly:
+      'A barbershop with two rooms, Fremont and Union City: fades, skin fades, tapers, lineups, beard trims and straight-razor shaves. Nine-thirty to half five, most days. Cash only, and they publish no prices.',
+    panels: [
+      {
+        head: 'Both shops',
+        body: [
+          'Fremont — 3833 Peralta Blvd, Suite D, (510) 894-3432',
+          'Union City — 1842 Whipple Rd, (510) 300-6793',
+          'Monday to Sunday, 9am to 5:30pm. Their own note: hours move with barber availability, and Sunday varies.',
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'screen-king',
+    name: 'Screen King',
+    label: 'Screen King',
+    cuisine: 'Window screens',
+    tagline: 'Custom window and door screens, Brentwood.',
+    color: '#101418|#C9CDD2',
+    prep: 0,
+    /*
+      NOT PHONE SCREENS. The name invites the wrong guess and the services
+      sheet has a phone-repair seat that would have been the easy mistake:
+      these are custom WINDOW and DOOR screens, cut and built at their own
+      shop. There is no screens category, so they take the handyman seat, which
+      is the nearest honest thing on the sheet.
+    */
+    category: 'Handyman and home repair',
+    phone: '(925) 301-3240',
+    address: '580 Valdry Ct, Suite D9, Brentwood, CA 94513',
+    email: 'ScreenKingsMobile@gmail.com',
+    instagram: 'screenking_bayarea',
+    site: 'https://www.screenkingmobile.com/',
+    /*
+      A REAL SHOP, AND NOT A MOBILE ONE — despite the domain. Their site says
+      the screens are "100% made at our shop" and invites you to visit; the
+      word MOBILE appears only as the label on a second phone line and inside
+      the business name. Nothing on their site says they come to you, so
+      nothing here says it either. They do list seventeen cities they serve.
+
+      NO PRICES ANYWHERE: everything is a free estimate by phone or email.
+
+      Their own email is ScreenKingsMobile@gmail.com — with an S — while the
+      domain is screenkingmobile.com without one. Easy to mistype either way.
+    */
+    quoteOnly:
+      'Custom window screens, screen doors, re-screening, patio sliders and pet doors, cut and built at their own shop in Brentwood and fitted across seventeen East Bay cities. Licensed and insured, number 036056. Every job is quoted from a free estimate.',
+    items: [],
+  },
+  {
+    slug: 'sweetest-sound',
+    name: 'Sweetest Sound',
+    label: 'Sweetest Sound',
+    cuisine: 'Dessert bar',
+    tagline: 'Ice cream and boozy sundaes, Mission District.',
+    color: '#1A1020|#E86FA6',
+    prep: 0,
+    /*
+      HE FILED IT "San Francisco • Goods" AND IT IS NOT REALLY GOODS. In their
+      own words it is "a design-driven ice cream and boozy dessert concept by
+      DMP, found inside Soundtrack" — a dessert and cocktail room, not a shop
+      selling a product. Ice cream is the closest honest seat and it is a fair
+      one, since hand-scooped ice cream is genuinely what they serve; the
+      San Francisco ice cream seat is Polly Ann's, so this takes a free number.
+    */
+    category: 'Ice cream shop',
+    address: '3192 16th St, San Francisco',
+    site: 'https://www.poweredbydmp.com/sweetest-sound',
+    needsSite: true,
+    /*
+      NO SITE OF THEIR OWN — a sub-page of their parent's, which is why it
+      carries needsSite.
+
+      NO ZIP, ON PURPOSE. Their page publishes the street and the district and
+      no postal code, and their own address block omits it. Not filled in here.
+
+      THE PHONE NUMBER ON THEIR PAGE IS SOUNDTRACK'S, not theirs — it sits
+      inside a structured-data block whose name is literally "Soundtrack" — so
+      it is not printed here as though it reached them.
+
+      AND THE BIGGER THING TO TELL HIM: this page is a barely-edited copy of
+      the Soundtrack page. Its machine-readable data is Soundtrack's verbatim,
+      its logo alt text reads "Soundtrack SF logo", and every photograph is a
+      Soundtrack interior. Sweetest Sound and Soundtrack are the same room. If
+      Soundtrack is ever sent as its own business, these two must not become
+      two tiles for one address.
+
+      The $400 is a floor for hiring the room, in their words "Starting from
+      $400 for 4 hours" — not the price of anything you eat. They publish no
+      menu prices at all.
+    */
+    quoteOnly:
+      'An ice cream and boozy dessert room inside Soundtrack, in the Mission: hand-scooped scoops, shakes, sundaes and halo-halo with a Make It Boozy upgrade, DJs from ten. Wednesday to Saturday, five till two. No menu prices are published.',
+    groups: [
+      {
+        name: 'Hiring the room',
+        items: [
+          ['Private event', 'Four hours. Their floor; it moves with the date.', 40000, 'from $400'],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
+    slug: 'co-ba',
+    /* Their diacritics, which are the name. The legal entity in their footer
+       is the undiacriticked CO BA HOUSE CORPORATION; the cafe is Cô Ba. */
+    name: 'Cô Ba',
+    label: 'Cô Ba',
+    cuisine: 'Vietnamese desserts',
+    tagline: 'Pandan waffles, chè and coffee on North First.',
+    color: '#14100C|#D8A657',
+    prep: 0,
+    category: 'Bakery',
+    phone: '(408) 708-7671',
+    address: '3730 N First Street, Suite 110, San Jose, CA 95134',
+    email: 'contact@cobacafe.biz',
+    instagram: 'cobacafesj',
+    site: 'https://cobacafe.biz/',
+    /*
+      NO ITEM PRICES. Their menu lives on Toast and their own site publishes
+      only a range — $6.50 to $21.50 — inside its structured data. A range is
+      not a price list, so nothing is itemised here.
+
+      THE NUMBER IN THEIR MACHINE-READABLE DATA IS AN OREGON ONE. Their footer
+      prints (408) 708-7671 three times; their JSON-LD carries a 503 number.
+      Anything reading their markup rather than their page — a search engine,
+      a directory — gets the wrong number. The visible one is used here and it
+      is worth telling them.
+    */
+    quoteOnly:
+      'A Vietnamese dessert cafe on North First in San Jose: chè, pandan waffles, tea and coffee, in their own words made with traditional flavours. Nine in the morning until half ten, later at weekends. Their prices are on Toast, not on their own site.',
+    items: [],
+  },
+  {
+    slug: 'persian-kabobs',
+    name: 'Persian Kabobs',
+    label: 'Persian Kabobs',
+    cuisine: 'Persian',
+    tagline: 'Flame-grilled kabobs and saffron rice, Cupertino.',
+    color: '#141014|#C9873A',
+    prep: 0,
+    category: 'Mediterranean',
+    /* Two numbers, both visitor-facing: every footer says 669-291-6697 and
+       the Visit Us page says (408) 257-1900. The local one is printed here
+       and the discrepancy is theirs to settle. */
+    phone: '(408) 257-1900',
+    address: '7335 Bollinger Rd, Cupertino, CA 95014',
+    email: 'zamarexinc@gmail.com',
+    site: 'https://www.persiankabobs.com/',
+    /*
+      NO PRICES. Their menu page renders in the browser and serves no item
+      names or prices in its HTML at all — a hundred and twenty-five items
+      exist behind it and none of them is readable.
+
+      NOTHING ON THIS PAGE REPEATS THEIR REVIEWS, AND THAT IS DELIBERATE. Two
+      of the three five-star testimonials on their own site are the site
+      builder's placeholder text, live in production: "Use this space to share
+      a testimonial quote about the business..." — signed "Dan C." and
+      "Linda S." under a heading that reads "Reviews on Google". Whatever that
+      is, it is not a review, and a directory that repeated it would be
+      publishing a fabricated one under a real restaurant's name. Their header
+      still carries "Sample Text" and lorem ipsum too. All of it is worth
+      telling them, kindly: it reads as carelessness rather than intent.
+    */
+    quoteOnly:
+      'A Persian kitchen on Bollinger Road in Cupertino doing flame-grilled kabobs, stews and saffron rice. Their menu is published without prices, so none are listed here.',
+    items: [],
+  },
+  {
+    slug: 'eat-more-pho',
+    name: 'Eat More Pho',
+    label: 'Eat More Pho',
+    cuisine: 'Vietnamese',
+    tagline: 'Pho on El Camino Real.',
+    color: '#12120E|#C4553A',
+    prep: 0,
+    category: 'Asian food',
+    address: '1066 E El Camino Real, Sunnyvale, CA 94087',
+    site: 'https://order.toasttab.com/online/eat-more-pho-em-1066-e-el-camino-real',
+    needsSite: true,
+    /*
+      HE FILED THIS AS SAN JOSE AND THE ADDRESS IS IN SUNNYVALE. 1066 E El
+      Camino Real is a Sunnyvale address; it sits on the Sunnyvale page. Worth
+      confirming with him, since he may have meant a different branch.
+
+      ALMOST NOTHING HERE IS FIRST-PARTY, AND THAT IS THE POINT. They have no
+      website: eatmorepho.com and half a dozen variants do not resolve at all,
+      and the only link he had was a Toast ordering page. Toast sits behind a
+      bot check that refuses everything, its sitemap included, so no menu, no
+      prices, no hours, no phone and no artwork could be read from anywhere
+      they publish. Only the name and the street — which is in the ordering
+      URL itself — are used.
+
+      THE STRONGEST WEBSITE PROSPECT ON THIS RUN. A restaurant whose entire
+      web presence is somebody else's ordering page is exactly what he sells.
+    */
+    contactOnly:
+      'They have no website of their own — only a Toast ordering page, which is where the menu and the prices are. Nothing is repeated here that they have not published somewhere we can read.',
+    items: [],
+  },
+  {
+    slug: 'hella-good-burger',
+    /* ALL CAPS, in their logo, their title and every heading. He filed them as
+       "Hella Good SJ", which is their domain rather than a name they use. */
+    name: 'HELLA GOOD BURGER',
+    label: 'Hella Good',
+    cuisine: 'Burgers',
+    tagline: 'Burgers, fried chicken and soft serve, downtown San Jose.',
+    color: '#141414|#E8B33A',
+    prep: 0,
+    category: 'Burgers and hot dogs',
+    address: '87 N. San Pedro St., San Jose, CA 95110',
+    instagram: 'hellagoodburger',
+    site: 'https://www.hellagoodsj.com/',
+    /*
+      NO PRICES AND NO PHONE. Their menu page describes eighteen items in full
+      and prices none of them — that is deferred to Toast — and they publish no
+      number at all.
+
+      Their own hours block misspells Wednesday, on two pages. Not repeated.
+    */
+    quoteOnly:
+      'A burger counter on North San Pedro in downtown San Jose: burgers, fried chicken, sides and soft serve, open daily from eleven and late on Fridays and Saturdays. Their prices are on Toast rather than their own site.',
+    items: [],
+  },
 ]

@@ -872,4 +872,37 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'vallejo-goods-12': 'b_butterpecan',
   'hayward-goods-12': 'b_butterpecan',
   'antioch-goods-12': 'b_butterpecan', //         coming soon, per their own site
+
+  /* The 31st, and the 1st. Two he sent as screenshots with no link at all —
+     everything on their pages comes off their own Instagram — plus a shop we
+     had listed on one of its two addresses. */
+  'oakland-goods2-3': 'b_delahcoffee', //        Coffee on page one is Jolly Cafe's
+  'san-francisco-goods2-6': 'b_portofperiperisf', // Wings on page one is Brasa Bros'
+  /* Their bio pins both shops; we had only the San Francisco one. */
+  'berkeley-goods2-0': 'b_udessertstory',
+
+  /* BEASTY - Online, 2026-09-01. Three shipping brands, and all three are pet
+     goods — a seat Pawddle has held since its own run, which is why Glow Paws,
+     DryPup and PuppiePack are all sitting on numbers that name something else
+     too. Same treatment: a free number, and the reason written down. */
+  'beasty-online-20': 'b_weasy', //      Pet goods is Pawddle's
+  'beasty-online-21': 'b_seatmate', //   same
+  'beasty-online-22': 'b_houndsy', //    same
+
+  /* Two shops for one barber, which is what he filed it as. */
+  'fremont-services-0': 'b_thecompanybarber', //   Barber and salon
+  'union-city-services-0': 'b_thecompanybarber',
+  /* Window and door screens, not phone screens. No screens category exists. */
+  'brentwood-services-22': 'b_screenking', //      Handyman and home repair
+  /* Ice cream on page one is Polly Ann's. */
+  'san-francisco-goods2-7': 'b_sweetestsound',
+
+  /* The 31st and the 1st, the food run. Two of his labels were off and are
+     corrected here rather than followed: Eat More Pho's address is in
+     SUNNYVALE, not San Jose, and "Hella Good SJ" is a domain — the business
+     writes itself HELLA GOOD BURGER. */
+  'san-jose-goods-13': 'b_coba', //         Bakery; a Vietnamese dessert cafe
+  'cupertino-goods-9': 'b_persiankabobs', // Mediterranean
+  'sunnyvale-goods-2': 'b_eatmorepho', //   Asian food; HIS CARD SAID SAN JOSE
+  'san-jose-goods2-1': 'b_hellagoodburger', // Burgers on page one is Dough Burger's
 }

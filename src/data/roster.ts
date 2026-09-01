@@ -804,11 +804,26 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.houseofthaisf.com/',
     address: '901 Larkin St, San Francisco',
   }),
+  /* TWO SHOPS, NOT ONE. He sent them again on 2026-08-31 labelled "Berkeley •
+     Goods / San Francisco • Goods", and their own Instagram bio pins both:
+     3489 16th St in San Francisco and 1849 Shattuck Ave in Berkeley. Only the
+     San Francisco one was listed, so the Berkeley page had no dessert shop
+     while this one sat a mile from it. Seated on both now. */
   seed('u-dessert-story', 'U Dessert Story', 'U Dessert', 'Dessert shop', '#20202A', {
     icon: 'u-dessert-story',
     logoTemplate: 'monogram', logoInitials: 'U', logoFace: 'grotesk',
     site: 'https://www.udessertstory.com/',
     address: '3489 16th St, San Francisco',
+    instagram: 'udessertstory',
+    panels: [
+      {
+        head: 'Both shops',
+        body: [
+          'San Francisco — 3489 16th St',
+          'Berkeley — 1849 Shattuck Ave',
+        ],
+      },
+    ],
   }),
   seed('the-farmacy', 'The Farmacy', 'The Farmacy', 'Cafe', '#1F4030', {
     icon: 'the-farmacy',
