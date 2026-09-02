@@ -911,4 +911,5 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      Program" with no city line; their own bio says The Veranda, Concord. */
   'alameda-goods-0': 'b_shakashack', //      no Hawaiian category; opens Alameda
   'concord-goods-7': 'b_mrsramen', //        Korean and ramen
+  'antioch-services-22': 'b_baysidefencing', //  Handyman and home repair; contractor taken (Serrano Turf)
 }

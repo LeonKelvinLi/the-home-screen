@@ -255,6 +255,24 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Bay Side Fencing Co — gathered 2026-09-02 from site
+     they are: Fencing contractor
+     flag: Lic #1042534, on their contact page and Instagram bio
+     flag: serves all of the Bay Area per their Instagram bio; the showroom is the Antioch address
+     flag: fence styles listed on their site: board on board, nail on dog ear, hog wire, ranch, 3-rail vinyl, horizontal, louvered, nail on flat top, deer fencing
+  */
+  'bayside-fencing': {
+    address: "1633 Viera Ave, Antioch, CA 94509",
+    phone: "925-420-6268",
+    email: "team@baysidefencingco.com",
+    hours: "Mon-Fri 9am-4pm, closed Sat-Sun",
+    instagram: "baysidefencing",
+    cuisine: "Fencing contractor",
+    tagline: "Licensed fencing contractor with a showroom on Viera Ave",
+    contactOnly: "Licensed fencing contractor with a showroom on Viera Ave. Redwood fences, custom and automatic gates, staining on new installations, and reclaimed wood accent walls. Free estimates by call or text (925-354-3677 for texts); they publish no prices.",
+  },
+
+  /*
      Benicia Grill — gathered 2026-09-02 from own-domain
      they are: Breakfast and lunch
      logo: http://www.benicia-grill.com/assets/images/logo/logo-white.jpg (166x161) — not cut into a tile yet

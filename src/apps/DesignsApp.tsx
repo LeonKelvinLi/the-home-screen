@@ -1,6 +1,118 @@
+import { useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { GLYPHS } from '../data/glyphs'
+import { submitDesignsContact } from '../lib/api'
 import type { ShellApi } from '../ios/Device'
+
+/**
+ * "Get in touch": a name and a number, and Leon calls back.
+ *
+ * Glenn, 2026-09-02, on the Call button that used to sit here: "do you prefer
+ * to leave your phone number here? Or leave a 'Get in touch' button where
+ * they leave their name and phone number for you to contact them at your
+ * convenience?" Leon: "Yupp that works." So the number comes off the page and
+ * the button collects theirs instead.
+ *
+ * Module scope, not inside DesignsApp: a component declared in a render body
+ * is a new function every render, so React remounts it and the half-typed
+ * form empties itself. tools/audit-nested-components.mjs fails the build on
+ * exactly that.
+ */
+function GetInTouch() {
+  const [open, setOpen] = useState(false)
+  const [name, setName] = useState('')
+  const [phone, setPhone] = useState('')
+  const [sending, setSending] = useState(false)
+  const [sent, setSent] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const sentOnce = useRef(false)
+
+  /* The same loose test the join form and the server use: ten digits, or
+     eleven starting with 1, or a + number with at least eight. */
+  const digits = phone.replace(/\D/g, '')
+  const phoneOk = phone.trim().startsWith('+')
+    ? digits.length >= 8
+    : digits.length === 10 || (digits.length === 11 && digits.startsWith('1'))
+  const ready = name.trim().length >= 2 && phoneOk
+
+  const submit = async () => {
+    if (!ready || sending || sentOnce.current) return
+    setSending(true)
+    setError(null)
+    try {
+      await submitDesignsContact({ name: name.trim(), phone: phone.trim() })
+      sentOnce.current = true
+      setSent(true)
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Could not send that. Try again.')
+    } finally {
+      setSending(false)
+    }
+  }
+
+  if (sent) {
+    return (
+      <p className="designs-touch-done" role="status">
+        Thanks, {name.trim()}. Leon will call or text you at {phone.trim()}.
+      </p>
+    )
+  }
+
+  if (!open) {
+    return (
+      <button type="button" className="btn-primary" onClick={() => setOpen(true)}>
+        Get in touch
+      </button>
+    )
+  }
+
+  return (
+    <form
+      className="designs-touch"
+      onSubmit={(e) => {
+        e.preventDefault()
+        void submit()
+      }}
+    >
+      <label className="join-field">
+        <span>Your name</span>
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          autoComplete="name"
+          placeholder="Your name"
+          enterKeyHint="next"
+          required
+        />
+      </label>
+      <label className="join-field">
+        <span>Phone number</span>
+        <input
+          type="tel"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          autoComplete="tel"
+          inputMode="tel"
+          placeholder="(510) 555-0123"
+          enterKeyHint="send"
+          required
+        />
+        <small className="join-hint">
+          Leon calls or texts you back at your convenience. The number is used for that and
+          nothing else.
+        </small>
+      </label>
+      <button type="submit" className="btn-primary" disabled={!ready || sending}>
+        {sending ? 'Sending…' : 'Send'}
+      </button>
+      {error && (
+        <p className="designs-touch-error" role="alert">
+          {error}
+        </p>
+      )}
+    </form>
+  )
+}
 
 /**
  * BEASTY Designs — the pitch to a business the operator is recruiting.
@@ -197,43 +309,37 @@ export function DesignsApp({ api }: { api: ShellApi }) {
           ))}
         </div>
 
-        <h2 className="designs-h">Holding your spot</h2>
+        <h2 className="designs-h">Your spot on the home screen</h2>
         {/*
-          Every term stated up front, including the ones a customer would rather
-          not read. An auto-renewing subscription sold to a California business
-          has to disclose the renewal, the price and how to cancel BEFORE it
-          charges — burying the month-seven charge under "six months free" is
-          exactly what that rule exists to stop. It also happens to be the term
-          most likely to cause an argument later, which is its own reason.
+          WAS THE $20/MONTH "HOLDING YOUR SPOT" CARD. Glenn, 2026-09-02, on a
+          screenshot of it: "right here you can update this and just put a
+          link to the members page." A spot is held through the affiliate
+          tiers on the Members page now — free, Biggie's Member, BEASTY Member
+          — so one page carries those prices and this one points at it rather
+          than quoting a second set that could drift from the first.
         */}
         <div className="designs-plan">
-          <span className="designs-plan-price">
-            $20<em>/month</em>
-          </span>
-          <ul>
-            <li>Holds your tile on the home screen and your Welcome discount.</li>
-            <li>
-              <strong>The first six months are free.</strong> The first $20 comes out in month
-              seven, then monthly after that.
-            </li>
-            <li>$180 for a year up front instead, which saves you $60.</li>
-            <li>Cancel any time.</li>
-            <li>Coming back after cancelling costs $20 to reactivate.</li>
-          </ul>
+          <p className="designs-plan-lead">
+            A spot on a city page is held through a BEASTY affiliate membership: a free tier,
+            Biggie&rsquo;s Member and BEASTY Member. The tiers, what each includes and what they
+            cost are on the Members page.
+          </p>
+          <button type="button" className="btn-primary" onClick={() => api.openApp('sys.members')}>
+            See the membership tiers
+          </button>
           <p className="designs-plan-foot">
-            Nothing is charged yet. Card payments are not connected, so this is the offer, not a
-            bill — you would be asked to confirm these terms before any money moved.
+            Nothing is charged through this app. A design quote here is separate from the
+            membership.
           </p>
         </div>
 
         <h2 className="designs-h">Start</h2>
         <div className="brand-contact">
           <p>A first conversation costs nothing and usually settles the scope in one call.</p>
-          <a className="btn-primary" href="tel:5108267735">
-            Call (510) 826-7735
-          </a>
-          <a className="btn-secondary" href="mailto:leondragon3798@gmail.com">
-            Email leondragon3798@gmail.com
+          <GetInTouch />
+          {/* designs@beastypages.com on his ask: "change your email address here". */}
+          <a className="btn-secondary" href="mailto:designs@beastypages.com">
+            Email designs@beastypages.com
           </a>
           <a
             className="btn-secondary"

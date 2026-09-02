@@ -422,7 +422,12 @@ export const PAGES: Record<PageKey, Page> = {
           'BEASTY Design services are provided by the same independent creator and developer behind the BEASTY platform.',
           'Help businesses discover BEASTY, grow the community, and get rewarded for the value you help create.',
         ],
-        after: 'Leon Kelvin Li \u2014 splk3798@gmail.com',
+        /* designs@beastypages.com, not the Gmail: Glenn, 2026-09-02, "replacing
+           your email address on the BEASTY designs referral program with your
+           beastypages.com email address ... won't get mixed up with your
+           current emails." The address is the one he proposed for the Designs
+           side when the Workspace was set up. */
+        after: 'Leon Kelvin Li \u2014 designs@beastypages.com',
       },
       {
         head: 'Bring a business onto the app',

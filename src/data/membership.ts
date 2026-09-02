@@ -229,9 +229,16 @@ export const MEMBERSHIP = {
     factual statement about where a customer's payment ends up, so it is quoted
     as his words and marked as needing the detail.
   */
+  /*
+    THE AMOUNT IS NOW HIS TOO. "$9 from every membership activation is
+    deducted for the foundation" (2026-09-02), and the same $9 sits under his
+    BARK arithmetic the night before. What is still missing is the
+    foundation's registration, so the flag stays for that.
+  */
   charity: {
     name: "Biggie's Purple Ribbon Foundation",
-    claim: "Proceeds from your sign-up go towards Biggie's Purple Ribbon Foundation.",
+    claim:
+      "Proceeds from your sign-up go towards Biggie's Purple Ribbon Foundation: $9 from every membership activation.",
     needsDetail: true,
   },
 } as const

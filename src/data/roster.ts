@@ -1028,6 +1028,17 @@ export const ROSTER_SEED: LocalSeed[] = [
       'on their own site.',
   }),
 
+  /* ---- 2026-09-02 ---- */
+  /* Their site link with "Antioch • Services" and three screenshots of their
+     Instagram. A licensed fencing contractor; the Contractor seat in Antioch
+     is Serrano's, so this takes Handyman and home repair on the Pleasanton
+     precedent. The mark is cut from the profile-ring screenshot he sent. */
+  seed('bayside-fencing', 'Bay Side Fencing Co', 'Bay Side Fencing', 'Fencing contractor', '#B3121B', {
+    icon: 'bayside-fencing',
+    logoTemplate: 'monogram', logoInitials: 'BF', logoFace: 'condensed',
+    site: 'https://baysidefencingco.com/',
+  }),
+
   /* ---- 2026-09-01 ---- */
   /* Sent as a link to their Square ordering site with "Alameda • Goods" and
      "Needs website" — the square.site IS the website, which is the point. No

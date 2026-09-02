@@ -1187,12 +1187,56 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
 const slackSafe = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
+/**
+ * A lead by email, on the Resend key the login codes already use.
+ *
+ * The webhook above has never been set on the live service, so every lead
+ * since the form shipped landed in a log nobody reads. Email is the channel
+ * the operator actually has: LEAD_EMAIL (vendor leads, for Glenn) and
+ * DESIGNS_LEAD_EMAIL (Get in touch on the Designs page, for Leon) are
+ * comma-separated lists; unset means no email, which is the state before
+ * this existed. Best-effort on purpose — the row is on disk before this runs,
+ * and a mail failure must never tell the person their message was refused.
+ */
+async function sendLeadEmail(toRaw: string | undefined, subject: string, text: string): Promise<void> {
+  const key = process.env.RESEND_API_KEY
+  const from = process.env.OTP_FROM_EMAIL
+  const to = String(toRaw ?? '')
+    .split(',')
+    .map((s) => s.trim())
+    .filter((s) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s))
+  if (!key || !from || !to.length) return
+  try {
+    const r = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
+      body: JSON.stringify({ from, to, subject, text }),
+      signal: AbortSignal.timeout(8000),
+    })
+    // The status, never the body: a provider error can echo the payload back.
+    if (!r.ok) console.error('lead email failed (lead is saved):', r.status)
+  } catch (err) {
+    console.error('lead email failed (lead is saved):', String(err))
+  }
+}
+
 function notifyLead(lead: Record<string, string>) {
   const f = (v: string) => slackSafe(v)
   const line = `NEW VENDOR LEAD  ${f(lead.business)} | ${f(lead.contact)}` +
     `${lead.cuisine ? ` | ${f(lead.cuisine)}` : ''}${lead.city ? ` | ${f(lead.city)}` : ''}` +
     `${lead.social ? ` | ${f(lead.social)}` : ''}`
   console.log(line)
+
+  void sendLeadEmail(
+    process.env.LEAD_EMAIL,
+    `BEASTY: new spot request from ${lead.business}`,
+    `${lead.business} asked for a spot on BEASTY pages.\n\n` +
+      `Contact: ${lead.contact}\n` +
+      `${lead.cuisine ? `What they do: ${lead.cuisine}\n` : ''}` +
+      `${lead.city ? `City: ${lead.city}\n` : ''}` +
+      `${lead.social ? `Social: ${lead.social}\n` : ''}` +
+      `\nSent from the Reserve a Spot form. Nothing is committed until you reply to them.`,
+  )
 
   const url = process.env.LEAD_WEBHOOK_URL
   if (!url) return
@@ -1208,6 +1252,54 @@ function notifyLead(lead: Record<string, string>) {
     signal: timeout,
   }).catch((err) => console.error('lead webhook failed (lead is saved):', String(err)))
 }
+
+/* ---------- BEASTY Designs: get in touch ---------- */
+
+/**
+ * A name and a number from the Designs page, for Leon to call back.
+ *
+ * Glenn's suggestion and Leon's "Yupp that works" (2026-09-02) took Leon's
+ * phone number off the page and put a Get in touch button there instead. The
+ * row goes into `applications` like a vendor lead — the name in `business`,
+ * `cuisine` marking it as a Designs enquiry — so the operator list shows it,
+ * it is logged, and it is emailed to DESIGNS_LEAD_EMAIL. Unauthenticated and
+ * bounded like the application route, for the same reasons.
+ */
+app.post('/api/designs/contact', rateLimiter(6, 3), async (req, res) => {
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_APP_FIELD) : '')
+  const name = str(req.body.name)
+  const phone = str(req.body.phone)
+  const digits = phone.replace(/\D/g, '')
+  const phoneOk = phone.startsWith('+')
+    ? digits.length >= 8
+    : digits.length === 10 || (digits.length === 11 && digits.startsWith('1'))
+  if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+  if (!phoneOk) return res.status(400).json({ error: 'A phone number that can be called back is required.' })
+
+  await db.prepare(
+    `INSERT INTO applications (id, business, cuisine, contact, city, social, created_at)
+     VALUES (?,?,?,?,?,?,?)`,
+  ).run(
+    `ap_${randomBytes(8).toString('hex')}`,
+    name,
+    'BEASTY Designs — get in touch',
+    phone,
+    null,
+    null,
+    Date.now(),
+  )
+
+  console.log(`NEW DESIGNS LEAD  ${slackSafe(name)} | ${slackSafe(phone)}`)
+  void sendLeadEmail(
+    process.env.DESIGNS_LEAD_EMAIL,
+    `BEASTY Designs: ${name} asked for a call`,
+    `${name} asked to be called or texted about BEASTY Designs.\n\nPhone: ${phone}\n\n` +
+      'Sent from the Get in touch button on the BEASTY Designs page.',
+  )
+
+  res.status(201).json({ ok: true })
+})
 
 /**
  * Operator-facing lead list.

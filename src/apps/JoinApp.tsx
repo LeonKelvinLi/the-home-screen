@@ -311,7 +311,14 @@ export function JoinApp({ api, onDone }: { api: ShellApi; onDone?: (a: Account) 
             />
             <small className="join-hint">
               {byText
-                ? 'We text you a six-digit code. Standard message rates apply.'
+                ? /*
+                    THE DISCLAIMER GLENN ASKED FOR, 2026-09-02: "you have to
+                    include a disclaimer that we reserve the right to send
+                    them promotional texts". It is also the opt-in wording the
+                    carrier registration wants, so it is stated here, where the
+                    number is typed, and nowhere looser.
+                  */
+                  'We text you a six-digit code. Standard message rates apply. By continuing you agree that BEASTY may also text you offers and news now and then; reply STOP to opt out.'
                 : 'Kept on your account. The code goes to your email.'}
             </small>
           </label>

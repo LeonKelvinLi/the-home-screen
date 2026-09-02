@@ -353,6 +353,31 @@ export async function submitApplication(input: ApplicationInput): Promise<void> 
   if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
 }
 
+/* ---------- BEASTY Designs: get in touch ---------- */
+
+/**
+ * A name and a number from the Designs page, for Leon to call back. The same
+ * shape of promise as an application: saved is claimed, delivered is not.
+ */
+export async function submitDesignsContact(input: { name: string; phone: string }): Promise<void> {
+  if (IS_LOCAL_ONLY) {
+    try {
+      const key = 'fb.designs-contact.v1'
+      const prev = JSON.parse(localStorage.getItem(key) ?? '[]')
+      localStorage.setItem(key, JSON.stringify([{ ...input, at: Date.now() }, ...prev].slice(0, 50)))
+    } catch {
+      /* private mode */
+    }
+    return
+  }
+  const res = await request('/api/designs/contact', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  })
+  if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
+}
+
 export const newIdempotencyKey = () =>
   `ik_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 12)}`
 

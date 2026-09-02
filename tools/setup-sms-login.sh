@@ -22,7 +22,10 @@
 #   2. Start the A2P 10DLC registration in parallel — BEASTY LLC has an EIN, so
 #      it is the Standard Brand path, not Sole Proprietor. Brand needs the legal
 #      name, EIN, address and website EXACTLY as the IRS has them; campaign needs
-#      the use case, sample messages and the opt-in wording.
+#      the use case, sample messages and the opt-in wording. The opt-in wording
+#      the app shows under the number box is: "By continuing you agree that
+#      BEASTY may also text you offers and news now and then; reply STOP to
+#      opt out." Use the same words on the campaign so they match.
 set -uo pipefail
 
 SERVICE=srv-d9nusqdaeets73cnca50

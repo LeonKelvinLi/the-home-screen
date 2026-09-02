@@ -78,6 +78,7 @@ for (const [id, want, expect] of [
   ['b_kababburger', 'Kabab Burger', { hours: 'Mon-Thu 11am-8pm', rows: 4 }],
   ['b_eaglepetgrooming', 'Eagle Pet Grooming', { call: '(650) 278-3611' }],
   ['b_shakashack', 'Shaka Shack', { hours: 'Mon-Tue, Thu-Sun 8:30am-3pm', rows: 4 }],
+  ['b_baysidefencing', 'Bay Side Fencing Co', { hours: 'Mon-Fri 9am-4pm', call: '925-420-6268' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -159,8 +160,20 @@ while (queue.length) {
   for (const m of t.matchAll(/assets\/[A-Za-z0-9_-]+\.js/g)) if (!seen.has(m[0])) queue.push(m[0])
 }
 console.log(`bundles       : ${seen.size} chunk(s), ${Math.round(bundles.length / 1024)}kb`)
-for (const s of ['Unlimited Loyalty and Welcome offers', 'members-perk-head', 'Tickets keep for any monthly raffle']) {
+for (const s of [
+  'Unlimited Loyalty and Welcome offers', 'members-perk-head', 'Tickets keep for any monthly raffle',
+  /* 2026-09-02: his domain address on Contacts, Leon's on Designs and MAKE $, his
+     sentence where Richmond was, the two-sided Members page, the Designs form. */
+  'glenn@beastypages.com', 'designs@beastypages.com', 'Get in touch directly with the owner of beastypages.com',
+  'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
+]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
+}
+/* And what he asked to have taken off: the old addresses, the city line, the
+   $20 holding card, Leon's number, the old acronym. A deploy that still ships
+   one of these is the old build. */
+for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP']) {
+  if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
 
 await b.close()

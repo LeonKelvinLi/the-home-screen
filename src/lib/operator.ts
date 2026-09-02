@@ -4,7 +4,7 @@
  * FILLED IN 2026-08-25, by him, in the thread: "510-789-3205 /
  * Glennmalicdem78@gmail.com — can you put my information here?" Everything
  * that reads this switched on at the same moment, which is what the note
- * below promised.
+ * below promised. The email moved to glenn@beastypages.com on 2026-09-02.
  *
  * ONE source. The Phone app's contact card and the intro screen's Phone panel
  * both read this, so there is exactly one place to fill in and no way for two
@@ -22,10 +22,20 @@
  */
 export const OPERATOR = {
   name: 'BEASTY',
-  /** Richmond, California. The city is public; the street address is not. */
-  city: 'Richmond, California',
+  /*
+    WHERE "RICHMOND, CALIFORNIA" USED TO BE. His ask, 2026-09-02: "remove
+    Richmond California and replace it with 'Get in touch directly with the
+    owner of beastypages.com if you have any questions, text or email is
+    preferred'." His words, split at the comma so it reads as two sentences.
+  */
+  note:
+    'Get in touch directly with the owner of beastypages.com if you have any questions. ' +
+    'Text or email is preferred.',
   phone: '510-789-3205',
-  email: 'Glennmalicdem78@gmail.com',
+  /* The domain address, on his ask of 2026-09-02 ("change my email address
+     to the domain one"). The mailbox exists: Leon set up the Workspace and
+     Glenn has been signing in to it. */
+  email: 'glenn@beastypages.com',
 } as const
 
 /** True once there is anything a customer could actually reach. */

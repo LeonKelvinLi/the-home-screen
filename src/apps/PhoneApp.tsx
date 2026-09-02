@@ -249,7 +249,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             <img src="/biggie.webp" alt="" draggable={false} />
           </span>
           <span className="operator-name">{OPERATOR.name}</span>
-          <span className="operator-where">{OPERATOR.city}</span>
+          <span className="operator-note">{OPERATOR.note}</span>
         </div>
 
         <ListSection

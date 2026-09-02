@@ -10,6 +10,7 @@ import {
   DISCOUNT_PER_MILESTONE,
 } from '../data/membership'
 import { LISTED_KITCHENS } from '../data/brands'
+import { AFFILIATE_INTRO, AFFILIATE_TIERS, AFFILIATE_CLOSE } from '../data/affiliateTiers'
 import type { Perk } from '../data/membership'
 import type { ShellApi } from '../ios/Device'
 
@@ -113,8 +114,63 @@ function PerkRow({ perk }: { perk: Perk }) {
   )
 }
 
+/**
+ * One of the two dropdown heads: User on the left, Business on the right.
+ *
+ * Module scope for the same reason PerkRow is — a component declared inside
+ * the render body remounts on every render and loses its state.
+ */
+function SideHead({
+  label,
+  sub,
+  open,
+  onClick,
+}: {
+  label: string
+  sub: string
+  open: boolean
+  onClick: () => void
+}) {
+  return (
+    <button
+      type="button"
+      className={`members-side${open ? ' is-open' : ''}`}
+      aria-expanded={open}
+      onClick={onClick}
+    >
+      <span className="members-side-text">
+        {label}
+        <span className="members-side-sub">{sub}</span>
+      </span>
+      <svg viewBox="0 0 24 24" aria-hidden="true" className="members-side-chev">
+        <path
+          d="M7 10l5 5 5-5"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.4"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </button>
+  )
+}
+
 export function MembersApp({ api }: { api: ShellApi }) {
   const m = MEMBERSHIP
+  /*
+    THE TWO DROPDOWNS. Glenn, 2026-09-02, on a screenshot of this page with
+    "User" and "Business" drawn across the top of it: "you can reconfigure
+    this page. Have two separate drop-down's for each side. User & business.
+    That way it consolidates membership choice on this page."
+
+    User opens by default because most people arriving here are customers and
+    the two passes are what the page has always led with; Business starts
+    folded so the three affiliate tiers do not push the passes off the screen.
+    Both can be open at once — somebody who owns a shop is also a customer.
+  */
+  const [side, setSide] = useState({ user: true, business: false })
+  const toggle = (k: 'user' | 'business') => setSide((v) => ({ ...v, [k]: !v[k] }))
 
   return (
     <AppChrome title={m.name} onBack={api.closeApp} className="is-beasty">
@@ -126,6 +182,23 @@ export function MembersApp({ api }: { api: ShellApi }) {
           <p className="members-lead">{m.lead}</p>
         </div>
 
+        <div className="members-sides" role="group" aria-label="Membership for">
+          <SideHead
+            label="User"
+            sub="Passes for customers"
+            open={side.user}
+            onClick={() => toggle('user')}
+          />
+          <SideHead
+            label="Business"
+            sub="Affiliate tiers"
+            open={side.business}
+            onClick={() => toggle('business')}
+          />
+        </div>
+
+        {side.user && (
+        <>
         {/*
           TWO TIERS, HIS. Price, then what the card honours, then the referral
           reward — in that order because that is the order somebody decides in:
@@ -208,6 +281,10 @@ export function MembersApp({ api }: { api: ShellApi }) {
               ? `Good at ${OFFER_PARTNER} today, with more partners being signed up.`
               : `Good at ${OFFER_COUNT} businesses today, and at every one that joins after.`}
         </p>
+        </>
+        )}
+
+        {side.business && <BusinessTiers api={api} />}
 
         <h2 className="members-h">Where the money goes</h2>
         <div className="members-charity">
@@ -218,8 +295,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
           */}
           {m.charity.needsDetail && (
             <p className="members-charity-flag">
-              Needs the operator&rsquo;s detail before this goes in front of customers — how much
-              of each payment, and the foundation&rsquo;s registration.
+              Needs the foundation&rsquo;s registration before this goes in front of customers.
             </p>
           )}
         </div>
@@ -261,6 +337,62 @@ function MembersFooterCta({ api }: { api: ShellApi }) {
             ? 'Card payments are not connected yet, so nothing can be charged and no membership can start. Choosing a tier records it and the operator will be in touch.'
             : 'Sign up free first. Every term above is shown again, and confirmed, before any money moves.'}
       </p>
+    </div>
+  )
+}
+
+/**
+ * The business side: the three affiliate tiers, in their words and at his
+ * prices. See data/affiliateTiers.ts for whose words and which prices.
+ *
+ * The rows reuse PerkRow, so a tier reads the way a pass does: every point on
+ * one line, his sentence one tap away. The cards are their own class rather
+ * than `.members-plan` because that class is the two customer passes, which
+ * tools/audit-membership-plans.mjs counts by name.
+ *
+ * NO CHOOSE BUTTON. Nothing in the app sells an affiliate spot yet; the free
+ * tier starts from the reserve form and the paid ones are arranged with the
+ * operator, and the note under the cards says exactly that rather than
+ * offering a button that would take nothing.
+ */
+function BusinessTiers({ api }: { api: ShellApi }) {
+  return (
+    <div className="members-biz">
+      {AFFILIATE_INTRO.map((line) => (
+        <p key={line} className="members-biz-intro">
+          {line}
+        </p>
+      ))}
+      {AFFILIATE_TIERS.map((t) => (
+        <div key={t.id} className={`members-biz-plan${t.id === 'beasty' ? ' is-best' : ''}`}>
+          <span className="members-biz-tier">Tier {t.n}</span>
+          <span className="members-biz-name">
+            {t.nameLead}{' '}
+            {t.mark === 'gem' ? <Gem size={18} /> : t.mark === 'ribbon' ? <Ribbon size={18} /> : null}{' '}
+            {t.nameTail}
+          </span>
+          <span className="members-biz-price">
+            {t.price}
+            {t.priceNote && <em>{t.priceNote}</em>}
+          </span>
+          <span className="members-biz-lead">{t.lead}</span>
+          <ul className="members-plan-perks">
+            {t.perks.map((perk) => (
+              <PerkRow key={perk.label} perk={perk} />
+            ))}
+          </ul>
+        </div>
+      ))}
+      <p className="members-biz-close">{AFFILIATE_CLOSE}</p>
+      <div className="members-biz-cta">
+        <button className="btn-primary" onClick={() => api.openApp('slot.join')}>
+          Reserve a spot
+        </button>
+        <p className="members-biz-cta-note">
+          Tier 1 begins with a reserved spot, which is free. Tier 2 and Tier 3 are arranged with
+          the operator once your spot is confirmed. Nothing is charged through this app.
+        </p>
+      </div>
     </div>
   )
 }

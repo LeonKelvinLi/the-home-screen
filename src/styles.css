@@ -4233,6 +4233,15 @@ textarea {
   color: var(--muted);
 }
 
+/* Two sentences where a city used to be, so it gets a measure and centring. */
+.operator-note {
+  max-width: 30ch;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+  color: var(--muted);
+}
+
 /* ---------- BEASTY members ---------- */
 
 .gem {
@@ -10584,3 +10593,221 @@ textarea {
   cursor: pointer;
 }
 .news-feed.is-archived { opacity: 0.72; }
+
+/* ---------- Members: the User / Business dropdowns and the business tiers ---------- */
+
+/*
+  TWO HEADS SIDE BY SIDE, each opening its own side of the page. His drawing
+  put "User" on the left and "Business" on the right of one row, so that is
+  the row; what each opens runs full width underneath, and both can be open.
+*/
+.members-sides {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 0 16px 12px;
+}
+
+.members-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 52px;
+  padding: 9px 12px 9px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #141414;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.members-side.is-open {
+  background: #141414;
+  border-color: #141414;
+  color: #fff;
+}
+
+.members-side-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.members-side-sub {
+  font-size: 11px;
+  font-weight: 600;
+  /* 0.72 of the ink, the same figure the notes use, so it clears 4.5:1 on the
+     yellow; on the dark open head it is white at 0.72. */
+  opacity: 0.72;
+}
+
+.members-side-chev {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  opacity: 0.7;
+  transition: transform 160ms ease;
+}
+
+.members-side.is-open .members-side-chev {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .members-side-chev {
+    transition: none;
+  }
+}
+
+.members-biz {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 16px;
+}
+
+.members-biz-intro {
+  margin: 0 4px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.82);
+}
+
+.members-biz-plan {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 14px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  color: #141414;
+}
+
+.members-biz-plan.is-best {
+  background: #141414;
+  border-color: #141414;
+  color: #fff;
+}
+
+.members-biz-tier {
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.72;
+}
+
+.members-biz-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.members-biz-price {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.members-biz-plan.is-best .members-biz-price {
+  color: #f6d800;
+}
+
+.members-biz-price em {
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0;
+  opacity: 0.72;
+}
+
+.members-biz-lead {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+.members-biz-plan.is-best .members-biz-lead {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.members-biz-plan.is-best .members-plan-perks {
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.members-biz-close {
+  margin: 2px 4px 0;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.72);
+}
+
+.members-biz-cta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.members-biz-cta-note {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: rgba(20, 20, 20, 0.68);
+}
+
+/* ---------- BEASTY Designs: the Members link card and Get in touch ---------- */
+
+.designs-plan-lead {
+  margin: 0 0 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.designs-plan .btn-primary {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.designs-touch {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.designs-touch .btn-primary[disabled] {
+  opacity: 0.45;
+}
+
+.designs-touch-done {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(52, 199, 89, 0.14);
+  color: #1c6b34;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.designs-touch-error {
+  margin: 0;
+  font-size: 13px;
+  color: #b3261e;
+}
