@@ -81,12 +81,18 @@ const seed = (
   }
   if (!research) return base
   const merged: LocalSeed = { ...base, ...research }
-  /* Research that carries a menu, a price list or its own sentence has said
-     what the roster note used to stand in for. Only the note is removed —
-     a hand-written contactOnly in `extra` (a business that asked for a
-     specific line) survives, because research never sets contactOnly to
-     ROSTER_NOTE. */
-  if ((merged.contactOnly === ROSTER_NOTE || merged.contactOnly === ROSTER_NOTE_PARTIAL) && (research.items?.length || research.groups?.length || research.quoteOnly || research.contactOnly)) {
+  /*
+    RESEARCH THAT SAYS WHAT THEY SELL RETIRES WHATEVER STOOD IN FOR IT.
+
+    Every contactOnly on a roster name — the generic note, the partial note, or
+    a hand-written line like "nothing else is listed yet" — was written as a
+    placeholder for the day the business's own menu or price list arrived. A
+    page cannot carry a priced menu AND a paragraph saying nothing is listed;
+    the data audit flags exactly that pair. So a menu, a quoted price list or a
+    researched sentence replaces the placeholder outright. What survives from
+    the hand-written extras is everything else: the clip, the mark, the CTA.
+  */
+  if (research.items?.length || research.groups?.length || research.quoteOnly || research.contactOnly) {
     merged.contactOnly = research.contactOnly
   }
   return merged

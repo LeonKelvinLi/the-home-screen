@@ -401,7 +401,10 @@ interface Seed {
   */
   address?: string
   phone?: string
-
+  /** Published contact address, where the business publishes one. */
+  email?: string
+  /** Their own site prices nothing: the page shows how to reach them instead of a menu. */
+  contactOnly?: string
 }
 
 /** name, description, low bound in cents, printed range. */
@@ -454,46 +457,84 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'hotboys-chicken', name: 'HotBoys Chicken', label: 'HotBoys Chicken',
+    slug: 'hotboys-chicken', name: 'World Famous Hotboys', label: 'HotBoys Chicken',
     site: 'https://worldfamoushotboys.com/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Nashville hot chicken', tagline: 'Nashville-style hot chicken, fried to order',
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-09-02. The four priced items that sat
+      here were ported from goodneighborbuilder.com and never confirmed; their
+      own site prices NOTHING — every menu favourite is a name and a
+      description, and the prices live on their ordering platforms only. So
+      the fiction is gone and the page says what they publish.
+
+      "Nashville hot chicken" was our label. Theirs is "Oakland's Original
+      Spicy Hot Fried Chicken", with "a nod to Nashville" — so the descriptor
+      is theirs now. Seven locations, Oakland the flagship; the others are
+      Sacramento, Walnut Creek, Hayward, Novato, and Carmel and Indianapolis
+      in Indiana.
+    */
+    cuisine: 'Hot fried chicken', tagline: 'Oakland’s original spicy hot fried chicken',
     color: '#F2B705', icon: 'hotboys', prep: 15, category: 'Menu',
-    items: [
-      ['Hot Chicken Sandwich', 'Buttermilk thigh, slaw, comeback sauce', 1350],
-      ['3 Piece Tender Combo', 'Tenders, fries, choice of heat', 1500],
-      ['Loaded Hot Fries', 'Chopped chicken, cheese, ranch drizzle', 1100],
-      ['Mac & Cheese', 'Baked, four cheese', 600],
-    ],
+    address: '1601 San Pablo Ave, Oakland, CA 94612',
+    email: 'dm@worldfamoushotboys.com',
+    instagram: 'worldfamoushotboys',
+    hours: 'Sun–Wed 9am–10pm, Thu 9am–midnight, Fri–Sat 9am–2am',
+    contactOnly:
+      'Oakland’s original spicy hot fried chicken — the sandwich, tenders, chicken and waffles, loaded fries and bonuts, at your heat level from Southern to HOT. Their own site publishes no prices; those are on their ordering page.',
+    items: [],
   },
   {
     slug: 'baked-blooms', name: 'Baked Blooms', label: 'Baked Blooms',
     site: 'https://bakedblooms.com/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Bakery & flowers', tagline: 'Fresh bakes and flower boxes',
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-09-02. "Bakery & flowers" was wrong:
+      the blooms are buttercream. They are a San Rafael "bouCAKEry" making
+      cupcake bouquets, and the four ported items — cinnamon roll trays,
+      brownie flights — do not exist on their menu. Their tiers are on their
+      homepage and match their store's prices exactly.
+
+      Their hours block is titled WINTER HOURS on a page selling a Summer
+      Collection, read in September; the schedule is carried, the label is not.
+      A visible theme error prints at the foot of every page — worth telling
+      them. A second phone is published as a cell: 415.378.5020.
+    */
+    cuisine: 'Cupcake bouquets', tagline: 'Art you can eat — bespoke cupcake bouquets',
     color: '#D06A8C', icon: 'baked-blooms', prep: 20, category: 'Bakery',
+    address: '2100 4th Street, Suite A, San Rafael, CA 94901',
+    phone: '(415) 419-2646',
+    email: 'sarah@bakedblooms.com',
+    instagram: 'bakedblooms',
+    hours: 'Tue–Sat 10am–2pm, Sun 10am–noon, closed Mon',
     items: [
-      ['Bloom Box + 6 Cookies', 'Seasonal blooms with warm cookies', 4500],
-      ['Half Dozen Cupcakes', "Baker's choice frosting", 2400],
-      ['Cinnamon Roll Tray', 'Four jumbo rolls, cream cheese glaze', 1800],
-      ['Brownie Flight', 'Fudge, walnut, cheesecake swirl', 1200],
+      ['Small BouCAKE', 'Seven cupcakes', 5000],
+      ['Medium BouCAKE', 'Twelve cupcakes', 7000],
+      ['Large BouCAKE', 'Nineteen cupcakes', 11000],
+      ['Extra Large BouCAKE', 'Twenty-four cupcakes', 13000],
+      ['Dozen, boxed', '', 6500],
+      ['Custom Arrangement', '', 5500, 'from $55'],
     ],
+    siteNote: 'Local delivery Tue–Fri up to twenty miles, priced at checkout.',
   },
   {
-    slug: 'wildfork-foods', name: 'WildFork Foods', label: 'WildFork Foods',
+    slug: 'wildfork-foods', name: 'Wild Fork Foods', label: 'WildFork Foods',
     site: 'https://wildforkfoods.com/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Butcher', tagline: 'Butcher-cut proteins, ready to cook',
-    color: '#C0392B', icon: 'wildfork', prep: 12, category: 'Butcher',
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-09-02. Not a butcher: a national
+      frozen meat and seafood chain that ships, with stores behind a locator.
+      The four ported items were never theirs. Their catalogue prices render
+      only in the browser and several are per pound with the final price by
+      weight, so the two here carry that as their label. No address is
+      published on the site itself.
+    */
+    cuisine: 'Meat and seafood', tagline: 'Frozen meat and seafood, shipped',
+    color: '#8B1E2D', icon: 'wildfork', prep: 5, category: 'Menu',
+    phone: '(833) 300-9453',
+    email: 'talk@wildforkfoods.com',
+    instagram: 'wildforkfoods',
     items: [
-      ['Ribeye 2-Pack', '12 oz each, hand cut', 3200],
-      ['Chicken Breast Family Pack', '4 lb, boneless skinless', 1900],
-      ['Wild Caught Salmon', 'Two 6 oz fillets', 2100],
-      ['Shrimp Skewers', 'Six garlic herb skewers', 1600],
+      ['Dry 10/20 Sea Scallops', 'Ten to twenty pieces, one pound', 2398, '$23.98 / lb'],
+      ['USDA Choice Center Cut Filet Mignon', 'Two pieces, about 0.85 lb; final price by weight', 3698, '$36.98 / lb'],
     ],
+    siteNote: 'A national chain; find a store or order for delivery on their site.',
   },
   {
     slug: 'vegan-mob', name: 'Vegan Mob', label: 'Vegan Mob',
@@ -573,18 +614,36 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitc…',
+    slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitchen',
     site: 'https://gaovietkitchen.com/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Vietnamese', tagline: 'Vietnamese comfort, made fresh daily',
-    color: '#1E7A6B', icon: 'gao-viet', prep: 16, category: 'Menu',
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-09-02, from their San Francisco menu.
+      The ported items are gone. In their words: "We blend traditional
+      Vietnamese flavors with a modern, high-energy dining experience built
+      around creativity, cocktails, and good times."
+
+      NO HOURS, and it is their page's doing: the summary line reads "Friday,
+      Saturday, Sunday — 11:30 PM - 10:00 PM" (a PM typo) while the detail
+      block on the same page says lunch 11:30–3 and dinner 5–10. A second
+      restaurant is in San Mateo, 313 South San Mateo Drive, (650) 477-2524,
+      and a San Jose one is "coming 2026".
+    */
+    cuisine: 'Vietnamese', tagline: 'Vietnamese flavours, cocktails and good times',
+    color: '#0F5132', icon: 'gao-viet', prep: 15, category: 'Menu',
+    address: '1900 Irving Street, San Francisco, CA 94122',
+    phone: '(415) 610-4631',
+    instagram: 'gaovietkitchen',
     items: [
-      ['Phở Tái', 'Rare steak, 12-hour broth', 1600],
-      ['Bánh Mì Thịt', 'Grilled pork, pâté, pickled veg', 1100],
-      ['Bún Chả', 'Grilled pork, vermicelli, herbs', 1700],
-      ['Fresh Spring Rolls', 'Two rolls, peanut sauce', 800],
+      ['Bánh Hỏi Sharing Set', 'Woven vermicelli platters with herbs, lettuce, pickles and fish sauce', 5000],
+      ['Wrap & Roll', 'Build-your-own fresh rolls: BBQ shrimp, grilled beef, nem nướng, crispy egg roll', 4200],
+      ['Gao Roll Sampler', 'Phở roll, nem nướng rolls, shrimp rolls, tofu rolls, imperial rolls', 3400],
+      ['Bánh Xèo', 'Turmeric coconut crêpe with five-spice pork belly, shrimp, jicama', 2700],
+      ['Gỏi Cuốn Tôm', 'Shrimp spring rolls with peanut sauce', 1500],
+      ['Phở Roll', 'Wok-tossed ribeye, garlic, ginger, onion, in a rice noodle sheet', 1800],
+      ['Chả Giò', 'Imperial rolls: pork, wood ear mushroom, vermicelli, taro', 1600],
+      ['Fish Sauce Chicken Wings', 'With Vietnamese coriander, garlic, chilli, jalapeño', 1700],
     ],
+    offer: ['Bánh Xèo', 'Gỏi Cuốn Tôm', 'Phở Roll', 'Fish Sauce Chicken Wings'],
   },
   /*
     BEASTY H20 CO — THE OPERATOR'S OWN BUSINESS, AND ITS MENU HERE IS INVENTED.
@@ -634,18 +693,24 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'winkydinkydogs', name: 'WinkyDinkyDogs', label: 'WinkyDinkyD…',
+    slug: 'winkydinkydogs', name: 'Winky Dinky Dogs', label: 'WinkyDinkyDogs',
     site: 'https://winkydinkydogs.com/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Hot dogs', tagline: 'Gourmet hot dogs, loaded up',
-    color: '#E8452C', icon: 'winky-dinky', prep: 10, category: 'Dogs',
-    items: [
-      ['Winky Classic', 'All beef dog, mustard, onions', 800],
-      ['Chili Cheese Dog', 'House chili, cheddar, jalapeño', 1100],
-      ['Bacon Wrapped Street Dog', 'Peppers, onions, crema', 1200],
-      ['Chili Cheese Fries', 'Full basket', 900],
-    ],
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-09-02. Their whole menu is one JPEG —
+      fourteen items and drinks, not a price on it — so the four ported prices
+      were never theirs and are gone. Their address is published with no ZIP,
+      and it is carried exactly as they write it rather than filled in.
+    */
+    cuisine: 'Hot dogs', tagline: 'Fresh. Delicious. Oakland.',
+    color: '#C81E1E', icon: 'winkydinky', prep: 10, category: 'Menu',
+    address: '325 19th Street, Oakland, CA',
+    phone: '(510) 817-4673',
+    email: 'info@winkydinkydogs.com',
+    instagram: 'thewinkydinkydogs',
+    hours: 'Mon–Fri 11am–8pm, Sat–Sun noon–6pm',
+    contactOnly:
+      'Dogs in beef, chicken, pork or vegan — the Original, the Mac N Chz, the Oaklandish with their chilli — plus a smash burger, a chicken sandwich, gumbo and loaded fries. Their menu is published without prices.',
+    items: [],
   },
   {
     slug: 'boba', name: 'Boba', label: 'Boba',
@@ -669,17 +734,31 @@ const SEED: Seed[] = [
       loyalty: 'A free can of soda with any purchase, any visit.',
     },
     site: 'https://www.ordermasatamalesandtacos.com/',
- name: 'Masa', label: 'Masa',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Mexican', tagline: 'Handmade tortillas and street tacos',
+    name: 'Masa Tamales & Taqueria', label: 'Masa',
+    /*
+      REDONE FROM THEIR OWN ORDERING SITE, 2026-09-02. The ported items are
+      gone; these are their carryout menu. A trailing plus on their prices
+      means it rises with the protein or option, so those carry a label. Their
+      site is a Menufy ordering domain rather than one of their own, which is
+      why needsSite — and its banner reads "Online Ordering Coming Soon!" on
+      what is itself the ordering site, so checkout may be off.
+    */
+    cuisine: 'Mexican', tagline: 'Hand-crafted tamales and taqueria, El Cerrito',
     color: '#D97706', icon: 'masa', prep: 12, category: 'Menu',
+    address: '10409 San Pablo Ave, El Cerrito, CA 94530',
+    phone: '(510) 778-1463',
+    hours: 'Daily 10am–10pm',
+    needsSite: true,
     items: [
-      ['Taco Trio', 'Three tacos, choice of meat', 1300],
-      ['Quesabirria Plate', 'Three tacos with consomé', 1700],
-      ['Burrito', 'Rice, beans, salsa verde', 1400],
-      ['Chips & Salsa', 'Fresh fried, two salsas', 600],
+      ['Quesabirria', 'Three corn tortillas dipped in consommé, melted cheese, shredded beef, onion, cilantro', 1450, '$14.50+'],
+      ['Street Taco', 'One taco on a handmade corn tortilla, your protein, onion and cilantro', 399, '$3.99+'],
+      ['Baja Tacos', 'Beer-battered fish or shrimp, slaw, chipotle sour cream', 550],
+      ['Burrito', 'Your protein with rice, beans, cheese, sour cream, guacamole', 1500, '$15.00+'],
+      ['Combo Plate, Tamales', 'Two tamales or a protein with four tortillas, rice, beans, pico, guacamole', 1600, '$16.00+'],
+      ['Wet Tamale', 'One tamale under warm red or green salsa, cotija and sour cream', 599, '$5.99+'],
+      ['Pizza Birria', 'A thirteen-inch tortilla dipped in consommé, stuffed with birria and cheese', 2600, '$26.00+'],
     ],
+    offer: ['Quesabirria', 'Street Taco', 'Burrito', 'Wet Tamale'],
   },
   {
     slug: 'waffles-cream', name: 'Waffles & Cream', label: 'Waffles & Cr…',
@@ -695,18 +774,38 @@ const SEED: Seed[] = [
     ],
   },
   {
-    slug: 'high-scores', name: 'High Scores', label: 'High Scores',
+    slug: 'high-scores', name: 'High Scores Arcade', label: 'High Scores',
     site: 'https://www.highscoresarcade.com/',
-    review:
-      'These prices and items were transcribed from goodneighborbuilder.com, which this file itself calls placeholder-looking, and have never been confirmed with the business. Treat the menu as a draft of what they might sell, not as their prices \u2014 including any ingredient or dietary wording, which nobody here has verified with the kitchen.',
-    cuisine: 'Arcade snacks', tagline: 'Arcade snacks, pizza, and slushies',
-    color: '#6D28D9', icon: 'high-scores', prep: 10, category: 'Snacks',
-    items: [
-      ['Pepperoni Personal Pizza', 'Eight inch, crispy crust', 1100],
-      ['Corn Dog Basket', 'Two dogs, curly fries', 1000],
-      ['Soft Pretzel', 'Warm, salted, cheese dip', 700],
-      ['Blue Raspberry Slushie', '24 oz, extra cold', 500],
+    /*
+      REDONE FROM THEIR OWN SITE, 2026-09-02. "Arcade snacks, pizza, and
+      slushies" was invented: they say outright "we do not have a kitchen or a
+      commercial sink". They sell beer and seltzer and nothing else to eat; the
+      ported menu is gone. What they price is admission — a wristband puts
+      every game on freeplay — and private parties, so those are the quoted
+      list here. A second arcade is at 459 Alvarado St, Monterey.
+
+      NO HOURS: their Visit page publishes Alameda's for only some days and
+      Monterey's with a broken time ("1a:30"). The phone is a New Jersey
+      number; they began in Burlington, NJ and moved west in 2012.
+    */
+    cuisine: 'Classic arcade', tagline: 'Classic gaming in a retro arcade, all on freeplay',
+    color: '#2D2A6E', icon: 'high-scores', prep: 0, category: 'Menu',
+    address: '1414 Park St, Alameda, CA 94501',
+    phone: '(609) 468-3083',
+    quoteOnly:
+      'An all-ages classic arcade — an interactive arcade museum, in their words — where a wristband sets every game to freeplay. No kitchen; beer and seltzer only, and parties bring their own refreshments.',
+    groups: [
+      {
+        name: 'Admission',
+        items: [
+          ['Unlimited gaming', 'Every game on freeplay', 1000, '$10 an hour'],
+          ['All day, in and out', '', 2200, '$22 all day'],
+          ['Private party, two hours, 15 guests', 'Guests beyond the package are $20 each', 30000, '$300'],
+          ['Private party, two hours, 20 guests', '', 40000, '$400'],
+        ],
+      },
     ],
+    items: [],
   },
 ]
 
@@ -743,6 +842,8 @@ const fromSeed = (s: Seed): Brand => ({
   site: s.site,
   address: s.address,
   phone: s.phone,
+  email: s.email,
+  contactOnly: s.contactOnly,
   needsSite: s.needsSite,
   siteNote: s.siteNote,
   instagram: s.instagram,

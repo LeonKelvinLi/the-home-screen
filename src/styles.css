@@ -1381,6 +1381,31 @@ textarea {
   font-variant-numeric: tabular-nums;
 }
 
+/* A quoted row is read, not tapped: no press feedback, and a range must not
+   wrap. Together with .brand-quote-note these were dropped by accident in
+   3f49231 (Aug 5) — every service page ran the note edge to edge, unstyled,
+   until 2026-09-01. */
+.menu-row.is-quote:active {
+  transform: none;
+  background: #fff;
+}
+
+.menu-row.is-quote .menu-row-price {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+/* States that the numbers below are quotes before anyone reads one as a fee. */
+.brand-quote-note {
+  margin: 14px 16px 0;
+  padding: 11px 13px;
+  border-radius: 12px;
+  background: rgba(0, 122, 255, 0.09);
+  color: #0a4a9e;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .menu-row-thumb {
   position: relative;
   flex: 0 0 auto;
@@ -1459,7 +1484,9 @@ textarea {
   font-style: normal;
   font-size: 12px;
   font-weight: 500;
-  opacity: 0.86;
+  /* Full white: at 0.86 the handle measured 4.4:1 on the magenta stop,
+     under the 4.5 that 12px text needs (audit-design, 2026-09-01). */
+  opacity: 1;
 }
 
 /*

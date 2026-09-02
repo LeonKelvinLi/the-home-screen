@@ -258,6 +258,22 @@ for (const b of BRANDS) {
 }
 
 /*
+  A NOTE IS PROSE A VISITOR READS. Two sentences glued by a generator show
+  their seams: a full stop doubled through a closing quote (`driveway.'.`) and
+  a sentence that starts lowercase after one. JDI Auto Detailing shipped both
+  to the local build on 2026-09-01 before anyone looked at the page.
+*/
+for (const b of BRANDS) {
+  for (const [field, text] of [['contactOnly', b.contactOnly], ['quoteOnly', b.quoteOnly], ['siteNote', b.siteNote]] as const) {
+    if (!text) continue
+    if (/[.!?]['"\u2019\u201d]\./.test(text) || /\.\s*\./.test(text)) err(`${b.name}: ${field} has a doubled full stop: "${text.slice(0, 80)}"`)
+    /* A full stop only: `doorstep!' — delivering` is a quoted exclamation
+       mid-sentence, not a seam. */
+    if (/\.['"\u2019\u201d]?\s+[a-z]/.test(text)) err(`${b.name}: ${field} starts a sentence in lowercase: "${text.slice(0, 80)}"`)
+  }
+}
+
+/*
   PRICES ARE MONEY. Anything under a dollar on a menu is almost always a
   units slip (dollars typed where cents were meant); anything over $5,000 on a
   small-business menu is a floor that lost its label or a typo.

@@ -38,6 +38,11 @@ const TODAY = new Date().toISOString().slice(0, 10)
 /* slug <- id, from the roster itself. */
 const roster = readFileSync('src/data/roster.ts', 'utf8')
 const slugs = [...roster.matchAll(/seed\('([a-z0-9-]+)'/g)].map((m) => m[1])
+/* Researchers copy from rendered HTML and bring entities with them. */
+const ENT = { '&amp;': '&', '&#38;': '&', '&quot;': '"', '&#34;': '"', '&#39;': "'", '&apos;': "'", '&lt;': '<', '&gt;': '>', '&nbsp;': ' ', '&#8217;': '’', '&#8216;': '‘', '&#8220;': '“', '&#8221;': '”' }
+const clean = (v) => (typeof v === 'string' ? v.replace(/&(amp|#38|quot|#34|#39|apos|lt|gt|nbsp|#8217|#8216|#8220|#8221);/g, (m) => ENT[m] ?? m).replace(/\s+/g, ' ').trim() : v)
+const deep = (v) => (Array.isArray(v) ? v.map(deep) : v && typeof v === 'object' ? Object.fromEntries(Object.entries(v).map(([k, x]) => [k, deep(x)])) : clean(v))
+
 const slugById = Object.fromEntries(slugs.map((s) => [`b_${s.replace(/-/g, '')}`, s]))
 const rosterName = Object.fromEntries([...roster.matchAll(/seed\('([a-z0-9-]+)',\s*'((?:[^'\\]|\\.)*)'/g)].map((m) => [m[1], m[2]]))
 
@@ -48,7 +53,9 @@ if (existsSync(OUT)) {
   for (const m of cur.matchAll(/\n  \/\/ hand-edited[^\n]*\n([\s\S]*?)\n  '([a-z0-9-]+)': (\{[\s\S]*?\n  \}),/g)) keep[m[2]] = m[0]
 }
 
-const SERVICE = /detail|repair|groom|spa|salon|gym|fitness|yoga|rental|photo|booth|tow|wash|paint|law|attorney|media|production|advertis|virtual|turf|paver|charter|bus\b|balloon|event|golf|paintball|trampoline|park|wiring|proposal|design|studio|clean|tint|coating|muffler|mechanic|tire|hauling|landscap|lighting|contractor|barber|nail|massage|dance|tutor|coach|daycare|kennel|walking|sitting/i
+/* Word-bounded where a token is short enough to hide inside another word —
+   "tow" sat inside "Downtown" and filed a barbecue menu as quoted services. */
+const SERVICE = /detail|repair|groom|\bspa\b|salon|\bgym\b|fitness|yoga|rental|photo|booth|\btow(ing)?\b|\bwash|\bpaint|\blaw\b|attorney|\bmedia\b|production|advertis|virtual|\bturf|paver|charter|\bbus(es)?\b|balloon|\bevent|\bgolf|paintball|trampoline|\bpark\b|wiring|proposal|\bdesign|studio|\bclean|\btint|coating|muffler|mechanic|\btires?\b|hauling|landscap|lighting|contractor|barber|\bnails?\b|massage|\bdance|tutor|\bcoach|daycare|kennel|walking|sitting|electronics|planning|\bcrm\b|automation|marketing/i
 
 const entries = {}
 const report = { files: 0, businesses: 0, priced: 0, quoted: 0, unpriced: 0, blocked: 0, unknownId: [], droppedItems: 0 }
@@ -57,7 +64,8 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
   let arr
   try { arr = JSON.parse(readFileSync(join(dir, f), 'utf8')) } catch (e) { console.error(`skip ${f}: ${e.message}`); continue }
   report.files++
-  for (const r of arr) {
+  for (const r0 of arr) {
+    const r = deep(r0)
     report.businesses++
     const slug = slugById[r.id]
     if (!slug) { report.unknownId.push(r.id); continue }
@@ -75,6 +83,10 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     if (r.email) e.email = String(r.email).trim()
     if (r.hours) e.hours = String(r.hours).trim()
     if (r.instagram) e.instagram = String(r.instagram).replace(/^@/, '').trim()
+    /* The roster's descriptor line was "lifted from the name" — his words —
+       so a researched one is better informed. Kept short: it is a line under
+       a name, not a sentence. */
+    if (r.cuisine && String(r.cuisine).trim().length <= 28) e.cuisine = String(r.cuisine).trim()
     if (r.site_kind === 'stopgap') e.needsSite = true
     const line = (r.one_line || '').trim()
     if (line && line.length <= 72 && !/[.!?]$/.test(line.slice(0, -1))) e.tagline = line
@@ -88,24 +100,45 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     }
     const anyFloor = items.some((i) => i[3])
     const isService = SERVICE.test(r.cuisine || '') || SERVICE.test(rosterName[slug] || '')
-    const sentence = line ? (line.endsWith('.') ? line : line + '.') : ''
+    /* A line that already ends in a full stop — including one tucked inside a
+       closing quote, as in `...your driveway.'` — gets no second one. And a
+       researcher's price note is a clause; it starts a sentence here. */
+    const endStop = (t) => (/[.!?]['"\u2019\u201d]?$/.test(t) ? t : t + '.')
+    const capital = (t) => t.replace(/^./, (c) => c.toUpperCase())
+    const sentence = line ? endStop(line) : ''
+    const noteSentence = r.price_note ? capital(endStop(String(r.price_note).trim())) : ''
+    const hardFact = !!(e.address || e.phone || e.hours || items.length)
 
-    if (r.blocked && !items.length && !e.address && !e.phone) {
+    if (r.blocked && !hardFact) {
+      /* Nothing readable. The roster note stays; only the notes are kept. */
       report.blocked++
-      if (!sentence) continue
-      e.contactOnly = sentence
-    } else if (items.length && (isService || anyFloor)) {
+      if (!Object.keys(e).length) { entries[slug] = { e: {}, notes }; continue }
+    } else if (items.length && isService) {
+      /* A service's prices are quoted, not ordered: a group, and a sentence.
+         A floor keeps its label in the fourth slot. */
       report.quoted++
       e.groups = [{ name: anyFloor ? 'Prices, from' : 'Prices', items: items.map(([n, d, c, l]) => (l ? [n, d, c, l] : [n, d, c])) }]
-      e.quoteOnly = `${sentence} ${r.price_note ? r.price_note.replace(/\.?$/, '.') : 'Prices are theirs, from their own site.'}`.trim()
+      e.quoteOnly = `${sentence} ${noteSentence || 'Prices are theirs, from their own site.'}`.trim()
     } else if (items.length) {
+      /* Food and retail: a menu. A "from" item keeps its label — the menu row
+         renders priceLabel over the number — so a floor is never shown as a
+         fixed price. */
       report.priced++
-      e.items = items.map(([n, d, c]) => [n, d, c])
+      e.items = items.map(([n, d, c, l]) => (l ? [n, d, c, l] : [n, d, c]))
       e.offer = items.slice(0, 4).map((i) => i[0])
-    } else {
+      /* The researcher's note on the prices — "from their catering PDF",
+         "private dining only until they open" — belongs under the menu, where
+         siteNote renders as the line that links to their own site. */
+      if (noteSentence) e.siteNote = noteSentence
+    } else if (hardFact) {
+      /* An address or a number and no prices: say what they are and that
+         they publish none. */
       report.unpriced++
-      const why = r.price_note ? r.price_note.replace(/\.?$/, '.') : 'They publish no prices.'
+      const why = noteSentence || 'They publish no prices.'
       e.contactOnly = `${sentence} ${why}`.trim()
+    } else {
+      /* Only soft facts (a handle, a stopgap flag). The roster note stays. */
+      report.unpriced++
     }
     entries[slug] = { e, notes }
   }

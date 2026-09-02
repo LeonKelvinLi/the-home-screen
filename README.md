@@ -32,7 +32,16 @@ npm run build                 # the audits serve dist/, so build first
 node tools/audit-all.mjs      # every audit, three at a time
 node tools/audit-all.mjs about members   # or just the ones whose name matches
 python3 tools/gap-check.py    # every link he ever sent, against the catalogue
+node tools/live-verify.mjs    # AFTER a deploy: drives beastypages.com itself
 ```
+
+The roster's facts come from `tools/roster-research-ingest.mjs`, which reads
+the research JSON (one array per batch, facts only from each business's own
+site) and writes `src/data/rosterResearch.ts` — generated, do not hand-edit.
+`node tools/spot-roster.mjs` (with `BASE=` pointing at a running server) prints
+what a visitor sees on a handful of roster pages: the name, the hours, the
+rows. The first version of it passed eight pages that were all another
+agent's viewer on the same port, so it now demands the brand's own name.
 
 Each audit starts its own server, its own test database and its own browser, so
 none of them needs anything running first. **They serve `dist/`** — a source

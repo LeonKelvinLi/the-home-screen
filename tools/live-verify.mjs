@@ -64,6 +64,41 @@ for (const [id, want] of [
   if (title !== want) fails.push(`${id} shows "${title}", expected "${want}"`)
 }
 
+// ---- the roster research, on the pages it filled ------------------------
+/*
+  Eighty-eight roster seats were filled from the businesses' own sites on
+  2026-09-01 — hours, menus, quote lists, contact-only notes. A title check
+  proves the page exists; this proves the facts reached it: hours under the
+  address, a priced menu or a quote group, or the contact card with a number.
+  And the quote note is styled — it ran edge to edge, unstyled, from Aug 5.
+*/
+for (const [id, want, expect] of [
+  ['b_soltaqueria', 'Sol Taqueria', { hours: 'Mon-Thu 10am-9pm', rows: 4 }],
+  ['b_jdiautodetailing', 'JDI Auto Detailing', { hours: 'Mon-Sat 8am-6pm', rows: 8, quote: true }],
+  ['b_kababburger', 'Kabab Burger', { hours: 'Mon-Thu 11am-8pm', rows: 4 }],
+  ['b_eaglepetgrooming', 'Eagle Pet Grooming', { call: '(650) 278-3611' }],
+]) {
+  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await p.waitForTimeout(600)
+  const got = await p.evaluate(() => {
+    const txt = (sel) => document.querySelector(sel)?.textContent?.replace(/\s+/g, ' ').trim() ?? ''
+    const q = document.querySelector('.brand-quote-note')
+    return {
+      title: txt('h1'),
+      hours: txt('.brand-hours'),
+      rows: document.querySelectorAll('.menu-row').length,
+      quotePad: q ? Math.round(q.getBoundingClientRect().left) : null,
+      call: txt('.brand-contact'),
+    }
+  })
+  console.log(`${id.padEnd(22)}: ${got.title} | ${got.hours || '-'} | ${got.rows} rows${got.quotePad !== null ? ` | note at x=${got.quotePad}` : ''}`)
+  if (got.title !== want) fails.push(`${id} shows "${got.title}", expected "${want}"`)
+  if (expect.hours && !got.hours.startsWith(expect.hours)) fails.push(`${id} hours read "${got.hours}", expected "${expect.hours}…"`)
+  if (expect.rows && got.rows < expect.rows) fails.push(`${id} shows ${got.rows} rows, expected ${expect.rows}`)
+  if (expect.quote && (got.quotePad === null || got.quotePad < 12)) fails.push(`${id}: the quote note is ${got.quotePad === null ? 'missing' : 'unstyled, at x=' + got.quotePad}`)
+  if (expect.call && !got.call.includes(expect.call)) fails.push(`${id}: the contact card does not carry ${expect.call}`)
+}
+
 // ---- the Instagram button ------------------------------------------------
 await p.goto(`${base}/?b=b_baymemoriesbooth`, { waitUntil: 'networkidle', timeout: 45000 })
 await p.waitForTimeout(600)
@@ -129,4 +164,4 @@ for (const s of ['Unlimited Loyalty and Welcome offers', 'members-perk-head', 'T
 
 await b.close()
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); process.exit(1) }
-console.log(`\nPASS on ${base}: the chapter stays open, three new pages render, the button links, the folded perks shipped.`)
+console.log(`\nPASS on ${base}: the chapter stays open, the pages render, the roster facts show, the button links, the folded perks shipped.`)
