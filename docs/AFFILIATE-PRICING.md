@@ -72,7 +72,29 @@ now tier two's price; the $39 monthly does not appear in the tier text at all.
 Nothing sells a spot in the app yet, so no arithmetic depends on which of the
 two is meant.
 
+## The loyalty schedule, 2026-09-02 (late)
+
+Glenn marked up a City Sports Club pricing screen and sent it with "I'm
+considering making this the standard for initiation fee and annual fees ...
+This will reward affiliates that are loyal to the platform" and "Inspired but
+never duplicated". Leon: "Yupp we can do that way." His marks, as written:
+
+| | |
+|---|---|
+| Initiation fee | $99 |
+| Annual fee, 2nd and 3rd year | $69 |
+| Annual fee, 4th year and after | $39 |
+
+The $29.99 monthly on the same screen carried no mark and was not mentioned,
+so it is not part of the standard. NOT ON THE PAGE, because the tiers above
+already print $69 and $99 and nothing says how the two fit together: is $99
+the initiation for every tier, or only BEASTY Member, and is the $69 tier
+its own initiation? One sentence from Glenn settles it; until then the page
+prints the tier figures and nothing about years.
+
 ## What is not settled
+
+- **How the loyalty schedule maps onto the tiers** (above).
 
 - **What period $69 and $99 cover.** The tier text carries no "per year" or
   "per month" and none was said; the page prints the figures exactly as

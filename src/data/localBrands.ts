@@ -203,6 +203,8 @@ export interface LocalSeed {
    * is carrying real information about the place.
    */
   photo?: { src: string; credit: string; alt: string }
+  /** Several, one at a time, swiped — see Brand.photos. */
+  photos?: { src: string; credit: string; alt: string }[]
 }
 
 /**
@@ -640,6 +642,27 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteNote: 'Litters, pedigrees and availability are on sincitypits.com',
     phone: '(702) 531-4960',
     address: 'Las Vegas, NV 89141',
+    /*
+      THEIR OWN POST, BOTH SLIDES, on Glenn's ask of 2026-09-02: "can you post
+      this on Sin City Pits page? Also, the gallery. I'm starting to contact a
+      lot of the affiliates on the pages to get in a legit offer to post." He
+      sent the flyer and a screenshot of the post's second slide, with "crop
+      this and put it when you scroll to the right on their page." Cropped to
+      the pictures; nothing on them is ours. The words in the alt are read off
+      the flyer.
+    */
+    photos: [
+      {
+        src: '/photos/sin-city-pits-breeder.webp',
+        alt: 'Sin City Pits flyer, Breeder Opportunity: three pit bull puppies, two grey and one tan. Available females with a breeding unit, from a select list of Sin City Pits studs, only with first or second pick.',
+        credit: 'Posted by Sin City Pits',
+      },
+      {
+        src: '/photos/sin-city-pits-dogs.webp',
+        alt: "Five Sin City Pits dogs composed on rocks under a stormy sky, named on the picture: SCP Disciple's Az, Melillo's Thor, SCP Az's Saint and SCP Queen Of Hearts.",
+        credit: 'Posted by Sin City Pits',
+      },
+    ],
     contactOnly:
       'Sin City Pits breeds American Pitbull Terriers and runs a canine semen bank \u2014 not a kitchen, so there is nothing to order here. They publish no prices at all: litters, stud fees and shipping are quoted by conversation. Call them, or start on their site.',
     items: [],

@@ -79,6 +79,7 @@ for (const [id, want, expect] of [
   ['b_eaglepetgrooming', 'Eagle Pet Grooming', { call: '(650) 278-3611' }],
   ['b_shakashack', 'Shaka Shack', { hours: 'Mon-Tue, Thu-Sun 8:30am-3pm', rows: 4 }],
   ['b_baysidefencing', 'Bay Side Fencing Co', { hours: 'Mon-Fri 9am-4pm', call: '925-420-6268' }],
+  ['b_sincitypits', 'Sin City Pits', { photos: 2 }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -91,6 +92,7 @@ for (const [id, want, expect] of [
       rows: document.querySelectorAll('.menu-row').length,
       quotePad: q ? Math.round(q.getBoundingClientRect().left) : null,
       call: txt('.brand-contact'),
+      photos: document.querySelectorAll('.brand-photos-track img').length,
     }
   })
   console.log(`${id.padEnd(22)}: ${got.title} | ${got.hours || '-'} | ${got.rows} rows${got.quotePad !== null ? ` | note at x=${got.quotePad}` : ''}`)
@@ -99,6 +101,7 @@ for (const [id, want, expect] of [
   if (expect.rows && got.rows < expect.rows) fails.push(`${id} shows ${got.rows} rows, expected ${expect.rows}`)
   if (expect.quote && (got.quotePad === null || got.quotePad < 12)) fails.push(`${id}: the quote note is ${got.quotePad === null ? 'missing' : 'unstyled, at x=' + got.quotePad}`)
   if (expect.call && !got.call.includes(expect.call)) fails.push(`${id}: the contact card does not carry ${expect.call}`)
+  if (expect.photos && got.photos < expect.photos) fails.push(`${id}: ${got.photos} pictures in the strip, expected ${expect.photos}`)
 }
 
 // ---- the Instagram button ------------------------------------------------
@@ -166,6 +169,7 @@ for (const s of [
      sentence where Richmond was, the two-sided Members page, the Designs form. */
   'glenn@beastypages.com', 'designs@beastypages.com', 'Get in touch directly with the owner of beastypages.com',
   'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
+  'sin-city-pits-breeder', 'brand-photos-track',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

@@ -33,6 +33,21 @@ export interface GalleryShot {
 const post = (code: string) => `https://www.instagram.com/p/${code}/`
 
 export const GALLERY: GalleryShot[] = [
+  /*
+    NOT HIS POST — an affiliate's, and the first one. Glenn, 2026-09-02:
+    "can you post this on Sin City Pits page? Also, the gallery. I'm starting
+    to contact a lot of the affiliates on the pages to get in a legit offer to
+    post." The caption is the flyer's own words, trimmed; the post itself was
+    sent as a screenshot, so there is no shortcode and no link back. Dated the
+    day he sent it, which is the day their Instagram showed it as an hour old.
+  */
+  {
+    src: '/gallery/2026-09-02-sin-city-pits-breeder.webp',
+    taken: '2026-09-02',
+    alt: 'Sin City Pits flyer, Breeder Opportunity: three pit bull puppies, two grey and one tan, above the words available females plus breeding unit.',
+    caption:
+      'Sin City Pits: Breeder opportunity. Purchase one of these select females and receive one breeding unit from a select list of Sin City Pits studs. Only available with first or second pick.',
+  },
   {
     src: '/gallery/CbeRyb1OCcZ.webp',
     taken: '2022-03-23',

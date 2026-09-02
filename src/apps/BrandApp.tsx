@@ -542,11 +542,43 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             photograph. `alt` is real text rather than an empty decorative one,
             because this picture is carrying information about the business.
           */}
-          {brand.photo && (
-            <figure className="brand-photo">
-              <img src={brand.photo.src} alt={brand.photo.alt} loading="lazy" decoding="async" />
-              <figcaption>{brand.photo.credit}</figcaption>
-            </figure>
+          {/*
+            SEVERAL PICTURES, ONE AT A TIME. Glenn sent both slides of a Sin
+            City Pits post: "post this on Sin City Pits page" for the first,
+            and for the second "crop this and put it when you scroll to the
+            right on their page." So this is a strip that snaps a picture at a
+            time, the way the post he was looking at does, rather than a grid
+            that shrinks both to thumbnails. Square, not 5:4: their posts are
+            square and a 5:4 cover crop takes the flyer's headline off.
+          */}
+          {brand.photos?.length ? (
+            <div className="brand-photos">
+              <ul
+                className="brand-photos-track"
+                aria-label={`${brand.photos.length} pictures from ${brand.name}. Swipe sideways for the next.`}
+              >
+                {brand.photos.map((ph) => (
+                  <li key={ph.src}>
+                    <figure className="brand-photo is-square">
+                      <img src={ph.src} alt={ph.alt} loading="lazy" decoding="async" />
+                      <figcaption>{ph.credit}</figcaption>
+                    </figure>
+                  </li>
+                ))}
+              </ul>
+              {brand.photos.length > 1 && (
+                <p className="brand-photos-hint">
+                  {brand.photos.length} pictures. Swipe for the next.
+                </p>
+              )}
+            </div>
+          ) : (
+            brand.photo && (
+              <figure className="brand-photo">
+                <img src={brand.photo.src} alt={brand.photo.alt} loading="lazy" decoding="async" />
+                <figcaption>{brand.photo.credit}</figcaption>
+              </figure>
+            )
           )}
 
           {/* Says plainly that this is a selection, not their whole menu —

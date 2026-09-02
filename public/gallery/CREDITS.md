@@ -1,5 +1,11 @@
 # Gallery provenance
 
+**2026-09-02: the first affiliate post.** `2026-09-02-sin-city-pits-breeder.webp`
+is Sin City Pits' own flyer, cropped out of the screenshot Glenn sent with
+"post this on Sin City Pits page? Also, the gallery." It is theirs, not his,
+and it is named by date because it arrived as a screenshot with no shortcode.
+The same picture and the post's second slide sit on their brand page.
+
 Twenty-nine posts from **instagram.com/beasty_pages** — the operator's own
 account, so unlike the wallpapers and the business logos this is his material on
 his own app. Nothing here belongs to a third party except the people and places

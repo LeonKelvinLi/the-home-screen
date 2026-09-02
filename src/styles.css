@@ -10811,3 +10811,50 @@ textarea {
   font-size: 13px;
   color: #b3261e;
 }
+
+/* ---------- a brand's pictures, one at a time ---------- */
+
+.brand-photos {
+  margin: 14px 0 0;
+}
+
+/*
+  A picture per screen, snapped, no scrollbar: the gesture Glenn was
+  describing is the one Instagram taught everybody. The hint under it is
+  there because a strip that shows exactly one picture looks like one picture.
+*/
+.brand-photos-track {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.brand-photos-track::-webkit-scrollbar {
+  display: none;
+}
+
+.brand-photos-track li {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+}
+
+.brand-photos-track .brand-photo {
+  margin: 0;
+}
+
+.brand-photo.is-square img {
+  aspect-ratio: 1 / 1;
+}
+
+.brand-photos-hint {
+  margin: 8px 0 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--muted);
+}

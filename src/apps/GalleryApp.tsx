@@ -60,8 +60,9 @@ export function GalleryApp({ api }: { api: ShellApi }) {
           hiding behind a spinner.
         */}
         <p className="gal-note">
-          Twenty-nine posts from @beasty_pages, with the captions as written. Instagram does not
-          let these update themselves, so newer ones are added by hand.
+          Twenty-nine posts from @beasty_pages, with the captions as written, and affiliates&rsquo;
+          own posts as Glenn adds them. Instagram does not let these update themselves, so newer
+          ones are added by hand.
         </p>
         <a className="gal-link" href="https://www.instagram.com/beasty_pages/" target="_blank" rel="noreferrer">
           See them all on Instagram

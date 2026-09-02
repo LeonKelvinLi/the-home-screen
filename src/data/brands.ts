@@ -137,6 +137,8 @@ export interface Brand {
   needsSite?: true
   /** One photograph of the place, ours to serve. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
+  /** Several, swiped through. See LocalSeed.photos. */
+  photos?: { src: string; credit: string; alt: string }[]
   /** A real ordering link (Toast, their own checkout), where one exists. */
   orderUrl?: string
   phone?: string
@@ -391,6 +393,13 @@ interface Seed {
   clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
   /** One photograph of the place. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
+  /**
+   * Several photographs, shown one at a time and swiped through — the first
+   * is what you see, the rest are "when you scroll to the right", which is
+   * how Glenn described where a second picture should go (2026-09-02, Sin
+   * City Pits). Their own posts, ours to serve, same rule as `photo`.
+   */
+  photos?: { src: string; credit: string; alt: string }[]
   /*
     A STREET ADDRESS AND A PHONE, which Brand has carried all along and Seed
     could not set. It came up when he asked to "update page with address and
@@ -852,6 +861,7 @@ const fromSeed = (s: Seed): Brand => ({
   quoteOnly: s.quoteOnly,
   clip: s.clip,
   photo: s.photo,
+  photos: s.photos,
   // "This week's favourites" is a food line. A service catalogue is not a
   // rotating special, and nothing about it changes weekly.
   //
