@@ -360,28 +360,63 @@ export const PAGES: Record<PageKey, Page> = {
     is a round number on top of $157 in commission rather than a share of
     anything that needs its own arithmetic.
   */
+  /*
+    THE APPROVED TEXT, 2026-09-01, PUBLISHED AS APPROVED.
+
+    Glenn wrote the programme, asked for a proofread, Leon sent back the
+    reworked version, and Glenn answered "That's better to publish." What is
+    below is that version, verbatim — the reworked one, not the draft, because
+    the rework is the one that survived their exchange: it says "approved
+    increments according to the program's current payout terms" where the
+    draft hard-coded $50-or-$100, and "where available and legally permitted"
+    on the XRP line.
+
+    THE OLD "MAKE SOME MONEY NOW" SECTION IS GONE, NOT MERGED. It promised a
+    flat 15% and about $52 a sale on a $349 website with a $100 three-in-a-
+    month bonus; the approved text says 10%-15% on qualifying referred
+    projects. Both on one page would be the site quoting two different
+    commission terms for the same work, so the approved one stands alone.
+
+    HIS DIAMOND IS NOT AN EMOJI HERE. The approved text reads "BEASTY (gem)
+    Member"; this file is plain strings, and the app's own convention — the
+    drawn Gem in MembersApp, in its words "an emoji is somebody else's
+    typeface" — is why the membership screen draws the mark instead. The word
+    "Member" carries the sentence; the mark lives where it can be drawn.
+  */
   careers: {
     title: 'Make some money with BEASTY',
     body: [
-      'Two ways, and they are different jobs. One pays a commission for every website you bring in. The other puts a business you rate onto the home screen, and pays nothing — it is for somebody who wants their neighbourhood on here.',
+      'BEASTY is built around supporting small businesses and the communities they serve. As the platform grows, we want our members to have the opportunity to help expand the BEASTY community — and get rewarded for it.',
+      'Through the BEASTY Affiliate Referral Program (BARP), members can earn points by referring new active users and businesses to the BEASTY platform.',
     ],
     sections: [
       {
-        head: 'Make some money now',
-        sub: '(website referrals)',
+        head: 'BARP points system',
         body: [
-          'Leon builds the websites behind BEASTY PAGES and is looking for people to bring him work. This is his offer and his money, not a BEASTY programme — he pays it, and he is who you deal with.',
-          'A website is $349. You get 15% of every one that sells, which is about $52 a referral, paid on the sale rather than on the introduction.',
-          'Refer three in the same calendar month and there is a $100 bonus on top — so three is $157 in commission plus $100, not $157.',
-          'Who to look for: any business with no website, or one that has not been touched in years. Most of the red-outlined businesses on the city pages are exactly that, and they are already a list.',
+          'Rewards may be redeemed once you accumulate at least 100 points. Eligible rewards may be paid in approved increments according to the program\u2019s current payout terms, and any remaining eligible points will be paid out when the program officially ends, subject to the program terms.',
+          'Eligible rewards may be paid by direct deposit or, where available and legally permitted, converted into XRP for digital payment.',
+          'To participate in BARP, individuals must meet the program\u2019s eligibility requirements, become a BEASTY Member, and complete the required tax documentation.',
+          'BARP is a limited promotional program and may be modified or discontinued in accordance with its official terms.',
+          'By growing an ecosystem that connects small businesses with their customers and communities, BEASTY aims to create value for participating members while also supporting the mission of Biggie\u2019s Foundation.',
         ],
         facts: [
-          'Website: $349',
-          'Your commission: 15%, about $52 a sale',
-          'Three in one month: $100 bonus',
-          'Paid by Leon, on the sale',
+          '3 points for each new active user referred',
+          '6 points for each new active business referred',
+          '1 point = $1',
+          'No limit to the points you can earn',
+          'Points are non-transferable',
+          'Redeemable from 100 points',
         ],
-        after: 'Leon Kelvin Li — splk3798@gmail.com',
+      },
+      {
+        head: 'BEASTY Designs Referral Program',
+        body: [
+          'In addition to BARP, BEASTY offers direct referral commissions for eligible BEASTY Design services.',
+          'Members may earn 10%\u201315% commission on qualifying referred projects after the work has been completed and payment has been received.',
+          'BEASTY Design services are provided by the same independent creator and developer behind the BEASTY platform.',
+          'Help businesses discover BEASTY, grow the community, and get rewarded for the value you help create.',
+        ],
+        after: 'Leon Kelvin Li \u2014 splk3798@gmail.com',
       },
       {
         head: 'Bring a business onto the app',
