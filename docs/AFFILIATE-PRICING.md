@@ -93,9 +93,12 @@ two is meant.
   they're obligated to enter their #. But then you have to include a
   disclaimer that we reserve the right to send them promotional texts". The
   disclaimer is in the join form under the number box already, shown only
-  when texting is on. Texting is off because there is no Twilio account:
-  `TWILIO_ACCOUNT_SID=... TWILIO_AUTH_TOKEN=... bash tools/setup-sms-login.sh`
-  turns it on once one exists.
+  when texting is on. SETTLED THE SAME EVENING: Leon put the cost to him
+  ("each message will cost us $0.08 and I will charge $200 to wire that
+  thing up") and Glenn answered "Actually let's leave it the way it is then"
+  — sign-in stays on email, texting is a later upgrade "once we have more
+  user base". When that day comes:
+  `TWILIO_ACCOUNT_SID=... TWILIO_AUTH_TOKEN=... bash tools/setup-sms-login.sh`.
 - The BARK point denomination. The Careers page (key 9, now MAKE $) says 3
   points per referred user, 6 per business, 1 point = $1, redeemable from 100.
   Glenn's own arithmetic in the thread matches it: 3 points is 10% of the $39
