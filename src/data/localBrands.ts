@@ -1289,7 +1289,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     siteCta: 'See the portfolio',
     siteNote: 'See past work and case studies at noctilucenty.github.io',
     phone: '(510) 826-7735',
-    email: 'leondragon3798@gmail.com',
+    /* The domain address, as on the Designs page (Glenn, 2026-09-02: it "won't
+       get mixed up with your current emails"). The number stays: this is a
+       listing's contact card, like every other business on the sheet. */
+    email: 'designs@beastypages.com',
     quoteOnly:
       'Every project is quoted after a conversation, so nothing here is ordered through the app. Prices are ranges because scope decides the number, not the category. The consultation is free.',
     perk: {
