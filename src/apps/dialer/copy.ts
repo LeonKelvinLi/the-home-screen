@@ -382,21 +382,27 @@ export const PAGES: Record<PageKey, Page> = {
     drawn Gem in MembersApp, in its words "an emoji is somebody else's
     typeface" — is why the membership screen draws the mark instead. The word
     "Member" carries the sentence; the mark lives where it can be drawn.
+
+    RENAMED 2026-09-02: BARP became BARK, "BEASTY Affiliate Referral Klub".
+    Glenn: "Lmk what you think of this new acronym I came up with" / "You know
+    me and my K's"; Leon: "that works perfectly". His note restated the same
+    3 / 6 / $1 lines under the new name, so only the name moved. The key that
+    opens this page reads MAKE $ now, not CAREERS — see keys.ts.
   */
   careers: {
     title: 'Make some money with BEASTY',
     body: [
       'BEASTY is built around supporting small businesses and the communities they serve. As the platform grows, we want our members to have the opportunity to help expand the BEASTY community — and get rewarded for it.',
-      'Through the BEASTY Affiliate Referral Program (BARP), members can earn points by referring new active users and businesses to the BEASTY platform.',
+      'Through the BEASTY Affiliate Referral Klub (BARK), members can earn points by referring new active users and businesses to the BEASTY platform.',
     ],
     sections: [
       {
-        head: 'BARP points system',
+        head: 'BARK points system',
         body: [
           'Rewards may be redeemed once you accumulate at least 100 points. Eligible rewards may be paid in approved increments according to the program\u2019s current payout terms, and any remaining eligible points will be paid out when the program officially ends, subject to the program terms.',
           'Eligible rewards may be paid by direct deposit or, where available and legally permitted, converted into XRP for digital payment.',
-          'To participate in BARP, individuals must meet the program\u2019s eligibility requirements, become a BEASTY Member, and complete the required tax documentation.',
-          'BARP is a limited promotional program and may be modified or discontinued in accordance with its official terms.',
+          'To participate in BARK, individuals must meet the program\u2019s eligibility requirements, become a BEASTY Member, and complete the required tax documentation.',
+          'BARK is a limited promotional program and may be modified or discontinued in accordance with its official terms.',
           'By growing an ecosystem that connects small businesses with their customers and communities, BEASTY aims to create value for participating members while also supporting the mission of Biggie\u2019s Foundation.',
         ],
         facts: [
@@ -411,7 +417,7 @@ export const PAGES: Record<PageKey, Page> = {
       {
         head: 'BEASTY Designs Referral Program',
         body: [
-          'In addition to BARP, BEASTY offers direct referral commissions for eligible BEASTY Design services.',
+          'In addition to BARK, BEASTY offers direct referral commissions for eligible BEASTY Design services.',
           'Members may earn 10%\u201315% commission on qualifying referred projects after the work has been completed and payment has been received.',
           'BEASTY Design services are provided by the same independent creator and developer behind the BEASTY platform.',
           'Help businesses discover BEASTY, grow the community, and get rewarded for the value you help create.',

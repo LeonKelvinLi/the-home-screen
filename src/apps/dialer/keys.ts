@@ -9,7 +9,7 @@
  *
  *   1 About      2 Contacts    3 BPRF
  *   4 Goods      5 Designs     6 Water
- *   7 Collabs    8 Donations   9 Careers
+ *   7 Collabs    8 Donations   9 Make $
  *   * Member     0 Sign in     # Share
  *
  * `letters` is what a real phone prints. `label` is what this one prints once
@@ -31,7 +31,7 @@ export type KeyAction =
 /** A drawn mark in dialer/glyphs. Kept as a name so this file stays data. */
 export type MarkName =
   | 'info' | 'instagram' | 'ribbon' | 'supply' | 'design' | 'droplet'
-  | 'collabs' | 'donate' | 'careers' | 'diamond' | 'signin' | 'share'
+  | 'collabs' | 'donate' | 'money' | 'diamond' | 'signin' | 'share'
 
 export type PanelPage =
   | 'about'
@@ -102,7 +102,13 @@ export const DIALER_KEYS: DialerKey[] = [
   { digit: '6', letters: 'MNO', label: 'WATER', mark: 'droplet', action: { kind: 'external', url: WATER_URL } },
   { digit: '7', letters: 'PQRS', label: 'COLLABS', mark: 'collabs', action: { kind: 'panel', page: 'collabs' } },
   { digit: '8', letters: 'TUV', label: 'DONATE', mark: 'donate', action: { kind: 'panel', page: 'donations' } },
-  { digit: '9', letters: 'WXYZ', label: 'CAREERS', mark: 'careers', action: { kind: 'panel', page: 'careers' } },
+  /*
+    MAKE $, not CAREERS. Glenn, 2026-09-02: "It's not like we are offering a
+    career opportunity but instead a way to make $ sooner than later." The key
+    is a dollar in a gear and the word under it is his phrase, cut to fit. The
+    page it opens keeps its `careers` key in code; only what people see moved.
+  */
+  { digit: '9', letters: 'WXYZ', label: 'MAKE $', mark: 'money', action: { kind: 'panel', page: 'careers' } },
   // Biggie's Diamond membership. MEMBERS, not MEMBERSHIP — seven characters
   // instead of ten, so it sits comfortably in the key at any size.
   { digit: '*', label: 'MEMBERS', mark: 'diamond', action: { kind: 'enter', app: MEMBERS } },

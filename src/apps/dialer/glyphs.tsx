@@ -110,15 +110,34 @@ export function DonateMark({ size = 24 }: MarkProps) {
   )
 }
 
-/** Careers — three rising bars with a pennant on the tallest. */
-export function CareersMark({ size = 24 }: MarkProps) {
+/**
+ * Make money — a dollar sign set in a gear.
+ *
+ * Glenn's ask, 2026-09-02: "changing the 'careers' button into one of these?
+ * Making $ icon. It's not like we are offering a career opportunity but
+ * instead a way to make $ sooner than later." The two references he sent were
+ * both a gear with a dollar in it (one cupped in a hand, one on a monitor).
+ * The gear and the dollar are what the two share, so that is the mark; the
+ * hand and the monitor are dropped because at 30px inside a 78px circle they
+ * turn the key into a thumbnail.
+ *
+ * The three rising bars this replaced said "career ladder", which is the
+ * reading he wants gone.
+ */
+export function MoneyMark({ size = 24 }: MarkProps) {
   return (
     <svg viewBox="0 0 24 24" width={size} height={size} aria-hidden="true" fill="currentColor">
-      <path d="M3.8 15.6H6C6.7 15.6 7.2 16.1 7.2 16.8V21.6H2.6V16.8C2.6 16.1 3.1 15.6 3.8 15.6Z" />
-      <path d="M9.9 11.8H12.1C12.8 11.8 13.3 12.3 13.3 13V21.6H8.7V13C8.7 12.3 9.2 11.8 9.9 11.8Z" />
-      <path d="M15.9 2.4H17.3V9H15.9Z" />
-      <path d="M17.3 2.9 21.4 4.7 17.3 6.5Z" />
-      <path d="M16 8H18.2C18.9 8 19.4 8.5 19.4 9.2V21.6H14.8V9.2C14.8 8.5 15.3 8 16 8Z" />
+      <path fillRule="evenodd" d="M12 3.4A8.6 8.6 0 1 0 12 20.6A8.6 8.6 0 1 0 12 3.4ZM12 5.9A6.1 6.1 0 1 1 12 18.1A6.1 6.1 0 1 1 12 5.9Z" />
+      {[0, 45, 90, 135, 180, 225, 270, 315].map((deg) => (
+        <rect key={deg} x="10.25" y="0.9" width="3.5" height="3.4" rx="0.9" transform={`rotate(${deg} 12 12)`} />
+      ))}
+      <path
+        d="M14.7 9.6C14.4 8.7 13.3 8.1 12 8.1C10.5 8.1 9.4 8.9 9.4 10C9.4 12.4 14.6 11.9 14.6 14.2C14.6 15.3 13.5 16 12 16C10.8 16 9.7 15.4 9.3 14.5M12 7.1V17"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.9"
+        strokeLinecap="round"
+      />
     </svg>
   )
 }
@@ -251,7 +270,7 @@ export const PANEL_MARKS: Record<PanelPage, (props: MarkProps) => JSX.Element> =
   bprf: PurpleRibbon,
   collabs: CollabsMark,
   donations: DonateMark,
-  careers: CareersMark,
+  careers: MoneyMark,
   reviews: ReviewsMark,
 }
 
@@ -270,7 +289,7 @@ export const KEY_MARKS: Record<MarkName, (props: MarkProps) => JSX.Element> = {
   droplet: DropletMark,
   collabs: CollabsMark,
   donate: DonateMark,
-  careers: CareersMark,
+  money: MoneyMark,
   diamond: Diamond,
   signin: SignInMark,
   share: ShareMark,
