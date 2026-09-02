@@ -1568,6 +1568,23 @@ textarea {
   opacity: 0.75;
 }
 
+/* Opening hours, under the address. Quiet, one line, an icon so it reads as
+   a fact rather than a sentence. */
+.brand-hours {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 8px 24px 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--secondary, rgba(60, 60, 67, 0.75));
+}
+
+.brand-hours svg {
+  flex: none;
+  opacity: 0.7;
+}
+
 /* ---------- cart bar ---------- */
 
 .cartbar {

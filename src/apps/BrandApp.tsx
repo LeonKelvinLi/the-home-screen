@@ -442,6 +442,22 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           )}
 
           {/*
+            HOURS, WHERE THEY PUBLISH ONE SCHEDULE. Directly under the address,
+            because the two questions a person has about a place they are about
+            to drive to are where it is and whether it is open. Never shown for
+            a business whose own site disagrees with itself about them.
+          */}
+          {brand.hours && (
+            <p className="brand-hours">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.2 2" />
+              </svg>
+              {brand.hours}
+            </p>
+          )}
+
+          {/*
             A PHONE NUMBER, WHEREVER THEY PUBLISH ONE.
 
             This used to appear only inside the contact block, which renders for

@@ -231,6 +231,44 @@ note(`${emptyCities.length} of ${(CITY_PAGES as readonly string[]).length} citie
 // ---- report --------------------------------------------------------------
 const order = { ERROR: 0, WARN: 1, NOTE: 2 }
 out.sort((a, b) => order[a.level] - order[b.level])
+/*
+  HOURS ARE ONE LINE OR NOTHING. The field exists so a page can say when a
+  place is open; a paragraph, a second schedule, or a "see website" is not
+  hours and is the kind of thing that arrives from careless research.
+*/
+for (const b of BRANDS) {
+  const h = (b as { hours?: string }).hours
+  if (!h) continue
+  if (h.length > 120) err(`${b.name}: hours is ${h.length} chars — that is prose, not a schedule: "${h.slice(0, 60)}…"`)
+  if (/\n/.test(h)) err(`${b.name}: hours contains a line break`)
+  /* Anchored at the start: "Mon–Sun 9–5:30 (Sunday varies)" is a schedule
+     with the business's own caveat on it; "Varies" alone is not a schedule. */
+  if (/^\s*(see (website|site)|call for|varies|tbd|coming soon)/i.test(h)) err(`${b.name}: hours says "${h}" — not a schedule, leave it unset`)
+}
+
+/*
+  A ROSTER NAME WITH RESEARCH MUST NOT STILL SAY HE IS GATHERING DETAILS.
+  The overlay drops the note when research arrives; this holds that.
+*/
+for (const b of BRANDS) {
+  const hasFacts = (b.menu ?? []).some((c) => c.items.length) || (b.groups ?? []).length || b.address || b.phone
+  if (b.rosterOnly && hasFacts && /nothing is listed yet/.test(b.contactOnly ?? '')) {
+    err(`${b.name}: carries a published address/menu AND the "still gathering details" roster note`)
+  }
+}
+
+/*
+  PRICES ARE MONEY. Anything under a dollar on a menu is almost always a
+  units slip (dollars typed where cents were meant); anything over $5,000 on a
+  small-business menu is a floor that lost its label or a typo.
+*/
+for (const b of BRANDS) {
+  for (const c of b.menu ?? []) for (const it of c.items) {
+    if (it.price > 0 && it.price < 100) warn(`${b.name}: "${it.name}" is priced ${it.price} cents — units slip?`)
+    if (it.price > 500_000) warn(`${b.name}: "${it.name}" is $${(it.price / 100).toFixed(0)} — a floor that lost its label, or a typo?`)
+  }
+}
+
 for (const f of out) console.log(`${f.level.padEnd(5)} ${f.what}`)
 const errors = out.filter((f) => f.level === 'ERROR').length
 console.log(

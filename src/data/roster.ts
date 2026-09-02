@@ -1,4 +1,5 @@
 import type { LocalSeed } from './localBrands'
+import { ROSTER_RESEARCH } from './rosterResearch'
 
 /**
  * The operator's own rosters for the two flagship pages, exactly as he sent
@@ -27,6 +28,35 @@ const ROSTER_NOTE =
   'business’s details — nothing is listed yet, so nothing here is a claim about ' +
   'them. Check back.'
 
+/*
+  THE SAME NOTE FOR A NAME THAT ALREADY CARRIES AN ADDRESS OR A NUMBER.
+
+  Nineteen roster pages printed a published street address beside the words
+  "nothing is listed yet". Both were true in their own way — his list, their
+  address — and together they read as a page contradicting itself. So a name
+  that arrived with an address or a phone says so, and says the rest is still
+  being gathered, which is what is actually the case.
+*/
+const ROSTER_NOTE_PARTIAL =
+  'This spot is reserved on the operator’s roster. The address and number here are ' +
+  'the business’s own; the rest of their details — what they sell and what it ' +
+  'costs — are still being gathered, so nothing else is claimed about them yet.'
+
+/*
+  THE RESEARCH LAYER SITS ON TOP OF HIS LIST, AND HIS LIST IS NOT EDITED.
+
+  Every name below is his roster as he sent it. What each business actually
+  publishes — address, hours, a number, a menu with prices — was gathered
+  later from the business's own website and lives in rosterResearch.ts, keyed
+  by slug and merged here. Two files on purpose: this one stays a faithful
+  copy of what he wrote, and the other is provenance-stamped research that can
+  be regenerated, reviewed and corrected without touching his roster.
+
+  When research exists, the "he is still gathering their details" note is
+  DROPPED — it would be false next to a published address — and replaced by
+  whatever the research says: a menu, a quoted price list, or a sentence about
+  a business that publishes no prices. A name with no research keeps the note.
+*/
 const seed = (
   slug: string,
   name: string,
@@ -34,19 +64,33 @@ const seed = (
   cuisine: string,
   color: string,
   extra?: Partial<LocalSeed>,
-): LocalSeed => ({
-  slug,
-  name,
-  label,
-  cuisine,
-  tagline: '',
-  color,
-  prep: 0,
-  category: 'Roster',
-  contactOnly: ROSTER_NOTE,
-  items: [],
-  ...extra,
-})
+): LocalSeed => {
+  const research = ROSTER_RESEARCH[slug]
+  const base: LocalSeed = {
+    slug,
+    name,
+    label,
+    cuisine,
+    tagline: '',
+    color,
+    prep: 0,
+    category: 'Roster',
+    contactOnly: extra?.address || extra?.phone ? ROSTER_NOTE_PARTIAL : ROSTER_NOTE,
+    items: [],
+    ...extra,
+  }
+  if (!research) return base
+  const merged: LocalSeed = { ...base, ...research }
+  /* Research that carries a menu, a price list or its own sentence has said
+     what the roster note used to stand in for. Only the note is removed —
+     a hand-written contactOnly in `extra` (a business that asked for a
+     specific line) survives, because research never sets contactOnly to
+     ROSTER_NOTE. */
+  if ((merged.contactOnly === ROSTER_NOTE || merged.contactOnly === ROSTER_NOTE_PARTIAL) && (research.items?.length || research.groups?.length || research.quoteOnly || research.contactOnly)) {
+    merged.contactOnly = research.contactOnly
+  }
+  return merged
+}
 
 /*
   Colours rotate through the app's own dark tile palette so a page of

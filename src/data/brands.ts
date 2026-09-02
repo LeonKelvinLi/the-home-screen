@@ -200,6 +200,8 @@ export interface Brand {
   instagram?: string
   /** Drop-downs on their page: pictures, or a list of shops. */
   panels?: BrandPanel[]
+  /** Opening hours, one line, as published. See localBrands.ts. */
+  hours?: string
   /**
    * Dietary descriptors the kitchen states about itself — "Halal", "Vegan",
    * "Gluten free".
@@ -357,6 +359,8 @@ interface Seed {
   instagram?: string
   /** Drop-downs on their page: pictures, or a list of shops. */
   panels?: BrandPanel[]
+  /** Opening hours, one line, as published. See localBrands.ts. */
+  hours?: string
   /** Overrides the picks bar and forces it to render. See localBrands.ts. */
   menuNote?: string
   /** Button label on a contact-only brand. */
@@ -743,6 +747,7 @@ const fromSeed = (s: Seed): Brand => ({
   siteNote: s.siteNote,
   instagram: s.instagram,
   panels: s.panels,
+  hours: s.hours,
   quoteOnly: s.quoteOnly,
   clip: s.clip,
   photo: s.photo,
@@ -850,6 +855,7 @@ export const BRANDS: Brand[] = [
     siteNote: s.siteNote,
     instagram: s.instagram,
     panels: s.panels,
+    hours: s.hours,
     siteCta: s.siteCta,
     dietary: s.dietary,
     perk: s.perk,

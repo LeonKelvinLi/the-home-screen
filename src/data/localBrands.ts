@@ -103,6 +103,16 @@ export interface LocalSeed {
    */
   panels?: BrandPanel[]
   /**
+   * Opening hours, one line, exactly as the business publishes them.
+   *
+   * Only set when their own site publishes a single unambiguous schedule. Two
+   * schedules that disagree — a footer and a banner, a bio and a post — mean
+   * NO hours here and a note in the comment, because printing either one is
+   * printing the wrong one for half the week. Never inferred from a booking
+   * widget, a delivery app or a search listing.
+   */
+  hours?: string
+  /**
    * Overrides the bar over the picks drop-down, and forces it to render.
    *
    * The computed line is "Choose from this week's favorites!", suppressed on a
@@ -4966,6 +4976,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'pink-onion',
+    hours: 'Every day 4pm–10pm',
     name: 'Pink Onion',
     label: 'Pink Onion',
     cuisine: 'Italian',
@@ -5078,6 +5089,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'auto-design-pro',
+    hours: 'Mon–Fri 9am–6pm, Sat 9am–5pm, closed Sun',
     /*
       SINGULAR. Their domain is autodesignpros.com and he filed them as "Auto
       Design Pros", but the wordmark, every line of their own copy and their
@@ -5123,6 +5135,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'precision-shine',
+    hours: 'Mon–Sat 8am–6pm, Sunday by appointment',
     name: 'Precision Shine Detailing',
     label: 'Precision Shine',
     cuisine: 'Mobile detailing',
@@ -5223,6 +5236,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'elliston-vineyards',
+    hours: 'Tasting Thu–Mon 11am–4pm',
     name: 'Elliston Vineyards',
     label: 'Elliston',
     cuisine: 'Winery',
@@ -5265,6 +5279,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'brunch-and-bloom',
+    hours: 'Every day 8am–3pm',
     /* An ampersand, which is how they write it everywhere. His note said "and". */
     name: 'Brunch & Bloom',
     label: 'Brunch & Bloom',
@@ -5313,6 +5328,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'johnny-boi',
+    hours: 'Sun–Thu 10am–9pm, Fri–Sat 10am–10pm',
     /* Plural on their own site; their Instagram name is singular. */
     name: 'Johnny Boi Smash Burgers',
     label: 'Johnny Boi',
@@ -5355,6 +5371,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'butter-pecan',
+    hours: 'Mon–Fri 10am–7pm, Sat–Sun 10am–5pm',
     icon: 'butter-pecan',
     name: 'Butter Pecan Bakeshop',
     label: 'Butter Pecan',
@@ -5491,6 +5508,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'port-of-peri-peri-sf',
+    hours: 'Mon–Thu 11am–10pm, Fri–Sun 11am–11pm',
     name: 'The Port of Peri Peri',
     label: 'Peri Peri SF',
     cuisine: 'Peri peri chicken',
@@ -5650,6 +5668,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'the-company-barber',
+    hours: 'Mon–Sun 9am–5:30pm (Sunday varies)',
     name: 'The Company Barber',
     label: 'Company Barber',
     cuisine: 'Barbershop',
@@ -5697,6 +5716,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'screen-king',
+    hours: 'Mon–Fri 9am–5pm, Sat by appointment, closed Sun',
     name: 'Screen King',
     label: 'Screen King',
     cuisine: 'Window screens',
@@ -5734,6 +5754,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'sweetest-sound',
+    hours: 'Wed–Sat 5pm–2am',
     name: 'Sweetest Sound',
     label: 'Sweetest Sound',
     cuisine: 'Dessert bar',
@@ -5788,6 +5809,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'co-ba',
+    hours: 'Sun–Thu 9am–10:30pm, Fri–Sat 9am–11pm',
     /* Their diacritics, which are the name. The legal entity in their footer
        is the undiacriticked CO BA HOUSE CORPORATION; the cafe is Cô Ba. */
     name: 'Cô Ba',
@@ -5819,6 +5841,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'persian-kabobs',
+    hours: 'Mon–Thu 10:45am–8:30pm, Fri–Sat to 9:30pm, Sun to 9pm',
     name: 'Persian Kabobs',
     label: 'Persian Kabobs',
     cuisine: 'Persian',
@@ -5886,6 +5909,7 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'hella-good-burger',
+    hours: 'Daily from 11am — to 9pm Mon–Tue, 9:30pm Wed–Thu & Sun, 11:30pm Fri–Sat',
     /* ALL CAPS, in their logo, their title and every heading. He filed them as
        "Hella Good SJ", which is their domain rather than a name they use. */
     name: 'HELLA GOOD BURGER',
