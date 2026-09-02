@@ -161,6 +161,14 @@ while (queue.length) {
   const t = await (await fetch(`${base}/${f}`)).text()
   bundles += t
   for (const m of t.matchAll(/assets\/[A-Za-z0-9_-]+\.js/g)) if (!seen.has(m[0])) queue.push(m[0])
+  /*
+    A CHUNK IMPORTS ITS SIBLINGS RELATIVELY — `import("./Shell-IfFj92Yv.js")`,
+    no "assets/" in front — so the crawl above stopped at the entry chunk and
+    every string that lives in the Shell (the whole app UI) read as "not in
+    any deployed chunk". That is the false negative tools/live-check.mjs was
+    written about; this follows the relative form too.
+  */
+  for (const m of t.matchAll(/["'`]\.\/([A-Za-z0-9_-]+\.js)["'`]/g)) { const f2 = `assets/${m[1]}`; if (!seen.has(f2)) queue.push(f2) }
 }
 console.log(`bundles       : ${seen.size} chunk(s), ${Math.round(bundles.length / 1024)}kb`)
 for (const s of [
