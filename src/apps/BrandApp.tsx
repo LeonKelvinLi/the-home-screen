@@ -13,6 +13,10 @@ import type { MenuItem } from '../data/brands'
 import type { BrandPanel } from '../data/localBrands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
+
+/** What a kitchen, a café or a bar sells — pages where "consultation" is the wrong word. */
+const FOOD_RX =
+  /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|bar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer/i
 import { Gem } from './MembersApp'
 
 /** One restaurant's menu — the screen an icon tap actually lands on. */
@@ -792,7 +796,16 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {(brand.contactOnly || brand.quoteOnly) && (
             <div className="brand-contact">
               {brand.contactOnly && <p>{brand.contactOnly}</p>}
-              {brand.quoteOnly && <p>Start with a free consultation.</p>}
+              {/*
+                THE LINE ABOVE THE CALL BUTTON depends on what they sell. "Start
+                with a free consultation" is right for a detailer or a designer
+                and wrong on a coffee house or a peri peri grill, where the
+                2026-09-02 sweep found it. A kitchen with no online ordering is
+                called to order from, not consulted.
+              */}
+              {brand.quoteOnly && (
+                <p>{FOOD_RX.test(`${brand.cuisine} ${brand.name}`) ? 'Call or message them to order or ask.' : 'Start with a free consultation.'}</p>
+              )}
               {brand.phone && (
                 <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}>
                   Call {brand.phone}

@@ -890,6 +890,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     House of Wings California — gathered 2026-09-02 from stopgap
+     they are: Chicken wings
+     flag: houseofwingsca.com did not resolve on 2026-09-02; Glenn: 'It seems to have expired'
+     flag: hours and address from their Instagram bio
+  */
+  'house-of-wings': {
+    address: "2941 Harbor St, Pittsburg, CA 94565",
+    hours: "Daily 11am-10pm",
+    instagram: "houseofwingscalifornia",
+    cuisine: "Chicken wings",
+    needsSite: true,
+    tagline: "Wings on Harbor Street, open every day",
+    contactOnly: "Wings on Harbor Street, open every day. Their website has lapsed, so the menu lives on their Instagram, and they publish no prices.",
+  },
+
+  /*
      i.snapped Photo Booths — gathered 2026-09-02 from own-domain
      they are: Photo booths
      flag: no street address — mobile, listing counties served
@@ -1770,6 +1786,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "suptealab",
     cuisine: "Boba and Taiwanese snacks",
     needsSite: true,
+  },
+
+  /*
+     Tastin Peachy — gathered 2026-09-02 from stopgap
+     they are: Catering
+     flag: no address published; the bio says Bay Area, CA
+     flag: the tagline is their bio line
+  */
+  'tastin-peachy': {
+    phone: "510-685-7876",
+    email: "TastinPeachy@gmail.com",
+    instagram: "tastinpeachy",
+    cuisine: "Catering",
+    needsSite: true,
+    tagline: "Bay Area catering: don't let your taste buds miss this",
+    contactOnly: "Bay Area catering: don't let your taste buds miss this. No website yet, so catering enquiries go by phone or email, and they publish no prices.",
   },
 
   /*

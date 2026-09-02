@@ -1038,6 +1038,23 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'BF', logoFace: 'condensed',
     site: 'https://baysidefencingco.com/',
   }),
+  /* FOUND IN THE 2026-09-02 SWEEP OF THE WHOLE THREAD. Sent 2026-08-23 with
+     "Looks like this place needs a website update. It seems to have expired"
+     and "BEASTY • Pittsburgh", and never seated. houseofwingsca.com does not
+     resolve, which is his "expired"; the facts are their Instagram bio, and
+     the mark is cut from the share sheet he sent. Wings is goods category 9. */
+  seed('house-of-wings', 'House of Wings California', 'House of Wings', 'Chicken wings', '#C8102E', {
+    icon: 'house-of-wings',
+    logoTemplate: 'monogram', logoInitials: 'HW', logoFace: 'condensed',
+  }),
+  /* Same sweep. Sent 2026-08-30 with "Just isolate the words for icon. Great
+     candidate for pilot program." A caterer with no website and no city —
+     "Bay Area, CA" is all their bio says — so the BEASTY services sheet, on
+     the Rocket MC Tow reasoning. */
+  seed('tastin-peachy', 'Tastin Peachy', 'Tastin Peachy', 'Catering', '#1A1A1A', {
+    icon: 'tastin-peachy',
+    logoTemplate: 'monogram', logoInitials: 'TP', logoFace: 'script',
+  }),
 
   /* ---- 2026-09-01 ---- */
   /* Sent as a link to their Square ordering site with "Alameda • Goods" and

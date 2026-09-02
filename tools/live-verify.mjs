@@ -80,6 +80,9 @@ for (const [id, want, expect] of [
   ['b_shakashack', 'Shaka Shack', { hours: 'Mon-Tue, Thu-Sun 8:30am-3pm', rows: 4 }],
   ['b_baysidefencing', 'Bay Side Fencing Co', { hours: 'Mon-Fri 9am-4pm', call: '925-420-6268' }],
   ['b_sincitypits', 'Sin City Pits', { photos: 2 }],
+  /* The 2026-09-02 sweep of the whole thread: two he sent and nobody seated. */
+  ['b_houseofwings', 'House of Wings California', { hours: 'Daily 11am-10pm' }],
+  ['b_tastinpeachy', 'Tastin Peachy', { call: '510-685-7876' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -178,6 +181,8 @@ for (const s of [
   'glenn@beastypages.com', 'designs@beastypages.com', 'Get in touch directly with the owner of beastypages.com',
   'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
   'sin-city-pits-breeder', 'brand-photos-track',
+  /* The four reels the sweep found never attached. */
+  'DaBs4utDZXb', 'DYI6AJgIFII', 'DYlU7BcoAMi', 'DcHlbGcBBX2',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

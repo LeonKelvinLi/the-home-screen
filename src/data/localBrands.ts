@@ -772,6 +772,14 @@ export const LOCAL_SEED: LocalSeed[] = [
     prep: 15,
     category: 'Hot chicken',
     site: 'https://www.jojoshotchicken.com',
+    /*
+      "See if you can take this video and attach it to this Restaurant page"
+      (2026-08-08). The video is @thesnacksensei's, a food reviewer, not the
+      restaurant's, so it is a card that opens the post, credited to him —
+      nothing re-hosted. The mock offers he asked for in the same breath are
+      below.
+    */
+    clip: { href: 'https://www.instagram.com/reel/DYlU7BcoAMi/', credit: 'Filmed by @thesnacksensei', platform: 'Instagram' },
     orderUrl: 'https://www.jojoshotchicken.com/menu',
     phone: '(408) 499-0916',
     address: '1601 Branham Ln #10, San Jose',
@@ -1161,6 +1169,11 @@ export const LOCAL_SEED: LocalSeed[] = [
     prep: 25,
     category: 'Regional Indian',
     site: 'https://www.pippaldublin.com',
+    /*
+      Their own reel, sent 2026-08-03 beside their profile — the account that
+      posted it is @pippaldublin. A card that opens the post; nothing copied.
+    */
+    clip: { href: 'https://www.instagram.com/reel/DaBs4utDZXb/', credit: 'Filmed by Pippāl', platform: 'Instagram' },
     orderUrl: 'https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c',
     address: '4500 Tassajara Rd, Suite C, Dublin',
     // OPEN, despite a "coming soon" post still sitting on their grid — that
@@ -1197,6 +1210,13 @@ export const LOCAL_SEED: LocalSeed[] = [
     prep: 20,
     category: 'Pizza & Plates',
     site: 'https://www.glasshouzzusa.com/',
+    /*
+      Sent 2026-08-03 beside their profile. NOT THEIR OWN FILM — the account
+      that posted it is @volha_creative, a content creator — so it is credited
+      to her and opened on Instagram rather than copied here. Same footing as
+      the Lucky Three Seven clip, and worth him confirming with her.
+    */
+    clip: { href: 'https://www.instagram.com/reel/DYI6AJgIFII/', credit: 'Filmed by @volha_creative', platform: 'Instagram' },
     orderUrl: 'https://glasshouzz.toast.site/order/glass-houzz-4575-livermore-outlets-drive',
     address: '4575 Livermore Outlets Drive, Livermore',
     /*
@@ -2631,6 +2651,12 @@ export const LOCAL_SEED: LocalSeed[] = [
     /* SQUARE SUBDOMAIN, NO DOMAIN OF THEIR OWN — which is exactly why the
        operator sent them. `needsSite` keeps them on his red-outline list. */
     site: 'https://phoshodough.square.site/',
+    /*
+      The reel he sent with their link and "BEASTY • Goods" (2026-08-23). It
+      is @grubwitmike's, a food reviewer, not theirs — a card that opens the
+      post, credited to him.
+    */
+    clip: { href: 'https://www.instagram.com/reel/DcHlbGcBBX2/', credit: 'Filmed by @grubwitmike', platform: 'Instagram' },
     siteCta: 'Order on their Square page',
     needsSite: true,
     siteNote: 'Second pickup counter at 1235 San Pablo Ave, Berkeley',
@@ -5354,6 +5380,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'johnny-boi',
+    /* Cut from the share-profile sheet he sent with the listing (2026-09-02 sweep). */
+    icon: 'johnny-boi',
     hours: 'Sun–Thu 10am–9pm, Fri–Sat 10am–10pm',
     /* Plural on their own site; their Instagram name is singular. */
     name: 'Johnny Boi Smash Burgers',
@@ -5502,6 +5530,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'delah-coffee',
+    /* Cut from the share-profile sheet he sent with the listing (2026-09-02 sweep). */
+    icon: 'delah-coffee',
     name: 'Delah Coffee House',
     label: 'Delah Coffee',
     cuisine: 'Arabic coffee',
@@ -5534,6 +5564,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'port-of-peri-peri-sf',
+    /* Cut from the share-profile sheet he sent with the listing (2026-09-02 sweep). */
+    icon: 'port-of-peri-peri-sf',
     hours: 'Mon–Thu 11am–10pm, Fri–Sun 11am–11pm',
     name: 'The Port of Peri Peri',
     label: 'Peri Peri SF',

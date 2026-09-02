@@ -18,5 +18,39 @@
    "serves all of the Bay Area per their Instagram bio; the showroom is the Antioch address",
    "fence styles listed on their site: board on board, nail on dog ear, hog wire, ranch, 3-rail vinyl, horizontal, louvered, nail on flat top, deer fencing"
   ]
+ },
+ {
+  "id": "b_houseofwings",
+  "name_exact": "House of Wings California",
+  "one_line": "Wings on Harbor Street, open every day",
+  "cuisine": "Chicken wings",
+  "address": "2941 Harbor St, Pittsburg, CA 94565",
+  "hours": "Daily 11am-10pm",
+  "instagram": "houseofwingscalifornia",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their website has lapsed, so the menu lives on their Instagram, and they publish no prices",
+  "flags": [
+   "houseofwingsca.com did not resolve on 2026-09-02; Glenn: 'It seems to have expired'",
+   "hours and address from their Instagram bio"
+  ]
+ },
+ {
+  "id": "b_tastinpeachy",
+  "name_exact": "Tastin Peachy",
+  "one_line": "Bay Area catering: don't let your taste buds miss this",
+  "cuisine": "Catering",
+  "phone": "510-685-7876",
+  "email": "TastinPeachy@gmail.com",
+  "instagram": "tastinpeachy",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "no website yet, so catering enquiries go by phone or email, and they publish no prices",
+  "flags": [
+   "no address published; the bio says Bay Area, CA",
+   "the tagline is their bio line"
+  ]
  }
 ]
