@@ -905,4 +905,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'cupertino-goods-9': 'b_persiankabobs', // Mediterranean
   'sunnyvale-goods-2': 'b_eatmorepho', //   Asian food; HIS CARD SAID SAN JOSE
   'san-jose-goods2-1': 'b_hellagoodburger', // Burgers on page one is Dough Burger's
+
+  /* 2026-09-01, the evening. No Hawaiian category, so seat 0 opens Alameda —
+     the brew boat's treatment. Mrs. Ramen came as "Candidate for Pilot
+     Program" with no city line; their own bio says The Veranda, Concord. */
+  'alameda-goods-0': 'b_shakashack', //      no Hawaiian category; opens Alameda
+  'concord-goods-7': 'b_mrsramen', //        Korean and ramen
 }

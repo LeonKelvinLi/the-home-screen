@@ -77,6 +77,7 @@ for (const [id, want, expect] of [
   ['b_jdiautodetailing', 'JDI Auto Detailing', { hours: 'Mon-Sat 8am-6pm', rows: 8, quote: true }],
   ['b_kababburger', 'Kabab Burger', { hours: 'Mon-Thu 11am-8pm', rows: 4 }],
   ['b_eaglepetgrooming', 'Eagle Pet Grooming', { call: '(650) 278-3611' }],
+  ['b_shakashack', 'Shaka Shack', { hours: 'Mon-Tue, Thu-Sun 8:30am-3pm', rows: 4 }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)

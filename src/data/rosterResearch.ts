@@ -1205,6 +1205,21 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Mrs. Ramen Concord — gathered 2026-09-02 from stopgap
+     they are: Ramen and seafood boil
+     flag: no website found; a 'Mrs. Pho' is listed by Yelp at the same address, which may be the same operator or the previous tenant
+     flag: address is from their own Instagram bio: 'At The Veranda, 2045 Diamond Blvd. Concord, California' — no suite number, no ZIP
+     flag: no phone, no hours anywhere in their own words
+  */
+  'mrs-ramen': {
+    address: "2045 Diamond Blvd, Concord, CA",
+    instagram: "mrs.ramen_concord",
+    cuisine: "Ramen and seafood boil",
+    needsSite: true,
+    contactOnly: "Seafood boil, ramen, Korean corn dogs and rice plates at The Veranda in Concord. No website yet — their menu is posted on their Instagram, where the boiling seafood bowl board reads $17.95 and a family pack $32.95.",
+  },
+
+  /*
      One House Bakery — gathered 2026-09-02 from own-domain
      they are: Bakery and cafe
      logo: https://static.wixstatic.com/media/7dfc6f_912d37cd93ff41bfa762c2ea97097eda~mv2_d_1320_1320_s_2.jpg (1320x1320) — not cut into a tile yet
@@ -1612,6 +1627,43 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "senorsisig",
     cuisine: "Filipino fusion",
     contactOnly: "'From Sisig Burritos to Sinigang Wings, we remix traditional Filipino flavors into innovative dishes everyone can enjoy.' The menu page lists every item with no prices — sisig tacos, burritos, fries, nachos, rice bowls, the Crispy Sinigang Wings — and prices live only inside their ordering flow.",
+  },
+
+  /*
+     Shaka Shack — gathered 2026-09-02 from stopgap
+     they are: Hawaiian brunch
+     flag: their only site is a Square Online store — the operator's own 'Needs website'
+     flag: the site's About and Catering pages return 404 while the footer advertises catering, corporate lunches and restaurant buyouts
+     flag: Instagram bio says the profile is being rebuilt: 'mahalo for the follow, help rebuilding our Instagram ohana'
+  */
+  'shaka-shack': {
+    address: "2300 Blanding Ave, Alameda, CA 94501",
+    phone: "(510) 305-8754",
+    email: "shakashackeats@gmail.com",
+    hours: "Mon-Tue, Thu-Sun 8:30am-3pm, closed Wed",
+    instagram: "shakashackeats",
+    cuisine: "Hawaiian brunch",
+    needsSite: true,
+    items: [
+      ["Syd's Loco Moco","Burger, rice, eggs your way, gravy",1900],
+      ["Musubi","Spam musubi",500],
+      ["Malasadas","One malasada, your choice of filling and sugar",300],
+      ["Ube Waffles","Ube waffles with ube syrup and fresh fruit",1700],
+      ["Kai's Plate Lunch","Your choice of lava chicken or kalua pork with mac or kimchi cucumber salad",1700,"$17-$22"],
+      ["Stella's Kalbi Rib Loco Moco","Kalbi ribs and an egg your way over rice, topped with gravy",2400],
+      ["Big Kahuna Loco Moco","Burger, kalua pork, Portuguese sausage with fried rice",2600],
+      ["Squirt's Kalua Pork Loco Moco","Kalua pork, rice, eggs, gravy",1900],
+      ["Hawaiian Roll French Toast","Hawaiian rolls turned into French toast bites with ube syrup and fresh fruit",1700],
+      ["Da Kine","Two eggs your way, house potatoes, rice, Hawaiian roll toast",1600],
+      ["Poke Bowl","Rice, slaw, cucumber, edamame, avocado, furikake, seaweed salad, ginger",2000],
+      ["Hawaiian Chili","Portuguese sausage, spam, beef and bacon with four beans over rice, green onions, cheese and a Hawaiian roll",1500],
+      ["Tutu's Mac Salad","Great grandma's recipe with spaghetti noodles",400],
+      ["Malasada Filling Sampler Half Dozen","Six filled malasadas, one of each filling",2100],
+      ["POG Juice","Passion fruit, orange, guava",500],
+      ["Keiki Loco Moco","A small loco moco, for kids",1200],
+    ],
+    offer: ["Syd's Loco Moco","Musubi","Malasadas","Ube Waffles"],
+    siteNote: "63 items are priced on their Square ordering site — breakfast, lunch, a keiki menu, Signal Coffee drinks, sweets and Kona beer.",
   },
 
   /*

@@ -2,8 +2,8 @@
 /*
   Turn research JSON into src/data/rosterResearch.ts.
 
-  Input: every *.json under the directory given (default /tmp/beasty-suite/
-  research), each an array of objects in the shape the research prompt asks
+  Input: every *.json under the directory given (default research/roster/ in
+  the repo), each an array of objects in the shape the research prompt asks
   for — one per business, facts from the business's OWN website only.
 
   This script is where the catalogue's rules are enforced mechanically, so a
@@ -30,7 +30,7 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'node:fs'
 import { join } from 'node:path'
 
-const dir = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv[2] : '/tmp/beasty-suite/research'
+const dir = process.argv[2] && !process.argv[2].startsWith('--') ? process.argv[2] : new URL('../research/roster', import.meta.url).pathname
 const WRITE = process.argv.includes('--write')
 const OUT = 'src/data/rosterResearch.ts'
 const TODAY = new Date().toISOString().slice(0, 10)

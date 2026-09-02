@@ -53,3 +53,16 @@ factor of twelve.
 - The Instagram button on a partner page is the first thing he has described as
   a higher-tier feature (2026-08-29). Which tier, and what else is in it, is
   not decided. See `instagram` in `src/data/localBrands.ts`.
+- The BARP point denomination (2026-09-01, the late thread). The Careers page
+  says 3 points per referred user, 6 per business, 1 point = $1, redeemable
+  from 100 — and Glenn's own arithmetic in the thread matches it: 3 points is
+  10% of the $39 fee after the $9 to the foundation, 6 is 10% of the $69
+  initiation after the same $9. Leon asked for "multiples of 10, like 50-100
+  pts, so it feels more rewarding than 3" and "$1 = 10 pts"; Glenn replied
+  "Ok so change to 5 & 10?" and the two do not agree with each other, and the
+  thread moved to a phone call. Settled in the thread: the commission stays at
+  10% ("It was always initially 10%"), with promotional double- or triple-point
+  days on slow days and holidays, and a bonus for hitting a saved-points goal
+  ("if they managed to save 300 points, we would double it"). NOTHING ON THE
+  PAGE CHANGES until the denomination is written down; it changes every number
+  in the facts list at once.

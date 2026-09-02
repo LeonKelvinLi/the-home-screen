@@ -1028,6 +1028,26 @@ export const ROSTER_SEED: LocalSeed[] = [
       'on their own site.',
   }),
 
+  /* ---- 2026-09-01 ---- */
+  /* Sent as a link to their Square ordering site with "Alameda • Goods" and
+     "Needs website" — the square.site IS the website, which is the point. No
+     Hawaiian category exists; seat 0 opens Alameda, as the brew boat does on
+     the services side. The mark is cut from the share-profile sheet he sent. */
+  seed('shaka-shack', 'Shaka Shack', 'Shaka Shack', 'Hawaiian brunch', '#0F3A46', {
+    icon: 'shaka-shack',
+    logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'condensed',
+    site: 'https://shaka-shack.square.site/',
+  }),
+  /* "Candidate for Pilot Program" and two screenshots of their Instagram —
+     no city line, no link. Their own bio puts them at The Veranda in Concord,
+     and ramen is category 8, so that is the seat. They have no website at
+     all that anyone can find, so the page carries their profile and nothing
+     it does not say. */
+  seed('mrs-ramen', 'Mrs. Ramen Concord', 'Mrs. Ramen', 'Ramen and seafood boil', '#C8102E', {
+    icon: 'mrs-ramen',
+    logoTemplate: 'monogram', logoInitials: 'MR', logoFace: 'slab',
+  }),
+
   /* ---- 2026-08-16 ---- */
   /* "Not sure what city to put it in though because it's a mobile service
      covering the Bay Area" — so no city, and the descriptor says mobile, which

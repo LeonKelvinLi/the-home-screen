@@ -18,6 +18,15 @@ and clipped the wordmark off a circular logo.
 --square skips the ring hunt and crops tight to the ink instead, for marks that
 are not in a circle at all — a logo lifted off a website, say.
 
+THE "SHARE PROFILE" SHEET IS A THIRD SHAPE. Tapping the picture on a profile
+opens a big disc on a blurred copy of their grid, with no ring at all. The ring
+hunt has nothing to find, and "find the ink" finds the whole blurred frame —
+which is what shipped as Shaka Shack's tile for a minute on 2026-09-01, and
+Mrs. Ramen's red bowl was mistaken for a ring and clipped. --disc looks for the
+disc itself (one big circle in the frame), crops inside it and fills the
+corners with the disc's own edge colour. It is also what runs on its own when
+the ink crop would keep more than four fifths of the frame.
+
 Writes public/icons/<slug>.webp at 512x512. Never redraws anything: every pixel
 is theirs, resampled once.
 """
@@ -48,6 +57,13 @@ def story_ring(im):
         return None
     if cv2.contourArea(c) < np.pi * r * r * 0.35:
         return None
+    # A ring is hollow: the picture sits inside it. A red bowl on a white disc
+    # (Mrs. Ramen, 2026-09-01) matched the hue test and was cropped as a ring,
+    # so anything ring-coloured through its own middle is a mark, not a ring.
+    inner = np.zeros(ring.shape, np.uint8)
+    cv2.circle(inner, (int(x), int(y)), int(r * 0.5), 255, -1)
+    if ring[inner == 255].mean() > 255 * 0.2:
+        return None
     return int(x), int(y), int(r)
 
 
@@ -62,6 +78,40 @@ def from_ring(im, cx, cy, r):
     inner = ((xx - rr) ** 2 + (yy - rr) ** 2) < (rr * 0.7) ** 2
     lit = crop[inner & (crop.mean(axis=2) > 170)]
     paper = np.median(lit, axis=0) if len(lit) else np.median(crop.reshape(-1, 3), axis=0)
+    mask = np.zeros((s, s), np.uint8)
+    cv2.circle(mask, (rr, rr), rr - 2, 255, -1)
+    crop[mask == 0] = paper
+    return crop
+
+
+def profile_disc(im):
+    """(cx, cy, r) of the big disc on a share-profile sheet, or None."""
+    h, w = im.shape[:2]
+    scale = 480 / w
+    small = cv2.resize(im, (480, int(h * scale)), interpolation=cv2.INTER_AREA)
+    g = cv2.GaussianBlur(cv2.cvtColor(small, cv2.COLOR_BGR2GRAY), (7, 7), 0)
+    found = cv2.HoughCircles(g, cv2.HOUGH_GRADIENT, dp=1.2, minDist=200, param1=120, param2=40,
+                             minRadius=int(480 * 0.22), maxRadius=int(480 * 0.46))
+    if found is None:
+        return None
+    x, y, r = found[0][0]
+    # The disc sits centred on the sheet; anything hard against a side is not it.
+    if abs(x - 240) > 40:
+        return None
+    return int(x / scale), int(y / scale), int(r / scale)
+
+
+def from_disc(im, cx, cy, r):
+    r = int(r * 0.985)
+    y0, x0 = max(0, cy - r), max(0, cx - r)
+    crop = im[y0:y0 + 2 * r, x0:x0 + 2 * r].copy()
+    s = min(crop.shape[:2])
+    crop = crop[:s, :s]
+    rr = s // 2
+    yy, xx = np.mgrid[0:s, 0:s]
+    d2 = (xx - rr) ** 2 + (yy - rr) ** 2
+    band = crop[(d2 > (rr * 0.86) ** 2) & (d2 < (rr * 0.96) ** 2)]
+    paper = np.median(band, axis=0)
     mask = np.zeros((s, s), np.uint8)
     cv2.circle(mask, (rr, rr), rr - 2, 255, -1)
     crop[mask == 0] = paper
@@ -95,6 +145,7 @@ def main():
     ap.add_argument("src")
     ap.add_argument("slug")
     ap.add_argument("--square", action="store_true", help="skip the ring hunt; crop to the ink")
+    ap.add_argument("--disc", action="store_true", help="a share-profile sheet: crop the big disc")
     ap.add_argument("--asis", action="store_true",
                     help="the --crop region IS the icon; pad it square and stop")
     ap.add_argument("--crop", help="pre-crop as x0,y0,x1,y1 fractions of the frame")
@@ -121,13 +172,25 @@ def main():
         canvas[oy:oy + h, ox:ox + w] = im
         im = canvas
         how = "as-is"
+    elif a.disc:
+        disc = profile_disc(im)
+        if not disc:
+            raise SystemExit("no disc found — is this the share-profile sheet?")
+        im = from_disc(im, *disc)
+        how = f"disc r={disc[2]}"
     elif not a.square:
         ring = story_ring(im)
         if ring:
             im = from_ring(im, *ring)
             how = f"ring r={ring[2]}"
         else:
-            im = from_ink(im)
+            cut = from_ink(im)
+            disc = profile_disc(im) if cut.shape[0] * cut.shape[1] > im.shape[0] * im.shape[1] * 0.8 else None
+            if disc:
+                im = from_disc(im, *disc)
+                how = f"disc r={disc[2]}"
+            else:
+                im = cut
     elif not a.asis:
         im = from_ink(im)
 

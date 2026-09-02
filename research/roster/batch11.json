@@ -1,0 +1,145 @@
+[
+ {
+  "id": "b_shakashack",
+  "name_exact": "Shaka Shack",
+  "one_line": "Hawaiian breakfast all day, weekend brunch, lunch, malasadas and shave ice on Blanding Ave.",
+  "cuisine": "Hawaiian brunch",
+  "address": "2300 Blanding Ave, Alameda, CA 94501",
+  "phone": "(510) 305-8754",
+  "email": "shakashackeats@gmail.com",
+  "hours": "Mon-Tue, Thu-Sun 8:30am-3pm, closed Wed",
+  "instagram": "shakashackeats",
+  "site_kind": "stopgap",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Syd's Loco Moco",
+    "desc": "Burger, rice, eggs your way, gravy",
+    "cents": 1900,
+    "label": null
+   },
+   {
+    "name": "Musubi",
+    "desc": "Spam musubi",
+    "cents": 500,
+    "label": null
+   },
+   {
+    "name": "Malasadas",
+    "desc": "One malasada, your choice of filling and sugar",
+    "cents": 300,
+    "label": null
+   },
+   {
+    "name": "Ube Waffles",
+    "desc": "Ube waffles with ube syrup and fresh fruit",
+    "cents": 1700,
+    "label": null
+   },
+   {
+    "name": "Kai's Plate Lunch",
+    "desc": "Your choice of lava chicken or kalua pork with mac or kimchi cucumber salad",
+    "cents": 1700,
+    "label": "$17-$22"
+   },
+   {
+    "name": "Stella's Kalbi Rib Loco Moco",
+    "desc": "Kalbi ribs and an egg your way over rice, topped with gravy",
+    "cents": 2400,
+    "label": null
+   },
+   {
+    "name": "Big Kahuna Loco Moco",
+    "desc": "Burger, kalua pork, Portuguese sausage with fried rice",
+    "cents": 2600,
+    "label": null
+   },
+   {
+    "name": "Squirt's Kalua Pork Loco Moco",
+    "desc": "Kalua pork, rice, eggs, gravy",
+    "cents": 1900,
+    "label": null
+   },
+   {
+    "name": "Hawaiian Roll French Toast",
+    "desc": "Hawaiian rolls turned into French toast bites with ube syrup and fresh fruit",
+    "cents": 1700,
+    "label": null
+   },
+   {
+    "name": "Da Kine",
+    "desc": "Two eggs your way, house potatoes, rice, Hawaiian roll toast",
+    "cents": 1600,
+    "label": null
+   },
+   {
+    "name": "Poke Bowl",
+    "desc": "Rice, slaw, cucumber, edamame, avocado, furikake, seaweed salad, ginger",
+    "cents": 2000,
+    "label": null
+   },
+   {
+    "name": "Hawaiian Chili",
+    "desc": "Portuguese sausage, spam, beef and bacon with four beans over rice, green onions, cheese and a Hawaiian roll",
+    "cents": 1500,
+    "label": null
+   },
+   {
+    "name": "Tutu's Mac Salad",
+    "desc": "Great grandma's recipe with spaghetti noodles",
+    "cents": 400,
+    "label": null
+   },
+   {
+    "name": "Malasada Filling Sampler Half Dozen",
+    "desc": "Six filled malasadas, one of each filling",
+    "cents": 2100,
+    "label": null
+   },
+   {
+    "name": "POG Juice",
+    "desc": "Passion fruit, orange, guava",
+    "cents": 500,
+    "label": null
+   },
+   {
+    "name": "Keiki Loco Moco",
+    "desc": "A small loco moco, for kids",
+    "cents": 1200,
+    "label": null
+   }
+  ],
+  "price_note": "63 items are priced on their Square ordering site — breakfast, lunch, a keiki menu, Signal Coffee drinks, sweets and Kona beer",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "their only site is a Square Online store — the operator's own 'Needs website'",
+   "the site's About and Catering pages return 404 while the footer advertises catering, corporate lunches and restaurant buyouts",
+   "Instagram bio says the profile is being rebuilt: 'mahalo for the follow, help rebuilding our Instagram ohana'"
+  ],
+  "blocked": false
+ },
+ {
+  "id": "b_mrsramen",
+  "name_exact": "Mrs. Ramen Concord",
+  "one_line": "Seafood boil, ramen, Korean corn dogs and rice plates at The Veranda in Concord.",
+  "cuisine": "Ramen and seafood boil",
+  "address": "2045 Diamond Blvd, Concord, CA",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "mrs.ramen_concord",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "no website yet — their menu is posted on their Instagram, where the boiling seafood bowl board reads $17.95 and a family pack $32.95",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "no website found; a 'Mrs. Pho' is listed by Yelp at the same address, which may be the same operator or the previous tenant",
+   "address is from their own Instagram bio: 'At The Veranda, 2045 Diamond Blvd. Concord, California' — no suite number, no ZIP",
+   "no phone, no hours anywhere in their own words"
+  ],
+  "blocked": false
+ }
+]
