@@ -10858,3 +10858,22 @@ textarea {
   text-align: center;
   color: var(--muted);
 }
+
+/* ---------- Contacts: how many have joined ---------- */
+
+.contacts-count {
+  margin: 4px 16px 10px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 213, 0, 0.22);
+  text-align: center;
+  font-size: 15px;
+  color: #141416;
+}
+
+.contacts-count strong {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-right: 2px;
+}

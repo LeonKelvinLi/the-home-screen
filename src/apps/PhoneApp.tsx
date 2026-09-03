@@ -326,6 +326,14 @@ export function PhoneApp({ api }: { api: ShellApi }) {
         */}
         {dir && dir.members.length > 0 ? (
           <>
+            {/*
+              THE COUNT IS THE MESSAGE — "the stated purpose of this list is
+              to show how the community is growing" — so it sits at the top,
+              not in a footer nobody scrolls to.
+            */}
+            <p className="contacts-count">
+              <strong>{dir.count}</strong> {dir.count === 1 ? 'member' : 'members'} on BEASTY
+            </p>
             {[...dir.members
               .reduce((m, mem) => {
                 const letter = (mem.name[0] || '#').toUpperCase()
