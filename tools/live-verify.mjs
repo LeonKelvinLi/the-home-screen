@@ -163,7 +163,14 @@ else if (chans) {
 // ---- the membership copy, in whichever chunk carries it ------------------
 const html = await (await fetch(base + '/')).text()
 const seen = new Set()
-const queue = [...new Set([...html.matchAll(/assets\/[A-Za-z0-9_-]+\.js/g)].map((m) => m[0]))]
+/*
+  THE STYLESHEET COUNTS TOO. This crawled only .js, so a rule that ships
+  purely in CSS — a keyframe name, a class that nothing in JS spells out —
+  read as "not in any deployed chunk" on a deploy that was serving it. That
+  is the same blind spot as the relative-import one below, one file type
+  further along.
+*/
+const queue = [...new Set([...html.matchAll(/assets\/[A-Za-z0-9_-]+\.(?:js|css)/g)].map((m) => m[0]))]
 let bundles = ''
 while (queue.length) {
   const f = queue.shift()
@@ -171,7 +178,7 @@ while (queue.length) {
   seen.add(f)
   const t = await (await fetch(`${base}/${f}`)).text()
   bundles += t
-  for (const m of t.matchAll(/assets\/[A-Za-z0-9_-]+\.js/g)) if (!seen.has(m[0])) queue.push(m[0])
+  for (const m of t.matchAll(/assets\/[A-Za-z0-9_-]+\.(?:js|css)/g)) if (!seen.has(m[0])) queue.push(m[0])
   /*
     A CHUNK IMPORTS ITS SIBLINGS RELATIVELY — `import("./Shell-IfFj92Yv.js")`,
     no "assets/" in front — so the crawl above stopped at the entry chunk and
@@ -181,7 +188,7 @@ while (queue.length) {
   */
   for (const m of t.matchAll(/["'`]\.\/([A-Za-z0-9_-]+\.js)["'`]/g)) { const f2 = `assets/${m[1]}`; if (!seen.has(f2)) queue.push(f2) }
 }
-console.log(`bundles       : ${seen.size} chunk(s), ${Math.round(bundles.length / 1024)}kb`)
+console.log(`bundles       : ${seen.size} file(s), ${Math.round(bundles.length / 1024)}kb`)
 for (const s of [
   'Unlimited Loyalty and Welcome offers', 'members-perk-head', 'Tickets keep for any monthly raffle',
   /* 2026-09-02: his domain address on Contacts, Leon's on Designs and MAKE $, his
