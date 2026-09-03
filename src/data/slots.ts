@@ -159,7 +159,9 @@ export const ONLINE_CATEGORIES: SlotCategory[] = [
   { n: 8, name: 'Skincare and beauty', label: 'Skincare' },
   { n: 9, name: 'Grooming and barber supply', label: 'Grooming' },
   { n: 10, name: 'Supplements and nutrition', label: 'Supplements' },
-  { n: 11, name: 'Coffee and tea', label: 'Coffee' },
+  /* Widened 2026-09-03 to seat Vending Enterprise, on the same reasoning as
+     n=15 on the services page. */
+  { n: 11, name: 'Coffee, drinks and vending', label: 'Coffee' },
   { n: 12, name: 'Hot sauce and condiments', label: 'Sauces' },
   { n: 13, name: 'Snacks and sweets', label: 'Snacks' },
   { n: 14, name: 'Car parts and performance', label: 'Car parts' },
@@ -172,7 +174,9 @@ export const ONLINE_CATEGORIES: SlotCategory[] = [
   { n: 21, name: 'Music and vinyl', label: 'Vinyl' },
   { n: 22, name: 'Games and collectibles', label: 'Games' },
   { n: 23, name: 'Tools and hardware', label: 'Tools' },
-  { n: 24, name: 'Tech and accessories', label: 'Tech' },
+  /* Widened 2026-09-03 for Overly Hiphop, a media company: none of the
+     twenty-four was a media seat and his ask was this sheet. */
+  { n: 24, name: 'Media, tech and accessories', label: 'Tech' },
 ]
 
 /**

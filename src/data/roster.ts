@@ -1036,6 +1036,56 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
 
   /* ---- 2026-09-03 ---- */
+  /* The overnight batch after Empire State. Every fact is from the business's
+     own page or bio; where a menu sits behind DoorDash or Toast, the page
+     says so and links it. */
+  seed('ruben-hibachi-grill', 'Ruben Hibachi Grill', 'Ruben Hibachi', 'Hibachi and catering', '#C8102E', {
+    icon: 'ruben-hibachi-grill',
+    logoTemplate: 'monogram', logoInitials: 'RH', logoFace: 'condensed',
+    site: 'https://www.doordash.com/store/rubenhibchigrill-san-lorenzo-44744433/109287358/',
+    siteCta: 'Order on DoorDash',
+  }),
+  seed('love-burn', 'Love Burn Hot Chicken', 'Love Burn', 'Nashville hot chicken', '#D7191F', {
+    icon: 'love-burn',
+    logoTemplate: 'monogram', logoInitials: 'LB', logoFace: 'condensed',
+    site: 'https://order.toasttab.com/online/love-burn-521a-3rd-street',
+    siteCta: 'Order on Toast',
+  }),
+  seed('the-tox-alamo', 'The Tox Alamo', 'The Tox', 'Lymphatic body sculpting', '#111111', {
+    icon: 'the-tox-alamo',
+    logoTemplate: 'monogram', logoInitials: 'TX', logoFace: 'condensed',
+    site: 'https://www.thetoxtechnique.com/',
+    siteCta: 'See The Tox Technique',
+  }),
+  seed('ethos-of-california', 'Ethos Of California', 'Ethos', 'Barbershop', '#1C1C1E', {
+    logoTemplate: 'wordmark', logoLines: ['ETHOS'], logoFace: 'condensed',
+    site: 'https://www.vagaro.com/ethosofcalifornia',
+    siteCta: 'Book on Vagaro',
+  }),
+  seed('vending-enterprise', 'Vending Enterprise', 'Vending Ent.', 'Vending machines', '#0F4C3A', {
+    logoTemplate: 'band', logoLines: ['VENDING', 'ENTERPRISE'], logoFace: 'condensed',
+    site: 'https://sites.google.com/vendingenterprise.net/vendingenterprise/home',
+  }),
+  seed('overly-hiphop', 'Overly Hip Hop', 'Overly', 'Media company', '#111111', {
+    icon: 'overly-hiphop',
+    logoTemplate: 'wordmark', logoLines: ['OVERLY'], logoFace: 'condensed',
+    site: 'https://overlyhiphop.com/',
+    siteCta: 'Get first access',
+    /* Nothing hard to research — no address, no prices — so the page would
+       otherwise print the roster placeholder. Their own site, in their words. */
+    contactOnly:
+      'A new Bay Area media company, born in the Bay and broadcasting worldwide: music, originals, community, fashion and business, out of Oakland and San Francisco. It launches Labor Day, September 7, 2026, and nothing is for sale yet; their site takes sign-ups for first access.',
+  }),
+  /* GOURMET BURRITOS IS HIS NAME FOR IT, not theirs: "ask Chat to make a quick
+     logo of something called 'Gourmet Burritos' for this A&A gas station that
+     serves burritos. I'm recruiting to them tomorrow." The business is A & A
+     Gas on Oliver Road; the page carries their real menu and the working name
+     he is pitching with. */
+  seed('gourmet-burritos', 'Gourmet Burritos', 'Gourmet Burritos', 'Burritos', '#B8860B', {
+    logoTemplate: 'badge', logoLines: ['GOURMET', 'BURRITOS'], logoFace: 'condensed',
+    site: 'https://www.yelp.com/biz/a-and-a-gas-fairfield',
+    siteCta: 'See them on Yelp',
+  }),
   /* "I'm picking up a pizza right now speaking to the Owner. Are you free
      to make up a page real quick?" — San Ramon • Goods, with their site, a
      Maps card and a photo of the Hot Honey Ricotta poster on their wall:

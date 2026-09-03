@@ -10,7 +10,7 @@ import {
   DISCOUNT_PER_MILESTONE,
 } from '../data/membership'
 import { LISTED_KITCHENS } from '../data/brands'
-import { AFFILIATE_INTRO, AFFILIATE_TIERS, AFFILIATE_CLOSE } from '../data/affiliateTiers'
+import { AFFILIATE_INTRO, AFFILIATE_TIERS, AFFILIATE_CLOSE, AFFILIATE_FEES } from '../data/affiliateTiers'
 import type { Perk } from '../data/membership'
 import type { ShellApi } from '../ios/Device'
 
@@ -383,6 +383,15 @@ function BusinessTiers({ api }: { api: ShellApi }) {
           </ul>
         </div>
       ))}
+      <div className="members-biz-fees">
+        <h3>{AFFILIATE_FEES.head}</h3>
+        <ul>
+          {AFFILIATE_FEES.lines.map((l) => (
+            <li key={l}>{l}</li>
+          ))}
+        </ul>
+        <p>{AFFILIATE_FEES.note}</p>
+      </div>
       <p className="members-biz-close">{AFFILIATE_CLOSE}</p>
       <div className="members-biz-cta">
         <button className="btn-primary" onClick={() => api.openApp('slot.join')}>

@@ -913,6 +913,14 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'concord-goods-7': 'b_mrsramen', //        Korean and ramen
   'antioch-services-22': 'b_baysidefencing', //  Handyman and home repair; contractor taken (Serrano Turf)
   'san-ramon-goods-5': 'b_empirestatepizza', //  Italian; sent 09-03 from the shop
+  'san-lorenzo-goods-2': 'b_rubenhibachigrill', // Asian food; opens San Lorenzo
+  'san-francisco-goods2-8': 'b_loveburn', //     wings seat taken; the yellow page
+  'alamo-services-2': 'b_thetoxalamo', //        Massage and spa; opens Alamo
+  'orinda-services-0': 'b_ethosofcalifornia', // Barber; Lafayette unverified
+  'beasty-online-10': 'b_vendingenterprise', //   Coffee, drinks and vending (widened)
+  'beasty-online-23': 'b_overlyhiphop', //        Media, tech and accessories (widened)
+  'fairfield-goods-1': 'b_gourmetburritos', //   Mexican food; A & A Gas, his working name
+  'beasty-individuals-15': 'b_nanacasas',
   'pittsburg-goods-8': 'b_houseofwings', //      Chicken wings; sent 08-23, seated in the 09-02 sweep
   'beasty-services2-19': 'b_tastinpeachy', //    Caterer, Bay Area, no city; sent 08-30, seated in the 09-02 sweep
 }

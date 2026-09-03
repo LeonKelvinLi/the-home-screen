@@ -10877,3 +10877,35 @@ textarea {
   letter-spacing: -0.02em;
   margin-right: 2px;
 }
+
+/* The fee schedule under the paid business tiers — his note, as a list. */
+.members-biz-fees {
+  margin: 0;
+  padding: 14px 15px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(20, 20, 20, 0.82);
+}
+
+.members-biz-fees h3 {
+  margin: 0 0 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(20, 20, 20, 0.68);
+}
+
+.members-biz-fees ul {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 13.5px;
+  line-height: 1.55;
+}
+
+.members-biz-fees p {
+  margin: 8px 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: rgba(20, 20, 20, 0.72);
+}

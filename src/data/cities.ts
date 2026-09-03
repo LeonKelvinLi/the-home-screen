@@ -279,6 +279,15 @@ export const CITY_PAGES = [
     subjects are his and the files, when they land, come from somewhere the
     licence survives a commercial product. See public/wallpapers/CREDITS.md.
   */
+  /*
+    2026-09-03, from the shop rounds: San Lorenzo for Ruben Hibachi Grill
+    ("Definitely needs a website · San Lorenzo • Goods") and Alamo for The
+    Tox ("Alamo • Services"). His San Lorenzo link was a homes.com listing
+    photo, somebody else's; both wallpapers are Commons aerials of the
+    places themselves, licensed — see public/wallpapers/CREDITS.md.
+  */
+  'San Lorenzo',
+  'Alamo',
   'Hayward',
   'Emeryville',
   'Piedmont',

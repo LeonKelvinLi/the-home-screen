@@ -12,9 +12,14 @@ import type { Perk } from './membership'
  * So the copy is the rework and the prices are Glenn's: free, $69, $99, and
  * $6 for the icon glow.
  *
- * PER YEAR, on Leon's answer of 2026-09-02 when asked whether $69 and $99
- * are yearly or one-off: yes, yearly. Glenn's text carried no period; the
- * period is Leon's call and is recorded in docs/AFFILIATE-PRICING.md.
+ * REVISED BY GLENN'S "BEASTY TIERS" NOTE, 2026-09-03 ("can you revise the
+ * member page?"): Biggie's Member is $39 per month and BEASTY Member $69 per
+ * month (+$6 for the glow), and BOTH carry the same fee schedule — a $99
+ * initiation fee in the first year, a $69 annual fee in years two and three,
+ * $39 a year from year four. His footnote on the annual fee: "This is a
+ * maintenance fee that covers all QR code generation and icon design
+ * creation for all Affiliates." That replaces the $69 / $99 figures from the
+ * night before, and the per-year reading of them.
  *
  * NOTHING HERE CHARGES A CARD. The free tier begins with a reserved spot and
  * the paid tiers are arranged with the operator once the spot is confirmed;
@@ -81,8 +86,8 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
     nameLead: "Biggie's",
     nameTail: 'Member',
     mark: 'ribbon',
-    price: '$69',
-    priceNote: 'per year',
+    price: '$39',
+    priceNote: 'per month',
     lead:
       "Includes everything in Tier 1, plus additional ways to promote your business and connect with Biggie's Pass Members.",
     perks: [
@@ -111,8 +116,8 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
     nameLead: 'BEASTY',
     nameTail: 'Member',
     mark: 'gem',
-    price: '$99',
-    priceNote: 'per year. Optional icon glow +$6',
+    price: '$69',
+    priceNote: 'per month. Add $6 for the icon glow',
     lead:
       'Includes everything in Tier 2, plus BEASTY’s highest level of business-page customization and customer engagement.',
     perks: [
@@ -138,6 +143,20 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
     ],
   },
 ]
+
+/**
+ * The fee schedule under the two paid tiers, his note verbatim in shape:
+ * initiation once, then an annual fee that steps down for staying.
+ */
+export const AFFILIATE_FEES = {
+  head: 'Initiation and annual fees, Tier 2 and Tier 3',
+  lines: [
+    '$99 initiation fee in the first year',
+    '$69 annual fee in years two and three',
+    '$39 annual fee from year four on',
+  ],
+  note: 'The annual fee is a maintenance fee that covers all QR code generation and icon design creation for all Affiliates.',
+}
 
 export const AFFILIATE_CLOSE =
   'BEASTY Membership gives businesses the most complete presence on BEASTY pages, with additional tools to attract new customers, reward existing customers, and showcase what makes their business unique.'

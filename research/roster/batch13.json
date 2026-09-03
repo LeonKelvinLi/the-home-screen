@@ -1,0 +1,167 @@
+[
+ {
+  "id": "b_rubenhibachigrill",
+  "name_exact": "Ruben Hibachi Grill",
+  "one_line": "Hibachi, catering and events on Paseo Grande",
+  "cuisine": "Hibachi and catering",
+  "address": "575 Paseo Grande, San Lorenzo, CA",
+  "phone": "510-776-1962",
+  "hours": "Wed-Fri 3pm-10pm, Sat-Sun 12pm-10pm, closed Mon-Tue",
+  "instagram": "rubenhibachigrill",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their menu is on DoorDash, which they link from their bio; they publish no prices of their own",
+  "flags": [
+   "all facts from their Instagram bio; DoorDash blocks reading the menu",
+   "Glenn: 'Definitely needs a website'"
+  ]
+ },
+ {
+  "id": "b_loveburn",
+  "name_exact": "Love Burn Hot Chicken",
+  "one_line": "Nashville-inspired hot chicken on 3rd Street, four spice levels",
+  "cuisine": "Nashville hot chicken",
+  "address": "521A 3rd St, San Francisco, CA",
+  "hours": "Mon-Fri 11:30am-7pm, closed Sat-Sun",
+  "instagram": "loveburnchicken",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "they take orders on Toast, which they link from their bio; the menu is behind it",
+  "flags": [
+   "all facts from their Instagram bio; Toast blocks reading the menu",
+   "bio says 'Portola 26' and 'Cluck around and find out'"
+  ]
+ },
+ {
+  "id": "b_thetoxalamo",
+  "name_exact": "The Tox Alamo",
+  "one_line": "Lymphatic body sculpting at Alamo Plaza, The Tox Technique",
+  "cuisine": "Lymphatic body sculpting",
+  "address": "120 Alamo Plaza, Alamo, CA 94507",
+  "instagram": "thetoxalamo",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "the studio books through its link in bio; The Tox Technique's site lists the treatments, the 60-minute Master Tox and the 100-minute Master Tox with sculpting facial, without prices",
+  "flags": [
+   "the studio is by @courtneyyeager per the bio; the franchise's studio locator does not list Alamo yet",
+   "address from their Instagram bio; the zip is Alamo's"
+  ]
+ },
+ {
+  "id": "b_ethosofcalifornia",
+  "name_exact": "Ethos Of California",
+  "one_line": "Barbershop on Orinda Way, booking on Vagaro",
+  "cuisine": "Barbershop",
+  "address": "23 Orinda Way Suite C, Orinda, CA 94563",
+  "phone": "(925) 464-1932",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their site is a Vagaro page still under construction (\"the chairs are open\"); services and prices are behind the booking screen",
+  "flags": [
+   "Glenn: 'He's got a location in Lafayette too' — no Lafayette address is published anywhere they control, so only Orinda is seated",
+   "two phones on their Vagaro page, (925) 464-1932 and (925) 718-0971; the first is carried"
+  ]
+ },
+ {
+  "id": "b_vendingenterprise",
+  "name_exact": "Vending Enterprise",
+  "one_line": "Vending machines placed free in Bay Area businesses and offices",
+  "cuisine": "Vending machines",
+  "phone": "415-523-5963",
+  "email": "lja@vendingenterprise.net",
+  "hours": "Mon-Sat 8am-5pm, closed Sun",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "placement is free to the host business, their own words; no prices are published",
+  "flags": [
+   "their site is a Google Site; vendingenterprise.net itself does not resolve",
+   "the contact page maps an Oakland street address that reads as a home base, so it is not printed"
+  ]
+ },
+ {
+  "id": "b_overlyhiphop",
+  "name_exact": "Overly Hip Hop",
+  "one_line": "A new Bay Area media company: music, originals, community, fashion",
+  "cuisine": "Media company",
+  "instagram": "overlyhiphop",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "launching Labor Day, September 7, 2026, per their site; nothing is for sale yet",
+  "flags": [
+   "Oakland and San Francisco per their footer; no address published",
+   "Glenn: his best friend's company, a sound engineer; a collab is planned"
+  ]
+ },
+ {
+  "id": "b_gourmetburritos",
+  "name_exact": "A & A Gas",
+  "one_line": "Burritos, tacos and tortas out of A & A Gas on Oliver Road, open 24 hours",
+  "cuisine": "Burritos",
+  "address": "1009 Oliver Rd, Fairfield, CA 94534",
+  "phone": "(707) 399-3600",
+  "hours": "Open 24 hours",
+  "site_kind": "stopgap",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Burrito",
+    "desc": "Tortilla, sour cream, rice, cheese, lettuce, choice of beans, meat and salsa",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Breakfast Burrito",
+    "desc": "Flour tortilla, cheese, egg, salsa, choice of ham, sausage, bacon or chorizo",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Fajita Burrito",
+    "desc": "Tortilla, sour cream, rice, cheese, sauteed veggies, lettuce, choice of beans and salsa",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Tacos",
+    "desc": "Three soft corn tortillas, choice of meat, salsa, cheese or sour cream and lettuce",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Torta",
+    "desc": "French roll, refried beans, lettuce, pico de gallo and choice of meat",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Quesadilla",
+    "desc": "Flour tortilla, refried beans, cheese, pico de gallo and choice of meat",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Taco Salad",
+    "desc": "Soft tortilla, lettuce, rice, cheese, pico de gallo, choice of meat",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Chips & Salsa",
+    "desc": "",
+    "cents": 449,
+    "label": null
+   }
+  ],
+  "price_note": "from the menu on their Yelp page, which Yelp notes may not be up to date",
+  "flags": [
+   "Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas",
+   "hours, phone and address from Apple Maps as he sent them; the menu from Yelp's listing"
+  ]
+ }
+]

@@ -3607,6 +3607,30 @@ export const LOCAL_SEED: LocalSeed[] = [
       since it was created. Cropped from the screenshots he sent, inside the
       Instagram story ring rather than around it.
     */
+    slug: 'nana-casas',
+    icon: 'nana-casas',
+    name: 'Nana Casas',
+    label: 'Nana Casas',
+    cuisine: 'Entrepreneur',
+    tagline: 'Bay Area entrepreneur: Beyond Amazing Clothing Company and Vending Enterprise.',
+    color: '#2A1B3D|#F2C94C',
+    prep: 0,
+    category: 'Entrepreneur',
+    /*
+      "BEASTY • Individuals" over a screenshot of her profile, 2026-09-03. Her
+      bio, in her words: "Entrepreneur. A rose that grew from concrete. THE
+      BAY. Beyond Amazing Clothing Company. Sticky Situationzz." Her link is
+      Vending Enterprise, which has its own spot on the Online sheet. The mark
+      is her profile picture, inside the story ring, from the screenshot.
+    */
+    instagram: '_beyondamazing',
+    site: 'https://sites.google.com/vendingenterprise.net/vendingenterprise/home',
+    siteCta: 'See Vending Enterprise',
+    contactOnly:
+      'A Bay Area entrepreneur, in her own words a rose that grew from concrete: Beyond Amazing Clothing Company and Vending Enterprise are hers. BEASTY has not spoken to her yet; this spot is hers to claim.',
+    items: [],
+  },
+  {
     slug: 'larry-june',
     icon: 'larry-june',
     name: 'Larry June',

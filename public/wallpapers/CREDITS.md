@@ -292,3 +292,13 @@ without finishing, twice. The threshold was written for the 454x604 thumbnails
 he sends, where the model earns its time. It now also requires a source under
 1600px on the short side — a small frame still goes through EDSR, a
 nearly-large-enough one gets a resample.
+
+## 2026-09-03 — San Lorenzo and Alamo
+
+- `san-lorenzo.webp` — "Aerial view of Ashland and San Lorenzo, December 2023",
+  by Pi.1415926535 on Wikimedia Commons, CC BY-SA 4.0
+  (https://creativecommons.org/licenses/by-sa/4.0). His link was a homes.com
+  listing photo, which is not ours to use; this is the town itself from above.
+- `alamo.webp` — "Aerial view of Alamo Plaza Shopping Center, October 2020",
+  by Pi.1415926535 on Wikimedia Commons, CC BY-SA 4.0. He sent no link for
+  Alamo; Alamo Plaza is where The Tox is, which made the choice.

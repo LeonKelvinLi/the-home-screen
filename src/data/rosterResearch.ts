@@ -717,6 +717,20 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Ethos Of California — gathered 2026-09-03 from own-domain
+     they are: Barbershop
+     flag: Glenn: 'He's got a location in Lafayette too' — no Lafayette address is published anywhere they control, so only Orinda is seated
+     flag: two phones on their Vagaro page, (925) 464-1932 and (925) 718-0971; the first is carried
+  */
+  'ethos-of-california': {
+    address: "23 Orinda Way Suite C, Orinda, CA 94563",
+    phone: "(925) 464-1932",
+    cuisine: "Barbershop",
+    tagline: "Barbershop on Orinda Way, booking on Vagaro",
+    contactOnly: "Barbershop on Orinda Way, booking on Vagaro. Their site is a Vagaro page still under construction (\"the chairs are open\"); services and prices are behind the booking screen.",
+  },
+
+  /*
      Forno Piombo — gathered 2026-09-03 from own-domain
      they are: Pizza ovens
      logo: https://fornopiombo.com/cdn/shop/files/FPO_Logo_FINAL-Letters-only_927e992a-09ac-47ba-ae13-1c751f373fe5_300x.png?v=1626473863 (300x182) — not cut into a tile yet
@@ -853,6 +867,33 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     ],
     offer: ["GSB Black Backplate","CBFW Backplate","GSB Matte Black Mouthpiece","GSB Black Turf Tape"],
     siteNote: "53 fixed-price products in their catalogue.",
+  },
+
+  /*
+     Gourmet Burritos — gathered 2026-09-03 from stopgap
+     their spelling: "A & A Gas" (roster keeps "Gourmet Burritos")
+     they are: Burritos
+     flag: Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas
+     flag: hours, phone and address from Apple Maps as he sent them; the menu from Yelp's listing
+  */
+  'gourmet-burritos': {
+    address: "1009 Oliver Rd, Fairfield, CA 94534",
+    phone: "(707) 399-3600",
+    hours: "Open 24 hours",
+    cuisine: "Burritos",
+    needsSite: true,
+    items: [
+      ["Burrito","Tortilla, sour cream, rice, cheese, lettuce, choice of beans, meat and salsa",1399],
+      ["Breakfast Burrito","Flour tortilla, cheese, egg, salsa, choice of ham, sausage, bacon or chorizo",1399],
+      ["Fajita Burrito","Tortilla, sour cream, rice, cheese, sauteed veggies, lettuce, choice of beans and salsa",1399],
+      ["Tacos","Three soft corn tortillas, choice of meat, salsa, cheese or sour cream and lettuce",1399],
+      ["Torta","French roll, refried beans, lettuce, pico de gallo and choice of meat",1399],
+      ["Quesadilla","Flour tortilla, refried beans, cheese, pico de gallo and choice of meat",1399],
+      ["Taco Salad","Soft tortilla, lettuce, rice, cheese, pico de gallo, choice of meat",1399],
+      ["Chips & Salsa","",449],
+    ],
+    offer: ["Burrito","Breakfast Burrito","Fajita Burrito","Tacos"],
+    siteNote: "From the menu on their Yelp page, which Yelp notes may not be up to date.",
   },
 
   /*
@@ -1148,6 +1189,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Love Burn Hot Chicken — gathered 2026-09-03 from stopgap
+     they are: Nashville hot chicken
+     flag: all facts from their Instagram bio; Toast blocks reading the menu
+     flag: bio says 'Portola 26' and 'Cluck around and find out'
+  */
+  'love-burn': {
+    address: "521A 3rd St, San Francisco, CA",
+    hours: "Mon-Fri 11:30am-7pm, closed Sat-Sun",
+    instagram: "loveburnchicken",
+    cuisine: "Nashville hot chicken",
+    needsSite: true,
+    tagline: "Nashville-inspired hot chicken on 3rd Street, four spice levels",
+    contactOnly: "Nashville-inspired hot chicken on 3rd Street, four spice levels. They take orders on Toast, which they link from their bio; the menu is behind it.",
+  },
+
+  /*
      Mac’s Old House — gathered 2026-09-03 from stopgap — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
      flag: the entire domain serves Squarespace's 'Website Expired' page — /, /menu, /sitemap.xml, www and bare, both user agents
   */
@@ -1352,6 +1409,18 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "paversandturfbyoneills",
     cuisine: "Pavers and turf",
     contactOnly: "'Outdoor living design, pavers, artificial turf and backyard renovations — with putting greens designed and built by true craftsmen,' serving the Tri-Valley. A contractor — free, no-obligation quotes only, no prices published.",
+  },
+
+  /*
+     Overly Hip Hop — gathered 2026-09-03 from own-domain
+     they are: Media company
+     flag: Oakland and San Francisco per their footer; no address published
+     flag: Glenn: his best friend's company, a sound engineer; a collab is planned
+  */
+  'overly-hiphop': {
+    instagram: "overlyhiphop",
+    cuisine: "Media company",
+    tagline: "A new Bay Area media company: music, originals, community, fashion",
   },
 
   /*
@@ -1629,6 +1698,23 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ["Kare Raisu","Japanese-style curry with Hamburg steak, fried chicken thigh or an Impossible patty",3000],
     ],
     offer: ["La Royale Classic","The Ambassador","The King's","Chicken Waffle"],
+  },
+
+  /*
+     Ruben Hibachi Grill — gathered 2026-09-03 from stopgap
+     they are: Hibachi and catering
+     flag: all facts from their Instagram bio; DoorDash blocks reading the menu
+     flag: Glenn: 'Definitely needs a website'
+  */
+  'ruben-hibachi-grill': {
+    address: "575 Paseo Grande, San Lorenzo, CA",
+    phone: "510-776-1962",
+    hours: "Wed-Fri 3pm-10pm, Sat-Sun 12pm-10pm, closed Mon-Tue",
+    instagram: "rubenhibachigrill",
+    cuisine: "Hibachi and catering",
+    needsSite: true,
+    tagline: "Hibachi, catering and events on Paseo Grande",
+    contactOnly: "Hibachi, catering and events on Paseo Grande. Their menu is on DoorDash, which they link from their bio; they publish no prices of their own.",
   },
 
   /*
@@ -1920,6 +2006,20 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     The Tox Alamo — gathered 2026-09-03 from own-domain
+     they are: Lymphatic body sculpting
+     flag: the studio is by @courtneyyeager per the bio; the franchise's studio locator does not list Alamo yet
+     flag: address from their Instagram bio; the zip is Alamo's
+  */
+  'the-tox-alamo': {
+    address: "120 Alamo Plaza, Alamo, CA 94507",
+    instagram: "thetoxalamo",
+    cuisine: "Lymphatic body sculpting",
+    tagline: "Lymphatic body sculpting at Alamo Plaza, The Tox Technique",
+    contactOnly: "Lymphatic body sculpting at Alamo Plaza, The Tox Technique. The studio books through its link in bio; The Tox Technique's site lists the treatments, the 60-minute Master Tox and the 100-minute Master Tox with sculpting facial, without prices.",
+  },
+
+  /*
      TOWNFUTURIST MEDIA — gathered 2026-09-03 from own-domain
      they are: Video production
      logo: https://static.wixstatic.com/media/97333a_fb647e13b8454d0a8a249dd59529cfd4~mv2.png (1159x227) — not cut into a tile yet
@@ -2028,6 +2128,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   'urban-air': {
     instagram: "urbanairpark",
     cuisine: "Indoor adventure park",
+  },
+
+  /*
+     Vending Enterprise — gathered 2026-09-03 from stopgap
+     they are: Vending machines
+     flag: their site is a Google Site; vendingenterprise.net itself does not resolve
+     flag: the contact page maps an Oakland street address that reads as a home base, so it is not printed
+  */
+  'vending-enterprise': {
+    phone: "415-523-5963",
+    email: "lja@vendingenterprise.net",
+    hours: "Mon-Sat 8am-5pm, closed Sun",
+    cuisine: "Vending machines",
+    needsSite: true,
+    tagline: "Vending machines placed free in Bay Area businesses and offices",
+    contactOnly: "Vending machines placed free in Bay Area businesses and offices. Placement is free to the host business, their own words; no prices are published.",
   },
 
   /*
