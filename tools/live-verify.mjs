@@ -88,6 +88,8 @@ for (const [id, want, expect] of [
   ['b_gourmetburritos', 'Gourmet Burritos', { hours: 'Open 24 hours', rows: 4 }],
   ['b_thetoxalamo', 'The Tox Alamo', {}],
   ['b_loveburn', 'Love Burn Hot Chicken', { hours: 'Mon-Fri 11:30am-7pm' }],
+  ['b_phonationnewark', 'Pho Nation', { hours: 'Daily 11am-9pm', call: '(510) 894-2584' }],
+  ['b_phonationalameda', 'Pho Nation', { hours: 'Daily 5pm-2am' }],
   ['b_tastinpeachy', 'Tastin Peachy', { call: '510-685-7876' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
@@ -191,7 +193,7 @@ for (const s of [
   'DaBs4utDZXb', 'DYI6AJgIFII', 'DYlU7BcoAMi', 'DcHlbGcBBX2',
   /* The Contacts list reads real members (2026-09-02). */
   'api/members/directory', 'members so far',
-  'san-lorenzo', 'Initiation and annual fees',
+  'san-lorenzo', 'Initiation and annual fees', 'point-richmond', 'hercules',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

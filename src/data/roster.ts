@@ -1076,6 +1076,28 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'A new Bay Area media company, born in the Bay and broadcasting worldwide: music, originals, community, fashion and business, out of Oakland and San Francisco. It launches Labor Day, September 7, 2026, and nothing is for sale yet; their site takes sign-ups for first access.',
   }),
+  /* PHO NATION, THREE TIMES. "Pho Nation locations: Alameda, San Bruno,
+     Newark" with five cards, and "He needs a consistent brand identity
+     between three of his locations" — the website-and-menu client, "it comes
+     with free pho". One mark on all three, cut from the profile disc he
+     sent; each page carries its own address, number and hours from the cards.
+     "San Bruno" is San Bruno Avenue in San Francisco, so that one is on San
+     Francisco's page. Newark's Square site takes the orders; the menu is
+     behind it. */
+  seed('pho-nation-newark', 'Pho Nation', 'Pho Nation', 'Vietnamese', '#B3121B', {
+    icon: 'pho-nation',
+    logoTemplate: 'monogram', logoInitials: 'PN', logoFace: 'condensed',
+    site: 'https://pho-nation.square.site/',
+    siteCta: 'Order online',
+  }),
+  seed('pho-nation-alameda', 'Pho Nation', 'Pho Nation', 'Vietnamese', '#B3121B', {
+    icon: 'pho-nation',
+    logoTemplate: 'monogram', logoInitials: 'PN', logoFace: 'condensed',
+  }),
+  seed('pho-nation-sf', 'Pho Nation SF', 'Pho Nation', 'Vietnamese', '#B3121B', {
+    icon: 'pho-nation',
+    logoTemplate: 'monogram', logoInitials: 'PN', logoFace: 'condensed',
+  }),
   /* GOURMET BURRITOS IS HIS NAME FOR IT, not theirs: "ask Chat to make a quick
      logo of something called 'Gourmet Burritos' for this A&A gas station that
      serves burritos. I'm recruiting to them tomorrow." The business is A & A

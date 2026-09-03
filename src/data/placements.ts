@@ -921,6 +921,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-online-23': 'b_overlyhiphop', //        Media, tech and accessories (widened)
   'fairfield-goods-1': 'b_gourmetburritos', //   Mexican food; A & A Gas, his working name
   'beasty-individuals-15': 'b_nanacasas',
+  'newark-goods-2': 'b_phonationnewark', //     Asian food
+  'alameda-goods-2': 'b_phonationalameda', //   Asian food
+  'san-francisco-goods2-9': 'b_phonationsf', // Asian seat taken; the yellow page
   'pittsburg-goods-8': 'b_houseofwings', //      Chicken wings; sent 08-23, seated in the 09-02 sweep
   'beasty-services2-19': 'b_tastinpeachy', //    Caterer, Bay Area, no city; sent 08-30, seated in the 09-02 sweep
 }

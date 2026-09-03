@@ -1485,6 +1485,51 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Pho Nation — gathered 2026-09-03 from stopgap
+     they are: Vietnamese
+     flag: hours, phone and address from the Apple Maps card he sent
+     flag: Glenn: the three locations need one consistent brand identity; the same mark is used on all three
+  */
+  'pho-nation-alameda': {
+    address: "1511 Park St, Alameda, CA 94501",
+    phone: "(510) 995-8084",
+    hours: "Daily 5pm-2am",
+    cuisine: "Vietnamese",
+    needsSite: true,
+    tagline: "Pho, noodle and rice on Park Street, open late",
+    contactOnly: "Pho, noodle and rice on Park Street, open late. Their page links only a Facebook profile; they publish no prices.",
+  },
+
+  /*
+     Pho Nation — gathered 2026-09-03 from stopgap
+     they are: Vietnamese
+     flag: hours, phone and address from the Apple Maps card he sent; the Square site lists this location for ordering
+  */
+  'pho-nation-newark': {
+    address: "6259 Jarvis Ave, Newark, CA 94560",
+    phone: "(510) 894-2584",
+    hours: "Daily 11am-9pm",
+    cuisine: "Vietnamese",
+    needsSite: true,
+    tagline: "Pho, noodle and rice on Jarvis Avenue, order online for pickup",
+    contactOnly: "Pho, noodle and rice on Jarvis Avenue, order online for pickup. They take pickup and delivery orders on their Square site, which holds the menu.",
+  },
+
+  /*
+     Pho Nation SF — gathered 2026-09-03 from stopgap
+     they are: Vietnamese
+     flag: Glenn wrote 'San Bruno' for this one; it is San Bruno Avenue in San Francisco, so it sits on San Francisco's page
+     flag: address from the profile card he sent; no phone or hours published there
+  */
+  'pho-nation-sf': {
+    address: "2428 San Bruno Ave, San Francisco, CA 94134",
+    cuisine: "Vietnamese",
+    needsSite: true,
+    tagline: "Pho, noodle and rice on San Bruno Avenue in the Portola",
+    contactOnly: "Pho, noodle and rice on San Bruno Avenue in the Portola. They publish no prices online.",
+  },
+
+  /*
      Pizzeria Cardamomo — gathered 2026-09-03 from own-domain
      they are: Northern Italian pizza
      logo: https://static-content.owner.com/funnel/images/d7fd8779-db7d-442d-b9aa-d731c798852f?v=8219686727 (703x95) — not cut into a tile yet

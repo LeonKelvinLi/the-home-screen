@@ -302,3 +302,15 @@ nearly-large-enough one gets a resample.
 - `alamo.webp` — "Aerial view of Alamo Plaza Shopping Center, October 2020",
   by Pi.1415926535 on Wikimedia Commons, CC BY-SA 4.0. He sent no link for
   Alamo; Alamo Plaza is where The Tox is, which made the choice.
+
+## 2026-09-03 (afternoon) — Hercules, Rodeo, Point Richmond
+
+- `hercules.webp` — "Refugio Valley Park Hercules California", by LPS.1 on
+  Wikimedia Commons, CC0. The same park his homes.com link showed.
+- `rodeo.webp` — "Aerial view of Crockett and Rodeo, September 2022", by
+  Pi.1415926535 on Wikimedia Commons, CC BY-SA 4.0. His link was a
+  california.com stock frame.
+- `point-richmond.webp` — "Point Richmond Historic District-9", by Almonroth
+  on Wikimedia Commons, CC BY-SA 3.0
+  (https://creativecommons.org/licenses/by-sa/3.0). His link was a Pinterest
+  pin.

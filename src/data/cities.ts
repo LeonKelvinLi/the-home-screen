@@ -288,6 +288,19 @@ export const CITY_PAGES = [
   */
   'San Lorenzo',
   'Alamo',
+  /*
+    2026-09-03, afternoon: "Sorry lots of important Cities that slipped my
+    mind" — Hercules, Rodeo, Crockett and Point Richmond, each with a landmark
+    link. Crockett already had a page. Hercules comes off the "rest of his
+    list" line at last. POINT RICHMOND IS A NEIGHBOURHOOD OF RICHMOND, which
+    has its own page — the West Oakland decision again: he asked for it, and a
+    business's page still carries its real address. Photographs: Commons, the
+    subjects his — Refugio Valley Park is exactly what his Hercules link
+    showed. See public/wallpapers/CREDITS.md.
+  */
+  'Hercules',
+  'Rodeo',
+  'Point Richmond',
   'Hayward',
   'Emeryville',
   'Piedmont',

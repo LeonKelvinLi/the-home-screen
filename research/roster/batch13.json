@@ -163,5 +163,53 @@
    "Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas",
    "hours, phone and address from Apple Maps as he sent them; the menu from Yelp's listing"
   ]
+ },
+ {
+  "id": "b_phonationnewark",
+  "name_exact": "Pho Nation",
+  "one_line": "Pho, noodle and rice on Jarvis Avenue, order online for pickup",
+  "cuisine": "Vietnamese",
+  "address": "6259 Jarvis Ave, Newark, CA 94560",
+  "phone": "(510) 894-2584",
+  "hours": "Daily 11am-9pm",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "they take pickup and delivery orders on their Square site, which holds the menu",
+  "flags": [
+   "hours, phone and address from the Apple Maps card he sent; the Square site lists this location for ordering"
+  ]
+ },
+ {
+  "id": "b_phonationalameda",
+  "name_exact": "Pho Nation",
+  "one_line": "Pho, noodle and rice on Park Street, open late",
+  "cuisine": "Vietnamese",
+  "address": "1511 Park St, Alameda, CA 94501",
+  "phone": "(510) 995-8084",
+  "hours": "Daily 5pm-2am",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their page links only a Facebook profile; they publish no prices",
+  "flags": [
+   "hours, phone and address from the Apple Maps card he sent",
+   "Glenn: the three locations need one consistent brand identity; the same mark is used on all three"
+  ]
+ },
+ {
+  "id": "b_phonationsf",
+  "name_exact": "Pho Nation SF",
+  "one_line": "Pho, noodle and rice on San Bruno Avenue in the Portola",
+  "cuisine": "Vietnamese",
+  "address": "2428 San Bruno Ave, San Francisco, CA 94134",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "they publish no prices online",
+  "flags": [
+   "Glenn wrote 'San Bruno' for this one; it is San Bruno Avenue in San Francisco, so it sits on San Francisco's page",
+   "address from the profile card he sent; no phone or hours published there"
+  ]
  }
 ]
