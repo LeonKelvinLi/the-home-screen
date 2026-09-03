@@ -211,6 +211,29 @@ export async function verifyCode(destination: string, code: string): Promise<Ver
   }
 }
 
+/** One row of the Contacts list: a first name, a last initial, the day they joined. */
+export interface DirectoryMember {
+  id: string
+  name: string
+  since: number
+  me: boolean
+}
+
+/**
+ * Everyone who has signed up, for the Phone app's Contacts. Null when signed
+ * out or when the server cannot be reached, so the screen can say so rather
+ * than show an empty list as though nobody had joined.
+ */
+export async function fetchDirectory(): Promise<{ count: number; members: DirectoryMember[] } | null> {
+  try {
+    const r = await fetch('/api/members/directory', { credentials: 'same-origin' })
+    if (!r.ok) return null
+    return (await r.json()) as { count: number; members: DirectoryMember[] }
+  } catch {
+    return null
+  }
+}
+
 export async function signOut(): Promise<void> {
   try {
     await fetch('/api/members/signout', { method: 'POST', credentials: 'same-origin' })

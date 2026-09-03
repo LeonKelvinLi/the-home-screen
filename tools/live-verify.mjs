@@ -184,6 +184,8 @@ for (const s of [
   'sin-city-pits-breeder', 'brand-photos-track',
   /* The four reels the sweep found never attached. */
   'DaBs4utDZXb', 'DYI6AJgIFII', 'DYlU7BcoAMi', 'DcHlbGcBBX2',
+  /* The Contacts list reads real members (2026-09-02). */
+  'api/members/directory', 'members so far',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

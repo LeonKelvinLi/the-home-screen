@@ -2276,6 +2276,32 @@ app.get('/api/members/me', rateLimiter(60, 20), async (req, res) => {
   res.json(await memberPayload(m))
 })
 
+/**
+ * Who else is here — the Contacts list in the Phone app.
+ *
+ * Glenn, 2026-09-02: "how soon can we have the contact list update every time
+ * a user signs up?" Members only: a stranger cannot see who joined. And what
+ * a member sees of another member is a first name, a last initial and the
+ * month they joined — never a number, an address or a handle, which is the
+ * difference between a community list and a leak.
+ */
+app.get('/api/members/directory', rateLimiter(60, 20), async (req, res) => {
+  const me = await memberFromRequest(req)
+  if (!me) return res.status(401).json({ error: 'Not signed in.' })
+  const rows = await db
+    .prepare('SELECT id, name, created_at FROM members ORDER BY LOWER(name) ASC, created_at ASC LIMIT 1000')
+    .all() as { id: string; name: string; created_at: number }[]
+  const shorten = (full: string) => {
+    const parts = String(full || 'Member').trim().split(/\s+/).filter(Boolean)
+    if (parts.length < 2) return parts[0] || 'Member'
+    return `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.`
+  }
+  res.json({
+    count: rows.length,
+    members: rows.map((r) => ({ id: r.id, name: shorten(r.name), since: r.created_at, me: r.id === me.id })),
+  })
+})
+
 /** Sign out on this device. */
 app.post('/api/members/signout', rateLimiter(20, 10), async (req, res) => {
   const token = readCookie(req, SESSION_COOKIE)

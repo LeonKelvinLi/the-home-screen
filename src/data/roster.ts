@@ -159,10 +159,17 @@ export const ROSTER_SEED: LocalSeed[] = [
       one edit: he is putting this in front of the owner tomorrow, and a
       misspelling on the pitch costs him more than the quote is worth.
     */
+    /*
+      AGREED, 2026-09-02. Glenn texted the owner the mock-up ("Just some
+      temporary examples unless you wanna keep it or change it") and the owner
+      wrote back his own two lines, each with a thumbs-up: "Loyalty 10% off
+      entire check" and "First time visit. Free soft serve"; Glenn added "with
+      the purchase of any meal for each guest" to the welcome. So `mock` is
+      gone: these are the business's own terms, in their words.
+    */
     offers: {
-      mock: true,
-      welcome: 'Get a FREE side & dessert with any $60+ meal purchase for your 1st visit!',
-      loyalty: 'Get a FREE $8 side or dessert with any $40+ meal purchase on any visit!',
+      welcome: 'Free soft serve on your first visit, with the purchase of any meal, for each guest.',
+      loyalty: '10% off the entire check.',
     },
     /* Replaces the generic roster note, which said he was still gathering their
        details — he has them now, and the page shows them. */
@@ -1038,6 +1045,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     icon: 'empire-state-pizza',
     logoTemplate: 'monogram', logoInitials: 'ES', logoFace: 'condensed',
     site: 'https://www.empirestatepizzas.com/',
+    /* "Nice I locked in legit offers!" — his note from the counter, 2026-09-02:
+       welcome "Spend $50+ 15%", loyalty "$50+ 10% off". Agreed with the owner
+       in person, so no `mock`. */
+    offers: {
+      welcome: '15% off when you spend $50 or more, on your first visit.',
+      loyalty: '10% off when you spend $50 or more.',
+    },
     photos: [
       {
         src: '/photos/empire-state-pizza-hot-honey.webp',

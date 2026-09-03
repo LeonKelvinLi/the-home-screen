@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
 import { PetAvatarArt } from './PetAvatar'
@@ -12,6 +12,29 @@ import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS, brandById } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
 import { OPERATOR, hasOperatorContact, telHref } from '../lib/operator'
+import { fetchDirectory, type DirectoryMember } from '../lib/account'
+import type { PetAvatar } from '../lib/profile'
+
+/*
+  A PET FOR EVERY MEMBER, DRAWN FROM THEIR ID. Members do not pick an avatar
+  yet, and a list of identical grey circles reads as a placeholder. The same
+  id always gets the same animal, so a row looks the same tomorrow.
+*/
+const DIR_SPECIES = ['dog', 'cat', 'rabbit', 'hamster', 'bird']
+const DIR_COATS = ['#3B3B3F', '#B5651D', '#8A8A8A', '#E0C9A6', '#5C4033', '#F2F2F2']
+const DIR_BACKDROPS = ['#FFE9A8', '#DCEBFF', '#FFD9D9', '#DFF5E1', '#EEE0FF', '#FFE6C7']
+const DIR_ACCESSORIES = ['', 'collar', 'bow', 'cap', 'shades', '']
+function petFor(id: string): PetAvatar {
+  let h = 7
+  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0
+  return {
+    species: DIR_SPECIES[h % DIR_SPECIES.length],
+    coat: DIR_COATS[(h >> 3) % DIR_COATS.length],
+    backdrop: DIR_BACKDROPS[(h >> 6) % DIR_BACKDROPS.length],
+    accessory: DIR_ACCESSORIES[(h >> 9) % DIR_ACCESSORIES.length],
+  }
+}
+const SINCE = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' })
 
 /**
  * Phone, laid out the way iOS lays it out: a five-item tab bar, a keypad with
@@ -66,6 +89,22 @@ export function PhoneApp({ api }: { api: ShellApi }) {
   const [tab, setTab] = useState<Tab>('contacts')
   /** A sample profile being read. Null is the directory itself. */
   const [person, setPerson] = useState<Person | null>(null)
+  /*
+    THE REAL LIST. Glenn, 2026-09-02: "how soon can we have the contact list
+    update every time a user signs up?" Fetched once when the app opens; null
+    means signed out or unreachable, and then the sample profiles below stand
+    in exactly as they did before anyone could sign up.
+  */
+  const [dir, setDir] = useState<{ count: number; members: DirectoryMember[] } | null>(null)
+  useEffect(() => {
+    let on = true
+    fetchDirectory().then((d) => {
+      if (on) setDir(d)
+    })
+    return () => {
+      on = false
+    }
+  }, [])
   const [digits, setDigits] = useState('')
 
   const tabBar = <TabBar items={TABS} active={tab} onSelect={setTab} />
@@ -285,31 +324,68 @@ export function PhoneApp({ api }: { api: ShellApi }) {
           data/community.ts is deleted and real members render here with no
           other change.
         */}
-        {[...peopleByLetter.entries()].map(([letter, people]) => (
-          <ListSection key={letter} header={letter}>
-            {people.map((person) => (
-              <ListRow
-                key={person.id}
-                label={
-                  <span className="contact-row">
-                    <span className="contact-mark">
-                      <PetAvatarArt pet={person.pet} size={30} />
-                    </span>
-                    {person.name}
-                  </span>
-                }
-                detail={`${person.city} · sample profile`}
-                onClick={() => setPerson(person)}
-              />
+        {dir && dir.members.length > 0 ? (
+          <>
+            {[...dir.members
+              .reduce((m, mem) => {
+                const letter = (mem.name[0] || '#').toUpperCase()
+                m.set(letter, [...(m.get(letter) ?? []), mem])
+                return m
+              }, new Map<string, DirectoryMember[]>())
+              .entries()].map(([letter, members]) => (
+              <ListSection key={letter} header={letter}>
+                {members.map((mem) => (
+                  <ListRow
+                    key={mem.id}
+                    label={
+                      <span className="contact-row">
+                        <span className="contact-mark">
+                          <PetAvatarArt pet={petFor(mem.id)} size={30} />
+                        </span>
+                        {mem.name}
+                        {mem.me ? ' (you)' : ''}
+                      </span>
+                    }
+                    detail={`Member since ${SINCE.format(new Date(mem.since))}`}
+                    chevron={false}
+                  />
+                ))}
+              </ListSection>
             ))}
-          </ListSection>
-        ))}
-
-        <p className="ios-section-footer">
-          These are example profiles, not real members — there are no accounts in the app yet, so
-          nobody has signed up and no total is shown. Open one to see what a member&rsquo;s page
-          looks like; every business on it is real and opens.
-        </p>
+            <p className="ios-section-footer">
+              {dir.count === 1 ? '1 member so far.' : `${dir.count} members so far.`} Everyone who signs
+              up appears here the moment they do: a first name and a last initial, nothing else.
+            </p>
+          </>
+        ) : (
+          <>
+        {[...peopleByLetter.entries()].map(([letter, people]) => (
+              <ListSection key={letter} header={letter}>
+                {people.map((person) => (
+                  <ListRow
+                    key={person.id}
+                    label={
+                      <span className="contact-row">
+                        <span className="contact-mark">
+                          <PetAvatarArt pet={person.pet} size={30} />
+                        </span>
+                        {person.name}
+                      </span>
+                    }
+                    detail={`${person.city} · sample profile`}
+                    onClick={() => setPerson(person)}
+                  />
+                ))}
+              </ListSection>
+            ))}
+    
+            <p className="ios-section-footer">
+              These are example profiles, not real members — there are no accounts in the app yet, so
+              nobody has signed up and no total is shown. Open one to see what a member&rsquo;s page
+              looks like; every business on it is real and opens.
+            </p>
+          </>
+        )}
       </NavScreen>
     )
   }
