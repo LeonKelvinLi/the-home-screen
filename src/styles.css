@@ -10928,6 +10928,14 @@ textarea {
   is what makes it look fake.
 */
 .icon-tile.is-glow {
+  /*
+    THE RADIUS HAS TO BE SET HERE, same as the mobile and no-website rings.
+    .icon-tile is a bare span and the rounding a tile appears to have is drawn
+    inside the logo's own SVG, so a box-shadow on the span traces a square —
+    which is exactly what the first glow did around a squircle. 24% is the
+    figure both rings use.
+  */
+  border-radius: 24%;
   animation: icon-glow 3.2s ease-in-out infinite;
 }
 
