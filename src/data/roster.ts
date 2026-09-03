@@ -107,7 +107,10 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* Their own about page: a skate shop on Polk St in San Francisco — apparel,
      skate goods, safety gear. His roster spells it Midnight; the shop spells
      it Midnite, and the shop wins. */
+  /* GLOW: a paid Tier 3 sample, on his ask of 2026-09-03 — "put an icon glow
+     on midnight theories and Gao just so I could use it as an example". */
   seed('midnight-theories', 'Midnite Theories', 'Midnite Th…', 'Skate shop', '#1C1C2E', {
+    glow: true,
     icon: 'midnight-theories',
     /* His own 'x Biggie' sheet, quoted rather than paraphrased — the
        qualifying condition IS the offer. mock until the business signs it. */
@@ -1107,6 +1110,21 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'badge', logoLines: ['GOURMET', 'BURRITOS'], logoFace: 'condensed',
     site: 'https://www.yelp.com/biz/a-and-a-gas-fairfield',
     siteCta: 'See them on Yelp',
+    /*
+      AGREED WITH THE OWNER, 2026-09-03: "Locked in offer! Welcome offer: Get
+      any 1 gourmet burrito item for $10 CASH only. Any size fountain drink
+      FREE with the purchase of any gourmet burrito item." Both lines are his,
+      verbatim in substance. He labelled only the first; the drink is placed as
+      the loyalty offer because it is written to repeat on any purchase, and
+      the $10 is the deal the owner gives him on a visit. Worth one word from
+      him if he meant both as the welcome.
+
+      NOT `mock`: he says the owner locked these in.
+    */
+    offers: {
+      welcome: 'Any one gourmet burrito item for $10, cash only.',
+      loyalty: 'A free fountain drink, any size, with any gourmet burrito item.',
+    },
   }),
   /* "I'm picking up a pizza right now speaking to the Owner. Are you free
      to make up a page real quick?" — San Ramon • Goods, with their site, a

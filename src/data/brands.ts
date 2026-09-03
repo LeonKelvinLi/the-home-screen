@@ -135,6 +135,8 @@ export interface Brand {
    * have quietly taken them off the list the moment the stopgap went in.
    */
   needsSite?: true
+  /** The paid icon glow. See LocalSeed.glow. */
+  glow?: true
   /** One photograph of the place, ours to serve. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
   /** Several, swiped through. See LocalSeed.photos. */
@@ -353,6 +355,8 @@ interface Seed {
   pageMark?: string
   /** Keep them on the red-outline prospect list even though `site` is set. */
   needsSite?: true
+  /** The paid icon glow. See LocalSeed.glow. */
+  glow?: true
   /** Stocked subset, by item name. Omit to offer the whole menu. */
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
@@ -623,6 +627,8 @@ const SEED: Seed[] = [
     ],
   },
   {
+    /* GLOW: the second paid Tier 3 sample, his ask of 2026-09-03. */
+    glow: true,
     slug: 'gao-viet-kitchen', name: 'Gao Viet Kitchen', label: 'Gao Viet Kitchen',
     site: 'https://gaovietkitchen.com/',
     /*
@@ -854,6 +860,7 @@ const fromSeed = (s: Seed): Brand => ({
   email: s.email,
   contactOnly: s.contactOnly,
   needsSite: s.needsSite,
+  glow: s.glow,
   siteNote: s.siteNote,
   instagram: s.instagram,
   panels: s.panels,
@@ -958,6 +965,7 @@ export const BRANDS: Brand[] = [
     site: s.site,
     pageMark: s.pageMark,
     needsSite: s.needsSite,
+    glow: s.glow,
     orderUrl: s.orderUrl,
     phone: s.phone,
     address: s.address,

@@ -49,6 +49,12 @@ interface Props {
   mobile?: boolean
   /** No website anywhere — the operator's prospect list. */
   noSite?: boolean
+  /**
+   * The paid icon glow, Tier 3's "+$6". A halo around the tile; not spoken,
+   * because unlike the mobile and no-website rings it carries no fact about
+   * the business — it is decoration somebody bought.
+   */
+  glow?: boolean
 }
 
 function AppIconBase({
@@ -61,6 +67,7 @@ function AppIconBase({
   size = ICON_SIZE,
   mobile,
   noSite,
+  glow,
 }: Props) {
   const ref = useRef<HTMLButtonElement>(null)
   const pressed = useRef(false)
@@ -126,7 +133,7 @@ function AppIconBase({
         .join(', ')}
     >
       <span
-        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}`}
+        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}${glow ? ' is-glow' : ''}`}
         style={{ width: size, height: size }}
       >
         {icon}

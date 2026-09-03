@@ -885,6 +885,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
                   badge={badgeFor(app.id)}
                   mobile={app.mobile}
                   noSite={app.noSite}
+                  glow={app.glow}
                   size={page.tile ?? screen.iconSize}
                   onOpen={(rect) => onOpen(app.id, rect)}
                 />

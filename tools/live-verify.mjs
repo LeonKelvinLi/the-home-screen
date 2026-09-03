@@ -85,7 +85,7 @@ for (const [id, want, expect] of [
   ['b_empirestatepizza', 'Empire State Pizza', { hours: 'Daily 11am-9pm', rows: 4, photos: 1 }],
   /* 2026-09-03 overnight batch */
   ['b_rubenhibachigrill', 'Ruben Hibachi Grill', { hours: 'Wed-Fri 3pm-10pm' }],
-  ['b_gourmetburritos', 'Gourmet Burritos', { hours: 'Open 24 hours', rows: 4 }],
+  ['b_gourmetburritos', 'Gourmet Burritos', { hours: 'Open 24 hours' }],
   ['b_thetoxalamo', 'The Tox Alamo', {}],
   ['b_loveburn', 'Love Burn Hot Chicken', { hours: 'Mon-Fri 11:30am-7pm' }],
   ['b_phonationnewark', 'Pho Nation', { hours: 'Daily 11am-9pm', call: '(510) 894-2584' }],
@@ -194,6 +194,7 @@ for (const s of [
   /* The Contacts list reads real members (2026-09-02). */
   'api/members/directory', 'members so far',
   'san-lorenzo', 'Initiation and annual fees', 'point-richmond', 'hercules',
+  'is-glow', 'icon-glow',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

@@ -58,6 +58,15 @@ export interface LocalSeed {
    * placeholder link silently takes them off the list he prospects from.
    */
   needsSite?: true
+  /**
+   * The paid icon glow, Tier 3's "+$6" line on the Members page.
+   *
+   * A halo that breathes around the tile on the city grid, so a business that
+   * pays for it is the one the eye lands on. Set only where the operator has
+   * sold it or is using it as a sample — it means nothing if every tile has
+   * one, which is the whole product.
+   */
+  glow?: true
   phone?: string
   address?: string
   /** Set when the whole menu is triangulated rather than published. */

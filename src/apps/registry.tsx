@@ -48,6 +48,8 @@ export interface AppDef {
    * button the day somebody added one.
    */
   noSite?: true
+  /** The paid icon glow, Tier 3. See LocalSeed.glow. */
+  glow?: true
   /**
    * Jump to a home-screen PAGE rather than open a window.
    *
@@ -116,6 +118,7 @@ export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
     pitching.
   */
   ...(b.site && !b.needsSite ? {} : { noSite: true as const }),
+  ...(b.glow ? { glow: true as const } : {}),
 }))
 
 export const SYSTEM_APPS: AppDef[] = SYSTEM.map((s) => ({

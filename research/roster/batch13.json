@@ -107,61 +107,13 @@
   "phone": "(707) 399-3600",
   "hours": "Open 24 hours",
   "site_kind": "stopgap",
-  "prices_published": true,
-  "items": [
-   {
-    "name": "Burrito",
-    "desc": "Tortilla, sour cream, rice, cheese, lettuce, choice of beans, meat and salsa",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Breakfast Burrito",
-    "desc": "Flour tortilla, cheese, egg, salsa, choice of ham, sausage, bacon or chorizo",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Fajita Burrito",
-    "desc": "Tortilla, sour cream, rice, cheese, sauteed veggies, lettuce, choice of beans and salsa",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Tacos",
-    "desc": "Three soft corn tortillas, choice of meat, salsa, cheese or sour cream and lettuce",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Torta",
-    "desc": "French roll, refried beans, lettuce, pico de gallo and choice of meat",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Quesadilla",
-    "desc": "Flour tortilla, refried beans, cheese, pico de gallo and choice of meat",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Taco Salad",
-    "desc": "Soft tortilla, lettuce, rice, cheese, pico de gallo, choice of meat",
-    "cents": 1399,
-    "label": null
-   },
-   {
-    "name": "Chips & Salsa",
-    "desc": "",
-    "cents": 449,
-    "label": null
-   }
-  ],
-  "price_note": "from the menu on their Yelp page, which Yelp notes may not be up to date",
+  "prices_published": false,
+  "items": [],
+  "price_note": "the menu on their Yelp page prices most items at $13.99, and Yelp itself warns it may be out of date — the owner quotes $15 to $17 at the counter, so nothing is priced here",
   "flags": [
    "Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas",
-   "hours, phone and address from Apple Maps as he sent them; the menu from Yelp's listing"
+   "hours, phone and address from Apple Maps as he sent them; the menu from Yelp's listing",
+   "PRICE CONFLICT: Yelp's menu says $13.99; Glenn, who buys there, says 'the burritos are like $15-17'. The priced menu is withdrawn rather than shipped wrong; ask the owner for a current list."
   ]
  },
  {

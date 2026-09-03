@@ -875,6 +875,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Burritos
      flag: Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas
      flag: hours, phone and address from Apple Maps as he sent them; the menu from Yelp's listing
+     flag: PRICE CONFLICT: Yelp's menu says $13.99; Glenn, who buys there, says 'the burritos are like $15-17'. The priced menu is withdrawn rather than shipped wrong; ask the owner for a current list.
   */
   'gourmet-burritos': {
     address: "1009 Oliver Rd, Fairfield, CA 94534",
@@ -882,18 +883,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     hours: "Open 24 hours",
     cuisine: "Burritos",
     needsSite: true,
-    items: [
-      ["Burrito","Tortilla, sour cream, rice, cheese, lettuce, choice of beans, meat and salsa",1399],
-      ["Breakfast Burrito","Flour tortilla, cheese, egg, salsa, choice of ham, sausage, bacon or chorizo",1399],
-      ["Fajita Burrito","Tortilla, sour cream, rice, cheese, sauteed veggies, lettuce, choice of beans and salsa",1399],
-      ["Tacos","Three soft corn tortillas, choice of meat, salsa, cheese or sour cream and lettuce",1399],
-      ["Torta","French roll, refried beans, lettuce, pico de gallo and choice of meat",1399],
-      ["Quesadilla","Flour tortilla, refried beans, cheese, pico de gallo and choice of meat",1399],
-      ["Taco Salad","Soft tortilla, lettuce, rice, cheese, pico de gallo, choice of meat",1399],
-      ["Chips & Salsa","",449],
-    ],
-    offer: ["Burrito","Breakfast Burrito","Fajita Burrito","Tacos"],
-    siteNote: "From the menu on their Yelp page, which Yelp notes may not be up to date.",
+    contactOnly: "Burritos, tacos and tortas out of A & A Gas on Oliver Road, open 24 hours. The menu on their Yelp page prices most items at $13.99, and Yelp itself warns it may be out of date — the owner quotes $15 to $17 at the counter, so nothing is priced here.",
   },
 
   /*

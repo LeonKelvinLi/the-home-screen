@@ -10909,3 +10909,47 @@ textarea {
   line-height: 1.45;
   color: rgba(20, 20, 20, 0.72);
 }
+
+/* ---------- the paid icon glow, Tier 3's "+$6" ---------- */
+
+/*
+  A GOLD HALO THAT BREATHES, not the dock's sweep and not the tile's own
+  colour.
+
+  The first cut blurred `background: inherit` around the tile, which on a
+  black logo is a black glow on a dark wallpaper — invisible, which is the one
+  thing a paid feature cannot be. So the halo is BEASTY yellow: the brand's
+  own colour, legible over every wallpaper and every tile, and unmistakably
+  not the red "no website" ring or the teal "mobile" one, both of which state
+  a fact about the business. This states that somebody paid.
+
+  box-shadow rather than a pseudo-element: shadows are not clipped by the
+  tile's overflow, so the artwork stays untouched — a wash across a real logo
+  is what makes it look fake.
+*/
+.icon-tile.is-glow {
+  animation: icon-glow 3.2s ease-in-out infinite;
+}
+
+@keyframes icon-glow {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px 1px rgba(246, 216, 0, 0.55),
+      0 0 14px 3px rgba(246, 216, 0, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 11px 3px rgba(246, 216, 0, 0.95),
+      0 0 26px 9px rgba(246, 216, 0, 0.5);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile.is-glow {
+    animation: none;
+    box-shadow:
+      0 0 8px 2px rgba(246, 216, 0, 0.75),
+      0 0 20px 6px rgba(246, 216, 0, 0.4);
+  }
+}
