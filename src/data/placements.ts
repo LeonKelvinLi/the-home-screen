@@ -912,6 +912,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'alameda-goods-0': 'b_shakashack', //      no Hawaiian category; opens Alameda
   'concord-goods-7': 'b_mrsramen', //        Korean and ramen
   'antioch-services-22': 'b_baysidefencing', //  Handyman and home repair; contractor taken (Serrano Turf)
+  'san-ramon-goods-5': 'b_empirestatepizza', //  Italian; sent 09-03 from the shop
   'pittsburg-goods-8': 'b_houseofwings', //      Chicken wings; sent 08-23, seated in the 09-02 sweep
   'beasty-services2-19': 'b_tastinpeachy', //    Caterer, Bay Area, no city; sent 08-30, seated in the 09-02 sweep
 }

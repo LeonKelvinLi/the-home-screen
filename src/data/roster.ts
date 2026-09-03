@@ -1028,6 +1028,25 @@ export const ROSTER_SEED: LocalSeed[] = [
       'on their own site.',
   }),
 
+  /* ---- 2026-09-03 ---- */
+  /* "I'm picking up a pizza right now speaking to the Owner. Are you free
+     to make up a page real quick?" — San Ramon • Goods, with their site, a
+     Maps card and a photo of the Hot Honey Ricotta poster on their wall:
+     "Just post this on the page for now." Italian is goods category 6. The
+     mark is their own badge, cut from the screenshot of their site. */
+  seed('empire-state-pizza', 'Empire State Pizza', 'Empire State', 'NYC-style pizza', '#1F5A3C', {
+    icon: 'empire-state-pizza',
+    logoTemplate: 'monogram', logoInitials: 'ES', logoFace: 'condensed',
+    site: 'https://www.empirestatepizzas.com/',
+    photos: [
+      {
+        src: '/photos/empire-state-pizza-hot-honey.webp',
+        alt: 'Empire State Pizza poster on the shop wall: Hot Honey Ricotta Pepperoni, NYC style, made with Parmigiano Reggiano.',
+        credit: 'Their poster, photographed in the shop',
+      },
+    ],
+  }),
+
   /* ---- 2026-09-02 ---- */
   /* Their site link with "Antioch • Services" and three screenshots of their
      Instagram. A licensed fencing contractor; the Contractor seat in Antioch

@@ -12,10 +12,9 @@ import type { Perk } from './membership'
  * So the copy is the rework and the prices are Glenn's: free, $69, $99, and
  * $6 for the icon glow.
  *
- * NO BILLING PERIOD IS PRINTED BECAUSE NONE WAS WRITTEN. "$69" and "$99" are
- * shown exactly as he wrote them; whether that is a year or a one-off is the
- * first open question in docs/AFFILIATE-PRICING.md, and a period typed here
- * would be a guess on a price.
+ * PER YEAR, on Leon's answer of 2026-09-02 when asked whether $69 and $99
+ * are yearly or one-off: yes, yearly. Glenn's text carried no period; the
+ * period is Leon's call and is recorded in docs/AFFILIATE-PRICING.md.
  *
  * NOTHING HERE CHARGES A CARD. The free tier begins with a reserved spot and
  * the paid tiers are arranged with the operator once the spot is confirmed;
@@ -83,6 +82,7 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
     nameTail: 'Member',
     mark: 'ribbon',
     price: '$69',
+    priceNote: 'per year',
     lead:
       "Includes everything in Tier 1, plus additional ways to promote your business and connect with Biggie's Pass Members.",
     perks: [
@@ -112,7 +112,7 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
     nameTail: 'Member',
     mark: 'gem',
     price: '$99',
-    priceNote: 'Optional icon glow +$6',
+    priceNote: 'per year. Optional icon glow +$6',
     lead:
       'Includes everything in Tier 2, plus BEASTY’s highest level of business-page customization and customer engagement.',
     perks: [

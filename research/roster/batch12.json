@@ -52,5 +52,227 @@
    "no address published; the bio says Bay Area, CA",
    "the tagline is their bio line"
   ]
+ },
+ {
+  "id": "b_empirestatepizza",
+  "name_exact": "Empire State Pizza",
+  "one_line": "NYC-style pizza on Alcosta Blvd, by the pie or the slice",
+  "cuisine": "NYC-style pizza",
+  "address": "9130 Alcosta Blvd Suite C, San Ramon, CA 94583",
+  "phone": "(925) 421-1111",
+  "hours": "Daily 11am-9pm",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "price_note": "from their own ordering site, which takes 10% off online orders",
+  "items": [
+   {
+    "name": "Hot Honey Ricotta Pepperoni",
+    "desc": "Classic red sauce, cheese, pepperoni, ricotta, fresh basil, hot honey, grana padano",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Empire Of Meats Pizza",
+    "desc": "Red sauce, Italian sausage, ground beef, salami, pepperoni, ham and linguica",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "NY Truffle Pizza",
+    "desc": "Portobello, fresh mozzarella, pecorino romano, garlic, black and white truffle oil",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Pizza by the Slice",
+    "desc": "",
+    "cents": 600,
+    "label": null
+   },
+   {
+    "name": "Specialty Pizza Slice",
+    "desc": "",
+    "cents": 875,
+    "label": null
+   },
+   {
+    "name": "Empire Margherita Pizza",
+    "desc": "Red sauce, fresh mozzarella, sliced tomato, fresh basil",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "NY White Pizza",
+    "desc": "Olive oil, ricotta, mozzarella, fresh garlic, fresh basil",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Combination Pizza",
+    "desc": "Pepperoni, salami, ham, sausage, mushroom, olive, bell pepper",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Garlic Chicken Pizza",
+    "desc": "White garlic sauce, chicken, mushrooms, green onions, tomato, garlic",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "BBQ Chicken Pizza",
+    "desc": "Smoked BBQ sauce, chicken, mushrooms, red onions, garlic, tomato",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Mediterranean Mile Pizza",
+    "desc": "Pesto, pepperoncini, spinach, green olives, red onions, sun-dried tomato, feta",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Uptown Pesto Pizza",
+    "desc": "Pesto, chicken, sun-dried tomato, black olive, mushrooms, artichoke, feta, red onion",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Ray's Special Pizza",
+    "desc": "Chicken, mushroom, artichoke, roasted garlic, basil, romano, white garlic sauce",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Vegetarian Pizza",
+    "desc": "Mushroom, olive, tomatoes, bell pepper, red onion, garlic",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "The Empire Tikka",
+    "desc": "Butter chicken sauce, mozzarella, butter chicken, bell pepper, red onion, mushroom, cilantro",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Paneer Tikka Pizza",
+    "desc": "Creamy butter sauce, mozzarella, marinated paneer, bell pepper, olive, onion, cilantro",
+    "cents": 2895,
+    "label": null
+   },
+   {
+    "name": "Create Your Own Pizza",
+    "desc": "",
+    "cents": 1795,
+    "label": null
+   },
+   {
+    "name": "Calzone",
+    "desc": "",
+    "cents": 1695,
+    "label": null
+   },
+   {
+    "name": "Beef & Lamb Gyro",
+    "desc": "With a bag of chips. Halal",
+    "cents": 1395,
+    "label": null
+   },
+   {
+    "name": "9\" Meatball Sub",
+    "desc": "With chips. Halal",
+    "cents": 1395,
+    "label": null
+   },
+   {
+    "name": "Hot Wings",
+    "desc": "",
+    "cents": 1295,
+    "label": null
+   },
+   {
+    "name": "BBQ Wings",
+    "desc": "",
+    "cents": 1295,
+    "label": null
+   },
+   {
+    "name": "Garlic Twists",
+    "desc": "",
+    "cents": 1195,
+    "label": null
+   },
+   {
+    "name": "Garlic Sticks",
+    "desc": "10 inch, white garlic sauce and pesto, topped with cheese",
+    "cents": 1495,
+    "label": null
+   },
+   {
+    "name": "Garlic Bread With Cheese",
+    "desc": "",
+    "cents": 895,
+    "label": null
+   },
+   {
+    "name": "Mozzarella Sticks",
+    "desc": "",
+    "cents": 895,
+    "label": null
+   },
+   {
+    "name": "Green Salad",
+    "desc": "",
+    "cents": 995,
+    "label": null
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "",
+    "cents": 995,
+    "label": null
+   },
+   {
+    "name": "Greek Salad",
+    "desc": "",
+    "cents": 1095,
+    "label": null
+   },
+   {
+    "name": "Brownie Cookie Pizza",
+    "desc": "",
+    "cents": 895,
+    "label": null
+   },
+   {
+    "name": "Chocolate Chip Cookie Pizza",
+    "desc": "",
+    "cents": 895,
+    "label": null
+   },
+   {
+    "name": "Fresh Cannoli",
+    "desc": "",
+    "cents": 1095,
+    "label": null
+   },
+   {
+    "name": "New York Cheesecake",
+    "desc": "",
+    "cents": 595,
+    "label": null
+   },
+   {
+    "name": "Lava Cake",
+    "desc": "",
+    "cents": 695,
+    "label": null
+   }
+  ],
+  "flags": [
+   "Apple Maps prints the suite as Ste A; their own site says Suite C, which is what is here",
+   "no Instagram on the site; none carried"
+  ]
  }
 ]

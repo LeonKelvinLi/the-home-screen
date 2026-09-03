@@ -96,10 +96,10 @@ prints the tier figures and nothing about years.
 
 - **How the loyalty schedule maps onto the tiers** (above).
 
-- **What period $69 and $99 cover.** The tier text carries no "per year" or
-  "per month" and none was said; the page prints the figures exactly as
-  written. Confirm before a checkout is attached, because a period is the
-  difference between $69 once and $828 a year.
+- ~~What period $69 and $99 cover.~~ SETTLED 2026-09-02: Leon confirmed
+  they are per year, and the page prints "per year" under both. Glenn's own
+  text carried no period, so if he meant otherwise it is one line to change
+  in `src/data/affiliateTiers.ts`.
 
 - Whether the 48 is per city or across all of them. He wrote "the first 48 for
   each city", which is 48 × the number of cities.
