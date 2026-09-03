@@ -20,8 +20,10 @@ import type { PetAvatar } from '../lib/profile'
   yet, and a list of identical grey circles reads as a placeholder. The same
   id always gets the same animal, so a row looks the same tomorrow.
 */
-const DIR_SPECIES = ['dog', 'cat', 'rabbit', 'hamster', 'bird']
-const DIR_COATS = ['#3B3B3F', '#B5651D', '#8A8A8A', '#E0C9A6', '#5C4033', '#F2F2F2']
+/* Light coats only: a dark coat fills the whole animal and the row reads as a
+   black disc, which is what the first cut of this looked like. */
+const DIR_SPECIES = ['dog', 'cat', 'rabbit', 'hamster']
+const DIR_COATS = ['#B5651D', '#C9A66B', '#E0C9A6', '#9A9A9A', '#F2F2F2', '#D98C5F']
 const DIR_BACKDROPS = ['#FFE9A8', '#DCEBFF', '#FFD9D9', '#DFF5E1', '#EEE0FF', '#FFE6C7']
 const DIR_ACCESSORIES = ['', 'collar', 'bow', 'cap', 'shades', '']
 function petFor(id: string): PetAvatar {
