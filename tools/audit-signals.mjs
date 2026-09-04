@@ -40,23 +40,54 @@ try {
     await p.waitForTimeout(500)
     return p
   }
+  /*
+    CLICK, THEN WAIT FOR THE NUMBER TO MOVE — not for a guessed 500ms.
+
+    Each of these counts is a POST and a re-read, and under the parallel suite
+    that round trip outran the sleep often enough to fail a working app. The
+    poll gives up after its window and lets the assertion below read whatever
+    is on screen, so a count that is genuinely wrong still fails.
+  */
+  const tap = async (p, sel) => {
+    const before = JSON.stringify(await nums(p))
+    await p.click(sel)
+    /* The number moves optimistically and then again when the server answers,
+       so waiting only for the first move hands the next click a component
+       mid-POST — which is how this lost a star. Wait for the move, THEN for
+       the value to hold still. */
+    await p.waitForFunction(
+      (b) => {
+        const n = [...document.querySelectorAll('.brand-act-n')].map((e) => e.textContent)
+        return JSON.stringify(n) !== b
+      },
+      before, { timeout: 8000, polling: 100 },
+    ).catch(() => {})
+    let last = null
+    for (let i = 0; i < 25; i++) {
+      const now = JSON.stringify(await nums(p))
+      if (now === last) break
+      last = now
+      await p.waitForTimeout(120)
+    }
+  }
+
   const p1 = await visitor()
   ok(JSON.stringify(await nums(p1)) === '["0","0","0"]', 'a brand nobody has touched shows 0, 0, 0')
 
-  await p1.click('.brand-like'); await p1.waitForTimeout(500)
+  await tap(p1, '.brand-like')
   ok((await nums(p1))[0] === '1', 'the heart counts a like')
 
-  await p1.click('.brand-like'); await p1.waitForTimeout(500)
+  await tap(p1, '.brand-like')
   ok((await nums(p1))[0] === '0', 'the SAME person tapping again UNLIKES — it does not count twice')
 
-  await p1.click('.brand-like'); await p1.waitForTimeout(500)
-  await p1.click('.brand-star'); await p1.waitForTimeout(500)
+  await tap(p1, '.brand-like')
+  await tap(p1, '.brand-star')
   const after = await nums(p1)
   ok(after[0] === '1' && after[1] === '1', 'the star counts a save, independently of the heart')
 
   const p2 = await visitor()
   ok((await nums(p2))[0] === '1', 'a second visitor SEES the first one’s like — the count is server-side')
-  await p2.click('.brand-like'); await p2.waitForTimeout(500)
+  await tap(p2, '.brand-like')
   ok((await nums(p2))[0] === '2', 'and a genuinely separate person adds exactly one')
 
   // the tap targets an affiliate's customer has to hit

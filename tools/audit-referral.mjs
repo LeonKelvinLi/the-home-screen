@@ -53,8 +53,32 @@ const join = async (url, name, email) => {
   if (!code) throw new Error(`no code logged for ${email}`)
   await p.fill('.join-code', code)
   await p.click('form.join button[type=submit]')
-  await p.waitForTimeout(1600)
-  const a = await p.evaluate(async()=>{const r=await fetch('/api/members/me',{credentials:'same-origin'});return r.ok?await r.json():null})
+  /*
+    POLL FROM NODE, NOT FROM THE PAGE.
+
+    Two wrong versions before this one. A flat 1600ms sleep failed under the
+    parallel suite whenever sign-up took longer, reporting that a member who
+    signed up never did. Replacing it with page.waitForFunction was worse:
+    signing in re-renders, that destroys the execution context, waitForFunction
+    rejects instantly and the check ran EARLIER than the sleep it replaced.
+    And polling it at 300ms out-ran /api/members/me's own rate limit, so the
+    poll manufactured the 429s it then read as a failed sign-up.
+
+    A loop of separate evaluate() calls survives a re-render, and one a second
+    stays inside the limiter. If it never arrives, `a` is null and the caller
+    asserts on it exactly as before.
+  */
+  let a = null
+  for (let i = 0; i < 22; i++) {
+    a = await p
+      .evaluate(async () => {
+        const r = await fetch('/api/members/me', { credentials: 'same-origin' })
+        return r.ok ? await r.json() : null
+      })
+      .catch(() => null)
+    if (a) break
+    await p.waitForTimeout(1000)
+  }
   return { ctx, p, a }
 }
 

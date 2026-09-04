@@ -129,7 +129,20 @@ for (const world of WORLDS) {
   await nameBox.fill('Chan Nel')
   await p.waitForTimeout(200)
   await p.evaluate(() => document.querySelector('.join button[type=submit]')?.click())
-  await p.waitForTimeout(1600)
+  /*
+    WAIT FOR THE STEP, NOT FOR A GUESSED 1.6 SECONDS.
+
+    Under `bash tools/audit-all.sh` six of these run at once, each with its own
+    server and browser, and the code screen took longer than 1600ms to render
+    perhaps one run in two — so this reported that the screen "does not name
+    the address it was sent to" when the screen simply was not there yet.
+    audit-all.sh's own header warns about exactly this.
+
+    The catch is deliberate: if the step never arrives, the assertions below
+    still run against an empty screen and still fail. This only removes the
+    guess, never the check.
+  */
+  await p.waitForSelector('.join-code', { timeout: 25000 }).catch(() => {})
 
   const codeStep = await p.evaluate(() => ({
     title: document.querySelector('.chrome-title, h1, h2')?.textContent?.trim() ?? '',
