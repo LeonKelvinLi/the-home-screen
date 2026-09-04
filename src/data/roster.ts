@@ -1079,6 +1079,39 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'A new Bay Area media company, born in the Bay and broadcasting worldwide: music, originals, community, fashion and business, out of Oakland and San Francisco. It launches Labor Day, September 7, 2026, and nothing is for sale yet; their site takes sign-ups for first access.',
   }),
+  /* 2026-09-03 night into 09-04. Cali Party Bus for Oakland; Pijja Paradise
+     twice, "I deliver to the one in Livermore every week. I plan to speak to
+     the owner and show her her page soon"; Chikin Drip twice, Union City and
+     San Jose. Their published rates and menus, from their own sites. */
+  seed('cali-party-bus', 'Cali Party Bus', 'Cali Party Bus', 'Party bus rental', '#12121A', {
+    icon: 'cali-party-bus',
+    logoTemplate: 'wordmark', logoLines: ['CALI', 'PARTY BUS'], logoFace: 'script',
+    site: 'https://calipartybus.com/sanfrancisco/',
+    siteCta: 'Get an instant quote',
+  }),
+  seed('pijja-paradise-pittsburg', 'Pijja Paradise', 'Pijja Paradise', 'Indian pizza', '#B3121B', {
+    icon: 'pijja-paradise',
+    logoTemplate: 'badge', logoLines: ['PIJJA', 'PARADISE'], logoFace: 'condensed',
+    site: 'https://pijjaparadise.com/',
+    siteCta: 'Order from Pittsburg',
+  }),
+  seed('pijja-paradise-livermore', 'Pijja Paradise', 'Pijja Paradise', 'Indian pizza', '#B3121B', {
+    icon: 'pijja-paradise',
+    logoTemplate: 'badge', logoLines: ['PIJJA', 'PARADISE'], logoFace: 'condensed',
+    site: 'https://pijjaparadise.com/',
+    siteCta: 'Order from Livermore',
+  }),
+  seed('chikin-drip-union-city', 'Chikin Drip', 'Chikin Drip', 'Nashville hot chicken', '#E8621A', {
+    icon: 'chikin-drip',
+    logoTemplate: 'wordmark', logoLines: ['CHIKIN', 'DRIP'], logoFace: 'condensed',
+    site: 'https://www.chikindrip.com/',
+  }),
+  seed('chikin-drip-san-jose', 'Chikin Drip', 'Chikin Drip', 'Nashville hot chicken', '#E8621A', {
+    icon: 'chikin-drip',
+    logoTemplate: 'wordmark', logoLines: ['CHIKIN', 'DRIP'], logoFace: 'condensed',
+    site: 'https://www.chikindrip.com/',
+  }),
+
   /* PHO NATION, THREE TIMES. "Pho Nation locations: Alameda, San Bruno,
      Newark" with five cards, and "He needs a consistent brand identity
      between three of his locations" — the website-and-menu client, "it comes

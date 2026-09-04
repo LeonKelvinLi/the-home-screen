@@ -921,6 +921,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-online-23': 'b_overlyhiphop', //        Media, tech and accessories (widened)
   'fairfield-goods-1': 'b_gourmetburritos', //   Mexican food; A & A Gas, his working name
   'beasty-individuals-15': 'b_nanacasas',
+  /* Zero-based: seat N is category N+1. Pijja is Indian-style pizza and calls
+     itself that, so both take Indian food rather than Italian — which is
+     Glasshouzz's in Livermore anyway. Chikin Drip takes Chicken wings in
+     Union City; San Jose's is JoJo's, so that one goes to the yellow page.
+     A party bus has no category on the services sheet and Oakland's Events
+     seat is Jump and Roll's, so Cali Party Bus goes to the yellow page too. */
+  'pittsburg-goods-3': 'b_pijjaparadisepittsburg', // Indian food
+  'livermore-goods-3': 'b_pijjaparadiselivermore', // Indian food
+  'union-city-goods-8': 'b_chikindripunioncity', //   Chicken wings
+  'san-jose-goods2-2': 'b_chikindripsanjose', //      wings seat is JoJo's
+  'oakland-services2-1': 'b_calipartybus', //         no transport category; Events is taken
   'newark-goods-2': 'b_phonationnewark', //     Asian food
   'alameda-goods-2': 'b_phonationalameda', //   Asian food
   'san-francisco-goods2-9': 'b_phonationsf', // Asian seat taken; the yellow page

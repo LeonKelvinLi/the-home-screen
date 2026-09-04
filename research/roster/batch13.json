@@ -141,12 +141,230 @@
   "phone": "(510) 995-8084",
   "hours": "Daily 5pm-2am",
   "site_kind": "stopgap",
-  "prices_published": false,
-  "items": [],
-  "price_note": "their page links only a Facebook profile; they publish no prices",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Pho Nation Combo #1",
+    "desc": "Rice noodles with thin sliced rare steak, briskets, well-done flanks, tripe, and beef meatballs in beef broth.",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Pho Nation Combo #2",
+    "desc": "Rice noodles with thin sliced rare steak, briskets, and well-done flanks in beef broth.",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Rare Steak & Beef Balls",
+    "desc": "Rice noodles with thin sliced rare steak and beef meatballs in beef broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Rare Steak & Well Done Briskets",
+    "desc": "Rice noodles with thin sliced rare steak and well-done briskets in beef broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Well Done Briskets",
+    "desc": "Rice noodles with well-done briskets in beef broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Rare Steak",
+    "desc": "Rice noodles with thin sliced rare steak in beef broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Beef Balls",
+    "desc": "Rice noodles with beef meatballs in beef broth.",
+    "cents": 2070,
+    "label": null
+   },
+   {
+    "name": "Pho Chicken Breast",
+    "desc": "Rice noodles with shredded chicken breast meat in chicken broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Pho Chicken Quarter",
+    "desc": "Rice noodles with bone-in chopped chicken leg quarters in chicken broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Pho Shrimp",
+    "desc": "Rice noodles with shrimp in chicken broth.",
+    "cents": 2070,
+    "label": null
+   },
+   {
+    "name": "Plain Pho & Soup",
+    "desc": "Rice noodles with beef or chicken broth.",
+    "cents": 1380,
+    "label": null
+   },
+   {
+    "name": "Vegetarian Pho Tofu & Mixed Veggies",
+    "desc": "Rice noodles with tofu and mixed vegetables in vegetarian broth.",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "House Special Vermicelli",
+    "desc": "Vermicelli noodles and grilled chicken, grilled pork, and grilled shrimp. Served with shredded lettuce, cucumb",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Grilled Chicken Vermicelli",
+    "desc": "Vermicelli noodles and grilled chicken. Served with shredded lettuce, cucumber, beansprouts, mint, pickled car",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Grilled Pork Vermicelli",
+    "desc": "Vermicelli noodles and grilled pork. Served with shredded lettuce, cucumber, beansprouts, mint, pickled carrot",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Grilled Shrimp Vermicelli",
+    "desc": "Vermicelli noodles and grilled shrimp. Served with shredded lettuce, cucumber, beansprouts, mint, pickled carr",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Egg Rolls Vermicelli",
+    "desc": "Vermicelli noodles and egg rolls. Served with shredded lettuce, cucumber, beansprouts, mint, pickled carrots &",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Vegetarian Tofu & Mixed Veggies Vermicelli",
+    "desc": "Vermicelli noodles and tofu and mixed vegetables. Served with shredded lettuce, cucumber, beansprouts, mint, p",
+    "cents": 1840,
+    "label": null
+   },
+   {
+    "name": "Combo Rice Plate #1",
+    "desc": "Jasmine broken white rice served with grilled pork, shrimp, grilled chicken, lettuce, tomatoes, and a side of ",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Combo Rice Plate #2",
+    "desc": "Jasmine broken white rice served with chicken wings, an egg roll, pork chop, lettuce, tomatoes, cucumber, and ",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Grilled Chicken, Salad, & Soup",
+    "desc": "Jasmine broken white rice served with grilled chicken, lettuce, tomatoes, cucumber, and a side of house chicke",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Grilled Pork, Salad, & Soup",
+    "desc": "Jasmine broken white rice served with grilled pork, lettuce, tomatoes, cucumber, and a side of house chicken s",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Grilled Pork Chops, Salad, & Soup",
+    "desc": "Jasmine broken white rice served with grilled pork chops, lettuce, tomatoes, cucumber, and a side of house chi",
+    "cents": 2070,
+    "label": null
+   },
+   {
+    "name": "Grilled Shrimp, Salad, & Soup",
+    "desc": "Jasmine broken white rice served with grilled shrimp, lettuce, tomatoes, cucumber, and a side of house chicken",
+    "cents": 2185,
+    "label": null
+   },
+   {
+    "name": "Grilled Beef Short Ribs, Salad, & Soup",
+    "desc": "Jasmine broken white rice served with grilled beef short ribs, lettuce, tomatoes, cucumber, and a side of hous",
+    "cents": 2415,
+    "label": null
+   },
+   {
+    "name": "Steamed Chicken, Salad, & Soup",
+    "desc": "Jasmine broken white rice served with steamed bone-in chopped chicken leg quarters, lettuce, tomatoes, cucumbe",
+    "cents": 1955,
+    "label": null
+   },
+   {
+    "name": "Vegetarian Tofu, Mixed Veggies, & Soup",
+    "desc": "Jasmine broken white rice served with tofu and steamed mixed vegetables, lettuce, tomatoes, cucumber, and a si",
+    "cents": 1840,
+    "label": null
+   },
+   {
+    "name": "Fried Egg Rolls",
+    "desc": "chicken, shrimp, and vegetable filling. Vegetarian option are now no longer available for this item.",
+    "cents": 1035,
+    "label": null
+   },
+   {
+    "name": "Fried Chicken Wings",
+    "desc": "Please note the flaver you would like. Lemon Pepper - Buffalo - Sweet and sour",
+    "cents": 1155,
+    "label": null
+   },
+   {
+    "name": "Fried Potstickers",
+    "desc": "Chicken and vegetable filling.",
+    "cents": 1035,
+    "label": null
+   },
+   {
+    "name": "Fresh Shrimp Spring Rolls",
+    "desc": "Comes with a side of peanut dipping sauce. Please ask for fish sauce if you are allergic to peanuts.",
+    "cents": 1265,
+    "label": null
+   },
+   {
+    "name": "Shrimp Salad",
+    "desc": "Hand-tossed shrimp, shredded cabbage, carrots, onions, mixed herbs with a sweet and savory fish sauce vinaigre",
+    "cents": 1495,
+    "label": null
+   },
+   {
+    "name": "Chicken Salad",
+    "desc": "Hand-tossed shredded chicken breast, shredded cabbage, carrots, onions, mixed herbs with a sweet and savory fi",
+    "cents": 1380,
+    "label": null
+   },
+   {
+    "name": "Fried Chicken Skin",
+    "desc": "Spicy. Please let us know if you do not want it spicy.",
+    "cents": 1265,
+    "label": null
+   },
+   {
+    "name": "Deep Fried Tofu",
+    "desc": "Spicy. Please let us know if you do not want it spicy.",
+    "cents": 920,
+    "label": null
+   },
+   {
+    "name": "Deep Fried Calamari",
+    "desc": "Spicy. Please let us know if you do not want it spicy.",
+    "cents": 1150,
+    "label": null
+   }
+  ],
+  "price_note": "from the menu on their Yelp page, the one Glenn sent, which Yelp notes may not be up to date",
   "flags": [
    "hours, phone and address from the Apple Maps card he sent",
-   "Glenn: the three locations need one consistent brand identity; the same mark is used on all three"
+   "Glenn: the three locations need one consistent brand identity; the same mark is used on all three",
+   "menu is the Alameda location's Yelp listing; the other two are not priced here"
   ]
  },
  {
@@ -162,6 +380,205 @@
   "flags": [
    "Glenn wrote 'San Bruno' for this one; it is San Bruno Avenue in San Francisco, so it sits on San Francisco's page",
    "address from the profile card he sent; no phone or hours published there"
+  ]
+ },
+ {
+  "id": "b_calipartybus",
+  "name_exact": "Cali Party Bus",
+  "one_line": "Party buses and limo vans out of an Oakland terminal",
+  "cuisine": "Party bus rental",
+  "address": "4911 Coliseum Way, Oakland, CA",
+  "phone": "(415) 692-1465",
+  "email": "info@calipartybus.com",
+  "hours": "Mon-Fri 8am-7pm, Sat-Sun 11am-5pm",
+  "instagram": "calipartybus",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Sprinter Limo Van",
+    "desc": "1 to 12 guests",
+    "cents": 16000,
+    "label": "from $160/hr"
+   },
+   {
+    "name": "Small Party Bus",
+    "desc": "10 to 19 guests",
+    "cents": 19500,
+    "label": "from $195/hr"
+   },
+   {
+    "name": "Small Party Bus with restroom",
+    "desc": "10 to 19 guests",
+    "cents": 20000,
+    "label": "from $200/hr"
+   },
+   {
+    "name": "Medium Party Bus",
+    "desc": "20 to 28 guests",
+    "cents": 24500,
+    "label": "from $245/hr"
+   },
+   {
+    "name": "Medium Party Bus with restroom",
+    "desc": "20 to 28 guests",
+    "cents": 25000,
+    "label": "from $250/hr"
+   },
+   {
+    "name": "Large Party Bus with restroom",
+    "desc": "30 to 40 guests",
+    "cents": 29500,
+    "label": "from $295/hr"
+   },
+   {
+    "name": "XL Party Bus with restroom",
+    "desc": "30 to 45 guests",
+    "cents": 30000,
+    "label": "from $300/hr"
+   },
+   {
+    "name": "Executive Charter with restroom",
+    "desc": "36 guests",
+    "cents": 20000,
+    "label": "from $200/hr"
+   }
+  ],
+  "price_note": "their own published starting rates, Sunday to Friday; Friday night and Saturday are $5 to $10 an hour more, and the rate covers tax, fuel, tolls and the driver's gratuity",
+  "flags": [
+   "a travel fee may apply beyond 40 miles of their Oakland terminal, their own note"
+  ]
+ },
+ {
+  "id": "b_chikindripunioncity",
+  "name_exact": "Chikin Drip",
+  "one_line": "Nashville hot chicken on Alvarado Blvd, open late every day",
+  "cuisine": "Nashville hot chicken",
+  "address": "32004 Alvarado Blvd, Union City, CA 94587",
+  "phone": "(669) 900-3829",
+  "email": "info@chikindrip.com",
+  "hours": "Sun-Thu 11am-1am, Fri-Sat 11am-1:30am",
+  "instagram": "chikindrip",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Combo 1",
+    "desc": "One slider, slaw, pickles, secret sauce and fries",
+    "cents": 1299,
+    "label": null
+   },
+   {
+    "name": "Combo 2",
+    "desc": "One slider, one tender, slaw, pickles, secret sauce and fries",
+    "cents": 1499,
+    "label": null
+   },
+   {
+    "name": "Combo 3",
+    "desc": "Two tenders, slaw, pickles, secret sauce and fries",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Combo 4",
+    "desc": "Two sliders, slaw, pickles, secret sauce and fries",
+    "cents": 1799,
+    "label": null
+   },
+   {
+    "name": "Loaded Fries",
+    "desc": "Fries, chopped tenders, slaw, pickles and secret sauce",
+    "cents": 1399,
+    "label": null
+   }
+  ],
+  "price_note": "from their own menu; cheese is 75 cents extra on any slider combo",
+  "flags": [
+   "their Instagram bio says 100% halal",
+   "every combo is fried to order, their words"
+  ]
+ },
+ {
+  "id": "b_chikindripsanjose",
+  "name_exact": "Chikin Drip",
+  "one_line": "Nashville hot chicken by SJC on Newhall Drive, open late",
+  "cuisine": "Nashville hot chicken",
+  "address": "530 Newhall Dr, San Jose, CA 95110",
+  "phone": "(669) 900-3829",
+  "email": "info@chikindrip.com",
+  "hours": "Sun-Thu 11am-1am, Fri-Sat 11am-1:30am",
+  "instagram": "chikindrip",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Combo 1",
+    "desc": "One slider, slaw, pickles, secret sauce and fries",
+    "cents": 1299,
+    "label": null
+   },
+   {
+    "name": "Combo 2",
+    "desc": "One slider, one tender, slaw, pickles, secret sauce and fries",
+    "cents": 1499,
+    "label": null
+   },
+   {
+    "name": "Combo 3",
+    "desc": "Two tenders, slaw, pickles, secret sauce and fries",
+    "cents": 1399,
+    "label": null
+   },
+   {
+    "name": "Combo 4",
+    "desc": "Two sliders, slaw, pickles, secret sauce and fries",
+    "cents": 1799,
+    "label": null
+   },
+   {
+    "name": "Loaded Fries",
+    "desc": "Fries, chopped tenders, slaw, pickles and secret sauce",
+    "cents": 1399,
+    "label": null
+   }
+  ],
+  "price_note": "from their own menu; cheese is 75 cents extra on any slider combo",
+  "flags": [
+   "they have a second San Jose kitchen at 81 Curtner Ave on the same menu, hours and number",
+   "their Instagram bio says 100% halal"
+  ]
+ },
+ {
+  "id": "b_pijjaparadisepittsburg",
+  "name_exact": "Pijja Paradise",
+  "one_line": "Indian-style pizza on Railroad Avenue",
+  "cuisine": "Indian pizza",
+  "address": "2961 Railroad Ave, Pittsburg, CA 94565",
+  "phone": "(925) 267-4833",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their site takes orders per location; the menu and prices are behind it",
+  "flags": [
+   "pijjaparadise.com renders only with JavaScript, so the menu could not be read",
+   "addresses and numbers from their own site's location list, as he sent it"
+  ]
+ },
+ {
+  "id": "b_pijjaparadiselivermore",
+  "name_exact": "Pijja Paradise",
+  "one_line": "Indian-style pizza on Larkspur Drive",
+  "cuisine": "Indian pizza",
+  "address": "922 Larkspur Dr Suite A1, Livermore, CA 94551",
+  "phone": "(925) 800-5934",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their site takes orders per location; the menu and prices are behind it",
+  "flags": [
+   "a third location in Fresno is on their site and is not seated here",
+   "Glenn delivers to this one weekly and plans to show the owner her page"
   ]
  }
 ]

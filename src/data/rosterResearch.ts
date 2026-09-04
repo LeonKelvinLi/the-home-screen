@@ -25,7 +25,7 @@ import type { LocalSeed } from './localBrands'
  */
 export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   /*
-     1-Up Retro — gathered 2026-09-03 from own-domain
+     1-Up Retro — gathered 2026-09-04 from own-domain
      their spelling: "1-Up Retro Video Games" (roster keeps "1-Up Retro")
      they are: Retro video games
      logo: https://www.1upretrogaming.com/cdn/shop/files/shirtlogo.png?v=1721634226 (1920x1200) — not cut into a tile yet
@@ -50,7 +50,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Adzeela — gathered 2026-09-03 from own-domain
+     Adzeela — gathered 2026-09-04 from own-domain
      they are: Out-of-home advertising
      logo: https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69dc669a982fd67a35b6482c.png (401x310) — not cut into a tile yet
      flag: no street address — footer lists only 'San Jose, California / Manila, Philippines'
@@ -68,7 +68,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Al Pastor Papi — gathered 2026-09-03 from own-domain
+     Al Pastor Papi — gathered 2026-09-04 from own-domain
      they are: Mexican grill
      logo: https://www.alpastorpapisf.com/uploads/b/75a7c2018d51b2a13ae14860ad1a9f6f0c865a1f22ab6e50c3a4e4419883ea86/APP%20Combined%20Logo%20%283%29_1775243606.png (2000x2000) — not cut into a tile yet
      flag: no phone or email published anywhere — the contact page is a form
@@ -94,7 +94,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Ally Virtual — gathered 2026-09-03 from own-domain
+     Ally Virtual — gathered 2026-09-04 from own-domain
      they are: CRM and automation
      logo: https://assets.cdn.filesafe.space/GyU3aAixj9Swzx1v6VvR/media/6628a0b2424438359e1ba0d3.png (350x180) — not cut into a tile yet
      flag: the only published address is 30 Gould St Ste R, Sheridan, WY — a registered-agent suite, not a place a customer visits — so no address is carried onto the page; both phones are San Jose area codes
@@ -123,13 +123,13 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Almas Auto & Tires — gathered 2026-09-03 from own-domain — BLOCKED: domain does not resolve — NXDOMAIN for almasautoandtiresca.com and www. on 1.1.1.1 and 8.8.8.8; no site to read
+     Almas Auto & Tires — gathered 2026-09-04 from own-domain — BLOCKED: domain does not resolve — NXDOMAIN for almasautoandtiresca.com and www. on 1.1.1.1 and 8.8.8.8; no site to read
   */
   'almas-auto-tires': {
   },
 
   /*
-     Andrew Shin — gathered 2026-09-03 from own-domain
+     Andrew Shin — gathered 2026-09-04 from own-domain
      their spelling: "Law Offices of Andrew B. Shin" (roster keeps "Andrew Shin")
      they are: Personal injury law
      logo: https://cdn.prod.website-files.com/6733dda61510d345ee4e95f5/6889615445e8101a63b519f5_logo%20new%201.jpg (700x240) — not cut into a tile yet
@@ -146,7 +146,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Babs Delta Diner — gathered 2026-09-03 from own-domain
+     Babs Delta Diner — gathered 2026-09-04 from own-domain
      they are: American diner
      flag: the site is an ordering mini-site with no about page and no email
      flag: a breakfast called 'Chicken Apple Sausage' is described as boneless pork chops — a copy-paste error; frequent menu typos
@@ -173,7 +173,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Banh Mi Oven — gathered 2026-09-03 from stopgap — BLOCKED: domain is not registered; there is no site to read
+     Banh Mi Oven — gathered 2026-09-04 from stopgap — BLOCKED: domain is not registered; there is no site to read
      flag: the given domain banhmioven.us does not exist — NXDOMAIN on two resolvers, and the .us registry has no record of it; the link he sent is dead
   */
   'banh-mi-oven': {
@@ -181,7 +181,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Banh Mi Xpress — gathered 2026-09-03 from own-domain
+     Banh Mi Xpress — gathered 2026-09-04 from own-domain
      they are: Vietnamese sandwiches
      flag: no business hours or days published — the only time statement is 'banh mi served from 7:30am to 6pm'
      flag: the 'grilled pork' description actually describes the grilled beef item
@@ -209,7 +209,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Barrel Bistro & Wine Bar — gathered 2026-09-03 from own-domain
+     The Barrel Bistro & Wine Bar — gathered 2026-09-04 from own-domain
      they are: Wine bar and bistro
      logo: https://images.squarespace-cdn.com/content/v1/62e481f28715b55915a9d17d/0cb1963c-d787-4160-9e53-4e09cd1c127f/Barrel-logotype-horizontal-2color.png (2085x200) — not cut into a tile yet
      flag: HOURS CONFLICT on their own site: the footer says Sun-Thu 9am-10pm, Fri-Sat 9am-11pm with breakfast 9-2, while their structured data says 11am-10pm every day — no hours carried
@@ -238,7 +238,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bay Area Charters — gathered 2026-09-03 from own-domain
+     Bay Area Charters — gathered 2026-09-04 from own-domain
      their spelling: "Bay Area Charters Inc." (roster keeps "Bay Area Charters")
      they are: Charter buses
      flag: fleet size contradicts itself: the homepage says 57-passenger motor coaches, the Services page says 55
@@ -255,7 +255,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bay Side Fencing Co — gathered 2026-09-03 from site
+     Bay Side Fencing Co — gathered 2026-09-04 from site
      they are: Fencing contractor
      flag: Lic #1042534, on their contact page and Instagram bio
      flag: serves all of the Bay Area per their Instagram bio; the showroom is the Antioch address
@@ -273,7 +273,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Benicia Grill — gathered 2026-09-03 from own-domain
+     Benicia Grill — gathered 2026-09-04 from own-domain
      they are: Breakfast and lunch
      logo: http://www.benicia-grill.com/assets/images/logo/logo-white.jpg (166x161) — not cut into a tile yet
      flag: About, Menu, Gallery, Coupons and Contact all return byte-identical homepage HTML — the whole nav is one page
@@ -293,7 +293,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bloom Balloon — gathered 2026-09-03 from own-domain
+     Bloom Balloon — gathered 2026-09-04 from own-domain
      their spelling: "BLOOM BALLOON" (roster keeps "Bloom Balloon")
      they are: Balloon decor
      logo: https://static.tildacdn.net/tild6230-3234-4430-b835-343032333532/logo_Bloom_Balloon_r.jpeg (1680x1711) — not cut into a tile yet
@@ -308,7 +308,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bober Tea & Mochi — gathered 2026-09-03 from own-domain
+     Bober Tea & Mochi — gathered 2026-09-04 from own-domain
      their spelling: "Bober Tea & Coffee" (roster keeps "Bober Tea & Mochi")
      they are: Boba and mochi donuts
      logo: https://framerusercontent.com/images/MqLkWIPHQiotmvGb9mJ1AyXfWc8.png (500x500) — not cut into a tile yet
@@ -327,7 +327,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bodylines Day Spa — gathered 2026-09-03 from own-domain
+     Bodylines Day Spa — gathered 2026-09-04 from own-domain
      they are: Day spa
      flag: leftover Wix duplicate pages: 'Copy of Home' is a visible nav item, and live service URLs use 'copy-of-' slugs
      flag: a bare Constant Contact signup URL is pasted as stray text into the page head
@@ -357,7 +357,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Boudreaux Cajun Steak House — gathered 2026-09-03 from own-domain
+     Boudreaux Cajun Steak House — gathered 2026-09-04 from own-domain
      they are: Cajun
      logo: https://le-cdn.hibuwebsites.com/d2d5b30f702a402bae0d53127cfa1f94/dms3rep/multi/opt/boudreaux-cajun-steak-house-logo-a78278ea-1920w.png (546x396) — not cut into a tile yet
      flag: NOT OPEN: the site publishes hours of Mon-Sun 11am-10pm while stating the restaurant is under construction and not open to the public — the hours are not carried
@@ -374,7 +374,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Brasa Bros — gathered 2026-09-03 from own-domain
+     Brasa Bros — gathered 2026-09-04 from own-domain
      they are: Peruvian rotisserie
      logo: https://images.getbento.com/accounts/c2c7fd3f33613d787a8a0347c60c09dd/media/images/28972BB_without_R.png (3530x2259) — not cut into a tile yet
      flag: the Build Your Own Bowl menu has two sections both labelled 'STEP 3'
@@ -391,7 +391,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Cafe Noir — gathered 2026-09-03 from own-domain
+     Cafe Noir — gathered 2026-09-04 from own-domain
      they are: African diaspora
      logo: https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/2139ba63-bcf8-4ad0-a7e6-233cd69d999c/cafe-noir-oakland-full-logo.png (1592x580) — not cut into a tile yet
      flag: HOURS CONFLICT on their own site: the homepage lists seven days of service, but the brunch menu says Wednesday-Sunday and the dinner menu says Wednesday-Friday, Saturday, Sunday — Monday and Tuesday contradicted, so no hours carried
@@ -418,7 +418,35 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     camachos-party-rentals — gathered 2026-09-03 from own-domain
+     Cali Party Bus — gathered 2026-09-04 from own-domain
+     they are: Party bus rental
+     flag: a travel fee may apply beyond 40 miles of their Oakland terminal, their own note
+  */
+  'cali-party-bus': {
+    address: "4911 Coliseum Way, Oakland, CA",
+    phone: "(415) 692-1465",
+    email: "info@calipartybus.com",
+    hours: "Mon-Fri 8am-7pm, Sat-Sun 11am-5pm",
+    instagram: "calipartybus",
+    cuisine: "Party bus rental",
+    tagline: "Party buses and limo vans out of an Oakland terminal",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Sprinter Limo Van","1 to 12 guests",16000,"from $160/hr"],
+        ["Small Party Bus","10 to 19 guests",19500,"from $195/hr"],
+        ["Small Party Bus with restroom","10 to 19 guests",20000,"from $200/hr"],
+        ["Medium Party Bus","20 to 28 guests",24500,"from $245/hr"],
+        ["Medium Party Bus with restroom","20 to 28 guests",25000,"from $250/hr"],
+        ["Large Party Bus with restroom","30 to 40 guests",29500,"from $295/hr"],
+        ["XL Party Bus with restroom","30 to 45 guests",30000,"from $300/hr"],
+        ["Executive Charter with restroom","36 guests",20000,"from $200/hr"],
+      ] },
+    ],
+    quoteOnly: "Party buses and limo vans out of an Oakland terminal. Their own published starting rates, Sunday to Friday; Friday night and Saturday are $5 to $10 an hour more, and the rate covers tax, fuel, tolls and the driver's gratuity.",
+  },
+
+  /*
+     camachos-party-rentals — gathered 2026-09-04 from own-domain
      their spelling: "Camachos Party Rentals" (roster keeps "camachos-party-rentals")
      they are: Party rentals
      logo: https://camachospartyrentals.com/wp-content/uploads/2023/11/Camachos_Party_Rentals.png (2100x2100) — not cut into a tile yet
@@ -436,7 +464,57 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chip Cookies — gathered 2026-09-03 from own-domain
+     Chikin Drip — gathered 2026-09-04 from own-domain
+     they are: Nashville hot chicken
+     flag: they have a second San Jose kitchen at 81 Curtner Ave on the same menu, hours and number
+     flag: their Instagram bio says 100% halal
+  */
+  'chikin-drip-san-jose': {
+    address: "530 Newhall Dr, San Jose, CA 95110",
+    phone: "(669) 900-3829",
+    email: "info@chikindrip.com",
+    hours: "Sun-Thu 11am-1am, Fri-Sat 11am-1:30am",
+    instagram: "chikindrip",
+    cuisine: "Nashville hot chicken",
+    tagline: "Nashville hot chicken by SJC on Newhall Drive, open late",
+    items: [
+      ["Combo 1","One slider, slaw, pickles, secret sauce and fries",1299],
+      ["Combo 2","One slider, one tender, slaw, pickles, secret sauce and fries",1499],
+      ["Combo 3","Two tenders, slaw, pickles, secret sauce and fries",1399],
+      ["Combo 4","Two sliders, slaw, pickles, secret sauce and fries",1799],
+      ["Loaded Fries","Fries, chopped tenders, slaw, pickles and secret sauce",1399],
+    ],
+    offer: ["Combo 1","Combo 2","Combo 3","Combo 4"],
+    siteNote: "From their own menu; cheese is 75 cents extra on any slider combo.",
+  },
+
+  /*
+     Chikin Drip — gathered 2026-09-04 from own-domain
+     they are: Nashville hot chicken
+     flag: their Instagram bio says 100% halal
+     flag: every combo is fried to order, their words
+  */
+  'chikin-drip-union-city': {
+    address: "32004 Alvarado Blvd, Union City, CA 94587",
+    phone: "(669) 900-3829",
+    email: "info@chikindrip.com",
+    hours: "Sun-Thu 11am-1am, Fri-Sat 11am-1:30am",
+    instagram: "chikindrip",
+    cuisine: "Nashville hot chicken",
+    tagline: "Nashville hot chicken on Alvarado Blvd, open late every day",
+    items: [
+      ["Combo 1","One slider, slaw, pickles, secret sauce and fries",1299],
+      ["Combo 2","One slider, one tender, slaw, pickles, secret sauce and fries",1499],
+      ["Combo 3","Two tenders, slaw, pickles, secret sauce and fries",1399],
+      ["Combo 4","Two sliders, slaw, pickles, secret sauce and fries",1799],
+      ["Loaded Fries","Fries, chopped tenders, slaw, pickles and secret sauce",1399],
+    ],
+    offer: ["Combo 1","Combo 2","Combo 3","Combo 4"],
+    siteNote: "From their own menu; cheese is 75 cents extra on any slider combo.",
+  },
+
+  /*
+     Chip Cookies — gathered 2026-09-04 from own-domain
      their spelling: "chip cookies" (roster keeps "Chip Cookies")
      they are: Gourmet cookies
      logo: https://www.chipcookies.co/cdn/shop/files/chip-logo_dfae3b6d-9d06-41eb-85ea-ba6f9c444fe5.png?v=1733879055 (600x600) — not cut into a tile yet
@@ -462,7 +540,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chiquo & Eva’s — gathered 2026-09-03 from own-domain
+     Chiquo & Eva’s — gathered 2026-09-04 from own-domain
      their spelling: "Chiquo & Eva's Wagyu Steakhouse" (roster keeps "Chiquo & Eva’s")
      they are: Wagyu steakhouse
      logo: https://static.wixstatic.com/shapes/0c4e7f_e268b88348614e30b9f97dfe006b8f9e.svg — not cut into a tile yet
@@ -492,7 +570,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chutneys — gathered 2026-09-03 from stopgap
+     Chutneys — gathered 2026-09-04 from stopgap
      flag: 2 of 4 DNS A records point at a misconfigured Cloudflare endpoint: HTTPS handshake refused, HTTP returns 'error code: 1001' — the site fails to load whenever a client picks those records
      flag: GoDaddy Website Builder template with a single Getty stock photo and GoDaddy's default icon — no business logo
      flag: publishes no cuisine, menu, address, phone, hours or social links; filed as 'Indian' but the site never says so
@@ -503,7 +581,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     classy-canines — gathered 2026-09-03 from own-domain
+     classy-canines — gathered 2026-09-04 from own-domain
      their spelling: "Classy Canine's Wiggle Rumps" (roster keeps "classy-canines")
      they are: Pet grooming
      logo: https://static.wixstatic.com/media/769eaa_5784054376a44f629bbefe56e79ae916~mv2.png (3468x1048) — not cut into a tile yet
@@ -533,7 +611,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Diablo Auto Detailing — gathered 2026-09-03 from own-domain
+     Diablo Auto Detailing — gathered 2026-09-04 from own-domain
      they are: Mobile auto detailing
      logo: https://diabloautodetailing.com/diablo-logo.jpg (920x920) — not cut into a tile yet
      flag: the site is an empty JS shell without JavaScript; every fact came from their own JS bundle and structured data
@@ -557,7 +635,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Donut Farm — gathered 2026-09-03 from own-domain
+     Donut Farm — gathered 2026-09-04 from own-domain
      they are: Vegan donuts
      logo: https://donutfarmberkeley.com/assets/logo.png (2306x1722) — not cut into a tile yet
      flag: HOURS CONFLICT on their own site: the visible page says Sat-Sun 9am-2pm while their structured data says 7:30am-3pm — Mon-Fri 7:30am-3pm agree in both, but no hours carried
@@ -574,7 +652,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Downtown BBQ — gathered 2026-09-03 from own-domain
+     Downtown BBQ — gathered 2026-09-04 from own-domain
      their spelling: "Downtown Barbecue" (roster keeps "Downtown BBQ")
      they are: Barbecue
      logo: https://static.spotapps.co/website_images/ab_websites/476501_website_v1/logo.png (200x200) — not cut into a tile yet
@@ -602,7 +680,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Eagle Pet Grooming — gathered 2026-09-03 from own-domain
+     Eagle Pet Grooming — gathered 2026-09-04 from own-domain
      they are: Mobile pet grooming
      logo: https://eaglepetgrooming.com/svg/eagle-logo.svg — not cut into a tile yet
      flag: their own site contradicts itself on where they work: a header toggle offers Nevada while the FAQ says the Bay Area and Salt Lake City
@@ -618,7 +696,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Eight Acres Kitchen & Bar — gathered 2026-09-03 from own-domain
+     Eight Acres Kitchen & Bar — gathered 2026-09-04 from own-domain
      they are: Contemporary comfort food
      logo: https://eightacresbrentwood.com/wp-content/uploads/8Logo.png (176x178) — not cut into a tile yet
      flag: name varies on-site: page title '8 Acres - Le Bon Temps' vs 'Eight Acres Kitchen & Bar' in content and logo
@@ -648,7 +726,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Empire State Pizza — gathered 2026-09-03 from own-domain
+     Empire State Pizza — gathered 2026-09-04 from own-domain
      they are: NYC-style pizza
      flag: Apple Maps prints the suite as Ste A; their own site says Suite C, which is what is here
      flag: no Instagram on the site; none carried
@@ -700,7 +778,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Emy’s Cannoli — gathered 2026-09-03 from own-domain
+     Emy’s Cannoli — gathered 2026-09-04 from own-domain
      their spelling: "Emy's Cannoli" (roster keeps "Emy’s Cannoli")
      they are: Italian catering
      logo: https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/LOGO/e3a37942-3a79-4efd-bd80-3297117fa3ae.webp (1080x946) — not cut into a tile yet
@@ -717,7 +795,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Ethos Of California — gathered 2026-09-03 from own-domain
+     Ethos Of California — gathered 2026-09-04 from own-domain
      they are: Barbershop
      flag: Glenn: 'He's got a location in Lafayette too' — no Lafayette address is published anywhere they control, so only Orinda is seated
      flag: two phones on their Vagaro page, (925) 464-1932 and (925) 718-0971; the first is carried
@@ -731,7 +809,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Forno Piombo — gathered 2026-09-03 from own-domain
+     Forno Piombo — gathered 2026-09-04 from own-domain
      they are: Pizza ovens
      logo: https://fornopiombo.com/cdn/shop/files/FPO_Logo_FINAL-Letters-only_927e992a-09ac-47ba-ae13-1c751f373fe5_300x.png?v=1626473863 (300x182) — not cut into a tile yet
      flag: the header logo's HTML claims 1945x1179 but the served file is 300x182
@@ -757,7 +835,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The French Spot — gathered 2026-09-03 from own-domain
+     The French Spot — gathered 2026-09-04 from own-domain
      they are: French patisserie
      logo: https://images.squarespace-cdn.com/content/v1/5f6b54d6483daf47f3ca0c32/25acebb3-09a0-44fe-89a6-e45e04de3875/newlogoagray.png (340x570) — not cut into a tile yet
      flag: the original shop is 1042 Larkin Street, San Francisco, Thu-Sun 8am-1pm; their nav lists Concord first, and Concord's hours are the ones carried
@@ -774,7 +852,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Gay Nineties Pizza & Pasta Co. — gathered 2026-09-03 from own-domain
+     Gay Nineties Pizza & Pasta Co. — gathered 2026-09-04 from own-domain
      their spelling: "Gay Nineties Pizza" (roster keeps "Gay Nineties Pizza & Pasta Co.")
      they are: Pizza and pasta
      logo: https://irp.cdn-website.com/5bf6c805601f409284365d58f44ccf25/dms3rep/multi/opt/gayninetieslogoidea1-1920w.png (655x570) — not cut into a tile yet
@@ -802,7 +880,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     German Auto Sport — gathered 2026-09-03 from own-domain
+     German Auto Sport — gathered 2026-09-04 from own-domain
      they are: German auto repair
      logo: https://gasberkeleyrepair.com/wp-content/uploads/2023/03/GAS-Logo-2_1.png (518x95) — not cut into a tile yet
      flag: the only email in the markup belongs to their web vendor, not the shop — treated as not published
@@ -818,7 +896,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Gofrette Pamper & Play — gathered 2026-09-03 from own-domain
+     Gofrette Pamper & Play — gathered 2026-09-04 from own-domain
      they are: Pet grooming and daycare
      logo: https://www.gofrette.com/wp-content/uploads/2026/07/gofrette-logo.webp (1024x1024) — not cut into a tile yet
      flag: Instagram inconsistent on their own site: the buttons link to gofrette408 while the contact page says @gofrette.pamper.and.play
@@ -845,7 +923,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Golden State Ballerz — gathered 2026-09-03 from stopgap
+     Golden State Ballerz — gathered 2026-09-04 from stopgap
      they are: Football gear
      logo: https://golden-state-ballerz.myshopify.com/cdn/shop/files/33827B68-FDF7-46EF-A948-03B383FE90B5.png?v=1777428510 (1024x1024) — not cut into a tile yet
      flag: no address, phone or email anywhere — the contact policy page contains only the Instagram URL
@@ -870,7 +948,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Gourmet Burritos — gathered 2026-09-03 from stopgap
+     Gourmet Burritos — gathered 2026-09-04 from stopgap
      their spelling: "A & A Gas" (roster keeps "Gourmet Burritos")
      they are: Burritos
      flag: Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas
@@ -887,7 +965,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Great Impasta — gathered 2026-09-03 from own-domain
+     Great Impasta — gathered 2026-09-04 from own-domain
      their spelling: "The Great Impasta" (roster keeps "Great Impasta")
      they are: Italian
      logo: https://greatimpastadanville.com/pluto-images/41a358f2-018e-4d8f-b80d-91012c9f5436 (512x516) — not cut into a tile yet
@@ -917,7 +995,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Happy Bay Paws — gathered 2026-09-03 from own-domain
+     Happy Bay Paws — gathered 2026-09-04 from own-domain
      they are: Mobile dog grooming
      logo: https://happybaypawsca.com/wp-content/uploads/2024/07/logo-v2.png (1000x535) — not cut into a tile yet
      flag: their /contact/ page returns a Cloudflare challenge while the rest of the site loads
@@ -945,7 +1023,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     House Of Thai — gathered 2026-09-03 from own-domain
+     House Of Thai — gathered 2026-09-04 from own-domain
      their spelling: "HOUSE OF THAI" (roster keeps "House Of Thai")
      they are: Thai street food
      logo: https://static.wixstatic.com/media/315f9a_35abbd9bfb684f71a13a6abbc73d3864~mv2.png (8500x4776) — not cut into a tile yet
@@ -973,7 +1051,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     House of Wings California — gathered 2026-09-03 from stopgap
+     House of Wings California — gathered 2026-09-04 from stopgap
      they are: Chicken wings
      flag: houseofwingsca.com did not resolve on 2026-09-02; Glenn: 'It seems to have expired'
      flag: hours and address from their Instagram bio
@@ -989,7 +1067,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     i.snapped Photo Booths — gathered 2026-09-03 from own-domain
+     i.snapped Photo Booths — gathered 2026-09-04 from own-domain
      they are: Photo booths
      flag: no street address — mobile, listing counties served
      flag: no logo image: the header is styled text and the favicon is the Wix default
@@ -1013,14 +1091,14 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     INTL Kitchen — gathered 2026-09-03 from own-domain — BLOCKED: Cloudflare 'Just a moment' challenge on every path; not bypassed — nothing readable
+     INTL Kitchen — gathered 2026-09-04 from own-domain — BLOCKED: Cloudflare 'Just a moment' challenge on every path; not bypassed — nothing readable
      flag: Cloudflare managed challenge on /, /sitemap.xml and /robots.txt with both user agents
   */
   'intl-kitchen': {
   },
 
   /*
-     JDI Auto Detailing — gathered 2026-09-03 from own-domain
+     JDI Auto Detailing — gathered 2026-09-04 from own-domain
      they are: Mobile auto detailing
      flag: two contact emails on one site: the footer says info@jdidetailing.com, the contact page says info@jdiautodetailing.com — the one on their domain is carried
      flag: the before-and-after gallery uses Unsplash stock photos
@@ -1047,7 +1125,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Jenuine Fitness — gathered 2026-09-03 from own-domain
+     Jenuine Fitness — gathered 2026-09-04 from own-domain
      their spelling: "JENUINE FITNESS" (roster keeps "Jenuine Fitness")
      they are: Gym and bootcamp
      logo: https://img1.wsimg.com/isteam/ip/ef4679e4-66e7-4d9e-ade7-68b1a8a3ab1c/logo/a720d831-287e-4c40-b5f0-4adb44e6bc3c.png (162x185) — not cut into a tile yet
@@ -1077,7 +1155,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     J&W Mobile Detailing — gathered 2026-09-03 from own-domain
+     J&W Mobile Detailing — gathered 2026-09-04 from own-domain
      they are: Mobile auto detailing
      logo: https://jnwdetailing.com/images/logo-nav.webp (300x250) — not cut into a tile yet
      flag: the services page promises 'real prices' but contains no dollar figure
@@ -1105,7 +1183,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Jump & Roll — gathered 2026-09-03 from own-domain
+     Jump & Roll — gathered 2026-09-04 from own-domain
      they are: Soft play rentals
      logo: https://itsjumpandroll.com/wp-content/uploads/2025/07/Pack-Montarias-4.png (1080x1080) — not cut into a tile yet
      flag: the same product is '8x8 White Bounce House' in the list and '8x8 White Bouncer House' on its price card
@@ -1133,7 +1211,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Kabab Burger — gathered 2026-09-03 from own-domain
+     Kabab Burger — gathered 2026-09-04 from own-domain
      their spelling: "Kabab Burger Mediterranean Grill" (roster keeps "Kabab Burger")
      they are: Mediterranean
      logo: https://kabab-burger.co/pluto-images/funnel/images/8d5f620f-65e9-4fd6-8725-0bdff4194b96 (2921x2888) — not cut into a tile yet
@@ -1161,7 +1239,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Kaisen Don — gathered 2026-09-03 from own-domain
+     Kaisen Don — gathered 2026-09-04 from own-domain
      their spelling: "Tetsujin Kaisen Don" (roster keeps "Kaisen Don")
      they are: Sushi and kaisen don
      flag: brand split: the domain is tetsujinsushi.com but Toast and Instagram use 'Kaisen Don'; the full name appears only in the page title
@@ -1179,7 +1257,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Love Burn Hot Chicken — gathered 2026-09-03 from stopgap
+     Love Burn Hot Chicken — gathered 2026-09-04 from stopgap
      they are: Nashville hot chicken
      flag: all facts from their Instagram bio; Toast blocks reading the menu
      flag: bio says 'Portola 26' and 'Cluck around and find out'
@@ -1195,7 +1273,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mac’s Old House — gathered 2026-09-03 from stopgap — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
+     Mac’s Old House — gathered 2026-09-04 from stopgap — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
      flag: the entire domain serves Squarespace's 'Website Expired' page — /, /menu, /sitemap.xml, www and bare, both user agents
   */
   'macs-old-house': {
@@ -1203,7 +1281,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Macstalgia — gathered 2026-09-03 from own-domain
+     Macstalgia — gathered 2026-09-04 from own-domain
      their spelling: "macstalgia" (roster keeps "Macstalgia")
      they are: Framed vinyl art
      logo: https://www.macstalgia.com/cdn/shop/files/hf_20260818_045451_57f574dd-1324-49a6-875d-f07cf87148a1.png?v=1787029208 (2048x2048) — not cut into a tile yet
@@ -1224,7 +1302,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Majestic Boutique — gathered 2026-09-03 from own-domain
+     Majestic Boutique — gathered 2026-09-04 from own-domain
      they are: Clothing boutique
      logo: https://cdn.shopify.com/s/files/1/0830/2867/2801/files/ACFD4D10-99B9-480D-8A07-946839C78FD5.jpg?v=1696398367 (915x731) — not cut into a tile yet
      flag: the Instagram link is malformed — a full URL pasted into a handle field — and produces a broken link; the intended handle was recovered from inside it
@@ -1252,7 +1330,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Marina Bay Media — gathered 2026-09-03 from own-domain
+     Marina Bay Media — gathered 2026-09-04 from own-domain
      they are: Marketing agency
      logo: https://www.marinabaymedia.com/20260610-marina-bay-media-logo-large.png (500x150) — not cut into a tile yet
      flag: Contact page is empty — a 'Contact' heading with no form, email or phone; the homepage says 'Contact us' with no channel other than Instagram
@@ -1265,7 +1343,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Meadowlark Dairy — gathered 2026-09-03 from own-domain
+     Meadowlark Dairy — gathered 2026-09-04 from own-domain
      they are: Soft-serve dairy
      logo: https://www.meadowlarkdairy.com/cdn/shop/files/Untitled_design_18_256x.png?v=1762378449 (256x256) — not cut into a tile yet
      flag: second location: 2287 Second Street, Livermore 94550, (925) 846-8777, with its own Instagram @meadowlarkdairylivermore
@@ -1286,7 +1364,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Midnite Theories — gathered 2026-09-03 from own-domain
+     Midnite Theories — gathered 2026-09-04 from own-domain
      they are: Skate shop
      logo: https://www.midnitetheories.com/cdn/shop/files/hoodie_font_sticker.jpg?v=1730508016 (1050x600) — not cut into a tile yet
      flag: the shop spells itself 'Midnite'; the directory id spells it 'midnight'
@@ -1310,7 +1388,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mimi’s Chocolates — gathered 2026-09-03 from own-domain
+     Mimi’s Chocolates — gathered 2026-09-04 from own-domain
      their spelling: "Mimi's Chocolates" (roster keeps "Mimi’s Chocolates")
      they are: Chocolates and ice cream
      logo: https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/logo/1a5dae7a-2365-49e5-9b0c-090e056f6540.png (2560x1591) — not cut into a tile yet
@@ -1338,7 +1416,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mrs. Ramen Concord — gathered 2026-09-03 from stopgap
+     Mrs. Ramen Concord — gathered 2026-09-04 from stopgap
      they are: Ramen and seafood boil
      flag: no website found; a 'Mrs. Pho' is listed by Yelp at the same address, which may be the same operator or the previous tenant
      flag: address is from their own Instagram bio: 'At The Veranda, 2045 Diamond Blvd. Concord, California' — no suite number, no ZIP
@@ -1353,7 +1431,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     One House Bakery — gathered 2026-09-03 from own-domain
+     One House Bakery — gathered 2026-09-04 from own-domain
      they are: Bakery and cafe
      logo: https://static.wixstatic.com/media/7dfc6f_912d37cd93ff41bfa762c2ea97097eda~mv2_d_1320_1320_s_2.jpg (1320x1320) — not cut into a tile yet
      flag: the menu exists only as images — no HTML or PDF text, so it reads as empty to anything that cannot see
@@ -1382,7 +1460,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     oneills-signature — gathered 2026-09-03 from own-domain
+     oneills-signature — gathered 2026-09-04 from own-domain
      their spelling: "Pavers and Turf By O'Neills" (roster keeps "oneills-signature")
      they are: Pavers and turf
      logo: https://paversandturf.com/wp-content/uploads/2025/04/LogoUpdate.png (1563x1563) — not cut into a tile yet
@@ -1402,7 +1480,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Overly Hip Hop — gathered 2026-09-03 from own-domain
+     Overly Hip Hop — gathered 2026-09-04 from own-domain
      they are: Media company
      flag: Oakland and San Francisco per their footer; no address published
      flag: Glenn: his best friend's company, a sound engineer; a collab is planned
@@ -1414,7 +1492,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     PaintGo — gathered 2026-09-03 from own-domain
+     PaintGo — gathered 2026-09-04 from own-domain
      their spelling: "Paint Go USA" (roster keeps "PaintGo")
      they are: Auto tint and PPF
      logo: https://irp.cdn-website.com/2dec908d/dms3rep/multi/LOGOWHITEpaintgo.webp (2400x386) — not cut into a tile yet
@@ -1434,7 +1512,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Perfect Nine — gathered 2026-09-03 from own-domain
+     Perfect Nine — gathered 2026-09-04 from own-domain
      they are: Mobile mini golf
      logo: https://images.squarespace-cdn.com/content/v1/6985817d209a3550aea72807/a665e08a-a937-42dc-ace4-80bc8c75e2a0/Perfect+Nine+Mobile+Mini+Golf+California.png (2500x502) — not cut into a tile yet
      flag: based in Berkeley but no street address published
@@ -1457,7 +1535,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Philomena Pizza — gathered 2026-09-03 from own-domain
+     Philomena Pizza — gathered 2026-09-04 from own-domain
      their spelling: "PHILOMENA" (roster keeps "Philomena Pizza")
      they are: Pizza and beer bar
      logo: https://images.squarespace-cdn.com/content/v1/56e8a739f850829a3e282a2a/7d848adb-25df-4a4b-96fe-25ca7319a0f0/horizantal+title.png (1944x567) — not cut into a tile yet
@@ -1475,10 +1553,11 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pho Nation — gathered 2026-09-03 from stopgap
+     Pho Nation — gathered 2026-09-04 from stopgap
      they are: Vietnamese
      flag: hours, phone and address from the Apple Maps card he sent
      flag: Glenn: the three locations need one consistent brand identity; the same mark is used on all three
+     flag: menu is the Alameda location's Yelp listing; the other two are not priced here
   */
   'pho-nation-alameda': {
     address: "1511 Park St, Alameda, CA 94501",
@@ -1487,11 +1566,50 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Vietnamese",
     needsSite: true,
     tagline: "Pho, noodle and rice on Park Street, open late",
-    contactOnly: "Pho, noodle and rice on Park Street, open late. Their page links only a Facebook profile; they publish no prices.",
+    items: [
+      ["Pho Nation Combo #1","Rice noodles with thin sliced rare steak, briskets, well-done flanks, tripe, and beef meatballs in beef broth.",2185],
+      ["Pho Nation Combo #2","Rice noodles with thin sliced rare steak, briskets, and well-done flanks in beef broth.",2185],
+      ["Rare Steak & Beef Balls","Rice noodles with thin sliced rare steak and beef meatballs in beef broth.",1955],
+      ["Rare Steak & Well Done Briskets","Rice noodles with thin sliced rare steak and well-done briskets in beef broth.",1955],
+      ["Well Done Briskets","Rice noodles with well-done briskets in beef broth.",1955],
+      ["Rare Steak","Rice noodles with thin sliced rare steak in beef broth.",1955],
+      ["Beef Balls","Rice noodles with beef meatballs in beef broth.",2070],
+      ["Pho Chicken Breast","Rice noodles with shredded chicken breast meat in chicken broth.",1955],
+      ["Pho Chicken Quarter","Rice noodles with bone-in chopped chicken leg quarters in chicken broth.",1955],
+      ["Pho Shrimp","Rice noodles with shrimp in chicken broth.",2070],
+      ["Plain Pho & Soup","Rice noodles with beef or chicken broth.",1380],
+      ["Vegetarian Pho Tofu & Mixed Veggies","Rice noodles with tofu and mixed vegetables in vegetarian broth.",1955],
+      ["House Special Vermicelli","Vermicelli noodles and grilled chicken, grilled pork, and grilled shrimp. Served with shredded lettuce, cucumb",2185],
+      ["Grilled Chicken Vermicelli","Vermicelli noodles and grilled chicken. Served with shredded lettuce, cucumber, beansprouts, mint, pickled car",1955],
+      ["Grilled Pork Vermicelli","Vermicelli noodles and grilled pork. Served with shredded lettuce, cucumber, beansprouts, mint, pickled carrot",1955],
+      ["Grilled Shrimp Vermicelli","Vermicelli noodles and grilled shrimp. Served with shredded lettuce, cucumber, beansprouts, mint, pickled carr",2185],
+      ["Egg Rolls Vermicelli","Vermicelli noodles and egg rolls. Served with shredded lettuce, cucumber, beansprouts, mint, pickled carrots &",1955],
+      ["Vegetarian Tofu & Mixed Veggies Vermicelli","Vermicelli noodles and tofu and mixed vegetables. Served with shredded lettuce, cucumber, beansprouts, mint, p",1840],
+      ["Combo Rice Plate #1","Jasmine broken white rice served with grilled pork, shrimp, grilled chicken, lettuce, tomatoes, and a side of",2185],
+      ["Combo Rice Plate #2","Jasmine broken white rice served with chicken wings, an egg roll, pork chop, lettuce, tomatoes, cucumber, and",2185],
+      ["Grilled Chicken, Salad, & Soup","Jasmine broken white rice served with grilled chicken, lettuce, tomatoes, cucumber, and a side of house chicke",1955],
+      ["Grilled Pork, Salad, & Soup","Jasmine broken white rice served with grilled pork, lettuce, tomatoes, cucumber, and a side of house chicken s",1955],
+      ["Grilled Pork Chops, Salad, & Soup","Jasmine broken white rice served with grilled pork chops, lettuce, tomatoes, cucumber, and a side of house chi",2070],
+      ["Grilled Shrimp, Salad, & Soup","Jasmine broken white rice served with grilled shrimp, lettuce, tomatoes, cucumber, and a side of house chicken",2185],
+      ["Grilled Beef Short Ribs, Salad, & Soup","Jasmine broken white rice served with grilled beef short ribs, lettuce, tomatoes, cucumber, and a side of hous",2415],
+      ["Steamed Chicken, Salad, & Soup","Jasmine broken white rice served with steamed bone-in chopped chicken leg quarters, lettuce, tomatoes, cucumbe",1955],
+      ["Vegetarian Tofu, Mixed Veggies, & Soup","Jasmine broken white rice served with tofu and steamed mixed vegetables, lettuce, tomatoes, cucumber, and a si",1840],
+      ["Fried Egg Rolls","chicken, shrimp, and vegetable filling. Vegetarian option are now no longer available for this item.",1035],
+      ["Fried Chicken Wings","Please note the flaver you would like. Lemon Pepper - Buffalo - Sweet and sour",1155],
+      ["Fried Potstickers","Chicken and vegetable filling.",1035],
+      ["Fresh Shrimp Spring Rolls","Comes with a side of peanut dipping sauce. Please ask for fish sauce if you are allergic to peanuts.",1265],
+      ["Shrimp Salad","Hand-tossed shrimp, shredded cabbage, carrots, onions, mixed herbs with a sweet and savory fish sauce vinaigre",1495],
+      ["Chicken Salad","Hand-tossed shredded chicken breast, shredded cabbage, carrots, onions, mixed herbs with a sweet and savory fi",1380],
+      ["Fried Chicken Skin","Spicy. Please let us know if you do not want it spicy.",1265],
+      ["Deep Fried Tofu","Spicy. Please let us know if you do not want it spicy.",920],
+      ["Deep Fried Calamari","Spicy. Please let us know if you do not want it spicy.",1150],
+    ],
+    offer: ["Pho Nation Combo #1","Pho Nation Combo #2","Rare Steak & Beef Balls","Rare Steak & Well Done Briskets"],
+    siteNote: "From the menu on their Yelp page, the one Glenn sent, which Yelp notes may not be up to date.",
   },
 
   /*
-     Pho Nation — gathered 2026-09-03 from stopgap
+     Pho Nation — gathered 2026-09-04 from stopgap
      they are: Vietnamese
      flag: hours, phone and address from the Apple Maps card he sent; the Square site lists this location for ordering
   */
@@ -1506,7 +1624,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pho Nation SF — gathered 2026-09-03 from stopgap
+     Pho Nation SF — gathered 2026-09-04 from stopgap
      they are: Vietnamese
      flag: Glenn wrote 'San Bruno' for this one; it is San Bruno Avenue in San Francisco, so it sits on San Francisco's page
      flag: address from the profile card he sent; no phone or hours published there
@@ -1520,7 +1638,35 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pizzeria Cardamomo — gathered 2026-09-03 from own-domain
+     Pijja Paradise — gathered 2026-09-04 from own-domain
+     they are: Indian pizza
+     flag: a third location in Fresno is on their site and is not seated here
+     flag: Glenn delivers to this one weekly and plans to show the owner her page
+  */
+  'pijja-paradise-livermore': {
+    address: "922 Larkspur Dr Suite A1, Livermore, CA 94551",
+    phone: "(925) 800-5934",
+    cuisine: "Indian pizza",
+    tagline: "Indian-style pizza on Larkspur Drive",
+    contactOnly: "Indian-style pizza on Larkspur Drive. Their site takes orders per location; the menu and prices are behind it.",
+  },
+
+  /*
+     Pijja Paradise — gathered 2026-09-04 from own-domain
+     they are: Indian pizza
+     flag: pijjaparadise.com renders only with JavaScript, so the menu could not be read
+     flag: addresses and numbers from their own site's location list, as he sent it
+  */
+  'pijja-paradise-pittsburg': {
+    address: "2961 Railroad Ave, Pittsburg, CA 94565",
+    phone: "(925) 267-4833",
+    cuisine: "Indian pizza",
+    tagline: "Indian-style pizza on Railroad Avenue",
+    contactOnly: "Indian-style pizza on Railroad Avenue. Their site takes orders per location; the menu and prices are behind it.",
+  },
+
+  /*
+     Pizzeria Cardamomo — gathered 2026-09-04 from own-domain
      they are: Northern Italian pizza
      logo: https://static-content.owner.com/funnel/images/d7fd8779-db7d-442d-b9aa-d731c798852f?v=8219686727 (703x95) — not cut into a tile yet
      flag: site banner: open September 7th for Labor Day, closed for a team vacation September 8th to 14th
@@ -1547,7 +1693,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Playland 707 — gathered 2026-09-03 from own-domain
+     Playland 707 — gathered 2026-09-04 from own-domain
      their spelling: "PLAYLAND707.com" (roster keeps "Playland 707")
      they are: Paintball
      logo: https://images.squarespace-cdn.com/content/v1/69a710af8259800303779dc1/7c3b847d-cdbf-4c04-9af3-9364b35e2c57/black2inlogo.jpg (1000x1000) — not cut into a tile yet
@@ -1579,7 +1725,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Polly Ann Ice Cream — gathered 2026-09-03 from own-domain
+     Polly Ann Ice Cream — gathered 2026-09-04 from own-domain
      they are: Ice cream
      logo: https://www.pollyann.com/static/4c139f8ea465466ad98154b406f8294b/73bb6/Polly_Ann_monochrome_logo_since_1955_v2.jpg (120x120) — not cut into a tile yet
      flag: menu lists two separate categories named 'Baked goods' and 'Baked Goods'
@@ -1607,7 +1753,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Quickly Benicia — gathered 2026-09-03 from own-domain
+     Quickly Benicia — gathered 2026-09-04 from own-domain
      they are: Boba and Filipino snacks
      logo: https://www.quicklybenicia.com/images/quickly-logo.jpg (1818x1818) — not cut into a tile yet
      flag: the site was generated with v0.app and carries long keyword-stuffed copy
@@ -1634,7 +1780,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Red Chili — gathered 2026-09-03 from own-domain
+     Red Chili — gathered 2026-09-04 from own-domain
      they are: Thai and Vietnamese
      logo: https://redchilirestaurants.com/wp-content/uploads/2025/04/Red-Chili-Rectangle-logo.png (208x58) — not cut into a tile yet
      flag: THE HAYWARD ROOM IS CLOSED — 29583 Mission Blvd, (510) 881-8593, 'temporarily closed until further notice due to repairs from a neighboring fire' per their own banner — so the open San Jose location is the address here
@@ -1661,7 +1807,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     rock-n-jump — gathered 2026-09-03 from own-domain
+     rock-n-jump — gathered 2026-09-04 from own-domain
      their spelling: "ROCKIN' JUMP" (roster keeps "rock-n-jump")
      they are: Trampoline park
      logo: https://rockinjump.com/wp-content/themes/rockinjump/images/header/Rockin-Jump-Logo.png (442x64) — not cut into a tile yet
@@ -1693,7 +1839,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Rocket MC Tow — gathered 2026-09-03 from own-domain
+     Rocket MC Tow — gathered 2026-09-04 from own-domain
      their spelling: "Rocket Motorcycle Towing and Transport Service" (roster keeps "Rocket MC Tow")
      they are: Motorcycle towing
      logo: https://www.rocketmctow.com/wp-content/uploads/2024/07/logo-web.png (500x460) — not cut into a tile yet
@@ -1708,7 +1854,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Royale Eatery — gathered 2026-09-03 from own-domain
+     The Royale Eatery — gathered 2026-09-04 from own-domain
      their spelling: "THE ROYALE" (roster keeps "The Royale Eatery")
      they are: Contemporary American
      logo: https://static.wixstatic.com/media/315f9a_ae2afe1fbba248ffa009ee59f07c6fa8~mv2.png (1280x1280) — not cut into a tile yet
@@ -1736,7 +1882,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Ruben Hibachi Grill — gathered 2026-09-03 from stopgap
+     Ruben Hibachi Grill — gathered 2026-09-04 from stopgap
      they are: Hibachi and catering
      flag: all facts from their Instagram bio; DoorDash blocks reading the menu
      flag: Glenn: 'Definitely needs a website'
@@ -1753,7 +1899,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Rywire — gathered 2026-09-03 from own-domain
+     Rywire — gathered 2026-09-04 from own-domain
      their spelling: "Rywire Motorsport Electronics" (roster keeps "Rywire")
      they are: Motorsport electronics
      logo: https://res.cloudinary.com/v11111111-0000-0000-0000-000001381196/image/upload/v1724100194/hf01rdo9mo8gvhvorwkw.png (1420x491) — not cut into a tile yet
@@ -1777,14 +1923,14 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Sala Thai — gathered 2026-09-03 from own-domain — BLOCKED: Cloudflare bot challenge on every URL with both user agents; not bypassed — nothing readable
+     Sala Thai — gathered 2026-09-04 from own-domain — BLOCKED: Cloudflare bot challenge on every URL with both user agents; not bypassed — nothing readable
      flag: WordPress behind Cloudflare — robots.txt is served, but the sitemap, /feed/ and /wp-json/ are all challenged
   */
   'sala-thai': {
   },
 
   /*
-     The Sandwich Monkey — gathered 2026-09-03 from own-domain
+     The Sandwich Monkey — gathered 2026-09-04 from own-domain
      their spelling: "SANDWICH MONKEY" (roster keeps "The Sandwich Monkey")
      they are: Sandwiches
      logo: https://img1.wsimg.com/isteam/ip/36917ad0-efd1-4e42-95ce-59336e468a4d/logo/ee08cbb2-6554-4f3d-b953-6eb8899b9d2f.png (2560x2560) — not cut into a tile yet
@@ -1801,7 +1947,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Santa Clara Super Kitchen — gathered 2026-09-03 from own-domain
+     Santa Clara Super Kitchen — gathered 2026-09-04 from own-domain
      they are: Halal catering
      logo: https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69ef20660d66f2a66587db87.png (866x288) — not cut into a tile yet
      flag: name alternates on the site: 'Santa Clara Super Kitchen' (title, logo, copyright) vs 'Santa Clara Super Kitchens' (About and FAQ)
@@ -1819,7 +1965,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Señor Sisig — gathered 2026-09-03 from own-domain
+     Señor Sisig — gathered 2026-09-04 from own-domain
      they are: Filipino fusion
      logo: https://images.getbento.com/accounts/ab73e9d161ec9b04042370bad74771a9/media/images/17855logo.png (900x260) — not cut into a tile yet
      flag: three more shops plus trucks: Ferry Building (1 Ferry Building Suite 41), Thrive City (151 Warriors Way Suite 103), Oakland (330 17th Street, 94612)
@@ -1837,7 +1983,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Shaka Shack — gathered 2026-09-03 from stopgap
+     Shaka Shack — gathered 2026-09-04 from stopgap
      they are: Hawaiian brunch
      flag: their only site is a Square Online store — the operator's own 'Needs website'
      flag: the site's About and Catering pages return 404 while the footer advertises catering, corporate lunches and restaurant buyouts
@@ -1874,7 +2020,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     SIA Collective — gathered 2026-09-03 from own-domain
+     SIA Collective — gathered 2026-09-04 from own-domain
      they are: Streetwear and footwear
      logo: https://siacollective.com/cdn/shop/files/textblack_f738e4c5-6cda-4366-bcf8-f74e6f69342a.png (3651x1530) — not cut into a tile yet
      flag: brand written 'sia collective' (header), 'SIA Collective' and 'SIACLTV' (about); logo wordmark reads 'siacltv'
@@ -1898,7 +2044,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Simply Soups — gathered 2026-09-03 from own-domain
+     Simply Soups — gathered 2026-09-04 from own-domain
      their spelling: "Simply Soups and More" (roster keeps "Simply Soups")
      they are: Soul food
      logo: https://storage.googleapis.com/msgsndr/JC1YUdvjnhXZlLhDoj4c/media/69784cc8a87bebf1d8313907.jpg (500x500) — not cut into a tile yet
@@ -1919,7 +2065,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Sol Taqueria — gathered 2026-09-03 from own-domain
+     Sol Taqueria — gathered 2026-09-04 from own-domain
      they are: Jalisco-style Mexican
      logo: https://static.wixstatic.com/media/fab297_42e925a7e2a14b0c8cb14ff9b5e5d2e0~mv2.png (889x1123) — not cut into a tile yet
      flag: footer hours are typed 'MOn-Thur 10-9PM' with no AM marker on the ten
@@ -1947,7 +2093,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     SupTea Lab — gathered 2026-09-03 from stopgap
+     SupTea Lab — gathered 2026-09-04 from stopgap
      they are: Boba and Taiwanese snacks
      logo: https://suptealaboakland.square.site/uploads/b/bcb2fda72610bd6712fe73e313670e34259b6a3cdae75d0a3a0f53a37060193a/LOGO%20Final_design_01_1708289189.jpg (2048x2048) — not cut into a tile yet
      flag: no address, phone or hours anywhere — 'Oakland' appears only in the square.site subdomain
@@ -1962,7 +2108,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Tastin Peachy — gathered 2026-09-03 from stopgap
+     Tastin Peachy — gathered 2026-09-04 from stopgap
      they are: Catering
      flag: no address published; the bio says Bay Area, CA
      flag: the tagline is their bio line
@@ -1978,14 +2124,14 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Farmacy — gathered 2026-09-03 from own-domain — BLOCKED: Cloudflare managed challenge on every page including robots.txt; nothing readable
+     The Farmacy — gathered 2026-09-04 from own-domain — BLOCKED: Cloudflare managed challenge on every page including robots.txt; nothing readable
      flag: every page is behind a Cloudflare challenge; only the sitemap is served, and its slugs describe a chicken concept — strips and chips, fried and rotisserie chicken sandwiches — not a cafe
   */
   'the-farmacy': {
   },
 
   /*
-     The Hangout — gathered 2026-09-03 from own-domain
+     The Hangout — gathered 2026-09-04 from own-domain
      their spelling: "The Hangout Breakfast" (roster keeps "The Hangout")
      they are: Breakfast and brunch
      logo: https://static.wixstatic.com/media/4498e5_d17e57814acd47d6829b1586449b2574~mv2.png (1558x1441) — not cut into a tile yet
@@ -2013,7 +2159,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Model Bakery — gathered 2026-09-03 from own-domain
+     The Model Bakery — gathered 2026-09-04 from own-domain
      they are: Artisan bakery
      logo: https://www.themodelbakery.com/wp-content/uploads/2025/06/Model-Logo-1908-Wheat-trans.svg (500x175) — not cut into a tile yet
      flag: FOUR LOCATIONS, and the roster seat is Napa, so the Oxbow Market stand is the address here. The others: 1357 Main St, St. Helena 94574, (707) 963-8192, Sun-Fri 5:30am-4pm, Sat to 5pm; 6523 Washington St, Yountville, (707) 415-5045, Mon/Wed-Fri 7am-12pm, closed Tue, Sat-Sun 7am-1pm; 1315 North Main St, Walnut Creek (no ZIP published), (866) 622-5379, daily 6am-4pm
@@ -2041,7 +2187,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Tox Alamo — gathered 2026-09-03 from own-domain
+     The Tox Alamo — gathered 2026-09-04 from own-domain
      they are: Lymphatic body sculpting
      flag: the studio is by @courtneyyeager per the bio; the franchise's studio locator does not list Alamo yet
      flag: address from their Instagram bio; the zip is Alamo's
@@ -2055,7 +2201,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     TOWNFUTURIST MEDIA — gathered 2026-09-03 from own-domain
+     TOWNFUTURIST MEDIA — gathered 2026-09-04 from own-domain
      they are: Video production
      logo: https://static.wixstatic.com/media/97333a_fb647e13b8454d0a8a249dd59529cfd4~mv2.png (1159x227) — not cut into a tile yet
      flag: name written four ways on their own site: 'TOWNFUTURIST MEDIA' (logo), 'townfuturist media', 'Townfuturistmedia' (title), 'Town Futurist Media' (credits)
@@ -2074,7 +2220,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     TruFusion Walnut Creek — gathered 2026-09-03 from third-party
+     TruFusion Walnut Creek — gathered 2026-09-04 from third-party
      they are: Group fitness
      flag: a chain site; this is the Walnut Creek studio's page
      flag: their logo asset URL is dead — it redirects to a Reebok Fitness 404 — so nothing was pulled for a tile
@@ -2091,7 +2237,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     U Dessert Story — gathered 2026-09-03 from own-domain
+     U Dessert Story — gathered 2026-09-04 from own-domain
      their spelling: "U :Dessert Story" (roster keeps "U Dessert Story")
      they are: Asian desserts
      logo: https://chowly-coo-configuration-assets.nyc3.digitaloceanspaces.com/chowly-coo-prod-configuration-assets/public/assets/U%3ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png (908x951) — not cut into a tile yet
@@ -2109,7 +2255,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     uBreakiFix — gathered 2026-09-03 from third-party
+     uBreakiFix — gathered 2026-09-04 from third-party
      their spelling: "uBreakiFix by Asurion" (roster keeps "uBreakiFix")
      they are: Electronics repair
      logo: https://images.ctfassets.net/d9ybqgejqp0w/4NRQb0wxJIQn6sxaZZuzAn/ee5e41a8970fe2c625b19a92c324c94d/ubreakifix-by-asurion-logo-header-nav.svg (120x48) — not cut into a tile yet
@@ -2126,7 +2272,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     United Curb Painting — gathered 2026-09-03 from own-domain
+     United Curb Painting — gathered 2026-09-04 from own-domain
      they are: Curb painting
      logo: https://assets.zyrosite.com/YX4ag7qEwETX3w2p/unitedc-mv02KZxDXLuvJKOb.jpg (1472x832) — not cut into a tile yet
      flag: the /prices page has no HTML text — prices exist only inside an image, which contains typos
@@ -2153,7 +2299,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Urban Air — gathered 2026-09-03 from own-domain
+     Urban Air — gathered 2026-09-04 from own-domain
      their spelling: "Urban Air Adventure Park" (roster keeps "Urban Air")
      they are: Indoor adventure park
      logo: https://www.urbanair.com/wp-content/uploads/2022/01/logo-horizontal-black-outline-1.png (1249x399) — not cut into a tile yet
@@ -2166,7 +2312,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Vending Enterprise — gathered 2026-09-03 from stopgap
+     Vending Enterprise — gathered 2026-09-04 from stopgap
      they are: Vending machines
      flag: their site is a Google Site; vendingenterprise.net itself does not resolve
      flag: the contact page maps an Oakland street address that reads as a home base, so it is not printed
@@ -2182,7 +2328,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Willy Billy Smoked Meat — gathered 2026-09-03 from own-domain
+     Willy Billy Smoked Meat — gathered 2026-09-04 from own-domain
      their spelling: "WILLY BILLY'S SMOKED MEATS" (roster keeps "Willy Billy Smoked Meat")
      they are: Halal Texan BBQ
      logo: https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png (1674x1887) — not cut into a tile yet
@@ -2213,7 +2359,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Winter White Car Wash & Detail — gathered 2026-09-03 from own-domain
+     Winter White Car Wash & Detail — gathered 2026-09-04 from own-domain
      they are: Mobile car detailing
      logo: https://img1.wsimg.com/isteam/ip/79ed2926-8987-45ae-8cf9-3611e560f8dc/IMG_5757.jpeg (1024x1024) — not cut into a tile yet
      flag: A UTAH FOOTPRINT ON A BAY AREA LISTING: a 385 (Utah) phone number and a Yelp link to a South Jordan, UT listing, beside 'California Cities We Serve' — worth a look before this is sold as local
@@ -2242,7 +2388,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Yes Moment — gathered 2026-09-03 from own-domain
+     Yes Moment — gathered 2026-09-04 from own-domain
      they are: Proposal planning
      logo: https://yes-moment.com/assets/img/logos/new_logo.png (269x231) — not cut into a tile yet
      flag: no address by design — they come to the location
@@ -2268,7 +2414,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     YogaSix East Contra Costa — gathered 2026-09-03 from third-party
+     YogaSix East Contra Costa — gathered 2026-09-04 from third-party
      they are: Yoga studio
      logo: https://www.yogasix.com/hubfs/logo-4.png (600x120) — not cut into a tile yet
      flag: the studio is branded 'East Contra Costa' but the address is in Brentwood, which is the page it sits on

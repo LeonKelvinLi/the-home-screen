@@ -89,7 +89,10 @@ for (const [id, want, expect] of [
   ['b_thetoxalamo', 'The Tox Alamo', {}],
   ['b_loveburn', 'Love Burn Hot Chicken', { hours: 'Mon-Fri 11:30am-7pm' }],
   ['b_phonationnewark', 'Pho Nation', { hours: 'Daily 11am-9pm', call: '(510) 894-2584' }],
-  ['b_phonationalameda', 'Pho Nation', { hours: 'Daily 5pm-2am' }],
+  ['b_phonationalameda', 'Pho Nation', { hours: 'Daily 5pm-2am', rows: 4 }],
+  ['b_chikindripunioncity', 'Chikin Drip', { hours: 'Sun-Thu 11am-1am', rows: 4 }],
+  ['b_calipartybus', 'Cali Party Bus', { hours: 'Mon-Fri 8am-7pm', rows: 8, quote: true }],
+  ['b_pijjaparadiselivermore', 'Pijja Paradise', {}],
   ['b_tastinpeachy', 'Tastin Peachy', { call: '510-685-7876' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
