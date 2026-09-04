@@ -927,6 +927,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      Union City; San Jose's is JoJo's, so that one goes to the yellow page.
      A party bus has no category on the services sheet and Oakland's Events
      seat is Jump and Roll's, so Cali Party Bus goes to the yellow page too. */
+  'pleasanton-goods-1': 'b_elranchogrande', //  Mexican food
   'pittsburg-goods-3': 'b_pijjaparadisepittsburg', // Indian food
   'livermore-goods-3': 'b_pijjaparadiselivermore', // Indian food
   'union-city-goods-8': 'b_chikindripunioncity', //   Chicken wings

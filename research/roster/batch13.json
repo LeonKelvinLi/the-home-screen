@@ -580,5 +580,23 @@
    "a third location in Fresno is on their site and is not seated here",
    "Glenn delivers to this one weekly and plans to show the owner her page"
   ]
+ },
+ {
+  "id": "b_elranchogrande",
+  "name_exact": "Rancho Grande Taqueria",
+  "one_line": "Tacos, burritos and enchiladas on Hopyard Road, open early",
+  "cuisine": "Mexican",
+  "address": "2707 Hopyard Rd, Pleasanton, CA",
+  "phone": "(925) 600-8620",
+  "hours": "Mon-Thu and Sat 8am-9pm, Fri 7am-9pm, Sun 8am-8pm",
+  "instagram": "ranchogrande.taq",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their menu page lists every dish and no prices; ordering ahead is by phone or a delivery app",
+  "flags": [
+   "the sign outside reads EL RANCHO GRANDE TAQUERIA; their own site, logo and footer say Rancho Grande Taqueria, so that is the name here",
+   "Glenn photographed the storefront and the window poster while delivering, 2026-09-04"
+  ]
  }
 ]

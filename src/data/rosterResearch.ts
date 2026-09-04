@@ -726,6 +726,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Rancho Grande Taqueria — gathered 2026-09-04 from own-domain
+     they are: Mexican
+     flag: the sign outside reads EL RANCHO GRANDE TAQUERIA; their own site, logo and footer say Rancho Grande Taqueria, so that is the name here
+     flag: Glenn photographed the storefront and the window poster while delivering, 2026-09-04
+  */
+  'el-rancho-grande': {
+    address: "2707 Hopyard Rd, Pleasanton, CA",
+    phone: "(925) 600-8620",
+    hours: "Mon-Thu and Sat 8am-9pm, Fri 7am-9pm, Sun 8am-8pm",
+    instagram: "ranchogrande.taq",
+    cuisine: "Mexican",
+    tagline: "Tacos, burritos and enchiladas on Hopyard Road, open early",
+    contactOnly: "Tacos, burritos and enchiladas on Hopyard Road, open early. Their menu page lists every dish and no prices; ordering ahead is by phone or a delivery app.",
+  },
+
+  /*
      Empire State Pizza — gathered 2026-09-04 from own-domain
      they are: NYC-style pizza
      flag: Apple Maps prints the suite as Ste A; their own site says Suite C, which is what is here

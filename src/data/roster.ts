@@ -1079,6 +1079,19 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'A new Bay Area media company, born in the Bay and broadcasting worldwide: music, originals, community, fashion and business, out of Oakland and San Francisco. It launches Labor Day, September 7, 2026, and nothing is for sale yet; their site takes sign-ups for first access.',
   }),
+  /* 2026-09-04, from the van: "are you able to add this to the Paige real
+     quick? I'm delivering right now and I might talk to the owner" — two
+     photographs, the storefront and the window poster. Everything below is
+     from their own site; the mark is their own Logo-Color.png, downloaded,
+     not the photograph. Their sign says EL RANCHO GRANDE and their site says
+     Rancho Grande, so the site wins, as it does everywhere else. */
+  seed('el-rancho-grande', 'Rancho Grande Taqueria', 'Rancho Grande', 'Mexican', '#A81E27', {
+    icon: 'el-rancho-grande',
+    logoTemplate: 'badge', logoLines: ['RANCHO', 'GRANDE'], logoFace: 'slab',
+    site: 'https://www.ranchograndetaq.com/',
+    siteCta: 'See their menu',
+  }),
+
   /* 2026-09-03 night into 09-04. Cali Party Bus for Oakland; Pijja Paradise
      twice, "I deliver to the one in Livermore every week. I plan to speak to
      the owner and show her her page soon"; Chikin Drip twice, Union City and
