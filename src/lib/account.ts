@@ -32,6 +32,8 @@ export interface Account {
   email: string | null
   phone: string | null
   instagram: string | null
+  /** Epoch ms they joined, from the server. */
+  joinedAt: number
   referralCode: string
   tier: 'free' | 'pass' | 'diamond'
   tierStatus: 'none' | 'pending' | 'active' | 'lapsed'

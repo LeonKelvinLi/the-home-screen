@@ -4,6 +4,7 @@ import { MemberPanel } from './MemberPanel'
 import { PetAvatarArt, SPECIES, COATS, BACKDROPS, ACCESSORIES } from './PetAvatar'
 import { Gem } from './MembersApp'
 import { member, isMember } from '../lib/member'
+import { useGate } from '../lib/gate'
 import { favorites } from '../lib/favorites'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { brandById } from '../data/brands'
@@ -47,7 +48,21 @@ export function ProfileApp({ api }: { api: ShellApi }) {
   const fileRef = useRef<HTMLInputElement | null>(null)
 
   const m = member()
-  const joined = isMember() ? new Date(m.joinedAt).getFullYear() : null
+  /*
+    THE ACCOUNT FIRST, THE DEVICE SECOND.
+
+    This read a year out of a store that predates accounts, so a real member
+    signing in on a new phone was told they had joined this year — or offered
+    the "become a member" button they had already pressed. The server knows
+    when they joined; the device store is the fallback for a visitor who has
+    made a local card and never signed in.
+  */
+  const { account } = useGate()
+  const joined = account
+    ? new Date(account.joinedAt).getFullYear()
+    : isMember()
+      ? new Date(m.joinedAt).getFullYear()
+      : null
 
   /*
     The diamond count is PLACES, not visits and not points. Someone who went to
@@ -379,10 +394,12 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           )}
         </div>
 
+        {/* Signed in, the first sentence was simply false: accounts exist and
+            the member list in Contacts is built from them. */}
         <p className="prof-fineprint">
-          This profile is on this phone only. There are no accounts in the app yet, so nothing here
-          has been sent anywhere and nobody else can see it — it is a preview of what a shared
-          profile will look like. No followers, no following, and no numbers about you: everything
+          {account
+            ? 'Your name and the month you joined are visible to other members in Contacts. Everything else on this page — your picture, your favourites, what you have visited — is on this phone only and has been sent nowhere. No followers, no following, and no numbers about you: everything'
+            : 'This profile is on this phone only. You are not signed in, so nothing here has been sent anywhere and nobody else can see it. No followers, no following, and no numbers about you: everything'}
           on this page is a place someone can tap and go to.
         </p>
 

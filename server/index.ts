@@ -1680,6 +1680,10 @@ async function memberPayload(m: MemberRow) {
       rendered "not connected yet" even when both links were live.
     */
     paymentsConfigured: paymentsLive(),
+    /* When they actually joined. The profile printed a year from a device-local
+       store that predates accounts, so a member signing in on a new phone was
+       told they had joined today. */
+    joinedAt: m.created_at,
     referralCode: m.referral_code,
     tier: m.tier,
     tierStatus: m.tier_status,

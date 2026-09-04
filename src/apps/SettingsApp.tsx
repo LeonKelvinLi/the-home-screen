@@ -5,6 +5,7 @@ import { LISTED_KITCHENS } from '../data/brands'
 import { useSettings } from '../store/settings'
 import { useCart } from '../store/cart'
 import { IS_LOCAL_ONLY, ORDERING_LIVE, PAYMENTS_LIVE } from '../lib/api'
+import { useGate } from '../lib/gate'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -20,6 +21,16 @@ const TIPS = [0, 1000, 1500, 1800, 2000, 2500]
 export function SettingsApp({ api }: { api: ShellApi }) {
   const s = useSettings()
   const cart = useCart()
+  /*
+    THE TOP THREE ROWS IGNORED THE ACCOUNT ENTIRELY.
+
+    "Sign In" was a constant, so a signed-in member opened Settings and was
+    told to sign in — which reads as "it forgot me", and is the one thing a
+    settings screen must never say. Payment printed a build-time flag rather
+    than what the server actually has, and Rewards printed a hardcoded zero.
+    All three now read the account the rest of the app already loads once.
+  */
+  const { account } = useGate()
   const [page, setPage] = useState<'root' | 'orders' | 'tip' | 'privacy' | 'about'>('root')
 
   if (page === 'tip') {
@@ -165,9 +176,15 @@ export function SettingsApp({ api }: { api: ShellApi }) {
       <ListSection>
         <ListRow
           icon="person.crop.circle.fill"
-          iconBg="#8E8E93"
-          label="Sign In"
-          detail="Keep your orders across devices"
+          iconBg={account ? '#34C759' : '#8E8E93'}
+          label={account ? account.name : 'Sign In'}
+          /* Whichever they are known by — a member who joined by text has no
+             address, and one who joined before the change has no number. */
+          detail={
+            account
+              ? (account.phone ?? account.email ?? 'Signed in')
+              : 'Keep your orders across devices'
+          }
           onClick={() => api.openApp('sys.account')}
         />
       </ListSection>
@@ -180,18 +197,38 @@ export function SettingsApp({ api }: { api: ShellApi }) {
           value={s.defaultFulfilment === 'pickup' ? 'Pickup' : 'Delivery'}
           onClick={() => setPage('orders')}
         />
+        {/* The server's answer, not the build flag: `paymentsConfigured` is
+            whether a Payment Link actually exists live. Signed out we do not
+            know, so it says what the build was compiled for. */}
         <ListRow
           icon="creditcard.fill"
           iconBg="#34C759"
           label="Payment"
-          value="Not connected"
+          value={
+            account
+              ? account.paymentsConfigured
+                ? 'Stripe'
+                : 'Not connected'
+              : PAYMENTS_LIVE
+                ? 'Stripe'
+                : 'Not connected'
+          }
           onClick={() => api.openApp('sys.help')}
         />
+        {/* Raffle tickets, not points: tickets are the reward that exists and
+            is earned, and the points programme is not built. A zero here was
+            a number about software nobody has written. */}
         <ListRow
           icon="star.fill"
           iconBg="#FF9500"
           label="Rewards"
-          value="0 points"
+          value={
+            account
+              ? account.raffleTickets.total === 1
+                ? '1 ticket'
+                : `${account.raffleTickets.total} tickets`
+              : 'Sign in'
+          }
           onClick={() => api.openApp('sys.rewards')}
         />
       </ListSection>

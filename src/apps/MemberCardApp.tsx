@@ -13,6 +13,7 @@ import {
   welcomeAvailable,
 } from '../lib/member'
 import { LISTED_KITCHENS } from '../data/brands'
+import { useGate } from '../lib/gate'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -29,6 +30,20 @@ import type { ShellApi } from '../ios/Device'
  */
 
 export function MemberCardApp({ api }: { api: ShellApi }) {
+  /*
+    SIGNED IN, THE CARD IS THE ACCOUNT'S.
+
+    This screen was written before accounts existed and read a code minted on
+    the device, so a real member — with a real referral code the server hands
+    out and credits — was shown a different code that means nothing to anybody.
+    Signed in, the card now prints and encodes `referralCode`, and the two
+    numbers under it are the server's: people who joined on that code, and the
+    raffle tickets those earned.
+
+    The visit simulation below stays device-local, because that is honestly
+    what it is: there is still no business-facing app scanning anything.
+  */
+  const { account } = useGate()
   const [m, setM] = useState(() => member())
   const [initials, setInitials] = useState('')
   const [phone, setPhone] = useState('')
@@ -41,9 +56,10 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
     only makes the modules smaller for a scanner to find.
   */
   useEffect(() => {
-    if (!m.code) return setQr(null)
+    const code = account?.referralCode ?? m.code
+    if (!code) return setQr(null)
     let alive = true
-    void QRCode.toString(m.code, {
+    void QRCode.toString(code, {
       type: 'svg',
       errorCorrectionLevel: 'M',
       margin: 0,
@@ -54,7 +70,7 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
     return () => {
       alive = false
     }
-  }, [m.code])
+  }, [m.code, account?.referralCode])
 
   const say = (s: string) => {
     setNote(s)
@@ -105,10 +121,12 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
             Said before anyone types anything, not after. A code built from a
             phone number sounds like it is doing more than it is.
           */}
+          {/* Signed in there IS an account, and saying otherwise was true only
+              before sign-in shipped. Each branch says what is actually so. */}
           <p className="member-fineprint">
-            This is a working preview. The card is made on this phone and stays on it — nothing is
-            sent anywhere, no account is created, and this code is a name badge rather than a
-            password. Nothing that costs money is ever authorised by it.
+            {account
+              ? 'Your card carries your own referral code, and the numbers on it come from your account. The scan buttons below are a simulation: there is no business-facing app yet, so nothing has been scanned by a shop.'
+              : 'This is a working preview. The card is made on this phone and stays on it — nothing is sent anywhere, no account is created, and this code is a name badge rather than a password. Nothing that costs money is ever authorised by it.'}
           </p>
         </div>
       </AppChrome>
@@ -124,18 +142,33 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           ) : (
             <div className="member-qr-img" />
           )}
-          <p className="member-code">{m.code}</p>
+          <p className="member-code">{account?.referralCode ?? m.code}</p>
         </div>
 
         <div className="member-stats">
-          <div>
-            <strong>{m.points}</strong>
-            <span>{m.points === 1 ? 'point' : 'points'}</span>
-          </div>
-          <div>
-            <strong>{m.referrals.length}</strong>
-            <span>introduced</span>
-          </div>
+          {account ? (
+            <>
+              <div>
+                <strong>{account.referrals}</strong>
+                <span>introduced</span>
+              </div>
+              <div>
+                <strong>{account.raffleTickets.total}</strong>
+                <span>{account.raffleTickets.total === 1 ? 'raffle ticket' : 'raffle tickets'}</span>
+              </div>
+            </>
+          ) : (
+            <>
+              <div>
+                <strong>{m.points}</strong>
+                <span>{m.points === 1 ? 'point' : 'points'}</span>
+              </div>
+              <div>
+                <strong>{m.referrals.length}</strong>
+                <span>introduced</span>
+              </div>
+            </>
+          )}
         </div>
 
         <p className="member-lead">

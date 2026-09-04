@@ -205,6 +205,8 @@ for (const s of [
   'api/members/directory', 'members so far',
   'san-lorenzo', 'Initiation and annual fees', 'point-richmond', 'hercules',
   'is-glow', 'icon-glow',
+  /* The screens that were showing account data without reading the account. */
+  'joinedAt', 'raffle tickets', 'Keep your orders across devices',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

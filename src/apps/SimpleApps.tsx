@@ -16,13 +16,36 @@ import type { ShellApi } from '../ios/Device'
  */
 
 export function RewardsApp({ api }: { api: ShellApi }) {
+  /*
+    THE BIG NUMBER WAS A HARDCODED ZERO under a paragraph explaining that the
+    points programme does not exist. Two things were wrong with that: a member
+    who has actually earned raffle tickets was shown nothing, and the one
+    number on the screen described software nobody has written.
+
+    So the card now counts what the server really keeps — raffle tickets, one
+    per three referrals, uncapped, which is the reward that exists — and the
+    note below still says plainly that points are not built.
+  */
+  const { account } = useGate()
+  const tickets = account?.raffleTickets.total ?? 0
+  const unused = account?.raffleTickets.unused ?? 0
+  const referrals = account?.referrals ?? 0
   return (
     <AppChrome title="Rewards" onBack={api.closeApp} tint="#F06A00">
       <div className="plain">
         <div className="reward-card">
-          <span className="reward-points">0</span>
-          <span className="reward-label">points</span>
+          <span className="reward-points">{tickets}</span>
+          <span className="reward-label">{tickets === 1 ? 'raffle ticket' : 'raffle tickets'}</span>
         </div>
+        {account ? (
+          <p>
+            {referrals === 0
+              ? 'Share your code and you earn a raffle ticket for every three people who join. There is no limit.'
+              : `${referrals} ${referrals === 1 ? 'person has' : 'people have'} joined on your code, which is ${tickets} ${tickets === 1 ? 'ticket' : 'tickets'}${unused ? `, ${unused} still unused` : ''}. One ticket for every three, with no limit.`}
+          </p>
+        ) : (
+          <p>Sign in to see your tickets. One for every three people who join on your code.</p>
+        )}
         {/*
           THIS PROGRAMME DOES NOT EXIST YET.
 
