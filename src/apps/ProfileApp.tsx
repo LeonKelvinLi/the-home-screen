@@ -58,8 +58,22 @@ export function ProfileApp({ api }: { api: ShellApi }) {
     made a local card and never signed in.
   */
   const { account } = useGate()
-  const joined = account
-    ? new Date(account.joinedAt).getFullYear()
+  /*
+    SIGNED IN IS NOT THE SAME AS BEING A MEMBER, and the first cut of this
+    treated them as one — so anybody with a free account lost the "become a
+    member" button, which is the only route from this page to the two passes.
+    tools/audit-membership-plans.mjs walks exactly that route and caught it.
+
+    A member is somebody holding a paid tier. `pending` counts: they have
+    chosen one and the operator is arranging it, and telling them to become a
+    member again would be the same forgetfulness this commit is fixing.
+  */
+  const memberTier =
+    account && account.tier !== 'free' && account.tierStatus !== 'none'
+      ? account
+      : null
+  const joined = memberTier
+    ? new Date(memberTier.joinedAt).getFullYear()
     : isMember()
       ? new Date(m.joinedAt).getFullYear()
       : null
