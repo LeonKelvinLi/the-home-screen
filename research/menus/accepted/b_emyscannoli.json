@@ -1,0 +1,31 @@
+{
+ "id": "b_emyscannoli",
+ "items": [],
+ "photos": [
+  {
+   "photo": "emys-cannoli-site-0",
+   "alt": "Alternative text for describing the image displayed",
+   "credit": "Their own photo, from emyscannoli.com"
+  },
+  {
+   "photo": "emys-cannoli-site-1",
+   "alt": "Placeholder image for ABOUT",
+   "credit": "Their own photo, from emyscannoli.com"
+  },
+  {
+   "photo": "emys-cannoli-site-2",
+   "alt": "Placeholder image for PRODUCT",
+   "credit": "Their own photo, from emyscannoli.com"
+  },
+  {
+   "photo": "emys-cannoli-site-3",
+   "alt": "Placeholder image for PRODUCT",
+   "credit": "Their own photo, from emyscannoli.com"
+  },
+  {
+   "photo": "emys-cannoli-site-4",
+   "alt": "Placeholder image for PRODUCT",
+   "credit": "Their own photo, from emyscannoli.com"
+  }
+ ]
+}

@@ -1,0 +1,958 @@
+{
+ "id": "b_pippal",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.pippaldublin.com/",
+  "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c",
+  "https://www.pippaldublin.com/menu",
+  "https://get.popmenu.com/",
+  "https://www.levelaccess.com/a/popmenu?utm_source=popmenuclient&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=footer&utm_campaign=popmenu",
+  "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c/item-lucknowi-chicken-biryani_29728f7f-3bdb-4cf0-bb34-df83b414fdf6",
+  "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c/item-chilli-garlic-naan_e40eb7e1-bcd2-4d70-8cc2-3c5d2ba6e788"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Lucknowi Chicken Biryani",
+   "desc": "Lucknowi Chicken biryani, Fragrant basmati rice with tender Corniche hen, brown onions, dry fruits, accompanied by cooling raita.",
+   "cents": 3400,
+   "image": "https://d1w7312wesee68.cloudfront.net/hPx0n-d_zgUXOG5WO561BIfRqFYoAHqe1GgjGGE4nr4/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/1/item-1600000000038976741_1781738084.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Chilli Garlic Naan",
+   "desc": "Chilli Garlic Naan – Soft, pillowy tandoor-baked bread topped with fresh garlic and herbs, offering a fragrant aroma and rich flavor that pairs perfectly with Indian curries.",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/OKDyQQTzkraKS_p7eZCblOcEQWrS6GBkLgOf-gt5s6c/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038982166_1781735906.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Pappad Sampler",
+   "desc": "Papad Sampler Assortment of Indian papads with chutneys.",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/ee4OhidwD4sa4JIkgJMxStvW1VQhrq8BVq96_yn5I0A/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038904050_1781726883.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Live Chaat Trolley for 2",
+   "desc": "• Live Chaat Classic Indian chaat reimagined with papadi, dhokla, chutneys, sev, & liquid nitrogen frozen yogurt.",
+   "cents": 2800,
+   "image": "https://d1w7312wesee68.cloudfront.net/0GUpEr0bL_YjOkJpXcE6RCQbihKUkhYQd2hWpvxmCE0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000038902148_1781726512.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Quinoa Bhel",
+   "desc": "Quinoa bhel Light and crunchy puffed rice with quinoa, pomelo, ginger, & assorted chutneys.",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/F06dSwUsOMnBi1BUICZffyUGYYJGxs_t0NEqpESK7a0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038904052_1781727378.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Sprout Salad",
+   "desc": "Sprout Salad: a healthy mix of sprouted lentils and pomelos, tossed with fresh herbs, lemon juice, and light spices for a refreshing crunch.",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/3fY_w_mZ7XMsJOxiJqzEjrbL9hRt_zPNrPk7ofUPfB4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000038904054_1781727587.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Kaahmiri Rajma Salad",
+   "desc": "Kashmiri Rajma salad Nutty rajma hummus paired with sprouts, crunchy potatoes, & pickled vegetables.",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/lclbcjtDodJysGD0fviyHMYvLzcEr_nTaUk2-F9nWDk/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038904056_1781727889.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Live Chaat Trolley for 4",
+   "desc": "Live Chaat Classic Indian chaat reimagined with papadi, dhokla, chutneys, sev, & liquid nitrogen frozen yogurt.",
+   "cents": 4200,
+   "image": "https://d1w7312wesee68.cloudfront.net/v9nn1YpYdLcNWsMuwscFpaeDRn0ltb-Amhoe-tXXaNE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000141627716_1781727681.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Only accepting scheduled orders"
+  },
+  {
+   "name": "Mushroom MOMO",
+   "desc": "Mushroom Momo, Soft steamed dumplings stuffed with finely chopped mushrooms, herbs, and light spices, served with tangy spicy chutney.",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/SHSuXfK1GSn1Vb5gX1WT9W1BsKMSi68Qv8xZI9MQeFM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038910342_1781728157.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "VEG STARTERS"
+  },
+  {
+   "name": "Roasted Gun Powder Idly",
+   "desc": "Roasted gun powder idlis steamed Coin idlis tossed in roasted gunpowder, served with mustard curry leaves & tomato chutney.",
+   "cents": 1800,
+   "image": "https://d1w7312wesee68.cloudfront.net/9JXfBUbFHhz7nLahml02kShInbuH7jd6oeW99vfz3s8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000038910344_1781728537.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "VEG STARTERS"
+  },
+  {
+   "name": "Mushroom Galouti",
+   "desc": "Mushroom Galouti, Delicate mushroom mince galouti with brown cashew-apricot chutney, crispy mushrooms, and coriander khamiri.",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/rdAvUq_MX5gnYZ7z4bqtu-aNwjvpeSwZBEHmf65kmGM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038910346_1781728983.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "VEG STARTERS"
+  },
+  {
+   "name": "Chakri Paneer",
+   "desc": "Chakri paneer, Aromatic paneer roomali stuffed with saffron, coriander, cashew, crispy spinach, & malai cream.",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/p9WNUFdB-9VqPEklQ6T1l477DayuN-MWIdDf1R-0otk/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/294aee66-4e3e-4a96-a779-a746071833f8/MenuItem/44402b3b-d6da-42d4-ae59-10e3360a9a10.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "VEG STARTERS"
+  },
+  {
+   "name": "Arbi Ke Kebab",
+   "desc": "Arbi ke kebab, Spiced taro root mince kebabs with coriander & carom seeds, served with khamiri roti & mint chutney.",
+   "cents": 1800,
+   "image": "https://d1w7312wesee68.cloudfront.net/17tVYc8dD__VjfAPb2-mH7fVaEbYwgv34S7MkS3hEC8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038911300_1781729618.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "VEG STARTERS"
+  },
+  {
+   "name": "Veg Manchow Soup",
+   "desc": "Veg Manchow Soup, A spicy, flavorful Indo-Chinese soup made with mixed vegetables, garlic, ginger, and soy, topped with crispy fried noodles.",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/UXH3mEx7HWxZzfreA67_mwclLgK5SGY99P_qiW6W9w4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038911302_1781729743.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "VEG STARTERS"
+  },
+  {
+   "name": "Chicken Tikka Trio",
+   "desc": "Chicken tikka trio Three flavorful tikka variations, classic, malai, & coriander, accompanied by mint-garlic chutney",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/vpXQz4dme2gUHMtsTzvTJm5B1G8Ewoj8375EZiKYSLU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000038935238_1781730218.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Fish Cutlet",
+   "desc": "Fish cutlet Crispy fried fish with a nutty peanut-butter finish, served alongside potato chips, & pickled onion.",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/VzvYb-8oweUlnGW5wfJtzrMYavD0koEWVn9fuTLaWw4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038935240_1781732294.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Andhra Fried Chicken",
+   "desc": "Andhra fried chicken Spiced Andhra-style fried chicken paired with tangy pickled onion & aromatic curry leaf.",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/pJ-F26BOmywGxnqbhfwIe1tbPx_t0eWZylHKjCwE97Q/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000057711866_1781732619.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Prawn Pepper Fry",
+   "desc": "Prawn pepper fry Succulent prawns tossed with black pepper, curry leaf, onion-garlic tadka, & young coconut.",
+   "cents": 2400,
+   "image": "https://d1w7312wesee68.cloudfront.net/Bsea2pq8XcPgyWzVYHTjzsfM292OpBXDHG9_bUvbdsw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000038935244_1781732249.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Pathar Ke Kebab",
+   "desc": "Pathar ke kebab Flavorful kebabs cooked on a stone slab, served with mint-garlic chutney, young onion, & coriander.",
+   "cents": 2400,
+   "image": "https://d1w7312wesee68.cloudfront.net/KAOzJj-kALjcGssUzPzkP8-XOQkyA4cO8ICmDUebnFo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038935246_1781730654.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Lamb CHOPS",
+   "desc": "Lamb Chops, Juicy lamb chops marinated in yogurt and spices, slow cooked in a clay pot, then perfectly toasted for a smoky, tender finish.",
+   "cents": 3200,
+   "image": "https://d1w7312wesee68.cloudfront.net/hl9qL0UOwOaajy1t3OhDi_FTCGdt_-WHJrJ10VWioLw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000038935248_1781731214.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "CHICKEN MOMO",
+   "desc": "Chicken Momo, steamed dumplings filled with juicy minced chicken, herbs, and mild spices, served with spicy chutney.",
+   "cents": 1800,
+   "image": "https://d1w7312wesee68.cloudfront.net/Y8tZUjHyvWXR8sz_sxNjkuwVfBRGJnCcstuQaVgZVnk/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038936700_1781731287.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Dal Jakhiya",
+   "desc": "Dal jakhiya, Mix yellow lentils flavored with jakhiya seeds, fresh ginger, tomato, & ghee",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/BF0dydC-LrQbZOzl_FTzGKUzVpJ5vJ-YAihFZ_kRByI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/5/item-1600000000038955645_1781731084.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Asami Vegetable Coconut Curry",
+   "desc": "Asami vegetable coconut curry, A fragrant coconut curry of seasonal vegetables, flavored with kaffir lime, galangal, and curry leaf.",
+   "cents": 2800,
+   "image": "https://d1w7312wesee68.cloudfront.net/7BkePXIEoEtIeiMEivGMcEbYkjpZxuGeMNNTWZd0P3k/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/7/item-1600000000038955647_1781733096.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Malai Kofta",
+   "desc": "Malai kofta, Delicate koftas in rich cashew gravy, paired with fresh fruits, cream cheese, and pan-seared asparagus.",
+   "cents": 2800,
+   "image": "https://d1w7312wesee68.cloudfront.net/-7mkZCNt1p5YrXxJujH9cGttg4CMsRe6AwxiUZSizw4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/1/item-1600000000038957051_1781734238.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Paneer Parat",
+   "desc": "Paneer Parat, Delicate six layered paneer in roasted tomato gravy, enhanced with coconut chili oil and curry leaf.",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/LRkTFKaWy_trXn05kxyMksE_PWJSH60Q48idxSLqUFk/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/3/item-1600000000038957053_1781733515.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Himalyan Jangli Mushrooms",
+   "desc": "Himalayan jangli Mushrooms, Wild mushrooms paired with mushroom purée & drizzled with fragrant curry leaf oil.",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/x4tQ_03SJhpaaKhxh7_mPPSK7ELeMMjjXeTQRpWQozo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/5/item-1600000000038957055_1781742755.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Litti Chokha",
+   "desc": "Litti chokha, Wheat dough balls stuffed with Sattu, served with roasted eggplant & potato chokha, finished with ghee",
+   "cents": 2800,
+   "image": "https://d1w7312wesee68.cloudfront.net/OqUp6qqAslnxWKNqZf_FVSMMYYya0lwAY1hn4VmRfO4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/7/item-1600000000038957057_1781733612.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Sarson Saag",
+   "desc": "Sarson saag, Fresh mustard greens cooked with garlic, white butter, and jaggery, served with pickled onion",
+   "cents": 2800,
+   "image": "https://d1w7312wesee68.cloudfront.net/vKdf75qWQrpnDuP80yYG3E9YsAEZTpPH5I_vo6wTKKI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/9/item-1600000000038957059_1781734092.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON VEG STARTERS"
+  },
+  {
+   "name": "Tawa Sabzi",
+   "desc": "Tawa Sabzi A vibrant medley of seasonal vegetables tossed on a hot iron tawa with aromatic Indian spices, fresh herbs, and a rich masala coating and finished with a touch of butter and kasuri methi for a smoky, street-st",
+   "cents": 2800,
+   "alcohol": false,
+   "src": "text",
+   "section": "NON VEG STARTERS",
+   "image": "https://d1w7312wesee68.cloudfront.net/crOpq3jVBN2_iqu-RozP0CqBYrSw0w_1wSR6dwCq5vo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/5/item-1600000000057715625_1781734197.jpg"
+  },
+  {
+   "name": "Laal Mass",
+   "desc": "Laal Mass, Spicy Rajasthani-style goat curry with fresh coriander and a drizzle of chili oil.",
+   "cents": 3400,
+   "image": "https://d1w7312wesee68.cloudfront.net/d_vhwu_ymg62GI_H0r6TMR6qmp4Nf1UJwWW7TccyNZw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038970152_1781739770.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Kashmiri Mutton Gustaba",
+   "desc": "Kashmiri Mutton Gustaba, Succulent mutton mince balls simmered in yogurt gravy with dry mint and crisp nadru",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/_fquqbZARdvWxNohM8UXBEGTo1Ju786UU50mjOBMIwY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000038970154_1781739948.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "East India Butter Chicken",
+   "desc": "Butter Chicken – Tender chicken simmered in a rich, creamy tomato-butter gravy, delicately spiced and finished with aromatic herbs.",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/7vx7Lt3mnXtz01c1ywl1REMwDpmThvdeTuf1_UryBS4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038968646_1781740185.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Chicken Saoji",
+   "desc": "Chicken Saoji – A fiery Maharashtrian specialty featuring tender chicken slow-cooked in a bold, aromatic gravy made with traditional Saoji spices.",
+   "cents": 3200,
+   "image": "https://d1w7312wesee68.cloudfront.net/vRkIAQG3bg2LjxaM5dZlMu4g6XESm2NViny1kA1m4lE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038968642_1781740650.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Mango Alleppey Fish & Prawn Curry",
+   "desc": "Mango Alleppey fish & prawn curry, Delicate seafood in creamy coconut-mango gravy, accented with curry leaf and chili oil.",
+   "cents": 3600,
+   "image": "https://d1w7312wesee68.cloudfront.net/xtDq1Ezmco1BqSjN2iTyneMRG3ypZWPAKlsIv_dXuZ4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038970150_1781740742.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Parsi Fish Curry",
+   "desc": "Parsi fish curry, Delicate steamed fish served with mustard-flavored coconut and coriander gravy.",
+   "cents": 3200,
+   "image": "https://d1w7312wesee68.cloudfront.net/1K7sSY_poyZ2H7jvbIldhME0DH_eokzh_QBAjR6szx8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000038968648_1781740796.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Goan crab cake",
+   "desc": "Goan Crab Cake, Succulent crab simmered in a spiced Goan coconut-tomato sauce with mustard, curry leaf, and chili oil.",
+   "cents": 3400,
+   "image": "https://d1w7312wesee68.cloudfront.net/6kD0m0jncV2CRSNFp2hnffg2C69TjsScq2hzBxwPrNY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038970156_1781741998.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Naga Chicken Curry",
+   "desc": "Naga chicken curry, Tender chicken simmered in a fragrant Naga-style curry with tomato, galangal, lemongrass, and curry leaf.",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/H7mwdq-7h4zBKfneTBpWff6KuntpBZ8ArmDYr_JZDAE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000038968644_1781741122.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Bhopali Pulao",
+   "desc": "Bhopali pulao, Fragrant rice with delicate cheese dumplings.",
+   "cents": 2400,
+   "image": "https://d1w7312wesee68.cloudfront.net/ZTQY_-_iOEZ8WDl4ej6st9tB6dg8MwHM0fm0GSL5ERI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/3/item-1600000000038976743_1781737941.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Steamed Rice",
+   "desc": "Steamed rice, Aromatic basmati rice, delicately steamed.",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/5HB2VsXh2cpPXR0SeoV3g6m-s9cegX5QMnVT0HawRbY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/5/item-1600000000038976745_1781738220.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "NON-VEG MAIN"
+  },
+  {
+   "name": "Plain Naan",
+   "desc": "Plain Naan – Soft and fluffy tandoor-baked flatbread with a delicate golden crust, perfect for scooping up rich curries and flavorful gravies.",
+   "cents": 500,
+   "image": "https://d1w7312wesee68.cloudfront.net/rNuQ_sArpVMA-hQ2T-KA4-jB27XpMjN891cAmi3-ymY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038982160_1781736509.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "Butter Naan",
+   "desc": "layered Hand-stretched naan baked in the tandoor until pillowy and lightly charred, finished with melted butter for a rich, comforting flavor.",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/FXeSWZQZmrh8HDm0zOGNgdlEWwNQxRwTiQ3jvl8jGRw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038982162_1781734963.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "Garlic Naan",
+   "desc": "Garlic Naan – Soft, pillowy tandoor-baked bread topped with fresh garlic and herbs",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/273i071DFbNRSIQHNPrjUvzfnAtBTY0q-x5WZhjtoY4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000038982164_1781735753.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "Beetroot Ki Roti",
+   "desc": "Beetroot Roti – Soft whole wheat flatbread infused with fresh beetroot, offering a vibrant color, natural sweetness, and wholesome nutrition in every bite.",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/fjcMtZ7mvISIOzEoAe7T9C-rYXioeQbf_CZP0p8JVVo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000038982168_1781735357.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "Lacha Paratha",
+   "desc": "Laccha Paratha – Flaky, multi-layered Indian flatbread, expertly hand-rolled and cooked to golden perfection, delivering a crisp texture and rich buttery flavor with every bite",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/W4ACO_Qe6UrDYa5iHqrMGWfsAfgKBBZsGOxE5cQbURw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038982170_1781735436.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "Bene Dosa",
+   "desc": "Benne Dosa – A crispy, buttery Karnataka-style dosa, golden brown on the outside and soft inside,",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/tRxaiy7xhu1KGY-KoqTNjXJO80Y8UgZKV0H-2QzjLMI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000077638874_1781735493.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "BREAD BASKET",
+   "desc": "Bread Basket – An assortment of freshly baked Indian breads, featuring a selection of naan, paratha, and roti, served warm to complement your dining experience.",
+   "cents": 4200,
+   "image": "https://d1w7312wesee68.cloudfront.net/8ur45hujJL4IYIiqXjlpITsx6ubIwVI4zJTF7pR9F4s/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000868904598_1781736022.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "BAJRA ROTI",
+   "desc": "Bajra Roti – A rustic pearl millet flatbread, rich in fiber and earthy flavors",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/eAY8gz1MKNPTe1CGcd8mG95_OajeiYc-qVt3oiGz1R0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000868905050_1781735628.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "MISSI ROTI",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "BREAD",
+   "image": "https://d1w7312wesee68.cloudfront.net/bYeFlI_xN40u3loG5usFExcZPEfPzuBefaAE6OrQnrY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/1/item-1600000000932990811_1781736351.png"
+  },
+  {
+   "name": "PUDINA PARANTHA",
+   "desc": "Layered Pudina Paratha – Flaky, multi-layered whole wheat flatbread infused with fresh mint and aromatic spices, pan-cooked to golden perfection for a crisp, flavorful bite.",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/Vy1o5_IivBiXymPHMcVrJrZXHyRenudQ7PEr5YgfLLU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000868905054_1781735835.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "MAKKAI ROTI",
+   "desc": "Missi Roti – A traditional North Indian flatbread made with gram flour and whole wheat, delicately spiced and cooked to perfection for a hearty, rustic flavor.",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/bYeFlI_xN40u3loG5usFExcZPEfPzuBefaAE6OrQnrY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/1/item-1600000000932990811_1781736351.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BREAD"
+  },
+  {
+   "name": "MINT CHUTNEY",
+   "desc": "Mint Chutney – A refreshing blend of fresh mint, cilantro, green chilies, and spices, delivering a vibrant burst of flavor with a perfect balance of zest and freshness.",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/HNO52m3EyBNyrcpsvwA6sRuHgpjLwmevwJANaNa-Bw4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/3/item-1600000000085033773_1781737114.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "TAMRIND CHUTNEY",
+   "desc": "Tamarind Chutney – A sweet and tangy chutney crafted from tamarind, jaggery, and aromatic spices, offering a rich depth of flavor that perfectly complements Indian appetizers and snacks.",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/R6vK8SeswUtcf-xFH_aMIv6RpyvVSHSQCXJnj_SCO7Y/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000085035660_1781737195.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "YOGURT",
+   "desc": "Yogurt Dip – A creamy and refreshing blend of fresh yogurt, herbs, and subtle spices, offering a cool and flavorful accompaniment to breads, kebabs, and appetizers.",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/B6OTKFqXYWiXsc6FqTcuJRjSd5nB8d2BXer6KtRS1SM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/7/item-1600000000085034737_1781737255.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "LEMON ONION CHILI",
+   "desc": "Lemon, Onion & Chili – A classic Indian accompaniment featuring crisp onions, fresh lemon wedges, and green chilies, adding a vibrant burst of zest, heat, and crunch to every bite.",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/jnFkmwl6zP5G2QKKYn3KfeQG4wuL1msI2M-0-73ByfU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000085037704_1781737414.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "SPICY CHUTNEY",
+   "desc": "Spicy Chutney – A bold and fiery blend of fresh chilies, herbs, and aromatic spices, crafted to add an intense kick and vibrant flavor to every dish.",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/XKIbmbatN9eeqJfoJBONdXlehGCSRDTsHisAru0LEmA/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/9/item-1600000000124845349_1781737541.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "CUCUMBER RAITA",
+   "desc": "Cucumber Raita – A cooling blend of creamy yogurt, crisp cucumber, and roasted spices, offering a refreshing balance to rich and flavorful Indian dishes.",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/lk03y_chsXln1O_uETX1PrFp8tq_XPrSGTEojDrvrPw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/5/item-1600000000942673935_1781737798.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "BOONDI RAITA",
+   "desc": "Boondi Raita – A refreshing yogurt-based accompaniment with crispy chickpea pearls, lightly seasoned with roasted spices for a creamy, crunchy, and flavorful finish.",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/aRe8Fvl7_ZXOshOlf_Ahbro9Zznb0Ux6Hxs4UZHVWE4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/7/item-1600000000942673937_1781737848.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DIPS"
+  },
+  {
+   "name": "Shahi Gola",
+   "desc": "Shahi gola, ghee cooked balushahi paired with creamy rabri, garnished with dry fruits, saffron, and silver varq",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/9Z9JlFGzw6yddnMthnAh3maaG9oyC0Ns8EQFOBCwrGM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000038990666_1781741259.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DESSERT"
+  },
+  {
+   "name": "MOONG DAAL HALWA",
+   "desc": "Moong Dal Halwa, A rich, slow-cooked lentil halwa made with ghee, sugar, and aromatic cardamom.",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/QiowgBslM-t86d2KgREF7ETFxOzJAljRGmWlTQ4ioT8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000038990668_1781741429.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DESSERT"
+  },
+  {
+   "name": "Daulat Ki Chaat",
+   "desc": "Daulat ki chaat, Light, airy winter delicacy of milk topped with saffron & cardamom.",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/X-gVC_qs05_4VO2kHaIRIaLMFiL0G7NNXWZByhoz2P4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000038990670_1781741503.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DESSERT"
+  },
+  {
+   "name": "Payasum",
+   "desc": "Payasam, Classic South Indian pudding with milk, stuffed ice cream, a touch of sweetness from dry fruits, and cardamom.",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/Hi3Xy3I6oJxqs7C6YC-RKTc1gAobw9uxAIajC9Okg3o/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000038990672_1781742304.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DESSERT"
+  },
+  {
+   "name": "GHEWAR",
+   "desc": "Ghewar, freshly prepared crispy honeycomb Ghewar, served warm with rich, creamy rabri",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/osT-_4s-xwkKLf5ROiTUQZaoobHAUa2B_h2PVrTyKfE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/9/item-1600000000868921459_1781741581.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "FRENCH FRIES WAFFLE",
+   "desc": "Waffle Fries – Crispy golden waffle-cut potato fries, perfectly seasoned and served hot for a crunchy, flavorful bite.",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/m27m89FXeUY8mYeurS64bHfkEhWg2TIv7mReel8JUJM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/7/item-1600000000165790817_1781738507.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "CORN CHEESE",
+   "desc": "Corn Cheese – Sweet corn kernels tossed with melted cheese, herbs, and spices, baked until warm, creamy, and irresistibly delicious.",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/0u-k2VLtSiY7LLXwytgViEH7Reiy3RikPbWPz2WMFjU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000165790818_1781738655.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "CHICKEN NUGGETS",
+   "desc": "Chicken Nuggets – Crispy golden chicken nuggets made with tender, juicy chicken and served with your favorite dipping sauce.",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/zPKNrCrzc4dPv8_r1jwR-a8t2mypaIhSycxARgEzsmc/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/9/item-1600000000165790819_1781738714.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "FRIED FISH",
+   "desc": "Fried Fish – Fresh fish fillets coated in a light, crispy batter and fried to golden perfection, served with a zesty dipping sauce.",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/ZFFCDykNtMG2BMBTbxxCMsnMMm1Ly8T08qkzDd79g24/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/0/item-1600000000165790820_1781738770.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "CHEESE DOSA",
+   "desc": "Cheese Dosa – A crispy South Indian dosa generously filled with melted cheese, creating the perfect blend of crunchy texture and creamy indulgence.",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/XftZCWQAWo9CFHNjl8gYamlzjqf1Ng5VdhdQkmeNGgM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/1/item-1600000000165790821_1781738829.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "CHOCOLATE DOSA",
+   "desc": "Chocolate Dosa – A crispy golden dosa drizzled with rich chocolate and filled with a luscious chocolate spread for a delightful sweet treat.",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/L-y_k7COPaM8ecxO1ifOzF9kSsRM0dtIcn1z09z1bbs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/2/item-1600000000165790822_1781738911.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "BUTTER CHICKEN MEAL",
+   "desc": "Butter Chicken with Butter Naan – Tender chicken simmered in a rich, creamy tomato-butter gravy, served with soft, freshly baked butter naan.",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/xq5A7E2DzBqwxzOlBHQrgdIu3XLCjIamj2eumJKbFlQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/3/item-1600000000165790823_1781739389.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "SHAHI PANEER MEAL",
+   "desc": "Shahi Paneer with Butter Naan – Soft paneer cubes simmered in a rich, creamy royal gravy, served with freshly baked butter naan brushed with melted butter.",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/BQmZzjE6GuOInNPzia08AzRMsvnDW3jToar9LIIS-F0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000000165790824_1781739445.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "VANILLA ICE CREAM",
+   "desc": "Vanilla Ice Cream – Smooth and creamy vanilla ice cream crafted with rich dairy and pure vanilla for a timeless, refreshing treat.",
+   "cents": 900,
+   "image": "https://d1w7312wesee68.cloudfront.net/hbFSsQ2t11qGV-EXAOR1-JAjCJBTUTdXwj66fOuCjZs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/5/item-1600000000165790825_1781739554.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "BERRRIES ICE CREAM",
+   "desc": "Berries Ice Cream – Creamy ice cream infused with a medley of fresh berries, offering the perfect balance of sweet and tangy flavors.",
+   "cents": 900,
+   "image": "https://d1w7312wesee68.cloudfront.net/yDNkUS8bThyudM3YpLJ0oEe7jujNnyT-RBdoRpFJJ7M/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/6/item-1600000000165790826_1781739655.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "PLAIN IDLI",
+   "desc": "",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/7EM60BdDmRmYKHfCNveW_2lsDfzBFaE-HV8_5jpud5k/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/8/item-1600000000950715748_1781739324.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  },
+  {
+   "name": "Kids Mango Lassi",
+   "desc": "Mango Lassi – A refreshing blend of ripe mangoes and creamy yogurt, lightly sweetened for a smooth and tropical delight.",
+   "cents": 900,
+   "image": "https://d1w7312wesee68.cloudfront.net/b6c-inKNN_8pzuTPXOnxWarUsDZjE0mS6g8lrmkHacg/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-294590000000000000/menu/items/4/item-1600000001520410234_1781742856.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BIRTHDAY & ANNIVERSARY(DINING)"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D20/yonkwsrd/fce6c5b2-4a82-4b5e-af41-8f683f326233.jpg",
+   "alt": "Food",
+   "near": "Make A Reservation",
+   "w": 1440,
+   "h": 1098,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/30128d51-6391-401e-8cef-f3050759fc26.png",
+   "alt": "logo",
+   "near": "Gather. Explore. Connect.\n\nBorn from a passion for India's diverse cuisine, Pippal showcases authent",
+   "w": 908,
+   "h": 863,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/ecc7a40d-0c93-40b5-91dc-4feac92ce6d2.jpg",
+   "alt": "Interior",
+   "near": "Group Dining & Private Events\n\nLooking for a venue to host your next event? Pippal offers a vibrant ",
+   "w": 1440,
+   "h": 1006,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D480%2Cheight%3D480%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/49a9f5a2-48b0-490a-ba2f-a1ed9b8683a7.jpg",
+   "alt": "Food",
+   "near": "",
+   "w": 480,
+   "h": 320,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D480%2Cheight%3D480%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/53f90438-e768-49ff-81e2-289c50702a7c.jpg",
+   "alt": "Cocktail",
+   "near": "",
+   "w": 384,
+   "h": 480,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D480%2Cheight%3D480%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/7e820a86-0b2f-48af-88b9-3f80012135a8.jpg",
+   "alt": "Food",
+   "near": "",
+   "w": 348,
+   "h": 480,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/1c3f7670-3beb-4e56-9974-71bc893e09a3.png",
+   "alt": "Rivaaz Hospitality Group",
+   "near": "ABOUTPRESS & NEWSCAREERSCONTACTGROUP DINING",
+   "w": 300,
+   "h": 297,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gatudqow/06482df6-87cb-4f11-b750-50d15940252e.png",
+   "alt": "",
+   "near": "Gather. Explore. Connect.\n\nBorn from a passion for India's diverse cuisine, Pippal showcases authent",
+   "w": 1280,
+   "h": 409,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gatudqow/2102e870-42bb-4180-ae7f-6ee726233e82.png",
+   "alt": "",
+   "near": "Group Dining & Private Events\n\nLooking for a venue to host your next event? Pippal offers a vibrant ",
+   "w": 1280,
+   "h": 684,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gatudqow/cb2694ba-e252-400b-8670-38b14001d538.png",
+   "alt": "",
+   "near": "Made with  by Popmenu\n(opens in a new window)\nopens in a new tab, get directions to\nDublin\n4500 Tass",
+   "w": 1280,
+   "h": 761,
+   "page": "https://www.pippaldublin.com/"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/4a28d3a6-0682-4571-9a04-9d54c83281ee/e77b543f-f5b9-4ebf-9362-d77dbe90e3f5.png",
+   "alt": "",
+   "near": "",
+   "w": 908,
+   "h": 825,
+   "page": "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D20/yonkwsrd/340ccc8c-e61b-4e19-b432-7c73893e38d0.png",
+   "alt": "crab dish",
+   "near": "Pippal Dublin Menu\nREGIONAL INDIAN RESTAURANT IN DUBLIN CA | MODERN INDIAN CUISINE & COCKTAILS",
+   "w": 1352,
+   "h": 863,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/0e370f3e-2e23-4563-95f2-c148ccce2683.jpg",
+   "alt": "Food",
+   "near": "Food",
+   "w": 1440,
+   "h": 1114,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/9efcebc1-a4ee-425c-ad71-a8d01825aee8.jpg",
+   "alt": "Drinks",
+   "near": "Drinks",
+   "w": 1440,
+   "h": 1036,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/f596040d-08ea-439e-ba38-ed04561d6686.jpg",
+   "alt": "Food",
+   "near": "Kids Menu",
+   "w": 1237,
+   "h": 1440,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/yonkwsrd/mapbox/122278-streets-15.png",
+   "alt": "Street map pinning Pippal - Dublin in Dublin",
+   "near": "©Mapbox ©OpenStreetMap Improve this map",
+   "w": 2560,
+   "h": 800,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/yonkwsrd/1c3f7670-3beb-4e56-9974-71bc893e09a3.png",
+   "alt": "Rivaaz Hospitality Group",
+   "near": "ABOUTPRESS & NEWSCAREERSCONTACTGROUP DINING",
+   "w": 300,
+   "h": 297,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gatudqow/cb2694ba-e252-400b-8670-38b14001d538.png",
+   "alt": "",
+   "near": "Made with  by Popmenu\n(opens in a new window)\nopens in a new tab, get directions to\nDublin\n4500 Tass",
+   "w": 1280,
+   "h": 761,
+   "page": "https://www.pippaldublin.com/menu"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/maxs-restaurant.png",
+   "alt": "Max's North America",
+   "near": "MAX'S NORTH AMERICA\n\n$8,900,000+ in online orders.\n\nRead full case study",
+   "w": 569,
+   "h": 281,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/henris-bakery.webp",
+   "alt": "Henri's Bakery & Deli",
+   "near": "HENRI'S BAKERY & DELI\n\n$3,800,000+ in online orders.\n\nRead full case study",
+   "w": 781,
+   "h": 394,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/hampton-social-white.webp",
+   "alt": "The Hampton Social",
+   "near": "THE HAMPTON SOCIAL\n\n835,000+ guest contacts for ongoing marketing.\n\nRead full case study",
+   "w": 900,
+   "h": 349,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/headshots/juan-fernando-henao.png",
+   "alt": "Juan Fernando Henao",
+   "near": "Juan Fernando Henao\nVP, La Parrilla & Casi Cielo",
+   "w": 500,
+   "h": 500,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/steam-boys.png",
+   "alt": "Steam Boys",
+   "near": "STEAM BOYS\n\n$430,000 from email marketing.\n\nRead full case study",
+   "w": 300,
+   "h": 232,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/rose-and-crown-tavern.webp",
+   "alt": "Rose & Crown Tavern",
+   "near": "ROSE & CROWN TAVERN\n\n50% of sessions from organic search.\n\nRead full case study",
+   "w": 305,
+   "h": 300,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/headshots/mary-jane-culhane.webp",
+   "alt": "Mary Jane Culhane",
+   "near": "Mary Jane Culhane\nOwner, Culhane's Irish Pub",
+   "w": 380,
+   "h": 400,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/headshots/tunji-junard.webp",
+   "alt": "Tunji Junard",
+   "near": "Tunji Junard\nCMO & Co-founder, Steam Boys",
+   "w": 380,
+   "h": 400,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/press/today-show-white.svg",
+   "alt": "Today Show logo",
+   "near": "AS SEEN IN…",
+   "w": 1000,
+   "h": 750,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/press/cnbc-white.svg",
+   "alt": "CNBC logo",
+   "near": "AS SEEN IN…",
+   "w": 701,
+   "h": 560,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/awards/deloitte-fast500-2025.png",
+   "alt": "Deloitte Technology Fast 500 2025",
+   "near": "AWARDS & HONORS",
+   "w": 1178,
+   "h": 908,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/awards/pinnacle-award.webp",
+   "alt": "Pinnacle Award",
+   "near": "AWARDS & HONORS",
+   "w": 2180,
+   "h": 2080,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/awards/aicpa-soc2.webp",
+   "alt": "AICPA SOC 2",
+   "near": "SOC 2\nPCI DSS",
+   "w": 336,
+   "h": 336,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://embed-ssl.wistia.com/deliveries/a13325494eaed0248f47488f1d584f2b.webp?image_crop_resized=1280x720",
+   "alt": "Nyke introduces herself using American Sign Language.",
+   "near": "Press O for more options",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.levelaccess.com/a/popmenu?utm_source=popmenuclient&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=footer&utm_campaign=popmenu"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/4a28d3a6-0682-4571-9a04-9d54c83281ee/e77b543f-f5b9-4ebf-9362-d77dbe90e3f5.png",
+   "alt": "",
+   "near": "",
+   "w": 908,
+   "h": 825,
+   "page": "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c/item-lucknowi-chicken-biryani_29728f7f-3bdb-4cf0-bb34-df83b414fdf6"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/4a28d3a6-0682-4571-9a04-9d54c83281ee/e77b543f-f5b9-4ebf-9362-d77dbe90e3f5.png",
+   "alt": "",
+   "near": "",
+   "w": 908,
+   "h": 825,
+   "page": "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c/item-chilli-garlic-naan_e40eb7e1-bcd2-4d70-8cc2-3c5d2ba6e788"
+  }
+ ]
+}

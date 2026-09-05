@@ -1,0 +1,715 @@
+{
+ "id": "b_ricoricotaco",
+ "source": "text",
+ "pages": [
+  "https://www.ricoricotaco.com/",
+  "https://order.toasttab.com/online/rico-rico-taco#!/",
+  "https://order.toasttab.com/online/rico-rico-taco#main",
+  "https://order.toasttab.com/Menu",
+  "https://order.toasttab.com/our-story",
+  "https://order.toasttab.com/location",
+  "https://order.toasttab.com/catering-order"
+ ],
+ "items": [
+  {
+   "name": "Taco Al Pastor",
+   "desc": "one spit-roasted pork taco topped with pineapple, onion, cilantro, salsa",
+   "cents": 525,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-al-pastor"
+  },
+  {
+   "name": "Taco de Camaron",
+   "desc": "one sautéed shrimp taco topped with chipotle crema, pico de gallo, salsa",
+   "cents": 575,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-de-camaron"
+  },
+  {
+   "name": "Taco de Carne Asada",
+   "desc": "one steak taco topped with onion, cilantro, salsa",
+   "cents": 550,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-de-carne-asada"
+  },
+  {
+   "name": "Taco de Chorizo",
+   "desc": "one pork chorizo taco topped with pineapple, onion, cilantro, salsa",
+   "cents": 525,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-de-chorizo"
+  },
+  {
+   "name": "Taco de Pescado",
+   "desc": "one crispy fried fish taco topped with chipotle crema, cabbage, pico de gallo ,pickled onions",
+   "cents": 575,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-de-pescado"
+  },
+  {
+   "name": "Taco de Hongos",
+   "desc": "one sautéed mushroom taco topped with queso cotija, salsa",
+   "cents": 525,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-de-hongos"
+  },
+  {
+   "name": "Taco de Nopal",
+   "desc": "one sautéed cactus taco topped with queso cotija and salsa",
+   "cents": 525,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-de-nopal"
+  },
+  {
+   "name": "Taco Veggie",
+   "desc": "one rice & bean taco topped with lettuce, pico de gallo, crema, queso cotija, salsa",
+   "cents": 525,
+   "section": "Tacos",
+   "photo": "ricoricotaco-taco-veggie"
+  },
+  {
+   "name": "Burrito",
+   "desc": "Bean, Cheese + Rice Burrito",
+   "cents": 900,
+   "section": "Tacos"
+  },
+  {
+   "name": "Alpastor Burrito",
+   "desc": "spit-roasted pork, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "section": "Tacos"
+  },
+  {
+   "name": "Camaron Burrito",
+   "desc": "sautéed shrimp with tomato & onion, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1600,
+   "section": "Tacos"
+  },
+  {
+   "name": "Carne Asada Burrito",
+   "desc": "steak, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1500,
+   "section": "Tacos"
+  },
+  {
+   "name": "Carnitas Burrito",
+   "desc": "crispy fried pork, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "section": "Tacos"
+  },
+  {
+   "name": "Chile Relleno Burrito",
+   "desc": "rice, beans, queso cotija, crema , tomato sauce, salsa",
+   "cents": 1600,
+   "section": "Tacos"
+  },
+  {
+   "name": "Chorizo Burrito",
+   "desc": "pork chorizo, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "section": "Tacos"
+  },
+  {
+   "name": "Hongo Burrito",
+   "desc": "sautéed mushroom with tomato & onion, rice, beans, cheese, crema, onion, cilantro, salsa",
+   "cents": 1400,
+   "section": "Tacos"
+  },
+  {
+   "name": "Pescado Burrito",
+   "desc": "crispy fried fish, rice, beans, cheese, chipotle crema, pico de gallo, cabbage, avocado sauce, salsa",
+   "cents": 1600,
+   "section": "Tacos"
+  },
+  {
+   "name": "Veggie Burrito",
+   "desc": "rice, beans, lettuce, pico de gallo, crema, cheese, avocado sauce, salsa",
+   "cents": 1300,
+   "section": "Tacos"
+  },
+  {
+   "name": "Nopal Burrito",
+   "desc": "sautéed cactus with onion, rice, beans, cheese, crema, onion, cilantro, salsa",
+   "cents": 1400,
+   "section": "Tacos"
+  },
+  {
+   "name": "Alpastor Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-alpastor-bowl"
+  },
+  {
+   "name": "Camaron Bowl",
+   "desc": "",
+   "cents": 1625,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-camaron-bowl"
+  },
+  {
+   "name": "Carne Asada Bowl",
+   "desc": "",
+   "cents": 1525,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-carne-asada-bowl"
+  },
+  {
+   "name": "Carnitas Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-carnitas-bowl"
+  },
+  {
+   "name": "Chorizo Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-chorizo-bowl"
+  },
+  {
+   "name": "Pescado Bowl",
+   "desc": "",
+   "cents": 1625,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-pescado-bowl"
+  },
+  {
+   "name": "Pollo Asado Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-pollo-asado-bowl"
+  },
+  {
+   "name": "Veggie Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-veggie-bowl"
+  },
+  {
+   "name": "Hongos Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-hongos-bowl"
+  },
+  {
+   "name": "Nopal Bowl",
+   "desc": "",
+   "cents": 1425,
+   "section": "Burrito bowls",
+   "photo": "ricoricotaco-nopal-bowl"
+  },
+  {
+   "name": "Alpastor Quesadilla",
+   "desc": "spit-roasted quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-alpastor-quesadilla"
+  },
+  {
+   "name": "Camaron Quesadilla",
+   "desc": "shrimp quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1600,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-camaron-quesadilla"
+  },
+  {
+   "name": "Carne Asada Quesadilla",
+   "desc": "Asada quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1500,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-carne-asada-quesadilla"
+  },
+  {
+   "name": "Carnitas Quesadilla",
+   "desc": "crispy fried pork quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-carnitas-quesadilla"
+  },
+  {
+   "name": "Chorizo Quesadilla",
+   "desc": "chorizo quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-chorizo-quesadilla"
+  },
+  {
+   "name": "Hongos Quesadilla",
+   "desc": "mushroom quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-hongos-quesadilla"
+  },
+  {
+   "name": "Nopal Quesadilla",
+   "desc": "cactus quesadilla served with a side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-nopal-quesadilla"
+  },
+  {
+   "name": "Pescado Quesadilla",
+   "desc": "crispy fried fish quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1600,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-pescado-quesadilla"
+  },
+  {
+   "name": "Pollo Asado Quesadilla",
+   "desc": "flamed grilled chicken quesadilla served with a side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-pollo-asado-quesadilla"
+  },
+  {
+   "name": "Quesadilla de Queso",
+   "desc": "cheese quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1200,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-quesadilla-de-queso"
+  },
+  {
+   "name": "Quesadilla De Masa",
+   "desc": "Corn quesadilla filled with your choice of protein, lettuce, queso cotija, crema, salsa",
+   "cents": 1350,
+   "section": "Quesadillas"
+  },
+  {
+   "name": "Huarachito",
+   "desc": "handmade oval fried corn tortilla filled with refried beans, topped with choice of meat or nopales, onion, cilantro, queso cotija, salsa",
+   "cents": 1150,
+   "section": "Quesadillas",
+   "photo": "ricoricotaco-huarachito"
+  },
+  {
+   "name": "Chille Relleno",
+   "desc": "roasted chile poblano stuffed with cheese, dipped in egg batter, served in tomato sauce, served with rice and two tortillas",
+   "cents": 1595,
+   "section": "Plates",
+   "photo": "ricoricotaco-chille-relleno"
+  },
+  {
+   "name": "Flautas",
+   "desc": "four crispy tortillas filled with chicken, topped with lettuce, cabbage, crema, queso cotija, pickled onions, salsa, served with rice",
+   "cents": 1675,
+   "section": "Plates",
+   "photo": "ricoricotaco-flautas"
+  },
+  {
+   "name": "Sopes",
+   "desc": "Two sopes topped with lettuce, cabbage, crema, queso cotija, pickled onions, tomato salsa, served with rice",
+   "cents": 1675,
+   "section": "Plates",
+   "photo": "ricoricotaco-sopes"
+  },
+  {
+   "name": "House Salad",
+   "desc": "deep fried tortilla topped with black beans, mixed greens, lettuce, radish, carrots, pico de gallo, queso cotija, salsa",
+   "cents": 1250,
+   "section": "Salads",
+   "photo": "ricoricotaco-house-salad"
+  },
+  {
+   "name": "Chips + Avocado Sauce + Salsa",
+   "desc": "Chips + Avocado Sauce + Salsa",
+   "cents": 375,
+   "section": "Salads",
+   "photo": "ricoricotaco-chips-avocado-sauce-salsa"
+  },
+  {
+   "name": "Chips + Chunky Guacamole",
+   "desc": "",
+   "cents": 550,
+   "section": "Salads",
+   "photo": "ricoricotaco-chips-chunky-guacamole"
+  },
+  {
+   "name": "Chips & Pico De Gallo",
+   "desc": "",
+   "cents": 375,
+   "section": "Salads"
+  },
+  {
+   "name": "Chips",
+   "desc": "",
+   "cents": 275,
+   "section": "Salads",
+   "photo": "ricoricotaco-chips"
+  },
+  {
+   "name": "Side of Chunky Guacamole",
+   "desc": "",
+   "cents": 350,
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Avocado Sauce",
+   "desc": "",
+   "cents": 150,
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Pico De Gallo",
+   "desc": "",
+   "cents": 150,
+   "section": "Salads"
+  },
+  {
+   "name": "Rice",
+   "desc": "",
+   "cents": 275,
+   "section": "Salads",
+   "photo": "ricoricotaco-rice"
+  },
+  {
+   "name": "Beans",
+   "desc": "",
+   "cents": 275,
+   "section": "Salads",
+   "photo": "ricoricotaco-beans"
+  },
+  {
+   "name": "Rice & Beans",
+   "desc": "",
+   "cents": 500,
+   "section": "Salads"
+  },
+  {
+   "name": "3 Tortillas",
+   "desc": "",
+   "cents": 225,
+   "section": "Salads",
+   "photo": "ricoricotaco-3-tortillas"
+  },
+  {
+   "name": "Side of Avocado sauce (3) packets",
+   "desc": "",
+   "cents": 100,
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Crema",
+   "desc": "",
+   "cents": 150,
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Mozzarella Cheese (negro)",
+   "desc": "",
+   "cents": 175,
+   "section": "Salads"
+  },
+  {
+   "name": "Side de Cotija (clear)",
+   "desc": "",
+   "cents": 175,
+   "section": "Salads"
+  },
+  {
+   "name": "Kids Burrito",
+   "desc": "",
+   "cents": 700,
+   "section": "Kids"
+  },
+  {
+   "name": "Kids Quesadilla",
+   "desc": "Flour quesadilla served with a side of sour cream",
+   "cents": 700,
+   "section": "Kids",
+   "photo": "ricoricotaco-kids-quesadilla"
+  },
+  {
+   "name": "Pacifico",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Corona",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Modelo",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Negra Modelo",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Coors Light",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Bohemia",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Heineken Non Alcoholic",
+   "desc": "",
+   "cents": 475,
+   "section": "Kids"
+  },
+  {
+   "name": "Dos XX Ambar",
+   "desc": "",
+   "cents": 425,
+   "section": "Kids"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 375,
+   "section": "Drinks",
+   "photo": "ricoricotaco-coca-cola"
+  },
+  {
+   "name": "Diet Coke, Can",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 200,
+   "section": "Drinks",
+   "photo": "ricoricotaco-diet-coke-can"
+  },
+  {
+   "name": "Jarrito- Mandarin",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarrito- Tamarindo",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarrito - Fruit Punch",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarrito -Mineral Water",
+   "desc": "Topo Chico has always been known for the legend surrounding its origins. Whether you believe in the legend or not, you'll still be able to enjoy the crisp",
+   "cents": 375,
+   "section": "Drinks",
+   "photo": "ricoricotaco-jarrito-mineral-water"
+  },
+  {
+   "name": "Squirt",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarrito- Lime",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Horchata",
+   "desc": "",
+   "cents": 460,
+   "section": "Drinks",
+   "photo": "ricoricotaco-horchata"
+  },
+  {
+   "name": "Jamaica",
+   "desc": "",
+   "cents": 460,
+   "section": "Drinks",
+   "photo": "ricoricotaco-jamaica"
+  },
+  {
+   "name": "Sandia",
+   "desc": "",
+   "cents": 460,
+   "section": "Drinks",
+   "photo": "ricoricotaco-sandia"
+  },
+  {
+   "name": "PIÑA",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Fresa",
+   "desc": "",
+   "cents": 460,
+   "section": "Drinks",
+   "photo": "ricoricotaco-fresa"
+  },
+  {
+   "name": "Water",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "ricoricotaco-water"
+  },
+  {
+   "name": "20 Tacos",
+   "desc": "",
+   "cents": 9500,
+   "section": "Tacos"
+  },
+  {
+   "name": "30 Tacos",
+   "desc": "",
+   "cents": 13500,
+   "section": "Tacos"
+  },
+  {
+   "name": "40 Tacos",
+   "desc": "",
+   "cents": 17000,
+   "section": "Tacos"
+  },
+  {
+   "name": "50 Tacos",
+   "desc": "",
+   "cents": 21250,
+   "section": "Tacos"
+  },
+  {
+   "name": "20 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 26000,
+   "section": "Burritos"
+  },
+  {
+   "name": "30 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 39000,
+   "section": "Burritos"
+  },
+  {
+   "name": "40 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 52000,
+   "section": "Burritos"
+  },
+  {
+   "name": "50 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 65000,
+   "section": "Burritos"
+  },
+  {
+   "name": "Chips, Salsa, Avocado Sauce (10-15)",
+   "desc": "",
+   "cents": 3000,
+   "section": "Chips, Salsa & Avocado",
+   "photo": "ricoricotaco-chips-salsa-avocado-sauce-10-15"
+  },
+  {
+   "name": "Chips + Chunky Guacamole (10-15)",
+   "desc": "",
+   "cents": 4500,
+   "section": "Chips, Salsa & Avocado"
+  },
+  {
+   "name": "Chunky Guacamole",
+   "desc": "",
+   "cents": 3000,
+   "section": "Chips, Salsa & Avocado",
+   "photo": "ricoricotaco-chunky-guacamole"
+  },
+  {
+   "name": "Rice (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "section": "Chips, Salsa & Avocado"
+  },
+  {
+   "name": "Frijol Negro (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "section": "Beans",
+   "photo": "ricoricotaco-frijol-negro-10-15"
+  },
+  {
+   "name": "Frijol Pinto (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "section": "Beans",
+   "photo": "ricoricotaco-frijol-pinto-10-15"
+  },
+  {
+   "name": "Frijol Refrito (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "section": "Beans",
+   "photo": "ricoricotaco-frijol-refrito-10-15"
+  },
+  {
+   "name": "Salad (10-15)",
+   "desc": "",
+   "cents": 3000,
+   "section": "Salad",
+   "photo": "ricoricotaco-salad-10-15"
+  },
+  {
+   "name": "Salad Vegan",
+   "desc": "",
+   "cents": 4500,
+   "section": "Salad",
+   "photo": "ricoricotaco-salad-vegan"
+  },
+  {
+   "name": "Fresa Traveler",
+   "desc": "96 fl oz of Agua Fresca (Serves 8-10)",
+   "cents": 2500,
+   "section": "Salad"
+  },
+  {
+   "name": "40 Flautas",
+   "desc": "",
+   "cents": 14000,
+   "section": "Drinks"
+  },
+  {
+   "name": "Raglan",
+   "desc": "",
+   "cents": 3000,
+   "section": "Drinks"
+  },
+  {
+   "name": "Zip-Up",
+   "desc": "",
+   "cents": 3200,
+   "section": "Drinks",
+   "photo": "ricoricotaco-zip-up"
+  },
+  {
+   "name": "Crew Neck",
+   "desc": "",
+   "cents": 2000,
+   "section": "Tees",
+   "photo": "ricoricotaco-crew-neck"
+  },
+  {
+   "name": "Ringer Tee",
+   "desc": "",
+   "cents": 2000,
+   "section": "Tees",
+   "photo": "ricoricotaco-ringer-tee"
+  }
+ ]
+}

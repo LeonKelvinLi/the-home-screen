@@ -1,0 +1,147 @@
+{
+ "id": "b_stansdonutshop",
+ "source": "text",
+ "pages": [
+  "https://www.stansdonutshop.com/",
+  "https://www.stansdonutshop.com/about",
+  "https://www.stansdonutshop.com/about-1",
+  "https://www.stansdonutshop.com/menus",
+  "https://www.stansdonutshop.com/contact",
+  "https://www.stansdonutshop.com/shop",
+  "https://www.stansdonutshop.com/product-page/grey-santa-clara-hoody-1"
+ ],
+ "items": [
+  {
+   "name": "Famous Glazed",
+   "desc": "Please note, due to high demand, we do need to limit order quantity during peak business hours.",
+   "cents": 190,
+   "section": "Donuts"
+  },
+  {
+   "name": "Sugar",
+   "desc": "",
+   "cents": 190,
+   "section": "Donuts"
+  },
+  {
+   "name": "Chocolate Glazed",
+   "desc": "",
+   "cents": 200,
+   "section": "Donuts"
+  },
+  {
+   "name": "Maple Glazed",
+   "desc": "",
+   "cents": 200,
+   "section": "Donuts"
+  },
+  {
+   "name": "Sprinkle Glazed",
+   "desc": "",
+   "cents": 210,
+   "section": "Donuts"
+  },
+  {
+   "name": "Dozen Regular Glazed",
+   "desc": "",
+   "cents": 1850,
+   "section": "Donuts"
+  },
+  {
+   "name": "Dozen Specialty Glazed",
+   "desc": "",
+   "cents": 2000,
+   "section": "Donuts"
+  },
+  {
+   "name": "Dozen raised with sprinkles",
+   "desc": "",
+   "cents": 2200,
+   "section": "Donuts"
+  },
+  {
+   "name": "An assortment of cake donuts",
+   "desc": "",
+   "cents": 125,
+   "section": "Donuts"
+  },
+  {
+   "name": "Strawberry and Blueberry available FRI-SUN",
+   "desc": "",
+   "cents": 150,
+   "section": "Donuts"
+  },
+  {
+   "name": "Jelly Filled Donut",
+   "desc": "Our glazed donut filled with raspberry jam. Also available with powdered sugar.",
+   "cents": 250,
+   "section": "Donuts"
+  },
+  {
+   "name": "Cinnamon Roll",
+   "desc": "Fresh, handmade Cinnamon Rolls",
+   "cents": 300,
+   "section": "Donuts"
+  },
+  {
+   "name": "Cinnamon Twist",
+   "desc": "Fresh, handmade Cinnamon Twist",
+   "cents": 300,
+   "section": "Donuts"
+  },
+  {
+   "name": "Apple Fritter",
+   "desc": "Available on Mondays and Fridays only!",
+   "cents": 300,
+   "section": "Donuts"
+  },
+  {
+   "name": "Bars",
+   "desc": "Available with maple or chocolate",
+   "cents": 250,
+   "section": "Donuts"
+  },
+  {
+   "name": "One dozen cake and/or old-fashioned",
+   "desc": "",
+   "cents": 1500,
+   "section": "By the dozen"
+  },
+  {
+   "name": "Dozen Raised Classic",
+   "desc": "One dozed glazed, sugar, cake, and old-fashioned",
+   "cents": 1850,
+   "section": "By the dozen"
+  },
+  {
+   "name": "Dozen Raised Specialty",
+   "desc": "Our famous raised donuts with chocolate, maple, sugar, and/or glazed",
+   "cents": 2000,
+   "section": "By the dozen"
+  },
+  {
+   "name": "Dozen Raised Rainbow Sprinkle",
+   "desc": "Our famous raised donuts with maple or chocolate icing topped with rainbow sprinkles",
+   "cents": 2200,
+   "section": "By the dozen"
+  },
+  {
+   "name": "Coffee Carafe",
+   "desc": "96oz. Includes: 8 cups, cream and sugar.",
+   "cents": 2000,
+   "section": "Donut holes"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "stans-donut-shop-site-0",
+   "alt": "",
+   "credit": "Their own photo, from stansdonutshop.com"
+  },
+  {
+   "photo": "stans-donut-shop-site-6",
+   "alt": "Jesus_edited.jpg",
+   "credit": "Their own photo, from stansdonutshop.com"
+  }
+ ]
+}

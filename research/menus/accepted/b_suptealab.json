@@ -1,0 +1,331 @@
+{
+ "id": "b_suptealab",
+ "source": "square",
+ "pages": [
+  "https://suptealaboakland.square.site/#66QIIDSPPAGSPZC7T2PAOI64",
+  "https://suptealaboakland.square.site/#66QIIDSPPAGSPZC7T2PAOI64"
+ ],
+ "items": [
+  {
+   "name": "Chai Tea Latte",
+   "desc": "Originating in India. A well Balance of aromatic spices and creamy and sweetness",
+   "cents": 575,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-chai-tea-latte"
+  },
+  {
+   "name": "Matcha Latte",
+   "desc": "Ceremonial grade Matcha from Uji Japan. The perfect match for your morning.",
+   "cents": 699,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-matcha-latte"
+  },
+  {
+   "name": "Milk Tea",
+   "desc": "Perfectly brew using high-pressure technique, correct temperature, and high-quality loose-leaf tea to achieve the best cup of tea you will ever had.",
+   "cents": 550,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-milk-tea"
+  },
+  {
+   "name": "B05 Fried Spring Roll（4）-春卷",
+   "desc": "Veggie Fried Spring Roll.",
+   "cents": 550,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b05-fried-spring-roll-4"
+  },
+  {
+   "name": "Thai Tea",
+   "desc": "the best classic Thai tea you will ever have in town.",
+   "cents": 550,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-thai-tea"
+  },
+  {
+   "name": "B02 Fried Chicken Wings(5)-炸鸡翼",
+   "desc": "Mouth watering wings.",
+   "cents": 799,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b02-fried-chicken-wings-5"
+  },
+  {
+   "name": "Strawberry Potion",
+   "desc": "Make with fresh strawberry and Spring Tea. Highly recommended for a hot day. Tips: Amazing with Osmanthus Jelly! and 50% sugar",
+   "cents": 600,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-strawberry-potion"
+  },
+  {
+   "name": "B01 Popcorn Chicken -盐酥鸡",
+   "desc": "Juicy Thigh meat with our well balance seasoning. The best popcorn chicken in town.",
+   "cents": 850,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b01-popcorn-chicken"
+  },
+  {
+   "name": "B03 Fried Chicken Steak-炸鸡排",
+   "desc": "Crispy and Juicy. A bite to die for",
+   "cents": 699,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b03-fried-chicken-steak"
+  },
+  {
+   "name": "B04 Fried Calamari-炸鱿鱼",
+   "desc": "Crispy, Tender and Juicy. Perfect for a treat.",
+   "cents": 850,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b04-fried-calamari"
+  },
+  {
+   "name": "B09 Sesame balls（6）-芝麻球",
+   "desc": "Slightly Sweet and Crispy Sesame balls with red bean filling.",
+   "cents": 399,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b09-sesame-balls-6"
+  },
+  {
+   "name": "Freshly Passion",
+   "desc": "Refreshing Jasmine tea with Passion fruit. The best you will ever had.",
+   "cents": 575,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-freshly-passion"
+  },
+  {
+   "name": "Grape Potion",
+   "desc": "Jasmine Green Tea with the combination of Kyoto Red Grape and Green Grape Jelly. Great treat for a Hot day.",
+   "cents": 600,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-grape-potion"
+  },
+  {
+   "name": "B17 French Fries-炸薯条",
+   "desc": "Fluffy inside, and crispy skins Freshly fried every single batch. Make to order.",
+   "cents": 599,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b17-french-fries"
+  },
+  {
+   "name": "Overly-Peach",
+   "desc": "Peach Oolong green tea with fresh peach for the maximum flavor!",
+   "cents": 600,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-overly-peach"
+  },
+  {
+   "name": "B11 Salt & Pepper Tofu-椒盐豆腐",
+   "desc": "Soft from the inside, Crispy from the outside. PERFECTION!",
+   "cents": 599,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b11-salt-pepper-tofu"
+  },
+  {
+   "name": "B10 Taishan Style Savory Waffle-炉底糍（咸）",
+   "desc": "Fluffy and slightly savory, with fresh taro and sausage bite. One Unique Waffle you will never forget.",
+   "cents": 850,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b10-taishan-style-savory-waffle"
+  },
+  {
+   "name": "A03 Popcorn Chicken Over Rice-盐酥鸡飯",
+   "desc": "Our Freshly made Popcorn Chicken on a bed of warm rice with seasonal veggie.",
+   "cents": 1150,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a03-popcorn-chicken-over-rice"
+  },
+  {
+   "name": "B12 Hand Grabbed Pancake with Fried Chicken Steak-炸鸡排手抓饼",
+   "desc": "Crispy Fried Chicken wrap in a nice and flakey pancake.",
+   "cents": 950,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b12-hand-grabbed-pancake-with-fried-chic"
+  },
+  {
+   "name": "B06 Hong Kong Style EggPuff-鸡蛋仔",
+   "desc": "Satisfy your cravings with Hong Kong-style egg puffs where soft meets airy for an irresistible snacking pleasure.",
+   "cents": 750,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b06-hong-kong-style-eggpuff"
+  },
+  {
+   "name": "B08 Sweet Waffle-炉底糍（甜）",
+   "desc": "Fluffy, Slightly sweeten with condensed milk.",
+   "cents": 750,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b08-sweet-waffle"
+  },
+  {
+   "name": "Mango Osmanthus",
+   "desc": "Jasmin green tea and mango puree, top it off with our Osmanthus flower Jelly. You can taste Autumn is coming.",
+   "cents": 600,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-mango-osmanthus"
+  },
+  {
+   "name": "A02 Fried Chicken Wing Over Rice（6）-炸鸡翼飯",
+   "desc": "Freshly make friend chicken wings over a bed of white rice with seasonal veggie.",
+   "cents": 1299,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a02-fried-chicken-wing-over-rice-6"
+  },
+  {
+   "name": "A07 Salt & Pepper Tofu Over Rice-椒盐豆腐飯",
+   "desc": "Freshly make Salt and Pepper Tofu over a bed of white rice with seasonal veggie",
+   "cents": 1050,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a07-salt-pepper-tofu-over-rice"
+  },
+  {
+   "name": "A06 Teriyaki Chicken Over Rice-照烧鸡飯",
+   "desc": "Sweet and Tangy Teriyaki Chicken over a bed of White Rice, with Seasonal Veggie. Lunch can be quick and delicious.",
+   "cents": 1350,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a06-teriyaki-chicken-over-rice"
+  },
+  {
+   "name": "B18Curly Fries-炸螺旋薯条",
+   "desc": "Curly fries are a popular variation of traditional French fries. Crispy Texture, Only missing ketchup, and YOU",
+   "cents": 750,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b18curly-fries"
+  },
+  {
+   "name": "A08 Fried Chicken Steak Over Rice-炸鸡排飯",
+   "desc": "Freshly make fried chicken steak over a bed of white rice with seasonal veggie.",
+   "cents": 1150,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a08-fried-chicken-steak-over-rice"
+  },
+  {
+   "name": "Classic Tea \"No Milk\"",
+   "desc": "Freshly brew Tea. Ice or Hot.",
+   "cents": 500,
+   "section": "Drinks and snacks"
+  },
+  {
+   "name": "B13 Crab Wonton (6) 蟹角",
+   "desc": "Imitation crab with cream cheese and green onion. Handmade to perfection.",
+   "cents": 750,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b13-crab-wonton-6"
+  },
+  {
+   "name": "B14 Mozzarella Cheese Stick (6) - 芝士條",
+   "desc": "Mouth watering Cheese Stick. Crispy Goodness!",
+   "cents": 650,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b14-mozzarella-cheese-stick-6"
+  },
+  {
+   "name": "A05 Salt & Pepper Fish over Rice - 椒鹽魚片飯",
+   "desc": "Classic Salt and Pepper Fish over a warm bed of rice. Crispy and Juicy.",
+   "cents": 1350,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a05-salt-pepper-fish-over-rice"
+  },
+  {
+   "name": "B16 Tonkatsu (Pork Cutlet) - 吉列豬排",
+   "desc": "Indulge in the irresistible crispy goodness of Tonkatsu, a traditional Japanese pork cutlet that promises a perfect golden crunch with each bite",
+   "cents": 750,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b16-tonkatsu-pork-cutlet"
+  },
+  {
+   "name": "Mango Creme",
+   "desc": "Mango Smoothie with our specialty sweet cream. Simply perfection.",
+   "cents": 650,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-mango-creme"
+  },
+  {
+   "name": "A04 Tonkatsu over Rice - 吉列豬排飯",
+   "desc": "Hungry??? Experience the crispy perfection of pork Tonkatsu over a bed of fluffy rice",
+   "cents": 1250,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a04-tonkatsu-over-rice"
+  },
+  {
+   "name": "B15 Salt & Pepper Fish - 椒鹽魚片",
+   "desc": "Experience the authentic flavors of Chinese salt and pepper fish, a tantalizing snack that will surely satisfy your cravings",
+   "cents": 850,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-b15-salt-pepper-fish"
+  },
+  {
+   "name": "A01 Unagi Over Rice-鰻魚飯",
+   "desc": "Savor the exquisite flavors of tender unagi drizzled over a bed of steaming rice, a traditional Japanese delicacy that will tantalize your taste buds",
+   "cents": 1499,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-a01-unagi-over-rice"
+  },
+  {
+   "name": "Salt & Pepper Shrimp over Rice + Thai Tea- 椒鹽蝦飯+泰式茶",
+   "desc": "Classic Salt and Pepper Fish over a warm bed of rice. Crispy and Juicy.",
+   "cents": 1499,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-salt-pepper-shrimp-over-rice-thai-tea"
+  },
+  {
+   "name": "Lychee Potion",
+   "desc": "Refreshing, Gentle sweetness from Lychee, with a Hint of peach :) perfect for a hot day. Owner Tips: add Lychee Jelly and do 0% sweet. Heavenly",
+   "cents": 600,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-lychee-potion"
+  },
+  {
+   "name": "Lychee Shake",
+   "desc": "Creamy and gently sweet from lychee. slightly caffeinated with green tea. Owner tips: Best enjoying this FRESHly made in Store",
+   "cents": 650,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-lychee-shake"
+  },
+  {
+   "name": "Grape Elixir *Limited",
+   "desc": "A perfect fusion of bold Kyoho Grapes and refreshing Green Grapes, infused with the natural energy of Oolong Tea. Sweet, Tangy, and absolutely delicious",
+   "cents": 775,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-grape-elixir-limited"
+  },
+  {
+   "name": "Kiwi Elixir",
+   "desc": "House made fresh Kiwi Puree, with refreshing orange green tea. Osmanthus Jelly included",
+   "cents": 675,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-kiwi-elixir"
+  },
+  {
+   "name": "Coco Fresh Ube",
+   "desc": "Coconut Milk, with Ube. Creamy and Sweet goodness",
+   "cents": 600,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-coco-fresh-ube"
+  },
+  {
+   "name": "Mango Coco",
+   "desc": "Fresh and delightful mango smoothie with our Coconut milk. The match made from heaven.",
+   "cents": 775,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-mango-coco"
+  },
+  {
+   "name": "Strawberry Shake",
+   "desc": "Creamy and Refreshing. Sweetness and slightly tangy from strawberry, combine with cream and green tea to create this love potion. Love is only one sip away",
+   "cents": 625,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-strawberry-shake"
+  },
+  {
+   "name": "SupTea Lab Fruit Tea",
+   "desc": "The Ultimate fruit tea. Well balance of passionfruit , orange, apple, and peach.",
+   "cents": 625,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-suptea-lab-fruit-tea"
+  },
+  {
+   "name": "Purple Dragon",
+   "desc": "Refreshing Peach Oolong green tea, slightly sweet purple dragon fruit. Great for Hydration!",
+   "cents": 675,
+   "section": "Drinks and snacks",
+   "photo": "suptea-lab-purple-dragon"
+  }
+ ]
+}

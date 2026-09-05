@@ -1,0 +1,160 @@
+{
+ "id": "b_traballosbackyardbbq",
+ "source": "text",
+ "pages": [
+  "https://traballosbackyardbbq.com/",
+  "https://traballosbackyardbbq.com/contact",
+  "https://www.ubereats.com/store/traballos-backyard-bbq-benicia/T6xsYRy_VgGSUBVDPGxaKw",
+  "https://www.ubereats.com/store/traballos-backyard-bbq-benicia/T6xsYRy_VgGSUBVDPGxaKw/6357ab2e-f4e5-42d4-ab98-145dbdc621ca?ps=1",
+  "https://auth.uber.com/v2/?next_url=https%3A%2F%2Fwww.ubereats.com%2Flogin-redirect%2F%3Fcampaign%3Dsignin_universal_link%26marketing_vistor_id%3D6aba5a02-aff9-4d4a-8af6-11b7efc608a6%26redirect%3D%252Fstore%252Ftraballos-backyard-bbq-benicia%252FT6xsYRy_VgGSUBVDPGxaKw%26guest_mode%3Dfalse%26app_clip%3Dfalse%26source_cta%3Dundefined%26source_flow%3Dundefined&localeCode=en-US&state=1788566520284_os5l9sf8h9&x-uber-did=21deda93-7d9d-4ae9-893b-f6ab8e78d15b",
+  "https://www.ubereats.com/category/benicia-ca/pie",
+  "https://www.ubereats.com/category/benicia-ca/cafe"
+ ],
+ "items": [
+  {
+   "name": "1 Way BBQ Plate",
+   "desc": "",
+   "cents": 2600,
+   "section": "Plates",
+   "photo": "traballosbackyardbbq-1-way-bbq-plate"
+  },
+  {
+   "name": "2 Way BBQ Plate",
+   "desc": "",
+   "cents": 3250,
+   "section": "Plates",
+   "photo": "traballosbackyardbbq-2-way-bbq-plate"
+  },
+  {
+   "name": "3 Way BBQ Plate",
+   "desc": "",
+   "cents": 3900,
+   "section": "Plates",
+   "photo": "traballosbackyardbbq-3-way-bbq-plate"
+  },
+  {
+   "name": "Mama's Style Potato Salad",
+   "desc": "",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "traballosbackyardbbq-mama-s-style-potato-salad"
+  },
+  {
+   "name": "Foe Cheesy Mac N Cheezy",
+   "desc": "",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "traballosbackyardbbq-foe-cheesy-mac-n-cheezy"
+  },
+  {
+   "name": "Yadidabeans",
+   "desc": "",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "traballosbackyardbbq-yadidabeans"
+  },
+  {
+   "name": "Rice N Yadidabeans",
+   "desc": "",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "traballosbackyardbbq-rice-n-yadidabeans"
+  },
+  {
+   "name": "Steamed Rice",
+   "desc": "",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "traballosbackyardbbq-steamed-rice"
+  },
+  {
+   "name": "Brisket",
+   "desc": "",
+   "cents": 1300,
+   "section": "Meat by the Pound",
+   "photo": "traballosbackyardbbq-brisket"
+  },
+  {
+   "name": "Smoked Ribs",
+   "desc": "",
+   "cents": 500,
+   "section": "Meat by the Pound",
+   "photo": "traballosbackyardbbq-smoked-ribs"
+  },
+  {
+   "name": "Pulled Pork",
+   "desc": "",
+   "cents": 910,
+   "section": "Meat by the Pound",
+   "photo": "traballosbackyardbbq-pulled-pork"
+  },
+  {
+   "name": "Grilled Chicken",
+   "desc": "",
+   "cents": 910,
+   "section": "Meat by the Pound",
+   "photo": "traballosbackyardbbq-grilled-chicken"
+  },
+  {
+   "name": "Hot Links (1 pc)",
+   "desc": "",
+   "cents": 650,
+   "section": "Meat by the Pound",
+   "photo": "traballosbackyardbbq-hot-links-1-pc"
+  },
+  {
+   "name": "Cali Drip",
+   "desc": "",
+   "cents": 650,
+   "section": "Drinks"
+  },
+  {
+   "name": "Water",
+   "desc": "",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "1 Stack Smash Burger",
+   "desc": "",
+   "cents": 1500,
+   "section": "Smash burgers",
+   "photo": "traballosbackyardbbq-1-stack-smash-burger"
+  },
+  {
+   "name": "2 Stack Smashed Burger",
+   "desc": "",
+   "cents": 2000,
+   "section": "Smash burgers",
+   "photo": "traballosbackyardbbq-2-stack-smashed-burger"
+  },
+  {
+   "name": "Jimmy Whop",
+   "desc": "",
+   "cents": 2500,
+   "section": "Smash burgers",
+   "photo": "traballosbackyardbbq-jimmy-whop"
+  },
+  {
+   "name": "Yolk'em Bowl",
+   "desc": "",
+   "cents": 1500,
+   "section": "Plates",
+   "photo": "traballosbackyardbbq-yolk-em-bowl"
+  },
+  {
+   "name": "Filipino Breakfast Burrito",
+   "desc": "",
+   "cents": 1500,
+   "section": "Plates",
+   "photo": "traballosbackyardbbq-filipino-breakfast-burrito"
+  },
+  {
+   "name": "Parekuzzi Breakfast Box",
+   "desc": "",
+   "cents": 1800,
+   "section": "Plates",
+   "photo": "traballosbackyardbbq-parekuzzi-breakfast-box"
+  }
+ ]
+}

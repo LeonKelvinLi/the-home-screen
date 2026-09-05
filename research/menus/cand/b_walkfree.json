@@ -1,0 +1,568 @@
+{
+ "id": "b_walkfree",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://walkfree.store/",
+  "https://walkfree.store/collections/all",
+  "https://walkfree.store/pages/contact",
+  "https://walkfree.store/products/breathable-anti-pull-dog-harness-system",
+  "https://walkfree.store/products/shipping-protection",
+  "https://walkfree.store/policies/refund-policy",
+  "https://walkfree.store/policies/shipping-policy"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Sale price",
+   "desc": "",
+   "cents": 6858,
+   "alcohol": false,
+   "src": "text",
+   "section": "Catalog",
+   "image": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200"
+  },
+  {
+   "name": "Regular price",
+   "desc": "",
+   "cents": 12888,
+   "alcohol": false,
+   "src": "text",
+   "section": "Catalog",
+   "image": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200"
+  },
+  {
+   "name": "Shipping Protection",
+   "desc": "Protect your order from loss, theft, or damage",
+   "cents": 299,
+   "image": "https://app.helloatlas.io/shipment-with-padlock.webp",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Add"
+  },
+  {
+   "name": "Anti-Pull Dog Harness",
+   "desc": "Anti-Pull Dog Harness Regular price $128.88 Sale price",
+   "cents": 6858,
+   "image": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=500",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Catalog"
+  },
+  {
+   "name": "You save 30%",
+   "desc": "",
+   "cents": 6858,
+   "alcohol": false,
+   "src": "text",
+   "section": "Catalog"
+  },
+  {
+   "name": "You save 35%",
+   "desc": "",
+   "cents": 11659,
+   "alcohol": false,
+   "src": "text",
+   "section": "Catalog"
+  },
+  {
+   "name": "You save 40%",
+   "desc": "",
+   "cents": 16459,
+   "alcohol": false,
+   "src": "text",
+   "section": "Catalog"
+  },
+  {
+   "name": "Add",
+   "desc": "Shipping Protection",
+   "cents": 299,
+   "image": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=352",
+   "alcohol": false,
+   "src": "card"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Anti-Pull Dog Harness\n\n    \n      ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=1200",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1500",
+   "alt": "",
+   "near": "Join over 1000+ Happy Customers\nTransform Walks Into Calm, Controlled Adventures\nEnjoy Peaceful, Con",
+   "w": 682,
+   "h": 682,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S77868032ad5941a1b6b6e81bfc0d8430M.webp?v=1788400542",
+   "alt": "",
+   "near": "Join Our Newsletter\n\nGet the latest updates, offers, and news delivered straight to your inbox.\n\nEma",
+   "w": 800,
+   "h": 800,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=500",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 500,
+   "h": 500,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=500",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 500,
+   "h": 400,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=500",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 500,
+   "h": 500,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://app.helloatlas.io/shipment-with-padlock.webp",
+   "alt": "Shipping Protection",
+   "near": "Shipping Protection\n                \n                \n                  Protect your order from loss",
+   "w": 2042,
+   "h": 2042,
+   "page": "https://walkfree.store/"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Anti-Pull Dog Harness\n\n    \n      ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=1200",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=352",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=3840",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 3840,
+   "h": 3072,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S5909207a95f74c508672d8b88431bd6cn.webp?v=1788430714&width=3840",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 3840,
+   "h": 3411,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S09946f953cb94d1b89480c0ec53732bcT.webp?v=1788424466&width=3840",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 3840,
+   "h": 3400,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=352",
+   "alt": "Shipping Protection",
+   "near": "Add\n\nShipping Protection\n\n$2.99",
+   "w": 320,
+   "h": 320,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=500",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 500,
+   "h": 400,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://app.helloatlas.io/shipment-with-padlock.webp",
+   "alt": "Shipping Protection",
+   "near": "Shipping Protection\n                \n                \n                  Protect your order from loss",
+   "w": 2042,
+   "h": 2042,
+   "page": "https://walkfree.store/collections/all"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Anti-Pull Dog Harness\n\n    \n      ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/pages/contact"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=1200",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/pages/contact"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=352",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/pages/contact"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=500",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 500,
+   "h": 400,
+   "page": "https://walkfree.store/pages/contact"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=352",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/pages/contact"
+  },
+  {
+   "src": "https://app.helloatlas.io/shipment-with-padlock.webp",
+   "alt": "Shipping Protection",
+   "near": "Shipping Protection\n                \n                \n                  Protect your order from loss",
+   "w": 2042,
+   "h": 2042,
+   "page": "https://walkfree.store/pages/contact"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Anti-Pull Dog Harness\n\n    \n      ",
+   "w": 853,
+   "h": 853,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=1200",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=1210",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 1 in modal",
+   "w": 695,
+   "h": 556,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1210",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 2 in modal",
+   "w": 800,
+   "h": 800,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S5909207a95f74c508672d8b88431bd6cn.webp?v=1788430714&width=1210",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 3 in modal",
+   "w": 626,
+   "h": 556,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S09946f953cb94d1b89480c0ec53732bcT.webp?v=1788424466&width=1210",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 4 in modal",
+   "w": 619,
+   "h": 548,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S60556f3c8b944544a1bc81818089d203m.webp?v=1788400542&width=1200",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 5 in modal",
+   "w": 517,
+   "h": 548,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S9c6c1edd231c47e8bd494412229cd11eJ.webp?v=1788400542&width=1200",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 6 in modal",
+   "w": 517,
+   "h": 548,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S1b3441ea404f47f7b51f65807c943ab2W.webp?v=1788400542&width=1200",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 7 in modal",
+   "w": 517,
+   "h": 548,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd6f1a021806e4b0f8590bbcfc9d32166j.webp?v=1788400543&width=1200",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Open media 8 in modal",
+   "w": 517,
+   "h": 548,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://cdn.shopify.com/s/files/1/0708/2934/2771/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570",
+   "alt": "",
+   "near": "Black\nRed\nOrange\nM\nL\nXL",
+   "w": 695,
+   "h": 556,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?height=200&v=1788424305",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Anti-Pull Dog Harness\nSale price\n$68.58\nRegular price\n$128.88\nSold out\nBlack\nRed\nOrange\nM\nL\nXL\nSold ",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 848,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 1060,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S5909207a95f74c508672d8b88431bd6cn.webp?v=1788430714",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 941,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S09946f953cb94d1b89480c0ec53732bcT.webp?v=1788424466",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 938,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S60556f3c8b944544a1bc81818089d203m.webp?v=1788400542&width=1100",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 1060,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S9c6c1edd231c47e8bd494412229cd11eJ.webp?v=1788400542&width=1445",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 1060,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S1b3441ea404f47f7b51f65807c943ab2W.webp?v=1788400542&width=1445",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 1060,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd6f1a021806e4b0f8590bbcfc9d32166j.webp?v=1788400543&width=1445",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Image 1 is now available in gallery view\nSkip to product information\nOpen media 1 in modal\nOpen medi",
+   "w": 1060,
+   "h": 1012,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=88",
+   "alt": "",
+   "near": "Breathable Anti-Pull Dog Harness System",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S9c6c1edd231c47e8bd494412229cd11eJ.webp?v=1788400542&width=800",
+   "alt": "",
+   "near": "Why Pet Owners Swear By This Harness\n\nDelivering quality and consistency that customers rely on.\n\nBr",
+   "w": 640,
+   "h": 640,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S60556f3c8b944544a1bc81818089d203m.webp?v=1788400542&width=1000",
+   "alt": "",
+   "near": "How This Product will Transform Outdoors Walks\n\nFirst Benefit\n\nControl and Safety\n\nStops pulling and",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd6f1a021806e4b0f8590bbcfc9d32166j.webp?v=1788400543&width=1000",
+   "alt": "",
+   "near": "Reach Out Any Time\nFirst name\nLast name\nEmail *\nPhone number\nComment\nSend Message",
+   "w": 500,
+   "h": 477,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=352",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=500",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n          \n\n\n  \n    Anti-Pull Dog Harness\n",
+   "w": 500,
+   "h": 400,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=352",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://app.helloatlas.io/shipment-with-padlock.webp",
+   "alt": "Shipping Protection",
+   "near": "Shipping Protection\n                \n                \n                  Protect your order from loss",
+   "w": 2042,
+   "h": 2042,
+   "page": "https://walkfree.store/products/breathable-anti-pull-dog-harness-system"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=1200",
+   "alt": "",
+   "near": "Anti-Pull Dog Harness\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Anti-Pull Dog Harness\n\n    \n      ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=1200",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=832",
+   "alt": "Shipping Protection",
+   "near": "",
+   "w": 457,
+   "h": 457,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=3840",
+   "alt": "Shipping Protection",
+   "near": "Close",
+   "w": 3840,
+   "h": 3840,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/Sd4d45bb6bb4f4f00831c6a70ce547805j.webp?v=1788424305&width=352",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S66219f536483404e95e255b0513328fc7.webp?v=1788430570&width=3840",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 3840,
+   "h": 3072,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S5909207a95f74c508672d8b88431bd6cn.webp?v=1788430714&width=3840",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 3840,
+   "h": 3411,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/S09946f953cb94d1b89480c0ec53732bcT.webp?v=1788424466&width=3840",
+   "alt": "Anti-Pull Dog Harness",
+   "near": "",
+   "w": 3840,
+   "h": 3400,
+   "page": "https://walkfree.store/products/shipping-protection"
+  },
+  {
+   "src": "https://walkfree.store/cdn/shop/files/shield.png?v=1788437894&width=352",
+   "alt": "",
+   "near": "Shipping Protection\n    \n  \n  \n      \n      \n\n        \n\n\n  \n    Shipping Protection\n\n    \n      \n\n\n ",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://walkfree.store/products/shipping-protection"
+  }
+ ]
+}

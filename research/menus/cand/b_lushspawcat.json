@@ -1,0 +1,86 @@
+{
+ "id": "b_lushspawcat",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.lushspaw.com/cat-services"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Cat Bath",
+   "desc": "",
+   "cents": 11000,
+   "alcohol": false,
+   "src": "text",
+   "section": "For your Feline Fur Babies"
+  },
+  {
+   "name": "Cat Groom",
+   "desc": "",
+   "cents": 16000,
+   "alcohol": false,
+   "src": "text",
+   "section": "For your Feline Fur Babies"
+  },
+  {
+   "name": "Specialty Cut (Add on)",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "For your Feline Fur Babies"
+  },
+  {
+   "name": "Shed-Less Treatment",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cat Add ons & Upgrades"
+  },
+  {
+   "name": "Flea & Tick Relief",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cat Add ons & Upgrades"
+  },
+  {
+   "name": "Deep Clean & Degrease",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cat Add ons & Upgrades"
+  },
+  {
+   "name": "Sanitary & Nail Trim",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Nail Trim"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/6a8746_0f6927e59d1e45cb89007cd0cc5cd84d~mv2.png/v1/fill/w_600,h_600,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6a8746_0f6927e59d1e45cb89007cd0cc5cd84d~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 600,
+   "h": 600,
+   "page": "https://www.lushspaw.com/cat-services"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/5e2f50_85da300cbf6744a68732091106e74506~mv2.png/v1/fill/w_601,h_338,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20design_edited.png",
+   "alt": "Untitled design_edited.png",
+   "near": "Book an Appointment\nBook Appointment",
+   "w": 601,
+   "h": 338,
+   "page": "https://www.lushspaw.com/cat-services"
+  }
+ ]
+}

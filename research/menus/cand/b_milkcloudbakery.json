@@ -1,0 +1,54 @@
+{
+ "id": "b_milkcloudbakery",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://milkcloudbakery.com/",
+  "https://milkcloudbakery.com/menu"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/milk-cloud-bakery-sign-sample-06.JPG/:/cr=t:0%25,l:16.69%25,w:66.63%25,h:100%25/rs=w:1160,h:1160",
+   "alt": "//img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/milk-cloud-bakery-sign-sample-06.JPG/:/rs=w:1300,h:800",
+   "near": "Kaya Swirl Shokupan\nwith Homemade Kaya Jam",
+   "w": 1160,
+   "h": 1160,
+   "page": "https://milkcloudbakery.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/25C4E8C3-0391-4486-9087-B886C55FDB5A.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:1160",
+   "alt": "//img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/25C4E8C3-0391-4486-9087-B886C55FDB5A.JPG/:/rs=w:1300,h:800",
+   "near": "Kaya Swirl Shokupan\nwith Homemade Kaya Jam",
+   "w": 1160,
+   "h": 1160,
+   "page": "https://milkcloudbakery.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/0309D81A-DB64-4C49-87DF-BB739C8EAD6B%202.JPG/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1160,h:1160",
+   "alt": "//img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/0309D81A-DB64-4C49-87DF-BB739C8EAD6B%202.JPG/:/rs=w:1300,h:800",
+   "near": "Kaya Swirl Shokupan\nwith Homemade Kaya Jam",
+   "w": 1160,
+   "h": 1160,
+   "page": "https://milkcloudbakery.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/LL_06166.JPG/:/cr=t:26.02%25,l:15.74%25,w:56.18%25,h:56.18%25/rs=w:1160",
+   "alt": "//img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/LL_06166.JPG/:/rs=w:1300,h:800",
+   "near": "Kaya Swirl Shokupan\nwith Homemade Kaya Jam",
+   "w": 958,
+   "h": 1438,
+   "page": "https://milkcloudbakery.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/LL_06844.JPG/:/cr=t:37.27%25,l:5.12%25,w:80.65%25,h:40.43%25/rs=w:1160,h:872",
+   "alt": "//img1.wsimg.com/isteam/ip/e5f5ad79-df25-445d-9cb1-0eb66da20e32/LL_06844.JPG/:/rs=w:1300,h:800",
+   "near": "Kaya Swirl Shokupan\nwith Homemade Kaya Jam",
+   "w": 1159,
+   "h": 872,
+   "page": "https://milkcloudbakery.com/"
+  }
+ ]
+}

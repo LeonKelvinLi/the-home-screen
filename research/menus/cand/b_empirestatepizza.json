@@ -1,0 +1,389 @@
+{
+ "id": "b_empirestatepizza",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.empirestatepizzas.com/"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Hot Wings",
+   "desc": "",
+   "cents": 1295,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607093_7cd469c29b?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE STATE PIZZA"
+  },
+  {
+   "name": "BBQ Wings",
+   "desc": "",
+   "cents": 1295,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607075_2347b587c2?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE STATE PIZZA"
+  },
+  {
+   "name": "Garlic Twists",
+   "desc": "",
+   "cents": 1195,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756608048_3e187805ec?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE STATE PIZZA"
+  },
+  {
+   "name": "Garlic Bread With Cheese",
+   "desc": "",
+   "cents": 895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607043_da15da4470?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE STATE PIZZA"
+  },
+  {
+   "name": "Mozzarella Sticks",
+   "desc": "",
+   "cents": 895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756606919_5d2f7a456f?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE STATE PIZZA"
+  },
+  {
+   "name": "Garlic Sticks 10\"",
+   "desc": "Fluffy Garlic Sticks with White Creamy Garlic Sauce and Pesto Sauce topped with Cheese",
+   "cents": 1495,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756606853_c4f6b198be?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE STATE PIZZA"
+  },
+  {
+   "name": "Create Your Own Pizza",
+   "desc": "",
+   "cents": 1795,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1757200626_32f64a5cdc?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "CREATE YOUR OWN PIZZA"
+  },
+  {
+   "name": "NY Truffle Pizza",
+   "desc": "Sliced portobello mushrooms, fresh mozzarella, pecorino romano cheese, fresh garlic, drizzled with black & white truffle oil, sprinkled with black pepper.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607436_05b2e1750e?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Empire Of Meats Pizza",
+   "desc": "Red sauce, italian sausage, ground beef, salami, pepperoni, ham and linguica.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607411_97a010bf3c?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Mediterranean Mile Pizza",
+   "desc": "Pesto sauce, pepperoncini, spinach, green olives, red onions, sun-dried tomato, feta cheese.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607383_c4b73b9029?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Garlic Chicken Pizza",
+   "desc": "Creamy white garlic sauce, chicken, mushrooms, green, onions, tomato and chopped garlic.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607357_9a11724c1e?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Empire Margherita Pizza",
+   "desc": "Red sauce, fresh mozzarella, sliced tomato and fresh basil.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607334_16c3113f82?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Combination Pizza",
+   "desc": "House mix read sauce, pepperoni, salami, ham, sausage, mushroom, olive, bell pepper.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607297_995022714b?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "NY White Pizza",
+   "desc": "Olive oil drizzle, ricotta cheese, mozzarella cheese, fresh garlic and fresh basil.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607273_0e740bee01?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Hot Honey Ricotta Pepperoni",
+   "desc": "Classic red sauce, cheese, pepperoni, ricotta cheese, fresh basil, hot honey sauce. Freshly grated grana padano cheese.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1767927831_ba3c652b68?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "BBQ Chicken Pizza",
+   "desc": "Smoked BBQ sauce, chicken, mushrooms, red onions, garlic and tomato.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607243_0bedee0ea4?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Uptown Pesto Pizza",
+   "desc": "Pesto sauce, chicken, sun-dried tomato, black olive, mushrooms, artichoke, feta cheese and red onion.",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607218_20fda701c5?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Ray's Special Pizza",
+   "desc": "Chicken, mushroom, artichoke, roasted garlic, fresh basil, romano cheese, white garlic sauce.",
+   "cents": 2895,
+   "alcohol": false,
+   "src": "text",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Vegetarian Pizza",
+   "desc": "House Mix Red Sauce, Mushroom, Olive, Tomatoes, Bell Pepper, Red Onion, Garlic",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607195_b08a8b6330?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "The Empire Tikka",
+   "desc": "Butter chicken Sauce, Mozzarella Cheese, Butter Chicken, Bell Pepper, Red Onion, Mushroom, Green Onion, Cilantro",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756780960_979bf01062?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Paneer Tikka Pizza",
+   "desc": "Creamy Butter Sauce, Mozzarella Cheese, Marinated Paneer, Bell Pepper, Olive, Onion, Cilantro",
+   "cents": 2895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756781168_3bd207253b?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE SPECIALTIES"
+  },
+  {
+   "name": "Pizza by the Slice",
+   "desc": "",
+   "cents": 600,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756755432_c24f1af061?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "PIZZA BY THE SLICE"
+  },
+  {
+   "name": "Specialty Pizza Slice",
+   "desc": "",
+   "cents": 875,
+   "alcohol": false,
+   "src": "text",
+   "section": "PIZZA BY THE SLICE"
+  },
+  {
+   "name": "Beef & Lamb Gyro",
+   "desc": "Beef & Lamb Gyro with bag of chips Halal",
+   "cents": 1395,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607111_1edf061296?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "EMPIRE BITES"
+  },
+  {
+   "name": "9\" Meatball Sub",
+   "desc": "9 inch Meatball sub with chips Halal",
+   "cents": 1395,
+   "alcohol": false,
+   "src": "text",
+   "section": "EMPIRE BITES"
+  },
+  {
+   "name": "Green Salad",
+   "desc": "",
+   "cents": 995,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607558_d371717b5f?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "SALADS"
+  },
+  {
+   "name": "Caesar Salad",
+   "desc": "",
+   "cents": 995,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607023_306f1c8c38?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "SALADS"
+  },
+  {
+   "name": "Greek Salad",
+   "desc": "",
+   "cents": 1095,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607005_d6a6c9b824?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "SALADS"
+  },
+  {
+   "name": "Calzone",
+   "desc": "",
+   "cents": 1695,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756607127_1a22dc7047?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "CALZONES"
+  },
+  {
+   "name": "Brownie Cookie Pizza",
+   "desc": "",
+   "cents": 895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756781065_d180f13a6d?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Chocolate Chip Cookie Pizza",
+   "desc": "",
+   "cents": 895,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756781089_9b9ce64724?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Cannoli",
+   "desc": "Fresh Cannoli",
+   "cents": 1095,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1756780935_ec21fe3955?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Cannoli"
+  },
+  {
+   "name": "New York Cheesecake",
+   "desc": "New York Cheesecake",
+   "cents": 595,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1757201164_efa82bd7cb?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "New York Cheesecake"
+  },
+  {
+   "name": "Lava Cake",
+   "desc": "Lava Cake",
+   "cents": 695,
+   "image": "https://slice-menu-assets-prod.imgix.net/112745/1757202165_990f535023?fit=crop&w=160&h=160",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Lava Cake"
+  },
+  {
+   "name": "Can Soda",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Mexican Coke",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Jaritto Bottle",
+   "desc": "",
+   "cents": 275,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "2 Liter Soda",
+   "desc": "",
+   "cents": 475,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Ranch Dressing",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "DIPS AND SAUCES"
+  },
+  {
+   "name": "Blue Cheese Dressing",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "DIPS AND SAUCES"
+  },
+  {
+   "name": "Marinara Sauce",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "DIPS AND SAUCES"
+  },
+  {
+   "name": "Pizza Sauce",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "DIPS AND SAUCES"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://slicelife.imgix.net/112745/photos/original/Hero1_Large.jpeg?crop=focalpoint&fp-x=0.75&fp-y=0.5&auto=compress%2Cformat&fit=crop&w=1500&h=700",
+   "alt": "",
+   "near": "EMPIRE STATE PIZZA\nVIEW MENU\nSTART ORDER",
+   "w": 1280,
+   "h": 597,
+   "page": "https://www.empirestatepizzas.com/"
+  }
+ ]
+}

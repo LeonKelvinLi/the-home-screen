@@ -1,0 +1,256 @@
+{
+ "id": "b_bobertea",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://www.boberteaus.com/",
+  "https://www.boberteaus.com/Menu",
+  "https://www.boberteaus.com/catering",
+  "https://www.boberteaus.com/update"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://framerusercontent.com/images/LxFPZcAiiPzFDnT230RlRP5dmnI.jpg?scale-down-to=512&width=750&height=750",
+   "alt": "",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.boberteaus.com/"
+  },
+  {
+   "src": "https://framerusercontent.com/images/vPsEfUgJYkUlEotKCjpXolJkPWk.png?scale-down-to=512&width=1500&height=1500",
+   "alt": "",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.boberteaus.com/"
+  },
+  {
+   "src": "https://framerusercontent.com/images/pJmrUT4CVViZ2yudrRN3rBKPsY0.jpg?scale-down-to=1024&width=1360&height=1020",
+   "alt": "",
+   "near": "ABOUT US\nAt Bober Tea, we’re not just making drinks, we’re making moments. What started in Singapore",
+   "w": 678,
+   "h": 508,
+   "page": "https://www.boberteaus.com/"
+  },
+  {
+   "src": "https://framerusercontent.com/images/BxkROaAtx03y4rcLP8sTdL5lyM4.png",
+   "alt": "",
+   "near": "info@boberteaus.com\n\n21001 San ramon valley \n\nBlvd E4 San ramon CA 94583\n\nMenu\n\nHome\n\nOur Story\n\nMen",
+   "w": 512,
+   "h": 288,
+   "page": "https://www.boberteaus.com/"
+  },
+  {
+   "src": "https://framerusercontent.com/images/OKNIb08L1nZ1mG7z1P2tysRbKIg.png?width=1120&height=4096",
+   "alt": "",
+   "near": "Flavorful                    SERIES \n\nSavor the moment, taste the magic!\n\nVIEW FULL MENU\nWE DO HOME ",
+   "w": 1280,
+   "h": 4681,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/tHa6gGDH8VN72Ehl8Gpco43ptY0.jpg",
+   "alt": "",
+   "near": "BROWN SUGAR MILK TEA",
+   "w": 750,
+   "h": 750,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/LxFPZcAiiPzFDnT230RlRP5dmnI.jpg",
+   "alt": "",
+   "near": "Brown Sugar Creme Brûlée",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/1zhGWgfbToBU15YvmKKfnC05oWI.jpg",
+   "alt": "",
+   "near": "Brown Sugar Cookies",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/1NUHETl0bmZWgWwUgpLtroUtTfQ.jpg",
+   "alt": "",
+   "near": "Brown Sugar Matcha Latte",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/VPg9xCKDOyspb91MaKgEWFPg9U.png?scale-down-to=1024&width=1920&height=1920",
+   "alt": "",
+   "near": "Classic Milk Tea",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/DHw76sPrrd1bLXjE1SbXkRL8.jpg?width=750&height=750",
+   "alt": "",
+   "near": "Hazelnut Milk Tea",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/DXzoJB8VcF7f7gZpxrJizF1T5E.png?scale-down-to=1024&width=1920&height=1920",
+   "alt": "",
+   "near": "Jasmine Milk Tea",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/RBdZKZUzrGaFzH8G3Wbny3sSvA.png?scale-down-to=1024&width=1920&height=1920",
+   "alt": "",
+   "near": "Roasted Oolong Milk Tea",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/Z8RKv2TYEX0pcIGb6QEQ1VxstDA.jpg?width=750&height=750",
+   "alt": "",
+   "near": "Signature Milk TEA",
+   "w": 725,
+   "h": 725,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/4AFSlX7dB56rNpwd5d13ixvU42c.jpg",
+   "alt": "",
+   "near": "Chizu Green Tea",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/PKHuN29vEckNM648mhvDYTdLf90.jpg",
+   "alt": "",
+   "near": "Chizu Mango Green Tea",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/okB26eY5UIgJk9PrQMojWocvqFM.jpg",
+   "alt": "",
+   "near": "Chizu Matcha Latte",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/j8H1gikrhd2BoNrblOw5zXMzAPQ.jpg",
+   "alt": "",
+   "near": "Chizu Milk Tea",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/ThTFu3DxL192i8IZTv7xtA4b8k0.png",
+   "alt": "",
+   "near": "Chizu Strawberry Green Tea",
+   "w": 500,
+   "h": 500,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/lrcxzMY6aMJfvUxo2JhZ9LVlzvE.png?scale-down-to=512",
+   "alt": "",
+   "near": "COCONUT COCO CLOUD",
+   "w": 499,
+   "h": 499,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/ALxTKhf0A7gezeGacIg3FjjM5HI.png?scale-down-to=512",
+   "alt": "",
+   "near": "CUSTARD COCO CLOUD",
+   "w": 499,
+   "h": 499,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/Vuj92gPGLGcfgXmcSvJ6v4Kyps.png?scale-down-to=512",
+   "alt": "",
+   "near": "MATCHA COCO CLOUD",
+   "w": 499,
+   "h": 499,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/I7adY7UIVbKDjZkkOsxKL1Zrdhw.png?scale-down-to=512",
+   "alt": "",
+   "near": "THE O.G.",
+   "w": 499,
+   "h": 499,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/PljzEM46ogOtOV5m35cW8YsfQw.jpeg?scale-down-to=512",
+   "alt": "",
+   "near": "CLASSIC MOCHI DONUTS",
+   "w": 499,
+   "h": 400,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/QY2axNJBSL76JdnCw1bd7DzgHc.png?scale-down-to=512&width=780&height=438",
+   "alt": "",
+   "near": "Injeolmi MOCHI DONUTS",
+   "w": 499,
+   "h": 281,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/GF0eICrb5LbX9IYKFD0GAhEHgx0.png?scale-down-to=512&width=780&height=438",
+   "alt": "",
+   "near": "Churros MOCHI DONUTS",
+   "w": 499,
+   "h": 281,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/BxkROaAtx03y4rcLP8sTdL5lyM4.png",
+   "alt": "",
+   "near": "info@boberteaus.com\n\n21001 San ramon valley \n\nBlvd E4 San ramon CA 94583\n\nMenu\n\nHome\n\nOur Story\n\nMen",
+   "w": 512,
+   "h": 288,
+   "page": "https://www.boberteaus.com/Menu"
+  },
+  {
+   "src": "https://framerusercontent.com/images/OKNIb08L1nZ1mG7z1P2tysRbKIg.png",
+   "alt": "",
+   "near": "host your events with\n\nMake your event pop with boba on the menu.\n\nGET STARTED\n         Have an even",
+   "w": 1280,
+   "h": 4681,
+   "page": "https://www.boberteaus.com/catering"
+  },
+  {
+   "src": "https://framerusercontent.com/images/BxkROaAtx03y4rcLP8sTdL5lyM4.png",
+   "alt": "",
+   "near": "info@boberteaus.com\n\n21001 San ramon valley \n\nBlvd E4 San ramon CA 94583\n\nMenu\n\nHome\n\nOur Story\n\nMen",
+   "w": 512,
+   "h": 288,
+   "page": "https://www.boberteaus.com/catering"
+  },
+  {
+   "src": "https://framerusercontent.com/images/BxkROaAtx03y4rcLP8sTdL5lyM4.png",
+   "alt": "",
+   "near": "info@boberteaus.com\n\n21001 San ramon valley \n\nBlvd E4 San ramon CA 94583\n\nMenu\n\nHome\n\nOur Story\n\nMen",
+   "w": 512,
+   "h": 288,
+   "page": "https://www.boberteaus.com/update"
+  }
+ ]
+}

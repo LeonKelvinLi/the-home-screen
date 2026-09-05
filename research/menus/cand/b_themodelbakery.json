@@ -1,0 +1,800 @@
+{
+ "id": "b_themodelbakery",
+ "source": "pdf",
+ "alt": {},
+ "pages": [
+  "https://www.themodelbakery.com/",
+  "https://www.themodelbakery.com/products/cookies-desserts/",
+  "https://www.themodelbakery.com/products/breakfast-lunch/",
+  "https://www.themodelbakery.com/order-for-pickup/",
+  "https://order.online/business/the-model-bakery-11514291",
+  "https://www.themodelbakery.com/catering-menus/",
+  "https://www.themodelbakery.com/model-bakery-at-wholefoods/"
+ ],
+ "pdfs": [
+  "https://www.themodelbakery.com/wp-content/uploads/2026/07/Oxbow-Catering-Menu-11.pdf",
+  "https://www.themodelbakery.com/wp-content/uploads/2026/07/St.-Helena-Catering-Menu-07.19.26.pdf"
+ ],
+ "items": [
+  {
+   "name": "FRESH SQUEEZED ORANGE JUICE",
+   "desc": "Apricot Pecan*, Blueberry, Oatmeal",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BEVERAGES SCONES"
+  },
+  {
+   "name": "12  Raisin, Cranberry Buttermilk",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST FRESH PRESSED JUICES"
+  },
+  {
+   "name": "OXBOW  Vampire Juice (Beet, Orange, Celery & Carrot)  Sour Cream Cinnamon,",
+   "desc": "AVAILABLE DAILY FROM 6:30 A.M. - 4:00 P.M.  BLACK TEA  35  Banana Walnut*, Blueberry, Apricot (GF),  4.25",
+   "cents": 400,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "ICED SPORTea®",
+   "desc": "BREAKFAST SANDWICH PLATTER  (serves 12- 8oz cups)",
+   "cents": 4000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "YOUR CHOICE OF 12 SANDWICHES,  Cinnamon Walnut Raisin*",
+   "desc": "CUT IN HALF FOR EASY SERVING  SIDES  Honey Bun",
+   "cents": 525,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "275.00  KETTLE CHIPS",
+   "desc": "(Sea Salt & Vinegar, Jalapeño, Sea Salt, Honey Dijon, BBQ)  COOKIES",
+   "cents": 225,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "HASHBROWN  3  Snickerdoodle",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "FRUIT CUP  8  Chocolate Chip",
+   "desc": "Choose any 12 sandwiches for your platter.",
+   "cents": 225,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "THE ORIGINAL**  Chocolate Chip Walnut*, Oatmeal",
+   "desc": "",
+   "cents": 275,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cucumber, Ginger)"
+  },
+  {
+   "name": "CROISSANTS  White Chocolate Hazelnut*",
+   "desc": "",
+   "cents": 325,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Pepper Jack, Chipotle Pesto Aioli"
+  },
+  {
+   "name": "CHIPOTLE SOURDOUGH**  Plain  4.25  Custard Danish",
+   "desc": "Model Bakery Hand- Griddled Croissant, Scrambled Eggs, Applewood Smoked",
+   "cents": 500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CROISSANTWICH**"
+  },
+  {
+   "name": "Bacon, Mild Cheddar Cheese  Almond Croissant* 4.75  Raspberry Danish",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CROISSANTWICH**"
+  },
+  {
+   "name": "SPICY CHORIZO TORTA**  Apple Butterhorn  5  Spinach & Feta",
+   "desc": "Model Bakery Hand- Griddled Torpedo Roll, Scrambled Eggs, Chorizo, Onion",
+   "cents": 575,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CROISSANTWICH**"
+  },
+  {
+   "name": "Hashbrown  Morning Bun  4.25  Pain Au Chocolat",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "MEDITERRANEAN +3 CROISSANTS"
+  },
+  {
+   "name": "Plain",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST CHORIZO WRAP +3"
+  },
+  {
+   "name": "Almond Croissant*",
+   "desc": "",
+   "cents": 475,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST CHORIZO WRAP +3"
+  },
+  {
+   "name": "Cheese, Chipotle Pesto Aioli, Hashbrown  Apple Butterhorn  5  Spinach & Feta",
+   "desc": "",
+   "cents": 575,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST CHORIZO WRAP +3"
+  },
+  {
+   "name": "MODEL WRAP +3  Bearclaw*  5  Ham & Swiss",
+   "desc": "ST. HELENA  On a Spinach Tortilla, Scrambled Egg, Applewood",
+   "cents": 600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST CHORIZO WRAP +3"
+  },
+  {
+   "name": "GF Wraps can be substituted for an additional",
+   "desc": "BREAKFAST SANDWICH PLATTER  Apricot Pecan*, Blueberry, Oatmeal",
+   "cents": 200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST CHORIZO WRAP +3"
+  },
+  {
+   "name": "(SERVES 12)  BEVERAGES",
+   "desc": "Raisin, Cranberry Buttermilk",
+   "cents": 425,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST CHORIZO WRAP +3"
+  },
+  {
+   "name": "FRESH PRESSED JUICES",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CUT IN HALF FOR EASY SERVING"
+  },
+  {
+   "name": "Banana Walnut*, Blueberry, Apricot (GF),",
+   "desc": "Garden Goddess (Kale, Romaine, Apple, Celery,",
+   "cents": 425,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CUT IN HALF FOR EASY SERVING"
+  },
+  {
+   "name": "THE ORIGINAL  ICED SPORTea®  Cinnamon Walnut Raisin*",
+   "desc": "Model Bakery Hand-Griddled English Muffin, Scrambled Egg, Canadian Bacon,",
+   "cents": 525,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CUT IN HALF FOR EASY SERVING"
+  },
+  {
+   "name": "BREAKFAST SAUSAGE  JOE TO GO",
+   "desc": "Model Bakery Hand-Griddled English Muffin, Scrambled Egg, Pork Sausage Patty,",
+   "cents": 4500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cheddar Cheese"
+  },
+  {
+   "name": "CROISSANTWICH  Snickerdoodle",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Pepper Jack Cheese, Chipotle Pesto Aioli"
+  },
+  {
+   "name": "KETTLE CHIPS",
+   "desc": "Model Bakery Hand-Griddled Croissant, Scrambled Egg, Applewood Smoked  (Sea Salt & Vinegar, Jalapeño, Sea Salt, BBQ)  Chocolate Chip  2.25",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Pepper Jack Cheese, Chipotle Pesto Aioli"
+  },
+  {
+   "name": "HASHBROWN  2  Mexican Walnut Wedding*",
+   "desc": "",
+   "cents": 250,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Bacon, Cheddar Cheese"
+  },
+  {
+   "name": "GRANOLA PARFAIT*  8.50  Peanut Butter*, Chocolate Chip Walnut*",
+   "desc": "",
+   "cents": 275,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CHIPOTLE SOURDOUGH"
+  },
+  {
+   "name": "CHORIZO TORTA**  Chocolate Chip (GF)",
+   "desc": "Model Bakery Hand-Griddled Torpedo Roll, Scrambled Egg, Pork Chorizo, Pepper",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CHIPOTLE SOURDOUGH"
+  },
+  {
+   "name": "MODEL BISCUIT BREAKFAST  White Chocolate Hazelnut*",
+   "desc": "Model Bakery Hand-Griddled Buttermilk Biscuit, Scrambled Egg, Cheddar Cheese,  Banana Pecan*, Seasonal Options  5.50",
+   "cents": 325,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CHIPOTLE SOURDOUGH"
+  },
+  {
+   "name": "Almond Macaroon*",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CHIPOTLE SOURDOUGH"
+  },
+  {
+   "name": "VEGGIE BREAKFAST**  Espresso Walnut Chocolate Rad*",
+   "desc": "Model Bakery Hand-Griddled English Muffin, Fried Egg, Hashbrown, Avocado,  Vegan Double Chocolate Chip  5",
+   "cents": 475,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Applewood Smoked Bacon"
+  },
+  {
+   "name": "Vegan Pistachio *",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Tomato, Ketchup, Mayonnaise"
+  },
+  {
+   "name": "$250",
+   "desc": "",
+   "cents": 32500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "CHOCOLATE CHIP])"
+  },
+  {
+   "name": "SPICY BURGER  TURKEY & BRIE  TOMATO BISQUE",
+   "desc": "",
+   "cents": 800,
+   "label": "from $8",
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mayonnaise"
+  },
+  {
+   "name": "COCA COLA, DIET COCA COLA  12 oz",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "HARISSA GRILLED CHICKEN +3"
+  },
+  {
+   "name": "MARTINELLI’S APPLE JUICE",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "SOUTHERN GRILLED CHICKEN +3"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/Model-Bakery-Digital-Gift-Certificate.webp",
+   "alt": "",
+   "near": "Get Your Gift Certificate Today",
+   "w": 1050,
+   "h": 675,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2023/04/famous-english-muffins-12pc.jpg",
+   "alt": "",
+   "near": "Famous English Muffins – 12 pack\nBUY NOW!\nNationwide Shipping!",
+   "w": 510,
+   "h": 510,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2023/04/bakery-sampler-for-6.jpg",
+   "alt": "",
+   "near": "Bakery Sampler for 6\nBUY NOW!\nNationwide Shipping!",
+   "w": 510,
+   "h": 510,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2023/04/bakery-best-sellers-4-6.jpg",
+   "alt": "",
+   "near": "Bakery Best Sellers 4-6\nBUY NOW!\nNationwide Shipping!",
+   "w": 510,
+   "h": 510,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/11/Oprahs-favorite-things-2025.jpg",
+   "alt": "",
+   "near": "Oprah’s favorite thing!\n2016, 2017, 2021 & 2025\n\n“I dare you to find a better English muffin than th",
+   "w": 595,
+   "h": 337,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/Oprah-Cover-2016-1376x2048.webp",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 1905,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/Oprah-Covers-2017-1376x2048.webp",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 1905,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/Oprah-Cover-20th-1376x2048.webp",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 1905,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/Oprah-Cover-Gratitude-1376x2048.webp",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 1905,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/11/Oprah-Cover-2025.webp",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 1725,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-pastries.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-breads.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-cookies.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-dessert.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-coffee-tea.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-breakfast-1.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-lunch-1.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-wholesale-2.webp",
+   "alt": "",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/LG_English_Muffin.jpeg",
+   "alt": "",
+   "near": "Sign up for updates! \n\nGet news from The Model Bakery. Insert Email here:\n\n  Sign Up!\n\nFamous Englis",
+   "w": 1280,
+   "h": 853,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/09/footer-wrap-bg.jpg",
+   "alt": "",
+   "near": "Back To Top\nTHE MODEL BAKERY\nRecent News\nModel Bakery opens new restaurant featuring sought-after En",
+   "w": 1280,
+   "h": 535,
+   "page": "https://www.themodelbakery.com/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-chocolate-tart.webp",
+   "alt": "product-chocolate-tart",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_choc_rads1.jpeg",
+   "alt": "photos_cookies_choc_rads1",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cakes_fruit_tart.jpeg",
+   "alt": "photos_cakes_fruit_tart",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_lemon.jpeg",
+   "alt": "photos_cookies_lemon",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cakes_peach_pie.jpeg",
+   "alt": "photos_cakes_peach_pie",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_peanutbutter.jpeg",
+   "alt": "photos_cookies_peanutbutter",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_brownies.jpeg",
+   "alt": "photos_cookies_brownies",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_dough.jpeg",
+   "alt": "photos_cookies_dough",
+   "near": "",
+   "w": 300,
+   "h": 374,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_eiffel_tower.jpeg",
+   "alt": "photos_cookies_eiffel_tower",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-banana-bread.webp",
+   "alt": "product-banana-bread",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cakes_pumpkin.jpeg",
+   "alt": "photos_cakes_pumpkin",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_gingerbread.jpeg",
+   "alt": "photos_cookies_gingerbread",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_cookies_n_latte.jpeg",
+   "alt": "photos_cookies_cookies_n_latte",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/product-red-velvet-cupcakes.webp",
+   "alt": "Red velvet cupcakes",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cakes_bundt.jpeg",
+   "alt": "photos_cakes_bundt",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cakes_apple_pie.jpeg",
+   "alt": "photos_cakes_apple_pie",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cookies_lindzer.jpeg",
+   "alt": "photos_cookies_lindzer",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_cakes_choc_carmel_tart.jpeg",
+   "alt": "photos_cakes_choc_carmel_tart",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/header-Cookies-Desserts.webp",
+   "alt": "",
+   "near": "Cookies & Desserts",
+   "w": 1280,
+   "h": 388,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/09/footer-wrap-bg.jpg",
+   "alt": "",
+   "near": "Back To Top\nTHE MODEL BAKERY\nRecent News\nModel Bakery opens new restaurant featuring sought-after En",
+   "w": 1280,
+   "h": 535,
+   "page": "https://www.themodelbakery.com/products/cookies-desserts/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_lunch_parfait.jpeg",
+   "alt": "photos_lunch_parfait",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/breakfast-sandwich-bun.jpg",
+   "alt": "breakfast-sandwich-bun",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/breakfast-sandwich-crescent.jpg",
+   "alt": "breakfast-sandwich-crescent",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/breakfast-sandwich-oj.jpg",
+   "alt": "breakfast-sandwich-oj",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/breakfast-sandwich-spinach.jpg",
+   "alt": "breakfast-sandwich-spinach",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_lunch_fig_sand.jpeg",
+   "alt": "photos_lunch_fig_sand",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_lunch_lox.jpeg",
+   "alt": "photos_lunch_lox",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/burger-beer.jpg",
+   "alt": "burger-beer",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_lunch_salami_sand.jpeg",
+   "alt": "photos_lunch_salami_sand",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/07/photos_lunch_hoagie.jpeg",
+   "alt": "photos_lunch_hoagie",
+   "near": "",
+   "w": 385,
+   "h": 480,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/chef-salad.jpg",
+   "alt": "chef-salad",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/eggs-on-toast.jpg",
+   "alt": "eggs-on-toast",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/ham-sandwich.jpg",
+   "alt": "ham-sandwich",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/sandwich.jpg",
+   "alt": "sandwich",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/tomatoes-on-toast.jpg",
+   "alt": "tomatoes-on-toast",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/salad-w-cranberries.jpg",
+   "alt": "salad-w-cranberries",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/squash-soup.jpg",
+   "alt": "squash-soup",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/tomato-soup.jpg",
+   "alt": "tomato-soup",
+   "near": "",
+   "w": 815,
+   "h": 1016,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2025/06/header-Breakfast-Lunch.webp",
+   "alt": "",
+   "near": "Breakfast & Lunch",
+   "w": 1280,
+   "h": 388,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  },
+  {
+   "src": "https://www.themodelbakery.com/wp-content/uploads/2021/09/footer-wrap-bg.jpg",
+   "alt": "",
+   "near": "Back To Top\nTHE MODEL BAKERY\nRecent News\nModel Bakery opens new restaurant featuring sought-after En",
+   "w": 1280,
+   "h": 535,
+   "page": "https://www.themodelbakery.com/products/breakfast-lunch/"
+  }
+ ]
+}

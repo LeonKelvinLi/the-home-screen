@@ -1,0 +1,428 @@
+{
+ "id": "b_houseofthai",
+ "source": "text",
+ "pages": [
+  "https://www.houseofthaisf.com/",
+  "https://www.houseofthaisf.com/menu-larkin",
+  "https://www.houseofthaisf.com/menu-catering",
+  "https://www.houseofthaisf.com/online-order-larkin",
+  "https://www.facebook.com/flx/warn/?u=https%3A%2F%2Fwww.ubereats.com%2Fstore%2Fhouse-of-thai-901-larkin-st%2FXrSuBIjSR6qk7HXp31jWAg%3FdiningMode%3DDELIVERY%26pl%3DJTdCJTIyYWRkcmVzcyUyMiUzQSUyMjgwMSUyMExhcmtpbiUyMFN0JTIyJTJDJTIycmVmZXJlbmNlJTIyJTNBJTIyNmZiYjA3NGItNDI2YS00OGJhLTBlNzItNzgzOWQ5ZDAyMjM0JTIyJTJDJTIycmVmZXJlbmNlVHlwZSUyMiUzQSUyMnViZXJfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EzNy43ODU0MjkyODk4NTI2MyUyQyUyMmxvbmdpdHVkZSUyMiUzQS0xMjIuNDE3OTc5Mjc5NDQ1MjglN0Q%253D%26fbclid%3DIwAR1mDxE0ERCFjKCGa0bSgYiQ3kbaW90uzguaS_6BmB7ZHZjRUFVUErp8z2o&h=AUDmhjQnfOHpTbK8_E8UWRdQAiBV4CAUwRJHKATbUAUbdIPQfIXizM4XWishm6ESs8v_SIQpaH2Q6-OE9_5_G3v4FGh4GNUQBMJt-oE2Ty1rhXLJ2fKK7EbtbMw6kW-_q-8HnkUg",
+  "https://order.online/store/house-of-thai-san-francisco-4666/?hideModal=true&pickup=true&redirected=true",
+  "https://www.grubhub.com/restaurant/house-of-thai-on-larkin-901-larkin-st-san-francisco/195279"
+ ],
+ "items": [
+  {
+   "name": "Fresh Rolls",
+   "desc": "Thin rice noodles, spring mix, mint, carrot, bean sprout; choice of shrimp OR marinated tofu. Served with tamarind sauce.",
+   "cents": 1300,
+   "section": "Appetizers",
+   "photo": "house-of-thai-fresh-rolls"
+  },
+  {
+   "name": "Tod Mun Pla (Fish Cake)",
+   "desc": "Deep fried white fish with green beans, kaffir lime leaf, and curry paste; served with cucumber salad and ground peanut.",
+   "cents": 1500,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Por-Pier Pak (Vegetarian rolls)",
+   "desc": "Deep fried egg rolls stuffed with silver noodles, black fungus, carrot, and cabbage; served with sweet & sour sauce.",
+   "cents": 1300,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Kor Moo Yang",
+   "desc": "Grilled marinated pork neck meat; served with spicy tamarind sauce.",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Nuer Kem",
+   "desc": "House specialty beef jerky; served with spicy tamarind sauce.",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Pla Mauk Tod",
+   "desc": "Golden fried calamari; served with sweet & sour sauce.",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Peak Gai Tod",
+   "desc": "Garlic marinated deep fried chicken wings; served with sweet & sour sauce.",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "See Krong Moo Todd",
+   "desc": "Deep fried marinated baby pork spare rib; served with sriracha spicy sauce.",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Samosa (Taro)",
+   "desc": "Served with cucumber salad and peanut sauce.",
+   "cents": 1500,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Chicken Skewer",
+   "desc": "Served with cucumber salad and peanut sauce.",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Thai Style with dried shrimp and peanut.",
+   "desc": "",
+   "cents": 1600,
+   "section": "Appetizers"
+  },
+  {
+   "name": "PU with salted crab.",
+   "desc": "",
+   "cents": 1700,
+   "section": "Appetizers"
+  },
+  {
+   "name": "KOONG SOD with shrimps and peanut.",
+   "desc": "",
+   "cents": 1800,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Naked Ladies",
+   "desc": "Raw shrimps topped with chef’s secret spicy lime dressing.",
+   "cents": 1800,
+   "section": "Specialties"
+  },
+  {
+   "name": "Minced chicken or minced pork",
+   "desc": "",
+   "cents": 1600,
+   "section": "Specialties"
+  },
+  {
+   "name": "Minced beef",
+   "desc": "",
+   "cents": 1800,
+   "section": "Specialties"
+  },
+  {
+   "name": "Catfish",
+   "desc": "",
+   "cents": 2100,
+   "section": "Specialties"
+  },
+  {
+   "name": "Roasted duck",
+   "desc": "",
+   "cents": 2400,
+   "section": "Specialties"
+  },
+  {
+   "name": "Salad Nuer Sun",
+   "desc": "Marinated flank beef steak sliced over iceberg salad, yellow onion, tomatoes, cucumber, and chef’s crystal glazed dressing.",
+   "cents": 2100,
+   "section": "Specialties"
+  },
+  {
+   "name": "Yum Woon-Sen",
+   "desc": "Silver noodles mixed with minced pork, shrimps, black fungus, red & green onion, cilantro, and spicy lime dressing.",
+   "cents": 2000,
+   "section": "Specialties"
+  },
+  {
+   "name": "Yum Tofu",
+   "desc": "Prepared with fresh chili, red and green onion, and spicy lime dressing.",
+   "cents": 1600,
+   "section": "Specialties"
+  },
+  {
+   "name": "Yum Nuer (Beef)",
+   "desc": "Prepared with cucumber, basil, fresh chili, red & green onion, and spicy lime dressing.",
+   "cents": 1900,
+   "section": "Specialties"
+  },
+  {
+   "name": "Tofu and mixed vegetables",
+   "desc": "",
+   "cents": 1800,
+   "section": "Specialties"
+  },
+  {
+   "name": "Chicken",
+   "desc": "",
+   "cents": 1900,
+   "section": "Specialties",
+   "photo": "house-of-thai-chicken"
+  },
+  {
+   "name": "Shrimps or Calamari",
+   "desc": "",
+   "cents": 2100,
+   "section": "Specialties"
+  },
+  {
+   "name": "Seafood",
+   "desc": "",
+   "cents": 2300,
+   "section": "Specialties",
+   "photo": "house-of-thai-seafood"
+  },
+  {
+   "name": "Fresh Tofu",
+   "desc": "",
+   "cents": 1700,
+   "section": "Specialties"
+  },
+  {
+   "name": "Ground Pork",
+   "desc": "",
+   "cents": 1800,
+   "section": "Specialties"
+  },
+  {
+   "name": "No Meat Substitution",
+   "desc": "",
+   "cents": 2500,
+   "section": "Specialties"
+  },
+  {
+   "name": "Chicken or Tofu or Mixed Vegetables",
+   "desc": "",
+   "cents": 2300,
+   "section": "Specialties"
+  },
+  {
+   "name": "Pork",
+   "desc": "",
+   "cents": 2400,
+   "section": "Specialties"
+  },
+  {
+   "name": "Beef",
+   "desc": "",
+   "cents": 2400,
+   "section": "Specialties",
+   "photo": "house-of-thai-beef"
+  },
+  {
+   "name": "Duck (half duck)",
+   "desc": "",
+   "cents": 3700,
+   "section": "Specialties"
+  },
+  {
+   "name": "Salmon Curry (A La Carte Only)",
+   "desc": "Fried battered salmon, carrot, eggplants, green bean, bell pepper, and basil in choice of favorite Red or / Green Curry.",
+   "cents": 2600,
+   "section": "Specialties"
+  },
+  {
+   "name": "Chan Pad Poo",
+   "desc": "Rice stick noodles with dungeness crab meat, egg, green onion, garlic, and fresh chili. NO MEAT SUBSTITUTION",
+   "cents": 2300,
+   "section": "Specialties"
+  },
+  {
+   "name": "Beef Noodle Soup",
+   "desc": "Sliced beef, beef stew, beef balls, tripe with bean sprouts, and dice Chinese broccoli in beef broth.",
+   "cents": 1900,
+   "section": "Noodle soup"
+  },
+  {
+   "name": "Tom Yum Noodle Soup",
+   "desc": "Minced pork, slice pork, pork balls, fish cakes, bean sprout, and ground peanuts in chili-lime soup.",
+   "cents": 1900,
+   "section": "Noodle soup"
+  },
+  {
+   "name": "Chicken Noodle Soup",
+   "desc": "Tender chicken and bean sprout.",
+   "cents": 1800,
+   "section": "Specialties"
+  },
+  {
+   "name": "Duck Noodle Soup",
+   "desc": "Roast duck and bean sprout.",
+   "cents": 2200,
+   "section": "Specialties"
+  },
+  {
+   "name": "Wonton Soup",
+   "desc": "Stuffed minced pork and shrimp wonton with roast pork and napa cabbage. ($3 extra charge for egg noodles)",
+   "cents": 1800,
+   "section": "Specialties"
+  },
+  {
+   "name": "Pork Leg Stew Noodles Soup",
+   "desc": "Specialty pork leg stew, pickle mustard, bean sprout.",
+   "cents": 1900,
+   "section": "Specialties"
+  },
+  {
+   "name": "Pad Cha Catfish (A La Carte Only)",
+   "desc": "Spicy stir fry dish, using peppercorn, bell pepper, carrot, onion, basil, chili and house chili paste sauce. Prepared with Catfish.",
+   "cents": 3400,
+   "section": "Specialties"
+  },
+  {
+   "name": "Fried Egg",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Sticky rice",
+   "desc": "",
+   "cents": 350,
+   "section": "Sides"
+  },
+  {
+   "name": "Brown rice",
+   "desc": "",
+   "cents": 350,
+   "section": "Sides",
+   "photo": "house-of-thai-brown-rice"
+  },
+  {
+   "name": "Garlic and Ginger rice",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides"
+  },
+  {
+   "name": "Fried rice",
+   "desc": "",
+   "cents": 450,
+   "section": "Sides",
+   "photo": "house-of-thai-fried-rice"
+  },
+  {
+   "name": "Curry Sauce (Red or Green)",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Peanut Sauce",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Cucumber Salad",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides",
+   "photo": "house-of-thai-cucumber-salad"
+  },
+  {
+   "name": "Steamed Assorted Vegetables",
+   "desc": "",
+   "cents": 800,
+   "section": "Sides"
+  },
+  {
+   "name": "Desserts",
+   "desc": "Coconut Sticky Rice with Egg Custard",
+   "cents": 900,
+   "section": "Sides",
+   "photo": "house-of-thai-desserts"
+  },
+  {
+   "name": "(Vanilla, Coconut, Thai Tea, Green Tea)",
+   "desc": "",
+   "cents": 850,
+   "section": "Sides"
+  },
+  {
+   "name": "Mango with Coconut Sticky Rice",
+   "desc": "",
+   "cents": 1200,
+   "section": "Sides"
+  },
+  {
+   "name": "Taro Ball",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Roti (Fry Flatbread)",
+   "desc": "Served with condensed milk and sugar.",
+   "cents": 400,
+   "section": "Sides"
+  },
+  {
+   "name": "Thai Iced Tea/Thai Iced Coffee",
+   "desc": "",
+   "cents": 600,
+   "section": "Beverages"
+  },
+  {
+   "name": "Lychee Iced Tea",
+   "desc": "",
+   "cents": 600,
+   "section": "Beverages"
+  },
+  {
+   "name": "Mint Lemonade (House made)",
+   "desc": "",
+   "cents": 600,
+   "section": "Beverages"
+  },
+  {
+   "name": "Coconut Juice",
+   "desc": "",
+   "cents": 600,
+   "section": "Beverages"
+  },
+  {
+   "name": "Sparking water 532 ml.",
+   "desc": "",
+   "cents": 300,
+   "section": "Beverages"
+  },
+  {
+   "name": "Coke, Diet coke and Sprite (Can)",
+   "desc": "",
+   "cents": 350,
+   "section": "Beverages"
+  },
+  {
+   "name": "Green Tea or Thai Tea",
+   "desc": "",
+   "cents": 250,
+   "section": "Beverages"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "house-of-thai-site-0",
+   "alt": "A vibrant spread of various Asian dishes, including curries, fried rice, seafood, and appetizers, arranged on wooden tab",
+   "credit": "Their own photo, from houseofthaisf.com"
+  },
+  {
+   "photo": "house-of-thai-site-1",
+   "alt": "A wooden bowl filled with green salad, tomatoes, and shredded vegetables, accompanied by a stone pestle.",
+   "credit": "Their own photo, from houseofthaisf.com"
+  },
+  {
+   "photo": "house-of-thai-site-3",
+   "alt": "A plate of pad thai with shrimp, topped with egg and garnished with carrot curls, served alongside bean sprouts and gree",
+   "credit": "Their own photo, from houseofthaisf.com"
+  },
+  {
+   "photo": "house-of-thai-site-4",
+   "alt": "A bowl of spicy noodle soup topped with fresh cilantro, minced meat, and slices of meatballs.",
+   "credit": "Their own photo, from houseofthaisf.com"
+  },
+  {
+   "photo": "house-of-thai-site-9",
+   "alt": "A dish featuring tender beef slices atop steamed broccoli and carrots, garnished with green leaves.",
+   "credit": "Their own photo, from houseofthaisf.com"
+  }
+ ]
+}

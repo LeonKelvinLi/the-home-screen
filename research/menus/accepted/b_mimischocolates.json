@@ -1,0 +1,126 @@
+{
+ "id": "b_mimischocolates",
+ "source": "text",
+ "pages": [
+  "https://mimischocolates.com/",
+  "https://mimischocolates.com/shop/ols/cart",
+  "https://mimischocolates.com/menu",
+  "https://mimischocolates.com/shop/ols/products/almond-apple",
+  "https://mimischocolates.com/shop/ols/products/chocolate-covered-strawberries",
+  "https://mimischocolates.com/shop/ols/products/caramel-apples",
+  "https://mimischocolates.com/shop/ols/products/chocolate-caramel-apple"
+ ],
+ "items": [
+  {
+   "name": "Almond Caramel Apple",
+   "desc": "From",
+   "cents": 1150,
+   "photo": "mimis-chocolates-almond-caramel-apple"
+  },
+  {
+   "name": "Chocolate Covered Strawberries",
+   "desc": "",
+   "cents": 285,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-chocolate-covered-strawberries"
+  },
+  {
+   "name": "Caramel Apples",
+   "desc": "",
+   "cents": 980,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-caramel-apples"
+  },
+  {
+   "name": "Chocolate Caramel Apple",
+   "desc": "",
+   "cents": 1075,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-chocolate-caramel-apple"
+  },
+  {
+   "name": "Strawberry Shortcake Apple",
+   "desc": "",
+   "cents": 1275,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-strawberry-shortcake-apple"
+  },
+  {
+   "name": "Apple Pie Apple",
+   "desc": "",
+   "cents": 1275,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-apple-pie-apple"
+  },
+  {
+   "name": "S'more Caramel Apple",
+   "desc": "",
+   "cents": 1425,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-s-more-caramel-apple"
+  },
+  {
+   "name": "Oreo Caramel Apple",
+   "desc": "",
+   "cents": 1275,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-oreo-caramel-apple"
+  },
+  {
+   "name": "Heath Caramel Apple",
+   "desc": "",
+   "cents": 1275,
+   "section": "Almond Caramel Apple",
+   "photo": "mimis-chocolates-heath-caramel-apple"
+  },
+  {
+   "name": "S'more",
+   "desc": "",
+   "cents": 565,
+   "section": "(Milk, Dark, or White Chocolate)",
+   "photo": "mimis-chocolates-s-more"
+  },
+  {
+   "name": "Caramel Apple",
+   "desc": "",
+   "cents": 925,
+   "section": "Caramel",
+   "photo": "mimis-chocolates-caramel-apple"
+  },
+  {
+   "name": "Oreo",
+   "desc": "",
+   "cents": 1175,
+   "section": "Caramel",
+   "photo": "mimis-chocolates-oreo"
+  },
+  {
+   "name": "Strawberry Shortcake",
+   "desc": "",
+   "cents": 1175,
+   "section": "Caramel",
+   "photo": "mimis-chocolates-strawberry-shortcake"
+  },
+  {
+   "name": "Candy Bar Covered Caramel Apple",
+   "desc": "From",
+   "cents": 1275,
+   "section": "Chocolates and ice cream",
+   "photo": "mimis-chocolates-candy-bar-covered-caramel-apple"
+  },
+  {
+   "name": "Peanut Caramel Apple",
+   "desc": "From",
+   "cents": 1150,
+   "section": "Chocolates and ice cream",
+   "photo": "mimis-chocolates-peanut-caramel-apple"
+  },
+  {
+   "name": "Pecan Caramel Apple",
+   "desc": "From",
+   "cents": 1150,
+   "section": "Chocolates and ice cream",
+   "photo": "mimis-chocolates-pecan-caramel-apple"
+  }
+ ]
+}

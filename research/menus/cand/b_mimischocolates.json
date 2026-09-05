@@ -1,0 +1,851 @@
+{
+ "id": "b_mimischocolates",
+ "source": "text",
+ "alt": {
+  "json": 4
+ },
+ "pages": [
+  "https://mimischocolates.com/",
+  "https://mimischocolates.com/shop/ols/cart",
+  "https://mimischocolates.com/menu",
+  "https://mimischocolates.com/shop/ols/products/almond-apple",
+  "https://mimischocolates.com/shop/ols/products/chocolate-covered-strawberries",
+  "https://mimischocolates.com/shop/ols/products/caramel-apples",
+  "https://mimischocolates.com/shop/ols/products/chocolate-caramel-apple"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Almond Caramel Apple",
+   "desc": "From",
+   "cents": 1150,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_47_48%20AM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Chocolate Covered Strawberries",
+   "desc": "",
+   "cents": 285,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2012_46_48%20AM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Caramel Apples",
+   "desc": "",
+   "cents": 980,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_46_08%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Chocolate Caramel Apple",
+   "desc": "",
+   "cents": 1075,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_41_20%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Strawberry Shortcake Apple",
+   "desc": "",
+   "cents": 1275,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_30_31%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Apple Pie Apple",
+   "desc": "",
+   "cents": 1275,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_22_02%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "S'more Caramel Apple",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_12_14%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Oreo Caramel Apple",
+   "desc": "",
+   "cents": 1275,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_18_54%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Heath Caramel Apple",
+   "desc": "",
+   "cents": 1275,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_12_29%20PM.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Almond Caramel Apple"
+  },
+  {
+   "name": "Chocolate Pretzel",
+   "desc": "",
+   "cents": 225,
+   "alcohol": false,
+   "src": "text",
+   "section": "Type Code : Fall4All"
+  },
+  {
+   "name": "Chocolate Marshmallow",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Type Code : Fall4All"
+  },
+  {
+   "name": "Oreo Crumb",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "Strawberry Shortcake Crumb",
+   "desc": "Chocolate Oreos/Shortbreads",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "Chocolate Rice Krispie Treats",
+   "desc": "",
+   "cents": 410,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "Chocolate Covered Strawberry",
+   "desc": "",
+   "cents": 285,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "Sprinkle",
+   "desc": "",
+   "cents": 285,
+   "alcohol": false,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)"
+  },
+  {
+   "name": "Oreo Crumb",
+   "desc": "Strawberry Shortcake Crumb $3.10 (White Chocolate)",
+   "cents": 310,
+   "alcohol": false,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)"
+  },
+  {
+   "name": "Toasted Coconut",
+   "desc": "",
+   "cents": 335,
+   "alcohol": false,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)"
+  },
+  {
+   "name": "Glitter +",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)"
+  },
+  {
+   "name": "Alcohol Infused +",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)"
+  },
+  {
+   "name": "Apple Cider Infused +",
+   "desc": "",
+   "cents": 100,
+   "alcohol": true,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)"
+  },
+  {
+   "name": "S'more",
+   "desc": "",
+   "cents": 565,
+   "alcohol": false,
+   "src": "text",
+   "section": "(Milk, Dark, or White Chocolate)",
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_12_14%20PM.png/:/rs=w:480,cg:true,m"
+  },
+  {
+   "name": "Oreo Crumb",
+   "desc": "",
+   "cents": 585,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "Strawberry Shortcake Crumb",
+   "desc": "",
+   "cents": 585,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "Chocolate Bacon",
+   "desc": "",
+   "cents": 355,
+   "alcohol": false,
+   "src": "text",
+   "section": "Regular"
+  },
+  {
+   "name": "-Dark Chocolate Caramel",
+   "desc": "Hot Chocolate Bomb (seasonal. November-February)",
+   "cents": 655,
+   "alcohol": false,
+   "src": "text",
+   "section": "-Caramel"
+  },
+  {
+   "name": "Cookies & Cream",
+   "desc": "",
+   "cents": 675,
+   "alcohol": false,
+   "src": "text",
+   "section": "-Caramel"
+  },
+  {
+   "name": "Caramel Oreos/Shortbreads",
+   "desc": "",
+   "cents": 310,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Caramel Pretzel Rods",
+   "desc": "",
+   "cents": 315,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Nuts & Chocolate",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Caramel Marshmallow",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "w/ Crumb",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "w/ Nuts & Chocolate",
+   "desc": "",
+   "cents": 550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Caramel Turtle Square",
+   "desc": "",
+   "cents": 275,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Caramel Rice Krispie Treats",
+   "desc": "",
+   "cents": 575,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Nuts & Chocolate",
+   "desc": "",
+   "cents": 672,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Caramel Apple",
+   "desc": "",
+   "cents": 925,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel",
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_47_48%20AM.png/:/rs=w:1024,h:1064"
+  },
+  {
+   "name": "w/Chocolate",
+   "desc": "w/Nuts $10.75(Almonds, Pecans, or Peanuts)",
+   "cents": 1025,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Nuts & Chocolate",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Oreo",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel",
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_18_54%20PM.png/:/rs=w:480,cg:true,m"
+  },
+  {
+   "name": "Apple Pie (White Chocolate w/Graham Cracker Crust)",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "M&M",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Snickers",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Heath Bar",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Strawberry Shortcake",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel",
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_30_31%20PM.png/:/rs=w:480,cg:true,m"
+  },
+  {
+   "name": "S'more",
+   "desc": "",
+   "cents": 1375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel",
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_12_14%20PM.png/:/rs=w:480,cg:true,m"
+  },
+  {
+   "name": "Bacon",
+   "desc": "",
+   "cents": 1375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Rocky Road",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Caramel"
+  },
+  {
+   "name": "Baby Scoop",
+   "desc": "",
+   "cents": 475,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mint Chip"
+  },
+  {
+   "name": "Kids Scoop",
+   "desc": "",
+   "cents": 575,
+   "alcohol": false,
+   "src": "text",
+   "section": "2oz Scoop"
+  },
+  {
+   "name": "Single Scoop",
+   "desc": "",
+   "cents": 675,
+   "alcohol": false,
+   "src": "text",
+   "section": "3oz Scoop"
+  },
+  {
+   "name": "Double Scoop",
+   "desc": "",
+   "cents": 875,
+   "alcohol": false,
+   "src": "text",
+   "section": "4oz Scoop"
+  },
+  {
+   "name": "Milkshake",
+   "desc": "",
+   "cents": 975,
+   "alcohol": false,
+   "src": "text",
+   "section": "Two 4oz Scoops"
+  },
+  {
+   "name": "Affogato",
+   "desc": "",
+   "cents": 725,
+   "alcohol": false,
+   "src": "text",
+   "section": "Two 4oz Scoops"
+  },
+  {
+   "name": "Candy Bar Covered Caramel Apple",
+   "desc": "From",
+   "cents": 1275,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2005_54_57%20PM.png/:/rs=w:480,cg:true,m",
+   "alcohol": false,
+   "src": "card"
+  },
+  {
+   "name": "Peanut Caramel Apple",
+   "desc": "From",
+   "cents": 1150,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2001_55_30%20PM.png/:/rs=w:480,cg:true,m",
+   "alcohol": false,
+   "src": "card"
+  },
+  {
+   "name": "Pecan Caramel Apple",
+   "desc": "From",
+   "cents": 1150,
+   "image": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_50_04%20AM.png/:/rs=w:480,cg:true,m",
+   "alcohol": false,
+   "src": "card"
+  }
+ ],
+ "alts": {
+  "json": [
+   {
+    "name": "Almond Caramel Apple",
+    "desc": "Indulge in the irresistible combination of sweet caramel apples coated with crunchy Almonds. Perfect for all your sweet cravings.",
+    "cents": 1150,
+    "alcohol": false,
+    "src": "json:https://54f7119c-a1d4-41ea-99f4-56706224959f.mysimplestore.com/api/v2/pr"
+   },
+   {
+    "name": "Chocolate Covered Strawberries",
+    "desc": "Indulge in our decadent Chocolate Covered Strawberries, featuring fresh strawberries enrobed in rich chocolate Perfect for any sweet tooth craving.",
+    "cents": 285,
+    "alcohol": false,
+    "src": "json:https://54f7119c-a1d4-41ea-99f4-56706224959f.mysimplestore.com/api/v2/pr"
+   },
+   {
+    "name": "Caramel Apples",
+    "desc": "Indulge in the sweet and decadent treat of our Caramel Apples. Hand-dipped in rich caramel, these apples are perfect for any occasion. Shop now for a delightful treat!",
+    "cents": 980,
+    "alcohol": false,
+    "src": "json:https://54f7119c-a1d4-41ea-99f4-56706224959f.mysimplestore.com/api/v2/pr"
+   },
+   {
+    "name": "Chocolate Caramel Apple",
+    "desc": "Indulge in the decadent combination of chocolate and caramel with our Chocolate Caramel Apple. Perfect for satisfying your sweet tooth cravings. Shop now for a delicious treat!",
+    "cents": 1075,
+    "alcohol": false,
+    "src": "json:https://54f7119c-a1d4-41ea-99f4-56706224959f.mysimplestore.com/api/v2/pr"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/mimis-retail-shop.jpeg/:/cr=t:12.55%25,l:0%25,w:100%25,h:74.9%25/rs=w:400,h:400,cg:true",
+   "alt": "A colorful sunset over the ocean with silhouettes of palm trees and gentle waves.",
+   "near": "Mimi's Chocolates is in the Tralee Village Apartments Shopping District\n\nOur handmade gourmet chocol",
+   "w": 400,
+   "h": 399,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_47_48%20AM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Almond Caramel Apple\nFrom\n$11.50",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2012_46_48%20AM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Chocolate Covered Strawberries\n$2.85",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_46_08%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Caramel Apples\n$9.80",
+   "w": 480,
+   "h": 480,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_41_20%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Chocolate Caramel Apple\n$10.75",
+   "w": 480,
+   "h": 480,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_30_31%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Strawberry Shortcake Apple\n$12.75",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_22_02%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Apple Pie Apple\n$12.75",
+   "w": 480,
+   "h": 480,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_12_14%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "S'more Caramel Apple\n$14.25",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_18_54%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Oreo Caramel Apple\n$12.75",
+   "w": 480,
+   "h": 480,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_12_29%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Heath Caramel Apple\n$12.75",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2005_54_57%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Candy Bar Covered Caramel Apple\nFrom\n$12.75",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2001_55_30%20PM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Peanut Caramel Apple\nFrom\n$11.50",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_50_04%20AM.png/:/rs=w:480,cg:true,m",
+   "alt": "",
+   "near": "Pecan Caramel Apple\nFrom\n$11.50",
+   "w": 480,
+   "h": 720,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/F7693CA8-B9BA-44CF-8A2C-9CE25A006816.jpeg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:984,h:713",
+   "alt": "",
+   "near": "Send a GiftCard Online\nDIGITAL GIFTCARD\n\nSend a gift card to friends and family or buy it now for yo",
+   "w": 984,
+   "h": 713,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ig_17894734367372787.jpg/:/rs=w:1535,m",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 675,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ig_17885672875891700.jpg/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1535,m",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 675,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ig_18104552995211575.jpg/:/rs=w:1535,m",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 675,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ig_17878285895394369.jpg/:/rs=w:1535,m",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 675,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/stock/109846/:/cr=t:0%25,l:0%25,w:100%25,h:100%25/rs=w:1535,m",
+   "alt": "",
+   "near": "CALL, TEXT, OR EMAIL US FOR CUSTOM ORDERS!\nFresh, Quality Ingredients\n\nWe make all of our confection",
+   "w": 640,
+   "h": 484,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_46_08%20PM.png",
+   "alt": "",
+   "near": "Caramel Apples\n$9.80",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_41_20%20PM.png",
+   "alt": "",
+   "near": "Chocolate Caramel Apple\n$10.75",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_30_31%20PM.png",
+   "alt": "",
+   "near": "Strawberry Shortcake Apple\n$12.75",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_22_02%20PM.png",
+   "alt": "",
+   "near": "Apple Pie Apple\n$12.75",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_12_14%20PM.png",
+   "alt": "",
+   "near": "S'more Caramel Apple\n$14.25",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_18_54%20PM.png",
+   "alt": "",
+   "near": "Oreo Caramel Apple\n$12.75",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2006_12_29%20PM.png",
+   "alt": "",
+   "near": "Heath Caramel Apple\n$12.75",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2005_54_57%20PM.png",
+   "alt": "",
+   "near": "Candy Bar Covered Caramel Apple\nFrom\n$12.75",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2001_55_30%20PM.png",
+   "alt": "",
+   "near": "Peanut Caramel Apple\nFrom\n$11.50",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_50_04%20AM.png",
+   "alt": "",
+   "near": "Pecan Caramel Apple\nFrom\n$11.50",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_47_48%20AM.png",
+   "alt": "",
+   "near": "Almond Caramel Apple\nFrom\n$11.50",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2012_46_48%20AM.png",
+   "alt": "",
+   "near": "Chocolate Covered Strawberries\n$2.85",
+   "w": 339,
+   "h": 339,
+   "page": "https://mimischocolates.com/"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_47_48%20AM.png/:/rs=w:1024,h:1064",
+   "alt": "Almond Caramel Apple",
+   "near": "",
+   "w": 709,
+   "h": 1064,
+   "page": "https://mimischocolates.com/shop/ols/products/almond-apple"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_47_48%20AM.png/:/rs=w:1200,h:1200",
+   "alt": "Almond Caramel Apple",
+   "near": "",
+   "w": 800,
+   "h": 1200,
+   "page": "https://mimischocolates.com/shop/ols/products/almond-apple"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_16_16%20AM.png/:/rs=w:1200,h:1200",
+   "alt": "Almond Caramel Apple",
+   "near": "",
+   "w": 800,
+   "h": 1200,
+   "page": "https://mimischocolates.com/shop/ols/products/almond-apple"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2012_46_48%20AM.png/:/rs=w:1024,h:1064",
+   "alt": "Chocolate Covered Strawberries",
+   "near": "",
+   "w": 709,
+   "h": 1064,
+   "page": "https://mimischocolates.com/shop/ols/products/chocolate-covered-strawberries"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2012_46_48%20AM.png/:/rs=w:1200,h:1200",
+   "alt": "Chocolate Covered Strawberries",
+   "near": "",
+   "w": 800,
+   "h": 1200,
+   "page": "https://mimischocolates.com/shop/ols/products/chocolate-covered-strawberries"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_46_08%20PM.png/:/rs=w:1024,h:1024",
+   "alt": "Caramel Apples",
+   "near": "",
+   "w": 1024,
+   "h": 1024,
+   "page": "https://mimischocolates.com/shop/ols/products/caramel-apples"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_46_08%20PM.png/:/rs=w:1200,h:1200",
+   "alt": "Caramel Apples",
+   "near": "",
+   "w": 1024,
+   "h": 1024,
+   "page": "https://mimischocolates.com/shop/ols/products/caramel-apples"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_41_20%20PM.png/:/rs=w:1024,h:1024",
+   "alt": "Chocolate Caramel Apple",
+   "near": "",
+   "w": 1024,
+   "h": 1024,
+   "page": "https://mimischocolates.com/shop/ols/products/chocolate-caramel-apple"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_41_20%20PM.png/:/rs=w:1200,h:1200",
+   "alt": "Chocolate Caramel Apple",
+   "near": "",
+   "w": 1024,
+   "h": 1024,
+   "page": "https://mimischocolates.com/shop/ols/products/chocolate-caramel-apple"
+  },
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/ols/ChatGPT%20Image%20May%205%2C%202025%2C%2010_43_31%20PM.png/:/rs=w:1200,h:1200",
+   "alt": "Chocolate Caramel Apple",
+   "near": "",
+   "w": 1024,
+   "h": 1024,
+   "page": "https://mimischocolates.com/shop/ols/products/chocolate-caramel-apple"
+  }
+ ]
+}

@@ -1,0 +1,409 @@
+{
+ "id": "b_brasabros",
+ "source": "json",
+ "pages": [
+  "https://www.brasa-bros.com/",
+  "https://www.brasa-bros.com/catering-v2/",
+  "https://order.chownow.com/order/44170/locations/66358?add_cn_ordering_class=true",
+  "https://order.toasttab.com/online/brasa-bros",
+  "https://www.brasa-bros.com/menus/#drinks",
+  "https://www.getbento.com/?utm_source=header&utm_campaign=brasa-bros.com",
+  "https://www.brasa-bros.com/news-item/build-your-own-peruvian-bowl/"
+ ],
+ "items": [
+  {
+   "name": "Whole Chicken",
+   "desc": "Includes two sides and a trio of sauces: one Pica Loco and two Aji Amarillo.",
+   "cents": 3495,
+   "section": "Pollo a la Brasa",
+   "photo": "brasa-bros-whole-chicken"
+  },
+  {
+   "name": "1/2 Chicken",
+   "desc": "Includes two sides and one Ají Amarillo sauce.",
+   "cents": 2195,
+   "section": "Pollo a la Brasa",
+   "photo": "brasa-bros-1-2-chicken"
+  },
+  {
+   "name": "1/4 Chicken",
+   "desc": "Includes two sides and one Ají Amarillo sauce",
+   "cents": 1795,
+   "section": "Pollo a la Brasa",
+   "photo": "brasa-bros-1-4-chicken"
+  },
+  {
+   "name": "Whole Chicken Only",
+   "desc": "Includes a trio of sauces: one Pica Loco and two Aji Amarillo.",
+   "cents": 2800,
+   "section": "Pollo a la Brasa",
+   "photo": "brasa-bros-whole-chicken-only"
+  },
+  {
+   "name": "1/2 Chicken Only",
+   "desc": "Includes two Aji Amarillo sauces.",
+   "cents": 1700,
+   "section": "Pollo a la Brasa",
+   "photo": "brasa-bros-1-2-chicken-only"
+  },
+  {
+   "name": "1/4 Chicken Only",
+   "desc": "Includes two Aji Amarillo sauces.",
+   "cents": 1000,
+   "section": "Pollo a la Brasa",
+   "photo": "brasa-bros-1-4-chicken-only"
+  },
+  {
+   "name": "Kicker Combo",
+   "desc": "One rotisserie chicken, 8 tenders, 2 large sides & 4 dipping sauces",
+   "cents": 5895,
+   "section": "Family Meals",
+   "photo": "brasa-bros-kicker-combo"
+  },
+  {
+   "name": "Champions Bucket",
+   "desc": "2 rotisserie chickens, 10 tenders, 3 large sides & 6 dipping sauces",
+   "cents": 9495,
+   "section": "Family Meals",
+   "photo": "brasa-bros-champions-bucket"
+  },
+  {
+   "name": "Game One",
+   "desc": "10 chicken tenders, 2 large sides & 3 dipping sauces",
+   "cents": 3995,
+   "section": "Family Meals",
+   "photo": "brasa-bros-game-one"
+  },
+  {
+   "name": "Goal Worthy Tenders",
+   "desc": "15 chicken tenders, 2 large sides & 4 dipping sauces",
+   "cents": 4995,
+   "section": "Family Meals",
+   "photo": "brasa-bros-goal-worthy-tenders"
+  },
+  {
+   "name": "Kid's Combo",
+   "desc": "1 chicken tender, fries, Brasa Bliss sauce & a drink",
+   "cents": 895,
+   "section": "Kids",
+   "photo": "brasa-bros-kid-s-combo"
+  },
+  {
+   "name": "Chaufita",
+   "desc": "Peruvian-style fried rice, 1 chicken tender with Brasa Bliss sauce & a drink",
+   "cents": 895,
+   "section": "Kids",
+   "photo": "brasa-bros-chaufita"
+  },
+  {
+   "name": "2 Tenders",
+   "desc": "Brasa Bliss sauce, fries, slaw, fountain drink",
+   "cents": 1395,
+   "section": "Combos",
+   "photo": "brasa-bros-2-tenders"
+  },
+  {
+   "name": "Crispy Sandwich",
+   "desc": "Crispy chicken on a Brioche bun, Brasa Bliss sauce, fries, slaw, pickles, fountain drink",
+   "cents": 1495,
+   "section": "Combos",
+   "photo": "brasa-bros-crispy-sandwich"
+  },
+  {
+   "name": "Jasmine Rice",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-jasmine-rice"
+  },
+  {
+   "name": "Side Chaufa",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-side-chaufa"
+  },
+  {
+   "name": "Fresh-cut Fries",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-fresh-cut-fries"
+  },
+  {
+   "name": "Sweet Potato Fries",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-sweet-potato-fries"
+  },
+  {
+   "name": "Yuca Fries",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-yuca-fries"
+  },
+  {
+   "name": "Beans",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-beans"
+  },
+  {
+   "name": "Plantains",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-plantains"
+  },
+  {
+   "name": "Slaw",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-slaw"
+  },
+  {
+   "name": "Small House Salad",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides",
+   "photo": "brasa-bros-small-house-salad"
+  },
+  {
+   "name": "Big House Salad",
+   "desc": "",
+   "cents": 1000,
+   "section": "Sides",
+   "photo": "brasa-bros-big-house-salad"
+  },
+  {
+   "name": "Single Tender",
+   "desc": "(1) Piece of Tender",
+   "cents": 595,
+   "section": "Sides",
+   "photo": "brasa-bros-single-tender"
+  },
+  {
+   "name": "Aji Amarillo Sauce",
+   "desc": "",
+   "cents": 150,
+   "section": "Signature Sauces",
+   "photo": "brasa-bros-aji-amarillo-sauce"
+  },
+  {
+   "name": "Pica Loco Sauce",
+   "desc": "",
+   "cents": 150,
+   "section": "Signature Sauces",
+   "photo": "brasa-bros-pica-loco-sauce"
+  },
+  {
+   "name": "Brasa Bliss Sauce",
+   "desc": "",
+   "cents": 150,
+   "section": "Signature Sauces",
+   "photo": "brasa-bros-brasa-bliss-sauce"
+  },
+  {
+   "name": "Medium Sauce 6oz",
+   "desc": "",
+   "cents": 450,
+   "section": "Signature Sauces",
+   "photo": "brasa-bros-medium-sauce-6oz"
+  },
+  {
+   "name": "Large Sauce 8oz",
+   "desc": "",
+   "cents": 550,
+   "section": "Signature Sauces",
+   "photo": "brasa-bros-large-sauce-8oz"
+  },
+  {
+   "name": "Tres Leches",
+   "desc": "",
+   "cents": 695,
+   "section": "Desserts",
+   "photo": "brasa-bros-tres-leches"
+  },
+  {
+   "name": "Maracuya Panna-Cotta",
+   "desc": "",
+   "cents": 695,
+   "section": "Desserts",
+   "photo": "brasa-bros-maracuya-panna-cotta"
+  },
+  {
+   "name": "Gummy Bears",
+   "desc": "",
+   "cents": 395,
+   "section": "Desserts",
+   "photo": "brasa-bros-gummy-bears"
+  },
+  {
+   "name": "Coca Cola",
+   "desc": "",
+   "cents": 395,
+   "section": "Drinks",
+   "photo": "brasa-bros-coca-cola"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 395,
+   "section": "Drinks",
+   "photo": "brasa-bros-diet-coke"
+  },
+  {
+   "name": "Coca Cola Zero",
+   "desc": "",
+   "cents": 395,
+   "section": "Drinks",
+   "photo": "brasa-bros-coca-cola-zero"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 395,
+   "section": "Drinks",
+   "photo": "brasa-bros-sprite"
+  },
+  {
+   "name": "Fanta",
+   "desc": "",
+   "cents": 395,
+   "section": "Drinks",
+   "photo": "brasa-bros-fanta"
+  },
+  {
+   "name": "Minute Maid",
+   "desc": "",
+   "cents": 395,
+   "section": "Drinks",
+   "photo": "brasa-bros-minute-maid"
+  },
+  {
+   "name": "Passion Fruit Lemonade",
+   "desc": "",
+   "cents": 600,
+   "section": "Drinks",
+   "photo": "brasa-bros-passion-fruit-lemonade"
+  },
+  {
+   "name": "Chicha Morada",
+   "desc": "",
+   "cents": 600,
+   "section": "Drinks",
+   "photo": "brasa-bros-chicha-morada"
+  },
+  {
+   "name": "Inca Cola",
+   "desc": "",
+   "cents": 450,
+   "section": "Drinks",
+   "photo": "brasa-bros-inca-cola"
+  },
+  {
+   "name": "LOMO SALTADO",
+   "desc": "",
+   "cents": 1795,
+   "section": "Signature Bowls",
+   "photo": "brasa-bros-lomo-saltado"
+  },
+  {
+   "name": "SALTADO DE POLLO",
+   "desc": "",
+   "cents": 1595,
+   "section": "Signature Bowls",
+   "photo": "brasa-bros-saltado-de-pollo"
+  },
+  {
+   "name": "Picanha Steak Bowl",
+   "desc": "",
+   "cents": 1895,
+   "section": "Signature Bowls"
+  },
+  {
+   "name": "MONSTRITO",
+   "desc": "",
+   "cents": 1595,
+   "section": "Signature Bowls"
+  },
+  {
+   "name": "Chaufa Crunch",
+   "desc": "Chopped tenders, fried rice & fries, drizzled with Brasa Bliss sauce",
+   "cents": 1795,
+   "section": "Signature Bowls",
+   "photo": "brasa-bros-chaufa-crunch"
+  },
+  {
+   "name": "House Salad - Small",
+   "desc": "",
+   "cents": 525,
+   "section": "Sides"
+  },
+  {
+   "name": "Grilled Chicken",
+   "desc": "",
+   "cents": 395
+  },
+  {
+   "name": "Grilled Steak",
+   "desc": "",
+   "cents": 495
+  },
+  {
+   "name": "Roasted Veggies",
+   "desc": "",
+   "cents": 295
+  },
+  {
+   "name": "Aji Garlic Chicken",
+   "desc": "",
+   "cents": 395
+  },
+  {
+   "name": "Salad",
+   "desc": "",
+   "cents": 525,
+   "photo": "brasa-bros-salad"
+  },
+  {
+   "name": "Chaufa",
+   "desc": "",
+   "cents": 200,
+   "photo": "brasa-bros-chaufa"
+  },
+  {
+   "name": "Yuca",
+   "desc": "",
+   "cents": 200,
+   "photo": "brasa-bros-yuca"
+  },
+  {
+   "name": "Sweet Potatoes",
+   "desc": "",
+   "cents": 200
+  },
+  {
+   "name": "Aji Amarillo",
+   "desc": "",
+   "cents": 450,
+   "photo": "brasa-bros-aji-amarillo"
+  },
+  {
+   "name": "Brasa Bliss",
+   "desc": "",
+   "cents": 450,
+   "photo": "brasa-bros-brasa-bliss"
+  },
+  {
+   "name": "Pica Loco",
+   "desc": "",
+   "cents": 450,
+   "photo": "brasa-bros-pica-loco"
+  }
+ ]
+}

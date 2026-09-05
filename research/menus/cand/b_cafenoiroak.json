@@ -1,0 +1,372 @@
+{
+ "id": "b_cafenoiroak",
+ "source": "text",
+ "alt": {
+  "pdf": 6
+ },
+ "pages": [
+  "https://www.cafenoiroak.com/",
+  "https://www.cafenoiroak.com/menu",
+  "https://www.cafenoiroak.com/catering",
+  "https://order.toasttab.com/online/cafe-noir-oakland-prescott-market-1620-18th-street",
+  "https://www.doordash.com/store/cafe-noir-oakland-25223365/?pickup=true",
+  "https://www.grubhub.com/restaurant/cafe-noir-1620-18th-st-oakland/11970080",
+  "https://www.cafenoiroak.com/s/Catering-Menu-2025.pdf"
+ ],
+ "pdfs": [
+  "https://www.cafenoiroak.com/s/Catering-Menu-2025.pdf"
+ ],
+ "items": [
+  {
+   "name": "Jerk Salmon",
+   "desc": "Fire roasted salmon filet with coconut rice and fried plantains; topped with mango salsa; cooked to medium",
+   "cents": 2450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Noir Jollof",
+   "desc": "Grilled chicken and shrimp with jollof style rice Spicy",
+   "cents": 2100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Mushroom Fettuccine",
+   "desc": "Fresh Fettuccine pasta with a wild mushroom cream sauce",
+   "cents": 1850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Braised Oxtail, whipped mash potatoes, seasonal mix vegetables",
+   "desc": "",
+   "cents": 3200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Braised Beef over Mash",
+   "desc": "Braised beef that we cook for 12 hours, decadent brown gravy over mash potatoes and seasonal mixed veg",
+   "cents": 2800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Fried Chicken Sandwich w/fries",
+   "desc": "Our infamous chicken sando is available for Ballers Games this season!!",
+   "cents": 1900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "BBQ CHICKEN TACO SALAD",
+   "desc": "Our infamous salad has made its way to dinner! Cabbage, arugula, pickled red onions, pickled jalapenos, cucumber, black beans, corn, shredded cheese, cherry tomatoes tossed in ranch and toped with bbq chicken",
+   "cents": 1850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Veggie Sandwich with fries"
+  },
+  {
+   "name": "*SPECIAL* Arugula Pesto Ricotta Gnocchi",
+   "desc": "House made ricotta gnocchi with our arugula pest made with sunflower seeds... so no worries for any nut allergies! Vegetarian add meat as an add on",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Veggie Sandwich with fries"
+  },
+  {
+   "name": "Cran Apple Salad",
+   "desc": "Arugula salad with cranberry compote, goat cheese and candied walnuts; citrus vinagrette",
+   "cents": 1350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Mixed Green Salad",
+   "desc": "Spinach and arugula, pickled red onions and cherry tomatoes, citrus vinaigrette",
+   "cents": 1150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Ricotta Donuts",
+   "desc": "Ricotta, lemon, fluffy and fried to perfection Small: 4 donuts Large: 8 donuts",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dessert"
+  },
+  {
+   "name": "BIG OL' COOKIE",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dessert"
+  },
+  {
+   "name": "Lemonade",
+   "desc": "Fresh squeezed lemonade sweetened by house made simple syrup",
+   "cents": 550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Sorrel",
+   "desc": "Carribean hibiscus drink that is spiced with citrus, ginger, nutmeg and cinnamon; we nicknamed it 'Christmas in a cup\"! Served hot or cold",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Bottled Water",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Coca-Cola, 12oz",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 250,
+   "image": "https://d1w7312wesee68.cloudfront.net/IljxWlhz5FJGUr9_ga6VrczUNLH5LxyZnW620bkGUM0/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Coca-Cola_Plastic_Bottle_20_fl_oz.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Coca-Cola, 12oz"
+  },
+  {
+   "name": "Green Juice",
+   "desc": "",
+   "cents": 900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sprite, 12oz"
+  },
+  {
+   "name": "Cafe Duran Coffee",
+   "desc": "Imported Coffee from Panama; Small Hot 3.50 Large Hot 4.50 Cold (one size) 4.50",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sprite, 12oz"
+  },
+  {
+   "name": "Infused Spa Water",
+   "desc": "",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sprite, 12oz"
+  },
+  {
+   "name": "TUSKER BEER",
+   "desc": "",
+   "cents": 900,
+   "alcohol": true,
+   "src": "text",
+   "section": "Sprite, 12oz"
+  },
+  {
+   "name": "Line 39 Wine",
+   "desc": "Choice of Sauvignon Blanc or Cabernet Sauvignon 10oz glass",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "Sprite, 12oz"
+  },
+  {
+   "name": "MIMOSAS",
+   "desc": "Choice of Tamarind, Honey Pasion Fruit and Mango",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sprite, 12oz"
+  },
+  {
+   "name": "*SIDE* Jollof Rice",
+   "desc": "Our Jollof rice with garlic and green onions (vegetarian)",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "*SIDE* Coconut Rice",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "*SIDE* Fried Plantains",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Side Salad",
+   "desc": "Mixed Green with cucumber, carrots and cherry tomatoes",
+   "cents": 550,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Pepper Sauce",
+   "desc": "Our habanero sauce to take home!! Its a 3 oz bottle of our spicy goodness; comes in a recyclable glass bottle",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Cran Apple Salad",
+   "desc": "Arugula salad with cranberry compote, goat cheese and candied walnuts; citrus vinagrette",
+   "cents": 1450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Categories"
+  }
+ ],
+ "alts": {
+  "pdf": [
+   {
+    "name": "Fried Chicken Sandwich",
+    "desc": "Cole Slaw, pickled jalapenos, chipotle aioli; comes with fries",
+    "cents": 1850,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Corporate Lunch Menu:"
+   },
+   {
+    "name": "Cran Apple Salad",
+    "desc": "Cran compote, sliced apples, candied walnuts, goat cheese,",
+    "cents": 1300,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Corporate Lunch Menu:"
+   },
+   {
+    "name": "Prescott Bowl w/Blackened Shrimp",
+    "desc": "Cajun shrimp, black beans, farro, arugula, cherry tomatoes,",
+    "cents": 2100,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Corporate Lunch Menu:"
+   },
+   {
+    "name": "Veggie Sandwich (vegan)",
+    "desc": "House made focaccia bread with portobello mushroom, roasted red",
+    "cents": 1850,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "pepper relish, herbed crema"
+   },
+   {
+    "name": "BBQ Chicken Taco Salad",
+    "desc": "Cabbage and arugula salad, black beans, corn, shredded carrots,",
+    "cents": 1800,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "pepper relish, herbed crema"
+   },
+   {
+    "name": "Chicken Tenders and Fries",
+    "desc": "5 crispy chicken tenders fried golden brown ; served with fries",
+    "cents": 1600,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "pepper relish, herbed crema"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/78eca4b7-9c1e-49b7-876a-54e835e0cc7b/HEIRLUME_typography%282%29.png?format=750w",
+   "alt": "",
+   "near": "",
+   "w": 690,
+   "h": 690,
+   "page": "https://www.cafenoiroak.com/"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/96373a55-38bf-4b18-82bf-aad4e10f8ebf/Triptic+Slider+for+Cafe+Noir.png?format=1500w",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 445,
+   "page": "https://www.cafenoiroak.com/"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/6d7d30a8-8dd6-4091-ab2e-79f6fcb7eb5c/cafe-noir-catering-full-table-setting-oakland-bay-area-black-owned.png?format=750w",
+   "alt": "",
+   "near": "",
+   "w": 690,
+   "h": 460,
+   "page": "https://www.cafenoiroak.com/"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/09ba2f7b-f50b-41bd-8e72-50f111001438/oakland-brunch-bowl-eggs-potatoes-cafe-noir-black-owned-restaurant.png?format=750w",
+   "alt": "Brunch bowl with sunny-side-up eggs, roasted potatoes, and seasonal vegetables drizzled with herb sauce at Café Noir, a Black-owned restaurant in Oakland.",
+   "near": "",
+   "w": 596,
+   "h": 397,
+   "page": "https://www.cafenoiroak.com/menu"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/2616947f-014d-4762-9e9d-d74f700f17b0/braised-beef-short-ribs-mashed-potatoes-cafe-noir-oakland-black-owned-restaurant.png?format=750w",
+   "alt": "Braised beef short ribs with creamy mashed potatoes and green beans at Café Noir, a Black-owned restaurant in Oakland. California",
+   "near": "",
+   "w": 596,
+   "h": 397,
+   "page": "https://www.cafenoiroak.com/menu"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/3a732828-42f0-406d-aecf-afde3baa0b3b/blackened-shrimp-corn-prescott-bowl-cafe-noir-oakland-black-owned-restaurant.png?format=750w",
+   "alt": "Blackened shrimp with grilled corn, savory bites, and fresh herbs at Café Noir, a Black-owned restaurant serving gourmet comfort food in Oakland, California.",
+   "near": "",
+   "w": 596,
+   "h": 397,
+   "page": "https://www.cafenoiroak.com/menu"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/7498ad94-dcf6-4acd-abf5-edd0b352b2f1/chocolate-cake-dessert-cafe-noir-oakland-black-owned-restaurant.png?format=750w",
+   "alt": "Rich chocolate cake topped with dark cherry compote at Café Noir, a Black-owned gourmet comfort food restaurant in Oakland.",
+   "near": "",
+   "w": 596,
+   "h": 397,
+   "page": "https://www.cafenoiroak.com/menu"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/18857ef3-4e71-4161-af3a-354f604796db/d83d01fc-69bb-4b0c-bdac-6603ba012931.png",
+   "alt": "",
+   "near": "",
+   "w": 5120,
+   "h": 2592,
+   "page": "https://order.toasttab.com/online/cafe-noir-oakland-prescott-market-1620-18th-street"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurant_service/restaurants/de8f9e65-2c58-430b-93e5-667575327f2e/Restaurant/4b62e53d-2469-41dd-ba10-e4da4e8e068d.jpg",
+   "alt": "Banner image",
+   "near": "Cafe Noir - Oakland - Prescott Market 1620 18th Street\n1620 18th Street, Oakland, CA\nDelivery\nPickup",
+   "w": 4000,
+   "h": 1848,
+   "page": "https://order.toasttab.com/online/cafe-noir-oakland-prescott-market-1620-18th-street"
+  }
+ ]
+}

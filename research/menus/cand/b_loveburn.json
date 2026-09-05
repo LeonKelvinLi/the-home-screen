@@ -1,0 +1,576 @@
+{
+ "id": "b_loveburn",
+ "source": "text",
+ "alt": {
+  "jsonld": 6
+ },
+ "pages": [
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-chicken-sandwich_4ae973e6-a524-4274-93fc-7be1b2cf9a27",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-caesar-salad_3076a0b8-2389-40d5-9821-88f14f6f5249",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-kfc-tenders-fries_0a63e89b-33e7-4ebc-837d-913434590f1e",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-tenders-and-fries_d1356dc0-0bb3-452e-aa44-f7eb950b9868",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-six-hot-wings_5895aff7-e75d-4a36-88a0-94a5cd3c98b7",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-twelve-hot-wings_be8047f6-d747-4e76-83c4-0ff7a79859d5"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Hot Chicken Sandwich",
+   "desc": "Crispy Fried Chicken Thigh served on Toasted Brioche Bun, Creamy Coleslaw & Pickles ***Levels 2-4 gets mixed pickles (cucumbers, jalapeños, onions)*** ****Level 4 Disclaimer: Consume at your discretion, Not for the faint",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "ASAP",
+   "image": "https://d1w7312wesee68.cloudfront.net/nMKoNnmuke1q6Y2FXyTvBSAf-OpwgnpHarliSftO4x8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/2948ec63-8167-4e77-ae1d-d9a8787d78cd.jpg"
+  },
+  {
+   "name": "Caesar Salad",
+   "desc": "Romaine lettuce, choice of grilled or fried chicken tender, parmesan cheese, herbed croutons, and Caesar dressing",
+   "cents": 1200,
+   "image": "https://d1w7312wesee68.cloudfront.net/7axH-NITOVTNNtHejwypYwGPhF4ic0BiYvxe5Kyxstk/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/7787ed1b-58f9-4f46-b538-0d326593771b.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ASAP"
+  },
+  {
+   "name": "KFC Tenders + Fries",
+   "desc": "",
+   "cents": 1800,
+   "image": "https://d1w7312wesee68.cloudfront.net/NmqNFBE2qPQE1ndCDr_ebBnRhaHc88I5ORG258SCtR0/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-327729000000000000/menu/items/9/item-1700000000683723449_1777845428.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ASAP"
+  },
+  {
+   "name": "Hot Tenders and Fries",
+   "desc": "Three massive chicken tenders (breast), choice of spice level, fries, and choice of sauce ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+   "cents": 1700,
+   "image": "https://d1w7312wesee68.cloudfront.net/394D4qedb7P1WO_ZEFLbg85ooFSZCo-7ewXiN0Yr7gE/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/9bca2195-d93a-4fb9-aa4a-d2dc19cd51f3.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Hot Fried Chicken"
+  },
+  {
+   "name": "Six Hot Wings",
+   "desc": "Six Large Hot Wings with choice of a spice level, choice of sauce, and side of pickles ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/-XrCcrkG4NSTdgTa6szSpZ_gm_JFThLAR92Otri5BVQ/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/5e43f63e-2e41-4d0b-bd83-0c1700294019.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Hot Fried Chicken"
+  },
+  {
+   "name": "Twelve Hot Wings",
+   "desc": "Twelve large hot wings with choice of two different spice levels, choice of two sauces, and side of pickles ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+   "cents": 2600,
+   "image": "https://d1w7312wesee68.cloudfront.net/XQa0lOLBbl2ImzAbnkQO3nfAQwId9tXUsUoKYE8YuJA/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/91755f90-3ac8-4098-af34-ecdcee27ea3c.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Hot Fried Chicken"
+  },
+  {
+   "name": "Hot Quarter Meal (Thigh & Drum)",
+   "desc": "Crispy Fried Chicken Leg Quarter, Buttered Texas Toast & Pickles ***Levels 2-4 gets mixed pickles (cucumbers, jalapeños, onions)*** ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Hot Fried Chicken",
+   "image": "https://d1w7312wesee68.cloudfront.net/MOGt-LJYQ3r-qB_uEvt06zJUXsbFOpBVSKQoeUFHrfQ/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/7de1cebf-5e58-451f-b82c-666ae1d4da79.jpg"
+  },
+  {
+   "name": "Double Smash Burger",
+   "desc": "Two beef patties, American cheese, house sauce, caramelized onions, and pickles on a toasted brioche bun. Vegan option available",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/4bI7KyuphdR5oZwyh5pfNhU7xpVrCPXrZmIONGJwQsY/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/44168f59-f43e-4463-8671-9a7a06e76aa8.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Smash Burger and Hot Sandwiches"
+  },
+  {
+   "name": "Korean Fried Chicken Sandwich",
+   "desc": "Crispy Korean glazed chicken, kimchi slaw, and pickles on brioche bun",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/6l_FHZkg3XPH_DAZYKSzgF2zwZVFCWnlYU4m7N3OSU8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/8407571f-cf4f-41eb-9731-69149d7b2b76.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Smash Burger and Hot Sandwiches"
+  },
+  {
+   "name": "Fish Filet Sandwich",
+   "desc": "Crispy fish patty, American cheese, bread and butter pickles, tartar sauce on a brioche bun",
+   "cents": 1200,
+   "image": "https://d1w7312wesee68.cloudfront.net/gEZC2FNg3Luqm34UxnEb4nbSuV7Snh3qyOd5nBEvaEU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/ccb05465-c830-42ba-8c5f-28478e9f1750.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Smash Burger and Hot Sandwiches"
+  },
+  {
+   "name": "BBQ Pork Sandwich",
+   "desc": "Pulled pork with Asian BBQ sauce, kimchee slaw, and pickles on brioche",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/V3K15WzqSjUqVu3OIUyFaz3SprwmerQRfcXn4lu3QLk/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/f10c7a4f-fb26-4621-a109-2fba9d2e915a.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Smash Burger and Hot Sandwiches"
+  },
+  {
+   "name": "Mixed Green Salad",
+   "desc": "Mixed greens with herbed croutons, cherry tomatoes, English cucumber, shredded carrots, balsamic vinaigrette",
+   "cents": 1200,
+   "image": "https://d1w7312wesee68.cloudfront.net/hOgGQ05pD7Q1ihTls8nlAzwplg2YkYzNyc2W0YTQr-Y/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/1d525004-95f9-4c40-8459-40e64a6b3fee.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Wing Wednesday 6pc",
+   "desc": "",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/arQ_WphEszFt47e9NisdzETqvFdwqB3UA8-KzsmyOTI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-327729000000000000/menu/items/6/item-1700000000224858546_1773899161.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Weekly Specials"
+  },
+  {
+   "name": "Wing Wednesday 12pc",
+   "desc": "",
+   "cents": 2600,
+   "image": "https://d1w7312wesee68.cloudfront.net/W5jMXjQ_KRD5GX4Ymbw8T9eYiCGnKPkChQZjI7-GqQs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-327729000000000000/menu/items/8/item-1700000000224858548_1777845762.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Weekly Specials"
+  },
+  {
+   "name": "Fish Filet Fridays",
+   "desc": "Fish Filet Friday Special",
+   "cents": 1000,
+   "image": "https://d1w7312wesee68.cloudfront.net/Zu-sg4rFb0DkbQ9-wSDZ44KclxZbwM2p1ikc9YN0R0w/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/7af2b4a6-7b07-4d16-8f61-9a9cbfe97e36.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "KFC 6pc Wings",
+   "desc": "",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/iY03TvhTOetitROTKVgXo-i5YyzRrfZPaDnm7zpxn0E/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-327729000000000000/menu/items/8/item-1700000000683793948_1777845620.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "Bomba special",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "French Fries",
+   "desc": "Crispy Coated French Fries",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/aslAM_FtGuSRe6cmzWf0q_CY0SYL9JOD4YxLcwvP144/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/e723c2d1-8fab-46b4-bfb1-de889904b661.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "Beer Battered Onion Rings",
+   "desc": "Crispy onion rings coated in a beer batter seasoned with salt and pepper",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/_9hhYaMHb4xRvqGGKRN41hsmUliUK0JfCJfuHtqn4Vc/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/9d5ac696-d093-4dc0-84fa-baa659c91cd5.png",
+   "alcohol": true,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "Creamy Coleslaw",
+   "desc": "Cabbage, Carrots, Apple Cider Vinegar, Dijon Mustard, Garlic, Onion, Sugar, Mayo, and Celery Seed",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/o1XiB_jPp_GqKuCtS-g-heAqDP20wtCjpWsp2ZGLnkE/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/518929b4-ca77-4f33-be3f-5b0ddcbd8cc5.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "Potato Salad",
+   "desc": "Potatoes, Mayonnaise, Celery, Sweet Pickle Relish, Mustard, Onion, and Red Bell Pepper",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/XRlcXlGcQqxikuhUi4pjKV4-Y72zj9L9qKFl12Ihs6Y/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/a0148d17-7023-46c8-b465-908a126003f7.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "Macaroni Salad",
+   "desc": "Elbow noodles, red and green bell peppers, red onions, scallion, celery, egg, and mayo",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/KjhpuKZOZRHUSFiN_OPnCS-oa2IRbnRBJR3MUCD4nuQ/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/39def865-0eb1-4161-bf87-dd5907634ceb.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Fish Filet Fridays"
+  },
+  {
+   "name": "Mike's Hot Honey",
+   "desc": "A blend of honey, chilies, and vinegar",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/U9e994SGwqYSsgluPf06YGKo5N3cDkeRoerGC9nvtXU/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/2939ba63-8dc9-4df8-8b14-1d6582ac79a4.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Sweet Baby Ray's BBQ Sauce",
+   "desc": "A sweet and smoky barbecue sauce typically featuring a rich blend of molasses, brown sugar, and spices",
+   "cents": 100,
+   "image": "https://d1w7312wesee68.cloudfront.net/lnSPqm0KKBQOmlloTsZAQqt2RwITluAp-5RchpXoEyA/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/33193c69-d144-4db6-8544-c0d027861e88.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Chipotle Aioli",
+   "desc": "House made chipotle aioli: mayo, garlic, lemon juice, chipotle powder, salt and pepper",
+   "cents": 100,
+   "image": "https://d1w7312wesee68.cloudfront.net/gNDmLymh76_uACI-mmhz3RFyLk_PKW66nOtPmlm2RkY/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/84e7a2de-84de-4668-8b18-2bf7209ca736.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Hot Ranch",
+   "desc": "Not for the faint of heart. Hot House made ranch: Habanero, Buttermilk, Mayo, and Spice Blend",
+   "cents": 100,
+   "image": "https://d1w7312wesee68.cloudfront.net/_6xgxtBToele6MvVoT-3MoE3v6P0E6-3h-wZdMvGENI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/4ba55f7e-c4fd-46c7-8d9d-387516accd95.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Cool Ranch",
+   "desc": "House made ranch: buttermilk, mayo, and spice blend",
+   "cents": 100,
+   "image": "https://d1w7312wesee68.cloudfront.net/4qY00ftgwc7lD0gATONixa0fFu8z6a4KhIsaFiv3tpo/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/f34691a8-ec75-4ccd-9e7b-5a7a608d1ba0.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Crystal Hot Sauce",
+   "desc": "Red Cayenne Peppers, Distilled White Vinegar, and Salt",
+   "cents": 100,
+   "image": "https://d1w7312wesee68.cloudfront.net/3iJWdS8_2twq7Bc0_yekhZBKuh9km0pB08ZBSQpiiao/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/26b69ab7-1013-4f1c-b1b4-d3992a112a89.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "House",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sauces",
+   "image": "https://d1w7312wesee68.cloudfront.net/4bI7KyuphdR5oZwyh5pfNhU7xpVrCPXrZmIONGJwQsY/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/44168f59-f43e-4463-8671-9a7a06e76aa8.png"
+  },
+  {
+   "name": "Habanero",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sauces",
+   "image": "https://d1w7312wesee68.cloudfront.net/_6xgxtBToele6MvVoT-3MoE3v6P0E6-3h-wZdMvGENI/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/4ba55f7e-c4fd-46c7-8d9d-387516accd95.png"
+  },
+  {
+   "name": "Ube Mochi Cake",
+   "desc": "Hawaiian inspired mochi butter cake made with ube (purple sweet potato)",
+   "cents": 400,
+   "image": "https://d1w7312wesee68.cloudfront.net/TFCOLnihgR5uAGEbYG5Wb9q_rDQCW3D0jXpftI8Pv6c/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/3a40088c-8fef-4eaf-84c1-1e98ffef88f8.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Strawberry Mochi Cake",
+   "desc": "",
+   "cents": 400,
+   "image": "https://d1w7312wesee68.cloudfront.net/u8lXc3tm5mb9--g-_IsKUimHVIS-p_ucguflO0OKR-Q/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/465a3bbb-e468-4e80-b00d-89759d8f6cb8.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sauces"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "A crisp, refreshing taste you know and love with zero calories",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Crush Grape Soda (Bottle)",
+   "desc": "Crush grape soda in a bottle offers a rush of grape flavor, typically caffeine-free",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Crush Orange Soda (Bottle)",
+   "desc": "Crush Orange Soda (bottle) - A bottled beverage offering a burst of orange flavor in every sip",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Sprite",
+   "desc": "The cold, refreshing flavors of lemon and lime, perfectly blended",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Crush Strawberry Soda (Bottle)",
+   "desc": "Crush strawberry soda offers a burst of sweet strawberry flavor in a refreshing carbonated drink, served in a bottle",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Horizon Organic Milk",
+   "desc": "Horizon Organic Milk is a certified organic milk, offering a naturally sourced and refreshing dairy beverage",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "Lightly carbonated water with a crisp, refreshing taste",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Coke",
+   "desc": "The cold, refreshing, sparkling classic that America loves",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Drinks"
+  },
+  {
+   "name": "Pure and refreshing bottled water",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bottled Water"
+  },
+  {
+   "name": "Calamansi Tea",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bottled Water"
+  },
+  {
+   "name": "Strawberry Yuzu",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bottled Water"
+  },
+  {
+   "name": "Dr. Pepper",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bottled Water"
+  },
+  {
+   "name": "Mini Churros with Caramel Sauce",
+   "desc": "Five mini churros rolled in cinnamon sugar and a side of house made caramel sauce",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/m0h9bv1ZzTOeQmPQc8BXtrf-4J7g_goLHuF_8AHfYz8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/91b6a88a-a522-42fd-89bb-5e8e43e9e872.png",
+   "alcohol": false,
+   "src": "card"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Hot Chicken Sandwich",
+    "desc": "Crispy Fried Chicken Thigh served on Toasted Brioche Bun, Creamy Coleslaw & Pickles ***Levels 2-4 gets mixed pickles (cucumbers, jalapeños, onions)*** ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+    "cents": 1500,
+    "image": "https://d1w7312wesee68.cloudfront.net/EKyaKSSZiHIh9lSvWXaj0p533aZMgdRv8OjvW9j9SPo/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/2948ec63-8167-4e77-ae1d-d9a8787d78cd.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "Romaine lettuce, choice of grilled or fried chicken tender, parmesan cheese, herbed croutons, and Caesar dressing",
+    "cents": 1200,
+    "image": "https://d1w7312wesee68.cloudfront.net/7axH-NITOVTNNtHejwypYwGPhF4ic0BiYvxe5Kyxstk/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/7787ed1b-58f9-4f46-b538-0d326593771b.png",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "KFC Tenders + Fries",
+    "desc": "",
+    "cents": 1800,
+    "image": "https://d1w7312wesee68.cloudfront.net/NmqNFBE2qPQE1ndCDr_ebBnRhaHc88I5ORG258SCtR0/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-327729000000000000/menu/items/9/item-1700000000683723449_1777845428.png",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hot Tenders and Fries",
+    "desc": "Three massive chicken tenders (breast), choice of spice level, fries, and choice of sauce ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+    "cents": 1700,
+    "image": "https://d1w7312wesee68.cloudfront.net/394D4qedb7P1WO_ZEFLbg85ooFSZCo-7ewXiN0Yr7gE/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/9bca2195-d93a-4fb9-aa4a-d2dc19cd51f3.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Six Hot Wings",
+    "desc": "Six Large Hot Wings with choice of a spice level, choice of sauce, and side of pickles ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+    "cents": 1400,
+    "image": "https://d1w7312wesee68.cloudfront.net/-XrCcrkG4NSTdgTa6szSpZ_gm_JFThLAR92Otri5BVQ/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/5e43f63e-2e41-4d0b-bd83-0c1700294019.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Twelve Hot Wings",
+    "desc": "Twelve large hot wings with choice of two different spice levels, choice of two sauces, and side of pickles ****Level 4 Disclaimer: Consume at your discretion, Not for the faint of heart****",
+    "cents": 2600,
+    "image": "https://d1w7312wesee68.cloudfront.net/XQa0lOLBbl2ImzAbnkQO3nfAQwId9tXUsUoKYE8YuJA/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/53166574-0205-435d-9ab2-68a128de703f/MenuItem/91755f90-3ac8-4098-af34-ecdcee27ea3c.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-chicken-sandwich_4ae973e6-a524-4274-93fc-7be1b2cf9a27"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-chicken-sandwich_4ae973e6-a524-4274-93fc-7be1b2cf9a27"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-caesar-salad_3076a0b8-2389-40d5-9821-88f14f6f5249"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-caesar-salad_3076a0b8-2389-40d5-9821-88f14f6f5249"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-kfc-tenders-fries_0a63e89b-33e7-4ebc-837d-913434590f1e"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-kfc-tenders-fries_0a63e89b-33e7-4ebc-837d-913434590f1e"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-tenders-and-fries_d1356dc0-0bb3-452e-aa44-f7eb950b9868"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-tenders-and-fries_d1356dc0-0bb3-452e-aa44-f7eb950b9868"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-six-hot-wings_5895aff7-e75d-4a36-88a0-94a5cd3c98b7"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-six-hot-wings_5895aff7-e75d-4a36-88a0-94a5cd3c98b7"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114659AM.png",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 268,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-twelve-hot-wings_be8047f6-d747-4e76-83c4-0ff7a79859d5"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/w8L1-NKZZS2J_yd4X9VooNOsQ81Tt5Kbo1LefFk26xs/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/2959c5c9-f6d0-4c6e-9274-23937de38ed1/ScreenShot20260305at114810AM.png",
+   "alt": "Delicious American-style burgers with sides in a casual dining setting",
+   "near": "Love Burn/ Me So Hungry Too Love Burn - 521A 3rd Street\n521A 3rd Street, San Francisco, CA\nDelivery\n",
+   "w": 1280,
+   "h": 567,
+   "page": "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-twelve-hot-wings_be8047f6-d747-4e76-83c4-0ff7a79859d5"
+  }
+ ]
+}

@@ -1,0 +1,615 @@
+{
+ "id": "b_lumpiacompany",
+ "source": "text",
+ "pages": [
+  "https://thelumpiacompany.com/",
+  "https://order.toasttab.com/online/thelumpiacompany",
+  "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu",
+  "https://thelumpiacompany.com/oakland-the-lumpia-company-drink-menu",
+  "https://thelumpiacompany.com/oakland-the-lumpia-company-catering#",
+  "https://thelumpiacompany.com/-catering",
+  "https://order.toasttab.com/online/thelumpiacompany/item-pork-shrimp-shanghai_b12dc37a-52af-4b55-b9d9-df42385348b4"
+ ],
+ "items": [
+  {
+   "name": "Pork & Shrimp Shanghai",
+   "desc": "",
+   "cents": 1300,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Mix & Match",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Bacon Cheeseburger",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-bacon-cheeseburger"
+  },
+  {
+   "name": "2AM Beef Taco",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Chicken Shanghai",
+   "desc": "",
+   "cents": 1200,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Chicken Tinola",
+   "desc": "",
+   "cents": 1300,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-chicken-tinola"
+  },
+  {
+   "name": "Crab",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Cubano",
+   "desc": "",
+   "cents": 1500,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Elote",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Lemon Pepper",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Mamas Veggie",
+   "desc": "",
+   "cents": 1300,
+   "section": "Lumpia"
+  },
+  {
+   "name": "NYC Pizza",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Turkey & Veggie w/ Swt Chili",
+   "desc": "",
+   "cents": 1300,
+   "section": "Lumpia"
+  },
+  {
+   "name": "Original Seasoned Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "Spicy Original Seasoned Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "Garlic Parm Adobo Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "Honey Buffalo Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "FBBQ Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "BBQ Jerk Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "BBQ Chicken Skewers",
+   "desc": "",
+   "cents": 1300,
+   "section": "Grilled Plates"
+  },
+  {
+   "name": "Filipino Mac-GHETTI - Regular",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides"
+  },
+  {
+   "name": "Filipino Mac-GHETTI - Kuya",
+   "desc": "",
+   "cents": 750,
+   "section": "Sides"
+  },
+  {
+   "name": "CHEESY Mac - Regular",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "CHEESY Mac - Kuya",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Fries - Adobo Seasoned",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides"
+  },
+  {
+   "name": "Fries - Plain Salted",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides"
+  },
+  {
+   "name": "Pork Belly Chips",
+   "desc": "",
+   "cents": 1000,
+   "section": "Sides"
+  },
+  {
+   "name": "Fried Shrimp (4pc)",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides"
+  },
+  {
+   "name": "Cheese Sauce on the Side",
+   "desc": "",
+   "cents": 100,
+   "section": "Sides"
+  },
+  {
+   "name": "GARLIC Rice",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides"
+  },
+  {
+   "name": "STEAMED Rice",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Fried Egg",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Arroz Caldo Bowl",
+   "desc": "",
+   "cents": 1000,
+   "section": "Bowls"
+  },
+  {
+   "name": "Bistek & Egg Bowl",
+   "desc": "",
+   "cents": 2000,
+   "section": "Bowls"
+  },
+  {
+   "name": "Fried shrimp rice bowl (GARLIC RICE)",
+   "desc": "",
+   "cents": 1550,
+   "section": "Bowls"
+  },
+  {
+   "name": "Fried Shrimp Rice Bowl (Steamed Rice)",
+   "desc": "",
+   "cents": 1500,
+   "section": "Bowls"
+  },
+  {
+   "name": "Tlc Salad",
+   "desc": "",
+   "cents": 1000,
+   "section": "Salads"
+  },
+  {
+   "name": "Garlic Noodle",
+   "desc": "",
+   "cents": 1300,
+   "section": "Garlic Noodles"
+  },
+  {
+   "name": "Ube pancakes",
+   "desc": "Ube 3 Stack",
+   "cents": 800,
+   "section": "Garlic Noodles"
+  },
+  {
+   "name": "Fried Shrimp + Chicken + Fries",
+   "desc": "",
+   "cents": 1700,
+   "section": "Combos"
+  },
+  {
+   "name": "Earls Combo Plate",
+   "desc": "",
+   "cents": 2000,
+   "section": "Combos"
+  },
+  {
+   "name": "Ube Pancake Stack",
+   "desc": "",
+   "cents": 1000,
+   "section": "Brunch"
+  },
+  {
+   "name": "Longanisa & Egg",
+   "desc": "",
+   "cents": 1000,
+   "section": "Brunch"
+  },
+  {
+   "name": "Arnel Palmer Calamansi Sweet Tea",
+   "desc": "",
+   "cents": 450,
+   "section": "Brunch"
+  },
+  {
+   "name": "Calamansi Limeade",
+   "desc": "",
+   "cents": 400,
+   "section": "Brunch",
+   "photo": "lumpiacompany-calamansi-limeade"
+  },
+  {
+   "name": "Strawberry Calamansi Limeade",
+   "desc": "",
+   "cents": 450,
+   "section": "Brunch",
+   "photo": "lumpiacompany-strawberry-calamansi-limeade"
+  },
+  {
+   "name": "Thai Iced Tea",
+   "desc": "",
+   "cents": 500,
+   "section": "Brunch",
+   "photo": "lumpiacompany-thai-iced-tea"
+  },
+  {
+   "name": "Guava Calamansi Limeade",
+   "desc": "",
+   "cents": 450,
+   "section": "Brunch"
+  },
+  {
+   "name": "Free Refill Fountain Soda",
+   "desc": "",
+   "cents": 500,
+   "section": "Drinks"
+  },
+  {
+   "name": "Fountain Soda - REGULAR 24OZ",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks"
+  },
+  {
+   "name": "Fountain Soda - KUYA 32OZ",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Ice Cup",
+   "desc": "",
+   "cents": 100,
+   "section": "Drinks"
+  },
+  {
+   "name": "(21+) Four Loko",
+   "desc": "",
+   "cents": 700,
+   "section": "Drinks"
+  },
+  {
+   "name": "(21+) Mike's Harder Lemonade",
+   "desc": "",
+   "cents": 700,
+   "section": "Drinks"
+  },
+  {
+   "name": "(21+) Modelo",
+   "desc": "",
+   "cents": 700,
+   "section": "Drinks"
+  },
+  {
+   "name": "(21+) Steel Reserve",
+   "desc": "",
+   "cents": 700,
+   "section": "Drinks"
+  },
+  {
+   "name": "(21+) White Claw",
+   "desc": "",
+   "cents": 500,
+   "section": "Drinks"
+  },
+  {
+   "name": "Arizona",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Bubble Tea Can",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Bundeburg Rootbeer",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Mineragua Sparkling Water",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Nomsi",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Poppi",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Red Bull / Celsius",
+   "desc": "",
+   "cents": 450,
+   "section": "Drinks"
+  },
+  {
+   "name": "Soda Can (Large Size)",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Soda Can (Mini Size)",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks"
+  },
+  {
+   "name": "Soda Can (Regular Size)",
+   "desc": "",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Soursop / Coconut Can",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Topo Chico",
+   "desc": "",
+   "cents": 500,
+   "section": "Drinks"
+  },
+  {
+   "name": "Vitamin Water",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Apple / Orange Juice",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Pure Sugarcane",
+   "desc": "",
+   "cents": 800,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Filipino Style Cantaloupe Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Mint Mojito Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Passion Fruit Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Watermelon Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Ginger Lemon Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Pineapple Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "No Ice",
+   "desc": "",
+   "cents": 100,
+   "section": "Presko sugarcane drinks"
+  },
+  {
+   "name": "Baco Cheeseburger",
+   "desc": "",
+   "cents": 1400,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-baco-cheeseburger"
+  },
+  {
+   "name": "Bicol Express Pork & Shrimp",
+   "desc": "",
+   "cents": 1300,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-bicol-express-pork-shrimp"
+  },
+  {
+   "name": "Earl's Turkey & Veggies",
+   "desc": "",
+   "cents": 1300,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-earl-s-turkey-veggies"
+  },
+  {
+   "name": "TLC Veggie",
+   "desc": "",
+   "cents": 1200,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-tlc-veggie"
+  },
+  {
+   "name": "Peach Mango Cobbler",
+   "desc": "",
+   "cents": 1200,
+   "section": "Lumpia",
+   "photo": "lumpiacompany-peach-mango-cobbler"
+  },
+  {
+   "name": "Adobo Seasoned",
+   "desc": "",
+   "cents": 1500,
+   "section": "Wings",
+   "photo": "lumpiacompany-adobo-seasoned"
+  },
+  {
+   "name": "Spicy Adobo Seasoned",
+   "desc": "",
+   "cents": 1500,
+   "section": "Wings"
+  },
+  {
+   "name": "Filipino BBQ",
+   "desc": "",
+   "cents": 1500,
+   "section": "Wings",
+   "photo": "lumpiacompany-filipino-bbq"
+  },
+  {
+   "name": "I Just Want Wings",
+   "desc": "",
+   "cents": 1300,
+   "section": "Wings"
+  },
+  {
+   "name": "Garlic Java RIce",
+   "desc": "",
+   "cents": 250,
+   "section": "Sides"
+  },
+  {
+   "name": "1/2 Size Mac - Ghetti",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Soft Boiled Egg",
+   "desc": "",
+   "cents": 100,
+   "section": "Sides"
+  },
+  {
+   "name": "Butter Garlic Shrimp Pancit Noodles",
+   "desc": "",
+   "cents": 1500,
+   "section": "Rice plates and bowls"
+  },
+  {
+   "name": "Veggie Garlic Pancit Noodles",
+   "desc": "",
+   "cents": 1200,
+   "section": "Rice plates and bowls"
+  },
+  {
+   "name": "Garlic Shrimp Rice Bowl",
+   "desc": "",
+   "cents": 1400,
+   "section": "Rice plates and bowls"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 200,
+   "section": "Rice plates and bowls"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 200,
+   "section": "Rice plates and bowls"
+  }
+ ]
+}

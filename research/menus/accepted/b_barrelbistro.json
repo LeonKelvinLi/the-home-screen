@@ -1,0 +1,283 @@
+{
+ "id": "b_barrelbistro",
+ "source": "text",
+ "pages": [
+  "https://www.thebarrelbistrowinebar.com/",
+  "https://www.thebarrelbistrowinebar.com/menus",
+  "https://www.thebarrelbistrowinebar.com/brunch",
+  "https://order.toasttab.com/online/thebarrelbistroandwinebar/item-the-barrel-burger_dce151ca-780f-45c0-ba18-838da47c8316",
+  "https://www.thebarrelbistrowinebar.com/s/New-Brunch-Menu.pdf",
+  "https://www.thebarrelbistrowinebar.com/s/010426-BARREL-MENUS-9.pdf",
+  "https://www.thebarrelbistrowinebar.com/s/010426-BARREL-MENUS-8.pdf"
+ ],
+ "items": [
+  {
+   "name": "Goat Cheese Salad",
+   "desc": "With petite Romaine hearts, baby kale, garlic croutons, parmesan cheese, house-made Caesar dressing",
+   "cents": 2200,
+   "section": "Salads"
+  },
+  {
+   "name": "Feta Saganaki Salad",
+   "desc": "Our Warm Napa Cabbage Salad features crispy pepper bacon, mushrooms, and tangy blue cheese gorgonzola, all tossed in a flavorful red wine dressing",
+   "cents": 2200,
+   "section": "Salads"
+  },
+  {
+   "name": "Caesar Salad",
+   "desc": "Pistachio, goat cheese mousse, butter lettuce, tomatoes, roasted beets and raspberry dressing.",
+   "cents": 2000,
+   "section": "Salads"
+  },
+  {
+   "name": "Mediterranean Breeze",
+   "desc": "",
+   "cents": 2000,
+   "section": "Salads"
+  },
+  {
+   "name": "House Salad",
+   "desc": "",
+   "cents": 1200,
+   "section": "Salads"
+  },
+  {
+   "name": "Prime Rib Eye",
+   "desc": "",
+   "cents": 6500,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Prime Lamb Chops",
+   "desc": "",
+   "cents": 6200,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Grilled Wild Boar Tenderloin",
+   "desc": "",
+   "cents": 4400,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Braised Rabbit Gnocchetti",
+   "desc": "",
+   "cents": 4400,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Grilled Branzino",
+   "desc": "",
+   "cents": 4600,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Chicken Parmesan",
+   "desc": "",
+   "cents": 3400,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Chilean Sea Bass",
+   "desc": "",
+   "cents": 5500,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Wild Lobster Tail Risotto",
+   "desc": "",
+   "cents": 4200,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Mushroom Risotto",
+   "desc": "",
+   "cents": 3800,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Risotto Alla Osso Buco",
+   "desc": "",
+   "cents": 4200,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Niman Short Ribs",
+   "desc": "",
+   "cents": 4600,
+   "section": "Main Courses"
+  },
+  {
+   "name": "Roasted Seasonal Vegetables",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sides"
+  },
+  {
+   "name": "Garlic Truffle Fries",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sides"
+  },
+  {
+   "name": "Crispy Brussels Sprouts",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sides"
+  },
+  {
+   "name": "Patatas Bravas",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sides"
+  },
+  {
+   "name": "Artisinal Soup Of The Day",
+   "desc": "",
+   "cents": 1300,
+   "section": "Sides"
+  },
+  {
+   "name": "Bread sourdough",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Fire-Kissed Pappardelle",
+   "desc": "",
+   "cents": 2800,
+   "section": "Sides"
+  },
+  {
+   "name": "SeaFood Linguine",
+   "desc": "",
+   "cents": 3600,
+   "section": "Sides"
+  },
+  {
+   "name": "Fettuccine Al Pollo E Funghi",
+   "desc": "",
+   "cents": 3200,
+   "section": "Sides"
+  },
+  {
+   "name": "Kids Pasta",
+   "desc": "Our Kids Pasta Butter is a delicious and simple dish perfect for young appetites. Made with tender pasta and a creamy butter sauce",
+   "cents": 1699,
+   "section": "Kids Options",
+   "photo": "barrel-bistro-kids-pasta"
+  },
+  {
+   "name": "Kids Chicken Souvlaki",
+   "desc": "",
+   "cents": 1600,
+   "section": "Kids Options"
+  },
+  {
+   "name": "Kids Beef Souvlaki",
+   "desc": "",
+   "cents": 1800,
+   "section": "Kids Options"
+  },
+  {
+   "name": "Prosciutto Flat Bread",
+   "desc": "",
+   "cents": 2800,
+   "section": "Flat Breads"
+  },
+  {
+   "name": "Filet Mignon Flat Bread",
+   "desc": "",
+   "cents": 2800,
+   "section": "Flat Breads"
+  },
+  {
+   "name": "Smoked Salmon Flat Bread",
+   "desc": "",
+   "cents": 2800,
+   "section": "Flat Breads"
+  },
+  {
+   "name": "Chef's Seasonal Vegan Flatbread",
+   "desc": "",
+   "cents": 2800,
+   "section": "Flat Breads"
+  },
+  {
+   "name": "Woodland mushroom flat bread",
+   "desc": "",
+   "cents": 2800,
+   "section": "Flat Breads"
+  },
+  {
+   "name": "The Shepherd Burger",
+   "desc": "",
+   "cents": 2200,
+   "section": "Burgers"
+  },
+  {
+   "name": "Barrel Sliders",
+   "desc": "",
+   "cents": 2200,
+   "section": "Burgers"
+  },
+  {
+   "name": "Chicken Skewers",
+   "desc": "",
+   "cents": 2800,
+   "section": "Bakaliko Souvlaki"
+  },
+  {
+   "name": "Beef Tenderloin",
+   "desc": "",
+   "cents": 3000,
+   "section": "Bakaliko Souvlaki"
+  },
+  {
+   "name": "Tiger Shrimp",
+   "desc": "",
+   "cents": 3000,
+   "section": "Bakaliko Souvlaki"
+  },
+  {
+   "name": "Wild Boar Souvlaki",
+   "desc": "",
+   "cents": 3200,
+   "section": "Bakaliko Souvlaki"
+  },
+  {
+   "name": "Uncle Yorgos' Fire Skewers",
+   "desc": "",
+   "cents": 5200,
+   "section": "Bakaliko Souvlaki"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "barrel-bistro-site-0",
+   "alt": "",
+   "credit": "Their own photo, from thebarrelbistrowinebar.com"
+  },
+  {
+   "photo": "barrel-bistro-site-2",
+   "alt": "",
+   "credit": "Their own photo, from thebarrelbistrowinebar.com"
+  },
+  {
+   "photo": "barrel-bistro-site-3",
+   "alt": "",
+   "credit": "Their own photo, from thebarrelbistrowinebar.com"
+  },
+  {
+   "photo": "barrel-bistro-site-11",
+   "alt": "",
+   "credit": "Their own photo, from thebarrelbistrowinebar.com"
+  },
+  {
+   "photo": "barrel-bistro-site-12",
+   "alt": "",
+   "credit": "Their own photo, from order.toasttab.com"
+  }
+ ]
+}

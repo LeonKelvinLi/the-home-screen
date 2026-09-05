@@ -928,6 +928,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      A party bus has no category on the services sheet and Oakland's Events
      seat is Jump and Roll's, so Cali Party Bus goes to the yellow page too. */
   'pleasanton-goods-1': 'b_elranchogrande', //  Mexican food
+  /* 2026-09-05. Dad's BBQ: the goods list has no barbecue seat, so the yellow
+     overflow page of the city he settled on; Tony's Style on the Boba spot he
+     named, twice; Caitlyn's on Bakery; Armenta on Gardener in Services (he
+     said Goods — it is a landscape contractor; flagged). */
+  'antioch-goods2-1': 'b_dadsbbq', //                Mississippi-style BBQ
+  'beasty-goods-14': 'b_tonysstyle', //              Chicken wings — "Add on Boba empty spot"
+  'albany-goods-14': 'b_tonysstyle', //              Chicken wings — "Add on Boba empty spot"
+  'san-jose-goods-12': 'b_caitlynssweets', //        Bakery — custom cakes
+  'antioch-services-21': 'b_armentalandscape', //    Gardener — landscape design and construction
+  'beasty-goods2-12': 'b_walkfree', //               Online: Pet goods is Pawddle's; yellow sheet
+  'santa-clara-services-14': 'b_lushspaw', //        Pet grooming
+  'san-jose-services2-0': 'b_lushspaw', //           Pet grooming is The Yappy Hour Club's; yellow sheet
   'pittsburg-goods-3': 'b_pijjaparadisepittsburg', // Indian food
   'livermore-goods-3': 'b_pijjaparadiselivermore', // Indian food
   'union-city-goods-8': 'b_chikindripunioncity', //   Chicken wings

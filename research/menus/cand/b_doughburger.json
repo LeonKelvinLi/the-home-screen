@@ -1,0 +1,463 @@
+{
+ "id": "b_doughburger",
+ "source": "square",
+ "alt": {
+  "text": 11
+ },
+ "pages": [
+  "https://www.doughburger.com/",
+  "https://www.doughburger.com/catering",
+  "https://www.doughburger.com/menu",
+  "https://www.doughburger.com/s/order",
+  "https://www.doughburger.com/merch"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Single DoughBurger",
+   "desc": "",
+   "cents": 599,
+   "label": "from $5.99",
+   "section": "Burgers",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/5HAIYKUEMCKQ7IZOTWEFAVSS.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Fries",
+   "desc": "",
+   "cents": 399,
+   "section": "Fries",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/AMI2QW4AKE3I7UA53IMVBLIC.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Saucy Fries",
+   "desc": "",
+   "cents": 499,
+   "section": "Fries",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/I5HNBN4GK7JPRMFGUQUX32AJ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Root Beer Float",
+   "desc": "Chilled root beer poured over creamy vanilla ice cream, creating a delightful frothy texture that's both refreshing and sweet.",
+   "cents": 599,
+   "section": "Shakes",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/SAOLZUXFXR3V6MB5P453EMBN.jpeg",
+   "alcohol": true,
+   "src": "square"
+  },
+  {
+   "name": "Double DoughBurger",
+   "desc": "",
+   "cents": 699,
+   "label": "from $6.99",
+   "section": "Burgers",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/N5WU6AOXZPDCKCDUM5VH3OQH.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Triple DoughBurger",
+   "desc": "",
+   "cents": 799,
+   "label": "from $7.99",
+   "section": "Burgers",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/JK5CP5GLWUCOWC4XV2LWTZHK.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Milk Shake",
+   "desc": "Indulge in the creamy goodness of our refreshing milkshake! Perfectly blended to satisfy your sweet cravings, our shakes are a delightful treat that will leave you wanting more. Order now for a taste of pure bliss!",
+   "cents": 699,
+   "section": "Shakes",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/QJ6557F6XHJJZI2ZOETGJCNK.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Soda",
+   "desc": "",
+   "cents": 275,
+   "section": "Beverage",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/WVJTRJO4MMHN2ZXMFZT4JWKJ.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Smash Fries",
+   "desc": "",
+   "cents": 599,
+   "section": "Fries",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/IIYZV65ZIG7PFQK6MDGRSAYT.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Dough Babbies",
+   "desc": "",
+   "cents": 499,
+   "section": "Treats",
+   "image": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/RU67IWIZSXK4LUMS3JIXIW67.jpeg",
+   "alcohol": false,
+   "src": "square"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Single DoughBurger",
+    "desc": "",
+    "cents": 599,
+    "label": "from $5.99",
+    "alcohol": false,
+    "src": "text",
+    "section": "MERCH"
+   },
+   {
+    "name": "Smash Fries",
+    "desc": "",
+    "cents": 599,
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Dough Babbies",
+    "desc": "",
+    "cents": 499,
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Double DoughBurger",
+    "desc": "",
+    "cents": 699,
+    "label": "from $6.99",
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Fries",
+    "desc": "",
+    "cents": 399,
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Milk Shake",
+    "desc": "",
+    "cents": 699,
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Triple DoughBurger",
+    "desc": "",
+    "cents": 799,
+    "label": "from $7.99",
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Soda",
+    "desc": "",
+    "cents": 275,
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Saucy Fries",
+    "desc": "",
+    "cents": 499,
+    "alcohol": false,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Root Beer Float",
+    "desc": "",
+    "cents": 599,
+    "alcohol": true,
+    "src": "text",
+    "section": "Add to order"
+   },
+   {
+    "name": "Grilled Cheese",
+    "desc": "",
+    "cents": 499,
+    "alcohol": false,
+    "src": "text",
+    "section": "Burgers"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://customer-ugajlzvkncemhxjh.cloudflarestream.com/44c150221bfb5ef928e9282be37c0777/thumbnails/thumbnail.jpg?width=1080",
+   "alt": "",
+   "near": "The Bay Area's #1 Burger\n\n⭐⭐⭐⭐⭐ | 5.0 Rated Excellent\n\nOrder Now\n\nBook Catering",
+   "w": 1080,
+   "h": 1920,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/5HAIYKUEMCKQ7IZOTWEFAVSS.jpeg?width=320&dpr=1",
+   "alt": "Single DoughBurger",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/IIYZV65ZIG7PFQK6MDGRSAYT.jpeg?width=320&dpr=1",
+   "alt": "Smash Fries",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/RU67IWIZSXK4LUMS3JIXIW67.jpeg?width=320&dpr=1",
+   "alt": "Dough Babbies",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/N5WU6AOXZPDCKCDUM5VH3OQH.jpeg?width=320&dpr=1",
+   "alt": "Double DoughBurger",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/AMI2QW4AKE3I7UA53IMVBLIC.jpeg?width=320&dpr=1",
+   "alt": "Fries",
+   "near": "",
+   "w": 320,
+   "h": 320,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/DSC09288_1758839668.jpg?width=2400&optimize=medium",
+   "alt": "",
+   "near": "About Dough Burger\n\nProudly serving halal smashburgers, fries, and shakes that are always made fresh",
+   "w": 2400,
+   "h": 1603,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/2026-03-19_18-31-26_1773963099.jpg?width=800&dpr=1",
+   "alt": "Dough Burger branded hat and Halal smash burger with melted American cheese, pickles, onions, and toasted bun from Dough Burger",
+   "near": "",
+   "w": 584,
+   "h": 874,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/2026-03-19_18-32-13_1773963146.jpg?width=800&dpr=1",
+   "alt": "Close up of a freshly made smash burger with melted cheese and crispy edges",
+   "near": "",
+   "w": 584,
+   "h": 389,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/DSC09260_1758839724.jpg?width=2400&optimize=medium",
+   "alt": "Exterior storefront of Dough Burger restaurant located on North First Street in San Jose",
+   "near": "",
+   "w": 2338,
+   "h": 3500,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/Dough%20Burger%20Milpitas%20Location%202_1787799164.JPEG?width=2400&optimize=medium",
+   "alt": "Dough Burger Milpitas storefront illuminated at night beneath a purple sky.",
+   "near": "",
+   "w": 2010,
+   "h": 3574,
+   "page": "https://www.doughburger.com/"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/DSC06279_1758685984.jpg?width=2400&optimize=medium",
+   "alt": "A row of Double Dough Burgers from a customer catering order.",
+   "near": "",
+   "w": 2400,
+   "h": 1603,
+   "page": "https://www.doughburger.com/catering"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/2026-06-25_09-51-19_1782395496.jpg?width=800&dpr=1",
+   "alt": "Smash burger catering tent with melted cheese, pickles, lettuce, and sauce held in gloved hands",
+   "near": "",
+   "w": 584,
+   "h": 778,
+   "page": "https://www.doughburger.com/catering"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/DB%20Stack_1782395508.jpeg?width=2400&optimize=medium",
+   "alt": "Stacked smash burgers with melted cheese, pickles, and sauce held in gloved hands",
+   "near": "",
+   "w": 1617,
+   "h": 1080,
+   "page": "https://www.doughburger.com/catering"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/SVC%20DB_1758689148.png?width=2400&optimize=medium",
+   "alt": "Silicon Valley Customs logo",
+   "near": "",
+   "w": 600,
+   "h": 450,
+   "page": "https://www.doughburger.com/catering"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/Bay%20Area%20Halal%20Foodies%20DG%20Logo_1759013075.png?width=2400&optimize=medium",
+   "alt": "Bay Area Halal Foodies logo",
+   "near": "",
+   "w": 600,
+   "h": 450,
+   "page": "https://www.doughburger.com/catering"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/New_DB%20MENU_V1.JPEG_1787776051.jpeg?width=2400&optimize=medium",
+   "alt": "Dough Burger menu featuring items and prices for smash burgers, fries, milkshakes, drinks prepared fresh in San Jose",
+   "near": "",
+   "w": 1920,
+   "h": 1080,
+   "page": "https://www.doughburger.com/menu"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/5HAIYKUEMCKQ7IZOTWEFAVSS.jpeg?width=640&optimize=medium",
+   "alt": "Single DoughBurger",
+   "near": "",
+   "w": 516,
+   "h": 516,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/N5WU6AOXZPDCKCDUM5VH3OQH.jpeg?width=640&optimize=medium",
+   "alt": "Double DoughBurger",
+   "near": "",
+   "w": 516,
+   "h": 516,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/JK5CP5GLWUCOWC4XV2LWTZHK.jpeg?width=640&optimize=medium",
+   "alt": "Triple DoughBurger",
+   "near": "",
+   "w": 516,
+   "h": 516,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/AMI2QW4AKE3I7UA53IMVBLIC.jpeg?width=640&optimize=medium",
+   "alt": "Fries",
+   "near": "",
+   "w": 640,
+   "h": 640,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/IIYZV65ZIG7PFQK6MDGRSAYT.jpeg?width=640&optimize=medium",
+   "alt": "Smash Fries",
+   "near": "",
+   "w": 640,
+   "h": 640,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/I5HNBN4GK7JPRMFGUQUX32AJ.jpeg?width=640&optimize=medium",
+   "alt": "Saucy Fries",
+   "near": "",
+   "w": 640,
+   "h": 640,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/WVJTRJO4MMHN2ZXMFZT4JWKJ.png?width=640&optimize=medium",
+   "alt": "Soda",
+   "near": "",
+   "w": 640,
+   "h": 671,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/QJ6557F6XHJJZI2ZOETGJCNK.jpeg?width=640&optimize=medium",
+   "alt": "Milk Shake",
+   "near": "",
+   "w": 640,
+   "h": 640,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/SAOLZUXFXR3V6MB5P453EMBN.jpeg?width=640&optimize=medium",
+   "alt": "Root Beer Float",
+   "near": "",
+   "w": 516,
+   "h": 516,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/RU67IWIZSXK4LUMS3JIXIW67.jpeg?width=640&optimize=medium",
+   "alt": "Dough Babbies",
+   "near": "",
+   "w": 640,
+   "h": 640,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/AKC6K7UYACANDF33OZMY54NF.png?width=640&optimize=medium",
+   "alt": "Side Pickles",
+   "near": "",
+   "w": 478,
+   "h": 510,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/NQPB6YJXWO2Q5IWP5B2KM3GD.jpeg?width=640&optimize=medium",
+   "alt": "Chili Peppers",
+   "near": "",
+   "w": 640,
+   "h": 691,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/2H2DZZX2UDIRWP6XKD3TJRPW.png?width=640&optimize=medium",
+   "alt": "Sliced Jalapeños",
+   "near": "",
+   "w": 640,
+   "h": 638,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://151268916.cdn6.editmysite.com/uploads/1/5/1/2/151268916/TARAYSFACEKMRG4ERE2ZZ5TB.png?width=640&optimize=medium",
+   "alt": "Secret Sauce",
+   "near": "",
+   "w": 640,
+   "h": 696,
+   "page": "https://www.doughburger.com/s/order"
+  },
+  {
+   "src": "https://c2297f376daa85c40ab1.cdn6.editmysite.com/uploads/b/c2297f376daa85c40ab15654663cc04c7b9b87a8f22a02364cf81090887667c1/15_1759012379.png?width=2400&optimize=medium",
+   "alt": "Person wearing White Dough Burger hoodie",
+   "near": "",
+   "w": 1080,
+   "h": 1080,
+   "page": "https://www.doughburger.com/merch"
+  }
+ ]
+}

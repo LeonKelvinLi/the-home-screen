@@ -1,0 +1,315 @@
+{
+ "id": "b_phoshodough",
+ "source": "square",
+ "pages": [
+  "https://phoshodough.square.site/#MYAG5QO4BE743MDFVVGXVER5",
+  "https://phoshodough.square.site/#MYAG5QO4BE743MDFVVGXVER5",
+  "https://squareup.com/us/en/online-store",
+  "https://squareup.com/us/en/online-store#main-content",
+  "https://squareup.com/us/en",
+  "https://squareup.com/us/en/restaurants",
+  "https://squareup.com/us/en/restaurants/switch-to-square"
+ ],
+ "items": [
+  {
+   "name": "Thai Iced Tea (TRA THAI)",
+   "desc": "",
+   "cents": 550,
+   "section": "Drinks",
+   "photo": "phoshodough-thai-iced-tea-tra-thai"
+  },
+  {
+   "name": "Grilled Chicken Vermicelli (Bún GÀ)",
+   "desc": "Bowls of vermicelli with mint, cilantro, bean sprouts, lettuce, pickled carrots & daikon, peanuts, spring green onions, & a side of fish sauce.",
+   "cents": 1595,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Oatmilk Thai Tea",
+   "desc": "",
+   "cents": 555,
+   "section": "Drinks"
+  },
+  {
+   "name": "Limeade (Nuoc Chanh)",
+   "desc": "",
+   "cents": 550,
+   "section": "Drinks",
+   "photo": "phoshodough-limeade-nuoc-chanh"
+  },
+  {
+   "name": "Fried Eggrolls (Chicken Inside!) (Chả giò)",
+   "desc": "Includes Chicken",
+   "cents": 1050,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Grilled Fish Vermicelli (Bún CÁ)",
+   "desc": "",
+   "cents": 1695,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Lemongrass Beef Vermicelli (Bún BÒ)",
+   "desc": "",
+   "cents": 1595,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Beef Ball N.S (Phở Bò viên)",
+   "desc": "",
+   "cents": 1450,
+   "section": "Noodle Soups"
+  },
+  {
+   "name": "Fish N.S (Phở CÁ Nướng)",
+   "desc": "",
+   "cents": 1650,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Shrimp N.S (Phở TÔM Nướng)",
+   "desc": "",
+   "cents": 1650,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Soft Drinks (Nuoc Ngoc)",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "phoshodough-soft-drinks-nuoc-ngoc"
+  },
+  {
+   "name": "Fresh Sliced Beef N.S (Phở tái)",
+   "desc": "",
+   "cents": 1450,
+   "section": "Noodle Soups"
+  },
+  {
+   "name": "Lemongrass Beef N.S (Phở BÒ Nướng)",
+   "desc": "",
+   "cents": 1550,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Pork N.S (Phở HEO Nướng)",
+   "desc": "",
+   "cents": 1550,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Shredded Chicken N.S (HỦ TIẾU GÀ xé)",
+   "desc": "",
+   "cents": 1450,
+   "section": "Noodle Soups"
+  },
+  {
+   "name": "Fresh Sliced Beef & Beef Ball N.S (Phở tái Bò viên )",
+   "desc": "",
+   "cents": 1495,
+   "section": "Noodle Soups"
+  },
+  {
+   "name": "Tofu Vermicelli (Bún Đậu phụ)",
+   "desc": "",
+   "cents": 1595,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Veggie N.S. (HỦ TIẾU CHAY)",
+   "desc": "",
+   "cents": 1495,
+   "section": "Noodle Soups"
+  },
+  {
+   "name": "Chicken & Shrimp Vermicelli (Bún TÔM GÀ Nướng)",
+   "desc": "",
+   "cents": 1750,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Pork & Shrimp Vermicelli (Bún TÔM HEO Nướng)",
+   "desc": "",
+   "cents": 1750,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Beef & Shrimp Vermicelli (Bún TÔM BÒ Nướng)",
+   "desc": "",
+   "cents": 1750,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Iced Green Tea (TRA DA)",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks"
+  },
+  {
+   "name": "Grilled Chicken Sandwich (Bánh mì GÀ Nướng)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Grilled Fish Sandwich (Bánh mì CÁ Nướng)",
+   "desc": "",
+   "cents": 1150,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Lemongrass Beef Sandwich (Bánh mì BÒ Nướng)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Grilled Pork Sandwich (Bánh mì HEO Nướng)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Grilled Shrimp Sandwich (Bánh mì TÔM Nướng)",
+   "desc": "",
+   "cents": 1150,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Tofu Sandwich (No Pate) (Bánh mì Đậu phụ)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Veggie Sandwich ( No Pate) (Bánh mì CHAY)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Fresh Shrimp Spring Roll (Gỏi cuốn TÔM)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Chicken Spring Roll (Gỏi cuốn GÀ Nướng)",
+   "desc": "",
+   "cents": 1095,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Grilled Shrimp Spring Roll (Gỏi cuốn TÔM Nướng)",
+   "desc": "",
+   "cents": 1150,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Fried Egg Roll Wrapped in Spring Roll (Chả giò cuốn)",
+   "desc": "",
+   "cents": 1195,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Grilled Fish Spring Rolls (Gỏi cuốn CÁ Nướng)",
+   "desc": "",
+   "cents": 1150,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Veggie Rolls (Gỏi cuốn CHAY)",
+   "desc": "",
+   "cents": 1050,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Grilled Pork Spring Roll (Gỏi cuốn HEO Nướng)",
+   "desc": "",
+   "cents": 1095,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Tofu Rolls (Gỏi cuốn Đậu phụ )",
+   "desc": "",
+   "cents": 1050,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Shrimp Vermicelli (Bún TÔM Nướng)",
+   "desc": "",
+   "cents": 1695,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Roasted Chicken N' Shrimp N.S (HỦ TIẾU TÔM GÀ Nướng)",
+   "desc": "",
+   "cents": 1695,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Lemongrass Beef N' Shrimp N.S (Phở TÔM BÒ Nướng)",
+   "desc": "",
+   "cents": 1695,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Pork N' Shrimp N.S (Phở TÔM HEO Nướng)",
+   "desc": "",
+   "cents": 1695,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Chicken N' Shrimp Spring Rolls (Gỏi cuốn TÔM GÀ Nướng)",
+   "desc": "",
+   "cents": 1195,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Grilled Pork N' Shrimp Spring Rolls (Gỏi cuốn TÔM HEO Nướng)",
+   "desc": "",
+   "cents": 1195,
+   "section": "Appetizers"
+  },
+  {
+   "name": "EGG ROLL VERMICELLI (Bún Chả giò)",
+   "desc": "",
+   "cents": 1595,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Twisted Thai Tea",
+   "desc": "",
+   "cents": 650,
+   "section": "Drinks",
+   "photo": "phoshodough-twisted-thai-tea"
+  },
+  {
+   "name": "Sir A. Palmer",
+   "desc": "",
+   "cents": 650,
+   "section": "Drinks",
+   "photo": "phoshodough-sir-a-palmer"
+  },
+  {
+   "name": "Roasted Chicken N.S (HỦ TIẾU GÀ Nướng)",
+   "desc": "",
+   "cents": 1550,
+   "section": "Grilled Noodle Soups"
+  },
+  {
+   "name": "Grilled Pork Vermicelli (Bún HEO Nướng)",
+   "desc": "",
+   "cents": 1595,
+   "section": "Vermicelli"
+  },
+  {
+   "name": "Vietnamese Coffee (Cafe Sua Da)",
+   "desc": "",
+   "cents": 550,
+   "section": "Drinks",
+   "photo": "phoshodough-vietnamese-coffee-cafe-sua-da"
+  }
+ ]
+}

@@ -1,0 +1,492 @@
+{
+ "id": "b_udessertstory",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.udessertstory.com/",
+  "https://www.udessertstory.com/catering",
+  "https://www.udessertstory.com/reservations",
+  "https://www.udessertstory.com/our-story",
+  "https://www.udessertstory.com/menu",
+  "https://www.udessertstory.com/contact-us",
+  "https://www.udessertstory.com/location"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Price:",
+   "desc": "",
+   "cents": 65000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Asian Dessert & Event Catering Services"
+  },
+  {
+   "name": "Add-On Flower Decoration: +",
+   "desc": "Note: We do not offer pickup for wedding cakes. Delivery is available — please inquire for a quote based on your venue location.",
+   "cents": 15000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Asian Dessert & Event Catering Services"
+  },
+  {
+   "name": "12-inch cake:",
+   "desc": "",
+   "cents": 30000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Asian Dessert & Event Catering Services"
+  },
+  {
+   "name": "9-inch cake:",
+   "desc": "",
+   "cents": 15000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Asian Dessert & Event Catering Services"
+  },
+  {
+   "name": "6-inch cake:",
+   "desc": "Perfect for larger weddings or dessert tables with variety.",
+   "cents": 10000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Asian Dessert & Event Catering Services"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/650%2Cfit/https%3A%2F%2Fs3.amazonaws.com%2Ftoasttab%2Frestaurants%2Frestaurant-87336000000000000%2Fmenu%2Fitems%2F6%2Fitem-600000047914224496_1767069233.png",
+   "alt": "Brown Butter Chicken Croffle",
+   "near": "Brown Butter Chicken Croffle\n\nOur signature crispy fried chicken on a buttery croffle, glazed with o",
+   "w": 650,
+   "h": 813,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/650%2Cfit/https%3A%2F%2Fs3.amazonaws.com%2Ftoasttab%2Frestaurants%2Frestaurant-87336000000000000%2Fmenu%2Fitems%2F4%2Fitem-600000043278846054_1756180910.jpg",
+   "alt": "Ube Matcha Latte",
+   "near": "Ube Matcha Latte\n\nOrganic Matcha from Uji farm, Japan\n\nAdd Item",
+   "w": 650,
+   "h": 867,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/650%2Cfit/https%3A%2F%2Fs3.amazonaws.com%2Ftoasttab%2Frestaurants%2Frestaurant-87336000000000000%2Fmenu%2Fitems%2F7%2Fitem-600000000634873037_1709349382.jpg",
+   "alt": "Mango Sticky Rice Bingsu",
+   "near": "Mango Sticky Rice Bingsu\n\nKorean snow ice with Local fresh Mango, Organic Homemade Crumble, Sticky R",
+   "w": 650,
+   "h": 488,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/650%2Cfit/https%3A%2F%2Fs3.amazonaws.com%2Ftoasttab%2Frestaurants%2Frestaurant-87336000000000000%2Fmenu%2Fitems%2F0%2Fitem-600000000634873200_1704866756.jpg",
+   "alt": "Latte",
+   "near": "Latte\n\nAdd Item",
+   "w": 650,
+   "h": 812,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/650%2Cfit/https%3A%2F%2Fs3.amazonaws.com%2Ftoasttab%2Frestaurants%2Frestaurant-87336000000000000%2Fmenu%2Fitems%2F6%2Fitem-600000047609283846_1766210168.png",
+   "alt": "Strawberry French Toast",
+   "near": "Strawberry French Toast\n\nClassic Brunch perfection. Thick-cut white milk bread soaked in rich custar",
+   "w": 650,
+   "h": 813,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/650%2Cfit/https%3A%2F%2Fs3.amazonaws.com%2Ftoasttab%2Frestaurants%2Frestaurant-87152000000000000%2Fmenu%2Fitems%2F8%2Fitem-600000047969268338_1767084076.png",
+   "alt": "The Loaded Nacho Croissant",
+   "near": "The Loaded Nacho Croissant\n\nOur flakiest croissant loaded with a perfect sunny-side-up fried egg, dr",
+   "w": 650,
+   "h": 813,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/ceabf3ce-3dde-4bb8-818f-dacb778b87cf-183580_540x.jpg",
+   "alt": "A modern take on Asian desserts, serving Downtown Berkeley and Mission SF",
+   "near": "A modern take on Asian desserts, serving Downtown Berkeley and Mission SF\n\nOur dessert menu is inspi",
+   "w": 540,
+   "h": 432,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/6bc3fd3d-455b-4215-9d9e-245148d2cacc-messageimage_1703127736227_360x.jpg",
+   "alt": "Online Ordering Made Sweet",
+   "near": "Online Ordering Made Sweet\n\nEnjoy U :Dessert Story from the comfort of home with easy online orderin",
+   "w": 360,
+   "h": 296,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/6eec17b0-2a20-4ed3-9145-d4556dedd3f9-item-600000000634873075_1707961862.jpg",
+   "alt": "Recipe: Chocolate Matcha Lava Cake",
+   "near": "Recipe: Chocolate Matcha Lava Cake\n\n\"At Tammy Boonlieng, you’ll find a variety of photogenic Asian-i",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/028f9a63-3e53-42d4-8ce7-0baffaa36f3b-476084937_1060581166103278_4267203157867065796_n.avif",
+   "alt": "U :Dessert Story serves next-level Asian cuisine",
+   "near": "U :Dessert Story serves next-level Asian cuisine\n\n\"They don't call it \"U\" for nothing! It's all abou",
+   "w": 1000,
+   "h": 1250,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/7280a5a4-543e-4127-8067-81faa37c2277-image.avif",
+   "alt": "",
+   "near": "Best Dessert Restaurant in San Francisco & Berkeley\n\nWe bring a new perspective to Asian desserts, m",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/81cdb6a0-2f48-4dfe-be72-492e1e9be5b6-21_960d79b4-24fe-48e7-92d9-375b7ca75989_800x.png",
+   "alt": "Make Every Celebration Unforgettable with<br>U :Dessert Story Catering",
+   "near": "Make Every Celebration Unforgettable with\nU :Dessert Story Catering\n\nFrom intimate weddings to vibra",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/7224d312-1e1b-412a-9f49-e4ad8cb78a6b-catering_6_800x.png",
+   "alt": "Asian Dessert &amp; Event Catering Services",
+   "near": "Asian Dessert & Event Catering Services\n\nU :Dessert Story offers full-service Asian dessert and even",
+   "w": 800,
+   "h": 600,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/f5f8aeb8-ce23-4db8-9e75-5b1af8c941c4-24_74ed0f8e-0db2-465f-8bc2-6c6e10f2b41c_800x.png",
+   "alt": "One-Stop Catering for Weddings &amp; Celebrations",
+   "near": "One-Stop Catering for Weddings & Celebrations\n\nWhether you’re planning a stylish wedding reception, ",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/adfce6a7-fa27-4035-982b-49315c18f53e-15_800x.png",
+   "alt": "Wedding Crepe Cake Catering",
+   "near": "Wedding Crepe Cake Catering\n\nElevate your special day with a stunning 3-Tier Wedding Crepe Cake — ha",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/24a5cecb-d37a-4391-ab92-6345634b4509-line_album_bingsoo_catering_250719_5_800x.jpg",
+   "alt": "Bingsoo Catering – Korean Shaved Ice Experience",
+   "near": "Bingsoo Catering – Korean Shaved Ice Experience\n\nRefresh, Delight & Impress your guests with our sig",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/5149c58a-4f9a-4308-8c23-1852f240e136-line_album_event_booth_250719_4_800x.jpg",
+   "alt": "General Catering — Sweet &amp; Savory One-Stop Service",
+   "near": "General Catering — Sweet & Savory One-Stop Service\n\nFull-Service Event Catering in San Francisco and",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/bf605f82-8a8f-47c1-842c-7607f025eb70-line_album_catering_250411_5_800x.jpg",
+   "alt": "Drinks",
+   "near": "Drinks\n\nAdd a burst of flavor and fun to your event with our Signature Drinks, crafted from premium ",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/17473a98-f174-4e49-9262-76edcf981988-34_800x.png",
+   "alt": "Alcoholic Beverages",
+   "near": "Alcoholic Beverages\n\nAlcoholic Beverages for Private Events:\n- Jasmine Rice Lager Beer (Locally brew",
+   "w": 800,
+   "h": 1067,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/aa2ee986-6282-494b-929f-a1e989d7997e-wedding27.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/ca00d5fa-0136-4bbe-b4ec-3dae9c9b537e-bingsoo-20private-20party-20set-20up.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1334,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/63387e62-54d9-4000-bd1b-82361f1225be-bingsu-20cater.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/fdb3632e-8ba9-42c5-9a20-d14b19947eab-bingsoo-20serving-20ctering-201.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/f25747f1-bec5-4137-a5d8-ce6f73fd33ca-mealbox2.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/bf5c8450-0c60-4560-a4be-73bb0c0de710-bingsu-20outdoor-20catering.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/a58ac516-c7c4-417c-b311-2a4212ea6663-cake-20catering-201.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/533e7be6-8acd-4247-a633-be97c6a577d9-cake-20catering.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/d4ff9ed3-f883-4f37-b6ff-a2556aa828cc-drink-20catering-203.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/6d7a84ff-2ffa-4a7c-a5c4-4bd904335371-mealbox8.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/0d374e2b-743c-4c6b-9191-28723d9b8eef-catering-20croffle-201.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/4e12a096-ef19-428d-a428-965467d0b007-wedding5.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1000,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/8a86150c-2727-48a8-b5c4-d09be8150038-dessert-20break-20catering-201.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/62f4d4df-3854-4acc-9fa9-ca23f74642d2-smoothie.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1250,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/5da90489-8c70-46c7-8378-68287c18e059-wedding11.avif",
+   "alt": "",
+   "near": "Photo Gallery\n\nCheck out our previous events & collaborations!",
+   "w": 1000,
+   "h": 1333,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/4469b4a2-4415-4efc-ac01-f299e26bc4f0-wedding_cakes_be740d63-1462-474b-87d4-c7e51ff46379_1600x.png",
+   "alt": "",
+   "near": "Exceptional catering for your special events in Berkeley & Mission SF\n\nDelicious catering options fo",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/catering"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/reservations"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/00a059cc-eadf-4263-85e5-f10d195a91dc-481200750_1079261377568590_2657684820247396917_n.avif",
+   "alt": "",
+   "near": "Reserve Your Table at U :Dessert Story\n\nSelect Your Favorite Location & Secure Your Table Below",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/reservations"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/our-story"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/97d0f92e-a2d4-406f-b3e1-07eacf366eba-1-13-udessert-01361_540x.jpg",
+   "alt": "A new vision for Asian desserts in Berkeley &amp; the Mission District",
+   "near": "A new vision for Asian desserts in Berkeley & the Mission District\n\nU :Dessert Story was created to ",
+   "w": 540,
+   "h": 675,
+   "page": "https://www.udessertstory.com/our-story"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/08745bb9-cf3b-47ec-b384-cde066ef0214-screen_shot_2024-11-23_at_10-09-18_pm_300x.png",
+   "alt": "Our Most Loved Creations",
+   "near": "Our Most Loved Creations\n\nOur specialty menu features handcrafted desserts made fresh in our kitchen",
+   "w": 300,
+   "h": 369,
+   "page": "https://www.udessertstory.com/our-story"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/d592bf2e-b9b9-4f9d-830f-11b107650f57-1728201406278_300x.jpg",
+   "alt": "Celebrate with U :Dessert Story",
+   "near": "Celebrate with U :Dessert Story\n\nOur catering services bring the signature U :Dessert Story experien",
+   "w": 300,
+   "h": 400,
+   "page": "https://www.udessertstory.com/our-story"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/77e4e2a7-7dff-49f1-b438-02d811decfa5-3-9-udessertmagazine-07786_540x.jpg",
+   "alt": "Order online with ease in Berkeley &amp; San Francisco’s Mission District",
+   "near": "Order online with ease in Berkeley & San Francisco’s Mission District\n\nOur online ordering platform ",
+   "w": 540,
+   "h": 675,
+   "page": "https://www.udessertstory.com/our-story"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/38ae7b7d-696a-43c5-8cd7-d6e941b2e2a8-inside_ud1_540x.jpg",
+   "alt": "",
+   "near": "About U :Dessert Story",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/our-story"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/menu"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/028f9a63-3e53-42d4-8ce7-0baffaa36f3b-476084937_1060581166103278_4267203157867065796_n.avif",
+   "alt": "",
+   "near": "Our Signature Bingsu\n\nDelicately shaved ice desserts inspired by Korean traditions.\n\nView Menu",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/menu"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/00a059cc-eadf-4263-85e5-f10d195a91dc-481200750_1079261377568590_2657684820247396917_n.avif",
+   "alt": "",
+   "near": "A New Level of Cake & Crepe Cakes\n\nThoughtfully crafted desserts inspired by Asian flavors.\n\nView Me",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/menu"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/0974c719-5706-4445-8aac-216603c1a201-491443927_18278195692249952_7748187821814688390_n.avif",
+   "alt": "",
+   "near": "Our Specialty Drinks Collection\n\nSignature sips made with premium ingredients and balance.\n\nView Men",
+   "w": 1280,
+   "h": 680,
+   "page": "https://www.udessertstory.com/menu"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/contact-us"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/81cdb6a0-2f48-4dfe-be72-492e1e9be5b6-21_960d79b4-24fe-48e7-92d9-375b7ca75989_800x.png",
+   "alt": "",
+   "near": "Get in Touch",
+   "w": 580,
+   "h": 618,
+   "page": "https://www.udessertstory.com/contact-us"
+  },
+  {
+   "src": "https://image-cdn.chowlyinc.com/300%2Cfit%2Cavif/https%3A%2F%2Fchowly-coo-configuration-assets.nyc3.digitaloceanspaces.com%2Fchowly-coo-prod-configuration-assets%2Fpublic%2Fassets%2FU%253ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png",
+   "alt": "U :Dessert Story logo",
+   "near": "Home\nCatering\nReservations\nRetail/Nationwide Shippng\nMore",
+   "w": 300,
+   "h": 314,
+   "page": "https://www.udessertstory.com/location"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/38ae7b7d-696a-43c5-8cd7-d6e941b2e2a8-inside_ud1_540x.jpg",
+   "alt": "San Francisco, CA",
+   "near": "San Francisco, CA",
+   "w": 540,
+   "h": 648,
+   "page": "https://www.udessertstory.com/location"
+  },
+  {
+   "src": "https://www.udessertstory.com/maglev/assets/a9a77206-6a81-4873-8de0-cfadcc98a871-2-4-udessertstory-03142_540x.jpg",
+   "alt": "Berkeley, CA",
+   "near": "Berkeley, CA",
+   "w": 540,
+   "h": 432,
+   "page": "https://www.udessertstory.com/location"
+  }
+ ]
+}

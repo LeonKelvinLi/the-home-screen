@@ -1,0 +1,511 @@
+{
+ "id": "b_thehangoutbreakfast",
+ "source": "text",
+ "pages": [
+  "https://www.thehangoutbreakfast.com/",
+  "https://www.thehangoutbreakfast.com/menu",
+  "https://www.doordash.com/store/the-hangout-walnut-creek-28949494/36271779/?srsltid=AfmBOopbcWoWgAUgP2jmya5-TZ-TyMsS0IdQ7GyDb-OEEYgRrOgr3Hv7",
+  "https://www.doordash.com/store/the-hangout-pleasant-hill-22953199/30003750/?srsltid=AfmBOorzYoZWiXILi_w0dqTCN6hks_36i6RwnPkFmHWUQ6GQRL4cFFH8",
+  "https://www.doordash.com/home",
+  "https://www.doordash.com/tabs/grocery",
+  "https://www.doordash.com/tabs/retail"
+ ],
+ "items": [
+  {
+   "name": "Loco Moco",
+   "desc": "Beef patty & rice, bell, mushroom, onion, fried egg and curry & gravy sauce mixed",
+   "cents": 2300,
+   "section": "Menu"
+  },
+  {
+   "name": "Gai Gra Prow",
+   "desc": "Ground chicken, basil, onion, bell, garlic, pepper, and fried egg over rice.",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "Chick Pops",
+   "desc": "Crispy fried chicken and bite waffle",
+   "cents": 1400,
+   "section": "Menu",
+   "photo": "the-hangout-breakfast-chick-pops"
+  },
+  {
+   "name": "Ube Pancake",
+   "desc": "Fluffy purple yam pancakes topped with fresh strawberries, blueberries, and grapes, served with a side of ube sauce.",
+   "cents": 2000,
+   "section": "Menu"
+  },
+  {
+   "name": "SIDE Bacon",
+   "desc": "Crispy, savory bacon strips, perfectly rendered for a delicious crunch.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "The Hangout Omelet",
+   "desc": "Bacon, avocado, tomato, Cheddar, and homemade bacon jam",
+   "cents": 2600,
+   "section": "Menu"
+  },
+  {
+   "name": "Sausage Scramble",
+   "desc": "CK apple sausage, spinach, onion, and Cheddar cheese",
+   "cents": 2300,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Two Eggs",
+   "desc": "Choice of two eggs: Up, Over Easy, Over Medium, Over Hard, Poached, Poached Medium, Poached Hard, Scrambled, Egg Whites, or No Egg.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "Buttermilk Pancake",
+   "desc": "Fluffy buttermilk pancakes topped with fresh strawberries, blueberries, grapes, a dollop of butter, and a dusting of powdered sugar. Syrup served on the side.",
+   "cents": 1800,
+   "section": "Menu"
+  },
+  {
+   "name": "Garlic Noodles",
+   "desc": "Garlic Noodles Green onion, Parmesan cheese Choice of meat Crispy Chicken or Tiger prawns",
+   "cents": 2300,
+   "section": "Menu"
+  },
+  {
+   "name": "Chicken & Waffle",
+   "desc": "Served with homemade spicy maple syrup",
+   "cents": 2500,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Pancake",
+   "desc": "A single pancake, often served as a delightful complement to any meal.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "Salmon Avocado Toast",
+   "desc": "Cherry tomato, pickled shallot, and caper",
+   "cents": 1700,
+   "section": "Menu",
+   "photo": "the-hangout-breakfast-salmon-avocado-toast"
+  },
+  {
+   "name": "Avocado Toast",
+   "desc": "Strawberries, basil, and fresh mozzarella",
+   "cents": 1500,
+   "section": "Menu",
+   "photo": "the-hangout-breakfast-avocado-toast"
+  },
+  {
+   "name": "Morning Poutine",
+   "desc": "Fries, bacon, fried egg, Pepper Jack cheese, curry & gravy sauce mixed",
+   "cents": 1400,
+   "section": "Menu"
+  },
+  {
+   "name": "Mixed Berries Parfait",
+   "desc": "Greek yogurt, granola, almond, and mixed berries",
+   "cents": 1200,
+   "section": "Menu"
+  },
+  {
+   "name": "Rosemary Fries",
+   "desc": "Crispy potato wedges seasoned with fresh rosemary.",
+   "cents": 900,
+   "section": "Menu"
+  },
+  {
+   "name": "Healthy Pig",
+   "desc": "Brussels sprouts, Parmesan, and bacon jam",
+   "cents": 1300,
+   "section": "Menu"
+  },
+  {
+   "name": "Two Eggs Any Style",
+   "desc": "Variety of styles. Accompanied by a choice of crispy potato, fries, mixed greens, or mixed fruits. Select wheat toast, ciabatta, English muffin",
+   "cents": 1600,
+   "section": "Menu"
+  },
+  {
+   "name": "Western Scramble",
+   "desc": "Bacon, avocado, tomato, Cheddar, homemade bacon jam",
+   "cents": 2300,
+   "section": "Menu"
+  },
+  {
+   "name": "Italian Piggy Scramble",
+   "desc": "Pork wine sausage, cherry tomato, onion, scallion, cheddar",
+   "cents": 2300,
+   "section": "Menu"
+  },
+  {
+   "name": "Trio Scramble",
+   "desc": "Bacon, CK apple sausage, pork wine sausage, basil, and Cheddar cheese",
+   "cents": 2400,
+   "section": "Menu"
+  },
+  {
+   "name": "Farmer Scramble",
+   "desc": "Tofu, baby kale, onion, mushroom, tomato and bell pepper",
+   "cents": 2100,
+   "section": "Menu"
+  },
+  {
+   "name": "Under the Sea Omelet",
+   "desc": "Smoked salmon, crab, tiger prawn, bacon, bell pepper, and Pepper Jack",
+   "cents": 3300,
+   "section": "Menu"
+  },
+  {
+   "name": "Crab Benedict",
+   "desc": "Crab, cherry tomato, avocado, Parmesan, and hollandaise",
+   "cents": 3300,
+   "section": "Menu"
+  },
+  {
+   "name": "Flying Pig Benedict",
+   "desc": "Bacon, baby kale, tomato, avocado, and hollandaise",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "49Er Benedict",
+   "desc": "Smoked salmon, avocado, capers, and wasabi hollandaise",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "Black Forest Benedict",
+   "desc": "Black Forest Ham, tomato, asparagus , hollandaise",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "Sausage Benedict",
+   "desc": "CK apple sausage, bell, onion, and spicy hollandaise",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "Crispy Chicken Benedict",
+   "desc": "Cherry tomato, red bell pepper, onion, and spicy hollandaise",
+   "cents": 2500,
+   "section": "Menu"
+  },
+  {
+   "name": "Florentine Benedict",
+   "desc": "Sautéed spinach, tomato, Parmesan, and hollandaise",
+   "cents": 2000,
+   "section": "Menu"
+  },
+  {
+   "name": "Hangover",
+   "desc": "Stir-fried Italian noodle, basil, bell, onion, mushroom, CK apple, bacon, and fried egg",
+   "cents": 2200,
+   "section": "Menu",
+   "photo": "the-hangout-breakfast-hangover"
+  },
+  {
+   "name": "Chick Katsu Curry",
+   "desc": "Crispy chicken & rice, fried Yukon, fried egg and curry & gravy sauce mixed",
+   "cents": 2400,
+   "section": "Menu"
+  },
+  {
+   "name": "Choco Banana Pancake",
+   "desc": "Served with homemade chocolate sauce and almond",
+   "cents": 2000,
+   "section": "Menu"
+  },
+  {
+   "name": "Monster Hotcakes",
+   "desc": "1 French toast , 3 Pancakes, 2 Eggs, 3 Bacon, or Ham, or 2 Chicken apple, or GarlicPork wine",
+   "cents": 3300,
+   "section": "Menu"
+  },
+  {
+   "name": "Lemon Creme Anglaise Pancake",
+   "desc": "Served with homemade lemon cream anglaise",
+   "cents": 2000,
+   "section": "Menu"
+  },
+  {
+   "name": "Classic Waffle",
+   "desc": "Golden waffle topped with fresh strawberries, blueberries, grapes, orange slices, and a sprig of rosemary, lightly dusted with powdered sugar",
+   "cents": 1700,
+   "section": "Menu"
+  },
+  {
+   "name": "Sunrise French Toast",
+   "desc": "Thick slices of French toast topped with assorted fresh berries, grapes, and orange slices, dusted with powdered sugar.",
+   "cents": 1700,
+   "section": "Menu"
+  },
+  {
+   "name": "Cha Thai Pancake",
+   "desc": "Served with homemade Thai tea sauce",
+   "cents": 2000,
+   "section": "Menu"
+  },
+  {
+   "name": "Berries Lover Toast",
+   "desc": "Mixed berries mascarpone stuffed with homemade strawberry sauce and cornflake",
+   "cents": 2100,
+   "section": "Menu"
+  },
+  {
+   "name": "California Burger",
+   "desc": "Beef patty, romaine, avocado, tomato, Cheddar, and bacon jam",
+   "cents": 2100,
+   "section": "Menu"
+  },
+  {
+   "name": "Terriyaki chicken burger",
+   "desc": "Crispy potato, French fries, mixed greens, mixed fruits, or no side.",
+   "cents": 2100,
+   "section": "Menu"
+  },
+  {
+   "name": "Fat Boy Burger",
+   "desc": "Beef patty, bacon, fried egg, fried onion, pickled ginger, and Pepper Jack",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "Rainbow Burger",
+   "desc": "Bell peppers, avocado, romaine, and tomato",
+   "cents": 1800,
+   "section": "Menu"
+  },
+  {
+   "name": "Chicken Burger",
+   "desc": "Crispy CK, tomato, and spring mix",
+   "cents": 2100,
+   "section": "Menu"
+  },
+  {
+   "name": "Ultimate Bacon Burger",
+   "desc": "Beef patty, romaine, avocado, tomato, Cheddar, and bacon jam",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "BLT",
+   "desc": "Bacon, romaine, tomato, and Pepper Jack",
+   "cents": 1800,
+   "section": "Menu"
+  },
+  {
+   "name": "Ham cheese Sandwich",
+   "desc": "Wheat toast, Bacon, eggs, and Cheddar",
+   "cents": 1800,
+   "section": "Menu"
+  },
+  {
+   "name": "BEC",
+   "desc": "Bacon, eggs, and Cheddar",
+   "cents": 1800,
+   "section": "Menu"
+  },
+  {
+   "name": "Smoked Salmon Salad",
+   "desc": "Cherry tomato, spring mix, romaine, pickled shallot, caper, and wasabi dressing",
+   "cents": 2100,
+   "section": "Menu"
+  },
+  {
+   "name": "Avocado Salad",
+   "desc": "Cherry tomato, baby kale, orange, spring mix, slice almond, and champagne vinaigrette",
+   "cents": 1700,
+   "section": "Menu"
+  },
+  {
+   "name": "Crispy Chicken Salad",
+   "desc": "Crispy CK, avocado, romaine, cherry tomato, pickled shallot, Parmesan, and sriracha dressing",
+   "cents": 2200,
+   "section": "Menu"
+  },
+  {
+   "name": "Grilled Cheese with Fries",
+   "desc": "Cheese sandwich served with fries. Choice of drink: Apple Juice or Milk.",
+   "cents": 1300,
+   "section": "Menu"
+  },
+  {
+   "name": "KID Pancake",
+   "desc": "Pancake with choice of Apple Juice or Milk.",
+   "cents": 1300,
+   "section": "Menu"
+  },
+  {
+   "name": "KID Scrambled",
+   "desc": "Scrambled eggs. Option of Apple Juice or Milk.",
+   "cents": 1300,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Toast",
+   "desc": "Choice of wheat, ciabatta, English muffin, or gluten-free toast.",
+   "cents": 500,
+   "section": "Menu"
+  },
+  {
+   "name": "SIDE Potato",
+   "desc": "Potatoes prepared in a style complementary to American cuisine, typically seasoned and served as a simple yet satisfying accompaniment.",
+   "cents": 600,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Pork Sausage",
+   "desc": "Pork sausage, typically prepared and served as a side dish, offering a simple yet satisfying complement to any meal.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "SIDE Waffle",
+   "desc": "A single Belgian-style waffle, typically served with honey butter and maple syrup.",
+   "cents": 800,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Crispy Chicken",
+   "desc": "Boneless chicken pieces, seasoned and deep fried for a crispy finish.",
+   "cents": 1200,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Patty",
+   "desc": "Rare, Medium Rare, Medium, Medium Well, or Well Done.",
+   "cents": 900,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Salmon",
+   "desc": "This dish features a carefully prepared portion of salmon, typically seasoned and cooked to enhance its natural flavors.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Ham",
+   "desc": "Side portion of sliced ham, typically served as an accompaniment.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Curry",
+   "desc": "Aromatic spices combined to create a rich, savory curry sauce, typically served as a complement to main dishes.",
+   "cents": 500,
+   "section": "Menu"
+  },
+  {
+   "name": "Mixed Fruits",
+   "desc": "A medley of fresh-cut fruits, typically including strawberries, kiwi, oranges, and blackberries, offering a refreshing complement to any meal.",
+   "cents": 600,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Salad",
+   "desc": "Fresh Green Salad: A Crisp, Refreshing Side Dish",
+   "cents": 500,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Banana",
+   "desc": "A freshly sourced banana, typically served as a light and simple complement to any meal.",
+   "cents": 500,
+   "section": "Menu"
+  },
+  {
+   "name": "Homemade Bacon Jam",
+   "desc": "A savory blend of slow-cooked bacon, caramelized onions, and a hint of sweetness, typically spread on toast or used to enhance dishes.",
+   "cents": 500,
+   "section": "Menu"
+  },
+  {
+   "name": "Side CK Apple",
+   "desc": "Sliced apples, typically served as a simple, refreshing accompaniment.",
+   "cents": 700,
+   "section": "Menu"
+  },
+  {
+   "name": "Side 1 Eggs",
+   "desc": "Sunny-side up, over easy, medium, hard, poached, scrambled, whites only, or none.",
+   "cents": 350,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Strawberry sauce",
+   "desc": "A sweet and tangy sauce made with fresh strawberries, typically served as a complement to desserts or as a flavorful addition to various dishes.",
+   "cents": 300,
+   "section": "Menu"
+  },
+  {
+   "name": "SIDE Thai Tea Sauce",
+   "desc": "Inspired by the aromatic and refreshing qualities of Thai tea, this sauce combines its creamy sweetness with a hint of spice, perfect for enhancing any dish.",
+   "cents": 300,
+   "section": "Menu"
+  },
+  {
+   "name": "SIDE Chocolate Sauce",
+   "desc": "Rich and velvety chocolate sauce, often served to complement a variety of desserts.",
+   "cents": 300,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Rice",
+   "desc": "Seasoned steamed grains, perfect as a side.",
+   "cents": 400,
+   "section": "Menu"
+  },
+  {
+   "name": "Avocado",
+   "desc": "Fresh and creamy fruit with a rich taste, perfect for adding a touch of luxury to any dish.",
+   "cents": 400,
+   "section": "Menu",
+   "photo": "the-hangout-breakfast-avocado"
+  },
+  {
+   "name": "Side Ube Sauce",
+   "desc": "A vibrant, sweet sauce made from purple yam, often enhancing desserts or adding a unique twist to savory dishes.",
+   "cents": 300,
+   "section": "Menu"
+  },
+  {
+   "name": "Side Hollandaise",
+   "desc": "A velvety blend of butter, egg yolks, and lemon juice, often complemented with a hint of dijon mustard for a smooth and rich taste.",
+   "cents": 300,
+   "section": "Menu"
+  },
+  {
+   "name": "SIDE Lemon Sauce",
+   "desc": "A tangy accompaniment made with fresh lemon juice, typically includes a blend of herbs and spices to enhance its flavor.",
+   "cents": 300,
+   "section": "Menu"
+  },
+  {
+   "name": "Ube Espresso",
+   "desc": "Dirty ube combines the unique taste of ube (purple yam) with the boldness of espresso, typically served as a warm beverage.",
+   "cents": 900,
+   "section": "Menu"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "the-hangout-breakfast-site-0",
+   "alt": "breakfast at the hangout",
+   "credit": "Their own photo, from thehangoutbreakfast.com"
+  },
+  {
+   "photo": "the-hangout-breakfast-site-1",
+   "alt": "cold drinks",
+   "credit": "Their own photo, from thehangoutbreakfast.com"
+  },
+  {
+   "photo": "the-hangout-breakfast-site-2",
+   "alt": "Walnut Creek",
+   "credit": "Their own photo, from thehangoutbreakfast.com"
+  }
+ ]
+}

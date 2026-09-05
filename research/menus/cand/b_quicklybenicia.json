@@ -1,0 +1,897 @@
+{
+ "id": "b_quicklybenicia",
+ "source": "text",
+ "alt": {
+  "jsonld": 17
+ },
+ "pages": [
+  "https://www.quicklybenicia.com/",
+  "https://www.quicklybenicia.com/specialty-menu",
+  "https://quickly-benicia.cloveronline.com/menu/all",
+  "https://quickly-benicia.cloveronline.com/menu/all",
+  "https://quickly-benicia.cloveronline.com/menu/all",
+  "https://quickly-benicia.cloveronline.com/menu/buldok-ramen-AKX1Q9VN6S4AY",
+  "https://quickly-benicia.cloveronline.com/menu/freeze-dried-topping-MKKNTC1YKMBHP"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Chee-Hoo Sticks",
+   "desc": "",
+   "cents": 819,
+   "image": "https://cloverstatic.com/menu-assets/items/WMXCFR9YA3NR4_1500x1125.jpeg?v=1776970272747",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Hula Rings",
+   "desc": "",
+   "cents": 510,
+   "image": "https://cloverstatic.com/menu-assets/items/MVVDK8CMM0W08_1500x1125.jpeg?v=1776970368044",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Hurricane Fries",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Lumpianadas",
+   "desc": "",
+   "cents": 595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Mahalo Fries",
+   "desc": "",
+   "cents": 995,
+   "alcohol": false,
+   "src": "text",
+   "section": "Food Favorites",
+   "image": "https://cloverstatic.com/menu-assets/items/MT5R8CGQX6W7J_1500x1125.jpeg"
+  },
+  {
+   "name": "Popcorn Chicken",
+   "desc": "",
+   "cents": 995,
+   "alcohol": false,
+   "src": "text",
+   "section": "Food Favorites",
+   "image": "https://cloverstatic.com/menu-assets/items/5TPRZ5SXPTSBM_1500x1125.jpeg?v=1776876319741"
+  },
+  {
+   "name": "Yum-Pia",
+   "desc": "",
+   "cents": 995,
+   "alcohol": false,
+   "src": "text",
+   "section": "Food Favorites",
+   "image": "https://cloverstatic.com/menu-assets/items/BF516T7G3BEHJ_1500x1125.jpeg"
+  },
+  {
+   "name": "Sweet pork tocino",
+   "desc": "",
+   "cents": 1395,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tocilog"
+  },
+  {
+   "name": "Sweet pork longanisa",
+   "desc": "",
+   "cents": 1395,
+   "alcohol": false,
+   "src": "text",
+   "section": "Longsilog"
+  },
+  {
+   "name": "Milkfish bangus",
+   "desc": "",
+   "cents": 1495,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bangsilog"
+  },
+  {
+   "name": "Chicken or pork BBQ",
+   "desc": "",
+   "cents": 1495,
+   "alcohol": false,
+   "src": "text",
+   "section": "BBQ Silog"
+  },
+  {
+   "name": "Mix & match favorites",
+   "desc": "",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combo Silog"
+  },
+  {
+   "name": "Breakfast Family Platter",
+   "desc": "",
+   "cents": 4995,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dine-In Only"
+  },
+  {
+   "name": "Fried Egg",
+   "desc": "",
+   "cents": 195,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/4EDTVYVZ2BF4P_1500x1125.jpeg"
+  },
+  {
+   "name": "Garlic Rice",
+   "desc": "",
+   "cents": 295,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/BF516T7G3BEHJ_1500x1125.jpeg"
+  },
+  {
+   "name": "BBQ Stick",
+   "desc": "",
+   "cents": 695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/X77M4FP3E11WP_1500x1125.jpeg"
+  },
+  {
+   "name": "Longanisa (2)",
+   "desc": "",
+   "cents": 695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Bangus",
+   "desc": "",
+   "cents": 1095,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/2S5RER7V497H6_1500x1125.jpeg"
+  },
+  {
+   "name": "Buldok Ramen",
+   "desc": "",
+   "cents": 510,
+   "image": "https://cloverstatic.com/menu-assets/items/AKX1Q9VN6S4AY_1500x1125.jpeg?v=1784152484486",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Dismiss"
+  },
+  {
+   "name": "Popcorn Chicken Ramen Topping",
+   "desc": "",
+   "cents": 510,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dismiss"
+  },
+  {
+   "name": "Mahalo Fries Ramen Topping",
+   "desc": "",
+   "cents": 510,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dismiss"
+  },
+  {
+   "name": "Lucky Mei Ramen",
+   "desc": "",
+   "cents": 304,
+   "image": "https://cloverstatic.com/menu-assets/items/ZE41GQT2XE09W_1500x1125.jpeg?v=1785108315113",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Dismiss"
+  },
+  {
+   "name": "Yum-pia (14 pieces)",
+   "desc": "",
+   "cents": 1025,
+   "image": "https://cloverstatic.com/menu-assets/items/BF516T7G3BEHJ_1500x1125.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Dismiss"
+  },
+  {
+   "name": "Mahalo Fries (10 pieces)",
+   "desc": "",
+   "cents": 1025,
+   "image": "https://cloverstatic.com/menu-assets/items/MT5R8CGQX6W7J_1500x1125.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Dismiss"
+  },
+  {
+   "name": "Bastos Taro by Bong Robbie",
+   "desc": "",
+   "cents": 103,
+   "alcohol": false,
+   "src": "text",
+   "section": "INFLUENCER DRINKS"
+  },
+  {
+   "name": "Sergio’s Summer Sip",
+   "desc": "",
+   "cents": 103,
+   "image": "https://cloverstatic.com/menu-assets/items/TBJ03FW6R9NXE_1500x1125.jpeg?v=1782971934957",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "INFLUENCER DRINKS"
+  },
+  {
+   "name": "Premium Matcha Milk Tea",
+   "desc": "",
+   "cents": 129,
+   "image": "https://cloverstatic.com/menu-assets/items/29YYW4K801ZY0_1500x1125.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "MILK TEA"
+  },
+  {
+   "name": "Panda Milk Tea",
+   "desc": "",
+   "cents": 154,
+   "image": "https://cloverstatic.com/menu-assets/items/1QY1SF3D7BVQA_1500x1125.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "MILK TEA"
+  },
+  {
+   "name": "Red Bean Milk Tea",
+   "desc": "",
+   "cents": 103,
+   "alcohol": false,
+   "src": "text",
+   "section": "MILK TEA"
+  },
+  {
+   "name": "+",
+   "desc": "",
+   "cents": 510,
+   "alcohol": false,
+   "src": "text",
+   "section": "Special instructions +"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Chee-Hoo Sticks",
+    "desc": "",
+    "cents": 795,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hula Rings",
+    "desc": "",
+    "cents": 495,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hurricane Fries",
+    "desc": "",
+    "cents": 795,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Lumpianadas",
+    "desc": "",
+    "cents": 595,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mahalo Fries",
+    "desc": "",
+    "cents": 995,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Popcorn Chicken",
+    "desc": "",
+    "cents": 995,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Yum-Pia",
+    "desc": "",
+    "cents": 995,
+    "section": "Food Favorites",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Tocilog",
+    "desc": "",
+    "cents": 1395,
+    "section": "Weekend Silog Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Longsilog",
+    "desc": "",
+    "cents": 1395,
+    "section": "Weekend Silog Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Bangsilog",
+    "desc": "",
+    "cents": 1495,
+    "section": "Weekend Silog Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "BBQ Silog",
+    "desc": "",
+    "cents": 1495,
+    "section": "Weekend Silog Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Combo Silog",
+    "desc": "",
+    "cents": 1795,
+    "section": "Weekend Silog Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Fried Egg",
+    "desc": "",
+    "cents": 195,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Garlic Rice",
+    "desc": "",
+    "cents": 295,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "BBQ Stick",
+    "desc": "",
+    "cents": 695,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Longanisa (2)",
+    "desc": "",
+    "cents": 695,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Bangus",
+    "desc": "",
+    "cents": 1095,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://www.quicklybenicia.com/images/specialty-menu-daily.png",
+   "alt": "Quickly Benicia daily specialty menu featuring food favorites and signature drinks with prices",
+   "near": "See the Full Menu",
+   "w": 1086,
+   "h": 1448,
+   "page": "https://www.quicklybenicia.com/specialty-menu"
+  },
+  {
+   "src": "https://www.quicklybenicia.com/images/specialty-menu-weekend.png",
+   "alt": "Quickly Benicia weekend specialty menu featuring silog plates and sides with prices",
+   "near": "See the Full Menu",
+   "w": 1086,
+   "h": 1448,
+   "page": "https://www.quicklybenicia.com/specialty-menu"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/quickly_7766503189673530805.png",
+   "alt": "merchant logo",
+   "near": "Quickly Benicia - The Original Best Boba Near Me & Filipino Food\nQuickly Benicia - The Original Best",
+   "w": 358,
+   "h": 358,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/AKX1Q9VN6S4AY_1500x1125.jpeg?v=1784152484486",
+   "alt": "product image",
+   "near": "Buldok Ramen\n$5.10\n\nBuild your own bowl of authentic Buldak ramen, fully self-serve. Pick any Buldak",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MKKNTC1YKMBHP_1500x1125.jpeg?v=1784152765390",
+   "alt": "product image",
+   "near": "Freeze Dried Topping\n$0.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/ZE41GQT2XE09W_1500x1125.jpeg?v=1785108315113",
+   "alt": "product image",
+   "near": "Lucky Mei Ramen\n$3.04",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WE1W8F6XDPSN8_1500x1125.jpeg?v=1776970144382",
+   "alt": "product image",
+   "near": "(1) Lumpianada\nSold Out\n\nThe Filipino deep-fried spring roll that combines two classics. All the bol",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/3SH4VQSXE1G6G_1500x1125.jpeg?v=1776970177601",
+   "alt": "product image",
+   "near": "(2) Lumpianada\nSold Out\n\nThe Filipino deep-fried spring roll that combines two classics. All the bol",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BF516T7G3BEHJ_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Yum-pia (14 pieces)\n$10.25\n\nGolden, crispy pork lumpia over signature garlic rice with nori crunch, ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MT5R8CGQX6W7J_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Mahalo Fries (10 pieces)\n$10.25\n\nGolden Spam fries over signature garlic rice with nori crunch, serv",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WMXCFR9YA3NR4_1500x1125.jpeg?v=1776970272747",
+   "alt": "product image",
+   "near": "Chee-Hoo Sticks\n$8.19\n\nFried cheese sticks with a touch of island flavoring.",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MVVDK8CMM0W08_1500x1125.jpeg?v=1776970368044",
+   "alt": "product image",
+   "near": "Hula Rings\n$5.10\n\nLarge fried onion rings with a touch of island flavors. A staff favorite!",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/5TPRZ5SXPTSBM_1500x1125.jpeg?v=1776876319741",
+   "alt": "product image",
+   "near": "Popcorn Chicken\nSold Out\n\nTaiwanese style bite-sized pieces of fried chicken with an island flavor t",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/2S5RER7V497H6_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Bangus Belly (1 a la carte)\nSold Out\n\nMarinated milkfish, the national fish of the Philippines. Deep",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/2AXJNG4E430KE_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Pork Stick (a la carte)\nSold Out\n\nFilipino-style pork BBQ, grilled and glazed in our sweet-savor",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/VKYPAMB3MV3JW_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Chicken Stick (1 a la carte)\nSold Out\n\nFilipino-style chicken BBQ, grilled and glazed in our swe",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/4EDTVYVZ2BF4P_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Chicken Sticks Silog (Weekends Only)\nSold Out\n\nFilipino-style chicken BBQ, grilled and glazed in",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/D5ZENGPNE9B60_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Pork Sticks Silog (Weekends Only)\nSold Out\n\nFilipino-style pork BBQ, grilled and glazed in our s",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/X77M4FP3E11WP_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Combo Silog (Weekends Only)\nSold Out\n\nThe ultimate sampler. Two garlicky longganisa sausages, one sw",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/P9NACC0EXHEDC_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Longsilog Breakfast (Weekends Only)\nSold Out\n\nGarlicky Filipino longganisa sausage, juicy and a litt",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BQ4C2JAM0FZR4_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Tocilog Breakfast (Weekends Only)\nSold Out\n\nSweet and savory pork tocino, caramelized on the grill a",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/KFXBNFWEVEHT6_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Garlic Rice\nSold Out\n\nOur signature garlic rice is topped with toasted garlic, green onion, and hous",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SG2Y491DZ4AEJ_1500x1125.jpeg?v=1787342034399",
+   "alt": "product image",
+   "near": "Banh Mi Style Bangus Fish Sandwich\nSold Out\n\nOur Bangus Fish Banh Mi brings a Filipino favorite into",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/TBJ03FW6R9NXE_1500x1125.jpeg?v=1782971934957",
+   "alt": "product image",
+   "near": "Sergio’s Summer Sip\n$1.03\n\nThis tropical summer creation is blended with creamy vanilla, strawberry ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/7QJW2HCVT2MY2_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Classic Milk Tea\n$0.00\n\nExperience our Classic Milk Tea - the original Taiwanese favorite with perfe",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/J8AY8QPWEPA9R_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Jasmine Milk Tea\n$0.00\n\nRelax with our Jasmine Milk Tea featuring fragrant flowers tea and creamy mi",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/29YYW4K801ZY0_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Premium Matcha Milk Tea\n$1.29\n\nUji ceremonial match green tea, sourced from Kyoto, Japan!",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/9GGQQFPNCPEX4_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Thai Milk Tea\n$0.00\n\nSavor our authentic Thai Milk Tea with traditional spices and milk in vibrant o",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/F4AFFXDJ8XB6T_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Taro Milk Tea\n$0.00\n\nExperience our signature Taro Milk Tea - a beloved purple delight with nutty, v",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/1QY1SF3D7BVQA_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Panda Milk Tea\n$1.54\n\nPanda Milk Tea a cute panda-inspired drink. Visit or order online at the best ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/1SMXTF2WGD988_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "White Tiger Milk Tea\n$0.00\n\nTry our White Tiger Milk Tea with creamy white chocolate and beautiful b",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/W4DRSZ20R9GP8_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Tiger Milk Tea\n$0.00\n\nInstagram your Tiger Milk Tea featuring dramatic brown sugar stripes and rich ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/quickly_7766503189673530805.png",
+   "alt": "merchant logo",
+   "near": "Quickly Benicia - The Original Best Boba Near Me & Filipino Food\nQuickly Benicia - The Original Best",
+   "w": 358,
+   "h": 358,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/AKX1Q9VN6S4AY_1500x1125.jpeg?v=1784152484486",
+   "alt": "product image",
+   "near": "Buldok Ramen\n$5.10\n\nBuild your own bowl of authentic Buldak ramen, fully self-serve. Pick any Buldak",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MKKNTC1YKMBHP_1500x1125.jpeg?v=1784152765390",
+   "alt": "product image",
+   "near": "Freeze Dried Topping\n$0.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/ZE41GQT2XE09W_1500x1125.jpeg?v=1785108315113",
+   "alt": "product image",
+   "near": "Lucky Mei Ramen\n$3.04",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WE1W8F6XDPSN8_1500x1125.jpeg?v=1776970144382",
+   "alt": "product image",
+   "near": "(1) Lumpianada\nSold Out\n\nThe Filipino deep-fried spring roll that combines two classics. All the bol",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/3SH4VQSXE1G6G_1500x1125.jpeg?v=1776970177601",
+   "alt": "product image",
+   "near": "(2) Lumpianada\nSold Out\n\nThe Filipino deep-fried spring roll that combines two classics. All the bol",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BF516T7G3BEHJ_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Yum-pia (14 pieces)\n$10.25\n\nGolden, crispy pork lumpia over signature garlic rice with nori crunch, ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MT5R8CGQX6W7J_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Mahalo Fries (10 pieces)\n$10.25\n\nGolden Spam fries over signature garlic rice with nori crunch, serv",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WMXCFR9YA3NR4_1500x1125.jpeg?v=1776970272747",
+   "alt": "product image",
+   "near": "Chee-Hoo Sticks\n$8.19\n\nFried cheese sticks with a touch of island flavoring.",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MVVDK8CMM0W08_1500x1125.jpeg?v=1776970368044",
+   "alt": "product image",
+   "near": "Hula Rings\n$5.10\n\nLarge fried onion rings with a touch of island flavors. A staff favorite!",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/5TPRZ5SXPTSBM_1500x1125.jpeg?v=1776876319741",
+   "alt": "product image",
+   "near": "Popcorn Chicken\nSold Out\n\nTaiwanese style bite-sized pieces of fried chicken with an island flavor t",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/2S5RER7V497H6_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Bangus Belly (1 a la carte)\nSold Out\n\nMarinated milkfish, the national fish of the Philippines. Deep",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/2AXJNG4E430KE_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Pork Stick (a la carte)\nSold Out\n\nFilipino-style pork BBQ, grilled and glazed in our sweet-savor",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/VKYPAMB3MV3JW_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Chicken Stick (1 a la carte)\nSold Out\n\nFilipino-style chicken BBQ, grilled and glazed in our swe",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/4EDTVYVZ2BF4P_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Chicken Sticks Silog (Weekends Only)\nSold Out\n\nFilipino-style chicken BBQ, grilled and glazed in",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/D5ZENGPNE9B60_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "BBQ Pork Sticks Silog (Weekends Only)\nSold Out\n\nFilipino-style pork BBQ, grilled and glazed in our s",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/X77M4FP3E11WP_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Combo Silog (Weekends Only)\nSold Out\n\nThe ultimate sampler. Two garlicky longganisa sausages, one sw",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/P9NACC0EXHEDC_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Longsilog Breakfast (Weekends Only)\nSold Out\n\nGarlicky Filipino longganisa sausage, juicy and a litt",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BQ4C2JAM0FZR4_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Tocilog Breakfast (Weekends Only)\nSold Out\n\nSweet and savory pork tocino, caramelized on the grill a",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/KFXBNFWEVEHT6_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Garlic Rice\nSold Out\n\nOur signature garlic rice is topped with toasted garlic, green onion, and hous",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SG2Y491DZ4AEJ_1500x1125.jpeg?v=1787342034399",
+   "alt": "product image",
+   "near": "Banh Mi Style Bangus Fish Sandwich\nSold Out\n\nOur Bangus Fish Banh Mi brings a Filipino favorite into",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/TBJ03FW6R9NXE_1500x1125.jpeg?v=1782971934957",
+   "alt": "product image",
+   "near": "Sergio’s Summer Sip\n$1.03\n\nThis tropical summer creation is blended with creamy vanilla, strawberry ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/7QJW2HCVT2MY2_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Classic Milk Tea\n$0.00\n\nExperience our Classic Milk Tea - the original Taiwanese favorite with perfe",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/J8AY8QPWEPA9R_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Jasmine Milk Tea\n$0.00\n\nRelax with our Jasmine Milk Tea featuring fragrant flowers tea and creamy mi",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/29YYW4K801ZY0_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Premium Matcha Milk Tea\n$1.29\n\nUji ceremonial match green tea, sourced from Kyoto, Japan!",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/9GGQQFPNCPEX4_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Thai Milk Tea\n$0.00\n\nSavor our authentic Thai Milk Tea with traditional spices and milk in vibrant o",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/F4AFFXDJ8XB6T_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Taro Milk Tea\n$0.00\n\nExperience our signature Taro Milk Tea - a beloved purple delight with nutty, v",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/1QY1SF3D7BVQA_1500x1125.jpeg",
+   "alt": "product image",
+   "near": "Panda Milk Tea\n$1.54\n\nPanda Milk Tea a cute panda-inspired drink. Visit or order online at the best ",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://quickly-benicia.cloveronline.com/menu/all"
+  }
+ ]
+}

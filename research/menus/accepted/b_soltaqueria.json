@@ -1,0 +1,341 @@
+{
+ "id": "b_soltaqueria",
+ "source": "text",
+ "pages": [
+  "https://www.soltaqueriaberkeley.com/",
+  "https://www.soltaqueriaberkeley.com/menus",
+  "https://www.soltaqueriaberkeley.com/online-ordering",
+  "https://www.soltaqueriaberkeley.com/online-ordering-ordering-page-2",
+  "https://www.soltaqueriaberkeley.com/_files/ugd/fab297_1897cd407b2442158934751397eb81be.pdf"
+ ],
+ "items": [
+  {
+   "name": "Huarache",
+   "desc": "Flattened, giant, deep-fried tortilla layered with beans, your choice of meat, cheese, salsa, onion, and cilantro. Our signature special!",
+   "cents": 1995,
+   "section": "Specials",
+   "photo": "sol-taqueria-huarache"
+  },
+  {
+   "name": "Molcajete",
+   "desc": "a bowl carved out of a volcanic stone, is seasoned and used to hold a curated selection of meats, seafood and vegetables.",
+   "cents": 2999,
+   "section": "Specials",
+   "photo": "sol-taqueria-molcajete"
+  },
+  {
+   "name": "Piña Loca",
+   "desc": "Pineapple filled with a mix of seafood, meats, vegetables and cheese. One of our customers favorites.",
+   "cents": 2500,
+   "section": "Specials",
+   "photo": "sol-taqueria-pi-a-loca"
+  },
+  {
+   "name": "Fajitas Plate",
+   "desc": "Served with a side of rice, beans, sour cream, and pico de gallo Choice of flour or corn tortillas on the side.",
+   "cents": 1950,
+   "section": "Specials",
+   "photo": "sol-taqueria-fajitas-plate"
+  },
+  {
+   "name": "Carne Asada Plate",
+   "desc": "Served with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "cents": 1750,
+   "section": "Plates",
+   "photo": "sol-taqueria-carne-asada-plate"
+  },
+  {
+   "name": "Carnitas Plate",
+   "desc": "Served with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "cents": 1750,
+   "section": "Plates",
+   "photo": "sol-taqueria-carnitas-plate"
+  },
+  {
+   "name": "Camarones a La Diabla",
+   "desc": "Served with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "cents": 2295,
+   "section": "Plates",
+   "photo": "sol-taqueria-camarones-a-la-diabla"
+  },
+  {
+   "name": "Regular Taco",
+   "desc": "Served with meat, onion, cilantro and salsa.",
+   "cents": 375,
+   "section": "Tacos",
+   "photo": "sol-taqueria-regular-taco"
+  },
+  {
+   "name": "Served with meat, onion, cilantro, salsa and cheese.",
+   "desc": "",
+   "cents": 475,
+   "section": "Tacos",
+   "photo": "sol-taqueria-served-with-meat-onion-cilantro-salsa-an"
+  },
+  {
+   "name": "Super Taco",
+   "desc": "Meat, lettuce, cheese, sour cream, guacamole, cilantro.",
+   "cents": 595,
+   "section": "Tacos",
+   "photo": "sol-taqueria-super-taco"
+  },
+  {
+   "name": "Taco Plate",
+   "desc": "Served with rice and beans on two tacos with meat",
+   "cents": 1150,
+   "section": "Tacos",
+   "photo": "sol-taqueria-taco-plate"
+  },
+  {
+   "name": "Fish Taco",
+   "desc": "Fish, salsa, lettuce, pico de gallo,",
+   "cents": 745,
+   "section": "Tacos",
+   "photo": "sol-taqueria-fish-taco"
+  },
+  {
+   "name": "Shrimp Taco",
+   "desc": "Shrimp, lettuce, cabbage, and salsa.",
+   "cents": 750,
+   "section": "Tacos",
+   "photo": "sol-taqueria-shrimp-taco"
+  },
+  {
+   "name": "Breakfast Burrito",
+   "desc": "Eggs, potato, cheese, salsa and choice of meat (chorizo, bacon, ham,)",
+   "cents": 1350,
+   "section": "Breakfast",
+   "photo": "sol-taqueria-breakfast-burrito"
+  },
+  {
+   "name": "Huevos con Chorizo",
+   "desc": "Eggs with chorizo. Served with rice, bean, meat, lettuce, sour cream, pico de gallo.",
+   "cents": 1550,
+   "section": "Breakfast",
+   "photo": "sol-taqueria-huevos-con-chorizo"
+  },
+  {
+   "name": "Huevos con Jamon",
+   "desc": "Eggs with Ham. Served with rice, beans, meat, lettuce, sour cream, pico de gallo.",
+   "cents": 1550,
+   "section": "Breakfast",
+   "photo": "sol-taqueria-huevos-con-jamon"
+  },
+  {
+   "name": "Huevos Rancheros",
+   "desc": "Eggs served on top of tortillas. Served with rice, bean, meat, lettuce, sour cream, pico de Gallo.",
+   "cents": 1550,
+   "section": "Breakfast",
+   "photo": "sol-taqueria-huevos-rancheros"
+  },
+  {
+   "name": "Chilaquiles Rojos o Verdes",
+   "desc": "Tortilla chips, 2 eggs, salsa, cheese, sour cream, cilantro. Side rice and beans.",
+   "cents": 1695,
+   "section": "Plates",
+   "photo": "sol-taqueria-chilaquiles-rojos-o-verdes"
+  },
+  {
+   "name": "Breakfast Skillet Bowl",
+   "desc": "Potatoes, 2 eggs, meat, cheese, sour cream, cilantro, salsa.",
+   "cents": 1695,
+   "section": "Plates",
+   "photo": "sol-taqueria-breakfast-skillet-bowl"
+  },
+  {
+   "name": "Torta",
+   "desc": "Choice of meat, Beans, Sour Cream, lettuce, onion, tomatoes, jalapeño, avocado, cheese",
+   "cents": 1595,
+   "section": "Tortas",
+   "photo": "sol-taqueria-torta"
+  },
+  {
+   "name": "Super Burrito",
+   "desc": "Served with arroz, frijol de olla, pico de gallo, guacamole, queso, crema, meat.",
+   "cents": 1550,
+   "section": "Burritos",
+   "photo": "sol-taqueria-super-burrito"
+  },
+  {
+   "name": "Regular Burrito",
+   "desc": "Served with arroz, frijol, meat, pico de gallo.",
+   "cents": 1425,
+   "section": "Burritos",
+   "photo": "sol-taqueria-regular-burrito"
+  },
+  {
+   "name": "Baby Burrito",
+   "desc": "Served with rice, beans, cheese, beans and cheese",
+   "cents": 1050,
+   "section": "Burritos",
+   "photo": "sol-taqueria-baby-burrito"
+  },
+  {
+   "name": "Veggie Burrito",
+   "desc": "Served with rice, beans, crema, queso, pico de gallo, lechuga.",
+   "cents": 1399,
+   "section": "Burritos",
+   "photo": "sol-taqueria-veggie-burrito"
+  },
+  {
+   "name": "Chile Relleno Burrito",
+   "desc": "Served with arroz, fripinto, queso, crema, guacamole, pico de gallo, chile relleno.",
+   "cents": 1450,
+   "section": "Plates",
+   "photo": "sol-taqueria-chile-relleno-burrito"
+  },
+  {
+   "name": "Wet Burrito",
+   "desc": "meat, rice, beans, sour cream, pico de gallo, guacamole, and cheese, wet in red or green sauce",
+   "cents": 1735,
+   "section": "Plates"
+  },
+  {
+   "name": "Super Nachos",
+   "desc": "Tortilla chips, meat, beans, cheese, sour cream, guacamole, pico de gallo.",
+   "cents": 1550,
+   "section": "Nachos",
+   "photo": "sol-taqueria-super-nachos"
+  },
+  {
+   "name": "Regular Nachos",
+   "desc": "Tortilla chips, beans, cheese, sour cream, guacamole, pico de gallo.",
+   "cents": 1425,
+   "section": "Nachos",
+   "photo": "sol-taqueria-regular-nachos"
+  },
+  {
+   "name": "Crazy Fries",
+   "desc": "Potatoes, meat, cheese, guacamole, sour cream, pico de gallo.",
+   "cents": 1599,
+   "section": "Nachos",
+   "photo": "sol-taqueria-crazy-fries"
+  },
+  {
+   "name": "Super Quesadilla",
+   "desc": "Large Flour tortilla, cheese, meat, sour cream, guacamole, pico de gallo.",
+   "cents": 1550,
+   "section": "Quesadillas",
+   "photo": "sol-taqueria-super-quesadilla"
+  },
+  {
+   "name": "Regular Quesadilla",
+   "desc": "flour tortilla, cheese.",
+   "cents": 399,
+   "section": "Quesadillas",
+   "photo": "sol-taqueria-regular-quesadilla"
+  },
+  {
+   "name": "Quesabirria",
+   "desc": "Corn tortilla, birria, cheese, salsa verde, onion, cilantro, served with consome broth.",
+   "cents": 599,
+   "section": "Quesadillas",
+   "photo": "sol-taqueria-quesabirria"
+  },
+  {
+   "name": "1 Item Combo Plate",
+   "desc": "Served with rice and beans.",
+   "cents": 1275,
+   "section": "Combination Plates",
+   "photo": "sol-taqueria-1-item-combo-plate"
+  },
+  {
+   "name": "2 Items Combo Plate",
+   "desc": "Served with rice and beans.",
+   "cents": 1599,
+   "section": "Combination Plates",
+   "photo": "sol-taqueria-2-items-combo-plate"
+  },
+  {
+   "name": "3 Items Combo Plate",
+   "desc": "Served with rice and beans.",
+   "cents": 1899,
+   "section": "Combination Plates"
+  },
+  {
+   "name": "Fish Super Bowl",
+   "desc": "Served with rice, pinto beans, lettuce, sour cream, cheese, pico de gallo, guacamole, and cilantro.",
+   "cents": 1599,
+   "section": "Super Bowls",
+   "photo": "sol-taqueria-fish-super-bowl"
+  },
+  {
+   "name": "Chicken Super Bowl",
+   "desc": "Served with rice, pinto beans, lettuce, sour cream, cheese, pico de gallo, guacamole, and cilantro.",
+   "cents": 1599,
+   "section": "Super Bowls",
+   "photo": "sol-taqueria-chicken-super-bowl"
+  },
+  {
+   "name": "Kids Quesadilla",
+   "desc": "Flour tortilla, cheese, served with rice and beans.",
+   "cents": 600,
+   "section": "Super Bowls",
+   "photo": "sol-taqueria-kids-quesadilla"
+  },
+  {
+   "name": "Kids Taco",
+   "desc": "Meat only Taco served with rice and beans.",
+   "cents": 600,
+   "section": "Super Bowls",
+   "photo": "sol-taqueria-kids-taco"
+  },
+  {
+   "name": "Churro",
+   "desc": "",
+   "cents": 324,
+   "section": "Desserts",
+   "photo": "sol-taqueria-churro"
+  },
+  {
+   "name": "Cheesecake",
+   "desc": "",
+   "cents": 450,
+   "section": "Desserts",
+   "photo": "sol-taqueria-cheesecake"
+  },
+  {
+   "name": "Flan",
+   "desc": "",
+   "cents": 575,
+   "section": "Desserts",
+   "photo": "sol-taqueria-flan"
+  },
+  {
+   "name": "Soda Lata",
+   "desc": "Coke, Diet Coke, Squirt, Pepsi.",
+   "cents": 225,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Snapple",
+   "desc": "Fruit Punch, Strawberry kiwi, Apple",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Mexican Soda",
+   "desc": "1/2 Litro.",
+   "cents": 495,
+   "section": "Drinks"
+  },
+  {
+   "name": "Cafe",
+   "desc": "",
+   "cents": 399,
+   "section": "Plates"
+  },
+  {
+   "name": "Horchata and Jamaica",
+   "desc": "",
+   "cents": 375,
+   "section": "Aguas frescas"
+  }
+ ]
+}

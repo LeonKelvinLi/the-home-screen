@@ -1,0 +1,769 @@
+{
+ "id": "b_dadsbbq",
+ "source": "jsonld",
+ "alt": {
+  "text": 27
+ },
+ "pages": [
+  "https://dadsbbqco.com/",
+  "https://dadsbbqco.com/menu",
+  "https://dadsbbqco.com/page/catering-",
+  "https://dadsbbqco.com/tags/seafood",
+  "https://dadsbbqco.com/tags/cajun-food",
+  "https://dadsbbqco.com/tags/dessert",
+  "https://dadsbbqco.com/tags/southern-food"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Greens freshly cooked",
+   "desc": "Mixed with collard, mustard and turnups with smoked turkey wings",
+   "cents": 800,
+   "section": "Side orders",
+   "image": "https://static-content.owner.com/funnel/images/375e3a16-dffa-4be3-9bbf-fb5cfc532eb7.jpg?v=0433824711",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Potato salad",
+   "desc": "",
+   "cents": 600,
+   "section": "Side orders",
+   "image": "https://static-content.owner.com/funnel/images/86b55e77-79f2-4fe4-a63e-f34f2c1b5f1e.png?v=9893887949",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green beans",
+   "desc": "Sautéed in onions and potatoes",
+   "cents": 700,
+   "section": "Side orders",
+   "image": "https://static-content.owner.com/funnel/images/13ab0885-ac51-4156-95e2-2906fe7be8a7.png",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Macaroni & cheese",
+   "desc": "Homemade baked macaroni and cheese",
+   "cents": 900,
+   "section": "Side orders",
+   "image": "https://static-content.owner.com/funnel/images/9be75eaa-84e0-45c8-a1c8-2a7e0ab4996f.png?v=8407689306",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baked beans",
+   "desc": "",
+   "cents": 700,
+   "section": "Side orders",
+   "image": "https://static-content.owner.com/funnel/images/4e45739f-6e7f-4f64-bf29-b9c2022aa119.png?v=6364664410",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Muffin",
+   "desc": "",
+   "cents": 300,
+   "section": "Hot corn bread muffins",
+   "image": "https://static-content.owner.com/funnel/images/b93bdfc6-9b7e-4de7-9574-6fe333d0f58b.png?v=1804010222",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mom's gumbo",
+   "desc": "Our Louisiana well freshly seasoned with shrimp, crabmeat, smoked hot and mild sausages over rice",
+   "cents": 1800,
+   "section": "Moms gumbo",
+   "image": "https://static-content.owner.com/funnel/images/9ce574b5-4e8d-46fc-8c0a-0b608cb4b689.jpg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Combo",
+   "desc": "A choice of 2 meats and 2 sides",
+   "cents": 2500,
+   "section": "Entrées",
+   "image": "https://static-content.owner.com/funnel/images/8dfc6e08-dbcb-4754-b274-2dd5ea1bbdfa.jpg?v=0748872105",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "3-way",
+   "desc": "A choice of 3 meats and 2 sides",
+   "cents": 3000,
+   "section": "Entrées",
+   "image": "https://static-content.owner.com/funnel/images/da218fae-3ebc-4783-88f1-e975581c5ba0.png?v=6834567277",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "4-way",
+   "desc": "A choice of 4 meats and 2 sides",
+   "cents": 3600,
+   "section": "Entrées",
+   "image": "https://static-content.owner.com/funnel/images/43f9c807-a3cc-4ada-8483-e4be5a18edbb.png?v=3724910399",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Entree dinner",
+   "desc": "A choice of ribs, links, chicken, tri tip and rib tips and 2 side orders",
+   "cents": 2000,
+   "section": "Entrées",
+   "image": "https://static-content.owner.com/funnel/images/8db4b50c-4255-47e5-966f-12a6c962504b.jpg?v=5705047763",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Half entree",
+   "desc": "Any choice of meat 1 side dish",
+   "cents": 1400,
+   "section": "Entrées",
+   "image": "https://static-content.owner.com/funnel/images/cbf84670-316e-4671-a038-febf1f63ff26.png?v=9028466890",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "1 pound of tritip",
+   "desc": "Side orders are not included",
+   "cents": 2600,
+   "section": "Meats only",
+   "image": "https://static-content.owner.com/funnel/images/aeb1defc-55e2-4a2d-9901-c9e1be48e53f.png?v=6655529906",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "1/2 slab of ribs",
+   "desc": "Side orders are not included",
+   "cents": 2500,
+   "section": "Meats only",
+   "image": "https://static-content.owner.com/funnel/images/fbc2ba67-13e3-4618-b3d5-1c28cd99fb76.png",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Single link",
+   "desc": "Side orders are not included",
+   "cents": 500,
+   "section": "Meats only",
+   "image": "https://static-content.owner.com/funnel/images/4fe48b16-2a7a-4c96-8dc2-e0ceea1e643e.png?v=8821475441",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Slab of ribs",
+   "desc": "Pork ribs",
+   "cents": 4500,
+   "section": "Meats only",
+   "image": "https://static-content.owner.com/funnel/images/da97406b-e59e-43f4-bb8f-94391ef72118.png?v=4353308871",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Whole chicken",
+   "desc": "Side orders are not included",
+   "cents": 2500,
+   "section": "Meats only",
+   "image": "https://static-content.owner.com/funnel/images/d55bf867-85df-41d8-9537-3575a8901292.png?v=9394068272",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "16 oz bottle of sauce",
+   "desc": "Specify-mild, or hot",
+   "cents": 1100,
+   "section": "BBQ sauce",
+   "image": "https://static-content.owner.com/funnel/images/6b8c29b0-c63f-404f-8446-e3318e103058?v=8562514397",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Extra sauce",
+   "desc": "Specify-mild, medium or hot",
+   "cents": 100,
+   "section": "BBQ sauce",
+   "image": "https://static-content.owner.com/funnel/images/4138651b-1e49-48d5-a146-3079c24eb617?v=4571381505",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sweet potato pie",
+   "desc": "Baked fresh daily",
+   "cents": 600,
+   "section": "Desserts",
+   "image": "https://static-content.owner.com/funnel/images/e2d62c6c-f524-4a39-a01e-f1836c7a0fe7.jpg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Banana pudding",
+   "desc": "Baked fresh daily",
+   "cents": 700,
+   "section": "Desserts",
+   "image": "https://static-content.owner.com/funnel/images/ce2b4051-16f4-4fc6-9010-9e73248c02d0.jpg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Peach cobbler",
+   "desc": "Baked fresh daily",
+   "cents": 800,
+   "section": "Desserts",
+   "image": "https://static-content.owner.com/growth/images/f9842b3f-fb1e-4721-85d2-9fb4b9861b94?v=7628623904",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kool-aid",
+   "desc": "That good flavor from your mommas kitchen",
+   "cents": 400,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/9e6db5b6-9b29-4288-b327-d6b532015ce3.png",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Flavors",
+   "desc": "Pepsi, diet pepsi, orange, root beer, lemonade and sprite,",
+   "cents": 250,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/df98746a-de33-435b-8075-4a8f913673a2?v=9429900561",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sweet tea",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/f93e3aaa-4444-4a55-a9e4-17b5d6f2ec91?v=3238489363",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "3pc Cat Fish",
+   "desc": "",
+   "cents": 1800,
+   "section": "Fried Fish Friday",
+   "image": "https://static-content.owner.com/funnel/images/56c3369e-2b56-4ea8-b466-c6f3e64b6cd3",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "6pc Cat Fish",
+   "desc": "",
+   "cents": 2400,
+   "section": "Fried Fish Friday",
+   "image": "https://static-content.owner.com/funnel/images/94e19fad-3896-451d-b803-a35eb1cc4745",
+   "alcohol": false,
+   "src": "jsonld"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Combo",
+    "desc": "",
+    "cents": 2500,
+    "alcohol": false,
+    "src": "text",
+    "section": "More"
+   },
+   {
+    "name": "3-way",
+    "desc": "",
+    "cents": 3000,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/da218fae-3ebc-4783-88f1-e975581c5ba0.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "More"
+   },
+   {
+    "name": "1 pound of tritip",
+    "desc": "",
+    "cents": 2600,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/aeb1defc-55e2-4a2d-9901-c9e1be48e53f.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "More"
+   },
+   {
+    "name": "Half entree",
+    "desc": "",
+    "cents": 1400,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/cbf84670-316e-4671-a038-febf1f63ff26.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "More"
+   },
+   {
+    "name": "Entree dinner",
+    "desc": "",
+    "cents": 2000,
+    "alcohol": false,
+    "src": "text",
+    "section": "More"
+   },
+   {
+    "name": "Slab of ribs",
+    "desc": "",
+    "cents": 4500,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/da97406b-e59e-43f4-bb8f-94391ef72118.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "More"
+   },
+   {
+    "name": "Macaroni & cheese",
+    "desc": "",
+    "cents": 900,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/9be75eaa-84e0-45c8-a1c8-2a7e0ab4996f.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "More"
+   },
+   {
+    "name": "Whole chicken",
+    "desc": "",
+    "cents": 2500,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/d55bf867-85df-41d8-9537-3575a8901292.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "More"
+   },
+   {
+    "name": "Greens freshly cooked",
+    "desc": "",
+    "cents": 800,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/375e3a16-dffa-4be3-9bbf-fb5cfc532eb7.jpg?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Side orders"
+   },
+   {
+    "name": "Potato salad",
+    "desc": "",
+    "cents": 600,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/86b55e77-79f2-4fe4-a63e-f34f2c1b5f1e.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Side orders"
+   },
+   {
+    "name": "Green beans",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Side orders"
+   },
+   {
+    "name": "Baked beans",
+    "desc": "",
+    "cents": 700,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/4e45739f-6e7f-4f64-bf29-b9c2022aa119.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Sautéed in onions and potatoes"
+   },
+   {
+    "name": "Muffin",
+    "desc": "",
+    "cents": 300,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/b93bdfc6-9b7e-4de7-9574-6fe333d0f58b.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Hot corn bread muffins"
+   },
+   {
+    "name": "Mom's gumbo",
+    "desc": "",
+    "cents": 1800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Hot corn bread muffins"
+   },
+   {
+    "name": "4-way",
+    "desc": "",
+    "cents": 3600,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/43f9c807-a3cc-4ada-8483-e4be5a18edbb.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Entrées"
+   },
+   {
+    "name": "1/2 slab of ribs",
+    "desc": "",
+    "cents": 2500,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/fbc2ba67-13e3-4618-b3d5-1c28cd99fb76.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Side orders are not included"
+   },
+   {
+    "name": "Single link",
+    "desc": "",
+    "cents": 500,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/4fe48b16-2a7a-4c96-8dc2-e0ceea1e643e.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Side orders are not included"
+   },
+   {
+    "name": "16 oz bottle of sauce",
+    "desc": "",
+    "cents": 1100,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/6b8c29b0-c63f-404f-8446-e3318e103058?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pork ribs"
+   },
+   {
+    "name": "Extra sauce",
+    "desc": "",
+    "cents": 100,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/4138651b-1e49-48d5-a146-3079c24eb617?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specify-mild, or hot"
+   },
+   {
+    "name": "Sweet potato pie",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specify-mild, or hot"
+   },
+   {
+    "name": "Banana pudding",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Baked fresh daily"
+   },
+   {
+    "name": "Peach cobbler",
+    "desc": "",
+    "cents": 800,
+    "image": "https://dadsbbqco.com/pluto-images/growth/images/f9842b3f-fb1e-4721-85d2-9fb4b9861b94?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Baked fresh daily"
+   },
+   {
+    "name": "Kool-aid",
+    "desc": "",
+    "cents": 400,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/9e6db5b6-9b29-4288-b327-d6b532015ce3.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Baked fresh daily"
+   },
+   {
+    "name": "Flavors",
+    "desc": "",
+    "cents": 250,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/df98746a-de33-435b-8075-4a8f913673a2?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Baked fresh daily"
+   },
+   {
+    "name": "Sweet tea",
+    "desc": "",
+    "cents": 400,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/f93e3aaa-4444-4a55-a9e4-17b5d6f2ec91?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Baked fresh daily"
+   },
+   {
+    "name": "3pc Cat Fish",
+    "desc": "",
+    "cents": 1800,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/56c3369e-2b56-4ea8-b466-c6f3e64b6cd3?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Baked fresh daily"
+   },
+   {
+    "name": "6pc Cat Fish",
+    "desc": "",
+    "cents": 2400,
+    "image": "https://dadsbbqco.com/pluto-images/funnel/images/94e19fad-3896-451d-b803-a35eb1cc4745?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Baked fresh daily"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/cee74be3-de48-4733-9734-fee45b5d5d2a?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best BBQ in Antioch\nOnce You've Tried the Best! Don't Settle for Less!\nOrder online",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/bf3ee55b-a136-4223-92e1-069d654c1b4e?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best BBQ in Antioch\nOnce You've Tried the Best! Don't Settle for Less!\nOrder online",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/6acb6d36-ab7d-4bc2-b24a-18c56badd632?w=560&h=560&fit=cover",
+   "alt": "Welcome To Dad’s BBQ",
+   "near": "Welcome To Dad’s BBQ\nAt Dad’s BBQ, we’re more than just a restaurant—we’re a family tradition that’s",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/d1fafb5f-dcbd-4cd0-a493-7ea762697b2f?w=560&h=560&fit=cover",
+   "alt": "Our Food, Our Flavor",
+   "near": "Our Food, Our Flavor\nFrom slow-smoked ribs and tri-tip to hot links, mac-n-cheese, and our legendary",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/db20c7df-48ba-4022-8c65-92fed162c625?w=1400&fit=cover",
+   "alt": "",
+   "near": "Order Now, Savor Soon\nCraving Dad’s BBQ but short on time? Order online or call ahead for easy picku",
+   "w": 1280,
+   "h": 800,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/a5e656e6-43aa-454c-95a2-28494fe1aefd?w=405&h=405&format=auto&fit=cover",
+   "alt": "Dad's BBQ chicken, ribs, mac and cheese, and green beans in a white takeout container.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/94faec30-d6df-49a0-ba02-4dfabb1b6840?w=405&h=405&format=auto&fit=cover",
+   "alt": "A close-up of Dad's BBQ creamy mac and cheese in a clear plastic container.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/ebe9d418-0db8-4d15-a3fe-c59a46f8036e?w=405&h=405&format=auto&fit=cover",
+   "alt": "Dad's BBQ chicken, ribs, macaroni and cheese, and green beans in a takeout container.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/7c21f4d9-87ec-4462-87ce-f4707b3a85cc?w=405&h=405&format=auto&fit=cover",
+   "alt": "Dad's BBQ ribs with rich sauce and a side of mashed potatoes in a white takeout container.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/9f60265c-8081-46ab-b100-cedd9b940416?w=405&h=405&format=auto&fit=cover",
+   "alt": "A clear plastic container filled with dark green collard greens, resting on a white napkin.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/231048f6-0dd6-4dd1-b0d4-cf53b49498db?w=405&h=405&format=auto&fit=cover",
+   "alt": "Dad's BBQ pulled pork, drenched in rich barbecue sauce, in a white takeout container.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/6c82925f-3a1e-47da-9ec0-00b90fbcaf8c?w=405&h=405&format=auto&fit=cover",
+   "alt": "Dad's BBQ brisket and ribs with baked beans and green beans on a wooden table.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/e6f26279-3ac2-4c6a-a1da-21436e425d39?w=405&h=405&format=auto&fit=cover",
+   "alt": "Six golden-brown corn muffins in white paper liners on a white disposable plate.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/e6664c26-4e7f-4fda-8a37-eda9c0839521?w=405&h=405&format=auto&fit=cover",
+   "alt": "Dad's BBQ ribs, generously coated in a rich, dark barbecue sauce on a white and red polka dot plate.",
+   "near": "Smoked To Perfection, Served With Love",
+   "w": 405,
+   "h": 405,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/3a988337-7c03-4596-8537-c04704505693?w=560&h=560&fit=cover",
+   "alt": "Catering That Brings People Together",
+   "near": "Catering That Brings People Together\nFrom backyard parties to corporate events, Dad’s BBQ catering m",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/3801d4ef-43ea-4d45-a666-398ffe70839d?w=560&h=560&fit=cover",
+   "alt": "The Dad’s BBQ Dining Experience",
+   "near": "The Dad’s BBQ Dining Experience\nStep into Dad’s BBQ and you’ll feel the difference. Our lively, welc",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/2e40a1c3-bbbb-4605-bcc6-40068d56ea82?w=1400&fit=cover",
+   "alt": "",
+   "near": "Dad's BBQ Rewards\nJoin our rewards program, earn points every time you order online, and redeem your",
+   "w": 1280,
+   "h": 800,
+   "page": "https://dadsbbqco.com/"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/cee74be3-de48-4733-9734-fee45b5d5d2a?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best seafood in Antioch, CA.\nFresh and Flavorful Seafood",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/seafood"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/bf3ee55b-a136-4223-92e1-069d654c1b4e?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best seafood in Antioch, CA.\nFresh and Flavorful Seafood",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/seafood"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/da97406b-e59e-43f4-bb8f-94391ef72118.png?w=560&h=560&fit=cover",
+   "alt": "Delicious Seafood Offerings",
+   "near": "Delicious Seafood Offerings\nDive into our selection of seafood that captures the essence of coastal ",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/seafood"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup",
+   "near": "Convenient Delivery and Pickup\nEnjoy our seafood dishes from the comfort of your home with our easy ",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/seafood"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/cee74be3-de48-4733-9734-fee45b5d5d2a?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best cajun food in Antioch, CA.\nSavor Authentic Cajun Flavors",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/cajun-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/bf3ee55b-a136-4223-92e1-069d654c1b4e?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best cajun food in Antioch, CA.\nSavor Authentic Cajun Flavors",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/cajun-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/aeb1defc-55e2-4a2d-9901-c9e1be48e53f.png?w=560&h=560&fit=cover",
+   "alt": "Delicious Cajun Food Awaits You",
+   "near": "Delicious Cajun Food Awaits You\nDive into the rich and spicy world of cajun food, where every bite t",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/cajun-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup Options",
+   "near": "Convenient Delivery and Pickup Options\nEnjoy our cajun food from the comfort of your home with our e",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/cajun-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/cee74be3-de48-4733-9734-fee45b5d5d2a?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best dessert in Antioch, CA.\nIndulge in Sweet Delights",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/dessert"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/bf3ee55b-a136-4223-92e1-069d654c1b4e?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best dessert in Antioch, CA.\nIndulge in Sweet Delights",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/dessert"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/da218fae-3ebc-4783-88f1-e975581c5ba0.png?w=560&h=560&fit=cover",
+   "alt": "Delicious Dessert Options",
+   "near": "Delicious Dessert Options\nOur dessert menu is a sweet lover's paradise, featuring everything from ri",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/dessert"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup",
+   "near": "Convenient Delivery and Pickup\nEnjoy our delicious desserts from the comfort of your home with our e",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/dessert"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/cee74be3-de48-4733-9734-fee45b5d5d2a?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best southern food in Antioch, CA.\nSavor Authentic Southern Flavors",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/southern-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/bf3ee55b-a136-4223-92e1-069d654c1b4e?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best southern food in Antioch, CA.\nSavor Authentic Southern Flavors",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://dadsbbqco.com/tags/southern-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/funnel/images/8db4b50c-4255-47e5-966f-12a6c962504b.jpg?w=560&h=560&fit=cover",
+   "alt": "Delicious Southern Food Awaits",
+   "near": "Delicious Southern Food Awaits\nIndulge in the rich and comforting tastes of southern food, where eve",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/southern-food"
+  },
+  {
+   "src": "https://dadsbbqco.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup Options",
+   "near": "Convenient Delivery and Pickup Options\nEnjoy our southern food from the comfort of your home with ou",
+   "w": 560,
+   "h": 560,
+   "page": "https://dadsbbqco.com/tags/southern-food"
+  }
+ ]
+}

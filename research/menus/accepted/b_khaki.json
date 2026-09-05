@@ -1,0 +1,357 @@
+{
+ "id": "b_khaki",
+ "source": "text",
+ "pages": [
+  "https://www.wearekhaki.com/",
+  "https://www.wearekhaki.com/menu",
+  "https://www.wearekhaki.com/catering",
+  "https://order.toasttab.com/online/khaki",
+  "https://order.toasttab.com/online/khaki/item-butter-chicken_a215b220-7364-47f5-91a9-93b0131ce8f2",
+  "https://order.toasttab.com/online/khaki/item-butter-naan_67e8e948-d76c-45ce-b97a-02df7585821d",
+  "https://order.toasttab.com/online/khaki/item-garlic-naan_bf39a1b1-4aa2-4fa6-9116-13d0128f42e9"
+ ],
+ "items": [
+  {
+   "name": "Butter Roti",
+   "desc": "",
+   "cents": 500,
+   "section": "Breads"
+  },
+  {
+   "name": "Cheese Naan",
+   "desc": "",
+   "cents": 800,
+   "section": "Breads"
+  },
+  {
+   "name": "Chili-Cheese Naan",
+   "desc": "",
+   "cents": 800,
+   "section": "Breads"
+  },
+  {
+   "name": "Chilli Garlic Roti",
+   "desc": "",
+   "cents": 700,
+   "section": "Breads",
+   "photo": "khaki-chilli-garlic-roti"
+  },
+  {
+   "name": "Plain Naan",
+   "desc": "",
+   "cents": 600,
+   "section": "Breads"
+  },
+  {
+   "name": "Plain Roti",
+   "desc": "",
+   "cents": 600,
+   "section": "Breads"
+  },
+  {
+   "name": "Mint Lachha Paratha",
+   "desc": "",
+   "cents": 700,
+   "section": "Breads"
+  },
+  {
+   "name": "Ajwain Laccha Paratha",
+   "desc": "",
+   "cents": 700,
+   "section": "Breads"
+  },
+  {
+   "name": "Butter Lachha Paratha",
+   "desc": "",
+   "cents": 700,
+   "section": "Breads"
+  },
+  {
+   "name": "Buttered Ladi Pao",
+   "desc": "",
+   "cents": 500,
+   "section": "Breads"
+  },
+  {
+   "name": "Ras Malai Tres Leches",
+   "desc": "",
+   "cents": 1500,
+   "section": "Dessert"
+  },
+  {
+   "name": "Canteen Pudding",
+   "desc": "",
+   "cents": 1500,
+   "section": "Dessert"
+  },
+  {
+   "name": "Kulfi Falooda",
+   "desc": "",
+   "cents": 1500,
+   "section": "Dessert"
+  },
+  {
+   "name": "Orange Juice Cake",
+   "desc": "",
+   "cents": 1600,
+   "section": "Dessert"
+  },
+  {
+   "name": "gulab jamun",
+   "desc": "",
+   "cents": 1000,
+   "section": "Dessert"
+  },
+  {
+   "name": "gulab jamun with vanilla ice cream",
+   "desc": "",
+   "cents": 1500,
+   "section": "Dessert"
+  },
+  {
+   "name": "Parsi Chicken Keema",
+   "desc": "",
+   "cents": 2200,
+   "section": "Non-veg appetizers",
+   "photo": "khaki-parsi-chicken-keema"
+  },
+  {
+   "name": "Mangalorean Beef Sukka",
+   "desc": "",
+   "cents": 2800,
+   "section": "Non-veg appetizers",
+   "photo": "khaki-mangalorean-beef-sukka"
+  },
+  {
+   "name": "Chemmeen Kappa",
+   "desc": "",
+   "cents": 2600,
+   "section": "Non-veg appetizers",
+   "photo": "khaki-chemmeen-kappa"
+  },
+  {
+   "name": "Chicken Noorani Kabab",
+   "desc": "",
+   "cents": 2200,
+   "section": "Non-veg appetizers",
+   "photo": "khaki-chicken-noorani-kabab"
+  },
+  {
+   "name": "Pallipalayam Chicken",
+   "desc": "",
+   "cents": 2000,
+   "section": "Non-veg appetizers",
+   "photo": "khaki-pallipalayam-chicken"
+  },
+  {
+   "name": "Lamb Burrah Kabab",
+   "desc": "",
+   "cents": 4400,
+   "section": "Non-veg mains",
+   "photo": "khaki-lamb-burrah-kabab"
+  },
+  {
+   "name": "Malvani Kolambi",
+   "desc": "",
+   "cents": 3000,
+   "section": "Non-veg mains",
+   "photo": "khaki-malvani-kolambi"
+  },
+  {
+   "name": "Meen Polichathu",
+   "desc": "",
+   "cents": 4000,
+   "section": "Non-veg mains"
+  },
+  {
+   "name": "Chicken Chettinadu",
+   "desc": "",
+   "cents": 2800,
+   "section": "Non-veg mains",
+   "photo": "khaki-chicken-chettinadu"
+  },
+  {
+   "name": "Champaran Handi Mutton",
+   "desc": "",
+   "cents": 3400,
+   "section": "Non-veg mains",
+   "photo": "khaki-champaran-handi-mutton"
+  },
+  {
+   "name": "Lamb Shank Biryani",
+   "desc": "",
+   "cents": 4600,
+   "section": "Non-veg mains"
+  },
+  {
+   "name": "Basmati Rice",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Bone Broth Biryani Rice",
+   "desc": "",
+   "cents": 800,
+   "section": "Sides",
+   "photo": "khaki-bone-broth-biryani-rice"
+  },
+  {
+   "name": "Buttered Pao",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides"
+  },
+  {
+   "name": "Coconut Rice",
+   "desc": "",
+   "cents": 800,
+   "section": "Sides"
+  },
+  {
+   "name": "Cucumber Mint Raita",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides"
+  },
+  {
+   "name": "Dal Makhani",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sides",
+   "photo": "khaki-dal-makhani"
+  },
+  {
+   "name": "Indian Onion, Tomato & Chili Salad",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides"
+  },
+  {
+   "name": "Plain Yogurt",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Saag Mushroom",
+   "desc": "",
+   "cents": 1800,
+   "section": "Sides"
+  },
+  {
+   "name": "Paneer Bhurji",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sides"
+  },
+  {
+   "name": "Papad Platter",
+   "desc": "",
+   "cents": 1000,
+   "section": "Sides",
+   "photo": "khaki-papad-platter"
+  },
+  {
+   "name": "Onion Pachadi",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Chopped onion",
+   "desc": "",
+   "cents": 150,
+   "section": "Sides"
+  },
+  {
+   "name": "Paneer Pinwheel",
+   "desc": "",
+   "cents": 2800,
+   "section": "Veg mains",
+   "photo": "khaki-paneer-pinwheel"
+  },
+  {
+   "name": "Zucchini Ricotta Kofta",
+   "desc": "",
+   "cents": 2600,
+   "section": "Veg mains",
+   "photo": "khaki-zucchini-ricotta-kofta"
+  },
+  {
+   "name": "Rampuri Bharwan Aloo",
+   "desc": "",
+   "cents": 2600,
+   "section": "Veg mains"
+  },
+  {
+   "name": "Kadhi Patra",
+   "desc": "",
+   "cents": 2600,
+   "section": "Veg mains",
+   "photo": "khaki-kadhi-patra"
+  },
+  {
+   "name": "Bagara Baingan",
+   "desc": "",
+   "cents": 2400,
+   "section": "Veg mains",
+   "photo": "khaki-bagara-baingan"
+  },
+  {
+   "name": "Achari Gobi Musallam",
+   "desc": "",
+   "cents": 2400,
+   "section": "Veg mains"
+  },
+  {
+   "name": "Donne Biryani",
+   "desc": "",
+   "cents": 3000,
+   "section": "Veg mains",
+   "photo": "khaki-donne-biryani"
+  },
+  {
+   "name": "Cauliflower Koliwada",
+   "desc": "",
+   "cents": 1800,
+   "section": "Veg appetizers",
+   "photo": "khaki-cauliflower-koliwada"
+  },
+  {
+   "name": "Jackfruit Cutlet",
+   "desc": "",
+   "cents": 1800,
+   "section": "Veg appetizers",
+   "photo": "khaki-jackfruit-cutlet"
+  },
+  {
+   "name": "Malai Mushroom",
+   "desc": "",
+   "cents": 2200,
+   "section": "Veg appetizers",
+   "photo": "khaki-malai-mushroom"
+  },
+  {
+   "name": "Sweet Potato & Patta Chaat",
+   "desc": "",
+   "cents": 2000,
+   "section": "Veg appetizers",
+   "photo": "khaki-sweet-potato-patta-chaat"
+  },
+  {
+   "name": "Hariyali Paneer Tikka",
+   "desc": "",
+   "cents": 2200,
+   "section": "Veg appetizers",
+   "photo": "khaki-hariyali-paneer-tikka"
+  },
+  {
+   "name": "Passion Fruit Pani Puri",
+   "desc": "",
+   "cents": 1600,
+   "section": "Veg appetizers",
+   "photo": "khaki-passion-fruit-pani-puri"
+  }
+ ]
+}

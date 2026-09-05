@@ -1,0 +1,351 @@
+{
+ "id": "b_sandwichmonkey",
+ "source": "square",
+ "pages": [
+  "https://thesandwichmonkey.com/",
+  "https://thesandwichmonkey.com/menu",
+  "https://thesandwichmonkey.com/order-online-for-pickup",
+  "https://thesandwichmonkey.com/order-catering",
+  "https://sandwich-monkey.square.site/#4QNZZSFVMDMHPDNPDUX6345H",
+  "https://sandwich-monkey.square.site/#4QNZZSFVMDMHPDNPDUX6345H",
+  "https://sandwich-monkey.square.site/#most-popular"
+ ],
+ "items": [
+  {
+   "name": "Drawing Board COLD",
+   "desc": "Build your own sandwich. All sandwiches come with Signature Garlic Pesto Sauce, Mayonnaise, Mustard, Lettuce, Tomatoes, Onions and Pickles",
+   "cents": 1550,
+   "section": "Drawing Board Sandwiches",
+   "photo": "sandwich-monkey-drawing-board-cold"
+  },
+  {
+   "name": "#15 Porky’s Pulled Pork",
+   "desc": "SLOW ROASTED PULLED PORK, SLAW AND BBQ SAUCE",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-15-porky-s-pulled-pork"
+  },
+  {
+   "name": "#1 King Louie (T)",
+   "desc": "HONEY HAM, BREADED CHICKEN PATTIES, SWISS CHEESE, GARLIC-PESTO SAUCE, MAYONNAISE, LETTUCE, TOMATOES, PICKLES, ONIONS (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-1-king-louie-t"
+  },
+  {
+   "name": "#4 Brass Monkey (T)",
+   "desc": "MEATBALLS, PROVOLONE CHEESE, MARINARA SAUCE (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-4-brass-monkey-t"
+  },
+  {
+   "name": "#8 Harvest Monkey",
+   "desc": "TURKEY, CREAM CHEESE, CRANBERRY SAUCE, LETTUCE, TOMATOES",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-8-harvest-monkey"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "",
+   "cents": 325,
+   "section": "Drinks",
+   "photo": "sandwich-monkey-gatorade"
+  },
+  {
+   "name": "San Pellegrino Flavored Soda",
+   "desc": "",
+   "cents": 295,
+   "section": "Drinks",
+   "photo": "sandwich-monkey-san-pellegrino-flavored-soda"
+  },
+  {
+   "name": "San Pellegrino Sparkling Water",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "sandwich-monkey-san-pellegrino-sparkling-water"
+  },
+  {
+   "name": "Soda 12 oz cans",
+   "desc": "",
+   "cents": 285,
+   "section": "Drinks",
+   "photo": "sandwich-monkey-soda-12-oz-cans"
+  },
+  {
+   "name": "Dirty Chips Mesquite BBQ",
+   "desc": "2 oz. bag Dirty Chips Mesquite BBQ",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chips-mesquite-bbq"
+  },
+  {
+   "name": "Dirty Chips: Salt and Vinegar",
+   "desc": "2 oz. bag Dirty Chips: Salt & Vinegar",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chips-salt-and-vinegar"
+  },
+  {
+   "name": "Dirty Chips: Sour Cream & Onion",
+   "desc": "2oz. bag Dirty Chips: Sour Cream & Onion",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chips-sour-cream-onion"
+  },
+  {
+   "name": "Dirty Chips: Jalepano Heat",
+   "desc": "2oz bag Dirty Chips: Jalepani Heat",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chips-jalepano-heat"
+  },
+  {
+   "name": "Dirty Chip: Sea Salt",
+   "desc": "2 oz. bag Dirty Chips: Sea Salt",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chip-sea-salt"
+  },
+  {
+   "name": "Kids ROAST BEEF",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-kids-roast-beef"
+  },
+  {
+   "name": "Kids HONEY HAM",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-kids-honey-ham"
+  },
+  {
+   "name": "Kids TURKEY",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-kids-turkey"
+  },
+  {
+   "name": "Kids NUTELLA, STRAWBERRY & BANANA",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-kids-nutella-strawberry-banana"
+  },
+  {
+   "name": "Kids PEANUT BUTTER & BANANA",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-kids-peanut-butter-banana"
+  },
+  {
+   "name": "Kids PEANUT BUTTER & JELLY",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-kids-peanut-butter-jelly"
+  },
+  {
+   "name": "LIL' RASCALS GRILLED CHEESE",
+   "desc": "",
+   "cents": 800,
+   "section": "Kid's Classic Sandwiches",
+   "photo": "sandwich-monkey-lil-rascals-grilled-cheese"
+  },
+  {
+   "name": "Chicken Tortilla Soup",
+   "desc": "",
+   "cents": 595,
+   "section": "Soups and boxes",
+   "photo": "sandwich-monkey-chicken-tortilla-soup"
+  },
+  {
+   "name": "Tomato Basil Soup",
+   "desc": "",
+   "cents": 595,
+   "section": "Soups and boxes",
+   "photo": "sandwich-monkey-tomato-basil-soup"
+  },
+  {
+   "name": "Club House Lunch Boxes",
+   "desc": "",
+   "cents": 1895,
+   "section": "Soups and boxes"
+  },
+  {
+   "name": "Dirty Chip: Cracked Pepper & Sea Salt",
+   "desc": "2 oz. bag Dirty Chips: Cracked Pepper & Sea Salt",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chip-cracked-pepper-sea-salt"
+  },
+  {
+   "name": "Dirty Chip: Maui Onion",
+   "desc": "2 oz. bag Dirty Chips: Maui Onion",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chip-maui-onion"
+  },
+  {
+   "name": "Dirty Chips Funky Fusion",
+   "desc": "2 oz. bag Dirty Chips Funky Fusion",
+   "cents": 295,
+   "section": "Chips",
+   "photo": "sandwich-monkey-dirty-chips-funky-fusion"
+  },
+  {
+   "name": "Metro Deli: Original Sea Salt Kettle Chips",
+   "desc": "1.38 oz. Bag : Metro Deli Original Sea Salt Kettle Chips",
+   "cents": 250,
+   "section": "Chips",
+   "photo": "sandwich-monkey-metro-deli-original-sea-salt-kettle-chip"
+  },
+  {
+   "name": "Metro Deli: Spicy Dill Pickle Kettle Chips",
+   "desc": "1.38 oz. Bag : Metro Deli Spicy Dill Pickle Kettle Chips",
+   "cents": 250,
+   "section": "Chips",
+   "photo": "sandwich-monkey-metro-deli-spicy-dill-pickle-kettle-chip"
+  },
+  {
+   "name": "Metro Deli: Jalapeño Cheddar Kettle Chips",
+   "desc": "1.38 oz. Bag : Metro Deli Jalapeno Cheddar Kettle Chips",
+   "cents": 250,
+   "section": "Chips",
+   "photo": "sandwich-monkey-metro-deli-jalape-o-cheddar-kettle-chips"
+  },
+  {
+   "name": "#5 Tempting Tuna Melt (T)",
+   "desc": "ALBACORE TUNA SALAD (CELERY, PICKLED RELISH, MAYONNAISE), AMERICAN CHEESE, SALT, PEPPER (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-5-tempting-tuna-melt-t"
+  },
+  {
+   "name": "#13 Angry Monkey (T)",
+   "desc": "GRILLED CHICKEN, PEPPER JACK CHEESE, SAFARI SAUCE, ROASTED RED PEPPERS, JALAPENOS, PEPPERONCINIS, LETTUCE, ONIONS (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-13-angry-monkey-t"
+  },
+  {
+   "name": "#2 Monkey's Uncle (T)",
+   "desc": "PASTRAMI, SWISS CHEESE, SAUERKRAUT, THOUSAND ISLAND DRESSING, LETTUCE, TOMATOES, PICKLES, ONIONS (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-2-monkey-s-uncle-t"
+  },
+  {
+   "name": "#6 BBQ Bonanza (T)",
+   "desc": "ROAST BEEF, BACON, CHEDDAR CHEESE, BBQ SAUCE, LETTUCE, TOMATOES, PICKLES, ONIONS (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-6-bbq-bonanza-t"
+  },
+  {
+   "name": "#3 Roasted Rascal (T)",
+   "desc": "ROAST BEEF, CREAM CHEESE, SAFARI SAUCE, LETTUCE, TOMATOES, PICKLES, ONIONS (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-3-roasted-rascal-t"
+  },
+  {
+   "name": "#10 Bonobo (T)",
+   "desc": "MOZZARELLA CHEESE, BALSAMIC VINEGAR, OLIVE OIL, TOMATOES, BASIL, SALT, PEPPER (TOASTED HOT)",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-10-bonobo-t"
+  },
+  {
+   "name": "#9 Avo Gobble",
+   "desc": "TURKEY, AMERICAN CHEESE, AVOCADO, MAYONNAISE, MUSTARD, LETTUCE, TOMATOES, PICKLES, ONIONS",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-9-avo-gobble"
+  },
+  {
+   "name": "#7 Monkey Business",
+   "desc": "TURKEY, BACON, HAM, MAYONNAISE, HONEY MUSTARD, LETTUCE, TOMATOES, PICKLES, ONIONS",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-7-monkey-business"
+  },
+  {
+   "name": "#12 Italian Jungle",
+   "desc": "SALAMI, CAPICOLA, PROSCIUTTO, MORTADELLA, PROVOLONE CHEESE, GARLIC SAUCE, OLIVE OIL, VINEGAR, ARTICHOKE HEARTS, PEPPERONCINIS, LETTUCE, TOMATOES, PICKLES",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-12-italian-jungle"
+  },
+  {
+   "name": "#1 Caesar Salad",
+   "desc": "ROMAIN LETTUCE, PARMESAN CHEESE, GARLIC CROUTONS, CAESAR DRESSING",
+   "cents": 1195,
+   "label": "from $11.95",
+   "section": "Salads",
+   "photo": "sandwich-monkey-1-caesar-salad"
+  },
+  {
+   "name": "#3 Tuna Salad",
+   "desc": "ROMAIN & SPRING MIX LETTUCE, TUNA SALAD, CUCUMBERS, RED ONIONS, TOMATOES, BLACK OLIVES, AVOCADO, ITALIAN DRESSING",
+   "cents": 1395,
+   "section": "Salads",
+   "photo": "sandwich-monkey-3-tuna-salad"
+  },
+  {
+   "name": "#4 BBQ Chicken Salad",
+   "desc": "ROMAIN LETTUCE, GRILLED CHICKEN, TOMATOES, CORN, BLACK BEANS, RED ONIONS, SHREDDED CHEDDAR, TORTILLA STRIPS, RANCH/BBQ SAUCE DRESSING",
+   "cents": 1395,
+   "section": "Salads",
+   "photo": "sandwich-monkey-4-bbq-chicken-salad"
+  },
+  {
+   "name": "#5 Italian Antipasto Salad",
+   "desc": "ROMAIN LETTUCE, SALAMI, ARTICHOKE HEARTS, RED ONIONS, BLACK OLIVES, TOMATOES, GARBANZO BEANS, PEPPERONCINIS, PROVOLONE CHEESE, PARMESAN CHEESE",
+   "cents": 1395,
+   "section": "Salads",
+   "photo": "sandwich-monkey-5-italian-antipasto-salad"
+  },
+  {
+   "name": "#6 Southwest Salad",
+   "desc": "ROMAIN LETTUCE, GRILLED CHICKEN, CORN, TOMATOES, AVOCADO, ROASTED RED PEPPERS, BLACK BEANS, RED ONIONS, SHREDDED CARROTS, TORTILLA STRIPS",
+   "cents": 1395,
+   "section": "Salads",
+   "photo": "sandwich-monkey-6-southwest-salad"
+  },
+  {
+   "name": "#7 Greek Salad",
+   "desc": "ROMAINE LETTUCE, CUCUMBER, RED ONION, TOMATOES, BELL PEPPERS, FETA CHEESE, BLACK OLIVES, OLIVE OIL , RED WINE VINEGAR",
+   "cents": 1395,
+   "section": "Salads",
+   "photo": "sandwich-monkey-7-greek-salad"
+  },
+  {
+   "name": "#2 NOBO Salad",
+   "desc": "SPRING MIX LETTUCE, MOZZARELLA, BASIL, TOMATOES, BALSAMIC VINAIGRETTE",
+   "cents": 1395,
+   "section": "Salads",
+   "photo": "sandwich-monkey-2-nobo-salad"
+  },
+  {
+   "name": "Drawing Board Toasted",
+   "desc": "Build your own sandwich. All sandwiches come with Signature Garlic Pesto Sauce, Mayonnaise, Mustard, Lettuce, Tomatoes, Onions and Pickles",
+   "cents": 1550,
+   "section": "Drawing Board Sandwiches",
+   "photo": "sandwich-monkey-drawing-board-toasted"
+  },
+  {
+   "name": "#11 Goodall",
+   "desc": "ARTICHOKE HEARTS, ROASTED RED PEPPERS, AVOCADO, PEPPERONCINIS, CUCUMBERS, GARLIC SAUCE, MAYONNAISE, MUSTARD, LETTUCE, TOMATOES, PICKLES, ONIONS",
+   "cents": 1550,
+   "section": "Clubhouse Sandwiches",
+   "photo": "sandwich-monkey-11-goodall"
+  }
+ ]
+}

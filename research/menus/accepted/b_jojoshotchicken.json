@@ -1,0 +1,100 @@
+{
+ "id": "b_jojoshotchicken",
+ "source": "text",
+ "pages": [
+  "https://www.jojoshotchicken.com/",
+  "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+ ],
+ "items": [
+  {
+   "name": "Combo 1",
+   "desc": "",
+   "cents": 1599,
+   "section": "Menu",
+   "photo": "jojoshotchicken-combo-1"
+  },
+  {
+   "name": "Combo 2",
+   "desc": "",
+   "cents": 1499,
+   "section": "Menu",
+   "photo": "jojoshotchicken-combo-2"
+  },
+  {
+   "name": "Combo 3 (Wednesday Special)",
+   "desc": "",
+   "cents": 1299,
+   "section": "Menu",
+   "photo": "jojoshotchicken-combo-3-wednesday-special"
+  },
+  {
+   "name": "Bowl",
+   "desc": "",
+   "cents": 1499,
+   "section": "Menu",
+   "photo": "jojoshotchicken-bowl"
+  },
+  {
+   "name": "Tender",
+   "desc": "",
+   "cents": 599,
+   "section": "Menu",
+   "photo": "jojoshotchicken-tender"
+  },
+  {
+   "name": "Fries",
+   "desc": "",
+   "cents": 599,
+   "section": "Menu",
+   "photo": "jojoshotchicken-fries"
+  },
+  {
+   "name": "Slider",
+   "desc": "",
+   "cents": 799,
+   "section": "Menu",
+   "photo": "jojoshotchicken-slider"
+  },
+  {
+   "name": "Water",
+   "desc": "",
+   "cents": 199,
+   "section": "Menu",
+   "photo": "jojoshotchicken-water"
+  },
+  {
+   "name": "Coca Cola",
+   "desc": "",
+   "cents": 299,
+   "section": "Menu",
+   "photo": "jojoshotchicken-coca-cola"
+  },
+  {
+   "name": "Coke Zero",
+   "desc": "",
+   "cents": 299,
+   "section": "Menu",
+   "photo": "jojoshotchicken-coke-zero"
+  },
+  {
+   "name": "Pickles",
+   "desc": "",
+   "cents": 299,
+   "section": "Menu",
+   "photo": "jojoshotchicken-pickles"
+  },
+  {
+   "name": "Slaw",
+   "desc": "",
+   "cents": 399,
+   "section": "Menu",
+   "photo": "jojoshotchicken-slaw"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 299,
+   "section": "Menu"
+  }
+ ]
+}

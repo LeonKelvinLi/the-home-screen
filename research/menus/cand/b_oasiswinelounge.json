@@ -1,0 +1,914 @@
+{
+ "id": "b_oasiswinelounge",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://oasiswinelounge.com/",
+  "https://oasiswinelounge.com/wp-content/uploads/2025/12/Oasis-November-2025-menu.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/05/Oasis-Cocktail-Menu-May-2026-1.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/06/Oasis-Happy-Hour-Menu-June-26.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/05/Oasis-Dessert-Menu-May-2026.pdf",
+  "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef",
+  "https://www.spoton.com/"
+ ],
+ "pdfs": [
+  "https://oasiswinelounge.com/wp-content/uploads/2025/12/Oasis-November-2025-menu.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/05/Oasis-Cocktail-Menu-May-2026-1.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/06/Oasis-Happy-Hour-Menu-June-26.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/05/Oasis-Dessert-Menu-May-2026.pdf"
+ ],
+ "items": [
+  {
+   "name": "Grilled Chicken Kabob",
+   "desc": "",
+   "cents": 2600,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633103874/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba092d_1633103818168.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Your bag"
+  },
+  {
+   "name": "Pumpkin Borani",
+   "desc": "",
+   "cents": 1600,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633012483/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba094e_1633012446645.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Your bag"
+  },
+  {
+   "name": "Mini Gyros Beef (4)",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Your bag"
+  },
+  {
+   "name": "Koobideh Kabob",
+   "desc": "",
+   "cents": 2900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Your bag"
+  },
+  {
+   "name": "Spicy Beef Cigar Rolls",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Your bag"
+  },
+  {
+   "name": "Potato Bolani",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Your bag"
+  },
+  {
+   "name": "Cucumber Mint Yogurt",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Classic Hummus",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Spicy Harissa Hummus",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Spicy Spinach Goat Cheese Dip",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Hummus Sampler",
+   "desc": "",
+   "cents": 2100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Pesto Hummus",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Garlic Hummus",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Eggplant Borani",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Sumac Spiced Potates",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Tour Of Mediterranean",
+   "desc": "",
+   "cents": 2100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Greek Dolmathes",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Dipping Sauces/Bread",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Lamb Lollipops",
+   "desc": "",
+   "cents": 2300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Basil Shrimp",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Chicken Mini Gyros (4)",
+   "desc": "",
+   "cents": 2265,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Mini Gyros Beef",
+   "desc": "",
+   "cents": 1900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Chicken Mini Gyros",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Mezze Platter",
+   "desc": "",
+   "cents": 2600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Steak Shawarma Pitas (4)",
+   "desc": "",
+   "cents": 2650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Steak Shawarma Pitas",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Falafel Crisps",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Starters"
+  },
+  {
+   "name": "Marinated Olives/ Feta Cheese",
+   "desc": "",
+   "cents": 1000,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633450463/menu/prod/614a054d1aceac0008ba048a/t5ewwjydurhcrbpqhqxlxxpeqy_1633450411633.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Starters"
+  },
+  {
+   "name": "Mediterranean Salad",
+   "desc": "",
+   "cents": 1600,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633030058/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba0915_1633030020259.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "House Salad",
+   "desc": "",
+   "cents": 900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Lemon Caesar",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Salata",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Pesto Shrimp Flatbread",
+   "desc": "",
+   "cents": 2800,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633032100/menu/prod/614a054d1aceac0008ba048a/qbwtpxgjtfgtra2n0qfvw1wad2_1633032065798.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Melitzana Flatbread",
+   "desc": "",
+   "cents": 2400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Cheese Flatbread",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Kids Cheese Pizza",
+   "desc": "",
+   "cents": 900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Kids Cheese Pizza w/chicken",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Zaytun Flatbread",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Extra Side",
+   "desc": "",
+   "cents": 1000,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633448544/menu/prod/614a054d1aceac0008ba048a/wborzb4zhbazdk43mwo3soxq2q_1633448490887.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Extra Gyro Slice (2)",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side Grilled Tomato",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side Cucumber Slices",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side Raw Veggie",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Classic Gyro",
+   "desc": "",
+   "cents": 2300,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633107034/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba0947_1633106979955.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Lunch"
+  },
+  {
+   "name": "Shawarma Wrap",
+   "desc": "",
+   "cents": 2400,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633107134/menu/prod/614a054d1aceac0008ba048a/p4omufhq13cfbf253ryw3f55le_1633107078751.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Lunch"
+  },
+  {
+   "name": "Oasis Salmon",
+   "desc": "",
+   "cents": 3600,
+   "image": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633098919/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba093c_1633098865880.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "From The Grille"
+  },
+  {
+   "name": "Grilled Rack Of Lamb",
+   "desc": "",
+   "cents": 4600,
+   "alcohol": false,
+   "src": "text",
+   "section": "From The Grille"
+  },
+  {
+   "name": "Mixed Grille",
+   "desc": "",
+   "cents": 3200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Sizzling Shrimp Kabob",
+   "desc": "",
+   "cents": 3500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Garlic-Butter Filet Kabob",
+   "desc": "",
+   "cents": 3900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Royal Platter Modified",
+   "desc": "",
+   "cents": 6200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Royal Platter",
+   "desc": "",
+   "cents": 6200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mantoo Dumplings",
+   "desc": "",
+   "cents": 2900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Aushak Tortellini",
+   "desc": "",
+   "cents": 2900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Sumac Trout",
+   "desc": "",
+   "cents": 3400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Veg",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Chicken",
+   "desc": "",
+   "cents": 2700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Veg W/extra vegetables",
+   "desc": "",
+   "cents": 2800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Shrimp",
+   "desc": "",
+   "cents": 3500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry With Chicken",
+   "desc": "",
+   "cents": 2400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry With Shrimp",
+   "desc": "",
+   "cents": 3500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry with Vegetable",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ koobideh",
+   "desc": "",
+   "cents": 2900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ falafel",
+   "desc": "",
+   "cents": 2400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ salmon",
+   "desc": "",
+   "cents": 3600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ rack of lamb",
+   "desc": "",
+   "cents": 4500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Baklava",
+   "desc": "",
+   "cents": 1100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweet Endings"
+  },
+  {
+   "name": "Oasis Paradise",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweet Endings"
+  },
+  {
+   "name": "Lava Love",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweet Endings"
+  },
+  {
+   "name": "Sweet Sampler",
+   "desc": "",
+   "cents": 3700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweet Endings"
+  },
+  {
+   "name": "Toffee Nut Cake",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweet Endings"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://oasiswinelounge.com/wp-content/uploads/2024/06/Bottom-homepage.jpg#138",
+   "alt": "parallax background",
+   "near": "Hours & Location\nLocate Us\n\n780 Main St\nPleasanton, CA 94566\n\n\nHours\n\n7 days a week\n11:30am-9:00pm\n\n",
+   "w": 1920,
+   "h": 1280,
+   "page": "https://oasiswinelounge.com/"
+  },
+  {
+   "src": "https://oasiswinelounge.com/wp-content/uploads/2024/06/2324.jpg#133",
+   "alt": "",
+   "near": "HOME\nMENUS\nPRIVATE EVENTS\nGALLERY\nOrder Online\nOpen Table Reservations\nOrder Online\nYelp Reservation",
+   "w": 1280,
+   "h": 900,
+   "page": "https://oasiswinelounge.com/"
+  },
+  {
+   "src": "https://oasiswinelounge.com/wp-content/uploads/2024/06/smooth-white-plaster-wall-1920.jpg#134",
+   "alt": "",
+   "near": "Hours & Location\nLocate Us\n\n780 Main St\nPleasanton, CA 94566\n\n\nHours\n\n7 days a week\n11:30am-9:00pm\n\n",
+   "w": 1280,
+   "h": 704,
+   "page": "https://oasiswinelounge.com/"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633103874/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba092d_1633103818168.jpg",
+   "alt": "",
+   "near": "Grilled Chicken Kabob\n$26.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633012483/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba094e_1633012446645.jpg",
+   "alt": "",
+   "near": "Pumpkin Borani\n$16.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633450463/menu/prod/614a054d1aceac0008ba048a/t5ewwjydurhcrbpqhqxlxxpeqy_1633450411633.jpg",
+   "alt": "",
+   "near": "Marinated Olives/ Feta Cheese\n$10.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633030058/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba0915_1633030020259.jpg",
+   "alt": "",
+   "near": "Mediterranean Salad\n$16.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633032100/menu/prod/614a054d1aceac0008ba048a/qbwtpxgjtfgtra2n0qfvw1wad2_1633032065798.jpg",
+   "alt": "",
+   "near": "Pesto Shrimp Flatbread\n$28.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633448544/menu/prod/614a054d1aceac0008ba048a/wborzb4zhbazdk43mwo3soxq2q_1633448490887.jpg",
+   "alt": "",
+   "near": "Extra Side\n$10.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633107034/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba0947_1633106979955.jpg",
+   "alt": "",
+   "near": "Classic Gyro\n$23.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633107134/menu/prod/614a054d1aceac0008ba048a/p4omufhq13cfbf253ryw3f55le_1633107078751.jpg",
+   "alt": "",
+   "near": "Shawarma Wrap\n$24.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://res.cloudinary.com/emaginepos/image/upload/c_fit,h_338,q_90,r_0,w_600/v1633098919/menu/prod/614a054d1aceac0008ba048a/614a05501aceac0008ba093c_1633098865880.jpg",
+   "alt": "",
+   "near": "Oasis Salmon\n$36.00",
+   "w": 400,
+   "h": 216,
+   "page": "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fvalues-1.4c460a51.png&w=640&q=75",
+   "alt": "People who show up",
+   "near": "People who show up",
+   "w": 528,
+   "h": 510,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fvalues-2.bf85ab05.png&w=640&q=75",
+   "alt": "Products that fuel efficiency",
+   "near": "Products that fuel efficiency",
+   "w": 528,
+   "h": 510,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fvalues-3.8601fce6.png&w=640&q=75",
+   "alt": "Support that’s always available",
+   "near": "Support that’s always available",
+   "w": 528,
+   "h": 510,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fvalues-4.2717b102.png&w=640&q=75",
+   "alt": "Profit driven by real insights",
+   "near": "Profit driven by real insights",
+   "w": 528,
+   "h": 510,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Freservations-tablet.b7225176.png&w=1080&q=75",
+   "alt": "Woman using SpotOn tablet for restaurant reservations",
+   "near": "Reservations",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fspoton-handheld-pos.2e165eac.png&w=1080&q=75",
+   "alt": "Server using SpotOn handheld POS device at restaurant table",
+   "near": "Handhelds",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fmarketing-diners.2379bdce.png&w=1080&q=75",
+   "alt": "Couple using phone to redeem marketing deal while dining",
+   "near": "Marketing",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fspoton-pos-station-bartender-central.957d69d4.png&w=1080&q=75",
+   "alt": "Bartender using SpotOn point-of-sale terminal behind bar",
+   "near": "Point-of-sale",
+   "w": 912,
+   "h": 1194,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fspoton-pos-station-bartender.61fbc82f.png&w=1920&q=75",
+   "alt": "Bartender using SpotOn point-of-sale terminal behind bar",
+   "near": "Point-of-sale",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fonline-ordering-customer.acb7a497.png&w=1080&q=75",
+   "alt": "Woman placing online food order on her smartphone at home",
+   "near": "Online ordering",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fprofitability-analysis.63a97604.png&w=1080&q=75",
+   "alt": "Restaurant owner reviews P&L analysis",
+   "near": "Profitability analysis software",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Flabor-management-restaurant.5a1a14f7.png&w=1080&q=75",
+   "alt": "Restaurant manager reviewing staff schedule on laptop at counter",
+   "near": "Scheduling",
+   "w": 896,
+   "h": 866,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fcasual-dining-pos.5f727179.png&w=640&q=75",
+   "alt": "Server using SpotOn POS system in a casual dining restaurant",
+   "near": "Restaurant\nCasual dining",
+   "w": 336,
+   "h": 591,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fbar-pub-pos.7d182bdd.png&w=640&q=75",
+   "alt": "Bartender using SpotOn POS system while guest enjoys a cocktail",
+   "near": "Restaurant\nBar & pub",
+   "w": 336,
+   "h": 587,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fbrewery-bartender-pos.1da87638.png&w=640&q=75",
+   "alt": "Bartender smiling and taking payment at SpotOn POS in a brewery",
+   "near": "Restaurant\nBrewery",
+   "w": 336,
+   "h": 589,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fquick-service-pos.feb1da2c.png&w=640&q=75",
+   "alt": "SpotOn POS system processing quick service order with burgers and fries",
+   "near": "Restaurant\nQuick service",
+   "w": 336,
+   "h": 589,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Ffast-casual-pos.200fca85.png&w=640&q=75",
+   "alt": "Guests ordering food at SpotOn POS in a fast casual restaurant",
+   "near": "Restaurant\nFast casual",
+   "w": 336,
+   "h": 589,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fcafe-bakery-pos.d32a21f2.png&w=640&q=75",
+   "alt": "Barista smiling while taking card payment on SpotOn POS at a cafe",
+   "near": "Restaurant\nCafe & bakery",
+   "w": 336,
+   "h": 589,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Famir-harpaz-mudpuppy.f144f90d.png&w=1920&q=75",
+   "alt": "Amir Harpaz smiling outdoors at The Mudpuppy restaurant by the lake",
+   "near": "“How in the hell does a company this big create a culture where everybody wants to help me?”\n\nAmir H",
+   "w": 1344,
+   "h": 1294,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fkhara-mangiduyos-kaleis-kitchenette.7564838c.png&w=1920&q=75",
+   "alt": "Khara Mangiduyos, owner of Kalei’s Kitchenette, smiling while helping a customer at the counter",
+   "near": "“Hospitality people are built differently. SpotOn understands because they’re hospitality people.”\n\n",
+   "w": 1344,
+   "h": 1294,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fjb-baligit-hideout-kitchen.a235efd5.png&w=1920&q=75",
+   "alt": "JB Baligit, owner of The Hideout Kitchen, smiling in black apron",
+   "near": "“They’ve rolled out the red carpet for me and my group. We’re extremely overwhelmed. That’s the kind",
+   "w": 1344,
+   "h": 1294,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fbig-daves-bagels-deli-owners.e8628e2c.png&w=1920&q=75",
+   "alt": "Big Dave’s Bagels & Deli owners smiling and holding fresh bagels",
+   "near": "“SpotOn has developed a culture of customer care that is both warm and rare these days.”\n\nDavid Haus",
+   "w": 1344,
+   "h": 1294,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fjonathan-gillespie-adalina.d56c4999.png&w=1920&q=75",
+   "alt": "Jonathan Gillespie smiling inside Adalina restaurant",
+   "near": "“SpotOn wasn’t just selling me a solution. They were offering a real partnership.”\n\nJonathan Gillesp",
+   "w": 1344,
+   "h": 1294,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=https%3A%2F%2Fstorage.ghost.io%2Fc%2F22%2F56%2F2256c778-7ed4-48f6-b263-d1f698aa8a02%2Fcontent%2Fimages%2F2026%2F08%2FCOTE_Laptop_Teamwork.png&w=1920&q=75",
+   "alt": "The AI Checklist Every Restaurant Operator Needs",
+   "near": "Restaurant",
+   "w": 1280,
+   "h": 854,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=https%3A%2F%2Fstorage.ghost.io%2Fc%2F22%2F56%2F2256c778-7ed4-48f6-b263-d1f698aa8a02%2Fcontent%2Fimages%2F2026%2F08%2FSpeed-of-service-restaurants.jpg&w=1920&q=75",
+   "alt": "How to Speed Up Restaurant Checkout to Turn Tables Faster and Increase Revenue",
+   "near": "Restaurant",
+   "w": 1280,
+   "h": 960,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=https%3A%2F%2Fstorage.ghost.io%2Fc%2F22%2F56%2F2256c778-7ed4-48f6-b263-d1f698aa8a02%2Fcontent%2Fimages%2F2026%2F08%2FBryan_crown-anchor.png&w=1920&q=75",
+   "alt": "Build vs. Buy in the Age of AI: A Field Guide for Restaurant Operators",
+   "near": "Restaurant",
+   "w": 867,
+   "h": 484,
+   "page": "https://www.spoton.com/"
+  },
+  {
+   "src": "https://www.spoton.com/_next/image/?url=%2F_next%2Fstatic%2Fmedia%2Fdemo-bg.ef22b972.png&w=1920&q=75",
+   "alt": "Demo form background blurred",
+   "near": "See how SpotOn\nis different\nGet a demo\nSteps\n1 of 2\n50%\nFull name\nBusiness email\nPhone number\nNext\n\n",
+   "w": 1280,
+   "h": 711,
+   "page": "https://www.spoton.com/"
+  }
+ ]
+}

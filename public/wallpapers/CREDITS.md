@@ -314,3 +314,6 @@ nearly-large-enough one gets a resample.
   on Wikimedia Commons, CC BY-SA 3.0
   (https://creativecommons.org/licenses/by-sa/3.0). His link was a Pinterest
   pin.
+- `penngrove.webp` — "Penngrove at the railroad station", unknown author, on
+  Wikimedia Commons, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0).
+  His link was a DuckDuckGo image search for Penngrove landmarks.

@@ -31,3 +31,7 @@ __pycache__/
 # committed, so there is no window in which a run could stage a live key.
 .stripe-live.env
 .stripe-test.env
+
+# The menu crawl: 575MB of page text, JSON and PDFs, re-creatable with tools/menu-scrape.ts.
+# The reviewed candidates (research/menus/cand) and what was accepted stay in.
+research/menus/raw/

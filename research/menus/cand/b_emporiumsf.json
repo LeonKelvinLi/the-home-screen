@@ -1,0 +1,427 @@
+{
+ "id": "b_emporiumsf",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://www.emporiumarcadebar.com/locations/san-francisco/",
+  "https://www.emporiumarcadebar.com/services_group/all-features/",
+  "https://www.emporiumarcadebar.com/services/non-alcoholic-menu/",
+  "https://www.emporiumarcadebar.com/services/bring-your-own-food/",
+  "https://www.emporiumarcadebar.com/services/food-truck/",
+  "https://www.emporiumarcadebar.com/services_group/all-features/page/2/",
+  "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Hogans-Alley.jpeg",
+   "alt": "Hogans Alley Video Game Emporium Arcade Bar",
+   "near": "Hogan's Alley\nVideo\nLogan Square\nMore Info",
+   "w": 540,
+   "h": 690,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/11/X-Men-Video-Game.jpeg",
+   "alt": "x-men video game emporium arcade bar",
+   "near": "X-Men\nVideo\nFulton Market\nMore Info",
+   "w": 540,
+   "h": 690,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/11/NFL-Blitz-99-Video-Game.jpeg",
+   "alt": "NFL Blitz ’99 Video Game emporium arcade bar",
+   "near": "NFL Blitz 99\nVideo\nWicker Park, Logan Square, San Francisco\nMore Info",
+   "w": 540,
+   "h": 690,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/FLR00273-1024x684-1.jpeg",
+   "alt": "Emporium DJ Performance Crowd",
+   "near": "",
+   "w": 1024,
+   "h": 684,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Emporium2018_0204_022802-3085_SSH_preview-1024x684-1.jpeg",
+   "alt": "Guests Playing Arcade Shooter",
+   "near": "",
+   "w": 1024,
+   "h": 684,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/FLR00257-1024x684-1.jpeg",
+   "alt": "Crowded Emporium Arcade Bar Event Night",
+   "near": "",
+   "w": 1024,
+   "h": 684,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/25358419_2044704888876231_8132539509846264501_o-1024x768-1.jpeg",
+   "alt": "Colorful Local Artist Mural With Seating",
+   "near": "",
+   "w": 1024,
+   "h": 768,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/09/sf_loc_hero_1.jpg",
+   "alt": "",
+   "near": "San Francisco",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/11/sanfrancisco_lo-ation_slide_1a.jpg",
+   "alt": "",
+   "near": "San Francisco",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/11/sanfrancisco_location_slide_2a.jpg",
+   "alt": "",
+   "near": "San Francisco",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/11/sanfrancisco_location_slide_3a.jpg",
+   "alt": "",
+   "near": "San Francisco",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/11/sanfrancisco_location_slide_4a.jpg",
+   "alt": "",
+   "near": "San Francisco",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/09/events_bkd_sf.jpg?id=1184",
+   "alt": "",
+   "near": "Events\nAll Types\nBar\nDance Party\nDJ\nFundraiser\nGame Night\nGames\nMixer\nMusic\nNYE Party\nOther\nPaint & ",
+   "w": 1030,
+   "h": 1086,
+   "page": "https://www.emporiumarcadebar.com/locations/san-francisco/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Shuffleboard-service-emporium-770x380.jpeg",
+   "alt": "Shuffleboard",
+   "near": "Shuffleboard\n\nShuffleboard is gaining in popularity as a bar game, and a growing number of bars acro",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Tournaments-Emporium-770x380.jpeg",
+   "alt": "Tournaments",
+   "near": "Tournaments\n\nPlaying in a tournament for the first time is always an intimidating experience. Intimi",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Dance-Floor-Emporium-770x380.jpeg",
+   "alt": "Dance floor",
+   "near": "Dance floor\n\nThere are drink specials every day of the week, making this a bar you can chill at even",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Food-Truck-Emporium-770x380.jpeg",
+   "alt": "Food Truck",
+   "near": "Food Truck\n\nSo…we don’t have food for sale at our locations outside of some delicious bar snacks, in",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Bubble-hockey-service-emporium-770x380.jpeg",
+   "alt": "Super Chexx",
+   "near": "Super Chexx\n\nA fun table game, bubble hockey gives players the ability to enjoy the speed and thrill",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Draft-Wine-Bar-Emporium-770x380.jpeg",
+   "alt": "Draft Wine",
+   "near": "Draft Wine\n\nWe offer a serious selection of drinks at Emporium Arcade Bar – including frozen, mixed,",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Summer-patio-emporium-770x380.jpeg",
+   "alt": "Summer Patio",
+   "near": "Summer Patio\n\nAvailable at our Fulton Market location the best Summer months make for great patio we",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Air-Hockey-Service-Emporium-770x380.jpeg",
+   "alt": "Air Hockey",
+   "near": "Air Hockey\n\nEnjoy a classic arcade game anytime at one of our air hockey tables. Evoke the same fast",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Foosball-Service-Emporium-770x380.jpeg",
+   "alt": "Foosball",
+   "near": "Foosball\n\nFoosball is the classic indoor football game, which is known as table football,, also know",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Craft-Beers-Emporium-770x380.jpeg",
+   "alt": "Craft Beers",
+   "near": "Craft Beers\n\nCraft beer aficionados, rejoice! You have yet another reason to head to Emporium Arcade",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.comwp-content/uploads/2017/06/title_bg.jpg?id=465",
+   "alt": "",
+   "near": "All Features",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Non-Alcoholic-menu-emporium.jpeg",
+   "alt": "Non-Alcoholic Menu",
+   "near": "Whether you’re purposefully on the wagon or just looking for something refreshing to sip while playi",
+   "w": 1170,
+   "h": 658,
+   "page": "https://www.emporiumarcadebar.com/services/non-alcoholic-menu/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/09/contact-hero.jpg",
+   "alt": "",
+   "near": "Non-Alcoholic Menu",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/services/non-alcoholic-menu/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Bring-Your-Food-Emporium.jpeg",
+   "alt": "Bring Your Own Food",
+   "near": "We encourage our guests to bring your own food! There are many awesome restaurants nearby or you can",
+   "w": 1170,
+   "h": 658,
+   "page": "https://www.emporiumarcadebar.com/services/bring-your-own-food/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/09/contact-hero.jpg",
+   "alt": "",
+   "near": "Bring Your Own Food",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/services/bring-your-own-food/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Food-Truck-Emporium.jpeg",
+   "alt": "Food Truck",
+   "near": "So…we don’t have food for sale at our locations outside of some delicious bar snacks, including Chic",
+   "w": 1170,
+   "h": 658,
+   "page": "https://www.emporiumarcadebar.com/services/food-truck/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/09/contact-hero.jpg",
+   "alt": "",
+   "near": "Food Truck",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/services/food-truck/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/NBA-Hoops-Service-Emporium-770x380.jpeg",
+   "alt": "NBA Hoops",
+   "near": "NBA Hoops\n\nLooking for a basketball arcade game that you can play with your friends while enjoying b",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Pinball-Machines-770x380.jpeg",
+   "alt": "Pinball Machines",
+   "near": "Pinball Machines\n\nPinball is an extremely popular arcade game where a player uses paddles (called fl",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Skeeball-Service-Emporium-770x380.jpeg",
+   "alt": "Skeeball Lanes",
+   "near": "Skeeball Lanes\n\nEver find yourself itching for a good ol’ game of Skee-Ball from your youth, but you",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Photo-Booth-Emporium-770x380.jpeg",
+   "alt": "Photo Booth",
+   "near": "Photo Booth\n\nAvailable at select venues, Emporium Arcade bar provides a fun photo booth to capture m",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Big-Screen-TV-Emporium-770x380.jpeg",
+   "alt": "Big Screen TV’s",
+   "near": "Big Screen TV’s\n\nWhen you live in a sports town; naturally, you need to find a place to sit down to ",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Live-DJs-Emporium-770x380.jpeg",
+   "alt": "Live DJ’s",
+   "near": "Live DJ’s\n\nEmporium Arcade Bar makes it possible for DJs to share live performances in each of our u",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Projection-Screen-Emporium-770x380.jpeg",
+   "alt": "20′ Projection Screen",
+   "near": "20′ Projection Screen\n\nEmporium Arcade Bar is known as a wonderful place to chill and listen to Grea",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Live-Music-Emporium-770x380.jpeg",
+   "alt": "Live Music",
+   "near": "Live Music\n\nLive concerts and DJs on a weekly basis cover the music spectrum with a mix of fresh and",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Full-Stage-view-Emporium-770x380.jpeg",
+   "alt": "Full Stage",
+   "near": "Full Stage\n\nWe are the original arcade bar + live events venue! We offer everything from classic arc",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Bring-Your-Food-Emporium-770x380.jpeg",
+   "alt": "Bring Your Own Food",
+   "near": "Bring Your Own Food\n\nWe encourage our guests to bring your own food! There are many awesome restaura",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.comwp-content/uploads/2017/06/title_bg.jpg?id=465",
+   "alt": "",
+   "near": "All Features",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/2/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Free-Party-Rentals-Emporium-770x380.jpeg",
+   "alt": "Free Party Rentals",
+   "near": "Free Party Rentals\n\nWhether you’d like a complete venue rental or just want to reserve a table or th",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Pool-Tables-Emporium-770x380.jpeg",
+   "alt": "Pool Tables",
+   "near": "Pool Tables\n\nEmporium Arcade Bar has an abundance of locations with billiard tables. Every bar we op",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Non-Alcoholic-menu-emporium-770x380.jpeg",
+   "alt": "Non-Alcoholic Menu",
+   "near": "Non-Alcoholic Menu\n\nWhether you’re purposefully on the wagon or just looking for something refreshin",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Draft-Cocktails-Emporium-770x380.jpeg",
+   "alt": "Draft Cocktails",
+   "near": "Draft Cocktails\n\nEmporium Arcade Bar first launched in Chicago in 2012 and quickly became a go-to ho",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Bar-Service-Emporium-770x380.jpeg",
+   "alt": "Bar",
+   "near": "Bar\n\nExperience why Emporium Arcade Bar is one of the best bars with multiple locations across the U",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Emporium-Arcade-Service-770x380.jpeg",
+   "alt": "Arcade Games",
+   "near": "Arcade Games\n\nAn arcade game is a coin-based machine designed to play one, or more games. Arcade gam",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Group-Parties-Service-770x380.jpeg",
+   "alt": "Group Parties",
+   "near": "Group Parties\n\nWe regularly host birthday parties, company parties, fundraisers, meet-ups, bachelor ",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Events-Service-770x380.jpeg",
+   "alt": "Events",
+   "near": "Events\n\nWith dozens of classic games to play and a handcrafted bar menu, we can guarantee your group",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.com/wp-content/uploads/2021/10/Draft-Beers-Emporium-770x380.jpeg",
+   "alt": "Draft Beers",
+   "near": "Draft Beers\n\nWe offer taps of awesome draft beer and cider at select Emporium locations. For a curre",
+   "w": 770,
+   "h": 380,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  },
+  {
+   "src": "https://www.emporiumarcadebar.comwp-content/uploads/2017/06/title_bg.jpg?id=465",
+   "alt": "",
+   "near": "All Features",
+   "w": 1310,
+   "h": 266,
+   "page": "https://www.emporiumarcadebar.com/services_group/all-features/page/3/"
+  }
+ ]
+}

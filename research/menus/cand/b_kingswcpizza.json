@@ -1,0 +1,2106 @@
+{
+ "id": "b_kingswcpizza",
+ "source": "jsonld",
+ "alt": {
+  "text": 85
+ },
+ "pages": [
+  "https://kingswcpizza.com/",
+  "https://kingswcpizza.com/menu",
+  "https://kingswcpizza.com/page/menu-pdf",
+  "https://kingswcpizza.com/catering",
+  "https://kingswcpizza.com/page/reservations",
+  "https://kingswcpizza.com/story",
+  "https://kingswcpizza.com/page/book-a-party"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "BBQ Chicken Wings",
+   "desc": "",
+   "cents": 999,
+   "section": "🍗 Appetizers",
+   "image": "https://static-content.owner.com/funnel/images/319c19f3-735d-4bc1-89b6-d74e47734704",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Buffalo Chicken Wings",
+   "desc": "",
+   "cents": 999,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Chicken Wings",
+   "desc": "",
+   "cents": 999,
+   "section": "🍗 Appetizers",
+   "image": "https://static-content.owner.com/funnel/images/a131dc30-9f4d-46c3-bebb-d494517e58b8",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mozzarella Sticks",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "French Fries",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "image": "https://kingswcpizza.com/pluto-images/funnel/images/9d56889f-9dde-455b-9327-cb419085f96d?w=320&fit=cover",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Garlic Bread",
+   "desc": "",
+   "cents": 599,
+   "section": "🍗 Appetizers",
+   "image": "https://static-content.owner.com/funnel/images/0f015d14-ba80-4cc7-8f87-de7d7f546107?v=9957574450",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Classic Chicken Wings",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Meatballs",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "image": "https://kingswcpizza.com/pluto-images/funnel/images/a0ed7ae2-5852-4ea8-9e8f-cf62592c7445?w=405&h=405&format=auto&fit=cover",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fried Calabresa",
+   "desc": "",
+   "cents": 1499,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Jalapeño Poppers",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Yuca Fries",
+   "desc": "",
+   "cents": 999,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Garlic Bread W/ Cheese",
+   "desc": "",
+   "cents": 699,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pepperoni Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni",
+   "cents": 1599,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/264ca7b8-2d3c-49c4-a846-2aa54a3ccf5e?v=3470012908",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Catupiry Pizza",
+   "desc": "Red sauce, mozzarella, shredded chicken, Brazilian cream cheese, oregano, green olives",
+   "cents": 2299,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/8991defe-3d1f-4cea-9d37-0b2d93cb8211",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "The Bay Special Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni, pineapple, sausage, jalapeno, pesto",
+   "cents": 1999,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/a96ebc7a-ed11-40f8-8bd2-77d13c1bfefa?v=7799341549",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Portuguese Pizza",
+   "desc": "White sauce, mozzarella, hard boiled eggs, corn, canadian bacon, onions, tomatoes, green olives",
+   "cents": 2299,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/e817ad14-9ddd-48a9-9630-40714af9cce2?v=2455279382",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "California Special Pizza",
+   "desc": "White sauce, mozzarella, chicken, bacon, tomatoes, green onions",
+   "cents": 1999,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/53a82b62-880e-4194-b7a6-cabda5d5e3bc?v=8072042207",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Calabresa Pizza",
+   "desc": "Red sauce, mozzarella, calabresa sausage, black olives, cooked onions",
+   "cents": 2299,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/270e39ea-a9e1-4b22-8daf-09429db9d41f",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Margherita Pizza",
+   "desc": "Red sauce, mozzarella, tomatoes, fresh basil",
+   "cents": 1899,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/ec1124e2-5c66-407b-a3e7-0d9bbfb03397?v=3186786106",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Combination Special Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni, salami, sausage, tomato, bell pepper, onions, mushroom",
+   "cents": 2099,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/46b7d515-3e8d-4252-a5d0-563fc07664f8?v=3224071419",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Pizza",
+   "desc": "Red sauce, mozzarella, spinach, black olives, feta cheese, tomatoes, garlic",
+   "cents": 1999,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/6dadab04-47fc-4288-81fb-1e821ac3c05e?v=2224337061",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hawaiian Pizza",
+   "desc": "Red sauce, Canadian bacon, pineapple",
+   "cents": 1699,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/f4785cbd-2a15-4f9d-b2e9-0ec431a38d5d?v=4121192948",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kings Special Pizza",
+   "desc": "Red sauce, mozzarella, spinach, mushrooms, broccoli, pesto, chicken, onions",
+   "cents": 2099,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/funnel/images/a7629ec4-6fbf-458c-87bc-91a064228d1c",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Cheese Pizza",
+   "desc": "With red sauce and mozzarella",
+   "cents": 1499,
+   "section": "🍕 Pizza",
+   "image": "https://kingswcpizza.com/pluto-images/funnel/images/fde6c89d-7e11-4bd4-a48b-d4b4b7daa9bf?w=240&h=240&fit=cover",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Haight-Ashbury Special Pizza",
+   "desc": "With red sauce, mozzarella, mushrooms, bell peppers, tomato, black olives, and onions",
+   "cents": 1999,
+   "section": "🍕 Pizza",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Meat Lover's Pizza",
+   "desc": "With red sauce, mozzarella, pepperoni, salami, ham, chicken, and sausage",
+   "cents": 2099,
+   "section": "🍕 Pizza",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "5-Cheese Pizza",
+   "desc": "With red sauce, mozzarella, ovalini, blue cheese, feta, and Parmesan",
+   "cents": 1999,
+   "section": "🍕 Pizza",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hula-Hula BBQ Chicken Pizza",
+   "desc": "With red sauce, mozzarella, pineapple, chicken, BBQ sauce, and green onions",
+   "cents": 1899,
+   "section": "🍕 Pizza",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/vD8C8ZO6eqxC-ddff70f7f3c74f70.jpg?v=3979432853",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Create-Your-Own Pizza (16\" X-Large)",
+   "desc": "With your choice of sauce",
+   "cents": 2599,
+   "section": "🍕 Pizza",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fettuccine Alfredo (Family)",
+   "desc": "",
+   "cents": 4699,
+   "section": "🍝 Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Fettuccine Alfredo (Family)",
+   "desc": "",
+   "cents": 7599,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/wCpVexTyKcqY-91f0ea28069124cc.jpg?v=3596153325",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti w/ Marinara Sauce (Individual)",
+   "desc": "",
+   "cents": 1599,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/taO9eXzyXrxo-34301ba5544e0b21.jpg?v=1071375071",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti w/ Marinara Sauce (Family)",
+   "desc": "",
+   "cents": 4699,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/YfUQDqfObgO8-34301ba5544e0b21.jpg?v=6361030004",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fettuccine Alfredo (Individual)",
+   "desc": "",
+   "cents": 1599,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/a7mmxqcFBviR-0e07eb7ac68ef606.jpg?v=6152201625",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti w/ Meat Sauce (Individual)",
+   "desc": "",
+   "cents": 1799,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/I2CGF7Euuo8d-19d9831fdc699969.jpg?v=3703519690",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti w/ Meat Sauce (Family)",
+   "desc": "",
+   "cents": 7599,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/HcV1JsHxPyDo-19d9831fdc699969.jpg?v=8573235243",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Fettuccine Alfredo (Individual)",
+   "desc": "",
+   "cents": 1899,
+   "section": "🍝 Pasta",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/368gjnEGPRb8-91f0ea28069124cc.jpg?v=5491766551",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pesto Parmesan Chicken Penne (Individual)",
+   "desc": "",
+   "cents": 1899,
+   "section": "🍝 Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pesto Parmesan Chicken Penne (Family)",
+   "desc": "",
+   "cents": 7599,
+   "section": "🍝 Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sunset Penne Marinara & Alfredo Sauce (Individual)",
+   "desc": "With your choice of protein",
+   "cents": 1999,
+   "section": "🍝 Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sunset Penne Marinara & Alfredo Sauce (Family)",
+   "desc": "With your choice of protein",
+   "cents": 7599,
+   "section": "🍝 Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Caesar Salad (Family)",
+   "desc": "Served with Caesar dressings included: crisp romaine, croutons, and parmesan",
+   "cents": 3499,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Caesar Salad (Family)",
+   "desc": "Served with Caesar dressings included: crisp romaine, croutons, parmesan, and chicken breast",
+   "cents": 4999,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green Salad (Family)",
+   "desc": "Included: lettuce, tomatoes, red onions, black olives, cucumber, bell peppers",
+   "cents": 4399,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad (Family)",
+   "desc": "Included: tomatoes, green bell peppers, cucumber, red onions, feta cheese, kalamata olives, oregano, and olive oil",
+   "cents": 4399,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Caesar Salad (Individual)",
+   "desc": "Romaine with croutons and Parmesan. Served with Caesar dressing",
+   "cents": 1199,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Caesar Salad (Individual)",
+   "desc": "Romaine with croutons, Parmesan, and chicken breast. Served with Caesar dressing",
+   "cents": 1699,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green Salad (Individual)",
+   "desc": "Lettuce with tomato, red onions, cucumber, pepperoncini and bell peppers. Served with your choice of dressing",
+   "cents": 1299,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad (Individual)",
+   "desc": "Diced tomatoes, green bell peppers, cucumbers, red onions, feta, Kalamata olives, oregano, and olive oil. Served with your choice of dressing",
+   "cents": 1499,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chocolate Cake",
+   "desc": "",
+   "cents": 699,
+   "section": "🥮 Desserts",
+   "image": "https://static-content.owner.com/funnel/images/fe6834b1-58a4-46d9-8ad3-b37f688f3c42?v=7307374440",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Cheesecake",
+   "desc": "",
+   "cents": 699,
+   "section": "🥮 Desserts",
+   "image": "https://static-content.owner.com/funnel/images/1060b128-f6e7-4774-97c7-00adecfda510",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Homemade Flan",
+   "desc": "",
+   "cents": 699,
+   "section": "🥮 Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Nutella Pizza",
+   "desc": "With cheese and Nutella",
+   "cents": 1899,
+   "section": "🥮 Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Brigadeiro Pizza",
+   "desc": "With cheese, homemade chocolate fudge, and chocolate sprinkles",
+   "cents": 1999,
+   "section": "🥮 Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Beijinho Pizza",
+   "desc": "With cheese, condensed milk cream, and shredded coconut",
+   "cents": 2099,
+   "section": "🥮 Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Banana & Cinnamon Pizza",
+   "desc": "With cheese, condensed milk cream, banana, and cinnamon",
+   "cents": 2099,
+   "section": "🥮 Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Açai Bowl",
+   "desc": "With strawberry, powdered milk, granola, banana, and condensed milk",
+   "cents": 1499,
+   "section": "🥮 Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages",
+   "image": "https://static-content.owner.com/funnel/images/f51aef91-0e55-4e62-b3ee-2763e0e6891b?v=7706046786",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Bottled Water",
+   "desc": "",
+   "cents": 199,
+   "section": "🥤 Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Assorted Individual Sodas",
+   "desc": "",
+   "cents": 225,
+   "section": "🥤 Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Assorted 2L Soda Bottles",
+   "desc": "",
+   "cents": 699,
+   "section": "🥤 Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Assorted Fruit Juices",
+   "desc": "",
+   "cents": 299,
+   "section": "🥤 Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Assorted Jarritos Sodas",
+   "desc": "Fruit-flavored Mexican sodas",
+   "cents": 299,
+   "section": "🥤 Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mexican Coke",
+   "desc": "Made with cane sugar",
+   "cents": 350,
+   "section": "🥤 Beverages",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/2vrd0nV1UfEQ-c335a23a62368fbd.jpg?v=8937768518",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Energy Drink",
+   "desc": "",
+   "cents": 375,
+   "section": "🥤 Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "2 Liters",
+   "desc": "2 liter bottles",
+   "cents": 699,
+   "section": "🥤 Beverages",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/dO8zt3fhlife-9736cd6ba3e0f411.jpg?v=4913718553",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Extra Large Pizza",
+   "desc": "Pepperoni Or Cheese Options Available!",
+   "cents": 1999,
+   "section": "Lunch Special 🍕🍴",
+   "image": "https://static-content.owner.com/funnel/images/1ed3b51f-c266-4d5a-bdee-6b7d8daf17a8?v=7684014292",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Double Special",
+   "desc": "One Topping per Pizza and Soda Choice",
+   "cents": 3999,
+   "section": "Double Special 🍕🍕🥤",
+   "image": "https://static-content.owner.com/funnel/images/4febaa2a-598c-4b95-8a5c-aa1304490fd7",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kings Deal",
+   "desc": "Extra Large Pizza, 10Pz Wings, Choice Salad, and 2 L Soda!",
+   "cents": 4999,
+   "section": "Kings Deal! 🍕🥗🥤🍗",
+   "image": "https://static-content.owner.com/funnel/images/927ca43c-0c71-4325-941e-a3b009708129?v=6602467151",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Plate",
+   "desc": "Rice, pinto beans, vegetable, French fries, chicken breast. Salad",
+   "cents": 1999,
+   "section": "🍽️ Sunday Specials - Sunday Plates",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Picanha Plate",
+   "desc": "Rice, beans, farofa, French fries, fried banana, salad, vegetable, picanha",
+   "cents": 2799,
+   "section": "🍽️ Sunday Specials - Sunday Plates",
+   "image": "https://static-content.owner.com/funnel/images/9d56889f-9dde-455b-9327-cb419085f96d?v=0176009770",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chef's Special Plate",
+   "desc": "Plate of the day",
+   "cents": 2199,
+   "section": "🍽️ Sunday Specials - Sunday Plates",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Plain Cheese Pizza",
+   "desc": "Red sauce, mozzarella",
+   "cents": 1499,
+   "section": "🍕 House Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/fde6c89d-7e11-4bd4-a48b-d4b4b7daa9bf?v=9292416154",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Vegetarian Special Pizza",
+   "desc": "",
+   "cents": 1999,
+   "section": "🍕 House Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/2a3f1a0b-4ffd-49b2-a4d3-c3c322405f9e?v=8169496471",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Meat Lovers Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni, salami, ham, chicken, sausage",
+   "cents": 2099,
+   "section": "🍕 House Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/1712f682-dca7-4186-89eb-781785176490?v=6609298731",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Five Cheese Pizza",
+   "desc": "Red sauce, mozzarella, ovolini, blue cheese, feta cheese, shredded parmesan cheese",
+   "cents": 2199,
+   "section": "🍕 House Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/a4ec73c3-01e8-4784-83f0-1148cedd7816?v=3331372209",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hula Hula BBQ Chicken Pizza",
+   "desc": "Red sauce, mozzarella, pineapple, chicken, BBQ sauce, green onions",
+   "cents": 1899,
+   "section": "🍕 House Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/cfd495ef-ed9a-4419-ba86-d404df55d411?v=2097500963",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Half / Half Pizza",
+   "desc": "",
+   "cents": 785,
+   "section": "🍕 House Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Classic Garlic and Salt Chicken Wings",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "image": "https://static-content.owner.com/funnel/images/ce14f02e-a716-4614-8ac0-8f0501b3971e",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lemon Pepper Wings",
+   "desc": "Bone in lemon pepper chicken wings",
+   "cents": 1099,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Jalapeno Poppers",
+   "desc": "",
+   "cents": 899,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Garlic Bread with Cheese",
+   "desc": "",
+   "cents": 699,
+   "section": "🍗 Appetizers",
+   "image": "https://static-content.owner.com/funnel/images/38231c0b-7e33-44d7-b3f6-0cedd8e24524?v=7875794670",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Beef Meatballs",
+   "desc": "",
+   "cents": 999,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Yucca Fries",
+   "desc": "",
+   "cents": 999,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fried Calabrese",
+   "desc": "",
+   "cents": 1499,
+   "section": "🍗 Appetizers",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "King Cheeseburger",
+   "desc": "Comes with Cheddar cheese, lettuce, tomatoes, onions, pink sauce, beef patty.",
+   "cents": 1599,
+   "section": "🍔 Cheeseburger",
+   "image": "https://static-content.owner.com/funnel/images/f1596232-3a25-42df-8325-fb07ea987c9d?v=1272166214",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Western Burger",
+   "desc": "Comes with Cheddar cheese, lettuce, tomatoes, onions, BBQ sauce, beef patty",
+   "cents": 1699,
+   "section": "🍔 Cheeseburger",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti Classic Butter & Garlic",
+   "desc": "",
+   "cents": 1299,
+   "section": "🍝 Pasta In House",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti Marinara Sauce",
+   "desc": "",
+   "cents": 1499,
+   "section": "🍝 Pasta In House",
+   "image": "https://static-content.owner.com/funnel/images/2bd8d5e5-f202-469f-9a6a-b7394cd098dc?v=8505064088",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fettuccine Alfredo",
+   "desc": "",
+   "cents": 1599,
+   "section": "🍝 Pasta In House",
+   "image": "https://static-content.owner.com/funnel/images/15a6afce-61ac-484a-893d-61004398624c",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spaghetti Meat Sauce",
+   "desc": "",
+   "cents": 1999,
+   "section": "🍝 Pasta In House",
+   "image": "https://static-content.owner.com/funnel/images/198c0140-93a1-4bda-8bc2-d0b95d7c73c8?v=0106427616",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Fettuccine Alfredo",
+   "desc": "",
+   "cents": 1999,
+   "section": "🍝 Pasta In House",
+   "image": "https://static-content.owner.com/funnel/images/3efbf73e-da95-439e-81bc-08a6ea914df4",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sunset Fettuccine (Marinara and Alfredo)",
+   "desc": "",
+   "cents": 1999,
+   "section": "🍝 Pasta In House",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Caesar Salad",
+   "desc": "Crisp romaine, croutons, parmesan, served with Caesar dressing.",
+   "cents": 1199,
+   "section": "🥗 Salads",
+   "image": "https://static-content.owner.com/funnel/images/e1a84850-53a5-4cb5-b285-653e14e5fece?v=4192303190",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Caesar Salad",
+   "desc": "Crisp romaine, croutons, parmesan, chicken breast served with Caesar dressing.",
+   "cents": 1599,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green Salad",
+   "desc": "Lettuce, tomato, red onions, black olives, cucumber, and bell peppers.",
+   "cents": 1299,
+   "section": "🥗 Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad",
+   "desc": "Diced tomatoes, green bell peppers, cucumbers, red onions, feta cheese, kalamata olives, oregano, and olive oil.",
+   "cents": 1499,
+   "section": "🥗 Salads",
+   "image": "https://static-content.owner.com/funnel/images/9bd37d18-4491-48db-8be6-925865bfc2d7?v=7436865806",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Nutella Dessert Pizza",
+   "desc": "Includes Nutella and cheese.",
+   "cents": 1999,
+   "section": "🍕 Dessert Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Brigadeiro Dessert Pizza",
+   "desc": "Includes cheese, homemade chocolate fudge, chocolate sprinkles",
+   "cents": 2299,
+   "section": "🍕 Dessert Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Beijinho Dessert Pizza",
+   "desc": "Includes cheese, white condensed milk cream, shredded coconut",
+   "cents": 1999,
+   "section": "🍕 Dessert Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Banana & Cinnamon Dessert Pizza",
+   "desc": "Includes cheese, white condensed milk cream, banana, cinnamon",
+   "cents": 2299,
+   "section": "🍕 Dessert Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Dessert 1/2 & 1/2",
+   "desc": "",
+   "cents": 1450,
+   "section": "🍕 Dessert Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Flan (Brazilian-Style Homemade)",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Passion Fruit Mousse",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Traditional Acai",
+   "desc": "Strawberry, banana, granola, Nido, and condensed milk.",
+   "cents": 1499,
+   "section": "Desserts",
+   "image": "https://static-content.owner.com/funnel/images/814a2895-eee7-4960-adbe-0928da388699?v=8464179236",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Marinara Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "🥫 Extras",
+   "image": "https://static-content.owner.com/funnel/images/4470ed96-b6d4-4a40-a5ea-c0b8cb888859",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Alfredo Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "🥫 Extras",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pesto Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "🥫 Extras",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "BBQ Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "🥫 Extras",
+   "image": "https://static-content.owner.com/funnel/images/320dbe7f-192d-4e81-ae9a-4c5a4e60e8db",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Buffalo Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "🥫 Extras",
+   "image": "https://static-content.owner.com/funnel/images/e68e369b-d010-4c1a-8b21-1f40a23b9863",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Water",
+   "desc": "",
+   "cents": 185,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/10b7aa75-bf3a-4dfb-91f3-0ed68746fc14?v=4915623501",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 199,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/7192fd59-f5a0-4753-8235-f63400538136?v=8261555606",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 199,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/9d4c1bd1-3def-4a54-9aaa-f9407c4c8154",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Coke Zero Can",
+   "desc": "",
+   "cents": 199,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/046e51b6-2114-492b-ac08-17bc5a9e21a5",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 199,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/9b7a8ab1-e700-4255-9959-5aede85c7b36",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Dr Pepper Can",
+   "desc": "",
+   "cents": 199,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/f11ce1a6-3b13-45a4-ae70-cc94e18bc33d",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Guarana",
+   "desc": "",
+   "cents": 299,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Jarritos Mandarin",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/1b259b1d-3adb-41df-ad0c-e862f2c2c3f8?v=2614497282",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Jarritos Lime",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/1b259b1d-3adb-41df-ad0c-e862f2c2c3f8?v=2614497282",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Coke Mexican Bottle",
+   "desc": "",
+   "cents": 350,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/GAFQJNps5hwm-c335a23a62368fbd.jpg?v=9179269374",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mexican Coke 500 ml",
+   "desc": "",
+   "cents": 415,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/yekamwwwQ1cd/ABw7vxbOxNpX-c335a23a62368fbd.jpg?v=9953034474",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Martinelli Apple Juice",
+   "desc": "",
+   "cents": 399,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/8a39b6ac-4e24-4f94-8099-aef7ff8029bf?v=8340513491",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mango Juice",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Cashew Juice",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Guava Juice",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Passion Fruit Juice",
+   "desc": "",
+   "cents": 349,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Orange Juice",
+   "desc": "",
+   "cents": 799,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "image": "https://static-content.owner.com/funnel/images/cf76c48d-1732-42c4-ad23-799478d28c01",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Red Bull",
+   "desc": "",
+   "cents": 399,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lemonade",
+   "desc": "",
+   "cents": 399,
+   "section": "🥤 Beverages - Non Alcoholic",
+   "alcohol": false,
+   "src": "jsonld"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "X-Large cheese or Pepperoni",
+    "desc": "",
+    "cents": 1999,
+    "alcohol": false,
+    "src": "text",
+    "section": "Welcome to Kings West Coast Pizzeria"
+   },
+   {
+    "name": "Plain Cheese Pizza",
+    "desc": "",
+    "cents": 1499,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/fde6c89d-7e11-4bd4-a48b-d4b4b7daa9bf?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Pepperoni Pizza",
+    "desc": "",
+    "cents": 1599,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/264ca7b8-2d3c-49c4-a846-2aa54a3ccf5e?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Combination Special Pizza",
+    "desc": "",
+    "cents": 2099,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/46b7d515-3e8d-4252-a5d0-563fc07664f8?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Chicken Catupiry Pizza",
+    "desc": "",
+    "cents": 2299,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/8991defe-3d1f-4cea-9d37-0b2d93cb8211?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Meat Lovers Pizza",
+    "desc": "",
+    "cents": 2099,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/1712f682-dca7-4186-89eb-781785176490?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Kings Deal",
+    "desc": "",
+    "cents": 4999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/927ca43c-0c71-4325-941e-a3b009708129?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "California Special Pizza",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/53a82b62-880e-4194-b7a6-cabda5d5e3bc?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Margherita Pizza",
+    "desc": "",
+    "cents": 1899,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/ec1124e2-5c66-407b-a3e7-0d9bbfb03397?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "6540 Mission St, Daly City, CA"
+   },
+   {
+    "name": "Extra Large Pizza",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/1ed3b51f-c266-4d5a-bdee-6b7d8daf17a8?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Lunch Special 🍕🍴"
+   },
+   {
+    "name": "Double Special",
+    "desc": "",
+    "cents": 3999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/4febaa2a-598c-4b95-8a5c-aa1304490fd7?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Double Special 🍕🍕🥤"
+   },
+   {
+    "name": "Portuguese Pizza",
+    "desc": "",
+    "cents": 2299,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/e817ad14-9ddd-48a9-9630-40714af9cce2?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, mozzarella, pepperoni"
+   },
+   {
+    "name": "Calabresa Pizza",
+    "desc": "",
+    "cents": 2299,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/270e39ea-a9e1-4b22-8daf-09429db9d41f?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, mozzarella, pepperoni"
+   },
+   {
+    "name": "Vegetarian Special Pizza",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/2a3f1a0b-4ffd-49b2-a4d3-c3c322405f9e?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, mozzarella, pepperoni"
+   },
+   {
+    "name": "Greek Pizza",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/6dadab04-47fc-4288-81fb-1e821ac3c05e?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, mozzarella, pepperoni"
+   },
+   {
+    "name": "Hawaiian Pizza",
+    "desc": "",
+    "cents": 1699,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/f4785cbd-2a15-4f9d-b2e9-0ec431a38d5d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, mozzarella, pepperoni"
+   },
+   {
+    "name": "Five Cheese Pizza",
+    "desc": "",
+    "cents": 2199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/a4ec73c3-01e8-4784-83f0-1148cedd7816?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, Canadian bacon, pineapple"
+   },
+   {
+    "name": "Kings Special Pizza",
+    "desc": "",
+    "cents": 2099,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/a7629ec4-6fbf-458c-87bc-91a064228d1c?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, Canadian bacon, pineapple"
+   },
+   {
+    "name": "The Bay Special Pizza",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/a96ebc7a-ed11-40f8-8bd2-77d13c1bfefa?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, Canadian bacon, pineapple"
+   },
+   {
+    "name": "Hula Hula BBQ Chicken Pizza",
+    "desc": "",
+    "cents": 1899,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/cfd495ef-ed9a-4419-ba86-d404df55d411?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Red sauce, Canadian bacon, pineapple"
+   },
+   {
+    "name": "Half / Half Pizza",
+    "desc": "",
+    "cents": 1570,
+    "alcohol": false,
+    "src": "text",
+    "section": "Red sauce, Canadian bacon, pineapple"
+   },
+   {
+    "name": "Classic Garlic and Salt Chicken Wings",
+    "desc": "",
+    "cents": 899,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/ce14f02e-a716-4614-8ac0-8f0501b3971e?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍗 Appetizers"
+   },
+   {
+    "name": "BBQ Chicken Wings",
+    "desc": "",
+    "cents": 999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/319c19f3-735d-4bc1-89b6-d74e47734704?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍗 Appetizers"
+   },
+   {
+    "name": "Buffalo Chicken Wings",
+    "desc": "",
+    "cents": 999,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍗 Appetizers"
+   },
+   {
+    "name": "Spicy Chicken Wings",
+    "desc": "",
+    "cents": 999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/a131dc30-9f4d-46c3-bebb-d494517e58b8?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍗 Appetizers"
+   },
+   {
+    "name": "Lemon Pepper Wings",
+    "desc": "",
+    "cents": 1099,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍗 Appetizers"
+   },
+   {
+    "name": "Mozzarella Sticks",
+    "desc": "",
+    "cents": 899,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "Jalapeno Poppers",
+    "desc": "",
+    "cents": 899,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "Garlic Bread",
+    "desc": "",
+    "cents": 599,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/0f015d14-ba80-4cc7-8f87-de7d7f546107?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "Garlic Bread with Cheese",
+    "desc": "",
+    "cents": 699,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/38231c0b-7e33-44d7-b3f6-0cedd8e24524?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "Beef Meatballs",
+    "desc": "",
+    "cents": 999,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "Yucca Fries",
+    "desc": "",
+    "cents": 999,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "French Fries",
+    "desc": "",
+    "cents": 899,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "Fried Calabrese",
+    "desc": "",
+    "cents": 1499,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bone in lemon pepper chicken wings"
+   },
+   {
+    "name": "King Cheeseburger",
+    "desc": "",
+    "cents": 1599,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/f1596232-3a25-42df-8325-fb07ea987c9d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍔 Cheeseburger"
+   },
+   {
+    "name": "Western Burger",
+    "desc": "",
+    "cents": 1699,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍔 Cheeseburger"
+   },
+   {
+    "name": "Spaghetti Classic Butter & Garlic",
+    "desc": "",
+    "cents": 1299,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍝 Pasta In House"
+   },
+   {
+    "name": "Spaghetti Marinara Sauce",
+    "desc": "",
+    "cents": 1499,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/2bd8d5e5-f202-469f-9a6a-b7394cd098dc?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍝 Pasta In House"
+   },
+   {
+    "name": "Fettuccine Alfredo",
+    "desc": "",
+    "cents": 1599,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/15a6afce-61ac-484a-893d-61004398624c?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍝 Pasta In House"
+   },
+   {
+    "name": "Spaghetti Meat Sauce",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/198c0140-93a1-4bda-8bc2-d0b95d7c73c8?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍝 Pasta In House"
+   },
+   {
+    "name": "Chicken Fettuccine Alfredo",
+    "desc": "",
+    "cents": 1999,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/3efbf73e-da95-439e-81bc-08a6ea914df4?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍝 Pasta In House"
+   },
+   {
+    "name": "Sunset Fettuccine (Marinara and Alfredo)",
+    "desc": "",
+    "cents": 1999,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍝 Pasta In House"
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/e1a84850-53a5-4cb5-b285-653e14e5fece?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥗 Salads"
+   },
+   {
+    "name": "Chicken Caesar Salad",
+    "desc": "",
+    "cents": 1599,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥗 Salads"
+   },
+   {
+    "name": "Green Salad",
+    "desc": "",
+    "cents": 1299,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥗 Salads"
+   },
+   {
+    "name": "Greek Salad",
+    "desc": "",
+    "cents": 1499,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/9bd37d18-4491-48db-8be6-925865bfc2d7?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥗 Salads"
+   },
+   {
+    "name": "Nutella Dessert Pizza",
+    "desc": "",
+    "cents": 1999,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍕 Dessert Pizzas"
+   },
+   {
+    "name": "Brigadeiro Dessert Pizza",
+    "desc": "",
+    "cents": 2299,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍕 Dessert Pizzas"
+   },
+   {
+    "name": "Beijinho Dessert Pizza",
+    "desc": "",
+    "cents": 1999,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍕 Dessert Pizzas"
+   },
+   {
+    "name": "Banana & Cinnamon Dessert Pizza",
+    "desc": "",
+    "cents": 2299,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍕 Dessert Pizzas"
+   },
+   {
+    "name": "Dessert 1/2 & 1/2",
+    "desc": "",
+    "cents": 1450,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍕 Dessert Pizzas"
+   },
+   {
+    "name": "Flan (Brazilian-Style Homemade)",
+    "desc": "",
+    "cents": 699,
+    "alcohol": false,
+    "src": "text",
+    "section": "Desserts"
+   },
+   {
+    "name": "Chocolate Cake",
+    "desc": "",
+    "cents": 699,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/fe6834b1-58a4-46d9-8ad3-b37f688f3c42?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Cheesecake",
+    "desc": "",
+    "cents": 699,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/1060b128-f6e7-4774-97c7-00adecfda510?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Passion Fruit Mousse",
+    "desc": "",
+    "cents": 699,
+    "alcohol": false,
+    "src": "text",
+    "section": "Desserts"
+   },
+   {
+    "name": "Traditional Acai",
+    "desc": "",
+    "cents": 1499,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/814a2895-eee7-4960-adbe-0928da388699?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Dressing",
+    "desc": "",
+    "cents": 100,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/f36a7dcf-5595-44d8-ac44-62b368eb20fa?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥫 Extras"
+   },
+   {
+    "name": "Marinara Sauce",
+    "desc": "",
+    "cents": 100,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/4470ed96-b6d4-4a40-a5ea-c0b8cb888859?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥫 Extras"
+   },
+   {
+    "name": "Alfredo Sauce",
+    "desc": "",
+    "cents": 100,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥫 Extras"
+   },
+   {
+    "name": "Pesto Sauce",
+    "desc": "",
+    "cents": 100,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥫 Extras"
+   },
+   {
+    "name": "BBQ Sauce",
+    "desc": "",
+    "cents": 100,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/320dbe7f-192d-4e81-ae9a-4c5a4e60e8db?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥫 Extras"
+   },
+   {
+    "name": "Buffalo Sauce",
+    "desc": "",
+    "cents": 100,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/e68e369b-d010-4c1a-8b21-1f40a23b9863?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥫 Extras"
+   },
+   {
+    "name": "Water",
+    "desc": "",
+    "cents": 185,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/10b7aa75-bf3a-4dfb-91f3-0ed68746fc14?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Sparkling Water",
+    "desc": "",
+    "cents": 349,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/f51aef91-0e55-4e62-b3ee-2763e0e6891b?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Coke",
+    "desc": "",
+    "cents": 199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/7192fd59-f5a0-4753-8235-f63400538136?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Diet Coke",
+    "desc": "",
+    "cents": 199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/9d4c1bd1-3def-4a54-9aaa-f9407c4c8154?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Coke Zero Can",
+    "desc": "",
+    "cents": 199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/046e51b6-2114-492b-ac08-17bc5a9e21a5?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Sprite",
+    "desc": "",
+    "cents": 199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/9b7a8ab1-e700-4255-9959-5aede85c7b36?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Dr Pepper Can",
+    "desc": "",
+    "cents": 199,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/f11ce1a6-3b13-45a4-ae70-cc94e18bc33d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Guarana",
+    "desc": "",
+    "cents": 299,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Jarritos Mandarin",
+    "desc": "",
+    "cents": 349,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/1b259b1d-3adb-41df-ad0c-e862f2c2c3f8?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Jarritos Lime",
+    "desc": "",
+    "cents": 349,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Coke Mexican Bottle",
+    "desc": "",
+    "cents": 350,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Mexican Coke 500 ml",
+    "desc": "",
+    "cents": 415,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Martinelli Apple Juice",
+    "desc": "",
+    "cents": 399,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/8a39b6ac-4e24-4f94-8099-aef7ff8029bf?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Mango Juice",
+    "desc": "",
+    "cents": 349,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Cashew Juice",
+    "desc": "",
+    "cents": 349,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Guava Juice",
+    "desc": "",
+    "cents": 349,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Passion Fruit Juice",
+    "desc": "",
+    "cents": 349,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Orange Juice",
+    "desc": "",
+    "cents": 799,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/cf76c48d-1732-42c4-ad23-799478d28c01?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Red Bull",
+    "desc": "",
+    "cents": 399,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Lemonade",
+    "desc": "",
+    "cents": 399,
+    "alcohol": false,
+    "src": "text",
+    "section": "🥤 Beverages - Non Alcoholic"
+   },
+   {
+    "name": "Chicken Plate",
+    "desc": "",
+    "cents": 1999,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍽️ Sunday Specials - Sunday Plates"
+   },
+   {
+    "name": "Picanha Plate",
+    "desc": "",
+    "cents": 2799,
+    "image": "https://kingswcpizza.com/pluto-images/funnel/images/9d56889f-9dde-455b-9327-cb419085f96d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "🍽️ Sunday Specials - Sunday Plates"
+   },
+   {
+    "name": "Chef's Special Plate",
+    "desc": "",
+    "cents": 2199,
+    "alcohol": false,
+    "src": "text",
+    "section": "🍽️ Sunday Specials - Sunday Plates"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/e91b59c3-3bf2-4c53-825f-aa4f3c9cb9b8?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best Pizza in Daly City\nWhere Flavor, Family, and the West Coast Meet!\nOrder online",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/09b5fe7d-e050-48b8-b02f-f505686edf74?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best Pizza in Daly City\nWhere Flavor, Family, and the West Coast Meet!\nOrder online",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/18642824-8ef0-439c-8bfd-d29cbb1a020c?w=560&h=560&fit=cover",
+   "alt": "Welcome to Kings West Coast Pizzeria",
+   "near": "Welcome to Kings West Coast Pizzeria\nKing's West Coast Pizzeria is where great food meets great peop",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/2da10685-b3c6-4622-b888-836d20bcd500?w=560&h=560&fit=cover",
+   "alt": "Made Fresh, Served Hot",
+   "near": "Made Fresh, Served Hot\nEvery dish is made with care, from our hand-shaped pizzas with golden crusts ",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/eae381d3-8ac9-41d3-9320-b5dbe42ac3e0?w=1400&fit=cover",
+   "alt": "",
+   "near": "Order From Our Website\nOrder directly from our website to save money in fees, get faster service, ea",
+   "w": 1280,
+   "h": 800,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/20dc0720-d3fb-42ca-ba94-52c38fad8b87?w=1400&fit=cover",
+   "alt": "",
+   "near": "Lunch Specials.\n1 slices staring at $4.99 or 2 slices $9.99. Get a free can of soda when purchasing ",
+   "w": 1280,
+   "h": 800,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/cc5a16e0-71ff-4adc-9cbf-8843ebb692f9?w=405&h=405&format=auto&fit=cover",
+   "alt": "A pizza decorated like an American flag with red onions, pepperoni, and diced tomatoes on a wooden table.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/0f5c003e-8065-42ab-a30c-1c108c6df6c4?w=405&h=405&format=auto&fit=cover",
+   "alt": "Overhead view of a whole pizza with chicken, broccoli, mushrooms, onions, and white sauce.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/008b03ae-2456-45b3-86fc-409e02186386?w=405&h=405&format=auto&fit=cover",
+   "alt": "A whole pizza with white sauce, tomatoes, black olives, and spinach on a wooden table.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/a0ed7ae2-5852-4ea8-9e8f-cf62592c7445?w=405&h=405&format=auto&fit=cover",
+   "alt": "Spaghetti and meatballs topped with shredded cheese, parsley, and green onions on a white plate.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/4663e7fc-28c1-4937-9d59-0179b134a4da?w=405&h=405&format=auto&fit=cover",
+   "alt": "Two plates of Brazilian food, with steak, onions, plantains, rice, fries, beans, and salad.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/f33c78ac-6e7f-4789-bce8-4637173363b3?w=405&h=405&format=auto&fit=cover",
+   "alt": "Creamy pasta dish topped with shredded Parmesan cheese and chopped green onions on a white plate.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/fe8ff35e-1630-4070-8686-d328b4e25c5d?w=405&h=405&format=auto&fit=cover",
+   "alt": "A cheeseburger with fried onions and a side salad with tomatoes, peppers, and onions.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/fc40bd29-2c59-4a27-b373-c36d6e654959?w=405&h=405&format=auto&fit=cover",
+   "alt": "Açaí bowl with banana, strawberries, and granola in a clear cup on a wooden table.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/b31170e0-b418-4276-a6e2-f51e46b4e410?w=405&h=405&format=auto&fit=cover",
+   "alt": "Caesar salad with green lettuce, croutons, white dressing, and shredded cheese on a white plate.",
+   "near": "Fresh from the Kitchen\n\nTake a look at some of our most popular dishes—handmade pizzas, hearty pasta",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/744e8210-25e2-40ad-ab4a-086a57acebfd?w=560&h=560&fit=cover",
+   "alt": "Cater Like a King",
+   "near": "Cater Like a King\nTurn any gathering into a feast with King's West Coast Pizzeria catering. Whether ",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/b547da1f-6f80-44f5-b839-0c796a8fa028?w=560&h=560&fit=cover",
+   "alt": "Save Your Seat with a Click",
+   "near": "Save Your Seat with a Click\nPlanning a night out? Reserve a table to skip the wait and enjoy more ti",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/ca430fac-6c83-40aa-ba5e-62175e46bd70?w=560&h=560&fit=cover",
+   "alt": "Rep the Flavor with Kings Merch",
+   "near": "Rep the Flavor with Kings Merch\nShow your love for Kings West Coast Pizzeria with exclusive merch—mu",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/87329f42-89f7-4ab9-b991-091a459138b7?w=1400&fit=cover",
+   "alt": "",
+   "near": "Come Visit Us in Daly City 📍\nStop by Kings West Coast Pizzeria at 6540 Mission St in Daly City and ",
+   "w": 1280,
+   "h": 800,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/b67adea5-5cb3-4730-9cd5-fb9eee18087d?w=560&h=560&fit=cover",
+   "alt": "Kings West Coast Pizzeria Rewards",
+   "near": "Kings West Coast Pizzeria Rewards\nJoin our rewards program, earn points every time you order online ",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/08650908-e868-414c-9c5d-c48237766929?w=560&h=560&fit=cover",
+   "alt": "Catering for Your Next Event in Daly City, CA",
+   "near": "Catering for Your Next Event in Daly City, CA\nFreshly prepared, professionally delivered catering fo",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/catering"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/352bdce3-87eb-4f97-924e-1432dcc1c422?w=560&h=560&fit=cover",
+   "alt": "Make Your California Event Unforgettable",
+   "near": "Make Your California Event Unforgettable\nLet Kings West Coast Pizzeria bring our authentic flavors t",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/catering"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/032ab7d8-75f2-4d66-8828-1fabc60cd104?w=405&h=405&format=auto&fit=cover",
+   "alt": "Spaghetti with meatballs, tomato sauce, shredded Parmesan cheese, and fresh herbs on a white plate.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/catering"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/853e311b-e9cb-48d0-a70c-470ad0a97331?w=405&h=405&format=auto&fit=cover",
+   "alt": "A clear cup of acai with white stripes, topped with strawberries, bananas, and granola.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/catering"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/3b958aba-fc30-4af6-ab5e-beb5544dcbad?w=405&h=405&format=auto&fit=cover",
+   "alt": "A whole pizza with pepperoni, sausage, green peppers, and a white sauce drizzle.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/catering"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/6bf74be6-22e1-4820-9525-ca279707bfa7?w=560&h=560&fit=cover",
+   "alt": "Where Brazilian Flavor Meets West Coast Comfort",
+   "near": "Where Brazilian Flavor Meets West Coast Comfort\nKing’s West Coast Pizzeria brings people together wi",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/page/reservations"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/3f66bb92-d56f-4293-abe4-893dbfdbc8b9?w=560&h=560&fit=cover",
+   "alt": "From Brazil to Daly City: A Family Dream",
+   "near": "From Brazil to Daly City: A Family Dream\nKings West Coast Pizzeria began with two brothers who grew ",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/story"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/b3de68fd-2fda-4c63-b59d-6b5000c455d5?w=560&h=560&fit=cover",
+   "alt": "Brazilian-American Fusion, Handcrafted Daily",
+   "near": "Brazilian-American Fusion, Handcrafted Daily\nEvery item on the menu tells part of the story. From cl",
+   "w": 560,
+   "h": 560,
+   "page": "https://kingswcpizza.com/story"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/ae6c8b93-0a2c-47dc-8dd6-39990672594c?w=405&h=405&format=auto&fit=cover",
+   "alt": "Kings West Coast Pizzeria dining room with wooden tables, metal chairs, and a counter area.",
+   "near": "Inside Kings: Where Comfort Meets Flavor 🪑",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/story"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/7c75c2f1-23af-4c43-8e81-b9b292760594?w=405&h=405&format=auto&fit=cover",
+   "alt": "Interior of Kings West Coast Pizzeria with tables, chairs, booths, and the restaurant logo on the wall.",
+   "near": "Inside Kings: Where Comfort Meets Flavor 🪑",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/story"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/69752046-4abd-46e7-ac30-0974ad604ca5?w=405&h=405&format=auto&fit=cover",
+   "alt": "Kings West Coast Pizzeria dining room with long communal table, booth seating, and large logo on the wall.",
+   "near": "Inside Kings: Where Comfort Meets Flavor 🪑",
+   "w": 405,
+   "h": 405,
+   "page": "https://kingswcpizza.com/story"
+  },
+  {
+   "src": "https://kingswcpizza.com/pluto-images/funnel/images/a946201c-35c9-4d8f-82b7-fbdfd96953bb?w=1400&fit=cover",
+   "alt": "",
+   "near": "Private Events",
+   "w": 1280,
+   "h": 800,
+   "page": "https://kingswcpizza.com/page/book-a-party"
+  }
+ ]
+}

@@ -1,0 +1,399 @@
+{
+ "id": "b_oasiswinelounge",
+ "source": "text",
+ "pages": [
+  "https://oasiswinelounge.com/",
+  "https://oasiswinelounge.com/wp-content/uploads/2025/12/Oasis-November-2025-menu.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/05/Oasis-Cocktail-Menu-May-2026-1.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/06/Oasis-Happy-Hour-Menu-June-26.pdf",
+  "https://oasiswinelounge.com/wp-content/uploads/2026/05/Oasis-Dessert-Menu-May-2026.pdf",
+  "https://order.spoton.com/so-oasis-wine-lounge-5751/pleasanton-ca/6144cc789adef3b9610bd1ef",
+  "https://www.spoton.com/"
+ ],
+ "items": [
+  {
+   "name": "Cucumber Mint Yogurt",
+   "desc": "",
+   "cents": 1400,
+   "section": "Starters"
+  },
+  {
+   "name": "Classic Hummus",
+   "desc": "",
+   "cents": 1300,
+   "section": "Starters"
+  },
+  {
+   "name": "Spicy Harissa Hummus",
+   "desc": "",
+   "cents": 1300,
+   "section": "Starters"
+  },
+  {
+   "name": "Spicy Spinach Goat Cheese Dip",
+   "desc": "",
+   "cents": 1200,
+   "section": "Starters"
+  },
+  {
+   "name": "Hummus Sampler",
+   "desc": "",
+   "cents": 2100,
+   "section": "Starters"
+  },
+  {
+   "name": "Pesto Hummus",
+   "desc": "",
+   "cents": 1400,
+   "section": "Starters"
+  },
+  {
+   "name": "Garlic Hummus",
+   "desc": "",
+   "cents": 1400,
+   "section": "Starters"
+  },
+  {
+   "name": "Eggplant Borani",
+   "desc": "",
+   "cents": 1500,
+   "section": "Starters"
+  },
+  {
+   "name": "Sumac Spiced Potates",
+   "desc": "",
+   "cents": 1300,
+   "section": "Starters"
+  },
+  {
+   "name": "Tour Of Mediterranean",
+   "desc": "",
+   "cents": 2100,
+   "section": "Starters"
+  },
+  {
+   "name": "Greek Dolmathes",
+   "desc": "",
+   "cents": 1300,
+   "section": "Starters"
+  },
+  {
+   "name": "Dipping Sauces/Bread",
+   "desc": "",
+   "cents": 1300,
+   "section": "Starters"
+  },
+  {
+   "name": "Lamb Lollipops",
+   "desc": "",
+   "cents": 2300,
+   "section": "Starters"
+  },
+  {
+   "name": "Basil Shrimp",
+   "desc": "",
+   "cents": 2000,
+   "section": "Starters"
+  },
+  {
+   "name": "Chicken Mini Gyros (4)",
+   "desc": "",
+   "cents": 2265,
+   "section": "Starters"
+  },
+  {
+   "name": "Mini Gyros Beef",
+   "desc": "",
+   "cents": 1900,
+   "section": "Starters"
+  },
+  {
+   "name": "Chicken Mini Gyros",
+   "desc": "",
+   "cents": 1700,
+   "section": "Starters"
+  },
+  {
+   "name": "Mezze Platter",
+   "desc": "",
+   "cents": 2600,
+   "section": "Starters"
+  },
+  {
+   "name": "Steak Shawarma Pitas (4)",
+   "desc": "",
+   "cents": 2650,
+   "section": "Starters"
+  },
+  {
+   "name": "Steak Shawarma Pitas",
+   "desc": "",
+   "cents": 2000,
+   "section": "Starters"
+  },
+  {
+   "name": "Falafel Crisps",
+   "desc": "",
+   "cents": 1300,
+   "section": "Starters"
+  },
+  {
+   "name": "Marinated Olives/ Feta Cheese",
+   "desc": "",
+   "cents": 1000,
+   "section": "Starters",
+   "photo": "oasiswinelounge-marinated-olives-feta-cheese"
+  },
+  {
+   "name": "Mediterranean Salad",
+   "desc": "",
+   "cents": 1600,
+   "section": "Salads",
+   "photo": "oasiswinelounge-mediterranean-salad"
+  },
+  {
+   "name": "House Salad",
+   "desc": "",
+   "cents": 900,
+   "section": "Salads"
+  },
+  {
+   "name": "Lemon Caesar",
+   "desc": "",
+   "cents": 1500,
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Salata",
+   "desc": "",
+   "cents": 1700,
+   "section": "Salads"
+  },
+  {
+   "name": "Pesto Shrimp Flatbread",
+   "desc": "",
+   "cents": 2800,
+   "section": "Salads",
+   "photo": "oasiswinelounge-pesto-shrimp-flatbread"
+  },
+  {
+   "name": "Melitzana Flatbread",
+   "desc": "",
+   "cents": 2400,
+   "section": "Salads"
+  },
+  {
+   "name": "Cheese Flatbread",
+   "desc": "",
+   "cents": 2000,
+   "section": "Salads"
+  },
+  {
+   "name": "Kids Cheese Pizza",
+   "desc": "",
+   "cents": 900,
+   "section": "Salads"
+  },
+  {
+   "name": "Kids Cheese Pizza w/chicken",
+   "desc": "",
+   "cents": 1300,
+   "section": "Salads"
+  },
+  {
+   "name": "Zaytun Flatbread",
+   "desc": "",
+   "cents": 2500,
+   "section": "Salads"
+  },
+  {
+   "name": "Side Grilled Tomato",
+   "desc": "",
+   "cents": 100,
+   "section": "Salads"
+  },
+  {
+   "name": "Side Cucumber Slices",
+   "desc": "",
+   "cents": 400,
+   "section": "Salads"
+  },
+  {
+   "name": "Side Raw Veggie",
+   "desc": "",
+   "cents": 500,
+   "section": "Salads"
+  },
+  {
+   "name": "Classic Gyro",
+   "desc": "",
+   "cents": 2300,
+   "section": "Lunch",
+   "photo": "oasiswinelounge-classic-gyro"
+  },
+  {
+   "name": "Shawarma Wrap",
+   "desc": "",
+   "cents": 2400,
+   "section": "Lunch",
+   "photo": "oasiswinelounge-shawarma-wrap"
+  },
+  {
+   "name": "Oasis Salmon",
+   "desc": "",
+   "cents": 3600,
+   "section": "From the grill",
+   "photo": "oasiswinelounge-oasis-salmon"
+  },
+  {
+   "name": "Grilled Rack Of Lamb",
+   "desc": "",
+   "cents": 4600,
+   "section": "From the grill"
+  },
+  {
+   "name": "Mixed Grille",
+   "desc": "",
+   "cents": 3200,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Sizzling Shrimp Kabob",
+   "desc": "",
+   "cents": 3500,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Garlic-Butter Filet Kabob",
+   "desc": "",
+   "cents": 3900,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Royal Platter Modified",
+   "desc": "",
+   "cents": 6200,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Royal Platter",
+   "desc": "",
+   "cents": 6200,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mantoo Dumplings",
+   "desc": "",
+   "cents": 2900,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Aushak Tortellini",
+   "desc": "",
+   "cents": 2900,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Sumac Trout",
+   "desc": "",
+   "cents": 3400,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Veg",
+   "desc": "",
+   "cents": 2500,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Chicken",
+   "desc": "",
+   "cents": 2700,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Veg W/extra vegetables",
+   "desc": "",
+   "cents": 2800,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Mediterranean Pasta Shrimp",
+   "desc": "",
+   "cents": 3500,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry With Chicken",
+   "desc": "",
+   "cents": 2400,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry With Shrimp",
+   "desc": "",
+   "cents": 3500,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry with Vegetable",
+   "desc": "",
+   "cents": 2000,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ koobideh",
+   "desc": "",
+   "cents": 2900,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ falafel",
+   "desc": "",
+   "cents": 2400,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ salmon",
+   "desc": "",
+   "cents": 3600,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Oasis Curry w/ rack of lamb",
+   "desc": "",
+   "cents": 4500,
+   "section": "Shish Kabobs"
+  },
+  {
+   "name": "Baklava",
+   "desc": "",
+   "cents": 1100,
+   "section": "Desserts"
+  },
+  {
+   "name": "Oasis Paradise",
+   "desc": "",
+   "cents": 1300,
+   "section": "Desserts"
+  },
+  {
+   "name": "Lava Love",
+   "desc": "",
+   "cents": 1400,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sweet Sampler",
+   "desc": "",
+   "cents": 3700,
+   "section": "Desserts"
+  },
+  {
+   "name": "Toffee Nut Cake",
+   "desc": "",
+   "cents": 1400,
+   "section": "Desserts"
+  }
+ ]
+}

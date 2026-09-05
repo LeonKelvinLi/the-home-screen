@@ -1,0 +1,77 @@
+{
+ "id": "b_banhmixpress",
+ "source": "text",
+ "pages": [
+  "https://www.banhmixpress.net/",
+  "https://www.banhmixpress.net/menu"
+ ],
+ "items": [
+  {
+   "name": "Bánh Mì Xpress- Bánh Mì Đặc Biệt",
+   "desc": "Crispy Vietnamese baguette layered with a variety of premium Vietnamese cold cuts, pork loaf, pâté, fresh cucumber, pickled carrots and daikon, cilantro",
+   "cents": 935,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-xpress-b-nh-m-c-bi-t"
+  },
+  {
+   "name": "Bánh Mì Heo Quay-Crispy roast pork",
+   "desc": "Crispy Vietnamese baguette filled with roasted pork belly with crunchy skin, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce",
+   "cents": 935,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-heo-quay-crispy-roast-pork"
+  },
+  {
+   "name": "Bánh Mì Bò Nướng-Grilled beef",
+   "desc": "Crispy Vietnamese baguette filled with grilled marinated beef, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Smoky, savory",
+   "cents": 935,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-b-n-ng-grilled-beef"
+  },
+  {
+   "name": "Bánh Mì Thịt Nguội-Vietnamse grilled ham",
+   "desc": "Crispy Vietnamese baguette filled with Vietnamese cold cuts, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce",
+   "cents": 835,
+   "section": "Bánh mì"
+  },
+  {
+   "name": "Bánh Mì Chả Lụa- Vietnamese ham",
+   "desc": "Crispy Vietnamese baguette filled with traditional Vietnamese pork sausage, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce",
+   "cents": 835,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-ch-l-a-vietnamese-ham"
+  },
+  {
+   "name": "Bánh Mì Thập Cẩm-Combination",
+   "desc": "Crispy Vietnamese baguette loaded with a variety of Vietnamese meats, pâté, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce",
+   "cents": 835,
+   "section": "Bánh mì"
+  },
+  {
+   "name": "Bánh Mì Xíu Mại-Vienamese meatball",
+   "desc": "Crispy Vietnamese baguette filled with tender Vietnamese meatballs in savory tomato sauce, topped with fresh cucumber, pickled carrots and daikon, cilantro",
+   "cents": 835,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-x-u-m-i-vienamese-meatball"
+  },
+  {
+   "name": "Bánh Mì Ốp La-Fried egg",
+   "desc": "Crispy Vietnamese baguette filled with traditional Vietnamese pork sausage and sunny-side-up eggs, topped with fresh cucumber, pickled carrots and daikon",
+   "cents": 735,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-p-la-fried-egg"
+  },
+  {
+   "name": "Bánh Mì Chả Gà-Vietnamese chicken ham",
+   "desc": "Crispy Vietnamese baguette filled with Vietnamese chicken sausage, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Light",
+   "cents": 835,
+   "section": "Bánh mì",
+   "photo": "banh-mi-xpress-b-nh-m-ch-g-vietnamese-chicken-ham"
+  },
+  {
+   "name": "Bánh Mì Thịt Nướng- Grilled pork",
+   "desc": "Crispy Vietnamese baguette filled with grilled marinated beef, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Smoky, savory",
+   "cents": 835,
+   "section": "Bánh mì"
+  }
+ ]
+}

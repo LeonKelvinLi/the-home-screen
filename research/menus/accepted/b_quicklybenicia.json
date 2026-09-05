@@ -1,0 +1,146 @@
+{
+ "id": "b_quicklybenicia",
+ "source": "text",
+ "pages": [
+  "https://www.quicklybenicia.com/",
+  "https://www.quicklybenicia.com/specialty-menu",
+  "https://quickly-benicia.cloveronline.com/menu/all",
+  "https://quickly-benicia.cloveronline.com/menu/all",
+  "https://quickly-benicia.cloveronline.com/menu/all",
+  "https://quickly-benicia.cloveronline.com/menu/buldok-ramen-AKX1Q9VN6S4AY",
+  "https://quickly-benicia.cloveronline.com/menu/freeze-dried-topping-MKKNTC1YKMBHP"
+ ],
+ "items": [
+  {
+   "name": "Chee-Hoo Sticks",
+   "desc": "",
+   "cents": 819,
+   "section": "Food Favorites",
+   "photo": "quickly-benicia-chee-hoo-sticks"
+  },
+  {
+   "name": "Hula Rings",
+   "desc": "",
+   "cents": 510,
+   "section": "Food Favorites",
+   "photo": "quickly-benicia-hula-rings"
+  },
+  {
+   "name": "Hurricane Fries",
+   "desc": "",
+   "cents": 795,
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Lumpianadas",
+   "desc": "",
+   "cents": 595,
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Mahalo Fries",
+   "desc": "",
+   "cents": 995,
+   "section": "Food Favorites",
+   "photo": "quickly-benicia-mahalo-fries"
+  },
+  {
+   "name": "Popcorn Chicken",
+   "desc": "",
+   "cents": 995,
+   "section": "Food Favorites",
+   "photo": "quickly-benicia-popcorn-chicken"
+  },
+  {
+   "name": "Yum-Pia",
+   "desc": "",
+   "cents": 995,
+   "section": "Food Favorites",
+   "photo": "quickly-benicia-yum-pia"
+  },
+  {
+   "name": "Tocilog",
+   "desc": "Sweet pork tocino",
+   "cents": 1395,
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Longsilog",
+   "desc": "Sweet pork longanisa",
+   "cents": 1395,
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Bangsilog",
+   "desc": "Milkfish bangus",
+   "cents": 1495,
+   "section": "Food Favorites"
+  },
+  {
+   "name": "Chicken or pork BBQ",
+   "desc": "",
+   "cents": 1495,
+   "section": "BBQ Silog"
+  },
+  {
+   "name": "Mix & match favorites",
+   "desc": "",
+   "cents": 1795,
+   "section": "Combo Silog"
+  },
+  {
+   "name": "Fried Egg",
+   "desc": "",
+   "cents": 195,
+   "section": "Sides",
+   "photo": "quickly-benicia-fried-egg"
+  },
+  {
+   "name": "Garlic Rice",
+   "desc": "",
+   "cents": 295,
+   "section": "Sides",
+   "photo": "quickly-benicia-garlic-rice"
+  },
+  {
+   "name": "BBQ Stick",
+   "desc": "",
+   "cents": 695,
+   "section": "Sides",
+   "photo": "quickly-benicia-bbq-stick"
+  },
+  {
+   "name": "Longanisa (2)",
+   "desc": "",
+   "cents": 695,
+   "section": "Sides"
+  },
+  {
+   "name": "Bangus",
+   "desc": "",
+   "cents": 1095,
+   "section": "Sides",
+   "photo": "quickly-benicia-bangus"
+  },
+  {
+   "name": "Premium Matcha Milk Tea",
+   "desc": "",
+   "cents": 129,
+   "section": "Milk tea",
+   "photo": "quickly-benicia-premium-matcha-milk-tea"
+  },
+  {
+   "name": "Panda Milk Tea",
+   "desc": "",
+   "cents": 154,
+   "section": "Milk tea",
+   "photo": "quickly-benicia-panda-milk-tea"
+  },
+  {
+   "name": "Red Bean Milk Tea",
+   "desc": "",
+   "cents": 103,
+   "section": "Milk tea"
+  }
+ ]
+}

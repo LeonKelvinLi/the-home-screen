@@ -1,0 +1,61 @@
+{
+ "id": "b_emyscannoli",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://emyscannoli.com/"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/HERO/ecdea47f-4fe9-4399-b3b9-7c863b044aab.webp",
+   "alt": "Alternative text for describing the image displayed",
+   "near": "Emy's Cannoli\n\nAuthentic Italian Flavors Delivered to Your Special Events\n\nExplore Our Offerings",
+   "w": 1080,
+   "h": 1969,
+   "page": "https://emyscannoli.com/"
+  },
+  {
+   "src": "https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/ABOUT/2cda4816-c211-43c6-9886-f45df16e4960.webp",
+   "alt": "Placeholder image for ABOUT",
+   "near": "About Emy's Cannoli\n\nEmy's Cannoli is a mobile catering business founded by Emy, a passionate home c",
+   "w": 1024,
+   "h": 768,
+   "page": "https://emyscannoli.com/"
+  },
+  {
+   "src": "https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/PRODUCT/93ca8441-9f74-4ba5-a42f-c69b9b50a763.webp",
+   "alt": "Placeholder image for PRODUCT",
+   "near": "Gourmet Mini Cannoli\n\nDelicate, crispy cannoli shells filled with creamy ricotta and chocolate chips",
+   "w": 768,
+   "h": 1024,
+   "page": "https://emyscannoli.com/"
+  },
+  {
+   "src": "https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/PRODUCT/f0016b83-42a3-4ded-810e-a6784ac51f3b.webp",
+   "alt": "Placeholder image for PRODUCT",
+   "near": "Traditional Tiramisu\n\nClassic Italian tiramisu made with authentic ingredients and time-honored tech",
+   "w": 640,
+   "h": 608,
+   "page": "https://emyscannoli.com/"
+  },
+  {
+   "src": "https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/PRODUCT/9a92a06b-35de-498f-8f10-9f3cb7c44b18.webp",
+   "alt": "Placeholder image for PRODUCT",
+   "near": "Homemade Lasagna\n\nHearty, traditional lasagna prepared with quality ingredients and Emy's signature ",
+   "w": 1080,
+   "h": 1066,
+   "page": "https://emyscannoli.com/"
+  },
+  {
+   "src": "https://emyscannoli.com/wp-content/plugins/accessibility-onetap/assets/images/icon-drop-down-menu.png",
+   "alt": "",
+   "near": "English",
+   "w": 549,
+   "h": 333,
+   "page": "https://emyscannoli.com/"
+  }
+ ]
+}

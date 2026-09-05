@@ -1,0 +1,356 @@
+{
+ "id": "b_jojoshotchicken",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.jojoshotchicken.com/",
+  "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Combo 1",
+   "desc": "",
+   "cents": 1599,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-1-287221/img_2zmNPPbFfWbeZnrosTfXskHStWs.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Combo 2",
+   "desc": "",
+   "cents": 1499,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-2-287232/img_2zmNPP729POpG7YstRRBsdtb77a.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Combo 3 (Wednesday Special)",
+   "desc": "",
+   "cents": 1299,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-3-wednesday-special-287235/img_2zmNPQBMm8udyi3XqQM4J1UgDiH.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Bowl",
+   "desc": "",
+   "cents": 1499,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/bowl-287238/img_2zmNPQG3xCs04uOeHLip2JG6J8N.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Halftime",
+   "desc": "",
+   "cents": 1099,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/halftime-287234/img_2zmNPTECy9vcbOZWqM4sXLj0pwf.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Tender",
+   "desc": "",
+   "cents": 599,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/tender-287240/img_2zmNPQ5xIGQv1GnM2enlvbtiSZF.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Fries",
+   "desc": "",
+   "cents": 599,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/fries-287239/img_2zmNPPvzlh4hIyXpFmWQ94INFwl.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Slider",
+   "desc": "",
+   "cents": 799,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/slider-287241/img_2zmNPR8j7HjXnxqOMC8ERmShT6E.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Water",
+   "desc": "",
+   "cents": 199,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/water-287252/img_2zmNPZZbbNDAorTzNI8a8PW8XfU.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Coca Cola",
+   "desc": "",
+   "cents": 299,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/coca-cola-287246/img_2zmNPPODSUa8mMwPi25jErUyglQ.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Coke Zero",
+   "desc": "",
+   "cents": 299,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/coke-zero-473877/img_32DbdGrqq6LnBsTCMoFXOC9PBXv.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Pickles",
+   "desc": "",
+   "cents": 299,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/pickles-287244/img_2zmNPQX0fzTFAY7E56DKaX1sP8d.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Slaw",
+   "desc": "",
+   "cents": 399,
+   "image": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/slaw-287243/img_2zmNPSao1OiXBsDEYH9FxfSrSPs.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Closed"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 299,
+   "alcohol": false,
+   "src": "text",
+   "section": "Closed"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://studio-mobile-app-prod.s3.amazonaws.com/public_web/media/ws_39URr89VcMEkG8UXv5B9xgOhsf4/jojos-menu-spread-hero-wss-3-er-1-a-kafg-nb-9-ww.jpg",
+   "alt": "Image",
+   "near": "JOJO'S\nHOT CHICKEN\nㅤㅤ\n\nOrder Now",
+   "w": 2560,
+   "h": 1440,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-1-287221/img_2zmNPPbFfWbeZnrosTfXskHStWs.jpg",
+   "alt": "Combo 1 Image",
+   "near": "Combo 1\n+",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-3-wednesday-special-287235/img_2zmNPQBMm8udyi3XqQM4J1UgDiH.jpg",
+   "alt": "Combo 3 (Wednesday Special) Image",
+   "near": "Combo 3 (Wednesday Special)\n+",
+   "w": 1080,
+   "h": 1080,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/halftime-287234/img_2zmNPTECy9vcbOZWqM4sXLj0pwf.jpg",
+   "alt": "Halftime Image",
+   "near": "Halftime\n+",
+   "w": 640,
+   "h": 360,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-3-287233/img_2zmNPSY0X0P2PMdbbeSkF9dcgzS.jpg",
+   "alt": "Combo 3-unavailable Image",
+   "near": "Combo 3-unavailable\n+",
+   "w": 640,
+   "h": 360,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-2-287232/img_2zmNPP729POpG7YstRRBsdtb77a.jpg",
+   "alt": "Combo 2 Image",
+   "near": "Combo 2\n+",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/bowl-287238/img_2zmNPQG3xCs04uOeHLip2JG6J8N.jpg",
+   "alt": "Bowl Image",
+   "near": "Bowl\n+",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/coca-cola-287246/img_2zmNPPODSUa8mMwPi25jErUyglQ.jpg",
+   "alt": "Coca Cola Image",
+   "near": "Coca Cola\n+",
+   "w": 1061,
+   "h": 1473,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/slider-287241/img_2zmNPR8j7HjXnxqOMC8ERmShT6E.jpg",
+   "alt": "Slider Image",
+   "near": "Slider\n+",
+   "w": 640,
+   "h": 360,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://studio-mobile-app-prod.s3.amazonaws.com/public_web/media/ws_39URr89VcMEkG8UXv5B9xgOhsf4/chat-gpt-image-10-feb-2026-01-32-35-p_wss_39UZSC.png",
+   "alt": "Content Section Image",
+   "near": "CHOOSE YOUR HEAT\nJojo's Hot Chicken has you covered for all the spice you want! Choose between a var",
+   "w": 1024,
+   "h": 1024,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://studio-mobile-app-prod.s3.amazonaws.com/public_web/media/ws_39URr89VcMEkG8UXv5B9xgOhsf4/jojos-png_wss_3ER0YOl0NadeFun3a1ODQ8WgnaC.png",
+   "alt": "Content Section Image",
+   "near": "PROUD TO\nSERVE YOU\nJojo's Hot Chicken is known for its delicious Nashville-style chicken! No one can",
+   "w": 6722,
+   "h": 6680,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://studio-mobile-app-prod.s3.amazonaws.com/public_web/media/ws_39URr89VcMEkG8UXv5B9xgOhsf4/196247-af-2381-41-f-5-9-e-9-c-83-c-808-eb-7-aa-6.png",
+   "alt": "Photo Section Image",
+   "near": "Jojo's Hot Chicken\nHome\nAbout\nContact Us\nVisit Us\nSign in\n\nOrder Online\n\nJOJO'S\nHOT CHICKEN\nㅤㅤ\n\nOrde",
+   "w": 1351,
+   "h": 1000,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://studio-mobile-app-prod.s3.amazonaws.com/public_web/media/ws_39URr89VcMEkG8UXv5B9xgOhsf4/jojos-menu-spread-hero_wss_3ER16FP2DHPoFFzbaDETz.jpg",
+   "alt": "",
+   "near": "‎\n\n‎",
+   "w": 1280,
+   "h": 320,
+   "page": "https://www.jojoshotchicken.com/"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-1-287221/img_2zmNPPbFfWbeZnrosTfXskHStWs.jpg",
+   "alt": "Combo 1",
+   "near": "Combo 1\n\n$15.99",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-2-287232/img_2zmNPP729POpG7YstRRBsdtb77a.jpg",
+   "alt": "Combo 2",
+   "near": "Combo 2\n\n$14.99",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/combo-3-wednesday-special-287235/img_2zmNPQBMm8udyi3XqQM4J1UgDiH.jpg",
+   "alt": "Combo 3 (Wednesday Special)",
+   "near": "Combo 3 (Wednesday Special)\n\n$12.99",
+   "w": 1080,
+   "h": 1080,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/bowl-287238/img_2zmNPQG3xCs04uOeHLip2JG6J8N.jpg",
+   "alt": "Bowl",
+   "near": "Bowl\n\n$14.99",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/halftime-287234/img_2zmNPTECy9vcbOZWqM4sXLj0pwf.jpg",
+   "alt": "Halftime",
+   "near": "Halftime\n\n$10.99",
+   "w": 640,
+   "h": 360,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/tender-287240/img_2zmNPQ5xIGQv1GnM2enlvbtiSZF.jpg",
+   "alt": "Tender",
+   "near": "Tender\n\n$5.99",
+   "w": 640,
+   "h": 360,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/fries-287239/img_2zmNPPvzlh4hIyXpFmWQ94INFwl.jpg",
+   "alt": "Fries",
+   "near": "Fries\n\n$5.99",
+   "w": 480,
+   "h": 270,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/slider-287241/img_2zmNPR8j7HjXnxqOMC8ERmShT6E.jpg",
+   "alt": "Slider",
+   "near": "Slider\n\n$7.99",
+   "w": 640,
+   "h": 360,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/extra-sauce-3193190/img_3HvLaxrMMt0lExPLRjtFtRHiX1n.jpg",
+   "alt": "Extra Sauce",
+   "near": "Extra Sauce\n\n$0.64",
+   "w": 1170,
+   "h": 965,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/water-287252/img_2zmNPZZbbNDAorTzNI8a8PW8XfU.jpg",
+   "alt": "Water",
+   "near": "Water\n\n$1.99",
+   "w": 982,
+   "h": 1370,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/coca-cola-287246/img_2zmNPPODSUa8mMwPi25jErUyglQ.jpg",
+   "alt": "Coca Cola",
+   "near": "Coca Cola\n\n$2.99",
+   "w": 1061,
+   "h": 1473,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/coke-zero-473877/img_32DbdGrqq6LnBsTCMoFXOC9PBXv.jpg",
+   "alt": "Coke Zero",
+   "near": "Coke Zero\n\n$2.99",
+   "w": 1200,
+   "h": 1195,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/pickles-287244/img_2zmNPQX0fzTFAY7E56DKaX1sP8d.jpg",
+   "alt": "Pickles",
+   "near": "Pickles\n\n$2.99",
+   "w": 1170,
+   "h": 2532,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  },
+  {
+   "src": "https://zyrl-tagging-v2.s3.amazonaws.com/jojo-s-2075/slaw-287243/img_2zmNPSao1OiXBsDEYH9FxfSrSPs.jpg",
+   "alt": "Slaw",
+   "near": "Slaw\n\n$3.99",
+   "w": 1170,
+   "h": 2532,
+   "page": "https://www.jojoshotchicken.com/jojo-s-2075/menu"
+  }
+ ]
+}

@@ -1,0 +1,22 @@
+{
+ "id": "b_heyyogurt",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://www.heyyogurtus.com/",
+  "https://www.heyyogurtus.com/menu"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/373ad7_a3b2645c365548388a841d8ba4344e09~mv2.png/v1/fill/w_1280,h_776,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/373ad7_a3b2645c365548388a841d8ba4344e09~mv2.png",
+   "alt": "아트보드 1_logo.png",
+   "near": "",
+   "w": 1280,
+   "h": 776,
+   "page": "https://www.heyyogurtus.com/"
+  }
+ ]
+}

@@ -1,0 +1,628 @@
+{
+ "id": "b_intlkitchen",
+ "source": "text",
+ "pages": [
+  "https://intlkitchen.com/",
+  "https://intlkitchen.com/menu",
+  "https://intlkitchen.com/order",
+  "https://intlkitchen.com/order/intlkitchen",
+  "https://intlkitchen.com/menu/intlkitchen/group_a0a0cada-1806-4396-b008-3e8b49ec7689/item-takeout-special-3-entres_1072462b-5069-40df-a608-33de6df5b082",
+  "https://intlkitchen.com/menu/intlkitchen/group_86edad30-72fe-4a62-b070-ee6f7b98c7f6/item-september-11-deal-for-1899_6c0d8b92-e4a9-4c78-ba46-7e2fdcb34602",
+  "https://intlkitchen.com/menu/intlkitchen/group_0f03be36-2cb7-4814-bf8f-96f0578410a5/item-001-spring-rolls_fc5e4878-e1da-4fe5-8b98-111bb30041bd"
+ ],
+ "items": [
+  {
+   "name": "001. Spring Rolls",
+   "desc": "",
+   "cents": 998,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-001-spring-rolls"
+  },
+  {
+   "name": "002. Fresh Rolls",
+   "desc": "Lettuce, cucumber, carrot, cabbage, and mixed green salad wrapped in rice paper. Served with peanut sauce",
+   "cents": 1298,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-002-fresh-rolls"
+  },
+  {
+   "name": "003. Fried Tofu",
+   "desc": "Deep-fried fresh tofu triangles served with sweet chili sauce and a side of chopped peanuts",
+   "cents": 998,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-003-fried-tofu"
+  },
+  {
+   "name": "004. Fish Cakes",
+   "desc": "4 pieces of deep-fried fresh fish cake from a mixture of fresh fish, chopped green beans, kaffir lime leaves, chili paste, and curry paste",
+   "cents": 1298,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-004-fish-cakes"
+  },
+  {
+   "name": "005. Corn Cakes",
+   "desc": "Fritters (4) made with corn kernels, chopped green beans, kaffir lime leaves, chili paste, and curry paste",
+   "cents": 1098,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-005-corn-cakes"
+  },
+  {
+   "name": "006. Pan Fried Dumplings",
+   "desc": "Pan-fried Thai-spiced chicken or pork dumplings (8) tossed in our house glaze",
+   "cents": 1098,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-006-pan-fried-dumplings"
+  },
+  {
+   "name": "007. Crispy Wrap",
+   "desc": "Thai style prawns (7) deep-fried in an eggroll wrapper, served with house sweet chili sauce",
+   "cents": 1398,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-007-crispy-wrap"
+  },
+  {
+   "name": "008. Golden Prawns",
+   "desc": "Deep-fried panko-breaded prawns (8) served with a side of french fries, complemented with a house sweet chili sauce",
+   "cents": 1598,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-008-golden-prawns"
+  },
+  {
+   "name": "009. House Butter Garlic Fries",
+   "desc": "Crispy golden fries tossed in our house-made garlic butter garnished with garlic crisps",
+   "cents": 1098,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-009-house-butter-garlic-fries"
+  },
+  {
+   "name": "010. Roti",
+   "desc": "A crispy multilayer Thai pancake served with house curry dip",
+   "cents": 998,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-010-roti"
+  },
+  {
+   "name": "011. Chive Puff Paratha",
+   "desc": "",
+   "cents": 998,
+   "section": "Appetizers",
+   "photo": "intl-kitchen-011-chive-puff-paratha"
+  },
+  {
+   "name": "012. Shrimp Cakes",
+   "desc": "4 pieces of deep-fried fresh shrimp cake from a mixture of fresh shrimp, chopped green beans, kaffir lime leaves, chili paste, and curry paste",
+   "cents": 1398,
+   "section": "Appetizers"
+  },
+  {
+   "name": "200. Grilled Garlic Chicken Hainan Rice",
+   "desc": "Served with Fragrant Chicken Rice, Cucumber, Chicken Broth, Pickled Veggies, and House Sauce",
+   "cents": 1598,
+   "section": "Grilled Chicken Hainan Rice",
+   "photo": "intl-kitchen-200-grilled-garlic-chicken-hainan-rice"
+  },
+  {
+   "name": "201. Grilled Lemongrass Chicken Hainan Rice",
+   "desc": "Served with Fragrant Chicken Rice, Cucumber, Chicken Broth, Pickled Veggies, and House Sauce",
+   "cents": 1598,
+   "section": "Grilled Chicken Hainan Rice",
+   "photo": "intl-kitchen-201-grilled-lemongrass-chicken-hainan-ri"
+  },
+  {
+   "name": "202. Grilled Ginger Chicken Hainan Rice",
+   "desc": "Served with Fragrant Chicken Rice, Cucumber, Chicken Broth, Pickled Veggies, and House Sauce",
+   "cents": 1598,
+   "section": "Grilled Chicken Hainan Rice",
+   "photo": "intl-kitchen-202-grilled-ginger-chicken-hainan-rice"
+  },
+  {
+   "name": "203. Grilled House Chicken Hainan Rice",
+   "desc": "Served with Fragrant Chicken Rice, Cucumber, Chicken Broth, Pickled Veggies, and House Sauce",
+   "cents": 1598,
+   "section": "Grilled Chicken Hainan Rice",
+   "photo": "intl-kitchen-203-grilled-house-chicken-hainan-rice"
+  },
+  {
+   "name": "300. Sizzling Tofu Rice Plate",
+   "desc": "Fried tofu glazed in your choice of sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot. Comes with your choice of rice.",
+   "cents": 1598,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-300-sizzling-tofu-rice-plate"
+  },
+  {
+   "name": "301. Sizzling Garlic Fillet Fish Rice Plate",
+   "desc": "Tender filet fish glazed in our house garlic sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot",
+   "cents": 1698,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-301-sizzling-garlic-fillet-fish-rice-pla"
+  },
+  {
+   "name": "302. Sizzling BBQ Chicken Rice Plate",
+   "desc": "Tender chicken glazed in your choice of sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot",
+   "cents": 1598,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-302-sizzling-bbq-chicken-rice-plate"
+  },
+  {
+   "name": "304. Sizzling BBQ Pork Rice Plate",
+   "desc": "Tender pork glazed in your choice of sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot. Comes with a side of soup and your choice of rice.",
+   "cents": 1698,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-304-sizzling-bbq-pork-rice-plate"
+  },
+  {
+   "name": "305. Sizzling Garlic Prawn Rice Plate",
+   "desc": "Tender prawns glazed in our house garlic butter sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot",
+   "cents": 1798,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-305-sizzling-garlic-prawn-rice-plate"
+  },
+  {
+   "name": "306. Sizzling Spare Ribs Rice Plate",
+   "desc": "Tender spare ribs glazed in your choice of sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot",
+   "cents": 1798,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-306-sizzling-spare-ribs-rice-plate"
+  },
+  {
+   "name": "307. Sizzling Lemongrass Prawn Rice Plate",
+   "desc": "Tender prawns glazed in our house lemongrass sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot",
+   "cents": 1798,
+   "section": "Sizzling Rice Plates",
+   "photo": "intl-kitchen-307-sizzling-lemongrass-prawn-rice-plate"
+  },
+  {
+   "name": "400. Yellow Curry Roti Pizza 🌶️",
+   "desc": "King Mushroom, Bell Pepper, Yellow Onion, Thai Yellow Curry Sauce, and choice of protein on crispy Roti",
+   "cents": 1198,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-400-yellow-curry-roti-pizza"
+  },
+  {
+   "name": "401. Green Curry Roti Pizza 🌶️",
+   "desc": "King Mushroom, Bell Pepper, Yellow Onion, Thai Green Curry Sauce, and choice of protein on crispy Roti",
+   "cents": 1198,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-401-green-curry-roti-pizza"
+  },
+  {
+   "name": "402. Vegetarian Roti Pizza",
+   "desc": "Roti Pizza comes with Red Bell Pepper, Green Bell Pepper, Yellow Onion and King Mushroom",
+   "cents": 1198,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-402-vegetarian-roti-pizza"
+  },
+  {
+   "name": "403. Build Your Own Roti Pizza",
+   "desc": "Roti Pizza comes with Red Bell Pepper, Green Bell Pepper, Yellow Onion and King Mushroom",
+   "cents": 1198,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-403-build-your-own-roti-pizza"
+  },
+  {
+   "name": "404. Pork & Hot Links Roti Pizza",
+   "desc": "Hot link Sausage, Pork Sausage, King Mushroom, Red Bell Pepper, Green Bell Pepper, and Yellow Onion on crispy Roti",
+   "cents": 1298,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-404-pork-hot-links-roti-pizza"
+  },
+  {
+   "name": "500. Signature Dry Rub Chicken Breast",
+   "desc": "Served with fries, yellow onion, red onion, and jalapeño.",
+   "cents": 1198,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-500-signature-dry-rub-chicken-breast"
+  },
+  {
+   "name": "501. Signature Dry Rub Fried Tofu",
+   "desc": "Served with fries, yellow onion, red onion, and jalapeño.",
+   "cents": 1198,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-501-signature-dry-rub-fried-tofu"
+  },
+  {
+   "name": "502. Signature Dry Rub Wings",
+   "desc": "Served with fries, yellow onion, red onion, and jalapeño.",
+   "cents": 1398,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-502-signature-dry-rub-wings"
+  },
+  {
+   "name": "503. Fried Fish Signature Dry Rub",
+   "desc": "Served with fries, yellow onion, red onion and jalapeño.",
+   "cents": 1398,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-503-fried-fish-signature-dry-rub"
+  },
+  {
+   "name": "504. Signature Dry Rub Prawns",
+   "desc": "Crispy shell-on prawns with fries, yellow onion, red onion and jalapeño.",
+   "cents": 1798,
+   "section": "Roti Pizza",
+   "photo": "intl-kitchen-504-signature-dry-rub-prawns"
+  },
+  {
+   "name": "505. Angry Style Chicken Breast",
+   "desc": "Served with fried potato, yellow onion, red onion, and jalapeño.",
+   "cents": 1198,
+   "section": "Angry style wings",
+   "photo": "intl-kitchen-505-angry-style-chicken-breast"
+  },
+  {
+   "name": "506. Angry Style Wings",
+   "desc": "Served with fried potato, yellow onion, red onion, and jalapeño.",
+   "cents": 1398,
+   "section": "Angry style wings",
+   "photo": "intl-kitchen-506-angry-style-wings"
+  },
+  {
+   "name": "507. Angry Style Fried Fish",
+   "desc": "Served with fried potato, yellow onion, red onion, and jalapeño.",
+   "cents": 1398,
+   "section": "Angry style wings",
+   "photo": "intl-kitchen-507-angry-style-fried-fish"
+  },
+  {
+   "name": "700. Lort Cha Noodles",
+   "desc": "",
+   "cents": 1498,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-700-lort-cha-noodles"
+  },
+  {
+   "name": "701. Kathiew Cha Noodles",
+   "desc": "",
+   "cents": 1498,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-701-kathiew-cha-noodles"
+  },
+  {
+   "name": "702a. Phnom Penh Dry Noodles (Egg Noodles)",
+   "desc": "A savory Cambodian classic featuring egg noodles tossed in a special house sauce with crispy krill (tiny shrimp), bean sprouts, green onion, cilantro",
+   "cents": 1498,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-702a-phnom-penh-dry-noodles-egg-noodles"
+  },
+  {
+   "name": "703. Basil Kathiew Cha Noodles",
+   "desc": "A Cambodian inspired dish featuring wide rice noodles stir-fried with Basil, Bell Pepper, Bean Sprouts, Yellow Onion, Green Onion",
+   "cents": 1498,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-703-basil-kathiew-cha-noodles"
+  },
+  {
+   "name": "704. Yellow Curry Noodle Soup",
+   "desc": "A rich and creamy Thai soup made with yellow curry paste, coconut milk, and egg noodles, with vegetables and choice of protein",
+   "cents": 1498,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-704-yellow-curry-noodle-soup"
+  },
+  {
+   "name": "705. Namya Noodle Soup",
+   "desc": "A spicy and aromatic Thai soup made with fish, coconut milk, and rice noodles.",
+   "cents": 1598,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-705-namya-noodle-soup"
+  },
+  {
+   "name": "706. Num Banh Chok Noodle Soup",
+   "desc": "A traditional Cambodian dish featuring rice noodles topped with a fish-based green curry, coconut milk, and a variety of fresh herbs and vegetables.",
+   "cents": 1598,
+   "section": "Specialty Noodles",
+   "photo": "intl-kitchen-706-num-banh-chok-noodle-soup"
+  },
+  {
+   "name": "GF1. Grilled Whole Tilapia",
+   "desc": "Whole Grilled Tilapia fish served with Cucumber, Pickled Vegetables, House Sweet Chili Sauce, and your choice of Rice.",
+   "cents": 1598,
+   "section": "Grilled Whole Fish",
+   "photo": "intl-kitchen-gf1-grilled-whole-tilapia"
+  },
+  {
+   "name": "GF2. Grilled Whole Pompano",
+   "desc": "Whole Grilled Pompano fish served with Cucumber, Pickled Vegetables, House Sweet Chili Sauce, and your choice of Rice.",
+   "cents": 1798,
+   "section": "Grilled Whole Fish",
+   "photo": "intl-kitchen-gf2-grilled-whole-pompano"
+  },
+  {
+   "name": "100. Papaya Salad",
+   "desc": "Shredded green papaya with minced garlic, crushed peanuts, grape tomato, carrot, sliced green beans, and fresh Thai chili, dressed in fresh lime juice",
+   "cents": 1698,
+   "section": "Salads"
+  },
+  {
+   "name": "101. Mango Salad",
+   "desc": "Your choice of protein with mango, cashew nuts, green onion, roasted chili flakes, fresh cilantro, carrot, and diced red onions",
+   "cents": 1698,
+   "section": "Salads",
+   "photo": "intl-kitchen-101-mango-salad"
+  },
+  {
+   "name": "102. Cambodian Style Papaya Salad",
+   "desc": "Shredded papaya salad with Cambodian prahok fish sauce, with dry shrimp, finely grounded shrimp paste, green bean, cherry tomato, and ground peanuts",
+   "cents": 1898,
+   "section": "Salads",
+   "photo": "intl-kitchen-102-cambodian-style-papaya-salad"
+  },
+  {
+   "name": "103. Salted Crab Papaya Salad",
+   "desc": "Shredded green papaya with salted crab (3 pieces due to saltiness for flavor enhancement), dried shrimp, green bean, cherry tomato, with ground peanut",
+   "cents": 1998,
+   "section": "Salads",
+   "photo": "intl-kitchen-103-salted-crab-papaya-salad"
+  },
+  {
+   "name": "D1. Mango Pudding",
+   "desc": "Creamy mango pudding with fresh mango chunks",
+   "cents": 499,
+   "section": "Dessert",
+   "photo": "intl-kitchen-d1-mango-pudding"
+  },
+  {
+   "name": "D2. Mango Sticky Rice",
+   "desc": "Sweet sticky rice with coconut milk and fresh mango",
+   "cents": 1095,
+   "section": "Dessert",
+   "photo": "intl-kitchen-d2-mango-sticky-rice"
+  },
+  {
+   "name": "D3. 2 Pandan Green Waffles",
+   "desc": "Crispy pandan flavored waffles",
+   "cents": 499,
+   "section": "Dessert",
+   "photo": "intl-kitchen-d3-2-pandan-green-waffles"
+  },
+  {
+   "name": "SO1. Steam Rice",
+   "desc": "",
+   "cents": 250,
+   "section": "Sides",
+   "photo": "intl-kitchen-so1-steam-rice"
+  },
+  {
+   "name": "SO2. Brown Rice",
+   "desc": "",
+   "cents": 350,
+   "section": "Sides",
+   "photo": "intl-kitchen-so2-brown-rice"
+  },
+  {
+   "name": "SO3. Fragrant Chicken Rice",
+   "desc": "",
+   "cents": 350,
+   "section": "Sides",
+   "photo": "intl-kitchen-so3-fragrant-chicken-rice"
+  },
+  {
+   "name": "MT2. Assam Milk Tea",
+   "desc": "Freshly brewed Assam black tea topped with non-dairy creamer",
+   "cents": 499,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt2-assam-milk-tea"
+  },
+  {
+   "name": "MT3. Jasmine Green Milk Tea",
+   "desc": "Freshly brewed Jasmine green tea topped with non-dairy creamer",
+   "cents": 499,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt3-jasmine-green-milk-tea"
+  },
+  {
+   "name": "MT5. Taro Milk Tea",
+   "desc": "Non-dairy creamer infused with taro flavoring. Fixed sweetness.",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt5-taro-milk-tea"
+  },
+  {
+   "name": "MT6. Mango Milk Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea with non-dairy creamer infused with mango puree",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt6-mango-milk-tea"
+  },
+  {
+   "name": "MT7. Lychee Milk Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea with non-dairy creamer infused with lychee essence",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt7-lychee-milk-tea"
+  },
+  {
+   "name": "MT8. Strawberry Milk Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea with non-dairy creamer infused with strawberry puree",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt8-strawberry-milk-tea"
+  },
+  {
+   "name": "MT9. Brown Sugar Milk Tea",
+   "desc": "Freshly brewed Assam black tea with non-dairy creamer and brown sugar swirl. Fixed sweetness.",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt9-brown-sugar-milk-tea"
+  },
+  {
+   "name": "MT10. Passion Fruit Milk Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea with non-dairy creamer infused with passion fruit essence",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt10-passion-fruit-milk-tea"
+  },
+  {
+   "name": "MT11. Peach Milk Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea with non-dairy creamer infused with peach essence",
+   "cents": 599,
+   "section": "AppeTea Milk Tea",
+   "photo": "intl-kitchen-mt11-peach-milk-tea"
+  },
+  {
+   "name": "FT3. Lychee Mango Iced Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with mango puree and lychee essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft3-lychee-mango-iced-tea"
+  },
+  {
+   "name": "FT4. Passion Fruit Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with passion fruit essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft4-passion-fruit-tea"
+  },
+  {
+   "name": "FT5. Lemon Iced Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with fresh lemon",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft5-lemon-iced-tea"
+  },
+  {
+   "name": "FT6. Mango Iced Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with mango puree",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft6-mango-iced-tea"
+  },
+  {
+   "name": "FT7. Lychee Iced Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with lychee essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft7-lychee-iced-tea"
+  },
+  {
+   "name": "FT8. Strawberry Iced Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with strawberry puree",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft8-strawberry-iced-tea"
+  },
+  {
+   "name": "FT9. Peach Fruit Tea",
+   "desc": "Freshly brewed Assam black tea or Jasmine green tea infused with peach essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-ft9-peach-fruit-tea"
+  },
+  {
+   "name": "L1. Iced Lemonade",
+   "desc": "Housemade lemonade",
+   "cents": 499,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-l1-iced-lemonade"
+  },
+  {
+   "name": "L2. Iced Mango Lemonade",
+   "desc": "Housemade lemonade infused with mango puree",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-l2-iced-mango-lemonade"
+  },
+  {
+   "name": "L3. Iced Strawberry Lemonade",
+   "desc": "Housemade lemonade infused with strawberry puree",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-l3-iced-strawberry-lemonade"
+  },
+  {
+   "name": "L4. Iced Passion Fruit Lemonade",
+   "desc": "Housemade lemonade infused with passion fruit essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-l4-iced-passion-fruit-lemonade"
+  },
+  {
+   "name": "L5. Iced Guava Lemonade",
+   "desc": "Housemade lemonade infused with guava essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-l5-iced-guava-lemonade"
+  },
+  {
+   "name": "L6. Iced Lychee Lemonade",
+   "desc": "Housemade lemonade infused with lychee essence",
+   "cents": 599,
+   "section": "AppeTea Flavored Tea",
+   "photo": "intl-kitchen-l6-iced-lychee-lemonade"
+  },
+  {
+   "name": "MT1. Thai Iced Tea",
+   "desc": "Classic steeped authentic Thai tea topped with half-and-half",
+   "cents": 599,
+   "section": "AppeTea Thai Tea",
+   "photo": "intl-kitchen-mt1-thai-iced-tea"
+  },
+  {
+   "name": "MT12. Thai Iced Coffee",
+   "desc": "Classic steeped authentic Thai coffee topped with half-and-half",
+   "cents": 599,
+   "section": "AppeTea Thai Tea",
+   "photo": "intl-kitchen-mt12-thai-iced-coffee"
+  },
+  {
+   "name": "MT4. Thai Iced Green Milk Tea",
+   "desc": "Steeped authentic Thai green tea topped with half-and-half",
+   "cents": 499,
+   "section": "AppeTea Thai Tea",
+   "photo": "intl-kitchen-mt4-thai-iced-green-milk-tea"
+  },
+  {
+   "name": "FT1. Thai Lemon Green Tea",
+   "desc": "Freshly brewed authentic Thai green tea infused with lemon",
+   "cents": 599,
+   "section": "AppeTea Thai Tea",
+   "photo": "intl-kitchen-ft1-thai-lemon-green-tea"
+  },
+  {
+   "name": "800. House Fried Rice",
+   "desc": "INTL Kitchen house fried rice with Egg, Carrot, Yellow Onion, Green Peas, Green Onion, minced Garlic, and your choice of protein in a savory house sauce.",
+   "cents": 1498,
+   "section": "Fried rice",
+   "photo": "intl-kitchen-800-house-fried-rice"
+  },
+  {
+   "name": "801. Basil Bai Cha",
+   "desc": "A Cambodian inspired fried rice with Basil, Bell Pepper, Bean Sprouts, Yellow Onion, Green Onion, minced Garlic",
+   "cents": 1498,
+   "section": "Fried rice",
+   "photo": "intl-kitchen-801-basil-bai-cha"
+  },
+  {
+   "name": "802. Tom Yum Fried Rice",
+   "desc": "A Thai inspired fried rice with Egg, Carrot, Yellow Onion, Green Peas, Green Onion, minced Garlic, and your choice of protein tossed in Tom Yum seasoning.",
+   "cents": 1498,
+   "section": "Fried rice",
+   "photo": "intl-kitchen-802-tom-yum-fried-rice"
+  },
+  {
+   "name": "803. Lemongrass Basil Fried Rice",
+   "desc": "INTL Kitchen fried rice with Lemongrass, Basil, Bell Pepper, Yellow Onion, Green Onion, minced Garlic, and your choice of protein in a savory house sauce.",
+   "cents": 1498,
+   "section": "Fried rice",
+   "photo": "intl-kitchen-803-lemongrass-basil-fried-rice"
+  },
+  {
+   "name": "804. Pineapple Fried Rice",
+   "desc": "A Thai style fried rice with Pineapple, Cashew Nuts, Egg, Carrot, Yellow Onion, Green Peas, Green Onion, minced Garlic",
+   "cents": 1498,
+   "section": "Fried rice",
+   "photo": "intl-kitchen-804-pineapple-fried-rice"
+  },
+  {
+   "name": "805. Pork & Hot Links Fried Rice",
+   "desc": "INTL Kitchen fried rice with Hot Link Sausage, Ground Pork, Egg, Yellow Onion, Green Onion, and minced Garlic in a savory house sauce.",
+   "cents": 1698,
+   "section": "Fried rice",
+   "photo": "intl-kitchen-805-pork-hot-links-fried-rice"
+  },
+  {
+   "name": "303. Sizzling Lemongrass Fillet Fish Rice Plate",
+   "desc": "Tender filet fish glazed in our house lemongrass sauce with King Mushroom, Onion, and Bell Pepper, served sizzling hot",
+   "cents": 1698,
+   "photo": "intl-kitchen-303-sizzling-lemongrass-fillet-fish-rice"
+  }
+ ]
+}

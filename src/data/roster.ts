@@ -92,7 +92,7 @@ const seed = (
     researched sentence replaces the placeholder outright. What survives from
     the hand-written extras is everything else: the clip, the mark, the CTA.
   */
-  if (research.items?.length || research.groups?.length || research.quoteOnly || research.contactOnly) {
+  if (research.items?.length || research.sections?.length || research.groups?.length || research.quoteOnly || research.contactOnly) {
     merged.contactOnly = research.contactOnly
   }
   return merged
@@ -1079,6 +1079,67 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'A new Bay Area media company, born in the Bay and broadcasting worldwide: music, originals, community, fashion and business, out of Oakland and San Francisco. It launches Labor Day, September 7, 2026, and nothing is for sale yet; their site takes sign-ups for first access.',
   }),
+  /* 2026-09-05, evening. Walk Free, "BEASTY • Online" with "Maybe include a
+     drop-down pic?" — a Shopify harness store; the Pet goods seat is Pawddle's,
+     so the flagship's yellow sheet, with their own product photos as the
+     strip. Lush Spaw, "Three locations above": two in San Jose, one in Santa
+     Clara — the Santa Clara grooming seat, and San Jose's yellow sheet because
+     The Yappy Hour Club holds that one. Prices from their own dog and cat
+     price pages, by weight and coat. */
+  seed('walk-free', 'Walk Free', 'Walk Free', 'Dog harness and leash', '#C8471B', {
+    icon: 'walk-free',
+    logoTemplate: 'badge', logoLines: ['WALK', 'FREE'], logoFace: 'grotesk',
+    site: 'https://walkfree.store/',
+    siteCta: 'Shop the harness',
+    /* An online store has no address or hours to count as a fact, so the
+       roster placeholder would stay; this is what they are. */
+    contactOnly:
+      'An online store for their anti-pull dog harness with a built-in retractable leash, shipped worldwide. ' +
+      'The store runs a rolling flash sale and prices differ by region, so the price is on the store, not here.',
+  }),
+  seed('lush-spaw', 'Lush Spaw', 'Lush Spaw', 'Pet grooming', '#E64BB5', {
+    icon: 'lush-spaw',
+    logoTemplate: 'wordmark', logoLines: ['LUSH', 'SPAW'], logoFace: 'script',
+    site: 'https://www.lushspaw.com/',
+    siteCta: 'Book an appointment',
+  }),
+
+  /* 2026-09-05. Four from the thread overnight and this morning, one per
+     message: Dad's BBQ for Antioch ("Brentwood • Goods. Actually, Antioch");
+     Tony's Style, "my cousins boy right here that owns this restaurant. Gonna
+     put him on. Needs a website too" — on the Boba spot he named, BEASTY and
+     Albany; Caitlyn's Sweets, "San Jose • Goods. Needs website"; and Armenta
+     Landscape Co., which he filed under Antioch Goods and which is a landscape
+     contractor, so it sits on the Gardener seat of Antioch Services instead —
+     flagged to him. Every fact below is from their own site or bio; Dad's
+     menu and photos are from their own ordering page. */
+  seed('dads-bbq', "Dad's BBQ", "Dad's BBQ", 'Mississippi-style BBQ', '#B8121B', {
+    icon: 'dads-bbq',
+    logoTemplate: 'badge', logoLines: ["DAD'S", 'BBQ'], logoFace: 'slab',
+    site: 'https://dadsbbqco.com/',
+    siteCta: 'Order online',
+  }),
+  seed('tonys-style', "Tony's Style", "Tony's Style", 'Chicken wings', '#1B0F3A', {
+    icon: 'tonys-style',
+    logoTemplate: 'wordmark', logoLines: ["TONY'S", 'STYLE'], logoFace: 'script',
+    site: 'https://www.instagram.com/tonysstyles/',
+    siteCta: 'Message them on Instagram',
+    needsSite: true,
+  }),
+  seed('caitlyns-sweets', "Caitlyn's Sweets", "Caitlyn's", 'Custom cakes', '#E8879F', {
+    icon: 'caitlyns-sweets',
+    logoTemplate: 'badge', logoLines: ["CAITLYN'S", 'SWEETS'], logoFace: 'script',
+    site: 'https://www.instagram.com/caitlyn_sweets/',
+    siteCta: 'DM for a quote',
+    needsSite: true,
+  }),
+  seed('armenta-landscape', 'Armenta Landscape Co.', 'Armenta', 'Landscape design and construction', '#2E7D32', {
+    icon: 'armenta-landscape',
+    logoTemplate: 'wordmark', logoLines: ['ARMENTA', 'LANDSCAPE'], logoFace: 'grotesk',
+    site: 'https://www.armentalandscape.com/',
+    siteCta: 'Contact them',
+  }),
+
   /* 2026-09-04, from the van: "are you able to add this to the Paige real
      quick? I'm delivering right now and I might talk to the owner" — two
      photographs, the storefront and the window poster. Everything below is

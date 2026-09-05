@@ -1,0 +1,246 @@
+{
+ "id": "b_loveburn",
+ "source": "text",
+ "pages": [
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-chicken-sandwich_4ae973e6-a524-4274-93fc-7be1b2cf9a27",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-caesar-salad_3076a0b8-2389-40d5-9821-88f14f6f5249",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-kfc-tenders-fries_0a63e89b-33e7-4ebc-837d-913434590f1e",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-hot-tenders-and-fries_d1356dc0-0bb3-452e-aa44-f7eb950b9868",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-six-hot-wings_5895aff7-e75d-4a36-88a0-94a5cd3c98b7",
+  "https://order.toasttab.com/online/love-burn-521a-3rd-street/item-twelve-hot-wings_be8047f6-d747-4e76-83c4-0ff7a79859d5"
+ ],
+ "items": [
+  {
+   "name": "Hot Tenders and Fries",
+   "desc": "Three massive chicken tenders (breast), choice of spice level, fries, and choice of sauce ****Level 4 Disclaimer: Consume at your discretion",
+   "cents": 1700,
+   "section": "Hot Fried Chicken",
+   "photo": "love-burn-hot-tenders-and-fries"
+  },
+  {
+   "name": "Six Hot Wings",
+   "desc": "Six Large Hot Wings with choice of a spice level, choice of sauce, and side of pickles ****Level 4 Disclaimer: Consume at your discretion",
+   "cents": 1400,
+   "section": "Hot Fried Chicken",
+   "photo": "love-burn-six-hot-wings"
+  },
+  {
+   "name": "Twelve Hot Wings",
+   "desc": "Twelve large hot wings with choice of two different spice levels, choice of two sauces, and side of pickles ****Level 4 Disclaimer: Consume at your discretion",
+   "cents": 2600,
+   "section": "Hot Fried Chicken",
+   "photo": "love-burn-twelve-hot-wings"
+  },
+  {
+   "name": "Hot Quarter Meal (Thigh & Drum)",
+   "desc": "Crispy Fried Chicken Leg Quarter, Buttered Texas Toast & Pickles ***Levels 2-4 gets mixed pickles (cucumbers, jalapeños",
+   "cents": 1600,
+   "section": "Hot Fried Chicken",
+   "photo": "love-burn-hot-quarter-meal-thigh-drum"
+  },
+  {
+   "name": "Double Smash Burger",
+   "desc": "Two beef patties, American cheese, house sauce, caramelized onions, and pickles on a toasted brioche bun. Vegan option available",
+   "cents": 1500,
+   "section": "Smash Burger and Hot Sandwiches",
+   "photo": "love-burn-double-smash-burger"
+  },
+  {
+   "name": "Korean Fried Chicken Sandwich",
+   "desc": "Crispy Korean glazed chicken, kimchi slaw, and pickles on brioche bun",
+   "cents": 1500,
+   "section": "Smash Burger and Hot Sandwiches",
+   "photo": "love-burn-korean-fried-chicken-sandwich"
+  },
+  {
+   "name": "Fish Filet Sandwich",
+   "desc": "Crispy fish patty, American cheese, bread and butter pickles, tartar sauce on a brioche bun",
+   "cents": 1200,
+   "section": "Smash Burger and Hot Sandwiches",
+   "photo": "love-burn-fish-filet-sandwich"
+  },
+  {
+   "name": "BBQ Pork Sandwich",
+   "desc": "Pulled pork with Asian BBQ sauce, kimchee slaw, and pickles on brioche",
+   "cents": 1500,
+   "section": "Smash Burger and Hot Sandwiches",
+   "photo": "love-burn-bbq-pork-sandwich"
+  },
+  {
+   "name": "Mixed Green Salad",
+   "desc": "Mixed greens with herbed croutons, cherry tomatoes, English cucumber, shredded carrots, balsamic vinaigrette",
+   "cents": 1200,
+   "section": "Salads",
+   "photo": "love-burn-mixed-green-salad"
+  },
+  {
+   "name": "Wing Wednesday 6pc",
+   "desc": "",
+   "cents": 1400,
+   "section": "Weekly Specials",
+   "photo": "love-burn-wing-wednesday-6pc"
+  },
+  {
+   "name": "Wing Wednesday 12pc",
+   "desc": "",
+   "cents": 2600,
+   "section": "Weekly Specials",
+   "photo": "love-burn-wing-wednesday-12pc"
+  },
+  {
+   "name": "Fish Filet Fridays",
+   "desc": "Fish Filet Friday Special",
+   "cents": 1000,
+   "section": "Specials and sides",
+   "photo": "love-burn-fish-filet-fridays"
+  },
+  {
+   "name": "KFC 6pc Wings",
+   "desc": "",
+   "cents": 1500,
+   "section": "Specials and sides",
+   "photo": "love-burn-kfc-6pc-wings"
+  },
+  {
+   "name": "Bomba special",
+   "desc": "",
+   "cents": 1800,
+   "section": "Specials and sides"
+  },
+  {
+   "name": "French Fries",
+   "desc": "Crispy Coated French Fries",
+   "cents": 600,
+   "section": "Specials and sides",
+   "photo": "love-burn-french-fries"
+  },
+  {
+   "name": "Creamy Coleslaw",
+   "desc": "Cabbage, Carrots, Apple Cider Vinegar, Dijon Mustard, Garlic, Onion, Sugar, Mayo, and Celery Seed",
+   "cents": 600,
+   "section": "Specials and sides",
+   "photo": "love-burn-creamy-coleslaw"
+  },
+  {
+   "name": "Potato Salad",
+   "desc": "Potatoes, Mayonnaise, Celery, Sweet Pickle Relish, Mustard, Onion, and Red Bell Pepper",
+   "cents": 600,
+   "section": "Specials and sides",
+   "photo": "love-burn-potato-salad"
+  },
+  {
+   "name": "Macaroni Salad",
+   "desc": "Elbow noodles, red and green bell peppers, red onions, scallion, celery, egg, and mayo",
+   "cents": 600,
+   "section": "Specials and sides",
+   "photo": "love-burn-macaroni-salad"
+  },
+  {
+   "name": "Mike's Hot Honey",
+   "desc": "A blend of honey, chilies, and vinegar",
+   "cents": 200,
+   "section": "Sauces",
+   "photo": "love-burn-mike-s-hot-honey"
+  },
+  {
+   "name": "Sweet Baby Ray's BBQ Sauce",
+   "desc": "A sweet and smoky barbecue sauce typically featuring a rich blend of molasses, brown sugar, and spices",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-sweet-baby-ray-s-bbq-sauce"
+  },
+  {
+   "name": "Chipotle Aioli",
+   "desc": "House made chipotle aioli: mayo, garlic, lemon juice, chipotle powder, salt and pepper",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-chipotle-aioli"
+  },
+  {
+   "name": "Hot Ranch",
+   "desc": "Not for the faint of heart. Hot House made ranch: Habanero, Buttermilk, Mayo, and Spice Blend",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-hot-ranch"
+  },
+  {
+   "name": "Cool Ranch",
+   "desc": "House made ranch: buttermilk, mayo, and spice blend",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-cool-ranch"
+  },
+  {
+   "name": "Crystal Hot Sauce",
+   "desc": "Red Cayenne Peppers, Distilled White Vinegar, and Salt",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-crystal-hot-sauce"
+  },
+  {
+   "name": "House",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-house"
+  },
+  {
+   "name": "Habanero",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces",
+   "photo": "love-burn-habanero"
+  },
+  {
+   "name": "Ube Mochi Cake",
+   "desc": "Hawaiian inspired mochi butter cake made with ube (purple sweet potato)",
+   "cents": 400,
+   "section": "Sauces",
+   "photo": "love-burn-ube-mochi-cake"
+  },
+  {
+   "name": "Strawberry Mochi Cake",
+   "desc": "",
+   "cents": 400,
+   "section": "Sauces",
+   "photo": "love-burn-strawberry-mochi-cake"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "A crisp, refreshing taste you know and love with zero calories",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Sprite",
+   "desc": "The cold, refreshing flavors of lemon and lime, perfectly blended",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Horizon Organic Milk",
+   "desc": "Horizon Organic Milk is a certified organic milk, offering a naturally sourced and refreshing dairy beverage",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "Lightly carbonated water with a crisp, refreshing taste",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Coke",
+   "desc": "The cold, refreshing, sparkling classic that America loves",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Mini Churros with Caramel Sauce",
+   "desc": "Five mini churros rolled in cinnamon sugar and a side of house made caramel sauce",
+   "cents": 800,
+   "photo": "love-burn-mini-churros-with-caramel-sauce"
+  }
+ ]
+}

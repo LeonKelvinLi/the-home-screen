@@ -1,0 +1,1324 @@
+{
+ "id": "b_thefarmacy",
+ "source": "json",
+ "alt": {
+  "jsonld": 38,
+  "text": 19
+ },
+ "pages": [
+  "https://www.farmacysf.com/",
+  "https://www.farmacysf.com/menu",
+  "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu",
+  "https://www.farmacysf.com/catering",
+  "https://get.popmenu.com/",
+  "https://www.levelaccess.com/a/popmenu?utm_source=popmenuclient&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=footer&utm_campaign=popmenu",
+  "https://www.farmacysf.com/items/fried-chicken-sandwich-d7957442?location=the-farmacy&menu=main-menu"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Fried Chicken Sandwich",
+   "desc": "Crispy chicken thigh, honey chipotle aioli, shaved cabbage, pickles, brioche bun",
+   "cents": 1250,
+   "section": "Handhelds",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Diablo Spicy Chicken Sandwich",
+   "desc": "Crispy chicken thigh, house diablo sauce, shredded lettuce, pickles, brioche bun",
+   "cents": 1325,
+   "section": "Handhelds",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D160%2Cheight%3D160%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D5/gwnrlbmy/f2e1e77f-575b-4c11-ba92-b546ee7916bf.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Rotisserie Chicken Sandwich",
+   "desc": "Herb-roasted chicken, lemon aioli, arugula, tomato, brioche bun",
+   "cents": 1225,
+   "section": "Handhelds",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D160%2Cheight%3D160%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D5/gwnrlbmy/3c533003-662f-4c4f-916c-2664bb31ac2b.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Plant-Based Chicken Sandwich (Tindle™)",
+   "desc": "Crispy Tindle™ chicken, vegan aioli, pickles, shredded lettuce",
+   "cents": 1275,
+   "section": "Handhelds",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D160%2Cheight%3D160%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D5/gwnrlbmy/48b387d0-f994-4c0b-8b81-19aaaa96fd5f.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Chicken Smash Burger *Limited Time Special*",
+   "desc": "Smashed seasoned chicken patty, American cheese, caramelized onions, pickles, Farmacy sauce",
+   "cents": 1395,
+   "section": "Handhelds",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/b9604cd6-886a-4ffb-ac13-c1aa8f0b26d6.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Classic Crispy Chicken Strips & Chips",
+   "desc": "Our special golden fried chicken",
+   "cents": 1295,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/11a84954-e6b2-4aa1-b514-6e4021a2ca95.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Hot Honey Chicken Strips & Chips",
+   "desc": "Crispy chicken tossed in hot honey glaze",
+   "cents": 1395,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/8703996a-3b64-402c-ba72-484995818ec8.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Diablo Chicken Strips & Chips",
+   "desc": "Crispy chicken tossed in house diablo sauce",
+   "cents": 1395,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4ed87406-100b-4d67-b728-daf3e0f1d38e.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Asian Chili Chicken Strips & Chips",
+   "desc": "Sweet-spicy chili glaze",
+   "cents": 1395,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/6c973257-2720-4575-998e-57953b74cfa3.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Mediterranean Bowl",
+   "desc": "Jasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+   "cents": 1395,
+   "section": "Signature Bowls",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/92c82ae8-c074-49d0-8ba8-7a30ce3a5a4a.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Asian Sesame Bowl",
+   "desc": "Jasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+   "cents": 1395,
+   "section": "Signature Bowls",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/5bf5b22b-32d6-4708-b34b-9ec12ba0011a.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Warm Power Bowl",
+   "desc": "Greens + grains, roasted seasonal vegetables, avocado, house vinaigrette. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+   "cents": 1295,
+   "section": "Signature Bowls",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Kale Caesar",
+   "desc": "Chopped kale, parmesan, sourdough croutons, Caesar dressing. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+   "cents": 1275,
+   "section": "Signature Salads",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f4870b19-6003-4d55-8f08-4b0d9b8f3bdb.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Asian Crunch Salad",
+   "desc": "Mixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+   "cents": 1375,
+   "section": "Signature Salads",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c2d6657e-8c0a-4431-82ef-806dfcec0a45.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Mediterranean Chopped Salad",
+   "desc": "Chopped romaine & arugula, cherry tomatoes, cucumber, olives, red onion, feta, lemon oregano vinaigrette. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+   "cents": 1375,
+   "section": "Signature Salads",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Soup Of The Day (Chicken Noodle)",
+   "desc": "",
+   "cents": 695,
+   "section": "Soup & Sides",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Daily-Made Farmacy Chips",
+   "desc": "",
+   "cents": 395,
+   "section": "Soup & Sides",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c9857f34-a28f-4ee2-b775-905b55ffe59c.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Hot Honey Mac & Cheese",
+   "desc": "Creamy mac & cheese with a hot honey drizzle",
+   "cents": 595,
+   "section": "Soup & Sides",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Sesame Asian Slaw",
+   "desc": "",
+   "cents": 595,
+   "section": "Soup & Sides",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Soft Serve",
+   "desc": "Rotating Flavor (French Vanilla)",
+   "cents": 595,
+   "section": "Sweets",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4877282d-b3f0-4f78-bda7-5da5acff91b2.png",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Brookie",
+   "desc": "",
+   "cents": 525,
+   "section": "Sweets",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/bd3b5fb0-2d18-4858-8ee0-8c1e60b4a79e.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Matcha Cookie",
+   "desc": "",
+   "cents": 525,
+   "section": "Sweets",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Classic Crispy Chicken Strips & Chips",
+   "desc": "Our special golden fried chicken",
+   "cents": 1850,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/11a84954-e6b2-4aa1-b514-6e4021a2ca95.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Hot Honey Chicken Strips & Chips",
+   "desc": "Crispy chicken tossed in hot honey glaze",
+   "cents": 1850,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/8703996a-3b64-402c-ba72-484995818ec8.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Diablo Chicken Strips & Chips",
+   "desc": "Crispy chicken tossed in house diablo sauce",
+   "cents": 1850,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4ed87406-100b-4d67-b728-daf3e0f1d38e.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Asian Chili Chicken Strips & Chips",
+   "desc": "Sweet-spicy chili glaze",
+   "cents": 1850,
+   "section": "Strips & Chips",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/6c973257-2720-4575-998e-57953b74cfa3.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Fried Chicken Sandwich",
+   "desc": "Each box includes a fried chicken sandwich (crispy fried chicken, spicy aioli, lettuce, red onions & tomato on a toasted brioche bun) and chips.",
+   "cents": 1850,
+   "section": "Boxed Lunches",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Plant‑Based Tindle Sandwich",
+   "desc": "Each box includes a plant-based Tindle sandwich (plant-based chicken, vegan aioli, lettuce, tomato & red onion on a toasted vegan bun) and chips.",
+   "cents": 1875,
+   "section": "Boxed Lunches",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D160%2Cheight%3D160%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D5/gwnrlbmy/48b387d0-f994-4c0b-8b81-19aaaa96fd5f.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Rotisserie Chicken Sandwich",
+   "desc": "Each box includes a rotisserie chicken sandwich (herb‑marinated rotisserie chicken, smoked salt & rich chicken fat on a toasted bun) and chips.",
+   "cents": 1825,
+   "section": "Boxed Lunches",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D160%2Cheight%3D160%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D5/gwnrlbmy/3c533003-662f-4c4f-916c-2664bb31ac2b.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Diablo Spicy Chicken Sandwich",
+   "desc": "Includes a diablo spicy chicken sandwich (crispy chicken thigh, house diablo sauce, shredded lettuce & pickles on brioche bun) and chips.",
+   "cents": 1925,
+   "section": "Boxed Lunches",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width%3D160%2Cheight%3D160%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D5/gwnrlbmy/f2e1e77f-575b-4c11-ba92-b546ee7916bf.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Chicken Smash Burger *Limited Time Special*",
+   "desc": "Includes a chicken smash burger (smashed seasoned chicken patty, American cheese, caramelized onions, pickles & Farmacy sauce) and chips.",
+   "cents": 1995,
+   "section": "Boxed Lunches",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/b9604cd6-886a-4ffb-ac13-c1aa8f0b26d6.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Warm Power Bowl",
+   "desc": "Fluffy rice, sweet peas, roasted broccoli, carrots, cabbage, green beans, and pea shoots topped with crispy shallots. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1850,
+   "section": "Bowls",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Mediterranean Bowl",
+   "desc": "Jasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1850,
+   "section": "Bowls",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/92c82ae8-c074-49d0-8ba8-7a30ce3a5a4a.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Asian Sesame Bowl",
+   "desc": "Jasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1850,
+   "section": "Bowls",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/5bf5b22b-32d6-4708-b34b-9ec12ba0011a.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Kale Caesar Salad",
+   "desc": "Petite kale, parmesan, and toasted croutons tossed in house-made Caesar dressing. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1750,
+   "section": "Salads",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Asian Crunch Salad",
+   "desc": "Mixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1750,
+   "section": "Salads",
+   "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c2d6657e-8c0a-4431-82ef-806dfcec0a45.jpg",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Mediterranean Chopped Salad",
+   "desc": "Chopped romaine & arugula, cherry tomatoes, cucumber, olives, red onion, feta, lemon oregano vinaigrette. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1750,
+   "section": "Salads",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "6 oz",
+   "desc": "",
+   "cents": 695,
+   "section": "Hot Honey Mac & Cheese",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "12 oz",
+   "desc": "",
+   "cents": 1195,
+   "section": "Hot Honey Mac & Cheese",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Whole Chicken Pack",
+   "desc": "Whole rotisserie chicken with asian slaw salad, hot honey mac & cheese, and crispy house-made chips—the perfect group meal. Serves 2-3 people each",
+   "cents": 3900,
+   "section": "The Family Pack",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Individual",
+   "desc": "",
+   "cents": 695,
+   "section": "Brookie",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Dozen",
+   "desc": "",
+   "cents": 6900,
+   "section": "Brookie",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Single",
+   "desc": "",
+   "cents": 695,
+   "section": "Matcha Cookie",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql?operationName=menuSection&variables=%7"
+  },
+  {
+   "name": "Daily-Made Farmacy Chips + Water",
+   "desc": "",
+   "cents": 600,
+   "section": "Make It a Combo",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql\",\"status\":200}"
+  },
+  {
+   "name": "Hot Honey Mac & Cheese + Water",
+   "desc": "",
+   "cents": 600,
+   "section": "Make It a Combo",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql\",\"status\":200}"
+  },
+  {
+   "name": "Sesame Asian Slaw + Water",
+   "desc": "",
+   "cents": 600,
+   "section": "Make It a Combo",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql\",\"status\":200}"
+  },
+  {
+   "name": "Daily-Made Farmacy Chips + Poppi Soda",
+   "desc": "",
+   "cents": 600,
+   "section": "Make It a Combo",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql\",\"status\":200}"
+  },
+  {
+   "name": "Hot Honey Mac & Cheese + Poppy Soda",
+   "desc": "",
+   "cents": 600,
+   "section": "Make It a Combo",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql\",\"status\":200}"
+  },
+  {
+   "name": "Sesame Asian Slaw + Poppy Soda",
+   "desc": "",
+   "cents": 600,
+   "section": "Make It a Combo",
+   "alcohol": false,
+   "src": "json:https://www.farmacysf.com/graphql\",\"status\":200}"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Fried Chicken Sandwich",
+    "desc": "Crispy chicken thigh, honey chipotle aioli, shaved cabbage, pickles, brioche bun",
+    "cents": 1250,
+    "section": "Handhelds",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Diablo Spicy Chicken Sandwich",
+    "desc": "Crispy chicken thigh, house diablo sauce, shredded lettuce, pickles, brioche bun",
+    "cents": 1325,
+    "section": "Handhelds",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f2e1e77f-575b-4c11-ba92-b546ee7916bf.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Rotisserie Chicken Sandwich",
+    "desc": "Herb-roasted chicken, lemon aioli, arugula, tomato, brioche bun",
+    "cents": 1225,
+    "section": "Handhelds",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/3c533003-662f-4c4f-916c-2664bb31ac2b.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Plant-Based Chicken Sandwich (Tindle™)",
+    "desc": "Crispy Tindle™ chicken, vegan aioli, pickles, shredded lettuce",
+    "cents": 1275,
+    "section": "Handhelds",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/48b387d0-f994-4c0b-8b81-19aaaa96fd5f.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Chicken Smash Burger *Limited Time Special*",
+    "desc": "Smashed seasoned chicken patty, American cheese, caramelized onions, pickles, Farmacy sauce",
+    "cents": 1395,
+    "section": "Handhelds",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/b9604cd6-886a-4ffb-ac13-c1aa8f0b26d6.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Classic Crispy Chicken Strips & Chips",
+    "desc": "Our special golden fried chicken",
+    "cents": 1295,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/11a84954-e6b2-4aa1-b514-6e4021a2ca95.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hot Honey Chicken Strips & Chips",
+    "desc": "Crispy chicken tossed in hot honey glaze",
+    "cents": 1395,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/8703996a-3b64-402c-ba72-484995818ec8.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Diablo Chicken Strips & Chips",
+    "desc": "Crispy chicken tossed in house diablo sauce",
+    "cents": 1395,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4ed87406-100b-4d67-b728-daf3e0f1d38e.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Asian Chili Chicken Strips & Chips",
+    "desc": "Sweet-spicy chili glaze",
+    "cents": 1395,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/6c973257-2720-4575-998e-57953b74cfa3.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mediterranean Bowl",
+    "desc": "Jasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+    "cents": 1395,
+    "section": "Signature Bowls",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/92c82ae8-c074-49d0-8ba8-7a30ce3a5a4a.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Asian Sesame Bowl",
+    "desc": "Jasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+    "cents": 1395,
+    "section": "Signature Bowls",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/5bf5b22b-32d6-4708-b34b-9ec12ba0011a.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Warm Power Bowl",
+    "desc": "Greens + grains, roasted seasonal vegetables, avocado, house vinaigrette. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+    "cents": 1295,
+    "section": "Signature Bowls",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/0e7b2715-f3eb-48eb-9b85-1f938e546398.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Kale Caesar",
+    "desc": "Chopped kale, parmesan, sourdough croutons, Caesar dressing. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+    "cents": 1275,
+    "section": "Signature Salads",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f4870b19-6003-4d55-8f08-4b0d9b8f3bdb.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Asian Crunch Salad",
+    "desc": "Mixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+    "cents": 1375,
+    "section": "Signature Salads",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c2d6657e-8c0a-4431-82ef-806dfcec0a45.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mediterranean Chopped Salad",
+    "desc": "Chopped romaine & arugula, cherry tomatoes, cucumber, olives, red onion, feta, lemon oregano vinaigrette. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+    "cents": 1375,
+    "section": "Signature Salads",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/a834ff76-af32-4214-9471-ab430d0c535f.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Soup Of The Day (Chicken Noodle)",
+    "desc": "",
+    "cents": 695,
+    "section": "Soup & Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Daily-Made Farmacy Chips",
+    "desc": "",
+    "cents": 395,
+    "section": "Soup & Sides",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c9857f34-a28f-4ee2-b775-905b55ffe59c.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hot Honey Mac & Cheese",
+    "desc": "Creamy mac & cheese with a hot honey drizzle",
+    "cents": 595,
+    "section": "Soup & Sides",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/2811e01d-2177-4925-902a-3e993cf56b15.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sesame Asian Slaw",
+    "desc": "",
+    "cents": 595,
+    "section": "Soup & Sides",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/390f2571-dbe0-4c1e-8ba9-598538a4b56c.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Soft Serve",
+    "desc": "Rotating Flavor (French Vanilla)",
+    "cents": 595,
+    "section": "Sweets",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4877282d-b3f0-4f78-bda7-5da5acff91b2.png",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Brookie",
+    "desc": "",
+    "cents": 525,
+    "section": "Sweets",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/bd3b5fb0-2d18-4858-8ee0-8c1e60b4a79e.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Matcha Cookie",
+    "desc": "",
+    "cents": 525,
+    "section": "Sweets",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/2f8f3c02-3ce2-4909-90a2-b6958164dd79.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Fried Chicken Sandwich",
+    "desc": "Each box includes a fried chicken sandwich (crispy fried chicken, spicy aioli, lettuce, red onions & tomato on a toasted brioche bun) and chips.",
+    "cents": 1850,
+    "section": "Boxed Lunches",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Plant‑Based Tindle Sandwich",
+    "desc": "Each box includes a plant-based Tindle sandwich (plant-based chicken, vegan aioli, lettuce, tomato & red onion on a toasted vegan bun) and chips.",
+    "cents": 1875,
+    "section": "Boxed Lunches",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/48b387d0-f994-4c0b-8b81-19aaaa96fd5f.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Rotisserie Chicken Sandwich",
+    "desc": "Each box includes a rotisserie chicken sandwich (herb‑marinated rotisserie chicken, smoked salt & rich chicken fat on a toasted bun) and chips.",
+    "cents": 1825,
+    "section": "Boxed Lunches",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/3c533003-662f-4c4f-916c-2664bb31ac2b.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Diablo Spicy Chicken Sandwich",
+    "desc": "Includes a diablo spicy chicken sandwich (crispy chicken thigh, house diablo sauce, shredded lettuce & pickles on brioche bun) and chips.",
+    "cents": 1925,
+    "section": "Boxed Lunches",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f2e1e77f-575b-4c11-ba92-b546ee7916bf.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Chicken Smash Burger *Limited Time Special*",
+    "desc": "Includes a chicken smash burger (smashed seasoned chicken patty, American cheese, caramelized onions, pickles & Farmacy sauce) and chips.",
+    "cents": 1995,
+    "section": "Boxed Lunches",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/b9604cd6-886a-4ffb-ac13-c1aa8f0b26d6.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Classic Crispy Chicken Strips & Chips",
+    "desc": "Our special golden fried chicken",
+    "cents": 1850,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/11a84954-e6b2-4aa1-b514-6e4021a2ca95.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hot Honey Chicken Strips & Chips",
+    "desc": "Crispy chicken tossed in hot honey glaze",
+    "cents": 1850,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/8703996a-3b64-402c-ba72-484995818ec8.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Diablo Chicken Strips & Chips",
+    "desc": "Crispy chicken tossed in house diablo sauce",
+    "cents": 1850,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4ed87406-100b-4d67-b728-daf3e0f1d38e.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Asian Chili Chicken Strips & Chips",
+    "desc": "Sweet-spicy chili glaze",
+    "cents": 1850,
+    "section": "Strips & Chips",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/6c973257-2720-4575-998e-57953b74cfa3.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Warm Power Bowl",
+    "desc": "Fluffy rice, sweet peas, roasted broccoli, carrots, cabbage, green beans, and pea shoots topped with crispy shallots. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+    "cents": 1850,
+    "section": "Bowls",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/0e7b2715-f3eb-48eb-9b85-1f938e546398.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mediterranean Bowl",
+    "desc": "Jasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+    "cents": 1850,
+    "section": "Bowls",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/92c82ae8-c074-49d0-8ba8-7a30ce3a5a4a.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Asian Sesame Bowl",
+    "desc": "Jasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+    "cents": 1850,
+    "section": "Bowls",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/5bf5b22b-32d6-4708-b34b-9ec12ba0011a.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Kale Caesar Salad",
+    "desc": "Petite kale, parmesan, and toasted croutons tossed in house-made Caesar dressing. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+    "cents": 1750,
+    "section": "Salads",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/2dd3c598-20ed-47b4-9069-eca2cde4ca52.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Asian Crunch Salad",
+    "desc": "Mixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+    "cents": 1750,
+    "section": "Salads",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c2d6657e-8c0a-4431-82ef-806dfcec0a45.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mediterranean Chopped Salad",
+    "desc": "Chopped romaine & arugula, cherry tomatoes, cucumber, olives, red onion, feta, lemon oregano vinaigrette. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+    "cents": 1750,
+    "section": "Salads",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/a834ff76-af32-4214-9471-ab430d0c535f.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Whole Chicken Pack",
+    "desc": "Whole rotisserie chicken with asian slaw salad, hot honey mac & cheese, and crispy house-made chips—the perfect group meal. Serves 2-3 people each",
+    "cents": 3900,
+    "section": "The Family Pack",
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/aa5c2d90-6436-4931-9cfe-84475db3fa80.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ],
+  "text": [
+   {
+    "name": "Make it a combo (side + water or poppi soda) for",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "BECOME A VIP"
+   },
+   {
+    "name": "Fried Chicken Sandwich",
+    "desc": "Crispy chicken thigh, honey chipotle aioli, shaved cabbage, pickles, brioche bun",
+    "cents": 1250,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "The Farmacy online ordering"
+   },
+   {
+    "name": "Diablo Spicy Chicken Sandwich",
+    "desc": "Crispy chicken thigh, house diablo sauce, shredded lettuce, pickles, brioche bun",
+    "cents": 1325,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f2e1e77f-575b-4c11-ba92-b546ee7916bf.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "FC"
+   },
+   {
+    "name": "Rotisserie Chicken Sandwich",
+    "desc": "Herb-roasted chicken, lemon aioli, arugula, tomato, brioche bun",
+    "cents": 1225,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/3c533003-662f-4c4f-916c-2664bb31ac2b.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "FC"
+   },
+   {
+    "name": "likes",
+    "desc": "",
+    "cents": 1275,
+    "alcohol": false,
+    "src": "text",
+    "section": "FC"
+   },
+   {
+    "name": "Chicken Smash Burger *Limited Time Special*",
+    "desc": "Smashed seasoned chicken patty, American cheese, caramelized onions, pickles, Farmacy sauce",
+    "cents": 1395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/b9604cd6-886a-4ffb-ac13-c1aa8f0b26d6.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "FC"
+   },
+   {
+    "name": "Classic Crispy Chicken Strips & Chips",
+    "desc": "Our special golden fried chicken",
+    "cents": 1295,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/11a84954-e6b2-4aa1-b514-6e4021a2ca95.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "FC"
+   },
+   {
+    "name": "Hot Honey Chicken Strips & Chips",
+    "desc": "Crispy chicken tossed in hot honey glaze",
+    "cents": 1395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/8703996a-3b64-402c-ba72-484995818ec8.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Hot Honey Chicken Strips & Chips"
+   },
+   {
+    "name": "Diablo Chicken Strips & Chips",
+    "desc": "Crispy chicken tossed in house diablo sauce",
+    "cents": 1395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4ed87406-100b-4d67-b728-daf3e0f1d38e.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Diablo Chicken Strips & Chips"
+   },
+   {
+    "name": "Asian Chili Chicken Strips & Chips",
+    "desc": "Sweet-spicy chili glaze",
+    "cents": 1395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/6c973257-2720-4575-998e-57953b74cfa3.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Mediterranean Bowl",
+    "desc": "Jasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+    "cents": 1395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/92c82ae8-c074-49d0-8ba8-7a30ce3a5a4a.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Asian Sesame Bowl",
+    "desc": "Jasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+    "cents": 1395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/5bf5b22b-32d6-4708-b34b-9ec12ba0011a.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Kale Caesar",
+    "desc": "Chopped kale, parmesan, sourdough croutons, Caesar dressing. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+    "cents": 1275,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f4870b19-6003-4d55-8f08-4b0d9b8f3bdb.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Asian Crunch Salad",
+    "desc": "Mixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+    "cents": 1375,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c2d6657e-8c0a-4431-82ef-806dfcec0a45.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Soup Of The Day (Chicken Noodle)",
+    "desc": "",
+    "cents": 695,
+    "alcohol": false,
+    "src": "text",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Daily-Made Farmacy Chips",
+    "desc": "",
+    "cents": 395,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c9857f34-a28f-4ee2-b775-905b55ffe59c.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Soft Serve",
+    "desc": "Rotating Flavor (French Vanilla)",
+    "cents": 595,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4877282d-b3f0-4f78-bda7-5da5acff91b2.png",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Brookie",
+    "desc": "",
+    "cents": 525,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/bd3b5fb0-2d18-4858-8ee0-8c1e60b4a79e.jpg",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Asian Chili Chicken Strips & Chips"
+   },
+   {
+    "name": "Plant-Based Chicken Sandwich (Tindle™)",
+    "desc": "Crispy Tindle™ chicken, vegan aioli, pickles, shredded lettuce likes",
+    "cents": 1275,
+    "image": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/48b387d0-f994-4c0b-8b81-19aaaa96fd5f.jpg",
+    "alcohol": false,
+    "src": "card"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D20/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+   "alt": "sandwich",
+   "near": "It Hits Different\nOrder Online",
+   "w": 1440,
+   "h": 1440,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D20/gwnrlbmy/8ad6fe86-4310-4e51-80a7-c8f599480f48.png",
+   "alt": "farmacy logo",
+   "near": "It Hits Different\nOrder Online",
+   "w": 500,
+   "h": 367,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/44d3eb19-a915-4401-8adc-b423e8c6fe0a.png",
+   "alt": "Fresh Harvest Bowl",
+   "near": "Healthy Food, Thoughfully Crafted\nWELCOME TO THE FARMACY\n\nDiscover The Perfect Fusion Of Flavor And ",
+   "w": 824,
+   "h": 936,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/c5650b66-71d2-4991-acef-f4bc5b62e949.jpg",
+   "alt": "🌱 The Fresh Harvest Bowl 🌱\nA vibrant, flavor-packed bowl designed your way—choose from slow-roasted rotisserie chicken, crispy fried chicken, or a plant-based alternative for the perfect protein boost. Served over fluffy rice, this bowl is loaded with shaved carrots, radish, tinker bell peppers, green beans, pea shoots, broccoli, and delicate slices of snap and snow peas, creating a refreshing balance of crunch and natural sweetness. Every bite is light, bright, and bursting with garden-fresh flavor—a nourishing, energizing meal that satisfies! 🥕🥦🔥",
+   "near": "About Us",
+   "w": 1440,
+   "h": 1440,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/aa5c2d90-6436-4931-9cfe-84475db3fa80.jpg",
+   "alt": "spread",
+   "near": "Catering",
+   "w": 1440,
+   "h": 1440,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/ccd759cd-741e-4789-8fc9-8ce879725676.jpg",
+   "alt": "sauces",
+   "near": "Contact Us",
+   "w": 1440,
+   "h": 1440,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/6df2ca1a-47ec-4aa1-9d87-ff932e7d8191.jpg",
+   "alt": "counter",
+   "near": "About Us\nABOUT THE FARMACY\n\nAt The Farmacy, we're more than just a restaurant – we're a destination ",
+   "w": 1440,
+   "h": 948,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/b133c77d-6742-4778-82fc-3ca77401ad37.png",
+   "alt": "Organic food collage",
+   "near": "OUR FOOD GALLERY\n\nExplore our delicious food gallery to see the heart and soul of what The Farmacy s",
+   "w": 1440,
+   "h": 968,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/1626add9-97b4-4bf4-a434-fe87b339852a.png",
+   "alt": "Catering spread of healthy food",
+   "near": "FRESH AND FLAVORFUL CATERING\n\nHost your next event with ease and flavor! At The Farmacy, we offer ca",
+   "w": 1440,
+   "h": 1042,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f43be77c-c832-4152-8a86-ba7137e7e756.png",
+   "alt": "",
+   "near": "OUR FOOD GALLERY\n\nExplore our delicious food gallery to see the heart and soul of what The Farmacy s",
+   "w": 640,
+   "h": 353,
+   "page": "https://www.farmacysf.com/"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D20/gwnrlbmy/6df2ca1a-47ec-4aa1-9d87-ff932e7d8191.jpg",
+   "alt": "counter",
+   "near": "Menu",
+   "w": 1440,
+   "h": 948,
+   "page": "https://www.farmacysf.com/menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=300,height=300,format=auto,fit=scale-down/gwnrlbmy/8ad6fe86-4310-4e51-80a7-c8f599480f48.png",
+   "alt": "The Farmacy home logo",
+   "near": "The Farmacy online ordering\nPickup\nDelivery\n\nPickup ASAP\n\nPickup at The Farmacy\n\n1 S Park St, San Fr",
+   "w": 300,
+   "h": 220,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+   "alt": "",
+   "near": "Fried Chicken Sandwich\n\nCrispy chicken thigh, honey chipotle aioli, shaved cabbage, pickles, brioche",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f2e1e77f-575b-4c11-ba92-b546ee7916bf.jpg",
+   "alt": "",
+   "near": "Diablo Spicy Chicken Sandwich\n\nCrispy chicken thigh, house diablo sauce, shredded lettuce, pickles, ",
+   "w": 1080,
+   "h": 1080,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/3c533003-662f-4c4f-916c-2664bb31ac2b.jpg",
+   "alt": "",
+   "near": "Rotisserie Chicken Sandwich\n\nHerb-roasted chicken, lemon aioli, arugula, tomato, brioche bun\n\n$12.25",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/48b387d0-f994-4c0b-8b81-19aaaa96fd5f.jpg",
+   "alt": "",
+   "near": "Plant-Based Chicken Sandwich (Tindle™)\n\nCrispy Tindle™ chicken, vegan aioli, pickles, shredded lettu",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/b9604cd6-886a-4ffb-ac13-c1aa8f0b26d6.jpg",
+   "alt": "",
+   "near": "Chicken Smash Burger *Limited Time Special*\n\nSmashed seasoned chicken patty, American cheese, carame",
+   "w": 1920,
+   "h": 1280,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/11a84954-e6b2-4aa1-b514-6e4021a2ca95.jpg",
+   "alt": "",
+   "near": "Classic Crispy Chicken Strips & Chips\n\nOur special golden fried chicken\n\n$12.95",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/8703996a-3b64-402c-ba72-484995818ec8.jpg",
+   "alt": "",
+   "near": "Hot Honey Chicken Strips & Chips\n\nCrispy chicken tossed in hot honey glaze\n\n$13.95",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4ed87406-100b-4d67-b728-daf3e0f1d38e.jpg",
+   "alt": "",
+   "near": "Diablo Chicken Strips & Chips\n\nCrispy chicken tossed in house diablo sauce\n\n$13.95",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/6c973257-2720-4575-998e-57953b74cfa3.jpg",
+   "alt": "",
+   "near": "Asian Chili Chicken Strips & Chips\n\nSweet-spicy chili glaze\n\n$13.95",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/92c82ae8-c074-49d0-8ba8-7a30ce3a5a4a.jpg",
+   "alt": "",
+   "near": "Mediterranean Bowl\n\nJasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Add cris",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/5bf5b22b-32d6-4708-b34b-9ec12ba0011a.jpg",
+   "alt": "",
+   "near": "Asian Sesame Bowl\n\nJasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. A",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/f4870b19-6003-4d55-8f08-4b0d9b8f3bdb.jpg",
+   "alt": "",
+   "near": "Kale Caesar\n\nChopped kale, parmesan, sourdough croutons, Caesar dressing. Add crispy, rotisserie, pl",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c2d6657e-8c0a-4431-82ef-806dfcec0a45.jpg",
+   "alt": "",
+   "near": "Asian Crunch Salad\n\nMixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/c9857f34-a28f-4ee2-b775-905b55ffe59c.jpg",
+   "alt": "",
+   "near": "Daily-Made Farmacy Chips\n\n$3.95",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/4877282d-b3f0-4f78-bda7-5da5acff91b2.png",
+   "alt": "",
+   "near": "Soft Serve\n\nRotating Flavor (French Vanilla)\n\n$5.95",
+   "w": 446,
+   "h": 482,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width=1920,height=1920,format=auto,fit=scale-down/gwnrlbmy/bd3b5fb0-2d18-4858-8ee0-8c1e60b4a79e.jpg",
+   "alt": "",
+   "near": "Brookie\n\n$5.25",
+   "w": 1920,
+   "h": 1920,
+   "page": "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D20/gwnrlbmy/aa5c2d90-6436-4931-9cfe-84475db3fa80.jpg",
+   "alt": "spread",
+   "near": "Catering\nTasty moments with a side of celebration",
+   "w": 1440,
+   "h": 1440,
+   "page": "https://www.farmacysf.com/catering"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/d0e83659-910a-4b80-b4f1-5e39d084e98b.png",
+   "alt": "",
+   "near": "Catering Inquiry\n\nContact us for catering information for your large party. For parties less than 25",
+   "w": 1280,
+   "h": 1250,
+   "page": "https://www.farmacysf.com/catering"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/maxs-restaurant.png",
+   "alt": "Max's North America",
+   "near": "MAX'S NORTH AMERICA\n\n$8,900,000+ in online orders.\n\nRead full case study",
+   "w": 569,
+   "h": 281,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/henris-bakery.webp",
+   "alt": "Henri's Bakery & Deli",
+   "near": "HENRI'S BAKERY & DELI\n\n$3,800,000+ in online orders.\n\nRead full case study",
+   "w": 781,
+   "h": 394,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/hampton-social-white.webp",
+   "alt": "The Hampton Social",
+   "near": "THE HAMPTON SOCIAL\n\n835,000+ guest contacts for ongoing marketing.\n\nRead full case study",
+   "w": 900,
+   "h": 349,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/headshots/juan-fernando-henao.png",
+   "alt": "Juan Fernando Henao",
+   "near": "Juan Fernando Henao\nVP, La Parrilla & Casi Cielo",
+   "w": 500,
+   "h": 500,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/steam-boys.png",
+   "alt": "Steam Boys",
+   "near": "STEAM BOYS\n\n$430,000 from email marketing.\n\nRead full case study",
+   "w": 300,
+   "h": 232,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/clients/rose-and-crown-tavern.webp",
+   "alt": "Rose & Crown Tavern",
+   "near": "ROSE & CROWN TAVERN\n\n50% of sessions from organic search.\n\nRead full case study",
+   "w": 305,
+   "h": 300,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/headshots/mary-jane-culhane.webp",
+   "alt": "Mary Jane Culhane",
+   "near": "Mary Jane Culhane\nOwner, Culhane's Irish Pub",
+   "w": 380,
+   "h": 400,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/headshots/tunji-junard.webp",
+   "alt": "Tunji Junard",
+   "near": "Tunji Junard\nCMO & Co-founder, Steam Boys",
+   "w": 380,
+   "h": 400,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/press/today-show-white.svg",
+   "alt": "Today Show logo",
+   "near": "AS SEEN IN…",
+   "w": 1000,
+   "h": 750,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/press/cnbc-white.svg",
+   "alt": "CNBC logo",
+   "near": "AS SEEN IN…",
+   "w": 701,
+   "h": 560,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/awards/deloitte-fast500-2025.png",
+   "alt": "Deloitte Technology Fast 500 2025",
+   "near": "AWARDS & HONORS",
+   "w": 1178,
+   "h": 908,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/awards/pinnacle-award.webp",
+   "alt": "Pinnacle Award",
+   "near": "AWARDS & HONORS",
+   "w": 2180,
+   "h": 2080,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://get.popmenu.com/cdn-cgi/image/format=auto/images/awards/aicpa-soc2.webp",
+   "alt": "AICPA SOC 2",
+   "near": "SOC 2\nPCI DSS",
+   "w": 336,
+   "h": 336,
+   "page": "https://get.popmenu.com/"
+  },
+  {
+   "src": "https://embed-ssl.wistia.com/deliveries/a13325494eaed0248f47488f1d584f2b.webp?image_crop_resized=1280x720",
+   "alt": "Nyke introduces herself using American Sign Language.",
+   "near": "Press O for more options",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.levelaccess.com/a/popmenu?utm_source=popmenuclient&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=footer&utm_campaign=popmenu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D1440%2Cheight%3D1440%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+   "alt": "Fried Chicken Sandwich",
+   "near": "",
+   "w": 1440,
+   "h": 1440,
+   "page": "https://www.farmacysf.com/items/fried-chicken-sandwich-d7957442?location=the-farmacy&menu=main-menu"
+  },
+  {
+   "src": "https://popmenucloud.com/cdn-cgi/image/width%3D768%2Cheight%3D768%2Cfit%3Dscale-down%2Cformat%3Dauto%2Cquality%3D60/gwnrlbmy/986ec506-2b2d-496d-89fd-9cb6178a49cf.jpg",
+   "alt": "Fried Chicken Sandwich",
+   "near": "",
+   "w": 768,
+   "h": 768,
+   "page": "https://www.farmacysf.com/items/fried-chicken-sandwich-d7957442?location=the-farmacy&menu=main-menu"
+  }
+ ]
+}

@@ -1,0 +1,2418 @@
+{
+ "id": "b_redchili",
+ "source": "text",
+ "alt": {
+  "jsonld": 74,
+  "pdf": 61
+ },
+ "pages": [
+  "https://redchilirestaurants.com/",
+  "https://redchilirestaurants.com/catering/",
+  "https://red-chili-restaurants.square.site/?location_id=LSFHFMDC71W3D&fulfillment=PICKUP#VKH556J4YLRA4NOMGXCCY374",
+  "https://redchilirestaurants.com/hayward-ca/",
+  "https://redchilirestaurants.com/san-jose-ca/",
+  "https://redchilirestaurants.com/wp-content/uploads/2026/06/RCB-Catering.pdf",
+  "https://redchilirestaurants.com/wp-content/uploads/2025/11/RCH-Menu.pdf"
+ ],
+ "pdfs": [
+  "https://redchilirestaurants.com/wp-content/uploads/2026/06/RCB-Catering.pdf",
+  "https://redchilirestaurants.com/wp-content/uploads/2025/11/RCH-Menu.pdf",
+  "https://redchilirestaurants.com/wp-content/uploads/2026/04/Red-Chili-In-store-Menu-8.pdf"
+ ],
+ "items": [
+  {
+   "name": "A1. Chicken Satay",
+   "desc": "",
+   "cents": 1150,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/JDZE45PO2B3JWTXXEWEYBZS6.jpeg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "A2. Vegan Egg Rolls",
+   "desc": "",
+   "cents": 895,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CVFYAHKVQI66QTCLOKH5QV4M.jpeg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "Vegan; sweet curry potato filling",
+   "desc": "",
+   "cents": 895,
+   "alcohol": false,
+   "src": "text",
+   "section": "A3. Samosa Egg Rolls",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/H4CNJIZRVD4TYMDMNKXSDZS3.png"
+  },
+  {
+   "name": "A4. Crab Rangoons",
+   "desc": "Made in-house; Filled with cream cheese, carrot, celery, imitation crab; sweet & sour sauce + chili paste for dipping",
+   "cents": 595,
+   "alcohol": false,
+   "src": "text",
+   "section": "A3. Samosa Egg Rolls",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/5VYG6QA5TOECTGOWUZPIDKWC.png"
+  },
+  {
+   "name": "A8. Roti Canai",
+   "desc": "",
+   "cents": 1050,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/665PGS44ZHSIVFSAWBJJ4V5O.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "A3. Samosa Egg Rolls"
+  },
+  {
+   "name": "A9. Fried Tofu",
+   "desc": "",
+   "cents": 1050,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/LUZY2GX6GK3TIWJ2ZGSSHT4C.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "A3. Samosa Egg Rolls"
+  },
+  {
+   "name": "A10. Tom Yum Wings",
+   "desc": "",
+   "cents": 1395,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/ROA2R2XXKBPBPXBYJ523ZFBC.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chicken Wings [A10-A16]"
+  },
+  {
+   "name": "A11. Larb Wings",
+   "desc": "Dry rub, a little sour & spicy, tossed in roasted rice and topped with red onions, cilantro, green onions",
+   "cents": 1395,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Wings [A10-A16]"
+  },
+  {
+   "name": "A12. Fish Sauce Wings",
+   "desc": "",
+   "cents": 1395,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/DSAKHEU7YIRFMQKTGLPOV5YW.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chicken Wings [A10-A16]"
+  },
+  {
+   "name": "A13. Red Chili Hot Wings",
+   "desc": "",
+   "cents": 1395,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/Z5FB7LQYLRZ5AA2BUNCTECYF.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chicken Wings [A10-A16]"
+  },
+  {
+   "name": "A14. Fire Wings",
+   "desc": "Housemade Fire sauce for the spicy lovers. Comes with a bed of lettuce and pickled carrots to cool down",
+   "cents": 1395,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Wings [A10-A16]"
+  },
+  {
+   "name": "A15. Passionfruit Habañero Wings",
+   "desc": "",
+   "cents": 1395,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CRR5HSJLC3GHVUVY4FITIX5L.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chicken Wings [A10-A16]"
+  },
+  {
+   "name": "Dry rub Thai citrus BBQ flavor",
+   "desc": "",
+   "cents": 1395,
+   "alcohol": false,
+   "src": "text",
+   "section": "A16. Lemon Zaap Wings (NEW)"
+  },
+  {
+   "name": "S1. Papaya Salad",
+   "desc": "",
+   "cents": 1375,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/SJNBZSBIICF765W25P3LYKRT.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads [S1-S3]"
+  },
+  {
+   "name": "S2. Mango Salad",
+   "desc": "",
+   "cents": 1375,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/5O2DV4GAPWAYU6QUFYOCJOGC.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads [S1-S3]"
+  },
+  {
+   "name": "S3. Larb",
+   "desc": "",
+   "cents": 1475,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/D5VMP5EJX4KJFZ5APWVMT44L.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads [S1-S3]"
+  },
+  {
+   "name": "10. Tom Yum",
+   "desc": "Sour and spicy soup w/ mushroom, babycorn, red onion, galanga, & lemongrass",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soups [10-11]",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/ROA2R2XXKBPBPXBYJ523ZFBC.jpeg"
+  },
+  {
+   "name": "11. Tom Kha",
+   "desc": "Flavorful & light coconut milk soup; choice of protein, baby corn, mushrooms, lemongrass",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soups [10-11]",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/LPGIFSHTU5AKYQ42XHBBETYE.jpeg"
+  },
+  {
+   "name": "Combo 1 (Curry)",
+   "desc": "Housemade gluten-free Thai coconut milk curry; comes with side salad, side and choice of proteinEGGROLL NOT INCLUDED",
+   "cents": 1475,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combo Plates",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/BIUPLFJYICZEAZYTVJKOUJQ3.jpeg"
+  },
+  {
+   "name": "Combo 2 (Stir-fry)",
+   "desc": "Comes with side salad, side, and choice of proteinEGGROLL NOT INCLUDED",
+   "cents": 1475,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combo Plates",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/K5XSAUSJQGDNHBKTBJDJX6LU.jpeg"
+  },
+  {
+   "name": "Combo 3 (BBQ)",
+   "desc": "House marinated Vietnamese BBQ; comes with side, salad, Vietnamese fish sauce and chili pasteEGGROLL NOT INCLUDED",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combo Plates",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CY4V3JWS7JKPXIGTEE3KK6IQ.jpeg"
+  },
+  {
+   "name": "27. Pad Thai",
+   "desc": "",
+   "cents": 1600,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/P3ZGJETAY2KWBWOPFJAAL7AV.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "28. Pad See Ew",
+   "desc": "",
+   "cents": 1550,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/DXEB2HFSZHQM2YLWFYTWDF7W.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "29. Pad Kee Mao",
+   "desc": "",
+   "cents": 1550,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/X4D7KKQNN2AFTUWLDWEJQCJL.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "30. Rad Na",
+   "desc": "",
+   "cents": 1550,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/WACWUKR6CWBPOPFB7TQKNHTL.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "31. Thai Fried Rice",
+   "desc": "Choice of Meat, egg, tomatoes, onions",
+   "cents": 1450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "32. Spicy Basil Fried Rice",
+   "desc": "",
+   "cents": 1450,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/6PDAMBQ6WQ2CFHY7XU367RND.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "33. Pineapple Fried Rice",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/QK5W7SYGORSYUM5O6B3SGSJQ.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "34. Crab Fried Rice",
+   "desc": "",
+   "cents": 1850,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/6RN77DZ5VCFVD3Y6WNUDM7SM.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Pan Fried Noodles [27-30]"
+  },
+  {
+   "name": "35. BBQ Chicken",
+   "desc": "",
+   "cents": 1795,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/62AE3WJVOE7GHHQ626V4CUPP.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BBQ Entree [35-37]"
+  },
+  {
+   "name": "36. BBQ Pork",
+   "desc": "",
+   "cents": 1795,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/VIDGTOOFM4QBA2V5JT4IUBCG.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BBQ Entree [35-37]"
+  },
+  {
+   "name": "37. BBQ Short Ribs",
+   "desc": "",
+   "cents": 2095,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/NL2ZPOYLZ5XJ7GEKNPQVG24H.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BBQ Entree [35-37]"
+  },
+  {
+   "name": "40. Panang Curry",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/2VLNBGMZBOPO4SOUWULTH4GH.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "41. Yellow Curry",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/3TEHTETVD5Y3AOV2S33HQFCC.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "42. Green Curry",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/V6EPV3DN5JOFE4ANE4VS7SL6.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "43. Red Curry",
+   "desc": "CoM, bamboo shoots, basil, bell peppers",
+   "cents": 1650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "44. Choo Chee Fish Curry",
+   "desc": "",
+   "cents": 1850,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/KQJRX3XHRFBMRUC7E27QNGIB.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "45. Massaman Curry",
+   "desc": "Peanut curry; choice of protein, potatoes, carrots, fried shallots",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "text",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "46. Pumpkin Curry",
+   "desc": "",
+   "cents": 1750,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/6IJMXDIJIU3QCTL6TWU4GUPM.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Curry Entree [40-46]"
+  },
+  {
+   "name": "50. Basil",
+   "desc": "Ground meat, basil, bell peppers, onions",
+   "cents": 1650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Stir-fry Entree [50-56]",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/KJGDAXWVFPECRYVEAYYY54PK.png"
+  },
+  {
+   "name": "51. Eggplant",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/Y7BDZ5XGUQKRAOGM37WN5EXQ.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Stir-fry Entree [50-56]"
+  },
+  {
+   "name": "52. Garlic",
+   "desc": "Sliced meat choice sauteed with garlic, onions, and house sauce, on bed of sliced lettuce and shredded carrots",
+   "cents": 1650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Stir-fry Entree [50-56]"
+  },
+  {
+   "name": "53. Mango",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/UQNTTPISPDDLFMEML7O3EDV5.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Stir-fry Entree [50-56]"
+  },
+  {
+   "name": "54. Mixed Veggie",
+   "desc": "Sliced meat, broccoli, carrots, cabbage, chinese broccoli, baby corn",
+   "cents": 1650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Stir-fry Entree [50-56]"
+  },
+  {
+   "name": "55. Spicy Green Bean",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/QBVNQ5L45HEYLQZ6UWWK7FMC.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Stir-fry Entree [50-56]"
+  },
+  {
+   "name": "C1. Tamarind Fried Fish Fillet",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/HT4ZRZLQEI7GAOEA3FOL6XPM.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chef's Specials [C1-C6]"
+  },
+  {
+   "name": "C2. Red Chili Fried Fish Fillet",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/T5M4R3ZBAW3LXLDVE7NZPA2B.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chef's Specials [C1-C6]"
+  },
+  {
+   "name": "Mango salad",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/5O2DV4GAPWAYU6QUFYOCJOGC.jpeg"
+  },
+  {
+   "name": "C4. Thai Crispy Garlic Shrimp",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/ZMRQ4ZSU2SCY4OAFEX4S3GG4.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "C5. Garlic Jumbo Prawns",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/QKHW3ETST2GPGAGAN6BKJ5EI.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "C6. Honey Walnut Shrimp",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Steamed Jasmine Rice",
+   "desc": "",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/TSRLUH6AZZAJP4EIFFBXX6LU.jpeg"
+  },
+  {
+   "name": "Brown Rice",
+   "desc": "",
+   "cents": 350,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/YBJGJYFMRMTZIQVJ3EG7WK3Q.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Coconut Rice",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Sticky Rice",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet",
+   "image": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Mango-Sticky-Rice-3-1024x683.jpg"
+  },
+  {
+   "name": "Steamed Veggies",
+   "desc": "",
+   "cents": 500,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/UMTLXU52CCIVW7U22B3O4CFZ.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Cucumber Salad",
+   "desc": "",
+   "cents": 500,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/EVMMAT6W3AEX2KTX6IC3KATI.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Garlic Noodles",
+   "desc": "",
+   "cents": 700,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/VDLD6UJCVVH7KMTECQZXEP3H.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Curry (Side)",
+   "desc": "Side of one of our Thai curries, only the curry itself",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet"
+  },
+  {
+   "name": "Peanut Sauce",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "C3. Mango Fried Fish Fillet",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/JDZE45PO2B3JWTXXEWEYBZS6.jpeg"
+  },
+  {
+   "name": "Mango Sticky Rice",
+   "desc": "",
+   "cents": 950,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts",
+   "image": "https://redchilirestaurants.com/wp-content/uploads/2025/11/IMG_1578-scaled.jpg"
+  },
+  {
+   "name": "Sweet Roti/ Egg",
+   "desc": "",
+   "cents": 995,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Cannot adj sweet",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Vietnamese Iced Coffee",
+   "desc": "",
+   "cents": 500,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/FW6NRUQIRLUPT3P6JCNDR6QD.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Green Thai Tea",
+   "desc": "floral taste from real Thai green tea leaves, cannot adj sweet",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/N6V7XKTBPTDBWO64QQU3LR2F.png"
+  },
+  {
+   "name": "Green Thai Tea w/ Lime",
+   "desc": "",
+   "cents": 500,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/XMXH7ZDRFII2EEN7BTEJVKEK.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Sparkling Passionfruit",
+   "desc": "",
+   "cents": 550,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/3H62LOGD4Z27YARAK4JS3T6O.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Sparkling Anchan",
+   "desc": "",
+   "cents": 550,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CYDB26K4PUHQSR3IGLKSBVMF.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Daang Soda w/ Lime",
+   "desc": "Red thai flower syrup, fresh lime juice, soda, topped with lime slices",
+   "cents": 550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Coconut meat inside",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Young Coco Juice"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Young Coco Juice"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Young Coco Juice"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Young Coco Juice"
+  },
+  {
+   "name": "Hot Tea",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Young Coco Juice"
+  },
+  {
+   "name": "Can adj sweet; Fresh Fruit",
+   "desc": "",
+   "cents": 650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mango Smoothie"
+  },
+  {
+   "name": "Mixed Berry Smoothie",
+   "desc": "Cannot adj sweet; yogurt based with real mixed berries",
+   "cents": 650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mango Smoothie"
+  },
+  {
+   "name": "Peach Mango Smoothie",
+   "desc": "",
+   "cents": 650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/MDR76YWRWSGUYFJMZHMLXI6X.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Mango Smoothie"
+  },
+  {
+   "name": "A3. Thai Samosa Egg Rolls",
+   "desc": "",
+   "cents": 895,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/H4CNJIZRVD4TYMDMNKXSDZS3.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Starters"
+  },
+  {
+   "name": "A14. Fire Hot Wings",
+   "desc": "",
+   "cents": 1395,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/PRO6Q7KX6LWJT3XZZVEF2A3J.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chicken Wings"
+  },
+  {
+   "name": "S $8 / L",
+   "desc": "Sour and spicy soup with mushroom, baby corn, red onion, galangal & lemongrass",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/JT7PRJKI3SRT3OQYPOVB7FCG.jpeg"
+  },
+  {
+   "name": "S $8.50 / L",
+   "desc": "Flavorful & light coconut milk soup; choice of protein, baby corn, mushrooms, lemongrass",
+   "cents": 1450,
+   "alcohol": false,
+   "src": "text",
+   "section": "11. Tom Kha",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/LPGIFSHTU5AKYQ42XHBBETYE.jpeg"
+  },
+  {
+   "name": "50. Basil (Pad Kra Prao)",
+   "desc": "",
+   "cents": 1650,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/KJGDAXWVFPECRYVEAYYY54PK.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Stir-fry"
+  },
+  {
+   "name": "C3. Mango Fried Fish Fillet",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/FBD3YMI7OB57ZFTFG2MABIDL.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chef’s Specials"
+  },
+  {
+   "name": "C6. Honey Wasabi Walnut Shrimp",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/HALZPNHGYNZ3Z7VKV3KADC6Z.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Served with mango salad"
+  },
+  {
+   "name": "Jasmine Rice",
+   "desc": "",
+   "cents": 250,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/TSRLUH6AZZAJP4EIFFBXX6LU.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sides"
+  },
+  {
+   "name": "Thai Iced Tea",
+   "desc": "",
+   "cents": 400,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/DWRCVMWBAJJTFJ7ROV44EFD5.jpeg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Drinks"
+  },
+  {
+   "name": "Green Thai Tea (w/ milk)",
+   "desc": "",
+   "cents": 450,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/N6V7XKTBPTDBWO64QQU3LR2F.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sweetness cannot be adjusted"
+  },
+  {
+   "name": "Coconut Juice",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweetness cannot be adjusted"
+  },
+  {
+   "name": "Sprite / Coke / Diet Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Served with coconut meat inside"
+  },
+  {
+   "name": "Mango Smoothie",
+   "desc": "",
+   "cents": 650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Smoothies",
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/MDR76YWRWSGUYFJMZHMLXI6X.png"
+  },
+  {
+   "name": "Mixed Berry Yogurt Smoothie",
+   "desc": "",
+   "cents": 650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweetness adjustable; fresh fruit"
+  },
+  {
+   "name": "Strawberry Smoothie",
+   "desc": "",
+   "cents": 650,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sweetness adjustable; fresh fruit"
+  },
+  {
+   "name": "GT Sticky Rice w/ Mango",
+   "desc": "",
+   "cents": 950,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/NCTRUMCL44VWNQFEH7PFNUME.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sweetness adjustable; fresh fruit"
+  },
+  {
+   "name": "Sweet Roti w/ Egg",
+   "desc": "",
+   "cents": 995,
+   "image": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/AQ5K4IQ7IVJPXBCPMUXNJYVO.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Extra mango +2"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Combo 1 - Curry (Vegan Base, GF)",
+    "desc": "Housemade gluten-free Thai coconut milk curry; comes with side salad and choice of side. Egg roll not included.",
+    "cents": 1475,
+    "section": "Combo Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Combo 2 - Stir-fry",
+    "desc": "Comes with side salad and choice of side. Egg roll not included.",
+    "cents": 1475,
+    "section": "Combo Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Combo 3 - BBQ",
+    "desc": "House marinated Vietnamese BBQ; comes with side, salad, Vietnamese fish sauce and chili paste, plus 2 grilled shrimp. Egg roll not included.",
+    "cents": 1595,
+    "section": "Combo Plates",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A1. Chicken Satay",
+    "desc": "4 skewers with wheat bread, peanut sauce & cucumber salad",
+    "cents": 1150,
+    "section": "Starters",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A2. Vegan Egg Rolls",
+    "desc": "3 pcs; comes with housemade sweet & sour sauce and chili paste",
+    "cents": 895,
+    "section": "Starters",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A3. Thai Samosa Egg Rolls",
+    "desc": "Vegan; sweet curry potato filling",
+    "cents": 895,
+    "section": "Starters",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A4. Crab Rangoons",
+    "desc": "Made in-house; filled with cream cheese, carrot, celery, imitation crab; sweet & sour sauce and chili paste for dipping",
+    "cents": 595,
+    "section": "Starters",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A8. Roti Canai",
+    "desc": "w/ yellow curry & cucumber salad",
+    "cents": 1050,
+    "section": "Starters",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A9. Fried Tofu",
+    "desc": "Soft and crispy tofu triangles paired with tamarind peanut sauce",
+    "cents": 1050,
+    "section": "Starters",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A10. Tom Yum Wings",
+    "desc": "Dry rub tom yum flavored, topped with fried lemongrass & kaffir leaves; paired with chili dipping sauce",
+    "cents": 1395,
+    "section": "Chicken Wings",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A11. Larb Wings",
+    "desc": "Dry rub, a little sour & spicy, tossed in roasted rice and topped with red onions, cilantro, green onions",
+    "cents": 1395,
+    "section": "Chicken Wings",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A12. Fish Sauce Wings",
+    "desc": "Glazed sweet & salty fish sauce, topped with fried shallots",
+    "cents": 1395,
+    "section": "Chicken Wings",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A13. Red Chili Hot Wings",
+    "desc": "Chicken wings stir-fried with bell peppers & sweet chili sauce, topped with fried basil",
+    "cents": 1395,
+    "section": "Chicken Wings",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A14. Fire Hot Wings",
+    "desc": "Housemade fire sauce for the spicy lovers; comes with a bed of lettuce and pickled carrots to cool down",
+    "cents": 1395,
+    "section": "Chicken Wings",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "A15. Passionfruit Habañero Wings",
+    "desc": "Fresh & crunchy deep-fried chicken wings paired with housemade passionfruit habañero dipping sauce; side of pickled carrots & daikon",
+    "cents": 1395,
+    "section": "Chicken Wings",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "S1. Papaya Salad",
+    "desc": "Green papaya, shredded carrots, tomatoes, green beans, dried shrimp, peanuts. Add salted crab +3 · Add grilled shrimp (2) +3",
+    "cents": 1375,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "S2. Mango Salad",
+    "desc": "Green mango, red onions, carrots, cashews. Add grilled shrimp (2) +3",
+    "cents": 1375,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "S3. Larb",
+    "desc": "Ground meat, roasted rice powder, chili, red onion, cilantro & mint leaves tossed in a lime fish sauce dressing. Chicken, pork, or beef (+1)",
+    "cents": 1475,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "10. Tom Yum",
+    "desc": "Sour and spicy soup with mushroom, baby corn, red onion, galangal & lemongrass. Choice of protein.",
+    "cents": 800,
+    "section": "Soup",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "11. Tom Kha",
+    "desc": "Flavorful & light coconut milk soup; choice of protein, baby corn, mushrooms, lemongrass",
+    "cents": 850,
+    "section": "Soup",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "27. Pad Thai",
+    "desc": "Choice of meat, beansprouts, chives, tofu. Contains peanuts.",
+    "cents": 1600,
+    "section": "Pan-Fried Noodles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "28. Pad See Ew",
+    "desc": "Choice of meat, broccoli, Chinese broccoli, eggs",
+    "cents": 1550,
+    "section": "Pan-Fried Noodles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "29. Pad Kee Mao",
+    "desc": "Choice of protein, bell peppers, onions, basil, tomato, eggs",
+    "cents": 1550,
+    "section": "Pan-Fried Noodles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "30. Rad Na",
+    "desc": "Choice of protein, broccoli, Chinese broccoli, Thai-style gravy",
+    "cents": 1550,
+    "section": "Pan-Fried Noodles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "31. Thai Fried Rice",
+    "desc": "Choice of meat, egg, tomatoes, onions",
+    "cents": 1450,
+    "section": "Fried Rice",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "32. Spicy Basil Fried Rice",
+    "desc": "Choice of meat, egg, basil, bell pepper, onions, dark soy",
+    "cents": 1450,
+    "section": "Fried Rice",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "33. Pineapple Fried Rice",
+    "desc": "Chicken & shrimp (2 pc), cashews, raisins, carrots, peas, pineapple chunks",
+    "cents": 1650,
+    "section": "Fried Rice",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "34. Crab Fried Rice",
+    "desc": "Crab meat, eggs, onions, sliced Chinese broccoli stems",
+    "cents": 1850,
+    "section": "Fried Rice",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "35. BBQ Chicken (GF)",
+    "desc": "Comes with Vietnamese fish sauce, chili paste, salad",
+    "cents": 1795,
+    "section": "BBQ Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "36. BBQ Pork",
+    "desc": "Comes with Vietnamese fish sauce, chili paste, salad",
+    "cents": 1795,
+    "section": "BBQ Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "37. BBQ Short Ribs",
+    "desc": "Comes with Vietnamese fish sauce, chili paste, salad",
+    "cents": 2095,
+    "section": "BBQ Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "40. Panang Curry",
+    "desc": "Choice of meat, basil, bell peppers - contains more meat",
+    "cents": 1650,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "41. Yellow Curry",
+    "desc": "Choice of meat, onions, potatoes",
+    "cents": 1650,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "42. Green Curry",
+    "desc": "Choice of meat, zucchini, eggplant, bell peppers, basil",
+    "cents": 1650,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "43. Red Curry",
+    "desc": "Choice of meat, bamboo shoots, basil, bell peppers",
+    "cents": 1650,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "44. Choo Chee Fish Curry",
+    "desc": "Basa fish fillet in red curry, topped with fried basil",
+    "cents": 1850,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "45. Massaman Curry",
+    "desc": "Peanut curry; choice of protein, potatoes, carrots, fried shallots",
+    "cents": 1795,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "46. Pumpkin Curry",
+    "desc": "Choice of protein, pumpkin, bell pepper, basil",
+    "cents": 1750,
+    "section": "Thai Curry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "50. Basil (Pad Kra Prao)",
+    "desc": "Ground meat, basil, bell peppers, onions",
+    "cents": 1650,
+    "section": "Stir-fry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "51. Eggplant",
+    "desc": "Ground meat, eggplant, bell pepper, onions, basil",
+    "cents": 1650,
+    "section": "Stir-fry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "52. Garlic",
+    "desc": "Sliced meat of choice sautéed with garlic, onions, and house sauce, on a bed of sliced lettuce and shredded carrots",
+    "cents": 1650,
+    "section": "Stir-fry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "53. Mango",
+    "desc": "Sliced meat, cubed mango, bell peppers, onions, cashews, sweet chili shrimp sauce",
+    "cents": 1650,
+    "section": "Stir-fry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "54. Mixed Veggie",
+    "desc": "Sliced meat, broccoli, carrots, cabbage, Chinese broccoli, baby corn",
+    "cents": 1650,
+    "section": "Stir-fry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "55. Spicy Green Bean",
+    "desc": "Sliced meat, green bean, bell pepper, spicy Thai curry paste",
+    "cents": 1650,
+    "section": "Stir-fry Entrée",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "C1. Tamarind Fried Fish Fillet",
+    "desc": "Glazed with sweet tamarind sauce; bell peppers, onions, fried basil",
+    "cents": 2000,
+    "section": "Chef's Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "C2. Red Chili Fried Fish Fillet",
+    "desc": "Red Chili sauce with diced bell peppers and onions",
+    "cents": 2000,
+    "section": "Chef's Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "C3. Mango Fried Fish Fillet",
+    "desc": "Served with mango salad",
+    "cents": 2000,
+    "section": "Chef's Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "C4. Thai Crispy Garlic Shrimp",
+    "desc": "",
+    "cents": 2000,
+    "section": "Chef's Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "C5. Garlic Jumbo Prawns",
+    "desc": "Deep-fried butterfly cut prawns seasoned with salt, pepper, chili and topped with onions and basil",
+    "cents": 2000,
+    "section": "Chef's Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "C6. Honey Wasabi Walnut Shrimp",
+    "desc": "",
+    "cents": 2000,
+    "section": "Chef's Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Jasmine Rice",
+    "desc": "Steamed jasmine rice",
+    "cents": 250,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Brown Rice",
+    "desc": "",
+    "cents": 350,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Coconut Rice",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sticky Rice",
+    "desc": "",
+    "cents": 350,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Garlic Noodles",
+    "desc": "",
+    "cents": 700,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Steamed Veggies",
+    "desc": "Broccoli, Chinese broccoli, carrots, baby corn, cabbage",
+    "cents": 500,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Cucumber Salad",
+    "desc": "",
+    "cents": 500,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Peanut Sauce",
+    "desc": "",
+    "cents": 300,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Side of Curry",
+    "desc": "Side of one of our Thai curries, only the curry itself",
+    "cents": 250,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Thai Iced Tea",
+    "desc": "Sweetness cannot be adjusted",
+    "cents": 400,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Green Thai Tea (w/ milk)",
+    "desc": "Floral taste from real Thai green tea leaves; sweetness cannot be adjusted",
+    "cents": 450,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Green Thai Tea w/ Lime",
+    "desc": "Made with real Thai green tea leaves, fresh lime, and sugar; no artificial colors, sweeteners, or dairy",
+    "cents": 500,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Vietnamese Iced Coffee",
+    "desc": "",
+    "cents": 500,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Coconut Juice",
+    "desc": "Served with coconut meat inside",
+    "cents": 450,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Daang Soda w/ Lime",
+    "desc": "Red Thai flower syrup, fresh lime juice, soda, topped with lime slices",
+    "cents": 550,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sprite / Coke / Diet Coke",
+    "desc": "",
+    "cents": 300,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sparkling Passionfruit",
+    "desc": "Best seller; made with real passionfruit, contains seeds",
+    "cents": 550,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sparkling Anchan",
+    "desc": "Soda, real butterfly pea flower, fresh lime juice, syrup; sweetness adjustable",
+    "cents": 550,
+    "section": "Drinks",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mango Smoothie",
+    "desc": "Sweetness adjustable; fresh fruit",
+    "cents": 650,
+    "section": "Smoothies",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Peach Mango Smoothie",
+    "desc": "Sweetness cannot be adjusted; yogurt based with real fruit",
+    "cents": 650,
+    "section": "Smoothies",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mixed Berry Yogurt Smoothie",
+    "desc": "Sweetness cannot be adjusted; yogurt based with real mixed berries",
+    "cents": 650,
+    "section": "Smoothies",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Strawberry Smoothie",
+    "desc": "Sweetness adjustable; fresh fruit",
+    "cents": 650,
+    "section": "Smoothies",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "GT Sticky Rice w/ Mango",
+    "desc": "Extra mango +2",
+    "cents": 950,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sweet Roti w/ Egg",
+    "desc": "",
+    "cents": 995,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ],
+  "pdf": [
+   {
+    "name": "(S) Tray: ~6-8 servings  (M) Tray: ~9-12 servings  (L) Tray: ~16-20 servings",
+    "desc": "",
+    "cents": 800,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "A2. Vegan Egg rolls  $2.25/pc  28. Pad See Ew  $75 /",
+    "desc": "A3. Thai Samosa Egg rolls  $2.25/pc  29. Pad Kee Mao  Beef",
+    "cents": 12000,
+    "label": "from $120",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "A4. Crab Rangoons  $1.25/pc  30. Rad Na  $80 /",
+    "desc": "A5. Fresh Shrimp rolls  $3/pc  31. Thai Fried Rice  Fish, Prawn",
+    "cents": 12500,
+    "label": "from $125",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "A7. Tofu Spring rolls  $3/pc  32. Spicy Basil Fried Rice  $85 /",
+    "desc": "A8. Roti Canai  $10.50/order",
+    "cents": 13000,
+    "label": "from $130",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "33. Pineapple Fried Rice  $80 /",
+    "desc": "A9. Fried Tofu  $10.50/order",
+    "cents": 12500,
+    "label": "from $125",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "34. Crab Fried Rice  $100 /",
+    "desc": "",
+    "cents": 15000,
+    "label": "from $150",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "FUSION CHICKEN WINGS",
+    "desc": "A10. Tom Yum Wings  (S) (24 pcs/4 orders): $55  VIETNAMESE BBQ",
+    "cents": 2700,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "A13. Red Chili Hot Wings",
+    "desc": "add order (6 pc): $13.95  37. BBQ Short Ribs  $21/order (~ 3 slabs)",
+    "cents": 2900,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SAN JOSE, CA 95132"
+   },
+   {
+    "name": "(S): 4-6 orders (M): 7-11 (L):",
+    "desc": "A15. Passionfruit Habañero Wings (sauce OTS)",
+    "cents": 1200,
+    "label": "from $12",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "SALAD  (S) (M)  (L)  A11",
+    "desc": "",
+    "cents": 3600,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "S1. Papaya Salad  $70 /",
+    "desc": "",
+    "cents": 10000,
+    "label": "from $100",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "S2. Mango Salad  $70 / $100 / $140",
+    "desc": "",
+    "cents": 3300,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "S3. Larb  $80 /",
+    "desc": "",
+    "cents": 12000,
+    "label": "from $120",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "40. Panang Curry  Ck, Pork, Veg, Tofu, or V/T  Steamed Rice  $30 /",
+    "desc": "",
+    "cents": 4500,
+    "label": "from $45",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "41. Yellow Curry  $85 / $130 / $170  Brown Rice  $35 /",
+    "desc": "",
+    "cents": 5000,
+    "label": "from $50",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "42. Green Curry  Beef  Coconut Rice  $40 /",
+    "desc": "43. Red Curry  $90 / $135 / $180  Garlic Noodles  $45 / $70 / $95  C10",
+    "cents": 6000,
+    "label": "from $60",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "45. Massaman Curry  (+$5-10)  Fish or Prawn  Cucumber Salad  $60 /",
+    "desc": "",
+    "cents": 9000,
+    "label": "from $90",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "46. Pumpkin Curry  (+$5-10)  $95 /",
+    "desc": "",
+    "cents": 14000,
+    "label": "from $140",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "44. Choo Chee Fish Fillet  $95 / $190  DESSERTS  (S):",
+    "desc": "",
+    "cents": 6000,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "Mango Sticky Rice  (M):",
+    "desc": "",
+    "cents": 12000,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "Sweet Roti w/ Egg  (L):",
+    "desc": "",
+    "cents": 18000,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "A14. Fire Wings"
+   },
+   {
+    "name": "50. Basil  Ck, Pork, Veg, Tofu, or V/T",
+    "desc": "51. Eggplant  $85 / $130 / $170  DRINKS  C14",
+    "cents": 4700,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "STIR-FRYS (S) (M) (L)"
+   },
+   {
+    "name": "C1. Tamarind Fried Fish Fillet  (S):",
+    "desc": "C2. Red Chili Fried Fish Fillet  (3 orders)",
+    "cents": 6000,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "STIR-FRYS (S) (M) (L)"
+   },
+   {
+    "name": "C3. Mango Fried Fish Fillet  (M):",
+    "desc": "",
+    "cents": 12000,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "STIR-FRYS (S) (M) (L)"
+   },
+   {
+    "name": "C4. Thai Crispy Garlic Shrimp",
+    "desc": "",
+    "cents": 4800,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "(6 orders)"
+   },
+   {
+    "name": "(L):",
+    "desc": "C5. Garlic Jumbo Prawns  (10 orders)",
+    "cents": 20000,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "(6 orders)"
+   },
+   {
+    "name": "A1. Chicken Satay (4)",
+    "desc": "",
+    "cents": 1150,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "A2. Vegan Egg Rolls (4)",
+    "desc": "A3. Thai Samosa Egg Rolls (4)  8.95  A3",
+    "cents": 895,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "A4. Crab Rangoons  (4) 5.95 / (8)",
+    "desc": "A5. Fresh Shrimp Rolls (2)  7.95  A2",
+    "cents": 995,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "A7. Tofu Spring Rolls (2)",
+    "desc": "",
+    "cents": 795,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "A8. Roti Canai",
+    "desc": "",
+    "cents": 1050,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "S1. Papaya Salad",
+    "desc": "",
+    "cents": 1375,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "S2. Mango Salad",
+    "desc": "Add Grilled Shrimp (2) (+$3)",
+    "cents": 1375,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "S3. Larb",
+    "desc": "(Chicken, Pork, or Beef (+1))",
+    "cents": 1475,
+    "alcohol": false,
+    "src": "pdf"
+   },
+   {
+    "name": "10. Tom Yum  8",
+    "desc": "",
+    "cents": 1400,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "10 11 SOUP (S) (L)"
+   },
+   {
+    "name": "COMBO 1 - CURRY [VEGAN BASE] [GF]",
+    "desc": "Choose a Protein: Chicken, Pork, Beef (+1), Fish (+2),",
+    "cents": 1475,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "pickled carrots on the side"
+   },
+   {
+    "name": "COMBO 2 - STIR-FRY",
+    "desc": "Choose a Protein: Chicken, Pork, Beef (+1), Fish (+2), Shrimp (+2),",
+    "cents": 1475,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Panang - Bell Peppers, Basil"
+   },
+   {
+    "name": "COMBO 3 - BBQ",
+    "desc": "All BBQ Combos come with grilled shrimp (2),",
+    "cents": 1595,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Panang - Bell Peppers, Basil"
+   },
+   {
+    "name": "20. Red Chili Spaghetti  16.5",
+    "desc": "Ground chicken, shrimp (2), tomatoes sautéed in sweet shrimp paste sauce",
+    "cents": 2200,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "SPAGHETTI"
+   },
+   {
+    "name": "Basil stir-fry over bed of spaghetti; May request to substitute chicken",
+    "desc": "22. Green Curry Spaghetti  15.5",
+    "cents": 2300,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "21. Basil Chicken Spaghetti 15.5"
+   },
+   {
+    "name": "23. Spaghetti Kee Mao  15.5",
+    "desc": "Choice of protein w/ basil & assorted veggies in savory kee mao sauce",
+    "cents": 2700,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "21. Basil Chicken Spaghetti 15.5"
+   },
+   {
+    "name": "27. Pad Thai",
+    "desc": "",
+    "cents": 1600,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "PAN-FRIED NOODLES"
+   },
+   {
+    "name": "Best eaten fresh; our take on the classic Thai dish; stir-fried w/ garlic,",
+    "desc": "diced red onions, minced sweet radish, tofu, beansprouts, chives, egg",
+    "cents": 2900,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "PAN-FRIED NOODLES"
+   },
+   {
+    "name": "FRIED RICE",
+    "desc": "",
+    "cents": 3200,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "30. Rad Na 15.5"
+   },
+   {
+    "name": "35. BBQ Chicken",
+    "desc": "Lemongrass-marinated chicken thigh; 12oz (raw weight) [GF]",
+    "cents": 1795,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "BBQ - ENTREE"
+   },
+   {
+    "name": "36. BBQ Pork",
+    "desc": "Sliced pork shoulder in house special marinade; 12oz (raw weight)",
+    "cents": 1795,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "BBQ - ENTREE"
+   },
+   {
+    "name": "37. BBQ Short Ribs",
+    "desc": "USDA Prime Korean short ribs in house special marinade",
+    "cents": 2095,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "BBQ - ENTREE"
+   },
+   {
+    "name": "40  41",
+    "desc": "",
+    "cents": 3700,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "BBQ - ENTREE"
+   },
+   {
+    "name": "46. Massaman Curry",
+    "desc": "Peanut-based curry w/ potatoes, carrots, boiled peanuts, and fried shallots",
+    "cents": 1795,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "45. Pumpkin Curry 17.5"
+   },
+   {
+    "name": "50. Basil (Pad Kra Prao)  16.5",
+    "desc": "Bell peppers, basil, onions, garlic; ground Chicken/Pork/Beef",
+    "cents": 5200,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "STIR FRYS - ENTREE"
+   },
+   {
+    "name": "Coconut Rice",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "56. Pra Ram (healthy option) 16.5"
+   },
+   {
+    "name": "Garlic Noodles",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Sticky Rice 3.5"
+   },
+   {
+    "name": "Thai Basil Spaghetti",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Sticky Rice 3.5"
+   },
+   {
+    "name": "Steamed Veggies",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Sticky Rice 3.5"
+   },
+   {
+    "name": "Cucumber Salad",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Sticky Rice 3.5"
+   },
+   {
+    "name": "Peanut Sauce (4 oz / 8oz)",
+    "desc": "",
+    "cents": 300,
+    "label": "from $3",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Sticky Rice 3.5"
+   },
+   {
+    "name": "Side of Curry (4 / 8 / 16 / 24oz)  2.5 / 5 /",
+    "desc": "",
+    "cents": 1000,
+    "label": "from $10",
+    "alcohol": false,
+    "src": "pdf",
+    "section": "Sticky Rice 3.5"
+   },
+   {
+    "name": "Green Thai Tea w/ Lime",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "CHEF’S SPECIALS"
+   },
+   {
+    "name": "Soda",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "CHEF’S SPECIALS"
+   },
+   {
+    "name": "Hot Green Tea",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "(Sprite, Coke, Diet Coke)"
+   },
+   {
+    "name": "9.5",
+    "desc": "",
+    "cents": 995,
+    "alcohol": false,
+    "src": "pdf",
+    "section": "(Sprite, Coke, Diet Coke)"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Tom-Yum-Soup-3-1536x1024.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 853,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Panang-Curry-2-2-1536x1024.jpg",
+   "alt": "A top-down view of a rich, aromatic Thai curry in a black bowl swirl-topped with coconut milk, green beans, and herbs, resting on a banana leaf liner next to a black spoon",
+   "near": "",
+   "w": 1280,
+   "h": 853,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/BBQ-Pork-Bun-3-3-1536x1024.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 853,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Pad-Kee-Mao-4-1536x1024.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 853,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Tamarind-Fish-2-1536x1024.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 853,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Mango-Sticky-Rice-3-1536x1024.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 853,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Tom-Yum-Soup-3-1024x683.jpg",
+   "alt": "Tom Yum soup with shrimp, lemongrass, lime, and chili, a hot and sour Thai classic bursting with flavor",
+   "near": "Tom Yum Soup",
+   "w": 1024,
+   "h": 683,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Mango-Sticky-Rice-3-1024x683.jpg",
+   "alt": "Green Tea Sticky Rice with Mango blends creamy rice, fresh mango, and subtle green tea flavor for a light, sweet dessert that feels rich yet refreshing.",
+   "near": "Green Tea Sticky Rice w/ Mango",
+   "w": 1024,
+   "h": 683,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Tamarind-Fish-2-1024x683.jpg",
+   "alt": "Tamarind fish cooked in tangy, sweet, and spicy sauce with fresh fish and aromatic herbs, a flavorful Asian seafood dish",
+   "near": "Tamarind Fish",
+   "w": 1024,
+   "h": 683,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Pad-Kee-Mao-4-1024x683.jpg",
+   "alt": "Pad Kee Mao (Drunken Noodles) with wide rice noodles, basil, chili, garlic, and veggies, spicy Thai stir-fry dish",
+   "near": "Pad Kee Mao",
+   "w": 1024,
+   "h": 683,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/BBQ-Pork-Bun-3-3-1024x683.jpg",
+   "alt": "Steamed BBQ pork bun filled with sweet savory meat, soft fluffy dough, classic Asian street food delight",
+   "near": "Grilled Pork Vermicelli",
+   "w": 1024,
+   "h": 683,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/Panang-Curry-2-2-1024x683.jpg",
+   "alt": "Panang curry served with rich coconut sauce, tender meat, and aromatic spices, a flavorful Thai classic dish",
+   "near": "Panang Curry",
+   "w": 1024,
+   "h": 683,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/RCG-Building.jpg",
+   "alt": "Red Chili Thai and Vietnamese Cuisine restaurant storefront illuminated at night",
+   "near": "Red Chili Hayward\n\n29583 Mission Blvd.\nHayward, CA 94544\n\n(510)881-8593\n\nHours\n\nTemporarily Closed",
+   "w": 418,
+   "h": 261,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/RCB-Building-768x657.jpg",
+   "alt": "Red Chili Thai and Vietnamese Cuisine restaurant storefront with open sign",
+   "near": "Red Chili San Jose\n\n2538 Berryessa Rd.\nSan Jose, CA 95132\n\n(408)937-8888\n\nHours\n\nEveryday\n11:00 AM –",
+   "w": 419,
+   "h": 358,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/04/birds-eye-RCH--e1745984949273.jpg",
+   "alt": "",
+   "near": "Thai and Vietnamese\nComfort Food\n\nSince 2004\n\nORDER NOW",
+   "w": 1200,
+   "h": 423,
+   "page": "https://redchilirestaurants.com/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/rcb-catering1.webp",
+   "alt": "Thai and Vietnamese Catering",
+   "near": "",
+   "w": 750,
+   "h": 750,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2026/05/Office-catering-in-San-Jose-scaled.png",
+   "alt": "",
+   "near": "",
+   "w": 1600,
+   "h": 1200,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/rcb-catering3.webp",
+   "alt": "Thai and Vietnamese Catering",
+   "near": "",
+   "w": 750,
+   "h": 750,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/rcb-catering4.webp",
+   "alt": "RCB catering BBQ chicken grilled with smoky sauce, tender and juicy, rich flavor perfect for parties and events",
+   "near": "",
+   "w": 750,
+   "h": 750,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/rcb-catering5.webp",
+   "alt": "RCB catering Pad Thai with stir-fried noodles, shrimp, peanuts, and tangy sauce, flavorful Thai favorite for events",
+   "near": "",
+   "w": 750,
+   "h": 750,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/rcb-catering7.webp",
+   "alt": "RCB catering custom order with flexible menu options, fresh ingredients, and tailored dishes for any event or occasion",
+   "near": "",
+   "w": 750,
+   "h": 750,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/05/rcb-catering9.webp",
+   "alt": "Contact Red Chilli Restaurant",
+   "near": "",
+   "w": 750,
+   "h": 750,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2025/11/IMG_1578-scaled.jpg",
+   "alt": "mango sticky rice",
+   "near": "",
+   "w": 1600,
+   "h": 1783,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://redchilirestaurants.com/wp-content/uploads/2026/05/catering-trays-scaled.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1600,
+   "h": 2133,
+   "page": "https://redchilirestaurants.com/catering/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/BIUPLFJYICZEAZYTVJKOUJQ3.jpeg",
+   "alt": "Combo 1 - Curry (Vegan Base, GF)",
+   "near": "Combo 1 – Curry (Vegan Base, GF)\n\nHousemade gluten-free Thai coconut milk curry; Panang / Yellow / G",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/K5XSAUSJQGDNHBKTBJDJX6LU.jpeg",
+   "alt": "Combo 2 - Stir-fry",
+   "near": "Combo 2 – Stir-fry\n\nBasil / Eggplant / Mango / Green Bean. Chicken, Pork, Veggie, Tofu, V&T $14.75 ·",
+   "w": 1370,
+   "h": 1170,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CY4V3JWS7JKPXIGTEE3KK6IQ.jpeg",
+   "alt": "Combo 3 - BBQ",
+   "near": "Combo 3 – BBQ\n\nHouse marinated Vietnamese BBQ; comes with side, salad, Vietnamese fish sauce, chili ",
+   "w": 3024,
+   "h": 4032,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/JDZE45PO2B3JWTXXEWEYBZS6.jpeg",
+   "alt": "A1. Chicken Satay",
+   "near": "A1. Chicken Satay\n$11.50\n\n4 skewers with wheat bread, peanut sauce & cucumber salad",
+   "w": 2958,
+   "h": 2791,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CVFYAHKVQI66QTCLOKH5QV4M.jpeg",
+   "alt": "A2. Vegan Egg Rolls",
+   "near": "A2. Vegan Egg Rolls\n$8.95\n\n3 pcs; comes with housemade sweet & sour sauce and chili paste",
+   "w": 2824,
+   "h": 2702,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/H4CNJIZRVD4TYMDMNKXSDZS3.png",
+   "alt": "A3. Thai Samosa Egg Rolls",
+   "near": "A3. Thai Samosa Egg Rolls\n$8.95\n\nVegan; sweet curry potato filling",
+   "w": 2560,
+   "h": 2304,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/5VYG6QA5TOECTGOWUZPIDKWC.png",
+   "alt": "A4. Crab Rangoons",
+   "near": "A4. Crab Rangoons\n$5.95 / 9.95\n\nMade in-house; filled with cream cheese, carrot, celery, imitation c",
+   "w": 864,
+   "h": 1184,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/665PGS44ZHSIVFSAWBJJ4V5O.png",
+   "alt": "A8. Roti Canai",
+   "near": "A8. Roti Canai\n$10.50\n\nw/ yellow curry & cucumber salad",
+   "w": 1180,
+   "h": 797,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/LUZY2GX6GK3TIWJ2ZGSSHT4C.png",
+   "alt": "A9. Fried Tofu",
+   "near": "A9. Fried Tofu\n$10.50\n\nSoft and crispy tofu triangles paired with tamarind peanut sauce",
+   "w": 2560,
+   "h": 2066,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/ROA2R2XXKBPBPXBYJ523ZFBC.jpeg",
+   "alt": "A10. Tom Yum Wings",
+   "near": "A10. Tom Yum Wings\n$13.95\n\nDry rub tom yum flavored, topped with fried lemongrass & kaffir leaves; p",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/DSAKHEU7YIRFMQKTGLPOV5YW.jpeg",
+   "alt": "A12. Fish Sauce Wings",
+   "near": "A12. Fish Sauce Wings\n$13.95\n\nGlazed sweet & salty fish sauce, topped with fried shallots",
+   "w": 3024,
+   "h": 4032,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/Z5FB7LQYLRZ5AA2BUNCTECYF.jpeg",
+   "alt": "A13. Red Chili Hot Wings",
+   "near": "A13. Red Chili Hot Wings\n$13.95\n\nChicken wings stir-fried with bell peppers & sweet chili sauce, top",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/PRO6Q7KX6LWJT3XZZVEF2A3J.jpeg",
+   "alt": "A14. Fire Hot Wings",
+   "near": "A14. Fire Hot Wings\n$13.95\n\nHousemade fire sauce for the spicy lovers; comes with a bed of lettuce a",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/CRR5HSJLC3GHVUVY4FITIX5L.png",
+   "alt": "A15. Passionfruit Habañero Wings",
+   "near": "A15. Passionfruit Habañero Wings\n$13.95\n\nFresh & crunchy deep-fried chicken wings paired with housem",
+   "w": 500,
+   "h": 500,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/SJNBZSBIICF765W25P3LYKRT.png",
+   "alt": "S1. Papaya Salad",
+   "near": "S1. Papaya Salad\n$13.75\n\nGreen papaya, shredded carrots, tomatoes, green beans, dried shrimp, peanut",
+   "w": 2913,
+   "h": 2899,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/5O2DV4GAPWAYU6QUFYOCJOGC.jpeg",
+   "alt": "S2. Mango Salad",
+   "near": "S2. Mango Salad\n$13.75\n\nGreen mango, red onions, carrots, cashews. Add grilled shrimp (2) +3",
+   "w": 3000,
+   "h": 2251,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/D5VMP5EJX4KJFZ5APWVMT44L.jpeg",
+   "alt": "S3. Larb",
+   "near": "S3. Larb\n$14.75\n\nGround meat, roasted rice powder, chili, red onion, cilantro & mint leaves tossed i",
+   "w": 2458,
+   "h": 2379,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/JT7PRJKI3SRT3OQYPOVB7FCG.jpeg",
+   "alt": "10. Tom Yum",
+   "near": "10. Tom Yum\nS $8 / L $14\n\nSour and spicy soup with mushroom, baby corn, red onion, galangal & lemong",
+   "w": 2048,
+   "h": 1365,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/LPGIFSHTU5AKYQ42XHBBETYE.jpeg",
+   "alt": "11. Tom Kha",
+   "near": "11. Tom Kha\nS $8.50 / L $14.50\n\nFlavorful & light coconut milk soup; choice of protein, baby corn, m",
+   "w": 2458,
+   "h": 2395,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/P3ZGJETAY2KWBWOPFJAAL7AV.jpeg",
+   "alt": "27. Pad Thai",
+   "near": "27. Pad Thai\n$16.00\n\nChoice of meat, beansprouts, chives, tofu. Contains peanuts.",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/DXEB2HFSZHQM2YLWFYTWDF7W.jpeg",
+   "alt": "28. Pad See Ew",
+   "near": "28. Pad See Ew\n$15.50\n\nChoice of meat, broccoli, Chinese broccoli, eggs",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/X4D7KKQNN2AFTUWLDWEJQCJL.jpeg",
+   "alt": "29. Pad Kee Mao",
+   "near": "29. Pad Kee Mao\n$15.50\n\nChoice of protein, bell peppers, onions, basil, tomato, eggs",
+   "w": 2048,
+   "h": 1365,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/WACWUKR6CWBPOPFB7TQKNHTL.jpeg",
+   "alt": "30. Rad Na",
+   "near": "30. Rad Na\n$15.50\n\nChoice of protein, broccoli, Chinese broccoli, Thai-style gravy",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/6PDAMBQ6WQ2CFHY7XU367RND.jpeg",
+   "alt": "32. Spicy Basil Fried Rice",
+   "near": "32. Spicy Basil Fried Rice\n$14.50\n\nChoice of meat, egg, basil, bell pepper, onions, dark soy",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/QK5W7SYGORSYUM5O6B3SGSJQ.jpeg",
+   "alt": "33. Pineapple Fried Rice",
+   "near": "33. Pineapple Fried Rice\n$16.50\n\nChicken & shrimp (2 pc), cashews, raisins, carrots, peas, pineapple",
+   "w": 1517,
+   "h": 1999,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/6RN77DZ5VCFVD3Y6WNUDM7SM.jpeg",
+   "alt": "34. Crab Fried Rice",
+   "near": "34. Crab Fried Rice\n$18.50\n\nCrab meat, eggs, onions, sliced Chinese broccoli stems",
+   "w": 3024,
+   "h": 3694,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/62AE3WJVOE7GHHQ626V4CUPP.png",
+   "alt": "35. BBQ Chicken",
+   "near": "35. BBQ Chicken\n$17.95\n\nGF",
+   "w": 807,
+   "h": 745,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/VIDGTOOFM4QBA2V5JT4IUBCG.png",
+   "alt": "36. BBQ Pork",
+   "near": "36. BBQ Pork\n$17.95",
+   "w": 2204,
+   "h": 2899,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/NL2ZPOYLZ5XJ7GEKNPQVG24H.jpeg",
+   "alt": "37. BBQ Short Ribs",
+   "near": "37. BBQ Short Ribs\n$20.95",
+   "w": 1234,
+   "h": 1646,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/2VLNBGMZBOPO4SOUWULTH4GH.jpeg",
+   "alt": "40. Panang Curry",
+   "near": "40. Panang Curry\n$16.50\n\nChoice of meat, basil, bell peppers – contains more meat",
+   "w": 2048,
+   "h": 1365,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/3TEHTETVD5Y3AOV2S33HQFCC.jpeg",
+   "alt": "41. Yellow Curry",
+   "near": "41. Yellow Curry\n$16.50\n\nChoice of meat, onions, potatoes",
+   "w": 2639,
+   "h": 2540,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/V6EPV3DN5JOFE4ANE4VS7SL6.jpeg",
+   "alt": "42. Green Curry",
+   "near": "42. Green Curry\n$16.50\n\nChoice of meat, zucchini, eggplant, bell peppers, basil",
+   "w": 1172,
+   "h": 826,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/KQJRX3XHRFBMRUC7E27QNGIB.png",
+   "alt": "44. Choo Chee Fish Curry",
+   "near": "44. Choo Chee Fish Curry\n$18.50\n\nBasa fish fillet in red curry, topped with fried basil",
+   "w": 2375,
+   "h": 2343,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/6IJMXDIJIU3QCTL6TWU4GUPM.jpeg",
+   "alt": "46. Pumpkin Curry",
+   "near": "46. Pumpkin Curry\n$17.50\n\nChoice of protein, pumpkin, bell pepper, basil",
+   "w": 2458,
+   "h": 2332,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/KJGDAXWVFPECRYVEAYYY54PK.png",
+   "alt": "50. Basil (Pad Kra Prao)",
+   "near": "50. Basil (Pad Kra Prao)\n$16.50\n\nGround meat, basil, bell peppers, onions",
+   "w": 2364,
+   "h": 3183,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  },
+  {
+   "src": "https://153415887.cdn6.editmysite.com/uploads/1/5/3/4/153415887/Y7BDZ5XGUQKRAOGM37WN5EXQ.png",
+   "alt": "51. Eggplant",
+   "near": "51. Eggplant\n$16.50\n\nGround meat, eggplant, bell pepper, onions, basil",
+   "w": 1176,
+   "h": 1548,
+   "page": "https://redchilirestaurants.com/san-jose-ca/"
+  }
+ ]
+}

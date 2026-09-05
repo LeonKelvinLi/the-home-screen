@@ -1,0 +1,357 @@
+{
+ "id": "b_pizzeriacardamomo",
+ "source": "jsonld",
+ "pages": [
+  "https://pizzeriacardamomo.com/",
+  "https://pizzeriacardamomo.com/menu",
+  "https://pizzeriacardamomo.com/catering",
+  "https://pizzeriacardamomo.com/page/beer-and-wine",
+  "https://pizzeriacardamomo.com/tags/margherita-pizza",
+  "https://pizzeriacardamomo.com/tags/meatballs",
+  "https://pizzeriacardamomo.com/tags/white-pizza"
+ ],
+ "items": [
+  {
+   "name": "Nonna Arancini",
+   "desc": "4 pieces of deep-fried rice balls, Pecorino Romano, Parmesan, Garlic, Parsley, and Pepper served with Parmesan sauce.",
+   "cents": 1200,
+   "section": "Specials"
+  },
+  {
+   "name": "Pizza ItaloAmericana",
+   "desc": "Organic tomato sauce, special cherry tomatoes confit, fresh burrata, ground beef sausage and hot honey.",
+   "cents": 2800,
+   "section": "Specials"
+  },
+  {
+   "name": "Pasta Cacio E Pepe",
+   "desc": "Cream Cacio E Pepe, house-made pecorino cream, Madagascar voatsiperifery pepper, lemon zest.",
+   "cents": 2600,
+   "section": "Specials"
+  },
+  {
+   "name": "Fresh Bread Baked (VG)",
+   "desc": "Fresh sourdough bread from The Baker Next Door.",
+   "cents": 500,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-fresh-bread-baked-vg"
+  },
+  {
+   "name": "Bruschetta (V)",
+   "desc": "Toasted sourdough, stracciatella, slow cooked cherry tomatoes.",
+   "cents": 1400,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-bruschetta-v"
+  },
+  {
+   "name": "Arancini Cacio e Pepe",
+   "desc": "Crispy risotto fritter with pecorino and parmigiano reggiano.",
+   "cents": 1300,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-arancini-cacio-e-pepe"
+  },
+  {
+   "name": "Marinated Taggiasca Olive (VG)",
+   "desc": "Lemon, cumin, chili served with fresh homemade bread.",
+   "cents": 1200,
+   "section": "Antipasti"
+  },
+  {
+   "name": "Meatballs",
+   "desc": "Ground beef meatballs seasoned with marinara sauce and voatsiperifery pepper.",
+   "cents": 1400,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-meatballs"
+  },
+  {
+   "name": "Aglio Bruschetta",
+   "desc": "Toasted sourdough, garlic puree, slow cooked cherry tomatoes, mint.",
+   "cents": 1400,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-aglio-bruschetta"
+  },
+  {
+   "name": "Habanero Oil",
+   "desc": "",
+   "cents": 900,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-habanero-oil"
+  },
+  {
+   "name": "Garlic Oil",
+   "desc": "",
+   "cents": 1000,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-garlic-oil"
+  },
+  {
+   "name": "Fig Bruschetta",
+   "desc": "Toasted sourdough, slow cooked organic figs, fresh organic goat cheese, organic fig leaves oil, rosemary and toasted hazelnuts.",
+   "cents": 1500,
+   "section": "Antipasti",
+   "photo": "pizzeria-cardamomo-fig-bruschetta"
+  },
+  {
+   "name": "Pasta Pomodoro Basilico (V)",
+   "desc": "House-made fresh spaghetti, slow-cooked tomato sauce, basil. Spicy pomodoro available on request.",
+   "cents": 2200,
+   "section": "Pasta",
+   "photo": "pizzeria-cardamomo-pasta-pomodoro-basilico-v"
+  },
+  {
+   "name": "Pasta Tagliatelle Bolognese",
+   "desc": "Housemade fresh pasta, beef ragu.",
+   "cents": 2600,
+   "section": "Pasta",
+   "photo": "pizzeria-cardamomo-pasta-tagliatelle-bolognese"
+  },
+  {
+   "name": "Pasta Spaghetti Meatballs",
+   "desc": "Classic hand-rolled ground beef meatballs, simmered in-housemade tomato sauce, topped with chili flakes and herbs.",
+   "cents": 2700,
+   "section": "Pasta",
+   "photo": "pizzeria-cardamomo-pasta-spaghetti-meatballs"
+  },
+  {
+   "name": "Lasagna",
+   "desc": "Layers of tender pasta, rich slow cooked beef Bolognese sauce, creamy bechamel sauce.",
+   "cents": 2600,
+   "section": "Pasta"
+  },
+  {
+   "name": "Pasta al Pesto",
+   "desc": "House made spaghetti, pine nuts, basil pesto, pecorino romano and parmagiano reggiano.",
+   "cents": 2600,
+   "section": "Pasta"
+  },
+  {
+   "name": "Margherita Pizza (V)",
+   "desc": "Organic tomato sauce, Fior di latte, basil.",
+   "cents": 2200,
+   "section": "Classic Pizza",
+   "photo": "pizzeria-cardamomo-margherita-pizza-v"
+  },
+  {
+   "name": "Margherita DOP Pizza (V)",
+   "desc": "Organic tomato sauce, buffalo mozzarella DOP, basil.",
+   "cents": 2600,
+   "section": "Classic Pizza",
+   "photo": "pizzeria-cardamomo-margherita-dop-pizza-v"
+  },
+  {
+   "name": "Alla Marinara Pizza (VG)",
+   "desc": "Organic tomato sauce, garlic, oregano, basil.",
+   "cents": 1900,
+   "section": "Classic Pizza"
+  },
+  {
+   "name": "Momo Pizza",
+   "desc": "Fior di latte, ricotta, montasio cheese, cbt yellow potatoes.",
+   "cents": 2600,
+   "section": "Specialty White Pizzas"
+  },
+  {
+   "name": "Bronte Pizza (V)",
+   "desc": "Fior di latte, ricotta, pistachio pesto, chopped pistachio.",
+   "cents": 2700,
+   "section": "Specialty White Pizzas"
+  },
+  {
+   "name": "Carbonara Pizza",
+   "desc": "Fior di latte, guanciale, poached egg cbt, Pecorino Romano DOP, Madagascar voatsiperifery pepper.",
+   "cents": 2800,
+   "section": "Specialty White Pizzas",
+   "photo": "pizzeria-cardamomo-carbonara-pizza"
+  },
+  {
+   "name": "Calzone Cacio Pepe Pizza",
+   "desc": "Fior di latte, pecorino romano, Madagascar voatsiperifery pepper, extra virgin olive oil.",
+   "cents": 2700,
+   "section": "Specialty White Pizzas",
+   "photo": "pizzeria-cardamomo-calzone-cacio-pepe-pizza"
+  },
+  {
+   "name": "Calzone Emiliana",
+   "desc": "Fior di latte, beef ragu, bechamel, parmigiano reggiano.",
+   "cents": 2800,
+   "section": "Specialty White Pizzas",
+   "photo": "pizzeria-cardamomo-calzone-emiliana"
+  },
+  {
+   "name": "Mortadella Pistachio",
+   "desc": "Fior di latte, mortadella (ham), pistachio pesto, chopped pistachios.",
+   "cents": 2800,
+   "section": "Specialty White Pizzas",
+   "photo": "pizzeria-cardamomo-mortadella-pistachio"
+  },
+  {
+   "name": "Stracciatella (V)",
+   "desc": "Organic tomato sauce, stracciatella, caramelized tomatoes, basil, olive oil.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas"
+  },
+  {
+   "name": "Verdura Pizza (V)",
+   "desc": "Organic tomato sauce, Fior di latte, grilled zucchini, eggplant, bell pepper, tomatoes, onion, taggiasca olives, and mint.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas",
+   "photo": "pizzeria-cardamomo-verdura-pizza-v"
+  },
+  {
+   "name": "Crudo e Parmigiano All' Aceto Balsamico",
+   "desc": "Organic tomato sauce, Fior di latte, 24-month prosciutto crudo, Parmigiano Reggiano, Modena traditional balsamic IGP.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "photo": "pizzeria-cardamomo-crudo-e-parmigiano-all-aceto-balsamico"
+  },
+  {
+   "name": "Spicy Pepperoni with Honey",
+   "desc": "Organic tomato sauce, fior di latte, pepperoni, organic honey.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "photo": "pizzeria-cardamomo-spicy-pepperoni-with-honey"
+  },
+  {
+   "name": "Sausage",
+   "desc": "Organic tomato sauce, fior di latte, bell peppers, ground beef sausage, white onions, garlic, Thai chilies, parmigiano reggiano.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "photo": "pizzeria-cardamomo-sausage"
+  },
+  {
+   "name": "Arrabbiata Pizza",
+   "desc": "Organic tomato sauce, Fior di latte, bacon, habanero chillies, fresh garlic, parsley, parmigiano reggiano.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas"
+  },
+  {
+   "name": "Funghi Ruccola Gorgonzola",
+   "desc": "Organic tomato sauce, Fior di latte, gorgonzola cheese, cooked organic baby mushrooms, arugula, garlic, and parsley.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas"
+  },
+  {
+   "name": "Sarika",
+   "desc": "Organic tomato sauce, fior di latte, cooked organic baby mushrooms, white onions, bell peppers, garlic, Thai chilies, parmigiano reggiano.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas",
+   "photo": "pizzeria-cardamomo-sarika"
+  },
+  {
+   "name": "Prosciutto Funghi",
+   "desc": "Organic tomato sauce, fior di latte, cooked organic baby mushroom, prosciutto granbiscotto.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas"
+  },
+  {
+   "name": "Pollo Al Limone",
+   "desc": "Braised chicken leg with lemon and spices, sauteed Yukon potatoes with rosemary.",
+   "cents": 2600,
+   "section": "Secondi",
+   "photo": "pizzeria-cardamomo-pollo-al-limone"
+  },
+  {
+   "name": "Arugula Salad",
+   "desc": "Local peaches, parmigiano reggiano, walnuts, honey, and vinaigrette.",
+   "cents": 1500,
+   "section": "Salads",
+   "photo": "pizzeria-cardamomo-arugula-salad"
+  },
+  {
+   "name": "Organic Beets Salad",
+   "desc": "Cara cara orange, toasted almonds, arugula pesto, white wine vinaigrette.",
+   "cents": 1800,
+   "section": "Salads"
+  },
+  {
+   "name": "Spring Salad",
+   "desc": "Mixed green salad with blood oranges, strawberries, toasted cashews, prosciutto crudo, and a light vinaigrette.",
+   "cents": 2100,
+   "section": "Salads",
+   "photo": "pizzeria-cardamomo-spring-salad"
+  },
+  {
+   "name": "Pistachio Salad",
+   "desc": "Spinach, blueberries, pistachios, goat cheese, fresh lemon and honey dressing.",
+   "cents": 1800,
+   "section": "Salads",
+   "photo": "pizzeria-cardamomo-pistachio-salad"
+  },
+  {
+   "name": "Tiramisu",
+   "desc": "Classic Italian dessert with layers of espresso-soaked ladyfingers, creamy mascarpone, and a dusting of cocoa powder.",
+   "cents": 1200,
+   "section": "Desserts",
+   "photo": "pizzeria-cardamomo-tiramisu"
+  },
+  {
+   "name": "Strawberry Tiramisu",
+   "desc": "Layers of strawberry-soaked ladyfingers, creamy mascarpone, and sweet strawberries.",
+   "cents": 1300,
+   "section": "Desserts",
+   "photo": "pizzeria-cardamomo-strawberry-tiramisu"
+  },
+  {
+   "name": "Panna C W Strawberry",
+   "desc": "Creamy Italian panna cotta topped with caramelized strawberries.",
+   "cents": 1300,
+   "section": "Desserts"
+  },
+  {
+   "name": "K Pasta Pomodoro (V)",
+   "desc": "Slow cooked pasta with tomatoes, parmigiano reggiano. Smaller portion for children 12 and under.",
+   "cents": 1700,
+   "section": "Kids",
+   "photo": "pizzeria-cardamomo-k-pasta-pomodoro-v"
+  },
+  {
+   "name": "Cheese Pasta",
+   "desc": "Pasta with parmigiano reggiano cheese and olive oil. Smaller portion for children 12 and under.",
+   "cents": 1700,
+   "section": "Kids",
+   "photo": "pizzeria-cardamomo-cheese-pasta"
+  },
+  {
+   "name": "Natural Spring Water",
+   "desc": "",
+   "cents": 800,
+   "section": "Drinks"
+  },
+  {
+   "name": "San Pellegrino Water",
+   "desc": "",
+   "cents": 800,
+   "section": "Drinks"
+  },
+  {
+   "name": "Limonata",
+   "desc": "",
+   "cents": 800,
+   "section": "Drinks"
+  },
+  {
+   "name": "Chinotto",
+   "desc": "",
+   "cents": 800,
+   "section": "Drinks"
+  },
+  {
+   "name": "Aranciata",
+   "desc": "",
+   "cents": 800,
+   "section": "Drinks"
+  },
+  {
+   "name": "Panini Verdura",
+   "desc": "Bell peppers, taggiasca olives, oregano, capers, basil, vinegar, stracciatella.",
+   "cents": 1800,
+   "section": "Panini"
+  },
+  {
+   "name": "Panini Prosciutto/Bufala",
+   "desc": "Ruliano prosciutto 24 mo, bufala, fresh tomatoes, basil, extra virgin olive oil.",
+   "cents": 2000,
+   "section": "Panini"
+  }
+ ]
+}

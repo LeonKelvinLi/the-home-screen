@@ -1,0 +1,1377 @@
+{
+ "id": "b_kaisendon",
+ "source": "text",
+ "pages": [
+  "https://www.tetsujinsushi.com/",
+  "https://order.online/store/-297279?hideModal=true&pickup=true",
+  "https://order.toasttab.com/online/kaisen-don",
+  "https://www.toasttab.com/kaisen-don/rewardsSignup",
+  "https://www.toasttab.com/kaisen-don/marketing-signup",
+  "https://order.toasttab.com/online/kaisen-don",
+  "https://order.online/business/KaisenDon-156638?utm_source=sdk&visitorId=263de1a06ed708ce17626"
+ ],
+ "items": [
+  {
+   "name": "Nankotsu",
+   "desc": "Fried chicken knee cartilage",
+   "cents": 1599,
+   "section": "Starters",
+   "photo": "kaisen-don-nankotsu"
+  },
+  {
+   "name": "Fish Soup",
+   "desc": "Daily fish broth , daikon radish , carrot , scallion (Slow cooked 6 hours , No Salt or Sodium added. Pure ingredients flavor .)",
+   "cents": 1099,
+   "section": "Starters"
+  },
+  {
+   "name": "Kanpachi kama",
+   "desc": "Salted grill kanpachi collar",
+   "cents": 2099,
+   "section": "Grilled",
+   "photo": "kaisen-don-kanpachi-kama"
+  },
+  {
+   "name": "Ika geso",
+   "desc": "Fried squid legs",
+   "cents": 1299,
+   "section": "Starters",
+   "photo": "kaisen-don-ika-geso"
+  },
+  {
+   "name": "Takowasa",
+   "desc": "Raw chopped octopus mix with fresh Japanese horseradish \"wasabi\"",
+   "cents": 1299,
+   "section": "Starters",
+   "photo": "kaisen-don-takowasa"
+  },
+  {
+   "name": "Umi masu crudo",
+   "desc": "Thin cut ocean trout serves with micro sprouts , house made soy vinaigrette , olive oil , avocado oil , salt & Ocean trout crispy roasted skin",
+   "cents": 2099,
+   "section": "Starters",
+   "photo": "kaisen-don-umi-masu-crudo"
+  },
+  {
+   "name": "Hirame usuzukuri (8 pc)",
+   "desc": "Halibut in thin cut style 8 pieces serves with ponzu sauce",
+   "cents": 2699,
+   "section": "Starters",
+   "photo": "kaisen-don-hirame-usuzukuri-8-pc"
+  },
+  {
+   "name": "Sashimi Deluxe 16pcs",
+   "desc": "",
+   "cents": 7999,
+   "section": "Starters",
+   "photo": "kaisen-don-sashimi-deluxe-16pcs"
+  },
+  {
+   "name": "Garlic fried shishito pepper",
+   "desc": "garlic stir fried shishito pepper",
+   "cents": 1699,
+   "section": "Starters",
+   "photo": "kaisen-don-garlic-fried-shishito-pepper"
+  },
+  {
+   "name": "Broadmoor Roll (5 pc.)",
+   "desc": "Chopped blue fin fatty tuna , scallion , avocado , roast garlic , radish sprout (We put wasabi in this roll ",
+   "cents": 2099,
+   "section": "Starters",
+   "photo": "kaisen-don-broadmoor-roll-5-pc"
+  },
+  {
+   "name": "Fried half sea bream head",
+   "desc": "",
+   "cents": 2199,
+   "section": "Starters"
+  },
+  {
+   "name": "Oden",
+   "desc": "Fish cakes stew in house broth",
+   "cents": 1399,
+   "section": "Starters",
+   "photo": "kaisen-don-oden"
+  },
+  {
+   "name": "Oden (Mochi Kinchaku)",
+   "desc": "Mochi rice cake wrap with fried tofu pouch in house broth",
+   "cents": 1199,
+   "section": "Starters",
+   "photo": "kaisen-don-oden-mochi-kinchaku"
+  },
+  {
+   "name": "Tuna poki",
+   "desc": "Tuna, Onion , tomato , avocado, tomato, salt , olive oil , house made poki sauce & cilantro",
+   "cents": 2199,
+   "section": "Starters",
+   "photo": "kaisen-don-tuna-poki"
+  },
+  {
+   "name": "Hamachi poki",
+   "desc": "yellowtail , Onion , tomato , avocado, tomato, salt , olive oil , house made poki sauce & cilantro",
+   "cents": 2199,
+   "section": "Starters",
+   "photo": "kaisen-don-hamachi-poki"
+  },
+  {
+   "name": "Sushi tray F (1-2 people)",
+   "desc": "This party tray comes with: 1 Ashland Roll 1Lion king roll 1 Lobster salad roll 1 Salmon skin roll (Total 32 pc.)",
+   "cents": 5999,
+   "section": "Starters",
+   "photo": "kaisen-don-sushi-tray-f-1-2-people"
+  },
+  {
+   "name": "Sushi tray G (2 people)",
+   "desc": "This sushi tray comes: 1 Pear salmon roll 1 Peach mango roll 1 Tuna avocado roll 1 Hamchi avocado roll 1 California roll (real crab) (Total 40 pc. rolls)",
+   "cents": 5499,
+   "section": "Starters",
+   "photo": "kaisen-don-sushi-tray-g-2-people"
+  },
+  {
+   "name": "Negitoro don(limited item)",
+   "desc": "Chopped fatty blue fin tuna with scallions, side with pickles, Avocado, and Nitamago (Light marinated boiled egg). (This item comes with miso soup)",
+   "cents": 4299,
+   "section": "Starters",
+   "photo": "kaisen-don-negitoro-don-limited-item"
+  },
+  {
+   "name": "Garlic albacore roll",
+   "desc": "Albacore , garlic , scallion ,Perilla harb leaf , daikon sprout , wasabi & sweet soy",
+   "cents": 1099,
+   "section": "Starters",
+   "photo": "kaisen-don-garlic-albacore-roll"
+  },
+  {
+   "name": "Madai sashimi",
+   "desc": "Sea bream with seasoned salt , peanut oil , perilla herb leafs. tomato with olive oil & house salad dressing",
+   "cents": 2499,
+   "section": "Starters",
+   "photo": "kaisen-don-madai-sashimi"
+  },
+  {
+   "name": "Aji Sashimi",
+   "desc": "Thin cut Jack Horse mackerel serves with ginger , scallion , thin slices onion and ponzu sauce",
+   "cents": 2799,
+   "section": "Starters",
+   "photo": "kaisen-don-aji-sashimi"
+  },
+  {
+   "name": "Hiyayakko tofu",
+   "desc": "Chilled soft tofu serves with fresh ginger , scallion, fish flake and house special soy",
+   "cents": 999,
+   "section": "Starters",
+   "photo": "kaisen-don-hiyayakko-tofu"
+  },
+  {
+   "name": "Blue fin tuna Nigiri (Seasonal)",
+   "desc": "",
+   "cents": 1399,
+   "section": "Starters",
+   "photo": "kaisen-don-blue-fin-tuna-nigiri-seasonal"
+  },
+  {
+   "name": "Kanpachi Nigiri (seasonal)",
+   "desc": "Amberjack",
+   "cents": 1199,
+   "section": "Nigiri",
+   "photo": "kaisen-don-kanpachi-nigiri-seasonal"
+  },
+  {
+   "name": "Kurodai Nigiri",
+   "desc": "Black Snapper",
+   "cents": 1299,
+   "section": "Nigiri",
+   "photo": "kaisen-don-kurodai-nigiri"
+  },
+  {
+   "name": "Fried chicken skin",
+   "desc": "Seasoned fried chicken skin with cabbage & tomato salad",
+   "cents": 1199,
+   "section": "Nigiri",
+   "photo": "kaisen-don-fried-chicken-skin"
+  },
+  {
+   "name": "Baeren SCHWARZ 330ml",
+   "desc": "(Made in Japan) SCHWARZ used to be drunk mainly in the former East Germany",
+   "cents": 1299,
+   "section": "Nigiri",
+   "photo": "kaisen-don-baeren-schwarz-330ml"
+  },
+  {
+   "name": "Ippin Junmai Daiginjo 720ml",
+   "desc": "(Rich , Dry) A hint of pineapple fragrance and sweet on the palate. Double Gold prize of San Francisco IWC Winer 2017. The best 2017, Double Gold 2017, 2015",
+   "cents": 8499,
+   "section": "Nigiri"
+  },
+  {
+   "name": "Yuzu nigori 300ml",
+   "desc": "(Sweet , Refreshing , Creamy ) Premium yuzu nigori sake using the best rice from Northern California and real, fresh yuzu juice from Japan.",
+   "cents": 2799,
+   "section": "Nigiri"
+  },
+  {
+   "name": "Negitoro hand roll",
+   "desc": "Chopped fatty blue fin tuna with scallion",
+   "cents": 1899,
+   "section": "Nigiri"
+  },
+  {
+   "name": "Salmon skin hand roll",
+   "desc": "",
+   "cents": 1099,
+   "section": "Nigiri"
+  },
+  {
+   "name": "(Veggie dumpling made by soy bean)",
+   "desc": "",
+   "cents": 1099,
+   "section": "Starters"
+  },
+  {
+   "name": "Grilled chicken breast , mix green salad with house vinaigrette dressing",
+   "desc": "",
+   "cents": 1899,
+   "section": "Salads"
+  },
+  {
+   "name": "Fried chicken wing",
+   "desc": "",
+   "cents": 1399,
+   "section": "Salads"
+  },
+  {
+   "name": "Salmon teriyaki",
+   "desc": "Salted grill salmon with teriyaki sauce ,potato salad,mix green salad & sides",
+   "cents": 2499,
+   "section": "Salads",
+   "photo": "kaisen-don-salmon-teriyaki"
+  },
+  {
+   "name": "Age dashi tofu",
+   "desc": "Battered deep-fried tofu with scallion, fish flakes & house broth",
+   "cents": 1299,
+   "section": "Starters",
+   "photo": "kaisen-don-age-dashi-tofu"
+  },
+  {
+   "name": "Ankimo",
+   "desc": "Seasoned cooked Monk Fish liver serve with thin onion, ground radish, scallion, and house special dressing.",
+   "cents": 1899,
+   "section": "Starters",
+   "photo": "kaisen-don-ankimo"
+  },
+  {
+   "name": "Chicken Karaage",
+   "desc": "Fried chicken",
+   "cents": 1299,
+   "section": "Starters",
+   "photo": "kaisen-don-chicken-karaage"
+  },
+  {
+   "name": "Fried vegetable potato cake",
+   "desc": "",
+   "cents": 999,
+   "section": "Starters"
+  },
+  {
+   "name": "Edamame",
+   "desc": "Salted soy bean",
+   "cents": 699,
+   "section": "Starters",
+   "photo": "kaisen-don-edamame"
+  },
+  {
+   "name": "Fried oyster",
+   "desc": "",
+   "cents": 1299,
+   "section": "Starters"
+  },
+  {
+   "name": "Fried salmon head (2 pc.)",
+   "desc": "Seasoned fried salmon head",
+   "cents": 1299,
+   "section": "Starters",
+   "photo": "kaisen-don-fried-salmon-head-2-pc"
+  },
+  {
+   "name": "Garlic salted fried tofu",
+   "desc": "",
+   "cents": 1399,
+   "section": "Starters",
+   "photo": "kaisen-don-garlic-salted-fried-tofu"
+  },
+  {
+   "name": "Gyoza",
+   "desc": "6pc. potstickers with yuzu dressing",
+   "cents": 1299,
+   "section": "Starters"
+  },
+  {
+   "name": "Ika sugata yaki",
+   "desc": "Salted grill whole squid",
+   "cents": 2399,
+   "section": "Grilled",
+   "photo": "kaisen-don-ika-sugata-yaki"
+  },
+  {
+   "name": "Maguro natto",
+   "desc": "Tuna, fermented soybean with house-made special soy sauce, scallion, and perilla leaf (First time order please make sure you know about this item)",
+   "cents": 1499,
+   "section": "Grilled",
+   "photo": "kaisen-don-maguro-natto"
+  },
+  {
+   "name": "Natto",
+   "desc": "Fermented soybean with house-made special soy sauce, scallion, and perilla leaf (First time order please make sure you know about this item)",
+   "cents": 899,
+   "section": "Starters",
+   "photo": "kaisen-don-natto"
+  },
+  {
+   "name": "Lemon Pepper Salmon Kama",
+   "desc": "Lemon Pepper Salted grill salmon collar",
+   "cents": 1899,
+   "section": "Grilled",
+   "photo": "kaisen-don-lemon-pepper-salmon-kama"
+  },
+  {
+   "name": "Smoke duck breast",
+   "desc": "Home made smoke duck breast with mix green salad",
+   "cents": 2399,
+   "section": "Grilled",
+   "photo": "kaisen-don-smoke-duck-breast"
+  },
+  {
+   "name": "Soft shell crab",
+   "desc": "",
+   "cents": 1399,
+   "section": "Grilled",
+   "photo": "kaisen-don-soft-shell-crab"
+  },
+  {
+   "name": "Spicy garlic Edamame",
+   "desc": "",
+   "cents": 1399,
+   "section": "Grilled",
+   "photo": "kaisen-don-spicy-garlic-edamame"
+  },
+  {
+   "name": "Takoyaki",
+   "desc": "Batter cooked octopus serves with special house-made spicy mayo",
+   "cents": 1199,
+   "section": "Grilled",
+   "photo": "kaisen-don-takoyaki"
+  },
+  {
+   "name": "Mix pickles",
+   "desc": "",
+   "cents": 799,
+   "section": "Starters"
+  },
+  {
+   "name": "Fried shrimp & vegetable",
+   "desc": "",
+   "cents": 1299,
+   "section": "Starters"
+  },
+  {
+   "name": "Poke salad",
+   "desc": "Assorted sashimi, slice onion, seaweed with house special poki sauce",
+   "cents": 1399,
+   "section": "Starters"
+  },
+  {
+   "name": "Seasoned fried halibut head & collar",
+   "desc": "",
+   "cents": 2099,
+   "section": "Starters"
+  },
+  {
+   "name": "Saba shioyaki Appetizer",
+   "desc": "Salted grill mackerel",
+   "cents": 1499,
+   "section": "Grilled",
+   "photo": "kaisen-don-saba-shioyaki-appetizer"
+  },
+  {
+   "name": "Fried salmon kama",
+   "desc": "Seasoned fried salmon collar serves with house made soy vinaigrette",
+   "cents": 1899,
+   "section": "Grilled"
+  },
+  {
+   "name": "Hamachi Kama Small",
+   "desc": "",
+   "cents": 1799,
+   "section": "Grilled",
+   "photo": "kaisen-don-hamachi-kama-small"
+  },
+  {
+   "name": "Hamachi kama Large",
+   "desc": "Salted grill yellowtail collar",
+   "cents": 2199,
+   "section": "Grilled",
+   "photo": "kaisen-don-hamachi-kama-large"
+  },
+  {
+   "name": "Kurodai kama",
+   "desc": "Seasoned fried snapper head",
+   "cents": 1299,
+   "section": "Grilled",
+   "photo": "kaisen-don-kurodai-kama"
+  },
+  {
+   "name": "Shishamo",
+   "desc": "Seasoned fried smelt with roe",
+   "cents": 1599,
+   "section": "Grilled",
+   "photo": "kaisen-don-shishamo"
+  },
+  {
+   "name": "Rainbow Don",
+   "desc": "Assorted sashimi over rice",
+   "cents": 3399,
+   "section": "Grilled",
+   "photo": "kaisen-don-rainbow-don"
+  },
+  {
+   "name": "Salmon Don",
+   "desc": "7 pc. Salmon, sushi omelette over sushi rice, and side (this item comes with miso soup)",
+   "cents": 2999,
+   "section": "Grilled",
+   "photo": "kaisen-don-salmon-don"
+  },
+  {
+   "name": "Salmon Ikura Don",
+   "desc": "Salmon, sushi omelette salmon caviar and sides",
+   "cents": 3499,
+   "section": "Grilled",
+   "photo": "kaisen-don-salmon-ikura-don"
+  },
+  {
+   "name": "Hamachi Don",
+   "desc": "7 pc. Yellowtail, sushi omelet over sushi rice and side (this item comes with miso soup",
+   "cents": 2999,
+   "section": "Grilled",
+   "photo": "kaisen-don-hamachi-don"
+  },
+  {
+   "name": "Tekka Don",
+   "desc": "7 pc. Tuna, sushi omelette and sides over rice",
+   "cents": 3299,
+   "section": "Grilled",
+   "photo": "kaisen-don-tekka-don"
+  },
+  {
+   "name": "Toro Don",
+   "desc": "5 pc. Blue fin fatty tuna, chopped up fatty tuna with scallion, Avocado, Perilla leaf, pickle, fresh wasabi (this item comes with miso soup)",
+   "cents": 4399,
+   "section": "Grilled",
+   "photo": "kaisen-don-toro-don"
+  },
+  {
+   "name": "Kaisen Don",
+   "desc": "Sea Scallop, crab, \"salmon caviar\" and sides over rice",
+   "cents": 3799,
+   "section": "Grilled",
+   "photo": "kaisen-don-kaisen-don"
+  },
+  {
+   "name": "Omakase Don(Daily item)",
+   "desc": "Chef's choice",
+   "cents": 6999,
+   "section": "Don and chirashi",
+   "photo": "kaisen-don-omakase-don-daily-item"
+  },
+  {
+   "name": "Mini omakase chirachi(Daily item)",
+   "desc": "Daily item: (Chef choice Chirashi)",
+   "cents": 4599,
+   "section": "Don and chirashi",
+   "photo": "kaisen-don-mini-omakase-chirachi-daily-item"
+  },
+  {
+   "name": "Blue fin tuna don",
+   "desc": "7 pc. Blue fin Tuna, sushi omelette and sides over rice",
+   "cents": 3399,
+   "section": "Don and chirashi"
+  },
+  {
+   "name": "*S. Pellegrino Sparking Natural Mineral Water 750ml",
+   "desc": "Large Bottle 1 litter",
+   "cents": 999,
+   "section": "Drinks",
+   "photo": "kaisen-don-s-pellegrino-sparking-natural-mineral-wa"
+  },
+  {
+   "name": "Voss Still Water",
+   "desc": "Bottle 500 ml. Artesian water from Norway",
+   "cents": 599,
+   "section": "Drinks",
+   "photo": "kaisen-don-voss-still-water"
+  },
+  {
+   "name": "Lychee oolong boba & aloe vera (480ml)",
+   "desc": "Jelly popping boba , Lychee oolong & aloe vera",
+   "cents": 699,
+   "section": "Drinks",
+   "photo": "kaisen-don-lychee-oolong-boba-aloe-vera-480ml"
+  },
+  {
+   "name": "Calpico 335ml (Can)",
+   "desc": "Bottle 500ml Japanese non-carbonated soft drink",
+   "cents": 399,
+   "section": "Drinks",
+   "photo": "kaisen-don-calpico-335ml-can"
+  },
+  {
+   "name": "Martinelli's Apple Juice",
+   "desc": "Bottle 296 ml",
+   "cents": 479,
+   "section": "Drinks",
+   "photo": "kaisen-don-martinelli-s-apple-juice"
+  },
+  {
+   "name": "Ramune Lychee Soda",
+   "desc": "Japanese codd-neck bottle carbonated soft drink , 200ml (bottle)",
+   "cents": 499,
+   "section": "Drinks",
+   "photo": "kaisen-don-ramune-lychee-soda"
+  },
+  {
+   "name": "Ramune Soda",
+   "desc": "Japanese codd-neck bottle carbonated soft drink 200ml (Bottle)",
+   "cents": 499,
+   "section": "Drinks",
+   "photo": "kaisen-don-ramune-soda"
+  },
+  {
+   "name": "Yuzu Soda",
+   "desc": "Can 350 ml. Yuzu carbonated soda",
+   "cents": 499,
+   "section": "Drinks",
+   "photo": "kaisen-don-yuzu-soda"
+  },
+  {
+   "name": "Plum soda",
+   "desc": "Can 350 ml Plum carbonated soda",
+   "cents": 499,
+   "section": "Drinks",
+   "photo": "kaisen-don-plum-soda"
+  },
+  {
+   "name": "Tomomasu Swan Ramune",
+   "desc": "Tomomasu Swan Ramune is a unique Japanese soda that combines refreshing citrus flavors with a fizzy, effervescent kick",
+   "cents": 699,
+   "section": "Drinks",
+   "photo": "kaisen-don-tomomasu-swan-ramune"
+  },
+  {
+   "name": "Boss cold black coffee(unsweetened)",
+   "desc": "Boss cold black coffee (237ml Can) from Japan",
+   "cents": 650,
+   "section": "Drinks",
+   "photo": "kaisen-don-boss-cold-black-coffee-unsweetened"
+  },
+  {
+   "name": "Mexican Sprite",
+   "desc": "Classic, cool, crisp lemon-lime flavored taste that's caffeine free",
+   "cents": 599,
+   "section": "Drinks",
+   "photo": "kaisen-don-mexican-sprite"
+  },
+  {
+   "name": "Mexican Fanta Orange",
+   "desc": "Liberate your every day with fizzy and refreshing fruit-flavored Fanta soda pop",
+   "cents": 599,
+   "section": "Drinks",
+   "photo": "kaisen-don-mexican-fanta-orange"
+  },
+  {
+   "name": "King salmon avo roll (Limited)",
+   "desc": "King salmon , avocado",
+   "cents": 1399,
+   "section": "Classic rolls"
+  },
+  {
+   "name": "California roll (Imitation crab)",
+   "desc": "Imitation crab , Avocado",
+   "cents": 899,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-california-roll-imitation-crab"
+  },
+  {
+   "name": "Spicy crab roll",
+   "desc": "Spicy imitation crab , cucummber",
+   "cents": 899,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spicy-crab-roll"
+  },
+  {
+   "name": "New york roll",
+   "desc": "Cooked shirmp , avocado",
+   "cents": 999,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-new-york-roll"
+  },
+  {
+   "name": "Salmon avo roll",
+   "desc": "Salmon , avocado",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-salmon-avo-roll"
+  },
+  {
+   "name": "Spicy salmon avo roll",
+   "desc": "Spicy Salmon , avocado",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spicy-salmon-avo-roll"
+  },
+  {
+   "name": "Tuna avo roll",
+   "desc": "Tuna , avocado",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-tuna-avo-roll"
+  },
+  {
+   "name": "Spicy tuna roll",
+   "desc": "House special mix spicy tuna, cucummber",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spicy-tuna-roll"
+  },
+  {
+   "name": "Hamachi avo roll",
+   "desc": "Hamachi, avocado",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-hamachi-avo-roll"
+  },
+  {
+   "name": "Spicy hamachi avo roll",
+   "desc": "Spicy hamachi, avocado",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spicy-hamachi-avo-roll"
+  },
+  {
+   "name": "Peach salmon roll",
+   "desc": "Peach , salmon",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-peach-salmon-roll"
+  },
+  {
+   "name": "Pear salmon roll",
+   "desc": "Salmon . pear",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-pear-salmon-roll"
+  },
+  {
+   "name": "Mango salmon roll",
+   "desc": "",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-mango-salmon-roll"
+  },
+  {
+   "name": "Mango tuna roll",
+   "desc": "",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-mango-tuna-roll"
+  },
+  {
+   "name": "Philly roll",
+   "desc": "Salmon, cream cheese, cucumber",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-philly-roll"
+  },
+  {
+   "name": "Salmon skin roll",
+   "desc": "Salmon skin , cucummber",
+   "cents": 1099,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-salmon-skin-roll"
+  },
+  {
+   "name": "Spicy shrimp roll (5 pc.)",
+   "desc": "Spicy cooked shrimp , avocado , cucumber",
+   "cents": 1399,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spicy-shrimp-roll-5-pc"
+  },
+  {
+   "name": "Rock & Roll roll",
+   "desc": "BBQ fresh water eel , avocado",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-rock-roll-roll"
+  },
+  {
+   "name": "Jalapeño hamachi roll",
+   "desc": "Jalapeño, cucumber ,yellowtail",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-jalape-o-hamachi-roll"
+  },
+  {
+   "name": "Jalapeño salmon roll",
+   "desc": "Jalapeño, cucumber ,salmon",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-jalape-o-salmon-roll"
+  },
+  {
+   "name": "Jalapeño tuna roll",
+   "desc": "Jalapeño, cucumber ,tuna",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-jalape-o-tuna-roll"
+  },
+  {
+   "name": "Lobster salad roll",
+   "desc": "Lobster salad , avocado",
+   "cents": 1399,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-lobster-salad-roll"
+  },
+  {
+   "name": "Spicy scallop roll",
+   "desc": "Spicy scallop , avocado",
+   "cents": 1299,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spicy-scallop-roll"
+  },
+  {
+   "name": "Tempura roll",
+   "desc": "Shrimp tempura, cucumber, avocado, with special house made sauce",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-tempura-roll"
+  },
+  {
+   "name": "Spider roll",
+   "desc": "Battered fried soft shell crab, cucumber, avocado, with special house made sauce",
+   "cents": 1599,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-spider-roll"
+  },
+  {
+   "name": "Negihama maki",
+   "desc": "Chopped yellowtail with scallion (We put wasabi in this roll , please let your servers know if you don't want wasabi in it , thanks!)",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-negihama-maki"
+  },
+  {
+   "name": "Tekka maki",
+   "desc": "tuna roll (We put wasabi in this roll , please let your servers know if you don't want wasabi in it , thanks!)",
+   "cents": 1199,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-tekka-maki"
+  },
+  {
+   "name": "Seasoned cooked octopus salad",
+   "desc": "",
+   "cents": 999,
+   "section": "Classic rolls"
+  },
+  {
+   "name": "Negitoro maki",
+   "desc": "Chopped fatty blue fin tuna with scallion (We put wasabi in this roll , please let your servers know if you don't want wasabi in it , thanks!)",
+   "cents": 1799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-negitoro-maki"
+  },
+  {
+   "name": "Ika mentai maki",
+   "desc": "Squid & spicy cod roe with perilla leaf",
+   "cents": 1299,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-ika-mentai-maki"
+  },
+  {
+   "name": "Dragon roll",
+   "desc": "Imitation crab meat, avocado, wrapped BBQ eel and avocado,with house special made sauce",
+   "cents": 1999,
+   "section": "Special rolls",
+   "photo": "kaisen-don-dragon-roll"
+  },
+  {
+   "name": "Tempura dragon roll",
+   "desc": "Tempura shirmp, cucummber, wrapped BBQ eel and avocado,with house special made sauce & flying fish roe",
+   "cents": 1999,
+   "section": "Special rolls",
+   "photo": "kaisen-don-tempura-dragon-roll"
+  },
+  {
+   "name": "Caterpillar roll",
+   "desc": "BBQ eel, cucumber, wrapped with avocado, with house special made sauce",
+   "cents": 1999,
+   "section": "Special rolls",
+   "photo": "kaisen-don-caterpillar-roll"
+  },
+  {
+   "name": "Rainbow roll",
+   "desc": "Imitation crab meat, avocado, wrapped with assorted sashimi",
+   "cents": 2099,
+   "section": "Special rolls",
+   "photo": "kaisen-don-rainbow-roll"
+  },
+  {
+   "name": "Ashland roll",
+   "desc": "Inside : Avocado , Cream cheese , Outside :baked Yellowtail, fish roes , scallion , spicy mayo & house special sauce",
+   "cents": 1999,
+   "section": "Special rolls",
+   "photo": "kaisen-don-ashland-roll"
+  },
+  {
+   "name": "Baked scallop",
+   "desc": "Imitation crab meat, avocado, topped with baked scallop and house special sauce",
+   "cents": 2199,
+   "section": "Special rolls",
+   "photo": "kaisen-don-baked-scallop"
+  },
+  {
+   "name": "Flamango roll",
+   "desc": "Cucumber, avocado wrapped with mango and0 salmon, topped with octopus salad, tobiko and scallion",
+   "cents": 2099,
+   "section": "Special rolls",
+   "photo": "kaisen-don-flamango-roll"
+  },
+  {
+   "name": "Orchard roll",
+   "desc": "Inside imitation crab, avocado. Outside wrap with tuna and avocado. Top with thin slices onion,cucumber",
+   "cents": 2099,
+   "section": "Special rolls",
+   "photo": "kaisen-don-orchard-roll"
+  },
+  {
+   "name": "Estudillo roll",
+   "desc": "Inside salmon , avocado, Outside wraps hamachi , avocado, shiso leaf .top with tobiko flying fish roe ,green onion",
+   "cents": 2199,
+   "section": "Special rolls",
+   "photo": "kaisen-don-estudillo-roll"
+  },
+  {
+   "name": "Davis roll",
+   "desc": "Inside spicy sea scallop , avocado . outside wraps by tuna . top Scallion",
+   "cents": 2199,
+   "section": "Special rolls"
+  },
+  {
+   "name": "Marina roll",
+   "desc": "Inside : spicy tuna , flying fish roe , scallions, cucumber. Outside wraps with yellowtail & albacore tuna .Top with green salad ",
+   "cents": 2199,
+   "section": "Special rolls",
+   "photo": "kaisen-don-marina-roll"
+  },
+  {
+   "name": "Sunset roll",
+   "desc": "Tempura shrimp, cucumber wrapped with tuna, salmon and avocado. Topped with spicy crab, flying fish roes and scallion",
+   "cents": 2199,
+   "section": "Special rolls",
+   "photo": "kaisen-don-sunset-roll"
+  },
+  {
+   "name": "49er roll",
+   "desc": "Real crab meat, avocado, wrapped with salmon and lemon",
+   "cents": 2199,
+   "section": "Special rolls",
+   "photo": "kaisen-don-49er-roll"
+  },
+  {
+   "name": "Manor roll",
+   "desc": "inside Spicy tuna , cucumber . outside wraps with yellowtail & avocado . top with aioli & thin slice Jalapeno pepper",
+   "cents": 2199,
+   "section": "Special rolls",
+   "photo": "kaisen-don-manor-roll"
+  },
+  {
+   "name": "Fairmont Roll",
+   "desc": "Shiso leaf , Scallion , Tuna , Blue fin fatty tuna , Uni \"Sea urchin\"",
+   "cents": 3299,
+   "section": "Special rolls",
+   "photo": "kaisen-don-fairmont-roll"
+  },
+  {
+   "name": "California hand roll",
+   "desc": "Imitation crab , Avocado",
+   "cents": 849,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-california-hand-roll"
+  },
+  {
+   "name": "California hand roll Real crab",
+   "desc": "Real crab , avocado",
+   "cents": 1599,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-california-hand-roll-real-crab"
+  },
+  {
+   "name": "Spicy crab hand roll",
+   "desc": "Spicy imitation crab , cucummber",
+   "cents": 899,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-spicy-crab-hand-roll"
+  },
+  {
+   "name": "Salmon avo hand roll",
+   "desc": "Salmon , avocado",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-salmon-avo-hand-roll"
+  },
+  {
+   "name": "Spicy salmon avo hand roll",
+   "desc": "Spicy Salmon , avocado",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-spicy-salmon-avo-hand-roll"
+  },
+  {
+   "name": "Tuna avo hand roll",
+   "desc": "Tuna , avocado",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-tuna-avo-hand-roll"
+  },
+  {
+   "name": "Spicy tuna hand roll",
+   "desc": "House special mix spicy tuna, cucummber",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-spicy-tuna-hand-roll"
+  },
+  {
+   "name": "Hamachi avo hand roll",
+   "desc": "Hamachi, avocado",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-hamachi-avo-hand-roll"
+  },
+  {
+   "name": "Spicy hamachi avo hand roll",
+   "desc": "Spicy hamachi, avocado",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-spicy-hamachi-avo-hand-roll"
+  },
+  {
+   "name": "Mango salmon hand roll",
+   "desc": "",
+   "cents": 1199,
+   "section": "Hand rolls"
+  },
+  {
+   "name": "Unagi hand roll",
+   "desc": "BBQ fresh water eel , avocado",
+   "cents": 1199,
+   "section": "Hand rolls"
+  },
+  {
+   "name": "Lobster salad hand roll",
+   "desc": "Lobster salad , avocado",
+   "cents": 1399,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-lobster-salad-hand-roll"
+  },
+  {
+   "name": "Spicy scallop hand roll",
+   "desc": "Spicy scallop , avocado",
+   "cents": 1299,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-spicy-scallop-hand-roll"
+  },
+  {
+   "name": "Negihama hand roll",
+   "desc": "Chopped yellowtail with scallion",
+   "cents": 1199,
+   "section": "Hand rolls",
+   "photo": "kaisen-don-negihama-hand-roll"
+  },
+  {
+   "name": "Spicy toro hand roll",
+   "desc": "Spicy toro , scallion , cucumber",
+   "cents": 1899,
+   "section": "Hand rolls"
+  },
+  {
+   "name": "Ika ikura hand roll",
+   "desc": "Fresh squid , house made",
+   "cents": 1699,
+   "section": "Hand rolls"
+  },
+  {
+   "name": "Veggie combo",
+   "desc": "This combo comes with: 1 Kappa maki 1 Oshinko maki 1 Yamagobo maki 1 Kanpyo maki 2 pc Inari",
+   "cents": 3599,
+   "section": "Veggie rolls",
+   "photo": "kaisen-don-veggie-combo"
+  },
+  {
+   "name": "Veggie roll 5 pc.",
+   "desc": "Mix vegetable",
+   "cents": 899,
+   "section": "Veggie rolls",
+   "photo": "kaisen-don-veggie-roll-5-pc"
+  },
+  {
+   "name": "Pear & avocado",
+   "desc": "",
+   "cents": 899,
+   "section": "Classic rolls"
+  },
+  {
+   "name": "Avo mango roll",
+   "desc": "Avocado , mango",
+   "cents": 899,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-avo-mango-roll"
+  },
+  {
+   "name": "Mango & japanese pickle",
+   "desc": "",
+   "cents": 899,
+   "section": "Classic rolls"
+  },
+  {
+   "name": "Veggie tempura roll 5pc.",
+   "desc": "Tempura vegetable",
+   "cents": 999,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-veggie-tempura-roll-5pc"
+  },
+  {
+   "name": "Avocado roll",
+   "desc": "",
+   "cents": 999,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-avocado-roll"
+  },
+  {
+   "name": "Kappa maki",
+   "desc": "cucummber",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-kappa-maki"
+  },
+  {
+   "name": "Mango maki",
+   "desc": "",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-mango-maki"
+  },
+  {
+   "name": "Yamagobo maki",
+   "desc": "Pickled mountain root",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-yamagobo-maki"
+  },
+  {
+   "name": "Kanpyo maki",
+   "desc": "Sweet pickle gourd",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-kanpyo-maki"
+  },
+  {
+   "name": "Oshinko maki",
+   "desc": "Pickled giant radish (Daikon)",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-oshinko-maki"
+  },
+  {
+   "name": "Plum paste ,Saseme seed,perilla leaf",
+   "desc": "",
+   "cents": 799,
+   "section": "Classic rolls"
+  },
+  {
+   "name": "Inari",
+   "desc": "Seasoned fried tofu wrap",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-inari"
+  },
+  {
+   "name": "Pear",
+   "desc": "",
+   "cents": 799,
+   "section": "Classic rolls",
+   "photo": "kaisen-don-pear"
+  },
+  {
+   "name": "#51# House salad",
+   "desc": "Mix green salad with house salad vinaigrette dressing",
+   "cents": 799,
+   "section": "Salads",
+   "photo": "kaisen-don-51-house-salad"
+  },
+  {
+   "name": "Seaweed salad",
+   "desc": "",
+   "cents": 699,
+   "section": "Salads",
+   "photo": "kaisen-don-seaweed-salad"
+  },
+  {
+   "name": "Wakame sunomono",
+   "desc": "Slightly pickled seaweed & cucumber salad",
+   "cents": 899,
+   "section": "Salads",
+   "photo": "kaisen-don-wakame-sunomono"
+  },
+  {
+   "name": "Ika sansai",
+   "desc": "Seasoned cooked Calamari & veggiue salad",
+   "cents": 999,
+   "section": "Salads",
+   "photo": "kaisen-don-ika-sansai"
+  },
+  {
+   "name": "Sashimi salad",
+   "desc": "Green salad & sashimi mixed with house vinaigrette",
+   "cents": 1999,
+   "section": "Salads",
+   "photo": "kaisen-don-sashimi-salad"
+  },
+  {
+   "name": "Albacore tataki",
+   "desc": "Seared albacore, slice onion, scallion, garlic with olive oil and house dressing",
+   "cents": 2099,
+   "section": "Salads",
+   "photo": "kaisen-don-albacore-tataki"
+  },
+  {
+   "name": "Katsuo tataki",
+   "desc": "Seared Skipjack tuna, slice onion, scallion, garlic with olive oil and house salad dressing",
+   "cents": 2999,
+   "section": "Salads"
+  },
+  {
+   "name": "Chicken udon",
+   "desc": "House made soup chicken udon with vegetable & scallion",
+   "cents": 1899,
+   "section": "Noodles",
+   "photo": "kaisen-don-chicken-udon"
+  },
+  {
+   "name": "Beef udon",
+   "desc": "House made soup beef udon with vegetable & scallion",
+   "cents": 1999,
+   "section": "Noodles",
+   "photo": "kaisen-don-beef-udon"
+  },
+  {
+   "name": "Tempura udon",
+   "desc": "House made soup udon with vegetable & shrimp tempura , scallion",
+   "cents": 1899,
+   "section": "Noodles"
+  },
+  {
+   "name": "Shoyu ramen",
+   "desc": "Soy sauce broth ramen noodle , chashu (Roasted pork belly), ajitsuke tamago",
+   "cents": 1799,
+   "section": "Noodles",
+   "photo": "kaisen-don-shoyu-ramen"
+  },
+  {
+   "name": "Zaru soba",
+   "desc": "Cold buck wheat noodle serves house made dipping sauce with scallion , ground radish , wasabi",
+   "cents": 1699,
+   "section": "Noodles",
+   "photo": "kaisen-don-zaru-soba"
+  },
+  {
+   "name": "Zaru somen(cold noodle)",
+   "desc": "Chilled wheat flour noodles ,grated fresh ginger , scallion with dipping sauce",
+   "cents": 1699,
+   "section": "Noodles"
+  },
+  {
+   "name": "Salmon sashimi",
+   "desc": "salmon",
+   "cents": 1599,
+   "section": "Sashimi",
+   "photo": "kaisen-don-salmon-sashimi"
+  },
+  {
+   "name": "Hamachi Nigiri",
+   "desc": "Yellowtail",
+   "cents": 999,
+   "section": "Sashimi",
+   "photo": "kaisen-don-hamachi-nigiri"
+  },
+  {
+   "name": "Tuna sashimi",
+   "desc": "",
+   "cents": 1699,
+   "section": "Sashimi",
+   "photo": "kaisen-don-tuna-sashimi"
+  },
+  {
+   "name": "Albacore Sashimi",
+   "desc": "",
+   "cents": 1599,
+   "section": "Sashimi",
+   "photo": "kaisen-don-albacore-sashimi"
+  },
+  {
+   "name": "Sashimi combo 10 pc.",
+   "desc": "",
+   "cents": 3999,
+   "section": "Sashimi",
+   "photo": "kaisen-don-sashimi-combo-10-pc"
+  },
+  {
+   "name": "Blue Fin Tuna Sashimi 4pc",
+   "desc": "",
+   "cents": 1799,
+   "section": "Sashimi"
+  },
+  {
+   "name": "Ocean trout sashimi (4pc.)",
+   "desc": "",
+   "cents": 1899,
+   "section": "Sashimi"
+  },
+  {
+   "name": "Arctic char",
+   "desc": "",
+   "cents": 1999,
+   "section": "Sashimi"
+  },
+  {
+   "name": "Toro sashimi (4pc)",
+   "desc": "Fatty blue fin tuna",
+   "cents": 3099,
+   "section": "Sashimi",
+   "photo": "kaisen-don-toro-sashimi-4pc"
+  },
+  {
+   "name": "Amberjack yellowtail",
+   "desc": "",
+   "cents": 2099,
+   "section": "Sashimi"
+  },
+  {
+   "name": "Kihada maguro nigiri",
+   "desc": "Aged yellow fin tuna",
+   "cents": 1299,
+   "section": "Nigiri",
+   "photo": "kaisen-don-kihada-maguro-nigiri"
+  },
+  {
+   "name": "Mebachi Maguro Nigiri",
+   "desc": "Aged big eye tuna",
+   "cents": 1399,
+   "section": "Nigiri",
+   "photo": "kaisen-don-mebachi-maguro-nigiri"
+  },
+  {
+   "name": "Tsubugai nigiri",
+   "desc": "Whelk clam",
+   "cents": 1099,
+   "section": "Nigiri",
+   "photo": "kaisen-don-tsubugai-nigiri"
+  },
+  {
+   "name": "Japanese sea snail",
+   "desc": "",
+   "cents": 999,
+   "section": "Nigiri"
+  },
+  {
+   "name": "Salmon Nigiri",
+   "desc": "",
+   "cents": 999,
+   "section": "Nigiri",
+   "photo": "kaisen-don-salmon-nigiri"
+  },
+  {
+   "name": "Salmon Belly Nigiri",
+   "desc": "",
+   "cents": 1099,
+   "section": "Nigiri",
+   "photo": "kaisen-don-salmon-belly-nigiri"
+  },
+  {
+   "name": "Hamachi Belly Nigiri",
+   "desc": "Yellowtail Belly",
+   "cents": 1099,
+   "section": "Nigiri",
+   "photo": "kaisen-don-hamachi-belly-nigiri"
+  },
+  {
+   "name": "Bincho Nigiri",
+   "desc": "Albacore",
+   "cents": 999,
+   "section": "Nigiri",
+   "photo": "kaisen-don-bincho-nigiri"
+  },
+  {
+   "name": "Ebi Nigiri",
+   "desc": "Cooked sushi shrimp",
+   "cents": 899,
+   "section": "Nigiri",
+   "photo": "kaisen-don-ebi-nigiri"
+  },
+  {
+   "name": "Ika Nigiri",
+   "desc": "Squid",
+   "cents": 999,
+   "section": "Nigiri",
+   "photo": "kaisen-don-ika-nigiri"
+  },
+  {
+   "name": "Hirame Nigiri (Seasonal)",
+   "desc": "Halibut",
+   "cents": 1399,
+   "section": "Nigiri",
+   "photo": "kaisen-don-hirame-nigiri-seasonal"
+  },
+  {
+   "name": "Halibut pickled by kelp",
+   "desc": "",
+   "cents": 1499,
+   "section": "Nigiri"
+  },
+  {
+   "name": "Hirame Engawa Nigiri (Seasonal)",
+   "desc": "Fatty halibut",
+   "cents": 1499,
+   "section": "Nigiri",
+   "photo": "kaisen-don-hirame-engawa-nigiri-seasonal"
+  },
+  {
+   "name": "Cooked seasoned octopus",
+   "desc": "",
+   "cents": 999,
+   "section": "Nigiri"
+  },
+  {
+   "name": "Unagi Nigiri",
+   "desc": "BBQ freshwater eel",
+   "cents": 999,
+   "section": "Nigiri",
+   "photo": "kaisen-don-unagi-nigiri"
+  },
+  {
+   "name": "Omelette",
+   "desc": "",
+   "cents": 699,
+   "section": "Nigiri",
+   "photo": "kaisen-don-omelette"
+  }
+ ]
+}

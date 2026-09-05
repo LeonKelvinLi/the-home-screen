@@ -1,0 +1,373 @@
+{
+ "id": "b_pamilya",
+ "source": "text",
+ "pages": [
+  "https://pamilyakitchen.com/",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd",
+  "https://pamilyakitchen.com/contact/",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-fried-milkfish-bangus_9629df35-016b-4d2c-b796-0a7aebdefb7f",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-siomai-pork-shrimp-4pcs_4a5fb7dc-381f-479c-8414-393d3efd0966",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-chicken-empanadas-3pcs_83d0bdab-e42b-4d16-9a9d-c87610ea3dd8",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-lobster-balls-4pc_82888c62-851e-4d5b-82c5-0619c77b9e40"
+ ],
+ "items": [
+  {
+   "name": "Ilocos Empanada 1pc",
+   "desc": "1 pc",
+   "cents": 1199,
+   "section": "Empanadas",
+   "photo": "pamilya-ilocos-empanada-1pc"
+  },
+  {
+   "name": "Bowl",
+   "desc": "",
+   "cents": 1799,
+   "section": "Plates & Bowls"
+  },
+  {
+   "name": "1 Entree Plate + Side Appetizer",
+   "desc": "",
+   "cents": 1995,
+   "section": "Plates & Bowls"
+  },
+  {
+   "name": "2 Entree Plate + Side Appetizer",
+   "desc": "",
+   "cents": 2400,
+   "section": "Plates & Bowls"
+  },
+  {
+   "name": "Longanisa Silog",
+   "desc": "Filipino breakfast sausage served with garlic rice & 2 sunny side up egg, ensalada, atchara (pickled veggies)",
+   "cents": 1995,
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Spam Silog",
+   "desc": "Tocino Spam served with garlic rice & 2 sunny side up eggs, ensalada, and atchara (pickled veggies)",
+   "cents": 1995,
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Pork Tocino Silog",
+   "desc": "Pork Tocino served with garlic rice & 2 sunny side up eggs, ensalada, and atchara (pickled veggies)",
+   "cents": 1995,
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Fried Bangus Silog",
+   "desc": "Fried Milkfish (Bangus) served with garlic rice & 2 sunny side up eggs, ensalada, atchara (pickled veggies)",
+   "cents": 1995,
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Sinigang Soup 32oz",
+   "desc": "",
+   "cents": 2200,
+   "section": "Sinigang"
+  },
+  {
+   "name": "Goldilocks Dinuguan",
+   "desc": "",
+   "cents": 2499,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Goldilocks Bopis",
+   "desc": "",
+   "cents": 2599,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Goldilocks Pinapaitan",
+   "desc": "",
+   "cents": 2499,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Manila Chicken BBQ",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Kuya's Pork BBQ",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Boneless Chicken Adobo",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Honey Fried Chicken Bites",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Crispy Pork Sisig",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Bangus Sisig",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Bicol Express",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Beef Steak Tagalog",
+   "desc": "",
+   "cents": 1695,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Beef Kalderetta",
+   "desc": "",
+   "cents": 1695,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "El Nido Garlic Shrimp",
+   "desc": "",
+   "cents": 1695,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Longanisa 3pc",
+   "desc": "",
+   "cents": 795,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Pork Tocino",
+   "desc": "",
+   "cents": 1595,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "White Rice",
+   "desc": "",
+   "cents": 549,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Garlic Rice",
+   "desc": "",
+   "cents": 725,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Pancit",
+   "desc": "",
+   "cents": 925,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Fried Plantain",
+   "desc": "",
+   "cents": 100,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Lechon Kawali",
+   "desc": "",
+   "cents": 1695,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Veggie Stir Fry",
+   "desc": "",
+   "cents": 725,
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Wawa's Banana Bread",
+   "desc": "",
+   "cents": 1595,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Polvoron Assorted",
+   "desc": "",
+   "cents": 975,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Ube Pillows Party",
+   "desc": "",
+   "cents": 425,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Garlic Peanuts",
+   "desc": "",
+   "cents": 525,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Choc Nut",
+   "desc": "",
+   "cents": 425,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Oishi Salt & Vinegar Cracklings",
+   "desc": "",
+   "cents": 349,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Lychee",
+   "desc": "",
+   "cents": 949,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Strawberry Guava",
+   "desc": "",
+   "cents": 949,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Toffee Peanuts",
+   "desc": "",
+   "cents": 599,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Passion Orange",
+   "desc": "",
+   "cents": 949,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Banana Lumpia",
+   "desc": "",
+   "cents": 975,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Boy Bawang Cornick Garlic",
+   "desc": "",
+   "cents": 199,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Boy Bawang Cornick BBQ",
+   "desc": "",
+   "cents": 199,
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Ube Jelly Salad",
+   "desc": "",
+   "cents": 1175,
+   "section": "Desserts"
+  },
+  {
+   "name": "Halo Halo",
+   "desc": "",
+   "cents": 1075,
+   "section": "Desserts"
+  },
+  {
+   "name": "Mom & Jaeca's Perfect Cake",
+   "desc": "",
+   "cents": 899,
+   "section": "Desserts"
+  },
+  {
+   "name": "Mango Jello",
+   "desc": "",
+   "cents": 795,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sweet Corn Bibinka Mochi",
+   "desc": "",
+   "cents": 249,
+   "section": "Desserts"
+  },
+  {
+   "name": "Wawa's Banana Bread Slice",
+   "desc": "",
+   "cents": 399,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sylvanna",
+   "desc": "",
+   "cents": 475,
+   "section": "Desserts"
+  },
+  {
+   "name": "Mango Calamansi Boba",
+   "desc": "",
+   "cents": 675,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sanzo",
+   "desc": "",
+   "cents": 350,
+   "section": "Desserts"
+  },
+  {
+   "name": "C20 Coconut Water",
+   "desc": "",
+   "cents": 495,
+   "section": "Desserts"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 325,
+   "section": "Desserts",
+   "photo": "pamilya-coca-cola"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 325,
+   "section": "Desserts",
+   "photo": "pamilya-diet-coke"
+  },
+  {
+   "name": "Sprite",
+   "desc": "Classic, cool, crisp lemon-lime flavored taste that's caffeine free",
+   "cents": 325,
+   "section": "Desserts"
+  },
+  {
+   "name": "Calamansi Juice",
+   "desc": "",
+   "cents": 325,
+   "section": "Desserts"
+  },
+  {
+   "name": "Watermelon Calamansi",
+   "desc": "",
+   "cents": 525,
+   "section": "Desserts"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "pamilya-site-0",
+   "alt": "",
+   "credit": "Their own photo, from pamilyakitchen.com"
+  }
+ ]
+}

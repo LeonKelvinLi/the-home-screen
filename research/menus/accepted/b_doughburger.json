@@ -1,0 +1,63 @@
+{
+ "id": "b_doughburger",
+ "source": "square",
+ "pages": [
+  "https://www.doughburger.com/",
+  "https://www.doughburger.com/catering",
+  "https://www.doughburger.com/menu",
+  "https://www.doughburger.com/s/order",
+  "https://www.doughburger.com/merch"
+ ],
+ "items": [
+  {
+   "name": "Fries",
+   "desc": "",
+   "cents": 399,
+   "section": "Fries",
+   "photo": "doughburger-fries"
+  },
+  {
+   "name": "Saucy Fries",
+   "desc": "",
+   "cents": 499,
+   "section": "Fries",
+   "photo": "doughburger-saucy-fries"
+  },
+  {
+   "name": "Triple DoughBurger",
+   "desc": "",
+   "cents": 799,
+   "label": "from $7.99",
+   "section": "Burgers",
+   "photo": "doughburger-triple-doughburger"
+  },
+  {
+   "name": "Milk Shake",
+   "desc": "Indulge in the creamy goodness of our refreshing milkshake! Perfectly blended to satisfy your sweet cravings",
+   "cents": 699,
+   "section": "Shakes",
+   "photo": "doughburger-milk-shake"
+  },
+  {
+   "name": "Soda",
+   "desc": "",
+   "cents": 275,
+   "section": "Drinks",
+   "photo": "doughburger-soda"
+  },
+  {
+   "name": "Smash Fries",
+   "desc": "",
+   "cents": 599,
+   "section": "Fries",
+   "photo": "doughburger-smash-fries"
+  },
+  {
+   "name": "Dough Babbies",
+   "desc": "",
+   "cents": 499,
+   "section": "Treats",
+   "photo": "doughburger-dough-babbies"
+  }
+ ]
+}

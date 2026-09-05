@@ -94,6 +94,21 @@ for (const [id, want, expect] of [
   ['b_calipartybus', 'Cali Party Bus', { hours: 'Mon-Fri 8am-7pm', rows: 8, quote: true }],
   ['b_pijjaparadiselivermore', 'Pijja Paradise', {}],
   ['b_elranchogrande', 'Rancho Grande Taqueria', { hours: 'Mon-Thu and Sat 8am-9pm', call: '(925) 600-8620' }],
+  /* 2026-09-05: the four from the thread, and the full menus with their own
+     photos — a row count well under what each publishes, so a trimmed offer
+     cannot pass for the menu. */
+  ['b_dadsbbq', "Dad's BBQ", { hours: 'Every day 11am-8:30pm', rows: 20 }],
+  ['b_tonysstyle', "Tony's Style", { call: '917-244-4797' }],
+  ['b_caitlynssweets', "Caitlyn's Sweets", {}],
+  ['b_armentalandscape', 'Armenta Landscape Co.', { call: '(925) 481-0609' }],
+  ['b_phonationnewark', 'Pho Nation', { rows: 40 }],
+  ['b_greatimpasta', 'Great Impasta', { rows: 80 }],
+  ['b_pippal', 'Pipp\u0101l', { rows: 60 }],
+  ['b_jackiesplace', "Jackie's Place", { rows: 60 }],
+  ['b_kaisendon', 'Kaisen Don', { rows: 150 }],
+  ['b_1upretro', '1-Up Retro', { rows: 4 }],
+  ['b_walkfree', 'Walk Free', { photos: 3 }],
+  ['b_lushspaw', 'Lush Spaw', { rows: 8, quote: true, call: '(833) 279-5874' }],
   ['b_tastinpeachy', 'Tastin Peachy', { call: '510-685-7876' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })

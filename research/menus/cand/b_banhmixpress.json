@@ -1,0 +1,206 @@
+{
+ "id": "b_banhmixpress",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.banhmixpress.net/",
+  "https://www.banhmixpress.net/menu"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Bánh Mì Xpress- Bánh Mì Đặc Biệt",
+   "desc": "Crispy Vietnamese baguette layered with a variety of premium Vietnamese cold cuts, pork loaf, pâté, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. A flavorful combination of savory, tan",
+   "cents": 935,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi",
+   "image": "https://static.wixstatic.com/media/4767b1_a12ce6b212444102aa8f0d1ee7e9f2f7~mv2.jpg/v1/fill/w_366,h_366,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4767b1_a12ce6b212444102aa8f0d1ee7e9f2f7~mv2.jpg"
+  },
+  {
+   "name": "Bánh Mì Heo Quay-Crispy roast pork",
+   "desc": "Crispy Vietnamese baguette filled with roasted pork belly with crunchy skin, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Savory, juicy, and perfectly crispy in every bite.",
+   "cents": 935,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi",
+   "image": "https://static.wixstatic.com/media/4767b1_43626584cc2f4e7293ed2c20779a9521~mv2.webp/v1/fill/w_328,h_328,al_c,lg_1,q_80,enc_auto/4767b1_43626584cc2f4e7293ed2c20779a9521~mv2.webp"
+  },
+  {
+   "name": "Bánh Mì Bò Nướng-Grilled beef",
+   "desc": "Crispy Vietnamese baguette filled with grilled marinated beef, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Smoky, savory, and bursting with bold Vietnamese flavor.",
+   "cents": 935,
+   "image": "https://static.wixstatic.com/media/4767b1_46f49f219961460c9eafd90297eac945~mv2.webp/v1/fill/w_328,h_328,al_c,lg_1,q_80,enc_auto/4767b1_46f49f219961460c9eafd90297eac945~mv2.webp",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "banh mi"
+  },
+  {
+   "name": "Bánh Mì Thịt Nguội-Vietnamse grilled ham",
+   "desc": "Crispy Vietnamese baguette filled with Vietnamese cold cuts, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. A classic combination of savory meats with fresh and tangy flavors.",
+   "cents": 835,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi"
+  },
+  {
+   "name": "Bánh Mì Chả Lụa- Vietnamese ham",
+   "desc": "Crispy Vietnamese baguette filled with traditional Vietnamese pork sausage, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. A classic Vietnamese sandwich with savory, fresh, and tangy fl",
+   "cents": 835,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi",
+   "image": "https://static.wixstatic.com/media/4767b1_8cf1f5c6ddba49d3aefba5d2c9a2290d~mv2.webp/v1/fill/w_218,h_218,al_c,lg_1,q_80,enc_auto/4767b1_8cf1f5c6ddba49d3aefba5d2c9a2290d~mv2.webp"
+  },
+  {
+   "name": "Bánh Mì Thập Cẩm-Combination",
+   "desc": "Crispy Vietnamese baguette loaded with a variety of Vietnamese meats, pâté, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. A hearty and flavorful combination of savory, fresh, and tangy",
+   "cents": 835,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi"
+  },
+  {
+   "name": "Bánh Mì Xíu Mại-Vienamese meatball",
+   "desc": "Crispy Vietnamese baguette filled with tender Vietnamese meatballs in savory tomato sauce, topped with fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Warm, rich, and full of comforting ",
+   "cents": 835,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi",
+   "image": "https://static.wixstatic.com/media/4767b1_d004e06e53124383a731674f7648600f~mv2.webp/v1/fill/w_312,h_312,al_c,lg_1,q_80,enc_auto/4767b1_d004e06e53124383a731674f7648600f~mv2.webp"
+  },
+  {
+   "name": "Bánh Mì Ốp La-Fried egg",
+   "desc": "Crispy Vietnamese baguette filled with traditional Vietnamese pork sausage and sunny-side-up eggs, topped with fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. A rich and satisfying Vietn",
+   "cents": 735,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi",
+   "image": "https://static.wixstatic.com/media/4767b1_720a22717e024b35bb9ac52b95f3ee1a~mv2.webp/v1/fill/w_214,h_214,al_c,lg_1,q_80,enc_auto/4767b1_720a22717e024b35bb9ac52b95f3ee1a~mv2.webp"
+  },
+  {
+   "name": "Bánh Mì Chả Gà-Vietnamese chicken ham",
+   "desc": "Crispy Vietnamese baguette filled with Vietnamese chicken sausage, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Light, savory, and packed with fresh Vietnamese flavors.",
+   "cents": 835,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi",
+   "image": "https://static.wixstatic.com/media/4767b1_c554d0a74ced435eab6d7c863883a186~mv2.webp/v1/fill/w_328,h_328,al_c,lg_1,q_80,enc_auto/4767b1_c554d0a74ced435eab6d7c863883a186~mv2.webp"
+  },
+  {
+   "name": "Bánh Mì Thịt Nướng- Grilled pork",
+   "desc": "Crispy Vietnamese baguette filled with grilled marinated beef, fresh cucumber, pickled carrots and daikon, cilantro, jalapeños, and house sauce. Smoky, savory, and bursting with bold Vietnamese flavor.",
+   "cents": 835,
+   "alcohol": false,
+   "src": "text",
+   "section": "banh mi"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/88aac0_c4e554553ce844ac95418690822d3fe4~mv2.png",
+   "alt": "",
+   "near": "Savor the Flavor of Vietnam\n\nDelicious Banh Mi Awaits\n\nAt Banh Mi Xpress, we serve authentic Vietnam",
+   "w": 2048,
+   "h": 1152,
+   "page": "https://www.banhmixpress.net/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/a3c153_3592f141741849e8b2cb99afa8e3a412~mv2.jpg/v1/fill/w_1280,h_640,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/a3c153_3592f141741849e8b2cb99afa8e3a412~mv2.jpg",
+   "alt": "",
+   "near": "WELCOME\n\nWelcome to Banh Mi Xpress—where every sandwich brings you a taste of Vietnam. We’re proud t",
+   "w": 1280,
+   "h": 640,
+   "page": "https://www.banhmixpress.net/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_8aaf9c31d98d44b18fd3bc16593a2595~mv2.jpg/v1/fill/w_644,h_635,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4767b1_8aaf9c31d98d44b18fd3bc16593a2595~mv2.jpg",
+   "alt": "1623516427_vietnamese-banh-mi-sandwich-img_6694.jpg",
+   "near": "Our Journey\n\nAt Banh Mi Xpress, every detail reflects a genuine passion for sharing the heart of Vie",
+   "w": 644,
+   "h": 635,
+   "page": "https://www.banhmixpress.net/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/11062b_162017b4425e4372a9bcd4b86983dd8d~mv2.jpg/v1/fill/w_326,h_477,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Balls%20of%20Dough.jpg",
+   "alt": "banh mi dough",
+   "near": "Fresh Ingredients\n\nWe prioritize freshness and quality, ensuring each sandwich is made with the best",
+   "w": 326,
+   "h": 477,
+   "page": "https://www.banhmixpress.net/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_be41d1e222914878a4a9ea30dceaf1eb~mv2.jpg/v1/fill/w_326,h_477,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1623516427_vietnamese-banh-mi-sandwich-img_6694.jpg",
+   "alt": "special banh mi",
+   "near": "Authentic Flavors\n\nOur menu features a variety of traditional Vietnamese fillings, offering somethin",
+   "w": 326,
+   "h": 477,
+   "page": "https://www.banhmixpress.net/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/88aac0_81950854c1c742a7856497acbcf276fe~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 2048,
+   "h": 896,
+   "page": "https://www.banhmixpress.net/"
+  },
+  {
+   "src": "https://static.parastorage.com/services/restaurant-menus-showcase-ooi/32f43626916d61c7230c005be8198518edbcf8b3b64433b47f70e8c6/media/menus_side_image.7077f229.jpeg",
+   "alt": "",
+   "near": "banh mi\nappetizers\nDrinks\nbanh mi\n\nbanh mi served from 7:30am to 6pm\n\nbanh mi\n\nCrispy Vietnamese bag",
+   "w": 3009,
+   "h": 3009,
+   "page": "https://www.banhmixpress.net/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_a12ce6b212444102aa8f0d1ee7e9f2f7~mv2.jpg/v1/fill/w_366,h_366,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/4767b1_a12ce6b212444102aa8f0d1ee7e9f2f7~mv2.jpg",
+   "alt": "Bánh Mì Xpress- Bánh Mì Đặc Biệt",
+   "near": "Bánh Mì Xpress- Bánh Mì Đặc Biệt\n\nCrispy Vietnamese baguette layered with a variety of premium Vietn",
+   "w": 366,
+   "h": 366,
+   "page": "https://www.banhmixpress.net/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_43626584cc2f4e7293ed2c20779a9521~mv2.webp/v1/fill/w_328,h_328,al_c,lg_1,q_80,enc_auto/4767b1_43626584cc2f4e7293ed2c20779a9521~mv2.webp",
+   "alt": "Bánh Mì Heo Quay-Crispy roast pork",
+   "near": "Bánh Mì Heo Quay-Crispy roast pork\n\nCrispy Vietnamese baguette filled with roasted pork belly with c",
+   "w": 328,
+   "h": 328,
+   "page": "https://www.banhmixpress.net/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_46f49f219961460c9eafd90297eac945~mv2.webp/v1/fill/w_328,h_328,al_c,lg_1,q_80,enc_auto/4767b1_46f49f219961460c9eafd90297eac945~mv2.webp",
+   "alt": "Bánh Mì Bò Nướng-Grilled beef",
+   "near": "Bánh Mì Bò Nướng-Grilled beef\n\nCrispy Vietnamese baguette filled with grilled marinated beef, fresh ",
+   "w": 328,
+   "h": 328,
+   "page": "https://www.banhmixpress.net/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_24695bd6623d4f03b25ea06d1f7b1084~mv2.webp/v1/fill/w_319,h_319,al_c,lg_1,q_80,enc_auto/4767b1_24695bd6623d4f03b25ea06d1f7b1084~mv2.webp",
+   "alt": "Bánh Mì Thịt Khìa-Vietnamese styleBraised pork",
+   "near": "Bánh Mì Thịt Khìa-Vietnamese styleBraised pork\n\nCrispy Vietnamese baguette filled with savory braise",
+   "w": 319,
+   "h": 319,
+   "page": "https://www.banhmixpress.net/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_d004e06e53124383a731674f7648600f~mv2.webp/v1/fill/w_312,h_312,al_c,lg_1,q_80,enc_auto/4767b1_d004e06e53124383a731674f7648600f~mv2.webp",
+   "alt": "Bánh Mì Xíu Mại-Vienamese meatball",
+   "near": "Bánh Mì Xíu Mại-Vienamese meatball\n\nCrispy Vietnamese baguette filled with tender Vietnamese meatbal",
+   "w": 312,
+   "h": 312,
+   "page": "https://www.banhmixpress.net/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/4767b1_c554d0a74ced435eab6d7c863883a186~mv2.webp/v1/fill/w_328,h_328,al_c,lg_1,q_80,enc_auto/4767b1_c554d0a74ced435eab6d7c863883a186~mv2.webp",
+   "alt": "Bánh Mì Chả Gà-Vietnamese chicken ham",
+   "near": "Bánh Mì Chả Gà-Vietnamese chicken ham\n\nCrispy Vietnamese baguette filled with Vietnamese chicken sau",
+   "w": 328,
+   "h": 328,
+   "page": "https://www.banhmixpress.net/menu"
+  }
+ ]
+}

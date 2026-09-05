@@ -1,0 +1,234 @@
+{
+ "id": "b_pollyann",
+ "source": "square",
+ "pages": [
+  "https://www.pollyann.com/menu/",
+  "https://www.pollyann.com/menu/",
+  "https://pollyannicecream.square.site/",
+  "https://pollyannicecream.square.site/s/order#most-popular"
+ ],
+ "items": [
+  {
+   "name": "Junior Scoop",
+   "desc": "Junior Scoop",
+   "cents": 525,
+   "section": "Ice cream",
+   "photo": "polly-ann-junior-scoop"
+  },
+  {
+   "name": "1.1 Small Milkshake",
+   "desc": "Milk Shake 16 Oz",
+   "cents": 975,
+   "section": "Drinks",
+   "photo": "polly-ann-1-1-small-milkshake"
+  },
+  {
+   "name": "1.3 Float",
+   "desc": "",
+   "cents": 900,
+   "section": "Drinks",
+   "photo": "polly-ann-1-3-float"
+  },
+  {
+   "name": "1 Regular Milkshake",
+   "desc": "Milkshake 24 Oz",
+   "cents": 1175,
+   "section": "Drinks",
+   "photo": "polly-ann-1-regular-milkshake"
+  },
+  {
+   "name": "Monster Sundae",
+   "desc": "",
+   "cents": 1250,
+   "section": "Ice cream",
+   "photo": "polly-ann-monster-sundae"
+  },
+  {
+   "name": "Regular Sundae",
+   "desc": "2 scoops, 4 Toppings, Whipped cream and cherry",
+   "cents": 1050,
+   "section": "Ice cream",
+   "photo": "polly-ann-regular-sundae"
+  },
+  {
+   "name": "Tiramisu Ice Cream Cake Personal",
+   "desc": "",
+   "cents": 900,
+   "section": "Ice cream",
+   "photo": "polly-ann-tiramisu-ice-cream-cake-personal"
+  },
+  {
+   "name": "Chocolate Bark",
+   "desc": "Broken pieces of chocolate with nuts",
+   "cents": 300,
+   "section": "Ice cream",
+   "photo": "polly-ann-chocolate-bark"
+  },
+  {
+   "name": "Malt",
+   "desc": "",
+   "cents": 100,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Single Scoop",
+   "desc": "Single Scoop",
+   "cents": 625,
+   "section": "Ice cream",
+   "photo": "polly-ann-single-scoop"
+  },
+  {
+   "name": "Ring Pop",
+   "desc": "",
+   "cents": 100,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Chocolate Chip Cookie 🍪 Jumbo",
+   "desc": "Triple chocolate Chip Cookie",
+   "cents": 400,
+   "section": "Ice cream",
+   "photo": "polly-ann-chocolate-chip-cookie-jumbo"
+  },
+  {
+   "name": "Pringles - Small",
+   "desc": "",
+   "cents": 150,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Monster Scoop",
+   "desc": "3 Scoops of Ice Cream",
+   "cents": 1050,
+   "section": "Ice cream",
+   "photo": "polly-ann-monster-scoop"
+  },
+  {
+   "name": "Push Pop",
+   "desc": "",
+   "cents": 200,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Sour Patch / Mamba / Skittles /Nerds",
+   "desc": "",
+   "cents": 200,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Sour Belt x 5",
+   "desc": "",
+   "cents": 100,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Soda Can",
+   "desc": "",
+   "cents": 175,
+   "section": "Drinks",
+   "photo": "polly-ann-soda-can"
+  },
+  {
+   "name": "ITO EN Tea",
+   "desc": "",
+   "cents": 275,
+   "section": "Drinks"
+  },
+  {
+   "name": "Soft Serve - Regular",
+   "desc": "",
+   "cents": 650,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Soft Serve Large",
+   "desc": "",
+   "cents": 850,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Double",
+   "desc": "2 Scoops of Ice cream. Can have 2 flavors with no extra cost.",
+   "cents": 795,
+   "section": "Ice cream",
+   "photo": "polly-ann-double"
+  },
+  {
+   "name": "Pint",
+   "desc": "1 Pint of Premium Ice Cream (16 Oz)",
+   "cents": 1090,
+   "section": "Ice cream",
+   "photo": "polly-ann-pint"
+  },
+  {
+   "name": "Waffle Cone Chocolate Dip",
+   "desc": "",
+   "cents": 125,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Hand packed Quart",
+   "desc": "",
+   "cents": 1790,
+   "section": "Ice cream",
+   "photo": "polly-ann-hand-packed-quart"
+  },
+  {
+   "name": "Slam Dunk Candy",
+   "desc": "",
+   "cents": 300,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Rock Paper Scissor \\ Toy Candy",
+   "desc": "",
+   "cents": 300,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Kinder Egg",
+   "desc": "",
+   "cents": 200,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Muscle Milk",
+   "desc": "",
+   "cents": 500,
+   "section": "Ice cream"
+  },
+  {
+   "name": "Brownie",
+   "desc": "",
+   "cents": 400,
+   "section": "Ice cream",
+   "photo": "polly-ann-brownie"
+  },
+  {
+   "name": "Vegan Container - Pint",
+   "desc": "Pint of Vegan Ice Cream",
+   "cents": 1200,
+   "section": "Ice cream"
+  },
+  {
+   "name": "1.2 Monster Milkshake",
+   "desc": "",
+   "cents": 1295,
+   "section": "Drinks",
+   "photo": "polly-ann-1-2-monster-milkshake"
+  },
+  {
+   "name": "Starbucks Frappuccino 9.5 Oz",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Quart (Pre-Packed)",
+   "desc": "",
+   "cents": 1790,
+   "section": "Ice cream",
+   "photo": "polly-ann-quart-pre-packed"
+  }
+ ]
+}

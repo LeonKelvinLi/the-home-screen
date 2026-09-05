@@ -1,0 +1,83 @@
+{
+ "id": "b_tequilastaqueria",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://tequilastaqueria.net/",
+  "https://tequilastaqueria.net/livermore-ave-orders/",
+  "https://tequilastaqueria.net/locations/",
+  "https://tequilastaqueria.net/orders/san-jose/",
+  "https://tequilastaqueria.net/menu/san-jose/",
+  "https://tequilastaqueria.net/orders/livermore-vasco-road/",
+  "https://tequilastaqueria.net/menu/livermore/"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://tequilastaqueria.net/hero/hero-poster-from-video.jpg",
+   "alt": "",
+   "near": "TEQUILA'S TAQUERIA\nThe Capital of the\nSuper Michelada\n\nMexican food, micheladas, and good times acro",
+   "w": 1920,
+   "h": 1080,
+   "page": "https://tequilastaqueria.net/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/locations/san-jose/exterior-01.jpg",
+   "alt": "Exterior of Tequila's Taqueria in San Jose",
+   "near": "LEIGH AVENUE\nSan Jose\n1052 Leigh Ave, San Jose, CA 95126\n(408) 278-1392\nOrder Now\nView Menu\nView Loc",
+   "w": 2000,
+   "h": 1500,
+   "page": "https://tequilastaqueria.net/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/locations/livermore-vasco-road/exterior-01.jpg",
+   "alt": "Exterior of Tequila's Taqueria on Vasco Road in Livermore",
+   "near": "VASCO ROAD\nVasco Road\n1306 N Vasco Rd, Livermore, CA 94551\n(925) 373-6037\nOrder Now\nView Menu\nView L",
+   "w": 2000,
+   "h": 1500,
+   "page": "https://tequilastaqueria.net/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/locations/livermore-avenue/exterior-01.jpg",
+   "alt": "Exterior of Tequila's Taqueria on Livermore Avenue",
+   "near": "LIVERMORE AVENUE\nLivermore Avenue\n160 S Livermore Ave, Livermore, CA 94550\n(925) 371-1191\nOrder Now\n",
+   "w": 2000,
+   "h": 1500,
+   "page": "https://tequilastaqueria.net/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/brand/career-home-desktop.webp",
+   "alt": "Restaurant team collaborating together inside a Tequila's Taqueria location",
+   "near": "CAREERS\nGrow With Tequila's\n\nCome work in a place where you can be yourself and reach your goals.\n\nE",
+   "w": 1200,
+   "h": 1800,
+   "page": "https://tequilastaqueria.net/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/locations/san-jose/exterior-01.jpg",
+   "alt": "Exterior of Tequila's Taqueria in San Jose",
+   "near": "LEIGH AVENUE\nSan Jose\n1052 Leigh Ave, San Jose, CA 95126\n(408) 278-1392\nOrder Now\nView Menu\nView Loc",
+   "w": 2000,
+   "h": 1500,
+   "page": "https://tequilastaqueria.net/locations/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/locations/livermore-vasco-road/exterior-01.jpg",
+   "alt": "Exterior of Tequila's Taqueria on Vasco Road in Livermore",
+   "near": "VASCO ROAD\nVasco Road\n1306 N Vasco Rd, Livermore, CA 94551\n(925) 373-6037\nOrder Now\nView Menu\nView L",
+   "w": 2000,
+   "h": 1500,
+   "page": "https://tequilastaqueria.net/locations/"
+  },
+  {
+   "src": "https://tequilastaqueria.net/locations/livermore-avenue/exterior-01.jpg",
+   "alt": "Exterior of Tequila's Taqueria on Livermore Avenue",
+   "near": "LIVERMORE AVENUE\nLivermore Avenue\n160 S Livermore Ave, Livermore, CA 94550\n(925) 371-1191\nOrder Now\n",
+   "w": 2000,
+   "h": 1500,
+   "page": "https://tequilastaqueria.net/locations/"
+  }
+ ]
+}

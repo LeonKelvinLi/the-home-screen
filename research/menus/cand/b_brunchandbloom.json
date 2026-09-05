@@ -1,0 +1,861 @@
+{
+ "id": "b_brunchandbloom",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://brunchandbloom.cloveronline.com/",
+  "https://brunchandbloom.cloveronline.com/menu/all",
+  "https://brunchandbloom.cloveronline.com/about",
+  "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR",
+  "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04",
+  "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ",
+  "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Apple Juice",
+   "desc": "",
+   "cents": 400,
+   "image": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "View all items"
+  },
+  {
+   "name": "Avocado",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "View all items"
+  },
+  {
+   "name": "Banana Bread Latte",
+   "desc": "",
+   "cents": 700,
+   "image": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "View all items"
+  },
+  {
+   "name": "Berry Blossom Overnight Oats",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text",
+   "section": "View all items"
+  },
+  {
+   "name": "Berry Blossom Ricotta Toast",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "View all items"
+  },
+  {
+   "name": "Big Trouble Coffee",
+   "desc": "",
+   "cents": 1799,
+   "alcohol": false,
+   "src": "text",
+   "section": "View all items"
+  },
+  {
+   "name": "Biscoff Latte",
+   "desc": "",
+   "cents": 700,
+   "image": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "View all items"
+  },
+  {
+   "name": "Bloom Berry Waffle",
+   "desc": "",
+   "cents": 1600,
+   "image": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "View all items"
+  },
+  {
+   "name": "Garden Shakshuka",
+   "desc": "",
+   "cents": 1800,
+   "image": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "Bloom Breakfast Sammie",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text"
+  },
+  {
+   "name": "Istanbul Morning",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text"
+  },
+  {
+   "name": "Sunrise Street Tacos",
+   "desc": "",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text"
+  },
+  {
+   "name": "Golden Harvest Hash",
+   "desc": "",
+   "cents": 1900,
+   "alcohol": false,
+   "src": "text"
+  },
+  {
+   "name": "Brunch & Bloom Classic",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text"
+  },
+  {
+   "name": "Tropical Morning Chia",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text"
+  },
+  {
+   "name": "Cali Avocado Toast",
+   "desc": "",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text",
+   "section": "TOASTS"
+  },
+  {
+   "name": "Coastal Lox Toast",
+   "desc": "",
+   "cents": 1900,
+   "alcohol": false,
+   "src": "text",
+   "section": "TOASTS"
+  },
+  {
+   "name": "Parisian French Toast",
+   "desc": "",
+   "cents": 1600,
+   "image": "https://cloverstatic.com/menu-assets/items/NG5FFTZ0HD0KR_1500x1125.jpeg?v=1782406998457",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "TOASTS"
+  },
+  {
+   "name": "Peanut Butter Blossom Toast",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "TOASTS"
+  },
+  {
+   "name": "Tuscan Morning Toast",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "TOASTS"
+  },
+  {
+   "name": "Turkey Garden Panini",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "PANINIS & MELTS"
+  },
+  {
+   "name": "Triple Cheese Melt",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "PANINIS & MELTS"
+  },
+  {
+   "name": "Irish Corned Beef Panini",
+   "desc": "",
+   "cents": 1800,
+   "image": "https://cloverstatic.com/menu-assets/items/WW5B49NQ5AHTM_1500x1125.jpeg?v=1781508541060",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "PANINIS & MELTS"
+  },
+  {
+   "name": "Southwest Chicken Panini",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "PANINIS & MELTS"
+  },
+  {
+   "name": "Garden Avocado Pesto Panini",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "PANINIS & MELTS"
+  },
+  {
+   "name": "California Turkey Sammie",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "SAMMIES"
+  },
+  {
+   "name": "Smoky Hot Chicken Sammie",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "SAMMIES"
+  },
+  {
+   "name": "Italian Garden Sammie",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "SAMMIES"
+  },
+  {
+   "name": "Bloom Chopped Salad",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "SALADS & SOUP"
+  },
+  {
+   "name": "Orchard Cobb Salad",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "SALADS & SOUP"
+  },
+  {
+   "name": "Creamy Tomato Soup",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "SALADS & SOUP"
+  },
+  {
+   "name": "‌",
+   "desc": "Lemon Blueberry Waffle",
+   "cents": 1700,
+   "image": "https://cloverstatic.com/menu-assets/items/QYFHWJDXZW5N4_1500x1125.jpeg?v=1782408182170",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "WAFFLES"
+  },
+  {
+   "name": "California Breakfast Waffle",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "WAFFLES"
+  },
+  {
+   "name": "Little Fry Up",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "FOR THE LITTLE ONES"
+  },
+  {
+   "name": "Grilled Cheese Louise",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "FOR THE LITTLE ONES"
+  },
+  {
+   "name": "Pb & Banana Toastie",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "FOR THE LITTLE ONES"
+  },
+  {
+   "name": "Organic Pastured Egg",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Turkey Bacon (2 Pcs)",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Chicken Sausage(2Pcs)",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Chicken Breast",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Turkey",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Smoked Salmon",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Seasonal Fruit Salad",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Toast, Butter",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "EXTRAS"
+  },
+  {
+   "name": "Drip Coffee",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Cappuccino",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Café Americano",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Caramel Latte",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Chai Tea Latte",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Golden Morning Latte",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Lavender Latte",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Vanilla Latte",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "COFFEE & ESPRESSO"
+  },
+  {
+   "name": "Matcha Latte",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "SEASONAL LATTES"
+  },
+  {
+   "name": "Rasberry Lemonade",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "COLD DRINKS"
+  },
+  {
+   "name": "Mint Lemonade",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "COLD DRINKS"
+  },
+  {
+   "name": "Classic Lemonade",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "COLD DRINKS"
+  },
+  {
+   "name": "Lavender Lemonade",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "COLD DRINKS"
+  },
+  {
+   "name": "Bottle Water",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "COLD DRINKS"
+  },
+  {
+   "name": "Hot Tea",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "HOT TEA"
+  },
+  {
+   "name": "Perennial Coffee",
+   "desc": "",
+   "cents": 2499,
+   "alcohol": false,
+   "src": "text",
+   "section": "RETAIL"
+  },
+  {
+   "name": "Brunch And Bloom Coffee Cup",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "RETAIL"
+  },
+  {
+   "name": "Shake",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "UNCATEGORIZED"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/"
+  },
+  {
+   "src": "https://cloverstatic.com/online-assets/merchant-website/F4F0Y058S7891/AA4J9D7T54MVP/welcome/image/welcome",
+   "alt": "Welcome to Brunch & Bloom. Enjoy artisan coffee, scratch-made brunch, and fresh ingredients sourced locally and organically whenever possible. Gather, savor, and bloom with us.",
+   "near": "Welcome to Brunch & Bloom. Enjoy artisan coffee, scratch-made brunch, and fresh ingredients sourced ",
+   "w": 2567,
+   "h": 3000,
+   "page": "https://brunchandbloom.cloveronline.com/"
+  },
+  {
+   "src": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alt": "product image",
+   "near": "Apple Juice\n\n$4.00",
+   "w": 528,
+   "h": 640,
+   "page": "https://brunchandbloom.cloveronline.com/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alt": "product image",
+   "near": "Banana Bread Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alt": "product image",
+   "near": "Biscoff Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alt": "product image",
+   "near": "Bloom Berry Waffle\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alt": "product image",
+   "near": "Garden Shakshuka\n\n$18.00",
+   "w": 528,
+   "h": 640,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/NG5FFTZ0HD0KR_1500x1125.jpeg?v=1782406998457",
+   "alt": "product image",
+   "near": "Parisian French Toast\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WW5B49NQ5AHTM_1500x1125.jpeg?v=1781508541060",
+   "alt": "product image",
+   "near": "Irish Corned Beef Panini\n\n$18.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alt": "product image",
+   "near": "Bloom Berry Waffle\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alt": "product image",
+   "near": "Banana Bread Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alt": "product image",
+   "near": "Biscoff Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/all"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/about"
+  },
+  {
+   "src": "https://cloverstatic.com/online-assets/merchant-website/F4F0Y058S7891/AA4J9D7T54MVP/aboutUs/image/aboutUs",
+   "alt": "BRUNCH & BLOOM - About Us",
+   "near": "About Us\n\nThank you for visiting our restaurant's website. We look forward to serving you delicious ",
+   "w": 1086,
+   "h": 1448,
+   "page": "https://brunchandbloom.cloveronline.com/about"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alt": "product image",
+   "near": "Garden Shakshuka\n\n$18.00",
+   "w": 528,
+   "h": 640,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/NG5FFTZ0HD0KR_1500x1125.jpeg?v=1782406998457",
+   "alt": "product image",
+   "near": "Parisian French Toast\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WW5B49NQ5AHTM_1500x1125.jpeg?v=1781508541060",
+   "alt": "product image",
+   "near": "Irish Corned Beef Panini\n\n$18.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alt": "product image",
+   "near": "Bloom Berry Waffle\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alt": "product image",
+   "near": "Banana Bread Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alt": "product image",
+   "near": "Biscoff Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alt": "product image",
+   "near": "Garden Shakshuka\n\n$18.00",
+   "w": 528,
+   "h": 640,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/NG5FFTZ0HD0KR_1500x1125.jpeg?v=1782406998457",
+   "alt": "product image",
+   "near": "Parisian French Toast\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WW5B49NQ5AHTM_1500x1125.jpeg?v=1781508541060",
+   "alt": "product image",
+   "near": "Irish Corned Beef Panini\n\n$18.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alt": "product image",
+   "near": "Bloom Berry Waffle\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alt": "product image",
+   "near": "Banana Bread Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alt": "product image",
+   "near": "Biscoff Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alt": "product image",
+   "near": "Garden Shakshuka\n\n$18.00",
+   "w": 528,
+   "h": 640,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/NG5FFTZ0HD0KR_1500x1125.jpeg?v=1782406998457",
+   "alt": "product image",
+   "near": "Parisian French Toast\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WW5B49NQ5AHTM_1500x1125.jpeg?v=1781508541060",
+   "alt": "product image",
+   "near": "Irish Corned Beef Panini\n\n$18.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alt": "product image",
+   "near": "Bloom Berry Waffle\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alt": "product image",
+   "near": "Banana Bread Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alt": "product image",
+   "near": "Biscoff Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ"
+  },
+  {
+   "src": "https://www.clover.com/v2/image/Originalontransparent_8837866265073590745.png",
+   "alt": "merchant logo",
+   "near": "BRUNCH & BLOOM\nBRUNCH & BLOOM",
+   "w": 600,
+   "h": 701,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  },
+  {
+   "src": "https://brunchandbloom.cloveronline.com/_next/static/media/defaultImage.16ru-k5mc8~nk.png",
+   "alt": "product image",
+   "near": "Garden Shakshuka\n\n$18.00",
+   "w": 528,
+   "h": 640,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/NG5FFTZ0HD0KR_1500x1125.jpeg?v=1782406998457",
+   "alt": "product image",
+   "near": "Parisian French Toast\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/WW5B49NQ5AHTM_1500x1125.jpeg?v=1781508541060",
+   "alt": "product image",
+   "near": "Irish Corned Beef Panini\n\n$18.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BDC2MSWZA0MS8_1500x1125.jpeg?v=1781508697184",
+   "alt": "product image",
+   "near": "Bloom Berry Waffle\n\n$16.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/014B5CWMWBYDJ_1500x1125.jpeg?v=1782408531165",
+   "alt": "product image",
+   "near": "Banana Bread Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/SK61RYTQ2EEW6_1500x1125.jpeg?v=1782406591578",
+   "alt": "product image",
+   "near": "Biscoff Latte\n\n$7.00",
+   "w": 1500,
+   "h": 1125,
+   "page": "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+  }
+ ]
+}

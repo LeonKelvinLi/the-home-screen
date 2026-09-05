@@ -1,0 +1,415 @@
+{
+ "id": "b_shakashack",
+ "source": "square",
+ "pages": [
+  "https://shaka-shack.square.site/",
+  "https://shaka-shack.square.site/s/order#most-popular"
+ ],
+ "items": [
+  {
+   "name": "Kai's Plate Lunch",
+   "desc": "Plate with your choice of meat and salad. Lava Chicken or Kalua Pork, Tutu’s Mac Salad or Kimchi Cucumber.",
+   "cents": 1700,
+   "label": "from $17.00",
+   "section": "Lunch",
+   "photo": "shaka-shack-kai-s-plate-lunch"
+  },
+  {
+   "name": "Lava Chicken Tropi-Cobb Salad",
+   "desc": "Mango, pineapple, tomato, avocado, edamame, bacon, egg, feta, romaine, lava chicken w/ pineapple balsamic",
+   "cents": 1800,
+   "section": "Lunch",
+   "photo": "shaka-shack-lava-chicken-tropi-cobb-salad"
+  },
+  {
+   "name": "Tea",
+   "desc": "",
+   "cents": 300,
+   "section": "Coffee"
+  },
+  {
+   "name": "Musubi",
+   "desc": "Spam Musubi",
+   "cents": 500,
+   "section": "Snacks",
+   "photo": "shaka-shack-musubi"
+  },
+  {
+   "name": "Hawaiian Chili",
+   "desc": "Portuguese sausage, spam, beef, & bacon w/ black, pinto, kidney & white beans over rice topped w/ green onions, shredded cheese & hawaiian roll",
+   "cents": 1500,
+   "section": "Snacks",
+   "photo": "shaka-shack-hawaiian-chili"
+  },
+  {
+   "name": "Fried Rice Cup",
+   "desc": "Spam Fried Rice",
+   "cents": 500,
+   "section": "Snacks",
+   "photo": "shaka-shack-fried-rice-cup"
+  },
+  {
+   "name": "Keiki (Kids) Spam, Eggs, Rice Breakfast",
+   "desc": "Spam, Eggs, Rice",
+   "cents": 1000,
+   "section": "Keiki menu (12 and under)",
+   "photo": "shaka-shack-keiki-kids-spam-eggs-rice-breakfast"
+  },
+  {
+   "name": "Keiki (Kids) Loco Moco",
+   "desc": "Small Loco Moco",
+   "cents": 1200,
+   "section": "Keiki menu (12 and under)",
+   "photo": "shaka-shack-keiki-kids-loco-moco"
+  },
+  {
+   "name": "Steak (Kalbi) & Eggs",
+   "desc": "Kalbi Short Ribs, Eggs your Way",
+   "cents": 2200,
+   "section": "Breakfast",
+   "photo": "shaka-shack-steak-kalbi-eggs"
+  },
+  {
+   "name": "Garden Breakfast Bowl",
+   "desc": "Eggs your way, House Potatoes, Bell Peppers, Spinach, Onions, Avocado, feta Cheese, Tomatoes, w/ Salsa",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-garden-breakfast-bowl"
+  },
+  {
+   "name": "Big Kahuna Loco Moco",
+   "desc": "Burger, Kalua Pork, Portuguese sausage w/ Fried Rice",
+   "cents": 2600,
+   "section": "Lunch",
+   "photo": "shaka-shack-big-kahuna-loco-moco"
+  },
+  {
+   "name": "Squirt's Kalua Pork Loco Moco",
+   "desc": "Kalua Pork, Rice, Eggs, Gravy add burger $4",
+   "cents": 1900,
+   "section": "Lunch",
+   "photo": "shaka-shack-squirt-s-kalua-pork-loco-moco"
+  },
+  {
+   "name": "Ube Mochi Waffles",
+   "desc": "Ube Mochi Waffle w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-ube-mochi-waffles"
+  },
+  {
+   "name": "Pineapple Upside Down Cake",
+   "desc": "",
+   "cents": 500,
+   "section": "Sweets",
+   "photo": "shaka-shack-pineapple-upside-down-cake"
+  },
+  {
+   "name": "Kimchi Cucumber",
+   "desc": "Kimchi Cucumber Salad",
+   "cents": 400,
+   "section": "Snacks",
+   "photo": "shaka-shack-kimchi-cucumber"
+  },
+  {
+   "name": "Ube Mochi",
+   "desc": "",
+   "cents": 500,
+   "section": "Sweets",
+   "photo": "shaka-shack-ube-mochi"
+  },
+  {
+   "name": "Keiki (Kids) Ube Waffle",
+   "desc": "",
+   "cents": 1000,
+   "section": "Keiki menu (12 and under)",
+   "photo": "shaka-shack-keiki-kids-ube-waffle"
+  },
+  {
+   "name": "Side Portuguese Sausage",
+   "desc": "",
+   "cents": 500,
+   "section": "Snacks",
+   "photo": "shaka-shack-side-portuguese-sausage"
+  },
+  {
+   "name": "Side Burger",
+   "desc": "",
+   "cents": 600,
+   "section": "Snacks"
+  },
+  {
+   "name": "Pineapple POG",
+   "desc": "",
+   "cents": 500,
+   "section": "Drinks",
+   "photo": "shaka-shack-pineapple-pog"
+  },
+  {
+   "name": "Poke Wrap",
+   "desc": "Rice, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger wrapped in a spinach tortilla",
+   "cents": 2000,
+   "section": "Lunch",
+   "photo": "shaka-shack-poke-wrap"
+  },
+  {
+   "name": "Malasadas",
+   "desc": "One Malasada option of filling and sugaring on the outside.",
+   "cents": 300,
+   "section": "Sweets",
+   "photo": "shaka-shack-malasadas"
+  },
+  {
+   "name": "Poke Salad",
+   "desc": "Romaine Lettuce, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger",
+   "cents": 2000,
+   "section": "Lunch",
+   "photo": "shaka-shack-poke-salad"
+  },
+  {
+   "name": "Latte",
+   "desc": "",
+   "cents": 600,
+   "section": "Coffee",
+   "photo": "shaka-shack-latte"
+  },
+  {
+   "name": "Americano",
+   "desc": "",
+   "cents": 500,
+   "section": "Coffee"
+  },
+  {
+   "name": "Iced Taro Vietnamese Coffee",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee",
+   "photo": "shaka-shack-iced-taro-vietnamese-coffee"
+  },
+  {
+   "name": "Side Spam",
+   "desc": "",
+   "cents": 500,
+   "section": "Snacks",
+   "photo": "shaka-shack-side-spam"
+  },
+  {
+   "name": "Poke Bowl",
+   "desc": "Rice, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger",
+   "cents": 2000,
+   "section": "Lunch",
+   "photo": "shaka-shack-poke-bowl"
+  },
+  {
+   "name": "Macchiato",
+   "desc": "",
+   "cents": 600,
+   "section": "Coffee",
+   "photo": "shaka-shack-macchiato"
+  },
+  {
+   "name": "Coke/Diet Coke",
+   "desc": "",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "POG Juice",
+   "desc": "POG = Passion Fruit, Orange, Guava",
+   "cents": 500,
+   "section": "Drinks",
+   "photo": "shaka-shack-pog-juice"
+  },
+  {
+   "name": "Side Lava Chicken",
+   "desc": "",
+   "cents": 600,
+   "section": "Snacks",
+   "photo": "shaka-shack-side-lava-chicken"
+  },
+  {
+   "name": "Lilikoi Lemonade",
+   "desc": "",
+   "cents": 500,
+   "section": "Drinks",
+   "photo": "shaka-shack-lilikoi-lemonade"
+  },
+  {
+   "name": "Coconut Water",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Caramel Macchiato",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee",
+   "photo": "shaka-shack-caramel-macchiato"
+  },
+  {
+   "name": "Capuccino",
+   "desc": "",
+   "cents": 600,
+   "section": "Coffee",
+   "photo": "shaka-shack-capuccino"
+  },
+  {
+   "name": "Syd's Loco Moco",
+   "desc": "Burger, Rice, Eggs your way, Gravy",
+   "cents": 1900,
+   "section": "Lunch",
+   "photo": "shaka-shack-syd-s-loco-moco"
+  },
+  {
+   "name": "Da Kine",
+   "desc": "2 Eggs Your Way, House Potatoes, Rice, Hawaiian Roll Toast",
+   "cents": 1600,
+   "section": "Breakfast",
+   "photo": "shaka-shack-da-kine"
+  },
+  {
+   "name": "Garden Breakfast Burrito",
+   "desc": "House Potatoes, Bell Peppers, Spinach, Onions, Eggs, Avocado, feta Cheese, Tomatoes Wrapped in a Spinach Tortilla w/ Salsa",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-garden-breakfast-burrito"
+  },
+  {
+   "name": "Hawaiian Roll French Toast",
+   "desc": "Hawaiian Rolls Turned Into Tasty French Toast Bites w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-hawaiian-roll-french-toast"
+  },
+  {
+   "name": "Ube Waffles",
+   "desc": "Ube Waffles w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-ube-waffles"
+  },
+  {
+   "name": "Hawaiian Sun",
+   "desc": "Randomly Selected Hawaiian Sun (Based on Availability)",
+   "cents": 300,
+   "section": "Drinks",
+   "photo": "shaka-shack-hawaiian-sun"
+  },
+  {
+   "name": "Keiki (Kids) Mini Dogs",
+   "desc": "Mini Hot Dogs w/ Side of Fresh Fruit",
+   "cents": 1000,
+   "section": "Keiki menu (12 and under)",
+   "photo": "shaka-shack-keiki-kids-mini-dogs"
+  },
+  {
+   "name": "Iced Latte",
+   "desc": "",
+   "cents": 600,
+   "section": "Coffee",
+   "photo": "shaka-shack-iced-latte"
+  },
+  {
+   "name": "Keiki (Kids) Grilled Cheese",
+   "desc": "Grilled Cheese w/ Side of Fresh Fruit",
+   "cents": 1000,
+   "section": "Keiki menu (12 and under)",
+   "photo": "shaka-shack-keiki-kids-grilled-cheese"
+  },
+  {
+   "name": "Keiki (Kids) Mini Burger",
+   "desc": "Slider w/ Side of Fresh Fruit",
+   "cents": 1000,
+   "section": "Keiki menu (12 and under)",
+   "photo": "shaka-shack-keiki-kids-mini-burger"
+  },
+  {
+   "name": "Drip Coffee",
+   "desc": "",
+   "cents": 500,
+   "section": "Coffee",
+   "photo": "shaka-shack-drip-coffee"
+  },
+  {
+   "name": "Tutu's Mac Salad",
+   "desc": "Great grandma’s recipe w/ spaghetti noodles",
+   "cents": 400,
+   "section": "Snacks",
+   "photo": "shaka-shack-tutu-s-mac-salad"
+  },
+  {
+   "name": "Side Kalbi Ribs",
+   "desc": "",
+   "cents": 1100,
+   "section": "Snacks"
+  },
+  {
+   "name": "Matcha Mochi Waffle",
+   "desc": "Matcha Mochi Waffle w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-matcha-mochi-waffle"
+  },
+  {
+   "name": "Side Teri Chicken",
+   "desc": "",
+   "cents": 600,
+   "section": "Snacks"
+  },
+  {
+   "name": "Side Kalua Pork",
+   "desc": "",
+   "cents": 600,
+   "section": "Snacks"
+  },
+  {
+   "name": "Malasada Filling Sampler Half Dozen",
+   "desc": "6 filled malasadas, one of each of our 6 fillings",
+   "cents": 2100,
+   "section": "Sweets",
+   "photo": "shaka-shack-malasada-filling-sampler-half-dozen"
+  },
+  {
+   "name": "Mac Nut Waffle",
+   "desc": "Mac Nut Waffle w/ Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "photo": "shaka-shack-mac-nut-waffle"
+  },
+  {
+   "name": "Stella's Kalbi Rib Loco Moco",
+   "desc": "Kalbi Ribs & an egg your way over rice topped with gravy",
+   "cents": 2400,
+   "section": "Lunch",
+   "photo": "shaka-shack-stella-s-kalbi-rib-loco-moco"
+  },
+  {
+   "name": "Side Bacon",
+   "desc": "",
+   "cents": 500,
+   "section": "Snacks",
+   "photo": "shaka-shack-side-bacon"
+  },
+  {
+   "name": "Keiki (Kids) Teri Chicken Plate Lunch",
+   "desc": "Kids Size Teri Chicken Plate Lunch",
+   "cents": 1200,
+   "section": "Keiki menu (12 and under)"
+  },
+  {
+   "name": "Teri Chicken Tropi-Cobb Salad",
+   "desc": "Mango, pineapple, tomato, avocado, edamame, bacon, egg, feta, romaine, teri chicken w/ pineapple balsamic.",
+   "cents": 1800,
+   "section": "Lunch",
+   "photo": "shaka-shack-teri-chicken-tropi-cobb-salad"
+  },
+  {
+   "name": "Malasada Filling Sampler Dozen",
+   "desc": "12 filled malasadas, two of each of our 6 fillings",
+   "cents": 4200,
+   "section": "Sweets",
+   "photo": "shaka-shack-malasada-filling-sampler-dozen"
+  }
+ ]
+}

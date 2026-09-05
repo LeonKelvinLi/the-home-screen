@@ -1,0 +1,144 @@
+{
+ "id": "b_alpastorpapi",
+ "source": "square",
+ "pages": [
+  "https://www.alpastorpapisf.com/s/order#most-popular",
+  "https://www.alpastorpapisf.com/s/order#most-popular"
+ ],
+ "items": [
+  {
+   "name": "Water",
+   "desc": "Bottled water.",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "Jarritos is a popular Mexican brand of fruit-flavored, carbonated soft drinks.",
+   "cents": 500,
+   "section": "Drinks"
+  },
+  {
+   "name": "Tacos Al Pastor de Trompo",
+   "desc": "Authentic Mexico City Style Tacos Al Pastor: 4 inch Corn Tortilla, Al Pastor de Trompo, Onions, Cilantro and Pineapple",
+   "cents": 500,
+   "section": "Tacos",
+   "photo": "al-pastor-papi-tacos-al-pastor-de-trompo"
+  },
+  {
+   "name": "Kids Burrito",
+   "desc": "Flour tortilla, rice, beans, and cheese. Add meat for an additional $3.00",
+   "cents": 800,
+   "section": "Burritos",
+   "photo": "al-pastor-papi-kids-burrito"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "Topo Chico is a premium, highly carbonated mineral water sourced and bottled in Monterrey, Mexico.",
+   "cents": 500,
+   "section": "Drinks"
+  },
+  {
+   "name": "The Alpastorta",
+   "desc": "Toasted soft roll, grilled al pastor, grilled pineapple, refried pinto beans, melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja",
+   "cents": 1900,
+   "label": "from $19.00",
+   "section": "Tortas",
+   "photo": "al-pastor-papi-the-alpastorta"
+  },
+  {
+   "name": "Classic Taco",
+   "desc": "4-inch Corn tortilla, cilantro, onions, plus your choice of protein.",
+   "cents": 400,
+   "label": "from $4.00",
+   "section": "Tacos",
+   "photo": "al-pastor-papi-classic-taco"
+  },
+  {
+   "name": "Chips and Salsa",
+   "desc": "Tortilla chips and salsa.",
+   "cents": 300,
+   "section": "Sides",
+   "photo": "al-pastor-papi-chips-and-salsa"
+  },
+  {
+   "name": "Vampiro Tacos",
+   "desc": "4 inch corn Tortilla, melted cheese, onions, cilantro.",
+   "cents": 500,
+   "label": "from $5.00",
+   "section": "Tacos",
+   "photo": "al-pastor-papi-vampiro-tacos"
+  },
+  {
+   "name": "Chips And Guacamole",
+   "desc": "Tortilla chips and freshly made, in-house guacamole.",
+   "cents": 1000,
+   "section": "Sides"
+  },
+  {
+   "name": "Bowl",
+   "desc": "Romaine, Spanish rice, black beans (whole or refried), melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja or medium salsa papi verde",
+   "cents": 1800,
+   "label": "from $18.00",
+   "section": "Bowls",
+   "photo": "al-pastor-papi-bowl"
+  },
+  {
+   "name": "Crispy Queso Tacos",
+   "desc": "6-inch crisped corn tortilla, melted cheese, onions, cilantro",
+   "cents": 700,
+   "label": "from $7.00",
+   "section": "Tacos",
+   "photo": "al-pastor-papi-crispy-queso-tacos"
+  },
+  {
+   "name": "Canned Soda",
+   "desc": "Variety of canned sodas.",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "Bottled Gatorade",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Gringa Taco",
+   "desc": "6-inch flour tortilla, melted cheese, onions, cilantro",
+   "cents": 800,
+   "label": "from $8.00",
+   "section": "Tacos",
+   "photo": "al-pastor-papi-gringa-taco"
+  },
+  {
+   "name": "Award Winning Burrito",
+   "desc": "12-inch flour tortilla, spanish rice, black beans (whole or refried), melted cheese, avocado, crema, onions, cilantro",
+   "cents": 1800,
+   "label": "from $18.00",
+   "section": "Burritos",
+   "photo": "al-pastor-papi-award-winning-burrito"
+  },
+  {
+   "name": "Tijuana Style Burrito",
+   "desc": "NO RICE, NO BEANS, 12 inch flour tortilla, melted cheese, avocado, crema, onions, cilantro, spicy salsa papi rojo or medium salsa papi verde.",
+   "cents": 1800,
+   "label": "from $18.00",
+   "section": "Burritos",
+   "photo": "al-pastor-papi-tijuana-style-burrito"
+  },
+  {
+   "name": "Chips",
+   "desc": "Side of tortilla chips",
+   "cents": 200,
+   "section": "Sides"
+  },
+  {
+   "name": "Aguas Frescas",
+   "desc": "A light, non-alcoholic Mexican beverage made by blending fruit, cereals, flowers, or seeds with water, sugar, and lime.",
+   "cents": 500,
+   "section": "Drinks",
+   "photo": "al-pastor-papi-aguas-frescas"
+  }
+ ]
+}

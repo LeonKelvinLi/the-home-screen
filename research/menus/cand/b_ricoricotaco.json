@@ -1,0 +1,1130 @@
+{
+ "id": "b_ricoricotaco",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.ricoricotaco.com/",
+  "https://order.toasttab.com/online/rico-rico-taco#!/",
+  "https://order.toasttab.com/online/rico-rico-taco#main",
+  "https://order.toasttab.com/Menu",
+  "https://order.toasttab.com/our-story",
+  "https://order.toasttab.com/location",
+  "https://order.toasttab.com/catering-order"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Great meals for under",
+   "desc": "— Soleil Ho, San Francisco Chronicle",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "— Soleil Ho, San Francisco Chronicle",
+   "image": "https://images.squarespace-cdn.com/content/v1/5d3e016c4d59b30001efa88a/1564985361704-4II1DBJFCX3FOG96IZCX/RicoRico_Interior_WebRes--2.jpg?format=1500w"
+  },
+  {
+   "name": "Taco de Carnitas",
+   "desc": "one crispy fried pork taco topped with onion, cilantro, salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/wuYoHDMzgIsA0JdxdJvGKqG6_1QqO8JCMb0kc1ciRN0/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/beae6c0c-4bba-4ac6-a5d4-42c930a1debd/MenuItem/79e02958-2656-4659-9b3c-9d810b3cefcb.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "MERCHANDISE"
+  },
+  {
+   "name": "Pollo Asado Burrito",
+   "desc": "flamed grilled chicken, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "MERCHANDISE"
+  },
+  {
+   "name": "Taco de Pollo Asado",
+   "desc": "one flamed grilled chicken taco topped onion, cilantro, salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/m-K8PvAbw8T5WlFDqV_UtsHV-oG1sindPhiF3ho_298/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/beae6c0c-4bba-4ac6-a5d4-42c930a1debd/MenuItem/a5ff0e38-1b07-4130-9a92-2addd50c229b.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "MERCHANDISE"
+  },
+  {
+   "name": "Taco Combo",
+   "desc": "2 Tacos with rice and beans",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "FOOD"
+  },
+  {
+   "name": "3 Tacos with rice and beans",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "FOOD"
+  },
+  {
+   "name": "Taco Al Pastor",
+   "desc": "one spit-roasted pork taco topped with pineapple, onion, cilantro, salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/-Yzxis62XPYEk4VXR_ZaBksSJb3Sb7OU2yzx5bR0d4M/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/4/item-400000000010637474_1738421560.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco de Camaron",
+   "desc": "one sautéed shrimp taco topped with chipotle crema, pico de gallo, salsa",
+   "cents": 575,
+   "image": "https://d1w7312wesee68.cloudfront.net/vKTQEXHn3S_JSh7GRd7bjUo2FaNH78ttqg9x8knc5B4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/0/item-400000000005589150_1738421621.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco de Carne Asada",
+   "desc": "one steak taco topped with onion, cilantro, salsa",
+   "cents": 550,
+   "image": "https://d1w7312wesee68.cloudfront.net/150Pc4tyeJmDk4gGPoihnFUO-VMs37lqpHNqY7CoG1w/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/beae6c0c-4bba-4ac6-a5d4-42c930a1debd/MenuItem/6e9f46ec-65e8-4c26-946b-11b7058a3100.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco de Chorizo",
+   "desc": "one pork chorizo taco topped with pineapple, onion, cilantro, salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/sW94xvJXiqbq6xBM5q1MeK7qIHYSPG_BlO8KM5dY57Q/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/beae6c0c-4bba-4ac6-a5d4-42c930a1debd/MenuItem/a9561093-087d-4d22-b758-935b2b11ea63.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco de Pescado",
+   "desc": "one crispy fried fish taco topped with chipotle crema, cabbage, pico de gallo ,pickled onions",
+   "cents": 575,
+   "image": "https://d1w7312wesee68.cloudfront.net/LsUeFCsl4O94M37ubpAL_gWcQ7i19qzMAiom0-u8XTQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000000005589156_1598758428.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco de Hongos",
+   "desc": "one sautéed mushroom taco topped with queso cotija, salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/-sDObXZ_sph1du8wkeCq3v5mBhSN-DhfjOQBkQxGK7M/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/2/item-400000000726744752_1598758305.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco de Nopal",
+   "desc": "one sautéed cactus taco topped with queso cotija and salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/FlXzMUQ4voQR0LJnknIhhE5eCtbRAwmuoXd3aEIhslY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/1/item-400000001032563661_1598758371.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Taco Veggie",
+   "desc": "one rice & bean taco topped with lettuce, pico de gallo, crema, queso cotija, salsa",
+   "cents": 525,
+   "image": "https://d1w7312wesee68.cloudfront.net/cDLA265BWm-8iySDeT8sWnxXXSc1yltJ5kL8C2FsyxQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000000005589098_1598758661.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tacos"
+  },
+  {
+   "name": "Burrito",
+   "desc": "Bean, Cheese + Rice Burrito",
+   "cents": 900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Alpastor Burrito",
+   "desc": "spit-roasted pork, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Camaron Burrito",
+   "desc": "sautéed shrimp with tomato & onion, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Carne Asada Burrito",
+   "desc": "steak, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Carnitas Burrito",
+   "desc": "crispy fried pork, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Chile Relleno Burrito",
+   "desc": "rice, beans, queso cotija, crema , tomato sauce, salsa",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Chorizo Burrito",
+   "desc": "pork chorizo, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Hongo Burrito",
+   "desc": "sautéed mushroom with tomato & onion, rice, beans, cheese, crema, onion, cilantro, salsa",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Pescado Burrito",
+   "desc": "crispy fried fish, rice, beans, cheese, chipotle crema, pico de gallo, cabbage, avocado sauce, salsa",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Veggie Burrito",
+   "desc": "rice, beans, lettuce, pico de gallo, crema, cheese, avocado sauce, salsa",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Nopal Burrito",
+   "desc": "sautéed cactus with onion, rice, beans, cheese, crema, onion, cilantro, salsa",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "Alpastor Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/jHevAjkJtCm0fyoy8M2nLZ5P861UwRO0TEJzjxvIRY8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000047787776629_1741207523.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Camaron Bowl",
+   "desc": "",
+   "cents": 1625,
+   "image": "https://d1w7312wesee68.cloudfront.net/LwyJO3HJIMc4Yz6vvlmgAbPj8bExx_4yvHHw7-yJRFU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/1/item-400000047787776631_1741207564.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Carne Asada Bowl",
+   "desc": "",
+   "cents": 1525,
+   "image": "https://d1w7312wesee68.cloudfront.net/5pEF3tr9pH9pgrM3VgCl7nqJv4JQv5jwpr-ihXnmcV8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/3/item-400000047787776633_1741207580.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Carnitas Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/kkmoV3O8uHVWOlSWtmY-voQlFoOQ1AYUMZOVfKEkZ7I/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/5/item-400000047787776635_1741207600.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Chorizo Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/LWSm5qbYHaKHnZttrMiEwnRFis_EZeoYJVTJI1gszOM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/7/item-400000047787776637_1741207621.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Pescado Bowl",
+   "desc": "",
+   "cents": 1625,
+   "image": "https://d1w7312wesee68.cloudfront.net/bSmi_OhOx8j7-ykciTxsbN4UKWkR8ngBdQa2cFlEAX0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000047787776639_1741207636.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Pollo Asado Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/pWvhmPm22hQV9vkO7tSrS5Tsij0Pnp5aIWXgKkfJIx0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/1/item-400000047787776641_1741207652.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Veggie Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/Rx6KPFwbIorHBEPxmjc5z8tU2Ib1k0ZHw_rDxYAmFEw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/3/item-400000047787776643_1741207668.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Hongos Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/PsLN6fT5havE45KTbjd4PCuMTzYIP5qb6IuMu51ARb0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/5/item-400000047787776645_1741207690.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Nopal Bowl",
+   "desc": "",
+   "cents": 1425,
+   "image": "https://d1w7312wesee68.cloudfront.net/JgGAhA2iaSIe1EPGN_OLxQLIeMEq6cQiYqhldPfalnA/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/7/item-400000047787776647_1741207704.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Burrito Bowl"
+  },
+  {
+   "name": "Alpastor Quesadilla",
+   "desc": "spit-roasted quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/bmYGg5pnKRaSgFS_KjHGNUUTZnO6kmw_1hV1GqIf7QM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/1/item-400000000491524771_1741206889.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Camaron Quesadilla",
+   "desc": "shrimp quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/shb_Do7_syfnlZOqJAleKQVKALt_HIkiXxxjqsGmBjg/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/2/item-400000000491548342_1741206777.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Carne Asada Quesadilla",
+   "desc": "Asada quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1500,
+   "image": "https://d1w7312wesee68.cloudfront.net/IXulqRJeoFtjakjyFDoEmb_0Bvyf8C9Myav5U5xpyT4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/5/item-400000019298161805_1741206794.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Carnitas Quesadilla",
+   "desc": "crispy fried pork quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/AKcJe-FJkEj_k59zAfzX1sSxPBWkPeg5gSVdkU0GQH4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000000491548346_1741207054.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Chorizo Quesadilla",
+   "desc": "chorizo quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/Xg-qPCuER-BQY8g07y7z6vbR9lIFi5mDjk-erGGWlrQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000022795679009_1741207082.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Hongos Quesadilla",
+   "desc": "mushroom quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/LExIa7pt04kquHhrI-1pXVaUsEfMQNA2oMrGxvnNYSI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/7/item-400000000730752437_1741207111.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Nopal Quesadilla",
+   "desc": "cactus quesadilla served with a side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/IUOK0rgynrvZJBH5pqj978Li5arzxWUqWWH0wXkOxWA/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/5/item-400000002056021235_1741207128.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Pescado Quesadilla",
+   "desc": "crispy fried fish quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1600,
+   "image": "https://d1w7312wesee68.cloudfront.net/_BtbHSBuASjQMuqWbrbuxMREiKMI073m6DnJFaNgNkw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/0/item-400000000491548700_1741207146.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Pollo Asado Quesadilla",
+   "desc": "flamed grilled chicken quesadilla served with a side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1400,
+   "image": "https://d1w7312wesee68.cloudfront.net/C5cMManO9X5R-SN-oQNMjYYRJYs5NIFGw56hwpFsC0E/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/2/item-400000000491548702_1741207172.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Quesadilla de Queso",
+   "desc": "cheese quesadilla served with side of lettuce, pico de gallo, crema, salsa",
+   "cents": 1200,
+   "image": "https://d1w7312wesee68.cloudfront.net/cXSpmlt0Tv0ZC5FRSLNNibECnUFqXZIuVBXHoROEu2s/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000000851220839_1741207187.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Harina Quesadilla"
+  },
+  {
+   "name": "Quesadilla De Masa",
+   "desc": "Corn quesadilla filled with your choice of protein, lettuce, queso cotija, crema, salsa",
+   "cents": 1350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Quesadilla de Masa"
+  },
+  {
+   "name": "Huarachito",
+   "desc": "handmade oval fried corn tortilla filled with refried beans, topped with choice of meat or nopales, onion, cilantro, queso cotija, salsa",
+   "cents": 1150,
+   "image": "https://d1w7312wesee68.cloudfront.net/6RtnMWHpw9D3knwJtM2ISMH1h2iTQiPZkKktXrkVVRg/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000000088378836_1598760357.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Huarachito"
+  },
+  {
+   "name": "Chille Relleno",
+   "desc": "roasted chile poblano stuffed with cheese, dipped in egg batter, served in tomato sauce, served with rice and two tortillas",
+   "cents": 1595,
+   "image": "https://d1w7312wesee68.cloudfront.net/kvf7PLVwqHgTfi9FurPquXAQffI5xBTB90zuvisBmcE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/1/item-400000000005589781_1598759392.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Plates"
+  },
+  {
+   "name": "Flautas",
+   "desc": "four crispy tortillas filled with chicken, topped with lettuce, cabbage, crema, queso cotija, pickled onions, salsa, served with rice",
+   "cents": 1675,
+   "image": "https://d1w7312wesee68.cloudfront.net/QLw69Txm7jOkcgk9ixw84belV2OdjryfOFryKh8gEfs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/2/item-400000000005589792_1741208002.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Plates"
+  },
+  {
+   "name": "Sopes",
+   "desc": "Two sopes topped with lettuce, cabbage, crema, queso cotija, pickled onions, tomato salsa, served with rice",
+   "cents": 1675,
+   "image": "https://d1w7312wesee68.cloudfront.net/-veAjvIOFBDeQ1epFXWlg7bjG3AKYyC-DpbE0iyrXNE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000006566526069_1741206644.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Plates"
+  },
+  {
+   "name": "House Salad",
+   "desc": "deep fried tortilla topped with black beans, mixed greens, lettuce, radish, carrots, pico de gallo, queso cotija, salsa",
+   "cents": 1250,
+   "image": "https://d1w7312wesee68.cloudfront.net/XNX_V8WjSR58vTlgkmOmc3rFaCJfGDTHg_AKSZcVCPs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/2/item-400000000498136532_1741208136.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Chips + Avocado Sauce + Salsa",
+   "desc": "Chips + Avocado Sauce + Salsa",
+   "cents": 375,
+   "image": "https://d1w7312wesee68.cloudfront.net/t0XtW5DjdMgEKX-Xnf8Vsq8H2vdRXrlMiUZ99k_kKeo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000000005590768_1598760715.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Chips + Chunky Guacamole",
+   "desc": "",
+   "cents": 550,
+   "image": "https://d1w7312wesee68.cloudfront.net/vJqf3RixB8fnUyXT-o85AlJGwGHJdA-LckvKQ0GyYrI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000050700242288_1741208066.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Chips & Pico De Gallo",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Chips",
+   "desc": "",
+   "cents": 275,
+   "image": "https://d1w7312wesee68.cloudfront.net/8b3aikzQplFicWY5WPF9qbip8SxDC3TvzXr02LQttT8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000000005590766_1611024878.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Chunky Guacamole",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Avocado Sauce",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Pico De Gallo",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Rice",
+   "desc": "",
+   "cents": 275,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads",
+   "image": "https://d1w7312wesee68.cloudfront.net/cDLA265BWm-8iySDeT8sWnxXXSc1yltJ5kL8C2FsyxQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000000005589098_1598758661.jpg"
+  },
+  {
+   "name": "Beans",
+   "desc": "",
+   "cents": 275,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads",
+   "image": "https://d1w7312wesee68.cloudfront.net/6RtnMWHpw9D3knwJtM2ISMH1h2iTQiPZkKktXrkVVRg/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000000088378836_1598760357.jpg"
+  },
+  {
+   "name": "Rice & Beans",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "3 Tortillas",
+   "desc": "",
+   "cents": 225,
+   "image": "https://d1w7312wesee68.cloudfront.net/JAd3KZQkaGUDHlsi7KcAvPrcP51-Z50h8NKNI10gbjM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000000525387309_1598759997.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Avocado sauce (3) packets",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Crema",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side of Mozzarella Cheese (negro)",
+   "desc": "",
+   "cents": 175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Side de Cotija (clear)",
+   "desc": "",
+   "cents": 175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salads"
+  },
+  {
+   "name": "Kids Burrito",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Kids Quesadilla",
+   "desc": "Flour quesadilla served with a side of sour cream",
+   "cents": 700,
+   "image": "https://d1w7312wesee68.cloudfront.net/8kN2aJyLIh9De6FKnmJ4F_o1qST00fgyN5jHhXtsLm0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/5/item-400000000600851755_1598760867.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Kids"
+  },
+  {
+   "name": "Pacifico",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Corona",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Modelo",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Negra Modelo",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "IPA",
+   "desc": "",
+   "cents": 425,
+   "alcohol": true,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Michelada",
+   "desc": "Who is ready for a spicy Michelada? Canned Michelada Available.",
+   "cents": 850,
+   "image": "https://d1w7312wesee68.cloudfront.net/uPN4RzWoiPM3UeU1IX0jG4flCKPfiMOQ_MtHjb_W5Qk/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/beae6c0c-4bba-4ac6-a5d4-42c930a1debd/MenuItem/8864a876-304f-4c63-bd88-d1b17567e757.jpg",
+   "alcohol": true,
+   "src": "text+card",
+   "section": "Kids"
+  },
+  {
+   "name": "Dos XX Lager",
+   "desc": "",
+   "cents": 425,
+   "alcohol": true,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Michelada Mix",
+   "desc": "",
+   "cents": 450,
+   "alcohol": true,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Coors Light",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Bohemia",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Heineken Non Alcoholic",
+   "desc": "",
+   "cents": 475,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Dos XX Ambar",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Kids"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 375,
+   "image": "https://d1w7312wesee68.cloudfront.net/9jLDrWCN8-K7AFqZw5dcDzxE0awbePzB2I455OIpBKQ/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Coca-Cola_Fountain.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Refrescos Mexicanos"
+  },
+  {
+   "name": "Diet Coke, Can",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 200,
+   "image": "https://d1w7312wesee68.cloudfront.net/EgyCmEto4U0RZ_Zr9-VfN0CkxGJe-pzoUdWoT8AprqU/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Diet_Coke_Can.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Jarrito- Mandarin",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Jarrito- Tamarindo",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Jarrito - Fruit Punch",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Jarrito -Mineral Water",
+   "desc": "Topo Chico has always been known for the legend surrounding its origins. Whether you believe in the legend or not, you'll still be able to enjoy the crisp, no-calorie taste of Topo Chico.",
+   "cents": 375,
+   "image": "https://d1w7312wesee68.cloudfront.net/MLZYAD2s0dsz493eZ1e-4dX-UUlrKVBIoH9lu1Ls-BQ/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Topo_Chico_Glass_Bottle.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Squirt",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Jarrito- Lime",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "HORCHATA",
+   "desc": "",
+   "cents": 460,
+   "image": "https://d1w7312wesee68.cloudfront.net/UbMxVUs052lugKu1usVJTxVuzVGsQ-KkZSFXtBU2lTw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000000005590738_1598761638.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "JAMAICA",
+   "desc": "",
+   "cents": 460,
+   "image": "https://d1w7312wesee68.cloudfront.net/FqJprH3fw6sMiZ_Tdst7N1jjkN1b60GnGJzRchJXeBw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/0/item-400000000005590740_1598761689.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "SANDIA",
+   "desc": "",
+   "cents": 460,
+   "image": "https://d1w7312wesee68.cloudfront.net/EAJWOWbqGkZdbT_D43zN1FfXXInezJ3sLd1tu_v3nFA/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/0/item-400000002466232160_1741206565.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "PIÑA",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "FRESA",
+   "desc": "",
+   "cents": 460,
+   "image": "https://d1w7312wesee68.cloudfront.net/GnVeEg0u2kmqkqb92STbmc8XCewWTLTRSrkQdQaBhmQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000000005590736_1598761532.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Diet Coke, Can"
+  },
+  {
+   "name": "Water",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Other",
+   "image": "https://d1w7312wesee68.cloudfront.net/MLZYAD2s0dsz493eZ1e-4dX-UUlrKVBIoH9lu1Ls-BQ/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Topo_Chico_Glass_Bottle.jpg"
+  },
+  {
+   "name": "20 Tacos",
+   "desc": "",
+   "cents": 9500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "30 Tacos",
+   "desc": "",
+   "cents": 13500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "40 Tacos",
+   "desc": "",
+   "cents": 17000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "50 Tacos",
+   "desc": "",
+   "cents": 21250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos"
+  },
+  {
+   "name": "20 Mini Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 14000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Burritos"
+  },
+  {
+   "name": "30 Mini Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 21000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Burritos"
+  },
+  {
+   "name": "40 Mini Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 28000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Burritos"
+  },
+  {
+   "name": "50 Mini Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 35000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Burritos"
+  },
+  {
+   "name": "20 Mini Breakfast",
+   "desc": "",
+   "cents": 15000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Breakfast Burritos"
+  },
+  {
+   "name": "30 Mini Breakfast",
+   "desc": "",
+   "cents": 22500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Breakfast Burritos"
+  },
+  {
+   "name": "40 Mini Breakfast",
+   "desc": "",
+   "cents": 30000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Breakfast Burritos"
+  },
+  {
+   "name": "50 Mini Breakfast",
+   "desc": "",
+   "cents": 37500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Breakfast Burritos"
+  },
+  {
+   "name": "60 Mini Breakfast",
+   "desc": "",
+   "cents": 45000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Mini Breakfast Burritos"
+  },
+  {
+   "name": "20 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 26000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos"
+  },
+  {
+   "name": "30 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 39000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos"
+  },
+  {
+   "name": "40 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 52000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos"
+  },
+  {
+   "name": "50 Burritos",
+   "desc": "Protein choice, rice, beans, cheese, crema, onion, cilantro, avocado sauce, salsa",
+   "cents": 65000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos"
+  },
+  {
+   "name": "Chips, Salsa, Avocado Sauce (10-15)",
+   "desc": "",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/t7K_eH0Y9_mKq-OlOz8aYGfepNCeK-6KFD6ngkg7sC0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/9/item-400000030603034289_1741208808.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Chips, Salsa & Avocado"
+  },
+  {
+   "name": "Chips + Chunky Guacamole (10-15)",
+   "desc": "",
+   "cents": 4500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chips, Salsa & Avocado"
+  },
+  {
+   "name": "Chunky Guacamole",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chips, Salsa & Avocado",
+   "image": "https://d1w7312wesee68.cloudfront.net/vJqf3RixB8fnUyXT-o85AlJGwGHJdA-LckvKQ0GyYrI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000050700242288_1741208066.jpg"
+  },
+  {
+   "name": "Rice (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Rice"
+  },
+  {
+   "name": "Frijol Negro (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "image": "https://d1w7312wesee68.cloudfront.net/RUXwyTIROhneRsCVNYqAuvIJ_QrTYrIpHsuNUtz5HYs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/1/item-400000030603031491_1741208664.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Beans"
+  },
+  {
+   "name": "Frijol Pinto (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "image": "https://d1w7312wesee68.cloudfront.net/EbvUnzVWlZF7maVuUbX0MWQAQ_O9NiZAnUqas1YbHrg/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/3/item-400000030603031493_1741208687.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Beans"
+  },
+  {
+   "name": "Frijol Refrito (10-15)",
+   "desc": "",
+   "cents": 2500,
+   "image": "https://d1w7312wesee68.cloudfront.net/X-gOj3Raj1FfJ8GO50llnEFnka-2wXlrHea5ympQtyw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/5/item-400000030603031495_1741208719.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Beans"
+  },
+  {
+   "name": "Salad (10-15)",
+   "desc": "",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/QHpJuLGYeyZW-MR1FTAcblooJMp5hfRGcvnsWkgkMDo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000030603033536_1741208358.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salad"
+  },
+  {
+   "name": "Salad Vegan",
+   "desc": "",
+   "cents": 4500,
+   "image": "https://d1w7312wesee68.cloudfront.net/2aDqWHGTH_KPhtS-_2nwi-eqLUtOwOoDWNyKfTiNNvg/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/0/item-400000030919981400_1741208514.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salad"
+  },
+  {
+   "name": "96 fl oz of Agua Fresca (Serves 8-10)",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresa Traveler"
+  },
+  {
+   "name": "96 fl oz of Michelada Mix (25)",
+   "desc": "",
+   "cents": 5000,
+   "alcohol": true,
+   "src": "text",
+   "section": "Michelada Mix Traveler"
+  },
+  {
+   "name": "40 Flautas",
+   "desc": "",
+   "cents": 14000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Other"
+  },
+  {
+   "name": "Raglan",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Other"
+  },
+  {
+   "name": "Zip-Up",
+   "desc": "",
+   "cents": 3200,
+   "image": "https://d1w7312wesee68.cloudfront.net/NOAunpz7rFuy-SAvPn_tlBkwGT2do2B1mwQbGo5UpVU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/2/item-400000019290479292_1650399701.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Other"
+  },
+  {
+   "name": "Crew Neck",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/uJRYq47XTaS9321wZ66HPOfo4offXHmKr6ARhoPutao/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/8/item-400000009381466758_1650399866.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tees"
+  },
+  {
+   "name": "Ringer Tee",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/CWvOHvI1T7mRuC2zdN0MX6YCNTYodXBwi8DIvfFF3ng/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-19045000000000000/menu/items/6/item-400000009381466756_1650398333.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tees"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/5d3e016c4d59b30001efa88a/1564985361704-4II1DBJFCX3FOG96IZCX/RicoRico_Interior_WebRes--2.jpg?format=1500w",
+   "alt": "RicoRico_Interior_WebRes--2.jpg",
+   "near": "“\nOakland’s Rico Rico and the joy of finding your favorite tacos.\n— Soleil Ho, San Francisco Chronic",
+   "w": 1080,
+   "h": 721,
+   "page": "https://www.ricoricotaco.com/"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/5d3e016c4d59b30001efa88a/1564985644826-TCQ3VFRB1N3H62CH42HF/RicoRico_Cooking_WebRes-5129.jpg?format=1500w",
+   "alt": "RicoRico_Cooking_WebRes-5129.jpg",
+   "near": "",
+   "w": 1080,
+   "h": 721,
+   "page": "https://www.ricoricotaco.com/"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/5d3e016c4d59b30001efa88a/1564985760351-OQS7ZNMLMJG13B03JOF6/RicoRico_Cooking_WebRes--5.jpg?format=1500w",
+   "alt": "RicoRico_Cooking_WebRes--5.jpg",
+   "near": "",
+   "w": 1080,
+   "h": 721,
+   "page": "https://www.ricoricotaco.com/"
+  },
+  {
+   "src": "https://images.squarespace-cdn.com/content/v1/5d3e016c4d59b30001efa88a/1564985818876-VAQIL0QFPPQMLEEVQJ3Y/RicoRico_Menu_Web--27.jpg?format=1500w",
+   "alt": "RicoRico_Menu_Web--27.jpg",
+   "near": "",
+   "w": 1080,
+   "h": 721,
+   "page": "https://www.ricoricotaco.com/"
+  }
+ ]
+}

@@ -1,0 +1,182 @@
+{
+ "id": "b_cafenoiroak",
+ "source": "text",
+ "pages": [
+  "https://www.cafenoiroak.com/",
+  "https://www.cafenoiroak.com/menu",
+  "https://www.cafenoiroak.com/catering",
+  "https://order.toasttab.com/online/cafe-noir-oakland-prescott-market-1620-18th-street",
+  "https://www.doordash.com/store/cafe-noir-oakland-25223365/?pickup=true",
+  "https://www.grubhub.com/restaurant/cafe-noir-1620-18th-st-oakland/11970080",
+  "https://www.cafenoiroak.com/s/Catering-Menu-2025.pdf"
+ ],
+ "items": [
+  {
+   "name": "Jerk Salmon",
+   "desc": "Fire roasted salmon filet with coconut rice and fried plantains; topped with mango salsa; cooked to medium",
+   "cents": 2450,
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Noir Jollof",
+   "desc": "Grilled chicken and shrimp with jollof style rice Spicy",
+   "cents": 2100,
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Mushroom Fettuccine",
+   "desc": "Fresh Fettuccine pasta with a wild mushroom cream sauce",
+   "cents": 1850,
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Braised Oxtail, whipped mash potatoes, seasonal mix vegetables",
+   "desc": "",
+   "cents": 3200,
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Braised Beef over Mash",
+   "desc": "Braised beef that we cook for 12 hours, decadent brown gravy over mash potatoes and seasonal mixed veg",
+   "cents": 2800,
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "Fried Chicken Sandwich w/fries",
+   "desc": "Our infamous chicken sando is available for Ballers Games this season!!",
+   "cents": 1900,
+   "section": "Dinner Entrees"
+  },
+  {
+   "name": "BBQ CHICKEN TACO SALAD",
+   "desc": "Our infamous salad has made its way to dinner! Cabbage, arugula, pickled red onions, pickled jalapenos, cucumber, black beans, corn, shredded cheese",
+   "cents": 1850,
+   "section": "Lunch"
+  },
+  {
+   "name": "*SPECIAL* Arugula Pesto Ricotta Gnocchi",
+   "desc": "House made ricotta gnocchi with our arugula pest made with sunflower seeds... so no worries for any nut allergies! Vegetarian add meat as an add on",
+   "cents": 1400,
+   "section": "Lunch"
+  },
+  {
+   "name": "Cran Apple Salad",
+   "desc": "Arugula salad with cranberry compote, goat cheese and candied walnuts; citrus vinagrette",
+   "cents": 1350,
+   "section": "Salads"
+  },
+  {
+   "name": "Mixed Green Salad",
+   "desc": "Spinach and arugula, pickled red onions and cherry tomatoes, citrus vinaigrette",
+   "cents": 1150,
+   "section": "Salads"
+  },
+  {
+   "name": "Ricotta Donuts",
+   "desc": "Ricotta, lemon, fluffy and fried to perfection Small: 4 donuts Large: 8 donuts",
+   "cents": 800,
+   "section": "Dessert"
+  },
+  {
+   "name": "BIG OL' COOKIE",
+   "desc": "",
+   "cents": 400,
+   "section": "Dessert"
+  },
+  {
+   "name": "Lemonade",
+   "desc": "Fresh squeezed lemonade sweetened by house made simple syrup",
+   "cents": 550,
+   "section": "Drinks"
+  },
+  {
+   "name": "Sorrel",
+   "desc": "Carribean hibiscus drink that is spiced with citrus, ginger, nutmeg and cinnamon; we nicknamed it 'Christmas in a cup\"! Served hot or cold",
+   "cents": 450,
+   "section": "Drinks"
+  },
+  {
+   "name": "Coca-Cola, 12oz",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "cafe-noir-oak-coca-cola-12oz"
+  },
+  {
+   "name": "Green Juice",
+   "desc": "",
+   "cents": 900,
+   "section": "Drinks"
+  },
+  {
+   "name": "Cafe Duran Coffee",
+   "desc": "Imported Coffee from Panama; Small Hot 3.50 Large Hot 4.50 Cold (one size) 4.50",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "Infused Spa Water",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks"
+  },
+  {
+   "name": "MIMOSAS",
+   "desc": "Choice of Tamarind, Honey Pasion Fruit and Mango",
+   "cents": 1000,
+   "section": "Drinks"
+  },
+  {
+   "name": "*SIDE* Jollof Rice",
+   "desc": "Our Jollof rice with garlic and green onions (vegetarian)",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "*SIDE* Coconut Rice",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "*SIDE* Fried Plantains",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides"
+  },
+  {
+   "name": "Side Salad",
+   "desc": "Mixed Green with cucumber, carrots and cherry tomatoes",
+   "cents": 550,
+   "section": "Sides"
+  },
+  {
+   "name": "Pepper Sauce",
+   "desc": "Our habanero sauce to take home!! Its a 3 oz bottle of our spicy goodness; comes in a recyclable glass bottle",
+   "cents": 500,
+   "section": "Sides"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "cafe-noir-oak-site-3",
+   "alt": "Brunch bowl with sunny-side-up eggs, roasted potatoes, and seasonal vegetables drizzled with herb sauce at Café Noir, a ",
+   "credit": "Their own photo, from cafenoiroak.com"
+  },
+  {
+   "photo": "cafe-noir-oak-site-4",
+   "alt": "Braised beef short ribs with creamy mashed potatoes and green beans at Café Noir, a Black-owned restaurant in Oakland. C",
+   "credit": "Their own photo, from cafenoiroak.com"
+  },
+  {
+   "photo": "cafe-noir-oak-site-5",
+   "alt": "Blackened shrimp with grilled corn, savory bites, and fresh herbs at Café Noir, a Black-owned restaurant serving gourmet",
+   "credit": "Their own photo, from cafenoiroak.com"
+  },
+  {
+   "photo": "cafe-noir-oak-site-6",
+   "alt": "Rich chocolate cake topped with dark cherry compote at Café Noir, a Black-owned gourmet comfort food restaurant in Oakla",
+   "credit": "Their own photo, from cafenoiroak.com"
+  }
+ ]
+}

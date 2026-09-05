@@ -1,0 +1,1332 @@
+{
+ "id": "b_pizzeriacardamomo",
+ "source": "jsonld",
+ "alt": {
+  "text": 54
+ },
+ "pages": [
+  "https://pizzeriacardamomo.com/",
+  "https://pizzeriacardamomo.com/menu",
+  "https://pizzeriacardamomo.com/catering",
+  "https://pizzeriacardamomo.com/page/beer-and-wine",
+  "https://pizzeriacardamomo.com/tags/margherita-pizza",
+  "https://pizzeriacardamomo.com/tags/meatballs",
+  "https://pizzeriacardamomo.com/tags/white-pizza"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Nonna Arancini",
+   "desc": "4 pieces of deep-fried rice balls, Pecorino Romano, Parmesan, Garlic, Parsley, and Pepper served with Parmesan sauce.",
+   "cents": 1200,
+   "section": "Specials",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pizza ItaloAmericana",
+   "desc": "Organic tomato sauce, special cherry tomatoes confit, fresh burrata, ground beef sausage and hot honey.",
+   "cents": 2800,
+   "section": "Specials",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pasta Cacio E Pepe",
+   "desc": "Cream Cacio E Pepe, house-made pecorino cream, Madagascar voatsiperifery pepper, lemon zest.",
+   "cents": 2600,
+   "section": "Specials",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Rigatoni Al Vodka",
+   "desc": "Shallots, vodka, slow cooked fresh organic tomato sauce, heavy cream, parmigiana reggiano.",
+   "cents": 2600,
+   "section": "Specials",
+   "alcohol": true,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fresh Bread Baked (VG)",
+   "desc": "Fresh sourdough bread from The Baker Next Door.",
+   "cents": 500,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/funnel/images/7cd89200-229c-41bc-b8e9-85165f102c01?v=8873311549",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Bruschetta (V)",
+   "desc": "Toasted sourdough, stracciatella, slow cooked cherry tomatoes.",
+   "cents": 1400,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/funnel/images/c302ceab-bdca-4c87-aa8b-357f4e6c9f2a?v=6261328751",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Arancini Cacio e Pepe",
+   "desc": "Crispy risotto fritter with pecorino and parmigiano reggiano.",
+   "cents": 1300,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/n0nEu9HoEl17.jpg?v=6940007340",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Marinated Taggiasca Olive (VG)",
+   "desc": "Lemon, cumin, chili served with fresh homemade bread.",
+   "cents": 1200,
+   "section": "Antipasti",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Meatballs",
+   "desc": "Ground beef meatballs seasoned with marinara sauce and voatsiperifery pepper.",
+   "cents": 1400,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/Eylr8wdX3bwF.jpg?v=2229816832",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Aglio Bruschetta",
+   "desc": "Toasted sourdough, garlic puree, slow cooked cherry tomatoes, mint.",
+   "cents": 1400,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/funnel/images/a9f43c0d-7044-475d-920f-26e8420c4560?v=0712483714",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Habanero Oil",
+   "desc": "",
+   "cents": 900,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/funnel/images/6760cd05-8c6e-4153-91e7-754f0f2db048?v=3249572514",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Garlic Oil",
+   "desc": "",
+   "cents": 1000,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/funnel/images/3b278a9a-130a-4182-8dee-e5c430d682b1?v=3453283464",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fig Bruschetta",
+   "desc": "Toasted sourdough, slow cooked organic figs, fresh organic goat cheese, organic fig leaves oil, rosemary and toasted hazelnuts.",
+   "cents": 1500,
+   "section": "Antipasti",
+   "image": "https://static-content.owner.com/funnel/images/7b5e2946-8042-423b-98db-ed8f37dac424?v=4440791626",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pasta Pomodoro Basilico (V)",
+   "desc": "House-made fresh spaghetti, slow-cooked tomato sauce, basil. Spicy pomodoro available on request.",
+   "cents": 2200,
+   "section": "Pasta",
+   "image": "https://static-content.owner.com/funnel/images/ebe6fc7f-322d-41db-bd8f-7cefd3c124da?v=2955503235",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pasta Tagliatelle Bolognese",
+   "desc": "Housemade fresh pasta, beef ragu.",
+   "cents": 2600,
+   "section": "Pasta",
+   "image": "https://static-content.owner.com/funnel/images/01f85b36-7403-42f0-bae4-013eec461619?v=7166058168",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pasta Spaghetti Meatballs",
+   "desc": "Classic hand-rolled ground beef meatballs, simmered in-housemade tomato sauce, topped with chili flakes and herbs.",
+   "cents": 2700,
+   "section": "Pasta",
+   "image": "https://static-content.owner.com/funnel/images/17f29fef-568e-465a-b49f-8155ba92372d?v=5280313909",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lasagna",
+   "desc": "Layers of tender pasta, rich slow cooked beef Bolognese sauce, creamy bechamel sauce.",
+   "cents": 2600,
+   "section": "Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pasta al Pesto",
+   "desc": "House made spaghetti, pine nuts, basil pesto, pecorino romano and parmagiano reggiano.",
+   "cents": 2600,
+   "section": "Pasta",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Margherita Pizza (V)",
+   "desc": "Organic tomato sauce, Fior di latte, basil.",
+   "cents": 2200,
+   "section": "Classic Pizza",
+   "image": "https://static-content.owner.com/funnel/images/1eb7bc71-ef82-460d-9f14-b8db37b3cca3?v=9353265395",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Margherita DOP Pizza (V)",
+   "desc": "Organic tomato sauce, buffalo mozzarella DOP, basil.",
+   "cents": 2600,
+   "section": "Classic Pizza",
+   "image": "https://static-content.owner.com/funnel/images/388b9144-8dae-4e22-bc70-420f41883171?v=5185601826",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Alla Marinara Pizza (VG)",
+   "desc": "Organic tomato sauce, garlic, oregano, basil.",
+   "cents": 1900,
+   "section": "Classic Pizza",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Momo Pizza",
+   "desc": "Fior di latte, ricotta, montasio cheese, cbt yellow potatoes.",
+   "cents": 2600,
+   "section": "Specialty White Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Bronte Pizza (V)",
+   "desc": "Fior di latte, ricotta, pistachio pesto, chopped pistachio.",
+   "cents": 2700,
+   "section": "Specialty White Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Carbonara Pizza",
+   "desc": "Fior di latte, guanciale, poached egg cbt, Pecorino Romano DOP, Madagascar voatsiperifery pepper.",
+   "cents": 2800,
+   "section": "Specialty White Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/2a963997-7c84-46dc-9aec-45572e68c1fd?v=8000139528",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Calzone Cacio Pepe Pizza",
+   "desc": "Fior di latte, pecorino romano, Madagascar voatsiperifery pepper, extra virgin olive oil.",
+   "cents": 2700,
+   "section": "Specialty White Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/8b8ef0a6-0fb4-4ca1-bab8-29ff2684b8fc?v=9510186732",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Calzone Emiliana",
+   "desc": "Fior di latte, beef ragu, bechamel, parmigiano reggiano.",
+   "cents": 2800,
+   "section": "Specialty White Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/b62b9a7e-fb47-4879-8884-fba8bebe9649?v=8019232280",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mortadella Pistachio",
+   "desc": "Fior di latte, mortadella (ham), pistachio pesto, chopped pistachios.",
+   "cents": 2800,
+   "section": "Specialty White Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/a2a51e20-9f02-42ad-baaf-868a1420e88f?v=0121245719",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Stracciatella (V)",
+   "desc": "Organic tomato sauce, stracciatella, caramelized tomatoes, basil, olive oil.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Verdura Pizza (V)",
+   "desc": "Organic tomato sauce, Fior di latte, grilled zucchini, eggplant, bell pepper, tomatoes, onion, taggiasca olives, and mint.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/c3683125-c53a-47f6-af6b-b8842959dcbb?v=4458986142",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Crudo e Parmigiano All' Aceto Balsamico",
+   "desc": "Organic tomato sauce, Fior di latte, 24-month prosciutto crudo, Parmigiano Reggiano, Modena traditional balsamic IGP.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/070d44d3-9fef-4c77-8e83-cb2e4e6819f5?v=1473563102",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Pepperoni with Honey",
+   "desc": "Organic tomato sauce, fior di latte, pepperoni, organic honey.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/6lp5gLBMhfGw.jpg?v=9181380275",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sausage",
+   "desc": "Organic tomato sauce, fior di latte, bell peppers, ground beef sausage, white onions, garlic, Thai chilies, parmigiano reggiano.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c0ff8e47-a734-4720-90f1-77ab78cce708?w=405&h=405&format=auto&fit=cover",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Arrabbiata Pizza",
+   "desc": "Organic tomato sauce, Fior di latte, bacon, habanero chillies, fresh garlic, parsley, parmigiano reggiano.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Funghi Ruccola Gorgonzola",
+   "desc": "Organic tomato sauce, Fior di latte, gorgonzola cheese, cooked organic baby mushrooms, arugula, garlic, and parsley.",
+   "cents": 2700,
+   "section": "Specialty Red Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sarika",
+   "desc": "Organic tomato sauce, fior di latte, cooked organic baby mushrooms, white onions, bell peppers, garlic, Thai chilies, parmigiano reggiano.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas",
+   "image": "https://static-content.owner.com/funnel/images/7b171237-a73b-47f3-ae06-73da27829ac1?v=6374528829",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Prosciutto Funghi",
+   "desc": "Organic tomato sauce, fior di latte, cooked organic baby mushroom, prosciutto granbiscotto.",
+   "cents": 2600,
+   "section": "Specialty Red Pizzas",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pollo Al Limone",
+   "desc": "Braised chicken leg with lemon and spices, sauteed Yukon potatoes with rosemary.",
+   "cents": 2600,
+   "section": "Secondi",
+   "image": "https://static-content.owner.com/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/jak4czmyZs2h.jpg?v=5859937449",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Arugula Salad",
+   "desc": "Local peaches, parmigiano reggiano, walnuts, honey, and vinaigrette.",
+   "cents": 1500,
+   "section": "Salads",
+   "image": "https://static-content.owner.com/funnel/images/514029e5-36be-4604-9f34-9ca25b8c32e6?v=7870674720",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Organic Beets Salad",
+   "desc": "Cara cara orange, toasted almonds, arugula pesto, white wine vinaigrette.",
+   "cents": 1800,
+   "section": "Salads",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spring Salad",
+   "desc": "Mixed green salad with blood oranges, strawberries, toasted cashews, prosciutto crudo, and a light vinaigrette.",
+   "cents": 2100,
+   "section": "Salads",
+   "image": "https://static-content.owner.com/funnel/images/b0021d7f-9be5-4029-811d-71d9b3d96080?v=0630403422",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pistachio Salad",
+   "desc": "Spinach, blueberries, pistachios, goat cheese, fresh lemon and honey dressing.",
+   "cents": 1800,
+   "section": "Salads",
+   "image": "https://static-content.owner.com/funnel/images/0258c581-b782-4d4c-94b5-815907fb2900?v=3915089566",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tiramisu",
+   "desc": "Classic Italian dessert with layers of espresso-soaked ladyfingers, creamy mascarpone, and a dusting of cocoa powder.",
+   "cents": 1200,
+   "section": "Desserts",
+   "image": "https://static-content.owner.com/funnel/images/b76188a4-744a-4393-931b-e0b87f9269cc?v=9774636144",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Strawberry Tiramisu",
+   "desc": "Layers of strawberry-soaked ladyfingers, creamy mascarpone, and sweet strawberries.",
+   "cents": 1300,
+   "section": "Desserts",
+   "image": "https://static-content.owner.com/funnel/images/bbc2fc5e-5cce-472e-a613-3f472513b1f2?v=2954028759",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Panna C W Strawberry",
+   "desc": "Creamy Italian panna cotta topped with caramelized strawberries.",
+   "cents": 1300,
+   "section": "Desserts",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "K Pasta Pomodoro (V)",
+   "desc": "Slow cooked pasta with tomatoes, parmigiano reggiano. Smaller portion for children 12 and under.",
+   "cents": 1700,
+   "section": "Kid's Menu",
+   "image": "https://static-content.owner.com/funnel/images/c942bd03-eca9-495a-bb03-a2b0d97923a6?v=3298099091",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Cheese Pasta",
+   "desc": "Pasta with parmigiano reggiano cheese and olive oil. Smaller portion for children 12 and under.",
+   "cents": 1700,
+   "section": "Kid's Menu",
+   "image": "https://static-content.owner.com/funnel/images/c0ddca34-b27c-428c-8437-10cce93e1662?v=2086550092",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Natural Spring Water",
+   "desc": "",
+   "cents": 800,
+   "section": "Beverage",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "San Pellegrino Water",
+   "desc": "",
+   "cents": 800,
+   "section": "Beverage",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Limonata",
+   "desc": "",
+   "cents": 800,
+   "section": "Beverage",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chinotto",
+   "desc": "",
+   "cents": 800,
+   "section": "Beverage",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Aranciata",
+   "desc": "",
+   "cents": 800,
+   "section": "Beverage",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Panini Verdura",
+   "desc": "Bell peppers, taggiasca olives, oregano, capers, basil, vinegar, stracciatella.",
+   "cents": 1800,
+   "section": "Panini",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Panini Prosciutto/Bufala",
+   "desc": "Ruliano prosciutto 24 mo, bufala, fresh tomatoes, basil, extra virgin olive oil.",
+   "cents": 2000,
+   "section": "Panini",
+   "alcohol": false,
+   "src": "jsonld"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Margherita Pizza (V)",
+    "desc": "",
+    "cents": 2200,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/1eb7bc71-ef82-460d-9f14-b8db37b3cca3?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Spicy Pepperoni with Honey",
+    "desc": "",
+    "cents": 2700,
+    "image": "https://pizzeriacardamomo.com/pluto-images/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/6lp5gLBMhfGw.jpg?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Pasta Tagliatelle Bolognese",
+    "desc": "",
+    "cents": 2600,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/01f85b36-7403-42f0-bae4-013eec461619?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Verdura Pizza (V)",
+    "desc": "",
+    "cents": 2600,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c3683125-c53a-47f6-af6b-b8842959dcbb?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Arugula Salad",
+    "desc": "",
+    "cents": 1500,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/514029e5-36be-4604-9f34-9ca25b8c32e6?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Margherita DOP Pizza (V)",
+    "desc": "",
+    "cents": 2600,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/388b9144-8dae-4e22-bc70-420f41883171?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Carbonara Pizza",
+    "desc": "",
+    "cents": 2800,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/2a963997-7c84-46dc-9aec-45572e68c1fd?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Sarika",
+    "desc": "",
+    "cents": 2600,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/7b171237-a73b-47f3-ae06-73da27829ac1?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2053A Broadway, Redwood City, CA"
+   },
+   {
+    "name": "Nonna Arancini",
+    "desc": "",
+    "cents": 1200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specials"
+   },
+   {
+    "name": "Pizza ItaloAmericana",
+    "desc": "",
+    "cents": 2800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specials"
+   },
+   {
+    "name": "Pasta Cacio E Pepe",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specials"
+   },
+   {
+    "name": "Rigatoni Al Vodka",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": true,
+    "src": "text",
+    "section": "Specials"
+   },
+   {
+    "name": "Fresh Bread Baked (VG)",
+    "desc": "",
+    "cents": 500,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/7cd89200-229c-41bc-b8e9-85165f102c01?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Bruschetta (V)",
+    "desc": "",
+    "cents": 1400,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c302ceab-bdca-4c87-aa8b-357f4e6c9f2a?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Arancini Cacio e Pepe",
+    "desc": "",
+    "cents": 1300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Marinated Taggiasca Olive (VG)",
+    "desc": "",
+    "cents": 1200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Meatballs",
+    "desc": "",
+    "cents": 1400,
+    "image": "https://pizzeriacardamomo.com/pluto-images/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/Eylr8wdX3bwF.jpg?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Aglio Bruschetta",
+    "desc": "",
+    "cents": 1400,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/a9f43c0d-7044-475d-920f-26e8420c4560?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Habanero Oil",
+    "desc": "",
+    "cents": 900,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/6760cd05-8c6e-4153-91e7-754f0f2db048?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Garlic Oil",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/3b278a9a-130a-4182-8dee-e5c430d682b1?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Fig Bruschetta",
+    "desc": "",
+    "cents": 1500,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/7b5e2946-8042-423b-98db-ed8f37dac424?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Antipasti"
+   },
+   {
+    "name": "Pasta Pomodoro Basilico (V)",
+    "desc": "",
+    "cents": 2200,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/ebe6fc7f-322d-41db-bd8f-7cefd3c124da?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pasta"
+   },
+   {
+    "name": "Pasta Spaghetti Meatballs",
+    "desc": "",
+    "cents": 2700,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/17f29fef-568e-465a-b49f-8155ba92372d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pasta"
+   },
+   {
+    "name": "Lasagna",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pasta"
+   },
+   {
+    "name": "Pasta al Pesto",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pasta"
+   },
+   {
+    "name": "Alla Marinara Pizza (VG)",
+    "desc": "",
+    "cents": 1900,
+    "alcohol": false,
+    "src": "text",
+    "section": "Classic Pizza"
+   },
+   {
+    "name": "Momo Pizza",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty White Pizzas"
+   },
+   {
+    "name": "Bronte Pizza (V)",
+    "desc": "",
+    "cents": 2700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty White Pizzas"
+   },
+   {
+    "name": "Calzone Cacio Pepe Pizza",
+    "desc": "",
+    "cents": 2700,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/8b8ef0a6-0fb4-4ca1-bab8-29ff2684b8fc?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty White Pizzas"
+   },
+   {
+    "name": "Calzone Emiliana",
+    "desc": "",
+    "cents": 2800,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/b62b9a7e-fb47-4879-8884-fba8bebe9649?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty White Pizzas"
+   },
+   {
+    "name": "Mortadella Pistachio",
+    "desc": "",
+    "cents": 2800,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/a2a51e20-9f02-42ad-baaf-868a1420e88f?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty White Pizzas"
+   },
+   {
+    "name": "Stracciatella (V)",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty Red Pizzas"
+   },
+   {
+    "name": "Crudo e Parmigiano All' Aceto Balsamico",
+    "desc": "",
+    "cents": 2700,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/070d44d3-9fef-4c77-8e83-cb2e4e6819f5?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty Red Pizzas"
+   },
+   {
+    "name": "Sausage",
+    "desc": "",
+    "cents": 2700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty Red Pizzas"
+   },
+   {
+    "name": "Arrabbiata Pizza",
+    "desc": "",
+    "cents": 2700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty Red Pizzas"
+   },
+   {
+    "name": "Funghi Ruccola Gorgonzola",
+    "desc": "",
+    "cents": 2700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty Red Pizzas"
+   },
+   {
+    "name": "Prosciutto Funghi",
+    "desc": "",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Specialty Red Pizzas"
+   },
+   {
+    "name": "Pollo Al Limone",
+    "desc": "",
+    "cents": 2600,
+    "image": "https://pizzeriacardamomo.com/pluto-images/uberEatsPhotoCoverage0426/ZuBU6i5QW0Ls/jak4czmyZs2h.jpg?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Secondi"
+   },
+   {
+    "name": "Organic Beets Salad",
+    "desc": "",
+    "cents": 1800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Salads"
+   },
+   {
+    "name": "Spring Salad",
+    "desc": "",
+    "cents": 2100,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/b0021d7f-9be5-4029-811d-71d9b3d96080?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Salads"
+   },
+   {
+    "name": "Pistachio Salad",
+    "desc": "",
+    "cents": 1800,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/0258c581-b782-4d4c-94b5-815907fb2900?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Salads"
+   },
+   {
+    "name": "Tiramisu",
+    "desc": "",
+    "cents": 1200,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/b76188a4-744a-4393-931b-e0b87f9269cc?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Strawberry Tiramisu",
+    "desc": "",
+    "cents": 1300,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/bbc2fc5e-5cce-472e-a613-3f472513b1f2?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Panna C W Strawberry",
+    "desc": "",
+    "cents": 1300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Desserts"
+   },
+   {
+    "name": "K Pasta Pomodoro (V)",
+    "desc": "",
+    "cents": 1700,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c942bd03-eca9-495a-bb03-a2b0d97923a6?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Cheese Pasta",
+    "desc": "",
+    "cents": 1700,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c0ddca34-b27c-428c-8437-10cce93e1662?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Natural Spring Water",
+    "desc": "",
+    "cents": 800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Beverage"
+   },
+   {
+    "name": "San Pellegrino Water",
+    "desc": "",
+    "cents": 800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Beverage"
+   },
+   {
+    "name": "Limonata",
+    "desc": "",
+    "cents": 800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Beverage"
+   },
+   {
+    "name": "Chinotto",
+    "desc": "",
+    "cents": 800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Beverage"
+   },
+   {
+    "name": "Aranciata",
+    "desc": "",
+    "cents": 800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Beverage"
+   },
+   {
+    "name": "Italian Cola",
+    "desc": "",
+    "cents": 600,
+    "image": "https://pizzeriacardamomo.com/pluto-images/funnel/images/f871cb47-c8c6-48d0-a2aa-c08297158185?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Beverage"
+   },
+   {
+    "name": "Panini Verdura",
+    "desc": "",
+    "cents": 1800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Panini"
+   },
+   {
+    "name": "Panini Prosciutto/Bufala",
+    "desc": "",
+    "cents": 2000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Panini"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/04953b68-09a6-4a79-972b-1a48d19fe6f0?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best Pizza in Redwood City\nOpen on September 7th for Labor Day. We are closed for our team vacation ",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/9085bab3-818a-48d2-83a6-424bc2b4bb24?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best Pizza in Redwood City\nOpen on September 7th for Labor Day. We are closed for our team vacation ",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/b4aff965-f873-4c6e-a1f6-7542d515e9e6?w=1400&fit=cover",
+   "alt": "",
+   "near": "Welcome to Cardamomo\nTucked into the heart of Redwood City, Pizzeria Cardamomo carries the golden li",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/e7d69fae-338d-4d0d-ba54-da6fcad9d693?w=1400&fit=cover",
+   "alt": "",
+   "near": "Chef Momo\n\nAt sixteen, Momo left Morocco with only a dream, arriving in Como so poor he slept on a b",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/b528f45b-b964-4c25-bf23-a0f0031d4c1f?w=560&h=560&fit=cover",
+   "alt": "Chef Momo",
+   "near": "Chef Momo\n\nAt sixteen, Momo left Morocco with only a dream, arriving in Como so poor he slept on a b",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/3218cebd-b68f-4a86-bdbc-ecdf7935ea49?w=560&h=560&fit=cover",
+   "alt": "A Love Story That Crossed Continents",
+   "near": "A Love Story That Crossed Continents\n On a chance evening in Milan, Sarika crossed paths with Chef M",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/0902a8a0-1e66-4dc5-af2a-777e457c486f?w=560&h=560&fit=cover",
+   "alt": "Momo's Habanero and Garlic Oil",
+   "near": "Momo's Habanero and Garlic Oil\nAt Cardamomo, every table is finished with Chef Momo’s house-made hab",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c11e2cfb-cb48-4b38-9dad-5c168f4c48c6?w=1400&fit=cover",
+   "alt": "",
+   "near": "Crafted with Time, Passion, and Purpose\nAll pizzas are scratch-made with organic ingredients and han",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/7edf2e8b-51eb-4b12-9cac-75385a1ada97?w=560&h=560&fit=cover",
+   "alt": "Crafted with Time, Passion, and Purpose",
+   "near": "Crafted with Time, Passion, and Purpose\nAll pizzas are scratch-made with organic ingredients and han",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/e90e7e49-6f60-49ee-93de-dd413fd3b9b7?w=1400&fit=cover",
+   "alt": "",
+   "near": "From Our Cellar\nOur selection of Italian wines and beers has been hand-picked in small batches to co",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/557944f1-a058-404b-821a-ad5666782896?w=560&h=560&fit=cover",
+   "alt": "From Our Cellar",
+   "near": "From Our Cellar\nOur selection of Italian wines and beers has been hand-picked in small batches to co",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/ca99f0fb-c28f-40b1-a0f7-1ea04b7fca0a?w=1400&fit=cover",
+   "alt": "",
+   "near": "Order Online Anytime, Enjoy at Home\nOrdering from Cardamomo is simple and convenient. Choose takeout",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/ea66ecae-82de-4fdb-9a0f-11b0d42bc6c7?w=560&h=560&fit=cover",
+   "alt": "Order Online Anytime, Enjoy at Home",
+   "near": "Order Online Anytime, Enjoy at Home\nOrdering from Cardamomo is simple and convenient. Choose takeout",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/e6d57c76-b6f1-4b03-ac1a-8f24b5ded858?w=405&h=405&format=auto&fit=cover",
+   "alt": "A freshly baked Margherita pizza with melted mozzarella, red sauce, and basil leaves on a plate.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/eec69c6f-6493-4af3-ac6d-efb90662edd5?w=405&h=405&format=auto&fit=cover",
+   "alt": "Thinly sliced prosciutto with white fat marbling, served on a light blue and white plate with cutlery.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c76ab938-5147-41e7-ad88-086bfefffbf9?w=405&h=405&format=auto&fit=cover",
+   "alt": "A close-up of a pepperoni pizza with a crispy crust, served on a white and blue plate.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/148d3390-ff9f-4014-8afe-057932033fd4?w=405&h=405&format=auto&fit=cover",
+   "alt": "Spinach salad with blueberries, feta cheese, and pistachio crumbles on a blue and white plate.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/bf48e032-09dd-45c1-81bd-519377246e6c?w=405&h=405&format=auto&fit=cover",
+   "alt": "Close-up of pappardelle pasta with rich bolognese sauce and grated cheese in a blue and white bowl.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/5e4db4ea-12e0-42bf-a59f-030d7e632dcd?w=405&h=405&format=auto&fit=cover",
+   "alt": "Green and black olives in olive oil with lemon wedges, served in a blue and white patterned bowl.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c0ff8e47-a734-4720-90f1-77ab78cce708?w=405&h=405&format=auto&fit=cover",
+   "alt": "A delicious pizza with sausage, onions, tomatoes, and green chilies on a blue plate.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/f6eaf4d1-5cb9-4dea-b62e-93ce548108ad?w=405&h=405&format=auto&fit=cover",
+   "alt": "Spaghetti with meatballs, tomato sauce, grated cheese, and a parsley garnish on a blue plate.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/63bc6654-30fe-4cf1-945c-2cf03edfa17d?w=405&h=405&format=auto&fit=cover",
+   "alt": "A white pizza with bacon, shredded cheese, and a poached egg on a blue and white plate.",
+   "near": "Check Out Our Pizza and Italian Creations\n\nExplore our handcrafted pizzas and Italian dishes, each m",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/64367315-5400-41d7-85fe-f20f2da83e41?w=1400&fit=cover",
+   "alt": "",
+   "near": "Catering and Events Services\nCardamomo offers catering for parties, meetings, or events of any size.",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/cfd8dbfd-b755-46e2-a0d6-79b07b79ba31?w=560&h=560&fit=cover",
+   "alt": "Catering and Events Services",
+   "near": "Catering and Events Services\nCardamomo offers catering for parties, meetings, or events of any size.",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/7e8fee5c-2b07-48e6-802d-48efea7bf4cc?w=1400&fit=cover",
+   "alt": "",
+   "near": "Dine In and Reservations\nOur restaurant is perfect for a casual lunch, family dinner, or small gathe",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/8ec56a7b-2ac7-4b4c-aea0-0ce09a186f2d?w=560&h=560&fit=cover",
+   "alt": "Stay in the Loop",
+   "near": "Stay in the Loop\nFrom daily specials to behind-the-scenes moments, we're always cooking up something",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/6995e13e-5a74-47ce-8ad4-c243da376268?w=1400&fit=cover",
+   "alt": "",
+   "near": "Cardamomo Rewards\nJoin our rewards program, earn points every time you order online and redeem your ",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/da0c477d-1a33-460c-9f56-48a4c2f95987?w=1400&fit=cover",
+   "alt": "",
+   "near": "Italian Catering for Your Next Event\nFreshly prepared, professionally delivered catering for corpora",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/cacb790b-2959-4446-ae6d-06da05bc6f80?w=560&h=560&fit=cover",
+   "alt": "Italian Catering for Your Next Event",
+   "near": "Italian Catering for Your Next Event\nFreshly prepared, professionally delivered catering for corpora",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/4a76d956-1cc5-4562-b457-42ff9a0aeaee?w=1400&fit=cover",
+   "alt": "",
+   "near": "Make Your Redwood City Event Unforgettable\nLet Cardamomo bring our authentic flavors to your next ga",
+   "w": 1280,
+   "h": 800,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/3f9dceb7-2ca0-42d6-b468-3e4173c582bc?w=560&h=560&fit=cover",
+   "alt": "Make Your Redwood City Event Unforgettable",
+   "near": "Make Your Redwood City Event Unforgettable\nLet Cardamomo bring our authentic flavors to your next ga",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/b6b548f5-360c-4c94-99de-1898512f4ecd?w=405&h=405&format=auto&fit=cover",
+   "alt": "Green and black olives in olive oil with lemon wedges, served in a blue and white bowl.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/43ad4af0-d79c-40ea-b262-d6275d5e79c5?w=405&h=405&format=auto&fit=cover",
+   "alt": "A white pizza with bacon, shredded cheese, and a poached egg on a white plate.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/a2f8342f-020a-403f-9a31-414beee2cd5b?w=405&h=405&format=auto&fit=cover",
+   "alt": "Spinach salad with blueberries, feta cheese, and pistachio crumbles on a blue and white plate.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/652cd840-52ba-4720-86d9-023bbcc64542?w=405&h=405&format=auto&fit=cover",
+   "alt": "A freshly baked Margherita pizza with melted cheese, tomato sauce, and basil leaves on a plate with a fork.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/2348fd0c-2847-4da0-b1e3-b5f910cd5a06?w=405&h=405&format=auto&fit=cover",
+   "alt": "Close-up of thinly sliced prosciutto on a white and blue plate with a fork and spoon.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/cbbf9f70-8dfb-46d4-8ae4-8ce783b09134?w=405&h=405&format=auto&fit=cover",
+   "alt": "A close-up of a freshly baked pepperoni pizza with a crispy crust on a white and blue plate.",
+   "near": "Order Catering Today\n\nChoose from one of our convenient packages and order online in minutes. Or wor",
+   "w": 405,
+   "h": 405,
+   "page": "https://pizzeriacardamomo.com/catering"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/04953b68-09a6-4a79-972b-1a48d19fe6f0?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best margherita pizza in Redwood City, CA.\nDelicious Margherita Pizza Awaits",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/tags/margherita-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/9085bab3-818a-48d2-83a6-424bc2b4bb24?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best margherita pizza in Redwood City, CA.\nDelicious Margherita Pizza Awaits",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/tags/margherita-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/7b171237-a73b-47f3-ae06-73da27829ac1?w=560&h=560&fit=cover",
+   "alt": "Margherita Pizza Perfection",
+   "near": "Margherita Pizza Perfection\nOur margherita pizza is a celebration of simplicity and flavor. With a t",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/tags/margherita-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup",
+   "near": "Convenient Delivery and Pickup\nEnjoy our margherita pizza from the comfort of your home with our fas",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/tags/margherita-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/04953b68-09a6-4a79-972b-1a48d19fe6f0?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best meatballs in Redwood City, CA.\nSavor Our Meatballs Today",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/tags/meatballs"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/9085bab3-818a-48d2-83a6-424bc2b4bb24?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best meatballs in Redwood City, CA.\nSavor Our Meatballs Today",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/tags/meatballs"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/c3683125-c53a-47f6-af6b-b8842959dcbb?w=560&h=560&fit=cover",
+   "alt": "Delicious Meatballs Await You",
+   "near": "Delicious Meatballs Await You\nOur meatballs are crafted with care, using a blend of premium ground b",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/tags/meatballs"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup",
+   "near": "Convenient Delivery and Pickup\nEnjoy our mouthwatering meatballs from the comfort of your home with ",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/tags/meatballs"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/04953b68-09a6-4a79-972b-1a48d19fe6f0?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best white pizza in Redwood City, CA.\nSavor Our White Pizza",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/tags/white-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/9085bab3-818a-48d2-83a6-424bc2b4bb24?w=1920&fit=cover",
+   "alt": "",
+   "near": "Best white pizza in Redwood City, CA.\nSavor Our White Pizza",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://pizzeriacardamomo.com/tags/white-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/funnel/images/1eb7bc71-ef82-460d-9f14-b8db37b3cca3?w=560&h=560&fit=cover",
+   "alt": "Delicious White Pizza Options",
+   "near": "Delicious White Pizza Options\nOur white pizza is a creamy delight that features a rich blend of rico",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/tags/white-pizza"
+  },
+  {
+   "src": "https://pizzeriacardamomo.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup",
+   "near": "Convenient Delivery and Pickup\nEnjoy our white pizza from the comfort of your home with our easy del",
+   "w": 560,
+   "h": 560,
+   "page": "https://pizzeriacardamomo.com/tags/white-pizza"
+  }
+ ]
+}

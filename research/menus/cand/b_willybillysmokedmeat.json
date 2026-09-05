@@ -1,0 +1,468 @@
+{
+ "id": "b_willybillysmokedmeat",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://willybillysmokedmeat.com/",
+  "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/catering-service-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/book-a-call-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/product-details-willy-billys-smoked-meat/product/695fd89ca6e8f38560c4707a/?variant=695fd89ca6e8f309d7c4707f"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Brisket (Regular)",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "text",
+   "section": "The Good Food Experience"
+  },
+  {
+   "name": "Brisket (Large)",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "BBQ (Choose 1)"
+  },
+  {
+   "name": "Pulled Beef (Regular)",
+   "desc": "",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "text",
+   "section": "BBQ (Choose 1 Side)"
+  },
+  {
+   "name": "Pulled Beef (Large)",
+   "desc": "",
+   "cents": 2100,
+   "alcohol": false,
+   "src": "text",
+   "section": "BBQ (Choose 1)"
+  },
+  {
+   "name": "Beef Hot Links",
+   "desc": "",
+   "cents": 1450,
+   "alcohol": false,
+   "src": "text",
+   "section": "BBQ (Choose 1 Side)"
+  },
+  {
+   "name": "Dino Beef Rib",
+   "desc": "",
+   "cents": 3500,
+   "alcohol": false,
+   "src": "text",
+   "section": "BBQ (Choose 1 Side)"
+  },
+  {
+   "name": "2-Meat Combo",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "COMBO MEALS"
+  },
+  {
+   "name": "3-Meat Combo",
+   "desc": "",
+   "cents": 2900,
+   "alcohol": false,
+   "src": "text",
+   "section": "COMBO MEALS"
+  },
+  {
+   "name": "Brisket Burger",
+   "desc": "",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "COMBO MEALS"
+  },
+  {
+   "name": "Mac & Cheese",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "COMBO MEALS"
+  },
+  {
+   "name": "Hawaiian Rolls (2 pcs)",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🥗 SIDES"
+  },
+  {
+   "name": "Corn Bread",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "🥗 SIDES"
+  },
+  {
+   "name": "Regular Fries",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "🥗 SIDES"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554dc57318f9e7e9c504.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cc1c13f2b55ae17f9.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cd9dae24d43cb3bea.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554c1dd8c92d027fdd2c.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554c1dd8c943a67fdd29.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cc57318982ce9c503.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cd9dae2a4cccb3be8.jpg",
+   "alt": "",
+   "near": "Home\nMenu\nCatering\nLocation\nContact\n408-650-2589\nWilly Billy's – Slow-Smoked and Flavor-Packed!\nOrde",
+   "w": 1280,
+   "h": 642,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://assets.cdn.filsafe.space/2W3mKjfU3GREdwOnEUvd/media/68dbed0ab114c467a6948aa7.pn",
+   "alt": "",
+   "near": "Catering for All Occasions\nPerfectly Crafted Meals for Any Event\n\nWhether it’s a corporate meeting, ",
+   "w": 1280,
+   "h": 532,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b9fa8cfbaeab98ec97e31a.png",
+   "alt": "",
+   "near": "Every Bite, a Flavor Adventure\n\nFrom smoky ribs and tender brisket to bold, tangy barbecue plates, o",
+   "w": 1280,
+   "h": 659,
+   "page": "https://willybillysmokedmeat.com/"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554dc57318f9e7e9c504.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cc1c13f2b55ae17f9.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cd9dae24d43cb3bea.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554c1dd8c92d027fdd2c.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554c1dd8c943a67fdd29.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cc57318982ce9c503.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cd9dae2a4cccb3be8.jpg",
+   "alt": "",
+   "near": "Home\nMenu\nCatering\nLocation\nContact\n408-650-2589\nWilly Billy's – Slow-Smoked and Flavor-Packed!\nOrde",
+   "w": 1280,
+   "h": 642,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://assets.cdn.filsafe.space/2W3mKjfU3GREdwOnEUvd/media/68dbed0ab114c467a6948aa7.pn",
+   "alt": "",
+   "near": "Catering for All Occasions\nPerfectly Crafted Meals for Any Event\n\nWhether it’s a corporate meeting, ",
+   "w": 1280,
+   "h": 532,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b9fa8cfbaeab98ec97e31a.png",
+   "alt": "",
+   "near": "Every Bite, a Flavor Adventure\n\nFrom smoky ribs and tender brisket to bold, tangy barbecue plates, o",
+   "w": 1280,
+   "h": 659,
+   "page": "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554cc1c13f2b55ae17f9.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://assets.cdn.filsafe.space/2W3mKjfU3GREdwOnEUvd/media/68dbed0ab114c467a6948aa7.pn",
+   "alt": "",
+   "near": "Catering for All Occasions\nPerfectly Crafted Meals for Any Event\n\nWhether it’s a corporate meeting, ",
+   "w": 1280,
+   "h": 532,
+   "page": "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b9fa8cfbaeab98ec97e31a.png",
+   "alt": "",
+   "near": "Every Bite, a Flavor Adventure\n\nFrom smoky ribs and tender brisket to bold, tangy barbecue plates, o",
+   "w": 1280,
+   "h": 659,
+   "page": "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/catering-service-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/db1cfd59-2681-4d28-970b-3b0b26c31296.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://willybillysmokedmeat.com/catering-service-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/catering-service-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/68de70f15477e0479de8db12.png",
+   "alt": "",
+   "near": "Catering Request\n\nFor orders less than $500, please give us 24 hours' notice. For catering orders ex",
+   "w": 1280,
+   "h": 1002,
+   "page": "https://willybillysmokedmeat.com/catering-service-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554c1dd8c900cc7fdd27.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6926554c01877797e25d91c1.jpg",
+   "alt": "",
+   "near": "",
+   "w": 5000,
+   "h": 3750,
+   "page": "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b9f7828c2b827fe016ee1a.png",
+   "alt": "",
+   "near": "Visit us today!\n\nwe believe that every kitchen should be as unique as the people who use it.",
+   "w": 1280,
+   "h": 260,
+   "page": "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/68dbed0ab114c467a6948aa7.png",
+   "alt": "",
+   "near": "OPENING HOURS\n\nStop by for a consultation or just to get inspired. We’re excited to help you bring y",
+   "w": 1280,
+   "h": 212,
+   "page": "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/book-a-call-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/book-a-call-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b9f782162c15e01637e149.png",
+   "alt": "",
+   "near": "We want to hear from you\n\nWhether you’ve got feedback, questions, catering requests, or just want to",
+   "w": 1280,
+   "h": 911,
+   "page": "https://willybillysmokedmeat.com/book-a-call-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b9fa8cfbaeab98ec97e31a.png",
+   "alt": "",
+   "near": "Hear From Our Loyal Customers\n\nOur guests come for the traditional techniques and high-quality 100% ",
+   "w": 1280,
+   "h": 585,
+   "page": "https://willybillysmokedmeat.com/book-a-call-willy-billys-smoked-meat"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png",
+   "alt": "Jerk and Java Logo",
+   "near": "",
+   "w": 1200,
+   "h": 1352,
+   "page": "https://willybillysmokedmeat.com/product-details-willy-billys-smoked-meat/product/695fd89ca6e8f38560c4707a/?variant=695fd89ca6e8f309d7c4707f"
+  },
+  {
+   "src": "https://images.leadconnectorhq.com/image/f_webp/q_80/r_1200/u_https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/cb1d09c6-f98c-4817-b238-e3f505102ef6.png",
+   "alt": "",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://willybillysmokedmeat.com/product-details-willy-billys-smoked-meat/product/695fd89ca6e8f38560c4707a/?variant=695fd89ca6e8f309d7c4707f"
+  }
+ ]
+}

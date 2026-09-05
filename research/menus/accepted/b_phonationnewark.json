@@ -1,0 +1,344 @@
+{
+ "id": "b_phonationnewark",
+ "source": "square",
+ "pages": [
+  "https://pho-nation.square.site/?location=LGATRB6HCK6A2#LADTEUMGQEBBOTYMOVSF6DGH",
+  "https://pho-nation.square.site/home",
+  "https://pho-nation.square.site/?location=LGATRB6HCK6A2#LADTEUMGQEBBOTYMOVSF6DGH"
+ ],
+ "items": [
+  {
+   "name": "1. PHO NATION COMBO #1 | PHỞ ĐẶC BIỆT BÒ VIÊN #1",
+   "desc": "Pho beef noodle soup. Combination contains thinly sliced rare steaks, briskets, flanks, tripes and beef balls.",
+   "cents": 1695,
+   "label": "from $16.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-1-pho-nation-combo-1-ph-c-bi-t-b-vi-n-1"
+  },
+  {
+   "name": "10. PHO SHRIMP | PHỞ TÔM",
+   "desc": "Pho shrimp noodle soup. Served with shrimps, noodle and chicken broth. Also a sprinkle of fried shallot.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-10-pho-shrimp-ph-t-m"
+  },
+  {
+   "name": "12. VEGETARIAN PHO TOFU + MIXED VEGGIES | PHỞ CHAY",
+   "desc": "Vegetarian pho made with mushroom seasoning broth, no MSG. Comes with fried tofu, broccoli, zucchini, carrot and white mushroom. Made fresh every time.",
+   "cents": 1495,
+   "label": "from $14.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-12-vegetarian-pho-tofu-mixed-veggies-ph-"
+  },
+  {
+   "name": "11. PLAIN PHO + SOUP | PHỞ KHÔNG",
+   "desc": "Plain pho noodle soup. Contains just noodle and soup. You can choose beef, chicken or vegetarian broth",
+   "cents": 1095,
+   "label": "from $10.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-11-plain-pho-soup-ph-kh-ng"
+  },
+  {
+   "name": "13. HOUSE SPECIAL VERMICELLI | BÚN ĐẶC BIỆT",
+   "desc": "House special vermicelli. Served with grilled chicken, grilled pork, three grilled shrimps, vermicelli noodle, thinly sliced round lettuce, cucumber",
+   "cents": 1895,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-13-house-special-vermicelli-b-n-c-bi-t"
+  },
+  {
+   "name": "14. GRILLED CHICKEN VERMICELLI | BÚN GÀ NƯỚNG",
+   "desc": "Grilled chicken vermicelli. Served with grilled chicken, vermicelli noodle, thinly sliced round lettuce, cucumber, beansprouts",
+   "cents": 1695,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-14-grilled-chicken-vermicelli-b-n-g-n-ng"
+  },
+  {
+   "name": "15. GRILLED PORK VERMICELLI | BÚN THỊT HEO NƯỚNG",
+   "desc": "Grilled pork vermicelli. Served with grilled pork, vermicelli noodle, thinly sliced round lettuce, cucumber, beansprouts",
+   "cents": 1695,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-15-grilled-pork-vermicelli-b-n-th-t-heo-"
+  },
+  {
+   "name": "17. EGGROLLS VERMICELLI | BÚN CHẢ GIÒ",
+   "desc": "Egg roll vermicelli. Served with 4 egg rolls, vermicelli noodle, thinly sliced round lettuce, cucumber, beansprouts, pickled carrot daikon and roast peanuts",
+   "cents": 1695,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-17-eggrolls-vermicelli-b-n-ch-gi"
+  },
+  {
+   "name": "16. GRILLED SHRIMPS VERMICELLI | BÚN TÔM NƯỚNG",
+   "desc": "Grilled shrimps vermicelli. Served with 9 grilled shrimps, vermicelli noodle, thinly sliced round lettuce, cucumber, beansprouts",
+   "cents": 1695,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-16-grilled-shrimps-vermicelli-b-n-t-m-n-"
+  },
+  {
+   "name": "18. VEGETARIAN TOFU + MIXED VEGGIES VERMICELLI | BÚN ĐẬU HỦ CHAY",
+   "desc": "Vegetarian tofu and mixed veggies vermicelli. Served with fried tofu, broccoli, white mushroom, sliced zucchini and carrot. Also contains vermicelli noodle",
+   "cents": 1595,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-18-vegetarian-tofu-mixed-veggies-vermice"
+  },
+  {
+   "name": "19. COMBO RICE PLATE #1 | CƠM ĐẶC BIỆT #1",
+   "desc": "Combo rice plate #1. Served with grilled chicken, grilled pork and 3 grilled shrimps and a small salad.",
+   "cents": 1895,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-19-combo-rice-plate-1-c-m-c-bi-t-1"
+  },
+  {
+   "name": "3. RARE STEAK + BEEF BALLS | PHỞ TÁI BÒ VIÊN",
+   "desc": "Pho beef noodle soup. Combination contains thinly sliced rare steak and beef balls.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-3-rare-steak-beef-balls-ph-t-i-b-vi-n"
+  },
+  {
+   "name": "20. COMBO RICE PLATE #2 | CƠM ĐẶC BIỆT #2",
+   "desc": "Combination rice plate comes with 1 grilled pork chop, 2 fried chicken wings, 1 egg roll. Also includes bowl of rice and a small salad.",
+   "cents": 1895,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-20-combo-rice-plate-2-c-m-c-bi-t-2"
+  },
+  {
+   "name": "21. GRILLED CHICKEN RICE + SALAD | CƠM GÀ NƯỚNG",
+   "desc": "Rice plate serve with grilled chicken and a small salad.",
+   "cents": 1695,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-21-grilled-chicken-rice-salad-c-m-g-n-ng"
+  },
+  {
+   "name": "22. GRILLED PORK RICE + SALAD | CƠM THỊT HEO NƯỚNG",
+   "desc": "Rice plate serve with grilled pork and a small salad.",
+   "cents": 1695,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-22-grilled-pork-rice-salad-c-m-th-t-heo-"
+  },
+  {
+   "name": "23. GRILLED PORKCHOP RICE + SALAD | CƠM SƯỜN HEO NƯỚNG",
+   "desc": "Rice plate serve with two grilled pork chops and a small salad",
+   "cents": 1795,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-23-grilled-porkchop-rice-salad-c-m-s-n-h"
+  },
+  {
+   "name": "24. GRILLED SHRIMPS RICE + SALAD | CƠM TÔM NƯỚNG",
+   "desc": "Rice plate serve with 9 grilled shrimps and a small salad.",
+   "cents": 1695,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-24-grilled-shrimps-rice-salad-c-m-t-m-n-"
+  },
+  {
+   "name": "25. GRILLED BEEF SHORT RIBS RICE + SALAD | CƠM SƯỜN BÒ NƯỚNG",
+   "desc": "Rice plate serve with strips of beef short rib and a small salad.",
+   "cents": 2095,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-25-grilled-beef-short-ribs-rice-salad-c-"
+  },
+  {
+   "name": "26. STEAMED CHICKEN RICE + SALAD | CƠM GÀ HẤP",
+   "desc": "Rice plate serve with steamed chicken leg quarter with bone and skin chopped into small pieces. Also includes salad and ginger sauce.",
+   "cents": 1695,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-26-steamed-chicken-rice-salad-c-m-g-h-p"
+  },
+  {
+   "name": "27. VEGETARIAN TOFU + MIXED VEGGIES RICE | CƠM ĐẬU HỦ CHAY",
+   "desc": "Rice plate comes with fried tofu, broccoli, white mushroom, sliced zucchini and carrot. Also comes with small salad.",
+   "cents": 1595,
+   "section": "Rice plates",
+   "photo": "pho-nation-newark-27-vegetarian-tofu-mixed-veggies-rice-c-"
+  },
+  {
+   "name": "29. FRIED CHICKEN WINGS | CÁNH GÀ CHIÊN",
+   "desc": "Fried chicken wings.",
+   "cents": 995,
+   "section": "Appetizers",
+   "photo": "pho-nation-newark-29-fried-chicken-wings-c-nh-g-chi-n"
+  },
+  {
+   "name": "30. FRIED SHRIMP ROLLS | TÔM CUỐN CHIÊN",
+   "desc": "5 whole shrimp wrapped in egg wrap fried.",
+   "cents": 995,
+   "section": "Appetizers",
+   "photo": "pho-nation-newark-30-fried-shrimp-rolls-t-m-cu-n-chi-n"
+  },
+  {
+   "name": "5. WELL DONE BRISKETS | PHỞ GẦU",
+   "desc": "Pho beef noodle soup serve with only briskets.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-5-well-done-briskets-ph-g-u"
+  },
+  {
+   "name": "28. FRIED EGG ROLLS | CHẢ GIÒ",
+   "desc": "Item comes with four egg rolls which contains chicken and shrimp. No pork.",
+   "cents": 995,
+   "section": "Appetizers",
+   "photo": "pho-nation-newark-28-fried-egg-rolls-ch-gi"
+  },
+  {
+   "name": "33. VEGETARIAN SPRING ROLLS | GỎI CUỐN CHAY",
+   "desc": "2 long rolls of fresh spring rolls using fried tofu. Also contains vermicelli, beansprout and long lettuce. Enjoy with peanut sauce.",
+   "cents": 995,
+   "section": "Appetizers",
+   "photo": "pho-nation-newark-33-vegetarian-spring-rolls-g-i-cu-n-chay"
+  },
+  {
+   "name": "32. FRESH SHRIMP SPRING ROLLS | GỎI CUỐN TÔM",
+   "desc": "2 long rolls of fresh shrimp spring roll cut in half served with peanut sauce. Contains shrimp, vermicelli, beansprout and long lettuce.",
+   "cents": 995,
+   "section": "Appetizers",
+   "photo": "pho-nation-newark-32-fresh-shrimp-spring-rolls-g-i-cu-n-t-"
+  },
+  {
+   "name": "34. VN ICE COFFEE MILK | VN CAFÉ SỬA ĐÁ",
+   "desc": "",
+   "cents": 595,
+   "section": "Drinks",
+   "photo": "pho-nation-newark-34-vn-ice-coffee-milk-vn-caf-s-a"
+  },
+  {
+   "name": "35. VN BLACK ICE COFFEE | VN CAFÉ DEN ĐÁ",
+   "desc": "",
+   "cents": 495,
+   "section": "Drinks",
+   "photo": "pho-nation-newark-35-vn-black-ice-coffee-vn-caf-den"
+  },
+  {
+   "name": "36. THAI ICE TEA | TRÀ THÁI",
+   "desc": "",
+   "cents": 550,
+   "section": "Drinks",
+   "photo": "pho-nation-newark-36-thai-ice-tea-tr-th-i"
+  },
+  {
+   "name": "39. FRESH LEMONADE | NƯỚC CHANH",
+   "desc": "",
+   "cents": 495,
+   "section": "Drinks",
+   "photo": "pho-nation-newark-39-fresh-lemonade-n-c-chanh"
+  },
+  {
+   "name": "40. SODA | NƯỚC NGỌT",
+   "desc": "",
+   "cents": 195,
+   "section": "Drinks",
+   "photo": "pho-nation-newark-40-soda-n-c-ng-t"
+  },
+  {
+   "name": "6. RARE STEAK | PHỞ TÁI",
+   "desc": "Pho beef noodle soup. Serve with thinly sliced rare steak.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-6-rare-steak-ph-t-i"
+  },
+  {
+   "name": "42. AVOCADO | BƠ",
+   "desc": "",
+   "cents": 695,
+   "section": "Smoothies",
+   "photo": "pho-nation-newark-42-avocado-b"
+  },
+  {
+   "name": "41. BOTTLED WATER | BÌNH NƯỚC",
+   "desc": "",
+   "cents": 195,
+   "section": "Drinks",
+   "photo": "pho-nation-newark-41-bottled-water-b-nh-n-c"
+  },
+  {
+   "name": "44. STRAWBERRY | DÂU",
+   "desc": "",
+   "cents": 595,
+   "section": "Smoothies",
+   "photo": "pho-nation-newark-44-strawberry-d-u"
+  },
+  {
+   "name": "45. STRAWBERRY BANANA | DÂU CHUOY",
+   "desc": "",
+   "cents": 595,
+   "section": "Smoothies",
+   "photo": "pho-nation-newark-45-strawberry-banana-d-u-chuoy"
+  },
+  {
+   "name": "43. MANGO | XOÀI",
+   "desc": "",
+   "cents": 595,
+   "section": "Smoothies",
+   "photo": "pho-nation-newark-43-mango-xo-i"
+  },
+  {
+   "name": "46. PEACH | DÂO",
+   "desc": "",
+   "cents": 595,
+   "section": "Smoothies",
+   "photo": "pho-nation-newark-46-peach-d-o"
+  },
+  {
+   "name": "47. WILDBERRY",
+   "desc": "",
+   "cents": 595,
+   "section": "Smoothies",
+   "photo": "pho-nation-newark-47-wildberry"
+  },
+  {
+   "name": "2. PHO NATION COMBO #2 | PHỞ ĐẶC BIỆT #2",
+   "desc": "Pho beef noodle soup combo#2. Combination comes with thinly sliced rare steak, well done brisket and flanks.",
+   "cents": 1695,
+   "label": "from $16.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-2-pho-nation-combo-2-ph-c-bi-t-2"
+  },
+  {
+   "name": "7. BEEF BALLS | PHỞ BÒ VIÊN",
+   "desc": "Pho beef noodle soup. Comes with only beef balls.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-7-beef-balls-ph-b-vi-n"
+  },
+  {
+   "name": "8. PHO CHICKEN BREAST | PHỞ GÀ",
+   "desc": "Pho chicken noodle soup. Comes with shredded white chicken breast.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-8-pho-chicken-breast-ph-g"
+  },
+  {
+   "name": "48. BEEF ONION VERMICELLI",
+   "desc": "Beef stir fry with yellow onion. Served with vermicelli noodle, thinly sliced round lettuce, cucumber, beansprout, pickled carrot daikon and roasted peanuts",
+   "cents": 1695,
+   "section": "Vermicelli",
+   "photo": "pho-nation-newark-48-beef-onion-vermicelli"
+  },
+  {
+   "name": "49. BEEF ONION RICE PLATE + SALAD",
+   "desc": "Beef is stir fry with yellow onion, served with rice and salad.",
+   "cents": 1695,
+   "section": "Rice plates"
+  },
+  {
+   "name": "9. PHO CHICKEN QUARTERS | PHỞ GÀ CÓ XƯƠNG",
+   "desc": "Pho chicken noodle soup. Comes with chicken leg quarter bone and skin, chopped in smaller pieces. Enjoy with ginger sauce.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-9-pho-chicken-quarters-ph-g-c-x-ng"
+  },
+  {
+   "name": "4. RARE STEAK + WELL DONE BRISKETS | PHỞ TÁI GẦU",
+   "desc": "Pho beef noodle soup. Combination contains thinly sliced rare steak and well done briskets.",
+   "cents": 1595,
+   "label": "from $15.95",
+   "section": "Noodle soups",
+   "photo": "pho-nation-newark-4-rare-steak-well-done-briskets-ph-t-i-g"
+  }
+ ]
+}

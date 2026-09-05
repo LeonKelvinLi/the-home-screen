@@ -1,0 +1,153 @@
+{
+ "id": "b_thefarmacy",
+ "source": "json",
+ "pages": [
+  "https://www.farmacysf.com/",
+  "https://www.farmacysf.com/menu",
+  "https://www.farmacysf.com/popmenu-order/the-farmacy/menus/main-menu",
+  "https://www.farmacysf.com/catering",
+  "https://get.popmenu.com/",
+  "https://www.levelaccess.com/a/popmenu?utm_source=popmenuclient&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=footer&utm_campaign=popmenu",
+  "https://www.farmacysf.com/items/fried-chicken-sandwich-d7957442?location=the-farmacy&menu=main-menu"
+ ],
+ "items": [
+  {
+   "name": "Fried Chicken Sandwich",
+   "desc": "Crispy chicken thigh, honey chipotle aioli, shaved cabbage, pickles, brioche bun",
+   "cents": 1250,
+   "section": "Handhelds",
+   "photo": "the-farmacy-fried-chicken-sandwich"
+  },
+  {
+   "name": "Diablo Spicy Chicken Sandwich",
+   "desc": "Crispy chicken thigh, house diablo sauce, shredded lettuce, pickles, brioche bun",
+   "cents": 1325,
+   "section": "Handhelds"
+  },
+  {
+   "name": "Rotisserie Chicken Sandwich",
+   "desc": "Herb-roasted chicken, lemon aioli, arugula, tomato, brioche bun",
+   "cents": 1225,
+   "section": "Handhelds"
+  },
+  {
+   "name": "Plant-Based Chicken Sandwich (Tindle™)",
+   "desc": "Crispy Tindle™ chicken, vegan aioli, pickles, shredded lettuce",
+   "cents": 1275,
+   "section": "Handhelds"
+  },
+  {
+   "name": "Chicken Smash Burger *Limited Time Special*",
+   "desc": "Smashed seasoned chicken patty, American cheese, caramelized onions, pickles, Farmacy sauce",
+   "cents": 1395,
+   "section": "Handhelds",
+   "photo": "the-farmacy-chicken-smash-burger-limited-time-specia"
+  },
+  {
+   "name": "Classic Crispy Chicken Strips & Chips",
+   "desc": "Our special golden fried chicken",
+   "cents": 1295,
+   "section": "Strips & Chips",
+   "photo": "the-farmacy-classic-crispy-chicken-strips-chips"
+  },
+  {
+   "name": "Hot Honey Chicken Strips & Chips",
+   "desc": "Crispy chicken tossed in hot honey glaze",
+   "cents": 1395,
+   "section": "Strips & Chips",
+   "photo": "the-farmacy-hot-honey-chicken-strips-chips"
+  },
+  {
+   "name": "Diablo Chicken Strips & Chips",
+   "desc": "Crispy chicken tossed in house diablo sauce",
+   "cents": 1395,
+   "section": "Strips & Chips",
+   "photo": "the-farmacy-diablo-chicken-strips-chips"
+  },
+  {
+   "name": "Asian Chili Chicken Strips & Chips",
+   "desc": "Sweet-spicy chili glaze",
+   "cents": 1395,
+   "section": "Strips & Chips",
+   "photo": "the-farmacy-asian-chili-chicken-strips-chips"
+  },
+  {
+   "name": "Mediterranean Bowl",
+   "desc": "Jasmine rice, cucumber-tomato salad, olives, fried scallions, tzatziki. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+   "cents": 1395,
+   "section": "Signature Bowls",
+   "photo": "the-farmacy-mediterranean-bowl"
+  },
+  {
+   "name": "Asian Sesame Bowl",
+   "desc": "Jasmine rice, sesame slaw, cucumbers, scallions, soy-ginger glaze, chili crisp. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+   "cents": 1395,
+   "section": "Signature Bowls",
+   "photo": "the-farmacy-asian-sesame-bowl"
+  },
+  {
+   "name": "Warm Power Bowl",
+   "desc": "Greens + grains, roasted seasonal vegetables, avocado, house vinaigrette. Add crispy, rotisserie, plant-based, or Diablo-style chicken for $3",
+   "cents": 1295,
+   "section": "Signature Bowls"
+  },
+  {
+   "name": "Kale Caesar",
+   "desc": "Chopped kale, parmesan, sourdough croutons, Caesar dressing. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+   "cents": 1275,
+   "section": "Signature Salads",
+   "photo": "the-farmacy-kale-caesar"
+  },
+  {
+   "name": "Asian Crunch Salad",
+   "desc": "Mixed greens, cabbage, carrots, sesame seeds, crispy wontons, ginger vinaigrette. Add crispy, rotisserie, plant-based, or Diablo chicken for $3",
+   "cents": 1375,
+   "section": "Signature Salads",
+   "photo": "the-farmacy-asian-crunch-salad"
+  },
+  {
+   "name": "Mediterranean Chopped Salad",
+   "desc": "Chopped romaine & arugula, cherry tomatoes, cucumber, olives, red onion, feta, lemon oregano vinaigrette. Add crispy, rotisserie, plant-based",
+   "cents": 1375,
+   "section": "Signature Salads"
+  },
+  {
+   "name": "Soup Of The Day (Chicken Noodle)",
+   "desc": "",
+   "cents": 695,
+   "section": "Soup & Sides"
+  },
+  {
+   "name": "Daily-Made Farmacy Chips",
+   "desc": "",
+   "cents": 395,
+   "section": "Soup & Sides",
+   "photo": "the-farmacy-daily-made-farmacy-chips"
+  },
+  {
+   "name": "Sesame Asian Slaw",
+   "desc": "",
+   "cents": 595,
+   "section": "Soup & Sides"
+  },
+  {
+   "name": "Soft Serve",
+   "desc": "Rotating Flavor (French Vanilla)",
+   "cents": 595,
+   "section": "Sweets",
+   "photo": "the-farmacy-soft-serve"
+  },
+  {
+   "name": "Plant‑Based Tindle Sandwich",
+   "desc": "Each box includes a plant-based Tindle sandwich (plant-based chicken, vegan aioli, lettuce, tomato & red onion on a toasted vegan bun) and chips.",
+   "cents": 1875,
+   "section": "Boxed Lunches"
+  },
+  {
+   "name": "Kale Caesar Salad",
+   "desc": "Petite kale, parmesan, and toasted croutons tossed in house-made Caesar dressing. Choose rotisserie chicken, fried chicken, or plant-based protein.",
+   "cents": 1750,
+   "section": "Salads"
+  }
+ ]
+}

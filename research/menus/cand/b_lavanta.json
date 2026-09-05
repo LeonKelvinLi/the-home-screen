@@ -1,0 +1,446 @@
+{
+ "id": "b_lavanta",
+ "source": "pdf",
+ "alt": {},
+ "pages": [
+  "https://www.eatlavanta.com/",
+  "https://www.eatlavanta.com/_files/ugd/fab297_d26119123fd74f42a866256930d9c976.pdf",
+  "https://www.eatlavanta.com/_files/ugd/fab297_834ede2c134845b39446a4c1a61032ee.pdf",
+  "https://www.eatlavanta.com/_files/ugd/fab297_da8acdb6cfe349e994824806d3f922f2.pdf"
+ ],
+ "pdfs": [
+  "https://www.eatlavanta.com/_files/ugd/fab297_d26119123fd74f42a866256930d9c976.pdf",
+  "https://www.eatlavanta.com/_files/ugd/fab297_834ede2c134845b39446a4c1a61032ee.pdf",
+  "https://www.eatlavanta.com/_files/ugd/fab297_da8acdb6cfe349e994824806d3f922f2.pdf"
+ ],
+ "items": [
+  {
+   "name": "ΤΑ ΜΕΖΕ ΤΟΥ ΣΕΦ FOR: 2-$34 | 4-$68 |",
+   "desc": "Dolmadakia | Tzatziki | Gigantes Plaki | Potato Croquettes |",
+   "cents": 600,
+   "label": "from $6",
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Lavanta"
+  },
+  {
+   "name": "Soup of the day",
+   "desc": "Ask your server for the soup of the day.",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Lavanta"
+  },
+  {
+   "name": "GRILLED HALLOUMI",
+   "desc": "Pan-Seared Organic Halloumi | Organic Peaches |",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "SALT-BAKED WHOLE FISH (FOR SHARING)"
+  },
+  {
+   "name": "BRANZINO",
+   "desc": "",
+   "cents": 4800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "SALT-BAKED WHOLE FISH (FOR SHARING)"
+  },
+  {
+   "name": "RED SNAPPER PLAKI",
+   "desc": "",
+   "cents": 4800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "SALT-BAKED WHOLE FISH (FOR SHARING)"
+  },
+  {
+   "name": "GIGANTES PLAki $15  LAMB SHANK",
+   "desc": "Giant beans baked in tomato sauce (VG, GF, DF)  ΑΡΝΙΣΙΟ ΚΟΤΣΙ",
+   "cents": 4200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chipotle Aioli | EVOO (V)"
+  },
+  {
+   "name": "Roasted Seasonal vegetables",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chipotle Aioli | EVOO (V)"
+  },
+  {
+   "name": "AEGEAN EGGPLANT SALAD $14  LAMB MOUSSAKA",
+   "desc": "",
+   "cents": 4200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chipotle Aioli | EVOO (V)"
+  },
+  {
+   "name": "DOLMADAKIA YIALANTZI $14  VEGETARIAN MOUSSAKA",
+   "desc": "Vine leaves stuffed with rice and herbs (VG, GF, DF)  ΧΟΡΤΟΦΑΓΙΚΟΣ ΜΟΥΣΑΚΑΣ",
+   "cents": 3600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "GRILLED OCTOPUS",
+   "desc": "",
+   "cents": 2800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "ΧΤΑΠΟΔΙ ΣΤΗ ΣΧΑΡΑ  PAN-SEARED KING SALMON",
+   "desc": "Char-Grilled Octopus | House-made Signature Sauce | EVOO (GF, DF)",
+   "cents": 4200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "VINE-WRAPPED GRILLED SARDINES $24  CORNISH HEN LEMONATO",
+   "desc": "",
+   "cents": 3800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "ZUCCHINI FRITTERS $16  GRILLED LAMB CHOPS",
+   "desc": "Zucchini | Feta | Fresh Herbs | Greek Lemon-Yogurt (V, GL, D)  ΠΑΪΔΑΚΙΑ ΑΡΝΙΟΥ",
+   "cents": 4800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "house-made POTATO CROQUETTES",
+   "desc": "Crispy Potato Croquettes | Feta & Kefalotyri | Fresh Dill | Oregano |  Fresh Herbs | EVOO | Sea Salt (GF)",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "Char-Grilled KEFTEDES",
+   "desc": "",
+   "cents": 3800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "(D, GF, VG)"
+  },
+  {
+   "name": "ΣΟΥΒΛΑΚΙΑ | SOUVLAKI  BEEF TENDERLOIN souvlaki",
+   "desc": "LAMB RAGÙ PAPPARDELLE $32  Grilled skewers of marinated meat, flame-cooked",
+   "cents": 3600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "ΦΡΕΣΚΑ ΖΥΜΑΡΙΚΑ | FRESH PASTA"
+  },
+  {
+   "name": "SANTORINI OCTOPUS PASTA $32  SHRIMP souvlaki",
+   "desc": "Bucatini | Braised Octopus | Crushed Tomato Medley | Garlic |",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Char-Grilled Lemon | EVOO |"
+  },
+  {
+   "name": "Char-Grilled Lemon | EVOO |  Lamb souvlaki",
+   "desc": "White Wine | Fresh Herbs | EVOO (GL)",
+   "cents": 3200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Char-Grilled Lemon | EVOO |"
+  },
+  {
+   "name": "EVOO (VG, DF, GL)",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Char-Grilled Lemon | EVOO |"
+  },
+  {
+   "name": "WILD BOAR souvlaki  Greek meatballs souvlaki",
+   "desc": "SALMON Fettuccine $32  Char-Grilled Orange | EVOO |",
+   "cents": 3200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Char-Grilled Lemon | EVOO |"
+  },
+  {
+   "name": "Chicken fettuccine",
+   "desc": "Handmade Fettuccine | Chicken | Mushrooms | EVOO |",
+   "cents": 3200,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Spanakorizo Rice (GF, PK, D)"
+  },
+  {
+   "name": "GREEK VILLAGE SALAD",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Spanakorizo Rice (GF, PK, D)"
+  },
+  {
+   "name": "For 2 Guests",
+   "desc": "Chicken | Lamb | Shrimp | Beef Tenderloin | Wild Boar |",
+   "cents": 12000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Spanakorizo Rice (GF, PK, D)"
+  },
+  {
+   "name": "ARUGULA SALAD $20  For 4 Guests",
+   "desc": "Mushrooms | Keftedes | Spanakorizo Rice |",
+   "cents": 24000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Spanakorizo Rice (GF, PK, D)"
+  },
+  {
+   "name": "For 6 Guests",
+   "desc": "Arugula | Cherry Tomatoes | Shaved Fennel | Capers | Dill |",
+   "cents": 36000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "ΡΟΚΑ Greek Lemon Potatoes (GF, D)"
+  },
+  {
+   "name": "HORIATIKI SALATA",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "ΡΟΚΑ Greek Lemon Potatoes (GF, D)"
+  },
+  {
+   "name": "BEEF TENDERLOIN $20  WILD BOAR TENDERLOIN",
+   "desc": "GRILLED CHICKEN $16  TIGER SHRIMP $16  (Please inform your server of any allergies.)",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "ΠΑΡΕΛΚΟΜΕΝΑ | SIDES"
+  },
+  {
+   "name": "3 COURSES FOR",
+   "desc": "",
+   "cents": 4900,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Lavanta"
+  },
+  {
+   "name": "Tzatziki | Serves 2 $10  Whole Branzino",
+   "desc": "",
+   "cents": 4800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Zucchini Fritters (2pc) $12  Red Snapper",
+   "desc": "",
+   "cents": 4800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Chef Tugba’s Mezze Platter | Serves 2 $34  Lamb Moussaka",
+   "desc": "",
+   "cents": 3600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Dolmadakia Yialantzi | Serves 2 $12  Veggie Moussaka",
+   "desc": "",
+   "cents": 3600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Aegean Eggplant Salad | Serves 2 $10  Grilled Koftedes",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Hummus | Serves 2 $10  Pan-Seared King Salmon",
+   "desc": "",
+   "cents": 3800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Poseidon Phyllo Trio",
+   "desc": "( 1 cheese, 1 potato, 1 lamb)",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Appetizers Main Dishes"
+  },
+  {
+   "name": "Shrimp Souvlaki",
+   "desc": "",
+   "cents": 1900,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Chicken Souvlaki",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Lamb Souvlaki",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Beef Tenderloin Souvlaki",
+   "desc": "",
+   "cents": 1800,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Mushroom Souvlaki",
+   "desc": "",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Meatballs Souvlaki",
+   "desc": "",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Wild Boar Souvlaki",
+   "desc": "",
+   "cents": 1600,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Salads"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Drinks"
+  },
+  {
+   "name": "Coke Zero",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Drinks"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Drinks"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Drinks"
+  },
+  {
+   "name": "Revani (1pc)",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Desserts"
+  },
+  {
+   "name": "Baklava (2pc)",
+   "desc": "Minimum $400 per catering order.",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Desserts"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/fab297_38dad406d62a434d9ebf49d40b1ad1f7~mv2.jpg/v1/fill/w_1280,h_603,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fab297_38dad406d62a434d9ebf49d40b1ad1f7~mv2.jpg",
+   "alt": "DSC03210.jpg",
+   "near": "Your Destination for Fresh and\nAuthentic Mediterranean Cuisine\nMediterranean Flavors in the Heart of",
+   "w": 1280,
+   "h": 603,
+   "page": "https://www.eatlavanta.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_bae1c171120c4fcb9e26b43fdcbe704c~mv2.jpg/v1/fill/w_640,h_594,fp_0.46_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC03150.jpg",
+   "alt": "DSC03150.jpg",
+   "near": "",
+   "w": 640,
+   "h": 594,
+   "page": "https://www.eatlavanta.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_03152673bee6460880331f98f319fa2d~mv2.jpg/v1/fill/w_640,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC03048.jpg",
+   "alt": "DSC03048.jpg",
+   "near": "",
+   "w": 640,
+   "h": 380,
+   "page": "https://www.eatlavanta.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_17eb113f8f9f469083f3283bd6312811~mv2.jpg/v1/fill/w_640,h_380,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC03029.jpg",
+   "alt": "DSC03029.jpg",
+   "near": "",
+   "w": 640,
+   "h": 380,
+   "page": "https://www.eatlavanta.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_3b515bd00ea848519a1811cf3b0c0d76~mv2.jpg/v1/fill/w_640,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC02956.jpg",
+   "alt": "DSC02956.jpg",
+   "near": "",
+   "w": 640,
+   "h": 700,
+   "page": "https://www.eatlavanta.com/"
+  }
+ ]
+}

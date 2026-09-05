@@ -1,0 +1,255 @@
+{
+ "id": "b_empirestatepizza",
+ "source": "text",
+ "pages": [
+  "https://www.empirestatepizzas.com/"
+ ],
+ "items": [
+  {
+   "name": "Hot Wings",
+   "desc": "",
+   "cents": 1295,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "BBQ Wings",
+   "desc": "",
+   "cents": 1295,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "Garlic Twists",
+   "desc": "",
+   "cents": 1195,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "Garlic Bread With Cheese",
+   "desc": "",
+   "cents": 895,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "Mozzarella Sticks",
+   "desc": "",
+   "cents": 895,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "Garlic Sticks 10\"",
+   "desc": "Fluffy Garlic Sticks with White Creamy Garlic Sauce and Pesto Sauce topped with Cheese",
+   "cents": 1495,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "Create Your Own Pizza",
+   "desc": "",
+   "cents": 1795,
+   "section": "Empire State Pizza"
+  },
+  {
+   "name": "NY Truffle Pizza",
+   "desc": "Sliced portobello mushrooms, fresh mozzarella, pecorino romano cheese, fresh garlic, drizzled with black & white truffle oil, sprinkled with black pepper.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Empire Of Meats Pizza",
+   "desc": "Red sauce, italian sausage, ground beef, salami, pepperoni, ham and linguica.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Mediterranean Mile Pizza",
+   "desc": "Pesto sauce, pepperoncini, spinach, green olives, red onions, sun-dried tomato, feta cheese.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Garlic Chicken Pizza",
+   "desc": "Creamy white garlic sauce, chicken, mushrooms, green, onions, tomato and chopped garlic.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Empire Margherita Pizza",
+   "desc": "Red sauce, fresh mozzarella, sliced tomato and fresh basil.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Combination Pizza",
+   "desc": "House mix read sauce, pepperoni, salami, ham, sausage, mushroom, olive, bell pepper.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "NY White Pizza",
+   "desc": "Olive oil drizzle, ricotta cheese, mozzarella cheese, fresh garlic and fresh basil.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Hot Honey Ricotta Pepperoni",
+   "desc": "Classic red sauce, cheese, pepperoni, ricotta cheese, fresh basil, hot honey sauce. Freshly grated grana padano cheese.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "BBQ Chicken Pizza",
+   "desc": "Smoked BBQ sauce, chicken, mushrooms, red onions, garlic and tomato.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Uptown Pesto Pizza",
+   "desc": "Pesto sauce, chicken, sun-dried tomato, black olive, mushrooms, artichoke, feta cheese and red onion.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Ray's Special Pizza",
+   "desc": "Chicken, mushroom, artichoke, roasted garlic, fresh basil, romano cheese, white garlic sauce.",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Vegetarian Pizza",
+   "desc": "House Mix Red Sauce, Mushroom, Olive, Tomatoes, Bell Pepper, Red Onion, Garlic",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "The Empire Tikka",
+   "desc": "Butter chicken Sauce, Mozzarella Cheese, Butter Chicken, Bell Pepper, Red Onion, Mushroom, Green Onion, Cilantro",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Paneer Tikka Pizza",
+   "desc": "Creamy Butter Sauce, Mozzarella Cheese, Marinated Paneer, Bell Pepper, Olive, Onion, Cilantro",
+   "cents": 2895,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Pizza by the Slice",
+   "desc": "",
+   "cents": 600,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Specialty Pizza Slice",
+   "desc": "",
+   "cents": 875,
+   "section": "Empire Specialties"
+  },
+  {
+   "name": "Beef & Lamb Gyro",
+   "desc": "Beef & Lamb Gyro with bag of chips Halal",
+   "cents": 1395,
+   "section": "Empire Bites"
+  },
+  {
+   "name": "9\" Meatball Sub",
+   "desc": "9 inch Meatball sub with chips Halal",
+   "cents": 1395,
+   "section": "Empire Bites"
+  },
+  {
+   "name": "Green Salad",
+   "desc": "",
+   "cents": 995,
+   "section": "Salads"
+  },
+  {
+   "name": "Caesar Salad",
+   "desc": "",
+   "cents": 995,
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Salad",
+   "desc": "",
+   "cents": 1095,
+   "section": "Salads"
+  },
+  {
+   "name": "Calzones",
+   "desc": "Calzone",
+   "cents": 1695,
+   "section": "Salads"
+  },
+  {
+   "name": "Brownie Cookie Pizza",
+   "desc": "",
+   "cents": 895,
+   "section": "Desserts"
+  },
+  {
+   "name": "Chocolate Chip Cookie Pizza",
+   "desc": "",
+   "cents": 895,
+   "section": "Desserts"
+  },
+  {
+   "name": "Cannoli",
+   "desc": "Fresh Cannoli",
+   "cents": 1095,
+   "section": "Desserts"
+  },
+  {
+   "name": "New York Cheesecake",
+   "desc": "New York Cheesecake",
+   "cents": 595,
+   "section": "Desserts"
+  },
+  {
+   "name": "Lava Cake",
+   "desc": "Lava Cake",
+   "cents": 695,
+   "section": "Desserts"
+  },
+  {
+   "name": "Can Soda",
+   "desc": "",
+   "cents": 200,
+   "section": "Drinks"
+  },
+  {
+   "name": "Mexican Coke",
+   "desc": "",
+   "cents": 375,
+   "section": "Drinks"
+  },
+  {
+   "name": "2 Liter Soda",
+   "desc": "",
+   "cents": 475,
+   "section": "Drinks"
+  },
+  {
+   "name": "Ranch Dressing",
+   "desc": "",
+   "cents": 100,
+   "section": "Dips and Sauces"
+  },
+  {
+   "name": "Blue Cheese Dressing",
+   "desc": "",
+   "cents": 100,
+   "section": "Dips and Sauces"
+  },
+  {
+   "name": "Marinara Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Dips and Sauces"
+  },
+  {
+   "name": "Pizza Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Dips and Sauces"
+  }
+ ]
+}

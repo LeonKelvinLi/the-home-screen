@@ -1,0 +1,700 @@
+{
+ "id": "b_kingswcpizza",
+ "source": "jsonld",
+ "pages": [
+  "https://kingswcpizza.com/",
+  "https://kingswcpizza.com/menu",
+  "https://kingswcpizza.com/page/menu-pdf",
+  "https://kingswcpizza.com/catering",
+  "https://kingswcpizza.com/page/reservations",
+  "https://kingswcpizza.com/story",
+  "https://kingswcpizza.com/page/book-a-party"
+ ],
+ "items": [
+  {
+   "name": "BBQ Chicken Wings",
+   "desc": "",
+   "cents": 999,
+   "section": "Appetizers",
+   "photo": "kingswcpizza-bbq-chicken-wings"
+  },
+  {
+   "name": "Buffalo Chicken Wings",
+   "desc": "",
+   "cents": 999,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Spicy Chicken Wings",
+   "desc": "",
+   "cents": 999,
+   "section": "Appetizers",
+   "photo": "kingswcpizza-spicy-chicken-wings"
+  },
+  {
+   "name": "Mozzarella Sticks",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers"
+  },
+  {
+   "name": "French Fries",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers",
+   "photo": "kingswcpizza-french-fries"
+  },
+  {
+   "name": "Garlic Bread",
+   "desc": "",
+   "cents": 599,
+   "section": "Appetizers",
+   "photo": "kingswcpizza-garlic-bread"
+  },
+  {
+   "name": "Classic Chicken Wings",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Meatballs",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Fried Calabresa",
+   "desc": "",
+   "cents": 1499,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Jalapeño Poppers",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Yuca Fries",
+   "desc": "",
+   "cents": 999,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Garlic Bread W/ Cheese",
+   "desc": "",
+   "cents": 699,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Pepperoni Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni",
+   "cents": 1599,
+   "section": "Pizza",
+   "photo": "kingswcpizza-pepperoni-pizza"
+  },
+  {
+   "name": "Chicken Catupiry Pizza",
+   "desc": "Red sauce, mozzarella, shredded chicken, Brazilian cream cheese, oregano, green olives",
+   "cents": 2299,
+   "section": "Pizza",
+   "photo": "kingswcpizza-chicken-catupiry-pizza"
+  },
+  {
+   "name": "The Bay Special Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni, pineapple, sausage, jalapeno, pesto",
+   "cents": 1999,
+   "section": "Pizza",
+   "photo": "kingswcpizza-the-bay-special-pizza"
+  },
+  {
+   "name": "Portuguese Pizza",
+   "desc": "White sauce, mozzarella, hard boiled eggs, corn, canadian bacon, onions, tomatoes, green olives",
+   "cents": 2299,
+   "section": "Pizza",
+   "photo": "kingswcpizza-portuguese-pizza"
+  },
+  {
+   "name": "California Special Pizza",
+   "desc": "White sauce, mozzarella, chicken, bacon, tomatoes, green onions",
+   "cents": 1999,
+   "section": "Pizza",
+   "photo": "kingswcpizza-california-special-pizza"
+  },
+  {
+   "name": "Calabresa Pizza",
+   "desc": "Red sauce, mozzarella, calabresa sausage, black olives, cooked onions",
+   "cents": 2299,
+   "section": "Pizza",
+   "photo": "kingswcpizza-calabresa-pizza"
+  },
+  {
+   "name": "Margherita Pizza",
+   "desc": "Red sauce, mozzarella, tomatoes, fresh basil",
+   "cents": 1899,
+   "section": "Pizza",
+   "photo": "kingswcpizza-margherita-pizza"
+  },
+  {
+   "name": "Combination Special Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni, salami, sausage, tomato, bell pepper, onions, mushroom",
+   "cents": 2099,
+   "section": "Pizza",
+   "photo": "kingswcpizza-combination-special-pizza"
+  },
+  {
+   "name": "Greek Pizza",
+   "desc": "Red sauce, mozzarella, spinach, black olives, feta cheese, tomatoes, garlic",
+   "cents": 1999,
+   "section": "Pizza",
+   "photo": "kingswcpizza-greek-pizza"
+  },
+  {
+   "name": "Hawaiian Pizza",
+   "desc": "Red sauce, Canadian bacon, pineapple",
+   "cents": 1699,
+   "section": "Pizza",
+   "photo": "kingswcpizza-hawaiian-pizza"
+  },
+  {
+   "name": "Kings Special Pizza",
+   "desc": "Red sauce, mozzarella, spinach, mushrooms, broccoli, pesto, chicken, onions",
+   "cents": 2099,
+   "section": "Pizza",
+   "photo": "kingswcpizza-kings-special-pizza"
+  },
+  {
+   "name": "Cheese Pizza",
+   "desc": "With red sauce and mozzarella",
+   "cents": 1499,
+   "section": "Pizza",
+   "photo": "kingswcpizza-cheese-pizza"
+  },
+  {
+   "name": "Haight-Ashbury Special Pizza",
+   "desc": "With red sauce, mozzarella, mushrooms, bell peppers, tomato, black olives, and onions",
+   "cents": 1999,
+   "section": "Pizza"
+  },
+  {
+   "name": "Meat Lover's Pizza",
+   "desc": "With red sauce, mozzarella, pepperoni, salami, ham, chicken, and sausage",
+   "cents": 2099,
+   "section": "Pizza"
+  },
+  {
+   "name": "5-Cheese Pizza",
+   "desc": "With red sauce, mozzarella, ovalini, blue cheese, feta, and Parmesan",
+   "cents": 1999,
+   "section": "Pizza"
+  },
+  {
+   "name": "Hula-Hula BBQ Chicken Pizza",
+   "desc": "With red sauce, mozzarella, pineapple, chicken, BBQ sauce, and green onions",
+   "cents": 1899,
+   "section": "Pizza",
+   "photo": "kingswcpizza-hula-hula-bbq-chicken-pizza"
+  },
+  {
+   "name": "Create-Your-Own Pizza (16\" X-Large)",
+   "desc": "With your choice of sauce",
+   "cents": 2599,
+   "section": "Pizza"
+  },
+  {
+   "name": "Fettuccine Alfredo (Family)",
+   "desc": "",
+   "cents": 4699,
+   "section": "Pasta"
+  },
+  {
+   "name": "Chicken Fettuccine Alfredo (Family)",
+   "desc": "",
+   "cents": 7599,
+   "section": "Pasta",
+   "photo": "kingswcpizza-chicken-fettuccine-alfredo-family"
+  },
+  {
+   "name": "Spaghetti w/ Marinara Sauce (Individual)",
+   "desc": "",
+   "cents": 1599,
+   "section": "Pasta",
+   "photo": "kingswcpizza-spaghetti-w-marinara-sauce-individual"
+  },
+  {
+   "name": "Spaghetti w/ Marinara Sauce (Family)",
+   "desc": "",
+   "cents": 4699,
+   "section": "Pasta",
+   "photo": "kingswcpizza-spaghetti-w-marinara-sauce-family"
+  },
+  {
+   "name": "Fettuccine Alfredo (Individual)",
+   "desc": "",
+   "cents": 1599,
+   "section": "Pasta",
+   "photo": "kingswcpizza-fettuccine-alfredo-individual"
+  },
+  {
+   "name": "Spaghetti w/ Meat Sauce (Individual)",
+   "desc": "",
+   "cents": 1799,
+   "section": "Pasta",
+   "photo": "kingswcpizza-spaghetti-w-meat-sauce-individual"
+  },
+  {
+   "name": "Spaghetti w/ Meat Sauce (Family)",
+   "desc": "",
+   "cents": 7599,
+   "section": "Pasta",
+   "photo": "kingswcpizza-spaghetti-w-meat-sauce-family"
+  },
+  {
+   "name": "Chicken Fettuccine Alfredo (Individual)",
+   "desc": "",
+   "cents": 1899,
+   "section": "Pasta",
+   "photo": "kingswcpizza-chicken-fettuccine-alfredo-individual"
+  },
+  {
+   "name": "Pesto Parmesan Chicken Penne (Individual)",
+   "desc": "",
+   "cents": 1899,
+   "section": "Pasta"
+  },
+  {
+   "name": "Pesto Parmesan Chicken Penne (Family)",
+   "desc": "",
+   "cents": 7599,
+   "section": "Pasta"
+  },
+  {
+   "name": "Sunset Penne Marinara & Alfredo Sauce (Individual)",
+   "desc": "With your choice of protein",
+   "cents": 1999,
+   "section": "Pasta"
+  },
+  {
+   "name": "Sunset Penne Marinara & Alfredo Sauce (Family)",
+   "desc": "With your choice of protein",
+   "cents": 7599,
+   "section": "Pasta"
+  },
+  {
+   "name": "Caesar Salad (Family)",
+   "desc": "Served with Caesar dressings included: crisp romaine, croutons, and parmesan",
+   "cents": 3499,
+   "section": "Salads"
+  },
+  {
+   "name": "Chicken Caesar Salad (Family)",
+   "desc": "Served with Caesar dressings included: crisp romaine, croutons, parmesan, and chicken breast",
+   "cents": 4999,
+   "section": "Salads"
+  },
+  {
+   "name": "Green Salad (Family)",
+   "desc": "Included: lettuce, tomatoes, red onions, black olives, cucumber, bell peppers",
+   "cents": 4399,
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Salad (Family)",
+   "desc": "Included: tomatoes, green bell peppers, cucumber, red onions, feta cheese, kalamata olives, oregano, and olive oil",
+   "cents": 4399,
+   "section": "Salads"
+  },
+  {
+   "name": "Caesar Salad (Individual)",
+   "desc": "Romaine with croutons and Parmesan. Served with Caesar dressing",
+   "cents": 1199,
+   "section": "Salads"
+  },
+  {
+   "name": "Chicken Caesar Salad (Individual)",
+   "desc": "Romaine with croutons, Parmesan, and chicken breast. Served with Caesar dressing",
+   "cents": 1699,
+   "section": "Salads"
+  },
+  {
+   "name": "Green Salad (Individual)",
+   "desc": "Lettuce with tomato, red onions, cucumber, pepperoncini and bell peppers. Served with your choice of dressing",
+   "cents": 1299,
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Salad (Individual)",
+   "desc": "Diced tomatoes, green bell peppers, cucumbers, red onions, feta, Kalamata olives, oregano, and olive oil. Served with your choice of dressing",
+   "cents": 1499,
+   "section": "Salads"
+  },
+  {
+   "name": "Chocolate Cake",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts",
+   "photo": "kingswcpizza-chocolate-cake"
+  },
+  {
+   "name": "Cheesecake",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts",
+   "photo": "kingswcpizza-cheesecake"
+  },
+  {
+   "name": "Homemade Flan",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts"
+  },
+  {
+   "name": "Nutella Pizza",
+   "desc": "With cheese and Nutella",
+   "cents": 1899,
+   "section": "Desserts"
+  },
+  {
+   "name": "Brigadeiro Pizza",
+   "desc": "With cheese, homemade chocolate fudge, and chocolate sprinkles",
+   "cents": 1999,
+   "section": "Desserts"
+  },
+  {
+   "name": "Beijinho Pizza",
+   "desc": "With cheese, condensed milk cream, and shredded coconut",
+   "cents": 2099,
+   "section": "Desserts"
+  },
+  {
+   "name": "Banana & Cinnamon Pizza",
+   "desc": "With cheese, condensed milk cream, banana, and cinnamon",
+   "cents": 2099,
+   "section": "Desserts"
+  },
+  {
+   "name": "Açai Bowl",
+   "desc": "With strawberry, powdered milk, granola, banana, and condensed milk",
+   "cents": 1499,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 349,
+   "section": "Beverages",
+   "photo": "kingswcpizza-sparkling-water"
+  },
+  {
+   "name": "Assorted Individual Sodas",
+   "desc": "",
+   "cents": 225,
+   "section": "Beverages"
+  },
+  {
+   "name": "Assorted 2L Soda Bottles",
+   "desc": "",
+   "cents": 699,
+   "section": "Beverages"
+  },
+  {
+   "name": "Assorted Fruit Juices",
+   "desc": "",
+   "cents": 299,
+   "section": "Beverages"
+  },
+  {
+   "name": "Assorted Jarritos Sodas",
+   "desc": "Fruit-flavored Mexican sodas",
+   "cents": 299,
+   "section": "Beverages"
+  },
+  {
+   "name": "Mexican Coke",
+   "desc": "Made with cane sugar",
+   "cents": 350,
+   "section": "Beverages",
+   "photo": "kingswcpizza-mexican-coke"
+  },
+  {
+   "name": "Energy Drink",
+   "desc": "",
+   "cents": 375,
+   "section": "Beverages"
+  },
+  {
+   "name": "2 Liters",
+   "desc": "2 liter bottles",
+   "cents": 699,
+   "section": "Beverages",
+   "photo": "kingswcpizza-2-liters"
+  },
+  {
+   "name": "Kings Deal",
+   "desc": "Extra Large Pizza, 10Pz Wings, Choice Salad, and 2 L Soda!",
+   "cents": 4999,
+   "section": "Kings Deal!",
+   "photo": "kingswcpizza-kings-deal"
+  },
+  {
+   "name": "Chicken Plate",
+   "desc": "Rice, pinto beans, vegetable, French fries, chicken breast. Salad",
+   "cents": 1999,
+   "section": "Sunday plates"
+  },
+  {
+   "name": "Picanha Plate",
+   "desc": "Rice, beans, farofa, French fries, fried banana, salad, vegetable, picanha",
+   "cents": 2799,
+   "section": "Sunday plates",
+   "photo": "kingswcpizza-picanha-plate"
+  },
+  {
+   "name": "Chef's Special Plate",
+   "desc": "Plate of the day",
+   "cents": 2199,
+   "section": "Sunday plates"
+  },
+  {
+   "name": "Plain Cheese Pizza",
+   "desc": "Red sauce, mozzarella",
+   "cents": 1499,
+   "section": "House Pizzas",
+   "photo": "kingswcpizza-plain-cheese-pizza"
+  },
+  {
+   "name": "Vegetarian Special Pizza",
+   "desc": "",
+   "cents": 1999,
+   "section": "House Pizzas",
+   "photo": "kingswcpizza-vegetarian-special-pizza"
+  },
+  {
+   "name": "Meat Lovers Pizza",
+   "desc": "Red sauce, mozzarella, pepperoni, salami, ham, chicken, sausage",
+   "cents": 2099,
+   "section": "House Pizzas",
+   "photo": "kingswcpizza-meat-lovers-pizza"
+  },
+  {
+   "name": "Five Cheese Pizza",
+   "desc": "Red sauce, mozzarella, ovolini, blue cheese, feta cheese, shredded parmesan cheese",
+   "cents": 2199,
+   "section": "House Pizzas",
+   "photo": "kingswcpizza-five-cheese-pizza"
+  },
+  {
+   "name": "Hula Hula BBQ Chicken Pizza",
+   "desc": "Red sauce, mozzarella, pineapple, chicken, BBQ sauce, green onions",
+   "cents": 1899,
+   "section": "House Pizzas",
+   "photo": "kingswcpizza-hula-hula-bbq-chicken-pizza"
+  },
+  {
+   "name": "Classic Garlic and Salt Chicken Wings",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers",
+   "photo": "kingswcpizza-classic-garlic-and-salt-chicken-wings"
+  },
+  {
+   "name": "Lemon Pepper Wings",
+   "desc": "Bone in lemon pepper chicken wings",
+   "cents": 1099,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Jalapeno Poppers",
+   "desc": "",
+   "cents": 899,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Garlic Bread with Cheese",
+   "desc": "",
+   "cents": 699,
+   "section": "Appetizers",
+   "photo": "kingswcpizza-garlic-bread-with-cheese"
+  },
+  {
+   "name": "Beef Meatballs",
+   "desc": "",
+   "cents": 999,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Yucca Fries",
+   "desc": "",
+   "cents": 999,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Fried Calabrese",
+   "desc": "",
+   "cents": 1499,
+   "section": "Appetizers"
+  },
+  {
+   "name": "King Cheeseburger",
+   "desc": "Comes with Cheddar cheese, lettuce, tomatoes, onions, pink sauce, beef patty.",
+   "cents": 1599,
+   "section": "Cheeseburger",
+   "photo": "kingswcpizza-king-cheeseburger"
+  },
+  {
+   "name": "Western Burger",
+   "desc": "Comes with Cheddar cheese, lettuce, tomatoes, onions, BBQ sauce, beef patty",
+   "cents": 1699,
+   "section": "Cheeseburger"
+  },
+  {
+   "name": "Spaghetti Classic Butter & Garlic",
+   "desc": "",
+   "cents": 1299,
+   "section": "Pasta In House"
+  },
+  {
+   "name": "Spaghetti Marinara Sauce",
+   "desc": "",
+   "cents": 1499,
+   "section": "Pasta In House",
+   "photo": "kingswcpizza-spaghetti-marinara-sauce"
+  },
+  {
+   "name": "Fettuccine Alfredo",
+   "desc": "",
+   "cents": 1599,
+   "section": "Pasta In House",
+   "photo": "kingswcpizza-fettuccine-alfredo"
+  },
+  {
+   "name": "Spaghetti Meat Sauce",
+   "desc": "",
+   "cents": 1999,
+   "section": "Pasta In House",
+   "photo": "kingswcpizza-spaghetti-meat-sauce"
+  },
+  {
+   "name": "Chicken Fettuccine Alfredo",
+   "desc": "",
+   "cents": 1999,
+   "section": "Pasta In House",
+   "photo": "kingswcpizza-chicken-fettuccine-alfredo"
+  },
+  {
+   "name": "Sunset Fettuccine (Marinara and Alfredo)",
+   "desc": "",
+   "cents": 1999,
+   "section": "Pasta In House"
+  },
+  {
+   "name": "Caesar Salad",
+   "desc": "Crisp romaine, croutons, parmesan, served with Caesar dressing.",
+   "cents": 1199,
+   "section": "Salads",
+   "photo": "kingswcpizza-caesar-salad"
+  },
+  {
+   "name": "Chicken Caesar Salad",
+   "desc": "Crisp romaine, croutons, parmesan, chicken breast served with Caesar dressing.",
+   "cents": 1599,
+   "section": "Salads"
+  },
+  {
+   "name": "Green Salad",
+   "desc": "Lettuce, tomato, red onions, black olives, cucumber, and bell peppers.",
+   "cents": 1299,
+   "section": "Salads"
+  },
+  {
+   "name": "Greek Salad",
+   "desc": "Diced tomatoes, green bell peppers, cucumbers, red onions, feta cheese, kalamata olives, oregano, and olive oil.",
+   "cents": 1499,
+   "section": "Salads",
+   "photo": "kingswcpizza-greek-salad"
+  },
+  {
+   "name": "Nutella Dessert Pizza",
+   "desc": "Includes Nutella and cheese.",
+   "cents": 1999,
+   "section": "Dessert Pizzas"
+  },
+  {
+   "name": "Brigadeiro Dessert Pizza",
+   "desc": "Includes cheese, homemade chocolate fudge, chocolate sprinkles",
+   "cents": 2299,
+   "section": "Dessert Pizzas"
+  },
+  {
+   "name": "Beijinho Dessert Pizza",
+   "desc": "Includes cheese, white condensed milk cream, shredded coconut",
+   "cents": 1999,
+   "section": "Dessert Pizzas"
+  },
+  {
+   "name": "Banana & Cinnamon Dessert Pizza",
+   "desc": "Includes cheese, white condensed milk cream, banana, cinnamon",
+   "cents": 2299,
+   "section": "Dessert Pizzas"
+  },
+  {
+   "name": "Dessert 1/2 & 1/2",
+   "desc": "",
+   "cents": 1450,
+   "section": "Dessert Pizzas"
+  },
+  {
+   "name": "Flan (Brazilian-Style Homemade)",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts"
+  },
+  {
+   "name": "Passion Fruit Mousse",
+   "desc": "",
+   "cents": 699,
+   "section": "Desserts"
+  },
+  {
+   "name": "Traditional Acai",
+   "desc": "Strawberry, banana, granola, Nido, and condensed milk.",
+   "cents": 1499,
+   "section": "Desserts",
+   "photo": "kingswcpizza-traditional-acai"
+  },
+  {
+   "name": "Marinara Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Extras",
+   "photo": "kingswcpizza-marinara-sauce"
+  },
+  {
+   "name": "Alfredo Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Extras"
+  },
+  {
+   "name": "Pesto Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Extras"
+  },
+  {
+   "name": "BBQ Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Extras",
+   "photo": "kingswcpizza-bbq-sauce"
+  },
+  {
+   "name": "Buffalo Sauce",
+   "desc": "",
+   "cents": 100,
+   "section": "Extras",
+   "photo": "kingswcpizza-buffalo-sauce"
+  }
+ ]
+}

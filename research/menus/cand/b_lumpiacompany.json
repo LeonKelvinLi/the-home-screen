@@ -1,0 +1,1272 @@
+{
+ "id": "b_lumpiacompany",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://thelumpiacompany.com/",
+  "https://order.toasttab.com/online/thelumpiacompany",
+  "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu",
+  "https://thelumpiacompany.com/oakland-the-lumpia-company-drink-menu",
+  "https://thelumpiacompany.com/oakland-the-lumpia-company-catering#",
+  "https://thelumpiacompany.com/-catering",
+  "https://order.toasttab.com/online/thelumpiacompany/item-pork-shrimp-shanghai_b12dc37a-52af-4b55-b9d9-df42385348b4"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Pork & Shrimp Shanghai",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "🔀 Mix & Match",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Bacon Cheeseburger",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders",
+   "image": "https://static.spotapps.co/spots/ef/469c95b9974e719c55723db74e805f/medium"
+  },
+  {
+   "name": "2AM Beef Taco",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Chicken Shanghai",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Chicken Tinola",
+   "desc": "",
+   "cents": 1300,
+   "image": "https://static.spotapps.co/spots/c7/1e4a97b9674a21aee9a4bb369b99cf/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Crab",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Cubano",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Elote",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Lemon Pepper",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Mamas Veggie",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "NYC Pizza",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Turkey & Veggie w/ Swt Chili",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Currently not accepting online orders"
+  },
+  {
+   "name": "Original Seasoned Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍗 Wings"
+  },
+  {
+   "name": "🔥 Spicy Original Seasoned Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍗 Wings"
+  },
+  {
+   "name": "Garlic Parm Adobo Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍗 Wings"
+  },
+  {
+   "name": "Honey Buffalo Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍗 Wings"
+  },
+  {
+   "name": "FBBQ Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍗 Wings"
+  },
+  {
+   "name": "BBQ Jerk Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍗 Wings"
+  },
+  {
+   "name": "BBQ Chicken Skewers",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Grilled Plates"
+  },
+  {
+   "name": "Filipino Mac-GHETTI - Regular",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Filipino Mac-GHETTI - Kuya",
+   "desc": "",
+   "cents": 750,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "CHEESY Mac - Regular",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "CHEESY Mac - Kuya",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Fries - Adobo Seasoned",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Fries - Plain Salted",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Pork Belly Chips",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Fried Shrimp (4pc)",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Cheese Sauce on the Side",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "GARLIC Rice",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "STEAMED Rice",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Fried Egg",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Garlic Schmack",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Chicken Nuggets ( 5 pcs)",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Filipino Mac Ghetti",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Kids French Fries",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Kids Lumpia - Chicken SH (4pcs)",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Kids Lumpia - Pork & Shrimp SH (4pcs)",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Kids Lumpia - Mama's Veggie (4 pcs)",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Mac N Cheese (Reg Size)",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Mini Corndogs (5 pcs)",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍯 EXTRA Sauce"
+  },
+  {
+   "name": "Arroz Caldo Bowl",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "BOWLS"
+  },
+  {
+   "name": "Bistek & Egg Bowl",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "BOWLS"
+  },
+  {
+   "name": "Fried shrimp rice bowl (GARLIC RICE)",
+   "desc": "",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "BOWLS"
+  },
+  {
+   "name": "Fried Shrimp Rice Bowl (Steamed Rice)",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "BOWLS"
+  },
+  {
+   "name": "Short Rib Rice Plate",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "add egg"
+  },
+  {
+   "name": "TLC SALAD",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Salad"
+  },
+  {
+   "name": "GARLIC NOODLE",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Garlic Noodles"
+  },
+  {
+   "name": "UBE 3 STACK",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "UBE PANCAKES"
+  },
+  {
+   "name": "FRIED SHRIMP + CHICKEN + FRIES",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "COMBO"
+  },
+  {
+   "name": "Earls Combo Plate",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "COMBO"
+  },
+  {
+   "name": "UBE PANCAKE STACK",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "BRUNCH"
+  },
+  {
+   "name": "LONGANISA & EGG",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "BRUNCH"
+  },
+  {
+   "name": "Arnel Palmer Calamansi Sweet Tea",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "BRUNCH"
+  },
+  {
+   "name": "Calamansi Limeade",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "BRUNCH",
+   "image": "https://static.spotapps.co/spots/cf/6fb6fcd499471d8f67fb556cc8d9e8/full"
+  },
+  {
+   "name": "Strawberry Calamansi Limeade",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "BRUNCH",
+   "image": "https://static.spotapps.co/spots/cf/6fb6fcd499471d8f67fb556cc8d9e8/full"
+  },
+  {
+   "name": "Thai Iced Tea",
+   "desc": "",
+   "cents": 500,
+   "image": "https://static.spotapps.co/spots/03/072d583d1d4f4dbc28da1cdc3c6df6/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "BRUNCH"
+  },
+  {
+   "name": "Guava Calamansi Limeade",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "BRUNCH"
+  },
+  {
+   "name": "ALAMEDA CAN",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "Frozen Slushy",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "Draft Beer",
+   "desc": "",
+   "cents": 600,
+   "alcohol": true,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "HAPPY HOUR BEER & WINE",
+   "desc": "",
+   "cents": 600,
+   "alcohol": true,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "Wine",
+   "desc": "",
+   "cents": 700,
+   "alcohol": true,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "Beer Flight",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": true,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "Sapporo",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "🍻 BAR Drinks"
+  },
+  {
+   "name": "Free Refill Fountain Soda",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fountain Soda"
+  },
+  {
+   "name": "Fountain Soda - REGULAR 24OZ",
+   "desc": "",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fountain Soda"
+  },
+  {
+   "name": "Fountain Soda - KUYA 32OZ",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fountain Soda"
+  },
+  {
+   "name": "Ice Cup",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fountain Soda"
+  },
+  {
+   "name": "(21+) Ayaba Sangria Can",
+   "desc": "",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) Four Loko",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) Mike's Harder Lemonade",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) Modelo",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) Soju Bottle",
+   "desc": "",
+   "cents": 700,
+   "alcohol": true,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) Steel Reserve",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) White Claw",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Sapporo beer",
+   "desc": "",
+   "cents": 700,
+   "alcohol": true,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Arizona",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Bottled Water",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Bubble Tea Can",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Bundeburg Rootbeer",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "ipa beer",
+   "desc": "",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Lipton Tea Bottle",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Mexican Coke Bottle",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Mineragua Sparkling Water",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Nomsi",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Poppi",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Red Bull / Celsius",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Soda Can (Large Size)",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Soda Can (Mini Size)",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Soda Can (Regular Size)",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Soursop / Coconut Can",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Topo Chico",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Vitamin Water",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Apple / Orange Juice",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "(21+) 805",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Refrigerated Drinks"
+  },
+  {
+   "name": "Pure Sugarcane",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "Filipino Style Cantaloupe Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "Mint Mojito Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "Passion Fruit Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "Watermelon Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "Ginger Lemon Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "Pineapple Sugarcane",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "No Ice",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Presko Sugarcane"
+  },
+  {
+   "name": "CALAMANSI SOJU MOJITO",
+   "desc": "",
+   "cents": 1100,
+   "alcohol": true,
+   "src": "text",
+   "section": "SOJU DRINKS"
+  },
+  {
+   "name": "STRAWBERRY SOJU MOJITO",
+   "desc": "",
+   "cents": 1100,
+   "alcohol": true,
+   "src": "text",
+   "section": "SOJU DRINKS"
+  },
+  {
+   "name": "Soju Bottle",
+   "desc": "",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "SOJU DRINKS"
+  },
+  {
+   "name": "Caberbet",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "VINO"
+  },
+  {
+   "name": "Sauvignon blanc",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "VINO"
+  },
+  {
+   "name": "Baco Cheeseburger",
+   "desc": "",
+   "cents": 1400,
+   "image": "https://static.spotapps.co/spots/f0/bb9058148f478ea2507c1d666b86e7/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "LUMPIA"
+  },
+  {
+   "name": "Bicol Express Pork & Shrimp",
+   "desc": "",
+   "cents": 1300,
+   "image": "https://static.spotapps.co/spots/bd/8527ba1b954ffcb72b9aeb6d5eaca3/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "LUMPIA"
+  },
+  {
+   "name": "Earl's Turkey & Veggies",
+   "desc": "",
+   "cents": 1300,
+   "image": "https://static.spotapps.co/spots/27/821fa727224107ae114be90b95fcb7/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "LUMPIA"
+  },
+  {
+   "name": "TLC Veggie",
+   "desc": "",
+   "cents": 1200,
+   "image": "https://static.spotapps.co/spots/c4/1134e457d34b7ebe4fff5c263bbff0/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "LUMPIA"
+  },
+  {
+   "name": "Peach Mango Cobbler",
+   "desc": "",
+   "cents": 1200,
+   "image": "https://static.spotapps.co/spots/97/9763a097684d20b21ce79e3da4a311/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "LUMPIA"
+  },
+  {
+   "name": "Adobo Seasoned",
+   "desc": "",
+   "cents": 1500,
+   "image": "https://static.spotapps.co/spots/ae/e01c27753d4885878ed2a6c41e9b95/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "CHICKEN WINGS"
+  },
+  {
+   "name": "Spicy Adobo Seasoned",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN WINGS"
+  },
+  {
+   "name": "Filipino BBQ",
+   "desc": "",
+   "cents": 1500,
+   "image": "https://static.spotapps.co/spots/c7/5ae5b323264a80bf0a3bce5628f799/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "CHICKEN WINGS"
+  },
+  {
+   "name": "I Just Want Wings",
+   "desc": "",
+   "cents": 1300,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN WINGS"
+  },
+  {
+   "name": "Garlic Java RIce",
+   "desc": "",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Steamed Rice",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "1/2 Size Mac - Ghetti",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Soft Boiled Egg",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "BUTTER GARLIC SHRIMP PANCIT NOODLES",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "RICE PLATES + BOWLS"
+  },
+  {
+   "name": "VEGGIE GARLIC PANCIT NOODLES",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text",
+   "section": "RICE PLATES + BOWLS"
+  },
+  {
+   "name": "GARLIC SHRIMP RICE BOWL",
+   "desc": "",
+   "cents": 1400,
+   "alcohol": false,
+   "src": "text",
+   "section": "RICE PLATES + BOWLS"
+  },
+  {
+   "name": "BBQ CHICKEN SKEWERS",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "\"BISTEK\" STEAK & EGG RICE BOWL"
+  },
+  {
+   "name": "Bottled Water",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Strawberry Calamansi Limeade"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Strawberry Calamansi Limeade"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Strawberry Calamansi Limeade"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/c1/984e99fadd47169e0434cbe6594516/:original",
+   "alt": "slideshow photo number 1",
+   "near": "GOOD FOOD DONE RIGHT\nCATERING",
+   "w": 1800,
+   "h": 1200,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/96/d05191109c4d1db055e27dc4688b04/:original",
+   "alt": "slideshow photo number 2",
+   "near": "GOOD TIMES, GREAT FOOD\nEVENTS",
+   "w": 1800,
+   "h": 1200,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/ee/771ef08de24402b1ce775cd8f762a2/full",
+   "alt": "Filipino BBQ hot wings with a side of fries.",
+   "near": "",
+   "w": 512,
+   "h": 512,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/194865_website_v1/video_poster.jpg",
+   "alt": "",
+   "near": "The decorative video is currently playing\nThe decorative video sound is off",
+   "w": 1280,
+   "h": 900,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/194865_website_v1/parties.jpg",
+   "alt": "",
+   "near": "GROUPS & PARTIES\n\nJoin us on this journey as we invite you to be a part of our delicious story. Whet",
+   "w": 640,
+   "h": 405,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/194865_website_v1/catering.jpg",
+   "alt": "",
+   "near": "CATERING\n\nLet us be part of your celebration. Contact our catering team to discuss your vision, and ",
+   "w": 640,
+   "h": 405,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/194865_website_v1/reviews.jpg",
+   "alt": "",
+   "near": "REVIEWS\nStart stop reviews carousel\nReview 1\nReview 2\nReview 3\nReview 4\nReview 5\n‹\n›\nGoogle reviews\n",
+   "w": 1280,
+   "h": 578,
+   "page": "https://thelumpiacompany.com/"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-170009000000000000/restaurant_1695670624.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/thelumpiacompany"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-170009000000000000/banner_1715145725.jpg?size=medium",
+   "alt": "Banner image",
+   "near": "Currently not accepting online orders\nLumpia Company - 9th Ave. Oakland Lumpia & Brew\n288 9th Avenue",
+   "w": 720,
+   "h": 480,
+   "page": "https://order.toasttab.com/online/thelumpiacompany"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/f0/bb9058148f478ea2507c1d666b86e7/full",
+   "alt": "",
+   "near": "Baco Cheeseburger\n$14.00\nGround beef, smoked bacon, cheddar cheese, and diced onions. Includes sweet",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/c7/1e4a97b9674a21aee9a4bb369b99cf/full",
+   "alt": "",
+   "near": "Chicken Tinola\n$13.00\nGround chicken, chayote squash, minced ginger, jalapenos, garlic, spinach, and",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/bd/8527ba1b954ffcb72b9aeb6d5eaca3/full",
+   "alt": "",
+   "near": "Bicol Express Pork & Shrimp\n$13.00\nSpicy coconut pork and shrimp, Shanghai-style lumpia. Includes sw",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/27/821fa727224107ae114be90b95fcb7/full",
+   "alt": "",
+   "near": "Earl's Turkey & Veggies\n$13.00\nGround turkey, cabbage, carrots, potatoes, peas, sprouts, corn, onion",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/c4/1134e457d34b7ebe4fff5c263bbff0/full",
+   "alt": "",
+   "near": "TLC Veggie\n$12.00\nChopped kale, roasted potatoes, roasted garlic, and roasted mushrooms. Includes a ",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/97/9763a097684d20b21ce79e3da4a311/full",
+   "alt": "",
+   "near": "Peach Mango Cobbler\n$12.00\nCaramelized peach and mango pie filling, jackfruit, cinnamon sugar wonton",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/ae/e01c27753d4885878ed2a6c41e9b95/full",
+   "alt": "",
+   "near": "Adobo Seasoned\n$15.00\nCrispy wings tossed with our secret dry adobo seasoning, and Sweet Chili, or O",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/c7/5ae5b323264a80bf0a3bce5628f799/full",
+   "alt": "",
+   "near": "Filipino BBQ\n$15.00\nCrispy wings hot tossed with our Filipino BBQ sauce, and ranch dressing dipping ",
+   "w": 448,
+   "h": 448,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/c4/8e80138d1c40aa923c0ff7076cf40e/full",
+   "alt": "",
+   "near": "Clamansi Limeade\n$4.00/Regular\n$6.00/Kuya",
+   "w": 489,
+   "h": 489,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-drink-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/cf/6fb6fcd499471d8f67fb556cc8d9e8/full",
+   "alt": "",
+   "near": "Strawberry Calamansi Limeade\n$4.50/Regular\n$6.50/Kuya",
+   "w": 489,
+   "h": 489,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-drink-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/03/072d583d1d4f4dbc28da1cdc3c6df6/full",
+   "alt": "",
+   "near": "Thai Iced Tea\n$5.00\nPlant based option with oatly oat milk.",
+   "w": 489,
+   "h": 489,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-drink-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/31/7526b52844492c938eb4307b990dd2/wide_medium",
+   "alt": "",
+   "near": "Skip to Main Content\nMENU\nDRINKS\nSPECIALS\nFROZEN LUMPIA SHIPPING\nMERCH\nORDER NOW\nEVENTS\nPARTIES\nCATE",
+   "w": 1280,
+   "h": 2026,
+   "page": "https://thelumpiacompany.com/oakland-the-lumpia-company-catering#"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/31/7526b52844492c938eb4307b990dd2/wide_medium",
+   "alt": "",
+   "near": "Skip to Main Content\nMENU\nDRINKS\nSPECIALS\nFROZEN LUMPIA SHIPPING\nMERCH\nORDER NOW\nEVENTS\nPARTIES\nCATE",
+   "w": 1280,
+   "h": 2026,
+   "page": "https://thelumpiacompany.com/-catering"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-170009000000000000/restaurant_1695670624.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/thelumpiacompany/item-pork-shrimp-shanghai_b12dc37a-52af-4b55-b9d9-df42385348b4"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-170009000000000000/banner_1715145725.jpg?size=medium",
+   "alt": "Banner image",
+   "near": "Currently not accepting online orders\nLumpia Company - 9th Ave. Oakland Lumpia & Brew\n288 9th Avenue",
+   "w": 720,
+   "h": 480,
+   "page": "https://order.toasttab.com/online/thelumpiacompany/item-pork-shrimp-shanghai_b12dc37a-52af-4b55-b9d9-df42385348b4"
+  }
+ ]
+}

@@ -1,0 +1,1143 @@
+{
+ "id": "b_pollyann",
+ "source": "square",
+ "alt": {
+  "text": 40
+ },
+ "pages": [
+  "https://www.pollyann.com/menu/",
+  "https://www.pollyann.com/menu/",
+  "https://pollyannicecream.square.site/",
+  "https://pollyannicecream.square.site/s/order#most-popular"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Junior Scoop",
+   "desc": "Junior Scoop",
+   "cents": 525,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/6MPQSBD2VONGSOUPWQL336UM.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Sandwich",
+   "desc": "Sandwich with Soft bread, Swiss cheese, cream cheese and a choice of Roast beef or steak or Turkey Ham.",
+   "cents": 600,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/6HFGXDVWSVTVQXMV66K64QBM.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "1.1 Small Milkshake",
+   "desc": "Milk Shake 16 Oz",
+   "cents": 975,
+   "section": "Drinks",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/FMLWTAIXNP2RENXH734GTGR2.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "1.3 Float",
+   "desc": "",
+   "cents": 900,
+   "section": "Drinks",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/6UGOJ2IDJNWED6RNXAHEFWLP.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "1 Regular Milkshake",
+   "desc": "Milkshake 24 Oz",
+   "cents": 1175,
+   "section": "Drinks",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/CVY354E2O3KJF55SQQAZ6P5V.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Monster Sundae",
+   "desc": "",
+   "cents": 1250,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/56UWRNE4QJ32XCOX2MN6M343.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Regular Sundae",
+   "desc": "2 scoops, 4 Toppings, Whipped cream and cherry",
+   "cents": 1050,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/YK75P5YJD766C3ULIAZVCHHV.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Tiramisu Ice Cream Cake Personal",
+   "desc": "",
+   "cents": 900,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/LU6HJD3BRIS5L2H4L63HAEQS.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Chocolate Bark",
+   "desc": "Broken pieces of chocolate with nuts",
+   "cents": 300,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/C5R5D3HXDOY36SPWIDQLD5TS.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Malt",
+   "desc": "",
+   "cents": 100,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Single Scoop",
+   "desc": "Single Scoop",
+   "cents": 625,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/OO32YTDPFCSOVBL3AFS4PYZE.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Ring Pop",
+   "desc": "",
+   "cents": 100,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Chocolate Chip Cookie 🍪 Jumbo",
+   "desc": "Triple chocolate Chip Cookie",
+   "cents": 400,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/AWQIH4V63CBH2ZSLVJBKZKL5.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Pringles - Small",
+   "desc": "",
+   "cents": 150,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Monster Scoop",
+   "desc": "3 Scoops of Ice Cream",
+   "cents": 1050,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/QH5B2GBVUFMPH2D7YXVYQKMT.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Push Pop",
+   "desc": "",
+   "cents": 200,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Sour Patch / Mamba / Skittles /Nerds",
+   "desc": "",
+   "cents": 200,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Sour Belt x 5",
+   "desc": "",
+   "cents": 100,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Soda Can",
+   "desc": "",
+   "cents": 175,
+   "section": "Drinks",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/PJVXVNPRV3C7BZOFMIYZWJ4P.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "ITO EN Tea",
+   "desc": "",
+   "cents": 275,
+   "section": "Drinks",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Large Water Bottle",
+   "desc": "",
+   "cents": 200,
+   "section": "Drinks",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Soft Serve - Regular",
+   "desc": "",
+   "cents": 650,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Soft Serve Large",
+   "desc": "",
+   "cents": 850,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Double",
+   "desc": "2 Scoops of Ice cream. Can have 2 flavors with no extra cost.",
+   "cents": 795,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/PKFAL5TWNTOEPVK6QPEBULGQ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Pint",
+   "desc": "1 Pint of Premium Ice Cream (16 Oz)",
+   "cents": 1090,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/GMHQ4B4LWMQZUU3W5AFIFY3R.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Mad Science Mini Chews \\ Bottle Pop",
+   "desc": "",
+   "cents": 300,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Waffle Cone Chocolate Dip",
+   "desc": "",
+   "cents": 125,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Hand packed Quart",
+   "desc": "",
+   "cents": 1790,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/Z2THL6OWABRXORAR7X7GCTNW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Slam Dunk Candy",
+   "desc": "",
+   "cents": 300,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Rock Paper Scissor \\ Toy Candy",
+   "desc": "",
+   "cents": 300,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Kinder Egg",
+   "desc": "",
+   "cents": 200,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Muscle Milk",
+   "desc": "",
+   "cents": 500,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Brownie",
+   "desc": "",
+   "cents": 400,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/GQKA4TPDLJJIVPKTS4MU4JAW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Vegan Container - Pint",
+   "desc": "Pint of Vegan Ice Cream",
+   "cents": 1200,
+   "section": "Items",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "1.2 Monster Milkshake",
+   "desc": "",
+   "cents": 1295,
+   "section": "Drinks",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/6QCGZXU4TGS7RNFFWZQBYGXQ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Starbucks Frappuccino 9.5 Oz",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Quart (Pre-Packed)",
+   "desc": "",
+   "cents": 1790,
+   "section": "Items",
+   "image": "https://139560270.cdn6.editmysite.com/uploads/1/3/9/5/139560270/IHUXUBQV4ST3UZI5PE6LTDM5.jpeg",
+   "alcohol": false,
+   "src": "square"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "SINGLE SCOOP",
+    "desc": "",
+    "cents": 595,
+    "image": "https://www.pollyann.com/static/5a76e2ad5984f64539833c120d53728a/bf95e/660ecd1e-0b5c-4c05-9ce3-b6871d564dae.webp",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Options"
+   },
+   {
+    "name": "REGULAR SUNDAE",
+    "desc": "",
+    "cents": 975,
+    "image": "https://www.pollyann.com/static/47dc7afbd2fd8c86231b1bca0d3ebb75/bf95e/12b601fb-efb1-4251-8c82-80506ce9b719.webp",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Options"
+   },
+   {
+    "name": "MONSTER SUNDAE",
+    "desc": "",
+    "cents": 1195,
+    "image": "https://www.pollyann.com/static/1a5ae908f4d1fddd26f6ea1949793856/bf95e/3b086340-e371-44d9-9a0a-3f0735950761.webp",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Options"
+   },
+   {
+    "name": "BANANA SPLIT MONSTER",
+    "desc": "",
+    "cents": 1280,
+    "image": "https://www.pollyann.com/static/9209d02de5e232f108b79a884afaad90/bf95e/ba507ee8-89cc-4f93-a7cb-d21926125e4a.webp",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Options"
+   },
+   {
+    "name": "PINT",
+    "desc": "",
+    "cents": 1090,
+    "image": "https://www.pollyann.com/static/8525f2396f0ac7d281f10275df589c92/bf95e/cbf48036-8c11-49d4-8297-1f5412d9a371.webp",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "CONTAINERS"
+   },
+   {
+    "name": "JUMBO COOKIE 4.5 OZ",
+    "desc": "",
+    "cents": 400,
+    "image": "https://www.pollyann.com/static/a1bc765299465d0e6b231d66cf886aae/85e35/d7588ebe-2087-47a9-9ecc-745216385864.webp",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "BAKED GOODS"
+   },
+   {
+    "name": "Junior Scoop",
+    "desc": "",
+    "cents": 525,
+    "alcohol": false,
+    "src": "text",
+    "section": "Junior Scoop"
+   },
+   {
+    "name": "3 Scoops of Ice Cream",
+    "desc": "",
+    "cents": 1050,
+    "alcohol": false,
+    "src": "text",
+    "section": "Single Scoop"
+   },
+   {
+    "name": "Hand packed Quart",
+    "desc": "",
+    "cents": 1790,
+    "alcohol": false,
+    "src": "text",
+    "section": "Single Scoop"
+   },
+   {
+    "name": "Milk Shake 16 Oz",
+    "desc": "",
+    "cents": 975,
+    "alcohol": false,
+    "src": "text",
+    "section": "1.1 Small Milkshake"
+   },
+   {
+    "name": "Milkshake 24 Oz",
+    "desc": "",
+    "cents": 1175,
+    "alcohol": false,
+    "src": "text",
+    "section": "1 Regular Milkshake"
+   },
+   {
+    "name": "1.3 Float",
+    "desc": "",
+    "cents": 900,
+    "alcohol": false,
+    "src": "text",
+    "section": "1 Regular Milkshake"
+   },
+   {
+    "name": "Triple chocolate Chip Cookie",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "text",
+    "section": "1 Regular Milkshake"
+   },
+   {
+    "name": "Double",
+    "desc": "2 Scoops of Ice cream. Can have 2 flavors with no extra cost.",
+    "cents": 795,
+    "alcohol": false,
+    "src": "text",
+    "section": "1 Regular Milkshake"
+   },
+   {
+    "name": "1 Pint of Premium Ice Cream (16 Oz)",
+    "desc": "",
+    "cents": 1090,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pint"
+   },
+   {
+    "name": "Brownie",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pint"
+   },
+   {
+    "name": "1.2 Monster Milkshake",
+    "desc": "",
+    "cents": 1295,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pint"
+   },
+   {
+    "name": "Quart (Pre-Packed)",
+    "desc": "",
+    "cents": 1790,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pint"
+   },
+   {
+    "name": "Starbucks Frappuccino 9.5 Oz",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Drinks"
+   },
+   {
+    "name": "Large Water Bottle",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Water Small 8 Oz"
+   },
+   {
+    "name": "ITO EN Tea",
+    "desc": "",
+    "cents": 275,
+    "alcohol": false,
+    "src": "text",
+    "section": "Water Small 8 Oz"
+   },
+   {
+    "name": "Soda Can",
+    "desc": "",
+    "cents": 175,
+    "alcohol": false,
+    "src": "text",
+    "section": "Water Small 8 Oz"
+   },
+   {
+    "name": "Pringles - Small",
+    "desc": "",
+    "cents": 150,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Sandwich",
+    "desc": "Sandwich with Soft bread, Swiss cheese, cream cheese and a choice of Roast beef or steak or Turkey Ham.",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Sour Belt x 5",
+    "desc": "",
+    "cents": 100,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Push Pop",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Sour Patch / Mamba / Skittles /Nerds",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Mad Science Mini Chews \\ Bottle Pop",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Slam Dunk Candy",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Rock Paper Scissor \\ Toy Candy",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Kinder Egg",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Items"
+   },
+   {
+    "name": "Pint of Vegan Ice Cream",
+    "desc": "",
+    "cents": 1200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Muscle Milk",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Waffle Cone Chocolate Dip",
+    "desc": "",
+    "cents": 125,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Soft Serve - Regular",
+    "desc": "",
+    "cents": 650,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Soft Serve Large",
+    "desc": "",
+    "cents": 850,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Malt",
+    "desc": "",
+    "cents": 100,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Chocolate Bark",
+    "desc": "Broken pieces of chocolate with nuts",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Tiramisu Ice Cream Cake Personal",
+    "desc": "",
+    "cents": 900,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   },
+   {
+    "name": "Ring Pop",
+    "desc": "",
+    "cents": 100,
+    "alcohol": false,
+    "src": "text",
+    "section": "Vegan Container - Pint"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://www.pollyann.com/static/46ce4e19cf5e80712e66fbbda6deb94d/65b2d/image0.jpeg.webp",
+   "alt": "",
+   "near": "OUR MENU",
+   "w": 1280,
+   "h": 1424,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/009f652ccd57c05e3674de246d159012/3cd29/2acf577f-2eb3-46f8-af05-cb96a62c14d4.webp",
+   "alt": "",
+   "near": "ICE CREAM SCOOP \n30\n\n$4.95 Junior/\n\n$5.95 Single/\n\n$7.50 Double/\n\n$9.90 Monster\n\nSince our smallest ",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/5a76e2ad5984f64539833c120d53728a/bf95e/660ecd1e-0b5c-4c05-9ce3-b6871d564dae.webp",
+   "alt": "",
+   "near": "SINGLE SCOOP \n26\n\n$5.95\n\nA big Ice Cream Scoop of Premium Ice Cream, add a split to have 2 flavors",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/47dc7afbd2fd8c86231b1bca0d3ebb75/bf95e/12b601fb-efb1-4251-8c82-80506ce9b719.webp",
+   "alt": "",
+   "near": "REGULAR SUNDAE \n20\n\n$9.75\n\n2 Scoops of Ice cream, 4 toppings, Whipped cream and Cherry",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/1a5ae908f4d1fddd26f6ea1949793856/bf95e/3b086340-e371-44d9-9a0a-3f0735950761.webp",
+   "alt": "",
+   "near": "MONSTER SUNDAE \n14\n\n$11.95\n\n3 Scoops of Ice cream, 4 toppings, Whipped cream and Cherry",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/9209d02de5e232f108b79a884afaad90/bf95e/ba507ee8-89cc-4f93-a7cb-d21926125e4a.webp",
+   "alt": "",
+   "near": "BANANA SPLIT MONSTER \n14\n\n$12.80\n\n3 Scoops of Ice cream, choose from more than 50 Flavors, 1 banana,",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/88af287747e24394a0a4a82175c3849d/ab99d/44018b88-b6ed-4654-8723-3ae1a727213d.webp",
+   "alt": "",
+   "near": "BROWNIE SUNDAE \n9\n\n$12.25 Regular/\n\n$14.25 Monster/\n\n$10.75 Single Brownie Sundae\n\n2 Scoops of premi",
+   "w": 1280,
+   "h": 1203,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/6bc1092deecbb3077cab92b0119bd833/bf95e/b778da92-6522-4796-b15b-147ab101c70d.webp",
+   "alt": "",
+   "near": "MILK SHAKE \n30\n\n$10.95 Regular 24 Oz/\n\n$8.95 Small 16 Oz/\n\n$12.95 Monster 32 Oz",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/8525f2396f0ac7d281f10275df589c92/bf95e/cbf48036-8c11-49d4-8297-1f5412d9a371.webp",
+   "alt": "",
+   "near": "PINT \n35\n\n$10.90\n\n16 Oz Pint",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/f00d712b526d5b37fed9c89964ce6d0b/bf95e/d8330401-fab0-4828-b63c-6f7fdca21a52.webp",
+   "alt": "",
+   "near": "QUART \n26\n\n$16.90 Quart/\n\n$16.90 Custom Packed, add more flavors\n\n32 Oz Quart",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/cd3daa5614a96c15cc693b1aab1802bc/b6e64/77762a87-0971-4b5c-b06c-9474a3adc90f.webp",
+   "alt": "",
+   "near": "ICE CREAM CAKE 8\" \n66\n\n$48.95 Regular/\n\n$5.00 Additional flavor\n\nCustom made 8 Inches Ice Cream Cake",
+   "w": 1280,
+   "h": 1052,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/3f0dcf297aa6c86d9afaf9aaaadb294e/dd3e2/afbc1152-f854-4aea-a708-04894d2d6031.webp",
+   "alt": "",
+   "near": "BLACK SESAME \n36\n\nMade with roasted Black Sesame seeds and some white sesame seeds to have a perfect",
+   "w": 1280,
+   "h": 1432,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/41d75a951a346352bcbd600f76ba461b/44a43/e61e0b43-b47a-4b37-8179-2fa708433dca.webp",
+   "alt": "",
+   "near": "ACAI SORBET \n18\n\nDairy free sorbet, with açaí berry.",
+   "w": 1280,
+   "h": 1706,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/9e1512c86cb13b1899bf8a158adff321/439ab/6919044b-f534-4567-bfe1-b711497663ce.webp",
+   "alt": "",
+   "near": "BLUEBERRY SHORTBREAD \n39",
+   "w": 1280,
+   "h": 1063,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/5b81825c424aa01cc3efab6eaecab4b8/85e35/51ec69b0-ede6-4d65-ac0f-b22a29c04334.webp",
+   "alt": "",
+   "near": "BRIGADEIRO \n40\n\nInspired by the Brazilian dessert, perfect balance of Chocolate, condensed milk and ",
+   "w": 1280,
+   "h": 960,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/091e91ddb977d4d831efe992e523e922/1c985/d5a1f838-d273-42a3-82e2-460ab8159150.webp",
+   "alt": "",
+   "near": "BUBBLE GUM \n18\n\nBubble gum flavored ice cream with vivid colors for a fun experience!",
+   "w": 1280,
+   "h": 1114,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/f6e69410d2441806d7b6209bfa0a1c46/6b725/e9baa5e9-e79a-4617-bebb-c9e409cadbd9.webp",
+   "alt": "",
+   "near": "BUMPY FREEWAY \n16\n\nChocolate Ice Cream with Marshmallows and Walnuts",
+   "w": 1280,
+   "h": 1189,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/b6305272f774d9acb9a8796c8b8861c8/b21ca/11146a15-569a-47d9-b2ad-89ca5eff08df.webp",
+   "alt": "",
+   "near": "BUTTER PECAN \n19\n\nVery creamy Butter Pecan Ice Cream with Pecan Nut pieces",
+   "w": 1280,
+   "h": 1262,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/977ec6d97a0e132cb2a1d1298ca84414/ffd9d/88ef4861-bbb6-41c0-9092-4cb18cb8ab3a.webp",
+   "alt": "",
+   "near": "CAFFE LATTE \n12\n\nA light and balanced coffee Ice Cream. Made with coffee",
+   "w": 1280,
+   "h": 1298,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/34cea2088ce370c955702b9bb1cef0ff/8509a/0f0d8e22-afda-487d-9aa4-841a82fe6f42.webp",
+   "alt": "",
+   "near": "CHERRY VANILLA \n15\n\nBlack Cherries and Vanilla Ice Cream",
+   "w": 1280,
+   "h": 864,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/859a6643ab09fc87a605024f25d63442/d99b3/8bad56f9-e50a-4eda-bd29-29cbed57b998.webp",
+   "alt": "",
+   "near": "CHOCOLATE BROWNIE \n15\n\nChocolate ice cream with brownie pieces",
+   "w": 1280,
+   "h": 1168,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/49a79813958c310cb0c99f10d02ab2e7/56358/493af9b0-d24e-41b9-bc5f-8297954013fb.webp",
+   "alt": "",
+   "near": "CHOCOLATE CHIP \n9\n\nVanilla ice Cream with Chocolate chips",
+   "w": 1280,
+   "h": 1046,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/055a60a654e46ac30225e51574172399/3cd29/d3127e47-5f06-4e31-ac30-99aecc8254f0.webp",
+   "alt": "",
+   "near": "CHOCOLATE TOFFEE NUT CRUNCH \n22\n\nChocolate Ice Cream with Toffee and Roasted nuts",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/7b689441045c01922542564bfd2afa26/cdb1a/8ce0d481-596f-44df-b881-ad80e78f592d.webp",
+   "alt": "",
+   "near": "COCONUT \n13\n\nAs creamy as it gets, our version of coconut comes with shredded coconut in a very crea",
+   "w": 1280,
+   "h": 1065,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/bb0b1f7575dc3aa04f082859879954fc/68b63/ebd55bca-1caf-4b84-aac7-2b2b461ca92a.webp",
+   "alt": "",
+   "near": "COCONUT & PINEAPPLE \n18",
+   "w": 1280,
+   "h": 1128,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/e8045a6b8fe552771a82519d4b126b49/b72b9/7d68c854-d5d6-4389-88b2-a2d4060c2901.webp",
+   "alt": "",
+   "near": "COFFEE BROWNIE \n13",
+   "w": 1280,
+   "h": 1155,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/d24c0f27b6d1aafeb21425e85e3e036c/3cd29/e3b81e10-d6c1-4cb9-8319-b0297538a558.webp",
+   "alt": "",
+   "near": "COFFEE & OREO COOKIE \n16\n\nCoffee Ice Cream with Oreo Cookie Pieces",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/b0b3a7b6614e90b9ca3bd719870b27ee/85e35/8d426e31-ee89-4aad-bf1d-3f78fbfe9976.webp",
+   "alt": "",
+   "near": "COOKIE (KOOKY) DOUGH BOY \n20\n\nVanilla, Cookie Dough and Chocolate chips",
+   "w": 1280,
+   "h": 960,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/e7406cf3dea088354a34c3c68dae19cb/c7a54/3a26bf8e-9312-4779-b264-98d7de3e5d58.webp",
+   "alt": "",
+   "near": "DULCE DE LECHE \n11\n\nA Milky Caramel Ice cream. Dulce de Leche is a traditional dessert in Latin Amer",
+   "w": 1280,
+   "h": 1062,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/924844ce4ac4e42137e3c866627b52c8/56931/4627b8c3-1e9b-4566-a095-ce0a77b42d5c.webp",
+   "alt": "",
+   "near": "DURIAN \n33\n\nCrafted for Durian lovers, our Durian ice cream has all the flavor and rich smell of the",
+   "w": 1280,
+   "h": 970,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/f4b53bfbb8d4efd778c350c686f05e8d/3cd29/7cfef25f-2c4c-4468-a671-e1b678ce8e6c.webp",
+   "alt": "",
+   "near": "DUTCH CHOCOLATE \n23\n\nDark Chocolate ice cream",
+   "w": 1280,
+   "h": 1280,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/cafb9a144db89532e7788a81a3fa2df5/7c3e3/fd518ad9-fe0c-413e-9938-48269155f28a.webp",
+   "alt": "",
+   "near": "GINGER MILK \n15\n\nA creamy version of Ginger Milk, sweet and not spicy.",
+   "w": 1279,
+   "h": 619,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/c34b67bfb863728811a8582a1783f167/c0a61/b54a4afa-6e87-4845-b16e-1114bda0ab4a.webp",
+   "alt": "",
+   "near": "GREEN TEA \n20\n\nMade with certified green tea leaves, brewed with our special technique to give that ",
+   "w": 1280,
+   "h": 1157,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/7f1fa3456fcbc0469b9c34e9bb5e1d64/f8683/f7c54bd8-8d22-4c03-a57c-f25e253c0346.webp",
+   "alt": "",
+   "near": "HAZELNUT WAFER STICK \n18\n\nA delicious combination of Nutella, Cream, Wafer and Chocolate flakes. A u",
+   "w": 1280,
+   "h": 968,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/e2b4e8ec7cef284e271dceaf70680d8c/99c02/2d472e2f-0fd2-46e3-bd62-f9cea7ab0317.webp",
+   "alt": "",
+   "near": "HONEYDEW \n15\n\nHoneydew flavored Ice Cream",
+   "w": 1280,
+   "h": 1124,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/72de694beb9fe78df02162680896c3ca/9c621/81bcd193-1b88-4681-bdc7-c5da156fbdb0.webp",
+   "alt": "",
+   "near": "JASMINE TEA \n27\n\nFloral and delicate flavor of Jasmine tea in a creamy ice cream. Brewed with our sp",
+   "w": 1280,
+   "h": 1149,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/8885e4ec149d89353edbd64c3fa450c1/91fa5/44e5defa-d134-4db6-bb98-a59f563ec028.webp",
+   "alt": "",
+   "near": "LEMON COOKIE \n21",
+   "w": 1280,
+   "h": 1227,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/3e9d491ca933ef7f0616b4c2ba588be7/a64af/33a62ef0-ee7c-446c-be20-2aada789e03b.webp",
+   "alt": "",
+   "near": "LYCHEE \n20\n\nCreamy Lychee flavor ice cream. Lychee is a tropical fruit which is pink red outside and",
+   "w": 1279,
+   "h": 814,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/c6255ea0fd79185e3c525d9a59e01adf/2ad19/7f61905b-5016-4067-afba-b834264be5bc.webp",
+   "alt": "",
+   "near": "MANGO \n18\n\nCreamy Mango Ice Cream, made with a delicious variety of Mango grown in the western of In",
+   "w": 1280,
+   "h": 1338,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/32171ebad85b8eedff3abedd3fa3b758/1dd10/589cbef8-bb92-496b-9ea5-18043a9a5d98.webp",
+   "alt": "",
+   "near": "MARBLE FUDGE \n13\n\nVanilla Ice Cream with chocolate Fudge",
+   "w": 1280,
+   "h": 1295,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/7a2ce8dcba9a5f3ef1316343ba298082/e1ea3/bb8f3bfa-fc46-43a4-98a6-473c3d1bddc1.webp",
+   "alt": "",
+   "near": "MATCHA GREEN TEA \n21\n\nMade with certified organic Matcha, fresh and rich matcha green tea flavor.",
+   "w": 1280,
+   "h": 721,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/39d86f078397ec7e0b4802b01c428579/c8e84/4141ced5-2054-4eaf-ab41-4f100c09efed.webp",
+   "alt": "",
+   "near": "MILK CHOCOLATE \n9",
+   "w": 1280,
+   "h": 1112,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/33590e5f6e974fa53b93c30d756ad9c5/b2b7d/dafb4ded-e3b5-4f0c-aeb7-2927b6655031.webp",
+   "alt": "",
+   "near": "MINT CHOCOLATE CHIP \n8\n\nMint Ice Cream With 3 kinds of chocolate chips",
+   "w": 1280,
+   "h": 1116,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/ce226b9c290c51032cd3a1d041d406fe/fa282/7495c39e-4cf6-4d6d-b263-24acdf020c88.webp",
+   "alt": "",
+   "near": "MINTIE OREO COOKIE \n17",
+   "w": 1280,
+   "h": 1683,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/0645df6f87b9833805961b4e2a9facb6/bf95e/03d5da2b-775b-443e-a027-e973245c6301.webp",
+   "alt": "",
+   "near": "MOCHA ALMOND \n9\n\nChocolate, Coffee and Roasted Almomds",
+   "w": 1280,
+   "h": 720,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/d054b3f94cb97e369613db7e71a54697/2ba46/c0968c98-8c34-4a33-949e-4068ac7c4cec.webp",
+   "alt": "",
+   "near": "OREO COOKIE (COOKIES AND CREAM) \n16",
+   "w": 1280,
+   "h": 901,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/bf6fbfbd940e10e0061c124e6bc00324/2cdfa/d9d44a58-77d2-4875-82b1-37eda4b45878.webp",
+   "alt": "",
+   "near": "PASSION FLAME (P.O.G) \n19\n\nA Sherbet with Passion Flame, Orange and Guava, brilliant colors and an e",
+   "w": 1280,
+   "h": 934,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/19604454d3750feb5c40d026900beec4/d9fcc/d7cce31c-a6ae-49b1-b714-007f221ad7d8.webp",
+   "alt": "",
+   "near": "RAINBOW SHERBET \n12\n\nA Sour Sherbet with Watermelon, Raspberry and lemon. Green, red and yellow colo",
+   "w": 1280,
+   "h": 747,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/d0fdaad21f479b52516237851aaf3b53/85e35/d2a7faae-f73d-4417-bef3-3d5d22fd0a36.webp",
+   "alt": "",
+   "near": "PERSIAN PRINCESS \n21\n\nPistachio, Almond, Apricot and Orange. A Pistachio and Almond Ice cream with t",
+   "w": 1280,
+   "h": 960,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/9d1a0695e2bb2115adf2d86df6197bc8/fc9c6/06a0ff73-8497-4bc9-8117-dd9b8d0554c0.webp",
+   "alt": "",
+   "near": "PISTACHIO - ALMOND \n16\n\nA blend of these two delicious tree nuts, make a delicious ice cream for Pis",
+   "w": 1280,
+   "h": 1161,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/10cdf609712af7776b806ddcd28c5b33/2e5b6/b36eb9b5-82c3-4b63-abed-71d0fb879340.webp",
+   "alt": "",
+   "near": "RED BEAN (AZUKI) \n23",
+   "w": 1280,
+   "h": 1040,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/aaca128adf5d032cbc84f7d2c00dde2a/7ea73/9952f8dc-1f71-4e3d-8e44-8d8450484e41.webp",
+   "alt": "",
+   "near": "RED PANDA \n24\n\nA delicious blend of Strawberry and red berries with White chocolate cookies",
+   "w": 1280,
+   "h": 717,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/bee036413df14cf5751a8885df477b23/cb3a8/2256d14a-8c3d-4c7b-bccf-1fbb24002012.webp",
+   "alt": "",
+   "near": "RUM RAISIN \n17",
+   "w": 1280,
+   "h": 1338,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/5717e4ee1bc3c5cf1b0ae0f5d756561a/b5d55/ecb37791-6362-44b1-afd7-13a8ca188621.webp",
+   "alt": "",
+   "near": "STAR WARS \n21\n\nVanilla cake ice cream with Marshmallows and rainbow Sprinkles... and it is blue!",
+   "w": 1280,
+   "h": 1373,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/bf3d2287e291a56b92698e341d415002/d6e0b/f212c7ce-c2f0-45fd-b07a-93d825239eb9.webp",
+   "alt": "",
+   "near": "STRAWBERRY \n12",
+   "w": 1280,
+   "h": 1082,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/e63c695638f02ab682ea61d5eb13b3d9/44a43/af144134-c58d-4d7f-b47b-5e47c29fb89c.webp",
+   "alt": "",
+   "near": "STRAWBERRY MARBLE \n12\n\nVanilla Ice Cream with a swirl of strawberry puree",
+   "w": 1280,
+   "h": 1706,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/c8b32bea8a7e1478829546a65e7392dd/1e545/18c29b58-21b9-4789-bb67-977c09a4c37a.webp",
+   "alt": "",
+   "near": "TARO \n16",
+   "w": 1280,
+   "h": 803,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/1385adf62de4c104c48610ae9ceedbbc/d1f2e/d3773b19-a778-4e57-9080-6c9c674bdd05.webp",
+   "alt": "",
+   "near": "THAI TEA \n20\n\nOur Thai tea is made with slowly brewed black tea, spiced with star anise, tamarind, c",
+   "w": 1280,
+   "h": 1262,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/bd7c4a3dd5064ef3be3f5138f6aef19b/d218b/b3cf9cd3-319f-4a00-a4b7-9beeedbc83cb.webp",
+   "alt": "",
+   "near": "TURKISH COFFEE \n12\n\nStrong Coffee Ice Cream.",
+   "w": 1280,
+   "h": 876,
+   "page": "https://www.pollyann.com/menu/"
+  },
+  {
+   "src": "https://www.pollyann.com/static/ffe572d4c8b8017fc69114e5f8732d9a/72217/7f3a8516-f2ba-4459-8744-6c0965d0df99.webp",
+   "alt": "",
+   "near": "VANILLA \n6",
+   "w": 1280,
+   "h": 913,
+   "page": "https://www.pollyann.com/menu/"
+  }
+ ]
+}

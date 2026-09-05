@@ -1,0 +1,210 @@
+{
+ "id": "b_biryaniz",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.biryaniz.com/",
+  "https://www.biryaniz.com/menu?promos=1&pid=9032",
+  "https://www.biryaniz.com/catering_services"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Paneer — +",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Add-Ons",
+   "image": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-chilliPaneer.webp"
+  },
+  {
+   "name": "Chicken — +",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Add-Ons",
+   "image": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-chickenlollipop.webp"
+  },
+  {
+   "name": "Goat / Shrimp / Fish — +",
+   "desc": "Please call us at 925-556-9999 or send us an email to info@biryanizdublin.com to talk to our catering specialist and give us the opportunity to make the event even more memorable.",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Add-Ons"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-order-online.webp",
+   "alt": "Order delicious biryani and authentic Indian cuisine online from Biryaniz Indian Cuisine",
+   "near": "ORDER YOUR FOOD NOW\nOrder Online",
+   "w": 500,
+   "h": 500,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-cateringservice.webp",
+   "alt": "Indian catering services with biryani, curries and appetizers by Biryaniz Indian Cuisine",
+   "near": "CATERING SERVICES\nCheckout Catering",
+   "w": 700,
+   "h": 700,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-best-deals.webp",
+   "alt": "Best deals on biryani and Indian cuisine at Biryaniz Indian Cuisine",
+   "near": "CHECK OUT BEST OFFERS\nUpcoming Deals",
+   "w": 700,
+   "h": 700,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-gulabjamun.webp",
+   "alt": "Gulab jamun Indian dessert from Biryaniz Indian Cuisine",
+   "near": "Gulab jamun Indian dessert from Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-garlicNaan.webp",
+   "alt": "Garlic naan bread at Biryaniz Indian Cuisine",
+   "near": "Garlic naan bread at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-chilliPaneer.webp",
+   "alt": "Chilli paneer Indo-Chinese starter at Biryaniz Indian Cuisine",
+   "near": "Chilli paneer Indo-Chinese starter at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-chickenlollipop.webp",
+   "alt": "Chicken lollipop appetizer at Biryaniz Indian Cuisine",
+   "near": "Chicken lollipop appetizer at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-sweetpaan.webp",
+   "alt": "Sweet Paan from Biryaniz Indian Cuisine",
+   "near": "Sweet Paan from Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/VegNoodles.webp",
+   "alt": "Vegetable noodles Indo-Chinese style at Biryaniz Indian Cuisine",
+   "near": "Vegetable noodles Indo-Chinese style at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-tandoorichicken.webp",
+   "alt": "Tandoori chicken starter at Biryaniz Indian Cuisine",
+   "near": "Tandoori chicken starter at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-paneer-butter-masala-curry.webp",
+   "alt": "Paneer butter masala at Biryaniz Indian Cuisine",
+   "near": "Paneer butter masala at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-lambbiryani.webp",
+   "alt": "Lamb biryani served at Biryaniz Indian Cuisine",
+   "near": "Lamb biryani served at Biryaniz Indian Cuisine",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-catering-service1.webp",
+   "alt": "Dine-in area at Biryaniz Indian Cuisine with comfortable seating and warm ambiance",
+   "near": "#1 Authentic Indian Cuisine\nFRESH INDIAN TAKEAWAY & CATERING IN DUBLIN, CA – AUTHENTIC FLAVORS DELIV",
+   "w": 924,
+   "h": 924,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/biryaniz-restuarant-interior.webp",
+   "alt": "Contact area of Biryaniz Indian Cuisine with warm and welcoming ambiance",
+   "near": "Connect With Us\nHOW TO FIND US?\ncall us book a table & delivery:\n925-556-9999\ninformation restaurant",
+   "w": 786,
+   "h": 590,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/Biryaniz.jpg",
+   "alt": "promotions",
+   "near": "",
+   "w": 1080,
+   "h": 1350,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/MM_BD.jpg",
+   "alt": "",
+   "near": "×\n\nWe and our vendors use cookies and other tracking technologies on our website. You may change you",
+   "w": 1280,
+   "h": 750,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/nav-background.jpg",
+   "alt": "",
+   "near": "Where Every Game is a Big Game\nWELCOME TO OUR AUTHENTIC INDIAN RESTAURANT IN DUBLIN, CA\nORDER YOUR F",
+   "w": 1280,
+   "h": 5075,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/778064bf-fe33-4049-9e32-5943fd6ff4dd/biryani.png",
+   "alt": "",
+   "near": "Raise Your Spirits\nDISCOVER THE TRUE TASTE OF INDIAN CUISINE IN DUBLIN, CALIFORNIA\n\nWelcome to one o",
+   "w": 1280,
+   "h": 678,
+   "page": "https://www.biryaniz.com/"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/Biryaniz.jpg",
+   "alt": "promotions",
+   "near": "",
+   "w": 1080,
+   "h": 1350,
+   "page": "https://www.biryaniz.com/menu?promos=1&pid=9032"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/catering-food.webp",
+   "alt": "catering",
+   "near": "We would like to be part of your happiness, emotions, memories and feeling’s in celebrating your lif",
+   "w": 600,
+   "h": 385,
+   "page": "https://www.biryaniz.com/catering_services"
+  },
+  {
+   "src": "https://www.pringleapi.com/Documents/3b1a708b-5464-4605-9ac0-7958bf4cae9d/Biryaniz.jpg",
+   "alt": "promotions",
+   "near": "",
+   "w": 1080,
+   "h": 1350,
+   "page": "https://www.biryaniz.com/catering_services"
+  }
+ ]
+}

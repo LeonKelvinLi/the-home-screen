@@ -1,0 +1,269 @@
+{
+ "id": "b_ellistonvineyards",
+ "source": "text",
+ "alt": {
+  "json": 4
+ },
+ "pages": [
+  "https://ellistonvineyards.com/",
+  "https://ellistonvineyards.com/collections/all"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "2015 Napa Cabernet Sauvignon",
+   "desc": "1 review",
+   "cents": 5899,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/2015-Napa-Cab-Sauv_360x.jpg?v=1705388637",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "2018 Pinot Noir",
+   "desc": "2 reviews",
+   "cents": 2799,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/2018PN2_360x.jpg?v=1705388674",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2016 Napa Reserve Cabernet Sauvignon"
+  },
+  {
+   "name": "2018 Oakville Cabernet Sauvignon",
+   "desc": "",
+   "cents": 9999,
+   "image": "https://ellistonvineyards.com/cdn/shop/files/2018_Oakville_Cabernet_Sauvignon_360x.jpg?v=1765233666",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2016 Napa Reserve Cabernet Sauvignon"
+  },
+  {
+   "name": "2020 Rosé",
+   "desc": "",
+   "cents": 2799,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/2020-Rose-mansion_360x.jpg?v=1705388707",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2018 Pinot Noir"
+  },
+  {
+   "name": "2021 Captain's Red Blend",
+   "desc": "",
+   "cents": 3099,
+   "image": "https://ellistonvineyards.com/cdn/shop/files/2021Captain_sBlend_360x.jpg?v=1765233015",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2018 Pinot Noir"
+  },
+  {
+   "name": "2021 Sonoma Chardonnay",
+   "desc": "",
+   "cents": 5299,
+   "image": "https://ellistonvineyards.com/cdn/shop/files/2021SonomaChardonnay_1_360x.jpg?v=1765232268",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2018 Pinot Noir"
+  },
+  {
+   "name": "2022 Elliston Estate Chardonnay",
+   "desc": "",
+   "cents": 4899,
+   "image": "https://ellistonvineyards.com/cdn/shop/files/2022EstateChardonnay_360x.jpg?v=1765234041",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2018 Pinot Noir"
+  },
+  {
+   "name": "2023 Napa Valley Cabernet Sauvignon",
+   "desc": "",
+   "cents": 5899,
+   "image": "https://ellistonvineyards.com/cdn/shop/files/IMG_9376_360x.jpg?v=1763538604",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "2018 Pinot Noir"
+  },
+  {
+   "name": "California Champagne",
+   "desc": "14 reviews",
+   "cents": 3399,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/California-Champange_360x.jpg?v=1705388656",
+   "alcohol": true,
+   "src": "text+card",
+   "section": "California Champagne"
+  },
+  {
+   "name": "From",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Elliston Vineyards Digital Gift Card",
+   "image": "https://ellistonvineyards.com/cdn/shop/products/DigitalGiftCard_360x.jpg?v=1612913758"
+  },
+  {
+   "name": "From",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fee",
+   "image": "https://ellistonvineyards.com/cdn/shop/products/DigitalGiftCard_360x.jpg?v=1612913758"
+  },
+  {
+   "name": "Peach Mango Sparkling Wine",
+   "desc": "",
+   "cents": 3399,
+   "image": "https://ellistonvineyards.com/cdn/shop/files/PeachMangoSparklingWine_360x.jpg?v=1765234735",
+   "alcohol": true,
+   "src": "text+card",
+   "section": "Fee"
+  },
+  {
+   "name": "Rosé Sparkling Wine",
+   "desc": "10 reviews",
+   "cents": 3299,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/Rose-Wine_360x.jpg?v=1705388651",
+   "alcohol": true,
+   "src": "text+card",
+   "section": "Rosé Sparkling Wine"
+  },
+  {
+   "name": "Sparkling Moscato",
+   "desc": "",
+   "cents": 3099,
+   "alcohol": false,
+   "src": "text",
+   "section": "Rosé Sparkling Wine"
+  },
+  {
+   "name": "Two-Bottle Wine Carrier",
+   "desc": "",
+   "cents": 500,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/wine-carrier-black_360x.jpg?v=1705388689",
+   "alcohol": true,
+   "src": "text+card",
+   "section": "Rosé Sparkling Wine"
+  },
+  {
+   "name": "2016 Napa Reserve Cabernet Sauvignon",
+   "desc": "2 reviews",
+   "cents": 6899,
+   "image": "https://ellistonvineyards.com/cdn/shop/products/2016-cs-special-reserve_360x.jpg?v=1705388640",
+   "alcohol": false,
+   "src": "card"
+  }
+ ],
+ "alts": {
+  "json": [
+   {
+    "name": "20 Percent Service Charge- Premium Tea Set with Sangria",
+    "desc": "",
+    "cents": 1100,
+    "alcohol": true,
+    "src": "json:https://apps.sasquatchstudio.co/api/canteen/rules/elliston-vineyards.mys"
+   },
+   {
+    "name": "20 Percent Service Charge- BBQ",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "json:https://apps.sasquatchstudio.co/api/canteen/rules/elliston-vineyards.mys"
+   },
+   {
+    "name": "20 Percent Service Charge-Bottomless Mimosa Ticket",
+    "desc": "",
+    "cents": 500,
+    "alcohol": true,
+    "src": "json:https://apps.sasquatchstudio.co/api/canteen/rules/elliston-vineyards.mys"
+   },
+   {
+    "name": "20 Percent Service Charge-Afternoon Tea Set",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "json:https://apps.sasquatchstudio.co/api/canteen/rules/elliston-vineyards.mys"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/Elliston_FallShoot_Hannah-Berglund-Photography-2_2a1f5694-7e25-41ef-a8be-424fd0b1532c_1296x.jpg?v=1636739889",
+   "alt": "",
+   "near": "Taste the Legacy\nShop Our Wines",
+   "w": 1279,
+   "h": 853,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/visit_elliston_360x.jpg?v=1706510210",
+   "alt": "Visit Elliston",
+   "near": "Visit Us\n\nWine tasting while enjoying our gorgeous property!\n\nBook Now",
+   "w": 353,
+   "h": 235,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/Weddings_Events_360x.jpg?v=1706512289",
+   "alt": "",
+   "near": "Weddings / Events\n\nPlan Your Dream Wedding or next event with Elliston.\n\nLearn More",
+   "w": 353,
+   "h": 235,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/Elliston_Wines_360x.jpg?v=1706512504",
+   "alt": "",
+   "near": "Shop Our Wines\n\nTaste the legacy\n\nShop Our Wines",
+   "w": 353,
+   "h": 235,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/Red-wines-collection_360x.jpg?v=1614296544",
+   "alt": "",
+   "near": "Red Wines",
+   "w": 353,
+   "h": 265,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/Sparkling-wines-collection_360x.jpg?v=1614296544",
+   "alt": "",
+   "near": "Sparkling Wines",
+   "w": 353,
+   "h": 265,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/White-wines-collection_360x.jpg?v=1614296544",
+   "alt": "",
+   "near": "White Wines",
+   "w": 353,
+   "h": 265,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://ellistonvineyards.com/cdn/shop/files/Elliston-exterior-1.jpg?v=1614313324",
+   "alt": "",
+   "near": "Experience the History\n\nExplore Elliston Vineyards through our virtual tour. You’ll see our historic",
+   "w": 1350,
+   "h": 900,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://dr8h81twidjpw.cloudfront.net/uploads/popup_setting/background_cover_img/Elliston-exterior-1_2004250013.jpeg",
+   "alt": "",
+   "near": "Welcome\n\nPlease verify that you are 21 years of age or older to enter this site.\n\nAgree\nDisagree",
+   "w": 1280,
+   "h": 900,
+   "page": "https://ellistonvineyards.com/"
+  },
+  {
+   "src": "https://dr8h81twidjpw.cloudfront.net/uploads/popup_setting/background_cover_img/Elliston-exterior-1_2004250013.jpeg",
+   "alt": "",
+   "near": "Welcome\n\nPlease verify that you are 21 years of age or older to enter this site.\n\nAgree\nDisagree",
+   "w": 1280,
+   "h": 900,
+   "page": "https://ellistonvineyards.com/collections/all"
+  }
+ ]
+}

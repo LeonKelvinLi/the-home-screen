@@ -1,0 +1,765 @@
+{
+ "id": "b_fireslicepizza",
+ "source": "text",
+ "alt": {
+  "jsonld": 5
+ },
+ "pages": [
+  "https://www.fireslicepizzeria.com/",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-large-build-your-own-18_69c3386d-ec99-4a88-a570-4ee6a28a902c",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-creamy-garlic-chicken-slice_3c5f0a6c-cbcd-4357-bea0-922ee0c6e37b",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-fire-slice_b58a9494-f281-447d-b39f-bcc48bf9dd4d",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-cheese-slice_a1757e9d-814e-484c-9a01-784a3387a027",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-pepperoni-slice_e6eea305-77c8-4357-aca0-9684be20e9cc"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Large Build Your Own \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, Choose your own toppings and plenty of signature red sauce",
+   "cents": 2899,
+   "image": "https://d1w7312wesee68.cloudfront.net/1g-R0K6VGn29uiU2E70Apw5vl9_Ug9AMbn30FNcmLFs/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/7/item-1700000000025290187_1771008659.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ASAP"
+  },
+  {
+   "name": "Creamy Garlic Chicken Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "ASAP"
+  },
+  {
+   "name": "Fire Slice",
+   "desc": "Fire Slice - Pepperoni, Bacon, Jalapenos, Hot Honey",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "ASAP"
+  },
+  {
+   "name": "Slice of Cheese Pizza",
+   "desc": "",
+   "cents": 799,
+   "alcohol": false,
+   "src": "text",
+   "section": "ASAP"
+  },
+  {
+   "name": "Slice of Pepperoni",
+   "desc": "",
+   "cents": 899,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "All Meat Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Combo Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Chicken Tikka Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Veggie Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Poly Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "BBQ Chicken Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Sam's Big Boss Slice Pepperoni",
+   "desc": "",
+   "cents": 5599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Sam’s Big Boss Slice the Works",
+   "desc": "",
+   "cents": 6599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Mediterranean Slice",
+   "desc": "",
+   "cents": 999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pepperoni Slice"
+  },
+  {
+   "name": "Medium Cheese Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, and plenty of signature red sauce",
+   "cents": 2199,
+   "image": "https://d1w7312wesee68.cloudfront.net/U_5oCiLvpxloxI72ERsYu7P29YjPov0i3mMiyRfZCxI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/9/item-1700000000025290149_1771006231.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Pepperoni Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, all beef old world pepperoni and plenty of signature red sauce",
+   "cents": 2599,
+   "image": "https://d1w7312wesee68.cloudfront.net/ndeLN-s0mCzGZQNFXrRSEO1hsUIV62zRZ4PGSNvP3-U/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/1/item-1700000000025290151_1771006336.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Polynesian Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, Turkey Ham, Beef Bacon, Sweet Pineapple, red onions, green onions and house made Polynesian BBQ SAUCE",
+   "cents": 2999,
+   "alcohol": false,
+   "src": "text",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Veggie Supreme Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, green bell peppers, red onion, grilled artichoke, mushroom, black olives, roasted garlic, toasted cashews and signature red sauce",
+   "cents": 2999,
+   "image": "https://d1w7312wesee68.cloudfront.net/VD29ra5TUsBD12Lk-3P6JDJ_VgOWI82crWVs8WdPpA4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/5/item-1700000000025290155_1771006481.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium All Meat Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, all beef, pepperoni, salami, bacon, sausage and signature red sauce",
+   "cents": 2999,
+   "image": "https://d1w7312wesee68.cloudfront.net/peK28sP8f7ddEhBYHN8VT9_CC6E7P4YqwNF2OT_mbi0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/7/item-1700000000025290157_1771006524.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Fire Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, all beef old world pepperoni, spicey Calabrian peppers, Beef Smoked Bacon, Ricotta Cheese, Honey hot drizzle and signature red sauce",
+   "cents": 2999,
+   "image": "https://d1w7312wesee68.cloudfront.net/lYmmK6CsxyGYwFGv_EeR-z6gwN5yH78K4fu2I25Swbw/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/9/item-1700000000025290159_1771006603.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Chicken Tikka Masala Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, tender chicken breast, red onion, Cilantro and Creamy Tikka Masala sauce",
+   "cents": 2999,
+   "image": "https://d1w7312wesee68.cloudfront.net/A6QKqo4d9-WKRij_U7L3zbTfloN0J6ax7vXmfbJUWBE/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/1/item-1700000000025290161_1771006691.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium BBQ Chicken & Bacon Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, chicken breast, crispy all beef bacon, red onions and smokey bbq sauce",
+   "cents": 2999,
+   "image": "https://d1w7312wesee68.cloudfront.net/lOI5mjuMll0PEYwlj-PUn8jNUCLWpSojjto4yZVbPrQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/5/item-1700000000025290165_1771007065.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Build Your Own - 14\"",
+   "desc": "Hand-tossed dough, buffalo mozzarella, Choose your own toppings and plenty of signature red sauce",
+   "cents": 2199,
+   "image": "https://d1w7312wesee68.cloudfront.net/K25-HWeReb2L56XQwCQmaP4s9b5iSEwe7XRCzEzQnN8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/7/item-1700000000025290167_1771007097.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Medium Combo \"14",
+   "desc": "",
+   "cents": 2999,
+   "alcohol": false,
+   "src": "text",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Mediterranean Pizza \"14",
+   "desc": "",
+   "cents": 2999,
+   "alcohol": false,
+   "src": "text",
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Large Cheese Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, and plenty of signature red sauce",
+   "cents": 2899,
+   "image": "https://d1w7312wesee68.cloudfront.net/QhlPXeriMmLneg34U6p4SzsO-mE0CwMw2l0VOqECB_8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/9/item-1700000000025290169_1771007320.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Pepperoni Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, all beef old world pepperoni and plenty of signature red sauce",
+   "cents": 3599,
+   "image": "https://d1w7312wesee68.cloudfront.net/CP9AdwghwNXfnd3VoLc8lqd3OwAwbpfZ2MACTo2VH8Y/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/1/item-1700000000025290171_1771007962.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Polynesian Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, Turkey Ham, Beef Bacon, Sweet Pineapple, red onions, green onions and house made Polynesian BBQ SAUCE",
+   "cents": 3999,
+   "alcohol": false,
+   "src": "text",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Veggie Supreme Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, green bell peppers, red onion, grilled artichoke, mushroom, black olives, roasted garlic, toasted cashews and signature red sauce",
+   "cents": 3999,
+   "image": "https://d1w7312wesee68.cloudfront.net/O0r6zfA0-H7WV3PMeG-UH1HJGVuj6sIVkY1Eb80KVxs/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/5/item-1700000000025290175_1771008174.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large All Meat Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, all beef, pepperoni, salami, bacon, sausage and signature red sauce",
+   "cents": 3999,
+   "image": "https://d1w7312wesee68.cloudfront.net/bZa6w22lQc7z6MNAxtdkrcaGtpnkYHlGvkvtOwdQCAQ/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/7/item-1700000000025290177_1771008331.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Fire Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, all beef old world pepperoni, spicey Calabrian peppers, Beef Smoked Bacon, Ricotta Cheese, Honey hot drizzle and signature red sauce",
+   "cents": 3999,
+   "image": "https://d1w7312wesee68.cloudfront.net/XbaxTnZFrxxKmYlm4j4H-awBDVpgK_G4q52nEftiFZU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/9/item-1700000000025290179_1771008377.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Chicken Tikka Masala Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, tender chicken breast, red onion, Cilantro and Creamy Tikka Masala sauce",
+   "cents": 3999,
+   "image": "https://d1w7312wesee68.cloudfront.net/0jDf4J8OjS8p-aaH1713PX9L2yobxYJWdlDQKCraqI0/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/1/item-1700000000025290181_1771008431.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large BBQ Chicken & Bacon Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, chicken breast, crispy all beef bacon, red onions and smokey bbq sauce",
+   "cents": 3999,
+   "image": "https://d1w7312wesee68.cloudfront.net/vesq6Kxxj04uWCOi1K59DJZCo-96kaYJYdCYhPgYesc/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/5/item-1700000000025290185_1771008530.png",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Combo \"18",
+   "desc": "",
+   "cents": 3999,
+   "alcohol": false,
+   "src": "text",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Large Mediterranean Pizza \"18",
+   "desc": "Hand-Tossed dough, mozzarella, creamy white sauce, lamb gyro, green bell peppers, olives, and roasted garlic",
+   "cents": 3999,
+   "alcohol": false,
+   "src": "text",
+   "section": "18\" Pizza"
+  },
+  {
+   "name": "Boss Cheese 24\"",
+   "desc": "",
+   "cents": 5499,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Pepperoni 24\"",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss All Meat Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Combination Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Fire Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Chicken Tikka Masala Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Veggie Supreme Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Creamy Garlic Chicken & Mushroom Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Polynesian Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss BBQ Chicken Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Boss Mediterranean Pizza \"24",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "Sam’s Big Boss The Works",
+   "desc": "",
+   "cents": 8000,
+   "alcohol": false,
+   "src": "text",
+   "section": "24\" PIZZA BOSS"
+  },
+  {
+   "name": "NY Cheese Cake",
+   "desc": "Delicious crafted New York Style Cheesecake Slice",
+   "cents": 899,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Refershing soda in a can",
+   "desc": "",
+   "cents": 199,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Refershing soda in a two liter bottle",
+   "desc": "",
+   "cents": 599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soda Bottle - 2L"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soda Bottle - 2L"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soda Bottle - 2L"
+  },
+  {
+   "name": "Cheese Slice",
+   "desc": "",
+   "cents": 799,
+   "alcohol": false,
+   "src": "text",
+   "section": "CA Privacy Statement"
+  },
+  {
+   "name": "Pepperoni Slice",
+   "desc": "",
+   "cents": 899,
+   "alcohol": false,
+   "src": "text",
+   "section": "CA Privacy Statement"
+  },
+  {
+   "name": "Medium Creamy Garlic Chicken & Mushroom Pizza \"14",
+   "desc": "Hand-tossed dough, buffalo mozzarella, tender chicken breast, roasted mushrooms, roasted garlic, red onions, and creamy white sauce",
+   "cents": 2999,
+   "image": "https://d1w7312wesee68.cloudfront.net/s_m5fHpkt5nq1ADprc7eszYlpC8bUoGCssy1tXwTTps/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/3/item-1700000000025290163_1771006985.png",
+   "alcohol": false,
+   "src": "card"
+  },
+  {
+   "name": "Large Creamy Garlic Chicken & Mushroom Pizza \"18",
+   "desc": "Hand-tossed dough, buffalo mozzarella, tender chicken breast, roasted garlic, red onions, mushrooms and creamy white sauce",
+   "cents": 3999,
+   "image": "https://d1w7312wesee68.cloudfront.net/4KkO39aZe9tdalyBHVNbfK07eRx3B_YUx1Gd7J4Tobo/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/3/item-1700000000025290183_1771008477.png",
+   "alcohol": false,
+   "src": "card"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Large Build Your Own \"18",
+    "desc": "Hand-tossed dough, buffalo mozzarella, Choose your own toppings and plenty of signature red sauce",
+    "cents": 2899,
+    "image": "https://d1w7312wesee68.cloudfront.net/1g-R0K6VGn29uiU2E70Apw5vl9_Ug9AMbn30FNcmLFs/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-323703000000000000/menu/items/7/item-1700000000025290187_1771008659.png",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Creamy Garlic Chicken Slice",
+    "desc": "",
+    "cents": 999,
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Fire Slice",
+    "desc": "Fire Slice - Pepperoni, Bacon, Jalapenos, Hot Honey",
+    "cents": 999,
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Cheese Slice",
+    "desc": "Slice of Cheese Pizza",
+    "cents": 799,
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Pepperoni Slice",
+    "desc": "Slice of Pepperoni",
+    "cents": 899,
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_721702d5e8d944898eb80d0e91326397~mv2.png/v1/fill/w_359,h_289,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/447d0d_721702d5e8d944898eb80d0e91326397~mv2.png",
+   "alt": "",
+   "near": "Savor Every Slice Today\n\nOrder Now\n\nAddress: 2705 Clayton Rd, Concord, CA 94519  ​\n\nFree Delivery wi",
+   "w": 359,
+   "h": 289,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/nsplsh_12a6d10852a34b17864c6ffe7d8d9e26~mv2.jpg/v1/fill/w_393,h_262,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/nsplsh_12a6d10852a34b17864c6ffe7d8d9e26~mv2.jpg",
+   "alt": "",
+   "near": "Savor Every Slice Today\n\nOrder Now\n\nAddress: 2705 Clayton Rd, Concord, CA 94519  ​\n\nFree Delivery wi",
+   "w": 393,
+   "h": 262,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_705114e344394c5b8e599916448829f3~mv2.jpg/v1/fill/w_844,h_408,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/447d0d_705114e344394c5b8e599916448829f3~mv2.jpg",
+   "alt": "",
+   "near": "Savor Every Slice Today\n\nOrder Now\n\nAddress: 2705 Clayton Rd, Concord, CA 94519  ​\n\nFree Delivery wi",
+   "w": 844,
+   "h": 408,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_8b0be24ea44c4ae6bca286f42d1c2c63~mv2.png/v1/fill/w_952,h_408,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/2026-02-08%2018_33_00-Photo%20Jan%2029%202026%2C%205%2041%2048%20AM_jpg.png",
+   "alt": "2026-02-08 18_33_00-Photo Jan 29 2026, 5 41 48 AM.jpg.png",
+   "near": "Savor Every Slice Today\n\nOrder Now\n\nAddress: 2705 Clayton Rd, Concord, CA 94519  ​\n\nFree Delivery wi",
+   "w": 952,
+   "h": 408,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_8f555e4ff441403a821990ea17aedd53~mv2.jpg/v1/crop/x_28,y_0,w_5575,h_8446/fill/w_536,h_812,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Photo%20Feb%2020%202026%2C%202%2016%2037%20AM.jpg",
+   "alt": "Photo Feb 20 2026, 2 16 37 AM.jpg",
+   "near": "As a family-owned restaurant, we cherish our values of quality and service. We focus on providing a ",
+   "w": 536,
+   "h": 812,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_2bfade6824f64dd2bc124efc35546eabf003.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_2bfade6824f64dd2bc124efc35546eabf003.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_9ab7365159ee483284b9c11e3084332e~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_9ab7365159ee483284b9c11e3084332e~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_db19392a93eb47279a9821cbd4c26fce~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_db19392a93eb47279a9821cbd4c26fce~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_079d48fed29b469182fd438020ce526a~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_079d48fed29b469182fd438020ce526a~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_c2aa686b1861456689f2447a56f51bb6~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_c2aa686b1861456689f2447a56f51bb6~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_cca5393eb7d44fedabb16705c05c9110~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_cca5393eb7d44fedabb16705c05c9110~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_198829a891fe45e6b464be37a480b4fd~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_198829a891fe45e6b464be37a480b4fd~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_e7216e5f81a549a88d5c6cd9933494b2~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_e7216e5f81a549a88d5c6cd9933494b2~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_474bbe467f444fc59dedcb936e92edee~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_474bbe467f444fc59dedcb936e92edee~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_fd50b9441a794e589399a9acd7bcfcc7~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_fd50b9441a794e589399a9acd7bcfcc7~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_3297c2b4db6c4b98a3570d7bc19a8a83~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_3297c2b4db6c4b98a3570d7bc19a8a83~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_2dd7741dbf914f26abcc505a0bb330ca~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_2dd7741dbf914f26abcc505a0bb330ca~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_6992242eb4414e9b9aec9c09f6ba4c59~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_6992242eb4414e9b9aec9c09f6ba4c59~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_93036aa5c4fe4f96b8670f2628e72c79~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_93036aa5c4fe4f96b8670f2628e72c79~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_9907d767d9e04c7c9e98ad94e82162de~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_9907d767d9e04c7c9e98ad94e82162de~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_8f555e4ff441403a821990ea17aedd53~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_8f555e4ff441403a821990ea17aedd53~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_557c6ea6120e4b1bae1f3f087c51d5ee~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_557c6ea6120e4b1bae1f3f087c51d5ee~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_511450302a824f08ba95d99588dc0e0c~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_511450302a824f08ba95d99588dc0e0c~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/447d0d_ce8bd84ebba84a778779e7e6a354b31b~mv2.jpg/v1/fill/w_354,h_472,q_90,enc_avif,quality_auto/447d0d_ce8bd84ebba84a778779e7e6a354b31b~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 354,
+   "h": 472,
+   "page": "https://www.fireslicepizzeria.com/"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/d002cc92-a711-49d4-be56-52e4e8da4fb2/c568273c-daef-49cf-92cf-c451d65709d4.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://order.toasttab.com/online/fire-slice-2705-clayton-rd"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/d002cc92-a711-49d4-be56-52e4e8da4fb2/c568273c-daef-49cf-92cf-c451d65709d4.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-large-build-your-own-18_69c3386d-ec99-4a88-a570-4ee6a28a902c"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/d002cc92-a711-49d4-be56-52e4e8da4fb2/c568273c-daef-49cf-92cf-c451d65709d4.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-creamy-garlic-chicken-slice_3c5f0a6c-cbcd-4357-bea0-922ee0c6e37b"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/d002cc92-a711-49d4-be56-52e4e8da4fb2/c568273c-daef-49cf-92cf-c451d65709d4.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-fire-slice_b58a9494-f281-447d-b39f-bcc48bf9dd4d"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/d002cc92-a711-49d4-be56-52e4e8da4fb2/c568273c-daef-49cf-92cf-c451d65709d4.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-cheese-slice_a1757e9d-814e-484c-9a01-784a3387a027"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/d002cc92-a711-49d4-be56-52e4e8da4fb2/c568273c-daef-49cf-92cf-c451d65709d4.png",
+   "alt": "",
+   "near": "",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-pepperoni-slice_e6eea305-77c8-4357-aca0-9684be20e9cc"
+  }
+ ]
+}

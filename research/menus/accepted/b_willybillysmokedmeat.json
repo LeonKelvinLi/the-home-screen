@@ -1,0 +1,114 @@
+{
+ "id": "b_willybillysmokedmeat",
+ "source": "text",
+ "pages": [
+  "https://willybillysmokedmeat.com/",
+  "https://willybillysmokedmeat.com/home-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/menu-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/catering-service-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/location-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/book-a-call-willy-billys-smoked-meat",
+  "https://willybillysmokedmeat.com/product-details-willy-billys-smoked-meat/product/695fd89ca6e8f38560c4707a/?variant=695fd89ca6e8f309d7c4707f"
+ ],
+ "items": [
+  {
+   "name": "Brisket (Regular)",
+   "desc": "",
+   "cents": 1800,
+   "section": "BBQ"
+  },
+  {
+   "name": "Brisket (Large)",
+   "desc": "",
+   "cents": 2500,
+   "section": "BBQ"
+  },
+  {
+   "name": "Pulled Beef (Regular)",
+   "desc": "",
+   "cents": 1600,
+   "section": "BBQ"
+  },
+  {
+   "name": "Pulled Beef (Large)",
+   "desc": "",
+   "cents": 2100,
+   "section": "BBQ"
+  },
+  {
+   "name": "Beef Hot Links",
+   "desc": "",
+   "cents": 1450,
+   "section": "BBQ"
+  },
+  {
+   "name": "Dino Beef Rib",
+   "desc": "",
+   "cents": 3500,
+   "section": "BBQ"
+  },
+  {
+   "name": "2-Meat Combo",
+   "desc": "",
+   "cents": 2500,
+   "section": "Combo meals"
+  },
+  {
+   "name": "3-Meat Combo",
+   "desc": "",
+   "cents": 2900,
+   "section": "Combo meals"
+  },
+  {
+   "name": "Brisket Burger",
+   "desc": "",
+   "cents": 1550,
+   "section": "Combo meals"
+  },
+  {
+   "name": "Mac & Cheese",
+   "desc": "",
+   "cents": 425,
+   "section": "Combo meals"
+  },
+  {
+   "name": "Hawaiian Rolls (2 pcs)",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Corn Bread",
+   "desc": "",
+   "cents": 350,
+   "section": "Sides"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "willy-billy-smoked-meat-site-0",
+   "alt": "",
+   "credit": "Their own photo, from willybillysmokedmeat.com"
+  },
+  {
+   "photo": "willy-billy-smoked-meat-site-2",
+   "alt": "",
+   "credit": "Their own photo, from willybillysmokedmeat.com"
+  },
+  {
+   "photo": "willy-billy-smoked-meat-site-3",
+   "alt": "",
+   "credit": "Their own photo, from willybillysmokedmeat.com"
+  },
+  {
+   "photo": "willy-billy-smoked-meat-site-5",
+   "alt": "",
+   "credit": "Their own photo, from willybillysmokedmeat.com"
+  },
+  {
+   "photo": "willy-billy-smoked-meat-site-14",
+   "alt": "",
+   "credit": "Their own photo, from willybillysmokedmeat.com"
+  }
+ ]
+}

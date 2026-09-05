@@ -1,0 +1,173 @@
+{
+ "id": "b_eightacres",
+ "source": "text",
+ "pages": [
+  "https://eightacresbrentwood.com/",
+  "https://eightacresbrentwood.com/#menu",
+  "https://order.toasttab.com/online/eightacresbrentwood.com",
+  "https://eightacresbrentwood.com/full-menu/",
+  "https://eightacresbrentwood.com/brunch-menu/",
+  "https://eightacresbrentwood.com/beverage-menu/",
+  "https://order.toasttab.com/online/eightacresbrentwood.com/item-forge-pepperoni-pizza_a73fdf53-9347-4404-9677-d2dde959dfa7"
+ ],
+ "items": [
+  {
+   "name": "Marinated Olives",
+   "desc": "mediterranean blend, orange, chili flake, fennel served w/ toasted sourdough",
+   "cents": 1250,
+   "section": "Starters",
+   "photo": "eight-acres-marinated-olives"
+  },
+  {
+   "name": "Baked Macaroni & Cheese",
+   "desc": "smoked three cheese blend, elbow macaroni",
+   "cents": 1300,
+   "section": "Starters",
+   "photo": "eight-acres-baked-macaroni-cheese"
+  },
+  {
+   "name": "Wisconsin Cheese Curds",
+   "desc": "chickpea battered, marinara sauce",
+   "cents": 1450,
+   "section": "Starters",
+   "photo": "eight-acres-wisconsin-cheese-curds"
+  },
+  {
+   "name": "Brussel Sprouts",
+   "desc": "crispy Brussels sprouts, sambal honey, micro cilantro",
+   "cents": 1350,
+   "section": "Starters",
+   "photo": "eight-acres-brussel-sprouts"
+  },
+  {
+   "name": "Carne Asada Tots",
+   "desc": "crispy tater tots, grilled carne asada, queso, guacamole, pickled jalapeños, pico de gallo",
+   "cents": 1650,
+   "section": "Starters",
+   "photo": "eight-acres-carne-asada-tots"
+  },
+  {
+   "name": "Chicken Wings",
+   "desc": "choice of... sambal honey w/ micro cilantro and thai peanut sauce or traditional buffalo sauce w/ bleu cheese crumbles and herb ranch dressing",
+   "cents": 1550,
+   "section": "Starters",
+   "photo": "eight-acres-chicken-wings"
+  },
+  {
+   "name": "Kale Caesar Salad",
+   "desc": "kale, caesar dressing, cracked black pepper, shaved grana padano, garlic croutons",
+   "cents": 1550,
+   "section": "Salads and soup",
+   "photo": "eight-acres-kale-caesar-salad"
+  },
+  {
+   "name": "Strawberry Salad",
+   "desc": "strawberries, toasted walnuts, pickled red onion, goat cheese, citrus vinaigrette, arugula",
+   "cents": 1650,
+   "section": "Salads and soup",
+   "photo": "eight-acres-strawberry-salad"
+  },
+  {
+   "name": "BLT Wedge",
+   "desc": "bacon, cherry tomatoes, iceberg lettuce, hard-boiled egg, pickled red onion, blue cheese crumbles, green goddess dressing",
+   "cents": 1650,
+   "section": "Salads and soup",
+   "photo": "eight-acres-blt-wedge"
+  },
+  {
+   "name": "Fat Boy Pizza",
+   "desc": "Italian sausage, bacon, pickled pepper, red onion, red sauce, mozzarella",
+   "cents": 2500,
+   "section": "Forge handcrafted pizzas",
+   "photo": "eight-acres-fat-boy-pizza"
+  },
+  {
+   "name": "BYO Burger",
+   "desc": "natural angus blend, LTOP on side. choice of cheese, sauce, and add ons. served on a brioche bun",
+   "cents": 2200,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-byo-burger"
+  },
+  {
+   "name": "Buffalo Shrimp Sandwich",
+   "desc": "fried shrimp, buffalo sauce, lettuce, tomato, mayo, blue cheese crumbles, served on a toasted deli roll",
+   "cents": 2250,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-buffalo-shrimp-sandwich"
+  },
+  {
+   "name": "Eight Acres Burger",
+   "desc": "natural angus blend, bacon jam, arugula, gruyere, pickled red onions, roasted garlic aioli. served on a brioche bun",
+   "cents": 2250,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-eight-acres-burger"
+  },
+  {
+   "name": "Fried Chicken Sandwich",
+   "desc": "fried chicken, bacon, pimento cheese, lettuce, house pickles, chipotle mayo",
+   "cents": 2200,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-fried-chicken-sandwich"
+  },
+  {
+   "name": "Muffaletta Sandwich",
+   "desc": "black forest ham, Molinari salame, hot sopressata, coppa, fontina cheese, olive salad, garlic aioli, served on a toasted deli roll",
+   "cents": 2300,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-muffaletta-sandwich"
+  },
+  {
+   "name": "Ribeye Melt",
+   "desc": "shaved ribeye, gruyere, served on a toasted deli roll w/ side of au jus and horseradish cream",
+   "cents": 3000,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-ribeye-melt"
+  },
+  {
+   "name": "Campanelle Pasta",
+   "desc": "campanelle pasta, roasted mushrooms, cherry tomatoes, arugula, pesto cream, grana padano",
+   "cents": 2450,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-campanelle-pasta"
+  },
+  {
+   "name": "Fish + Chips",
+   "desc": "beer battered pacific cod, steak fries, tartar sauce",
+   "cents": 2450,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-fish-chips"
+  },
+  {
+   "name": "Chicken Confit",
+   "desc": "chicken confit, ham hock stewed cannellini beans, sautéed greens, hot sauce jam on side",
+   "cents": 2600,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-chicken-confit"
+  },
+  {
+   "name": "Blackened Mahi Mahi",
+   "desc": "whipped potatoes, sautéed greens, shrimp, andouille, white wine - lemon cream, crispy capers",
+   "cents": 3100,
+   "section": "Entrees and sandwiches",
+   "photo": "eight-acres-blackened-mahi-mahi"
+  },
+  {
+   "name": "Kids Mac + Cheese",
+   "desc": "",
+   "cents": 1250,
+   "section": "Kids"
+  },
+  {
+   "name": "Kids Chicken Bites",
+   "desc": "",
+   "cents": 1250,
+   "section": "Kids"
+  },
+  {
+   "name": "Kids Fish + Chips",
+   "desc": "",
+   "cents": 1250,
+   "section": "Kids"
+  }
+ ]
+}

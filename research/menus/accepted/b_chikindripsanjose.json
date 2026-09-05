@@ -1,0 +1,41 @@
+{
+ "id": "b_chikindripsanjose",
+ "source": "text",
+ "pages": [
+  "https://www.chikindrip.com/",
+  "https://www.chikindrip.com/menu",
+  "https://www.chikindrip.com/catering"
+ ],
+ "items": [
+  {
+   "name": "Combo 1",
+   "desc": "",
+   "cents": 1299,
+   "section": "Combos"
+  },
+  {
+   "name": "Combo 2",
+   "desc": "",
+   "cents": 1499,
+   "section": "Combos"
+  },
+  {
+   "name": "Combo 3",
+   "desc": "",
+   "cents": 1399,
+   "section": "Combos"
+  },
+  {
+   "name": "Combo 4",
+   "desc": "",
+   "cents": 1799,
+   "section": "Combos"
+  },
+  {
+   "name": "Loaded Fries",
+   "desc": "",
+   "cents": 1399,
+   "section": "Combos"
+  }
+ ]
+}

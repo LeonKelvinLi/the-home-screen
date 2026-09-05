@@ -1,0 +1,284 @@
+{
+ "id": "b_paulosausage",
+ "source": "square",
+ "alt": {
+  "text": 8
+ },
+ "pages": [
+  "https://www.paulosausageco.com/",
+  "https://www.paulosausageco.com/sandwich-pre-order"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Italian Dip",
+   "desc": "Savor the rich flavors of our Italian Dip Sandwich, featuring a blend of Italian pork and beef sausage, sautéed onions, roasted garlic, and mushrooms, all topped with melted Swiss cheese. Served with a side of au jus gravy for dipping, this sandwich is a hearty and flavorful treat that’s perfect for dipping and enjoying.",
+   "cents": 1500,
+   "image": "https://148323237.cdn6.editmysite.com/uploads/1/4/8/3/148323237/L3QKWWXFIJX6MAZUF3P6UOE7.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Meatball Sub",
+   "desc": "Sink your teeth into this hearty classic featuring our tender, flavorful meatballs simmered in our vodka cream tomato sauce. Topped with melted parmasean and served on a toasted sub roll, it’s a comforting and satisfying favorite that hits all the right notes.",
+   "cents": 1550,
+   "image": "https://148323237.cdn6.editmysite.com/uploads/1/4/8/3/148323237/6GMOZ5ZJMDPESEP6GS33ISVL.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Ham & Burrata",
+   "desc": "Indulge in a delightful blend of flavors with our Ham & Burrata Sandwich. This sandwich features savory ham paired with creamy burrata topped with olive oil & black pepper, a drizzle of sweet honey, & freshly tossed arugula salad, all served on our freshly baked focaccia. It's a perfect mix of sweet, savory, and creamy in every bite.",
+   "cents": 1600,
+   "image": "https://148323237.cdn6.editmysite.com/uploads/1/4/8/3/148323237/3BPXUTT6PPOH2JXBIJVI6G2L.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Italian Cold Cut",
+   "desc": "Enjoy a classic Italian cold cut sandwich stacked with capicola, salami, pepperoni, ham, and provolone all served on our freshly baked focaccia. This flavorful combination is topped with mayo, crisp lettuce dressed in oil and vinegar, ripe tomato, fresh onion, and tangy pepperoncini, making each bite a perfect balance of savory and zesty flavors.",
+   "cents": 2000,
+   "image": "https://148323237.cdn6.editmysite.com/uploads/1/4/8/3/148323237/BJF5Q6SEBIQ2VDACW3F6KNVO.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Salami & Stuffed Pepperoncini",
+   "desc": "Enjoy the bold flavors of savory salami paired with cream cheese stuffed pepperoncini, fresh arugula, & ripe tomato, all balanced with a touch of creamy mayo. Layered on our freshly baked focaccia, this sandwich delivers a satisfying blend of tangy, creamy, and fresh ingredients in every bite.",
+   "cents": 1550,
+   "image": "https://148323237.cdn6.editmysite.com/uploads/1/4/8/3/148323237/V6APKQOXNGUBNSGBNVJR5C2Z.jpeg",
+   "alcohol": false,
+   "src": "square"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Italian Dip",
+    "desc": "Savor the rich flavors of our Italian Dip Sandwich, featuring a blend of Italian pork and beef sausage, sautéed onions, roasted garlic, and mushrooms, all topped with melted Swiss cheese. Served with a side of au jus gra",
+    "cents": 1500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Fresh Italian Sandwiches"
+   },
+   {
+    "name": "Meatball Sub",
+    "desc": "Sink your teeth into this hearty classic featuring our tender, flavorful meatballs simmered in our vodka cream tomato sauce. Topped with melted parmasean and served on a toasted sub roll, it’s a comforting and satisfying",
+    "cents": 1550,
+    "alcohol": false,
+    "src": "text",
+    "section": "Fresh Italian Sandwiches"
+   },
+   {
+    "name": "Ham & Burrata",
+    "desc": "Indulge in a delightful blend of flavors with our Ham & Burrata Sandwich. This sandwich features savory ham paired with creamy burrata topped with olive oil & black pepper, a drizzle of sweet honey, & freshly tossed arug",
+    "cents": 1600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Fresh Italian Sandwiches"
+   },
+   {
+    "name": "Italian Cold Cut",
+    "desc": "Enjoy a classic Italian cold cut sandwich stacked with capicola, salami, pepperoni, ham, and provolone all served on our freshly baked focaccia. This flavorful combination is topped with mayo, crisp lettuce dressed in oi",
+    "cents": 2000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Fresh Italian Sandwiches"
+   },
+   {
+    "name": "Salami & Stuffed Pepperoncini",
+    "desc": "Enjoy the bold flavors of savory salami paired with cream cheese stuffed pepperoncini, fresh arugula, & ripe tomato, all balanced with a touch of creamy mayo. Layered on our freshly baked focaccia, this sandwich delivers",
+    "cents": 1550,
+    "alcohol": false,
+    "src": "text",
+    "section": "Fresh Italian Sandwiches"
+   },
+   {
+    "name": "Blueberry Maple Breakfast Sandwich",
+    "desc": "Featuring our premium Blueberry Maple Breakfast Sausage, this breakfast sandwich is layered with fluffy scrambled eggs, crispy honey-cured bacon, sharp cheddar cheese, & creamy mayo on our fresh baked focaccia. The subtl",
+    "cents": 1400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sausage Smash Sandwiches"
+   },
+   {
+    "name": "Hazy Cowboy Smash",
+    "desc": "Dive into bold flavors with our Hazy Cowboy Smash Sandwich. Featuring our premium Hazy Jalapeno Cheddar sausage topped with zesty flame-roasted jalapeno, grilled onion, smoked cheddar, iceberg lettuce, and a drizzle of b",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sausage Smash Sandwiches"
+   },
+   {
+    "name": "Italian Smash",
+    "desc": "Get ready for a burst of flavor with our Italian Smash Sandwich, featuring your choice of mild or hot Italian sausage, perfectly smashed and grilled. Topped with creamy goat cheese, fresh arugula, juicy tomato, and a spi",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sausage Smash Sandwiches"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/Paulo%20sausage%20company%20%281%29%20copy%207_1707060430.png?width=2400&optimize=medium",
+   "alt": "Paulo Sausage Company logo",
+   "near": "",
+   "w": 2400,
+   "h": 1200,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/PauloSausageCo-80_1724886274.jpg?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2400,
+   "h": 1600,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/16_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/8_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/7_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/11_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/10_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/12_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/13_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/14_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/2_1729968661.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/1_1729968661.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/5_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/3_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/4_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/6_1729968662.png?width=2400&optimize=medium",
+   "alt": "",
+   "near": "",
+   "w": 2000,
+   "h": 2000,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/32_1707060388.png?width=2400&optimize=medium",
+   "alt": "Paulo Sausage Company logo",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://www.paulosausageco.com/"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/Paulo%20sausage%20company%20%281%29%20copy%207_1707060430.png?width=2400&optimize=medium",
+   "alt": "Paulo Sausage Company logo",
+   "near": "",
+   "w": 2400,
+   "h": 1200,
+   "page": "https://www.paulosausageco.com/sandwich-pre-order"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/2024-08-28_21-22-43_1724905386.jpg?width=1600&dpr=1",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 227,
+   "page": "https://www.paulosausageco.com/sandwich-pre-order"
+  },
+  {
+   "src": "https://f470a654bc235b0221c1.cdn6.editmysite.com/uploads/b/f470a654bc235b0221c19b4744020594f563a82d042eb906803d820d070e46a0/32_1707060388.png?width=2400&optimize=medium",
+   "alt": "Paulo Sausage Company logo",
+   "near": "",
+   "w": 500,
+   "h": 500,
+   "page": "https://www.paulosausageco.com/sandwich-pre-order"
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+{
+ "id": "b_chiquoandeva",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.chiquoandeva.com/",
+  "https://www.chiquoandeva.com/menu"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "MoChiquo Fried Chicken Wings",
+   "desc": "8 Chicken wings marinated in a gochujang + mochiko batter. Fried in beef tallow.",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Appetizers",
+   "image": "https://static.parastorage.com/services/restaurant-menus-showcase-ooi/32f43626916d61c7230c005be8198518edbcf8b3b64433b47f70e8c6/media/menus_side_image.7077f229.jpeg"
+  },
+  {
+   "name": "Lumpia Shanghai",
+   "desc": "Filipino fried egg roll made with pork, carrots, celery, and water chestnuts. Comes with 12 pieces. Fried in beef tallow.",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Appetizers"
+  },
+  {
+   "name": "Japanese A5 Wagyu Ribeye - 20-22 oz",
+   "desc": "Origin - Miyazaki Japan. Grade A5. Japanese Beef Marble Score 10+. Feeds 2 people",
+   "cents": 21500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cuts of Wagyu"
+  },
+  {
+   "name": "Japanese A5 Wagyu Filet Mignon - 10 oz",
+   "desc": "Origin - Miyazaki Japan. Grade A5. Japanese BMS 10+. Feeds 1 person.",
+   "cents": 19000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cuts of Wagyu"
+  },
+  {
+   "name": "Silog",
+   "desc": "Garlic fried rice topped with a fried egg and fried garlic chips.",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pacific Sides"
+  },
+  {
+   "name": "Mango Salad",
+   "desc": "Mangoes, pineapple, tomatoes, onions, and lime juice. Compliments the richness of the wagyu.",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Pacific Sides"
+  },
+  {
+   "name": "Chili Pepper Shrimp",
+   "desc": "Tamarind, Chili Peppers, Garlic, Lemon",
+   "cents": 2300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Enhancers"
+  },
+  {
+   "name": "Bone Marrow",
+   "desc": "Two bone marrow canoes with roasted garlic and a side of toasted bread. Bread is toasted in bone marrow butter.",
+   "cents": 2300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Enhancers"
+  },
+  {
+   "name": "Gunther’s Ice Cream",
+   "desc": "",
+   "cents": 68000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Victoria & Vincent Tomahawk"
+  },
+  {
+   "name": "Gunther’s Ice Cream",
+   "desc": "",
+   "cents": 56000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Wagyu Ribeye (Tomahawk + A5) Tour"
+  },
+  {
+   "name": "Gunther’s Ice Cream",
+   "desc": "",
+   "cents": 32500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tyco Tomahawk"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/0c4e7f_73be9817624342db9741e68ff100576d~mv2.jpg/v1/fill/w_450,h_470,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/18210957451294561.jpg",
+   "alt": "18210957451294561.jpg",
+   "near": "",
+   "w": 450,
+   "h": 470,
+   "page": "https://www.chiquoandeva.com/"
+  },
+  {
+   "src": "https://static.parastorage.com/services/restaurant-menus-showcase-ooi/32f43626916d61c7230c005be8198518edbcf8b3b64433b47f70e8c6/media/menus_side_image.7077f229.jpeg",
+   "alt": "",
+   "near": "Wagyu Steak Menu\n\nWagyu Steakhouse Saturday Pop Up at The Cafe at The Inn at Benicia Bay! 5-9pm Rese",
+   "w": 3009,
+   "h": 3009,
+   "page": "https://www.chiquoandeva.com/menu"
+  }
+ ]
+}

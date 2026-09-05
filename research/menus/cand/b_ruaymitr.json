@@ -1,0 +1,455 @@
+{
+ "id": "b_ruaymitr",
+ "source": "text",
+ "alt": {
+  "jsonld": 4
+ },
+ "pages": [
+  "https://www.ruaymitrsf.com/",
+  "https://order.toasttab.com/online/ruaymitr",
+  "https://www.ruaymitrsf.com/_files/ugd/2557db_4044fbb8bcce4c53b37105281df5ca1f.pdf",
+  "https://order.toasttab.com/online/ruaymitr/item-chickarones_dc7bcf65-fa10-41dd-a097-fb65da3f930b",
+  "https://order.toasttab.com/online/ruaymitr/item-hoy-jor_4e9cf858-dbed-4b77-942d-06bf7a24e110",
+  "https://order.toasttab.com/online/ruaymitr/item-samosa_dfe88af4-2977-462c-9be8-f5ec5f06bf72",
+  "https://order.toasttab.com/online/ruaymitr/item-crab-wonton_1de20da6-fd4d-4b9d-aa69-4cb817a4b1da"
+ ],
+ "pdfs": [
+  "https://www.ruaymitrsf.com/_files/ugd/2557db_4044fbb8bcce4c53b37105281df5ca1f.pdf"
+ ],
+ "items": [
+  {
+   "name": "Chickarones",
+   "desc": "",
+   "cents": 600,
+   "image": "https://d1w7312wesee68.cloudfront.net/CZR-f4T7wbLjqG5Q57GOzGI6pPj7O7Gl2uswQMuLFh4/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/2/item-5740067487948372_1784223686.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Appetizers"
+  },
+  {
+   "name": "Hoy Jor",
+   "desc": "",
+   "cents": 900,
+   "image": "https://d1w7312wesee68.cloudfront.net/iLHLkr4TceryXt4lubCQ8hREz7BorXKtT05_Pf-bVQk/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/4/item-5740067487948374_1784223717.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Appetizers"
+  },
+  {
+   "name": "Samosa",
+   "desc": "",
+   "cents": 800,
+   "image": "https://d1w7312wesee68.cloudfront.net/csJmm2qBh8w6J-T26cM5uxNtEJFxUpwdisZNWjraKuo/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/6/item-5740067487948376_1784223749.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Appetizers"
+  },
+  {
+   "name": "Crab Wonton",
+   "desc": "",
+   "cents": 1200,
+   "image": "https://d1w7312wesee68.cloudfront.net/bmWX3Rqc1MdRwcI5ZR_SQsi6wSBc4ZIxuNfso505ZSs/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/9/item-5740067487965439_1784223793.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Appetizers"
+  },
+  {
+   "name": "Khao Mun Gai",
+   "desc": "",
+   "cents": 1800,
+   "image": "https://d1w7312wesee68.cloudfront.net/jmBi6Sz8Jh2CV6O3ID2Ny3G0I2D14jmbQvsy7AwQ9q8/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/0/item-5740067488060260_1784223884.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Khao Mun Gai Tod",
+   "desc": "",
+   "cents": 1900,
+   "image": "https://d1w7312wesee68.cloudfront.net/WGQmQm3vgtYcTit7Obk-pk9XSkTUpTDHEQeEX7mz75Q/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/2/item-5740067488060262_1784223910.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Khao Moo Dang Moo Krob",
+   "desc": "",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/wNGlxROjWYxzff_z8oVi24DNV503Ouf529ltBSdHQK4/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/4/item-5740067488060264_1784223939.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Ba Mee Moo Dang Moo Krob",
+   "desc": "",
+   "cents": 2000,
+   "image": "https://d1w7312wesee68.cloudfront.net/PqWSLboUOr_RcdQpSZj43mfo1ZFAvk1v74zQ9Ldi7HM/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/6/item-5740067488060266_1784224123.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Khao Soi Gai",
+   "desc": "",
+   "cents": 2100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Kra Pow Moo Krob",
+   "desc": "Spicy crispy pork belly stir-fried with Thai holy basil, served with jasmine rice and fried egg.",
+   "cents": 2100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Khao Mun",
+   "desc": "",
+   "cents": 400,
+   "image": "https://d1w7312wesee68.cloudfront.net/quRui8FLsqdH01sUqeBpNc369Lcx6oZnACsnpBs4X30/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/8/item-5740067488080018_1784224226.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Sides"
+  },
+  {
+   "name": "Jasmine Rice",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Boiled Egg",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sides"
+  },
+  {
+   "name": "Mango Sticky Rice",
+   "desc": "",
+   "cents": 1100,
+   "image": "https://d1w7312wesee68.cloudfront.net/yvgjkXy0S8XRbt4H4W43XS7PT016apstabMw6p-sRLI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/8/item-5740067488096298_1784224410.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Kanom Tuay",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Coconut Ice Cream",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 300,
+   "image": "https://d1w7312wesee68.cloudfront.net/9jLDrWCN8-K7AFqZw5dcDzxE0awbePzB2I455OIpBKQ/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Coca-Cola_Fountain.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 300,
+   "image": "https://d1w7312wesee68.cloudfront.net/-9aKbjm4JGBExLa3KA_cQ1GRImhfIzZgPjUjRsdAiO8/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Diet_Coke_Fountain.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Sprite",
+   "desc": "Classic, cool, crisp lemon-lime flavored taste that's caffeine free",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Thai Iced Tea",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Fresh Young Coconut",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Hot Matcha Tea",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Hot Jasmine Tea",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Iced Green Tea",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Thai Ice Coffee",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Sapporo",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Beer"
+  },
+  {
+   "name": "Singha",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Beer"
+  },
+  {
+   "name": "Ozeki Pineapple Nigori",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sake"
+  },
+  {
+   "name": "Ozeki Strawberry Nigori",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sake"
+  },
+  {
+   "name": "Sayuri Nigori",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sake"
+  },
+  {
+   "name": "Ozeki Nigiri Unfiltered",
+   "desc": "",
+   "cents": 1200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sake"
+  },
+  {
+   "name": "ozeki yuzu Nigori",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sake"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Chickarones",
+    "desc": "",
+    "cents": 600,
+    "image": "https://d1w7312wesee68.cloudfront.net/CZR-f4T7wbLjqG5Q57GOzGI6pPj7O7Gl2uswQMuLFh4/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/2/item-5740067487948372_1784223686.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Hoy Jor",
+    "desc": "",
+    "cents": 900,
+    "image": "https://d1w7312wesee68.cloudfront.net/iLHLkr4TceryXt4lubCQ8hREz7BorXKtT05_Pf-bVQk/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/4/item-5740067487948374_1784223717.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Samosa",
+    "desc": "",
+    "cents": 800,
+    "image": "https://d1w7312wesee68.cloudfront.net/csJmm2qBh8w6J-T26cM5uxNtEJFxUpwdisZNWjraKuo/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/6/item-5740067487948376_1784223749.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Crab Wonton",
+    "desc": "",
+    "cents": 1200,
+    "image": "https://d1w7312wesee68.cloudfront.net/bmWX3Rqc1MdRwcI5ZR_SQsi6wSBc4ZIxuNfso505ZSs/resize:fit:720:720/plain/s3://toasttab/restaurants/restaurant-152897000000000000/menu/items/9/item-5740067487965439_1784223793.jpg",
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/2557db_4cae6e8d97864278aa6c59910fd69aba~mv2.jpg/v1/fill/w_620,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_9259%202_JPG.jpg",
+   "alt": "IMG_9259 2.JPG",
+   "near": "",
+   "w": 620,
+   "h": 650,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/2557db_46938f986e4c4a04b9e77a8bde06fb1c~mv2.jpg/v1/fill/w_620,h_650,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_9258%202_JPG.jpg",
+   "alt": "IMG_9258 2.JPG",
+   "near": "",
+   "w": 620,
+   "h": 650,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/2557db_7e69a82701f1497db4271b661713d52b~mv2.png/v1/fill/w_324,h_324,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/89339163-2698-4AD1-B437-30F5C4BBACC3_PNG.png",
+   "alt": "89339163-2698-4AD1-B437-30F5C4BBACC3.PNG",
+   "near": "",
+   "w": 324,
+   "h": 324,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/2557db_30fd7a53cab74b318c9d1e26573140fa~mv2.png/v1/fill/w_324,h_324,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/EA66A807-F837-4138-BDB5-71EF2C924B10_PNG.png",
+   "alt": "EA66A807-F837-4138-BDB5-71EF2C924B10.PNG",
+   "near": "",
+   "w": 324,
+   "h": 324,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/2557db_492423784cf04b87ab96e857819ecda2~mv2.png/v1/fill/w_324,h_324,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/F2F32A4F-6717-4A01-AC14-217948F070E0_PNG.png",
+   "alt": "F2F32A4F-6717-4A01-AC14-217948F070E0.PNG",
+   "near": "",
+   "w": 324,
+   "h": 324,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/2557db_0ba456e752ba4655bcf90e734833d6a5~mv2.png/v1/fill/w_325,h_324,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/4FE50D6E-DDF7-41DF-B60C-2D93660D81DC_PNG.png",
+   "alt": "4FE50D6E-DDF7-41DF-B60C-2D93660D81DC.PNG",
+   "near": "",
+   "w": 325,
+   "h": 324,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/2557db_0eb9b259413c4f5cbe5915ef074f12da~mv2.png/v1/fill/w_400,h_267,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/2557db_0eb9b259413c4f5cbe5915ef074f12da~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 400,
+   "h": 267,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/c837a6_1f360d0f096b4346875065cdc5f7983b~mv2.png/v1/fill/w_358,h_358,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_1f360d0f096b4346875065cdc5f7983b~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 358,
+   "h": 358,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/11062b_32cddb6cd2ea41ae8127e3b1adbae616~mv2.jpg/v1/fill/w_358,h_358,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_32cddb6cd2ea41ae8127e3b1adbae616~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 358,
+   "h": 358,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/c837a6_1f360d0f096b4346875065cdc5f7983b~mv2.png/v1/fill/w_783,h_783,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/c837a6_1f360d0f096b4346875065cdc5f7983b~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 783,
+   "h": 783,
+   "page": "https://www.ruaymitrsf.com/"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-152897000000000000/restaurant_1783795980.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/ruaymitr"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-152897000000000000/restaurant_1783795980.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/ruaymitr/item-chickarones_dc7bcf65-fa10-41dd-a097-fb65da3f930b"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-152897000000000000/restaurant_1783795980.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/ruaymitr/item-hoy-jor_4e9cf858-dbed-4b77-942d-06bf7a24e110"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-152897000000000000/restaurant_1783795980.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/ruaymitr/item-samosa_dfe88af4-2977-462c-9be8-f5ec5f06bf72"
+  },
+  {
+   "src": "https://d2s742iet3d3t1.cloudfront.net/restaurants/restaurant-152897000000000000/restaurant_1783795980.png?size=small",
+   "alt": "",
+   "near": "",
+   "w": 360,
+   "h": 360,
+   "page": "https://order.toasttab.com/online/ruaymitr/item-crab-wonton_1de20da6-fd4d-4b9d-aa69-4cb817a4b1da"
+  }
+ ]
+}

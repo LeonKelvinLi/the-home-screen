@@ -1,0 +1,62 @@
+{
+ "id": "b_donutfarm",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://donutfarmberkeley.com/",
+  "https://www.doordash.com/store/pepples-donut-farm-berkeley-93518/"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://donutfarmberkeley.com/assets/photos/brunch-hero.jpg?v=3",
+   "alt": "Steak and egg tacos from Donut Farm's weekend brunch",
+   "near": "SAT + SUN · 9A – 2P",
+   "w": 1063,
+   "h": 1066,
+   "page": "https://donutfarmberkeley.com/"
+  },
+  {
+   "src": "https://donutfarmberkeley.com/assets/photos/donut-entire.png?v=2",
+   "alt": "A box of assorted Donut Farm vegan donuts",
+   "near": "@DONUTFARMOAKLAND\nDONUT FARM · 25K FOLLOWERS\nFOLLOW @DONUTFARMOAKLAND →\nFACEBOOK →",
+   "w": 562,
+   "h": 572,
+   "page": "https://donutfarmberkeley.com/"
+  },
+  {
+   "src": "https://donutfarmberkeley.com/assets/photos/salted-caramel.jpg?v=2",
+   "alt": "Salted caramel vegan donut",
+   "near": "@DONUTFARMOAKLAND\nDONUT FARM · 25K FOLLOWERS\nFOLLOW @DONUTFARMOAKLAND →\nFACEBOOK →",
+   "w": 2500,
+   "h": 2494,
+   "page": "https://donutfarmberkeley.com/"
+  },
+  {
+   "src": "https://donutfarmberkeley.com/assets/photos/cold-brew.png?v=2",
+   "alt": "Cold brew coffee and donuts",
+   "near": "@DONUTFARMOAKLAND\nDONUT FARM · 25K FOLLOWERS\nFOLLOW @DONUTFARMOAKLAND →\nFACEBOOK →",
+   "w": 600,
+   "h": 592,
+   "page": "https://donutfarmberkeley.com/"
+  },
+  {
+   "src": "https://donutfarmberkeley.com/assets/photos/home-img.jpg?v=2",
+   "alt": "",
+   "near": "BERKELEY · EST. 2006\nReal good donuts.\nAlways organic.\n\nScratch-made daily in Berkeley. 100% organic",
+   "w": 1280,
+   "h": 745,
+   "page": "https://donutfarmberkeley.com/"
+  },
+  {
+   "src": "https://donutfarmberkeley.com/assets/photos/crew-2016.jpg?v=2",
+   "alt": "",
+   "near": "Our Story\nTwenty years in. Same mission.\n\nDonut Farm was started in 2006 by Josh Levine — San Franci",
+   "w": 1280,
+   "h": 1382,
+   "page": "https://donutfarmberkeley.com/"
+  }
+ ]
+}

@@ -1,0 +1,172 @@
+[
+ {
+  "id": "b_dadsbbq",
+  "name_exact": "Dad's BBQ",
+  "one_line": "Mississippi-style barbecue in Antioch since 1999",
+  "cuisine": "Mississippi-style BBQ",
+  "address": "5887 Lone Tree Way, Suite R, Antioch, CA 94531",
+  "phone": null,
+  "email": "dadsbbq101@gmail.com",
+  "hours": "Every day 11am-8:30pm",
+  "instagram": "dadsbbqca",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [],
+  "price_note": "prices and photos are from their own online ordering page",
+  "flags": [
+   "hours are from their Instagram bio; the site itself lists none",
+   "Glenn: 'Brentwood • Goods' then 'Actually, Antioch'",
+   "a food trailer books by DM or email, per their bio"
+  ]
+ },
+ {
+  "id": "b_tonysstyle",
+  "name_exact": "Tony's Style",
+  "one_line": "Chicken wings on San Pablo Ave in Albany, serving the Bay 15+ years",
+  "cuisine": "Chicken wings",
+  "address": "938 San Pablo Ave, Albany, CA",
+  "phone": "917-244-4797",
+  "email": null,
+  "hours": null,
+  "instagram": "tonysstyles",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "hours and the menu are posted on their Instagram story daily; no site yet",
+  "flags": [
+   "Glenn: 'This is my cousins boy right here that owns this restaurant. Gonna put him on. Needs a website too'",
+   "the icon is their neon sign, cut from his photo of it"
+  ]
+ },
+ {
+  "id": "b_caitlynssweets",
+  "name_exact": "Caitlyn's Sweets",
+  "one_line": "Custom cakes in San Jose for birthdays, weddings and events",
+  "cuisine": "Custom cakes",
+  "address": "San Jose, CA",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "caitlyn_sweets",
+  "site_kind": "stopgap",
+  "prices_published": false,
+  "items": [],
+  "price_note": "DM them for a quote and availability; Bay Area pickup and delivery; policies and flavors are in their highlights",
+  "flags": [
+   "Glenn: 'San Jose • Goods. Needs website'",
+   "no street address published"
+  ]
+ },
+ {
+  "id": "b_armentalandscape",
+  "name_exact": "Armenta Landscape Co.",
+  "one_line": "Landscape design and construction across the East Bay",
+  "cuisine": "Landscape contractor",
+  "address": null,
+  "phone": "(925) 481-0609",
+  "email": null,
+  "hours": null,
+  "instagram": "armentalandscapeco",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "quotes on request; pavers, concrete and pergolas, 3D designs and construction; Lic. 1033926",
+  "flags": [
+   "Glenn filed them under 'Antioch • Goods'; they are a landscape contractor and sit on Antioch Services",
+   "serves Brentwood, Oakley, Antioch, Walnut Creek, Dublin, San Ramon, Danville, Pleasanton, Livermore, Lafayette, per their site"
+  ]
+ },
+ {
+  "id": "b_walkfree",
+  "name_exact": "Walk Free",
+  "one_line": "Anti-pull dog harness with a built-in leash, shipped worldwide",
+  "cuisine": "Dog harness and leash",
+  "address": null,
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "walkfree.us",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "their store runs a rolling flash sale and prices its harness differently by region, so the price is on the store, not here",
+  "flags": [
+   "Glenn: 'BEASTY • Online' and 'Maybe include a drop-down pic?' — their own product photos are the strip",
+   "their bio says 'the ultimate leash for small dogs'; the product page says medium to large dogs"
+  ]
+ },
+ {
+  "id": "b_lushspaw",
+  "name_exact": "Lush Spaw",
+  "one_line": "Dog and cat grooming, three shops in San Jose and Santa Clara",
+  "cuisine": "Pet grooming",
+  "address": "700 S Winchester Blvd #60, San Jose, CA; 2604 Union Ave, San Jose, CA; 2434 El Camino Real, Santa Clara, CA",
+  "phone": "(833) 279-5874",
+  "email": null,
+  "hours": null,
+  "instagram": "lushspaw",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Lush Bath, short hair",
+    "desc": "Massage bath and condition, blueberry facial, blowout and brush out, nail trim and grind, ear cleaning, teeth brushing, fluff and puff. By weight, up to 20 lbs to 101 lbs and up.",
+    "cents": 5000,
+    "label": "from $50"
+   },
+   {
+    "name": "Lush Bath, long hair",
+    "desc": "The same bath for long-haired breeds. By weight.",
+    "cents": 5500,
+    "label": "from $55"
+   },
+   {
+    "name": "Lush Groom",
+    "desc": "Haircut and style with everything in the Lush Bath. By weight.",
+    "cents": 8500,
+    "label": "from $85"
+   },
+   {
+    "name": "Lush Groom, poodle, doodle and special breeds",
+    "desc": "Their own pricing category. By weight.",
+    "cents": 11000,
+    "label": "from $110"
+   },
+   {
+    "name": "Cat Bath",
+    "desc": "",
+    "cents": 11000
+   },
+   {
+    "name": "Cat Groom",
+    "desc": "",
+    "cents": 16000
+   },
+   {
+    "name": "Nail trim and grind",
+    "desc": "",
+    "cents": 2000
+   },
+   {
+    "name": "Pawdicure",
+    "desc": "",
+    "cents": 4500
+   },
+   {
+    "name": "Teeth brushing",
+    "desc": "",
+    "cents": 1000
+   },
+   {
+    "name": "Ear cleaning and plucking",
+    "desc": "",
+    "cents": 1000
+   }
+  ],
+  "price_note": "by weight and coat type, from their own dog and cat price pages; a $4 material fee is added to every groom and bath, and first visits are 20% off, per their site",
+  "flags": [
+   "Glenn: 'Three locations above' — the three addresses in their bio",
+   "the site's story ring is Instagram's; the icon is the white disc inside it"
+  ]
+ }
+]

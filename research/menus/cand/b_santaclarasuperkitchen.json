@@ -1,0 +1,294 @@
+{
+ "id": "b_santaclarasuperkitchen",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://santaclarasuperkitchen.com/#home",
+  "https://santaclarasuperkitchen.com/food-tasting"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69ef20660d66f2a66587db87.png",
+   "alt": "Santa Clara Super Kitchen",
+   "near": "HOME\nABOUT\nMENUS & SPECIALTY\nGALLERY\nFAQ\nCAREERS\nCONTACT\nBOOK TASTING",
+   "w": 866,
+   "h": 288,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=90",
+   "alt": "Premier Kitchen",
+   "near": "BAY AREA · HALAL · CORPORATE\nBAY AREA\nPremium\nCorporate\n\nTasting\n\n350+ menu options across multiple ",
+   "w": 1600,
+   "h": 1067,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=1600&q=90",
+   "alt": "Gourmet Food",
+   "near": "BAY AREA · HALAL · CORPORATE\nBAY AREA\nPremium\nCorporate\n\nTasting\n\n350+ menu options across multiple ",
+   "w": 1600,
+   "h": 2400,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=90",
+   "alt": "Fresh Cuisine",
+   "near": "BAY AREA · HALAL · CORPORATE\nBAY AREA\nPremium\nCorporate\n\nTasting\n\n350+ menu options across multiple ",
+   "w": 1600,
+   "h": 1067,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=1600&q=90",
+   "alt": "Delicious Meals",
+   "near": "BAY AREA · HALAL · CORPORATE\nBAY AREA\nPremium\nCorporate\n\nTasting\n\n350+ menu options across multiple ",
+   "w": 1600,
+   "h": 1933,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1600&q=90",
+   "alt": "Fine Dining",
+   "near": "BAY AREA · HALAL · CORPORATE\nBAY AREA\nPremium\nCorporate\n\nTasting\n\n350+ menu options across multiple ",
+   "w": 1600,
+   "h": 1600,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?w=1600&q=85",
+   "alt": "About",
+   "near": "Home/About\n    Our Story\n    Built on Passion,Driven by Flavor\n    From a single shared kitchen in S",
+   "w": 1600,
+   "h": 2133,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1530062845289-9109b2c9c868?w=900&q=85",
+   "alt": "Kitchen",
+   "near": "CAEst. California",
+   "w": 900,
+   "h": 599,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=700&q=85",
+   "alt": "Food",
+   "near": "CAEst. California",
+   "w": 700,
+   "h": 467,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&q=85",
+   "alt": "Menus",
+   "near": "Home/Menus & Specialty\n    Our Culinary Selection\n    Menus &Specialty\n    From sunrise to sunset — ",
+   "w": 1600,
+   "h": 1067,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=1200&q=85",
+   "alt": "Breakfast",
+   "near": "Breakfast Menus\n        Sunrise spreads and grab-and-go\n        Explore",
+   "w": 1200,
+   "h": 800,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=900&q=85",
+   "alt": "Lunch",
+   "near": "Lunch Menus\n        Hot meals built for productivity\n        Explore",
+   "w": 900,
+   "h": 900,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=85",
+   "alt": "Dinner",
+   "near": "Dinner Menus\n        Evening events and client dinners\n        Explore",
+   "w": 900,
+   "h": 600,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=900&q=85",
+   "alt": "Healthy",
+   "near": "Healthy Options\n        Light, balanced, nutrient-dense\n        Explore",
+   "w": 900,
+   "h": 612,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=900&q=85",
+   "alt": "Salad Bar",
+   "near": "Salad Bar\n        Build-your-own freshness\n        Explore",
+   "w": 900,
+   "h": 600,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85",
+   "alt": "Specialty",
+   "near": "Specialty Menu\n        BBQ, Caribbean, Seafood & more\n        Explore",
+   "w": 1600,
+   "h": 1067,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1558030006-450675393462?w=1200&q=90",
+   "alt": "Brisket",
+   "near": "Texan BBQ\n        Texas Hill CountryBrisket\n        Slow-smoked over oak and hickory for 12+ hours",
+   "w": 1200,
+   "h": 675,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69f03ae0717d5dd4e1983923.png",
+   "alt": "Jerk Chicken",
+   "near": "Caribbean\n          Fire Jerk Chicken",
+   "w": 606,
+   "h": 402,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69f03ae07a52d611f4aa5748.png",
+   "alt": "Seafood Boil",
+   "near": "Seafood\n          Seafood Boil",
+   "w": 563,
+   "h": 375,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?w=600&q=85",
+   "alt": "Breakfast",
+   "near": "Breakfast\n        Morning Plates",
+   "w": 600,
+   "h": 400,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=85",
+   "alt": "Salad",
+   "near": "Salad Bar\n        Fresh Garden Bowl",
+   "w": 600,
+   "h": 400,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=600&q=85",
+   "alt": "Grilled Chicken",
+   "near": "Caribbean\n        Grilled Chicken",
+   "w": 600,
+   "h": 401,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=600&q=85",
+   "alt": "Healthy",
+   "near": "Healthy\n        Wholesome Plates",
+   "w": 600,
+   "h": 408,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1574484284002-952d92456975?w=700&q=85",
+   "alt": "Caribbean Fish Curry",
+   "near": "Caribbean\n        Caribbean Fish Curry\n        Rich coconut & spice sauce",
+   "w": 700,
+   "h": 1050,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1594831902913-2505d9969c7e?w=700&q=85",
+   "alt": "Cajun Shrimp Bowl",
+   "near": "Seafood\n        Cajun Shrimp Bowl\n        Cajun butter sauce",
+   "w": 700,
+   "h": 467,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=85",
+   "alt": "Grain & Veggie Bowl",
+   "near": "Healthy\n        Grain & Veggie Bowl",
+   "w": 600,
+   "h": 400,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1543339308-43e59d6b73a6?w=600&q=85",
+   "alt": "Fresh Salad Bowl",
+   "near": "Healthy\n          Fresh Salad Bowl",
+   "w": 600,
+   "h": 400,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=600&q=85",
+   "alt": "Mixed Grill Platter",
+   "near": "Texan BBQ\n          Mixed Grill Platter",
+   "w": 600,
+   "h": 900,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1555244162-803834f70033?w=1200&q=90",
+   "alt": "Corporate Event",
+   "near": "Seafood\n        Corporate GalaSetup\n        Full-service tasting for 500+ guests",
+   "w": 1200,
+   "h": 800,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=1600&q=85",
+   "alt": "Book Tasting",
+   "near": "Home/Book Tasting\n    Corporate Tasting\n    Elevate EveryEvent & Meeting\n    From intimate office lu",
+   "w": 1600,
+   "h": 1082,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1600&q=85",
+   "alt": "Careers",
+   "near": "Home/Careers\n    Join Our Team\n    Build Your Careerin Culinary Excellence\n    Join California's pre",
+   "w": 1600,
+   "h": 1067,
+   "page": "https://santaclarasuperkitchen.com/#home"
+  },
+  {
+   "src": "https://assets.cdn.filesafe.space/AE2UU55cmUdfygelpQhH/media/6a0c26e8f21f452f628d0006.png",
+   "alt": "Logo",
+   "near": "California's premier kitchen network connecting you with top restaurant brands — helping food entrep",
+   "w": 866,
+   "h": 288,
+   "page": "https://santaclarasuperkitchen.com/food-tasting"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1559847844-5315695dadae?w=1600&q=85",
+   "alt": "",
+   "near": "CORPORATE TASTING\nElevate Every\nEvent & Meeting\n\nFrom intimate office lunches to 500-person corporat",
+   "w": 1260,
+   "h": 765,
+   "page": "https://santaclarasuperkitchen.com/food-tasting"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1555244162-803834f70033?q=80&w=1600&auto=format&fit=crop",
+   "alt": "",
+   "near": "CORPORATE TASTING\nElevate Every\nEvent & Meeting\n\nFrom intimate office lunches to 500-person corporat",
+   "w": 1260,
+   "h": 765,
+   "page": "https://santaclarasuperkitchen.com/food-tasting"
+  },
+  {
+   "src": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1600&auto=format&fit=crop",
+   "alt": "",
+   "near": "CORPORATE TASTING\nElevate Every\nEvent & Meeting\n\nFrom intimate office lunches to 500-person corporat",
+   "w": 1260,
+   "h": 765,
+   "page": "https://santaclarasuperkitchen.com/food-tasting"
+  }
+ ]
+}

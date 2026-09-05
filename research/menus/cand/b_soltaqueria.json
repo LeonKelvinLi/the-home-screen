@@ -1,0 +1,1057 @@
+{
+ "id": "b_soltaqueria",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.soltaqueriaberkeley.com/",
+  "https://www.soltaqueriaberkeley.com/menus",
+  "https://www.soltaqueriaberkeley.com/online-ordering",
+  "https://www.soltaqueriaberkeley.com/online-ordering-ordering-page-2",
+  "https://www.soltaqueriaberkeley.com/_files/ugd/fab297_1897cd407b2442158934751397eb81be.pdf"
+ ],
+ "pdfs": [
+  "https://www.soltaqueriaberkeley.com/_files/ugd/fab297_1897cd407b2442158934751397eb81be.pdf"
+ ],
+ "items": [
+  {
+   "name": "Huarache",
+   "desc": "Flattened, giant, deep-fried tortilla layered with beans, your choice of meat, cheese, salsa, onion, and cilantro. Our signature special!",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_07cb2b424b4f46dc990514c62e2ca8a0~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_07cb2b424b4f46dc990514c62e2ca8a0~mv2.png"
+  },
+  {
+   "name": "Molcajete",
+   "desc": "a bowl carved out of a volcanic stone, is seasoned and used to hold a curated selection of meats, seafood and vegetables.",
+   "cents": 2999,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_d526f64226224ddb8e3e478e347efd69~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_d526f64226224ddb8e3e478e347efd69~mv2.png"
+  },
+  {
+   "name": "Piña Loca",
+   "desc": "Pineapple filled with a mix of seafood, meats, vegetables and cheese. One of our customers favorites.",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_0471db147e094d4fb22c2747fd87b7e6~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_0471db147e094d4fb22c2747fd87b7e6~mv2.png"
+  },
+  {
+   "name": "Fajitas Plate",
+   "desc": "Served with a side of rice, beans, sour cream, and pico de gallo Choice of flour or corn tortillas on the side.",
+   "cents": 1950,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_215af4e2966c4a4a856d62aff0e54bd3~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_215af4e2966c4a4a856d62aff0e54bd3~mv2.png"
+  },
+  {
+   "name": "Carne Asada Plate",
+   "desc": "Served with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "cents": 1750,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_1610101ca9e44114a47c715df9ee057a~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_1610101ca9e44114a47c715df9ee057a~mv2.png"
+  },
+  {
+   "name": "Carnitas Plate",
+   "desc": "Served with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "cents": 1750,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_de6bba45476c4957b371246ca14d8695~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_de6bba45476c4957b371246ca14d8695~mv2.png"
+  },
+  {
+   "name": "Camarones a La Diabla",
+   "desc": "Served with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "cents": 2295,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHANGE",
+   "image": "https://static.wixstatic.com/media/450185_ebe891b04b914d5cbca346de39d70f21~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_ebe891b04b914d5cbca346de39d70f21~mv2.png"
+  },
+  {
+   "name": "Regular Taco",
+   "desc": "Served with meat, onion, cilantro and salsa.",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tacos",
+   "image": "https://static.wixstatic.com/media/450185_e599d3f451194445adfb1de8ce002575~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_e599d3f451194445adfb1de8ce002575~mv2.png"
+  },
+  {
+   "name": "Served with meat, onion, cilantro, salsa and cheese.",
+   "desc": "",
+   "cents": 475,
+   "alcohol": false,
+   "src": "text",
+   "section": "Taco with Cheese",
+   "image": "https://static.wixstatic.com/media/450185_ffcd48127fbb456197fb4d18f7383d1f~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_ffcd48127fbb456197fb4d18f7383d1f~mv2.png"
+  },
+  {
+   "name": "Super Taco",
+   "desc": "Meat, lettuce, cheese, sour cream, guacamole, cilantro.",
+   "cents": 595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Taco with Cheese",
+   "image": "https://static.wixstatic.com/media/450185_59b9c79801d743ab8ee089d235846a46~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_59b9c79801d743ab8ee089d235846a46~mv2.png"
+  },
+  {
+   "name": "Taco Plate",
+   "desc": "Served with rice and beans on two tacos with meat",
+   "cents": 1150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Taco with Cheese",
+   "image": "https://static.wixstatic.com/media/450185_aa4eb9df27ee476d8254c946f81a8ab1~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_aa4eb9df27ee476d8254c946f81a8ab1~mv2.png"
+  },
+  {
+   "name": "Fish Taco",
+   "desc": "Fish, salsa, lettuce, pico de gallo,",
+   "cents": 745,
+   "alcohol": false,
+   "src": "text",
+   "section": "Taco with Cheese",
+   "image": "https://static.wixstatic.com/media/450185_d488e2ac7fb14c4c9bd6cf85386d19a8~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_d488e2ac7fb14c4c9bd6cf85386d19a8~mv2.png"
+  },
+  {
+   "name": "Shrimp Taco",
+   "desc": "Shrimp, lettuce, cabbage, and salsa.",
+   "cents": 750,
+   "alcohol": false,
+   "src": "text",
+   "section": "Taco with Cheese",
+   "image": "https://static.wixstatic.com/media/450185_430ed260750f44c4a651f284dd8cbf03~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_430ed260750f44c4a651f284dd8cbf03~mv2.jpg"
+  },
+  {
+   "name": "Breakfast Burrito",
+   "desc": "Eggs, potato, cheese, salsa and choice of meat (chorizo, bacon, ham,)",
+   "cents": 1350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Breakfast",
+   "image": "https://static.wixstatic.com/media/450185_ca963eb2ce7a45bb8cf82236ce4cc88c~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_ca963eb2ce7a45bb8cf82236ce4cc88c~mv2.jpg"
+  },
+  {
+   "name": "Huevos con Chorizo",
+   "desc": "Eggs with chorizo. Served with rice, bean, meat, lettuce, sour cream, pico de gallo.",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Breakfast",
+   "image": "https://static.wixstatic.com/media/450185_66e5e7224b0d41baa33f09e9a04c5d27~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_66e5e7224b0d41baa33f09e9a04c5d27~mv2.png"
+  },
+  {
+   "name": "Huevos con Jamon",
+   "desc": "Eggs with Ham. Served with rice, beans, meat, lettuce, sour cream, pico de gallo.",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Breakfast",
+   "image": "https://static.wixstatic.com/media/450185_7e5e8a84c28f4b27832a539bbd266589~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_7e5e8a84c28f4b27832a539bbd266589~mv2.jpg"
+  },
+  {
+   "name": "Huevos Rancheros",
+   "desc": "Eggs served on top of tortillas. Served with rice, bean, meat, lettuce, sour cream, pico de Gallo.",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Breakfast",
+   "image": "https://static.wixstatic.com/media/450185_cb7bc21144024435a901d4c616956ae0~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_cb7bc21144024435a901d4c616956ae0~mv2.jpg"
+  },
+  {
+   "name": "Chilaquiles Rojos o Verdes",
+   "desc": "Tortilla chips, 2 eggs, salsa, cheese, sour cream, cilantro. Side rice and beans.",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Breakfast",
+   "image": "https://static.wixstatic.com/media/450185_f95e78b553a1460fb2a236a6b803f60c~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_f95e78b553a1460fb2a236a6b803f60c~mv2.png"
+  },
+  {
+   "name": "Breakfast Skillet Bowl",
+   "desc": "Potatoes, 2 eggs, meat, cheese, sour cream, cilantro, salsa.",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Breakfast",
+   "image": "https://static.wixstatic.com/media/450185_e3459d35764f40f4baf6741887ad9c10~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_e3459d35764f40f4baf6741887ad9c10~mv2.jpg"
+  },
+  {
+   "name": "Torta",
+   "desc": "Choice of meat, Beans, Sour Cream, lettuce, onion, tomatoes, jalapeño, avocado, cheese",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Tortas",
+   "image": "https://static.wixstatic.com/media/450185_8f35e891476a45139b94372f17e68233~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_8f35e891476a45139b94372f17e68233~mv2.png"
+  },
+  {
+   "name": "Super Burrito",
+   "desc": "Served with arroz, frijol de olla, pico de gallo, guacamole, queso, crema, meat.",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos",
+   "image": "https://static.wixstatic.com/media/450185_ef60d960bec64a3e8aaa11e5bfaf8857~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_ef60d960bec64a3e8aaa11e5bfaf8857~mv2.png"
+  },
+  {
+   "name": "Regular Burrito",
+   "desc": "Served with arroz, frijol, meat, pico de gallo.",
+   "cents": 1425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos",
+   "image": "https://static.wixstatic.com/media/450185_40b9bef2854746afa415795dbed9a662~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_40b9bef2854746afa415795dbed9a662~mv2.png"
+  },
+  {
+   "name": "Baby Burrito",
+   "desc": "Served with rice, beans, cheese, beans and cheese",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos",
+   "image": "https://static.wixstatic.com/media/450185_f57fbe3ac63546d68ff9a23eb985da98~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_f57fbe3ac63546d68ff9a23eb985da98~mv2.jpg"
+  },
+  {
+   "name": "Veggie Burrito",
+   "desc": "Served with rice, beans, crema, queso, pico de gallo, lechuga.",
+   "cents": 1399,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos",
+   "image": "https://static.wixstatic.com/media/450185_560510ebb0c44325ad03b11308065dcf~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_560510ebb0c44325ad03b11308065dcf~mv2.png"
+  },
+  {
+   "name": "Chile Relleno Burrito",
+   "desc": "Served with arroz, fripinto, queso, crema, guacamole, pico de gallo, chile relleno.",
+   "cents": 1450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos",
+   "image": "https://static.wixstatic.com/media/450185_b6b549d451544e25b607203a61195d88~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_b6b549d451544e25b607203a61195d88~mv2.png"
+  },
+  {
+   "name": "Wet Burrito",
+   "desc": "meat, rice, beans, sour cream, pico de gallo, guacamole, and cheese, wet in red or green sauce",
+   "cents": 1735,
+   "alcohol": false,
+   "src": "text",
+   "section": "Burritos"
+  },
+  {
+   "name": "Super Nachos",
+   "desc": "Tortilla chips, meat, beans, cheese, sour cream, guacamole, pico de gallo.",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Nachos",
+   "image": "https://static.wixstatic.com/media/450185_087d915e0dd34f339672c88b04728f5b~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_087d915e0dd34f339672c88b04728f5b~mv2.png"
+  },
+  {
+   "name": "Regular Nachos",
+   "desc": "Tortilla chips, beans, cheese, sour cream, guacamole, pico de gallo.",
+   "cents": 1425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Nachos",
+   "image": "https://static.wixstatic.com/media/450185_55e03a93a4ba4294a6ed36202ab95a24~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_55e03a93a4ba4294a6ed36202ab95a24~mv2.png"
+  },
+  {
+   "name": "Crazy Fries",
+   "desc": "Potatoes, meat, cheese, guacamole, sour cream, pico de gallo.",
+   "cents": 1599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Nachos",
+   "image": "https://static.wixstatic.com/media/450185_098f31b4500c4e5c8f98a5cd69ff0d2a~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_098f31b4500c4e5c8f98a5cd69ff0d2a~mv2.png"
+  },
+  {
+   "name": "Super Quesadilla",
+   "desc": "Large Flour tortilla, cheese, meat, sour cream, guacamole, pico de gallo.",
+   "cents": 1550,
+   "alcohol": false,
+   "src": "text",
+   "section": "Quesadillas",
+   "image": "https://static.wixstatic.com/media/450185_fe78c7b8c7c649e5960972508afd113e~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_fe78c7b8c7c649e5960972508afd113e~mv2.png"
+  },
+  {
+   "name": "Regular Quesadilla",
+   "desc": "flour tortilla, cheese.",
+   "cents": 399,
+   "alcohol": false,
+   "src": "text",
+   "section": "Quesadillas",
+   "image": "https://static.wixstatic.com/media/450185_7941e339c10447649de02858711bdddb~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_7941e339c10447649de02858711bdddb~mv2.png"
+  },
+  {
+   "name": "Quesabirria",
+   "desc": "Corn tortilla, birria, cheese, salsa verde, onion, cilantro, served with consome broth.",
+   "cents": 599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Quesadillas",
+   "image": "https://static.wixstatic.com/media/450185_6dafee10316248fc8603054677b479bc~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_6dafee10316248fc8603054677b479bc~mv2.png"
+  },
+  {
+   "name": "1 Item Combo Plate",
+   "desc": "Served with rice and beans.",
+   "cents": 1275,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combination Plates",
+   "image": "https://static.wixstatic.com/media/450185_a0f54e01d730451ea02baecf0012ca2b~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_a0f54e01d730451ea02baecf0012ca2b~mv2.png"
+  },
+  {
+   "name": "2 Items Combo Plate",
+   "desc": "Served with rice and beans.",
+   "cents": 1599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combination Plates",
+   "image": "https://static.wixstatic.com/media/450185_372462b95d344e6bb84d022d7efc1923~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_372462b95d344e6bb84d022d7efc1923~mv2.png"
+  },
+  {
+   "name": "3 Items Combo Plate",
+   "desc": "Served with rice and beans.",
+   "cents": 1899,
+   "alcohol": false,
+   "src": "text",
+   "section": "Combination Plates"
+  },
+  {
+   "name": "Fish Super Bowl",
+   "desc": "Served with rice, pinto beans, lettuce, sour cream, cheese, pico de gallo, guacamole, and cilantro.",
+   "cents": 1599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Super Bowls",
+   "image": "https://static.wixstatic.com/media/450185_0a88d27694124565935a3b3e5df9b937~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_0a88d27694124565935a3b3e5df9b937~mv2.jpg"
+  },
+  {
+   "name": "Chicken Super Bowl",
+   "desc": "Served with rice, pinto beans, lettuce, sour cream, cheese, pico de gallo, guacamole, and cilantro.",
+   "cents": 1599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Super Bowls",
+   "image": "https://static.wixstatic.com/media/450185_a561de51f1e24343b3a2b6f5507cb82e~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_a561de51f1e24343b3a2b6f5507cb82e~mv2.png"
+  },
+  {
+   "name": "Kids Quesadilla",
+   "desc": "Flour tortilla, cheese, served with rice and beans.",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Super Bowls",
+   "image": "https://static.wixstatic.com/media/450185_d90f8262217f46e9a6508bbf6406c8af~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_d90f8262217f46e9a6508bbf6406c8af~mv2.jpg"
+  },
+  {
+   "name": "Kids Taco",
+   "desc": "Meat only Taco served with rice and beans.",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Super Bowls",
+   "image": "https://static.wixstatic.com/media/450185_696a78dfd5f04a608ea235c7e8c1a1d1~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_696a78dfd5f04a608ea235c7e8c1a1d1~mv2.jpg"
+  },
+  {
+   "name": "Churro",
+   "desc": "",
+   "cents": 324,
+   "alcohol": false,
+   "src": "text",
+   "section": "Postre",
+   "image": "https://static.wixstatic.com/media/11062b_17d210c0326c4bf8b50af31bcbb0f3d8~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_17d210c0326c4bf8b50af31bcbb0f3d8~mv2.jpg"
+  },
+  {
+   "name": "Cheesecake",
+   "desc": "",
+   "cents": 450,
+   "alcohol": false,
+   "src": "text",
+   "section": "Postre",
+   "image": "https://static.wixstatic.com/media/450185_60a3a6fde4d642e583196e6f9c2fbf08~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_60a3a6fde4d642e583196e6f9c2fbf08~mv2.png"
+  },
+  {
+   "name": "Flan",
+   "desc": "",
+   "cents": 575,
+   "alcohol": false,
+   "src": "text",
+   "section": "Postre",
+   "image": "https://static.wixstatic.com/media/11062b_35ab09ffc47047afbd146c2f042fb7f6~mv2.jpeg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_35ab09ffc47047afbd146c2f042fb7f6~mv2.jpeg"
+  },
+  {
+   "name": "Soda Lata",
+   "desc": "Coke, Diet Coke, Squirt, Pepsi.",
+   "cents": 225,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bebidas"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bebidas"
+  },
+  {
+   "name": "Snapple",
+   "desc": "Fruit Punch, Strawberry kiwi, Apple",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bebidas"
+  },
+  {
+   "name": "Bottle water",
+   "desc": "",
+   "cents": 195,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bebidas"
+  },
+  {
+   "name": "Mexican Soda",
+   "desc": "1/2 Litro.",
+   "cents": 495,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bebidas"
+  },
+  {
+   "name": "Cafe",
+   "desc": "",
+   "cents": 399,
+   "alcohol": false,
+   "src": "text",
+   "section": "Bebidas"
+  },
+  {
+   "name": "Horchata and Jamaica",
+   "desc": "",
+   "cents": 375,
+   "alcohol": false,
+   "src": "text",
+   "section": "Agra Fresca"
+  },
+  {
+   "name": "15 Tacos",
+   "desc": "If you request more than 1 meat option, please select when ordering.",
+   "cents": 6000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Agra Fresca",
+   "image": "https://static.wixstatic.com/media/fab297_51655eb0dad6404f8260e3778ea93355~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_51655eb0dad6404f8260e3778ea93355~mv2.jpg"
+  },
+  {
+   "name": "30 Tacos",
+   "desc": "If you request more than 1 meat option, please select when ordering.",
+   "cents": 12000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Agra Fresca",
+   "image": "https://static.wixstatic.com/media/fab297_c7d4c042487443788335b13bd4f6fae7~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_c7d4c042487443788335b13bd4f6fae7~mv2.jpg"
+  },
+  {
+   "name": "20 Quesadillas",
+   "desc": "",
+   "cents": 7000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Agra Fresca",
+   "image": "https://static.wixstatic.com/media/fab297_c09cdcc55679460caa669dcd13606d8b~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_c09cdcc55679460caa669dcd13606d8b~mv2.jpg"
+  },
+  {
+   "name": "15 Quesabirrias",
+   "desc": "",
+   "cents": 9500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Agra Fresca",
+   "image": "https://static.wixstatic.com/media/450185_93c06b5fe7544bd09a9b3eb61f7e3afd~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_93c06b5fe7544bd09a9b3eb61f7e3afd~mv2.png"
+  },
+  {
+   "name": "20 Super Burrito",
+   "desc": "If you request more than 2 meat options, please specify in the special requests.",
+   "cents": 32000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Agra Fresca",
+   "image": "https://static.wixstatic.com/media/fab297_2cdebbf476e54c7b882cdbc714c1c3df~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_2cdebbf476e54c7b882cdbc714c1c3df~mv2.jpg"
+  },
+  {
+   "name": "1 TRAY OF 30 FLAUTAS",
+   "desc": "This is catering item order. Please allow for more prep time when placing an order of our catering menu items.",
+   "cents": 45000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Small Asada Tray",
+   "desc": "",
+   "cents": 16000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Large Asada Tray",
+   "desc": "",
+   "cents": 30000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Small Barbacoa Tray",
+   "desc": "",
+   "cents": 16000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Large Barbacoa Tray",
+   "desc": "",
+   "cents": 30000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Small Pollo Tray",
+   "desc": "",
+   "cents": 14000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Large Pollo Tray",
+   "desc": "",
+   "cents": 27000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Small Pastor Tray",
+   "desc": "",
+   "cents": 14000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Large Pastor Tray",
+   "desc": "",
+   "cents": 27000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Small Carnitas Tray",
+   "desc": "",
+   "cents": 14000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Large Carnitas Tray",
+   "desc": "",
+   "cents": 27000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Party Tray #2"
+  },
+  {
+   "name": "Small Rice Tray",
+   "desc": "",
+   "cents": 6000,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDE TRAYS"
+  },
+  {
+   "name": "Large Rice Tray",
+   "desc": "",
+   "cents": 11000,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDE TRAYS"
+  },
+  {
+   "name": "Small Refried Beans Tray",
+   "desc": "",
+   "cents": 6500,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDE TRAYS"
+  },
+  {
+   "name": "Large Refried Beans Tray",
+   "desc": "",
+   "cents": 12000,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDE TRAYS"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/fab297_6e3cc32aa5214292b9655edf6b651154~mv2.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fab297_6e3cc32aa5214292b9655edf6b651154~mv2.jpg",
+   "alt": "Untitled design-9.jpg",
+   "near": "",
+   "w": 1280,
+   "h": 900,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_a61ee29407da487b917f1ac483432f43~mv2.jpg/v1/fill/w_641,h_660,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fab297_a61ee29407da487b917f1ac483432f43~mv2.jpg",
+   "alt": "DSC04456_edited.jpg",
+   "near": "Margaritas, Piña Coladas, Micheladas, and more!\n\nCool off with our latest lineup of refreshing drink",
+   "w": 641,
+   "h": 660,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_01188239c1214b9cbe23f9b888dfd71a~mv2.jpg/v1/fill/w_1280,h_656,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fab297_01188239c1214b9cbe23f9b888dfd71a~mv2.jpg",
+   "alt": "wp2798765-3552400653.jpg",
+   "near": "NOW OPEN!\n\nWelcome to Sol Taqueria, your destination for authentic Jalisco-style Mexican cuisine in ",
+   "w": 1280,
+   "h": 656,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_a561de51f1e24343b3a2b6f5507cb82e~mv2.png/v1/fill/w_420,h_420,q_90,enc_avif,quality_auto/450185_a561de51f1e24343b3a2b6f5507cb82e~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 420,
+   "h": 420,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_087d915e0dd34f339672c88b04728f5b~mv2.png/v1/fill/w_420,h_420,q_90,enc_avif,quality_auto/450185_087d915e0dd34f339672c88b04728f5b~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 420,
+   "h": 420,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_24a66276f96a434fb5293663a43c2bc8~mv2.png/v1/fill/w_420,h_420,q_90,enc_avif,quality_auto/450185_24a66276f96a434fb5293663a43c2bc8~mv2.png",
+   "alt": "",
+   "near": "",
+   "w": 420,
+   "h": 420,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_ec7ee5a7d2174c5980620dbaf15df793~mv2.jpg/v1/crop/x_1098,y_0,w_3756,h_3996/fill/w_485,h_565,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/equipo2_taqueriasol.jpg",
+   "alt": "equipo2_taqueriasol.jpg",
+   "near": "Our\nMission\n\nAt Sol Taqueria, our mission is to bring the authentic flavors and traditions of Jalisc",
+   "w": 485,
+   "h": 565,
+   "page": "https://www.soltaqueriaberkeley.com/"
+  },
+  {
+   "src": "https://static.parastorage.com/services/restaurant-menus-showcase-ooi/32f43626916d61c7230c005be8198518edbcf8b3b64433b47f70e8c6/media/menus_side_image.7077f229.jpeg",
+   "alt": "",
+   "near": "Sol Taqueria\nCatering Menu\nMeat Trays\nSol Taqueria\nSpecials\nHuarache\nFlattened, giant, deep-fried to",
+   "w": 3009,
+   "h": 3009,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_07cb2b424b4f46dc990514c62e2ca8a0~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_07cb2b424b4f46dc990514c62e2ca8a0~mv2.png",
+   "alt": "Huarache",
+   "near": "Huarache\nFlattened, giant, deep-fried tortilla layered with beans, your choice of meat, cheese, sals",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_d526f64226224ddb8e3e478e347efd69~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_d526f64226224ddb8e3e478e347efd69~mv2.png",
+   "alt": "Molcajete",
+   "near": "Molcajete\na bowl carved out of a volcanic stone, is seasoned and used to hold a curated selection of",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_0471db147e094d4fb22c2747fd87b7e6~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_0471db147e094d4fb22c2747fd87b7e6~mv2.png",
+   "alt": "Piña Loca",
+   "near": "Piña Loca\nPineapple filled with a mix of seafood, meats, vegetables and cheese. One of our customers",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_215af4e2966c4a4a856d62aff0e54bd3~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_215af4e2966c4a4a856d62aff0e54bd3~mv2.png",
+   "alt": "Fajitas Plate",
+   "near": "Fajitas Plate\nServed with a side of rice, beans, sour cream, and pico de gallo Choice of flour or co",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_1610101ca9e44114a47c715df9ee057a~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_1610101ca9e44114a47c715df9ee057a~mv2.png",
+   "alt": "Carne Asada Plate",
+   "near": "Carne Asada Plate\nServed with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_de6bba45476c4957b371246ca14d8695~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_de6bba45476c4957b371246ca14d8695~mv2.png",
+   "alt": "Carnitas Plate",
+   "near": "Carnitas Plate\nServed with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_ebe891b04b914d5cbca346de39d70f21~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_ebe891b04b914d5cbca346de39d70f21~mv2.png",
+   "alt": "Camarones a La Diabla",
+   "near": "Camarones a La Diabla\nServed with rice, beans, lettuce, guacamole, sour cream, and pico de gallo",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_e599d3f451194445adfb1de8ce002575~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_e599d3f451194445adfb1de8ce002575~mv2.png",
+   "alt": "Regular Taco",
+   "near": "Regular Taco\nServed with meat, onion, cilantro and salsa.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_ffcd48127fbb456197fb4d18f7383d1f~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_ffcd48127fbb456197fb4d18f7383d1f~mv2.png",
+   "alt": "Taco with Cheese",
+   "near": "Taco with Cheese\nServed with meat, onion, cilantro, salsa and cheese.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_59b9c79801d743ab8ee089d235846a46~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_59b9c79801d743ab8ee089d235846a46~mv2.png",
+   "alt": "Super Taco",
+   "near": "Super Taco\nMeat, lettuce, cheese, sour cream, guacamole, cilantro.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_aa4eb9df27ee476d8254c946f81a8ab1~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_aa4eb9df27ee476d8254c946f81a8ab1~mv2.png",
+   "alt": "Taco Plate",
+   "near": "Taco Plate\nServed with rice and beans on two tacos with meat",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_d488e2ac7fb14c4c9bd6cf85386d19a8~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_d488e2ac7fb14c4c9bd6cf85386d19a8~mv2.png",
+   "alt": "Fish Taco",
+   "near": "Fish Taco\nFish, salsa, lettuce, pico de gallo,",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_430ed260750f44c4a651f284dd8cbf03~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_430ed260750f44c4a651f284dd8cbf03~mv2.jpg",
+   "alt": "Shrimp Taco",
+   "near": "Shrimp Taco\nShrimp, lettuce, cabbage, and salsa.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_ca963eb2ce7a45bb8cf82236ce4cc88c~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_ca963eb2ce7a45bb8cf82236ce4cc88c~mv2.jpg",
+   "alt": "Breakfast Burrito",
+   "near": "Breakfast Burrito\nEggs, potato, cheese, salsa and choice of meat (chorizo, bacon, ham,)",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_66e5e7224b0d41baa33f09e9a04c5d27~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_66e5e7224b0d41baa33f09e9a04c5d27~mv2.png",
+   "alt": "Huevos con Chorizo",
+   "near": "Huevos con Chorizo\nEggs with chorizo. Served with rice, bean, meat, lettuce, sour cream, pico de gal",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_7e5e8a84c28f4b27832a539bbd266589~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_7e5e8a84c28f4b27832a539bbd266589~mv2.jpg",
+   "alt": "Huevos con Jamon",
+   "near": "Huevos con Jamon\nEggs with Ham. Served with rice, beans, meat, lettuce, sour cream, pico de gallo.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_cb7bc21144024435a901d4c616956ae0~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_cb7bc21144024435a901d4c616956ae0~mv2.jpg",
+   "alt": "Huevos Rancheros",
+   "near": "Huevos Rancheros\nEggs served on top of tortillas. Served with rice, bean, meat, lettuce, sour cream,",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_f95e78b553a1460fb2a236a6b803f60c~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_f95e78b553a1460fb2a236a6b803f60c~mv2.png",
+   "alt": "Chilaquiles Rojos o Verdes",
+   "near": "Chilaquiles Rojos o Verdes\nTortilla chips, 2 eggs, salsa, cheese, sour cream, cilantro. Side rice an",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_e3459d35764f40f4baf6741887ad9c10~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_e3459d35764f40f4baf6741887ad9c10~mv2.jpg",
+   "alt": "Breakfast Skillet Bowl",
+   "near": "Breakfast Skillet Bowl\nPotatoes, 2 eggs, meat, cheese, sour cream, cilantro, salsa.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_8f35e891476a45139b94372f17e68233~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_8f35e891476a45139b94372f17e68233~mv2.png",
+   "alt": "Torta",
+   "near": "Torta\nChoice of meat, Beans, Sour Cream, lettuce, onion, tomatoes, jalapeño, avocado, cheese",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_ef60d960bec64a3e8aaa11e5bfaf8857~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_ef60d960bec64a3e8aaa11e5bfaf8857~mv2.png",
+   "alt": "Super Burrito",
+   "near": "Super Burrito\nServed with arroz, frijol de olla, pico de gallo, guacamole, queso, crema, meat.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_40b9bef2854746afa415795dbed9a662~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_40b9bef2854746afa415795dbed9a662~mv2.png",
+   "alt": "Regular Burrito",
+   "near": "Regular Burrito\nServed with arroz, frijol, meat, pico de gallo.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_f57fbe3ac63546d68ff9a23eb985da98~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_f57fbe3ac63546d68ff9a23eb985da98~mv2.jpg",
+   "alt": "Baby Burrito",
+   "near": "Baby Burrito\nServed with rice, beans, cheese, beans and cheese",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_560510ebb0c44325ad03b11308065dcf~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_560510ebb0c44325ad03b11308065dcf~mv2.png",
+   "alt": "Veggie Burrito",
+   "near": "Veggie Burrito\nServed with rice, beans, crema, queso, pico de gallo, lechuga.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_b6b549d451544e25b607203a61195d88~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_b6b549d451544e25b607203a61195d88~mv2.png",
+   "alt": "Chile Relleno Burrito",
+   "near": "Chile Relleno Burrito\nServed with arroz, fripinto, queso, crema, guacamole, pico de gallo, chile rel",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_087d915e0dd34f339672c88b04728f5b~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_087d915e0dd34f339672c88b04728f5b~mv2.png",
+   "alt": "Super Nachos",
+   "near": "Super Nachos\nTortilla chips, meat, beans, cheese, sour cream, guacamole, pico de gallo.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_55e03a93a4ba4294a6ed36202ab95a24~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_55e03a93a4ba4294a6ed36202ab95a24~mv2.png",
+   "alt": "Regular Nachos",
+   "near": "Regular Nachos\nTortilla chips, beans, cheese, sour cream, guacamole, pico de gallo.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_098f31b4500c4e5c8f98a5cd69ff0d2a~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_098f31b4500c4e5c8f98a5cd69ff0d2a~mv2.png",
+   "alt": "Crazy Fries",
+   "near": "Crazy Fries\nPotatoes, meat, cheese, guacamole, sour cream, pico de gallo.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_fe78c7b8c7c649e5960972508afd113e~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_fe78c7b8c7c649e5960972508afd113e~mv2.png",
+   "alt": "Super Quesadilla",
+   "near": "Super Quesadilla\nLarge Flour tortilla, cheese, meat, sour cream, guacamole, pico de gallo.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_7941e339c10447649de02858711bdddb~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_7941e339c10447649de02858711bdddb~mv2.png",
+   "alt": "Regular Quesadilla",
+   "near": "Regular Quesadilla\nflour tortilla, cheese.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_6dafee10316248fc8603054677b479bc~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_6dafee10316248fc8603054677b479bc~mv2.png",
+   "alt": "Quesabirria",
+   "near": "Quesabirria\nCorn tortilla, birria, cheese, salsa verde, onion, cilantro, served with consome broth.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_a0f54e01d730451ea02baecf0012ca2b~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_a0f54e01d730451ea02baecf0012ca2b~mv2.png",
+   "alt": "1 Item Combo Plate",
+   "near": "1 Item Combo Plate\nServed with rice and beans.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_372462b95d344e6bb84d022d7efc1923~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_372462b95d344e6bb84d022d7efc1923~mv2.png",
+   "alt": "2 Items Combo Plate",
+   "near": "2 Items Combo Plate\nServed with rice and beans.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_0a88d27694124565935a3b3e5df9b937~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_0a88d27694124565935a3b3e5df9b937~mv2.jpg",
+   "alt": "Fish Super Bowl",
+   "near": "Fish Super Bowl\nServed with rice, pinto beans, lettuce, sour cream, cheese, pico de gallo, guacamole",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_a561de51f1e24343b3a2b6f5507cb82e~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_a561de51f1e24343b3a2b6f5507cb82e~mv2.png",
+   "alt": "Chicken Super Bowl",
+   "near": "Chicken Super Bowl\nServed with rice, pinto beans, lettuce, sour cream, cheese, pico de gallo, guacam",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_d90f8262217f46e9a6508bbf6406c8af~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_d90f8262217f46e9a6508bbf6406c8af~mv2.jpg",
+   "alt": "Kids Quesadilla",
+   "near": "Kids Quesadilla\nFlour tortilla, cheese, served with rice and beans.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_696a78dfd5f04a608ea235c7e8c1a1d1~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/450185_696a78dfd5f04a608ea235c7e8c1a1d1~mv2.jpg",
+   "alt": "Kids Taco",
+   "near": "Kids Taco\nMeat only Taco served with rice and beans.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/11062b_17d210c0326c4bf8b50af31bcbb0f3d8~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_17d210c0326c4bf8b50af31bcbb0f3d8~mv2.jpg",
+   "alt": "Churro",
+   "near": "Churro",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_60a3a6fde4d642e583196e6f9c2fbf08~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_60a3a6fde4d642e583196e6f9c2fbf08~mv2.png",
+   "alt": "Cheesecake",
+   "near": "Cheesecake",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/11062b_35ab09ffc47047afbd146c2f042fb7f6~mv2.jpeg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/11062b_35ab09ffc47047afbd146c2f042fb7f6~mv2.jpeg",
+   "alt": "Flan",
+   "near": "Flan",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_51655eb0dad6404f8260e3778ea93355~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_51655eb0dad6404f8260e3778ea93355~mv2.jpg",
+   "alt": "15 Tacos",
+   "near": "15 Tacos\nIf you request more than 1 meat option, please select when ordering.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_c7d4c042487443788335b13bd4f6fae7~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_c7d4c042487443788335b13bd4f6fae7~mv2.jpg",
+   "alt": "30 Tacos",
+   "near": "30 Tacos\nIf you request more than 1 meat option, please select when ordering.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_c09cdcc55679460caa669dcd13606d8b~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_c09cdcc55679460caa669dcd13606d8b~mv2.jpg",
+   "alt": "20 Quesadillas",
+   "near": "20 Quesadillas",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/450185_93c06b5fe7544bd09a9b3eb61f7e3afd~mv2.png/v1/fill/w_345,h_345,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/450185_93c06b5fe7544bd09a9b3eb61f7e3afd~mv2.png",
+   "alt": "15 Quesabirrias",
+   "near": "15 Quesabirrias",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_2cdebbf476e54c7b882cdbc714c1c3df~mv2.jpg/v1/fill/w_345,h_345,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_2cdebbf476e54c7b882cdbc714c1c3df~mv2.jpg",
+   "alt": "20 Super Burrito",
+   "near": "20 Super Burrito\nIf you request more than 2 meat options, please specify in the special requests.",
+   "w": 345,
+   "h": 345,
+   "page": "https://www.soltaqueriaberkeley.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_6e3cc32aa5214292b9655edf6b651154~mv2.jpg/v1/fill/w_1102,h_320,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fab297_6e3cc32aa5214292b9655edf6b651154~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1102,
+   "h": 320,
+   "page": "https://www.soltaqueriaberkeley.com/online-ordering"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_6e3cc32aa5214292b9655edf6b651154~mv2.jpg/v1/fill/w_1102,h_320,fp_0.50_0.50,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/fab297_6e3cc32aa5214292b9655edf6b651154~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1102,
+   "h": 320,
+   "page": "https://www.soltaqueriaberkeley.com/online-ordering-ordering-page-2"
+  }
+ ]
+}

@@ -1,0 +1,610 @@
+{
+ "id": "b_jackiesplace",
+ "source": "text",
+ "pages": [
+  "https://www.jackiesplacesj.com/",
+  "https://www.jackiesplacesj.com/menu",
+  "https://order.toasttab.com/online/jackies-place-new-840-n-1st-street",
+  "https://order.toasttab.com/online/jackies-place-2-321-south-first-street",
+  "https://order.toasttab.com/online/jackies-place-new-840-n-1st-street#main",
+  "https://order.toasttab.com/online/jackies-place-new-840-n-1st-street/item-southern-fried-fish-plate_38188a42-c75c-49e0-b182-ddc0231ca8cc",
+  "https://order.toasttab.com/online/jackies-place-new-840-n-1st-street/item-small-side_4ba08527-68d5-4976-a7b8-5c3f6d813cf4"
+ ],
+ "items": [
+  {
+   "name": "Cracklin' Chicken Bites",
+   "desc": "Crispy, golden chicken bites tossed with crunchy cracklin’ skin pieces for extra flavor and texture, served with your choice of ranch, BBQ",
+   "cents": 1000,
+   "section": "Shareables",
+   "photo": "jackiesplace-cracklin-chicken-bites"
+  },
+  {
+   "name": "Corn Ribs",
+   "desc": "Crispy, Cajun-glazed corn ribs, sprinkled with parmesan, served hot with your choice of ranch, BBQ, “Saucy Chick” honey mustard",
+   "cents": 1000,
+   "section": "Shareables",
+   "photo": "jackiesplace-corn-ribs"
+  },
+  {
+   "name": "Party Wings (6)",
+   "desc": "A mix of drums and flats deep fried and hand tossed in your choice of any of our house-made sauces : JP's Original BBQ, Cajun Spice, Peach Habanero",
+   "cents": 1200,
+   "section": "Shareables",
+   "photo": "jackiesplace-party-wings-6"
+  },
+  {
+   "name": "Party Wings (12)",
+   "desc": "A mix of drums and flats deep fried and hand tossed in your choice of any of our house-made sauces : JP's Original BBQ, Cajun Spice, Peach Habanero",
+   "cents": 2000,
+   "section": "Shareables",
+   "photo": "jackiesplace-party-wings-12"
+  },
+  {
+   "name": "French Fries",
+   "desc": "Crispy Seasoned French Fries *Vegan",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "jackiesplace-french-fries"
+  },
+  {
+   "name": "Scoop's \"Not Yo\" Nachos",
+   "desc": "Made with both tortilla chips AND fries! Then topped with cheese sauce, pico de gallo, green onions, JP's Original BBQ and \"Set It Off\" sauce",
+   "cents": 1200,
+   "section": "Sides",
+   "photo": "jackiesplace-scoop-s-not-yo-nachos"
+  },
+  {
+   "name": "Chili Cheese Fries",
+   "desc": "Crunchy seasoned French Fries, layered with our house-made cheese sauce and flavorful chili beans! Topped with green onions",
+   "cents": 1000,
+   "section": "Sides",
+   "photo": "jackiesplace-chili-cheese-fries"
+  },
+  {
+   "name": "Fried Chicken Plate",
+   "desc": "3 Piece Chicken Wings Our fried chicken, Battered and fried to perfection. Choose any two sides and your choice of cornbread or sliced bread",
+   "cents": 2400,
+   "section": "Plates",
+   "photo": "jackiesplace-fried-chicken-plate"
+  },
+  {
+   "name": "Smoked Beef Brisket Plate",
+   "desc": "1/2 Pound Beef Brisket. Our 16 hour smoked Beef Brisket. Choose any two sides and your choice of cornbread or sliced bread",
+   "cents": 2700,
+   "section": "Plates",
+   "photo": "jackiesplace-smoked-beef-brisket-plate"
+  },
+  {
+   "name": "Hot Link Plate",
+   "desc": "2 Piece Hot Link Plate Our smoked, grilled, beef links. Choose any two sides and your choice of cornbread or sliced bread",
+   "cents": 2200,
+   "section": "Plates",
+   "photo": "jackiesplace-hot-link-plate"
+  },
+  {
+   "name": "Smoked Pulled Pork Plate",
+   "desc": "1/2 pound of our smoked Pulled Pork. Choose any two sides and your choice of cornbread or sliced bread. Add an additional Meat to make it a combo!",
+   "cents": 2200,
+   "section": "Plates",
+   "photo": "jackiesplace-smoked-pulled-pork-plate"
+  },
+  {
+   "name": "BBQ Chicken Plate",
+   "desc": "2 Piece BBQ Chicken Plate Smoked, grilled, BBQ Chicken. Choose any two sides and your choice of cornbread or sliced bread",
+   "cents": 2300,
+   "section": "Plates",
+   "photo": "jackiesplace-bbq-chicken-plate"
+  },
+  {
+   "name": "Vegetarian Smoked Pulled Jackfruit Plate",
+   "desc": "1/2 Pound of our Vegetarian Smoked Jackfruit topped with crispy onion rings. Any two sides and your choice of cornbread or sliced bread.",
+   "cents": 2200,
+   "section": "Plates",
+   "photo": "jackiesplace-vegetarian-smoked-pulled-jackfruit-plate"
+  },
+  {
+   "name": "Kid's Plate",
+   "desc": "",
+   "cents": 1200,
+   "section": "Kids"
+  },
+  {
+   "name": "Brisket Sandwich",
+   "desc": "Smoked Beef Brisket on a brioche bun - all the are toppings served on the side.",
+   "cents": 1900,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-brisket-sandwich"
+  },
+  {
+   "name": "Drippin' Fried Chicken Sandwich",
+   "desc": "Things can get a little messy this one but we promise that all the flavor will be worth it",
+   "cents": 1800,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-drippin-fried-chicken-sandwich"
+  },
+  {
+   "name": "Everything is Bigger In Texas Sandwich",
+   "desc": "At Jackie's Place, we are BIG on our names and we live up to them too! Try this sandwich stacked in Smoked Beef Brisket",
+   "cents": 3000,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-everything-is-bigger-in-texas-sandwich"
+  },
+  {
+   "name": "Southern Fried Fish Sandwich",
+   "desc": "Southern Fried Basa Catfish on a brioche bun - all the are toppings served on the side.",
+   "cents": 1700,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-southern-fried-fish-sandwich"
+  },
+  {
+   "name": "(V) Pulled Jackfruit Sandwich",
+   "desc": "Our smoked BBQ Jackfruit is a vegetarian alternative to pulled meat flavored with peppers and topped with crispy onion strings.",
+   "cents": 1700,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-v-pulled-jackfruit-sandwich"
+  },
+  {
+   "name": "\"Hondo\" Hot Link",
+   "desc": "Add Chili + Cheese Sauce to make it “Hondo, TX” style!",
+   "cents": 1600,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-hondo-hot-link"
+  },
+  {
+   "name": "Smoked Pulled Pork Sandwich",
+   "desc": "Smoked Pulled Pork on a brioche bun - all the are toppings served on the side.",
+   "cents": 1700,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-smoked-pulled-pork-sandwich"
+  },
+  {
+   "name": "Smoked BBQ Chicken Sandwich",
+   "desc": "Smoked BBQ Chicken, on a buttery brioche bun.",
+   "cents": 1700,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-smoked-bbq-chicken-sandwich"
+  },
+  {
+   "name": "Chicken & Waffles",
+   "desc": "3 Jumbo fried chicken wings paired with a golden waffle. Upgrade your waffle with a special topping or try our cinnamon pecan brown sugar syrup that we call",
+   "cents": 2100,
+   "section": "Chicken & Waffles",
+   "photo": "jackiesplace-chicken-waffles"
+  },
+  {
+   "name": "Waffle",
+   "desc": "Belgian golden waffle as big as a whole plate! Add maple bacon",
+   "cents": 1000,
+   "section": "Chicken & Waffles",
+   "photo": "jackiesplace-waffle"
+  },
+  {
+   "name": "Bowl - Seafood Gumbo Soup",
+   "desc": "Our Seafood Gumbo Soup is filled with Crab, Shrimp, Chicken, and Andouille Sausage, topped with green onions and served with rice + cornbread muffin.",
+   "cents": 2500,
+   "section": "Soup & Bowls",
+   "photo": "jackiesplace-bowl-seafood-gumbo-soup"
+  },
+  {
+   "name": "Smoked Jackfruit Bowl",
+   "desc": "Our smoked BBQ Jackfruit is a vegetarian alternative to pulled meat flavored with peppers and topped with crispy onion strings, served with rice and cornbread.",
+   "cents": 1600,
+   "section": "Soup & Bowls",
+   "photo": "jackiesplace-smoked-jackfruit-bowl"
+  },
+  {
+   "name": "Cup -Seafood Gumbo Soup",
+   "desc": "Our Seafood Gumbo Soup is filled with Crab, Shrimp, Chicken, and Andouille Sausage, topped with green onions and served with rice + cornbread muffin.",
+   "cents": 1500,
+   "section": "Soup & Bowls",
+   "photo": "jackiesplace-cup-seafood-gumbo-soup"
+  },
+  {
+   "name": "Soul Bowl",
+   "desc": "Our In-house baked Mac + Cheese topped with pico de gallo, green onions",
+   "cents": 1800,
+   "section": "Soup & Bowls",
+   "photo": "jackiesplace-soul-bowl"
+  },
+  {
+   "name": "Beef Chili Bowl",
+   "desc": "A rich, savory chili made with seasoned ground beef, smokey brisket and pinto beans. Topped with shredded cheese, a scoop of white rice",
+   "cents": 1300,
+   "section": "Soup & Bowls",
+   "photo": "jackiesplace-beef-chili-bowl"
+  },
+  {
+   "name": "Smothered Chicken",
+   "desc": "Fried chicken breast patty smothered in gravy served with STEAMED RICE + any two sides and a choice of complementary cornbread or sliced white bread",
+   "cents": 2500,
+   "section": "Smothered",
+   "photo": "jackiesplace-smothered-chicken"
+  },
+  {
+   "name": "Oxtails",
+   "desc": "Smothered Oxtails, served with rice and a cornbread muffin.",
+   "cents": 3500,
+   "section": "Smothered",
+   "photo": "jackiesplace-oxtails"
+  },
+  {
+   "name": "BBQ Chicken Thigh",
+   "desc": "A highly flavorful, smoked, boneless, skinless chicken thigh.",
+   "cents": 400,
+   "section": "Sides",
+   "photo": "jackiesplace-bbq-chicken-thigh"
+  },
+  {
+   "name": "Chicken Breast Patty (Fried)",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides",
+   "photo": "jackiesplace-chicken-breast-patty-fried"
+  },
+  {
+   "name": "Cornbread Muffin",
+   "desc": "1 Muffin",
+   "cents": 200,
+   "section": "Sides",
+   "photo": "jackiesplace-cornbread-muffin"
+  },
+  {
+   "name": "Hamburger Bun",
+   "desc": "",
+   "cents": 150,
+   "section": "Sides"
+  },
+  {
+   "name": "Hot Links",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides",
+   "photo": "jackiesplace-hot-links"
+  },
+  {
+   "name": "Hotdog Bun",
+   "desc": "",
+   "cents": 150,
+   "section": "Sides",
+   "photo": "jackiesplace-hotdog-bun"
+  },
+  {
+   "name": "Jumbo Fried Chicken Wings",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides",
+   "photo": "jackiesplace-jumbo-fried-chicken-wings"
+  },
+  {
+   "name": "Rib Tips",
+   "desc": "",
+   "cents": 950,
+   "section": "Sides",
+   "photo": "jackiesplace-rib-tips"
+  },
+  {
+   "name": "Sliced White Bread (2 slices)",
+   "desc": "",
+   "cents": 200,
+   "section": "Sides",
+   "photo": "jackiesplace-sliced-white-bread-2-slices"
+  },
+  {
+   "name": "Smoked Beef Brisket",
+   "desc": "",
+   "cents": 900,
+   "section": "Sides",
+   "photo": "jackiesplace-smoked-beef-brisket"
+  },
+  {
+   "name": "Smoked Jackfruit (V)",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides"
+  },
+  {
+   "name": "Smoked Pulled Pork",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides",
+   "photo": "jackiesplace-smoked-pulled-pork"
+  },
+  {
+   "name": "Southern Fried Fish (Basa)",
+   "desc": "Southern Deep Fried Catfish (Basa Catfish) Cornmeal batter",
+   "cents": 400,
+   "section": "Sides",
+   "photo": "jackiesplace-southern-fried-fish-basa"
+  },
+  {
+   "name": "Steamed White Rice",
+   "desc": "",
+   "cents": 650,
+   "section": "Sides",
+   "photo": "jackiesplace-steamed-white-rice"
+  },
+  {
+   "name": "Uncle Greg's Ribs (Pork)",
+   "desc": "",
+   "cents": 500,
+   "section": "Sides",
+   "photo": "jackiesplace-uncle-greg-s-ribs-pork"
+  },
+  {
+   "name": "NEW !!! \"Fire It Up\" Spicy BBQ Sauce",
+   "desc": "",
+   "cents": 800,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-new-fire-it-up-spicy-bbq-sauce"
+  },
+  {
+   "name": "\"Jack Sauce\" - Pecan Syrup",
+   "desc": "Cinnamon Pecan Brown Sugar Syrup",
+   "cents": 100,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-jack-sauce-pecan-syrup"
+  },
+  {
+   "name": "Chicken Gravy",
+   "desc": "",
+   "cents": 150,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-chicken-gravy"
+  },
+  {
+   "name": "Oxtail Gravy",
+   "desc": "",
+   "cents": 150,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-oxtail-gravy"
+  },
+  {
+   "name": "Lemon Pepper (Seasoned Butter)",
+   "desc": "",
+   "cents": 1000,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-lemon-pepper-seasoned-butter"
+  },
+  {
+   "name": "Cajun Hot (Seasoned Butter)",
+   "desc": "",
+   "cents": 1000,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-cajun-hot-seasoned-butter"
+  },
+  {
+   "name": "The JuJu",
+   "desc": "A mix between Grape + Cherry Kool-Aid named after Jackie's sister JuJu! *NO REFILLS*",
+   "cents": 450,
+   "section": "House Made Sauces",
+   "photo": "jackiesplace-the-juju"
+  },
+  {
+   "name": "Grape Kool-Aid",
+   "desc": "Classic Grape Kool-Aid *NO REFILLS*",
+   "cents": 450,
+   "section": "Drinks",
+   "photo": "jackiesplace-grape-kool-aid"
+  },
+  {
+   "name": "Cherry Kool-Aid",
+   "desc": "Classic Cherry Kool-Aid *NO REFILLS*",
+   "cents": 450,
+   "section": "Drinks",
+   "photo": "jackiesplace-cherry-kool-aid"
+  },
+  {
+   "name": "TT's Sweet Tea",
+   "desc": "Your Auntie's Classic Sweet Tea! *NO REFILLS*",
+   "cents": 450,
+   "section": "Drinks",
+   "photo": "jackiesplace-tt-s-sweet-tea"
+  },
+  {
+   "name": "Watermelon Lemonade",
+   "desc": "Sweet Watermelon with a tangy citrus kick! *NO REFILLS*",
+   "cents": 450,
+   "section": "Drinks",
+   "photo": "jackiesplace-watermelon-lemonade"
+  },
+  {
+   "name": "Coke Zero",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks",
+   "photo": "jackiesplace-coca-cola"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks",
+   "photo": "jackiesplace-diet-coke"
+  },
+  {
+   "name": "Lemonade",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks",
+   "photo": "jackiesplace-lemonade"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks",
+   "photo": "jackiesplace-sprite"
+  },
+  {
+   "name": "Orange Fanta",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks",
+   "photo": "jackiesplace-orange-fanta"
+  },
+  {
+   "name": "Red Bull",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks",
+   "photo": "jackiesplace-red-bull"
+  },
+  {
+   "name": "Hyphy Juice (Energy Drink)",
+   "desc": "Grapple Flavor",
+   "cents": 500,
+   "section": "Drinks",
+   "photo": "jackiesplace-hyphy-juice-energy-drink"
+  },
+  {
+   "name": "Aquafina",
+   "desc": "",
+   "cents": 200,
+   "section": "Drinks",
+   "photo": "jackiesplace-aquafina"
+  },
+  {
+   "name": "Saratoga can",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "jackiesplace-saratoga-can"
+  },
+  {
+   "name": "Orange Juice",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks",
+   "photo": "jackiesplace-orange-juice"
+  },
+  {
+   "name": "Cranberry Juice",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Pineapple Juice",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks"
+  },
+  {
+   "name": "Mocktail",
+   "desc": "",
+   "cents": 800,
+   "section": "Drinks"
+  },
+  {
+   "name": "Shirley Temple",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Roy Rogers",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Smoked Pulled Jackfruit Plate",
+   "desc": "1/2 Pound of our Vegetarian Smoked Jackfruit topped with crispy onion rings. Any two sides and your choice of cornbread or sliced bread.",
+   "cents": 2200,
+   "section": "Plates",
+   "photo": "jackiesplace-smoked-pulled-jackfruit-plate"
+  },
+  {
+   "name": "Mdw Brunch",
+   "desc": "",
+   "cents": 5500,
+   "section": "Plates"
+  },
+  {
+   "name": "(V) Jackfruit Sandwich",
+   "desc": "Our smoked BBQ Jackfruit is a vegetarian alternative to pulled meat flavored with peppers and topped with crispy onion strings.",
+   "cents": 1700,
+   "section": "Sandwiches",
+   "photo": "jackiesplace-v-jackfruit-sandwich"
+  },
+  {
+   "name": "Butter Pound Cake",
+   "desc": "Our Butter Pound Cake is a classic MUST HAVE dessert that has been a part of our soulful kitchen for generations. We make it with a generous amount of butter",
+   "cents": 800,
+   "section": "Desserts",
+   "photo": "jackiesplace-butter-pound-cake"
+  },
+  {
+   "name": "KeyLime Pie",
+   "desc": "Our Key Lime pie is the perfect treat for anyone with a sweet tooth! It has a light and fluffy whipped topping that will make your taste buds tingle",
+   "cents": 1000,
+   "section": "Desserts",
+   "photo": "jackiesplace-keylime-pie"
+  },
+  {
+   "name": "Lemon Poundcake",
+   "desc": "A dense, moist, and buttery texture, with a vibrant lemon flavor from zest and juice, and a sweet lemon-sugary glaze",
+   "cents": 900,
+   "section": "Desserts",
+   "photo": "jackiesplace-lemon-poundcake"
+  },
+  {
+   "name": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks"
+  },
+  {
+   "name": "Diet Coke, Can",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "jackiesplace-diet-coke-can"
+  },
+  {
+   "name": "Coke Zero, Can",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks"
+  },
+  {
+   "name": "Sunkist (CAN)",
+   "desc": "",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "jackiesplace-sunkist-can"
+  },
+  {
+   "name": "Saratoga Sparkling Water",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks"
+  },
+  {
+   "name": "Saratoga Still Water",
+   "desc": "",
+   "cents": 350,
+   "section": "Drinks",
+   "photo": "jackiesplace-saratoga-still-water"
+  },
+  {
+   "name": "Premium",
+   "desc": "",
+   "cents": 1200,
+   "section": "Drinks",
+   "photo": "jackiesplace-premium"
+  },
+  {
+   "name": "Dasani",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  }
+ ]
+}

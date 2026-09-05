@@ -1,0 +1,262 @@
+{
+ "id": "b_lushspaw",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.lushspaw.com/dog-services"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Up to 20 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "21 - 40 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .$60",
+   "cents": 5000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Bath"
+  },
+  {
+   "name": "81 - 100 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 9000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Bath"
+  },
+  {
+   "name": "101 lbs & up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 10000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Bath"
+  },
+  {
+   "name": "Up to 20 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "21 - 40 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . $65",
+   "cents": 5500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Bath"
+  },
+  {
+   "name": "101 lbs & up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "Additional to bath (face, feet, & sanitary):",
+   "cents": 10500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Bath"
+  },
+  {
+   "name": "Up to 20 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "21 - 40 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .$95",
+   "cents": 8500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Groom"
+  },
+  {
+   "name": "101 lbs & up. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "Poodle, Doodle, & Special Breeds",
+   "cents": 13500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Lush Groom"
+  },
+  {
+   "name": "Up to 20 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "21 - 40 lbs . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .$125",
+   "cents": 11000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Weight Price"
+  },
+  {
+   "name": "101 lbs & up . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 18500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Weight Price"
+  },
+  {
+   "name": "$20/",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Pick one from the following shampoos:",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Ultra-soft Shampoo & Conditioner",
+   "desc": "Features premium, highest-grade shampoo and conditioner, with extra coat-massaging time to leave your dog’s fur exceptionally soft and silky.",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Flea relief",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Hydrating mud bath",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Specialty breed cut",
+   "desc": "Our trained groomers take the time to deliver the precise specialty cut you envision for your dog.",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Face Trim . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Rear Feather Trim . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Sanitary . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Tail Trim . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "S (Up to 30 lbs) . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "M (31 - 60 lbs) . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "L (61 lbs & up) . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 3000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Zoom Bath/Zoom Groom"
+  },
+  {
+   "name": "Ear Cleaning & Plucking . . . . .",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Service Price"
+  },
+  {
+   "name": "Eye Trim . . . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Service Price"
+  },
+  {
+   "name": "Nail Trim & Grind . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Service Price"
+  },
+  {
+   "name": "Paw Balm . . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Service Price"
+  },
+  {
+   "name": "Pawdicure . . . . . . . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 4500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Service Price"
+  },
+  {
+   "name": "Teeth Brushing. . . . . . . . . . . . . . .",
+   "desc": "",
+   "cents": 1000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Service Price"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/1f9c5e_3d658910406c404b980e809465cf5912~mv2.png/v1/crop/x_0,y_72,w_1080,h_952/fill/w_542,h_478,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20design%20(2).png",
+   "alt": "Untitled design (2).png",
+   "near": "",
+   "w": 542,
+   "h": 478,
+   "page": "https://www.lushspaw.com/dog-services"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/11062b_e275ff56ab4549afb0e0371f48eb9bc4~mv2.jpg/v1/fill/w_427,h_422,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_e275ff56ab4549afb0e0371f48eb9bc4~mv2.jpg",
+   "alt": "Grooming the Dog",
+   "near": "Zoom Bath/Zoom Groom \n\n$20/$30\n\nExpress Service\n\nPriority Treatment\n\nWith Groomer the whole time\n\nTh",
+   "w": 427,
+   "h": 422,
+   "page": "https://www.lushspaw.com/dog-services"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1f9c5e_9fedff0f70204016a4eac4b5c5dac283~mv2.png/v1/crop/x_55,y_245,w_978,h_620/fill/w_492,h_311,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Untitled%20design%20(6).png",
+   "alt": "Untitled design (6).png",
+   "near": "Book an Appointment\nBook Appointment",
+   "w": 492,
+   "h": 311,
+   "page": "https://www.lushspaw.com/dog-services"
+  }
+ ]
+}

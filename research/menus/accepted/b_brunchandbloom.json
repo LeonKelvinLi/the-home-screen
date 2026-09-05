@@ -1,0 +1,291 @@
+{
+ "id": "b_brunchandbloom",
+ "source": "text",
+ "pages": [
+  "https://brunchandbloom.cloveronline.com/",
+  "https://brunchandbloom.cloveronline.com/menu/all",
+  "https://brunchandbloom.cloveronline.com/about",
+  "https://brunchandbloom.cloveronline.com/menu/apple-juice-Z7PWVVHZFX4VR",
+  "https://brunchandbloom.cloveronline.com/menu/avocado-1WNNN2QZA8N04",
+  "https://brunchandbloom.cloveronline.com/menu/banana-bread-latte-014B5CWMWBYDJ",
+  "https://brunchandbloom.cloveronline.com/menu/berry-blossom-overnight-oats-NHAZAGGE0ACG4"
+ ],
+ "items": [
+  {
+   "name": "Garden Shakshuka",
+   "desc": "",
+   "cents": 1800,
+   "section": "Brunch plates",
+   "photo": "brunchandbloom-garden-shakshuka"
+  },
+  {
+   "name": "Bloom Breakfast Sammie",
+   "desc": "",
+   "cents": 1500,
+   "section": "Brunch plates"
+  },
+  {
+   "name": "Istanbul Morning",
+   "desc": "",
+   "cents": 1800,
+   "section": "Brunch plates"
+  },
+  {
+   "name": "Sunrise Street Tacos",
+   "desc": "",
+   "cents": 1600,
+   "section": "Brunch plates"
+  },
+  {
+   "name": "Golden Harvest Hash",
+   "desc": "",
+   "cents": 1900,
+   "section": "Brunch plates"
+  },
+  {
+   "name": "Brunch & Bloom Classic",
+   "desc": "",
+   "cents": 1700,
+   "section": "Brunch plates"
+  },
+  {
+   "name": "Tropical Morning Chia",
+   "desc": "",
+   "cents": 1200,
+   "section": "Brunch plates"
+  },
+  {
+   "name": "Cali Avocado Toast",
+   "desc": "",
+   "cents": 1600,
+   "section": "Toasts"
+  },
+  {
+   "name": "Coastal Lox Toast",
+   "desc": "",
+   "cents": 1900,
+   "section": "Toasts"
+  },
+  {
+   "name": "Parisian French Toast",
+   "desc": "",
+   "cents": 1600,
+   "section": "Toasts",
+   "photo": "brunchandbloom-parisian-french-toast"
+  },
+  {
+   "name": "Peanut Butter Blossom Toast",
+   "desc": "",
+   "cents": 1500,
+   "section": "Toasts"
+  },
+  {
+   "name": "Tuscan Morning Toast",
+   "desc": "",
+   "cents": 1700,
+   "section": "Toasts"
+  },
+  {
+   "name": "Turkey Garden Panini",
+   "desc": "",
+   "cents": 1700,
+   "section": "Paninis & Melts"
+  },
+  {
+   "name": "Triple Cheese Melt",
+   "desc": "",
+   "cents": 1500,
+   "section": "Paninis & Melts"
+  },
+  {
+   "name": "Irish Corned Beef Panini",
+   "desc": "",
+   "cents": 1800,
+   "section": "Paninis & Melts",
+   "photo": "brunchandbloom-irish-corned-beef-panini"
+  },
+  {
+   "name": "Southwest Chicken Panini",
+   "desc": "",
+   "cents": 1800,
+   "section": "Paninis & Melts"
+  },
+  {
+   "name": "Garden Avocado Pesto Panini",
+   "desc": "",
+   "cents": 1700,
+   "section": "Paninis & Melts"
+  },
+  {
+   "name": "California Turkey Sammie",
+   "desc": "",
+   "cents": 1800,
+   "section": "Sammies"
+  },
+  {
+   "name": "Smoky Hot Chicken Sammie",
+   "desc": "",
+   "cents": 1800,
+   "section": "Sammies"
+  },
+  {
+   "name": "Italian Garden Sammie",
+   "desc": "",
+   "cents": 1700,
+   "section": "Sammies"
+  },
+  {
+   "name": "Bloom Chopped Salad",
+   "desc": "",
+   "cents": 1700,
+   "section": "Salads & Soup"
+  },
+  {
+   "name": "Orchard Cobb Salad",
+   "desc": "",
+   "cents": 1800,
+   "section": "Salads & Soup"
+  },
+  {
+   "name": "Creamy Tomato Soup",
+   "desc": "",
+   "cents": 800,
+   "section": "Salads & Soup"
+  },
+  {
+   "name": "California Breakfast Waffle",
+   "desc": "",
+   "cents": 1800,
+   "section": "Waffles"
+  },
+  {
+   "name": "Little Fry Up",
+   "desc": "",
+   "cents": 1000,
+   "section": "For the Little Ones"
+  },
+  {
+   "name": "Grilled Cheese Louise",
+   "desc": "",
+   "cents": 1000,
+   "section": "For the Little Ones"
+  },
+  {
+   "name": "Pb & Banana Toastie",
+   "desc": "",
+   "cents": 1000,
+   "section": "For the Little Ones"
+  },
+  {
+   "name": "Drip Coffee",
+   "desc": "",
+   "cents": 400,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Cappuccino",
+   "desc": "",
+   "cents": 600,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Café Americano",
+   "desc": "",
+   "cents": 500,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Caramel Latte",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Chai Tea Latte",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Golden Morning Latte",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Lavender Latte",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Vanilla Latte",
+   "desc": "",
+   "cents": 700,
+   "section": "Coffee & Espresso"
+  },
+  {
+   "name": "Matcha Latte",
+   "desc": "",
+   "cents": 700,
+   "section": "Seasonal Lattes"
+  },
+  {
+   "name": "Rasberry Lemonade",
+   "desc": "",
+   "cents": 600,
+   "section": "Cold Drinks"
+  },
+  {
+   "name": "Mint Lemonade",
+   "desc": "",
+   "cents": 600,
+   "section": "Cold Drinks"
+  },
+  {
+   "name": "Classic Lemonade",
+   "desc": "",
+   "cents": 500,
+   "section": "Cold Drinks"
+  },
+  {
+   "name": "Lavender Lemonade",
+   "desc": "",
+   "cents": 600,
+   "section": "Cold Drinks"
+  },
+  {
+   "name": "Hot Tea",
+   "desc": "",
+   "cents": 600,
+   "section": "Hot Tea"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "brunch-and-bloom-site-2",
+   "alt": "product image",
+   "credit": "Their own photo, from brunchandbloom.cloveronline.com"
+  },
+  {
+   "photo": "brunch-and-bloom-site-3",
+   "alt": "product image",
+   "credit": "Their own photo, from brunchandbloom.cloveronline.com"
+  },
+  {
+   "photo": "brunch-and-bloom-site-4",
+   "alt": "product image",
+   "credit": "Their own photo, from brunchandbloom.cloveronline.com"
+  },
+  {
+   "photo": "brunch-and-bloom-site-5",
+   "alt": "product image",
+   "credit": "Their own photo, from brunchandbloom.cloveronline.com"
+  },
+  {
+   "photo": "brunch-and-bloom-site-6",
+   "alt": "product image",
+   "credit": "Their own photo, from brunchandbloom.cloveronline.com"
+  }
+ ]
+}

@@ -523,7 +523,7 @@ const SEED: Seed[] = [
       ['Large BouCAKE', 'Nineteen cupcakes', 11000],
       ['Extra Large BouCAKE', 'Twenty-four cupcakes', 13000],
       ['Dozen, boxed', '', 6500],
-      ['Custom Arrangement', '', 5500, 'from $55'],
+      ['Custom Arrangement', '', 5500, null, 'from $55'],
     ],
     siteNote: 'Local delivery Tue–Fri up to twenty miles, priced at checkout.',
   },
@@ -544,8 +544,8 @@ const SEED: Seed[] = [
     email: 'talk@wildforkfoods.com',
     instagram: 'wildforkfoods',
     items: [
-      ['Dry 10/20 Sea Scallops', 'Ten to twenty pieces, one pound', 2398, '$23.98 / lb'],
-      ['USDA Choice Center Cut Filet Mignon', 'Two pieces, about 0.85 lb; final price by weight', 3698, '$36.98 / lb'],
+      ['Dry 10/20 Sea Scallops', 'Ten to twenty pieces, one pound', 2398, null, '$23.98 / lb'],
+      ['USDA Choice Center Cut Filet Mignon', 'Two pieces, about 0.85 lb; final price by weight', 3698, null, '$36.98 / lb'],
     ],
     siteNote: 'A national chain; find a store or order for delivery on their site.',
   },
@@ -765,13 +765,13 @@ const SEED: Seed[] = [
     hours: 'Daily 10am–10pm',
     needsSite: true,
     items: [
-      ['Quesabirria', 'Three corn tortillas dipped in consommé, melted cheese, shredded beef, onion, cilantro', 1450, '$14.50+'],
-      ['Street Taco', 'One taco on a handmade corn tortilla, your protein, onion and cilantro', 399, '$3.99+'],
+      ['Quesabirria', 'Three corn tortillas dipped in consommé, melted cheese, shredded beef, onion, cilantro', 1450, null, '$14.50+'],
+      ['Street Taco', 'One taco on a handmade corn tortilla, your protein, onion and cilantro', 399, null, '$3.99+'],
       ['Baja Tacos', 'Beer-battered fish or shrimp, slaw, chipotle sour cream', 550],
-      ['Burrito', 'Your protein with rice, beans, cheese, sour cream, guacamole', 1500, '$15.00+'],
-      ['Combo Plate, Tamales', 'Two tamales or a protein with four tortillas, rice, beans, pico, guacamole', 1600, '$16.00+'],
-      ['Wet Tamale', 'One tamale under warm red or green salsa, cotija and sour cream', 599, '$5.99+'],
-      ['Pizza Birria', 'A thirteen-inch tortilla dipped in consommé, stuffed with birria and cheese', 2600, '$26.00+'],
+      ['Burrito', 'Your protein with rice, beans, cheese, sour cream, guacamole', 1500, null, '$15.00+'],
+      ['Combo Plate, Tamales', 'Two tamales or a protein with four tortillas, rice, beans, pico, guacamole', 1600, null, '$16.00+'],
+      ['Wet Tamale', 'One tamale under warm red or green salsa, cotija and sour cream', 599, null, '$5.99+'],
+      ['Pizza Birria', 'A thirteen-inch tortilla dipped in consommé, stuffed with birria and cheese', 2600, null, '$26.00+'],
     ],
     offer: ['Quesabirria', 'Street Taco', 'Burrito', 'Wet Tamale'],
   },
@@ -813,10 +813,10 @@ const SEED: Seed[] = [
       {
         name: 'Admission',
         items: [
-          ['Unlimited gaming', 'Every game on freeplay', 1000, '$10 an hour'],
-          ['All day, in and out', '', 2200, '$22 all day'],
-          ['Private party, two hours, 15 guests', 'Guests beyond the package are $20 each', 30000, '$300'],
-          ['Private party, two hours, 20 guests', '', 40000, '$400'],
+          ['Unlimited gaming', 'Every game on freeplay', 1000, null, '$10 an hour'],
+          ['All day, in and out', '', 2200, null, '$22 all day'],
+          ['Private party, two hours, 15 guests', 'Guests beyond the package are $20 each', 30000, null, '$300'],
+          ['Private party, two hours, 20 guests', '', 40000, null, '$400'],
         ],
       },
     ],
@@ -880,7 +880,7 @@ const fromSeed = (s: Seed): Brand => ({
      everything, because those items are scaffolding, not a menu. */
   menuNote: s.review
     ? undefined
-    : (s.menuNote ?? (s.quoteOnly ? undefined : s.items.length > 0 ? MENU_NOTE : undefined)),
+    : (s.menuNote ?? (s.quoteOnly ? undefined : s.items.length > 0 || s.sections?.length ? MENU_NOTE : undefined)),
   /*
     Offers travel from the seed here too, not only from the roster and local
     lists. Without this the operator's sheets for Butter Pecan and Masa were set
@@ -912,6 +912,20 @@ const fromSeed = (s: Seed): Brand => ({
           */
           .filter((it) => !s.offer || s.offer.includes(it.name)),
       }))
+    : s.sections?.length
+    ? s.sections.map((sec, gi) => ({
+        id: `c_${s.slug.replace(/-/g, '')}_${gi + 1}`,
+        name: sec.name,
+        items: sec.items.map(([name, desc, price, photo, priceLabel], i) => ({
+          id: `i_${s.slug.replace(/-/g, '')}_${gi + 1}_${i + 1}`,
+          name,
+          desc,
+          price,
+          priceLabel: priceLabel ?? undefined,
+          imageUrl: photo ? `/food/${photo.replace(/^~/, '')}.webp` : undefined,
+          imageIsIllustration: photo ? photo.startsWith('~') : undefined,
+        })),
+      }))
     : [
     {
       id: `c_${s.slug.replace(/-/g, '')}`,
@@ -925,11 +939,12 @@ const fromSeed = (s: Seed): Brand => ({
         silently repoints an id at a different dish.
       */
       items: s.items
-        .map(([name, desc, price, photo], i) => ({
+        .map(([name, desc, price, photo, priceLabel], i) => ({
           id: `i_${s.slug.replace(/-/g, '')}_${i + 1}`,
           name,
           desc,
           price,
+          priceLabel: priceLabel ?? undefined,
           imageUrl: photo ? `/food/${photo.replace(/^~/, '')}.webp` : undefined,
         // A leading ~ in the seed marks the picture as an illustration.
         imageIsIllustration: photo ? photo.startsWith('~') : undefined,

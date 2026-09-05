@@ -1,0 +1,896 @@
+{
+ "id": "b_karamsf",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.karam-sf.com/",
+  "https://www.toasttab.com/local/order/karam-mediterranean-1725-polk-street",
+  "https://www.karam-sf.com/menu"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "HUMMUS",
+   "desc": "Organic garbanzo beans,tahini, lemon juice, Olive Oil",
+   "cents": 900,
+   "image": "https://static.wixstatic.com/media/fab297_4a910f175d47441c85623e02c8bf2a82~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_4a910f175d47441c85623e02c8bf2a82~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "HUMUS/BAYROOTY",
+   "desc": "Organic Garbanzo Beans, Parsley, Garlic, Tahini, Lemon Juice, Olive Oil",
+   "cents": 1000,
+   "image": "https://static.wixstatic.com/media/fab297_918b020d11274f35b1bc590c5d9e65b3~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_918b020d11274f35b1bc590c5d9e65b3~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "BABA GHANOUJ",
+   "desc": "Smoked Eggplant, Garlic, Tahini, Olive Oil",
+   "cents": 1000,
+   "image": "https://static.wixstatic.com/media/fab297_36f3d8094497494a8cdc2d69d158ef51~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_36f3d8094497494a8cdc2d69d158ef51~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "MUHAMARA",
+   "desc": "Sweet Red Peppers, Walnuts, Burgle (Crushed Wheat ) Olive Oil",
+   "cents": 1200,
+   "image": "https://static.wixstatic.com/media/fab297_7cfa18e2436c449990eec32de587fdda~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7cfa18e2436c449990eec32de587fdda~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "LABNI B KHYAR",
+   "desc": "Cucumber, Yogurt, Mint, Olive Oil",
+   "cents": 1200,
+   "image": "https://static.wixstatic.com/media/fab297_d7079f263e34467895ce211c58438dcf~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_d7079f263e34467895ce211c58438dcf~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "WARAK ENAB",
+   "desc": "Grape leaves stuffed with rice, parsley, mint, olive oil lemon juice",
+   "cents": 1100,
+   "image": "https://static.wixstatic.com/media/fab297_ef3a4aed09b24da7afc56d7aed672a4d~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_ef3a4aed09b24da7afc56d7aed672a4d~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "KABIS MIX",
+   "desc": "Mixed Pickles, Turnip, Cucumber Pickels, Olive",
+   "cents": 900,
+   "image": "https://static.wixstatic.com/media/fab297_3a481a305c5645a099fb909de5097f7e~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_3a481a305c5645a099fb909de5097f7e~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "FALAFEL",
+   "desc": "Organic Garbanzo And Fava Beans, Onions, Garlic, Parsley",
+   "cents": 1200,
+   "image": "https://static.wixstatic.com/media/fab297_b93aa430b83549f8a2a4f83b3f17bbe6~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_b93aa430b83549f8a2a4f83b3f17bbe6~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "HALLOUMI CHEESE",
+   "desc": "Flat Melted, Cucumber, Mint, Tomatoes",
+   "cents": 1400,
+   "image": "https://static.wixstatic.com/media/fab297_89d9eb1570ac44728cea1d0a51335b01~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_89d9eb1570ac44728cea1d0a51335b01~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "ZAHRAA (CAULIFLOWER)",
+   "desc": "Deep Fried With Garlic & Tahini Sauce",
+   "cents": 1300,
+   "image": "https://static.wixstatic.com/media/fab297_16a9ed40ff5041b9a48f723a0ad3aeb2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_16a9ed40ff5041b9a48f723a0ad3aeb2~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "HUMMUS SHAWERMA LAMB OR CHICKEN",
+   "desc": "Organic Garbanzo Beans, Tahini Sauce, & Shaved Beef & Lam Or Chicken Shawarma",
+   "cents": 1700,
+   "image": "https://static.wixstatic.com/media/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card"
+  },
+  {
+   "name": "BEEF & LAMB SHAWERMA",
+   "desc": "Marinated Beef& Lamb Slowly Roasted, {Served With Rice, Salad & Humus}",
+   "cents": 2400,
+   "image": "https://static.wixstatic.com/media/fab297_b8105403cfdc4622959f401613a5db65~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_b8105403cfdc4622959f401613a5db65~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Wrap Sajj Bread"
+  },
+  {
+   "name": "BEEF & LAMB SHAWERMA ARABIC STYLE",
+   "desc": "Served With Salad, French Fries, Pickles",
+   "cents": 2400,
+   "image": "https://static.wixstatic.com/media/fab297_856d903c54134b6cbe3c9733cd999a31~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_856d903c54134b6cbe3c9733cd999a31~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Wrap Sajj Bread"
+  },
+  {
+   "name": "CHICKEN SHAWARMA",
+   "desc": "Chaved Chicken Slowly Roasted, Pickles, Lettuce, Garlic Sauces",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Wrap Sajj Bread",
+   "image": "https://static.wixstatic.com/media/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg"
+  },
+  {
+   "name": "CHICKEN SHAWERMA ARABIC STYLE",
+   "desc": "Served With Salad, French Fries, Pickles",
+   "cents": 2300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Wrap Sajj Bread"
+  },
+  {
+   "name": "FALAFEL WRAP",
+   "desc": "Lettuce, Tomato, Pickles, Tahini Sauce",
+   "cents": 1500,
+   "image": "https://static.wixstatic.com/media/fab297_e40302e888df4e17ad88e77f666f1b53~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e40302e888df4e17ad88e77f666f1b53~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Wrap Sajj Bread"
+  },
+  {
+   "name": "TABOULI",
+   "desc": "Parsley, Onion, Tomatoes, Bulgur (Crushed What Olive Oil, Lemon Juice",
+   "cents": 1300,
+   "image": "https://static.wixstatic.com/media/fab297_ae20c411f2424eeaaa6fd8d99155bb3d~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_ae20c411f2424eeaaa6fd8d99155bb3d~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "FATTOUCH",
+   "desc": "Lettuce, Cucumber, Tomatoes, Mint, Onion, Radishes, Italian Parsley, Bell Peppers, Oregano, Croutons, Lemon Juice & Pomegranate",
+   "cents": 1400,
+   "image": "https://static.wixstatic.com/media/fab297_eaa16fe2a1084eefb25d8e6849f92d70~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_eaa16fe2a1084eefb25d8e6849f92d70~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "ARABIC SALAD",
+   "desc": "Lettuce, Cucumber, Tomatoes, Mint, Onion, Parsley, Lemon Juice & Olive Oil",
+   "cents": 1400,
+   "image": "https://static.wixstatic.com/media/fab297_3bb69b3327e2441e9464788e9c1c0c44~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_3bb69b3327e2441e9464788e9c1c0c44~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Salads"
+  },
+  {
+   "name": "RIBEYE STEAK",
+   "desc": "Tender Juicy Grilled steak With Secret Spices, {Served With Fries & Salad}",
+   "cents": 4000,
+   "image": "https://static.wixstatic.com/media/fab297_97fbbd2d804d4b7aa5c4636c9b8eab7e~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_97fbbd2d804d4b7aa5c4636c9b8eab7e~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "CHICKEN SHAWERMA",
+   "desc": "Marinated Chicken Slowly Roasted {Served With Rice, Salad & Humus}",
+   "cents": 2300,
+   "image": "https://static.wixstatic.com/media/fab297_8d365e0d93634ac1820367385835ab6b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_8d365e0d93634ac1820367385835ab6b~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "SHISH TAOUK",
+   "desc": "Cubes Of Grilled Chicken Breast {Served With Rice, Salad & Humus}",
+   "cents": 2200,
+   "image": "https://static.wixstatic.com/media/fab297_ce8c2dc5a55144a6afc0139ef42cf4ce~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_ce8c2dc5a55144a6afc0139ef42cf4ce~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "KAFTA KEBAB",
+   "desc": "Minced Beef & Lamb With Blended Herbs {Served With Rice, Salad & Humus}",
+   "cents": 2200,
+   "image": "https://static.wixstatic.com/media/fab297_e68f0ccc18bb41ae810e6a7e04c1f496~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e68f0ccc18bb41ae810e6a7e04c1f496~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "LAMB SHISH KABAB",
+   "desc": "Cubes Of Grilled Dry Age Lamb {Served With Rice, Salad & Humus}",
+   "cents": 2500,
+   "image": "https://static.wixstatic.com/media/fab297_023f06ff8d354fb3bd81a6f02c335559~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_023f06ff8d354fb3bd81a6f02c335559~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "BEEF SHISH KABAB",
+   "desc": "Cubes Grilled Filet Mignon (Served With Rice, Salad & Humus}",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "COMBO KEBAB",
+   "desc": "Chicken, Kafta & Choice Of Lamb Or Beef {Served With Rice, Salad & Humus}",
+   "cents": 2800,
+   "image": "https://static.wixstatic.com/media/fab297_3082454d27744192817ffc2a64ef351c~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_3082454d27744192817ffc2a64ef351c~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "REYASH",
+   "desc": "Rib Cut Grilled Domestic Rack Of Lamb {Served With Rice, Salad & Humus}",
+   "cents": 3000,
+   "image": "https://static.wixstatic.com/media/fab297_e7c64f6c29a74125a61e82879614ba8b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e7c64f6c29a74125a61e82879614ba8b~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "JAWANIH CHICKEN WINGS",
+   "desc": "Marinated With Garlic, Lemon Juice, House Made Hot Sauce {Served With Salad, French Fries & Humus}",
+   "cents": 2200,
+   "image": "https://static.wixstatic.com/media/fab297_e4a04278a5ad49cf8cace80bbf0dbc49~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e4a04278a5ad49cf8cace80bbf0dbc49~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "FAROOJ MESHWE (GRILLED HALF CHICKEN)",
+   "desc": "Grilled Chicken Marinate with Garlic, Lemon Juice, Hot Sauce {Served With Humus, Salad, and French Fries)",
+   "cents": 2300,
+   "image": "https://static.wixstatic.com/media/fab297_a4198fbbd71d475eaed684b106b309b2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_a4198fbbd71d475eaed684b106b309b2~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "DAWOOD BASHA",
+   "desc": "Sautéed Meat Balls, Onion, Tomato Sauce, {Served With Rice}",
+   "cents": 2500,
+   "image": "https://static.wixstatic.com/media/fab297_6f8db28b0d5e40749bda287bcc32e80b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_6f8db28b0d5e40749bda287bcc32e80b~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tabekh Stew"
+  },
+  {
+   "name": "OKRA LAMB SHANK",
+   "desc": "Sautéed Okra, Tomatoes, Cilantro, Garlic With Lamb Shank (Served With Rice}",
+   "cents": 3000,
+   "image": "https://static.wixstatic.com/media/fab297_494440dee6e4455e8fdeda25a076d85e~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_494440dee6e4455e8fdeda25a076d85e~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tabekh Stew"
+  },
+  {
+   "name": "KABAB HALABI SPICY",
+   "desc": "Ground Lamb, Onions, Parsley, Garlic & Tomato Sauce {Served With Rice}",
+   "cents": 2500,
+   "image": "https://static.wixstatic.com/media/fab297_20b8529f73a24e83ae1f13b6d2142ca6~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_20b8529f73a24e83ae1f13b6d2142ca6~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tabekh Stew"
+  },
+  {
+   "name": "FASOLIA - KIDNEY BEANS",
+   "desc": "Kidney Beans, Onions, Tomato, Garlic, Lamb Shank (Served With Rice}",
+   "cents": 3000,
+   "image": "https://static.wixstatic.com/media/fab297_9a688fd912e94adab8874e7285f62e11~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_9a688fd912e94adab8874e7285f62e11~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Tabekh Stew"
+  },
+  {
+   "name": "VEGGIE OKRA",
+   "desc": "Sautéed Okra, Tomatoes, Cilantro, Garlic {Served With Rice}",
+   "cents": 2400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "MOO-JADARRA",
+   "desc": "Rice & Lentils Cooked On Slow Heat, Garnished With Caramelized Onion & Cumin {Served With Salad}",
+   "cents": 2200,
+   "image": "https://static.wixstatic.com/media/fab297_17119b6feb514d3eb0e4487d98c209f2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_17119b6feb514d3eb0e4487d98c209f2~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "FALAFEL PLATE",
+   "desc": "Organic Garbanzo, Tahini Sauce, {Served With Humus), Baba Ghanouj, Salad, & Pickles",
+   "cents": 2200,
+   "image": "https://static.wixstatic.com/media/fab297_7cb6b8a62c0b4198a99a232c04b714b8~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7cb6b8a62c0b4198a99a232c04b714b8~mv2.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Chicken/Beef Skewer",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Kafta Skewer",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Lamb Skewer",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Rack of Lamb",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes",
+   "image": "https://static.wixstatic.com/media/fab297_e7c64f6c29a74125a61e82879614ba8b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e7c64f6c29a74125a61e82879614ba8b~mv2.jpg"
+  },
+  {
+   "name": "Pita Basket Homemade",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Rice Bowl",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "French Fries",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Vegetarian Dishes",
+   "image": "https://static.wixstatic.com/media/fab297_856d903c54134b6cbe3c9733cd999a31~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_856d903c54134b6cbe3c9733cd999a31~mv2.jpg"
+  },
+  {
+   "name": "Basbousa",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Mabroume",
+   "desc": "",
+   "cents": 700,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Pistachio Baklava",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Walnut Baklava",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Zero Coke",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Fanta",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Fresh Lemonade",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Yogurt Drink",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Iced Tea",
+   "desc": "",
+   "cents": 600,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Bottled Water",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 500,
+   "alcohol": false,
+   "src": "text",
+   "section": "DRINKS"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/11062b_3f58ffd8cc1d471787185e65767efbf1~mv2.jpg/v1/fill/w_1280,h_613,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_3f58ffd8cc1d471787185e65767efbf1~mv2.jpg",
+   "alt": "Golden Gate Bridge Distant View",
+   "near": "EVERY DAY\n\n12PM-5PM\n\nDAILY LUNCH SPECIAL!\n\nStop by any day from 12PM-5PM and get our famous Chicken ",
+   "w": 1280,
+   "h": 613,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_3e0cb0cf7f8d491ca5b98ab07071fe84~mv2.png/v1/fill/w_398,h_597,fp_0.50_0.50,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Promo.png",
+   "alt": "Promo.png",
+   "near": "",
+   "w": 398,
+   "h": 597,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_9f3f2ee0f3cb4f80889b2457adc933df~mv2.jpg/v1/fill/w_1280,h_578,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/17.jpg",
+   "alt": "17.jpg",
+   "near": "",
+   "w": 1280,
+   "h": 578,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_5b96b684095a45e99940cc53c75acf19~mv2.jpg/v1/fill/w_744,h_419,q_90,enc_avif,quality_auto/fab297_5b96b684095a45e99940cc53c75acf19~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 744,
+   "h": 419,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg/v1/fill/w_372,h_209,q_90,enc_avif,quality_auto/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 372,
+   "h": 209,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_554ebd8bf74140db92f79f539a96832d~mv2.jpg/v1/fill/w_372,h_209,q_90,enc_avif,quality_auto/fab297_554ebd8bf74140db92f79f539a96832d~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 372,
+   "h": 209,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_da8447a9d294433ab3ff138a1b34b19c~mv2.jpg/v1/fill/w_372,h_209,q_90,enc_avif,quality_auto/fab297_da8447a9d294433ab3ff138a1b34b19c~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 372,
+   "h": 209,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_9f3f2ee0f3cb4f80889b2457adc933df~mv2.jpg/v1/fill/w_372,h_209,q_90,enc_avif,quality_auto/fab297_9f3f2ee0f3cb4f80889b2457adc933df~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 372,
+   "h": 209,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_f53167621a784d3faaf00de80029ee64~mv2.jpg/v1/fill/w_744,h_419,q_90,enc_avif,quality_auto/fab297_f53167621a784d3faaf00de80029ee64~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 744,
+   "h": 419,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_76a20dec27c549debe781f08a7ba59e6~mv2.jpg/v1/fill/w_744,h_419,q_90,enc_avif,quality_auto/fab297_76a20dec27c549debe781f08a7ba59e6~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 744,
+   "h": 419,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_8664d1937fb4404590524970cac66352~mv2.jpg/v1/fill/w_372,h_209,q_90,enc_avif,quality_auto/fab297_8664d1937fb4404590524970cac66352~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 372,
+   "h": 209,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_e68f0ccc18bb41ae810e6a7e04c1f496~mv2.jpg/v1/fill/w_372,h_209,q_90,enc_avif,quality_auto/fab297_e68f0ccc18bb41ae810e6a7e04c1f496~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 372,
+   "h": 209,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_56f0906a33f7435fa75a4d1a0f12c3f5~mv2.jpg/v1/fill/w_1116,h_628,q_90,enc_avif,quality_auto/fab297_56f0906a33f7435fa75a4d1a0f12c3f5~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1116,
+   "h": 628,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_554ebd8bf74140db92f79f539a96832d~mv2.jpg/v1/fill/w_1254,h_849,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/19.jpg",
+   "alt": "19.jpg",
+   "near": "",
+   "w": 1254,
+   "h": 849,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/c837a6_2828dec337374714b0631f4aab1cb4b8f000.jpg/v1/fill/w_1280,h_364,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/c837a6_2828dec337374714b0631f4aab1cb4b8f000.jpg",
+   "alt": "",
+   "near": "1725 POLK ST\n\nCONTACT\n\n1725 Polk St\nSan Francisco, CA\n\nWednesday-Monday: 12AM-10PM\n\nTuesday: CLOSED\n",
+   "w": 1280,
+   "h": 364,
+   "page": "https://www.karam-sf.com/"
+  },
+  {
+   "src": "https://static.parastorage.com/services/restaurant-menus-showcase-ooi/32f43626916d61c7230c005be8198518edbcf8b3b64433b47f70e8c6/media/menus_side_image.7077f229.jpeg",
+   "alt": "",
+   "near": "KARAM SF\nCold Meza\n\n(Appetizer)\n\nHUMMUS\n\nOrganic garbanzo beans,tahini, lemon juice, Olive Oil\n\n$9.0",
+   "w": 3009,
+   "h": 3009,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_4a910f175d47441c85623e02c8bf2a82~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_4a910f175d47441c85623e02c8bf2a82~mv2.jpg",
+   "alt": "HUMMUS",
+   "near": "HUMMUS\n\nOrganic garbanzo beans,tahini, lemon juice, Olive Oil\n\n$9.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_918b020d11274f35b1bc590c5d9e65b3~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_918b020d11274f35b1bc590c5d9e65b3~mv2.jpg",
+   "alt": "HUMUS/BAYROOTY",
+   "near": "HUMUS/BAYROOTY\n\nOrganic Garbanzo Beans, Parsley, Garlic, Tahini, Lemon Juice, Olive Oil\n\n$10.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_36f3d8094497494a8cdc2d69d158ef51~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_36f3d8094497494a8cdc2d69d158ef51~mv2.jpg",
+   "alt": "BABA GHANOUJ",
+   "near": "BABA GHANOUJ\n\nSmoked Eggplant, Garlic, Tahini, Olive Oil\n\n$10.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_7cfa18e2436c449990eec32de587fdda~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7cfa18e2436c449990eec32de587fdda~mv2.jpg",
+   "alt": "MUHAMARA",
+   "near": "MUHAMARA\n\nSweet Red Peppers, Walnuts, Burgle (Crushed Wheat ) Olive Oil\n\n$12.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_d7079f263e34467895ce211c58438dcf~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_d7079f263e34467895ce211c58438dcf~mv2.jpg",
+   "alt": "LABNI B KHYAR",
+   "near": "LABNI B KHYAR\n\nCucumber, Yogurt, Mint, Olive Oil\n\n$12.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_ef3a4aed09b24da7afc56d7aed672a4d~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_ef3a4aed09b24da7afc56d7aed672a4d~mv2.jpg",
+   "alt": "WARAK ENAB",
+   "near": "WARAK ENAB\n\nGrape leaves stuffed with rice, parsley, mint, olive oil lemon juice\n\n$11.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_3a481a305c5645a099fb909de5097f7e~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_3a481a305c5645a099fb909de5097f7e~mv2.jpg",
+   "alt": "KABIS MIX",
+   "near": "KABIS MIX\n\nMixed Pickles, Turnip, Cucumber Pickels, Olive\n\n$9.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_b93aa430b83549f8a2a4f83b3f17bbe6~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_b93aa430b83549f8a2a4f83b3f17bbe6~mv2.jpg",
+   "alt": "FALAFEL",
+   "near": "FALAFEL\n\nOrganic Garbanzo And Fava Beans, Onions, Garlic, Parsley\n\n$12.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_89d9eb1570ac44728cea1d0a51335b01~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_89d9eb1570ac44728cea1d0a51335b01~mv2.jpg",
+   "alt": "HALLOUMI CHEESE",
+   "near": "HALLOUMI CHEESE\n\nFlat Melted, Cucumber, Mint, Tomatoes\n\n$14.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_16a9ed40ff5041b9a48f723a0ad3aeb2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_16a9ed40ff5041b9a48f723a0ad3aeb2~mv2.jpg",
+   "alt": "ZAHRAA (CAULIFLOWER)",
+   "near": "ZAHRAA (CAULIFLOWER)\n\nDeep Fried With Garlic & Tahini Sauce\n\n$13.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7e8236673fd241318de297f2915787b0~mv2.jpg",
+   "alt": "HUMMUS SHAWERMA LAMB OR CHICKEN",
+   "near": "HUMMUS SHAWERMA LAMB OR CHICKEN\n\nOrganic Garbanzo Beans, Tahini Sauce, & Shaved Beef & Lam Or Chicke",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_343cf8c3deba441d9911dd7c673c6975~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_343cf8c3deba441d9911dd7c673c6975~mv2.jpg",
+   "alt": "BEEF & LAMB SHAWERMA",
+   "near": "BEEF & LAMB SHAWERMA\n\nChaved Beff & Lamb Slowly Roasted, Tomato, Parslely, Lettuce, Pickles, Onion T",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_856d903c54134b6cbe3c9733cd999a31~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_856d903c54134b6cbe3c9733cd999a31~mv2.jpg",
+   "alt": "BEEF & LAMB SHAWERMA ARABIC STYLE",
+   "near": "BEEF & LAMB SHAWERMA ARABIC STYLE\n\nServed With Salad, French Fries, Pickles\n\n$24.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_e40302e888df4e17ad88e77f666f1b53~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e40302e888df4e17ad88e77f666f1b53~mv2.jpg",
+   "alt": "FALAFEL WRAP",
+   "near": "FALAFEL WRAP\n\nLettuce, Tomato, Pickles, Tahini Sauce\n\n$15.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_ae20c411f2424eeaaa6fd8d99155bb3d~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_ae20c411f2424eeaaa6fd8d99155bb3d~mv2.jpg",
+   "alt": "TABOULI",
+   "near": "TABOULI\n\nParsley, Onion, Tomatoes, Bulgur (Crushed What Olive Oil, Lemon Juice\n\n$13.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_eaa16fe2a1084eefb25d8e6849f92d70~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_eaa16fe2a1084eefb25d8e6849f92d70~mv2.jpg",
+   "alt": "FATTOUCH",
+   "near": "FATTOUCH\n\nLettuce, Cucumber, Tomatoes, Mint, Onion, Radishes, Italian Parsley, Bell Peppers, Oregano",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_3bb69b3327e2441e9464788e9c1c0c44~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_3bb69b3327e2441e9464788e9c1c0c44~mv2.jpg",
+   "alt": "ARABIC SALAD",
+   "near": "ARABIC SALAD\n\nLettuce, Cucumber, Tomatoes, Mint, Onion, Parsley, Lemon Juice & Olive Oil\n\n$14.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_97fbbd2d804d4b7aa5c4636c9b8eab7e~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_97fbbd2d804d4b7aa5c4636c9b8eab7e~mv2.jpg",
+   "alt": "RIBEYE STEAK",
+   "near": "RIBEYE STEAK\n\nTender Juicy Grilled steak With Secret Spices, {Served With Fries & Salad}\n\n$40.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_b8105403cfdc4622959f401613a5db65~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_b8105403cfdc4622959f401613a5db65~mv2.jpg",
+   "alt": "BEEF & LAMB SHAWERMA",
+   "near": "BEEF & LAMB SHAWERMA\n\nMarinated Beef& Lamb Slowly Roasted, {Served With Rice, Salad & Humus}\n\n$24.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_8d365e0d93634ac1820367385835ab6b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_8d365e0d93634ac1820367385835ab6b~mv2.jpg",
+   "alt": "CHICKEN SHAWERMA",
+   "near": "CHICKEN SHAWERMA\n\nMarinated Chicken Slowly Roasted {Served With Rice, Salad & Humus}\n\n$23.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_ce8c2dc5a55144a6afc0139ef42cf4ce~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_ce8c2dc5a55144a6afc0139ef42cf4ce~mv2.jpg",
+   "alt": "SHISH TAOUK",
+   "near": "SHISH TAOUK\n\nCubes Of Grilled Chicken Breast {Served With Rice, Salad & Humus}\n\n$22.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_e68f0ccc18bb41ae810e6a7e04c1f496~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e68f0ccc18bb41ae810e6a7e04c1f496~mv2.jpg",
+   "alt": "KAFTA KEBAB",
+   "near": "KAFTA KEBAB\n\nMinced Beef & Lamb With Blended Herbs {Served With Rice, Salad & Humus}\n\n$22.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_023f06ff8d354fb3bd81a6f02c335559~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_023f06ff8d354fb3bd81a6f02c335559~mv2.jpg",
+   "alt": "LAMB SHISH KABAB",
+   "near": "LAMB SHISH KABAB\n\nCubes Of Grilled Dry Age Lamb {Served With Rice, Salad & Humus}\n\n$25.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_3082454d27744192817ffc2a64ef351c~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_3082454d27744192817ffc2a64ef351c~mv2.jpg",
+   "alt": "COMBO KEBAB",
+   "near": "COMBO KEBAB\n\nChicken, Kafta & Choice Of Lamb Or Beef {Served With Rice, Salad & Humus}\n\n$28.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_e7c64f6c29a74125a61e82879614ba8b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e7c64f6c29a74125a61e82879614ba8b~mv2.jpg",
+   "alt": "REYASH",
+   "near": "REYASH\n\nRib Cut Grilled Domestic Rack Of Lamb {Served With Rice, Salad & Humus}\n\n$30.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_e4a04278a5ad49cf8cace80bbf0dbc49~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_e4a04278a5ad49cf8cace80bbf0dbc49~mv2.jpg",
+   "alt": "JAWANIH CHICKEN WINGS",
+   "near": "JAWANIH CHICKEN WINGS\n\nMarinated With Garlic, Lemon Juice, House Made Hot Sauce {Served With Salad, ",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_a4198fbbd71d475eaed684b106b309b2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_a4198fbbd71d475eaed684b106b309b2~mv2.jpg",
+   "alt": "FAROOJ MESHWE (GRILLED HALF CHICKEN)",
+   "near": "FAROOJ MESHWE (GRILLED HALF CHICKEN)\n\nGrilled Chicken Marinate with Garlic, Lemon Juice, Hot Sauce {",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_6f8db28b0d5e40749bda287bcc32e80b~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_6f8db28b0d5e40749bda287bcc32e80b~mv2.jpg",
+   "alt": "DAWOOD BASHA",
+   "near": "DAWOOD BASHA\n\nSautéed Meat Balls, Onion, Tomato Sauce, {Served With Rice}\n\n$25.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_494440dee6e4455e8fdeda25a076d85e~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_494440dee6e4455e8fdeda25a076d85e~mv2.jpg",
+   "alt": "OKRA LAMB SHANK",
+   "near": "OKRA LAMB SHANK\n\nSautéed Okra, Tomatoes, Cilantro, Garlic With Lamb Shank (Served With Rice}\n\n$30.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_20b8529f73a24e83ae1f13b6d2142ca6~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_20b8529f73a24e83ae1f13b6d2142ca6~mv2.jpg",
+   "alt": "KABAB HALABI SPICY",
+   "near": "KABAB HALABI SPICY\n\nGround Lamb, Onions, Parsley, Garlic & Tomato Sauce {Served With Rice}\n\n$25.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_9a688fd912e94adab8874e7285f62e11~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_9a688fd912e94adab8874e7285f62e11~mv2.jpg",
+   "alt": "FASOLIA - KIDNEY BEANS",
+   "near": "FASOLIA - KIDNEY BEANS\n\nKidney Beans, Onions, Tomato, Garlic, Lamb Shank (Served With Rice}\n\n$30.00",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_17119b6feb514d3eb0e4487d98c209f2~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_17119b6feb514d3eb0e4487d98c209f2~mv2.jpg",
+   "alt": "MOO-JADARRA",
+   "near": "MOO-JADARRA\n\nRice & Lentils Cooked On Slow Heat, Garnished With Caramelized Onion & Cumin {Served Wi",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/fab297_7cb6b8a62c0b4198a99a232c04b714b8~mv2.jpg/v1/fill/w_400,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/fab297_7cb6b8a62c0b4198a99a232c04b714b8~mv2.jpg",
+   "alt": "FALAFEL PLATE",
+   "near": "FALAFEL PLATE\n\nOrganic Garbanzo, Tahini Sauce, {Served With Humus), Baba Ghanouj, Salad, & Pickles\n\n",
+   "w": 400,
+   "h": 400,
+   "page": "https://www.karam-sf.com/menu"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/c837a6_2828dec337374714b0631f4aab1cb4b8f000.jpg/v1/fill/w_1280,h_364,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/c837a6_2828dec337374714b0631f4aab1cb4b8f000.jpg",
+   "alt": "",
+   "near": "1725 POLK ST\n\nCONTACT\n\n1725 Polk St\nSan Francisco, CA\n\nWednesday-Monday: 12AM-10PM\n\nTuesday: CLOSED\n",
+   "w": 1280,
+   "h": 364,
+   "page": "https://www.karam-sf.com/menu"
+  }
+ ]
+}

@@ -1,0 +1,165 @@
+{
+ "id": "b_fireslicepizza",
+ "source": "text",
+ "pages": [
+  "https://www.fireslicepizzeria.com/",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-large-build-your-own-18_69c3386d-ec99-4a88-a570-4ee6a28a902c",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-creamy-garlic-chicken-slice_3c5f0a6c-cbcd-4357-bea0-922ee0c6e37b",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-fire-slice_b58a9494-f281-447d-b39f-bcc48bf9dd4d",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-cheese-slice_a1757e9d-814e-484c-9a01-784a3387a027",
+  "https://order.toasttab.com/online/fire-slice-2705-clayton-rd/item-pepperoni-slice_e6eea305-77c8-4357-aca0-9684be20e9cc"
+ ],
+ "items": [
+  {
+   "name": "Slice of Pepperoni",
+   "desc": "",
+   "cents": 899,
+   "section": "Slices"
+  },
+  {
+   "name": "All Meat Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "Combo Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "Chicken Tikka Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "Veggie Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "Poly Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "BBQ Chicken Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "Sam's Big Boss Slice Pepperoni",
+   "desc": "",
+   "cents": 5599,
+   "section": "Slices"
+  },
+  {
+   "name": "Sam’s Big Boss Slice the Works",
+   "desc": "",
+   "cents": 6599,
+   "section": "Slices"
+  },
+  {
+   "name": "Mediterranean Slice",
+   "desc": "",
+   "cents": 999,
+   "section": "Slices"
+  },
+  {
+   "name": "Mediterranean Pizza \"14",
+   "desc": "",
+   "cents": 2999,
+   "section": "14\" Pizza"
+  },
+  {
+   "name": "Boss Cheese 24\"",
+   "desc": "",
+   "cents": 5499,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Pepperoni 24\"",
+   "desc": "",
+   "cents": 5999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss All Meat Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Combination Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Fire Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Chicken Tikka Masala Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Veggie Supreme Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Creamy Garlic Chicken & Mushroom Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Polynesian Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss BBQ Chicken Pizza 24\"",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Boss Mediterranean Pizza \"24",
+   "desc": "",
+   "cents": 6999,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "Sam’s Big Boss The Works",
+   "desc": "",
+   "cents": 8000,
+   "section": "24\" Pizza Boss"
+  },
+  {
+   "name": "NY Cheese Cake",
+   "desc": "Delicious crafted New York Style Cheesecake Slice",
+   "cents": 899,
+   "section": "Desserts"
+  },
+  {
+   "name": "Refershing soda in a can",
+   "desc": "",
+   "cents": 199,
+   "section": "Desserts"
+  }
+ ]
+}

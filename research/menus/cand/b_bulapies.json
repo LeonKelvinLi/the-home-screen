@@ -1,0 +1,999 @@
+{
+ "id": "b_bulapies",
+ "source": "jsonld",
+ "alt": {
+  "text": 33
+ },
+ "pages": [
+  "https://bulapiesfiji.com/",
+  "https://bulapiesfiji.com/menu",
+  "https://bulapiesfiji.com/drinks/drinks",
+  "https://bulapiesfiji.com/food/pastries",
+  "https://bulapiesfiji.com/drinks/coffee",
+  "https://bulapiesfiji.com/food/halal-food",
+  "https://bulapiesfiji.com/tags/lunch"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Smoked Bacon & Egg [B]",
+   "desc": "2 Large eggs, sautéed onions and TOO much hardwood smoked bacon.",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/f0047efc-eab0-43d0-a260-b41b8ad13b03?v=8004741057",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Beef Stew Pie [X]",
+   "desc": "HALAL. Warm up your taste buds with our hearty beef stew. Made with tender ground beef, peas, carrots, and potatoes, this comforting dish is perfect for cozy nights in. Don't miss out on this delicious meal - order your beef stew today!",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/aa0bcee9-0c78-44f4-a176-a27b3ab17a72",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Butter Chicken Pie [BC]",
+   "desc": "Indulge in the rich and savory flavors of our butter chicken pie. This chicken pie offers a perfect balance of creamy buttery goodness with a hint of heat, sure to tantalize your taste buds",
+   "cents": 1100,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/d0212212-96cc-441f-8784-6941ea8ff23f",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Homestyle Chicken [HC]",
+   "desc": "A hearty creamy blend of tender chicken and broccoli encased in our flaky crust.",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/292d10fe-9b22-43dc-8971-44fd07ec18a7?v=0424471063",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mama's Lamb Pie [L]",
+   "desc": "Our Mama's Lamb pie is filled with a tasty ground lamb, sweet potato and veggie stew. A mouthwatering twist on a classic dish. Treat yourself to this savory and sweet delight today!",
+   "cents": 1100,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/79cad03c-7dff-4b23-9952-748f29e14a58",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mince & Cheese Pie [M]",
+   "desc": "HALAL. Claimed to be the 'softest cheeseburger'. Indulge in the savory delight of our mouthwatering mince and cheese pie, a perfect blend of flavorful minced meat and gooey melted cheese encased in a golden crust.",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/a794749f-3c83-48ed-9ddc-91d5e5511ba8?v=8332525678",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pot Roast Pie [PR]",
+   "desc": "Braised beef and carrots slow-cooked in red wine. This pie knocks you straight to Sunday dinner.",
+   "cents": 1200,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/aa0f54a6-2f45-4142-871d-1b108213972f",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Veggie Curry Pie [V]",
+   "desc": "Indulge in the ultimate comfort food with our veggie curry pie. This mouthwatering vegetarian option features a flavorful curry filling encased in a savory pastry crust, creating a truly satisfying and delicious meal",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/68d7dcc0-815c-4954-9cc2-32baf3312269",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Smoked Pulled Pork [PP]",
+   "desc": "Indulge in the ultimate comfort food with our mouthwatering Smoked BBQ Pulled Pork with our in house coleslaw.",
+   "cents": 1200,
+   "section": "Savory Pies",
+   "image": "https://static-content.owner.com/funnel/images/0ff01fc1-cc0f-414b-a18c-8b021a9766da?v=9518961509",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pork Sausage Roll",
+   "desc": "Indulge in the savory delight of our homemade pork sausage roll encased in buttery, flaky pastry. A perfect treat for any time of the day - try our sausage roll today!",
+   "cents": 500,
+   "section": "Sausage Rolls",
+   "image": "https://static-content.owner.com/funnel/images/48c8bb84-b45a-4bce-a363-dd4ea745c660?v=1691827304",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Sausage Roll",
+   "desc": "HALAL. Homemade lamb sausage roll encased in our buttery flaky pastry.",
+   "cents": 500,
+   "section": "Sausage Rolls",
+   "image": "https://static-content.owner.com/funnel/images/048bcb95-6887-4876-88fa-aab0d95f76b1?v=6379513345",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chocanana Pie [O]",
+   "desc": "Oh so good! This pie features a fudgy chocolate banana center with nutella, encased in our buttery flaky pastry.",
+   "cents": 900,
+   "section": "Dessert",
+   "image": "https://static-content.owner.com/funnel/images/15a35652-a99d-4b37-84f4-927d24f37aee?v=2728868324",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pineapple Pie [P]",
+   "desc": "Indulge in the irresistible sweetness of our caramelized pineapple pie. This delectable dessert features perfectly caramelized pineapple with cinnamon nestled in a buttery, flaky crust. Treat yourself to a slice of heaven today!",
+   "cents": 900,
+   "section": "Dessert",
+   "image": "https://static-content.owner.com/funnel/images/34f91a8b-b0a5-405f-a7be-41eb9c0d2a6e?v=2895081963",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Banana Pudding Trifle",
+   "desc": "Indulge in the ultimate dessert experience with our banana pudding trifle. This thick and creamy treat is the perfect combination of rich banana flavor and velvety smooth texture. Treat yourself to a slice of heaven with every bite!",
+   "cents": 600,
+   "section": "Trifle Cake Cups",
+   "image": "https://static-content.owner.com/funnel/images/71b9e7ff-1293-4bb4-aecb-128d59b8b8d5?v=8987276250",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Guava Strawberry Ripple",
+   "desc": "Delicious flavors of guava and tart strawberry layered with our fresh cream and custard mix with Nila wafers. So thick, so creamy!",
+   "cents": 650,
+   "section": "Trifle Cake Cups",
+   "image": "https://static-content.owner.com/funnel/images/9568354a-6a6f-4633-8ab0-23e68437eca0?v=8651249332",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Latte",
+   "desc": "Espresso and steamed milk. Available in 12oz, 16oz and 20oz",
+   "cents": 425,
+   "section": "Espresso Drinks",
+   "image": "https://static-content.owner.com/funnel/images/7290113b-5045-4c39-8cf8-38be078542e9?v=6921322679",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Americano",
+   "desc": "Espresso shots topped with hot water. Available in 12oz, 16oz and 20oz.",
+   "cents": 400,
+   "section": "Espresso Drinks",
+   "image": "https://static-content.owner.com/funnel/images/42e2020a-94b7-467e-bdee-3e1d914cdc73?v=3187518671",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mocha",
+   "desc": "Our espresso combined with our dark chocolate syrup and steamed milk, topped with whipped cream.",
+   "cents": 475,
+   "section": "Espresso Drinks",
+   "image": "https://static-content.owner.com/funnel/images/881d744c-2139-496d-b38f-b3fc88cc8644?v=0406929243",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "White Mocha",
+   "desc": "Our espresso combined with our white chocolate syrup and steamed milk, topped with whipped cream.",
+   "cents": 475,
+   "section": "Espresso Drinks",
+   "image": "https://static-content.owner.com/funnel/images/42ce2b2f-2b58-463c-b756-06a82aeaa1d9",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kumquat Limemade",
+   "desc": "Cool off with our homemade kumquat limemade, sweetened with organic cane sugar.",
+   "cents": 350,
+   "section": "Specialty Drinks",
+   "image": "https://static-content.owner.com/funnel/images/0cb2bc74-fe3f-4a0c-902e-76fa5dfe4e24?v=2626210993",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Nitro Hibiscus Tea Lemonade",
+   "desc": "Our refreshing blend of Nitro Hibiscus Tea and Lemonade with Raspberry flavor.",
+   "cents": 445,
+   "section": "Specialty Drinks",
+   "image": "https://static-content.owner.com/funnel/images/cbf8a9da-d375-4ca9-90ee-7325c4a302b5?v=1088914974",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Nitro Cold Brew",
+   "desc": "Cold brew infused with nitro to give you a smooth and stronger caffeinated experience.",
+   "cents": 425,
+   "section": "Specialty Drinks",
+   "image": "https://static-content.owner.com/funnel/images/d44a82c3-4931-48b9-aff9-b8ad1165de1a?v=0646838418",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Coke 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/7192fd59-f5a0-4753-8235-f63400538136?v=8261555606",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sprite 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/9b7a8ab1-e700-4255-9959-5aede85c7b36",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fanta Orange 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/2f9ad39b-7b81-44c4-8b7a-fc60e16faa7b?v=3488904656",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pepsi 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/b1c292b0-8472-4b63-87b4-e1b1662b49c4?v=6287224717",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pepsi Diet 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/ef657288-21f2-4172-9851-2879e90ca34f?v=8622529992",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Canada Dry 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/925aa992-af7a-4ab0-bd52-58cbca1860fc?v=1201907842",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Dr Pepper 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/f11ce1a6-3b13-45a4-ae70-cc94e18bc33d?v=6052725217",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Manzanita Sol Red Apple 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mountain Dew 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "image": "https://static-content.owner.com/funnel/images/97ea07f9-08a9-46ba-a23a-d4f7740c532d",
+   "alcohol": false,
+   "src": "jsonld"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Mince & Cheese Pie [M]",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/a794749f-3c83-48ed-9ddc-91d5e5511ba8?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Butter Chicken Pie [BC]",
+    "desc": "",
+    "cents": 1100,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/d0212212-96cc-441f-8784-6941ea8ff23f?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Veggie Curry Pie [V]",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/68d7dcc0-815c-4954-9cc2-32baf3312269?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Smoked Pulled Pork [PP]",
+    "desc": "",
+    "cents": 1200,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/0ff01fc1-cc0f-414b-a18c-8b021a9766da?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Chocanana Pie [O]",
+    "desc": "",
+    "cents": 900,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/15a35652-a99d-4b37-84f4-927d24f37aee?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Smoked Bacon & Egg [B]",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/f0047efc-eab0-43d0-a260-b41b8ad13b03?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Homestyle Chicken [HC]",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/292d10fe-9b22-43dc-8971-44fd07ec18a7?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Beef Stew Pie [X]",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/aa0bcee9-0c78-44f4-a176-a27b3ab17a72?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2568 Springs Rd, Vallejo, CA"
+   },
+   {
+    "name": "Mama's Lamb Pie [L]",
+    "desc": "",
+    "cents": 1100,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/79cad03c-7dff-4b23-9952-748f29e14a58?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Savory Pies"
+   },
+   {
+    "name": "Pot Roast Pie [PR]",
+    "desc": "",
+    "cents": 1200,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/aa0f54a6-2f45-4142-871d-1b108213972f?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Savory Pies"
+   },
+   {
+    "name": "Pork Sausage Roll",
+    "desc": "",
+    "cents": 500,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/48c8bb84-b45a-4bce-a363-dd4ea745c660?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Sausage Rolls"
+   },
+   {
+    "name": "Lamb Sausage Roll",
+    "desc": "",
+    "cents": 500,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/048bcb95-6887-4876-88fa-aab0d95f76b1?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Sausage Rolls"
+   },
+   {
+    "name": "Pineapple Pie [P]",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/34f91a8b-b0a5-405f-a7be-41eb9c0d2a6e?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Dessert"
+   },
+   {
+    "name": "Banana Pudding Trifle",
+    "desc": "",
+    "cents": 600,
+    "image": "https://bulapiesfiji.com/pluto-images/replatedMenuPhotoV2/plating-v2.40.1/tB3jcz9ID6Th/Ququ7hoZgOaW-0a4136142ae19310.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Trifle Cake Cups"
+   },
+   {
+    "name": "Guava Strawberry Ripple",
+    "desc": "",
+    "cents": 650,
+    "image": "https://bulapiesfiji.com/pluto-images/replatedMenuPhotoV2/plating-v2.40.1/tB3jcz9ID6Th/cEigOA2L4C89-f9f3fd4a9272bf15.png?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Trifle Cake Cups"
+   },
+   {
+    "name": "Latte",
+    "desc": "",
+    "cents": 425,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/7290113b-5045-4c39-8cf8-38be078542e9?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Espresso Drinks"
+   },
+   {
+    "name": "Americano",
+    "desc": "",
+    "cents": 400,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/42e2020a-94b7-467e-bdee-3e1d914cdc73?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Espresso Drinks"
+   },
+   {
+    "name": "Mocha",
+    "desc": "",
+    "cents": 475,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/881d744c-2139-496d-b38f-b3fc88cc8644?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Espresso Drinks"
+   },
+   {
+    "name": "White Mocha",
+    "desc": "",
+    "cents": 475,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/42ce2b2f-2b58-463c-b756-06a82aeaa1d9?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Espresso Drinks"
+   },
+   {
+    "name": "Kumquat Limemade",
+    "desc": "",
+    "cents": 350,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/0cb2bc74-fe3f-4a0c-902e-76fa5dfe4e24?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty Drinks"
+   },
+   {
+    "name": "Nitro Hibiscus Tea Lemonade",
+    "desc": "",
+    "cents": 445,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/cbf8a9da-d375-4ca9-90ee-7325c4a302b5?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty Drinks"
+   },
+   {
+    "name": "Nitro Cold Brew",
+    "desc": "",
+    "cents": 425,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/d44a82c3-4931-48b9-aff9-b8ad1165de1a?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Specialty Drinks"
+   },
+   {
+    "name": "Coke 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/7192fd59-f5a0-4753-8235-f63400538136?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Sprite 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/9b7a8ab1-e700-4255-9959-5aede85c7b36?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Fanta Orange 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/2f9ad39b-7b81-44c4-8b7a-fc60e16faa7b?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Pepsi 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/b1c292b0-8472-4b63-87b4-e1b1662b49c4?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Pepsi Diet 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/ef657288-21f2-4172-9851-2879e90ca34f?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Canada Dry 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/925aa992-af7a-4ab0-bd52-58cbca1860fc?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Dr Pepper 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/f11ce1a6-3b13-45a4-ae70-cc94e18bc33d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Manzanita Sol Red Apple 12oz",
+    "desc": "",
+    "cents": 150,
+    "alcohol": false,
+    "src": "text",
+    "section": "Drinks"
+   },
+   {
+    "name": "Mountain Dew 12oz",
+    "desc": "",
+    "cents": 150,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/97ea07f9-08a9-46ba-a23a-d4f7740c532d?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Drinks"
+   },
+   {
+    "name": "Chicken Curry Pie",
+    "desc": "",
+    "cents": 1000,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/9bc53bc4-58fd-45ad-8dfd-24d6f3e96f80?w=480&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Read more"
+   },
+   {
+    "name": "Smoked Brisket Pie [SB]",
+    "desc": "",
+    "cents": 1200,
+    "image": "https://bulapiesfiji.com/pluto-images/funnel/images/6b3854be-deac-4391-8dac-2e7ea0d84fad?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Read more"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/29fe5dd1-ddcc-469c-abf1-ee843e48ed29?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best Bakery in Vallejo\nExperience the magic of Fiji in every delightful, flavorful bite!\nOrder onlin",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/04995d54-01a0-44cf-8850-f18238f57195?w=1400&fit=cover",
+   "alt": "",
+   "near": "Order From Our Website\nOrder directly from our website to save money in fees, get faster service, ea",
+   "w": 1280,
+   "h": 800,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/a36f046e-7773-4da5-8ccd-b5619863ac43?w=560&h=560&fit=cover",
+   "alt": "Your New Favorite Spot for Polynesian Delights!",
+   "near": "Your New Favorite Spot for Polynesian Delights!\nLocated at 2568 Springs Road in Vallejo, CA, Bula Pi",
+   "w": 560,
+   "h": 560,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/f3e365eb-4c3d-4413-8bcb-c3b471d6d545?w=405&h=405&format=auto&fit=cover",
+   "alt": "Unbaked Bula Pies with savory filling and shredded cheese, ready for the oven.",
+   "near": "Your Taste of Paradise\n\nHere’s a sneak peek of the items our customers can’t stop talking about",
+   "w": 405,
+   "h": 405,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/e5cc1f2e-6b62-401a-9389-4a83c33ec737?w=405&h=405&format=auto&fit=cover",
+   "alt": "Rows of uncooked Bula Pies Fiji pastry shells filled with savory meat and vegetable filling.",
+   "near": "Your Taste of Paradise\n\nHere’s a sneak peek of the items our customers can’t stop talking about",
+   "w": 405,
+   "h": 405,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/c2c4843f-7868-4f0f-a87a-7c729d86e340?w=405&h=405&format=auto&fit=cover",
+   "alt": "Rows of small, individual Bula Pies Fiji pastries filled with a golden, savory potato mixture.",
+   "near": "Your Taste of Paradise\n\nHere’s a sneak peek of the items our customers can’t stop talking about",
+   "w": 405,
+   "h": 405,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/a1dbaf43-18df-4f68-9c2b-7a0756d35206?w=405&h=405&format=auto&fit=cover",
+   "alt": "Four Bula Pies Fiji pastries with savory meat and vegetable filling in uncooked crusts.",
+   "near": "Your Taste of Paradise\n\nHere’s a sneak peek of the items our customers can’t stop talking about",
+   "w": 405,
+   "h": 405,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/67c6e96b-499e-42b9-aeb7-3ae2f6f4360b?w=405&h=405&format=auto&fit=cover",
+   "alt": "Unbaked Bula Pies with raw egg, bacon, and seasoning in a pastry shell, ready for baking.",
+   "near": "Your Taste of Paradise\n\nHere’s a sneak peek of the items our customers can’t stop talking about",
+   "w": 405,
+   "h": 405,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/5db06464-929d-44b6-9bd0-02453050e298?w=405&h=405&format=auto&fit=cover",
+   "alt": "Four uncooked Bula Pies Fiji pastries filled with a savory potato and vegetable mixture.",
+   "near": "Your Taste of Paradise\n\nHere’s a sneak peek of the items our customers can’t stop talking about",
+   "w": 405,
+   "h": 405,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/4dbb8e5f-915c-44b5-875b-e380572f4679?w=560&h=560&fit=cover",
+   "alt": "Discover Fijian Flavors",
+   "near": "Discover Fijian Flavors\nAt Bula Pies Fiji, we offer a menu packed with traditional Fijian and Polyne",
+   "w": 560,
+   "h": 560,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/6ff2297c-b607-403b-b3e6-8d8d799a10f8?w=560&h=560&fit=cover",
+   "alt": "Convenience at Its Best",
+   "near": "Convenience at Its Best\nWe know life gets busy, so we make it easy for you to enjoy our food. You ca",
+   "w": 560,
+   "h": 560,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/86aef98e-946e-4b88-93f0-7bacbebcf48e?w=560&h=560&fit=cover",
+   "alt": "Join Us Today!",
+   "near": "Join Us Today!\nBula Pies Fiji is not just a place to eat; it’s a place to enjoy good food and good t",
+   "w": 560,
+   "h": 560,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/4e4011e9-ff48-420d-958c-55b8886d070e?w=1400&fit=cover",
+   "alt": "",
+   "near": "Bula Pies Fiji Rewards\nJoin our rewards program to earn points, get free items, and stay up to date ",
+   "w": 1280,
+   "h": 800,
+   "page": "https://bulapiesfiji.com/"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/9b7a8ab1-e700-4255-9959-5aede85c7b36?w=640&fit=cover",
+   "alt": "Sprite 12oz",
+   "near": "Drinks in Vallejo\n\nExplore the full drinks menu at Bula Pies Fiji in Vallejo, CA, with convenient pi",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/0cb2bc74-fe3f-4a0c-902e-76fa5dfe4e24?w=480&fit=cover",
+   "alt": "Kumquat Limemade",
+   "near": "Kumquat Limemade\n\n$3.50\n\nHomemade kumquat limemade is sweetened with organic cane sugar.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/cbf8a9da-d375-4ca9-90ee-7325c4a302b5?w=480&fit=cover",
+   "alt": "Nitro Hibiscus Tea Lemonade",
+   "near": "Nitro Hibiscus Tea Lemonade\n\n$4.45\n\nNitro hibiscus tea, lemonade, and raspberry flavor combine in th",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/9b7a8ab1-e700-4255-9959-5aede85c7b36?w=480&fit=cover",
+   "alt": "Sprite 12oz",
+   "near": "Sprite 12oz\n\n$1.50\n\nA 12-ounce serving of Sprite offers lemon-lime flavor and carbonation.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/97ea07f9-08a9-46ba-a23a-d4f7740c532d?w=640&fit=cover",
+   "alt": "Mountain Dew 12oz",
+   "near": "Meet Bula Pies Fiji\n\nBula Pies Fiji in Vallejo, CA offers a satisfying drinks selection to complemen",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/925aa992-af7a-4ab0-bd52-58cbca1860fc?w=320&fit=cover",
+   "alt": "Canada Dry 12oz",
+   "near": "Canada Dry 12oz\n\n$1.50\n\nCanada Dry 12oz is a 12-ounce carbonated ginger ale soft drink.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/7192fd59-f5a0-4753-8235-f63400538136?w=320&fit=cover",
+   "alt": "Coke 12oz",
+   "near": "Coke 12oz\n\n$1.50\n\nCoke 12oz is a 12-ounce cola soft drink.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/f11ce1a6-3b13-45a4-ae70-cc94e18bc33d?w=320&fit=cover",
+   "alt": "Dr Pepper 12oz",
+   "near": "Dr Pepper 12oz\n\n$1.50\n\nA 12-ounce serving of Dr Pepper offers signature flavor and carbonation.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/2f9ad39b-7b81-44c4-8b7a-fc60e16faa7b?w=320&fit=cover",
+   "alt": "Fanta Orange 12oz",
+   "near": "Fanta Orange 12oz\n\n$1.50\n\nFanta Orange 12oz is a 12-ounce orange-flavored carbonated soda.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/97ea07f9-08a9-46ba-a23a-d4f7740c532d?w=320&fit=cover",
+   "alt": "Mountain Dew 12oz",
+   "near": "Mountain Dew 12oz\n\n$1.50\n\nMountain Dew 12oz is a carbonated citrus-flavored soft drink.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/b1c292b0-8472-4b63-87b4-e1b1662b49c4?w=320&fit=cover",
+   "alt": "Pepsi 12oz",
+   "near": "Pepsi 12oz\n\n$1.50\n\nA 12-ounce serving of Pepsi provides cola flavor and carbonation.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/ef657288-21f2-4172-9851-2879e90ca34f?w=320&fit=cover",
+   "alt": "Pepsi Diet 12oz",
+   "near": "Pepsi Diet 12oz\n\n$1.50\n\nPepsi Diet 12oz is a 12-ounce diet cola soft drink.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/drinks"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/aa0f54a6-2f45-4142-871d-1b108213972f?w=640&fit=cover",
+   "alt": "Pot Roast Pie [PR]",
+   "near": "Pastries in Vallejo\n\nExplore the pastries menu at Bula Pies Fiji in Vallejo, CA, and enjoy your favo",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/d0212212-96cc-441f-8784-6941ea8ff23f?w=480&fit=cover",
+   "alt": "Butter Chicken Pie [BC]",
+   "near": "Butter Chicken Pie [BC]\n\n$11.00\n\nCreamy butter chicken with gentle heat fills this flaky savory pie.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/292d10fe-9b22-43dc-8971-44fd07ec18a7?w=480&fit=cover",
+   "alt": "Homestyle Chicken [HC]",
+   "near": "Homestyle Chicken [HC]\n\n$10.00\n\nCreamy chicken and broccoli fill a flaky-crusted savory pie.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/9bc53bc4-58fd-45ad-8dfd-24d6f3e96f80?w=480&fit=cover",
+   "alt": "Chicken Curry Pie",
+   "near": "Chicken Curry Pie\n\n$10.00\n\nGround chicken and fragrant spices fill this flaky curry pie.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/292d10fe-9b22-43dc-8971-44fd07ec18a7?w=640&fit=cover",
+   "alt": "Homestyle Chicken [HC]",
+   "near": "From the Kitchen at Bula Pies Fiji\n\nBula Pies Fiji in Vallejo, CA brings a satisfying pastries selec",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/048bcb95-6887-4876-88fa-aab0d95f76b1?w=320&fit=cover",
+   "alt": "Lamb Sausage Roll",
+   "near": "Lamb Sausage Roll\n\n$5.00\n\nHalal lamb sausage wrapped in buttery, flaky pastry makes this savory roll",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/79cad03c-7dff-4b23-9952-748f29e14a58?w=320&fit=cover",
+   "alt": "Mama's Lamb Pie [L]",
+   "near": "Mama's Lamb Pie [L]\n\n$11.00\n\nGround lamb, sweet potato, and vegetables fill this savory pie.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/34f91a8b-b0a5-405f-a7be-41eb9c0d2a6e?w=320&fit=cover",
+   "alt": "Pineapple Pie [P]",
+   "near": "Pineapple Pie [P]\n\n$10.00\n\nCaramelized pineapple with cinnamon fills a buttery, flaky crust.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/48c8bb84-b45a-4bce-a363-dd4ea745c660?w=320&fit=cover",
+   "alt": "Pork Sausage Roll",
+   "near": "Pork Sausage Roll\n\n$5.00\n\nPork sausage is wrapped in buttery, flaky pastry for this savory roll.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/aa0f54a6-2f45-4142-871d-1b108213972f?w=320&fit=cover",
+   "alt": "Pot Roast Pie [PR]",
+   "near": "Pot Roast Pie [PR]\n\n$12.00\n\nBraised beef and carrots slow-cooked in red wine inside a pastry crust.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/pastries"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/881d744c-2139-496d-b38f-b3fc88cc8644?w=640&fit=cover",
+   "alt": "Mocha",
+   "near": "Coffee in Vallejo\n\nExplore the coffee selection at Bula Pies Fiji in Vallejo, CA, with convenient pi",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/42ce2b2f-2b58-463c-b756-06a82aeaa1d9?w=480&fit=cover",
+   "alt": "White Mocha",
+   "near": "White Mocha\n\n$4.75+\n\nEspresso with white chocolate syrup, steamed milk, plus whipped cream.",
+   "w": 422,
+   "h": 421,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/7290113b-5045-4c39-8cf8-38be078542e9?w=480&fit=cover",
+   "alt": "Latte",
+   "near": "Latte\n\n$4.25+\n\nEspresso with steamed milk; choose almond, low-fat, or whole milk.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/881d744c-2139-496d-b38f-b3fc88cc8644?w=480&fit=cover",
+   "alt": "Mocha",
+   "near": "Mocha\n\n$4.75+\n\nEspresso with dark chocolate syrup, steamed milk, plus whipped cream.",
+   "w": 422,
+   "h": 422,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/7290113b-5045-4c39-8cf8-38be078542e9?w=640&fit=cover",
+   "alt": "Latte",
+   "near": "Prepared the Bula Pies Fiji Way\n\nBula Pies Fiji in Vallejo, CA offers a satisfying coffee menu with ",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/42e2020a-94b7-467e-bdee-3e1d914cdc73?w=320&fit=cover",
+   "alt": "Americano",
+   "near": "Americano\n\n$4.00\n\nEspresso shots topped with hot water make this customizable coffee drink.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/d44a82c3-4931-48b9-aff9-b8ad1165de1a?w=320&fit=cover",
+   "alt": "Nitro Cold Brew",
+   "near": "Nitro Cold Brew\n\n$4.25\n\nCold brew infused with nitro for a smooth, stronger coffee.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/drinks/coffee"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/aa0bcee9-0c78-44f4-a176-a27b3ab17a72?w=640&fit=cover",
+   "alt": "Beef Stew Pie [X]",
+   "near": "Halal Food in Vallejo\n\nExplore halal food at Bula Pies Fiji in Vallejo, CA, with savory pies availab",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/food/halal-food"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/aa0bcee9-0c78-44f4-a176-a27b3ab17a72?w=320&fit=cover",
+   "alt": "Beef Stew Pie [X]",
+   "near": "Beef Stew Pie [X]\n\n$10.00\n\nHalal ground beef, peas, carrots, and potatoes fill this savory pie.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/halal-food"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/a794749f-3c83-48ed-9ddc-91d5e5511ba8?w=320&fit=cover",
+   "alt": "Mince & Cheese Pie [M]",
+   "near": "Mince & Cheese Pie [M]\n\n$10.00\n\nMinced meat and melted cheese fill this halal pie with a golden crus",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/halal-food"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/6b3854be-deac-4391-8dac-2e7ea0d84fad?w=320&fit=cover",
+   "alt": "Smoked Brisket Pie [SB]",
+   "near": "Smoked Brisket Pie [SB]\n\n$12.00\n\nA halal savory pie filled with smoky brisket and savory seasoning.",
+   "w": 320,
+   "h": 320,
+   "page": "https://bulapiesfiji.com/food/halal-food"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/a794749f-3c83-48ed-9ddc-91d5e5511ba8?w=640&fit=cover",
+   "alt": "Mince & Cheese Pie [M]",
+   "near": "Welcome to Bula Pies Fiji\n\nBula Pies Fiji brings a satisfying selection of halal food to Vallejo, CA",
+   "w": 640,
+   "h": 640,
+   "page": "https://bulapiesfiji.com/food/halal-food"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/29fe5dd1-ddcc-469c-abf1-ee843e48ed29?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best lunch in Vallejo, CA.\nDelicious Lunch Options Await",
+   "w": 1920,
+   "h": 1200,
+   "page": "https://bulapiesfiji.com/tags/lunch"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/funnel/images/d0212212-96cc-441f-8784-6941ea8ff23f?w=560&h=560&fit=cover",
+   "alt": "Savor Your Lunch with Us",
+   "near": "Savor Your Lunch with Us\nOur lunch menu features a delightful array of options that cater to every p",
+   "w": 560,
+   "h": 560,
+   "page": "https://bulapiesfiji.com/tags/lunch"
+  },
+  {
+   "src": "https://bulapiesfiji.com/pluto-images/delivery-bag-photo.png?w=560&h=560&fit=cover",
+   "alt": "Convenient Delivery and Pickup",
+   "near": "Convenient Delivery and Pickup\nWe offer flexible delivery and pickup options to make enjoying your l",
+   "w": 560,
+   "h": 560,
+   "page": "https://bulapiesfiji.com/tags/lunch"
+  }
+ ]
+}

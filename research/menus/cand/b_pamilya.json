@@ -1,0 +1,668 @@
+{
+ "id": "b_pamilya",
+ "source": "text",
+ "alt": {
+  "jsonld": 4
+ },
+ "pages": [
+  "https://pamilyakitchen.com/",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd",
+  "https://pamilyakitchen.com/contact/",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-fried-milkfish-bangus_9629df35-016b-4d2c-b796-0a7aebdefb7f",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-siomai-pork-shrimp-4pcs_4a5fb7dc-381f-479c-8414-393d3efd0966",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-chicken-empanadas-3pcs_83d0bdab-e42b-4d16-9a9d-c87610ea3dd8",
+  "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-lobster-balls-4pc_82888c62-851e-4d5b-82c5-0619c77b9e40"
+ ],
+ "pdfs": [
+  "https://fisherman.gumlet.io/public/pamilyamodernfilipinocomfortfood/Full_Menu_1.pdf",
+  "https://fisherman.gumlet.io/public/pamilyamodernfilipinocomfortfood/Catering_Menu_1.pdf",
+  "https://fisherman.gumlet.io/public/pamilyamodernfilipinocomfortfood/Catering_Menu.pdf"
+ ],
+ "items": [
+  {
+   "name": "Fried Milkfish Bangus",
+   "desc": "",
+   "cents": 1399,
+   "alcohol": false,
+   "src": "text",
+   "section": "ASAP"
+  },
+  {
+   "name": "Siomai (Pork & Shrimp) 4pcs",
+   "desc": "Steamed Dumplings 4pcs.",
+   "cents": 595,
+   "alcohol": false,
+   "src": "text",
+   "section": "ASAP"
+  },
+  {
+   "name": "3pcs",
+   "desc": "",
+   "cents": 649,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Empanadas 3pcs"
+  },
+  {
+   "name": "Lobster Balls 4pc",
+   "desc": "",
+   "cents": 695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Empanadas 3pcs"
+  },
+  {
+   "name": "Pork & Shrimp Lumpia 5pc",
+   "desc": "",
+   "cents": 549,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Empanadas 3pcs"
+  },
+  {
+   "name": "Ilocos Empanada 1pc",
+   "desc": "1 pc",
+   "cents": 1199,
+   "image": "https://d1w7312wesee68.cloudfront.net/MavAsc9tbJMqf1hi31gEVZVYMPqPEblSlNjEM4wCiao/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/1123748b-038e-4fd7-a2c9-22b2aaf39dfc/MenuItem/fa91f822-bf9c-4d73-bcc3-2f897d44a414.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Ilocos Empanada 1pc"
+  },
+  {
+   "name": "Bowl",
+   "desc": "",
+   "cents": 1799,
+   "alcohol": false,
+   "src": "text",
+   "section": "Plates & Bowls"
+  },
+  {
+   "name": "1 Entree Plate + Side Appetizer",
+   "desc": "",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "Plates & Bowls"
+  },
+  {
+   "name": "2 Entree Plate + Side Appetizer",
+   "desc": "",
+   "cents": 2400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Plates & Bowls"
+  },
+  {
+   "name": "Longanisa Silog",
+   "desc": "Filipino breakfast sausage served with garlic rice & 2 sunny side up egg, ensalada, atchara (pickled veggies)",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Spam Silog",
+   "desc": "Tocino Spam served with garlic rice & 2 sunny side up eggs, ensalada, and atchara (pickled veggies)",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Pork Tocino Silog",
+   "desc": "Pork Tocino served with garlic rice & 2 sunny side up eggs, ensalada, and atchara (pickled veggies)",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Fried Bangus Silog",
+   "desc": "Fried Milkfish (Bangus) served with garlic rice & 2 sunny side up eggs, ensalada, atchara (pickled veggies)",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "All Day Breakfast"
+  },
+  {
+   "name": "Sinigang Soup 32oz",
+   "desc": "",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sinigang"
+  },
+  {
+   "name": "Goldilocks Dinuguan",
+   "desc": "",
+   "cents": 2499,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Goldilocks Bopis",
+   "desc": "",
+   "cents": 2599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Goldilocks Pinapaitan",
+   "desc": "",
+   "cents": 2499,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Manila Chicken BBQ",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Kuya's Pork BBQ",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Boneless Chicken Adobo",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Honey Fried Chicken Bites",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Crispy Pork Sisig",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Bangus Sisig",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Bicol Express",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Beef Steak Tagalog",
+   "desc": "",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Beef Kalderetta",
+   "desc": "",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "El Nido Garlic Shrimp",
+   "desc": "",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Longanisa 3pc",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Pork Tocino",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "White Rice",
+   "desc": "",
+   "cents": 549,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Garlic Rice",
+   "desc": "",
+   "cents": 725,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Pancit",
+   "desc": "",
+   "cents": 925,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Fried Plantain",
+   "desc": "",
+   "cents": 100,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Lechon Kawali",
+   "desc": "",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Veggie Stir Fry",
+   "desc": "",
+   "cents": 725,
+   "alcohol": false,
+   "src": "text",
+   "section": "Frozen Delicacies"
+  },
+  {
+   "name": "Wawa's Banana Bread",
+   "desc": "",
+   "cents": 1595,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Polvoron Assorted",
+   "desc": "",
+   "cents": 975,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Ube Pillows Party",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Garlic Peanuts",
+   "desc": "",
+   "cents": 525,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Choc Nut",
+   "desc": "",
+   "cents": 425,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Oishi Salt & Vinegar Cracklings",
+   "desc": "",
+   "cents": 349,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Lychee",
+   "desc": "",
+   "cents": 949,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Strawberry Guava",
+   "desc": "",
+   "cents": 949,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Toffee Peanuts",
+   "desc": "",
+   "cents": 599,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Passion Orange",
+   "desc": "",
+   "cents": 949,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "NOMS Banana Lumpia",
+   "desc": "",
+   "cents": 975,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Boy Bawang Cornick Garlic",
+   "desc": "",
+   "cents": 199,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Boy Bawang Cornick BBQ",
+   "desc": "",
+   "cents": 199,
+   "alcohol": false,
+   "src": "text",
+   "section": "Filipino Snacks & Treats"
+  },
+  {
+   "name": "Ube Jelly Salad",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Halo Halo",
+   "desc": "",
+   "cents": 1075,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Mom & Jaeca's Perfect Cake",
+   "desc": "",
+   "cents": 899,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Mango Jello",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Sweet Corn Bibinka Mochi",
+   "desc": "",
+   "cents": 249,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Wawa's Banana Bread Slice",
+   "desc": "",
+   "cents": 399,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Sylvanna",
+   "desc": "",
+   "cents": 475,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Mango Calamansi Boba",
+   "desc": "",
+   "cents": 675,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Sanzo",
+   "desc": "",
+   "cents": 350,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Bottled Water",
+   "desc": "",
+   "cents": 225,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "C20 Coconut Water",
+   "desc": "",
+   "cents": 495,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 325,
+   "image": "https://d1w7312wesee68.cloudfront.net/9jLDrWCN8-K7AFqZw5dcDzxE0awbePzB2I455OIpBKQ/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Coca-Cola_Fountain.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 325,
+   "image": "https://d1w7312wesee68.cloudfront.net/-9aKbjm4JGBExLa3KA_cQ1GRImhfIzZgPjUjRsdAiO8/resize:fit:360:360/plain/s3://toasttab/restaurants/brand/coca-cola/Diet_Coke_Fountain.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Desserts"
+  },
+  {
+   "name": "Sprite",
+   "desc": "Classic, cool, crisp lemon-lime flavored taste that's caffeine free",
+   "cents": 325,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Calamansi Juice",
+   "desc": "",
+   "cents": 325,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Watermelon Calamansi",
+   "desc": "",
+   "cents": 525,
+   "alcohol": false,
+   "src": "text",
+   "section": "Desserts"
+  },
+  {
+   "name": "Chicken Empanadas 3pcs",
+   "desc": "",
+   "cents": 649,
+   "alcohol": false,
+   "src": "text",
+   "section": "Do Not Sell My Personal Information"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Fried Milkfish Bangus",
+    "desc": "",
+    "cents": 1399,
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Siomai (Pork & Shrimp) 4pcs",
+    "desc": "Steamed Dumplings 4pcs.",
+    "cents": 595,
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Chicken Empanadas 3pcs",
+    "desc": "3pcs",
+    "cents": 649,
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Lobster Balls 4pc",
+    "desc": "",
+    "cents": 695,
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://pamilyakitchen.com/static/fa499e5bb0ba40f817bd946ac506afa7/1e947/Pamilya_2.webp",
+   "alt": "",
+   "near": "Order Online\nCatering Form\nFull Menu\nCatering Menu\nREVIEWS\nKatie\nThe Empanadas and Lumpia are my fav",
+   "w": 1280,
+   "h": 852,
+   "page": "https://pamilyakitchen.com/"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/0062785f-97db-42ea-ac41-0e537b8c8c39.png",
+   "alt": "",
+   "near": "",
+   "w": 968,
+   "h": 856,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/Zub2vk16N45a8RG9QXVB52PAhTA4SDLFGCSdXwrhytk/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/PamilyaRestaurantB20240428124429.jpeg",
+   "alt": "",
+   "near": "Pamilya 756 Woodside Rd\n756 Woodside Rd, Redwood City, CA\nDelivery\nPickup\nPickup from 756 Woodside R",
+   "w": 1280,
+   "h": 960,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/0062785f-97db-42ea-ac41-0e537b8c8c39.png",
+   "alt": "",
+   "near": "",
+   "w": 968,
+   "h": 856,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-fried-milkfish-bangus_9629df35-016b-4d2c-b796-0a7aebdefb7f"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/Zub2vk16N45a8RG9QXVB52PAhTA4SDLFGCSdXwrhytk/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/PamilyaRestaurantB20240428124429.jpeg",
+   "alt": "",
+   "near": "Pamilya 756 Woodside Rd\n756 Woodside Rd, Redwood City, CA\nDelivery\nPickup\nPickup from 756 Woodside R",
+   "w": 1280,
+   "h": 960,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-fried-milkfish-bangus_9629df35-016b-4d2c-b796-0a7aebdefb7f"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/0062785f-97db-42ea-ac41-0e537b8c8c39.png",
+   "alt": "",
+   "near": "",
+   "w": 968,
+   "h": 856,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-siomai-pork-shrimp-4pcs_4a5fb7dc-381f-479c-8414-393d3efd0966"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/Zub2vk16N45a8RG9QXVB52PAhTA4SDLFGCSdXwrhytk/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/PamilyaRestaurantB20240428124429.jpeg",
+   "alt": "",
+   "near": "Pamilya 756 Woodside Rd\n756 Woodside Rd, Redwood City, CA\nDelivery\nPickup\nPickup from 756 Woodside R",
+   "w": 1280,
+   "h": 960,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-siomai-pork-shrimp-4pcs_4a5fb7dc-381f-479c-8414-393d3efd0966"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/0062785f-97db-42ea-ac41-0e537b8c8c39.png",
+   "alt": "",
+   "near": "",
+   "w": 968,
+   "h": 856,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-chicken-empanadas-3pcs_83d0bdab-e42b-4d16-9a9d-c87610ea3dd8"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/Zub2vk16N45a8RG9QXVB52PAhTA4SDLFGCSdXwrhytk/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/PamilyaRestaurantB20240428124429.jpeg",
+   "alt": "",
+   "near": "Pamilya 756 Woodside Rd\n756 Woodside Rd, Redwood City, CA\nDelivery\nPickup\nPickup from 756 Woodside R",
+   "w": 1280,
+   "h": 960,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-chicken-empanadas-3pcs_83d0bdab-e42b-4d16-9a9d-c87610ea3dd8"
+  },
+  {
+   "src": "https://d28f3w0x9i80nq.cloudfront.net/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/0062785f-97db-42ea-ac41-0e537b8c8c39.png",
+   "alt": "",
+   "near": "",
+   "w": 968,
+   "h": 856,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-lobster-balls-4pc_82888c62-851e-4d5b-82c5-0619c77b9e40"
+  },
+  {
+   "src": "https://d1w7312wesee68.cloudfront.net/Zub2vk16N45a8RG9QXVB52PAhTA4SDLFGCSdXwrhytk/ext:webp/quality:85/preset:xl/plain/s3://toast-sites-resources-prod/restaurantImages/f35bc79f-5352-4bc4-8609-96045689293c/PamilyaRestaurantB20240428124429.jpeg",
+   "alt": "",
+   "near": "Pamilya 756 Woodside Rd\n756 Woodside Rd, Redwood City, CA\nDelivery\nPickup\nPickup from 756 Woodside R",
+   "w": 1280,
+   "h": 960,
+   "page": "https://order.toasttab.com/online/pamilya-756-woodside-rd/item-lobster-balls-4pc_82888c62-851e-4d5b-82c5-0619c77b9e40"
+  }
+ ]
+}

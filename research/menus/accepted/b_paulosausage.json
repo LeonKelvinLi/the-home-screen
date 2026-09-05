@@ -1,0 +1,45 @@
+{
+ "id": "b_paulosausage",
+ "source": "square",
+ "pages": [
+  "https://www.paulosausageco.com/",
+  "https://www.paulosausageco.com/sandwich-pre-order"
+ ],
+ "items": [
+  {
+   "name": "Italian Dip",
+   "desc": "Savor the rich flavors of our Italian Dip Sandwich, featuring a blend of Italian pork and beef sausage, sautéed onions, roasted garlic, and mushrooms",
+   "cents": 1500,
+   "section": "Sandwiches",
+   "photo": "paulosausage-italian-dip"
+  },
+  {
+   "name": "Meatball Sub",
+   "desc": "Sink your teeth into this hearty classic featuring our tender, flavorful meatballs simmered in our vodka cream tomato sauce",
+   "cents": 1550,
+   "section": "Sandwiches",
+   "photo": "paulosausage-meatball-sub"
+  },
+  {
+   "name": "Ham & Burrata",
+   "desc": "Indulge in a delightful blend of flavors with our Ham & Burrata Sandwich",
+   "cents": 1600,
+   "section": "Sandwiches",
+   "photo": "paulosausage-ham-burrata"
+  },
+  {
+   "name": "Italian Cold Cut",
+   "desc": "Enjoy a classic Italian cold cut sandwich stacked with capicola, salami, pepperoni, ham, and provolone all served on our freshly baked focaccia",
+   "cents": 2000,
+   "section": "Sandwiches",
+   "photo": "paulosausage-italian-cold-cut"
+  },
+  {
+   "name": "Salami & Stuffed Pepperoncini",
+   "desc": "Enjoy the bold flavors of savory salami paired with cream cheese stuffed pepperoncini, fresh arugula, & ripe tomato, all balanced with a touch of creamy mayo",
+   "cents": 1550,
+   "section": "Sandwiches",
+   "photo": "paulosausage-salami-stuffed-pepperoncini"
+  }
+ ]
+}

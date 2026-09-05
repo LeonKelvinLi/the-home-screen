@@ -1,0 +1,382 @@
+{
+ "id": "b_karamsf",
+ "source": "text",
+ "pages": [
+  "https://www.karam-sf.com/",
+  "https://www.toasttab.com/local/order/karam-mediterranean-1725-polk-street",
+  "https://www.karam-sf.com/menu"
+ ],
+ "items": [
+  {
+   "name": "Hummus",
+   "desc": "Organic garbanzo beans,tahini, lemon juice, Olive Oil",
+   "cents": 900,
+   "section": "Appetizers",
+   "photo": "karamsf-hummus"
+  },
+  {
+   "name": "Humus/bayrooty",
+   "desc": "Organic Garbanzo Beans, Parsley, Garlic, Tahini, Lemon Juice, Olive Oil",
+   "cents": 1000,
+   "section": "Appetizers",
+   "photo": "karamsf-humus-bayrooty"
+  },
+  {
+   "name": "Baba Ghanouj",
+   "desc": "Smoked Eggplant, Garlic, Tahini, Olive Oil",
+   "cents": 1000,
+   "section": "Appetizers",
+   "photo": "karamsf-baba-ghanouj"
+  },
+  {
+   "name": "Muhamara",
+   "desc": "Sweet Red Peppers, Walnuts, Burgle (Crushed Wheat ) Olive Oil",
+   "cents": 1200,
+   "section": "Appetizers",
+   "photo": "karamsf-muhamara"
+  },
+  {
+   "name": "Labni B Khyar",
+   "desc": "Cucumber, Yogurt, Mint, Olive Oil",
+   "cents": 1200,
+   "section": "Appetizers",
+   "photo": "karamsf-labni-b-khyar"
+  },
+  {
+   "name": "Warak Enab",
+   "desc": "Grape leaves stuffed with rice, parsley, mint, olive oil lemon juice",
+   "cents": 1100,
+   "section": "Appetizers",
+   "photo": "karamsf-warak-enab"
+  },
+  {
+   "name": "Kabis Mix",
+   "desc": "Mixed Pickles, Turnip, Cucumber Pickels, Olive",
+   "cents": 900,
+   "section": "Appetizers",
+   "photo": "karamsf-kabis-mix"
+  },
+  {
+   "name": "Falafel",
+   "desc": "Organic Garbanzo And Fava Beans, Onions, Garlic, Parsley",
+   "cents": 1200,
+   "section": "Appetizers",
+   "photo": "karamsf-falafel"
+  },
+  {
+   "name": "Halloumi Cheese",
+   "desc": "Flat Melted, Cucumber, Mint, Tomatoes",
+   "cents": 1400,
+   "section": "Appetizers",
+   "photo": "karamsf-halloumi-cheese"
+  },
+  {
+   "name": "Zahraa (Cauliflower)",
+   "desc": "Deep Fried With Garlic & Tahini Sauce",
+   "cents": 1300,
+   "section": "Appetizers",
+   "photo": "karamsf-zahraa-cauliflower"
+  },
+  {
+   "name": "Hummus Shawerma Lamb or Chicken",
+   "desc": "Organic Garbanzo Beans, Tahini Sauce, & Shaved Beef & Lam Or Chicken Shawarma",
+   "cents": 1700,
+   "section": "Appetizers",
+   "photo": "karamsf-hummus-shawerma-lamb-or-chicken"
+  },
+  {
+   "name": "Beef & Lamb Shawerma",
+   "desc": "Marinated Beef& Lamb Slowly Roasted, {Served With Rice, Salad & Humus}",
+   "cents": 2400,
+   "section": "Wrap Sajj Bread",
+   "photo": "karamsf-beef-lamb-shawerma"
+  },
+  {
+   "name": "Beef & Lamb Shawerma Arabic Style",
+   "desc": "Served With Salad, French Fries, Pickles",
+   "cents": 2400,
+   "section": "Wrap Sajj Bread",
+   "photo": "karamsf-beef-lamb-shawerma-arabic-style"
+  },
+  {
+   "name": "Chicken Shawarma",
+   "desc": "Chaved Chicken Slowly Roasted, Pickles, Lettuce, Garlic Sauces",
+   "cents": 1500,
+   "section": "Wrap Sajj Bread",
+   "photo": "karamsf-chicken-shawarma"
+  },
+  {
+   "name": "Chicken Shawerma Arabic Style",
+   "desc": "Served With Salad, French Fries, Pickles",
+   "cents": 2300,
+   "section": "Wrap Sajj Bread"
+  },
+  {
+   "name": "Falafel Wrap",
+   "desc": "Lettuce, Tomato, Pickles, Tahini Sauce",
+   "cents": 1500,
+   "section": "Wrap Sajj Bread",
+   "photo": "karamsf-falafel-wrap"
+  },
+  {
+   "name": "Tabouli",
+   "desc": "Parsley, Onion, Tomatoes, Bulgur (Crushed What Olive Oil, Lemon Juice",
+   "cents": 1300,
+   "section": "Salads",
+   "photo": "karamsf-tabouli"
+  },
+  {
+   "name": "Fattouch",
+   "desc": "Lettuce, Cucumber, Tomatoes, Mint, Onion, Radishes, Italian Parsley, Bell Peppers, Oregano, Croutons, Lemon Juice & Pomegranate",
+   "cents": 1400,
+   "section": "Salads",
+   "photo": "karamsf-fattouch"
+  },
+  {
+   "name": "Arabic Salad",
+   "desc": "Lettuce, Cucumber, Tomatoes, Mint, Onion, Parsley, Lemon Juice & Olive Oil",
+   "cents": 1400,
+   "section": "Salads",
+   "photo": "karamsf-arabic-salad"
+  },
+  {
+   "name": "Ribeye Steak",
+   "desc": "Tender Juicy Grilled steak With Secret Spices, {Served With Fries & Salad}",
+   "cents": 4000,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-ribeye-steak"
+  },
+  {
+   "name": "Chicken Shawerma",
+   "desc": "Marinated Chicken Slowly Roasted {Served With Rice, Salad & Humus}",
+   "cents": 2300,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-chicken-shawerma"
+  },
+  {
+   "name": "Shish Taouk",
+   "desc": "Cubes Of Grilled Chicken Breast {Served With Rice, Salad & Humus}",
+   "cents": 2200,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-shish-taouk"
+  },
+  {
+   "name": "Kafta Kebab",
+   "desc": "Minced Beef & Lamb With Blended Herbs {Served With Rice, Salad & Humus}",
+   "cents": 2200,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-kafta-kebab"
+  },
+  {
+   "name": "Lamb Shish Kabab",
+   "desc": "Cubes Of Grilled Dry Age Lamb {Served With Rice, Salad & Humus}",
+   "cents": 2500,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-lamb-shish-kabab"
+  },
+  {
+   "name": "Beef Shish Kabab",
+   "desc": "Cubes Grilled Filet Mignon (Served With Rice, Salad & Humus}",
+   "cents": 2500,
+   "section": "Entree Mashawe"
+  },
+  {
+   "name": "Combo Kebab",
+   "desc": "Chicken, Kafta & Choice Of Lamb Or Beef {Served With Rice, Salad & Humus}",
+   "cents": 2800,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-combo-kebab"
+  },
+  {
+   "name": "Reyash",
+   "desc": "Rib Cut Grilled Domestic Rack Of Lamb {Served With Rice, Salad & Humus}",
+   "cents": 3000,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-reyash"
+  },
+  {
+   "name": "Jawanih Chicken Wings",
+   "desc": "Marinated With Garlic, Lemon Juice, House Made Hot Sauce {Served With Salad, French Fries & Humus}",
+   "cents": 2200,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-jawanih-chicken-wings"
+  },
+  {
+   "name": "Farooj Meshwe (Grilled Half Chicken)",
+   "desc": "Grilled Chicken Marinate with Garlic, Lemon Juice, Hot Sauce {Served With Humus, Salad, and French Fries)",
+   "cents": 2300,
+   "section": "Entree Mashawe",
+   "photo": "karamsf-farooj-meshwe-grilled-half-chicken"
+  },
+  {
+   "name": "Dawood Basha",
+   "desc": "Sautéed Meat Balls, Onion, Tomato Sauce, {Served With Rice}",
+   "cents": 2500,
+   "section": "Tabekh Stew",
+   "photo": "karamsf-dawood-basha"
+  },
+  {
+   "name": "Okra Lamb Shank",
+   "desc": "Sautéed Okra, Tomatoes, Cilantro, Garlic With Lamb Shank (Served With Rice}",
+   "cents": 3000,
+   "section": "Tabekh Stew",
+   "photo": "karamsf-okra-lamb-shank"
+  },
+  {
+   "name": "Kabab Halabi Spicy",
+   "desc": "Ground Lamb, Onions, Parsley, Garlic & Tomato Sauce {Served With Rice}",
+   "cents": 2500,
+   "section": "Tabekh Stew",
+   "photo": "karamsf-kabab-halabi-spicy"
+  },
+  {
+   "name": "Fasolia - Kidney Beans",
+   "desc": "Kidney Beans, Onions, Tomato, Garlic, Lamb Shank (Served With Rice}",
+   "cents": 3000,
+   "section": "Tabekh Stew",
+   "photo": "karamsf-fasolia-kidney-beans"
+  },
+  {
+   "name": "Veggie Okra",
+   "desc": "Sautéed Okra, Tomatoes, Cilantro, Garlic {Served With Rice}",
+   "cents": 2400,
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Moo-jadarra",
+   "desc": "Rice & Lentils Cooked On Slow Heat, Garnished With Caramelized Onion & Cumin {Served With Salad}",
+   "cents": 2200,
+   "section": "Vegetarian Dishes",
+   "photo": "karamsf-moo-jadarra"
+  },
+  {
+   "name": "Falafel Plate",
+   "desc": "Organic Garbanzo, Tahini Sauce, {Served With Humus), Baba Ghanouj, Salad, & Pickles",
+   "cents": 2200,
+   "section": "Vegetarian Dishes",
+   "photo": "karamsf-falafel-plate"
+  },
+  {
+   "name": "Chicken/Beef Skewer",
+   "desc": "",
+   "cents": 800,
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Kafta Skewer",
+   "desc": "",
+   "cents": 800,
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Lamb Skewer",
+   "desc": "",
+   "cents": 800,
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Rack of Lamb",
+   "desc": "",
+   "cents": 800,
+   "section": "Vegetarian Dishes",
+   "photo": "karamsf-rack-of-lamb"
+  },
+  {
+   "name": "Pita Basket Homemade",
+   "desc": "",
+   "cents": 500,
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "Rice Bowl",
+   "desc": "",
+   "cents": 800,
+   "section": "Vegetarian Dishes"
+  },
+  {
+   "name": "French Fries",
+   "desc": "",
+   "cents": 800,
+   "section": "Vegetarian Dishes",
+   "photo": "karamsf-french-fries"
+  },
+  {
+   "name": "Basbousa",
+   "desc": "",
+   "cents": 800,
+   "section": "Desserts"
+  },
+  {
+   "name": "Mabroume",
+   "desc": "",
+   "cents": 700,
+   "section": "Desserts"
+  },
+  {
+   "name": "Pistachio Baklava",
+   "desc": "",
+   "cents": 600,
+   "section": "Desserts"
+  },
+  {
+   "name": "Walnut Baklava",
+   "desc": "",
+   "cents": 600,
+   "section": "Desserts"
+  },
+  {
+   "name": "Coke",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Zero Coke",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Sprite",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Fanta",
+   "desc": "",
+   "cents": 300,
+   "section": "Drinks"
+  },
+  {
+   "name": "Fresh Lemonade",
+   "desc": "",
+   "cents": 600,
+   "section": "Drinks"
+  },
+  {
+   "name": "Yogurt Drink",
+   "desc": "",
+   "cents": 600,
+   "section": "Drinks"
+  },
+  {
+   "name": "Iced Tea",
+   "desc": "",
+   "cents": 600,
+   "section": "Drinks"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 500,
+   "section": "Drinks"
+  }
+ ]
+}

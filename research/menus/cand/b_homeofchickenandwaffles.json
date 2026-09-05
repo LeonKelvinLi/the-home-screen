@@ -1,0 +1,1689 @@
+{
+ "id": "b_homeofchickenandwaffles",
+ "source": "text",
+ "alt": {
+  "jsonld": 83
+ },
+ "pages": [
+  "https://homeofchickenandwaffles.com/",
+  "https://homeofchickenandwaffles.com/-cater?source=pop_up&spot_id=159557&destination=catering&promotion=catering",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-drink-menu",
+  "https://reserve.spoton.com/restaurant/70092#",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-cater",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-catering"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Karmel Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Pineapple Coconut Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Chocolate Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Sock It To Me Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "German Chocolate Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Marble Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Sweet Potato Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Red Velvet Cake",
+   "desc": "",
+   "cents": 5999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Pecan Pie",
+   "desc": "",
+   "cents": 3499,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Sweet Potato Pie",
+   "desc": "",
+   "cents": 2999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Half pan $89.99 | Full pan",
+   "desc": "",
+   "cents": 14999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Chicken Strips"
+  },
+  {
+   "name": "Half pan $69.99 | Full pan",
+   "desc": "",
+   "cents": 12999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Greens"
+  },
+  {
+   "name": "Half pan $69.99 | Full pan",
+   "desc": "",
+   "cents": 10999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Black Eyed Peas"
+  },
+  {
+   "name": "Half pan $64.99 | Full pan",
+   "desc": "",
+   "cents": 8999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Red Beans & Rice"
+  },
+  {
+   "name": "Half pan $59.99 | Full pan",
+   "desc": "",
+   "cents": 8499,
+   "alcohol": false,
+   "src": "text",
+   "section": "Grits"
+  },
+  {
+   "name": "Half pan $44.99 | Full pan",
+   "desc": "",
+   "cents": 6999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Gravy"
+  },
+  {
+   "name": "Half pan $79.99 | Full pan",
+   "desc": "",
+   "cents": 10999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Eggs with Cheese & Onions"
+  },
+  {
+   "name": "Half pan $74.99 | Full pan",
+   "desc": "",
+   "cents": 10499,
+   "alcohol": false,
+   "src": "text",
+   "section": "Eggs"
+  },
+  {
+   "name": "Aladrienne's Nachos",
+   "desc": "",
+   "cents": 1499,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Ernestine's Wings",
+   "desc": "",
+   "cents": 1299,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Travis' Chicken Drummettes",
+   "desc": "",
+   "cents": 1299,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "8 fried chicken drummettes with our house seasoning | Add smothered in gravy +",
+   "desc": "Conner's Buttermilk Chicken Strips",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Charisses' Garlic Fries",
+   "desc": "",
+   "cents": 1175,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Tayler's Sweet Potato Fries",
+   "desc": "",
+   "cents": 1099,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Ashley's French Fries",
+   "desc": "",
+   "cents": 925,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Pretty Patricia's Salad",
+   "desc": "",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Sophia's Chicken Salad",
+   "desc": "",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Lovely Leila's Chef Salad",
+   "desc": "",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Brandon's Dinner Salad",
+   "desc": "",
+   "cents": 850,
+   "alcohol": false,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Angie's Delight",
+   "desc": "",
+   "cents": 1925,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Incredible Kelly",
+   "desc": "",
+   "cents": 1775,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Jade's Joy",
+   "desc": "",
+   "cents": 1650,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Amina's Appetite",
+   "desc": "",
+   "cents": 1375,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Tracy's Mouthwatering Strawberry Waffles",
+   "desc": "",
+   "cents": 1695,
+   "image": "https://static.spotapps.co/spots/a3/0b631baee64966867a56269015f0cb/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Paige's Palette",
+   "desc": "",
+   "cents": 1925,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Renaldi's Request",
+   "desc": "",
+   "cents": 2125,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Lord BJ",
+   "desc": "",
+   "cents": 2450,
+   "image": "https://static.spotapps.co/spots/c8/fa0cdb304141278da4e42bd8fd6347/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Keith's Tackle",
+   "desc": "",
+   "cents": 2075,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Homeboy",
+   "desc": "",
+   "cents": 1975,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Dale's Choice",
+   "desc": "",
+   "cents": 2050,
+   "alcohol": false,
+   "src": "text",
+   "section": "CHICKEN & WAFFLES"
+  },
+  {
+   "name": "Chace's Combo",
+   "desc": "",
+   "cents": 1850,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Justin's Omelet",
+   "desc": "",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Laura's Luscious Breakfast",
+   "desc": "",
+   "cents": 1495,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Jacqueline's Breakfast",
+   "desc": "",
+   "cents": 1625,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Susan's Special",
+   "desc": "",
+   "cents": 1350,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Kim's Creation",
+   "desc": "",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Elouise's Masterpiece",
+   "desc": "",
+   "cents": 1350,
+   "alcohol": false,
+   "src": "text",
+   "section": "EGGS & SUCH"
+  },
+  {
+   "name": "Michele's Fried Chicken Sandwich",
+   "desc": "",
+   "cents": 1695,
+   "image": "https://static.spotapps.co/spots/d4/9a871a0e5c4cf6a843ae5984e20bb5/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Teri's Chicken Salad Sliders"
+  },
+  {
+   "name": "Uncle Johnny's Juicy Chicken Sandwich",
+   "desc": "",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "text",
+   "section": "Teri's Chicken Salad Sliders"
+  },
+  {
+   "name": "Stevie's Catfish Sandwich",
+   "desc": "",
+   "cents": 1995,
+   "image": "https://static.spotapps.co/spots/bf/ac86997dc94e3f8c4ab63be6e10c4c/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Teri's Chicken Salad Sliders"
+  },
+  {
+   "name": "Naima's Catfish",
+   "desc": "",
+   "cents": 2295,
+   "image": "https://static.spotapps.co/spots/6f/58c920dfe54e20be97b6daaa7560c3/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Teri's Chicken Salad Sliders"
+  },
+  {
+   "name": "Sabrina's Catfish Plate",
+   "desc": "",
+   "cents": 2295,
+   "image": "https://static.spotapps.co/spots/83/183c5f8d964835a53f0eaf67397e1a/full",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "Teri's Chicken Salad Sliders"
+  },
+  {
+   "name": "Brother Darrol",
+   "desc": "",
+   "cents": 1975,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Prince Brendon",
+   "desc": "",
+   "cents": 2150,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Homegirl",
+   "desc": "",
+   "cents": 2025,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Princess Jordan",
+   "desc": "",
+   "cents": 2025,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Gordon's Bank",
+   "desc": "",
+   "cents": 2025,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Lil John's Special",
+   "desc": "",
+   "cents": 1995,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Skye's Buttermilk Chicken Strips",
+   "desc": "",
+   "cents": 2095,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Darrols Homerun",
+   "desc": "",
+   "cents": 2325,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Uncle Doe's Sampler",
+   "desc": "",
+   "cents": 1975,
+   "alcohol": false,
+   "src": "text",
+   "section": "CREATIVE COMBINATIONS"
+  },
+  {
+   "name": "Kaisun's Transformer",
+   "desc": "",
+   "cents": 1095,
+   "alcohol": false,
+   "src": "text",
+   "section": "MECCA'S KIDS MEAL"
+  },
+  {
+   "name": "Omaurie's Ranger",
+   "desc": "",
+   "cents": 1095,
+   "alcohol": false,
+   "src": "text",
+   "section": "MECCA'S KIDS MEAL"
+  },
+  {
+   "name": "Amiya's Doll",
+   "desc": "",
+   "cents": 1095,
+   "alcohol": false,
+   "src": "text",
+   "section": "1 turkey sausage patty and grits"
+  },
+  {
+   "name": "Josiah's Starfish",
+   "desc": "",
+   "cents": 1095,
+   "alcohol": false,
+   "src": "text",
+   "section": "1 turkey sausage patty and grits"
+  },
+  {
+   "name": "Breast",
+   "desc": "",
+   "cents": 685,
+   "alcohol": false,
+   "src": "text",
+   "section": "1 turkey sausage patty and grits",
+   "image": "https://static.spotapps.co/spots/c8/fa0cdb304141278da4e42bd8fd6347/full"
+  },
+  {
+   "name": "Leg",
+   "desc": "",
+   "cents": 435,
+   "alcohol": false,
+   "src": "text",
+   "section": "1 turkey sausage patty and grits"
+  },
+  {
+   "name": "1 sausage $4.55 | 3 sausages",
+   "desc": "",
+   "cents": 675,
+   "alcohol": false,
+   "src": "text",
+   "section": "Turkey Sausage"
+  },
+  {
+   "name": "Waffle",
+   "desc": "",
+   "cents": 875,
+   "alcohol": false,
+   "src": "text",
+   "section": "Turkey Sausage",
+   "image": "https://static.spotapps.co/website_images/ab_websites/159557_website_v1/contact_decoration.png"
+  },
+  {
+   "name": "Biscuit",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "Turkey Sausage",
+   "image": "https://static.spotapps.co/spots/83/183c5f8d964835a53f0eaf67397e1a/full"
+  },
+  {
+   "name": "1 egg $4.00 | 2 eggs",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Egg"
+  },
+  {
+   "name": "With 1 egg $5.00 | With 2 eggs",
+   "desc": "Chicken Omelet with 3 Eggs",
+   "cents": 900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Eggs with Cheese & Onions"
+  },
+  {
+   "name": "Thigh",
+   "desc": "",
+   "cents": 505,
+   "alcohol": false,
+   "src": "text",
+   "section": "Eggs with Cheese & Onions",
+   "image": "https://static.spotapps.co/spots/c7/1a8a93b86247209d8a886a331bf698/medium"
+  },
+  {
+   "name": "Wing",
+   "desc": "",
+   "cents": 655,
+   "alcohol": false,
+   "src": "text",
+   "section": "Eggs with Cheese & Onions",
+   "image": "https://static.spotapps.co/spots/56/9590ed785445fb87193b806e6f4a55/medium"
+  },
+  {
+   "name": "Buckwheat Waffle",
+   "desc": "",
+   "cents": 900,
+   "alcohol": false,
+   "src": "text",
+   "section": "Eggs with Cheese & Onions"
+  },
+  {
+   "name": "Strawberries & Cream",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cornbread"
+  },
+  {
+   "name": "Caramel Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Chocolate Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Red Velvet Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Sock It To Me Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Pineapple Coconut Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "German Chocolate Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Mello Yellow Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Sweet Potato Cake",
+   "desc": "",
+   "cents": 1050,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Pecan Pie",
+   "desc": "",
+   "cents": 875,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Sweet Potato Pie",
+   "desc": "",
+   "cents": 875,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Peach Cobbler",
+   "desc": "",
+   "cents": 875,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Chocolate Chip Waffle",
+   "desc": "",
+   "cents": 925,
+   "alcohol": false,
+   "src": "text",
+   "section": "DESSERTS"
+  },
+  {
+   "name": "Macaroni & Cheese",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Candied Yams",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Greens",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES",
+   "image": "https://static.spotapps.co/spots/56/9590ed785445fb87193b806e6f4a55/medium"
+  },
+  {
+   "name": "Home Fries",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Smothered Potatoes",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Grits",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES",
+   "image": "https://static.spotapps.co/spots/83/183c5f8d964835a53f0eaf67397e1a/full"
+  },
+  {
+   "name": "Potato Salad",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES",
+   "image": "https://static.spotapps.co/spots/3f/8759cca76c4460bfe6bdde7534008e/medium"
+  },
+  {
+   "name": "Red Beans & Rice",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Black Eye Peas & Rice",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Rice & Gravy",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES"
+  },
+  {
+   "name": "Coleslaw",
+   "desc": "",
+   "cents": 795,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES",
+   "image": "https://static.spotapps.co/spots/d4/9a871a0e5c4cf6a843ae5984e20bb5/full"
+  },
+  {
+   "name": "Gravy",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "text",
+   "section": "SIDES",
+   "image": "https://static.spotapps.co/spots/c8/fa0cdb304141278da4e42bd8fd6347/full"
+  },
+  {
+   "name": "Country Doctor Czech Pilsner",
+   "desc": "",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "RESERVE"
+  },
+  {
+   "name": "Field of Vision Pale Ale",
+   "desc": "",
+   "cents": 800,
+   "alcohol": false,
+   "src": "text",
+   "section": "Original Pattern | Pilsner"
+  },
+  {
+   "name": "Thanks! It Has Pockets! IPA",
+   "desc": "",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "Original Pattern | Pale Ale"
+  },
+  {
+   "name": "Lucid Illusion Hazy IPA",
+   "desc": "",
+   "cents": 800,
+   "alcohol": true,
+   "src": "text",
+   "section": "Original Pattern | IPA"
+  }
+ ],
+ "alts": {
+  "jsonld": [
+   {
+    "name": "Aladrienne's Nachos",
+    "desc": "Choice of black-eyed peas or red beans, home-fried tortilla chips, cheese, sour cream, jalapenos, and salsa. Add chicken +$3.00.",
+    "cents": 1499,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Ernestine's Wings",
+    "desc": "8 baked chicken drummettes with choice of homestyle buffalo, BBQ, or garlic sauce.",
+    "cents": 1299,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Travis' Chicken Drummettes",
+    "desc": "8 fried chicken drummettes with house seasoning. Add smothered in gravy +$2.00.",
+    "cents": 1299,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Conner's Buttermilk Chicken Strips",
+    "desc": "Battered and fried, boneless and skinless 6 breast strips with house seasoning. Choice of ranch, BBQ, smothered, or buffalo sauce +$1.00.",
+    "cents": 1299,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Charisses' Garlic Fries",
+    "desc": "House French fries with homemade garlic sauce.",
+    "cents": 1175,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Tayler's Sweet Potato Fries",
+    "desc": "Fried with house seasoning salt and served with BBQ sauce.",
+    "cents": 1099,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Ashley's French Fries",
+    "desc": "With house seasoning salt.",
+    "cents": 925,
+    "section": "Appetizers",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Pretty Patricia's Salad",
+    "desc": "Battered, fried, or grilled boneless, skinless chicken breast strips, lettuce, tomatoes, cucumber, carrots, boiled egg, bell pepper, and cheese.",
+    "cents": 1995,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sophia's Chicken Salad",
+    "desc": "Chicken salad, lettuce, tomatoes, cucumber, carrots, boiled egg, red onion, bell pepper, and cheese.",
+    "cents": 1795,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Lovely Leila's Chef Salad",
+    "desc": "Fried or grilled chicken breast, lettuce, tomatoes, cucumber, carrots, boiled egg, bell pepper, and cheese.",
+    "cents": 1995,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Brandon's Dinner Salad",
+    "desc": "Lettuce, tomatoes, cucumber, carrots, red onion, and bell peppers. Add cheese +$0.50.",
+    "cents": 850,
+    "section": "Salads",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Angie's Delight",
+    "desc": "1 succulent breast, 1 delicious waffle, and grits.",
+    "cents": 1925,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Incredible Kelly",
+    "desc": "1 leg or thigh, 1 delicious waffle, and grits.",
+    "cents": 1775,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Jade's Joy",
+    "desc": "2 delicious waffles and 2 turkey sausage patties (no substitutions).",
+    "cents": 1650,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Amina's Appetite",
+    "desc": "Delicious buckwheat waffle and 2 turkey sausage patties (no substitutions).",
+    "cents": 1375,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Tracy's Mouthwatering Strawberry Waffles",
+    "desc": "2 delicious waffles topped with strawberry topping and whipped cream, and 2 turkey sausage patties (no substitutions).",
+    "cents": 1695,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Paige's Palette",
+    "desc": "2 Southern-fried chicken wings, 1 egg, and 1 delicious waffle.",
+    "cents": 1925,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Renaldi's Request",
+    "desc": "2 pieces of chicken Southern style or smothered in gravy and onions (+$2.00) and 2 delicious waffles. Add 2 breasts +$2.50.",
+    "cents": 2125,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Lord BJ",
+    "desc": "4 pieces of chicken Southern style or smothered in gravy and onions (+$2.00) and 2 delicious waffles. Add 2 breasts +$2.50.",
+    "cents": 2450,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Keith's Tackle",
+    "desc": "2 chicken wings, 1 delicious waffle, and macaroni and cheese.",
+    "cents": 2075,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Homeboy",
+    "desc": "3 wings and waffle or French fries (no substitutions).",
+    "cents": 1975,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Dale's Choice",
+    "desc": "8 chicken strips and waffle or French fries. Ranch, buffalo, or BBQ sauce (no substitutions).",
+    "cents": 2050,
+    "section": "Chicken & Waffles",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Chace's Combo",
+    "desc": "Egg white vegetable omelet with tomato, onions, bell pepper, and cheese. Buckwheat waffle or sweet potato fries. Add 2 turkey sausage patties +$3.00.",
+    "cents": 1850,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Justin's Omelet",
+    "desc": "Cheese, chicken, and onion omelet. French fries or 1 delicious waffle (no substitutions).",
+    "cents": 1795,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Laura's Luscious Breakfast",
+    "desc": "2 turkey sausage patties, 2 eggs, grits, and hot fluffy biscuit.",
+    "cents": 1495,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Jacqueline's Breakfast",
+    "desc": "2 turkey sausage patties, 2 eggs, and 1 delicious waffle.",
+    "cents": 1625,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Susan's Special",
+    "desc": "2 scrambled eggs mixed with cheese and onions, potatoes and gravy, and hot fluffy biscuit.",
+    "cents": 1350,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Kim's Creation",
+    "desc": "1 chicken breast, 1 leg or 1 wing, 2 eggs, grits, and hot fluffy biscuit.",
+    "cents": 1795,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Elouise's Masterpiece",
+    "desc": "2 sausage patties, toast, and 1 egg. Coffee, orange juice, or hot tea.",
+    "cents": 1350,
+    "section": "Eggs & Such",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Teri's Chicken Salad Sliders",
+    "desc": "Chicken salad with lettuce, tomato, and red onions on slider buns.",
+    "cents": 1395,
+    "section": "Sandwiches",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Michele's Fried Chicken Sandwich",
+    "desc": "Boneless and skinless fried breast with special house coleslaw and pickles on a brioche bun.",
+    "cents": 1695,
+    "section": "Sandwiches",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Uncle Johnny's Juicy Chicken Sandwich",
+    "desc": "Boneless and skinless grilled chicken breast with lettuce, tomatoes, and red onions on a brioche bun.",
+    "cents": 1795,
+    "section": "Sandwiches",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Stevie's Catfish Sandwich",
+    "desc": "Boneless fried catfish fillet with lettuce, tomato, and red onions on a brioche bun.",
+    "cents": 1995,
+    "section": "Sandwiches",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Naima's Catfish",
+    "desc": "2 large fried catfish fillets with choice of French fries, potato salad, green salad, or coleslaw (no substitutions).",
+    "cents": 2295,
+    "section": "Fried Fish",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sabrina's Catfish Plate",
+    "desc": "2 large catfish fillets fried or smothered in gravy and onions (+$2.00), grits, and hot fluffy biscuit.",
+    "cents": 2295,
+    "section": "Fried Fish",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Brother Darrol",
+    "desc": "2 pieces of chicken Southern style or smothered in gravy and onions (+$2.00), grits, and hot fluffy biscuit. Add 2 breasts +$2.50.",
+    "cents": 1975,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Prince Brendon",
+    "desc": "4 pieces of chicken Southern style or smothered in gravy and onions (+$2.00), grits, and hot fluffy biscuit. Add 2 breasts +$2.50.",
+    "cents": 2150,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Homegirl",
+    "desc": "4 pieces of chicken Southern style or smothered in gravy and onions (+$2.00) and cornbread. Choice of any 2 sides +$7.50.",
+    "cents": 2025,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Princess Jordan",
+    "desc": "1 breast or 2 wings, macaroni and cheese, greens, and cornbread.",
+    "cents": 2025,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Gordon's Bank",
+    "desc": "1 breast or 2 wings, macaroni and cheese, yams, and cornbread.",
+    "cents": 2025,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Lil John's Special",
+    "desc": "3 wings and cornbread. Choice of greens, smothered potatoes, or macaroni and cheese.",
+    "cents": 1995,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Skye's Buttermilk Chicken Strips",
+    "desc": "Homemade, cooked to order, 8 boneless and skinless chicken breast strips. Choice of macaroni and cheese, green salad, or potato salad.",
+    "cents": 2095,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Darrols Homerun",
+    "desc": "2 breasts, greens and cornbread. Choice of macaroni and cheese or red beans and rice.",
+    "cents": 2325,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Uncle Doe's Sampler",
+    "desc": "Choice of any 3 sides: greens, macaroni and cheese, grits, yams, red beans and rice, smothered potatoes, black-eyed peas, green salad, rice and gravy, or potato salad. Cornbread.",
+    "cents": 1975,
+    "section": "Creative Combinations",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Kaisun's Transformer",
+    "desc": "1 chicken leg with mac and cheese.",
+    "cents": 1095,
+    "section": "Mecca's Kids Meal",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Omaurie's Ranger",
+    "desc": "1 turkey sausage patty and grits.",
+    "cents": 1095,
+    "section": "Mecca's Kids Meal",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Amiya's Doll",
+    "desc": "1 chicken wing with 1 delicious waffle.",
+    "cents": 1095,
+    "section": "Mecca's Kids Meal",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Josiah's Starfish",
+    "desc": "3 fried chicken strips with French fries.",
+    "cents": 1095,
+    "section": "Mecca's Kids Meal",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Caramel Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Chocolate Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Red Velvet Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sock It To Me Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Pineapple Coconut Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "German Chocolate Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mello Yellow Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sweet Potato Cake",
+    "desc": "",
+    "cents": 1050,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Pecan Pie",
+    "desc": "",
+    "cents": 875,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Sweet Potato Pie",
+    "desc": "",
+    "cents": 875,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Peach Cobbler",
+    "desc": "",
+    "cents": 875,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Chocolate Chip Waffle",
+    "desc": "",
+    "cents": 925,
+    "section": "Desserts",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Macaroni & Cheese",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Candied Yams",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Greens",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Home Fries",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Smothered Potatoes",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Grits",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Potato Salad",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Red Beans & Rice",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Black Eye Peas & Rice",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Rice & Gravy",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Coleslaw",
+    "desc": "",
+    "cents": 795,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Gravy",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Derreck's Deal",
+    "desc": "1 thigh or 1 leg, candied yams, greens, and cornbread.",
+    "cents": 1350,
+    "section": "Daily Lunch Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Mimi's Potluck",
+    "desc": "1 thigh or 1 leg, macaroni and cheese, greens, and cornbread.",
+    "cents": 1350,
+    "section": "Daily Lunch Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Stacy's Southern Special",
+    "desc": "1 thigh or 1 leg, mixed greens, potato salad, and cornbread.",
+    "cents": 1350,
+    "section": "Daily Lunch Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Big Daddy",
+    "desc": "1 thigh or 1 leg, black-eyed peas, rice, green salad, and cornbread.",
+    "cents": 1350,
+    "section": "Daily Lunch Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Colonel Marshal",
+    "desc": "1 thigh or 1 leg, red beans, green salad, and cornbread.",
+    "cents": 1350,
+    "section": "Daily Lunch Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Jessie's Party",
+    "desc": "6 buffalo wings or fried drummettes and French fries or delicious waffle.",
+    "cents": 1350,
+    "section": "Daily Lunch Specials",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Homeboy (Happy Hour)",
+    "desc": "3 wings — waffle or French fries.",
+    "cents": 1399,
+    "section": "Happy Hour",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Dale's Choice (Happy Hour)",
+    "desc": "8 chicken strips — waffle or French fries. Dipping sauce: ranch, buffalo, or BBQ.",
+    "cents": 1399,
+    "section": "Happy Hour",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Princess Jordan (Happy Hour)",
+    "desc": "Macaroni & cheese, greens, and cornbread. Choice of 1 breast or 2 wings.",
+    "cents": 1399,
+    "section": "Happy Hour",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Njambi's Magic (Happy Hour)",
+    "desc": "Red beans & rice, greens, cornbread. Choice of 1 breast, 2 wings, 2 thighs, or 2 legs.",
+    "cents": 1399,
+    "section": "Happy Hour",
+    "alcohol": false,
+    "src": "jsonld"
+   },
+   {
+    "name": "Uncle Johnny's Juicy Chicken Sandwich (Happy Hour)",
+    "desc": "Fried or grilled boneless, skinless breast with lettuce, red onion on sesame seed bun or wheat bread.",
+    "cents": 1399,
+    "section": "Happy Hour",
+    "alcohol": false,
+    "src": "jsonld"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://static.spotapps.co/spots/f4/0ecba6c4e54d80acd4a1130df62ce6/:original",
+   "alt": "",
+   "near": "We are closing on August 31st!Thank you for all the years of love and friendship!",
+   "w": 565,
+   "h": 350,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/32/586cb1a3e14cc9afb2f5d63331b1ee/:original",
+   "alt": "slideshow photo number 1",
+   "near": "ENJOY YOUR FAVORITES AT HOME\nORDER",
+   "w": 1600,
+   "h": 1200,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://cdn.spotapps.co/spothopper/image/fetch/f_auto,q_auto:best,c_fit,h_1200/http://static.spotapps.co/spots/c0/c5ac4f0b6147d78c3d9d7e7bdbe1c0/:original",
+   "alt": "slideshow photo number 2",
+   "near": "LET US HANDLE THE CATERING\nCATERING",
+   "w": 1800,
+   "h": 1200,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/5a/a91f3b9f1943febfd4fbaf22062cab/full",
+   "alt": "Guests and bartender at a bar counter.",
+   "near": "",
+   "w": 512,
+   "h": 512,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/2a/a6df00715f43bea20a7437714813c3/full",
+   "alt": "Sabrina's Catfish Plate.",
+   "near": "",
+   "w": 512,
+   "h": 512,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/159557_website_v1/video_poster_2.jpg",
+   "alt": "",
+   "near": "The decorative video is currently playing\nThe decorative video sound is off",
+   "w": 1280,
+   "h": 900,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/dd/1e6f04247f475690d01201efbf83cc/w926",
+   "alt": "",
+   "near": "FOOD IS FAMILY\nThe Heart and Soul of Togetherness\n\nFood brings folks together, no matter who they ar",
+   "w": 1280,
+   "h": 400,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/159557_website_v1/section_back.jpg",
+   "alt": "",
+   "near": "ORDER ONLINE\nPick Up Your Favorite Food\n\nDon't feel like cooking today? We got you covered - order n",
+   "w": 1280,
+   "h": 358,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/website_images/ab_websites/159557_website_v1/reviews_back.jpg",
+   "alt": "",
+   "near": "REVIEWS\nStart stop reviews carousel\nReview 1\nReview 2\nReview 3\n‹\n›\nReview by - Google\nFive Star Revi",
+   "w": 1280,
+   "h": 611,
+   "page": "https://homeofchickenandwaffles.com/"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/a3/0b631baee64966867a56269015f0cb/full",
+   "alt": "",
+   "near": "Tracy's Mouthwatering Strawberry Waffles\n$16.95\n2 delicious waffles topped with strawberry topping a",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/c8/fa0cdb304141278da4e42bd8fd6347/full",
+   "alt": "",
+   "near": "Lord BJ\n$24.50\n4 pieces of chicken prepared Southern style or smothered in gravy and onions (+$2.00)",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/26/4c1b9d060b4dbabb5dad6bdf2d694e/full",
+   "alt": "",
+   "near": "Teri's Chicken Salad Sliders\n$13.95/3 Pieces\nChicken salad with lettuce, tomato, and red onions on s",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/d4/9a871a0e5c4cf6a843ae5984e20bb5/full",
+   "alt": "",
+   "near": "Michele's Fried Chicken Sandwich\n$16.95\nBoneless and skinless fried breast with special house colesl",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/bf/ac86997dc94e3f8c4ab63be6e10c4c/full",
+   "alt": "",
+   "near": "Stevie's Catfish Sandwich\n$19.95\nBoneless fried catfish fillet with lettuce, tomato, and red onions ",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/6f/58c920dfe54e20be97b6daaa7560c3/full",
+   "alt": "",
+   "near": "Naima's Catfish\n$22.95\n2 large fried catfish fillets with a choice of French fries, potato salad, gr",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/83/183c5f8d964835a53f0eaf67397e1a/full",
+   "alt": "",
+   "near": "Sabrina's Catfish Plate\n$22.95\n2 large catfish fillets fried or smothered in gravy and onions (+$2.0",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/87/103933a7c84d7f8667fcceabd31e8e/full",
+   "alt": "",
+   "near": "Jason's Pick\nChoice of: 1 breast or 2 wings $20.25 | 2 thighs or 2 legs $18.25 • Black-eyed peas, ri",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/9a/7f15d128324e34ae226d2a5879cb6d/full",
+   "alt": "",
+   "near": "Njambi's Magic\nChoice of: 1 breast or 2 wings $20.25 | 2 thighs or 2 legs $18.25 • Red beans and ric",
+   "w": 448,
+   "h": 448,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu"
+  },
+  {
+   "src": "https://static.spotapps.co/spots/87/103933a7c84d7f8667fcceabd31e8e/wide_medium",
+   "alt": "",
+   "near": "Skip to main content\nMENU\nDRINKS\nSPECIALS\nEVENTS\nRESERVE\nCATERING\nJOBS\nInstagram page\nGoogle page",
+   "w": 1280,
+   "h": 914,
+   "page": "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-catering"
+  }
+ ]
+}

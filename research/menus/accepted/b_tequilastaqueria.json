@@ -1,0 +1,26 @@
+{
+ "id": "b_tequilastaqueria",
+ "items": [],
+ "photos": [
+  {
+   "photo": "tequilas-taqueria-site-0",
+   "alt": "",
+   "credit": "Their own photo, from tequilastaqueria.net"
+  },
+  {
+   "photo": "tequilas-taqueria-site-1",
+   "alt": "Exterior of Tequila's Taqueria in San Jose",
+   "credit": "Their own photo, from tequilastaqueria.net"
+  },
+  {
+   "photo": "tequilas-taqueria-site-2",
+   "alt": "Exterior of Tequila's Taqueria on Vasco Road in Livermore",
+   "credit": "Their own photo, from tequilastaqueria.net"
+  },
+  {
+   "photo": "tequilas-taqueria-site-3",
+   "alt": "Exterior of Tequila's Taqueria on Livermore Avenue",
+   "credit": "Their own photo, from tequilastaqueria.net"
+  }
+ ]
+}

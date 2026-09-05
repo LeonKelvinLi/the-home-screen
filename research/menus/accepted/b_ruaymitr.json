@@ -1,0 +1,183 @@
+{
+ "id": "b_ruaymitr",
+ "source": "text",
+ "pages": [
+  "https://www.ruaymitrsf.com/",
+  "https://order.toasttab.com/online/ruaymitr",
+  "https://www.ruaymitrsf.com/_files/ugd/2557db_4044fbb8bcce4c53b37105281df5ca1f.pdf",
+  "https://order.toasttab.com/online/ruaymitr/item-chickarones_dc7bcf65-fa10-41dd-a097-fb65da3f930b",
+  "https://order.toasttab.com/online/ruaymitr/item-hoy-jor_4e9cf858-dbed-4b77-942d-06bf7a24e110",
+  "https://order.toasttab.com/online/ruaymitr/item-samosa_dfe88af4-2977-462c-9be8-f5ec5f06bf72",
+  "https://order.toasttab.com/online/ruaymitr/item-crab-wonton_1de20da6-fd4d-4b9d-aa69-4cb817a4b1da"
+ ],
+ "items": [
+  {
+   "name": "Chickarones",
+   "desc": "",
+   "cents": 600,
+   "section": "Appetizers",
+   "photo": "ruaymitr-chickarones"
+  },
+  {
+   "name": "Hoy Jor",
+   "desc": "",
+   "cents": 900,
+   "section": "Appetizers",
+   "photo": "ruaymitr-hoy-jor"
+  },
+  {
+   "name": "Samosa",
+   "desc": "",
+   "cents": 800,
+   "section": "Appetizers",
+   "photo": "ruaymitr-samosa"
+  },
+  {
+   "name": "Crab Wonton",
+   "desc": "",
+   "cents": 1200,
+   "section": "Appetizers",
+   "photo": "ruaymitr-crab-wonton"
+  },
+  {
+   "name": "Khao Mun Gai",
+   "desc": "",
+   "cents": 1800,
+   "section": "Main Dishes",
+   "photo": "ruaymitr-khao-mun-gai"
+  },
+  {
+   "name": "Khao Mun Gai Tod",
+   "desc": "",
+   "cents": 1900,
+   "section": "Main Dishes",
+   "photo": "ruaymitr-khao-mun-gai-tod"
+  },
+  {
+   "name": "Khao Moo Dang Moo Krob",
+   "desc": "",
+   "cents": 2200,
+   "section": "Main Dishes",
+   "photo": "ruaymitr-khao-moo-dang-moo-krob"
+  },
+  {
+   "name": "Ba Mee Moo Dang Moo Krob",
+   "desc": "",
+   "cents": 2000,
+   "section": "Main Dishes",
+   "photo": "ruaymitr-ba-mee-moo-dang-moo-krob"
+  },
+  {
+   "name": "Khao Soi Gai",
+   "desc": "",
+   "cents": 2100,
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Kra Pow Moo Krob",
+   "desc": "Spicy crispy pork belly stir-fried with Thai holy basil, served with jasmine rice and fried egg.",
+   "cents": 2100,
+   "section": "Main Dishes"
+  },
+  {
+   "name": "Khao Mun",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides",
+   "photo": "ruaymitr-khao-mun"
+  },
+  {
+   "name": "Jasmine Rice",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Boiled Egg",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides"
+  },
+  {
+   "name": "Mango Sticky Rice",
+   "desc": "",
+   "cents": 1100,
+   "section": "Desserts",
+   "photo": "ruaymitr-mango-sticky-rice"
+  },
+  {
+   "name": "Kanom Tuay",
+   "desc": "",
+   "cents": 500,
+   "section": "Desserts"
+  },
+  {
+   "name": "Coconut Ice Cream",
+   "desc": "",
+   "cents": 600,
+   "section": "Desserts"
+  },
+  {
+   "name": "Coca-Cola",
+   "desc": "Coca-Cola Original Taste — the crisp, refreshing taste you know and love",
+   "cents": 300,
+   "section": "Soft Drinks",
+   "photo": "ruaymitr-coca-cola"
+  },
+  {
+   "name": "Diet Coke",
+   "desc": "Take a Diet Coke break with this refreshing, no-calorie soft drink",
+   "cents": 300,
+   "section": "Soft Drinks",
+   "photo": "ruaymitr-diet-coke"
+  },
+  {
+   "name": "Sprite",
+   "desc": "Classic, cool, crisp lemon-lime flavored taste that's caffeine free",
+   "cents": 300,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "",
+   "cents": 600,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Thai Iced Tea",
+   "desc": "",
+   "cents": 600,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Fresh Young Coconut",
+   "desc": "",
+   "cents": 600,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Hot Matcha Tea",
+   "desc": "",
+   "cents": 500,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Hot Jasmine Tea",
+   "desc": "",
+   "cents": 500,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Iced Green Tea",
+   "desc": "",
+   "cents": 500,
+   "section": "Soft Drinks"
+  },
+  {
+   "name": "Thai Ice Coffee",
+   "desc": "",
+   "cents": 600,
+   "section": "Soft Drinks"
+  }
+ ]
+}

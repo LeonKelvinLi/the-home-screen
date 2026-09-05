@@ -1,0 +1,4627 @@
+{
+ "id": "b_kababburger",
+ "source": "jsonld",
+ "alt": {
+  "text": 234
+ },
+ "pages": [
+  "https://kabab-burger.co/",
+  "https://kabab-burger.co/menu",
+  "https://kabab-burger.co/page/catering",
+  "https://kabab-burger.co/tags/vegetarian-food",
+  "https://kabab-burger.co/tags/middle-eastern-food",
+  "https://kabab-burger.co/tags/lunch",
+  "https://kabab-burger.co/tags/dinner"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "House Salad HH",
+   "desc": "Grilled 100% Chuck Beef Burger topped with seasoned Feta Cheese. Served in a toasted bun with Lettuce, Tomato, Red Onion, Tzatziki and a choice of one side.",
+   "cents": 799,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/HCZGDNWDFZ5Z6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad HH",
+   "desc": "Romaine Lettuce, Tomatoes, Cucumbers, Feta Cheese, Kalamata Olives, Red Onion & seasonings. Served with the House Dressing on the side.",
+   "cents": 995,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/Y3WVZHM3TFR0E.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hamburger 1/4 Lb. HH",
+   "desc": "Grilled 100% ground beef Chuck Burger served in a toasted bun with Lettuce, Tomato, Pickles and one side.",
+   "cents": 1199,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Cheese Burger 1/4 Lb. HH",
+   "desc": "Grilled 100% ground beef Chuck Burger served in a toasted bun with Cheddar Cheese, Lettuce, Tomato, Pickles and one side.",
+   "cents": 1299,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/C9C5TA4ZPM4BG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Burger 1/4 Lb. HH",
+   "desc": "Grilled 100% Chuck Beef Burger topped with seasoned Feta Cheese. Served in a toasted bun with Lettuce, Tomato, Red Onion, Tzatziki and a choice of one side.",
+   "cents": 1350,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Gyro in a Pita HH",
+   "desc": "Thin slices of marinated Chicken cooked on the rotisserie served in a pita bread with hummus, Israeli salad & tahini.",
+   "cents": 1199,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/V2ZY5JJ907JV2.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Shawarma in a Pita HH",
+   "desc": "Thin slices of marinated Chicken Thighs cooked on the rotisserie served in a Pita bread with Hummus, House salad & Tahini.",
+   "cents": 1199,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/EZRA36Q8CYVXR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafels in Pita HH",
+   "desc": "Freshly made Falafel balls (3) served inside a Pita bread with Hummus, Tahini, and House salad.",
+   "cents": 1095,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/9S1818RT7RXAM.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyro in a Pita HH",
+   "desc": "Thin slices of marinated Beef & Lamb strips cooked on the rotisserie, served in a Pita bread with Salad and Tzatziki sauce.",
+   "cents": 1199,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/V2ZY5JJ907JV2.jpeg?w=320&q=80",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kefta in Pita (3) HH",
+   "desc": "Ground Lamb & Beef grilled to perfection, served in a Pita bread with Tzatziki and House salad.",
+   "cents": 1199,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Plate (4) HH",
+   "desc": "Freshly made Falafel balls (3) served on a plate with Hummus, Tahini and House Salad. Add a Pita Bread for only $1.50.",
+   "cents": 1150,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/ANS600R8C72W8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Shawarma Plate HH",
+   "desc": "Thin slices of marinated chicken thighs, cooked on the rotisserie, served with Rice, Hummus and House Salad. Add a Pita Bread for $1.50",
+   "cents": 1250,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/N4DGKR0NANNR0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Kabab Plate HH",
+   "desc": "Cubes of marinated Chicken Breast grilled to perfection, served with Basmati Rice, House Salad, Hummus. Add a Pita Bread for $1.50",
+   "cents": 1250,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/KZ00F92J6FKX8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros Plate HH",
+   "desc": "Thin slices of marinated Beef & Lamb Gyros cooked on the rotisserie, served on a plate with Basmati Rice, Greek Salad and Tzatziki Sauce. Ad a Pita Bread for $1.50",
+   "cents": 1250,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/X85K6AJ8P511A.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kefta Kabab Plate HH",
+   "desc": "Grilled seasoned mixture of 100% ground Chuck beef & Australian Lamb Grilled to perfection, served with Basmati Rice, House Salad and Hummus. Add a Pita Bread for $1.50",
+   "cents": 1250,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/BEJMJFZQ7GCV6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Kabab Plate Mini HH",
+   "desc": "Cubes of marinated Australian lamb Grilled to Perfection, served with Basmati Rice, House Salad and Hummus. Ad a Pita Bread for $1.50",
+   "cents": 1350,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/R9WVHZ17VB4M8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Schnitzel Plate HH",
+   "desc": "Crispy seasoned and breaded Chicken Breast, pan fried to perfection, served on a plate with French Fries, Hummus and House Salad. You can add one Pita bread for $1.50",
+   "cents": 1350,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/DFZRT0PTZ8WTP.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "side of Pita Bread HH",
+   "desc": "",
+   "cents": 150,
+   "section": "Early Bird Menu - 2:00 to 5:30 pm (Mon-Fri)",
+   "image": "https://cloverstatic.com/menu-assets/items/XC53M27FKHQ5E.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "1/2 Sampler Patter",
+   "desc": "Includes any combination of ONLY 4 items from the regular Sampler Platter.",
+   "cents": 1150,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/NB8TFTNZDSKZJ.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baba Ganoush (Mini)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 775,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/ETKECCWWNRSFE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baba Ganoush (Regular)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 1050,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/PP9HMHKJBC8WT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Dolmas Appetizer (5)",
+   "desc": "Stuffed grape leaves w/rice & spices (5)",
+   "cents": 675,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/174TXSWG9GXK8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Appetizer (5)",
+   "desc": "5 of our delicious Falafels balls made to order. Served with (1) side Tahini.",
+   "cents": 850,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/HNTFXVTPK64SM.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus (Mini)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 775,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/ZTKNMFJJXRSXW.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickles (Large)",
+   "desc": "Pickled Cucumbers, Turnips & Olives.",
+   "cents": 899,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/498CJX61RBFVE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickles (Regular)",
+   "desc": "Pickled Cucumbers, Turnips & Olives.",
+   "cents": 645,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/18P4MT741GG16.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Sampler Platter",
+   "desc": "Hummus, Turkish Salad Dip, Baba Ganoush, Spicy Eggplant, Pickles, Tahini, two Falafel balls, two Dolmas and served with two Pita breads.",
+   "cents": 1745,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/HV802ABBJEPZ0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Pita (1)",
+   "desc": "",
+   "cents": 215,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/BXDPSBWNEKZ5C.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Eggplant (Mini)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 775,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/7MTR2QCXF8FFE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Eggplant (Regular)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 1050,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/F4DVP8J1MSNC0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Turkish Salad (Mini)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 775,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/8BDJ64WEEPCJG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Turkish Salad (Regular)",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 1050,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/P63F6AFDHSYW8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tzatziki with pita",
+   "desc": "Served with 1 Pita bread.",
+   "cents": 645,
+   "section": "Appetizers",
+   "image": "https://cloverstatic.com/menu-assets/items/7KSK5GMVABKSY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad (Large)",
+   "desc": "Romaine lettuce, Tomatoes, Cucumbers, Feta Cheese, Kalamata Olives, Red Onion & seasonings. Served with the house dressing on the side.",
+   "cents": 1495,
+   "section": "Salads",
+   "image": "https://cloverstatic.com/menu-assets/items/1VMH9FMA7Z4XG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad (Regular)",
+   "desc": "Romaine Lettuce, Tomatoes, Cucumbers, Feta Cheese, Kalamata Olives, Red Onion & seasonings. Served with the House Dressing on the side.",
+   "cents": 1199,
+   "section": "Salads",
+   "image": "https://cloverstatic.com/menu-assets/items/QG3SF9XGPH7C4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (Large)",
+   "desc": "Fresh diced Tomatoes, Cucumbers, Shredded Romaine topped with Parsley and our house Dressing.",
+   "cents": 1325,
+   "section": "Salads",
+   "image": "https://cloverstatic.com/menu-assets/items/GWQE40PVJDGRE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (Regular)",
+   "desc": "Fresh diced Tomatoes, Cucumbers, Shredded Romaine topped with Parsley and our house Dressing.",
+   "cents": 995,
+   "section": "Salads",
+   "image": "https://cloverstatic.com/menu-assets/items/Q8BQA378RB0SR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Gyros Plate",
+   "desc": "Thin slices of marinated rotisserie chicken served with Basmati Rice, Tzatziki, Greek Salad and one Pita bread.",
+   "cents": 1795,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/R84W4P11WP3DT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Kabab Plate",
+   "desc": "Cubes of marinated Chicken Breast grilled to perfection, served with Basmati Rice, House Salad, Hummus & one Pita Bread.",
+   "cents": 1995,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/H3S8ZZASHHH2E.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Plate",
+   "desc": "Fresh made Falafel balls, served on a plate with Hummus, Tahini, House Salad & 1 Pita bread.",
+   "cents": 1675,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/M7FAKSSW2WBBY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Grilled Plain Chicken Breast Plate",
+   "desc": "Chicken breast Grilled to perfection served with Basmati Rice, House Salad, Hummus & one Pita Bread.",
+   "cents": 1995,
+   "section": "Plates",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros Plate",
+   "desc": "Thin slices of marinated rotisserie Beef & Lamb Gyros. Served on a plate with Basmati Rice, Greek Salad, Tzatziki Sauce & one Pita Bread.",
+   "cents": 1795,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/8KA7YEMWJHEFT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus Plate",
+   "desc": "Served with two Pita Breads and your choice of toppings.",
+   "cents": 1399,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/9P5C7NE3573XE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kefta Kabab Plate",
+   "desc": "Grilled seasoned mixture of ground beef & lamb Grilled to perfection, served with Basmati Rice, House Salad, Hummus & one Pita Bread.",
+   "cents": 1995,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/R7PS8J65D9R1G.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Kabab Plate",
+   "desc": "Cubes of marinated lamb Grilled to Perfection, served with Basmati Rice, House Salad, Hummus & one Pita Bread.",
+   "cents": 2299,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/QZM2JAAQ6SD2T.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mix two Kababs Plate",
+   "desc": "Choice of 2 skewers of Chicken, kefta or Lamb kababs.",
+   "cents": 2599,
+   "section": "Plates",
+   "image": "https://static-content.owner.com/funnel/images/0fb5f2be-b1e6-4267-9ff0-5d6ce990a198?v=0524891411",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Schnitzel Plate",
+   "desc": "Crispy pan fried seasoned and breaded Chicken Breast, served on a plate with French Fries, Hummus, House Salad & one Pita bread.",
+   "cents": 1895,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/8NPQ34PJV6XHA.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Plate",
+   "desc": "Thin slices of marinated rotisserie chicken served with Rice, Hummus, House Salad and one Pita bread.",
+   "cents": 1845,
+   "section": "Plates",
+   "image": "https://cloverstatic.com/menu-assets/items/MGPJBSDACJ6AY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Gyros in Pita",
+   "desc": "Thin slices of marinated Chicken, served inside a pita bread with hummus, Israeli salad & tahini",
+   "cents": 1575,
+   "section": "Pita Sandwiches",
+   "image": "https://cloverstatic.com/menu-assets/items/XVVFZCCSKF2Y6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Kabab in pita",
+   "desc": "Cubes of marinated Chicken Breast grilled to perfection, Served inside a Pita bread with Hummus, House salad & Tahini.",
+   "cents": 1695,
+   "section": "Pita Sandwiches",
+   "image": "https://cloverstatic.com/menu-assets/items/513NN096RX8T8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel in Pita",
+   "desc": "Freshly cooked Falafel balls, served inside a Pita bread with Hummus, Tahini, and House salad",
+   "cents": 1445,
+   "section": "Pita Sandwiches",
+   "image": "https://cloverstatic.com/menu-assets/items/0KCTFJDPGS1S8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros in pita",
+   "desc": "Thin slices of marinated Beef & Lamb strips, served inside a Pita bread with Salad and Tzatziki sauce",
+   "cents": 1575,
+   "section": "Pita Sandwiches",
+   "image": "https://cloverstatic.com/menu-assets/items/XVVFZCCSKF2Y6.jpeg?w=320&q=80",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus in Pita",
+   "desc": "Hummus served in a Pita with Tahini and House Salad.",
+   "cents": 1275,
+   "section": "Pita Sandwiches",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kefta Kabab in pita",
+   "desc": "Grilled seasoned mixture of Ground Beef & Lamb Grilled to perfection, served inside a Pita bread with Hummus, Israeli Salad & Tahini",
+   "cents": 1695,
+   "section": "Pita Sandwiches",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Kabab in Pita",
+   "desc": "Tender cubes of Marinated Lamb Grilled to perfection, served inside a Pita with Hummus, House Salad & Tahini.",
+   "cents": 1989,
+   "section": "Pita Sandwiches",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Schnitzel in pita",
+   "desc": "Crispy pan fried seasoned breaded Chicken Breast, served inside a Pita bread with Hummus, House Salad & Tahini",
+   "cents": 1695,
+   "section": "Pita Sandwiches",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma In Pita",
+   "desc": "Thin slices of marinated Chicken Shawarma, served inside a Pita bread with Hummus, House salad & Tahini.",
+   "cents": 1575,
+   "section": "Pita Sandwiches",
+   "image": "https://cloverstatic.com/menu-assets/items/7VYPMD38ERY82.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kabab Burger",
+   "desc": "Grilled seasoned Lamb & Beef burger. Served on a toasted bun with Mayo, Lettuce, Tomato and Pickles",
+   "cents": 2139,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/ZYW2TFDSEJA8C.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Double Kabab Burger",
+   "desc": "2 Grilled seasoned lamb & beef burger. Served on a toasted bun with mayo, lettuce, tomato and pickles",
+   "cents": 2445,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/H5CMHMB3WESQ0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hamburger",
+   "desc": "Grilled 100% Ground Beef Chuck Burger. Served on a toasted Bun with Mayo, Lettuce, Tomato and Pickles",
+   "cents": 1725,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/EVBV6JZTKF7JR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Double Hamburger",
+   "desc": "2 Grilled 100% Ground Beef Chuck Burger. Served on a toasted Bun with Mayo, Lettuce, Tomato and Pickles",
+   "cents": 2150,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/7MBYQV7AZY72A.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Cheese Burger",
+   "desc": "Grilled 100% Ground Beef Chuck Burger. Served on a toasted Bun with Cheddar Cheese, Mayo, Lettuce, Tomato and Pickles",
+   "cents": 1830,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/VT625SDHAGZ3T.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Double Cheese Burger",
+   "desc": "2 Grilled 100% Ground Beef Chuck Burger. Served on a toasted Bun with Cheddar Cheese, Mayo, Lettuce, Tomato and Pickles",
+   "cents": 2299,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/5ZBE7EXS54HVW.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Garden Burger HH",
+   "desc": "Garden Burger Grilled to perfection, served in a toasted bun with lettuce, tomato, pickles and a choice of one side.",
+   "cents": 1799,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/ADTD57RHHASD4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Double Garden Burger",
+   "desc": "Grilled 2 Vegetarian Garden burgers. Served on a toasted bun with mayo, lettuce, tomato and pickles",
+   "cents": 2295,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/J9J24F40PPS88.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Burger",
+   "desc": "Grilled Beef Burger topped with seasoned Feta Cheese. Served in a toasted Bun with Lettuce, Tomato, Red Onion and Tzatziki",
+   "cents": 1950,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/13V8NM5YMBTS6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Double Greek Burger",
+   "desc": "2 Grilled Beef Burger topped with seasoned Feta Cheese. Served in a toasted Bun with Lettuce, Tomato, Red Onion and Tzatziki",
+   "cents": 2345,
+   "section": "Burgers",
+   "image": "https://cloverstatic.com/menu-assets/items/A3QF25ENXSG4P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side 1 Chicken Kabab",
+   "desc": "",
+   "cents": 895,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/FBT2Q5MVJP66J.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side 1 Kefta Kabab",
+   "desc": "",
+   "cents": 895,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/85HP0MC8HSH5Y.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side 1 Lamb Kabab",
+   "desc": "",
+   "cents": 1050,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/N6H86VFX2CVM6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Burger Patty",
+   "desc": "",
+   "cents": 675,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/8MHQRT9V5JCXE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Gyros a-la-carte 6 oz.",
+   "desc": "",
+   "cents": 799,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/KRQ94E4BTRGWJ.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Kabab Burger Patty",
+   "desc": "",
+   "cents": 869,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/P23B33YWRM67P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Schnitzel (7oz)",
+   "desc": "",
+   "cents": 845,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/N05E5T9PQ92WY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Shawama a-la-carte (6oz.)",
+   "desc": "",
+   "cents": 799,
+   "section": "A la carte",
+   "image": "https://cloverstatic.com/menu-assets/items/2DW8AJ6CA2KN4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baklava 12 ea",
+   "desc": "",
+   "cents": 2800,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/ZFD2JPTHX2350.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baklava 24 ea",
+   "desc": "",
+   "cents": 5000,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/WCNB7Z22MWZ9T.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati Rice - Large",
+   "desc": "",
+   "cents": 5900,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/XWAB0EDM5CPBR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati Rice - Medium",
+   "desc": "",
+   "cents": 4100,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/0WZRMQC1HPX62.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Platter Appetizer - Large",
+   "desc": "",
+   "cents": 8600,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/Z4N3ED1FJXNX8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Platter Appetizer - Medium",
+   "desc": "",
+   "cents": 5200,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/SC5VNKH0DXZJG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fried Eggplant Platter App. - Large",
+   "desc": "",
+   "cents": 11500,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/509DDG9PHY6G0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fried Eggplant Platter App. - Medium",
+   "desc": "",
+   "cents": 7200,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/A9QVYND14TP2T.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad - Large",
+   "desc": "",
+   "cents": 8700,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/C35ZXYYC18A0P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek Salad - Medium",
+   "desc": "",
+   "cents": 5000,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/NQPHBDDJT0NBY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyro Platter - Large",
+   "desc": "",
+   "cents": 12100,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/ZS18CVYNC3ZW0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyro Platter - Medium",
+   "desc": "",
+   "cents": 7300,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/JMKD8Z9S70B2R.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (10 lbs Bowl) - Large",
+   "desc": "",
+   "cents": 7400,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/53BQG1HNVS16A.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (5 lbs Bowl) - Medium",
+   "desc": "",
+   "cents": 4000,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/K4YRDMK6ZPPR4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Shish Kabab Platter - Large",
+   "desc": "",
+   "cents": 18200,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/V17WKZ5A903X2.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Shish Kabab Platter - Medium",
+   "desc": "",
+   "cents": 10900,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/MF66J43AWSGFE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Med, Sampler Platter App. - Large",
+   "desc": "",
+   "cents": 11500,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/SRA8A27V28ZWG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Med. Sampler Platter App. - Medium",
+   "desc": "",
+   "cents": 7200,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/VXTYJQBRVJC9P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Platter - Large",
+   "desc": "",
+   "cents": 12100,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/54FBYQEG2N2W8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Platter - Medium",
+   "desc": "",
+   "cents": 7300,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/XYRQWBC3PNWS4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shish Kabab Mix Platter - Large",
+   "desc": "",
+   "cents": 14400,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/2ZTSD9B575JP8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shish Kabab Mix Platter - Medium",
+   "desc": "",
+   "cents": 7900,
+   "section": "Bowls & Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/J5Z9TMP19SWYR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids (3) Falafel Plate",
+   "desc": "Three Falafels served with a choice of one side and one kids drink.",
+   "cents": 1099,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/1GJX8ZAB6EY1P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Cheeseburger",
+   "desc": "Grilled 1/4 lb. 100% all beef burger. Served plain in a bun with Cheddar Cheese, one side & one kids drink.",
+   "cents": 1300,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/9XQTEMW83V4SE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Chicken Kabab",
+   "desc": "Kids Chicken Kabab served with a choice of one side and one kids drink.",
+   "cents": 1299,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/7RMCZFBG4CHSM.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Grilled Cheese Pita",
+   "desc": "Grilled Cheese in a Pita Bread with a choice of one side & one kids drink.",
+   "cents": 1199,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/PTDJMC6XFJ9RP.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Grilled Chicken Breast (plain)",
+   "desc": "Served with a choice of one side and one kids drink.",
+   "cents": 1199,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/10AEBVZKWAA8C.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Gyros",
+   "desc": "Thin slices of Gyros strips (Beef & Lamb) and Tzatziki Sauce served with a choice of one side and one kids drink.",
+   "cents": 1199,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/HDG4E0V73M05G.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Hamburger",
+   "desc": "Grilled 1/4 lb. 100% all beef burger. Served plain in a bun with a choice of one side and one kids drink.",
+   "cents": 1195,
+   "section": "Kids Menu",
+   "image": "https://cloverstatic.com/menu-assets/items/1WP9XSKKSHF48.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Schnitzel",
+   "desc": "Crispy pan fried breaded chicken breast strips served with a choice of one side and one kids drink.",
+   "cents": 1295,
+   "section": "Kids Menu",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kids Shawarma",
+   "desc": "Thin slices of Marinated Rotisserie Chicken served with one side & one kids drink.",
+   "cents": 1199,
+   "section": "Kids Menu",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Dressing Side 2 oz.",
+   "desc": "",
+   "cents": 175,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/9BHSFTT3V115Y.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "French Fries (Large)",
+   "desc": "",
+   "cents": 850,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/D96A5B1XQ25MG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "French Fries (Regular)",
+   "desc": "",
+   "cents": 549,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/NXBPS8DHRXWPT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "hummus side 2 oz.",
+   "desc": "",
+   "cents": 200,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/9VVNQHDG8SKY4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pita Package White (5)",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/0JV6KRHMGXD0J.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side 1 Patty Burger",
+   "desc": "",
+   "cents": 850,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/J0XHBEB80H72P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Basmati Rice 12 oz.",
+   "desc": "",
+   "cents": 655,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/QQ564RW1EHCD4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Cucumber Spears (6)",
+   "desc": "",
+   "cents": 645,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/D120JH1338FYP.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Gluten Free Bread (2)",
+   "desc": "",
+   "cents": 250,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/4JQTV4Y866D9R.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Kabab Burger Patty a-la-carte",
+   "desc": "",
+   "cents": 969,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/FJZBV8PHQ4Q48.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Schnitzel A-la-carte 7 oz.",
+   "desc": "",
+   "cents": 895,
+   "section": "Sides",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Tomato Slices (4)",
+   "desc": "",
+   "cents": 225,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/S5D1WMQCRWD98.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Side Veggie Burger a-la-carte",
+   "desc": "",
+   "cents": 925,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/M4J66HF1T04RM.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Single Dolma (1)",
+   "desc": "",
+   "cents": 175,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/JYEB70FVN43AC.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Single Falafel (1)",
+   "desc": "",
+   "cents": 155,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/PA19TBNK1XQS4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tzatziki Side 2 oz.",
+   "desc": "",
+   "cents": 150,
+   "section": "Sides",
+   "image": "https://cloverstatic.com/menu-assets/items/CY2YGEXS4JKQE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Family Meal (Vegetarian)",
+   "desc": "36 Falafel balls, House salad w/ dressing, hummus, tahini and 6 pita breads.",
+   "cents": 6799,
+   "section": "Family Meals",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Family Meal",
+   "desc": "Chicken Shawarma cooked on the rotisserie, serve with House Salad w/dressing, Hummus, Tahini, Basmati Rice and 6 pita breads.",
+   "cents": 7699,
+   "section": "Family Meals",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyro Family Meal",
+   "desc": "Gyros Cooked on the rotisserie serve with, Greek salad w/dressing, Tzatziki sauce, Basmati Rice and 6 pita breads.",
+   "cents": 7699,
+   "section": "Family Meals",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mix Kabab Family Meal (3 Kefta 3 Chicken or 6 the same)",
+   "desc": "3 Kefta and 3 Chicken Kababs or 6 all the same cooked on the grill, serve with House Salad w/dressing, Hummus, Tahini, Basmati Rice and 6 Pitas.",
+   "cents": 8399,
+   "section": "Family Meals",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mix Lamb Kabab Family Meal (chick & kefta)",
+   "desc": "3 skewers of Lamb kabab, 3 skewers of other cooked on the grill, serve with House salad w/dressing, Basmati Rice, Hummus, Tahini and 6 Pita breads.",
+   "cents": 9249,
+   "section": "Family Meals",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "All Lamb Kabab Family Meal",
+   "desc": "6 Lamb Kababs serve with House Salad w/dressing, Hummus, Tahini, Basmati Rice and 6 Pitas.",
+   "cents": 9799,
+   "section": "Family Meals",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baklava Pistachio (Finger)",
+   "desc": "",
+   "cents": 250,
+   "section": "Desserts",
+   "image": "https://cloverstatic.com/menu-assets/items/D3W6X7QEH5ZDJ.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Soda Can",
+   "desc": "",
+   "cents": 245,
+   "section": "Cold Beverages",
+   "image": "https://cloverstatic.com/menu-assets/items/6YS7Y8BX90ZSE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Arrowhead Water Bottle",
+   "desc": "",
+   "cents": 195,
+   "section": "Cold Beverages",
+   "image": "https://cloverstatic.com/menu-assets/items/V7WW8SAT40CKT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fiji Water (small)",
+   "desc": "",
+   "cents": 299,
+   "section": "Cold Beverages",
+   "image": "https://cloverstatic.com/menu-assets/items/4CEN00CC0V3K8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Frapuchino",
+   "desc": "",
+   "cents": 465,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "",
+   "cents": 375,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Honest Kids",
+   "desc": "",
+   "cents": 195,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Ice Tea",
+   "desc": "",
+   "cents": 375,
+   "section": "Cold Beverages",
+   "image": "https://cloverstatic.com/menu-assets/items/6XW4FQ85ZBMC0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "",
+   "cents": 325,
+   "section": "Cold Beverages",
+   "image": "https://cloverstatic.com/menu-assets/items/CBXE3ZR75P6ET.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kern's",
+   "desc": "",
+   "cents": 325,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pellegrino Large Sparkling Water",
+   "desc": "",
+   "cents": 399,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pellegrino Spark. (small)",
+   "desc": "",
+   "cents": 319,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pellegrino Soda Can",
+   "desc": "",
+   "cents": 299,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Snapple",
+   "desc": "",
+   "cents": 350,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Vitamin Water",
+   "desc": "",
+   "cents": 375,
+   "section": "Cold Beverages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "10 Dolmas (10)",
+   "desc": "",
+   "cents": 1299,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/SWKP3TD6PWBXT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "20 Dolmas (20)",
+   "desc": "",
+   "cents": 2099,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/QR1T90N64X0ZE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baba Ganoush (16 oz.)",
+   "desc": "",
+   "cents": 1450,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/DZ3Z1JKCZ1DM8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baba Ganoush (32 oz.)",
+   "desc": "",
+   "cents": 2795,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/450A4A4ESMQWP.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baba Ganoush (8 oz.)",
+   "desc": "",
+   "cents": 799,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/5N8FP6D7C914P.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baklava (1) Take Out",
+   "desc": "",
+   "cents": 205,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/K0J8H045E2Q8W.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baklava (12)",
+   "desc": "",
+   "cents": 2575,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/BBPZQHV2WV014.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baklava (24)",
+   "desc": "",
+   "cents": 4795,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/KN2YZNK3FKG2R.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati Rice (16 oz.)",
+   "desc": "",
+   "cents": 1195,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/N3R7JHMYJ2X6R.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati Rice (32 oz.)",
+   "desc": "",
+   "cents": 2195,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/NGG4KNDKJY94M.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati Rice (8 oz)",
+   "desc": "",
+   "cents": 695,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/V3WWP9N5KSXB2.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "ChiIi Garlic (16 oz.)",
+   "desc": "",
+   "cents": 1145,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/D6WVNTNJHZQJ4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "ChiIi Garlic (32 oz.)",
+   "desc": "",
+   "cents": 1795,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/97YECHG1PJR5C.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "ChiIi Garlic (8 oz.)",
+   "desc": "",
+   "cents": 845,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/PZE3F9HTMJH24.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Bulk (1 - 25)",
+   "desc": "",
+   "cents": 120,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/86J2HSRFS865W.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Bulk (101 +)",
+   "desc": "",
+   "cents": 105,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/5A3SDGY9RMJV6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Bulk (26 - 50)",
+   "desc": "",
+   "cents": 115,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/VEGR26VG94KAC.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel Bulk (51 - 100)",
+   "desc": "",
+   "cents": 110,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/G3HNYC5S8ZM5T.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Feta Cheese (16 oz.)",
+   "desc": "",
+   "cents": 1395,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/WXK35CVP20Z32.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Feta Cheese (32 oz.)",
+   "desc": "",
+   "cents": 1899,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/TME7HDSKGAMCE.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Feta Cheese (8 oz.)",
+   "desc": "",
+   "cents": 945,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/ZFTQ60H6WMVH0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green Cracked Spicy Olives (16 oz.)",
+   "desc": "",
+   "cents": 1145,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green Cracked Spicy Olives (32 oz.)",
+   "desc": "",
+   "cents": 1950,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Green Cracked Spicy Olives (8 oz.)",
+   "desc": "",
+   "cents": 845,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros Meat (Cooked) (16 oz.)",
+   "desc": "",
+   "cents": 1995,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros Meat (Cooked) (32 oz.)",
+   "desc": "",
+   "cents": 3695,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros Meat (Cooked) (8 oz.)",
+   "desc": "",
+   "cents": 1095,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (16 oz.)",
+   "desc": "",
+   "cents": 895,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/K3TMJSS34QP7T.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (32 oz.)",
+   "desc": "",
+   "cents": 1595,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/GFGDG001C36CW.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad (8 oz.)",
+   "desc": "",
+   "cents": 599,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/DVE5M9ZZW7YHJ.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus (16 oz.)",
+   "desc": "",
+   "cents": 1450,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/YZT20TJQ8GBMY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus (32 oz.)",
+   "desc": "",
+   "cents": 2795,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/DNZSZGZ1XKE7J.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus (8 oz.)",
+   "desc": "",
+   "cents": 799,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/P4ECEWJKRM156.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kalamata olives (16 oz.)",
+   "desc": "",
+   "cents": 995,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kalamata olives (32 oz.)",
+   "desc": "",
+   "cents": 1650,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kalamata olives (8 oz.)",
+   "desc": "",
+   "cents": 695,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickled Cucumbers (16 oz.)",
+   "desc": "",
+   "cents": 995,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/HFBJDG4ZWA4YR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickled Cucumbers (32 oz.)",
+   "desc": "",
+   "cents": 1650,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/ANQBP04P0C8WG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickled Cucumbers (8 oz.)",
+   "desc": "",
+   "cents": 695,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/FCNEEQXE4YWSP.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickled Turnips (16 oz.)",
+   "desc": "",
+   "cents": 995,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickled Turnips (32oz.)",
+   "desc": "",
+   "cents": 1650,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Pickled Turnips (8 oz.)",
+   "desc": "",
+   "cents": 695,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Raw Tahina (2 lbs.)",
+   "desc": "",
+   "cents": 1925,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Meat (cooked) (16 oz.)",
+   "desc": "",
+   "cents": 1995,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Meat (cooked) (32 oz.)",
+   "desc": "",
+   "cents": 3695,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma Meat (cooked) (8 oz.)",
+   "desc": "",
+   "cents": 1095,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Eggplant (16 oz.)",
+   "desc": "",
+   "cents": 1450,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/FMEZSHM89WYDA.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Eggplant (32 oz.)",
+   "desc": "",
+   "cents": 2795,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/PJH19TPX1MJ42.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Eggplant (8 oz.)",
+   "desc": "",
+   "cents": 799,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/N7EZAGJC9HJ6A.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tahini (16 oz.)",
+   "desc": "",
+   "cents": 1395,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tahini (32 oz.)",
+   "desc": "",
+   "cents": 1995,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tahini (8 oz.)",
+   "desc": "",
+   "cents": 795,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Turkish Coffee Can (Venizelos) 16 Oz.",
+   "desc": "",
+   "cents": 2599,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Turkish Salad (16 oz.)",
+   "desc": "",
+   "cents": 1450,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/3Y7ZPY5TWW3CG.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Turkish Salad (32 oz.) (cloned)",
+   "desc": "",
+   "cents": 2195,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/RGJYXR060N0J2.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Turkish Salad (8 oz.)",
+   "desc": "",
+   "cents": 799,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/16J3YHFYRHY30.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tzatziki (16 oz.)",
+   "desc": "",
+   "cents": 1395,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/0Y1WZR2FQ7P52.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tzatziki (32 oz.)",
+   "desc": "",
+   "cents": 1995,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/RYT8AJSPRSVJW.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Tzatziki (8 oz.)",
+   "desc": "",
+   "cents": 795,
+   "section": "By The Pound: (Take out only)",
+   "image": "https://cloverstatic.com/menu-assets/items/2WVHEER5FX9S0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Zhoug (16 oz.)",
+   "desc": "",
+   "cents": 1550,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Zhoug (8 oz.)",
+   "desc": "",
+   "cents": 750,
+   "section": "By The Pound: (Take out only)",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Baba Ganoush Platter (2 lbs.)",
+   "desc": "",
+   "cents": 2295,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/ZRXF6VBXSNF2R.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati rice (full pan) 7.5 Lbs",
+   "desc": "",
+   "cents": 5900,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/999JRH8GT23D8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Basmati rice (half pan) 3.75 Lbs",
+   "desc": "",
+   "cents": 4100,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/ZQWA4VV2WT6QW.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Bowls",
+   "desc": "",
+   "cents": 300,
+   "section": "Catering Platters",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel platter (Large) 72ea",
+   "desc": "",
+   "cents": 8600,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/GAMS6SRDVGQF0.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Falafel platter (medium) 32ea",
+   "desc": "",
+   "cents": 5200,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/QDC3ADSA0T9FT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fried eggplant platter (Large)",
+   "desc": "",
+   "cents": 9500,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/K8XD3BW0G25A6.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Fried eggplant platter (medium)",
+   "desc": "",
+   "cents": 6200,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/AY7XRNARR3ATR.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek salad bowl (Large) 10 Lbs",
+   "desc": "",
+   "cents": 8700,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/1MS8KS7R4Y0C2.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Greek salad bowl (medium) 5 Lbs",
+   "desc": "",
+   "cents": 5000,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/JE656X48R2JB8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros (full pan) 7.5 Lbs",
+   "desc": "",
+   "cents": 12100,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/QJV8CTDPDD3Q8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Gyros (half pan) 3.75 Lbs",
+   "desc": "",
+   "cents": 7300,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/AWZN7J05KGGYT.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad bowl (Large) 10 Lbs",
+   "desc": "",
+   "cents": 7400,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/GAC478YT9EX8J.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "House Salad bowl (medium) 5 Lbs",
+   "desc": "",
+   "cents": 4000,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/4TWWFNRQBJ8TM.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Hummus Platter (2lbs.)",
+   "desc": "",
+   "cents": 2295,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/X2MFW40ZK9EP4.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Kabab (full pan] 20ea",
+   "desc": "",
+   "cents": 18200,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/P164HB8ASCKBY.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Kabab (half pan) 10ea",
+   "desc": "",
+   "cents": 10900,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/DMZJPX1XY5TJC.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mediterranean sampler platter (Large)",
+   "desc": "",
+   "cents": 11500,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/JHESSNVXW7AKM.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mediterranean sampler platter (medium)",
+   "desc": "",
+   "cents": 7200,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/MZVVBJRD6HG9A.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mix Shish Kabab (full pan) 20ea",
+   "desc": "",
+   "cents": 14400,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/ER7JV37WVZY00.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mix Shish Kabab (half pan) 10ea",
+   "desc": "",
+   "cents": 7900,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/NVK1SHS8W205J.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Platters",
+   "desc": "",
+   "cents": 300,
+   "section": "Catering Platters",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Service Items",
+   "desc": "",
+   "cents": 200,
+   "section": "Catering Platters",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma (full pan) 7.5 Lbs",
+   "desc": "",
+   "cents": 12100,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/AZ7BPEXCAPY6C.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Shawarma (half pan) 3.75 Lbs",
+   "desc": "",
+   "cents": 7300,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/GM2PXXWVY69A2.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Spicy Eggplant Platter (2 lbs.)",
+   "desc": "",
+   "cents": 2295,
+   "section": "Catering Platters",
+   "image": "https://cloverstatic.com/menu-assets/items/FDTN8XGDWQJ7G.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Kabab Classic (10 serving)",
+   "desc": "House Salad (2.5Lbs) Hummus (2Lbs) Falafels (30ea) Tahini (1lb) Tzatziki (1lb) Pickles (1lb) Basmati Rice (2lbs) and Pita Bread (10ea) -Choose only two from: Turkish Salad (2lbs) Dolmas (20ea) Baba Ganoush (2lbs) Spicy Eggplant (2lbs) Greek Salad (2lbs) -Choose only one from: Gyro (3.5lbs) Chicken Shawarma (3.5lbs) Kefta Kababs (10ea) Chicken Kababs (10ea)",
+   "cents": 26000,
+   "section": "Meal Packages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Classic (10 serving)",
+   "desc": "",
+   "cents": 28000,
+   "section": "Meal Packages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Mediterranean Classic (10 serving)",
+   "desc": "",
+   "cents": 24000,
+   "section": "Meal Packages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Vegetarian Classic (10 serving)",
+   "desc": "",
+   "cents": 19000,
+   "section": "Meal Packages",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Shawarma Plate",
+   "desc": "Thin slices of marinated rotisserie chicken served with Rice, Hummus, House Salad and one Pita bread.",
+   "cents": 1845,
+   "image": "https://cloverstatic.com/menu-assets/items/N4DGKR0NANNR0.jpeg?w=320&q=80",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Lamb Kabab Plate (Mini) HH",
+   "desc": "Cubes of marinated Australian lamb Grilled to Perfection, served with Basmati Rice, House Salad and Hummus. Ad a Pita Bread for $1.50",
+   "cents": 1350,
+   "image": "https://cloverstatic.com/menu-assets/items/R9WVHZ17VB4M8.jpeg?w=320&q=80",
+   "alcohol": false,
+   "src": "jsonld"
+  },
+  {
+   "name": "Chicken Kabab Plate (Mini) HH",
+   "desc": "Cubes of marinated Chicken Breast grilled to perfection, served with Basmati Rice, House Salad, Hummus. Add a Pita Bread for $1.50",
+   "cents": 1250,
+   "image": "https://cloverstatic.com/menu-assets/items/KZ00F92J6FKX8.jpeg",
+   "alcohol": false,
+   "src": "jsonld"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Chicken Kabab Plate",
+    "desc": "",
+    "cents": 1995,
+    "image": "https://cloverstatic.com/menu-assets/items/H3S8ZZASHHH2E.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Gyros Plate",
+    "desc": "",
+    "cents": 1795,
+    "image": "https://cloverstatic.com/menu-assets/items/8KA7YEMWJHEFT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Shawarma Plate",
+    "desc": "",
+    "cents": 1845,
+    "image": "https://cloverstatic.com/menu-assets/items/MGPJBSDACJ6AY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Mix two Kababs Plate",
+    "desc": "",
+    "cents": 2599,
+    "image": "https://kabab-burger.co/pluto-images/funnel/images/0fb5f2be-b1e6-4267-9ff0-5d6ce990a198?w=320&fit=cover",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Falafel Appetizer (5)",
+    "desc": "",
+    "cents": 850,
+    "image": "https://cloverstatic.com/menu-assets/items/HNTFXVTPK64SM.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Falafel Plate",
+    "desc": "",
+    "cents": 1675,
+    "image": "https://cloverstatic.com/menu-assets/items/M7FAKSSW2WBBY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Kefta Kabab Plate",
+    "desc": "",
+    "cents": 1995,
+    "image": "https://cloverstatic.com/menu-assets/items/R7PS8J65D9R1G.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "Sampler Platter",
+    "desc": "",
+    "cents": 1745,
+    "image": "https://cloverstatic.com/menu-assets/items/HV802ABBJEPZ0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "3647 Mount Diablo Blvd, Lafayette, CA"
+   },
+   {
+    "name": "House Salad HH",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/HCZGDNWDFZ5Z6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Greek Salad HH",
+    "desc": "",
+    "cents": 995,
+    "image": "https://cloverstatic.com/menu-assets/items/Y3WVZHM3TFR0E.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Hamburger 1/4 Lb. HH",
+    "desc": "",
+    "cents": 1199,
+    "alcohol": false,
+    "src": "text",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Cheese Burger 1/4 Lb. HH",
+    "desc": "",
+    "cents": 1299,
+    "image": "https://cloverstatic.com/menu-assets/items/C9C5TA4ZPM4BG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Greek Burger 1/4 Lb. HH",
+    "desc": "",
+    "cents": 1350,
+    "alcohol": false,
+    "src": "text",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Chicken Gyro in a Pita HH",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://cloverstatic.com/menu-assets/items/V2ZY5JJ907JV2.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Chicken Shawarma in a Pita HH",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://cloverstatic.com/menu-assets/items/EZRA36Q8CYVXR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Falafels in Pita HH",
+    "desc": "",
+    "cents": 1095,
+    "image": "https://cloverstatic.com/menu-assets/items/9S1818RT7RXAM.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Gyro in a Pita HH",
+    "desc": "",
+    "cents": 1199,
+    "alcohol": false,
+    "src": "text",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Kefta in Pita (3) HH",
+    "desc": "",
+    "cents": 1199,
+    "alcohol": false,
+    "src": "text",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Falafel Plate (4) HH",
+    "desc": "",
+    "cents": 1150,
+    "image": "https://cloverstatic.com/menu-assets/items/ANS600R8C72W8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Chicken Shawarma Plate HH",
+    "desc": "",
+    "cents": 1250,
+    "image": "https://cloverstatic.com/menu-assets/items/N4DGKR0NANNR0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Chicken Kabab Plate HH",
+    "desc": "",
+    "cents": 1250,
+    "image": "https://cloverstatic.com/menu-assets/items/KZ00F92J6FKX8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Gyros Plate HH",
+    "desc": "",
+    "cents": 1250,
+    "image": "https://cloverstatic.com/menu-assets/items/X85K6AJ8P511A.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Kefta Kabab Plate HH",
+    "desc": "",
+    "cents": 1250,
+    "image": "https://cloverstatic.com/menu-assets/items/BEJMJFZQ7GCV6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Lamb Kabab Plate Mini HH",
+    "desc": "",
+    "cents": 1350,
+    "image": "https://cloverstatic.com/menu-assets/items/R9WVHZ17VB4M8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "Schnitzel Plate HH",
+    "desc": "",
+    "cents": 1350,
+    "image": "https://cloverstatic.com/menu-assets/items/DFZRT0PTZ8WTP.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "side of Pita Bread HH",
+    "desc": "",
+    "cents": 150,
+    "image": "https://cloverstatic.com/menu-assets/items/XC53M27FKHQ5E.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "2 PM - 5:30 PM"
+   },
+   {
+    "name": "1/2 Sampler Patter",
+    "desc": "",
+    "cents": 1150,
+    "image": "https://cloverstatic.com/menu-assets/items/NB8TFTNZDSKZJ.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Baba Ganoush (Mini)",
+    "desc": "",
+    "cents": 775,
+    "image": "https://cloverstatic.com/menu-assets/items/ETKECCWWNRSFE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Baba Ganoush (Regular)",
+    "desc": "",
+    "cents": 1050,
+    "image": "https://cloverstatic.com/menu-assets/items/PP9HMHKJBC8WT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Dolmas Appetizer (5)",
+    "desc": "",
+    "cents": 675,
+    "image": "https://cloverstatic.com/menu-assets/items/174TXSWG9GXK8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Hummus (Mini)",
+    "desc": "",
+    "cents": 775,
+    "image": "https://cloverstatic.com/menu-assets/items/ZTKNMFJJXRSXW.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Pickles (Large)",
+    "desc": "",
+    "cents": 899,
+    "image": "https://cloverstatic.com/menu-assets/items/498CJX61RBFVE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Pickles (Regular)",
+    "desc": "",
+    "cents": 645,
+    "image": "https://cloverstatic.com/menu-assets/items/18P4MT741GG16.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Side Pita (1)",
+    "desc": "",
+    "cents": 215,
+    "image": "https://cloverstatic.com/menu-assets/items/BXDPSBWNEKZ5C.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Spicy Eggplant (Mini)",
+    "desc": "",
+    "cents": 775,
+    "image": "https://cloverstatic.com/menu-assets/items/7MTR2QCXF8FFE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Spicy Eggplant (Regular)",
+    "desc": "",
+    "cents": 1050,
+    "image": "https://cloverstatic.com/menu-assets/items/F4DVP8J1MSNC0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Turkish Salad (Mini)",
+    "desc": "",
+    "cents": 775,
+    "image": "https://cloverstatic.com/menu-assets/items/8BDJ64WEEPCJG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Turkish Salad (Regular)",
+    "desc": "",
+    "cents": 1050,
+    "image": "https://cloverstatic.com/menu-assets/items/P63F6AFDHSYW8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Tzatziki with pita",
+    "desc": "",
+    "cents": 645,
+    "image": "https://cloverstatic.com/menu-assets/items/7KSK5GMVABKSY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Appetizers"
+   },
+   {
+    "name": "Greek Salad - Large",
+    "desc": "",
+    "cents": 8700,
+    "image": "https://cloverstatic.com/menu-assets/items/C35ZXYYC18A0P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Salads"
+   },
+   {
+    "name": "Greek Salad (Regular)",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://cloverstatic.com/menu-assets/items/QG3SF9XGPH7C4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Salads"
+   },
+   {
+    "name": "House Salad (Large)",
+    "desc": "",
+    "cents": 1325,
+    "image": "https://cloverstatic.com/menu-assets/items/GWQE40PVJDGRE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Salads"
+   },
+   {
+    "name": "House Salad (Regular)",
+    "desc": "",
+    "cents": 995,
+    "image": "https://cloverstatic.com/menu-assets/items/Q8BQA378RB0SR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Salads"
+   },
+   {
+    "name": "Chicken Gyros Plate",
+    "desc": "",
+    "cents": 1795,
+    "image": "https://cloverstatic.com/menu-assets/items/R84W4P11WP3DT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Plates"
+   },
+   {
+    "name": "Grilled Plain Chicken Breast Plate",
+    "desc": "",
+    "cents": 1995,
+    "alcohol": false,
+    "src": "text",
+    "section": "Plates"
+   },
+   {
+    "name": "Hummus Plate",
+    "desc": "",
+    "cents": 1399,
+    "image": "https://cloverstatic.com/menu-assets/items/9P5C7NE3573XE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Plates"
+   },
+   {
+    "name": "Lamb Kabab Plate",
+    "desc": "",
+    "cents": 2299,
+    "image": "https://cloverstatic.com/menu-assets/items/QZM2JAAQ6SD2T.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Plates"
+   },
+   {
+    "name": "Schnitzel Plate",
+    "desc": "",
+    "cents": 1895,
+    "image": "https://cloverstatic.com/menu-assets/items/8NPQ34PJV6XHA.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Plates"
+   },
+   {
+    "name": "Chicken Gyros in Pita",
+    "desc": "",
+    "cents": 1575,
+    "image": "https://cloverstatic.com/menu-assets/items/XVVFZCCSKF2Y6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Chicken Kabab in pita",
+    "desc": "",
+    "cents": 1695,
+    "image": "https://cloverstatic.com/menu-assets/items/513NN096RX8T8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Falafel in Pita",
+    "desc": "",
+    "cents": 1445,
+    "image": "https://cloverstatic.com/menu-assets/items/0KCTFJDPGS1S8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Gyros in pita",
+    "desc": "",
+    "cents": 1575,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Hummus in Pita",
+    "desc": "",
+    "cents": 1275,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Kefta Kabab in pita",
+    "desc": "",
+    "cents": 1695,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Lamb Kabab in Pita",
+    "desc": "",
+    "cents": 1989,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Schnitzel in pita",
+    "desc": "",
+    "cents": 1695,
+    "alcohol": false,
+    "src": "text",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Shawarma In Pita",
+    "desc": "",
+    "cents": 1575,
+    "image": "https://cloverstatic.com/menu-assets/items/7VYPMD38ERY82.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Pita Sandwiches"
+   },
+   {
+    "name": "Kabab Burger",
+    "desc": "",
+    "cents": 2139,
+    "image": "https://cloverstatic.com/menu-assets/items/ZYW2TFDSEJA8C.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Double Kabab Burger",
+    "desc": "",
+    "cents": 2445,
+    "image": "https://cloverstatic.com/menu-assets/items/H5CMHMB3WESQ0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Hamburger",
+    "desc": "",
+    "cents": 1725,
+    "image": "https://cloverstatic.com/menu-assets/items/EVBV6JZTKF7JR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Double Hamburger",
+    "desc": "",
+    "cents": 2150,
+    "image": "https://cloverstatic.com/menu-assets/items/7MBYQV7AZY72A.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Cheese Burger",
+    "desc": "",
+    "cents": 1830,
+    "image": "https://cloverstatic.com/menu-assets/items/VT625SDHAGZ3T.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Double Cheese Burger",
+    "desc": "",
+    "cents": 2299,
+    "image": "https://cloverstatic.com/menu-assets/items/5ZBE7EXS54HVW.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Garden Burger HH",
+    "desc": "",
+    "cents": 1799,
+    "image": "https://cloverstatic.com/menu-assets/items/ADTD57RHHASD4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Double Garden Burger",
+    "desc": "",
+    "cents": 2295,
+    "image": "https://cloverstatic.com/menu-assets/items/J9J24F40PPS88.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Greek Burger",
+    "desc": "",
+    "cents": 1950,
+    "image": "https://cloverstatic.com/menu-assets/items/13V8NM5YMBTS6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Double Greek Burger",
+    "desc": "",
+    "cents": 2345,
+    "image": "https://cloverstatic.com/menu-assets/items/A3QF25ENXSG4P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side 1 Chicken Kabab",
+    "desc": "",
+    "cents": 895,
+    "image": "https://cloverstatic.com/menu-assets/items/FBT2Q5MVJP66J.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side 1 Kefta Kabab",
+    "desc": "",
+    "cents": 895,
+    "image": "https://cloverstatic.com/menu-assets/items/85HP0MC8HSH5Y.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side 1 Lamb Kabab",
+    "desc": "",
+    "cents": 1050,
+    "image": "https://cloverstatic.com/menu-assets/items/N6H86VFX2CVM6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side Burger Patty",
+    "desc": "",
+    "cents": 675,
+    "image": "https://cloverstatic.com/menu-assets/items/8MHQRT9V5JCXE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side Gyros a-la-carte 6 oz.",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/KRQ94E4BTRGWJ.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side Kabab Burger Patty",
+    "desc": "",
+    "cents": 869,
+    "image": "https://cloverstatic.com/menu-assets/items/P23B33YWRM67P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side Schnitzel (7oz)",
+    "desc": "",
+    "cents": 845,
+    "image": "https://cloverstatic.com/menu-assets/items/N05E5T9PQ92WY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Side Shawama a-la-carte (6oz.)",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/2DW8AJ6CA2KN4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Burgers"
+   },
+   {
+    "name": "Baklava 12 ea",
+    "desc": "",
+    "cents": 2800,
+    "image": "https://cloverstatic.com/menu-assets/items/ZFD2JPTHX2350.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Baklava 24 ea",
+    "desc": "",
+    "cents": 5000,
+    "image": "https://cloverstatic.com/menu-assets/items/WCNB7Z22MWZ9T.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Basmati Rice - Large",
+    "desc": "",
+    "cents": 5900,
+    "image": "https://cloverstatic.com/menu-assets/items/XWAB0EDM5CPBR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Basmati Rice - Medium",
+    "desc": "",
+    "cents": 4100,
+    "image": "https://cloverstatic.com/menu-assets/items/0WZRMQC1HPX62.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Falafel Platter Appetizer - Large",
+    "desc": "",
+    "cents": 8600,
+    "image": "https://cloverstatic.com/menu-assets/items/Z4N3ED1FJXNX8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Falafel Platter Appetizer - Medium",
+    "desc": "",
+    "cents": 5200,
+    "image": "https://cloverstatic.com/menu-assets/items/SC5VNKH0DXZJG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Fried Eggplant Platter App. - Large",
+    "desc": "",
+    "cents": 11500,
+    "image": "https://cloverstatic.com/menu-assets/items/509DDG9PHY6G0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Fried Eggplant Platter App. - Medium",
+    "desc": "",
+    "cents": 7200,
+    "image": "https://cloverstatic.com/menu-assets/items/A9QVYND14TP2T.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Greek Salad - Medium",
+    "desc": "",
+    "cents": 5000,
+    "image": "https://cloverstatic.com/menu-assets/items/NQPHBDDJT0NBY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Gyro Platter - Large",
+    "desc": "",
+    "cents": 12100,
+    "image": "https://cloverstatic.com/menu-assets/items/ZS18CVYNC3ZW0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Gyro Platter - Medium",
+    "desc": "",
+    "cents": 7300,
+    "image": "https://cloverstatic.com/menu-assets/items/JMKD8Z9S70B2R.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "House Salad (10 lbs Bowl) - Large",
+    "desc": "",
+    "cents": 7400,
+    "image": "https://cloverstatic.com/menu-assets/items/53BQG1HNVS16A.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "House Salad (5 lbs Bowl) - Medium",
+    "desc": "",
+    "cents": 4000,
+    "image": "https://cloverstatic.com/menu-assets/items/K4YRDMK6ZPPR4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Lamb Shish Kabab Platter - Large",
+    "desc": "",
+    "cents": 18200,
+    "image": "https://cloverstatic.com/menu-assets/items/V17WKZ5A903X2.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Lamb Shish Kabab Platter - Medium",
+    "desc": "",
+    "cents": 10900,
+    "image": "https://cloverstatic.com/menu-assets/items/MF66J43AWSGFE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Med, Sampler Platter App. - Large",
+    "desc": "",
+    "cents": 11500,
+    "image": "https://cloverstatic.com/menu-assets/items/SRA8A27V28ZWG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Med. Sampler Platter App. - Medium",
+    "desc": "",
+    "cents": 7200,
+    "image": "https://cloverstatic.com/menu-assets/items/VXTYJQBRVJC9P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Shawarma Platter - Large",
+    "desc": "",
+    "cents": 12100,
+    "image": "https://cloverstatic.com/menu-assets/items/54FBYQEG2N2W8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Shawarma Platter - Medium",
+    "desc": "",
+    "cents": 7300,
+    "image": "https://cloverstatic.com/menu-assets/items/XYRQWBC3PNWS4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Shish Kabab Mix Platter - Large",
+    "desc": "",
+    "cents": 14400,
+    "image": "https://cloverstatic.com/menu-assets/items/2ZTSD9B575JP8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Shish Kabab Mix Platter - Medium",
+    "desc": "",
+    "cents": 7900,
+    "image": "https://cloverstatic.com/menu-assets/items/J5Z9TMP19SWYR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids (3) Falafel Plate",
+    "desc": "",
+    "cents": 1099,
+    "image": "https://cloverstatic.com/menu-assets/items/1GJX8ZAB6EY1P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Cheeseburger",
+    "desc": "",
+    "cents": 1300,
+    "image": "https://cloverstatic.com/menu-assets/items/9XQTEMW83V4SE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Chicken Kabab",
+    "desc": "",
+    "cents": 1299,
+    "image": "https://cloverstatic.com/menu-assets/items/7RMCZFBG4CHSM.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Grilled Cheese Pita",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://cloverstatic.com/menu-assets/items/PTDJMC6XFJ9RP.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Grilled Chicken Breast (plain)",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://cloverstatic.com/menu-assets/items/10AEBVZKWAA8C.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Gyros",
+    "desc": "",
+    "cents": 1199,
+    "image": "https://cloverstatic.com/menu-assets/items/HDG4E0V73M05G.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Hamburger",
+    "desc": "",
+    "cents": 1195,
+    "image": "https://cloverstatic.com/menu-assets/items/1WP9XSKKSHF48.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Schnitzel",
+    "desc": "",
+    "cents": 1295,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Kids Shawarma",
+    "desc": "",
+    "cents": 1199,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Sides",
+    "desc": "Dressing Side 2 oz.",
+    "cents": 175,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "French Fries (Large)",
+    "desc": "",
+    "cents": 850,
+    "image": "https://cloverstatic.com/menu-assets/items/D96A5B1XQ25MG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "French Fries (Regular)",
+    "desc": "",
+    "cents": 549,
+    "image": "https://cloverstatic.com/menu-assets/items/NXBPS8DHRXWPT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "hummus side 2 oz.",
+    "desc": "",
+    "cents": 200,
+    "image": "https://cloverstatic.com/menu-assets/items/9VVNQHDG8SKY4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Pita Package White (5)",
+    "desc": "",
+    "cents": 795,
+    "image": "https://cloverstatic.com/menu-assets/items/0JV6KRHMGXD0J.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side 1 Patty Burger",
+    "desc": "",
+    "cents": 850,
+    "image": "https://cloverstatic.com/menu-assets/items/J0XHBEB80H72P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Basmati Rice 12 oz.",
+    "desc": "",
+    "cents": 655,
+    "image": "https://cloverstatic.com/menu-assets/items/QQ564RW1EHCD4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Cucumber Spears (6)",
+    "desc": "",
+    "cents": 645,
+    "image": "https://cloverstatic.com/menu-assets/items/D120JH1338FYP.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Gluten Free Bread (2)",
+    "desc": "",
+    "cents": 250,
+    "image": "https://cloverstatic.com/menu-assets/items/4JQTV4Y866D9R.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Kabab Burger Patty a-la-carte",
+    "desc": "",
+    "cents": 969,
+    "image": "https://cloverstatic.com/menu-assets/items/FJZBV8PHQ4Q48.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Schnitzel A-la-carte 7 oz.",
+    "desc": "",
+    "cents": 895,
+    "alcohol": false,
+    "src": "text",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Tomato Slices (4)",
+    "desc": "",
+    "cents": 225,
+    "image": "https://cloverstatic.com/menu-assets/items/S5D1WMQCRWD98.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Side Veggie Burger a-la-carte",
+    "desc": "",
+    "cents": 925,
+    "image": "https://cloverstatic.com/menu-assets/items/M4J66HF1T04RM.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Single Dolma (1)",
+    "desc": "",
+    "cents": 175,
+    "image": "https://cloverstatic.com/menu-assets/items/JYEB70FVN43AC.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Single Falafel (1)",
+    "desc": "",
+    "cents": 155,
+    "image": "https://cloverstatic.com/menu-assets/items/PA19TBNK1XQS4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Tzatziki Side 2 oz.",
+    "desc": "",
+    "cents": 150,
+    "image": "https://cloverstatic.com/menu-assets/items/CY2YGEXS4JKQE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Bowls & Platters"
+   },
+   {
+    "name": "Falafel Family Meal (Vegetarian)",
+    "desc": "",
+    "cents": 6799,
+    "alcohol": false,
+    "src": "text",
+    "section": "Family Meals"
+   },
+   {
+    "name": "Shawarma Family Meal",
+    "desc": "",
+    "cents": 7699,
+    "alcohol": false,
+    "src": "text",
+    "section": "Family Meals"
+   },
+   {
+    "name": "Gyro Family Meal",
+    "desc": "",
+    "cents": 7699,
+    "alcohol": false,
+    "src": "text",
+    "section": "Family Meals"
+   },
+   {
+    "name": "Mix Kabab Family Meal (3 Kefta 3 Chicken or 6 the same)",
+    "desc": "",
+    "cents": 8399,
+    "alcohol": false,
+    "src": "text",
+    "section": "Family Meals"
+   },
+   {
+    "name": "Mix Lamb Kabab Family Meal (chick & kefta)",
+    "desc": "",
+    "cents": 9249,
+    "alcohol": false,
+    "src": "text",
+    "section": "Family Meals"
+   },
+   {
+    "name": "All Lamb Kabab Family Meal",
+    "desc": "",
+    "cents": 9799,
+    "alcohol": false,
+    "src": "text",
+    "section": "Family Meals"
+   },
+   {
+    "name": "Baklava Pistachio (Finger)",
+    "desc": "",
+    "cents": 250,
+    "image": "https://cloverstatic.com/menu-assets/items/D3W6X7QEH5ZDJ.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Desserts"
+   },
+   {
+    "name": "Soda Can",
+    "desc": "",
+    "cents": 245,
+    "image": "https://cloverstatic.com/menu-assets/items/6YS7Y8BX90ZSE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Arrowhead Water Bottle",
+    "desc": "",
+    "cents": 195,
+    "image": "https://cloverstatic.com/menu-assets/items/V7WW8SAT40CKT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Fiji Water (small)",
+    "desc": "",
+    "cents": 299,
+    "image": "https://cloverstatic.com/menu-assets/items/4CEN00CC0V3K8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Frapuchino",
+    "desc": "",
+    "cents": 465,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Gatorade",
+    "desc": "",
+    "cents": 375,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Honest Kids",
+    "desc": "",
+    "cents": 195,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Ice Tea",
+    "desc": "",
+    "cents": 375,
+    "image": "https://cloverstatic.com/menu-assets/items/6XW4FQ85ZBMC0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Jarritos",
+    "desc": "",
+    "cents": 325,
+    "image": "https://cloverstatic.com/menu-assets/items/CBXE3ZR75P6ET.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Kern's",
+    "desc": "",
+    "cents": 325,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Pellegrino Large Sparkling Water",
+    "desc": "",
+    "cents": 399,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Pellegrino Spark. (small)",
+    "desc": "",
+    "cents": 319,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Pellegrino Soda Can",
+    "desc": "",
+    "cents": 299,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Snapple",
+    "desc": "",
+    "cents": 350,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "Vitamin Water",
+    "desc": "",
+    "cents": 375,
+    "alcohol": false,
+    "src": "text",
+    "section": "Cold Beverages"
+   },
+   {
+    "name": "10 Dolmas (10)",
+    "desc": "",
+    "cents": 1299,
+    "image": "https://cloverstatic.com/menu-assets/items/SWKP3TD6PWBXT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "20 Dolmas (20)",
+    "desc": "",
+    "cents": 2099,
+    "image": "https://cloverstatic.com/menu-assets/items/QR1T90N64X0ZE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baba Ganoush (16 oz.)",
+    "desc": "",
+    "cents": 1450,
+    "image": "https://cloverstatic.com/menu-assets/items/DZ3Z1JKCZ1DM8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baba Ganoush (32 oz.)",
+    "desc": "",
+    "cents": 2795,
+    "image": "https://cloverstatic.com/menu-assets/items/450A4A4ESMQWP.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baba Ganoush (8 oz.)",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/5N8FP6D7C914P.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baklava (1) Take Out",
+    "desc": "",
+    "cents": 205,
+    "image": "https://cloverstatic.com/menu-assets/items/K0J8H045E2Q8W.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baklava (12)",
+    "desc": "",
+    "cents": 2575,
+    "image": "https://cloverstatic.com/menu-assets/items/BBPZQHV2WV014.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baklava (24)",
+    "desc": "",
+    "cents": 4795,
+    "image": "https://cloverstatic.com/menu-assets/items/KN2YZNK3FKG2R.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Basmati Rice (16 oz.)",
+    "desc": "",
+    "cents": 1195,
+    "image": "https://cloverstatic.com/menu-assets/items/N3R7JHMYJ2X6R.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Basmati Rice (32 oz.)",
+    "desc": "",
+    "cents": 2195,
+    "image": "https://cloverstatic.com/menu-assets/items/NGG4KNDKJY94M.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Basmati Rice (8 oz)",
+    "desc": "",
+    "cents": 695,
+    "image": "https://cloverstatic.com/menu-assets/items/V3WWP9N5KSXB2.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "ChiIi Garlic (16 oz.)",
+    "desc": "",
+    "cents": 1145,
+    "image": "https://cloverstatic.com/menu-assets/items/D6WVNTNJHZQJ4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "ChiIi Garlic (32 oz.)",
+    "desc": "",
+    "cents": 1795,
+    "image": "https://cloverstatic.com/menu-assets/items/97YECHG1PJR5C.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "ChiIi Garlic (8 oz.)",
+    "desc": "",
+    "cents": 845,
+    "image": "https://cloverstatic.com/menu-assets/items/PZE3F9HTMJH24.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Falafel Bulk (1 - 25)",
+    "desc": "",
+    "cents": 120,
+    "image": "https://cloverstatic.com/menu-assets/items/86J2HSRFS865W.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Falafel Bulk (101 +)",
+    "desc": "",
+    "cents": 105,
+    "image": "https://cloverstatic.com/menu-assets/items/5A3SDGY9RMJV6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Falafel Bulk (26 - 50)",
+    "desc": "",
+    "cents": 115,
+    "image": "https://cloverstatic.com/menu-assets/items/VEGR26VG94KAC.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Falafel Bulk (51 - 100)",
+    "desc": "",
+    "cents": 110,
+    "image": "https://cloverstatic.com/menu-assets/items/G3HNYC5S8ZM5T.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Feta Cheese (16 oz.)",
+    "desc": "",
+    "cents": 1395,
+    "image": "https://cloverstatic.com/menu-assets/items/WXK35CVP20Z32.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Feta Cheese (32 oz.)",
+    "desc": "",
+    "cents": 1899,
+    "image": "https://cloverstatic.com/menu-assets/items/TME7HDSKGAMCE.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Feta Cheese (8 oz.)",
+    "desc": "",
+    "cents": 945,
+    "image": "https://cloverstatic.com/menu-assets/items/ZFTQ60H6WMVH0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Green Cracked Spicy Olives (16 oz.)",
+    "desc": "",
+    "cents": 1145,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Green Cracked Spicy Olives (32 oz.)",
+    "desc": "",
+    "cents": 1950,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Green Cracked Spicy Olives (8 oz.)",
+    "desc": "",
+    "cents": 845,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Gyros Meat (Cooked) (16 oz.)",
+    "desc": "",
+    "cents": 1995,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Gyros Meat (Cooked) (32 oz.)",
+    "desc": "",
+    "cents": 3695,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Gyros Meat (Cooked) (8 oz.)",
+    "desc": "",
+    "cents": 1095,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "House Salad (16 oz.)",
+    "desc": "",
+    "cents": 895,
+    "image": "https://cloverstatic.com/menu-assets/items/K3TMJSS34QP7T.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "House Salad (32 oz.)",
+    "desc": "",
+    "cents": 1595,
+    "image": "https://cloverstatic.com/menu-assets/items/GFGDG001C36CW.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "House Salad (8 oz.)",
+    "desc": "",
+    "cents": 599,
+    "image": "https://cloverstatic.com/menu-assets/items/DVE5M9ZZW7YHJ.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Hummus (16 oz.)",
+    "desc": "",
+    "cents": 1450,
+    "image": "https://cloverstatic.com/menu-assets/items/YZT20TJQ8GBMY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Hummus (32 oz.)",
+    "desc": "",
+    "cents": 2795,
+    "image": "https://cloverstatic.com/menu-assets/items/DNZSZGZ1XKE7J.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Hummus (8 oz.)",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/P4ECEWJKRM156.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Kalamata olives (16 oz.)",
+    "desc": "",
+    "cents": 995,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Kalamata olives (32 oz.)",
+    "desc": "",
+    "cents": 1650,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Kalamata olives (8 oz.)",
+    "desc": "",
+    "cents": 695,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Pickled Cucumbers (16 oz.)",
+    "desc": "",
+    "cents": 995,
+    "image": "https://cloverstatic.com/menu-assets/items/HFBJDG4ZWA4YR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Pickled Cucumbers (32 oz.)",
+    "desc": "",
+    "cents": 1650,
+    "image": "https://cloverstatic.com/menu-assets/items/ANQBP04P0C8WG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Pickled Cucumbers (8 oz.)",
+    "desc": "",
+    "cents": 695,
+    "image": "https://cloverstatic.com/menu-assets/items/FCNEEQXE4YWSP.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Pickled Turnips (16 oz.)",
+    "desc": "",
+    "cents": 995,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Pickled Turnips (32oz.)",
+    "desc": "",
+    "cents": 1650,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Pickled Turnips (8 oz.)",
+    "desc": "",
+    "cents": 695,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Raw Tahina (2 lbs.)",
+    "desc": "",
+    "cents": 1925,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Shawarma Meat (cooked) (16 oz.)",
+    "desc": "",
+    "cents": 1995,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Shawarma Meat (cooked) (32 oz.)",
+    "desc": "",
+    "cents": 3695,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Shawarma Meat (cooked) (8 oz.)",
+    "desc": "",
+    "cents": 1095,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Spicy Eggplant (16 oz.)",
+    "desc": "",
+    "cents": 1450,
+    "image": "https://cloverstatic.com/menu-assets/items/FMEZSHM89WYDA.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Spicy Eggplant (32 oz.)",
+    "desc": "",
+    "cents": 2795,
+    "image": "https://cloverstatic.com/menu-assets/items/PJH19TPX1MJ42.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Spicy Eggplant (8 oz.)",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/N7EZAGJC9HJ6A.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Tahini (16 oz.)",
+    "desc": "",
+    "cents": 1395,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Tahini (32 oz.)",
+    "desc": "",
+    "cents": 1995,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Tahini (8 oz.)",
+    "desc": "",
+    "cents": 795,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Turkish Coffee Can (Venizelos) 16 Oz.",
+    "desc": "",
+    "cents": 2599,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Turkish Salad (16 oz.)",
+    "desc": "",
+    "cents": 1450,
+    "image": "https://cloverstatic.com/menu-assets/items/3Y7ZPY5TWW3CG.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Turkish Salad (32 oz.) (cloned)",
+    "desc": "",
+    "cents": 2195,
+    "image": "https://cloverstatic.com/menu-assets/items/RGJYXR060N0J2.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Turkish Salad (8 oz.)",
+    "desc": "",
+    "cents": 799,
+    "image": "https://cloverstatic.com/menu-assets/items/16J3YHFYRHY30.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Tzatziki (16 oz.)",
+    "desc": "",
+    "cents": 1395,
+    "image": "https://cloverstatic.com/menu-assets/items/0Y1WZR2FQ7P52.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Tzatziki (32 oz.)",
+    "desc": "",
+    "cents": 1995,
+    "image": "https://cloverstatic.com/menu-assets/items/RYT8AJSPRSVJW.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Tzatziki (8 oz.)",
+    "desc": "",
+    "cents": 795,
+    "image": "https://cloverstatic.com/menu-assets/items/2WVHEER5FX9S0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Zhoug (16 oz.)",
+    "desc": "",
+    "cents": 1550,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Zhoug (8 oz.)",
+    "desc": "",
+    "cents": 750,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Baba Ganoush Platter (2 lbs.)",
+    "desc": "",
+    "cents": 2295,
+    "image": "https://cloverstatic.com/menu-assets/items/ZRXF6VBXSNF2R.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Basmati rice (full pan) 7.5 Lbs",
+    "desc": "",
+    "cents": 5900,
+    "image": "https://cloverstatic.com/menu-assets/items/999JRH8GT23D8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Basmati rice (half pan) 3.75 Lbs",
+    "desc": "",
+    "cents": 4100,
+    "image": "https://cloverstatic.com/menu-assets/items/ZQWA4VV2WT6QW.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Bowls",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Falafel platter (Large) 72ea",
+    "desc": "",
+    "cents": 8600,
+    "image": "https://cloverstatic.com/menu-assets/items/GAMS6SRDVGQF0.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Falafel platter (medium) 32ea",
+    "desc": "",
+    "cents": 5200,
+    "image": "https://cloverstatic.com/menu-assets/items/QDC3ADSA0T9FT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Fried eggplant platter (Large)",
+    "desc": "",
+    "cents": 9500,
+    "image": "https://cloverstatic.com/menu-assets/items/K8XD3BW0G25A6.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Fried eggplant platter (medium)",
+    "desc": "",
+    "cents": 6200,
+    "image": "https://cloverstatic.com/menu-assets/items/AY7XRNARR3ATR.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Greek salad bowl (Large) 10 Lbs",
+    "desc": "",
+    "cents": 8700,
+    "image": "https://cloverstatic.com/menu-assets/items/1MS8KS7R4Y0C2.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Greek salad bowl (medium) 5 Lbs",
+    "desc": "",
+    "cents": 5000,
+    "image": "https://cloverstatic.com/menu-assets/items/JE656X48R2JB8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Gyros (full pan) 7.5 Lbs",
+    "desc": "",
+    "cents": 12100,
+    "image": "https://cloverstatic.com/menu-assets/items/QJV8CTDPDD3Q8.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Gyros (half pan) 3.75 Lbs",
+    "desc": "",
+    "cents": 7300,
+    "image": "https://cloverstatic.com/menu-assets/items/AWZN7J05KGGYT.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "House Salad bowl (Large) 10 Lbs",
+    "desc": "",
+    "cents": 7400,
+    "image": "https://cloverstatic.com/menu-assets/items/GAC478YT9EX8J.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "House Salad bowl (medium) 5 Lbs",
+    "desc": "",
+    "cents": 4000,
+    "image": "https://cloverstatic.com/menu-assets/items/4TWWFNRQBJ8TM.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Hummus Platter (2lbs.)",
+    "desc": "",
+    "cents": 2295,
+    "image": "https://cloverstatic.com/menu-assets/items/X2MFW40ZK9EP4.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Lamb Kabab (full pan] 20ea",
+    "desc": "",
+    "cents": 18200,
+    "image": "https://cloverstatic.com/menu-assets/items/P164HB8ASCKBY.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Lamb Kabab (half pan) 10ea",
+    "desc": "",
+    "cents": 10900,
+    "image": "https://cloverstatic.com/menu-assets/items/DMZJPX1XY5TJC.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Mediterranean sampler platter (Large)",
+    "desc": "",
+    "cents": 11500,
+    "image": "https://cloverstatic.com/menu-assets/items/JHESSNVXW7AKM.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Mediterranean sampler platter (medium)",
+    "desc": "",
+    "cents": 7200,
+    "image": "https://cloverstatic.com/menu-assets/items/MZVVBJRD6HG9A.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Mix Shish Kabab (full pan) 20ea",
+    "desc": "",
+    "cents": 14400,
+    "image": "https://cloverstatic.com/menu-assets/items/ER7JV37WVZY00.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Mix Shish Kabab (half pan) 10ea",
+    "desc": "",
+    "cents": 7900,
+    "image": "https://cloverstatic.com/menu-assets/items/NVK1SHS8W205J.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Platters",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Service Items",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Shawarma (full pan) 7.5 Lbs",
+    "desc": "",
+    "cents": 12100,
+    "image": "https://cloverstatic.com/menu-assets/items/AZ7BPEXCAPY6C.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Shawarma (half pan) 3.75 Lbs",
+    "desc": "",
+    "cents": 7300,
+    "image": "https://cloverstatic.com/menu-assets/items/GM2PXXWVY69A2.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Spicy Eggplant Platter (2 lbs.)",
+    "desc": "",
+    "cents": 2295,
+    "image": "https://cloverstatic.com/menu-assets/items/FDTN8XGDWQJ7G.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "text+card",
+    "section": "By The Pound: (Take out only)"
+   },
+   {
+    "name": "Kabab Classic (10 serving)",
+    "desc": "",
+    "cents": 26000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Meal Packages"
+   },
+   {
+    "name": "Lamb Classic (10 serving)",
+    "desc": "",
+    "cents": 28000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Meal Packages"
+   },
+   {
+    "name": "Mediterranean Classic (10 serving)",
+    "desc": "",
+    "cents": 24000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Meal Packages"
+   },
+   {
+    "name": "Vegetarian Classic (10 serving)",
+    "desc": "",
+    "cents": 19000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Meal Packages"
+   },
+   {
+    "name": "Dressing Side 2 oz.",
+    "desc": "",
+    "cents": 175,
+    "image": "https://cloverstatic.com/menu-assets/items/9BHSFTT3V115Y.jpeg?w=320&q=80",
+    "alcohol": false,
+    "src": "card"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/a632ec2c-ca22-49a0-974b-b5e409230700?w=1920&quality=60&fit=cover",
+   "alt": "",
+   "near": "Best Mediterranean Food in Lafayette\nBold Flavors, Fresh Ingredients, Mediterranean Magic in Every B",
+   "w": 1920,
+   "h": 2559,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/QZM2JAAQ6SD2T.jpeg",
+   "alt": "Lamb Kabab Plate",
+   "near": "Lamb Kabab Plate",
+   "w": 1024,
+   "h": 768,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/H3S8ZZASHHH2E.jpeg",
+   "alt": "Chicken Kabab Plate",
+   "near": "Chicken Kabab Plate",
+   "w": 1024,
+   "h": 768,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MGPJBSDACJ6AY.jpeg",
+   "alt": "Shawarma Plate",
+   "near": "Shawarma Plate",
+   "w": 1024,
+   "h": 768,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/M7FAKSSW2WBBY.jpeg",
+   "alt": "Falafel Plate",
+   "near": "Falafel Plate",
+   "w": 1024,
+   "h": 769,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/P63F6AFDHSYW8.jpeg",
+   "alt": "Turkish Salad (Regular)",
+   "near": "Turkish Salad (Regular)",
+   "w": 1024,
+   "h": 768,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/c8aa82ff-1e96-4509-b793-33c03901bdc1?w=560&h=560&fit=cover",
+   "alt": "Welcome to Kabab Burger Mediterranean Grill!",
+   "near": "Welcome to Kabab Burger Mediterranean Grill!\nLocated in Lafayette, CA, Kabab Burger Mediterranean Gr",
+   "w": 560,
+   "h": 560,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/168d69a9-f85b-4076-ae83-ff0b10073b73?w=560&h=560&fit=cover",
+   "alt": "🥙 Delicious Mediterranean Menu for Everyone",
+   "near": "🥙 Delicious Mediterranean Menu for Everyone\nOur menu includes fan favorites like the Falafel Plate,",
+   "w": 560,
+   "h": 560,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/9e7a930d-8c4b-4479-8df6-0291dbda4804?w=1400&fit=cover",
+   "alt": "",
+   "near": "Order From Our Website\nOrdering from Kabab Burger Mediterranean Grill is easy! You can either pick u",
+   "w": 1280,
+   "h": 800,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/b8aea0ef-a716-4221-9dfc-9a06888fd357?w=405&h=405&format=auto&fit=cover",
+   "alt": "Hummus topped with sautéed mushrooms, onions, and fresh parsley, sprinkled with paprika.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/d45f9740-504d-40f6-9688-72911a91fe81?w=405&h=405&format=auto&fit=cover",
+   "alt": "A falafel pita sandwich from Kabab Burger Mediterranean Grill, filled with falafel, diced tomatoes, cucumbers, and lettuce.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/4c450380-8343-44fe-abfd-61d662df9c67?w=405&h=405&format=auto&fit=cover",
+   "alt": "A falafel pita sandwich with tzatziki sauce and a pickle spear, served with three falafel balls.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/194ae8e1-9b5f-44da-8209-4434ba2402c7?w=405&h=405&format=auto&fit=cover",
+   "alt": "A white plate holds green pickles, whole olives, and bright pink pickled turnips.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/a0602628-1cec-429d-a3a6-7525a6e1b441?w=405&h=405&format=auto&fit=cover",
+   "alt": "A vibrant Mediterranean salad with lettuce, tomatoes, cucumbers, red onions, feta cheese, and dressing.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/8b475123-ebc3-4432-beb8-567e2808b5ce?w=405&h=405&format=auto&fit=cover",
+   "alt": "Close-up of a latte in a white cup with a heart design in the foam.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/39c98bec-0e85-46ba-8bea-f207843873a1?w=405&h=405&format=auto&fit=cover",
+   "alt": "A double cheeseburger with lettuce, tomato, and pickles, served with a side of golden french fries.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/bdb5c3d8-1444-4239-a6a0-8d7f72247711?w=405&h=405&format=auto&fit=cover",
+   "alt": "A white plate holds a serving of Mediterranean stew, garnished with fresh parsley.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/6e0196e2-97da-4627-a131-d4a90d4f330f?w=405&h=405&format=auto&fit=cover",
+   "alt": "Grilled kabob with rice, hummus, and a fresh salad of diced cucumbers, tomatoes, and lettuce.",
+   "near": "📸 Explore Our Delicious Menu Items\n\nBrowse through our gallery to see the delicious Mediterranean d",
+   "w": 405,
+   "h": 405,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/8214b650-9e0a-4aef-9022-2c2d514860a6?w=560&h=560&fit=cover",
+   "alt": "👨‍👩‍👧‍👦 Family-Friendly Dining Experience",
+   "near": "👨‍👩‍👧‍👦 Family-Friendly Dining Experience\nOur restaurant offers a relaxed atmosphere, perfect fo",
+   "w": 560,
+   "h": 560,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://kabab-burger.co/pluto-images/funnel/images/8ed6bd96-e76f-4607-a242-f851bc60ff59?w=1400&fit=cover",
+   "alt": "",
+   "near": "🎉 Join Our Rewards Program!\nSign up for our rewards program and start earning points every time you",
+   "w": 1280,
+   "h": 800,
+   "page": "https://kabab-burger.co/"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/H3S8ZZASHHH2E.jpeg?w=320&q=80",
+   "alt": "Chicken Kabab Plate.",
+   "near": "Chicken Kabab Plate\n\n$19.95",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/8KA7YEMWJHEFT.jpeg?w=320&q=80",
+   "alt": "Gyros Plate.",
+   "near": "Gyros Plate\n\n$17.95",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/MGPJBSDACJ6AY.jpeg?w=320&q=80",
+   "alt": "Shawarma Plate.",
+   "near": "Shawarma Plate\n\n$18.45",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/HNTFXVTPK64SM.jpeg?w=320&q=80",
+   "alt": "Falafel Appetizer (5).",
+   "near": "Falafel Appetizer (5)\n\n$8.50",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/M7FAKSSW2WBBY.jpeg?w=320&q=80",
+   "alt": "Falafel Plate.",
+   "near": "Falafel Plate\n\n$16.75",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/R7PS8J65D9R1G.jpeg?w=320&q=80",
+   "alt": "Kefta Kabab Plate.",
+   "near": "Kefta Kabab Plate\n\n$19.95",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/HV802ABBJEPZ0.jpeg?w=320&q=80",
+   "alt": "Sampler Platter.",
+   "near": "Sampler Platter\n\n$17.45",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/HCZGDNWDFZ5Z6.jpeg?w=320&q=80",
+   "alt": "House Salad HH.",
+   "near": "House Salad HH\n\n$7.99\n\nGrilled 100% Chuck Beef Burger topped with seasoned Feta Cheese. Served in a ",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/Y3WVZHM3TFR0E.jpeg?w=320&q=80",
+   "alt": "Greek Salad HH.",
+   "near": "Greek Salad HH\n\n$9.95\n\nRomaine Lettuce, Tomatoes, Cucumbers, Feta Cheese, Kalamata Olives, Red Onion",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/C9C5TA4ZPM4BG.jpeg?w=320&q=80",
+   "alt": "Cheese Burger 1/4 Lb. HH.",
+   "near": "Cheese Burger 1/4 Lb. HH\n\n$12.99+\n\nGrilled 100% ground beef Chuck Burger served in a toasted bun wit",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/V2ZY5JJ907JV2.jpeg?w=320&q=80",
+   "alt": "Chicken Gyro in a Pita HH.",
+   "near": "Chicken Gyro in a Pita HH\n\n$11.99\n\nThin slices of marinated Chicken cooked on the rotisserie served ",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/EZRA36Q8CYVXR.jpeg?w=320&q=80",
+   "alt": "Chicken Shawarma in a Pita HH.",
+   "near": "Chicken Shawarma in a Pita HH\n\n$11.99\n\nThin slices of marinated Chicken Thighs cooked on the rotisse",
+   "w": 698,
+   "h": 524,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/9S1818RT7RXAM.jpeg?w=320&q=80",
+   "alt": "Falafels in Pita HH.",
+   "near": "Falafels in Pita HH\n\n$10.95\n\nFreshly made Falafel balls (3) served inside a Pita bread with Hummus, ",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/ANS600R8C72W8.jpeg?w=320&q=80",
+   "alt": "Falafel Plate (4) HH.",
+   "near": "Falafel Plate (4) HH\n\n$11.50\n\nFreshly made Falafel balls (3) served on a plate with Hummus, Tahini a",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/N4DGKR0NANNR0.jpeg?w=320&q=80",
+   "alt": "Chicken Shawarma Plate HH.",
+   "near": "Chicken Shawarma Plate HH\n\n$12.50\n\nThin slices of marinated chicken thighs, cooked on the rotisserie",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/KZ00F92J6FKX8.jpeg?w=320&q=80",
+   "alt": "Chicken Kabab Plate HH.",
+   "near": "Chicken Kabab Plate HH\n\n$12.50\n\nCubes of marinated Chicken Breast grilled to perfection, served with",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/X85K6AJ8P511A.jpeg?w=320&q=80",
+   "alt": "Gyros Plate HH.",
+   "near": "Gyros Plate HH\n\n$12.50\n\nThin slices of marinated Beef & Lamb Gyros cooked on the rotisserie, served ",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BEJMJFZQ7GCV6.jpeg?w=320&q=80",
+   "alt": "Kefta Kabab Plate HH.",
+   "near": "Kefta Kabab Plate HH\n\n$12.50\n\nGrilled seasoned mixture of 100% ground Chuck beef & Australian Lamb G",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/R9WVHZ17VB4M8.jpeg?w=320&q=80",
+   "alt": "Lamb Kabab Plate Mini HH.",
+   "near": "Lamb Kabab Plate Mini HH\n\n$13.50\n\nCubes of marinated Australian lamb Grilled to Perfection, served w",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/DFZRT0PTZ8WTP.jpeg?w=320&q=80",
+   "alt": "Schnitzel Plate HH.",
+   "near": "Schnitzel Plate HH\n\n$13.50\n\nCrispy seasoned and breaded Chicken Breast, pan fried to perfection, ser",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/XC53M27FKHQ5E.jpeg?w=320&q=80",
+   "alt": "Side of Pita Bread HH.",
+   "near": "side of Pita Bread HH\n\n$1.50\n\nSoft, warm pita bread served on the side.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/NB8TFTNZDSKZJ.jpeg?w=320&q=80",
+   "alt": "1/2 Sampler Patter.",
+   "near": "1/2 Sampler Patter\n\n$11.50\n\nIncludes any combination of ONLY 4 items from the regular Sampler Platte",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/ETKECCWWNRSFE.jpeg?w=320&q=80",
+   "alt": "Baba Ganoush (Mini).",
+   "near": "Baba Ganoush (Mini)\n\n$7.75\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/PP9HMHKJBC8WT.jpeg?w=320&q=80",
+   "alt": "Baba Ganoush (Regular).",
+   "near": "Baba Ganoush (Regular)\n\n$10.50\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/174TXSWG9GXK8.jpeg?w=320&q=80",
+   "alt": "Dolmas Appetizer (5).",
+   "near": "Dolmas Appetizer (5)\n\n$6.75\n\nStuffed grape leaves w/rice & spices (5)",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/ZTKNMFJJXRSXW.jpeg?w=320&q=80",
+   "alt": "Hummus (Mini).",
+   "near": "Hummus (Mini)\n\n$7.75\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/498CJX61RBFVE.jpeg?w=320&q=80",
+   "alt": "Pickles (Large).",
+   "near": "Pickles (Large)\n\n$8.99\n\nPickled Cucumbers, Turnips & Olives.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/18P4MT741GG16.jpeg?w=320&q=80",
+   "alt": "Pickles (Regular).",
+   "near": "Pickles (Regular)\n\n$6.45\n\nPickled Cucumbers, Turnips & Olives.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/BXDPSBWNEKZ5C.jpeg?w=320&q=80",
+   "alt": "Side Pita (1).",
+   "near": "Side Pita (1)\n\n$2.15",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/7MTR2QCXF8FFE.jpeg?w=320&q=80",
+   "alt": "Spicy Eggplant (Mini).",
+   "near": "Spicy Eggplant (Mini)\n\n$7.75\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/F4DVP8J1MSNC0.jpeg?w=320&q=80",
+   "alt": "Spicy Eggplant (Regular).",
+   "near": "Spicy Eggplant (Regular)\n\n$10.50\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/8BDJ64WEEPCJG.jpeg?w=320&q=80",
+   "alt": "Turkish Salad (Mini).",
+   "near": "Turkish Salad (Mini)\n\n$7.75\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/P63F6AFDHSYW8.jpeg?w=320&q=80",
+   "alt": "Turkish Salad (Regular).",
+   "near": "Turkish Salad (Regular)\n\n$10.50\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/7KSK5GMVABKSY.jpeg?w=320&q=80",
+   "alt": "Tzatziki with pita.",
+   "near": "Tzatziki with pita\n\n$6.45\n\nServed with 1 Pita bread.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/1VMH9FMA7Z4XG.jpeg?w=320&q=80",
+   "alt": "Greek Salad (Large).",
+   "near": "Greek Salad (Large)\n\n$14.95\n\nRomaine lettuce, Tomatoes, Cucumbers, Feta Cheese, Kalamata Olives, Red",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/QG3SF9XGPH7C4.jpeg?w=320&q=80",
+   "alt": "Greek Salad (Regular).",
+   "near": "Greek Salad (Regular)\n\n$11.99\n\nRomaine Lettuce, Tomatoes, Cucumbers, Feta Cheese, Kalamata Olives, R",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/GWQE40PVJDGRE.jpeg?w=320&q=80",
+   "alt": "House Salad (Large).",
+   "near": "House Salad (Large)\n\n$13.25\n\nFresh diced Tomatoes, Cucumbers, Shredded Romaine topped with Parsley a",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/Q8BQA378RB0SR.jpeg?w=320&q=80",
+   "alt": "House Salad (Regular).",
+   "near": "House Salad (Regular)\n\n$9.95\n\nFresh diced Tomatoes, Cucumbers, Shredded Romaine topped with Parsley ",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/R84W4P11WP3DT.jpeg?w=320&q=80",
+   "alt": "Chicken Gyros Plate.",
+   "near": "Chicken Gyros Plate\n\n$17.95\n\nThin slices of marinated rotisserie chicken served with Basmati Rice, T",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  },
+  {
+   "src": "https://cloverstatic.com/menu-assets/items/9P5C7NE3573XE.jpeg?w=320&q=80",
+   "alt": "Hummus Plate.",
+   "near": "Hummus Plate\n\n$13.99\n\nServed with two Pita Breads and your choice of toppings.",
+   "w": 640,
+   "h": 480,
+   "page": "https://kabab-burger.co/menu"
+  }
+ ]
+}

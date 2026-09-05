@@ -1,0 +1,533 @@
+{
+ "id": "b_pippal",
+ "source": "text",
+ "pages": [
+  "https://www.pippaldublin.com/",
+  "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c",
+  "https://www.pippaldublin.com/menu",
+  "https://get.popmenu.com/",
+  "https://www.levelaccess.com/a/popmenu?utm_source=popmenuclient&utm_medium=iconlarge&utm_term=eachannelpage&utm_content=footer&utm_campaign=popmenu",
+  "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c/item-lucknowi-chicken-biryani_29728f7f-3bdb-4cf0-bb34-df83b414fdf6",
+  "https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c/item-chilli-garlic-naan_e40eb7e1-bcd2-4d70-8cc2-3c5d2ba6e788"
+ ],
+ "items": [
+  {
+   "name": "Lucknowi Chicken Biryani",
+   "desc": "Lucknowi Chicken biryani, Fragrant basmati rice with tender Corniche hen, brown onions, dry fruits, accompanied by cooling raita.",
+   "cents": 3400,
+   "section": "Biryani",
+   "photo": "pippal-lucknowi-chicken-biryani"
+  },
+  {
+   "name": "Chilli Garlic Naan",
+   "desc": "Chilli Garlic Naan – Soft, pillowy tandoor-baked bread topped with fresh garlic and herbs",
+   "cents": 600,
+   "section": "Biryani",
+   "photo": "pippal-chilli-garlic-naan"
+  },
+  {
+   "name": "Pappad Sampler",
+   "desc": "Papad Sampler Assortment of Indian papads with chutneys.",
+   "cents": 1400,
+   "section": "Biryani",
+   "photo": "pippal-pappad-sampler"
+  },
+  {
+   "name": "Live Chaat Trolley for 2",
+   "desc": "• Live Chaat Classic Indian chaat reimagined with papadi, dhokla, chutneys, sev, & liquid nitrogen frozen yogurt.",
+   "cents": 2800,
+   "section": "Biryani",
+   "photo": "pippal-live-chaat-trolley-for-2"
+  },
+  {
+   "name": "Quinoa Bhel",
+   "desc": "Quinoa bhel Light and crunchy puffed rice with quinoa, pomelo, ginger, & assorted chutneys.",
+   "cents": 1600,
+   "section": "Biryani",
+   "photo": "pippal-quinoa-bhel"
+  },
+  {
+   "name": "Sprout Salad",
+   "desc": "Sprout Salad: a healthy mix of sprouted lentils and pomelos, tossed with fresh herbs, lemon juice, and light spices for a refreshing crunch.",
+   "cents": 1600,
+   "section": "Biryani",
+   "photo": "pippal-sprout-salad"
+  },
+  {
+   "name": "Kaahmiri Rajma Salad",
+   "desc": "Kashmiri Rajma salad Nutty rajma hummus paired with sprouts, crunchy potatoes, & pickled vegetables.",
+   "cents": 1600,
+   "section": "Biryani",
+   "photo": "pippal-kaahmiri-rajma-salad"
+  },
+  {
+   "name": "Live Chaat Trolley for 4",
+   "desc": "Live Chaat Classic Indian chaat reimagined with papadi, dhokla, chutneys, sev, & liquid nitrogen frozen yogurt.",
+   "cents": 4200,
+   "section": "Biryani",
+   "photo": "pippal-live-chaat-trolley-for-4"
+  },
+  {
+   "name": "Mushroom MOMO",
+   "desc": "Mushroom Momo, Soft steamed dumplings stuffed with finely chopped mushrooms, herbs, and light spices, served with tangy spicy chutney.",
+   "cents": 1600,
+   "section": "Veg starters",
+   "photo": "pippal-mushroom-momo"
+  },
+  {
+   "name": "Roasted Gun Powder Idly",
+   "desc": "Roasted gun powder idlis steamed Coin idlis tossed in roasted gunpowder, served with mustard curry leaves & tomato chutney.",
+   "cents": 1800,
+   "section": "Veg starters",
+   "photo": "pippal-roasted-gun-powder-idly"
+  },
+  {
+   "name": "Mushroom Galouti",
+   "desc": "Mushroom Galouti, Delicate mushroom mince galouti with brown cashew-apricot chutney, crispy mushrooms, and coriander khamiri.",
+   "cents": 2000,
+   "section": "Veg starters",
+   "photo": "pippal-mushroom-galouti"
+  },
+  {
+   "name": "Chakri Paneer",
+   "desc": "Chakri paneer, Aromatic paneer roomali stuffed with saffron, coriander, cashew, crispy spinach, & malai cream.",
+   "cents": 2000,
+   "section": "Veg starters",
+   "photo": "pippal-chakri-paneer"
+  },
+  {
+   "name": "Arbi Ke Kebab",
+   "desc": "Arbi ke kebab, Spiced taro root mince kebabs with coriander & carom seeds, served with khamiri roti & mint chutney.",
+   "cents": 1800,
+   "section": "Veg starters",
+   "photo": "pippal-arbi-ke-kebab"
+  },
+  {
+   "name": "Veg Manchow Soup",
+   "desc": "Veg Manchow Soup, A spicy, flavorful Indo-Chinese soup made with mixed vegetables, garlic, ginger, and soy, topped with crispy fried noodles.",
+   "cents": 1400,
+   "section": "Veg starters",
+   "photo": "pippal-veg-manchow-soup"
+  },
+  {
+   "name": "Chicken Tikka Trio",
+   "desc": "Chicken tikka trio Three flavorful tikka variations, classic, malai, & coriander, accompanied by mint-garlic chutney",
+   "cents": 2200,
+   "section": "Non-veg starters",
+   "photo": "pippal-chicken-tikka-trio"
+  },
+  {
+   "name": "Fish Cutlet",
+   "desc": "Fish cutlet Crispy fried fish with a nutty peanut-butter finish, served alongside potato chips, & pickled onion.",
+   "cents": 2200,
+   "section": "Non-veg starters",
+   "photo": "pippal-fish-cutlet"
+  },
+  {
+   "name": "Andhra Fried Chicken",
+   "desc": "Andhra fried chicken Spiced Andhra-style fried chicken paired with tangy pickled onion & aromatic curry leaf.",
+   "cents": 2200,
+   "section": "Non-veg starters",
+   "photo": "pippal-andhra-fried-chicken"
+  },
+  {
+   "name": "Prawn Pepper Fry",
+   "desc": "Prawn pepper fry Succulent prawns tossed with black pepper, curry leaf, onion-garlic tadka, & young coconut.",
+   "cents": 2400,
+   "section": "Non-veg starters",
+   "photo": "pippal-prawn-pepper-fry"
+  },
+  {
+   "name": "Pathar Ke Kebab",
+   "desc": "Pathar ke kebab Flavorful kebabs cooked on a stone slab, served with mint-garlic chutney, young onion, & coriander.",
+   "cents": 2400,
+   "section": "Non-veg starters",
+   "photo": "pippal-pathar-ke-kebab"
+  },
+  {
+   "name": "Lamb CHOPS",
+   "desc": "Lamb Chops, Juicy lamb chops marinated in yogurt and spices, slow cooked in a clay pot, then perfectly toasted for a smoky, tender finish.",
+   "cents": 3200,
+   "section": "Non-veg starters",
+   "photo": "pippal-lamb-chops"
+  },
+  {
+   "name": "Chicken Momo",
+   "desc": "Chicken Momo, steamed dumplings filled with juicy minced chicken, herbs, and mild spices, served with spicy chutney.",
+   "cents": 1800,
+   "section": "Non-veg starters",
+   "photo": "pippal-chicken-momo"
+  },
+  {
+   "name": "Dal Jakhiya",
+   "desc": "Dal jakhiya, Mix yellow lentils flavored with jakhiya seeds, fresh ginger, tomato, & ghee",
+   "cents": 2200,
+   "section": "Non-veg starters",
+   "photo": "pippal-dal-jakhiya"
+  },
+  {
+   "name": "Asami Vegetable Coconut Curry",
+   "desc": "Asami vegetable coconut curry, A fragrant coconut curry of seasonal vegetables, flavored with kaffir lime, galangal, and curry leaf.",
+   "cents": 2800,
+   "section": "Non-veg starters",
+   "photo": "pippal-asami-vegetable-coconut-curry"
+  },
+  {
+   "name": "Malai Kofta",
+   "desc": "Malai kofta, Delicate koftas in rich cashew gravy, paired with fresh fruits, cream cheese, and pan-seared asparagus.",
+   "cents": 2800,
+   "section": "Non-veg starters",
+   "photo": "pippal-malai-kofta"
+  },
+  {
+   "name": "Paneer Parat",
+   "desc": "Paneer Parat, Delicate six layered paneer in roasted tomato gravy, enhanced with coconut chili oil and curry leaf.",
+   "cents": 3000,
+   "section": "Non-veg starters",
+   "photo": "pippal-paneer-parat"
+  },
+  {
+   "name": "Himalyan Jangli Mushrooms",
+   "desc": "Himalayan jangli Mushrooms, Wild mushrooms paired with mushroom purée & drizzled with fragrant curry leaf oil.",
+   "cents": 3000,
+   "section": "Non-veg starters",
+   "photo": "pippal-himalyan-jangli-mushrooms"
+  },
+  {
+   "name": "Litti Chokha",
+   "desc": "Litti chokha, Wheat dough balls stuffed with Sattu, served with roasted eggplant & potato chokha, finished with ghee",
+   "cents": 2800,
+   "section": "Non-veg starters",
+   "photo": "pippal-litti-chokha"
+  },
+  {
+   "name": "Sarson Saag",
+   "desc": "Sarson saag, Fresh mustard greens cooked with garlic, white butter, and jaggery, served with pickled onion",
+   "cents": 2800,
+   "section": "Non-veg starters",
+   "photo": "pippal-sarson-saag"
+  },
+  {
+   "name": "Tawa Sabzi",
+   "desc": "Tawa Sabzi A vibrant medley of seasonal vegetables tossed on a hot iron tawa with aromatic Indian spices, fresh herbs",
+   "cents": 2800,
+   "section": "Non-veg starters",
+   "photo": "pippal-tawa-sabzi"
+  },
+  {
+   "name": "Laal Mass",
+   "desc": "Laal Mass, Spicy Rajasthani-style goat curry with fresh coriander and a drizzle of chili oil.",
+   "cents": 3400,
+   "section": "Non-veg mains",
+   "photo": "pippal-laal-mass"
+  },
+  {
+   "name": "Kashmiri Mutton Gustaba",
+   "desc": "Kashmiri Mutton Gustaba, Succulent mutton mince balls simmered in yogurt gravy with dry mint and crisp nadru",
+   "cents": 3000,
+   "section": "Non-veg mains",
+   "photo": "pippal-kashmiri-mutton-gustaba"
+  },
+  {
+   "name": "East India Butter Chicken",
+   "desc": "Butter Chicken – Tender chicken simmered in a rich, creamy tomato-butter gravy, delicately spiced and finished with aromatic herbs.",
+   "cents": 3000,
+   "section": "Non-veg mains",
+   "photo": "pippal-east-india-butter-chicken"
+  },
+  {
+   "name": "Chicken Saoji",
+   "desc": "Chicken Saoji – A fiery Maharashtrian specialty featuring tender chicken slow-cooked in a bold, aromatic gravy made with traditional Saoji spices.",
+   "cents": 3200,
+   "section": "Non-veg mains",
+   "photo": "pippal-chicken-saoji"
+  },
+  {
+   "name": "Mango Alleppey Fish & Prawn Curry",
+   "desc": "Mango Alleppey fish & prawn curry, Delicate seafood in creamy coconut-mango gravy, accented with curry leaf and chili oil.",
+   "cents": 3600,
+   "section": "Non-veg mains",
+   "photo": "pippal-mango-alleppey-fish-prawn-curry"
+  },
+  {
+   "name": "Parsi Fish Curry",
+   "desc": "Parsi fish curry, Delicate steamed fish served with mustard-flavored coconut and coriander gravy.",
+   "cents": 3200,
+   "section": "Non-veg mains",
+   "photo": "pippal-parsi-fish-curry"
+  },
+  {
+   "name": "Goan crab cake",
+   "desc": "Goan Crab Cake, Succulent crab simmered in a spiced Goan coconut-tomato sauce with mustard, curry leaf, and chili oil.",
+   "cents": 3400,
+   "section": "Non-veg mains",
+   "photo": "pippal-goan-crab-cake"
+  },
+  {
+   "name": "Naga Chicken Curry",
+   "desc": "Naga chicken curry, Tender chicken simmered in a fragrant Naga-style curry with tomato, galangal, lemongrass, and curry leaf.",
+   "cents": 3000,
+   "section": "Non-veg mains",
+   "photo": "pippal-naga-chicken-curry"
+  },
+  {
+   "name": "Bhopali Pulao",
+   "desc": "Bhopali pulao, Fragrant rice with delicate cheese dumplings.",
+   "cents": 2400,
+   "section": "Non-veg mains",
+   "photo": "pippal-bhopali-pulao"
+  },
+  {
+   "name": "Steamed Rice",
+   "desc": "Steamed rice, Aromatic basmati rice, delicately steamed.",
+   "cents": 600,
+   "section": "Non-veg mains",
+   "photo": "pippal-steamed-rice"
+  },
+  {
+   "name": "Plain Naan",
+   "desc": "Plain Naan – Soft and fluffy tandoor-baked flatbread with a delicate golden crust, perfect for scooping up rich curries and flavorful gravies.",
+   "cents": 500,
+   "section": "Breads",
+   "photo": "pippal-plain-naan"
+  },
+  {
+   "name": "Butter Naan",
+   "desc": "layered Hand-stretched naan baked in the tandoor until pillowy and lightly charred, finished with melted butter for a rich, comforting flavor.",
+   "cents": 600,
+   "section": "Breads",
+   "photo": "pippal-butter-naan"
+  },
+  {
+   "name": "Garlic Naan",
+   "desc": "Garlic Naan – Soft, pillowy tandoor-baked bread topped with fresh garlic and herbs",
+   "cents": 600,
+   "section": "Breads",
+   "photo": "pippal-garlic-naan"
+  },
+  {
+   "name": "Beetroot Ki Roti",
+   "desc": "Beetroot Roti – Soft whole wheat flatbread infused with fresh beetroot, offering a vibrant color, natural sweetness, and wholesome nutrition in every bite.",
+   "cents": 800,
+   "section": "Breads",
+   "photo": "pippal-beetroot-ki-roti"
+  },
+  {
+   "name": "Lacha Paratha",
+   "desc": "Laccha Paratha – Flaky, multi-layered Indian flatbread, expertly hand-rolled and cooked to golden perfection",
+   "cents": 800,
+   "section": "Breads",
+   "photo": "pippal-lacha-paratha"
+  },
+  {
+   "name": "Bene Dosa",
+   "desc": "Benne Dosa – A crispy, buttery Karnataka-style dosa, golden brown on the outside and soft inside,",
+   "cents": 600,
+   "section": "Breads",
+   "photo": "pippal-bene-dosa"
+  },
+  {
+   "name": "Bread Basket",
+   "desc": "Bread Basket – An assortment of freshly baked Indian breads, featuring a selection of naan, paratha, and roti, served warm to complement your dining experience.",
+   "cents": 4200,
+   "section": "Breads",
+   "photo": "pippal-bread-basket"
+  },
+  {
+   "name": "Bajra Roti",
+   "desc": "Bajra Roti – A rustic pearl millet flatbread, rich in fiber and earthy flavors",
+   "cents": 800,
+   "section": "Breads",
+   "photo": "pippal-bajra-roti"
+  },
+  {
+   "name": "Missi Roti",
+   "desc": "",
+   "cents": 800,
+   "section": "Breads",
+   "photo": "pippal-missi-roti"
+  },
+  {
+   "name": "Pudina Parantha",
+   "desc": "Layered Pudina Paratha – Flaky, multi-layered whole wheat flatbread infused with fresh mint and aromatic spices, pan-cooked to golden perfection for a crisp",
+   "cents": 800,
+   "section": "Breads",
+   "photo": "pippal-pudina-parantha"
+  },
+  {
+   "name": "Makkai Roti",
+   "desc": "Missi Roti – A traditional North Indian flatbread made with gram flour and whole wheat, delicately spiced and cooked to perfection for a hearty, rustic flavor.",
+   "cents": 800,
+   "section": "Breads",
+   "photo": "pippal-makkai-roti"
+  },
+  {
+   "name": "Mint Chutney",
+   "desc": "Mint Chutney – A refreshing blend of fresh mint, cilantro, green chilies, and spices",
+   "cents": 200,
+   "section": "Dips",
+   "photo": "pippal-mint-chutney"
+  },
+  {
+   "name": "Tamrind Chutney",
+   "desc": "Tamarind Chutney – A sweet and tangy chutney crafted from tamarind, jaggery, and aromatic spices",
+   "cents": 200,
+   "section": "Dips",
+   "photo": "pippal-tamrind-chutney"
+  },
+  {
+   "name": "Yogurt",
+   "desc": "Yogurt Dip – A creamy and refreshing blend of fresh yogurt, herbs, and subtle spices, offering a cool and flavorful accompaniment to breads, kebabs",
+   "cents": 200,
+   "section": "Dips",
+   "photo": "pippal-yogurt"
+  },
+  {
+   "name": "Lemon Onion Chili",
+   "desc": "Lemon, Onion & Chili – A classic Indian accompaniment featuring crisp onions, fresh lemon wedges, and green chilies, adding a vibrant burst of zest, heat",
+   "cents": 200,
+   "section": "Dips",
+   "photo": "pippal-lemon-onion-chili"
+  },
+  {
+   "name": "Spicy Chutney",
+   "desc": "Spicy Chutney – A bold and fiery blend of fresh chilies, herbs, and aromatic spices, crafted to add an intense kick and vibrant flavor to every dish.",
+   "cents": 200,
+   "section": "Dips",
+   "photo": "pippal-spicy-chutney"
+  },
+  {
+   "name": "Cucumber Raita",
+   "desc": "Cucumber Raita – A cooling blend of creamy yogurt, crisp cucumber, and roasted spices, offering a refreshing balance to rich and flavorful Indian dishes.",
+   "cents": 600,
+   "section": "Dips",
+   "photo": "pippal-cucumber-raita"
+  },
+  {
+   "name": "Boondi Raita",
+   "desc": "Boondi Raita – A refreshing yogurt-based accompaniment with crispy chickpea pearls, lightly seasoned with roasted spices for a creamy, crunchy",
+   "cents": 600,
+   "section": "Dips",
+   "photo": "pippal-boondi-raita"
+  },
+  {
+   "name": "Shahi Gola",
+   "desc": "Shahi gola, ghee cooked balushahi paired with creamy rabri, garnished with dry fruits, saffron, and silver varq",
+   "cents": 1500,
+   "section": "Desserts",
+   "photo": "pippal-shahi-gola"
+  },
+  {
+   "name": "Moong Daal Halwa",
+   "desc": "Moong Dal Halwa, A rich, slow-cooked lentil halwa made with ghee, sugar, and aromatic cardamom.",
+   "cents": 1500,
+   "section": "Desserts",
+   "photo": "pippal-moong-daal-halwa"
+  },
+  {
+   "name": "Daulat Ki Chaat",
+   "desc": "Daulat ki chaat, Light, airy winter delicacy of milk topped with saffron & cardamom.",
+   "cents": 1500,
+   "section": "Desserts",
+   "photo": "pippal-daulat-ki-chaat"
+  },
+  {
+   "name": "Payasum",
+   "desc": "Payasam, Classic South Indian pudding with milk, stuffed ice cream, a touch of sweetness from dry fruits, and cardamom.",
+   "cents": 1500,
+   "section": "Desserts",
+   "photo": "pippal-payasum"
+  },
+  {
+   "name": "Ghewar",
+   "desc": "Ghewar, freshly prepared crispy honeycomb Ghewar, served warm with rich, creamy rabri",
+   "cents": 1500,
+   "section": "Celebration desserts",
+   "photo": "pippal-ghewar"
+  },
+  {
+   "name": "French Fries Waffle",
+   "desc": "Waffle Fries – Crispy golden waffle-cut potato fries, perfectly seasoned and served hot for a crunchy, flavorful bite.",
+   "cents": 1400,
+   "section": "Celebration desserts",
+   "photo": "pippal-french-fries-waffle"
+  },
+  {
+   "name": "Corn Cheese",
+   "desc": "Corn Cheese – Sweet corn kernels tossed with melted cheese, herbs, and spices, baked until warm, creamy, and irresistibly delicious.",
+   "cents": 1400,
+   "section": "Celebration desserts",
+   "photo": "pippal-corn-cheese"
+  },
+  {
+   "name": "Chicken Nuggets",
+   "desc": "Chicken Nuggets – Crispy golden chicken nuggets made with tender, juicy chicken and served with your favorite dipping sauce.",
+   "cents": 1400,
+   "section": "Celebration desserts",
+   "photo": "pippal-chicken-nuggets"
+  },
+  {
+   "name": "Fried Fish",
+   "desc": "Fried Fish – Fresh fish fillets coated in a light, crispy batter and fried to golden perfection, served with a zesty dipping sauce.",
+   "cents": 1400,
+   "section": "Celebration desserts",
+   "photo": "pippal-fried-fish"
+  },
+  {
+   "name": "Cheese Dosa",
+   "desc": "Cheese Dosa – A crispy South Indian dosa generously filled with melted cheese, creating the perfect blend of crunchy texture and creamy indulgence.",
+   "cents": 1600,
+   "section": "Celebration desserts",
+   "photo": "pippal-cheese-dosa"
+  },
+  {
+   "name": "Chocolate Dosa",
+   "desc": "Chocolate Dosa – A crispy golden dosa drizzled with rich chocolate and filled with a luscious chocolate spread for a delightful sweet treat.",
+   "cents": 1600,
+   "section": "Celebration desserts",
+   "photo": "pippal-chocolate-dosa"
+  },
+  {
+   "name": "Butter Chicken Meal",
+   "desc": "Butter Chicken with Butter Naan – Tender chicken simmered in a rich, creamy tomato-butter gravy, served with soft, freshly baked butter naan.",
+   "cents": 2000,
+   "section": "Celebration desserts",
+   "photo": "pippal-butter-chicken-meal"
+  },
+  {
+   "name": "Shahi Paneer Meal",
+   "desc": "Shahi Paneer with Butter Naan – Soft paneer cubes simmered in a rich, creamy royal gravy, served with freshly baked butter naan brushed with melted butter.",
+   "cents": 2000,
+   "section": "Celebration desserts",
+   "photo": "pippal-shahi-paneer-meal"
+  },
+  {
+   "name": "Vanilla Ice Cream",
+   "desc": "Vanilla Ice Cream – Smooth and creamy vanilla ice cream crafted with rich dairy and pure vanilla for a timeless, refreshing treat.",
+   "cents": 900,
+   "section": "Celebration desserts",
+   "photo": "pippal-vanilla-ice-cream"
+  },
+  {
+   "name": "Berrries Ice Cream",
+   "desc": "Berries Ice Cream – Creamy ice cream infused with a medley of fresh berries, offering the perfect balance of sweet and tangy flavors.",
+   "cents": 900,
+   "section": "Celebration desserts",
+   "photo": "pippal-berrries-ice-cream"
+  },
+  {
+   "name": "Plain Idli",
+   "desc": "",
+   "cents": 1400,
+   "section": "Celebration desserts",
+   "photo": "pippal-plain-idli"
+  },
+  {
+   "name": "Kids Mango Lassi",
+   "desc": "Mango Lassi – A refreshing blend of ripe mangoes and creamy yogurt, lightly sweetened for a smooth and tropical delight.",
+   "cents": 900,
+   "section": "Celebration desserts",
+   "photo": "pippal-kids-mango-lassi"
+  }
+ ]
+}

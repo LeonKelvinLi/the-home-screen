@@ -1,0 +1,57 @@
+{
+ "id": "b_theyardbrentwood",
+ "source": "pdf",
+ "alt": {},
+ "pages": [
+  "https://brentwoodyard.com/"
+ ],
+ "pdfs": [
+  "https://img1.wsimg.com/blobby/go/3a63da6b-d273-42fd-aad8-3ab004c3f698/Menu%20Letter%20Size%20Feb%202026.pdf",
+  "https://img1.wsimg.com/blobby/go/3a63da6b-d273-42fd-aad8-3ab004c3f698/12.12.25%20Cocktail%20Menu.pdf"
+ ],
+ "items": [
+  {
+   "name": "Filthy F R I E S",
+   "desc": "",
+   "cents": 900,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Liberty CHICKEN"
+  },
+  {
+   "name": "BURGER  FRENCH F R I E S",
+   "desc": "",
+   "cents": 400,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Liberty CHICKEN"
+  },
+  {
+   "name": "add chicken $4, add burger patty $4",
+   "desc": "",
+   "cents": 1100,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "brown rice, 4 veggies, rotating add-ins"
+  },
+  {
+   "name": "Root Beer  Coconut Pina  Lukasowa Vodka",
+   "desc": "",
+   "cents": 1100,
+   "alcohol": true,
+   "src": "pdf",
+   "section": "Basic Not Boring"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://img1.wsimg.com/isteam/ip/3a63da6b-d273-42fd-aad8-3ab004c3f698/DSC05690%20Sara%20Jean%20Photography.jpg/:/rs=w:1160,h:773",
+   "alt": "",
+   "near": "",
+   "w": 1160,
+   "h": 773,
+   "page": "https://brentwoodyard.com/"
+  }
+ ]
+}

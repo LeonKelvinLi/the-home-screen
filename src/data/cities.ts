@@ -303,6 +303,7 @@ export const CITY_PAGES = [
   'Point Richmond',
   'Hayward',
   'Emeryville',
+  'Penngrove',
   'Piedmont',
   'West Oakland',
   'North Berkeley',

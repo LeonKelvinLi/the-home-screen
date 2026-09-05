@@ -1,0 +1,77 @@
+{
+ "id": "b_chikindripsanjose",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.chikindrip.com/",
+  "https://www.chikindrip.com/menu",
+  "https://www.chikindrip.com/catering"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Combo 1",
+   "desc": "",
+   "cents": 1299,
+   "image": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FChicken%20Drip_combo1.png&w=384&q=75",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ChikinDrip"
+  },
+  {
+   "name": "Combo 2",
+   "desc": "",
+   "cents": 1499,
+   "image": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FChicken%20DripCombo2.png&w=384&q=75",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ChikinDrip"
+  },
+  {
+   "name": "Combo 3",
+   "desc": "",
+   "cents": 1399,
+   "image": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FChicken%20combo3.png&w=384&q=75",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ChikinDrip"
+  },
+  {
+   "name": "Combo 4",
+   "desc": "",
+   "cents": 1799,
+   "image": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FChicken%20DripCombo4.png&w=384&q=75",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ChikinDrip"
+  },
+  {
+   "name": "Loaded Fries",
+   "desc": "",
+   "cents": 1399,
+   "image": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FChicken%20Drip%20loaded%20fries.png&w=384&q=75",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ChikinDrip"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FGassss1.jpeg&w=1920&q=75",
+   "alt": "",
+   "near": "ChikinDrip\nMenu\nLocations\nCatering\nORDER NOW\nChikin Drip — Nashville hot chicken in the San Francisc",
+   "w": 960,
+   "h": 857,
+   "page": "https://www.chikindrip.com/"
+  },
+  {
+   "src": "https://www.chikindrip.com/_next/image?url=%2Fimages%2FChikinDripWithBg.png&w=640&q=75",
+   "alt": "Chikin Drip",
+   "near": "Chikin Drip — Nashville hot chicken in the San Francisco Bay Area\nORDER NOW\nCATER NOW",
+   "w": 500,
+   "h": 335,
+   "page": "https://www.chikindrip.com/"
+  }
+ ]
+}

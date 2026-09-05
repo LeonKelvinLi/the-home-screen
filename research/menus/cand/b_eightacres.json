@@ -1,0 +1,731 @@
+{
+ "id": "b_eightacres",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://eightacresbrentwood.com/",
+  "https://eightacresbrentwood.com/#menu",
+  "https://order.toasttab.com/online/eightacresbrentwood.com",
+  "https://eightacresbrentwood.com/full-menu/",
+  "https://eightacresbrentwood.com/brunch-menu/",
+  "https://eightacresbrentwood.com/beverage-menu/",
+  "https://order.toasttab.com/online/eightacresbrentwood.com/item-forge-pepperoni-pizza_a73fdf53-9347-4404-9677-d2dde959dfa7"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Forge Pepperoni Pizza",
+   "desc": "pepperoni, castelvetrano olives, thinly sliced jalapeño, mozzarella, red onion, parmesan, parsley, marjoram",
+   "cents": 2500,
+   "image": "https://d1w7312wesee68.cloudfront.net/vwXuIjv1YxL_z0GjXygbGy-gvhoBUiU5gbs8D_NHVSQ/resize:fit:720:720/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/dbfb57d4-163e-4b23-8559-7f9068c71d07.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ASAP"
+  },
+  {
+   "name": "Wild Mushroom Pizza",
+   "desc": "roasted garlic puree, fontina, mozzarella, parmesan, roasted mushrooms, parsley, thyme",
+   "cents": 2400,
+   "image": "https://d1w7312wesee68.cloudfront.net/CJaXJ-aQ2yKRPwBeDBKR-57sLUJuk2HYasTgYBAd_Hg/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/adb0463a-18ad-4296-9442-a5b4bfbd5df9.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ASAP"
+  },
+  {
+   "name": "Margherita Pizza",
+   "desc": "Forge red sauce, fresh mozzarella, torn basil",
+   "cents": 2300,
+   "image": "https://d1w7312wesee68.cloudfront.net/JCc0QZLXs-O1W0b0-pKULBX1E_B99WxsX1NWbGTSXv4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/6e78713d-5c79-47bf-b5db-273fe62b011b.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "ASAP"
+  },
+  {
+   "name": "Marinated Olives",
+   "desc": "mediterranean blend, orange, chili flake, fennel served w/ toasted sourdough",
+   "cents": 1250,
+   "image": "https://d1w7312wesee68.cloudfront.net/nMZoE4Ma2jDpf3X6P3Ex0g2gizdOa3lJLgJ-uzUG_W4/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/3e5e554d-174a-4d9c-a6bd-0a1cc1f37fea.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Starters | Apps -"
+  },
+  {
+   "name": "Baked Macaroni & Cheese",
+   "desc": "smoked three cheese blend, elbow macaroni",
+   "cents": 1300,
+   "image": "https://d1w7312wesee68.cloudfront.net/QYCtxRUIf74TlmKNvnjrdPU3YCHMQXBxw_2uV05ucjc/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/df0d4227-3a5c-480e-b517-601ed2368a09.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Starters | Apps -"
+  },
+  {
+   "name": "Wisconsin Cheese Curds",
+   "desc": "chickpea battered, marinara sauce",
+   "cents": 1450,
+   "image": "https://d1w7312wesee68.cloudfront.net/pMcWrYDXFX7I2MGlQ2yBlrBpD5D98aFO_PxOH3quh9g/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/a97ce61d-f3bc-4458-a496-f448f105b8a7.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Starters | Apps -"
+  },
+  {
+   "name": "Brussel Sprouts",
+   "desc": "crispy Brussels sprouts, sambal honey, micro cilantro",
+   "cents": 1350,
+   "image": "https://d1w7312wesee68.cloudfront.net/55J-DlEfZ2MgPWBXpw2sPb9WYSQeofuXRNyowoVHl6U/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/4/item-500000057379081544_1778194019.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Starters | Apps -"
+  },
+  {
+   "name": "Carne Asada Tots",
+   "desc": "crispy tater tots, grilled carne asada, queso, guacamole, pickled jalapeños, pico de gallo",
+   "cents": 1650,
+   "image": "https://d1w7312wesee68.cloudfront.net/3xCuclVbQGUxZg1G-ctA4SAiUYTaPvc8rvLK6aA-EmY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/1/item-500000067455737031_1782865576.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Starters | Apps -"
+  },
+  {
+   "name": "Chicken Wings",
+   "desc": "choice of... sambal honey w/ micro cilantro and thai peanut sauce or traditional buffalo sauce w/ bleu cheese crumbles and herb ranch dressing",
+   "cents": 1550,
+   "image": "https://d1w7312wesee68.cloudfront.net/r4XnN9pHjzEKSvXvmcapORzQzJRXa9cEPQkCGUGtNzU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/3/item-500000067455737033_1782941294.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Starters | Apps -"
+  },
+  {
+   "name": "Kale Caesar Salad",
+   "desc": "kale, caesar dressing, cracked black pepper, shaved grana padano, garlic croutons",
+   "cents": 1550,
+   "image": "https://d1w7312wesee68.cloudfront.net/YtB1NFdOH0y0FoaYM4ccjFiXuo5h-bKmKMbseDgjH5E/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/2/item-500000062829339362_1778193769.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Salads | Soup -"
+  },
+  {
+   "name": "Strawberry Salad",
+   "desc": "strawberries, toasted walnuts, pickled red onion, goat cheese, citrus vinaigrette, arugula",
+   "cents": 1650,
+   "image": "https://d1w7312wesee68.cloudfront.net/kT8ezzykcE7ujr9j7j6DQkJ-kPAurrF2_k39u8vZo6U/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/32a70f43-da6a-4ae6-9971-a6a1f67e90e5.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Salads | Soup -"
+  },
+  {
+   "name": "BLT Wedge",
+   "desc": "bacon, cherry tomatoes, iceberg lettuce, hard-boiled egg, pickled red onion, blue cheese crumbles, green goddess dressing",
+   "cents": 1650,
+   "image": "https://d1w7312wesee68.cloudfront.net/UnjEZEvZToMr-o-WRGypfM72ltfZzZdTMc2Av0IJGqY/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/6/item-500000055680766206_1772740924.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Salads | Soup -"
+  },
+  {
+   "name": "Fat Boy Pizza",
+   "desc": "Italian sausage, bacon, pickled pepper, red onion, red sauce, mozzarella",
+   "cents": 2500,
+   "image": "https://d1w7312wesee68.cloudfront.net/-C_iUuVmKZSwOHGbXmrlbatUtP4LnazRh3p04YwqJ7Y/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/f01e185c-43f8-4aca-8e75-08654d210e42.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Forge Handcrafted Pizzas -"
+  },
+  {
+   "name": "BYO Burger",
+   "desc": "natural angus blend, LTOP on side. choice of cheese, sauce, and add ons. served on a brioche bun",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/qJ_Hpj-7HJne8ku950-OaiqSBMawH8xwl4iTkSUCsFU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/5/item-500000067455812215_1783627607.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Buffalo Shrimp Sandwich",
+   "desc": "fried shrimp, buffalo sauce, lettuce, tomato, mayo, blue cheese crumbles, served on a toasted deli roll",
+   "cents": 2250,
+   "image": "https://d1w7312wesee68.cloudfront.net/81OIgHXOpzzPrrnMRI9Ey6RMOdDt87husLNiq6LNvJI/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/1/item-500000067455812211_1783017892.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Eight Acres Burger",
+   "desc": "natural angus blend, bacon jam, arugula, gruyere, pickled red onions, roasted garlic aioli. served on a brioche bun",
+   "cents": 2250,
+   "image": "https://d1w7312wesee68.cloudfront.net/_VXJLT32fuxhzHuew2CLlo2AEZDMAUMs_Wwz-ZjQCu8/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/97af6c33-caf4-49f8-82ae-b3eaf74edec9.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Fried Chicken Sandwich",
+   "desc": "fried chicken, bacon, pimento cheese, lettuce, house pickles, chipotle mayo",
+   "cents": 2200,
+   "image": "https://d1w7312wesee68.cloudfront.net/gdbY92H858WWbrPk-PCrdEg311cC0Kv3C19W6e-eVJE/resize:fit:360:360/plain/s3://toasttab/menu_service/restaurants/87083672-8ff7-4ae9-99fd-bd80ab2f4dac/MenuItem/44ae1c5e-6717-46a4-9537-0a0bf3ff8e2e.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Muffaletta Sandwich",
+   "desc": "black forest ham, Molinari salame, hot sopressata, coppa, fontina cheese, olive salad, garlic aioli, served on a toasted deli roll",
+   "cents": 2300,
+   "image": "https://d1w7312wesee68.cloudfront.net/CLGzYUSkA5blrQ1x2fynwXrP5nXD2NKnkjnXXt_DKuc/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/1/item-500000069706748071_1787429282.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Ribeye Melt",
+   "desc": "shaved ribeye, gruyere, served on a toasted deli roll w/ side of au jus and horseradish cream",
+   "cents": 3000,
+   "image": "https://d1w7312wesee68.cloudfront.net/f7nM4UA7S8820v3JwnwPTeI1bAcAKIPgXU4zqWXigOc/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/9/item-500000069706748069_1787348325.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Campanelle Pasta",
+   "desc": "campanelle pasta, roasted mushrooms, cherry tomatoes, arugula, pesto cream, grana padano",
+   "cents": 2450,
+   "image": "https://d1w7312wesee68.cloudfront.net/hjT3jfq-Wc36VC7VOmZib0iqp3bXYYgThHS2NrSGe24/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/7/item-500000067455927557_1783624028.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Fish + Chips",
+   "desc": "beer battered pacific cod, steak fries, tartar sauce",
+   "cents": 2450,
+   "image": "https://d1w7312wesee68.cloudfront.net/SfEBvaLk28dk9A6I19uOofAi41XzA4XXBxi-W2gmR4Y/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/3/item-500000062829401643_1772741029.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Chicken Confit",
+   "desc": "chicken confit, ham hock stewed cannellini beans, sautéed greens, hot sauce jam on side",
+   "cents": 2600,
+   "image": "https://d1w7312wesee68.cloudfront.net/nIkx3n-jnAjjnkeAC6Zg3MRXA82GiKbVbSUhC1uyB5I/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/2/item-500000069707136082_1787441611.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Blackened Mahi Mahi",
+   "desc": "whipped potatoes, sautéed greens, shrimp, andouille, white wine - lemon cream, crispy capers",
+   "cents": 3100,
+   "image": "https://d1w7312wesee68.cloudfront.net/rlYySHEZcpQgTbv43mi1slxNCllxt1UD4kAfQTgkXJU/resize:fit:360:360/plain/s3://toasttab/restaurants/restaurant-266618000000000000/menu/items/0/item-500000069707136080_1787441579.jpg",
+   "alcohol": false,
+   "src": "text+card",
+   "section": "- Entree | Sandwiches -"
+  },
+  {
+   "name": "Kids Mac + Cheese",
+   "desc": "",
+   "cents": 1250,
+   "alcohol": false,
+   "src": "text",
+   "section": "- Kids Food -"
+  },
+  {
+   "name": "Kids Chicken Bites",
+   "desc": "",
+   "cents": 1250,
+   "alcohol": false,
+   "src": "text",
+   "section": "- Kids Food -"
+  },
+  {
+   "name": "Kids Fish + Chips",
+   "desc": "",
+   "cents": 1250,
+   "alcohol": false,
+   "src": "text",
+   "section": "- Kids Food -"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Screenshot-2026-07-07-at-5.47.26-PM-1536x1013.png",
+   "alt": "Screenshot 2026-07-07 at 5.47.26 PM",
+   "near": "Scratch Kitchen located on Eight Acres of California Countryside. Amazing Views, Delicious Food and ",
+   "w": 1280,
+   "h": 844,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_4120-768x712.jpeg",
+   "alt": "IMG_4120",
+   "near": "Promising a fresh take on comfort food while blending bold and seasonal flavors into every dish. Ope",
+   "w": 685,
+   "h": 635,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Untitled-design-2-e1782948775290-768x635.png",
+   "alt": "Untitled design (2)",
+   "near": "The bar has an amazing variety of craft cocktails, locally brewed beer and a unique wine menu that h",
+   "w": 447,
+   "h": 369,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2591.jpeg",
+   "alt": "Screenshot",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 720,
+   "h": 509,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/5.jpeg",
+   "alt": "5",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 720,
+   "h": 509,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2536-1-768x576.jpeg",
+   "alt": "IMG_2536",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 539,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2580-768x576.jpeg",
+   "alt": "IMG_2580",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 539,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_4123-1-768x620.jpeg",
+   "alt": "IMG_4123",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 581,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2112-scaled-e1783554502630-768x557.jpeg",
+   "alt": "IMG_2112",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 522,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_4166-768x564.jpeg",
+   "alt": "IMG_4166",
+   "near": "Seasonal Menu",
+   "w": 602,
+   "h": 442,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_3429-e1783560526181-768x824.jpeg",
+   "alt": "Screenshot",
+   "near": "Seasonal Menu",
+   "w": 602,
+   "h": 645,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/plugins/spotlight-social-photo-feeds/ui/images/ig-logo.png",
+   "alt": "eightacresbrentwood's profile picture",
+   "near": "@eightacresbrentwood",
+   "w": 350,
+   "h": 350,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17955005691013606-s-80-400.jpg",
+   "alt": "When is Happy Hour? Monday thru Friday , 2pm - 5pm.What’s on the Menu? Fried Chicken Bites, Crispy Brussels Sprouts, Cheese Curds, Pork Rinds. Where? Eight Acres Kitchen & Bar. happyhour brentwood 925 specials seanmccauleyinv contracostanews brentwoodcoc",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17964952238963372-s-80-400.jpg",
+   "alt": "Anniversary Celebration!! Brunch 11-3, music starts at 12!Join us and Chris Ahlman! 🍳🎶\n\nanniversary 1year food livemusic brentwood 925",
+   "near": "",
+   "w": 400,
+   "h": 224,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17983333803062594-s-80-400.jpg",
+   "alt": "Day 4 of our Anniversary Weekend!!! Last chance to try our Weekend Dinner Specials. Seats are available but you’ll only need the edge:) foodie ossobucco scalloprisotto bloom specialmenu seanmccauleyinv contracostanews eightacresbrentwood brentwoodcoc",
+   "near": "",
+   "w": 400,
+   "h": 358,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18090448220290407-s-80-400.jpg",
+   "alt": "Day 2 of our Anniversary Weekend Celebration featuring The Wayhighs Live in the Cellar eightacresbrentwood . Come join us from 6:00pm - 9:00pm. livemusic rockandroll brentwood cocktails eightacres contracostanews seanmccauleyinv brentwoodcoc thewayhighs",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17988247737029973-s-80-400.jpg",
+   "alt": "Tonight!!!! Tickets still available. paintnite https://www.paintnite.com/us/ca/brentwood/events/cactus-sunset-1-tickets-10371352?fbclid=IwY2xjawTpv_hwZG9mAWV4dG4DYWVtAjEwAGJyaWQRMTF5NmVkOHBWclVwcTJqNHZzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeJHUOcEvrEgvkOVelzhY4cHibzjZjDGQNwBEfNr8ic9Z-1KoSLO8uao3-gSo_aem_Kw3Dj8jQi_QGyLk9nsxI7A",
+   "near": "",
+   "w": 400,
+   "h": 492,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18086114465222928-s-80-400.jpg",
+   "alt": "Join us Wednesday the Aug 26th thru Sunday Aug 30th for our Anniversary Weekend!!! One year ago we opened our doors to Brentwood and we want to celebrate the community that embraced and supported us.\nThe Party starts Wednesday w/ Paint Nite in the Cellar hosted by Bindhu (tickets available), followed by Free Live Music on Thursday with The Wayhighs. Friday and Saturday Chef Colin is creating a special menu for the weekend with a variety of different fresh offerings including a new seasonal menu. It all culminates on Sunday with the Acoustic stylings on Chris Ahlman during Brunch from 12pm – 3pm. Come grab a beer and a burger and join the party!!! We look forward to celebrating with all our friends and neighbors.\ncelebration brentwood eat drink eightacres",
+   "near": "",
+   "w": 400,
+   "h": 494,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17907949989288248-s-80-400.jpg",
+   "alt": "When the weather is this nice you gotta get out. Brunch every Saturday and Sunday, 11am-2pm!🤍🍳frenchtoast breakfast brunch breakfastburger mimosa weekend yum brentwood california outdoordining yesplz bar food eat drink cocktail drinks foodie brunching brunchtime eightacres 925 925eats",
+   "near": "",
+   "w": 400,
+   "h": 497,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18045416996804918-s-80-400.jpg",
+   "alt": "Grab your girls and catch up at Eight Acres!🍸🤍eightacres restaurant brentwood food cocktail girldinner donotdisturb yum drink craftcocktails chickensandwich wedgesalad mac macnchesse fries drank girltime bayarea 925 925eats eightacresexperience scratchkitchen bar cocktails",
+   "near": "",
+   "w": 400,
+   "h": 266,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18074294936713288-s-80-400.jpg",
+   "alt": "Thursday Night Jams! Come check out Gypsy Stone Duo tomorrow night! Good food, good fun!livemusic thursday thursdaynights music food drink bar restaurant brentwood 925 dance gypsystone eightacres eat fun",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18571105891069950-s-80-400.jpg",
+   "alt": "Did someone say “sliders”?🫣sliders carnita carnitas resturants california eightacres brentwood 94513 eatstagram drink yum carnitasliders eightacresexperience outdoordining summer picodegallo yummy",
+   "near": "",
+   "w": 400,
+   "h": 301,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18021069785896043-s-80-400.jpg",
+   "alt": "Come in for Brunch! Every weekend 11am-2pm!🍳🥓brunch breakfast burrito breakfastburrito chiliquiles frenchtoast eggsbenny carnitas truffledmushrooms mimosa eightacres kitchen bar kitchenandbar yum eat drink resturants brentwood925 brentwood restuarant egg",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18115583056702585-s-80-400.jpg",
+   "alt": "Duck Confit! Elevate your palate!🦆duck duckconfit eight acres kitchen yum eightacres brentwood food drink dirtyrice tangerinegastrique dish dinner eat kitchennbar bar eightacresexperience patioseating",
+   "near": "",
+   "w": 400,
+   "h": 267,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17932130928098195-s-80-400.jpg",
+   "alt": "🚨Weekend Brunch Special!!🚨Carne Asada Tater Tots!\nBrunch Every Sat-Sunday 10am-3pm🍳\n\nbrunch carneassada tatertots brentwood eightacres resturants bar kitchen yum tots guac brunchvibes weekend weekendspecial mimosa special getwhileyoucan betterinbrentwood tater eight acres eightacresbrentwood eightacreskitchenandbar",
+   "near": "",
+   "w": 400,
+   "h": 300,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18094047425456763-s-80-400.jpg",
+   "alt": "Summer Nights at Eight Acres☀️🍸summerishere resturants brentonwood eightacres bar food dance livemusic craftcocktails beer appetizer event betterinbrentwood bbqstyle fun hometown hometownfun cellar summer patioseason outdoordinning sunset cocktails mocktails",
+   "near": "",
+   "w": 400,
+   "h": 313,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18441353953190607-s-80-400.jpg",
+   "alt": "Island in the Sun… makes me feel so fine, I can’t control my brain🌞🏝️newcocktail bar resturants brentwood bayeats betterinbrentwood eightacres yum sipandenjoy cocktails craftcocktails cali vibe sunset outdoordining cometry islandinthesun",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Screenshot-2026-08-12-at-2.31.06-PM-e1787956847628-768x600.png",
+   "alt": "Screenshot 2026-08-12 at 2.31.06 PM",
+   "near": "Jeffery James\n\nThu, Sep 3, 2026 | Eight Acres Kitchen & Bar\n\nMore info\nRSVP",
+   "w": 377,
+   "h": 295,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Screenshot-2026-06-20-at-3.45.19-PM-768x434.png",
+   "alt": "Screenshot 2026-06-20 at 3.45.19 PM",
+   "near": "Family Feud Night\n\nTue, Sep 8, 2026 | Eight Acres Kitchen & Bar\n\nMore info\nRSVP",
+   "w": 377,
+   "h": 213,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Screenshot-2026-08-28-at-3.48.51-PM-768x1003.png",
+   "alt": "Screenshot 2026-08-28 at 3.48.51 PM",
+   "near": "Comedy Night – Showcase\n\nWed, Sep 9, 2026 | Eight Acres Kitchen & Bar\n\nMore info\nRSVP",
+   "w": 377,
+   "h": 493,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/3d2d1a_9699d094f8724a329dcba5a9e629108emv2.avif",
+   "alt": "3d2d1a_9699d094f8724a329dcba5a9e629108e~mv2",
+   "near": "Project 4\n\nThu, Sep 10, 2026 | Eight Acres Kitchen & Bar\n\nMore info\nRSVP",
+   "w": 378,
+   "h": 378,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Screenshot-2026-09-01-at-5.33.57-PM-768x613.png",
+   "alt": "Screenshot 2026-09-01 at 5.33.57 PM",
+   "near": "The Retrofitz Band\n\nThu, Sep 17, 2026 | Eight Acres Kitchen & Bar\n\nMore info\nRSVP",
+   "w": 377,
+   "h": 301,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Crosstown-5-768x512.jpg",
+   "alt": "Crosstown 5",
+   "near": "Crosstown 5\n\nThu, Sep 24, 2026 | Eight Acres Kitchen & Bar\n\nMore info\nRSVP",
+   "w": 377,
+   "h": 251,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://img.youtube.com/vi/ug__1aZ4m34/hqdefault.jpg",
+   "alt": "The Cellar",
+   "near": "The Cellar",
+   "w": 480,
+   "h": 360,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://img.youtube.com/vi/MvDJ-XbWOWQ/hqdefault.jpg",
+   "alt": "Garden Patio",
+   "near": "Garden Patio",
+   "w": 480,
+   "h": 360,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://img.youtube.com/vi/jxgZTxVLBdM/hqdefault.jpg",
+   "alt": "Outside Patio + Reception",
+   "near": "Outside Patio + Reception",
+   "w": 480,
+   "h": 360,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://img.youtube.com/vi/bvCxHspUIvA/hqdefault.jpg",
+   "alt": "Lawn Ceremonies + Trelis",
+   "near": "Lawn Ceremonies + Trelis",
+   "w": 480,
+   "h": 360,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://img.youtube.com/vi/vMFfFkcg5NA/hqdefault.jpg",
+   "alt": "Main Dining Room",
+   "near": "Main Dining Room",
+   "w": 480,
+   "h": 360,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_0666.jpg",
+   "alt": "IMG_0666",
+   "near": "Get in Touch\n\nCall us (925) 848-0858 | Email us info@eightacresbrentwood.com\n\nCONTACT US",
+   "w": 5472,
+   "h": 3648,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_0371-768x512.jpeg",
+   "alt": "IMG_0371",
+   "near": "Private Events\n\nBringing fun and entertaining events to Brentwood to help engage our local community",
+   "w": 602,
+   "h": 401,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/cv-img.png",
+   "alt": "",
+   "near": "The Cellar",
+   "w": 1204,
+   "h": 458,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/eightacresbrentwood-footer-scaled.png",
+   "alt": "",
+   "near": "Contact\n\nGeneral Inquiries\n\ninfo@eightacresbrentwood.com\n\nCall us (925) 848-0858\n\n \n\n \n\nLocation\n\n80",
+   "w": 1280,
+   "h": 493,
+   "page": "https://eightacresbrentwood.com/"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Screenshot-2026-07-07-at-5.47.26-PM-1536x1013.png",
+   "alt": "Screenshot 2026-07-07 at 5.47.26 PM",
+   "near": "Scratch Kitchen located on Eight Acres of California Countryside. Amazing Views, Delicious Food and ",
+   "w": 1280,
+   "h": 844,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_4120-768x712.jpeg",
+   "alt": "IMG_4120",
+   "near": "Promising a fresh take on comfort food while blending bold and seasonal flavors into every dish. Ope",
+   "w": 685,
+   "h": 635,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/Untitled-design-2-e1782948775290-768x635.png",
+   "alt": "Untitled design (2)",
+   "near": "The bar has an amazing variety of craft cocktails, locally brewed beer and a unique wine menu that h",
+   "w": 447,
+   "h": 369,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2591.jpeg",
+   "alt": "Screenshot",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 720,
+   "h": 509,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/5.jpeg",
+   "alt": "5",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 720,
+   "h": 509,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2536-1-768x576.jpeg",
+   "alt": "IMG_2536",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 539,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2580-768x576.jpeg",
+   "alt": "IMG_2580",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 539,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_4123-1-768x620.jpeg",
+   "alt": "IMG_4123",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 581,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_2112-scaled-e1783554502630-768x557.jpeg",
+   "alt": "IMG_2112",
+   "near": "BYO Burger\n\nbuild your own burger with all the fixins!!!",
+   "w": 719,
+   "h": 522,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_4166-768x564.jpeg",
+   "alt": "IMG_4166",
+   "near": "Seasonal Menu",
+   "w": 602,
+   "h": 442,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/IMG_3429-e1783560526181-768x824.jpeg",
+   "alt": "Screenshot",
+   "near": "Seasonal Menu",
+   "w": 602,
+   "h": 645,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/plugins/spotlight-social-photo-feeds/ui/images/ig-logo.png",
+   "alt": "eightacresbrentwood's profile picture",
+   "near": "@eightacresbrentwood",
+   "w": 350,
+   "h": 350,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17955005691013606-s-80-400.jpg",
+   "alt": "When is Happy Hour? Monday thru Friday , 2pm - 5pm.What’s on the Menu? Fried Chicken Bites, Crispy Brussels Sprouts, Cheese Curds, Pork Rinds. Where? Eight Acres Kitchen & Bar. happyhour brentwood 925 specials seanmccauleyinv contracostanews brentwoodcoc",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17964952238963372-s-80-400.jpg",
+   "alt": "Anniversary Celebration!! Brunch 11-3, music starts at 12!Join us and Chris Ahlman! 🍳🎶\n\nanniversary 1year food livemusic brentwood 925",
+   "near": "",
+   "w": 400,
+   "h": 224,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17983333803062594-s-80-400.jpg",
+   "alt": "Day 4 of our Anniversary Weekend!!! Last chance to try our Weekend Dinner Specials. Seats are available but you’ll only need the edge:) foodie ossobucco scalloprisotto bloom specialmenu seanmccauleyinv contracostanews eightacresbrentwood brentwoodcoc",
+   "near": "",
+   "w": 400,
+   "h": 358,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18090448220290407-s-80-400.jpg",
+   "alt": "Day 2 of our Anniversary Weekend Celebration featuring The Wayhighs Live in the Cellar eightacresbrentwood . Come join us from 6:00pm - 9:00pm. livemusic rockandroll brentwood cocktails eightacres contracostanews seanmccauleyinv brentwoodcoc thewayhighs",
+   "near": "",
+   "w": 400,
+   "h": 533,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/17988247737029973-s-80-400.jpg",
+   "alt": "Tonight!!!! Tickets still available. paintnite https://www.paintnite.com/us/ca/brentwood/events/cactus-sunset-1-tickets-10371352?fbclid=IwY2xjawTpv_hwZG9mAWV4dG4DYWVtAjEwAGJyaWQRMTF5NmVkOHBWclVwcTJqNHZzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeJHUOcEvrEgvkOVelzhY4cHibzjZjDGQNwBEfNr8ic9Z-1KoSLO8uao3-gSo_aem_Kw3Dj8jQi_QGyLk9nsxI7A",
+   "near": "",
+   "w": 400,
+   "h": 492,
+   "page": "https://eightacresbrentwood.com/#menu"
+  },
+  {
+   "src": "https://eightacresbrentwood.com/wp-content/uploads/spotlight-insta/18086114465222928-s-80-400.jpg",
+   "alt": "Join us Wednesday the Aug 26th thru Sunday Aug 30th for our Anniversary Weekend!!! One year ago we opened our doors to Brentwood and we want to celebrate the community that embraced and supported us.\nThe Party starts Wednesday w/ Paint Nite in the Cellar hosted by Bindhu (tickets available), followed by Free Live Music on Thursday with The Wayhighs. Friday and Saturday Chef Colin is creating a special menu for the weekend with a variety of different fresh offerings including a new seasonal menu. It all culminates on Sunday with the Acoustic stylings on Chris Ahlman during Brunch from 12pm – 3pm. Come grab a beer and a burger and join the party!!! We look forward to celebrating with all our friends and neighbors.\ncelebration brentwood eat drink eightacres",
+   "near": "",
+   "w": 400,
+   "h": 494,
+   "page": "https://eightacresbrentwood.com/#menu"
+  }
+ ]
+}

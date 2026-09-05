@@ -1,0 +1,1098 @@
+{
+ "id": "b_shakashack",
+ "source": "square",
+ "alt": {
+  "text": 63
+ },
+ "pages": [
+  "https://shaka-shack.square.site/",
+  "https://shaka-shack.square.site/s/order#most-popular"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Kai's Plate Lunch",
+   "desc": "Plate with your choice of meat and salad. Lava Chicken or Kalua Pork, Tutu’s Mac Salad or Kimchi Cucumber.",
+   "cents": 1700,
+   "label": "from $17.00",
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/GOYLXWOEAQSFN2CNVFFR57KZ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Lava Chicken Tropi-Cobb Salad",
+   "desc": "Mango, pineapple, tomato, avocado, edamame, bacon, egg, feta, romaine, lava chicken w/ pineapple balsamic",
+   "cents": 1800,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/ZJOD3WFMKAUGIA35IOIBDPPZ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Kona Beer",
+   "desc": "",
+   "cents": 700,
+   "section": "Alcoholic Beverages",
+   "alcohol": true,
+   "src": "square"
+  },
+  {
+   "name": "Tea",
+   "desc": "",
+   "cents": 300,
+   "section": "Signal Coffee",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Musubi",
+   "desc": "Spam Musubi",
+   "cents": 500,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/YEUZ252P4ISAMSUVAJPYPBFS.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Hawaiian Chili",
+   "desc": "Portuguese sausage, spam, beef, & bacon w/ black, pinto, kidney & white beans over rice topped w/ green onions, shredded cheese & hawaiian roll",
+   "cents": 1500,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/PKA7TQF5P246OOLFXZ2MQLPB.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Fried Rice Cup",
+   "desc": "Spam Fried Rice",
+   "cents": 500,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/KOUZSD6B5PFMW7KSCTMKAJFU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Spam, Eggs, Rice Breakfast",
+   "desc": "Spam, Eggs, Rice",
+   "cents": 1000,
+   "section": "Keiki Menu (12& Under)",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/SWIYJYCJVLMYYHTSIOHW4YEU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Loco Moco",
+   "desc": "Small Loco Moco",
+   "cents": 1200,
+   "section": "Keiki Menu (12& Under)",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/3CJH72BTYBO4BT64SZOLERQO.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Steak (Kalbi) & Eggs",
+   "desc": "Kalbi Short Ribs, Eggs your Way",
+   "cents": 2200,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/7GSNKQCGA6EOGS4J27UFGHPU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Garden Breakfast Bowl",
+   "desc": "Eggs your way, House Potatoes, Bell Peppers, Spinach, Onions, Avocado, feta Cheese, Tomatoes, w/ Salsa",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/PYW4HRXDIRVWJA5WD565VPJ5.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Big Kahuna Loco Moco",
+   "desc": "Burger, Kalua Pork, Portuguese sausage w/ Fried Rice",
+   "cents": 2600,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/UE376ICNKS4YH3UO5KJQLES6.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Squirt's Kalua Pork Loco Moco",
+   "desc": "Kalua Pork, Rice, Eggs, Gravy add burger $4",
+   "cents": 1900,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/BABC6I4O446AHYVKTKR6XAAC.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Ube Mochi Waffles",
+   "desc": "Ube Mochi Waffle w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/FEU6YRRB3HBTPG3Y26Q5NIVA.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Pineapple Upside Down Cake",
+   "desc": "",
+   "cents": 500,
+   "section": "Sweets",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/IGHNTXWSYNGBQWPRPGA522AF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Kimchi Cucumber",
+   "desc": "Kimchi Cucumber Salad",
+   "cents": 400,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/7ZYMYZNXFBHBWW54TN2SU5PW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Ube Mochi",
+   "desc": "",
+   "cents": 500,
+   "section": "Sweets",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/37FOKNO33YPCXXSCVMR7CDM6.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Ube Waffle",
+   "desc": "",
+   "cents": 1000,
+   "section": "Keiki Menu (12& Under)",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/GXC75ZE43TNIY4A36AIAEU4I.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Portuguese Sausage",
+   "desc": "",
+   "cents": 500,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/MN6XT7TUGTG6DQ66FSOBURU2.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Burger",
+   "desc": "",
+   "cents": 600,
+   "section": "Snack Shack",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Pineapple POG",
+   "desc": "",
+   "cents": 500,
+   "section": "Other Drinks",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/PQR5NCI5YHVKUVQQEWAY4G66.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Poke Wrap",
+   "desc": "Rice, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger wrapped in a spinach tortilla",
+   "cents": 2000,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/CLEBGUBV2RZ5TNBVF3TLXIDW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Malasadas",
+   "desc": "One Malasada option of filling and sugaring on the outside.",
+   "cents": 300,
+   "section": "Sweets",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/44RMIPJSXOKYHB4SXTXDXDUF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Poke Salad",
+   "desc": "Romaine Lettuce, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger",
+   "cents": 2000,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/MUJBNNNEXOBJZWRZJMY366QF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Latte",
+   "desc": "",
+   "cents": 600,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/RYTNZWIIBBFBXKXHG6R3BZUQ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Espresso (double shot)",
+   "desc": "",
+   "cents": 300,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/BSYXI7CUWZMHO5O4XFXRFJZV.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Americano",
+   "desc": "",
+   "cents": 500,
+   "section": "Signal Coffee",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Iced Taro Vietnamese Coffee",
+   "desc": "",
+   "cents": 700,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/AC7L7CT2NXC4ZRO6KTGG2ANI.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Spam",
+   "desc": "",
+   "cents": 500,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/ZWI5F7E6YEI6ISDWBWUSEN64.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Poke Bowl",
+   "desc": "Rice, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger",
+   "cents": 2000,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/2WWU4RGH3GZS6V76VJD4MROW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Macchiato",
+   "desc": "",
+   "cents": 600,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/EEJOCFPNC3HINLWN6TM25A72.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Coke/Diet Coke",
+   "desc": "",
+   "cents": 200,
+   "section": "Other Drinks",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Bottle Water",
+   "desc": "",
+   "cents": 300,
+   "section": "Other Drinks",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "POG Juice",
+   "desc": "POG = Passion Fruit, Orange, Guava",
+   "cents": 500,
+   "section": "Other Drinks",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/GPDA3PKH57TGH2O6MRE75OBG.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Lava Chicken",
+   "desc": "",
+   "cents": 600,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/W2W4NPLVUQ2XBBRYYFX5HSHF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Lilikoi Lemonade",
+   "desc": "",
+   "cents": 500,
+   "section": "Other Drinks",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/PQR5NCI5YHVKUVQQEWAY4G66.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Mimosa",
+   "desc": "",
+   "cents": 800,
+   "section": "Alcoholic Beverages",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/7W2QO5GVK7R2MXEIAOG7F4HR.png",
+   "alcohol": true,
+   "src": "square"
+  },
+  {
+   "name": "Coconut Water",
+   "desc": "",
+   "cents": 300,
+   "section": "Other Drinks",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Caramel Macchiato",
+   "desc": "",
+   "cents": 700,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/EEJOCFPNC3HINLWN6TM25A72.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Capuccino",
+   "desc": "",
+   "cents": 600,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/4BV6O2GPMD3W23TRXNFZWRJU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Syd's Loco Moco",
+   "desc": "Burger, Rice, Eggs your way, Gravy",
+   "cents": 1900,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/ULXLA4ZOW3HBDY4FVZLUY2KG.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Da Kine",
+   "desc": "2 Eggs Your Way, House Potatoes, Rice, Hawaiian Roll Toast",
+   "cents": 1600,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/DYFKQX4LM5VCRQRWO4LSDXZM.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Garden Breakfast Burrito",
+   "desc": "House Potatoes, Bell Peppers, Spinach, Onions, Eggs, Avocado, feta Cheese, Tomatoes Wrapped in a Spinach Tortilla w/ Salsa",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/Q6AEPZ6LQD7YWO73IQFPWI6U.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Hawaiian Roll French Toast",
+   "desc": "Hawaiian Rolls Turned Into Tasty French Toast Bites w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/4OOFZ7SMFXS4IEP3IFOCEY5V.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Ube Waffles",
+   "desc": "Ube Waffles w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/FEU6YRRB3HBTPG3Y26Q5NIVA.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Hawaiian Sun",
+   "desc": "Randomly Selected Hawaiian Sun (Based on Availability)",
+   "cents": 300,
+   "section": "Other Drinks",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/62EH3IYCLA3GK6E75I4IGHT5.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Mini Dogs",
+   "desc": "Mini Hot Dogs w/ Side of Fresh Fruit",
+   "cents": 1000,
+   "section": "Keiki Menu (12& Under)",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/27VBD5IM5CEW463HQEXSNAVU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Iced Latte",
+   "desc": "",
+   "cents": 600,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/AC7L7CT2NXC4ZRO6KTGG2ANI.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Grilled Cheese",
+   "desc": "Grilled Cheese w/ Side of Fresh Fruit",
+   "cents": 1000,
+   "section": "Keiki Menu (12& Under)",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/27VBD5IM5CEW463HQEXSNAVU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Mini Burger",
+   "desc": "Slider w/ Side of Fresh Fruit",
+   "cents": 1000,
+   "section": "Keiki Menu (12& Under)",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/27VBD5IM5CEW463HQEXSNAVU.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Drip Coffee",
+   "desc": "",
+   "cents": 500,
+   "section": "Signal Coffee",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/ZKE6DO43K5YRJ3I4I5OINKDG.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Tutu's Mac Salad",
+   "desc": "Great grandma’s recipe w/ spaghetti noodles",
+   "cents": 400,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/Z635FO37GPPICYAQYKKSVCFA.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Kalbi Ribs",
+   "desc": "",
+   "cents": 1100,
+   "section": "Snack Shack",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Matcha Mochi Waffle",
+   "desc": "Matcha Mochi Waffle w/ Ube Syrup & Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/YM5CF3LHO5CBK2ZDUSFEY4BP.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Teri Chicken",
+   "desc": "",
+   "cents": 600,
+   "section": "Snack Shack",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Kalua Pork",
+   "desc": "",
+   "cents": 600,
+   "section": "Snack Shack",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Malasada Filling Sampler Half Dozen",
+   "desc": "6 filled malasadas, one of each of our 6 fillings",
+   "cents": 2100,
+   "section": "Sweets",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/44RMIPJSXOKYHB4SXTXDXDUF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Mac Nut Waffle",
+   "desc": "Mac Nut Waffle w/ Fresh Fruit",
+   "cents": 1700,
+   "section": "Breakfast",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/KNEWBF3KWUXAMREZUQONK7UW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Stella's Kalbi Rib Loco Moco",
+   "desc": "Kalbi Ribs & an egg your way over rice topped with gravy",
+   "cents": 2400,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/QMM3RUCHWM66TYW73HGALHV6.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Side Bacon",
+   "desc": "",
+   "cents": 500,
+   "section": "Snack Shack",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/YUJPB6ASBNMCRGZBMVCN2CEV.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Keiki (Kids) Teri Chicken Plate Lunch",
+   "desc": "Kids Size Teri Chicken Plate Lunch",
+   "cents": 1200,
+   "section": "Keiki Menu (12& Under)",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Teri Chicken Tropi-Cobb Salad",
+   "desc": "Mango, pineapple, tomato, avocado, edamame, bacon, egg, feta, romaine, teri chicken w/ pineapple balsamic.",
+   "cents": 1800,
+   "section": "Lunch",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/ZJOD3WFMKAUGIA35IOIBDPPZ.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Malasada Filling Sampler Dozen",
+   "desc": "12 filled malasadas, two of each of our 6 fillings",
+   "cents": 4200,
+   "section": "Sweets",
+   "image": "https://151023546.cdn6.editmysite.com/uploads/1/5/1/0/151023546/44RMIPJSXOKYHB4SXTXDXDUF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Spam Musubi",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Musubi"
+   },
+   {
+    "name": "Iced Latte",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Musubi"
+   },
+   {
+    "name": "Syd's Loco Moco",
+    "desc": "Burger, Rice, Eggs your way, Gravy",
+    "cents": 1900,
+    "alcohol": false,
+    "src": "text",
+    "section": "Musubi"
+   },
+   {
+    "name": "POG Juice",
+    "desc": "POG = Passion Fruit, Orange, Guava",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Musubi"
+   },
+   {
+    "name": "Kimchi Cucumber Salad",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kimchi Cucumber"
+   },
+   {
+    "name": "Great grandma’s recipe w/ spaghetti noodles",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Hawaiian Chili",
+    "desc": "Portuguese sausage, spam, beef, & bacon w/ black, pinto, kidney & white beans over rice topped w/ green onions, shredded cheese & hawaiian roll",
+    "cents": 1500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Spam Fried Rice",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Burger",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Portuguese Sausage",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Spam",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Bacon",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Kalua Pork",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Kalbi Ribs",
+    "desc": "",
+    "cents": 1100,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Teri Chicken",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Side Lava Chicken",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Drip Coffee",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Tea",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Americano",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Capuccino",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Caramel Macchiato",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Espresso (double shot)",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Macchiato",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Latte",
+    "desc": "",
+    "cents": 600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Iced Taro Vietnamese Coffee",
+    "desc": "",
+    "cents": 700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Tutu's Mac Salad"
+   },
+   {
+    "name": "Coke/Diet Coke",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Other Drinks"
+   },
+   {
+    "name": "Bottle Water",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Other Drinks"
+   },
+   {
+    "name": "Lilikoi Lemonade",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Other Drinks"
+   },
+   {
+    "name": "Coconut Water",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Other Drinks"
+   },
+   {
+    "name": "Hawaiian Sun",
+    "desc": "Randomly Selected Hawaiian Sun (Based on Availability)",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Other Drinks"
+   },
+   {
+    "name": "Pineapple POG",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Other Drinks"
+   },
+   {
+    "name": "Mimosa",
+    "desc": "",
+    "cents": 800,
+    "alcohol": true,
+    "src": "text",
+    "section": "Alcoholic Beverages"
+   },
+   {
+    "name": "Kona Beer",
+    "desc": "",
+    "cents": 700,
+    "alcohol": true,
+    "src": "text",
+    "section": "Alcoholic Beverages"
+   },
+   {
+    "name": "Da Kine",
+    "desc": "2 Eggs Your Way, House Potatoes, Rice, Hawaiian Roll Toast",
+    "cents": 1600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Garden Breakfast Burrito",
+    "desc": "House Potatoes, Bell Peppers, Spinach, Onions, Eggs, Avocado, feta Cheese, Tomatoes Wrapped in a Spinach Tortilla w/ Salsa",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Hawaiian Roll French Toast",
+    "desc": "Hawaiian Rolls Turned Into Tasty French Toast Bites w/ Ube Syrup & Fresh Fruit",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Ube Waffles w/ Ube Syrup & Fresh Fruit",
+    "desc": "",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Ube Waffles"
+   },
+   {
+    "name": "Steak (Kalbi) & Eggs",
+    "desc": "Kalbi Short Ribs, Eggs your Way",
+    "cents": 2200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Ube Waffles"
+   },
+   {
+    "name": "Garden Breakfast Bowl",
+    "desc": "Eggs your way, House Potatoes, Bell Peppers, Spinach, Onions, Avocado, feta Cheese, Tomatoes, w/ Salsa",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Ube Waffles"
+   },
+   {
+    "name": "Big Kahuna Loco Moco",
+    "desc": "Burger, Kalua Pork, Portuguese sausage w/ Fried Rice",
+    "cents": 2600,
+    "alcohol": false,
+    "src": "text",
+    "section": "Ube Waffles"
+   },
+   {
+    "name": "Kalua Pork, Rice, Eggs, Gravy add burger",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Squirt's Kalua Pork Loco Moco"
+   },
+   {
+    "name": "Ube Mochi Waffle w/ Ube Syrup & Fresh Fruit",
+    "desc": "",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Ube Mochi Waffles"
+   },
+   {
+    "name": "Mac Nut Waffle w/ Fresh Fruit",
+    "desc": "",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Mac Nut Waffle"
+   },
+   {
+    "name": "Stella's Kalbi Rib Loco Moco",
+    "desc": "Kalbi Ribs & an egg your way over rice topped with gravy",
+    "cents": 2400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Mac Nut Waffle"
+   },
+   {
+    "name": "Matcha Mochi Waffle",
+    "desc": "Matcha Mochi Waffle w/ Ube Syrup & Fresh Fruit",
+    "cents": 1700,
+    "alcohol": false,
+    "src": "text",
+    "section": "Mac Nut Waffle"
+   },
+   {
+    "name": "Poke Bowl",
+    "desc": "Rice, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger",
+    "cents": 2000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Lunch"
+   },
+   {
+    "name": "Kai's Plate Lunch",
+    "desc": "Plate with your choice of meat and salad. Lava Chicken or Kalua Pork, Tutu’s Mac Salad or Kimchi Cucumber.",
+    "cents": 1700,
+    "label": "from $17.00",
+    "alcohol": false,
+    "src": "text",
+    "section": "Lunch"
+   },
+   {
+    "name": "Lava Chicken Tropi-Cobb Salad",
+    "desc": "Mango, pineapple, tomato, avocado, edamame, bacon, egg, feta, romaine, lava chicken w/ pineapple balsamic",
+    "cents": 1800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Lunch"
+   },
+   {
+    "name": "Poke Wrap",
+    "desc": "Rice, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger wrapped in a spinach tortilla",
+    "cents": 2000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Squirt's Kalua Pork Loco Moco"
+   },
+   {
+    "name": "Poke Salad",
+    "desc": "Romaine Lettuce, Slaw, Cucumber, Edamame, Avocado, Furikake, Seaweed Salad, Ginger",
+    "cents": 2000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Squirt's Kalua Pork Loco Moco"
+   },
+   {
+    "name": "Teri Chicken Tropi-Cobb Salad",
+    "desc": "Mango, pineapple, tomato, avocado, edamame, bacon, egg, feta, romaine, teri chicken w/ pineapple balsamic.",
+    "cents": 1800,
+    "alcohol": false,
+    "src": "text",
+    "section": "Squirt's Kalua Pork Loco Moco"
+   },
+   {
+    "name": "Mini Hot Dogs w/ Side of Fresh Fruit",
+    "desc": "",
+    "cents": 1000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Squirt's Kalua Pork Loco Moco"
+   },
+   {
+    "name": "Grilled Cheese w/ Side of Fresh Fruit",
+    "desc": "",
+    "cents": 1000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Keiki (Kids) Grilled Cheese"
+   },
+   {
+    "name": "Slider w/ Side of Fresh Fruit",
+    "desc": "",
+    "cents": 1000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Keiki (Kids) Mini Burger"
+   },
+   {
+    "name": "Small Loco Moco",
+    "desc": "",
+    "cents": 1200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Keiki (Kids) Loco Moco"
+   },
+   {
+    "name": "Spam, Eggs, Rice",
+    "desc": "",
+    "cents": 1000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Keiki (Kids) Spam, Eggs, Rice Breakfast"
+   },
+   {
+    "name": "Keiki (Kids) Ube Waffle",
+    "desc": "",
+    "cents": 1000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Keiki (Kids) Spam, Eggs, Rice Breakfast"
+   },
+   {
+    "name": "Kids Size Teri Chicken Plate Lunch",
+    "desc": "",
+    "cents": 1200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Keiki (Kids) Teri Chicken Plate Lunch"
+   },
+   {
+    "name": "Malasadas",
+    "desc": "One Malasada option of filling and sugaring on the outside.",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sweets"
+   },
+   {
+    "name": "Pineapple Upside Down Cake",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sweets"
+   },
+   {
+    "name": "Ube Mochi",
+    "desc": "",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sweets"
+   },
+   {
+    "name": "Malasada Filling Sampler Half Dozen",
+    "desc": "6 filled malasadas, one of each of our 6 fillings",
+    "cents": 2100,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sweets"
+   },
+   {
+    "name": "Malasada Filling Sampler Dozen",
+    "desc": "12 filled malasadas, two of each of our 6 fillings",
+    "cents": 4200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Sweets"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://3103c640177b6669314d.cdn6.editmysite.com/uploads/b/3103c640177b6669314d46c1c46e8ff4a1f6dc6f12c4a03c8ce48e6f86f3f01a/ShakaShack_Hero_1740976743.jpg?width=1600&optimize=medium&height=480&fit=cover&dpr=1",
+   "alt": "",
+   "near": "Hawaiian Style Eats & Treats\n\nOrder Now",
+   "w": 1280,
+   "h": 211,
+   "page": "https://shaka-shack.square.site/"
+  },
+  {
+   "src": "https://3103c640177b6669314d.cdn6.editmysite.com/uploads/b/3103c640177b6669314d46c1c46e8ff4a1f6dc6f12c4a03c8ce48e6f86f3f01a/2025-04-25_21-40-12_1745642419.png?width=1600&optimize=medium&height=480&fit=cover&dpr=1",
+   "alt": "",
+   "near": "",
+   "w": 1040,
+   "h": 200,
+   "page": "https://shaka-shack.square.site/s/order#most-popular"
+  }
+ ]
+}

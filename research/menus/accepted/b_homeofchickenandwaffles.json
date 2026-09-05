@@ -1,0 +1,494 @@
+{
+ "id": "b_homeofchickenandwaffles",
+ "source": "text",
+ "pages": [
+  "https://homeofchickenandwaffles.com/",
+  "https://homeofchickenandwaffles.com/-cater?source=pop_up&spot_id=159557&destination=catering&promotion=catering",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-food-menu",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-drink-menu",
+  "https://reserve.spoton.com/restaurant/70092#",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-cater",
+  "https://homeofchickenandwaffles.com/oakland-home-of-chicken-and-waffles-catering"
+ ],
+ "items": [
+  {
+   "name": "Aladrienne's Nachos",
+   "desc": "Choice of black-eyed peas or red beans, home-fried tortilla chips, cheese, sour cream, jalapenos, and salsa. Add chicken +$3.00.",
+   "cents": 1499,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Ernestine's Wings",
+   "desc": "8 baked chicken drummettes with choice of homestyle buffalo, BBQ, or garlic sauce.",
+   "cents": 1299,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Travis' Chicken Drummettes",
+   "desc": "8 fried chicken drummettes with house seasoning. Add smothered in gravy +$2.00.",
+   "cents": 1299,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Conner's Buttermilk Chicken Strips",
+   "desc": "Battered and fried, boneless and skinless 6 breast strips with house seasoning. Choice of ranch, BBQ, smothered, or buffalo sauce +$1.00.",
+   "cents": 1299,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Charisses' Garlic Fries",
+   "desc": "House French fries with homemade garlic sauce.",
+   "cents": 1175,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Tayler's Sweet Potato Fries",
+   "desc": "Fried with house seasoning salt and served with BBQ sauce.",
+   "cents": 1099,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Ashley's French Fries",
+   "desc": "With house seasoning salt.",
+   "cents": 925,
+   "section": "Appetizers"
+  },
+  {
+   "name": "Pretty Patricia's Salad",
+   "desc": "Battered, fried, or grilled boneless, skinless chicken breast strips, lettuce, tomatoes, cucumber, carrots, boiled egg, bell pepper, and cheese.",
+   "cents": 1995,
+   "section": "Salads"
+  },
+  {
+   "name": "Sophia's Chicken Salad",
+   "desc": "Chicken salad, lettuce, tomatoes, cucumber, carrots, boiled egg, red onion, bell pepper, and cheese.",
+   "cents": 1795,
+   "section": "Salads"
+  },
+  {
+   "name": "Lovely Leila's Chef Salad",
+   "desc": "Fried or grilled chicken breast, lettuce, tomatoes, cucumber, carrots, boiled egg, bell pepper, and cheese.",
+   "cents": 1995,
+   "section": "Salads"
+  },
+  {
+   "name": "Brandon's Dinner Salad",
+   "desc": "Lettuce, tomatoes, cucumber, carrots, red onion, and bell peppers. Add cheese +$0.50.",
+   "cents": 850,
+   "section": "Salads"
+  },
+  {
+   "name": "Angie's Delight",
+   "desc": "1 succulent breast, 1 delicious waffle, and grits.",
+   "cents": 1925,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Incredible Kelly",
+   "desc": "1 leg or thigh, 1 delicious waffle, and grits.",
+   "cents": 1775,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Jade's Joy",
+   "desc": "2 delicious waffles and 2 turkey sausage patties (no substitutions).",
+   "cents": 1650,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Amina's Appetite",
+   "desc": "Delicious buckwheat waffle and 2 turkey sausage patties (no substitutions).",
+   "cents": 1375,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Tracy's Mouthwatering Strawberry Waffles",
+   "desc": "2 delicious waffles topped with strawberry topping and whipped cream, and 2 turkey sausage patties (no substitutions).",
+   "cents": 1695,
+   "section": "Chicken & Waffles",
+   "photo": "homeofchickenandwaffles-tracy-s-mouthwatering-strawberry-waffles"
+  },
+  {
+   "name": "Paige's Palette",
+   "desc": "2 Southern-fried chicken wings, 1 egg, and 1 delicious waffle.",
+   "cents": 1925,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Renaldi's Request",
+   "desc": "2 pieces of chicken Southern style or smothered in gravy and onions (+$2.00) and 2 delicious waffles. Add 2 breasts +$2.50.",
+   "cents": 2125,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Lord BJ",
+   "desc": "4 pieces of chicken Southern style or smothered in gravy and onions (+$2.00) and 2 delicious waffles. Add 2 breasts +$2.50.",
+   "cents": 2450,
+   "section": "Chicken & Waffles",
+   "photo": "homeofchickenandwaffles-lord-bj"
+  },
+  {
+   "name": "Keith's Tackle",
+   "desc": "2 chicken wings, 1 delicious waffle, and macaroni and cheese.",
+   "cents": 2075,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Homeboy",
+   "desc": "3 wings and waffle or French fries (no substitutions).",
+   "cents": 1975,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Dale's Choice",
+   "desc": "8 chicken strips and waffle or French fries. Ranch, buffalo, or BBQ sauce (no substitutions).",
+   "cents": 2050,
+   "section": "Chicken & Waffles"
+  },
+  {
+   "name": "Chace's Combo",
+   "desc": "Egg white vegetable omelet with tomato, onions, bell pepper, and cheese. Buckwheat waffle or sweet potato fries. Add 2 turkey sausage patties +$3.00.",
+   "cents": 1850,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Justin's Omelet",
+   "desc": "Cheese, chicken, and onion omelet. French fries or 1 delicious waffle (no substitutions).",
+   "cents": 1795,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Laura's Luscious Breakfast",
+   "desc": "2 turkey sausage patties, 2 eggs, grits, and hot fluffy biscuit.",
+   "cents": 1495,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Jacqueline's Breakfast",
+   "desc": "2 turkey sausage patties, 2 eggs, and 1 delicious waffle.",
+   "cents": 1625,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Susan's Special",
+   "desc": "2 scrambled eggs mixed with cheese and onions, potatoes and gravy, and hot fluffy biscuit.",
+   "cents": 1350,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Kim's Creation",
+   "desc": "1 chicken breast, 1 leg or 1 wing, 2 eggs, grits, and hot fluffy biscuit.",
+   "cents": 1795,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Elouise's Masterpiece",
+   "desc": "2 sausage patties, toast, and 1 egg. Coffee, orange juice, or hot tea.",
+   "cents": 1350,
+   "section": "Eggs & Such"
+  },
+  {
+   "name": "Teri's Chicken Salad Sliders",
+   "desc": "Chicken salad with lettuce, tomato, and red onions on slider buns.",
+   "cents": 1395,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Michele's Fried Chicken Sandwich",
+   "desc": "Boneless and skinless fried breast with special house coleslaw and pickles on a brioche bun.",
+   "cents": 1695,
+   "section": "Sandwiches",
+   "photo": "homeofchickenandwaffles-michele-s-fried-chicken-sandwich"
+  },
+  {
+   "name": "Uncle Johnny's Juicy Chicken Sandwich",
+   "desc": "Boneless and skinless grilled chicken breast with lettuce, tomatoes, and red onions on a brioche bun.",
+   "cents": 1795,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Stevie's Catfish Sandwich",
+   "desc": "Boneless fried catfish fillet with lettuce, tomato, and red onions on a brioche bun.",
+   "cents": 1995,
+   "section": "Sandwiches",
+   "photo": "homeofchickenandwaffles-stevie-s-catfish-sandwich"
+  },
+  {
+   "name": "Naima's Catfish",
+   "desc": "2 large fried catfish fillets with choice of French fries, potato salad, green salad, or coleslaw (no substitutions).",
+   "cents": 2295,
+   "section": "Fried Fish",
+   "photo": "homeofchickenandwaffles-naima-s-catfish"
+  },
+  {
+   "name": "Sabrina's Catfish Plate",
+   "desc": "2 large catfish fillets fried or smothered in gravy and onions (+$2.00), grits, and hot fluffy biscuit.",
+   "cents": 2295,
+   "section": "Fried Fish",
+   "photo": "homeofchickenandwaffles-sabrina-s-catfish-plate"
+  },
+  {
+   "name": "Brother Darrol",
+   "desc": "2 pieces of chicken Southern style or smothered in gravy and onions (+$2.00), grits, and hot fluffy biscuit. Add 2 breasts +$2.50.",
+   "cents": 1975,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Prince Brendon",
+   "desc": "4 pieces of chicken Southern style or smothered in gravy and onions (+$2.00), grits, and hot fluffy biscuit. Add 2 breasts +$2.50.",
+   "cents": 2150,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Homegirl",
+   "desc": "4 pieces of chicken Southern style or smothered in gravy and onions (+$2.00) and cornbread. Choice of any 2 sides +$7.50.",
+   "cents": 2025,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Princess Jordan",
+   "desc": "1 breast or 2 wings, macaroni and cheese, greens, and cornbread.",
+   "cents": 2025,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Gordon's Bank",
+   "desc": "1 breast or 2 wings, macaroni and cheese, yams, and cornbread.",
+   "cents": 2025,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Lil John's Special",
+   "desc": "3 wings and cornbread. Choice of greens, smothered potatoes, or macaroni and cheese.",
+   "cents": 1995,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Skye's Buttermilk Chicken Strips",
+   "desc": "Homemade, cooked to order, 8 boneless and skinless chicken breast strips. Choice of macaroni and cheese, green salad, or potato salad.",
+   "cents": 2095,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Darrols Homerun",
+   "desc": "2 breasts, greens and cornbread. Choice of macaroni and cheese or red beans and rice.",
+   "cents": 2325,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Uncle Doe's Sampler",
+   "desc": "Choice of any 3 sides: greens, macaroni and cheese, grits, yams, red beans and rice, smothered potatoes, black-eyed peas, green salad, rice and gravy",
+   "cents": 1975,
+   "section": "Creative Combinations"
+  },
+  {
+   "name": "Kaisun's Transformer",
+   "desc": "1 chicken leg with mac and cheese.",
+   "cents": 1095,
+   "section": "Mecca's Kids Meal"
+  },
+  {
+   "name": "Omaurie's Ranger",
+   "desc": "1 turkey sausage patty and grits.",
+   "cents": 1095,
+   "section": "Mecca's Kids Meal"
+  },
+  {
+   "name": "Amiya's Doll",
+   "desc": "1 chicken wing with 1 delicious waffle.",
+   "cents": 1095,
+   "section": "Mecca's Kids Meal"
+  },
+  {
+   "name": "Josiah's Starfish",
+   "desc": "3 fried chicken strips with French fries.",
+   "cents": 1095,
+   "section": "Mecca's Kids Meal"
+  },
+  {
+   "name": "Caramel Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Chocolate Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Red Velvet Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sock It To Me Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Pineapple Coconut Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "German Chocolate Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Mello Yellow Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sweet Potato Cake",
+   "desc": "",
+   "cents": 1050,
+   "section": "Desserts"
+  },
+  {
+   "name": "Pecan Pie",
+   "desc": "",
+   "cents": 875,
+   "section": "Desserts"
+  },
+  {
+   "name": "Sweet Potato Pie",
+   "desc": "",
+   "cents": 875,
+   "section": "Desserts"
+  },
+  {
+   "name": "Peach Cobbler",
+   "desc": "",
+   "cents": 875,
+   "section": "Desserts"
+  },
+  {
+   "name": "Chocolate Chip Waffle",
+   "desc": "",
+   "cents": 925,
+   "section": "Desserts"
+  },
+  {
+   "name": "Macaroni & Cheese",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Candied Yams",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Greens",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides",
+   "photo": "homeofchickenandwaffles-greens"
+  },
+  {
+   "name": "Home Fries",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Smothered Potatoes",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Grits",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides",
+   "photo": "homeofchickenandwaffles-grits"
+  },
+  {
+   "name": "Potato Salad",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides",
+   "photo": "homeofchickenandwaffles-potato-salad"
+  },
+  {
+   "name": "Red Beans & Rice",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Black Eye Peas & Rice",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Rice & Gravy",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides"
+  },
+  {
+   "name": "Coleslaw",
+   "desc": "",
+   "cents": 795,
+   "section": "Sides",
+   "photo": "homeofchickenandwaffles-coleslaw"
+  },
+  {
+   "name": "Gravy",
+   "desc": "",
+   "cents": 400,
+   "section": "Sides",
+   "photo": "homeofchickenandwaffles-gravy"
+  },
+  {
+   "name": "Derreck's Deal",
+   "desc": "1 thigh or 1 leg, candied yams, greens, and cornbread.",
+   "cents": 1350,
+   "section": "Daily Lunch Specials"
+  },
+  {
+   "name": "Mimi's Potluck",
+   "desc": "1 thigh or 1 leg, macaroni and cheese, greens, and cornbread.",
+   "cents": 1350,
+   "section": "Daily Lunch Specials"
+  },
+  {
+   "name": "Stacy's Southern Special",
+   "desc": "1 thigh or 1 leg, mixed greens, potato salad, and cornbread.",
+   "cents": 1350,
+   "section": "Daily Lunch Specials"
+  },
+  {
+   "name": "Big Daddy",
+   "desc": "1 thigh or 1 leg, black-eyed peas, rice, green salad, and cornbread.",
+   "cents": 1350,
+   "section": "Daily Lunch Specials"
+  },
+  {
+   "name": "Colonel Marshal",
+   "desc": "1 thigh or 1 leg, red beans, green salad, and cornbread.",
+   "cents": 1350,
+   "section": "Daily Lunch Specials"
+  },
+  {
+   "name": "Jessie's Party",
+   "desc": "6 buffalo wings or fried drummettes and French fries or delicious waffle.",
+   "cents": 1350,
+   "section": "Daily Lunch Specials"
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "id": "b_simplysoups",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://simplysoupsandmore.com/",
+  "https://order.online/store/simply-soups-and-more-antioch-32335419",
+  "https://www.doordash.com/en/store/simply-soups-and-more-antioch-32335419/62357190/",
+  "https://def.uber.com/en/challenge?from_service=d2ViLWVhdHMtdjI%3D&q=OGI5YzliOWQwZTZiMjAyMDhkOGRhYTI1YjRmZDBmNDM6WTBUMFVWSEI5MXNad1JDUDppckpwb2ZtSkQ1dnpDYzJ3K3VRK1MyMSthMDRmKytnOFpvMWFCMm5aR0l1VzU1WEswaTRCa3NqNzFISE5hT1c1bjkvYVpJZzVKU3ZsQ1NHblR5TlJUd3Y3OWVkY05uVWZLeGJ1UXN3bndsdmxEb1AxZ2pJeHQvRWFINE5hNnVrdlVJeDdMaHp3OFRSWU1Rb1Q0cjdoa0wzV0VrdGFQVHRQS2VrNEs0TWJBSlo1RUxrVXMxc3Fra0VkN0FSdWhod0hYUUhvVXpzSm1aRWFLNkJ5c0ZjMFpOTzZCY0xhblhSMXdmV0U0eWlnRUZ2aVBDMzlEMTJzQUhvem9TdnpNY05ZcVY3TEJ2TU5XS0J3WklBaVlHNXNLOCtla1VZUDhxUzZGMkxmODhOd0JMMFJuei9VZDFjMk9TaWltSnM9OmZ4NE1uRG9vUkxnVzhvQ21NUnlENWc9PQ%3D%3D",
+  "https://www.grubhub.com/restaurant/simply-soups-and-more-3103-delta-fair-blvd-antioch/9985664",
+  "https://www.grubhub.com/lets-eat",
+  "https://www.grubhub.com/#goToMenu"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Extra sides",
+   "desc": "Our sides bring comfort and all the flavor your plate deserves! Load up on the classics you love!",
+   "cents": 1598,
+   "alcohol": false,
+   "src": "text",
+   "section": "Categories"
+  },
+  {
+   "name": "Build your own Soul bowl",
+   "desc": "Our Build Your Own Soul Bowl lets you load up your bowl with the meats and sides you love. From comfort-food classics to our signature fixin’s, you make the bowl — we bring the soul! STEP 1: PICK YOUR BASE Every good Sou",
+   "cents": 2999,
+   "alcohol": false,
+   "src": "text",
+   "section": "Categories"
+  },
+  {
+   "name": "Meatloaf",
+   "desc": "Our homemade Southern-style meatloaf is made with a perfectly seasoned blend of beef, baked until tender and juicy, and served with one side of your choice. This hearty comfort food favorite is packed with rich, savory f",
+   "cents": 2499,
+   "alcohol": false,
+   "src": "text",
+   "section": "Categories"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://assets.cdn.filesafe.space/JC1YUdvjnhXZlLhDoj4c/media/6a82fa9b1348f05552b1b124.webp",
+   "alt": "Fresh soul food plate from Simply Soups and More in Antioch",
+   "near": "Tap to see the full menu",
+   "w": 1600,
+   "h": 1600,
+   "page": "https://simplysoupsandmore.com/"
+  },
+  {
+   "src": "https://assets.cdn.filesafe.space/JC1YUdvjnhXZlLhDoj4c/media/6a82faba38315703fb7b0883.webp",
+   "alt": "Simply Soups and More Soul Bowl — base, protein and two homestyle sides",
+   "near": "Build a Bowl",
+   "w": 1600,
+   "h": 1600,
+   "page": "https://simplysoupsandmore.com/"
+  }
+ ]
+}

@@ -1,0 +1,412 @@
+{
+ "id": "b_stansdonutshop",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.stansdonutshop.com/",
+  "https://www.stansdonutshop.com/about",
+  "https://www.stansdonutshop.com/about-1",
+  "https://www.stansdonutshop.com/menus",
+  "https://www.stansdonutshop.com/contact",
+  "https://www.stansdonutshop.com/shop",
+  "https://www.stansdonutshop.com/product-page/grey-santa-clara-hoody-1"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Famous Glazed",
+   "desc": "Please note, due to high demand, we do need to limit order quantity during peak business hours.",
+   "cents": 190,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Sugar",
+   "desc": "",
+   "cents": 190,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Chocolate Glazed",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Maple Glazed",
+   "desc": "",
+   "cents": 200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Sprinkle Glazed",
+   "desc": "",
+   "cents": 210,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Dozen Regular Glazed",
+   "desc": "",
+   "cents": 1850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Dozen Specialty Glazed",
+   "desc": "",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Dozen raised with sprinkles",
+   "desc": "",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "An assortment of cake donuts",
+   "desc": "",
+   "cents": 125,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Old Fashioned",
+   "desc": "Available plain, glazed, maple, and chocolate",
+   "cents": 125,
+   "alcohol": true,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Strawberry and Blueberry available FRI-SUN",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "text",
+   "section": "Fresh, Hand-made Donuts"
+  },
+  {
+   "name": "Saturday- Lemon",
+   "desc": "*Flavors subject to change on Holidays.",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Buttermilk"
+  },
+  {
+   "name": "Jelly Filled Donut",
+   "desc": "Our glazed donut filled with raspberry jam. Also available with powdered sugar.",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Buttermilk"
+  },
+  {
+   "name": "Cinnamon Roll",
+   "desc": "Fresh, handmade Cinnamon Rolls",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Buttermilk"
+  },
+  {
+   "name": "Cinnamon Twist",
+   "desc": "Fresh, handmade Cinnamon Twist",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Buttermilk"
+  },
+  {
+   "name": "Apple Fritter",
+   "desc": "Available on Mondays and Fridays only!",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Buttermilk"
+  },
+  {
+   "name": "Bars",
+   "desc": "Available with maple or chocolate",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Buttermilk"
+  },
+  {
+   "name": "Available WED-SUN",
+   "desc": "",
+   "cents": 250,
+   "alcohol": false,
+   "src": "text",
+   "section": "Creme Filled"
+  },
+  {
+   "name": "Available on MON-TUES",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Custard Filled"
+  },
+  {
+   "name": "Available WED-SUN",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Cherry"
+  },
+  {
+   "name": "One dozen cake and/or old-fashioned",
+   "desc": "",
+   "cents": 1500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dozen Cake/Old-Fashioned"
+  },
+  {
+   "name": "Dozen Raised Classic",
+   "desc": "One dozed glazed, sugar, cake, and old-fashioned",
+   "cents": 1850,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dozen Cake/Old-Fashioned"
+  },
+  {
+   "name": "Dozen Raised Specialty",
+   "desc": "Our famous raised donuts with chocolate, maple, sugar, and/or glazed",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dozen Cake/Old-Fashioned"
+  },
+  {
+   "name": "Dozen Raised Rainbow Sprinkle",
+   "desc": "Our famous raised donuts with maple or chocolate icing topped with rainbow sprinkles",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "section": "Dozen Cake/Old-Fashioned"
+  },
+  {
+   "name": "$3.00 for ONE dozen donut holes.",
+   "desc": "",
+   "cents": 300,
+   "alcohol": false,
+   "src": "text",
+   "section": "Donut Holes"
+  },
+  {
+   "name": "Coffee Carafe",
+   "desc": "96oz. Includes: 8 cups, cream and sugar.",
+   "cents": 2000,
+   "alcohol": false,
+   "src": "text",
+   "section": "Donut Holes"
+  },
+  {
+   "name": "Price",
+   "desc": "",
+   "cents": 4500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Sand colored Hoodie"
+  },
+  {
+   "name": "Price",
+   "desc": "",
+   "cents": 2600,
+   "alcohol": false,
+   "src": "text",
+   "section": "Ladies Shirt"
+  },
+  {
+   "name": "Price",
+   "desc": "",
+   "cents": 2500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Stans Donuts Mesh Cap"
+  },
+  {
+   "name": "Price",
+   "desc": "",
+   "cents": 3500,
+   "alcohol": false,
+   "src": "text",
+   "section": "Santa Clara T-Shirt"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_6f5ea692dc03454db3271bf955af3562f000.jpg/v1/fill/w_1280,h_900,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/1e3639_6f5ea692dc03454db3271bf955af3562f000.jpg",
+   "alt": "",
+   "near": "HOME\n\nOUR STORY\n\nMENU\n\nCONTACT\n\nSHOP",
+   "w": 1280,
+   "h": 900,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_fc45db8a7c76401d919b115bb5c3bfba.png/v1/fill/w_600,h_490,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e3639_fc45db8a7c76401d919b115bb5c3bfba.png",
+   "alt": "",
+   "near": "HOME\n\nOUR STORY\n\nMENU\n\nCONTACT\n\nSHOP",
+   "w": 600,
+   "h": 490,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_3a372c984e58400c8f2636b4a3f29de8.png/v1/fill/w_600,h_490,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e3639_3a372c984e58400c8f2636b4a3f29de8.png",
+   "alt": "",
+   "near": "HOME\n\nOUR STORY\n\nMENU\n\nCONTACT\n\nSHOP",
+   "w": 600,
+   "h": 490,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_0d7644e61f7f4d5d958d00936c00f626~mv2.jpg/v1/fill/w_980,h_573,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e3639_0d7644e61f7f4d5d958d00936c00f626~mv2.jpg",
+   "alt": "Christmas or New Year background with Golden alarm clock in snowdrifts on blue background",
+   "near": "Holiday Hours\n\nWe will be closed on\nLabor day 9/7\nThanksgiving 11/26\nBlack Friday 11/27\nChristmas Da",
+   "w": 980,
+   "h": 573,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_bd5a569960324f849e7c448299035364.jpg/v1/fill/w_324,h_324,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DSC_0086_edited_JPG.jpg",
+   "alt": "fresh handmade famous stans donuts",
+   "near": "Made Fresh Daily",
+   "w": 324,
+   "h": 324,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_f16e2bb9fe154c0797929fb093eb8b65~mv2_d_3456_5184_s_4_2.jpg/v1/fill/w_321,h_324,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2173_JPG.jpg",
+   "alt": "counter service stans donut shop",
+   "near": "Counter Service",
+   "w": 321,
+   "h": 324,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_a478472beb0f417c867ecbb790f78d0e.jpg/v1/fill/w_321,h_324,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/imagejpeg_0_2.jpg",
+   "alt": "decorated cake glazed donuts",
+   "near": "Many Varieties",
+   "w": 321,
+   "h": 324,
+   "page": "https://www.stansdonutshop.com/"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_2db99a3b365f447babf6a6cf8c1cb7f8.jpg/v1/crop/x_0,y_518,w_1824,h_2675/fill/w_447,h_657,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMAG1145.jpg",
+   "alt": "IMAG1145.jpg",
+   "near": "our story\nStan's Donuts\n\nStan's Donuts has been a community fixture in Santa Clara for more than six",
+   "w": 447,
+   "h": 657,
+   "page": "https://www.stansdonutshop.com/about"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_5e59bcaac07f4e51923747e089c919fb~mv2_d_1823_1219_s_2.jpg/v1/fill/w_512,h_339,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/dad.jpg",
+   "alt": "dad.jpg",
+   "near": "For many years, son Richard was the second hand to Stan. Working along side his father, he learned t",
+   "w": 512,
+   "h": 339,
+   "page": "https://www.stansdonutshop.com/about"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_ebe2ce956f6c4f8fa6cac21d41f5642c~mv2.jpg/v1/fill/w_511,h_354,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Jesus_edited.jpg",
+   "alt": "Jesus_edited.jpg",
+   "near": "For many years, son Richard was the second hand to Stan. Working along side his father, he learned t",
+   "w": 511,
+   "h": 354,
+   "page": "https://www.stansdonutshop.com/about"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_f926e282a8054eda9bdc1db3c5bc28b8~mv2.jpg/v1/fill/w_367,h_418,al_c,lg_1,q_80,enc_avif,quality_auto/IMG_3953%202_edited.jpg",
+   "alt": "IMG_3953 2_edited.jpg",
+   "near": "Luis Felipe Villafuerte, also known as El Vasco (his mother’s maiden name), was born in Ecuador in 1",
+   "w": 367,
+   "h": 418,
+   "page": "https://www.stansdonutshop.com/about-1"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_9cd324fb73fb40148c009e83ae9dfa49~mv2.jpg/v1/fill/w_346,h_389,al_c,lg_1,q_80,enc_avif,quality_auto/IMG_3955%202_edited.jpg",
+   "alt": "IMG_3955 2_edited.jpg",
+   "near": "Luis Felipe Villafuerte, also known as El Vasco (his mother’s maiden name), was born in Ecuador in 1",
+   "w": 346,
+   "h": 389,
+   "page": "https://www.stansdonutshop.com/about-1"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_5e26f3e791f145fe9b07519c98c4da6f~mv2.jpg/v1/fill/w_600,h_400,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/MENU.jpg",
+   "alt": "MENU.jpg",
+   "near": "Luis Felipe Villafuerte, also known as El Vasco (his mother’s maiden name), was born in Ecuador in 1",
+   "w": 600,
+   "h": 400,
+   "page": "https://www.stansdonutshop.com/about-1"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_ad4c74745a28477cb9130e7aeae9964a~mv2.jpg/v1/crop/x_0,y_0,w_288,h_310,q_80,enc_auto/1e3639_ad4c74745a28477cb9130e7aeae9964a~mv2.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1120,
+   "h": 323,
+   "page": "https://www.stansdonutshop.com/about-1"
+  },
+  {
+   "src": "https://static.parastorage.com/services/restaurant-menus-showcase-ooi/32f43626916d61c7230c005be8198518edbcf8b3b64433b47f70e8c6/media/menus_side_image.7077f229.jpeg",
+   "alt": "",
+   "near": "Our Menu\nWelcome to Stan’s!\nPro tips;\n- We accept cash and check only.\n- We are primarily a morning ",
+   "w": 3009,
+   "h": 3009,
+   "page": "https://www.stansdonutshop.com/menus"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_3d24380d1c6e4221ab1877d3ff49e0de~mv2.jpg/v1/fill/w_487,h_639,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Vintage%20orange%20phone%20on%20the%20table%20Isolat.jpg",
+   "alt": "Vintage orange phone on the table Isolat",
+   "near": "contact\n\nEmail. stansdonutshop@yahoo.com   \n\nTel. (408) 296-5982\n\n​\n\nWe want to hear from you!\n\nPlea",
+   "w": 487,
+   "h": 639,
+   "page": "https://www.stansdonutshop.com/contact"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_3d5bf02ce82948489578213689c3cbd8~mv2.png/v1/fill/w_300,h_228,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e3639_3d5bf02ce82948489578213689c3cbd8~mv2.png",
+   "alt": "",
+   "near": "Quick View",
+   "w": 300,
+   "h": 228,
+   "page": "https://www.stansdonutshop.com/shop"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_82f3c5640b0b4a41b8f29bcddc81b331~mv2.jpeg/v1/fill/w_498,h_609,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e3639_82f3c5640b0b4a41b8f29bcddc81b331~mv2.jpeg",
+   "alt": "Sand colored Hoodie",
+   "near": "",
+   "w": 498,
+   "h": 609,
+   "page": "https://www.stansdonutshop.com/product-page/grey-santa-clara-hoody-1"
+  },
+  {
+   "src": "https://static.wixstatic.com/media/1e3639_ec301057b743423e815b6ff47b88740f~mv2.png/v1/fill/w_498,h_609,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/1e3639_ec301057b743423e815b6ff47b88740f~mv2.png",
+   "alt": "Sand colored Hoodie",
+   "near": "",
+   "w": 498,
+   "h": 609,
+   "page": "https://www.stansdonutshop.com/product-page/grey-santa-clara-hoody-1"
+  }
+ ]
+}

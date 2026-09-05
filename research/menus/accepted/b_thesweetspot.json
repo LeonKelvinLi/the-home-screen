@@ -1,0 +1,171 @@
+{
+ "id": "b_thesweetspot",
+ "source": "text",
+ "pages": [
+  "https://thesweetspotwc.square.site/?location_id=LJHGPBW11983T&fulfillment=PICKUP#ZKWECOT3RR775CLESJDCER7B"
+ ],
+ "items": [
+  {
+   "name": "Biscoff Sando",
+   "desc": "Japanese style milk bread fried to perfection and filled with sweet cream. Topped with biscoff sauce and cookie crumbs",
+   "cents": 1150,
+   "section": "Sandos"
+  },
+  {
+   "name": "Dubai Sando",
+   "desc": "Japanese style milk bread fried to perfection and filled with sweet cream. Topped with pistachio cream and crispy katafi",
+   "cents": 1150,
+   "section": "Sandos"
+  },
+  {
+   "name": "Matcha Sando",
+   "desc": "Japanese style milk bread fried to perfection and filled with ceremonial grade Matcha cream",
+   "cents": 1150,
+   "section": "Sandos"
+  },
+  {
+   "name": "Plain Sando",
+   "desc": "Japanese style milk bread fried to perfection and filled with sweet cream",
+   "cents": 950,
+   "section": "Sandos"
+  },
+  {
+   "name": "Strawberry Nutella Sando",
+   "desc": "Japanese style milk bread fried to perfection and filled with sweet cream. Topped with strawberries and Nutella",
+   "cents": 1050,
+   "section": "Sandos"
+  },
+  {
+   "name": "15 Biscoff Mini Pancakes",
+   "desc": "Fluffy pancakes coated with Lotus Biscoff sauce and Belgian white chocolate. Cookie crumbs sprinkled on top",
+   "cents": 1299,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "15 Double Chocolate Mini Pancakes",
+   "desc": "Fluffy mini pancakes coated in Nutella and Belgian white chocolate",
+   "cents": 1299,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "15 Dubai Chocolate Mini Pancakes",
+   "desc": "Fluffy mini pancakes covered in Nutella, pistachio cream and crispy katafi",
+   "cents": 1399,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "20 Biscoff Mini Pancakes",
+   "desc": "Fluffy pancakes coated with Lotus Biscoff sauce and Belgian white chocolate. Cookie crumbs sprinkled on top",
+   "cents": 1599,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "20 Double Chocolate Mini Pancakes",
+   "desc": "Fluffy mini pancakes coated in Nutella and Belgian white chocolate",
+   "cents": 1599,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "20 Dubai Chocolate Mini Pancakes",
+   "desc": "Fluffy mini pancakes covered in Nutella, pistachio cream and crispy katafi",
+   "cents": 1699,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "25 Biscoff Mini Pancakes",
+   "desc": "Fluffy pancakes coated with Lotus Biscoff sauce and Belgian white chocolate. Cookie crumbs sprinkled on top",
+   "cents": 1899,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "25 Double Chocolate Mini Pancakes",
+   "desc": "Fluffy mini pancakes coated in Nutella and Belgian white chocolate",
+   "cents": 1899,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "25 Dubai Chocolate Mini Pancakes",
+   "desc": "Fluffy mini pancakes covered in Nutella, pistachio cream and crispy katafi",
+   "cents": 1999,
+   "section": "Mini pancakes"
+  },
+  {
+   "name": "Banana Biscoff Crepe",
+   "desc": "Crepe filled and topped with, biscoff sauce, biscoff cookie crumble, white chocolate and sliced banana.",
+   "cents": 1499,
+   "section": "Crepes"
+  },
+  {
+   "name": "Dubai Chocolate Crepe",
+   "desc": "Crepe filled and topped with crispy kunafa, pistachio cream, Nutella and ground pistachios.",
+   "cents": 1499,
+   "section": "Crepes"
+  },
+  {
+   "name": "Strawberry Nutella Crepe",
+   "desc": "Crepe filled and topped with sliced strawberries and Nutella",
+   "cents": 1399,
+   "section": "Crepes"
+  },
+  {
+   "name": "Just plain Nutella",
+   "desc": "",
+   "cents": 1099,
+   "section": "Crepes"
+  },
+  {
+   "name": "Dubai Chocolate Strawberry Cup",
+   "desc": "Strawberries cut in half and covered in melted Nutella chocolate, pistachio cream and crispy katafi",
+   "cents": 1599,
+   "section": "Strawberry cups"
+  },
+  {
+   "name": "Chocolate Strawberry Cup",
+   "desc": "strawberries cut in half and topped with melted Nutella",
+   "cents": 1399,
+   "section": "Strawberry cups"
+  },
+  {
+   "name": "White Chocolate Strawberry cup",
+   "desc": "Strawberries cut in half and covered in melted Belgian white chocolate",
+   "cents": 1399,
+   "section": "Strawberry cups"
+  },
+  {
+   "name": "Biscoff Strawberry Cup",
+   "desc": "Strawberries cut in half and covered in melted Belgian white chocolate, lotus biscoff sauce and lotus biscoff cookie crumble",
+   "cents": 1499,
+   "section": "Strawberry cups"
+  },
+  {
+   "name": "Dubai Chocolate Kunafa",
+   "desc": "Kunafa topped with pistachio cream, crushed pistachios and Nutella with strawberries on the side.",
+   "cents": 1499,
+   "section": "Kunafa"
+  },
+  {
+   "name": "Banana Biscoff Kunafa",
+   "desc": "Crispy shredded phyllo dough filled with a sweet cheese filling soaked in sweet syrup, topped with fresh bananas, Lotus Biscoff sauce, white chocolate",
+   "cents": 1399,
+   "section": "Kunafa"
+  },
+  {
+   "name": "Strawberry Nutella Kunafa",
+   "desc": "Crispy shredded phyllo dough soaked in sweet syrup, topped with fresh strawberries and a rich drizzle of Nutella.",
+   "cents": 1299,
+   "section": "Kunafa"
+  },
+  {
+   "name": "Plain Kunafa",
+   "desc": "",
+   "cents": 1099,
+   "section": "Kunafa"
+  },
+  {
+   "name": "12 oz or 16ozWhole milk",
+   "desc": "",
+   "cents": 350,
+   "section": "Kunafa"
+  }
+ ]
+}

@@ -91,14 +91,20 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
     const line = (r.one_line || '').trim()
     if (line && line.length <= 72 && !/[.!?]$/.test(line.slice(0, -1))) e.tagline = line
 
+    /* Their own pictures, picked by eye from their site (tools/menu-strip.ts). */
+    if (Array.isArray(r.photos) && r.photos.length) e.photos = r.photos.map((ph) => ({ src: `/food/${ph.photo}-lg.webp`, alt: String(ph.alt || ''), credit: String(ph.credit || '') }))
     /* Items. */
     const items = []
     for (const it of r.items ?? []) {
       const cents = Number(it.cents)
       if (!it.name || !Number.isFinite(cents) || cents <= 0 || cents > 5_000_000) { report.droppedItems++; continue }
-      items.push([String(it.name).trim(), String(it.desc || '').trim(), Math.round(cents), it.label ? String(it.label).trim() : null])
+      items.push([String(it.name).trim(), String(it.desc || '').trim(), Math.round(cents), it.label ? String(it.label).trim() : null, it.photo ? String(it.photo).trim() : null, it.section ? String(it.section).trim() : null])
     }
     const anyFloor = items.some((i) => i[3])
+    /* A menu tuple: photo in the fourth slot, label in the fifth. Trailing
+       empties are dropped so a plain item stays [name, desc, cents]. */
+    const tuple = ([n, d, c, l, ph]) => (l ? [n, d, c, ph || null, l] : ph ? [n, d, c, ph] : [n, d, c])
+    const anySection = items.some((i) => i[5])
     const isService = SERVICE.test(r.cuisine || '') || SERVICE.test(rosterName[slug] || '')
     /* A line that already ends in a full stop — including one tucked inside a
        closing quote, as in `...your driveway.'` — gets no second one. And a
@@ -124,8 +130,20 @@ for (const f of readdirSync(dir).filter((x) => x.endsWith('.json')).sort()) {
          renders priceLabel over the number — so a floor is never shown as a
          fixed price. */
       report.priced++
-      e.items = items.map(([n, d, c, l]) => (l ? [n, d, c, l] : [n, d, c]))
-      e.offer = items.slice(0, 4).map((i) => i[0])
+      /* The whole published menu renders — his ask of 2026-09-04 was the menu,
+         not a four-item taster — in its own sections when it has them. */
+      if (anySection) {
+        const secs = []
+        for (const it of items) {
+          const name = it[5] || 'Menu'
+          let g = secs.find((x) => x.name === name)
+          if (!g) { g = { name, items: [] }; secs.push(g) }
+          g.items.push(tuple(it))
+        }
+        e.sections = secs
+      } else {
+        e.items = items.map(tuple)
+      }
       /* The researcher's note on the prices — "from their catering PDF",
          "private dining only until they open" — belongs under the menu, where
          siteNote renders as the line that links to their own site. */
@@ -152,6 +170,8 @@ for (const slug of Object.keys(entries).sort()) {
   body += `\n  /*\n${notes.map((n) => '     ' + n.replace(/\*\//g, '* /')).join('\n')}\n  */\n  '${slug}': {\n`
   for (const [k, v] of Object.entries(e)) {
     if (k === 'items') body += `    items: ${fmtItems(v, '    ')},\n`
+    else if (k === 'photos') body += `    photos: [\n${v.map((ph) => `      ${q(ph)},`).join('\n')}\n    ],\n`
+    else if (k === 'sections') body += `    sections: [\n${v.map((g) => `      { name: ${q(g.name)}, items: ${fmtItems(g.items, '      ')} },`).join('\n')}\n    ],\n`
     else if (k === 'groups') body += `    groups: [\n      { name: ${q(v[0].name)}, items: ${fmtItems(v[0].items, '      ')} },\n    ],\n`
     else body += `    ${k}: ${q(v)},\n`
   }

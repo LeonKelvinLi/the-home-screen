@@ -1,0 +1,362 @@
+{
+ "id": "b_alpastorpapi",
+ "source": "square",
+ "alt": {
+  "text": 19
+ },
+ "pages": [
+  "https://www.alpastorpapisf.com/s/order#most-popular",
+  "https://www.alpastorpapisf.com/s/order#most-popular"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "Water",
+   "desc": "Bottled water.",
+   "cents": 200,
+   "section": "Beverages",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Jarritos",
+   "desc": "Jarritos is a popular Mexican brand of fruit-flavored, carbonated soft drinks.",
+   "cents": 500,
+   "section": "Beverages",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Tacos Al Pastor de Trompo",
+   "desc": "Authentic Mexico City Style Tacos Al Pastor: 4 inch Corn Tortilla, Al Pastor de Trompo, Onions, Cilantro and Pineapple",
+   "cents": 500,
+   "section": "Tacos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/CZFQGMCGHZNQFZLKBWAIZAFY.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Kids Burrito",
+   "desc": "Flour tortilla, rice, beans, and cheese. Add meat for an additional $3.00",
+   "cents": 800,
+   "section": "Burritos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/XJW5DYWY62WKC5DJESGV35AC.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Sparkling Water",
+   "desc": "Topo Chico is a premium, highly carbonated mineral water sourced and bottled in Monterrey, Mexico.",
+   "cents": 500,
+   "section": "Beverages",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "The Alpastorta",
+   "desc": "Toasted soft roll, grilled al pastor, grilled pineapple, refried pinto beans, melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja, medium salsa papi verde.",
+   "cents": 1900,
+   "label": "from $19.00",
+   "section": "Tortas",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/MKTEMAELG5EXECTNNCZ47UHM.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Classic Taco",
+   "desc": "4-inch Corn tortilla, cilantro, onions, plus your choice of protein.",
+   "cents": 400,
+   "label": "from $4.00",
+   "section": "Tacos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/CZFQGMCGHZNQFZLKBWAIZAFY.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Chips and Salsa",
+   "desc": "Tortilla chips and salsa.",
+   "cents": 300,
+   "section": "Sides",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/MNRDZ3CL4T6LT75VIA4V7JUX.png",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Vampiro Tacos",
+   "desc": "4 inch corn Tortilla, melted cheese, onions, cilantro.",
+   "cents": 500,
+   "label": "from $5.00",
+   "section": "Tacos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/R5WPOP235CQQMW2YUL5TYDUS.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Chips And Guacamole",
+   "desc": "Tortilla chips and freshly made, in-house guacamole.",
+   "cents": 1000,
+   "section": "Sides",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Bowl",
+   "desc": "Romaine, Spanish rice, black beans (whole or refried), melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja or medium salsa papi verde",
+   "cents": 1800,
+   "label": "from $18.00",
+   "section": "Bowls",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/U7HDXYYIHUJNBUMGAAYIAHT2.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Crispy Queso Tacos",
+   "desc": "6-inch crisped corn tortilla, melted cheese, onions, cilantro",
+   "cents": 700,
+   "label": "from $7.00",
+   "section": "Tacos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/547NGHAVPCI6LY2AR3UCRPNF.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Canned Soda",
+   "desc": "Variety of canned sodas.",
+   "cents": 300,
+   "section": "Beverages",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Gatorade",
+   "desc": "Bottled Gatorade",
+   "cents": 400,
+   "section": "Beverages",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Gringa Taco",
+   "desc": "6-inch flour tortilla, melted cheese, onions, cilantro",
+   "cents": 800,
+   "label": "from $8.00",
+   "section": "Tacos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/CZFQGMCGHZNQFZLKBWAIZAFY.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Award Winning Burrito",
+   "desc": "12-inch flour tortilla, spanish rice, black beans (whole or refried), melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja or medium salsa papi verde.",
+   "cents": 1800,
+   "label": "from $18.00",
+   "section": "Burritos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/XQXEN5LSELWBXNOVBHZW63R4.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Tijuana Style Burrito",
+   "desc": "NO RICE, NO BEANS, 12 inch flour tortilla, melted cheese, avocado, crema, onions, cilantro, spicy salsa papi rojo or medium salsa papi verde.",
+   "cents": 1800,
+   "label": "from $18.00",
+   "section": "Burritos",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/K4SBO5XTGD7TBGMLKXBVRGCN.jpeg",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Chips",
+   "desc": "Side of tortilla chips",
+   "cents": 200,
+   "section": "Sides",
+   "alcohol": false,
+   "src": "square"
+  },
+  {
+   "name": "Aguas Frescas",
+   "desc": "A light, non-alcoholic Mexican beverage made by blending fruit, cereals, flowers, or seeds with water, sugar, and lime.",
+   "cents": 500,
+   "section": "Beverages",
+   "image": "https://132310637.cdn6.editmysite.com/uploads/1/3/2/3/132310637/Y5IDIE2PEE7BZCKMRWPP6ROW.jpeg",
+   "alcohol": false,
+   "src": "square"
+  }
+ ],
+ "alts": {
+  "text": [
+   {
+    "name": "Award Winning Burrito",
+    "desc": "12-inch flour tortilla, spanish rice, black beans (whole or refried), melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja or medium salsa papi verde.",
+    "cents": 1800,
+    "label": "from $18.00",
+    "alcohol": false,
+    "src": "text"
+   },
+   {
+    "name": "Crispy Queso Tacos",
+    "desc": "6-inch crisped corn tortilla, melted cheese, onions, cilantro",
+    "cents": 700,
+    "label": "from $7.00",
+    "alcohol": false,
+    "src": "text"
+   },
+   {
+    "name": "Tacos Al Pastor de Trompo",
+    "desc": "Authentic Mexico City Style Tacos Al Pastor: 4 inch Corn Tortilla, Al Pastor de Trompo, Onions, Cilantro and Pineapple",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text"
+   },
+   {
+    "name": "Classic Taco",
+    "desc": "4-inch Corn tortilla, cilantro, onions, plus your choice of protein.",
+    "cents": 400,
+    "label": "from $4.00",
+    "alcohol": false,
+    "src": "text"
+   },
+   {
+    "name": "Gringa Taco",
+    "desc": "6-inch flour tortilla, melted cheese, onions, cilantro",
+    "cents": 800,
+    "label": "from $8.00",
+    "alcohol": false,
+    "src": "text"
+   },
+   {
+    "name": "Vampiro Tacos",
+    "desc": "4 inch corn Tortilla, melted cheese, onions, cilantro.",
+    "cents": 500,
+    "label": "from $5.00",
+    "alcohol": false,
+    "src": "text"
+   },
+   {
+    "name": "Flour tortilla, rice, beans, and cheese. Add meat for an additional",
+    "desc": "",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Tijuana Style Burrito",
+    "desc": "NO RICE, NO BEANS, 12 inch flour tortilla, melted cheese, avocado, crema, onions, cilantro, spicy salsa papi rojo or medium salsa papi verde.",
+    "cents": 1800,
+    "label": "from $18.00",
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "The Alpastorta",
+    "desc": "Toasted soft roll, grilled al pastor, grilled pineapple, refried pinto beans, melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja, medium salsa papi verde.",
+    "cents": 1900,
+    "label": "from $19.00",
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Bowl",
+    "desc": "Romaine, Spanish rice, black beans (whole or refried), melted cheese, avocado, crema, onions, cilantro, spicy salsa papi roja or medium salsa papi verde",
+    "cents": 1800,
+    "label": "from $18.00",
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Sparkling Water",
+    "desc": "Topo Chico is a premium, highly carbonated mineral water sourced and bottled in Monterrey, Mexico.",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Jarritos",
+    "desc": "Jarritos is a popular Mexican brand of fruit-flavored, carbonated soft drinks.",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Water",
+    "desc": "Bottled water.",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Aguas Frescas",
+    "desc": "A light, non-alcoholic Mexican beverage made by blending fruit, cereals, flowers, or seeds with water, sugar, and lime.",
+    "cents": 500,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Canned Soda",
+    "desc": "Variety of canned sodas.",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Kids Burrito"
+   },
+   {
+    "name": "Bottled Gatorade",
+    "desc": "",
+    "cents": 400,
+    "alcohol": false,
+    "src": "text",
+    "section": "Gatorade"
+   },
+   {
+    "name": "Chips and Salsa",
+    "desc": "Tortilla chips and salsa.",
+    "cents": 300,
+    "alcohol": false,
+    "src": "text",
+    "section": "Gatorade"
+   },
+   {
+    "name": "Side of tortilla chips",
+    "desc": "",
+    "cents": 200,
+    "alcohol": false,
+    "src": "text",
+    "section": "Chips"
+   },
+   {
+    "name": "Chips And Guacamole",
+    "desc": "Tortilla chips and freshly made, in-house guacamole.",
+    "cents": 1000,
+    "alcohol": false,
+    "src": "text",
+    "section": "Chips"
+   }
+  ]
+ },
+ "images": [
+  {
+   "src": "https://75a7c2018d51b2a13ae1.cdn6.editmysite.com/uploads/b/75a7c2018d51b2a13ae14860ad1a9f6f0c865a1f22ab6e50c3a4e4419883ea86/2026-03-26_13-38-35_1774557538.jpg?width=1600&optimize=medium&height=480&fit=cover&dpr=1",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 200,
+   "page": "https://www.alpastorpapisf.com/s/order#most-popular"
+  },
+  {
+   "src": "https://75a7c2018d51b2a13ae1.cdn6.editmysite.com/uploads/b/75a7c2018d51b2a13ae14860ad1a9f6f0c865a1f22ab6e50c3a4e4419883ea86/2026-03-26_13-38-35_1774557538.jpg?width=1600&optimize=medium&height=480&fit=cover&dpr=1",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 200,
+   "page": "https://www.alpastorpapisf.com/s/order#most-popular"
+  }
+ ]
+}

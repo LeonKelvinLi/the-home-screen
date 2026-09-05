@@ -1,0 +1,685 @@
+{
+ "id": "b_beniciagrill",
+ "source": "pdf",
+ "alt": {},
+ "pages": [
+  "http://www.benicia-grill.com/",
+  "http://www.benicia-grill.com/menu.pdf"
+ ],
+ "pdfs": [
+  "http://www.benicia-grill.com/menu.pdf"
+ ],
+ "items": [
+  {
+   "name": "All Egg Combos are served with your choice of Hash Browns or  Pancakes and Bacon",
+   "desc": "Country Potatoes, and Toast  Two buttermilk pancakes and two pieces of bacon.",
+   "cents": 1430,
+   "alcohol": false,
+   "src": "pdf"
+  },
+  {
+   "name": "Benicia Grill Breakfast  19.30  Banana and Walnut Pancakes",
+   "desc": "Three eggs any style, three pieces of bacon, and three sausage links.  Three walnut pancakes, topped with glazed banana slices and walnuts.",
+   "cents": 1530,
+   "alcohol": false,
+   "src": "pdf"
+  },
+  {
+   "name": "2 Eggs and Hash Browns  13.00  Pancake Combo",
+   "desc": "Two eggs served any style.  Two uffy buttermilk pancakes, two eggs any style, two pieces of bacon or",
+   "cents": 1630,
+   "alcohol": false,
+   "src": "pdf"
+  },
+  {
+   "name": "Three eggs served any style.  Short Stack",
+   "desc": "Bacon and Eggs  16.30  Two buttermilk pancakes.",
+   "cents": 1329,
+   "alcohol": false,
+   "src": "pdf"
+  },
+  {
+   "name": "Two eggs served any style and four pieces of bacon.  Full Stack",
+   "desc": "Sausage Link and Eggs  16.30  Three buttermilk pancakes. Add strawberry sauce (seasonal) or bananas for 1.49.",
+   "cents": 1429,
+   "alcohol": false,
+   "src": "pdf"
+  },
+  {
+   "name": "Belgian Wafe and Bacon",
+   "desc": "Hot Link and Eggs  17.30  A Belgian wafe with two pieces of bacon.",
+   "cents": 1529,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Wafe Combo",
+   "desc": "Linguica and Eggs  16.95  A Belgian wafe, two eggs any style, two pieces of bacon or sausage.",
+   "cents": 1705,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Banana Walnut Wafe",
+   "desc": "Turkey Sausage Patty and Eggs  16.30  A Belgian walnut wafe, two eggs any style, two pieces of bacon or sausage.",
+   "cents": 1875,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Two eggs served any style and a hamburger patty.  French Toast and Bacon",
+   "desc": "Breakfast Bacon Cheeseburger  19.50  Two pieces of cinnamon French toast with two pieces of bacon.",
+   "cents": 1605,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Chicken Fried Steak and Eggs  18.00  Eggs Benedict",
+   "desc": "Lightly seasoned and breaded beefsteak, eggs any style.  Canadian bacon, poached eggs and hollandaise sauce served on an English muffin.",
+   "cents": 1880,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Porkchop and Eggs  18.80  Florentine Benedict",
+   "desc": "A seasoned and grilled pork chop and two eggs served any style.  Ham, fresh spinach, poached eggs, tomato and Hollandaise sauce on an English muffin.",
+   "cents": 1880,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Ham Steak and Eggs  17.30  Veggie Benedict",
+   "desc": "Grilled ham steak and two eggs served any style.  Avocado, tomato, bell pepper, onion, poached egg, and Hollandaise sauce on an",
+   "cents": 1730,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "A 4oz steak and two eggs served any style.  Linguica Benedict",
+   "desc": "12oz T-Bone Steak and Eggs  27.95  Linguica, bell peppers, onion, poached eggs and Hollandaise sauce on an English",
+   "cents": 1895,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Sausage Patty and Eggs 16.95 WAFFLES"
+  },
+  {
+   "name": "Breakfast Sandwich  17.00  Steak Fajita Omelette",
+   "desc": "Two eggs cooked over hard, bacon, cheese, and tomato served between two  Grilled steak, bell peppers, onion and jack cheese. Served with sour cream and salsa.",
+   "cents": 1830,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Tri-Tip and Eggs 18.00 OMELETTES"
+  },
+  {
+   "name": "pieces of toast with hash browns or country potatoes.  Chicken Fajita Omelette",
+   "desc": "Breakfast Burrito  16.70  Grilled Chicken, bell peppers, onion and jack cheese. Served with sour cream and salsa.",
+   "cents": 1830,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Tri-Tip and Eggs 18.00 OMELETTES"
+  },
+  {
+   "name": "Add Bacon or Sausage  +",
+   "desc": "",
+   "cents": 150,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Tri-Tip and Eggs 18.00 OMELETTES"
+  },
+  {
+   "name": "British Bangers & Eggs  18.20  Louisiana Omelette",
+   "desc": "Served with 2 eggs, choice of hash browns or country potatoes. Served with toast.  Cajun sausage, onion and cheese.",
+   "cents": 1830,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Tri-Tip and Eggs 18.00 OMELETTES"
+  },
+  {
+   "name": "Spinach Omelette",
+   "desc": "SKILLETS  Spinach, mushrooms and Swiss cheese.",
+   "cents": 1830,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Tri-Tip and Eggs 18.00 OMELETTES"
+  },
+  {
+   "name": "Steak Omelette",
+   "desc": "Joe’s Special  18.70  Grilled steak, mushrooms, cheese, tomato and onion.",
+   "cents": 1930,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "BMS Omelette",
+   "desc": "Country Skillet  17.80  Bacon, mushrooms and Swiss cheese.",
+   "cents": 1730,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Denver Omelette",
+   "desc": "Steak Fajita Skillet  18.00  Ham, onion, bell pepper and cheese.",
+   "cents": 1830,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Garden Omelette",
+   "desc": "Avocado, spinach, mushrooms, olives, tomato, onion and cheese.",
+   "cents": 1730,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Chicken Fajita Skillet  17.00  Ham and Cheese Omelette",
+   "desc": "Grilled chicken, bell peppers, onion, cheese, guacamole, salsa, sour cream with",
+   "cents": 1730,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Ham and Cheese Skillet  16.00  Cheese Omelette",
+   "desc": "American, cheddar or Swiss.",
+   "cents": 1630,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Santa Fe Skillet  17.80  Turkey Patty Sausage Omelette",
+   "desc": "Diced turkey sausage, onion, and mixed cheese.",
+   "cents": 1630,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Chicken Skillet",
+   "desc": "Grilled chicken, scrambled eggs, cheeses, mushrooms, bell pepper and onions  Linguica Omelette  17.95",
+   "cents": 1830,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Greek Omelette",
+   "desc": "Shrimp Skillet  18.30  Olives, bell peppers, onion, tomato, mushrooms and cheese.",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Served with Toast"
+  },
+  {
+   "name": "Veggie Skillet  18.30  Biscuits and Gravy  9.05  Egg (1)",
+   "desc": "Spinach, mushrooms, olives, tomato, onions., scrambled eggs and cheese over  Hash Browns  7.55  Eggs (2)  4.95",
+   "cents": 295,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "Country Potatoes  5.95  French Toast",
+   "desc": "",
+   "cents": 705,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "country potatoes. Served with toast.  A Pancake  5.95  Toast",
+   "desc": "",
+   "cents": 295,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "Hot Link Skillet  18.30  Bacon (4)  9.00  Wafe",
+   "desc": "",
+   "cents": 1029,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "Sausage links (3)  9.00  Oatmeal",
+   "desc": "Diced hot links, bell peppers, onion, tomato and cheese over country potatoes.  Turkey Sausage Patty (2)  9.00  Grits  9.00",
+   "cents": 900,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "Served with toast.  Ham  9.05  Fried Rice",
+   "desc": "",
+   "cents": 825,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "Fruit Cup  6.95  Fruit Bowl",
+   "desc": "",
+   "cents": 1295,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "17.45  17.45",
+   "desc": "",
+   "cents": 1745,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "17.45  17.45",
+   "desc": "",
+   "cents": 1575,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "16.45  16.45",
+   "desc": "",
+   "cents": 1645,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "17.45  17.45",
+   "desc": "",
+   "cents": 1645,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "15.45  17.45",
+   "desc": "",
+   "cents": 1645,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "15.45  15.45",
+   "desc": "",
+   "cents": 1645,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "14.45  17.45",
+   "desc": "",
+   "cents": 1845,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "BREAKFAST SIDES"
+  },
+  {
+   "name": "Chicken Caesar _________________________________________",
+   "desc": "Chicken Caesar salad, Parmesan cheese and Caesar dressing wrapped in a flour tortilla.",
+   "cents": 1475,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "WRAPS",
+   "image": "http://www.benicia-grill.com/services/ces1-removebg-preview_1753894795.png"
+  },
+  {
+   "name": "Steak Caesar ___________________________________________",
+   "desc": "Caesar salad with sliced Tri Tip, Parmesan cheese and Caesar dressing in a flour tortilla.",
+   "cents": 1575,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "WRAPS"
+  },
+  {
+   "name": "Veggie _________________________________________________",
+   "desc": "Avocado, mushroom, olives, cheese, cucumber, lettuce and onion wrapped in a flour tortilla, with ranch",
+   "cents": 1475,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "WRAPS"
+  },
+  {
+   "name": "Buffalo Chicken _________________________________________",
+   "desc": "Buffalo chicken, lettuce, tomato, cheese, green onion and ranch dressing.",
+   "cents": 1695,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "WRAPS"
+  },
+  {
+   "name": "Fajita Chicken Salad _____",
+   "desc": "",
+   "cents": 1745,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Caesar Salad"
+  },
+  {
+   "name": "$17.45 Salad",
+   "desc": "",
+   "cents": 1745,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chicken Caesar Salad ____ Caesar"
+  },
+  {
+   "name": "Shrimp Caesar Salad _____ $18.45 Mediterranean Salad _____",
+   "desc": "",
+   "cents": 1645,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chicken Caesar Salad ____ Caesar"
+  },
+  {
+   "name": "Buffalo Chicken Salad  SaladSalad _____________",
+   "desc": "",
+   "cents": 1795,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chicken Caesar Salad ____ Caesar"
+  },
+  {
+   "name": "$17.00 Chef",
+   "desc": "",
+   "cents": 1700,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chicken Caesar Salad ____ Caesar"
+  },
+  {
+   "name": "___ $17.45",
+   "desc": "",
+   "cents": 1745,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chicken Caesar Salad ____ Caesar"
+  },
+  {
+   "name": "Fajita Chicken Salad",
+   "desc": "Fajita Tri-Tip Salad  Soft Drink ______________________",
+   "cents": 1745,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Chicken Caesar Salad ____ Caesar"
+  },
+  {
+   "name": "$5.95  $8.99  Iced Tea ________________________",
+   "desc": "",
+   "cents": 405,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cobb Salad"
+  },
+  {
+   "name": "$6.95",
+   "desc": "",
+   "cents": 974,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Cobb Salad"
+  },
+  {
+   "name": "Hot Chocolate _________________",
+   "desc": "",
+   "cents": 1645,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "$8.99  Hot Tea __________________________",
+   "desc": "",
+   "cents": 405,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Shrimp",
+   "desc": "",
+   "cents": 595,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Lg: Apple Juice _______________",
+   "desc": "",
+   "cents": 1845,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Sm: Orange Juice ____________ $4.05",
+   "desc": "$8.95  Lg: Orange Juice _____________ $4.60$5.50",
+   "cents": 450,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Sm: Tomato Juice ____________ $4.05",
+   "desc": "Lg: Tomate Juice _____________ $4.60$5.50",
+   "cents": 450,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "$8.99  Lg: Milk __________________________",
+   "desc": "",
+   "cents": 405,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Milkshake ________________________",
+   "desc": "",
+   "cents": 460,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "$8.99  Vanilla, Chocolate, or Strawberry",
+   "desc": "",
+   "cents": 725,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "$7.00  Bottled Water _________________",
+   "desc": "",
+   "cents": 260,
+   "alcohol": false,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "BEER _____________________________",
+   "desc": "",
+   "cents": 610,
+   "alcohol": true,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "$7.00  RED WINE GLASS ________",
+   "desc": "",
+   "cents": 760,
+   "alcohol": true,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "WHITE WINE GLASS __",
+   "desc": "",
+   "cents": 760,
+   "alcohol": true,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Mimosa __________________________",
+   "desc": "",
+   "cents": 900,
+   "alcohol": true,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  },
+  {
+   "name": "Bloody Mary __________________",
+   "desc": "",
+   "cents": 905,
+   "alcohol": true,
+   "src": "pdf",
+   "section": "Mediterranean Salad"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "http://www.benicia-grill.com/flash/a1_1754073874.jpg",
+   "alt": "hero image",
+   "near": "Benicia Grill\nORDER NOW",
+   "w": 1920,
+   "h": 800,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/flash/a2_1754073893.jpg",
+   "alt": "hero image",
+   "near": "Benicia Grill\nORDER NOW",
+   "w": 1920,
+   "h": 800,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/flash/a3_1754073931.jpg",
+   "alt": "hero image",
+   "near": "Benicia Grill\nORDER NOW",
+   "w": 1920,
+   "h": 800,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/flash/a4_1754073970.jpg",
+   "alt": "hero image",
+   "near": "Benicia Grill\nORDER NOW",
+   "w": 1920,
+   "h": 800,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/flash/a5_1754073981.jpg",
+   "alt": "hero image",
+   "near": "Benicia Grill\nORDER NOW",
+   "w": 1920,
+   "h": 800,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/assets/images/about/image-1.jpg",
+   "alt": "About Image",
+   "near": "ABOUT US\nWelcome to Benicia Grill\n\nWelcome to Benicia Grill!\n\nAt Benicia Grill, we keep things simpl",
+   "w": 680,
+   "h": 480,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/services/menu-8_1753291893.png",
+   "alt": "",
+   "near": "Chicken Alfredo Fettuccine",
+   "w": 306,
+   "h": 306,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/services/menu-9_1753291919.png",
+   "alt": "",
+   "near": "Chocolate Milk Shake",
+   "w": 306,
+   "h": 306,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/services/fr1-removebg-preview_1753894682.png",
+   "alt": "",
+   "near": "Garlic Fries",
+   "w": 306,
+   "h": 306,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/services/ces1-removebg-preview_1753894795.png",
+   "alt": "",
+   "near": "Chicken Caesar Salad",
+   "w": 306,
+   "h": 306,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/assets/images/gallery/video-1.jpg",
+   "alt": "Video Image",
+   "near": "BENICIA GRILL 1,\nHours of Operation:\nOpen daily: 7am to 2pm.\nWe Serve Breakfast and Lunch",
+   "w": 770,
+   "h": 520,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/assets/images/shape/line-1.png",
+   "alt": "Shape",
+   "near": "FOODS REVIEWS\nGlobal Customer Feedback\n\nFrom ambiance to cuisine, Benicia Grill offers a great dinin",
+   "w": 630,
+   "h": 506,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/assets/images/shape/element-1.png",
+   "alt": "",
+   "near": "FOODS REVIEWS\nGlobal Customer Feedback\n\nFrom ambiance to cuisine, Benicia Grill offers a great dinin",
+   "w": 315,
+   "h": 414,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/assets/images/bg/dot-bg.png",
+   "alt": "",
+   "near": "WORKING HOUR\nEnjoy Our Delicious Foods\nMonday - Thursday\n7am - 2pm\nFriday - Sunday\n7am - 2pm\nBanquet",
+   "w": 1280,
+   "h": 735,
+   "page": "http://www.benicia-grill.com/"
+  },
+  {
+   "src": "http://www.benicia-grill.com/assets/images/bg/hours-bg-1.jpg",
+   "alt": "",
+   "near": "WORKING HOUR\nEnjoy Our Delicious Foods\nMonday - Thursday\n7am - 2pm\nFriday - Sunday\n7am - 2pm\nBanquet",
+   "w": 640,
+   "h": 735,
+   "page": "http://www.benicia-grill.com/"
+  }
+ ]
+}

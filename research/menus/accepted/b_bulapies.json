@@ -1,0 +1,231 @@
+{
+ "id": "b_bulapies",
+ "source": "jsonld",
+ "pages": [
+  "https://bulapiesfiji.com/",
+  "https://bulapiesfiji.com/menu",
+  "https://bulapiesfiji.com/drinks/drinks",
+  "https://bulapiesfiji.com/food/pastries",
+  "https://bulapiesfiji.com/drinks/coffee",
+  "https://bulapiesfiji.com/food/halal-food",
+  "https://bulapiesfiji.com/tags/lunch"
+ ],
+ "items": [
+  {
+   "name": "Smoked Bacon & Egg [B]",
+   "desc": "2 Large eggs, sautéed onions and TOO much hardwood smoked bacon.",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "photo": "bulapies-smoked-bacon-egg-b"
+  },
+  {
+   "name": "Beef Stew Pie [X]",
+   "desc": "HALAL. Warm up your taste buds with our hearty beef stew. Made with tender ground beef, peas, carrots, and potatoes",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "photo": "bulapies-beef-stew-pie-x"
+  },
+  {
+   "name": "Butter Chicken Pie [BC]",
+   "desc": "Indulge in the rich and savory flavors of our butter chicken pie. This chicken pie offers a perfect balance of creamy buttery goodness with a hint of heat",
+   "cents": 1100,
+   "section": "Savory Pies",
+   "photo": "bulapies-butter-chicken-pie-bc"
+  },
+  {
+   "name": "Homestyle Chicken [HC]",
+   "desc": "A hearty creamy blend of tender chicken and broccoli encased in our flaky crust.",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "photo": "bulapies-homestyle-chicken-hc"
+  },
+  {
+   "name": "Mama's Lamb Pie [L]",
+   "desc": "Our Mama's Lamb pie is filled with a tasty ground lamb, sweet potato and veggie stew. A mouthwatering twist on a classic dish",
+   "cents": 1100,
+   "section": "Savory Pies",
+   "photo": "bulapies-mama-s-lamb-pie-l"
+  },
+  {
+   "name": "Mince & Cheese Pie [M]",
+   "desc": "HALAL. Claimed to be the 'softest cheeseburger'. Indulge in the savory delight of our mouthwatering mince and cheese pie",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "photo": "bulapies-mince-cheese-pie-m"
+  },
+  {
+   "name": "Pot Roast Pie [PR]",
+   "desc": "Braised beef and carrots slow-cooked in red wine. This pie knocks you straight to Sunday dinner.",
+   "cents": 1200,
+   "section": "Savory Pies",
+   "photo": "bulapies-pot-roast-pie-pr"
+  },
+  {
+   "name": "Veggie Curry Pie [V]",
+   "desc": "Indulge in the ultimate comfort food with our veggie curry pie",
+   "cents": 1000,
+   "section": "Savory Pies",
+   "photo": "bulapies-veggie-curry-pie-v"
+  },
+  {
+   "name": "Smoked Pulled Pork [PP]",
+   "desc": "Indulge in the ultimate comfort food with our mouthwatering Smoked BBQ Pulled Pork with our in house coleslaw.",
+   "cents": 1200,
+   "section": "Savory Pies",
+   "photo": "bulapies-smoked-pulled-pork-pp"
+  },
+  {
+   "name": "Pork Sausage Roll",
+   "desc": "Indulge in the savory delight of our homemade pork sausage roll encased in buttery, flaky pastry",
+   "cents": 500,
+   "section": "Sausage Rolls",
+   "photo": "bulapies-pork-sausage-roll"
+  },
+  {
+   "name": "Lamb Sausage Roll",
+   "desc": "HALAL. Homemade lamb sausage roll encased in our buttery flaky pastry.",
+   "cents": 500,
+   "section": "Sausage Rolls",
+   "photo": "bulapies-lamb-sausage-roll"
+  },
+  {
+   "name": "Chocanana Pie [O]",
+   "desc": "Oh so good! This pie features a fudgy chocolate banana center with nutella, encased in our buttery flaky pastry.",
+   "cents": 900,
+   "section": "Dessert",
+   "photo": "bulapies-chocanana-pie-o"
+  },
+  {
+   "name": "Pineapple Pie [P]",
+   "desc": "Indulge in the irresistible sweetness of our caramelized pineapple pie",
+   "cents": 900,
+   "section": "Dessert",
+   "photo": "bulapies-pineapple-pie-p"
+  },
+  {
+   "name": "Banana Pudding Trifle",
+   "desc": "Indulge in the ultimate dessert experience with our banana pudding trifle",
+   "cents": 600,
+   "section": "Trifle Cake Cups",
+   "photo": "bulapies-banana-pudding-trifle"
+  },
+  {
+   "name": "Guava Strawberry Ripple",
+   "desc": "Delicious flavors of guava and tart strawberry layered with our fresh cream and custard mix with Nila wafers. So thick, so creamy!",
+   "cents": 650,
+   "section": "Trifle Cake Cups",
+   "photo": "bulapies-guava-strawberry-ripple"
+  },
+  {
+   "name": "Latte",
+   "desc": "Espresso and steamed milk. Available in 12oz, 16oz and 20oz",
+   "cents": 425,
+   "section": "Espresso Drinks",
+   "photo": "bulapies-latte"
+  },
+  {
+   "name": "Americano",
+   "desc": "Espresso shots topped with hot water. Available in 12oz, 16oz and 20oz.",
+   "cents": 400,
+   "section": "Espresso Drinks",
+   "photo": "bulapies-americano"
+  },
+  {
+   "name": "Mocha",
+   "desc": "Our espresso combined with our dark chocolate syrup and steamed milk, topped with whipped cream.",
+   "cents": 475,
+   "section": "Espresso Drinks",
+   "photo": "bulapies-mocha"
+  },
+  {
+   "name": "White Mocha",
+   "desc": "Our espresso combined with our white chocolate syrup and steamed milk, topped with whipped cream.",
+   "cents": 475,
+   "section": "Espresso Drinks",
+   "photo": "bulapies-white-mocha"
+  },
+  {
+   "name": "Kumquat Limemade",
+   "desc": "Cool off with our homemade kumquat limemade, sweetened with organic cane sugar.",
+   "cents": 350,
+   "section": "Specialty Drinks",
+   "photo": "bulapies-kumquat-limemade"
+  },
+  {
+   "name": "Nitro Hibiscus Tea Lemonade",
+   "desc": "Our refreshing blend of Nitro Hibiscus Tea and Lemonade with Raspberry flavor.",
+   "cents": 445,
+   "section": "Specialty Drinks",
+   "photo": "bulapies-nitro-hibiscus-tea-lemonade"
+  },
+  {
+   "name": "Nitro Cold Brew",
+   "desc": "Cold brew infused with nitro to give you a smooth and stronger caffeinated experience.",
+   "cents": 425,
+   "section": "Specialty Drinks",
+   "photo": "bulapies-nitro-cold-brew"
+  },
+  {
+   "name": "Coke 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-coke-12oz"
+  },
+  {
+   "name": "Sprite 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-sprite-12oz"
+  },
+  {
+   "name": "Fanta Orange 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-fanta-orange-12oz"
+  },
+  {
+   "name": "Pepsi 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-pepsi-12oz"
+  },
+  {
+   "name": "Pepsi Diet 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-pepsi-diet-12oz"
+  },
+  {
+   "name": "Canada Dry 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-canada-dry-12oz"
+  },
+  {
+   "name": "Dr Pepper 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-dr-pepper-12oz"
+  },
+  {
+   "name": "Manzanita Sol Red Apple 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks"
+  },
+  {
+   "name": "Mountain Dew 12oz",
+   "desc": "",
+   "cents": 150,
+   "section": "Drinks",
+   "photo": "bulapies-mountain-dew-12oz"
+  }
+ ]
+}

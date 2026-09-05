@@ -1,0 +1,151 @@
+{
+ "id": "b_ofieskitchen",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://ofieskitchen.com/",
+  "https://ofieskitchen.com/menu/",
+  "https://ofieskitchen.com/catering/"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2019/04/logo-ofies-kitchen-where-food-meets-fun.png",
+   "alt": "",
+   "near": "Contact us 925-962-7158\nHome\nOur menu\nCatering\nHome\nOur menu\nCatering",
+   "w": 1000,
+   "h": 1000,
+   "page": "https://ofieskitchen.com/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/05/foodtruck-cover-img-ofieskitchen-bay-area-min.png",
+   "alt": "",
+   "near": "Where foods meets fun!\n\nFood truck, burgers and more!\n\nServing the Bay Area",
+   "w": 1000,
+   "h": 750,
+   "page": "https://ofieskitchen.com/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/05/memphis-mini-dark.png",
+   "alt": "",
+   "near": "Slide\n\"Ofie's has THE BEST burgers! I found her at the farmers market and was blown away by how good",
+   "w": 400,
+   "h": 400,
+   "page": "https://ofieskitchen.com/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/05/dark_wall.png",
+   "alt": "",
+   "near": "Contact us 925-962-7158\nHome\nOur menu\nCatering\nHome\nOur menu\nCatering\nWhere foods meets fun!\n\nFood t",
+   "w": 1280,
+   "h": 1584,
+   "page": "https://ofieskitchen.com/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2019/04/logo-ofies-kitchen-where-food-meets-fun.png",
+   "alt": "",
+   "near": "Contact us 925-962-7158\nHome\nOur menu\nCatering\nHome\nOur menu\nCatering",
+   "w": 1000,
+   "h": 1000,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/06/B-Burger-Menu-Ofies-Kitche-no-price.png",
+   "alt": "",
+   "near": "Our takeaway menu full of delicious fun",
+   "w": 1074,
+   "h": 1074,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/06/C-Sides-Menu-Ofies-Kitchen-no-price.png",
+   "alt": "",
+   "near": "Our takeaway menu full of delicious fun",
+   "w": 1073,
+   "h": 1073,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/cheesesteaksandwich.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 1000,
+   "h": 750,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/cheeseburger.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 1000,
+   "h": 750,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/chickensandwich.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 1000,
+   "h": 750,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/Hamburger.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 971,
+   "h": 776,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/Loadedtatertots.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 1398,
+   "h": 1600,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/SweetPotatoTotsFrenchFries.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 1000,
+   "h": 750,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/slider2/Theworksburger.jpeg",
+   "alt": "",
+   "near": "cheesesteaksandwich\ncheeseburger\nchickensandwich\nHamburger\nLoadedtatertots\nSweetPotatoTotsFrenchFrie",
+   "w": 739,
+   "h": 672,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/05/dark_wall.png",
+   "alt": "",
+   "near": "Contact us 925-962-7158\nHome\nOur menu\nCatering\nHome\nOur menu\nCatering\nOur takeaway menu full of deli",
+   "w": 1280,
+   "h": 1927,
+   "page": "https://ofieskitchen.com/menu/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2019/04/logo-ofies-kitchen-where-food-meets-fun.png",
+   "alt": "",
+   "near": "Contact us 925-962-7158\nHome\nOur menu\nCatering\nHome\nOur menu\nCatering",
+   "w": 1000,
+   "h": 1000,
+   "page": "https://ofieskitchen.com/catering/"
+  },
+  {
+   "src": "https://ofieskitchen.com/wp-content/uploads/2020/05/dark_wall.png",
+   "alt": "",
+   "near": "Contact us 925-962-7158\nHome\nOur menu\nCatering\nHome\nOur menu\nCatering\nWe also do catering!\nName *\nEm",
+   "w": 1280,
+   "h": 1435,
+   "page": "https://ofieskitchen.com/catering/"
+  }
+ ]
+}

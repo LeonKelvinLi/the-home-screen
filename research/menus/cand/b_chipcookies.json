@@ -1,0 +1,331 @@
+{
+ "id": "b_chipcookies",
+ "source": "text",
+ "alt": {},
+ "pages": [
+  "https://www.chipcookies.co/",
+  "https://www.chipcookies.co/pages/catering",
+  "https://www.chipcookies.co/pages/nationwide-shipping-chip-cookies",
+  "https://www.chipcookies.co/pages/event-catering",
+  "https://order.online/business/chip-cookies-328204"
+ ],
+ "pdfs": [],
+ "items": [
+  {
+   "name": "QUICK BUY",
+   "desc": "signature cookies assortment",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "image": "https://www.chipcookies.co/cdn/shop/files/chip_og_stack_1b4618cf-0821-4a72-ba85-078c8eac61c4.jpg?v=1746212596&width=300"
+  },
+  {
+   "name": "OG™",
+   "desc": "",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "section": "chocolate chip lovers"
+  },
+  {
+   "name": "SW chip™",
+   "desc": "",
+   "cents": 2200,
+   "alcohol": false,
+   "src": "text",
+   "section": "biscoff chip™",
+   "image": "https://www.chipcookies.co/cdn/shop/files/sw-chip_web_copy.png?v=1733876277&width=670"
+  }
+ ],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/IMG_4196.jpg?v=1733871193&width=460",
+   "alt": "IMG_4196.jpg",
+   "near": "local ordering\nORDER PICKUP OR DELIVERY",
+   "w": 419,
+   "h": 629,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/chipboxes.jpg?v=1726853397&width=460",
+   "alt": "chipboxes.jpg",
+   "near": "cookie gift boxes\nORDER NATIONWIDE SHIPPING",
+   "w": 419,
+   "h": 280,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/chip_cookies_large_order_box.jpg?v=1736267231&width=460",
+   "alt": "chip_cookies_large_order_box.jpg",
+   "near": "catering\nLEARN MORE",
+   "w": 419,
+   "h": 629,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/lava_chip_small_64cc088e-2224-4c21-92c0-b5600c43983b.png?v=1787949545&width=670",
+   "alt": "lava_chip_small_64cc088e-2224-4c21-92c0-b5600c43983b.png",
+   "near": "CHIP OF THE WEEK\n\nlava chip\n\na handmade cocoa cookie with a rich melted chocolate filling + topped w",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/og-chip_web_copy.png?v=1733876247&width=670",
+   "alt": "og-chip_web_copy.png",
+   "near": "OG + mini OG™\n\nour signature, handmade, award-winning gourmet milk chocolate chip cookie, available ",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/sugar-chip_copy.png?v=1733876263&width=670",
+   "alt": "sugar-chip_copy.png",
+   "near": "sugar chip™\n\na gourmet sugar cookie topped with our famous cream cheese frosting + sprinkles\n\nORDER ",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/sw-chip_web_copy.png?v=1733876277&width=670",
+   "alt": "sw-chip_web_copy.png",
+   "near": "SW chip\n\na warm gourmet cookie stuffed with premium 57% semi-sweet chocolate wafers + topped with ma",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/biscoff-chip_web_copy.png?v=1733876287&width=670",
+   "alt": "biscoff-chip_web_copy.png",
+   "near": "biscoff chip\n\na handmade cookie made with biscoff cookies, white chocolate chips + stuffed with bisc",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/bts-chip_web_copy.png?v=1733876298&width=670",
+   "alt": "bts-chip_web_copy.png",
+   "near": "BTS chip\n\na handmade dutch cocoa cookie infused with caramel, sweetened condensed milk + topped with",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/tres-leches-chip_web_copy.png?v=1733876310&width=670",
+   "alt": "tres-leches-chip_web_copy.png",
+   "near": "tres leches chip\n\na handmade butter cookie infused with sweetened condensed milk + topped with whipp",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/oreo-dunk-chip_web_copy.png?v=1733876322&width=670",
+   "alt": "oreo-dunk-chip_web_copy.png",
+   "near": "oreo dunk chip\n\na handmade dutch cocoa cookie infused with sweetened condensed milk + topped with cr",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/choconut-chip_web_copy.png?v=1733876332&width=670",
+   "alt": "choconut-chip_web_copy.png",
+   "near": "choconut chip\n\na warm OG chip cookie capped with melted milk chocolate and topped with fresh + toast",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/boneless-chip_web_copy.png?v=1739900981&width=670",
+   "alt": "boneless-chip_web_copy.png",
+   "near": "boneless chip\n\na gourmet butter cookie base ready to be customized or enjoyed by itself\n\nORDER NOW",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/cocoa-chip_web_copy.png?v=1738688813&width=670",
+   "alt": "cocoa-chip_web_copy.png",
+   "near": "cocoa chip\n\na gourmet dutch cocoa cookie base ready to be customized or enjoyed by itself\n\nORDER NOW",
+   "w": 660,
+   "h": 660,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/lava_chip_small_64cc088e-2224-4c21-92c0-b5600c43983b.png?crop=center&height=800&v=1787949545&width=800",
+   "alt": "lava_chip_small_64cc088e-2224-4c21-92c0-b5600c43983b.png",
+   "near": "chip of the week\n                        lava chip\n                      a handmade cocoa cookie wit",
+   "w": 800,
+   "h": 800,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/og-chip_web_copy.png?crop=center&height=1200&v=1733876247&width=1200",
+   "alt": "og-chip_web_copy.png",
+   "near": "OG + mini OG™\n                      OG: our signature handmade award-winning chocolate chip cookie  ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/sugar-chip_copy.png?crop=center&height=1200&v=1733876263&width=1200",
+   "alt": "sugar-chip_copy.png",
+   "near": "sugar chip™\n                      a gourmet sugar cookie topped with our famous cream cheese frostin",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/sw-chip_web_copy.png?crop=center&height=1200&v=1733876277&width=1200",
+   "alt": "sw-chip_web_copy.png",
+   "near": "SW chip\n                      a warm gourmet cookie stuffed with rich semi-sweet chocolate wafers + ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/biscoff-chip_web_copy.png?crop=center&height=1200&v=1733876287&width=1200",
+   "alt": "biscoff-chip_web_copy.png",
+   "near": "biscoff chip\n                      a handmade cookie made with biscoff cookies, white chocolate chip",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/bts-chip_web_copy.png?crop=center&height=1200&v=1733876298&width=1200",
+   "alt": "bts-chip_web_copy.png",
+   "near": "BTS chip\n                      a handmade belgium cocoa cookie infused with caramel, sweetened conde",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/tres-leches-chip_web_copy.png?crop=center&height=1200&v=1733876310&width=1200",
+   "alt": "tres-leches-chip_web_copy.png",
+   "near": "tres leches chip\n                      a handmade butter cookie infused with sweetened condensed mil",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/oreo-dunk-chip_web_copy.png?crop=center&height=1200&v=1733876322&width=1200",
+   "alt": "oreo-dunk-chip_web_copy.png",
+   "near": "oreo dunk chip\n                      a handmade belgium cocoa cookie infused with white chocolate + ",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/choconut-chip_web_copy.png?crop=center&height=1200&v=1733876332&width=1200",
+   "alt": "choconut-chip_web_copy.png",
+   "near": "choconut chip\n                      a warm OG chip cookie capped with melted milk chocolate and topp",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/boneless-chip_web_copy.png?crop=center&height=1200&v=1739900981&width=1200",
+   "alt": "boneless-chip_web_copy.png",
+   "near": "boneless chip\n                      a gourmet butter cookie base ready to be customized or enjoyed b",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/cocoa-chip_web_copy.png?crop=center&height=1200&v=1738688813&width=1200",
+   "alt": "cocoa-chip_web_copy.png",
+   "near": "cocoa chip\n                      a gourmet belgium cocoa cookie base ready to be customized or enjoy",
+   "w": 1200,
+   "h": 1200,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/ChipBar_BeckyKimballPhotography_67.jpg?v=1726939148&width=460",
+   "alt": "chip cookie bar",
+   "near": "chip cookie bar\n\nvisit a chip location to build your dream cookie\n\nFIND A CHIP",
+   "w": 426,
+   "h": 580,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/cookiecakeheader.png?v=1721674034&width=460",
+   "alt": "chip cookie cakes",
+   "near": "chip cookie cakes\n\ncelebrate any occasion with a cookie cake\n\nPREORDER NOW",
+   "w": 426,
+   "h": 512,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/dough_36d97da1-c51c-4224-821c-8e0e4b27246e.jpg?v=1613617904&width=460",
+   "alt": "chip and go dough",
+   "near": "chip and go dough\n\nwhen you want cookies but also want to stay home\n\nORDER NOW",
+   "w": 426,
+   "h": 418,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/icecreamsandwichheader_527466e0-a1dc-46ba-8a0e-12f21964436f.png?v=1721673972&width=460",
+   "alt": "chip ice cream sandwiches",
+   "near": "chip ice cream sandwiches\n\nnow offered at all chip locations\n\nFIND A CHIP",
+   "w": 426,
+   "h": 512,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/chipzookieheader.png?crop=center&height=2500&v=1721674167&width=2084",
+   "alt": "chipzookie",
+   "near": "chipzookie\n\nvanilla ice cream + OG chip\n\nFIND A CHIP",
+   "w": 373,
+   "h": 373,
+   "page": "https://www.chipcookies.co/"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/catering_23755e0c-7fec-4e9e-b7fb-7fe5832f0152.jpg?v=1613617785&width=1296",
+   "alt": "",
+   "near": "",
+   "w": 1279,
+   "h": 960,
+   "page": "https://www.chipcookies.co/pages/catering"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/chipcatering_6615d231-906f-4f53-9af6-a51685ff3d7f.png?v=1721929232&width=1024",
+   "alt": "chipcatering_6615d231-906f-4f53-9af6-a51685ff3d7f.png",
+   "near": "MAKE YOUR EVENT THE CHIP\n\ncustom catering\n\nwhether you are catering events for 50 people or 500, wow",
+   "w": 1122,
+   "h": 1122,
+   "page": "https://www.chipcookies.co/pages/catering"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/Untitled-4_a54b27f2-d190-4452-8621-46bf046db1b2.png?v=1722364860&width=1296",
+   "alt": "Untitled-4_a54b27f2-d190-4452-8621-46bf046db1b2.png",
+   "near": "SPECIAL EVENTS CALL FOR CHIP\n\nweddings + events\n\ndessert is everyone's favorite part of a gathering.",
+   "w": 1122,
+   "h": 748,
+   "page": "https://www.chipcookies.co/pages/catering"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/largeorders.png?v=1722364781&width=1296",
+   "alt": "largeorders.png",
+   "near": "CHIP CHIP HOORAY!\n\nlarge orders to feed a crowd\n\nthe newest addition to chip's box collection, the c",
+   "w": 1122,
+   "h": 748,
+   "page": "https://www.chipcookies.co/pages/catering"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/chipgiftingandfavors.png?v=1721929534&width=1024",
+   "alt": "chipgiftingandfavors.png",
+   "near": "DELIVERING HAPPINESS\n\ngifting + favors\n\nshare your appreciation or send your congratulations with go",
+   "w": 1122,
+   "h": 1122,
+   "page": "https://www.chipcookies.co/pages/catering"
+  },
+  {
+   "src": "https://www.chipcookies.co/cdn/shop/files/Chip_Holiday_BeckyKimballPhoto_129.jpg?v=1736464259&width=670",
+   "alt": "Chip_Holiday_BeckyKimballPhoto_129.jpg",
+   "near": "",
+   "w": 660,
+   "h": 990,
+   "page": "https://www.chipcookies.co/pages/nationwide-shipping-chip-cookies"
+  }
+ ]
+}

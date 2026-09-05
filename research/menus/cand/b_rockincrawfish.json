@@ -1,0 +1,64 @@
+{
+ "id": "b_rockincrawfish",
+ "source": "",
+ "alt": {},
+ "pages": [
+  "https://therockincrawfish.com/",
+  "https://order.online/store/the-rockin%E2%80%99-crawfish-oakland-23022328/?hideModal=true&pickup=true",
+  "https://order.online/store/the-rockin%E2%80%99-crawfish-san-pablo-90161/?hideModal=true&pickup=true",
+  "https://order.online/business/-7687?utm_medium=wp_plugin&utm_source=sdk&visitorId=1e071a06edf13bf21946a"
+ ],
+ "pdfs": [],
+ "items": [],
+ "alts": {},
+ "images": [
+  {
+   "src": "https://therockincrawfish.com/wp-content/uploads/2024/03/crawfish-boil-slide.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 487,
+   "page": "https://therockincrawfish.com/"
+  },
+  {
+   "src": "https://therockincrawfish.com/wp-content/uploads/2024/03/oysters-slide.jpg",
+   "alt": "",
+   "near": "",
+   "w": 1280,
+   "h": 487,
+   "page": "https://therockincrawfish.com/"
+  },
+  {
+   "src": "https://therockincrawfish.com/wp-content/uploads/2024/03/noodles-shrimp-sm2-text1-300x234.jpg",
+   "alt": "",
+   "near": "Whether you are a transplant to California from New Orleans, the Crawfish capital of the world, or \n",
+   "w": 300,
+   "h": 234,
+   "page": "https://therockincrawfish.com/"
+  },
+  {
+   "src": "https://therockincrawfish.com/wp-content/uploads/2024/03/fried-oreos-sm-text2-300x218.jpg",
+   "alt": "",
+   "near": "On our menu you will find great Cajun seafood offerings including crawfish, crab, shrimp, clams and ",
+   "w": 300,
+   "h": 218,
+   "page": "https://therockincrawfish.com/"
+  },
+  {
+   "src": "https://therockincrawfish.com/wp-content/uploads/2024/03/wooden-structure-1.jpg",
+   "alt": "",
+   "near": "WELCOME TO ROCKIN’ CRAWFISH\n\nWhether you are a transplant to California from New Orleans, the Crawfi",
+   "w": 1280,
+   "h": 220,
+   "page": "https://therockincrawfish.com/"
+  },
+  {
+   "src": "https://therockincrawfish.com/wp-content/uploads/2024/03/wooden-structure-bg.jpg",
+   "alt": "",
+   "near": "WELCOME TO ROCKIN’ CRAWFISH\n\nWhether you are a transplant to California from New Orleans, the Crawfi",
+   "w": 1280,
+   "h": 400,
+   "page": "https://therockincrawfish.com/"
+  }
+ ]
+}

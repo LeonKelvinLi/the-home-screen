@@ -1,0 +1,111 @@
+{
+ "id": "b_gayninetiespizza",
+ "source": "text",
+ "pages": [
+  "https://www.gayninetiespizza.com/",
+  "https://www.gayninetiespizza.com/lunch-menu",
+  "https://www.gayninetiespizza.com/dinner-menu",
+  "https://www.gayninetiespizza.com/pizza-menu",
+  "https://www.gayninetiespizza.com/winebeer",
+  "https://www.gayninetiespizza.com/map-our-location",
+  "https://www.gayninetiespizza.com/our-history"
+ ],
+ "items": [
+  {
+   "name": "Side Lunch Salad",
+   "desc": "",
+   "cents": 600,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-side-lunch-salad"
+  },
+  {
+   "name": "Italian Sausage(two)",
+   "desc": "",
+   "cents": 800,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-italian-sausage-two"
+  },
+  {
+   "name": "Minestrone Soup with crackers",
+   "desc": "",
+   "cents": 700,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-minestrone-soup-with-crackers"
+  },
+  {
+   "name": "Minestrone Soup with bread and butter",
+   "desc": "",
+   "cents": 900,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-minestrone-soup-with-bread-and-butter"
+  },
+  {
+   "name": "Meatballs(two)",
+   "desc": "",
+   "cents": 800,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-meatballs-two"
+  },
+  {
+   "name": "Cheesy Garlic Bread",
+   "desc": "",
+   "cents": 1000,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-cheesy-garlic-bread"
+  },
+  {
+   "name": "Antipasta Platter",
+   "desc": "",
+   "cents": 1650,
+   "section": "Appetizers",
+   "photo": "gay-nineties-pizza-antipasta-platter"
+  },
+  {
+   "name": "Garlic Bread",
+   "desc": "(with cheese add $2.25)",
+   "cents": 600,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-garlic-bread"
+  },
+  {
+   "name": "Italian Sausage (two)",
+   "desc": "",
+   "cents": 800,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-italian-sausage-two"
+  },
+  {
+   "name": "Minestrone Soup",
+   "desc": "with crackers",
+   "cents": 800,
+   "section": "Side Orders",
+   "photo": "gay-nineties-pizza-minestrone-soup"
+  },
+  {
+   "name": "Meatballs (two)",
+   "desc": "",
+   "cents": 800,
+   "section": "Minestrone Soup",
+   "photo": "gay-nineties-pizza-meatballs-two"
+  },
+  {
+   "name": "Soft Drinks",
+   "desc": "",
+   "cents": 400,
+   "section": "Altamont Maui Waui",
+   "photo": "gay-nineties-pizza-soft-drinks"
+  }
+ ],
+ "photos": [
+  {
+   "photo": "gay-nineties-pizza-site-3",
+   "alt": "",
+   "credit": "Their own photo, from gayninetiespizza.com"
+  },
+  {
+   "photo": "gay-nineties-pizza-site-4",
+   "alt": "",
+   "credit": "Their own photo, from gayninetiespizza.com"
+  }
+ ]
+}

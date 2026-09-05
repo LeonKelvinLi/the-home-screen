@@ -1,0 +1,176 @@
+{
+ "id": "b_dadsbbq",
+ "source": "jsonld",
+ "pages": [
+  "https://dadsbbqco.com/",
+  "https://dadsbbqco.com/menu",
+  "https://dadsbbqco.com/page/catering-",
+  "https://dadsbbqco.com/tags/seafood",
+  "https://dadsbbqco.com/tags/cajun-food",
+  "https://dadsbbqco.com/tags/dessert",
+  "https://dadsbbqco.com/tags/southern-food"
+ ],
+ "items": [
+  {
+   "name": "Greens freshly cooked",
+   "desc": "Mixed with collard, mustard and turnups with smoked turkey wings",
+   "cents": 800,
+   "section": "Sides",
+   "photo": "dads-bbq-greens-freshly-cooked"
+  },
+  {
+   "name": "Potato salad",
+   "desc": "",
+   "cents": 600,
+   "section": "Sides",
+   "photo": "dads-bbq-potato-salad"
+  },
+  {
+   "name": "Green beans",
+   "desc": "Sautéed in onions and potatoes",
+   "cents": 700,
+   "section": "Sides",
+   "photo": "dads-bbq-green-beans"
+  },
+  {
+   "name": "Macaroni & cheese",
+   "desc": "Homemade baked macaroni and cheese",
+   "cents": 900,
+   "section": "Sides",
+   "photo": "dads-bbq-macaroni-cheese"
+  },
+  {
+   "name": "Baked beans",
+   "desc": "",
+   "cents": 700,
+   "section": "Sides",
+   "photo": "dads-bbq-baked-beans"
+  },
+  {
+   "name": "Muffin",
+   "desc": "",
+   "cents": 300,
+   "section": "Sides",
+   "photo": "dads-bbq-muffin"
+  },
+  {
+   "name": "Mom's gumbo",
+   "desc": "Our Louisiana well freshly seasoned with shrimp, crabmeat, smoked hot and mild sausages over rice",
+   "cents": 1800,
+   "section": "Gumbo",
+   "photo": "dads-bbq-mom-s-gumbo"
+  },
+  {
+   "name": "Combo",
+   "desc": "A choice of 2 meats and 2 sides",
+   "cents": 2500,
+   "section": "Entrées",
+   "photo": "dads-bbq-combo"
+  },
+  {
+   "name": "3-way",
+   "desc": "A choice of 3 meats and 2 sides",
+   "cents": 3000,
+   "section": "Entrées",
+   "photo": "dads-bbq-3-way"
+  },
+  {
+   "name": "4-way",
+   "desc": "A choice of 4 meats and 2 sides",
+   "cents": 3600,
+   "section": "Entrées",
+   "photo": "dads-bbq-4-way"
+  },
+  {
+   "name": "Entree dinner",
+   "desc": "A choice of ribs, links, chicken, tri tip and rib tips and 2 side orders",
+   "cents": 2000,
+   "section": "Entrées",
+   "photo": "dads-bbq-entree-dinner"
+  },
+  {
+   "name": "1 pound of tritip",
+   "desc": "Side orders are not included",
+   "cents": 2600,
+   "section": "Meats",
+   "photo": "dads-bbq-1-pound-of-tritip"
+  },
+  {
+   "name": "1/2 slab of ribs",
+   "desc": "Side orders are not included",
+   "cents": 2500,
+   "section": "Meats",
+   "photo": "dads-bbq-1-2-slab-of-ribs"
+  },
+  {
+   "name": "Slab of ribs",
+   "desc": "Pork ribs",
+   "cents": 4500,
+   "section": "Meats",
+   "photo": "dads-bbq-slab-of-ribs"
+  },
+  {
+   "name": "Whole chicken",
+   "desc": "Side orders are not included",
+   "cents": 2500,
+   "section": "Meats",
+   "photo": "dads-bbq-whole-chicken"
+  },
+  {
+   "name": "Sweet potato pie",
+   "desc": "Baked fresh daily",
+   "cents": 600,
+   "section": "Desserts",
+   "photo": "dads-bbq-sweet-potato-pie"
+  },
+  {
+   "name": "Banana pudding",
+   "desc": "Baked fresh daily",
+   "cents": 700,
+   "section": "Desserts",
+   "photo": "dads-bbq-banana-pudding"
+  },
+  {
+   "name": "Peach cobbler",
+   "desc": "Baked fresh daily",
+   "cents": 800,
+   "section": "Desserts",
+   "photo": "dads-bbq-peach-cobbler"
+  },
+  {
+   "name": "Kool-aid",
+   "desc": "That good flavor from your mommas kitchen",
+   "cents": 400,
+   "section": "Drinks",
+   "photo": "dads-bbq-kool-aid"
+  },
+  {
+   "name": "Flavors",
+   "desc": "Pepsi, diet pepsi, orange, root beer, lemonade and sprite,",
+   "cents": 250,
+   "section": "Drinks",
+   "photo": "dads-bbq-flavors"
+  },
+  {
+   "name": "Sweet tea",
+   "desc": "",
+   "cents": 400,
+   "section": "Drinks",
+   "photo": "dads-bbq-sweet-tea"
+  },
+  {
+   "name": "3pc Cat Fish",
+   "desc": "",
+   "cents": 1800,
+   "section": "Fried Fish Friday",
+   "photo": "dads-bbq-3pc-cat-fish"
+  },
+  {
+   "name": "6pc Cat Fish",
+   "desc": "",
+   "cents": 2400,
+   "section": "Fried Fish Friday",
+   "photo": "dads-bbq-6pc-cat-fish"
+  }
+ ]
+}

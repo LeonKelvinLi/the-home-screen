@@ -1,0 +1,400 @@
+{
+ "id": "b_downtownbbq",
+ "source": "text",
+ "pages": [
+  "https://downtownbarbecue.co/",
+  "https://downtownbarbecue.co/santa-rosa-downtown-barbecue-food-23879",
+  "https://downtownbarbecue.co/santa-rosa-downtown-barbecue-food-1134233",
+  "https://downtownbarbecue.co/santa-rosa-downtown-barbecue-drink-menu",
+  "https://order.toasttab.com/online/downtownbarbecue#",
+  "https://order.toasttab.com/online/downtownbarbecue/item-2-meat-combo-w-corn-bread_e9710089-0680-4122-8df9-57e311970864",
+  "https://order.toasttab.com/online/downtownbarbecue/item-pulled-pork_56e87fe2-da29-47b9-be3f-f4594a095297"
+ ],
+ "items": [
+  {
+   "name": "SONOMA SALAD",
+   "desc": "Butter lettuces, shaved roots, pickled shallots, roasted pumpkin seeds with smoked house vinaigrette",
+   "cents": 1400,
+   "section": "Salads",
+   "photo": "downtown-bbq-sonoma-salad"
+  },
+  {
+   "name": "CAESAR SALAD",
+   "desc": "CLASSIC CEASAR, ANCHOVY DRESSING, PARMESAN, FREID CROUTONS",
+   "cents": 1400,
+   "section": "Salads",
+   "photo": "downtown-bbq-caesar-salad"
+  },
+  {
+   "name": "Pit Smoked Salmon Salad",
+   "desc": "",
+   "cents": 1900,
+   "section": "Salads",
+   "photo": "downtown-bbq-pit-smoked-salmon-salad"
+  },
+  {
+   "name": "Brisket & Calabrian Chili",
+   "desc": "",
+   "cents": 1900,
+   "section": "California Pizza"
+  },
+  {
+   "name": "Pork & Pineapple",
+   "desc": "",
+   "cents": 1800,
+   "section": "California Pizza"
+  },
+  {
+   "name": "Cali Pizza Chicken",
+   "desc": "",
+   "cents": 1800,
+   "section": "California Pizza"
+  },
+  {
+   "name": "Eggplant Parmigiano",
+   "desc": "",
+   "cents": 1800,
+   "section": "California Pizza"
+  },
+  {
+   "name": "Pit Smoked Salmon Pizza",
+   "desc": "",
+   "cents": 2000,
+   "section": "California Pizza"
+  },
+  {
+   "name": "Banana Pudding",
+   "desc": "",
+   "cents": 800,
+   "section": "Desserts"
+  },
+  {
+   "name": "Brisket & Peppers",
+   "desc": "",
+   "cents": 1900,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Classic Pulled Pork",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "Brisket",
+   "desc": "Slow smoked Texas style, salt + pepper, crispy crust prime brisket",
+   "cents": 2100,
+   "section": "Meats",
+   "photo": "downtown-bbq-brisket"
+  },
+  {
+   "name": "Memphis Ribs",
+   "desc": "Succulent competition style, St. Louis cut ribs",
+   "cents": 2400,
+   "section": "Meats",
+   "photo": "downtown-bbq-memphis-ribs"
+  },
+  {
+   "name": "Cajun Chicken",
+   "desc": "Bold, spicy and earthy smoked chicken - comes fully cooked but it will look a bit pink due to smoke ring.",
+   "cents": 1800,
+   "section": "Meats",
+   "photo": "downtown-bbq-cajun-chicken"
+  },
+  {
+   "name": "House Hot Link",
+   "desc": "",
+   "cents": 1000,
+   "section": "Meats",
+   "photo": "downtown-bbq-house-hot-link"
+  },
+  {
+   "name": "1 Meat Plate W/ Corn Bread",
+   "desc": "",
+   "cents": 2500,
+   "section": "Meats"
+  },
+  {
+   "name": "4 Person Pitmaster Platter",
+   "desc": "SAMPLING OF SMOKED MEATS, PICKLES, four small SIDES and four slices of cornbread 12/lb Brisket, 1/2lb Pulled Pork, 1/2 Rack Ribs and 1/2 Chicken, 3 Wings",
+   "cents": 12800,
+   "section": "Meats",
+   "photo": "downtown-bbq-4-person-pitmaster-platter"
+  },
+  {
+   "name": "6-8 Person Pitmaster Platter",
+   "desc": "SAMPLING OF SMOKED MEATS, PICKLES, four LARGE SIDES and eight slices of cornbread 1lb Brisket, 1lb Pulled Pork, Full Rack Ribs and Whole Chicken, 6 Wings",
+   "cents": 23900,
+   "section": "Meats",
+   "photo": "downtown-bbq-6-8-person-pitmaster-platter"
+  },
+  {
+   "name": "TWICE BAKED POTATO",
+   "desc": "LOADED TWICE BAKED RUSSET POTATO, GOUDA, GREEN ONION, BUTTER, SOUR CREAM, BBQ SAUCE WITH YOUR CHOICE OF BBQ MEAT",
+   "cents": 1200,
+   "section": "Meats",
+   "photo": "downtown-bbq-twice-baked-potato"
+  },
+  {
+   "name": "MEMPHIS WINGS",
+   "desc": "",
+   "cents": 1300,
+   "section": "Meats"
+  },
+  {
+   "name": "BUFFALO WINGS",
+   "desc": "",
+   "cents": 1300,
+   "section": "Meats"
+  },
+  {
+   "name": "PORK BELLY BURNT ENDS",
+   "desc": "",
+   "cents": 1700,
+   "section": "Meats"
+  },
+  {
+   "name": "HABANERO WINGS",
+   "desc": "",
+   "cents": 1300,
+   "section": "Meats"
+  },
+  {
+   "name": "Luau Plate",
+   "desc": "",
+   "cents": 2000,
+   "section": "Meats"
+  },
+  {
+   "name": "BRISKET AND PEPPERS SANDO",
+   "desc": "Tender brisket, melted onion and peppers, horseradish mayo",
+   "cents": 2000,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "SMASH BURGER",
+   "desc": "ground brisket, grilled onion, American, pickles, campfire sauce",
+   "cents": 1300,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "MEMPHIS SANDO",
+   "desc": "",
+   "cents": 1600,
+   "section": "Sandwiches"
+  },
+  {
+   "name": "WEDGE SALAD",
+   "desc": "",
+   "cents": 1700,
+   "section": "Sides/salads"
+  },
+  {
+   "name": "BURNT ENDS CHILLI",
+   "desc": "DEEP AND SPICY CHILLI, WITH CREMA, CHEESE AND GREEN ONIONS",
+   "cents": 900,
+   "section": "Sides/salads",
+   "photo": "downtown-bbq-burnt-ends-chilli"
+  },
+  {
+   "name": "BUTTERNUT SQUASH",
+   "desc": "Roasted Butternut Squash with brown butter and sage",
+   "cents": 800,
+   "section": "Sides/salads",
+   "photo": "downtown-bbq-butternut-squash"
+  },
+  {
+   "name": "CUCUMBER SAL",
+   "desc": "cucumber with creamy dill dressing",
+   "cents": 800,
+   "section": "Sides/salads",
+   "photo": "downtown-bbq-cucumber-sal"
+  },
+  {
+   "name": "SLAW",
+   "desc": "Cabbage and carrot, brined and tossed in house mayo dressing. LARGE (16oz)",
+   "cents": 800,
+   "section": "Baked Beans",
+   "photo": "downtown-bbq-slaw"
+  },
+  {
+   "name": "TALLOW FRIES",
+   "desc": "",
+   "cents": 800,
+   "section": "Baked Beans",
+   "photo": "downtown-bbq-tallow-fries"
+  },
+  {
+   "name": "KIDS PIZZA",
+   "desc": "THIN CRUST PIZZA WITH TOMATO AND CHEESE",
+   "cents": 1100,
+   "section": "Kiddos",
+   "photo": "downtown-bbq-kids-pizza"
+  },
+  {
+   "name": "KIDS CHICKEN TENDERS",
+   "desc": "3 pieces of breaded chicken tenders",
+   "cents": 1000,
+   "section": "Kids Chicken Tenders",
+   "photo": "downtown-bbq-kids-chicken-tenders"
+  },
+  {
+   "name": "KIDS MAC N CHEESE",
+   "desc": "",
+   "cents": 800,
+   "section": "Kids Chicken Tenders"
+  },
+  {
+   "name": "KIDS BURGER",
+   "desc": "",
+   "cents": 1000,
+   "section": "Kids Chicken Tenders"
+  },
+  {
+   "name": "CHOC MOUSSE",
+   "desc": "",
+   "cents": 800,
+   "section": "Desserts"
+  },
+  {
+   "name": "CHEESE CAKE",
+   "desc": "",
+   "cents": 800,
+   "section": "Desserts"
+  },
+  {
+   "name": "VALLEY FORD SOFT SERVE",
+   "desc": "",
+   "cents": 800,
+   "section": "Desserts",
+   "photo": "downtown-bbq-valley-ford-soft-serve"
+  },
+  {
+   "name": "VANILLA & LEMON OLIVE OIL & SEA SALT",
+   "desc": "Vanilla soft served topped with lemon olive oil drizzle and flaky sea salt",
+   "cents": 900,
+   "section": "Desserts",
+   "photo": "downtown-bbq-vanilla-lemon-olive-oil-sea-salt"
+  },
+  {
+   "name": "CREME BRULEE",
+   "desc": "",
+   "cents": 800,
+   "section": "Desserts"
+  },
+  {
+   "name": "MEMPHIS CHX TOPPER",
+   "desc": "",
+   "cents": 600,
+   "section": "Toppers"
+  },
+  {
+   "name": "SMOKED CHX TOPPER",
+   "desc": "",
+   "cents": 500,
+   "section": "Toppers"
+  },
+  {
+   "name": "PULLED PORK TOPPER",
+   "desc": "",
+   "cents": 500,
+   "section": "Toppers"
+  },
+  {
+   "name": "BRISKET TOPPER",
+   "desc": "",
+   "cents": 800,
+   "section": "Toppers"
+  },
+  {
+   "name": "PORK BELLY TOPPER",
+   "desc": "",
+   "cents": 800,
+   "section": "Toppers"
+  },
+  {
+   "name": "SIDECAMPFIRE SAUCE",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE RANCH",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE BLUE CHEESE",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE CALI MUSTARD",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE CEASAR DRESSING",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE SONOMA SALAD DRESS",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE MIDWEST BBQ SAUCE",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "SIDE CALI BBQ SAUCE",
+   "desc": "",
+   "cents": 100,
+   "section": "Sauces"
+  },
+  {
+   "name": "QUESABIRRIA",
+   "desc": "",
+   "cents": 1700,
+   "section": "Tacos"
+  },
+  {
+   "name": "PAPAS TACOS",
+   "desc": "",
+   "cents": 1600,
+   "section": "Tacos"
+  },
+  {
+   "name": "PULLED PORK TACO",
+   "desc": "",
+   "cents": 1500,
+   "section": "Tacos"
+  },
+  {
+   "name": "TT PORK",
+   "desc": "",
+   "cents": 500,
+   "section": "Tacos"
+  },
+  {
+   "name": "TT BRISKET",
+   "desc": "",
+   "cents": 500,
+   "section": "Tacos"
+  },
+  {
+   "name": "TT PAPA",
+   "desc": "",
+   "cents": 500,
+   "section": "Tacos"
+  }
+ ]
+}
