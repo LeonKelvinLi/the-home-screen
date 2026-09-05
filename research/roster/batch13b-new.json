@@ -168,5 +168,25 @@
    "Glenn: 'Three locations above' — the three addresses in their bio",
    "the site's story ring is Instagram's; the icon is the white disc inside it"
   ]
+ },
+ {
+  "id": "b_russfamkitchen",
+  "name_exact": "Russ Fam Kitchen",
+  "one_line": "Filipino fusion inside an Exxon on Hillside Blvd, and in Redwood City",
+  "cuisine": "Filipino fusion",
+  "address": "1216 Hillside Blvd, Daly City, CA 94014",
+  "phone": "510-691-3658",
+  "email": "admin@russfamkitchen.com",
+  "hours": "Tue-Sun 8:30am-12pm and 2pm-7pm",
+  "instagram": "russfamkitchen_",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [],
+  "price_note": "prices and photos are from their own online ordering page",
+  "flags": [
+   "second counter at 2992 Spring St Unit C, Redwood City, per their site",
+   "hours are from their Instagram bio: '8:30-12 / 2-7PM, Tuesday-Sunday'",
+   "Glenn: 'Daly City • Goods' with their reel"
+  ]
  }
 ]

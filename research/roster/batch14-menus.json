@@ -12240,5 +12240,224 @@
     "credit": "Their own product photos, from walkfree.store"
    }
   ]
+ },
+ {
+  "id": "b_russfamkitchen",
+  "name_exact": "Russ Fam Kitchen",
+  "one_line": "Filipino fusion inside an Exxon on Hillside Blvd, and in Redwood City",
+  "cuisine": "Filipino fusion",
+  "address": "1216 Hillside Blvd, Daly City, CA 94014",
+  "phone": "510-691-3658",
+  "email": "admin@russfamkitchen.com",
+  "hours": "Tue-Sun 8:30am-12pm and 2pm-7pm",
+  "instagram": "russfamkitchen_",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Spam Silog",
+    "desc": "Spamsilog is a type of Silog, a traditional Filipino breakfast dish made of garlic rice, fried spam and sunny side up egg.",
+    "cents": 1399,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-spam-silog"
+   },
+   {
+    "name": "Tocilog",
+    "desc": "Tender sweet-cured pork tocino served with white rice and a fried egg. A Filipino breakfast classic that’s sweet, savory and satisfying.",
+    "cents": 1499,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-tocilog"
+   },
+   {
+    "name": "Tapsilog",
+    "desc": "Tender marinated beef tapa served with white rice and a fried egg. A classic Filipino breakfast favorite packed with bold, savory flavor in every bite.",
+    "cents": 1599,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-tapsilog"
+   },
+   {
+    "name": "Bacsilog",
+    "desc": "Crispy bacon served with garlic fried rice and a fried egg. A hearty and flavorful breakfast classic that’s savory, satisfying and delicious.",
+    "cents": 1499,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-bacsilog"
+   },
+   {
+    "name": "Hotsilog",
+    "desc": "Three Filipino-style hotdogs served with white rice and a fried egg. A sweet, savory and satisfying breakfast favorite that’s perfect any time of the day.",
+    "cents": 1399,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-hotsilog"
+   },
+   {
+    "name": "American Breakfast",
+    "desc": "A classic breakfast platter featuring scrambled eggs, crispy bacon and pancakes.",
+    "cents": 1499,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-american-breakfast"
+   },
+   {
+    "name": "Bangsilog",
+    "desc": "Crispy boneless milkfish served with white rice and a fried egg. A classic Filipino breakfast dish that’s hearty, flavorful and satisfying.",
+    "cents": 1799,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-bangsilog"
+   },
+   {
+    "name": "Longsilog",
+    "desc": "3 pieces of sweet Filipino longganisa sausage served with white rice and a fried egg. A flavorful breakfast favorite.",
+    "cents": 1399,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-longsilog"
+   },
+   {
+    "name": "Cornsilog",
+    "desc": "Corned beef served with white rice and a fried egg. A savory Filipino breakfast classic that's hearty and satisfying.",
+    "cents": 1699,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-cornsilog"
+   },
+   {
+    "name": "Embusilog",
+    "desc": "4 pieces of embutido (Filipino-style meatloaf) served with white rice and a fried egg. A hearty and savory breakfast plate.",
+    "cents": 1499,
+    "section": "Breakfast",
+    "photo": "russ-fam-kitchen-embusilog"
+   },
+   {
+    "name": "Cheezzy Birria Tacos",
+    "desc": "4 pieces with free consommé shredded beef, dried chilies, corn tortilla, mozzarella cheese, onions, cilantro and consommé.",
+    "cents": 2000,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-cheezzy-birria-tacos"
+   },
+   {
+    "name": "Lion King Sushi Bake",
+    "desc": "Japanese rice, furikake, imitation crab, salmon, topped with mayo, unagi sauce, tobiko and spring onions.",
+    "cents": 1700,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-lion-king-sushi-bake"
+   },
+   {
+    "name": "Pork Lumpia",
+    "desc": "",
+    "cents": 1300,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-pork-lumpia"
+   },
+   {
+    "name": "Classic Chicken Wings",
+    "desc": "8 pieces.",
+    "cents": 1600,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-classic-chicken-wings"
+   },
+   {
+    "name": "Cali-Spam Musubi",
+    "desc": "2 pieces. Sliced spam, Japanese rice, special sauce, topped with imitation crab, unagi sauce, spicy mayo, furikake, spring onions.",
+    "cents": 1500,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-cali-spam-musubi"
+   },
+   {
+    "name": "Braised Pork Belly with Lumpia Rice Plate",
+    "desc": "",
+    "cents": 1800,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-braised-pork-belly-with-lumpia-rice-plat"
+   },
+   {
+    "name": "Crispy Dinakdakan Rice Plate",
+    "desc": "Chopped crispy pork, house made special creamy sauce, ginger, onions, fresh Thai chili & jalapeños (spicy).",
+    "cents": 1600,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-crispy-dinakdakan-rice-plate"
+   },
+   {
+    "name": "Lechon Kawali Rice Plate",
+    "desc": "Well seasoned deep fried pork belly served in cubes.",
+    "cents": 1600,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-lechon-kawali-rice-plate"
+   },
+   {
+    "name": "Pork & Shrimp Siomai",
+    "desc": "10 pieces comes with soy sauce and homemade garlic chili oil.",
+    "cents": 1500,
+    "section": "Lunch and dinner",
+    "photo": "russ-fam-kitchen-pork-shrimp-siomai"
+   },
+   {
+    "name": "Kwek-Kwek",
+    "desc": "10 pieces quail eggs come with house special manong sauce & vinegar.",
+    "cents": 1000,
+    "section": "Filipino Street Foods",
+    "photo": "russ-fam-kitchen-kwek-kwek"
+   },
+   {
+    "name": "Ki-Kiam",
+    "desc": "10 pieces bite sized ki-kiam with house special manong sauce & vinegar.",
+    "cents": 900,
+    "section": "Filipino Street Foods",
+    "photo": "russ-fam-kitchen-ki-kiam"
+   },
+   {
+    "name": "Fish Balls",
+    "desc": "12 pieces bite sized fish balls with house special manong sauce & vinegar.",
+    "cents": 800,
+    "section": "Filipino Street Foods",
+    "photo": "russ-fam-kitchen-fish-balls"
+   },
+   {
+    "name": "Pork Tumbong",
+    "desc": "3 sticks",
+    "cents": 1300,
+    "section": "Filipino Street Foods",
+    "photo": "russ-fam-kitchen-pork-tumbong"
+   },
+   {
+    "name": "Classic Iskrambol",
+    "desc": "16 oz. SHAVED ICE, POWDERED MILK, SUGAR, FLAVORING, DRIZZLED WITH EITHER CHOCOLATE / CARAMEL SAUCE, TOPPED WITH MARSHMALLOWS & SPRINKLES",
+    "cents": 900,
+    "section": "Drinks",
+    "photo": "russ-fam-kitchen-classic-iskrambol"
+   },
+   {
+    "name": "Ube Iskrambol",
+    "desc": "16 oz. SHAVED ICE, POWDERED MILK, SUGAR, FLAVORING, DRIZZLED WITH EITHER CHOCOLATE / CARAMEL SAUCE, TOPPED WITH MARSHMALLOWS & SPRINKLES",
+    "cents": 900,
+    "section": "Drinks",
+    "photo": "russ-fam-kitchen-ube-iskrambol"
+   },
+   {
+    "name": "Sagot’ Gulaman",
+    "desc": "16oz",
+    "cents": 600,
+    "section": "Drinks",
+    "photo": "russ-fam-kitchen-sagot-gulaman"
+   },
+   {
+    "name": "Sagot Gulaman",
+    "desc": "",
+    "cents": 600,
+    "section": "Drinks"
+   },
+   {
+    "name": "Ilocos Empanada",
+    "desc": "Ilocos Empanada is made with fresh green papaya, homemade pork longganisa and egg",
+    "cents": 800,
+    "section": "Specialties",
+    "photo": "russ-fam-kitchen-ilocos-empanada"
+   }
+  ],
+  "price_note": "prices and photos are from their own site",
+  "flags": [
+   "second counter at 2992 Spring St Unit C, Redwood City, per their site",
+   "hours are from their Instagram bio: '8:30-12 / 2-7PM, Tuesday-Sunday'",
+   "Glenn: 'Daly City • Goods' with their reel",
+   "menu: 28 items read from https://russfamkitchen.com/menu on 2026-09-05"
+  ],
+  "menu_source": "https://russfamkitchen.com/menu",
+  "menu_gathered": "2026-09-05"
  }
 ]

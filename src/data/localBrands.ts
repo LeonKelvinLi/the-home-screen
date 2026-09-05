@@ -518,6 +518,8 @@ export const LOCAL_SEED: LocalSeed[] = [
       Instagram ever since it was written.
     */
     clip: {
+      src: '/clips/grind-cafe-707.mp4',
+      poster: '/clips/grind-cafe-707-poster.webp',
       href: 'https://www.instagram.com/reel/DcRs0cKSUwJ/',
       credit: 'Filmed by The Grind Café',
       platform: 'Instagram',
@@ -599,7 +601,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       ZIP 94513 is from the state licence register, not from them.
     */
     slug: 'the-yard-brentwood',
-    clip: { href: 'https://www.instagram.com/reel/DV7TYKVCGdl/', credit: 'Filmed by The Yard', platform: 'Instagram' },
+    clip: { src: '/clips/the-yard-brentwood.mp4', poster: '/clips/the-yard-brentwood-poster.webp', href: 'https://www.instagram.com/reel/DV7TYKVCGdl/', credit: 'Filmed by @thesnacksensei', platform: 'Instagram' },
     name: 'The Yard',
     label: 'The Yard',
     cuisine: 'Smash burgers, cocktails',
@@ -830,7 +832,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     */
     slug: 'tequilas-taqueria',
     icon: 'tequilas-taqueria',
-    clip: { href: 'https://www.instagram.com/reel/DbmH3wLFV9U/', credit: 'Filmed by Tequila\u2019s Taqueria', platform: 'Instagram' },
+    clip: { src: '/clips/tequilas-taqueria.mp4', poster: '/clips/tequilas-taqueria-poster.webp', href: 'https://www.instagram.com/reel/DbmH3wLFV9U/', credit: 'Filmed by Tequila\u2019s Taqueria', platform: 'Instagram' },
     name: "Tequila's Taquería",
     label: "Tequila's",
     cuisine: 'Mexican, seafood, botanas',
@@ -919,7 +921,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       nothing re-hosted. The mock offers he asked for in the same breath are
       below.
     */
-    clip: { href: 'https://www.instagram.com/reel/DYlU7BcoAMi/', credit: 'Filmed by @thesnacksensei', platform: 'Instagram' },
+    clip: { src: '/clips/jojos-hot-chicken.mp4', poster: '/clips/jojos-hot-chicken-poster.webp', href: 'https://www.instagram.com/reel/DYlU7BcoAMi/', credit: 'Filmed by @thesnacksensei', platform: 'Instagram' },
     orderUrl: 'https://www.jojoshotchicken.com/menu',
     phone: '(408) 499-0916',
     address: '1601 Branham Ln #10, San Jose',
@@ -1411,8 +1413,10 @@ export const LOCAL_SEED: LocalSeed[] = [
        embed it. He adds "I deliver for them weekly so they're definitely going
        to be on board", which is a reason to expect a yes, not a yes. */
     clip: {
+      src: '/clips/paulo-sausage.mp4',
+      poster: '/clips/paulo-sausage-poster.webp',
       href: 'https://www.instagram.com/reel/DaboslhTtv9/',
-      credit: 'Posted by Paulo Sausage Co',
+      credit: 'Filmed by @justmostie',
       platform: 'Instagram',
     },
     cuisine: 'Italian sandwiches, sausage',
@@ -1456,7 +1460,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       Their own reel, sent 2026-08-03 beside their profile — the account that
       posted it is @pippaldublin. A card that opens the post; nothing copied.
     */
-    clip: { href: 'https://www.instagram.com/reel/DaBs4utDZXb/', credit: 'Filmed by Pippāl', platform: 'Instagram' },
+    clip: { src: '/clips/pippal.mp4', poster: '/clips/pippal-poster.webp', href: 'https://www.instagram.com/reel/DaBs4utDZXb/', credit: 'Filmed by Pippāl', platform: 'Instagram' },
     orderUrl: 'https://order.toasttab.com/online/pippal-dublin-4500-tassajara-rd-unit-c',
     address: '4500 Tassajara Rd, Suite C, Dublin',
     // OPEN, despite a "coming soon" post still sitting on their grid — that
@@ -1575,7 +1579,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       to her and opened on Instagram rather than copied here. Same footing as
       the Lucky Three Seven clip, and worth him confirming with her.
     */
-    clip: { href: 'https://www.instagram.com/reel/DYI6AJgIFII/', credit: 'Filmed by @volha_creative', platform: 'Instagram' },
+    clip: { src: '/clips/glasshouzz.mp4', poster: '/clips/glasshouzz-poster.webp', href: 'https://www.instagram.com/reel/DYI6AJgIFII/', credit: 'Filmed by @volha_creative', platform: 'Instagram' },
     orderUrl: 'https://glasshouzz.toast.site/order/glass-houzz-4575-livermore-outlets-drive',
     address: '4575 Livermore Outlets Drive, Livermore',
     /*
@@ -2299,9 +2303,11 @@ export const LOCAL_SEED: LocalSeed[] = [
     contactOnly:
       'Cambodian street food on Foothill Boulevard \u2014 in their own words, designed to bring the taste of Cambodia\u2019s fusion locally and affordable to everyone. Open Monday to Saturday 11am-7pm and Sunday 11am-5pm, closed Tuesdays. They publish no prices and have no website yet, so nothing is priced here.',
     clip: {
+      src: '/clips/cambodian-street-food.mp4',
+      poster: '/clips/cambodian-street-food-poster.webp',
       href: 'https://www.youtube.com/watch?v=6xSaVABbB9s',
       platform: 'YouTube',
-      credit: 'The video from their own Instagram bio.',
+      credit: 'From their Instagram bio, filmed by Jay Chan (@JayChanMuzik)',
     },
     items: [],
   },
@@ -2360,9 +2366,11 @@ export const LOCAL_SEED: LocalSeed[] = [
     contactOnly:
       'A Concord food truck \u2014 burgers and more, in their own words: where food meets fun. They also trade at Epidemic Ales, so their own site and Instagram are where to find them on a given day. They publish no prices, so nothing is priced here.',
     clip: {
+      src: '/clips/ofies-kitchen.mp4',
+      poster: '/clips/ofies-kitchen-poster.webp',
       href: 'https://www.instagram.com/reel/DcckUJ9zv_g/',
       platform: 'Instagram',
-      credit: 'Their reel, on Instagram.',
+      credit: 'Filmed by @itsmeloslab',
     },
     items: [],
     photos: [
@@ -2430,9 +2438,11 @@ export const LOCAL_SEED: LocalSeed[] = [
     contactOnly:
       'Pan Asian cooking on Bay Street in Fremont, doing private events, catering and reservations. In their own words their vendors are Zabiha Halal certified. They have no website yet and publish no prices, so nothing is priced here \u2014 their Instagram is where to reach them.',
     clip: {
+      src: '/clips/house-of-raha.mp4',
+      poster: '/clips/house-of-raha-poster.webp',
       href: 'https://www.instagram.com/reel/Dbq3kjRPWEg/',
       platform: 'Instagram',
-      credit: 'Their reel, on Instagram.',
+      credit: 'Filmed by @smackinfood',
     },
     items: [],
   },
@@ -3074,6 +3084,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     */
     offers: { welcome: '15% off your first order', mock: true },
     clip: {
+      src: '/clips/pawddle.mp4',
+      poster: '/clips/pawddle-poster.webp',
       href: 'https://www.instagram.com/reel/Dccj3_ZRmkr/',
       credit: 'Posted by Pawddle',
       platform: 'Instagram',
@@ -3377,7 +3389,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       is @grubwitmike's, a food reviewer, not theirs — a card that opens the
       post, credited to him.
     */
-    clip: { href: 'https://www.instagram.com/reel/DcHlbGcBBX2/', credit: 'Filmed by @grubwitmike', platform: 'Instagram' },
+    clip: { src: '/clips/phosho-dough.mp4', poster: '/clips/phosho-dough-poster.webp', href: 'https://www.instagram.com/reel/DcHlbGcBBX2/', credit: 'Filmed by @grubwitmike', platform: 'Instagram' },
     siteCta: 'Order on their Square page',
     needsSite: true,
     siteNote: 'Second pickup counter at 1235 San Pablo Ave, Berkeley',
@@ -3600,6 +3612,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     email: 'kingspizzeriawc@gmail.com',
     site: 'https://kingswcpizza.com/',
     clip: {
+      src: '/clips/kings-wc-pizza.mp4',
+      poster: '/clips/kings-wc-pizza-poster.webp',
       href: 'https://www.instagram.com/reel/DH4_CuVuxm9/',
       credit: 'Posted by Kings West Coast Pizzeria',
       platform: 'Instagram',
@@ -3794,6 +3808,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     email: 'Tinywheelsco@outlook.com',
     site: 'https://tinywheelspets.com/',
     clip: {
+      src: '/clips/tiny-wheels.mp4',
+      poster: '/clips/tiny-wheels-poster.webp',
       href: 'https://www.instagram.com/reel/Dcg6A7npkpj/',
       credit: 'Posted by Tiny Wheels',
       platform: 'Instagram',
@@ -4035,6 +4051,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Pet goods',
     site: 'https://relunio.store/products/drypup-hands-free-dog-drying-bag',
     clip: {
+      src: '/clips/drypup.mp4',
+      poster: '/clips/drypup-poster.webp',
       href: 'https://www.instagram.com/reel/DcZdfdTQLhX/',
       credit: 'Posted by DryPup',
       platform: 'Instagram',
@@ -4073,6 +4091,8 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Pet goods',
     site: 'https://www.puppiepack.store/',
     clip: {
+      src: '/clips/puppiepack.mp4',
+      poster: '/clips/puppiepack-poster.webp',
       href: 'https://www.instagram.com/reel/DbtLc7eROjF/',
       credit: 'Posted by PuppiePack',
       platform: 'Instagram',

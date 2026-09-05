@@ -115,3 +115,31 @@ movement in it. It starts one second in.
 "requested format is not available" against a 1440x1080 VP9 reel that plain
 yt-dlp merged without complaint. That failure looks like the post being
 unavailable and is not.
+
+
+## Added 2026-09-05, on his word: "remember to add those videos and links to the swipeable feed too"
+
+Every reel he had sent for a business that sat on its page as a card only. Cut by
+`tools/make-clip.py` — a one-frame-per-second motion sweep picks the 24 seconds with
+the most movement — to 540x960 with sound.
+
+| File | Business | Taken from |
+|---|---|---|
+| `cambodian-street-food.mp4` | Cambodian Street Food | youtube.com/watch?v=6xSaVABbB9s — **an excerpt**, 845s–869s of 1385s; posted by @@JayChanMuzik |
+| `tiny-wheels.mp4` | Tiny Wheels | instagram.com/reel/Dcg6A7npkpj — whole, 12s; posted by @38330280417 |
+| `grind-cafe-707.mp4` | The Grind Café | instagram.com/reel/DcRs0cKSUwJ — **an excerpt**, 18s–42s of 153s; posted by @17803922980 |
+| `puppiepack.mp4` | PuppiePack | instagram.com/reel/DbtLc7eROjF — whole, 14s; posted by @14925299718 |
+| `drypup.mp4` | DryPup | instagram.com/reel/DcZdfdTQLhX — whole, 11s; posted by @39051952116 |
+| `pawddle.mp4` | Pawddle | instagram.com/reel/Dccj3_ZRmkr — whole, 8s; posted by @74558811466 |
+| `kings-wc-pizza.mp4` | Kings West Coast Pizzeria | instagram.com/reel/DH4_CuVuxm9 — **an excerpt**, 4s–28s of 48s; posted by @52872264122 |
+| `paulo-sausage.mp4` | Paulo Sausage Co | instagram.com/reel/DaboslhTtv9 — **an excerpt**, 3s–27s of 56s; posted by @50849876993 |
+| `house-of-raha.mp4` | House of Raha | instagram.com/reel/Dbq3kjRPWEg — whole, 24s; posted by @ Food & Lifestyle |
+| `russ-fam-kitchen.mp4` | Russ Fam Kitchen, Daly City | instagram.com/reel/Dc68gg9SJhY — **an excerpt**, 2s–26s of 136s; their own post, @russfamkitchen_ |
+
+**Filmed by someone other than the business, credited to the film-maker on the card,
+and used the same narrow way as Lucky Three Seven — nobody has told us we may:**
+The Yard and Jojo's Hot Chicken (@thesnacksensei), Glasshouzz (@volha_creative),
+Ofie's Kitchen (@itsmeloslab), Phosho Dough (@grubwitmike), Paulo Sausage Co
+(@justmostie), House of Raha (@smackinfood), Cambodian Street Food (Jay Chan,
+@JayChanMuzik on YouTube — a 24-second excerpt of a 23-minute vlog, 845s–869s).
+Worth him confirming with each. The rest are the businesses' own posts.

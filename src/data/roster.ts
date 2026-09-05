@@ -1079,6 +1079,25 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'A new Bay Area media company, born in the Bay and broadcasting worldwide: music, originals, community, fashion and business, out of Oakland and San Francisco. It launches Labor Day, September 7, 2026, and nothing is for sale yet; their site takes sign-ups for first access.',
   }),
+  /* 2026-09-05, night. Russ Fam Kitchen, "Daly City • Goods", with their reel
+     — "remember to add those videos and links to the swipeable feed too", so
+     the reel is re-hosted and plays in Watch. Filipino fusion inside an Exxon
+     on Hillside Blvd, a second counter in Redwood City; facts from their bio
+     and site, the menu from their own ordering page. */
+  seed('russ-fam-kitchen', 'Russ Fam Kitchen', 'Russ Fam', 'Filipino fusion', '#1B3F8F', {
+    icon: 'russ-fam-kitchen',
+    logoTemplate: 'badge', logoLines: ['RUSS FAM', 'KITCHEN'], logoFace: 'slab',
+    site: 'https://russfamkitchen.com/',
+    siteCta: 'Order online',
+    clip: {
+      src: '/clips/russ-fam-kitchen.mp4',
+      poster: '/clips/russ-fam-kitchen-poster.webp',
+      href: 'https://www.instagram.com/reel/Dc68gg9SJhY/',
+      credit: 'Their own reel, @russfamkitchen_',
+      platform: 'Instagram',
+    },
+  }),
+
   /* 2026-09-05, evening. Walk Free, "BEASTY • Online" with "Maybe include a
      drop-down pic?" — a Shopify harness store; the Pet goods seat is Pawddle's,
      so the flagship's yellow sheet, with their own product photos as the
