@@ -121,7 +121,9 @@ for (const [id, want, expect] of [
       hours: txt('.brand-hours'),
       rows: document.querySelectorAll('.menu-row').length,
       quotePad: q ? Math.round(q.getBoundingClientRect().left) : null,
-      call: txt('.brand-contact'),
+      /* A page with a full menu draws no contact block — the number sits in
+         its own row under the address — so the check reads the whole page. */
+      call: txt('.brand-contact') + ' ' + (document.body?.innerText || '').replace(/\s+/g, ' '),
       photos: document.querySelectorAll('.brand-photos-track img').length,
     }
   })
