@@ -53,7 +53,7 @@ if d.get('photos'):
         a, b = find_array(seg, m2.start()); rest2 = seg[b:]; rest2 = rest2[1:] if rest2.startswith(',') else rest2
         seg = seg[:m2.start()] + rest2
     ph = '    photos: [\n' + ''.join(f"      {{ src: '/food/{x['photo']}-lg.webp', alt: {json.dumps(x.get('alt',''), ensure_ascii=False)}, credit: {json.dumps(x.get('credit',''), ensure_ascii=False)} }},\n" for x in d['photos']) + '    ],'
-    m3 = re.search(r'\n(\s*)sections: \[', seg) or re.search(r'\n(\s*)items: \[', seg)
+    m3 = re.search(r'\n    sections: \[', seg) or re.search(r'\n    groups: \[', seg) or re.search(r'\n    items: \[', seg)
     a3, b3 = find_array(seg, m3.start()); rest3 = seg[b3:]; rest3 = rest3[1:] if rest3.startswith(',') else rest3
     seg = seg[:b3] + ',\n' + ph + rest3
 s = s[:start] + seg + s[end:]

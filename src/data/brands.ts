@@ -347,7 +347,10 @@ interface Seed {
   icon: string
   prep: number
   category: string
-  items: [string, string, number, string?][]
+  /** name, description, cents, photo (or null when a label follows), priceLabel. */
+  items: [string, string, number, (string | null)?, string?][]
+  /** The whole menu in its published sections; same tuple; never trimmed by `offer`. */
+  sections?: { name: string; items: [string, string, number, (string | null)?, string?][] }[]
   review?: string
   /** A page of theirs that actually resolves. Verified before it goes in. */
   site?: string
@@ -813,10 +816,10 @@ const SEED: Seed[] = [
       {
         name: 'Admission',
         items: [
-          ['Unlimited gaming', 'Every game on freeplay', 1000, null, '$10 an hour'],
-          ['All day, in and out', '', 2200, null, '$22 all day'],
-          ['Private party, two hours, 15 guests', 'Guests beyond the package are $20 each', 30000, null, '$300'],
-          ['Private party, two hours, 20 guests', '', 40000, null, '$400'],
+          ['Unlimited gaming', 'Every game on freeplay', 1000, '$10 an hour'],
+          ['All day, in and out', '', 2200, '$22 all day'],
+          ['Private party, two hours, 15 guests', 'Guests beyond the package are $20 each', 30000, '$300'],
+          ['Private party, two hours, 20 guests', '', 40000, '$400'],
         ],
       },
     ],
