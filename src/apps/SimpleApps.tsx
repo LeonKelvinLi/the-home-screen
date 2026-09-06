@@ -216,8 +216,11 @@ export function AccountApp({ api }: { api: ShellApi }) {
       <div className="plain">
         <h3>Signed out</h3>
         <p>
-          Orders placed on this device are saved here. Sign in to keep them across phones and to
-          start earning rewards.
+          {/* Orders stay on the device that placed them: nothing ties an order
+              to a member yet, so "sign in to keep them across phones" was a
+              promise the server could not keep. Say what signing in does. */}
+          Orders placed on this device stay on this device. Sign in to open the whole directory
+          and to start earning rewards.
         </p>
         <button className="btn-primary" onClick={() => api.openApp('sys.join')}>
           Sign in or sign up

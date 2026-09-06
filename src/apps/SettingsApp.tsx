@@ -179,11 +179,17 @@ export function SettingsApp({ api }: { api: ShellApi }) {
           iconBg={account ? '#34C759' : '#8E8E93'}
           label={account ? account.name : 'Sign In'}
           /* Whichever they are known by — a member who joined by text has no
-             address, and one who joined before the change has no number. */
+             address, and one who joined before the change has no number.
+
+             Signed out, this row said "Keep your orders across devices". Orders
+             are not attached to accounts — the orders table has no member
+             column and checkout never reads the session — so that was a
+             promise the app could not keep. It now names what signing in
+             actually does. */
           detail={
             account
               ? (account.phone ?? account.email ?? 'Signed in')
-              : 'Keep your orders across devices'
+              : 'Open the whole directory and earn rewards'
           }
           onClick={() => api.openApp('sys.account')}
         />

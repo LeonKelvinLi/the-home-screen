@@ -225,7 +225,7 @@ for (const s of [
   'san-lorenzo', 'Initiation and annual fees', 'point-richmond', 'hercules',
   'is-glow', 'icon-glow',
   /* The screens that were showing account data without reading the account. */
-  'joinedAt', 'raffle tickets', 'Keep your orders across devices',
+  'joinedAt', 'raffle tickets', 'Open the whole directory and earn rewards',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }
