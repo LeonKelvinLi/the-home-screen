@@ -28,10 +28,10 @@
 #      opt out." Use the same words on the campaign so they match.
 set -uo pipefail
 
-SERVICE=srv-d9nusqdaeets73cnca50
+SERVICE=srv-daaq49favr4c73b5s3i0   # recreated 2026-08-31; the old srv-d9nus… id is dead
 : "${TWILIO_ACCOUNT_SID:?set TWILIO_ACCOUNT_SID}"
 : "${TWILIO_AUTH_TOKEN:?set TWILIO_AUTH_TOKEN}"
-RENDER_KEY=$(grep -m1 '^RENDER_API_KEY=' ~/Desktop/dev/allcpr-stickers/.env | cut -d= -f2- | tr -d '"'"'"'')
+RENDER_KEY=$(grep -m1 '^RENDER_API_KEY=' ~/.render.env | cut -d= -f2- | tr -d '"'"'"'')
 
 echo "Looking for an existing Verify service..."
 sid=$(curl -s -u "$TWILIO_ACCOUNT_SID:$TWILIO_AUTH_TOKEN" \

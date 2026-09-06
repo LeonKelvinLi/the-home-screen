@@ -82,7 +82,8 @@ node tools/audit-membership-billing.mjs
    rather than printing them, because one of them is the webhook signing
    secret. Delete that file once the values are on Render.
 3. Set **three** environment variables on the Render service
-   (`srv-d9nusqdaeets73cnca50`) and **trigger a deploy** — the Render API does
+   (`srv-daaq49favr4c73b5s3i0` — the service was recreated on 2026-08-31, and
+   only the API key in `~/.render.env` can see it) and **trigger a deploy** — the Render API does
    not restart a service when its environment changes, so a value set without a
    deploy is a value the running process never sees:
    - `STRIPE_WEBHOOK_SECRET` (from the live webhook endpoint)

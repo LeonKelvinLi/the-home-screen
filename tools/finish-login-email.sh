@@ -21,14 +21,14 @@ set -uo pipefail
 RESEND_KEY=$(grep -m1 '^RESEND_API_KEY=' ~/.resend.env 2>/dev/null | cut -d= -f2-)
 if [ -z "${RESEND_KEY:-}" ]; then
   # Fall back to the one Render already holds, which is the same key.
-  RENDER_KEY=$(grep -m1 '^RENDER_API_KEY=' ~/Desktop/dev/allcpr-stickers/.env | cut -d= -f2- | tr -d '"'"'"'')
+  RENDER_KEY=$(grep -m1 '^RENDER_API_KEY=' ~/.render.env | cut -d= -f2- | tr -d '"'"'"'')
   RESEND_KEY=$(curl -s -H "Authorization: Bearer $RENDER_KEY" \
-    "https://api.render.com/v1/services/srv-d9nusqdaeets73cnca50/env-vars?limit=50" \
+    "https://api.render.com/v1/services/srv-daaq49favr4c73b5s3i0/env-vars?limit=50" \
     | python3 -c "import json,sys;print({r['envVar']['key']:r['envVar']['value'] for r in json.load(sys.stdin)}.get('RESEND_API_KEY',''))")
 fi
-RENDER_KEY=${RENDER_KEY:-$(grep -m1 '^RENDER_API_KEY=' ~/Desktop/dev/allcpr-stickers/.env | cut -d= -f2- | tr -d '"'"'"'')}
+RENDER_KEY=${RENDER_KEY:-$(grep -m1 '^RENDER_API_KEY=' ~/.render.env | cut -d= -f2- | tr -d '"'"'"'')}
 DOMAIN_ID=15b5e1ae-67d9-4997-9ef9-b2b37a3df891
-SERVICE=srv-d9nusqdaeets73cnca50
+SERVICE=srv-daaq49favr4c73b5s3i0   # recreated 2026-08-31; the old srv-d9nus… id is dead
 FROM='BEASTY <hello@beastypages.com>'
 
 echo "Asking Resend to verify beastypages.com..."

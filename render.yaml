@@ -1,10 +1,16 @@
 # Render blueprint — one Node service serving both the API and the built client.
 #
+# NOT CONNECTED AS A BLUEPRINT. The live service (the-home-screen,
+# srv-daaq49favr4c73b5s3i0, recreated 2026-08-31) was set up in the dashboard
+# and is deployed by the push to main, so this file is the record of how it is
+# configured rather than the thing that configures it. Keep the two in step by
+# hand: `bash tools/set-render-env.sh` changes the live environment.
+#
 # Single service on purpose: the Express app already serves ./dist with an SPA
 # catch-all, so the client and API share an origin and there is no CORS surface
 # and no second deploy to keep in step.
 #
-# TWO THINGS TO KNOW
+# THREE THINGS TO KNOW
 #
 # 1. ORDERING IS LIVE, PAYMENTS ARE NOT. VITE_ORDERING=live routes orders to the
 #    server and real kitchen tickets are written. VITE_PAYMENTS is deliberately
@@ -13,9 +19,16 @@
 #    without it the server refuses to boot in production, which is the intended
 #    safety net. Remove both and set STRIPE_SECRET_KEY when payments are wired.
 #
-# 2. THE DISK IS LOAD-BEARING. Render's filesystem is ephemeral without one, so
-#    every redeploy would silently start an empty database and lose live orders
-#    and vendor applications.
+# 2. THE DATABASE IS POSTGRES. Every table lives in the Render Postgres
+#    "beasty-db" (dpg-daaq3qnavr4c73b5qglg-a), and the server refuses to boot
+#    without DATABASE_URL. The 1 GB disk below is left over from when everything
+#    was a SQLite file on it; nothing writes there any more. It can come off the
+#    live service once the old /var/data/data.db is confirmed unneeded — until
+#    then it costs a little and risks nothing.
+#
+# 3. SIGN-IN CODES AND LEADS GO OUT THROUGH RESEND, from OTP_FROM_EMAIL on the
+#    verified beastypages.com domain. A resend.dev sender delivers only to the
+#    account owner (see tools/finish-login-email.sh), so never point it back.
 
 services:
   - type: web
@@ -41,26 +54,46 @@ services:
         value: "1"
       - key: PLATFORM_FEE_BPS
         value: "1000"
-      - key: DATABASE_PATH
-        value: /var/data/data.db
+      # The Render Postgres "beasty-db". Set in the dashboard, never in this file.
+      - key: DATABASE_URL
+        sync: false
       # Tickets advance on a timer so the demo has something truthful to show.
       # Set to 0 the moment a real kitchen display exists, or the simulator will
       # overwrite what the kitchen entered.
       - key: SIMULATE_KITCHEN
         value: "1"
-      - key: STRIPE_SECRET_KEY
+      # Sign-in codes and lead email. OTP_FROM_EMAIL must be on a domain that
+      # is verified in Resend; live it is "BEASTY <hello@beastypages.com>".
+      - key: RESEND_API_KEY
         sync: false
-      # Guards the operator-only applications list. Without it that route 503s,
-      # which is the safe default — it used to accept any vendor's token and
-      # hand every competitor the whole lead pipeline.
-      - key: OPERATOR_TOKEN
-        generateValue: true
-      # Where a new food-truck application actually lands. A Slack or Discord
-      # incoming webhook, or any automation URL. Leave unset and leads only
-      # reach the server log — they are never lost, but nobody is told.
+      - key: OTP_FROM_EMAIL
+        sync: false
+      # Where vendor leads (Reserve a Spot) and Designs enquiries are emailed;
+      # comma-separated. Unset, a lead only reaches the server log.
+      - key: LEAD_EMAIL
+        sync: false
+      - key: DESIGNS_LEAD_EMAIL
+        sync: false
+      # Optional: also POST each vendor lead to a Slack or Discord incoming
+      # webhook. Never set live so far.
       - key: LEAD_WEBHOOK_URL
         sync: false
+      # Guards the operator-only applications list and calendar writes. Without
+      # it those routes 503, which is the safe default — the list used to accept
+      # any vendor's token and hand every competitor the whole lead pipeline.
+      - key: OPERATOR_TOKEN
+        generateValue: true
+      # Memberships. Unset until Glenn activates the Stripe account and
+      # tools/stripe-setup.mjs makes the live objects — see docs/STRIPE.md.
+      # The SECRET key is not wanted here: the server only verifies webhooks.
+      - key: STRIPE_PAYMENT_LINK_PASS
+        sync: false
+      - key: STRIPE_PAYMENT_LINK_DIAMOND
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
     disk:
+      # LEGACY — see note 2. Holds the pre-Postgres SQLite file and nothing else.
       name: orders
       mountPath: /var/data
       sizeGB: 1

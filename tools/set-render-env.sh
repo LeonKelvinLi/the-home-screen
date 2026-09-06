@@ -3,7 +3,12 @@
 #
 # The values never appear in this repo, in the shell history, or on screen:
 # they are read from a file you write and delete, and only the KEY NAMES are
-# printed back. Setting a variable makes Render redeploy.
+# printed back. Setting a variable through the API does NOT redeploy on its
+# own, so this triggers the deploy itself at the end.
+#
+# The Render API key comes from ~/.render.env (override with RENDER_KEY_FILE).
+# It has to be a key for the workspace that holds the-home-screen: the
+# allcpr-stickers key this used to read cannot see this service at all.
 #
 #   1. write the file
 #        cat > /tmp/beasty.env <<'VARS'
@@ -19,8 +24,10 @@
 set -u
 FILE=${1:?usage: set-render-env.sh <env-file> [--apply]}
 APPLY=${2:-}
-SERVICE=${RENDER_SERVICE_ID:-srv-d9nusqdaeets73cnca50}
-KEYFILE=${RENDER_KEY_FILE:-/Users/leon/Desktop/dev/allcpr-stickers/.env}
+# the-home-screen was recreated on 2026-08-31 and got a new id; the old one
+# (srv-d9nusqdaeets73cnca50) answers "not found" to everything.
+SERVICE=${RENDER_SERVICE_ID:-srv-daaq49favr4c73b5s3i0}
+KEYFILE=${RENDER_KEY_FILE:-$HOME/.render.env}
 
 KEY=$(grep -m1 '^RENDER_API_KEY=' "$KEYFILE" | cut -d= -f2- | tr -d '"'\''' | tr -d ' \r')
 [ -z "$KEY" ] && { echo "No RENDER_API_KEY in $KEYFILE"; exit 1; }
