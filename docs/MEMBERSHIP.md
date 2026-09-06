@@ -12,7 +12,7 @@ out in two different currencies.
 | Referral codes, QR, credit | **working** |
 | Raffle tickets | **working** |
 | Discount arithmetic | **working** |
-| Email codes (OTP) | **working** — needs a provider key to deliver |
+| Email codes (OTP) | **live** — sent through Resend from the verified beastypages.com domain since 2026-08-29 |
 | Sign-in on a second device | **working** |
 | Taking $39 or $59 | **wired** — needs Stripe keys, see below |
 | Reissuing a login code | **working** — the code step can send another, on a 30s cooldown |

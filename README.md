@@ -13,10 +13,19 @@ time, and two pages of empty reservable tiles for each city he is opening in.
 
 ## Run it
 
+The server needs Postgres — every table lives there, and there is no file to
+fall back to. Locally that is one container, which the audits below share:
+
 ```bash
+docker run -d --name beasty-pg -e POSTGRES_PASSWORD=beasty -e POSTGRES_USER=beasty \
+  -e POSTGRES_DB=beasty -p 55432:5432 postgres:16-alpine
+export DATABASE_URL=postgres://beasty:beasty@localhost:55432/beasty
 npm install
 npm run dev        # client on :5173, api on :8787
 ```
+
+`.env.example` lists every other variable and what it is for; nothing loads a
+`.env` file on its own.
 
 Or build and serve the whole thing from one process:
 
@@ -43,8 +52,12 @@ what a visitor sees on a handful of roster pages: the name, the hours, the
 rows. The first version of it passed eight pages that were all another
 agent's viewer on the same port, so it now demands the brand's own name.
 
-Each audit starts its own server, its own test database and its own browser, so
-none of them needs anything running first. **They serve `dist/`** — a source
+Each audit starts its own server, its own browser and its own throwaway
+Postgres database — created on the container above through `TEST_DATABASE_URL`
+(default `postgres://beasty:beasty@localhost:55432/postgres`) and dropped on
+the way out — so none of them needs anything running first except that
+container. `tools/pgtest.mjs` refuses a managed host, so the production
+database cannot be pointed at by accident. **They serve `dist/`** — a source
 change you have not built is a change they cannot see, and the failure looks
 like a bug that is still there after you fixed it.
 
@@ -75,10 +88,27 @@ FAIL line. Silence is not a pass.
   the client polls them every six seconds.
 - **Reserve slots** — every city page carries 24 empty tiles, each one a live
   pitch to the next business. Tapping one opens the reserve screen,
-  `POST /api/applications` records who asked, and `LEAD_WEBHOOK_URL` puts it in
-  front of a human rather than leaving it in a table nobody reads.
+  `POST /api/applications` records who asked, and the lead is emailed to
+  `LEAD_EMAIL` on the same Resend key the login codes use, so it reaches a
+  human rather than sitting in a table nobody reads. `LEAD_WEBHOOK_URL` can
+  also post it to Slack or Discord, but has never been set on the live
+  service. The Designs page's Get in touch button lands the same way, in
+  `DESIGNS_LEAD_EMAIL`.
 - **Calendar** — what the businesses have on, stored server-side. Reading is
   public; writing and deleting need `OPERATOR_TOKEN`.
+- **Accounts and membership** — sign-up and sign-in are one screen: a name
+  and an email, a six-digit code sent through Resend, and an httpOnly session
+  cookie good for 180 days. No passwords, and the code never reaches the
+  client. Every member gets a referral code and a QR; each three sign-ups on
+  it earn a raffle ticket and a discount, both computed by `rewardsFor()` in
+  `src/data/membership.ts`, which the server imports too. Choosing a paid tier
+  records it as `pending` and hands back a Stripe Payment Link when one is
+  configured; only Stripe's webhook can mark anybody paid. Signed out, the
+  first two pages and every business on them stay open, and six doors — more
+  cities, the reels, the gallery, the dock switch, the dock buttons, search —
+  raise the sign-up prompt instead. Contacts lists real members once signed
+  in. SMS codes are built end to end and off until a Twilio account exists.
+  `docs/MEMBERSHIP.md` has the whole shape.
 
 ## Where the data comes from
 
@@ -137,21 +167,31 @@ wholesale while treating unverified data as safe.
   it is doing so.
 - `prepMinutes` is an estimate by category, not sourced, and is hedged in the
   UI rather than shown as a fact.
-- Membership and the profile. `src/lib/member.ts` and `src/lib/profile.ts` are
-  localStorage only — no server, no card, nothing charged. Both partner offers
-  in the catalogue are flagged `mock`, meaning the operator asked to see the
-  design and the business has agreed nothing; the app labels them on screen
-  rather than letting them read as terms.
+- Paid membership. Accounts are real (above), but no member has ever been
+  charged: `tier_status` stays `pending` until Stripe's webhook says otherwise,
+  and the live service carries no Payment Links and no webhook secret because
+  the Stripe account has not been activated. `docs/STRIPE.md` lists what only
+  Glenn can do there.
+- The loyalty card and the profile extras. `src/lib/member.ts` (the code you
+  show at the counter, its points and check-ins) and `src/lib/profile.ts`
+  (avatar, top spot, display name) are still localStorage only — no server,
+  no card, nothing scanned. Both partner offers in the catalogue are flagged
+  `mock`, meaning the operator asked to see the design and the business has
+  agreed nothing; the app labels them on screen rather than letting them read
+  as terms.
 
 ## Not built yet
 
-- Accounts and sign-in. Orders are keyed to a phone number typed at checkout.
+- Orders on an account. Orders are keyed to the device and the phone number
+  typed at checkout; signing in does not attach them to the member, so a
+  member's order history is still whatever ids this browser kept.
 - Vendor onboarding and Stripe Connect KYC. `POST /api/applications` captures a
   business that wants a slot, but vendors exist in the DB with
   `payouts_enabled = 0` and no way to complete verification.
 - Scheduling, cancellation, refunds, receipts.
-- Any customer-facing authentication — see the security notes below. The
-  vendor and operator routes do carry bearer tokens.
+- SMS sign-in, switched on. The code path is written and audited; on
+  2026-09-02 the decision was to stay on email until there are more users.
+  `tools/setup-sms-login.sh` turns it on once a Twilio account exists.
 
 ## Architecture notes
 
@@ -221,7 +261,8 @@ competitor's lines on the same cart.
   against no authorization — but the Stripe call itself is still not written.
   The guard used to key off `STRIPE_SECRET_KEY` and failed open the moment an
   operator set one: a key cannot prove a charge path exists, only code can.
-- **No customer accounts.** Order history is the set of ids on the device.
+- **Orders are not attached to accounts.** Order history is the set of ids on
+  the device, even for a signed-in member.
 - **Rate limiting is in-process.** Order creation is capped at 30/min per IP
   with a burst of 10, and applications at 6/min with a burst of 3; orders are
   also bounded by `MAX_LINES` and `MAX_ORDER_TOTAL`. The token buckets live in
