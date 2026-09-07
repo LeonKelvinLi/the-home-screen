@@ -49,6 +49,15 @@ export interface Tier {
   nameTail: string
   mark: 'ribbon' | 'gem'
   monthly: number
+  /*
+    THE YEARLY PRICE, ONCE HE NAMES ONE. Leon asked for a yearly option on
+    2026-09-06 ("add yearly if you can"); the number is Glenn's to give, and
+    a price typed here without him is a promise made on his behalf. So the
+    field exists, the screen grows a Monthly / Yearly switch the moment a
+    tier carries one, and the server, Stripe setup and audit all understand
+    'year' already. Nothing shows a yearly price until this is set.
+  */
+  yearly?: number
   /** What the member's card honours at an affiliate. */
   honours: string
   /** Ceiling on the referral discount, in dollars. */

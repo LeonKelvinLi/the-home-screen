@@ -62,7 +62,7 @@ const tiers = JSON.parse(
   execFileSync('npx', ['tsx', '-e', `
     import { TIERS } from './src/data/membership'
     process.stdout.write(JSON.stringify(TIERS.map(t => ({
-      id: t.id, name: t.name, monthly: t.monthly, honours: t.honours,
+      id: t.id, name: t.name, monthly: t.monthly, yearly: t.yearly ?? null, honours: t.honours,
     }))))
   `], { encoding: 'utf8' }),
 )
@@ -82,7 +82,6 @@ const stamped = (o, tier) => o.metadata?.app === 'beastypages' && o.metadata?.ti
 
 const env = {}
 for (const t of tiers) {
-  const cents = Math.round(t.monthly * 100)
   const desc = `Honours ${t.honours} at any BEASTY affiliate, with no limit each month.`
 
   const products = await api('products?limit=100&active=true', null)
@@ -93,25 +92,38 @@ for (const t of tiers) {
   } else console.log(`${t.name.padEnd(12)} product   : ${product.id} (exists)`)
   if (!product) continue
 
-  const prices = await api(`prices?product=${product.id}&limit=100&active=true`, null)
-  let price = prices.data.find((p) => p.unit_amount === cents && p.recurring?.interval === 'month')
-  if (!price) {
-    console.log(`${''.padEnd(12)} price     : ${WRITE ? 'creating' : 'would create'} $${t.monthly}/month`)
-    if (WRITE) price = await api('prices', { product: product.id, unit_amount: String(cents), currency: 'usd', 'recurring[interval]': 'month', 'metadata[tier_id]': t.id, 'metadata[app]': 'beastypages' })
-  } else console.log(`${''.padEnd(12)} price     : ${price.id} — $${(price.unit_amount / 100).toFixed(2)}/${price.recurring.interval} (exists)`)
-  if (!price) continue
+  /*
+    ONE PRICE AND ONE LINK PER INTERVAL. The yearly pair exists only when the
+    tier carries a yearly price in membership.ts — Glenn's number, never one
+    typed here. A link is told apart from its monthly twin by metadata.interval;
+    the links made before yearly existed carry none, and none means month.
+  */
+  const intervals = [['month', t.monthly], ...(t.yearly ? [['year', t.yearly]] : [])]
+  for (const [interval, dollars] of intervals) {
+    const cents = Math.round(dollars * 100)
+    const prices = await api(`prices?product=${product.id}&limit=100&active=true`, null)
+    let price = prices.data.find((p) => p.unit_amount === cents && p.recurring?.interval === interval)
+    if (!price) {
+      console.log(`${''.padEnd(12)} price     : ${WRITE ? 'creating' : 'would create'} $${dollars}/${interval}`)
+      if (WRITE) price = await api('prices', { product: product.id, unit_amount: String(cents), currency: 'usd', 'recurring[interval]': interval, 'metadata[tier_id]': t.id, 'metadata[app]': 'beastypages' })
+    } else console.log(`${''.padEnd(12)} price     : ${price.id} — $${(price.unit_amount / 100).toFixed(2)}/${price.recurring.interval} (exists)`)
+    if (!price) continue
 
-  const links = await api('payment_links?limit=100&active=true', null)
-  let link = links.data.find((l) => stamped(l, t.id))
-  if (!link) {
-    console.log(`${''.padEnd(12)} link      : ${WRITE ? 'creating' : 'would create'}`)
-    if (WRITE) link = await api('payment_links', {
-      'line_items[0][price]': price.id, 'line_items[0][quantity]': '1',
-      'after_completion[type]': 'redirect', 'after_completion[redirect][url]': `${SITE}/?joined=1`,
-      allow_promotion_codes: 'true', 'metadata[tier_id]': t.id, 'metadata[app]': 'beastypages',
-    })
-  } else console.log(`${''.padEnd(12)} link      : ${link.url} (exists)`)
-  if (link) env[t.id === 'pass' ? 'STRIPE_PAYMENT_LINK_PASS' : 'STRIPE_PAYMENT_LINK_DIAMOND'] = link.url
+    const links = await api('payment_links?limit=100&active=true', null)
+    let link = links.data.find((l) => stamped(l, t.id) && (l.metadata?.interval ?? 'month') === interval)
+    if (!link) {
+      console.log(`${''.padEnd(12)} link      : ${WRITE ? 'creating' : 'would create'} (${interval})`)
+      if (WRITE) link = await api('payment_links', {
+        'line_items[0][price]': price.id, 'line_items[0][quantity]': '1',
+        'after_completion[type]': 'redirect', 'after_completion[redirect][url]': `${SITE}/?joined=1`,
+        allow_promotion_codes: 'true', 'metadata[tier_id]': t.id, 'metadata[app]': 'beastypages', 'metadata[interval]': interval,
+      })
+    } else console.log(`${''.padEnd(12)} link      : ${link.url} (exists, ${interval})`)
+    if (link) {
+      const key = t.id === 'pass' ? 'STRIPE_PAYMENT_LINK_PASS' : 'STRIPE_PAYMENT_LINK_DIAMOND'
+      env[interval === 'year' ? `${key}_YEARLY` : key] = link.url
+    }
+  }
 }
 
 /* Exactly the three the server acts on — see the webhook in server/index.ts.

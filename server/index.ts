@@ -1,6 +1,6 @@
 import express from 'express'
 import type { NextFunction, Request, Response } from 'express'
-import { createHash, randomBytes, randomInt, timingSafeEqual } from 'node:crypto'
+import { createHash, createHmac, randomBytes, randomInt, timingSafeEqual } from 'node:crypto'
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
@@ -1555,7 +1555,18 @@ interface MemberRow {
   tier: string
   tier_status: string
   tier_since: number | null
+  tier_interval: string
   created_at: number
+}
+
+/**
+ * A first name and a last initial — all another member ever sees of a name.
+ * Shared by Contacts, a member's page, and what a shop is told at a scan.
+ */
+const shortName = (full: string) => {
+  const parts = String(full || 'Member').trim().split(/\s+/).filter(Boolean)
+  if (parts.length < 2) return parts[0] || 'Member'
+  return `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.`
 }
 
 async function memberFromRequest(req: Request): Promise<MemberRow | null> {
@@ -1584,17 +1595,34 @@ async function syncRaffleTickets(memberId: string): Promise<void> {
     .prepare('SELECT COUNT(*) AS n FROM members WHERE referred_by = ?')
     .get(memberId) as { n: number }
   const earned = Math.floor(n / 3)
+  if (earned === 0) return
+  /*
+    ONLY THE MILESTONES THAT ARE MISSING. This used to attempt every milestone
+    on every read and let ON CONFLICT drop the duplicates — correct, and it
+    burned a serial each time: Postgres draws the next number before it finds
+    the conflict, so a member's ticket count sat still while the numbers on
+    new tickets climbed with every page load. Tickets carry their serial on
+    screen now, so the sequence is only touched for a ticket that will exist.
+  */
+  const have = new Set(
+    (await db
+      .prepare('SELECT earned_at_referral FROM raffle_tickets WHERE member_id = ?')
+      .all(memberId) as { earned_at_referral: number }[]).map((r) => Number(r.earned_at_referral)),
+  )
+  const missing: number[] = []
+  for (let m = 1; m <= earned; m++) if (!have.has(m * 3)) missing.push(m * 3)
+  if (!missing.length) return
   const insert = db.prepare(
     /* ON CONFLICT DO NOTHING is Postgres's INSERT OR IGNORE. The UNIQUE
        (member_id, earned_at_referral) is what stops a milestone minting a
-       second ticket, and it is what lets this loop re-run harmlessly. */
+       second ticket when two requests race past the check above. */
     `INSERT INTO raffle_tickets (id, member_id, earned_at_referral, created_at)
      VALUES (?,?,?,?)
      ON CONFLICT (member_id, earned_at_referral) DO NOTHING`,
   )
   const run = db.transaction(async () => {
-    for (let m = 1; m <= earned; m++) {
-      await insert.run(`rt_${randomBytes(8).toString('hex')}`, memberId, m * 3, Date.now())
+    for (const at of missing) {
+      await insert.run(`rt_${randomBytes(8).toString('hex')}`, memberId, at, Date.now())
     }
   })
   await run()
@@ -1616,13 +1644,16 @@ async function syncRaffleTickets(memberId: string): Promise<void> {
  * Built with URL rather than string concatenation because a Payment Link may
  * already carry a query string, and `?a=b?c=d` silently loses the second one.
  */
-function paymentLinkFor(tierId: string, member: { id: string; email: string }): string | null {
-  const base =
-    tierId === 'pass'
-      ? process.env.STRIPE_PAYMENT_LINK_PASS
-      : tierId === 'diamond'
-        ? process.env.STRIPE_PAYMENT_LINK_DIAMOND
-        : undefined
+function paymentLinkFor(
+  tierId: string,
+  interval: 'month' | 'year',
+  member: { id: string; email: string },
+): string | null {
+  /* One link per tier per interval. The yearly ones exist only once a tier
+     carries a yearly price and tools/stripe-setup.mjs has made them. */
+  const key =
+    tierId === 'pass' ? 'STRIPE_PAYMENT_LINK_PASS' : tierId === 'diamond' ? 'STRIPE_PAYMENT_LINK_DIAMOND' : null
+  const base = key ? process.env[interval === 'year' ? `${key}_YEARLY` : key] : undefined
   if (!base) return null
   try {
     const u = new URL(base)
@@ -1648,6 +1679,69 @@ function paymentLinkFor(tierId: string, member: { id: string; email: string }): 
 /** Whether a checkout can be opened at all. Both tiers need their own link. */
 const paymentsLive = () =>
   !!process.env.STRIPE_PAYMENT_LINK_PASS || !!process.env.STRIPE_PAYMENT_LINK_DIAMOND
+
+/* ---------- the pass: a QR that changes every minute ---------- */
+
+/*
+  GLENN, 2026-09-06: "make sure QR code is changing every 1 or 5 min so the QR
+  code on every user cannot be redeemed offers."
+
+  The card used to show the referral code, which is meant to be shared and so
+  is worthless as proof of who is standing at the counter: a screenshot of
+  anybody's card would redeem their offer. So the member card now shows a
+  TOKEN — this member, this minute, signed with a secret only the server
+  holds — and a shop verifies it through /api/pass/verify.
+
+  Three properties, and tools/audit-pass.mjs holds the server to all of them:
+
+    - it ROTATES: the token is different every PASS_WINDOW_MS;
+    - it EXPIRES: a scanner accepts the current window and the one before it,
+      so a screen that was already held up still verifies, and nothing older;
+    - it is ONE-SHOT: the first scan is written to pass_scans and the second
+      scan of the same token is refused, however fresh it is. That is what
+      makes a screenshot worthless even inside the minute.
+
+  Every minute rather than every five: a token that is good for one scan and
+  dies within two minutes is the tighter of the two he offered, and the card
+  refetches on its own so the person holding it up never sees a dead one.
+
+  The secret comes from PASS_SECRET. Without it one is minted per boot, which
+  works but kills every pass in the air on each restart — loud at boot.
+*/
+const PASS_WINDOW_MS = Math.max(1000, Number(process.env.PASS_WINDOW_MS ?? 60_000))
+const PASS_SECRET_SET = !!process.env.PASS_SECRET
+const PASS_SECRET = process.env.PASS_SECRET || randomBytes(32).toString('base64url')
+
+const passWindow = (now = Date.now()) => Math.floor(now / PASS_WINDOW_MS)
+const signPass = (memberId: string, win: number) =>
+  createHmac('sha256', PASS_SECRET).update(`${memberId}.${win}`).digest('base64url').slice(0, 27)
+
+function passTokenFor(memberId: string, now = Date.now()) {
+  const win = passWindow(now)
+  return { token: `bp1.${memberId}.${win}.${signPass(memberId, win)}`, expiresAt: (win + 1) * PASS_WINDOW_MS }
+}
+
+type PassCheck = { ok: true; memberId: string } | { ok: false; status: 400 | 410; error: string }
+
+/** Format, signature, then age — and the signature before the age, so an
+    attacker cannot learn from the error which windows are live. */
+function checkPass(token: string, now = Date.now()): PassCheck {
+  const bad: PassCheck = { ok: false, status: 400, error: 'That is not a valid BEASTY pass.' }
+  const parts = String(token ?? '').split('.')
+  if (parts.length !== 4 || parts[0] !== 'bp1') return bad
+  const [, memberId, winStr, sig] = parts
+  const win = Number(winStr)
+  if (!/^[A-Za-z0-9_-]{1,64}$/.test(memberId) || !Number.isInteger(win) || win < 0) return bad
+  const want = Buffer.from(signPass(memberId, win))
+  const got = Buffer.from(sig)
+  if (want.length !== got.length || !timingSafeEqual(want, got)) return bad
+  const cur = passWindow(now)
+  if (win > cur) return bad
+  if (win < cur - 1) {
+    return { ok: false, status: 410, error: 'That pass has expired. Ask them to show the screen again.' }
+  }
+  return { ok: true, memberId }
+}
 
 async function memberPayload(m: MemberRow) {
   await syncRaffleTickets(m.id)
@@ -1687,9 +1781,12 @@ async function memberPayload(m: MemberRow) {
     referralCode: m.referral_code,
     tier: m.tier,
     tierStatus: m.tier_status,
+    tierInterval: m.tier_interval === 'year' ? 'year' : 'month',
     referrals,
     raffleTickets: { total: tickets.total ?? 0, unused: tickets.unused ?? 0 },
     rewards,
+    /* So the member card can count a pass down without guessing the window. */
+    passWindowMs: PASS_WINDOW_MS,
   }
 }
 
@@ -2295,14 +2392,138 @@ app.get('/api/members/directory', rateLimiter(60, 20), async (req, res) => {
   const rows = await db
     .prepare('SELECT id, name, created_at FROM members ORDER BY LOWER(name) ASC, created_at ASC LIMIT 1000')
     .all() as { id: string; name: string; created_at: number }[]
-  const shorten = (full: string) => {
-    const parts = String(full || 'Member').trim().split(/\s+/).filter(Boolean)
-    if (parts.length < 2) return parts[0] || 'Member'
-    return `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.`
-  }
   res.json({
     count: rows.length,
-    members: rows.map((r) => ({ id: r.id, name: shorten(r.name), since: r.created_at, me: r.id === me.id })),
+    members: rows.map((r) => ({ id: r.id, name: shortName(r.name), since: r.created_at, me: r.id === me.id })),
+  })
+})
+
+/**
+ * Another member's page — what they starred and liked.
+ *
+ * Glenn, 2026-09-06: "make sure people on contact list we can go into their
+ * profile and see what they liked." Members only, like the directory, and the
+ * answer is built from brand_signals rows that carry this member's id — the
+ * hearts and stars they tapped while signed in. A name, the month they joined
+ * and two lists of businesses; never a number, an address or a handle.
+ */
+app.get('/api/members/:id/profile', rateLimiter(60, 20), async (req, res) => {
+  const me = await memberFromRequest(req)
+  if (!me) return res.status(401).json({ error: 'Not signed in.' })
+  const id = String(req.params.id)
+  const m = await db
+    .prepare('SELECT id, name, created_at FROM members WHERE id = ?')
+    .get(id) as { id: string; name: string; created_at: number } | undefined
+  if (!m) return res.status(404).json({ error: 'No such member.' })
+  const rows = await db
+    .prepare(
+      `SELECT brand_id, kind FROM brand_signals
+       WHERE member_id = ? AND kind IN ('like','favourite')
+       ORDER BY created_at DESC LIMIT 200`,
+    )
+    .all(id) as { brand_id: string; kind: string }[]
+  res.json({
+    id: m.id,
+    name: shortName(m.name),
+    since: m.created_at,
+    likes: rows.filter((r) => r.kind === 'like').map((r) => r.brand_id),
+    favourites: rows.filter((r) => r.kind === 'favourite').map((r) => r.brand_id),
+    me: m.id === me.id,
+  })
+})
+
+/**
+ * The member's own raffle tickets, one row each, numbered.
+ *
+ * Glenn, 2026-09-06: "make sure they have their own digital raffle for every
+ * user." A count was already on the account; this is the tickets themselves —
+ * each with its serial, when it was earned and for which sign-up, and whether
+ * it has been spent on a named draw. Nobody else's are ever listed.
+ */
+app.get('/api/members/tickets', rateLimiter(60, 20), async (req, res) => {
+  const m = await memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  await syncRaffleTickets(m.id)
+  const rows = await db
+    .prepare(
+      `SELECT id, serial, earned_at_referral, created_at, used_at, used_for
+       FROM raffle_tickets WHERE member_id = ? ORDER BY serial ASC`,
+    )
+    .all(m.id) as {
+      id: string; serial: number; earned_at_referral: number; created_at: number
+      used_at: number | null; used_for: string | null
+    }[]
+  res.json({
+    tickets: rows.map((r) => ({
+      id: r.id,
+      serial: Number(r.serial),
+      earnedAtReferral: r.earned_at_referral,
+      earnedAt: r.created_at,
+      usedAt: r.used_at,
+      usedFor: r.used_for,
+    })),
+  })
+})
+
+/** The pass for this minute. Never cached: the whole point is that it moves. */
+app.get('/api/members/pass', rateLimiter(60, 20), async (req, res) => {
+  const m = await memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  res.set('Cache-Control', 'no-store').json({ ...passTokenFor(m.id), windowMs: PASS_WINDOW_MS })
+})
+
+/** The same pass, drawn, for anything that wants an <img>. */
+app.get('/api/members/pass.svg', rateLimiter(60, 20), async (req, res) => {
+  const m = await memberFromRequest(req)
+  if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  const { token } = passTokenFor(m.id)
+  try {
+    const { toString } = await import('qrcode')
+    const svg = await toString(token, { type: 'svg', margin: 1, width: 512, errorCorrectionLevel: 'M' })
+    res.type('image/svg+xml').set('Cache-Control', 'no-store').send(svg)
+  } catch {
+    res.status(500).json({ error: 'Could not draw the pass.' })
+  }
+})
+
+/**
+ * THE SCAN. A shop's till, or the operator, hands in what the camera read.
+ *
+ * Takes a vendor bearer token or the operator token: a member must never be
+ * able to verify their own pass, or the one-shot property could be burned
+ * from the customer side. The answer says who is standing there — first name
+ * and initial — and what their membership honours, if it is paid and active.
+ * Nothing here charges, credits or redeems anything; that is the shop's
+ * decision, made with a true answer in front of it.
+ */
+app.post('/api/pass/verify', rateLimiter(120, 40), async (req, res) => {
+  const vendorId = await authVendor(req)
+  const operator = !vendorId && isOperator(req)
+  if (!vendorId && !operator) return res.status(401).json({ error: 'A vendor or operator token is required.' })
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const token = typeof req.body.token === 'string' ? req.body.token.trim() : ''
+  const c = checkPass(token)
+  if (!c.ok) return res.status(c.status).json({ error: c.error })
+  const m = await db.prepare('SELECT * FROM members WHERE id = ?').get(c.memberId) as MemberRow | undefined
+  if (!m) return res.status(400).json({ error: 'That is not a valid BEASTY pass.' })
+  try {
+    await db
+      .prepare('INSERT INTO pass_scans (id, token_hash, member_id, scanned_by, created_at) VALUES (?,?,?,?,?)')
+      .run(`ps_${randomBytes(8).toString('hex')}`, hashToken(token), m.id, vendorId ?? 'operator', Date.now())
+  } catch (err) {
+    /* 23505 is Postgres for "that UNIQUE already has this" — the token was
+       scanned before. Anything else is a real failure and stays one. */
+    if ((err as { code?: string })?.code === '23505') {
+      return res.status(409).json({ error: 'That pass was already scanned. Ask them to show the screen again.' })
+    }
+    throw err
+  }
+  const tier = TIERS.find((t) => t.id === m.tier)
+  const active = !!tier && m.tier_status === 'active'
+  res.json({
+    ok: true,
+    member: { id: m.id, name: shortName(m.name), tier: m.tier, tierStatus: m.tier_status },
+    honours: active ? tier.honours : null,
   })
 })
 
@@ -2330,18 +2551,28 @@ app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
   const id = typeof req.body.tier === 'string' ? req.body.tier : ''
   const tier = TIERS.find((t) => t.id === id)
   if (!tier) return res.status(400).json({ error: 'Unknown membership.' })
+  /*
+    MONTH OR YEAR. Absent means month, which is what every choice was before
+    a yearly price existed. A year is only accepted for a tier that actually
+    carries a yearly price — the screen never offers one otherwise, and this
+    is the guard for anything that is not the screen.
+  */
+  const rawInterval = req.body.interval
+  const interval: 'month' | 'year' | null =
+    rawInterval === undefined || rawInterval === 'month' ? 'month' : rawInterval === 'year' ? 'year' : null
+  if (!interval) return res.status(400).json({ error: 'Billing is monthly or yearly.' })
+  if (interval === 'year' && !tier.yearly) {
+    return res.status(400).json({ error: `${tier.name} has no yearly price yet.` })
+  }
 
-  await db.prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ? WHERE id = ?').run(
-    tier.id,
-    'pending',
-    Date.now(),
-    m.id,
-  )
+  await db
+    .prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ?, tier_interval = ? WHERE id = ?')
+    .run(tier.id, 'pending', Date.now(), interval, m.id)
 
   const row = await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
   res.json({
     ...(await memberPayload(row)),
-    paymentLink: paymentLinkFor(tier.id, { id: m.id, email: row.email }),
+    paymentLink: paymentLinkFor(tier.id, interval, { id: m.id, email: row.email }),
   })
 })
 
@@ -2628,6 +2859,13 @@ async function start() {
       // Loud, and loudest in production: this one is invisible from the outside
       // until a customer cannot get in, and then it looks like a broken form.
       console.warn(`*** SIGN-IN EMAIL WILL NOT REACH CUSTOMERS: ${mail} ***`)
+    }
+    if (!PASS_SECRET_SET) {
+      console.warn(
+        PROD
+          ? '*** PASS_SECRET IS UNSET: member passes are signed per boot and die on every restart. Set it on the service. ***'
+          : 'PASS_SECRET unset — passes are signed with a per-boot secret, which is fine for development.',
+      )
     }
     if (SIMULATE_KITCHEN) {
       console.warn('*** KITCHEN SIMULATOR ON: ticket states advance on a timer, not by a kitchen. ***')

@@ -107,8 +107,13 @@ FAIL line. Silence is not a pass.
   first two pages and every business on them stay open, and six doors — more
   cities, the reels, the gallery, the dock switch, the dock buttons, search —
   raise the sign-up prompt instead. Contacts lists real members once signed
-  in. SMS codes are built end to end and off until a Twilio account exists.
-  `docs/MEMBERSHIP.md` has the whole shape.
+  in, and a row opens that member's page: what they starred and liked, and
+  nothing private. The member card shows a **pass** — a signed QR that changes
+  every minute and verifies once at `POST /api/pass/verify`, so a screenshot
+  redeems nothing. Raffle tickets are numbered rows a member holds alone,
+  listed on Rewards. Yearly billing is wired and hidden until a yearly price
+  exists. SMS codes are built end to end and off until a Twilio account
+  exists. `docs/MEMBERSHIP.md` has the whole shape.
 
 ## Where the data comes from
 

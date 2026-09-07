@@ -14,6 +14,9 @@ import { AFFILIATE_INTRO, AFFILIATE_TIERS, AFFILIATE_CLOSE, AFFILIATE_FEES } fro
 import type { Perk } from '../data/membership'
 import type { ShellApi } from '../ios/Device'
 
+/** A yearly switch exists only when a tier has a yearly price to show. */
+const HAS_YEARLY = TIERS.some((t) => !!t.yearly)
+
 /**
  * BEASTY members — the loyalty programme.
  *
@@ -157,6 +160,7 @@ function SideHead({
 }
 
 export function MembersApp({ api }: { api: ShellApi }) {
+  const [billing, setBilling] = useState<'month' | 'year'>('month')
   const m = MEMBERSHIP
   /*
     THE TWO DROPDOWNS. Glenn, 2026-09-02, on a screenshot of this page with
@@ -207,6 +211,29 @@ export function MembersApp({ api }: { api: ShellApi }) {
           The perks are per tier rather than one shared list, because the whole
           difference between $39 and $59 lives in them.
         */}
+        {/*
+          MONTHLY / YEARLY — only once a tier carries a yearly price. Leon asked
+          for yearly on 2026-09-06; the number is Glenn's, so until membership.ts
+          holds one this switch does not render and nothing yearly is shown.
+        */}
+        {HAS_YEARLY && (
+          <div className="members-interval" role="group" aria-label="Billing">
+            <button
+              className={`members-interval-btn${billing === 'month' ? ' is-on' : ''}`}
+              onClick={() => setBilling('month')}
+              aria-pressed={billing === 'month'}
+            >
+              Monthly
+            </button>
+            <button
+              className={`members-interval-btn${billing === 'year' ? ' is-on' : ''}`}
+              onClick={() => setBilling('year')}
+              aria-pressed={billing === 'year'}
+            >
+              Yearly
+            </button>
+          </div>
+        )}
         <div className="members-plans">
           {TIERS.map((t) => (
             <div key={t.id} className={`members-plan${t.id === 'diamond' ? ' is-best' : ''}`}>
@@ -221,8 +248,8 @@ export function MembersApp({ api }: { api: ShellApi }) {
                 {t.nameTail}
               </span>
               <span className="members-plan-price">
-                ${t.monthly}
-                <em>/month</em>
+                ${billing === 'year' && t.yearly ? t.yearly : t.monthly}
+                <em>{billing === 'year' && t.yearly ? '/year' : '/month'}</em>
               </span>
               <span className="members-plan-note">
                 Honours {t.honours} at any affiliate, with no limit each month.
@@ -251,7 +278,7 @@ export function MembersApp({ api }: { api: ShellApi }) {
                   <PerkRow key={perk.label} perk={perk} />
                 ))}
               </ul>
-              <ChooseTier id={t.id} name={t.name} />
+              <ChooseTier interval={billing} id={t.id} name={t.name} />
             </div>
           ))}
         </div>
@@ -419,7 +446,15 @@ function BusinessTiers({ api }: { api: ShellApi }) {
  * honest version — "not connected yet" — is also the version that does not
  * take money the operator cannot yet receive.
  */
-function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
+function ChooseTier({
+  id,
+  name,
+  interval,
+}: {
+  id: 'pass' | 'diamond'
+  name: string
+  interval: 'month' | 'year'
+}) {
   const { account, setAccount } = useGate()
   const [busy, setBusy] = useState(false)
   const [note, setNote] = useState<string | null>(null)
@@ -438,7 +473,7 @@ function ChooseTier({ id, name }: { id: 'pass' | 'diamond'; name: string }) {
   async function choose() {
     if (busy) return
     setBusy(true)
-    const r = await chooseTier(id)
+    const r = await chooseTier(id, interval)
     setBusy(false)
     if (!r) {
       setNote('Could not do that just now. Try again in a moment.')

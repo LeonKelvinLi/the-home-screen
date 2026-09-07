@@ -16,6 +16,10 @@ out in two different currencies.
 | Sign-in on a second device | **working** |
 | Taking $39 or $59 | **wired** — needs Stripe keys, see below |
 | Reissuing a login code | **working** — the code step can send another, on a 30s cooldown |
+| The pass on the member card | **working** — a signed QR that rotates every minute and scans once; see below |
+| A member's page from Contacts | **working** — what they starred and liked, nothing private |
+| Raffle tickets, numbered per member | **working** — `GET /api/members/tickets`, listed on Rewards |
+| Yearly billing | **wired** — refused by the server and hidden on the page until a tier carries a `yearly` price |
 
 `tier_status` never leaves `pending` on its own. Nothing in this codebase may
 mark a member paid; only a payment provider may, and none is wired.
@@ -111,6 +115,72 @@ Properties `tools/audit-otp.mjs` holds to:
   for an unknown address and 202 for a registered one. Anybody could have typed
   addresses in and learned who is a member. The name is now validated before
   anyone is looked up.
+
+## The pass: a QR that changes every minute
+
+Glenn, 2026-09-06: "make sure QR code is changing every 1 or 5 min so the QR
+code on every user cannot be redeemed offers." The member card used to show
+the referral code, which is meant to be shared and so proves nothing about who
+is at the counter; a screenshot of anybody's card would have redeemed their
+offer.
+
+The card now shows a **token**: `bp1.<member>.<window>.<signature>`, the
+signature an HMAC over the member id and the current minute, keyed by
+`PASS_SECRET`. `GET /api/members/pass` hands it out (never cached), the card
+draws it, counts it down, and fetches the next one the moment it expires.
+
+A shop verifies it with its vendor token, or the operator with theirs:
+
+    curl -X POST https://beastypages.com/api/pass/verify \
+         -H "Authorization: Bearer vt_…" -H 'content-type: application/json' \
+         -d '{"token":"bp1.…"}'
+
+Three properties, all held by `tools/audit-pass.mjs`:
+
+* **it rotates** — a different token every `PASS_WINDOW_MS` (60 s live);
+* **it expires** — the current window and the one before it verify, nothing
+  older, so a screen that was already held up still works;
+* **it scans once** — the first scan is written to `pass_scans` and the same
+  token is refused with 409 after that. This is what makes a screenshot
+  worthless even inside the minute.
+
+The answer names the member (first name and initial) and what their tier
+honours if it is paid and active. Nothing is charged or credited here; the
+shop decides with a true answer in front of it. A member cannot verify their
+own pass — that would let the one-shot be burned from the customer side.
+
+`PASS_SECRET` is set on the live service. Without it the server mints one per
+boot and shouts about it: passes would still work, but every one in the air
+would die on each restart.
+
+## What a member sees of another member
+
+Contacts lists first name, last initial and the month they joined, and since
+2026-09-06 a row opens: `GET /api/members/:id/profile` returns the businesses
+that member **starred and liked** while signed in (from `brand_signals` rows
+carrying their id), and nothing else — never a number, an address or a handle.
+The member's own profile says so. `tools/audit-member-profile.mjs` reads a
+page through both the API and the screen.
+
+## Raffle tickets, one row each
+
+`raffle_tickets` carries a `serial` (BIGSERIAL) so a ticket is something a
+member can point at — "No. 000123" — and no two members ever hold the same
+number. `GET /api/members/tickets` lists the signed-in member's own tickets,
+each with the sign-up that earned it and whether it has been spent on a named
+draw; Rewards shows them as stubs. Nobody else's are ever listed.
+`tools/audit-raffle.mjs` mints them through the real referral chain.
+
+## Yearly
+
+Leon asked for a yearly option on 2026-09-06. The price is Glenn's to name, so
+nothing yearly shows until a tier in `src/data/membership.ts` carries
+`yearly`. Everything else is in place: `POST /api/members/tier` takes
+`interval: 'month' | 'year'` and refuses a year for a tier with no yearly
+price, `tier_interval` is stored, `STRIPE_PAYMENT_LINK_*_YEARLY` are read, and
+`tools/stripe-setup.mjs` makes the yearly price and link the moment the number
+exists. `tools/audit-tier-interval.mjs` expects the switch to appear on the
+page the same day.
 
 ## The gate fails OPEN
 

@@ -14,6 +14,7 @@ import {
 } from '../lib/member'
 import { LISTED_KITCHENS } from '../data/brands'
 import { useGate } from '../lib/gate'
+import { fetchPass, type Pass } from '../lib/account'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -28,6 +29,12 @@ import type { ShellApi } from '../ios/Device'
  * camera fails, the shop reads six characters off the screen instead, and both
  * paths hand the till the identical code. See lib/member.ts.
  */
+
+/** 0:42 — what is left on the pass, read at a glance while it is held up. */
+const countdown = (ms: number) => {
+  const s = Math.ceil(ms / 1000)
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`
+}
 
 export function MemberCardApp({ api }: { api: ShellApi }) {
   /*
@@ -51,12 +58,58 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
   const [note, setNote] = useState<string | null>(null)
 
   /*
+    THE PASS ROTATES. Signed in, the QR is no longer the referral code — that
+    one is meant to be shared and lives on the profile — but a token the
+    server signs for this member and this minute (/api/members/pass). Glenn,
+    2026-09-06: a screenshot of somebody's code must not redeem their offer.
+    Each token is good for one scan and dies within two minutes; the card
+    fetches the next one the moment this one expires, and again whenever the
+    screen comes back into view, so what is held up is never a dead code.
+  */
+  const [pass, setPass] = useState<Pass | null>(null)
+  const [now, setNow] = useState(() => Date.now())
+  useEffect(() => {
+    if (!account) {
+      setPass(null)
+      return
+    }
+    let alive = true
+    let timer: number | undefined
+    const load = async () => {
+      if (timer) window.clearTimeout(timer)
+      const p = await fetchPass()
+      if (!alive) return
+      setPass(p)
+      /* A little after expiry rather than a little before: the server's clock
+         decides the window, and asking early would hand back the same token. */
+      const wait = p ? Math.max(1000, p.expiresAt - Date.now() + 250) : 15000
+      if (timer) window.clearTimeout(timer)
+      timer = window.setTimeout(load, wait)
+    }
+    void load()
+    const onShow = () => {
+      if (document.visibilityState === 'visible') void load()
+    }
+    document.addEventListener('visibilitychange', onShow)
+    return () => {
+      alive = false
+      if (timer) window.clearTimeout(timer)
+      document.removeEventListener('visibilitychange', onShow)
+    }
+  }, [account?.id])
+  useEffect(() => {
+    if (!account) return
+    const t = window.setInterval(() => setNow(Date.now()), 1000)
+    return () => window.clearInterval(t)
+  }, [account?.id])
+
+  /*
     The QR is drawn from the code, not stored with it. Error correction M and a
     zero quiet zone: the card supplies its own white margin, and a doubled one
     only makes the modules smaller for a scanner to find.
   */
   useEffect(() => {
-    const code = account?.referralCode ?? m.code
+    const code = account ? pass?.token : m.code
     if (!code) return setQr(null)
     let alive = true
     void QRCode.toString(code, {
@@ -70,14 +123,16 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
     return () => {
       alive = false
     }
-  }, [m.code, account?.referralCode])
+  }, [m.code, account?.id, pass?.token])
 
   const say = (s: string) => {
     setNote(s)
     window.setTimeout(() => setNote(null), 2600)
   }
 
-  if (!isMember()) {
+  /* A signed-in member HAS a card — the account is the card. The local
+     "make my card" form is only for a visitor with no account. */
+  if (!account && !isMember()) {
     const preview = canJoin(initials, phone) ? makeCode(initials, phone) : null
     return (
       <AppChrome title="Member card" onBack={api.closeApp} className="is-beasty">
@@ -142,7 +197,18 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           ) : (
             <div className="member-qr-img" />
           )}
-          <p className="member-code">{account?.referralCode ?? m.code}</p>
+          {account ? (
+            <>
+              <p className="member-code member-code-name">{account.name}</p>
+              <p className="member-refresh" aria-live="polite">
+                {pass
+                  ? `Refreshes in ${countdown(Math.max(0, pass.expiresAt - now))}`
+                  : 'Getting your pass…'}
+              </p>
+            </>
+          ) : (
+            <p className="member-code">{m.code}</p>
+          )}
         </div>
 
         <div className="member-stats">
@@ -172,8 +238,9 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
         </div>
 
         <p className="member-lead">
-          Show this when you arrive. One point a day per business — scanning the same shop twice in
-          an afternoon does not count twice.
+          {account
+            ? 'Show this at the counter. It changes every minute and each one is good for a single scan, so a screenshot cannot be used by anyone else.'
+            : 'Show this when you arrive. One point a day per business — scanning the same shop twice in an afternoon does not count twice.'}
         </p>
 
         {/*
@@ -185,6 +252,8 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           have earned a point they have not is the one failure this programme
           cannot afford.
         */}
+        {isMember() && (
+        <>
         <h2 className="member-h">Simulate a shop scanning you</h2>
         {/*
           EVERY listed business, not the first four.
@@ -258,6 +327,16 @@ export function MemberCardApp({ api }: { api: ShellApi }) {
           Points are counted on this phone only and are not worth anything yet — no rate has been
           set and nothing can be redeemed. When a shop can really scan this, that is what changes.
         </p>
+        </>
+        )}
+
+        {account && (
+          <p className="member-fineprint">
+            {account.tierStatus === 'active'
+              ? 'A shop that scans this sees your first name and what your membership honours, and nothing else.'
+              : 'A shop that scans this sees your first name. Offers are honoured once a membership is paid and active.'}
+          </p>
+        )}
 
         {note && (
           <div className="dialer-toast" role="status">

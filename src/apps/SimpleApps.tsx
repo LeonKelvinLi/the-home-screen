@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { InstallGuide } from '../ios/InstallGuide'
 import { canInstall } from '../lib/install'
 import { useGate } from '../lib/gate'
-import { signOut as apiSignOut } from '../lib/account'
+import { signOut as apiSignOut, fetchTickets, type RaffleTicket } from '../lib/account'
 import type { ShellApi } from '../ios/Device'
 
 /**
@@ -14,6 +14,8 @@ import type { ShellApi } from '../ios/Device'
  * list of vendors marked "onboarding incomplete", which told customers the
  * kitchens might not get paid. Anything unfinished belongs in the README.
  */
+
+const TICKET_DATE = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
 
 export function RewardsApp({ api }: { api: ShellApi }) {
   /*
@@ -30,6 +32,27 @@ export function RewardsApp({ api }: { api: ShellApi }) {
   const tickets = account?.raffleTickets.total ?? 0
   const unused = account?.raffleTickets.unused ?? 0
   const referrals = account?.referrals ?? 0
+  /*
+    THE TICKETS THEMSELVES, not just how many. Glenn, 2026-09-06: "make sure
+    they have their own digital raffle for every user." Each one is a row on
+    the server with its own serial, so a member can point at ticket 000123
+    and it is theirs and nobody else's. Fetched when the screen opens and
+    again when the count on the account moves.
+  */
+  const [stubs, setStubs] = useState<RaffleTicket[] | null>(null)
+  useEffect(() => {
+    if (!account) {
+      setStubs(null)
+      return
+    }
+    let on = true
+    void fetchTickets().then((t) => {
+      if (on) setStubs(t)
+    })
+    return () => {
+      on = false
+    }
+  }, [account?.id, tickets])
   return (
     <AppChrome title="Rewards" onBack={api.closeApp} tint="#F06A00">
       <div className="plain">
@@ -37,6 +60,29 @@ export function RewardsApp({ api }: { api: ShellApi }) {
           <span className="reward-points">{tickets}</span>
           <span className="reward-label">{tickets === 1 ? 'raffle ticket' : 'raffle tickets'}</span>
         </div>
+        {account && stubs && stubs.length > 0 && (
+          <section className="tickets" aria-label="Your raffle tickets">
+            <h2 className="tickets-h">Your tickets</h2>
+            <ul className="ticket-list">
+              {stubs.map((t) => (
+                <li key={t.id} className={`ticket-stub${t.usedAt ? ' is-used' : ''}`}>
+                  <span className="ticket-no">No. {String(t.serial).padStart(6, '0')}</span>
+                  <span className="ticket-state">
+                    {t.usedAt ? `Entered${t.usedFor ? ` in ${t.usedFor}` : ''}` : 'Unused'}
+                  </span>
+                  <span className="ticket-meta">
+                    Earned when sign-up {t.earnedAtReferral} joined on your code ·{' '}
+                    {TICKET_DATE.format(new Date(t.earnedAt))}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <p className="plain-note">
+              Every ticket is yours alone: numbered, kept on your account, and good for any monthly
+              raffle. Draws are announced in News.
+            </p>
+          </section>
+        )}
         {account ? (
           <p>
             {referrals === 0

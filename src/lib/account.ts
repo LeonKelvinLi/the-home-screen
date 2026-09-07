@@ -42,6 +42,10 @@ export interface Account {
   rewards: Rewards
   /** Whether the server has a Payment Link to send anybody to. */
   paymentsConfigured: boolean
+  /** month or year — how the chosen tier is billed. Month until a yearly price exists. */
+  tierInterval: 'month' | 'year'
+  /** How often the pass on the member card rotates, so the card can count down. */
+  passWindowMs: number
 }
 
 export interface SignUp {
@@ -258,13 +262,16 @@ export interface TierResult {
  * provider may do that — so a null link has to be shown as "not connected yet"
  * rather than swallowed.
  */
-export async function chooseTier(tier: 'pass' | 'diamond'): Promise<TierResult | null> {
+export async function chooseTier(
+  tier: 'pass' | 'diamond',
+  interval: 'month' | 'year' = 'month',
+): Promise<TierResult | null> {
   try {
     const r = await fetch('/api/members/tier', {
       method: 'POST',
       headers: json,
       credentials: 'same-origin',
-      body: JSON.stringify({ tier }),
+      body: JSON.stringify({ tier, interval }),
     })
     if (!r.ok) return null
     const b = await r.json()
@@ -277,4 +284,84 @@ export async function chooseTier(tier: 'pass' | 'diamond'): Promise<TierResult |
 /** The link a member shares. Same string the QR encodes, so both can be shown. */
 export function shareLink(code: string): string {
   return `${window.location.origin}/?ref=${encodeURIComponent(code)}`
+}
+
+/**
+ * THE PASS: a signed token that changes every minute.
+ *
+ * Glenn's worry, 2026-09-06: a member's QR could be screenshotted and the
+ * picture used to redeem offers by somebody who never paid. So the code on the
+ * member card is no longer the referral code, which is meant to be shared, but
+ * a token the server signs for THIS member and THIS minute. A shop verifies it
+ * once; the second scan of the same picture is refused. Nothing here can mint
+ * one — the server needs the session to know whose it is.
+ */
+export interface Pass {
+  token: string
+  /** Epoch ms after which this token stops verifying (a scanner allows one
+      window of grace on top, for a screen that was already up). */
+  expiresAt: number
+  windowMs: number
+}
+
+export async function fetchPass(): Promise<Pass | null> {
+  try {
+    const r = await fetch('/api/members/pass', { credentials: 'same-origin', cache: 'no-store' })
+    if (!r.ok) return null
+    return (await r.json()) as Pass
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Another member's page, from Contacts: what they starred and liked.
+ *
+ * Glenn, 2026-09-06: "make sure people on contact list we can go into their
+ * profile and see what they liked." The server answers only to a signed-in
+ * member, and only with what that person did on business pages — never a
+ * number, an address or a handle.
+ */
+export interface MemberProfile {
+  id: string
+  name: string
+  since: number
+  /** Brand ids, newest first. */
+  likes: string[]
+  favourites: string[]
+  me: boolean
+}
+
+export async function fetchMemberProfile(id: string): Promise<MemberProfile | null> {
+  try {
+    const r = await fetch(`/api/members/${encodeURIComponent(id)}/profile`, {
+      credentials: 'same-origin',
+    })
+    if (!r.ok) return null
+    return (await r.json()) as MemberProfile
+  } catch {
+    return null
+  }
+}
+
+/** One raffle ticket, as the member holds it: numbered, dated, spent or not. */
+export interface RaffleTicket {
+  id: string
+  serial: number
+  /** The referral count that earned it: 3, 6, 9 … */
+  earnedAtReferral: number
+  earnedAt: number
+  usedAt: number | null
+  usedFor: string | null
+}
+
+export async function fetchTickets(): Promise<RaffleTicket[] | null> {
+  try {
+    const r = await fetch('/api/members/tickets', { credentials: 'same-origin' })
+    if (!r.ok) return null
+    const b = (await r.json()) as { tickets: RaffleTicket[] }
+    return Array.isArray(b.tickets) ? b.tickets : []
+  } catch {
+    return null
+  }
 }

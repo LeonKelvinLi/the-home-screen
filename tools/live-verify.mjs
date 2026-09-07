@@ -226,6 +226,11 @@ for (const s of [
   'is-glow', 'icon-glow',
   /* The screens that were showing account data without reading the account. */
   'joinedAt', 'raffle tickets', 'Open the whole directory and earn rewards',
+  /* 2026-09-06: the rotating pass on the member card, a member's page from
+     Contacts, the numbered tickets on Rewards, and the yearly switch's style
+     (the switch itself stays hidden until a yearly price exists). */
+  'api/members/pass', 'Refreshes in', 'single scan', 'api/members/', '/profile', 'Nothing liked yet',
+  'api/members/tickets', 'ticket-stub', 'members-interval',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }
@@ -235,6 +240,15 @@ for (const s of [
 for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP']) {
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
+
+/* The pass and the till, from outside: no session means no pass, and no vendor
+   or operator token means no scan. Both are the doors that must be shut on the
+   live site; neither creates anything. */
+const passOut = await fetch(base + '/api/members/pass').then((r) => r.status).catch(() => 0)
+const scanOut = await fetch(base + '/api/pass/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{"token":"bp1.x.1.y"}' }).then((r) => r.status).catch(() => 0)
+console.log(`pass          : signed out ${passOut} | scan without a token ${scanOut}`)
+if (passOut !== 401) fails.push(`/api/members/pass answered ${passOut} signed out, expected 401`)
+if (scanOut !== 401) fails.push(`/api/pass/verify answered ${scanOut} with no vendor or operator token, expected 401`)
 
 await b.close()
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); process.exit(1) }

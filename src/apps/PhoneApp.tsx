@@ -12,7 +12,7 @@ import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS, brandById } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
 import { OPERATOR, hasOperatorContact, telHref } from '../lib/operator'
-import { fetchDirectory, type DirectoryMember } from '../lib/account'
+import { fetchDirectory, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
 import type { PetAvatar } from '../lib/profile'
 
 /*
@@ -92,6 +92,20 @@ export function PhoneApp({ api }: { api: ShellApi }) {
   /** A sample profile being read. Null is the directory itself. */
   const [person, setPerson] = useState<Person | null>(null)
   /*
+    A REAL MEMBER'S PAGE. Glenn, 2026-09-06: "make sure people on contact list
+    we can go into their profile and see what they liked". The row is what the
+    directory already gave us; the page is fetched when it is opened, and it
+    holds what that member starred and liked on business pages — nothing else
+    about them leaves the server.
+  */
+  const [open, setOpen] = useState<{ row: DirectoryMember; profile: MemberProfile | null | 'loading' } | null>(null)
+  const openMember = (row: DirectoryMember) => {
+    setOpen({ row, profile: 'loading' })
+    void fetchMemberProfile(row.id).then((p) =>
+      setOpen((cur) => (cur && cur.row.id === row.id ? { row, profile: p } : cur)),
+    )
+  }
+  /*
     THE REAL LIST. Glenn, 2026-09-02: "how soon can we have the contact list
     update every time a user signs up?" Fetched once when the app opens; null
     means signed out or unreachable, and then the sample profiles below stand
@@ -155,6 +169,90 @@ export function PhoneApp({ api }: { api: ShellApi }) {
         <p className="keypad-note">Calling is not connected yet — no number has been published.</p>
         {tabBar}
       </div>
+    )
+  }
+
+  if (tab === 'contacts' && open) {
+    const prof = open.profile
+    const loaded = prof && prof !== 'loading' ? prof : null
+    const favs = (loaded?.favourites ?? []).map((id) => brandById(id)).filter(Boolean)
+    const liked = (loaded?.likes ?? []).map((id) => brandById(id)).filter(Boolean)
+    const who = open.row.me ? 'you' : 'they'
+    return (
+      <NavScreen title={open.row.name} onBack={() => setOpen(null)} backTitle="Contacts" footer={tabBar}>
+        <div className="prof member-page">
+          <header className="prof-head">
+            <span className="prof-avatar" aria-hidden="true">
+              <PetAvatarArt pet={petFor(open.row.id)} size={96} />
+            </span>
+            <div className="prof-id">
+              <span className="prof-name">
+                {open.row.name}
+                {open.row.me ? ' (you)' : ''}
+              </span>
+              <p className="prof-spread">Member since {SINCE.format(new Date(open.row.since))}</p>
+            </div>
+          </header>
+
+          {prof === 'loading' && <p className="prof-empty">Loading…</p>}
+          {prof === null && <p className="prof-empty">Could not load this member just now.</p>}
+
+          {loaded && (
+            <>
+              <section>
+                <h2 className="prof-h">Top favourites</h2>
+                {favs.length === 0 ? (
+                  <p className="prof-empty">Nothing starred yet.</p>
+                ) : (
+                  <div className="prof-grid">
+                    {favs.slice(0, 9).map((b) => {
+                      const bg = b!.logo.bg.split('|')[0]
+                      return (
+                        <button
+                          className="prof-tile"
+                          key={b!.id}
+                          style={{ background: bg }}
+                          onClick={() => api.openApp(b!.id)}
+                          aria-label={b!.name}
+                        >
+                          <span className="prof-tile-name" style={{ color: readableOn(bg).fg }}>
+                            {b!.name}
+                          </span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
+              </section>
+
+              <section>
+                <h2 className="prof-h">Liked</h2>
+                {liked.length === 0 ? (
+                  <p className="prof-empty">Nothing liked yet.</p>
+                ) : (
+                  <div className="prof-chiprow">
+                    {liked.map((b) => (
+                      <button className="prof-chip" key={b!.id} onClick={() => api.openApp(b!.id)}>
+                        <span
+                          className="prof-chip-dot"
+                          style={{ background: b!.logo.bg.split('|')[0] }}
+                          aria-hidden="true"
+                        />
+                        {b!.name}
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </section>
+
+              <p className="prof-fineprint">
+                What {who} starred and liked on business pages, and when {who} joined. Nothing else
+                — no number, no address, no handle. Every business here is real and opens.
+              </p>
+            </>
+          )}
+        </div>
+      </NavScreen>
     )
   }
 
@@ -357,14 +455,14 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                       </span>
                     }
                     detail={`Member since ${SINCE.format(new Date(mem.since))}`}
-                    chevron={false}
+                    onClick={() => openMember(mem)}
                   />
                 ))}
               </ListSection>
             ))}
             <p className="ios-section-footer">
               {dir.count === 1 ? '1 member so far.' : `${dir.count} members so far.`} Everyone who signs
-              up appears here the moment they do: a first name and a last initial, nothing else.
+              up appears here the moment they do. Open one to see what they have starred and liked.
             </p>
           </>
         ) : (

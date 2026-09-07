@@ -10961,3 +10961,100 @@ textarea {
       0 0 20px 6px rgba(246, 216, 0, 0.4);
   }
 }
+
+
+/* ---- The pass: the rotating code on the member card ---- */
+.member-code-name {
+  font-size: 17px;
+  letter-spacing: 0.02em;
+}
+
+.member-refresh {
+  margin: -6px 0 0;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: rgba(20, 20, 22, 0.55);
+}
+
+/* ---- Raffle tickets, as stubs a member can point at ---- */
+.tickets {
+  margin-top: 18px;
+}
+
+.tickets-h {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ticket-list {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ticket-stub {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2px 10px;
+  align-items: baseline;
+  padding: 12px 14px;
+  border: 1px dashed rgba(240, 106, 0, 0.55);
+  border-radius: 12px;
+  background: rgba(240, 106, 0, 0.06);
+}
+
+.ticket-no {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.ticket-state {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #1a6b2e;
+}
+
+.ticket-stub.is-used .ticket-state {
+  color: rgba(60, 60, 67, 0.6);
+}
+
+.ticket-meta {
+  grid-column: 1 / -1;
+  font-size: 12.5px;
+  color: rgba(60, 60, 67, 0.7);
+}
+
+/* ---- Monthly / Yearly, shown only once a tier carries a yearly price ---- */
+.members-interval {
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(120, 120, 128, 0.12);
+  width: max-content;
+  margin: 0 auto 14px;
+}
+
+.members-interval-btn {
+  border: 0;
+  background: transparent;
+  padding: 7px 16px;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  color: #141414;
+}
+
+.members-interval-btn.is-on {
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}

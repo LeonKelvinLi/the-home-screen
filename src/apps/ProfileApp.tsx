@@ -412,7 +412,7 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             the member list in Contacts is built from them. */}
         <p className="prof-fineprint">
           {account
-            ? 'Your name and the month you joined are visible to other members in Contacts. Everything else on this page — your picture, your favourites, what you have visited — is on this phone only and has been sent nowhere. No followers, no following, and no numbers about you: everything'
+            ? 'Other members can open you from Contacts and see your name, the month you joined, and the businesses you have starred or liked. Your picture and what you have visited are on this phone only and have been sent nowhere. No followers, no following, and no numbers about you: everything'
             : 'This profile is on this phone only. You are not signed in, so nothing here has been sent anywhere and nobody else can see it. No followers, no following, and no numbers about you: everything'}
           on this page is a place someone can tap and go to.
         </p>

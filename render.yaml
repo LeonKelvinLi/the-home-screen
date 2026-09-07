@@ -92,6 +92,15 @@ services:
         sync: false
       - key: STRIPE_WEBHOOK_SECRET
         sync: false
+      # Yearly Payment Links, once a tier carries a yearly price.
+      - key: STRIPE_PAYMENT_LINK_PASS_YEARLY
+        sync: false
+      - key: STRIPE_PAYMENT_LINK_DIAMOND_YEARLY
+        sync: false
+      # Signs the rotating pass on the member card. Random, and never in this
+      # file: without it every pass dies on each restart.
+      - key: PASS_SECRET
+        generateValue: true
     disk:
       # LEGACY — see note 2. Holds the pre-Postgres SQLite file and nothing else.
       name: orders

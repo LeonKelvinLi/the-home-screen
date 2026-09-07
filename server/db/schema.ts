@@ -344,6 +344,23 @@ CREATE TABLE IF NOT EXISTS brand_signals (
 
 CREATE INDEX IF NOT EXISTS idx_signals_brand ON brand_signals(brand_id, kind);
 
+/*
+  EVERY PASS SCAN, ONCE. The member card shows a signed token that rotates
+  every minute; a shop verifies it through /api/pass/verify. The UNIQUE on
+  token_hash is what makes a screenshot worthless: the first scan of a token
+  is recorded here and the second is refused, however fresh it still looks.
+  Hashed like every other token in the database.
+*/
+CREATE TABLE IF NOT EXISTS pass_scans (
+  id         TEXT PRIMARY KEY,
+  token_hash TEXT NOT NULL UNIQUE,
+  member_id  TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  scanned_by TEXT NOT NULL,
+  created_at BIGINT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS idx_pass_scans_member ON pass_scans(member_id, created_at);
+
 CREATE TABLE IF NOT EXISTS events (
   id         TEXT PRIMARY KEY,
   date       TEXT NOT NULL,
@@ -445,6 +462,21 @@ ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS channel TEXT NOT NULL DEFAULT '
   window in /api/members/start.
 */
 ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS delivered BOOLEAN NOT NULL DEFAULT TRUE;
+
+/*
+  A TICKET HAS A NUMBER ON IT. Glenn's raffle is per member — every user holds
+  their own tickets — and a ticket somebody can show has to be identifiable
+  by something shorter than a sixteen-hex id. BIGSERIAL numbers the rows that
+  already exist in the order they were minted and every new one after them,
+  so no two members can ever hold the same number.
+*/
+ALTER TABLE raffle_tickets ADD COLUMN IF NOT EXISTS serial BIGSERIAL;
+
+/*
+  MONTH OR YEAR. A membership can be taken yearly once Glenn names the price;
+  until then every row says month, which is what every existing one is.
+*/
+ALTER TABLE members ADD COLUMN IF NOT EXISTS tier_interval TEXT NOT NULL DEFAULT 'month';
 `
 
 /**
