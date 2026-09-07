@@ -21,6 +21,10 @@ exist because the fault they look for has shipped from this repo at least once.
     node   tools/audit-about.mjs                               # About: chapters closed until tapped, picture loads
     node   tools/audit-login.mjs                               # sign-in: reissue a code, no env names on screen
     node   tools/audit-journey.mjs                             # the whole journey in one session, 22 steps
+    node   tools/audit-pass.mjs                                # the member card's pass: rotates, expires, scans once
+    node   tools/audit-member-profile.mjs                      # a member's page from Contacts: their likes, nothing private
+    node   tools/audit-raffle.mjs                              # numbered raffle tickets, per member, via the referral chain
+    node   tools/audit-tier-interval.mjs                       # monthly records, yearly refused until a price exists
     node   tools/live-smoke.mjs                                # production, read-only, creates nothing
 
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app
@@ -39,6 +43,15 @@ later runs and page loads start timing out.
 
 `tools/audit-journey.mjs` is the one that tests the joins rather than a seam:
 one browser session, stranger to lapsed member, 22 steps in order.
+
+## Reading Glenn's thread
+
+    python3 tools/thread-dump.py --since 2026-09-01 --his
+    python3 tools/thread-dump.py --grep "supply|yearly|raffle|qr"
+
+Prints the iMessage conversation as text, the way `gap-check.py` reads it.
+Needs Full Disk Access for the terminal it runs from — without it macOS
+answers "unable to open database file", which is a permission, not a bug.
 
 ## Checking what is actually live
 
