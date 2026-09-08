@@ -25,7 +25,7 @@ import type { LocalSeed } from './localBrands'
  */
 export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   /*
-     1-Up Retro — gathered 2026-09-05 from own-domain
+     1-Up Retro — gathered 2026-09-08 from own-domain
      their spelling: "1-Up Retro Video Games" (roster keeps "1-Up Retro")
      they are: Retro video games
      logo: https://www.1upretrogaming.com/cdn/shop/files/shirtlogo.png?v=1721634226 (1920x1200) — not cut into a tile yet
@@ -49,7 +49,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Adzeela — gathered 2026-09-05 from own-domain
+     Adzeela — gathered 2026-09-08 from own-domain
      they are: Out-of-home advertising
      logo: https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69dc669a982fd67a35b6482c.png (401x310) — not cut into a tile yet
      flag: no street address — footer lists only 'San Jose, California / Manila, Philippines'
@@ -67,7 +67,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Al Pastor Papi — gathered 2026-09-05 from own-domain
+     Al Pastor Papi — gathered 2026-09-08 from own-domain
      they are: Mexican grill
      logo: https://www.alpastorpapisf.com/uploads/b/75a7c2018d51b2a13ae14860ad1a9f6f0c865a1f22ab6e50c3a4e4419883ea86/APP%20Combined%20Logo%20%283%29_1775243606.png (2000x2000) — not cut into a tile yet
      flag: no phone or email published anywhere — the contact page is a form
@@ -116,7 +116,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Ally Virtual — gathered 2026-09-05 from own-domain
+     Ally Virtual — gathered 2026-09-08 from own-domain
      they are: CRM and automation
      logo: https://assets.cdn.filesafe.space/GyU3aAixj9Swzx1v6VvR/media/6628a0b2424438359e1ba0d3.png (350x180) — not cut into a tile yet
      flag: the only published address is 30 Gould St Ste R, Sheridan, WY — a registered-agent suite, not a place a customer visits — so no address is carried onto the page; both phones are San Jose area codes
@@ -145,13 +145,13 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Almas Auto & Tires — gathered 2026-09-05 from own-domain — BLOCKED: domain does not resolve — NXDOMAIN for almasautoandtiresca.com and www. on 1.1.1.1 and 8.8.8.8; no site to read
+     Almas Auto & Tires — gathered 2026-09-08 from own-domain — BLOCKED: domain does not resolve — NXDOMAIN for almasautoandtiresca.com and www. on 1.1.1.1 and 8.8.8.8; no site to read
   */
   'almas-auto-tires': {
   },
 
   /*
-     Andrew Shin — gathered 2026-09-05 from own-domain
+     Andrew Shin — gathered 2026-09-08 from own-domain
      their spelling: "Law Offices of Andrew B. Shin" (roster keeps "Andrew Shin")
      they are: Personal injury law
      logo: https://cdn.prod.website-files.com/6733dda61510d345ee4e95f5/6889615445e8101a63b519f5_logo%20new%201.jpg (700x240) — not cut into a tile yet
@@ -168,7 +168,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Armenta Landscape Co. — gathered 2026-09-05 from own-domain
+     Armenta Landscape Co. — gathered 2026-09-08 from own-domain
      they are: Landscape contractor
      flag: Glenn filed them under 'Antioch • Goods'; they are a landscape contractor and sit on Antioch Services
      flag: serves Brentwood, Oakley, Antioch, Walnut Creek, Dublin, San Ramon, Danville, Pleasanton, Livermore, Lafayette, per their site
@@ -182,7 +182,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Babs Delta Diner — gathered 2026-09-05 from own-domain
+     Babs Delta Diner — gathered 2026-09-08 from own-domain
      they are: American diner
      flag: the site is an ordering mini-site with no about page and no email
      flag: a breakfast called 'Chicken Apple Sausage' is described as boneless pork chops — a copy-paste error; frequent menu typos
@@ -208,7 +208,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Banh Mi Oven — gathered 2026-09-05 from stopgap — BLOCKED: domain is not registered; there is no site to read
+     Banh Mi Oven — gathered 2026-09-08 from stopgap — BLOCKED: domain is not registered; there is no site to read
      flag: the given domain banhmioven.us does not exist — NXDOMAIN on two resolvers, and the .us registry has no record of it; the link he sent is dead
   */
   'banh-mi-oven': {
@@ -216,7 +216,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Banh Mi Xpress — gathered 2026-09-05 from own-domain
+     Banh Mi Xpress — gathered 2026-09-08 from own-domain
      they are: Vietnamese sandwiches
      flag: no business hours or days published — the only time statement is 'banh mi served from 7:30am to 6pm'
      flag: the 'grilled pork' description actually describes the grilled beef item
@@ -248,7 +248,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Barrel Bistro & Wine Bar — gathered 2026-09-05 from own-domain
+     The Barrel Bistro & Wine Bar — gathered 2026-09-08 from own-domain
      they are: Wine bar and bistro
      logo: https://images.squarespace-cdn.com/content/v1/62e481f28715b55915a9d17d/0cb1963c-d787-4160-9e53-4e09cd1c127f/Barrel-logotype-horizontal-2color.png (2085x200) — not cut into a tile yet
      flag: HOURS CONFLICT on their own site: the footer says Sun-Thu 9am-10pm, Fri-Sat 9am-11pm with breakfast 9-2, while their structured data says 11am-10pm every day — no hours carried
@@ -330,7 +330,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bay Area Charters — gathered 2026-09-05 from own-domain
+     Bay Area Charters — gathered 2026-09-08 from own-domain
      their spelling: "Bay Area Charters Inc." (roster keeps "Bay Area Charters")
      they are: Charter buses
      flag: fleet size contradicts itself: the homepage says 57-passenger motor coaches, the Services page says 55
@@ -347,7 +347,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bay Side Fencing Co — gathered 2026-09-05 from site
+     Bay Side Fencing Co — gathered 2026-09-08 from site
      they are: Fencing contractor
      flag: Lic #1042534, on their contact page and Instagram bio
      flag: serves all of the Bay Area per their Instagram bio; the showroom is the Antioch address
@@ -365,7 +365,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Benicia Grill — gathered 2026-09-05 from own-domain
+     Benicia Grill — gathered 2026-09-08 from own-domain
      they are: Breakfast and lunch
      logo: http://www.benicia-grill.com/assets/images/logo/logo-white.jpg (166x161) — not cut into a tile yet
      flag: About, Menu, Gallery, Coupons and Contact all return byte-identical homepage HTML — the whole nav is one page
@@ -392,7 +392,101 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bloom Balloon — gathered 2026-09-05 from own-domain
+     Bhan Mae Vane — gathered 2026-09-08 from own-domain
+     they are: Modern Lao & Thai cuisine
+     logo: https://static1.squarespace.com/static/5da923454173893f4e094cd2/t/5dade6113707f45fc261ce60/1571677727641/4074FCD7-CF55-489B-83FB-34B563D20F64.png?format=1500w (1500x600) — not cut into a tile yet
+     flag: Operator's note: Alameda • Goods — Some place my daughter visits
+     flag: Operator tagged it 'Goods', but this is a sit-down restaurant (the site's own tagline is 'MODERN LAO & THAI FOOD'; Instagram category 'Restaurant')
+     flag: Hours agree everywhere on their own channels: site footer, Visit page and Instagram bio all say Tues–Sun 11am-3pm and 5pm-9pm, Mondays closed; the Visit page and Instagram bio both add last seating/dine-in 2:30pm (lunch) and 8:30pm (dinner), last takeout 2:45pm and 8:45pm
+     flag: The $75 BMV Ultimate Papaya Platter is a standalone image block sitting between the Soup and Specialty Dishes sections with no section header of its own, so its section is left blank; its add-on proteins are +$8
+     flag: No logo image in the site header (plain text 'Bhan Mae Vane'); logo_url is the site's og:image share banner (orange emblem, name and 'MODERN LAO & THAI CUISINE' on white with bamboo/wood-grain side borders). The URL ends in .png but the Squarespace CDN serves it as WebP, and the meta tag uses http:// although https works; the site favicon is a generic red chili-pepper icon (100x100), not the logo
+     flag: Squarespace template leftovers: the Menu and Drink pages display 'This is the page description.', every page's footer has an empty 'Embed Block — Add an embed URL or code.', and the homepage meta description is blank
+     flag: Footer copyright reads '© 2021, Bhan Mae Vane LLC' (stale year); the wine list carries 2012–2018 vintages with a note that the wine menu is 'subject to change', so drink prices may be dated
+     flag: Online ordering is only a DoorDash partner link on the site's 'Door Dash' page (third-party, no prices taken from it); the site says catering and reservations are by phone only
+     flag: Policies published on the Visit page: 18% gratuity for parties of 6 or more; reservations strongly preferred for parties larger than 8 and same-day reservations not usually taken; corkage $20 per bottle, four bottles max; gift cards sold in restaurant only; catering needs at least 2 days notice
+     flag: Name variants: site title and Instagram name 'Bhan Mae Vane'; footer 'Bhan Mae Vane LLC'; the Facebook link on the Instagram profile reads 'Bhan Mae Vane Restaurant'
+     flag: Our Story page names the owners as sisters Bebe Lach (Chef-Owner) and Thip Tran (Owner), cooking from their mother's recipes; no opening date is published
+     flag: Not published anywhere on their own site or Instagram: opening year, parking info, a full catering menu; the menu page publishes 60-plus priced dishes plus a drink list, so items here are a 40-item selection of the base prices
+  */
+  'bhan-mae-vane': {
+    address: "1511 Webster Street, Alameda, CA 94501",
+    phone: "510-227-5197",
+    email: "info@bhanmaevane.com",
+    hours: "Tue-Sun 11am-3pm, 5pm-9pm, closed Mon",
+    instagram: "bhanmaevane",
+    cuisine: "Modern Lao & Thai cuisine",
+    tagline: "Modern Lao & Thai restaurant on Webster Street in Alameda",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Fried Tofu","Served with Thai peanut sauce",1400],
+        ["Eggrolls (Pork or Veggies)","Served with our sweet chili sauce, veggie or pork",1600],
+        ["Chicken Satay","Grilled chicken skewers served with peanut sauce and cucumber sauce.",1800],
+        ["Shrimp in a Blanket","Fried seasoned shrimps wrapped in eggroll wrapper served with sweet chili sauce",1800],
+        ["Appetizer Sampler","Shrimp in a Blanket (4), Eggrolls (3), and Fried Tofu (8)",2400],
+      ] },
+      { name: "Salads", items: [
+        ["Papaya Salad","Lao style - Hand shredded green papaya mixed with fresh Thai chili, tomatoes, lime juice, shrimp paste and anchovy dressing. Thai style - Hand shredded green papaya mixed with fresh Thai chili, tomatoes, lime juice and fish sauce dressing",1800],
+        ["Laab Gai","Minced chicken and gizzards mixed with toasted rice powder, fresh herbs and lime dressing.",2000],
+        ["Laab Seen","Lao Style - Sliced beef and tripe mixed with toasted rice powder, fresh herbs and lime dressing.",2200],
+        ["Yum Talay (Seafood Salad)","Fresh shrimp and calamari mixed with fresh herbs and tossed with our chili lime sauce.",2600],
+      ] },
+      { name: "Soup", items: [
+        ["Tom Yum","Spicy and sour soup with mushrooms and herbs (chicken / tofu / veggies / shrimp +2 / seafood +6)",2000],
+        ["Tom Kha","Coconut soup with lemongrass, galangal, kaffir lime leaves and fresh mushrooms (chicken / tofu / veggie / shrimp +2 / seafood +6)",2000],
+      ] },
+      { name: "Menu", items: [
+        ["BMV Ultimate Papaya Platter","Papaya Salad (Lao or Thai style), pork rinds, vermicelli noodles, cabbage and rice (steamed or sticky). 3 options of protein (Meats & BBQ). Options: Crispy Pork Belly / BBQ Pork Ribs / Fried Wings / Angel Wings / Spicy Wings / Lao Sausages / Beef Jerky / Beef Short Ribs +8",7500],
+      ] },
+      { name: "Specialty Dishes", items: [
+        ["Sakoo","Steamed savory tapioca balls stuffed with ground pork, peanuts, sweet radishes and shallots. Served with lettuce, fried chili peppers, fried garlic, and fresh herbs.",2000],
+        ["Nam Khao","Crispy rice salad tossed with preserved pork sausage, peanuts, green onions, and cilantro. Served with fried chili peppers, lettuce, mint, and cilantro.",2000],
+        ["Fresh Lao Spring Rolls","Choice of grilled beef, shrimp, crispy pork belly, or tofu wrapped in rice paper with fresh herbs and lettuce. Served with pineapple anchovy sauce, sweet fish sauce & peanut sauce. Combo shrimp & beef +$4",1800],
+        ["Aou Nuer","Stewed beef with lemongrass, fresh herbs, mushrooms, and Thai eggplant.",2200],
+        ["Mok Pla","Basa fish with herbs steamed in banana leaves. Served with steamed vegetables and Laotian tomato sauce.",2500],
+        ["Fried Clear Rice Roll Wraps","Our signature fried rice paper egg rolls with pork. Served with our sweet fish sauce, lettuce, herbs, and vermicelli noodles.",2000,null,"signature"],
+        ["Phatty Special","Shrimp garlic noodles with a strip of crispy pork belly and your choice of (4 pieces) fried, angel or spicy chicken wings.",3800],
+      ] },
+      { name: "Meat", items: [
+        ["Seen Lod (Lao Beef Jerky)","Beef jerky served with Laotian roasted tomato sauce and steam vegetables.",2000],
+        ["Sai Oua (Lao Sausages)","Spicy pork sausage with herbs served with Laotian tomato sauce.",2000],
+        ["Crispy Pork Belly","Fried pork belly served with chili lime sauce.",2200],
+        ["BBQ Pork Ribs","Grilled lemongrass marinated pork spareribs served with chili lime sauce.",2200],
+        ["BBQ Beef Short Ribs","Grilled marinated beef short ribs served with chili lime sauce.",2800],
+        ["Fried Wings","Lightly battered and seasoned crispy fried wings (8)",1800],
+        ["Angel Wings","Lightly battered crispy fried wings tossed with our special sweet chili sauce (8)",1800],
+        ["Spicy Wings","Lightly battered crispy fried wings tossed with our special sweet and spicy chili sauce mix (8)",1800],
+        ["Combo Wings Platter","Fried Wings (7) Angel Wings (7) Spicy Wings (7)",4600],
+      ] },
+      { name: "Entrees", items: [
+        ["Pad Ka Pow","Wok fried basil, mushrooms, bell peppers, and onions with choice of protein.",2000],
+      ] },
+      { name: "Fried Rice and Noodle Dishes", items: [
+        ["Garlic Noodles","Wok fried egg noodles with garlic and butter.",1800],
+        ["Pad Thai","Wok fried thin rice noodles with tamarind sauce, tofu, eggs, bean sprouts and green onions.",2000],
+        ["Pad Kee Mao","Wok fried flat wide rice noodles with spicy basil sauce, onions, broccoli, bell peppers and fresh basil.",2000],
+      ] },
+      { name: "Noodle Soup", items: [
+        ["Khao Piek","Fresh handmade noodles with chicken in savory chicken broth. Choice of pork blood optional.",1800],
+        ["Khao Soy","Fermented spicy bean paste cooked with ground pork and fresh tomatoes served with flat wide rice noodles, sliced beef and pork meatballs.",2000],
+        ["Khao Poon Gai","Laotian curry chicken vermicelli noodle soup. Contains bamboo shoots and quail eggs. Choice of pork blood optional.",2000],
+        ["Pho E-Lao","Laotian style beef rice noodle soup with sliced beef and pork meatballs, beef tripe optional.",2000],
+      ] },
+      { name: "Curries", items: [
+        ["Geng Dang (Red Curry)","Coconut milk red curry simmered with onions, bamboo shoots, bell peppers and basil with choice of protein.",2000],
+      ] },
+      { name: "Dessert", items: [
+        ["Sticky Rice with Mango","Sticky rice with sweet coconut milk topped with mangoes and toasted sesame seeds",1000],
+        ["Purple Rice with Egg Custard","Purple rice with sweet coconut milk topped with our special egg custard and toasted sesame seeds",1000],
+      ] },
+      { name: "Specialty Drinks (Non-Alcoholic Beverages)", items: [
+        ["Thai Iced Tea","",500],
+      ] },
+    ],
+    siteNote: "Base prices from the Menu and Drink pages of bhanmaevane.com (entrees, fried rice/noodles and curries add beef +$3, shrimp +$4, shrimp & calamari +$8; soups shrimp +$2, seafood +$6); hours from the Visit page and site footer, matching the Instagram bio.",
+  },
+
+  /*
+     Bloom Balloon — gathered 2026-09-08 from own-domain
      their spelling: "BLOOM BALLOON" (roster keeps "Bloom Balloon")
      they are: Balloon decor
      logo: https://static.tildacdn.net/tild6230-3234-4430-b835-343032333532/logo_Bloom_Balloon_r.jpeg (1680x1711) — not cut into a tile yet
@@ -407,7 +501,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bober Tea & Mochi — gathered 2026-09-05 from own-domain
+     Bober Tea & Mochi — gathered 2026-09-08 from own-domain
      their spelling: "Bober Tea & Coffee" (roster keeps "Bober Tea & Mochi")
      they are: Boba and mochi donuts
      logo: https://framerusercontent.com/images/MqLkWIPHQiotmvGb9mJ1AyXfWc8.png (500x500) — not cut into a tile yet
@@ -434,7 +528,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Bodylines Day Spa — gathered 2026-09-05 from own-domain
+     Bodylines Day Spa — gathered 2026-09-08 from own-domain
      they are: Day spa
      flag: leftover Wix duplicate pages: 'Copy of Home' is a visible nav item, and live service URLs use 'copy-of-' slugs
      flag: a bare Constant Contact signup URL is pasted as stray text into the page head
@@ -464,7 +558,190 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Boudreaux Cajun Steak House — gathered 2026-09-05 from own-domain
+     BODYROK East Bay — gathered 2026-09-08 from own-domain — BLOCKED: Mindbody store and schedule pages (clients.mindbodyonline.com, studioid=283626) returned HTTP 403 'Security Check' to WebFetch and to curl; they were read instead in the real browser pane, so all Mindbody facts above come from the rendered pages on 2026-09-07. The two t.bodyrok.com tracking links returned 405 to HEAD; on GET one redirected to the Mindbody Walnut Creek community-events schedule (also 403 to curl) and the other to a Google Form. Instagram was not fetched; its facts come from the operator's four screenshots.
+     they are: Reformer Pilates studio
+     logo: https://bodyrok.com/wp-content/uploads/2024/07/Logo-large-1024x135.png (1024x135) — not cut into a tile yet
+     flag: The operator's exact note: Multiple locations
+     flag: Name is spelled differently on their own properties: brand site pages just say 'BODYROK'; their Mindbody booking site is titled 'BODYROK - East Bay'; the Instagram display name is 'BODYROK EASTBAY' (handle bodyrokeastbay); the round avatar logo reads 'BODYROK EAST BAY'; the operator wrote 'BodyRok East Bay'. 'BODYROK East Bay' used here.
+     flag: Six East Bay studio pages exist but only four are open. Walnut Creek (1380 North California Boulevard) says 'Opening Late Summer 2026' and the studios index labels it 'Coming Soon'; Lafayette (971 Moraga Rd) says 'Opening Fall 2026' and is labeled 'Coming Soon' on the index. Their addresses are in locations only and were left out of the top-level address so a card does not show unopened studios.
+     flag: Linktree bio has a typo 'ROCKRDIGE' and says only 'WALNUT CREEK COMING SOON!', while the Instagram bio says 'Coming Soon: Walnut Creek & Lafayette'.
+     flag: No phone number appears on any bodyrok.com studio page or on the Mindbody store. The only number published is the Instagram Contact sheet's 'Text (510) 900-9234', which is a text line for the whole East Bay group, so every per-studio phone is null.
+     flag: No opening hours are published on the site, linktree, Instagram or Mindbody; only class schedules. For reference, class start times on the Mindbody schedule for the week of Sept 7-13 2026 (Mon Sept 7 was a holiday short schedule): Berkeley Tue-Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, Sat 7am-12pm, Sun 8am-12pm; Oakland Lakeshore Tue-Thu 6:00am-7:30pm, Fri 6:00am-6:30pm, Sat-Sun 7am-12pm; Alamo from 6:00am Tue-Fri with last classes 5:30pm Tue, 6:30pm Wed, 12pm Thu, 1pm Fri, Sat-Sun 7-11am; Rockridge Tue and Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, no classes Wed Sept 9, Sat 8-11am, Sun 8am-12pm. Classes are 45 minutes.
+     flag: The studio pages link to Instagram @bodyrokstudio (the brand account), not @bodyrokeastbay.
+     flag: Wording differs between studio pages while prices are identical: intro first item is 'First Class' on Berkeley and Rockridge but '1 Class' on Alamo and Oakland; section is 'Class Packages' on Berkeley and Oakland but 'Class Packs' on Alamo and Rockridge; validity reads '30 Day Expiration' vs 'Valid For 30 Days' and 'Valid For 6 Months' vs '6 Month Expiration'.
+     flag: Addresses are inconsistently formatted on their site: Alamo, Rockridge, Walnut Creek and Lafayette have no ZIP code and end in ', USA'; Oakland spells out 'California'; Alamo's '170f Alamo Plaza' uses a lowercase suite letter. Kept exactly as published.
+     flag: Rockridge is a neighborhood of Oakland, so there are two Oakland-addressed studios (3303 Lakeshore Ave and 5901 College Avenue); Instagram and the site list 'Oakland' and 'Rockridge' as separate studios.
+     flag: Linktree button 'BUY YOUR ROCKRIDGE FOUNDING MEMBERSHIP' points to Mindbody prodId=205, which no longer resolves to any contract (the store only offers the four EastBay Access memberships and four Walnut Creek founding memberships) and the Rockridge page says 'now open' with standard prices, so that button looks stale.
+     flag: Other stale linktree buttons: 'SIGN UP FOR ROCKRIDGE CLASSES!' carries a hard-coded schedule date 05/09/26; 'FREE Pilates in the Park with Kelsey - 8/30!' (t.bodyrok.com link resolving to the Mindbody schedule for location 5 'Walnut Creek', category 'Community Events') is a past event; 'August Promo- Get your membership now' was still up in September.
+     flag: Walnut Creek founding prices ($83.30, $132.30, $167.30, $195.30) are exactly 30% off the standard $119, $189, $239, $279 tiers; Mindbody says 'lock in your 30% discount for the life of your Walnut Creek only membership', founding members pay a '$25 drop-in rate per class' at the other East Bay studios until opening, and the pinned Instagram post says 'LAST CALL 30% OFF FOUNDING MEMBERSHIPS'.
+     flag: Memberships are named 'EastBay Access- Recurring ... (no commitment)' on Mindbody, yet the contract reads '$119.00 every month for 12 months' and 'auto-renews every 12 months until you cancel' with a 30-day written cancellation notice. Memberships are valid at Alamo, Berkeley, Oakland, Rockridge and Walnut Creek; extra classes $25 each; late cancel $15.
+     flag: No-show penalty contradicts itself: the studio pages say a $20 charge on unlimited plans, while the Mindbody Unlimited contract says 'you will incur a $25 No Show Fee'.
+     flag: Items on the Mindbody store that bodyrok.com does not show: 2 Weeks Unlimited $79, ROK 1 Month Unlimited (no contract) $349, three Back To School bonus packs expiring 12/5/2026, Special Event- Non-Member $20 and $10 Community class ONLY. The 'Community Events (out of studio)' category cannot be bought online and a 'Privates' category exists on the schedule filter with no price published.
+     flag: The brand home page says 'Generally a drop in class starts at around $30 (depending on location)', but the East Bay drop-in is $38.
+     flag: Only the black 'BODYROK' wordmark is hosted on their own domain (a white variant is at https://bodyrok.com/wp-content/uploads/2024/07/logo-white-1024x134.png, 1024x134); the round 'BODYROK EAST BAY' badge exists only as the Instagram and linktree avatar, hosted by those platforms.
+     flag: Per-studio emails on their site: berkeley@bodyrok.com, alamo@bodyrok.com, oakland@bodyrok.com, rockridge@bodyrok.com, walnutcreek@bodyrok.com, lafayette@bodyrok.com, plus brand info@bodyrok.com; Instagram's Contact sheet shows berkeley@BODYROK.com, which is why it is the top-level email.
+     flag: The operator sent a linktree; its 'Our Website' button goes to the brand's bodyrok.com/studios/ index, and booking and purchases run on Mindbody (clients.mindbodyonline.com, site ID 283626). site_kind is own-domain because the addresses and prices live on bodyrok.com.
+  */
+  'bodyrok-alamo': {
+    address: "170f Alamo Plaza, Alamo, CA, USA",
+    phone: "(510) 900-9234",
+    email: "alamo@bodyrok.com",
+    instagram: "bodyrokeastbay",
+    cuisine: "Reformer Pilates studio",
+    tagline: "Reformer Pilates studio at Alamo Plaza",
+    groups: [
+      { name: "Prices, from", items: [
+        ["First Class","Intro offer, 30 Day Expiration; Alamo and Oakland pages call it '1 Class'; Mindbody name 'INTRO SPECIAL - $20 First Visit'",2000,"$20"],
+        ["5 Classes","Intro offer, 30 Day Expiration; Mindbody name 'INTRO SPECIAL- 5 classes for $99 (1mth exp)'",9900,"$99"],
+        ["Unlimited","Intro offer: first month unlimited, 1 class per day, expires 30 days from first use; Mindbody name 'INTRO SPECIAL 1st MTH(1x day) $149'",14900,"$149"],
+        ["INTRO SPECIAL 2 Weeks Unlimited (1X Day) $79","Expiration Date: 14 days from first use; listed on their Mindbody store only, not on bodyrok.com",7900,"$79"],
+        ["1 Class","Drop-in, Valid For 6 Months; Mindbody name 'ROK Group- 1 session'",3800,"$38"],
+        ["5 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 5 Sessions'",16900,"$169"],
+        ["10 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 10 Sessions'",29900,"$299"],
+        ["20 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 20 Sessions'",54900,"$549"],
+        ["ROK 1 Month Unlimited (no contract)","One month unlimited, no contract; expiration one month from purchase; Mindbody store only",34900,"$349"],
+        ["4x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 4X Mth (no commitment)': $119.00 every month, valid at Alamo, Berkeley, Oakland, Rockridge, Walnut Creek; extra classes $25 each",11900,"$119/mo"],
+        ["8x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 8X Mth (no commitment)': $189.00 every month",18900,"$189/mo"],
+        ["12x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 12X Mth (no commitment)': $239.00 every month",23900,"$239/mo"],
+        ["Unlimited","Membership, 30 Day Cancellation, max 1 class per day; Mindbody contract 'EastBay Access- Recurring Unlimited, 1X Day': $279.00 every month",27900,"$279/mo"],
+        ["WALNUT CREEK 4X Mth Founding Membership","Walnut Creek page lists it as '4x A Month' under 'Founding Memberships - Lock Your Rate In For Life'; $83.30 every month, Walnut Creek only, activates when the studio opens",8330,"$83.30/mo"],
+        ["WALNUT CREEK 8X Mth Founding Membership","Walnut Creek page: '8x A Month'; $132.30 every month",13230,"$132.30/mo"],
+        ["WALNUT CREEK 12X Mth Founding Membership","Walnut Creek page: '12x A Month'; $167.30 every month",16730,"$167.30/mo"],
+        ["WALNUT CREEK Founding Member- Unlimited (1X Day)","Walnut Creek page: 'Unlimited'; $195.30 every month",19530,"$195.30/mo"],
+        ["Back To School- 5 +1 FREE $169 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",16900,"$169"],
+        ["Back to School- 10 +2 FREE $299 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",29900,"$299"],
+        ["Back To School- 20 +4 FREE- $549 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",54900,"$549"],
+        ["Special Event- Non-Member","Mindbody 'Special Event Classes' category",2000,"$20"],
+        ["$10 Community class ONLY","Mindbody 'COMMUNITY Sculpt Classes' category",1000,"$10"],
+      ] },
+    ],
+    quoteOnly: "Reformer Pilates studio at Alamo Plaza. Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody.",
+  },
+
+  /*
+     BODYROK East Bay — gathered 2026-09-08 from own-domain — BLOCKED: Mindbody store and schedule pages (clients.mindbodyonline.com, studioid=283626) returned HTTP 403 'Security Check' to WebFetch and to curl; they were read instead in the real browser pane, so all Mindbody facts above come from the rendered pages on 2026-09-07. The two t.bodyrok.com tracking links returned 405 to HEAD; on GET one redirected to the Mindbody Walnut Creek community-events schedule (also 403 to curl) and the other to a Google Form. Instagram was not fetched; its facts come from the operator's four screenshots.
+     they are: Reformer Pilates studio
+     logo: https://bodyrok.com/wp-content/uploads/2024/07/Logo-large-1024x135.png (1024x135) — not cut into a tile yet
+     flag: The operator's exact note: Multiple locations
+     flag: Name is spelled differently on their own properties: brand site pages just say 'BODYROK'; their Mindbody booking site is titled 'BODYROK - East Bay'; the Instagram display name is 'BODYROK EASTBAY' (handle bodyrokeastbay); the round avatar logo reads 'BODYROK EAST BAY'; the operator wrote 'BodyRok East Bay'. 'BODYROK East Bay' used here.
+     flag: Six East Bay studio pages exist but only four are open. Walnut Creek (1380 North California Boulevard) says 'Opening Late Summer 2026' and the studios index labels it 'Coming Soon'; Lafayette (971 Moraga Rd) says 'Opening Fall 2026' and is labeled 'Coming Soon' on the index. Their addresses are in locations only and were left out of the top-level address so a card does not show unopened studios.
+     flag: Linktree bio has a typo 'ROCKRDIGE' and says only 'WALNUT CREEK COMING SOON!', while the Instagram bio says 'Coming Soon: Walnut Creek & Lafayette'.
+     flag: No phone number appears on any bodyrok.com studio page or on the Mindbody store. The only number published is the Instagram Contact sheet's 'Text (510) 900-9234', which is a text line for the whole East Bay group, so every per-studio phone is null.
+     flag: No opening hours are published on the site, linktree, Instagram or Mindbody; only class schedules. For reference, class start times on the Mindbody schedule for the week of Sept 7-13 2026 (Mon Sept 7 was a holiday short schedule): Berkeley Tue-Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, Sat 7am-12pm, Sun 8am-12pm; Oakland Lakeshore Tue-Thu 6:00am-7:30pm, Fri 6:00am-6:30pm, Sat-Sun 7am-12pm; Alamo from 6:00am Tue-Fri with last classes 5:30pm Tue, 6:30pm Wed, 12pm Thu, 1pm Fri, Sat-Sun 7-11am; Rockridge Tue and Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, no classes Wed Sept 9, Sat 8-11am, Sun 8am-12pm. Classes are 45 minutes.
+     flag: The studio pages link to Instagram @bodyrokstudio (the brand account), not @bodyrokeastbay.
+     flag: Wording differs between studio pages while prices are identical: intro first item is 'First Class' on Berkeley and Rockridge but '1 Class' on Alamo and Oakland; section is 'Class Packages' on Berkeley and Oakland but 'Class Packs' on Alamo and Rockridge; validity reads '30 Day Expiration' vs 'Valid For 30 Days' and 'Valid For 6 Months' vs '6 Month Expiration'.
+     flag: Addresses are inconsistently formatted on their site: Alamo, Rockridge, Walnut Creek and Lafayette have no ZIP code and end in ', USA'; Oakland spells out 'California'; Alamo's '170f Alamo Plaza' uses a lowercase suite letter. Kept exactly as published.
+     flag: Rockridge is a neighborhood of Oakland, so there are two Oakland-addressed studios (3303 Lakeshore Ave and 5901 College Avenue); Instagram and the site list 'Oakland' and 'Rockridge' as separate studios.
+     flag: Linktree button 'BUY YOUR ROCKRIDGE FOUNDING MEMBERSHIP' points to Mindbody prodId=205, which no longer resolves to any contract (the store only offers the four EastBay Access memberships and four Walnut Creek founding memberships) and the Rockridge page says 'now open' with standard prices, so that button looks stale.
+     flag: Other stale linktree buttons: 'SIGN UP FOR ROCKRIDGE CLASSES!' carries a hard-coded schedule date 05/09/26; 'FREE Pilates in the Park with Kelsey - 8/30!' (t.bodyrok.com link resolving to the Mindbody schedule for location 5 'Walnut Creek', category 'Community Events') is a past event; 'August Promo- Get your membership now' was still up in September.
+     flag: Walnut Creek founding prices ($83.30, $132.30, $167.30, $195.30) are exactly 30% off the standard $119, $189, $239, $279 tiers; Mindbody says 'lock in your 30% discount for the life of your Walnut Creek only membership', founding members pay a '$25 drop-in rate per class' at the other East Bay studios until opening, and the pinned Instagram post says 'LAST CALL 30% OFF FOUNDING MEMBERSHIPS'.
+     flag: Memberships are named 'EastBay Access- Recurring ... (no commitment)' on Mindbody, yet the contract reads '$119.00 every month for 12 months' and 'auto-renews every 12 months until you cancel' with a 30-day written cancellation notice. Memberships are valid at Alamo, Berkeley, Oakland, Rockridge and Walnut Creek; extra classes $25 each; late cancel $15.
+     flag: No-show penalty contradicts itself: the studio pages say a $20 charge on unlimited plans, while the Mindbody Unlimited contract says 'you will incur a $25 No Show Fee'.
+     flag: Items on the Mindbody store that bodyrok.com does not show: 2 Weeks Unlimited $79, ROK 1 Month Unlimited (no contract) $349, three Back To School bonus packs expiring 12/5/2026, Special Event- Non-Member $20 and $10 Community class ONLY. The 'Community Events (out of studio)' category cannot be bought online and a 'Privates' category exists on the schedule filter with no price published.
+     flag: The brand home page says 'Generally a drop in class starts at around $30 (depending on location)', but the East Bay drop-in is $38.
+     flag: Only the black 'BODYROK' wordmark is hosted on their own domain (a white variant is at https://bodyrok.com/wp-content/uploads/2024/07/logo-white-1024x134.png, 1024x134); the round 'BODYROK EAST BAY' badge exists only as the Instagram and linktree avatar, hosted by those platforms.
+     flag: Per-studio emails on their site: berkeley@bodyrok.com, alamo@bodyrok.com, oakland@bodyrok.com, rockridge@bodyrok.com, walnutcreek@bodyrok.com, lafayette@bodyrok.com, plus brand info@bodyrok.com; Instagram's Contact sheet shows berkeley@BODYROK.com, which is why it is the top-level email.
+     flag: The operator sent a linktree; its 'Our Website' button goes to the brand's bodyrok.com/studios/ index, and booking and purchases run on Mindbody (clients.mindbodyonline.com, site ID 283626). site_kind is own-domain because the addresses and prices live on bodyrok.com.
+  */
+  'bodyrok-berkeley': {
+    address: "1601 University Avenue, Berkeley, CA 94703",
+    phone: "(510) 900-9234",
+    email: "berkeley@bodyrok.com",
+    instagram: "bodyrokeastbay",
+    cuisine: "Reformer Pilates studio",
+    tagline: "Reformer Pilates studio on University Ave in Berkeley",
+    groups: [
+      { name: "Prices, from", items: [
+        ["First Class","Intro offer, 30 Day Expiration; Alamo and Oakland pages call it '1 Class'; Mindbody name 'INTRO SPECIAL - $20 First Visit'",2000,"$20"],
+        ["5 Classes","Intro offer, 30 Day Expiration; Mindbody name 'INTRO SPECIAL- 5 classes for $99 (1mth exp)'",9900,"$99"],
+        ["Unlimited","Intro offer: first month unlimited, 1 class per day, expires 30 days from first use; Mindbody name 'INTRO SPECIAL 1st MTH(1x day) $149'",14900,"$149"],
+        ["INTRO SPECIAL 2 Weeks Unlimited (1X Day) $79","Expiration Date: 14 days from first use; listed on their Mindbody store only, not on bodyrok.com",7900,"$79"],
+        ["1 Class","Drop-in, Valid For 6 Months; Mindbody name 'ROK Group- 1 session'",3800,"$38"],
+        ["5 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 5 Sessions'",16900,"$169"],
+        ["10 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 10 Sessions'",29900,"$299"],
+        ["20 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 20 Sessions'",54900,"$549"],
+        ["ROK 1 Month Unlimited (no contract)","One month unlimited, no contract; expiration one month from purchase; Mindbody store only",34900,"$349"],
+        ["4x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 4X Mth (no commitment)': $119.00 every month, valid at Alamo, Berkeley, Oakland, Rockridge, Walnut Creek; extra classes $25 each",11900,"$119/mo"],
+        ["8x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 8X Mth (no commitment)': $189.00 every month",18900,"$189/mo"],
+        ["12x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 12X Mth (no commitment)': $239.00 every month",23900,"$239/mo"],
+        ["Unlimited","Membership, 30 Day Cancellation, max 1 class per day; Mindbody contract 'EastBay Access- Recurring Unlimited, 1X Day': $279.00 every month",27900,"$279/mo"],
+        ["WALNUT CREEK 4X Mth Founding Membership","Walnut Creek page lists it as '4x A Month' under 'Founding Memberships - Lock Your Rate In For Life'; $83.30 every month, Walnut Creek only, activates when the studio opens",8330,"$83.30/mo"],
+        ["WALNUT CREEK 8X Mth Founding Membership","Walnut Creek page: '8x A Month'; $132.30 every month",13230,"$132.30/mo"],
+        ["WALNUT CREEK 12X Mth Founding Membership","Walnut Creek page: '12x A Month'; $167.30 every month",16730,"$167.30/mo"],
+        ["WALNUT CREEK Founding Member- Unlimited (1X Day)","Walnut Creek page: 'Unlimited'; $195.30 every month",19530,"$195.30/mo"],
+        ["Back To School- 5 +1 FREE $169 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",16900,"$169"],
+        ["Back to School- 10 +2 FREE $299 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",29900,"$299"],
+        ["Back To School- 20 +4 FREE- $549 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",54900,"$549"],
+        ["Special Event- Non-Member","Mindbody 'Special Event Classes' category",2000,"$20"],
+        ["$10 Community class ONLY","Mindbody 'COMMUNITY Sculpt Classes' category",1000,"$10"],
+      ] },
+    ],
+    quoteOnly: "Reformer Pilates studio on University Ave in Berkeley. Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody.",
+  },
+
+  /*
+     BODYROK East Bay — gathered 2026-09-08 from own-domain — BLOCKED: Mindbody store and schedule pages (clients.mindbodyonline.com, studioid=283626) returned HTTP 403 'Security Check' to WebFetch and to curl; they were read instead in the real browser pane, so all Mindbody facts above come from the rendered pages on 2026-09-07. The two t.bodyrok.com tracking links returned 405 to HEAD; on GET one redirected to the Mindbody Walnut Creek community-events schedule (also 403 to curl) and the other to a Google Form. Instagram was not fetched; its facts come from the operator's four screenshots.
+     they are: Reformer Pilates studio
+     logo: https://bodyrok.com/wp-content/uploads/2024/07/Logo-large-1024x135.png (1024x135) — not cut into a tile yet
+     flag: The operator's exact note: Multiple locations
+     flag: Name is spelled differently on their own properties: brand site pages just say 'BODYROK'; their Mindbody booking site is titled 'BODYROK - East Bay'; the Instagram display name is 'BODYROK EASTBAY' (handle bodyrokeastbay); the round avatar logo reads 'BODYROK EAST BAY'; the operator wrote 'BodyRok East Bay'. 'BODYROK East Bay' used here.
+     flag: Six East Bay studio pages exist but only four are open. Walnut Creek (1380 North California Boulevard) says 'Opening Late Summer 2026' and the studios index labels it 'Coming Soon'; Lafayette (971 Moraga Rd) says 'Opening Fall 2026' and is labeled 'Coming Soon' on the index. Their addresses are in locations only and were left out of the top-level address so a card does not show unopened studios.
+     flag: Linktree bio has a typo 'ROCKRDIGE' and says only 'WALNUT CREEK COMING SOON!', while the Instagram bio says 'Coming Soon: Walnut Creek & Lafayette'.
+     flag: No phone number appears on any bodyrok.com studio page or on the Mindbody store. The only number published is the Instagram Contact sheet's 'Text (510) 900-9234', which is a text line for the whole East Bay group, so every per-studio phone is null.
+     flag: No opening hours are published on the site, linktree, Instagram or Mindbody; only class schedules. For reference, class start times on the Mindbody schedule for the week of Sept 7-13 2026 (Mon Sept 7 was a holiday short schedule): Berkeley Tue-Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, Sat 7am-12pm, Sun 8am-12pm; Oakland Lakeshore Tue-Thu 6:00am-7:30pm, Fri 6:00am-6:30pm, Sat-Sun 7am-12pm; Alamo from 6:00am Tue-Fri with last classes 5:30pm Tue, 6:30pm Wed, 12pm Thu, 1pm Fri, Sat-Sun 7-11am; Rockridge Tue and Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, no classes Wed Sept 9, Sat 8-11am, Sun 8am-12pm. Classes are 45 minutes.
+     flag: The studio pages link to Instagram @bodyrokstudio (the brand account), not @bodyrokeastbay.
+     flag: Wording differs between studio pages while prices are identical: intro first item is 'First Class' on Berkeley and Rockridge but '1 Class' on Alamo and Oakland; section is 'Class Packages' on Berkeley and Oakland but 'Class Packs' on Alamo and Rockridge; validity reads '30 Day Expiration' vs 'Valid For 30 Days' and 'Valid For 6 Months' vs '6 Month Expiration'.
+     flag: Addresses are inconsistently formatted on their site: Alamo, Rockridge, Walnut Creek and Lafayette have no ZIP code and end in ', USA'; Oakland spells out 'California'; Alamo's '170f Alamo Plaza' uses a lowercase suite letter. Kept exactly as published.
+     flag: Rockridge is a neighborhood of Oakland, so there are two Oakland-addressed studios (3303 Lakeshore Ave and 5901 College Avenue); Instagram and the site list 'Oakland' and 'Rockridge' as separate studios.
+     flag: Linktree button 'BUY YOUR ROCKRIDGE FOUNDING MEMBERSHIP' points to Mindbody prodId=205, which no longer resolves to any contract (the store only offers the four EastBay Access memberships and four Walnut Creek founding memberships) and the Rockridge page says 'now open' with standard prices, so that button looks stale.
+     flag: Other stale linktree buttons: 'SIGN UP FOR ROCKRIDGE CLASSES!' carries a hard-coded schedule date 05/09/26; 'FREE Pilates in the Park with Kelsey - 8/30!' (t.bodyrok.com link resolving to the Mindbody schedule for location 5 'Walnut Creek', category 'Community Events') is a past event; 'August Promo- Get your membership now' was still up in September.
+     flag: Walnut Creek founding prices ($83.30, $132.30, $167.30, $195.30) are exactly 30% off the standard $119, $189, $239, $279 tiers; Mindbody says 'lock in your 30% discount for the life of your Walnut Creek only membership', founding members pay a '$25 drop-in rate per class' at the other East Bay studios until opening, and the pinned Instagram post says 'LAST CALL 30% OFF FOUNDING MEMBERSHIPS'.
+     flag: Memberships are named 'EastBay Access- Recurring ... (no commitment)' on Mindbody, yet the contract reads '$119.00 every month for 12 months' and 'auto-renews every 12 months until you cancel' with a 30-day written cancellation notice. Memberships are valid at Alamo, Berkeley, Oakland, Rockridge and Walnut Creek; extra classes $25 each; late cancel $15.
+     flag: No-show penalty contradicts itself: the studio pages say a $20 charge on unlimited plans, while the Mindbody Unlimited contract says 'you will incur a $25 No Show Fee'.
+     flag: Items on the Mindbody store that bodyrok.com does not show: 2 Weeks Unlimited $79, ROK 1 Month Unlimited (no contract) $349, three Back To School bonus packs expiring 12/5/2026, Special Event- Non-Member $20 and $10 Community class ONLY. The 'Community Events (out of studio)' category cannot be bought online and a 'Privates' category exists on the schedule filter with no price published.
+     flag: The brand home page says 'Generally a drop in class starts at around $30 (depending on location)', but the East Bay drop-in is $38.
+     flag: Only the black 'BODYROK' wordmark is hosted on their own domain (a white variant is at https://bodyrok.com/wp-content/uploads/2024/07/logo-white-1024x134.png, 1024x134); the round 'BODYROK EAST BAY' badge exists only as the Instagram and linktree avatar, hosted by those platforms.
+     flag: Per-studio emails on their site: berkeley@bodyrok.com, alamo@bodyrok.com, oakland@bodyrok.com, rockridge@bodyrok.com, walnutcreek@bodyrok.com, lafayette@bodyrok.com, plus brand info@bodyrok.com; Instagram's Contact sheet shows berkeley@BODYROK.com, which is why it is the top-level email.
+     flag: The operator sent a linktree; its 'Our Website' button goes to the brand's bodyrok.com/studios/ index, and booking and purchases run on Mindbody (clients.mindbodyonline.com, site ID 283626). site_kind is own-domain because the addresses and prices live on bodyrok.com.
+  */
+  'bodyrok-oakland': {
+    address: "3303 Lakeshore Ave, Oakland, California 94610; 5901 College Avenue, Oakland, CA, USA",
+    phone: "(510) 900-9234",
+    email: "oakland@bodyrok.com",
+    instagram: "bodyrokeastbay",
+    cuisine: "Reformer Pilates studio",
+    tagline: "Reformer Pilates studios on Lakeshore Ave and in Rockridge, Oakland",
+    groups: [
+      { name: "Prices, from", items: [
+        ["First Class","Intro offer, 30 Day Expiration; Alamo and Oakland pages call it '1 Class'; Mindbody name 'INTRO SPECIAL - $20 First Visit'",2000,"$20"],
+        ["5 Classes","Intro offer, 30 Day Expiration; Mindbody name 'INTRO SPECIAL- 5 classes for $99 (1mth exp)'",9900,"$99"],
+        ["Unlimited","Intro offer: first month unlimited, 1 class per day, expires 30 days from first use; Mindbody name 'INTRO SPECIAL 1st MTH(1x day) $149'",14900,"$149"],
+        ["INTRO SPECIAL 2 Weeks Unlimited (1X Day) $79","Expiration Date: 14 days from first use; listed on their Mindbody store only, not on bodyrok.com",7900,"$79"],
+        ["1 Class","Drop-in, Valid For 6 Months; Mindbody name 'ROK Group- 1 session'",3800,"$38"],
+        ["5 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 5 Sessions'",16900,"$169"],
+        ["10 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 10 Sessions'",29900,"$299"],
+        ["20 Classes","Valid For 6 Months; Mindbody name 'ROK Group - 20 Sessions'",54900,"$549"],
+        ["ROK 1 Month Unlimited (no contract)","One month unlimited, no contract; expiration one month from purchase; Mindbody store only",34900,"$349"],
+        ["4x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 4X Mth (no commitment)': $119.00 every month, valid at Alamo, Berkeley, Oakland, Rockridge, Walnut Creek; extra classes $25 each",11900,"$119/mo"],
+        ["8x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 8X Mth (no commitment)': $189.00 every month",18900,"$189/mo"],
+        ["12x A Month","Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 12X Mth (no commitment)': $239.00 every month",23900,"$239/mo"],
+        ["Unlimited","Membership, 30 Day Cancellation, max 1 class per day; Mindbody contract 'EastBay Access- Recurring Unlimited, 1X Day': $279.00 every month",27900,"$279/mo"],
+        ["WALNUT CREEK 4X Mth Founding Membership","Walnut Creek page lists it as '4x A Month' under 'Founding Memberships - Lock Your Rate In For Life'; $83.30 every month, Walnut Creek only, activates when the studio opens",8330,"$83.30/mo"],
+        ["WALNUT CREEK 8X Mth Founding Membership","Walnut Creek page: '8x A Month'; $132.30 every month",13230,"$132.30/mo"],
+        ["WALNUT CREEK 12X Mth Founding Membership","Walnut Creek page: '12x A Month'; $167.30 every month",16730,"$167.30/mo"],
+        ["WALNUT CREEK Founding Member- Unlimited (1X Day)","Walnut Creek page: 'Unlimited'; $195.30 every month",19530,"$195.30/mo"],
+        ["Back To School- 5 +1 FREE $169 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",16900,"$169"],
+        ["Back to School- 10 +2 FREE $299 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",29900,"$299"],
+        ["Back To School- 20 +4 FREE- $549 (90 day expiration)","Promo pack on their Mindbody store, Expiration Date 12/5/2026",54900,"$549"],
+        ["Special Event- Non-Member","Mindbody 'Special Event Classes' category",2000,"$20"],
+        ["$10 Community class ONLY","Mindbody 'COMMUNITY Sculpt Classes' category",1000,"$10"],
+      ] },
+    ],
+    quoteOnly: "Reformer Pilates studios on Lakeshore Ave and in Rockridge, Oakland. Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody.",
+  },
+
+  /*
+     Boudreaux Cajun Steak House — gathered 2026-09-08 from own-domain
      they are: Cajun
      logo: https://le-cdn.hibuwebsites.com/d2d5b30f702a402bae0d53127cfa1f94/dms3rep/multi/opt/boudreaux-cajun-steak-house-logo-a78278ea-1920w.png (546x396) — not cut into a tile yet
      flag: NOT OPEN: the site publishes hours of Mon-Sun 11am-10pm while stating the restaurant is under construction and not open to the public — the hours are not carried
@@ -487,7 +764,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Brasa Bros — gathered 2026-09-05 from own-domain
+     Brasa Bros — gathered 2026-09-08 from own-domain
      they are: Peruvian rotisserie
      logo: https://images.getbento.com/accounts/c2c7fd3f33613d787a8a0347c60c09dd/media/images/28972BB_without_R.png (3530x2259) — not cut into a tile yet
      flag: the Build Your Own Bowl menu has two sections both labelled 'STEP 3'
@@ -586,7 +863,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Cafe Noir — gathered 2026-09-05 from own-domain
+     Cafe Noir — gathered 2026-09-08 from own-domain
      they are: African diaspora
      logo: https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/2139ba63-bcf8-4ad0-a7e6-233cd69d999c/cafe-noir-oakland-full-logo.png (1592x580) — not cut into a tile yet
      flag: HOURS CONFLICT on their own site: the homepage lists seven days of service, but the brunch menu says Wednesday-Sunday and the dinner menu says Wednesday-Friday, Saturday, Sunday — Monday and Tuesday contradicted, so no hours carried
@@ -647,7 +924,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     caitlyns-sweets — gathered 2026-09-05 from stopgap
+     caitlyns-sweets — gathered 2026-09-08 from stopgap
      their spelling: "Caitlyn's Sweets" (roster keeps "caitlyns-sweets")
      they are: Custom cakes
      flag: Glenn: 'San Jose • Goods. Needs website'
@@ -663,7 +940,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Cali Party Bus — gathered 2026-09-05 from own-domain
+     Cali Party Bus — gathered 2026-09-08 from own-domain
      they are: Party bus rental
      flag: a travel fee may apply beyond 40 miles of their Oakland terminal, their own note
   */
@@ -691,7 +968,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     camachos-party-rentals — gathered 2026-09-05 from own-domain
+     camachos-party-rentals — gathered 2026-09-08 from own-domain
      their spelling: "Camachos Party Rentals" (roster keeps "camachos-party-rentals")
      they are: Party rentals
      logo: https://camachospartyrentals.com/wp-content/uploads/2023/11/Camachos_Party_Rentals.png (2100x2100) — not cut into a tile yet
@@ -709,7 +986,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chikin Drip — gathered 2026-09-05 from own-domain
+     Chikin Drip — gathered 2026-09-08 from own-domain
      they are: Nashville hot chicken
      flag: they have a second San Jose kitchen at 81 Curtner Ave on the same menu, hours and number
      flag: their Instagram bio says 100% halal
@@ -736,7 +1013,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chikin Drip — gathered 2026-09-05 from own-domain
+     Chikin Drip — gathered 2026-09-08 from own-domain
      they are: Nashville hot chicken
      flag: their Instagram bio says 100% halal
      flag: every combo is fried to order, their words
@@ -763,18 +1040,21 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chip Cookies — gathered 2026-09-05 from own-domain
+     Chip Cookies — gathered 2026-09-08 from own-domain
      their spelling: "chip cookies" (roster keeps "Chip Cookies")
      they are: Gourmet cookies
      logo: https://www.chipcookies.co/cdn/shop/files/chip-logo_dfae3b6d-9d06-41eb-85ea-ba6f9c444fe5.png?v=1733879055 (600x600) — not cut into a tile yet
+     flag: Glenn, 2026-09-07: '3 locations' — the three Bay Area stores from their own locations page, Brentwood, Walnut Creek and Dublin, are all on the address line now and each has its own page seat; hours are identical at all three per each store's own page (Walnut Creek writes Mon-Thu and Sun on separate lines)
+     flag: phones per store, from each store's own page: Brentwood (925) 489-5201, Walnut Creek 925-289-9351, Dublin 925-819-7855; emails brentwood@, walnutcreek@ and dublin@chipcookies.co
+     flag: two Instagram accounts: chipcookies.bayarea (the one Glenn sent, lists the three Bay Area stores) and the corporate chipcookiesco the website links; the Bay Area one is carried
      flag: A CHAIN of 23 stores in seven states, headquartered at 1805 E Williams Field Rd, Gilbert AZ. The Brentwood store is the address here; the other Bay Area stores are Dublin, 6851 Amador Plaza Rd, (925) 819-7855, and Walnut Creek, 2335 Oak Grove Road, (925) 289-9351
-     flag: hours vary by store and live on per-store pages (Dublin: Sun-Thu 10am-10pm, Fri-Sat to midnight); none published for Brentwood in the HTML read, so none carried
      flag: internal franchise supply items are exposed in their public product feed
   */
   'chip-cookies': {
-    address: "2505 Sand Creek Rd #128, Brentwood, CA 94513",
+    address: "2505 Sand Creek Rd #128, Brentwood, CA 94513; 2335 Oak Grove Road, Walnut Creek, CA 94598; 6851 Amador Plaza Rd, Dublin, CA 94568",
     phone: "(925) 489-5201",
-    instagram: "chipcookiesco",
+    hours: "Sun-Thu 10am-10pm, Fri-Sat 10am-12am",
+    instagram: "chipcookies.bayarea",
     cuisine: "Gourmet cookies",
     photos: [
       {"src":"/food/chip-cookies-site-3-lg.webp","alt":"og-chip_web_copy.png","credit":"Their own photo, from chipcookies.co"},
@@ -796,7 +1076,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chiquo & Eva’s — gathered 2026-09-05 from own-domain
+     Chiquo & Eva’s — gathered 2026-09-08 from own-domain
      their spelling: "Chiquo & Eva's Wagyu Steakhouse" (roster keeps "Chiquo & Eva’s")
      they are: Wagyu steakhouse
      logo: https://static.wixstatic.com/shapes/0c4e7f_e268b88348614e30b9f97dfe006b8f9e.svg — not cut into a tile yet
@@ -838,7 +1118,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Chutneys — gathered 2026-09-05 from stopgap
+     Chutneys — gathered 2026-09-08 from stopgap
      flag: 2 of 4 DNS A records point at a misconfigured Cloudflare endpoint: HTTPS handshake refused, HTTP returns 'error code: 1001' — the site fails to load whenever a client picks those records
      flag: GoDaddy Website Builder template with a single Getty stock photo and GoDaddy's default icon — no business logo
      flag: publishes no cuisine, menu, address, phone, hours or social links; filed as 'Indian' but the site never says so
@@ -849,7 +1129,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     classy-canines — gathered 2026-09-05 from own-domain
+     classy-canines — gathered 2026-09-08 from own-domain
      their spelling: "Classy Canine's Wiggle Rumps" (roster keeps "classy-canines")
      they are: Pet grooming
      logo: https://static.wixstatic.com/media/769eaa_5784054376a44f629bbefe56e79ae916~mv2.png (3468x1048) — not cut into a tile yet
@@ -879,7 +1159,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     dads-bbq — gathered 2026-09-05 from own-domain
+     dads-bbq — gathered 2026-09-08 from own-domain
      their spelling: "Dad's BBQ" (roster keeps "dads-bbq")
      they are: Mississippi-style BBQ
      flag: hours are from their Instagram bio; the site itself lists none
@@ -937,7 +1217,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Diablo Auto Detailing — gathered 2026-09-05 from own-domain
+     Diablo Auto Detailing — gathered 2026-09-08 from own-domain
      they are: Mobile auto detailing
      logo: https://diabloautodetailing.com/diablo-logo.jpg (920x920) — not cut into a tile yet
      flag: the site is an empty JS shell without JavaScript; every fact came from their own JS bundle and structured data
@@ -961,7 +1241,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Donut Farm — gathered 2026-09-05 from own-domain
+     Donut Farm — gathered 2026-09-08 from own-domain
      they are: Vegan donuts
      logo: https://donutfarmberkeley.com/assets/logo.png (2306x1722) — not cut into a tile yet
      flag: HOURS CONFLICT on their own site: the visible page says Sat-Sun 9am-2pm while their structured data says 7:30am-3pm — Mon-Fri 7:30am-3pm agree in both, but no hours carried
@@ -984,7 +1264,72 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Downtown BBQ — gathered 2026-09-05 from own-domain
+     Doodle Cakes — gathered 2026-09-08 from own-domain
+     their spelling: "doodlecakes" (roster keeps "Doodle Cakes")
+     they are: Cake Shop
+     logo: https://www.doodlecakesbakery.com/uploads/b/bfdb8ef2731066eeca258ade92385bd80c7ea0ea2970568cbd049d48cb2d3f17/DC_shine_pink_1775514271.png (2000x2000) — not cut into a tile yet
+     flag: Operator's exact note: Alameda • Goods
+     flag: Name spelling: the site and Instagram display name is the one-word lowercase 'doodlecakes' (page title, web manifest, Square location name, logo alt text); the logo artwork reads 'doodle cakes'; the domain and Instagram handle are 'doodlecakesbakery'. The operator's spelling 'Doodle Cakes Bakery' does not appear anywhere on the site.
+     flag: Phone: not displayed anywhere on the site or the Instagram bio (no tel: link, no phone text, none in the Store info panel). A number (+1 510-995-8539) exists only inside the site's non-rendered Square store-location JSON, so phone is left null pending verification.
+     flag: Hours agree across three of their own sources: site footer 'OPEN to Public: WED, THUR, FRI & SAT 11AM - 3PM' (also 'Open to Public Wed- Sat, 11am-3pm' on the custom-cake form), Square pickup/delivery hours Wed-Sat 11:00-15:00 with Sun-Tue empty, and the Instagram bio 'WED-SAT / 11AM-3PM'.
+     flag: Site kind: own domain (doodlecakesbakery.com) running Square Online; the homepage IS the ordering menu (/s/order redirects to /). There are no separate about, menu, contact or locations pages (all 404).
+     flag: Standard Cakes: the 'Cakes / Standard Cakes' section rendered empty (heading only) on the live menu at first load, but the site's published catalog lists 5 visible items in that category, and each product page loads live with the same price (verified 2026-09-07): Standard 4" Cake $50.00, Standard 6" Cake $70.00, Standard 8" Cake $90.00 (each 'prep time of 3 business days'), Standard Lunchbox Mini Cake 4” $30.00 and Celebration Box $40.00 (each 'prep time of 20 hours'), all with a required cake-flavor choice (e.g. Red Velvet/Cream Cheese, Ube/Ube, Chocolate/Peanut Butter) and optional sprinkles or edible glitter. Included under section 'Cakes / Standard Cakes'; the empty render is most likely the auto-selected next pickup slot (Wednesday 11:00 AM) falling inside their prep time.
+     flag: Visible but uncategorized products reachable only by direct URL (not shown on the menu) were excluded from items: 6 Box $25.50, Cake Slice $6.30, Custom 4” Lunchbox Mini Cake $30.00, Custom Celebration Box $40.00, Flower Pot Cake $32.50, Heart $6.00, Tiny cake $10.00, Paper Bag $0.10.
+     flag: The sitemap lists about 95 product URLs; most are rotated-out monthly cupcake flavors or dated seasonal items (e.g. 'available until 5/30', Lunar New Year 2026, Mother's Day Heart, Jack-O-Lantern) or catalog-hidden listings that still load with a price by direct URL (e.g. 'Custom 6” Cake' $70.00, visibility hidden). Excluded.
+     flag: Cupcake flavors rotate monthly ('Monthly Flavors'); the 6 standard and 6 GDE* (gluten, dairy and egg free) flavors listed are the selection rendered on 2026-09-07. Dozen assortments say flavors may vary from the picture.
+     flag: Ordering rules on the site: 'Email = doodlecakesbakery.online@gmail.com for custom orders'; 'High volume of emails, responses take 3 days'; custom cakes need at minimum 1-2 weeks notice for elaborate designs and 2-3 business days for simple designs; '*THIS INQUIRY FORM DOES NOT GUARANTEE AN ORDER*'. Instagram bio adds 'NO DM ORDERS!'.
+     flag: Fulfillment per the ordering page: store pickup and local delivery both enabled (Square shows 'Lead time: 1 day', order cutoff 10:00 AM, delivery fee $0); pickup instruction 'Please give First and Last Name to receive your order.'; returns policy 'We do not refund or exchange products.'; notice that the cashier or delivery driver may ask to see ID and/or the credit card used.
+     flag: Instagram (screenshot, @doodlecakesbakery, display name 'doodlecakes', category 'Cake Shop'): '647 Central Ave, Alameda, CA', 'WED-SAT / 11AM-3PM', 'NO DM ORDERS!', 'Email: Doodlecakesbakery.online@gmail.com' (same address as the site, capitalized differently), link doodlecakesbakery.com. Consistent with the site.
+     flag: Logo: logo_url is the pink square header logo (alt 'doodlecakes logo', 2000x2000 PNG, opaque pink background, white cupcake with hippo and sparkles) and matches the operator's second screenshot. Alternatives on the site: line-art wordmark used in the footer (DC-line_only_B_1652479102.png, 1124x294, transparent), a purple-circle app icon/favicon variant (icon_512x512_android_NTM5NT.png, 510x510, theme color #cb9ac7), and a different cartoon hippo-face design stored as the site's logo field (BigLogo_Face_1652487961.png, 6000x6000, transparent, 4.7 MB).
+     flag: Site meta description: 'Bay Area bakery in Alameda, CA. Vegan & gluten free options. Birthday, wedding and corporate event cakes & dessert surprise boxes.'
+  */
+  'doodle-cakes': {
+    address: "647 Central Avenue, Alameda, CA 94501",
+    email: "doodlecakesbakery.online@gmail.com",
+    hours: "Wed-Sat 11am-3pm, closed Sun-Tue",
+    instagram: "doodlecakesbakery",
+    cuisine: "Cake Shop",
+    tagline: "Cupcake and cake shop in Alameda with vegan and gluten-free options",
+    sections: [
+      { name: "Cupcakes", items: [
+        ["Surprise Box","What dessert in a box did you get?",1999],
+        ["Surprise Box 6 Pack","What 6 pack of desserts did you get?",11000],
+      ] },
+      { name: "Cupcakes / Daily Standard Cupcakes", items: [
+        ["Chocolate Wasted","Decadent dark chocolate cake, topped with chocolate frosting, chocolate sauce and chocolate chips.",499],
+        ["Red Velvet","Riveting Red velvet cake, a lighter chocolate cake, topped with cream cheese frosting.",499],
+        ["Cookies & Cream (CnC)","Captivating cookies & cream vanilla cake, topped with vanilla frosting, and chocolate cookie.",499],
+        ["Piñata","Vanilla cake filled with mini m&ms, topped with vanilla frosting and mini m&ms.",499],
+        ["Chocolate Caramel Frappe","Chocolate cake topped with caramel frosting, whipped cream, caramel drizzle and a candy straw.",499],
+        ["Lemon","Lemon cake, topped with lemon frosting.",499],
+      ] },
+      { name: "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes", items: [
+        ["GDE* Free Strawberry Crunch","Gluten free, dairy free and egg free strawberry cake, topped with dairy free vanilla frosting and strawberry crunch crumbs.",499],
+        ["GDE* Free Cinnamon Toasty","Gluten free, dairy free, and egg free cinnamon cake, topped with dairy free vanilla frosting, cinnamon sugar and Catalina Crunch.",499],
+        ["GDE* Free Chocolate Oreo","Gluten free, dairy free and egg free chocolate cake, topped with dairy free vanilla frosting and a gluten free chocolate Oreo cookie.",499],
+        ["GDE* Free Lemon Blueberry","Gluten, dairy and egg free blueberry cake, topped with dairy free lemon frosting, freeze dried blueberries and edible glitter.",499],
+        ["GDE S’mores","Gluten, dairy and egg free chocolate cake, graham cracker crust, topped with dairy free vanilla frosting, oat chocolate, marshmallows and a graham cracker.",499],
+        ["GDE* Free Banana Split","Gluten, dairy and egg free spiced banana cake, topped with dairy free vanilla frosting, dairy free chocolate sauce, banana chips, sprinkles, maraschino cherry and edible glitter.",499],
+      ] },
+      { name: "Cupcakes / By the Dozen", items: [
+        ["Dozen Mixed Assortment","1 Dozen Mixed Assortment of our GDE* Free and Standard Cupcakes (1 Each of the 6 Standard Monthly Flavors* and 6 GDE* Free Monthly Flavors). *Flavors may vary from picture indicated. Check the individual cupcakes for the current selection. PLEASE NOTE: •Mixed Assortment: Contains all 12 flavors; which includes 1 each of the GDE* Free Flavors, and 1 each of the Standard Flavors. **If you would like a mix of Standard Flavors only or GDE* Free Flavors only, please select the indicated Assortment**",5500],
+        ["Dozen GDE* Free Assortment","1 Dozen Assortment of our Gluten, Dairy and Egg Free Cupcakes (2 Each of the GDE* Free Monthly Flavors*) *Flavors may vary from picture indicated. Check the individual cupcakes for the current selection.",5500],
+        ["Dozen Standard Assortment","1 Dozen Assortment of our Daily Standard Cupcakes (2 Each of the Standard Monthly Flavors*). *Flavors may vary from picture indicated. Check the individual cupcakes for the current selection.",5500],
+        ["Mini Cupcake Assortment","* Flavors may vary from picture indicated. Check the individual cupcakes for the current selection. PLEASE NOTE: • Mixed Assortment : Contains all 12 flavors; which includes 1 each of the GDE* Free Flavors, and 1 each of the Standard Flavors • Standard Assortment : Contains 2 each of the Monthly Standard Flavors • GDE Free Assortment : Contains 2 each of the Monthly GDE Free Flavors",2999],
+      ] },
+      { name: "Cakes / Standard Cakes", items: [
+        ["Standard 4\" Cake","4” Small Cake Serves 2-6 people. Custom writing available - maximum of 4 words. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",5000,null,"3 business days prep, 12 flavors"],
+        ["Standard 6\" Cake","6\" Cake Serves 8-14 Custom writing available. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",7000,null,"3 business days prep, 12 flavors"],
+        ["Standard 8\" Cake","8\" Cake Serves 14-28 Custom writing available. Please add the message in the order notes. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",9000,null,"3 business days prep, 12 flavors"],
+        ["Standard Lunchbox Mini Cake 4”","4” Lunchbox Mini Cake (Bento Cake) Serves 2-4 people. Custom writing available - maximum of 4 words. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",3000,null,"20 hours prep, 11 flavors"],
+        ["Celebration Box","4\" Lunch box Mini Cake + 2 Standard Size Cupcakes Serves 2-6 Custom writing available - maximum 4 words. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",4000,null,"20 hours prep, 10 flavors"],
+      ] },
+    ],
+    siteNote: "Prices are from the live Square Online ordering menu that is the doodlecakesbakery.com homepage (rendered 2026-09-07) and its catalog data; hours from the site's own footer text, Square pickup hours and the Instagram bio, which all agree.",
+  },
+
+  /*
+     Downtown BBQ — gathered 2026-09-08 from own-domain
      their spelling: "Downtown Barbecue" (roster keeps "Downtown BBQ")
      they are: Barbecue
      logo: https://static.spotapps.co/website_images/ab_websites/476501_website_v1/logo.png (200x200) — not cut into a tile yet
@@ -1089,7 +1434,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Eagle Pet Grooming — gathered 2026-09-05 from own-domain
+     Eagle Pet Grooming — gathered 2026-09-08 from own-domain
      they are: Mobile pet grooming
      logo: https://eaglepetgrooming.com/svg/eagle-logo.svg — not cut into a tile yet
      flag: their own site contradicts itself on where they work: a header toggle offers Nevada while the FAQ says the Bay Area and Salt Lake City
@@ -1105,7 +1450,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Eight Acres Kitchen & Bar — gathered 2026-09-05 from own-domain
+     Eight Acres Kitchen & Bar — gathered 2026-09-08 from own-domain
      they are: Contemporary comfort food
      logo: https://eightacresbrentwood.com/wp-content/uploads/8Logo.png (176x178) — not cut into a tile yet
      flag: name varies on-site: page title '8 Acres - Le Bon Temps' vs 'Eight Acres Kitchen & Bar' in content and logo
@@ -1160,7 +1505,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Rancho Grande Taqueria — gathered 2026-09-05 from own-domain
+     Rancho Grande Taqueria — gathered 2026-09-08 from own-domain
      they are: Mexican
      flag: the sign outside reads EL RANCHO GRANDE TAQUERIA; their own site, logo and footer say Rancho Grande Taqueria, so that is the name here
      flag: Glenn photographed the storefront and the window poster while delivering, 2026-09-04
@@ -1176,7 +1521,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Empire State Pizza — gathered 2026-09-05 from own-domain
+     Empire State Pizza — gathered 2026-09-08 from own-domain
      they are: NYC-style pizza
      flag: Apple Maps prints the suite as Ste A; their own site says Suite C, which is what is here
      flag: no Instagram on the site; none carried
@@ -1249,7 +1594,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Emy’s Cannoli — gathered 2026-09-05 from own-domain
+     Emy’s Cannoli — gathered 2026-09-08 from own-domain
      their spelling: "Emy's Cannoli" (roster keeps "Emy’s Cannoli")
      they are: Italian catering
      logo: https://bronkbuilder-website-assets.s3.us-east-2.amazonaws.com/users/55506079-77ad-4a9c-b02f-eaadca6e1803/websites/5d9c4b44-2008-4bff-923a-3e3e2f2bc244/LOGO/e3a37942-3a79-4efd-bd80-3297117fa3ae.webp (1080x946) — not cut into a tile yet
@@ -1273,7 +1618,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Ethos Of California — gathered 2026-09-05 from own-domain
+     Ethos Of California — gathered 2026-09-08 from own-domain
      they are: Barbershop
      flag: Glenn: 'He's got a location in Lafayette too' — no Lafayette address is published anywhere they control, so only Orinda is seated
      flag: two phones on their Vagaro page, (925) 464-1932 and (925) 718-0971; the first is carried
@@ -1287,7 +1632,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Forno Piombo — gathered 2026-09-05 from own-domain
+     Forno Piombo — gathered 2026-09-08 from own-domain
      they are: Pizza ovens
      logo: https://fornopiombo.com/cdn/shop/files/FPO_Logo_FINAL-Letters-only_927e992a-09ac-47ba-ae13-1c751f373fe5_300x.png?v=1626473863 (300x182) — not cut into a tile yet
      flag: the header logo's HTML claims 1945x1179 but the served file is 300x182
@@ -1312,7 +1657,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The French Spot — gathered 2026-09-05 from own-domain
+     The French Spot — gathered 2026-09-08 from own-domain
      they are: French patisserie
      logo: https://images.squarespace-cdn.com/content/v1/5f6b54d6483daf47f3ca0c32/25acebb3-09a0-44fe-89a6-e45e04de3875/newlogoagray.png (340x570) — not cut into a tile yet
      flag: the original shop is 1042 Larkin Street, San Francisco, Thu-Sun 8am-1pm; their nav lists Concord first, and Concord's hours are the ones carried
@@ -1329,7 +1674,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Gay Nineties Pizza & Pasta Co. — gathered 2026-09-05 from own-domain
+     Gay Nineties Pizza & Pasta Co. — gathered 2026-09-08 from own-domain
      their spelling: "Gay Nineties Pizza" (roster keeps "Gay Nineties Pizza & Pasta Co.")
      they are: Pizza and pasta
      logo: https://irp.cdn-website.com/5bf6c805601f409284365d58f44ccf25/dms3rep/multi/opt/gayninetieslogoidea1-1920w.png (655x570) — not cut into a tile yet
@@ -1373,7 +1718,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     German Auto Sport — gathered 2026-09-05 from own-domain
+     German Auto Sport — gathered 2026-09-08 from own-domain
      they are: German auto repair
      logo: https://gasberkeleyrepair.com/wp-content/uploads/2023/03/GAS-Logo-2_1.png (518x95) — not cut into a tile yet
      flag: the only email in the markup belongs to their web vendor, not the shop — treated as not published
@@ -1389,7 +1734,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Gofrette Pamper & Play — gathered 2026-09-05 from own-domain
+     Gofrette Pamper & Play — gathered 2026-09-08 from own-domain
      they are: Pet grooming and daycare
      logo: https://www.gofrette.com/wp-content/uploads/2026/07/gofrette-logo.webp (1024x1024) — not cut into a tile yet
      flag: Instagram inconsistent on their own site: the buttons link to gofrette408 while the contact page says @gofrette.pamper.and.play
@@ -1416,7 +1761,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Golden State Ballerz — gathered 2026-09-05 from stopgap
+     Golden State Ballerz — gathered 2026-09-08 from stopgap
      they are: Football gear
      logo: https://golden-state-ballerz.myshopify.com/cdn/shop/files/33827B68-FDF7-46EF-A948-03B383FE90B5.png?v=1777428510 (1024x1024) — not cut into a tile yet
      flag: no address, phone or email anywhere — the contact policy page contains only the Instagram URL
@@ -1440,7 +1785,32 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Gourmet Burritos — gathered 2026-09-05 from stopgap
+     Good Compenny — gathered 2026-09-08 from own-domain
+     they are: Streetwear brand
+     logo: https://goodcompenny.co/cdn/shop/files/GC_HEADER_6392a686-e093-417d-884a-c8496ac6b0f5.png?v=1720029892 (3000x900) — not cut into a tile yet
+     flag: Glenn: 'BEASTY • Online'
+     flag: the P.O. box in Vallejo on their FAQ is a returns address, not a shop, so no address is carried; the phone on their contact page reads like unedited theme text and is not carried either
+     flag: PRICING: the whole store is offer-based. Announcement bar: '*OFFER BASED MERCH*'. Product pages: 'Our entire site runs on a unique offer-based system called "Proud to Pay"... you get to choose your donation amount for everything we offer.' FAQ: 'If your offer meets or exceeds our minimum offer amount, it will be automatically accepted'; the minimum is never published. The listed amounts ($500 magazine, $1,000 CD, $2,000 beanie/hat/puzzle, $2,500 tee, $7,500 jacket/jersey, $10,000 racing jacket) are the 'Add to cart' list prices next to a 'Make An Offer' form, not fixed retail - show them only with the 'Make an offer' label or hide them.
+     flag: TWO CONFLICTING ADDRESSES: the FAQ page publishes 'Address for Returns: P.O. Box 5903 Vallejo, CA 94591' (used in address). The Contact page map block reads '6100 Wilshire Blvd 2nd Floor CA 9004 / +1 310 499 7700 / Opening hours Monday-Saturday 11am–7pm ET, Sunday 11am–6pm ET' - no city, 4-digit ZIP, Eastern-time hours on a California address, and nothing else on the site mentions Los Angeles; it reads like unedited theme placeholder text. The phone above is the only one on the site and comes from that block, so treat it as unverified; hours left null for the same reason.
+     flag: LOCATION IS INFERRED, NOT STATED: the site never says where the brand is based. 'Vallejo' in one_line comes from the returns P.O. Box plus Bay references in product copy ('IM FROM THE BAY' football jersey, 'VJO' beanie and 'VJO LEGENDS' jacket, Richmond CA and Stern Grove show tees, 'Good Compenny x Cal bears' hat). No street address or storefront is published; locations left empty.
+     flag: NAME RENDERING: the Shopify store name, page titles, logo alt text and footer copyright all show lowercase 'goodcompenny'; the header logo wordmark, product copy and the Instagram display name read 'Good Compenny' (name_exact uses the wordmark).
+     flag: SHIPPING (from the FAQ page): 'Our standard shipping service is USPS'; in-stock items ship within 1–3 days 'unless we are on the road for tour'; printed shirts and hoodies 3–5 weeks, factory items 4–6 weeks; 'We ship to most countries worldwide', international via DHL with tariffs paid by the customer. Shopify /policies/ pages (shipping, refund, terms, privacy) all return 404; the returns/exchange policy exists only in the FAQ text and a product-page accordion (30 days, unworn, customer pays return shipping, show purchases non-refundable).
+     flag: NAV ODDITIES: 'FAQ's' links to /collections/faq, a product collection with 0 products whose description holds the FAQ and contact info; 'Bottoms' (/collections/bottoms) is empty; 'Shows' points to /collections/music-1, titled 'MUSIC' and containing CDs; /pages/about is 404 - there is no About page.
+     flag: COPY ODDITIES: product 'SHIRT PACK $150' is listed at $2,000.00 (sold out); GC "PINK T" MESH JERSEY's description starts 'GOOD COMPENNY BLUE MESH JERSEY!'; a homepage section reads 'FEATURED COLLECTION / Best dresses for the upcoming fall season' (no dresses are sold) and another says 'shop new hoodies' (no hoodies listed); the NPR Tiny Desk vinyl copy spells 'Laruseell'.
+     flag: LOGO: the header file is a white 'Good Compenny' wordmark on a transparent PNG (3000x900) - invisible on light backgrounds, needs a dark backdrop; no favicon is set; the yellow circular avatar on Instagram does not appear anywhere on the site.
+     flag: LARUSSELL: much of the catalog is 'Official LaRussell' show tees, CDs, an NPR Tiny Desk vinyl and a puzzle, but the site never explains the relationship; the Instagram bio only says 'The official Good Compenny brand page.'
+     flag: INSTAGRAM (screenshot): display name 'Good Compenny', category 'Brand', bio 'WELCOME TO THE FAMILY! The official Good Compenny brand page. For brand related questions contact us at merch@goodcompenny.co', link 'goodcompenny.co and 1 more' (second link not visible). Site footer links: instagram.com/goodcompenny, tiktok.com/@goodcompenny, youtube.com/@GoodCompenny, x.com/GCompenny.
+     flag: The operator's exact note: BEASTY • Online
+  */
+  'good-compenny': {
+    email: "merch@goodcompenny.co",
+    instagram: "goodcompenny",
+    cuisine: "Streetwear brand",
+    tagline: "Bay Area streetwear and LaRussell merch, offer-based, ships worldwide",
+  },
+
+  /*
+     Gourmet Burritos — gathered 2026-09-08 from stopgap
      their spelling: "A & A Gas" (roster keeps "Gourmet Burritos")
      they are: Burritos
      flag: Glenn's working name for the page is Gourmet Burritos; the business on Yelp and Apple Maps is A & A Gas
@@ -1457,7 +1827,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Great Impasta — gathered 2026-09-05 from own-domain
+     Great Impasta — gathered 2026-09-08 from own-domain
      their spelling: "The Great Impasta" (roster keeps "Great Impasta")
      they are: Italian
      logo: https://greatimpastadanville.com/pluto-images/41a358f2-018e-4d8f-b80d-91012c9f5436 (512x516) — not cut into a tile yet
@@ -1599,7 +1969,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Happy Bay Paws — gathered 2026-09-05 from own-domain
+     Happy Bay Paws — gathered 2026-09-08 from own-domain
      they are: Mobile dog grooming
      logo: https://happybaypawsca.com/wp-content/uploads/2024/07/logo-v2.png (1000x535) — not cut into a tile yet
      flag: their /contact/ page returns a Cloudflare challenge while the rest of the site loads
@@ -1627,7 +1997,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     House Of Thai — gathered 2026-09-05 from own-domain
+     House Of Thai — gathered 2026-09-08 from own-domain
      their spelling: "HOUSE OF THAI" (roster keeps "House Of Thai")
      they are: Thai street food
      logo: https://static.wixstatic.com/media/315f9a_35abbd9bfb684f71a13a6abbc73d3864~mv2.png (8500x4776) — not cut into a tile yet
@@ -1727,7 +2097,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     House of Wings California — gathered 2026-09-05 from stopgap
+     House of Wings California — gathered 2026-09-08 from stopgap
      they are: Chicken wings
      flag: houseofwingsca.com did not resolve on 2026-09-02; Glenn: 'It seems to have expired'
      flag: hours and address from their Instagram bio
@@ -1743,7 +2113,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     i.snapped Photo Booths — gathered 2026-09-05 from own-domain
+     i.snapped Photo Booths — gathered 2026-09-08 from own-domain
      they are: Photo booths
      flag: no street address — mobile, listing counties served
      flag: no logo image: the header is styled text and the favicon is the Wix default
@@ -1767,7 +2137,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     INTL Kitchen — gathered 2026-09-05 from own-domain — BLOCKED: Cloudflare 'Just a moment' challenge on every path; not bypassed — nothing readable
+     INTL Kitchen — gathered 2026-09-08 from own-domain — BLOCKED: Cloudflare 'Just a moment' challenge on every path; not bypassed — nothing readable
      flag: Cloudflare managed challenge on /, /sitemap.xml and /robots.txt with both user agents
      flag: menu: 88 items read from https://intlkitchen.com/menu on 2026-09-05
   */
@@ -1896,7 +2266,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     JDI Auto Detailing — gathered 2026-09-05 from own-domain
+     JDI Auto Detailing — gathered 2026-09-08 from own-domain
      they are: Mobile auto detailing
      flag: two contact emails on one site: the footer says info@jdidetailing.com, the contact page says info@jdiautodetailing.com — the one on their domain is carried
      flag: the before-and-after gallery uses Unsplash stock photos
@@ -1923,7 +2293,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Jenuine Fitness — gathered 2026-09-05 from own-domain
+     Jenuine Fitness — gathered 2026-09-08 from own-domain
      their spelling: "JENUINE FITNESS" (roster keeps "Jenuine Fitness")
      they are: Gym and bootcamp
      logo: https://img1.wsimg.com/isteam/ip/ef4679e4-66e7-4d9e-ade7-68b1a8a3ab1c/logo/a720d831-287e-4c40-b5f0-4adb44e6bc3c.png (162x185) — not cut into a tile yet
@@ -1953,7 +2323,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     J&W Mobile Detailing — gathered 2026-09-05 from own-domain
+     J&W Mobile Detailing — gathered 2026-09-08 from own-domain
      they are: Mobile auto detailing
      logo: https://jnwdetailing.com/images/logo-nav.webp (300x250) — not cut into a tile yet
      flag: the services page promises 'real prices' but contains no dollar figure
@@ -1981,7 +2351,76 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Jump & Roll — gathered 2026-09-05 from own-domain
+     Jolly Roger Land — gathered 2026-09-08 from own-domain
+     they are: Indoor playground
+     logo: https://static.wixstatic.com/media/c1e1da_8e1aa65d7a3a488998ad46cf46e81b03~mv2.png (579x99) — not cut into a tile yet
+     flag: Operator's note: Union City • Services
+     flag: Business type per their own site: an indoor playground / children's play center ('Union city's best indoor family entertainment arena for parties and play', 'nearly 7,000 square feet', four-level soft play structure) with birthday-party rooms; open since January 22, 2019 (about page); Wix site, booking and waivers on LilyPad
+     flag: Address spelling differs: the site (footer, contact page, party menu, printable invitation) says '31300 Courthouse Dr'; the Instagram bio says '31300 courthouse pl'
+     flag: Phone differs: the site shows 510-362-7996 everywhere (header, footer tel link, menu, invitation, booking page); the Instagram profile's Call button dials +1 (510) 304-8683
+     flag: Three emails published: the footer/contact text reads jollyrogerland@yahoo.com but that text is hyperlinked to mailto:info@jollyrogerland.com; the pricing, play-center and calendar pages print info@jollyrogerland.com; employment@jollyrogerland.com is for jobs. info@ is used here; verify with the owner
+     flag: Name written several ways: 'Jolly Roger Land' (logo, footer, contact page, Instagram), 'JOLLY ROGER LAND' (page titles), 'Jollyrogerland'/'JollyRogerLand' (og:site_name, meta description, play-center heading, waiver), tagline 'Indoorplayground - Kidsplay - Funforkids' run together, and an Instagram post thumbnail reads 'JOLLY ROGERS LAND SAN JOSE CA'
+     flag: Deposit contradiction on /pricing-plans: every party card and the booking page say '$200 Non-refundable', but the policy text on the same page says '$100 deposits is non-refundable', and the party terms add 'Deposits will be nonrefundable 3 weeks prior to your party date'
+     flag: Weekday definition differs: open play uses 'Weekdays Monday to Friday', parties use 'Weekdays Monday to Thursday' and price Friday as a weekend; the party section heading reads 'FRIDAY, SATURDAY AND HOLIDAYS' while its cards say 'Friday to Sunday & Holidays'
+     flag: Package contents inconsistent: the weekday 30 KIDS card ($715) lists only 'two large pizza (Value $55.98)' and '20 juice pouches' for 30 kids, while the weekend 30 KIDS card lists three pizzas and 30 pouches; both 20 KIDS cards value 'two large pizza' at $27.99, which is the menu price of one large pizza
+     flag: Additional-child limits inconsistent: cards say '(Max 15)' for 10 kids and '(Max 5)' for 20 and 30 kids; the booking page allows up to 15 or 19 extra for the 10-kid packages and up to 36 for Mon-Thu 20 kids, yet says 'For parties larger than 29 please phone' on the Fri-Sun 20-kid package; the terms also say 'For parties of more than 10 children, please call us' although 20- and 30-kid packages are sold online
+     flag: Outside food rules conflict: the policy says 'No outside food and drinks allowed' and '$10 per item' if you bring your own, while the party terms say 'No outside drinks are allowed, but food is permitted with a fee'
+     flag: The Monday-Thursday 30 KIDS package ($715) is on the site but not offered on the LilyPad booking page (only the other five packages are)
+     flag: Contact page shows a 'SPECIAL HOURS:' label with nothing after it; the hours themselves match on /pricing-plans and /contact, and the San Jose subdomain lists the same hours
+     flag: Some 'BOOK NOW' buttons on /unioncity and /play-center link to /plans-pricing, a leftover page titled 'Pricing-old' showing an unnamed '$385 ... Valid for one week' plan; not counted as a price
+     flag: Calendar page has no calendar entries; the 'REVIEWS' nav item just links to /unioncity
+     flag: Socks are required ('All guests must wear socks on the play area') and sold at the admissions counter, but no sock price is published
+     flag: The online ticket-sales page (LilyPad tickets1.php) needs a JavaScript date step and returned 'Invalid Selection' to direct fetches, so admission prices come from the site's pricing page, not the ticket page
+     flag: Site disclaimers: 'Price/hours are subject to change without notice'; menu: 'All items are subject to sales tax (10.75%)' and 'All prices are subject to changes'
+     flag: Age and charging rules: 'suitable for children AGED 12 and younger'; 'We charge anyone aged under 18 (except infants) regardless if they play or not'; children must be accompanied and supervised by a parent/legal guardian; a waiver is required for each playing child
+     flag: Second location: San Jose (Westfield Oakridge Malls, 925 Blossom Hills RD, San Jose, CA, 95123) on sanjose.jollyrogerland.com with its own phone (408) 622-8306 and different prices; this record is the Union City location only
+  */
+  'jolly-roger-land': {
+    address: "31300 Courthouse Dr, Union City, CA 94587",
+    phone: "510-362-7996",
+    email: "info@jollyrogerland.com",
+    hours: "Mon-Wed 10am-7:30pm, Thu-Sun 10am-8pm",
+    instagram: "_jollyrogerland",
+    cuisine: "Indoor playground",
+    tagline: "Indoor playground and kids' party center in Union City",
+    groups: [
+      { name: "Prices, from", items: [
+        ["1 KID / UNLIMITED PLAY","Weekdays Monday to Friday. For 1 Kid. Unlimited Play Time. One child comes with 1 free adult. $7 for each additional adult",1800,"weekdays Mon-Fri"],
+        ["1 KID / 1 hour","Saturday, Sunday & Holidays. For 1 Kid. 1 Hour Play Time. One child comes with 1 free adult. $7 for each additional adult",1800,"Sat, Sun & holidays"],
+        ["1 KID / 2 hour","Saturday, Sunday & Holidays. For 1 Kid. 2 Hour Play Time. One child comes with 1 free adult. $7 for each additional adult",2100,"Sat, Sun & holidays"],
+        ["1 KID / UNLIMITED PLAY","Saturday, Sunday & Holidays. For 1 Kid. Unlimited Play Time. One child comes with 1 free adult. $7 for each additional adult",2400,"Sat, Sun & holidays"],
+        ["Additional adult","$7 for each additional adult (one child comes with 1 free adult; the same $7 charge applies at parties)",700,"per adult"],
+        ["10 KIDS","Friday to Sunday & Holidays. For 10 Kids. 1 Hour Play Time. 60 Minutes in the Party Room. Includes One Large Pizza (Value $27.99). Includes 10 Juice Pouches. 10 Free Adults. $20 for each Additional child (Max 15). $7 for each additional adult. $200 Non-refundable",38500,"Fri-Sun & holidays"],
+        ["20 KIDS","Friday to Sunday & Holidays. For 20 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes two large pizza (Value $27.99). Includes 20 juice pouches. 20 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable",58900,"Fri-Sun & holidays"],
+        ["30 KIDS","Friday to Sunday & Holidays. For 30 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes three large pizza (Value $83.97). Includes 30 juice pouches. 30 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable",76500,"Fri-Sun & holidays"],
+        ["10 KIDS","Weekdays Monday to Thursday. For 10 Kids. 1 Hour Play Time. 60 Minutes in the Party Room. Includes One Large Pizza (Value $27.99). Includes 10 Juice Pouches. 10 Free Adults. $20 for each Additional child (Max 15). $7 for each additional adult. $200 Non-refundable",33500,"weekdays Mon-Thu"],
+        ["20 KIDS","Weekdays Monday to Thursday. For 20 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes two large pizza (Value $27.99). Includes 20 juice pouches. 20 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable",53500,"weekdays Mon-Thu"],
+        ["30 KIDS","Weekdays Monday to Thursday. For 30 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes two large pizza (Value $55.98). Includes 20 juice pouches. 30 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable (as printed on the site; not offered on the online booking page)",71500,"weekdays Mon-Thu"],
+        ["Party deposit","$200 Non-refundable on every party card and on the booking page (the policy text on the same page says $100)",20000,"non-refundable"],
+        ["Additional child (party)","$20 for each Additional child; booking page: Extra child $20.00 each",2000,"per child"],
+        ["Party overtime","There will be a $20 charge for every 10 minutes you go over your scheduled party time",2000,"per 10 minutes"],
+        ["Excess cleaning charge","A $50 charge will be applied if excess cleaning is needed for your party",5000],
+        ["Outside food/drink charge","If you bring your own food/drinks, you WILL be charged $10 per item",1000,"per item"],
+        ["Pizza-Large Cheese or 1-Topping (15”)","",2799],
+        ["Pizza-Large Master Pizzas (15”)","",3299],
+        ["Pizza-King 1-Topping (18”)","",3299],
+        ["Pizza-King Master Pizzas (18”)","",3799],
+        ["Groovy Twists (Garlic Parmesan or Bacon/Cheese)","6 pieces",1000],
+        ["Chicken Wings (Roasted, BBQ, Parmesan, Teriyaki)","24 pieces",3799],
+        ["Boneless Wings (Roasted, BBQ, Parmesan, Teriyaki)","24 pieces",4099],
+        ["French Fries","1 LB",700],
+        ["Seasoned Potato Wedges","1 LB",950],
+        ["Pasta-Chicken Alfredo","1 Small Tray",1700],
+        ["Pasta-Meat Marinara","1 Small Tray",1700],
+        ["Pepsi/Coke, Diet Pepsi/Coke, or Sprite","1 Liters",600],
+        ["Honest Organic Juice Pouch (6.75FL OZ)","",125],
+      ] },
+    ],
+    quoteOnly: "Indoor playground and kids' party center in Union City. Admission, party and fee prices from jollyrogerland.com/pricing-plans (repeated on /unioncity) and cross-checked on their LilyPad booking page; food prices from their linked 'Jolly Roger Land Party Food/ Drinks Menu' document (plus 10.75% sales tax); hours from 'OUR TIMINGS' on /pricing-plans and 'Hours of Operation' on /contact.",
+  },
+
+  /*
+     Jump & Roll — gathered 2026-09-08 from own-domain
      they are: Soft play rentals
      logo: https://itsjumpandroll.com/wp-content/uploads/2025/07/Pack-Montarias-4.png (1080x1080) — not cut into a tile yet
      flag: the same product is '8x8 White Bounce House' in the list and '8x8 White Bouncer House' on its price card
@@ -2009,7 +2448,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Kabab Burger — gathered 2026-09-05 from own-domain
+     Kabab Burger — gathered 2026-09-08 from own-domain
      their spelling: "Kabab Burger Mediterranean Grill" (roster keeps "Kabab Burger")
      they are: Mediterranean
      logo: https://kabab-burger.co/pluto-images/funnel/images/8d5f620f-65e9-4fd6-8725-0bdff4194b96 (2921x2888) — not cut into a tile yet
@@ -2165,7 +2604,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Kaisen Don — gathered 2026-09-05 from own-domain
+     Kaisen Don — gathered 2026-09-08 from own-domain
      their spelling: "Tetsujin Kaisen Don" (roster keeps "Kaisen Don")
      they are: Sushi and kaisen don
      flag: brand split: the domain is tetsujinsushi.com but Toast and Instagram use 'Kaisen Don'; the full name appears only in the page title
@@ -2410,7 +2849,156 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Lavanta — gathered 2026-09-05 from own-domain
+     Kusan Bazaar — gathered 2026-09-08 from own-domain
+     they are: Halal Uyghur, Central Asian
+     logo: https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709 (1352x264) — not cut into a tile yet
+     flag: Glenn: 'Milpitas • Goods'
+     flag: Operator's exact note: San Jose • Goods, Milpitas • Goods, Mountain View • Goods
+     flag: Naming: the site's header, <title>, logo and story page brand the umbrella as 'Kusan Collective'; the location names are 'Kusan Uyghur Cuisine 西域小巴郎- San Jose', 'Kusan Bazaar 龟兹集市- Milpitas' and 'Kusan Bazaar 龟兹集市- Mountain View'; Instagram display name is 'Küsan'; footer copyright reads 'Slow Food Diary LLC 2026 All Rights Reserved'. name_exact uses 'Kusan Bazaar' (domain, app name, two of three locations)
+     flag: Site footer disclaimer (verbatim): 'Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and operated. The two businesses are not affiliated in any legal or financial capacity.' Yet one site, one Instagram, one email and one app cover all three locations, so the San Jose location may not belong under a 'Kusan Bazaar' listing
+     flag: San Jose hours contradict each other on the site, so they are left null. Homepage store-hours block: Sun 10:30am-3pm & 5-9pm, Mon-Fri 10:30am-2:30pm & 5-9pm, Sat 10:30am-3pm & 5-9pm. /page/locations: Sunday 10:30 AM–9 PM, Monday–Thursday 10:30 AM–2:30 PM & 4:30–9 PM, Friday 11 AM–2:30 PM & 5–9:30 PM, Saturday 10:30 AM–9 PM
+     flag: Menus and prices differ by location. The default kusanbazaar.com/menu is the San Jose menu with lower prices (French-style Roasted Lamb Chops with Salads $18.95+ vs $29.95 in Milpitas; Homemade Amine Yogurt $5.95 vs $6.95; Uyghur Roast Lamb Shank $25.99 vs $25.95; Soda $2.00 vs $2.50). Mountain View has a 'streamlined' menu with different items (Grilled Lamb Cold Noodles $18.95, Grilled Chicken Cold Noodles $21.25, Lobster Tails $39.19+, Uyghur Lamb Wraps (2 piece) $17.95, yoghurt beverages $6.50). Items above are the Milpitas menu only
+     flag: Broken link: the Milpitas 'Order Now' button on /page/locations points to /menu/kusanbazaar-bcnyw1, which returns HTTP 404; the working Milpitas menu (linked from the homepage) is /menu/kusanbazaar-milpitas
+     flag: SEO oddities: page titles read 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' and 'Best Chinese Food in California' although the food is Uyghur/Central Asian halal; the FAQ 'What areas do you serve?' lists only San Jose neighborhoods (no Milpitas or Mountain View)
+     flag: Instagram vs site contact: Instagram contact sheet shows (855) 695-8726 and order@kusancuisine.com, while the site publishes per-location phones and Kusanbazaar@gmail.com; Instagram bio address is only the San Jose one; the handle is kusanuyghurcuisine (the San Jose name) while the site's Facebook link is facebook.com/KusanBazaar. An Instagram post advertises a weekend-only 'Grilled Lamb Cold Noodles' promo at $9.95 (reg $18.95)
+     flag: Possible fourth location: an Instagram 4th of July post footer lists 'MILPITAS · SAN JOSE · MOUNTAIN VIEW · SAN MATEO'; San Mateo appears nowhere on the site (not on /page/locations, story, contact or catering pages)
+     flag: Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail
+     flag: Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources
+     flag: Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')
+  */
+  'kusan-bazaar-milpitas': {
+    address: "510 Barber Ln, Milpitas, CA 95035",
+    phone: "(408) 549-2078",
+    email: "Kusanbazaar@gmail.com",
+    hours: "Mon-Thu 11am-2:30pm & 5-9pm, Fri 11am-2:30pm & 5-9:30pm, Sat 11am-9:30pm, Sun 11am-9pm",
+    instagram: "kusanuyghurcuisine",
+    cuisine: "Halal Uyghur, Central Asian",
+    tagline: "Halal Uyghur Silk Road restaurant on Barber Lane in Milpitas",
+    sections: [
+      { name: "Appetizers & Salads 沙拉和前菜", items: [
+        ["Samsa (2 piece per serve) 烤包子","Flour, Lamb, Onions, Black peppers, Salt, and Sesame (Two pieces per serving)",795],
+        ["Uyghur Salad 维吾尔风味沙拉","Tomato, Onion, Green pepper, Coriander, Dry red pepper, Salt, Sesame oil, Vinegar (Vegan Food, Gluten free)",799],
+        ["Eggplant With Mashed Garlic 蒜蓉茄子沙拉","Eggplant, Garlic, Cilantro, Dry red pepper, Salt, Sesame oil, Prickly pepper oil, Chili oil, Garlic water (Vegan Food, Gluten Free)",899],
+        ["Black Fungus Salad 爽心木耳沙拉","Black Fungus, Goji Berries, Onion, Garlic, Cilantro, Soy Sauce, Chili oil, Sesame oil, Vinegar (Vegan Food, Gluten Free)",799],
+        ["Cold Chili Chicken 椒麻鸡","Chicken, Onion, Cilantro, Dry red pepper, Salt, Sesame oil, Chili oil, Prickly pepper oil. (Gluten Free)",950],
+        ["Sliced Beef with Sauce 凉拌牛肉","Sliced beef, Green onion, Cilantro, Dry red pepper, Salt, Sesame oil, Chili oil, Prickly pepper oil (Gluten Free)",1095],
+      ] },
+      { name: "Silk Road Grilled 维吾尔风烤制", items: [
+        ["Lamb Kebab (2 Skewers) 烤羊肉串","Lamb, Cumin, and Chili powder. (Serves two skewers per order) (Gluten free)",995],
+        ["Chicken Kebab (2 Skewers) 烤鸡肉串","Chicken, Cumin, and Chili powder. (Serves two skewers per order) (Gluten free)",895],
+        ["Wellington-Style Roasted Lamb Shank 惠灵顿风羊腿面包","",2895],
+        ["Golden Crispy Roasted Lamb Rib 黄金脆片烤羊排","Lamb Rib, Onion, Home-made BBQ powder",2495],
+        ["Uyghur Grilled Lamb Shank 维吾尔特色焖烤羊腿","Lamb Shank, Onion, Fennel Seeds, Sichuan Peppercorn, Cumin, White Pepper, Bay Leaves, Cinnamon, Star Anise, Black Cardamom, Angelica Root, Nutmeg, Salt. (Halal Lamb From Australasia, No Msg, Homestyle)",2595],
+        ["French-Style Roasted Lamb Chops with Salads 法式烤羊排配沙拉","Lamb chops, Cumin, Chili powder and Italian season. (Gluten free)",2995],
+        ["Whole Roasted Fish with Silk Road Garlic Spice- 丝路风味蒜香金皮烤整鱼","Freshwater Catfish, Garlic, BBQ powder （Contains Bones）",2995],
+        ["Slow-Roasted Beef Rib 慢烤牛肋排","Beef Ribs, Cumin, Salt, Chili Powder. (Gluten Free)",2595],
+        ["Grilled Garlic Naan Bread 蒜香烤馕饼","Naan bread, Cumin, and Chili powder. (Vegan)",250],
+        ["Roasted Whole Lamb (Advance booking required) 烤全羊","Halal Whole lamb (cleaned and gutted), Cumin, Chili powder, Egg, Olive oil, Salt, Black pepper, Minced garlic, Rosemary, Thyme.",48800,null,"from $488"],
+      ] },
+      { name: "Uyghur Noodles 维吾尔面食", items: [
+        ["Big Plate Chicken 大盘鸡拌面","Chicken (Bone-in), Potato, Green pepper, Garlic, Dry red pepper, and house spices, served with flat wheat flour noodles.",2495,null,"from $24.95"],
+        ["Laghman 拉条子","Homemade noodles, Lamb, Cabbage, Potatoes, Tomato, Green onion, Green Pepper, and Black Fungi. (Choose spicy level: No spicy, Spicy, Extra spicy)",1995],
+        ["Peppercorn Beef Tossed Noodles 藤椒牛肉辣皮子拌面","",1995],
+        ["Beef Cumin Chao-mian 孜然牛肉炒拉条子","Handmade Noodles, Beef, Cumin, Onion, Pepper, Salt",1895],
+        ["Lamb Cumin Chao-mian 孜然羊肉炒面","Lamb, Noodles, Cumin, Onion, Pepper, Salt",1895],
+        ["Veggie Cumin Chao-mian 孜然时蔬炒拉条子","Handmade noodles, Shredded Carrots, Onion, Pepper, Black Fungus, Cumin,",1795],
+        ["Signature Braised Beef Rib Noodle Soup 西域牛肋排面","Handmade noodles, Beef rib, Green onion, Chives, Cilantro, Chili oil, and White radish",2295],
+        ["Beef Noodle Soup 清汤牛肉面","Wheat flour Noodles, Beef, Green onion, Chives, Cilantro, Chili oil, and White",1795],
+        ["Lamb Noodle Soup 清汤羊肉面","Wheat flour Noodles, Lamb, Goji Berries, Green onion, Cilantro, Chili oil White",1795],
+      ] },
+      { name: "Signature Pilaf Set 手抓饭套餐", items: [
+        ["Braised Beef Pilaf 香炖牛肉粒手抓饭","",2095],
+        ["Braised Lamb Rib Pilaf 新西兰羊排手抓饭","",2295],
+        ["6-Hour Braised Lamb Shank Pilaf 六小时慢炖羊腿手抓饭","",2795],
+        ["Garlic-Baked Cold-Water Lobster Pilaf 蒜蓉焗烤北大西洋冷水龙虾手抓饭","",2695],
+      ] },
+      { name: "Dumplings & Wontons 饺子 · 馄炖", items: [
+        ["Lamb Broth with Handcrafted Mini Wontons 羊汤手工小馄饨","",1895],
+        ["Handcrafted Dumplings - Beef with Celery (10 Piece) 手工牛肉芹菜水饺","Beef, Celery.Flour, Seasonings",1695],
+      ] },
+      { name: "Uyghur Wraps 维吾尔烤肉卷", items: [
+        ["Uyghur Lamb Wraps 维吾尔酸奶羊肉卷","Lamb, Tomato, Onion, Green Pepper, home-made Yogurt wrapped with Naan bread.",1695],
+        ["Uyghur Chicken Wraps 维吾尔酸奶鸡肉卷","Chicken, Tomato, Onion, Green Pepper, home-made Yogurt wrapped with Naan bread.",1595],
+      ] },
+      { name: "Soup and Stew 汤和炖菜", items: [
+        ["Stewed Mutton Soup 清炖羊腩汤","Lamb, Goji Berries, White Pepper, Salt",399,null,"from $3.99"],
+        ["6-Hour Braised Lamb Shank with Naan 慢炖羊腿配烤馕","Lamb Shank, Naan bread, Asparagus, Cilantro and decorated with White Sesame and Sliced dry red pepper.",2495],
+        ["Braised Lamb Ribs With Dipping Sauce 慢炖新西兰小羊排 （手抓羊肉）","Lamb Rib, White Pepper, Salt",2295],
+      ] },
+      { name: "Dessert 甜品", items: [
+        ["Homemade Amine Yogurt 维吾尔妈妈手工酸奶","Home-made Yogurt, Almond and Honey (Vegetarian)",695],
+        ["Yogurt Pressé Cone with Fig Jam 冷萃干噎酸奶甜筒","Home-made Yogurt Cheese, Fig Jam, Cone, Dry Rose (Vegetarian)",895],
+        ["Baklava 巴克拉瓦酥皮坚果蛋糕","Sweet dessert pastry made of layers of filo filled with chopped nuts and sweetened and held together with honey (Vegetarian)",495],
+      ] },
+      { name: "Drinks 饮品", items: [
+        ["Uyghur Special Milk Tea 维吾尔风味特调微咸奶茶","Made with milk, black tea, butter, cream, and salt. (Hot)",595],
+        ["Dogap Yoghurt Beverage (Sour) 多哈普微糖酸奶饮","",695],
+        ["Honey Lemon Flavor Yoghurt Beverage 柠檬蜂蜜果粒酸奶饮","",695],
+      ] },
+    ],
+    siteNote: "Prices and descriptions are the Milpitas online-ordering menu on kusanbazaar.com; hours from the homepage location card and the locations page, which agree for Milpitas.",
+  },
+
+  /*
+     Kusan Bazaar — gathered 2026-09-08 from own-domain
+     they are: Halal Uyghur, Central Asian
+     logo: https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709 (1352x264) — not cut into a tile yet
+     flag: Glenn: 'Mountain View • Goods'
+     flag: Operator's exact note: San Jose • Goods, Milpitas • Goods, Mountain View • Goods
+     flag: Naming: the site's header, <title>, logo and story page brand the umbrella as 'Kusan Collective'; the location names are 'Kusan Uyghur Cuisine 西域小巴郎- San Jose', 'Kusan Bazaar 龟兹集市- Milpitas' and 'Kusan Bazaar 龟兹集市- Mountain View'; Instagram display name is 'Küsan'; footer copyright reads 'Slow Food Diary LLC 2026 All Rights Reserved'. name_exact uses 'Kusan Bazaar' (domain, app name, two of three locations)
+     flag: Site footer disclaimer (verbatim): 'Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and operated. The two businesses are not affiliated in any legal or financial capacity.' Yet one site, one Instagram, one email and one app cover all three locations, so the San Jose location may not belong under a 'Kusan Bazaar' listing
+     flag: San Jose hours contradict each other on the site, so they are left null. Homepage store-hours block: Sun 10:30am-3pm & 5-9pm, Mon-Fri 10:30am-2:30pm & 5-9pm, Sat 10:30am-3pm & 5-9pm. /page/locations: Sunday 10:30 AM–9 PM, Monday–Thursday 10:30 AM–2:30 PM & 4:30–9 PM, Friday 11 AM–2:30 PM & 5–9:30 PM, Saturday 10:30 AM–9 PM
+     flag: Menus and prices differ by location. The default kusanbazaar.com/menu is the San Jose menu with lower prices (French-style Roasted Lamb Chops with Salads $18.95+ vs $29.95 in Milpitas; Homemade Amine Yogurt $5.95 vs $6.95; Uyghur Roast Lamb Shank $25.99 vs $25.95; Soda $2.00 vs $2.50). Mountain View has a 'streamlined' menu with different items (Grilled Lamb Cold Noodles $18.95, Grilled Chicken Cold Noodles $21.25, Lobster Tails $39.19+, Uyghur Lamb Wraps (2 piece) $17.95, yoghurt beverages $6.50). Items above are the Milpitas menu only
+     flag: Broken link: the Milpitas 'Order Now' button on /page/locations points to /menu/kusanbazaar-bcnyw1, which returns HTTP 404; the working Milpitas menu (linked from the homepage) is /menu/kusanbazaar-milpitas
+     flag: SEO oddities: page titles read 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' and 'Best Chinese Food in California' although the food is Uyghur/Central Asian halal; the FAQ 'What areas do you serve?' lists only San Jose neighborhoods (no Milpitas or Mountain View)
+     flag: Instagram vs site contact: Instagram contact sheet shows (855) 695-8726 and order@kusancuisine.com, while the site publishes per-location phones and Kusanbazaar@gmail.com; Instagram bio address is only the San Jose one; the handle is kusanuyghurcuisine (the San Jose name) while the site's Facebook link is facebook.com/KusanBazaar. An Instagram post advertises a weekend-only 'Grilled Lamb Cold Noodles' promo at $9.95 (reg $18.95)
+     flag: Possible fourth location: an Instagram 4th of July post footer lists 'MILPITAS · SAN JOSE · MOUNTAIN VIEW · SAN MATEO'; San Mateo appears nowhere on the site (not on /page/locations, story, contact or catering pages)
+     flag: Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail
+     flag: Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources
+     flag: Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')
+  */
+  'kusan-bazaar-mountain-view': {
+    address: "634 N San Antonio Rd, Mountain View, CA 94043",
+    phone: "(650) 215-6118",
+    email: "Kusanbazaar@gmail.com",
+    hours: "Daily 11am-2:30pm & 5-9pm",
+    instagram: "kusanuyghurcuisine",
+    cuisine: "Halal Uyghur, Central Asian",
+    tagline: "Halal Uyghur Silk Road restaurant on N San Antonio Rd, Mountain View",
+    contactOnly: "Halal Uyghur Silk Road restaurant on N San Antonio Rd, Mountain View. The Mountain View shop runs a shorter menu of its own with different prices on kusanbazaar.com, so they are on the site rather than here.",
+  },
+
+  /*
+     Kusan Uyghur Cuisine — gathered 2026-09-08 from own-domain
+     they are: Halal Uyghur, Central Asian
+     logo: https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709 (1352x264) — not cut into a tile yet
+     flag: Glenn: 'San Jose • Goods'
+     flag: their own footer says Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and not affiliated, though one site, one Instagram and one email cover all three; seated under the name the site gives this shop
+     flag: Operator's exact note: San Jose • Goods, Milpitas • Goods, Mountain View • Goods
+     flag: Naming: the site's header, <title>, logo and story page brand the umbrella as 'Kusan Collective'; the location names are 'Kusan Uyghur Cuisine 西域小巴郎- San Jose', 'Kusan Bazaar 龟兹集市- Milpitas' and 'Kusan Bazaar 龟兹集市- Mountain View'; Instagram display name is 'Küsan'; footer copyright reads 'Slow Food Diary LLC 2026 All Rights Reserved'. name_exact uses 'Kusan Bazaar' (domain, app name, two of three locations)
+     flag: Site footer disclaimer (verbatim): 'Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and operated. The two businesses are not affiliated in any legal or financial capacity.' Yet one site, one Instagram, one email and one app cover all three locations, so the San Jose location may not belong under a 'Kusan Bazaar' listing
+     flag: San Jose hours contradict each other on the site, so they are left null. Homepage store-hours block: Sun 10:30am-3pm & 5-9pm, Mon-Fri 10:30am-2:30pm & 5-9pm, Sat 10:30am-3pm & 5-9pm. /page/locations: Sunday 10:30 AM–9 PM, Monday–Thursday 10:30 AM–2:30 PM & 4:30–9 PM, Friday 11 AM–2:30 PM & 5–9:30 PM, Saturday 10:30 AM–9 PM
+     flag: Menus and prices differ by location. The default kusanbazaar.com/menu is the San Jose menu with lower prices (French-style Roasted Lamb Chops with Salads $18.95+ vs $29.95 in Milpitas; Homemade Amine Yogurt $5.95 vs $6.95; Uyghur Roast Lamb Shank $25.99 vs $25.95; Soda $2.00 vs $2.50). Mountain View has a 'streamlined' menu with different items (Grilled Lamb Cold Noodles $18.95, Grilled Chicken Cold Noodles $21.25, Lobster Tails $39.19+, Uyghur Lamb Wraps (2 piece) $17.95, yoghurt beverages $6.50). Items above are the Milpitas menu only
+     flag: Broken link: the Milpitas 'Order Now' button on /page/locations points to /menu/kusanbazaar-bcnyw1, which returns HTTP 404; the working Milpitas menu (linked from the homepage) is /menu/kusanbazaar-milpitas
+     flag: SEO oddities: page titles read 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' and 'Best Chinese Food in California' although the food is Uyghur/Central Asian halal; the FAQ 'What areas do you serve?' lists only San Jose neighborhoods (no Milpitas or Mountain View)
+     flag: Instagram vs site contact: Instagram contact sheet shows (855) 695-8726 and order@kusancuisine.com, while the site publishes per-location phones and Kusanbazaar@gmail.com; Instagram bio address is only the San Jose one; the handle is kusanuyghurcuisine (the San Jose name) while the site's Facebook link is facebook.com/KusanBazaar. An Instagram post advertises a weekend-only 'Grilled Lamb Cold Noodles' promo at $9.95 (reg $18.95)
+     flag: Possible fourth location: an Instagram 4th of July post footer lists 'MILPITAS · SAN JOSE · MOUNTAIN VIEW · SAN MATEO'; San Mateo appears nowhere on the site (not on /page/locations, story, contact or catering pages)
+     flag: Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail
+     flag: Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources
+     flag: Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')
+  */
+  'kusan-uyghur-cuisine-san-jose': {
+    address: "1516 N 4th St, San Jose, CA 95112",
+    phone: "(650) 899-0210",
+    email: "Kusanbazaar@gmail.com",
+    instagram: "kusanuyghurcuisine",
+    cuisine: "Halal Uyghur, Central Asian",
+    tagline: "Halal Uyghur Silk Road kitchen on N 4th St in San Jose",
+    contactOnly: "Halal Uyghur Silk Road kitchen on N 4th St in San Jose. The San Jose shop runs its own menu at its own prices on kusanbazaar.com; hours are printed two different ways on that site, so none are carried.",
+  },
+
+  /*
+     Lavanta — gathered 2026-09-08 from own-domain
   */
   'lavanta': {
     photos: [
@@ -2422,7 +3010,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Love Burn Hot Chicken — gathered 2026-09-05 from stopgap
+     Love Burn Hot Chicken — gathered 2026-09-08 from stopgap
      they are: Nashville hot chicken
      flag: all facts from their Instagram bio; Toast blocks reading the menu
      flag: bio says 'Portola 26' and 'Cluck around and find out'
@@ -2491,7 +3079,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Lush Spaw — gathered 2026-09-05 from own-domain
+     Lush Spaw — gathered 2026-09-08 from own-domain
      they are: Pet grooming
      flag: Glenn: 'Three locations above' — the three addresses in their bio
      flag: the site's story ring is Instagram's; the icon is the white disc inside it
@@ -2520,7 +3108,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mac’s Old House — gathered 2026-09-05 from stopgap — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
+     Mac’s Old House — gathered 2026-09-08 from stopgap — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
      flag: the entire domain serves Squarespace's 'Website Expired' page — /, /menu, /sitemap.xml, www and bare, both user agents
   */
   'macs-old-house': {
@@ -2528,7 +3116,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Macstalgia — gathered 2026-09-05 from own-domain
+     Macstalgia — gathered 2026-09-08 from own-domain
      their spelling: "macstalgia" (roster keeps "Macstalgia")
      they are: Framed vinyl art
      logo: https://www.macstalgia.com/cdn/shop/files/hf_20260818_045451_57f574dd-1324-49a6-875d-f07cf87148a1.png?v=1787029208 (2048x2048) — not cut into a tile yet
@@ -2548,7 +3136,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Majestic Boutique — gathered 2026-09-05 from own-domain
+     Majestic Boutique — gathered 2026-09-08 from own-domain
      they are: Clothing boutique
      logo: https://cdn.shopify.com/s/files/1/0830/2867/2801/files/ACFD4D10-99B9-480D-8A07-946839C78FD5.jpg?v=1696398367 (915x731) — not cut into a tile yet
      flag: the Instagram link is malformed — a full URL pasted into a handle field — and produces a broken link; the intended handle was recovered from inside it
@@ -2575,7 +3163,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Marina Bay Media — gathered 2026-09-05 from own-domain
+     Marina Bay Media — gathered 2026-09-08 from own-domain
      they are: Marketing agency
      logo: https://www.marinabaymedia.com/20260610-marina-bay-media-logo-large.png (500x150) — not cut into a tile yet
      flag: Contact page is empty — a 'Contact' heading with no form, email or phone; the homepage says 'Contact us' with no channel other than Instagram
@@ -2588,7 +3176,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Meadowlark Dairy — gathered 2026-09-05 from own-domain
+     Meadowlark Dairy — gathered 2026-09-08 from own-domain
      they are: Soft-serve dairy
      logo: https://www.meadowlarkdairy.com/cdn/shop/files/Untitled_design_18_256x.png?v=1762378449 (256x256) — not cut into a tile yet
      flag: second location: 2287 Second Street, Livermore 94550, (925) 846-8777, with its own Instagram @meadowlarkdairylivermore
@@ -2613,7 +3201,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Midnite Theories — gathered 2026-09-05 from own-domain
+     Midnite Theories — gathered 2026-09-08 from own-domain
      they are: Skate shop
      logo: https://www.midnitetheories.com/cdn/shop/files/hoodie_font_sticker.jpg?v=1730508016 (1050x600) — not cut into a tile yet
      flag: the shop spells itself 'Midnite'; the directory id spells it 'midnight'
@@ -2636,7 +3224,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mimi’s Chocolates — gathered 2026-09-05 from own-domain
+     Mimi’s Chocolates — gathered 2026-09-08 from own-domain
      their spelling: "Mimi's Chocolates" (roster keeps "Mimi’s Chocolates")
      they are: Chocolates and ice cream
      logo: https://img1.wsimg.com/isteam/ip/54f7119c-a1d4-41ea-99f4-56706224959f/logo/1a5dae7a-2365-49e5-9b0c-090e056f6540.png (2560x1591) — not cut into a tile yet
@@ -2682,7 +3270,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mrs. Ramen Concord — gathered 2026-09-05 from stopgap
+     Mrs. Ramen Concord — gathered 2026-09-08 from stopgap
      they are: Ramen and seafood boil
      flag: no website found; a 'Mrs. Pho' is listed by Yelp at the same address, which may be the same operator or the previous tenant
      flag: address is from their own Instagram bio: 'At The Veranda, 2045 Diamond Blvd. Concord, California' — no suite number, no ZIP
@@ -2697,7 +3285,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     One House Bakery — gathered 2026-09-05 from own-domain
+     One House Bakery — gathered 2026-09-08 from own-domain
      they are: Bakery and cafe
      logo: https://static.wixstatic.com/media/7dfc6f_912d37cd93ff41bfa762c2ea97097eda~mv2_d_1320_1320_s_2.jpg (1320x1320) — not cut into a tile yet
      flag: the menu exists only as images — no HTML or PDF text, so it reads as empty to anything that cannot see
@@ -2725,7 +3313,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     oneills-signature — gathered 2026-09-05 from own-domain
+     oneills-signature — gathered 2026-09-08 from own-domain
      their spelling: "Pavers and Turf By O'Neills" (roster keeps "oneills-signature")
      they are: Pavers and turf
      logo: https://paversandturf.com/wp-content/uploads/2025/04/LogoUpdate.png (1563x1563) — not cut into a tile yet
@@ -2745,7 +3333,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Overly Hip Hop — gathered 2026-09-05 from own-domain
+     Overly Hip Hop — gathered 2026-09-08 from own-domain
      they are: Media company
      flag: Oakland and San Francisco per their footer; no address published
      flag: Glenn: his best friend's company, a sound engineer; a collab is planned
@@ -2757,7 +3345,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     PaintGo — gathered 2026-09-05 from own-domain
+     PaintGo — gathered 2026-09-08 from own-domain
      their spelling: "Paint Go USA" (roster keeps "PaintGo")
      they are: Auto tint and PPF
      logo: https://irp.cdn-website.com/2dec908d/dms3rep/multi/LOGOWHITEpaintgo.webp (2400x386) — not cut into a tile yet
@@ -2777,7 +3365,37 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Perfect Nine — gathered 2026-09-05 from own-domain
+     Parada New Peru — gathered 2026-09-08 from own-domain
+     their spelling: "Parada Kitchen" (roster keeps "Parada New Peru")
+     they are: Peruvian food
+     logo: https://paradakitchen.com/wp-content/uploads/2024/09/parada-logo.png (598x226) — not cut into a tile yet
+     flag: The operator's exact note: Walnut Creek • Goods — 'Goods' does not fit: this is a sit-down Peruvian restaurant (dine-in, take-out, bar, brunch, catering), not a goods/retail shop
+     flag: Name is written three ways: the site title and nav-logo alt text say 'Parada Kitchen' (domain paradakitchen.com), while the logo image itself and the hero graphic read 'Parada NEW PERU' (matches the operator's 'Parada New Peru'), and the Instagram display name and OpenTable link slug say 'Parada Peruvian Kitchen'; body copy just says 'Parada'
+     flag: Sunday is not listed anywhere on the site or in the Instagram bio, neither as hours nor as closed; a Brunch menu is published (bottomless mimosas, 90 min limit) but no brunch days or hours are given, so hours covers Mon-Sat only
+     flag: No item prices on any own-site menu page (Dinner, Brunch, Cocktails, Beer & Wine, Desserts): only '$25 corkage fee' ('$25 for 750ml' on the wine page) and 'Add Fried egg $3' on Lomo Saltado; the Catering Menu page just says to email events@altamiranorestaurants.com
+     flag: Their Toast ordering page (order.toasttab.com/online/parada-wc-7001-sunne-ln-suite-116), the only place their prices would be, returned 403 and a Cloudflare 'Just a moment' bot-verification page, which was not bypassed, so items is empty
+     flag: The site's own 'Order Online' nav link points to paradakitchen.com/pickup-delivery/, which returns 404; the working links are the Toast 'Pickup + Delivery' URL and OpenTable (opentable.com/r/parada-peruvian-kitchen-reservations-walnut-creek) for reservations
+     flag: Address details are scattered: most pages say '7001 Sunne Lane, Walnut Creek, CA' with no zip; 94597 appears only on the Our Restaurants page ('7001 Sunne Ln, Walnut Creek, CA 94597'); 'Suite 116' appears only inside the Toast link slugs, never in visible text
+     flag: A second email, events@altamiranorestaurants.com, is published for events and catering (the restaurant group's domain, not Parada's); the Instagram bio tags #AltamiranoRestaurants
+     flag: Only one Parada location is published; the site's Our Restaurants page lists sister restaurants under chef Carlos Altamirano (Paradita Eatery, Emeryville; Sanguchon Eatery and Mochica, San Francisco; Barranco, Lafayette; La Costanera, Half Moon Bay), separate brands with their own sites, not recorded as Parada locations
+     flag: The header logo file (wordmark 'Parada NEW PERU') is white-on-transparent, invisible on light backgrounds; a 200x200 teal square 'P' favicon also exists at https://paradakitchen.com/wp-content/uploads/2024/09/favicon-parada.png
+     flag: Parking is described two ways: the site banner says '2 Hours of Free Parking at the public parking garage conveniently located next to our restaurant', the contact page says 'complimentary parking in the covered lot behind the restaurant' (one block from Pleasant Hill/Contra Costa Centre BART)
+     flag: Beer & Wine list looks dated: vintages 2016-2020 only, with typos ('Colorada', 'Sam Jose')
+     flag: The site itself has no Instagram or social links; the handle comes only from the operator's screenshot of the profile (@paradakitchen, category 'Peruvian Restaurant', bio 'Dine in & Take out: Mon-Thu 11am-9pm Fri-Sat 11am-10pm', identical to the site's hours)
+  */
+  'parada-new-peru': {
+    address: "7001 Sunne Lane, Walnut Creek, CA 94597",
+    phone: "925-448-8118",
+    email: "info@paradakitchen.com",
+    hours: "Mon-Thu 11am-9pm, Fri-Sat 11am-10pm",
+    instagram: "paradakitchen",
+    cuisine: "Peruvian food",
+    tagline: "Peruvian restaurant by chef Carlos Altamirano in Walnut Creek",
+    contactOnly: "Peruvian restaurant by chef Carlos Altamirano in Walnut Creek. No prices anywhere on paradakitchen.com (menu pages give names and descriptions only; the only dollar figures are a $25 corkage fee and a $3 fried-egg add-on); their Toast ordering page is behind a Cloudflare bot check and was not read; hours come from the homepage HOURS block and match the Instagram bio.",
+  },
+
+  /*
+     Perfect Nine — gathered 2026-09-08 from own-domain
      they are: Mobile mini golf
      logo: https://images.squarespace-cdn.com/content/v1/6985817d209a3550aea72807/a665e08a-a937-42dc-ace4-80bc8c75e2a0/Perfect+Nine+Mobile+Mini+Golf+California.png (2500x502) — not cut into a tile yet
      flag: based in Berkeley but no street address published
@@ -2800,7 +3418,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Philomena Pizza — gathered 2026-09-05 from own-domain
+     Philomena Pizza — gathered 2026-09-08 from own-domain
      their spelling: "PHILOMENA" (roster keeps "Philomena Pizza")
      they are: Pizza and beer bar
      logo: https://images.squarespace-cdn.com/content/v1/56e8a739f850829a3e282a2a/7d848adb-25df-4a4b-96fe-25ca7319a0f0/horizantal+title.png (1944x567) — not cut into a tile yet
@@ -2955,7 +3573,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pho Nation — gathered 2026-09-05 from stopgap
+     Pho Nation — gathered 2026-09-08 from stopgap
      they are: Vietnamese
      flag: hours, phone and address from the Apple Maps card he sent
      flag: Glenn: the three locations need one consistent brand identity; the same mark is used on all three
@@ -3010,7 +3628,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pho Nation — gathered 2026-09-05 from stopgap
+     Pho Nation — gathered 2026-09-08 from stopgap
      they are: Vietnamese
      flag: hours, phone and address from the Apple Maps card he sent; the Square site lists this location for ordering
      flag: menu: 46 items read from https://pho-nation.square.site/?location=LGATRB6HCK6A2#LADTEUMGQEBBOTYMOVSF6DGH on 2026-09-04
@@ -3086,7 +3704,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pho Nation SF — gathered 2026-09-05 from stopgap
+     Pho Nation SF — gathered 2026-09-08 from stopgap
      they are: Vietnamese
      flag: Glenn wrote 'San Bruno' for this one; it is San Bruno Avenue in San Francisco, so it sits on San Francisco's page
      flag: address from the profile card he sent; no phone or hours published there
@@ -3100,7 +3718,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pijja Paradise — gathered 2026-09-05 from own-domain
+     Pijja Paradise — gathered 2026-09-08 from own-domain
      they are: Indian pizza
      flag: a third location in Fresno is on their site and is not seated here
      flag: Glenn delivers to this one weekly and plans to show the owner her page
@@ -3114,7 +3732,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pijja Paradise — gathered 2026-09-05 from own-domain
+     Pijja Paradise — gathered 2026-09-08 from own-domain
      they are: Indian pizza
      flag: pijjaparadise.com renders only with JavaScript, so the menu could not be read
      flag: addresses and numbers from their own site's location list, as he sent it
@@ -3128,7 +3746,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Pizzeria Cardamomo — gathered 2026-09-05 from own-domain
+     Pizzeria Cardamomo — gathered 2026-09-08 from own-domain
      they are: Northern Italian pizza
      logo: https://static-content.owner.com/funnel/images/d7fd8779-db7d-442d-b9aa-d731c798852f?v=8219686727 (703x95) — not cut into a tile yet
      flag: site banner: open September 7th for Labor Day, closed for a team vacation September 8th to 14th
@@ -3224,7 +3842,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Playland 707 — gathered 2026-09-05 from own-domain
+     Playland 707 — gathered 2026-09-08 from own-domain
      their spelling: "PLAYLAND707.com" (roster keeps "Playland 707")
      they are: Paintball
      logo: https://images.squarespace-cdn.com/content/v1/69a710af8259800303779dc1/7c3b847d-cdbf-4c04-9af3-9364b35e2c57/black2inlogo.jpg (1000x1000) — not cut into a tile yet
@@ -3256,7 +3874,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Polly Ann Ice Cream — gathered 2026-09-05 from own-domain
+     Polly Ann Ice Cream — gathered 2026-09-08 from own-domain
      they are: Ice cream
      logo: https://www.pollyann.com/static/4c139f8ea465466ad98154b406f8294b/73bb6/Polly_Ann_monochrome_logo_since_1955_v2.jpg (120x120) — not cut into a tile yet
      flag: menu lists two separate categories named 'Baked goods' and 'Baked Goods'
@@ -3314,7 +3932,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Quickly Benicia — gathered 2026-09-05 from own-domain
+     Quickly Benicia — gathered 2026-09-08 from own-domain
      they are: Boba and Filipino snacks
      logo: https://www.quicklybenicia.com/images/quickly-logo.jpg (1818x1818) — not cut into a tile yet
      flag: the site was generated with v0.app and carries long keyword-stuffed copy
@@ -3363,7 +3981,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Red Chili — gathered 2026-09-05 from own-domain
+     Red Chili — gathered 2026-09-08 from own-domain
      they are: Thai and Vietnamese
      logo: https://redchilirestaurants.com/wp-content/uploads/2025/04/Red-Chili-Rectangle-logo.png (208x58) — not cut into a tile yet
      flag: THE HAYWARD ROOM IS CLOSED — 29583 Mission Blvd, (510) 881-8593, 'temporarily closed until further notice due to repairs from a neighboring fire' per their own banner — so the open San Jose location is the address here
@@ -3486,7 +4104,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     rock-n-jump — gathered 2026-09-05 from own-domain
+     rock-n-jump — gathered 2026-09-08 from own-domain
      their spelling: "ROCKIN' JUMP" (roster keeps "rock-n-jump")
      they are: Trampoline park
      logo: https://rockinjump.com/wp-content/themes/rockinjump/images/header/Rockin-Jump-Logo.png (442x64) — not cut into a tile yet
@@ -3518,7 +4136,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Rocket MC Tow — gathered 2026-09-05 from own-domain
+     Rocket MC Tow — gathered 2026-09-08 from own-domain
      their spelling: "Rocket Motorcycle Towing and Transport Service" (roster keeps "Rocket MC Tow")
      they are: Motorcycle towing
      logo: https://www.rocketmctow.com/wp-content/uploads/2024/07/logo-web.png (500x460) — not cut into a tile yet
@@ -3533,7 +4151,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Royale Eatery — gathered 2026-09-05 from own-domain
+     The Royale Eatery — gathered 2026-09-08 from own-domain
      their spelling: "THE ROYALE" (roster keeps "The Royale Eatery")
      they are: Contemporary American
      logo: https://static.wixstatic.com/media/315f9a_ae2afe1fbba248ffa009ee59f07c6fa8~mv2.png (1280x1280) — not cut into a tile yet
@@ -3560,7 +4178,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Ruben Hibachi Grill — gathered 2026-09-05 from stopgap
+     Ruben Hibachi Grill — gathered 2026-09-08 from stopgap
      they are: Hibachi and catering
      flag: all facts from their Instagram bio; DoorDash blocks reading the menu
      flag: Glenn: 'Definitely needs a website'
@@ -3577,7 +4195,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Russ Fam Kitchen — gathered 2026-09-05 from own-domain
+     Russ Fam Kitchen — gathered 2026-09-08 from own-domain
      they are: Filipino fusion
      flag: second counter at 2992 Spring St Unit C, Redwood City, per their site
      flag: hours are from their Instagram bio: '8:30-12 / 2-7PM, Tuesday-Sunday'
@@ -3636,7 +4254,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Rywire — gathered 2026-09-05 from own-domain
+     Rywire — gathered 2026-09-08 from own-domain
      their spelling: "Rywire Motorsport Electronics" (roster keeps "Rywire")
      they are: Motorsport electronics
      logo: https://res.cloudinary.com/v11111111-0000-0000-0000-000001381196/image/upload/v1724100194/hf01rdo9mo8gvhvorwkw.png (1420x491) — not cut into a tile yet
@@ -3660,7 +4278,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Sala Thai — gathered 2026-09-05 from own-domain — BLOCKED: Cloudflare bot challenge on every URL with both user agents; not bypassed — nothing readable
+     Sala Thai — gathered 2026-09-08 from own-domain — BLOCKED: Cloudflare bot challenge on every URL with both user agents; not bypassed — nothing readable
      flag: WordPress behind Cloudflare — robots.txt is served, but the sitemap, /feed/ and /wp-json/ are all challenged
   */
   'sala-thai': {
@@ -3670,7 +4288,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Sandwich Monkey — gathered 2026-09-05 from own-domain
+     The Sandwich Monkey — gathered 2026-09-08 from own-domain
      their spelling: "SANDWICH MONKEY" (roster keeps "The Sandwich Monkey")
      they are: Sandwiches
      logo: https://img1.wsimg.com/isteam/ip/36917ad0-efd1-4e42-95ce-59336e468a4d/logo/ee08cbb2-6554-4f3d-b953-6eb8899b9d2f.png (2560x2560) — not cut into a tile yet
@@ -3752,7 +4370,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Santa Clara Super Kitchen — gathered 2026-09-05 from own-domain
+     Santa Clara Super Kitchen — gathered 2026-09-08 from own-domain
      they are: Halal catering
      logo: https://assets.cdn.filesafe.space/eB7n0OPlq05vyyLG9vE5/media/69ef20660d66f2a66587db87.png (866x288) — not cut into a tile yet
      flag: name alternates on the site: 'Santa Clara Super Kitchen' (title, logo, copyright) vs 'Santa Clara Super Kitchens' (About and FAQ)
@@ -3770,7 +4388,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Señor Sisig — gathered 2026-09-05 from own-domain
+     Señor Sisig — gathered 2026-09-08 from own-domain
      they are: Filipino fusion
      logo: https://images.getbento.com/accounts/ab73e9d161ec9b04042370bad74771a9/media/images/17855logo.png (900x260) — not cut into a tile yet
      flag: three more shops plus trucks: Ferry Building (1 Ferry Building Suite 41), Thrive City (151 Warriors Way Suite 103), Oakland (330 17th Street, 94612)
@@ -3796,7 +4414,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Shaka Shack — gathered 2026-09-05 from stopgap
+     Shaka Shack — gathered 2026-09-08 from stopgap
      they are: Hawaiian brunch
      flag: their only site is a Square Online store — the operator's own 'Needs website'
      flag: the site's About and Catering pages return 404 while the footer advertises catering, corporate lunches and restaurant buyouts
@@ -3890,7 +4508,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     SIA Collective — gathered 2026-09-05 from own-domain
+     SIA Collective — gathered 2026-09-08 from own-domain
      they are: Streetwear and footwear
      logo: https://siacollective.com/cdn/shop/files/textblack_f738e4c5-6cda-4366-bcf8-f74e6f69342a.png (3651x1530) — not cut into a tile yet
      flag: brand written 'sia collective' (header), 'SIA Collective' and 'SIACLTV' (about); logo wordmark reads 'siacltv'
@@ -3913,7 +4531,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Simply Soups — gathered 2026-09-05 from own-domain
+     Simply Soups — gathered 2026-09-08 from own-domain
      their spelling: "Simply Soups and More" (roster keeps "Simply Soups")
      they are: Soul food
      logo: https://storage.googleapis.com/msgsndr/JC1YUdvjnhXZlLhDoj4c/media/69784cc8a87bebf1d8313907.jpg (500x500) — not cut into a tile yet
@@ -3937,7 +4555,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Sol Taqueria — gathered 2026-09-05 from own-domain
+     Sol Taqueria — gathered 2026-09-08 from own-domain
      they are: Jalisco-style Mexican
      logo: https://static.wixstatic.com/media/fab297_42e925a7e2a14b0c8cb14ff9b5e5d2e0~mv2.png (889x1123) — not cut into a tile yet
      flag: footer hours are typed 'MOn-Thur 10-9PM' with no AM marker on the ten
@@ -4031,7 +4649,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     SupTea Lab — gathered 2026-09-05 from stopgap
+     SupTea Lab — gathered 2026-09-08 from stopgap
      they are: Boba and Taiwanese snacks
      logo: https://suptealaboakland.square.site/uploads/b/bcb2fda72610bd6712fe73e313670e34259b6a3cdae75d0a3a0f53a37060193a/LOGO%20Final_design_01_1708289189.jpg (2048x2048) — not cut into a tile yet
      flag: no address, phone or hours anywhere — 'Oakland' appears only in the square.site subdomain
@@ -4098,7 +4716,105 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Tastin Peachy — gathered 2026-09-05 from stopgap
+     Sushinaloa — gathered 2026-09-08 from own-domain
+     they are: Mexican sushi & mariscos
+     logo: https://static.wixstatic.com/media/fab297_f800a1a601ea4b00b5ae55559451c71b~mv2.png (960x960) — not cut into a tile yet
+     flag: Operator's exact note: Redwood City • Goods — the 'Goods' category does not fit; their own site and Instagram both call it a Restaurant
+     flag: Operator spelled it 'Sushi Naloa'; the business spells it 'Sushinaloa' (one word) on its site title, footer, logo and Instagram display name 'Sushinaloa - Redwood City'
+     flag: Phone contradiction on their own homepage: visible text and tel: links (including the 'Reserve A Table' button) say (650) 771-1620, but the hidden schema.org block says telephone 6503894597; used the visible number
+     flag: Hours contradiction on their own site: visible footer says 'Wednesday-Monday: 10AM-10PM / Tuesday: CLOSED', but the hidden schema.org data and Wix business schedule list only Sun and Wed-Sat 10:00-22:00, with a malformed day-less entry where Monday should be; used the visible hours
+     flag: Zip shown two ways on their own site: footer says 94063, hidden structured data and the ordering page say 94063-2825 (zip+4, consistent)
+     flag: Online-ordering page footer reads '© 2035 by Business Name. Built on Wix Studio' (unedited template placeholder) while the homepage footer reads '© 2026 by Studio Siete'; the /experiences page carries the same placeholder
+     flag: A menu named 'Test' (single item 'Test', $0, description 'Vfdsvfdavrsa', modifier 'No mayo') is publicly visible as a tab on the menu and ordering pages; excluded from items
+     flag: Price contradiction: Caldo de Camarón and Caldo de Pescado are $24.20 under Tacos y Caldos but $22 as variants of '7 Mares' under Mariscos Calientes
+     flag: Duplicate items across menus: 'Mariscada' $65.95 appears under both Mariscos and Mariscos Calientes; 'Milkshake' $9.90 under both Bebidas and Postres
+     flag: Dietary labels look wrong: the 'Chipotle' roll (asada) and 'Ceviche Sierra' (fish) are tagged 'Vegetarian'
+     flag: Typos/oddities in item names: 'Michealda de Mango', 'Brucheta Sushi', 'Tacos Clasicos(3)'; 'Coctel ' and 'Cerveza ' carry trailing spaces; sub-menus 'Sushi', 'Mariscos Calientes' and 'Bebidas' all carry the copied description 'Mariscos Estilo Sinaloa'
+     flag: Nearly all online prices equal a round dollar amount plus 10% (e.g. $13.20, $16.50, $24.20, $29.70); in-store prices may differ, so verify before quoting
+     flag: Ordering page showed 'Accepting Orders' with Pickup / Delivery / Dine-In at fetch time, but the default 'Delivery time: Today 8:00 AM' is earlier than the 10AM opening; menu sections are split into 'Sides/Appetizers' (menu) and 'Sides/Starters' (section)
+     flag: Homepage buttons 'Order Pick-Up' and 'Order Delivery' are not hyperlinked (only 'See Menu' and 'Order Online' go to /online-ordering); footer words 'Party Reservations', 'Catering' and 'View Menu' are plain text; 'Reserve A Table' is a tel: link, while a separate /reservations page ('Request a reservation') exists and /book-online says 'Nothing to book right now'
+     flag: The website has no social links; the Instagram handle sushinaloarwc comes from the operator's profile screenshot (bio: "Redwood City's First Mexican-Sushi Restaurant", '2505 Middlefield Rd, Redwood City, CA', 'Mariscos estilo Sinaloa, Micheladas y mas', link sushinaloarwc.com); no hours, phone or prices are published on Instagram
+     flag: The Instagram profile links a Facebook page labeled 'Suchinaloa Quintero' (misspelled with a 'c')
+     flag: Site is a Wix Studio site on their own domain with built-in Wix Restaurants ordering; no third-party ordering platform (DoorDash/Toast/etc.) is linked; the homepage links a Telemundo interview ('As Seen on Telemundo!')
+  */
+  'sushi-naloa': {
+    address: "2505 Middlefield Rd, Redwood City, CA 94063",
+    phone: "(650) 771-1620",
+    email: "sushinaloacatering@gmail.com",
+    hours: "Wed-Mon 10am-10pm, closed Tue",
+    instagram: "sushinaloarwc",
+    cuisine: "Mexican sushi & mariscos",
+    tagline: "Sinaloa-style mariscos and Mexican sushi in Redwood City since 2013",
+    sections: [
+      { name: "Sides/Starters", items: [
+        ["Guacamole","",1320],
+        ["Empanadas de Camaron","",1870],
+        ["Camarones Cucarachas","",2420],
+        ["Chicharrones de Pescado","",2190],
+        ["Super Nachos","",1980,null,"Asada or Chicken; Shrimp or Octopus +$2"],
+      ] },
+      { name: "Tacos y Caldos", items: [
+        ["Tacos Gobernador","Shrimp or Marlin",1870],
+        ["Taco Capeado (3)","SHRIMP - FISH - OCTOPUS",1650],
+        ["Quesabirrias","Comes with 3 quesabirrias, consume, and toppings.",1870],
+        ["Siete Mares Soup","",2530],
+        ["Tacos Clasicos(3)","",1320,null,"Asada or Chicken; Shrimp or Octopus +$2"],
+      ] },
+      { name: "Mariscos (Estilo Sinaloa)", items: [
+        ["Aguachile","",2640],
+        ["Aguachile Negro","",2750],
+        ["Campechana","Shrimp, octopus, oyster, and scallop.",2860],
+        ["Torre","Shrimp, scallop, octopus, crab, cucumber, avocado, and chiltepin.",3295],
+        ["Botana Mazatlan","Fish, ceviche, shrimp, octopus, scallop, and oysters.",4290],
+        ["Aguachile en su Piedra","Shrimp, scallop, cucumber, and tomato.",3190],
+        ["Mariscada","",6595],
+      ] },
+      { name: "Ceviches / Tostadas", items: [
+        ["Tostada Perrona","Shrimp, octopus, scallop, crab, and avocado.",1754],
+        ["Ceviche de Camaron","Shrimp Ceviche",990,null,"Tostada $9.90 / Plate $23"],
+        ["Ceviche Mixto","Shrimp and octopus.",1100,null,"Tostada $11 / Plate $25.24"],
+      ] },
+      { name: "Sushi", items: [
+        ["Divorciado","Shrimp, asada, cream cheese, avocado, cucumber, and unagi sauce.",2085],
+        ["Venenoso","Crab, avocado, cucumber, chiltepin, onion, and chipotle sauce.",2194],
+        ["Cocono","Shrimp, avocado, cucumber, surimi, coconut, mango, and chipotle sauce.",2085],
+        ["Spicy Tuna","Tuna, cream cheese, avocado, and jalapeño.",2415],
+        ["California","Cream cheese, avocado, and cucumber.",1865],
+        ["Salmon Roll","Salmon, cream cheese, avocado, and cucumber.",2415],
+        ["Bacon Roll","Shrimp, bacon, mozzarella cheese, avocado, and cucumber.",2415],
+      ] },
+      { name: "Mariscos Calientes", items: [
+        ["Molcajete","Shrimp, chicken, pork, and steak with side of rice.",3295],
+        ["Mojarra","FRITA // AL AJO // A LA DIABLA. Rice and salad on the side.",2300],
+        ["Camarones Envueltos","Bacon-wrapped shrimp.",2415],
+        ["Salmon a la Plancha","Choice of Tilapia available.",2970],
+        ["Camarones a La Diabla","",2300,null,"A La Diabla, Camarones Rancheros or A La Plancha, $23 each"],
+      ] },
+      { name: "Bebidas", items: [
+        ["Michelada","",1210,null,"Regular $12.10; Con Camaron $19.80; Perrona or La Buchona $30.80"],
+        ["Cubeta (6)","",3190],
+        ["Barrilito (1LT)","",2420],
+        ["Agua Fresca","",550],
+        ["Piña Colada","",1310],
+      ] },
+      { name: "Kid's Menu", items: [
+        ["Tenders","",1760],
+        ["Plain Quesadilla","Cheese only.",1100],
+      ] },
+      { name: "Postres", items: [
+        ["Flan","",660],
+        ["Banana Split","",1100],
+      ] },
+      { name: "Trays (Catering)", items: [
+        ["Charola Especial","Special tray with Sushi Venenoso, Sushi Cocono, Camarones Envueltos y Empanizados, Flautas, Camarones Cucaracha, Chicharrón Chino, and Empanadas de Camarón.",12500],
+        ["Full Sushi Tray","For 50 people",10000],
+      ] },
+    ],
+    siteNote: "Prices from the Wix menu data on their own site (sushinaloarwc.com/menu, the same menus behind /online-ordering); hours, address, phone and email from the homepage footer.",
+  },
+
+  /*
+     Tastin Peachy — gathered 2026-09-08 from stopgap
      they are: Catering
      flag: no address published; the bio says Bay Area, CA
      flag: the tagline is their bio line
@@ -4114,7 +4830,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Farmacy — gathered 2026-09-05 from own-domain — BLOCKED: Cloudflare managed challenge on every page including robots.txt; nothing readable
+     The Farmacy — gathered 2026-09-08 from own-domain — BLOCKED: Cloudflare managed challenge on every page including robots.txt; nothing readable
      flag: every page is behind a Cloudflare challenge; only the sitemap is served, and its slugs describe a chicken concept — strips and chips, fried and rotisserie chicken sandwiches — not a cafe
      flag: menu: 21 items read from https://www.farmacysf.com/menu on 2026-09-05
   */
@@ -4162,7 +4878,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Hangout — gathered 2026-09-05 from own-domain
+     The Hangout — gathered 2026-09-08 from own-domain
      their spelling: "The Hangout Breakfast" (roster keeps "The Hangout")
      they are: Breakfast and brunch
      logo: https://static.wixstatic.com/media/4498e5_d17e57814acd47d6829b1586449b2574~mv2.png (1558x1441) — not cut into a tile yet
@@ -4268,7 +4984,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Model Bakery — gathered 2026-09-05 from own-domain
+     The Model Bakery — gathered 2026-09-08 from own-domain
      they are: Artisan bakery
      logo: https://www.themodelbakery.com/wp-content/uploads/2025/06/Model-Logo-1908-Wheat-trans.svg (500x175) — not cut into a tile yet
      flag: FOUR LOCATIONS, and the roster seat is Napa, so the Oxbow Market stand is the address here. The others: 1357 Main St, St. Helena 94574, (707) 963-8192, Sun-Fri 5:30am-4pm, Sat to 5pm; 6523 Washington St, Yountville, (707) 415-5045, Mon/Wed-Fri 7am-12pm, closed Tue, Sat-Sun 7am-1pm; 1315 North Main St, Walnut Creek (no ZIP published), (866) 622-5379, daily 6am-4pm
@@ -4299,7 +5015,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     The Tox Alamo — gathered 2026-09-05 from own-domain
+     The Tox Alamo — gathered 2026-09-08 from own-domain
      they are: Lymphatic body sculpting
      flag: the studio is by @courtneyyeager per the bio; the franchise's studio locator does not list Alamo yet
      flag: address from their Instagram bio; the zip is Alamo's
@@ -4313,7 +5029,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     tonys-style — gathered 2026-09-05 from stopgap
+     tonys-style — gathered 2026-09-08 from stopgap
      their spelling: "Tony's Style" (roster keeps "tonys-style")
      they are: Chicken wings
      flag: Glenn: 'This is my cousins boy right here that owns this restaurant. Gonna put him on. Needs a website too'
@@ -4330,7 +5046,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     TOWNFUTURIST MEDIA — gathered 2026-09-05 from own-domain
+     TOWNFUTURIST MEDIA — gathered 2026-09-08 from own-domain
      they are: Video production
      logo: https://static.wixstatic.com/media/97333a_fb647e13b8454d0a8a249dd59529cfd4~mv2.png (1159x227) — not cut into a tile yet
      flag: name written four ways on their own site: 'TOWNFUTURIST MEDIA' (logo), 'townfuturist media', 'Townfuturistmedia' (title), 'Town Futurist Media' (credits)
@@ -4349,7 +5065,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     TruFusion Walnut Creek — gathered 2026-09-05 from third-party
+     TruFusion Walnut Creek — gathered 2026-09-08 from third-party
      they are: Group fitness
      flag: a chain site; this is the Walnut Creek studio's page
      flag: their logo asset URL is dead — it redirects to a Reebok Fitness 404 — so nothing was pulled for a tile
@@ -4366,7 +5082,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     U Dessert Story — gathered 2026-09-05 from own-domain
+     U Dessert Story — gathered 2026-09-08 from own-domain
      their spelling: "U :Dessert Story" (roster keeps "U Dessert Story")
      they are: Asian desserts
      logo: https://chowly-coo-configuration-assets.nyc3.digitaloceanspaces.com/chowly-coo-prod-configuration-assets/public/assets/U%3ADessert-Story-bdfc5969-cce0-4a23-afb1-a9eaa90f1149.png (908x951) — not cut into a tile yet
@@ -4392,7 +5108,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     uBreakiFix — gathered 2026-09-05 from third-party
+     uBreakiFix — gathered 2026-09-08 from third-party
      their spelling: "uBreakiFix by Asurion" (roster keeps "uBreakiFix")
      they are: Electronics repair
      logo: https://images.ctfassets.net/d9ybqgejqp0w/4NRQb0wxJIQn6sxaZZuzAn/ee5e41a8970fe2c625b19a92c324c94d/ubreakifix-by-asurion-logo-header-nav.svg (120x48) — not cut into a tile yet
@@ -4409,7 +5125,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     United Curb Painting — gathered 2026-09-05 from own-domain
+     United Curb Painting — gathered 2026-09-08 from own-domain
      they are: Curb painting
      logo: https://assets.zyrosite.com/YX4ag7qEwETX3w2p/unitedc-mv02KZxDXLuvJKOb.jpg (1472x832) — not cut into a tile yet
      flag: the /prices page has no HTML text — prices exist only inside an image, which contains typos
@@ -4436,7 +5152,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Urban Air — gathered 2026-09-05 from own-domain
+     Urban Air — gathered 2026-09-08 from own-domain
      their spelling: "Urban Air Adventure Park" (roster keeps "Urban Air")
      they are: Indoor adventure park
      logo: https://www.urbanair.com/wp-content/uploads/2022/01/logo-horizontal-black-outline-1.png (1249x399) — not cut into a tile yet
@@ -4449,7 +5165,107 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Vending Enterprise — gathered 2026-09-05 from stopgap
+     Varnish Nail Boutique — gathered 2026-09-08 from booking-platform
+     they are: Nail salon
+     flag: Operator's exact note: sent twice, as Antioch • Goods and as Walnut Creek • Goods
+     flag: Two locations confirmed from their own Instagram profiles: @varnishnailboutique is 'Varnish Nail Boutique | Walnut Creek' (2918 N Main St, (925) 506-3101) and @varnish.antioch is 'Varnish Nail Boutique | Antioch' (4815 Lone Tree Wy, Antioch, CA 94531, (925) 750-4245); each bio cross-links the other
+     flag: The booking site publishes no address; its phone 9255063101 equals the Walnut Creek Instagram phone and the link sits in the Walnut Creek bio, so the site and its hours are attributed to Walnut Creek; the Antioch profile shows no website link
+     flag: Antioch hours are not published on any of their own pages, so that location's hours are null
+     flag: Name mismatch: the site's subdomain (varnishnailstudio3868) and email (varnishstudioco@) say 'Studio', but the site heading, its company record and both Instagram profiles say 'Varnish Nail Boutique'; the 'Varnish Nail Studio' label appears to come from the URL
+     flag: It is a nail salon (services, incl. waxing), so the operator's 'Goods' category looks wrong
+     flag: Email is from the booking site's own company record (the public API response the page loads on every visit) and is not rendered on the visible page; confirm before displaying it
+     flag: The site is a bare SimplePOS booking shell: no about text, no logo image, no address, no visible hours; the company record's name/address/city/about fields are empty and only the DBA name 'Varnish Nail Boutique' is set. Hours were read from the booking calendar (Mon-Sat 9:30am-7pm, Sun 10am-6pm)
+     flag: No logo on their own site (home page is a plain blue header; the only image assets are SimplePOS platform graphics), so logo_url is null; their Instagram profile picture is a logo (blue marble circle, gold 'V', 'VARNISH NAIL BOUTIQUE'; the Antioch profile's variant adds 'ANTIOCH') but exists only in the operator's screenshots, not at a fetchable URL
+     flag: Prices: 57 of 114 services are flagged adjustable and render as '$X.00+' on the site (recorded here as 'from $X'); each category also has a $0 placeholder entry ('Pedicure Service', 'Manicure Service', 'Design', etc.) that was omitted; add-ons such as Chrome, Cateye, French Tips and Ombre are repeated in nearly every category, and every extension service shows a 15-minute duration placeholder
+     flag: The Walnut Creek Instagram address has no ZIP code; recorded as published
+     flag: The site is a JavaScript app: a plain fetch returns only the 'SimplePOS Online Booking' shell; data was taken from the rendered page in a browser and from the site's own API (simplepos.us/api/v2 with the Sub-Domain header the app sends)
+  */
+  'varnish-nail-boutique-antioch': {
+    address: "4815 Lone Tree Wy, Antioch, CA 94531",
+    phone: "(925) 750-4245",
+    email: "varnishstudioco@gmail.com",
+    instagram: "varnish.antioch",
+    cuisine: "Nail salon",
+    tagline: "Nail salon on Lone Tree Way in Antioch: mani, pedi, gel, dip, wax",
+    contactOnly: "Nail salon on Lone Tree Way in Antioch: mani, pedi, gel, dip, wax. The Antioch shop publishes no hours or price list of its own; the Walnut Creek shop's booking site carries the brand's prices.",
+  },
+
+  /*
+     Varnish Nail Boutique — gathered 2026-09-08 from booking-platform
+     they are: Nail salon
+     flag: Operator's exact note: sent twice, as Antioch • Goods and as Walnut Creek • Goods
+     flag: Two locations confirmed from their own Instagram profiles: @varnishnailboutique is 'Varnish Nail Boutique | Walnut Creek' (2918 N Main St, (925) 506-3101) and @varnish.antioch is 'Varnish Nail Boutique | Antioch' (4815 Lone Tree Wy, Antioch, CA 94531, (925) 750-4245); each bio cross-links the other
+     flag: The booking site publishes no address; its phone 9255063101 equals the Walnut Creek Instagram phone and the link sits in the Walnut Creek bio, so the site and its hours are attributed to Walnut Creek; the Antioch profile shows no website link
+     flag: Antioch hours are not published on any of their own pages, so that location's hours are null
+     flag: Name mismatch: the site's subdomain (varnishnailstudio3868) and email (varnishstudioco@) say 'Studio', but the site heading, its company record and both Instagram profiles say 'Varnish Nail Boutique'; the 'Varnish Nail Studio' label appears to come from the URL
+     flag: It is a nail salon (services, incl. waxing), so the operator's 'Goods' category looks wrong
+     flag: Email is from the booking site's own company record (the public API response the page loads on every visit) and is not rendered on the visible page; confirm before displaying it
+     flag: The site is a bare SimplePOS booking shell: no about text, no logo image, no address, no visible hours; the company record's name/address/city/about fields are empty and only the DBA name 'Varnish Nail Boutique' is set. Hours were read from the booking calendar (Mon-Sat 9:30am-7pm, Sun 10am-6pm)
+     flag: No logo on their own site (home page is a plain blue header; the only image assets are SimplePOS platform graphics), so logo_url is null; their Instagram profile picture is a logo (blue marble circle, gold 'V', 'VARNISH NAIL BOUTIQUE'; the Antioch profile's variant adds 'ANTIOCH') but exists only in the operator's screenshots, not at a fetchable URL
+     flag: Prices: 57 of 114 services are flagged adjustable and render as '$X.00+' on the site (recorded here as 'from $X'); each category also has a $0 placeholder entry ('Pedicure Service', 'Manicure Service', 'Design', etc.) that was omitted; add-ons such as Chrome, Cateye, French Tips and Ombre are repeated in nearly every category, and every extension service shows a 15-minute duration placeholder
+     flag: The Walnut Creek Instagram address has no ZIP code; recorded as published
+     flag: The site is a JavaScript app: a plain fetch returns only the 'SimplePOS Online Booking' shell; data was taken from the rendered page in a browser and from the site's own API (simplepos.us/api/v2 with the Sub-Domain header the app sends)
+  */
+  'varnish-nail-boutique-walnut-creek': {
+    address: "2918 N Main St, Walnut Creek, California",
+    phone: "(925) 506-3101",
+    email: "varnishstudioco@gmail.com",
+    hours: "Mon-Sat 9:30am-7pm, Sun 10am-6pm",
+    instagram: "varnishnailboutique",
+    cuisine: "Nail salon",
+    tagline: "Nail salon on N Main St in Walnut Creek: mani, pedi, gel, dip, wax",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Classic Manicure (Reg)","",2800],
+        ["Classic Manicure (Gel)","",4200],
+        ["KDS Manicure (Reg)","",5500],
+        ["KDS Manicure (Gel)","",7000],
+        ["Collagen Manicure (Reg)","",6500],
+        ["Collagen Manicure (Gel)","",8000],
+        ["Cleopatra Golden Manicure (Reg)","",7500],
+        ["Cleopatra Golden Manicure (Gel)","",9000],
+        ["24K VIP Package (Reg)","",9000],
+        ["24K VIP Package (Gel)","",10500],
+        ["Classic Pedicure (Reg)","",4500],
+        ["Classic Pedicure (Gel)","",5500],
+        ["KDS Pedicure (Reg)","",6500],
+        ["KDS Pedicure (Gel)","",8000],
+        ["Collagen Pedicure (Reg)","",7500],
+        ["Collagen Pedicure (Gel)","",9000],
+        ["Cleopatra Golden Pedicure (Reg)","",8500],
+        ["Cleopatra Golden Pedicure (Gel)","",10000],
+        ["24K VIP Package (Reg)","",10000],
+        ["24K VIP Package (Gel)","",11500],
+        ["GelX Full Set","",7100,"from $71"],
+        ["Gel X Fill","",6100],
+        ["Builder Gel Full Set (Natural)","",6000,"from $60"],
+        ["Builder Gel Full Set (Tips)","",7500,"from $75"],
+        ["Builder Gel Fill (Natural)","",5500,"from $55"],
+        ["Builder Gel Fill (Tips)","",6500,"from $65"],
+        ["Dip (Natural)","",5500,"from $55"],
+        ["Dip (Tips)","",6500,"from $65"],
+        ["Acrylic Full Set","",6100,"from $61"],
+        ["Acrylic Fill","",5100,"from $51"],
+        ["Pink & White Full Set","",7500,"from $75"],
+        ["Kids Manicure (Reg)","",2000],
+        ["Kids Manicure (Gel)","",3000],
+        ["Kids Pedicure (Reg)","",3000],
+        ["Kids Pedicure (Gel)","",4000],
+        ["Eyebrow (For Her)","",1600,"from $16"],
+        ["Eyebrow (For Him)","",1800,"from $18"],
+        ["Brazilian","",5500,"from $55"],
+        ["Hands Polish Change (Reg)","",1600],
+        ["Toes Polish Change (Reg)","",2000],
+        ["Gel Add-On","",1500,"from $15"],
+        ["French Tips","",1000,"from $10"],
+        ["Chrome","",1000],
+      ] },
+    ],
+    quoteOnly: "Nail salon on N Main St in Walnut Creek: mani, pedi, gel, dip, wax. Prices are the full service list on their SimplePOS booking site (varnishnailstudio3868.simplepos.us, all 9 categories); hours are that booking system's business-hours calendar, identical across the two weeks checked (Sep 7-20, 2026); addresses and the Antioch phone come from the two Instagram bios in the operator's screenshots.",
+  },
+
+  /*
+     Vending Enterprise — gathered 2026-09-08 from stopgap
      they are: Vending machines
      flag: their site is a Google Site; vendingenterprise.net itself does not resolve
      flag: the contact page maps an Oakland street address that reads as a home base, so it is not printed
@@ -4465,7 +5281,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Walk Free — gathered 2026-09-05 from own-domain
+     Walk Free — gathered 2026-09-08 from own-domain
      they are: Dog harness and leash
      flag: Glenn: 'BEASTY • Online' and 'Maybe include a drop-down pic?' — their own product photos are the strip
      flag: their bio says 'the ultimate leash for small dogs'; the product page says medium to large dogs
@@ -4483,7 +5299,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Willy Billy Smoked Meat — gathered 2026-09-05 from own-domain
+     Willy Billy Smoked Meat — gathered 2026-09-08 from own-domain
      their spelling: "WILLY BILLY'S SMOKED MEATS" (roster keeps "Willy Billy Smoked Meat")
      they are: Halal Texan BBQ
      logo: https://assets.cdn.filesafe.space/2W3mKjfU3GREdwOnEUvd/media/67b76555410afca5d4f1fc10.png (1674x1887) — not cut into a tile yet
@@ -4531,7 +5347,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Winter White Car Wash & Detail — gathered 2026-09-05 from own-domain
+     Winter White Car Wash & Detail — gathered 2026-09-08 from own-domain
      they are: Mobile car detailing
      logo: https://img1.wsimg.com/isteam/ip/79ed2926-8987-45ae-8cf9-3611e560f8dc/IMG_5757.jpeg (1024x1024) — not cut into a tile yet
      flag: A UTAH FOOTPRINT ON A BAY AREA LISTING: a 385 (Utah) phone number and a Yelp link to a South Jordan, UT listing, beside 'California Cities We Serve' — worth a look before this is sold as local
@@ -4560,7 +5376,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Yes Moment — gathered 2026-09-05 from own-domain
+     Yes Moment — gathered 2026-09-08 from own-domain
      they are: Proposal planning
      logo: https://yes-moment.com/assets/img/logos/new_logo.png (269x231) — not cut into a tile yet
      flag: no address by design — they come to the location
@@ -4586,7 +5402,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     YogaSix East Contra Costa — gathered 2026-09-05 from third-party
+     YogaSix East Contra Costa — gathered 2026-09-08 from third-party
      they are: Yoga studio
      logo: https://www.yogasix.com/hubfs/logo-4.png (600x120) — not cut into a tile yet
      flag: the studio is branded 'East Contra Costa' but the address is in Brentwood, which is the page it sits on

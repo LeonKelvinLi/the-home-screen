@@ -4772,6 +4772,41 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    /*
+      HIS ASK, 2026-09-06: three videos of "the same Dance group from Richmond
+      CA called 'Housing Authority'", "They def need a spot on BEASTY •
+      Individuals", and "Yes plz" when offered. The crew has no page of its
+      own; the name is verified from Jammer's own uploads ("Housin Authority
+      Dance Crew from Richmond California"), and the three videos he sent are
+      other people's uploads of the members, so the card links the one he
+      called out rather than pretending to embed it. The icon is Jammer's own
+      channel picture — "use there pics for there icon button".
+    */
+    slug: 'housing-authority',
+    icon: 'housing-authority',
+    name: 'Housing Authority',
+    label: 'Housing Authority',
+    cuisine: 'Dance crew',
+    tagline: 'A dance crew out of Richmond, California.',
+    color: '#141414|#F2C400',
+    prep: 0,
+    category: 'Dance crew',
+    logoTemplate: 'wordmark',
+    logoFace: 'condensed',
+    logoLines: ['HOUSING', 'AUTHORITY'],
+    site: 'https://www.youtube.com/@JW-vd9jh',
+    siteCta: 'See their videos',
+    needsSite: true,
+    clip: {
+      href: 'https://youtube.com/shorts/smkmZZYE0qE',
+      credit: 'Posted by Gold House',
+      platform: 'YouTube',
+    },
+    contactOnly:
+      'A dance crew out of Richmond. Glenn names Jammer, Flii Stylz and Rich + Tone Talauega as its members; the crew has no page of its own, so this links to Jammer, who posts under its name. BEASTY has not spoken to them: this spot is held, not taken.',
+    items: [],
+  },
+  {
     slug: 'iamsu',
     icon: 'iamsu',
     name: 'IAMSU!',

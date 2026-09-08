@@ -951,4 +951,28 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-9': 'b_phonationsf', // Asian seat taken; the yellow page
   'pittsburg-goods-8': 'b_houseofwings', //      Chicken wings; sent 08-23, seated in the 09-02 sweep
   'beasty-services2-19': 'b_tastinpeachy', //    Caterer, Bay Area, no city; sent 08-30, seated in the 09-02 sweep
+  /*
+    2026-09-08: the batch he sent on the night of the 7th, plus the five from
+    the weekend. Research in research/roster/batch15.json. Where a category
+    seat was already taken, or no category fits, the business sits on the
+    city's yellow sheet, as before.
+  */
+  'redwood-city-goods-4': 'b_sushinaloa', //                     Sushi — Mexican sushi and mariscos
+  'san-jose-goods-2': 'b_kusanuyghurcuisinesanjose', //          Asian food
+  'milpitas-goods2-0': 'b_kusanbazaarmilpitas', //               Milpitas's Asian seat is INTL Kitchen's; yellow sheet
+  'mountain-view-goods-2': 'b_kusanbazaarmountainview', //       Asian food
+  'walnut-creek-services-1': 'b_varnishnailboutiquewalnutcreek', // Nail salon — he wrote Goods
+  'antioch-services-1': 'b_varnishnailboutiqueantioch', //       Nail salon — he wrote Goods
+  'berkeley-services-4': 'b_bodyrokberkeley', //                 Gym — reformer Pilates
+  'alamo-services-4': 'b_bodyrokalamo', //                       Gym
+  'oakland-services-4': 'b_bodyrokoakland', //                   Gym; Lakeshore and Rockridge on one seat
+  'alameda-goods2-0': 'b_bhanmaevane', //                        Alameda's Asian seat is Pho Nation's; yellow sheet
+  'union-city-services2-0': 'b_jollyrogerland', //               no play-centre category; yellow sheet
+  'walnut-creek-goods2-2': 'b_paradanewperu', //                 Peruvian — no seat for it, like Las Lomas
+  'beasty-goods2-13': 'b_goodcompenny', //                       Online: the apparel seat is Facet Fine's; yellow sheet
+  'livermore-goods-14': 'b_bobaclub', //                         Boba shop
+  'alameda-goods-12': 'b_doodlecakes', //                        Bakery
+  'walnut-creek-goods-15': 'b_chipcookies', //                   Cookies — their Walnut Creek store
+  'dublin-goods-15': 'b_chipcookies', //                         Cookies — their Dublin store
+  'beasty-individuals-16': 'b_housingauthority', //              a Richmond dance crew, on his "Yes plz"
 }

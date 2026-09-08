@@ -111,6 +111,21 @@ for (const [id, want, expect] of [
   ['b_lushspaw', 'Lush Spaw', { rows: 8, quote: true, call: '(833) 279-5874' }],
   ['b_russfamkitchen', 'Russ Fam Kitchen', { hours: 'Tue-Sun 8:30am-12pm', rows: 20, call: '510-691-3658' }],
   ['b_tastinpeachy', 'Tastin Peachy', { call: '510-685-7876' }],
+  /* 2026-09-08: the batch he sent on the night of the 7th and the weekend's
+     five. Row counts sit under what each publishes, as above. */
+  ['b_sushinaloa', 'Sushinaloa', { hours: 'Wed-Mon 10am-10pm', rows: 40, call: '(650) 771-1620' }],
+  ['b_kusanbazaarmilpitas', 'Kusan Bazaar', { hours: 'Mon-Thu 11am-2:30pm', rows: 40, call: '(408) 549-2078' }],
+  ['b_kusanuyghurcuisinesanjose', 'Kusan Uyghur Cuisine', { call: '(650) 899-0210' }],
+  ['b_varnishnailboutiquewalnutcreek', 'Varnish Nail Boutique', { hours: 'Mon-Sat 9:30am-7pm', rows: 40, quote: true, call: '(925) 506-3101' }],
+  ['b_bodyrokberkeley', 'BODYROK East Bay', { rows: 20, quote: true }],
+  ['b_bhanmaevane', 'Bhan Mae Vane', { hours: 'Tue-Sun 11am-3pm', rows: 38, call: '510-227-5197' }],
+  ['b_jollyrogerland', 'Jolly Roger Land', { hours: 'Mon-Wed 10am-7:30pm', rows: 25, quote: true, call: '510-362-7996' }],
+  ['b_paradanewperu', 'Parada New Peru', { hours: 'Mon-Thu 11am-9pm', call: '925-448-8118' }],
+  ['b_goodcompenny', 'Good Compenny', {}],
+  ['b_bobaclub', 'Boba Club', {}],
+  ['b_doodlecakes', 'Doodle Cakes', { hours: 'Wed-Sat 11am-3pm', rows: 20 }],
+  ['b_housingauthority', 'Housing Authority', {}],
+  ['b_chipcookies', 'Chip Cookies', { hours: 'Sun-Thu 10am-10pm' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)

@@ -1,0 +1,2348 @@
+[
+ {
+  "id": "b_sushinaloa",
+  "name_exact": "Sushinaloa",
+  "one_line": "Sinaloa-style mariscos and Mexican sushi in Redwood City since 2013",
+  "cuisine": "Mexican sushi & mariscos",
+  "address": "2505 Middlefield Rd, Redwood City, CA 94063",
+  "phone": "(650) 771-1620",
+  "email": "sushinaloacatering@gmail.com",
+  "hours": "Wed-Mon 10am-10pm, closed Tue",
+  "instagram": "sushinaloarwc",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Guacamole",
+    "desc": "",
+    "cents": 1320,
+    "section": "Sides/Starters"
+   },
+   {
+    "name": "Empanadas de Camaron",
+    "desc": "",
+    "cents": 1870,
+    "section": "Sides/Starters"
+   },
+   {
+    "name": "Camarones Cucarachas",
+    "desc": "",
+    "cents": 2420,
+    "section": "Sides/Starters"
+   },
+   {
+    "name": "Chicharrones de Pescado",
+    "desc": "",
+    "cents": 2190,
+    "section": "Sides/Starters"
+   },
+   {
+    "name": "Super Nachos",
+    "desc": "",
+    "cents": 1980,
+    "label": "Asada or Chicken; Shrimp or Octopus +$2",
+    "section": "Sides/Starters"
+   },
+   {
+    "name": "Tacos Gobernador",
+    "desc": "Shrimp or Marlin",
+    "cents": 1870,
+    "section": "Tacos y Caldos"
+   },
+   {
+    "name": "Taco Capeado (3)",
+    "desc": "SHRIMP - FISH - OCTOPUS",
+    "cents": 1650,
+    "section": "Tacos y Caldos"
+   },
+   {
+    "name": "Quesabirrias",
+    "desc": "Comes with 3 quesabirrias, consume, and toppings.",
+    "cents": 1870,
+    "section": "Tacos y Caldos"
+   },
+   {
+    "name": "Siete Mares Soup",
+    "desc": "",
+    "cents": 2530,
+    "section": "Tacos y Caldos"
+   },
+   {
+    "name": "Tacos Clasicos(3)",
+    "desc": "",
+    "cents": 1320,
+    "label": "Asada or Chicken; Shrimp or Octopus +$2",
+    "section": "Tacos y Caldos"
+   },
+   {
+    "name": "Aguachile",
+    "desc": "",
+    "cents": 2640,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Aguachile Negro",
+    "desc": "",
+    "cents": 2750,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Campechana",
+    "desc": "Shrimp, octopus, oyster, and scallop.",
+    "cents": 2860,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Torre",
+    "desc": "Shrimp, scallop, octopus, crab, cucumber, avocado, and chiltepin.",
+    "cents": 3295,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Botana Mazatlan",
+    "desc": "Fish, ceviche, shrimp, octopus, scallop, and oysters.",
+    "cents": 4290,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Aguachile en su Piedra",
+    "desc": "Shrimp, scallop, cucumber, and tomato.",
+    "cents": 3190,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Mariscada",
+    "desc": "",
+    "cents": 6595,
+    "section": "Mariscos (Estilo Sinaloa)"
+   },
+   {
+    "name": "Tostada Perrona",
+    "desc": "Shrimp, octopus, scallop, crab, and avocado.",
+    "cents": 1754,
+    "section": "Ceviches / Tostadas"
+   },
+   {
+    "name": "Ceviche de Camaron",
+    "desc": "Shrimp Ceviche",
+    "cents": 990,
+    "label": "Tostada $9.90 / Plate $23",
+    "section": "Ceviches / Tostadas"
+   },
+   {
+    "name": "Ceviche Mixto",
+    "desc": "Shrimp and octopus.",
+    "cents": 1100,
+    "label": "Tostada $11 / Plate $25.24",
+    "section": "Ceviches / Tostadas"
+   },
+   {
+    "name": "Divorciado",
+    "desc": "Shrimp, asada, cream cheese, avocado, cucumber, and unagi sauce.",
+    "cents": 2085,
+    "section": "Sushi"
+   },
+   {
+    "name": "Venenoso",
+    "desc": "Crab, avocado, cucumber, chiltepin, onion, and chipotle sauce.",
+    "cents": 2194,
+    "section": "Sushi"
+   },
+   {
+    "name": "Cocono",
+    "desc": "Shrimp, avocado, cucumber, surimi, coconut, mango, and chipotle sauce.",
+    "cents": 2085,
+    "section": "Sushi"
+   },
+   {
+    "name": "Spicy Tuna",
+    "desc": "Tuna, cream cheese, avocado, and jalapeño.",
+    "cents": 2415,
+    "section": "Sushi"
+   },
+   {
+    "name": "California",
+    "desc": "Cream cheese, avocado, and cucumber.",
+    "cents": 1865,
+    "section": "Sushi"
+   },
+   {
+    "name": "Salmon Roll",
+    "desc": "Salmon, cream cheese, avocado, and cucumber.",
+    "cents": 2415,
+    "section": "Sushi"
+   },
+   {
+    "name": "Bacon Roll",
+    "desc": "Shrimp, bacon, mozzarella cheese, avocado, and cucumber.",
+    "cents": 2415,
+    "section": "Sushi"
+   },
+   {
+    "name": "Molcajete",
+    "desc": "Shrimp, chicken, pork, and steak with side of rice.",
+    "cents": 3295,
+    "section": "Mariscos Calientes"
+   },
+   {
+    "name": "Mojarra",
+    "desc": "FRITA // AL AJO // A LA DIABLA. Rice and salad on the side.",
+    "cents": 2300,
+    "section": "Mariscos Calientes"
+   },
+   {
+    "name": "Camarones Envueltos",
+    "desc": "Bacon-wrapped shrimp.",
+    "cents": 2415,
+    "section": "Mariscos Calientes"
+   },
+   {
+    "name": "Salmon a la Plancha",
+    "desc": "Choice of Tilapia available.",
+    "cents": 2970,
+    "section": "Mariscos Calientes"
+   },
+   {
+    "name": "Camarones a La Diabla",
+    "desc": "",
+    "cents": 2300,
+    "label": "A La Diabla, Camarones Rancheros or A La Plancha, $23 each",
+    "section": "Mariscos Calientes"
+   },
+   {
+    "name": "Michelada",
+    "desc": "",
+    "cents": 1210,
+    "label": "Regular $12.10; Con Camaron $19.80; Perrona or La Buchona $30.80",
+    "section": "Bebidas"
+   },
+   {
+    "name": "Cubeta (6)",
+    "desc": "",
+    "cents": 3190,
+    "section": "Bebidas"
+   },
+   {
+    "name": "Barrilito (1LT)",
+    "desc": "",
+    "cents": 2420,
+    "section": "Bebidas"
+   },
+   {
+    "name": "Agua Fresca",
+    "desc": "",
+    "cents": 550,
+    "section": "Bebidas"
+   },
+   {
+    "name": "Piña Colada",
+    "desc": "",
+    "cents": 1310,
+    "section": "Bebidas"
+   },
+   {
+    "name": "Tenders",
+    "desc": "",
+    "cents": 1760,
+    "section": "Kid's Menu"
+   },
+   {
+    "name": "Plain Quesadilla",
+    "desc": "Cheese only.",
+    "cents": 1100,
+    "section": "Kid's Menu"
+   },
+   {
+    "name": "Flan",
+    "desc": "",
+    "cents": 660,
+    "section": "Postres"
+   },
+   {
+    "name": "Banana Split",
+    "desc": "",
+    "cents": 1100,
+    "section": "Postres"
+   },
+   {
+    "name": "Charola Especial",
+    "desc": "Special tray with Sushi Venenoso, Sushi Cocono, Camarones Envueltos y Empanizados, Flautas, Camarones Cucaracha, Chicharrón Chino, and Empanadas de Camarón.",
+    "cents": 12500,
+    "section": "Trays (Catering)"
+   },
+   {
+    "name": "Full Sushi Tray",
+    "desc": "For 50 people",
+    "cents": 10000,
+    "section": "Trays (Catering)"
+   }
+  ],
+  "price_note": "prices from the Wix menu data on their own site (sushinaloarwc.com/menu, the same menus behind /online-ordering); hours, address, phone and email from the homepage footer",
+  "logo_url": "https://static.wixstatic.com/media/fab297_f800a1a601ea4b00b5ae55559451c71b~mv2.png",
+  "logo_px": "960x960",
+  "flags": [
+   "Operator's exact note: Redwood City • Goods — the 'Goods' category does not fit; their own site and Instagram both call it a Restaurant",
+   "Operator spelled it 'Sushi Naloa'; the business spells it 'Sushinaloa' (one word) on its site title, footer, logo and Instagram display name 'Sushinaloa - Redwood City'",
+   "Phone contradiction on their own homepage: visible text and tel: links (including the 'Reserve A Table' button) say (650) 771-1620, but the hidden schema.org block says telephone 6503894597; used the visible number",
+   "Hours contradiction on their own site: visible footer says 'Wednesday-Monday: 10AM-10PM / Tuesday: CLOSED', but the hidden schema.org data and Wix business schedule list only Sun and Wed-Sat 10:00-22:00, with a malformed day-less entry where Monday should be; used the visible hours",
+   "Zip shown two ways on their own site: footer says 94063, hidden structured data and the ordering page say 94063-2825 (zip+4, consistent)",
+   "Online-ordering page footer reads '© 2035 by Business Name. Built on Wix Studio' (unedited template placeholder) while the homepage footer reads '© 2026 by Studio Siete'; the /experiences page carries the same placeholder",
+   "A menu named 'Test' (single item 'Test', $0, description 'Vfdsvfdavrsa', modifier 'No mayo') is publicly visible as a tab on the menu and ordering pages; excluded from items",
+   "Price contradiction: Caldo de Camarón and Caldo de Pescado are $24.20 under Tacos y Caldos but $22 as variants of '7 Mares' under Mariscos Calientes",
+   "Duplicate items across menus: 'Mariscada' $65.95 appears under both Mariscos and Mariscos Calientes; 'Milkshake' $9.90 under both Bebidas and Postres",
+   "Dietary labels look wrong: the 'Chipotle' roll (asada) and 'Ceviche Sierra' (fish) are tagged 'Vegetarian'",
+   "Typos/oddities in item names: 'Michealda de Mango', 'Brucheta Sushi', 'Tacos Clasicos(3)'; 'Coctel ' and 'Cerveza ' carry trailing spaces; sub-menus 'Sushi', 'Mariscos Calientes' and 'Bebidas' all carry the copied description 'Mariscos Estilo Sinaloa'",
+   "Nearly all online prices equal a round dollar amount plus 10% (e.g. $13.20, $16.50, $24.20, $29.70); in-store prices may differ, so verify before quoting",
+   "Ordering page showed 'Accepting Orders' with Pickup / Delivery / Dine-In at fetch time, but the default 'Delivery time: Today 8:00 AM' is earlier than the 10AM opening; menu sections are split into 'Sides/Appetizers' (menu) and 'Sides/Starters' (section)",
+   "Homepage buttons 'Order Pick-Up' and 'Order Delivery' are not hyperlinked (only 'See Menu' and 'Order Online' go to /online-ordering); footer words 'Party Reservations', 'Catering' and 'View Menu' are plain text; 'Reserve A Table' is a tel: link, while a separate /reservations page ('Request a reservation') exists and /book-online says 'Nothing to book right now'",
+   "The website has no social links; the Instagram handle sushinaloarwc comes from the operator's profile screenshot (bio: \"Redwood City's First Mexican-Sushi Restaurant\", '2505 Middlefield Rd, Redwood City, CA', 'Mariscos estilo Sinaloa, Micheladas y mas', link sushinaloarwc.com); no hours, phone or prices are published on Instagram",
+   "The Instagram profile links a Facebook page labeled 'Suchinaloa Quintero' (misspelled with a 'c')",
+   "Site is a Wix Studio site on their own domain with built-in Wix Restaurants ordering; no third-party ordering platform (DoorDash/Toast/etc.) is linked; the homepage links a Telemundo interview ('As Seen on Telemundo!')"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_kusanuyghurcuisinesanjose",
+  "name_exact": "Kusan Uyghur Cuisine",
+  "one_line": "Halal Uyghur Silk Road kitchen on N 4th St in San Jose",
+  "cuisine": "Halal Uyghur, Central Asian",
+  "address": "1516 N 4th St, San Jose, CA 95112",
+  "phone": "(650) 899-0210",
+  "email": "Kusanbazaar@gmail.com",
+  "hours": null,
+  "instagram": "kusanuyghurcuisine",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "the San Jose shop runs its own menu at its own prices on kusanbazaar.com; hours are printed two different ways on that site, so none are carried",
+  "logo_url": "https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709",
+  "logo_px": "1352x264",
+  "flags": [
+   "Glenn: 'San Jose • Goods'",
+   "their own footer says Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and not affiliated, though one site, one Instagram and one email cover all three; seated under the name the site gives this shop",
+   "Operator's exact note: San Jose • Goods, Milpitas • Goods, Mountain View • Goods",
+   "Naming: the site's header, <title>, logo and story page brand the umbrella as 'Kusan Collective'; the location names are 'Kusan Uyghur Cuisine 西域小巴郎- San Jose', 'Kusan Bazaar 龟兹集市- Milpitas' and 'Kusan Bazaar 龟兹集市- Mountain View'; Instagram display name is 'Küsan'; footer copyright reads 'Slow Food Diary LLC 2026 All Rights Reserved'. name_exact uses 'Kusan Bazaar' (domain, app name, two of three locations)",
+   "Site footer disclaimer (verbatim): 'Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and operated. The two businesses are not affiliated in any legal or financial capacity.' Yet one site, one Instagram, one email and one app cover all three locations, so the San Jose location may not belong under a 'Kusan Bazaar' listing",
+   "San Jose hours contradict each other on the site, so they are left null. Homepage store-hours block: Sun 10:30am-3pm & 5-9pm, Mon-Fri 10:30am-2:30pm & 5-9pm, Sat 10:30am-3pm & 5-9pm. /page/locations: Sunday 10:30 AM–9 PM, Monday–Thursday 10:30 AM–2:30 PM & 4:30–9 PM, Friday 11 AM–2:30 PM & 5–9:30 PM, Saturday 10:30 AM–9 PM",
+   "Menus and prices differ by location. The default kusanbazaar.com/menu is the San Jose menu with lower prices (French-style Roasted Lamb Chops with Salads $18.95+ vs $29.95 in Milpitas; Homemade Amine Yogurt $5.95 vs $6.95; Uyghur Roast Lamb Shank $25.99 vs $25.95; Soda $2.00 vs $2.50). Mountain View has a 'streamlined' menu with different items (Grilled Lamb Cold Noodles $18.95, Grilled Chicken Cold Noodles $21.25, Lobster Tails $39.19+, Uyghur Lamb Wraps (2 piece) $17.95, yoghurt beverages $6.50). Items above are the Milpitas menu only",
+   "Broken link: the Milpitas 'Order Now' button on /page/locations points to /menu/kusanbazaar-bcnyw1, which returns HTTP 404; the working Milpitas menu (linked from the homepage) is /menu/kusanbazaar-milpitas",
+   "SEO oddities: page titles read 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' and 'Best Chinese Food in California' although the food is Uyghur/Central Asian halal; the FAQ 'What areas do you serve?' lists only San Jose neighborhoods (no Milpitas or Mountain View)",
+   "Instagram vs site contact: Instagram contact sheet shows (855) 695-8726 and order@kusancuisine.com, while the site publishes per-location phones and Kusanbazaar@gmail.com; Instagram bio address is only the San Jose one; the handle is kusanuyghurcuisine (the San Jose name) while the site's Facebook link is facebook.com/KusanBazaar. An Instagram post advertises a weekend-only 'Grilled Lamb Cold Noodles' promo at $9.95 (reg $18.95)",
+   "Possible fourth location: an Instagram 4th of July post footer lists 'MILPITAS · SAN JOSE · MOUNTAIN VIEW · SAN MATEO'; San Mateo appears nowhere on the site (not on /page/locations, story, contact or catering pages)",
+   "Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail",
+   "Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources",
+   "Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_kusanbazaarmilpitas",
+  "name_exact": "Kusan Bazaar",
+  "one_line": "Halal Uyghur Silk Road restaurant on Barber Lane in Milpitas",
+  "cuisine": "Halal Uyghur, Central Asian",
+  "address": "510 Barber Ln, Milpitas, CA 95035",
+  "phone": "(408) 549-2078",
+  "email": "Kusanbazaar@gmail.com",
+  "hours": "Mon-Thu 11am-2:30pm & 5-9pm, Fri 11am-2:30pm & 5-9:30pm, Sat 11am-9:30pm, Sun 11am-9pm",
+  "instagram": "kusanuyghurcuisine",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Samsa (2 piece per serve) 烤包子",
+    "desc": "Flour, Lamb, Onions, Black peppers, Salt, and Sesame (Two pieces per serving)",
+    "cents": 795,
+    "section": "Appetizers & Salads 沙拉和前菜"
+   },
+   {
+    "name": "Uyghur Salad 维吾尔风味沙拉",
+    "desc": "Tomato, Onion, Green pepper, Coriander, Dry red pepper, Salt, Sesame oil, Vinegar (Vegan Food, Gluten free)",
+    "cents": 799,
+    "section": "Appetizers & Salads 沙拉和前菜"
+   },
+   {
+    "name": "Eggplant With Mashed Garlic 蒜蓉茄子沙拉",
+    "desc": "Eggplant, Garlic, Cilantro, Dry red pepper, Salt, Sesame oil, Prickly pepper oil, Chili oil, Garlic water (Vegan Food, Gluten Free)",
+    "cents": 899,
+    "section": "Appetizers & Salads 沙拉和前菜"
+   },
+   {
+    "name": "Black Fungus Salad 爽心木耳沙拉",
+    "desc": "Black Fungus, Goji Berries, Onion, Garlic, Cilantro, Soy Sauce, Chili oil, Sesame oil, Vinegar (Vegan Food, Gluten Free)",
+    "cents": 799,
+    "section": "Appetizers & Salads 沙拉和前菜"
+   },
+   {
+    "name": "Cold Chili Chicken 椒麻鸡",
+    "desc": "Chicken, Onion, Cilantro, Dry red pepper, Salt, Sesame oil, Chili oil, Prickly pepper oil. (Gluten Free)",
+    "cents": 950,
+    "section": "Appetizers & Salads 沙拉和前菜"
+   },
+   {
+    "name": "Sliced Beef with Sauce 凉拌牛肉",
+    "desc": "Sliced beef, Green onion, Cilantro, Dry red pepper, Salt, Sesame oil, Chili oil, Prickly pepper oil (Gluten Free)",
+    "cents": 1095,
+    "section": "Appetizers & Salads 沙拉和前菜"
+   },
+   {
+    "name": "Lamb Kebab (2 Skewers) 烤羊肉串",
+    "desc": "Lamb, Cumin, and Chili powder. (Serves two skewers per order) (Gluten free)",
+    "cents": 995,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Chicken Kebab (2 Skewers) 烤鸡肉串",
+    "desc": "Chicken, Cumin, and Chili powder. (Serves two skewers per order) (Gluten free)",
+    "cents": 895,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Wellington-Style Roasted Lamb Shank 惠灵顿风羊腿面包",
+    "desc": "",
+    "cents": 2895,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Golden Crispy Roasted Lamb Rib 黄金脆片烤羊排",
+    "desc": "Lamb Rib, Onion, Home-made BBQ powder",
+    "cents": 2495,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Uyghur Grilled Lamb Shank 维吾尔特色焖烤羊腿",
+    "desc": "Lamb Shank, Onion, Fennel Seeds, Sichuan Peppercorn, Cumin, White Pepper, Bay Leaves, Cinnamon, Star Anise, Black Cardamom, Angelica Root, Nutmeg, Salt. (Halal Lamb From Australasia, No Msg, Homestyle)",
+    "cents": 2595,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "French-Style Roasted Lamb Chops with Salads 法式烤羊排配沙拉",
+    "desc": "Lamb chops, Cumin, Chili powder and Italian season. (Gluten free)",
+    "cents": 2995,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Whole Roasted Fish with Silk Road Garlic Spice- 丝路风味蒜香金皮烤整鱼",
+    "desc": "Freshwater Catfish, Garlic, BBQ powder （Contains Bones）",
+    "cents": 2995,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Slow-Roasted Beef Rib 慢烤牛肋排",
+    "desc": "Beef Ribs, Cumin, Salt, Chili Powder. (Gluten Free)",
+    "cents": 2595,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Grilled Garlic Naan Bread 蒜香烤馕饼",
+    "desc": "Naan bread, Cumin, and Chili powder. (Vegan)",
+    "cents": 250,
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Roasted Whole Lamb (Advance booking required) 烤全羊",
+    "desc": "Halal Whole lamb (cleaned and gutted), Cumin, Chili powder, Egg, Olive oil, Salt, Black pepper, Minced garlic, Rosemary, Thyme.",
+    "cents": 48800,
+    "label": "from $488",
+    "section": "Silk Road Grilled 维吾尔风烤制"
+   },
+   {
+    "name": "Big Plate Chicken 大盘鸡拌面",
+    "desc": "Chicken (Bone-in), Potato, Green pepper, Garlic, Dry red pepper, and house spices, served with flat wheat flour noodles.",
+    "cents": 2495,
+    "label": "from $24.95",
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Laghman 拉条子",
+    "desc": "Homemade noodles, Lamb, Cabbage, Potatoes, Tomato, Green onion, Green Pepper, and Black Fungi. (Choose spicy level: No spicy, Spicy, Extra spicy)",
+    "cents": 1995,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Peppercorn Beef Tossed Noodles 藤椒牛肉辣皮子拌面",
+    "desc": "",
+    "cents": 1995,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Beef Cumin Chao-mian 孜然牛肉炒拉条子",
+    "desc": "Handmade Noodles, Beef, Cumin, Onion, Pepper, Salt",
+    "cents": 1895,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Lamb Cumin Chao-mian 孜然羊肉炒面",
+    "desc": "Lamb, Noodles, Cumin, Onion, Pepper, Salt",
+    "cents": 1895,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Veggie Cumin Chao-mian 孜然时蔬炒拉条子",
+    "desc": "Handmade noodles, Shredded Carrots, Onion, Pepper, Black Fungus, Cumin,",
+    "cents": 1795,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Signature Braised Beef Rib Noodle Soup 西域牛肋排面",
+    "desc": "Handmade noodles, Beef rib, Green onion, Chives, Cilantro, Chili oil, and White radish",
+    "cents": 2295,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Beef Noodle Soup 清汤牛肉面",
+    "desc": "Wheat flour Noodles, Beef, Green onion, Chives, Cilantro, Chili oil, and White",
+    "cents": 1795,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Lamb Noodle Soup 清汤羊肉面",
+    "desc": "Wheat flour Noodles, Lamb, Goji Berries, Green onion, Cilantro, Chili oil White",
+    "cents": 1795,
+    "section": "Uyghur Noodles 维吾尔面食"
+   },
+   {
+    "name": "Braised Beef Pilaf 香炖牛肉粒手抓饭",
+    "desc": "",
+    "cents": 2095,
+    "section": "Signature Pilaf Set 手抓饭套餐"
+   },
+   {
+    "name": "Braised Lamb Rib Pilaf 新西兰羊排手抓饭",
+    "desc": "",
+    "cents": 2295,
+    "section": "Signature Pilaf Set 手抓饭套餐"
+   },
+   {
+    "name": "6-Hour Braised Lamb Shank Pilaf 六小时慢炖羊腿手抓饭",
+    "desc": "",
+    "cents": 2795,
+    "section": "Signature Pilaf Set 手抓饭套餐"
+   },
+   {
+    "name": "Garlic-Baked Cold-Water Lobster Pilaf 蒜蓉焗烤北大西洋冷水龙虾手抓饭",
+    "desc": "",
+    "cents": 2695,
+    "section": "Signature Pilaf Set 手抓饭套餐"
+   },
+   {
+    "name": "Lamb Broth with Handcrafted Mini Wontons 羊汤手工小馄饨",
+    "desc": "",
+    "cents": 1895,
+    "section": "Dumplings & Wontons 饺子 · 馄炖"
+   },
+   {
+    "name": "Handcrafted Dumplings - Beef with Celery (10 Piece) 手工牛肉芹菜水饺",
+    "desc": "Beef, Celery.Flour, Seasonings",
+    "cents": 1695,
+    "section": "Dumplings & Wontons 饺子 · 馄炖"
+   },
+   {
+    "name": "Uyghur Lamb Wraps 维吾尔酸奶羊肉卷",
+    "desc": "Lamb, Tomato, Onion, Green Pepper, home-made Yogurt wrapped with Naan bread.",
+    "cents": 1695,
+    "section": "Uyghur Wraps 维吾尔烤肉卷"
+   },
+   {
+    "name": "Uyghur Chicken Wraps 维吾尔酸奶鸡肉卷",
+    "desc": "Chicken, Tomato, Onion, Green Pepper, home-made Yogurt wrapped with Naan bread.",
+    "cents": 1595,
+    "section": "Uyghur Wraps 维吾尔烤肉卷"
+   },
+   {
+    "name": "Stewed Mutton Soup 清炖羊腩汤",
+    "desc": "Lamb, Goji Berries, White Pepper, Salt",
+    "cents": 399,
+    "label": "from $3.99",
+    "section": "Soup and Stew 汤和炖菜"
+   },
+   {
+    "name": "6-Hour Braised Lamb Shank with Naan 慢炖羊腿配烤馕",
+    "desc": "Lamb Shank, Naan bread, Asparagus, Cilantro and decorated with White Sesame and Sliced dry red pepper.",
+    "cents": 2495,
+    "section": "Soup and Stew 汤和炖菜"
+   },
+   {
+    "name": "Braised Lamb Ribs With Dipping Sauce 慢炖新西兰小羊排 （手抓羊肉）",
+    "desc": "Lamb Rib, White Pepper, Salt",
+    "cents": 2295,
+    "section": "Soup and Stew 汤和炖菜"
+   },
+   {
+    "name": "Homemade Amine Yogurt 维吾尔妈妈手工酸奶",
+    "desc": "Home-made Yogurt, Almond and Honey (Vegetarian)",
+    "cents": 695,
+    "section": "Dessert 甜品"
+   },
+   {
+    "name": "Yogurt Pressé Cone with Fig Jam 冷萃干噎酸奶甜筒",
+    "desc": "Home-made Yogurt Cheese, Fig Jam, Cone, Dry Rose (Vegetarian)",
+    "cents": 895,
+    "section": "Dessert 甜品"
+   },
+   {
+    "name": "Baklava 巴克拉瓦酥皮坚果蛋糕",
+    "desc": "Sweet dessert pastry made of layers of filo filled with chopped nuts and sweetened and held together with honey (Vegetarian)",
+    "cents": 495,
+    "section": "Dessert 甜品"
+   },
+   {
+    "name": "Uyghur Special Milk Tea 维吾尔风味特调微咸奶茶",
+    "desc": "Made with milk, black tea, butter, cream, and salt. (Hot)",
+    "cents": 595,
+    "section": "Drinks 饮品"
+   },
+   {
+    "name": "Dogap Yoghurt Beverage (Sour) 多哈普微糖酸奶饮",
+    "desc": "",
+    "cents": 695,
+    "section": "Drinks 饮品"
+   },
+   {
+    "name": "Honey Lemon Flavor Yoghurt Beverage 柠檬蜂蜜果粒酸奶饮",
+    "desc": "",
+    "cents": 695,
+    "section": "Drinks 饮品"
+   }
+  ],
+  "price_note": "prices and descriptions are the Milpitas online-ordering menu on kusanbazaar.com; hours from the homepage location card and the locations page, which agree for Milpitas",
+  "logo_url": "https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709",
+  "logo_px": "1352x264",
+  "flags": [
+   "Glenn: 'Milpitas • Goods'",
+   "Operator's exact note: San Jose • Goods, Milpitas • Goods, Mountain View • Goods",
+   "Naming: the site's header, <title>, logo and story page brand the umbrella as 'Kusan Collective'; the location names are 'Kusan Uyghur Cuisine 西域小巴郎- San Jose', 'Kusan Bazaar 龟兹集市- Milpitas' and 'Kusan Bazaar 龟兹集市- Mountain View'; Instagram display name is 'Küsan'; footer copyright reads 'Slow Food Diary LLC 2026 All Rights Reserved'. name_exact uses 'Kusan Bazaar' (domain, app name, two of three locations)",
+   "Site footer disclaimer (verbatim): 'Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and operated. The two businesses are not affiliated in any legal or financial capacity.' Yet one site, one Instagram, one email and one app cover all three locations, so the San Jose location may not belong under a 'Kusan Bazaar' listing",
+   "San Jose hours contradict each other on the site, so they are left null. Homepage store-hours block: Sun 10:30am-3pm & 5-9pm, Mon-Fri 10:30am-2:30pm & 5-9pm, Sat 10:30am-3pm & 5-9pm. /page/locations: Sunday 10:30 AM–9 PM, Monday–Thursday 10:30 AM–2:30 PM & 4:30–9 PM, Friday 11 AM–2:30 PM & 5–9:30 PM, Saturday 10:30 AM–9 PM",
+   "Menus and prices differ by location. The default kusanbazaar.com/menu is the San Jose menu with lower prices (French-style Roasted Lamb Chops with Salads $18.95+ vs $29.95 in Milpitas; Homemade Amine Yogurt $5.95 vs $6.95; Uyghur Roast Lamb Shank $25.99 vs $25.95; Soda $2.00 vs $2.50). Mountain View has a 'streamlined' menu with different items (Grilled Lamb Cold Noodles $18.95, Grilled Chicken Cold Noodles $21.25, Lobster Tails $39.19+, Uyghur Lamb Wraps (2 piece) $17.95, yoghurt beverages $6.50). Items above are the Milpitas menu only",
+   "Broken link: the Milpitas 'Order Now' button on /page/locations points to /menu/kusanbazaar-bcnyw1, which returns HTTP 404; the working Milpitas menu (linked from the homepage) is /menu/kusanbazaar-milpitas",
+   "SEO oddities: page titles read 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' and 'Best Chinese Food in California' although the food is Uyghur/Central Asian halal; the FAQ 'What areas do you serve?' lists only San Jose neighborhoods (no Milpitas or Mountain View)",
+   "Instagram vs site contact: Instagram contact sheet shows (855) 695-8726 and order@kusancuisine.com, while the site publishes per-location phones and Kusanbazaar@gmail.com; Instagram bio address is only the San Jose one; the handle is kusanuyghurcuisine (the San Jose name) while the site's Facebook link is facebook.com/KusanBazaar. An Instagram post advertises a weekend-only 'Grilled Lamb Cold Noodles' promo at $9.95 (reg $18.95)",
+   "Possible fourth location: an Instagram 4th of July post footer lists 'MILPITAS · SAN JOSE · MOUNTAIN VIEW · SAN MATEO'; San Mateo appears nowhere on the site (not on /page/locations, story, contact or catering pages)",
+   "Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail",
+   "Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources",
+   "Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_kusanbazaarmountainview",
+  "name_exact": "Kusan Bazaar",
+  "one_line": "Halal Uyghur Silk Road restaurant on N San Antonio Rd, Mountain View",
+  "cuisine": "Halal Uyghur, Central Asian",
+  "address": "634 N San Antonio Rd, Mountain View, CA 94043",
+  "phone": "(650) 215-6118",
+  "email": "Kusanbazaar@gmail.com",
+  "hours": "Daily 11am-2:30pm & 5-9pm",
+  "instagram": "kusanuyghurcuisine",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "the Mountain View shop runs a shorter menu of its own with different prices on kusanbazaar.com, so they are on the site rather than here",
+  "logo_url": "https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709",
+  "logo_px": "1352x264",
+  "flags": [
+   "Glenn: 'Mountain View • Goods'",
+   "Operator's exact note: San Jose • Goods, Milpitas • Goods, Mountain View • Goods",
+   "Naming: the site's header, <title>, logo and story page brand the umbrella as 'Kusan Collective'; the location names are 'Kusan Uyghur Cuisine 西域小巴郎- San Jose', 'Kusan Bazaar 龟兹集市- Milpitas' and 'Kusan Bazaar 龟兹集市- Mountain View'; Instagram display name is 'Küsan'; footer copyright reads 'Slow Food Diary LLC 2026 All Rights Reserved'. name_exact uses 'Kusan Bazaar' (domain, app name, two of three locations)",
+   "Site footer disclaimer (verbatim): 'Kusan Bazaar and Kusan Uyghur Cuisine are independently owned and operated. The two businesses are not affiliated in any legal or financial capacity.' Yet one site, one Instagram, one email and one app cover all three locations, so the San Jose location may not belong under a 'Kusan Bazaar' listing",
+   "San Jose hours contradict each other on the site, so they are left null. Homepage store-hours block: Sun 10:30am-3pm & 5-9pm, Mon-Fri 10:30am-2:30pm & 5-9pm, Sat 10:30am-3pm & 5-9pm. /page/locations: Sunday 10:30 AM–9 PM, Monday–Thursday 10:30 AM–2:30 PM & 4:30–9 PM, Friday 11 AM–2:30 PM & 5–9:30 PM, Saturday 10:30 AM–9 PM",
+   "Menus and prices differ by location. The default kusanbazaar.com/menu is the San Jose menu with lower prices (French-style Roasted Lamb Chops with Salads $18.95+ vs $29.95 in Milpitas; Homemade Amine Yogurt $5.95 vs $6.95; Uyghur Roast Lamb Shank $25.99 vs $25.95; Soda $2.00 vs $2.50). Mountain View has a 'streamlined' menu with different items (Grilled Lamb Cold Noodles $18.95, Grilled Chicken Cold Noodles $21.25, Lobster Tails $39.19+, Uyghur Lamb Wraps (2 piece) $17.95, yoghurt beverages $6.50). Items above are the Milpitas menu only",
+   "Broken link: the Milpitas 'Order Now' button on /page/locations points to /menu/kusanbazaar-bcnyw1, which returns HTTP 404; the working Milpitas menu (linked from the homepage) is /menu/kusanbazaar-milpitas",
+   "SEO oddities: page titles read 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' and 'Best Chinese Food in California' although the food is Uyghur/Central Asian halal; the FAQ 'What areas do you serve?' lists only San Jose neighborhoods (no Milpitas or Mountain View)",
+   "Instagram vs site contact: Instagram contact sheet shows (855) 695-8726 and order@kusancuisine.com, while the site publishes per-location phones and Kusanbazaar@gmail.com; Instagram bio address is only the San Jose one; the handle is kusanuyghurcuisine (the San Jose name) while the site's Facebook link is facebook.com/KusanBazaar. An Instagram post advertises a weekend-only 'Grilled Lamb Cold Noodles' promo at $9.95 (reg $18.95)",
+   "Possible fourth location: an Instagram 4th of July post footer lists 'MILPITAS · SAN JOSE · MOUNTAIN VIEW · SAN MATEO'; San Mateo appears nowhere on the site (not on /page/locations, story, contact or catering pages)",
+   "Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail",
+   "Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources",
+   "Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_varnishnailboutiquewalnutcreek",
+  "name_exact": "Varnish Nail Boutique",
+  "one_line": "Nail salon on N Main St in Walnut Creek: mani, pedi, gel, dip, wax",
+  "cuisine": "Nail salon",
+  "address": "2918 N Main St, Walnut Creek, California",
+  "phone": "(925) 506-3101",
+  "email": "varnishstudioco@gmail.com",
+  "hours": "Mon-Sat 9:30am-7pm, Sun 10am-6pm",
+  "instagram": "varnishnailboutique",
+  "site_kind": "booking-platform",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Classic Manicure (Reg)",
+    "desc": "",
+    "cents": 2800,
+    "section": "Manicure"
+   },
+   {
+    "name": "Classic Manicure (Gel)",
+    "desc": "",
+    "cents": 4200,
+    "section": "Manicure"
+   },
+   {
+    "name": "KDS Manicure (Reg)",
+    "desc": "",
+    "cents": 5500,
+    "section": "Manicure"
+   },
+   {
+    "name": "KDS Manicure (Gel)",
+    "desc": "",
+    "cents": 7000,
+    "section": "Manicure"
+   },
+   {
+    "name": "Collagen Manicure (Reg)",
+    "desc": "",
+    "cents": 6500,
+    "section": "Manicure"
+   },
+   {
+    "name": "Collagen Manicure (Gel)",
+    "desc": "",
+    "cents": 8000,
+    "section": "Manicure"
+   },
+   {
+    "name": "Cleopatra Golden Manicure (Reg)",
+    "desc": "",
+    "cents": 7500,
+    "section": "Manicure"
+   },
+   {
+    "name": "Cleopatra Golden Manicure (Gel)",
+    "desc": "",
+    "cents": 9000,
+    "section": "Manicure"
+   },
+   {
+    "name": "24K VIP Package (Reg)",
+    "desc": "",
+    "cents": 9000,
+    "section": "Manicure"
+   },
+   {
+    "name": "24K VIP Package (Gel)",
+    "desc": "",
+    "cents": 10500,
+    "section": "Manicure"
+   },
+   {
+    "name": "Classic Pedicure (Reg)",
+    "desc": "",
+    "cents": 4500,
+    "section": "Pedicure"
+   },
+   {
+    "name": "Classic Pedicure (Gel)",
+    "desc": "",
+    "cents": 5500,
+    "section": "Pedicure"
+   },
+   {
+    "name": "KDS Pedicure (Reg)",
+    "desc": "",
+    "cents": 6500,
+    "section": "Pedicure"
+   },
+   {
+    "name": "KDS Pedicure (Gel)",
+    "desc": "",
+    "cents": 8000,
+    "section": "Pedicure"
+   },
+   {
+    "name": "Collagen Pedicure (Reg)",
+    "desc": "",
+    "cents": 7500,
+    "section": "Pedicure"
+   },
+   {
+    "name": "Collagen Pedicure (Gel)",
+    "desc": "",
+    "cents": 9000,
+    "section": "Pedicure"
+   },
+   {
+    "name": "Cleopatra Golden Pedicure (Reg)",
+    "desc": "",
+    "cents": 8500,
+    "section": "Pedicure"
+   },
+   {
+    "name": "Cleopatra Golden Pedicure (Gel)",
+    "desc": "",
+    "cents": 10000,
+    "section": "Pedicure"
+   },
+   {
+    "name": "24K VIP Package (Reg)",
+    "desc": "",
+    "cents": 10000,
+    "section": "Pedicure"
+   },
+   {
+    "name": "24K VIP Package (Gel)",
+    "desc": "",
+    "cents": 11500,
+    "section": "Pedicure"
+   },
+   {
+    "name": "GelX Full Set",
+    "desc": "",
+    "cents": 7100,
+    "section": "GelX",
+    "label": "from $71"
+   },
+   {
+    "name": "Gel X Fill",
+    "desc": "",
+    "cents": 6100,
+    "section": "GelX"
+   },
+   {
+    "name": "Builder Gel Full Set (Natural)",
+    "desc": "",
+    "cents": 6000,
+    "section": "Builder Gel",
+    "label": "from $60"
+   },
+   {
+    "name": "Builder Gel Full Set (Tips)",
+    "desc": "",
+    "cents": 7500,
+    "section": "Builder Gel",
+    "label": "from $75"
+   },
+   {
+    "name": "Builder Gel Fill (Natural)",
+    "desc": "",
+    "cents": 5500,
+    "section": "Builder Gel",
+    "label": "from $55"
+   },
+   {
+    "name": "Builder Gel Fill (Tips)",
+    "desc": "",
+    "cents": 6500,
+    "section": "Builder Gel",
+    "label": "from $65"
+   },
+   {
+    "name": "Dip (Natural)",
+    "desc": "",
+    "cents": 5500,
+    "section": "Dipping",
+    "label": "from $55"
+   },
+   {
+    "name": "Dip (Tips)",
+    "desc": "",
+    "cents": 6500,
+    "section": "Dipping",
+    "label": "from $65"
+   },
+   {
+    "name": "Acrylic Full Set",
+    "desc": "",
+    "cents": 6100,
+    "section": "Acrylic",
+    "label": "from $61"
+   },
+   {
+    "name": "Acrylic Fill",
+    "desc": "",
+    "cents": 5100,
+    "section": "Acrylic",
+    "label": "from $51"
+   },
+   {
+    "name": "Pink & White Full Set",
+    "desc": "",
+    "cents": 7500,
+    "section": "Acrylic",
+    "label": "from $75"
+   },
+   {
+    "name": "Kids Manicure (Reg)",
+    "desc": "",
+    "cents": 2000,
+    "section": "Kids Services"
+   },
+   {
+    "name": "Kids Manicure (Gel)",
+    "desc": "",
+    "cents": 3000,
+    "section": "Kids Services"
+   },
+   {
+    "name": "Kids Pedicure (Reg)",
+    "desc": "",
+    "cents": 3000,
+    "section": "Kids Services"
+   },
+   {
+    "name": "Kids Pedicure (Gel)",
+    "desc": "",
+    "cents": 4000,
+    "section": "Kids Services"
+   },
+   {
+    "name": "Eyebrow (For Her)",
+    "desc": "",
+    "cents": 1600,
+    "section": "Waxing",
+    "label": "from $16"
+   },
+   {
+    "name": "Eyebrow (For Him)",
+    "desc": "",
+    "cents": 1800,
+    "section": "Waxing",
+    "label": "from $18"
+   },
+   {
+    "name": "Brazilian",
+    "desc": "",
+    "cents": 5500,
+    "section": "Waxing",
+    "label": "from $55"
+   },
+   {
+    "name": "Hands Polish Change (Reg)",
+    "desc": "",
+    "cents": 1600,
+    "section": "Extra Services"
+   },
+   {
+    "name": "Toes Polish Change (Reg)",
+    "desc": "",
+    "cents": 2000,
+    "section": "Extra Services"
+   },
+   {
+    "name": "Gel Add-On",
+    "desc": "",
+    "cents": 1500,
+    "section": "Extra Services",
+    "label": "from $15"
+   },
+   {
+    "name": "French Tips",
+    "desc": "",
+    "cents": 1000,
+    "section": "Extra Services",
+    "label": "from $10"
+   },
+   {
+    "name": "Chrome",
+    "desc": "",
+    "cents": 1000,
+    "section": "Extra Services"
+   }
+  ],
+  "price_note": "Prices are the full service list on their SimplePOS booking site (varnishnailstudio3868.simplepos.us, all 9 categories); hours are that booking system's business-hours calendar, identical across the two weeks checked (Sep 7-20, 2026); addresses and the Antioch phone come from the two Instagram bios in the operator's screenshots",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Operator's exact note: sent twice, as Antioch • Goods and as Walnut Creek • Goods",
+   "Two locations confirmed from their own Instagram profiles: @varnishnailboutique is 'Varnish Nail Boutique | Walnut Creek' (2918 N Main St, (925) 506-3101) and @varnish.antioch is 'Varnish Nail Boutique | Antioch' (4815 Lone Tree Wy, Antioch, CA 94531, (925) 750-4245); each bio cross-links the other",
+   "The booking site publishes no address; its phone 9255063101 equals the Walnut Creek Instagram phone and the link sits in the Walnut Creek bio, so the site and its hours are attributed to Walnut Creek; the Antioch profile shows no website link",
+   "Antioch hours are not published on any of their own pages, so that location's hours are null",
+   "Name mismatch: the site's subdomain (varnishnailstudio3868) and email (varnishstudioco@) say 'Studio', but the site heading, its company record and both Instagram profiles say 'Varnish Nail Boutique'; the 'Varnish Nail Studio' label appears to come from the URL",
+   "It is a nail salon (services, incl. waxing), so the operator's 'Goods' category looks wrong",
+   "Email is from the booking site's own company record (the public API response the page loads on every visit) and is not rendered on the visible page; confirm before displaying it",
+   "The site is a bare SimplePOS booking shell: no about text, no logo image, no address, no visible hours; the company record's name/address/city/about fields are empty and only the DBA name 'Varnish Nail Boutique' is set. Hours were read from the booking calendar (Mon-Sat 9:30am-7pm, Sun 10am-6pm)",
+   "No logo on their own site (home page is a plain blue header; the only image assets are SimplePOS platform graphics), so logo_url is null; their Instagram profile picture is a logo (blue marble circle, gold 'V', 'VARNISH NAIL BOUTIQUE'; the Antioch profile's variant adds 'ANTIOCH') but exists only in the operator's screenshots, not at a fetchable URL",
+   "Prices: 57 of 114 services are flagged adjustable and render as '$X.00+' on the site (recorded here as 'from $X'); each category also has a $0 placeholder entry ('Pedicure Service', 'Manicure Service', 'Design', etc.) that was omitted; add-ons such as Chrome, Cateye, French Tips and Ombre are repeated in nearly every category, and every extension service shows a 15-minute duration placeholder",
+   "The Walnut Creek Instagram address has no ZIP code; recorded as published",
+   "The site is a JavaScript app: a plain fetch returns only the 'SimplePOS Online Booking' shell; data was taken from the rendered page in a browser and from the site's own API (simplepos.us/api/v2 with the Sub-Domain header the app sends)"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_varnishnailboutiqueantioch",
+  "name_exact": "Varnish Nail Boutique",
+  "one_line": "Nail salon on Lone Tree Way in Antioch: mani, pedi, gel, dip, wax",
+  "cuisine": "Nail salon",
+  "address": "4815 Lone Tree Wy, Antioch, CA 94531",
+  "phone": "(925) 750-4245",
+  "email": "varnishstudioco@gmail.com",
+  "hours": null,
+  "instagram": "varnish.antioch",
+  "site_kind": "booking-platform",
+  "prices_published": false,
+  "items": [],
+  "price_note": "the Antioch shop publishes no hours or price list of its own; the Walnut Creek shop's booking site carries the brand's prices",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Operator's exact note: sent twice, as Antioch • Goods and as Walnut Creek • Goods",
+   "Two locations confirmed from their own Instagram profiles: @varnishnailboutique is 'Varnish Nail Boutique | Walnut Creek' (2918 N Main St, (925) 506-3101) and @varnish.antioch is 'Varnish Nail Boutique | Antioch' (4815 Lone Tree Wy, Antioch, CA 94531, (925) 750-4245); each bio cross-links the other",
+   "The booking site publishes no address; its phone 9255063101 equals the Walnut Creek Instagram phone and the link sits in the Walnut Creek bio, so the site and its hours are attributed to Walnut Creek; the Antioch profile shows no website link",
+   "Antioch hours are not published on any of their own pages, so that location's hours are null",
+   "Name mismatch: the site's subdomain (varnishnailstudio3868) and email (varnishstudioco@) say 'Studio', but the site heading, its company record and both Instagram profiles say 'Varnish Nail Boutique'; the 'Varnish Nail Studio' label appears to come from the URL",
+   "It is a nail salon (services, incl. waxing), so the operator's 'Goods' category looks wrong",
+   "Email is from the booking site's own company record (the public API response the page loads on every visit) and is not rendered on the visible page; confirm before displaying it",
+   "The site is a bare SimplePOS booking shell: no about text, no logo image, no address, no visible hours; the company record's name/address/city/about fields are empty and only the DBA name 'Varnish Nail Boutique' is set. Hours were read from the booking calendar (Mon-Sat 9:30am-7pm, Sun 10am-6pm)",
+   "No logo on their own site (home page is a plain blue header; the only image assets are SimplePOS platform graphics), so logo_url is null; their Instagram profile picture is a logo (blue marble circle, gold 'V', 'VARNISH NAIL BOUTIQUE'; the Antioch profile's variant adds 'ANTIOCH') but exists only in the operator's screenshots, not at a fetchable URL",
+   "Prices: 57 of 114 services are flagged adjustable and render as '$X.00+' on the site (recorded here as 'from $X'); each category also has a $0 placeholder entry ('Pedicure Service', 'Manicure Service', 'Design', etc.) that was omitted; add-ons such as Chrome, Cateye, French Tips and Ombre are repeated in nearly every category, and every extension service shows a 15-minute duration placeholder",
+   "The Walnut Creek Instagram address has no ZIP code; recorded as published",
+   "The site is a JavaScript app: a plain fetch returns only the 'SimplePOS Online Booking' shell; data was taken from the rendered page in a browser and from the site's own API (simplepos.us/api/v2 with the Sub-Domain header the app sends)"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_bodyrokberkeley",
+  "name_exact": "BODYROK East Bay",
+  "one_line": "Reformer Pilates studio on University Ave in Berkeley",
+  "cuisine": "Reformer Pilates studio",
+  "address": "1601 University Avenue, Berkeley, CA 94703",
+  "phone": "(510) 900-9234",
+  "email": "berkeley@bodyrok.com",
+  "hours": null,
+  "instagram": "bodyrokeastbay",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "First Class",
+    "desc": "Intro offer, 30 Day Expiration; Alamo and Oakland pages call it '1 Class'; Mindbody name 'INTRO SPECIAL - $20 First Visit'",
+    "cents": 2000,
+    "label": "$20",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "5 Classes",
+    "desc": "Intro offer, 30 Day Expiration; Mindbody name 'INTRO SPECIAL- 5 classes for $99 (1mth exp)'",
+    "cents": 9900,
+    "label": "$99",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "Unlimited",
+    "desc": "Intro offer: first month unlimited, 1 class per day, expires 30 days from first use; Mindbody name 'INTRO SPECIAL 1st MTH(1x day) $149'",
+    "cents": 14900,
+    "label": "$149",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "INTRO SPECIAL 2 Weeks Unlimited (1X Day) $79",
+    "desc": "Expiration Date: 14 days from first use; listed on their Mindbody store only, not on bodyrok.com",
+    "cents": 7900,
+    "label": "$79",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "1 Class",
+    "desc": "Drop-in, Valid For 6 Months; Mindbody name 'ROK Group- 1 session'",
+    "cents": 3800,
+    "label": "$38",
+    "section": "Class Packages"
+   },
+   {
+    "name": "5 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 5 Sessions'",
+    "cents": 16900,
+    "label": "$169",
+    "section": "Class Packages"
+   },
+   {
+    "name": "10 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 10 Sessions'",
+    "cents": 29900,
+    "label": "$299",
+    "section": "Class Packages"
+   },
+   {
+    "name": "20 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 20 Sessions'",
+    "cents": 54900,
+    "label": "$549",
+    "section": "Class Packages"
+   },
+   {
+    "name": "ROK 1 Month Unlimited (no contract)",
+    "desc": "One month unlimited, no contract; expiration one month from purchase; Mindbody store only",
+    "cents": 34900,
+    "label": "$349",
+    "section": "Class Packages"
+   },
+   {
+    "name": "4x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 4X Mth (no commitment)': $119.00 every month, valid at Alamo, Berkeley, Oakland, Rockridge, Walnut Creek; extra classes $25 each",
+    "cents": 11900,
+    "label": "$119/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "8x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 8X Mth (no commitment)': $189.00 every month",
+    "cents": 18900,
+    "label": "$189/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "12x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 12X Mth (no commitment)': $239.00 every month",
+    "cents": 23900,
+    "label": "$239/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "Unlimited",
+    "desc": "Membership, 30 Day Cancellation, max 1 class per day; Mindbody contract 'EastBay Access- Recurring Unlimited, 1X Day': $279.00 every month",
+    "cents": 27900,
+    "label": "$279/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 4X Mth Founding Membership",
+    "desc": "Walnut Creek page lists it as '4x A Month' under 'Founding Memberships - Lock Your Rate In For Life'; $83.30 every month, Walnut Creek only, activates when the studio opens",
+    "cents": 8330,
+    "label": "$83.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 8X Mth Founding Membership",
+    "desc": "Walnut Creek page: '8x A Month'; $132.30 every month",
+    "cents": 13230,
+    "label": "$132.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 12X Mth Founding Membership",
+    "desc": "Walnut Creek page: '12x A Month'; $167.30 every month",
+    "cents": 16730,
+    "label": "$167.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK Founding Member- Unlimited (1X Day)",
+    "desc": "Walnut Creek page: 'Unlimited'; $195.30 every month",
+    "cents": 19530,
+    "label": "$195.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "Back To School- 5 +1 FREE $169 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 16900,
+    "label": "$169",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Back to School- 10 +2 FREE $299 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 29900,
+    "label": "$299",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Back To School- 20 +4 FREE- $549 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 54900,
+    "label": "$549",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Special Event- Non-Member",
+    "desc": "Mindbody 'Special Event Classes' category",
+    "cents": 2000,
+    "label": "$20",
+    "section": "Special Event Classes"
+   },
+   {
+    "name": "$10 Community class ONLY",
+    "desc": "Mindbody 'COMMUNITY Sculpt Classes' category",
+    "cents": 1000,
+    "label": "$10",
+    "section": "COMMUNITY Sculpt Classes"
+   }
+  ],
+  "price_note": "Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody",
+  "logo_url": "https://bodyrok.com/wp-content/uploads/2024/07/Logo-large-1024x135.png",
+  "logo_px": "1024x135",
+  "flags": [
+   "The operator's exact note: Multiple locations",
+   "Name is spelled differently on their own properties: brand site pages just say 'BODYROK'; their Mindbody booking site is titled 'BODYROK - East Bay'; the Instagram display name is 'BODYROK EASTBAY' (handle bodyrokeastbay); the round avatar logo reads 'BODYROK EAST BAY'; the operator wrote 'BodyRok East Bay'. 'BODYROK East Bay' used here.",
+   "Six East Bay studio pages exist but only four are open. Walnut Creek (1380 North California Boulevard) says 'Opening Late Summer 2026' and the studios index labels it 'Coming Soon'; Lafayette (971 Moraga Rd) says 'Opening Fall 2026' and is labeled 'Coming Soon' on the index. Their addresses are in locations only and were left out of the top-level address so a card does not show unopened studios.",
+   "Linktree bio has a typo 'ROCKRDIGE' and says only 'WALNUT CREEK COMING SOON!', while the Instagram bio says 'Coming Soon: Walnut Creek & Lafayette'.",
+   "No phone number appears on any bodyrok.com studio page or on the Mindbody store. The only number published is the Instagram Contact sheet's 'Text (510) 900-9234', which is a text line for the whole East Bay group, so every per-studio phone is null.",
+   "No opening hours are published on the site, linktree, Instagram or Mindbody; only class schedules. For reference, class start times on the Mindbody schedule for the week of Sept 7-13 2026 (Mon Sept 7 was a holiday short schedule): Berkeley Tue-Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, Sat 7am-12pm, Sun 8am-12pm; Oakland Lakeshore Tue-Thu 6:00am-7:30pm, Fri 6:00am-6:30pm, Sat-Sun 7am-12pm; Alamo from 6:00am Tue-Fri with last classes 5:30pm Tue, 6:30pm Wed, 12pm Thu, 1pm Fri, Sat-Sun 7-11am; Rockridge Tue and Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, no classes Wed Sept 9, Sat 8-11am, Sun 8am-12pm. Classes are 45 minutes.",
+   "The studio pages link to Instagram @bodyrokstudio (the brand account), not @bodyrokeastbay.",
+   "Wording differs between studio pages while prices are identical: intro first item is 'First Class' on Berkeley and Rockridge but '1 Class' on Alamo and Oakland; section is 'Class Packages' on Berkeley and Oakland but 'Class Packs' on Alamo and Rockridge; validity reads '30 Day Expiration' vs 'Valid For 30 Days' and 'Valid For 6 Months' vs '6 Month Expiration'.",
+   "Addresses are inconsistently formatted on their site: Alamo, Rockridge, Walnut Creek and Lafayette have no ZIP code and end in ', USA'; Oakland spells out 'California'; Alamo's '170f Alamo Plaza' uses a lowercase suite letter. Kept exactly as published.",
+   "Rockridge is a neighborhood of Oakland, so there are two Oakland-addressed studios (3303 Lakeshore Ave and 5901 College Avenue); Instagram and the site list 'Oakland' and 'Rockridge' as separate studios.",
+   "Linktree button 'BUY YOUR ROCKRIDGE FOUNDING MEMBERSHIP' points to Mindbody prodId=205, which no longer resolves to any contract (the store only offers the four EastBay Access memberships and four Walnut Creek founding memberships) and the Rockridge page says 'now open' with standard prices, so that button looks stale.",
+   "Other stale linktree buttons: 'SIGN UP FOR ROCKRIDGE CLASSES!' carries a hard-coded schedule date 05/09/26; 'FREE Pilates in the Park with Kelsey - 8/30!' (t.bodyrok.com link resolving to the Mindbody schedule for location 5 'Walnut Creek', category 'Community Events') is a past event; 'August Promo- Get your membership now' was still up in September.",
+   "Walnut Creek founding prices ($83.30, $132.30, $167.30, $195.30) are exactly 30% off the standard $119, $189, $239, $279 tiers; Mindbody says 'lock in your 30% discount for the life of your Walnut Creek only membership', founding members pay a '$25 drop-in rate per class' at the other East Bay studios until opening, and the pinned Instagram post says 'LAST CALL 30% OFF FOUNDING MEMBERSHIPS'.",
+   "Memberships are named 'EastBay Access- Recurring ... (no commitment)' on Mindbody, yet the contract reads '$119.00 every month for 12 months' and 'auto-renews every 12 months until you cancel' with a 30-day written cancellation notice. Memberships are valid at Alamo, Berkeley, Oakland, Rockridge and Walnut Creek; extra classes $25 each; late cancel $15.",
+   "No-show penalty contradicts itself: the studio pages say a $20 charge on unlimited plans, while the Mindbody Unlimited contract says 'you will incur a $25 No Show Fee'.",
+   "Items on the Mindbody store that bodyrok.com does not show: 2 Weeks Unlimited $79, ROK 1 Month Unlimited (no contract) $349, three Back To School bonus packs expiring 12/5/2026, Special Event- Non-Member $20 and $10 Community class ONLY. The 'Community Events (out of studio)' category cannot be bought online and a 'Privates' category exists on the schedule filter with no price published.",
+   "The brand home page says 'Generally a drop in class starts at around $30 (depending on location)', but the East Bay drop-in is $38.",
+   "Only the black 'BODYROK' wordmark is hosted on their own domain (a white variant is at https://bodyrok.com/wp-content/uploads/2024/07/logo-white-1024x134.png, 1024x134); the round 'BODYROK EAST BAY' badge exists only as the Instagram and linktree avatar, hosted by those platforms.",
+   "Per-studio emails on their site: berkeley@bodyrok.com, alamo@bodyrok.com, oakland@bodyrok.com, rockridge@bodyrok.com, walnutcreek@bodyrok.com, lafayette@bodyrok.com, plus brand info@bodyrok.com; Instagram's Contact sheet shows berkeley@BODYROK.com, which is why it is the top-level email.",
+   "The operator sent a linktree; its 'Our Website' button goes to the brand's bodyrok.com/studios/ index, and booking and purchases run on Mindbody (clients.mindbodyonline.com, site ID 283626). site_kind is own-domain because the addresses and prices live on bodyrok.com."
+  ],
+  "blocked": "Mindbody store and schedule pages (clients.mindbodyonline.com, studioid=283626) returned HTTP 403 'Security Check' to WebFetch and to curl; they were read instead in the real browser pane, so all Mindbody facts above come from the rendered pages on 2026-09-07. The two t.bodyrok.com tracking links returned 405 to HEAD; on GET one redirected to the Mindbody Walnut Creek community-events schedule (also 403 to curl) and the other to a Google Form. Instagram was not fetched; its facts come from the operator's four screenshots."
+ },
+ {
+  "id": "b_bodyrokalamo",
+  "name_exact": "BODYROK East Bay",
+  "one_line": "Reformer Pilates studio at Alamo Plaza",
+  "cuisine": "Reformer Pilates studio",
+  "address": "170f Alamo Plaza, Alamo, CA, USA",
+  "phone": "(510) 900-9234",
+  "email": "alamo@bodyrok.com",
+  "hours": null,
+  "instagram": "bodyrokeastbay",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "First Class",
+    "desc": "Intro offer, 30 Day Expiration; Alamo and Oakland pages call it '1 Class'; Mindbody name 'INTRO SPECIAL - $20 First Visit'",
+    "cents": 2000,
+    "label": "$20",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "5 Classes",
+    "desc": "Intro offer, 30 Day Expiration; Mindbody name 'INTRO SPECIAL- 5 classes for $99 (1mth exp)'",
+    "cents": 9900,
+    "label": "$99",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "Unlimited",
+    "desc": "Intro offer: first month unlimited, 1 class per day, expires 30 days from first use; Mindbody name 'INTRO SPECIAL 1st MTH(1x day) $149'",
+    "cents": 14900,
+    "label": "$149",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "INTRO SPECIAL 2 Weeks Unlimited (1X Day) $79",
+    "desc": "Expiration Date: 14 days from first use; listed on their Mindbody store only, not on bodyrok.com",
+    "cents": 7900,
+    "label": "$79",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "1 Class",
+    "desc": "Drop-in, Valid For 6 Months; Mindbody name 'ROK Group- 1 session'",
+    "cents": 3800,
+    "label": "$38",
+    "section": "Class Packages"
+   },
+   {
+    "name": "5 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 5 Sessions'",
+    "cents": 16900,
+    "label": "$169",
+    "section": "Class Packages"
+   },
+   {
+    "name": "10 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 10 Sessions'",
+    "cents": 29900,
+    "label": "$299",
+    "section": "Class Packages"
+   },
+   {
+    "name": "20 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 20 Sessions'",
+    "cents": 54900,
+    "label": "$549",
+    "section": "Class Packages"
+   },
+   {
+    "name": "ROK 1 Month Unlimited (no contract)",
+    "desc": "One month unlimited, no contract; expiration one month from purchase; Mindbody store only",
+    "cents": 34900,
+    "label": "$349",
+    "section": "Class Packages"
+   },
+   {
+    "name": "4x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 4X Mth (no commitment)': $119.00 every month, valid at Alamo, Berkeley, Oakland, Rockridge, Walnut Creek; extra classes $25 each",
+    "cents": 11900,
+    "label": "$119/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "8x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 8X Mth (no commitment)': $189.00 every month",
+    "cents": 18900,
+    "label": "$189/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "12x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 12X Mth (no commitment)': $239.00 every month",
+    "cents": 23900,
+    "label": "$239/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "Unlimited",
+    "desc": "Membership, 30 Day Cancellation, max 1 class per day; Mindbody contract 'EastBay Access- Recurring Unlimited, 1X Day': $279.00 every month",
+    "cents": 27900,
+    "label": "$279/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 4X Mth Founding Membership",
+    "desc": "Walnut Creek page lists it as '4x A Month' under 'Founding Memberships - Lock Your Rate In For Life'; $83.30 every month, Walnut Creek only, activates when the studio opens",
+    "cents": 8330,
+    "label": "$83.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 8X Mth Founding Membership",
+    "desc": "Walnut Creek page: '8x A Month'; $132.30 every month",
+    "cents": 13230,
+    "label": "$132.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 12X Mth Founding Membership",
+    "desc": "Walnut Creek page: '12x A Month'; $167.30 every month",
+    "cents": 16730,
+    "label": "$167.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK Founding Member- Unlimited (1X Day)",
+    "desc": "Walnut Creek page: 'Unlimited'; $195.30 every month",
+    "cents": 19530,
+    "label": "$195.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "Back To School- 5 +1 FREE $169 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 16900,
+    "label": "$169",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Back to School- 10 +2 FREE $299 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 29900,
+    "label": "$299",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Back To School- 20 +4 FREE- $549 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 54900,
+    "label": "$549",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Special Event- Non-Member",
+    "desc": "Mindbody 'Special Event Classes' category",
+    "cents": 2000,
+    "label": "$20",
+    "section": "Special Event Classes"
+   },
+   {
+    "name": "$10 Community class ONLY",
+    "desc": "Mindbody 'COMMUNITY Sculpt Classes' category",
+    "cents": 1000,
+    "label": "$10",
+    "section": "COMMUNITY Sculpt Classes"
+   }
+  ],
+  "price_note": "Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody",
+  "logo_url": "https://bodyrok.com/wp-content/uploads/2024/07/Logo-large-1024x135.png",
+  "logo_px": "1024x135",
+  "flags": [
+   "The operator's exact note: Multiple locations",
+   "Name is spelled differently on their own properties: brand site pages just say 'BODYROK'; their Mindbody booking site is titled 'BODYROK - East Bay'; the Instagram display name is 'BODYROK EASTBAY' (handle bodyrokeastbay); the round avatar logo reads 'BODYROK EAST BAY'; the operator wrote 'BodyRok East Bay'. 'BODYROK East Bay' used here.",
+   "Six East Bay studio pages exist but only four are open. Walnut Creek (1380 North California Boulevard) says 'Opening Late Summer 2026' and the studios index labels it 'Coming Soon'; Lafayette (971 Moraga Rd) says 'Opening Fall 2026' and is labeled 'Coming Soon' on the index. Their addresses are in locations only and were left out of the top-level address so a card does not show unopened studios.",
+   "Linktree bio has a typo 'ROCKRDIGE' and says only 'WALNUT CREEK COMING SOON!', while the Instagram bio says 'Coming Soon: Walnut Creek & Lafayette'.",
+   "No phone number appears on any bodyrok.com studio page or on the Mindbody store. The only number published is the Instagram Contact sheet's 'Text (510) 900-9234', which is a text line for the whole East Bay group, so every per-studio phone is null.",
+   "No opening hours are published on the site, linktree, Instagram or Mindbody; only class schedules. For reference, class start times on the Mindbody schedule for the week of Sept 7-13 2026 (Mon Sept 7 was a holiday short schedule): Berkeley Tue-Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, Sat 7am-12pm, Sun 8am-12pm; Oakland Lakeshore Tue-Thu 6:00am-7:30pm, Fri 6:00am-6:30pm, Sat-Sun 7am-12pm; Alamo from 6:00am Tue-Fri with last classes 5:30pm Tue, 6:30pm Wed, 12pm Thu, 1pm Fri, Sat-Sun 7-11am; Rockridge Tue and Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, no classes Wed Sept 9, Sat 8-11am, Sun 8am-12pm. Classes are 45 minutes.",
+   "The studio pages link to Instagram @bodyrokstudio (the brand account), not @bodyrokeastbay.",
+   "Wording differs between studio pages while prices are identical: intro first item is 'First Class' on Berkeley and Rockridge but '1 Class' on Alamo and Oakland; section is 'Class Packages' on Berkeley and Oakland but 'Class Packs' on Alamo and Rockridge; validity reads '30 Day Expiration' vs 'Valid For 30 Days' and 'Valid For 6 Months' vs '6 Month Expiration'.",
+   "Addresses are inconsistently formatted on their site: Alamo, Rockridge, Walnut Creek and Lafayette have no ZIP code and end in ', USA'; Oakland spells out 'California'; Alamo's '170f Alamo Plaza' uses a lowercase suite letter. Kept exactly as published.",
+   "Rockridge is a neighborhood of Oakland, so there are two Oakland-addressed studios (3303 Lakeshore Ave and 5901 College Avenue); Instagram and the site list 'Oakland' and 'Rockridge' as separate studios.",
+   "Linktree button 'BUY YOUR ROCKRIDGE FOUNDING MEMBERSHIP' points to Mindbody prodId=205, which no longer resolves to any contract (the store only offers the four EastBay Access memberships and four Walnut Creek founding memberships) and the Rockridge page says 'now open' with standard prices, so that button looks stale.",
+   "Other stale linktree buttons: 'SIGN UP FOR ROCKRIDGE CLASSES!' carries a hard-coded schedule date 05/09/26; 'FREE Pilates in the Park with Kelsey - 8/30!' (t.bodyrok.com link resolving to the Mindbody schedule for location 5 'Walnut Creek', category 'Community Events') is a past event; 'August Promo- Get your membership now' was still up in September.",
+   "Walnut Creek founding prices ($83.30, $132.30, $167.30, $195.30) are exactly 30% off the standard $119, $189, $239, $279 tiers; Mindbody says 'lock in your 30% discount for the life of your Walnut Creek only membership', founding members pay a '$25 drop-in rate per class' at the other East Bay studios until opening, and the pinned Instagram post says 'LAST CALL 30% OFF FOUNDING MEMBERSHIPS'.",
+   "Memberships are named 'EastBay Access- Recurring ... (no commitment)' on Mindbody, yet the contract reads '$119.00 every month for 12 months' and 'auto-renews every 12 months until you cancel' with a 30-day written cancellation notice. Memberships are valid at Alamo, Berkeley, Oakland, Rockridge and Walnut Creek; extra classes $25 each; late cancel $15.",
+   "No-show penalty contradicts itself: the studio pages say a $20 charge on unlimited plans, while the Mindbody Unlimited contract says 'you will incur a $25 No Show Fee'.",
+   "Items on the Mindbody store that bodyrok.com does not show: 2 Weeks Unlimited $79, ROK 1 Month Unlimited (no contract) $349, three Back To School bonus packs expiring 12/5/2026, Special Event- Non-Member $20 and $10 Community class ONLY. The 'Community Events (out of studio)' category cannot be bought online and a 'Privates' category exists on the schedule filter with no price published.",
+   "The brand home page says 'Generally a drop in class starts at around $30 (depending on location)', but the East Bay drop-in is $38.",
+   "Only the black 'BODYROK' wordmark is hosted on their own domain (a white variant is at https://bodyrok.com/wp-content/uploads/2024/07/logo-white-1024x134.png, 1024x134); the round 'BODYROK EAST BAY' badge exists only as the Instagram and linktree avatar, hosted by those platforms.",
+   "Per-studio emails on their site: berkeley@bodyrok.com, alamo@bodyrok.com, oakland@bodyrok.com, rockridge@bodyrok.com, walnutcreek@bodyrok.com, lafayette@bodyrok.com, plus brand info@bodyrok.com; Instagram's Contact sheet shows berkeley@BODYROK.com, which is why it is the top-level email.",
+   "The operator sent a linktree; its 'Our Website' button goes to the brand's bodyrok.com/studios/ index, and booking and purchases run on Mindbody (clients.mindbodyonline.com, site ID 283626). site_kind is own-domain because the addresses and prices live on bodyrok.com."
+  ],
+  "blocked": "Mindbody store and schedule pages (clients.mindbodyonline.com, studioid=283626) returned HTTP 403 'Security Check' to WebFetch and to curl; they were read instead in the real browser pane, so all Mindbody facts above come from the rendered pages on 2026-09-07. The two t.bodyrok.com tracking links returned 405 to HEAD; on GET one redirected to the Mindbody Walnut Creek community-events schedule (also 403 to curl) and the other to a Google Form. Instagram was not fetched; its facts come from the operator's four screenshots."
+ },
+ {
+  "id": "b_bodyrokoakland",
+  "name_exact": "BODYROK East Bay",
+  "one_line": "Reformer Pilates studios on Lakeshore Ave and in Rockridge, Oakland",
+  "cuisine": "Reformer Pilates studio",
+  "address": "3303 Lakeshore Ave, Oakland, California 94610; 5901 College Avenue, Oakland, CA, USA",
+  "phone": "(510) 900-9234",
+  "email": "oakland@bodyrok.com",
+  "hours": null,
+  "instagram": "bodyrokeastbay",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "First Class",
+    "desc": "Intro offer, 30 Day Expiration; Alamo and Oakland pages call it '1 Class'; Mindbody name 'INTRO SPECIAL - $20 First Visit'",
+    "cents": 2000,
+    "label": "$20",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "5 Classes",
+    "desc": "Intro offer, 30 Day Expiration; Mindbody name 'INTRO SPECIAL- 5 classes for $99 (1mth exp)'",
+    "cents": 9900,
+    "label": "$99",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "Unlimited",
+    "desc": "Intro offer: first month unlimited, 1 class per day, expires 30 days from first use; Mindbody name 'INTRO SPECIAL 1st MTH(1x day) $149'",
+    "cents": 14900,
+    "label": "$149",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "INTRO SPECIAL 2 Weeks Unlimited (1X Day) $79",
+    "desc": "Expiration Date: 14 days from first use; listed on their Mindbody store only, not on bodyrok.com",
+    "cents": 7900,
+    "label": "$79",
+    "section": "Intro Offers"
+   },
+   {
+    "name": "1 Class",
+    "desc": "Drop-in, Valid For 6 Months; Mindbody name 'ROK Group- 1 session'",
+    "cents": 3800,
+    "label": "$38",
+    "section": "Class Packages"
+   },
+   {
+    "name": "5 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 5 Sessions'",
+    "cents": 16900,
+    "label": "$169",
+    "section": "Class Packages"
+   },
+   {
+    "name": "10 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 10 Sessions'",
+    "cents": 29900,
+    "label": "$299",
+    "section": "Class Packages"
+   },
+   {
+    "name": "20 Classes",
+    "desc": "Valid For 6 Months; Mindbody name 'ROK Group - 20 Sessions'",
+    "cents": 54900,
+    "label": "$549",
+    "section": "Class Packages"
+   },
+   {
+    "name": "ROK 1 Month Unlimited (no contract)",
+    "desc": "One month unlimited, no contract; expiration one month from purchase; Mindbody store only",
+    "cents": 34900,
+    "label": "$349",
+    "section": "Class Packages"
+   },
+   {
+    "name": "4x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 4X Mth (no commitment)': $119.00 every month, valid at Alamo, Berkeley, Oakland, Rockridge, Walnut Creek; extra classes $25 each",
+    "cents": 11900,
+    "label": "$119/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "8x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 8X Mth (no commitment)': $189.00 every month",
+    "cents": 18900,
+    "label": "$189/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "12x A Month",
+    "desc": "Membership, 30 Day Cancellation; Mindbody contract 'EastBay Access- Recurring 12X Mth (no commitment)': $239.00 every month",
+    "cents": 23900,
+    "label": "$239/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "Unlimited",
+    "desc": "Membership, 30 Day Cancellation, max 1 class per day; Mindbody contract 'EastBay Access- Recurring Unlimited, 1X Day': $279.00 every month",
+    "cents": 27900,
+    "label": "$279/mo",
+    "section": "Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 4X Mth Founding Membership",
+    "desc": "Walnut Creek page lists it as '4x A Month' under 'Founding Memberships - Lock Your Rate In For Life'; $83.30 every month, Walnut Creek only, activates when the studio opens",
+    "cents": 8330,
+    "label": "$83.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 8X Mth Founding Membership",
+    "desc": "Walnut Creek page: '8x A Month'; $132.30 every month",
+    "cents": 13230,
+    "label": "$132.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK 12X Mth Founding Membership",
+    "desc": "Walnut Creek page: '12x A Month'; $167.30 every month",
+    "cents": 16730,
+    "label": "$167.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "WALNUT CREEK Founding Member- Unlimited (1X Day)",
+    "desc": "Walnut Creek page: 'Unlimited'; $195.30 every month",
+    "cents": 19530,
+    "label": "$195.30/mo",
+    "section": "Walnut Creek Founding Memberships"
+   },
+   {
+    "name": "Back To School- 5 +1 FREE $169 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 16900,
+    "label": "$169",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Back to School- 10 +2 FREE $299 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 29900,
+    "label": "$299",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Back To School- 20 +4 FREE- $549 (90 day expiration)",
+    "desc": "Promo pack on their Mindbody store, Expiration Date 12/5/2026",
+    "cents": 54900,
+    "label": "$549",
+    "section": "Promos (Mindbody, seen 2026-09-07)"
+   },
+   {
+    "name": "Special Event- Non-Member",
+    "desc": "Mindbody 'Special Event Classes' category",
+    "cents": 2000,
+    "label": "$20",
+    "section": "Special Event Classes"
+   },
+   {
+    "name": "$10 Community class ONLY",
+    "desc": "Mindbody 'COMMUNITY Sculpt Classes' category",
+    "cents": 1000,
+    "label": "$10",
+    "section": "COMMUNITY Sculpt Classes"
+   }
+  ],
+  "price_note": "Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody",
+  "logo_url": "https://bodyrok.com/wp-content/uploads/2024/07/Logo-large-1024x135.png",
+  "logo_px": "1024x135",
+  "flags": [
+   "The operator's exact note: Multiple locations",
+   "Name is spelled differently on their own properties: brand site pages just say 'BODYROK'; their Mindbody booking site is titled 'BODYROK - East Bay'; the Instagram display name is 'BODYROK EASTBAY' (handle bodyrokeastbay); the round avatar logo reads 'BODYROK EAST BAY'; the operator wrote 'BodyRok East Bay'. 'BODYROK East Bay' used here.",
+   "Six East Bay studio pages exist but only four are open. Walnut Creek (1380 North California Boulevard) says 'Opening Late Summer 2026' and the studios index labels it 'Coming Soon'; Lafayette (971 Moraga Rd) says 'Opening Fall 2026' and is labeled 'Coming Soon' on the index. Their addresses are in locations only and were left out of the top-level address so a card does not show unopened studios.",
+   "Linktree bio has a typo 'ROCKRDIGE' and says only 'WALNUT CREEK COMING SOON!', while the Instagram bio says 'Coming Soon: Walnut Creek & Lafayette'.",
+   "No phone number appears on any bodyrok.com studio page or on the Mindbody store. The only number published is the Instagram Contact sheet's 'Text (510) 900-9234', which is a text line for the whole East Bay group, so every per-studio phone is null.",
+   "No opening hours are published on the site, linktree, Instagram or Mindbody; only class schedules. For reference, class start times on the Mindbody schedule for the week of Sept 7-13 2026 (Mon Sept 7 was a holiday short schedule): Berkeley Tue-Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, Sat 7am-12pm, Sun 8am-12pm; Oakland Lakeshore Tue-Thu 6:00am-7:30pm, Fri 6:00am-6:30pm, Sat-Sun 7am-12pm; Alamo from 6:00am Tue-Fri with last classes 5:30pm Tue, 6:30pm Wed, 12pm Thu, 1pm Fri, Sat-Sun 7-11am; Rockridge Tue and Thu 6:30am-6:30pm, Fri 6:30am-5:30pm, no classes Wed Sept 9, Sat 8-11am, Sun 8am-12pm. Classes are 45 minutes.",
+   "The studio pages link to Instagram @bodyrokstudio (the brand account), not @bodyrokeastbay.",
+   "Wording differs between studio pages while prices are identical: intro first item is 'First Class' on Berkeley and Rockridge but '1 Class' on Alamo and Oakland; section is 'Class Packages' on Berkeley and Oakland but 'Class Packs' on Alamo and Rockridge; validity reads '30 Day Expiration' vs 'Valid For 30 Days' and 'Valid For 6 Months' vs '6 Month Expiration'.",
+   "Addresses are inconsistently formatted on their site: Alamo, Rockridge, Walnut Creek and Lafayette have no ZIP code and end in ', USA'; Oakland spells out 'California'; Alamo's '170f Alamo Plaza' uses a lowercase suite letter. Kept exactly as published.",
+   "Rockridge is a neighborhood of Oakland, so there are two Oakland-addressed studios (3303 Lakeshore Ave and 5901 College Avenue); Instagram and the site list 'Oakland' and 'Rockridge' as separate studios.",
+   "Linktree button 'BUY YOUR ROCKRIDGE FOUNDING MEMBERSHIP' points to Mindbody prodId=205, which no longer resolves to any contract (the store only offers the four EastBay Access memberships and four Walnut Creek founding memberships) and the Rockridge page says 'now open' with standard prices, so that button looks stale.",
+   "Other stale linktree buttons: 'SIGN UP FOR ROCKRIDGE CLASSES!' carries a hard-coded schedule date 05/09/26; 'FREE Pilates in the Park with Kelsey - 8/30!' (t.bodyrok.com link resolving to the Mindbody schedule for location 5 'Walnut Creek', category 'Community Events') is a past event; 'August Promo- Get your membership now' was still up in September.",
+   "Walnut Creek founding prices ($83.30, $132.30, $167.30, $195.30) are exactly 30% off the standard $119, $189, $239, $279 tiers; Mindbody says 'lock in your 30% discount for the life of your Walnut Creek only membership', founding members pay a '$25 drop-in rate per class' at the other East Bay studios until opening, and the pinned Instagram post says 'LAST CALL 30% OFF FOUNDING MEMBERSHIPS'.",
+   "Memberships are named 'EastBay Access- Recurring ... (no commitment)' on Mindbody, yet the contract reads '$119.00 every month for 12 months' and 'auto-renews every 12 months until you cancel' with a 30-day written cancellation notice. Memberships are valid at Alamo, Berkeley, Oakland, Rockridge and Walnut Creek; extra classes $25 each; late cancel $15.",
+   "No-show penalty contradicts itself: the studio pages say a $20 charge on unlimited plans, while the Mindbody Unlimited contract says 'you will incur a $25 No Show Fee'.",
+   "Items on the Mindbody store that bodyrok.com does not show: 2 Weeks Unlimited $79, ROK 1 Month Unlimited (no contract) $349, three Back To School bonus packs expiring 12/5/2026, Special Event- Non-Member $20 and $10 Community class ONLY. The 'Community Events (out of studio)' category cannot be bought online and a 'Privates' category exists on the schedule filter with no price published.",
+   "The brand home page says 'Generally a drop in class starts at around $30 (depending on location)', but the East Bay drop-in is $38.",
+   "Only the black 'BODYROK' wordmark is hosted on their own domain (a white variant is at https://bodyrok.com/wp-content/uploads/2024/07/logo-white-1024x134.png, 1024x134); the round 'BODYROK EAST BAY' badge exists only as the Instagram and linktree avatar, hosted by those platforms.",
+   "Per-studio emails on their site: berkeley@bodyrok.com, alamo@bodyrok.com, oakland@bodyrok.com, rockridge@bodyrok.com, walnutcreek@bodyrok.com, lafayette@bodyrok.com, plus brand info@bodyrok.com; Instagram's Contact sheet shows berkeley@BODYROK.com, which is why it is the top-level email.",
+   "The operator sent a linktree; its 'Our Website' button goes to the brand's bodyrok.com/studios/ index, and booking and purchases run on Mindbody (clients.mindbodyonline.com, site ID 283626). site_kind is own-domain because the addresses and prices live on bodyrok.com."
+  ],
+  "blocked": "Mindbody store and schedule pages (clients.mindbodyonline.com, studioid=283626) returned HTTP 403 'Security Check' to WebFetch and to curl; they were read instead in the real browser pane, so all Mindbody facts above come from the rendered pages on 2026-09-07. The two t.bodyrok.com tracking links returned 405 to HEAD; on GET one redirected to the Mindbody Walnut Creek community-events schedule (also 403 to curl) and the other to a Google Form. Instagram was not fetched; its facts come from the operator's four screenshots."
+ },
+ {
+  "id": "b_bhanmaevane",
+  "name_exact": "Bhan Mae Vane",
+  "one_line": "Modern Lao & Thai restaurant on Webster Street in Alameda",
+  "cuisine": "Modern Lao & Thai cuisine",
+  "address": "1511 Webster Street, Alameda, CA 94501",
+  "phone": "510-227-5197",
+  "email": "info@bhanmaevane.com",
+  "hours": "Tue-Sun 11am-3pm, 5pm-9pm, closed Mon",
+  "instagram": "bhanmaevane",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Fried Tofu",
+    "desc": "Served with Thai peanut sauce",
+    "cents": 1400,
+    "section": "Appetizers"
+   },
+   {
+    "name": "Eggrolls (Pork or Veggies)",
+    "desc": "Served with our sweet chili sauce, veggie or pork",
+    "cents": 1600,
+    "section": "Appetizers"
+   },
+   {
+    "name": "Chicken Satay",
+    "desc": "Grilled chicken skewers served with peanut sauce and cucumber sauce.",
+    "cents": 1800,
+    "section": "Appetizers"
+   },
+   {
+    "name": "Shrimp in a Blanket",
+    "desc": "Fried seasoned shrimps wrapped in eggroll wrapper served with sweet chili sauce",
+    "cents": 1800,
+    "section": "Appetizers"
+   },
+   {
+    "name": "Appetizer Sampler",
+    "desc": "Shrimp in a Blanket (4), Eggrolls (3), and Fried Tofu (8)",
+    "cents": 2400,
+    "section": "Appetizers"
+   },
+   {
+    "name": "Papaya Salad",
+    "desc": "Lao style - Hand shredded green papaya mixed with fresh Thai chili, tomatoes, lime juice, shrimp paste and anchovy dressing. Thai style - Hand shredded green papaya mixed with fresh Thai chili, tomatoes, lime juice and fish sauce dressing",
+    "cents": 1800,
+    "section": "Salads"
+   },
+   {
+    "name": "Laab Gai",
+    "desc": "Minced chicken and gizzards mixed with toasted rice powder, fresh herbs and lime dressing.",
+    "cents": 2000,
+    "section": "Salads"
+   },
+   {
+    "name": "Laab Seen",
+    "desc": "Lao Style - Sliced beef and tripe mixed with toasted rice powder, fresh herbs and lime dressing.",
+    "cents": 2200,
+    "section": "Salads"
+   },
+   {
+    "name": "Yum Talay (Seafood Salad)",
+    "desc": "Fresh shrimp and calamari mixed with fresh herbs and tossed with our chili lime sauce.",
+    "cents": 2600,
+    "section": "Salads"
+   },
+   {
+    "name": "Tom Yum",
+    "desc": "Spicy and sour soup with mushrooms and herbs (chicken / tofu / veggies / shrimp +2 / seafood +6)",
+    "cents": 2000,
+    "section": "Soup"
+   },
+   {
+    "name": "Tom Kha",
+    "desc": "Coconut soup with lemongrass, galangal, kaffir lime leaves and fresh mushrooms (chicken / tofu / veggie / shrimp +2 / seafood +6)",
+    "cents": 2000,
+    "section": "Soup"
+   },
+   {
+    "name": "BMV Ultimate Papaya Platter",
+    "desc": "Papaya Salad (Lao or Thai style), pork rinds, vermicelli noodles, cabbage and rice (steamed or sticky). 3 options of protein (Meats & BBQ). Options: Crispy Pork Belly / BBQ Pork Ribs / Fried Wings / Angel Wings / Spicy Wings / Lao Sausages / Beef Jerky / Beef Short Ribs +8",
+    "cents": 7500
+   },
+   {
+    "name": "Sakoo",
+    "desc": "Steamed savory tapioca balls stuffed with ground pork, peanuts, sweet radishes and shallots. Served with lettuce, fried chili peppers, fried garlic, and fresh herbs.",
+    "cents": 2000,
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Nam Khao",
+    "desc": "Crispy rice salad tossed with preserved pork sausage, peanuts, green onions, and cilantro. Served with fried chili peppers, lettuce, mint, and cilantro.",
+    "cents": 2000,
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Fresh Lao Spring Rolls",
+    "desc": "Choice of grilled beef, shrimp, crispy pork belly, or tofu wrapped in rice paper with fresh herbs and lettuce. Served with pineapple anchovy sauce, sweet fish sauce & peanut sauce. Combo shrimp & beef +$4",
+    "cents": 1800,
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Aou Nuer",
+    "desc": "Stewed beef with lemongrass, fresh herbs, mushrooms, and Thai eggplant.",
+    "cents": 2200,
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Mok Pla",
+    "desc": "Basa fish with herbs steamed in banana leaves. Served with steamed vegetables and Laotian tomato sauce.",
+    "cents": 2500,
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Fried Clear Rice Roll Wraps",
+    "desc": "Our signature fried rice paper egg rolls with pork. Served with our sweet fish sauce, lettuce, herbs, and vermicelli noodles.",
+    "cents": 2000,
+    "label": "signature",
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Phatty Special",
+    "desc": "Shrimp garlic noodles with a strip of crispy pork belly and your choice of (4 pieces) fried, angel or spicy chicken wings.",
+    "cents": 3800,
+    "section": "Specialty Dishes"
+   },
+   {
+    "name": "Seen Lod (Lao Beef Jerky)",
+    "desc": "Beef jerky served with Laotian roasted tomato sauce and steam vegetables.",
+    "cents": 2000,
+    "section": "Meat"
+   },
+   {
+    "name": "Sai Oua (Lao Sausages)",
+    "desc": "Spicy pork sausage with herbs served with Laotian tomato sauce.",
+    "cents": 2000,
+    "section": "Meat"
+   },
+   {
+    "name": "Crispy Pork Belly",
+    "desc": "Fried pork belly served with chili lime sauce.",
+    "cents": 2200,
+    "section": "Meat"
+   },
+   {
+    "name": "BBQ Pork Ribs",
+    "desc": "Grilled lemongrass marinated pork spareribs served with chili lime sauce.",
+    "cents": 2200,
+    "section": "Meat"
+   },
+   {
+    "name": "BBQ Beef Short Ribs",
+    "desc": "Grilled marinated beef short ribs served with chili lime sauce.",
+    "cents": 2800,
+    "section": "Meat"
+   },
+   {
+    "name": "Fried Wings",
+    "desc": "Lightly battered and seasoned crispy fried wings (8)",
+    "cents": 1800,
+    "section": "Meat"
+   },
+   {
+    "name": "Angel Wings",
+    "desc": "Lightly battered crispy fried wings tossed with our special sweet chili sauce (8)",
+    "cents": 1800,
+    "section": "Meat"
+   },
+   {
+    "name": "Spicy Wings",
+    "desc": "Lightly battered crispy fried wings tossed with our special sweet and spicy chili sauce mix (8)",
+    "cents": 1800,
+    "section": "Meat"
+   },
+   {
+    "name": "Combo Wings Platter",
+    "desc": "Fried Wings (7) Angel Wings (7) Spicy Wings (7)",
+    "cents": 4600,
+    "section": "Meat"
+   },
+   {
+    "name": "Pad Ka Pow",
+    "desc": "Wok fried basil, mushrooms, bell peppers, and onions with choice of protein.",
+    "cents": 2000,
+    "section": "Entrees"
+   },
+   {
+    "name": "Garlic Noodles",
+    "desc": "Wok fried egg noodles with garlic and butter.",
+    "cents": 1800,
+    "section": "Fried Rice and Noodle Dishes"
+   },
+   {
+    "name": "Pad Thai",
+    "desc": "Wok fried thin rice noodles with tamarind sauce, tofu, eggs, bean sprouts and green onions.",
+    "cents": 2000,
+    "section": "Fried Rice and Noodle Dishes"
+   },
+   {
+    "name": "Pad Kee Mao",
+    "desc": "Wok fried flat wide rice noodles with spicy basil sauce, onions, broccoli, bell peppers and fresh basil.",
+    "cents": 2000,
+    "section": "Fried Rice and Noodle Dishes"
+   },
+   {
+    "name": "Khao Piek",
+    "desc": "Fresh handmade noodles with chicken in savory chicken broth. Choice of pork blood optional.",
+    "cents": 1800,
+    "section": "Noodle Soup"
+   },
+   {
+    "name": "Khao Soy",
+    "desc": "Fermented spicy bean paste cooked with ground pork and fresh tomatoes served with flat wide rice noodles, sliced beef and pork meatballs.",
+    "cents": 2000,
+    "section": "Noodle Soup"
+   },
+   {
+    "name": "Khao Poon Gai",
+    "desc": "Laotian curry chicken vermicelli noodle soup. Contains bamboo shoots and quail eggs. Choice of pork blood optional.",
+    "cents": 2000,
+    "section": "Noodle Soup"
+   },
+   {
+    "name": "Pho E-Lao",
+    "desc": "Laotian style beef rice noodle soup with sliced beef and pork meatballs, beef tripe optional.",
+    "cents": 2000,
+    "section": "Noodle Soup"
+   },
+   {
+    "name": "Geng Dang (Red Curry)",
+    "desc": "Coconut milk red curry simmered with onions, bamboo shoots, bell peppers and basil with choice of protein.",
+    "cents": 2000,
+    "section": "Curries"
+   },
+   {
+    "name": "Sticky Rice with Mango",
+    "desc": "Sticky rice with sweet coconut milk topped with mangoes and toasted sesame seeds",
+    "cents": 1000,
+    "section": "Dessert"
+   },
+   {
+    "name": "Purple Rice with Egg Custard",
+    "desc": "Purple rice with sweet coconut milk topped with our special egg custard and toasted sesame seeds",
+    "cents": 1000,
+    "section": "Dessert"
+   },
+   {
+    "name": "Thai Iced Tea",
+    "desc": "",
+    "cents": 500,
+    "section": "Specialty Drinks (Non-Alcoholic Beverages)"
+   }
+  ],
+  "price_note": "Base prices from the Menu and Drink pages of bhanmaevane.com (entrees, fried rice/noodles and curries add beef +$3, shrimp +$4, shrimp & calamari +$8; soups shrimp +$2, seafood +$6); hours from the Visit page and site footer, matching the Instagram bio",
+  "logo_url": "https://static1.squarespace.com/static/5da923454173893f4e094cd2/t/5dade6113707f45fc261ce60/1571677727641/4074FCD7-CF55-489B-83FB-34B563D20F64.png?format=1500w",
+  "logo_px": "1500x600",
+  "flags": [
+   "Operator's note: Alameda • Goods — Some place my daughter visits",
+   "Operator tagged it 'Goods', but this is a sit-down restaurant (the site's own tagline is 'MODERN LAO & THAI FOOD'; Instagram category 'Restaurant')",
+   "Hours agree everywhere on their own channels: site footer, Visit page and Instagram bio all say Tues–Sun 11am-3pm and 5pm-9pm, Mondays closed; the Visit page and Instagram bio both add last seating/dine-in 2:30pm (lunch) and 8:30pm (dinner), last takeout 2:45pm and 8:45pm",
+   "The $75 BMV Ultimate Papaya Platter is a standalone image block sitting between the Soup and Specialty Dishes sections with no section header of its own, so its section is left blank; its add-on proteins are +$8",
+   "No logo image in the site header (plain text 'Bhan Mae Vane'); logo_url is the site's og:image share banner (orange emblem, name and 'MODERN LAO & THAI CUISINE' on white with bamboo/wood-grain side borders). The URL ends in .png but the Squarespace CDN serves it as WebP, and the meta tag uses http:// although https works; the site favicon is a generic red chili-pepper icon (100x100), not the logo",
+   "Squarespace template leftovers: the Menu and Drink pages display 'This is the page description.', every page's footer has an empty 'Embed Block — Add an embed URL or code.', and the homepage meta description is blank",
+   "Footer copyright reads '© 2021, Bhan Mae Vane LLC' (stale year); the wine list carries 2012–2018 vintages with a note that the wine menu is 'subject to change', so drink prices may be dated",
+   "Online ordering is only a DoorDash partner link on the site's 'Door Dash' page (third-party, no prices taken from it); the site says catering and reservations are by phone only",
+   "Policies published on the Visit page: 18% gratuity for parties of 6 or more; reservations strongly preferred for parties larger than 8 and same-day reservations not usually taken; corkage $20 per bottle, four bottles max; gift cards sold in restaurant only; catering needs at least 2 days notice",
+   "Name variants: site title and Instagram name 'Bhan Mae Vane'; footer 'Bhan Mae Vane LLC'; the Facebook link on the Instagram profile reads 'Bhan Mae Vane Restaurant'",
+   "Our Story page names the owners as sisters Bebe Lach (Chef-Owner) and Thip Tran (Owner), cooking from their mother's recipes; no opening date is published",
+   "Not published anywhere on their own site or Instagram: opening year, parking info, a full catering menu; the menu page publishes 60-plus priced dishes plus a drink list, so items here are a 40-item selection of the base prices"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_jollyrogerland",
+  "name_exact": "Jolly Roger Land",
+  "one_line": "Indoor playground and kids' party center in Union City",
+  "cuisine": "Indoor playground",
+  "address": "31300 Courthouse Dr, Union City, CA 94587",
+  "phone": "510-362-7996",
+  "email": "info@jollyrogerland.com",
+  "hours": "Mon-Wed 10am-7:30pm, Thu-Sun 10am-8pm",
+  "instagram": "_jollyrogerland",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "1 KID / UNLIMITED PLAY",
+    "desc": "Weekdays Monday to Friday. For 1 Kid. Unlimited Play Time. One child comes with 1 free adult. $7 for each additional adult",
+    "cents": 1800,
+    "label": "weekdays Mon-Fri",
+    "section": "Open play admission"
+   },
+   {
+    "name": "1 KID / 1 hour",
+    "desc": "Saturday, Sunday & Holidays. For 1 Kid. 1 Hour Play Time. One child comes with 1 free adult. $7 for each additional adult",
+    "cents": 1800,
+    "label": "Sat, Sun & holidays",
+    "section": "Open play admission"
+   },
+   {
+    "name": "1 KID / 2 hour",
+    "desc": "Saturday, Sunday & Holidays. For 1 Kid. 2 Hour Play Time. One child comes with 1 free adult. $7 for each additional adult",
+    "cents": 2100,
+    "label": "Sat, Sun & holidays",
+    "section": "Open play admission"
+   },
+   {
+    "name": "1 KID / UNLIMITED PLAY",
+    "desc": "Saturday, Sunday & Holidays. For 1 Kid. Unlimited Play Time. One child comes with 1 free adult. $7 for each additional adult",
+    "cents": 2400,
+    "label": "Sat, Sun & holidays",
+    "section": "Open play admission"
+   },
+   {
+    "name": "Additional adult",
+    "desc": "$7 for each additional adult (one child comes with 1 free adult; the same $7 charge applies at parties)",
+    "cents": 700,
+    "label": "per adult",
+    "section": "Open play admission"
+   },
+   {
+    "name": "10 KIDS",
+    "desc": "Friday to Sunday & Holidays. For 10 Kids. 1 Hour Play Time. 60 Minutes in the Party Room. Includes One Large Pizza (Value $27.99). Includes 10 Juice Pouches. 10 Free Adults. $20 for each Additional child (Max 15). $7 for each additional adult. $200 Non-refundable",
+    "cents": 38500,
+    "label": "Fri-Sun & holidays",
+    "section": "Party packages - Fri-Sun & holidays"
+   },
+   {
+    "name": "20 KIDS",
+    "desc": "Friday to Sunday & Holidays. For 20 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes two large pizza (Value $27.99). Includes 20 juice pouches. 20 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable",
+    "cents": 58900,
+    "label": "Fri-Sun & holidays",
+    "section": "Party packages - Fri-Sun & holidays"
+   },
+   {
+    "name": "30 KIDS",
+    "desc": "Friday to Sunday & Holidays. For 30 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes three large pizza (Value $83.97). Includes 30 juice pouches. 30 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable",
+    "cents": 76500,
+    "label": "Fri-Sun & holidays",
+    "section": "Party packages - Fri-Sun & holidays"
+   },
+   {
+    "name": "10 KIDS",
+    "desc": "Weekdays Monday to Thursday. For 10 Kids. 1 Hour Play Time. 60 Minutes in the Party Room. Includes One Large Pizza (Value $27.99). Includes 10 Juice Pouches. 10 Free Adults. $20 for each Additional child (Max 15). $7 for each additional adult. $200 Non-refundable",
+    "cents": 33500,
+    "label": "weekdays Mon-Thu",
+    "section": "Party packages - weekdays Mon-Thu"
+   },
+   {
+    "name": "20 KIDS",
+    "desc": "Weekdays Monday to Thursday. For 20 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes two large pizza (Value $27.99). Includes 20 juice pouches. 20 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable",
+    "cents": 53500,
+    "label": "weekdays Mon-Thu",
+    "section": "Party packages - weekdays Mon-Thu"
+   },
+   {
+    "name": "30 KIDS",
+    "desc": "Weekdays Monday to Thursday. For 30 Kids. 1 Hour Play Time. 60 Minutes in the party room. Includes two large pizza (Value $55.98). Includes 20 juice pouches. 30 Free Adults. $20 for each Additional child (Max 5). $7 for each additional adult. $200 Non-refundable (as printed on the site; not offered on the online booking page)",
+    "cents": 71500,
+    "label": "weekdays Mon-Thu",
+    "section": "Party packages - weekdays Mon-Thu"
+   },
+   {
+    "name": "Party deposit",
+    "desc": "$200 Non-refundable on every party card and on the booking page (the policy text on the same page says $100)",
+    "cents": 20000,
+    "label": "non-refundable",
+    "section": "Party extras & fees"
+   },
+   {
+    "name": "Additional child (party)",
+    "desc": "$20 for each Additional child; booking page: Extra child $20.00 each",
+    "cents": 2000,
+    "label": "per child",
+    "section": "Party extras & fees"
+   },
+   {
+    "name": "Party overtime",
+    "desc": "There will be a $20 charge for every 10 minutes you go over your scheduled party time",
+    "cents": 2000,
+    "label": "per 10 minutes",
+    "section": "Party extras & fees"
+   },
+   {
+    "name": "Excess cleaning charge",
+    "desc": "A $50 charge will be applied if excess cleaning is needed for your party",
+    "cents": 5000,
+    "section": "Party extras & fees"
+   },
+   {
+    "name": "Outside food/drink charge",
+    "desc": "If you bring your own food/drinks, you WILL be charged $10 per item",
+    "cents": 1000,
+    "label": "per item",
+    "section": "Party extras & fees"
+   },
+   {
+    "name": "Pizza-Large Cheese or 1-Topping (15”)",
+    "desc": "",
+    "cents": 2799,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Pizza-Large Master Pizzas (15”)",
+    "desc": "",
+    "cents": 3299,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Pizza-King 1-Topping (18”)",
+    "desc": "",
+    "cents": 3299,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Pizza-King Master Pizzas (18”)",
+    "desc": "",
+    "cents": 3799,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Groovy Twists (Garlic Parmesan or Bacon/Cheese)",
+    "desc": "6 pieces",
+    "cents": 1000,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Chicken Wings (Roasted, BBQ, Parmesan, Teriyaki)",
+    "desc": "24 pieces",
+    "cents": 3799,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Boneless Wings (Roasted, BBQ, Parmesan, Teriyaki)",
+    "desc": "24 pieces",
+    "cents": 4099,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "French Fries",
+    "desc": "1 LB",
+    "cents": 700,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Seasoned Potato Wedges",
+    "desc": "1 LB",
+    "cents": 950,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Pasta-Chicken Alfredo",
+    "desc": "1 Small Tray",
+    "cents": 1700,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Pasta-Meat Marinara",
+    "desc": "1 Small Tray",
+    "cents": 1700,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Pepsi/Coke, Diet Pepsi/Coke, or Sprite",
+    "desc": "1 Liters",
+    "cents": 600,
+    "section": "Party Food/Drinks Menu"
+   },
+   {
+    "name": "Honest Organic Juice Pouch (6.75FL OZ)",
+    "desc": "",
+    "cents": 125,
+    "section": "Party Food/Drinks Menu"
+   }
+  ],
+  "price_note": "Admission, party and fee prices from jollyrogerland.com/pricing-plans (repeated on /unioncity) and cross-checked on their LilyPad booking page; food prices from their linked 'Jolly Roger Land Party Food/ Drinks Menu' document (plus 10.75% sales tax); hours from 'OUR TIMINGS' on /pricing-plans and 'Hours of Operation' on /contact",
+  "logo_url": "https://static.wixstatic.com/media/c1e1da_8e1aa65d7a3a488998ad46cf46e81b03~mv2.png",
+  "logo_px": "579x99",
+  "flags": [
+   "Operator's note: Union City • Services",
+   "Business type per their own site: an indoor playground / children's play center ('Union city's best indoor family entertainment arena for parties and play', 'nearly 7,000 square feet', four-level soft play structure) with birthday-party rooms; open since January 22, 2019 (about page); Wix site, booking and waivers on LilyPad",
+   "Address spelling differs: the site (footer, contact page, party menu, printable invitation) says '31300 Courthouse Dr'; the Instagram bio says '31300 courthouse pl'",
+   "Phone differs: the site shows 510-362-7996 everywhere (header, footer tel link, menu, invitation, booking page); the Instagram profile's Call button dials +1 (510) 304-8683",
+   "Three emails published: the footer/contact text reads jollyrogerland@yahoo.com but that text is hyperlinked to mailto:info@jollyrogerland.com; the pricing, play-center and calendar pages print info@jollyrogerland.com; employment@jollyrogerland.com is for jobs. info@ is used here; verify with the owner",
+   "Name written several ways: 'Jolly Roger Land' (logo, footer, contact page, Instagram), 'JOLLY ROGER LAND' (page titles), 'Jollyrogerland'/'JollyRogerLand' (og:site_name, meta description, play-center heading, waiver), tagline 'Indoorplayground - Kidsplay - Funforkids' run together, and an Instagram post thumbnail reads 'JOLLY ROGERS LAND SAN JOSE CA'",
+   "Deposit contradiction on /pricing-plans: every party card and the booking page say '$200 Non-refundable', but the policy text on the same page says '$100 deposits is non-refundable', and the party terms add 'Deposits will be nonrefundable 3 weeks prior to your party date'",
+   "Weekday definition differs: open play uses 'Weekdays Monday to Friday', parties use 'Weekdays Monday to Thursday' and price Friday as a weekend; the party section heading reads 'FRIDAY, SATURDAY AND HOLIDAYS' while its cards say 'Friday to Sunday & Holidays'",
+   "Package contents inconsistent: the weekday 30 KIDS card ($715) lists only 'two large pizza (Value $55.98)' and '20 juice pouches' for 30 kids, while the weekend 30 KIDS card lists three pizzas and 30 pouches; both 20 KIDS cards value 'two large pizza' at $27.99, which is the menu price of one large pizza",
+   "Additional-child limits inconsistent: cards say '(Max 15)' for 10 kids and '(Max 5)' for 20 and 30 kids; the booking page allows up to 15 or 19 extra for the 10-kid packages and up to 36 for Mon-Thu 20 kids, yet says 'For parties larger than 29 please phone' on the Fri-Sun 20-kid package; the terms also say 'For parties of more than 10 children, please call us' although 20- and 30-kid packages are sold online",
+   "Outside food rules conflict: the policy says 'No outside food and drinks allowed' and '$10 per item' if you bring your own, while the party terms say 'No outside drinks are allowed, but food is permitted with a fee'",
+   "The Monday-Thursday 30 KIDS package ($715) is on the site but not offered on the LilyPad booking page (only the other five packages are)",
+   "Contact page shows a 'SPECIAL HOURS:' label with nothing after it; the hours themselves match on /pricing-plans and /contact, and the San Jose subdomain lists the same hours",
+   "Some 'BOOK NOW' buttons on /unioncity and /play-center link to /plans-pricing, a leftover page titled 'Pricing-old' showing an unnamed '$385 ... Valid for one week' plan; not counted as a price",
+   "Calendar page has no calendar entries; the 'REVIEWS' nav item just links to /unioncity",
+   "Socks are required ('All guests must wear socks on the play area') and sold at the admissions counter, but no sock price is published",
+   "The online ticket-sales page (LilyPad tickets1.php) needs a JavaScript date step and returned 'Invalid Selection' to direct fetches, so admission prices come from the site's pricing page, not the ticket page",
+   "Site disclaimers: 'Price/hours are subject to change without notice'; menu: 'All items are subject to sales tax (10.75%)' and 'All prices are subject to changes'",
+   "Age and charging rules: 'suitable for children AGED 12 and younger'; 'We charge anyone aged under 18 (except infants) regardless if they play or not'; children must be accompanied and supervised by a parent/legal guardian; a waiver is required for each playing child",
+   "Second location: San Jose (Westfield Oakridge Malls, 925 Blossom Hills RD, San Jose, CA, 95123) on sanjose.jollyrogerland.com with its own phone (408) 622-8306 and different prices; this record is the Union City location only"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_paradanewperu",
+  "name_exact": "Parada Kitchen",
+  "one_line": "Peruvian restaurant by chef Carlos Altamirano in Walnut Creek",
+  "cuisine": "Peruvian food",
+  "address": "7001 Sunne Lane, Walnut Creek, CA 94597",
+  "phone": "925-448-8118",
+  "email": "info@paradakitchen.com",
+  "hours": "Mon-Thu 11am-9pm, Fri-Sat 11am-10pm",
+  "instagram": "paradakitchen",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "No prices anywhere on paradakitchen.com (menu pages give names and descriptions only; the only dollar figures are a $25 corkage fee and a $3 fried-egg add-on); their Toast ordering page is behind a Cloudflare bot check and was not read; hours come from the homepage HOURS block and match the Instagram bio",
+  "logo_url": "https://paradakitchen.com/wp-content/uploads/2024/09/parada-logo.png",
+  "logo_px": "598x226",
+  "flags": [
+   "The operator's exact note: Walnut Creek • Goods — 'Goods' does not fit: this is a sit-down Peruvian restaurant (dine-in, take-out, bar, brunch, catering), not a goods/retail shop",
+   "Name is written three ways: the site title and nav-logo alt text say 'Parada Kitchen' (domain paradakitchen.com), while the logo image itself and the hero graphic read 'Parada NEW PERU' (matches the operator's 'Parada New Peru'), and the Instagram display name and OpenTable link slug say 'Parada Peruvian Kitchen'; body copy just says 'Parada'",
+   "Sunday is not listed anywhere on the site or in the Instagram bio, neither as hours nor as closed; a Brunch menu is published (bottomless mimosas, 90 min limit) but no brunch days or hours are given, so hours covers Mon-Sat only",
+   "No item prices on any own-site menu page (Dinner, Brunch, Cocktails, Beer & Wine, Desserts): only '$25 corkage fee' ('$25 for 750ml' on the wine page) and 'Add Fried egg $3' on Lomo Saltado; the Catering Menu page just says to email events@altamiranorestaurants.com",
+   "Their Toast ordering page (order.toasttab.com/online/parada-wc-7001-sunne-ln-suite-116), the only place their prices would be, returned 403 and a Cloudflare 'Just a moment' bot-verification page, which was not bypassed, so items is empty",
+   "The site's own 'Order Online' nav link points to paradakitchen.com/pickup-delivery/, which returns 404; the working links are the Toast 'Pickup + Delivery' URL and OpenTable (opentable.com/r/parada-peruvian-kitchen-reservations-walnut-creek) for reservations",
+   "Address details are scattered: most pages say '7001 Sunne Lane, Walnut Creek, CA' with no zip; 94597 appears only on the Our Restaurants page ('7001 Sunne Ln, Walnut Creek, CA 94597'); 'Suite 116' appears only inside the Toast link slugs, never in visible text",
+   "A second email, events@altamiranorestaurants.com, is published for events and catering (the restaurant group's domain, not Parada's); the Instagram bio tags #AltamiranoRestaurants",
+   "Only one Parada location is published; the site's Our Restaurants page lists sister restaurants under chef Carlos Altamirano (Paradita Eatery, Emeryville; Sanguchon Eatery and Mochica, San Francisco; Barranco, Lafayette; La Costanera, Half Moon Bay), separate brands with their own sites, not recorded as Parada locations",
+   "The header logo file (wordmark 'Parada NEW PERU') is white-on-transparent, invisible on light backgrounds; a 200x200 teal square 'P' favicon also exists at https://paradakitchen.com/wp-content/uploads/2024/09/favicon-parada.png",
+   "Parking is described two ways: the site banner says '2 Hours of Free Parking at the public parking garage conveniently located next to our restaurant', the contact page says 'complimentary parking in the covered lot behind the restaurant' (one block from Pleasant Hill/Contra Costa Centre BART)",
+   "Beer & Wine list looks dated: vintages 2016-2020 only, with typos ('Colorada', 'Sam Jose')",
+   "The site itself has no Instagram or social links; the handle comes only from the operator's screenshot of the profile (@paradakitchen, category 'Peruvian Restaurant', bio 'Dine in & Take out: Mon-Thu 11am-9pm Fri-Sat 11am-10pm', identical to the site's hours)"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_doodlecakes",
+  "name_exact": "doodlecakes",
+  "one_line": "Cupcake and cake shop in Alameda with vegan and gluten-free options",
+  "cuisine": "Cake Shop",
+  "address": "647 Central Avenue, Alameda, CA 94501",
+  "phone": null,
+  "email": "doodlecakesbakery.online@gmail.com",
+  "hours": "Wed-Sat 11am-3pm, closed Sun-Tue",
+  "instagram": "doodlecakesbakery",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Surprise Box",
+    "desc": "What dessert in a box did you get?",
+    "cents": 1999,
+    "label": "",
+    "section": "Cupcakes"
+   },
+   {
+    "name": "Surprise Box 6 Pack",
+    "desc": "What 6 pack of desserts did you get?",
+    "cents": 11000,
+    "label": "",
+    "section": "Cupcakes"
+   },
+   {
+    "name": "Chocolate Wasted",
+    "desc": "Decadent dark chocolate cake, topped with chocolate frosting, chocolate sauce and chocolate chips.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily Standard Cupcakes"
+   },
+   {
+    "name": "Red Velvet",
+    "desc": "Riveting Red velvet cake, a lighter chocolate cake, topped with cream cheese frosting.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily Standard Cupcakes"
+   },
+   {
+    "name": "Cookies & Cream (CnC)",
+    "desc": "Captivating cookies & cream vanilla cake, topped with vanilla frosting, and chocolate cookie.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily Standard Cupcakes"
+   },
+   {
+    "name": "Piñata",
+    "desc": "Vanilla cake filled with mini m&ms, topped with vanilla frosting and mini m&ms.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily Standard Cupcakes"
+   },
+   {
+    "name": "Chocolate Caramel Frappe",
+    "desc": "Chocolate cake topped with caramel frosting, whipped cream, caramel drizzle and a candy straw.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily Standard Cupcakes"
+   },
+   {
+    "name": "Lemon",
+    "desc": "Lemon cake, topped with lemon frosting.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily Standard Cupcakes"
+   },
+   {
+    "name": "GDE* Free Strawberry Crunch",
+    "desc": "Gluten free, dairy free and egg free strawberry cake, topped with dairy free vanilla frosting and strawberry crunch crumbs.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes"
+   },
+   {
+    "name": "GDE* Free Cinnamon Toasty",
+    "desc": "Gluten free, dairy free, and egg free cinnamon cake, topped with dairy free vanilla frosting, cinnamon sugar and Catalina Crunch.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes"
+   },
+   {
+    "name": "GDE* Free Chocolate Oreo",
+    "desc": "Gluten free, dairy free and egg free chocolate cake, topped with dairy free vanilla frosting and a gluten free chocolate Oreo cookie.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes"
+   },
+   {
+    "name": "GDE* Free Lemon Blueberry",
+    "desc": "Gluten, dairy and egg free blueberry cake, topped with dairy free lemon frosting, freeze dried blueberries and edible glitter.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes"
+   },
+   {
+    "name": "GDE S’mores",
+    "desc": "Gluten, dairy and egg free chocolate cake, graham cracker crust, topped with dairy free vanilla frosting, oat chocolate, marshmallows and a graham cracker.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes"
+   },
+   {
+    "name": "GDE* Free Banana Split",
+    "desc": "Gluten, dairy and egg free spiced banana cake, topped with dairy free vanilla frosting, dairy free chocolate sauce, banana chips, sprinkles, maraschino cherry and edible glitter.",
+    "cents": 499,
+    "label": "",
+    "section": "Cupcakes / Daily VEGAN Gluten, Dairy, and Egg Free Cupcakes"
+   },
+   {
+    "name": "Dozen Mixed Assortment",
+    "desc": "1 Dozen Mixed Assortment of our GDE* Free and Standard Cupcakes (1 Each of the 6 Standard Monthly Flavors* and 6 GDE* Free Monthly Flavors). *Flavors may vary from picture indicated. Check the individual cupcakes for the current selection. PLEASE NOTE: •Mixed Assortment: Contains all 12 flavors; which includes 1 each of the GDE* Free Flavors, and 1 each of the Standard Flavors. **If you would like a mix of Standard Flavors only or GDE* Free Flavors only, please select the indicated Assortment**",
+    "cents": 5500,
+    "label": "",
+    "section": "Cupcakes / By the Dozen"
+   },
+   {
+    "name": "Dozen GDE* Free Assortment",
+    "desc": "1 Dozen Assortment of our Gluten, Dairy and Egg Free Cupcakes (2 Each of the GDE* Free Monthly Flavors*) *Flavors may vary from picture indicated. Check the individual cupcakes for the current selection.",
+    "cents": 5500,
+    "label": "",
+    "section": "Cupcakes / By the Dozen"
+   },
+   {
+    "name": "Dozen Standard Assortment",
+    "desc": "1 Dozen Assortment of our Daily Standard Cupcakes (2 Each of the Standard Monthly Flavors*). *Flavors may vary from picture indicated. Check the individual cupcakes for the current selection.",
+    "cents": 5500,
+    "label": "",
+    "section": "Cupcakes / By the Dozen"
+   },
+   {
+    "name": "Mini Cupcake Assortment",
+    "desc": "* Flavors may vary from picture indicated. Check the individual cupcakes for the current selection. PLEASE NOTE: • Mixed Assortment : Contains all 12 flavors; which includes 1 each of the GDE* Free Flavors, and 1 each of the Standard Flavors • Standard Assortment : Contains 2 each of the Monthly Standard Flavors • GDE Free Assortment : Contains 2 each of the Monthly GDE Free Flavors",
+    "cents": 2999,
+    "label": "",
+    "section": "Cupcakes / By the Dozen"
+   },
+   {
+    "name": "Standard 4\" Cake",
+    "desc": "4” Small Cake Serves 2-6 people. Custom writing available - maximum of 4 words. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",
+    "cents": 5000,
+    "label": "3 business days prep, 12 flavors",
+    "section": "Cakes / Standard Cakes"
+   },
+   {
+    "name": "Standard 6\" Cake",
+    "desc": "6\" Cake Serves 8-14 Custom writing available. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",
+    "cents": 7000,
+    "label": "3 business days prep, 12 flavors",
+    "section": "Cakes / Standard Cakes"
+   },
+   {
+    "name": "Standard 8\" Cake",
+    "desc": "8\" Cake Serves 14-28 Custom writing available. Please add the message in the order notes. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",
+    "cents": 9000,
+    "label": "3 business days prep, 12 flavors",
+    "section": "Cakes / Standard Cakes"
+   },
+   {
+    "name": "Standard Lunchbox Mini Cake 4”",
+    "desc": "4” Lunchbox Mini Cake (Bento Cake) Serves 2-4 people. Custom writing available - maximum of 4 words. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",
+    "cents": 3000,
+    "label": "20 hours prep, 11 flavors",
+    "section": "Cakes / Standard Cakes"
+   },
+   {
+    "name": "Celebration Box",
+    "desc": "4\" Lunch box Mini Cake + 2 Standard Size Cupcakes Serves 2-6 Custom writing available - maximum 4 words. Standard cakes are decorated based on flavor profile/Baker’s choice. For custom orders, please fill out our Inquiry Form.",
+    "cents": 4000,
+    "label": "20 hours prep, 10 flavors",
+    "section": "Cakes / Standard Cakes"
+   }
+  ],
+  "price_note": "Prices are from the live Square Online ordering menu that is the doodlecakesbakery.com homepage (rendered 2026-09-07) and its catalog data; hours from the site's own footer text, Square pickup hours and the Instagram bio, which all agree",
+  "logo_url": "https://www.doodlecakesbakery.com/uploads/b/bfdb8ef2731066eeca258ade92385bd80c7ea0ea2970568cbd049d48cb2d3f17/DC_shine_pink_1775514271.png",
+  "logo_px": "2000x2000",
+  "flags": [
+   "Operator's exact note: Alameda • Goods",
+   "Name spelling: the site and Instagram display name is the one-word lowercase 'doodlecakes' (page title, web manifest, Square location name, logo alt text); the logo artwork reads 'doodle cakes'; the domain and Instagram handle are 'doodlecakesbakery'. The operator's spelling 'Doodle Cakes Bakery' does not appear anywhere on the site.",
+   "Phone: not displayed anywhere on the site or the Instagram bio (no tel: link, no phone text, none in the Store info panel). A number (+1 510-995-8539) exists only inside the site's non-rendered Square store-location JSON, so phone is left null pending verification.",
+   "Hours agree across three of their own sources: site footer 'OPEN to Public: WED, THUR, FRI & SAT 11AM - 3PM' (also 'Open to Public Wed- Sat, 11am-3pm' on the custom-cake form), Square pickup/delivery hours Wed-Sat 11:00-15:00 with Sun-Tue empty, and the Instagram bio 'WED-SAT / 11AM-3PM'.",
+   "Site kind: own domain (doodlecakesbakery.com) running Square Online; the homepage IS the ordering menu (/s/order redirects to /). There are no separate about, menu, contact or locations pages (all 404).",
+   "Standard Cakes: the 'Cakes / Standard Cakes' section rendered empty (heading only) on the live menu at first load, but the site's published catalog lists 5 visible items in that category, and each product page loads live with the same price (verified 2026-09-07): Standard 4\" Cake $50.00, Standard 6\" Cake $70.00, Standard 8\" Cake $90.00 (each 'prep time of 3 business days'), Standard Lunchbox Mini Cake 4” $30.00 and Celebration Box $40.00 (each 'prep time of 20 hours'), all with a required cake-flavor choice (e.g. Red Velvet/Cream Cheese, Ube/Ube, Chocolate/Peanut Butter) and optional sprinkles or edible glitter. Included under section 'Cakes / Standard Cakes'; the empty render is most likely the auto-selected next pickup slot (Wednesday 11:00 AM) falling inside their prep time.",
+   "Visible but uncategorized products reachable only by direct URL (not shown on the menu) were excluded from items: 6 Box $25.50, Cake Slice $6.30, Custom 4” Lunchbox Mini Cake $30.00, Custom Celebration Box $40.00, Flower Pot Cake $32.50, Heart $6.00, Tiny cake $10.00, Paper Bag $0.10.",
+   "The sitemap lists about 95 product URLs; most are rotated-out monthly cupcake flavors or dated seasonal items (e.g. 'available until 5/30', Lunar New Year 2026, Mother's Day Heart, Jack-O-Lantern) or catalog-hidden listings that still load with a price by direct URL (e.g. 'Custom 6” Cake' $70.00, visibility hidden). Excluded.",
+   "Cupcake flavors rotate monthly ('Monthly Flavors'); the 6 standard and 6 GDE* (gluten, dairy and egg free) flavors listed are the selection rendered on 2026-09-07. Dozen assortments say flavors may vary from the picture.",
+   "Ordering rules on the site: 'Email = doodlecakesbakery.online@gmail.com for custom orders'; 'High volume of emails, responses take 3 days'; custom cakes need at minimum 1-2 weeks notice for elaborate designs and 2-3 business days for simple designs; '*THIS INQUIRY FORM DOES NOT GUARANTEE AN ORDER*'. Instagram bio adds 'NO DM ORDERS!'.",
+   "Fulfillment per the ordering page: store pickup and local delivery both enabled (Square shows 'Lead time: 1 day', order cutoff 10:00 AM, delivery fee $0); pickup instruction 'Please give First and Last Name to receive your order.'; returns policy 'We do not refund or exchange products.'; notice that the cashier or delivery driver may ask to see ID and/or the credit card used.",
+   "Instagram (screenshot, @doodlecakesbakery, display name 'doodlecakes', category 'Cake Shop'): '647 Central Ave, Alameda, CA', 'WED-SAT / 11AM-3PM', 'NO DM ORDERS!', 'Email: Doodlecakesbakery.online@gmail.com' (same address as the site, capitalized differently), link doodlecakesbakery.com. Consistent with the site.",
+   "Logo: logo_url is the pink square header logo (alt 'doodlecakes logo', 2000x2000 PNG, opaque pink background, white cupcake with hippo and sparkles) and matches the operator's second screenshot. Alternatives on the site: line-art wordmark used in the footer (DC-line_only_B_1652479102.png, 1124x294, transparent), a purple-circle app icon/favicon variant (icon_512x512_android_NTM5NT.png, 510x510, theme color #cb9ac7), and a different cartoon hippo-face design stored as the site's logo field (BigLogo_Face_1652487961.png, 6000x6000, transparent, 4.7 MB).",
+   "Site meta description: 'Bay Area bakery in Alameda, CA. Vegan & gluten free options. Birthday, wedding and corporate event cakes & dessert surprise boxes.'"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_goodcompenny",
+  "name_exact": "Good Compenny",
+  "one_line": "Bay Area streetwear and LaRussell merch, offer-based, ships worldwide",
+  "cuisine": "Streetwear brand",
+  "address": null,
+  "phone": null,
+  "email": "merch@goodcompenny.co",
+  "hours": null,
+  "instagram": "goodcompenny",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "everything on their store is offer-based — 'Proud to Pay': you name the amount, and offers at or above their unpublished minimum are accepted — so the figures on the store are anchors, not prices, and none are printed here",
+  "logo_url": "https://goodcompenny.co/cdn/shop/files/GC_HEADER_6392a686-e093-417d-884a-c8496ac6b0f5.png?v=1720029892",
+  "logo_px": "3000x900",
+  "flags": [
+   "Glenn: 'BEASTY • Online'",
+   "the P.O. box in Vallejo on their FAQ is a returns address, not a shop, so no address is carried; the phone on their contact page reads like unedited theme text and is not carried either",
+   "PRICING: the whole store is offer-based. Announcement bar: '*OFFER BASED MERCH*'. Product pages: 'Our entire site runs on a unique offer-based system called \"Proud to Pay\"... you get to choose your donation amount for everything we offer.' FAQ: 'If your offer meets or exceeds our minimum offer amount, it will be automatically accepted'; the minimum is never published. The listed amounts ($500 magazine, $1,000 CD, $2,000 beanie/hat/puzzle, $2,500 tee, $7,500 jacket/jersey, $10,000 racing jacket) are the 'Add to cart' list prices next to a 'Make An Offer' form, not fixed retail - show them only with the 'Make an offer' label or hide them.",
+   "TWO CONFLICTING ADDRESSES: the FAQ page publishes 'Address for Returns: P.O. Box 5903 Vallejo, CA 94591' (used in address). The Contact page map block reads '6100 Wilshire Blvd 2nd Floor CA 9004 / +1 310 499 7700 / Opening hours Monday-Saturday 11am–7pm ET, Sunday 11am–6pm ET' - no city, 4-digit ZIP, Eastern-time hours on a California address, and nothing else on the site mentions Los Angeles; it reads like unedited theme placeholder text. The phone above is the only one on the site and comes from that block, so treat it as unverified; hours left null for the same reason.",
+   "LOCATION IS INFERRED, NOT STATED: the site never says where the brand is based. 'Vallejo' in one_line comes from the returns P.O. Box plus Bay references in product copy ('IM FROM THE BAY' football jersey, 'VJO' beanie and 'VJO LEGENDS' jacket, Richmond CA and Stern Grove show tees, 'Good Compenny x Cal bears' hat). No street address or storefront is published; locations left empty.",
+   "NAME RENDERING: the Shopify store name, page titles, logo alt text and footer copyright all show lowercase 'goodcompenny'; the header logo wordmark, product copy and the Instagram display name read 'Good Compenny' (name_exact uses the wordmark).",
+   "SHIPPING (from the FAQ page): 'Our standard shipping service is USPS'; in-stock items ship within 1–3 days 'unless we are on the road for tour'; printed shirts and hoodies 3–5 weeks, factory items 4–6 weeks; 'We ship to most countries worldwide', international via DHL with tariffs paid by the customer. Shopify /policies/ pages (shipping, refund, terms, privacy) all return 404; the returns/exchange policy exists only in the FAQ text and a product-page accordion (30 days, unworn, customer pays return shipping, show purchases non-refundable).",
+   "NAV ODDITIES: 'FAQ's' links to /collections/faq, a product collection with 0 products whose description holds the FAQ and contact info; 'Bottoms' (/collections/bottoms) is empty; 'Shows' points to /collections/music-1, titled 'MUSIC' and containing CDs; /pages/about is 404 - there is no About page.",
+   "COPY ODDITIES: product 'SHIRT PACK $150' is listed at $2,000.00 (sold out); GC \"PINK T\" MESH JERSEY's description starts 'GOOD COMPENNY BLUE MESH JERSEY!'; a homepage section reads 'FEATURED COLLECTION / Best dresses for the upcoming fall season' (no dresses are sold) and another says 'shop new hoodies' (no hoodies listed); the NPR Tiny Desk vinyl copy spells 'Laruseell'.",
+   "LOGO: the header file is a white 'Good Compenny' wordmark on a transparent PNG (3000x900) - invisible on light backgrounds, needs a dark backdrop; no favicon is set; the yellow circular avatar on Instagram does not appear anywhere on the site.",
+   "LARUSSELL: much of the catalog is 'Official LaRussell' show tees, CDs, an NPR Tiny Desk vinyl and a puzzle, but the site never explains the relationship; the Instagram bio only says 'The official Good Compenny brand page.'",
+   "INSTAGRAM (screenshot): display name 'Good Compenny', category 'Brand', bio 'WELCOME TO THE FAMILY! The official Good Compenny brand page. For brand related questions contact us at merch@goodcompenny.co', link 'goodcompenny.co and 1 more' (second link not visible). Site footer links: instagram.com/goodcompenny, tiktok.com/@goodcompenny, youtube.com/@GoodCompenny, x.com/GCompenny.",
+   "The operator's exact note: BEASTY • Online"
+  ],
+  "blocked": null
+ }
+]

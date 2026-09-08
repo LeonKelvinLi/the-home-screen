@@ -1832,6 +1832,139 @@ export const ROSTER_SEED: LocalSeed[] = [
       'The operator filed this one as a MOBILE service rather than a shop, so no address is ' +
       'shown — it does not have one fixed place to be. Nothing else is listed yet.',
   }),
+
+  /* ---- 2026-09-08. The batch he sent on the night of the 7th, plus the five
+     from the weekend that were still waiting. Facts from each business's own
+     site, in research/roster/batch15.json; icons cut from the profile
+     pictures in his screenshots. ---- */
+
+  /* "Sushi Naloa" was his spelling; the restaurant writes Sushinaloa, one
+     word, on its sign, its site and its Instagram. Sinaloa-style mariscos and
+     Mexican sushi — Redwood City's sushi seat. */
+  seed('sushi-naloa', 'Sushinaloa', 'Sushinaloa', 'Mexican sushi', '#1E6FA8', {
+    icon: 'sushi-naloa',
+    logoTemplate: 'monogram', logoInitials: 'SN', logoFace: 'condensed',
+    site: 'https://www.sushinaloarwc.com/online-ordering',
+    siteCta: 'Order online',
+  }),
+  /* Kusan: three shops on one site, three menus at three sets of prices, and
+     a footer that says the San Jose shop, Kusan Uyghur Cuisine, is a separate
+     business — so it keeps the name the site gives it. Only Milpitas carries
+     items, because Milpitas is the menu that was read. */
+  seed('kusan-uyghur-cuisine-san-jose', 'Kusan Uyghur Cuisine', 'Kusan', 'Uyghur food', '#8A1C1C', {
+    icon: 'kusan-bazaar',
+    logoTemplate: 'wordmark', logoLines: ['KÜSAN'], logoFace: 'condensed',
+    site: 'https://kusanbazaar.com/',
+    siteCta: 'Order online',
+  }),
+  seed('kusan-bazaar-milpitas', 'Kusan Bazaar', 'Kusan Bazaar', 'Uyghur food', '#8A1C1C', {
+    icon: 'kusan-bazaar',
+    logoTemplate: 'wordmark', logoLines: ['KÜSAN'], logoFace: 'condensed',
+    site: 'https://kusanbazaar.com/menu/kusanbazaar-milpitas',
+    siteCta: 'Order online',
+  }),
+  seed('kusan-bazaar-mountain-view', 'Kusan Bazaar', 'Kusan Bazaar', 'Uyghur food', '#8A1C1C', {
+    icon: 'kusan-bazaar',
+    logoTemplate: 'wordmark', logoLines: ['KÜSAN'], logoFace: 'condensed',
+    site: 'https://kusanbazaar.com/',
+    siteCta: 'Order online',
+  }),
+  /* Varnish Nail Boutique — "Studio" was only ever in the booking URL. Two
+     shops, each with its own Instagram; the booking site and its price list
+     belong to Walnut Creek. He filed both as Goods; a nail salon is a
+     service, so they sit on the services pages. */
+  seed('varnish-nail-boutique-walnut-creek', 'Varnish Nail Boutique', 'Varnish', 'Nail salon', '#1F3A5F', {
+    icon: 'varnish-nail-boutique',
+    logoTemplate: 'monogram', logoInitials: 'V', logoFace: 'script',
+    site: 'https://varnishnailstudio3868.simplepos.us/new-home',
+    siteCta: 'Book online',
+  }),
+  seed('varnish-nail-boutique-antioch', 'Varnish Nail Boutique', 'Varnish', 'Nail salon', '#1F3A5F', {
+    icon: 'varnish-nail-boutique',
+    logoTemplate: 'monogram', logoInitials: 'V', logoFace: 'script',
+  }),
+  /* BODYROK East Bay — "Multiple locations". Four open studios; Walnut Creek
+     and Lafayette say "coming soon" on their own site and get no seat until
+     they open. One price list at all four, and no hours published anywhere,
+     only class schedules. Rockridge is in Oakland, so it shares that seat. */
+  seed('bodyrok-berkeley', 'BODYROK East Bay', 'BODYROK', 'Reformer Pilates', '#111111', {
+    icon: 'bodyrok',
+    logoTemplate: 'wordmark', logoLines: ['BODYROK'], logoFace: 'condensed',
+    site: 'https://bodyrok.com/studios/',
+    siteCta: 'Book a class',
+  }),
+  seed('bodyrok-alamo', 'BODYROK East Bay', 'BODYROK', 'Reformer Pilates', '#111111', {
+    icon: 'bodyrok',
+    logoTemplate: 'wordmark', logoLines: ['BODYROK'], logoFace: 'condensed',
+    site: 'https://bodyrok.com/studios/',
+    siteCta: 'Book a class',
+  }),
+  seed('bodyrok-oakland', 'BODYROK East Bay', 'BODYROK', 'Reformer Pilates', '#111111', {
+    icon: 'bodyrok',
+    logoTemplate: 'wordmark', logoLines: ['BODYROK'], logoFace: 'condensed',
+    site: 'https://bodyrok.com/studios/',
+    siteCta: 'Book a class',
+  }),
+  /* Bhan Mae Vane — "Some place my daughter visits". Lao and Thai on Webster
+     Street, two sisters cooking their mother's recipes. Alameda's Asian seat
+     is Pho Nation's, so the yellow sheet. */
+  seed('bhan-mae-vane', 'Bhan Mae Vane', 'Bhan Mae Vane', 'Lao and Thai food', '#2B2B2B', {
+    icon: 'bhan-mae-vane',
+    logoTemplate: 'wordmark', logoLines: ['BHAN MAE', 'VANE'], logoFace: 'slab',
+    site: 'https://www.bhanmaevane.com/menu',
+    siteCta: 'See the menu',
+  }),
+  /* Jolly Roger Land — an indoor playground with party rooms, admission and
+     party packages priced on their own site. Nothing on the services list is
+     a play centre, so Union City's yellow sheet. */
+  seed('jolly-roger-land', 'Jolly Roger Land', 'Jolly Roger', 'Indoor playground', '#F2B705', {
+    icon: 'jolly-roger-land',
+    logoTemplate: 'wordmark', logoLines: ['JOLLY', 'ROGER'], logoFace: 'slab',
+    site: 'https://www.jollyrogerland.com/pricing-plans',
+    siteCta: 'Book a party',
+  }),
+  /* Parada — the logo he photographed says NEW PERU, the site title says
+     Kitchen, Instagram says Peruvian Kitchen. No prices on their own site,
+     and their Toast page sits behind a bot check, so none are printed.
+     Peruvian has no seat, like Las Lomas, so the yellow sheet. */
+  seed('parada-new-peru', 'Parada New Peru', 'Parada', 'Peruvian food', '#1B7A8C', {
+    icon: 'parada-new-peru',
+    logoTemplate: 'wordmark', logoLines: ['PARADA'], logoFace: 'script',
+    site: 'https://paradakitchen.com/',
+    siteCta: 'See the menu',
+  }),
+  /* Good Compenny — offer-based merch: every figure on the store is an anchor
+     above an unpublished minimum, so no price is printed. Online's apparel
+     seat is Facet Fine's, so BEASTY's yellow sheet. */
+  seed('good-compenny', 'Good Compenny', 'Good Compenny', 'Streetwear brand', '#F2C400', {
+    icon: 'good-compenny',
+    logoTemplate: 'wordmark', logoLines: ['GOOD', 'COMPENNY'], logoFace: 'condensed',
+    site: 'https://goodcompenny.co/',
+    siteCta: 'See the store',
+    /* No address, hours or fixed prices exist to research, so the generated
+       layer would leave the roster's "still gathering" note; what they are is
+       known, so it is said here. */
+    contactOnly:
+      'Bay Area streetwear — satin jackets, mesh jerseys, puff-print tees, beanies — and official LaRussell show tees, records and a puzzle, shipped worldwide from their own store. Everything on it is offer-based: you name the amount, and offers at or above their unpublished minimum are accepted, so no price is printed here.',
+  }),
+  /* Boba Club — "Needs Website". Their only web presence is a Chowbus
+     ordering page, which is what the button opens. */
+  seed('boba-club', 'Boba Club', 'Boba Club', 'Boba and sandwiches', '#4FB3E8', {
+    icon: 'boba-club',
+    logoTemplate: 'wordmark', logoLines: ['BOBA', 'CLUB'], logoFace: 'condensed',
+    site: 'https://pos.chowbus.com/online-ordering/store/restaurant/22892',
+    siteCta: 'Order online',
+    needsSite: true,
+  }),
+  /* Doodle Cakes — "doodlecakes", one word, everywhere on their own site; his
+     spelling is kept here and theirs is in the research. Cupcakes and cakes
+     with a vegan, gluten-free line. Alameda's bakery seat. */
+  seed('doodle-cakes', 'Doodle Cakes', 'Doodle Cakes', 'Cake shop', '#F4A6C6', {
+    icon: 'doodle-cakes',
+    logoTemplate: 'wordmark', logoLines: ['doodle', 'cakes'], logoFace: 'script',
+    site: 'https://www.doodlecakesbakery.com/',
+    siteCta: 'Order online',
+  }),
 ]
 
 /**

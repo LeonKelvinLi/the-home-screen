@@ -11962,11 +11962,11 @@
   "name_exact": "chip cookies",
   "one_line": "'chip is the original gourmet cookie delivery company' — warm gourmet cookies delivered locally, shipped nationwide, and sold in 23 stores across seven states.",
   "cuisine": "Gourmet cookies",
-  "address": "2505 Sand Creek Rd #128, Brentwood, CA 94513",
+  "address": "2505 Sand Creek Rd #128, Brentwood, CA 94513; 2335 Oak Grove Road, Walnut Creek, CA 94598; 6851 Amador Plaza Rd, Dublin, CA 94568",
   "phone": "(925) 489-5201",
   "email": null,
-  "hours": null,
-  "instagram": "chipcookiesco",
+  "hours": "Sun-Thu 10am-10pm, Fri-Sat 10am-12am",
+  "instagram": "chipcookies.bayarea",
   "site_kind": "own-domain",
   "prices_published": true,
   "items": [
@@ -12011,8 +12011,10 @@
   "logo_url": "https://www.chipcookies.co/cdn/shop/files/chip-logo_dfae3b6d-9d06-41eb-85ea-ba6f9c444fe5.png?v=1733879055",
   "logo_px": "600x600",
   "flags": [
+   "Glenn, 2026-09-07: '3 locations' — the three Bay Area stores from their own locations page, Brentwood, Walnut Creek and Dublin, are all on the address line now and each has its own page seat; hours are identical at all three per each store's own page (Walnut Creek writes Mon-Thu and Sun on separate lines)",
+   "phones per store, from each store's own page: Brentwood (925) 489-5201, Walnut Creek 925-289-9351, Dublin 925-819-7855; emails brentwood@, walnutcreek@ and dublin@chipcookies.co",
+   "two Instagram accounts: chipcookies.bayarea (the one Glenn sent, lists the three Bay Area stores) and the corporate chipcookiesco the website links; the Bay Area one is carried",
    "A CHAIN of 23 stores in seven states, headquartered at 1805 E Williams Field Rd, Gilbert AZ. The Brentwood store is the address here; the other Bay Area stores are Dublin, 6851 Amador Plaza Rd, (925) 819-7855, and Walnut Creek, 2335 Oak Grove Road, (925) 289-9351",
-   "hours vary by store and live on per-store pages (Dublin: Sun-Thu 10am-10pm, Fri-Sat to midnight); none published for Brentwood in the HTML read, so none carried",
    "internal franchise supply items are exposed in their public product feed"
   ],
   "blocked": false,
