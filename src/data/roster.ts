@@ -1965,6 +1965,18 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.doodlecakesbakery.com/',
     siteCta: 'Order online',
   }),
+
+  /* ---- 2026-09-08, morning. Moxie Steak House, "Alameda • Goods" — Park
+     Street. No steakhouse seat exists; Mac's Old House took Antioch's burgers
+     seat for the same reason, and Alameda's is Shaka Shack's, so the yellow
+     sheet. The icon is their roundel from his screenshot. Research in
+     research/roster/batch16.json. ---- */
+  seed('moxie-steak-house', 'Moxie Steak House', 'Moxie', 'Steakhouse', '#1F6F73', {
+    icon: 'moxie-steak-house',
+    logoTemplate: 'wordmark', logoLines: ['MOXIE'], logoFace: 'script',
+    site: 'https://www.moxiealameda.com/',
+    siteCta: 'See the menu',
+  }),
 ]
 
 /**

@@ -3342,6 +3342,94 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Moxie Steak House — gathered 2026-09-08 from own-domain
+     they are: Steakhouse
+     logo: https://images.squarespace-cdn.com/content/v1/65ff79e65817f545c360dbd7/24dbc09f-0f78-4d23-8442-25bbb96a4d67/fan.png (2243x2554) — not cut into a tile yet
+     flag: Operator's exact note: Alameda • Goods — but the site shows no shop, goods, or merchandise (only an empty Squarespace /cart link); it is a sit-down steakhouse
+     flag: dietary marks (v, gf, vv) and the happy-hour 'Plates' / 'Bites' groupings are on the menu page and were not carried onto the rows
+     flag: Name spelling varies: site title and homepage hero say 'Moxie Steak House' / 'MOXIE STEAK HOUSE' (two words), footer says just 'MOXIE', Instagram says 'MOXIE STEAKHOUSE' with handle moxiesteakhouse (one word)
+     flag: Instagram mismatch: the site never mentions 'moxiesteakhouse'; its Squarespace social-link config points Instagram to instagram.com/littlehouse_cafe.moxie/ (the chef's former Little House café account, per the about page history); the 'moxiesteakhouse' handle is taken from the operator's screenshot of that profile, which links back to moxiealameda.com and shows the Park St address
+     flag: Phone contradiction: site (homepage, footer, menu, about) lists (510) 671-2890; the Instagram Contact button (operator screenshot) lists (510) 864-4044
+     flag: Email contradiction: site lists moxie1640@gmail.com; the Instagram Contact button lists tootsiepuplove@gmail.com
+     flag: No ZIP code published anywhere on the site ('1640 Park Street Alameda Ca') or in the Instagram bio ('1640 Park St, Alameda, California')
+     flag: Hours: the site footer on every page lists only 'Wednesday — Sunday 5pm — 9pm' (dinner); the homepage hero and menu page add Brunch Saturday & Sunday 10am-2pm and Happy Hour Wednesday-Sunday 2pm-5pm; the hours line combines these; Instagram bio 'Open 2 - 9 Wednesday - Friday, 10 - 9 Saturday- Sunday' agrees; Monday-Tuesday closure inferred from 'Open Wednesday-Sunday'
+     flag: Market price item: 'Foolish Fish of the Day' is listed M/P with no price (Other Choices section)
+     flag: Reservations page embeds a Squarespace Tock reservation block (no OpenTable/Resy link); menu page says no reservation needed for brunch
+     flag: Menu text is seasonal ('Spring Asparagus Soup', 'Lemony Spring Slaw', blog post 'Spring Menu') and may be stale as of Sept 2026; prices recorded as currently published
+     flag: Menu page lists non-alcoholic drinks twice with different spellings ('A'Siciliana Lemon Soda' vs 'A'siciliana Lemonata', 'San Pellegrino' vs 'San Pelligrino') and repeats 'Latte $5'
+     flag: Two different marks: the site logo (logoImageUrl and og:image) is the teal fan/cocktail graphic fan.png, matching operator screenshot IMG_3772; the Instagram avatar is a vintage waitress illustration (IMG_3775)
+     flag: About page names Donna Meadows as Executive Chef/owner and describes the room as 'reminiscent of an art-deco era French countryside restaurant and steakhouse'; site is Squarespace on its own domain
+  */
+  'moxie-steak-house': {
+    address: "1640 Park Street, Alameda, CA",
+    phone: "(510) 671-2890",
+    email: "moxie1640@gmail.com",
+    hours: "Wed-Fri 2pm-9pm, Sat-Sun 10am-9pm, closed Mon-Tue",
+    instagram: "moxiesteakhouse",
+    cuisine: "Steakhouse",
+    tagline: "Art-deco French-style steakhouse and bar on Park Street in Alameda",
+    sections: [
+      { name: "Get Started", items: [
+        ["Tableside Caesar Salad for Two or More","",2600],
+        ["Caesar Salad for One Prepared by the Chef","",1100],
+        ["Full Belly Farms Beet Salad with Oranges, Walnuts, and Marinated Goat Cheese","",1600],
+        ["Classic Wedge Salad","",1400],
+        ["Half Dozen Oysters on Ice with Champagne Mignonette","",2400],
+        ["Gulf Shrimp with Cocktail Sauce","",2200],
+        ["Local Dungeness Crab Cake with Lemony Spring Slaw","",2400],
+        ["Housemade Parker Rolls with Orange Blossom Butter and Alameda Honey","",800],
+        ["Mongolian Meatballs with Scallion Sesame Salad","",1200],
+      ] },
+      { name: "The Cuts", items: [
+        ["8 Oz. Bavette (Sirloin Flap)","Wagyu Beef by Abatti Ranch",4800],
+        ["12 Oz. New York Strip","Wagyu Beef by Abatti Ranch",7300],
+        ["48 Oz. Bone-in Tomahawk","Wagyu Beef by Abatti Ranch",21000],
+        ["6 Oz. Filet Mignon","Holstein Beef by Brandt Farms",4600],
+        ["14 Oz Ribeye","Holstein Beef by Brandt Farms",7200],
+        ["32 Oz. Flannery Porterhouse","Holstein Beef by Brandt Farms",14600],
+      ] },
+      { name: "Other Choices", items: [
+        ["Australian Lamb Chops","",4700],
+        ["Half Roasted Lemon Rosemary Hen","",3200],
+        ["Pachamama Farms Pork Tenderloin from Oregon","",3400],
+        ["Spring Asparagus Soup with Parmesan Gnocchi and Brown Butter Almondine","",3200],
+      ] },
+      { name: "Carbs", items: [
+        ["Classic Mash","",1000],
+        ["Beef Tallow Fries with Garlic Aioli","",1000],
+        ["Mac & Cheese with or without Gorgonzola","",1000],
+        ["Loaded Baked Potato with Sour Cream, Chives, Cheddar Cheese, Butter","add Bacon +$2",1000],
+        ["Duck Fat Roasted Yukons with Confit Garlic","",1000],
+        ["Grand Dutchess Potatoes with Caramelized Onions, and Koch Cannalina Cheese","",1000],
+      ] },
+      { name: "Veggies", items: [
+        ["Sauteed Sugar Snap Peas with Radishes and Cucumber","",1000],
+        ["Salt and Pepper Shoe String Onions","",1000],
+        ["Roasted Cumin Carrots with a Carrot Pepita Hummus","",1000],
+        ["Grilled Asparagus with Gribiche","",1000],
+        ["Charred Leeks with Tonnato Sauce, Crispy Panko, and Kalamata Olives","",1000],
+      ] },
+      { name: "Brunch", items: [
+        ["Steak & Eggs","spicy steak skewers, crispy fried eggs, potato doughnuts and Romesco sauce",2700],
+        ["Moxie Burger with chips","add egg $5, bacon $5",2000],
+        ["Classic Maine lobster roll","",3500],
+        ["Brioche French Toast","with berries and cream",2000],
+        ["Flambeed tableside banana souffle pancake","",2500],
+        ["Donut of the day","",400],
+      ] },
+      { name: "Happy Hour", items: [
+        ["Hanger Steak & Fries","",3400],
+        ["Cheddar Cheese Burger & Fries","",2500],
+        ["Oyster on Ice with Lemon","",250],
+      ] },
+      { name: "Cocktails", items: [
+        ["Alameda Kick","Bruichladdich & Laphroaig Scotch, Orgeat, Quince Liqueur, Absinthe",1700],
+      ] },
+    ],
+    siteNote: "Prices from the text menu at moxiealameda.com/menu (dinner, brunch, happy hour, drinks); hours combine the site's published windows (happy hour Wed-Sun 2pm-5pm, dinner Wed-Sun 5pm-9pm, brunch Sat-Sun 10am-2pm) and match the Instagram bio.",
+  },
+
+  /*
      Mrs. Ramen Concord — gathered 2026-09-08 from stopgap
      they are: Ramen and seafood boil
      flag: no website found; a 'Mrs. Pho' is listed by Yelp at the same address, which may be the same operator or the previous tenant

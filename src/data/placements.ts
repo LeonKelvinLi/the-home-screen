@@ -975,4 +975,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'walnut-creek-goods-15': 'b_chipcookies', //                   Cookies — their Walnut Creek store
   'dublin-goods-15': 'b_chipcookies', //                         Cookies — their Dublin store
   'beasty-individuals-16': 'b_housingauthority', //              a Richmond dance crew, on his "Yes plz"
+  /* 2026-09-08, morning: Moxie Steak House, "Alameda • Goods". */
+  'alameda-goods2-1': 'b_moxiesteakhouse', //                     no steakhouse seat, and the burgers seat is Shaka Shack's; yellow sheet
 }

@@ -1,0 +1,317 @@
+[
+ {
+  "id": "b_moxiesteakhouse",
+  "name_exact": "Moxie Steak House",
+  "one_line": "Art-deco French-style steakhouse and bar on Park Street in Alameda",
+  "cuisine": "Steakhouse",
+  "address": "1640 Park Street, Alameda, CA",
+  "phone": "(510) 671-2890",
+  "email": "moxie1640@gmail.com",
+  "hours": "Wed-Fri 2pm-9pm, Sat-Sun 10am-9pm, closed Mon-Tue",
+  "instagram": "moxiesteakhouse",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Tableside Caesar Salad for Two or More",
+    "desc": "",
+    "cents": 2600,
+    "section": "Get Started",
+    "label": ""
+   },
+   {
+    "name": "Caesar Salad for One Prepared by the Chef",
+    "desc": "",
+    "cents": 1100,
+    "section": "Get Started",
+    "label": ""
+   },
+   {
+    "name": "Full Belly Farms Beet Salad with Oranges, Walnuts, and Marinated Goat Cheese",
+    "desc": "",
+    "cents": 1600,
+    "label": "",
+    "section": "Get Started"
+   },
+   {
+    "name": "Classic Wedge Salad",
+    "desc": "",
+    "cents": 1400,
+    "label": "",
+    "section": "Get Started"
+   },
+   {
+    "name": "Half Dozen Oysters on Ice with Champagne Mignonette",
+    "desc": "",
+    "cents": 2400,
+    "label": "",
+    "section": "Get Started"
+   },
+   {
+    "name": "Gulf Shrimp with Cocktail Sauce",
+    "desc": "",
+    "cents": 2200,
+    "label": "",
+    "section": "Get Started"
+   },
+   {
+    "name": "Local Dungeness Crab Cake with Lemony Spring Slaw",
+    "desc": "",
+    "cents": 2400,
+    "section": "Get Started",
+    "label": ""
+   },
+   {
+    "name": "Housemade Parker Rolls with Orange Blossom Butter and Alameda Honey",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Get Started"
+   },
+   {
+    "name": "Mongolian Meatballs with Scallion Sesame Salad",
+    "desc": "",
+    "cents": 1200,
+    "section": "Get Started",
+    "label": ""
+   },
+   {
+    "name": "8 Oz. Bavette (Sirloin Flap)",
+    "desc": "Wagyu Beef by Abatti Ranch",
+    "cents": 4800,
+    "section": "The Cuts",
+    "label": ""
+   },
+   {
+    "name": "12 Oz. New York Strip",
+    "desc": "Wagyu Beef by Abatti Ranch",
+    "cents": 7300,
+    "section": "The Cuts",
+    "label": ""
+   },
+   {
+    "name": "48 Oz. Bone-in Tomahawk",
+    "desc": "Wagyu Beef by Abatti Ranch",
+    "cents": 21000,
+    "section": "The Cuts",
+    "label": ""
+   },
+   {
+    "name": "6 Oz. Filet Mignon",
+    "desc": "Holstein Beef by Brandt Farms",
+    "cents": 4600,
+    "section": "The Cuts",
+    "label": ""
+   },
+   {
+    "name": "14 Oz Ribeye",
+    "desc": "Holstein Beef by Brandt Farms",
+    "cents": 7200,
+    "section": "The Cuts",
+    "label": ""
+   },
+   {
+    "name": "32 Oz. Flannery Porterhouse",
+    "desc": "Holstein Beef by Brandt Farms",
+    "cents": 14600,
+    "section": "The Cuts",
+    "label": ""
+   },
+   {
+    "name": "Australian Lamb Chops",
+    "desc": "",
+    "cents": 4700,
+    "section": "Other Choices",
+    "label": ""
+   },
+   {
+    "name": "Half Roasted Lemon Rosemary Hen",
+    "desc": "",
+    "cents": 3200,
+    "label": "",
+    "section": "Other Choices"
+   },
+   {
+    "name": "Pachamama Farms Pork Tenderloin from Oregon",
+    "desc": "",
+    "cents": 3400,
+    "label": "",
+    "section": "Other Choices"
+   },
+   {
+    "name": "Spring Asparagus Soup with Parmesan Gnocchi and Brown Butter Almondine",
+    "desc": "",
+    "cents": 3200,
+    "label": "",
+    "section": "Other Choices"
+   },
+   {
+    "name": "Classic Mash",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Carbs"
+   },
+   {
+    "name": "Beef Tallow Fries with Garlic Aioli",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Carbs"
+   },
+   {
+    "name": "Mac & Cheese with or without Gorgonzola",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Carbs"
+   },
+   {
+    "name": "Loaded Baked Potato with Sour Cream, Chives, Cheddar Cheese, Butter",
+    "desc": "add Bacon +$2",
+    "cents": 1000,
+    "label": "",
+    "section": "Carbs"
+   },
+   {
+    "name": "Duck Fat Roasted Yukons with Confit Garlic",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Carbs"
+   },
+   {
+    "name": "Grand Dutchess Potatoes with Caramelized Onions, and Koch Cannalina Cheese",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Carbs"
+   },
+   {
+    "name": "Sauteed Sugar Snap Peas with Radishes and Cucumber",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Veggies"
+   },
+   {
+    "name": "Salt and Pepper Shoe String Onions",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Veggies"
+   },
+   {
+    "name": "Roasted Cumin Carrots with a Carrot Pepita Hummus",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Veggies"
+   },
+   {
+    "name": "Grilled Asparagus with Gribiche",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Veggies"
+   },
+   {
+    "name": "Charred Leeks with Tonnato Sauce, Crispy Panko, and Kalamata Olives",
+    "desc": "",
+    "cents": 1000,
+    "section": "Veggies",
+    "label": ""
+   },
+   {
+    "name": "Steak & Eggs",
+    "desc": "spicy steak skewers, crispy fried eggs, potato doughnuts and Romesco sauce",
+    "cents": 2700,
+    "section": "Brunch",
+    "label": ""
+   },
+   {
+    "name": "Moxie Burger with chips",
+    "desc": "add egg $5, bacon $5",
+    "cents": 2000,
+    "section": "Brunch",
+    "label": ""
+   },
+   {
+    "name": "Classic Maine lobster roll",
+    "desc": "",
+    "cents": 3500,
+    "section": "Brunch",
+    "label": ""
+   },
+   {
+    "name": "Brioche French Toast",
+    "desc": "with berries and cream",
+    "cents": 2000,
+    "section": "Brunch",
+    "label": ""
+   },
+   {
+    "name": "Flambeed tableside banana souffle pancake",
+    "desc": "",
+    "cents": 2500,
+    "section": "Brunch",
+    "label": ""
+   },
+   {
+    "name": "Donut of the day",
+    "desc": "",
+    "cents": 400,
+    "section": "Brunch",
+    "label": ""
+   },
+   {
+    "name": "Hanger Steak & Fries",
+    "desc": "",
+    "cents": 3400,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Cheddar Cheese Burger & Fries",
+    "desc": "",
+    "cents": 2500,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Oyster on Ice with Lemon",
+    "desc": "",
+    "cents": 250,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Alameda Kick",
+    "desc": "Bruichladdich & Laphroaig Scotch, Orgeat, Quince Liqueur, Absinthe",
+    "cents": 1700,
+    "section": "Cocktails",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices from the text menu at moxiealameda.com/menu (dinner, brunch, happy hour, drinks); hours combine the site's published windows (happy hour Wed-Sun 2pm-5pm, dinner Wed-Sun 5pm-9pm, brunch Sat-Sun 10am-2pm) and match the Instagram bio",
+  "logo_url": "https://images.squarespace-cdn.com/content/v1/65ff79e65817f545c360dbd7/24dbc09f-0f78-4d23-8442-25bbb96a4d67/fan.png",
+  "logo_px": "2243x2554",
+  "flags": [
+   "Operator's exact note: Alameda • Goods — but the site shows no shop, goods, or merchandise (only an empty Squarespace /cart link); it is a sit-down steakhouse",
+   "dietary marks (v, gf, vv) and the happy-hour 'Plates' / 'Bites' groupings are on the menu page and were not carried onto the rows",
+   "Name spelling varies: site title and homepage hero say 'Moxie Steak House' / 'MOXIE STEAK HOUSE' (two words), footer says just 'MOXIE', Instagram says 'MOXIE STEAKHOUSE' with handle moxiesteakhouse (one word)",
+   "Instagram mismatch: the site never mentions 'moxiesteakhouse'; its Squarespace social-link config points Instagram to instagram.com/littlehouse_cafe.moxie/ (the chef's former Little House café account, per the about page history); the 'moxiesteakhouse' handle is taken from the operator's screenshot of that profile, which links back to moxiealameda.com and shows the Park St address",
+   "Phone contradiction: site (homepage, footer, menu, about) lists (510) 671-2890; the Instagram Contact button (operator screenshot) lists (510) 864-4044",
+   "Email contradiction: site lists moxie1640@gmail.com; the Instagram Contact button lists tootsiepuplove@gmail.com",
+   "No ZIP code published anywhere on the site ('1640 Park Street Alameda Ca') or in the Instagram bio ('1640 Park St, Alameda, California')",
+   "Hours: the site footer on every page lists only 'Wednesday — Sunday 5pm — 9pm' (dinner); the homepage hero and menu page add Brunch Saturday & Sunday 10am-2pm and Happy Hour Wednesday-Sunday 2pm-5pm; the hours line combines these; Instagram bio 'Open 2 - 9 Wednesday - Friday, 10 - 9 Saturday- Sunday' agrees; Monday-Tuesday closure inferred from 'Open Wednesday-Sunday'",
+   "Market price item: 'Foolish Fish of the Day' is listed M/P with no price (Other Choices section)",
+   "Reservations page embeds a Squarespace Tock reservation block (no OpenTable/Resy link); menu page says no reservation needed for brunch",
+   "Menu text is seasonal ('Spring Asparagus Soup', 'Lemony Spring Slaw', blog post 'Spring Menu') and may be stale as of Sept 2026; prices recorded as currently published",
+   "Menu page lists non-alcoholic drinks twice with different spellings ('A'Siciliana Lemon Soda' vs 'A'siciliana Lemonata', 'San Pellegrino' vs 'San Pelligrino') and repeats 'Latte $5'",
+   "Two different marks: the site logo (logoImageUrl and og:image) is the teal fan/cocktail graphic fan.png, matching operator screenshot IMG_3772; the Instagram avatar is a vintage waitress illustration (IMG_3775)",
+   "About page names Donna Meadows as Executive Chef/owner and describes the room as 'reminiscent of an art-deco era French countryside restaurant and steakhouse'; site is Squarespace on its own domain"
+  ],
+  "blocked": null
+ }
+]
