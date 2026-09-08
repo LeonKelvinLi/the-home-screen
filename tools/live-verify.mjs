@@ -122,7 +122,7 @@ for (const [id, want, expect] of [
   ['b_jollyrogerland', 'Jolly Roger Land', { hours: 'Mon-Wed 10am-7:30pm', rows: 25, quote: true, call: '510-362-7996' }],
   ['b_paradanewperu', 'Parada New Peru', { hours: 'Mon-Thu 11am-9pm', call: '925-448-8118' }],
   ['b_goodcompenny', 'Good Compenny', {}],
-  ['b_bobaclub', 'Boba Club', {}],
+  ['b_bobaclub', 'Boba Club', { hours: 'Daily 11am-7:59pm', rows: 25, call: '(510) 999-2687' }],
   ['b_doodlecakes', 'Doodle Cakes', { hours: 'Wed-Sat 11am-3pm', rows: 20 }],
   ['b_housingauthority', 'Housing Authority', {}],
   ['b_chipcookies', 'Chip Cookies', { hours: 'Sun-Thu 10am-10pm' }],

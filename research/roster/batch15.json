@@ -2313,6 +2313,253 @@
   "blocked": null
  },
  {
+  "id": "b_bobaclub",
+  "name_exact": "Boba Club",
+  "one_line": "Milk tea, smoothies and bánh mì sandwiches in Livermore, California",
+  "cuisine": "Milk Tea & Sandwiches",
+  "address": "909 Bluebell Drive, Livermore, CA, 94551",
+  "phone": "+1 (510) 999-2687",
+  "email": null,
+  "hours": "Daily 11am-7:59pm",
+  "instagram": "bobaclub2025",
+  "site_kind": "ordering-platform",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "chocolate strawberry milk",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "New Drinks"
+   },
+   {
+    "name": "ice coffee latte",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "New Drinks"
+   },
+   {
+    "name": "pistachio latte",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "New Drinks"
+   },
+   {
+    "name": "taro coconut milk",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "New Drinks"
+   },
+   {
+    "name": "watermelon fruit tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "New Drinks"
+   },
+   {
+    "name": "combo - milk tea & banh mi",
+    "desc": "",
+    "cents": 1495,
+    "label": "",
+    "section": "Combo Specials"
+   },
+   {
+    "name": "combo - smoothie & banh mi",
+    "desc": "",
+    "cents": 1595,
+    "label": "",
+    "section": "Combo Specials"
+   },
+   {
+    "name": "combo - tea gurt & banh mi",
+    "desc": "",
+    "cents": 1595,
+    "label": "",
+    "section": "Combo Specials"
+   },
+   {
+    "name": "combo - fruit tea & banh mi",
+    "desc": "",
+    "cents": 1495,
+    "label": "",
+    "section": "Combo Specials"
+   },
+   {
+    "name": "combo - matcha latte & banh mi",
+    "desc": "",
+    "cents": 1595,
+    "label": "",
+    "section": "Combo Specials"
+   },
+   {
+    "name": "brown sugar milk tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Milk Tea"
+   },
+   {
+    "name": "jasmine milk tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Milk Tea"
+   },
+   {
+    "name": "taro milk tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Milk Tea"
+   },
+   {
+    "name": "mint oreo milk tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Milk Tea"
+   },
+   {
+    "name": "biscoff cookie milk tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Milk Tea"
+   },
+   {
+    "name": "thai milk tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Milk Tea"
+   },
+   {
+    "name": "strawberry smoothie",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Smoothie"
+   },
+   {
+    "name": "avacado mango smoothie",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Smoothie"
+   },
+   {
+    "name": "black sesame smoothie",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Smoothie"
+   },
+   {
+    "name": "ube smoothie",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Smoothie"
+   },
+   {
+    "name": "strawberry teagurt",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Tea & Yogurt"
+   },
+   {
+    "name": "mango teagurt",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Tea & Yogurt"
+   },
+   {
+    "name": "strawberry matcha latte",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Matcha Latte"
+   },
+   {
+    "name": "banana matcha latte",
+    "desc": "",
+    "cents": 850,
+    "label": "",
+    "section": "Matcha Latte"
+   },
+   {
+    "name": "passion fruit tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Fruit Tea"
+   },
+   {
+    "name": "mango fruit tea",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Fruit Tea"
+   },
+   {
+    "name": "strawberry mojito",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Fruit Tea"
+   },
+   {
+    "name": "b.b.q. pork belly banh mi",
+    "desc": "",
+    "cents": 895,
+    "label": "",
+    "section": "Sandwiches - Bánh Mì"
+   },
+   {
+    "name": "grilled pork banh mi",
+    "desc": "",
+    "cents": 895,
+    "label": "",
+    "section": "Sandwiches - Bánh Mì"
+   },
+   {
+    "name": "grilled chicken banh mi",
+    "desc": "",
+    "cents": 895,
+    "label": "",
+    "section": "Sandwiches - Bánh Mì"
+   },
+   {
+    "name": "cold cut combo w pork pate banh mi",
+    "desc": "",
+    "cents": 895,
+    "label": "",
+    "section": "Sandwiches - Bánh Mì"
+   }
+  ],
+  "price_note": "Prices, address, phone and hours are from their Chowbus online-ordering page; every price there carries a '+', the base before a size or add-on, so the figures here are starting prices",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Neither screenshot shows an address, phone or hours; both are of the Instagram profile @bobaclub2025 (the second is a zoomed crop of that same profile, not the ordering page's header)",
+   "Instagram bio lists 'pos.chowbus.com/online-or... and 1 more' - the second link is not visible in the screenshot, so it is unknown",
+   "Ordering page prints closing time as 07:59 PM every day; recorded as published (7:59pm), not rounded to 8pm",
+   "Menu item names are printed in lowercase on the ordering page and transcribed as-is, including the spelling 'avacado mango smoothie'; names and prices came through WebFetch text extraction, not a browser render, so casing should be spot-checked before publishing",
+   "Ordering page showed status 'Closed' at fetch time; not verified whether that is outside-hours or a temporary closure",
+   "No email published anywhere",
+   "No logo URL captured; the logo (blue-haired cartoon character with a boba cup, text 'BOBA CLUB / MILK TEA & SANDWICHES') is only seen in the Instagram screenshot",
+   "Instagram bio also advertises 'Catering | Events' with no details or pricing published",
+   "the operator's exact note: Needs Website — Livermore • Goods"
+  ],
+  "blocked": null
+ },
+ {
   "id": "b_goodcompenny",
   "name_exact": "Good Compenny",
   "one_line": "Bay Area streetwear and LaRussell merch, offer-based, ships worldwide",

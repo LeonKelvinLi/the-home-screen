@@ -501,6 +501,78 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Boba Club — gathered 2026-09-08 from ordering-platform
+     they are: Milk Tea & Sandwiches
+     flag: Neither screenshot shows an address, phone or hours; both are of the Instagram profile @bobaclub2025 (the second is a zoomed crop of that same profile, not the ordering page's header)
+     flag: Instagram bio lists 'pos.chowbus.com/online-or... and 1 more' - the second link is not visible in the screenshot, so it is unknown
+     flag: Ordering page prints closing time as 07:59 PM every day; recorded as published (7:59pm), not rounded to 8pm
+     flag: Menu item names are printed in lowercase on the ordering page and transcribed as-is, including the spelling 'avacado mango smoothie'; names and prices came through WebFetch text extraction, not a browser render, so casing should be spot-checked before publishing
+     flag: Ordering page showed status 'Closed' at fetch time; not verified whether that is outside-hours or a temporary closure
+     flag: No email published anywhere
+     flag: No logo URL captured; the logo (blue-haired cartoon character with a boba cup, text 'BOBA CLUB / MILK TEA & SANDWICHES') is only seen in the Instagram screenshot
+     flag: Instagram bio also advertises 'Catering | Events' with no details or pricing published
+     flag: the operator's exact note: Needs Website — Livermore • Goods
+  */
+  'boba-club': {
+    address: "909 Bluebell Drive, Livermore, CA, 94551",
+    phone: "+1 (510) 999-2687",
+    hours: "Daily 11am-7:59pm",
+    instagram: "bobaclub2025",
+    cuisine: "Milk Tea & Sandwiches",
+    tagline: "Milk tea, smoothies and bánh mì sandwiches in Livermore, California",
+    sections: [
+      { name: "New Drinks", items: [
+        ["chocolate strawberry milk","",750],
+        ["ice coffee latte","",750],
+        ["pistachio latte","",850],
+        ["taro coconut milk","",750],
+        ["watermelon fruit tea","",750],
+      ] },
+      { name: "Combo Specials", items: [
+        ["combo - milk tea & banh mi","",1495],
+        ["combo - smoothie & banh mi","",1595],
+        ["combo - tea gurt & banh mi","",1595],
+        ["combo - fruit tea & banh mi","",1495],
+        ["combo - matcha latte & banh mi","",1595],
+      ] },
+      { name: "Milk Tea", items: [
+        ["brown sugar milk tea","",750],
+        ["jasmine milk tea","",750],
+        ["taro milk tea","",750],
+        ["mint oreo milk tea","",750],
+        ["biscoff cookie milk tea","",750],
+        ["thai milk tea","",750],
+      ] },
+      { name: "Smoothie", items: [
+        ["strawberry smoothie","",850],
+        ["avacado mango smoothie","",850],
+        ["black sesame smoothie","",850],
+        ["ube smoothie","",850],
+      ] },
+      { name: "Tea & Yogurt", items: [
+        ["strawberry teagurt","",850],
+        ["mango teagurt","",850],
+      ] },
+      { name: "Matcha Latte", items: [
+        ["strawberry matcha latte","",850],
+        ["banana matcha latte","",850],
+      ] },
+      { name: "Fruit Tea", items: [
+        ["passion fruit tea","",750],
+        ["mango fruit tea","",750],
+        ["strawberry mojito","",750],
+      ] },
+      { name: "Sandwiches - Bánh Mì", items: [
+        ["b.b.q. pork belly banh mi","",895],
+        ["grilled pork banh mi","",895],
+        ["grilled chicken banh mi","",895],
+        ["cold cut combo w pork pate banh mi","",895],
+      ] },
+    ],
+    siteNote: "Prices, address, phone and hours are from their Chowbus online-ordering page; every price there carries a '+', the base before a size or add-on, so the figures here are starting prices.",
+  },
+
+  /*
      Bober Tea & Mochi — gathered 2026-09-08 from own-domain
      their spelling: "Bober Tea & Coffee" (roster keeps "Bober Tea & Mochi")
      they are: Boba and mochi donuts
