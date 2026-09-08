@@ -4787,7 +4787,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     name: 'Housing Authority',
     label: 'Housing Authority',
     cuisine: 'Dance crew',
-    tagline: 'A dance crew out of Richmond, California.',
+    /* Not "Richmond, California": that exact phrase was the operator card's
+       old city line, which he asked to have removed, and live-verify keeps it
+       as a canary for the old build. */
+    tagline: 'A dance crew out of Richmond, in the East Bay.',
     color: '#141414|#F2C400',
     prep: 0,
     category: 'Dance crew',
