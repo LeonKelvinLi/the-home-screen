@@ -59,6 +59,11 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: No email address found on the home page or the /contact page.
      flag: Phone number appears in two printed formats across pages ('(415) 467-2343' on the home page vs '415-467-2343' on /ubebakeoff, /menu, and /contact) - same number, formatting difference only.
      flag: Menu prices are on their Toast ordering page, which refuses automated fetches (403), so the page says the prices are on the site rather than printing any
+     flag: Menu sweep 2026-09-09, still no readable prices: No prices could be read: the menu at 7milehouse.com/menu is published only as scanned/photo images (Appetizers, Sandwiches/Pasta/Kids/Sides, Entrees/Desserts, Dog Menu, Brunch Menu pages), not text, and their Toast online-ordering page (order.toasttab.com/online/7-mile-house-sports-bar-grill) return
+     flag: Menu sweep 2026-09-09: Menu on own site (7milehouse.com/menu) is images only, no machine-readable text or prices
+     flag: Menu sweep 2026-09-09: Toast online-ordering page returned 403 Forbidden, confirming prior report
+     flag: Menu sweep 2026-09-09: Hours are irregular: closed Tuesday, and bar stays open later (10pm) Fri-Sat than the kitchen/general hours
+     flag: Menu sweep 2026-09-09: Site also references a separate Dog Menu and a Brunch Menu, neither price-readable
   */
   '7-mile-house': {
     address: "2800 Bayshore Blvd, Brisbane, CA 94005",
@@ -486,9 +491,17 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
 
   /*
      Banh Mi Oven — gathered 2026-09-09 from stopgap — BLOCKED: domain is not registered; there is no site to read
+     they are: Vietnamese
      flag: the given domain banhmioven.us does not exist — NXDOMAIN on two resolvers, and the .us registry has no record of it; the link he sent is dead
+     flag: Menu sweep 2026-09-09, still no readable prices: No prices could be read. The given URL https://banhmioven.us/ does not resolve (DNS lookup failure, both with and without www). One WebSearch identified banhmiovenus.com as the likely correct official site ('Banh Mi Oven | Vietnamese Sandwich Shop in San Jose, CA'), but it returned HTTP 403 Forbidde
+     flag: Menu sweep 2026-09-09: The exact URL given in the task (https://banhmioven.us/) does not exist -- DNS does not resolve at all, so it appears to be a dead link or typo
+     flag: Menu sweep 2026-09-09: Could not confirm which domain is the current official site: banhmiovenus.com (403 Forbidden) and banhmiovencali.com (404 Not Found on all paths tried) were both found via search but neither was readable
+     flag: Menu sweep 2026-09-09: Search listings suggest there may be more than one 'Banh Mi Oven' location/entity: a Yelp listing for 1143 Story Rd, San Jose, CA and a separate Yelp listing marked CLOSED for 221 E San Fernando St, San Jose, CA, plus an unrelated Austin, TX location (banhmioventx.com) -- could not determine from an
+     flag: Menu sweep 2026-09-09: name_exact, one_line, and cuisine are low-confidence, inferred only from third-party search-result titles since no own-site or own-ordering-page content could be loaded at all
+     flag: Menu sweep 2026-09-09: address/phone/email/hours/instagram/logo all left null because nothing could be confirmed from the business's own site or own ordering page
   */
   'banh-mi-oven': {
+    cuisine: "Vietnamese",
     needsSite: true,
   },
 
@@ -811,6 +824,13 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: the homepage featured dish 'Chicken Alfredo Fettuccine' is nowhere on the menu PDF
      flag: homepage says 'Benicia Grill 1', implying numbered locations, but none other is listed
      flag: the banquet room is bookable 6am-10pm
+     flag: Menu sweep 2026-09-09, still no readable prices: Their own menu.pdf (linked from benicia-grill.com) was read in full (4 pages: cover/contact, Breakfast, numbered Sandwiches/Burgers 1-33, and Wraps/Salads/Fries & Sides/Kids Menu/Beverages/Desserts). No base item carries a printed price anywhere in it -- salads, wraps, sides, kids items, and beverag
+     flag: Menu sweep 2026-09-09: menu.pdf lists item names/descriptions/numbers but prints no base prices for any dish -- salads/wraps/sides/kids/beverages show blank underscored price lines, suggesting a template menu with prices removed or handwritten in-store
+     flag: Menu sweep 2026-09-09: Address is spelled two different ways on their own pages: homepage HTML shows '4760 E 2nd St, Benicia, CA 94510' while the PDF menu spells it out as '4760 East 2nd Street, Benicia, CA 94510' -- same address, different abbreviation
+     flag: Menu sweep 2026-09-09: PDF also lists a fax number, 707.745.6737, distinct from the main phone 707.751.0155
+     flag: Menu sweep 2026-09-09: Site separately mentions a banquet/private event room available 6am-10pm, wider than the 7am-2pm regular dining hours
+     flag: Menu sweep 2026-09-09: No online ordering platform (Toast/Square/ChowNow) found on the site; menu is a downloadable PDF only
+     flag: Menu sweep 2026-09-09: PDF is dated 'Rev. 7/2026' so it is presented as their current menu
   */
   'benicia-grill': {
     address: "4760 E 2nd St, Benicia, CA 94510",
@@ -818,6 +838,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     hours: "Daily 7am-2pm",
     instagram: "benicia.grill",
     cuisine: "Breakfast and lunch",
+    tagline: "A breakfast-and-lunch grill in Benicia since 2008 — 'fresh, hearty",
     photos: [
       {"src":"/food/benicia-grill-site-0-lg.webp","alt":"hero image","credit":"Their own photo, from benicia-grill.com"},
       {"src":"/food/benicia-grill-site-1-lg.webp","alt":"hero image","credit":"Their own photo, from benicia-grill.com"},
@@ -825,7 +846,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       {"src":"/food/benicia-grill-site-3-lg.webp","alt":"hero image","credit":"Their own photo, from benicia-grill.com"},
       {"src":"/food/benicia-grill-site-4-lg.webp","alt":"hero image","credit":"Their own photo, from benicia-grill.com"},
     ],
-    contactOnly: "A breakfast-and-lunch grill in Benicia since 2008 — 'fresh, hearty meals, friendly service, and a space that feels like home.' Their menu is a PDF with every price line left blank; only add-ons are priced.",
+    contactOnly: "A breakfast-and-lunch grill in Benicia since 2008 — 'fresh, hearty. Their menu is a PDF with every price line left blank; only add-ons are priced.",
   },
 
   /*
@@ -1018,6 +1039,12 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: leftover template copy in the footer: 'Unwind and savor the burger bliss' on a boba site
      flag: a placeholder 'info@email.com' sits beside the real address
      flag: testimonials use generic full names with no dates
+     flag: Menu sweep 2026-09-09, still no readable prices: boberteaus.com/Menu lists item names by series (Brown Sugar, Milk Tea, Chizu/Cheese, Vietnamese Coffee, Mochi Donut) but no prices appear anywhere in the fetched page text for the homepage, /menu, or /Menu URLs, so no priced items could be recorded for the Martinez location.
+     flag: Menu sweep 2026-09-09: Homepage's main contact block shows a San Ramon address (21001 San Ramon Valley Blvd, E4, San Ramon CA 94583); the Martinez-specific address was only found on the separate /locations page
+     flag: Menu sweep 2026-09-09: Menu item names found with no prices: Brown Sugar Milk Tea, Brown Sugar Creme Brulee, Brown Sugar Cookies, Brown Sugar Matcha Latte, Classic Milk Tea, Hazelnut/Jasmine/Roasted Oolong/Honey/Signature Milk Tea, Chizu Green Tea/Mango Green Tea/Matcha Latte/Milk Tea/Strawberry Green Tea, Coconut/Custard
+     flag: Menu sweep 2026-09-09: No Instagram or other social link found anywhere on the site
+     flag: Menu sweep 2026-09-09: info@boberteaus.com is a general company-wide contact email, not specific to the Martinez location
+     flag: Menu sweep 2026-09-09: This is a chain with 30+ locations across multiple US states plus one in India
   */
   'bober-tea': {
     address: "1029 Arnold Dr, Ste 10, Martinez, CA 94553",
@@ -1025,6 +1052,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     hours: "Daily 10am-9pm",
     instagram: "bober_teaus",
     cuisine: "Boba and mochi donuts",
+    tagline: "A boba chain that 'started in Singapore' — brown sugar, cheese-foam,",
     photos: [
       {"src":"/food/bober-tea-site-2-lg.webp","alt":"","credit":"Their own photo, from boberteaus.com"},
       {"src":"/food/bober-tea-site-5-lg.webp","alt":"","credit":"Their own photo, from boberteaus.com"},
@@ -1033,7 +1061,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       {"src":"/food/bober-tea-site-13-lg.webp","alt":"","credit":"Their own photo, from boberteaus.com"},
       {"src":"/food/bober-tea-site-15-lg.webp","alt":"","credit":"Their own photo, from boberteaus.com"},
     ],
-    contactOnly: "A boba chain that 'started in Singapore' — brown sugar, cheese-foam, milk tea and Vietnamese coffee series, plus topped mochi donuts. The menu page lists drink and donut names only — no prices anywhere on the site.",
+    contactOnly: "A boba chain that 'started in Singapore' — brown sugar, cheese-foam,. The menu page lists drink and donut names only — no prices anywhere on the site.",
   },
 
   /*
@@ -1257,19 +1285,27 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: no street address; 'Located in Fairfield, CA' but the service area says Sacramento
      flag: literal template variables render in the footer: {{placeholder_footer_reserve1}} through 7, and five unlabelled 'Button' placeholders on the homepage
      flag: the contact page lists the same number twice as Mobile and Alternate
+     flag: Menu sweep 2026-09-09, still no readable prices: No prices are published anywhere on boucajun.com. The homepage and /restaurant page state the sit-down steak house location is still 'under development'/coming soon, and the /gumbo-orders page (current, operating service) advertises gumbo but lists no item prices, directing customers to call or text
+     flag: Menu sweep 2026-09-09: No menu or prices published anywhere on the site; the sit-down restaurant is explicitly described as still under development ('coming soon')
+     flag: Menu sweep 2026-09-09: Food Truck, Catering, and Gumbo Orders pages advertise active services but list no item prices, directing customers to call/text (844) 305-2260 for pricing
+     flag: Menu sweep 2026-09-09: Hours (Mon-Sun 11am-10pm) are stated identically on both the homepage and the /gumbo-orders page - no contradiction found
+     flag: Menu sweep 2026-09-09: Gumbo-orders page mentions a 10% discount for military, seniors, and first responders
   */
   'bou-cajun': {
+    address: "814 Texas Street, Fairfield, CA 94533",
     phone: "(844) 305-2260",
     email: "info@boucajun.com",
+    hours: "Mon-Sun 11am-10pm",
     instagram: "boucajun_",
     cuisine: "Cajun",
+    tagline: "Veteran- and minority-owned 'authentic New Orleans cuisine' in",
     photos: [
       {"src":"/food/bou-cajun-site-1-lg.webp","alt":"","credit":"Their own photo, from boucajun.com"},
       {"src":"/food/bou-cajun-site-3-lg.webp","alt":"","credit":"Their own photo, from boucajun.com"},
       {"src":"/food/bou-cajun-site-4-lg.webp","alt":"","credit":"Their own photo, from boucajun.com"},
       {"src":"/food/bou-cajun-site-8-lg.webp","alt":"","credit":"Their own photo, from boucajun.com"},
     ],
-    contactOnly: "Veteran- and minority-owned 'authentic New Orleans cuisine' in Fairfield — a food truck, event catering and gumbo to go; the restaurant itself is under construction and not open to the public. No menu or prices published; ordering is by call or text; 10% military, senior and first-responder discounts advertised.",
+    contactOnly: "Veteran- and minority-owned 'authentic New Orleans cuisine' in. No menu or prices published; ordering is by call or text; 10% military, senior and first-responder discounts advertised.",
   },
 
   /*
@@ -1372,6 +1408,19 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Breaktime Tea — gathered 2026-09-09 from ordering-platform — BLOCKED: order.online storefront returned HTTP 403 Forbidden (tried 3 URL variants)
+     they are: Bubble Tea
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: order.online storefront blocked (HTTP 403) on all 3 URL variants attempted, including the exact URL provided
+     flag: One WebSearch for an owned website turned up only third-party listings (Facebook, Yelp, DoorDash, Instagram, order.online, plus directory/aggregator sites weeblyte.com and wheree.com) and an unverified breaktimetea.com domain with no substantive content
+     flag: Because no approved own-site or ordering-page source could actually be read, address/phone/hours/instagram are left null rather than sourced from third-party (Yelp/DoorDash/aggregator) snippets
+  */
+  'breaktime-tea': {
+    cuisine: "Bubble Tea",
+    tagline: "Bubble tea and boba drink shop",
+  },
+
+  /*
      Cafe Noir — gathered 2026-09-09 from own-domain
      they are: African diaspora
      logo: https://images.squarespace-cdn.com/content/v1/6584861e80e9050fa3c6ffc8/2139ba63-bcf8-4ad0-a7e6-233cd69d999c/cafe-noir-oakland-full-logo.png (1592x580) — not cut into a tile yet
@@ -1438,6 +1487,11 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Custom cakes
      flag: Glenn: 'San Jose • Goods. Needs website'
      flag: no street address published
+     flag: Menu sweep 2026-09-09, still no readable prices: No independent website or ordering page exists for this business. The Instagram bio (@caitlyn_sweets) says 'DM for quote & availability', confirming pricing is by custom quote only and is not published anywhere, so no menu items or prices could be recorded.
+     flag: Menu sweep 2026-09-09: No standalone business website or ordering page found; a single WebSearch turned up only Instagram (@caitlyn_sweets), a TikTok (@caitlynsweets), and third-party listings (Yelp, a Giftly gift-card page) - no owned domain
+     flag: Menu sweep 2026-09-09: This is a custom-order cake business - pricing is quote-based via DM, not a published menu, so 'items: []' is expected rather than a gap
+     flag: Menu sweep 2026-09-09: No street address, phone, or email listed in the Instagram bio; only 'San Jose'/Bay Area given as service area
+     flag: Menu sweep 2026-09-09: Search also surfaced an unrelated similarly-named business, 'Caitlyn's Confections' (caitlynsconfections.com), which was not used since it does not match the given Instagram handle
   */
   'caitlyns-sweets': {
     address: "San Jose, CA",
@@ -1446,6 +1500,23 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     needsSite: true,
     tagline: "Custom cakes in San Jose for birthdays, weddings and events",
     contactOnly: "Custom cakes in San Jose for birthdays, weddings and events. DM them for a quote and availability; Bay Area pickup and delivery; policies and flavors are in their highlights.",
+  },
+
+  /*
+     Cajun Crack N — gathered 2026-09-09 from own-domain — BLOCKED: order.online storefront returned HTTP 403 Forbidden
+     their spelling: "Cajun Crack'n CA" (roster keeps "Cajun Crack N")
+     they are: Cajun Seafood Boil
+     logo: https://img1.wsimg.com/isteam/ip/4bb7e437-4b51-4578-b5c9-21e1469c471b/Cajun%20logo%20no%20bg.png — not cut into a tile yet
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: No street address, phone, email, or hours found anywhere on cajuncracknca.com/concord (header and footer both checked) or the cajuncracknca.com homepage
+     flag: order.online storefront for this location (store/cajun-crack'n-concord-24646509) returned HTTP 403 Forbidden on both a plain and a URL-encoded-apostrophe attempt
+     flag: Guessed /menu and /contact subpages both returned 404 Not Found
+     flag: Appears to be a multi-location chain; a separate Milpitas location operates its own distinct domain (cajuncracknmilpitas.com)
+     flag: Menu item names found with no prices: Combo 1-3, Signature 1-2, The Boiling (a-la-carte catch), Garlic Bread, Fries, Onion Rings, Chicken Tender/Catfish/Shrimp/Oyster/Softshell Crab baskets, various Po'Boys, Gumbo, Cajun Chowder, and Rice/Sauce/Butter/Corn/Egg/Potato add-ons
+  */
+  'cajun-crack-n': {
+    cuisine: "Cajun Seafood Boil",
+    tagline: "Cajun-style seafood boil restaurant with fried baskets and po'boys",
   },
 
   /*
@@ -1628,13 +1699,21 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
 
   /*
      Chutneys — gathered 2026-09-09 from stopgap
+     they are: Indian
      flag: 2 of 4 DNS A records point at a misconfigured Cloudflare endpoint: HTTPS handshake refused, HTTP returns 'error code: 1001' — the site fails to load whenever a client picks those records
      flag: GoDaddy Website Builder template with a single Getty stock photo and GoDaddy's default icon — no business logo
      flag: publishes no cuisine, menu, address, phone, hours or social links; filed as 'Indian' but the site never says so
      flag: domain is .ai
+     flag: Menu sweep 2026-09-09, still no readable prices: chutneys.ai (www.chutneys.ai) loads only a bare placeholder page with a tagline and a contact form, no menu; the non-www chutneys.ai never loads (persistent SSL handshake failure); a related-looking domain chutneys.us (found via search, labeled "Chutneys Indian Vegetarian Restaurant, Brentwood, CA")
+     flag: Menu sweep 2026-09-09: Given URL chutneys.ai (no www) fails with a persistent SSL handshake error and never loads.
+     flag: Menu sweep 2026-09-09: www.chutneys.ai loads but is a near-empty placeholder: only the tagline "Savor the Flavor" and a contact form; no address, phone, email, hours, Instagram link, logo, or menu present.
+     flag: Menu sweep 2026-09-09: A separate domain chutneys.us surfaced in search as "Chutneys Indian Vegetarian Restaurant | Brentwood, CA" -- very likely the same business -- but blocked automated fetches with HTTP 403 on every page tried, so it could not be used to verify any facts.
+     flag: Menu sweep 2026-09-09: No address, phone, email, hours, Instagram, logo, or menu/prices could be confirmed from any reachable page for this business.
   */
   'chutneys': {
+    cuisine: "Indian",
     needsSite: true,
+    tagline: "One-page placeholder site: the tagline 'Savor the Flavor', a contact",
   },
 
   /*
@@ -1756,20 +1835,28 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: HOURS CONFLICT on their own site: the visible page says Sat-Sun 9am-2pm while their structured data says 7:30am-3pm — Mon-Fri 7:30am-3pm agree in both, but no hours carried
      flag: a badge claims '100% organic since 2003' while the site also says founded 2006
      flag: sister cafe Coffee Conscious at 1312 Gilman St, Berkeley; the former Oakland flagship at 6037 San Pablo is stated closed
+     flag: Menu sweep 2026-09-09, still no readable prices: donutfarmberkeley.com does not publish a menu with prices anywhere on the site; flavors rotate daily and are described as posted to Instagram instead. The only ordering link on the site is a third-party DoorDash storefront, which is excluded as a source per instructions, so no items with prices coul
+     flag: Menu sweep 2026-09-09: The business's own site states the original Oakland flagship (6037 San Pablo) is CLOSED and operations moved to two Berkeley shops (3278 Adeline St main shop; 1312 Gilman St 'Coffee Conscious' sister cafe) -- this contradicts the task's framing of this business as being in Oakland, CA; the address g
+     flag: Menu sweep 2026-09-09: Instagram handle linked from the site is @donutfarmoakland, still referencing Oakland even though the site says that location is closed.
+     flag: Menu sweep 2026-09-09: No menu or prices published in text on the own-domain site; only a third-party DoorDash ordering link was found (excluded per sourcing rules). /menu, /locations, and /order paths on the site all returned 404.
+     flag: Menu sweep 2026-09-09: logo_url was a relative path (assets/logo.png) in the page HTML, resolved here against the site root.
+     flag: Menu sweep 2026-09-09: Site markets itself with the word 'organic' rather than explicitly using the word 'vegan' on the pages fetched, though several rotating/brunch items are plant-based (e.g. Pepples Tofu Scramble, Buffalo Cauliflower).
   */
   'donut-farm': {
     address: "3278 Adeline St, Berkeley, CA 94703",
     phone: "(510) 879-6980",
     email: "pepples.donuts@gmail.com",
+    hours: "Daily 7:30am-3pm",
     instagram: "donutfarmoakland",
     cuisine: "Vegan donuts",
+    tagline: "'Real good donuts. Always organic.' — 100% organic, fully vegan donuts",
     photos: [
       {"src":"/food/donut-farm-site-0-lg.webp","alt":"Steak and egg tacos from Donut Farm's weekend brunch","credit":"Their own photo, from donutfarmberkeley.com"},
       {"src":"/food/donut-farm-site-1-lg.webp","alt":"A box of assorted Donut Farm vegan donuts","credit":"Their own photo, from donutfarmberkeley.com"},
       {"src":"/food/donut-farm-site-2-lg.webp","alt":"Salted caramel vegan donut","credit":"Their own photo, from donutfarmberkeley.com"},
       {"src":"/food/donut-farm-site-3-lg.webp","alt":"Cold brew coffee and donuts","credit":"Their own photo, from donutfarmberkeley.com"},
     ],
-    contactOnly: "'Real good donuts. Always organic.' — 100% organic, fully vegan donuts made from scratch daily in Berkeley, plus weekend vegan brunch. No prices anywhere on the site; the day's flavours are posted on Instagram and ordering goes through a delivery link.",
+    contactOnly: "'Real good donuts. Always organic.' — 100% organic, fully vegan donuts. No prices anywhere on the site; the day's flavours are posted on Instagram and ordering goes through a delivery link.",
   },
 
   /*
@@ -2016,8 +2103,18 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   /*
      Rancho Grande Taqueria — gathered 2026-09-09 from own-domain
      they are: Mexican
+     logo: https://irp.cdn-website.com/77a86d20/dms3rep/multi/Color-Whtie-Logo.svg — not cut into a tile yet
      flag: the sign outside reads EL RANCHO GRANDE TAQUERIA; their own site, logo and footer say Rancho Grande Taqueria, so that is the name here
      flag: Glenn photographed the storefront and the window poster while delivering, 2026-09-04
+     flag: Menu sweep 2026-09-09: Prices are from Rancho Grande Taqueria's own order.online storefront (order.online/store/rancho-grande-taqueria-pleasanton-24568904); the site's own /our-menu page on ranchograndetaq.com lists the same item names and descriptions but no prices at all.
+     flag: Menu sweep 2026-09-09: ranchograndetaq.com's own /our-menu page lists item names and descriptions with no prices whatsoever; every price here comes from the order.online storefront instead.
+     flag: Menu sweep 2026-09-09: Hours conflict: ranchograndetaq.com states Mon-Thu & Sat 8:00am-9:00pm, Fri 7:00am-9:00pm, Sun 8:00am-8:00pm, while the order.online storefront shows a single flat 'Online ordering hours: 8:00 AM - 8:00 PM' for every day — hours set to null because of this disagreement.
+     flag: Menu sweep 2026-09-09: The order.online browser-tab title reads 'EL RANCHO GRANDE TAQUERIA' (with 'El'), while ranchograndetaq.com and its own page content consistently use 'Rancho Grande Taqueria' (no 'El'); used the site's own spelling for name_exact.
+     flag: Menu sweep 2026-09-09: 'Bean & Cheese Burrito', 'Bean Rice & Cheese Burrito', and 'Bean & Rice Burrito' are each cross-listed under both the Burritos and Kids Menu categories at the same price on order.online; recorded once, under Burritos.
+     flag: Menu sweep 2026-09-09: No email address found on ranchograndetaq.com.
+     flag: Menu sweep 2026-09-09: Delivery/pickup is also offered via GrubHub and UberEats per the homepage; not used for pricing here.
+     flag: Menu sweep 2026-09-09: Menudo soup is flagged on the menu itself as 'ONLY AVAILABLE SATURDAY & SUNDAY'.
+     flag: Menu sweep 2026-09-09: 'Cheese' and 'Lettuce' are listed as add-on Extras with size options but no printed price, so they were not included as items.
   */
   'el-rancho-grande': {
     address: "2707 Hopyard Rd, Pleasanton, CA",
@@ -2026,7 +2123,157 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "ranchogrande.taq",
     cuisine: "Mexican",
     tagline: "Tacos, burritos and enchiladas on Hopyard Road, open early",
-    contactOnly: "Tacos, burritos and enchiladas on Hopyard Road, open early. Their menu page lists every dish and no prices; ordering ahead is by phone or a delivery app.",
+    sections: [
+      { name: "Burritos", items: [
+        ["California Burrito","Filled with your choice of meats, including Carne Asada, Lengua, Cabeza, and more. Also available meat-free.",1595],
+        ["Jumbo Burrito","With cheese, guacamole, sour cream, rice and beans, pico de gallo and lettuce.",1624],
+        ["Super Burrito","With cheese, guacamole, sour cream, rice, beans & pico de gallo.",1494],
+        ["Super Wet Burrito","With rice, beans, cheese, sour cream and guacamole, pico de gallo and enchilada or chile verde sauce with cheese on top.",1745],
+        ["Super 2 Mix Meat Burrito","With rice, beans, cheese, and sour cream, guacamole, pico de gallo.",1750],
+        ["Super Shrimp Burrito","With cheese, guacamole, sour cream, rice & beans, salsa.",2075],
+        ["Super Burro Mar Y Tierra","Burrito filled with both seafood and land meats. Various meat options including Carne Asada, Lengua, Carnitas, and more.",2300],
+        ["Super Burrito Fish","Grilled fish, rice, beans, cheese, sour cream, guacamole, and pico de gallo wrapped in a flour tortilla.",1800],
+        ["Regular Burrito","With rice, beans and pico de gallo.",1225],
+        ["Regular Wet Burrito","With rice, beans, pico de gallo and enchilada or chile verde sauce on top.",1475],
+        ["Regular 2 Mix Meat Burrito","With rice, beans and salsa.",1624],
+        ["Regular Shrimp Burrito","With rice, beans & salsa.",1850],
+        ["Regular Burro Mar Y Tierra","Combination of land and sea flavors in a burrito. Choose from various meats such as beef, pork, chicken, or no meat option.",2099],
+        ["Regular Burrito Fish","Grilled tilapia, rice, beans, cheese, pico de gallo, and salsa in a flour tortilla.",1550],
+        ["Vegetarian Burrito","With cheese, guacamole, sour cream, rice and beans, pico de gallo, and lettuce (no meat).",1225],
+        ["Vegetarian Wet Burrito","",1475],
+        ["Vegan Burrito","With beans, guacamole, lettuce, pico de gallo.",1225],
+        ["Bean Rice & Cheese Burrito","Refried beans, rice, and shredded cheddar cheese wrapped in a soft flour tortilla.",974],
+        ["Bean & Cheese Burrito","Savory beans paired with melted cheese, encased in a soft, warm tortilla.",895],
+        ["Bean & Rice Burrito","Refried beans and rice wrapped in a soft flour tortilla.",895],
+        ["Rancho Grande Burrito Plate","With rice, beans, guacamole, sour cream, cheese, lettuce, choice of meats.",2095],
+      ] },
+      { name: "Tacos", items: [
+        ["Taco","With onions and cilantro.",385],
+        ["Taco Lengua","Beef tongue on a corn tortilla, topped with cilantro and onions.",550],
+        ["Veggie Taco","Grilled veggies, black beans, lettuce, pico de gallo, cheese, and guacamole on a soft corn tortilla.",385],
+        ["Fish Taco","With onions, cilantro & salsa.",675],
+        ["Shrimp Taco","Grilled shrimp topped with shredded lettuce, fresh cilantro, and diced onions on soft corn tortillas.",675],
+        ["Super Taco","With onions, cilantro & salsa, cheese, guacamole, sour cream, & lettuce.",975],
+        ["Rancho Taco","With onions, cilantro, salsa, grilled with choice of meat, cheese on top and lettuce on the side.",725],
+        ["(2) Queso Birria Tacos","Tacos with birria, cheese, onions, cilantro, and tomatillo salsa. Topped with beef broth.",1100],
+        ["(3) Queso Birria Tacos","Slow-cooked beef in corn tortillas with melted cheese, served with a side of consomme for dipping.",1650],
+        ["Taco #32","Tender taco filled with choices like Carne Asada, Carnitas, Chorizo, Pollo Adobado, and more.",1030],
+        ["Chips","Fresh homemade tortilla chips typically served with salsa or guacamole.",200],
+      ] },
+      { name: "Quesadillas", items: [
+        ["Rancho Grande Quesadilla","With sour cream, guacamole, cheese and choice of meat.",1425],
+        ["Super Quesadilla","With sour cream, guacamole, cheese and choice of meat.",1175],
+        ["Large Quesadilla (Cheese Only)","Melted cheese layered between two large flour tortillas, grilled to a golden brown.",995],
+        ["Regular Quesadilla (Cheese Only)","Melted cheese enveloped in a golden, toasted tortilla.",600],
+        ["Meat Quesadilla Regular","Quesadilla with your choice of meat: grilled steak, beef tongue, beef cheek, barbacoa beef, grilled chicken, shredded chicken, marinated chicken, seasoned pork, braised pork, green chili pork, spicy sausage, or pork stomach.",925],
+        ["Large Quesadilla (Meat Only)","Stuffed with your choice of seasoned meats like Carne Asada, Lengua, Barbacoa, and more.",1200],
+      ] },
+      { name: "Nachos/Fries", items: [
+        ["Super Nachos","Choice of meat, sour cream, guacamole and salsa.",1445],
+        ["Regular Nachos","Cheese, sour cream, guacamole and salsa.",1100],
+        ["Super Fries","Loaded fries topped with your choice of meat: options include various beef, chicken, pork, and chorizo.",1494],
+      ] },
+      { name: "Combo Plate", items: [
+        ["Crispy Taco Combo 2","Crispy taco combo with choice of meats or seafood such as Carne Asada, Pollo Asado, Barbacoa, Carnitas, Shrimp, and more.",1800],
+        ["Crispy Taco Combo 1","Crispy corn taco with choice of Carne Asada, Pollo Asado, Carnitas, Chorizo, seafood, and more.",1350],
+        ["Super Taco Combo","Choose from a variety of meats like Carne Asada, Lengua, Pollo Asado, Chorizo, or Shrimp. Served as a taco plate.",1425],
+        ["1 Taco Combo","1 taco topped with onions & cilantro w/ side rice & beans with cheese on top.",1050],
+        ["2 Taco Combo","2 tacos topped with onions & cilantro w/ side rice & beans with cheese on top.",1425],
+        ["3 Taco Combo","3 tacos topped with onions & cilantro w/ side rice & beans with cheese on top.",1795],
+        ["Taco Salad","With rice, beans, guacamole, sour cream, cheese, lettuce, choice of meats.",1775],
+      ] },
+      { name: "Plates", items: [
+        ["Carne Asada Plate","Grilled steak served with a roasted green chili pepper and a charred green onion.",2195],
+        ["Bisteak Ranchero Plate","Tender steak strips with sauteed onions, bell peppers, and tomatoes, served with seasoned rice, refried beans topped with shredded cheese, and a side of fresh lettuce.",2295],
+        ["Rancho Grande Plate","With rice, beans, guacamole, sour cream, cheese, lettuce and your choice of meat.",2150],
+        ["3 Enchilada Combo","Three enchiladas with a choice of meats or seafood, topped with your choice of red or green sauce.",1995],
+        ["2 Enchilada Combo","Choice of protein including beef, tongue, barbacoa, chicken, pork, and seafood. Sauces: red or green.",1482],
+        ["1 Enchilada Combo","Enchilada combo with choice of meat including Carne Asada, Lengua, Barbacoa, and more. Wet options: red or green.",1248],
+        ["Fajitas (Beef)","Tender beef strips sauteed with bell peppers and onions, seasoned with traditional Mexican spices.",2295],
+        ["Fajitas (Chicken)","Grilled chicken with bell peppers and onions, served with rice, beans, tortillas, and salad.",2295],
+        ["Fajitas Mix","Fajitas mix served with a selection of meats including Carne Asada, Lengua, Barbacoa, and many more.",2399],
+        ["3 Flautas Plate","Chicken only.",1995],
+        ["Chile Relleno Plate","Roasted poblano pepper stuffed with cheese, topped with tomato sauce, served with refried beans, Mexican rice, shredded lettuce, guacamole, and sour cream.",1875],
+        ["Chimichanga Plate","Crisp flour tortilla filled with choice of meats like Carne Asada, Lengua, Barbacoa, or seafood such as Shrimp or Fish.",1875],
+        ["Carne Con Chile Plate","Grilled beef strips with grilled onions cooked with spicy salsa. Served with rice, refried beans and tortillas.",1995],
+      ] },
+      { name: "Mariscos", items: [
+        ["Mojarra","Fried whole fish. Fried fish, rice, beans, tortillas and salad.",2250],
+        ["Camarones A la Diabla","Succulent shrimp in a spicy red sauce, served with rice, shredded lettuce, tomato, onion, and red bell pepper.",2350],
+        ["Fajitas de Camarones","With vegetables. With rice, beans, tortillas and salad.",2395],
+        ["Camarones Al Mojo de Ajo","Succulent shrimp sauteed in garlic, served with shredded lettuce, bell peppers, onions, and a side of rice.",2350],
+        ["Camarones A la Mantequilla","Succulent shrimp sauteed in butter, served with shredded lettuce, sliced tomatoes, onions, bell peppers, and a side of rice and beans.",2350],
+        ["Camarones Adobados","Shrimp marinated in adobo sauce, typically prepared with a blend of chili peppers, garlic, and spices.",2350],
+        ["Cocktel de Camaron","Shrimp cocktail with choice of cold, warm, or hot.",1999],
+        ["Tostada de Ceviche (Fish)","Fresh fish ceviche on a crispy tostada, topped with sliced avocado.",675],
+      ] },
+      { name: "Breakfast Plate", items: [
+        ["Egg Chorizo Plate","Scrambled eggs mixed with spicy chorizo sausage, served alongside refried beans topped with melted cheese and a portion of seasoned Mexican rice.",1675],
+        ["Egg Ham Plate","Scrambled eggs mixed with ham, served with beans, potatoes, and tortillas.",1675],
+        ["Egg Beef Plate","Tender beef options: Carne Asada, Barbacoa, Lengua (beef tongue), Cabeza (head meat), paired with eggs.",1675],
+        ["Egg Chicken Plate","Eggs with a choice of chicken styles: Pollo Asado (grilled chicken), Pollo Desebrado (shredded chicken), or Pollo Adobado (marinated chicken).",1675],
+        ["Egg Pork Plate","Eggs with choices of Carnitas, Pastor, or Chile Verde.",1675],
+        ["Huevos Rancheros","With rice, beans and tortillas.",1675],
+        ["Chilaquiles","With rice, beans and tortillas.",1675],
+      ] },
+      { name: "Breakfast Burritos", items: [
+        ["Chorizo Egg & Cheese Burrito","Savory chorizo paired with scrambled eggs, melted cheese, and tender beans wrapped in a soft tortilla.",1050],
+        ["Bacon Egg & Cheese Burrito","Scrambled eggs, crispy bacon, and melted cheese wrapped in a soft tortilla.",1050],
+        ["Beef Egg & Cheese Burrito","Carne Asada, Barbacoa, Lengua, or Cabeza beef, combined with eggs and cheese, wrapped in a burrito.",1050],
+        ["Ham Egg & Cheese Burrito","Ham, scrambled eggs, and cheese wrapped in a flour tortilla.",1050],
+        ["Chicken Egg & Cheese Burrito","Grilled chicken options with eggs and melted cheese wrapped in a warm tortilla.",1050],
+        ["Pork Egg & Cheese Burrito","Eggs, cheese, and a choice of pork (Carnitas, Pastor, or Chile Verde).",1050],
+        ["Machaca Egg & Cheese Burrito","Shredded beef, bell peppers, onions, tomatoes, scrambled with eggs, and topped with cheese, all wrapped in a flour tortilla.",1050],
+        ["Potato Egg & Cheese Burrito","Scrambled eggs, diced potatoes, and melted cheese wrapped in a soft flour tortilla.",1050],
+      ] },
+      { name: "Desserts", items: [
+        ["Mexican Candy Flan","Smooth and creamy flan topped with a rich caramel sauce.",780],
+        ["Churro","Crisp golden-brown fried dough stick, dusted with cinnamon sugar.",230],
+      ] },
+      { name: "Soups", items: [
+        ["Menudo","Only available Saturday & Sunday.",1525],
+        ["Pozole","Pork hominy soup.",1525],
+      ] },
+      { name: "Drinks", items: [
+        ["Large Bev","Variety of fountain sodas: Coke, Diet Coke, Sprite, Fanta, Pink Lemonade, Root Beer.",395],
+        ["Medium Bev","Coke, Diet Coke, Sprite, Fanta, Pink Lemonade, or Root Beer.",345],
+        ["Imported Soda Bottle","A variety of Jarritos sodas: fruit punch, lime, mandarin, mineragua, pineapple, tamarind; also sangria and Sidral Mundet.",425],
+        ["Bottle Coca Cola 1/2 Liter","",499],
+        ["Bottle Fanta 1/2 Liter","Mexican Fanta in a 1/2 liter glass bottle.",499],
+        ["Can Soda","Choice of Coke, Diet Coke, or Dr. Pepper in a can.",275],
+        ["Bottle Water","",235],
+        ["Large Agua Fresca","",515],
+        ["Medium Agua Fresca","",411],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Meat Cheese Taco","Ground beef and cheese in a soft flour tortilla.",450],
+        ["Cheese Quesadilla","Melted cheese folded in a soft flour tortilla, grilled to a golden brown.",600],
+      ] },
+      { name: "Tortas & Tostadas", items: [
+        ["Torta","Mexican sandwich filled with a choice of meats such as beef, chicken, pork, or chorizo.",1475],
+        ["Tostadas","With choice of meat, beans, lettuce, sour cream, cheese & guacamole.",1125],
+        ["Ensalada","Mixed greens topped with your choice of Carne Asada, Lengua, Cabeza, Carnitas, Pastor, or various other meats.",1075],
+      ] },
+      { name: "A La Carte/Extra", items: [
+        ["Crispy Taco A La Carta","Crispy taco. Filled with options: grilled steak, tongue, shredded chicken, seasoned pork, fish, and more.",655,null,"from"],
+        ["1 Flauta","Deep-fried crispy tortilla typically filled with shredded chicken or beef, topped with lettuce, sour cream, and cheese.",650],
+        ["Chile Relleno A La Carta","",806],
+        ["Enchilada A La Carta","Enchilada with various meats or seafood. Choices include Carne Asada, Shrimp, Cheese, and more. Option for wet style with red or green sauce.",475],
+        ["Tamale A La Carta","Tamale with choice of chicken or pork filling.",475],
+        ["Chimichanga A La Carta","Chimichanga filled with choice of various meats, such as Carne Asada, Carnitas, Pollo, Chorizo, and more.",1245],
+      ] },
+      { name: "Extra", items: [
+        ["Guacamole","Creamy avocado dip available in multiple sizes: 2oz, 4oz, 8oz, 20oz, 32oz.",150,null,"from"],
+        ["Sour Cream","Various sizes available: 2oz, 4oz, 8oz, 20oz, 32oz.",150,null,"from"],
+        ["Salsa","Assorted salsa options including Pico De Gallo, Salsa Verde, Chile Verde Salsa, Tomatillo Salsa, Sinaloa Salsa, Chipotle Salsa, and Very Spicy Salsa. Available in 8oz, 20oz, and 32oz.",600,null,"from"],
+        ["Side Rice","Small or large servings of Mexican-style rice.",575,null,"from"],
+        ["Side Beans","Beans with choice of size, type (refried or whole), and optional cheese in various quantities.",575,null,"from"],
+        ["Side 1/2 Rice & 1/2 Beans","Rice and beans on the side, available in small or large. Choose between refried or whole beans.",575,null,"from"],
+        ["Small Meat","Variety of meats including Carne Asada, Lengua, barbacoa, cabeza, pollo asado, and more; also fish and shrimp.",1599,null,"from"],
+        ["Large Meat","Selection of various meats and seafood like Carne Asada, Lengua, Barbacoa, Shredded Chicken, and more.",3099,null,"from"],
+      ] },
+    ],
+    siteNote: "Prices are from Rancho Grande Taqueria's own order.online storefront (order.online/store/rancho-grande-taqueria-pleasanton-24568904); the site's own /our-menu page on ranchograndetaq.com lists the same item names and descriptions but no prices at all.",
   },
 
   /*
@@ -2110,12 +2357,19 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: the contact form carries the builder's placeholder text, 'Business Default form', with a stray 'Subscribe' label
      flag: the hero image alt is the unedited placeholder
      flag: a one-page site: no address, hours or prices
+     flag: Menu sweep 2026-09-09, still no readable prices: No prices are printed anywhere on emyscannoli.com; the home page lists three offerings (Gourmet Mini Cannoli, Traditional Tiramisu, Homemade Lasagna) with descriptions but no prices, and the only other page paths on the site (/menu, /services, /about, /contact) return 404, so no separate menu or ord
+     flag: Menu sweep 2026-09-09: No prices published anywhere on the site for any menu item
+     flag: Menu sweep 2026-09-09: No street address listed on the site (business appears to be a mobile cart/catering operation with no fixed storefront); Vacaville, CA location given in the task brief could not be confirmed from their own site
+     flag: Menu sweep 2026-09-09: No hours of operation listed on the site
+     flag: Menu sweep 2026-09-09: Site is effectively single-page: nav links (About, Services, Contact) and attempted paths /menu, /services, /about, /contact all return 404, so they are likely in-page anchors rather than separate pages
+     flag: Menu sweep 2026-09-09: No online ordering platform (Toast/Square/ChowNow/etc.) found or linked
   */
   'emys-cannoli': {
     phone: "(707) 580-2049",
     email: "emyscannoli@gmail.com",
     instagram: "emyscannoli",
     cuisine: "Italian catering",
+    tagline: "Mobile catering bringing 'Authentic Italian Flavors Delivered to Your",
     photos: [
       {"src":"/food/emys-cannoli-site-0-lg.webp","alt":"Alternative text for describing the image displayed","credit":"Their own photo, from emyscannoli.com"},
       {"src":"/food/emys-cannoli-site-1-lg.webp","alt":"Placeholder image for ABOUT","credit":"Their own photo, from emyscannoli.com"},
@@ -2123,7 +2377,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       {"src":"/food/emys-cannoli-site-3-lg.webp","alt":"Placeholder image for PRODUCT","credit":"Their own photo, from emyscannoli.com"},
       {"src":"/food/emys-cannoli-site-4-lg.webp","alt":"Placeholder image for PRODUCT","credit":"Their own photo, from emyscannoli.com"},
     ],
-    contactOnly: "Mobile catering bringing 'Authentic Italian Flavors Delivered to Your Special Events' — mini cannoli, tiramisu and lasagna, founded by Emy after seven years in Italy. Three offerings are named — gourmet mini cannoli, traditional tiramisu, homemade lasagna — and none is priced.",
+    contactOnly: "Mobile catering bringing 'Authentic Italian Flavors Delivered to Your. Three offerings are named — gourmet mini cannoli, traditional tiramisu, homemade lasagna — and none is priced.",
   },
 
   /*
@@ -2506,6 +2760,63 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Harumi — gathered 2026-09-09 from own-domain
+     their spelling: "Harumi Sushi & Hibachi" (roster keeps "Harumi")
+     they are: Japanese AYCE sushi/hibachi
+     logo: https://harumisushihibachi.com/assets/favicon.svg — not cut into a tile yet
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: Only site found on a business-specific domain was harumisushihibachi.com; no Toast/Square/ChowNow/order.online storefront could be found via search. Yelp, Google Maps, and DoorDash listings were seen in search results but were NOT used as a source for any fact per instructions.
+     flag: Strong evidence harumisushihibachi.com is an auto-generated third-party template microsite rather than a site authored/maintained by the restaurant: its CSS is versioned 'site.css?v=menu-detail-20260527' (a generic shared template name/id), it loads analytics from a shared Railway-hosted Umami instance, it embeds a verbatim Google star rating ('4.4 stars on Google'), Google review count (210+), and full-text Google reviews (e.g. from 'Allen Ng', 'Lelong Pham (Long)'), its FAQ answers are generic boilerplate, and near-duplicate template phrasing repeats across pages ('with listed prices when available' / 'Check the menu for current prices and availability').
+     flag: This is marketed elsewhere as an all-you-can-eat (AYCE) restaurant, but no AYCE per-person/adult/child/lunch/dinner pricing tiers appear anywhere on the site -- a major gap for this business type that further undermines confidence in the site's 'popular dishes' price list as a real menu.
+     flag: The 7 listed 'popular dishes' read as generic sushi ingredient names (Shrimp, Eel, Cheese, Caviar) rather than actual named dishes/rolls with descriptions, consistent with filler/template content.
+     flag: No email address found on any page of the site.
+     flag: No Instagram or other social-media link found on the site (its only outbound non-utility link is a Google Maps place link).
+     flag: No dedicated logo image exists; the header uses a plain text wordmark ('Harumi Sushi & Hibachi') and the only graphical brand asset is a generic SVG favicon, so logo_px could not be determined.
+     flag: A similarly named domain, harumisushinv.com ('Harumi Sushi'), appeared in search results; it is very likely an unrelated, differently located restaurant (possibly in Nevada, given 'nv') and was not used as a source or verified further.
+     flag: Address/phone/hours above are the best-available facts printed on harumisushihibachi.com (consistent between its home page and menu page), but given the site's likely auto-generated nature they should be treated as provisional rather than confirmed directly by the business owner.
+     flag: An official site was found (own-domain), but it does not contain a verifiable, business-authored priced menu.
+  */
+  'harumi-ayce': {
+    address: "4713 Livermore Outlets Dr, Livermore, CA 94551, USA",
+    phone: "+1 925-667-4714",
+    hours: "Mon-Thu & Sun 11am-9:30pm, Fri-Sat 11am-10pm",
+    cuisine: "Japanese AYCE sushi/hibachi",
+    tagline: "All-you-can-eat Japanese sushi and hibachi restaurant in Livermore, CA",
+    contactOnly: "All-you-can-eat Japanese sushi and hibachi restaurant in Livermore, CA. No trustworthy priced menu was found: harumisushihibachi.com/menu/ and /popular-dishes/ show only a generic 7-item 'popular dishes' sample (Shrimp $10.00, Eel $15.00, Cheese $5.00, Caviar $10.00, Salmon Sashimi $15.00, Tempura Roll $12.99, Avocado Roll $12.99) whose own copy says 'Check the menu for current prices and availability' right next to those figures and which includes no all-you-can-eat per-person pricing at all, so these look like auto-generated placeholder content rather than the restaurant's real menu and were not captured as items.",
+  },
+
+  /*
+     House of Silog — gathered 2026-09-09 from ordering-platform — BLOCKED: order.online/business/house-of-silog-brentwood returned HTTP 403 Forbidden
+     their spelling: "House Of Silog" (roster keeps "House of Silog")
+     they are: Filipino
+     logo: https://798f55407ee211f0b627.cdn6.editmysite.com/uploads/b/798f5540-7ee2-11f0-b627-63507b36213e/IMG_0055.jpg?width=104 (104) — not cut into a tile yet
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: order.online/business/house-of-silog-brentwood (the URL given in the brief) returned HTTP 403 Forbidden; could not be read at all.
+     flag: Used house-of-silog.square.site instead (found via search) as the business's own ordering platform; it is a Square Online storefront, not a custom domain.
+     flag: Most menu categories on the ordering site (Silog All Day, Specialties-Ala Carte, Drinks, Appetizers, Condiments, Special Menu, Beverages) show no populated items in the live storefront, or items are marked 'Unavailable'/'Sold out' — Egg, Plain Fries and Suman are marked 'Unavailable' despite carrying a listed price, and Crispy Pata is 'Sold out' with no price at all.
+     flag: A search-engine snippet (third-party, not the business's own page) listed a different phone number, +1 408-221-8939, than the one shown on the business's own ordering page (+1 925-544-9562); the business's own page was used.
+     flag: Search-engine snippets suggest day-specific hours (e.g. Wed-Sat only), but the business's own ordering page only shows a flat daily window of 4:00 PM-8:59 PM with no day-by-day breakdown, so that flat window is reported here.
+     flag: No Instagram link found anywhere on the business's own ordering page.
+  */
+  'house-of-silog': {
+    address: "7760 Brentwood Blvd Ste D, Brentwood, CA 94513-1062",
+    phone: "+1 925-544-9562",
+    hours: "Daily 4:00pm-8:59pm",
+    cuisine: "Filipino",
+    tagline: "Filipino silog breakfast-plate spot in Brentwood",
+    sections: [
+      { name: "Add Ons", items: [
+        ["Egg","Add-on egg",175],
+      ] },
+      { name: "Other Items", items: [
+        ["Plain Fries","",400],
+        ["Suman (1pc)","Filipino rice cake made from glutinous rice, cooked in coconut milk and wrapped in banana leaves",350],
+      ] },
+    ],
+    siteNote: "The order.online storefront given in the brief (order.online/business/house-of-silog-brentwood) returned HTTP 403 Forbidden. Prices instead read from the business's own Square ordering site, house-of-silog.square.site, found via one web search. Most of that site's menu categories (Silog All Day, Specialties - Ala Carte, Drinks, Appetizers, Condiments, Special Menu) have no items populated in the live storefront; only Egg, Plain Fries, and Suman carry a price, and Crispy Pata is listed sold out with no price shown.",
+  },
+
+  /*
      House Of Thai — gathered 2026-09-09 from own-domain
      their spelling: "HOUSE OF THAI" (roster keeps "House Of Thai")
      they are: Thai street food
@@ -2610,6 +2921,11 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Chicken wings
      flag: houseofwingsca.com did not resolve on 2026-09-02; Glenn: 'It seems to have expired'
      flag: hours and address from their Instagram bio
+     flag: Menu sweep 2026-09-09, still no readable prices: No own website or first-party ordering page (Toast/Square/ChowNow/order.online) could be found. One web search turned up only marketplace listings (DoorDash, Uber Eats, Grubhub), a Yelp page, and an Instagram profile (houseofwingscalifornia) — none of which are the business's own site or ordering pa
+     flag: Menu sweep 2026-09-09: No own-domain website found; their old domain houseofwingsca.com does not resolve, per the brief.
+     flag: Menu sweep 2026-09-09: One web search for an own site or first-party ordering page returned only third-party marketplace pages (DoorDash, Uber Eats, Grubhub) and a Yelp listing — no Toast/Square/ChowNow/order.online storefront run by the business was found.
+     flag: Menu sweep 2026-09-09: The business is known to have an Instagram account, houseofwingscalifornia, but this was not confirmed via a link from any site owned by the business (there is no such site), so it is not populated in the instagram field per the sourcing rule.
+     flag: Menu sweep 2026-09-09: Address, phone, and hours appear on third-party sites (Yelp, DoorDash, Grubhub) but were deliberately excluded because the task requires facts only from the business's own site or ordering page, and neither exists.
   */
   'house-of-wings': {
     address: "2941 Harbor St, Pittsburg, CA 94565",
@@ -3465,6 +3781,12 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail
      flag: Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources
      flag: Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')
+     flag: Menu sweep 2026-09-09: Prices and full item list read from the Mountain View location's own menu page, https://kusanbazaar.com/menu/kusanbazaar-txusjq. Address, phone, hours, email, and Instagram link read from the Mountain View entry on the kusanbazaar.com homepage location listing.
+     flag: Menu sweep 2026-09-09: Branding is inconsistent across the site: the homepage's SEO title reads 'Kusan Collective | Best Chinese Food in Bay Area | Chinese Food near me' despite this being a Halal Uyghur restaurant; the San Jose location is separately branded 'Kusan Uyghur Cuisine' while Milpitas and Mountain View are bra
+     flag: Menu sweep 2026-09-09: This is one of three locations (San Jose, Milpitas, Mountain View) sharing the kusanbazaar.com site; items and prices recorded here are for the Mountain View location's own menu page only, per the brief.
+     flag: Menu sweep 2026-09-09: The Instagram handle (kusanuyghurcuisine) and contact email (Kusanbazaar@gmail.com) appear once on the shared homepage and are not confirmed to be Mountain-View-specific rather than a brand-wide contact.
+     flag: Menu sweep 2026-09-09: 'Lobster Tails' and 'Stewed Mutton Soup' are priced with a '+' suffix on the menu (e.g. '$39.19+'), indicating a starting/variable price; recorded here with label 'from'.
+     flag: Menu sweep 2026-09-09: No phone number, hours, or Instagram link were shown on the Mountain View menu page itself; those fields were sourced from the shared homepage's Mountain View location card instead.
   */
   'kusan-bazaar-mountain-view': {
     address: "634 N San Antonio Rd, Mountain View, CA 94043",
@@ -3474,7 +3796,62 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "kusanuyghurcuisine",
     cuisine: "Halal Uyghur, Central Asian",
     tagline: "Halal Uyghur Silk Road restaurant on N San Antonio Rd, Mountain View",
-    contactOnly: "Halal Uyghur Silk Road restaurant on N San Antonio Rd, Mountain View. The Mountain View shop runs a shorter menu of its own with different prices on kusanbazaar.com, so they are on the site rather than here.",
+    sections: [
+      { name: "Appetizers & Salads", items: [
+        ["Samsa (2 pcs per serve)","Flour, lamb, onions, black pepper, salt and sesame",795],
+        ["Uyghur Salad","Tomato, onion, green pepper, coriander, dry red pepper, salt, sesame oil, vinegar",799],
+        ["Cucumber Salad With Yogurt","Cucumber, yogurt, lemon juice, black pepper",799],
+        ["Eggplant With Mashed Garlic","Eggplant, garlic, cilantro, dry red pepper, salt, sesame oil, prickly pepper oil, chili oil, garlic water",899],
+        ["Black Fungus Salad","Black fungus, goji berries, onion, garlic, cilantro, soy sauce, chili oil, sesame oil, vinegar",799],
+        ["Cold Chili Chicken","Chicken, onion, cilantro, dry red pepper, salt, sesame oil, chili oil, prickly pepper oil",950],
+        ["Sliced Beef With Sauce","Sliced beef, green onion, cilantro, dry red pepper, salt, sesame oil, chili oil, prickly pepper oil",1095],
+      ] },
+      { name: "Silk Road Grilled", items: [
+        ["Lamb Kebab (2 Skewers)","Lamb, cumin and chili powder",995],
+        ["Chicken Kebab (2 Skewers)","Chicken, cumin and chili powder",895],
+        ["Wellington-Style Roasted Lamb Shank","Lamb shank, onion, bread, cumin and chili powder",2895],
+        ["Golden Crispy Roasted Lamb Rib","Lamb rib, onion, home-made BBQ powder",2495],
+        ["Uyghur Roast Lamb Shank","Lamb shank, onion, fennel seeds, Sichuan peppercorn, cumin, white pepper, bay leaves, cinnamon, star anise, black cardamom, angelica root, nutmeg, salt",2595],
+        ["French-Style Roasted Lamb Chops with Salads","Lamb chops, cumin, chili powder and Italian seasoning",2995],
+        ["Silk Road Garlic-Roasted Whole Fish","Freshwater catfish, garlic, BBQ powder (contains bones)",3355],
+        ["Lobster Tails, Garlic-Baked, Wild North Atlantic Cold-Water","",3919,null,"from"],
+        ["Slow-Roasted Beef Rib","",2906],
+        ["Grilled Garlic Naan Bread","Naan bread, cumin and chili powder",250],
+      ] },
+      { name: "Signature Pilaf Set", items: [
+        ["Braised Beef Cubes Pilaf","Rice, carrot, green onion, cotton oil, quail eggs, shredded lamb and beef, served with Uyghur salad or yogurt",2095],
+        ["Braised Lamb Rib Pilaf","",2295],
+        ["6-Hour Braised Lamb Shank Pilaf","",2795],
+        ["Pilaf with Garlic-Baked North Atlantic Cold-Water Lobster Tail","",2699],
+      ] },
+      { name: "Noodles, Dumplings & Wraps", items: [
+        ["Lamb Broth with Handcraft Mini Wontons","Handmade mini wontons, lamb, goji berries, green onion, cilantro, chili oil, white radish",1895],
+        ["Handcrafted Dumplings-Beef with Celery","Beef, celery, flour, seasoning",1695],
+        ["Uyghur Lamb Wraps (2 piece)","Lamb, tomato, onion, green pepper, home-made yogurt wrapped with naan",1795],
+        ["Uyghur Chicken Wraps (2 piece)","Chicken, tomato, onion, green pepper, home-made yogurt wrapped with naan",1695],
+      ] },
+      { name: "Soup and Stew", items: [
+        ["Stewed Mutton Soup","Lamb, goji berries, white radish, salt",399,null,"from"],
+        ["Braised Lamb Ribs","Lamb rib, white pepper, salt",2295],
+      ] },
+      { name: "Drinks", items: [
+        ["Honey Yuzu Flavor Yoghurt Beverage","",650],
+        ["Passion Fruit Flavor Yoghurt Beverage","",650],
+        ["Honey Lemon Flavor Yoghurt Beverage","",650],
+        ["Blueberry Flavor Yoghurt Beverage","",650],
+        ["Mango Flavor Yoghurt Beverage","",650],
+        ["Strawberry Flavor Yoghurt Beverage","",650],
+        ["Uyghur Special Milk Tea","Milk, black tea, butter, cream and salt (hot)",595],
+        ["Honey Lemon Tea","Black tea, honey and lemon (hot or cold)",450],
+        ["Soda","Choose Coke, Diet Coke or Sprite",250],
+      ] },
+      { name: "Dessert", items: [
+        ["Homemade Amine Yogurt","Home-made yogurt, almond and honey",695],
+        ["Yogourt Presse Cone with Fig Jam","Home-made yogurt cheese, fig jam, cone, dry rose",895],
+        ["Baklava","Layers of filo filled with chopped nuts and honey",495],
+      ] },
+    ],
+    siteNote: "Prices and full item list read from the Mountain View location's own menu page, https://kusanbazaar.com/menu/kusanbazaar-txusjq. Address, phone, hours, email, and Instagram link read from the Mountain View entry on the kusanbazaar.com homepage location listing.",
   },
 
   /*
@@ -3495,6 +3872,14 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: Site platform: own domain built on Owner.com ('Powered by Owner' in footer), ordering via the same domain plus an OrderSave app (kusanle0e.app.ordersave.com); pages load in a browser/WebFetch but curl gets a Cloudflare challenge (HTTP 403), so automated re-checks may fail
      flag: Logo: the only logo file on the site is the 'KUSAN COLLECTIVE / NEW UYGHUR FUSION' wordmark (black text on white, served as image/avif at 1352x264; append ?w=N&h=N&fit=contain for resized copies); no 'Kusan Bazaar' logo is published, and the Instagram avatar 'KÜSAN' roundel has no fetchable URL from own sources
      flag: Odd published prices: Stewed Mutton Soup $3.99+ and Flat Noodle $3.00 look like side/add-on sizes; Roasted Whole Lamb is $488.00+ and marked 'Advance booking required'; some descriptions are truncated on the site (e.g. Beef Noodle Soup ends with 'and White')
+     flag: Menu sweep 2026-09-09: Prices captured from the San Jose location's own order/menu page at https://kusanbazaar.com/menu/kusanuyghurcuisine-ggis5e (the San Jose-specific link found on https://kusanbazaar.com/page/locations), which itself displays the 1516 N 4th St, San Jose, CA address; the same prices also appear on the site's general https://kusanbazaar.com/menu page.
+     flag: Menu sweep 2026-09-09: Multi-location business: kusanbazaar.com also lists Milpitas (510 Barber Ln, order page kusanbazaar-bcnyw1) and Mountain View (634 N San Antonio Rd, order page kusanbazaar-txusjq) locations with their own order pages/pricing; only the San Jose (N 4th St) location, order page kusanuyghurcuisine-ggis5
+     flag: Menu sweep 2026-09-09: Location-specific branding: the San Jose order page URL slug and displayed name use 'Kusan Uyghur Cuisine', while Milpitas and Mountain View order pages use 'Kusan Bazaar'; the overall site/company brand is presented as 'Kusan Collective'.
+     flag: Menu sweep 2026-09-09: Hours contradiction: the homepage states approximate hours (lunch 10:30am-2:30pm, dinner 5-9pm on weekdays), while the dedicated Locations page gives more detailed San Jose-specific hours (Mon-Thu dinner starts 4:30pm not 5pm; Friday lunch starts 11am not 10:30am; Sunday 10:30am-9pm continuous). Bec
+     flag: Menu sweep 2026-09-09: Three items show a '+' after the listed price on the San Jose menu page (French-style Roasted Lamb Chops with Salads $18.95+, Stewed Mutton Soup $3.99+, Big Plate Chicken $24.95+), indicating a starting/base price with additional size or add-on options; the page text did not itemize the specific upc
+     flag: Menu sweep 2026-09-09: No Instagram or other social media links were found on the homepage or in its footer.
+     flag: Menu sweep 2026-09-09: Logo image is a small 64x64 icon-style graphic rather than a full wordmark; may be a favicon rather than the primary brand logo.
+     flag: Menu sweep 2026-09-09: Menu item Chinese-language translations shown alongside English names on the page were omitted from name/desc fields for clarity; only the English item names were captured.
   */
   'kusan-uyghur-cuisine-san-jose': {
     address: "1516 N 4th St, San Jose, CA 95112",
@@ -3503,7 +3888,56 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "kusanuyghurcuisine",
     cuisine: "Halal Uyghur, Central Asian",
     tagline: "Halal Uyghur Silk Road kitchen on N 4th St in San Jose",
-    contactOnly: "Halal Uyghur Silk Road kitchen on N 4th St in San Jose. The San Jose shop runs its own menu at its own prices on kusanbazaar.com; hours are printed two different ways on that site, so none are carried.",
+    sections: [
+      { name: "Appetizers & Salads", items: [
+        ["Samsa (2 piece per serve)","",795],
+        ["Uyghur Salad","",799],
+        ["Cucumber Salad With Yogurt","",799],
+        ["Eggplant With Mashed Garlic","",899],
+        ["Black Fungus Salads","",799],
+        ["Cold Chili Chicken","",950],
+        ["Sliced Beef With Sauce","",1095],
+      ] },
+      { name: "Grilled", items: [
+        ["Lamb Kebab (2 Skewers)","",995],
+        ["Chicken Kebab (2 Skewers)","",895],
+        ["Golden Crispy Roasted Lamb Rib","",2495],
+        ["Uyghur Roast Lamb Shank","",2599],
+        ["Grilled Naan","",250],
+        ["French-style Roasted Lamb Chops with Salads","",1895,null,"from"],
+      ] },
+      { name: "Soup & Stew", items: [
+        ["Stewed Mutton Soup","",399,null,"from"],
+        ["Braised Lamb Shank with Naan","",2495],
+        ["Braised Lamb Ribs","",2295],
+      ] },
+      { name: "Main Dish", items: [
+        ["Big Plate Chicken","",2495,null,"from"],
+        ["Flat Noodle","",300],
+        ["Laghman","",1995],
+        ["Polo (Served with Yogurt & Uyghur Salads)","",1895],
+        ["Beef Noodles Soup","",1695],
+        ["Lamb Noodles Soup","",1695],
+        ["Lamb Cumin Chao-mian","",1895],
+        ["Uyghur Lamb Wraps","",1695],
+        ["Uyghur Chicken Wraps","",1595],
+        ["Handcrafted Dumplings - Beef with Celery (10 Piece)","",1595],
+      ] },
+      { name: "Dessert", items: [
+        ["Homemade Amine Yogurt","",595],
+        ["Baklava","",495],
+      ] },
+      { name: "Drinks", items: [
+        ["Uyghur Special Milk Tea","",595],
+        ["Dogap Yoghurt Beverage (Sour)","",695],
+        ["Honey Yuzu Flavor Yoghurt Beverage","",695],
+        ["Passion Fruit Flavor Yoghurt Beverage","",695],
+        ["Honey Lemon Flavor Yoghurt Beverage","",695],
+        ["Honey Lemon Tea","",450],
+        ["Soda","",200],
+      ] },
+    ],
+    siteNote: "Prices captured from the San Jose location's own order/menu page at https://kusanbazaar.com/menu/kusanuyghurcuisine-ggis5e (the San Jose-specific link found on https://kusanbazaar.com/page/locations), which itself displays the 1516 N 4th St, San Jose, CA address; the same prices also appear on the site's general https://kusanbazaar.com/menu page.",
   },
 
   /*
@@ -3588,6 +4022,28 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Lucky Three Seven — gathered 2026-09-09 from own-domain
+     they are: Filipino
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: Starting point was only a GoFundMe link, which is not a valid fact source; one WebSearch call located an apparent own domain (luckythreeseven.com) and a NetWaiter ordering-platform page (luckythreeseven.netwaiter.com), both matching the business's address and phone.
+     flag: luckythreeseven.com footer copyright reads 'Lucky 777 LLC', supporting that this domain belongs to the business despite the mismatched order-online link found on it.
+     flag: luckythreeseven.com's 'Order Online' button links to https://order.online/store/chopped-nyc-ann-arbor-27977264/ which is an unrelated storefront (not Lucky Three Seven, not in Oakland) -- the link appears broken or misconfigured.
+     flag: No menu prices were found on either the own-domain site or the NetWaiter ordering-platform page; /menu (tried on both sites) and /order (tried on NetWaiter) all returned 404, so no priced menu could be located within the tool budget.
+     flag: luckythreeseven.com states payment is cash or Venmo/Zelle only, no credit cards accepted.
+     flag: No Instagram link found on either of the business's own pages (a separate Facebook page exists per search results but was not used as a source).
+     flag: No second location mentioned anywhere in the sources checked.
+     flag: Hours were stated only on the NetWaiter page; the own-domain homepage did not list hours at all, so there is no direct contradiction, but the schedule is sourced from a single page.
+  */
+  'lucky-three-seven': {
+    address: "2868 Fruitvale Ave, Oakland, CA 94602",
+    phone: "(510) 866-2023",
+    hours: "Sun, Wed–Sat 11:00 AM–7:00 PM; closed Mon–Tue",
+    cuisine: "Filipino",
+    tagline: "Filipino restaurant in Oakland serving comfort food and wings",
+    contactOnly: "Filipino restaurant in Oakland serving comfort food and wings. No priced menu could be found: luckythreeseven.com (their own domain) names only 3 sample dishes with no prices and its 'Order Online' button links to an unrelated business's order.online storefront; luckythreeseven.netwaiter.com (their NetWaiter ordering-platform page) lists restaurant info and hours but no menu or prices; /menu paths on both sites and /order on the NetWaiter site returned 404.",
+  },
+
+  /*
      Lush Spaw — gathered 2026-09-09 from own-domain
      they are: Pet grooming
      flag: Glenn: 'Three locations above' — the three addresses in their bio
@@ -3617,11 +4073,28 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Mac’s Old House — gathered 2026-09-09 from stopgap — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
+     Mac’s Old House — gathered 2026-09-09 from ordering-platform — BLOCKED: Squarespace subscription expired — no business content is published anywhere on the domain
+     they are: American steakhouse
      flag: the entire domain serves Squarespace's 'Website Expired' page — /, /menu, /sitemap.xml, www and bare, both user agents
+     flag: Menu sweep 2026-09-09: Prices captured from https://macsoldhouse.netwaiter.com/antioch/menu/, a single-business NetWaiter-hosted menu page (the business's own domain macsoldhouse.com is expired/inaccessible); that page credits the listing to a third-party service ('Locu') and the prices (e.g. $6.95 prime rib dinner specials, $1-$1.50 cocktails) read as a legacy/outdated menu rather than current pricing.
+     flag: Menu sweep 2026-09-09: Business's own domain https://www.macsoldhouse.com/ returns HTTP 404 and, when opened in a browser, shows a Squarespace 'Website Expired' page — the primary site is inactive; all data here came from the business's NetWaiter-hosted page (macsoldhouse.netwaiter.com/antioch) instead.
+     flag: Menu sweep 2026-09-09: That NetWaiter page states 'Online Ordering Not Available' and attributes its menu content to 'Locu', a third-party restaurant-data service that shut down years ago; prices appear stale/historical rather than current.
+     flag: Menu sweep 2026-09-09: Contradiction: Manhattan cocktail is priced at $1.00 under the 'New York Thursday' drink specials but $1.50 under the general 'Drinks' section on the same page.
+     flag: Menu sweep 2026-09-09: Two extraction passes of the same menu page disagreed on the Cajun Tuesday items — one pass listed Prime Rib, Chicken, and Trout (each $6.95, 'spicy and blackened' style) as three items; a second pass split out 'Spicy and Blackened' as its own $6.95 line and dropped Trout. The three-item version (Pr
+     flag: Menu sweep 2026-09-09: First-pass summaries showed the 'Cajun Tuesday' and 'Seafood Wednesday' complete-dinner prices with a trailing '+' (e.g. '$6.95+'), suggesting these may be starting/upgradeable prices; a later line-item pass showed flat prices with no '+'. Treated as 'from' pricing (label: "from") but this is not fu
+     flag: Menu sweep 2026-09-09: No appetizer, dessert, or standard (non-daily-special) full-price steak/prime rib dinner items were found in the captured content — plausibly an incomplete legacy menu capture rather than the restaurant's full historical offering.
+     flag: Menu sweep 2026-09-09: No email address, Instagram, or other social media link was found on any page checked.
+     flag: Menu sweep 2026-09-09: No logo image was found on any page checked.
+     flag: Menu sweep 2026-09-09: Per public news reporting (Antioch Herald, not the business's own site — used only for background context, not as a source for any field above), Mac's Old House reportedly closed permanently on June 22, 2025 after 42 years under prior ownership, with new owners reportedly planning to reopen in 2026;
+     flag: Menu sweep 2026-09-09: Only one physical location found; no evidence of a second location.
+     flag: Menu sweep 2026-09-09: macsoldhouse.com is expired; the NetWaiter menu credits Locu, a listing service that no longer exists; outside reporting says the restaurant closed in June 2025 — not printed on the page, since it is not their own statement, but his to check
   */
   'macs-old-house': {
-    needsSite: true,
+    address: "3100 E 18th St, Antioch, CA 94509",
+    phone: "(925) 757-9908",
+    hours: "Mon-Sun 4:00pm-10:00pm",
+    cuisine: "American steakhouse",
+    contactOnly: "Their own domain has expired and the only menu online is a NetWaiter page crediting a defunct listing service, so its prices are not carried; outside reporting says the restaurant closed in June 2025, which is his to confirm.",
   },
 
   /*
@@ -3682,6 +4155,33 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   'marina-bay-media': {
     instagram: "marinabaymedia",
     cuisine: "Marketing agency",
+  },
+
+  /*
+     Maymay’s Cravings — gathered 2026-09-09 from ordering-platform
+     their spelling: "Maymay’s Cravings Asian Snack bar" (roster keeps "Maymay’s Cravings")
+     they are: Filipino desserts
+     logo: https://static.wixstatic.com/media/3dff99_43ebae768a2549c4bcfd66a3701a4d0f~mv2.jpg/v1/fill/w_264,h_264,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3dff99_43ebae768a2549c4bcfd66a3701a4d0f~mv2.jpg (264) — not cut into a tile yet
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: Own-domain site found at maymayscravings.com (Wix) in addition to the order.online/DoorDash storefront. Its homepage is otherwise a near-empty template (browser title reads 'Refund Policy | Maymay's Cravings'; only visible text is 'Welcome to Maymay's Cravings') with no address, phone, or hours listed, and its footer social icons are unconfigured Wix placeholders (facebook.com/wix, instagram.com/wix, x.com/wix, tiktok.com/@wix) rather than the business's real profiles.
+     flag: That same own-domain homepage does embed one image of the business's actual printed menu board, which shows a logo and a real handle '@MAYMAYSCRAVINGS' next to the Instagram/Facebook icons (used here as the instagram field) — this is a different, more credible source for the handle than the placeholder footer icons on the same site.
+     flag: Price discrepancy between the two of the business's own pages: the printed menu board on maymayscravings.com shows lower prices than order.online for overlapping items, e.g. Mango Sago $9 vs $11, Buko Pandan $9 vs $11, Ube Sago $9 vs $11, Taho $8 vs $10, Tofu Pudding with Coconut Milk & Sago $10 vs $14, Creamy Tofu Pudding w/ Coconut Milk & Taro Balls $12 vs $15, Iced Taro Balls & Milk $11 vs $14, Iced Taro Balls w/ Boba Sago Grass Jelly & Red Bean $14 vs $17, same +Taro Paste $15 vs $18, Filipino Congee 'Lugaw' $7 vs $10 (as 'Filipino Congee (Lugaw) with Egg'). Likely reflects standard in-store-vs-delivery-platform markup. items[] uses the order.online prices per the sourcing instructions; not treated as a hours-style contradiction requiring nulling since it is a pricing difference, not a factual disagreement about a single fixed fact.
+     flag: The printed menu board also lists items/sections with no equivalent on order.online at all: a Signature Drinks list (Corn Latte, Ube Latte, Strawberry Latte, Mango Coconut, Matcha Coconut Water, each $6-$7.50), Pork Sinigang $18, a Bingsu category (Small $14 / Large $21, in Mango Cheesecake, Strawberry Cheesecake, Matcha Red Bean w/ Matcha Mochi Jelly, and Oreos & Brownies flavors), and Mango Sticky Rice Dessert / Mango Sticky Rice Drink at $10 each. These were not merged into items[] to avoid combining two disagreeing source menus.
+     flag: order.online's storeHeader describes the business as a 'Virtual Brand' with businessTags Filipino / Casual Dining / Fast Casual.
+     flag: Phone (408) 565-5287 and the street/city address fields were read from the ordering page's embedded structured order data, not from visibly rendered page text (no visible phone number or tel: link was found in the rendered page); the address string used here ('1349 Locust, Walnut Creek CA 94596-4511, United States') is the one visibly printed in the page's store-info banner.
+     flag: order.online shows two slightly different hour sets on the same page: the store's actual operating hours (used for the hours field here) and a several-minutes-shorter 'hours this store accepts DoorDash orders' cutoff each day — treated as complementary, not a contradiction.
+     flag: No email address found printed on either page (a DoorDash support-routing contact email exists only base64-encoded inside a Terms-of-Service link parameter, not displayed as page content, so it was not used).
+     flag: No second location found.
+     flag: Menu sweep 2026-09-09: 56 prices read from order.online were set aside because their own site's menu-board photo shows lower prices for the same items — a delivery mark-up, not the kitchen's price
+  */
+  'maymays-cravings': {
+    address: "1349 Locust, Walnut Creek CA 94596-4511, United States",
+    phone: "(408) 565-5287",
+    hours: "Mon-Tue 12pm-7:30pm, Wed-Sat 12pm-9pm, Sun 12pm-7:30pm",
+    instagram: "maymayscravings",
+    cuisine: "Filipino desserts",
+    tagline: "Filipino snack bar serving sago desserts, onigiri, and drinks",
+    contactOnly: "Filipino snack bar serving sago desserts, onigiri, and drinks. Their order.online storefront prints prices that run higher than the menu board on their own site (Mango Sago $11 against $9), the mark-up a delivery platform adds, so neither set is carried until they publish one list.",
   },
 
   /*
@@ -3872,13 +4372,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: no website found; a 'Mrs. Pho' is listed by Yelp at the same address, which may be the same operator or the previous tenant
      flag: address is from their own Instagram bio: 'At The Veranda, 2045 Diamond Blvd. Concord, California' — no suite number, no ZIP
      flag: no phone, no hours anywhere in their own words
+     flag: Menu sweep 2026-09-09, still no readable prices: No prices found: no official website or ordering-platform page (own domain, Toast, Square, ChowNow, or order.online) for Mrs. Ramen could be located within the search budget, and Instagram is not a valid price source.
+     flag: Menu sweep 2026-09-09: Only an Instagram handle (mrs.ramen_concord) was known going into this research; no website or ordering-platform URL was provided.
+     flag: Menu sweep 2026-09-09: One WebSearch call ('Mrs Ramen Concord The Veranda menu order online') was run per instructions; it returned no own-domain website or ordering-platform (Toast/Square/ChowNow/order.online) page belonging to Mrs. Ramen.
+     flag: Menu sweep 2026-09-09: Search results were dominated by a different business at the same shopping center, 'Mrs. Pho' (Vietnamese fusion, previously 'Silverlake Ramen' at that unit), at 2045 Diamond Blvd Ste Pv32, Concord -- this is NOT confirmed to be the same business as Mrs. Ramen and no facts from it were used or shoul
+     flag: Menu sweep 2026-09-09: Confirmed via WebFetch that an Instagram profile named 'Mrs. Ramen Concord' exists at the given handle, but its bio/link-in-bio could not be read (Instagram blocks unauthenticated scraping of profile content), so no link to a real site could be extracted.
+     flag: Menu sweep 2026-09-09: Attempted to find a Veranda shopping-center tenant-directory page for Mrs. Ramen (shoptheveranda.com) as a possible link source; the site blocked automated access (403 Forbidden).
+     flag: Menu sweep 2026-09-09: No street address, phone number, hours, logo, or menu prices could be confirmed from any business-owned source; all such fields are left null/empty per instructions rather than guessed.
+     flag: Menu sweep 2026-09-09: Possible second/related-location or naming confusion: worth verifying in person or via the business's own Instagram whether 'Mrs. Ramen' and 'Mrs. Pho' at The Veranda are related, a successor, or entirely separate businesses.
   */
   'mrs-ramen': {
     address: "2045 Diamond Blvd, Concord, CA",
     instagram: "mrs.ramen_concord",
     cuisine: "Ramen and seafood boil",
     needsSite: true,
-    contactOnly: "Seafood boil, ramen, Korean corn dogs and rice plates at The Veranda in Concord. No website yet — their menu is posted on their Instagram, where the boiling seafood bowl board reads $17.95 and a family pack $32.95.",
+    tagline: "Seafood boil, ramen, Korean corn dogs and rice plates at The Veranda in",
+    contactOnly: "Seafood boil, ramen, Korean corn dogs and rice plates at The Veranda in. No website yet — their menu is posted on their Instagram, where the boiling seafood bowl board reads $17.95 and a family pack $32.95.",
   },
 
   /*
@@ -3907,6 +4416,208 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ["Porchetta Sandwich","Fresh bread, porchetta, fontina, fennel, apple, arugula, caramelised onion aioli",1850],
     ],
     siteNote: "The full priced menu is published as image files; salads and pizzas are priced small and large; 'items subject to daily availability'.",
+  },
+
+  /*
+     One House Bistro — gathered 2026-09-09 from own-domain
+     they are: Thai & Asian Fusion
+     logo: https://www.blizzstatic.com/dynamicmedia/image/16051/6a7f647609547.png — not cut into a tile yet
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: Found via web search from an Instagram-only lead; business has its own site at onehousebistro.com plus a Toast ordering page (order.toasttab.com/online/onehousebistro), so the own-domain site was used
+     flag: Site displayed a 'temporarily closed, reopening September 9, 2026' banner at time of research (today's date)
+     flag: Some modifier upcharges are not captured as separate priced items: shrimp add-on (+$4) on Thai Lunch/Curry dishes, and yellow curry sauce add-on (+$4) on Samosa
+     flag: Yellow/Red/Green Curry and several Pad dishes are printed twice on the menu under different section headers (e.g. Thai Lunch vs Curry vs Thai Street Food) at the same price; both instances are recorded as separate items since sections differ
+     flag: One item's name was normalized from an apparent typo 'Pad See Ev' to 'Pad See Ew' to match the identical dish's spelling elsewhere on the same menu
+  */
+  'one-house-bistro': {
+    address: "2468 San Ramon Valley Boulevard, San Ramon, CA 94583",
+    phone: "(925) 235-8888",
+    hours: "Mon-Fri 8:30am-2:30pm & 5-9pm, Sat-Sun 8am-2:30pm & 5-9pm",
+    instagram: "onehousebistro",
+    cuisine: "Thai & Asian Fusion",
+    tagline: "Thai and Asian fusion breakfast, brunch, and dinner restaurant",
+    sections: [
+      { name: "Breakfast Salad", items: [
+        ["Athenian Salad","Arugula, mixed greens, cucumbers, cherry tomatoes, red onions, olives, goat cheese with cilantro lime vinaigrette",1900],
+        ["Asian Salad","Romaine, carrots, cucumbers, edamame, mandarin oranges, green onions, cilantro, crispy wonton strips, cashew nut, grilled chicken with asian dressing",2300],
+        ["Ocean's Salad","Mixed green with grilled shrimp, smoked salmon, avocado, cherry tomatoes, cucumbers, fried capers and parmesan, cilantro lime vinaigrette",2800],
+      ] },
+      { name: "Egg Plate", items: [
+        ["Two Eggs Any Style","",1600],
+        ["Egg Plate with Applewood Bacon","",2100],
+        ["Egg Plate with Chicken Mango Sausage","",2100],
+        ["Egg Plate with Pork Sausage","",2100],
+        ["Egg Plate with Thai Pork Sausage","",2300],
+        ["Egg Plate with New York Steak","",2800],
+      ] },
+      { name: "Scrambles / Omelet", items: [
+        ["Green Garden","Baby spinach, monterey jack, parmesan",1900],
+        ["Athenian","Mushroom, olives, arugula, goat cheese",1900],
+        ["Frisco","Chicken mango sausage, mushroom, red onion, avocado, mild cheddar",2200],
+        ["Breakfast Meat","Bacon, pork sausage, Canadian ham, mild cheddar",2300],
+        ["South of the Border","Chorizo, cherry pepper, avocado, monterey jack with fresh salsa",2200],
+        ["Pacific Morning","Shrimp, spinach, red onion, fried capers, monterey jack",2500],
+        ["Ocean Sunrise","Fresh Dungeness crab, green onion, asparagus, monterey jack, parmesan",2900],
+      ] },
+      { name: "Benedict", items: [
+        ["Classic Benedict","Canadian bacon, Meyer lemon hollandaise",1900],
+        ["Florentine Benedict","Baby spinach, tomato, Meyer lemon hollandaise, parmesan",2000],
+        ["Fried Chicken Benedict","Fried chicken, Meyer lemon hollandaise",2200],
+        ["The Salmon Benney","Smoked salmon, sliced lemon, fried caper, Meyer lemon hollandaise",2500],
+        ["Crab Benedict","Fresh Dungeness crab meat, asparagus, sliced lemon, fried caper, Meyer lemon hollandaise, parmesan",2900],
+      ] },
+      { name: "Bun & Bread", items: [
+        ["Classic Burger","Angus beef patty, mild cheddar, lettuce, tomato, red onion, pickles and aioli on toasted brioche bun",2100],
+        ["California Burger","Angus beef patty, monterey jack, arugula, tomato, red onion, pickles and jalapeno ranch on toasted brioche bun",2300],
+        ["One House Shrimp Burger","Crispy shrimp donut, lettuce, avocado, red onion and spicy aioli sauce on toasted brioche bun",2500],
+        ["Breakfast Sandwich","Bacon, scrambled egg, spinach, mild cheddar and aioli on ciabatta roll",2100],
+        ["B L T A","Bacon, lettuce, tomato, avocado and aioli on ciabatta roll",2100],
+        ["Chicken Melt","Chicken mango sausage, spinach, tomato and aioli on ciabatta roll",2100],
+        ["Mushroom Melt","Mushroom, pesto, mayo and monterey jack on ciabatta roll",2000],
+      ] },
+      { name: "Healthy Choice", items: [
+        ["Mix Fruit with Greek Yogurt","",1200],
+        ["Avocado Toast","Texas toast, sliced avocado, radish, red pickle onion, olive oil with poached egg",1500],
+        ["Pimavera Omelet","Egg white omelet, arugula, bell pepper, mushroom, tomato, scallion with salad and english muffin",2500],
+      ] },
+      { name: "Kid's Zone", items: [
+        ["Kid Pancake","One pancake and one scrambled egg with bacon or chicken sausage or pork sausage",1500],
+        ["One Egg Plate (Kids)","One scrambled egg with bacon or chicken sausage or pork sausage and mixed fruit",1400],
+        ["Grilled Cheese (Kids)","Wheat toast with melted mild cheddar, swiss cheese with french fries",1400],
+      ] },
+      { name: "Breakfast Side", items: [
+        ["Toast","",400],
+        ["Avocado","",300],
+        ["One Egg","",300],
+        ["Two Eggs","",600],
+        ["Bacon","",700],
+        ["Chicken Sausage","",700],
+        ["Pork Sausage","",700],
+        ["Thai Pork Sausage","",900],
+        ["One Pancake","",900],
+        ["One French Toast","",800],
+        ["Fried Chicken","",900],
+        ["Grill Chicken","",800],
+        ["Potato Medley","",600],
+        ["French Fries","",600],
+        ["Fresh Salsa","",300],
+        ["Hollandaise Sauce","",300],
+        ["New York Steak (Side)","",1500],
+      ] },
+      { name: "Sweet & Sweet", items: [
+        ["Fried Chicken & Waffles","Served with mixed berry, sugar powder, and maple syrup",2000],
+        ["Citrus French Toast","Served with mixed berry, sugar powder, butter and maple syrup",1800],
+        ["Sweet Waffles","Served with mixed berry, sugar powder, vanilla ice cream and whip cream",1500],
+        ["Butter Milk Pancakes","Served with mixed berry, sugar powder, butter and maple syrup",1800],
+        ["Banana Strawberry Nutella Crepe","Served with whipped cream and sugar powder",1500],
+      ] },
+      { name: "Appetizers", items: [
+        ["Steamed House Dumplings (5)","Prawns & pork in wontons, house soy sauce, fried garlic",1200],
+        ["Crab Rangoon (6)","Wild crab cream cheese wontons, house cherry sauce",1400],
+        ["Samosa (4)","Vegetables, pastry puffs, cucumber salad",1400],
+        ["Tuna Tower","Wild tuna, avocado, mango, masago, sweet soy with crispy rice paper",1800],
+        ["Crispy Prawn Rolls (5)","Hand wrapped marinated prawns with egg roll shells, house sweet chili sauce",1400],
+        ["Avocado Spring Roll (3)","Avocado and herbs in egg roll shells, house cherry sauce",1500],
+        ["Fresh Rolls (2)","Prawns or avocado, spring mix, rice paper, peanut sauce",1100],
+        ["Pot Stickers (6)","Fried gyoza with chicken and veggie, house soy sauce",1100],
+        ["Chicken Satay (4)","Marinated chicken breast, cucumber salad, peanut sauce",1300],
+        ["Roti and Yellow Curry","Crispy fried roti, yellow curry sauce",1400],
+        ["Garlic Pepper Wings (6)","Marinated and fried battered wings and sweet chili garlic sauce",1500],
+        ["Crispy Shrimp Donut (3)","Marinated shrimp, pork fat, cilantro and sweet spicy plum sauce",1500],
+        ["Vegetable Egg Rolls (4)","Veggies, glass noodle, in egg roll shell with sweet chili sauce",1100],
+      ] },
+      { name: "Thai Lunch", items: [
+        ["Pad Thai (Thai Lunch)","Thin rice noodles, eggs, tofu, scallions, beansprout, and peanuts; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Pad See Ew (Thai Lunch)","Wild rice noodles, eggs, broccoli and carrots; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Pad Kee Mao (Thai Lunch)","Wild rice noodles, basil, bell peppers, onion and carrots; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Fried Rice (Thai Lunch)","Eggs, tomato, carrots and scallion; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Pad Gra Prow (Thai Lunch)","Basil, bell peppers, onion and carrots; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["String Bean (Thai Lunch)","Thai chili paste, basil, green bean and bell pepper; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Eggplant (Thai Lunch)","Eggplant, basil, bell pepper and onion; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Yellow Curry (Thai Lunch)","Broccoli, carrot, onion and potato; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Red Curry (Thai Lunch)","Broccoli, carrot, bell pepper, basil and green bean; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Green Curry (Thai Lunch)","Broccoli, carrot, bell pepper, basil, green bean and eggplant; choice of chicken, pork, beef, tofu or vegetable",1800],
+      ] },
+      { name: "Soups", items: [
+        ["Tom Kha","Mild creamy coconut milk and herbs broth, mushroom, scallions, red onions, cilantro, chili paste; choice of chicken, pork, beef, tofu or vegetable",800],
+        ["Tom Yum","Mild lemongrass and herbs broth, mushroom, scallions, red onions, cilantro, chili paste; choice of chicken, pork, beef, tofu or vegetable",800],
+      ] },
+      { name: "Thai Salad", items: [
+        ["Beet Salad","Spring mix, candied walnut, dried cranberries, mandarin oranges, strawberries, parmesan cheese and vinaigrette",1700],
+        ["Papaya Salad","Grilled shrimps, shredded papaya, peanuts, tomatoes, carrots, lime dressing",1700],
+        ["Thai Beef Salad","Medium rare beef, red onion, scallions, cilantro, roasted rice, roasted chilies, lime dressing",1700],
+      ] },
+      { name: "Curry", items: [
+        ["Yellow Curry","Carrot, onion and potato; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Red Curry","Broccoli, carrot, bell pepper, basil and green bean; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Green Curry","Broccoli, carrot, bell pepper, basil, green bean and eggplant; choice of chicken, pork, beef, tofu or vegetable",1800],
+      ] },
+      { name: "Thai Street Food", items: [
+        ["Pad Thai","Thin rice noodles, eggs, fried tofu, chive, beansprout, and peanuts; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Pad See Ew","Wild rice noodles, eggs, broccoli and carrots; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Pad Kee Mao","Wild rice noodles, basil, bell peppers, onion and carrots; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Fried Rice","Eggs, tomato, onion and scallion; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Spicy Basil Fried Rice","Carrots, scallion, basil, onion, bell peppers; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Pineapple Fried Rice","Eggs, cashewnut, raisin, garlic, scallion, pineapples, curry powder; choice of chicken, pork, beef, tofu or vegetable",1900],
+        ["Pad Gra Prow","Basil, bell peppers, onion and carrots; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["String Bean","Thai chili paste, basil, green bean and bell pepper; choice of chicken, pork, beef, tofu or vegetable",1800],
+        ["Eggplant","Eggplant, basil, bell pepper and onion; choice of chicken, pork, beef, tofu or vegetable",1800],
+      ] },
+      { name: "Special of the House", items: [
+        ["Khao Soi","Northern Thai style curry, crispy egg noodles, steamed egg noodles, chicken, red onion, scallion, cilantro",2000],
+        ["Wild Lobster Pad Thai","Wild lobster, prawns, thin rice noodle, eggs, fried tofu, chive and peanut",3000],
+        ["Lychee Salmon","Grilled salmon, red curry, lychee, cherry tomatoes",2800],
+        ["Seafood Paradise","Shrimp, green mussels, scallops, asparagus, zucchini, carrot, broccoli, bell pepper, red curry",3500],
+        ["Angus Beef Curry","Slow cooked angus beef, panang curry",2200],
+        ["Fried Whole Snapper","Crispy fried whole snapper, spring mix salad, Thai spicy lime sauce",3500],
+        ["Tom Yum Spaghetti","Spaghetti noodles, tom yum paste, mushroom, tomato, scallion",1800],
+        ["Drunken Spaghetti","Spaghetti noodles, basil, bell pepper, onion and carrot",1800],
+        ["Crab Fried Rice","Crab meat, eggs, carrots and scallion",2500],
+      ] },
+      { name: "Thai Side", items: [
+        ["Jasmine Rice","",300],
+        ["Brown Rice","",400],
+        ["Sticky Rice","",400],
+        ["Cucumber Salad","",700],
+        ["Steamed Veggies","",700],
+        ["Fried Roti (1)","",400],
+      ] },
+      { name: "Hot Drink", items: [
+        ["House Coffee","",500],
+        ["Espresso","",400],
+        ["Americano","",500],
+        ["Latte","",700],
+        ["Cappuccino","",700],
+        ["Salted Caramel Macchiato","",900],
+        ["Mocha","",800],
+        ["Chai Latte","",700],
+        ["Matcha Latte","",700],
+        ["Ube Latte","",700],
+        ["Hot Chocolate","",700],
+        ["Hot Tea","",700],
+      ] },
+      { name: "Beverages", items: [
+        ["Fresh Squeezed Orange Juice","",700],
+        ["Lemonade","",600],
+        ["Coke","",400],
+        ["Diet Coke","",400],
+        ["Coke Zero","",400],
+        ["Sprite","",400],
+        ["Regular Iced Tea","",600],
+        ["Thai Iced Tea","",700],
+        ["Arnold Palmer","",700],
+        ["Thai Iced Green Tea","",700],
+        ["Ginger Beer","",600],
+        ["Mochi Yuzu","",800],
+        ["Maison Perrier","",500],
+        ["Acqua Panna Natural","",500],
+        ["Apple Juice","",500],
+        ["Cranberry Juice","",500],
+        ["Milk","",400],
+        ["Chocolate Milk","",400],
+      ] },
+    ],
+    siteNote: "Full priced menu text taken from onehousebistro.com/menu (their own domain); address, phone, and hours confirmed from the onehousebistro.com homepage.",
   },
 
   /*
@@ -3979,6 +4690,13 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: Parking is described two ways: the site banner says '2 Hours of Free Parking at the public parking garage conveniently located next to our restaurant', the contact page says 'complimentary parking in the covered lot behind the restaurant' (one block from Pleasant Hill/Contra Costa Centre BART)
      flag: Beer & Wine list looks dated: vintages 2016-2020 only, with typos ('Colorada', 'Sam Jose')
      flag: The site itself has no Instagram or social links; the handle comes only from the operator's screenshot of the profile (@paradakitchen, category 'Peruvian Restaurant', bio 'Dine in & Take out: Mon-Thu 11am-9pm Fri-Sat 11am-10pm', identical to the site's hours)
+     flag: Menu sweep 2026-09-09, still no readable prices: No prices are printed anywhere on paradakitchen.com; the dinner, brunch, and cocktails menu pages all list item names and descriptions but omit every price (the cocktails page explicitly tells customers to call for current pricing). Their Toast ordering page (order.toasttab.com/online/parada-wc-7001
+     flag: Menu sweep 2026-09-09: Business name given in this task ('Parada New Peru') does not match the name used on their own site, which calls itself 'Parada Kitchen' (also 'Parada Peruvian Kitchen' on the dinner-menu page, and 'parada-peruvian-kitchen' in their OpenTable listing)
+     flag: Menu sweep 2026-09-09: No prices printed anywhere on paradakitchen.com across dinner, brunch, and cocktails menu pages
+     flag: Menu sweep 2026-09-09: Their Toast online-ordering page (order.toasttab.com/online/parada-wc-7001-sunne-ln-suite-116) returned HTTP 403 Forbidden, so any prices it carries could not be read
+     flag: Menu sweep 2026-09-09: Site-listed hours cover only Mon-Thu and Fri-Sat; no Sunday hours are stated anywhere found
+     flag: Menu sweep 2026-09-09: No Instagram link found in the site's HTML on the homepage or contact page
+     flag: Menu sweep 2026-09-09: Toast ordering URL slug references 'Suite 116' though the printed address on the site's own pages does not include a suite number
   */
   'parada-new-peru': {
     address: "7001 Sunne Lane, Walnut Creek, CA 94597",
@@ -4170,6 +4888,183 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Pho De Nguyen — gathered 2026-09-09 from own-domain
+     they are: Vietnamese
+     logo: https://website-cdn.menusifu.com/public/images/Transparent+Logo.png — not cut into a tile yet
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: Task's location 'San Mateo CA' does not match either of the business's two locations (San Bruno, CA and San Francisco, CA); the San Bruno address includes 'San Mateo Ave' as its street name, which is likely the source of the mix-up
+     flag: Business operates two locations with different phones and hours: San Bruno (650-873-1388, used here) and San Francisco at 501 6th Street (415-904-9888, Mon-Fri 10am-2am next day, Sat 5pm-11:45pm, Sun 12am-2am) — only the San Bruno location's data is recorded in this file
+     flag: Address discrepancy between the business's own pages: phodenguyen.com homepage prints '586-A San Mateo Ave', while the online-ordering platform's store-info footer prints '586 San Mateo Ave' (no '-A')
+     flag: No Instagram link or email address found anywhere on phodenguyen.com, despite this task being given an Instagram handle for the business
+     flag: A few items appear twice on the ordering menu under different section headers at the same price (e.g. 'Filet Mignon' $8 under both Soups and Sides, 'Noodles' $4 under both Extras and Sides) — likely the same add-on offered in multiple contexts, recorded here as separate entries since sections differ
+     flag: One vegetarian item's printed name was truncated on the ordering page ('Fresh Spring Rolls W/' with no object after 'W/'); recorded here as 'Fresh Spring Rolls'
+  */
+  'pho-de-nguyen': {
+    address: "586-A San Mateo Ave, San Bruno, CA 94066",
+    phone: "650-873-1388",
+    hours: "Tue-Fri 10am-3pm & 4-9pm, Sat 10am-9pm, Sun 10am-8pm, closed Mon",
+    cuisine: "Vietnamese",
+    tagline: "Vietnamese restaurant known for pho, banh mi, and noodles",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Shrimp Egg Rolls","Fried",800],
+        ["Fries","",600],
+        ["Salt + Pepper Wings","",1000],
+        ["Sticky Wings","",1000],
+        ["GlutenFree Sticky Wings","",1000],
+        ["Goi Ga","Cold citrus chicken salad with peanuts",1500],
+        ["Shrimp Spring Rolls","",1300],
+        ["Roast Duck Skin Chips","",1200],
+        ["GlutenFree Parmesan Wings","",1000],
+        ["The Sampler","2 pork+chicken egg rolls, 2 shrimp egg rolls, 2 roast duck skewers, 2 shrimp spring rolls, 4 sticky wings",2600],
+        ["Crab Rangoon (6)","Crispy deep fried wonton stuffed with cream cheese, imitation crab meat, onions",1300],
+        ["Deep Fried Wonton (8)","Wonton stuffed with shrimp and pork",1400],
+        ["Beef Spring Roll","",1100],
+        ["Chicken Spring Roll","",1100],
+        ["Imperial Rolls","",1500],
+        ["Parmesan Wings","",1000],
+        ["Carpaccio","",1900],
+        ["Deep Fried Imperial Roll","",1600],
+      ] },
+      { name: "Soups", items: [
+        ["Oxtail Pho Dac Biet","Special combination with oxtail",2200],
+        ["Pho Dac Biet","Special combination: filet mignon, flank, brisket, and beef meatballs",1900],
+        ["Pho Tai - Rare Angus Steak","Filet mignon",1900],
+        ["Pho Bo Vien","Meatballs",1900],
+        ["Pho Tai Gau","Rare steak + brisket",1900],
+        ["Pho Gau (Brisket Pho)","Brisket only",1900],
+        ["Pho Ga","Chicken pho",1900],
+        ["Pho Vit Quay","Roast duck pho",2400],
+        ["Pho Tom","Shrimp",2000],
+        ["Bun Bo Hue","Spicy beef noodle soup, served with thin vermicelli",1900],
+        ["Duck Bun Bo Hue","",2800],
+        ["Filet Mignon (Soup Topping)","",800],
+        ["Wonton Noodles Soup","Shrimp & pork dumpling served in chicken broth egg noodles, topped with bok choy",2000],
+        ["Oxtail Pho","Pho served with only oxtails",2600],
+      ] },
+      { name: "Rice Plates", items: [
+        ["Spicy Lemongrass Filet Mignon + Rice","",2300],
+        ["Spicy Lemongrass Chicken + Rice","",2100],
+        ["Five Spice Chicken + Rice","",2100],
+        ["Ca Ri","",1500],
+        ["Com Thit Nuong Rice Plate","Rice plate with protein, egg rolls, and fish sauce dressing",2100],
+      ] },
+      { name: "Vermicelli Bowls", items: [
+        ["Bun Thit Nuong Dry Vermicelli Bowl","Dry vermicelli bowl with protein, egg rolls, and fish sauce dressing",2000],
+      ] },
+      { name: "Garlic Noodles", items: [
+        ["Garlic Noodles","",1500],
+      ] },
+      { name: "Banh Mi", items: [
+        ["Beef Short Rib Banh Mi","",1800],
+        ["Chicken Salad Banh Mi","",1700],
+        ["Lemongrass Beef Banh Mi","",1700],
+        ["Lemongrass Chicken Banh Mi","",1700],
+        ["Duck Banh Mi","",2000],
+      ] },
+      { name: "Vegetarian", items: [
+        ["Veggie Egg Rolls","",700],
+        ["Fresh Spring Rolls","",1300],
+        ["Salt + Pepper Tofu","",1300],
+        ["Vegan Pho","",1800],
+        ["Shaken Leaf W/ Rice","",1600],
+        ["Spicy Eggplant + Tofu Stir Fry W/ Rice","",1900],
+        ["Tofu Vermicelli Bowl","",1400],
+        ["Vegan Ca Ri (Curry)","",1600],
+        ["Garlic Bok Choy","",1300],
+        ["Vegan Bun Bo Hue","",1100],
+      ] },
+      { name: "Drinks", items: [
+        ["Ca Phe Sua Da","Vietnamese iced coffee with condensed milk",600],
+        ["Thai Tea","",600],
+        ["Coconut Water","Can",600],
+        ["Bottled Water","",250],
+        ["Coke","",400],
+        ["Diet Coke","",400],
+        ["Sprite","",400],
+        ["Sunkist","",400],
+        ["Coke Zero","",400],
+      ] },
+      { name: "Extras", items: [
+        ["Noodles (Extra)","",400],
+        ["Wings (Extra)","",600],
+        ["Chicken (Extra)","",400],
+        ["Shrimp (Extra)","",600],
+        ["Corkage","",1100],
+        ["Extra Garnish","",300],
+      ] },
+      { name: "Catering Menu", items: [
+        ["Pork+Chicken Egg Rolls (Catering)","",4100],
+        ["Shrimp Egg Rolls (Catering)","",4100],
+        ["Vegetarian Egg Rolls (Catering)","",4100],
+        ["Chicken Potstickers (Catering)","",5100],
+        ["Shrimp Spring Rolls (20 Pcs)","Fresh rice paper rolls + peanut sauce",10100],
+        ["Pork Spring Rolls (20 Pcs)","Fresh rice paper rolls + peanut sauce",10100],
+        ["Tofu Spring Rolls (20 Pcs)","Fresh rice paper rolls + peanut sauce",10100],
+        ["Garlic Pork Banh Mi (10 Pcs)","",16100],
+        ["Chicken Banh Mi (10 Pcs)","",16100],
+        ["Duck Banh Mi (10 Pcs)","",16100],
+        ["Eggplant Tofu Banh Mi (10 Pcs)","",16100],
+        ["Fries (Catering)","",3600],
+        ["Salt & Pepper Wings (Catering)","Wings for catering are all gluten free",6600],
+        ["Sticky Wings (Catering)","",6600],
+        ["Parmesan Wings (Catering)","",6600],
+        ["Salt & Pepper Tofu (Tray)","",5100],
+        ["Garlic Bok Choy (Tray)","",5100],
+        ["Garlic String Beans (Tray)","",5100],
+        ["Shaken Leaf (Tray)","",8600],
+        ["Lemongrass Tofu (Tray)","",8600],
+        ["Spicy Eggplant Tofu (Tray)","",8600],
+        ["Chicken Lemongrass (Tray)","",9100],
+        ["Beef Lemongrass (Tray)","",9100],
+        ["Pork Lemongrass (Tray)","",9100],
+        ["Shrimp Lemongrass (Tray)","",9100],
+        ["Chicken Fried Rice (Tray)","",12100],
+        ["Beef Fried Rice (Tray)","",12100],
+        ["Pork Fried Rice (Tray)","",12100],
+        ["Tofu Fried Rice (Tray)","",12100],
+        ["Duck Fried Rice (Tray)","",16100],
+        ["Shrimp Fried Rice (Tray)","",16100],
+        ["Crab Fried Rice (Tray)","",16100],
+        ["Steamed Rice (Tray)","",2100],
+        ["Plain Garlic Noodle (Tray)","Stir fry thick egg noodles with butter, garlic, topped with freshly grated parmesan and basil",7600],
+        ["Chicken Garlic Noodle (Tray)","Stir fry thick egg noodles with butter, garlic, topped with freshly grated parmesan and basil",12100],
+        ["Beef Garlic Noodle (Tray)","Stir fry thick egg noodles with butter, garlic, topped with freshly grated parmesan and basil",12100],
+        ["Duck Garlic Noodle (Tray)","Stir fry thick egg noodles with butter, garlic, topped with freshly grated parmesan and basil",12100],
+        ["Shrimp Garlic Noodle (Tray)","Stir fry thick egg noodles with butter, garlic, topped with freshly grated parmesan and basil",12100],
+        ["Tofu Garlic Noodle (Tray)","Stir fry thick egg noodles with butter, garlic, topped with freshly grated parmesan and basil",12100],
+        ["Masabi Ranch Steak w. Chimichurri Sauce (1Lbs) (Tray)","",5100],
+        ["Chicken Salad (Carrot) (Tray)","Goi Ga: cold chicken citrus salad with cabbage, carrot, mixed herbs, peanuts, fried shallot",6100],
+        ["Chicken Salad (Daikon) (Tray)","Goi Ga: cold chicken citrus salad with cabbage, daikon, mixed herbs, peanuts, fried shallot",6100],
+        ["Mixed Greens (Tray)","",4100],
+        ["Vermicelli Noodles (S) (Tray)","",2100],
+        ["Sugarcane Juice (1/2 Gal)","",3400],
+        ["Sugarcane Juice (Gal)","",6000],
+        ["Thai Tea (10 Cups)","",5100],
+        ["Vietnamese Ice Coffee (10 Cups)","",5100],
+      ] },
+      { name: "Sides", items: [
+        ["Extra Noodles On Side","",400],
+        ["Extra Noodles Broth","",800],
+        ["Rice","",300],
+        ["Broth","",900],
+        ["Oxtail","",1100],
+        ["Filet Mignon (Side)","",800],
+        ["Fried Egg","",300],
+        ["Grilled Eggplant","",600],
+        ["Vegetables On The Side","",600],
+        ["Noodles (Side)","",400],
+        ["Vegetables","",600],
+        ["Quarter Roast Duck","",1400],
+      ] },
+      { name: "Sugarcane HQ", items: [
+        ["Fresh Pressed Sugarcane Juice","",800],
+      ] },
+    ],
+    siteNote: "Full priced menu taken from the business's own MealKeyway/MenuSifu online-ordering page for the San Bruno location (order.mealkeyway.com, linked from phodenguyen.com); phodenguyen.com's own pages list business info but no text price list, so the JS-rendered ordering page was read via a browser to get prices.",
+  },
+
+  /*
      Pho Nation — gathered 2026-09-09 from stopgap
      they are: Vietnamese
      flag: hours, phone and address from the Apple Maps card he sent
@@ -4319,13 +5214,142 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Indian pizza
      flag: a third location in Fresno is on their site and is not seated here
      flag: Glenn delivers to this one weekly and plans to show the owner her page
+     flag: Menu sweep 2026-09-09: Prices are from Pijja Paradise's own dedicated website for the Livermore location, pijjaparadiselivermore.com (its menu/order page).
+     flag: Menu sweep 2026-09-09: Displayed prices are non-round numbers (e.g. $18.71, $23.39, $53.81) that are close to common round base prices multiplied by about 1.17 (e.g. $15.99x1.17=$18.71; $19.99x1.17=$23.39), suggesting an online-ordering surcharge of roughly 17% is baked into every price shown on this page.
+     flag: Menu sweep 2026-09-09: Pittsburg and Livermore show different menus and different prices for similarly named pizzas (e.g. Livermore 'Cheese Pizza' $18.71 vs Pittsburg 'Cheese Pizza / Create Your Own Pizza' $19.55+) even though both are Pijja Paradise locations — recorded as two separate menus as instructed, not one shared
+     flag: Menu sweep 2026-09-09: 'Soda' is listed at $3.50 in both a 'Desserts' block and a 'Drinks' block on this page; recorded once, under Drinks.
+     flag: Menu sweep 2026-09-09: 'Side Jalapeno' ($1.17) is listed under both 'Appetizers' and a separate 'Sides' heading on this page; recorded once, under Appetizers.
+     flag: Menu sweep 2026-09-09: The business's main domain pijjaparadise.com is unreachable (SSL/TLS handshake failure); this Livermore data instead comes from the location's own dedicated domain, pijjaparadiselivermore.com.
+     flag: Menu sweep 2026-09-09: A third location (Fresno, 2767 W Shaw Ave 106, Fresno CA 93711) exists per pijjaparadise.menufy.com/locations, in addition to the two requested.
+     flag: Menu sweep 2026-09-09: menufy.com lists the Livermore address with a suite number ('922 Larkspur Dr A1') while pijjaparadiselivermore.com omits the suite.
+     flag: Menu sweep 2026-09-09: No Instagram link or logo image URL found on pijjaparadiselivermore.com; no email address found either.
   */
   'pijja-paradise-livermore': {
     address: "922 Larkspur Dr Suite A1, Livermore, CA 94551",
     phone: "(925) 800-5934",
+    hours: "Mon-Sun 9am-11pm",
     cuisine: "Indian pizza",
     tagline: "Indian-style pizza on Larkspur Drive",
-    contactOnly: "Indian-style pizza on Larkspur Drive. Their site takes orders per location; the menu and prices are behind it.",
+    sections: [
+      { name: "Pizzas", items: [
+        ["Cheese Pizza","",1871],
+        ["Chili Paneer Pizza","",2339],
+        ["Butter Chicken Pizza","",2339],
+        ["Heart Attack Pizza","",2339],
+        ["Achari Chicken Pizza","",2339],
+        ["Tandoori Chicken Pizza","",2339],
+        ["Garden Vegetarian Pizza","",2339],
+        ["Tandoori Paneer Pizza","",2339],
+        ["Achari Paneer Pizza","",2339],
+        ["Chicken Tikka Masala Pizza","",2339],
+        ["California Chicken Club Pizza","",2339],
+        ["Royal Shahi Paneer Pizza","",2339],
+        ["Curry Chicken Pizza","",2339],
+        ["Achari Gobi Pizza","",2339],
+        ["World Meatijja Pizza","",2339],
+        ["Aloha Pineapple Express Pizza","",2339],
+        ["BBQ Chicken Lovers Pizza","",2339],
+        ["Greek Pizza","",2339],
+        ["Garlic Vegetarian Pizza","",2339],
+        ["Mexican Taco Pizza","",2339],
+        ["You Say Potato Pizza!!!","",2339],
+        ["Curry Paneer Pizza","",2339],
+        ["Veggie Curry Pizza","",2339],
+        ["World Supreme Pizza","",2339],
+        ["Lamb Kabab Pizza","",2573],
+      ] },
+      { name: "Appetizers", items: [
+        ["Side Jalapeno","",117],
+        ["Side Ranch Dressing","",139],
+        ["Regular Fries","",584],
+        ["Veg Samosa","",584],
+        ["Truffle Fries","",935],
+        ["Garlic Fries","",935],
+        ["Cheesey Fries","",935],
+        ["Chicken Tenders","",935],
+        ["Garlic Sticks with Cheese","",1052],
+        ["Potato Munchies","",1052],
+        ["Jalapeno Peppers","",1052],
+        ["Cauliflower Bites","",1052],
+        ["Mozzarella Sticks","",1052],
+        ["Fried Mushrooms","",1052],
+        ["Boneless Wings","",1169],
+        ["Indian Masala Breadsticks","",1169],
+        ["Pesto Garlic Sticks","",1169],
+        ["Traditional Wings","",1169],
+        ["Paneer Tikka Quesadilla","",1169],
+        ["Mac & Cheese","",818],
+        ["Loaded Fries","",1286],
+        ["Loaded Mac & Cheese","",1286],
+        ["Achari Chicken Wings","",1286],
+        ["Tandoori Chicken Wings","",1286],
+        ["Chicken Tikka Quesadilla","",1286],
+        ["Buffalo Mac & Cheese","",1286],
+      ] },
+      { name: "Burgers & Sandwiches", items: [
+        ["Hamburger","",935],
+        ["Cheeseburger","",1052],
+        ["Veggie Patty Burger","",1052],
+        ["Crispy Chicken Sandwich","",1052],
+        ["Spicy Chicken Sandwich","",1169],
+        ["Veggie Patty Noodles Burger","",1286],
+        ["Butter Chicken Sandwich","",1286],
+        ["Paneer Tikka Sandwich","",1286],
+        ["Italian Sandwich","",1286],
+        ["Mushroom Swiss Burger","",1286],
+        ["Shahi Paneer Sandwich","",1286],
+        ["Tandoori Chicken Sandwich","",1286],
+        ["Tandoori Paneer Sandwich","",1286],
+        ["Grilled Chicken Sandwich","",1286],
+        ["Pastrami Cheese Burger","",1403],
+        ["Double Cheeseburger","",1403],
+        ["Avocado Swiss Burger","",1403],
+        ["BBQ Bacon Cheeseburger","",1403],
+        ["Pastrami Swiss Sandwich","",1520],
+        ["Heart Attack Burger","",1754],
+        ["5 Patty Cheeseburger","",2807],
+      ] },
+      { name: "Salads", items: [
+        ["Caesar Salad","",1169],
+        ["Greek Salad","",1286],
+        ["Tandoori Chicken Salad","",1520],
+        ["High Protein Salad","",1520],
+        ["Garden Salad","",1886],
+      ] },
+      { name: "Calzones", items: [
+        ["The Cheesy Trio Calzone","",1871],
+      ] },
+      { name: "Desserts", items: [
+        ["Ice Cream Dollies","",233],
+        ["Ice Cream Conical Kulfi","",350],
+        ["Ice Cream Cylindrical Kulfi","",350],
+        ["Ice Cream Cups","",350],
+        ["Ice Cream Cones","",467],
+        ["Ice Cream Cassatta","",584],
+        ["Tiramisu","",701],
+        ["Cheesecake","",701],
+        ["Sticky Toffee Pudding","",701],
+        ["Mini Churros","",818],
+        ["Nutella Pizza","",1169],
+        ["Chocolate Chip Cookie Pizza","",1169],
+        ["Ice Cream Matka Box","",1286],
+        ["Ice Cream Cake","",1403],
+        ["Dubai Chocolate Pizza","",2105],
+      ] },
+      { name: "Drinks", items: [
+        ["Water","",174],
+        ["Soda","",350],
+        ["Fresh Hazy IPA","",935],
+      ] },
+      { name: "Catering", items: [
+        ["Greek Salad Catering","Catering tray",5381],
+        ["Tandoori Chicken Salad Catering","Catering tray",5381],
+        ["High Protein Salad Catering","Catering tray",5381],
+        ["Garden Salad Catering","Catering tray",5381],
+        ["Caesar Salad Catering","Catering tray",5381],
+      ] },
+    ],
+    siteNote: "Prices are from Pijja Paradise's own dedicated website for the Livermore location, pijjaparadiselivermore.com (its menu/order page).",
   },
 
   /*
@@ -4333,13 +5357,147 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Indian pizza
      flag: pijjaparadise.com renders only with JavaScript, so the menu could not be read
      flag: addresses and numbers from their own site's location list, as he sent it
+     flag: Menu sweep 2026-09-09: Prices are from Pijja Paradise's own order.online storefront for the Pittsburg location (order.online/store/pijja-paradise-pittsburg-29028324); the business's main domain, pijjaparadise.com, could not be reached from this environment (SSL/TLS handshake failure).
+     flag: Menu sweep 2026-09-09: pijjaparadise.com (the business's main domain) is unreachable from this environment: HTTPS fails with an SSL/TLS handshake failure and plain HTTP returns 409; every fact here therefore comes from the business's own order.online storefront rather than the primary site.
+     flag: Menu sweep 2026-09-09: Chain has at least 3 locations per pijjaparadise.menufy.com/locations: Pittsburg, Livermore, and Fresno (2767 W Shaw Ave 106, Fresno, CA 93711) — Fresno was not one of the two requested but exists.
+     flag: Menu sweep 2026-09-09: Address formatting differs slightly between sources: menufy.com lists '2961 Railroad Avenue, Pittsburg, CA 94565' while order.online lists '2961 Railroad Ave, Pittsburg CA 94565-5224'.
+     flag: Menu sweep 2026-09-09: Two distinct items are both named 'Lamb Kabab Burger' on the same order.online storefront, with different descriptions and prices ($15.00 vs $9.20); kept as two separate entries, the second labeled '(Lamb Patty)' here for clarity.
+     flag: Menu sweep 2026-09-09: The order.online page shows 'Online ordering hours: 9:30 AM-11:25 PM', which looks like a single day's live window rather than a posted weekly schedule; no hours are published on any reachable page for this location, so hours is null.
+     flag: Menu sweep 2026-09-09: No Instagram link, logo image, phone-verified-elsewhere, or email address found on any reachable page for this location.
+     flag: Menu sweep 2026-09-09: The ordering page displays a 'Get $10 off any order of $50 or more' promo banner; not reflected in item prices.
+     flag: Menu sweep 2026-09-09: This is treated as site_kind 'ordering-platform' rather than 'own-domain' because the business's own domain never loaded for this location.
   */
   'pijja-paradise-pittsburg': {
     address: "2961 Railroad Ave, Pittsburg, CA 94565",
     phone: "(925) 267-4833",
     cuisine: "Indian pizza",
     tagline: "Indian-style pizza on Railroad Avenue",
-    contactOnly: "Indian-style pizza on Railroad Avenue. Their site takes orders per location; the menu and prices are behind it.",
+    sections: [
+      { name: "Pizza", items: [
+        ["Create Your Own Pizza","Create your own pizza with any toppings",1955,null,"from"],
+        ["Pepperoni Pizza","Our crispy cup pepperoni pizza",1955,null,"from"],
+        ["Cheese Pizza","Create your own pizza with any toppings",1955,null,"from"],
+        ["Peri Peri Chicken Pizza","Homemade tangy peri-peri sauce, onions, red peppers, marinated spicy chicken & fresh cilantro",2000,null,"from"],
+        ["Peri Peri Paneer Pizza","Homemade tangy peri-peri sauce, onions, red peppers, marinated spicy paneer & fresh cilantro",2000,null,"from"],
+        ["Small World Supreme","Pijja Paradise combination with salami, pepperoni, mushrooms, onion, bell pepper, Italian sausage",2300,null,"from"],
+        ["Tandoori Paneer Pizza","Homemade eggless tandoori sauce, onions, bell pepper, tomato, jalapenos, tandoori paneer with fresh cilantro & green onions",2300,null,"from"],
+        ["Small World Meatijja","All meat combo with salami, pepperoni, ham, beef & sausage",2300,null,"from"],
+        ["Garden Vegetarian","Mushrooms, olives, bell pepper, onion, diced tomatoes",2300,null,"from"],
+        ["California Chicken Club","Creamy garlic sauce, grilled chicken, crispy bacon, diced tomatoes & fresh cilantro",2300,null,"from"],
+        ["BBQ Chicken Lovers","Tangy BBQ sauce, grilled chicken, crispy bacon & diced tomato",2300,null,"from"],
+        ["Aloha Pineapple Express","Straight from Hawaii with sliced pineapple and ham with loads of cheese",2300,null,"from"],
+        ["Greek Pizza","Mediterranean style with pesto sauce, spinach, feta cheese, greek olives & sundried tomatoes",2300,null,"from"],
+        ["Garlic Vegetarian","Garlic vegetarian combo with mushrooms, spinach, red onions, broccoli & diced tomato",2300,null,"from"],
+        ["Mexican Taco Pizza","Mexican taco style with ground beef, taco seasoning, fresh lettuce, beans, cheddar blend, diced tomato, jalapenos & green onion",2300,null,"from"],
+        ["HeartAttack Pizza","Tons of pepperoni with loads of cheese",2300,null,"from"],
+        ["You Say Potato!!!","Pesto sauce, roasted garlic, onions, crispy sliced potato with truffle oil drizzle and parmesan cheese",2300,null,"from"],
+        ["Achari Paneer Pizza","Creamy garlic sauce, onion, tomato, bell pepper, jalapenos & marinated achari paneer",2300,null,"from"],
+        ["Tandoori Chicken Pizza","Homemade tandoori sauce, onions, bell peppers, diced tomato, marinated tandoori chicken, jalapenos, fresh green onion & cilantro",2300,null,"from"],
+        ["Butter Chicken Pizza","Homemade butter sauce, onions, diced tomato, buttered marinated chicken, fresh green onion & cilantro",2300,null,"from"],
+        ["Chicken Tikka Masala Pizza","Tikka sauce, onions, bell pepper, ginger, garlic, diced tomato, marinated chicken tikka, fresh cilantro",2300,null,"from"],
+        ["Curry Chicken Pizza","Homemade curry sauce, onion, fresh garlic, diced tomato, marinated chicken, fresh green onion & cilantro",2300,null,"from"],
+        ["Achari Chicken Pizza","Creamy garlic sauce, onion, bell pepper, jalapeno, diced tomato, grilled chicken, fresh green onion & cilantro",2300,null,"from"],
+        ["Royal Shahi Paneer","Eggless butter sauce, mushrooms, onion, diced tomato, buttered marinated paneer, fresh green onion & cilantro",2300,null,"from"],
+        ["Curry Paneer Pizza","Eggless curry sauce, red onions, bell pepper, fresh garlic, diced tomato, marinated paneer, fresh green onion & cilantro",2300,null,"from"],
+        ["Chili Paneer Pizza","Eggless curry sauce, red onions, bell pepper, fresh garlic, diced tomato, marinated paneer, green chilli, jalapenos, fresh green onion & cilantro",2300,null,"from"],
+        ["Lamb Kabab Pizza","Rich & creamy homemade garlic sauce, sauteed red onions, flavorful marinated halal lamb with a sprinkle of cilantro",2300,null,"from"],
+        ["Achari Gobi Pizza","Creamy garlic sauce, onions, bell pepper, diced tomato with achari gobhi",2300,null,"from"],
+      ] },
+      { name: "Appetizers", items: [
+        ["Aloo Puff Patty 2Pcs","Homemade crispy puff potato patty fresh from the oven",690,null,"from"],
+        ["Cauliflower Bites","Cauliflower (gobhi) battered and deep fried until crispy",1150,null,"from"],
+        ["Cheesey Fries","Crispy fries loaded with cheese sauce",920,null,"from"],
+        ["Chicken Tikka Quesadilla","Mexican quesadilla with chicken tikka, onions, & bell pepper",1380,null,"from"],
+        ["Heineken 12 FL Oz.","",746,null,"from"],
+        ["Paneer Tikka Quesadilla","Mexican quesadilla with our special paneer tikka, onion, bell pepper stuffed in it",1610,null,"from"],
+        ["Tandoori Sauce","",115,null,"from"],
+        ["Chicken Tenders","",920,null,"from"],
+        ["Garlic Sticks with Cheese","",1150,null,"from"],
+        ["Pesto Garlic Sticks","Pesto garlic sticks with cheese",1265,null,"from"],
+        ["Indian Masala Breadsticks","Indian masala breadsticks with jalapeno and pineapple with homemade masala",1380,null,"from"],
+        ["Mozzarella Sticks","",1150,null,"from"],
+        ["Jalapeno Poppers","Jalapeno poppers filled with cream cheese",1380,null,"from"],
+        ["Regular Fries","",575,null,"from"],
+        ["Truffle Fries","Fries with truffle aioli and parmesan",920,null,"from"],
+        ["Garlic Fries","Fries with garlic sauce & parsley",920,null,"from"],
+        ["Loaded Fries","Fries with crispy bacon or beef, onions & fresh green onions",1265,null,"from"],
+        ["Mac & Cheese","",920,null,"from"],
+        ["Buffalo Mac & Cheese","Crispy spicy buffalo chicken loaded with mac",1265,null,"from"],
+        ["Loaded Mac & Cheese","Loaded mac & cheese with crispy bacon, onions & fresh green onions",1265,null,"from"],
+        ["Fried Mushrooms","",1035,null,"from"],
+        ["Veg Samosa (2 Pc)","",690,null,"from"],
+      ] },
+      { name: "Burgers and Sandwiches", items: [
+        ["All American Double Smash","Double beef patties, crispy bacon, gooey american cheese, crisp lettuce, fresh tomato, dill pickles, and zingy onions between two soft buns",1380,null,"from"],
+        ["Heart Attack Burger","Two juicy 1/3 lb beef patties with 4 slices of american cheese & loaded with 3 mozzarella sticks",1725,null,"from"],
+        ["Italian Sandwich","Italian style sandwich with ham & salami",1265,null,"from"],
+        ["Lamb Kabab Burger","Juicy marinated lamb kabab on burger bun with Paradise sauce, onion, lettuce, tomato & pickles",1500,null,"from"],
+        ["Parantha Smash Burger","Flaky, buttery, layered unleavened flatbread with two smashed beef patties, loads of cheese and caramelized onion",1500,null,"from"],
+        ["Parantha Veggie Noodle Burger","Crispy flaky parantha with veggie patty, lettuce, onion, tomato with homemade sauce",1500,null,"from"],
+        ["Pastrami Cheese Burger","Pastrami cheese burger with swiss cheese loaded with onion, lettuce, tomato and Paradise sauce",1380,null,"from"],
+        ["Pastrami Swiss Sandwich","Pastrami swiss sandwich with onion, lettuce, tomato and pickles",1495,null,"from"],
+        ["Veggie Patty Burger","Original homemade veggie patty with Paradise sauce, onions, potato, lettuce, pickles on a soft bun",1035,null,"from"],
+        ["Veggie Patty Noodles Burger","Indian street burger with veggie noodles loaded on hamburger bun, onion, tomato and tamarind sauce",1265,null,"from"],
+        ["5 Patty Cheeseburger","Five 1/3 lb fresh beef patties with lettuce, onion, tomato, pickles on secret sauce",2243,null,"from"],
+        ["BBQ Bacon Cheeseburger","1/3 lb fresh beef patty with bacon, lettuce, onion, tomato, pickles on secret sauce with BBQ drizzle",1380,null,"from"],
+        ["Butter Chicken Sandwich","Grilled chicken on butter sauce with onion, sliced tomato and pickles",1265,null,"from"],
+        ["Cheeseburger","1/3 lb fresh beef patty with lettuce, onion, tomato, pickles on secret sauce",1150,null,"from"],
+        ["Crispy Chicken Sandwich","Crispy chicken with secret sauce, onion, sliced tomato & pickles",1150,null,"from"],
+        ["Double Cheeseburger","Double 1/3 lb fresh beef patty with lettuce, onion, tomato, pickles on secret sauce",1380,null,"from"],
+        ["Grilled Chicken Sandwich","Grilled chicken with secret sauce, onion, sliced tomato & pickles",1265,null,"from"],
+        ["Lamb Kabab Burger (Lamb Patty)","Lamb patty with lettuce, onion, tomato, pickles on secret sauce",920,null,"from"],
+        ["Mushroom Swiss Burger","1/3 lb fresh beef patty with lettuce, onion, tomato, pickles on secret sauce with swiss cheese and grilled mushroom",1265,null,"from"],
+        ["Shahi Paneer Sandwich","Indian style paneer sandwich with malai sauce",1265,null,"from"],
+        ["Spicy Chicken Sandwich","Crispy spicy chicken with secret sauce, onion, sliced tomato & pickles",1150,null,"from"],
+        ["Tandoori Chicken Sandwich","Grilled chicken with lettuce, onion, tomato, pickles on tandoori sauce",1265,null,"from"],
+        ["Tandoori Paneer Sandwich","Grilled tandoori paneer on tandoori sauce, onions, lettuce, tomato on a soft bun",1265,null,"from"],
+      ] },
+      { name: "Salads", items: [
+        ["Garden Salad","",1265,null,"from"],
+        ["Caesar","Romaine hearts, garlic croutons, shaved parmesan & caesar dressing",1150,null,"from"],
+        ["Greek Salad","",1265,null,"from"],
+        ["Tandoori Chicken Salad","",1495,null,"from"],
+        ["High Protein Salad","",1495,null,"from"],
+      ] },
+      { name: "Desserts", items: [
+        ["Paradise Chocolate Pizza","Kunafa pistachio cream base topped with a drizzle of rich chocolate and powdered sugar",1725,null,"from"],
+        ["Sticky Toffee Pudding","One of the most selling desserts",805,null,"from"],
+        ["Nutella Pizza","Heart-shape Nutella pizza",1380,null,"from"],
+        ["Chocolate Chip Pizza","Chocolate chip cookie pizza",1265,null,"from"],
+        ["Mini Churros 16pcs","",805,null,"from"],
+        ["Cheesecake","",690,null,"from"],
+        ["Tiramisu","",690,null,"from"],
+      ] },
+      { name: "Drinks", items: [
+        ["Crush Orange","",460,null,"from"],
+        ["Diet Pepsi","",690,null,"from"],
+        ["Jarritos Pineapple","",460,null,"from"],
+        ["Pepsi","",345,null,"from"],
+        ["Starry","",690,null,"from"],
+        ["Water","",230,null,"from"],
+        ["Lemonade","",460,null,"from"],
+        ["Jarritos Mandarian","",460,null,"from"],
+      ] },
+      { name: "Sides", items: [
+        ["BBQ Sauce","",200,null,"from"],
+        ["Buffalo Sauce","",150,null,"from"],
+        ["Jalapeno","",115,null,"from"],
+        ["Ranch","",115,null,"from"],
+      ] },
+      { name: "Halal", items: [
+        ["Halal Wings","Crispy wings with choice of your flavors",1495,null,"from"],
+        ["Halal Combo Pizza","Halal beef pepperoni, mushroom, onion, bell pepper, tomatoes, halal lamb",2414,null,"from"],
+        ["Halal Lamb Kabab Pizza","Lamb kabab, creamy white sauce, red onions, and fresh cilantro on a pizza",2530,null,"from"],
+        ["Halal Pepperoni Pizza","Housemade red sauce, beef pepperoni, mozzarella",2070,null,"from"],
+      ] },
+      { name: "Chicken Wings", items: [
+        ["Achari Chicken Wings","Pijja special tangy achari wings",1495,null,"from"],
+        ["Boneless Wings","Crispy boneless wings with choice of your flavors",1380,null,"from"],
+        ["Tandoori Chicken Wings","Pijja special tandoori spicy wings",1495,null,"from"],
+        ["Traditional Wings","Crispy wings with choice of your flavors",1495,null,"from"],
+      ] },
+    ],
+    siteNote: "Prices are from Pijja Paradise's own order.online storefront for the Pittsburg location (order.online/store/pijja-paradise-pittsburg-29028324); the business's main domain, pijjaparadise.com, could not be reached from this environment (SSL/TLS handshake failure).",
   },
 
   /*
@@ -4779,6 +5937,11 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Hibachi and catering
      flag: all facts from their Instagram bio; DoorDash blocks reading the menu
      flag: Glenn: 'Definitely needs a website'
+     flag: Menu sweep 2026-09-09, still no readable prices: No official business website or business-run ordering page could be found. A search turned up only third-party listings (DoorDash marketplace, Yelp, Instagram, TikTok, Apple Maps); per sourcing rules these were not used for facts or prices, so no menu could be read.
+     flag: Menu sweep 2026-09-09: No own-domain website or Toast/Square/ChowNow/order.online ordering page exists for this business as far as one WebSearch could find; only DoorDash, Yelp, Instagram (@rubenhibachigrill), TikTok, and Apple Maps listings appeared.
+     flag: Menu sweep 2026-09-09: A similarly named site, hibachibyruben.com ('Hibachi By Ruben'), was checked and confirmed to be a different, unrelated business located in San Juan, TX, not San Lorenzo, CA.
+     flag: Menu sweep 2026-09-09: Per sourcing rules (no Yelp/DoorDash/review sites), address, phone, and hours were not populated even though a DoorDash listing surfaced some in search results.
+     flag: Menu sweep 2026-09-09: name_exact reflects the name given in the research request, not text confirmed on an owned site.
   */
   'ruben-hibachi-grill': {
     address: "575 Paseo Grande, San Lorenzo, CA",
@@ -4876,12 +6039,24 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
 
   /*
      Sala Thai — gathered 2026-09-09 from own-domain — BLOCKED: Cloudflare bot challenge on every URL with both user agents; not bypassed — nothing readable
+     they are: Thai
+     logo: https://salathairichmond.com/wp-content/uploads/2025/05/SALA-LOGO2-1024x517.png (1024x517) — not cut into a tile yet
      flag: WordPress behind Cloudflare — robots.txt is served, but the sitemap, /feed/ and /wp-json/ are all challenged
+     flag: Menu sweep 2026-09-09, still no readable prices: salathairichmond.com publishes its real menu only as 8 scanned/photographed image files (menu-8.5x11in_2025-01.jpg through -07.jpg, plus a togo-8.5x11in_2025-01.jpg takeout menu) hosted under /wp-content/uploads/; no text-based prices appear anywhere on the homepage or /menu/ page to extract.
+     flag: Menu sweep 2026-09-09: Homepage lists two different phone numbers: 510-223-2933 (used here, also shown on the /menu page) and 510-223-2900.
+     flag: Menu sweep 2026-09-09: A fax number is printed as '510-2232932' (appears to be missing a dash/digit formatting).
+     flag: Menu sweep 2026-09-09: Full menu is 7 image pages plus a separate takeout menu image; no text pricing exists on the site.
+     flag: Menu sweep 2026-09-09: No Instagram or Facebook link found anywhere on the site.
   */
   'sala-thai': {
+    address: "15501 San Pablo Ave Suite F, Richmond, CA 94806",
+    phone: "510-223-2933",
+    hours: "Mon-Fri 11am-4pm & 5pm-10pm, Sat 4pm-10pm, Sun 5pm-10pm",
+    cuisine: "Thai",
     photos: [
       {"src":"/food/sala-thai-site-0-lg.webp","alt":"","credit":"Their own photo, from salathairichmond.com"},
     ],
+    contactOnly: "They publish no prices.",
   },
 
   /*
@@ -5096,13 +6271,21 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: uses 'tasting' site-wide where 'catering' is plainly meant
      flag: second phone published as 'Online Ordering': (669) 310-5261; separate catering email catering@santaclarasuperkitchen.com
      flag: hero and gallery use Unsplash stock photos; copyright line still says 2025
+     flag: Menu sweep 2026-09-09, still no readable prices: No item-level prices are published anywhere on santaclarasuperkitchen.com (homepage '#menus' section, /food-tasting, /contact were all checked); the site's 'View Full Menu' button just anchors back to the same homepage section, which shows category tiles (Breakfast, Lunch, Dinner, Healthy, Salad Bar
+     flag: Menu sweep 2026-09-09: No street address is published anywhere on the site (homepage, /contact, /food-tasting) - only 'Santa Clara, California' is given, with no street number.
+     flag: Menu sweep 2026-09-09: No hours of operation are published anywhere on the site.
+     flag: Menu sweep 2026-09-09: Two different phone numbers serve different purposes: +1 (669) 310-5261 is labeled for 'online ordering' while +1 (669) 600-0201 is the general call number (used here as phone).
+     flag: Menu sweep 2026-09-09: Email addresses render only as literal placeholder text in fetched content (appear JavaScript/anti-scraping obfuscated on the live site) and could not be captured as real addresses, so email was left null.
+     flag: Menu sweep 2026-09-09: This is a shared/ghost-kitchen operator running multiple sub-brands (e.g. Jerk & Java, House of the Best Seafood Boil, Willy Billy Smoked Meat; site claims 22+ cuisines and 350+ menu items) rather than a single restaurant menu.
+     flag: Menu sweep 2026-09-09: The research brief describes this business as 'halal catering' but no page fetched (home, /food-tasting, /contact) explicitly mentions halal certification, so that claim could not be verified from the site.
   */
   'santa-clara-super-kitchen': {
     phone: "(669) 600-0201",
     email: "info@santaclarasuperkitchen.com",
     instagram: "santaclarasuperkitchen",
     cuisine: "Halal catering",
-    contactOnly: "'California's premier shared kitchen network' selling halal corporate catering and office meal delivery from partner restaurant brands. They claim '350+ menu options' and 'transparent pricing' but publish no menu items or prices; quotes come through a tasting-request form.",
+    tagline: "'California's premier shared kitchen network' selling halal corporate",
+    contactOnly: "'California's premier shared kitchen network' selling halal corporate. They claim '350+ menu options' and 'transparent pricing' but publish no menu items or prices; quotes come through a tasting-request form.",
   },
 
   /*
@@ -5112,6 +6295,11 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: three more shops plus trucks: Ferry Building (1 Ferry Building Suite 41), Thrive City (151 Warriors Way Suite 103), Oakland (330 17th Street, 94612)
      flag: the Thrive City address is published with ZIP 94518, which is not a San Francisco ZIP
      flag: name written both 'Señor Sisig' and 'Senor Sisig' on the same pages
+     flag: Menu sweep 2026-09-09, still no readable prices: senorsisig.com/menu/ and /order/ list dish names and descriptions (Classics, Featured Items, Vegano, Kids Menu, Dessert, Beverages) but no prices anywhere in the static page. The Oakland location's dedicated ordering storefront, which would show real prices - https://order.online/store/senor-sisig-o
+     flag: Menu sweep 2026-09-09: Señor Sisig has multiple locations (990 Valencia St and 1 Ferry Building and 151 Warriors Way in San Francisco, 330 17th St in Oakland, plus food trucks); this file is scoped to the Oakland, CA location only, per instructions.
+     flag: Menu sweep 2026-09-09: Hours contradiction between the site's own pages: senorsisig.com/locations/ lists Oakland hours as Sun-Wed 11am-8pm / Thu-Sat 11am-9pm, while the dedicated senorsisig.com/location/oakland/ page lists Mon-Sun 11am-9pm for the same location. Hours set to null due to this conflict.
+     flag: Menu sweep 2026-09-09: No phone number is published for the Oakland location on either the /locations/ directory or the /location/oakland/ page.
+     flag: Menu sweep 2026-09-09: Menu items (name + description only, no prices) found: Classics - Sisig Taco, Senor Sisig Burrito, California Sisig Burrito, Tosilog Burrito, Sisig Nachos, Sisig Fries, Sisig Rice Bowl, Senor Sisig Burrito Bowl, Tosilog Bowl, Sisig Salad; Featured - Umami Ube Crab Sandwich; Vegano (vegan versions of
   */
   'senor-sisig': {
     address: "990 Valencia St, San Francisco, CA 94110",
@@ -5120,6 +6308,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     hours: "Daily 11am-9pm",
     instagram: "senorsisig",
     cuisine: "Filipino fusion",
+    tagline: "'From Sisig Burritos to Sinigang Wings, we remix traditional Filipino",
     photos: [
       {"src":"/food/senor-sisig-site-2-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
       {"src":"/food/senor-sisig-site-3-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
@@ -5128,7 +6317,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       {"src":"/food/senor-sisig-site-7-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
       {"src":"/food/senor-sisig-site-8-lg.webp","alt":"","credit":"Their own photo, from senorsisig.com"},
     ],
-    contactOnly: "'From Sisig Burritos to Sinigang Wings, we remix traditional Filipino flavors into innovative dishes everyone can enjoy.' The menu page lists every item with no prices — sisig tacos, burritos, fries, nachos, rice bowls, the Crispy Sinigang Wings — and prices live only inside their ordering flow.",
+    contactOnly: "'From Sisig Burritos to Sinigang Wings, we remix traditional Filipino. The menu page lists every item with no prices — sisig tacos, burritos, fries, nachos, rice bowls, the Crispy Sinigang Wings — and prices live only inside their ordering flow.",
   },
 
   /*
@@ -5364,6 +6553,21 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices and photos are from their own site.",
+  },
+
+  /*
+     Stella Pastry & Cafe — gathered 2026-09-09 from none
+     they are: Italian bakery/cafe
+     flag: Menu sweep 2026-09-09: first research record for this seat
+     flag: No own-domain website or Toast/Square/ChowNow/order.online storefront run by the business could be located via one WebSearch (plus one follow-up ordering-platform-focused search).
+     flag: Search results were dominated by third-party marketplace/review listings (DoorDash, Uber Eats, Postmates, Grubhub, Tripadvisor, Yelp) and apparent auto-generated directory-spam mirrors (e.g. stellaspastry.mapsite.site, stella-pastry-cafe.bartgrocerybbq.com, stella-pastry.com-place.com, stella-pastry.wheree.com, stella-pastry-cafe.menu-world.com) that are not the business's own site.
+     flag: A distinctly named business, 'Stella's Bakery' (stellasbakery.us), also appeared in search results but is a different business and was not used.
+     flag: Per sourcing rules, address/phone/hours seen in search-result summaries (sourced from Yelp/DoorDash/Tripadvisor) were not populated into this record.
+     flag: name_exact reflects the name given in the research request, not text confirmed on an owned site.
+  */
+  'stella-pastry': {
+    cuisine: "Italian bakery/cafe",
+    tagline: "Italian bakery and cafe in San Francisco's North Beach",
   },
 
   /*
@@ -5774,6 +6978,12 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      they are: Chicken wings
      flag: Glenn: 'This is my cousins boy right here that owns this restaurant. Gonna put him on. Needs a website too'
      flag: the icon is their neon sign, cut from his photo of it
+     flag: Menu sweep 2026-09-09, still no readable prices: Tony's Style's ordering page (adelinefoodhall.com, which redirects to oakland.picnicfood.com) is a JavaScript-rendered single-page app; the static fetch returned only the header text 'Order Now From Your Digital Food Court' with no menu items, descriptions, or prices retrievable.
+     flag: Menu sweep 2026-09-09: No standalone business website exists: tonysstyle.com has no DNS record
+     flag: Menu sweep 2026-09-09: Only web presence found beyond marketplaces is an Instagram (tonysstyles, as given) and a vendor storefront inside Adeline Food Hall's ordering platform (adelinefoodhall.com -> oakland.picnicfood.com)
+     flag: Menu sweep 2026-09-09: That storefront is JS-rendered, so no menu, prices, phone, email, hours, or logo could be extracted from a static page fetch
+     flag: Menu sweep 2026-09-09: Address is inferred only from the ordering page's own URL slug (/tony's-style/5333-adeline-st-oakland/), not from printed page text, since the page did not render statically; no zip code confirmed
+     flag: Menu sweep 2026-09-09: Per instructions, items left empty since no own site or ordering page with readable menu content could be found
   */
   'tonys-style': {
     address: "938 San Pablo Ave, Albany, CA",
@@ -5829,13 +7039,19 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
      flag: HOURS CONFLICT on their own site: the /location page and the /contact-us page publish different schedules for both shops — none carried
      flag: Berkeley: 1849 Shattuck Ave 94709, (510) 356-4127
      flag: the /location blurb says 'Visit us in Bernal Heights' though the shops are on 16th Street and in Berkeley — template filler
+     flag: Menu sweep 2026-09-09, still no readable prices: udessertstory.com's homepage lists dessert categories and named items (e.g., Brown Butter Chicken Croffle, Mango Sticky Rice Bingsu) with no prices; the /menu and /stores pages are portals with no item-level pricing in static HTML, and the SF location's order.online, custom.order.online, and Toast o
+     flag: Menu sweep 2026-09-09: Second location: Berkeley (1849 Shattuck Ave) in addition to the San Francisco location researched here
+     flag: Menu sweep 2026-09-09: No prices could be confirmed for the SF menu despite trying /menu, /stores, order.online, custom.order.online, and a Toast page - all either lacked static price data or returned 403
+     flag: Menu sweep 2026-09-09: Email address is not listed anywhere on the site
   */
   'u-dessert-story': {
     address: "3489 16th St, San Francisco, CA 94114",
     phone: "(415) 796-3633",
     email: "udessertstory.official@gmail.com",
+    hours: "Sun 1pm-11:59pm, Mon-Wed 3pm-10pm, Thu-Fri 3pm-1am, Sat 1pm-1am",
     instagram: "udessertstory",
     cuisine: "Asian desserts",
+    tagline: "An Asian dessert cafe in San Francisco and Berkeley — 'We bring a new",
     photos: [
       {"src":"/food/u-dessert-story-site-0-lg.webp","alt":"Brown Butter Chicken Croffle","credit":"Their own photo, from udessertstory.com"},
       {"src":"/food/u-dessert-story-site-1-lg.webp","alt":"Ube Matcha Latte","credit":"Their own photo, from udessertstory.com"},
@@ -5844,7 +7060,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       {"src":"/food/u-dessert-story-site-7-lg.webp","alt":"Recipe: Chocolate Matcha Lava Cake","credit":"Their own photo, from udessertstory.com"},
       {"src":"/food/u-dessert-story-site-8-lg.webp","alt":"U :Dessert Story serves next-level Asian cuisine","credit":"Their own photo, from udessertstory.com"},
     ],
-    contactOnly: "An Asian dessert cafe in San Francisco and Berkeley — 'We bring a new perspective to Asian desserts, making everything in-house.' Ordering runs through an embedded app; no prices in the page and no PDF menu — the signatures are the Brown Butter Chicken Croffle, the Ube Matcha Latte and the Mango Sticky Rice Bingsu.",
+    contactOnly: "An Asian dessert cafe in San Francisco and Berkeley — 'We bring a new. Ordering runs through an embedded app; no prices in the page and no PDF menu — the signatures are the Brown Butter Chicken Croffle, the Ube Matcha Latte and the Mango Sticky Rice Bingsu.",
   },
 
   /*

@@ -739,12 +739,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'MC', logoFace: 'script',
     site: 'https://mimischocolates.com/',
   }),
+  /* The 2026-09-09 menu sweep found their own site and ordering page, and
+     their two rooms are San Bruno and San Francisco — not San Mateo, where he
+     seated them. The seat stays his; the page shows their address. */
   seed('pho-de-nguyen', 'Pho De Nguyen', 'Pho De Ng…', 'Vietnamese, pho', '#7A1F1F', {
     logoTemplate: 'monogram', logoInitials: 'PN', logoFace: 'slab',
-    site: 'https://www.instagram.com/phodenguyen',
-    contactOnly:
-      'Sent by the operator with no website and no logo of their own — his note calls that ' +
-      'the opportunity rather than the problem. Nothing is listed here yet.',
+    site: 'https://phodenguyen.com/',
+    siteCta: 'Order online',
   }),
   seed('maymays-cravings', 'Maymay’s Cravings', 'Maymay’s', 'Filipino desserts', '#8C2F5A', {
     logoTemplate: 'monogram', logoInitials: 'MC', logoFace: 'script',
@@ -760,9 +761,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.theroyaleeatery.com/',
     address: '2190 Contra Costa Blvd, Pleasant Hill',
   }),
+  /* The 2026-09-09 menu sweep found their own site behind the Instagram
+     link, with the whole menu priced. */
   seed('one-house-bistro', 'One House Bistro', 'One House', 'Bistro, brunch and dinner', '#6B5426', {
     logoTemplate: 'monogram', logoInitials: 'OH', logoFace: 'grotesk',
-    site: 'https://www.instagram.com/onehouse.sr',
+    site: 'https://onehousebistro.com/',
+    siteCta: 'See the menu',
     address: '2468 San Ramon Valley Blvd, San Ramon',
   }),
   seed('benicia-grill', 'Benicia Grill', 'Benicia Grill', 'American grill', '#8C3A1E', {

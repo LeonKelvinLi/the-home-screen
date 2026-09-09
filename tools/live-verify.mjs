@@ -134,6 +134,19 @@ for (const [id, want, expect] of [
   ['b_streetsocial', 'Street Social', { call: '(707) 774-6185', free: true }],
   ['b_alivekitchen', 'Alive Kitchen', { call: '(561) 909-5062', free: true }],
   ['b_baithak', 'Baithak', { rows: 100, call: '(925) 361-0862' }],
+  /* The 2026-09-09 menu sweep: fifteen menus read from the businesses' own pages. */
+  ['b_islafilipino', 'Isla Filipino Restaurant', { rows: 90, call: '(925) 849-6255' }],
+  ['b_pinkonion', 'Pink Onion', { rows: 60, call: '(415) 529-2635' }],
+  ['b_elranchogrande', 'Rancho Grande Taqueria', { rows: 90 }],
+  ['b_onehousebistro', 'One House Bistro', { rows: 110, call: '(925) 235-8888' }],
+  ['b_phodenguyen', 'Pho De Nguyen', { rows: 100 }],
+  ['b_pijjaparadisepittsburg', 'Pijja Paradise', { rows: 80 }],
+  ['b_pijjaparadiselivermore', 'Pijja Paradise', { rows: 80 }],
+  ['b_kusanbazaarmountainview', 'Kusan Bazaar', { rows: 30 }],
+  ['b_kusanuyghurcuisinesanjose', 'Kusan Uyghur Cuisine', { rows: 30 }],
+  ['b_hellagoodburger', 'HELLA GOOD BURGER', { rows: 20 }],
+  ['b_firebunz', 'Firebunz', { rows: 8 }],
+  ['b_portofperiperisf', 'The Port of Peri Peri', { rows: 70, call: '(415) 340-7373' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
