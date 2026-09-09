@@ -408,6 +408,7 @@ function BusinessTiers({ api }: { api: ShellApi }) {
               <PerkRow key={perk.label} perk={perk} />
             ))}
           </ul>
+          {t.note && <p className="members-biz-note">{t.note}</p>}
         </div>
       ))}
       <div className="members-biz-fees">

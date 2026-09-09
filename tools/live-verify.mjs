@@ -130,9 +130,17 @@ for (const [id, want, expect] of [
   ['b_7milehouse', '7 Mile House', { hours: 'Mon 11:30am-9pm', call: '(415) 467-2343' }],
   ['b_belly', 'Belly', { rows: 80, call: '(510) 350-8799' }],
   ['b_wowmiapizza', 'Wow Mia Pizza', { rows: 60, call: '(408) 676-3030' }],
+  ['b_saladmakers', 'Salad Makers', { rows: 60, call: '(925) 634-0718' }],
+  ['b_streetsocial', 'Street Social', { call: '(707) 774-6185', free: true }],
+  ['b_alivekitchen', 'Alive Kitchen', { call: '(561) 909-5062', free: true }],
+  ['b_baithak', 'Baithak', { rows: 100, call: '(925) 361-0862' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
+  /* The whole menu sits behind a bar since 2026-09-09; the rows are counted
+     with it open, which is how a customer counts them too. */
+  await p.locator('.brand-menu-drop .menu-picks-bar').first().click({ timeout: 2500 }).catch(() => {})
+  await p.waitForTimeout(250)
   const got = await p.evaluate(() => {
     const txt = (sel) => document.querySelector(sel)?.textContent?.replace(/\s+/g, ' ').trim() ?? ''
     const q = document.querySelector('.brand-quote-note')
@@ -145,6 +153,9 @@ for (const [id, want, expect] of [
          its own row under the address — so the check reads the whole page. */
       call: txt('.brand-contact') + ' ' + (document.body?.innerText || '').replace(/\s+/g, ' '),
       photos: document.querySelectorAll('.brand-photos-track img').length,
+      /* The free listing, Tier 1: the note is there and the menu is not. */
+      free: !!document.querySelector('.brand-free'),
+      menuBar: !!document.querySelector('.brand-menu-drop'),
     }
   })
   console.log(`${id.padEnd(22)}: ${got.title} | ${got.hours || '-'} | ${got.rows} rows${got.quotePad !== null ? ` | note at x=${got.quotePad}` : ''}`)
@@ -154,7 +165,27 @@ for (const [id, want, expect] of [
   if (expect.quote && (got.quotePad === null || got.quotePad < 12)) fails.push(`${id}: the quote note is ${got.quotePad === null ? 'missing' : 'unstyled, at x=' + got.quotePad}`)
   if (expect.call && !got.call.includes(expect.call)) fails.push(`${id}: the contact card does not carry ${expect.call}`)
   if (expect.photos && got.photos < expect.photos) fails.push(`${id}: ${got.photos} pictures in the strip, expected ${expect.photos}`)
+  if (expect.free && !got.free) fails.push(`${id}: a yellow-sheet spot should be drawn as the free Tier 1 listing`)
+  if (expect.free && got.menuBar) fails.push(`${id}: the free listing must not carry the menu`)
 }
+
+// ---- the reviewer's film, his 2026-09-09 protocol ----------------------
+await p.goto(`${base}/?b=b_belly`, { waitUntil: 'networkidle', timeout: 45000 })
+await p.waitForTimeout(600)
+const review = await p.evaluate(() => {
+  const bar = document.querySelector('.brand-clip-drop .menu-picks-bar')
+  return { bar: bar?.textContent?.replace(/\s+/g, ' ').trim() ?? '' }
+})
+await p.locator('.brand-clip-drop .menu-picks-bar').first().click({ timeout: 2500 }).catch(() => {})
+await p.waitForTimeout(400)
+const credit = await p.evaluate(() => {
+  const a = document.querySelector('.brand-clip-credit a')
+  return { href: a?.getAttribute('href') ?? null, sound: !!document.querySelector('.brand-clip-sound') }
+})
+console.log('review clip   :', JSON.stringify({ ...review, ...credit }))
+if (!review.bar.startsWith('Watch a review by @antoinetterzz')) fails.push(`Belly's clip bar reads "${review.bar}", expected "Watch a review by @antoinetterzz"`)
+if (credit.href !== 'https://www.instagram.com/antoinetterzz/') fails.push(`Belly's credit links to ${credit.href}, expected her Instagram`)
+if (!credit.sound) fails.push('the clip has no sound button')
 
 // ---- the Instagram button ------------------------------------------------
 await p.goto(`${base}/?b=b_baymemoriesbooth`, { waitUntil: 'networkidle', timeout: 45000 })

@@ -37,6 +37,23 @@ export interface Clip {
   credit: string
   /** Where `href` goes, for the label: 'Instagram', 'TikTok', 'YouTube'. */
   platform?: string
+  /**
+   * The reviewer's handle, without the @, when the film is theirs rather
+   * than the business's. The bar then says "Watch a review by @handle" and
+   * the credit opens their profile — his 2026-09-09 protocol for "other
+   * food reviewers' videos on an Affiliate's page": "This way they get the
+   * credit & views and hopefully a follow directly to their ig page."
+   */
+  by?: string
+}
+
+/** Where a credit points when the film is a reviewer's. */
+export function reviewerHref(clip: Clip): string | undefined {
+  if (!clip.by) return undefined
+  const p = (clip.platform ?? 'Instagram').toLowerCase()
+  if (p === 'tiktok') return `https://www.tiktok.com/@${clip.by}`
+  if (p === 'youtube') return `https://www.youtube.com/@${clip.by}`
+  return `https://www.instagram.com/${clip.by}/`
 }
 
 /** Multiply a hex towards black. Used to give a one-colour brand a gradient. */
@@ -65,6 +82,15 @@ function PlayMark({ size = 40 }: { size?: number }) {
 export function BrandClip({ clip, logo }: { clip: Clip; logo: Logo }) {
   const ref = useRef<HTMLVideoElement | null>(null)
   const [reduced, setReduced] = useState(false)
+  /*
+    SOUND, ON A TAP. It starts muted because nothing else starts a phone
+    talking without being asked, and his ask of 2026-09-09 — "are you able to
+    add sound onto the downloaded video for that page?" — is answered by the
+    button: one tap unmutes, and the tap is the gesture a browser needs before
+    it will play audio at all. The files carry a sound track (make-clip.py
+    keeps it; tools/audit-reel-sound.mjs checks it).
+  */
+  const [sound, setSound] = useState(false)
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)')
@@ -95,20 +121,47 @@ export function BrandClip({ clip, logo }: { clip: Clip; logo: Logo }) {
   }, [reduced, clip.src])
 
   if (clip.src) {
+    const link = reviewerHref(clip)
     return (
       <figure className="brand-clip">
-        <video
-          ref={ref}
-          className="brand-clip-video"
-          src={clip.src}
-          poster={clip.poster}
-          muted
-          loop
-          playsInline
-          preload="none"
-          controls={reduced}
-        />
-        <figcaption className="brand-clip-credit">{clip.credit}</figcaption>
+        <div className="brand-clip-frame">
+          <video
+            ref={ref}
+            className="brand-clip-video"
+            src={clip.src}
+            poster={clip.poster}
+            muted
+            loop
+            playsInline
+            preload="none"
+            controls={reduced}
+          />
+          <button
+            type="button"
+            className="brand-clip-sound"
+            aria-label={sound ? 'Turn the sound off' : 'Turn the sound on'}
+            aria-pressed={sound}
+            onClick={() => {
+              const el = ref.current
+              if (!el) return
+              const next = !sound
+              el.muted = !next
+              setSound(next)
+              if (next) void el.play().catch(() => {})
+            }}
+          >
+            {sound ? 'Sound on' : 'Sound off'}
+          </button>
+        </div>
+        <figcaption className="brand-clip-credit">
+          {link ? (
+            <a href={link} target="_blank" rel="noopener noreferrer">
+              {clip.credit}
+            </a>
+          ) : (
+            clip.credit
+          )}
+        </figcaption>
       </figure>
     )
   }
@@ -162,7 +215,7 @@ export function BrandClip({ clip, logo }: { clip: Clip; logo: Logo }) {
       <span className="clip-body">
         <PlayMark />
         <span className="clip-text">
-          <strong>Watch their clip</strong>
+          <strong>{clip.by ? `Watch a review by @${clip.by}` : 'Watch their clip'}</strong>
           {/* Says it leaves, before the tap rather than after. */}
           <em>
             {clip.credit} · opens {platform}

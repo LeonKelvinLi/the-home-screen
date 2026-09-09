@@ -18,6 +18,7 @@ import type { ShellApi } from '../ios/Device'
 const FOOD_RX =
   /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|bar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer/i
 import { Gem } from './MembersApp'
+import { FREE_SPOT_MONTHS } from '../data/affiliateTiers'
 
 /** One restaurant's menu — the screen an icon tap actually lands on. */
 /**
@@ -126,10 +127,21 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   const [picksOpen, setPicksOpen] = useState(false)
   /** Their video, behind a bar — see the clip block below. */
   const [clipOpen, setClipOpen] = useState(false)
+  /** The whole menu, behind a bar — his ask of 2026-09-09. See below. */
+  const [menuOpen, setMenuOpen] = useState(false)
   const [activeCat, setActiveCat] = useState(0)
   const bodyRef = useRef<HTMLDivElement>(null)
 
   if (!brand) return null
+
+  /*
+    WHICH TIER THIS PAGE IS DRAWN AT. See Brand.tier for his rule. Unset is
+    the whole page; 1 is the free listing — name, address and contact details,
+    the link — and everything below that reads the tier before it renders.
+  */
+  const tier = brand.tier ?? 3
+  const film = tier >= 3 ? brand.clip?.src : undefined
+  const menuCount = brand.menu.reduce((n, c) => n + c.items.length, 0)
 
   const inCart = cart.countForBrand(brand.id)
   /*
@@ -181,7 +193,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
       >
         <div className="brand-body" ref={bodyRef}>
           <div
-            className={`brand-hero${brand.clip?.src ? ' has-film' : ''}`}
+            className={`brand-hero${film ? ' has-film' : ''}`}
             style={{ background: heroBg(brand.logo.bg), color: ink.fg }}
           >
             {/*
@@ -203,7 +215,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               would stay flat until the file arrived. "metadata" gets the poster
               and the first frames without pulling the whole clip up front.
             */}
-            {brand.clip?.src && (
+            {film && (
               <div className="brand-film" aria-hidden="true">
                 {/*
                   The poster is a real <img> UNDER the video, not the video's
@@ -213,10 +225,10 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   film and leaving an empty band, because the fallback was a CSS
                   background nothing ever set.
                 */}
-                {brand.clip.poster && <img className="brand-film-still" src={brand.clip.poster} alt="" />}
+                {brand.clip?.poster && <img className="brand-film-still" src={brand.clip.poster} alt="" />}
                 <video
-                  src={brand.clip.src}
-                  poster={brand.clip.poster}
+                  src={film}
+                  poster={brand.clip?.poster}
                   autoPlay
                   muted
                   loop
@@ -429,6 +441,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {brand.address && (
             <div className="brand-where">
               <p className="brand-address">{brand.address}</p>
+              {tier >= 2 && (
               <a
                 className="btn-secondary brand-directions"
                 href={mapsHref(brand.address, brand.name)}
@@ -442,6 +455,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 </svg>
                 Directions
               </a>
+              )}
             </div>
           )}
 
@@ -473,7 +487,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
 
             Not repeated for the two kinds that already carry it below.
           */}
-          {brand.phone && !brand.contactOnly && !brand.quoteOnly && (
+          {brand.phone && !brand.contactOnly && !brand.quoteOnly && tier >= 3 && (
             <a
               className="brand-call"
               href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}
@@ -484,6 +498,12 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               </svg>
               {brand.phone}
             </a>
+          )}
+          {/* The number as text, not a button: "direct-call phone button" is
+              the Tier 3 perk, "contact information" is Tier 1. Tier 1 prints
+              it in its own block further down. */}
+          {brand.phone && !brand.contactOnly && !brand.quoteOnly && tier === 2 && (
+            <p className="brand-call is-text">{brand.phone}</p>
           )}
 
           {brand.pricesEstimated && (
@@ -521,14 +541,16 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             line until somebody wants it, and the bar says there is a video
             rather than making them scroll to find out.
           */}
-          {brand.clip && (
+          {brand.clip && tier >= 3 && (
             <div className="menu-picks brand-clip-drop">
               <button
                 className={`menu-picks-bar${clipOpen ? ' is-open' : ''}`}
                 onClick={() => setClipOpen((o) => !o)}
                 aria-expanded={clipOpen}
               >
-                <span>Watch their video</span>
+                {/* A reviewer's film says so on the bar — his 2026-09-09
+                    protocol for "other food reviewers' videos". */}
+                <span>{brand.clip.by ? `Watch a review by @${brand.clip.by}` : 'Watch their video'}</span>
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
@@ -555,7 +577,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             that shrinks both to thumbnails. Square, not 5:4: their posts are
             square and a 5:4 cover crop takes the flyer's headline off.
           */}
-          {brand.photos?.length ? (
+          {tier >= 2 && brand.photos?.length ? (
             <div className="brand-photos">
               <ul
                 className="brand-photos-track"
@@ -577,7 +599,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               )}
             </div>
           ) : (
-            brand.photo && (
+            tier >= 2 && brand.photo && (
               <figure className="brand-photo">
                 <img src={brand.photo.src} alt={brand.photo.alt} loading="lazy" decoding="async" />
                 <figcaption>{brand.photo.credit}</figcaption>
@@ -598,7 +620,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             brand has no picks listed it stays the plain line it always was —
             there is nothing to drop down.
           */}
-          {brand.menuNote &&
+          {tier >= 2 && brand.menuNote &&
             (picks.length ? (
               <div className="menu-picks">
                 <button
@@ -654,7 +676,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
 
             That is what the membership is sold on, so it goes first.
           */}
-          {(brand.offers?.welcome || brand.offers?.loyalty) && (
+          {tier >= 2 && (brand.offers?.welcome || brand.offers?.loyalty) && (
             <div className={`brand-offers${brand.offers.mock ? ' is-mock' : ''}`}>
               {/*
                 A mockup says so, at the top, before the terms it is mocking.
@@ -704,10 +726,34 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
 
           {/* How to actually start, stated before the prices rather than under
               them, because "these are quotes" changes how the list is read. */}
-          {brand.quoteOnly && <p className="brand-quote-note">{brand.quoteOnly}</p>}
+          {tier >= 3 && brand.quoteOnly && <p className="brand-quote-note">{brand.quoteOnly}</p>}
 
           {/* A single-category menu needs no tab bar — one lone pill that
               repeats the section heading below it is pure noise. */}
+          {/*
+            THE WHOLE MENU BEHIND ONE BAR, his ask of 2026-09-09: "Can we make
+            the entire menu as a drop-down button? This will simplify their
+            page when users view them." Collapsed until asked for, and the bar
+            names the count so it says what is behind it. A quoted price list
+            drops down the same way. Tier 3 only — "menu list" is a premium
+            feature from the same note; see data/affiliateTiers.ts.
+          */}
+          {tier >= 3 && menuCount > 0 && (
+            <div className="menu-picks brand-menu-drop">
+              <button
+                className={`menu-picks-bar${menuOpen ? ' is-open' : ''}`}
+                onClick={() => setMenuOpen((o) => !o)}
+                aria-expanded={menuOpen}
+              >
+                <span>
+                  {brand.quoteOnly ? 'Price list' : 'Menu'} · {menuCount} {menuCount === 1 ? 'item' : 'items'}
+                </span>
+                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              {menuOpen && (
+                <div className="brand-menu-body">
           {brand.menu.length > 1 && (
           <nav className="cat-tabs">
             {brand.menu.map((c, i) => (
@@ -773,12 +819,16 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               })}
             </section>
           ))}
+                </div>
+              )}
+            </div>
+          )}
 
 
           {/* A discount the partner honours at their own counter. Sits above
               the contact block because for a service partner it is the whole
               reason the tile was opened. */}
-          {brand.perk && (
+          {tier >= 2 && brand.perk && (
             <div className="brand-perk">
               <strong>{brand.perk.headline}</strong>
               <span>{brand.perk.detail}</span>
@@ -793,7 +843,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             route out of the app, and the quoted one needs it MOST — the whole
             screen is a price list with no way to buy anything.
           */}
-          {(brand.contactOnly || brand.quoteOnly) && (
+          {tier >= 2 && (brand.contactOnly || brand.quoteOnly) && (
             <div className="brand-contact">
               {brand.contactOnly && <p>{brand.contactOnly}</p>}
               {/*
@@ -824,7 +874,37 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
           )}
 
-          <BrandPanels panels={brand.panels} />
+          {/*
+            THE FREE LISTING, Tier 1, his rule of 2026-09-09 for the yellow
+            sheets: the name, the address, the contact details and the link —
+            the Tier 1 perks on the Members page, and nothing from the tiers
+            above. Said on the page, because the point of a free spot is that
+            its owner is shown it: "they will see they are on our pages as a
+            Free member but will hopefully be interested in upgrading."
+          */}
+          {tier === 1 && (
+            <div className="brand-contact brand-free">
+              {brand.phone && <p className="brand-free-line">Phone {brand.phone}</p>}
+              {brand.email && <p className="brand-free-line">Email {brand.email}</p>}
+              {brand.site && (
+                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer">
+                  {brand.siteCta ?? 'Open their page'}
+                </a>
+              )}
+              <p className="brand-free-note">
+                Listed free as a BEASTY Affiliate. A free spot is held for {FREE_SPOT_MONTHS} months. The
+                full page — a bio, featured items, the menu, a video and member offers — comes with
+                membership.
+              </p>
+              {/* btn-primary, not the offers block's white-on-dark pill, which
+                  is invisible on this white card. */}
+              <button className="btn-primary" onClick={() => api.openApp('sys.members')}>
+                See the affiliate tiers
+              </button>
+            </div>
+          )}
+
+          {tier >= 2 && <BrandPanels panels={brand.panels} />}
 
           {/*
             A DIRECT LINE TO THEIR INSTAGRAM, where he has sold one.
@@ -839,7 +919,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             following. So this stands on its own and appears on any page that
             carries a handle.
           */}
-          {brand.instagram && (
+          {tier >= 3 && brand.instagram && (
             <a
               className="brand-ig"
               href={`https://www.instagram.com/${brand.instagram}/`}
@@ -860,13 +940,13 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
 
           {/* A partner-specific reason to visit their own site. Falls back to
               naming the destination honestly when there is nothing to add. */}
-          {brand.siteNote && !brand.contactOnly ? (
+          {tier >= 2 && brand.siteNote && !brand.contactOnly ? (
             <p className="brand-foot">
               <a href={brand.site ?? brand.orderUrl} target="_blank" rel="noreferrer">
                 {brand.siteNote}
               </a>
             </p>
-          ) : brand.orderUrl && !brand.contactOnly ? (
+          ) : tier >= 2 && brand.orderUrl && !brand.contactOnly ? (
             <p className="brand-foot">
               <a href={brand.orderUrl} target="_blank" rel="noreferrer">
                 They also take orders on {orderHost(brand.orderUrl)}
@@ -882,7 +962,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 walker, a garage, a print shop and an iOS app. "Prices set by the
                 kitchen" sat two sentences under "there is nothing to order
                 here". */}
-            {brand.contactOnly
+            {brand.contactOnly || tier === 1
               ? 'Contact them directly.'
               : brand.quoteOnly
                 ? 'Ranges are indicative; the quote is what counts.'

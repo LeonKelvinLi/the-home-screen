@@ -981,4 +981,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'brisbane-goods-0': 'b_7milehouse', //                          no bar-and-grill seat; seat 0 opens the city, as Shaka Shack's did Alameda
   'oakland-goods-7': 'b_belly', //                                Korean and ramen — kimchi and bulgogi on a Rockridge diner menu
   'san-jose-goods-5': 'b_wowmiapizza', //                         Italian — pizza
+  /* 2026-09-09, evening: Salad Makers on a seat; Street Social and Alive
+     Kitchen on yellow sheets, drawn at Tier 1 under his rule of that day. */
+  'brentwood-goods-6': 'b_saladmakers', //                        Sandwiches — soups, salads and sandwiches
+  'petaluma-goods2-0': 'b_streetsocial', //                       no seat for comfort food and a bottle shop; Tier 1
+  'concord-goods2-1': 'b_alivekitchen', //                        meal prep delivered to three cities; Tier 1 on each yellow sheet
+  'walnut-creek-goods2-3': 'b_alivekitchen',
+  'lafayette-goods2-0': 'b_alivekitchen',
 }

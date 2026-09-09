@@ -44,7 +44,22 @@ export interface AffiliateTier {
   /** The sentence under the price — what this tier is for. */
   lead: string
   perks: Perk[]
+  /** A line under the perks, where a tier needs one. */
+  note?: string
 }
+
+/**
+ * How long a free spot is held before it comes off the yellow sheet.
+ *
+ * HIS QUESTION, 2026-09-09: "Maybe put a disclaimer on the FREE Tier
+ * membership for Affiliates that their FREE spot will expire after 3 months?
+ * or 9 months? ... Or do you think we should just leave them on their spot
+ * indefinitely?" Three, the first number he named and the one that keeps a
+ * yellow sheet from filling with businesses that never answered, until he
+ * says otherwise. NOTHING REMOVES A SPOT AUTOMATICALLY: a seat comes off by
+ * his word, as it always has, and this number is what the page promises.
+ */
+export const FREE_SPOT_MONTHS = 3
 
 /** The two sentences that open the business side of the Members page. */
 export const AFFILIATE_INTRO = [
@@ -78,6 +93,7 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
         detail: 'Your business acronym displayed on the tile.',
       },
     ],
+    note: `A free spot is held for ${FREE_SPOT_MONTHS} months. After that it comes off the page unless the business has become a member.`,
   },
   {
     id: 'biggies',
@@ -130,6 +146,13 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
         label: 'A featured video on your page',
         detail:
           'Upload a promotional or featured video to your business page and change it once per week. The video may also appear on the BEASTY Affiliate Video page.',
+      },
+      /* His ask of 2026-09-09: "Can you add a 'menu list' onto the tier 3 as
+         a premium feature?" The whole menu, behind a drop-down on the page. */
+      {
+        label: 'Full menu list on your page',
+        detail:
+          'Your complete menu with prices on your page, behind a drop-down bar so the page stays short until a customer opens it.',
       },
       { label: 'Direct-call phone button', detail: 'A direct-call phone button on your page.' },
       {

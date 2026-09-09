@@ -137,6 +137,19 @@ export interface Brand {
   needsSite?: true
   /** The paid icon glow. See LocalSeed.glow. */
   glow?: true
+  /**
+   * Which affiliate tier this page is drawn at. See data/affiliateTiers.ts.
+   *
+   * HIS RULE, 2026-09-09: every spot on the BEASTY pages gets "the full Tier 3
+   * treatment", and from that day a spot on a city's yellow sheet gets the
+   * free Tier 1 treatment — the name, the address and contact details, the
+   * link to their site, the tile in their colour with their initials — "so
+   * when I share them a DM or email of their page they will see they are on
+   * our pages as a Free member but will hopefully be interested in
+   * upgrading." Unset means 3: everything seated before that day keeps its
+   * whole page. The rules themselves are in apps/BrandApp.tsx.
+   */
+  tier?: 1 | 2 | 3
   /** One photograph of the place, ours to serve. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
   /** Several, swiped through. See LocalSeed.photos. */
@@ -167,7 +180,7 @@ export interface Brand {
    * checkout must never try to charge one. The string explains how to start.
    */
   quoteOnly?: string
-  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
+  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string; by?: string }
   /** A name-only seat from the operator's roster. Kept off the catalogue page. */
   rosterOnly?: boolean
   /** Published contact address, where the business publishes one. */
@@ -360,6 +373,19 @@ interface Seed {
   needsSite?: true
   /** The paid icon glow. See LocalSeed.glow. */
   glow?: true
+  /**
+   * Which affiliate tier this page is drawn at. See data/affiliateTiers.ts.
+   *
+   * HIS RULE, 2026-09-09: every spot on the BEASTY pages gets "the full Tier 3
+   * treatment", and from that day a spot on a city's yellow sheet gets the
+   * free Tier 1 treatment — the name, the address and contact details, the
+   * link to their site, the tile in their colour with their initials — "so
+   * when I share them a DM or email of their page they will see they are on
+   * our pages as a Free member but will hopefully be interested in
+   * upgrading." Unset means 3: everything seated before that day keeps its
+   * whole page. The rules themselves are in apps/BrandApp.tsx.
+   */
+  tier?: 1 | 2 | 3
   /** Stocked subset, by item name. Omit to offer the whole menu. */
   offer?: string[]
   /** Replaces the generic "they also take orders on X" footer. */
@@ -397,7 +423,7 @@ interface Seed {
    * to actually start.
    */
   quoteOnly?: string
-  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
+  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string; by?: string }
   /** One photograph of the place. See LocalSeed.photo. */
   photo?: { src: string; credit: string; alt: string }
   /**
@@ -864,6 +890,7 @@ const fromSeed = (s: Seed): Brand => ({
   contactOnly: s.contactOnly,
   needsSite: s.needsSite,
   glow: s.glow,
+  tier: s.tier,
   siteNote: s.siteNote,
   instagram: s.instagram,
   panels: s.panels,
@@ -984,6 +1011,7 @@ export const BRANDS: Brand[] = [
     pageMark: s.pageMark,
     needsSite: s.needsSite,
     glow: s.glow,
+    tier: s.tier,
     orderUrl: s.orderUrl,
     phone: s.phone,
     address: s.address,

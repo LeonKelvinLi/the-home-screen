@@ -19,6 +19,8 @@ export interface Reel {
   src: string
   poster?: string
   credit: string
+  /** The reviewer's handle when the film is theirs. See apps/BrandClip.tsx. */
+  by?: string
   /** The original post, where there is one. */
   href?: string
 }
@@ -30,5 +32,6 @@ export const REELS: Reel[] = BRANDS.filter((b) => b.clip?.src).map((b) => ({
   src: b.clip!.src!,
   poster: b.clip!.poster,
   credit: b.clip!.credit,
+  by: b.clip!.by,
   href: b.clip!.href,
 }))

@@ -2015,6 +2015,10 @@ export const ROSTER_SEED: LocalSeed[] = [
       href: 'https://www.instagram.com/reel/DdDEq35z2g5/',
       credit: 'Filmed by @antoinetterzz',
       platform: 'Instagram',
+      /* His 2026-09-09 note: the bar says "Watch a review by @antoinetterzz"
+         and the credit opens her Instagram — "This way they get the credit &
+         views and hopefully a follow directly to their ig page." */
+      by: 'antoinetterzz',
     },
   }),
   /* Wow Mia Pizza, "San Jose • Goods" — Monterey Road. Pizza is the Italian
@@ -2026,6 +2030,60 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['WOW MIA', 'PIZZA'], logoFace: 'grotesk',
     site: 'https://wowmiapizza.com/',
     siteCta: 'Order online',
+  }),
+
+  /* ---- 2026-09-09, evening. Four more, and a rule from the same day that
+     changes how a spot is drawn: "from here forward, we should only give
+     Affiliates that are on the yellow pages the Free Tier 1 treatment" — see
+     Brand.tier. Research in research/roster/batch18.json. ---- */
+  /* Salad Makers, "Brentwood • Goods" — The Streets of Brentwood. Soups,
+     salads and sandwiches, and Brentwood's Sandwiches seat is open, so a
+     category seat and the whole page. Their site and their Instagram bio
+     close at different hours, so none are carried. The mark is their disc,
+     cut from his screenshot of their site. */
+  seed('salad-makers', 'Salad Makers', 'Salad Makers', 'Salads, wraps & sandwiches', '#2F7D32', {
+    icon: 'salad-makers',
+    logoTemplate: 'wordmark', logoLines: ['Salad', 'Makers'], logoFace: 'script',
+    site: 'https://www.saladmakers.net/',
+    siteCta: 'Order online',
+  }),
+  /* Street Social, "Petaluma • Goods" — Petaluma Boulevard North, eclectic
+     comfort food and a bottle shop. No seat for it, so the yellow sheet, and
+     so the first page drawn at Tier 1: their initials on a tile in their
+     colour, the address, the number, the email and the link, nothing from
+     the tiers above. Their menu is a photograph and their own pages disagree
+     about the hours, so neither is carried. */
+  seed('street-social', 'Street Social', 'Street Social', 'Comfort food & bottle shop', '#111111', {
+    logoTemplate: 'monogram', logoInitials: 'SS', logoFace: 'slab',
+    site: 'https://www.streetsocial.social/',
+    siteCta: 'Reserve a table',
+    tier: 1,
+  }),
+  /* Alive Kitchen by Joni, "3 locations" with no city — Mediterranean meal
+     prep delivered weekly, and the three locations are the cities it serves,
+     Concord, Walnut Creek and Lafayette, per their own bio. No address
+     anywhere (theirs is given after checkout), no seat for meal prep, so each
+     of the three cities' yellow sheets, at Tier 1. */
+  seed('alive-kitchen', 'Alive Kitchen', 'Alive Kitchen', 'Meal prep, delivered weekly', '#2E4A2E', {
+    logoTemplate: 'monogram', logoInitials: 'AK', logoFace: 'script',
+    site: 'https://eatalivekitchen.com/',
+    siteCta: "Order this week's menu",
+    tier: 1,
+  }),
+  /* Baithak, "Dublin • Goods", sent again on 2026-09-09 as a paid Instagram
+     ad. It has held dublin-goods2-1 since August as a hand-written entry that
+     said they publish no prices; their own menu page now prints 138 of them,
+     so the entry moves here and the menu comes with it. Still the warm lead
+     he described — "I deliver for them. They're aware and waiting to sign
+     on" — and nothing here claims they have agreed anything. Seated before
+     the Tier 1 rule, so it keeps its whole page. Their footers and their
+     contact page disagree about hours and about the email, so neither is
+     carried. */
+  seed('baithak', 'Baithak', 'Baithak', 'Indian', '#D2691E', {
+    icon: 'baithak',
+    logoTemplate: 'wordmark', logoLines: ['Baithak'], logoFace: 'script',
+    site: 'https://baithak.us/',
+    siteCta: 'Reserve a table',
   }),
 ]
 

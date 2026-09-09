@@ -138,6 +138,68 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Alive Kitchen — gathered 2026-09-09 from own-domain
+     their spelling: "Alive Kitchen by Joni" (roster keeps "Alive Kitchen")
+     they are: Mediterranean
+     logo: https://eatalivekitchen.com/assets/logo-Cj9p8VVN.png — not cut into a tile yet
+     flag: Glenn: '3 locations', no city given
+     flag: Website meta description also names 'Napa' as a 4th service area, but the Instagram bio and the rest of the site name only 3 cities (Concord, Walnut Creek, Lafayette) -- a location on one page but not the others
+     flag: No street address is published for any city; the site states the exact address is only 'provided after checkout' (mentioned specifically for Concord pickup)
+     flag: Only one phone number (+1 561-909-5062, also used as the WhatsApp ordering link) is published for the whole business; no per-city phone numbers exist
+     flag: No per-city store hours are published; only a general Sun-Mon 2-6pm delivery/pickup window and a Thursday 6pm weekly order cutoff apply site-wide, not tied to any specific address
+     flag: This is a weekly meal-prep delivery/pickup kitchen, not a walk-in restaurant with three storefronts, so the 'locations' are delivery service-area cities rather than addressed venues
+     flag: One kitchen, three delivery cities — Concord, Walnut Creek and Lafayette per their own bio, Napa only in the site's meta description — so one record seated on each of the three cities' yellow sheets; orders close Thursday 6pm, delivery and pickup Sun-Mon 2-6pm, per the site
+  */
+  'alive-kitchen': {
+    phone: "(561) 909-5062",
+    email: "Alivekitchen24@gmail.com",
+    instagram: "alivekitchen24",
+    cuisine: "Mediterranean",
+    tagline: "Weekly Mediterranean meal-prep delivered in the Bay Area, CA",
+    sections: [
+      { name: "Protein Bowls", items: [
+        ["Chicken Shawarma","Spiced chicken, basmati rice, cucumber tomato salad, pickled onion, garlic yogurt",2500],
+        ["Chimichurri Chicken","Herb-marinated chicken, roasted sweet potatoes, garlic green beans, house chimichurri",2300],
+        ["Mediterranean Ground Beef Bowl","Spiced ground beef, tri-color quinoa, roasted vegetables, tzatziki, fresh herbs",2800],
+        ["Grilled Shrimp Couscous","Garlic lemon shrimp, lemon herb couscous, seasonal vegetables",2800],
+        ["Roasted Eggplant & Chickpea","Roasted eggplant, marinated chickpeas, lemon herb rice, tahini, pomegranate",2000],
+        ["Kofta Bowl","Spiced ground beef and lamb kofta, pearl couscous, roasted vegetables, mint yogurt",2600],
+      ] },
+      { name: "Salads", items: [
+        ["Chickpea Salad","Marinated chickpeas, cucumber, cherry tomato, red onion, bell pepper, lemon vinaigrette",1300],
+        ["Roasted Beet Salad","Roasted beets, toasted pine nuts, goat cheese, pomegranate, tahini dressing",1800],
+        ["Cabbage Slaw","Shaved cabbage, carrot, edamame, scallion, citrus dressing",1200],
+        ["Kale Salad","Massaged kale, parmesan, lemon, caesar dressing, toasted pepitas",1000],
+      ] },
+      { name: "Dips & Breads", items: [
+        ["Classic Hummus","",800],
+        ["Tzatziki","",800],
+        ["Matbucha","",800],
+        ["Chimichurri","",800],
+        ["Lemon Tahini","",800],
+        ["Fresh Baked Pita (4-pack)","",1000],
+        ["Fresh Baked Pita (8-pack)","",2000],
+        ["Braided Challah Loaf","",1500],
+      ] },
+      { name: "Cold-Pressed Juices", items: [
+        ["Green Glow","",900],
+        ["Carrot Citrus Boost","",900],
+        ["Beet Berry Vitality","",1000],
+      ] },
+      { name: "Meal Plans", items: [
+        ["Essential","6 meals per week",15000],
+        ["Balanced","10 meals per week",25000],
+        ["Performance","15 meals per week",37500],
+      ] },
+      { name: "Shabbat Dinner", items: [
+        ["Honey Harissa Roast Chicken","Shabbat dinner, serves 4",25000],
+        ["Slow-Braised Lamb Shoulder","Shabbat dinner, serves 4",27500],
+      ] },
+    ],
+    siteNote: "Prices are taken from the site's own menu page (eatalivekitchen.com/menu); one menu applies to all cities and no location-based pricing is shown.",
+  },
+
+  /*
      Ally Virtual — gathered 2026-09-09 from own-domain
      they are: CRM and automation
      logo: https://assets.cdn.filesafe.space/GyU3aAixj9Swzx1v6VvR/media/6628a0b2424438359e1ba0d3.png (350x180) — not cut into a tile yet
@@ -227,6 +289,199 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ["Fried Chicken with Waffles","Five pieces of fried chicken on a waffle",2025],
     ],
     siteNote: "A 184-item priced menu inside their ordering app; no static or PDF menu.",
+  },
+
+  /*
+     Baithak — gathered 2026-09-09 from own-domain
+     they are: Awadhi and North Indian
+     logo: https://baithak.us/wp-content/uploads/2025/03/Logo-Orange_small_website.png — not cut into a tile yet
+     flag: Glenn: 'Dublin • Goods'
+     flag: Hours conflict: the homepage, happy-hour page, and weekend-brunch page footers all state 'Open Daily: 11:00 AM – 10:00 PM', but the Contact Us page (https://baithak.us/contact-us/) states 'Mon - THUR: 11AM - 9PM / Fri, SAT: 11AM - 10PM / SUN: 11AM - 9PM'. Because these disagree, hours is set to null.
+     flag: Email conflict: the homepage, happy-hour page, and weekend-brunch page footers all list info@baithak.us, but the Contact Us page lists baithak@baithak.us. Because these disagree, email is set to null.
+     flag: No second location is mentioned anywhere on the site; all pages checked point to the single Dublin, CA address.
+     flag: Replaces the hand-written entry of 2026-08 that said they publish no prices: their own menu page now prints them
+  */
+  'baithak': {
+    address: "4590 Dublin Blvd, Dublin, CA 94568",
+    phone: "(925) 361-0862",
+    instagram: "Baithak.dublin",
+    cuisine: "Awadhi and North Indian",
+    tagline: "Indian restaurant with full bar, happy hour, and weekend brunch",
+    sections: [
+      { name: "Kebab Plates", items: [
+        ["Norani Paneer Tikka","Grilled cottage cheese",1700],
+        ["Harabhara Daal Kebab","",1600],
+        ["Salad Bowl","Choose any kebab",1500],
+        ["Soft Veg Kebab","Vegetable patties, soft",1600],
+        ["Chicken Malai Tikka","Cream marinated chicken",1700],
+        ["Chicken Seekh Kebab","",1700],
+        ["Chicken Chapali Kebab","Minced chicken kofta kebab",1700],
+        ["Tandoori Chicken Tikka","Marinated chicken pieces",1700],
+        ["Beef Seekh Kebab","Seasoned minced beef",1800],
+        ["Shami Kebab","Minced goat patties, soft",1800],
+        ["Lamb Chop","Marinated lamb chops",2200],
+        ["Fish Fillet Ajwaini","Basa fish",1800],
+        ["Mutton Seekh Kebab","Minced goat meat kebab",1800],
+        ["Soya Chaap Kebab","",1600],
+      ] },
+      { name: "Sides", items: [
+        ["Khameeri Naan (1pc)","",400],
+        ["Garlic Khameeri Naan","",400],
+        ["Warqi Parantha","",400],
+        ["Saffron Rice","",500],
+        ["Biryani Rice","",600],
+        ["Indian Salad","",800],
+        ["Caesar Salad","",800],
+        ["Chilli Garlic Khamiri Naan","",400],
+        ["Khameeri Atta Roti","",400],
+        ["Steam Rice","",500],
+      ] },
+      { name: "Curries", items: [
+        ["Awadhi Daal Makhani","Black daal",1500],
+        ["Awadhi Paneer Makhani","Cottage cheese in curry",1700],
+        ["Shahi Veg Korma","Mix vegetable curry",1700],
+        ["Chicken Kasoori Methi (Boneless)","",1700],
+        ["Awadhi Butter Chicken (Boneless)","Butter chicken, boneless",1700],
+        ["Lamb Nihari","Spicy goat curry",2100],
+        ["Goat Awadhi Korma","Goat creamy curry",2000],
+        ["Chana Daal Fry","",1500],
+        ["Malai Kofta","",1700],
+        ["Dhaba Chicken Korma","",1800],
+        ["Baingan Bharta","",1600],
+      ] },
+      { name: "Biryanis", items: [
+        ["Paneer Mix Veg Biryani","Aromatic rice, vegetables & paneer",1600],
+        ["Chicken Lucknowi Biryani (With Bones)","Aromatic rice & chicken",1600],
+      ] },
+      { name: "Sharing Platters", items: [
+        ["Non Veg Platter","",4400],
+        ["Veg Platter","",4200],
+      ] },
+      { name: "Chai Nashta", items: [
+        ["Chai","Masala / Irani / Saffron / Sulemani",500],
+        ["Coffee","Cappuccino / Americano / Espresso / Cold Nescafe / Filter Coffee",500],
+        ["Shakes","Vanilla / Chocolate / Mango / Strawberry / Pistachio saffron",700],
+      ] },
+      { name: "Snacks & Quick Bites", items: [
+        ["Grilled Bombay Veg Sandwich","",1300],
+        ["Amul Cheese Sandwich","",1300],
+        ["Paneer Roll","",1300],
+        ["Mix Veg Paneer Pakoda","",1100],
+        ["Naanza (Pizza)","Cheese, Chicken Makhani, Paneer, Veg",1300],
+        ["Grilled Chicken Sandwich","",1300],
+        ["Chicken Seekh Roll","",1300],
+        ["Chicken Malai Tikka Roll","",1300],
+        ["Vada Pav","",900],
+        ["Bun Muska","Sweet bread & butter",600],
+        ["Masala Peanuts","",600],
+        ["Papdi Chaat","",1100],
+        ["Aloo Tikki Chaat","",1100],
+        ["Dahi Puri","",1100],
+        ["Pani Puri","",1100],
+        ["Chakhana Chana Dal","",600],
+        ["Masala Papad","",600],
+      ] },
+      { name: "Mocktails", items: [
+        ["Pink Paloma","Grapefruit",1000],
+        ["Red Lantern","Pomegranate",1000],
+        ["Lychee Mule","Lychee",1000],
+        ["Mojito","Pineapple",1000],
+        ["Pina Colada Virgin","",1000],
+        ["Margarita Virgin","",1000],
+      ] },
+      { name: "Buffet", items: [
+        ["Adult","",3000],
+        ["Kids","",1500],
+      ] },
+      { name: "Small Bites", items: [
+        ["Daal Pakwan","",700],
+        ["Ram Laddoo","",700],
+        ["Papad Peanut Masala","",700],
+        ["Kurkure Bhindi","",700],
+        ["Veg Cheese Ball","",700],
+        ["Chicken Cheese Ball","",800],
+        ["Chole Bhature","",1600],
+      ] },
+      { name: "Chai - Lassi - Coffee", items: [
+        ["Mango Lassi","",700],
+        ["Masala Soda","",700],
+        ["Fresh Lime Soda","",700],
+      ] },
+      { name: "Beers", items: [
+        ["Blue Moon","",800],
+        ["Hazy Little Things IPA","",800],
+        ["Modelo Especial","",800],
+        ["Coors Light","",800],
+        ["Peroni Nastro Azurro","",800],
+        ["Pacifico","",800],
+        ["Corona Extra","",800],
+        ["Pale Ale Sierra Nevada","",800],
+      ] },
+      { name: "Non Alcoholic", items: [
+        ["Lemonade","",500],
+        ["Can Soda","",500],
+        ["Tap Soda","",400],
+      ] },
+      { name: "Desserts", items: [
+        ["Shahi Tukda","",600],
+        ["Malai Kulfi","",600],
+        ["Ice Cream","Mango / strawberry / chocolate / vanilla / pistachio",600],
+        ["Shahi Phirni","",600],
+        ["Rasmalai","",800],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Chicken Nuggets","",800],
+        ["Cheese Sandwich","",1000],
+        ["Veg Spring Roll","",800],
+        ["French Fries","",800],
+        ["Onion Rings","",600],
+        ["Maggi Masala","",800],
+        ["Chocolate Milk Shake","",700],
+        ["Vanilla Milk Shake","",700],
+        ["Cheese Naanza","",1100],
+        ["Mango Milk Shake","",700],
+      ] },
+      { name: "Cocktails", items: [
+        ["Japanese Sour","Tequila-based; balance of tartness and sweetness",1200],
+        ["Lychee Martini","Vodka; sweet, fruity martini with distinctive lychee flavour",1200],
+        ["Bramble","Gin-based sour with distinct blackberry flavour",1200],
+        ["Mango Mojito","Rum; refreshing cocktail with balance of sweet, tart, minty flavours",1200],
+        ["Mimosa","Champagne",1200],
+        ["Old Fashioned","Whiskey",1200],
+        ["Moscow Mule","",1300],
+        ["Margarita","",1300],
+        ["Pina Colada","",1300],
+      ] },
+      { name: "Bar Drinks", items: [
+        ["Gin Hendricks","",1500],
+        ["Cognac Hennessy","",1500],
+        ["Cabernet Sauvignon","Wine, glass",1200],
+        ["Pinot Noir","Wine, glass",1200],
+        ["Chardonnay","Wine, glass",1200],
+        ["Sauvignon Blanc","Wine, glass",1200],
+        ["Champagne","Glass",1200],
+        ["Tequila Don Julio Blanco","",1300],
+        ["Whiskey Crown Royal","",1300],
+        ["Whiskey Jameson","",1300],
+        ["Vodka Tito's","",1400],
+        ["Vodka Absolute","",1400],
+        ["Gin Tanqueray","",1300],
+        ["Cognac Hennessay VSOP","",1400],
+        ["Tequila Patron Silver","",1300],
+        ["Tequila Patron Anejo","",1300],
+        ["Tequila Casa Amigo Reposado","",1500],
+        ["Vodka Belvedere","",1600],
+        ["Vodka Grey Goose","",1600],
+        ["Whiskey Jack Daniel","",1300],
+        ["Whiskey Black Label","",1500],
+        ["Whiskey Glinlivet 12","",1600],
+        ["Whiskey Oban 14","",1800],
+        ["Whiskey Indri","",2000],
+        ["Whiskey Maccallan 12","",2200],
+        ["Cognac Rampur","",2200],
+      ] },
+    ],
+    siteNote: "Prices taken from the site's own menu page (https://baithak.us/baithak-indian-restaurant-menu-dublin-ca/), which lists the full food and drink menu as text with printed prices.",
   },
 
   /*
@@ -4630,6 +4885,127 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Salad Makers — gathered 2026-09-09 from own-domain
+     they are: Salads, wraps & sandwiches
+     logo: https://studio-mobile-app-prod.s3.amazonaws.com/public_web/logo/ws_39uJ6tP98HgAQs9W7jqHAdztMrI/3402-c-3-b-1-466-c-4129-9503-0-a-40-a-63-d-8-db-1.png — not cut into a tile yet
+     flag: Glenn: 'Brentwood • Goods'
+     flag: No explicit hours schedule is printed anywhere on the site; the /menu page only shows a dynamic 'Open now' status with no weekly hours listed, so hours is null.
+     flag: No email address is published anywhere on the site.
+     flag: No Instagram link or handle appears on the home page or menu page; instagram is null.
+     flag: The site is a single-page ordering site (home page + /menu ordering page, built on the 'Revi' platform) with no separate /location, /hours, or /about URLs to check.
+     flag: No second location is mentioned anywhere on the site.
+     flag: Two priced menu items are marked 'Out Of Stock (Be Back Soon!)' as of this research: Broccoli Cheddar soup ($8.99) and Polar beverage ($3.25); both are kept in items since they carry printed prices.
+     flag: Printed address has no ZIP code: the menu page shows only '2565 Sand Creek Road, Brentwood, CA'.
+     flag: Address with the suite and ZIP, and the handle saladmakers_brentwood, are from Glenn's screenshots of their own site's Find Us page and their own Instagram profile, which links saladmakers.net
+     flag: Hours contradict between their own pages: the site's Find Us page says Mon-Sat 11am-6pm, Sun 11am-5pm; their Instagram bio says Mon-Sat 11am-7pm, Sun 11am-6pm — so none are carried
+  */
+  'salad-makers': {
+    address: "2565 Sand Creek Rd, Ste 136, Brentwood, CA 94513",
+    phone: "(925) 634-0718",
+    instagram: "saladmakers_brentwood",
+    cuisine: "Salads, wraps & sandwiches",
+    tagline: "Fast-casual salad, sandwich, wrap and soup shop in Brentwood, CA",
+    sections: [
+      { name: "Salad Makers' Favorite Salads", items: [
+        ["Chicken Apple Crisp Salad","Mix greens, romaine, grilled chicken, apples, blue cheese, walnuts, dried cranberries, and balsamic vinaigrette dressing",1399],
+        ["Cobb Salad","Mix greens, romaine, grilled chicken, bacon, carrots, tomatoes, avocado, egg, blue cheese and ranch dressing.",1499],
+        ["Asian Chicken Salad","Mix greens, grilled chicken, carrots, almonds, mandarin oranges, wonton crisps, tossed sesame dressing.",1399],
+        ["Brentwood House Salad","Mix greens, romaine, almonds, pears, blue cheese, topped with honey dijon mustard, and tossed with balsamic vinaigrette dressing",1299],
+        ["BBQ Salad","Mix greens, romaine, bbq chicken, corn, tomatoes, onions, cheddar cheese and crispy strips with ranch.",1399],
+      ] },
+      { name: "Classic Salads", items: [
+        ["Chicken Caesar Salad","Romaine, tossed in our special caesar dressing with croutons and parmesan cheese.",1299],
+        ["Make Your Own Salad","",1399],
+        ["Buffalo Chicken Salad","Mix greens, romaine, chicken with buffalo sauce, bacon, tomatoes, onions, blue cheese and ranch",1399],
+        ["Greek Salad","Mix greens, romaine, cucumbers, tomatoes, olives, red onions, feta cheese",1399],
+        ["Tuna Salad","Mix greens, romaine, white tuna, wonton, bell peppers, onions, tomatoes, cucumbers. Your choice of dressing",1399],
+        ["Daily Salad Special","Today's Special",1099],
+      ] },
+      { name: "Combos", items: [
+        ["Salad & Soup Combo","Pick half salad/ soup",1899],
+        ["Sandwich & Soup Combo","Pick half sandwich/ soup",1899],
+        ["Sandwich & Salad Combo","Pick half salad/ half sandwich",1899],
+      ] },
+      { name: "Sandwiches", items: [
+        ["Pesto Chicken Panini","On a Ciabatta bread with pesto ranch, chicken, mozzarella and tomatoes.",1299],
+        ["Turkey Pesto Panini","On a sourdough with pesto sauce, turkey, swiss cheese and tomatoes.",1299],
+        ["BBQ Chicken Panini","On a sourdough with chicken, lettuce, tomatoes, onions, cheddar cheese and BBQ sauce.",1299],
+        ["Turkey Avocado Club","Toasted on sourdough, all natural turkey, onions, cucumber, lettuce, bacon, avocado and house mayo.",1399],
+        ["Grilled Cheese","",1149],
+        ["Pesto Cheese Panini","On a sourdough with swiss, parmesan, mozzarella and pesto sauce",1299],
+        ["Ribeye Steak Sandwich","Ribeye, mayo, bbq sauce, and tomato. On ciabatta",1499],
+        ["BLT","",1299],
+        ["Tuna Melt","White tuna, mayo, lettuce, tomato and swiss cheese. On sourdough",1299],
+      ] },
+      { name: "Wraps", items: [
+        ["Chicken Caesar Pita","",1399],
+        ["Buffalo Chicken Wrap","Buffalo chicken, bacon, tomatoes, onions, blue cheese and ranch",1399],
+        ["Salad Wrap","",1399],
+        ["Chicken Gyro","Warm pita with lettuce, tomatoes, onion, & tzatziki sauce.",1399],
+        ["Ribeye Gyro","Warm pita with lettuce, tomatoes, onion, & tzatziki sauce.",1399],
+        ["Turkey Wrap","",1399],
+      ] },
+      { name: "Soup", items: [
+        ["Chicken Tortilla Soup","",899],
+        ["Clam Chowder","Creamy Style New England Chowder",899],
+        ["Broccoli Cheddar","",899],
+        ["Tomato Bisque","",899],
+        ["Butternut Squash Soup","",899],
+      ] },
+      { name: "Pizza", items: [
+        ["Cheese Pizza","10” pizza. Thin crust delicious cauliflower dough pizza with mozzarella cheese and pizza sauce",1100],
+        ["Pepperoni Pizza","10” Pizza",1300],
+        ["Build your own Pizza","10” pizza",1400],
+        ["Pesto Cheese Pizza","10” Pizza. Thin crust delicious cauliflower dough pizza with mozzarella cheese and pesto sauce",1200],
+      ] },
+      { name: "Sides", items: [
+        ["Boiled Egg","",250],
+        ["Cookies","",325],
+        ["Rice Krispie","",325],
+        ["Side Chicken","",250],
+        ["Warm Pita","",199],
+        ["Toasted Sourdough","",175],
+        ["Side Avocado","",175],
+        ["Chips","",225],
+        ["Balsamic Vinaigrette","",200],
+        ["Caesar Dressing","",200],
+        ["Feta Cheese (Greek) Dressing","",200],
+        ["Honey Mustard Dressing","",200],
+        ["Ranch","",200],
+        ["Toasted Sesame Dressing","",200],
+        ["Italian Dressing","",200],
+        ["Jalapeno Ranch","",200],
+        ["Blue Cheese Dressing","",200],
+        ["Olive Oil & Balsamic Vinegar","",200],
+        ["Raspberry Vinaigrette","",200],
+        ["Thousand Island Dressing","",200],
+      ] },
+      { name: "Kids", items: [
+        ["Kids Grilled Cheese","Soft toasted whole wheat white bread",1000],
+        ["Kids Salad Two toppings","",1000],
+        ["Kids Cheese Pizza","",1000],
+        ["Kids Mac & Cheese","",1000],
+      ] },
+      { name: "Beverages", items: [
+        ["Coke","",275],
+        ["Dr.Pepper","",275],
+        ["Gatorade","",350],
+        ["Snapple","",350],
+        ["Kids juice","",200],
+        ["Sparkling Water","",350],
+        ["Water","",275],
+        ["La Croix","",350],
+        ["Izze","",350],
+        ["Arizona Iced Tea","",325],
+        ["Polar","",325],
+        ["Kombucha","",399],
+        ["Energy Drink","",399],
+      ] },
+    ],
+    siteNote: "Prices come from saladmakers.net/menu, the business's own in-house ordering page (built on the 'Revi' ordering platform); the static homepage does not list prices.",
+  },
+
+  /*
      The Sandwich Monkey — gathered 2026-09-09 from own-domain
      their spelling: "SANDWICH MONKEY" (roster keeps "The Sandwich Monkey")
      they are: Sandwiches
@@ -4988,6 +5364,28 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices and photos are from their own site.",
+  },
+
+  /*
+     Street Social — gathered 2026-09-09 from own-domain
+     their spelling: "Street..Social" (roster keeps "Street Social")
+     they are: Seasonal American
+     logo: https://images.squarespace-cdn.com/content/v1/5a2049faf14aa151d0ec4334/f0326e03-39e4-4ab3-a148-d56c5d930f88/Screen%2BShot%2B2021-07-06%2Bat%2B10.36.03%2BAM.jpg — not cut into a tile yet
+     flag: Glenn: 'Petaluma • Goods'
+     flag: Hours are inconsistent across their own pages/profiles: the About page says 'Dinner tuesday - Friday 5:30 until 9:00' (one uniform schedule), but the homepage/menu page instead treats Tuesday as a distinct 'Golden Fried Chicken... Dine in with us from 5:30 until Sold out. No reservations' event and Wednesday as a separate, unspecified 'Neighborhood Night'; their own Instagram bio adds a third variant, 'Tuesday - Friday 5:30-9ish / Saturdays are for private,' which is not mentioned on the website at all. Because these disagree, hours is set to null.
+     flag: No menu prices are published as text anywhere on the site; prices_published is false and items is empty as a result (see price_note).
+     flag: Site spells its own name inconsistently: the homepage and About page both render it as 'Street..Social,' while an embedded San Francisco Chronicle quote on the homepage, plus the site's own domain (streetsocial.social) and email, use plain 'Street Social' with no punctuation.
+     flag: Their own contact email (streetsocialla@gmail.com) still carries an 'LA' suffix from the brand's Los Angeles founding (per the About page's history: founded 2013 in LA, then Central Coast, then Sonoma County, permanent Petaluma location since 2020) — this is a naming remnant, not a second active location; only one operating address (Petaluma) is listed on the site.
+     flag: Phone printed the way their own Instagram contact sheet prints it, (707) 774-6185; the site writes 707.774.6185
+  */
+  'street-social': {
+    address: "29 F Petaluma Boulevard North, Petaluma, California 94952",
+    phone: "(707) 774-6185",
+    email: "streetsocialla@gmail.com",
+    instagram: "street_social",
+    cuisine: "Seasonal American",
+    tagline: "Small chef-driven restaurant serving seasonal food and craft cocktails",
+    contactOnly: "Small chef-driven restaurant serving seasonal food and craft cocktails. Their menu is published only as a photograph on the homepage, which the Menu link opens, so no prices are printed here; the one shown is dated 08.28.26.",
   },
 
   /*

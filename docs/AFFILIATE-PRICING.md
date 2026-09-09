@@ -140,3 +140,31 @@ prints the tier figures and nothing about years.
   double- or triple-point days on slow days and holidays, and a bonus for
   hitting a saved-points goal ("if they managed to save 300 points, we would
   double it"). Those go on the page once Glenn writes the terms.
+
+## Tier treatment by page, 2026-09-09
+
+Glenn's note of 9 September, after Belly's page went up with "the premium
+Tier 3 options":
+
+- Every spot on the BEASTY pages — Goods, Services, Online, Individuals —
+  gets "the full Tier 3 treatment", so those affiliates see what membership
+  looks like and "keep their spot".
+- "From here forward", a spot on a city's yellow sheet gets the free Tier 1
+  treatment: name, address and contact details, the link to their site, the
+  tile in their colour with their initials. The bio, the featured items, the
+  menu, the video, the offers and the Instagram button wait for membership.
+  Spots seated before that day keep their whole page.
+- "Menu list" is a Tier 3 premium feature, and the whole menu sits behind a
+  drop-down bar on every page that carries one.
+- A film by a reviewer rather than the business says "Watch a review by
+  @handle", the credit opens the reviewer's Instagram, and the clip has a
+  sound button. "This will be our standard protocol when we use other food
+  reviewers' videos on an Affiliate's page."
+- The free tier says on the Members page that a free spot is held for a set
+  number of months. He asked "3 months? or 9 months?" and whether to leave
+  them indefinitely; the page says three until he answers, and nothing is
+  removed automatically — a seat comes off by his word, as before.
+
+In code: `tier` on a seed (`src/data/brands.ts`), the rules in
+`src/apps/BrandApp.tsx`, the perk and `FREE_SPOT_MONTHS` in
+`src/data/affiliateTiers.ts`.

@@ -11058,3 +11058,82 @@ textarea {
   background: #fff;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
 }
+
+
+/* ---------- the free listing, the menu bar and the reviewer's film (2026-09-09) ---------- */
+
+/* Tier 1: contact details as lines, the site as the one button, and the note
+   that says what membership adds. See BrandApp. */
+.brand-free-line {
+  margin: 0 0 6px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.brand-free-note {
+  margin: 10px 0 8px;
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--muted);
+}
+
+/* Tier 2 has the number but not the call button. */
+.brand-call.is-text {
+  display: block;
+  margin: 0 0 12px;
+  font-size: 14px;
+  color: var(--ink);
+}
+
+/* The whole menu behind a bar: the same bar as the picks, and the body below
+   it keeps the sticky category tabs working as before. */
+.brand-menu-drop {
+  margin-bottom: 12px;
+}
+
+.brand-menu-body {
+  padding-top: 8px;
+}
+
+/* The sound button sits on the film, top-right, in the same dark disc as the
+   reels' speaker badge so it lands legibly on any frame. */
+.brand-clip-frame {
+  position: relative;
+}
+
+.brand-clip-sound {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  padding: 7px 11px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(11, 11, 13, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.brand-clip-sound:active {
+  background: rgba(11, 11, 13, 0.78);
+}
+
+/* A reviewer's credit is a link to them, and it looks like one. */
+.brand-clip-credit a,
+.reel-credit a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.members-biz-note {
+  margin: 8px 0 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--muted);
+}

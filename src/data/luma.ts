@@ -198,6 +198,7 @@ export const ICON_LUMA: Record<string, number> = {
   'russ-fam-kitchen': 0.7208,
   'rywire': 0.8397,
   'sala-thai': 0.9556,
+  'salad-makers': 0.6328,
   'sandwich-monkey': 0.3017,
   'santa-clara-super-kitchen': 0.4137,
   'scoop-n-chill': 0.5594,

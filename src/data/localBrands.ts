@@ -82,6 +82,8 @@ export interface LocalSeed {
    * one, which is the whole product.
    */
   glow?: true
+  /** Which affiliate tier this page is drawn at. See brands.ts. */
+  tier?: 1 | 2 | 3
   phone?: string
   address?: string
   /** Set when the whole menu is triangulated rather than published. */
@@ -216,7 +218,7 @@ export interface LocalSeed {
    * and do not pretend to — it draws a card that says where it goes. `credit`
    * is required either way: it is their video, and whose it is gets said.
    */
-  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string }
+  clip?: { src?: string; poster?: string; href?: string; credit: string; platform?: string; by?: string }
   /**
    * One photograph of the business, on our own origin.
    *
@@ -6175,32 +6177,6 @@ export const LOCAL_SEED: LocalSeed[] = [
     */
     quoteOnly:
       'A Vietnamese kitchen in Oakland. Their own site is behind a bot check that will not answer, so nothing beyond their name is listed here yet.',
-    items: [],
-  },
-  {
-    slug: 'baithak',
-    icon: 'baithak',
-    name: 'Baithak',
-    label: 'Baithak',
-    cuisine: 'Indian',
-    tagline: 'Kebabs, curries and biryani. Dublin Boulevard.',
-    color: '#FAFAFA|#D2691E',
-    prep: 0,
-    /* Dublin's Indian seat is Pippal's and the yellow sheet's first is
-       Biryaniz. This is the second Indian kitchen on that overflow page, which
-       is a thing worth him knowing rather than a problem. */
-    category: 'Indian food',
-    phone: '(925) 361-0862',
-    address: '4590 Dublin Blvd, Dublin, CA 94568',
-    site: 'https://baithak.us/',
-    instagram: 'Baithak.dublin',
-    /*
-      A WARM LEAD, IN HIS OWN WORDS: "I deliver for them. They're aware and
-      waiting to sign on." Nothing on this page claims they have agreed
-      anything, and no price is shown because their site publishes none.
-    */
-    quoteOnly:
-      'An Indian restaurant on Dublin Boulevard doing kebabs, curries and biryani. They publish no prices; their site takes table reservations.',
     items: [],
   },
   {

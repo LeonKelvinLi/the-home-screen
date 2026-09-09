@@ -211,7 +211,17 @@ export function VideoApp({ api }: { api: ShellApi }) {
                 {r.name}
               </button>
               <p className="reel-line">{r.line}</p>
-              <p className="reel-credit">{r.credit}</p>
+              {/* A reviewer's credit opens their profile — the same protocol
+                  as on the business's page. */}
+              <p className="reel-credit">
+                {r.by ? (
+                  <a href={`https://www.instagram.com/${r.by}/`} target="_blank" rel="noopener noreferrer">
+                    {r.credit}
+                  </a>
+                ) : (
+                  r.credit
+                )}
+              </p>
             </div>
             {i === live && REELS.length > 1 && i === 0 && (
               <span className="reel-hint" aria-hidden="true">

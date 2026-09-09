@@ -1,0 +1,1786 @@
+[
+ {
+  "id": "b_saladmakers",
+  "name_exact": "Salad Makers",
+  "one_line": "Fast-casual salad, sandwich, wrap and soup shop in Brentwood, CA",
+  "cuisine": "Salads, wraps & sandwiches",
+  "address": "2565 Sand Creek Rd, Ste 136, Brentwood, CA 94513",
+  "phone": "(925) 634-0718",
+  "email": null,
+  "hours": null,
+  "instagram": "saladmakers_brentwood",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Chicken Apple Crisp Salad",
+    "desc": "Mix greens, romaine, grilled chicken, apples, blue cheese, walnuts, dried cranberries, and balsamic vinaigrette dressing",
+    "cents": 1399,
+    "section": "Salad Makers' Favorite Salads",
+    "label": ""
+   },
+   {
+    "name": "Cobb Salad",
+    "desc": "Mix greens, romaine, grilled chicken, bacon, carrots, tomatoes, avocado, egg, blue cheese and ranch dressing.",
+    "cents": 1499,
+    "section": "Salad Makers' Favorite Salads",
+    "label": ""
+   },
+   {
+    "name": "Asian Chicken Salad",
+    "desc": "Mix greens, grilled chicken, carrots, almonds, mandarin oranges, wonton crisps, tossed sesame dressing.",
+    "cents": 1399,
+    "section": "Salad Makers' Favorite Salads",
+    "label": ""
+   },
+   {
+    "name": "Brentwood House Salad",
+    "desc": "Mix greens, romaine, almonds, pears, blue cheese, topped with honey dijon mustard, and tossed with balsamic vinaigrette dressing",
+    "cents": 1299,
+    "section": "Salad Makers' Favorite Salads",
+    "label": ""
+   },
+   {
+    "name": "BBQ Salad",
+    "desc": "Mix greens, romaine, bbq chicken, corn, tomatoes, onions, cheddar cheese and crispy strips with ranch.",
+    "cents": 1399,
+    "section": "Salad Makers' Favorite Salads",
+    "label": ""
+   },
+   {
+    "name": "Chicken Caesar Salad",
+    "desc": "Romaine, tossed in our special caesar dressing with croutons and parmesan cheese.",
+    "cents": 1299,
+    "section": "Classic Salads",
+    "label": ""
+   },
+   {
+    "name": "Make Your Own Salad",
+    "desc": "",
+    "cents": 1399,
+    "section": "Classic Salads",
+    "label": ""
+   },
+   {
+    "name": "Buffalo Chicken Salad",
+    "desc": "Mix greens, romaine, chicken with buffalo sauce, bacon, tomatoes, onions, blue cheese and ranch",
+    "cents": 1399,
+    "section": "Classic Salads",
+    "label": ""
+   },
+   {
+    "name": "Greek Salad",
+    "desc": "Mix greens, romaine, cucumbers, tomatoes, olives, red onions, feta cheese",
+    "cents": 1399,
+    "section": "Classic Salads",
+    "label": ""
+   },
+   {
+    "name": "Tuna Salad",
+    "desc": "Mix greens, romaine, white tuna, wonton, bell peppers, onions, tomatoes, cucumbers. Your choice of dressing",
+    "cents": 1399,
+    "section": "Classic Salads",
+    "label": ""
+   },
+   {
+    "name": "Daily Salad Special",
+    "desc": "Today's Special",
+    "cents": 1099,
+    "section": "Classic Salads",
+    "label": ""
+   },
+   {
+    "name": "Salad & Soup Combo",
+    "desc": "Pick half salad/ soup",
+    "cents": 1899,
+    "section": "Combos",
+    "label": ""
+   },
+   {
+    "name": "Sandwich & Soup Combo",
+    "desc": "Pick half sandwich/ soup",
+    "cents": 1899,
+    "section": "Combos",
+    "label": ""
+   },
+   {
+    "name": "Sandwich & Salad Combo",
+    "desc": "Pick half salad/ half sandwich",
+    "cents": 1899,
+    "section": "Combos",
+    "label": ""
+   },
+   {
+    "name": "Pesto Chicken Panini",
+    "desc": "On a Ciabatta bread with pesto ranch, chicken, mozzarella and tomatoes.",
+    "cents": 1299,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Turkey Pesto Panini",
+    "desc": "On a sourdough with pesto sauce, turkey, swiss cheese and tomatoes.",
+    "cents": 1299,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "BBQ Chicken Panini",
+    "desc": "On a sourdough with chicken, lettuce, tomatoes, onions, cheddar cheese and BBQ sauce.",
+    "cents": 1299,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Turkey Avocado Club",
+    "desc": "Toasted on sourdough, all natural turkey, onions, cucumber, lettuce, bacon, avocado and house mayo.",
+    "cents": 1399,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Grilled Cheese",
+    "desc": "",
+    "cents": 1149,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Pesto Cheese Panini",
+    "desc": "On a sourdough with swiss, parmesan, mozzarella and pesto sauce",
+    "cents": 1299,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Ribeye Steak Sandwich",
+    "desc": "Ribeye, mayo, bbq sauce, and tomato. On ciabatta",
+    "cents": 1499,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "BLT",
+    "desc": "",
+    "cents": 1299,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Tuna Melt",
+    "desc": "White tuna, mayo, lettuce, tomato and swiss cheese. On sourdough",
+    "cents": 1299,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Chicken Caesar Pita",
+    "desc": "",
+    "cents": 1399,
+    "section": "Wraps",
+    "label": ""
+   },
+   {
+    "name": "Buffalo Chicken Wrap",
+    "desc": "Buffalo chicken, bacon, tomatoes, onions, blue cheese and ranch",
+    "cents": 1399,
+    "section": "Wraps",
+    "label": ""
+   },
+   {
+    "name": "Salad Wrap",
+    "desc": "",
+    "cents": 1399,
+    "section": "Wraps",
+    "label": ""
+   },
+   {
+    "name": "Chicken Gyro",
+    "desc": "Warm pita with lettuce, tomatoes, onion, & tzatziki sauce.",
+    "cents": 1399,
+    "section": "Wraps",
+    "label": ""
+   },
+   {
+    "name": "Ribeye Gyro",
+    "desc": "Warm pita with lettuce, tomatoes, onion, & tzatziki sauce.",
+    "cents": 1399,
+    "section": "Wraps",
+    "label": ""
+   },
+   {
+    "name": "Turkey Wrap",
+    "desc": "",
+    "cents": 1399,
+    "section": "Wraps",
+    "label": ""
+   },
+   {
+    "name": "Chicken Tortilla Soup",
+    "desc": "",
+    "cents": 899,
+    "section": "Soup",
+    "label": ""
+   },
+   {
+    "name": "Clam Chowder",
+    "desc": "Creamy Style New England Chowder",
+    "cents": 899,
+    "section": "Soup",
+    "label": ""
+   },
+   {
+    "name": "Broccoli Cheddar",
+    "desc": "",
+    "cents": 899,
+    "section": "Soup",
+    "label": ""
+   },
+   {
+    "name": "Tomato Bisque",
+    "desc": "",
+    "cents": 899,
+    "section": "Soup",
+    "label": ""
+   },
+   {
+    "name": "Butternut Squash Soup",
+    "desc": "",
+    "cents": 899,
+    "section": "Soup",
+    "label": ""
+   },
+   {
+    "name": "Cheese Pizza",
+    "desc": "10” pizza. Thin crust delicious cauliflower dough pizza with mozzarella cheese and pizza sauce",
+    "cents": 1100,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Pizza",
+    "desc": "10” Pizza",
+    "cents": 1300,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Build your own Pizza",
+    "desc": "10” pizza",
+    "cents": 1400,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Pesto Cheese Pizza",
+    "desc": "10” Pizza. Thin crust delicious cauliflower dough pizza with mozzarella cheese and pesto sauce",
+    "cents": 1200,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Boiled Egg",
+    "desc": "",
+    "cents": 250,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Cookies",
+    "desc": "",
+    "cents": 325,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Rice Krispie",
+    "desc": "",
+    "cents": 325,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Side Chicken",
+    "desc": "",
+    "cents": 250,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Warm Pita",
+    "desc": "",
+    "cents": 199,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Toasted Sourdough",
+    "desc": "",
+    "cents": 175,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Side Avocado",
+    "desc": "",
+    "cents": 175,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Chips",
+    "desc": "",
+    "cents": 225,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Balsamic Vinaigrette",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Caesar Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Feta Cheese (Greek) Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Honey Mustard Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Ranch",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Toasted Sesame Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Italian Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Jalapeno Ranch",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Blue Cheese Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Olive Oil & Balsamic Vinegar",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Raspberry Vinaigrette",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Thousand Island Dressing",
+    "desc": "",
+    "cents": 200,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Kids Grilled Cheese",
+    "desc": "Soft toasted whole wheat white bread",
+    "cents": 1000,
+    "section": "Kids",
+    "label": ""
+   },
+   {
+    "name": "Kids Salad Two toppings",
+    "desc": "",
+    "cents": 1000,
+    "section": "Kids",
+    "label": ""
+   },
+   {
+    "name": "Kids Cheese Pizza",
+    "desc": "",
+    "cents": 1000,
+    "section": "Kids",
+    "label": ""
+   },
+   {
+    "name": "Kids Mac & Cheese",
+    "desc": "",
+    "cents": 1000,
+    "section": "Kids",
+    "label": ""
+   },
+   {
+    "name": "Coke",
+    "desc": "",
+    "cents": 275,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Dr.Pepper",
+    "desc": "",
+    "cents": 275,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Gatorade",
+    "desc": "",
+    "cents": 350,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Snapple",
+    "desc": "",
+    "cents": 350,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Kids juice",
+    "desc": "",
+    "cents": 200,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Sparkling Water",
+    "desc": "",
+    "cents": 350,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Water",
+    "desc": "",
+    "cents": 275,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "La Croix",
+    "desc": "",
+    "cents": 350,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Izze",
+    "desc": "",
+    "cents": 350,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Arizona Iced Tea",
+    "desc": "",
+    "cents": 325,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Polar",
+    "desc": "",
+    "cents": 325,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Kombucha",
+    "desc": "",
+    "cents": 399,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Energy Drink",
+    "desc": "",
+    "cents": 399,
+    "section": "Beverages",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices come from saladmakers.net/menu, the business's own in-house ordering page (built on the 'Revi' ordering platform); the static homepage does not list prices.",
+  "logo_url": "https://studio-mobile-app-prod.s3.amazonaws.com/public_web/logo/ws_39uJ6tP98HgAQs9W7jqHAdztMrI/3402-c-3-b-1-466-c-4129-9503-0-a-40-a-63-d-8-db-1.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Brentwood • Goods'",
+   "No explicit hours schedule is printed anywhere on the site; the /menu page only shows a dynamic 'Open now' status with no weekly hours listed, so hours is null.",
+   "No email address is published anywhere on the site.",
+   "No Instagram link or handle appears on the home page or menu page; instagram is null.",
+   "The site is a single-page ordering site (home page + /menu ordering page, built on the 'Revi' platform) with no separate /location, /hours, or /about URLs to check.",
+   "No second location is mentioned anywhere on the site.",
+   "Two priced menu items are marked 'Out Of Stock (Be Back Soon!)' as of this research: Broccoli Cheddar soup ($8.99) and Polar beverage ($3.25); both are kept in items since they carry printed prices.",
+   "Printed address has no ZIP code: the menu page shows only '2565 Sand Creek Road, Brentwood, CA'.",
+   "Address with the suite and ZIP, and the handle saladmakers_brentwood, are from Glenn's screenshots of their own site's Find Us page and their own Instagram profile, which links saladmakers.net",
+   "Hours contradict between their own pages: the site's Find Us page says Mon-Sat 11am-6pm, Sun 11am-5pm; their Instagram bio says Mon-Sat 11am-7pm, Sun 11am-6pm — so none are carried"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_streetsocial",
+  "name_exact": "Street..Social",
+  "one_line": "Small chef-driven restaurant serving seasonal food and craft cocktails",
+  "cuisine": "Seasonal American",
+  "address": "29 F Petaluma Boulevard North, Petaluma, California 94952",
+  "phone": "(707) 774-6185",
+  "email": "streetsocialla@gmail.com",
+  "hours": null,
+  "instagram": "street_social",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is published only as a photograph on the homepage, which the Menu link opens, so no prices are printed here; the one shown is dated 08.28.26.",
+  "logo_url": "https://images.squarespace-cdn.com/content/v1/5a2049faf14aa151d0ec4334/f0326e03-39e4-4ab3-a148-d56c5d930f88/Screen%2BShot%2B2021-07-06%2Bat%2B10.36.03%2BAM.jpg",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Petaluma • Goods'",
+   "Hours are inconsistent across their own pages/profiles: the About page says 'Dinner tuesday - Friday 5:30 until 9:00' (one uniform schedule), but the homepage/menu page instead treats Tuesday as a distinct 'Golden Fried Chicken... Dine in with us from 5:30 until Sold out. No reservations' event and Wednesday as a separate, unspecified 'Neighborhood Night'; their own Instagram bio adds a third variant, 'Tuesday - Friday 5:30-9ish / Saturdays are for private,' which is not mentioned on the website at all. Because these disagree, hours is set to null.",
+   "No menu prices are published as text anywhere on the site; prices_published is false and items is empty as a result (see price_note).",
+   "Site spells its own name inconsistently: the homepage and About page both render it as 'Street..Social,' while an embedded San Francisco Chronicle quote on the homepage, plus the site's own domain (streetsocial.social) and email, use plain 'Street Social' with no punctuation.",
+   "Their own contact email (streetsocialla@gmail.com) still carries an 'LA' suffix from the brand's Los Angeles founding (per the About page's history: founded 2013 in LA, then Central Coast, then Sonoma County, permanent Petaluma location since 2020) — this is a naming remnant, not a second active location; only one operating address (Petaluma) is listed on the site.",
+   "Phone printed the way their own Instagram contact sheet prints it, (707) 774-6185; the site writes 707.774.6185"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_alivekitchen",
+  "name_exact": "Alive Kitchen by Joni",
+  "one_line": "Weekly Mediterranean meal-prep delivered in the Bay Area, CA",
+  "cuisine": "Mediterranean",
+  "address": null,
+  "phone": "(561) 909-5062",
+  "email": "Alivekitchen24@gmail.com",
+  "hours": null,
+  "instagram": "alivekitchen24",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Chicken Shawarma",
+    "desc": "Spiced chicken, basmati rice, cucumber tomato salad, pickled onion, garlic yogurt",
+    "cents": 2500,
+    "section": "Protein Bowls",
+    "label": ""
+   },
+   {
+    "name": "Chimichurri Chicken",
+    "desc": "Herb-marinated chicken, roasted sweet potatoes, garlic green beans, house chimichurri",
+    "cents": 2300,
+    "section": "Protein Bowls",
+    "label": ""
+   },
+   {
+    "name": "Mediterranean Ground Beef Bowl",
+    "desc": "Spiced ground beef, tri-color quinoa, roasted vegetables, tzatziki, fresh herbs",
+    "cents": 2800,
+    "section": "Protein Bowls",
+    "label": ""
+   },
+   {
+    "name": "Grilled Shrimp Couscous",
+    "desc": "Garlic lemon shrimp, lemon herb couscous, seasonal vegetables",
+    "cents": 2800,
+    "section": "Protein Bowls",
+    "label": ""
+   },
+   {
+    "name": "Roasted Eggplant & Chickpea",
+    "desc": "Roasted eggplant, marinated chickpeas, lemon herb rice, tahini, pomegranate",
+    "cents": 2000,
+    "section": "Protein Bowls",
+    "label": ""
+   },
+   {
+    "name": "Kofta Bowl",
+    "desc": "Spiced ground beef and lamb kofta, pearl couscous, roasted vegetables, mint yogurt",
+    "cents": 2600,
+    "section": "Protein Bowls",
+    "label": ""
+   },
+   {
+    "name": "Chickpea Salad",
+    "desc": "Marinated chickpeas, cucumber, cherry tomato, red onion, bell pepper, lemon vinaigrette",
+    "cents": 1300,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Roasted Beet Salad",
+    "desc": "Roasted beets, toasted pine nuts, goat cheese, pomegranate, tahini dressing",
+    "cents": 1800,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Cabbage Slaw",
+    "desc": "Shaved cabbage, carrot, edamame, scallion, citrus dressing",
+    "cents": 1200,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Kale Salad",
+    "desc": "Massaged kale, parmesan, lemon, caesar dressing, toasted pepitas",
+    "cents": 1000,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Classic Hummus",
+    "desc": "",
+    "cents": 800,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Tzatziki",
+    "desc": "",
+    "cents": 800,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Matbucha",
+    "desc": "",
+    "cents": 800,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Chimichurri",
+    "desc": "",
+    "cents": 800,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Lemon Tahini",
+    "desc": "",
+    "cents": 800,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Fresh Baked Pita (4-pack)",
+    "desc": "",
+    "cents": 1000,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Fresh Baked Pita (8-pack)",
+    "desc": "",
+    "cents": 2000,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Braided Challah Loaf",
+    "desc": "",
+    "cents": 1500,
+    "section": "Dips & Breads",
+    "label": ""
+   },
+   {
+    "name": "Green Glow",
+    "desc": "",
+    "cents": 900,
+    "section": "Cold-Pressed Juices",
+    "label": ""
+   },
+   {
+    "name": "Carrot Citrus Boost",
+    "desc": "",
+    "cents": 900,
+    "section": "Cold-Pressed Juices",
+    "label": ""
+   },
+   {
+    "name": "Beet Berry Vitality",
+    "desc": "",
+    "cents": 1000,
+    "section": "Cold-Pressed Juices",
+    "label": ""
+   },
+   {
+    "name": "Essential",
+    "desc": "6 meals per week",
+    "cents": 15000,
+    "section": "Meal Plans",
+    "label": ""
+   },
+   {
+    "name": "Balanced",
+    "desc": "10 meals per week",
+    "cents": 25000,
+    "section": "Meal Plans",
+    "label": ""
+   },
+   {
+    "name": "Performance",
+    "desc": "15 meals per week",
+    "cents": 37500,
+    "section": "Meal Plans",
+    "label": ""
+   },
+   {
+    "name": "Honey Harissa Roast Chicken",
+    "desc": "Shabbat dinner, serves 4",
+    "cents": 25000,
+    "section": "Shabbat Dinner",
+    "label": ""
+   },
+   {
+    "name": "Slow-Braised Lamb Shoulder",
+    "desc": "Shabbat dinner, serves 4",
+    "cents": 27500,
+    "section": "Shabbat Dinner",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are taken from the site's own menu page (eatalivekitchen.com/menu); one menu applies to all cities and no location-based pricing is shown.",
+  "logo_url": "https://eatalivekitchen.com/assets/logo-Cj9p8VVN.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: '3 locations', no city given",
+   "Website meta description also names 'Napa' as a 4th service area, but the Instagram bio and the rest of the site name only 3 cities (Concord, Walnut Creek, Lafayette) -- a location on one page but not the others",
+   "No street address is published for any city; the site states the exact address is only 'provided after checkout' (mentioned specifically for Concord pickup)",
+   "Only one phone number (+1 561-909-5062, also used as the WhatsApp ordering link) is published for the whole business; no per-city phone numbers exist",
+   "No per-city store hours are published; only a general Sun-Mon 2-6pm delivery/pickup window and a Thursday 6pm weekly order cutoff apply site-wide, not tied to any specific address",
+   "This is a weekly meal-prep delivery/pickup kitchen, not a walk-in restaurant with three storefronts, so the 'locations' are delivery service-area cities rather than addressed venues",
+   "One kitchen, three delivery cities — Concord, Walnut Creek and Lafayette per their own bio, Napa only in the site's meta description — so one record seated on each of the three cities' yellow sheets; orders close Thursday 6pm, delivery and pickup Sun-Mon 2-6pm, per the site"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_baithak",
+  "name_exact": "Baithak",
+  "one_line": "Indian restaurant with full bar, happy hour, and weekend brunch",
+  "cuisine": "Awadhi and North Indian",
+  "address": "4590 Dublin Blvd, Dublin, CA 94568",
+  "phone": "(925) 361-0862",
+  "email": null,
+  "hours": null,
+  "instagram": "Baithak.dublin",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Norani Paneer Tikka",
+    "desc": "Grilled cottage cheese",
+    "cents": 1700,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Harabhara Daal Kebab",
+    "desc": "",
+    "cents": 1600,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Salad Bowl",
+    "desc": "Choose any kebab",
+    "cents": 1500,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Soft Veg Kebab",
+    "desc": "Vegetable patties, soft",
+    "cents": 1600,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Chicken Malai Tikka",
+    "desc": "Cream marinated chicken",
+    "cents": 1700,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Chicken Seekh Kebab",
+    "desc": "",
+    "cents": 1700,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Chicken Chapali Kebab",
+    "desc": "Minced chicken kofta kebab",
+    "cents": 1700,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Tandoori Chicken Tikka",
+    "desc": "Marinated chicken pieces",
+    "cents": 1700,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Beef Seekh Kebab",
+    "desc": "Seasoned minced beef",
+    "cents": 1800,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Shami Kebab",
+    "desc": "Minced goat patties, soft",
+    "cents": 1800,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Lamb Chop",
+    "desc": "Marinated lamb chops",
+    "cents": 2200,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Fish Fillet Ajwaini",
+    "desc": "Basa fish",
+    "cents": 1800,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Mutton Seekh Kebab",
+    "desc": "Minced goat meat kebab",
+    "cents": 1800,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Soya Chaap Kebab",
+    "desc": "",
+    "cents": 1600,
+    "section": "Kebab Plates",
+    "label": ""
+   },
+   {
+    "name": "Khameeri Naan (1pc)",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Garlic Khameeri Naan",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Warqi Parantha",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Saffron Rice",
+    "desc": "",
+    "cents": 500,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Biryani Rice",
+    "desc": "",
+    "cents": 600,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Indian Salad",
+    "desc": "",
+    "cents": 800,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "",
+    "cents": 800,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Chilli Garlic Khamiri Naan",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Khameeri Atta Roti",
+    "desc": "",
+    "cents": 400,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Steam Rice",
+    "desc": "",
+    "cents": 500,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Awadhi Daal Makhani",
+    "desc": "Black daal",
+    "cents": 1500,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Awadhi Paneer Makhani",
+    "desc": "Cottage cheese in curry",
+    "cents": 1700,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Shahi Veg Korma",
+    "desc": "Mix vegetable curry",
+    "cents": 1700,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Chicken Kasoori Methi (Boneless)",
+    "desc": "",
+    "cents": 1700,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Awadhi Butter Chicken (Boneless)",
+    "desc": "Butter chicken, boneless",
+    "cents": 1700,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Lamb Nihari",
+    "desc": "Spicy goat curry",
+    "cents": 2100,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Goat Awadhi Korma",
+    "desc": "Goat creamy curry",
+    "cents": 2000,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Chana Daal Fry",
+    "desc": "",
+    "cents": 1500,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Malai Kofta",
+    "desc": "",
+    "cents": 1700,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Dhaba Chicken Korma",
+    "desc": "",
+    "cents": 1800,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Baingan Bharta",
+    "desc": "",
+    "cents": 1600,
+    "section": "Curries",
+    "label": ""
+   },
+   {
+    "name": "Paneer Mix Veg Biryani",
+    "desc": "Aromatic rice, vegetables & paneer",
+    "cents": 1600,
+    "section": "Biryanis",
+    "label": ""
+   },
+   {
+    "name": "Chicken Lucknowi Biryani (With Bones)",
+    "desc": "Aromatic rice & chicken",
+    "cents": 1600,
+    "section": "Biryanis",
+    "label": ""
+   },
+   {
+    "name": "Non Veg Platter",
+    "desc": "",
+    "cents": 4400,
+    "section": "Sharing Platters",
+    "label": ""
+   },
+   {
+    "name": "Veg Platter",
+    "desc": "",
+    "cents": 4200,
+    "section": "Sharing Platters",
+    "label": ""
+   },
+   {
+    "name": "Chai",
+    "desc": "Masala / Irani / Saffron / Sulemani",
+    "cents": 500,
+    "section": "Chai Nashta",
+    "label": ""
+   },
+   {
+    "name": "Coffee",
+    "desc": "Cappuccino / Americano / Espresso / Cold Nescafe / Filter Coffee",
+    "cents": 500,
+    "section": "Chai Nashta",
+    "label": ""
+   },
+   {
+    "name": "Shakes",
+    "desc": "Vanilla / Chocolate / Mango / Strawberry / Pistachio saffron",
+    "cents": 700,
+    "section": "Chai Nashta",
+    "label": ""
+   },
+   {
+    "name": "Grilled Bombay Veg Sandwich",
+    "desc": "",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Amul Cheese Sandwich",
+    "desc": "",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Paneer Roll",
+    "desc": "",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Mix Veg Paneer Pakoda",
+    "desc": "",
+    "cents": 1100,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Naanza (Pizza)",
+    "desc": "Cheese, Chicken Makhani, Paneer, Veg",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Grilled Chicken Sandwich",
+    "desc": "",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Chicken Seekh Roll",
+    "desc": "",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Chicken Malai Tikka Roll",
+    "desc": "",
+    "cents": 1300,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Vada Pav",
+    "desc": "",
+    "cents": 900,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Bun Muska",
+    "desc": "Sweet bread & butter",
+    "cents": 600,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Masala Peanuts",
+    "desc": "",
+    "cents": 600,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Papdi Chaat",
+    "desc": "",
+    "cents": 1100,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Aloo Tikki Chaat",
+    "desc": "",
+    "cents": 1100,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Dahi Puri",
+    "desc": "",
+    "cents": 1100,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Pani Puri",
+    "desc": "",
+    "cents": 1100,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Chakhana Chana Dal",
+    "desc": "",
+    "cents": 600,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Masala Papad",
+    "desc": "",
+    "cents": 600,
+    "section": "Snacks & Quick Bites",
+    "label": ""
+   },
+   {
+    "name": "Pink Paloma",
+    "desc": "Grapefruit",
+    "cents": 1000,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Red Lantern",
+    "desc": "Pomegranate",
+    "cents": 1000,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Lychee Mule",
+    "desc": "Lychee",
+    "cents": 1000,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Mojito",
+    "desc": "Pineapple",
+    "cents": 1000,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Pina Colada Virgin",
+    "desc": "",
+    "cents": 1000,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Margarita Virgin",
+    "desc": "",
+    "cents": 1000,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Adult",
+    "desc": "",
+    "cents": 3000,
+    "section": "Buffet",
+    "label": ""
+   },
+   {
+    "name": "Kids",
+    "desc": "",
+    "cents": 1500,
+    "section": "Buffet",
+    "label": ""
+   },
+   {
+    "name": "Daal Pakwan",
+    "desc": "",
+    "cents": 700,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Ram Laddoo",
+    "desc": "",
+    "cents": 700,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Papad Peanut Masala",
+    "desc": "",
+    "cents": 700,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Kurkure Bhindi",
+    "desc": "",
+    "cents": 700,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Veg Cheese Ball",
+    "desc": "",
+    "cents": 700,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Chicken Cheese Ball",
+    "desc": "",
+    "cents": 800,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Chole Bhature",
+    "desc": "",
+    "cents": 1600,
+    "section": "Small Bites",
+    "label": ""
+   },
+   {
+    "name": "Mango Lassi",
+    "desc": "",
+    "cents": 700,
+    "section": "Chai - Lassi - Coffee",
+    "label": ""
+   },
+   {
+    "name": "Masala Soda",
+    "desc": "",
+    "cents": 700,
+    "section": "Chai - Lassi - Coffee",
+    "label": ""
+   },
+   {
+    "name": "Fresh Lime Soda",
+    "desc": "",
+    "cents": 700,
+    "section": "Chai - Lassi - Coffee",
+    "label": ""
+   },
+   {
+    "name": "Blue Moon",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Hazy Little Things IPA",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Modelo Especial",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Coors Light",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Peroni Nastro Azurro",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Pacifico",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Corona Extra",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Pale Ale Sierra Nevada",
+    "desc": "",
+    "cents": 800,
+    "section": "Beers",
+    "label": ""
+   },
+   {
+    "name": "Lemonade",
+    "desc": "",
+    "cents": 500,
+    "section": "Non Alcoholic",
+    "label": ""
+   },
+   {
+    "name": "Can Soda",
+    "desc": "",
+    "cents": 500,
+    "section": "Non Alcoholic",
+    "label": ""
+   },
+   {
+    "name": "Tap Soda",
+    "desc": "",
+    "cents": 400,
+    "section": "Non Alcoholic",
+    "label": ""
+   },
+   {
+    "name": "Shahi Tukda",
+    "desc": "",
+    "cents": 600,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Malai Kulfi",
+    "desc": "",
+    "cents": 600,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Ice Cream",
+    "desc": "Mango / strawberry / chocolate / vanilla / pistachio",
+    "cents": 600,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Shahi Phirni",
+    "desc": "",
+    "cents": 600,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Rasmalai",
+    "desc": "",
+    "cents": 800,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Chicken Nuggets",
+    "desc": "",
+    "cents": 800,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Cheese Sandwich",
+    "desc": "",
+    "cents": 1000,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Veg Spring Roll",
+    "desc": "",
+    "cents": 800,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "French Fries",
+    "desc": "",
+    "cents": 800,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Onion Rings",
+    "desc": "",
+    "cents": 600,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Maggi Masala",
+    "desc": "",
+    "cents": 800,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Chocolate Milk Shake",
+    "desc": "",
+    "cents": 700,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Vanilla Milk Shake",
+    "desc": "",
+    "cents": 700,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Cheese Naanza",
+    "desc": "",
+    "cents": 1100,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Mango Milk Shake",
+    "desc": "",
+    "cents": 700,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Japanese Sour",
+    "desc": "Tequila-based; balance of tartness and sweetness",
+    "cents": 1200,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Lychee Martini",
+    "desc": "Vodka; sweet, fruity martini with distinctive lychee flavour",
+    "cents": 1200,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Bramble",
+    "desc": "Gin-based sour with distinct blackberry flavour",
+    "cents": 1200,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Mango Mojito",
+    "desc": "Rum; refreshing cocktail with balance of sweet, tart, minty flavours",
+    "cents": 1200,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Mimosa",
+    "desc": "Champagne",
+    "cents": 1200,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Old Fashioned",
+    "desc": "Whiskey",
+    "cents": 1200,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Moscow Mule",
+    "desc": "",
+    "cents": 1300,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Margarita",
+    "desc": "",
+    "cents": 1300,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Pina Colada",
+    "desc": "",
+    "cents": 1300,
+    "section": "Cocktails",
+    "label": ""
+   },
+   {
+    "name": "Gin Hendricks",
+    "desc": "",
+    "cents": 1500,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Cognac Hennessy",
+    "desc": "",
+    "cents": 1500,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Cabernet Sauvignon",
+    "desc": "Wine, glass",
+    "cents": 1200,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Pinot Noir",
+    "desc": "Wine, glass",
+    "cents": 1200,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Chardonnay",
+    "desc": "Wine, glass",
+    "cents": 1200,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Sauvignon Blanc",
+    "desc": "Wine, glass",
+    "cents": 1200,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Champagne",
+    "desc": "Glass",
+    "cents": 1200,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Tequila Don Julio Blanco",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Crown Royal",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Jameson",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Vodka Tito's",
+    "desc": "",
+    "cents": 1400,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Vodka Absolute",
+    "desc": "",
+    "cents": 1400,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Gin Tanqueray",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Cognac Hennessay VSOP",
+    "desc": "",
+    "cents": 1400,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Tequila Patron Silver",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Tequila Patron Anejo",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Tequila Casa Amigo Reposado",
+    "desc": "",
+    "cents": 1500,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Vodka Belvedere",
+    "desc": "",
+    "cents": 1600,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Vodka Grey Goose",
+    "desc": "",
+    "cents": 1600,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Jack Daniel",
+    "desc": "",
+    "cents": 1300,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Black Label",
+    "desc": "",
+    "cents": 1500,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Glinlivet 12",
+    "desc": "",
+    "cents": 1600,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Oban 14",
+    "desc": "",
+    "cents": 1800,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Indri",
+    "desc": "",
+    "cents": 2000,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Whiskey Maccallan 12",
+    "desc": "",
+    "cents": 2200,
+    "section": "Bar Drinks",
+    "label": ""
+   },
+   {
+    "name": "Cognac Rampur",
+    "desc": "",
+    "cents": 2200,
+    "section": "Bar Drinks",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices taken from the site's own menu page (https://baithak.us/baithak-indian-restaurant-menu-dublin-ca/), which lists the full food and drink menu as text with printed prices.",
+  "logo_url": "https://baithak.us/wp-content/uploads/2025/03/Logo-Orange_small_website.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Dublin • Goods'",
+   "Hours conflict: the homepage, happy-hour page, and weekend-brunch page footers all state 'Open Daily: 11:00 AM – 10:00 PM', but the Contact Us page (https://baithak.us/contact-us/) states 'Mon - THUR: 11AM - 9PM / Fri, SAT: 11AM - 10PM / SUN: 11AM - 9PM'. Because these disagree, hours is set to null.",
+   "Email conflict: the homepage, happy-hour page, and weekend-brunch page footers all list info@baithak.us, but the Contact Us page lists baithak@baithak.us. Because these disagree, email is set to null.",
+   "No second location is mentioned anywhere on the site; all pages checked point to the single Dublin, CA address.",
+   "Replaces the hand-written entry of 2026-08 that said they publish no prices: their own menu page now prints them"
+  ],
+  "blocked": null
+ }
+]
