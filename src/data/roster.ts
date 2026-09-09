@@ -2108,7 +2108,12 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   /* SIA Collective takes this seat, on "BEASTY • Goods, replace EAT tile
      please". EAT keeps its services seat at #9 and its place in the dock. */
   'b_siacollective', //    10 SIA Collective
-  'b_paulosausage', //     11 Paulo Sausage Co
+  /* "Can you move belly to the front home screen? You can move Paulo
+     sausage somewhere else because they close down recently." — 2026-09-09.
+     Belly takes the seat; Paulo Sausage Co keeps its Pittsburg seat, which
+     is the somewhere else it already had, until he says more — their own
+     site carries no closing notice, so the page does not say one. */
+  'b_belly', //            11 Belly
   'b_lumpiacompany', //    12 Lumpia Company
   'b_hotboyschicken', //   13 Hot boys
   'b_sincitypits', //      14 Sin City Pits

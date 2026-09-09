@@ -647,7 +647,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     page to sit in until the Pittsburg page existed this week. A business on a
     BEASTY sheet AND in its own city is the intended shape, not a duplicate.
   */
-  'pittsburg-goods-6': 'b_paulosausage', //        Sandwiches
+  'pittsburg-goods-6': 'b_paulosausage', //        Sandwiches — off the front page since 2026-09-09 ("they close down recently"); this seat is his call
   /*
     2026-08-28, 01:01-01:28. THREE OF THESE FOUR HAVE NO CATEGORY among the
     twenty-four — BBQ, a distillery and a Cajun seafood boil are none of them,
