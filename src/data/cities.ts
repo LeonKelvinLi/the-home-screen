@@ -316,6 +316,13 @@ export const CITY_PAGES = [
     address is what a customer navigates to, so Sunol gets the page.
   */
   'Sunol',
+  /*
+    2026-09-08, evening: 7 Mile House, "Brisbane • Goods", opens Brisbane. His
+    landmark link was a hotel photograph off TripAdvisor, not ours to use; the
+    wallpaper is Sierra Point and the marina from Commons, the same corner of
+    town — see public/wallpapers/CREDITS.md.
+  */
+  'Brisbane',
 ] as const
 
 /**

@@ -977,4 +977,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-individuals-16': 'b_housingauthority', //              a Richmond dance crew, on his "Yes plz"
   /* 2026-09-08, morning: Moxie Steak House, "Alameda • Goods". */
   'alameda-goods2-1': 'b_moxiesteakhouse', //                     no steakhouse seat, and the burgers seat is Shaka Shack's; yellow sheet
+  /* 2026-09-08, evening: 7 Mile House opens Brisbane; Belly; Wow Mia Pizza. */
+  'brisbane-goods-0': 'b_7milehouse', //                          no bar-and-grill seat; seat 0 opens the city, as Shaka Shack's did Alameda
+  'oakland-goods-7': 'b_belly', //                                Korean and ramen — kimchi and bulgogi on a Rockridge diner menu
+  'san-jose-goods-5': 'b_wowmiapizza', //                         Italian — pizza
 }

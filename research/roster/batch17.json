@@ -1,0 +1,1291 @@
+[
+ {
+  "id": "b_7milehouse",
+  "name_exact": "7 Mile House",
+  "one_line": "Historic, dog-friendly restaurant, sports bar and live music venue",
+  "cuisine": "Restaurant & sports bar",
+  "address": "2800 Bayshore Blvd, Brisbane, CA 94005",
+  "phone": "(415) 467-2343",
+  "email": null,
+  "hours": "Mon 11:30am-9pm, Wed-Sat 11:30am-9pm, Sun 11:30am-8pm, closed Tue",
+  "instagram": "7milehouse",
+  "site_kind": "own-domain",
+  "prices_published": false,
+  "items": [],
+  "price_note": "No text-based prices are published on 7milehouse.com: /menu shows six menu images (Appetizers & Salads; Sandwiches, Pasta, Kids & Sides; Entrees & Desserts; two further unlabeled pages; Dog Menu; Brunch Menu) with no readable text, and /order only links out to a third-party Toast Tab ordering page. Per the /ubebakeoff page, the 6th annual Ube Bake-Off (Sept 30-Oct 5, 2026) has no entry fee, is dine-in only via the 'Ube Bake-Off Sampler' (comes with 2 ballots to sample and vote on 4 competing desserts; no tickets needed though reservations are recommended), with the winning baker earning the 'Ube Bake Off Champ' title, a $100 gift certificate, and a chance to sell their dessert at 7 Mile House in Oct/Nov.",
+  "logo_url": "https://images.squarespace-cdn.com/content/v1/5621644ce4b01226f10a20ad/1535466904353-UGW681IXI8TO1INI0X75/static1.squarespace.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Brisbane • Goods'",
+   "Hours: the home page, /menu and /contact agree (Sun 11:30am-8pm; Mon and Wed-Sat 11:30am-9pm, bar to 10pm Fri-Sat; closed Tue) and their Instagram bio says 'Open Wed - Mon w/ Sun brunch'; only the /ubebakeoff page's generic footer groups the days differently, so the three-page line is carried",
+   "Menu is image/PDF only on /menu (Appetizers & Salads; Sandwiches, Pasta, Kids & Sides; Entrees & Desserts; two more unlabeled pages; Dog Menu; Brunch Menu) - no text prices could be extracted; /order redirects to a third-party Toast Tab ordering site (out of scope for this research), so prices_published is false and items is empty.",
+   "Ube Bake-Off page: 6th annual event, Sept 30-Oct 5, 2026, at 7 Mile House. Free to vote (no entry fee); dine-in only - order the 'Ube Bake-Off Sampler' to taste 4 competition desserts and receive 2 ballots to vote (hand to server); no tickets required, reservations recommended. Prizes: the '7 Mile House Ube Bake Off Champ' title, a $100 gift certificate, a chance to sell the winning dessert at 7 Mile House in Oct/Nov, plus a blog/social media feature. A separate link on that page for nominating or competing was not followed.",
+   "No email address found on the home page or the /contact page.",
+   "Phone number appears in two printed formats across pages ('(415) 467-2343' on the home page vs '415-467-2343' on /ubebakeoff, /menu, and /contact) - same number, formatting difference only.",
+   "Menu prices are on their Toast ordering page, which refuses automated fetches (403), so the page says the prices are on the site rather than printing any"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_belly",
+  "name_exact": "belly",
+  "one_line": "Korean-Mexican fusion diner with tacos, burgers, bowls, brunch",
+  "cuisine": "Korean-Mexican fusion",
+  "address": "5634 College Avenue, Oakland, CA 94618",
+  "phone": "(510) 350-8799",
+  "email": "info@bellyuptown.com",
+  "hours": null,
+  "instagram": "bellyoakland",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Kimchi Arancini Balls",
+    "desc": "Crispy risotto, Monterey Jack, scallions, sesame, kimchi aioli",
+    "cents": 900,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Crispy Dumplings",
+    "desc": "Pan-seared pork & shrimp, soy chili oil",
+    "cents": 1000,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Mushroom Arancini",
+    "desc": "",
+    "cents": 900,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Bulgogi Stuffed Mushrooms",
+    "desc": "",
+    "cents": 900,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Uptown Burger",
+    "desc": "6oz patty, sunny egg, grilled kimchi, jalapeños, cheese, belly sauce, fries",
+    "cents": 2200,
+    "section": "Burgers",
+    "label": ""
+   },
+   {
+    "name": "Belly Burger",
+    "desc": "6oz patty, mushrooms, onion ring, kimchi cucumbers, cheese, garlic & belly sauce, fries",
+    "cents": 2200,
+    "section": "Burgers",
+    "label": ""
+   },
+   {
+    "name": "West Coast Burger",
+    "desc": "6oz patty, kimchi cucumbers, candied bacon, greens, tomato, avocado, chipotle ketchup, fries",
+    "cents": 2200,
+    "section": "Burgers",
+    "label": ""
+   },
+   {
+    "name": "Silk Road Spaghetti",
+    "desc": "Garlic, ginger, green onions, Yunnan chilies, sweet & spicy sauce",
+    "cents": 1400,
+    "section": "Pasta",
+    "label": ""
+   },
+   {
+    "name": "Creamy Kimchi Spaghetti",
+    "desc": "Sautéed kimchi, onions, Parmesan, creamy kimchi sauce",
+    "cents": 1400,
+    "section": "Pasta",
+    "label": ""
+   },
+   {
+    "name": "Miso Butter Spaghetti",
+    "desc": "Parmesan, furikake, truffle oil, toasted panko",
+    "cents": 1400,
+    "section": "Pasta",
+    "label": ""
+   },
+   {
+    "name": "Mushroom Risotto",
+    "desc": "Dashi, mushroom, Parmesan, parsley, asparagus",
+    "cents": 1900,
+    "section": "Pasta",
+    "label": ""
+   },
+   {
+    "name": "Asian Crunch Salad",
+    "desc": "Cabbage mix, Romaine, carrots, Asian pear, fried split peas, wontons, miso sesame vinaigrette",
+    "cents": 1600,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Chinese Chicken Salad",
+    "desc": "Mixed greens, chicken, wontons, mandarins, almonds, edamame, sesame ginger vinaigrette",
+    "cents": 1975,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Side Salad",
+    "desc": "Mixed greens, pickled red onions, sesame ginger vinaigrette",
+    "cents": 575,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "Romaine, croutons, Parmesan, caesar dressing",
+    "cents": 1600,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Cobb Salad",
+    "desc": "",
+    "cents": 1600,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Breakfast Taco Place",
+    "desc": "Scrambled eggs/egg whites, fries, bacon, cheese, avocado, chipotle aioli (2 corn tortillas)",
+    "cents": 2195,
+    "section": "All Day Breakfast",
+    "label": ""
+   },
+   {
+    "name": "Breakfast Burrito",
+    "desc": "Scrambled eggs/egg whites, tater tots, bacon, cheese, avocado, chipotle aioli",
+    "cents": 2075,
+    "section": "All Day Breakfast",
+    "label": ""
+   },
+   {
+    "name": "Breakfast Sandwich",
+    "desc": "Egg, bacon, American cheese, avocado, chipotle aioli",
+    "cents": 1600,
+    "section": "All Day Breakfast",
+    "label": ""
+   },
+   {
+    "name": "Cali",
+    "desc": "House marinated steak, fries, avocado, pico de gallo, spicy crema, Cheddar",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "Grilled Chicken",
+    "desc": "House marinated chicken, Korean slaw, rice, pickled cucumbers, garlic & kimchi aioli",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "Panko Shrimp",
+    "desc": "Panko shrimp tempura, avocado, sesame slaw, sambal aioli, pico de gallo, lime-cilantro crema",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "Korean Hot Chicken Taco",
+    "desc": "Panko fried chicken, sesame slaw, pickled cucumbers, kimchi aioli",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "Steak + Egg Taco",
+    "desc": "House marinated steak, fries, fried egg, chipotle & garlic aioli",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "Surf Taco",
+    "desc": "Panko fish tempura, avocado, pico de gallo, sesame slaw, sambal aioli, spicy crema",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "Veggie Taco",
+    "desc": "Tofu tempura, sweet chili glaze, sesame slaw, pickled cucumbers",
+    "cents": 775,
+    "section": "Tacos (Individual)",
+    "label": ""
+   },
+   {
+    "name": "2 Taco Platter",
+    "desc": "Choice of two tacos, side salad, chips",
+    "cents": 2095,
+    "section": "Taco Platters",
+    "label": ""
+   },
+   {
+    "name": "3 Taco Platter",
+    "desc": "Choice of three tacos, side salad, chips",
+    "cents": 2475,
+    "section": "Taco Platters",
+    "label": ""
+   },
+   {
+    "name": "Cali Burrito",
+    "desc": "House marinated steak, fries, avocado, pico de gallo, spicy crema, Cheddar",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Grilled Chicken Burrito",
+    "desc": "Marinated chicken, Korean slaw, pickled cucumbers, garlic & kimchi aioli, multigrain rice",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Panko Shrimp Burrito",
+    "desc": "Panko shrimp, avocado, sesame slaw, sambal aioli, pico de gallo, lime-cilantro crema, multigrain rice",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Korean Hot Chicken Burrito",
+    "desc": "Panko fried chicken, sesame slaw, pickled cucumbers, kimchi aioli, multigrain rice",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Steak + Egg Burrito",
+    "desc": "House marinated steak, fries, fried egg, chipotle & garlic aioli",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Surf Burrito",
+    "desc": "Tempura fish, sesame slaw, avocado, pico de gallo, sambal aioli, spicy crema, multigrain rice",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Veggie Burrito",
+    "desc": "Tofu tempura, pickled cucumbers, sesame slaw, sweet chili glaze",
+    "cents": 1975,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Surf and Turf Burrito",
+    "desc": "Steak, shrimp tempura, corn salsa, Cheddar, avocado, chipotle aioli",
+    "cents": 2200,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Chicken Caesar Wrap",
+    "desc": "Grilled/fried chicken, Romaine, Parmesan, croutons, caesar dressing",
+    "cents": 2075,
+    "section": "Burritos",
+    "label": ""
+   },
+   {
+    "name": "Cali Bowl",
+    "desc": "House marinated steak, fries, avocado, pico de gallo, spicy crema, Cheddar",
+    "cents": 1975,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Grilled Chicken Bowl",
+    "desc": "Marinated chicken, Korean slaw, pickled cucumbers, garlic & kimchi aioli, multigrain rice",
+    "cents": 1975,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Panko Shrimp Bowl",
+    "desc": "Panko shrimp, avocado, sesame slaw, sambal aioli, pico de gallo, lime-cilantro crema, multigrain rice",
+    "cents": 1975,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Korean Hot Chicken Bowl",
+    "desc": "Panko fried chicken, sesame slaw, pickled cucumbers, kimchi aioli, multigrain rice",
+    "cents": 1975,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Surf Bowl",
+    "desc": "Panko fish, sesame slaw, avocado, pico de gallo, sambal aioli, spicy crema, multigrain rice",
+    "cents": 1975,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Veggie Bowl",
+    "desc": "Tofu tempura, sweet chili glaze, sesame slaw, cucumbers, multigrain rice",
+    "cents": 1975,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Surf and Turf Bowl",
+    "desc": "Steak, shrimp tempura, corn salsa, Cheddar, avocado, chipotle aioli, fries",
+    "cents": 1950,
+    "section": "Bowls",
+    "label": ""
+   },
+   {
+    "name": "Chicken + Fries",
+    "desc": "Fried chicken tender, French fries",
+    "cents": 1200,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Kids Hamburger",
+    "desc": "Quarter pound grass-fed Angus patty, French fries",
+    "cents": 1200,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Grilled Cheese",
+    "desc": "Pain de mie, Cheddar, Monterey Jack",
+    "cents": 1000,
+    "section": "Kids Menu",
+    "label": ""
+   },
+   {
+    "name": "Chicken Tortilla Soup (Cup)",
+    "desc": "Chicken, corn, black beans, avocado, Cheddar, Monterey Jack, sour cream, crispy tortilla",
+    "cents": 1000,
+    "section": "Soup & Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Chicken Tortilla Soup (Bowl)",
+    "desc": "Chicken, corn, black beans, avocado, Cheddar, Monterey Jack, sour cream, crispy tortilla",
+    "cents": 1500,
+    "section": "Soup & Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Chicken Noodle Soup (Cup)",
+    "desc": "Chicken, carrots, celery, orecchiette",
+    "cents": 1000,
+    "section": "Soup & Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Chicken Noodle Soup (Bowl)",
+    "desc": "Chicken, carrots, celery, orecchiette",
+    "cents": 1500,
+    "section": "Soup & Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Classic Fries",
+    "desc": "Shoestring fries",
+    "cents": 600,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Truffle Fries",
+    "desc": "Shoestring fries, Italian parsley, Parmesan, truffle oil",
+    "cents": 900,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Tater Tots",
+    "desc": "Crispy tots, togarashi aioli, furikake",
+    "cents": 900,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Grandma Chun's Homemade Kimchi",
+    "desc": "Napa cabbage, water parsley, minari, chives",
+    "cents": 400,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Chocolate Chip Cookie",
+    "desc": "Brown butter, Valrhona dark chocolate, Maldon sea salt",
+    "cents": 500,
+    "section": "Sweets",
+    "label": ""
+   },
+   {
+    "name": "Ice Cream",
+    "desc": "Matcha or Ube, topped with chocolate chip cookie crumbles",
+    "cents": 800,
+    "section": "Sweets",
+    "label": ""
+   },
+   {
+    "name": "Matcha Creme Brulee",
+    "desc": "With assorted berries",
+    "cents": 1200,
+    "section": "Sweets",
+    "label": ""
+   },
+   {
+    "name": "Bread Pudding",
+    "desc": "Cinnamon, vanilla, brioche, crème anglais",
+    "cents": 1400,
+    "section": "Sweets",
+    "label": ""
+   },
+   {
+    "name": "Matcha Yuzu Lemonade",
+    "desc": "",
+    "cents": 700,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Butterfly Pea Yuzu Lemonade",
+    "desc": "",
+    "cents": 700,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Seasonal Lemonade",
+    "desc": "Fresh lemon juice, fruit purees, mint",
+    "cents": 500,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Seasonal Unsweetened Iced Tea",
+    "desc": "Fresh brewed, no sugar",
+    "cents": 500,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "San Pellegrino Sparkling Water",
+    "desc": "",
+    "cents": 350,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Fiji Water",
+    "desc": "",
+    "cents": 250,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Coke",
+    "desc": "",
+    "cents": 350,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Diet Coke",
+    "desc": "",
+    "cents": 350,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Coke Zero",
+    "desc": "",
+    "cents": 350,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Horchata",
+    "desc": "",
+    "cents": 600,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Strawberry Horchata",
+    "desc": "",
+    "cents": 700,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Matcha Horchata",
+    "desc": "",
+    "cents": 700,
+    "section": "Non-Alcoholic Drinks",
+    "label": ""
+   },
+   {
+    "name": "Iced Latte",
+    "desc": "",
+    "cents": 550,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Strawberry Milk",
+    "desc": "",
+    "cents": 600,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Iced Matcha Latte",
+    "desc": "",
+    "cents": 550,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Pourover Coffee",
+    "desc": "",
+    "cents": 500,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Latte",
+    "desc": "",
+    "cents": 500,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Assorted Hot Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Mexican Hot Chocolate",
+    "desc": "",
+    "cents": 500,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Americano",
+    "desc": "",
+    "cents": 500,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Iced Americano",
+    "desc": "",
+    "cents": 550,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Chai Latte",
+    "desc": "",
+    "cents": 600,
+    "section": "Café",
+    "label": ""
+   },
+   {
+    "name": "Kochita",
+    "desc": "Yuzu, pear, ginger, lime, mint, lemon-lime soda",
+    "cents": 700,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "Sparkling Lemonade",
+    "desc": "Lemonade of the day, lemon-lime soda",
+    "cents": 700,
+    "section": "Mocktails",
+    "label": ""
+   },
+   {
+    "name": "La Fin Du Monde",
+    "desc": "",
+    "cents": 900,
+    "section": "Draft Beers",
+    "label": ""
+   },
+   {
+    "name": "Headland Point Bonita Pilsner",
+    "desc": "",
+    "cents": 700,
+    "section": "Draft Beers",
+    "label": ""
+   },
+   {
+    "name": "Almanac Love Hazy IPA",
+    "desc": "",
+    "cents": 700,
+    "section": "Draft Beers",
+    "label": ""
+   },
+   {
+    "name": "House Pinot Noir (Glass)",
+    "desc": "",
+    "cents": 800,
+    "section": "Wine",
+    "label": ""
+   },
+   {
+    "name": "House Pinot Noir (Bottle)",
+    "desc": "",
+    "cents": 3700,
+    "section": "Wine",
+    "label": ""
+   },
+   {
+    "name": "House Sauvignon Blanc (Glass)",
+    "desc": "",
+    "cents": 1000,
+    "section": "Wine",
+    "label": ""
+   },
+   {
+    "name": "House Sauvignon Blanc (Bottle)",
+    "desc": "",
+    "cents": 4000,
+    "section": "Wine",
+    "label": ""
+   },
+   {
+    "name": "House Rosé (Glass)",
+    "desc": "",
+    "cents": 900,
+    "section": "Wine",
+    "label": ""
+   },
+   {
+    "name": "House Rosé (Bottle)",
+    "desc": "",
+    "cents": 3500,
+    "section": "Wine",
+    "label": ""
+   },
+   {
+    "name": "Lady Moon",
+    "desc": "Lychee, elderflower, lime",
+    "cents": 1200,
+    "section": "Cocktail Spritzers",
+    "label": ""
+   },
+   {
+    "name": "Shitorasu",
+    "desc": "Kalamansi, sudachi, rosemary",
+    "cents": 1200,
+    "section": "Cocktail Spritzers",
+    "label": ""
+   },
+   {
+    "name": "Guayaba",
+    "desc": "Guayaba, pineapple",
+    "cents": 1200,
+    "section": "Cocktail Spritzers",
+    "label": ""
+   },
+   {
+    "name": "Kochi",
+    "desc": "Yuzu, pear, ginger, lime, mint",
+    "cents": 1200,
+    "section": "Cocktail Spritzers",
+    "label": ""
+   }
+  ],
+  "price_note": "All prices came from the full text menu on Belly's own site at https://www.bellyrestaurants.com/menus. That page notes online ordering is also available via Toast (toasttab.com/belly), but prices here were read directly from Belly's own menu page, not from Toast.",
+  "logo_url": "https://static.wixstatic.com/media/6511a6_43e3c4b2fc0844c19b09eb35e25c54ba~mv2.jpg",
+  "logo_px": "525x190",
+  "flags": [
+   "Glenn: 'Oakland • Goods'",
+   "Second location on their own contact-us/about pages: 1901 San Pablo Avenue, Oakland, CA 94612 (downtown Oakland), explicitly marked 'Permanently Closed'; the only active location is 5634 College Avenue (Rockridge).",
+   "Hours of operation are not published on any of Belly's own pages checked (home, contact-us, about) — contact-us explicitly had no hours text — so hours is set to null rather than guessed.",
+   "Toast's separate live-ordering page (https://order.toasttab.com/online/belly), which sometimes shows hours, returned HTTP 403 Forbidden when fetched and could not be checked.",
+   "Instagram reel https://www.instagram.com/reel/DdDEq35z2g5/ loaded fine (no login wall). It was posted by a third-party food/lifestyle account, @antoinetterzz, not by Belly itself, captioned 'My favorite chicken caesar wrap in Oakland! #bayarea #oakland #bayareafoodie #lunchidea @bellyoakland' — the reel reviews/shows Belly's Chicken Caesar Wrap. Note it tags the handle @bellyoakland, which differs from the Instagram handle Belly's own site links to (@bellyuptown).",
+   "Phone number punctuation varied slightly by page ('1-510-350-8799' vs '1 510 350 8799') but the digits matched everywhere; not a real contradiction.",
+   "Belly's own about page gives no formal cuisine label, only the tagline 'Good food, no frills'; the 'Korean-Mexican fusion' tag used here is inferred from the menu itself (kimchi, bulgogi, Korean-style tacos/burritos/bowls alongside pico de gallo, crema, and Cheddar).",
+   "Instagram: their site's footer links @bellyuptown, but the profile in Glenn's screenshot is @bellyoakland — display name Belly, 5634 College Ave, linking bellyrestaurants.com — and the reel tags @bellyoakland too, so that handle is carried; the site's phone 1-510-350-8799 is printed the way their Instagram contact sheet prints it, (510) 350-8799"
+  ],
+  "blocked": "order.toasttab.com/online/belly (Toast ordering page) returned HTTP 403 Forbidden when fetched, so it could not be used to cross-check hours or prices."
+ },
+ {
+  "id": "b_wowmiapizza",
+  "name_exact": "Wowmia Pizza",
+  "one_line": "Pizzeria in San Jose serving pizza, wings, sandwiches and salads",
+  "cuisine": "Pizza",
+  "address": "2951 Monterey Road, San Jose, CA 95111",
+  "phone": "(408) 676-3030",
+  "email": "contact@wowmiapizza.com",
+  "hours": null,
+  "instagram": "wowmiapizza",
+  "site_kind": "own-domain",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Smoky BBQ Chicken P",
+    "desc": "Creamy garlic & BBQ sauce, blended cheese, BBQ chicken, bacon, tomatoes, red onions, green onions",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Smoky BBQ Chicken S",
+    "desc": "Creamy garlic & BBQ sauce, blended cheese, BBQ chicken, bacon, tomatoes, red onions, green onions",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Smoky BBQ Chicken M",
+    "desc": "Creamy garlic & BBQ sauce, blended cheese, BBQ chicken, bacon, tomatoes, red onions, green onions",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Smoky BBQ Chicken L",
+    "desc": "Creamy garlic & BBQ sauce, blended cheese, BBQ chicken, bacon, tomatoes, red onions, green onions",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Smoky BBQ Chicken XL",
+    "desc": "Creamy garlic & BBQ sauce, blended cheese, BBQ chicken, bacon, tomatoes, red onions, green onions",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Gardena P",
+    "desc": "Creamy garlic sauce, cheese, spinach, garlic, tomatoes, red onions, zucchini, artichoke hearts, mushrooms",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Gardena S",
+    "desc": "Creamy garlic sauce, cheese, spinach, garlic, tomatoes, red onions, zucchini, artichoke hearts, mushrooms",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Gardena M",
+    "desc": "Creamy garlic sauce, cheese, spinach, garlic, tomatoes, red onions, zucchini, artichoke hearts, mushrooms",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Gardena L",
+    "desc": "Creamy garlic sauce, cheese, spinach, garlic, tomatoes, red onions, zucchini, artichoke hearts, mushrooms",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Gardena XL",
+    "desc": "Creamy garlic sauce, cheese, spinach, garlic, tomatoes, red onions, zucchini, artichoke hearts, mushrooms",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Harvest P",
+    "desc": "Red sauce, cheese, mushrooms, green peppers, yellow onions, tomatoes, Kalamata olives, banana pepper",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Harvest S",
+    "desc": "Red sauce, cheese, mushrooms, green peppers, yellow onions, tomatoes, Kalamata olives, banana pepper",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Harvest M",
+    "desc": "Red sauce, cheese, mushrooms, green peppers, yellow onions, tomatoes, Kalamata olives, banana pepper",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Harvest L",
+    "desc": "Red sauce, cheese, mushrooms, green peppers, yellow onions, tomatoes, Kalamata olives, banana pepper",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Harvest XL",
+    "desc": "Red sauce, cheese, mushrooms, green peppers, yellow onions, tomatoes, Kalamata olives, banana pepper",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combo Rambo P",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage, linguica, yellow onion, mushrooms, green peppers, olives",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combo Rambo S",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage, linguica, yellow onion, mushrooms, green peppers, olives",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combo Rambo M",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage, linguica, yellow onion, mushrooms, green peppers, olives",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combo Rambo L",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage, linguica, yellow onion, mushrooms, green peppers, olives",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combo Rambo XL",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage, linguica, yellow onion, mushrooms, green peppers, olives",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Shawn's Favorite P",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon, linguica, tomatoes, mushrooms, banana peppers, green onions",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Shawn's Favorite S",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon, linguica, tomatoes, mushrooms, banana peppers, green onions",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Shawn's Favorite M",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon, linguica, tomatoes, mushrooms, banana peppers, green onions",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Shawn's Favorite L",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon, linguica, tomatoes, mushrooms, banana peppers, green onions",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Shawn's Favorite XL",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon, linguica, tomatoes, mushrooms, banana peppers, green onions",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian P",
+    "desc": "Red sauce, cheese, ham and pineapple",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian S",
+    "desc": "Red sauce, cheese, ham and pineapple",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian M",
+    "desc": "Red sauce, cheese, ham and pineapple",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian L",
+    "desc": "Red sauce, cheese, ham and pineapple",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian XL",
+    "desc": "Red sauce, cheese, ham and pineapple",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Island Delight P",
+    "desc": "Polynesian sauce, cheese, ham, bacon, pineapple, tomatoes, red onions, green onions",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Island Delight S",
+    "desc": "Polynesian sauce, cheese, ham, bacon, pineapple, tomatoes, red onions, green onions",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Island Delight M",
+    "desc": "Polynesian sauce, cheese, ham, bacon, pineapple, tomatoes, red onions, green onions",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Island Delight L",
+    "desc": "Polynesian sauce, cheese, ham, bacon, pineapple, tomatoes, red onions, green onions",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Island Delight XL",
+    "desc": "Polynesian sauce, cheese, ham, bacon, pineapple, tomatoes, red onions, green onions",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Marvell P",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage and linguica",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Marvell S",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage and linguica",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Marvell M",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage and linguica",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Marvell L",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage and linguica",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Marvell XL",
+    "desc": "Red sauce, cheese, salami, pepperoni, sausage and linguica",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat P",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon and linguica",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat S",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon and linguica",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat M",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon and linguica",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat L",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon and linguica",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat XL",
+    "desc": "Red sauce, cheese, pepperoni, sausage, bacon and linguica",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Wow Chick P",
+    "desc": "Creamy garlic sauce, cheese, chicken, red onions, tomatoes, mushrooms, herb seasoning, green onions",
+    "cents": 1199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Wow Chick S",
+    "desc": "Creamy garlic sauce, cheese, chicken, red onions, tomatoes, mushrooms, herb seasoning, green onions",
+    "cents": 2199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Wow Chick M",
+    "desc": "Creamy garlic sauce, cheese, chicken, red onions, tomatoes, mushrooms, herb seasoning, green onions",
+    "cents": 2699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Wow Chick L",
+    "desc": "Creamy garlic sauce, cheese, chicken, red onions, tomatoes, mushrooms, herb seasoning, green onions",
+    "cents": 3199,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Wow Chick XL",
+    "desc": "Creamy garlic sauce, cheese, chicken, red onions, tomatoes, mushrooms, herb seasoning, green onions",
+    "cents": 3699,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "E-Roni",
+    "desc": "Red sauce, cheese, beef bologna, beef frankfurter sausage, green and red peppers, thyme seasoning (one size only)",
+    "cents": 3399,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "E-Roni Delight",
+    "desc": "Red sauce, cheese, crumble beef, mushrooms, green and red peppers, thyme seasoning (one size only)",
+    "cents": 3399,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "ChickMe E-Roni",
+    "desc": "Wowmia white sauce, cheese, chicken, mushroom, green and red peppers, olives, thyme seasoning (one size only)",
+    "cents": 3399,
+    "section": "Pizza",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Pizza (One Topping) P",
+    "desc": "Choice of one topping; regular, skinny or pan crust",
+    "cents": 999,
+    "section": "Build Your Own Pizza",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Pizza (One Topping) S",
+    "desc": "Choice of one topping; regular, skinny or pan crust",
+    "cents": 1899,
+    "section": "Build Your Own Pizza",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Pizza (One Topping) M",
+    "desc": "Choice of one topping; regular, skinny or pan crust",
+    "cents": 2199,
+    "section": "Build Your Own Pizza",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Pizza (One Topping) L",
+    "desc": "Choice of one topping; regular, skinny or pan crust",
+    "cents": 2699,
+    "section": "Build Your Own Pizza",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Pizza (One Topping) XL",
+    "desc": "Choice of one topping; regular, skinny or pan crust",
+    "cents": 2999,
+    "section": "Build Your Own Pizza",
+    "label": ""
+   },
+   {
+    "name": "Sossis Tanoori",
+    "desc": "Hotdog, mushroom, cheese, tomatoes, pickles, parsley, potato chips (available Tue-Thu)",
+    "cents": 1999,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Jambon Tanoori",
+    "desc": "Beef jambon, mushroom, cheese, tomatoes, potato chips, pickles, parsley (available Tue-Thu)",
+    "cents": 1999,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Super Jambon",
+    "desc": "Beef jambon, potato chips, tomatoes, pickles, parsley (available Tue-Thu)",
+    "cents": 1999,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Chick Mia",
+    "desc": "Boneless wings, cheese, tomatoes, mushrooms, pickles, parsley, potato chips (available Tue-Thu)",
+    "cents": 1999,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Wings 6 pc",
+    "desc": "Classic or boneless; choice of Buffalo Hot, Buffalo Mild, BBQ, Lemon Pepper, Garlic Parmesan or Polynesian",
+    "cents": 1099,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Wings 12 pc",
+    "desc": "Classic or boneless; choice of Buffalo Hot, Buffalo Mild, BBQ, Lemon Pepper, Garlic Parmesan or Polynesian",
+    "cents": 1999,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Wings 24 pc",
+    "desc": "Classic or boneless; choice of Buffalo Hot, Buffalo Mild, BBQ, Lemon Pepper, Garlic Parmesan or Polynesian",
+    "cents": 3299,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Garlic Parmesan Sticks 3 pc",
+    "desc": "",
+    "cents": 699,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Garlic Parmesan Sticks 6 pc",
+    "desc": "",
+    "cents": 1099,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Garlic Parmesan Sticks 12 pc",
+    "desc": "",
+    "cents": 1699,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Garden Salad Individual",
+    "desc": "Lettuce, grape tomatoes, cucumber, red onion, Kalamata olives, green peppers",
+    "cents": 899,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Garden Salad Family",
+    "desc": "Lettuce, grape tomatoes, cucumber, red onion, Kalamata olives, green peppers",
+    "cents": 1199,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Caesar Salad Individual",
+    "desc": "Lettuce, shaved parmesan cheese, croutons",
+    "cents": 899,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Caesar Salad Family",
+    "desc": "Lettuce, shaved parmesan cheese, croutons",
+    "cents": 1199,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Soft Drink 16oz",
+    "desc": "Coke, Sprite, Diet Coke, Dr Pepper, Fanta Orange, Root Beer or Coke Zero",
+    "cents": 299,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Soft Drink 2 Liter",
+    "desc": "Coke, Sprite, Diet Coke, Dr Pepper, Fanta Orange, Root Beer or Coke Zero",
+    "cents": 599,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Wine Glass",
+    "desc": "Pinot Noir, Chardonnay, Cabernet or Merlot",
+    "cents": 899,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Wine Bottle",
+    "desc": "Pinot Noir, Chardonnay, Cabernet or Merlot",
+    "cents": 3099,
+    "section": "Beverages",
+    "label": ""
+   }
+  ],
+  "price_note": "All prices are printed in full on the business's own menu page at wowmiapizza.com/menu/; a linked third-party ordering platform (posnet.us/site/wowmia) handles checkout but was not queried separately since the menu text and prices already live on the business's own page.",
+  "logo_url": "https://wowmiapizza.com/wp-content/uploads/2023/11/mia-logo.png",
+  "logo_px": "150x58",
+  "flags": [
+   "Glenn: 'San Jose • Goods'",
+   "Hours contradiction on the Contact page (wowmiapizza.com/contact/): it states 'Sunday - Thursday: 11:00 AM - 9:00 PM' and 'Friday - Saturday: 11:00 AM - 10:00 PM' but also separately states 'Monday - Closed' -- Monday is both inside the open Sun-Thu range and listed as closed on the same page, so hours could not be resolved to one consistent line and are set to null.",
+   "Homepage also lists separate promotional hours that don't map onto the Contact page's daily hours: Lunch Buffet Tue-Fri 11:30am-1:30pm and Happy Hour Tue-Thu 2pm-5pm.",
+   "Two different phone numbers are printed sitewide (as tel: links on both the homepage and contact page) with neither labeled as primary: (408) 676-3030 (shown in the address/contact block, used as the phone value here) and (408) 245-9000 (shown elsewhere on the same pages).",
+   "No email address is published anywhere on the site -- checked the raw HTML of the homepage and contact page for mailto: links and visible email text and found none, so email is set to null.",
+   "The site's own 'About Us' nav link (https://wowmiapizza.com/about-us/) returns HTTP 404, and https://wowmiapizza.com/about also 404s, so no About page could be reached or checked for further contradictions.",
+   "Only one location (San Jose, on Monterey Road) is mentioned anywhere on the site; no second location found.",
+   "Email is not on the site; contact@wowmiapizza.com is from the Contact sheet of their own Instagram profile in Glenn's screenshot, which also shows (408) 676-3030 as the number"
+  ],
+  "blocked": null
+ }
+]

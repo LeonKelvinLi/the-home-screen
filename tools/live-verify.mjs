@@ -127,6 +127,9 @@ for (const [id, want, expect] of [
   ['b_housingauthority', 'Housing Authority', {}],
   ['b_chipcookies', 'Chip Cookies', { hours: 'Sun-Thu 10am-10pm' }],
   ['b_moxiesteakhouse', 'Moxie Steak House', { hours: 'Wed-Fri 2pm-9pm', rows: 35, call: '(510) 671-2890' }],
+  ['b_7milehouse', '7 Mile House', { hours: 'Mon 11:30am-9pm', call: '(415) 467-2343' }],
+  ['b_belly', 'Belly', { rows: 80, call: '(510) 350-8799' }],
+  ['b_wowmiapizza', 'Wow Mia Pizza', { rows: 60, call: '(408) 676-3030' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)

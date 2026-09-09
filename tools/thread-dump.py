@@ -54,6 +54,21 @@ def decode_attributed(blob):
     return blob[i:i + n].decode('utf-8', errors='replace')
 
 
+# Things the thread carries that must never land in a transcript, a log or a
+# tool result: bank routing and account numbers (he pasted his on 2026-09-08),
+# card numbers, and live keys. The message still prints, the digits do not.
+SECRET = re.compile(
+    r'((?:routing|account|acct|card)\s*(?:#|no\.?|number)?\s*:?\s*)(\d[\d -]{5,}\d)'
+    r'|(sk_(?:live|test)_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|rk_(?:live|test)_[A-Za-z0-9]+)'
+    r'|(?<!\d)(\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4})(?!\d)',
+    re.I,
+)
+
+
+def redact(text):
+    return SECRET.sub(lambda m: (m.group(1) or '') + '[redacted]', text)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--since', help='YYYY-MM-DD')
@@ -95,7 +110,7 @@ def main():
         if pattern and not pattern.search(t):
             continue
         who = 'LEON ' if from_me else 'GLENN'
-        print(f"{when:%Y-%m-%d %H:%M} {who}: {t.replace(chr(10), ' ⏎ ')}")
+        print(f"{when:%Y-%m-%d %H:%M} {who}: {redact(t).replace(chr(10), ' ⏎ ')}")
         n += 1
     print(f'-- {n} message(s)', file=sys.stderr)
     return 0

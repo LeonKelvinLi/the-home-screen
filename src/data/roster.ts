@@ -1977,6 +1977,56 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.moxiealameda.com/',
     siteCta: 'See the menu',
   }),
+
+  /* ---- 2026-09-08, evening. Three more, each with the city written beside
+     the link. Research in research/roster/batch17.json. ---- */
+  /* 7 Mile House, "Brisbane • Goods" — sent as their Ube Bake-Off page, and
+     Brisbane had no page, so this opens it. No bar-and-grill seat exists;
+     seat 0 opens the city, as Shaka Shack's did Alameda. Their menu is six
+     pictures and their prices sit on Toast, which refuses a fetch, so the
+     page says where the prices are rather than printing any. The mark is
+     their own logo off the site, flattened onto white. */
+  seed('7-mile-house', '7 Mile House', '7 Mile House', 'Bar & grill', '#5C3A1E', {
+    icon: '7-mile-house',
+    logoTemplate: 'badge', logoLines: ['7 MILE', 'HOUSE'], logoFace: 'slab',
+    site: 'https://7milehouse.com/',
+    siteCta: 'See the menu',
+    siteNote: 'Ube Bake-Off, September 30 to October 5: the sampler comes with two ballots',
+    contactOnly:
+      'SF comfort food on Bayshore Boulevard, established 1858 by their own sign: a restaurant, sports bar and live-music room ' +
+      'with a heated, dog-friendly patio, a dog menu of its own and Sunday brunch. The menu on their site is pictures and the ' +
+      'prices live on their Toast ordering page, so none are printed here. Their sixth annual Ube Bake-Off runs September 30 ' +
+      'to October 5, 2026: order the sampler, taste the four competing desserts, and vote with the two ballots that come with it.',
+  }),
+  /* Belly, "Oakland • Goods" — College Avenue in Rockridge; their downtown
+     room on San Pablo is marked permanently closed on their own pages. Kimchi
+     and bulgogi through a diner menu of tacos, burritos and burgers, so the
+     Korean seat. The reel he sent with "Can you play on their page without it
+     going onto Instagram?" is a food creator's, not theirs — re-hosted and
+     credited to her, on the Phosho Dough reasoning; see public/clips/CREDITS.md. */
+  seed('belly', 'Belly', 'Belly', 'Korean-Mexican fusion', '#1F3F73', {
+    icon: 'belly',
+    logoTemplate: 'wordmark', logoLines: ['Belly'], logoFace: 'script',
+    site: 'https://www.bellyrestaurants.com/',
+    siteCta: 'See the menu',
+    clip: {
+      src: '/clips/belly.mp4',
+      poster: '/clips/belly-poster.webp',
+      href: 'https://www.instagram.com/reel/DdDEq35z2g5/',
+      credit: 'Filmed by @antoinetterzz',
+      platform: 'Instagram',
+    },
+  }),
+  /* Wow Mia Pizza, "San Jose • Goods" — Monterey Road. Pizza is the Italian
+     seat and San Jose's is open. Their contact page prints two sets of hours
+     that disagree about Monday, so none are carried. The mark is cut from the
+     profile disc in his screenshot. */
+  seed('wow-mia-pizza', 'Wow Mia Pizza', 'Wow Mia', 'Pizza', '#F2622E', {
+    icon: 'wow-mia-pizza',
+    logoTemplate: 'wordmark', logoLines: ['WOW MIA', 'PIZZA'], logoFace: 'grotesk',
+    site: 'https://wowmiapizza.com/',
+    siteCta: 'Order online',
+  }),
 ]
 
 /**

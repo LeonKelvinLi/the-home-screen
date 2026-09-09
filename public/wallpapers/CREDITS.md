@@ -317,3 +317,12 @@ nearly-large-enough one gets a resample.
 - `penngrove.webp` — "Penngrove at the railroad station", unknown author, on
   Wikimedia Commons, CC BY 4.0 (https://creativecommons.org/licenses/by/4.0).
   His link was a DuckDuckGo image search for Penngrove landmarks.
+
+## 2026-09-08 (evening) — Brisbane
+
+- `brisbane.webp` — "Brisbane, California", by Sharon Hahn Darlin on Wikimedia
+  Commons (from Flickr), CC BY 2.0 (https://creativecommons.org/licenses/by/2.0).
+  Sierra Point and the marina from above with San Bruno Mountain behind — the
+  same corner of town as his link, which was a DuckDuckGo image result of the
+  DoubleTree at Sierra Point, a TripAdvisor photograph and not ours to use.
+  3629x2410, so no super-resolution. The page opened for 7 Mile House.
