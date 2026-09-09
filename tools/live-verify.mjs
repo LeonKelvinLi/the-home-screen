@@ -180,12 +180,14 @@ await p.locator('.brand-clip-drop .menu-picks-bar').first().click({ timeout: 250
 await p.waitForTimeout(400)
 const credit = await p.evaluate(() => {
   const a = document.querySelector('.brand-clip-credit a')
-  return { href: a?.getAttribute('href') ?? null, sound: !!document.querySelector('.brand-clip-sound') }
+  const offers = document.querySelector('.brand-offers')?.textContent?.replace(/\s+/g, ' ') ?? ''
+  return { href: a?.getAttribute('href') ?? null, sound: !!document.querySelector('.brand-clip-sound'), mockOffer: /Example only/.test(offers) && /fries or kimchi/i.test(offers) }
 })
 console.log('review clip   :', JSON.stringify({ ...review, ...credit }))
 if (!review.bar.startsWith('Watch a review by @antoinetterzz')) fails.push(`Belly's clip bar reads "${review.bar}", expected "Watch a review by @antoinetterzz"`)
 if (credit.href !== 'https://www.instagram.com/antoinetterzz/') fails.push(`Belly's credit links to ${credit.href}, expected her Instagram`)
 if (!credit.sound) fails.push('the clip has no sound button')
+if (!credit.mockOffer) fails.push("Belly's page does not show his example offer, labelled as an example")
 
 // ---- the Instagram button ------------------------------------------------
 await p.goto(`${base}/?b=b_baymemoriesbooth`, { waitUntil: 'networkidle', timeout: 45000 })

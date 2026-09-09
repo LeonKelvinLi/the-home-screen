@@ -2006,6 +2006,16 @@ export const ROSTER_SEED: LocalSeed[] = [
      credited to her, on the Phosho Dough reasoning; see public/clips/CREDITS.md. */
   seed('belly', 'Belly', 'Belly', 'Korean-Mexican fusion', '#1F3F73', {
     icon: 'belly',
+    /* "Can you put this as an example for belly?" — 2026-09-09, a Notes
+       screenshot: a welcome offer and a "Biggies Pass offer". His words,
+       one spelling corrected ("you're" to "your"); mock until Belly signs
+       it, so the page says these are examples and nothing has been agreed.
+       "I'm going to tag my daughter and see what she thinks." */
+    offers: {
+      mock: true,
+      welcome: 'Get a free side of fries or kimchi with each $15+ order.',
+      loyalty: 'Get a 10% discount with your $20+ meal purchase!',
+    },
     logoTemplate: 'wordmark', logoLines: ['Belly'], logoFace: 'script',
     site: 'https://www.bellyrestaurants.com/',
     siteCta: 'See the menu',
