@@ -2222,15 +2222,19 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_hotboyschicken', //   13 Hot boys
   'b_sincitypits', //      14 Sin City Pits
   /* "Can you bump SMASH burgers into the more goods space" — moved to the
-     yellow sheet in data/placements.ts, and the seat it left is "that empty
-     space on the home screen" he gave Chef Jeff's on 2026-09-10. */
-  'b_chefjeffssmashburger', // 15 Chef Jeff's Smash Burger
+     yellow sheet in data/placements.ts, so this seat is open again. Tony's
+     Style has sat in it since 2026-09-05 through an explicit override in
+     data/placements.ts, which wins over this array; the seat is NOT free. */
+  null, //                 15 Tony's Style, via placements.ts
   'b_butterpecan', //      16 Butter Pecan bake shop
   'b_veganmob', //         17 Vegan Mob
   /* "Bump poof of Alchemy to yellow goods pages", 2026-08-28 — same move as
      Smash Burgers above, and for the same reason: the seat is his to reassign.
-     Reseated on beasty-goods2 in data/placements.ts, so 18 is open again. */
-  null, //                 18 open
+     Reseated on beasty-goods2 in data/placements.ts, which left 18 open — and
+     18 is "that empty space on the home screen" he gave Chef Jeff's on
+     2026-09-10. It is the only seat on this page that is actually free: 15
+     reads open here but placements.ts seats Tony's Style in it. */
+  'b_chefjeffssmashburger', // 18 Chef Jeff's Smash Burger
   'b_gaovietkitchen', //   19 Gao
   'b_elemonkey', //        20 Elemonkey
   'b_meadowlarkdairy', //  21 Meadowlark Dairy
