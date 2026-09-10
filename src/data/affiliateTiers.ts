@@ -15,11 +15,12 @@ import type { Perk } from './membership'
  * REVISED BY GLENN'S "BEASTY TIERS" NOTE, 2026-09-03 ("can you revise the
  * member page?"): Biggie's Member is $39 per month and BEASTY Member $69 per
  * month (+$6 for the glow), and BOTH carry the same fee schedule — a $99
- * initiation fee in the first year, a $69 annual fee in years two and three,
- * $39 a year from year four. His footnote on the annual fee: "This is a
+ * initiation fee, a $69 annual fee and then $39 a year. His footnote on the
+ * annual fee: "This is a
  * maintenance fee that covers all QR code generation and icon design
  * creation for all Affiliates." That replaces the $69 / $99 figures from the
- * night before, and the per-year reading of them.
+ * night before, and the per-year reading of them. WHICH YEARS EACH FEE COVERS
+ * was re-cut on 2026-09-10; see AFFILIATE_FEES below for the current split.
  *
  * NOTHING HERE CHARGES A CARD. The free tier begins with a reserved spot and
  * the paid tiers are arranged with the operator once the spot is confirmed;
@@ -170,13 +171,19 @@ export const AFFILIATE_TIERS: AffiliateTier[] = [
 /**
  * The fee schedule under the two paid tiers, his note verbatim in shape:
  * initiation once, then an annual fee that steps down for staying.
+ *
+ * RE-CUT 2026-09-10, by him, in red over a screenshot of this block: the
+ * three lines read "Year 1 & 2", "Year 3-5" and "Year 6 til forever". Same
+ * three prices, each covering more years than it did — the $99 now carries
+ * the first two years rather than one, and the $39 starts at year six rather
+ * than year four. "I'll explain why later."
  */
 export const AFFILIATE_FEES = {
   head: 'Initiation and annual fees, Tier 2 and Tier 3',
   lines: [
-    '$99 initiation fee in the first year',
-    '$69 annual fee in years two and three',
-    '$39 annual fee from year four on',
+    '$99 initiation fee, years one and two',
+    '$69 annual fee in years three to five',
+    '$39 annual fee from year six on',
   ],
   note: 'The annual fee is a maintenance fee that covers all QR code generation and icon design creation for all Affiliates.',
 }

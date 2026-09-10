@@ -171,10 +171,18 @@ export function MembersApp({ api }: { api: ShellApi }) {
     User opens by default because most people arriving here are customers and
     the two passes are what the page has always led with; Business starts
     folded so the three affiliate tiers do not push the passes off the screen.
-    Both can be open at once — somebody who owns a shop is also a customer.
+
+    ONE AT A TIME. They used to open independently, on the reasoning that
+    somebody who owns a shop is also a customer — and with both open the page
+    ran the two passes and the three affiliate tiers together into one column
+    of black cards with no telling which prices belonged to which side. "Fix
+    where both could be selected", 2026-09-10. Opening one folds the other,
+    which is what "consolidates membership choice on this page" asked for.
+    Tapping the open one still folds it, so neither header is a dead control.
   */
   const [side, setSide] = useState({ user: true, business: false })
-  const toggle = (k: 'user' | 'business') => setSide((v) => ({ ...v, [k]: !v[k] }))
+  const toggle = (k: 'user' | 'business') =>
+    setSide((v) => ({ user: k === 'user' && !v.user, business: k === 'business' && !v.business }))
 
   return (
     <AppChrome title={m.name} onBack={api.closeApp} className="is-beasty">
