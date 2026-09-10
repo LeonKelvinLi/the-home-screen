@@ -134,6 +134,10 @@ for (const [id, want, expect] of [
   ['b_streetsocial', 'Street Social', { call: '(707) 774-6185', free: true }],
   ['b_alivekitchen', 'Alive Kitchen', { call: '(561) 909-5062', free: true }],
   ['b_baithak', 'Baithak', { rows: 100, call: '(925) 361-0862' }],
+  /* 2026-09-10. Chef Jeff's took the home screen's seat 18 with the icon glow;
+     Bay Area Event Lights had been missing since 29 August. */
+  ['b_chefjeffssmashburger', "Chef Jeff's Smash Burger", { call: '(925) 732-7625' }],
+  ['b_bayareaeventlights', 'Bay Area Event Lights', { call: '(408) 502-7229', free: true }],
   /* The 2026-09-09 menu sweep: fifteen menus read from the businesses' own pages. */
   ['b_islafilipino', 'Isla Filipino Restaurant', { rows: 90, call: '(925) 849-6255' }],
   ['b_pinkonion', 'Pink Onion', { rows: 60, call: '(415) 529-2635' }],
