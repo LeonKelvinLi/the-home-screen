@@ -1832,6 +1832,19 @@ export const ROSTER_SEED: LocalSeed[] = [
     icon: 'emys-cannoli',
     logoTemplate: 'monogram', logoInitials: 'EC', logoFace: 'script',
     site: 'http://emyscannoli.com/',
+    /* "Foodie" — 2026-09-09, a reel and nothing else. It is a reviewer's film
+       of THIS shop: @oaktowngrubhub, captioned "Authentic Italian dessert from
+       @emyscannoli". Handled the way he set out for Belly the same day: the
+       bar reads "Watch a review by @oaktowngrubhub", the credit opens his
+       page, "so they get the credit & views and hopefully a follow". */
+    clip: {
+      src: '/clips/emys-cannoli.mp4',
+      poster: '/clips/emys-cannoli-poster.webp',
+      href: 'https://www.instagram.com/reel/DdFKK1RSPBd/',
+      credit: 'Filmed by @oaktowngrubhub',
+      platform: 'Instagram',
+      by: 'oaktowngrubhub',
+    },
     contactOnly:
       'The operator filed this one as a MOBILE service rather than a shop, so no address is ' +
       'shown — it does not have one fixed place to be. Nothing else is listed yet.',
@@ -2099,6 +2112,83 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://baithak.us/',
     siteCta: 'Reserve a table',
   }),
+
+  /* ---- 2026-09-10. ---- */
+  /*
+     Bay Area Event Lights, "Mobile / San Jose • Services" — sent 2026-08-29 and
+     missed for twelve days. tools/gap-check.py did not catch it either: its
+     seven-character prefix rule read bayareaeventlights.com as Bay Area
+     Charters and called it listed. That rule is tightened in the same commit.
+
+     Event lighting and decor for weddings, events and holidays, a preferred
+     lighting vendor at Saratoga Springs, Hakone Gardens and Montalvo among
+     others, by their own billing. Mobile, so no street address: San Jose is
+     the city they give. Event coordinator, the nearest of the twenty-four, is
+     Bloom Balloon's on San Jose already, so this takes the yellow sheet — and
+     a yellow-sheet spot seated after his 2026-09-09 rule is a free Tier 1
+     listing. He sent it before that rule; his to bump.
+  */
+  seed('bay-area-event-lights', 'Bay Area Event Lights', 'Event Lights', 'Event lighting & decor', '#1B2A4A', {
+    logoTemplate: 'monogram', logoInitials: 'BL', logoFace: 'condensed',
+    address: 'San Jose, CA',
+    phone: '(408) 502-7229',
+    email: 'BayAreaEventLights@gmail.com',
+    site: 'https://www.bayareaeventlights.com/',
+    siteCta: 'See their work',
+    tier: 1,
+  }),
+  /*
+     Chef Jeff's Smash Burger, Antioch. His message of 2026-09-10: "I
+     delivered to them for the first time and I know the owner from Restaurant
+     Depot and he totally hooked me up. He's 100% down. He's ready for a page
+     … Give him that empty space on the home screen. And put a glow around
+     his page."
+
+     The empty space is seat 15, open since Smash Burgers Bros was bumped to
+     the yellow sheet — a burger seat for a burger shop. The glow is the
+     Tier 3 add-on, seated by his instruction rather than by a payment.
+
+     EVERY FACT HERE IS THEIR OWN, off their own Instagram profile, which he
+     sent as a screenshot: the address, the number, the hours, and the line
+     about what they sell. They have no website of their own — the profile
+     links a Facebook page — so the page asks for one. THEIR MENU IS NOT
+     HERE: it is published only through DoorDash and Uber Eats, whose prices
+     run above the counter's, and this repo has never taken a price off a
+     delivery platform. A photo of their menu board is all it needs.
+
+     The mark is their own logo, cut from his photograph of their dining-room
+     wall; the wall's texture is flattened behind it and no part of the mark
+     is redrawn. The two dishes are HIS photographs of the food he was handed,
+     credited to him rather than dressed up as the shop's own photography.
+  */
+  seed('chef-jeffs-smash-burger', "Chef Jeff's Smash Burger", "Chef Jeff's", 'Smashburgers', '#2B2B2E', {
+    glow: true,
+    icon: 'chef-jeffs-smash-burger',
+    tagline: 'Gourmet smashburgers, fast food style',
+    address: '740 W 2nd St, Antioch, CA',
+    phone: '(925) 732-7625',
+    hours: 'Tue–Sat 10:30am–8pm; closed Sun & Mon',
+    instagram: 'chefjeffssmashburger',
+    needsSite: true,
+    contactOnly:
+      'Smashed angus patties with their own sauces, on West 2nd Street since 2024. They have ' +
+      'no website of their own yet — everything here is off their own Instagram profile. Their ' +
+      'menu is published only through the delivery apps, whose prices run above the counter’s, ' +
+      'so no prices are listed here until they send their own.',
+    logoTemplate: 'band', logoLines: ['SMASH', 'BURGER'], logoFace: 'condensed',
+    photos: [
+      {
+        src: '/food/chef-jeffs-smash-burger-1-lg.webp',
+        alt: 'A smashburger with crisped cheese edges in checkered paper',
+        credit: 'Photographed by Glenn Malicdem',
+      },
+      {
+        src: '/food/chef-jeffs-smash-burger-2-lg.webp',
+        alt: 'A burger boxed with fries and a cup of sauce',
+        credit: 'Photographed by Glenn Malicdem',
+      },
+    ],
+  }),
 ]
 
 /**
@@ -2132,8 +2222,9 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_hotboyschicken', //   13 Hot boys
   'b_sincitypits', //      14 Sin City Pits
   /* "Can you bump SMASH burgers into the more goods space" — moved to the
-     yellow sheet in data/placements.ts, so this seat is open again. */
-  null, //                 15 open
+     yellow sheet in data/placements.ts, and the seat it left is "that empty
+     space on the home screen" he gave Chef Jeff's on 2026-09-10. */
+  'b_chefjeffssmashburger', // 15 Chef Jeff's Smash Burger
   'b_butterpecan', //      16 Butter Pecan bake shop
   'b_veganmob', //         17 Vegan Mob
   /* "Bump poof of Alchemy to yellow goods pages", 2026-08-28 — same move as

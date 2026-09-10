@@ -940,6 +940,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-12': 'b_walkfree', //               Online: Pet goods is Pawddle's; yellow sheet
   'santa-clara-services-14': 'b_lushspaw', //        Pet grooming
   'san-jose-services2-0': 'b_lushspaw', //           Pet grooming is The Yappy Hour Club's; yellow sheet
+  /* Bay Area Event Lights, "Mobile / San Jose • Services", 2026-08-29 — Event
+     coordinator is Bloom Balloon's on San Jose, so the yellow sheet. */
+  'san-jose-services2-1': 'b_bayareaeventlights',
   'daly-city-goods-10': 'b_russfamkitchen', //       Filipino
   'pittsburg-goods-3': 'b_pijjaparadisepittsburg', // Indian food
   'livermore-goods-3': 'b_pijjaparadiselivermore', // Indian food

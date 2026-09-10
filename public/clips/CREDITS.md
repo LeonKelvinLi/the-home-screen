@@ -136,6 +136,7 @@ the most movement — to 540x960 with sound.
 | `house-of-raha.mp4` | House of Raha | instagram.com/reel/Dbq3kjRPWEg — whole, 24s; posted by @ Food & Lifestyle |
 | `russ-fam-kitchen.mp4` | Russ Fam Kitchen, Daly City | instagram.com/reel/Dc68gg9SJhY — **an excerpt**, 2s–26s of 136s; their own post, @russfamkitchen_ |
 | `belly.mp4` | Belly, Oakland | instagram.com/reel/DdDEq35z2g5 — **an excerpt**, 8s–32s of 99s — the room, the menu board, the street and the wrap being unwrapped, chosen over the sweep's 5s start, which opened on her face; posted by @antoinetterzz, a food creator, not the restaurant — her chicken caesar wrap post, sent with "Can you play on their page without it going onto Instagram?" |
+| `emys-cannoli.mp4` | Emy’s Cannoli, Fairfield | instagram.com/reel/DdFKK1RSPBd — **an excerpt**, 9s–33s of 95s; posted by @oaktowngrubhub ("NowThatLooksGooD"), a food reviewer, not the shop — sent on 2026-09-09 with the single word "Foodie" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

@@ -12,7 +12,7 @@ MATCHING IS DELIBERATELY LOOSE. A domain is rarely spelled the way the business
 is: houseofthaisf.com is "House of Thai", thefrenchspotsf.com is "The French
 Spot", banhmiovenus.com is "Banh Mi Oven". So both sides are reduced to
 lowercase letters and digits, common decorations are stripped off the front and
-back, and a prefix of seven characters or more counts as a match. It over-
+back, and a prefix that leaves at most three characters unmatched counts. It over-
 matches rather than under-matches on purpose: a false "already listed" is one
 line to check by hand, a false "missing" wastes a research agent.
 
@@ -152,8 +152,18 @@ def listed(host: str, pool: str, raw: str) -> bool:
     stems.add(re.sub(r'^(the|eat|its|try|order|new|shop|store|my|go)', '', base))
     for s in list(stems):
         stems.add(re.sub(r'(sf|ca|sj|oakland|berkeley|danville|norcal|bayarea|restaurants?|store|shop|online)$', '', s))
+    # A PREFIX IS ONLY A MATCH IF IT IS NEARLY THE WHOLE STEM.
+    #
+    # The rule used to walk every prefix down to seven characters, which made
+    # any two businesses sharing an opening word the same business:
+    # bayareaeventlights.com matched Bay Area Charters on "bayarea" and was
+    # reported as listed for the twelve days it was actually missing. So the
+    # prefix must now leave no more than three characters unaccounted for —
+    # enough for the "us" in banhmiovenus or a trailing "co", not enough to
+    # swallow a second word.
     for s in stems:
-        for length in range(len(s), 6, -1):
+        floor = max(7, len(s) - 3)
+        for length in range(len(s), floor - 1, -1):
             if s[:length] in pool:
                 return True
     return False
