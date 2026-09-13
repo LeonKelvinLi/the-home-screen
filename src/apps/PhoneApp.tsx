@@ -2,8 +2,6 @@ import { useEffect, useState } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
 import { PetAvatarArt } from './PetAvatar'
-import { SAMPLE_PEOPLE, type Person } from '../data/community'
-import { Gem } from './MembersApp'
 import { readableOn } from '../ios/contrast'
 import { TabBar } from '../ios/ui/TabBar'
 import type { TabItem } from '../ios/ui/TabBar'
@@ -12,7 +10,7 @@ import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS, brandById } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
 import { OPERATOR, hasOperatorContact, telHref } from '../lib/operator'
-import { fetchDirectory, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
+import { fetchDirectory, fetchMemberCount, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
 import type { PetAvatar } from '../lib/profile'
 
 /*
@@ -89,8 +87,6 @@ function formatNumber(d: string): string {
 
 export function PhoneApp({ api }: { api: ShellApi }) {
   const [tab, setTab] = useState<Tab>('contacts')
-  /** A sample profile being read. Null is the directory itself. */
-  const [person, setPerson] = useState<Person | null>(null)
   /*
     A REAL MEMBER'S PAGE. Glenn, 2026-09-06: "make sure people on contact list
     we can go into their profile and see what they liked". The row is what the
@@ -108,14 +104,22 @@ export function PhoneApp({ api }: { api: ShellApi }) {
   /*
     THE REAL LIST. Glenn, 2026-09-02: "how soon can we have the contact list
     update every time a user signs up?" Fetched once when the app opens; null
-    means signed out or unreachable, and then the sample profiles below stand
-    in exactly as they did before anyone could sign up.
+    means signed out or unreachable.
   */
   const [dir, setDir] = useState<{ count: number; members: DirectoryMember[] } | null>(null)
+  /*
+    THE NUMBER, for somebody who is not signed in. The sample profiles that
+    stood here were asked for "until account creation is wired", and it is:
+    so a visitor now sees how many real members there are — Glenn's "see how
+    big our users are growing" — and is asked in to see who they are.
+  */
+  const [count, setCount] = useState<number | null>(null)
   useEffect(() => {
     let on = true
     fetchDirectory().then((d) => {
-      if (on) setDir(d)
+      if (!on) return
+      setDir(d)
+      if (!d) void fetchMemberCount().then((n) => on && setCount(n))
     })
     return () => {
       on = false
@@ -256,125 +260,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
     )
   }
 
-  if (tab === 'contacts' && person) {
-    /*
-      Somebody else's profile, read-only.
-
-      Same shape as your own page so the two are recognisably the same thing,
-      minus every control that edits — you cannot rename a stranger or restyle
-      their pet. The businesses on it are real ids, so tapping one leaves this
-      screen and opens that kitchen, which is the entire point of the page.
-    */
-    const visited = person.visited.map((id) => brandById(id)).filter(Boolean)
-    const favs = person.favourites.map((id) => brandById(id)).filter(Boolean)
-    const top = brandById(person.topSpotId)
-
-    return (
-      <NavScreen
-        title={person.name}
-        onBack={() => setPerson(null)}
-        backTitle="Contacts"
-        footer={tabBar}
-      >
-        <div className="prof">
-          <header className="prof-head">
-            <span className="prof-avatar" aria-hidden="true">
-              <PetAvatarArt pet={person.pet} size={96} />
-            </span>
-            <div className="prof-id">
-              <span className="prof-name">{person.name}</span>
-              <span className="prof-count">
-                <Gem size={18} />
-                <span>[{visited.length}]</span>
-              </span>
-              <p className="prof-spread">{person.city}</p>
-            </div>
-          </header>
-
-          {/* Said once, at the top, where it cannot be missed. */}
-          <p className="prof-fineprint">
-            An example profile, not a real member. There are no accounts in the app yet. The
-            businesses below are real and open.
-          </p>
-
-          {top && (
-            <section className="prof-top">
-              <h2 className="prof-h">Number one spot</h2>
-              <button className="prof-top-card" onClick={() => api.openApp(top.id)}>
-                <span
-                  className="prof-top-mark"
-                  style={{ background: top.logo.bg.split('|')[0] }}
-                  aria-hidden="true"
-                />
-                <span className="prof-top-text">
-                  <strong>{top.name}</strong>
-                  <em>{top.cuisine}</em>
-                </span>
-              </button>
-            </section>
-          )}
-
-          <section>
-            <h2 className="prof-h">Top 9 favourites</h2>
-            <div className="prof-grid">
-              {Array.from({ length: 9 }).map((_, i) => {
-                const b = favs[i]
-                if (!b)
-                  return (
-                    <span className="prof-tile is-empty" key={i} aria-hidden="true">
-                      {i + 1}
-                    </span>
-                  )
-                const bg = b.logo.bg.split('|')[0]
-                return (
-                  <button
-                    className="prof-tile"
-                    key={b.id}
-                    style={{ background: bg }}
-                    onClick={() => api.openApp(b.id)}
-                    aria-label={b.name}
-                  >
-                    <span className="prof-tile-name" style={{ color: readableOn(bg).fg }}>
-                      {b.name}
-                    </span>
-                  </button>
-                )
-              })}
-            </div>
-          </section>
-
-          <section>
-            <h2 className="prof-h">Places visited</h2>
-            <div className="prof-chiprow">
-              {visited.map((b) => (
-                <button className="prof-chip" key={b!.id} onClick={() => api.openApp(b!.id)}>
-                  <span
-                    className="prof-chip-dot"
-                    style={{ background: b!.logo.bg.split('|')[0] }}
-                    aria-hidden="true"
-                  />
-                  {b!.name}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <div className="prof-member">
-            <p className="prof-member-line">
-              <Gem size={16} /> Member since {person.memberSince}
-            </p>
-          </div>
-        </div>
-      </NavScreen>
-    )
-  }
-
   if (tab === 'contacts') {
-    const peopleByLetter = new Map<string, Person[]>()
-    for (const p of [...SAMPLE_PEOPLE].sort((x, y) => x.name.localeCompare(y.name))) {
-      const letter = p.name[0].toUpperCase()
-      peopleByLetter.set(letter, [...(peopleByLetter.get(letter) ?? []), p])
-    }
     const live = hasOperatorContact()
 
     return (
@@ -417,12 +303,12 @@ export function PhoneApp({ api }: { api: ShellApi }) {
           find a business, so a second alphabetical list of the same kitchens
           earned nothing. This is who else is using it.
 
-          EVERY ROW BELOW IS A SAMPLE and says so, because the stated purpose of
-          this list is to show how the community is growing — so the count is
-          the message, and an invented count would mislead the customer AND the
-          business owners it gets shown to. When account creation is wired,
-          data/community.ts is deleted and real members render here with no
-          other change.
+          REAL MEMBERS ONLY. The stated purpose of this list is to show how the
+          community is growing, so the count is the message — and an invented
+          count would mislead the customer and every business owner it is shown
+          to. The sample profiles that stood in before accounts existed are
+          gone; a visitor who is not signed in sees the real number and is
+          asked in to see the names.
         */}
         {dir && dir.members.length > 0 ? (
           <>
@@ -466,33 +352,20 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             </p>
           </>
         ) : (
-          <>
-        {[...peopleByLetter.entries()].map(([letter, people]) => (
-              <ListSection key={letter} header={letter}>
-                {people.map((person) => (
-                  <ListRow
-                    key={person.id}
-                    label={
-                      <span className="contact-row">
-                        <span className="contact-mark">
-                          <PetAvatarArt pet={person.pet} size={30} />
-                        </span>
-                        {person.name}
-                      </span>
-                    }
-                    detail={`${person.city} · sample profile`}
-                    onClick={() => setPerson(person)}
-                  />
-                ))}
-              </ListSection>
-            ))}
-    
-            <p className="ios-section-footer">
-              These are example profiles, not real members — there are no accounts in the app yet, so
-              nobody has signed up and no total is shown. Open one to see what a member&rsquo;s page
-              looks like; every business on it is real and opens.
+          <div className="contacts-join">
+            {count !== null && count > 0 && (
+              <p className="contacts-count">
+                <strong>{count}</strong> {count === 1 ? 'member' : 'members'} on BEASTY
+              </p>
+            )}
+            <p className="contacts-join-copy">
+              Sign in to see who else is on BEASTY and what they have starred and liked. It is free,
+              and your own name joins the list the moment you do.
             </p>
-          </>
+            <button className="btn-primary" onClick={() => api.openApp('sys.join')}>
+              Sign in or join free
+            </button>
+          </div>
         )}
       </NavScreen>
     )

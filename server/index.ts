@@ -11,6 +11,38 @@ import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
 const here = dirname(fileURLToPath(import.meta.url))
 const app = express()
 
+/*
+  AN ASYNC ROUTE THAT THROWS ANSWERS 500. IT DOES NOT END THE PROCESS.
+
+  Express 4 calls a handler and ignores what it returns, so a rejected promise
+  never reaches the error handler at the bottom of this file: Node sees an
+  unhandled rejection and exits. Found on 13 September 2026, when an order for
+  any of 71 businesses that had a menu but no vendor row hit a foreign-key
+  error and took the whole service down, for every customer, until the host
+  restarted it. Every handler registered through app.get/post/put/patch/
+  delete/all is wrapped so a rejection goes to next(err) instead.
+
+  Left exactly as they are: app.get with one argument, which is Express reading
+  a setting, and four-argument functions, which are error handlers.
+*/
+type AnyFn = (...a: unknown[]) => unknown
+const settled = (h: unknown) =>
+  typeof h === 'function' && h.length < 4
+    ? (req: Request, res: Response, next: NextFunction) => {
+        try {
+          const out = (h as AnyFn)(req, res, next) as { catch?: unknown } | undefined
+          if (out && typeof out.catch === 'function') (out as Promise<unknown>).catch(next)
+        } catch (err) {
+          next(err)
+        }
+      }
+    : h
+for (const method of ['get', 'post', 'put', 'patch', 'delete', 'all'] as const) {
+  const register = (app[method] as unknown as AnyFn).bind(app)
+  ;(app as unknown as Record<string, AnyFn>)[method] = (...args: unknown[]) =>
+    args.length < 2 ? register(...args) : register(args[0], ...args.slice(1).map(settled))
+}
+
 const PORT = Number(process.env.PORT ?? 8787)
 const PROD = process.env.NODE_ENV === 'production'
 
@@ -75,10 +107,15 @@ app.use((_req, res, next) => {
     the customer actually is, but only when they TAP it — never on load. The
     header has to allow the origin or that tap fails with a policy violation
     rather than a permission prompt. Everything else stays denied.
+
+    camera=(self) for the same reason. The landing page's Scan tab and the
+    kitchen screen's pass check both read QR codes, and both start the camera
+    only on a tap. With camera=() the browser refuses before it ever asks, and
+    the screen can only say "blocked" to a customer who never said no.
   */
   res.setHeader(
     'Permissions-Policy',
-    'camera=(), microphone=(), geolocation=(self), payment=(), usb=(), interest-cohort=()',
+    'camera=(self), microphone=(), geolocation=(self), payment=(), usb=(), interest-cohort=()',
   )
   res.setHeader('Cross-Origin-Opener-Policy', 'same-origin')
   res.setHeader('Cross-Origin-Resource-Policy', 'same-origin')
@@ -277,11 +314,57 @@ async function seedVendors() {
   }
 }
 
-/** Constant-time bearer check, scoped to one vendor row. */
+/**
+ * A kitchen's key, as issued by the operator: `kt_` and 32 random bytes.
+ *
+ * The prefix is what tells the two kinds of vendor credential apart at a
+ * glance, in a log line or in a support message, without either one being
+ * readable from the other.
+ */
+const KITCHEN_TOKEN_PREFIX = 'kt_'
+
+/**
+ * Which kitchens are real: those holding at least one key that has not been
+ * turned off. The simulator leaves their tickets alone and the customer's
+ * screen stops calling their statuses a demonstration. Small table, read whole.
+ */
+async function liveKitchens(): Promise<Set<string>> {
+  const rows = await db
+    .prepare('SELECT DISTINCT vendor_id FROM vendor_tokens WHERE revoked_at IS NULL')
+    .all() as { vendor_id: string }[]
+  return new Set(rows.map((r) => r.vendor_id))
+}
+
+/**
+ * Who is calling from a kitchen.
+ *
+ * TWO KINDS OF KEY. An issued kitchen key is found by its SHA-256 hash, so the
+ * database never holds one in the clear and a leaked backup opens no kitchen;
+ * turning it off is one row. The boot-seeded vendors.api_token came first,
+ * was never handed to any kitchen, and is printed to stdout in development for
+ * the audits — so it is honoured there and nowhere else. In production a
+ * kitchen gets in with an issued key or not at all.
+ */
 async function authVendor(req: express.Request): Promise<string | null> {
   const header = req.get('authorization') ?? ''
-  const token = header.startsWith('Bearer ') ? header.slice(7) : ''
+  const token = header.startsWith('Bearer ') ? header.slice(7).trim() : ''
   if (token.length < 8) return null
+
+  if (token.startsWith(KITCHEN_TOKEN_PREFIX)) {
+    const row = await db
+      .prepare('SELECT id, vendor_id, last_used_at FROM vendor_tokens WHERE token_hash = ? AND revoked_at IS NULL')
+      .get(hashToken(token)) as { id: string; vendor_id: string; last_used_at: string | number | null } | undefined
+    if (!row) return null
+    const now = Date.now()
+    /* At most once a minute: a board polling every few seconds should not turn
+       every read into a write. */
+    if (row.last_used_at === null || now - Number(row.last_used_at) > 60_000) {
+      await db.prepare('UPDATE vendor_tokens SET last_used_at = ? WHERE id = ?').run(now, row.id)
+    }
+    return row.vendor_id
+  }
+
+  if (PROD) return null
 
   const rows = await db.prepare('SELECT id, api_token FROM vendors WHERE api_token IS NOT NULL').all() as {
     id: string
@@ -314,6 +397,7 @@ interface IndexedItem {
 }
 
 const priceIndex = new Map<string, IndexedItem>()
+const VENDOR_IDS = new Set(VENDORS.map((v) => v.id))
 
 for (const brand of BRANDS) {
   /*
@@ -336,6 +420,23 @@ for (const brand of BRANDS) {
     always refused to sell these; the server never checked.
   */
   if (brand.contactOnly) continue
+  /*
+    Nor a Tier 1 or Tier 2 page. The menu list is a Tier 3 feature (his note of
+    9 September, data/affiliateTiers.ts), so those pages show no menu and
+    nothing on them can reach a cart. Alive Kitchen and Daughter Thai carry
+    researched menus on free Tier 1 listings; the rule above applies to them.
+  */
+  if ((brand.tier ?? 3) < 3) continue
+  /*
+    And never an item whose kitchen has no vendor row: its ticket cannot be
+    written, and before the async guard above that failure ended the process.
+    VENDORS now covers every seed, so this should never fire; it is here so a
+    future seed list that forgets one is a loud line at boot, not an outage.
+  */
+  if (!VENDOR_IDS.has(brand.vendorId)) {
+    console.error(`not orderable: ${brand.id} has a menu but no vendor ${brand.vendorId}`)
+    continue
+  }
 
   for (const cat of brand.menu) {
     for (const item of cat.items) {
@@ -686,7 +787,7 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
           error: 'This idempotency key was already used for a different order.',
         })
       }
-      return res.status(200).json(await readOrder(prior.id, { forCustomer: true }))
+      return res.status(200).json({ ...(await readOrder(prior.id, { forCustomer: true })), cancelKey: cancelKeyFor(prior.id) })
     }
   }
 
@@ -829,7 +930,7 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
         .prepare(
           `SELECT DISTINCT o.code AS code FROM orders o
            JOIN tickets t ON t.order_id = o.id
-           WHERE o.created_at > ? AND t.state != 'collected'`,
+           WHERE o.created_at > ? AND t.state NOT IN ('collected', 'cancelled')`,
         )
         .all(now - CODE_WINDOW_MS) as { code: string }[]
     ).map((r) => r.code),
@@ -839,16 +940,20 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
     code = `#${1000 + Math.floor(Math.random() * 8999)}`
   }
 
+  /* The order joins the account of whoever is signed in, so it follows them to
+     every phone they sign in on. A signed-out order is unchanged. */
+  const member = await memberFromRequest(req)
+
   const write = db.transaction(async () => {
     await db.prepare(
       `INSERT INTO orders (id, code, customer_name, customer_phone, fulfilment, subtotal, tax,
         service_fee, delivery_fee, tip, total, eta_minutes, payment_state, idempotency_key,
-        address, request_digest, created_at)
-       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+        address, request_digest, member_id, created_at)
+       VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     ).run(
       orderId, code, name, phone, fulfilment, subtotal, tax,
       serviceFee, deliveryFee, tip, total, etaMinutes, 'mock', idemKey,
-      address || null, requestDigest, now,
+      address || null, requestDigest, member?.id ?? null, now,
     )
 
     /*
@@ -915,7 +1020,7 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
     BEGIN it already runs inside is the stronger guarantee.
   */
   await write()
-  res.status(201).json(await readOrder(orderId, { forCustomer: true }))
+  res.status(201).json({ ...(await readOrder(orderId, { forCustomer: true })), cancelKey: cancelKeyFor(orderId) })
 })
 
 /**
@@ -927,13 +1032,32 @@ app.get('/api/orders', rateLimiter(120, 30), async (req, res) => {
   const vendorId = await authVendor(req)
   if (!vendorId) return res.status(401).json({ error: 'Vendor token required.' })
 
+  /*
+    Every order this kitchen still has to work, however many there are, and the
+    thirty most recent besides.
+
+    It was `SELECT DISTINCT o.id ... ORDER BY o.created_at`, written for SQLite.
+    Postgres refuses to order a DISTINCT by a column it did not select, so the
+    queue failed on every call — unnoticed only because no kitchen had ever
+    held a key, and before async errors were caught, fatal to the whole server
+    on a kitchen's first poll. A flat "latest fifty" would also have let a
+    busy kitchen's oldest open ticket slide off its own board.
+  */
   const ids = await db
     .prepare(
-      `SELECT DISTINCT o.id FROM orders o
-       JOIN tickets t ON t.order_id = o.id
-       WHERE t.vendor_id = ? ORDER BY o.created_at DESC LIMIT 50`,
+      `SELECT id FROM (
+         SELECT o.id, o.created_at FROM orders o
+         WHERE EXISTS (SELECT 1 FROM tickets t WHERE t.order_id = o.id AND t.vendor_id = ?
+                       AND t.state IN ('queued', 'cooking', 'ready'))
+         UNION
+         SELECT recent.id, recent.created_at FROM (
+           SELECT o.id, o.created_at FROM orders o
+           WHERE EXISTS (SELECT 1 FROM tickets t WHERE t.order_id = o.id AND t.vendor_id = ?)
+           ORDER BY o.created_at DESC LIMIT 30
+         ) recent
+       ) board ORDER BY created_at DESC LIMIT 200`,
     )
-    .all(vendorId) as { id: string }[]
+    .all(vendorId, vendorId) as { id: string }[]
 
   /* Promise.all, not map alone: each readOrder is async now and an unresolved
      promise would serialise as {} to every vendor polling their queue. */
@@ -959,12 +1083,74 @@ app.get('/api/orders/:id', rateLimiter(120, 40), async (req, res) => {
   res.json(order)
 })
 
+/**
+ * THE CUSTOMER'S RIGHT TO CANCEL, as a key only the customer ever holds.
+ *
+ * The order id alone cannot be it: every kitchen on a shared cart holds that id
+ * too, and a competitor must not be able to cancel another kitchen's ticket by
+ * replaying it. So the key is derived from the id with the server's secret and
+ * handed out only in the response to the request that placed the order — never
+ * on a vendor queue and never on a lookup. Nothing is stored; the server can
+ * always recompute it. A signed-in member who placed the order needs no key.
+ */
+const cancelKeyFor = (orderId: string) =>
+  createHmac('sha256', PASS_SECRET).update(`order-cancel.${orderId}`).digest('base64url').slice(0, 32)
+
+/**
+ * Cancel an order, whole, before any kitchen has started on it.
+ *
+ * All or nothing, and under a row lock: every ticket on the order is read FOR
+ * UPDATE, so a kitchen pressing Start at the same moment either lands first
+ * (and the cancel is refused) or waits and finds the ticket already cancelled.
+ * Half an order cancelled and half cooking is the one outcome this must not
+ * produce. Nothing is charged today, so there is nothing to refund; when
+ * payments exist, the refund belongs here.
+ */
+app.post('/api/orders/:id/cancel', rateLimiter(30, 10), async (req, res) => {
+  const orderId = String(req.params.id)
+  const order = await db.prepare('SELECT id, member_id FROM orders WHERE id = ?').get(orderId) as
+    | { id: string; member_id: string | null }
+    | undefined
+  if (!order) return res.status(404).json({ error: 'Not found' })
+
+  const body = isObj(req.body) ? req.body : {}
+  const given = Buffer.from(typeof body.cancelKey === 'string' ? body.cancelKey : '')
+  const want = Buffer.from(cancelKeyFor(orderId))
+  const byKey = given.length === want.length && timingSafeEqual(given, want)
+  const member = byKey ? null : await memberFromRequest(req)
+  const byOwner = !!member && !!order.member_id && member.id === order.member_id
+  if (!byKey && !byOwner) {
+    return res.status(403).json({ error: 'Only the customer who placed this order can cancel it.' })
+  }
+
+  const outcome = await db.transaction(async () => {
+    const tickets = await db
+      .prepare('SELECT id, state FROM tickets WHERE order_id = ? FOR UPDATE')
+      .all(orderId) as { id: string; state: string }[]
+    if (tickets.some((t) => t.state !== 'queued' && t.state !== 'cancelled')) return 'started'
+    await db.prepare(
+      `UPDATE tickets SET state = 'cancelled', cancelled_by = 'customer', state_changed_at = ?
+       WHERE order_id = ? AND state = 'queued'`,
+    ).run(Date.now(), orderId)
+    return 'cancelled'
+  })()
+  if (outcome === 'started') {
+    return res.status(409).json({ error: 'A kitchen has already started on this order. Call them to change it.' })
+  }
+  res.json(await readOrder(orderId, { forCustomer: true }))
+})
+
 const NEXT_STATE: Record<string, string[]> = {
-  queued: ['cooking'],
-  cooking: ['ready'],
+  /* A kitchen may turn a ticket down before or while cooking — sold out, closed
+     early — and says why. Once it is ready, it is the customer's food. */
+  queued: ['cooking', 'cancelled'],
+  cooking: ['ready', 'cancelled'],
   ready: ['collected'],
   collected: [],
+  cancelled: [],
 }
+
+const MAX_CANCEL_REASON = 140
 
 /** Kitchen-facing: advance a ticket. Vendor-scoped, forward-only. */
 app.post('/api/tickets/:id/state', rateLimiter(120, 30), async (req, res) => {
@@ -973,9 +1159,10 @@ app.post('/api/tickets/:id/state', rateLimiter(120, 30), async (req, res) => {
 
   const body = isObj(req.body) ? req.body : {}
   const state = typeof body.state === 'string' ? body.state : ''
-  if (!['queued', 'cooking', 'ready', 'collected'].includes(state)) {
+  if (!['queued', 'cooking', 'ready', 'collected', 'cancelled'].includes(state)) {
     return res.status(400).json({ error: 'Bad state' })
   }
+  const reason = typeof body.reason === 'string' ? body.reason.trim().slice(0, MAX_CANCEL_REASON) : ''
 
   const ticket = await db.prepare('SELECT vendor_id, state FROM tickets WHERE id = ?').get(req.params.id) as
     | { vendor_id: string; state: string }
@@ -988,11 +1175,39 @@ app.post('/api/tickets/:id/state', rateLimiter(120, 30), async (req, res) => {
 
   // Compare-and-swap on the observed state so two terminals cannot both advance.
   const info = await db
-    .prepare('UPDATE tickets SET state = ?, state_changed_at = ? WHERE id = ? AND vendor_id = ? AND state = ?')
-    .run(state, Date.now(), req.params.id, vendorId, ticket.state)
+    .prepare(
+      `UPDATE tickets SET state = ?, state_changed_at = ?,
+         cancelled_by = CASE WHEN ? = 'cancelled' THEN 'kitchen' ELSE cancelled_by END,
+         cancel_reason = CASE WHEN ? = 'cancelled' THEN ? ELSE cancel_reason END
+       WHERE id = ? AND vendor_id = ? AND state = ?`,
+    )
+    .run(state, Date.now(), state, state, reason || null, req.params.id, vendorId, ticket.state)
   if (info.changes === 0) return res.status(409).json({ error: 'Ticket changed underneath you.' })
 
   res.json({ ok: true, state })
+})
+
+/**
+ * The kitchen screen's own card: who this key belongs to, and what its
+ * register code has brought in. Everything else on the board comes from the
+ * vendor queue it already polls.
+ */
+app.get('/api/kitchen/me', rateLimiter(60, 20), async (req, res) => {
+  const vendorId = await authVendor(req)
+  if (!vendorId) return res.status(401).json({ error: 'This kitchen link is not valid any more.' })
+  const vendor = VENDORS.find((v) => v.id === vendorId)
+  const brands = BRANDS.filter((b) => b.vendorId === vendorId)
+  let signups = 0
+  for (const b of brands) {
+    const r = await db.prepare('SELECT COUNT(*) AS n FROM members WHERE joined_via = ?').get(b.id) as { n: string | number }
+    signups += Number(r.n)
+  }
+  res.set('Cache-Control', 'no-store').json({
+    vendorId,
+    name: vendor?.name ?? brands[0]?.name ?? vendorId,
+    brands: brands.map((b) => ({ id: b.id, name: b.name })),
+    signupsFromRegisterCode: signups,
+  })
 })
 
 interface ReadOpts {
@@ -1010,6 +1225,7 @@ async function readOrder(id: string, opts: ReadOpts = {}) {
       ? await db.prepare('SELECT * FROM tickets WHERE order_id = ? AND vendor_id = ?').all(id, opts.vendorId)
       : await db.prepare('SELECT * FROM tickets WHERE order_id = ?').all(id)
   ) as Record<string, unknown>[]
+  const live = await liveKitchens()
 
   return {
     id: o.id,
@@ -1037,7 +1253,9 @@ async function readOrder(id: string, opts: ReadOpts = {}) {
       minute after ordering and could drive out for food nobody had started.
       The screen can only tell the truth if the server tells it which it is.
     */
-    simulated: SIMULATE_KITCHEN,
+    /* Only while at least one kitchen on the order is still the simulator's. A
+       kitchen with its own screen is moving its own tickets. */
+    simulated: SIMULATE_KITCHEN && tickets.some((t) => !live.has(String(t.vendor_id))),
     /*
       The customer is told the phone number is "so the kitchen can reach you",
       and a delivery order is refused without an address — then neither was ever
@@ -1060,6 +1278,12 @@ async function readOrder(id: string, opts: ReadOpts = {}) {
         vendorId: t.vendor_id,
         brandIds: JSON.parse(String(t.brand_ids)) as string[],
         state: t.state,
+        /* Whether this kitchen works its own screen. The customer is told "call
+           them before you travel" only where nobody is watching for the order. */
+        kitchenLive: live.has(String(t.vendor_id)),
+        ...(t.state === 'cancelled'
+          ? { cancelledBy: t.cancelled_by ?? undefined, cancelReason: t.cancel_reason ?? undefined }
+          : {}),
         ...(opts.forCustomer
           ? {}
           : {
@@ -1094,8 +1318,13 @@ if (SIMULATE_KITCHEN) {
       const due: Record<string, number> = { queued: 12, cooking: 45, ready: 120 }
       const rows = await db
         .prepare(
-          `SELECT id, state, state_changed_at FROM tickets
-           WHERE state IN ('queued','cooking','ready')`,
+          /* Never a real kitchen's ticket: one with a live key is working its
+             own board, and the timer moving it would lie to both sides. */
+          `SELECT t.id, t.state, t.state_changed_at FROM tickets t
+           WHERE t.state IN ('queued','cooking','ready')
+             AND NOT EXISTS (
+               SELECT 1 FROM vendor_tokens k WHERE k.vendor_id = t.vendor_id AND k.revoked_at IS NULL
+             )`,
         )
         .all() as { id: string; state: string; state_changed_at: number }[]
 
@@ -1430,6 +1659,103 @@ app.delete('/api/events/:id', rateLimiter(30, 10), async (req, res) => {
   const info = await db.prepare('DELETE FROM events WHERE id = ?').run(String(req.params.id))
   if (info.changes === 0) return res.status(404).json({ error: 'Not found' })
   res.status(204).end()
+})
+
+/* ---------- kitchens: issuing and turning off their keys ---------- */
+
+const MAX_TOKEN_LABEL = 60
+const MAX_LIVE_TOKENS_PER_VENDOR = 10
+
+/** v_x and b_x name the same kitchen; accept either. */
+const vendorIdFrom = (raw: string) => (raw.startsWith('b_') ? `v_${raw.slice(2)}` : raw)
+
+function operatorGuard(req: Request, res: Response): boolean {
+  if (OPERATOR_TOKEN.length < 16) {
+    res.status(503).json({ error: 'No operator token configured.' })
+    return false
+  }
+  if (!isOperator(req)) {
+    res.status(401).json({ error: 'Operator token required.' })
+    return false
+  }
+  return true
+}
+
+/**
+ * Issue a kitchen a key, one per device. The key is in the response ONCE and
+ * never again: only its hash is kept. The link it comes with opens the kitchen
+ * screen already signed in, with the key in the fragment so it is never sent
+ * to the server in a request line or written to an access log.
+ */
+app.post('/api/vendors/:id/tokens', rateLimiter(20, 10), async (req, res) => {
+  if (!operatorGuard(req, res)) return
+  const vendorId = vendorIdFrom(String(req.params.id))
+  const vendor = await db.prepare('SELECT id, name FROM vendors WHERE id = ?').get(vendorId) as
+    | { id: string; name: string }
+    | undefined
+  if (!vendor) return res.status(404).json({ error: 'No such kitchen.' })
+  const live = await db
+    .prepare('SELECT COUNT(*) AS n FROM vendor_tokens WHERE vendor_id = ? AND revoked_at IS NULL')
+    .get(vendorId) as { n: string | number }
+  if (Number(live.n) >= MAX_LIVE_TOKENS_PER_VENDOR) {
+    return res.status(409).json({ error: `This kitchen already has ${MAX_LIVE_TOKENS_PER_VENDOR} live keys. Turn one off first.` })
+  }
+  const body = isObj(req.body) ? req.body : {}
+  const label = typeof body.label === 'string' ? body.label.trim().slice(0, MAX_TOKEN_LABEL) : ''
+  const token = `${KITCHEN_TOKEN_PREFIX}${randomBytes(32).toString('base64url')}`
+  const id = `vk_${randomBytes(8).toString('hex')}`
+  await db
+    .prepare('INSERT INTO vendor_tokens (id, vendor_id, token_hash, label, created_at) VALUES (?,?,?,?,?)')
+    .run(id, vendorId, hashToken(token), label || null, Date.now())
+  const origin = PROD ? `https://${req.get('host')}` : `${req.protocol}://${req.get('host')}`
+  res.status(201).set('Cache-Control', 'no-store').json({
+    id,
+    vendorId,
+    name: vendor.name,
+    label: label || undefined,
+    token,
+    kitchenUrl: `${origin}/kitchen#k=${token}`,
+  })
+})
+
+/** A kitchen's keys: when each was issued and last used. Never the key itself. */
+app.get('/api/vendors/:id/tokens', rateLimiter(30, 15), async (req, res) => {
+  if (!operatorGuard(req, res)) return
+  const vendorId = vendorIdFrom(String(req.params.id))
+  const rows = await db
+    .prepare('SELECT id, label, created_at, last_used_at, revoked_at FROM vendor_tokens WHERE vendor_id = ? ORDER BY created_at DESC')
+    .all(vendorId) as { id: string; label: string | null; created_at: string; last_used_at: string | null; revoked_at: string | null }[]
+  const num = (v: string | null) => (v === null ? null : Number(v))
+  res.json(rows.map((r) => ({
+    id: r.id,
+    label: r.label ?? undefined,
+    createdAt: Number(r.created_at),
+    lastUsedAt: num(r.last_used_at),
+    revokedAt: num(r.revoked_at),
+  })))
+})
+
+/** Turn one key off — a lost or replaced tablet. The row stays, stamped. */
+app.delete('/api/vendor-tokens/:id', rateLimiter(30, 15), async (req, res) => {
+  if (!operatorGuard(req, res)) return
+  const info = await db
+    .prepare('UPDATE vendor_tokens SET revoked_at = ? WHERE id = ? AND revoked_at IS NULL')
+    .run(Date.now(), String(req.params.id))
+  if (info.changes === 0) return res.status(404).json({ error: 'No live key with that id.' })
+  res.status(204).end()
+})
+
+/** What every register code has brought in, busiest first. */
+app.get('/api/register-signups', rateLimiter(30, 15), async (req, res) => {
+  if (!operatorGuard(req, res)) return
+  const rows = await db
+    .prepare('SELECT joined_via, COUNT(*) AS n FROM members WHERE joined_via IS NOT NULL GROUP BY joined_via ORDER BY COUNT(*) DESC')
+    .all() as { joined_via: string; n: string }[]
+  res.json(rows.map((r) => ({
+    brandId: r.joined_via,
+    name: BRANDS.find((b) => b.id === r.joined_via)?.name ?? r.joined_via,
+    signups: Number(r.n),
+  })))
 })
 
 /* ---------- static ---------- */
@@ -2086,6 +2412,16 @@ app.get('/api/members/channels', (_req, res) => {
 
 
 /**
+ * The business a register code named, kept only if it is a real one. A code
+ * printed for a business that later leaves still signs somebody up; it simply
+ * credits nobody.
+ */
+const viaFrom = (v: unknown): string | null => {
+  const s = typeof v === 'string' ? v.trim() : ''
+  return /^b_[a-z0-9]{2,40}$/.test(s) && BRANDS.some((x) => x.id === s) ? s : null
+}
+
+/**
  * Step one: ask for a code.
  *
  * ONE ENDPOINT FOR SIGN-UP AND SIGN-IN, and the response is identical for both.
@@ -2203,13 +2539,14 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   ) {
     await db.prepare(
       `UPDATE login_codes SET
-         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?
+         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?, pending_via = ?
        WHERE destination = ?`,
     ).run(
       name || null,
       str(b.instagram).replace(/^@+/, '') || null,
       channel === 'sms' ? destination : str(b.phone) || null,
       str(b.ref).toUpperCase() || null,
+      viaFrom(b.via),
       destination,
     )
     return res.status(202).json({
@@ -2225,8 +2562,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   await db.prepare(
     `INSERT INTO login_codes
        (destination, channel, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
-        attempts, created_at, expires_at)
-     VALUES (?,?,?,?,?,?,?,?,0,?,?)
+        pending_via, attempts, created_at, expires_at)
+     VALUES (?,?,?,?,?,?,?,?,?,0,?,?)
      ON CONFLICT(destination) DO UPDATE SET
        channel = excluded.channel,
        code_hash = excluded.code_hash,
@@ -2235,6 +2572,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
        pending_instagram = excluded.pending_instagram,
        pending_phone = excluded.pending_phone,
        pending_ref = excluded.pending_ref,
+       pending_via = excluded.pending_via,
        attempts = 0,
        created_at = excluded.created_at,
        expires_at = excluded.expires_at`,
@@ -2247,6 +2585,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     str(b.instagram).replace(/^@+/, '') || null,
     channel === 'sms' ? destination : str(b.phone) || null,
     str(b.ref).toUpperCase() || null,
+    viaFrom(b.via),
     now,
     now + CODE_TTL_MS,
   )
@@ -2294,6 +2633,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
         pending_instagram: string | null
         pending_phone: string | null
         pending_ref: string | null
+        pending_via: string | null
         attempts: number
         expires_at: number
       }
@@ -2348,8 +2688,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 
   const id = `mb_${randomBytes(8).toString('hex')}`
   await db.prepare(
-    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, created_at)
-     VALUES (?,?,?,?,?,?,?,?)`,
+    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, created_at)
+     VALUES (?,?,?,?,?,?,?,?,?)`,
   ).run(
     id,
     row.pending_name ?? 'Member',
@@ -2360,6 +2700,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     byPhone ? destination : row.pending_phone,
     await newReferralCode(),
     referrer?.id ?? null,
+    viaFrom(row.pending_via),
     Date.now(),
   )
   // Their referrer may have just crossed a milestone.
@@ -2396,6 +2737,35 @@ app.get('/api/members/directory', rateLimiter(60, 20), async (req, res) => {
     count: rows.length,
     members: rows.map((r) => ({ id: r.id, name: shortName(r.name), since: r.created_at, me: r.id === me.id })),
   })
+})
+
+/**
+ * THE MEMBER'S OWN ORDERS, from whichever phone they are signed in on.
+ *
+ * Order history used to be the set of ids one browser had kept, so the same
+ * member on a second phone had none. These are the orders placed while signed
+ * in, newest first, in the customer's view — no platform fee, no payout.
+ */
+app.get('/api/members/orders', rateLimiter(60, 20), async (req, res) => {
+  const me = await memberFromRequest(req)
+  if (!me) return res.status(401).json({ error: 'Not signed in.' })
+  const ids = await db
+    .prepare('SELECT id FROM orders WHERE member_id = ? ORDER BY created_at DESC LIMIT 25')
+    .all(me.id) as { id: string }[]
+  const orders = (await Promise.all(ids.map((r) => readOrder(r.id, { forCustomer: true })))).filter(Boolean)
+  res.set('Cache-Control', 'no-store').json({ orders })
+})
+
+/**
+ * HOW MANY MEMBERS THERE ARE, for anybody.
+ *
+ * Glenn's purpose for Contacts, 9 August: "users can see other users and see how
+ * big our users are growing." The names stay behind sign-in; the number is the
+ * part he wants seen, and it is only ever the real one.
+ */
+app.get('/api/members/count', rateLimiter(60, 20), async (_req, res) => {
+  const r = await db.prepare('SELECT COUNT(*) AS n FROM members').get() as { n: string | number }
+  res.set('Cache-Control', 'no-store').json({ count: Number(r.n) })
 })
 
 /**
@@ -2818,7 +3188,9 @@ app.get('*', (_req, res) => {
 })
 
 /** Never return a stack trace: it leaks absolute paths and the dependency tree. */
-app.use((err: unknown, _req: express.Request, res: express.Response, _next: express.NextFunction) => {
+app.use((err: unknown, _req: express.Request, res: express.Response, next: express.NextFunction) => {
+  // Half an answer already went out: Express's own handler closes the socket.
+  if (res.headersSent) return next(err)
   // body-parser marks its own failures. Reporting them as 500 told the customer
   // the server had broken when in fact their request was malformed or too
   // large, and left them unable to tell whether an order had been created.

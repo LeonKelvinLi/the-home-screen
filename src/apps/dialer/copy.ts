@@ -86,17 +86,16 @@ export const PAGES: Record<PageKey, Page> = {
     business — which is what makes the Share & Scan code the app already
     generates worth printing.
 
-    NOT BUILT. Nothing is captured, nothing is uploaded, and the camera is never
-    switched on until someone taps to start it.
+    BUILT, 2026-09-13, alongside the register cards that give it something to
+    read. Nothing is captured, nothing is uploaded, and the camera is never
+    switched on until someone taps to start it. See apps/QrScanner.tsx.
   */
   camera: {
     title: 'Scan',
     body: [
-      'Point the camera at a BEASTY code — in a shop window, on a flyer, on somebody else’s screen — and it opens that business straight away. No app to install and nothing to type.',
-      'It is not switched on yet. When it is, the camera only runs while this screen is open, nothing is recorded, and no picture leaves the phone: a code is read and the app moves on.',
+      'Point the camera at a BEASTY code — on a partner’s counter, on a flyer, on somebody else’s screen — and it opens that business straight away. No app to install and nothing to type.',
+      'The camera only runs after you tap to start it and only while this screen is open. Nothing is recorded and no picture leaves the phone: the code is read on the phone, and the camera turns off when you close this.',
     ],
-    needsGlenn:
-      'Window stickers or cards carrying each partner’s code — the scanner is worth nothing until there is something out there to scan.',
   },
 
   /*

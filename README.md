@@ -84,8 +84,27 @@ FAIL line. Silence is not a pass.
   platform fee per vendor (10% by default, `PLATFORM_FEE_BPS`) and stores it.
   A 5% service fee and any tip are charged on the food total. Pickup or
   delivery; delivery adds a flat $3.99 and 12 minutes to the ETA.
-- **Orders** — under `SIMULATE_KITCHEN=1` ticket states advance on a timer, and
-  the client polls them every six seconds.
+- **Orders** — the client polls ticket states every six seconds. Signed in,
+  the list is the account's, so it follows the member to another phone.
+  Before any kitchen starts, the customer can cancel: the key for that comes
+  back only in the answer to the request that placed the order (or the
+  signed-in account that placed it), so a kitchen holding the order id cannot
+  cancel a competitor's ticket. All or nothing, under a row lock.
+- **The kitchen screen** — `/kitchen`, on whatever the counter already has.
+  A kitchen signs in with a link the operator issues
+  (`tools/issue-kitchen-token.mjs`, `docs/KITCHEN.md`); the key rides in the
+  URL fragment, is stored on the device and wiped from the address bar. The
+  board shows that kitchen's tickets only — New, Cooking, Ready — with the
+  customer's name and number, a new-order banner and chime, and Start, Ready,
+  Picked up and Can't make it (with a reason the customer sees). The same
+  screen scans a member's pass with the device camera. A kitchen with a live
+  key is left alone by `SIMULATE_KITCHEN`, and the customer's screen stops
+  calling its statuses a demonstration.
+- **Register cards** — `tools/make-register-cards.ts` prints a 4 x 6 card for
+  each seated business with a QR for `/?b=<id>&via=qr`. The landing page's
+  Scan tab reads it with the camera (BEASTY links only), and a sign-up that
+  starts from a card is credited to that business: the kitchen screen shows it
+  its own count, the operator sees everyone's.
 - **Reserve slots** — every city page carries 24 empty tiles, each one a live
   pitch to the next business. Tapping one opens the reserve screen,
   `POST /api/applications` records who asked, and the lead is emailed to
@@ -166,10 +185,11 @@ wholesale while treating unverified data as safe.
   imported. `PAYMENTS_WIRED` in `server/index.ts` is a source constant, not an
   env var, precisely so that setting `STRIPE_SECRET_KEY` cannot make the app
   believe a charge path exists.
-- The kitchen. No kitchen display exists and no vendor has been issued a token,
-  so in production tickets stay `queued`. `SIMULATE_KITCHEN=1` walks them
-  queued → cooking → ready → collected for a demo, and shouts in the log that
-  it is doing so.
+- The kitchen, for every kitchen so far. The screen exists (`/kitchen`) and
+  keys can be issued, but none has been given to a business yet, so in
+  production every ticket is still walked queued → cooking → ready → collected
+  by `SIMULATE_KITCHEN=1`, and the order screen tells the customer so. That
+  changes kitchen by kitchen as each one is handed its link.
 - `prepMinutes` is an estimate by category, not sourced, and is hedged in the
   UI rather than shown as a fact.
 - Paid membership. Accounts are real (above), but no member has ever been
@@ -187,13 +207,12 @@ wholesale while treating unverified data as safe.
 
 ## Not built yet
 
-- Orders on an account. Orders are keyed to the device and the phone number
-  typed at checkout; signing in does not attach them to the member, so a
-  member's order history is still whatever ids this browser kept.
 - Vendor onboarding and Stripe Connect KYC. `POST /api/applications` captures a
   business that wants a slot, but vendors exist in the DB with
   `payouts_enabled = 0` and no way to complete verification.
-- Scheduling, cancellation, refunds, receipts.
+- Scheduling, refunds, receipts. (Cancelling is built — the customer before a
+  kitchen starts, the kitchen with a reason — and nothing is charged today, so
+  there is nothing to refund yet; the refund belongs in the cancel route.)
 - SMS sign-in, switched on. The code path is written and audited; on
   2026-09-02 the decision was to stay on email until there are more users.
   `tools/setup-sms-login.sh` turns it on once a Twilio account exists.
@@ -240,18 +259,23 @@ uses, so a logo never changes shape depending on the device.
 
 ## Kitchen API
 
-Each vendor gets a bearer token, printed on boot in development:
+A kitchen authenticates with a key the operator issues — `kt_` and 32 random
+bytes, shown once, stored only as its SHA-256 — normally through the screen at
+`/kitchen` rather than by hand. `docs/KITCHEN.md` has issuing and revoking.
 
 ```bash
-curl -H "Authorization: Bearer vt_…" localhost:8787/api/orders
+curl -H "Authorization: Bearer kt_…" localhost:8787/api/orders
 curl -X POST localhost:8787/api/tickets/<id>/state \
-     -H "Authorization: Bearer vt_…" -H 'content-type: application/json' \
-     -d '{"state":"cooking"}'
+     -H "Authorization: Bearer kt_…" -H 'content-type: application/json' \
+     -d '{"state":"cancelled","reason":"Sold out"}'
 ```
 
-`GET /api/orders` returns only that vendor's tickets. Transitions are
-forward-only (`queued → cooking → ready → collected`) and use compare-and-swap,
-so two terminals cannot both advance the same ticket.
+`GET /api/orders` returns only that vendor's tickets: every order it still has
+to work, plus its thirty most recent. Transitions are forward-only
+(`queued → cooking → ready → collected`, and `cancelled` from queued or
+cooking, with a reason of up to 140 characters) and use compare-and-swap, so
+two terminals cannot both advance the same ticket. The boot-seeded `vt_`
+tokens are printed in development for the audits and refused in production.
 
 Customers never hit that endpoint — `GET /api/orders/:id` is the public lookup,
 and the unguessable order id is the capability. The customer-facing shape omits
@@ -266,15 +290,14 @@ competitor's lines on the same cart.
   against no authorization — but the Stripe call itself is still not written.
   The guard used to key off `STRIPE_SECRET_KEY` and failed open the moment an
   operator set one: a key cannot prove a charge path exists, only code can.
-- **Orders are not attached to accounts.** Order history is the set of ids on
-  the device, even for a signed-in member.
 - **Rate limiting is in-process.** Order creation is capped at 30/min per IP
   with a burst of 10, and applications at 6/min with a burst of 3; orders are
   also bounded by `MAX_LINES` and `MAX_ORDER_TOTAL`. The token buckets live in
   one process's memory, so this is the first thing to replace if it ever scales
   past a single instance.
-- **Vendor tokens are static** and printed to stdout in dev. Fine for a
-  commissary, not for self-serve vendor onboarding.
+- **Kitchen keys are issued by the operator**, from a CLI, one per device and
+  at most ten live per kitchen. A business cannot rotate its own key or see
+  its devices; that is vendor onboarding, which is not built.
 - **The tax table is right today and expires.** The rates in
   `src/data/brands.ts` are transcribed from CDTFA's July 2026 table and were
   last confirmed 2026-08-09, so the old "confirm before payments go on" gate is

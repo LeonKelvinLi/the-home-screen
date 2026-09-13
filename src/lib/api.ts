@@ -63,7 +63,15 @@ export interface Ticket {
   vendorId: string
   brandIds: string[]
   lines: TicketLine[]
-  state: 'queued' | 'cooking' | 'ready' | 'collected'
+  state: 'queued' | 'cooking' | 'ready' | 'collected' | 'cancelled'
+  /** Who cancelled it, when it was: the customer before any kitchen started, or
+   *  the kitchen that could not make it. */
+  cancelledBy?: 'customer' | 'kitchen'
+  /** The kitchen's own words, when it turned the ticket down. */
+  cancelReason?: string
+  /** True when this kitchen has its own live screen and is moving the ticket
+   *  itself, rather than nobody (or the demo timer). */
+  kitchenLive?: boolean
 }
 
 export interface PlacedOrder {
@@ -83,6 +91,14 @@ export interface PlacedOrder {
    * has started cooking.
    */
   simulated?: boolean
+  /**
+   * The customer's key to cancel this order, handed out only in the response
+   * that placed it and kept on this device. Every kitchen on a shared cart also
+   * holds the order id, so the id alone is not proof of being the customer.
+   */
+  cancelKey?: string
+  /** Placed while signed in, so the account can cancel it without the key. */
+  mine?: boolean
 }
 
 export interface PlaceOrderInput {
@@ -167,7 +183,11 @@ function readLocal(): PlacedOrder[] {
 
 function rememberOrder(order: PlacedOrder) {
   try {
-    const next = [order, ...readLocal().filter((o) => o.id !== order.id)].slice(0, 25)
+    const prior = readLocal().find((o) => o.id === order.id)
+    /* A fresh copy from a poll carries no cancel key — only the placing
+       response ever does — so the one this device holds is kept. */
+    const merged = { ...order, cancelKey: order.cancelKey ?? prior?.cancelKey, mine: order.mine || prior?.mine }
+    const next = [merged, ...readLocal().filter((o) => o.id !== order.id)].slice(0, 25)
     localStorage.setItem(ORDERS_KEY, JSON.stringify(next))
   } catch {
     /* private mode / quota — history just won't survive a reload */
@@ -269,7 +289,7 @@ export interface OrdersResult {
  * re-fetching it every six seconds forever buys nothing.
  */
 const isSettled = (o: PlacedOrder) =>
-  o.tickets.length > 0 && o.tickets.every((t) => t.state === 'collected')
+  o.tickets.length > 0 && o.tickets.every((t) => t.state === 'collected' || t.state === 'cancelled')
 
 /*
   How many live lookups one poll may spend.
@@ -283,15 +303,50 @@ const isSettled = (o: PlacedOrder) =>
 */
 const POLL_BUDGET = 8
 
-export async function listOrders(): Promise<OrdersResult> {
+export async function listOrders(opts: { signedIn?: boolean } = {}): Promise<OrdersResult> {
+  if (IS_LOCAL_ONLY) return { orders: readLocal(), degraded: false }
+
+  /*
+    THE ACCOUNT'S ORDERS FIRST, when somebody is signed in: one request for all
+    of them, from whichever phone placed them. Only the orders this device holds
+    that the account does not — placed while signed out — are looked up one by
+    one below.
+
+    SHOWN, NOT STORED. An order placed on another phone is held in memory for
+    this list and never written to this phone's storage. Written, it would
+    outlive signing out: a member who signs in on a friend's phone would leave
+    their orders on it for the next person to open. A copy this device already
+    holds, because it placed the order, is refreshed as before.
+  */
+  const fromAccount = new Set<string>()
+  const accountOrders: PlacedOrder[] = []
+  let accountFailed = false
+  if (opts.signedIn) {
+    try {
+      const res = await request('/api/members/orders', { credentials: 'same-origin' })
+      if (res.ok) {
+        const body = (await res.json()) as { orders?: PlacedOrder[] }
+        const held = readLocal()
+        for (const o of body.orders ?? []) {
+          const mine = held.find((x) => x.id === o.id)
+          if (mine) rememberOrder({ ...o, mine: true })
+          accountOrders.push({ ...o, mine: true, cancelKey: mine?.cancelKey })
+          fromAccount.add(o.id)
+        }
+      } else if (res.status !== 401) {
+        accountFailed = true
+      }
+    } catch {
+      accountFailed = true
+    }
+  }
   const stored = readLocal()
-  if (IS_LOCAL_ONLY) return { orders: stored, degraded: false }
 
   // With a backend, the stored ids are capabilities — re-fetch for live state.
   // Newest first, and only the ones that can still move, so the budget is spent
   // on the order the customer is actually watching.
   const live = stored
-    .filter((o) => !isSettled(o))
+    .filter((o) => !fromAccount.has(o.id) && !isSettled(o))
     .sort((a, b) => b.createdAt - a.createdAt)
     .slice(0, POLL_BUDGET)
   const liveIds = new Set(live.map((o) => o.id))
@@ -301,14 +356,15 @@ export async function listOrders(): Promise<OrdersResult> {
       const res = await request(`/api/orders/${encodeURIComponent(o.id)}`)
       if (res.status === 404) return null
       if (!res.ok) throw new Error(String(res.status))
-      return (await res.json()) as PlacedOrder
+      /* The stored key rides along; the lookup never returns one. */
+      return { ...((await res.json()) as PlacedOrder), cancelKey: o.cancelKey, mine: o.mine }
     }),
   )
 
   // Everything not re-fetched is either finished or older than the budget —
   // its last known copy is still correct, so show it rather than hiding it.
-  const orders: PlacedOrder[] = stored.filter((o) => !liveIds.has(o.id))
-  let degraded = false
+  const orders: PlacedOrder[] = [...accountOrders, ...stored.filter((o) => !liveIds.has(o.id) && !fromAccount.has(o.id))]
+  let degraded = accountFailed
   settled.forEach((r, i) => {
     if (r.status === 'fulfilled') {
       if (r.value) orders.push(r.value)
@@ -320,6 +376,44 @@ export async function listOrders(): Promise<OrdersResult> {
 
   orders.sort((a, b) => b.createdAt - a.createdAt)
   return { orders, degraded }
+}
+
+/**
+ * Whether this order can still be cancelled from here: nothing has started, and
+ * this device holds the key or the order belongs to the signed-in account.
+ */
+export function canCancel(o: PlacedOrder, signedIn: boolean): boolean {
+  const open = o.tickets.filter((t) => t.state !== 'cancelled')
+  if (open.length === 0 || open.some((t) => t.state !== 'queued')) return false
+  return !!o.local || !!o.cancelKey || (signedIn && !!o.mine)
+}
+
+/**
+ * Cancel a whole order before any kitchen has started on it.
+ *
+ * The server refuses once a kitchen has begun, and says so; that refusal is
+ * surfaced as it is, never turned into a cancellation that did not happen.
+ */
+export async function cancelOrder(o: PlacedOrder): Promise<PlacedOrder> {
+  if (o.local) {
+    const done: PlacedOrder = {
+      ...o,
+      tickets: o.tickets.map((t) => (t.state === 'queued' ? { ...t, state: 'cancelled', cancelledBy: 'customer' } : t)),
+    }
+    rememberOrder(done)
+    return done
+  }
+  const res = await request(`/api/orders/${encodeURIComponent(o.id)}/cancel`, {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    credentials: 'same-origin',
+    body: JSON.stringify({ cancelKey: o.cancelKey }),
+  })
+  if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
+  const fresh = { ...((await res.json()) as PlacedOrder), cancelKey: o.cancelKey, mine: o.mine }
+  /* Only into storage if this device already held it; see listOrders. */
+  if (readLocal().some((x) => x.id === o.id)) rememberOrder(fresh)
+  return fresh
 }
 
 /* ---------- vendor applications ---------- */

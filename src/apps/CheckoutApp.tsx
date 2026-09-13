@@ -105,9 +105,20 @@ export function CheckoutApp({ api, onBack }: { api: ShellApi; onBack: () => void
               ordering goes live once the backend is connected.
             </p>
           ) : !PAYMENTS_LIVE ? (
+            /*
+              Per kitchen, from the server. A kitchen with its own screen has
+              the order in front of it, and telling that customer "no kitchen
+              display is connected" would be as false as the reverse was.
+            */
             <p className="local-notice">
-              <strong>Nothing has been charged.</strong> Your order is recorded, but no kitchen
-              display is connected yet — call the kitchen to confirm before you travel.
+              <strong>Nothing has been charged.</strong>{' '}
+              {order.tickets.every((tk) => tk.kitchenLive)
+                ? order.tickets.length === 1
+                  ? 'The kitchen has your order on its own screen. Track order follows it as they work.'
+                  : 'Every kitchen on this order has it on its own screen. Track order follows each one as they work.'
+                : order.tickets.some((tk) => tk.kitchenLive)
+                  ? 'Some of these kitchens have your order on their own screen and some are not connected yet. Call the ones that are not before you travel.'
+                  : 'Your order is recorded, but no kitchen display is connected yet — call the kitchen to confirm before you travel.'}
             </p>
           ) : null}
 

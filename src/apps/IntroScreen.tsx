@@ -8,6 +8,7 @@ import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { Gem } from './MembersApp'
+import { QrScanner, beastyPathFrom } from './QrScanner'
 import { PagesMark } from './dialer/PagesMark'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
@@ -994,6 +995,58 @@ function FavoritesPanel({ onOpen }: { onOpen: (brandId: string) => void }) {
 }
 
 /**
+ * Scan — the camera, reading BEASTY codes.
+ *
+ * Off until tapped, and the copy above it says so before the tap. A code that
+ * names a business opens that business, through the same `/?b=` link a shared
+ * page uses, so the app, the register credit and the back button all behave
+ * as they do for any other arrival. Anything that is not a BEASTY code is
+ * refused on screen and never followed.
+ */
+function ScanPanel({ copy }: { copy: string[] }) {
+  const [on, setOn] = useState(false)
+  const [refused, setRefused] = useState(false)
+  return (
+    <>
+      {/* Read before the tap; once the camera is on, the panel is the camera,
+          or the square and its off button sit below the fold on a phone. */}
+      {!on &&
+        copy.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
+      {on ? (
+        <>
+          <QrScanner
+            hint="Hold a BEASTY code inside the square."
+            onCode={(text) => {
+              const path = beastyPathFrom(text)
+              if (!path) {
+                setRefused(true)
+                return false
+              }
+              window.location.assign(path)
+              return true
+            }}
+          />
+          {refused && (
+            <p className="dialer-panel-flag" role="status">
+              That code is not a BEASTY code, so it was not opened.
+            </p>
+          )}
+          <button className="dialer-panel-action" onClick={() => setOn(false)}>
+            Turn the camera off
+          </button>
+        </>
+      ) : (
+        <button className="dialer-panel-action" onClick={() => setOn(true)}>
+          Start the camera
+        </button>
+      )}
+    </>
+  )
+}
+
+/**
  * Recent — the businesses this device has actually opened.
  *
  * Grouped by day rather than listed flat, because "Today" and "Yesterday" are
@@ -1182,6 +1235,8 @@ function Panel({
       <RecentPanel onOpen={onOpenBrand} />
     ) : page === 'favorites' ? (
       <FavoritesPanel onOpen={onOpenBrand} />
+    ) : page === 'camera' ? (
+      <ScanPanel copy={PAGES.camera.body} />
     ) : null
 
   // Contacts is the one page with no written copy: the operator has not

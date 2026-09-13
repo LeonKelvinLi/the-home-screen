@@ -1,6 +1,6 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { GATED, type GateKey } from '../data/membership'
-import { captureReferral, fetchAccount, type Account, type AccountState } from './account'
+import { captureReferral, captureVia, fetchAccount, type Account, type AccountState } from './account'
 
 /**
  * WHAT A SIGNED-OUT VISITOR MAY DO, and the prompt when they may not.
@@ -52,6 +52,7 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
     // A shared QR lands here first; the code has to be kept before anything
     // rewrites the URL or the referrer loses their credit.
     captureReferral()
+    captureVia()
     void refresh()
   }, [refresh])
 

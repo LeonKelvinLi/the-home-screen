@@ -85,6 +85,43 @@ export function captureReferral(search = window.location.search): void {
   }
 }
 
+/**
+ * WHICH BUSINESS'S REGISTER CODE brought this visitor, if one did.
+ *
+ * A register card encodes `/?b=<business>&via=qr`. The business is kept for the
+ * visit, exactly as a member's referral code is, and sent with the sign-up so
+ * the business that put the code on its counter is credited for the member it
+ * produced. A shared link to a business page carries no `via` and credits
+ * nobody: sharing a page is not a register.
+ */
+const VIA_KEY = 'fb.via.v1'
+
+export function captureVia(search = window.location.search): void {
+  try {
+    const q = new URLSearchParams(search)
+    const b = q.get('b')
+    if (q.get('via') === 'qr' && b && /^b_[a-z0-9]{2,40}$/.test(b)) sessionStorage.setItem(VIA_KEY, b)
+  } catch {
+    /* private mode — the credit is simply not carried */
+  }
+}
+
+export function pendingVia(): string | null {
+  try {
+    return sessionStorage.getItem(VIA_KEY)
+  } catch {
+    return null
+  }
+}
+
+function clearVia(): void {
+  try {
+    sessionStorage.removeItem(VIA_KEY)
+  } catch {
+    /* nothing to clear */
+  }
+}
+
 export function pendingReferral(): string | null {
   try {
     return sessionStorage.getItem(REF_KEY)
@@ -171,7 +208,7 @@ export async function startSignUp(fields: SignUp): Promise<StartResult> {
       method: 'POST',
       headers: json,
       credentials: 'same-origin',
-      body: JSON.stringify({ ...fields, ref: pendingReferral() ?? undefined }),
+      body: JSON.stringify({ ...fields, ref: pendingReferral() ?? undefined, via: pendingVia() ?? undefined }),
     })
     const body = await r.json().catch(() => ({}))
     if (!r.ok) return { ok: false, error: body?.error ?? 'Could not send a code just now.' }
@@ -211,6 +248,7 @@ export async function verifyCode(destination: string, code: string): Promise<Ver
     const body = await r.json().catch(() => ({}))
     if (!r.ok) return { ok: false, error: body?.error ?? 'That code did not work.' }
     clearReferral()
+    clearVia()
     return { ok: true, account: body as Account }
   } catch {
     return { ok: false, error: 'No connection. Try again in a moment.' }
@@ -235,6 +273,21 @@ export async function fetchDirectory(): Promise<{ count: number; members: Direct
     const r = await fetch('/api/members/directory', { credentials: 'same-origin' })
     if (!r.ok) return null
     return (await r.json()) as { count: number; members: DirectoryMember[] }
+  } catch {
+    return null
+  }
+}
+
+/**
+ * How many members there are — the number, for anybody, with no names. Null
+ * when it cannot be read, so a screen never shows a zero it did not check.
+ */
+export async function fetchMemberCount(): Promise<number | null> {
+  try {
+    const r = await fetch('/api/members/count', { credentials: 'same-origin' })
+    if (!r.ok) return null
+    const b = (await r.json()) as { count?: unknown }
+    return typeof b.count === 'number' ? b.count : null
   } catch {
     return null
   }

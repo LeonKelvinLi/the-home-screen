@@ -181,7 +181,7 @@ CREATE TABLE IF NOT EXISTS tickets (
   vendor_id     TEXT NOT NULL REFERENCES vendors(id),
   brand_ids     TEXT NOT NULL,
   state         TEXT NOT NULL DEFAULT 'queued'
-                CHECK (state IN ('queued','cooking','ready','collected')),
+                CHECK (state IN ('queued','cooking','ready','collected','cancelled')),
   subtotal      INTEGER NOT NULL,
   platform_fee  INTEGER NOT NULL,
   vendor_payout INTEGER NOT NULL,
@@ -376,6 +376,27 @@ CREATE TABLE IF NOT EXISTS events (
 CREATE INDEX IF NOT EXISTS idx_events_date ON events(date);
 
 /*
+  A KITCHEN'S KEY TO ITS OWN SCREEN.
+
+  The boot-seeded vendors.api_token was one plaintext secret per vendor that
+  nobody had ever been handed, so no kitchen could sign in. These are issued by
+  the operator, one per device, stored only as a SHA-256 hash, and turned off by
+  stamping revoked_at rather than deleting the row, so a lost tablet's key can
+  be killed and the record of it kept.
+*/
+CREATE TABLE IF NOT EXISTS vendor_tokens (
+  id           TEXT PRIMARY KEY,
+  vendor_id    TEXT NOT NULL REFERENCES vendors(id) ON DELETE CASCADE,
+  token_hash   TEXT NOT NULL UNIQUE,
+  label        TEXT,
+  created_at   BIGINT NOT NULL,
+  last_used_at BIGINT,
+  revoked_at   BIGINT
+);
+
+CREATE INDEX IF NOT EXISTS idx_vendor_tokens_vendor ON vendor_tokens(vendor_id);
+
+/*
   Additive migrations. Postgres has ADD COLUMN IF NOT EXISTS, so unlike the
   SQLite version this needs no pragma inspection — but it still has to run
   after the CREATEs, because on an existing database CREATE TABLE IF NOT EXISTS
@@ -477,6 +498,61 @@ ALTER TABLE raffle_tickets ADD COLUMN IF NOT EXISTS serial BIGSERIAL;
   until then every row says month, which is what every existing one is.
 */
 ALTER TABLE members ADD COLUMN IF NOT EXISTS tier_interval TEXT NOT NULL DEFAULT 'month';
+
+/*
+  ORDERS BELONG TO THE MEMBER WHO PLACED THEM, when one was signed in. Order
+  history used to be whichever ids this browser had kept, so a member's second
+  phone showed nothing. Nullable: a signed-out order stays exactly what it was,
+  and deleting a member leaves their past orders standing for the kitchens.
+*/
+ALTER TABLE orders ADD COLUMN IF NOT EXISTS member_id TEXT REFERENCES members(id) ON DELETE SET NULL;
+CREATE INDEX IF NOT EXISTS idx_orders_member ON orders(member_id, created_at) WHERE member_id IS NOT NULL;
+
+/*
+  A TICKET CAN BE CANCELLED — by the customer before any kitchen starts, or by
+  the kitchen that cannot make it. The CHECK is widened in place, and only when
+  it still lacks the new state, so this is safe on every boot and a no-op on a
+  database created from the SCHEMA above.
+
+  Found by what the constraint SAYS, not by its name. Postgres names an inline
+  CHECK itself (tickets_state_check today), and a database created by an older
+  schema could carry another name; matching on the name alone would leave that
+  one in place, and every cancel would then fail the old CHECK in production
+  while passing every audit, which all start from a fresh database.
+*/
+ALTER TABLE tickets ADD COLUMN IF NOT EXISTS cancelled_by TEXT;
+ALTER TABLE tickets ADD COLUMN IF NOT EXISTS cancel_reason TEXT;
+DO $$
+DECLARE c record;
+BEGIN
+  FOR c IN
+    SELECT conname FROM pg_constraint
+    WHERE conrelid = 'tickets'::regclass AND contype = 'c'
+      AND pg_get_constraintdef(oid) LIKE '%collected%'
+      AND pg_get_constraintdef(oid) NOT LIKE '%cancelled%'
+  LOOP
+    EXECUTE format('ALTER TABLE tickets DROP CONSTRAINT %I', c.conname);
+  END LOOP;
+  IF NOT EXISTS (
+    SELECT 1 FROM pg_constraint
+    WHERE conrelid = 'tickets'::regclass AND contype = 'c'
+      AND pg_get_constraintdef(oid) LIKE '%cancelled%'
+  ) THEN
+    ALTER TABLE tickets ADD CONSTRAINT tickets_state_check
+      CHECK (state IN ('queued','cooking','ready','collected','cancelled'));
+  END IF;
+END $$;
+
+/*
+  WHICH BUSINESS'S REGISTER CODE BROUGHT A MEMBER IN. Glenn's model from 4
+  August: a code at every affiliate's register, every customer who scans it a
+  potential sign-up, the maintenance fee paying for the codes. The code carries
+  the business; the sign-up keeps it, so each affiliate can be shown what its
+  counter produced.
+*/
+ALTER TABLE members ADD COLUMN IF NOT EXISTS joined_via TEXT;
+ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_via TEXT;
+CREATE INDEX IF NOT EXISTS idx_members_joined_via ON members(joined_via) WHERE joined_via IS NOT NULL;
 `
 
 /**

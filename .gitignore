@@ -35,3 +35,7 @@ __pycache__/
 # The menu crawl: 575MB of page text, JSON and PDFs, re-creatable with tools/menu-scrape.ts.
 # The reviewed candidates (research/menus/cand) and what was accepted stay in.
 research/menus/raw/
+
+# Register cards and anything else a tool prints for handing out. Re-creatable,
+# and a folder of 344 PDFs does not belong in history.
+/out/

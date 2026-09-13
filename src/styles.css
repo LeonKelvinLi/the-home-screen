@@ -11137,3 +11137,595 @@ textarea {
   line-height: 1.4;
   color: var(--muted);
 }
+
+/* ---------- Orders: cancelling ---------- */
+
+.order-card.is-cancelled .order-head strong,
+.order-card.is-cancelled .order-when {
+  color: var(--tertiary);
+}
+
+.order-cancelled-chip {
+  padding: 3px 9px;
+  border-radius: 9px;
+  background: rgba(255, 59, 48, 0.12);
+  color: #b3261e;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.order-ticket.is-cancelled .order-ticket-name,
+.order-ticket.is-cancelled .order-ticket-lines {
+  color: var(--tertiary);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.ticket-state.is-cancelled {
+  background: rgba(255, 59, 48, 0.12);
+  color: #b3261e;
+}
+
+/* The kitchen's reason, in its words. Not struck through: it is the one line
+   on a cancelled ticket the customer needs to read. */
+.order-ticket-cancel {
+  margin-top: 4px;
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: #b3261e;
+  font-weight: 600;
+}
+
+.order-cancel {
+  display: block;
+  min-height: 44px;
+  margin: 6px auto 0;
+  padding: 0 14px;
+  color: #b3261e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.order-cancel-confirm {
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255, 59, 48, 0.08);
+}
+
+.order-cancel-confirm p {
+  margin: 0 0 10px;
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+
+.order-cancel-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.order-cancel-actions > button {
+  flex: 1 1 120px;
+}
+
+/* White on #d70015 is 5.0:1. The system red (#ff3b30) is 3.5:1 and this is
+   the button that throws an order away. */
+.order-cancel-go {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 13px;
+  background: #d70015;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.order-cancel-go:disabled,
+.order-cancel-actions .btn-secondary:disabled {
+  opacity: 0.55;
+}
+
+.order-cancel-error {
+  margin: 10px 0 0;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #b3261e;
+  font-weight: 600;
+}
+
+/* ---------- Contacts: signed out ---------- */
+
+.contacts-join {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 12px;
+  padding: 12px 0 24px;
+}
+
+.contacts-join .contacts-count {
+  margin-bottom: 0;
+}
+
+.contacts-join-copy {
+  margin: 0 20px;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+  color: var(--muted);
+}
+
+.contacts-join .btn-primary {
+  flex: 0 0 auto;
+  margin: 0 16px;
+}
+
+/* ---------- QR scanner ---------- */
+
+.qr-scanner {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  aspect-ratio: 1;
+  margin: 6px 0 10px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #0b0b0d;
+}
+
+.qr-scanner-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* The square to aim at. The shadow dims everything outside it. */
+.qr-scanner-frame {
+  position: absolute;
+  inset: 17%;
+  border: 3px solid rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 0 0 999px rgba(0, 0, 0, 0.32);
+  pointer-events: none;
+}
+
+.qr-scanner.is-denied .qr-scanner-frame,
+.qr-scanner.is-unavailable .qr-scanner-frame {
+  display: none;
+}
+
+.qr-scanner .qr-scanner-note,
+.qr-scanner .qr-scanner-hint {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  margin: 0;
+  color: #fff;
+  font-size: 13.5px;
+  line-height: 1.45;
+  font-weight: 600;
+  text-align: center;
+}
+
+.qr-scanner .qr-scanner-note {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.qr-scanner .qr-scanner-hint {
+  bottom: 10px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* ---------- Kitchen screen (/kitchen) ---------- */
+
+/*
+  Its own page, outside the phone shell. The body is a fixed, non-scrolling
+  grid for the device, so this pins itself to the viewport and scrolls itself.
+  Light, large and high-contrast: it is read from across a counter under
+  kitchen lights, often by someone with their hands full.
+*/
+.kitchen-screen {
+  position: fixed;
+  inset: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: #eceef2;
+  color: #0b0b0d;
+  font-size: 16px;
+  touch-action: manipulation;
+}
+
+.kitchen-screen button {
+  min-height: 48px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: #fff;
+  border: 1px solid rgba(20, 20, 22, 0.18);
+  font-size: 15px;
+  font-weight: 700;
+  color: #0b0b0d;
+}
+
+.kitchen-screen button:disabled {
+  opacity: 0.5;
+}
+
+.kitchen-screen button.is-go {
+  background: #0062d6;
+  border-color: #0062d6;
+  color: #fff;
+}
+
+.kitchen-screen button.is-danger {
+  background: #d70015;
+  border-color: #d70015;
+  color: #fff;
+}
+
+.kitchen-signin {
+  box-sizing: border-box;
+  width: calc(100% - 32px);
+  max-width: 440px;
+  margin: 12vh auto 0;
+  padding: 24px 20px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.kitchen-signin h1 {
+  margin: 0 0 12px;
+  font-size: 24px;
+}
+
+.kitchen-signin p {
+  margin: 0 0 14px;
+  line-height: 1.5;
+}
+
+.kitchen-signin form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kitchen-signin input,
+.kitchen-refuse input {
+  flex: 1 1 200px;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(20, 20, 22, 0.25);
+  background: #fff;
+  font-size: 16px;
+}
+
+.kitchen-bar {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 16px;
+  padding: 12px 16px;
+  background: #141416;
+  color: #fff;
+}
+
+.kitchen-bar h1 {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.kitchen-sub {
+  margin: 2px 0 0;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.kitchen-bar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.kitchen-bar-actions button {
+  min-height: 44px;
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+/* One row on a phone: three wrapping pills put Sign out on a line of its own. */
+@media (max-width: 560px) {
+  .kitchen-bar-actions {
+    display: grid;
+    grid-template-columns: 1.7fr 1fr 1fr;
+    width: 100%;
+  }
+
+  .kitchen-bar-actions button {
+    padding: 0 8px;
+    font-size: 14px;
+    line-height: 1.15;
+  }
+}
+
+.kitchen-bar-actions button[aria-pressed='true'] {
+  background: #ffd500;
+  border-color: #ffd500;
+  color: #141416;
+}
+
+.kitchen-warn,
+.kitchen-new {
+  margin: 12px 16px 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.kitchen-warn {
+  background: #ffe7c2;
+  color: #6b3a00;
+}
+
+.kitchen-new {
+  background: #ffd500;
+  color: #141416;
+  font-size: 20px;
+  text-align: center;
+  animation: kitchen-new-pulse 1.2s ease-in-out 3;
+}
+
+@keyframes kitchen-new-pulse {
+  50% {
+    transform: scale(1.02);
+  }
+}
+
+.kitchen-board {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px;
+}
+
+@media (min-width: 900px) {
+  .kitchen-board {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+.kitchen-column h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.kitchen-column h2 span {
+  min-width: 28px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: #141416;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+}
+
+.kitchen-empty {
+  margin: 0;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px dashed rgba(20, 20, 22, 0.25);
+  color: #4a4a50;
+  text-align: center;
+}
+
+.kitchen-ticket {
+  margin-bottom: 12px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #fff;
+  border-left: 6px solid #0062d6;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+.kitchen-ticket.is-cooking {
+  border-left-color: #c76a00;
+}
+
+.kitchen-ticket.is-ready {
+  border-left-color: #248a3d;
+}
+
+.kitchen-ticket header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.kitchen-code {
+  font-size: 24px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.kitchen-age {
+  font-size: 14px;
+  font-weight: 700;
+  color: #4a4a50;
+}
+
+.kitchen-age.is-late {
+  color: #b3261e;
+}
+
+.kitchen-who,
+.kitchen-address {
+  margin: 4px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #3a3a40;
+}
+
+.kitchen-who a {
+  color: #0062d6;
+  font-weight: 700;
+}
+
+.kitchen-lines {
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.kitchen-lines li {
+  padding: 6px 0;
+  border-top: 1px solid rgba(20, 20, 22, 0.1);
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.kitchen-qty {
+  display: inline-block;
+  min-width: 34px;
+  font-weight: 800;
+}
+
+.kitchen-options,
+.kitchen-note {
+  display: block;
+  margin-left: 34px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3a3a40;
+}
+
+.kitchen-note {
+  font-style: italic;
+  color: #6b3a00;
+}
+
+.kitchen-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.kitchen-actions button {
+  flex: 1 1 120px;
+}
+
+.kitchen-refuse {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fdecea;
+}
+
+.kitchen-refuse p {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+
+.kitchen-reasons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.kitchen-reasons button {
+  min-height: 44px;
+  font-size: 14px;
+}
+
+.kitchen-reasons button.is-on {
+  background: #141416;
+  border-color: #141416;
+  color: #fff;
+}
+
+.kitchen-refuse input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.kitchen-done {
+  margin: 0 16px 24px;
+  font-size: 14px;
+  color: #4a4a50;
+}
+
+.kitchen-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.kitchen-modal-card {
+  width: 100%;
+  max-width: 420px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: 18px;
+  border-radius: 18px;
+  background: #fff;
+}
+
+.kitchen-modal-card h2 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.kitchen-modal-card p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+}
+
+.kitchen-modal-card > button {
+  width: 100%;
+}
+
+.kitchen-pass-ok {
+  color: #248a3d;
+}
+
+.kitchen-pass-none {
+  color: #b3261e;
+}
+
+.kitchen-pass-name {
+  font-size: 26px;
+  font-weight: 800;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kitchen-new {
+    animation: none;
+  }
+}

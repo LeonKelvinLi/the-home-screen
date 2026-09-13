@@ -158,6 +158,9 @@ for (const [id, want, expect] of [
   ['b_piwings', 'P.I. Wings', { hours: 'Wed-Sun 12pm-8pm', call: '(415) 322-9469' }],
   ['b_pizzaponte', 'Pizza Ponte', { free: true, call: '(510) 658-7788' }],
   ['b_claireandersonhomes', 'Claire Anderson', { call: '(510) 435-7822' }],
+  /* 2026-09-13 morning. */
+  ['b_daughterthai', 'Daughter Thai Kitchen', { free: true, call: '(510) 823-2354' }],
+  ['b_mexihibachi', 'MexiHibachi', { call: '415.604.7135' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -325,6 +328,60 @@ const scanOut = await fetch(base + '/api/pass/verify', { method: 'POST', headers
 console.log(`pass          : signed out ${passOut} | scan without a token ${scanOut}`)
 if (passOut !== 401) fails.push(`/api/members/pass answered ${passOut} signed out, expected 401`)
 if (scanOut !== 401) fails.push(`/api/pass/verify answered ${scanOut} with no vendor or operator token, expected 401`)
+
+/* ---- 2026-09-13: the kitchen screen, the Scan tab, cancelling, the count ----
+   Still read-only. No key is issued, no camera is started, no order is placed:
+   each door is checked from the outside, where it must be shut. */
+const status = (path, init) => fetch(base + path, init).then((r) => r.status).catch(() => 0)
+const doors = {
+  kitchenMe: await status('/api/kitchen/me'),
+  queue: await status('/api/orders'),
+  issue: await status('/api/vendors/v_belly/tokens', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' }),
+  keys: await status('/api/vendors/v_belly/tokens'),
+  revoke: await status('/api/vendor-tokens/vk_0000000000000000', { method: 'DELETE' }),
+  signups: await status('/api/register-signups'),
+  cancel: await status('/api/orders/o_no_such_order/cancel', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' }),
+  mine: await status('/api/members/orders'),
+}
+console.log('doors         :', JSON.stringify(doors))
+for (const [k, want] of Object.entries({ kitchenMe: 401, queue: 401, issue: 401, keys: 401, revoke: 401, signups: 401, cancel: 404, mine: 401 })) {
+  if (doors[k] !== want) fails.push(`${k} answered ${doors[k]} from outside, expected ${want}`)
+}
+const count = await fetch(base + '/api/members/count').then((r) => r.json()).catch(() => null)
+console.log('member count  :', JSON.stringify(count))
+if (!count || !Number.isInteger(count.count) || count.count < 1) fails.push('/api/members/count did not answer with a real number')
+
+const kr = await fetch(base + '/kitchen')
+const policy = kr.headers.get('permissions-policy') || ''
+if (!/camera=\(self\)/.test(policy)) fails.push(`the camera is still blocked by the live Permissions-Policy: "${policy}"`)
+await p.goto(base + '/kitchen', { waitUntil: 'networkidle', timeout: 45000 })
+const kitchen = await p.waitForSelector('.kitchen-signin h1', { timeout: 20000 }).then(async () => ({
+  title: await p.textContent('.kitchen-signin h1'),
+  robots: await p.evaluate(() => document.querySelector('meta[name="robots"]')?.getAttribute('content') ?? null),
+  shell: await p.locator('.dialer, .device').count(),
+})).catch(() => null)
+console.log('kitchen       :', JSON.stringify(kitchen))
+if (!kitchen) fails.push('/kitchen did not draw its sign-in screen')
+else {
+  if (kitchen.title !== 'BEASTY kitchen') fails.push(`/kitchen is titled "${kitchen.title}"`)
+  if (kitchen.robots !== 'noindex, nofollow') fails.push('/kitchen does not ask search engines to stay away')
+  if (kitchen.shell) fails.push('the customer app loaded behind the kitchen screen')
+}
+
+await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+await p.locator('[aria-label="Enter BEASTY"]').first().waitFor({ state: 'visible', timeout: 30000 }).catch(() => {})
+await p.locator('[aria-label="Scan"]').first().click({ timeout: 10000 }).catch(() => {})
+const scanTab = await p.getByRole('button', { name: 'Start the camera' }).isVisible({ timeout: 10000 }).catch(() => false)
+console.log('scan tab      :', scanTab ? 'Start the camera is offered' : 'no camera button')
+if (!scanTab) fails.push('the landing Scan tab does not offer to start the camera')
+
+for (const s of ['Sign in or join free', 'contacts-join', 'That code is not a BEASTY code', 'order-cancel-confirm', 'Cancel ticket', 'kitchenLive', 'Scan a member pass', 'register code']) {
+  if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
+}
+/* The sample people Contacts showed before accounts existed. */
+for (const s of ['sample profile', 'Marisol R.', 'Terrell B.']) {
+  if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
+}
 
 await b.close()
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); process.exit(1) }

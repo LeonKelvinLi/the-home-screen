@@ -2,16 +2,23 @@ import { useEffect, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { BrandLogo } from '../ios/BrandLogo'
 import { brandById } from '../data/brands'
-import { IS_LOCAL_ONLY, listOrders } from '../lib/api'
+import { IS_LOCAL_ONLY, OrderRejected, canCancel, cancelOrder, listOrders } from '../lib/api'
 import type { PlacedOrder } from '../lib/api'
+import { useGate } from '../lib/gate'
 import { money } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
 
 const STATES = ['queued', 'cooking', 'ready', 'collected'] as const
 
 export function OrdersApp({ api }: { api: ShellApi }) {
+  const { account } = useGate()
+  const signedIn = !!account
   const [orders, setOrders] = useState<PlacedOrder[] | null>(null)
   const [stale, setStale] = useState(false)
+  /** The order whose cancel is being confirmed, and what the server said. */
+  const [confirming, setConfirming] = useState<string | null>(null)
+  const [cancelling, setCancelling] = useState<string | null>(null)
+  const [cancelError, setCancelError] = useState<{ id: string; message: string } | null>(null)
 
   useEffect(() => {
     let alive = true
@@ -21,11 +28,14 @@ export function OrdersApp({ api }: { api: ShellApi }) {
       Self-chaining rather than setInterval: a poll slower than the interval
       used to overlap, and an older response landing after a newer one made
       tickets visibly regress from `ready` back to `cooking`.
+
+      Restarted when the account changes, so signing in brings the account's
+      orders from every other phone straight onto this list.
     */
     const tick = async () => {
       let result
       try {
-        result = await listOrders()
+        result = await listOrders({ signedIn })
       } catch {
         if (alive) setStale(true)
         if (alive) timer = window.setTimeout(tick, 6000)
@@ -44,7 +54,25 @@ export function OrdersApp({ api }: { api: ShellApi }) {
       alive = false
       clearTimeout(timer)
     }
-  }, [])
+  }, [signedIn])
+
+  const cancel = async (o: PlacedOrder) => {
+    setCancelling(o.id)
+    setCancelError(null)
+    try {
+      const fresh = await cancelOrder(o)
+      setOrders((prev) => (prev ?? []).map((x) => (x.id === o.id ? fresh : x)))
+      setConfirming(null)
+    } catch (err) {
+      /* A refusal is shown as the server worded it: "a kitchen has already
+         started" is the thing the customer needs to read, not a generic fail. */
+      const message =
+        err instanceof OrderRejected ? err.message : 'Could not reach the server. Try again in a moment.'
+      setCancelError({ id: o.id, message })
+    } finally {
+      setCancelling(null)
+    }
+  }
 
   if (orders === null) {
     return (
@@ -62,7 +90,11 @@ export function OrdersApp({ api }: { api: ShellApi }) {
         <div className="empty">
           <div className="empty-mark">🧾</div>
           <h2>No orders yet</h2>
-          <p>Your past and active orders live here.</p>
+          <p>
+            {signedIn
+              ? 'Orders you place while signed in show here on every phone you use.'
+              : 'Your past and active orders live here.'}
+          </p>
           <button className="btn-secondary" onClick={api.closeApp}>
             Browse kitchens
           </button>
@@ -95,9 +127,12 @@ export function OrdersApp({ api }: { api: ShellApi }) {
           </p>
         )}
         {orders.map((o) => {
-          const done = o.tickets.every((t) => t.state === 'collected')
+          const open = o.tickets.filter((t) => t.state !== 'cancelled')
+          const allCancelled = open.length === 0 && o.tickets.length > 0
+          const done = !allCancelled && open.every((t) => t.state === 'collected')
+          const cancellable = canCancel(o, signedIn)
           return (
-            <section className="order-card" key={o.id}>
+            <section className={`order-card${allCancelled ? ' is-cancelled' : ''}`} key={o.id}>
               <header className="order-head">
                 <div>
                   <strong>{o.code}</strong>
@@ -111,17 +146,24 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                   </span>
                 </div>
                 <div className="order-right">
-                  <span className="order-total">{money(o.total)}</span>
+                  {allCancelled ? (
+                    <span className="order-cancelled-chip">Cancelled</span>
+                  ) : (
+                    <span className="order-total">{money(o.total)}</span>
+                  )}
                 </div>
               </header>
 
-              {!done && !o.local && (
+              {!done && !allCancelled && !o.local && (
                 <div className="progress">
                   {STATES.map((s, i) => {
                     // Drive off the SLOWEST kitchen. Using `some` lit the whole
                     // bar as soon as one of three kitchens was ready, telling
-                    // the customer to collect food nobody had started.
-                    const slowest = Math.min(...o.tickets.map((t) => STATES.indexOf(t.state)))
+                    // the customer to collect food nobody had started. A
+                    // cancelled ticket is out of the race, not the slowest in it.
+                    const slowest = Math.min(
+                      ...open.map((t) => STATES.indexOf(t.state as (typeof STATES)[number])),
+                    )
                     return (
                       <span key={s} className={`progress-step${i <= slowest ? ' is-on' : ''}`}>
                         {s}
@@ -132,7 +174,7 @@ export function OrdersApp({ api }: { api: ShellApi }) {
               )}
 
               {o.tickets.map((t) => (
-                <div className="order-ticket" key={t.vendorId}>
+                <div className={`order-ticket${t.state === 'cancelled' ? ' is-cancelled' : ''}`} key={t.vendorId}>
                   <div className="order-ticket-marks">
                     {t.brandIds.map((bid) => {
                       const b = brandById(bid)
@@ -151,6 +193,16 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                       ))}
                     </div>
                     {/*
+                      Who cancelled, in the kitchen's own words when it was the
+                      kitchen. A ticket that silently went grey would leave the
+                      customer ringing to ask why.
+                    */}
+                    {t.state === 'cancelled' && t.cancelledBy === 'kitchen' && (
+                      <div className="order-ticket-cancel">
+                        The kitchen could not take this{t.cancelReason ? `: ${t.cancelReason}` : '.'}
+                      </div>
+                    )}
+                    {/*
                       Checkout tells a pickup customer "your order screen lists
                       the address for each" — and it did not. These are separate
                       businesses in seven different cities, so without this the
@@ -159,6 +211,7 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                       publishes one, since that is how you chase a late order.
                     */}
                     {o.fulfilment === 'pickup' &&
+                      t.state !== 'cancelled' &&
                       t.brandIds.map((bid) => {
                         const b = brandById(bid)
                         if (!b?.address) return null
@@ -184,6 +237,35 @@ export function OrdersApp({ api }: { api: ShellApi }) {
                   </span>
                 </div>
               ))}
+
+              {/*
+                CANCEL, while no kitchen has started — and only from the device
+                that placed the order or the account that owns it. Two steps,
+                because a stray tap on a phone should not throw away lunch.
+              */}
+              {cancellable && confirming !== o.id && (
+                <button className="order-cancel" onClick={() => setConfirming(o.id)}>
+                  Cancel order
+                </button>
+              )}
+              {cancellable && confirming === o.id && (
+                <div className="order-cancel-confirm" role="group" aria-label="Cancel this order">
+                  <p>Cancel this order? No kitchen has started on it yet.</p>
+                  <div className="order-cancel-actions">
+                    <button className="btn-secondary" onClick={() => setConfirming(null)} disabled={cancelling === o.id}>
+                      Keep it
+                    </button>
+                    <button className="order-cancel-go" onClick={() => void cancel(o)} disabled={cancelling === o.id}>
+                      {cancelling === o.id ? 'Cancelling…' : 'Cancel order'}
+                    </button>
+                  </div>
+                </div>
+              )}
+              {cancelError?.id === o.id && (
+                <p className="order-cancel-error" role="alert">
+                  {cancelError.message}
+                </p>
+              )}
             </section>
           )
         })}

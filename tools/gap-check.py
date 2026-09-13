@@ -129,10 +129,14 @@ def raw_data() -> str:
 
 
 def haystack() -> str:
+    # NOT the icons folder. It used to be listed here too, and an icon is cut
+    # before its seed is written: on 2026-09-13 Daughter Thai and MexiHibachi
+    # read as "listed" for the hour between their tiles landing in public/icons
+    # and anything seating them. An icon a seed uses is already in the seed
+    # text as `icon: '...'`, so the folder only ever added the unused ones.
     parts = []
     for name in SEED_FILES:
         parts.append(open(os.path.join(ROOT, 'src/data', name)).read())
-    parts.append(' '.join(os.listdir(os.path.join(ROOT, 'public/icons'))))
     return norm(' '.join(parts))
 
 

@@ -17,7 +17,7 @@
   up the root tsconfig, which does not carry the `react-jsx` runtime, and this
   audit imports the registry, which is full of JSX. The flag is the whole fix.
 */
-import { BRANDS, brandById } from '../src/data/brands'
+import { BRANDS, VENDORS, brandById } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
 import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
@@ -282,6 +282,24 @@ for (const b of BRANDS) {
   for (const c of b.menu ?? []) for (const it of c.items) {
     if (it.price > 0 && it.price < 100) warn(`${b.name}: "${it.name}" is priced ${it.price} cents — units slip?`)
     if (it.price > 500_000) warn(`${b.name}: "${it.name}" is $${(it.price / 100).toFixed(0)} — a floor that lost its label, or a typo?`)
+  }
+}
+
+/*
+  A MENU THAT CAN BE ORDERED HAS A KITCHEN TO SEND IT TO.
+
+  On 13 September 2026 71 roster businesses had researched menus and no vendor,
+  because VENDORS was built from two of the three seed lists. Every order for
+  one wrote a ticket for a vendor with no row, failed a foreign key, and took
+  the server down. The server now refuses to index such an item and survives
+  the error, but a business that shows a menu and cannot take an order is still
+  wrong, and this is where it is caught before it ships.
+*/
+{
+  const vendorIds = new Set(VENDORS.map((v) => v.id))
+  for (const b of BRANDS) {
+    if (b.quoteOnly || b.contactOnly || !b.menu.some((c) => c.items.length > 0)) continue
+    if (!vendorIds.has(b.vendorId)) err(`${b.name}: orderable menu but no vendor ${b.vendorId} — its orders cannot be written`)
   }
 }
 

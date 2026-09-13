@@ -56,7 +56,10 @@ matching on the tail is what makes the two comparable.
 """
 imported = set()
 for src in files.values():
-    for m in re.finditer(r"""from\s+['"]([^'"]+)['"]""", src):
+    # A lazy import() counts. The kitchen screen is loaded only on /kitchen, by
+    # main.tsx's `lazy(() => import('./apps/KitchenScreen'))`, and was reported
+    # dead on the day it was written because only `from '...'` was read.
+    for m in re.finditer(r"""(?:from\s+|import\(\s*)['"]([^'"]+)['"]""", src):
         spec = m.group(1)
         if spec.startswith("."):
             imported.add(os.path.basename(spec))

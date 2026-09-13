@@ -25,6 +25,8 @@ exist because the fault they look for has shipped from this repo at least once.
     node   tools/audit-member-profile.mjs                      # a member's page from Contacts: their likes, nothing private
     node   tools/audit-raffle.mjs                              # numbered raffle tickets, per member, via the referral chain
     node   tools/audit-tier-interval.mjs                       # monthly records, yearly refused until a price exists
+    node   tools/audit-kitchen.mjs                             # kitchen keys, the /kitchen board, a pass read by the camera
+    node   tools/audit-orders-account.mjs                      # cancel rules, orders on the account, a register card credits its business
     node   tools/live-smoke.mjs                                # production, read-only, creates nothing
 
 `audit-design`, `audit-run` and `audit-landing-flip` build and serve the app

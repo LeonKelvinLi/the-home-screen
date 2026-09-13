@@ -1031,8 +1031,17 @@ export const BRANDS: Brand[] = [
   ...SEED.map(fromSeed),
 ]
 
-/** Each business is independent and is paid separately. */
-export const VENDORS: Vendor[] = [...LOCAL_SEED, ...SEED].map((s) => ({
+/**
+ * Each business is independent and is paid separately.
+ *
+ * EVERY SEED, THE ROSTER INCLUDED. The roster was left out when its seeds were
+ * name-only and nothing could be ordered from them. Researched menus have since
+ * landed on 71 of them, their items became orderable, and each order for one
+ * tried to write a ticket for a vendor with no row, which failed a foreign key
+ * and (before the server caught async errors) took the service down. A brand
+ * and its vendor are one business, so one list makes both.
+ */
+export const VENDORS: Vendor[] = [...ROSTER_SEED, ...LOCAL_SEED, ...SEED].map((s) => ({
   id: `v_${s.slug.replace(/-/g, '')}`,
   name: s.name,
   stripeAccountId: null,
