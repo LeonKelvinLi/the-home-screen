@@ -2606,22 +2606,33 @@ export const LOCAL_SEED: LocalSeed[] = [
     name: "Papi Clary's Kitchen",
     label: "Papi Clary's",
     cuisine: 'Filipino',
-    tagline: 'Ilocos empanada and tacos, Concord.',
+    tagline: 'Birria tacos, quesabirria and lumpia, Concord.',
     color: '#0E0E0E|#C9A227',
     prep: 0,
     category: 'Filipino',
-    phone: '',
-    /* THEIR INSTAGRAM IS THE LINK, and `needsSite` keeps them on his red-outline
-       list anyway. Without a link the page told people to go to their Instagram
-       and gave them no way to get there; without the flag, pointing at a social
-       profile would have quietly taken them off the list he prospects from —
-       and he sent them precisely because they need a website. */
-    site: 'https://www.instagram.com/papiclaryskitchen/',
-    siteCta: 'See their Instagram',
+    /* THE NUMBER AND THE EMAIL ARE THEIR SQUARE SITE'S, read on 2026-09-12. */
+    phone: '(925) 222-7786',
+    email: 'papiclaryskitchen@gmail.com',
+    /*
+      THEIR SQUARE ORDERING SITE IS THE LINK. He sent it on 2026-08-23 —
+      "BEASTY • Concord, This place would be great for the food truck" — and
+      the page linked their Instagram and said they had no website until the
+      12 September thread read caught it. A square.site subdomain is an
+      ordering page, not a website of their own, so `needsSite` keeps them on
+      his red-outline list, on the Phosho Dough reasoning.
+
+      THEIR ONLINE MENU IS BIRRIA NOW: birria tacos, quesabirria, birria fries
+      and mulitas, cheeseburger lumpia, arroz caldo, ube horchata. No Ilocos
+      empanada or adobo is on it, so the line below says what they sell today.
+      Square loads the prices in the browser after the page opens, so none
+      could be read and none are printed.
+    */
+    site: 'https://papiclaryskitchen.square.site/',
+    siteCta: 'Order on their Square page',
     needsSite: true,
-    address: '2186 Solano Way, Concord, CA',
+    address: '2186 Solano Way, Concord, CA 94565',
     contactOnly:
-      'Chef Clary cooks Ilocos empanada, birria and adobo out of Solano Way in Concord, and caters parties. Open Wednesday to Saturday, 11am to 9:30pm; closed Monday and Tuesday. They have no website and publish no dish prices, so nothing is priced here \u2014 their Instagram is where to reach them.',
+      'Chef Clary cooks birria tacos, quesabirria and birria fries alongside cheeseburger lumpia and arroz caldo, out of Solano Way in Concord, and caters parties. Open Wednesday to Saturday, 11am to 9:30pm; closed Monday and Tuesday. Their menu and prices are on their Square ordering page, so nothing is priced here.',
     items: [],
   },
   {

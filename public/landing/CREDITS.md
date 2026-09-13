@@ -15,6 +15,8 @@ them:
 | 2 | `IMG_2199` | Biggie on a blue lead, 7 February 2019 |
 | 3 | `IMG_2202` | Biggie against a balcony rail, 18 January 2019 |
 | 4 | `IMG_2201` | Blue-nose to nose, mirrored and tinted |
+| 5 | `IMG_3669` | "HBD to my boy Richmond!!! @rtbrothas", mirrored, 30 November 2018 — sent 6 September 2026 with "Maybe add these to the landing page reel?" |
+| 6 | `IMG_3670` | Against a white brick wall, 11 November 2018 — the second of the same two |
 
 ## The whole card, not a crop of the picture in it
 

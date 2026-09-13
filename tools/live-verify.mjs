@@ -151,6 +151,13 @@ for (const [id, want, expect] of [
   ['b_hellagoodburger', 'HELLA GOOD BURGER', { rows: 20 }],
   ['b_firebunz', 'Firebunz', { rows: 8 }],
   ['b_portofperiperisf', 'The Port of Peri Peri', { rows: 70, call: '(415) 340-7373' }],
+  /* 2026-09-10 evening to 09-12. */
+  ['b_bratpakdogkamp', 'BratPak Dog Kamp', { call: '(925) 980-2742' }],
+  ['b_sliceitpizza', 'Sliceit Pizza', { hours: 'Daily 11am-10pm', rows: 60, call: '(925) 288-0588' }],
+  ['b_doghausberkeley', 'Dog Haus Biergarten', { rows: 70 }],
+  ['b_piwings', 'P.I. Wings', { hours: 'Wed-Sun 12pm-8pm', call: '(415) 322-9469' }],
+  ['b_pizzaponte', 'Pizza Ponte', { free: true, call: '(510) 658-7788' }],
+  ['b_claireandersonhomes', 'Claire Anderson', { call: '(510) 435-7822' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)

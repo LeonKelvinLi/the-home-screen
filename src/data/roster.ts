@@ -2189,6 +2189,79 @@ export const ROSTER_SEED: LocalSeed[] = [
       },
     ],
   }),
+
+  /* ---- 2026-09-10 evening to 09-12, the messages after the 10 September
+     commits. Research in research/roster/batch21.json. ---- */
+  /* BratPak Dog Kamp, "Livermore • Services" — cage-free daycare, overnight
+     boarding and in-home training on First Street. Pet grooming and walking
+     is the nearest seat a services page has, and Livermore's was open. They
+     publish no rates; the first day or first night is free, per their site.
+     A second shop in Henderson, Nevada is his call for the Las Vegas page. */
+  seed('bratpak-dog-kamp', 'BratPak Dog Kamp', 'BratPak', 'Dog daycare and boarding', '#F08A24', {
+    icon: 'bratpak-dog-kamp',
+    logoTemplate: 'wordmark', logoLines: ['BratPak'], logoFace: 'grotesk',
+    site: 'https://bratpakdogkamp.com/',
+    siteCta: 'Book on their site',
+  }),
+  /* Sliceit Pizza, "Martinez • Goods" — slices, pies and calzones. Seated on
+     Martinez's open Italian seat as he labelled it; the shop itself is on
+     Pacheco Blvd in Pacheco, which borders Martinez and has no page, and the
+     page shows that address. The menu is sliceitnow.com's. */
+  seed('sliceit-pizza', 'Sliceit Pizza', 'Sliceit', 'Pizza', '#111111', {
+    icon: 'sliceit-pizza',
+    logoTemplate: 'wordmark', logoLines: ['SLICEit'], logoFace: 'condensed',
+    site: 'https://sliceitnow.com/',
+    siteCta: 'Order online',
+  }),
+  /* Dog Haus Biergarten Berkeley, "Berkeley • Goods", sent as their rewards
+     link. Hot dogs and smashburgers take Berkeley's open Burgers and hot dogs
+     seat. The prices are the Berkeley store's, from their ordering storefront
+     switched to Berkeley, which prices differently from their other stores.
+     Their location page and their Berkeley Instagram disagree about the late
+     hours, so none are carried. A franchise of a national brand. */
+  seed('dog-haus-berkeley', 'Dog Haus Biergarten', 'Dog Haus', 'Hot dogs and burgers', '#E4342A', {
+    icon: 'dog-haus-berkeley',
+    logoTemplate: 'wordmark', logoLines: ['Dog', 'Haus'], logoFace: 'grotesk',
+    site: 'https://locations.doghaus.com/locations/ca/berkeley/1407-san-pablo-ave-suite-a',
+    siteCta: 'See the Berkeley store',
+  }),
+  /* P.I. Wings, "Daly city • Goods" — Filipino flavours on a chicken wing.
+     Daly City's Chicken wings seat was open. Their site prints the number and
+     the email, and a menu that is one picture with no prices; the address and
+     the Wednesday-to-Sunday hours are their own Instagram bio. */
+  seed('pi-wings', 'P.I. Wings', 'P.I. Wings', 'Filipino wings', '#2D384B', {
+    icon: 'pi-wings',
+    logoTemplate: 'monogram', logoInitials: 'PI', logoFace: 'grotesk',
+    site: 'https://www.eatpiwings.com/',
+    siteCta: 'See the menu',
+  }),
+  /* Pizza Ponte, "Oakland • Goods" — Temescal, run by two brothers. Oakland's
+     Italian seat is Philomena Pizza's, so the yellow sheet, at the free Tier 1
+     his rule of 9 September sets for a yellow-sheet spot. Their own site
+     prints no address or number; both are off the Apple Maps card he sent
+     with the link. */
+  seed('pizza-ponte', 'Pizza Ponte', 'Pizza Ponte', 'Pizza', '#0A2A56', {
+    icon: 'pizza-ponte',
+    logoTemplate: 'wordmark', logoLines: ['Pizza', 'Ponte'], logoFace: 'slab',
+    site: 'https://www.ponte.pizza/',
+    siteCta: 'Order online',
+    tier: 1,
+  }),
+  /* Claire Anderson, "BEASTY • Services — Lets tap into a new market", and
+     "I'll get ahold of her and give her a lifetime affiliate deal." The first
+     realtor on the app: Corcoran Icon Properties, DRE 01513554, luxury and
+     relocation across Oakland, Piedmont, Lamorinda and San Francisco. BEASTY
+     Services is full, so its yellow sheet. THE WHOLE PAGE, not Tier 1: every
+     spot on the BEASTY pages gets the full treatment by his note of 9
+     September, and a Tier 1 page prints a three-month expiry that would
+     contradict the lifetime deal he is offering her. The mark is her own
+     compass logo, cut from his screenshot of her site. */
+  seed('claire-anderson-homes', 'Claire Anderson', 'Claire Anderson', 'Real estate agent', '#6F6A67', {
+    icon: 'claire-anderson-homes',
+    logoTemplate: 'wordmark', logoLines: ['Claire', 'Anderson'], logoFace: 'script',
+    site: 'https://www.movetherecallclaire.com/',
+    siteCta: 'See her listings',
+  }),
 ]
 
 /**

@@ -61,6 +61,12 @@ SLOTS = {
     2: "1907_IMG_2199.png",
     3: "1907_IMG_2202.png",
     4: "1907_IMG_2201.png",
+    # 2026-09-06, "Maybe add these to the landing page reel?" — HBD Richmond
+    # (@rtbrothas, 30 November 2018) and the white-brick wall (11 November
+    # 2018). Sent to the thread as IMG_3669 and IMG_3670, not to the msgs
+    # folder above, so --all needs them copied in beside the first four.
+    5: "IMG_3669.png",
+    6: "IMG_3670.png",
 }
 POSTS = os.environ.get(
     "BEASTY_POSTS",

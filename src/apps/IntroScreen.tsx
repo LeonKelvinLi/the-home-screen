@@ -38,6 +38,12 @@ const LANDING_PHOTOS = [
   { src: '/landing/biggie-2.webp', bg: '#f5f6f5', light: true },
   { src: '/landing/biggie-3.webp', bg: '#f5f6f5', light: true },
   { src: '/landing/biggie-4.webp', bg: '#f5f6f5', light: true },
+  /* "Maybe add these to the landing page reel?" — 2026-09-06, two more of his
+     own @beasty_pages posts with Biggie, and "They're the hottest they've ever
+     been since the Michael movie release." Leon said yes that night; they are
+     slots 5 and 6. Both measured light at the foot, like the four before. */
+  { src: '/landing/biggie-5.webp', bg: '#f5f6f5', light: true },
+  { src: '/landing/biggie-6.webp', bg: '#f5f6f5', light: true },
 ]
 
 

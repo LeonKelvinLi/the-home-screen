@@ -991,4 +991,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'concord-goods2-1': 'b_alivekitchen', //                        meal prep delivered to three cities; Tier 1 on each yellow sheet
   'walnut-creek-goods2-3': 'b_alivekitchen',
   'lafayette-goods2-0': 'b_alivekitchen',
+  /* 2026-09-10 evening to 09-12: four on open category seats, Pizza Ponte on
+     Oakland's yellow sheet at Tier 1, Claire Anderson on the BEASTY services
+     yellow sheet with the whole page. */
+  'livermore-services-14': 'b_bratpakdogkamp', //                 Pet grooming and walking — daycare and boarding, the nearest seat
+  'martinez-goods-5': 'b_sliceitpizza', //                        Italian — pizza; the shop is in Pacheco, next door
+  'berkeley-goods-0': 'b_doghausberkeley', //                     Burgers and hot dogs
+  'daly-city-goods-8': 'b_piwings', //                            Chicken wings
+  'oakland-goods2-4': 'b_pizzaponte', //                          Italian is Philomena Pizza's; yellow sheet, Tier 1
+  'beasty-services2-20': 'b_claireandersonhomes', //              BEASTY Services is full; real estate, a new market
 }

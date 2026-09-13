@@ -1,0 +1,1327 @@
+[
+ {
+  "id": "b_bratpakdogkamp",
+  "name_exact": "BratPak Dog Kamp",
+  "one_line": "Cage-free dog daycare, overnight boarding and training in Livermore",
+  "cuisine": "Dog daycare and boarding",
+  "address": "3841 First St, Livermore, CA 94551",
+  "phone": "(925) 980-2742",
+  "email": "info@bratpakdogkamp.com",
+  "hours": null,
+  "instagram": "bratpakdogkamp",
+  "site_kind": "own-domain",
+  "site_url": "https://bratpakdogkamp.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no rates; their site offers the first day of daycare or the first night of boarding free, and asks you to book an orientation or call",
+  "logo_url": "https://bratpakdogkamp.com/assets/bratpak-logo-BKAetVl3.webp",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Livermore • Services'",
+   "Business operates two locations (Henderson, NV and Livermore, CA); address/phone given here are for the Livermore, CA location per the 'Livermore' label",
+   "No prices are published anywhere on the site for daycare, boarding, or training — /pricing and /boarding URLs return 404 and the FAQ has no rates either",
+   "Training service area is described as 'Henderson and Las Vegas Valley', not Livermore — differs from the daycare/boarding footprint",
+   "Instagram handle bratpakdogkamp is from Glenn's screenshot of their own profile, which links bratpakdogkamp.com and prints the same First Street address, (925) 980-2742 and info@bratpakdogkamp.com",
+   "Second location in Henderson, Nevada ('Livermore and Las Vegas' on their own post); the app has a Las Vegas page, and whether they get a seat there is Glenn's call"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_sliceitpizza",
+  "name_exact": "Sliceit Pizza",
+  "one_line": "Pizzeria serving slices, pies, wings, calzones, and sandwiches",
+  "cuisine": "Pizza",
+  "address": "5860 Pacheco Blvd, Pacheco, CA 94553",
+  "phone": "(925) 288-0588",
+  "email": "sliceitpizza@gmail.com",
+  "hours": "Daily 11am-10pm",
+  "instagram": "sliceitpizza",
+  "site_kind": "own-domain",
+  "site_url": "https://sliceitnow.com/menu",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Cheese Slice",
+    "desc": "",
+    "cents": 395,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Slice",
+    "desc": "",
+    "cents": 495,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian Slice",
+    "desc": "",
+    "cents": 550,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Red Hook Slice",
+    "desc": "",
+    "cents": 550,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "All Meat Slice",
+    "desc": "",
+    "cents": 595,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Veggie Slice",
+    "desc": "",
+    "cents": 595,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Combination Slice",
+    "desc": "",
+    "cents": 595,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Honey Roni Slice",
+    "desc": "",
+    "cents": 595,
+    "section": "Pizza Slices",
+    "label": ""
+   },
+   {
+    "name": "Cheese Pizza (12\")",
+    "desc": "",
+    "cents": 1495,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Pizza (12\")",
+    "desc": "",
+    "cents": 1695,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian Pizza (12\")",
+    "desc": "",
+    "cents": 1895,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Honey Roni Pizza (12\")",
+    "desc": "",
+    "cents": 1995,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Red Hook Pizza (12\")",
+    "desc": "",
+    "cents": 2095,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Veggie Pizza (12\")",
+    "desc": "",
+    "cents": 2195,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Chicken Spinach Pizza (12\")",
+    "desc": "",
+    "cents": 2195,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combination Pizza (12\")",
+    "desc": "",
+    "cents": 2295,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat Pizza (12\")",
+    "desc": "",
+    "cents": 2295,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Margherita Pizza (12\")",
+    "desc": "",
+    "cents": 2195,
+    "section": "12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Cheese Pizza (18\")",
+    "desc": "",
+    "cents": 2795,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Pizza (18\")",
+    "desc": "",
+    "cents": 2995,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian Pizza (18\")",
+    "desc": "",
+    "cents": 3295,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Margherita Pizza (18\")",
+    "desc": "",
+    "cents": 3295,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Honey Roni Pizza (18\")",
+    "desc": "",
+    "cents": 3495,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Red Hook Pizza (18\")",
+    "desc": "",
+    "cents": 3695,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Chicken Spinach Pizza (18\")",
+    "desc": "",
+    "cents": 3695,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat Pizza (18\")",
+    "desc": "",
+    "cents": 3795,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combination Pizza (18\")",
+    "desc": "",
+    "cents": 3795,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Veggie Pizza (18\")",
+    "desc": "",
+    "cents": 3795,
+    "section": "18\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Cheese Pizza (20\")",
+    "desc": "",
+    "cents": 3195,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Pizza (20\")",
+    "desc": "",
+    "cents": 3695,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian Pizza (20\")",
+    "desc": "",
+    "cents": 3795,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Margherita Pizza (20\")",
+    "desc": "",
+    "cents": 3795,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Honey Roni Pizza (20\")",
+    "desc": "",
+    "cents": 4195,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Red Hook Pizza (20\")",
+    "desc": "",
+    "cents": 4195,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Chicken Spinach Pizza (20\")",
+    "desc": "",
+    "cents": 4195,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat Pizza (20\")",
+    "desc": "",
+    "cents": 4295,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combination Pizza (20\")",
+    "desc": "",
+    "cents": 4295,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Veggie Pizza (20\")",
+    "desc": "",
+    "cents": 4295,
+    "section": "20\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Cheese Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 1695,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 1895,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Hawaiian Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2095,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Red Hook Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2295,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Chicken Spinach Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2395,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Veggie Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2395,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Margherita Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2395,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Honey Roni Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2195,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "All Meat Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2495,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Combination Gluten-Free Pizza (12\")",
+    "desc": "",
+    "cents": 2495,
+    "section": "Gluten-Free 12\" Pizza",
+    "label": ""
+   },
+   {
+    "name": "Cheese Calzone",
+    "desc": "",
+    "cents": 1095,
+    "section": "Calzones",
+    "label": ""
+   },
+   {
+    "name": "Chicken Calzone",
+    "desc": "",
+    "cents": 1295,
+    "section": "Calzones",
+    "label": ""
+   },
+   {
+    "name": "Pepperoni Jalapeno Calzone",
+    "desc": "",
+    "cents": 1395,
+    "section": "Calzones",
+    "label": ""
+   },
+   {
+    "name": "Veggie Calzone",
+    "desc": "",
+    "cents": 1695,
+    "section": "Calzones",
+    "label": ""
+   },
+   {
+    "name": "Meat Calzone",
+    "desc": "",
+    "cents": 1795,
+    "section": "Calzones",
+    "label": ""
+   },
+   {
+    "name": "Wings (6 pc)",
+    "desc": "",
+    "cents": 1095,
+    "section": "Wings",
+    "label": ""
+   },
+   {
+    "name": "Wings (12 pc)",
+    "desc": "",
+    "cents": 2095,
+    "section": "Wings",
+    "label": ""
+   },
+   {
+    "name": "Wings (24 pc)",
+    "desc": "",
+    "cents": 3995,
+    "section": "Wings",
+    "label": ""
+   },
+   {
+    "name": "Garlic Knots (6 pc)",
+    "desc": "",
+    "cents": 695,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Cheesy Garlic Knots (6 pc)",
+    "desc": "",
+    "cents": 795,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Cheesy Garlic Bread",
+    "desc": "",
+    "cents": 795,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Garlic Knots (12 pc)",
+    "desc": "",
+    "cents": 1095,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Meatball Marinara",
+    "desc": "",
+    "cents": 1195,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Cheesy Garlic Knots (12 pc)",
+    "desc": "",
+    "cents": 1495,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Garlic Knots (20 pc)",
+    "desc": "",
+    "cents": 1995,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Cheesy Garlic Knots (20 pc)",
+    "desc": "",
+    "cents": 2295,
+    "section": "Snacks",
+    "label": ""
+   },
+   {
+    "name": "Buffalo Chicken Sando",
+    "desc": "",
+    "cents": 1395,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "Meatball Parmesan",
+    "desc": "",
+    "cents": 1395,
+    "section": "Sandwiches",
+    "label": ""
+   },
+   {
+    "name": "House Salad",
+    "desc": "",
+    "cents": 995,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "",
+    "cents": 1095,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Cannoli",
+    "desc": "",
+    "cents": 550,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Cheesecake",
+    "desc": "",
+    "cents": 595,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Tiramisu",
+    "desc": "",
+    "cents": 750,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Pepsi Can",
+    "desc": "",
+    "cents": 199,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Snapple",
+    "desc": "",
+    "cents": 350,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Jarrito",
+    "desc": "",
+    "cents": 350,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "San Pellegrino",
+    "desc": "",
+    "cents": 375,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "2 Liter Jumbo Soda",
+    "desc": "",
+    "cents": 599,
+    "section": "Drinks",
+    "label": ""
+   }
+  ],
+  "price_note": "All prices are from the sliceitnow.com/menu page.",
+  "logo_url": "https://static-content.owner.com/bd186f9f-0209-4fd5-ae43-632d42b0b67e.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Martinez • Goods'",
+   "Site's own address is 5860 Pacheco Blvd, Pacheco, CA 94553 -- no separate Martinez street address found on sliceitnow.com; Martinez is listed only as a delivery/service area alongside Concord, Pleasant Hill, Walnut Creek, and Pittsburg",
+   "No Instagram link found anywhere on the business's own site",
+   "/locations and /order paths on sliceitnow.com both 404 -- no multi-location switcher found; site appears to represent a single physical location (Pacheco)",
+   "Instagram handle sliceitpizza is from Glenn's screenshot of their own profile, which links sliceitnow.com, prints 5860 Pacheco Blvd and names 'Martinez, Pacheco, Pleasant Hill, Concord, Walnut Creek' as its area",
+   "Seated on Martinez's Italian seat as Glenn labelled it; their only shop is on Pacheco Blvd in Pacheco, which borders Martinez and has no page of its own"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_doghausberkeley",
+  "name_exact": "Dog Haus Biergarten Berkeley",
+  "one_line": "Gourmet hot dogs, sausages, smashburgers and a biergarten on San Pablo",
+  "cuisine": "Hot dogs and burgers",
+  "address": "1407 San Pablo Ave, Suite A, Berkeley, CA 94702",
+  "phone": "(844) 370-3800",
+  "email": null,
+  "hours": null,
+  "instagram": "doghaus_berkeley",
+  "site_kind": "own-domain",
+  "site_url": "https://locations.doghaus.com/locations/ca/berkeley/1407-san-pablo-ave-suite-a",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Egg & Cheese Burrito",
+    "desc": "3 cage free eggs, white American cheese, crispy tater tots, caramelized onions, spicy mayo",
+    "cents": 1249,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Haus Burrito",
+    "desc": "3 fresh eggs, smoked bacon, white american cheese, crispy tater tots, caramelized onions & spicy mayo, grilled",
+    "cents": 1399,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Wurst Burrito",
+    "desc": "3 fresh eggs, breakfast sausage, white american cheese, crispy tater tots, caramelized onions & spicy mayo, grilled",
+    "cents": 1499,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Bronco Burrito",
+    "desc": "3 fresh eggs, smoked bacon, white american cheese, avocado, pickled jalapenos, crispy tater tots, cotija cheese & chipotle aioli, grilled",
+    "cents": 1449,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Borracho Burrito",
+    "desc": "3 fresh eggs, smoked bacon, haus chili, white american cheese, crispy tater tots & mayo, grilled",
+    "cents": 1399,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Cajun Burrito",
+    "desc": "3 fresh eggs, cajun seasoned sausage, white american cheese, caramelized onions, crispy spicy tots & chipotle aioli, grilled",
+    "cents": 1499,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Chorizo Burrito",
+    "desc": "3 cage free eggs, chorizo, white American cheese, crispy tater tots, caramelized onions, chipotle aioli",
+    "cents": 1399,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Chimichanga",
+    "desc": "3 cage free scrambled eggs, crispy tater tots, smoked bacon, sage breakfast sausage, white American cheese, miso ranch, maple sriracha",
+    "cents": 1799,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Swole Chick",
+    "desc": "Cage free egg whites, grilled chicken breast, white American cheese, avocado, wild arugula, tomato, spicy basil aioli",
+    "cents": 1799,
+    "section": "Bad-Ass Breakfast Burritos",
+    "label": ""
+   },
+   {
+    "name": "Hamburger",
+    "desc": "Smashed black angus beef, diced onion, pickle, shredded lettuce, secret sauce, King's Hawaiian bun",
+    "cents": 1499,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Cheeseburger",
+    "desc": "Smashed black angus beef, white American cheese, diced onion, pickle, shredded lettuce, secret sauce, King's Hawaiian bun",
+    "cents": 1549,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Ringer",
+    "desc": "Smashed black angus beef, white American cheese, pickles, lettuce, crispy onion strings, El Gallo BBQ sauce, miso ranch, King's Hawaiian bun",
+    "cents": 1599,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Little Mule",
+    "desc": "Smashed black angus beef, white American cheese, avocado, caramelized onion, shredded lettuce, pickled jalapeno, cotija cheese, chipotle aioli, King's Hawaiian bun",
+    "cents": 1599,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "The Hangover",
+    "desc": "Smashed black angus beef, white American cheese, diced onion, pickle, Haus chili, shredded lettuce, mustard, mayo, King's Hawaiian bun",
+    "cents": 1699,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Holy Aioli",
+    "desc": "Smashed black angus beef, white American cheese, caramelized onion, smoked bacon, garlic aioli, King's Hawaiian bun",
+    "cents": 1599,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Bacon Onion Jam",
+    "desc": "Smashed black angus beef, Nashville hot rub, white American cheese, pickle, bacon chipotle onion jam, shredded lettuce, El Gallo BBQ sauce, miso ranch, King's Hawaiian bun",
+    "cents": 1699,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Burger",
+    "desc": "Smashed black angus beef, King's Hawaiian bun, choose your toppings",
+    "cents": 1299,
+    "section": "Smashburgers",
+    "label": ""
+   },
+   {
+    "name": "Santa Fe",
+    "desc": "Grilled chicken breast, white American cheese, avocado, shredded lettuce, pickled jalapenos, cotija cheese, chipotle aioli, sesame bun",
+    "cents": 1499,
+    "section": "Grilled Chicken",
+    "label": ""
+   },
+   {
+    "name": "Western",
+    "desc": "Grilled chicken breast, white American cheese, pickles, shredded lettuce, crispy onion strings, El Gallo BBQ sauce, miso ranch, sesame bun",
+    "cents": 1499,
+    "section": "Grilled Chicken",
+    "label": ""
+   },
+   {
+    "name": "Nashville Hot (Grilled)",
+    "desc": "Grilled chicken breast, Nashville hot rub, white American cheese, pickles, slaw, secret sauce, sesame bun",
+    "cents": 1499,
+    "section": "Grilled Chicken",
+    "label": ""
+   },
+   {
+    "name": "Sweet Chick",
+    "desc": "Grilled chicken breast, hot honey, Nashville hot rub, shredded lettuce, pickled jalapenos, chipotle aioli, miso ranch, sesame bun",
+    "cents": 1499,
+    "section": "Grilled Chicken",
+    "label": ""
+   },
+   {
+    "name": "Cali Chick",
+    "desc": "Grilled chicken breast, white American cheese, avocado, tomato, wild arugula, spicy basil aioli, sesame bun",
+    "cents": 1499,
+    "section": "Grilled Chicken",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Grilled Chicken",
+    "desc": "Grilled chicken breast, sesame bun, choose your toppings",
+    "cents": 1249,
+    "section": "Grilled Chicken",
+    "label": ""
+   },
+   {
+    "name": "Bad Mutha Clucka",
+    "desc": "Crispy chicken breast, pickles, shredded lettuce, miso ranch, sesame bun",
+    "cents": 1499,
+    "section": "Crispy Chicken",
+    "label": ""
+   },
+   {
+    "name": "Hot Chick",
+    "desc": "Crispy chicken breast, Nashville hot, pickles, Haus slaw, secret sauce, sesame bun",
+    "cents": 1499,
+    "section": "Crispy Chicken",
+    "label": ""
+   },
+   {
+    "name": "Hot Honey Chick",
+    "desc": "Crispy chicken breast, hot honey, Nashville hot rub, shredded lettuce, pickled jalapeno, chipotle aioli, miso ranch, sesame bun",
+    "cents": 1499,
+    "section": "Crispy Chicken",
+    "label": ""
+   },
+   {
+    "name": "Buff Chick",
+    "desc": "Crispy chicken breast, buffalo sauce, pickles, shredded lettuce, miso ranch, sesame bun",
+    "cents": 1499,
+    "section": "Crispy Chicken",
+    "label": ""
+   },
+   {
+    "name": "El Gallo BBQ",
+    "desc": "Crispy chicken breast, pickles, shredded lettuce, crispy onion strings, El Gallo BBQ sauce, miso ranch, sesame bun",
+    "cents": 1599,
+    "section": "Crispy Chicken",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Crispy Chicken",
+    "desc": "Crispy chicken breast, sesame bun, choose your toppings",
+    "cents": 1299,
+    "section": "Crispy Chicken",
+    "label": ""
+   },
+   {
+    "name": "Wings",
+    "desc": "Crispy fried wings, choice of sauce, served with miso ranch",
+    "cents": 1499,
+    "section": "Wings and Tenders",
+    "label": ""
+   },
+   {
+    "name": "Tenders",
+    "desc": "5 crispy fried chicken tenders, choice of sauce, served with miso ranch",
+    "cents": 1299,
+    "section": "Wings and Tenders",
+    "label": ""
+   },
+   {
+    "name": "Sooo Cali",
+    "desc": "Black angus beef dog, wild arugula, tomato, avocado, crispy onion strings, spicy basil aioli",
+    "cents": 1199,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "Cowboy",
+    "desc": "Black angus beef dog, cheese sauce, crispy onion strings, El Gallo BBQ sauce, miso ranch",
+    "cents": 1199,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "Old Town",
+    "desc": "Black angus beef dog, caramelized onions, pickled jalapenos, cotija cheese, chipotle aioli",
+    "cents": 1149,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "Chili Idol",
+    "desc": "Black angus beef dog, Haus chili, cheese sauce, diced onion",
+    "cents": 1499,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "The Hogfather",
+    "desc": "Pork bratwurst, bacon chipotle onion jam, chipotle aioli, miso ranch",
+    "cents": 1199,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "Das Brat",
+    "desc": "Pork bratwurst, caramelized onions, sauerkraut, spicy brown mustard, garlic aioli",
+    "cents": 1199,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "Build Your Own Dog or Sausage",
+    "desc": "Angus beef dog on grilled King's Hawaiian roll",
+    "cents": 999,
+    "section": "Dogs & Sausages",
+    "label": ""
+   },
+   {
+    "name": "Garlic Cotija",
+    "desc": "Fries, garlic aioli, basil aioli, pepper relish, cotija cheese",
+    "cents": 1299,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "Tot-Chos",
+    "desc": "Tater tots, tomatoes, avocado, cheese sauce, pickled jalapenos, chipotle aioli",
+    "cents": 1399,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "Hot Honey Sweet Potato",
+    "desc": "Sweet potato fries, Nashville hot rub, hot honey, pickled jalapenos, chipotle aioli, miso ranch",
+    "cents": 1499,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "Smoke Haus Fries",
+    "desc": "Fries, smoked bacon, cheese sauce, El Gallo BBQ sauce, miso ranch, scallions",
+    "cents": 1449,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "Crispy Pickle Chips",
+    "desc": "Fried pickle chips served with miso ranch",
+    "cents": 1099,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "Onion Strings",
+    "desc": "Crispy onion strings served with miso ranch",
+    "cents": 999,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "Pretzel Bites",
+    "desc": "Crispy pretzel bites, cheese sauce & mustard aioli",
+    "cents": 1199,
+    "section": "Shareables",
+    "label": ""
+   },
+   {
+    "name": "OG Sliders (3 Pack)",
+    "desc": "White American cheese, mayo, caramelized onions",
+    "cents": 1499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "BOJ Sliders (3 Pack)",
+    "desc": "White American cheese, pickle, bacon chipotle onion jam, El Gallo BBQ sauce, miso ranch",
+    "cents": 1499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "BMC Sliders (3 Pack)",
+    "desc": "Crispy chicken tender, pickle, shredded lettuce, miso ranch",
+    "cents": 1499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "THC Sliders (3 Pack)",
+    "desc": "Crispy chicken tender, Nashville hot rub, pickle, slaw, secret sauce",
+    "cents": 1499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "OG Slider (1)",
+    "desc": "White American cheese, mayo, caramelized onions",
+    "cents": 499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "BOJ Slider (1)",
+    "desc": "White American cheese, pickle, bacon chipotle onion jam, El Gallo BBQ sauce, miso ranch",
+    "cents": 499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "BMC Slider (1)",
+    "desc": "Crispy chicken tender, pickle, shredded lettuce, miso ranch",
+    "cents": 499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "THC Slider (1)",
+    "desc": "Crispy chicken tender, Nashville hot rub, pickle, slaw, secret sauce",
+    "cents": 499,
+    "section": "Sliders",
+    "label": ""
+   },
+   {
+    "name": "Sliders Small Meal",
+    "desc": "Includes tots or fries and a drink",
+    "cents": 1299,
+    "section": "Small Meals",
+    "label": ""
+   },
+   {
+    "name": "Tenders Meal",
+    "desc": "Choice of 3 crispy or grilled chicken tenders; includes tots or fries and a drink",
+    "cents": 1299,
+    "section": "Small Meals",
+    "label": ""
+   },
+   {
+    "name": "Hot Dog Meal",
+    "desc": "Plain hot dog; includes tots or fries and a drink",
+    "cents": 1299,
+    "section": "Small Meals",
+    "label": ""
+   },
+   {
+    "name": "Chipotle Aioli",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Hot Honey",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "El Gallo Saauuccee",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Garlic Aioli",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Haus Buffalo",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Miso Ranch",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Secret Sauce",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Spicy Basil Aioli",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Spicy Brown Mustard",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Spicy Mayo",
+    "desc": "Extra sauce",
+    "cents": 89,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Cheese Sauce",
+    "desc": "Extra sauce",
+    "cents": 99,
+    "section": "Extra Sauces",
+    "label": ""
+   },
+   {
+    "name": "Fries",
+    "desc": "",
+    "cents": 499,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Tater Tots",
+    "desc": "",
+    "cents": 499,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Hot Fries",
+    "desc": "",
+    "cents": 599,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Hot Tots",
+    "desc": "",
+    "cents": 599,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Cheese Fries",
+    "desc": "",
+    "cents": 799,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Cheese Tots",
+    "desc": "",
+    "cents": 799,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Chili Cheese Fries",
+    "desc": "",
+    "cents": 949,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Chili Cheese Tots",
+    "desc": "",
+    "cents": 949,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Sweet Potato Fries",
+    "desc": "",
+    "cents": 549,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "RC Cola Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Dr. Pepper Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Dr. Pepper Zero Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "I.B.C. Root Beer Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "7-Up Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Squirt Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Sunkist Bottle",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Core Water",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Ghost Energy Drink",
+    "desc": "",
+    "cents": 498,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "Mott's Apple Juice",
+    "desc": "",
+    "cents": 399,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "La Colombe Vanilla Coffee",
+    "desc": "",
+    "cents": 1000,
+    "section": "Beverages",
+    "label": ""
+   },
+   {
+    "name": "La Colombe Mocha Coffee",
+    "desc": "",
+    "cents": 1000,
+    "section": "Beverages",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from the Berkeley-location menu on Dog Haus's own Thanx ordering storefront (order.thanx.com/hausrewards, switched to the Berkeley pickup location), which differs from other locations' pricing shown by default (e.g. Belmont).",
+  "logo_url": "https://doghaus.com/wp-content/uploads/2022/10/dhlogo2.svg",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Berkeley • Goods'",
+   "order.thanx.com/hausrewards is the ordering/rewards platform for the brand 'Dog Haus'; the linked corporate site is doghaus.com",
+   "This location is branded 'Dog Haus Biergarten Berkeley' (serves beer/wine, has a Happy Hour menu) rather than plain 'Dog Haus'",
+   "Dog Haus operates many other locations nationwide (multiple in California incl. Belmont and Roseville, plus AZ, CO, DC, IL, IN, MD, NY, OH, TN, TX, UT, WA, WI) and in Yucatan, Mexico -- Berkeley was used per instructions",
+   "Menu prices differ by location: the Thanx ordering site defaults to the Belmont, CA store; prices here were pulled after switching the storefront to the Berkeley location specifically",
+   "Email address found (berkeleycares@doghaus.com) is listed on the Berkeley page as a careers/hiring contact ('Email to Apply'), not a general customer-service email",
+   "Phone (844) 370-3800 is listed on the Berkeley location page but is a toll-free number, likely a shared/central Dog Haus line rather than store-direct",
+   "Instagram handle (doghausdogs) is the corporate/national account linked site-wide, not Berkeley-specific",
+   "Logo is an SVG (vector) file on doghaus.com; no fixed pixel dimensions stated",
+   "Hours disagree: their Berkeley location page says Thu-Fri 11am-10pm and Sat 10am-10pm; the Berkeley Instagram bio (Glenn's screenshot) says dine-in Thu-Fri 11am-11pm and Sat 10am-11pm, so none are carried",
+   "The only email on the location page is the careers address ('Email to Apply'), so no email is carried",
+   "Instagram doghaus_berkeley is the Berkeley location's own account, from Glenn's screenshot; it links order.doghaus.com's Berkeley menu",
+   "Dog Haus is a national franchise brand; this is the Berkeley biergarten Glenn sent"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_piwings",
+  "name_exact": "P.I. WINGS",
+  "one_line": "The flavors of the Philippines on a chicken wing, plus tacos and boba",
+  "cuisine": "Filipino wings",
+  "address": "1900 Sullivan Ave, Daly City, CA",
+  "phone": "(415) 322-9469",
+  "email": "info@eatpiwings.com",
+  "hours": "Wed-Sun 12pm-8pm, closed Mon-Tue",
+  "instagram": "eatpiwings",
+  "site_kind": "own-domain",
+  "site_url": "https://www.eatpiwings.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is one picture on their site with no prices on it, so none are listed here",
+  "logo_url": "https://static.wixstatic.com/media/feaa91_2409273d9af840cc8be32253ddb0824a~mv2.png",
+  "logo_px": "2500x1330",
+  "flags": [
+   "Glenn: 'Daly city • Goods'",
+   "No street address published on the business's own site; only 'San Francisco Bay Area' is given as the service area, and the site's own Yelp link uses the slug 'pi-wings-san-francisco'",
+   "No hours of operation published, despite the homepage being titled 'Menu and Business Hours'",
+   "No prices printed anywhere on the site for any menu item",
+   "Site is effectively a single page (sitemap lists only the homepage); no menu/order/locations subpages exist",
+   "Address and the Wednesday-to-Sunday 12pm-8pm hours are their own verified Instagram bio (@eatpiwings), from Glenn's screenshot; their site gives only 'San Francisco Bay Area'",
+   "Name: their Instagram writes P.I. WINGS, their site PI Wings"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_pizzaponte",
+  "name_exact": "Pizza Ponte",
+  "one_line": "Brick-oven pizza with 56-hour dough, run by two brothers in Oakland",
+  "cuisine": "Pizza",
+  "address": "4919 Telegraph Ave, Oakland, CA 94609",
+  "phone": "(510) 658-7788",
+  "email": null,
+  "hours": null,
+  "instagram": "pizzaponte.oakland",
+  "site_kind": "own-domain",
+  "site_url": "https://www.ponte.pizza/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu and prices are on the order page of their own site, ponte.pizza",
+  "logo_url": "https://www.ponte.pizza/uploads/b/c0bb9f949a485683bfeab2b873c33e007e34911f29719d957847ae689946d531/Untitled%20%2811%20x%2011%20in%29_1731880152.png",
+  "logo_px": "2000x2000",
+  "flags": [
+   "Glenn: 'Oakland • Goods'",
+   "No street address, phone, or email published on the business's own pages",
+   "No hours of operation published on the business's own pages",
+   "No /locations page exists on the site; single Oakland location implied by the site's own Instagram handle 'pizzaponte.oakland' and an About-page press link to an Oakland Temescal pizza article",
+   "Full catalog is ~40 items per the site's sitemap; only the 'Most Popular' section items were priced within research scope (see price_note)",
+   "Classic Cheese Pizza and Genoa Pesto were showing all sizes as 'Out of stock' at time of research",
+   "Genoa Pesto 20\" appears marked down from $39.00 to $38.00 on the order page (labeled 'Sale')",
+   "Address and phone are from the Apple Maps card Glenn sent with the link, which names ponte.pizza as the website; their own site prints neither, and the Maps hours are not carried",
+   "Seven 'Most Popular' prices were read from their /s/order page and set aside: the page is on Oakland's yellow sheet at Tier 1, which shows no menu, and seven of about forty items would not be their menu"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_claireandersonhomes",
+  "name_exact": "Claire Anderson Homes",
+  "one_line": "Luxury and relocation realtor: Oakland, Piedmont, Lamorinda and SF",
+  "cuisine": "Real estate agent",
+  "address": "342 Highland Ave, Piedmont, CA 94611",
+  "phone": "(510) 435-7822",
+  "email": "Claire.Anderson@corcoranicon.com",
+  "hours": null,
+  "instagram": "claireandersonhomes",
+  "site_kind": "own-domain",
+  "site_url": "https://www.movetherecallclaire.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "A licensed agent with Corcoran Icon Properties, CA DRE 01513554; she publishes no fees or commission, which are agreed with her directly",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "This is a real business, not a campaign: Claire Anderson is a licensed East Bay real estate agent/broker (CA DRE #01513554) selling home buying and selling representation to families in and relocating to the East Bay, CA.",
+   "Glenn: 'BEASTY • Services' — 'Lets tap into a new market'",
+   "Site domain 'movetherecallclaire.com' is unrelated to the branded business name 'Claire Anderson Homes' used on every page — an unusual/mismatched domain",
+   "No /services or /pricing page exists (404); no commission or fee amounts are published anywhere on the site",
+   "Address is her brokerage's office, Corcoran Icon Properties on Highland Ave, Piedmont, as printed on her site",
+   "Email Claire.Anderson@corcoranicon.com is from the Contact sheet of her own verified Instagram (@claireandersonhomes) in Glenn's screenshot; her site hides its address behind Cloudflare",
+   "Phone: her site prints (510) 435-7822, her Instagram contact sheet (866) 966-8384; the site's number is carried",
+   "Glenn: 'I'll get ahold of her and give her a lifetime affiliate deal'"
+  ],
+  "blocked": null
+ }
+]
