@@ -2262,6 +2262,35 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.movetherecallclaire.com/',
     siteCta: 'See her listings',
   }),
+
+  /* ---- 2026-09-13, the two he sent that morning. Research in
+     research/roster/batch22.json. ---- */
+  /* Daughter Thai Kitchen, "Oakland • Goods" — Southern Thai on Medau Place in
+     Montclair; their site says they won Food Network's Thai Takedown.
+     Oakland's Asian food seat is Cambodian Street Food's, so the yellow sheet,
+     at the free Tier 1 his rule of 9 September sets for a yellow-sheet spot.
+     Their menu and prices are their own ordering page's. The mark is their
+     logo from that page, on a black tile. */
+  seed('daughter-thai', 'Daughter Thai Kitchen', 'Daughter Thai', 'Southern Thai', '#0D0D0D', {
+    icon: 'daughter-thai',
+    logoTemplate: 'wordmark', logoLines: ['Daughter'], logoFace: 'script',
+    site: 'https://daughterthai.com/',
+    siteCta: 'Order online',
+    tier: 1,
+  }),
+  /* MexiHibachi, "Pinole • Goods" — Mexican and Japanese hibachi together, on
+     Fitzgerald Drive. Pinole's Mexican food seat was open, and Mexican is the
+     half they lead with. Their own site prints no menu and no prices, only
+     "Text Menu @ 415.604.7135", and their Toast page had online ordering
+     switched off with nothing listed, so the page says so and gives the
+     number. Delivery marketplaces were not used. The mark is their own
+     Instagram picture. */
+  seed('mexihibachi', 'MexiHibachi', 'MexiHibachi', 'Mexican-Japanese fusion', '#0B0B0B', {
+    icon: 'mexihibachi',
+    logoTemplate: 'wordmark', logoLines: ['Mexi', 'Hibachi'], logoFace: 'condensed',
+    site: 'https://mexihibachi.com/',
+    siteCta: 'Visit their site',
+  }),
 ]
 
 /**

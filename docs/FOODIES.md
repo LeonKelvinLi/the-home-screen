@@ -34,10 +34,11 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 12 Sep | @meggyeatz (meg, bay area eats) | A week of San Francisco eats, several places | No single business |
 | 12 Sep | @allday.social (a social media agency) | A team spotlight of its co-founder @allie.eats | An agency, not a restaurant |
 | 12 Sep | @hellahansel (Hansel Fernandes) | Roxie Food Center tri-tip sandwich, 1901 San Jose Ave, San Francisco | No |
+| 13 Sep | @noblecinemaevents | An event flyer, not a restaurant: "Big Bites in the Bay", hosted by @smackornotfoodreview with guest @big.nu.energy, 20 September at Noble Cinema Studios, 1509 Solano Ave, Vallejo, $5 entry | An event. It could go on the Calendar if he wants it there |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
-DdCY9_wP5R_, DdNCA9Qyb7W. The profile is instagram.com/bayarea_fooddreamz.
+DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__. The profile is instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
 

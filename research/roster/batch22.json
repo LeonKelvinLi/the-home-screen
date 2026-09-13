@@ -1,0 +1,550 @@
+[
+ {
+  "id": "b_daughterthai",
+  "name_exact": "Daughter Thai Kitchen",
+  "one_line": "Southern Thai in Montclair, from a Food Network Thai Takedown winner",
+  "cuisine": "Southern Thai",
+  "address": "6118 Medau Place, Oakland, CA 94611",
+  "phone": "(510) 823-2354",
+  "email": "eat@daughterthai.com",
+  "hours": "Mon-Thu 11:30am-2pm & 5-8:30pm, Fri 11:30am-2pm & 5-9pm, Sat 12-3pm & 5-9pm, Sun 12-3pm & 5-8:30pm",
+  "instagram": "daughterthaikitchen",
+  "site_kind": "own-domain",
+  "site_url": "https://daughterthai.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Daughter Egg Rolls",
+    "desc": "Glass noodles, carrot, black mushroom, and cabbage wrapped in crispy egg roll skin",
+    "cents": 1750,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Samosa",
+    "desc": "Red Norland potato, caramelized onion, carrot wrapped in pastry skin, 3 pieces",
+    "cents": 1750,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Ahi Scoops",
+    "desc": "Pan-seared sesame crusted Ahi tuna, cucumber, seaweed salad, crispy potato",
+    "cents": 2150,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Thai Fish Cakes",
+    "desc": "Fried fish cake, white fish paste with red curry, kaffir lime, green bean",
+    "cents": 1750,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Mieng Kum Kung",
+    "desc": "Crispy-crusted tiger prawns with zesty lime, ginger, onion, roasted coconut",
+    "cents": 2150,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Chicken Wings",
+    "desc": "Crispy organic wings, crispy basil, chili plum sauce",
+    "cents": 2050,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Daughter Thai Taco",
+    "desc": "Crunchy chicken in sweet and tangy sauce wrapped with roti",
+    "cents": 2050,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Neua Num Tok Rolls",
+    "desc": "Grilled Snake River Farm Wagyu flank steak wrapped with mint, cilantro",
+    "cents": 2350,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Crispy Calamari",
+    "desc": "Curry battered Monterey squid with cilantro-lime dipping sauce",
+    "cents": 1800,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Roti Mataba",
+    "desc": "",
+    "cents": 1750,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Pumpkin Fries",
+    "desc": "",
+    "cents": 1500,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Sai Krok Isaan",
+    "desc": "Fermented sausage from the Isan region of Thailand with pork, garlic, jasmine rice",
+    "cents": 1595,
+    "section": "Starter",
+    "label": ""
+   },
+   {
+    "name": "Tom Yum (Cup)",
+    "desc": "Spicy and sour soup with mushroom, tomato, mixed veggie, galangal, kaffir lime",
+    "cents": 1150,
+    "section": "Soups",
+    "label": "from"
+   },
+   {
+    "name": "Tom Yum (Bowl)",
+    "desc": "Spicy and sour soup with mushroom, tomato, mixed veggie, galangal, kaffir lime",
+    "cents": 2150,
+    "section": "Soups",
+    "label": "from"
+   },
+   {
+    "name": "Tom Kha (Cup)",
+    "desc": "Creamy coconut soup with mushroom, tomato, mixed veggie, galangal",
+    "cents": 1495,
+    "section": "Soups",
+    "label": "from"
+   },
+   {
+    "name": "Tom Kha (Bowl)",
+    "desc": "Creamy coconut soup with mushroom, tomato, mixed veggie, galangal",
+    "cents": 2495,
+    "section": "Soups",
+    "label": "from"
+   },
+   {
+    "name": "Papaya Salad",
+    "desc": "Hand shredded green papaya, garlic, peanuts, fresh chili, cherry tomato",
+    "cents": 1950,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Quinoa Salad",
+    "desc": "Tossed with roasted coconut, carrot, brown rice, dry chili, shallots, rice crispy",
+    "cents": 2050,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Rice Salad Nam Khao Tod",
+    "desc": "Thai fermented pork sausage, crispy red curry rice, ginger, chili, shallot",
+    "cents": 2300,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Yum Neua",
+    "desc": "Grilled Wagyu flank steak, cucumbers, green onions, shallots, mint with spicy lime",
+    "cents": 2500,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Yellow Curry",
+    "desc": "Potato, white onion, carrot and crispy shallots",
+    "cents": 2100,
+    "section": "Curry",
+    "label": "from"
+   },
+   {
+    "name": "Red Curry",
+    "desc": "Bell pepper, bamboo shoot, basil",
+    "cents": 2100,
+    "section": "Curry",
+    "label": "from"
+   },
+   {
+    "name": "Green Curry",
+    "desc": "Eggplant, bell pepper, bamboo, basil",
+    "cents": 2100,
+    "section": "Curry",
+    "label": "from"
+   },
+   {
+    "name": "Pumpkin Curry",
+    "desc": "Southern Thai style, kabocha, turmeric, bell pepper",
+    "cents": 2300,
+    "section": "Curry",
+    "label": "from"
+   },
+   {
+    "name": "Tofu Noodle Soup",
+    "desc": "Fresh rice noodles, veggie broth, soft organic tofu, mixed veggies",
+    "cents": 2050,
+    "section": "Noodles Soup",
+    "label": ""
+   },
+   {
+    "name": "Chicken Noodle Soup",
+    "desc": "Shredded organic chicken, fresh rice noodles, Asian broccoli, bean sprouts",
+    "cents": 2250,
+    "section": "Noodles Soup",
+    "label": ""
+   },
+   {
+    "name": "24 Hours Beef Noodle Soup",
+    "desc": "Slow-cooked bone-in beef short rib, egg noodles, veal broth, Asian broccoli",
+    "cents": 3725,
+    "section": "Noodles Soup",
+    "label": ""
+   },
+   {
+    "name": "Southern Fish Curry Kang Tai Pla",
+    "desc": "Pickled fish stew in turmeric, lemongrass with squash, Thai eggplant",
+    "cents": 3625,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Kang Kua Prawns",
+    "desc": "Southern curry, fresh red turmeric, bell pepper, green peppercorns",
+    "cents": 3525,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Crab Fried Rice",
+    "desc": "Jumbo lump crab meat, prawns, double eggs, twice-cooked rice",
+    "cents": 4075,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Run Juan Seafood Sizzling",
+    "desc": "Assorted seafood sauteed in homemade curry paste, basil",
+    "cents": 3775,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Hat Yai Fried Chicken",
+    "desc": "Southern-style fried Mary's Organic chicken thigh, turmeric and jasmine rice",
+    "cents": 3325,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Kai Gor Rhae",
+    "desc": "Phuket style BBQ free-range chicken thigh marinated in turmeric",
+    "cents": 3350,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Slow Cooked Beef Curry",
+    "desc": "Wagyu beef, green coconut curry, Thai eggplant, bell pepper, basil",
+    "cents": 3725,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Seua Rhong Haii",
+    "desc": "Grilled Snake River Farm Wagyu beef flank steak, tamarind sauce",
+    "cents": 4025,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Panang Neua",
+    "desc": "Slow braised bone-in short rib in Panang curry, grilled broccolini",
+    "cents": 4500,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Khao Soi Neua",
+    "desc": "Slow-cooked boneless beef ribs in Northern Thai yellow curry",
+    "cents": 3750,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Volcano Cup Noodles",
+    "desc": "Spicy noodles stir-fried with house-made Godmother sauce, braised short ribs",
+    "cents": 3550,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Basil Bomb",
+    "desc": "Thai chili basil stir-fried with tiger prawns, calamari, scallops",
+    "cents": 4000,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Little Lao Platter",
+    "desc": "",
+    "cents": 9900,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Crispy Branzino",
+    "desc": "Fried whole branzino on hot metal plate with vegetables, crispy shallots",
+    "cents": 4700,
+    "section": "Specials",
+    "label": ""
+   },
+   {
+    "name": "Pad Thai Chai Ya",
+    "desc": "Thin rice noodles, cage free egg, tofu, coconut milk, tamarind",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad See You",
+    "desc": "Flat rice noodles, cage free egg, carrot, Asian broccoli",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad Kee Mow",
+    "desc": "Flat rice noodles, garlic, bamboo shoots, bell pepper, tomato",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Thai Fried Rice",
+    "desc": "Cage free egg, white onion, green onion, tomato, cilantro",
+    "cents": 1950,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad Ka Pow",
+    "desc": "Thai basil, garlic, fresh chili, bell pepper, jalapeno",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad Asian Broccoli",
+    "desc": "Spicy XO sauce, garlic",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad Spicy Eggplant",
+    "desc": "Eggplant, bell pepper, garlic, Thai basil, jalapeno",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad Fresh Ginger Sauce",
+    "desc": "Black and white mushrooms, white onion, green onion, fresh ginger",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Pad Khua Kling",
+    "desc": "Sauteed southern dry curry paste, fresh peppercorn, krachai",
+    "cents": 2050,
+    "section": "Street Food",
+    "label": "from"
+   },
+   {
+    "name": "Jasmine Rice",
+    "desc": "",
+    "cents": 400,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Brown Rice",
+    "desc": "",
+    "cents": 495,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Sticky Rice",
+    "desc": "",
+    "cents": 495,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Coconut Rice",
+    "desc": "",
+    "cents": 595,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Bone Broth",
+    "desc": "",
+    "cents": 625,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Fried Egg",
+    "desc": "",
+    "cents": 450,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Crispy Roti",
+    "desc": "",
+    "cents": 550,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Steamed Noodles",
+    "desc": "",
+    "cents": 700,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Steamed Veggies",
+    "desc": "",
+    "cents": 700,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Peanut Sauce",
+    "desc": "",
+    "cents": 700,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Cucumber Salad",
+    "desc": "",
+    "cents": 700,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Crispy Pork Belly",
+    "desc": "",
+    "cents": 1600,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Side Curry Sauce",
+    "desc": "",
+    "cents": 800,
+    "section": "Side Order",
+    "label": ""
+   },
+   {
+    "name": "Kid's Fried Rice with Egg",
+    "desc": "",
+    "cents": 1375,
+    "section": "Kid's Menu",
+    "label": "from"
+   },
+   {
+    "name": "Kid's Rice Noodles",
+    "desc": "Rice noodles sauteed with egg and broccoli",
+    "cents": 1375,
+    "section": "Kid's Menu",
+    "label": "from"
+   },
+   {
+    "name": "Kid's Crispy Chicken",
+    "desc": "Served with jasmine rice and plum sauce",
+    "cents": 1375,
+    "section": "Kid's Menu",
+    "label": ""
+   },
+   {
+    "name": "Daughter Croissant Bread Pudding",
+    "desc": "House made warm croissant bread pudding with caramel sauce",
+    "cents": 1750,
+    "section": "Dessert",
+    "label": ""
+   },
+   {
+    "name": "Thai Vacation",
+    "desc": "Warm coconut sticky rice with ice cream in half young coconut",
+    "cents": 1700,
+    "section": "Dessert",
+    "label": ""
+   },
+   {
+    "name": "Choco Cake",
+    "desc": "Moist chocolate cake with vanilla ice cream",
+    "cents": 1750,
+    "section": "Dessert",
+    "label": ""
+   },
+   {
+    "name": "Luk Sao Platter",
+    "desc": "Chef's choice dessert with fresh fruits and vanilla ice cream",
+    "cents": 3850,
+    "section": "Dessert",
+    "label": ""
+   }
+  ],
+  "price_note": "Their menu and prices are on the order page of their own site, daughterthai.com",
+  "logo_url": "https://static-content.owner.com/funnel/images/c4a68f01-99a2-4502-a493-46c0a262753c",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Oakland • Goods', sent 2026-09-13",
+   "Only one location found; the /menu ordering page itself states 'Single Location: 6118 Medau Pl, Oakland, CA' — no other Daughter Thai locations exist to list.",
+   "Site states the restaurant won Food Network's 'Thai Takedown' Season 61.",
+   "Hours are split lunch/dinner service each day (not one continuous block); represented above joined with '&' per day group, all from the homepage's stated schedule.",
+   "Researcher's source note: prices read from daughterthai.com/menu (an Owner.com storefront on their own domain), which says 'Single Location: 6118 Medau Pl, Oakland, CA'",
+   "Oakland's Asian food seat is Cambodian Street Food's, so the yellow sheet at Tier 1 (his rule of 9 September)"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_mexihibachi",
+  "name_exact": "MexiHibachi",
+  "one_line": "Mexican and Japanese hibachi, together, in Pinole",
+  "cuisine": "Mexican-Japanese fusion",
+  "address": "1578 Fitzgerald Drive, Pinole, CA 94564",
+  "phone": "415.604.7135",
+  "email": "MexiHibachi@gmail.com",
+  "hours": null,
+  "instagram": "mexihibachi",
+  "site_kind": "own-domain",
+  "site_url": "https://mexihibachi.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no menu or prices online; their own site says to text 415.604.7135 for the menu",
+  "logo_url": "https://img1.wsimg.com/isteam/ip/c5a0b373-0e44-4bd6-bdfc-16df4f99c6ce/IMG_1501.PNG",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Pinole • Goods', sent 2026-09-13",
+   "Researcher's source note: mexihibachi.com prints no menu; their Toast page (order.toasttab.com/online/mexihabachi-1578-a-fitzgerald-dr) said online ordering is unavailable, with no items; marketplaces were not used",
+   "Own site publishes no menu or prices at all -- it only says 'Text Menu @ 415.604.7135' and points customers to DoorDash/UberEats for delivery (both excluded per research rules).",
+   "No hours are printed as text anywhere on their own site; the only hours-adjacent signal is an embedded Google Maps widget, which is Google-sourced rather than the business's own text, so hours were left null rather than trusted.",
+   "Site is a single sparse page (GoDaddy Website Builder/Airo) with no dine-in language, storefront photos, or hours -- could not independently confirm from their own site whether 1578 Fitzgerald Drive is a walk-in shop or a delivery-only/commissary kitchen; address was kept because a Google Maps pin for it appears embedded on their own page.",
+   "No other MexiHibachi locations found on their own site; only the single Pinole address is referenced.",
+   "Site also links their own TikTok (@mexihibachi) and Yelp page, but Yelp was not used as a source of facts per research rules.",
+   "Could not locate or reach the business's own order.online storefront (the page reportedly opened by Instagram's 'Order food' button, header 'MEXIHIBACHI', hours '11:45 AM - 6:40 PM', Featured Items 'New York Steak & ...'): tried WebSearch for 'order.online mexihibachi Pinole', domain-restricted searches on order.online and bigbowl.order.online, a search for the DoorDash-style slug 'mexihibachi-pinole' on order.online, and browsing order.online's own homepage directly -- none surfaced a working MexiHibachi store URL, only third-party marketplace listings (DoorDash, UberEats, Grubhub, Postmates, Beyond Menu) which are excluded per research rules. A direct Google search for the URL was also blocked by Google's automated-traffic verification challenge, which was not bypassed.",
+   "Found a single-restaurant Toast ordering page at https://order.toasttab.com/online/mexihabachi-1578-a-fitzgerald-dr (own storefront, not a marketplace), but as of this check (2026-09-13, browser-rendered) it displayed 'Currently not accepting online orders' / 'Online ordering is currently unavailable. Please contact the restaurant to place an order.' with no menu items or prices shown, so nothing could be captured from it."
+  ],
+  "blocked": null
+ }
+]

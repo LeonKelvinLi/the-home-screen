@@ -1000,4 +1000,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'daly-city-goods-8': 'b_piwings', //                            Chicken wings
   'oakland-goods2-4': 'b_pizzaponte', //                          Italian is Philomena Pizza's; yellow sheet, Tier 1
   'beasty-services2-20': 'b_claireandersonhomes', //              BEASTY Services is full; real estate, a new market
+  /* 2026-09-13 morning: Daughter Thai on Oakland's yellow sheet at Tier 1,
+     MexiHibachi on Pinole's open Mexican food seat. */
+  'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1
+  'pinole-goods-1': 'b_mexihibachi', //                           Mexican food — Mexican and Japanese hibachi
 }
