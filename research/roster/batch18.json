@@ -1771,7 +1771,7 @@
     "label": ""
    }
   ],
-  "price_note": "Prices taken from the site's own menu page (https://baithak.us/baithak-indian-restaurant-menu-dublin-ca/), which lists the full food and drink menu as text with printed prices.",
+  "price_note": "Prices are from the menu on their own site",
   "logo_url": "https://baithak.us/wp-content/uploads/2025/03/Logo-Orange_small_website.png",
   "logo_px": null,
   "flags": [
@@ -1779,7 +1779,8 @@
    "Hours conflict: the homepage, happy-hour page, and weekend-brunch page footers all state 'Open Daily: 11:00 AM – 10:00 PM', but the Contact Us page (https://baithak.us/contact-us/) states 'Mon - THUR: 11AM - 9PM / Fri, SAT: 11AM - 10PM / SUN: 11AM - 9PM'. Because these disagree, hours is set to null.",
    "Email conflict: the homepage, happy-hour page, and weekend-brunch page footers all list info@baithak.us, but the Contact Us page lists baithak@baithak.us. Because these disagree, email is set to null.",
    "No second location is mentioned anywhere on the site; all pages checked point to the single Dublin, CA address.",
-   "Replaces the hand-written entry of 2026-08 that said they publish no prices: their own menu page now prints them"
+   "Replaces the hand-written entry of 2026-08 that said they publish no prices: their own menu page now prints them",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Prices taken from the site's own menu page (https://baithak.us/baithak-indian-restaurant-menu-dublin-ca/), which lists the full food and drink menu as text with printed prices."
   ],
   "blocked": null
  }

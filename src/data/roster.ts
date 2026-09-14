@@ -66,6 +66,10 @@ const seed = (
   extra?: Partial<LocalSeed>,
 ): LocalSeed => {
   const research = ROSTER_RESEARCH[slug]
+  /* A seed that brings its own menu retires the placeholder the same way
+     research does below. Chef Jeff's menu was read off their own board and
+     written here by hand, and it rendered under "still gathering details". */
+  const ownMenu = !!(extra?.items?.length || extra?.sections?.length || extra?.groups?.length || extra?.quoteOnly)
   const base: LocalSeed = {
     slug,
     name,
@@ -75,7 +79,7 @@ const seed = (
     color,
     prep: 0,
     category: 'Roster',
-    contactOnly: extra?.address || extra?.phone ? ROSTER_NOTE_PARTIAL : ROSTER_NOTE,
+    contactOnly: ownMenu ? undefined : extra?.address || extra?.phone ? ROSTER_NOTE_PARTIAL : ROSTER_NOTE,
     items: [],
     ...extra,
   }
@@ -204,7 +208,9 @@ export const ROSTER_SEED: LocalSeed[] = [
       welcome: '$10 off each all-you-can-eat, no limit on your first visit.',
       loyalty: 'A free can of soda with any purchase, any visit.',
     },
-    site: 'https://www.yelp.com/biz/harumi-sushi-and-hibachi-livermore',
+    /* No site: the Yelp page that stood here is not theirs, and neither is
+       harumisushihibachi.com, an auto-generated booking site (checked
+       2026-09-13). The tile's outline says so until they have one. */
     logoTemplate: 'band', logoLines: ['HARUMI', 'AYCE'],
   }),
   /*
@@ -2144,22 +2150,24 @@ export const ROSTER_SEED: LocalSeed[] = [
      … Give him that empty space on the home screen. And put a glow around
      his page."
 
-     The empty space is seat 15, open since Smash Burgers Bros was bumped to
-     the yellow sheet — a burger seat for a burger shop. The glow is the
-     Tier 3 add-on, seated by his instruction rather than by a payment.
+     The empty space is seat 18. The glow is the Tier 3 add-on, seated by his
+     instruction rather than by a payment.
 
-     EVERY FACT HERE IS THEIR OWN, off their own Instagram profile, which he
-     sent as a screenshot: the address, the number, the hours, and the line
-     about what they sell. They have no website of their own — the profile
-     links a Facebook page — so the page asks for one. THEIR MENU IS NOT
-     HERE: it is published only through DoorDash and Uber Eats, whose prices
-     run above the counter's, and this repo has never taken a price off a
-     delivery platform. A photo of their menu board is all it needs.
+     THE MENU IS THEIR OWN BOARD, read on 2026-09-13 from the MENU highlight on
+     their own Instagram (@chefjeffssmashburger): the last card is the full
+     chalkboard, every item and price, posted about 59 weeks before it was
+     read. Leon's ask the same night: "make into menu … all kitchens should
+     look the same so when users open its a menu inside". Delivery-app prices
+     were never used. The board prices each burger "Single" and "Make it
+     complete" without saying what complete adds, so the single price is the
+     item's price and the complete price is quoted in its description in the
+     board's own words, not explained. The cheeses are the board's list.
 
-     The mark is their own logo, cut from his photograph of their dining-room
-     wall; the wall's texture is flattened behind it and no part of the mark
-     is redrawn. The two dishes are HIS photographs of the food he was handed,
-     credited to him rather than dressed up as the shop's own photography.
+     Address, number and hours are off their Instagram profile. They have no
+     website of their own; the profile links a Facebook page, so the page asks
+     for one. The mark is their own logo, cut from Glenn's photograph of their
+     dining-room wall. The smashburger picture on Single Smashed is Glenn's own
+     photograph of the burger he was handed.
   */
   seed('chef-jeffs-smash-burger', "Chef Jeff's Smash Burger", "Chef Jeff's", 'Smashburgers', '#2B2B2E', {
     glow: true,
@@ -2170,22 +2178,62 @@ export const ROSTER_SEED: LocalSeed[] = [
     hours: 'Tue–Sat 10:30am–8pm; closed Sun & Mon',
     instagram: 'chefjeffssmashburger',
     needsSite: true,
-    contactOnly:
-      'Smashed angus patties with their own sauces, on West 2nd Street since 2024. They have ' +
-      'no website of their own yet — everything here is off their own Instagram profile. Their ' +
-      'menu is published only through the delivery apps, whose prices run above the counter’s, ' +
-      'so no prices are listed here until they send their own.',
     logoTemplate: 'band', logoLines: ['SMASH', 'BURGER'], logoFace: 'condensed',
-    photos: [
+    sections: [
       {
-        src: '/food/chef-jeffs-smash-burger-1-lg.webp',
-        alt: 'A smashburger with crisped cheese edges in checkered paper',
-        credit: 'Photographed by Glenn Malicdem',
+        name: 'Burgers and sandwiches',
+        items: [
+          ['Single Smashed', 'Smashed 100% Angus chuck ground beef patty, cheese, lettuce, tomatoes, grilled onions, pickles and secret sauce. Make it complete: $17.', 1100, 'chef-jeffs-smash-burger-1'],
+          ['Double Smashed', 'Two smashed 100% Angus chuck ground beef patties, cheese, lettuce, tomatoes, grilled onions, pickles and secret sauce. Make it complete: $20.', 1600],
+          ['Sweet n Spicy Chicken', 'Two breaded chicken tenderloins on a toasted bun with cheese, shredded lettuce, sliced tomato, raw onion, pickles and their homemade sweet and hot sauce. Make it complete: $17.', 1100],
+          ['Breakfast Croissant', 'Bacon, sausage patty, egg frittata and cheese on a buttery toasted croissant. Make it complete: $17.', 1100],
+        ],
       },
       {
-        src: '/food/chef-jeffs-smash-burger-2-lg.webp',
-        alt: 'A burger boxed with fries and a cup of sauce',
-        credit: 'Photographed by Glenn Malicdem',
+        name: 'Smashed fries and salad',
+        items: [
+          ['Smashed Fries', 'A smashed 100% Angus chuck ground beef patty, cheese, bacon, tomatoes, grilled onions, pickles and secret sauce on a bed of fries. Make it complete: $15.', 1300],
+          ['Smashed Salad', 'A smashed 100% Angus chuck ground beef patty, cheese, tomatoes, grilled onions, bacon, pickles and secret sauce on a bed of lettuce. Make it complete: $17.', 1300],
+        ],
+      },
+      {
+        name: 'Sides',
+        items: [
+          ['Onion Rings', 'Crunchy beer-battered onion rings', 700],
+          ['Fries', 'Crispy seasoned shoestring fries', 600],
+          ['Cheese Fries', 'Crispy seasoned fries smothered in nacho cheese with bacon', 900],
+        ],
+      },
+      {
+        name: 'Kids',
+        items: [
+          ['Smashburger with Fries', '', 800],
+          ['Chicken Strips with Fries', '', 800],
+        ],
+      },
+      {
+        name: 'Add-ons',
+        items: [
+          ['Thick Cut Bacon', '', 300],
+          ['Extra Cheese', 'American, cheddar, habanero jack, Monterey jack or Swiss', 50],
+          ['Real Swiss Cheese', '', 50],
+          ['Grilled Mushrooms', '', 50],
+          ['Fresh Jalapeños', '', 50],
+        ],
+      },
+      {
+        name: 'Drinks',
+        items: [
+          ['Milkshake, Medium', 'Chocolate, cookies and cream, strawberry, PB&C (peanut butter and chocolate) or vanilla', 575],
+          ['Milkshake, Large', 'Chocolate, cookies and cream, strawberry, PB&C (peanut butter and chocolate) or vanilla', 675],
+          ['Cold Drink', 'Canned soda or bottled water', 200],
+        ],
+      },
+      {
+        name: 'Dessert',
+        items: [
+          ['Gourmet Brownies', 'Chocolate salted caramel, peanut butter toffee, Peruvian chocolate chunk or gluten-free chocolate', 350],
+        ],
       },
     ],
   }),
@@ -2290,6 +2338,25 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['Mexi', 'Hibachi'], logoFace: 'condensed',
     site: 'https://mexihibachi.com/',
     siteCta: 'Visit their site',
+  }),
+
+  /* ---- 2026-09-13 evening. Research in research/roster/batch23.json. ---- */
+  /* Gumbo Social, "San Francisco • Goods — Needs website" — gumbo, po'boys
+     and catering on 3rd Street in Bayview. No goods category fits a gumbo
+     kitchen, so San Francisco's yellow sheet, at the free Tier 1 his rule of
+     9 September sets. NOT OUTLINED as siteless: gumbosocial.com is live (a
+     Wix site updated 2026-09-08, with the menu this record carries), and the
+     outline on the tile reads "no website" to a screen reader and marks a
+     business for a website pitch. His note is passed back to him instead.
+     Café Mélange at City Hall, the counter his Apple Maps card showed, is the
+     owner's separate sister café; none of its details are used here. The mark
+     is their own logo, cut from his screenshot of their Instagram picture. */
+  seed('gumbo-social', 'Gumbo Social', 'Gumbo Social', 'Soul food & gumbo', '#1C7C85', {
+    icon: 'gumbo-social',
+    logoTemplate: 'wordmark', logoLines: ['Gumbo', 'Social'], logoFace: 'grotesk',
+    site: 'https://www.gumbosocial.com/',
+    siteCta: 'See their menu',
+    tier: 1,
   }),
 ]
 

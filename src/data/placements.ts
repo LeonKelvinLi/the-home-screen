@@ -1004,4 +1004,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      MexiHibachi on Pinole's open Mexican food seat. */
   'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1
   'pinole-goods-1': 'b_mexihibachi', //                           Mexican food — Mexican and Japanese hibachi
+  /* 2026-09-13 evening: Gumbo Social on San Francisco's yellow sheet, Tier 1. */
+  'san-francisco-goods2-10': 'b_gumbosocial', //                  no gumbo or soul food seat; yellow sheet, Tier 1
 }

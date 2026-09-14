@@ -106,6 +106,7 @@ export const ICON_LUMA: Record<string, number> = {
   'golden-state-ballerz': 0.7936,
   'good-compenny': 0.5133,
   'griffo-distillery': 0.7381,
+  'gumbo-social': 0.7842,
   'gyro-king': 0.5748,
   'happy-bay-paws': 0.8907,
   'healthy-spot-berkeley': 0.5945,

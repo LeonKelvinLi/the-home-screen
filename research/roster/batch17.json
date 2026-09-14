@@ -712,7 +712,7 @@
     "label": ""
    }
   ],
-  "price_note": "All prices came from the full text menu on Belly's own site at https://www.bellyrestaurants.com/menus. That page notes online ordering is also available via Toast (toasttab.com/belly), but prices here were read directly from Belly's own menu page, not from Toast.",
+  "price_note": "Prices are from the menu on their own site",
   "logo_url": "https://static.wixstatic.com/media/6511a6_43e3c4b2fc0844c19b09eb35e25c54ba~mv2.jpg",
   "logo_px": "525x190",
   "flags": [
@@ -723,7 +723,8 @@
    "Instagram reel https://www.instagram.com/reel/DdDEq35z2g5/ loaded fine (no login wall). It was posted by a third-party food/lifestyle account, @antoinetterzz, not by Belly itself, captioned 'My favorite chicken caesar wrap in Oakland! #bayarea #oakland #bayareafoodie #lunchidea @bellyoakland' — the reel reviews/shows Belly's Chicken Caesar Wrap. Note it tags the handle @bellyoakland, which differs from the Instagram handle Belly's own site links to (@bellyuptown).",
    "Phone number punctuation varied slightly by page ('1-510-350-8799' vs '1 510 350 8799') but the digits matched everywhere; not a real contradiction.",
    "Belly's own about page gives no formal cuisine label, only the tagline 'Good food, no frills'; the 'Korean-Mexican fusion' tag used here is inferred from the menu itself (kimchi, bulgogi, Korean-style tacos/burritos/bowls alongside pico de gallo, crema, and Cheddar).",
-   "Instagram: their site's footer links @bellyuptown, but the profile in Glenn's screenshot is @bellyoakland — display name Belly, 5634 College Ave, linking bellyrestaurants.com — and the reel tags @bellyoakland too, so that handle is carried; the site's phone 1-510-350-8799 is printed the way their Instagram contact sheet prints it, (510) 350-8799"
+   "Instagram: their site's footer links @bellyuptown, but the profile in Glenn's screenshot is @bellyoakland — display name Belly, 5634 College Ave, linking bellyrestaurants.com — and the reel tags @bellyoakland too, so that handle is carried; the site's phone 1-510-350-8799 is printed the way their Instagram contact sheet prints it, (510) 350-8799",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: All prices came from the full text menu on Belly's own site at https://www.bellyrestaurants.com/menus. That page notes online ordering is also available via Toast (toasttab.com/belly), but prices here were read directly from Belly's own menu page, not from Toast."
   ],
   "blocked": "order.toasttab.com/online/belly (Toast ordering page) returned HTTP 403 Forbidden when fetched, so it could not be used to cross-check hours or prices."
  },

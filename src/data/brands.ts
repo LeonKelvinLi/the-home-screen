@@ -513,6 +513,17 @@ const SEED: Seed[] = [
       is theirs now. Seven locations, Oakland the flagship; the others are
       Sacramento, Walnut Creek, Hayward, Novato, and Carmel and Indianapolis
       in Indiana.
+
+      THE MENU, 2026-09-13, from the Oakland store's own Toast ordering page
+      (order.toasttab.com/online/hotboys, "World Famous Hotboys Oakland-100%
+      Halal Chicken, 1601 San Pablo Ave"), which their site's structured data
+      names as Oakland's order link. Toast is their own storefront, not a
+      marketplace; the DoorDash-run order.online store their buttons also open
+      was not used. Read in a real browser, since Toast answers a bot check to
+      fetches. Left out: the beer (no age check here), apparel, donations, the
+      "featured" repeats, and the bone-in chicken, all out of stock that day.
+      Leon's ask the same night: "all kitchens should look the same so when
+      users open its a menu inside".
     */
     cuisine: 'Hot fried chicken', tagline: 'Oakland’s original spicy hot fried chicken',
     color: '#F2B705', icon: 'hotboys', prep: 15, category: 'Menu',
@@ -520,9 +531,115 @@ const SEED: Seed[] = [
     email: 'dm@worldfamoushotboys.com',
     instagram: 'worldfamoushotboys',
     hours: 'Sun–Wed 9am–10pm, Thu 9am–midnight, Fri–Sat 9am–2am',
-    contactOnly:
-      'Oakland’s original spicy hot fried chicken — the sandwich, tenders, chicken and waffles, loaded fries and bonuts, at your heat level from Southern to HOT. Their own site publishes no prices; those are on their ordering page.',
+    siteNote: 'Prices are from their Oakland store’s own ordering page.',
     items: [],
+    sections: [
+      {
+        name: 'Combos',
+        items: [
+          ['Sando Combo', 'The Sando and your choice of side. Drink sold separately.', 1650],
+          ['Tender Sando Combo', 'A white meat Tender Sando, dressed with their house made money sauce, slaw and pickles, with a side of your choice. Drink sold separately.', 1300],
+          ['Chicken Tender Combo', 'Two jumbo chicken tenders and a side of your choice. Drink sold separately.', 1550],
+          ['El Guapo Combo', 'El Guapo sando and a side. Drink sold separately.', 1700],
+        ],
+      },
+      {
+        name: 'Sandos',
+        items: [
+          ['Sando', 'Their World Famous Sandwich', 1350],
+          ['Tender Sando', 'One white meat tender, house made money sauce, slaw and pickles', 900],
+          ['El Guapo', 'Their hot chicken, spiced to your preference, topped with pickles and liquid gold (cheese sauce)', 1400],
+          ['Veggie Sando', 'Their World Famous Sandwich', 1400],
+        ],
+      },
+      {
+        name: 'Tenders',
+        items: [
+          ['5 Pack Tenders', '', 2500],
+          ['10 DERS', '', 5000],
+          ['Chicken Nuggies', '', 1000],
+          ['Hot Hot Tender, One Tender Challenge', 'Spiced with their famous Hot Hot spice blend. See if you can stand the heat!', 850],
+        ],
+      },
+      {
+        name: 'Premium Fries and Bowls',
+        items: [
+          ['Loaded', 'Krinkle Kut fries topped with their World Famous fried chicken spiced to your liking, slaw, pickles and money sauce', 1550],
+          ['Guap Fries', 'Krinkle cut fries with their World Famous fried chicken spiced to your preference, cheese sauce and chives', 1550],
+          ['Swamp', 'Krinkle Kut fries topped with their World Famous fried chicken spiced to your liking, collard greens and money sauce', 1550],
+          ['Hoosier Fries', 'Krinkle cut fries topped with house made sage gravy, shredded cheddar and chives', 1550],
+          ['World Famous Smackbowl', 'House made mac n cheese with dark meat nuggies spiced the way you like, Dirty Dave’s Ranch, hot sauce and chives', 1700],
+        ],
+      },
+      {
+        name: 'Etouffee',
+        items: [
+          ['Etou Fries', 'Krinkle cut fries topped with their scratch made chicken etouffee and chives', 1400],
+          ['Chicken Etouffee', '', 1400],
+        ],
+      },
+      {
+        name: 'Salad and Wrap',
+        items: [
+          ['Stunna Salad', 'Fresh arugula with grape tomatoes and red onions. Make it vegan with house made vegan Caesar and vegan chicken, or top it with a fried chicken tender and Dirty Dave’s Ranch.', 1400],
+          ['Stunna Wrap', 'The Stunna Salad in a warm flour tortilla, vegan or with a fried chicken tender and Dirty Dave’s Ranch', 1500],
+        ],
+      },
+      {
+        name: 'Breakfast',
+        items: [
+          ['WF Chicken & Waffles', '', 2100],
+          ['Half Order Chicken & Waffles', '', 1250],
+          ['Pollo Moco', '', 1400],
+          ['Bonuts N’ Gravy', '', 1100],
+          ['Side Waffle', '', 900],
+          ['Side Honey Butter', '', 150],
+          ['Maple Syrup', '', 150],
+        ],
+      },
+      {
+        name: 'Sides',
+        items: [
+          ['Fries', '', 550],
+          ['Mac n’ Cheese', '', 600],
+          ['Greens', '', 600],
+          ['Slaw', '', 550],
+          ['Cheese Sauce', '', 600],
+          ['Sage Gravy', '', 600],
+          ['Side Etouffee', 'Scratch made chicken etouffee in an 8 oz cup, with white rice and chives', 600],
+          ['Side Bonut N Gravy', '', 600],
+          ['White Rice', '', 300],
+          ['Money Sauce', '', 75],
+          ['Dirty Dave’s Top Secret Ranch', '', 100],
+          ['Xtra Pickles', '', 100],
+        ],
+      },
+      {
+        name: 'Desserts',
+        items: [
+          ['Bonuts', '', 500],
+          ['Angry Bonuts', 'When you like your dessert hot and sweet. Choose your spice level.', 500],
+          ['Side Caramel Sauce', '', 125],
+          ['Side Chocolate Sauce', '', 125],
+        ],
+      },
+      {
+        name: 'Drinks',
+        items: [
+          ['Coke', '', 275],
+          ['Diet Coke', '', 275],
+          ['Sprite', '', 275],
+          ['Fanta Orange', '', 275],
+          ['MM Lemonade', '', 275],
+          ['Pibb Xtra', '', 275],
+          ['Dasani Bottled Water', '16.9 oz', 225],
+          ['Red Bull', '', 400],
+          ['Red Bull Sugar Free', '', 400],
+          ['Red Bull Peach', '', 400],
+          ['Red Bull Watermelon', '', 400],
+        ],
+      },
+    ],
   },
   {
     slug: 'baked-blooms', name: 'Baked Blooms', label: 'Baked Blooms',
@@ -744,6 +861,17 @@ const SEED: Seed[] = [
       fourteen items and drinks, not a price on it — so the four ported prices
       were never theirs and are gone. Their address is published with no ZIP,
       and it is carried exactly as they write it rather than filled in.
+
+      THE MENU, 2026-09-13, from their own Toast store for this shop
+      (order.toasttab.com/online/winky-dinky-dogs-325-19th-street, "Pickup from
+      325 19th street, Oakland"). Their site does not link it, but it is their
+      own storefront for the address on this page, and their Instagram bio
+      lists this shop. Read in a real browser, since Toast answers a bot check
+      to fetches. Left out: the "Off Site" event bar (cocktails, beer, wine and
+      spirits, with no age check here) and the event-only gumbo and dog. Their
+      Temescal shop at 4521 Telegraph has its own Toast store and is not
+      seated. Leon's ask the same night: "all kitchens should look the same so
+      when users open its a menu inside".
     */
     cuisine: 'Hot dogs', tagline: 'Fresh. Delicious. Oakland.',
     color: '#C81E1E', icon: 'winkydinky', prep: 10, category: 'Menu',
@@ -752,9 +880,110 @@ const SEED: Seed[] = [
     email: 'info@winkydinkydogs.com',
     instagram: 'thewinkydinkydogs',
     hours: 'Mon–Fri 11am–8pm, Sat–Sun noon–6pm',
-    contactOnly:
-      'Dogs in beef, chicken, pork or vegan — the Original, the Mac N Chz, the Oaklandish with their chilli — plus a smash burger, a chicken sandwich, gumbo and loaded fries. Their menu is published without prices.',
+    siteNote: 'Prices are from their 19th Street shop’s own ordering page.',
     items: [],
+    sections: [
+      {
+        name: 'Hot Dogs',
+        items: [
+          ['Winky Dinky Dog Original Dog', 'Peppers and onions, mayo', 1250],
+          ['Winky Dinky Jerk Dog', 'Traditional Walkerswood seasoning with smoked honey', 1400],
+          ['Mac n Chz Winky Dinky', 'Their world famous mac n chz', 1400],
+          ['The Oaklandish', 'Their world famous chilli', 1500],
+          ['The World Famous Hotdog Co', 'Bacon, grilled onions and cherry peppers', 1500],
+          ['Boudin', '', 1375],
+        ],
+      },
+      {
+        name: 'Burgers and Sandwiches',
+        items: [
+          ['Winky Dinky Smash Burger', 'Lettuce, tomato, onions, cheese', 1475],
+          ['Vegan Burger', '', 1575],
+          ['Winky Dinky Fried Chicken Sandwich', 'Red hot ranch aioli sauce', 1375],
+          ['Fish Burger', '', 1750],
+        ],
+      },
+      {
+        name: 'Plates',
+        items: [
+          ['Fried Ribs (3 pieces)', 'Their special', 1650],
+          ['Winky Dinky Wings', 'Flavas: garlic pepper, sweet and hot, parmesan', 1650],
+          ['Turkey Wings', '', 2475],
+          ['Baked Chicken', '', 2475],
+          ['Smoked Chicken', '', 1875],
+          ['Whole Chicken', '', 3475],
+          ['Beef Ribs', '', 1875],
+          ['Oxtails', '', 2975],
+          ['Chicken & Waffles', '', 1975],
+          ['Fish Plate', '', 2750],
+          ['Fish & Fries', '', 2250],
+          ['Creole Carols Hot Sausage', '', 1650],
+        ],
+      },
+      {
+        name: 'Gumbo',
+        items: [
+          ['Tyranny Gumbo', '', 3250],
+          ['Gumbo Burrito', '', 2750],
+        ],
+      },
+      {
+        name: 'Fries and Sides',
+        items: [
+          ['Chicken Loaded Fries', 'With jerk sauce', 1750],
+          ['Regular Fries', '', 950],
+          ['Chicken Salad', '', 1650],
+          ['Mac n Chz', '', 650],
+          ['Shrimp Salad', '', 750],
+          ['Salad', '', 750],
+          ['Rice', '', 375],
+          ['Chow Chow', '', 650],
+          ['Pickles', '', 600],
+          ['Chips', 'Rap Snacks', 475],
+          ['Hot Sauce', 'Bottle', 1200],
+          ['BBQ Sauce', 'Bottle', 1500],
+        ],
+      },
+      {
+        name: 'Sweets',
+        items: [
+          ['UBE Cheese Cake', '', 850],
+          ['NY Style Cheese Cake', '', 850],
+          ['Strawberry Short Cake', '', 850],
+          ['Pound Cake', '', 850],
+          ['Lemon Cake', '', 650],
+          ['Brownies', '', 975],
+          ['Cookies', '', 650],
+          ['Pies', '', 1150],
+          ['Pudding', '', 1200],
+          ['Ice Cream', '', 650],
+          ['Tasty Treats Small', '', 1200],
+          ['Tasty Treats Big', '', 2500],
+        ],
+      },
+      {
+        name: 'Drinks',
+        items: [
+          ['Homemade Lemonade', '', 750],
+          ['Kool Aide', '', 750],
+          ['Grape Kool Aid', '', 750],
+          ['SeaMoss Drink', '', 950],
+          ['Organic Drinks', '', 750],
+          ['Coconut Water', '', 650],
+          ['Ting', '', 650],
+          ['Rockstar', '', 575],
+          ['Coca-Cola, Bottle', '', 400],
+          ['Sprite, Bottle', '', 400],
+          ['Fanta Orange, Bottle', '', 400],
+          ['7UP', '', 400],
+          ['Pure Leaf Sweet Tea', '', 400],
+          ['Life Water', '', 400],
+          ['S. Pellegrino', '', 400],
+          ['Apple Juice', '', 400],
+          ['Coca-Cola, Can', '', 275],
+        ],
+      },
+    ],
   },
   {
     slug: 'boba', name: 'Boba', label: 'Boba',

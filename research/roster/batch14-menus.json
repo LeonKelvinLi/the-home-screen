@@ -12126,12 +12126,13 @@
     "label": null
    }
   ],
-  "price_note": "only the Soul Bowl is priced on their own site; the rest of the menu sits behind order.online links",
+  "price_note": "Only the Soul Bowl is priced on their own site",
   "logo_url": "https://storage.googleapis.com/msgsndr/JC1YUdvjnhXZlLhDoj4c/media/69784cc8a87bebf1d8313907.jpg",
   "logo_px": "500x500",
   "flags": [
    "logo reads 'SIMPLY SOUPS and more... ESTD 2024'",
-   "site calls itself 'New in Antioch'; every menu button leads off-site to order.online"
+   "site calls itself 'New in Antioch'; every menu button leads off-site to order.online",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: only the Soul Bowl is priced on their own site; the rest of the menu sits behind order.online links"
   ],
   "blocked": false,
   "photos": [

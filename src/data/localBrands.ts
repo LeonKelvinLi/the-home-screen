@@ -718,10 +718,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Ice cream',
     site: 'https://jonnysitalianice.com',
     siteCta: 'See their Instagram',
-    siteNote: 'Their site is still a placeholder. Instagram is where they post.',
+    siteNote: 'Instagram is where they post.',
     address: '1323 Sunnyvale Saratoga Rd, Sunnyvale',
     contactOnly:
-      'A walk-up counter, so there is nothing to order here. They publish no menu and no prices anywhere \u2014 not on their site, which is still a placeholder, and not on Instagram \u2014 so rather than guess at them, this lists where they are and when they are open. Open Monday to Thursday noon to 11pm, and Friday to Sunday noon to midnight. They say they are the first in Sunnyvale to put soft serve and Italian ice in the same cup.',
+      'A walk-up counter, so there is nothing to order here. They publish no menu or prices. Open Monday to Thursday noon to 11pm, and Friday to Sunday noon to midnight. They say they are the first in Sunnyvale to put soft serve and Italian ice in the same cup.',
     items: [],
   },
   {
@@ -3206,7 +3206,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       platform: 'Instagram',
     },
     contactOnly:
-      'A Bay Area rapper and producer. His own site is still largely the template it was built from — the contact details on it are Squarespace’s placeholders, not his — so only his music and shows are pointed to here. BEASTY has not spoken to him yet: this spot is held, not taken.',
+      'A Bay Area rapper and producer. BEASTY has not spoken to him yet: this spot is held, not taken.',
     items: [],
   },
   {
@@ -7405,7 +7405,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       asking him.
     */
     quoteOnly:
-      'An Arabic coffee house on West Grand in Oakland: coffee, tea, cakes and pastries, with hummus and falafel baskets. Their menu is pictures on their own site and their ordering page will not answer a fetch, so no prices are listed here yet.',
+      'An Arabic coffee house on West Grand in Oakland: coffee, tea, cakes and pastries, with hummus and falafel baskets. Their menu is pictures on their own site, so no prices are listed here yet.',
     site: 'https://delahcoffee.com/',
     phone: '(510) 228-8229',
     email: 'info@delahcoffee.com',

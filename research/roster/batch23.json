@@ -1,0 +1,255 @@
+[
+ {
+  "id": "b_gumbosocial",
+  "name_exact": "Gumbo Social",
+  "one_line": "Bayview soul food restaurant for gumbo and po'boys, plus catering",
+  "cuisine": "Soul food & gumbo",
+  "address": "5176 3rd St, San Francisco, CA 94124",
+  "phone": "(415) 655-9195",
+  "email": "GumboSocial415@gmail.com",
+  "hours": "Mon-Tue 11am-3pm, Wed-Sat 11am-6pm",
+  "instagram": "gumbosocial",
+  "site_kind": "own-domain",
+  "site_url": "https://www.gumbosocial.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Smoked Cochon Gumbo",
+    "desc": "Holy Trinity, Slow Roasted Pork Belly, Beef Hot Link, Andouille Sausage. Japanese Takatu Style Broth. Contains Dairy and Wheat.",
+    "cents": 1300,
+    "section": "Gumbos",
+    "label": "$13 / $24"
+   },
+   {
+    "name": "Chicken & Sausage Gumbo",
+    "desc": "Holy Trinity, Chicken, Okra, Sausage, Butter, Flour, Herbs and Spices. Contains Dairy and Wheat.",
+    "cents": 1300,
+    "section": "Gumbos",
+    "label": "$13 / $24"
+   },
+   {
+    "name": "Smoked Turkey Gumbo",
+    "desc": "Holy Trinity, Smoked Turkey, Okra, Butter, Flour, Herbs and Spices. Contains Dairy and Wheat.",
+    "cents": 1300,
+    "section": "Gumbos",
+    "label": "$13 / $24"
+   },
+   {
+    "name": "Vegan Gumbo",
+    "desc": "Holy Trinity, Okra, Black Eyed Peas, Hominy, Mushrooms, Vegetable Broth, Flour, Herbs and Spices. Vegan. Contains Wheat.",
+    "cents": 1300,
+    "section": "Gumbos",
+    "label": "$13 / $24"
+   },
+   {
+    "name": "Shrimp Po'Boy",
+    "desc": "Grilled Shrimp, Social Sauce, Coleslaw. Contains Wheat and Egg.",
+    "cents": 1800,
+    "section": "Po'Boys",
+    "label": ""
+   },
+   {
+    "name": "Pork Po'Boy",
+    "desc": "Roasted Pork, Social Sauce, Coleslaw. Contains Shellfish, Wheat and Egg.",
+    "cents": 1600,
+    "section": "Po'Boys",
+    "label": ""
+   },
+   {
+    "name": "Sausage Po'boy",
+    "desc": "Pork Sausage, Social Sauce, Coleslaw. Contains Wheat and Egg.",
+    "cents": 1600,
+    "section": "Po'Boys",
+    "label": ""
+   },
+   {
+    "name": "Southern Fried Basa Po'boy",
+    "desc": "Fillet of delicate white fish with a lot of flavor coated in traditional southern fish fry batter. Milk, Fish (e.g., bass, flounder, cod), Wheat. No Pork.",
+    "cents": 1800,
+    "section": "Po'Boys",
+    "label": ""
+   },
+   {
+    "name": "Jackfruit Po'Boy",
+    "desc": "Jackfruit, Peppers, Onions, Hearts of Palm. Vegan. Contains Wheat.",
+    "cents": 1600,
+    "section": "Po'Boys",
+    "label": ""
+   },
+   {
+    "name": "Seaburger",
+    "desc": "Basa fish, lettuce, tomato, pickled red onions, pickles, and toasted brioche bun. Dressed with Social sauce. Milk, Fish (e.g., bass, flounder, cod), Wheat. No Pork.",
+    "cents": 1700,
+    "section": "Po'Boys",
+    "label": ""
+   },
+   {
+    "name": "Fried Brussels Sprouts",
+    "desc": "Crispy and seasoned to perfection.",
+    "cents": 900,
+    "section": "More",
+    "label": ""
+   },
+   {
+    "name": "Fries",
+    "desc": "Cajun seasoned fries.",
+    "cents": 700,
+    "section": "More",
+    "label": ""
+   },
+   {
+    "name": "Rice",
+    "desc": "A cup of Rice to pair with any dish.",
+    "cents": 300,
+    "section": "More",
+    "label": "$3 / $6 / $12"
+   },
+   {
+    "name": "Corn Hoecake",
+    "desc": "Served with butter. Ask about seasonal hoecakes.",
+    "cents": 500,
+    "section": "More",
+    "label": "$5 ea."
+   },
+   {
+    "name": "Red Beans and Rice with Roasted Duck",
+    "desc": "Roasted Duck, Holy Trinity, Carrots, Butter, Tomato, Red Beans and Rice. Contains Dairy. Gluten Free.",
+    "cents": 1300,
+    "section": "More",
+    "label": "$13 / $21"
+   },
+   {
+    "name": "California Greens",
+    "desc": "Kale, Tomato, Onion, Garlic, Spices, Garbanzo, Kidney, and Pinto Beans. Vegan. Gluten Free.",
+    "cents": 1200,
+    "section": "More",
+    "label": "$12 / $20"
+   },
+   {
+    "name": "Louisa Lunch Special",
+    "desc": "Your choice of ½ Po’Boy and ½ Gumbo + Fries (+2 Fish or Shrimp).",
+    "cents": 2000,
+    "section": "Combos & Offers",
+    "label": "from $20"
+   },
+   {
+    "name": "Family Size Gumbo",
+    "desc": "Served hot or cold (heat at home). Rice sold separately.",
+    "cents": 6500,
+    "section": "Combos & Offers",
+    "label": "$65 / $120"
+   },
+   {
+    "name": "Mix & Match for Large Groups - 6 Po'boys",
+    "desc": "Mix and match any 6 po'boys for a set price.",
+    "cents": 9900,
+    "section": "Combos & Offers",
+    "label": ""
+   },
+   {
+    "name": "Mix & Match for Large Groups - 6 Large Gumbos",
+    "desc": "Mix and match any 6 gumbos for a set price.",
+    "cents": 12000,
+    "section": "Combos & Offers",
+    "label": ""
+   },
+   {
+    "name": "Lemon Pound Cake",
+    "desc": "",
+    "cents": 450,
+    "section": "Beverages & Desserts",
+    "label": ""
+   },
+   {
+    "name": "Sparkling Water",
+    "desc": "",
+    "cents": 300,
+    "section": "Beverages & Desserts",
+    "label": ""
+   },
+   {
+    "name": "Rice Krispy Treat",
+    "desc": "",
+    "cents": 425,
+    "section": "Beverages & Desserts",
+    "label": ""
+   },
+   {
+    "name": "Soft Drinks",
+    "desc": "",
+    "cents": 300,
+    "section": "Beverages & Desserts",
+    "label": ""
+   },
+   {
+    "name": "Pork Belly Add-On",
+    "desc": "",
+    "cents": 900,
+    "section": "Add-Ons",
+    "label": ""
+   },
+   {
+    "name": "Jackfruit Add-On",
+    "desc": "",
+    "cents": 900,
+    "section": "Add-Ons",
+    "label": ""
+   },
+   {
+    "name": "Pork Add-On",
+    "desc": "",
+    "cents": 900,
+    "section": "Add-Ons",
+    "label": ""
+   },
+   {
+    "name": "Smoked Turkey Add-On",
+    "desc": "",
+    "cents": 900,
+    "section": "Add-Ons",
+    "label": ""
+   },
+   {
+    "name": "Sausage Add-On",
+    "desc": "",
+    "cents": 900,
+    "section": "Add-Ons",
+    "label": ""
+   },
+   {
+    "name": "Shrimp Add-On",
+    "desc": "",
+    "cents": 900,
+    "section": "Add-Ons",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from the menu on Gumbo Social's own website, which says the menu changes regularly",
+  "logo_url": "https://static.wixstatic.com/media/25988e_aa2b741887d246cd8e58d9d6c3978501~mv2.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'San Francisco • Goods — Needs website', sent 2026-09-13 20:26 PT",
+   "Operator: 'San Francisco • Goods — Needs website' — but gumbosocial.com is LIVE: gumbosocial.com 301-redirects to https://www.gumbosocial.com/ (HTTP 200), a Wix site on their own domain with Menu, Catering, Location/Hours, Events, About, Blog, Press Kit, Brand Guidelines, Merch and Gift Cards pages; sitemap lastmod 2026-09-08 and blog posts up to 2026-08-05. The 'Needs website' note does not match what is published, so site_kind is own-domain, not stopgap (solo.to is only their link-in-bio).",
+   "RESTAURANT vs CITY HALL COUNTER: the restaurant is 5176 3rd St, San Francisco, CA 94124 (Bayview), per gumbosocial.com's Location/Hours page, site footer, catering pick-up info and press releases; the IG bio's 'Restaurant M-T 11-3, W-Sat 11-6' hours are that shop's hours. Café Mélange (City Hall – Ground Floor, Suite 040, 1 Dr Carlton B Goodlett Pl, San Francisco, CA 94102; 415-319-1797; info@cafemelangesf.com; 7:30 AM - 3 PM M-F, per cafemelangesf.com) is a SEPARATE café, not the restaurant: gumbosocial.com's March 5, 2026 press release says Chef Dontaye Ball, owner of Gumbo Social, took ownership of it (grand reopening March 18, 2026), and its July 6, 2026 post calls it 'Gumbo Social's sister restaurant'. The IG bio's 'Gumbo @ Cafe Melange at SF City Hall' and the operator's Apple Maps card (+1 (415) 319-1797, cafemelangesf.com) are that café; none of its address, phone, email or hours are used in the fields above.",
+   "Café Mélange's own menu (cafemelangesf.com/menu) sells Chicken & Sausage Gumbo and Vegan Gumbo at Cup $10 / Bowl $13 ('The selection and prices may change in the future') — different sizes and prices from the restaurant's $13/$24 gumbos; those café prices are not in items.",
+   "Phone: (415) 655-9195 is the restaurant number on gumbosocial.com (Location/Hours page, footer, press releases). solo.to instead has a 'Text' button to 650-733-4134 (sms: link) — a different number that appears nowhere on gumbosocial.com; not used. The site's Spring Restaurant Week 2026 page prints '425-655-9195', apparently a typo of 415-655-9195.",
+   "Email: GumboSocial415@gmail.com is the footer CONTACT email on every gumbosocial.com page and is the address behind solo.to's Email button (base64-encoded there). The site also uses hello@gumbosocial.com (private/large-party events, order receipts, press) and catering@gumbosocial.com (catering questions).",
+   "Hours: the Location/Hours page states 'Monday-Tuesday, 11 AM - 3 PM' and 'Wednesday-Saturday, 11 AM - 6 PM' (footer: 'Mon-Tue, 11 AM - 3 PM / Wed-Sat, 11 AM - 6 PM'); solo.to and the IG bio shorten this to 'M-T 11-3; W-Sat 11-6', where M-T means Monday-Tuesday per the site. Sunday is not mentioned anywhere — not listed as open and not stated as closed.",
+   "Temporary closure: a gumbosocial.com post dated July 6, 2026 says the restaurant closed July 3 to August 16, 2026 and was scheduled to reopen Monday, August 17, 2026 (catering continued, Café Mélange stayed open). No post confirming the actual reopening was found; the homepage and Location/Hours page show no closure notice, and their 6th Annual Seafood Boil was held at 5176 3rd St on August 23, 2026.",
+   "Evening service: the homepage and a July 28, 2026 post describe a GoFundMe to pilot a 6-10 PM takeout/delivery window ('Gumbo Social currently closes at 6 PM'); the events page lists a donor thank-you 'Dinner Is Served', date TBA. No evening hours are published yet, so hours above are the current 11-3 / 11-6 schedule.",
+   "Prices are from gumbosocial.com/menu, which says 'Our soul food menu changes regularly, but here’s a taste of what you can expect', and the July 2026 closure post says new menu offerings were being developed — so the web menu may not match current in-store or Toast prices, and it could not be cross-checked against Toast (see blocked).",
+   "Two- and three-price items: the menu prints the gumbos as '$13/24', Red Beans and Rice with Roasted Duck '$13/21', California Greens '$12/$20', Family Size Gumbo '$65/$120' and Rice '$3/$6/$12' without naming the sizes. cents holds the lowest price and label shows all of them. No size names were assigned because their own pages disagree: the Restaurant Week page says 'Gumbo (small)' / 'Gumbo (regular)' while the menu says '6 Large Gumbos'.",
+   "Louisa Lunch Special is printed '$20 (+2 Fish or Shrimp)'; recorded as from $20 with the upcharge text kept in desc. Corn Hoecake is printed '$5 ea.' and keeps that as its label.",
+   "Item names: on the site the four gumbos are listed under the 'Gumbos' heading only as 'Smoked Cochon', 'Chicken & Sausage', 'Smoked Turkey' and 'Vegan' — ' Gumbo' was appended for clarity. The six $9 'Add-Ons' are bare names on the site ('Pork Belly', 'Jackfruit', 'Pork', 'Smoked Turkey', 'Sausage', 'Shrimp') — ' Add-On' was appended. All other names, descriptions and allergen notes are copied as printed (only missing end periods added).",
+   "Allergen notes look swapped on their menu: 'Pork Po'Boy' says 'Contains Shellfish, Wheat and Egg', while 'Shrimp Po'Boy' says only 'Contains Wheat and Egg'. Copied verbatim, not corrected.",
+   "The menu's 'Frozen To-Go' section (Frozen Red Beans, Frozen Gumbo, Frozen Cali Greens, 32 oz each) has no prices and is left out of items.",
+   "Not downloaded, so not compared with the web menu: the menu page's downloadable menu PDF (https://www.gumbosocial.com/_files/ugd/25988e_b5df3d80c4644a2f9722d762c18a6cd9.pdf) and the catering page's Catering Menu PDF.",
+   "Catering is ordered through a HoneyCart storefront (gumbosocial.gethoneycart.com, JavaScript-only; the site's 'CATERING MENU' link and bit.ly/gumbo-caters both go there) and Toast catering (www.toasttab.com/catering/gumbo-social, behind a bot check). Catering prices were not gathered and are not in items. Terms the site states: pick-up with 24 hours' notice and no minimum; delivery within 20 miles with a $100 minimum and fees from $6.99.",
+   "Their 'Merch' Square Online site (gumbo-social.square.site) still lists older pop-up-era food products (e.g. Fall Succotash, Turkey Two Ways, Prosperity Bowl, Sunday Dinner) next to T-shirts and tote bags; treated as stale merch and not used for prices.",
+   "Delivery marketplace links (DoorDash order.online, Uber Eats order.store, Grubhub) on solo.to and gumbosocial.com were ignored per the rules. The Location/Hours page's 'Order Online' link goes to a DoorDash order.online storefront, while the site nav's ORDER ONLINE button goes to Toast.",
+   "Logo: logo_url is the 'PRIMARY (WEBSITE)' logo, Black-Blue version (file 'Gumbo Social Logo_Black-Blue Website.png'), from gumbosocial.com/brand-guidelines. That page also has Black, White and White-Blue versions, 'Social' versions, Bayview/Sunset/Noe Valley versions, a secondary logo and a submark; the press kit links a 'Gumbo Social Logos.zip' (not downloaded). The site header uses a different, unlabeled image (https://static.wixstatic.com/media/9ff825_fd483a36ff9c4469bd6d20423c0be84e~mv2.png), and solo.to's avatar is https://cdn.solo.to/user/a/5f69ce594c6117_77368561.jpg. No image was downloaded, so which one prints www.GumboSocial.com is unconfirmed and logo_px is unknown.",
+   "The events page lists a May 30, 2026 'Ferry Plaza Farmers Market Farewell', so the farmers-market booth in the older press linked from solo.to appears to have ended; only the 3rd St restaurant (plus the separate Café Mélange) has published hours."
+  ],
+  "blocked": "Their Toast Online Ordering storefront (order.toasttab.com/online/gumbo-social, plus order.toasttab.com/egiftcards/gumbo-social and www.toasttab.com/catering/gumbo-social) returned a Cloudflare bot check (HTTP 403 'Just a moment...' / 'Performing security verification') to WebFetch, curl and headless Playwright. It was not bypassed, so live Toast prices and hours could not be cross-checked; the priced menu comes from gumbosocial.com/menu instead."
+ }
+]

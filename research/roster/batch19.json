@@ -449,12 +449,12 @@
   "address": "4713 Livermore Outlets Dr, Livermore, CA 94551, USA",
   "phone": "+1 925-667-4714",
   "email": null,
-  "hours": "Mon-Thu & Sun 11am-9:30pm, Fri-Sat 11am-10pm",
+  "hours": null,
   "instagram": null,
   "site_kind": "own-domain",
   "prices_published": false,
   "items": [],
-  "price_note": "No trustworthy priced menu was found: harumisushihibachi.com/menu/ and /popular-dishes/ show only a generic 7-item 'popular dishes' sample (Shrimp $10.00, Eel $15.00, Cheese $5.00, Caviar $10.00, Salmon Sashimi $15.00, Tempura Roll $12.99, Avocado Roll $12.99) whose own copy says 'Check the menu for current prices and availability' right next to those figures and which includes no all-you-can-eat per-person pricing at all, so these look like auto-generated placeholder content rather than the restaurant's real menu and were not captured as items.",
+  "price_note": "They publish no menu or prices of their own online",
   "logo_url": "https://harumisushihibachi.com/assets/favicon.svg",
   "logo_px": null,
   "flags": [
@@ -468,7 +468,9 @@
    "No dedicated logo image exists; the header uses a plain text wordmark ('Harumi Sushi & Hibachi') and the only graphical brand asset is a generic SVG favicon, so logo_px could not be determined.",
    "A similarly named domain, harumisushinv.com ('Harumi Sushi'), appeared in search results; it is very likely an unrelated, differently located restaurant (possibly in Nevada, given 'nv') and was not used as a source or verified further.",
    "Address/phone/hours above are the best-available facts printed on harumisushihibachi.com (consistent between its home page and menu page), but given the site's likely auto-generated nature they should be treated as provisional rather than confirmed directly by the business owner.",
-   "An official site was found (own-domain), but it does not contain a verifiable, business-authored priced menu."
+   "An official site was found (own-domain), but it does not contain a verifiable, business-authored priced menu.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: No trustworthy priced menu was found: harumisushihibachi.com/menu/ and /popular-dishes/ show only a generic 7-item 'popular dishes' sample (Shrimp $10.00, Eel $15.00, Cheese $5.00, Caviar $10.00, Salmon Sashimi $15.00, Tempura Roll $12.99, Avocado Roll $12.99) whose own copy says 'Check the menu for current prices and availability' right next to those figures and which includes no all-you-can-eat per-person pricing at all, so these look like auto-generated placeholder content rather than the restaurant's real menu and were not captured as items.",
+   "2026-09-13 re-check: harumisushihibachi.com is an auto-generated reservation-selling site, not the restaurant's; its hours are no longer carried and the listing no longer links Yelp as their website. All-you-can-eat prices appear only in third-party posts that disagree ($26.99 lunch / $39.99 dinner in one, $40-42 in others), none carried. Instagram @harumisushi_livermore is probably theirs, unconfirmed."
   ],
   "blocked": null
  },
@@ -507,7 +509,7 @@
     "label": ""
    }
   ],
-  "price_note": "The order.online storefront given in the brief (order.online/business/house-of-silog-brentwood) returned HTTP 403 Forbidden. Prices instead read from the business's own Square ordering site, house-of-silog.square.site, found via one web search. Most of that site's menu categories (Silog All Day, Specialties - Ala Carte, Drinks, Appetizers, Condiments, Special Menu) have no items populated in the live storefront; only Egg, Plain Fries, and Suman carry a price, and Crispy Pata is listed sold out with no price shown.",
+  "price_note": "Prices are from their own online ordering page, which lists only a few items so far",
   "logo_url": "https://798f55407ee211f0b627.cdn6.editmysite.com/uploads/b/798f5540-7ee2-11f0-b627-63507b36213e/IMG_0055.jpg?width=104",
   "logo_px": 104,
   "flags": [
@@ -517,7 +519,8 @@
    "Most menu categories on the ordering site (Silog All Day, Specialties-Ala Carte, Drinks, Appetizers, Condiments, Special Menu, Beverages) show no populated items in the live storefront, or items are marked 'Unavailable'/'Sold out' — Egg, Plain Fries and Suman are marked 'Unavailable' despite carrying a listed price, and Crispy Pata is 'Sold out' with no price at all.",
    "A search-engine snippet (third-party, not the business's own page) listed a different phone number, +1 408-221-8939, than the one shown on the business's own ordering page (+1 925-544-9562); the business's own page was used.",
    "Search-engine snippets suggest day-specific hours (e.g. Wed-Sat only), but the business's own ordering page only shows a flat daily window of 4:00 PM-8:59 PM with no day-by-day breakdown, so that flat window is reported here.",
-   "No Instagram link found anywhere on the business's own ordering page."
+   "No Instagram link found anywhere on the business's own ordering page.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: The order.online storefront given in the brief (order.online/business/house-of-silog-brentwood) returned HTTP 403 Forbidden. Prices instead read from the business's own Square ordering site, house-of-silog.square.site, found via one web search. Most of that site's menu categories (Silog All Day, Specialties - Ala Carte, Drinks, Appetizers, Condiments, Special Menu) have no items populated in the live storefront; only Egg, Plain Fries, and Suman carry a price, and Crispy Pata is listed sold out with no price shown."
   ],
   "blocked": "order.online/business/house-of-silog-brentwood returned HTTP 403 Forbidden"
  },
@@ -830,7 +833,7 @@
     "label": ""
    }
   ],
-  "price_note": "Prices and full item list read from the Mountain View location's own menu page, https://kusanbazaar.com/menu/kusanbazaar-txusjq. Address, phone, hours, email, and Instagram link read from the Mountain View entry on the kusanbazaar.com homepage location listing.",
+  "price_note": "Prices are from the Mountain View shop’s own menu page",
   "logo_url": "https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709",
   "logo_px": "1352x264",
   "flags": [
@@ -852,7 +855,8 @@
    "Menu sweep 2026-09-09: This is one of three locations (San Jose, Milpitas, Mountain View) sharing the kusanbazaar.com site; items and prices recorded here are for the Mountain View location's own menu page only, per the brief.",
    "Menu sweep 2026-09-09: The Instagram handle (kusanuyghurcuisine) and contact email (Kusanbazaar@gmail.com) appear once on the shared homepage and are not confirmed to be Mountain-View-specific rather than a brand-wide contact.",
    "Menu sweep 2026-09-09: 'Lobster Tails' and 'Stewed Mutton Soup' are priced with a '+' suffix on the menu (e.g. '$39.19+'), indicating a starting/variable price; recorded here with label 'from'.",
-   "Menu sweep 2026-09-09: No phone number, hours, or Instagram link were shown on the Mountain View menu page itself; those fields were sourced from the shared homepage's Mountain View location card instead."
+   "Menu sweep 2026-09-09: No phone number, hours, or Instagram link were shown on the Mountain View menu page itself; those fields were sourced from the shared homepage's Mountain View location card instead.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Prices and full item list read from the Mountain View location's own menu page, https://kusanbazaar.com/menu/kusanbazaar-txusjq. Address, phone, hours, email, and Instagram link read from the Mountain View entry on the kusanbazaar.com homepage location listing."
   ],
   "blocked": null
  },
@@ -1115,7 +1119,7 @@
     "label": ""
    }
   ],
-  "price_note": "Prices captured from the San Jose location's own order/menu page at https://kusanbazaar.com/menu/kusanuyghurcuisine-ggis5e (the San Jose-specific link found on https://kusanbazaar.com/page/locations), which itself displays the 1516 N 4th St, San Jose, CA address; the same prices also appear on the site's general https://kusanbazaar.com/menu page.",
+  "price_note": "Prices are from the San Jose restaurant’s own menu page",
   "logo_url": "https://kusanbazaar.com/pluto-images/funnel/images/880af640-b202-4c7f-87ab-3e1ba1de6709",
   "logo_px": "1352x264",
   "flags": [
@@ -1140,7 +1144,8 @@
    "Menu sweep 2026-09-09: Three items show a '+' after the listed price on the San Jose menu page (French-style Roasted Lamb Chops with Salads $18.95+, Stewed Mutton Soup $3.99+, Big Plate Chicken $24.95+), indicating a starting/base price with additional size or add-on options; the page text did not itemize the specific upc",
    "Menu sweep 2026-09-09: No Instagram or other social media links were found on the homepage or in its footer.",
    "Menu sweep 2026-09-09: Logo image is a small 64x64 icon-style graphic rather than a full wordmark; may be a favicon rather than the primary brand logo.",
-   "Menu sweep 2026-09-09: Menu item Chinese-language translations shown alongside English names on the page were omitted from name/desc fields for clarity; only the English item names were captured."
+   "Menu sweep 2026-09-09: Menu item Chinese-language translations shown alongside English names on the page were omitted from name/desc fields for clarity; only the English item names were captured.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Prices captured from the San Jose location's own order/menu page at https://kusanbazaar.com/menu/kusanuyghurcuisine-ggis5e (the San Jose-specific link found on https://kusanbazaar.com/page/locations), which itself displays the 1516 N 4th St, San Jose, CA address; the same prices also appear on the site's general https://kusanbazaar.com/menu page."
   ],
   "blocked": null
  },
@@ -1157,7 +1162,7 @@
   "site_kind": "own-domain",
   "prices_published": false,
   "items": [],
-  "price_note": "No priced menu could be found: luckythreeseven.com (their own domain) names only 3 sample dishes with no prices and its 'Order Online' button links to an unrelated business's order.online storefront; luckythreeseven.netwaiter.com (their NetWaiter ordering-platform page) lists restaurant info and hours but no menu or prices; /menu paths on both sites and /order on the NetWaiter site returned 404.",
+  "price_note": "They publish no menu prices online",
   "logo_url": null,
   "logo_px": null,
   "flags": [
@@ -1169,7 +1174,8 @@
    "luckythreeseven.com states payment is cash or Venmo/Zelle only, no credit cards accepted.",
    "No Instagram link found on either of the business's own pages (a separate Facebook page exists per search results but was not used as a source).",
    "No second location mentioned anywhere in the sources checked.",
-   "Hours were stated only on the NetWaiter page; the own-domain homepage did not list hours at all, so there is no direct contradiction, but the schedule is sourced from a single page."
+   "Hours were stated only on the NetWaiter page; the own-domain homepage did not list hours at all, so there is no direct contradiction, but the schedule is sourced from a single page.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: No priced menu could be found: luckythreeseven.com (their own domain) names only 3 sample dishes with no prices and its 'Order Online' button links to an unrelated business's order.online storefront; luckythreeseven.netwaiter.com (their NetWaiter ordering-platform page) lists restaurant info and hours but no menu or prices; /menu paths on both sites and /order on the NetWaiter site returned 404."
   ],
   "blocked": null
  },
@@ -1186,7 +1192,7 @@
   "site_kind": "ordering-platform",
   "prices_published": false,
   "items": [],
-  "price_note": "Their own domain has expired and the only menu online is a NetWaiter page crediting a defunct listing service, so its prices are not carried; outside reporting says the restaurant closed in June 2025, which is his to confirm.",
+  "price_note": "Their website is no longer online, so no menu or prices are listed here",
   "logo_url": null,
   "logo_px": null,
   "flags": [
@@ -1202,7 +1208,8 @@
    "Menu sweep 2026-09-09: No logo image was found on any page checked.",
    "Menu sweep 2026-09-09: Per public news reporting (Antioch Herald, not the business's own site — used only for background context, not as a source for any field above), Mac's Old House reportedly closed permanently on June 22, 2025 after 42 years under prior ownership, with new owners reportedly planning to reopen in 2026;",
    "Menu sweep 2026-09-09: Only one physical location found; no evidence of a second location.",
-   "Menu sweep 2026-09-09: macsoldhouse.com is expired; the NetWaiter menu credits Locu, a listing service that no longer exists; outside reporting says the restaurant closed in June 2025 — not printed on the page, since it is not their own statement, but his to check"
+   "Menu sweep 2026-09-09: macsoldhouse.com is expired; the NetWaiter menu credits Locu, a listing service that no longer exists; outside reporting says the restaurant closed in June 2025 — not printed on the page, since it is not their own statement, but his to check",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Their own domain has expired and the only menu online is a NetWaiter page crediting a defunct listing service, so its prices are not carried; outside reporting says the restaurant closed in June 2025, which is his to confirm."
   ],
   "blocked": "Squarespace subscription expired — no business content is published anywhere on the domain"
  },
@@ -1219,7 +1226,7 @@
   "site_kind": "ordering-platform",
   "prices_published": false,
   "items": [],
-  "price_note": "Their order.online storefront prints prices that run higher than the menu board on their own site (Mango Sago $11 against $9), the mark-up a delivery platform adds, so neither set is carried until they publish one list.",
+  "price_note": "Their menu board and their online ordering page disagree on prices, so none are listed here until they settle on one",
   "logo_url": "https://static.wixstatic.com/media/3dff99_43ebae768a2549c4bcfd66a3701a4d0f~mv2.jpg/v1/fill/w_264,h_264,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/3dff99_43ebae768a2549c4bcfd66a3701a4d0f~mv2.jpg",
   "logo_px": 264,
   "flags": [
@@ -1233,7 +1240,8 @@
    "order.online shows two slightly different hour sets on the same page: the store's actual operating hours (used for the hours field here) and a several-minutes-shorter 'hours this store accepts DoorDash orders' cutoff each day — treated as complementary, not a contradiction.",
    "No email address found printed on either page (a DoorDash support-routing contact email exists only base64-encoded inside a Terms-of-Service link parameter, not displayed as page content, so it was not used).",
    "No second location found.",
-   "Menu sweep 2026-09-09: 56 prices read from order.online were set aside because their own site's menu-board photo shows lower prices for the same items — a delivery mark-up, not the kitchen's price"
+   "Menu sweep 2026-09-09: 56 prices read from order.online were set aside because their own site's menu-board photo shows lower prices for the same items — a delivery mark-up, not the kitchen's price",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Their order.online storefront prints prices that run higher than the menu board on their own site (Mango Sago $11 against $9), the mark-up a delivery platform adds, so neither set is carried until they publish one list."
   ],
   "blocked": null
  },
@@ -2295,7 +2303,7 @@
   "site_kind": "own-domain",
   "prices_published": false,
   "items": [],
-  "price_note": "No prices anywhere on paradakitchen.com (menu pages give names and descriptions only; the only dollar figures are a $25 corkage fee and a $3 fried-egg add-on); their Toast ordering page is behind a Cloudflare bot check and was not read; hours come from the homepage HOURS block and match the Instagram bio",
+  "price_note": "Their menu is published without prices",
   "logo_url": "https://paradakitchen.com/wp-content/uploads/2024/09/parada-logo.png",
   "logo_px": "598x226",
   "flags": [
@@ -2318,7 +2326,8 @@
    "Menu sweep 2026-09-09: Their Toast online-ordering page (order.toasttab.com/online/parada-wc-7001-sunne-ln-suite-116) returned HTTP 403 Forbidden, so any prices it carries could not be read",
    "Menu sweep 2026-09-09: Site-listed hours cover only Mon-Thu and Fri-Sat; no Sunday hours are stated anywhere found",
    "Menu sweep 2026-09-09: No Instagram link found in the site's HTML on the homepage or contact page",
-   "Menu sweep 2026-09-09: Toast ordering URL slug references 'Suite 116' though the printed address on the site's own pages does not include a suite number"
+   "Menu sweep 2026-09-09: Toast ordering URL slug references 'Suite 116' though the printed address on the site's own pages does not include a suite number",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: No prices anywhere on paradakitchen.com (menu pages give names and descriptions only; the only dollar figures are a $25 corkage fee and a $3 fried-egg add-on); their Toast ordering page is behind a Cloudflare bot check and was not read; hours come from the homepage HOURS block and match the Instagram bio"
   ],
   "blocked": null
  },
@@ -4006,7 +4015,7 @@
     "label": "from"
    }
   ],
-  "price_note": "Prices are from Pijja Paradise's own order.online storefront for the Pittsburg location (order.online/store/pijja-paradise-pittsburg-29028324); the business's main domain, pijjaparadise.com, could not be reached from this environment (SSL/TLS handshake failure).",
+  "price_note": "Prices are from their Pittsburg shop’s online ordering page",
   "flags": [
    "pijjaparadise.com renders only with JavaScript, so the menu could not be read",
    "addresses and numbers from their own site's location list, as he sent it",
@@ -4018,7 +4027,8 @@
    "Menu sweep 2026-09-09: The order.online page shows 'Online ordering hours: 9:30 AM-11:25 PM', which looks like a single day's live window rather than a posted weekly schedule; no hours are published on any reachable page for this location, so hours is null.",
    "Menu sweep 2026-09-09: No Instagram link, logo image, phone-verified-elsewhere, or email address found on any reachable page for this location.",
    "Menu sweep 2026-09-09: The ordering page displays a 'Get $10 off any order of $50 or more' promo banner; not reflected in item prices.",
-   "Menu sweep 2026-09-09: This is treated as site_kind 'ordering-platform' rather than 'own-domain' because the business's own domain never loaded for this location."
+   "Menu sweep 2026-09-09: This is treated as site_kind 'ordering-platform' rather than 'own-domain' because the business's own domain never loaded for this location.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Prices are from Pijja Paradise's own order.online storefront for the Pittsburg location (order.online/store/pijja-paradise-pittsburg-29028324); the business's main domain, pijjaparadise.com, could not be reached from this environment (SSL/TLS handshake failure)."
   ]
  },
  {
@@ -5580,7 +5590,7 @@
     "label": "from"
    }
   ],
-  "price_note": "Prices are from Rancho Grande Taqueria's own order.online storefront (order.online/store/rancho-grande-taqueria-pleasanton-24568904); the site's own /our-menu page on ranchograndetaq.com lists the same item names and descriptions but no prices at all.",
+  "price_note": "Prices are from their online ordering page",
   "flags": [
    "the sign outside reads EL RANCHO GRANDE TAQUERIA; their own site, logo and footer say Rancho Grande Taqueria, so that is the name here",
    "Glenn photographed the storefront and the window poster while delivering, 2026-09-04",
@@ -5592,7 +5602,8 @@
    "Menu sweep 2026-09-09: No email address found on ranchograndetaq.com.",
    "Menu sweep 2026-09-09: Delivery/pickup is also offered via GrubHub and UberEats per the homepage; not used for pricing here.",
    "Menu sweep 2026-09-09: Menudo soup is flagged on the menu itself as 'ONLY AVAILABLE SATURDAY & SUNDAY'.",
-   "Menu sweep 2026-09-09: 'Cheese' and 'Lettuce' are listed as add-on Extras with size options but no printed price, so they were not included as items."
+   "Menu sweep 2026-09-09: 'Cheese' and 'Lettuce' are listed as add-on Extras with size options but no printed price, so they were not included as items.",
+   "Customer-facing wording rewritten 2026-09-13 to one plain line; the research detail it replaced is kept in these flags. Previous price note: Prices are from Rancho Grande Taqueria's own order.online storefront (order.online/store/rancho-grande-taqueria-pleasanton-24568904); the site's own /our-menu page on ranchograndetaq.com lists the same item names and descriptions but no prices at all."
   ],
   "logo_url": "https://irp.cdn-website.com/77a86d20/dms3rep/multi/Color-Whtie-Logo.svg"
  },

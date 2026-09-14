@@ -136,7 +136,11 @@ for (const [id, want, expect] of [
   ['b_baithak', 'Baithak', { rows: 100, call: '(925) 361-0862' }],
   /* 2026-09-10. Chef Jeff's took the home screen's seat 18 with the icon glow;
      Bay Area Event Lights had been missing since 29 August. */
-  ['b_chefjeffssmashburger', "Chef Jeff's Smash Burger", { call: '(925) 732-7625' }],
+  ['b_chefjeffssmashburger', "Chef Jeff's Smash Burger", { call: '(925) 732-7625', rows: 20 }],
+  /* 2026-09-13 night: front-page kitchens that opened without a menu. */
+  ['b_hotboyschicken', 'World Famous Hotboys', { rows: 55 }],
+  ['b_winkydinkydogs', 'Winky Dinky Dogs', { rows: 65, call: '(510) 817-4673' }],
+  ['b_gumbosocial', 'Gumbo Social', { free: true, call: '(415) 655-9195' }],
   ['b_bayareaeventlights', 'Bay Area Event Lights', { call: '(408) 502-7229', free: true }],
   /* The 2026-09-09 menu sweep: fifteen menus read from the businesses' own pages. */
   ['b_islafilipino', 'Isla Filipino Restaurant', { rows: 90, call: '(925) 849-6255' }],
@@ -378,8 +382,10 @@ if (!scanTab) fails.push('the landing Scan tab does not offer to start the camer
 for (const s of ['Sign in or join free', 'contacts-join', 'That code is not a BEASTY code', 'order-cancel-confirm', 'Cancel ticket', 'kitchenLive', 'Scan a member pass', 'register code']) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }
-/* The sample people Contacts showed before accounts existed. */
-for (const s of ['sample profile', 'Marisol R.', 'Terrell B.']) {
+/* The sample people Contacts showed before accounts existed, and Glenn's name,
+   which BEASTY LLC keeps off the site (it captioned Chef Jeff's photos until
+   their menu replaced them on 2026-09-13). */
+for (const s of ['sample profile', 'Marisol R.', 'Terrell B.', 'Glenn Malicdem']) {
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
 
