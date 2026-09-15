@@ -1006,4 +1006,14 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'pinole-goods-1': 'b_mexihibachi', //                           Mexican food — Mexican and Japanese hibachi
   /* 2026-09-13 evening: Gumbo Social on San Francisco's yellow sheet, Tier 1. */
   'san-francisco-goods2-10': 'b_gumbosocial', //                  no gumbo or soul food seat; yellow sheet, Tier 1
+  /* 2026-09-14: Looki on BEASTY • Online. No wearable-tech category exists and
+     Media, tech and accessories is Overly Hip Hop's, so Watches, the nearest
+     open wearable seat. A BEASTY page, so the whole page. */
+  'beasty-online-6': 'b_looki', //                                Watches — a wearable AI camera
+  /* 2026-09-14: Sushi Uma on San Francisco's open Sushi seat; Ace King BBQ,
+     Harborview and The Sea on their cities' yellow sheets at Tier 1. */
+  'san-francisco-goods-4': 'b_sushiuma', //                        Sushi
+  'newark-goods2-0': 'b_acekingbbq', //                            Asian food is Pho Nation's; yellow sheet, Tier 1
+  'san-francisco-goods2-11': 'b_harborviewsf', //                  Asian food is House of Thai's; yellow sheet, Tier 1
+  'palo-alto-goods2-0': 'b_theseabyash', //                        no seafood or steak seat; yellow sheet, Tier 1
 }

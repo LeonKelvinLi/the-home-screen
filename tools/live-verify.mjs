@@ -141,6 +141,12 @@ for (const [id, want, expect] of [
   ['b_hotboyschicken', 'World Famous Hotboys', { rows: 55 }],
   ['b_winkydinkydogs', 'Winky Dinky Dogs', { rows: 65, call: '(510) 817-4673' }],
   ['b_gumbosocial', 'Gumbo Social', { free: true, call: '(415) 655-9195' }],
+  /* 2026-09-14. */
+  ['b_sushiuma', 'Sushi Uma', { rows: 100, call: '(415) 968-9933', hours: 'Daily 11:00 am' }],
+  ['b_acekingbbq', 'Ace King BBQ', { free: true, call: '510-323-4987' }],
+  ['b_harborviewsf', 'Harborview Restaurant & Bar', { free: true, call: '(415) 399-1200' }],
+  ['b_theseabyash', "The Sea by Alexander's Steakhouse", { free: true, call: '(650) 213-1111' }],
+  ['b_looki', 'Looki', { quote: true, photos: 1 }],
   ['b_bayareaeventlights', 'Bay Area Event Lights', { call: '(408) 502-7229', free: true }],
   /* The 2026-09-09 menu sweep: fifteen menus read from the businesses' own pages. */
   ['b_islafilipino', 'Isla Filipino Restaurant', { rows: 90, call: '(925) 849-6255' }],

@@ -4190,6 +4190,62 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    slug: 'looki',
+    icon: 'looki',
+    name: 'Looki',
+    label: 'Looki',
+    cuisine: 'AI wearable camera',
+    tagline: 'A clip-on AI camera that turns your day into comics and recaps.',
+    color: '#1A1A1A',
+    prep: 0,
+    category: 'Wearable tech',
+    site: 'https://www.looki.ai/',
+    email: 'support@looki.ai',
+    instagram: 'looki.ai',
+    /*
+      "BEASTY • Online — Hey bro, can you post the AI picture with the context
+      generated of the puppies I sent you? I'm gonna contact them and see if we
+      can get a welcome offer." Glenn, 2026-09-14.
+
+      THE PICTURE IS HIS. Looki's app drew the eight panels from his family's
+      day with a new puppy and wrote the caption; he sent both on 2026-09-13
+      and asked for them on this page. The comic is padded to a square so the
+      strip's square frame does not crop the Looki mark off its foot.
+
+      Prices and the product are from their own store (looki.ai, read
+      2026-09-14): Looki Tech Limited, Toronto; a one-time purchase, no
+      subscription sold. Their own privacy page says it "only captures when
+      users actively enable it, with clear visual and audio cues", so nothing
+      here calls it always-on. Their affiliate policy (2026-09-10) forbids
+      implying an official partnership or using unapproved logos: the page
+      says the spot is held, and the logo question goes to Glenn with his
+      offer ask.
+    */
+    quoteOnly:
+      'A 32 g clip-on AI camera, the Looki L1, whose app turns what it captures into daily recaps, short vlogs and illustrated comic pages with captions. These are their own published prices, in US dollars. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    photos: [
+      {
+        src: '/food/looki-puppy-day-lg.webp',
+        alt: 'An eight-panel illustrated comic drawn by the Looki app: a family meets a fluffy cream puppy in a car park, passes her around, shops for her in a pet store, and ends the day with her in a busy restaurant.',
+        credit: '“Watching you go from that bright car ride to meeting the fluffy little puppy felt so sweet and real. I loved seeing everyone gently pass her around, then head into the store together before ending the day in that warm, busy room with the little pup right there.” The Looki app drew this page and wrote its caption from a day with a new puppy.',
+      },
+    ],
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['Looki L1', 'Black, white or green; comes with a magnetic lanyard', 24900],
+          ['Go Clip', 'Attaches it to a hat, bag or strap', 2900],
+          ['Magnetic Charging Stand', 'Holds it upright while it charges', 3900],
+          ['Safety Necklace Case', 'Wear it as a pendant', 1900],
+          ['Magnetic Lanyard', 'A spare', 1900],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
     slug: 'drypup',
     icon: 'drypup',
     name: 'DryPup',

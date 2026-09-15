@@ -16,7 +16,9 @@ import type { ShellApi } from '../ios/Device'
 
 /** What a kitchen, a café or a bar sells — pages where "consultation" is the wrong word. */
 const FOOD_RX =
-  /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|bar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer/i
+  /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|bar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer|vietnam|indian|greek|persian|mediterranean|hot pot|californian|chinese|cantonese|japanese|korean|mexican|italian|filipino|peruvian|distiller|bottle shop|charcuterie|grazing/i
+/* What an online shop sells: goods posted from their own store, not booked. */
+const SHOP_RX = /jumpsuit|swimwear|life jacket|supplement|dog bed|boots|camera|drying bag|backpack|clothing|streetwear|pet goods|apparel/i
 import { Gem } from './MembersApp'
 import { FREE_SPOT_MONTHS } from '../data/affiliateTiers'
 
@@ -847,14 +849,24 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             <div className="brand-contact">
               {brand.contactOnly && <p>{brand.contactOnly}</p>}
               {/*
-                THE LINE ABOVE THE CALL BUTTON depends on what they sell. "Start
-                with a free consultation" is right for a detailer or a designer
-                and wrong on a coffee house or a peri peri grill, where the
-                2026-09-02 sweep found it. A kitchen with no online ordering is
-                called to order from, not consulted.
+                THE LINE ABOVE THE CALL BUTTON depends on what they sell. A
+                kitchen is called to order from; an online shop is bought from
+                on its own store; everything else is booked or asked.
+
+                It said "Start with a free consultation" for everything that was
+                not food, which on 2026-09-14 put that line on Greek, Indian,
+                Persian and Vietnamese restaurants, on online shops and on
+                rappers — and a free consultation is a promise about a
+                business's terms that almost none of them has made.
               */}
               {brand.quoteOnly && (
-                <p>{FOOD_RX.test(`${brand.cuisine} ${brand.name}`) ? 'Call or message them to order or ask.' : 'Start with a free consultation.'}</p>
+                <p>
+                  {FOOD_RX.test(`${brand.cuisine} ${brand.name}`)
+                    ? 'Call or message them to order or ask.'
+                    : SHOP_RX.test(`${brand.cuisine} ${brand.name}`)
+                      ? 'Buy from their own store.'
+                      : 'Call or message them to book or ask.'}
+                </p>
               )}
               {brand.phone && (
                 <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}>

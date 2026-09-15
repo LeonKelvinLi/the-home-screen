@@ -1,0 +1,3017 @@
+[
+ {
+  "id": "b_acekingbbq",
+  "name_exact": "Ace King BBQ",
+  "one_line": "Chinese BBQ skewers, foil-pan dishes and noodles, open late in Newark",
+  "cuisine": "Chinese BBQ skewers",
+  "address": "6062 Mowry Ave, Newark, CA 94560",
+  "phone": "510-323-4987",
+  "email": null,
+  "hours": "Sunday - Thursday 5:00 PM - 11:30 PM; Friday - Saturday 5:00 PM - 12:30 AM",
+  "instagram": "acekingnewark",
+  "site_kind": "own-domain",
+  "site_url": "https://www.acekingbbqus.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Hot Squid(Contains Peanuts)",
+    "desc": "",
+    "cents": 499,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Beef",
+    "desc": "Two Series Of Starting Point",
+    "cents": 299,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Lamb",
+    "desc": "Two Series Of Starting Point",
+    "cents": 299,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken",
+    "desc": "Two Series Of Starting Point",
+    "cents": 279,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Backstrops of bull",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Beef Tendon",
+    "desc": "",
+    "cents": 329,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Beef Tripe",
+    "desc": "",
+    "cents": 329,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Lamb Chop",
+    "desc": "",
+    "cents": 509,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Lamb Kidney",
+    "desc": "",
+    "cents": 759,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Charcoal Grilled Fatty Intestine",
+    "desc": "",
+    "cents": 349,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken Wing",
+    "desc": "",
+    "cents": 329,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "House Special Orleans Chicken Leg",
+    "desc": "",
+    "cents": 539,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken Gizzard",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken Heart",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken Feet",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken Skin",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chicken Gristle",
+    "desc": "",
+    "cents": 349,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Pig Feet(Whole)",
+    "desc": "",
+    "cents": 869,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Squid",
+    "desc": "",
+    "cents": 329,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Shrimp",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Yellow Croaker",
+    "desc": "",
+    "cents": 349,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Pollack",
+    "desc": "",
+    "cents": 1099,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Winkles",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Home Made Fish Ball",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Grilled Squid Tentacles",
+    "desc": "",
+    "cents": 299,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "BBQ Garlic Scallop(2)",
+    "desc": "",
+    "cents": 649,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Sausage",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Quail Egg",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Egg Mix",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Roasted Quail",
+    "desc": "",
+    "cents": 869,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Chinese Sausage",
+    "desc": "",
+    "cents": 379,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Fish Cake",
+    "desc": "",
+    "cents": 289,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "BBQ Scalded Aorta",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Bacon Enoki Roll",
+    "desc": "",
+    "cents": 349,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "BBQ Pork w.Garlic(2)",
+    "desc": "",
+    "cents": 539,
+    "section": "BBQ Meat",
+    "label": ""
+   },
+   {
+    "name": "Coriander Roll",
+    "desc": "",
+    "cents": 279,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Bell Pepper",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Cabbage",
+    "desc": "",
+    "cents": 349,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "A Vegetable",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "String Bean",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Eggplant",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Mushroom",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Chinese Chives",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Thin Toufu Wrap(10pcs）",
+    "desc": "",
+    "cents": 269,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Fried Bean Curd",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Potato",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Sweet Potato",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Rice Cake",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Bread Slice",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Steamed Bun Slice",
+    "desc": "",
+    "cents": 239,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "BBQ Glaten",
+    "desc": "",
+    "cents": 299,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Cotton Candy",
+    "desc": "",
+    "cents": 279,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Grilled Chiba Tofu",
+    "desc": "",
+    "cents": 299,
+    "section": "BBQ Veggie",
+    "label": ""
+   },
+   {
+    "name": "Mini Chicken Wing Tips(5)",
+    "desc": "This product contains peanuts.此产品包含花生.",
+    "cents": 499,
+    "section": "Mini BBQ Skewers",
+    "label": ""
+   },
+   {
+    "name": "Mini Sweet Corn(5)",
+    "desc": "",
+    "cents": 329,
+    "section": "Mini BBQ Skewers",
+    "label": ""
+   },
+   {
+    "name": "Mini Thin Tutu Wrap(10)",
+    "desc": "",
+    "cents": 349,
+    "section": "Mini BBQ Skewers",
+    "label": ""
+   },
+   {
+    "name": "BBQ Oyster Chives & Egg w.Garlic Sauce",
+    "desc": "",
+    "cents": 1399,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Cucumber Mushroom & Egg(New)",
+    "desc": "",
+    "cents": 869,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Shrimp & Egg",
+    "desc": "",
+    "cents": 1189,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Eggplant w.Garlic",
+    "desc": "",
+    "cents": 1099,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Enokimushroom",
+    "desc": "",
+    "cents": 1099,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Spicy Tofu",
+    "desc": "",
+    "cents": 1199,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Minced Meat Vermicelli",
+    "desc": "",
+    "cents": 1199,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Shrimp",
+    "desc": "",
+    "cents": 1599,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Clam",
+    "desc": "",
+    "cents": 1899,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Pig Brain in Foil Pan Box",
+    "desc": "",
+    "cents": 1749,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Duck Blood In Foilpan Box",
+    "desc": "",
+    "cents": 1699,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "BBQ Frog Leg",
+    "desc": "",
+    "cents": 1999,
+    "section": "BBQ In Foil Pan Box",
+    "label": ""
+   },
+   {
+    "name": "Spicy Baby Shrimp",
+    "desc": "Original Price $26.99;New Product Promotion $23.99.",
+    "cents": 2699,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Baby Shrimp w.Chives",
+    "desc": "Original Price $26.99;New Product Promotion $23.99.",
+    "cents": 2699,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Shrimp w.Garlic Butter(New)",
+    "desc": "",
+    "cents": 1699,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Golden Corn Kernels(New)",
+    "desc": "",
+    "cents": 799,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Ak Spicy Chicken Feet(New)",
+    "desc": "",
+    "cents": 1999,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Ak Spicy Duck Head(New)",
+    "desc": "",
+    "cents": 1899,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Spicy Veggie",
+    "desc": "",
+    "cents": 1799,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Spicy Chicken",
+    "desc": "",
+    "cents": 1899,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Spicy Lamb Chop",
+    "desc": "",
+    "cents": 2399,
+    "section": "Hot Selection",
+    "label": ""
+   },
+   {
+    "name": "Yunnan Bridge Noodles(Spicy)",
+    "desc": "",
+    "cents": 1699,
+    "section": "Crossing-The-Bridge Noodles",
+    "label": ""
+   },
+   {
+    "name": "Crisp Tofu w.Sesame Sauce(New)",
+    "desc": "",
+    "cents": 1199,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Lemon Chicken Feet",
+    "desc": "",
+    "cents": 1399,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Sliced Pork",
+    "desc": "",
+    "cents": 1299,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Sliced Pork Cucumber",
+    "desc": "",
+    "cents": 1199,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Cold Ear Wire",
+    "desc": "",
+    "cents": 1199,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Pork Liver",
+    "desc": "",
+    "cents": 1299,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Cucumber Tofu Strip",
+    "desc": "",
+    "cents": 1099,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Sweet Sour Cabbage",
+    "desc": "",
+    "cents": 1099,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Seaweed Salad",
+    "desc": "",
+    "cents": 1199,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Preserred Eggs w.Chili",
+    "desc": "",
+    "cents": 899,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Smashed Cucumber Salad",
+    "desc": "",
+    "cents": 1099,
+    "section": "Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Sweet Osmanthus Fried Rice Cake(New)",
+    "desc": "",
+    "cents": 799,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "H.Special Fried Rice(Spicy)",
+    "desc": "",
+    "cents": 1399,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "fried rice with dried radish",
+    "desc": "",
+    "cents": 1399,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "H.Special Rice Noodle(Spicy)",
+    "desc": "",
+    "cents": 1399,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Spicy Rice Noodle(Spicy)",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Hot & Sour Noodles",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "House Special Dumpling",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "House Special Wonton Soup",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "House Special Cold Noodle",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Steamed Egg",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Doughbay Soup",
+    "desc": "",
+    "cents": 1299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Fried Instant Noodles",
+    "desc": "",
+    "cents": 1399,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Fried Egg",
+    "desc": "",
+    "cents": 299,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Rice",
+    "desc": "",
+    "cents": 249,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Steamed Bun",
+    "desc": "",
+    "cents": 799,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Fried Bun",
+    "desc": "",
+    "cents": 799,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Rice Noodle w.Egg",
+    "desc": "",
+    "cents": 1399,
+    "section": "Staple Food",
+    "label": ""
+   },
+   {
+    "name": "Coke",
+    "desc": "",
+    "cents": 300,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Zero Coke",
+    "desc": "",
+    "cents": 300,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Sprite",
+    "desc": "",
+    "cents": 300,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Wanglaoji",
+    "desc": "",
+    "cents": 350,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Beijing Original Yogurt",
+    "desc": "",
+    "cents": 369,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Bawang Temple Pear Soda",
+    "desc": "",
+    "cents": 699,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Iced Red Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Suanmeitang",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Iced Pear Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Iced Grapefruit & Honey Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Master Kong Jasmine Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Ksf Jasmine Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Grape Green Tea",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Yuanqi Sparking water(peach)",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Yuanqi Sparking Water(grapes)",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Yuanqi Sparking Water(lychee)",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Arctic Ocean Tangerine Flavored Soda",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Yinlu Peanut Milk",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Unified Assam Milk Tea",
+    "desc": "",
+    "cents": 499,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Water",
+    "desc": "",
+    "cents": 200,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Xiaoming Liuliuda Tea",
+    "desc": "",
+    "cents": 400,
+    "section": "Drinks",
+    "label": ""
+   },
+   {
+    "name": "Maidong Peach Vitamin Drink",
+    "desc": "",
+    "cents": 450,
+    "section": "Drinks",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from their own online ordering page",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Newark • Goods', sent 2026-09-14 08:28 PT with screenshots of @acekingnewark and acekingbbqus.com",
+   "Prices captured 2026-09-14 (about 8:50 PM PDT) in headless Chromium from their MenuSifu online ordering storefront, which is the 'Online Order' link in the menu of their own site; the link 301-redirects to https://order.mealkeyway.com/customer/release/index?mid=4c4b3266682b476e702b376e58622f70486a4c6a37513d3d#/main. MenuSifu is their POS vendor and also hosts acekingbbqus.com, so this was treated as their first-party ordering page, not a marketplace. The rendered menu and the storefront's own menu data (.../menu?productLine=ONLINE_ORDER) match item for item, prices included; no Cloudflare or bot check",
+   "IS acekingbbqus.com THIS BUSINESS: yes. Its home and Contact Us pages (and the unlinked /menu/ and /about/ pages) show 6062 Mowry Ave, Newark, CA 94560 and 510-323-4987; the page title is 'Ace King BBQ - BBQ Restaurant丨Online Order丨Newark丨CA', the footer 'Copyright © 2025 Ace King BBQ. All rights reserved.', and the homepage photos' alt text says 'at Ace King BBQ, a Chinese BBQ Restaurant in Newark'. The ordering storefront's merchant record lists http://www.acekingbbqus.com/ as its website, the site links back to that storefront, and the Instagram bio (operator's screenshot) links the same domain",
+   "WHY THE LOGO SAYS 'Ace King Music Restaurant': the site's header logo (https://website-cdn.menusifu.com/wp-content/uploads/acekingbbqus.com/2023/02/ad688d117d7920313326ca0d5992a05.png, 389x326, alt text 'Ace King BBQ') is a black circle reading 'Ace King / Music Restaurant' beside a fan of playing cards. The same artwork is the ordering storefront's logo (pixel.menusifu.com/.../logo.jpg), and the storefront itself is named 'Ace King Music Resturant' (sic); its pop-up photo of skewers is captioned 'Aceking BBQ'. Beyond Menu lists an 'Ace King Music Restaurant' at 6062 Mowry Ave, an allmenus page title gives 'Ace King Music Restaurant menu - Newark CA 94560 - (510) 323-4987', search results show a Facebook page titled 'Aceking Music Restaurant | Newark CA', and acekingmusicnewark.com (still indexed as 'Ace King Music Restaurant | Order Online | Newark, CA 94560 | Chinese') no longer resolves in DNS. It reads as an earlier name still attached to their POS account and logo, not a different business; nothing I could read says whether ownership changed",
+   "Cuisine, in their own words: the site calls itself a 'BBQ Restaurant' ('About this Incredible BBQ restaurant') and the photo alt text says 'Chinese BBQ Restaurant'; the Instagram bio says 'Skewers • BBQ Plates • Bold Flavors'. The storefront menu is Chinese-style: BBQ sold by the piece (beef, lamb and chicken skewers, offal, seafood, vegetables, mini skewers), BBQ In Foil Pan Box dishes, cold appetizers, fried rice, noodles and dumplings, Yunnan Bridge Noodles, and Chinese bottled drinks. It is not Korean BBQ (the only Korean item is Korean Shochu under Alcohol)",
+   "HOURS: their site's home and Contact Us pages (also /menu/ and /about/) print 'Sunday - Thursday 5:00 PM - 11:30 PM' and 'Friday - Saturday 5:00 PM - 12:30 PM'. The '12:30 PM' is read as a typo for 12:30 AM because the ordering storefront's own pickup schedule runs 5:00 PM-11:30 PM Sunday-Thursday and 5:00 PM until 12:30 AM (past midnight) on Friday and Saturday; the storefront showed 'Opens MON (Today): 05:00 PM - 11:30 PM'. The Instagram bio says 'Open Daily — Come Hungry'",
+   "Phone 510-323-4987 is on their site's home and Contact Us pages and on the storefront, whose notices read 'Please call 5103234987 to reconfirm your pick-up time. Thank you!!!!' and 'Food preparing times may vary on weekends. please call 5103234987 to confirm pick up time.'",
+   "No email is published on their site, the storefront, or the Instagram bio as screenshotted, so email is null",
+   "items = all 128 visible non-alcohol items on the storefront, in its order and with its category names. Left out: the Alcohol section (8 items: Korean Shochu $9.99, Tsingtao, Heineken, Corona and Sapporo $4.50 each, Wusu Beer $9.99, Tsingtao Beer Big Bottle 640ml $9.99, Snow Beer (Large) (640ml) $10.99) and 65 records the storefront hides (24 more beverages, 5 appetizers, 3 BBQ Meat, 1 BBQ Veggie, 2 Mini BBQ Skwers, 1 foil-pan dish, 15 noodle add-ons, a hidden 2-item 'New' category, and 12 internal spice/flavor options in a category named 'Dont Delete Item')",
+   "SOLD OUT when captured but still listed with prices, so kept: Lamb Chop ($5.09, BBQ Meat) and Mini Thin Tutu Wrap(10) ($3.49, Mini BBQ Skwers)",
+   "Promo prices: Spicy Baby Shrimp and Baby Shrimp w.Chives both list $26.99 with the description 'Original Price $26.99;New Product Promotion $23.99.' (copied as desc). cents holds the listed $26.99, not the promotional $23.99",
+   "Beef, Lamb and Chicken skewers carry the description 'Two Series Of Starting Point', copied verbatim. It looks like a machine translation (possibly 'two-skewer minimum'), but the storefront's minimum order quantity for them is 1 and the listed $2.99 / $2.99 / $2.79 is the price per item",
+   "Paid add-ons not in items: Yunnan Bridge Noodles(Spicy) takes up to 10 add-ons from $2.29 (~Chinese Cabbage) to $6.99 (~Shrimp), e.g. ~Lamb $6.59, ~Add Rice Noodle $4.39; BBQ Duck Blood In Foilpan Box and BBQ Frog Leg offer Instant Noodles or Vermicelli at +$3.50. Spice-level choices on skewers and hot dishes, and Sunny Side / Double Side on Fried Egg, cost nothing",
+   "Names and descriptions are copied exactly as the English storefront shows them, typos and odd capitals included ('Mini BBQ Skwers', 'Preserred Eggs w.Chili', 'BBQ Glaten', 'Backstrops of bull', 'Doughbay Soup', 'Mini Thin Tutu Wrap(10)', 'Thin Toufu Wrap(10pcs）' with a full-width closing bracket, lower-case 'fried rice with dried radish', and 'This product contains peanuts.此产品包含花生.'). The storefront also carries Chinese names (e.g. 牛肉串 Beef, 羊肉串 Lamb, 锡纸烧 BBQ In Foil Pan Box); not carried",
+   "Their site's own 'Drink' page (the only Menu sub-page) shows one image, 'Ace King Bbq Drink Menu' (wp-content/uploads/acekingbbqus.com/2021/09/menu2-1024x724-1.jpg), which is a 2021 bubble-tea menu branded 'U&ME TEA 优米茶铺' (fresh, fruit and milk teas at $3.95-$5.95). None of those drinks are on the current storefront, so it was treated as stale and not used",
+   "Unlinked pages from their Yoast sitemap: /menu/, /about/ and /ace-king-menu/ carry no menu and no prices (empty shells with the contact block); /gallery/ is photos only. The sitemap's homepage lastmod is 2025-07-30",
+   "Not used: acekingbbq.gotoeat.net (footer says 'This is not the official website. The content is updated by the community.'; its 'Must-try' prices run higher than the storefront's, e.g. Smashed Cucumber Salad US$14.29 there vs $10.99), the Beyond Menu page for 'Ace King Music Restaurant' ('Not accepting online orders', with different hours of 3:00 pm to 1:00 am, 1:30 am Friday-Saturday), and the DoorDash, Yelp, Tripadvisor, Apple Maps, Wheree, Zmenu and allmenus listings. No Toast, Square, Clover or ChowNow storefront turned up",
+   "Instagram facts (profile name 'Ace King BBQ | Newark', bio text, www.acekingbbqus.com link) come from the operator's screenshots; Instagram was not opened",
+   "logo_url left null: the only logo they publish is the playing-card artwork that says 'Ace King Music Restaurant', not 'Ace King BBQ'; worth asking them for a current logo"
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_sushiuma",
+  "name_exact": "Sushi Uma",
+  "one_line": "Family-owned Outer Sunset sushi: nigiri, signature rolls and chirashi",
+  "cuisine": "Japanese sushi",
+  "address": "2026 Irving St, San Francisco, CA 94122",
+  "phone": "(415) 968-9933",
+  "email": "SushiUmaInc@gmail.com",
+  "hours": "Daily 11:00 am - 11:30 pm",
+  "instagram": "sushiumasf",
+  "site_kind": "own-domain",
+  "site_url": "https://www.thesushiuma.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Steam Rice",
+    "desc": "Sushi Rice",
+    "cents": 350,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A1. Miso Soup",
+    "desc": "",
+    "cents": 399,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A2. Garden Salad (greens in miso dressing)",
+    "desc": "",
+    "cents": 595,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A3. Edamame (Boiled Soy Bean)",
+    "desc": "",
+    "cents": 595,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A4. Wakame Salad (Marinated Seaweed Salad)",
+    "desc": "",
+    "cents": 695,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A5. Sunomono (Cucumber in vinegar dressing)",
+    "desc": "",
+    "cents": 695,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A6. Tako Sunomono (Cucumber in vinegar dressing with Tako)",
+    "desc": "",
+    "cents": 895,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A7. Ebi Sunomono (Cucumber in vinegar dressing with Ebi)",
+    "desc": "",
+    "cents": 895,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Wasabi Tako",
+    "desc": "Raw octopus with wasabi sauce",
+    "cents": 595,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Agedashi Tofu",
+    "desc": "Deep fried tofu cubes served radish",
+    "cents": 895,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Poke salad",
+    "desc": "Diced Salmon / Tuna / Yellowtail over green salad with house sauce",
+    "cents": 1195,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Deep fried Veggie Spring rolls (4 pcs)",
+    "desc": "Deep fried Veggie Spring rolls",
+    "cents": 895,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Fried Gyoza (6 pcs)",
+    "desc": "Deep Fried Gyoza with vegetable and pork inside. served with Ponzu sauce.",
+    "cents": 895,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Takoyaki (6pcs)",
+    "desc": "Deep fried flour-based batter ball with Tako bits, topped with seaweed and bonito flakes, served with mayo and tonkatsu sauce.",
+    "cents": 995,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Calamari Tempura",
+    "desc": "",
+    "cents": 995,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A8. Shrimp Tempura",
+    "desc": "",
+    "cents": 995,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Veggie Tempura",
+    "desc": "Deep fried vegetable.",
+    "cents": 1095,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "A9. Soft Shell Crab (Deep Fried)",
+    "desc": "",
+    "cents": 1095,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Kaki Fry",
+    "desc": "Deep Fried Oyster 6 pcs",
+    "cents": 995,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Chicken Karaage",
+    "desc": "Deep Fried Boneless Chicken 8pcs",
+    "cents": 1195,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Ankimo",
+    "desc": "Monk Fish Liver with Ponzu Sauce 3pcs",
+    "cents": 995,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Hamachi Kama",
+    "desc": "Grilled yellowtail cheek with ponzu radish sauce.",
+    "cents": 1695,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Bluefin Tuna tartare",
+    "desc": "Bluefin tuna, diced small and combined cold ponzu sauce and avocado",
+    "cents": 1295,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Grill whole squid",
+    "desc": "Grill whole squid with spicy mayo",
+    "cents": 1495,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "Fresh Fries",
+    "desc": "French Fries with ketchup and spicy mayo",
+    "cents": 795,
+    "section": "Appetizer and Salad",
+    "label": ""
+   },
+   {
+    "name": "N1. Tamago (Grilled Egg)",
+    "desc": "",
+    "cents": 695,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N2. Inari (Fried Tofu Skin)",
+    "desc": "",
+    "cents": 695,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N3. Saba (Mackerel)",
+    "desc": "",
+    "cents": 795,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N4. Sake (Salmon)",
+    "desc": "",
+    "cents": 895,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N5. Hon Maguro (Bluefin Tuna)",
+    "desc": "Bluefin Tuna",
+    "cents": 995,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N6. Hamachi (Yellow Tail)",
+    "desc": "",
+    "cents": 895,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N7. Albacore (White Tuna)",
+    "desc": "",
+    "cents": 895,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N8. Ebi (Cooked Shrimp)",
+    "desc": "",
+    "cents": 895,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N9. Tobiko (Flying Fish Roe)",
+    "desc": "",
+    "cents": 895,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N10. Smoked Salmon",
+    "desc": "",
+    "cents": 895,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N11. Unagi (BBQ Eel)",
+    "desc": "",
+    "cents": 945,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N12. Tako (Octopus)",
+    "desc": "",
+    "cents": 945,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N13. Ikura (Salmon Roe)",
+    "desc": "",
+    "cents": 995,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "Walu (Super White Tuna)",
+    "desc": "",
+    "cents": 995,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N14. Hotate (Scallop)",
+    "desc": "",
+    "cents": 995,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "N15. Amaebi (Sweet Shrimp)",
+    "desc": "",
+    "cents": 2295,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "Uni",
+    "desc": "Sea Urchin Sushi",
+    "cents": 1695,
+    "section": "Nigiri -- 2 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S01. Tamago (Grilled Egg)",
+    "desc": "",
+    "cents": 695,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S02. Inari (Fried Tofu Skin)",
+    "desc": "",
+    "cents": 695,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S03. Saba (Mackerel)",
+    "desc": "",
+    "cents": 925,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S04. Sake (Salmon)",
+    "desc": "",
+    "cents": 1295,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S05. Maguro (Tuna)",
+    "desc": "",
+    "cents": 1295,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S6. Albacore (White Tuna)",
+    "desc": "",
+    "cents": 1195,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S7. Hamachi (Yellow Tail)",
+    "desc": "",
+    "cents": 1195,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S8. Ebi (Cooked Shrimp)",
+    "desc": "",
+    "cents": 1195,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S9. Tobiko (Flying Fish Roe)",
+    "desc": "",
+    "cents": 1195,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S10. Smoked Salmon",
+    "desc": "",
+    "cents": 1195,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S11. Unagi (BBQ Eel)",
+    "desc": "",
+    "cents": 1145,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S12. Tako (Octopus)",
+    "desc": "",
+    "cents": 1145,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S13. Ikura (Salmon Roe)",
+    "desc": "",
+    "cents": 1295,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S14. Hotate (Scallop)",
+    "desc": "",
+    "cents": 1295,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "S15. Amaebi (Sweet Shrimp)",
+    "desc": "",
+    "cents": 4495,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "Uni",
+    "desc": "Raw Sea Urchin",
+    "cents": 2595,
+    "section": "Sashimi -- 4 pieces per order",
+    "label": ""
+   },
+   {
+    "name": "C01.Sushi Combo",
+    "desc": "Chef Choice of 7 pcs Nigiri and 6 pcs of California Roll",
+    "cents": 2595,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "C02. Irving Street Combo",
+    "desc": "Chef Choice of 5 pcs nigiri, 4 pcs of sashimi and 1 makimono of your choice",
+    "cents": 3195,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "C03. Sushi Uma Combo",
+    "desc": "Chef Choice of 12 pcs nigiri, 6 pcs of Tuna Maki and 6 pcs of California roll",
+    "cents": 3895,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "C04. Sashimi Combo (7 pcs)",
+    "desc": "Chef Choice of 7 pcs sashimi",
+    "cents": 2595,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "C05. Sashimi Combo (12 pcs)",
+    "desc": "Chef Choice of 12 pcs of assorted sashimi",
+    "cents": 3195,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "C06. Sashimi Combo (24 pcs)",
+    "desc": "Chef Choice of 24 pcs of assorted sashimi",
+    "cents": 5995,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "Omakase (10 pcs)",
+    "desc": "Chef choices of 10 pieces Nigiri",
+    "cents": 4495,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "Premium Omakase (10 pcs)",
+    "desc": "Chef choices of 10 pieces nigiri (including Uni and A5 Wagyu)",
+    "cents": 5495,
+    "section": "Sashimi and Sushi Combinations",
+    "label": ""
+   },
+   {
+    "name": "M01. Avocado Roll",
+    "desc": "",
+    "cents": 745,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M02. Kappa Maki (Cucumber)",
+    "desc": "",
+    "cents": 695,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M03. Spicy Tuna Roll",
+    "desc": "",
+    "cents": 795,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M04. Spicy Salmon Roll",
+    "desc": "",
+    "cents": 795,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M05. Sake Maki (Salmon)",
+    "desc": "",
+    "cents": 795,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M06. Tekka Maki (Tuna)",
+    "desc": "",
+    "cents": 795,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M07. Negihama Maki (Yellow Tail)",
+    "desc": "",
+    "cents": 795,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M08. California Roll",
+    "desc": "",
+    "cents": 795,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M09. Salmon Avocado Roll",
+    "desc": "",
+    "cents": 895,
+    "section": "Makimono",
+    "label": ""
+   },
+   {
+    "name": "M01. Avocado Roll",
+    "desc": "",
+    "cents": 745,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M02. Kappa Maki (Cucumber)",
+    "desc": "",
+    "cents": 695,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M03. Spicy Tuna Roll",
+    "desc": "",
+    "cents": 695,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M04. Spicy Salmon Roll",
+    "desc": "",
+    "cents": 795,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M05. Sake Maki (Salmon)",
+    "desc": "",
+    "cents": 795,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M06. Tekka Maki (Tuna)",
+    "desc": "",
+    "cents": 795,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M07. Negihama Maki (Yellow Tail)",
+    "desc": "",
+    "cents": 795,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M08. California Roll",
+    "desc": "",
+    "cents": 795,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "M09. Salmon Avocado Roll",
+    "desc": "",
+    "cents": 895,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "Uni handroll",
+    "desc": "Sea Urchin handroll",
+    "cents": 1195,
+    "section": "Handrolls",
+    "label": ""
+   },
+   {
+    "name": "R01. Boston Roll",
+    "desc": "Cucumber, imitation crab and Avocado inside, topped with Salmon.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "R02. Catepillar Roll",
+    "desc": "Eel and cucumber inside, top with avocado and Tobiko.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "R03. 49ers Roll",
+    "desc": "Imitaion Crabmeat inside, top with salmon and lemon.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Dragon Roll",
+    "desc": "Shrimp tempura inside, top with eel and avocado.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "R04. Rainbow Roll",
+    "desc": "Imitation Crabmeat inside, top with assorted fish.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Crazy Roll",
+    "desc": "Spicy yellowtail inside, and top with albacore.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Philadelphia Roll",
+    "desc": "Smoke salmon, and cream cheese.",
+    "cents": 1295,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Rock and Roll",
+    "desc": "BBQ eel and avocado.",
+    "cents": 1295,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Tempura Roll",
+    "desc": "Shrimp tempura and cucumber.",
+    "cents": 1295,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Spider Roll",
+    "desc": "Soft shell crab and cucumber.",
+    "cents": 1795,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Romeo and Juliet Roll",
+    "desc": "Salmon and avocado inside, top with scallop and tobiko.",
+    "cents": 1795,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "R05. San Francisco Roll",
+    "desc": "Spicy tuna and cucumber inside, topped with avocado and tobiko.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Dynamite Roll",
+    "desc": "Spicy tuna and green onion inside and deep fried the roll.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Lion King Roll",
+    "desc": "Crabmeat and avocado inside, top with salmon and seared the roll.",
+    "cents": 1795,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Cherry Blossom Roll",
+    "desc": "Salmon and avocado inside, top with tuna.",
+    "cents": 1895,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "New York Roll",
+    "desc": "Ebi, avocado and cucumber.",
+    "cents": 1295,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Irving Street Roll",
+    "desc": "Yellowtail, eel and avocado.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Volcano Roll",
+    "desc": "Eel inside, top with crabmeat, salmon, and tobiko.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Scallop Lover Roll",
+    "desc": "Eel inside, top with seared scallop and tobiko.",
+    "cents": 1895,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Red Dragon Roll",
+    "desc": "Shrimp tempura inside topped with spicy tuna.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Hottie Roll",
+    "desc": "Shrimp tempura, avocado, topped with seared albacore and spicy tuna.",
+    "cents": 1795,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Lava Roll",
+    "desc": "Deep fried California roll or Spicy Tuna roll with spicy sauce, tobiko and scallions.",
+    "cents": 1695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Shrimp Lover Roll",
+    "desc": "Tempura shrimp and imitation crab inside, topped with ebi and avocado",
+    "cents": 1795,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Uni Deluxe Roll",
+    "desc": "Sea urchin, Salmon belly, tobiko, shiso leave, cucumber",
+    "cents": 2695,
+    "section": "Signature Rolls",
+    "label": ""
+   },
+   {
+    "name": "Unagi Don",
+    "desc": "BBQ Eel over rice",
+    "cents": 1795,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Sake Oyako Don",
+    "desc": "Salmon and Ikura over rice",
+    "cents": 1695,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Tekka Don",
+    "desc": "Tuna over rice",
+    "cents": 1695,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Dynamite Don Bowl",
+    "desc": "Mixed Fish with Spicy Tuna over rice",
+    "cents": 1695,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Bara Chirashi Don",
+    "desc": "Chopped fish mix with wasabi and soy sauce over rice",
+    "cents": 1995,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Chirashi Don",
+    "desc": "Assorted Sashimi over rice",
+    "cents": 2295,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Premium Chirashi",
+    "desc": "Assorted premium Sashimi over Rice",
+    "cents": 3995,
+    "section": "Signature Bowls",
+    "label": ""
+   },
+   {
+    "name": "Soda",
+    "desc": "",
+    "cents": 225,
+    "section": "Beverages and Desserts",
+    "label": ""
+   },
+   {
+    "name": "Ito En Green Tea",
+    "desc": "Bottled Green Tea (unsweetened)",
+    "cents": 325,
+    "section": "Beverages and Desserts",
+    "label": ""
+   },
+   {
+    "name": "Snapple",
+    "desc": "Various flavor of bottled snapple",
+    "cents": 325,
+    "section": "Beverages and Desserts",
+    "label": ""
+   },
+   {
+    "name": "Bottled Water",
+    "desc": "",
+    "cents": 225,
+    "section": "Beverages and Desserts",
+    "label": ""
+   },
+   {
+    "name": "Cheese Cake",
+    "desc": "",
+    "cents": 695,
+    "section": "Beverages and Desserts",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from the online ordering page on their own website",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn, 2026-09-14 09:24 PT, with their Instagram post: 'Hey bro, can you gather as much information maybe on yelp and make them a page. They will be a good candidate to get a website made.' No page named; San Francisco's Sushi seat was open",
+   "THEY DO HAVE A WEBSITE (the operator believed not): https://www.thesushiuma.com/ (thesushiuma.com redirects there) is a live Wix site with Home, Online Orders (New), Loyalty, My Account, Comments, About and Gallery pages. Every page's footer shows '2026 Irving St, San Francisco, CA 94122', 'T: 415-968-9933', 'email: SushiUmaInc@gmail.com' and '© 2016 by Sushi Uma Inc.'. WHOIS: registered 2017-12-29 through Wix, updated 2025-12-05, expires 2026-12-29. Apple Maps also lists thesushiuma.com as their website; the Instagram simply does not link it. It is a dated 2016 Wix template ('Proudly created with Wix.com'), which may be why it looks like they have no site",
+   "Prices captured 2026-09-14 (about 8:55 PM PDT) in headless Chromium from 'Online Orders (New)', the Wix Restaurants ordering page on their own domain. It read 'Accepting Orders', pickup only (all of its delivery options are switched off), pickup address 2026 Irving Street. The rendered page and the page's embedded menu data match item for item, prices included; no bot check. The menu records were created 2025-10-08 and the sections last edited 2025-10-27, so in-store prices may have moved since",
+   "items = all 121 dish cards the page shows across its 9 sections, which come from 113 distinct menu records. The 'Handrolls' section re-uses 8 of the Makimono records (M01, M02 and M04-M09, same names and prices), so those 8 appear under both sections; Handrolls has its own 'M03. Spicy Tuna Roll' at $6.95 (Makimono's M03 is $7.95) and 'Uni handroll'. 'Uni' appears in both Nigiri ($16.95, 'Sea Urchin Sushi') and Sashimi ($25.95, 'Raw Sea Urchin') as separate dishes. A page may want to show the 8 shared rolls once. Two further item IDs referenced by the Signature Rolls and Beverages sections are not published and do not render",
+   "Nigiri prices are per 2-piece order and sashimi prices per 4-piece order; that information is in their section names, kept as the section values",
+   "'Uni handroll' ($11.95) showed '$11.95 - Unavailable' (out of stock) when captured; kept with its listed price",
+   "Priced add-ons not in items: A1. Miso Soup has a required size (small (12oz) +$0.00 or large (32oz) +$5.00) and an optional 'with clams' +$1.50; Cheese Cake is New York Cheese Cake (default) or Green Tea Cheese Cake +$4.95. Free choices: Soda (Coke, Diet Coke, Sprite), Snapple (Lemon, Half and half, Raspberry or Peach Iced Tea), Poke salad fish (Salmon, Tuna, Yellowtail), Lava Roll base (California Roll or Spicy Tuna Roll)",
+   "Names and descriptions are copied as the page shows them, typos kept ('C01.Sushi Combo', 'R02. Catepillar Roll', 'Imitaion Crabmeat', 'Smoke salmon', 'shiso leave', 'deep fried the roll'). Only whitespace was tidied the way the browser renders it: double spaces collapsed (e.g. 'N6. Hamachi (Yellow Tail)'), a leading space dropped from 'Omakase (10 pcs)', trailing spaces and line breaks removed, and an invisible zero-width space removed from the Volcano Roll description. Not in items: section intro lines (e.g. Signature Rolls: 'NOTE: Most of our Signature Rolls have Imitation crab inside. Please specify in your order if you would like to take it out. Thanks!'), the page's 'Featured' badges, its 'Vegetarian' tags (Steam Rice, A2-A5, Agedashi Tofu, Deep fried Veggie Spring rolls, Veggie Tempura, Fresh Fries) and its 'Mild' tag (Wasabi Tako)",
+   "No alcohol is on their ordering menu, so nothing was skipped for that reason (Apple Maps lists 'Beer and wine served')",
+   "HOURS: their site footer (all pages) prints 'Monday, Tuesday, Wednesday, Thursday: 11:00 am - 11:30 pm' and 'Friday, Saturday, Sunday: 11:00 am - 11:30 am'. The second line's '11:30 am' is read as a typo: their own ordering page's pickup schedule is 11:00 AM-11:30 PM on all seven days, Apple Maps says 'Every Day: 11:00 AM – 11:30 PM', and a search-engine summary of their Yelp page gives 'Mon - Sun: 11:00 am - 11:30 pm'",
+   "FACT SOURCES (operator allowed listings for basic facts on this business): address, phone and email from their own site footer on every page and the ordering page's business info (name 'Sushi Uma', +14159689933, sushiumainc@gmail.com); the phone also matches the Aug 7, 2026 Instagram post relayed by the operator and Apple Maps '+1 (415) 968-9933'. Neighbourhood 'Outer Sunset' from Apple Maps (the Yelp search summary agrees; Tripadvisor's title says 'Sunset District'). Cuisine: their About page says 'Sushi Uma is started as a Grab and Go Japanese restaurant', Yelp's category is 'Sushi Bars' (Yelp page title in search results), Apple Maps' is 'Sushi Restaurant'. 'Family-owned' and the 10-year anniversary come from their Instagram post via the operator; the site's '© 2016' fits. Website confirmed from their own domain plus Apple Maps",
+   "YELP NOT READ DIRECTLY: www.yelp.com/biz/sushi-uma-san-francisco answered HTTP 403 to WebFetch and a 'You have been blocked' bot page (HTTP 403) in headless Chromium; not bypassed. The Yelp facts above come only from search-engine titles and summaries of that page, so treat them as secondary. Google Maps was not checked",
+   "OLD ADDRESS IN THEIR LINKS: the footer address on their site links to a Google Maps pin for '2146 Irving St, San Francisco, CA 94122', and their GrubHub button's URL says 'sushi-uma-2146-irving-st'; a sanfranciscodowntown.com listing also shows 2146 Irving Street. Every written address on their site and ordering page, the Instagram post, Apple Maps and Yelp say 2026 Irving St, so 2146 looks like a former address and that map link points to the wrong spot",
+   "AYCE NOT CAPTURED: search-result titles of videos on their Facebook page (facebook.com/SushiUma, linked from their site) advertise all-you-can-eat sushi from 11am to 4pm, and search summaries quote conflicting prices ($24.99 weekdays / $28.99 weekends vs $26.99 weekdays / $29.99 weekends and holidays) with unknown dates. Nothing about AYCE is on their website or ordering page, and Facebook was not opened; confirm with them before mentioning it",
+   "Dine-in promotion from their Aug 7, 2026 Instagram post (per the operator, not verified here): spend $100 before tax, get 12 free pieces of premium sashimi; not mentioned on their website",
+   "Their site also runs a Wix loyalty program: 1 point per $1 on restaurant orders, 100 points for signing up; 100 points = $5 off orders over $35, 200 = $10 off over $60, 400 = $20 off over $100",
+   "Not used for prices: the UberEat, GrubHub and DoorDash buttons on their own site, order.online/store/sushi-uma-76867 (DoorDash-run), and the Grubhub, Seamless, menupages, novacircle, outgoing.world and wanderlog listings. Their site's 'Menu Peek >' button just links back to the home page",
+   "Instagram @sushiumasf was not opened (no login); search results show the profile as 'SushiUma (@sushiumasf)'",
+   "logo_url left null: the site has no logo image, only the text 'Sushi Uma' and a small sushi-and-chopsticks icon"
+  ],
+  "blocked": "Yelp only (not a price source): www.yelp.com/biz/sushi-uma-san-francisco returned HTTP 403 to WebFetch and a 'You have been blocked' bot page in headless Chromium; not bypassed. Their own website and ordering page loaded fine"
+ },
+ {
+  "id": "b_harborviewsf",
+  "name_exact": "Harborview Restaurant & Bar",
+  "one_line": "Cantonese dim sum, roast duck and seafood with San Francisco Bay views",
+  "cuisine": "Cantonese Chinese",
+  "address": "4 Embarcadero Center, San Francisco, CA 94111",
+  "phone": "(415) 399-1200",
+  "email": "info@harborviewsf.com",
+  "hours": null,
+  "instagram": "harborviewsf",
+  "site_kind": "own-domain",
+  "site_url": "https://www.harborviewsf.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Honey Glazed Barbecued Pork",
+    "desc": "蜜汁叉燒 Danish pork slices glazed with honey, sugar, and spices",
+    "cents": 1300,
+    "section": "Chef's Specials 廚師特別介紹",
+    "label": ""
+   },
+   {
+    "name": "Beef Brisket & Turnip in a Hot Pot",
+    "desc": "清湯蘿蔔牛肉 Tender pieces of beef brisket & turnip simmered in a hearty broth",
+    "cents": 3800,
+    "section": "Chef's Specials 廚師特別介紹",
+    "label": ""
+   },
+   {
+    "name": "Dungeness Crab Congee",
+    "desc": "生滾蟹肉粥 Congee/Rice Porridge with Dungeness Crab",
+    "cents": 4000,
+    "section": "Chef's Specials 廚師特別介紹",
+    "label": "Half Crab $40 / Whole Crab $75"
+   },
+   {
+    "name": "Chilled Sea Cucumber",
+    "desc": "涼拌原條海參 Served whole with wasabi",
+    "cents": 1800,
+    "section": "Appetizers 頭檯",
+    "label": ""
+   },
+   {
+    "name": "Salt & Pepper Spareribs",
+    "desc": "椒鹽排骨 Deep-fried spareribs sprinkled with salt & pepper seasonings",
+    "cents": 2400,
+    "section": "Appetizers 頭檯",
+    "label": ""
+   },
+   {
+    "name": "Harborview Beef",
+    "desc": "凱悅秘製牛肉 Stir-fried top choice sliced beef marinated with chef's special sauce",
+    "cents": 2800,
+    "section": "House Specialties 特色推介",
+    "label": ""
+   },
+   {
+    "name": "Roast Squab",
+    "desc": "石岐燒乳鴿 Whole squab roasted to a golden brown crispy skin, served with seasoning salt",
+    "cents": 2500,
+    "section": "House Specialties 特色推介",
+    "label": ""
+   },
+   {
+    "name": "Baked Black Cod",
+    "desc": "香焗銀鱈魚 Large fillet of black cod marinated & baked in our special glaze (Cooking time 30+ minutes)",
+    "cents": 5600,
+    "section": "House Specialties 特色推介",
+    "label": "Small 小 $56 / Large 大 $98"
+   },
+   {
+    "name": "Vegetarian Smoked Goose",
+    "desc": "腐皮素鵝 Mushroom wrapped in tofu skin, marinated in soy sauce",
+    "cents": 1300,
+    "section": "Barbeque 至尊燒味",
+    "label": ""
+   },
+   {
+    "name": "Japanese Seaweed",
+    "desc": "日本海藻",
+    "cents": 1300,
+    "section": "Barbeque 至尊燒味",
+    "label": ""
+   },
+   {
+    "name": "Soya Sauce Bean Curd",
+    "desc": "鹵水豆腐",
+    "cents": 1300,
+    "section": "Barbeque 至尊燒味",
+    "label": ""
+   },
+   {
+    "name": "Chilled Jellyfish Plate",
+    "desc": "涼拌海蜇",
+    "cents": 1300,
+    "section": "Barbeque 至尊燒味",
+    "label": ""
+   },
+   {
+    "name": "Vegetarian Hot & Sour Soup",
+    "desc": "素酸辣湯 Thick broth cooked with black fungus, bamboo shoots, bean curd, scallions, egg, vinegar & pepper",
+    "cents": 800,
+    "section": "Soup 湯羹",
+    "label": ""
+   },
+   {
+    "name": "Chicken & Sweet Corn Soup",
+    "desc": "雞茸粟米羹 Tiny pieces of chicken, sweet corn & egg cooked in a thick savory broth",
+    "cents": 800,
+    "section": "Soup 湯羹",
+    "label": ""
+   },
+   {
+    "name": "Pumpkin Bisque With Pine Nuts",
+    "desc": "松子金露",
+    "cents": 800,
+    "section": "Soup 湯羹",
+    "label": "$8 / With Seafood - $12"
+   },
+   {
+    "name": "Jumbo Soup Dumpling in Supreme Broth",
+    "desc": "瑤柱灌湯餃 Filled with dried scallops, pork, shrimp, mushroom, bamboo pit",
+    "cents": 1200,
+    "section": "Soup 湯羹",
+    "label": ""
+   },
+   {
+    "name": "Fish Maw & Bamboo Mushroom Soup",
+    "desc": "花膠筒竹笙魚肚羹 Thick broth cooked with fish maw, bamboo pith, mushroom and egg white",
+    "cents": 1200,
+    "section": "Soup 湯羹",
+    "label": ""
+   },
+   {
+    "name": "Steamed Clams with Silken Eggs",
+    "desc": "鲜蜆蒸水蛋",
+    "cents": 3000,
+    "section": "Seafood 海鮮",
+    "label": ""
+   },
+   {
+    "name": "Scallop & Steak Cubes with Macadamia Nuts",
+    "desc": "夏果牛柳帶子",
+    "cents": 3000,
+    "section": "Seafood 海鮮",
+    "label": ""
+   },
+   {
+    "name": "Chilled Princess Chicken",
+    "desc": "貴妃龍岗雞 Specially marinated whole chicken served with a ginger and onion sauce",
+    "cents": 2800,
+    "section": "Poultry 家禽",
+    "label": "Half $28 / Whole $50"
+   },
+   {
+    "name": "Golden Roasted Chicken",
+    "desc": "凱悅吊燒雞",
+    "cents": 2800,
+    "section": "Poultry 家禽",
+    "label": "Half $28 / Whole $50"
+   },
+   {
+    "name": "Roast Duck",
+    "desc": "明爐燒鴨 California free range duck marinated with 9 spices",
+    "cents": 3200,
+    "section": "Poultry 家禽",
+    "label": "Half $32 / Whole $55"
+   },
+   {
+    "name": "Honey Garlic Sesame Chicken (Boneless)",
+    "desc": "蒜香蜜汁雞 Diced chicken breast sautéed in our special honey garlic sauce and served with broccoli",
+    "cents": 2500,
+    "section": "Poultry 家禽",
+    "label": ""
+   },
+   {
+    "name": "Kung Pao Chicken (Boneless)",
+    "desc": "宮保雞丁 Sautéed diced chicken breast with bell peppers, onions, carrots, green beans and peanuts in spicy sauce",
+    "cents": 2500,
+    "section": "Poultry 家禽",
+    "label": ""
+   },
+   {
+    "name": "Three Cup Basil Chicken",
+    "desc": "三杯雞或雞翼 Sautéed boneless chicken breast or chicken wings (with bones) with Thai basil, bell peppers, garlic & ginger in a claypot",
+    "cents": 2600,
+    "section": "Poultry 家禽",
+    "label": ""
+   },
+   {
+    "name": "Honey Garlic Pork Spareribs",
+    "desc": "西汁排骨 Hearty spareribs glazed with honey and seasonings",
+    "cents": 2400,
+    "section": "Pork & Beef 豬牛",
+    "label": ""
+   },
+   {
+    "name": "Sautéed Beef with Seasonal Vegetables",
+    "desc": "時菜炒牛肉 Beef with vegetables",
+    "cents": 2600,
+    "section": "Pork & Beef 豬牛",
+    "label": ""
+   },
+   {
+    "name": "Sautéed Seasonal Vegetables",
+    "desc": "清炒時蔬",
+    "cents": 2400,
+    "section": "Vegetables 蔬菜",
+    "label": ""
+   },
+   {
+    "name": "Mapo Tofu",
+    "desc": "香滑麻婆豆腐 Soft bean curd, shredded pork & scallions sautéed in a spicy sauce. Vegetarian option available",
+    "cents": 2500,
+    "section": "Vegetables 蔬菜",
+    "label": ""
+   },
+   {
+    "name": "Sautéed Green Beans",
+    "desc": "干燒四季豆 Green beans sautéed with minced pork in a spicy bean sauce. Vegetarian option available",
+    "cents": 2500,
+    "section": "Vegetables 蔬菜",
+    "label": ""
+   },
+   {
+    "name": "Eggplant with Garlic Sauce",
+    "desc": "魚香茄子 Eggplant, shredded pork, black fungus, bamboo shoots & scallions sautéed in a hot garlic sauce. Vegetarian option available",
+    "cents": 2500,
+    "section": "Vegetables 蔬菜",
+    "label": ""
+   },
+   {
+    "name": "Combination Seafood Stir Fried Garlic Noodle",
+    "desc": "海鮮三寶蒜蓉麵 Prawns, clams & scallops sautéed with garlic noodles",
+    "cents": 2600,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "X.O. Sauce Stir-Fried Seafood Rice Noodles",
+    "desc": "X.O.醬海鮮炒米粉 Stir-fried rice noodles with prawns, scallops, calamari and our special housemade X.O. Sauce",
+    "cents": 2600,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Braised E-Fu Noodles with Shredded Pork",
+    "desc": "韭皇肉絲伊麵 Noodles with shredded pork, mushrooms and chives",
+    "cents": 2300,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Golden Supreme Fried Rice",
+    "desc": "金雙蛋炒飯 Fried rice with onions, egg whites and egg yolks",
+    "cents": 2300,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Dried Scallops & Egg White Fried Rice",
+    "desc": "瑤柱蛋白炒飯 Fried rice with dried scallops and egg whites",
+    "cents": 2300,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Salted Fish with Chicken Fried Rice",
+    "desc": "鹹魚雞粒炒飯 Fried rice with salted fish and diced chicken",
+    "cents": 2300,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Chinese Bacon & Sausage Sticky Rice",
+    "desc": "生炒臘味糯米飯 Sticky rice mixed with lop cheong, egg and dried shrimp",
+    "cents": 2500,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Black Truffle Udon",
+    "desc": "黑松露雜菌炒烏冬 Udon stir-fried with assorted mushrooms and black truffle",
+    "cents": 2300,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Shrimp and Scrambled Egg Chow Fun",
+    "desc": "滑蛋蝦球炒河粉 Stir-fried flat rice noodles with shrimp and silky scrambled eggs",
+    "cents": 2600,
+    "section": "Rice & Noodles 飯麵",
+    "label": ""
+   },
+   {
+    "name": "Black Sesame Mochi In Sweet Almond Soup",
+    "desc": "杏仁露湯圓",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Black Sesame Mochi in Ginger Tea",
+    "desc": "薑茶湯圓",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Double-Boiled Ginger Pudding",
+    "desc": "薑汁燉奶",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Mango Pudding",
+    "desc": "芒果布丁",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Mango Sago with Grapefruit",
+    "desc": "楊枝甘露",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Longevity Peach Buns",
+    "desc": "南山夀桃 Filled with lotus paste & salted egg yolk (2 pcs)",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Baked Portuguese Custard Tarts",
+    "desc": "葡式蛋撻 (3 pcs)",
+    "cents": 990,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Deep-Fried Sesame Balls with Purple Sweet Potato",
+    "desc": "紫薯煎堆 (3 pcs)",
+    "cents": 770,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Steamed Lava Salt Egg Yolk Custard Buns",
+    "desc": "鹹蛋皇流沙包 (3 pcs)",
+    "cents": 990,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Baked Coffee Lava Buns With Crunchy Sugar Crust",
+    "desc": "雪山咖啡包 (3 pcs)",
+    "cents": 990,
+    "section": "Desserts 甜品",
+    "label": ""
+   },
+   {
+    "name": "Steamed \"Black & White\" Soup Dumplings",
+    "desc": "鎮店鴛鴦小籠包 Xiao long bao with black truffle and Kurobuta pork (4pcs)",
+    "cents": 1600,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Kurobuta Pork Soup Dumplings",
+    "desc": "黑豚肉小籠包 Xiao long bao with Kurobuta pork (4pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Kurobuta Pork & Shrimp Dumplings",
+    "desc": "黑豚肉燒賣 Siu mai (4pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Shrimp Dumplings",
+    "desc": "水晶鮮蝦餃 Har gow (4pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Shrimp & Leek Dumplings",
+    "desc": "鮮蝦韭菜餃 (3 pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Shrimp & Pea Sprout Dumplings",
+    "desc": "鮮蝦豆苗餃 (3 pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Scallop Dumplings",
+    "desc": "蒸海鮮餃 (3 pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Mushroom Dumplings",
+    "desc": "羅漢齋餃 Vegetarian (3pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Glutinous Rice Wrapped with Lotus Leaf",
+    "desc": "瑤柱珍珠糯米雞 (1pc)",
+    "cents": 600,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Shrimp Roll",
+    "desc": "腐竹鮮蝦卷 Wrapped in bean curd (3pcs)",
+    "cents": 990,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Beef Balls",
+    "desc": "陳皮牛肉丸 (3 pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Pork Spareribs",
+    "desc": "豉汁蒸排骨 With black bean sauce",
+    "cents": 990,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Chicken Feet",
+    "desc": "豉汁蒸鳳爪 With black bean sauce",
+    "cents": 990,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Jumbo Soup Dumpling in Supreme Broth",
+    "desc": "瑤柱灌湯餃 With sundried scallops (1 pc)",
+    "cents": 1100,
+    "section": "Dim Sum: Steamed 蒸蒸日上",
+    "label": ""
+   },
+   {
+    "name": "Steamed Longevity Peach Buns",
+    "desc": "南山夀桃 Filled with salted egg yolk and lotus seed paste (2 pcs)",
+    "cents": 770,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Steamed Barbecue Pork Buns",
+    "desc": "蜜汁叉燒包 (3pcs)",
+    "cents": 770,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Steamed Custard & Egg Yolk Buns",
+    "desc": "鹹蛋流沙包 (3pcs)",
+    "cents": 990,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Baked BBQ Pork Buns",
+    "desc": "雪山叉燒包 With a crunchy sugar crust (2pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Baked Coffee Lava Buns",
+    "desc": "雪山咖啡包 With a crunchy sugar crust (3 pcs)",
+    "cents": 990,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Baked Pineapple Buns",
+    "desc": "菠蘿奶黄包 with Custard and Real Pineapple",
+    "cents": 990,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Pan-Fried Vegetable Buns",
+    "desc": "素生煎包",
+    "cents": 990,
+    "section": "Dim Sum: Buns 包羅萬有",
+    "label": ""
+   },
+   {
+    "name": "Congee with Salted Pork & Century Egg",
+    "desc": "皮蛋瘦肉粥",
+    "cents": 1400,
+    "section": "Dim Sum: Congee/Rice Porridge 生滾粥品",
+    "label": ""
+   },
+   {
+    "name": "Congee with Sliced Beef",
+    "desc": "生滾牛肉粥",
+    "cents": 1400,
+    "section": "Dim Sum: Congee/Rice Porridge 生滾粥品",
+    "label": ""
+   },
+   {
+    "name": "Congee with Dungeness Crab",
+    "desc": "生滾肉蟹粥",
+    "cents": 4000,
+    "section": "Dim Sum: Congee/Rice Porridge 生滾粥品",
+    "label": "Half $40 / Whole $75"
+   },
+   {
+    "name": "Congee with Bone-in Chicken",
+    "desc": "黃毛鷄粥",
+    "cents": 2000,
+    "section": "Dim Sum: Congee/Rice Porridge 生滾粥品",
+    "label": ""
+   },
+   {
+    "name": "Chinese Fried Doughnut",
+    "desc": "油條",
+    "cents": 500,
+    "section": "Dim Sum: Congee/Rice Porridge 生滾粥品",
+    "label": ""
+   },
+   {
+    "name": "Steamed Rice Flour Rolls (Beef, Shrimp, BBQ Pork, Vegetarian or Chinese Doughnut)",
+    "desc": "布拉腸 (牛肉, 鮮蝦, 叉燒, 羅漢齋, 炸兩) (3 pcs)",
+    "cents": 1300,
+    "section": "Dim Sum: Rice Flour Rolls 長長久久",
+    "label": ""
+   },
+   {
+    "name": "Deep-Fried Sesame Dumplings",
+    "desc": "紫薯煎堆 With sweet potato stuffing (3pcs)",
+    "cents": 770,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Deep-Fried Glutinous Rice Dumplings",
+    "desc": "家鄉鹹水角 With assorted meat stuffing (3pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Baked Portuguese Style Custard Tart",
+    "desc": "澳門葡撻 (3pcs)",
+    "cents": 990,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Vegetarian Egg Rolls",
+    "desc": "素菜春卷 (3pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Vegetarian Potstickers",
+    "desc": "碧綠齋窩貼 (4 pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Chicken Potstickers",
+    "desc": "(4pcs)",
+    "cents": 1100,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Deep-Fried Shrimp Toast",
+    "desc": "盤龍蝦多士 (6pcs)",
+    "cents": 1300,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Deep-Fried Shrimp Balls",
+    "desc": "金絲炸蝦丸 (3 pcs)",
+    "cents": 1300,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Deep-Fried Shrimp Dumplings",
+    "desc": "沙律明蝦角 (3 pcs)",
+    "cents": 1300,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Pan-Fried Turnip Cake",
+    "desc": "香煎蘿蔔糕",
+    "cents": 770,
+    "section": "Dim Sum: Fried & Baked 煎炸焗點心",
+    "label": ""
+   },
+   {
+    "name": "Vegetarian Smoked Goose",
+    "desc": "腐皮素鵝 Mushroom wrapped in tofu skin, marinated in sweet soy sauce",
+    "cents": 1300,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Chilled Jellyfish Plate",
+    "desc": "涼拌海蜇",
+    "cents": 1300,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Soy Sauce Bean Curd",
+    "desc": "鹵水豆腐",
+    "cents": 1300,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Steamed Chinese Broccoli with Oyster Sauce",
+    "desc": "蠔油芥蘭",
+    "cents": 1300,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Chow Mein with Bean Sprouts & Green Onion",
+    "desc": "豉油皇炒麵",
+    "cents": 1300,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Harborview Beef",
+    "desc": "凱悅秘製牛肉",
+    "cents": 1600,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Three Treasures with Black Bean Sauce",
+    "desc": "豉汁煎醸三寶",
+    "cents": 1600,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Salt & Pepper Fried Chicken Wings",
+    "desc": "椒鹽鷄翼 (6 pcs)",
+    "cents": 1400,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Honey Garlic Sesame Chicken",
+    "desc": "蜜汁鷄球 (Boneless)",
+    "cents": 1600,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Chicken Feet in Herbal Broth",
+    "desc": "藥膳雞腳",
+    "cents": 1100,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Sweet & Sour Pork with Pineapple",
+    "desc": "菠蘿咕嚕肉",
+    "cents": 1600,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Szechuan Spicy Cold Chicken",
+    "desc": "麻辣口水雞",
+    "cents": 1300,
+    "section": "Dim Sum: Specials 特別推介",
+    "label": ""
+   },
+   {
+    "name": "Double-Boiled Milk & Ginger Pudding",
+    "desc": "薑汁燉奶 (Hot)",
+    "cents": 770,
+    "section": "Dim Sum: Dessert 甜甜蜜蜜",
+    "label": ""
+   },
+   {
+    "name": "Black Sesame Glutinous Rice Dumplings",
+    "desc": "薑茶湯圓 In ginger tea (hot)",
+    "cents": 770,
+    "section": "Dim Sum: Dessert 甜甜蜜蜜",
+    "label": ""
+   },
+   {
+    "name": "Sweet Almond Soup",
+    "desc": "杏仁露 (Hot)",
+    "cents": 770,
+    "section": "Dim Sum: Dessert 甜甜蜜蜜",
+    "label": ""
+   },
+   {
+    "name": "Mango Pudding",
+    "desc": "芒果布丁 (Cold)",
+    "cents": 770,
+    "section": "Dim Sum: Dessert 甜甜蜜蜜",
+    "label": ""
+   },
+   {
+    "name": "Mango Sago with Grapefruit",
+    "desc": "楊枝甘露 (Cold)",
+    "cents": 770,
+    "section": "Dim Sum: Dessert 甜甜蜜蜜",
+    "label": ""
+   },
+   {
+    "name": "Black Sesame Mochi",
+    "desc": "雷沙湯圓 With grated peanut (4 pcs)",
+    "cents": 770,
+    "section": "Dim Sum: Dessert 甜甜蜜蜜",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from the menu on their own website, which adds an 18% service charge",
+  "logo_url": "https://images.getbento.com/accounts/a9a05a32a9abad0e6803b9fbbb9dcf4e/media/images/35998f98dd4d4dab3-69068harborview.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'San Francisco • Goods', sent 2026-09-14 09:27 PT with screenshots of @harborviewsf",
+   "Sources, all fetched 2026-09-14 with no CAPTCHA, login or block: https://www.harborviewsf.com/ , https://www.harborviewsf.com/location/harborview-restaurant-bar/ , https://www.harborviewsf.com/menus/ , https://www.harborviewsf.com/reservations/ , https://www.harborviewsf.com/about/ , https://www.harborviewsf.com/announcements/ , https://www.harborviewsf.com/store/ . Values were read from raw HTML because a WebFetch summary of the menu page contained transcription errors.",
+   "Address is printed on the homepage and the Hours & Location page as '4 Embarcadero Center, San Francisco, CA 94111' with no suite. The Hours & Location page adds: main entrance street level (press 0 in the elevator); bar entrance and accessible entrance lobby level (press 1); Harborview GO street level on Sacramento Alley. The Bar Menu tab prints 'Four Embarcadero Center | Lobby Level'. Instagram writes 'Four Embarcadero Center'.",
+   "hours is null because their own site disagrees about dinner closing time. Visible text on https://www.harborviewsf.com/location/harborview-restaurant-bar/ : 'LUNCH Tuesday to Friday 11:30am - 2:00pm, Saturday & Sunday 10:30am - 2:30pm; DINNER Tuesday to Sunday (Closed Mondays) 5:00pm - 9:00pm; HAPPY HOUR Tuesday to Friday 4:00pm – 7:00pm; HARBORVIEW GO Tuesday to Friday 11:30am - 1:30pm'. The schema.org openingHours embedded in every page of the site says dinner Tu, We, Th and Su 17:00-20:30 and Fr, Sa 17:00-21:00 (lunch times match). No separate dim sum hours are stated anywhere. The Reservations page says last call for kitchen orders is 15 minutes before closing.",
+   "Price source: the HTML menu text of the Main Menu and Dim Sum tabs on https://www.harborviewsf.com/menus/ . The same page's own 'Download PDF' files disagree with that text on many prices, so an item was kept only where the web price matched the corresponding file: Main Menu PDF https://media-cdn.getbento.com/accounts/a9a05a32a9abad0e6803b9fbbb9dcf4e/media/lMEcR5rYSGK7KSgeslHv_Harbor%20View%20Dine%20in%20Menu%2020260303.pdf (created 2026-03-03, uploaded 2026-05-17); Dim Sum PDF https://media-cdn.getbento.com/accounts/a9a05a32a9abad0e6803b9fbbb9dcf4e/media/C79TrZsQ6GlPqrv5xFYg_Master%20Dim%20Sum%20for%20PDF%20%28v.2026.04.10%29.pdf (uploaded 2026-04-11; prices as size codes with the printed legend S $7.7, M $9.9, L $11, XL $13, Q $16); Desserts image https://media-cdn.getbento.com/accounts/a9a05a32a9abad0e6803b9fbbb9dcf4e/media/Y40mWjN9TtuOBhLdP1l9_Dessert%20Menu%20Website%202026.png (uploaded 2026-08-11). These files are hosted on BentoBox's CDN media-cdn.getbento.com, not on harborviewsf.com. The Main Menu PDF also lists many dishes that are not in the web text; none of those were copied.",
+   "Omitted because the web price differs from the Main Menu PDF (web vs PDF): Black Truffle Peking Duck Sliders $13 vs $14; Spicy Honey Garlic Chicken Wings $13 vs $14; Salt & Pepper Chicken Wings $13 vs $14; Salt & Pepper Calamari $26 vs $28; Salt & Pepper Scallops $25 vs $30; Three Treasures with Black Bean Sauce $28 vs $30; Peking Duck half $36 vs $38 (whole $68 on both); Crispy Roasted Pork Belly 6 pcs $12 / 9 pcs $16 vs $13 / $17; Prawns with Honey Walnuts $26 vs $30; Szechuan Spicy Sauce Cold Chicken half $28 / whole $50 vs a $13 appetizer; Pan-Fried Pork Patties With Salted Fish $30 vs $32; Steak Cubes & Snow Peas in XO Sauce $25 vs $26; Mu Shu Vegetables $24 vs $25; Black Mushrooms with Mustard Greens $25 vs $30; Mixed Vegetables with Mushrooms $30 vs $28; Braised Tofu with Vegetables $30 vs $28; Fried Stuffed Bean Curd with Shrimp $28 vs $25; the whole 'Dim Sum 點心' section of the Main Menu tab (Vegetable Egg Rolls, Baked BBQ Pork Buns, Steamed Kurobuta Pork Soup Dumplings, Steamed Shrimp Dumplings, Steamed Kurobuta Pork & Shrimp Dumplings, Chicken Pot Stickers at $11 vs $12; Pork Wontons in Chili Sauce $11 for 6 pcs vs $15 for 8 pcs).",
+   "Omitted because the dish is in the web text but not on the Main Menu PDF: Sea Salt Tofu Fries $11; Salt & Pepper Prawns $26 and Pan Fried Prawns In Supreme Soy Sauce $28 (the PDF instead has Sauteed Tiger Prawns $30 in salt & pepper or soy sauce styles); Spicy Garlic Prawns $28; X.O. Chili Sauce Sautéed Scallops & Snap Peas $25; Golden Prawns $26; Sliced Kurobuta Pork with Onions in Spicy Sauce $24; Steak Cubes & Mushrooms In Black Pepper Sauce $26; Sautéed Seasonal Vegetables with Garlic $28; Original X.O. Sauce jar $23 (also absent from /store/). Double Boiled Chicken Soup $15 was also dropped: the PDF sells it at $15 but as 'Double Boiled Chicken Soup with Conch' under a different Chinese name, so the web description is out of date.",
+   "Omitted as market price (MKT): Singapore Style Chili Dungeness Crab; Live Dungeness Crab with Salt and Pepper (Signature Dish); Ginger & Scallion Lobster or Crab Noodle.",
+   "Omitted from the Dim Sum tab: Plain Congee $7 (Dim Sum PDF code S = $7.7); Sautéed Green Beans $12 (PDF code XL = $13); not on the Dim Sum PDF at all: Japanese Seaweed $10, Steamed Pea Sprout Dumplings $11, Congee with Seafood $14, Deep-Fried Bean Curd Skin Rolls with Shrimp $12, Barbecue Pork with Honey Glaze $12 (whose web description reads 鹵水豆腐, the soy bean curd name, which looks like a copy error).",
+   "Omitted from Desserts: Deep-Fried Sesame Balls with Dark or White Chocolate $9.90 (Desserts image: $7.7 for purple yam, white or dark chocolate). The Main Menu copy of Black Sesame Mochi with Grated Peanut says 3 pcs while the Desserts image and the Dim Sum tab say 4 pcs, so only the Dim Sum copy was kept. Baked Coffee Lava Buns With Crunchy Sugar Crust is listed twice in the Main Menu tab (Chef's Specials and Desserts); kept once under Desserts.",
+   "Kept with caveats: the web description of Golden Supreme Fried Rice does not mention the housemade X.O. Sauce that the PDF lists. Several kept web names differ from the PDF wording for the same Chinese dish name and price (Golden Roasted Chicken = PDF 'Harborview Roasted Chicken'; Beef Brisket & Turnip in a Hot Pot = 'in Hearty Broth'; Steamed Scallop Dumplings = Dim Sum PDF 'Seafood Dumplings'; Steamed Mushroom Dumplings = 'Buddha's Delight Dumplings'; Steamed Shrimp & Leek Dumplings = 'Shrimp & Chive Dumplings'). Dim Sum dishes also appear, at different prices, in the Main Menu tab; the section prefix 'Dim Sum:' marks the Dim Sum tab. Dietary icon labels (spicy, vegetarian, peanut) were not copied into desc.",
+   "Not included: the Bar Menu tab (cocktails, beer, wine). Its 'Happy Hour Bar Bites' ($5 to $13, bar only, Tuesday to Friday 4 to 7pm) appear only in the web text and not on the Bar Menu PDF https://media-cdn.getbento.com/accounts/a9a05a32a9abad0e6803b9fbbb9dcf4e/media/lgKt9yc8R5WtuEOjYEKh_Drink%20Menu%20052526%20%281%29.pdf (uploaded 2026-08-30), so they could not be confirmed. Non-alcoholic drinks and hot tea ($1.75 per person) appear only in the PDFs. Banquet set menus priced per table are in https://media-cdn.getbento.com/accounts/a9a05a32a9abad0e6803b9fbbb9dcf4e/media/zwiYgG3SQvyIZAUHgJyM_2026%20Banquet%20Menu%2020260906.pdf . Harborview GO weekday lunch specials are described only as 'starting at $15 including sides and a free drink', with no itemised prices.",
+   "Service charge and pricing notes printed on the menu page: 'An 18% service charge will be added to your bill' and 'Pricing is subject to change without advanced notice'. The Main Menu PDF says all prices exclude tax and service and the 18% applies to all party sizes.",
+   "Reservations use the on-site form at https://www.harborviewsf.com/reservations/ (tables of 8+ need a credit card hold with a $10 per person no-show or late cancellation fee). Takeout ordering link https://www.qooway.com/olo/en?HarborviewSF&menuLanguage=en#1 and catering store https://harborviewsf.getbento.com/catering-store-v2/harborview-restaurant-bar/menu were not used for prices.",
+   "logo_url is the site header logo (300x227 PNG). Like all images on the site it is served from BentoBox's image CDN images.getbento.com rather than from harborviewsf.com.",
+   "Michelin: the site's news list includes 'Harborview SF Earns Michelin Guide 2025 Recognition!'. It was left out of one_line because the site states no current-year listing."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_theseabyash",
+  "name_exact": "The Sea by Alexander's Steakhouse",
+  "one_line": "Modern seafood with Japanese flair, plus wagyu steaks, in Palo Alto",
+  "cuisine": "Seafood & Wagyu",
+  "address": "4269 El Camino Real, Palo Alto, CA 94306",
+  "phone": "(650) 213-1111",
+  "email": "contact@theseausa.com",
+  "hours": "Dinner Sun 5-8:30pm, Mon 5:30-8pm, Tue-Thu 5:30-8:30pm, Fri 5:30-9pm, Sat 5-9pm",
+  "instagram": "theseabyash",
+  "site_kind": "own-domain",
+  "site_url": "https://theseausa.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Hamachi Shots",
+    "desc": "ponzu, avocado, ginger, jalapeño",
+    "cents": 4200,
+    "section": "Cold Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Today's Oysters",
+    "desc": "",
+    "cents": 3200,
+    "section": "Cold Appetizers",
+    "label": "half dozen 32 or dozen 60"
+   },
+   {
+    "name": "Cinco Jotas Jamon Iberico",
+    "desc": "truffle mushroom, tomato, olive, idiazábal cheese",
+    "cents": 4000,
+    "section": "Cold Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Big Eye Tuna Tataki",
+    "desc": "watermelon radish, crispy garlic, avocado, sesame",
+    "cents": 3500,
+    "section": "Cold Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Farmer's Market Salad",
+    "desc": "seasonal selection hand picked by Chef Yumin",
+    "cents": 2500,
+    "section": "Cold Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Lobster Rocks",
+    "desc": "almond purée, truffle, mitsuba",
+    "cents": 3200,
+    "section": "Hot Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Popcorn Crab",
+    "desc": "jumbo lump crab, togarashi, sriracha aioli",
+    "cents": 3800,
+    "section": "Hot Appetizers",
+    "label": ""
+   },
+   {
+    "name": "The Sea Fried Clam Chowder",
+    "desc": "potato, celery, carrot, bacon",
+    "cents": 2700,
+    "section": "Hot Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Shrimp Toast Skewer",
+    "desc": "shiitake mushroom, lemon, paprika, garlic",
+    "cents": 2400,
+    "section": "Hot Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Abalone Risotto (Monterey)",
+    "desc": "sesame oil, asparagus, maitake mushrooms, seaweed",
+    "cents": 3200,
+    "section": "Hot Appetizers",
+    "label": ""
+   },
+   {
+    "name": "Tasting",
+    "desc": "full table participation, before 8pm",
+    "cents": 19500,
+    "section": "Tasting",
+    "label": "195 per person (maximum of 6 guests)"
+   },
+   {
+    "name": "Upper Iowa Angus Filet Mignon",
+    "desc": "portobello mushroom raviolis, caramelized onions, green peppercorn jus",
+    "cents": 7800,
+    "section": "The Land Entrée",
+    "label": ""
+   },
+   {
+    "name": "Upper Iowa Angus Prime New York",
+    "desc": "crispy polenta, tomato compote, parmesan cheese, bordelaise",
+    "cents": 7500,
+    "section": "The Land Entrée",
+    "label": ""
+   },
+   {
+    "name": "Wagyu Flat Iron Steak (USA)",
+    "desc": "tempura asparagus, jimmy nardello sweet pepper chimichurri, garlic herb sauce",
+    "cents": 8700,
+    "section": "The Land Entrée",
+    "label": ""
+   },
+   {
+    "name": "Imperial Wagyu Ribeye (USA)",
+    "desc": "corn kakiage, sweet paprika, green peppercorn jus",
+    "cents": 11500,
+    "section": "The Land Entrée",
+    "label": ""
+   },
+   {
+    "name": "Kerwee Wagyu Strip (Australia)",
+    "desc": "potato fondant, wild mushrooms, bordelaise",
+    "cents": 15500,
+    "section": "The Land Entrée",
+    "label": ""
+   },
+   {
+    "name": "Brussels Sprouts",
+    "desc": "balsamic vinegar, shallots, bacon",
+    "cents": 1600,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Wild Mushrooms",
+    "desc": "chives / garlic",
+    "cents": 1800,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Shishito Peppers",
+    "desc": "balsamic vinegar / bonito flakes",
+    "cents": 1600,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Garlic Mashed Potato",
+    "desc": "butter and chives",
+    "cents": 1600,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Black Forest Ham Mac N’ Cheese",
+    "desc": "a blend of eight cheeses / truffle oil",
+    "cents": 1600,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Truffle Fries",
+    "desc": "parmesan, truffle aioli",
+    "cents": 1800,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Lobster Fried Rice",
+    "desc": "bacon, egg, garlic, green onions",
+    "cents": 3000,
+    "section": "Sides",
+    "label": ""
+   },
+   {
+    "name": "Halibut T-Bone (Wild - Alaska)",
+    "desc": "flat beans, oyster mushrooms, tomatoes, lemongrass shellfish emulsion, basil",
+    "cents": 7900,
+    "section": "The Sea Entrée",
+    "label": ""
+   },
+   {
+    "name": "Seared Mero Seabass (Wild - Hawaii)",
+    "desc": "zucchini, tomato compote, sweet potato, shallot, red wine sauce",
+    "cents": 6700,
+    "section": "The Sea Entrée",
+    "label": ""
+   },
+   {
+    "name": "Miso Black Cod (Wild - Half Moon Bay)",
+    "desc": "koshihikari rice, lobster soboro, bell pepper miso, kale, aged vinegar",
+    "cents": 6000,
+    "section": "The Sea Entrée",
+    "label": ""
+   },
+   {
+    "name": "Grilled Lobster (Wild - Maine)",
+    "desc": "lemon risotto, tarragon, asparagus, parmesan cheese, wild mushroom",
+    "cents": 9500,
+    "section": "The Sea Entrée",
+    "label": ""
+   },
+   {
+    "name": "Hot Seafood Platter",
+    "desc": "lobster, mussels, scallops, shrimp, seppia, ocean escargot",
+    "cents": 19500,
+    "section": "The Sea Entrée",
+    "label": ""
+   },
+   {
+    "name": "北海道 Hokkaido, Japan A5",
+    "desc": "privately farmed in below freezing temperatures",
+    "cents": 4500,
+    "section": "Fullblood Japanese Wagyu",
+    "label": "45/oz"
+   },
+   {
+    "name": "宮崎 Miyazaki, Japan A5",
+    "desc": "warm climate / ideal for raising cattle",
+    "cents": 4500,
+    "section": "Fullblood Japanese Wagyu",
+    "label": "45/oz"
+   },
+   {
+    "name": "Wagyu Trio (Japan, Australia, USA)",
+    "desc": "trio of salts, trio of sauces",
+    "cents": 24000,
+    "section": "Market Feature",
+    "label": ""
+   },
+   {
+    "name": "American Wagyu Tomahawk Chop 48 oz.",
+    "desc": "crushed potatoes, half lobster tail, green peppercorn sauce",
+    "cents": 37500,
+    "section": "Market Feature",
+    "label": ""
+   },
+   {
+    "name": "Honey Butter Toast",
+    "desc": "caramelized apples / apple butterscotch / vanilla ice cream",
+    "cents": 2000,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Berry Sweet",
+    "desc": "mascarpone cheesecake / strawberry / graham cracker crumble",
+    "cents": 2000,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Banana Cream Puffs",
+    "desc": "caramelized banana / banana ice cream / dulce de leche",
+    "cents": 2000,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Sunset",
+    "desc": "coconut crème brûlée / strawberry / vanilla pineapple chutney / crispy honey",
+    "cents": 2000,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Burnt Almond Bombe",
+    "desc": "amaretto ice cream / toasted almonds / vanilla cream / devil's food / espresso caramel",
+    "cents": 2200,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Rise N' Shine",
+    "desc": "mango soufflé / vanilla crème anglaise",
+    "cents": 2400,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Monaco Coffee",
+    "desc": "dark chocolate, almond, chrysanthemum",
+    "cents": 900,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Virgin Silver Buds",
+    "desc": "(white tea) wild honey, amaretto, plum",
+    "cents": 1600,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Monte Carlo Decaf",
+    "desc": "plum, walnut, blueberry",
+    "cents": 900,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Straight Leaf Jasmine",
+    "desc": "(green tea) lush, honeysuckle, floral",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Rouge Espresso",
+    "desc": "raspberry, caramel, cacao",
+    "cents": 900,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Spring Jade",
+    "desc": "(green tea) creamy, honeydew, lilac",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Cappuccino",
+    "desc": "espresso, microfoam milk",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Genmaicha",
+    "desc": "(green tea) toasted brown rice, nutty, delicate",
+    "cents": 800,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Latte",
+    "desc": "espresso, microfoam milk",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Bergamot Black",
+    "desc": "(earl gray) sour orange , robust, fragrant",
+    "cents": 800,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Honey Latte",
+    "desc": "espresso, honey, microfoam milk",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Heirloom Pu'er",
+    "desc": "(black tea) rich, carmel, earthy",
+    "cents": 1100,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Nutella Latte",
+    "desc": "espresso, nutella, microfoam milk",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Nile Valley Chamomile",
+    "desc": "(non-caffeinated) apple, melon, soothing",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Mocha",
+    "desc": "espresso, chocolate, microfoam milk",
+    "cents": 1200,
+    "section": "Coffee & Tea",
+    "label": ""
+   },
+   {
+    "name": "Pacific Peppermint",
+    "desc": "(non-caffeinated) vibrant, cooling, refreshing",
+    "cents": 800,
+    "section": "Coffee & Tea",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from the dinner menu linked from their own website",
+  "logo_url": "https://theseausa.com/wp-content/uploads/sites/5/2022/01/The-Sea-Logo.png",
+  "logo_px": null,
+  "flags": [
+   "Glenn: 'Palo Alto • Goods', sent 2026-09-14 09:40 PT with the theseausa.com iMenuPro hand-off page",
+   "Sources, all fetched 2026-09-14 with no CAPTCHA, login or block: https://theseausa.com/ , https://theseausa.com/info/ , https://theseausa.com/events-offerings/ , https://theseausa.com/privatedining/ , https://theseausa.com/going-to-imenupro-dinner/ , https://theseausa.com/going-to-sevenrooms/ , plus the two iMenuPro menus they link.",
+   "Price source: the dinner menu on iMenuPro https://qr.imenupro.com/s65-5l , linked as 'View Dinner Menu' from their own page https://theseausa.com/going-to-imenupro-dinner/ (the site's Menu link). Raw HTML and a headless Playwright render showed the same content. The menu's embedded data says its four parts were last synced between 2026-07-10 and 2026-08-28.",
+   "Formatting: the menu prints each price as a bare number at the end of the description (no $ sign). That number became cents and was removed from desc. Asterisk markers, which have no footnote on the menu, were removed from names, and ALL-CAPS names and section headings were converted to title case. Descriptions are otherwise as printed.",
+   "No 'MP' or market-price items appear on the current dinner menu. Items in its 'market feature' section have printed prices (240 and 375).",
+   "Special pricing kept, with the printed text in label: Today's Oysters 'half dozen 32 or dozen 60' (cents = half dozen). Tasting '195 per person (maximum of 6 guests)', 'full table participation, before 8pm'; its five courses (Hamachi Tataki (Japan), Abalone (Monterey Bay), Seared Maine Scallops (Wild Stonington), Kerwee Wagyu (Australia), Vanilla Cake) have no prices of their own. The two fullblood Japanese A5 wagyu cuts are '45/oz', sold in '4 oz increments / cut to order / served with king oyster mushrooms, carrots, bordelaise'.",
+   "Omitted: wine list https://hub.binwise.com/print/WineList_PDF.aspx?ListId=286&LocationID=150 ; the tasting's 'wine pairings 100 per person' and its per-course wine notes; the tasting add-ons 'Osetra Caviar Supplement 55' and 'Miyazaki A5 Supplement 80'.",
+   "Sunday Prix Fixe price contradiction, so it is not in items. The homepage and https://theseausa.com/events-offerings/ say 'a refined three-course dining experience at $85 per person' (available every Sunday). The menu they link, https://imenupro.com/+s65-14g-z , is an image https://menupro.s3.amazonaws.com/imp_ofmVtB6bmWT4SE/s65-14g-z-1.jpg?ver=b06l (last modified 2026-02-10) titled 'Sunday Prix Fixe Menu $95', 'exclusive of tax and gratuity', with supplements Smoked Salmon $20, Half Lobster Tail $40, Scallop $40 (3 Each) and Japanese A5 Wagyu 3oz $95.",
+   "Brunch: the Instagram bio mentions a 'Brunch Prix Fixe', but the website mentions no brunch. It lists only dinner hours plus the 'Sunday Prix Fixe' above.",
+   "The Prime Rib Special on the homepage and Events & Offerings page (Monday and Tuesday evenings, '$75 per person' for Prime Rib, Caesar Salad and One Side Dish, 'Available for a limited time') is not on the dinner menu and was not added to items.",
+   "Hours are identical in the footer of every page checked. Holiday closures disagree: https://theseausa.com/info/ lists Memorial Day, 4th of July, Labor Day, Thanksgiving Day, Christmas Day and New Year's Day as closed, while the footer 'Holiday Hours' popup lists the same days without Memorial Day.",
+   "Address: the website prints '4269 El Camino Real, Palo Alto, CA 94306'; the Instagram bio says '4269 W El Camino Real'.",
+   "Reservations: https://theseausa.com/going-to-sevenrooms/ hands off to SevenRooms at https://www.sevenrooms.com/explore/theseabyalexanders/reservations/create/search/ (the homepage links SevenRooms directly too). Private events: https://theseausa.com/going-to-tripleseat/ ; the Private Dining page lists the Director of Special Events at 408.805.9910.",
+   "Chef name disagrees on their own site: https://theseausa.com/info/ names Chef YuMin Lin (the menu says 'Chef Yumin'), while the homepage meta description names Chef Pratik Mungre. Not used in this record.",
+   "House policies on https://theseausa.com/info/ : corkage $50 for the first and second 750 ml bottle and $100 for every bottle after; no children under 7.",
+   "logo_url is the site header logo on their own domain (600x193 PNG).",
+   "Hours shortened to one schedule line for the page; as printed on their site: Dinner: Sunday 5:00pm – 8:30pm; Monday 5:30pm – 8:00pm; Tuesday-Thursday 5:30pm – 8:30pm; Friday 5:30pm – 9:00pm; Saturday 5:00pm – 9:00pm"
+  ],
+  "blocked": null
+ }
+]

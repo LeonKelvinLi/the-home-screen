@@ -2358,6 +2358,59 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'See their menu',
     tier: 1,
   }),
+
+  /* ---- 2026-09-14. Research in research/roster/batch24.json. ---- */
+  /* Ace King BBQ, "Newark • Goods" — Chinese BBQ skewers, foil-pan dishes and
+     noodles on Mowry Avenue, open late. Newark's Asian food seat is Pho
+     Nation's, so the yellow sheet at the free Tier 1. Their site and ordering
+     page still carry an old "Ace King Music Restaurant" logo at the same
+     address; the mark here is the BBQ logo off their own Instagram picture. */
+  seed('ace-king-bbq', 'Ace King BBQ', 'Ace King', 'Chinese BBQ skewers', '#2E3F7C', {
+    icon: 'ace-king-bbq',
+    logoTemplate: 'wordmark', logoLines: ['ACE', 'KING'], logoFace: 'condensed',
+    site: 'https://www.acekingbbqus.com/',
+    siteCta: 'Order online',
+    tier: 1,
+  }),
+  /* Sushi Uma, sent as their Instagram post with "gather as much information
+     maybe on yelp and make them a page. They will be a good candidate to get
+     a website made." Family-owned sushi on Irving Street, ten years this
+     summer, on San Francisco's open Sushi seat with the whole page. Yelp
+     blocked the researcher, and Yelp was never a price source: the menu is
+     the ordering page on their own site. THEY HAVE A SITE, thesushiuma.com, a
+     2016 Wix template that still takes pickup orders, so the tile is not
+     outlined as siteless; a redesign is the pitch. No mark of theirs was
+     sent, so the tile is drawn. */
+  seed('sushi-uma', 'Sushi Uma', 'Sushi Uma', 'Japanese sushi', '#9E2A2B', {
+    logoTemplate: 'monogram', logoInitials: 'SU', logoFace: 'slab',
+    site: 'https://www.thesushiuma.com/',
+    siteCta: 'Order pickup',
+  }),
+  /* Harborview Restaurant & Bar, "San Francisco • Goods" — Michelin Guide
+     Cantonese, dim sum and roast duck at 4 Embarcadero Center. San
+     Francisco's Asian food seat is House of Thai's, so the yellow sheet at
+     Tier 1. No hours: their site's visible hours and its search-engine data
+     disagree about dinner. The mark is their own logo, cut from his
+     screenshot of their Instagram picture. */
+  seed('harborview-sf', 'Harborview Restaurant & Bar', 'Harborview', 'Cantonese Chinese', '#A4262C', {
+    icon: 'harborview-sf',
+    logoTemplate: 'wordmark', logoLines: ['HARBORVIEW'], logoFace: 'grotesk',
+    site: 'https://www.harborviewsf.com/',
+    siteCta: 'See their menus',
+    tier: 1,
+  }),
+  /* The Sea by Alexander's Steakhouse, "Palo Alto • Goods" — seafood with
+     Japanese flair and wagyu on El Camino Real, dinner only. No goods seat
+     fits seafood or steak, so Palo Alto's yellow sheet at Tier 1. Prices are
+     the dinner menu their own site links on iMenuPro. The mark is the
+     wordmark from his screenshot of their site. */
+  seed('the-sea-by-ash', "The Sea by Alexander's Steakhouse", 'The Sea', 'Seafood & Wagyu', '#1F4E9C', {
+    icon: 'the-sea-palo-alto',
+    logoTemplate: 'wordmark', logoLines: ['THE', 'SEA'], logoFace: 'grotesk',
+    site: 'https://theseausa.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
 ]
 
 /**
