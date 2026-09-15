@@ -50,6 +50,26 @@ NOT_A_SITE = {
     'book.peek.com', 'link.com',
     'order.online', 'beastypages.com', 'the-home-screen.onrender.com',
     'leonkelvinli.onrender.com', 'allis-dog-walking.onrender.com',
+    # Link-in-bio pages. The business behind each is listed under its own
+    # site: linkin.bio/thetoxalamo is The Tox Alamo, solo.to/gumbosocial is
+    # Gumbo Social (gumbosocial.com).
+    'linkin.bio', 'solo.to',
+    # Apple Maps pins, sent for meeting spots on rides and dinners.
+    'maps.apple', 'maps.apple.com',
+    # 2026-08-06, "💧 = trykangenwaterfree.com / Button on the page", then the
+    # same minute: "Don't worry about the link my host in the Philippines is
+    # fixing it … Put this instead for now" with the leadconnectorhq preview.
+    'trykangenwaterfree.com',
+    # 2026-08-12, his launch timeline: "Order thru Alibaba" for the QR
+    # pedestals. A supplier, not a listing.
+    'alibaba.com',
+    # 2026-09-12, an e-bike product page in the middle of a ride conversation.
+    'citygrounds.com',
+    # Listed under their main domains: winterwhiteproducts.com is Winter White
+    # Car Wash's product shop (the tile links winterwhitecarwash.com), and
+    # traballosbbq.framer.website is Traballo's Backyard BBQ's old page
+    # (listed at traballosbackyardbbq.com).
+    'winterwhiteproducts.com', 'traballosbbq.framer.website',
 }
 
 # He spent an evening pricing domain names for the brand itself — dozens of
