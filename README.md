@@ -113,6 +113,11 @@ FAIL line. Silence is not a pass.
   also post it to Slack or Discord, but has never been set on the live
   service. The Designs page's Get in touch button lands the same way, in
   `DESIGNS_LEAD_EMAIL`.
+- **BEASTY Collab** — the landing page's Collab key (7) carries Glenn's
+  invitation to food creators and a four-field form (name, phone, email,
+  Instagram). `POST /api/collabs` saves it with the other leads and emails
+  `LEAD_EMAIL`, with Reply set to the creator. `tools/audit-collab.mjs`
+  checks it end to end without calling Resend.
 - **Calendar** — what the businesses have on, stored server-side. Reading is
   public; writing and deleting need `OPERATOR_TOKEN`.
 - **Accounts and membership** — sign-up and sign-in are one screen: a name

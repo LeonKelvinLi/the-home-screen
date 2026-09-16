@@ -286,27 +286,27 @@ export const PAGES: Record<PageKey, Page> = {
   },
 
   /*
-    An invitation, not an offer. No rates, splits or exclusivity have been agreed
-    with anyone, so the page cannot imply a standing arrangement. The only working
-    inbox is the Reserve a Spot form, which saves details and nothing more.
+    BEASTY Collab: the invitation to food creators, in Glenn's words.
+
+    He sent it on 2026-09-16 ("can you run this through your AI agent and proof
+    read it? I want to add this on the Collab button on the landing page") and
+    the offer is his own: BEASTY pays for the meal, the creator presents the
+    review for BEASTY pages. Proofread only: "Xollab" to "Collab", "Ali we
+    ask" to "All we ask", "Small business" to "small businesses", "front the
+    entire bill" to "cover the entire bill", and the punctuation.
+
+    The form under it (apps/CollabForm.tsx) is the inbox he asked for: name,
+    phone, email and Instagram, emailed to the leads address. It replaces the
+    old general-purpose page, which pointed at the Reserve a Spot form because
+    there was no other way in.
   */
   collabs: {
-    title: 'Collaborations',
+    title: 'BEASTY Collab',
     body: [
-      'The home screen is not only restaurants. Kitchens and food trucks are most of it, but there is an apparel label on there and someone making drinkware. If you run something local, or you make things about local places, there is probably a shape of this that fits.',
-      'Nothing is set. No rates, no split, no exclusivity, no minimum — none of that has been agreed with anyone, so treat this as an invitation to talk rather than an offer. Terms get agreed with Glenn directly, before anything runs.',
-      'Worth raising: two businesses on the screen running something together, a creator who wants to shoot the places on it, an event with a few of them on one bill. Come with what you have in mind and what you would want out of it.',
-      /*
-        The form has five fixed fields — business name, what you cook, phone or
-        email, city, Instagram — and no free-text box, so it cannot take "what
-        you are proposing". Ask for what it can actually hold, and say the rest
-        happens on the call. The panel now carries a button that opens it; it
-        used to name the form and give no way to reach it.
-      */
-      'There is no published phone line or email yet. The one inbox that works today is the Reserve a Spot screen. It asks for a business name, what you make, a phone or email, and your city — there is nowhere to type the proposal itself, so put the short version in the "what you make" line and save the rest for when Glenn calls. He replies himself.',
+      'BEASTY pages is looking for foodies to collaborate with and support small businesses anywhere in the Bay Area.',
+      'We hope to find hidden gems with you and share the content you create. All we ask is that you present the food review on behalf of BEASTY pages, and we will cover the entire bill!',
+      'We meet at the restaurant, speak with the owners and take a few pictures with our BEASTY pages brand ambassadors and mascots, Sade & Munchy. It’s as simple as that. We enjoy the meal together and support the local business. A win-win for all!',
     ],
-    needsGlenn:
-      'A published phone number or email for collaboration inquiries, and what he is actually prepared to offer a collaborator, before this can be more than a conversation.',
   },
 
   /*

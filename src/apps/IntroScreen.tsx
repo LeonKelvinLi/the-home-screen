@@ -9,6 +9,7 @@ import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
 import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
 import { Gem } from './MembersApp'
 import { QrScanner, beastyPathFrom } from './QrScanner'
+import { CollabForm } from './CollabForm'
 import { PagesMark } from './dialer/PagesMark'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
@@ -1167,6 +1168,10 @@ function PanelSections({ sections }: { sections?: AboutSection[] }) {
 }
 
 
+/* What Tab can land on inside a panel. The Collab page carries a form, so
+   fields count as well as buttons and links. */
+const FOCUSABLE = 'button, a[href], input, select, textarea'
+
 function Panel({
   page,
   onShare,
@@ -1199,7 +1204,7 @@ function Panel({
     const el = card.current
     if (!el) return
     const returnTo = document.activeElement as HTMLElement | null
-    const first = el.querySelector<HTMLElement>('button, a[href]')
+    const first = el.querySelector<HTMLElement>(FOCUSABLE)
     ;(first ?? el).focus({ preventScroll: true })
     return () => returnTo?.focus?.({ preventScroll: true })
   }, [])
@@ -1213,8 +1218,11 @@ function Panel({
     if (e.key !== 'Tab') return
     const el = card.current
     if (!el) return
-    const focusable = [...el.querySelectorAll<HTMLElement>('button, a[href]')].filter(
-      (n) => n.offsetParent !== null,
+    /* A disabled control is skipped by the browser's own Tab, so it cannot be
+       the end of the loop: the Collab form's Send is disabled until the form
+       is filled, and Tab past the last field would have left the panel. */
+    const focusable = [...el.querySelectorAll<HTMLElement>(FOCUSABLE)].filter(
+      (n) => n.offsetParent !== null && !n.matches(':disabled'),
     )
     if (focusable.length === 0) return
     const first = focusable[0]
@@ -1289,13 +1297,14 @@ function Panel({
             )}
           </blockquote>
         )}
-        {/* Careers and Collabs both send people to the same form, so both need
-            the button. Collabs used to name it and give no way to reach it. */}
-        {(page === 'careers' || page === 'collabs') && (
+        {/* Careers sends people to Reserve a Spot. Collabs has its own form
+            now: the food creators Glenn is inviting, 2026-09-16. */}
+        {page === 'careers' && (
           <button className="dialer-panel-action" onClick={onJoin}>
-            {page === 'collabs' ? 'Open Reserve a Spot' : 'Claim a tile'}
+            Claim a tile
           </button>
         )}
+        {page === 'collabs' && <CollabForm />}
         {page === 'donations' && (
           <button className="dialer-panel-action" onClick={onWater}>
             See BEASTY H20

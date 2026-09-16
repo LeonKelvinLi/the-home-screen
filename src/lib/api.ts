@@ -472,6 +472,38 @@ export async function submitDesignsContact(input: { name: string; phone: string 
   if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
 }
 
+/* ---------- BEASTY Collab: food creators ---------- */
+
+export interface CollabInput {
+  name: string
+  phone: string
+  email: string
+  instagram: string
+}
+
+/**
+ * A food creator's details from the Collab key on the landing page. The same
+ * promise as the other two forms: saved is claimed, a reply is not.
+ */
+export async function submitCollab(input: CollabInput): Promise<void> {
+  if (IS_LOCAL_ONLY) {
+    try {
+      const key = 'fb.collabs.v1'
+      const prev = JSON.parse(localStorage.getItem(key) ?? '[]')
+      localStorage.setItem(key, JSON.stringify([{ ...input, at: Date.now() }, ...prev].slice(0, 50)))
+    } catch {
+      /* private mode */
+    }
+    return
+  }
+  const res = await request('/api/collabs', {
+    method: 'POST',
+    headers: { 'content-type': 'application/json' },
+    body: JSON.stringify(input),
+  })
+  if (!res.ok) throw new OrderRejected(res.status, await errorMessage(res))
+}
+
 export const newIdempotencyKey = () =>
   `ik_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 12)}`
 

@@ -1416,6 +1416,10 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
 const slackSafe = (s: string) =>
   s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
 
+/* Loose on purpose, like the phone test: something@something.tld, no spaces
+   (so no line breaks either). The mail provider is the real judge. */
+const EMAIL_SHAPE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
+
 /**
  * A lead by email, on the Resend key the login codes already use.
  *
@@ -1427,19 +1431,32 @@ const slackSafe = (s: string) =>
  * this existed. Best-effort on purpose — the row is on disk before this runs,
  * and a mail failure must never tell the person their message was refused.
  */
-async function sendLeadEmail(toRaw: string | undefined, subject: string, text: string): Promise<void> {
+async function sendLeadEmail(
+  toRaw: string | undefined,
+  subject: string,
+  text: string,
+  /* The sender's own address, so Reply in the operator's mail app answers
+     them rather than the no-reply sender. Only ever a validated address. */
+  replyTo?: string,
+): Promise<void> {
   const key = process.env.RESEND_API_KEY
   const from = process.env.OTP_FROM_EMAIL
   const to = String(toRaw ?? '')
     .split(',')
     .map((s) => s.trim())
-    .filter((s) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(s))
+    .filter((s) => EMAIL_SHAPE.test(s))
   if (!key || !from || !to.length) return
   try {
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',
       headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-      body: JSON.stringify({ from, to, subject, text }),
+      body: JSON.stringify({
+        from,
+        to,
+        subject,
+        text,
+        ...(replyTo && EMAIL_SHAPE.test(replyTo) ? { reply_to: replyTo } : {}),
+      }),
       signal: AbortSignal.timeout(8000),
     })
     // The status, never the body: a provider error can echo the payload back.
@@ -1525,6 +1542,82 @@ app.post('/api/designs/contact', rateLimiter(6, 3), async (req, res) => {
     `BEASTY Designs: ${name} asked for a call`,
     `${name} asked to be called or texted about BEASTY Designs.\n\nPhone: ${phone}\n\n` +
       'Sent from the Get in touch button on the BEASTY Designs page.',
+  )
+
+  res.status(201).json({ ok: true })
+})
+
+/* ---------- BEASTY Collab: food creators ---------- */
+
+/**
+ * An Instagram handle from whatever a person types for one: `@name`, `name`,
+ * or a pasted profile link. Instagram allows letters, numbers, full stops and
+ * underscores, up to 30. Anything else is not a handle, and null.
+ */
+function instagramHandle(raw: string): string | null {
+  let s = raw.trim()
+  const link = s.match(/instagram\.com\/([^/?#\s]+)/i)
+  if (link) s = link[1]
+  s = s.replace(/^@+/, '')
+  return /^[A-Za-z0-9._]{1,30}$/.test(s) && /[A-Za-z0-9]/.test(s) ? s : null
+}
+
+/**
+ * A food creator asking to collaborate, from the Collab key on the landing
+ * page.
+ *
+ * Glenn, 2026-09-16, with the invitation the panel now carries: "I want to add
+ * this on the Collab button on the landing page. Keep it really simple and ask
+ * for their basic information like name, phone number, email address [and] IG
+ * handle." Four fields, all four required: setting up a meal takes a number to
+ * call, an address to write to and the account the review goes out on. The
+ * row goes into `applications` like the other two forms (the name in
+ * `business`, `cuisine` marking it as a Collab, the handle in `social`), so the
+ * operator list shows it, and it is emailed to LEAD_EMAIL, the inbox for
+ * leads, with Reply set to the creator. Unauthenticated and bounded like the
+ * other two.
+ */
+app.post('/api/collabs', rateLimiter(6, 3), async (req, res) => {
+  if (!isObj(req.body)) return res.status(400).json({ error: 'Body must be an object.' })
+  const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_APP_FIELD) : '')
+  const name = str(req.body.name)
+  const phone = str(req.body.phone)
+  const email = str(req.body.email)
+  const handle = instagramHandle(str(req.body.instagram))
+  const digits = phone.replace(/\D/g, '')
+  const phoneOk = phone.startsWith('+')
+    ? digits.length >= 8
+    : digits.length === 10 || (digits.length === 11 && digits.startsWith('1'))
+  if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+  if (!phoneOk) return res.status(400).json({ error: 'A phone number we can call or text is required.' })
+  if (!EMAIL_SHAPE.test(email)) return res.status(400).json({ error: 'An email address is required.' })
+  if (!handle) return res.status(400).json({ error: 'Your Instagram handle is required.' })
+
+  await db.prepare(
+    `INSERT INTO applications (id, business, cuisine, contact, city, social, created_at)
+     VALUES (?,?,?,?,?,?,?)`,
+  ).run(
+    `ap_${randomBytes(8).toString('hex')}`,
+    name,
+    'BEASTY Collab — food creator',
+    `${phone} · ${email}`,
+    null,
+    `@${handle}`,
+    Date.now(),
+  )
+
+  // The name and the public handle only: the number and address stay out of the log.
+  console.log(`NEW COLLAB LEAD  ${slackSafe(name)} | @${handle}`)
+  void sendLeadEmail(
+    process.env.LEAD_EMAIL,
+    `BEASTY Collab: @${handle} wants to collaborate`,
+    `${name} wants to collaborate with BEASTY pages as a food creator.\n\n` +
+      `Instagram: @${handle} (https://www.instagram.com/${handle}/)\n` +
+      `Phone: ${phone}\n` +
+      `Email: ${email}\n\n` +
+      'Sent from the Collab button on the landing page. Replying to this email reaches them. ' +
+      'Nothing is arranged until you get in touch.',
+    email,
   )
 
   res.status(201).json({ ok: true })

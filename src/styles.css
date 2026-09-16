@@ -10792,6 +10792,55 @@ textarea {
   text-align: left;
 }
 
+/*
+  BEASTY Collab: the creator form inside the landing page's Collab panel.
+  The panel's own paragraph rule sets size and colour; these only space the
+  fields and keep Send full width, the way every form in the app reads.
+*/
+.collab-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+}
+
+.dialer-panel .collab-form p {
+  margin: 0;
+}
+
+.dialer-panel .collab-form-lead {
+  font-weight: 650;
+}
+
+.collab-form .btn-primary {
+  width: 100%;
+}
+
+.collab-form .btn-primary[disabled] {
+  opacity: 0.45;
+}
+
+.dialer-panel .collab-fine {
+  font-size: 12.5px;
+  line-height: 1.4;
+  color: var(--muted);
+}
+
+.dialer-panel .collab-error {
+  font-size: 13px;
+  color: #b3261e;
+}
+
+.dialer-panel .collab-done {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(52, 199, 89, 0.14);
+  color: #1c6b34;
+}
+
 .designs-touch .btn-primary[disabled] {
   opacity: 0.45;
 }
