@@ -39,15 +39,24 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 14 Sep | @oaktowngrubhub | Emy's Cannoli, sent a second time (the 9 September reel) | **Yes.** Already on Emy's Cannoli's page as a review |
 | 14 Sep | @sjaroundthebay | Her 2025 year of Bay Area bites, several places | No single business |
 | 14 Sep | @felicitythefoodie | Sunday brunch at Early to Rise, NoPa, San Francisco | No |
+| 15 Sep | @chefmelissaking (Melissa King), a second time | A smash burger at Lana's, Oakland | No. He asked "I can't remember if we got her already": yes, she is on this list from 11 September |
+| 15 Sep | @antoinetterzz | Deli Board, San Francisco. Sent beside Deli Board's listing, not marked "Foodie" | **Yes.** On Deli Board's page as a review |
+| 15 Sep | @thesauceboss_ (Yan Saderi) | Deli Board, San Francisco ("one of the top ranked sandwiches in California") | **Yes, the business.** The page plays @antoinetterzz's film, the one sent with the listing; this one is the spare |
+| 15 Sep | @geraldfermin (Gerald Fermin) | Four fritters at Apple Fritter, 1901 S Norfolk St, San Mateo | No |
+| 15 Sep | @janeethefoodie (Jane) | A day at Westfield Valley Fair, San Jose, posted March 2024 | No single business |
+| 15 Sep | @pimchanyum | Kuro Nami, San Anselmo (@kuronamimarin), posted October 2024 | No |
+| 16 Sep | @mukbangyourmama | Brunch drinks at Clementine, Yountville (@clementineyountville) | No |
+| 16 Sep | @ilisaeatssf | A walk along Chicago's lakefront, posted June 2025. Not food and not the Bay Area | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
 DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__, Dc2abz8C7CU, DdIMBHKPfj_ (again), DS8GlMgCf7b,
-DdN7XUmvmzU. The profile is instagram.com/bayarea_fooddreamz.
+DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
+DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq. The profile is instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
 
-From `public/clips/CREDITS.md`: @antoinetterzz (Belly), @oaktowngrubhub (Emy's
+From `public/clips/CREDITS.md`: @antoinetterzz (Belly, Deli Board), @oaktowngrubhub (Emy's
 Cannoli), @grubwitmike (Phosho Dough), @justmostie (Paulo Sausage Co),
 @thesnacksensei (The Yard, Jojo's Hot Chicken), @volha_creative (Glasshouzz),
 @itsmeloslab (Ofie's Kitchen), @smackinfood (House of Raha), @thetastebud

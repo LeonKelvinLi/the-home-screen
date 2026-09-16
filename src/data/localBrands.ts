@@ -4246,6 +4246,44 @@ export const LOCAL_SEED: LocalSeed[] = [
     items: [],
   },
   {
+    slug: 'pupcup',
+    icon: 'pupcup',
+    name: 'PupCup',
+    label: 'PupCup',
+    cuisine: 'Dog travel bottle',
+    tagline: 'A steel water bottle with a silicone bowl, for a dog’s drink on a walk.',
+    color: '#35CDDF',
+    prep: 0,
+    category: 'Pet goods',
+    site: 'https://pupcup.store/products/pupcup',
+    email: 'info@pupcup.store',
+    instagram: 'pupcupstore',
+    /*
+      "BEASTY • Online", Glenn, 2026-09-16, with the product page linked here.
+
+      Read from their own Shopify store on 2026-09-16: two listings of what is
+      the same 285 ml bottle, blue or pink, $24.99 each, and a "buy two" price
+      on both product pages. The store says it is run from Alkmaar in the
+      Netherlands (privacy policy and shop data) and their Instagram bio says
+      it ships worldwide. The street address in the privacy policy is left
+      off: it may be a home. Their "60-day money-back guarantee" is not
+      repeated, because the policy pages it points to are missing (404).
+    */
+    quoteOnly:
+      'A 285 ml stainless steel water bottle with a silicone drinking bowl, for giving a dog a drink on a walk, in blue or pink. These are their own published prices, in US dollars. The shop is run from the Netherlands and says it ships worldwide. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'From their shop',
+        items: [
+          ['PupCup water bottle', 'Blue or pink, 285 ml, with a silicone bowl and carry strap', 2499],
+          ['Two bottles', 'Their bundle price on the product page', 4248],
+        ],
+      },
+    ],
+    items: [],
+  },
+  {
     slug: 'drypup',
     icon: 'drypup',
     name: 'DryPup',
@@ -6278,6 +6316,10 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(925) 999-6394',
     address: '1512 Sunnyvale Ave, Walnut Creek, CA 94597',
     site: 'https://thesweetspotwc.square.site/',
+    /* "Walnut Creek • Goods. Needs a proper website", 2026-09-15, with the
+       same Square link. Their only site is the Square Online ordering page,
+       the Masa case, so the tile keeps the red outline for the prospect list. */
+    needsSite: true,
     siteNote: 'Closed Mondays',
     /*
       NO PRICES, AND THEY DO PUBLISH SOME. Their Square Online menu renders in

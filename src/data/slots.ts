@@ -103,7 +103,10 @@ export const SERVICE_CATEGORIES: SlotCategory[] = [
   { n: 1, name: 'Barber and salon', label: 'Barber' },
   { n: 2, name: 'Nail salon', label: 'Nails' },
   { n: 3, name: 'Massage and spa', label: 'Spa' },
-  { n: 4, name: 'Tattoo shop', label: 'Tattoo' },
+  /* Widened from "Tattoo shop" on 2026-09-16 to seat a piercing studio (hone,
+     San Jose) the same way the dog boutique took a breeder: body art is one
+     errand, and the label under the tile is unchanged. */
+  { n: 4, name: 'Tattoo and piercing', label: 'Tattoo' },
   { n: 5, name: 'Gym', label: 'Gym' },
   { n: 6, name: 'Mechanics and smog', label: 'Mechanic' },
   { n: 7, name: 'Car audio', label: 'Car Audio' },

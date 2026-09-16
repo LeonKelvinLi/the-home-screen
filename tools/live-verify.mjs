@@ -171,6 +171,40 @@ for (const [id, want, expect] of [
   /* 2026-09-13 morning. */
   ['b_daughterthai', 'Daughter Thai Kitchen', { free: true, call: '(510) 823-2354' }],
   ['b_mexihibachi', 'MexiHibachi', { call: '415.604.7135' }],
+  /* 2026-09-15 and 16: thirty-two city seats and PupCup. */
+  ['b_marymar', 'Mar Y Mar', {  }],
+  ['b_tacosmireynitasanlorenzo', 'Tacos Mi Reynita', { rows: 33, hours: "Every day", call: "(510) 971-0014" }],
+  ['b_tacosmireynitahayward', 'Tacos Mi Reynita', { rows: 28, hours: "Tue-Sun", call: "(510) 434-8039" }],
+  ['b_tacosmireynitasanjose', 'Tacos Mi Reynita', { rows: 31, hours: "Tue-Sun", call: "(408) 592-9231" }],
+  ['b_tacosmireynitafremont', 'Tacos Mi Reynita', { rows: 39, call: "(510) 542-7320" }],
+  ['b_turtletower', 'Turtle Tower', { free: true, call: "(415) 298-0897" }],
+  ['b_plazacafepleasanthill', 'Plaza Cafe', { rows: 124, hours: "Daily 7:30am-2:30pm", call: "(925) 827-2811" }],
+  ['b_honepiercing', 'Hone Piercing', { quote: true, call: "(669) 699-8822" }],
+  ['b_cyclebarberkeley', 'CycleBar Berkeley', { free: true, call: "(510) 529-4881" }],
+  ['b_rumbleboxingsanramon', 'Rumble Boxing San Ramon', { quote: true, call: "(925) 302-5996" }],
+  ['b_trufflepokebelmont', 'Truffle Poke Bar', { rows: 35, hours: "Mon-Fri 10am-9pm", call: "(650) 622-4581" }],
+  ['b_trufflepokeburlingame', 'Truffle Poke Bar', { rows: 35, hours: "Mon-Fri 10am-9pm", call: "(650) 699-4107" }],
+  ['b_trufflepokessf', 'Truffle Poke Bar', { rows: 35, hours: "Mon-Fri 10am-9pm", call: "(650) 741-6180" }],
+  ['b_trufflepokesanmateo', 'Truffle Poke Bar', { rows: 35, hours: "Mon-Fri 10am-9pm", call: "(650) 573-6425" }],
+  ['b_balompie', 'Balompié Sports Bar & Grill', { free: true, call: "(510) 243-5275" }],
+  ['b_paperplanesj', 'Paper Plane', { free: true, call: "(408) 713-2625" }],
+  ['b_benchmarkclimbingberkeley', 'Benchmark Climbing', { free: true, call: "(510) 973-0335" }],
+  ['b_benchmarkclimbingsf', 'Benchmark Climbing', { free: true, call: "(415) 913-7490" }],
+  ['b_deliboard', 'Deli Board', { rows: 13, hours: "Tue-Sun 11am-3pm" }],
+  ['b_brazucaacai', 'Brazuca Açaí', { free: true, call: "(415) 240-1178" }],
+  ['b_gravityvaultmarin', 'The Gravity Vault Marin', { quote: true, call: "(415) 472-9344" }],
+  ['b_batchandbrine', 'Batch & Brine', { free: true, call: "(925) 298-5687" }],
+  ['b_thaithanioishi', 'Thai Thani and Oishi', { rows: 225, hours: "Sun-Thu 11am-9pm", call: "(925) 954-8385" }],
+  ['b_brewandbanhmi', 'Brew & Banh Mi Cafe', { rows: 16, hours: "Sun-Thu 7am-8pm", call: "(408) 649-3006" }],
+  ['b_delageoakland', 'Delage', { rows: 32, hours: "Mon-Sat: lunch 11am-3pm", call: "(510) 823-2050" }],
+  ['b_tajmahallivermore', 'Taj Mahal', { free: true, call: "(925) 533-8057" }],
+  ['b_shodaisf', 'Yakiniku Shodai', { free: true, call: "(415) 757-0201" }],
+  ['b_thirsteasanleandro', 'ThirsTea', { rows: 147, call: "(510) 567-3014" }],
+  ['b_zandypekingduck', 'Z & Y Peking Duck', { free: true, call: "(415) 986-1899" }],
+  ['b_bibosalon', 'BIBO Salon', { quote: true, call: "(510) 838-2426" }],
+  ['b_pizzadeliandgrill', 'Pizza Deli & Grill', { free: true, call: "(510) 343-5336" }],
+  ['b_calburger', 'Cal Burger & More', { free: true }],
+  ['b_pupcup', 'PupCup', { quote: true }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -225,6 +259,13 @@ if (!review.bar.startsWith('Watch a review by @antoinetterzz')) fails.push(`Bell
 if (credit.href !== 'https://www.instagram.com/antoinetterzz/') fails.push(`Belly's credit links to ${credit.href}, expected her Instagram`)
 if (!credit.sound) fails.push('the clip has no sound button')
 if (!credit.mockOffer) fails.push("Belly's page does not show his example offer, labelled as an example")
+
+/* Deli Board's film is @antoinetterzz's too, sent with the listing on 2026-09-16. */
+await p.goto(`${base}/?b=b_deliboard`, { waitUntil: 'networkidle', timeout: 45000 })
+await p.waitForTimeout(600)
+const deliBar = await p.evaluate(() => document.querySelector('.brand-clip-drop .menu-picks-bar')?.textContent?.replace(/\s+/g, ' ').trim() ?? '')
+console.log('deli review   :', deliBar)
+if (!deliBar.startsWith('Watch a review by @antoinetterzz')) fails.push(`Deli Board's clip bar reads "${deliBar}", expected "Watch a review by @antoinetterzz"`)
 
 // ---- the Instagram button ------------------------------------------------
 await p.goto(`${base}/?b=b_baymemoriesbooth`, { waitUntil: 'networkidle', timeout: 45000 })
@@ -388,6 +429,27 @@ if (!scanTab) fails.push('the landing Scan tab does not offer to start the camer
 for (const s of ['Sign in or join free', 'contacts-join', 'That code is not a BEASTY code', 'order-cancel-confirm', 'Cancel ticket', 'kitchenLive', 'Scan a member pass', 'register code']) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }
+
+/* ---- 2026-09-16: BEASTY Collab, his invitation and the creator form ----
+   READ-ONLY: the form is opened and read, never sent. The endpoint is asked
+   with an empty body, which it refuses before anything is written. */
+await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+await p.locator('[aria-label="7"]').first().click({ timeout: 15000 }).catch(() => {})
+await p.locator('[aria-label="7. COLLABS"]').first().click({ timeout: 15000 }).catch(() => {})
+const collab = await p.waitForSelector('.dialer-panel .collab-form', { timeout: 15000 }).then(() => p.evaluate(() => ({
+  title: document.querySelector('.dialer-panel h2')?.textContent?.trim(),
+  sade: /Sade & Munchy/.test(document.querySelector('.dialer-panel-body')?.textContent ?? ''),
+  fields: [...document.querySelectorAll('.collab-form .join-field > span')].map((s) => s.textContent?.trim()).join(', '),
+}))).catch(() => null)
+const collabApi = await fetch(base + '/api/collabs', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' }).then((r) => r.status).catch(() => 0)
+console.log('collab        :', JSON.stringify({ ...collab, api: collabApi }))
+if (!collab) fails.push('the Collab key does not open the creator form')
+else {
+  if (collab.title !== 'BEASTY Collab') fails.push(`the Collab panel is titled "${collab.title}"`)
+  if (!collab.sade) fails.push('the Collab panel is missing his invitation')
+  if (collab.fields !== 'Name, Phone number, Email address, Instagram handle') fails.push(`the Collab form asks for: ${collab.fields}`)
+}
+if (collabApi !== 400) fails.push(`/api/collabs answered ${collabApi} to an empty body, expected 400`)
 /* The sample people Contacts showed before accounts existed, and Glenn's name,
    which BEASTY LLC keeps off the site (it captioned Chef Jeff's photos until
    their menu replaced them on 2026-09-13). */

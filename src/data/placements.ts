@@ -1016,4 +1016,40 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'newark-goods2-0': 'b_acekingbbq', //                            Asian food is Pho Nation's; yellow sheet, Tier 1
   'san-francisco-goods2-11': 'b_harborviewsf', //                  Asian food is House of Thai's; yellow sheet, Tier 1
   'palo-alto-goods2-0': 'b_theseabyash', //                        no seafood or steak seat; yellow sheet, Tier 1
+  /* 2026-09-15 and 16: thirty-three seats from two days of his messages. Open
+     category seats get the whole page; a taken seat, or no fitting tile,
+     means the city's yellow sheet at Tier 1. */
+  'san-bruno-goods-1': 'b_marymar', //                             Mexican food — mariscos and tacos
+  'san-lorenzo-goods-1': 'b_tacosmireynitasanlorenzo', //          Mexican food
+  'hayward-goods-1': 'b_tacosmireynitahayward', //                 Mexican food
+  'san-jose-goods-1': 'b_tacosmireynitasanjose', //                Mexican food
+  'fremont-goods-1': 'b_tacosmireynitafremont', //                 Mexican food
+  'san-francisco-goods2-12': 'b_turtletower', //                   Asian food is House of Thai's; yellow sheet, Tier 1
+  'pleasant-hill-goods-7': 'b_plazacafepleasanthill', //           Korean — Korean street food at night
+  'san-jose-services-3': 'b_honepiercing', //                      Tattoo and piercing
+  'berkeley-services2-0': 'b_cyclebarberkeley', //                 Gym is BodyRok's; yellow sheet, Tier 1
+  'san-ramon-services-4': 'b_rumbleboxingsanramon', //             Gym — boxing fitness
+  'belmont-goods-4': 'b_trufflepokebelmont', //                    Sushi — poke
+  'burlingame-goods-4': 'b_trufflepokeburlingame', //              Sushi — poke
+  'south-san-francisco-goods-4': 'b_trufflepokessf', //            Sushi — poke
+  'san-mateo-goods-4': 'b_trufflepokesanmateo', //                 Sushi — poke
+  'richmond-goods2-0': 'b_balompie', //                            no Salvadoran seat; yellow sheet, Tier 1
+  'san-jose-goods2-3': 'b_paperplanesj', //                        no bar seat; yellow sheet, Tier 1
+  'berkeley-services2-1': 'b_benchmarkclimbingberkeley', //        Gym is BodyRok's; yellow sheet, Tier 1
+  'san-francisco-services2-9': 'b_benchmarkclimbingsf', //         Gym is Beat Drop's; yellow sheet, Tier 1
+  'san-francisco-goods-6': 'b_deliboard', //                       Sandwiches
+  'richmond-goods2-1': 'b_brazucaacai', //                         no açaí seat, Ice cream is Waffles Cream's; yellow sheet, Tier 1
+  'san-rafael-services-4': 'b_gravityvaultmarin', //               Gym — "Marin"; San Rafael is on their address
+  'lafayette-goods2-1': 'b_batchandbrine', //                      Burgers is Kabab Burger's; yellow sheet, Tier 1
+  'beasty-online-4': 'b_pupcup', //                                Bags and luggage — a dog travel bottle; Pet goods is Pawddle's
+  'walnut-creek-goods-2': 'b_thaithanioishi', //                   Asian food — Thai and sushi
+  'milpitas-goods-13': 'b_brewandbanhmi', //                       Coffee shop
+  'oakland-goods-4': 'b_delageoakland', //                         Sushi
+  'livermore-goods2-0': 'b_tajmahallivermore', //                  Indian is Pijja Paradise's; yellow sheet, Tier 1
+  'san-francisco-goods2-13': 'b_shodaisf', //                      no yakiniku seat; yellow sheet, Tier 1
+  'san-leandro-goods-14': 'b_thirsteasanleandro', //               Boba shop
+  'san-francisco-goods2-14': 'b_zandypekingduck', //               Asian food is House of Thai's; yellow sheet, Tier 1
+  'oakland-services-0': 'b_bibosalon', //                          Barber and salon
+  'oakland-goods2-6': 'b_pizzadeliandgrill', //                    Italian is Philomena Pizza's; yellow sheet, Tier 1
+  'berkeley-goods2-1': 'b_calburger', //                           Burgers is Dog Haus's; yellow sheet, Tier 1
 }

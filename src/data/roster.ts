@@ -2411,6 +2411,316 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'See their menu',
     tier: 1,
   }),
+
+  /* ---- 2026-09-15 and 16. Research in research/roster/batch25.json. ----
+     Every mark below is cut from his screenshots of the business's own
+     Instagram picture or website. A seat on a yellow sheet is the free
+     Tier 1; a category seat is the whole page. */
+
+  /* Mar Y Mar, "San Bruno • Goods. Needs website absolutely new new" — a new
+     mariscos taqueria and bar on San Mateo Avenue. San Bruno's Mexican food
+     seat was open. No website, so no link and the red outline. Instagram put
+     a "NEW" badge over the bottom of their picture; that strip is filled with
+     the picture's own paper. */
+  seed('mar-y-mar', 'Mar Y Mar', 'Mar Y Mar', 'Mexican seafood', '#0B0B0F', {
+    icon: 'mar-y-mar',
+    logoTemplate: 'wordmark', logoLines: ['Mar Y Mar'], logoFace: 'script',
+  }),
+  /* Tacos Mi Reynita, "3 locations. Needs Website" — Tijuana-style tacos. Their
+     own Toast site lists FOUR shops with a number each, so four seeds on the
+     Pho Nation pattern, each on its city's open Mexican food seat with that
+     shop's own menu (the prices differ by a little between them). Their only
+     site is the Toast one, so the red outline stays. San Jose and Hayward were
+     not taking online orders when read; the link still shows the menu. */
+  seed('tacos-mi-reynita-san-lorenzo', 'Tacos Mi Reynita', 'Mi Reynita', 'Tijuana-style tacos', '#26A891', {
+    icon: 'tacos-mi-reynita',
+    logoTemplate: 'wordmark', logoLines: ['Tacos Mi', 'Reynita'], logoFace: 'condensed',
+    site: 'https://tacosmireynita.toast.site/order/tacos-mi-reynita-san-lorenzo-575-paseo-grande',
+    siteCta: 'Order pickup',
+    needsSite: true,
+  }),
+  seed('tacos-mi-reynita-hayward', 'Tacos Mi Reynita', 'Mi Reynita', 'Tijuana-style tacos', '#26A891', {
+    icon: 'tacos-mi-reynita',
+    logoTemplate: 'wordmark', logoLines: ['Tacos Mi', 'Reynita'], logoFace: 'condensed',
+    site: 'https://tacosmireynita.toast.site/order/tacos-mi-reynita-hayward-821-sycamore-avenue',
+    siteCta: 'See their menu',
+    needsSite: true,
+  }),
+  seed('tacos-mi-reynita-san-jose', 'Tacos Mi Reynita', 'Mi Reynita', 'Tijuana-style tacos', '#26A891', {
+    icon: 'tacos-mi-reynita',
+    logoTemplate: 'wordmark', logoLines: ['Tacos Mi', 'Reynita'], logoFace: 'condensed',
+    site: 'https://tacosmireynita.toast.site/order/tacos-mi-reynita-san-jose-2075-alum-rock-avenue',
+    siteCta: 'See their menu',
+    needsSite: true,
+  }),
+  seed('tacos-mi-reynita-fremont', 'Tacos Mi Reynita', 'Mi Reynita', 'Tijuana-style tacos', '#26A891', {
+    icon: 'tacos-mi-reynita',
+    logoTemplate: 'wordmark', logoLines: ['Tacos Mi', 'Reynita'], logoFace: 'condensed',
+    site: 'https://tacosmireynita.toast.site/order/tacos-mi-reynita-restaurant-hayward-821-sycamore-avenue',
+    siteCta: 'Order pickup',
+    needsSite: true,
+  }),
+  /* Turtle Tower, "San Francisco • Goods" — Northern Vietnamese since 1999, in
+     the Marina and the Financial District. San Francisco's Asian food seat is
+     House of Thai's, so the yellow sheet at Tier 1. */
+  seed('turtle-tower', 'Turtle Tower', 'Turtle Tower', 'Northern Vietnamese', '#2A3D92', {
+    icon: 'turtle-tower',
+    logoTemplate: 'wordmark', logoLines: ['TURTLE', 'TOWER'], logoFace: 'grotesk',
+    site: 'https://www.turtletowersf.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
+  /* Plaza Cafe, "Pleasant Hill • Goods. Brand brand new. Needs a website." —
+     breakfast since 1985 and, from 9 September, Korean street food at night,
+     on Pleasant Hill's open Korean seat. plazapleasanthill.com is an ordering
+     template (the Masa case: an ordering platform on their own domain, a map
+     of Los Angeles on its info page), so the red outline stays. */
+  seed('plaza-cafe-pleasant-hill', 'Plaza Cafe', 'Plaza Cafe', 'Breakfast & Korean food', '#3D270F', {
+    icon: 'plaza-cafe-pleasant-hill',
+    logoTemplate: 'wordmark', logoLines: ['PLAZA', 'CAFE'], logoFace: 'slab',
+    site: 'https://plazapleasanthill.com/',
+    siteCta: 'Order online',
+    needsSite: true,
+  }),
+  /* hone, "San Jose • Services" — a piercing studio on Lincoln Avenue in
+     Willow Glen, on San Jose's open body-art seat (widened to "Tattoo and
+     piercing" for them in data/slots.ts). Fees are their booking page's;
+     jewelry is priced separately. */
+  seed('hone-piercing', 'Hone Piercing', 'Hone', 'Piercing studio', '#1A1412', {
+    icon: 'hone-piercing',
+    logoTemplate: 'wordmark', logoLines: ['hone'], logoFace: 'grotesk',
+    site: 'https://www.honepiercing.com/',
+    siteCta: 'Book a piercing',
+  }),
+  /* CycleBar Berkeley, "Berkeley • Services" — indoor cycling on University
+     Avenue. Berkeley's Gym seat is BodyRok's, so the yellow sheet at Tier 1.
+     The link is the studio's own page on the franchise site. */
+  seed('cyclebar-berkeley', 'CycleBar Berkeley', 'CycleBar', 'Indoor cycling studio', '#E21F26', {
+    icon: 'cyclebar-berkeley',
+    logoTemplate: 'wordmark', logoLines: ['CYCLEBAR'], logoFace: 'condensed',
+    site: 'https://www.cyclebar.com/location/berkeley',
+    siteCta: 'See classes and prices',
+    tier: 1,
+  }),
+  /* Rumble Boxing San Ramon, "San Ramon • Services" — boxing-inspired group
+     fitness in Diablo Plaza, on San Ramon's open Gym seat. */
+  seed('rumble-boxing-san-ramon', 'Rumble Boxing San Ramon', 'Rumble', 'Boxing fitness studio', '#D71F36', {
+    icon: 'rumble-boxing-san-ramon',
+    logoTemplate: 'wordmark', logoLines: ['RUMBLE'], logoFace: 'condensed',
+    site: 'https://www.rumbleboxinggym.com/location/san-ramon',
+    siteCta: 'Book a class',
+  }),
+  /* Truffle Poke Bar, "Multiple locations • Goods" — four Peninsula shops, one
+     seed per city on the Pho Nation pattern, each on its city's open Sushi
+     seat (poke is raw fish; there is no closer tile). The mark is the badge
+     from their own website. */
+  seed('truffle-poke-belmont', 'Truffle Poke Bar', 'Truffle Poke', 'Poke & sushi', '#0B0B0B', {
+    icon: 'truffle-poke-bar',
+    logoTemplate: 'wordmark', logoLines: ['Truffle'], logoFace: 'script',
+    site: 'https://www.trufflepokebar.com/',
+    siteCta: 'See their menu',
+  }),
+  seed('truffle-poke-burlingame', 'Truffle Poke Bar', 'Truffle Poke', 'Poke & sushi', '#0B0B0B', {
+    icon: 'truffle-poke-bar',
+    logoTemplate: 'wordmark', logoLines: ['Truffle'], logoFace: 'script',
+    site: 'https://www.trufflepokebar.com/',
+    siteCta: 'See their menu',
+  }),
+  seed('truffle-poke-ssf', 'Truffle Poke Bar', 'Truffle Poke', 'Poke & sushi', '#0B0B0B', {
+    icon: 'truffle-poke-bar',
+    logoTemplate: 'wordmark', logoLines: ['Truffle'], logoFace: 'script',
+    site: 'https://www.trufflepokebar.com/',
+    siteCta: 'See their menu',
+  }),
+  seed('truffle-poke-san-mateo', 'Truffle Poke Bar', 'Truffle Poke', 'Poke & sushi', '#0B0B0B', {
+    icon: 'truffle-poke-bar',
+    logoTemplate: 'wordmark', logoLines: ['Truffle'], logoFace: 'script',
+    site: 'https://www.trufflepokebar.com/',
+    siteCta: 'See their menu',
+  }),
+  /* Balompié Sports Bar & Grill, "Richmond • Goods. Needs a Website ASAP" —
+     Salvadoran food and a sports bar at Hilltop. No tile for Salvadoran food
+     (Mexican would be wrong), so the yellow sheet at Tier 1. No website: no
+     link, and the red outline follows from that. */
+  seed('balompie', 'Balompié Sports Bar & Grill', 'Balompié', 'Salvadoran', '#1B1210', {
+    icon: 'balompie',
+    logoTemplate: 'wordmark', logoLines: ['Balompié'], logoFace: 'script',
+    tier: 1,
+  }),
+  /* Paper Plane, "San Jose • Goods" — a bar on South First Street. No bar
+     tile, so the yellow sheet at Tier 1. */
+  seed('paper-plane-sj', 'Paper Plane', 'Paper Plane', 'Cocktail bar', '#0A0A0A', {
+    icon: 'paper-plane-sj',
+    logoTemplate: 'wordmark', logoLines: ['PAPER', 'PLANE'], logoFace: 'grotesk',
+    site: 'https://paperplanesj.com/',
+    siteCta: 'Visit their site',
+    tier: 1,
+  }),
+  /* Benchmark Climbing, "Berkeley • Services / San Francisco • Services" — two
+     bouldering gyms. Both cities' Gym seats are taken (BodyRok, Beat Drop), so
+     each goes on its yellow sheet at Tier 1, one seed per gym. Their mark is
+     the arch alone; the wordmark was cut off in his screenshot. */
+  seed('benchmark-climbing-berkeley', 'Benchmark Climbing', 'Benchmark', 'Bouldering gym', '#23272A', {
+    icon: 'benchmark-climbing',
+    logoTemplate: 'wordmark', logoLines: ['BENCHMARK'], logoFace: 'grotesk',
+    site: 'https://www.benchmarkclimbing.com/',
+    siteCta: 'See passes and prices',
+    tier: 1,
+  }),
+  seed('benchmark-climbing-sf', 'Benchmark Climbing', 'Benchmark', 'Bouldering gym', '#23272A', {
+    icon: 'benchmark-climbing',
+    logoTemplate: 'wordmark', logoLines: ['BENCHMARK'], logoFace: 'grotesk',
+    site: 'https://www.benchmarkclimbing.com/',
+    siteCta: 'See passes and prices',
+    tier: 1,
+  }),
+  /* Deli Board, "San Francisco • Goods" — sandwiches on Folsom Street, on San
+     Francisco's open Sandwiches seat. The film is @antoinetterzz's, sent in the
+     same message as the listing, so it plays as a review under his protocol of
+     2026-09-09 (see docs/FOODIES.md). */
+  seed('deli-board', 'Deli Board', 'Deli Board', 'Sandwiches', '#1C1C1C', {
+    icon: 'deli-board',
+    logoTemplate: 'wordmark', logoLines: ['DELI', 'BOARD'], logoFace: 'condensed',
+    site: 'https://deliboardsf.com/',
+    siteCta: 'See their menu',
+    clip: {
+      src: '/clips/deli-board.mp4',
+      poster: '/clips/deli-board-poster.webp',
+      href: 'https://www.instagram.com/reel/DdVGzARTQiS/',
+      credit: 'Filmed by @antoinetterzz',
+      platform: 'Instagram',
+      by: 'antoinetterzz',
+    },
+  }),
+  /* Brazuca Açaí, "Richmond • Goods" — açaí bowls on Barrett Avenue. He sent
+     their DoorDash page; nothing here comes from it. No tile for açaí (Ice
+     cream is Waffles Cream's), so the yellow sheet at Tier 1. No website of
+     their own, so no link. */
+  seed('brazuca-acai', 'Brazuca Açaí', 'Brazuca', 'Açaí bowls', '#009C3B', {
+    icon: 'brazuca-acai',
+    logoTemplate: 'wordmark', logoLines: ['Brazuca'], logoFace: 'script',
+    tier: 1,
+  }),
+  /* The Gravity Vault Marin, "Marin • Services" — an indoor climbing gym at
+     Smith Ranch Road. There is no Marin page; San Rafael is the city on their
+     address, and its Gym seat was open. */
+  seed('gravity-vault-marin', 'The Gravity Vault Marin', 'Gravity Vault', 'Indoor climbing gym', '#0D4E7D', {
+    icon: 'gravity-vault-marin',
+    logoTemplate: 'wordmark', logoLines: ['GRAVITY', 'VAULT'], logoFace: 'grotesk',
+    site: 'https://gravityvault.com/locations/marin-county-ca',
+    siteCta: 'See rates and classes',
+  }),
+  /* Batch & Brine, "Lafayette • Goods" — burgers, brunch and cocktails on Mt.
+     Diablo Blvd. Lafayette's Burgers seat is Kabab Burger's, so the yellow
+     sheet at Tier 1. The menu is their Toast pickup page, read in a real
+     browser; the dine-in and bar lists on it are left out. */
+  seed('batch-and-brine', 'Batch & Brine', 'Batch & Brine', 'Burgers & brunch', '#B79A37', {
+    icon: 'batch-and-brine',
+    logoTemplate: 'wordmark', logoLines: ['BATCH', '& BRINE'], logoFace: 'grotesk',
+    site: 'https://www.batchandbrine.com/',
+    siteCta: 'See their menus',
+    tier: 1,
+  }),
+  /* Thai Thani and Oishi, "Walnut Creek • Goods" — Thai food and sushi under one
+     roof on Ygnacio Valley Road, on Walnut Creek's open Asian food seat. The
+     menu is their own pickup ordering page. */
+  seed('thai-thani-oishi', 'Thai Thani and Oishi', 'Thai Thani', 'Thai & sushi', '#702573', {
+    icon: 'thai-thani-oishi',
+    logoTemplate: 'wordmark', logoLines: ['Thai Thani'], logoFace: 'slab',
+    site: 'https://www.thaithanioishi.com/',
+    siteCta: 'Order pickup',
+  }),
+  /* Brew & Banh Mi Cafe, "Milpitas • Goods" — coffee, tea and banh mi on
+     Cypress Drive, on Milpitas's open Coffee seat. */
+  seed('brew-and-banh-mi', 'Brew & Banh Mi Cafe', 'Brew Banh Mi', 'Coffee & banh mi', '#6F4A24', {
+    icon: 'brew-and-banh-mi',
+    logoTemplate: 'wordmark', logoLines: ['BREW &', 'BANH MI'], logoFace: 'slab',
+    site: 'https://www.brewbanhmicafe.com/en',
+    siteCta: 'See their menu',
+  }),
+  /* Delage, "Oakland • Goods" — sushi and omakase on 9th Street, reopening on
+     16 September under Kyle Itani, on Oakland's open Sushi seat. Their menus
+     are samples (the fish changes daily); the omakase is a seat at the
+     counter, so it is named in the note rather than sold as pickup. */
+  seed('delage-oakland', 'Delage', 'Delage', 'Sushi & omakase', '#732B2F', {
+    icon: 'delage-oakland',
+    logoTemplate: 'wordmark', logoLines: ['DELAGE'], logoFace: 'slab',
+    site: 'https://www.delagesushi.com/',
+    siteCta: 'See their menus',
+  }),
+  /* Taj Mahal, "Livermore • Goods. I deliver for them so I'll get an offer
+     soon." — an Indian restaurant, bar and lounge at the outlets. Livermore's
+     Indian seat is Pijja Paradise's, so the yellow sheet at Tier 1 until they
+     sign. */
+  seed('taj-mahal-livermore', 'Taj Mahal', 'Taj Mahal', 'Indian', '#002541', {
+    icon: 'taj-mahal-livermore',
+    logoTemplate: 'wordmark', logoLines: ['TAJ', 'MAHAL'], logoFace: 'slab',
+    site: 'https://tajmahalflavorsofindia.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
+  /* Yakiniku Shodai, "San Francisco • Goods" — Japanese wagyu barbecue on
+     Market Street. No tile for yakiniku, and Asian food is House of Thai's, so
+     the yellow sheet at Tier 1. */
+  seed('shodai-sf', 'Yakiniku Shodai', 'Shodai', 'Japanese yakiniku', '#3A342E', {
+    icon: 'shodai-sf',
+    logoTemplate: 'wordmark', logoLines: ['SHODAI'], logoFace: 'slab',
+    site: 'https://www.shodaisf.com/',
+    siteCta: 'See their menus',
+    tier: 1,
+  }),
+  /* ThirsTea, "San Leandro • Goods. Brand new new. Needs website asap" — a
+     ThirsTea (by Brain Tune Cafe) boba shop opening on MacArthur Blvd, soft
+     opening 17 September, on San Leandro's open Boba seat. The chain's site
+     lists this shop and its ordering page, so no red outline: a page of the
+     shop's own is the pitch. */
+  seed('thirstea-san-leandro', 'ThirsTea', 'ThirsTea', 'Boba tea', '#E4312B', {
+    icon: 'thirstea-san-leandro',
+    logoTemplate: 'wordmark', logoLines: ['THIRSTEA'], logoFace: 'grotesk',
+    site: 'https://thirstea.com/',
+    siteCta: 'Visit their site',
+  }),
+  /* Z & Y Peking Duck, "San Francisco • Goods" — Peking duck and dim sum on
+     Jackson Street. Asian food is House of Thai's, so the yellow sheet at
+     Tier 1. */
+  seed('z-and-y-peking-duck', 'Z & Y Peking Duck', 'Z & Y', 'Peking duck & dim sum', '#B42C39', {
+    icon: 'z-and-y-peking-duck',
+    logoTemplate: 'wordmark', logoLines: ['Z & Y'], logoFace: 'slab',
+    site: 'https://zandypekingduck.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
+  /* BIBO Salon, "Oakland • Services" — a full-service hair salon on Broadway,
+     on Oakland's open Barber and salon seat. Prices are the "from" list on
+     their own site; their booking page quotes higher fixed prices. */
+  seed('bibo-salon', 'BIBO Salon', 'BIBO', 'Hair salon', '#2A2D35', {
+    icon: 'bibo-salon',
+    logoTemplate: 'wordmark', logoLines: ['BIBO'], logoFace: 'slab',
+    site: 'https://www.bibosalon.com/',
+    siteCta: 'Book an appointment',
+  }),
+  /* Pizza Deli & Grill, "Oakland • Goods" — halal pizza, burgers and
+     cheesesteaks on International Blvd. Italian is Philomena Pizza's, so the
+     yellow sheet at Tier 1. The www address he sent fails; the bare domain
+     works. */
+  seed('pizza-deli-and-grill', 'Pizza Deli & Grill', 'Pizza Deli', 'Halal pizza & grill', '#B3261E', {
+    icon: 'pizza-deli-and-grill',
+    logoTemplate: 'wordmark', logoLines: ['PIZZA DELI', '& GRILL'], logoFace: 'condensed',
+    site: 'https://pizzadeliandgrill.com/',
+    siteCta: 'Order pickup',
+    tier: 1,
+  }),
+  /* Cal Burger & More, "Berkeley • Goods" — smash burgers, wings and Crazyades
+     on Euclid Avenue. Berkeley's Burgers seat is Dog Haus's, so the yellow
+     sheet at Tier 1. Their site is new and unfinished (a placeholder phone
+     number), so no number is carried. */
+  seed('cal-burger', 'Cal Burger & More', 'Cal Burger', 'Smash burgers & wings', '#1B2A4E', {
+    icon: 'cal-burger',
+    logoTemplate: 'wordmark', logoLines: ['CAL', 'BURGER'], logoFace: 'condensed',
+    site: 'https://calbgocrazy.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
 ]
 
 /**

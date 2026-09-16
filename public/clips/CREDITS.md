@@ -137,11 +137,12 @@ the most movement — to 540x960 with sound.
 | `russ-fam-kitchen.mp4` | Russ Fam Kitchen, Daly City | instagram.com/reel/Dc68gg9SJhY — **an excerpt**, 2s–26s of 136s; their own post, @russfamkitchen_ |
 | `belly.mp4` | Belly, Oakland | instagram.com/reel/DdDEq35z2g5 — **an excerpt**, 8s–32s of 99s — the room, the menu board, the street and the wrap being unwrapped, chosen over the sweep's 5s start, which opened on her face; posted by @antoinetterzz, a food creator, not the restaurant — her chicken caesar wrap post, sent with "Can you play on their page without it going onto Instagram?" |
 | `emys-cannoli.mp4` | Emy’s Cannoli, Fairfield | instagram.com/reel/DdFKK1RSPBd — **an excerpt**, 9s–33s of 95s; posted by @oaktowngrubhub ("NowThatLooksGooD"), a food reviewer, not the shop — sent on 2026-09-09 with the single word "Foodie" |
+| `deli-board.mp4` | Deli Board, San Francisco | instagram.com/reel/DdVGzARTQiS — **an excerpt**, 2s–26s of 74s — her "Finally trying Deli Board in SF" title over the cut sandwich, then the Tenenbaum, chosen over a 1s start that opened on her face; re-encoded at CRF 29 (4.2 MB) because the windy, sunlit picture came out at 6.3 MB at the tool's CRF 26; posted by @antoinetterzz, a food creator, not the shop — sent on 2026-09-16 beside Deli Board's listing ("San Francisco • Goods") |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**
 The Yard and Jojo's Hot Chicken (@thesnacksensei), Glasshouzz (@volha_creative),
 Ofie's Kitchen (@itsmeloslab), Phosho Dough (@grubwitmike), Paulo Sausage Co
 (@justmostie), House of Raha (@smackinfood), Cambodian Street Food (Jay Chan,
-@JayChanMuzik on YouTube — a 24-second excerpt of a 23-minute vlog, 845s–869s), Belly (@antoinetterzz).
+@JayChanMuzik on YouTube — a 24-second excerpt of a 23-minute vlog, 845s–869s), Belly and Deli Board (@antoinetterzz).
 Worth him confirming with each. The rest are the businesses' own posts.

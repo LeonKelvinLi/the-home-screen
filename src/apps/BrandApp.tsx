@@ -14,11 +14,12 @@ import type { BrandPanel } from '../data/localBrands'
 import { money, useCart } from '../store/cart'
 import type { ShellApi } from '../ios/Device'
 
-/** What a kitchen, a café or a bar sells — pages where "consultation" is the wrong word. */
+/** What a kitchen, a café or a bar sells — pages where "consultation" is the wrong word.
+    "bar" is bounded on both sides so CycleBar, a cycling studio, is not a bar. */
 const FOOD_RX =
-  /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|bar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer|vietnam|indian|greek|persian|mediterranean|hot pot|californian|chinese|cantonese|japanese|korean|mexican|italian|filipino|peruvian|distiller|bottle shop|charcuterie|grazing/i
+  /coffee|caf[eé]|\btea\b|boba|chicken|wing|burger|pizza|taco|taquer|thai|ramen|pho\b|sushi|bakery|bake|pastr|dessert|ice cream|grill|kitchen|restaurant|\bfood|bbq|barbecue|brunch|breakfast|lunch|dinner|deli|sandwich|catering|winery|\bwine|beer|brew|\bbar\b|lounge|juice|smoothie|yogurt|cookie|donut|pie\b|noodle|dumpling|seafood|steak|meat|butcher|market|grocer|vietnam|indian|greek|persian|mediterranean|hot pot|californian|chinese|cantonese|japanese|korean|mexican|italian|filipino|peruvian|distiller|bottle shop|charcuterie|grazing/i
 /* What an online shop sells: goods posted from their own store, not booked. */
-const SHOP_RX = /jumpsuit|swimwear|life jacket|supplement|dog bed|boots|camera|drying bag|backpack|clothing|streetwear|pet goods|apparel/i
+const SHOP_RX = /jumpsuit|swimwear|life jacket|supplement|dog bed|boots|camera|drying bag|backpack|travel bottle|clothing|streetwear|pet goods|apparel/i
 import { Gem } from './MembersApp'
 import { FREE_SPOT_MONTHS } from '../data/affiliateTiers'
 

@@ -53,14 +53,42 @@ export const KIND_LABEL: Record<NewsKind, string> = {
 const ITEMS: NewsItem[] = [
   {
     /*
+      FROM THEIR OWN POSTS: ThirsTea San Leandro's Instagram, in his
+      screenshots of 2026-09-16. The eventDate puts the soft opening on the
+      calendar.
+    */
+    date: '2026-09-16',
+    kind: 'opening',
+    headline: 'ThirsTea opens in San Leandro on Thursday',
+    body:
+      'A new boba shop at 1383 MacArthur Blvd, Suite 1. Soft opening Thursday 17 September, ' +
+      '1 to 7pm. Grand opening Saturday 19 September, 11am to 8pm: buy two drinks, get one, and a ' +
+      'souvenir for the first 50 customers. Sunday 20 September, 11am to 8pm: buy three, get one.',
+    eventDate: '2026-09-17',
+    brands: ['b_thirsteasanleandro'],
+  },
+  {
+    /* From the banner on their own site: "Reopening Wednesday, September 16". */
+    date: '2026-09-16',
+    kind: 'opening',
+    headline: 'Delage reopens in Old Oakland',
+    body:
+      'The sushi and omakase counter on 9th Street, founded by Chef Chikara Ono and carried ' +
+      'forward by Chef Kyle Itani, reopens on Wednesday 16 September. Lunch and dinner, Monday ' +
+      'to Saturday.',
+    eventDate: '2026-09-16',
+    brands: ['b_delageoakland'],
+  },
+  {
+    /*
       A REAL DATE, FROM THEIR OWN HOMEPAGE. A modal on
       homeofchickenandwaffles.com reads "We are closing on August 31st!" — his
       spec lists "upcoming openings/closures" as exactly the kind of thing this
       page carries, and it is the most useful thing the directory can tell
       somebody this week.
 
-      It is also what proves the calendar wiring: this is the only post with an
-      eventDate, so it is the one that has to appear on the calendar as well.
+      It is also what proved the calendar wiring: it was the first post with an
+      eventDate, so it had to appear on the calendar as well.
       The restaurant itself is seeded and deliberately not seated — a tile for a
       room that shuts on Sunday would be wrong by Monday — but a dated notice
       that it is closing is right either way.
