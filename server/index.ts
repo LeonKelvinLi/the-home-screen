@@ -3275,6 +3275,40 @@ app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
  */
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 
+/*
+  THE COLLAB LINK, beastypages.com/collab.
+
+  Glenn shares it in food creators' Instagram DMs (2026-09-16), and a DM shows
+  the page's title, text and picture before anyone taps. The app is one page
+  whose title is BEASTY PAGES, so this path gets its own head; the client
+  opens the Collab invitation when it arrives here (see App.tsx).
+*/
+const COLLAB_BLURB =
+  'BEASTY pages is looking for Bay Area foodies to collaborate with. We cover the bill; you present the food review.'
+app.get(['/collab', '/collab/'], async (req, res) => {
+  res.setHeader('Cache-Control', 'no-store')
+  // The Host header goes into an attribute, so it is held to hostname characters.
+  const host = String(req.get('host') ?? '').replace(/[^A-Za-z0-9.:-]/g, '') || 'beastypages.com'
+  const origin = PROD ? `https://${host}` : `${req.protocol}://${host}`
+  const head = [
+    '<title>BEASTY Collab</title>',
+    `<meta name="description" content="${COLLAB_BLURB}" />`,
+    '<meta property="og:type" content="website" />',
+    '<meta property="og:site_name" content="BEASTY PAGES" />',
+    '<meta property="og:title" content="BEASTY Collab" />',
+    `<meta property="og:description" content="${COLLAB_BLURB}" />`,
+    `<meta property="og:url" content="${origin}/collab" />`,
+    `<meta property="og:image" content="${origin}/icon-512.png" />`,
+  ].join('\n    ')
+  try {
+    const { readFile } = await import('node:fs/promises')
+    const html = await readFile(join(here, '..', 'dist', 'index.html'), 'utf8')
+    res.type('html').send(html.replace('<title>BEASTY PAGES</title>', head))
+  } catch {
+    res.sendFile(join(here, '..', 'dist', 'index.html'))
+  }
+})
+
 app.get('*', (_req, res) => {
   res.setHeader('Cache-Control', 'no-store')
   res.sendFile(join(here, '..', 'dist', 'index.html'))

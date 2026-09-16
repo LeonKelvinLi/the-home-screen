@@ -11,12 +11,16 @@
   - a send lands in the operator's lead list with the handle cleaned up;
   - the lead email goes to LEAD_EMAIL with Reply set to the creator, and the
     server log keeps the creator's number and address out;
-  - the endpoint refuses what the form would refuse.
+  - the endpoint refuses what the form would refuse;
+  - beastypages.com/collab, the link Glenn sends to creators' DMs, carries its
+    own title and preview, opens straight onto the invitation, and the panel's
+    Share button hands that link to the share sheet (or copies it).
 
   Resend is never called: a preload swaps fetch for api.resend.com in the
   server under test and writes the request to the log instead.
 */
 import { spawn } from 'node:child_process'
+import http from 'node:http'
 import { createServer } from 'node:net'
 import { rmSync, readFileSync, openSync, mkdtempSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
@@ -191,6 +195,76 @@ try {
   check((await call('POST', '/api/collabs', { ...good, instagram: 'x'.repeat(31) })).status === 400, 'a handle longer than Instagram allows is refused')
   check((await call('POST', '/api/collabs', ['not', 'an', 'object'])).status === 400, 'a body that is not an object is refused')
   check((await call('POST', '/api/collabs', { ...good, name: 42 })).status === 400, 'a name that is not text is refused')
+
+  /* ---- the link Glenn shares, and the button that shares it ----------------- */
+  const collabHtml = await (await fetch(B + '/collab')).text()
+  const rootHtml = await (await fetch(B + '/')).text()
+  check(/<title>BEASTY Collab<\/title>/.test(collabHtml) && /property="og:title" content="BEASTY Collab"/.test(collabHtml) && /property="og:image" content="http[^"]+\/icon-512\.png"/.test(collabHtml) && /We cover the bill/.test(collabHtml),
+    'beastypages.com/collab carries its own title, text and picture for a DM preview')
+  check(/<title>BEASTY PAGES<\/title>/.test(rootHtml) && !/og:title/.test(rootHtml), 'the home page keeps its own title')
+  const forged = await new Promise((resolve) => {
+    const r = http.request({ host: 'localhost', port, path: '/collab', headers: { host: 'evil.example"><script>alert(1)</script>' } }, (resp) => {
+      let d = ''
+      resp.on('data', (c) => { d += c })
+      resp.on('end', () => resolve(d))
+    })
+    r.on('error', () => resolve(''))
+    r.end()
+  })
+  check(forged.includes('BEASTY Collab') && !forged.includes('<script>alert'), 'a forged Host header cannot write into the page')
+
+  const phone = await chromium.launch()
+  const ctx = await phone.newContext({ viewport: { width: 393, height: 852 } })
+  await ctx.addInitScript(() => {
+    window.__shared = []
+    navigator.share = async (data) => { window.__shared.push(data) }
+  })
+  const pg = await ctx.newPage()
+  const errs = []
+  pg.on('pageerror', (e) => errs.push(String(e)))
+  const t0 = Date.now()
+  await pg.goto(B + '/collab', { waitUntil: 'domcontentloaded' })
+  const landedIn = await pg.waitForSelector('.dialer-panel .collab-form', { timeout: 8000 }).then(() => Date.now() - t0).catch(() => null)
+  check(landedIn !== null, `the link opens straight onto the invitation, no key pressed${landedIn !== null ? ` (${landedIn} ms)` : ''}`)
+  const focus = await pg.evaluate(() => {
+    const a = document.activeElement
+    return { panel: !!a?.classList.contains('dialer-panel'), outline: a ? getComputedStyle(a).outlineStyle : null }
+  })
+  check(focus.panel && focus.outline === 'none', `arriving by link, the dialog holds focus with no ring on anything (${JSON.stringify(focus)})`)
+  await pg.keyboard.press('Tab')
+  check((await pg.evaluate(() => document.activeElement?.getAttribute('aria-label'))) === 'Close', 'and Tab from there reaches Close first')
+  await pg.getByRole('button', { name: 'Share this invitation' }).click()
+  const sent = await pg.evaluate(() => window.__shared)
+  check(sent.length === 1 && sent[0].url === B + '/collab' && sent[0].title === 'BEASTY Collab' && /foodies/.test(sent[0].text || ''),
+    `Share this invitation hands the share sheet the Collab link (${JSON.stringify(sent)})`)
+  await pg.click('.dialer-panel-close')
+  check((await pg.locator('.dialer-panel').count()) === 0, 'closing it leaves the ordinary landing page')
+  await pg.click('[aria-label="Enter BEASTY"]')
+  await pg.waitForSelector('.shell-enter', { timeout: 20000 })
+  await pg.waitForTimeout(800)
+  await pg.goBack()
+  await pg.locator('[aria-label="Enter BEASTY"]').first().waitFor({ state: 'visible', timeout: 20000 })
+  await pg.waitForTimeout(500)
+  check((await pg.locator('.dialer-panel').count()) === 0, 'coming back from the app does not reopen the invitation')
+  check(errs.length === 0, `no script errors on the link${errs.length ? ': ' + errs.join(' | ') : ''}`)
+  await phone.close()
+
+  const desk = await chromium.launch()
+  const dctx = await desk.newContext({ viewport: { width: 1280, height: 900 } })
+  await dctx.addInitScript(() => {
+    window.__copied = []
+    try { delete Navigator.prototype.share } catch {}
+    Object.defineProperty(navigator, 'share', { value: undefined, configurable: true })
+    Object.defineProperty(navigator, 'clipboard', { value: { writeText: async (t) => { window.__copied.push(t) } }, configurable: true })
+  })
+  const dp = await dctx.newPage()
+  await dp.goto(B + '/collab', { waitUntil: 'domcontentloaded' })
+  await dp.waitForSelector('.dialer-panel .collab-form', { timeout: 8000 })
+  await dp.getByRole('button', { name: 'Share this invitation' }).click()
+  const said = await dp.waitForSelector('.dialer-toast', { timeout: 4000 }).then((h) => h.textContent()).catch(() => null)
+  const copied = await dp.evaluate(() => window.__copied)
+  check(said === 'Link copied' && copied.length === 1 && copied[0] === B + '/collab', `with no share sheet the link is copied and the page says so (${said}, ${JSON.stringify(copied)})`)
+  await desk.close()
 } catch (e) {
   console.log('FAIL: ' + (e?.stack || e))
   await done(1)
@@ -198,5 +272,5 @@ try {
 
 for (const n of notes) console.log(`  NOTE ${n}`)
 if (fails.length) { console.log(`\nFAIL: ${fails.join('; ')}`); await done(1) }
-console.log('\nPASS: the Collab panel carries his invitation and a four-field form that reaches the lead inbox, and only real details get through.')
+console.log('\nPASS: the Collab panel carries his invitation and a four-field form that reaches the lead inbox, only real details get through, and beastypages.com/collab opens it and shares it.')
 await done(0)

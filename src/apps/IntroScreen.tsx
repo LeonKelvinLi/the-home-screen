@@ -6,7 +6,7 @@ import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES, type AboutSection } from './dialer/copy'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
-import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark } from './dialer/glyphs'
+import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark, ShareMark } from './dialer/glyphs'
 import { Gem } from './MembersApp'
 import { QrScanner, beastyPathFrom } from './QrScanner'
 import { CollabForm } from './CollabForm'
@@ -85,6 +85,11 @@ interface Props {
    * that replays it deliberately.
    */
   skipIntro?: boolean
+  /**
+   * A panel to open on arrival. The Collab link (beastypages.com/collab) lands
+   * on the invitation rather than on a keypad the creator has never seen.
+   */
+  openPanel?: PanelPage
 }
 
 /**
@@ -155,7 +160,7 @@ const STOCK_TAB_LABELS = ['Favorites', 'Recents', 'Contacts', 'Keypad', 'Voicema
 */
 const TAB_LABELS = ['Favorites', 'Recent', 'Scan', 'Profile', 'Reviews']
 
-export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Props) {
+export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openPanel }: Props) {
   const reduced =
     skipIntro ||
     (typeof window !== 'undefined' &&
@@ -164,7 +169,13 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
   const [stage, setStage] = useState<Stage>(reduced ? 'beasty' : 'stock')
   /** How many of the six BEASTY keys have lit so far. */
   const [spelled, setSpelled] = useState(reduced ? BEASTY_DIGITS.length : 0)
-  const [panel, setPanel] = useState<PanelPage | null>(null)
+  const [panel, setPanel] = useState<PanelPage | null>(openPanel ?? null)
+  /* The panel the link opened, until someone closes or changes it. */
+  const arrivedOn = useRef<PanelPage | null>(openPanel ?? null)
+  const closePanel = () => {
+    arrivedOn.current = null
+    setPanel(null)
+  }
   /** The BEASTY PAGES bar's dropdown. Closed on every fresh arrival. */
   const [domainOpen, setDomainOpen] = useState(false)
   /*
@@ -345,12 +356,12 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
     later(() => setToast(null), 2000)
   }
 
-  const share = async () => {
-    const url = window.location.origin
+  /** The phone's share sheet where there is one, else the clipboard. */
+  const shareLink = async (url: string, title: string, text?: string): Promise<boolean> => {
     if (navigator.share) {
       try {
-        await navigator.share({ title: 'BEASTY', url })
-        return
+        await navigator.share(text ? { title, text, url } : { title, url })
+        return true
       } catch {
         /* dismissed — fall through to copy */
       }
@@ -362,15 +373,36 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
       // nothing — which on desktop is every visitor, since navigator.share is
       // not there to take over.
       say('Link copied')
+      return true
     } catch {
-      setPanel('contacts')
+      return false
     }
+  }
+
+  const share = async () => {
+    if (!(await shareLink(window.location.origin, 'BEASTY'))) setPanel('contacts')
+  }
+
+  /*
+    Glenn, 2026-09-16, on the Collab panel: "can you add a share button here?
+    This will make it a lot easier for me to share to the DM's of Instagram
+    foodies." The link opens straight onto this invitation.
+  */
+  const shareCollab = async () => {
+    const url = `${window.location.origin}/collab`
+    const shared = await shareLink(
+      url,
+      'BEASTY Collab',
+      'BEASTY pages is looking for Bay Area foodies to collaborate with.',
+    )
+    if (!shared) say(`Copy this link: ${url.replace(/^https?:\/\//, '')}`)
   }
 
   const run = (action: KeyAction) => {
     if (leaving) return
     switch (action.kind) {
       case 'panel':
+        arrivedOn.current = null
         setPanel((p) => (p === action.page ? null : action.page))
         return
       case 'enter':
@@ -793,17 +825,19 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro }: Pro
           <>
             {/* Tapping outside was a no-op: there was no backdrop element at all,
                 so the only exits were the close button and the tab bar. */}
-            <div className="dialer-scrim" onClick={() => setPanel(null)} aria-hidden="true" />
+            <div className="dialer-scrim" onClick={closePanel} aria-hidden="true" />
           </>
         )}
         {panel && (
           <Panel
             page={panel}
             onShare={share}
+            onShareCollab={shareCollab}
             onJoin={() => leave(onJoin)}
             onWater={() => leave(onWater)}
-            onClose={() => setPanel(null)}
+            onClose={closePanel}
             onOpenBrand={(id) => leave(() => onOpen(id))}
+            focusDialog={panel === arrivedOn.current}
           />
         )}
 
@@ -1175,6 +1209,8 @@ const FOCUSABLE = 'button, a[href], input, select, textarea'
 function Panel({
   page,
   onShare,
+  onShareCollab,
+  focusDialog,
   onJoin,
   onWater,
   onClose,
@@ -1182,6 +1218,13 @@ function Panel({
 }: {
   page: PanelPage
   onShare: () => void
+  onShareCollab: () => void
+  /**
+   * Focus the dialog itself rather than its close button. A panel that a link
+   * opened has had no tap yet, and a ring round the close button is the first
+   * thing a creator arriving from a DM would see.
+   */
+  focusDialog?: boolean
   onJoin: () => void
   onWater: () => void
   onClose: () => void
@@ -1204,7 +1247,7 @@ function Panel({
     const el = card.current
     if (!el) return
     const returnTo = document.activeElement as HTMLElement | null
-    const first = el.querySelector<HTMLElement>(FOCUSABLE)
+    const first = focusDialog ? null : el.querySelector<HTMLElement>(FOCUSABLE)
     ;(first ?? el).focus({ preventScroll: true })
     return () => returnTo?.focus?.({ preventScroll: true })
   }, [])
@@ -1227,7 +1270,7 @@ function Panel({
     if (focusable.length === 0) return
     const first = focusable[0]
     const last = focusable[focusable.length - 1]
-    if (e.shiftKey && document.activeElement === first) {
+    if (e.shiftKey && (document.activeElement === first || document.activeElement === el)) {
       e.preventDefault()
       last.focus()
     } else if (!e.shiftKey && document.activeElement === last) {
@@ -1302,6 +1345,12 @@ function Panel({
         {page === 'careers' && (
           <button className="dialer-panel-action" onClick={onJoin}>
             Claim a tile
+          </button>
+        )}
+        {page === 'collabs' && (
+          <button type="button" className="dialer-panel-action collab-share" onClick={onShareCollab}>
+            <ShareMark size={16} />
+            Share this invitation
           </button>
         )}
         {page === 'collabs' && <CollabForm />}

@@ -450,6 +450,13 @@ else {
   if (collab.fields !== 'Name, Phone number, Email address, Instagram handle') fails.push(`the Collab form asks for: ${collab.fields}`)
 }
 if (collabApi !== 400) fails.push(`/api/collabs answered ${collabApi} to an empty body, expected 400`)
+/* The link Glenn sends to creators' DMs opens onto the invitation and its Share button. */
+const collabHead = await fetch(base + '/collab').then((r) => r.text()).catch(() => '')
+await p.goto(base + '/collab', { waitUntil: 'networkidle', timeout: 60000 })
+const linked = await p.waitForSelector('.dialer-panel .collab-share', { timeout: 15000 }).then(() => true).catch(() => false)
+console.log('collab link   :', JSON.stringify({ title: /<title>BEASTY Collab<\/title>/.test(collabHead), preview: /og:title/.test(collabHead), opens: linked }))
+if (!/<title>BEASTY Collab<\/title>/.test(collabHead) || !/og:title/.test(collabHead)) fails.push('beastypages.com/collab does not carry its own title and preview')
+if (!linked) fails.push('beastypages.com/collab does not open onto the invitation with its Share button')
 /* The sample people Contacts showed before accounts existed, and Glenn's name,
    which BEASTY LLC keeps off the site (it captioned Chef Jeff's photos until
    their menu replaced them on 2026-09-13). */

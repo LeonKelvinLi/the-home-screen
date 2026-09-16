@@ -72,6 +72,13 @@ export default function App() {
 
   const [openOn, setOpenOn] = useState<string | null>(shared)
   /*
+    The Collab link, beastypages.com/collab: Glenn sends it to food creators
+    (2026-09-16), so it lands on his invitation with the takeover skipped, the
+    same courtesy as a shared business link. Only on arrival: coming back from
+    the app is an ordinary return, and the panel stays shut.
+  */
+  const collabLink = typeof window !== 'undefined' && /^\/collab\/?$/.test(window.location.pathname)
+  /*
     Bumped on every return from the app, and used as IntroScreen's key.
 
     Without it React can reconcile the returning screen against the one it
@@ -213,7 +220,8 @@ export default function App() {
              and the account screen are all one key rather than a tap into the
              grid. */
           onOpen={(appId) => enter(appId)}
-          skipIntro={skipIntro}
+          skipIntro={skipIntro || (visit === 0 && collabLink)}
+          openPanel={visit === 0 && collabLink ? 'collabs' : undefined}
         />
       )}
     </GateProvider>
