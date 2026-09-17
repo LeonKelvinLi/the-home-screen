@@ -1,0 +1,1161 @@
+[
+ {
+  "id": "b_roasteateryco",
+  "name_exact": "Roast Eatery Co.",
+  "one_line": "Grab-and-go Hong Kong style Chinese BBQ and soy sauce braised goods",
+  "cuisine": "Hong Kong Chinese BBQ",
+  "address": "3120 Balfour Rd Ste A, Brentwood, California",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "roast_eatery_co",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": null,
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Record: Roast Eatery Co., the single grab-and-go Chinese BBQ shop at 3120 Balfour Rd Ste A, Brentwood. Their Instagram grid has an 'OPENING DAY Feb 12 2025' post, so they have been open since 12 Feb 2025; nothing seen suggests they have closed.",
+   "NO WEBSITE AND NO FIRST-PARTY ORDERING PAGE FOUND, so site_kind is 'none' and site_url is null. Checked 17 Sep 2026: (a) DNS lookups for roasteateryco.com, roasteatery.com, roasteaterybrentwood.com, theroasteatery.com, roasteateryco.net, roasteatery.co, roast-eatery.com, roasteatery.net, roasteateryca.com, roasteaterycompany.com, roasteateryco.us, eatroasteatery.com, roasteaterybbq.com, roasteatery.us, roasteateryco.shop, dairongsiudim.com and daiwingsiudim.com all return NXDOMAIN (no such domain); (b) https://roasteatery.square.site/ , https://roasteateryco.square.site/ , https://roast-eatery.square.site/ and https://roasteaterybrentwood.square.site/ all return HTTP 404; (c) https://linktr.ee/roasteateryco and https://linktr.ee/roast_eatery_co both return HTTP 404; (d) three web searches for the business name plus Brentwood/Balfour/'Grab & Go HK BBQ' returned only their Instagram plus aggregator listings. Their Instagram profile also shows no link, per the transcript supplied.",
+   "All non-Instagram results for this business are delivery marketplaces or directories, which this brief bars as sources: DoorDash, Yelp, Zmenu, Roadtrippers, Apple Maps, Giftly. Nothing from any of them is used in this record. As instructed, DoorDash was not opened or used for anything, even though their Instagram grid includes a DoorDash graphic.",
+   "PHONE IS NULL: a phone number for this shop appears in aggregator listings only (Yelp/DoorDash/Zmenu style pages), never on a first-party page, so it is not recorded. A human should confirm the number with the shop.",
+   "HOURS ARE NULL: the same aggregator listings publish opening hours, but the business publishes none on any first-party page, so hours are left null. A human should confirm them directly.",
+   "EMAIL IS NULL: no email address is published on any first-party source seen.",
+   "Facts used all come from the Instagram profile text transcribed in the brief, which is their own profile: 'Roast Eatery (Grab & Go HK BBQ)'; 'A Grab and Go, Chinese BBQ eatery, specialized in roast duck, soy sauce chicken, honey glazed bbq pork, and many other soy sauce braised goods!'; '3120 Balfour Rd Ste A, Brentwood, California'. The address is recorded exactly as they write it, which includes no ZIP code (the plaza's ZIP is 94513 on the neighbouring business's own page).",
+   "Name: the logo reads 'ROAST EATERY CO.' in English with the Chinese name 大榮小店; the Instagram display name is 'Roast Eatery (Grab & Go HK BBQ)'. name_exact uses 'Roast Eatery Co.' from the logo. A human may prefer to show the Chinese name 大榮小店 alongside it.",
+   "NO PRICES: they publish no menu or price list on any first-party page, so prices_published is false and items is empty. Menu prices exist only on delivery marketplaces, which are barred here.",
+   "LOGO IS NULL: the logo exists only as an Instagram image; there is no first-party site to host it, so no logo URL could be recorded. A human can lift it from the Instagram profile picture or ask the owner for the file.",
+   "Same plaza as Dim Sum Basket (3120 Balfour Rd, Brentwood), which Glenn also sent; see b_dimsumbasket. Roast Eatery Co is Ste A, Dim Sum Basket is Unit C.",
+   "Read 17 Sep 2026, not blocked: none of the candidate own-domain URLs above resolved. https://www.instagram.com/roast_eatery_co/ returned HTTP 200 but only an empty JavaScript app shell with no profile text, so nothing was taken from it; the Instagram facts come from the brief's transcript. Guessed Toast URLs (https://www.toasttab.com/roast-eatery-co , https://order.toasttab.com/online/roast-eatery-co) return HTTP 403, which is what Toast returns for any automated read and is NOT evidence that such a page exists."
+  ],
+  "blocked": "instagram.com/roast_eatery_co returns only an empty JS app shell to an automated read; the profile facts used are the ones transcribed in the brief."
+ },
+ {
+  "id": "b_dimsumbasket",
+  "name_exact": "Dim Sum Basket",
+  "one_line": "Chinese dim sum to-go restaurant serving Cantonese comfort food",
+  "cuisine": "Cantonese dim sum",
+  "address": "3120 Balfour Rd Unit C, Brentwood, CA 94513",
+  "phone": "(925) 418-4142",
+  "email": "Eatdimsumbasket@gmail.com",
+  "hours": "Tue-Fri 10am-5pm; Sat 9am-5pm; Sun 9am-3pm; closed Mon",
+  "instagram": "dimsumbasket",
+  "site_kind": "stopgap",
+  "site_url": "https://dimsumbasket.square.site/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Ramune Strbrry",
+    "desc": "",
+    "cents": 250,
+    "section": "Order Online",
+    "label": ""
+   },
+   {
+    "name": "Ramune Original",
+    "desc": "",
+    "cents": 250,
+    "section": "Order Online",
+    "label": ""
+   },
+   {
+    "name": "Rice Pudding Trio 砵仔糕三拼",
+    "desc": "",
+    "cents": 375,
+    "section": "Order Online",
+    "label": ""
+   },
+   {
+    "name": "Red Bean Rice Pudding 紅豆砵仔糕",
+    "desc": "",
+    "cents": 175,
+    "section": "Order Online",
+    "label": ""
+   },
+   {
+    "name": "Original Rice Pudding 原味砵仔糕",
+    "desc": "",
+    "cents": 175,
+    "section": "Order Online",
+    "label": ""
+   },
+   {
+    "name": "Coconut Rice Pudding 椰汁砵仔糕",
+    "desc": "",
+    "cents": 175,
+    "section": "Order Online",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from their own online store, which is not currently taking orders.",
+  "source_url": "https://dimsumbasket.square.site/",
+  "logo_url": "https://dimsumbasket.square.site/uploads/b/cdb424de8a2864d917b84878ec55ac4a443f6d38a757a8f52f684215ce06d2f9/Dimsum%20Basket%20Logo_1656748693.png",
+  "logo_px": "3730x2753",
+  "flags": [
+   "Record: Dim Sum Basket, the single dim-sum-to-go shop at 3120 Balfour Rd, Brentwood. Open, but online ordering is switched off: the store data on their own page says accepting_orders = false, every product page says 'Our store is not currently accepting orders', and the home page banner reads 'Dim sum to go restaurant online order coming soon...'.",
+   "SAME PLAZA AS ROAST EATERY CO: both are at 3120 Balfour Rd, Brentwood (Dim Sum Basket is Unit C, Roast Eatery Co is Ste A). Glenn sent both; see b_roasteateryco.",
+   "Website: no site of their own, so site_kind is 'stopgap'. Their only web presence is the Square Online (Weebly-built) store at https://dimsumbasket.square.site/ , which their Instagram links. It is live and current (HTTP 200, footer '(c) 2026', product pages updated 12 Sep 2026 per the sitemap) but it is a single-page site: the only page is 'Home' plus the order page and the item template.",
+   "DOMAIN TO CHECK: https://dimsumbasket.com/ resolves (HTTP 200) to a GoDaddy Website Builder placeholder whose title is just 'dimsumbasket.com' and whose only content is 'Launching Soon' and a contact form. It carries no business name, address, phone, menu or link to this shop, so ownership could not be confirmed and it is not used as their site. Worth asking the owner whether the domain is theirs - if it is, it is the natural home for a real site.",
+   "Price source: the six products published on their own Square Online store, read 17 Sep 2026. The store's order page (https://dimsumbasket.square.site/s/order) renders 'The page doesn't currently have any products. Please try again later.', so the products are not visible in any category; they were found through the store's own sitemap (https://dimsumbasket.square.site/sitemap.xml) and read one page at a time. Each price was taken from that item's own product page AND cross-checked against the schema.org Product JSON-LD embedded in the same page, so no price can have been paired with a neighbouring item.",
+   "Item pages read (all HTTP 200, headless Playwright, 17 Sep 2026): /product/ramune-strbrry/102 $2.50; /product/ramune-original/103 $2.50; /product/rice-pudding-trio-/105 $3.75; /product/red-bean-rice-pudding-/106 $1.75; /product/original-rice-pudding-/107 $1.75; /product/coconut-rice-pudding-/108 $1.75. All six carry an empty description on their own page, so desc is blank for every item.",
+   "THE CATALOG IS TINY AND IS NOT THEIR REAL MENU: only these six items are published, and it is all rice pudding and bottled Ramune - none of the dim sum they are known for. A human should expect the real menu to be much larger and to come from the owner.",
+   "Completeness of the six items is confirmed three ways, all first-party: the store's own sitemap lists exactly these six product pages; ids 101, 104, 109 and 110 return the site's own 404 page, so nothing is hidden behind an unlisted id; and the catalog feed their own product pages call (cdn5.editmysite.com/app/store/api/v28/editor/users/142380691/sites/694364130574326402/products, read 17 Sep 2026, HTTP 200) reports total = 6 visible products with prices $2.50, $2.50, $3.75, $1.75, $1.75, $1.75 in that order, each with an empty description, no image and no size variants. The same feed's categories endpoint reports total = 0 categories, which is why their order page renders empty.",
+   "Section and order: the store shows no menu sections; each item's breadcrumb on its own page reads 'Order Online', so that is used as the section name for all six. No customer-facing order is published either, so the items are listed in their own product-id order.",
+   "INSTAGRAM PRICE NOT USED IN items: the brief notes an Instagram post showing 'Fried Dough Stick $3.75'. That item is not on their Square store, so it is not in items; note that $3.75 is also the store price of the Rice Pudding Trio, so the two must not be confused. A human can add Fried Dough Stick at $3.75 on the owner's word.",
+   "ADDRESS: their Square page publishes '3120 Balfour Road / Brentwood, CA 94513' with no unit; their Instagram publishes '3120 Balfour Rd Unit C Brentwood Ca' with no ZIP. Neither contradicts the other, so this record combines them as '3120 Balfour Rd Unit C, Brentwood, CA 94513'.",
+   "PHONE AND EMAIL: their Square page's Location & Hours block publishes the phone as '(925)418-4142' (recorded here in the standard form) and the email in capitals as 'EATDIMSUMBASKET@GMAIL.COM'; Instagram publishes it as 'Eatdimsumbasket@gmail.com', which is the form recorded. The two sources agree.",
+   "HOURS come from the Location & Hours block on their own Square page and are consistent there: Monday Closed, Tuesday-Friday 10am-5pm, Saturday 9am-5pm, Sunday 9am-3pm. Their Instagram (as transcribed) publishes no hours, so there is nothing to contradict.",
+   "Other copy on their own page, if useful: 'Cantonese comfort food for anytime of the day with a taste of tradition', a 'Limited availability' section that renders empty, and a 'Featured Menu Items' section ('Try one of our signature selections and see what everyone's talking about') that also renders with no items because the store has no visible products.",
+   "Read 17 Sep 2026, all HTTP 200 and none blocked: https://dimsumbasket.square.site/ (curl and headless), /s/order (headless), /sitemap.xml , /robots.txt , the six /product/ pages above (headless), the probe ids 101/104/109/110 (headless, all the site's 404 page), the logo PNG, and https://dimsumbasket.com/ plus its sitemap. https://www.instagram.com/dimsumbasket/ returned HTTP 200 but only an empty JavaScript app shell, so nothing was taken from it; the Instagram facts come from the brief's transcript. No CAPTCHA or bot challenge was met or bypassed.",
+   "Their store page carries a reCAPTCHA-protected 'Stay in the Loop' email sign-up; it was not filled in or submitted.",
+   "Aggregator listings exist for this shop (DoorDash, order.online, ezCater, Yelp and similar) and are barred by this brief; none of them was opened or used, and no price here comes from one.",
+   "Logo: the 'DIM SUM BASKET' roundel PNG hosted on their own Square store, 3730x2753 native (the page itself serves it resized, e.g. ?width=400). The site publishes no social links of its own."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_brentwoodrehabpt",
+  "name_exact": "Brentwood Rehab & Performance Physical Therapy",
+  "one_line": "One-on-one physical therapy for orthopedic injuries and post-op rehab",
+  "cuisine": "Physical therapy clinic",
+  "address": "2200 Sand Creek Rd., Ste F, Brentwood, CA 94513",
+  "phone": "(925) 466-5550",
+  "email": "info@brentwoodphysicaltherapy.com",
+  "hours": "Mon-Fri 7am-7pm; Sat 8am-4pm",
+  "instagram": "brentwoodphysicaltherapy",
+  "site_kind": "own-domain",
+  "site_url": "https://www.brentwoodphysicaltherapy.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": null,
+  "source_url": null,
+  "logo_url": "https://www.brentwoodphysicaltherapy.com/uploads/1/3/0/4/13046685/published/brentwood-header-clean.png?1776115420",
+  "logo_px": "672x141",
+  "flags": [
+   "Record: Brentwood Rehab & Performance Physical Therapy, the single clinic at 2200 Sand Creek Rd., Ste F, Brentwood. Open and taking new patients: the home page headline is 'Now Open!', which fits the ribbon-cutting post on their Instagram.",
+   "Website: own domain, https://www.brentwoodphysicaltherapy.com/ , built on Weebly/Square Online. It is live and current - all 29 pages in its sitemap return HTTP 200, the sitemap's lastmod is 20 Aug 2026, the footer reads '(c) COPYRIGHT 2026' and the blog has posts from May, June, July and August 2026.",
+   "NO PRICES PUBLISHED ANYWHERE ON THEIR SITE, so prices_published is false, items is empty, price_note is null and source_url is null. Every one of the 29 sitemap pages was read and searched for dollar amounts and for the words price, rate, fee, cost, cash pay, self pay and package; there is no fee schedule, no evaluation price, no visit rate and no package pricing. The guessed price pages /rates.html, /pricing.html, /prices.html, /cash-pay.html, /fees.html, /self-pay.html, /packages.html, /cost.html and /memberships.html all return HTTP 404.",
+   "CASH PAY EXISTS BUT IS UNPRICED: their FAQ page says 'We also have affordable cash pay programs' with no amount. Their insurance page says the team 'can help verify your coverage, explain your costs upfront, and handle billing', again with no figures. So a cash-pay rate exists to be asked for, but they publish none.",
+   "INSURANCE (not cash-pay only): the insurance page says they are 'in network with many major insurances as well as worker's compensation, Medicare, and auto insurance' and 'also contracted with John Muir HMO, Hill Physicians HMO, and Affinity HMO'. The FAQ page says 'in network with nearly all major insurances as well as worker's compensation, Medicare, and auto insurance' and names John Muir HMO only - a small wording difference between their own two pages, not a real contradiction. They bill insurance directly, deductible/co-pay/co-insurance is due at the time of service, and they accept cash, check, Visa and MasterCard. The patient demographic form they host adds 'WE DO NOT BILL THIRD PARTY AUTO CLAIM'.",
+   "THE ONLY DOLLAR FIGURE ON THE WHOLE SITE is a penalty, not a service price, so it is deliberately not in items: the 'No Show Policies' PDF they host (/uploads/1/3/0/4/13046685/missed_appointments_patient_signature.docx_1.pdf) says 'A late cancel or no-show will result in a $60 charge', needs 24 hours' notice, counts arriving more than 15 minutes late as a missed appointment, and warns that more than three missed or canceled appointments can result in patient dismissal.",
+   "CLINICIANS, from their own team page: Dominick Gabor, MPT (Owner), Derek Vandersloot, MS, PT (Owner) and Tori Heimlich, DPT. Their bio pages add: Dominick has a Master's in Physical Therapy from CSU Long Beach and lives in Brentwood; Derek has a Master's from UC San Francisco (1998) and has been an APTA-certified Clinical Specialist in Orthopedics (OCS) since 2002; Tori has a DPT from University of the Pacific and a B.S. in Kinesiology from San Jose State.",
+   "HOURS: the home page publishes 'Open 7am-7pm Monday - Friday. Saturdays 8am-4pm!' - the only hours they publish. It says nothing about Sunday, so the record leaves Sunday out rather than asserting they are closed. Their Instagram (as transcribed) publishes no hours, so there is nothing to contradict.",
+   "CONTACT: phone (925) 466-5550 and fax (925) 466-3880 on the home page; the contact page repeats the phone and truncates the fax to 'Fax: (925)'. The appointment page says texting 925-466-5550 is the fastest way for returning patients and is also how to cancel. Email info@brentwoodphysicaltherapy.com is published on the home and careers pages (obfuscated by Cloudflare email protection and decoded from the page's own data). Address, phone and the Instagram address '2200 Sand Creek Rd, Ste F' agree; the site writes it '2200 Sand Creek Rd., Ste F' with ZIP 94513.",
+   "Booking: there is no self-serve online booking and no prices behind a booking flow. New patients fill in a request form at /brentwood-physical-therapy-appointment.html and the clinic calls back; /talk-to-a-pt.html offers a choice of 'A comprehensive, hour long evaluation', 'An in-person 15 minute consultation' or 'A 15 minute phone consultation', none of them priced and none said to be free. No form was submitted and no appointment was requested. The 'PAY BILL' link goes to their patient portal at https://sanramonpt.patient.sprypt.com/home , which was not opened or logged into.",
+   "Relationship to another clinic, which explains several pages: the site says the clinic is 'From the trusted team behind San Ramon Valley Physical Therapy, serving the East Bay for over 40 years' and 'Built on the foundation of San Ramon Valley Physical Therapy - serving the East Bay since 1985', and links http://sanramonvalleypt.com . Note the two different vintages on their own pages ('over 40 years' vs 'since 1985'). Several inherited pages still speak as San Ramon Valley PT rather than Brentwood: /telerehab.html ('during this time of social distancing', 'Current SRVPT Patients'), /trx.html, and all five hosted new-patient PDFs, which carry the San Ramon Valley Physical Therapy letterhead and its Danville and San Ramon addresses and phone numbers, not the Brentwood ones. Worth flagging to the owner.",
+   "Claims on their own pages, useful for copy: one-on-one care with a licensed physical therapist at every visit; 60-minute evaluations; appointments available within the same week; locally owned, not a corporate chain; they handle insurance billing. Service area given as Brentwood, Oakley, Antioch, Discovery Bay and Byron (the meta description says Brentwood, Oakley and Discovery Bay). Direct access: under CA AB 1000 most PPO patients can be seen for 12 visits or 45 days without a doctor's referral, and they still accept referrals from MDs, DOs, chiropractors and podiatrists.",
+   "The site publishes no social media links at all (only tweet-this buttons on blog posts), so the Instagram handle is the one supplied in the brief. https://www.instagram.com/brentwoodphysicaltherapy/ returned HTTP 200 but only an empty JavaScript app shell, so nothing was taken from it.",
+   "Name: 'Brentwood Rehab & Performance Physical Therapy' in the site's body copy and footer, 'BRENTWOOD R&P PHYSICAL THERAPY' in the page title and logo alt text, 'Brentwood Rehab & Performance' on the About and Services pages, 'BRPPT' throughout. Instagram uses 'Brentwood Rehab & Performance PT'. name_exact uses the longest form the site itself writes.",
+   "Read 17 Sep 2026 with curl, all HTTP 200 and none blocked: https://www.brentwoodphysicaltherapy.com/ and /index.html , /about-us.html , /services.html , /insurance.html , /new-patients.html , /new-patient-forms.html , /faqs.html , /contact-us.html , /the-brppt-team.html , /why-brppt.html , /brentwood-physical-therapy-appointment.html , /pay-bill.html , /careers.html , /blog.html , the four blog posts (/blog/5-mistakes-people-make-after-a-total-knee-replacement , /blog/shoulder-pain-at-night-why-it-happens-and-what-you-can-do-about-it , /blog/why-grip-strength-matters-more-than-you-think , /blog/youth-sports-specialization-is-creating-more-injuries), /dance.html , /derek-vandersloot-ms-pt.html , /dominick-gabor-mpt.html , /functional-movement.html , /post-op.html , /prenatalpost-partum-pilates.html , /return-to-competition.html , /talk-to-a-pt.html , /telerehab.html , /tori-heimlich-dpt.html , /trx.html , /sitemap.xml , the logo PNG, and the five hosted PDFs (privacy practices, patient demographics, patient health information, no-show policies, direct access). No CAPTCHA or bot challenge was met or bypassed.",
+   "Logo: the 'BRENTWOOD R&P PHYSICAL THERAPY' header wordmark PNG from their own site, 672x141."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_doublerainbowcafe",
+  "name_exact": "Double Rainbow Cafe",
+  "one_line": "Cafe and ice cream shop with neurodivergent vocational training",
+  "cuisine": "Ice cream parlor and cafe",
+  "address": "850 4th Street, San Rafael, CA 94901",
+  "phone": "(415) 457-0803",
+  "email": null,
+  "hours": "Mon-Thu 9am-9pm; Fri-Sat 9am-10pm; Sun 10am-9pm",
+  "instagram": "double_rainbowcafe",
+  "site_kind": "own-domain",
+  "site_url": "https://doublerainbowcafe.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "ICE CREAM (SM)",
+    "desc": "You can have as many different flavors regardless of size",
+    "cents": 375,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "ICE CREAM (M)",
+    "desc": "You can have as many different flavors regardless of size",
+    "cents": 495,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "ICE CREAM (LG)",
+    "desc": "You can have as many different flavors regardless of size",
+    "cents": 625,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "ICE CREAM (PINT)",
+    "desc": "",
+    "cents": 900,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "ICE CREAM (QUART)",
+    "desc": "",
+    "cents": 1225,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "SOFT-SERVE YOGURT (SM)",
+    "desc": "Dannon YoCream non-fat yogurt",
+    "cents": 375,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "SOFT-SERVE YOGURT (M)",
+    "desc": "Dannon YoCream non-fat yogurt",
+    "cents": 475,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "SOFT-SERVE YOGURT (LG)",
+    "desc": "Dannon YoCream non-fat yogurt",
+    "cents": 600,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "SOFT-SERVE YOGURT (PINT)",
+    "desc": "",
+    "cents": 900,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "SOFT-SERVE YOGURT (QUART)",
+    "desc": "",
+    "cents": 1225,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "Ice-cream Cakes (SM)",
+    "desc": "Made to order with two layers of cake (vanilla or chocolate) and a layer of ice cream; 48-72 hours notice",
+    "cents": 3500,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "Ice-cream Cakes (REG)",
+    "desc": "Made to order with two layers of cake (vanilla or chocolate) and a layer of ice cream; 48-72 hours notice",
+    "cents": 4500,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "Ice Cream Sandwich",
+    "desc": "Your choice of ice cream between two of their house made chocolate chip cookies",
+    "cents": 775,
+    "section": "ICE CREAM / YOGURT",
+    "label": ""
+   },
+   {
+    "name": "SHAKE/MALT",
+    "desc": "Your favorite flavor(s) blended to perfection; two sizes at 7.50 and 9",
+    "cents": 750,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "SUPER THICK SHAKE",
+    "desc": "Extra ice cream compared to a regular shake; two sizes at 8.85 and 10",
+    "cents": 885,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "Oreo Shake",
+    "desc": "Ice cream blended with heaping scoops of Oreo cookies; two sizes at 8 and 9.65",
+    "cents": 800,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "CHAI TEA SHAKE",
+    "desc": "Vanilla ice cream blended with Chai Baba Chai; decaf available; two sizes at 8 and 9.65",
+    "cents": 800,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "Espresso Shake",
+    "desc": "Ice cream blended with a shot of espresso; decaf available; two sizes at 8 and 9.65",
+    "cents": 800,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "Sorbet Freeze",
+    "desc": "Sorbet blended with soda water; dairy free; two sizes at 7.50 and 9",
+    "cents": 750,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "Root Beer Freeze",
+    "desc": "A root beer float put through the blender; two sizes at 7.50 and 9",
+    "cents": 750,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": "from"
+   },
+   {
+    "name": "Root Beer Float",
+    "desc": "Root beer with 2 scoops of vanilla ice cream; other sodas and flavors available",
+    "cents": 725,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": ""
+   },
+   {
+    "name": "Old Fashioned Ice Cream Soda",
+    "desc": "Chocolate, vanilla, strawberry or coffee soda with 2 scoops of ice cream and whipped cream",
+    "cents": 675,
+    "section": "SHAKES / MALTS / FREEZES",
+    "label": ""
+   },
+   {
+    "name": "Hot Fudge Sundae",
+    "desc": "Ice cream, almonds, homemade hot fudge, whipped cream and sprinkles; two sizes at 8.50 and 10.65",
+    "cents": 850,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Caramel Sundae",
+    "desc": "Ice cream, almonds, caramel, whipped cream and sprinkles; two sizes at 8.50 and 10.65",
+    "cents": 850,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Strawberry Sundae",
+    "desc": "Ice cream, almonds, strawberries, whipped cream and sprinkles; two sizes at 8.50 and 10.65",
+    "cents": 850,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Rocky Road Sundae",
+    "desc": "Ice cream, almonds, homemade hot fudge, marshmallow sauce, whipped cream and sprinkles; two sizes at 8.75 and 10.90",
+    "cents": 875,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Oreo Sundae",
+    "desc": "Ice cream, Oreo pieces, homemade hot fudge, whipped cream and sprinkles; two sizes at 8.75 and 10.90",
+    "cents": 875,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Banana Hot Fudge",
+    "desc": "Ice cream, almonds, homemade hot fudge, sliced bananas, whipped cream and sprinkles; two sizes at 9 and 11",
+    "cents": 900,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Banana Split",
+    "desc": "Three scoops with almonds, house made hot fudge, caramel, strawberries, whipped cream and sprinkles; two sizes at 10 and 11.85",
+    "cents": 1000,
+    "section": "SUNDAES",
+    "label": "from"
+   },
+   {
+    "name": "Brownie Sundae",
+    "desc": "A chocolate brownie with ice cream, almonds, homemade hot fudge, whipped cream and sprinkles",
+    "cents": 1045,
+    "section": "SUNDAES",
+    "label": ""
+   },
+   {
+    "name": "Coffee",
+    "desc": "Locally roasted Masterpiece Coffee; three sizes at 2.50, 2.75 and 3",
+    "cents": 250,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Espresso (Single)",
+    "desc": "50 cents extra for each additional shot",
+    "cents": 275,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Espresso (Double)",
+    "desc": "50 cents extra for each additional shot",
+    "cents": 335,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Espresso (Triple)",
+    "desc": "50 cents extra for each additional shot",
+    "cents": 385,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Cappuccino",
+    "desc": "Espresso with fluffy foam and a touch of milk; Whole milk, non-fat and soy available (soy 50 cents extra); three sizes at 4.25, 5.25 and 6",
+    "cents": 425,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Latte",
+    "desc": "Espresso, milk and a touch of foam; Whole milk, non-fat and soy available (soy 50 cents extra); three sizes at 4.45, 5.40 and 6",
+    "cents": 445,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Vanilla Latte",
+    "desc": "Espresso, milk, vanilla syrup and a touch of foam; Whole milk, non-fat and soy available (soy 50 cents extra); three sizes at 4.95, 5.85 and 6.60",
+    "cents": 495,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Mocha",
+    "desc": "Espresso, milk, Ghirardelli chocolate powder, chocolate syrup and whipped cream; three sizes at 4.95, 5.85 and 6.60",
+    "cents": 495,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "White Chocolate Mocha",
+    "desc": "Espresso, milk, Ghirardelli white chocolate powder and whipped cream; three sizes at 4.95, 5.85 and 6.60",
+    "cents": 495,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Add a flavor to your drink of choice",
+    "desc": "Any of their Torani syrups",
+    "cents": 50,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Hot Chocolate",
+    "desc": "Steamed milk with Ghirardelli chocolate powder, chocolate syrup and whipped cream; also made as hot white chocolate; three sizes at 3.85, 4.40 and 4.95",
+    "cents": 385,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Tea",
+    "desc": "An assortment of Tea and Trumpets loose leaf teas",
+    "cents": 335,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "A Pot of Tea",
+    "desc": "Unlimited refills on the water while you are in",
+    "cents": 465,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Chai Latte",
+    "desc": "Chai Baba Chai; decaf available; three sizes at 4.40, 4.95 and 5.50",
+    "cents": 440,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Hot Spiced Cider",
+    "desc": "Steamed apple cider with a touch of cinnamon and nutmeg; three sizes at 3.50, 4 and 4.60",
+    "cents": 350,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Thai Iced Tea",
+    "desc": "Made with Chai Baba Chai; two sizes at 3.75 and 4.25",
+    "cents": 375,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Iced Tea",
+    "desc": "Unsweetened, made with Lipton Tea; two sizes at 2.25 and 2.75",
+    "cents": 225,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Sodas and juices",
+    "desc": "A wide and ever changing selection; menu shows a 2-5 range",
+    "cents": 200,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Italian Sodas",
+    "desc": "Torani syrups mixed with soda water; two sizes at 3.25 and 4.25",
+    "cents": 325,
+    "section": "HOT/COLD DRINKS",
+    "label": "from"
+   },
+   {
+    "name": "Shaved Ice",
+    "desc": "Light and fluffy shaved ice with your choice of Torani flavor(s)",
+    "cents": 600,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Shaved Ice w/ Ice Cream",
+    "desc": "Shaved ice with a generous scoop of ice cream",
+    "cents": 825,
+    "section": "HOT/COLD DRINKS",
+    "label": ""
+   },
+   {
+    "name": "Energy Blast",
+    "desc": "Strawberries, banana, nonfat yogurt, protein powder and nonfat milk; two sizes at 7.25 and 8.50",
+    "cents": 725,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Blue Banana",
+    "desc": "Banana, blueberries, nonfat yogurt and nonfat milk; two sizes at 7.25 and 8.50",
+    "cents": 725,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Peachy Keen",
+    "desc": "Peaches, banana, apple juice and your choice of sorbet or nonfat yogurt; two sizes at 7.25 and 8.50",
+    "cents": 725,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Peach Sunrise",
+    "desc": "Peaches, nonfat vanilla yogurt, cinnamon, nutmeg and apple juice; two sizes at 5.50 and 6.50",
+    "cents": 550,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Fruit Basket",
+    "desc": "Banana, strawberries and blueberries; two sizes at 5.50 and 6.50",
+    "cents": 550,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Wild Berry",
+    "desc": "Strawberries, blueberries, sorbet, protein powder and apple juice; two sizes at 5.50 and 6.50",
+    "cents": 550,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Tropicale",
+    "desc": "Pineapple, banana, peaches and orange juice; two sizes at 5.50 and 6.50",
+    "cents": 550,
+    "section": "Smoothies",
+    "label": "from"
+   },
+   {
+    "name": "Mango Madness",
+    "desc": "Strawberries, mango-tangerine sorbet, protein powder and orange juice; two sizes at 5.50 and 6.50",
+    "cents": 550,
+    "section": "Smoothies",
+    "label": "from"
+   }
+  ],
+  "price_note": "Prices are from the menu on their own website.",
+  "source_url": "https://doublerainbowcafe.com/menu",
+  "logo_url": "https://img1.wsimg.com/isteam/ip/5d3cc5b4-44d0-42e1-8b28-19ab7b86b649/DRClogo-terise-06.png",
+  "logo_px": "743x741",
+  "flags": [
+   "Record: Double Rainbow Cafe, the single shop at 850 4th Street, San Rafael. Open and trading as of 17 Sep 2026 (site footer shows a live 'Open today 09:00 am - 09:00 pm' widget).",
+   "Website: own domain doublerainbowcafe.com, built on GoDaddy Website Builder 8.0. Live and current: both pages carry a 2026 copyright and the sitemap gives lastmod 2026-09-09. The whole site is only two pages, / and /menu.",
+   "Read 17 Sep 2026 with curl, all HTTP 200, none blocked: https://doublerainbowcafe.com/ , https://doublerainbowcafe.com/menu , /sitemap.xml , /sitemap.website.xml , /sitemap.ols.xml , /robots.txt , /ols/products . Both / and /menu were also rendered headless (Playwright) to confirm nothing else loads in JavaScript; the headless renders matched the curl HTML. /ols/products returns the homepage byte-for-byte (the GoDaddy online store is empty: the cart panel says 'Your cart is empty').",
+   "Price source: the menu list on https://doublerainbowcafe.com/menu, read 17 Sep 2026. The page carries exactly 5 sections and 51 priced rows, kept here in the site's own order and with the site's own section names.",
+   "SIZE HANDLING: 31 of the 51 menu rows show two or three prices. Where the shop names the sizes itself (ICE CREAM and SOFT-SERVE YOGURT 'SM/M/LG' and 'PINT/QUART', Ice-cream Cakes 'SM:35 REG: 45') each size is a separate item using their own abbreviations. Espresso is split Single/Double/Triple because its own description says 'Single, double or triple shots'. For every other multi-price row the shop does NOT name the sizes anywhere on the page, so rather than invent size names the record holds ONE item at the lowest published price with label 'from', and the full published price string is repeated in that item's desc. That is why the 51 menu rows become 59 items.",
+   "NO PRICE, so skipped: the 'Blue Hawaii' smoothie (blueberries, pineapple, orange juice and your choice of nonfat yogurt or sorbet) is the only row on the menu with an empty price field.",
+   "'Sodas and juices' is published as a range, '2-5', not a size list; it is recorded as 'from' 2.00 with the range in desc.",
+   "Menu rows with placeholder text: 'SOFT-SERVE YOGURT: PINT/QUART' has the GoDaddy default description 'Add a description about this item' and the SUNDAES section has 'Add a description about this category'. Those placeholders were left out of desc rather than copied.",
+   "FOOD GAP a human should know about: the About text on the homepage advertises 'sandwiches, snacks', 'cookies, cakes' and 'a grilled cheese', and the menu page ends with 'YES WE DELIVER!!!', but the menu page publishes NO food section and no delivery details at all. Everything priced on the site is ice cream, frozen yogurt, shakes, sundaes, drinks or smoothies.",
+   "AUTISTRY STUDIOS: doublerainbowcafe.com never mentions Autistry Studios, vocational training or neurodivergent students anywhere, on either page, in the rendered HTML or in the page metadata. The only first-party wording available for that is the Instagram profile, which describes the business as 'Double Rainbow @ Autistry Studios', 'Community cafe & ice cream shop', 'Vocational training led by neurodivergent students', 'Ice Cream Shop', '850 4th St, San Rafael, California', 'San Rafael, CA'. one_line and the vocational-training claim rest on those Instagram lines only, NOT on the website.",
+   "Instead the website tells a different story about itself: 'an old-fashioned ice cream parlor and coffee shop', 'Since 1988, our unique shop has been a pillar of the downtown San Rafael community', with 'a bar counter, vinyl seats, and nostalgic decor', serving Double Rainbow brand ice cream made in San Francisco, locally roasted Masterpiece Coffee and Chai Baba Chai. The site looks to predate the Autistry Studios arrangement; a human should ask the owner which framing they want published.",
+   "NAME: the website calls itself 'Double Rainbow Cafe' throughout (page title, About text, footer) and that is used for name_exact. The Instagram display name is 'Double Rainbow @ Autistry Studios'.",
+   "RAINBOW SOCIAL: the LGBTQ+ Rainbow Social (Saturdays noon to 2, from September 19th) appears ONLY in the Instagram post transcribed in the brief. It is NOT on their own site: neither page mentions a Rainbow Social, an LGBTQ+ event, September 19th or any recurring Saturday event, and there is no events page. Do not publish it as a site-confirmed event without checking with them.",
+   "Hours source: the LocalBusiness JSON-LD in the homepage HTML, which is the only place the full week is published: Mon-Thu 09:00-21:00, Fri-Sat 09:00-22:00, Sun 10:00-21:00. The visible footer widget only ever shows the current day, and on 17 Sep 2026 it showed '09:00 am - 09:00 pm', which agrees with the JSON-LD. The Instagram lines transcribed in the brief carry no hours, so there is no site-vs-Instagram conflict. Non-first-party listings found while searching for their site show closing an hour later each day; those were not used and were not verified.",
+   "Address and phone agree across the homepage footer ('850 4th Street, San Rafael, CA 94901, us'), the JSON-LD ('850 4th St', '+1 415 457 0803') and the Instagram contact lines. The Instagram address was transcribed with a typo, 'San Raf19ael'.",
+   "EMAIL: none published. The homepage 'Drop us a line!' block is a contact form with an Email field for the customer to fill in, not a published address; it is protected by reCAPTCHA and was not submitted. No mailto: link exists on either page. email is null.",
+   "No first-party online ordering or booking: no Toast, Square, Clover, ChowNow or similar link anywhere on the site, and the built-in GoDaddy store is empty. A joe.coffee ordering page for 'Double Rainbow @ Autistry Studios' turned up while searching for their own site; it is not linked from their website, it is not on the brief's approved list of first-party storefronts, and it was NOT opened or used. A human may want to check it for a current till menu: https://joe.coffee/locations/ca/san-rafael/double-rainbow-autistry-studios-san-rafael/",
+   "Autistry Studios also hosts a 'Double Rainbow Cafe' partnership page at https://autistrystudios.com/partnerships/project-four-l3zw3-e64hh . That is a partner organisation's own domain rather than the cafe's, so under the source rules it was NOT opened or used. It is the obvious place for a human to find the cafe's own wording on the vocational programme.",
+   "Social links on their own site: Facebook (facebook.com/DoubleRainbowCafe), Instagram (instagram.com/Double_rainbowcafe), X (x.com/DoubleRainbowsr) and Yelp. No Linktree exists. The Instagram bio's second link ('and 1 more') could not be identified without opening Instagram.",
+   "Logo: the rainbow roundel wordmark from the site header, https://img1.wsimg.com/isteam/ip/5d3cc5b4-44d0-42e1-8b28-19ab7b86b649/DRClogo-terise-06.png , downloaded and measured at 743x741 on a white background. The header serves it scaled to 126x126.",
+   "The homepage 'SPECIALS!!!' section has no actual specials and no prices, just two photos (a sundae and a bundt cake) and generic copy."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_studiofloras",
+  "name_exact": "Studio Flora's",
+  "one_line": "Pressed flower, rug tufting, candle and mosaic lamp craft workshops",
+  "cuisine": "Art and craft workshops",
+  "address": "575 Sutter St #202, San Francisco, CA 94102",
+  "phone": "(650) 889-6075",
+  "email": "emir@studiofloras.com",
+  "hours": null,
+  "instagram": "studioflorasworkshop",
+  "site_kind": "own-domain",
+  "site_url": "https://www.studiofloras.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Pressed Flower Art - San Francisco",
+    "desc": "90 minutes; one 8x10 pressed flower frame, 20+ flower varieties, tools and instruction; optional frame upgrade for $15; groups of 5 to 100",
+    "cents": 7900,
+    "section": "San Francisco - Union Square",
+    "label": ""
+   },
+   {
+    "name": "Turkish Mosaic Lamp Making Workshop - San Francisco",
+    "desc": "90-120 minutes; one handcrafted mosaic lamp with a 90 mm glass globe, tiles, beads, tools and take-home grouting materials; larger glass and lamp upgrades offered at an unpublished price",
+    "cents": 8900,
+    "section": "San Francisco - Union Square",
+    "label": ""
+   },
+   {
+    "name": "Rug Tufting Making Workshop at San Francisco",
+    "desc": "150 minutes; tufting gun, yarns, glue, trimming tools and backing, with an approx 18-inch frame; an approx 25-inch frame is a $15 upgrade; groups of 7 to 100",
+    "cents": 9900,
+    "section": "San Francisco - Union Square",
+    "label": ""
+   },
+   {
+    "name": "Moss Wall Art Workshop - San Francisco",
+    "desc": "90 minutes; one moss wall art piece with preserved moss, wood frame, tools and adhesive; ages 12+",
+    "cents": 7500,
+    "section": "San Francisco - Union Square",
+    "label": ""
+   },
+   {
+    "name": "Glass Painting Workshop at San Francisco",
+    "desc": "90 minutes; one hand-painted glass artwork with paints, tools and instruction; ages 9+; groups of 1 to 100; on-site design upgrades offered at an unpublished price",
+    "cents": 7500,
+    "section": "San Francisco - Union Square",
+    "label": ""
+   },
+   {
+    "name": "Pressed Flower Art - San Jose",
+    "desc": "90 minutes; one 8x10 pressed flower frame, 20+ flower varieties, tools and instruction; optional frame upgrade for $15; groups of 5 to 100",
+    "cents": 7900,
+    "section": "San Jose Downtown",
+    "label": ""
+   },
+   {
+    "name": "Turkish Mosaic Lamp Making Workshop - San Jose",
+    "desc": "90-120 minutes; one handcrafted mosaic lamp with a 90 mm glass globe, tiles, beads, tools and take-home grouting materials",
+    "cents": 8900,
+    "section": "San Jose Downtown",
+    "label": ""
+   },
+   {
+    "name": "Botanical- Candle Making Workshop - San Jose",
+    "desc": "90 minutes; one 12 oz botanical soy candle in a glass jar, choice of scent, wax colour and dried flowers; ages 13+; optional gift wrapping",
+    "cents": 6900,
+    "section": "San Jose Downtown",
+    "label": ""
+   },
+   {
+    "name": "Moss Wall Art Workshop -San Jose",
+    "desc": "90 minutes; one moss wall art piece with preserved moss, wood frame, tools and adhesive; ages 12+",
+    "cents": 7500,
+    "section": "San Jose Downtown",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are per guest before tax, from their own booking pages.",
+  "source_url": "https://workshop-book.as.me/schedule/0eca9ebf/",
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "HOURS LEFT BLANK: their site gives a window of '8am-9pm (days not stated)' with no days, which reads as nothing on a page; ask them for opening days.",
+   "Record: Studio Flora's, the San Francisco studio at 575 Sutter St #202 (they call it 'San Francisco - Union Square'). This is a SERVICE business: the items are their workshops, priced per guest.",
+   "LOCATIONS their own site lists: three. (1) San Francisco - Union Square, 575 Sutter St #202, San Francisco, CA 94102. (2) San Jose Downtown. (3) Mobile workshops, which they bring to an office or venue. The FAQ page says 'We currently operate out of two primary studio locations in the Bay Area: San Francisco Studio: (Near Union Square), San Jose Studio: (For South Bay residents) We also offer Mobile Workshops where we bring the full studio experience directly to your office or private venue.' Their Instagram line 'San Francisco | San Jose | Mobile' matches.",
+   "SAN JOSE ADDRESS IS PUBLISHED, BUT WITH TWO DIFFERENT STREETS. The /locations page footer, the /san-jose and /san-francisco footers and the pressed-flower page all give '21 Edwards Ave, San Jose, CA 95110' (also written '21 Edward Ave' and '21 edwards Avenue'). The HOMEPAGE footer instead gives '975 South First Street San Jose', and the candle workshop page gives 'Studio Flora's - 975 S 1st St, San Jose, CA'. Both San Jose addresses are live on the site at the same time; a human must ask which one is current. The San Francisco address is consistent everywhere.",
+   "Website: own domain www.studiofloras.com, built on Squarespace. Live and current (2026 copyright, guest reviews dated Dec 2025 and Jan 2026, sitemap lastmod values running from Sep 2025 to 29 Jun 2026).",
+   "Read 17 Sep 2026 with curl, all HTTP 200, none blocked: https://www.studiofloras.com/ and /sitemap.xml , plus /studiofloras (byte-identical to the homepage), /pressed-flower-art , /mosaic-lamp , /candle-workshop , /moss-wall-art , /moss-wall-art-san-jose , /moss-wall-art-san-jose-s , /rug-tufting-making-class , /painting-glass , /team-building-activity , /private-event , /san-francisco , /san-jose , /locations , /from-our-guests , /faqs-1 , /scheduling-workshop , /turkish-mosaic-lamp-san-francisco , /pressed-flower-art-san-francisco , /rug-tufting-class-san-francisco , /pressed-flower-art-san-jose , /turkish-mosaic-lamp-san-jose , /candel-making-with-real-flowers-san-jose . The sitemap also lists 29 /blogs/* SEO posts and 12 '-old' pages, which were not read.",
+   "PRICE SOURCE: their own Acuity Scheduling booking storefront at https://workshop-book.as.me/ , which every 'Book Now' button on the site links to, read 17 Sep 2026 (HTTP 200, not blocked; prices taken from the appointment-type data embedded in the page, no login and no booking). It publishes exactly 9 active workshops, and each name carries its own pre-tax price: Pressed Flower Art - San Jose ($79+tax); Pressed Flower Art - San Francisco ($79+tax); Rug Tufting Making Workshop at San Francisco (99$ + Tax); Glass Painting Workshop at San Francisco ($75 + Tax); Turkish Mosaic Lamp Making Workshop - San Jose ($89+tax); Turkish Mosaic Lamp Making Workshop - San Francisco ($89+tax); Botanical- Candle Making Workshop - San Jose ($69+tax); Moss Wall Art Workshop -San Jose ($75+tax); Moss Wall Art Workshop -San Francisco ($75+tax). This source was chosen over the website because it is the only place that prices each workshop per location, which is what this record needs.",
+   "The cents values above are the PRE-TAX per-guest prices. The same booking page also carries the tax-inclusive amount actually charged: San Francisco 8.625% (Pressed Flower $85.81, Mosaic Lamp $96.68, Rug Tufting $107.55, Glass Painting $81.47, Moss Wall $81.47) and San Jose 10% (Pressed Flower $86.90, Mosaic Lamp $97.90, Candle $75.90, Moss Wall $82.50).",
+   "PRICE CONFLICT, website vs booking page. Four of the nine prices on their own workshop pages are LOWER than the booking page: Pressed Flower Art is '$75 + tax per guest' on /pressed-flower-art vs $79+tax at booking; Glass Painting is '$69 + tax per guest' on /painting-glass vs $75+tax; Botanical Candle Making is '$65 per guest' on /candle-workshop vs $69+tax; Moss Wall Art is '$69 per guest' on /moss-wall-art vs $75+tax. Turkish Mosaic Lamp ('$89 + tax per guest') and Rug Tufting ('$99 + Tax per guest') agree. A human should decide which set to publish and tell the owner the workshop pages are out of date.",
+   "A THIRD figure for Moss Wall Art: /moss-wall-art-san-jose says '$65 per guest' while the general /moss-wall-art page says '$69 per guest' and booking says $75+tax. Three different prices for the same class are live on their own properties.",
+   "Sections use their own page headings: 'San Francisco - Union Square' from /san-francisco and 'San Jose Downtown' from /san-jose. Those two pages also decide which workshops belong to which studio: San Francisco lists Pressed Flower Art, Turkish Mosaic Lamp, Rug Tufting, Moss Wall Art and Glass Painting; San Jose lists Pressed Flower Art, Turkish Mosaic Lamp, Candel Making with Real Flowers and Moss Wall Art. Candle making is San Jose only and rug tufting and glass painting are San Francisco only. The homepage, by contrast, shows all seven workshops together with no location.",
+   "NO PRIVATE PARTY MINIMUM AND NO MOBILE PRICE IS PUBLISHED, so none is recorded. What they do publish: group sizes per workshop (Pressed Flower 5 to 100, Rug Tufting 7 to 100, Glass Painting 1 to 100, Candle 5 to 100, Mosaic Lamp and Moss Wall Art just 'public, private, and mobile workshops'); that they 'travel up to 300 miles for private workshops' (the mosaic lamp page says 100 miles instead) with a 'travel fee may vary depending on distance and group size'; that they can host '100+ people' through the mobile service; and that private and corporate bookings go through the contact form on the Team Building page rather than a price list. No form was submitted.",
+   "Priced extras that are body text rather than price-list rows, so they sit in the item descriptions instead of being separate items: 'Optional frame upgrade available for $15' on /pressed-flower-art, and on /rug-tufting-making-class a larger approx 25-inch frame 'available as an optional upgrade for an additional $15'. Mosaic lamp glass and lamp size upgrades and glass painting 'design upgrades available on-site' are offered with NO price.",
+   "The FAQ page says workshop fees are 'all-inclusive. They cover all necessary materials, tools, expert instruction, and the final artwork you create. There are no hidden fees', which reads oddly against the '+ tax' pricing and the $15 upgrades.",
+   "PHONE CONFLICT: their own site's footer, on every page, gives '650 889 60 75' (recorded as (650) 889-6075), and their Acuity booking page repeats '650 889 60 75 - emir@studiofloras.com'. The Instagram contact sheet transcribed in the brief gives (650) 387-7339 for WhatsApp, phone and text. The site number is used here because two of their own properties agree on it; the Instagram number needs checking. The email emir@studiofloras.com is the same in both places.",
+   "HOURS: the site footer publishes only 'HOURS 8AM - 9 PM', with no days named, on every page. The record says so rather than guessing that it means daily. Actual class times are whatever the booking calendar offers.",
+   "The FAQ page (/faqs-1) has eight real questions followed by eight unedited 'Lorem ipsum dolor sit amet' placeholder blocks, and /private-event is an empty page with only the site chrome. The site is not fully finished.",
+   "LOGO: none. The Squarespace header is a plain text site title, 'Studio Flora's', with no logo image, so logo_url and logo_px are null. The only brand image files are a favicon (https://images.squarespace-cdn.com/content/v1/676ba58c82981f26254ddcef/7ee1918c-2466-4739-a82e-2dcffb1ffdd3/favicon.ico) and the og:image, a 1500x1404 photo named thingstodo.jpeg.",
+   "NAME: 'Studio Flora's' on the site title, footer copyright, Instagram and the booking page. The site body text also writes it without the apostrophe, 'Studio Floras'.",
+   "Third-party class marketplaces were NOT used for any fact: the homepage embeds ClassBento listings (classbento.com/make-pressed-flower-art, /make-a-turkish-mosaic-lamp-0, /botanical-candle-making-workshop-san-jose, /mosaic-candle-holder-workshop-san-jose, /ali-emir-uzlu) and links one Eventbrite ticket page (eventbrite.com/e/pressed-flower-art-frame-tickets-1204635851259). Those may carry different prices again.",
+   "The homepage runs a 'TRUSTED BY TEAMS FROM' strip of corporate logos (Google, Apple, Meta, Amazon, Netflix, Tesla, IBM, Salesforce, LinkedIn, Uber, Stanford, Yelp, TikTok) hotlinked from Wikimedia, and quotes Google review scores of 5.0 from 300 San Jose and 100 San Francisco reviews. Neither was verified; neither is treated as fact."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_thelocalpetaluma",
+  "name_exact": "The Local",
+  "one_line": "Farm-to-table sandwiches, salads, bowls and smoothies in Petaluma",
+  "cuisine": "Farm-to-table sandwiches",
+  "address": "229 N. McDowell Blvd, Petaluma, CA 94954",
+  "phone": "(707) 981-7100",
+  "email": "chriso.thelocal@gmail.com",
+  "hours": "Mon-Sat 10:30am-3:30pm; closed Sun",
+  "instagram": "thelocalpetaluma",
+  "site_kind": "own-domain",
+  "site_url": "https://www.thelocalpetaluma.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "The Petaluma",
+    "desc": "Della sourdough, Turkey, Cheddar, Avocado, Local Greens, Pickle, Pickled Onion, Lemon Aioli",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Napa Valley",
+    "desc": "House Made Focaccia, Turkey, Bacon, Pepper Jack, Arugula, Pickled Onion, Jalapeno, Ranch",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Old Adobe Rd. (Warm)",
+    "desc": "House Made Dutch Crunch, Turkey, Danish Havarti, Radish, Pickle, Pickled Onion, Red Pesto, Chili Lime Aioli",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "The Cotati",
+    "desc": "House Made Focaccia, Honey Ham, Pepper Jack, Avocado, Local Greens, Pepperoncini, Pickled Onion, Red Pesto, Mustard Seed Aioli",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Cubano (Warm)",
+    "desc": "House Made Soft Roll, Slow Braised Pork, Honey Ham, Pepper Jack, Pickle, Pepperoncini, Dijon, Mustard Seed Aioli",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Golden State",
+    "desc": "House Made Dutch Crunch, Chicken Thigh, Bacon, Pepper Jack, Purple Slaw, Pickled Onion, Peppercini, Carolina Gold Aioli",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "The Stinson",
+    "desc": "House Made Dutch Crunch, Chicken Thigh, Cheddar, Romaine, Pickle, Jalapeno, Red Pesto, Chipotle Ranch",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Pastrami (Warm)",
+    "desc": "House Made Dutch Crunch, Pastrami, Cheddar, Grilled Peppers & Onion, Green Slaw, Pepperoncini, Chimichurri, Horseradish Aioli",
+    "cents": 1700,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Helen Putnam (VE)",
+    "desc": "House Made Focaccia, Roasted Beet Hummus, Avocado, Local Greens, Cucumber, Artichoke, Infused Carrots, Ginger, Pickle, Red Onion",
+    "cents": 1600,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Russian River (V)",
+    "desc": "House Made Focaccia, Grilled Eggplant, Goat Cheese, Arugula, Roasted Red Pepper, Piquante Pepper, Chimichurri, Lemon Aioli",
+    "cents": 1600,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "The Kenwood",
+    "desc": "House Made Soft Roll, Pickled Cauliflower, Mushroom, Goat Cheese, Arugula, Artichoke, Ginger, Chipotle Ranch",
+    "cents": 1600,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Seasonal Banh Mi (V)",
+    "desc": "House Made Soft Roll, Local Cucumber, Avocado, Purple Slaw, Ginger, Pickled Onion, Togarashi Aioli",
+    "cents": 1600,
+    "section": "Specialty Sandwiches / Wraps",
+    "label": ""
+   },
+   {
+    "name": "Beet Salad",
+    "desc": "Deep Roots Farms Mixed Greens, Beets, Carrot, Onion, Walnut, Goat Cheese, Balsamic Vinaigrette",
+    "cents": 1500,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Cucumber Salad",
+    "desc": "Deep Roots Farm Mixed Greens, Peach Farm Persian Cucumbers, Carrots, Onion, Furikake, Ginger Soy Dressing",
+    "cents": 1500,
+    "section": "Salads",
+    "label": ""
+   },
+   {
+    "name": "Classic Rice",
+    "desc": "Jasmine Rice, Seasonal Vegetables, Avocado, Ginger, Pickled Onion, Furikake, Chili Lime Aioli",
+    "cents": 1500,
+    "section": "Seasonal Bowls",
+    "label": ""
+   },
+   {
+    "name": "Teriyaki",
+    "desc": "Jasmine Rice, Seasonal Vegetables, Steamed Carrot, Purple Slaw, House Teriyaki",
+    "cents": 1500,
+    "section": "Seasonal Bowls",
+    "label": ""
+   },
+   {
+    "name": "Wild Berry",
+    "desc": "Blueberry, Strawberry, Blackberry, Banana. 100% real fruit and non-dairy",
+    "cents": 1000,
+    "section": "Smoothies",
+    "label": ""
+   },
+   {
+    "name": "Tropics",
+    "desc": "Strawberry, Mango, Banana, Coconut. 100% real fruit and non-dairy",
+    "cents": 1000,
+    "section": "Smoothies",
+    "label": ""
+   },
+   {
+    "name": "Cobbler",
+    "desc": "Peach, Banana, Peanut Butter, Cinnamon, Honey. 100% real fruit and non-dairy",
+    "cents": 1000,
+    "section": "Smoothies",
+    "label": ""
+   },
+   {
+    "name": "Aztec",
+    "desc": "Raspberry, Strawberry, Banana, Peanut Butter, Aztec Chocolate. 100% real fruit and non-dairy",
+    "cents": 1000,
+    "section": "Smoothies",
+    "label": ""
+   },
+   {
+    "name": "Superfood",
+    "desc": "Blueberry, Mango, Banana, Superfood, Peanut Butter. 100% real fruit and non-dairy",
+    "cents": 1000,
+    "section": "Smoothies",
+    "label": ""
+   },
+   {
+    "name": "Add On",
+    "desc": "Protein, Collagen, Superfood, Aztec Chocolate, Matcha, Spirulina, Chia Seed, Flax Seed, Coconut Flake, Lavender & Peanut Butter",
+    "cents": 200,
+    "section": "Smoothies",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from the menu on their own website.",
+  "source_url": "https://www.thelocalpetaluma.com/menu",
+  "logo_url": "https://images.squarespace-cdn.com/content/v1/63601264d6771e7b63f4e9d4/333cd6ea-6dce-4a68-bd80-f32737632f90/favicon.ico",
+  "logo_px": "300x300",
+  "photos": [
+   {
+    "photo": "the-local-petaluma-site-1",
+    "alt": "Cross-section of a sandwich on toasted crusty bread, layered with avocado spread, sliced ham, pickle spears and a carrot",
+    "credit": "Their own photo, from thelocalpetaluma.com"
+   }
+  ],
+  "flags": [
+   "Pages read 17 Sep 2026, none blocked: https://www.thelocalpetaluma.com/ (HTTP 200), /menu, /about. Their sitemap lists only these three pages.",
+   "Site is live on their own domain, Squarespace 7.1, and looks current: menu names a 'Seasonal Banh Mi' and Early-Girl-season produce, consistent with a September menu.",
+   "Prices came from the menu page on their own website (https://www.thelocalpetaluma.com/menu), read 17 Sep 2026. Every price is printed twice in their markup (above and below each item) and both copies agree, so prices were cross-checked.",
+   "AWARD NOT SUBSTANTIATED: Instagram bio says 'Award Winning Farm to Table Sandwiches', but their own website names no award and no awarding body anywhere on the three pages. Per the brief no award is claimed in this record. Do NOT print 'award winning' on the page unless a human confirms which award and who gave it.",
+   "PHONE CONTRADICTION: their own site publishes (707) 981-7100 three times, and the Instagram bio shows the same 707-981-7100. The (707) 789-7002 from the Instagram contact sheet appears NOWHERE on their site; it is unverified and was not used. Use (707) 981-7100.",
+   "EMAIL CHECK: chriso.thelocal@gmail.com from the Instagram contact sheet IS published on their own site, so it is verified and used here. Their site also publishes a second address, raul.thelocal@gmail.com (co-owner Raul Lopez).",
+   "HOURS: site and Instagram agree on Mon-Sat 10:30am-3:30pm. Instagram adds '(or sell out)'; the site does not say this, so it was left out of the hours line, but the kitchen may close early when they sell out.",
+   "The 'Deli Sandwich / Wrap' section is a build-your-own with NO price published (choice of Turkey/Ham/Chicken/Veggie and Cheddar/Pepper Jack/Havarti, on House Made Soft Roll, Dutch Crunch or Flour Tortilla; 'Add Avocado - 2', 'Add Bacon - 2'). Skipped from items per the no-price rule; a human may want to ask the owner for the base price.",
+   "Priced add-ons published as section notes, not as items: sandwiches 'Add: Turkey, Ham, Chicken, Bacon, Braised Pork $3'; salads 'ADD: Lemon Rosemary Chicken +$3'; bowls 'Add: Chicken, Braised Pork +$3'.",
+   "The 'Add On' item ($2) in Smoothies is a published priced row in their own menu block, but it is a smoothie add-on rather than a standalone drink; render it accordingly.",
+   "Item names carry their own '(V)', '(VE)' and '(Warm)' tags exactly as published. Their site does not define V/VE, so no meaning is asserted here. The menu links a third-party dietary guide (search.picknic.app) which was NOT used as a source.",
+   "The DRINKS tab has a 'Beverages' section heading with no items under it, so smoothies are the only priced drinks they publish.",
+   "logo_url is the 'TL' monogram from their own site (black circle, serif T and L on cream). It is wired up as the site favicon, which is the only logo image their site hosts, and it serves at 300x300; the site header itself is plain text, not an image.",
+   "Only two photographs are published across their whole site, both used here. Alt text was written from the images as published; the files were not kept.",
+   "Page material from their own About page, if useful: opened at the start of 2022 by co-owners Raul Lopez and Chris Osborne; mission is 'to deliver a farm to table Experience that highlights bay area Culinary excellence'; Raul Lopez has a 2013 California Culinary Academy degree and cooked at Californios and Lazy Bear (both Michelin-starred, San Francisco) and Quintonil in Mexico City; Chris Osborne is a Sonoma County business developer and mixologist. They list 15 local purveyors including Della Fattoria, Point Reyes Cheese Co., Green String Farms and Deep Root Farms.",
+   "Homepage tagline, their own words: 'fresh. Seasonal. locally sourced'.",
+   "Open and operating as of 17 Sep 2026; no closure or reduced-hours notice on their site.",
+   "Single location; this is the only one.",
+   "Their site links Yelp and Facebook; Yelp was not used as a source per the no-aggregator rule. They publish no online ordering page."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_milelimitberkeley",
+  "name_exact": "Mile Limit",
+  "one_line": "Mediterranean small plates, wine bar and bodega in West Berkeley",
+  "cuisine": "Mediterranean wine bar",
+  "address": "2040 San Pablo Ave, Berkeley, CA 94702",
+  "phone": "(510) 833-2687",
+  "email": null,
+  "hours": "Wed-Thu 4-9pm; Fri-Sat 4-10pm; Sun 4-9pm; closed Mon-Tue",
+  "instagram": "milelimit",
+  "site_kind": "own-domain",
+  "site_url": "https://www.milelimitberkeley.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Spiced Nuts",
+    "desc": "Ras al hanout spiced mixed nuts",
+    "cents": 500,
+    "section": "Bar Snacks",
+    "label": ""
+   },
+   {
+    "name": "Mixed Olives",
+    "desc": "Marinated olives",
+    "cents": 700,
+    "section": "Bar Snacks",
+    "label": ""
+   },
+   {
+    "name": "Farmers Market Pickles",
+    "desc": "Green tomato, cauliflower, cucumber, & carrots with cilantro cream. (Please note vegetables change subject to availability)",
+    "cents": 800,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Caponata",
+    "desc": "Riverdog rosa bianca eggplant, castlevetrano olives, golden raisins, capers, whipped ricotta, pine nuts, with toast",
+    "cents": 1000,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Cheese plate",
+    "desc": "Mt. Tam, Hop Along, Gorgonzola Dolce served with spiced nuts, fig jam, fresh fruit, olives and toast.",
+    "cents": 1700,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Anchovy Toast",
+    "desc": "Grilled baguette, anchovy-garlic butter, grated pecorino, parsley leaves",
+    "cents": 900,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Burrata",
+    "desc": "Burrata di stefano, pistachio-raisin pistou, fermented honey, saba, fennel pollen, toast",
+    "cents": 1500,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Early Girl Tomato Salad",
+    "desc": "Early girl tomatoes, charred Brentwood corn, crispy garbanzos, shallot dressing, sumac, on whipped za'atar labneh",
+    "cents": 1500,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Arugula Salad",
+    "desc": "Wild arugula, farro, feta, figs, baharat walnuts, pickled fennel, tahini-maple dressing",
+    "cents": 1400,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Wagyu Tartare",
+    "desc": "Wagyu beef tartar, raw oyster aioli, bottarga, served with toast.",
+    "cents": 1900,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Escabeche",
+    "desc": "Salt spring mussels in miso tomato vinegar sauce, served with toast",
+    "cents": 1500,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Arayes",
+    "desc": "Pita stuffed with ground lamb & toma cheese served with za'atar aioli",
+    "cents": 1400,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Confit Chicken Empanada",
+    "desc": "Moroccan spiced confit chicken, gruyere, & sifra potato empanada served with tarragon creme fraiche",
+    "cents": 1200,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Duck Carnitas Tacos",
+    "desc": "Confit duck, tagine-spiced tomato sauce, poached apricot & olive relish, blended corn & flour tortillas (2 ea)",
+    "cents": 1400,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Ricotta Gnocchi",
+    "desc": "Ricotta cheese gnocchi, shiitake & porcini mushroom cheese sauce, koji brown butter breadcrumbs",
+    "cents": 1800,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Cassoulet",
+    "desc": "Rancho gordo white bean stew with rabbit, & pork belly, topped with bread crumbs",
+    "cents": 1800,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Oxtail Ragú",
+    "desc": "Braised oxtail, creamy Brentwood corn polenta, shaved pecorino, pepitas, pickled onions",
+    "cents": 2000,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Octopus & Confit Potato Salad",
+    "desc": "Octopus, confit potatoes, gypsy peppers, fried caper dressing, carrot greens",
+    "cents": 1900,
+    "section": "Small Plates",
+    "label": ""
+   },
+   {
+    "name": "Fig Frangipane Tart",
+    "desc": "Fig frangipane tart served with creme fraiche honey whip, maldon sea salt",
+    "cents": 1200,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Greek Yogurt Panna Cotta",
+    "desc": "Greek yogurt panna cotta with lemon curd, fresh berries, marcona almond brittle",
+    "cents": 1000,
+    "section": "Desserts",
+    "label": ""
+   },
+   {
+    "name": "Chocolate Brownie Mousse Cake",
+    "desc": "Tcho chocolate brownie base, chocolate mousse, caramelized cacao nibs",
+    "cents": 1200,
+    "section": "Desserts",
+    "label": ""
+   }
+  ],
+  "price_note": "Prices are from their own pickup ordering page, and the kitchen changes the menu often.",
+  "source_url": "https://order.toasttab.com/online/mile-limit",
+  "logo_url": null,
+  "logo_px": null,
+  "photos": [
+   {
+    "photo": "mile-limit-berkeley-site-1",
+    "alt": "Mile Limit's corner storefront at 2040 San Pablo Ave, with the wine-glass logo and 'Taste · Learn · Shop' lettering on t",
+    "credit": "Their own photo, from milelimitberkeley.com"
+   },
+   {
+    "photo": "mile-limit-berkeley-site-2",
+    "alt": "Overhead view of a wooden table spread with Mediterranean small plates: an empanada with dipping sauce, a tin of mussels",
+    "credit": "Their own photo, from milelimitberkeley.com"
+   },
+   {
+    "photo": "mile-limit-berkeley-site-3",
+    "alt": "Wine bottles on metal shelves inside a store with a window and a potted plant in the background",
+    "credit": "Their own photo, from milelimitberkeley.com"
+   }
+  ],
+  "flags": [
+   "Read 2026-09-17 in a real browser (Leon's Chrome, no sign-in), because Toast answers automated reads with a Cloudflare challenge: https://order.toasttab.com/online/mile-limit ('Mile Limit - Mediterranean Restaurant', 2040 San Pablo Avenue, pickup and delivery, scheduled orders only). Taken: Bar Snacks, Small Plates and Desserts, 21 items. Left out: Amaretti Morbidi, out of stock that day, and the Wine Retail tab, which is their bottle-shop shelf (hundreds of bottles) rather than a menu.",
+   "Their own site publishes 20 of these dishes and no drinks list at all; the ordering page is the fuller and more current one, so it is the source.",
+   "Wine club, from their own site and not carried as menu items (a monthly subscription, not something to order): Tier 1 $55 a month; Tier 2 $100 a month",
+   "NOT PRINTED: the '$1.50 oysters and sparkling wine flights' happy hour from their Instagram, which their own site does not mention; and 'Michelin Recommended', which their site applies to La Marcha, their sister restaurant, not to Mile Limit.",
+   "Pages read 17 Sep 2026, none blocked: https://www.milelimitberkeley.com/ (HTTP 200), /menu, /about-us, /contact, /wine-club. Their sitemap lists only these five pages.",
+   "Site is live on their own domain, Squarespace 7.1, and looks current and actively maintained: the menu carries Early Girl tomatoes and Brentwood corn, both in season in September.",
+   "Food and dessert prices are from the menu page on their own website; the two wine club tier prices are from the wine-club page on the same site. Both read 17 Sep 2026.",
+   "LOGO: their current website does NOT use the black wine-glasses / 'MILE LIMIT / TASTE · LEARN · SHOP' logo as a logo. The site header is a plain text wordmark reading 'Mile Limit', the site hosts no logo image file, and the favicon is still the stock Squarespace default. That logo IS in real-world use, though: it appears painted in white on their storefront window in their own homepage photograph (the first entry in photos). So there is no logo image URL to give; logo_url is null. A human could ask the owner for the logo file, or crop it from the storefront photo.",
+   "NO WINE OR DRINKS LIST IS PUBLISHED ON THEIR OWN SITE. This is the main gap. Their homepage describes the wine list in prose ('classic producers from Northern California, low-intervention and natural wines') but prints no wine, beer, cocktail or by-the-glass prices anywhere, and there is no menu PDF. The wine and drinks sections requested could not be filled from a permitted source.",
+   "BLOCKED: their online ordering page, https://order.toasttab.com/online/mile-limit, which is linked from every page of their site as 'Order Online', returned HTTP 403 with a Cloudflare 'Just a moment...' interstitial on 17 Sep 2026. The challenge was not attempted. This Toast page is the most likely place the drinks and wine-by-the-glass prices live; a human should open that exact URL in a real browser.",
+   "Their menu page carries their own warning: 'Please note our menu changes frequently. Please call for latest menu.' The whole menu is one hand-typed rich-text block, so it can change without notice; prices should be treated as of 17 Sep 2026.",
+   "EMAIL: none published anywhere on their own site or in the Instagram facts provided, so email is null. Their contact page offers only a phone number and a contact form, and the homepage has a newsletter signup."
+  ],
+  "blocked": null
+ },
+ {
+  "id": "b_dumontlivermore",
+  "name_exact": "Dumont Creamery & Cafe",
+  "one_line": "Globally inspired ice cream, coffee and boba, new in Livermore",
+  "cuisine": "Ice cream, coffee and boba",
+  "address": "2375 Railroad Ave, Suite 101, Livermore, CA",
+  "phone": null,
+  "email": "info@dumont.us",
+  "hours": null,
+  "instagram": "dumont.livermore",
+  "site_kind": "own-domain",
+  "site_url": "https://dumont.us/",
+  "prices_published": false,
+  "items": [],
+  "price_note": null,
+  "source_url": null,
+  "logo_url": "https://dumont.us/cdn/shop/files/Untitled_200_x_170_px_200_x_100_px.png?v=1745934752",
+  "logo_px": "200x100",
+  "flags": [
+   "Record: the LIVERMORE shop only, at 2375 Railroad Ave, Suite 101. Dumont is a multi-location franchise brand and dumont.us is the shared brand site.",
+   "THE LIVERMORE SHOP HAS NO PAGE ON THEIR OWN SITE. dumont.us has a page per location under /pages/<city>, but there is no Livermore page: https://dumont.us/pages/livermore returns HTTP 404, the word 'Livermore' appears nowhere in any page fetched, 'Railroad' and the Livermore ZIP codes appear nowhere, Livermore is absent from the /pages/stores 'Scoop Map' and absent from the homepage 'VISIT OUR STORES' list, and the pages sitemap (25 pages, lastmod 14 Jul 2026) does not contain it. Everything in this record about the Livermore shop itself comes from their Instagram, @dumont.livermore, as transcribed in the brief.",
+   "OTHER LOCATIONS named on their own site, for the multi-location note. The /pages/stores 'Scoop Map' lists 16: Woodstock MD; Aubrey TX; Southlake TX; Little Elm TX; NorthLake TX; Frisco TX - Coit & Main St.; Round Rock TX; Coppell TX; Lakeway TX; Plano TX; Cedar Park TX; San Jose CA; Greenville SC; Bentonville AR; Alpharetta GA; Columbus OH. The homepage list adds Chesterfield MO, giving 17. Only ONE other California location, San Jose (28 N Almaden Ave Suite 40, San Jose, CA 95110, +1 408-673-7219). The pages sitemap also holds /pages/chesterfield and /pages/aubrey-tx, and the homepage carries two recent 'FAIRFAX' banner images for a location that is not in either list yet.",
+   "NO PRICES ARE PUBLISHED ANYWHERE FIRST-PARTY FOR LIVERMORE, so prices_published is false and items is empty. dumont.us publishes no prices at all: the three product pages /pages/icecreams , /pages/bobas-teas and /pages/coffees-more are image slideshows only (their banners were downloaded and inspected - 'Global Flavor Spotlight', 'bubbly, slushy & the trendiest beverages in town', 'brews with a purpose' - naming flavours such as Hokey Pokey, Mint Basil Sorbet, Biscoff, Kheer, Tiger Stripes and Matcha Milk Tea, with no price on any of them). https://dumont.us/products.json holds exactly one product, a $99.00 'Dumont Iceream' placeholder that is marked sold out. There is no menu PDF and no ordering link.",
+   "A first-party Clover ordering storefront with a full priced menu exists for the SAN JOSE shop, https://www.clover.com/online-ordering/dumont-creamery--cafe-san-jose (rendered headless 17 Sep 2026; it shows 'DUMONT CREAMERY & CAFE isn't accepting online orders right now', an 8:00 AM - 11:00 PM window and priced items such as Cortado $4.25, Double shot espresso $3.75, Flat white $4.50, Hot Chocolate $4.95, with some items at $0.00). It is NOT used here: those are San Jose's prices, not Livermore's, and dumont.us does not link to Clover from anywhere. The equivalent Livermore URLs were checked and there is no Livermore storefront: https://www.clover.com/online-ordering/dumont-creamery--cafe-livermore and .../dumont-creamery-cafe-livermore both render Clover's 'Oops! Sorry, but we couldn't find that page.'",
+   "Read 17 Sep 2026 with curl, all HTTP 200 unless noted, none blocked: https://dumont.us/ , /pages/stores , /pages/livermore (404) , /pages/icecreams , /pages/bobas-teas , /pages/coffees-more , /pages/contact , /pages/about-us , /pages/san-jose , /pages/flavours , /collections/all , /products.json , /sitemap.xml , /sitemap_pages_1.xml . Two Clover pages were rendered headless (Playwright). No CAPTCHA or bot challenge was met anywhere.",
+   "Website: own domain dumont.us, a Shopify store on the 'Jugaad_IceCream_Theme2025' theme. It is live but its Livermore coverage is missing and the footer still reads '@Dumont USA 2025'. Location pages carry only an address and a phone number, never hours.",
+   "PHONE: no Livermore number is published. The only phone on their own site is +1 (952) 258-9468 on /pages/contact, which sits under franchise-enquiry copy ('Looking to open your very own dream creamery and cafe?') and is the company line, not the shop, so phone is null. The Instagram lines transcribed in the brief carry no phone either.",
+   "EMAIL: info@dumont.us, from /pages/contact. It is the company address, not a Livermore one.",
+   "HOURS: none published for Livermore, so hours is null. /pages/contact gives 'Open Hours Monday to Friday 09:30 - 17:30 Saturday & Sunday 10:00 - 15:00', but that is beside the franchise-enquiry form and the corporate phone, so it is office hours, not shop hours - do not publish it as the creamery's hours. No location page on the site lists hours for any shop.",
+   "ADDRESS: '2375 Railroad Ave, Suite 101' exactly as their Instagram publishes it, with the city from their Instagram line 'Now serving LIVERMORE, CA'. No ZIP is published first-party, so none is given.",
+   "OPENING STATUS: their Instagram, marked NEW, shows a grand launch on '10th September, 3pm onwards' with '25% off all drinks' and 'buy 1 scoop get 1 free', plus a grand opening ribbon cutting, so the shop opened on 10 Sep 2026 and should be trading. Their own website has not caught up. No launch-offer end date is published, so treat the 25% off and BOGO scoop offers as expired unless confirmed.",
+   "NAME: 'Dumont Creamery & Cafe' comes from the Instagram profile name ('Dumont Creamery & Cafe - Livermore') and from their own logo image, which reads 'DUMONT CREAMERY & CAFE'. The website never spells the name out in text: the Shopify store name, page titles and og:title are all just 'Dumont.us'.",
+   "Logo: the wordmark from the site header, https://dumont.us/cdn/shop/files/Untitled_200_x_170_px_200_x_100_px.png?v=1745934752 , downloaded and measured at 200x100. The header also uses a second 200x75 mark, /cdn/shop/files/Untitled_design_3.png?v=1745301941 . The theme's own /cdn/shop/t/4/assets/logo.png returns 404.",
+   "Their own description of the offer, from the Instagram lines in the brief: 'Globally inspired ice cream, coffee & boba'. The site groups its range as 'Scoops', 'Sips' and 'Brews' and says brewing is 'a craft rooted in sustainability, flavor, and global inspiration'. The 'Shades of Summer' drinks graphic mentioned in the brief is an Instagram post; nothing with that name is on dumont.us.",
+   "The site's only social link is instagram.com (the brand account); it does not link the @dumont.livermore account. There is no Linktree."
+  ],
+  "blocked": "The Livermore shop has no page on dumont.us (https://dumont.us/pages/livermore is HTTP 404) and no first-party priced menu, phone or hours could be found for it; all Livermore-specific facts here come from their Instagram."
+ }
+]

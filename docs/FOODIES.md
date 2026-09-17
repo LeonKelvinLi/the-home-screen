@@ -47,16 +47,20 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 15 Sep | @pimchanyum | Kuro Nami, San Anselmo (@kuronamimarin), posted October 2024 | No |
 | 16 Sep | @mukbangyourmama | Brunch drinks at Clementine, Yountville (@clementineyountville) | No |
 | 16 Sep | @ilisaeatssf | A walk along Chicago's lakefront, posted June 2025. Not food and not the Bay Area | No |
+| 17 Sep | @mama_sheedz | A wagyu steak, filmed close up in August. No business named anywhere in the post | No business to place it on |
+| 17 Sep | @thespoonlist | The Local, Petaluma — sandwiches, the shop and Chef Chris. Sent with the listing and "please give credit to this person and attach their link to their Instagram" | **Yes.** On The Local's page as a review, credited to her |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
 DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__, Dc2abz8C7CU, DdIMBHKPfj_ (again), DS8GlMgCf7b,
 DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
-DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq. The profile is instagram.com/bayarea_fooddreamz.
+DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok. The profile is
+instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
 
-From `public/clips/CREDITS.md`: @antoinetterzz (Belly, Deli Board), @oaktowngrubhub (Emy's
+From `public/clips/CREDITS.md`: @antoinetterzz (Belly, Deli Board), @thespoonlist (The
+Local), @oaktowngrubhub (Emy's
 Cannoli), @grubwitmike (Phosho Dough), @justmostie (Paulo Sausage Co),
 @thesnacksensei (The Yard, Jojo's Hot Chicken), @volha_creative (Glasshouzz),
 @itsmeloslab (Ofie's Kitchen), @smackinfood (House of Raha), @thetastebud

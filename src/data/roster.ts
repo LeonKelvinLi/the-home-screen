@@ -2721,6 +2721,113 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'See their menu',
     tier: 1,
   }),
+
+  /* ---- 2026-09-17. Research in research/roster/batch26.json. ---- */
+
+  /* Roast Eatery Co., "Needs website. Brentwood • Goods" — Hong Kong roast
+     duck and soy sauce braised goods to take away, in the same plaza on
+     Balfour Road as Dim Sum Basket below. Brentwood's Asian food seat is X
+     Noodles', so the yellow sheet at Tier 1. No website anywhere: no link,
+     and the red outline follows. They publish no prices of their own either. */
+  seed('roast-eatery-co', 'Roast Eatery Co.', 'Roast Eatery', 'Hong Kong Chinese BBQ', '#F0A32B', {
+    icon: 'roast-eatery-co',
+    logoTemplate: 'wordmark', logoLines: ['ROAST', 'EATERY'], logoFace: 'condensed',
+    tier: 1,
+  }),
+  /* Dim Sum Basket, "Brentwood • Goods. Needs website" — dim sum to go, two
+     doors from Roast Eatery. Their only site is a Square store, so the red
+     outline stays; the store's whole catalogue today is rice pudding and
+     bottled Ramune, and it is not taking orders. Yellow sheet at Tier 1. */
+  seed('dim-sum-basket', 'Dim Sum Basket', 'Dim Sum', 'Cantonese dim sum', '#F5C518', {
+    icon: 'dim-sum-basket',
+    logoTemplate: 'wordmark', logoLines: ['DIM SUM', 'BASKET'], logoFace: 'grotesk',
+    site: 'https://dimsumbasket.square.site/',
+    siteCta: 'See their shop',
+    needsSite: true,
+    tier: 1,
+  }),
+  /* Brentwood Rehab & Performance PT, "Brentwood • Services" — one-on-one
+     physical therapy on Sand Creek Road. No tile for a clinic, so Brentwood's
+     yellow sheet at Tier 1. They publish no prices. */
+  seed('brentwood-rehab-pt', 'Brentwood Rehab & Performance PT', 'Brentwood PT', 'Physical therapy', '#14293C', {
+    icon: 'brentwood-rehab-pt',
+    logoTemplate: 'wordmark', logoLines: ['BRENTWOOD', 'REHAB'], logoFace: 'grotesk',
+    site: 'https://www.brentwoodphysicaltherapy.com/',
+    siteCta: 'Book a visit',
+    tier: 1,
+  }),
+  /* Double Rainbow Cafe, "San Rafael • Goods" — a café and ice cream shop at
+     Autistry Studios on 4th Street, where the training is for neurodivergent
+     students, on San Rafael's open Ice cream seat. */
+  seed('double-rainbow-cafe', 'Double Rainbow Cafe', 'Double Rainbow', 'Cafe & ice cream', '#E4762D', {
+    icon: 'double-rainbow-cafe',
+    logoTemplate: 'wordmark', logoLines: ['Double', 'Rainbow'], logoFace: 'grotesk',
+    site: 'https://doublerainbowcafe.com/',
+    siteCta: 'See their menu',
+  }),
+  /* Studio Flora's, "San Francisco • Services" — pressed flower art, rug
+     tufting, candles and mosaic lamps, taught on Sutter Street and in San
+     Jose. No tile for a craft workshop, so San Francisco's yellow sheet at
+     Tier 1. */
+  seed('studio-floras', "Studio Flora's", 'Studio Flora', 'Art & craft workshops', '#C2A66D', {
+    icon: 'studio-floras',
+    logoTemplate: 'wordmark', logoLines: ['STUDIO', "FLORA'S"], logoFace: 'slab',
+    site: 'https://www.studiofloras.com/',
+    siteCta: 'Book a workshop',
+    tier: 1,
+  }),
+  /*
+    The Local, "Petaluma • Goods. I deliver to this restaurant weekly and I
+    know the owner. Please give him a glow on his page and do as much for it as
+    you can. He will give me an offer soon and spearhead the city of Petaluma."
+
+    So: Petaluma's open Sandwiches seat, the whole page, the glow he asked for,
+    their own menu and one of their own photographs — and the reel he sent
+    right after, which is @thespoonlist's film of the shop, playing as a review
+    with her credit linking her Instagram, as he asked.
+  */
+  seed('the-local-petaluma', 'The Local', 'The Local', 'Farm-to-table sandwiches', '#1E2738', {
+    glow: true,
+    icon: 'the-local-petaluma',
+    logoTemplate: 'wordmark', logoLines: ['THE', 'LOCAL'], logoFace: 'slab',
+    site: 'https://www.thelocalpetaluma.com/',
+    siteCta: 'See their menu',
+    clip: {
+      src: '/clips/the-local-petaluma.mp4',
+      poster: '/clips/the-local-petaluma-poster.webp',
+      href: 'https://www.instagram.com/reel/DdXV9jQveok/',
+      credit: 'Filmed by @thespoonlist',
+      platform: 'Instagram',
+      by: 'thespoonlist',
+    },
+  }),
+  /* Mile Limit, "Berkeley • Goods" — Mediterranean small plates, a wine bar
+     and a bottle shop on San Pablo Avenue, from the chefs behind La Marcha,
+     on Berkeley's open Mediterranean seat. The film is their own post: "Please
+     clip this video for that page. It is an ad placed by them." */
+  seed('mile-limit-berkeley', 'Mile Limit', 'Mile Limit', 'Mediterranean wine bar', '#222222', {
+    icon: 'mile-limit-berkeley',
+    logoTemplate: 'wordmark', logoLines: ['MILE', 'LIMIT'], logoFace: 'condensed',
+    site: 'https://www.milelimitberkeley.com/',
+    siteCta: 'Order pickup',
+    clip: {
+      src: '/clips/mile-limit-berkeley.mp4',
+      poster: '/clips/mile-limit-berkeley-poster.webp',
+      href: 'https://www.instagram.com/p/DdSQMLZAXta/',
+      credit: 'Their own film, @milelimit',
+      platform: 'Instagram',
+    },
+  }),
+  /* Dumont Creamery & Cafe, "Livermore • Goods" — ice cream, coffee and boba
+     on Railroad Avenue, opened this month, on Livermore's open Ice cream seat.
+     Dumont is a 16-shop brand and dumont.us has a page per shop, but not for
+     Livermore, and it publishes no prices, so the page says so. */
+  seed('dumont-livermore', 'Dumont Creamery & Cafe', 'Dumont', 'Ice cream, coffee & boba', '#194C49', {
+    icon: 'dumont-livermore',
+    logoTemplate: 'wordmark', logoLines: ['DUMONT'], logoFace: 'slab',
+    site: 'https://dumont.us/',
+    siteCta: 'See their site',
+  }),
 ]
 
 /**

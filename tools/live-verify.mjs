@@ -205,6 +205,15 @@ for (const [id, want, expect] of [
   ['b_pizzadeliandgrill', 'Pizza Deli & Grill', { free: true, call: "(510) 343-5336" }],
   ['b_calburger', 'Cal Burger & More', { free: true }],
   ['b_pupcup', 'PupCup', { quote: true }],
+  /* 2026-09-17: eight more, two of them with a film. */
+  ['b_roasteateryco', 'Roast Eatery Co.', { free: true }],
+  ['b_dimsumbasket', 'Dim Sum Basket', { free: true, call: "(925) 418-4142" }],
+  ['b_brentwoodrehabpt', 'Brentwood Rehab & Performance PT', { free: true, call: "(925) 466-5550" }],
+  ['b_doublerainbowcafe', 'Double Rainbow Cafe', { rows: 50, hours: "Mon-Thu 9am-9pm", call: "(415) 457-0803" }],
+  ['b_studiofloras', "Studio Flora's", { free: true, call: "(650) 889-6075" }],
+  ['b_thelocalpetaluma', 'The Local', { rows: 18, hours: "Mon-Sat 10:30am-3:30pm", photos: 1, call: "(707) 981-7100" }],
+  ['b_milelimitberkeley', 'Mile Limit', { rows: 17, hours: "Wed-Thu 4-9pm", photos: 3, call: "(510) 833-2687" }],
+  ['b_dumontlivermore', 'Dumont Creamery & Cafe', {  }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -259,6 +268,15 @@ if (!review.bar.startsWith('Watch a review by @antoinetterzz')) fails.push(`Bell
 if (credit.href !== 'https://www.instagram.com/antoinetterzz/') fails.push(`Belly's credit links to ${credit.href}, expected her Instagram`)
 if (!credit.sound) fails.push('the clip has no sound button')
 if (!credit.mockOffer) fails.push("Belly's page does not show his example offer, labelled as an example")
+
+/* The films of 2026-09-17: a creator's on The Local, the shop's own on Mile Limit. */
+for (const [id, want] of [['b_thelocalpetaluma', 'Watch a review by @thespoonlist'], ['b_milelimitberkeley', 'Watch their video']]) {
+  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await p.waitForTimeout(600)
+  const bar = await p.evaluate(() => document.querySelector('.brand-clip-drop .menu-picks-bar')?.textContent?.replace(/\s+/g, ' ').trim() ?? '')
+  console.log(`${id.padEnd(22)}: ${bar}`)
+  if (!bar.startsWith(want)) fails.push(`${id}'s clip bar reads "${bar}", expected "${want}"`)
+}
 
 /* Deli Board's film is @antoinetterzz's too, sent with the listing on 2026-09-16. */
 await p.goto(`${base}/?b=b_deliboard`, { waitUntil: 'networkidle', timeout: 45000 })

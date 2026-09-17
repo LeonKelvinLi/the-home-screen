@@ -1052,4 +1052,14 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'oakland-services-0': 'b_bibosalon', //                          Barber and salon
   'oakland-goods2-6': 'b_pizzadeliandgrill', //                    Italian is Philomena Pizza's; yellow sheet, Tier 1
   'berkeley-goods2-1': 'b_calburger', //                           Burgers is Dog Haus's; yellow sheet, Tier 1
+  /* 2026-09-17: eight from Tuesday night and Wednesday. The Local gets the
+     glow he asked for; Mile Limit and it both carry a film. */
+  'brentwood-goods2-0': 'b_roasteateryco', //                      Asian food is X Noodles'; yellow sheet, Tier 1
+  'brentwood-goods2-2': 'b_dimsumbasket', //                        same plaza, same seat taken; yellow sheet, Tier 1
+  'brentwood-services2-0': 'b_brentwoodrehabpt', //                 no clinic seat; yellow sheet, Tier 1
+  'san-rafael-goods-11': 'b_doublerainbowcafe', //                  Ice cream shop — a café at Autistry Studios
+  'san-francisco-services2-10': 'b_studiofloras', //                no craft-workshop seat; yellow sheet, Tier 1
+  'petaluma-goods-6': 'b_thelocalpetaluma', //                      Sandwiches — his own delivery customer, with the glow
+  'berkeley-goods-9': 'b_milelimitberkeley', //                     Mediterranean
+  'livermore-goods-11': 'b_dumontlivermore', //                     Ice cream shop
 }
