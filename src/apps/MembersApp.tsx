@@ -1,5 +1,7 @@
 import { useState } from 'react'
 import { AppChrome } from './AppChrome'
+import { ShareMark } from './dialer/glyphs'
+import { SHARE_MEMBERS, shareOrCopy, shareUrl } from '../lib/share'
 import { useGate } from '../lib/gate'
 import { chooseTier } from '../lib/account'
 import {
@@ -161,6 +163,19 @@ function SideHead({
 
 export function MembersApp({ api }: { api: ShellApi }) {
   const [billing, setBilling] = useState<'month' | 'year'>('month')
+  /*
+    SHARE THIS PAGE. Glenn, 2026-09-17, over a screenshot of this screen and of
+    MAKE $: "would you mind adding a share button to each one of these pages?"
+    The link is beastypages.com/members, which opens this screen (App.tsx), and
+    a DM shows it as BEASTY membership rather than as the front door.
+  */
+  const [said, setSaid] = useState<string | null>(null)
+  const share = async () => {
+    const how = await shareOrCopy(SHARE_MEMBERS)
+    if (how === 'shared') return
+    setSaid(how === 'copied' ? 'Link copied' : `Copy this link: ${shareUrl(SHARE_MEMBERS).replace(/^https?:\/\//, '')}`)
+    window.setTimeout(() => setSaid(null), 3000)
+  }
   const m = MEMBERSHIP
   /*
     THE TWO DROPDOWNS. Glenn, 2026-09-02, on a screenshot of this page with
@@ -185,13 +200,28 @@ export function MembersApp({ api }: { api: ShellApi }) {
     setSide((v) => ({ user: k === 'user' && !v.user, business: k === 'business' && !v.business }))
 
   return (
-    <AppChrome title={m.name} onBack={api.closeApp} className="is-beasty">
+    <AppChrome
+      title={m.name}
+      onBack={api.closeApp}
+      className="is-beasty"
+      right={
+        <button type="button" className="chrome-pill is-share" onClick={share}>
+          <ShareMark size={15} />
+          Share
+        </button>
+      }
+    >
       <div className="members">
         <div className="members-hero">
           <span className="members-gem">
             <Gem size={44} />
           </span>
           <p className="members-lead">{m.lead}</p>
+          {said && (
+            <p className="members-said" role="status">
+              {said}
+            </p>
+          )}
         </div>
 
         <div className="members-sides" role="group" aria-label="Membership for">

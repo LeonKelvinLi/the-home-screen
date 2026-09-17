@@ -116,11 +116,15 @@ FAIL line. Silence is not a pass.
 - **BEASTY Collab** — the landing page's Collab key (7) carries Glenn's
   invitation to food creators and a four-field form (name, phone, email,
   Instagram). `POST /api/collabs` saves it with the other leads and emails
-  `LEAD_EMAIL`, with Reply set to the creator. `beastypages.com/collab`
-  opens straight onto that panel and carries its own title and preview for a
-  DM, and the panel's Share this invitation button sends that link through
-  the phone's share sheet. `tools/audit-collab.mjs` checks it end to end
-  without calling Resend.
+  `LEAD_EMAIL`, with Reply set to the creator. `tools/audit-collab.mjs` checks
+  it end to end without calling Resend.
+- **Pages he can send** — `beastypages.com/collab`, `/money` and `/members`
+  each open the page they name (the Collab invitation, MAKE $, the membership
+  screen), skipping the landing takeover, and each carries its own title,
+  description and preview picture so a DM shows what the link is. Every one of
+  them has a Share button that hands that link to the phone's share sheet, or
+  copies it where there is none. `src/lib/share.ts` holds the three, and the
+  server's `SHARE_PAGES` holds their previews.
 - **Calendar** — what the businesses have on, stored server-side. Reading is
   public; writing and deleting need `OPERATOR_TOKEN`.
 - **Accounts and membership** — sign-up and sign-in are one screen: a name

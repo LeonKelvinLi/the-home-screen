@@ -10,6 +10,7 @@ import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark, ShareMark }
 import { Gem } from './MembersApp'
 import { QrScanner, beastyPathFrom } from './QrScanner'
 import { CollabForm } from './CollabForm'
+import { SHARE_COLLAB, SHARE_MONEY, shareOrCopy, shareUrl, type SharePage } from '../lib/share'
 import { PagesMark } from './dialer/PagesMark'
 import { useScramble } from './dialer/useScramble'
 import { KeypadGrid, PersonCircleFill, PhoneFill, RecentsClock, StarFill, VoicemailFill } from './dialer/ios'
@@ -356,47 +357,46 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
     later(() => setToast(null), 2000)
   }
 
-  /** The phone's share sheet where there is one, else the clipboard. */
-  const shareLink = async (url: string, title: string, text?: string): Promise<boolean> => {
+  /*
+    Sharing a page, through the phone's sheet or the clipboard (lib/share.ts).
+
+    Copying says so: the message used to be rendered only inside the Contacts
+    panel, so pressing # SHARE from the keypad copied the link and showed
+    nothing — which on desktop is every visitor, since navigator.share is not
+    there to take over.
+  */
+  const sharePage = async (page: SharePage) => {
+    const how = await shareOrCopy(page)
+    if (how === 'copied') say('Link copied')
+    if (how === 'failed') say(`Copy this link: ${shareUrl(page).replace(/^https?:\/\//, '')}`)
+  }
+
+  const share = async () => {
     if (navigator.share) {
       try {
-        await navigator.share(text ? { title, text, url } : { title, url })
-        return true
+        await navigator.share({ title: 'BEASTY', url: window.location.origin })
+        return
       } catch {
         /* dismissed — fall through to copy */
       }
     }
     try {
-      await navigator.clipboard.writeText(url)
-      // Say so. This used to set a flag rendered only inside the Contacts
-      // panel, so pressing # SHARE from the keypad copied the link and showed
-      // nothing — which on desktop is every visitor, since navigator.share is
-      // not there to take over.
+      await navigator.clipboard.writeText(window.location.origin)
       say('Link copied')
-      return true
     } catch {
-      return false
+      setPanel('contacts')
     }
-  }
-
-  const share = async () => {
-    if (!(await shareLink(window.location.origin, 'BEASTY'))) setPanel('contacts')
   }
 
   /*
     Glenn, 2026-09-16, on the Collab panel: "can you add a share button here?
     This will make it a lot easier for me to share to the DM's of Instagram
-    foodies." The link opens straight onto this invitation.
+    foodies." The next morning, over the membership page and MAKE $: "would you
+    mind adding a share button to each one of these pages?" Each link opens the
+    page it shares.
   */
-  const shareCollab = async () => {
-    const url = `${window.location.origin}/collab`
-    const shared = await shareLink(
-      url,
-      'BEASTY Collab',
-      'BEASTY pages is looking for Bay Area foodies to collaborate with.',
-    )
-    if (!shared) say(`Copy this link: ${url.replace(/^https?:\/\//, '')}`)
-  }
+  const shareCollab = () => sharePage(SHARE_COLLAB)
+  const shareMoney = () => sharePage(SHARE_MONEY)
 
   const run = (action: KeyAction) => {
     if (leaving) return
@@ -833,6 +833,7 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
             page={panel}
             onShare={share}
             onShareCollab={shareCollab}
+            onShareMoney={shareMoney}
             onJoin={() => leave(onJoin)}
             onWater={() => leave(onWater)}
             onClose={closePanel}
@@ -1210,6 +1211,7 @@ function Panel({
   page,
   onShare,
   onShareCollab,
+  onShareMoney,
   focusDialog,
   onJoin,
   onWater,
@@ -1219,6 +1221,7 @@ function Panel({
   page: PanelPage
   onShare: () => void
   onShareCollab: () => void
+  onShareMoney: () => void
   /**
    * Focus the dialog itself rather than its close button. A panel that a link
    * opened has had no tap yet, and a ring round the close button is the first
@@ -1343,9 +1346,15 @@ function Panel({
         {/* Careers sends people to Reserve a Spot. Collabs has its own form
             now: the food creators Glenn is inviting, 2026-09-16. */}
         {page === 'careers' && (
-          <button className="dialer-panel-action" onClick={onJoin}>
-            Claim a tile
-          </button>
+          <>
+            <button className="dialer-panel-action" onClick={onJoin}>
+              Claim a tile
+            </button>
+            <button type="button" className="dialer-panel-action is-share" onClick={onShareMoney}>
+              <ShareMark size={16} />
+              Share this page
+            </button>
+          </>
         )}
         {page === 'collabs' && (
           <button type="button" className="dialer-panel-action collab-share" onClick={onShareCollab}>

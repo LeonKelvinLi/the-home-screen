@@ -1,6 +1,7 @@
 import { GateProvider } from './lib/gate'
 import { Suspense, lazy, useEffect, useState } from 'react'
 import { IntroScreen } from './apps/IntroScreen'
+import type { PanelPage } from './apps/dialer/keys'
 import { savedCity } from './lib/place'
 import { wallpaperFor } from './ios/Wallpaper'
 
@@ -19,6 +20,18 @@ const Shell = lazy(() => import('./Shell'))
 /** Resolve which brand the Water button opens without pulling in the catalogue. */
 const BEASTY_H20 = 'b_beastyh20'
 const RESERVE = 'slot.join'
+
+/*
+  The paths Glenn shares (see lib/share.ts): two open a landing panel, and the
+  membership one opens the app's own screen, the way a shared business link
+  does. Anything else here would be a page nobody can share.
+*/
+/* MAKE $ (key 9) opens the panel keyed `careers` — "Make some money with
+   BEASTY", his instructions for bringing a business in. */
+const LINKED_PANEL: Record<string, PanelPage | undefined> = { '/collab': 'collabs', '/money': 'careers' }
+const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members' }
+const path = () =>
+  typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '') || '/'
 
 /** How long the dialer and the home screen overlap during the cross-fade. */
 const HANDOFF_MS = 620
@@ -46,7 +59,8 @@ export default function App() {
     () =>
       typeof window !== 'undefined' &&
       (window.history.state?.hs === 'app' ||
-        /^b_[a-z0-9]{2,40}$/.test(new URLSearchParams(window.location.search).get('b') ?? '')),
+        /^b_[a-z0-9]{2,40}$/.test(new URLSearchParams(window.location.search).get('b') ?? '') ||
+        !!LINKED_APP[path()]),
   )
   /*
     A shared business link, honoured on arrival.
@@ -70,14 +84,7 @@ export default function App() {
     return id && /^b_[a-z0-9]{2,40}$/.test(id) ? id : null
   })()
 
-  const [openOn, setOpenOn] = useState<string | null>(shared)
-  /*
-    The Collab link, beastypages.com/collab: Glenn sends it to food creators
-    (2026-09-16), so it lands on his invitation with the takeover skipped, the
-    same courtesy as a shared business link. Only on arrival: coming back from
-    the app is an ordinary return, and the panel stays shut.
-  */
-  const collabLink = typeof window !== 'undefined' && /^\/collab\/?$/.test(window.location.pathname)
+  const [openOn, setOpenOn] = useState<string | null>(shared ?? LINKED_APP[path()] ?? null)
   /*
     Bumped on every return from the app, and used as IntroScreen's key.
 
@@ -86,6 +93,17 @@ export default function App() {
     finished BEASTY screen with no takeover. The key guarantees a fresh mount.
   */
   const [visit, setVisit] = useState(0)
+  /*
+    The shared pages: /collab, /money and /members.
+
+    Glenn sends these in DMs — the Collab invitation on 2026-09-16, then "add a
+    share button to each one of these pages" over the membership page and MAKE $
+    the next morning — so each link opens the page he is talking about rather
+    than the front door, with the takeover skipped, the same courtesy as a
+    shared business link. Only on arrival: coming back from the app is an
+    ordinary return, and nothing reopens.
+  */
+  const linkedPanel = visit === 0 ? LINKED_PANEL[path()] : undefined
   /*
     True while the dialer is still on screen, fading, with the home screen
     already mounted and coming up underneath it.
@@ -220,8 +238,8 @@ export default function App() {
              and the account screen are all one key rather than a tap into the
              grid. */
           onOpen={(appId) => enter(appId)}
-          skipIntro={skipIntro || (visit === 0 && collabLink)}
-          openPanel={visit === 0 && collabLink ? 'collabs' : undefined}
+          skipIntro={skipIntro || !!linkedPanel}
+          openPanel={linkedPanel}
         />
       )}
     </GateProvider>

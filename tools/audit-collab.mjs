@@ -14,7 +14,9 @@
   - the endpoint refuses what the form would refuse;
   - beastypages.com/collab, the link Glenn sends to creators' DMs, carries its
     own title and preview, opens straight onto the invitation, and the panel's
-    Share button hands that link to the share sheet (or copies it).
+    Share button hands that link to the share sheet (or copies it);
+  - the other two pages he asked to share the next morning do the same:
+    /money opens MAKE $ and /members opens the membership screen in the app.
 
   Resend is never called: a preload swaps fetch for api.resend.com in the
   server under test and writes the request to the log instead.
@@ -249,6 +251,45 @@ try {
   check(errs.length === 0, `no script errors on the link${errs.length ? ': ' + errs.join(' | ') : ''}`)
   await phone.close()
 
+  /* ---- the other two pages he asked for, 2026-09-17 ------------------------ */
+  for (const [slug, title] of [['money', 'Make money with BEASTY'], ['members', 'BEASTY membership']]) {
+    const html = await (await fetch(`${B}/${slug}`)).text()
+    check(new RegExp(`<title>${title}</title>`).test(html) && new RegExp(`og:title" content="${title}"`).test(html) && /og:image" content="http[^"]+\/icon-512\.png"/.test(html),
+      `beastypages.com/${slug} carries its own title, text and picture for a DM preview`)
+  }
+  const phone2 = await chromium.launch()
+  const ctx2 = await phone2.newContext({ viewport: { width: 393, height: 852 } })
+  await ctx2.addInitScript(() => {
+    window.__shared = []
+    navigator.share = async (data) => { window.__shared.push(data) }
+  })
+  const pg2 = await ctx2.newPage()
+  const errs2 = []
+  pg2.on('pageerror', (e) => errs2.push(String(e)))
+
+  await pg2.goto(B + '/money', { waitUntil: 'domcontentloaded' })
+  const moneyOpen = await pg2.waitForSelector('.dialer-panel .dialer-panel-action.is-share', { timeout: 8000 }).then(() => true).catch(() => false)
+  const moneyTitle = await pg2.evaluate(() => document.querySelector('.dialer-panel h2')?.textContent?.trim())
+  check(moneyOpen && moneyTitle === 'Make some money with BEASTY', `/money opens MAKE $ with its Share button (${moneyTitle})`)
+  check((await pg2.locator('.dialer-panel button', { hasText: 'Claim a tile' }).count()) === 1, 'and Claim a tile is still there')
+  await pg2.getByRole('button', { name: 'Share this page' }).click()
+  const sentMoney = await pg2.evaluate(() => window.__shared)
+  check(sentMoney.length === 1 && sentMoney[0].url === B + '/money' && sentMoney[0].title === 'Make money with BEASTY',
+    `Share this page hands the sheet the MAKE $ link (${JSON.stringify(sentMoney)})`)
+
+  await pg2.goto(B + '/members', { waitUntil: 'domcontentloaded' })
+  const memberShare = await pg2.waitForSelector('.chrome-pill.is-share', { timeout: 20000 }).then(() => true).catch(() => false)
+  const memberHead = await pg2.evaluate(() => document.querySelector('.nav-bar h1, .nav-title, h1')?.textContent?.trim())
+  check(memberShare, `/members opens the membership screen in the app with a Share button (${memberHead})`)
+  await pg2.waitForTimeout(700)
+  await pg2.locator('.chrome-pill.is-share').click()
+  const sentMember = await pg2.evaluate(() => window.__shared)
+  /* A fresh document, so the stub's list starts empty again. */
+  check(sentMember.length === 1 && sentMember[0].url === B + '/members' && sentMember[0].title === 'BEASTY membership',
+    `Share on the membership screen hands the sheet its own link (${JSON.stringify(sentMember)})`)
+  check(errs2.length === 0, `no script errors on either page${errs2.length ? ': ' + errs2.join(' | ') : ''}`)
+  await phone2.close()
+
   const desk = await chromium.launch()
   const dctx = await desk.newContext({ viewport: { width: 1280, height: 900 } })
   await dctx.addInitScript(() => {
@@ -272,5 +313,5 @@ try {
 
 for (const n of notes) console.log(`  NOTE ${n}`)
 if (fails.length) { console.log(`\nFAIL: ${fails.join('; ')}`); await done(1) }
-console.log('\nPASS: the Collab panel carries his invitation and a four-field form that reaches the lead inbox, only real details get through, and beastypages.com/collab opens it and shares it.')
+console.log('\nPASS: the Collab panel carries his invitation and a four-field form that reaches the lead inbox, only real details get through, and /collab, /money and /members each open their page and share it.')
 await done(0)

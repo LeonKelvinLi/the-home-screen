@@ -3276,28 +3276,49 @@ app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 
 /*
-  THE COLLAB LINK, beastypages.com/collab.
+  THE SHAREABLE PAGES: beastypages.com/collab, /money and /members.
 
-  Glenn shares it in food creators' Instagram DMs (2026-09-16), and a DM shows
-  the page's title, text and picture before anyone taps. The app is one page
-  whose title is BEASTY PAGES, so this path gets its own head; the client
-  opens the Collab invitation when it arrives here (see App.tsx).
+  Glenn sends these in food creators' and business owners' Instagram DMs
+  (2026-09-16 for Collab, "add a share button to each one of these pages" for
+  the other two the next morning), and a DM shows the page's title, text and
+  picture before anyone taps. The app is one page whose title is BEASTY PAGES,
+  so each of these paths gets its own head; the client opens the matching page
+  when it arrives there (see App.tsx and lib/share.ts).
 */
-const COLLAB_BLURB =
-  'BEASTY pages is looking for Bay Area foodies to collaborate with. We cover the bill; you present the food review.'
-app.get(['/collab', '/collab/'], async (req, res) => {
+const SHARE_PAGES: Record<string, { title: string; blurb: string }> = {
+  collab: {
+    title: 'BEASTY Collab',
+    blurb:
+      'BEASTY pages is looking for Bay Area foodies to collaborate with. We cover the bill; you present the food review.',
+  },
+  money: {
+    title: 'Make money with BEASTY',
+    blurb:
+      'Earn points for bringing new members and businesses onto BEASTY pages, and get rewarded as the directory grows.',
+  },
+  members: {
+    title: 'BEASTY membership',
+    blurb:
+      'One membership, honoured at every participating BEASTY affiliate. Signing up is free; the pass is the paid part.',
+  },
+}
+/* One segment, and unknown ones fall through to the SPA below. */
+app.get('/:page', async (req, res, next) => {
+  const slug = String(req.params.page)
+  const page = SHARE_PAGES[slug]
+  if (!page) return next()
   res.setHeader('Cache-Control', 'no-store')
   // The Host header goes into an attribute, so it is held to hostname characters.
   const host = String(req.get('host') ?? '').replace(/[^A-Za-z0-9.:-]/g, '') || 'beastypages.com'
   const origin = PROD ? `https://${host}` : `${req.protocol}://${host}`
   const head = [
-    '<title>BEASTY Collab</title>',
-    `<meta name="description" content="${COLLAB_BLURB}" />`,
+    `<title>${page.title}</title>`,
+    `<meta name="description" content="${page.blurb}" />`,
     '<meta property="og:type" content="website" />',
     '<meta property="og:site_name" content="BEASTY PAGES" />',
-    '<meta property="og:title" content="BEASTY Collab" />',
-    `<meta property="og:description" content="${COLLAB_BLURB}" />`,
-    `<meta property="og:url" content="${origin}/collab" />`,
+    `<meta property="og:title" content="${page.title}" />`,
+    `<meta property="og:description" content="${page.blurb}" />`,
+    `<meta property="og:url" content="${origin}/${slug}" />`,
     `<meta property="og:image" content="${origin}/icon-512.png" />`,
   ].join('\n    ')
   try {

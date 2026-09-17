@@ -10804,12 +10804,41 @@ textarea {
   The panel's own paragraph rule sets size and colour; these only space the
   fields and keep Send full width, the way every form in the app reads.
 */
-/* "Share this invitation": the link Glenn sends to creators' DMs. */
+/* The pages Glenn sends in DMs carry their own share button: the Collab
+   invitation, MAKE $ and, in the app, the membership page. */
+.dialer-panel .dialer-panel-action.is-share,
 .dialer-panel .collab-share {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   margin-top: 14px;
+}
+
+/* In the app's own nav bar, beside Home. */
+.chrome-pill.is-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 12px;
+  min-height: 32px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(20, 20, 22, 0.08);
+  color: var(--ink);
+  font-size: 13.5px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.is-beasty .chrome-pill.is-share {
+  background: rgba(20, 20, 22, 0.14);
+}
+
+.members-said {
+  margin: 8px 0 0;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
 }
 
 .collab-form {

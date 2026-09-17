@@ -457,6 +457,15 @@ const linked = await p.waitForSelector('.dialer-panel .collab-share', { timeout:
 console.log('collab link   :', JSON.stringify({ title: /<title>BEASTY Collab<\/title>/.test(collabHead), preview: /og:title/.test(collabHead), opens: linked }))
 if (!/<title>BEASTY Collab<\/title>/.test(collabHead) || !/og:title/.test(collabHead)) fails.push('beastypages.com/collab does not carry its own title and preview')
 if (!linked) fails.push('beastypages.com/collab does not open onto the invitation with its Share button')
+/* The two pages he asked to share the next morning: MAKE $ and membership. */
+for (const [slug, title, sel] of [['money', 'Make money with BEASTY', '.dialer-panel .dialer-panel-action.is-share'], ['members', 'BEASTY membership', '.chrome-pill.is-share']]) {
+  const head = await fetch(`${base}/${slug}`).then((r) => r.text()).catch(() => '')
+  await p.goto(`${base}/${slug}`, { waitUntil: 'networkidle', timeout: 60000 })
+  const opens = await p.waitForSelector(sel, { timeout: 20000 }).then(() => true).catch(() => false)
+  console.log(`collab ${slug.padEnd(8)}:`, JSON.stringify({ title: head.includes(`<title>${title}</title>`), opens }))
+  if (!head.includes(`<title>${title}</title>`) || !/og:title/.test(head)) fails.push(`beastypages.com/${slug} does not carry its own title and preview`)
+  if (!opens) fails.push(`beastypages.com/${slug} does not open its page with a Share button`)
+}
 /* The sample people Contacts showed before accounts existed, and Glenn's name,
    which BEASTY LLC keeps off the site (it captioned Chef Jeff's photos until
    their menu replaced them on 2026-09-13). */
