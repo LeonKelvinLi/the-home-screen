@@ -11,6 +11,7 @@
  * per kind, so tapping the heart twice unlikes rather than counting twice, and
  * nobody can run a number up with their thumb.
  */
+import { drain } from './http'
 export interface Signals {
   counts: { like: number; favourite: number; share: number }
   mine: { like: boolean; favourite: boolean; share: boolean }
@@ -23,7 +24,13 @@ export const EMPTY_SIGNALS: Signals = {
   mine: { like: false, favourite: false, share: false },
 }
 
-const ok = (r: Response) => (r.ok ? (r.json() as Promise<Signals>) : null)
+const ok = async (r: Response) => {
+  if (!r.ok) {
+    await drain(r)
+    return null
+  }
+  return (await r.json()) as Signals
+}
 
 export async function readSignals(brandId: string): Promise<Signals | null> {
   try {

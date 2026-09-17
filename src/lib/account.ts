@@ -15,6 +15,7 @@
  * nothing a script can steal. Every call goes out with credentials and the
  * server decides who is asking.
  */
+import { drain, drainNull } from './http'
 
 export interface Rewards {
   milestones: number
@@ -158,8 +159,11 @@ export type AccountState = Account | null | 'offline'
 export async function fetchAccount(): Promise<AccountState> {
   try {
     const r = await fetch('/api/members/me', { credentials: 'same-origin' })
-    if (r.status === 401) return null
-    if (!r.ok) return 'offline'
+    /* The body is read even when the answer is no — see lib/http drain(). */
+    if (!r.ok) {
+      await drain(r)
+      return r.status === 401 ? null : 'offline'
+    }
     return (await r.json()) as Account
   } catch {
     return 'offline'
@@ -183,7 +187,10 @@ export type LoginChannels = { sms: boolean; email: boolean }
 export async function loginChannels(): Promise<LoginChannels> {
   try {
     const r = await fetch('/api/members/channels', { credentials: 'same-origin' })
-    if (!r.ok) return { sms: false, email: true }
+    if (!r.ok) {
+      await drain(r)
+      return { sms: false, email: true }
+    }
     const b = await r.json()
     return { sms: !!b.sms, email: !!b.email }
   } catch {
@@ -271,7 +278,7 @@ export interface DirectoryMember {
 export async function fetchDirectory(): Promise<{ count: number; members: DirectoryMember[] } | null> {
   try {
     const r = await fetch('/api/members/directory', { credentials: 'same-origin' })
-    if (!r.ok) return null
+    if (!r.ok) return drainNull(r)
     return (await r.json()) as { count: number; members: DirectoryMember[] }
   } catch {
     return null
@@ -285,7 +292,7 @@ export async function fetchDirectory(): Promise<{ count: number; members: Direct
 export async function fetchMemberCount(): Promise<number | null> {
   try {
     const r = await fetch('/api/members/count', { credentials: 'same-origin' })
-    if (!r.ok) return null
+    if (!r.ok) return drainNull(r)
     const b = (await r.json()) as { count?: unknown }
     return typeof b.count === 'number' ? b.count : null
   } catch {
@@ -326,7 +333,7 @@ export async function chooseTier(
       credentials: 'same-origin',
       body: JSON.stringify({ tier, interval }),
     })
-    if (!r.ok) return null
+    if (!r.ok) return drainNull(r)
     const b = await r.json()
     return { account: b as Account, paymentLink: b.paymentLink, paymentsConfigured: b.paymentsConfigured }
   } catch {
@@ -360,7 +367,7 @@ export interface Pass {
 export async function fetchPass(): Promise<Pass | null> {
   try {
     const r = await fetch('/api/members/pass', { credentials: 'same-origin', cache: 'no-store' })
-    if (!r.ok) return null
+    if (!r.ok) return drainNull(r)
     return (await r.json()) as Pass
   } catch {
     return null
@@ -390,7 +397,7 @@ export async function fetchMemberProfile(id: string): Promise<MemberProfile | nu
     const r = await fetch(`/api/members/${encodeURIComponent(id)}/profile`, {
       credentials: 'same-origin',
     })
-    if (!r.ok) return null
+    if (!r.ok) return drainNull(r)
     return (await r.json()) as MemberProfile
   } catch {
     return null
@@ -411,7 +418,7 @@ export interface RaffleTicket {
 export async function fetchTickets(): Promise<RaffleTicket[] | null> {
   try {
     const r = await fetch('/api/members/tickets', { credentials: 'same-origin' })
-    if (!r.ok) return null
+    if (!r.ok) return drainNull(r)
     const b = (await r.json()) as { tickets: RaffleTicket[] }
     return Array.isArray(b.tickets) ? b.tickets : []
   } catch {

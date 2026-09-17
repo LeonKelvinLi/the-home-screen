@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import { QrScanner } from './QrScanner'
+import { drain } from '../lib/http'
 
 /**
  * THE KITCHEN SCREEN, at /kitchen.
@@ -196,8 +197,12 @@ export default function KitchenScreen() {
       try {
         const r = await fetch('/api/kitchen/me', auth())
         if (!alive) return
-        if (r.status === 401) return signOut(TURNED_OFF)
-        if (r.ok) setMe((await r.json()) as Me)
+        if (r.status === 401) {
+          await drain(r)
+          return signOut(TURNED_OFF)
+        }
+        if (!r.ok) return drain(r)
+        setMe((await r.json()) as Me)
       } catch {
         if (alive) setOffline(true)
       }
@@ -216,8 +221,17 @@ export default function KitchenScreen() {
       try {
         const r = await fetch('/api/orders', auth())
         if (!alive) return
-        if (r.status === 401) return signOut(TURNED_OFF)
-        if (!r.ok) throw new Error(String(r.status))
+        if (r.status === 401) {
+          await drain(r)
+          return signOut(TURNED_OFF)
+        }
+        if (!r.ok) {
+          /* Drained before throwing: this runs every few seconds, and an
+             unread body per failed poll is a connection leaked per failed
+             poll on a screen that stays open all service. */
+          await drain(r)
+          throw new Error(String(r.status))
+        }
         const list = (await r.json()) as KitchenOrder[]
         const prev = seen.current
         if (prev) {
@@ -303,7 +317,8 @@ export default function KitchenScreen() {
 
   const refresh = async () => {
     const list = await fetch('/api/orders', auth())
-    if (list.ok) setOrders((await list.json()) as KitchenOrder[])
+    if (!list.ok) return drain(list)
+    setOrders((await list.json()) as KitchenOrder[])
   }
 
   const move = async (ticket: KitchenTicket, to: TicketState, why?: string) => {
@@ -314,7 +329,10 @@ export default function KitchenScreen() {
         `/api/tickets/${encodeURIComponent(ticket.id)}/state`,
         auth({ method: 'POST', body: JSON.stringify({ state: to, ...(why ? { reason: why } : {}) }) }),
       )
-      if (r.status === 401) return signOut(TURNED_OFF)
+      if (r.status === 401) {
+        await drain(r)
+        return signOut(TURNED_OFF)
+      }
       if (!r.ok) {
         const b = (await r.json().catch(() => ({}))) as { error?: string }
         /* 409 is the customer cancelling first, or another screen moving the
@@ -344,7 +362,10 @@ export default function KitchenScreen() {
     }
     try {
       const r = await fetch('/api/pass/verify', auth({ method: 'POST', body: JSON.stringify({ token: text }) }))
-      if (r.status === 401) return signOut(TURNED_OFF)
+      if (r.status === 401) {
+        await drain(r)
+        return signOut(TURNED_OFF)
+      }
       const b = (await r.json().catch(() => ({}))) as {
         error?: string
         member?: { name: string }

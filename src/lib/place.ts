@@ -8,6 +8,7 @@
  * Once resolved it is written to the device and read back on every later
  * visit, so the prompt happens once and never again.
  */
+import { drain } from './http'
 
 export const DEFAULT_CITY = 'San Francisco'
 
@@ -84,7 +85,10 @@ export async function detectCity(): Promise<CityResult> {
   try {
     const { latitude, longitude } = pos.coords
     const r = await fetch(`/api/city?lat=${latitude}&lon=${longitude}`)
-    if (!r.ok) throw new Error(`city lookup returned ${r.status}`)
+    if (!r.ok) {
+      await drain(r)
+      throw new Error(`city lookup returned ${r.status}`)
+    }
     const { city } = (await r.json()) as { city?: string }
     if (!city) throw new Error('no city in response')
     remember(city)
