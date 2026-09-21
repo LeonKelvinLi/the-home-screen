@@ -933,7 +933,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      named, twice; Caitlyn's on Bakery; Armenta on Gardener in Services (he
      said Goods — it is a landscape contractor; flagged). */
   'antioch-goods2-1': 'b_dadsbbq', //                Mississippi-style BBQ
-  'beasty-goods-14': 'b_tonysstyle', //              Chicken wings — "Add on Boba empty spot"
+  'beasty-goods-14': 'b_jazzbraids', //              Janelle, pink glow — moved to page one 2026-09-21 (was Tony's Style)
   'albany-goods-14': 'b_tonysstyle', //              Chicken wings — "Add on Boba empty spot"
   'san-jose-goods-12': 'b_caitlynssweets', //        Bakery — custom cakes
   'antioch-services-21': 'b_armentalandscape', //    Gardener — landscape design and construction
@@ -1111,9 +1111,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-19': 'b_holbrookhouse', //                 a bar; yellow sheet, Tier 1
   'santa-rosa-goods-7': 'b_seoultotokyokitchen', //                Korean and ramen
   'san-jose-services2-2': 'b_bustdownco', //                       no jeweller seat; yellow sheet, Tier 1
-  'beasty-services2-22': 'b_bustdowncobeasty', //                  BEASTY page, with the glow he asked for
   'newark-services-0': 'b_jazzbraids', //                          Barber and salon — Janelle, pink glow
-  'beasty-services2-21': 'b_jazzbraids', //                        BEASTY page — Janelle, pink glow
   'concord-services-0': 'b_caballerosbarberlounge', //             Barber and salon
   'antioch-services-19': 'b_moaeventsrentals', //                  Event coordinator
   'south-san-francisco-goods-2': 'b_hlpeninsulasouthsf', //        Asian food
@@ -1123,4 +1121,21 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'milpitas-goods2-1': 'b_hlpeninsulamilpitas', //                 Asian is International Kitchen's; yellow sheet, Tier 1
   'santa-clara-goods-9': 'b_thehalalcartel', //                    Mediterranean; halal
   'antioch-goods2-2': 'b_thecozyoven', //                          Bakery is Butter Pecan's; yellow sheet, Tier 1
+  /* 2026-09-21, Leon: "move the app with glowing ones to the first page".
+     Every glowing tile now sits on BEASTY • Goods, the first page a visitor
+     sees: Midnite Theories, Chef Jeff's and Gao were already there, and The
+     Local, Jazz Braids (seat 15, above) and Bust Down & Co. join them. The
+     Local keeps its Petaluma seat, which he is using to recruit that city;
+     Janelle keeps Newark and Bust Down keeps its San Jose listing, but both
+     leave the BEASTY services yellow sheet so neither shows twice there.
+
+     The three who made room are the page's tiles with no menu that keep a
+     city seat of their own. They move to the yellow sheet right behind it,
+     not off the BEASTY pages: Sin City Pits (Las Vegas), Tony's Style (Albany)
+     and Lucky Three Seven (Oakland). */
+  'beasty-goods-13': 'b_thelocalpetaluma', //                     The Local — glow; was Sin City Pits
+  'beasty-goods-23': 'b_bustdowncobeasty', //                     Bust Down & Co. — glow; was Lucky Three Seven
+  'beasty-goods2-14': 'b_sincitypits', //                          from page one, seat 14
+  'beasty-goods2-15': 'b_tonysstyle', //                           from page one, seat 15
+  'beasty-goods2-16': 'b_luckythreeseven', //                      from page one, seat 24
 }

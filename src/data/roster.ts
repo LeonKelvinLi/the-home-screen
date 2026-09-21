@@ -3351,7 +3351,10 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_belly', //            11 Belly
   'b_lumpiacompany', //    12 Lumpia Company
   'b_hotboyschicken', //   13 Hot boys
-  'b_sincitypits', //      14 Sin City Pits
+  /* 14 and 24 are seated in data/placements.ts since 2026-09-21: the glowing
+     tiles moved to this page, and Sin City Pits and Lucky Three Seven went to
+     the yellow sheet behind it. */
+  null, //                 14 The Local, via placements.ts (was Sin City Pits)
   /* "Can you bump SMASH burgers into the more goods space" — moved to the
      yellow sheet in data/placements.ts, so this seat is open again. Tony's
      Style has sat in it since 2026-09-05 through an explicit override in
@@ -3371,7 +3374,7 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_meadowlarkdairy', //  21 Meadowlark Dairy
   'b_masa', //             22 Masa
   'b_harumiayce', //       23 Harumi - AYCE
-  'b_luckythreeseven', //  24 Lucky Three Seven
+  null, //                 24 Bust Down & Co., via placements.ts (was Lucky Three Seven)
 ]
 
 export const BEASTY_SERVICES_ROSTER: (string | null)[] = [

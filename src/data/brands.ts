@@ -896,7 +896,7 @@ const SEED: Seed[] = [
       when users open its a menu inside".
     */
     cuisine: 'Hot dogs', tagline: 'Fresh. Delicious. Oakland.',
-    color: '#C81E1E', icon: 'winkydinky', prep: 10, category: 'Menu',
+    color: '#C81E1E', icon: 'winky-dinky', prep: 10, category: 'Menu',
     address: '325 19th Street, Oakland, CA',
     phone: '(510) 817-4673',
     email: 'info@winkydinkydogs.com',
