@@ -453,7 +453,11 @@ for (const s of [
   'Unlimited Loyalty and Welcome offers', 'members-perk-head', 'Tickets keep for any monthly raffle',
   /* 2026-09-02: his domain address on Contacts, Leon's on Designs and MAKE $, his
      sentence where Richmond was, the two-sided Members page, the Designs form. */
-  'glenn@beastypages.com', 'designs@beastypages.com', 'Get in touch directly with the owner of beastypages.com',
+  'glenn@beastypages.com', 'designs@beastypages.com',
+  /* 2026-09-21: his revision of Contacts — the owners' line, both owners and
+     the call-or-text sheet. Signed out, the dock is behind the gate, so the
+     card is proved from the bundle rather than by opening it. */
+  'Get in touch directly with the owners for any questions', 'Co-CEO/Co-Founder', '510-674-8011', 'calltext-sheet', 'sms:',
   'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
   'sin-city-pits-breeder', 'brand-photos-track',
   /* The four reels the sweep found never attached. */
@@ -581,35 +585,15 @@ for (const s of ['sample profile', 'Marisol R.', 'Terrell B.', 'Glenn Malicdem']
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
 
-/* 2026-09-19: the landing's count line is gone, and Contacts lists both owners
-   with a number that asks "call or text?". Read only: nothing is dialled. */
+/* 2026-09-19: the landing's count line is gone ("Could you remove this also
+   when you can?"). The owners on Contacts are checked in the bundle list
+   above: signed out, the dock that opens Contacts raises the sign-up prompt. */
 await p.goto(base, { waitUntil: 'networkidle', timeout: 60000 })
 await p.click('[aria-label="1"]', { timeout: 4000 }).catch(() => {})
 await p.waitForTimeout(3200)
 const landingLine = await p.evaluate(() => /local businesses\. Open tiles/.test(document.body.innerText))
+console.log('landing line  :', landingLine ? 'still there' : 'gone')
 if (landingLine) fails.push('the landing still prints the "local businesses. Open tiles" line')
-await p.click('[aria-label="Enter BEASTY"]').catch(() => {})
-await p.waitForTimeout(2600)
-let phoneApp = false
-for (let i = 1; i <= 3 && !phoneApp; i++) {
-  await p.evaluate((i) => [...document.querySelectorAll('[aria-label]')].find((x) => (x.getAttribute('aria-label') || '').includes(`dock set ${i} of`))?.click(), i)
-  await p.waitForTimeout(500)
-  phoneApp = await p.evaluate(() => {
-    const n = [...document.querySelectorAll('[aria-label]')].find((x) => /^phone$/i.test(x.getAttribute('aria-label') || ''))
-    n?.click()
-    return !!n
-  })
-}
-await p.waitForTimeout(1500)
-const ownersText = await p.evaluate(() => document.body.innerText)
-const owners = /Co-CEO\/Co-Founder/i.test(ownersText) && /Janelle/.test(ownersText) && /510-674-8011/.test(ownersText)
-await p.evaluate(() => [...document.querySelectorAll('button.ios-row')].find((x) => /Glenn/.test(x.textContent || ''))?.click())
-await p.waitForTimeout(500)
-const sheet = await p.evaluate(() => [...document.querySelectorAll('.calltext-sheet a')].map((a) => a.getAttribute('href')))
-console.log('contacts      :', JSON.stringify({ phoneApp, owners, sheet, landingLine }))
-if (!phoneApp) fails.push('the Phone app could not be opened from the dock')
-if (!owners) fails.push('Contacts does not list both owners')
-if (!(sheet.includes('tel:5107893205') && sheet.includes('sms:5107893205'))) fails.push("tapping Glenn's number does not offer Call and Text")
 
 await b.close()
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); process.exit(1) }
