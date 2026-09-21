@@ -136,7 +136,7 @@ export interface Brand {
    */
   needsSite?: true
   /** The paid icon glow. See LocalSeed.glow. */
-  glow?: true
+  glow?: true | 'pink'
   /**
    * Which affiliate tier this page is drawn at. See data/affiliateTiers.ts.
    *
@@ -186,7 +186,18 @@ export interface Brand {
   /** Published contact address, where the business publishes one. */
   email?: string
   /** What this business gives BEASTY members. See the Seed note. */
-  offers?: { welcome?: string; loyalty?: string; mock?: boolean }
+  offers?: {
+    welcome?: string
+    loyalty?: string
+    mock?: boolean
+    /**
+     * Who the welcome offer is a collaboration between, printed in red beside
+     * the words "Welcome offer" — his markup of 2026-09-19 on Jojo's page,
+     * "Jojo's HC x @TheSnackSensei", and his note for The Yard, "from The
+     * Yard x @TheSnackSensei".
+     */
+    collab?: string
+  }
   /**
    * Line above the menu. Every partner carries one: the list is a curated
    * selection, not their full menu, and the customer should be told that
@@ -372,7 +383,7 @@ interface Seed {
   /** Keep them on the red-outline prospect list even though `site` is set. */
   needsSite?: true
   /** The paid icon glow. See LocalSeed.glow. */
-  glow?: true
+  glow?: true | 'pink'
   /**
    * Which affiliate tier this page is drawn at. See data/affiliateTiers.ts.
    *
@@ -414,7 +425,18 @@ interface Seed {
    * commitment, so both stay empty until that business has actually agreed one
    * — an offer printed on a partner's page is a promise made in their name.
    */
-  offers?: { welcome?: string; loyalty?: string; mock?: boolean }
+  offers?: {
+    welcome?: string
+    loyalty?: string
+    mock?: boolean
+    /**
+     * Who the welcome offer is a collaboration between, printed in red beside
+     * the words "Welcome offer" — his markup of 2026-09-19 on Jojo's page,
+     * "Jojo's HC x @TheSnackSensei", and his note for The Yard, "from The
+     * Yard x @TheSnackSensei".
+     */
+    collab?: string
+  }
   groups?: ServiceGroup[]
   /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere:

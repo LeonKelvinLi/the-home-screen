@@ -125,6 +125,20 @@ FAIL line. Silence is not a pass.
   them has a Share button that hands that link to the phone's share sheet, or
   copies it where there is none. `src/lib/share.ts` holds the three, and the
   server's `SHARE_PAGES` holds their previews.
+- **The owners' card** — Contacts opens on "beastypages.com" and lists both
+  owners, Glenn (CEO/Founder) and Janelle (Co-CEO/Co-Founder), from `OWNERS`
+  in `src/lib/operator.ts`; the landing's contacts panel reads the same list.
+  A number there asks "call or text?" (`src/ios/ui/CallOrText.tsx`), with a
+  real `tel:` and `sms:` link each. Janelle's email stays blank until her
+  mailbox exists.
+- **Halal** — a business whose own pages say halal carries
+  `dietary: ['Halal']`, which draws the halal mark (`src/ios/HalalMark.tsx`,
+  the Arabic word on a green disc, drawn here rather than a licensed image)
+  in its page's chips, and search finds it by the word. It states their
+  claim, never a certification.
+- **Glow** — the paid icon halo is gold by default; `glow: 'pink'` draws it
+  pink (Janelle's page). A tile with no website keeps its red ring inside the
+  halo rather than losing it to the animation.
 - **Calendar** — what the businesses have on, stored server-side. Reading is
   public; writing and deleting need `OPERATOR_TOKEN`.
 - **Accounts and membership** — sign-up and sign-in are one screen: a name

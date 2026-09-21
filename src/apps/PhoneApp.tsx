@@ -9,7 +9,8 @@ import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
 import { BRANDS, brandById } from '../data/brands'
 import type { ShellApi } from '../ios/Device'
-import { OPERATOR, hasOperatorContact, telHref } from '../lib/operator'
+import { OPERATOR, OWNERS, hasOperatorContact } from '../lib/operator'
+import { CallOrTextSheet } from '../ios/ui/CallOrText'
 import { fetchDirectory, fetchMemberCount, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
 import type { PetAvatar } from '../lib/profile'
 
@@ -87,6 +88,8 @@ function formatNumber(d: string): string {
 
 export function PhoneApp({ api }: { api: ShellApi }) {
   const [tab, setTab] = useState<Tab>('contacts')
+  /* The owner whose number was tapped: the Call or Text sheet is open for them. */
+  const [dial, setDial] = useState<{ name: string; phone: string } | null>(null)
   /*
     A REAL MEMBER'S PAGE. Glenn, 2026-09-06: "make sure people on contact list
     we can go into their profile and see what they liked". The row is what the
@@ -277,24 +280,29 @@ export function PhoneApp({ api }: { api: ShellApi }) {
           <span className="operator-note">{OPERATOR.note}</span>
         </div>
 
-        <ListSection
-          footer={
-            live
-              ? undefined
-              : 'The phone line and email are not connected yet. Every kitchen below can still be opened.'
-          }
-        >
-          {OPERATOR.phone ? (
-            <ListRow label="Phone" value={OPERATOR.phone} href={telHref(OPERATOR.phone)} />
-          ) : (
+        {/*
+          THE OWNERS, one section each, under the role he wrote for them —
+          his revision of 2026-09-19 crossed out the single Phone and Email
+          rows and put both owners here. A number asks "call or text?"
+          (see ios/ui/CallOrText): the card above says text is preferred.
+        */}
+        {live ? (
+          OWNERS.map((o) => (
+            <ListSection key={o.name} header={o.role}>
+              <ListRow
+                label={o.name}
+                value={o.phone}
+                onClick={() => setDial({ name: o.name, phone: o.phone })}
+              />
+              {o.email && <ListRow label="Email" value={o.email} href={`mailto:${o.email}`} />}
+            </ListSection>
+          ))
+        ) : (
+          <ListSection footer="The phone line and email are not connected yet. Every kitchen below can still be opened.">
             <ListRow label="Phone" value="Not connected yet" chevron={false} />
-          )}
-          {OPERATOR.email ? (
-            <ListRow label="Email" value={OPERATOR.email} href={`mailto:${OPERATOR.email}`} />
-          ) : (
-            <ListRow label="Email" value="Not connected yet" chevron={false} />
-          )}
-        </ListSection>
+          </ListSection>
+        )}
+        {dial && <CallOrTextSheet name={dial.name} phone={dial.phone} onClose={() => setDial(null)} />}
 
         {/*
           PEOPLE, not businesses.

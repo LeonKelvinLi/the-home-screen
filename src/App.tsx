@@ -75,7 +75,7 @@ export default function App() {
 
     Validated by SHAPE, not against the catalogue. Importing brandById here
     would pull the whole catalogue into the first response, which is the exact
-    cost PARTNER_COUNT exists to avoid — so the id is pattern-checked and the
+    cost the landing page is built to avoid — so the id is pattern-checked and the
     Shell resolves it, falling back to the home screen if it names nothing.
   */
   const shared = (() => {

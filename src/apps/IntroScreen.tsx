@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
-import { CITY_PAGES, PARTNER_COUNT } from '../data/cities'
-import { OPERATOR, telHref } from '../lib/operator'
+import { OPERATOR, OWNERS } from '../lib/operator'
+import { CallOrText } from '../ios/ui/CallOrText'
 import { BEASTY_DIGITS, DIALER_KEYS } from './dialer/keys'
 import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES, type AboutSection } from './dialer/copy'
@@ -900,9 +900,6 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
           />
         </nav>
 
-        <p className="dialer-foot">
-          {PARTNER_COUNT} local businesses. Open tiles in {CITY_PAGES.length} cities.
-        </p>
         <div className="dialer-home" aria-hidden="true" />
       </div>
 
@@ -1300,10 +1297,21 @@ function Panel({
     (page === 'contacts' ? (
       <>
         {OPERATOR.phone || OPERATOR.email ? (
-          <>
-            {OPERATOR.phone && <a href={telHref(OPERATOR.phone)}>{OPERATOR.phone}</a>}
-            {OPERATOR.email && <a href={`mailto:${OPERATOR.email}`}>{OPERATOR.email}</a>}
-          </>
+          /* Both owners, as on the app's Contacts page, and a number asks
+             "call or text?" — his asks of 2026-09-19. */
+          OWNERS.map((o) => (
+            <p className="dialer-owner" key={o.name}>
+              <span className="dialer-owner-role">
+                {o.role} — {o.name}
+              </span>
+              <CallOrText phone={o.phone} name={o.name} className="dialer-owner-link" />
+              {o.email && (
+                <a className="dialer-owner-link" href={`mailto:${o.email}`}>
+                  {o.email}
+                </a>
+              )}
+            </p>
+          ))
         ) : (
           <p>
             The phone line and email are not connected yet. Every business on the home screen

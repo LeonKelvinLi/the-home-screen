@@ -324,27 +324,3 @@ export const CITY_PAGES = [
   */
   'Brisbane',
 ] as const
-
-/**
- * How many researched partners are listed, for the landing page's pitch.
- *
- * A NUMBER rather than `LISTED_KITCHENS.length`, because reading that length
- * costs the landing page the entire catalogue. Shell checks it against the real
- * list on mount and complains in the console if they ever drift, so this cannot
- * quietly go stale.
- */
-/*
-  12, not 13. It went stale the moment The Yard was made quoteOnly to keep its
-  cocktails out of a delivery cart — LISTED_KITCHENS excludes quoteOnly, so the
-  real figure dropped and this constant did not follow. The dev-only guard in
-  Shell.tsx caught it; production had been printing 13.
-
-  Worth knowing WHY it undercounts rather than just matching the number. That
-  exclusion was written to keep a software studio out of a list a food truck is
-  invited to join, and The Yard is a burger restaurant that simply takes its
-  orders at the counter. So the honest figure for "local businesses" is arguably
-  13, and this says 12 — understating, which is the direction the comment on
-  LISTED_KITCHENS explicitly asks for, because overstating the size of the
-  network to someone deciding whether to join is the worst way to be wrong here.
-*/
-export const PARTNER_COUNT = 12

@@ -21,28 +21,6 @@ import { MembersApp } from './apps/MembersApp'
 import { CalendarApp } from './apps/CalendarApp'
 import { MemberCardApp } from './apps/MemberCardApp'
 import { ProfileApp } from './apps/ProfileApp'
-import { LISTED_KITCHENS } from './data/brands'
-import { PARTNER_COUNT } from './data/cities'
-
-/*
-  The landing page quotes PARTNER_COUNT rather than reading this list, because
-  reading it would cost the first response the whole catalogue. This is the only
-  place that has both, so it is where they get compared — a wrong number in the
-  pitch to a prospective business is exactly the kind of stale constant nobody
-  notices.
-*/
-/*
-  Not DEV-only any more. This drifted to 13 against a real 12 and shipped that
-  way, because the only thing watching was a warning nobody runs a dev server to
-  see. One integer comparison at module load is worth a wrong number in the
-  pitch showing up in a production log.
-*/
-if (LISTED_KITCHENS.length !== PARTNER_COUNT) {
-  console.warn(
-    `PARTNER_COUNT is ${PARTNER_COUNT} but there are ${LISTED_KITCHENS.length} listed partners. ` +
-      'Update PARTNER_COUNT in src/data/cities.ts.',
-  )
-}
 
 /**
  * Everything behind the landing page: the fake OS, every app, and the whole

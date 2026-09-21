@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { Symbol } from '../ios/ui/Symbol'
 import { BrandLogo } from '../ios/BrandLogo'
+import { HalalMark, isHalal } from '../ios/HalalMark'
 import { BRANDS } from '../data/brands'
 import { CITY_PAGES } from '../data/cities'
 import { money } from '../store/cart'
@@ -67,7 +68,10 @@ export function SearchApp({ api }: { api: ShellApi }) {
       (b) =>
         b.name.toLowerCase().includes(term) ||
         b.cuisine.toLowerCase().includes(term) ||
-        b.tagline.toLowerCase().includes(term),
+        b.tagline.toLowerCase().includes(term) ||
+        /* "Also make it searchable" — halal, and any other dietary line a
+           business gives about itself, finds it. */
+        !!b.dietary?.some((d) => d.toLowerCase().includes(term)),
     )
 
     const itemHits: Hit[] = []
@@ -185,6 +189,12 @@ export function SearchApp({ api }: { api: ShellApi }) {
                       <em>
                         {b.cuisine}
                         {b.needsOwnerReview && ' · unconfirmed'}
+                        {isHalal(b.dietary) && (
+                          <span className="search-halal">
+                            {' · '}
+                            <HalalMark size={13} /> Halal
+                          </span>
+                        )}
                       </em>
                     </span>
                     <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { ItemSheet } from './ItemSheet'
 import { BrandLogo } from '../ios/BrandLogo'
+import { HalalMark, isHalal } from '../ios/HalalMark'
 import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
@@ -392,13 +393,16 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               <div className="brand-chips">
                 {brand.dietary?.map((d) => (
                   <span
-                    className="chip"
+                    className={isHalal([d]) ? 'chip chip-halal' : 'chip'}
                     key={d}
                     style={{
                       background: ink.isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.08)',
                       color: ink.fg,
                     }}
                   >
+                    {/* The standard mark for every business that says it
+                        serves halal — his ask of 2026-09-18. */}
+                    {isHalal([d]) && <HalalMark size={15} />}
                     {d}
                   </span>
                 ))}
@@ -701,7 +705,12 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 <div className="brand-offer">
                   <span className="brand-offer-head">
                     <Gem size={15} />
-                    Welcome offer
+                    <span className="brand-offer-title">Welcome offer</span>
+                    {/* "Jojo's HC x @TheSnackSensei" — in red, where his
+                        markup put it. */}
+                    {brand.offers.collab && (
+                      <span className="brand-offer-collab">{brand.offers.collab}</span>
+                    )}
                   </span>
                   <span className="brand-offer-body">{brand.offers.welcome}</span>
                   <span className="brand-offer-when">First visit, once.</span>

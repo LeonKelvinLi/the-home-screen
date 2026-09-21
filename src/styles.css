@@ -5727,44 +5727,6 @@ textarea {
   white-space: nowrap;
 }
 
-/*
-  The line under the tab bar.
-
-  `visibility` rather than `opacity`, and the row is collapsed while hidden: at
-  opacity 0 it still occupied 20px between the tab bar and the home indicator,
-  which pushed the whole keypad and call button 16pt up the screen relative to
-  the real thing. Position is not something an invisible element gets to change.
-*/
-.dialer-foot {
-  margin: 0;
-  height: 0;
-  overflow: hidden;
-  order: -1;
-  font-size: 11px;
-  font-weight: 600;
-  /* 0.62 measured 4.28:1 where this actually sits on the gradient, under the
-     4.5 minimum on 11px text. 0.72 gives 5.41. */
-  color: rgba(20, 20, 22, 0.72);
-  opacity: 0;
-  transition: opacity 520ms ease 420ms;
-}
-
-.dialer.is-beasty .dialer-foot {
-  opacity: 1;
-  height: auto;
-  /* 3, not 6: giving the badge its real height cost the tab bar 2pt on a
-     360x620 screen, and this is cheaper to give back than keypad. */
-  margin: calc(3 * var(--u)) 0 calc(2 * var(--u));
-  /*
-    height:auto is not enough on its own. As a flex item this was free to shrink
-    and the tighter keypad squeezed it to 4pt tall, so the one line stating how
-    many businesses are real and how many cities are empty rendered as a sliver
-    of cut-off text. That line is the honest count — it does not get to be the
-    thing that gives way when space is short.
-  */
-  flex: 0 0 auto;
-}
-
 .dialer-home {
   /* Measured 157 x 5.0pt, 8pt clear of the bottom edge. */
   width: 157px;
@@ -5788,7 +5750,6 @@ textarea {
   .dialer-call,
   .dialer-tab,
   .dialer-tab-label > span,
-  .dialer-foot,
   .dialer-number {
     transition: none;
   }
@@ -6228,9 +6189,6 @@ textarea {
     text-overflow: clip;
   }
 
-  .dialer-foot {
-    display: none;
-  }
 }
 
 /*
@@ -7083,6 +7041,53 @@ textarea {
 */
 .brand-offers.is-mock .brand-offer-head {
   color: #7a4a00;
+}
+
+/*
+  WHO THE WELCOME OFFER IS BETWEEN — "Jojo's HC x @TheSnackSensei" — in red,
+  where his markup of 2026-09-19 put it. Two reds, because the block is dark
+  on a signed offer and cream on an example: #b3261e measures 5.9:1 on the
+  cream, and the lighter one 6.2:1 on the dark panel.
+*/
+.brand-offer-collab {
+  margin-left: 4px;
+  font-weight: 700;
+  color: #ff8a80;
+  /* Whole or not at all: on a narrow page it drops under "Welcome offer"
+     rather than squeezing both onto two lines each. */
+  white-space: nowrap;
+}
+
+/* The head wraps as whole pieces; see .brand-offer-collab. */
+.brand-offer-head:has(.brand-offer-collab) {
+  flex-wrap: wrap;
+}
+
+.brand-offer-title {
+  white-space: nowrap;
+}
+
+.brand-offers.is-mock .brand-offer-collab {
+  color: #b3261e;
+}
+
+/* The halal mark sits inside its chip, before the word. */
+.chip-halal {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.chip-halal .halal-mark,
+.search-halal .halal-mark {
+  flex: none;
+}
+
+.search-halal {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-style: normal;
 }
 
 .brand-offers.is-mock .brand-offer-body {
@@ -11055,6 +11060,101 @@ textarea {
   }
 }
 
+/*
+  PINK, for Janelle's page: "Can you put a glow around her icon? Can you make
+  it a pink glow?" (2026-09-20). The same breath and the same radius as the
+  gold one, in her colour — the paid halo, not a new kind of ring.
+*/
+.icon-tile.is-glow.is-glow-pink {
+  animation-name: icon-glow-pink;
+}
+
+@keyframes icon-glow-pink {
+  0%,
+  100% {
+    box-shadow:
+      0 0 5px 1px rgba(255, 79, 163, 0.6),
+      0 0 14px 3px rgba(255, 79, 163, 0.32);
+  }
+  50% {
+    box-shadow:
+      0 0 11px 3px rgba(255, 79, 163, 0.95),
+      0 0 26px 9px rgba(255, 79, 163, 0.5);
+  }
+}
+
+/*
+  A GLOW ON A TILE THAT ALSO WEARS THE RED RING.
+
+  The halo animates box-shadow, and an animation beats a static declaration,
+  so on a tile that was both the red "no website" ring simply vanished for the
+  length of the breath. Janelle's page is both — no website yet, and a glow —
+  so these draw the ring inside every frame. The ring is a fact about the
+  business; the glow is decoration somebody bought; neither may hide the other.
+*/
+.icon-tile.is-nosite.is-glow {
+  animation-name: icon-glow-nosite;
+}
+.icon-tile.is-nosite.is-glow.is-glow-pink {
+  animation-name: icon-glow-pink-nosite;
+}
+
+@keyframes icon-glow-nosite {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 8px 5px rgba(246, 216, 0, 0.5),
+      0 0 16px 7px rgba(246, 216, 0, 0.28);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 13px 7px rgba(246, 216, 0, 0.9),
+      0 0 28px 11px rgba(246, 216, 0, 0.45);
+  }
+}
+
+@keyframes icon-glow-pink-nosite {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 8px 5px rgba(255, 79, 163, 0.55),
+      0 0 16px 7px rgba(255, 79, 163, 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 13px 7px rgba(255, 79, 163, 0.92),
+      0 0 28px 11px rgba(255, 79, 163, 0.48);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile.is-glow.is-glow-pink {
+    box-shadow:
+      0 0 8px 2px rgba(255, 79, 163, 0.8),
+      0 0 20px 6px rgba(255, 79, 163, 0.42);
+  }
+  .icon-tile.is-nosite.is-glow {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 10px 6px rgba(246, 216, 0, 0.7);
+  }
+  .icon-tile.is-nosite.is-glow.is-glow-pink {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 10px 6px rgba(255, 79, 163, 0.75);
+  }
+}
+
 
 /* ---- The pass: the rotating code on the member card ---- */
 .member-code-name {
@@ -11821,4 +11921,88 @@ textarea {
   .kitchen-new {
     animation: none;
   }
+}
+
+/* ---- Call or text: a number that asks, his ask of 2026-09-19 ---- */
+.calltext-scrim {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 10px calc(10px + env(safe-area-inset-bottom));
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.calltext-sheet {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 420px;
+}
+
+.calltext-title {
+  margin: 0;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: rgba(250, 250, 252, 0.97);
+  color: rgba(60, 60, 67, 0.85);
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.calltext-btn,
+.calltext-cancel {
+  display: block;
+  padding: 15px;
+  border: 0;
+  border-radius: 14px;
+  background: rgba(250, 250, 252, 0.97);
+  color: #0a60d8;
+  font-size: 19px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.calltext-cancel {
+  font-weight: 700;
+}
+
+.calltext-number {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* The landing's Contacts panel: one line per owner. */
+.dialer-owner {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0 0 12px;
+}
+
+.dialer-owner-role {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dialer-owner-link {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  text-decoration: underline;
+  cursor: pointer;
 }

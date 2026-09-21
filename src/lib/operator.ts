@@ -21,16 +21,22 @@
  * the moment these are non-empty.
  */
 export const OPERATOR = {
-  name: 'BEASTY',
+  /* "beastypages.com" over the old "BEASTY" — his revision of the Contacts
+     page, 2026-09-19. */
+  name: 'beastypages.com',
   /*
     WHERE "RICHMOND, CALIFORNIA" USED TO BE. His ask, 2026-09-02: "remove
     Richmond California and replace it with 'Get in touch directly with the
     owner of beastypages.com if you have any questions, text or email is
     preferred'." His words, split at the comma so it reads as two sentences.
   */
-  note:
-    'Get in touch directly with the owner of beastypages.com if you have any questions. ' +
-    'Text or email is preferred.',
+  /*
+    "Get in touch directly with the owners for any questions. Text or email is
+    preferred" — his wording in the same revision, now that there are two of
+    them. The old line said "the owner of beastypages.com", which the title
+    above it now says on its own.
+  */
+  note: 'Get in touch directly with the owners for any questions. Text or email is preferred.',
   phone: '510-789-3205',
   /* The domain address, on his ask of 2026-09-02 ("change my email address
      to the domain one"). The mailbox exists: Leon set up the Workspace and
@@ -44,3 +50,30 @@ export const hasOperatorContact = (): boolean =>
 
 /** `tel:` needs the digits alone; a formatted number will not dial on some Androids. */
 export const telHref = (phone: string): string => `tel:${phone.replace(/[^0-9+]/g, '')}`
+
+/** The same digits for a text. `sms:` opens the phone's own messages app. */
+export const smsHref = (phone: string): string => `sms:${phone.replace(/[^0-9+]/g, '')}`
+
+export interface Owner {
+  name: string
+  /** His wording, as he wrote it: "CEO/Founder", "Co-CEO/Co-Founder". */
+  role: string
+  phone: string
+  /** Blank until the mailbox exists — an address that bounces is worse than none. */
+  email: string
+}
+
+/*
+  THE OWNERS, from his revision of the Contacts page on 2026-09-19: "CEO/Founder
+  - Glenn, Co-CEO/Co-Founder - Janelle", each with a number and a domain email.
+  First names only, as on the rest of the site.
+
+  JANELLE'S EMAIL IS BLANK ON PURPOSE. He asked for janelle@beastypages.com in
+  the same message as "create Janelle an email" — the mailbox is being made in
+  the Workspace, and until it exists the address would bounce. Fill it in here
+  the day it does; the row appears on its own.
+*/
+export const OWNERS: Owner[] = [
+  { name: 'Glenn', role: 'CEO/Founder', phone: OPERATOR.phone, email: OPERATOR.email },
+  { name: 'Janelle', role: 'Co-CEO/Co-Founder', phone: '510-674-8011', email: '' },
+]
