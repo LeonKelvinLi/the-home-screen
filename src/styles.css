@@ -11070,16 +11070,23 @@ textarea {
 }
 
 @keyframes icon-glow-pink {
+  /*
+    NEON PINK, #FF6FD0, and as strong as the gold. The first cut used a
+    deeper pink (#FF4FA3) at the gold's opacities, and on a dark wallpaper —
+    beside a red ring especially — it read as a red haze: "where is the pink
+    glow" (Leon, 2026-09-21). A lighter pink keeps its hue against the dark
+    and against red.
+  */
   0%,
   100% {
     box-shadow:
-      0 0 5px 1px rgba(255, 79, 163, 0.6),
-      0 0 14px 3px rgba(255, 79, 163, 0.32);
+      0 0 8px 3px rgba(255, 111, 208, 0.8),
+      0 0 20px 7px rgba(255, 111, 208, 0.45);
   }
   50% {
     box-shadow:
-      0 0 11px 3px rgba(255, 79, 163, 0.95),
-      0 0 26px 9px rgba(255, 79, 163, 0.5);
+      0 0 14px 6px rgba(255, 111, 208, 1),
+      0 0 32px 13px rgba(255, 111, 208, 0.6);
   }
 }
 
@@ -11118,28 +11125,31 @@ textarea {
 }
 
 @keyframes icon-glow-pink-nosite {
+  /* The ring first (it paints on top), then the pink beyond it: the halo
+     starts outside the red, so the two colours sit side by side instead of
+     mixing into one. */
   0%,
   100% {
     box-shadow:
       0 0 0 2px rgba(10, 12, 14, 0.55),
       0 0 0 4px #ff3b30,
-      0 0 8px 5px rgba(255, 79, 163, 0.55),
-      0 0 16px 7px rgba(255, 79, 163, 0.3);
+      0 0 10px 7px rgba(255, 111, 208, 0.8),
+      0 0 22px 10px rgba(255, 111, 208, 0.45);
   }
   50% {
     box-shadow:
       0 0 0 2px rgba(10, 12, 14, 0.55),
       0 0 0 4px #ff3b30,
-      0 0 13px 7px rgba(255, 79, 163, 0.92),
-      0 0 28px 11px rgba(255, 79, 163, 0.48);
+      0 0 16px 9px rgba(255, 111, 208, 1),
+      0 0 34px 14px rgba(255, 111, 208, 0.6);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .icon-tile.is-glow.is-glow-pink {
     box-shadow:
-      0 0 8px 2px rgba(255, 79, 163, 0.8),
-      0 0 20px 6px rgba(255, 79, 163, 0.42);
+      0 0 12px 5px rgba(255, 111, 208, 0.95),
+      0 0 26px 10px rgba(255, 111, 208, 0.5);
   }
   .icon-tile.is-nosite.is-glow {
     box-shadow:
@@ -11151,7 +11161,8 @@ textarea {
     box-shadow:
       0 0 0 2px rgba(10, 12, 14, 0.55),
       0 0 0 4px #ff3b30,
-      0 0 10px 6px rgba(255, 79, 163, 0.75);
+      0 0 14px 8px rgba(255, 111, 208, 0.95),
+      0 0 30px 12px rgba(255, 111, 208, 0.5);
   }
 }
 
