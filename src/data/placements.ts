@@ -1062,4 +1062,65 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'petaluma-goods-6': 'b_thelocalpetaluma', //                      Sandwiches — his own delivery customer, with the glow
   'berkeley-goods-9': 'b_milelimitberkeley', //                     Mediterranean
   'livermore-goods-11': 'b_dumontlivermore', //                     Ice cream shop
+  /* 2026-09-17 to 21, research/roster/batch27.json: fifty-eight seats for
+     about forty businesses, Janelle's own page with the pink glow, and
+     three films. See that file's flags for every fact. */
+  'oakland-goods-12': 'b_realcutiepies', //                        Bakery
+  'daly-city-goods-2': 'b_kankiin', //                             Asian food
+  'san-francisco-goods-0': 'b_lovelysburgerssf', //                Burgers; read-only menu, their to-go rule
+  'oakland-goods2-7': 'b_lovelysburgersoakland', //                Burgers is Cafe Noir's; yellow sheet, Tier 1
+  'san-francisco-goods-16': 'b_whackdonuts', //                    Donuts
+  'san-francisco-goods2-15': 'b_goldengatemarketdeli', //          Sandwiches is Deli Board's; the whole page, for the film
+  'san-francisco-goods2-16': 'b_mochicasf', //                     no Peruvian seat; yellow sheet, Tier 1
+  'dublin-goods-1': 'b_taqueriaaztecadublin', //                   Mexican
+  'dublin-goods-2': 'b_eastbaybuffet', //                          Asian food
+  'oakland-goods2-8': 'b_lachicharronadacolombiana', //            no Colombian seat; yellow sheet, Tier 1
+  'richmond-goods-5': 'b_goldpiepizza', //                         Italian
+  'oakland-goods2-9': 'b_tadaramen', //                            Korean and ramen is Belly's; yellow sheet, Tier 1
+  'san-francisco-goods2-17': 'b_barsprezzatura', //                Italian is Stella's; yellow sheet, Tier 1
+  'san-jose-goods2-4': 'b_poorhousebistro', //                     no New Orleans seat; yellow sheet, Tier 1
+  'albany-goods-4': 'b_sakanasushialbany', //                      Sushi
+  'emeryville-goods-5': 'b_pizzagallery', //                       Italian; the first halal mark
+  'napa-goods-0': 'b_napayard', //                                 Burgers; no bar seat
+  'san-jose-goods2-5': 'b_mimosaswillowglen', //                   no brunch seat; yellow sheet, Tier 1
+  'danville-services2-0': 'b_dreamlandartplay', //                 no kids' play seat; yellow sheet, Tier 1
+  'san-bruno-goods2-0': 'b_cajunbowlsanbruno', //                  no seafood seat; yellow sheet, Tier 1
+  'san-mateo-goods2-0': 'b_cajunbowlsanmateo', //                  no seafood seat; yellow sheet, Tier 1
+  'walnut-creek-goods-4': 'b_okepokewalnutcreek', //               Sushi, for poke
+  'san-rafael-goods-13': 'b_sanaacafe', //                         Coffee shop
+  'alameda-goods-5': 'b_pastapelican', //                          Italian
+  'sunnyvale-goods-14': 'b_almadessert', //                        Boba
+  'albany-goods2-0': 'b_brezoalbany', //                           no Californian seat; yellow sheet, Tier 1
+  'walnut-creek-goods-1': 'b_tacoswalnutcreek', //                 Mexican
+  'san-leandro-goods-2': 'b_yummyyummyhibachisanleandro', //       Asian food
+  'oakland-goods2-12': 'b_yummyyummyhibachi73rd', //               Asian is Cambodian Street Food's; the whole page, for the film
+  'oakland-goods2-13': 'b_yummyyummyhibachipiedmont', //           the same, their second Oakland shop
+  'foster-city-goods2-0': 'b_toastintown', //                      no brunch seat; yellow sheet, Tier 1
+  'antioch-services-4': 'b_barrebeat', //                          Gym; his label said Goods
+  'oakland-goods2-10': 'b_nossooakland', //                        a lounge; yellow sheet, Tier 1
+  'san-leandro-goods-1': 'b_elportalsanleandro', //                Mexican
+  'san-francisco-goods2-18': 'b_kitavasf', //                      no gluten-free seat; yellow sheet, Tier 1
+  'oakland-goods2-11': 'b_kitavaoakland', //                       the same
+  'albany-goods2-1': 'b_kitavaalbany', //                          the same
+  'walnut-creek-goods2-4': 'b_kitavawalnutcreek', //               the same
+  'union-city-services-4': 'b_betweentheplants', //                Gym, for reformer Pilates
+  'vacaville-goods2-0': 'b_pampasvacaville', //                    no steakhouse seat; yellow sheet, Tier 1
+  'walnut-creek-services2-2': 'b_essencebjj', //                   Gym is TruFusion's; yellow sheet, Tier 1
+  'newark-goods-12': 'b_dripdesserthouse', //                      Bakery
+  'san-francisco-services-16': 'b_regentthaimassage', //           Massage
+  'san-francisco-goods2-19': 'b_holbrookhouse', //                 a bar; yellow sheet, Tier 1
+  'santa-rosa-goods-7': 'b_seoultotokyokitchen', //                Korean and ramen
+  'san-jose-services2-2': 'b_bustdownco', //                       no jeweller seat; yellow sheet, Tier 1
+  'beasty-services2-22': 'b_bustdowncobeasty', //                  BEASTY page, with the glow he asked for
+  'newark-services-0': 'b_jazzbraids', //                          Barber and salon — Janelle, pink glow
+  'beasty-services2-21': 'b_jazzbraids', //                        BEASTY page — Janelle, pink glow
+  'concord-services-0': 'b_caballerosbarberlounge', //             Barber and salon
+  'antioch-services-19': 'b_moaeventsrentals', //                  Event coordinator
+  'south-san-francisco-goods-2': 'b_hlpeninsulasouthsf', //        Asian food
+  'burlingame-goods-2': 'b_hlpeninsulapearl', //                   Asian food
+  'castro-valley-goods-2': 'b_hlpeninsulacastrovalley', //         Asian food
+  'burlingame-goods2-0': 'b_hlpeninsulagarden', //                 their second Burlingame room; yellow sheet, Tier 1
+  'milpitas-goods2-1': 'b_hlpeninsulamilpitas', //                 Asian is International Kitchen's; yellow sheet, Tier 1
+  'santa-clara-goods-9': 'b_thehalalcartel', //                    Mediterranean; halal
+  'antioch-goods2-2': 'b_thecozyoven', //                          Bakery is Butter Pecan's; yellow sheet, Tier 1
 }

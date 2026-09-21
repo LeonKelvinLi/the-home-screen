@@ -963,9 +963,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'GI', logoFace: 'script',
     site: 'https://greatimpastadanville.com/',
   }),
+  /* "Needs Website update. Current one isn't working." (2026-09-19) — and it
+     is not: chutneys.ai is still a placeholder with a contact form. The link
+     is off the page, the red outline stays, and the facts are their Instagram
+     (research batch27). The mark is cut from their own post. */
   seed('chutneys', 'Chutneys', 'Chutneys', 'Indian', '#8A4A12', {
+    icon: 'chutneys',
     logoTemplate: 'monogram', logoInitials: 'CH', logoFace: 'slab',
-    site: 'https://chutneys.ai/',
   }),
   seed('french-spot', 'The French Spot', 'French Spot', 'French bakery', '#243A6B', {
     icon: 'french-spot',
@@ -1205,11 +1209,15 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'Order from Livermore',
   }),
   seed('chikin-drip-union-city', 'Chikin Drip', 'Chikin Drip', 'Nashville hot chicken', '#E8621A', {
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'chikin-drip',
     logoTemplate: 'wordmark', logoLines: ['CHIKIN', 'DRIP'], logoFace: 'condensed',
     site: 'https://www.chikindrip.com/',
   }),
   seed('chikin-drip-san-jose', 'Chikin Drip', 'Chikin Drip', 'Nashville hot chicken', '#E8621A', {
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'chikin-drip',
     logoTemplate: 'wordmark', logoLines: ['CHIKIN', 'DRIP'], logoFace: 'condensed',
     site: 'https://www.chikindrip.com/',
@@ -1875,18 +1883,24 @@ export const ROSTER_SEED: LocalSeed[] = [
      business — so it keeps the name the site gives it. Only Milpitas carries
      items, because Milpitas is the menu that was read. */
   seed('kusan-uyghur-cuisine-san-jose', 'Kusan Uyghur Cuisine', 'Kusan', 'Uyghur food', '#8A1C1C', {
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'kusan-bazaar',
     logoTemplate: 'wordmark', logoLines: ['KÜSAN'], logoFace: 'condensed',
     site: 'https://kusanbazaar.com/',
     siteCta: 'Order online',
   }),
   seed('kusan-bazaar-milpitas', 'Kusan Bazaar', 'Kusan Bazaar', 'Uyghur food', '#8A1C1C', {
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'kusan-bazaar',
     logoTemplate: 'wordmark', logoLines: ['KÜSAN'], logoFace: 'condensed',
     site: 'https://kusanbazaar.com/menu/kusanbazaar-milpitas',
     siteCta: 'Order online',
   }),
   seed('kusan-bazaar-mountain-view', 'Kusan Bazaar', 'Kusan Bazaar', 'Uyghur food', '#8A1C1C', {
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'kusan-bazaar',
     logoTemplate: 'wordmark', logoLines: ['KÜSAN'], logoFace: 'condensed',
     site: 'https://kusanbazaar.com/',
@@ -2704,6 +2718,8 @@ export const ROSTER_SEED: LocalSeed[] = [
      yellow sheet at Tier 1. The www address he sent fails; the bare domain
      works. */
   seed('pizza-deli-and-grill', 'Pizza Deli & Grill', 'Pizza Deli', 'Halal pizza & grill', '#B3261E', {
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'pizza-deli-and-grill',
     logoTemplate: 'wordmark', logoLines: ['PIZZA DELI', '& GRILL'], logoFace: 'condensed',
     site: 'https://pizzadeliandgrill.com/',
@@ -2827,6 +2843,482 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['DUMONT'], logoFace: 'slab',
     site: 'https://dumont.us/',
     siteCta: 'See their site',
+  }),
+
+  /* ---- 2026-09-17 to 21. Research in research/roster/batch27.json. ---- */
+  /* Real Cutie Pies, "Oakland • Goods" — dessert cups on 17th Street, on
+     Oakland's open Bakery seat. The reel he sent straight after is their own
+     post of KTVU's feature on them, so it plays here as their film. */
+  seed('real-cutie-pies', 'Real Cutie Pies', 'Cutie Pies', 'Dessert cups', '#1F4E9A', {
+    icon: 'real-cutie-pies',
+    logoTemplate: 'wordmark', logoLines: ['CUTIE', 'PIES'], logoFace: 'script',
+    site: 'https://realcutiepies.com/',
+    siteCta: 'See their flavors',
+    clip: {
+      src: '/clips/real-cutie-pies.mp4',
+      poster: '/clips/real-cutie-pies-poster.webp',
+      href: 'https://www.instagram.com/reel/DU889WWkn8j/',
+      credit: 'Their own post of KTVU FOX 2’s feature',
+      platform: 'Instagram',
+    },
+  }),
+  /* Kan Kiin, "Daly City • Goods" — Thai brunch and dinner on Southgate
+     Avenue, on Daly City's open Asian food seat, with their whole brunch menu. */
+  seed('kan-kiin', 'Kan Kiin', 'Kan Kiin', 'Thai brunch & dinner', '#1D3B2F', {
+    icon: 'kan-kiin',
+    logoTemplate: 'wordmark', logoLines: ['KAN', 'KIIN'], logoFace: 'condensed',
+    site: 'https://www.kankiineatery.com/',
+    siteCta: 'See their menus',
+  }),
+  /* Lovely's Burgers, "Oakland • Goods / San Francisco • Goods" — two shops.
+     San Francisco takes the open Burgers seat with the whole page; Oakland's
+     Burgers seat is Cafe Noir's, so Oakland is a free listing on the yellow
+     sheet. The reel he sent after it is Sam Smith's @samserved visiting the
+     Cole Valley shop, so it plays as a review with his handle. READ-ONLY: their
+     own menu says they cannot take to-go orders at peak hours. */
+  seed('lovelys-burgers-sf', "Lovely's Burgers", "Lovely's", 'Burgers & dogs', '#C8321E', {
+    icon: 'lovelys-burgers',
+    logoTemplate: 'wordmark', logoLines: ["LOVELY'S"], logoFace: 'condensed',
+    site: 'https://www.lovelysburgers.com/cole-valley',
+    siteCta: 'See their hours',
+    quoteOnly:
+      'Order at the counter inside Woods Cole Valley. Their menu says they cannot take to-go orders at peak times, so this is their menu to read, not to order from.',
+    clip: {
+      src: '/clips/lovelys-burgers-sf.mp4',
+      poster: '/clips/lovelys-burgers-sf-poster.webp',
+      href: 'https://www.instagram.com/reel/DWCwnqWgQh9/',
+      credit: 'Filmed by @samserved',
+      platform: 'Instagram',
+      by: 'samserved',
+    },
+  }),
+  seed('lovelys-burgers-oakland', "Lovely's Burgers", "Lovely's", 'Burgers & dogs', '#C8321E', {
+    icon: 'lovelys-burgers',
+    logoTemplate: 'wordmark', logoLines: ["LOVELY'S"], logoFace: 'condensed',
+    site: 'https://www.lovelysburgers.com/oakland',
+    tier: 1,
+  }),
+  /* Whack Donuts, "San Francisco • Goods" — sent as a Linktree, whose main
+     link is their own site, whackdonuts.net. San Francisco's open Donuts seat. */
+  seed('whack-donuts', 'Whack Donuts!', 'Whack', 'Vegan donuts', '#D43F8D', {
+    icon: 'whack-donuts',
+    logoTemplate: 'wordmark', logoLines: ['WHACK', 'DONUTS'], logoFace: 'condensed',
+    site: 'https://www.whackdonuts.net/',
+    siteCta: 'Order from their site',
+  }),
+  /* Mochica, "San Francisco • Goods" — Peruvian has no seat, so the yellow sheet. */
+  seed('mochica-sf', 'Mochica Kitchen & Bar', 'Mochica', 'Peruvian', '#5B2A1E', {
+    icon: 'mochica-sf',
+    logoTemplate: 'wordmark', logoLines: ['MOCHICA'], logoFace: 'slab',
+    site: 'https://mochicasf.com/',
+    tier: 1,
+  }),
+  /* Taqueria Azteca, "Dublin • Goods" — Dublin's open Mexican seat. Their site
+     is a DoorDash-built page with an order button and nothing else. */
+  seed('taqueria-azteca-dublin', 'Taqueria Azteca', 'Azteca', 'Mexican', '#D7261E', {
+    icon: 'taqueria-azteca-dublin',
+    logoTemplate: 'wordmark', logoLines: ['TAQUERIA', 'AZTECA'], logoFace: 'condensed',
+    site: 'https://www.taqueriaazteca.com/',
+  }),
+  /* La Chicharronada Colombiana, "Oakland • Goods. Needs website and pilot
+     program" — a Facebook profile is their only link. */
+  seed('la-chicharronada-colombiana', 'La Chicharronada Colombiana', 'Chicharronada', 'Colombian', '#1C1C1C', {
+    icon: 'la-chicharronada-colombiana',
+    logoTemplate: 'monogram', logoInitials: 'LC', logoFace: 'condensed',
+    tier: 1,
+  }),
+  /* Goldpie Pizza, "Richmond • Goods. New new. Needs website and pilot
+     program" — Sunday and Monday pizza, pre-ordered by text; Richmond's open
+     Italian seat. */
+  seed('goldpie-pizza', 'Goldpie Pizza', 'Goldpie', 'Pizza', '#B3261E', {
+    icon: 'goldpie-pizza',
+    logoTemplate: 'wordmark', logoLines: ['GOLDPIE'], logoFace: 'script',
+  }),
+  /* Golden Gate Market & Deli, "San Francisco • Goods" — the Sandwiches seat
+     is Deli Board's, so this is the yellow sheet, but with THE WHOLE PAGE: he
+     asked "Can you please clip this video for their page?", and a free listing
+     carries no film. The film is @thesnacksensei's. */
+  seed('golden-gate-market-deli', 'Golden Gate Market & Deli', 'Golden Gate', 'Sandwiches & market', '#8E1B1B', {
+    icon: 'golden-gate-market-deli',
+    logoTemplate: 'wordmark', logoLines: ['GOLDEN', 'GATE'], logoFace: 'slab',
+    site: 'https://goldengatemarketdeli.com/',
+    siteCta: 'Order from their site',
+    clip: {
+      src: '/clips/golden-gate-market-deli.mp4',
+      poster: '/clips/golden-gate-market-deli-poster.webp',
+      href: 'https://www.instagram.com/reel/DX7W6WiIU8a/',
+      credit: 'Filmed by @thesnacksensei',
+      platform: 'Instagram',
+      by: 'thesnacksensei',
+    },
+  }),
+  /* Tada Ramen, "Oakland • Goods. Needs website update" — their domain has
+     lapsed and serves a gambling site, so nothing links to it. Korean and
+     ramen is Belly's seat; the yellow sheet. */
+  seed('tada-ramen', 'Tada Ramen & Yakitori', 'Tada', 'Ramen & yakitori', '#141414', {
+    icon: 'tada-ramen',
+    logoTemplate: 'wordmark', logoLines: ['TADA'], logoFace: 'condensed',
+    tier: 1,
+  }),
+  /* Bar Sprezzatura, "San Francisco • Goods" — Italian is Stella's seat. */
+  seed('bar-sprezzatura', 'Bar Sprezzatura', 'Sprezzatura', 'Italian aperitivo bar', '#1F3A2B', {
+    icon: 'bar-sprezzatura',
+    logoTemplate: 'wordmark', logoLines: ['BAR', 'SPRZ'], logoFace: 'condensed',
+    site: 'https://www.barsprezzatura.com/',
+    tier: 1,
+  }),
+  /* Poor House Bistro, "San Jose • Goods. Needs website" — they have one, so
+     it is a redesign pitch, not an outline. No New Orleans seat exists. */
+  seed('poor-house-bistro', 'Poor House Bistro', 'Poor House', 'New Orleans cooking', '#1A1A1A', {
+    icon: 'poor-house-bistro',
+    logoTemplate: 'monogram', logoInitials: 'PHB', logoFace: 'slab',
+    site: 'https://poorhousebistro.com/',
+    tier: 1,
+  }),
+  /* Sakana Sushi & Roll, "Albany • Goods" — Albany's open Sushi seat, the menu
+     from their own ordering portal (a stopgap, so the outline stays). */
+  seed('sakana-sushi-albany', 'Sakana Sushi & Roll', 'Sakana', 'Sushi & rolls', '#D2542A', {
+    icon: 'sakana-sushi',
+    logoTemplate: 'wordmark', logoLines: ['SAKANA'], logoFace: 'slab',
+    site: 'https://www.ordersakana.com/albany/order',
+    siteCta: 'Order from their site',
+  }),
+  /* Pizza Gallery, "Emeryville • Goods" — Emeryville's open Italian seat, and
+     the first page with the halal mark: "If we can add this icon onto Pizza
+     galleries page and make this the standard for restaurants that serve
+     Halal. Also make it searchable." */
+  seed('pizza-gallery', 'Pizza Gallery', 'Pizza Gallery', 'Halal pizza & wings', '#C62828', {
+    icon: 'pizza-gallery',
+    logoTemplate: 'wordmark', logoLines: ['PIZZA', 'GALLERY'], logoFace: 'condensed',
+    site: 'https://pizzagalleryca.com/',
+    siteCta: 'Order from their site',
+    dietary: ['Halal'],
+  }),
+  /* Napa Yard, "NAPA • Goods" — a beer garden on the river; Napa's open Burgers
+     seat, since the Double Smashburger is theirs and no bar category exists. */
+  seed('napa-yard', 'Napa Yard & Beer Garden', 'Napa Yard', 'Beer garden', '#2E3A2F', {
+    icon: 'napa-yard',
+    logoTemplate: 'wordmark', logoLines: ['NAPA', 'YARD'], logoFace: 'condensed',
+    site: 'https://www.napayard.com/',
+    siteCta: 'See their menus',
+  }),
+  /* Mimosas of Willow Glen, "San Jose • Goods" — brunch has no seat. */
+  seed('mimosas-willow-glen', 'Mimosas of Willow Glen', 'Mimosas', 'Brunch', '#2B2B2B', {
+    icon: 'mimosas-willow-glen',
+    logoTemplate: 'wordmark', logoLines: ['MIMOSAS'], logoFace: 'script',
+    site: 'https://mimosasofwillowglen.com/',
+    tier: 1,
+  }),
+  /* Dreamland Art & Play, "Danville • Services" — a kids' play town and art
+     studio; no tile fits, so the services yellow sheet. */
+  seed('dreamland-art-play', 'Dreamland Art & Play', 'Dreamland', "Kids' play & art studio", '#3A3A3A', {
+    icon: 'dreamland-art-play',
+    logoTemplate: 'wordmark', logoLines: ['DREAMLAND'], logoFace: 'script',
+    site: 'https://www.dreamlandartandplay.com/',
+    tier: 1,
+  }),
+  /* Cajun Bowl, "San Bruno • Goods / San Mateo • Goods" — two shops; no
+     seafood seat, so both yellow sheets. */
+  seed('cajun-bowl-san-bruno', 'Cajun Bowl', 'Cajun Bowl', 'Cajun seafood', '#1B1B1B', {
+    icon: 'cajun-bowl',
+    logoTemplate: 'wordmark', logoLines: ['CAJUN', 'BOWL'], logoFace: 'script',
+    site: 'https://www.cajunbowlcalifornia.com/',
+    tier: 1,
+  }),
+  seed('cajun-bowl-san-mateo', 'Cajun Bowl', 'Cajun Bowl', 'Cajun seafood', '#1B1B1B', {
+    icon: 'cajun-bowl',
+    logoTemplate: 'wordmark', logoLines: ['CAJUN', 'BOWL'], logoFace: 'script',
+    site: 'https://www.cajunbowlcalifornia.com/',
+    tier: 1,
+  }),
+  /* Oke Poke, "Walnut Creek • Goods" — poke takes the Sushi seat, as Truffle
+     Poke's did on the Peninsula. */
+  seed('oke-poke-walnut-creek', 'Oke Poke Walnut Creek', 'Oke Poke', 'Poke', '#1C1C1C', {
+    icon: 'oke-poke-walnut-creek',
+    logoTemplate: 'wordmark', logoLines: ['OKE', 'POKE'], logoFace: 'condensed',
+    site: 'https://www.okepoke.com/',
+    siteCta: 'Order from their site',
+  }),
+  /* Sana'a Cafe, "San Rafael • Goods. Needs website and pilot program" —
+     Yemeni coffee, San Rafael's open Coffee seat. */
+  seed('sanaa-cafe', "Sana'a Cafe", "Sana'a", 'Yemeni coffee', '#2A2016', {
+    icon: 'sanaa-cafe',
+    logoTemplate: 'wordmark', logoLines: ["SANA'A"], logoFace: 'slab',
+  }),
+  /* Pasta Pelican, "Alameda • Goods" — Alameda's open Italian seat, with
+     their whole dining menu. */
+  seed('pasta-pelican', 'Pasta Pelican', 'Pelican', 'Italian & American', '#13294B', {
+    icon: 'pasta-pelican',
+    logoTemplate: 'wordmark', logoLines: ['PASTA', 'PELICAN'], logoFace: 'script',
+    site: 'https://www.pastapelican.com/',
+    siteCta: 'Reserve or order',
+  }),
+  /* Alma Dessert, "Sunnyvale • Goods" — "Boba x Tiramisu", on Sunnyvale's
+     open Boba seat. */
+  seed('alma-dessert', 'Alma Dessert', 'Alma', 'Tiramisu & tea', '#D2693F', {
+    icon: 'alma-dessert',
+    logoTemplate: 'wordmark', logoLines: ['ALMA'], logoFace: 'script',
+    site: 'https://www.almadessert.com/',
+    siteCta: 'Order from their site',
+  }),
+  /* Brezo, "Albany • Goods" — Californian has no seat. */
+  seed('brezo-albany', 'Brezo Restaurant', 'Brezo', 'Californian', '#111111', {
+    icon: 'brezo-albany',
+    logoTemplate: 'wordmark', logoLines: ['BREZO'], logoFace: 'script',
+    site: 'https://www.brezorestaurant.com/',
+    tier: 1,
+  }),
+  /* Tacos Walnut Creek, "Walnut Creek • Goods" — the open Mexican seat. */
+  seed('tacos-walnut-creek', 'Tacos Walnut Creek', 'Tacos WC', 'Mexican', '#1B1B1B', {
+    icon: 'tacos-walnut-creek',
+    logoTemplate: 'wordmark', logoLines: ['TACOS', 'WC'], logoFace: 'condensed',
+    site: 'https://tacoswalnutcreek.com/',
+    siteCta: 'See their menu',
+  }),
+  /* Yummy Yummy Hibachi, "3 locations" — one page each, and the reel on every
+     one: "Please clip this video for each of the locations pages." San
+     Leandro takes the open Asian food seat; Oakland's is Cambodian Street
+     Food's, so the two Oakland shops go on the yellow sheet with THE WHOLE
+     PAGE, because a free listing carries no film. Their bio's website is dead. */
+  seed('yummy-yummy-hibachi-san-leandro', 'Yummy Yummy Hibachi', 'Yummy', 'Hibachi', '#E4611B', {
+    icon: 'yummy-yummy-hibachi',
+    logoTemplate: 'wordmark', logoLines: ['YUMMY', 'YUMMY'], logoFace: 'condensed',
+    clip: {
+      src: '/clips/yummy-yummy-hibachi.mp4',
+      poster: '/clips/yummy-yummy-hibachi-poster.webp',
+      href: 'https://www.instagram.com/reel/DdeeVxNzQe4/',
+      credit: 'Their own film, @yummy_yummyhibachi',
+      platform: 'Instagram',
+    },
+  }),
+  seed('yummy-yummy-hibachi-73rd', 'Yummy Yummy Hibachi', 'Yummy', 'Hibachi', '#E4611B', {
+    icon: 'yummy-yummy-hibachi',
+    logoTemplate: 'wordmark', logoLines: ['YUMMY', 'YUMMY'], logoFace: 'condensed',
+    clip: {
+      src: '/clips/yummy-yummy-hibachi.mp4',
+      poster: '/clips/yummy-yummy-hibachi-poster.webp',
+      href: 'https://www.instagram.com/reel/DdeeVxNzQe4/',
+      credit: 'Their own film, @yummy_yummyhibachi',
+      platform: 'Instagram',
+    },
+  }),
+  seed('yummy-yummy-hibachi-piedmont', 'Yummy Yummy Hibachi', 'Yummy', 'Hibachi', '#E4611B', {
+    icon: 'yummy-yummy-hibachi',
+    logoTemplate: 'wordmark', logoLines: ['YUMMY', 'YUMMY'], logoFace: 'condensed',
+    clip: {
+      src: '/clips/yummy-yummy-hibachi.mp4',
+      poster: '/clips/yummy-yummy-hibachi-poster.webp',
+      href: 'https://www.instagram.com/reel/DdeeVxNzQe4/',
+      credit: 'Their own film, @yummy_yummyhibachi',
+      platform: 'Instagram',
+    },
+  }),
+  /* Toast In Town, "Foster City • Goods. Can you isolate just the toast/bread
+     for the icon logo?" — the icon is the loaf alone. Brunch has no seat. */
+  seed('toast-in-town', 'Toast In Town', 'Toast', 'Brunch', '#5B2F1F', {
+    icon: 'toast-in-town',
+    logoTemplate: 'wordmark', logoLines: ['TOAST'], logoFace: 'slab',
+    site: 'https://toastintown.com/',
+    tier: 1,
+  }),
+  /* BARREbeat, "Antioch • Goods" — a fitness studio, so Antioch's open Gym
+     seat on the services page, the label corrected rather than followed. */
+  seed('barre-beat', 'BARREbeat Fitness', 'BARREbeat', 'Barre & dance fitness', '#6B3FA0', {
+    icon: 'barre-beat',
+    logoTemplate: 'wordmark', logoLines: ['BARRE', 'BEAT'], logoFace: 'condensed',
+    site: 'https://barre-beat.com/',
+    siteCta: 'Book a class',
+  }),
+  /* Nosso, "Oakland • Goods" — sent with the Barre Beat link pasted again; the
+     screenshots are all Nosso's. A lounge; the yellow sheet. */
+  seed('nosso-oakland', 'Nosso', 'Nosso', 'Lounge & bites', '#1E1E1E', {
+    icon: 'nosso-oakland',
+    logoTemplate: 'wordmark', logoLines: ['NOSSO'], logoFace: 'script',
+    site: 'https://nossooakland.com/',
+    tier: 1,
+  }),
+  /* El Portal, "San Leandro • Goods" — the open Mexican seat, their own menu. */
+  seed('el-portal-san-leandro', 'El Portal Mexican Restaurant', 'El Portal', 'Mexican & seafood', '#8A4A1E', {
+    icon: 'el-portal-san-leandro',
+    logoTemplate: 'wordmark', logoLines: ['EL', 'PORTAL'], logoFace: 'script',
+    site: 'https://www.elportalrest.com/',
+    siteCta: 'See their menu',
+  }),
+  /* Kitava, "Goods, 4 locations" — gluten-free, which has no seat, so four
+     yellow-sheet listings: San Francisco, Oakland, Albany, Walnut Creek. */
+  seed('kitava-sf', 'Kitava', 'Kitava', 'Gluten-free kitchen', '#5E8C31', {
+    icon: 'kitava',
+    logoTemplate: 'wordmark', logoLines: ['KITAVA'], logoFace: 'slab',
+    site: 'https://www.kitava.com/store-locator/',
+    tier: 1,
+  }),
+  seed('kitava-oakland', 'Kitava', 'Kitava', 'Gluten-free kitchen', '#5E8C31', {
+    icon: 'kitava',
+    logoTemplate: 'wordmark', logoLines: ['KITAVA'], logoFace: 'slab',
+    site: 'https://www.kitava.com/store-locator/',
+    tier: 1,
+  }),
+  seed('kitava-albany', 'Kitava', 'Kitava', 'Gluten-free kitchen', '#5E8C31', {
+    icon: 'kitava',
+    logoTemplate: 'wordmark', logoLines: ['KITAVA'], logoFace: 'slab',
+    site: 'https://www.kitava.com/store-locator/',
+    tier: 1,
+  }),
+  seed('kitava-walnut-creek', 'Kitava', 'Kitava', 'Gluten-free kitchen', '#5E8C31', {
+    icon: 'kitava',
+    logoTemplate: 'wordmark', logoLines: ['KITAVA'], logoFace: 'slab',
+    site: 'https://www.kitava.com/store-locator/',
+    tier: 1,
+  }),
+  /* Between The Plants, "Union City • Services. They have an app to download
+     to book." — reformer Pilates, Union City's open Gym seat. */
+  seed('between-the-plants', 'Between The Plants', 'Between', 'Reformer Pilates', '#1F5A3D', {
+    icon: 'between-the-plants',
+    logoTemplate: 'wordmark', logoLines: ['BETWEEN', 'THE PLANTS'], logoFace: 'script',
+    site: 'https://www.betweentheplants.com/',
+    siteCta: 'See their plans',
+  }),
+  /* PAMPAS, "Vacaville • Goods" — a Brazilian steakhouse; no seat fits. */
+  seed('pampas-vacaville', 'PAMPAS Brazilian Steakhouse', 'Pampas', 'Brazilian steakhouse', '#4A1E1E', {
+    icon: 'pampas-vacaville',
+    logoTemplate: 'wordmark', logoLines: ['PAMPAS'], logoFace: 'slab',
+    site: 'https://www.pampasbraziliansteakhouse.com/',
+    tier: 1,
+  }),
+  /* Essence Jiu Jitsu, "Walnut Creek • Services" — the Gym seat is TruFusion's. */
+  seed('essence-bjj', 'Essence Jiu Jitsu', 'Essence', 'Brazilian jiu-jitsu', '#1A1A1A', {
+    icon: 'essence-bjj',
+    logoTemplate: 'wordmark', logoLines: ['ESSENCE'], logoFace: 'condensed',
+    site: 'https://essencebjjwalnutcreek.com/',
+    tier: 1,
+  }),
+  /* Drip Dessert House, "Newark • Goods" — Newark's open Bakery seat; a Square
+     store is their only site, so the outline stays. */
+  seed('drip-dessert-house', 'Drip Dessert House', 'Drip', 'Dessert house', '#4A2C1D', {
+    icon: 'drip-dessert-house',
+    logoTemplate: 'wordmark', logoLines: ['DRIP'], logoFace: 'condensed',
+    site: 'https://dripdesserthouse.square.site/',
+    siteCta: 'Order from their store',
+  }),
+  /* Regent Thai Massage, "San Francisco • Services" — the open Massage seat. */
+  seed('regent-thai-massage', 'Regent Thai Massage', 'Regent', 'Thai massage', '#0E1B33', {
+    icon: 'regent-thai-massage',
+    logoTemplate: 'wordmark', logoLines: ['REGENT'], logoFace: 'script',
+    site: 'https://www.regentthaimassage.com/',
+    siteCta: 'Book a massage',
+  }),
+  /* The Holbrook House, "San Francisco • Goods" — a bar; no seat fits. */
+  seed('holbrook-house', 'The Holbrook House', 'Holbrook', 'Bar & restaurant', '#141414', {
+    icon: 'holbrook-house',
+    logoTemplate: 'wordmark', logoLines: ['HOLBROOK'], logoFace: 'slab',
+    site: 'https://www.holbrookhousesf.com/',
+    tier: 1,
+  }),
+  /* Seoul to Tokyo Kitchen, "Santa Rosa • Goods" — the open Korean seat. */
+  seed('seoul-to-tokyo-kitchen', 'Seoul to Tokyo Kitchen', 'Seoul Tokyo', 'Korean & Japanese', '#2B2B2B', {
+    icon: 'seoul-to-tokyo-kitchen',
+    logoTemplate: 'wordmark', logoLines: ['SEOUL', 'TOKYO'], logoFace: 'condensed',
+    site: 'https://seoultotokyokitchen.com/',
+    siteCta: 'See their menu',
+  }),
+  /* Bust Down & Co., "San Jose • Services / BEASTY • Services. Please put a
+     glow on the BEASTY spot. This is Janelle's family." Two seeds because the
+     two seats differ: the San Jose listing is free and plain, the BEASTY page
+     is whole and glows. */
+  seed('bust-down-co', 'Bust Down & Co.', 'Bust Down', 'Custom jewelry & watches', '#111111', {
+    icon: 'bust-down-co',
+    logoTemplate: 'wordmark', logoLines: ['BUST', 'DOWN'], logoFace: 'condensed',
+    site: 'https://bustdownandco.com/',
+    tier: 1,
+  }),
+  seed('bust-down-co-beasty', 'Bust Down & Co.', 'Bust Down', 'Custom jewelry & watches', '#111111', {
+    glow: true,
+    icon: 'bust-down-co',
+    logoTemplate: 'wordmark', logoLines: ['BUST', 'DOWN'], logoFace: 'condensed',
+    site: 'https://bustdownandco.com/',
+    siteCta: 'Shop their store',
+  }),
+  /* Jazz Braids — Janelle's own. "Newark • Services / BEASTY • Services. Needs
+     website. This is Janelle folks. Can you put a glow around her icon? Can
+     you make it a pink glow?" Newark's open Barber and salon seat and a BEASTY
+     seat, the pink glow on both, and her own post of Ludacris's birthday
+     braids as the film: "Can you also clip this video and add it to her page." */
+  seed('jazz-braids', 'Jazz Braids', 'Jazz Braids', 'Braids, salon services', '#4A2A1E', {
+    glow: 'pink',
+    icon: 'jazz-braids',
+    logoTemplate: 'wordmark', logoLines: ['JAZZ', 'BRAIDS'], logoFace: 'script',
+    site: 'https://www.styleseat.com/m/v/jazzbraidsstyles',
+    siteCta: 'Book on StyleSeat',
+    clip: {
+      src: '/clips/jazz-braids.mp4',
+      poster: '/clips/jazz-braids-poster.webp',
+      href: 'https://www.instagram.com/reel/Cw6TATXPOkB/',
+      credit: 'Her own post, @jazz_braids_styles',
+      platform: 'Instagram',
+    },
+  }),
+  /* Caballeros BarberLounge, "Concord • Services" — the open Barber seat. */
+  seed('caballeros-barber-lounge', 'Caballeros BarberLounge', 'Caballeros', 'Barber', '#1A1A1A', {
+    icon: 'caballeros-barber-lounge',
+    logoTemplate: 'wordmark', logoLines: ['CABALLEROS'], logoFace: 'script',
+    site: 'https://www.caballerosbarberlounge.com/',
+    siteCta: 'Book a cut',
+  }),
+  /* MOA Events & Rentals, "Antioch • Services. Needs Website. Pilot program" —
+     they have a working site with a booking cart, so no outline; Antioch's
+     open Events seat. */
+  seed('moa-events-rentals', 'MOA Events & Rentals', 'MOA', 'Mobile party rentals', '#1A9E9E', {
+    icon: 'moa-events-rentals',
+    logoTemplate: 'wordmark', logoLines: ['MOA'], logoFace: 'condensed',
+    site: 'https://rentbouncebayarea.com/',
+    siteCta: 'Book a rental',
+  }),
+  /* HL Peninsula, "Five locations" — one page each. The Asian food seat is open
+     in South San Francisco, Burlingame and Castro Valley; Milpitas's is taken,
+     and Burlingame's second restaurant goes on its yellow sheet. */
+  seed('hl-peninsula-south-sf', 'HL Peninsula Restaurant', 'HL Peninsula', 'Cantonese dim sum', '#1E3A8A', {
+    icon: 'hl-peninsula',
+    logoTemplate: 'monogram', logoInitials: 'HL', logoFace: 'slab',
+    site: 'https://www.hlpeninsula.com/locations',
+    siteCta: 'See their menus',
+  }),
+  seed('hl-peninsula-pearl', 'HL Peninsula Pearl', 'HL Pearl', 'Cantonese dim sum', '#1E3A8A', {
+    icon: 'hl-peninsula',
+    logoTemplate: 'monogram', logoInitials: 'HL', logoFace: 'slab',
+    site: 'https://www.hlpeninsula.com/locations',
+    siteCta: 'See their menus',
+  }),
+  seed('hl-peninsula-castro-valley', 'HL Peninsula Restaurant', 'HL Peninsula', 'Cantonese dim sum', '#1E3A8A', {
+    icon: 'hl-peninsula',
+    logoTemplate: 'monogram', logoInitials: 'HL', logoFace: 'slab',
+    site: 'https://www.hlpeninsula.com/locations',
+    siteCta: 'See their menus',
+  }),
+  seed('hl-peninsula-garden', 'HL Peninsula Garden', 'HL Garden', 'Cantonese dim sum', '#1E3A8A', {
+    icon: 'hl-peninsula',
+    logoTemplate: 'monogram', logoInitials: 'HL', logoFace: 'slab',
+    site: 'https://www.hlpeninsula.com/locations',
+    tier: 1,
+  }),
+  seed('hl-peninsula-milpitas', 'HL Peninsula Restaurant', 'HL Peninsula', 'Cantonese dim sum', '#1E3A8A', {
+    icon: 'hl-peninsula',
+    logoTemplate: 'monogram', logoInitials: 'HL', logoFace: 'slab',
+    site: 'https://www.hlpeninsula.com/locations',
+    tier: 1,
+  }),
+  /* The Halal Cartel, "Santa Clara • Goods. Halal" — Santa Clara's open
+     Mediterranean seat, with the halal mark on their own word. */
+  seed('the-halal-cartel', 'The Halal Cartel', 'Halal Cartel', 'Halal street food', '#1E1612', {
+    icon: 'the-halal-cartel',
+    logoTemplate: 'wordmark', logoLines: ['HALAL', 'CARTEL'], logoFace: 'condensed',
+    dietary: ['Halal'],
+  }),
+  /* The Cozy Oven, "Antioch • Goods. New new. Needs Website and pilot
+     program" — cakes to order; the Bakery seat is Butter Pecan's. */
+  seed('the-cozy-oven', 'The Cozy Oven', 'Cozy Oven', 'Custom cakes', '#E88BA5', {
+    icon: 'the-cozy-oven',
+    logoTemplate: 'wordmark', logoLines: ['COZY', 'OVEN'], logoFace: 'script',
+    tier: 1,
   }),
 ]
 

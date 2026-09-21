@@ -214,6 +214,65 @@ for (const [id, want, expect] of [
   ['b_thelocalpetaluma', 'The Local', { rows: 18, hours: "Mon-Sat 10:30am-3:30pm", photos: 1, call: "(707) 981-7100" }],
   ['b_milelimitberkeley', 'Mile Limit', { rows: 17, hours: "Wed-Thu 4-9pm", photos: 3, call: "(510) 833-2687" }],
   ['b_dumontlivermore', 'Dumont Creamery & Cafe', {  }],
+  /* 2026-09-17 to 21: the batch of forty-odd, Janelle's page and five HL rooms. */
+  ['b_realcutiepies', 'Real Cutie Pies', { hours: 'Tue-Sat 12-5pm' }],
+  ['b_kankiin', 'Kan Kiin', { rows: 35, hours: 'Brunch Mon-Fri', call: '(650) 755-8749' }],
+  ['b_lovelysburgerssf', "Lovely's Burgers", { rows: 10, quote: true }],
+  ['b_lovelysburgersoakland', "Lovely's Burgers", { free: true }],
+  ['b_whackdonuts', 'Whack Donuts!', { call: '(415) 754-8451' }],
+  ['b_mochicasf', 'Mochica Kitchen & Bar', { free: true, call: '(415) 278-0480' }],
+  ['b_taqueriaaztecadublin', 'Taqueria Azteca', { call: '(925) 833-0888' }],
+  ['b_lachicharronadacolombiana', 'La Chicharronada Colombiana', { free: true, call: '(408) 509-4458' }],
+  ['b_goldpiepizza', 'Goldpie Pizza', { hours: 'Sun and Mon', call: '(510) 529-5007' }],
+  ['b_goldengatemarketdeli', 'Golden Gate Market & Deli', { rows: 55, hours: 'Deli daily', call: '(415) 346-6052' }],
+  ['b_tadaramen', 'Tada Ramen & Yakitori', { free: true }],
+  ['b_eastbaybuffet', 'East Bay Buffet', { rows: 12, quote: true, call: '(925) 361-7429' }],
+  ['b_barsprezzatura', 'Bar Sprezzatura', { free: true }],
+  ['b_poorhousebistro', 'Poor House Bistro', { free: true, call: '(408) 292-5837' }],
+  ['b_sakanasushialbany', 'Sakana Sushi & Roll', { rows: 170, call: '(510) 634-7447' }],
+  ['b_pizzagallery', 'Pizza Gallery', { rows: 17, hours: 'Sun-Wed 11am-9pm', call: '(510) 607-8778' }],
+  ['b_napayard', 'Napa Yard & Beer Garden', { rows: 23, hours: 'Mon-Thu 4-10pm', call: '(707) 815-0398' }],
+  ['b_mimosaswillowglen', 'Mimosas of Willow Glen', { free: true, call: '(408) 352-5015' }],
+  ['b_dreamlandartplay', 'Dreamland Art & Play', { free: true, call: '(415) 686-4748' }],
+  ['b_cajunbowlsanbruno', 'Cajun Bowl', { free: true, call: '(650) 636-4550' }],
+  ['b_cajunbowlsanmateo', 'Cajun Bowl', { free: true, call: '(650) 445-7248' }],
+  ['b_okepokewalnutcreek', 'Oke Poke Walnut Creek', { rows: 25, hours: 'Daily 11am-8pm' }],
+  ['b_sanaacafe', "Sana'a Cafe", { hours: 'Sun-Thu 7am-10pm' }],
+  ['b_pastapelican', 'Pasta Pelican', { rows: 60, hours: 'Mon-Thu 11:30am', call: '(510) 864-7427' }],
+  ['b_almadessert', 'Alma Dessert', { rows: 19 }],
+  ['b_brezoalbany', 'Brezo Restaurant', { free: true, call: '(510) 705-1897' }],
+  ['b_tacoswalnutcreek', 'Tacos Walnut Creek', { hours: 'Daily 10am-10pm', call: '(925) 464-7489' }],
+  ['b_yummyyummyhibachisanleandro', 'Yummy Yummy Hibachi', { call: '(510) 488-8738' }],
+  ['b_yummyyummyhibachi73rd', 'Yummy Yummy Hibachi', { call: '(510) 626-6724' }],
+  ['b_yummyyummyhibachipiedmont', 'Yummy Yummy Hibachi', { call: '(510) 907-3904' }],
+  ['b_toastintown', 'Toast In Town', { free: true, call: '(650) 389-7618' }],
+  ['b_barrebeat', 'BARREbeat Fitness', { rows: 6, quote: true, call: '(925) 679-4428' }],
+  ['b_nossooakland', 'Nosso', { free: true, call: '(510) 207-1008' }],
+  ['b_elportalsanleandro', 'El Portal Mexican Restaurant', { rows: 150, hours: 'Mon-Fri 9am-10pm' }],
+  ['b_kitavasf', 'Kitava', { free: true, call: '(415) 780-1661' }],
+  ['b_kitavaoakland', 'Kitava', { free: true, call: '(510) 496-4055' }],
+  ['b_kitavaalbany', 'Kitava', { free: true, call: '(510) 725-6097' }],
+  ['b_kitavawalnutcreek', 'Kitava', { free: true, call: '(925) 430-2901' }],
+  ['b_betweentheplants', 'Between The Plants', { rows: 3, quote: true, call: '(510) 690-7143' }],
+  ['b_pampasvacaville', 'PAMPAS Brazilian Steakhouse', { free: true, call: '(707) 514-7228' }],
+  ['b_essencebjj', 'Essence Jiu Jitsu', { free: true, call: '(925) 404-9876' }],
+  ['b_dripdesserthouse', 'Drip Dessert House', { rows: 9 }],
+  ['b_regentthaimassage', 'Regent Thai Massage', { rows: 9, quote: true, hours: 'Daily 10am-9pm', call: '(415) 465-3604' }],
+  ['b_holbrookhouse', 'The Holbrook House', { free: true, call: '(415) 515-6444' }],
+  ['b_seoultotokyokitchen', 'Seoul to Tokyo Kitchen', { hours: 'Mon-Sat 11am-3pm', call: '(707) 919-3014' }],
+  ['b_bustdownco', 'Bust Down & Co.', { free: true, call: '(510) 586-9228' }],
+  ['b_bustdowncobeasty', 'Bust Down & Co.', { hours: 'Mon-Fri 11am-5pm', call: '(510) 586-9228' }],
+  ['b_jazzbraids', 'Jazz Braids', { rows: 10, quote: true, hours: 'Wed-Thu 10:30am', call: '(510) 894-3975' }],
+  ['b_caballerosbarberlounge', 'Caballeros BarberLounge', { rows: 6, quote: true, call: '(925) 444-5024' }],
+  ['b_moaeventsrentals', 'MOA Events & Rentals', { rows: 3, quote: true, call: '(925) 502-6384' }],
+  ['b_hlpeninsulasouthsf', 'HL Peninsula Restaurant', { hours: 'Mon-Fri 10:30am', call: '(650) 616-8168' }],
+  ['b_hlpeninsulapearl', 'HL Peninsula Pearl', { call: '(650) 697-1288' }],
+  ['b_hlpeninsulacastrovalley', 'HL Peninsula Restaurant', { call: '(510) 999-3838' }],
+  ['b_hlpeninsulagarden', 'HL Peninsula Garden', { free: true, call: '(650) 692-8888' }],
+  ['b_hlpeninsulamilpitas', 'HL Peninsula Restaurant', { free: true, call: '(408) 262-3988' }],
+  ['b_thehalalcartel', 'The Halal Cartel', { hours: 'Daily 11am-11pm' }],
+  ['b_thecozyoven', 'The Cozy Oven', { free: true }],
+  ['b_chutneys', 'Chutneys', { hours: 'Mon-Fri 11am-9pm', call: '(925) 434-5555' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -277,6 +336,37 @@ for (const [id, want] of [['b_thelocalpetaluma', 'Watch a review by @thespoonlis
   console.log(`${id.padEnd(22)}: ${bar}`)
   if (!bar.startsWith(want)) fails.push(`${id}'s clip bar reads "${bar}", expected "${want}"`)
 }
+
+/* The films of 2026-09-17 to 21: three by creators, three the businesses' own. */
+for (const [id, want] of [
+  ['b_goldengatemarketdeli', 'Watch a review by @thesnacksensei'],
+  ['b_lovelysburgerssf', 'Watch a review by @samserved'],
+  ['b_jonnysitalianice', 'Watch a review by @peggy_shoo'],
+  ['b_realcutiepies', 'Watch their video'],
+  ['b_yummyyummyhibachi73rd', 'Watch their video'],
+  ['b_jazzbraids', 'Watch their video'],
+]) {
+  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await p.waitForTimeout(600)
+  const bar = await p.evaluate(() => document.querySelector('.brand-clip-drop .menu-picks-bar')?.textContent?.replace(/\s+/g, ' ').trim() ?? '')
+  console.log(`${id.padEnd(22)}: ${bar}`)
+  if (!bar.startsWith(want)) fails.push(`${id}'s clip bar reads "${bar}", expected "${want}"`)
+}
+
+/* The halal mark (2026-09-18) and the red collab line on the example offers
+   (2026-09-19). */
+await p.goto(`${base}/?b=b_pizzagallery`, { waitUntil: 'networkidle', timeout: 45000 })
+await p.waitForTimeout(500)
+const halal = await p.evaluate(() => !!document.querySelector('.chip-halal .halal-mark'))
+for (const [id, who] of [['b_jojoshotchicken', 'Jojo’s HC x @TheSnackSensei'], ['b_theyardbrentwood', 'The Yard x @TheSnackSensei']]) {
+  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await p.waitForTimeout(500)
+  const tag = await p.evaluate(() => document.querySelector('.brand-offer-collab')?.textContent?.trim() ?? '')
+  console.log(`collab ${id.padEnd(15)}: ${tag}`)
+  if (tag !== who) fails.push(`${id}: the welcome offer's collab line reads "${tag}", expected "${who}"`)
+}
+console.log('halal mark    :', halal)
+if (!halal) fails.push("Pizza Gallery's page does not carry the halal mark")
 
 /* Deli Board's film is @antoinetterzz's too, sent with the listing on 2026-09-16. */
 await p.goto(`${base}/?b=b_deliboard`, { waitUntil: 'networkidle', timeout: 45000 })
@@ -490,6 +580,36 @@ for (const [slug, title, sel] of [['money', 'Make money with BEASTY', '.dialer-p
 for (const s of ['sample profile', 'Marisol R.', 'Terrell B.', 'Glenn Malicdem']) {
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
+
+/* 2026-09-19: the landing's count line is gone, and Contacts lists both owners
+   with a number that asks "call or text?". Read only: nothing is dialled. */
+await p.goto(base, { waitUntil: 'networkidle', timeout: 60000 })
+await p.click('[aria-label="1"]', { timeout: 4000 }).catch(() => {})
+await p.waitForTimeout(3200)
+const landingLine = await p.evaluate(() => /local businesses\. Open tiles/.test(document.body.innerText))
+if (landingLine) fails.push('the landing still prints the "local businesses. Open tiles" line')
+await p.click('[aria-label="Enter BEASTY"]').catch(() => {})
+await p.waitForTimeout(2600)
+let phoneApp = false
+for (let i = 1; i <= 3 && !phoneApp; i++) {
+  await p.evaluate((i) => [...document.querySelectorAll('[aria-label]')].find((x) => (x.getAttribute('aria-label') || '').includes(`dock set ${i} of`))?.click(), i)
+  await p.waitForTimeout(500)
+  phoneApp = await p.evaluate(() => {
+    const n = [...document.querySelectorAll('[aria-label]')].find((x) => /^phone$/i.test(x.getAttribute('aria-label') || ''))
+    n?.click()
+    return !!n
+  })
+}
+await p.waitForTimeout(1500)
+const ownersText = await p.evaluate(() => document.body.innerText)
+const owners = /Co-CEO\/Co-Founder/i.test(ownersText) && /Janelle/.test(ownersText) && /510-674-8011/.test(ownersText)
+await p.evaluate(() => [...document.querySelectorAll('button.ios-row')].find((x) => /Glenn/.test(x.textContent || ''))?.click())
+await p.waitForTimeout(500)
+const sheet = await p.evaluate(() => [...document.querySelectorAll('.calltext-sheet a')].map((a) => a.getAttribute('href')))
+console.log('contacts      :', JSON.stringify({ phoneApp, owners, sheet, landingLine }))
+if (!phoneApp) fails.push('the Phone app could not be opened from the dock')
+if (!owners) fails.push('Contacts does not list both owners')
+if (!(sheet.includes('tel:5107893205') && sheet.includes('sms:5107893205'))) fails.push("tapping Glenn's number does not offer Call and Text")
 
 await b.close()
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); process.exit(1) }

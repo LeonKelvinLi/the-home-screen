@@ -80,8 +80,13 @@ export interface LocalSeed {
    * pays for it is the one the eye lands on. Set only where the operator has
    * sold it or is using it as a sample — it means nothing if every tile has
    * one, which is the whole product.
+   *
+   * `'pink'` is the same halo in pink, his ask of 2026-09-20 for Janelle's
+   * own page: "Can you put a glow around her icon? Can you make it a pink
+   * glow?" The colour is the only difference; the rule for who gets one is
+   * the same.
    */
-  glow?: true
+  glow?: true | 'pink'
   /** Which affiliate tier this page is drawn at. See brands.ts. */
   tier?: 1 | 2 | 3
   phone?: string
@@ -164,7 +169,7 @@ export interface LocalSeed {
    * name, and a mockup that looks identical to an agreed one is how a customer
    * ends up asking a counter to honour something nobody promised.
    */
-  offers?: { welcome?: string; loyalty?: string; mock?: boolean }
+  offers?: { welcome?: string; loyalty?: string; mock?: boolean; collab?: string }
   /**
    * Priced work that is QUOTED, not bought. Suppresses add-to-cart everywhere.
    * The string explains how to actually start.
@@ -609,7 +614,9 @@ export const LOCAL_SEED: LocalSeed[] = [
     cuisine: 'Smash burgers, cocktails',
     tagline: 'Burgers and a cocktail bar on the old gas station lot downtown.',
     color: '#2F2A24|#171310',
-    icon: '',
+    /* Their own logo, cut from their site: "update their icon for me"
+       (2026-09-19). */
+    icon: 'the-yard-brentwood',
     prep: 15,
     category: 'Burgers',
     site: 'https://brentwoodyard.com',
@@ -639,6 +646,19 @@ export const LOCAL_SEED: LocalSeed[] = [
     perk: {
       headline: 'Liberty faculty and students get 10% off',
       detail: 'Printed on their own menu. Ask at the counter.',
+    },
+    /*
+      HIS NOTES SCREENSHOT OF 2026-09-19, "add this to their page ... And put
+      as an example": a welcome offer "from The Yard x @TheSnackSensei" and a
+      "Biggies Pass offer". Shown as an example, the Belly way — The Yard has
+      not signed it, so the page says so — with the collaboration line in red
+      beside "Welcome offer", as his markup on Jojo's page showed.
+    */
+    offers: {
+      mock: true,
+      welcome: 'Get a 20% discount with your $30+ meal purchase, first visit only.',
+      loyalty: 'Get a 10% discount with your $20+ meal purchase, any visit.',
+      collab: 'The Yard x @TheSnackSensei',
     },
     /* Priced in `groups` below; `items` stays empty, as on every grouped brand. */
     items: [],
@@ -706,6 +726,20 @@ export const LOCAL_SEED: LocalSeed[] = [
       to them rather than asserted.
     */
     slug: 'jonnys-italian-ice',
+    /*
+      A FOODIE REEL OF A BUSINESS ON BEASTY, so it goes on the page — the rule
+      of 2026-09-09. @peggy_shoo's review, sent 2026-09-20 with "Foodie". Her
+      caption uses the word the note below keeps off this page; the film is
+      hers and plays as it is, and the page does not repeat the caption.
+    */
+    clip: {
+      src: '/clips/jonnys-italian-ice.mp4',
+      poster: '/clips/jonnys-italian-ice-poster.webp',
+      href: 'https://www.instagram.com/reel/DdT5OWxhEBz/',
+      credit: 'Filmed by @peggy_shoo',
+      platform: 'Instagram',
+      by: 'peggy_shoo',
+    },
     name: "Jonny's Italian Ice",
     label: "Jonny's",
     cuisine: 'Italian ice, soft serve',
@@ -908,11 +942,12 @@ export const LOCAL_SEED: LocalSeed[] = [
     tagline: 'Nashville-style hot chicken, hand-breaded, with seven spice levels from none to Reaper.',
     color: '#C41E24',
     /*
-      NO `icon`. We do not have their artwork, and pointing at a file that is
-      not there renders a broken image on the grid — worse than no logo at all.
-      Leaving it unset draws the monogram fallback on their own red instead.
-      Swap in /icons/jojos-hot-chicken.webp the moment they send one.
+      THEIR ROOSTER, from their own site, on his ask of 2026-09-19 ("update
+      their icon"). Until then this drew a JH monogram because nobody had
+      their artwork.
     */
+    icon: 'jojos-hot-chicken',
+    instagram: 'jojoshotchicken',
     prep: 15,
     category: 'Hot chicken',
     site: 'https://www.jojoshotchicken.com',
@@ -951,6 +986,9 @@ export const LOCAL_SEED: LocalSeed[] = [
       mock: true,
       welcome: 'Buy one sandwich, get one free on your first visit.',
       loyalty: 'Free fountain soda, with refills, on any meal.',
+      /* "Make it easier and just add this that's in the red" — his red
+         markup on this block, 2026-09-19. */
+      collab: 'Jojo’s HC x @TheSnackSensei',
     },
     siteNote: 'Order direct at jojoshotchicken.com — pick the Branham location.',
     items: [],
@@ -3280,6 +3318,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'fire-slice-pizza',
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'fire-slice-pizza',
     name: 'Fire Slice Pizza',
     label: 'Fire Slice',
@@ -3611,6 +3651,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'karam-sf',
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'karam-sf',
     name: 'Karam Mediterranean Cuisine',
     label: 'Karam',
@@ -4342,17 +4384,23 @@ export const LOCAL_SEED: LocalSeed[] = [
       platform: 'Instagram',
     },
     /*
-      NO ICON AND NOTHING PROMOTIONAL, for the same reasons as GlowPaws and
-      DryPup. The only images on their site are their storefront builder's own
-      theme assets — shipping a ShopBase theme file as their app icon would be
-      the Astra mistake again — so the app draws its own mark until they send
-      artwork.
+      THEIR OWN MARK AT LAST. He re-sent the listing on 2026-09-17 with two
+      screenshots of their Instagram, @puppiepack_co, whose picture is a real
+      logo (the dog in the carrier, "Carry love, everywhere") — so the tile
+      is cut from that, not from a theme asset.
+
+      NOTHING PROMOTIONAL, for the same reasons as GlowPaws and DryPup. The
+      only images on their site are their storefront builder's own theme
+      assets — shipping a ShopBase theme file as their app icon would have
+      been the Astra mistake again.
 
       Their domain was registered 2026-06-23, two months ago, and the store runs
       on ShopBase. That is not disqualifying and it is not hidden here; it is
       why nothing on this page repeats their marketing. The product and the
       price are theirs and real.
     */
+    icon: 'puppiepack',
+    instagram: 'puppiepack_co',
     logoTemplate: 'badge',
     logoFace: 'grotesk',
     logoInitials: 'PP',
@@ -4644,6 +4692,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'dough-burger',
+    /* Halal on their own pages — the standard mark, his ask of 2026-09-18. */
+    dietary: ['Halal'],
     icon: 'dough-burger',
     name: 'Dough Burger',
     label: 'Dough Burger',
@@ -8089,5 +8139,72 @@ export const LOCAL_SEED: LocalSeed[] = [
         ["Root Beer Float", "", 675],
       ]},
     ],
+  },
+  {
+    slug: 'east-bay-buffet',
+    icon: 'east-bay-buffet',
+    name: 'East Bay Buffet',
+    label: 'East Bay',
+    cuisine: 'Asian-American buffet',
+    tagline: 'All-you-can-eat Asian and American buffet on San Ramon Road.',
+    color: '#1B1B1B|#B3261E',
+    prep: 0,
+    category: 'Asian food',
+    phone: '(925) 361-7429',
+    address: '7400 San Ramon Rd, Dublin, CA 94568',
+    hours: 'Mon-Thu 11am-3pm, 4-9:30pm; Fri 11am-3pm, 4-10pm; Sat 11am-10pm; Sun 11am-9:30pm',
+    site: 'https://eastbaybuffet.com/',
+    instagram: 'eastbaybuffet',
+    /*
+      "Dublin • Goods", 2026-09-18 — on Dublin's open Asian food seat.
+
+      HAND-WRITTEN, NOT A ROSTER SEED, because what they price is a seat at the
+      buffet, not a dish to take away: the roster ingest would have turned
+      "Adult, weekday lunch" into something to put in a cart. quoteOnly shows
+      their prices and puts none of them in a cart.
+
+      Everything is their own site, eastbaybuffet.com: the prices are its
+      schema.org menu, the hours its schema and footer, the offers its banner.
+      Their Instagram's "Best Buffet in Tri-Valley" is their own boast and is
+      not repeated.
+    */
+    quoteOnly:
+      'An all-you-can-eat buffet of sushi, seafood, malatang and Chinese, Japanese, Thai and American dishes. These are their own prices; seniors 65 and over get 10% off with ID, and a birthday guest eats free with three paying adults.',
+    menuNote: 'Their buffet prices',
+    groups: [
+      {
+        name: 'Lunch, Monday to Friday',
+        items: [
+          ['Adult', '11am to 3pm', 2699],
+          ['Kids 4 to 6', '', 1099],
+          ['Kids 7 to 10', '', 1599],
+        ],
+      },
+      {
+        name: 'Lunch, Saturday',
+        items: [
+          ['Adult', '11am to 3pm', 2999],
+          ['Kids 4 to 6', '', 1099],
+          ['Kids 7 to 10', '', 1799],
+        ],
+      },
+      {
+        name: 'Dinner, Monday to Thursday',
+        items: [
+          ['Adult', '4 to 9:30pm', 3999],
+          ['Kids 4 to 6', '', 1699],
+          ['Kids 7 to 10', '', 2199],
+        ],
+      },
+      {
+        name: 'Friday and Saturday dinner, and all day Sunday',
+        items: [
+          ['Adult', '', 3999],
+          ['Kids 4 to 6', '', 1899],
+          ['Kids 7 to 10', '', 2399],
+        ],
+      },
+    ],
+    items: [],
   },
 ]

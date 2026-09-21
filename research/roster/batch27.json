@@ -1,0 +1,5960 @@
+[
+ {
+  "id": "b_realcutiepies",
+  "name_exact": "Real Cutie Pies",
+  "one_line": "Dessert cups in rotating flavors, from peach cobbler to banana pudding",
+  "cuisine": "Dessert cups",
+  "address": "341 17th St, Oakland, CA 94612",
+  "phone": null,
+  "email": "cutiepiesorders@gmail.com",
+  "hours": "Tue-Sat 12-5pm or until sold out; closed Sun-Mon",
+  "instagram": "realcutiepies",
+  "site_kind": "own",
+  "site_url": "https://realcutiepies.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their site lists this week’s six flavors and a rotation of eighteen, but no prices; pre-orders go through their Instagram DMs",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Hours are their site’s schema (Tue-Sat 12:00-17:00, Sun/Mon closed) and their Instagram bio adds “(or Sold Out)”.",
+   "The week of Sep 15-19 lineup on their site: Peach Cobbler, Banana Pudding, Hella Oreo, Horchata, Vanilla Dream, Key Lime.",
+   "No phone number is published on the site or the Instagram profile Glenn sent."
+  ]
+ },
+ {
+  "id": "b_kankiin",
+  "name_exact": "Kan Kiin Brunch & Thai Eatery",
+  "one_line": "Thai brunch and Thai comfort dinners on Southgate Avenue",
+  "cuisine": "Thai brunch & dinner",
+  "address": "201 Southgate Ave, Daly City, CA 94015",
+  "phone": "(650) 755-8749",
+  "email": "kankiineatery@gmail.com",
+  "hours": "Brunch Mon-Fri 11am-2pm, Sat-Sun 10am-3pm; Thai dinner daily 5-8:30pm",
+  "instagram": "kan_kiin",
+  "site_kind": "own",
+  "site_url": "https://www.kankiineatery.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Kan Kiin French Toast",
+    "desc": "Brioche French toast, 2-way banana, homemade coconut syrup, coconut flakes and mixed fruit (add vanilla ice cream +$4)",
+    "cents": 1800,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Matcha Buttermilk Pancakes",
+    "desc": "Matcha infused buttermilk pancake, mixed fruit and Matcha sauce",
+    "cents": 1900,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Belly & Sunny",
+    "desc": "Herb braised pork belly, roasted potato, wok fried brussels sprouts, sunny - side up eggs, toast",
+    "cents": 2200,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Hat Yai Fried Chicken & Waffle",
+    "desc": "Crispy “Southern of Thailand-Style” fried Mary’s free range chicken & vanilla waffle, maple syrup",
+    "cents": 2200,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "American Fried Rice",
+    "desc": "Homemade Ketchup fried rice, raisin, fried chicken, turkey sausage patty, chicken apple sausage, bacon and sunny - side up fried egg",
+    "cents": 2200,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Jok Crispy Pork Belly",
+    "desc": "“Tom Yum” Rice porridge with house crispy pork belly, poached egg, ginger, shiitake mushroom, green onion, SMOKED SALMON TARTINE Wild smoked salmon, scramble eggs, green onions, avocado, cream cheese on ciabatta served with potato wedges",
+    "cents": 2500,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Sweet Corn Cake & Crab Benedict",
+    "desc": "Poached eggs, crispy sweet corn cake, Dungeness crab chunk, house hollandaise, fresh cucumber salad.",
+    "cents": 2800,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Steak & Eggs",
+    "desc": "8.oz NY-steak, two sunny - side up accompanied with “Ka Pow” Thai basil fried rice",
+    "cents": 3000,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Bangkok Golden",
+    "desc": "A flavorful Thai stir-fry featuring Dungeness crab, shrimp, squid, and scallops, all cooked in our signature house curry sauce with onions, bell peppers, and three eggs. Served with a side of jasmine rice and house salad",
+    "cents": 3200,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Claypot Belly",
+    "desc": "Slow- braised pork belly, served over jasmine rice paired with Shiitake mushroom, onion, white sesame and poached egg",
+    "cents": 2200,
+    "label": "",
+    "section": "Signatures"
+   },
+   {
+    "name": "Two Eggs Any Style",
+    "desc": "",
+    "cents": 1500,
+    "label": "",
+    "section": "Egg plates"
+   },
+   {
+    "name": "Two Eggs with Chicken Apple Sausage Patty",
+    "desc": "",
+    "cents": 1700,
+    "label": "",
+    "section": "Egg plates"
+   },
+   {
+    "name": "Two Eggs with Applewood Smoked Bacon",
+    "desc": "",
+    "cents": 1800,
+    "label": "",
+    "section": "Egg plates"
+   },
+   {
+    "name": "Two Eggs with Applewood Smoked Bacon, Chicken Apple Patty, Smoked Ham",
+    "desc": "",
+    "cents": 2000,
+    "label": "",
+    "section": "Egg plates"
+   },
+   {
+    "name": "Harvest Heaven Omelette",
+    "desc": "Spinach, mushroom, onion, avocado, bell pepper, tomato and Monterey jack",
+    "cents": 1800,
+    "label": "",
+    "section": "Omelettes"
+   },
+   {
+    "name": "Western Sunrise Omelette",
+    "desc": "Canadian bacon, onion, mushroom, bell pepper and Monterey jack",
+    "cents": 1900,
+    "label": "",
+    "section": "Omelettes"
+   },
+   {
+    "name": "The Meat Wagon Omelette",
+    "desc": "Applewood smoked bacon, smoked ham, onion, chorizo and cheddar",
+    "cents": 2000,
+    "label": "",
+    "section": "Omelettes"
+   },
+   {
+    "name": "Applewood Scramble",
+    "desc": "Applewood smoke bacon, spinach, mushroom, and Cheddar",
+    "cents": 1800,
+    "label": "",
+    "section": "Scrambles"
+   },
+   {
+    "name": "Duo of the Sea Scramble",
+    "desc": "Shrimp, Scallop, mushroom, bell pepper, and Monterey jack",
+    "cents": 2500,
+    "label": "",
+    "section": "Scrambles"
+   },
+   {
+    "name": "Crab Lover Scramble",
+    "desc": "Fresh crabmeat, spinach, mushroom onion and Monterey jack",
+    "cents": 2700,
+    "label": "",
+    "section": "Scrambles"
+   },
+   {
+    "name": "Classic Benedict",
+    "desc": "Canadian bacon, poached eggs and hollandaise sauce",
+    "cents": 1700,
+    "label": "",
+    "section": "Benedicts"
+   },
+   {
+    "name": "Crispy Chicken Benedict",
+    "desc": "Crispy chicken, poached eggs, pesto mayo and hollandaise sauce",
+    "cents": 1800,
+    "label": "",
+    "section": "Benedicts"
+   },
+   {
+    "name": "Crispy Belly Benedict",
+    "desc": "Crispy pork belly, poached eggs, avocado, jalapeños and hollandaise sauce",
+    "cents": 2200,
+    "label": "",
+    "section": "Benedicts"
+   },
+   {
+    "name": "Alaskan Benedict",
+    "desc": "Wild Smoked salmon, red onion, poached eggs, and hollandaise sauce",
+    "cents": 2300,
+    "label": "",
+    "section": "Benedicts"
+   },
+   {
+    "name": "Green Curry Spaghetti",
+    "desc": "Chicken or Beef, bell pepper, Thai basil and green curry sauce",
+    "cents": 1700,
+    "label": "",
+    "section": "Spaghetti"
+   },
+   {
+    "name": "Drunken Seafood Spaghetti",
+    "desc": "Shrimp, scallop, calamari, mussel, bell pepper, Thai basil, jalapeños and homemade spicy sauce",
+    "cents": 2500,
+    "label": "",
+    "section": "Spaghetti"
+   },
+   {
+    "name": "Mid-night Bacon Spaghetti",
+    "desc": "Applewood smoked bacon, Thai basil, bell pepper, jalapeños, and spicy Thai chili sauce",
+    "cents": 1800,
+    "label": "",
+    "section": "Spaghetti"
+   },
+   {
+    "name": "Breakfast Burger",
+    "desc": "Scrambled egg, bacon, chicken apple sausage patty, American cheese and homemade mayo",
+    "cents": 1900,
+    "label": "",
+    "section": "Burgers and sandwiches"
+   },
+   {
+    "name": "Spicy Crispy Chicken Burger",
+    "desc": "Fried chicken, tomato, lettuce, pickle and homemade spicy mayo",
+    "cents": 1800,
+    "label": "",
+    "section": "Burgers and sandwiches"
+   },
+   {
+    "name": "Cheese Burger",
+    "desc": "Hamburger beef patty, American cheese, tomato, lettuce, onion and pickle",
+    "cents": 1800,
+    "label": "",
+    "section": "Burgers and sandwiches"
+   },
+   {
+    "name": "Corn Fritters",
+    "desc": "Corn fritters served with plum dipping and peanuts",
+    "cents": 1300,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Brussel Sprouts & Fries",
+    "desc": "Fried brussels sprouts and French fries with pesto mayo dip",
+    "cents": 1200,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Kan Kiin Salad",
+    "desc": "Seasonal fruit, yellow corn, mix green, romaine lettuce, cucumber, cherry tomato, carrot, and beet",
+    "cents": 1300,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Chicken Salad",
+    "desc": "Crispy chicken, baby romaine lettuce, cucumber, cherry tomato, carrot, avocado, and poached egg",
+    "cents": 1600,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Mango & Sticky Rice",
+    "desc": "Fresh mango, sweet sticky rice served with homemade coconut milk",
+    "cents": 1300,
+    "label": "",
+    "section": "Sweet corner"
+   },
+   {
+    "name": "Kid Approved Waffle",
+    "desc": "Belgian vanilla waffle served with vanilla ice cream, whipped cream, mix fruits, and homemade coconut syrup",
+    "cents": 1300,
+    "label": "",
+    "section": "Sweet corner"
+   },
+   {
+    "name": "Roti & Fried Banana Split",
+    "desc": "Roti breads and fried banana served with vanilla ice cream and coconut caramel",
+    "cents": 1300,
+    "label": "",
+    "section": "Sweet corner"
+   },
+   {
+    "name": "Choco Banana Toast",
+    "desc": "Sweet toast, caramelized banana, Nutella, chocolate syrup and chocolate chips",
+    "cents": 1400,
+    "label": "",
+    "section": "Sweet corner"
+   },
+   {
+    "name": "E-Sarn Chicken Wings",
+    "desc": "Fried chicken wings, sweet and sour sauce",
+    "cents": 1500,
+    "label": "",
+    "section": "Starters"
+   }
+  ],
+  "price_note": "This is their brunch menu, from their own site; the Thai dinner menu is on their site too",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Brunch menu read from kankiineatery.com/menus (Wix). Wines and beers on the same page are left off: this app has no age check.",
+   "Their Instagram bio says “Recognized by the MICHELIN Guide 2024-2026” and the site has a MICHELIN GUIDE 2026 page; the page does not repeat the claim.",
+   "Weekend brunch is first come, first served, per their site."
+  ]
+ },
+ {
+  "id": "b_lovelysburgerssf",
+  "name_exact": "Lovely's Burgers",
+  "one_line": "Grass-fed burgers, dogs and fries inside Woods Cole Valley",
+  "cuisine": "Burgers & dogs",
+  "address": "848 Cole St, San Francisco, CA",
+  "phone": null,
+  "email": null,
+  "hours": "Mon 5-9pm; closed Tue; Wed-Sat 5-9pm; Sun 1-5pm",
+  "instagram": "lovelysburgers",
+  "site_kind": "own",
+  "site_url": "https://www.lovelysburgers.com/cole-valley",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "The OG",
+    "desc": "American cheese, griddle onion, pickle, ketchup, mustard, potato bun",
+    "cents": 925,
+    "label": "",
+    "section": "Burgers"
+   },
+   {
+    "name": "The Drive Thru",
+    "desc": "American cheese, schmaltz onion, pickle, lettuce, tomato, special sauce, sesame bun",
+    "cents": 1125,
+    "label": "",
+    "section": "Burgers"
+   },
+   {
+    "name": "The Picnic",
+    "desc": "Cold cheddar, red onion, pickle, lettuce, tomato, mayo, ketchup, mustard, sesame bun",
+    "cents": 1150,
+    "label": "",
+    "section": "Burgers"
+   },
+   {
+    "name": "The Chili Willie",
+    "desc": "American cheese, chili, pickled jalapeño, onion, mustard, special sauce, potato bun",
+    "cents": 1250,
+    "label": "",
+    "section": "Burgers"
+   },
+   {
+    "name": "Cult Classic",
+    "desc": "Schwarz all-beef dog, ketchup, mustard, relish, potato roll",
+    "cents": 650,
+    "label": "",
+    "section": "Dogs"
+   },
+   {
+    "name": "Coney Island",
+    "desc": "Chili, cheese sauce, mustard, onion",
+    "cents": 850,
+    "label": "",
+    "section": "Dogs"
+   },
+   {
+    "name": "Chicago Dawg",
+    "desc": "Tomato, onion, sport pepper, relish, mustard, pickle spear, celery salt",
+    "cents": 900,
+    "label": "",
+    "section": "Dogs"
+   },
+   {
+    "name": "Hand Cut French Fries",
+    "desc": "Fried in rice bran oil",
+    "cents": 550,
+    "label": "",
+    "section": "Sides"
+   },
+   {
+    "name": "Cheese Fries",
+    "desc": "Hand cut fries, house cheese sauce",
+    "cents": 750,
+    "label": "",
+    "section": "Sides"
+   },
+   {
+    "name": "Chili Cheese Fries",
+    "desc": "Hand cut fries, grass-fed all-beef chili, house cheese sauce",
+    "cents": 950,
+    "label": "",
+    "section": "Sides"
+   }
+  ],
+  "price_note": "Their Cole Valley menu, from their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu transcribed from the “Lovely’s Cole Valley Menu” image on lovelysburgers.com/cole-valley. “Make it a double: add an extra patty for $3.50” is an add-on and is left off.",
+   "Their menu says “During peak service hours we cannot accept to go orders”, so the page is read-only (quoteOnly) rather than orderable.",
+   "Hours are the Lovely’s column of the Cole Valley page; Woods, their host, keeps longer hours.",
+   "No phone is published for Lovely’s on their site."
+  ]
+ },
+ {
+  "id": "b_whackdonuts",
+  "name_exact": "Whack Donuts",
+  "one_line": "Baked-not-fried vegan donuts at Embarcadero Center",
+  "cuisine": "Vegan donuts",
+  "address": "4 Embarcadero Center, Ste 4507, San Francisco, CA 94111",
+  "phone": "(415) 754-8451",
+  "email": "thewhackness@whackdonuts.org",
+  "hours": null,
+  "instagram": "whackdonuts",
+  "site_kind": "own",
+  "site_url": "https://www.whackdonuts.net/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their site takes custom, catering and gluten-free orders by message and posts no prices; they also sell at Ritual Coffee on Valencia Street Friday to Sunday",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Hours conflict: whackdonuts.net says Tue-Fri 9am-2pm and Sat 7:30am-12:30pm; their Instagram bio says Sat 7:30am-2pm. Hours left null.",
+   "Glenn linked linktr.ee/thewhackness; the Linktree’s main link is whackdonuts.net, their own Squarespace site, so they do have a website.",
+   "Founder Vandor “Whacko” Hill, per their site’s story page."
+  ]
+ },
+ {
+  "id": "b_taqueriaaztecadublin",
+  "name_exact": "Taqueria Azteca",
+  "one_line": "Short rib pho birria and the No Mamés taco on Amador Plaza Road",
+  "cuisine": "Mexican",
+  "address": "7155 Amador Plaza Rd, Dublin, CA 94568",
+  "phone": "(925) 833-0888",
+  "email": "taqueriaaztecadublinca@gmail.com",
+  "hours": null,
+  "instagram": "taqueriaaztecadublinca",
+  "site_kind": "stopgap",
+  "site_url": "https://www.taqueriaazteca.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their own site carries no menu or prices, only a link to order online",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "taqueriaazteca.com is a Wix page whose footer reads “© 2025 by DoorDash”: an about line, a contact form and an Order Now link. Treated as a stopgap site (the Masa precedent), so the page keeps the red outline.",
+   "Catering and taquizas, per their Instagram bio."
+  ]
+ },
+ {
+  "id": "b_goldpiepizza",
+  "name_exact": "Goldpie Pizza",
+  "one_line": "Sunday and Monday pizza on Pierce Street, pre-ordered by text",
+  "cuisine": "Pizza",
+  "address": "3219 Pierce St, Richmond, CA",
+  "phone": "(510) 529-5007",
+  "email": null,
+  "hours": "Sun and Mon 11:30am-7:30pm or until sold out",
+  "instagram": "goldpieig",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices; to pre-order, text your name, your order and a pickup time",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “New new. Needs website and pilot program.” No website: their Instagram links only a Threads profile.",
+   "Their bio: “Open Sunday and Monday @7Starshhc_ 1130a-730p or til sold out. To Pre-order TEXT 1. Name 2. Order 3. Date & pick-up time to (510)529-5007.” The host account is not named on the page."
+  ]
+ },
+ {
+  "id": "b_goldengatemarketdeli",
+  "name_exact": "Golden Gate Market & Deli",
+  "one_line": "Fifty-odd toasted sandwiches on Dutch crunch, on Lombard Street",
+  "cuisine": "Sandwiches & market",
+  "address": "2767 Lombard St, San Francisco, CA 94123",
+  "phone": "(415) 346-6052",
+  "email": null,
+  "hours": "Deli daily 9am-8pm; market Mon-Sat 9am-10pm, Sun 9am-9pm",
+  "instagram": "goldengatemarketanddeli",
+  "site_kind": "own",
+  "site_url": "https://goldengatemarketdeli.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "San Franpsycho Sandwich",
+    "desc": "Honey maple turkey, gouda, bacon, pesto, garlic spread, & remoulade sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Godfather Sandwich",
+    "desc": "Italian salami, pepper salami, smoked turkey, provolone & garlic spread.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Skinny Jeans Sandwich",
+    "desc": "Ovengold turkey, avocado, tomatoes, lettuce & cucumbers.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Sandlot Sandwich",
+    "desc": "Rotisserie chicken, hot coppa, pepper jack, pesto, bell pepper, remoulade & avocado.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Darlicious Sandwich",
+    "desc": "Salsalito & pepper turkey, havarti cheese, bacon, & avocado.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Italian Sub",
+    "desc": "Salami, ham, mortadella, provolone, oil & vinegar.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Honey Baked Sandwich",
+    "desc": "Honey turkey, honey ham, swiss cheese, & avocado.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Escape From Alcatraz Sandwich",
+    "desc": "Buffalo chicken, 3 pepper colby jack cheese, bacon, bbq sauce, cajun remoulade & avocado.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Veggie Lovers Sandwich",
+    "desc": "Your choice of melted cheese, the garden & avocado.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Pg-13 Sandwich",
+    "desc": "Cajun turkey, chipotle gouda, & honey mustard.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Bad Date Sandwich",
+    "desc": "Smoked turkey, pepper jack, onions, jalapeños & honey mustard.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Freak Sandwich",
+    "desc": "Pastrami brisket, chipotle gouda cheese, honey mustard, sriracha mayo & jalapenos.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Hangover Sandwich",
+    "desc": "Pepper turkey, spicy coppola, asiago cheese & remoulade sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Spartacus Sandwich",
+    "desc": "Italian salami, mortadella, hot coppa, provolone, oil & vinegar.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "One Of The Boys Sandwich",
+    "desc": "Cajun turkey, pepper salami, bacon & cheddar cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Blta Sandwich",
+    "desc": "Bacon, lettuce, tomatoes & avocado.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Chicken Bacon Ranch Sandwich",
+    "desc": "Rotisserie chicken, bacon, ranch & your choice of cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Rest In Pesto Sandwich",
+    "desc": "Everroast chicken, pesto & your choice of cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Spitfire Sandwich",
+    "desc": "Everroast chicken, pepper jack, sriracha mayo, bacon & jalapenos.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Lightweight Tipsy Sandwich",
+    "desc": "Hot pastrami, swiss, coleslaw & remoulade sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Hot Mess Sandwich",
+    "desc": "All beef meatballs & provolone cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Meltdown Sandwich",
+    "desc": "Tuna salad & your choice of cheese oven baked.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The City Girl Sandwich",
+    "desc": "Ever roast chicken, cheddar, bacon & bbq sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Recession Sandwich",
+    "desc": "Ovengold turkey, prosciutto & provolone.",
+    "cents": 1649,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The City Boy Sandwich",
+    "desc": "Roast beef, cheddar, bacon, & bbq sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Chicken Garlic Asiago Sandwich",
+    "desc": "Rotisserie chicken, garlic spread & asiago cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Double Trouble Sandwich",
+    "desc": "Pepper turkey, bacon, avocado & cream cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Rated 'R' Sandwich",
+    "desc": "Blazing buffalo chicken, habanero jack cheese & remoulade sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Gobbler Sandwich",
+    "desc": "Ovengold turkey, cranberry sauce & provolone cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Special O Cajun Sandwich",
+    "desc": "Cajun turkey, jalapenos & pepper jack cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Buffalo Blue Sandwich",
+    "desc": "Blazing buffalo chicken, bacon, bleu cheese dressing & frank's red hot buffalo sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Teriyaki Chicken Sandwich",
+    "desc": "Rotisserie chicken, teriyaki glaze & havarti cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The Pepper Mill Sandwich",
+    "desc": "Pepper salami, pepper turkey & provolone.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Reli Benny Sandwich",
+    "desc": "Corned beef, sauerkraut, 1,000 island dressing & swiss cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Italian Wedding Sandwich",
+    "desc": "Pesto & marinara sauces over rotisserie chicken with melted provolone.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Sexy Time Sandwich",
+    "desc": "Habanero ham, chipotle gouda, honey mustard & parmesan cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Fatty Sandwich",
+    "desc": "Roast beef, pesto, bacon & habanero jack cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Triple Og Sandwich",
+    "desc": "Rotisserie chicken & your choice of cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Dirty South Sandwich",
+    "desc": "Pastrami brisket, chipotle gouda, coleslaw & bbq sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Mideast Touch Sandwich",
+    "desc": "Falafel, hummus, tomatoes, cucumbers & olive oil.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Katsu Chicken Sandwich",
+    "desc": "Rotisserie chicken, katsu sauce & swiss cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Hot Lava Sandwich",
+    "desc": "Salsalito turkey, sriracha, jalapenos & pepper jack cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Rb Cheesesteak Sandwich",
+    "desc": "Roast beef, bell peppers, onions with your choice of cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Four Play Sandwich",
+    "desc": "Ever roast chicken, habanero jack cheese, bell pepper & jalapeno ranch.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Smoked Bouda Gouda Sandwich",
+    "desc": "Rotisserie chicken with melted gouda cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Piglet Sandwich",
+    "desc": "Sliced pork loin, havarti cheese, bacon & honey mustard.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Prosciutto Pesto Sandwich",
+    "desc": "Black forest ham, prosciutto provolone cheese with pesto sauce.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "The French Kiss Sandwich",
+    "desc": "Roast beef, marbleu cheese, jalapenos, a1 sauce, topped with french's crispy fried onions.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Leggo My Eggplant Sandwich",
+    "desc": "Eggplant, roasted red peppers & provolone.",
+    "cents": 1699,
+    "label": "",
+    "section": "Sandwiches"
+   },
+   {
+    "name": "Sausage, Egg, & Cheese Sandwich",
+    "desc": "",
+    "cents": 1299,
+    "label": "",
+    "section": "Breakfast Sandwiches"
+   },
+   {
+    "name": "Bacon, Egg, & Cheese Sandwich",
+    "desc": "",
+    "cents": 1299,
+    "label": "",
+    "section": "Breakfast Sandwiches"
+   },
+   {
+    "name": "Bacon, Ham, Sausage, Eggs, & Cheese Sandwich",
+    "desc": "",
+    "cents": 1499,
+    "label": "",
+    "section": "Breakfast Sandwiches"
+   },
+   {
+    "name": "Ham, Egg, & Cheese Sandwich",
+    "desc": "",
+    "cents": 1299,
+    "label": "",
+    "section": "Breakfast Sandwiches"
+   },
+   {
+    "name": "Egg & Cheese Sandwich",
+    "desc": "",
+    "cents": 1199,
+    "label": "",
+    "section": "Breakfast Sandwiches"
+   },
+   {
+    "name": "Chips",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "Soda",
+    "desc": "Twelve oz can.",
+    "cents": 300,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "Joe Teas",
+    "desc": "20 oz bottles.",
+    "cents": 399,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "San Pellegrino",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Sides and drinks"
+   }
+  ],
+  "price_note": "Every sandwich comes on your choice of bread, from Dutch crunch to sourdough; this is their own menu",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu read in a browser from goldengatemarketdeli.com/Menu (a base44 site with its own ordering). Chips and drinks are on it; the market’s beer, wine and spirits are not listed and would not be here.",
+   "Since 2013, owned by Wael “Wally” Abedalnour and Emil Habash, per their FAQ; Boar’s Head meats and Wedemeyer Bakery rolls."
+  ]
+ },
+ {
+  "id": "b_sakanasushialbany",
+  "name_exact": "Sakana Sushi & Roll",
+  "one_line": "Classic and vegan sushi rolls on purple rice, on Solano Avenue",
+  "cuisine": "Sushi & rolls",
+  "address": "1105 Solano Ave, Albany, CA 94706",
+  "phone": "(510) 634-7447",
+  "email": null,
+  "hours": null,
+  "instagram": "sakanasushi.official",
+  "site_kind": "stopgap",
+  "site_url": "https://www.ordersakana.com/albany/order",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Edamame",
+    "desc": "Soybeans",
+    "cents": 595,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Grilled Garlic Edamame",
+    "desc": "",
+    "cents": 895,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Miso Soup",
+    "desc": "",
+    "cents": 395,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Rice",
+    "desc": "",
+    "cents": 395,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Sunomono",
+    "desc": "cucumber salad, vinegar-based",
+    "cents": 495,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Ebi Sunomono",
+    "desc": "cucumber salad with shrimp",
+    "cents": 695,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Tako Sunomono",
+    "desc": "cucumber salad with octopus",
+    "cents": 895,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Kani Sunomono",
+    "desc": "cucumber salad with real crab meat",
+    "cents": 1395,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Tsukemono",
+    "desc": "pickled vegetables",
+    "cents": 1195,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Wakame Salad",
+    "desc": "seaweed salad",
+    "cents": 795,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Ankimo (4pcs)",
+    "desc": "monkfish liver",
+    "cents": 1995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Takowasa",
+    "desc": "raw octopus flavored with wasabi",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Salmon Kama",
+    "desc": "baked salmon collar",
+    "cents": 1995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Baked Mussel (5pcs)",
+    "desc": "",
+    "cents": 1295,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Sashimi Appetizer (5pcs)",
+    "desc": "salmon, yellowtail, tuna",
+    "cents": 1695,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Spicy Sashimi Salad",
+    "desc": "",
+    "cents": 2395,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Spring Salmon (5pcs)",
+    "desc": "salmon, onion, daikon, kaiware, lemon, balsamic, olive oil",
+    "cents": 1695,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Jalapeno Hamachi (5pcs)",
+    "desc": "yellowtail, jalapeno, balsamic, olive oil, tobiko, scallion",
+    "cents": 1995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Shiromi (8pcs)",
+    "desc": "spicy ponzu & scallion over seasonal white fish",
+    "cents": 2595,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Albacore Drop (4pcs)",
+    "desc": "albacore, real crab, tobiko, scallion, sesame oil, garlic ponzu, lemon",
+    "cents": 1995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Chicken Skewer",
+    "desc": "",
+    "cents": 299,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Japanese Sausage (3pcs)",
+    "desc": "",
+    "cents": 695,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Agedashi Tofu",
+    "desc": "",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Gyoza",
+    "desc": "pan fried",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Kaki Fry",
+    "desc": "panko-fried oysters",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Shishito Pepper",
+    "desc": "blistered peppers with soy garlic sauce",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Takoyaki",
+    "desc": "octopus balls",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Chicken Karaage",
+    "desc": "",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Ika Karaage",
+    "desc": "deep-fried squid",
+    "cents": 995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Fried Soft Shell Crab",
+    "desc": "",
+    "cents": 1495,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Jalapeno TNT (4pcs)",
+    "desc": "crispy jalapeno stuffed with spicy tuna & cream cheese",
+    "cents": 1495,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Kani Katsu",
+    "desc": "real crab cutlet",
+    "cents": 1995,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Mixed Tempura Appetizer",
+    "desc": "",
+    "cents": 1495,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Shrimp Tempura Appetizer",
+    "desc": "",
+    "cents": 1495,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Veggie Tempura App",
+    "desc": "",
+    "cents": 1495,
+    "label": "",
+    "section": "Appetizer"
+   },
+   {
+    "name": "Bluefin Toro Nigiri (2pcs)",
+    "desc": "fatty part of bluefin tuna",
+    "cents": 1795,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Maguro Nigiri (3pcs)",
+    "desc": "tuna",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Seared Tuna Nigiri (3pcs)",
+    "desc": "",
+    "cents": 1195,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Sake Nigiri (3pcs)",
+    "desc": "salmon",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Seared Sake Nigiri (3pcs)",
+    "desc": "",
+    "cents": 1195,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Hamachi Nigiri (3pcs)",
+    "desc": "yellowtail",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Kanpachi Nigiri (3pcs)",
+    "desc": "amberjack",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Hirame Nigiri (3pcs)",
+    "desc": "flounder",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Madai Nigiri (3pcs)",
+    "desc": "snapper",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Shiro Maguro Nigiri (3pcs)",
+    "desc": "albacore",
+    "cents": 995,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Ama Ebi Nigiri (2pcs)",
+    "desc": "jumbo sweet shrimp",
+    "cents": 1695,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Ebi Nigiri (3pcs)",
+    "desc": "cooked shrimp",
+    "cents": 895,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Hotate Nigiri (2pcs)",
+    "desc": "scallop",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Ika Nigiri (2pcs)",
+    "desc": "squid",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Tako Nigiri (2pcs)",
+    "desc": "octopus",
+    "cents": 950,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Unagi Nigiri (2pcs)",
+    "desc": "freshwater eel",
+    "cents": 950,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Saba Nigiri (3pcs)",
+    "desc": "mackerel",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Ikura Nigiri (2pcs)",
+    "desc": "salmon roe",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Tobiko Nigiri (2pcs)",
+    "desc": "flying fish roe",
+    "cents": 1095,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Tamago Nigiri (2pcs)",
+    "desc": "egg",
+    "cents": 750,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Inari Nigiri (3pcs)",
+    "desc": "fried tofu",
+    "cents": 795,
+    "label": "",
+    "section": "Nigiri"
+   },
+   {
+    "name": "Small Sashimi Combination (9pcs)",
+    "desc": "served with 1 miso soup and 1 rice",
+    "cents": 2995,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Medium Sashimim Combination (18pcs)",
+    "desc": "served with 1 miso soup and 1 rice",
+    "cents": 5495,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Large Sashimi Combination (36pcs)",
+    "desc": "served with 2 miso soup and 2 rice",
+    "cents": 10595,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Sushi Combo A",
+    "desc": "6 pcs nigiri + CA or spicy tuna roll, served with 1 miso soup",
+    "cents": 2995,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Sushi Combo B",
+    "desc": "8pcs nigiri + salmon or tuna roll, served with 1 miso soup",
+    "cents": 3695,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Sushi Combo C",
+    "desc": "6pcs nigiri + 6pcs sashimi + CA or spicy tuna roll, served with 1 miso soup",
+    "cents": 4295,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Saba Shioyaki",
+    "desc": "baked mackerel served with 1 miso soup and 1 rice",
+    "cents": 2495,
+    "label": "",
+    "section": "Combination"
+   },
+   {
+    "name": "Chirashi",
+    "desc": "assorted fish",
+    "cents": 3995,
+    "label": "",
+    "section": "Sakana Donburi"
+   },
+   {
+    "name": "Sake Don",
+    "desc": "salmon",
+    "cents": 3895,
+    "label": "",
+    "section": "Sakana Donburi"
+   },
+   {
+    "name": "Tekka Don",
+    "desc": "tuna",
+    "cents": 3995,
+    "label": "",
+    "section": "Sakana Donburi"
+   },
+   {
+    "name": "Hamachi Don",
+    "desc": "yellowtail",
+    "cents": 3995,
+    "label": "",
+    "section": "Sakana Donburi"
+   },
+   {
+    "name": "Unagi Don",
+    "desc": "freshwater eel",
+    "cents": 3895,
+    "label": "",
+    "section": "Sakana Donburi"
+   },
+   {
+    "name": "Spicy Don",
+    "desc": "spicy tuna & salmon, real crab, tobiko, scallion, mayo",
+    "cents": 3495,
+    "label": "",
+    "section": "Sakana Donburi"
+   },
+   {
+    "name": "Chicken Teriyaki",
+    "desc": "",
+    "cents": 2195,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "Salmon Teriyaki",
+    "desc": "",
+    "cents": 2495,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "Chicken Katsu",
+    "desc": "",
+    "cents": 2495,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "Nabe Udon",
+    "desc": "",
+    "cents": 1895,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "Yakisoba",
+    "desc": "stir-fried noodles, chicken or bacon",
+    "cents": 1595,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "Oyako Don",
+    "desc": "",
+    "cents": 2295,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "Katsu Don",
+    "desc": "",
+    "cents": 2495,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "SABA SHIOYAKI",
+    "desc": "",
+    "cents": 1995,
+    "label": "",
+    "section": "Kitchen Entrees"
+   },
+   {
+    "name": "California Roll",
+    "desc": "crab, avocado",
+    "cents": 795,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Real California Roll",
+    "desc": "real crab, avocado",
+    "cents": 1795,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Salmon Roll",
+    "desc": "",
+    "cents": 995,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Tuna Roll",
+    "desc": "",
+    "cents": 995,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Yellowtail Roll",
+    "desc": "",
+    "cents": 995,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Avo Salmon Roll",
+    "desc": "w/ avocado",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Avo Tuna Roll",
+    "desc": "w/ avocado",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Avo Yellowtail Roll",
+    "desc": "w/ avocado",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spicy Salmon Roll",
+    "desc": "w/ cucumber",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spicy Tuna Roll",
+    "desc": "w/ cucumber",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spicy Yellowtail Roll",
+    "desc": "w/ cucumber",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spicy Scallop Roll",
+    "desc": "w/ cucumber, tobiko",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Negitoro",
+    "desc": "bluefin toro w/ green onion",
+    "cents": 1695,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Negi Hama",
+    "desc": "yellowtail w/ green onion",
+    "cents": 995,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Negi Saba",
+    "desc": "mackerel w/ green onion, ginger",
+    "cents": 995,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Philadelphia Roll",
+    "desc": "smoked salmon, avocado, cream cheese",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Rock and Roll",
+    "desc": "unagi, avocado, cucumber",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "New York Roll",
+    "desc": "cooked shrimp, avocado, cucumber",
+    "cents": 995,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Poki Roll",
+    "desc": "spicy tuna, cucumber, seaweed salad",
+    "cents": 1095,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Salmon Skin Roll",
+    "desc": "salmon skin, burdock, cucumber, kaiware, tobiko, scallion, unagi sauce",
+    "cents": 1295,
+    "label": "",
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Lion King (BAKED)",
+    "desc": "in: crab, avocado out: salmon, tobiko, scallion, unagi sauce",
+    "cents": 1895,
+    "label": "",
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Super Lion King (BAKED)",
+    "desc": "in: shrimp tempura, cream cheese, crab out: smoked salmon, tobiko, scallion, unagi sauce",
+    "cents": 2295,
+    "label": "",
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Bay Scallop (BAKED)",
+    "desc": "in: crab, avocado out: scallop, tobiko, scallion, unagi sauce",
+    "cents": 2050,
+    "label": "",
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Spicy Lion King (BAKED)",
+    "desc": "in: spicy tuna, avocado out: salmon, tobiko, scallion, unagi sauce, sriracha",
+    "cents": 2050,
+    "label": "",
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Vegan Lion Queen (BAKED)",
+    "desc": "in: tofu, asparagus, avocado out: tofu, bell pepper, vegan unagi sauce, vegan spicy mayo, scallion",
+    "cents": 1995,
+    "label": "",
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Crustacean Party (BAKED)",
+    "desc": "in: real crab, cooked shrimp, avocado out: baby lobster, tobiko, red onion, scallion, unagi sauce",
+    "cents": 2795,
+    "label": "",
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Avocado Roll",
+    "desc": "",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Asaparagus Roll",
+    "desc": "",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Kappa Maki",
+    "desc": "cucumber",
+    "cents": 750,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Avokyu Roll",
+    "desc": "avocado, cucumber",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Gobokyu Roll",
+    "desc": "burdock root, cucumber",
+    "cents": 750,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Oshinko Roll",
+    "desc": "pickled radish",
+    "cents": 750,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Kanpyo Roll",
+    "desc": "calabash",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Tamago Roll",
+    "desc": "sweet egg",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Inari Roll",
+    "desc": "bean curd",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Shitake Roll",
+    "desc": "mushroom",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Vegan California",
+    "desc": "tofu, avocado",
+    "cents": 995,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Vegan Philadelphia",
+    "desc": "cashew cream, cucumber, avocado",
+    "cents": 995,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Veggie Roll",
+    "desc": "cucumber, asparagus, avocado",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Spicy Veggie Roll",
+    "desc": "cucumber, kaiware, avocado, spicy sauce, sesame oil",
+    "cents": 795,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Negi Natto Roll",
+    "desc": "natto, green onion",
+    "cents": 995,
+    "label": "",
+    "section": "Vegetarian Classic Rolls"
+   },
+   {
+    "name": "Avyo",
+    "desc": "in: tofu, avocado out: avocado, avocado sauce, macadamia nuts, honey",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Berkeley Roll",
+    "desc": "in: kanpyo, cucumber out: avocado, tomatoes, vegan wasabi mayo, vegan beet sauce",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Farmers Market",
+    "desc": "in: tamago, avocado out: tofu, bell pepper, vegan wasabi mayo, vegan unagi sauce",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Herbivore Dinosaurs",
+    "desc": "alfalfa sprouts, vegan cashew cream, tofu, avocado, cucumber, vegan beet sauce, avocado sauce",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Pink lady",
+    "desc": "in: tofu, avocado out: beet, vegan beet sauce, avocado",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Richmond Roll",
+    "desc": "in: tamago out: mango slices, avocado, honey, vegan wasabi mayo",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Sweet Tomatoes",
+    "desc": "in: asparagus, avocado, cucumber, vegan cashew cream, kaiware out: tomatoes, honey, vegan spicy mayo",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Veggie Caterpillar",
+    "desc": "in: asparagus, cucumber, inari out: avocado, vegan spicy mayo",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Veggie Fiesta",
+    "desc": "in: kanpyo, inari, cucumber, avocado, asparagus out: mango, lemon, macadamia nuts, vegan unagi sauce, avocado sauce",
+    "cents": 1995,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Veggie Lover",
+    "desc": "kanpyo, cucumber, avocado, shitake, burdock root, pickled radish, beet, asparagus",
+    "cents": 1895,
+    "label": "",
+    "section": "Vegetarian Special Rolls"
+   },
+   {
+    "name": "Natsu Yasumi (Summer Vacation)",
+    "desc": "in: spicy salmon, kaiware, cucumber out: seasonal white fish, shiso, tobiko, scallion, spicy ponzu",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Fuyu Yasumi (Winter Vacation)",
+    "desc": "in: spicy tuna, crab, shrimp tempura out: seared albacore, seared salmon, unagi sauce, tobiko, spicy mayo, scallion",
+    "cents": 2295,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "After school",
+    "desc": "in: tamago, inari, pickled radish, crab, sesame oil (9-10pcs)",
+    "cents": 1795,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "49ers",
+    "desc": "in: avocado, crab out: salmon, lemon",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Kengsington Roll",
+    "desc": "in: spicy salmon, asparagus out: spicy tuna, avocado, tobiko, scallion, unagi sauce, spicy mayo, wasabi mayo",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Ace Roll",
+    "desc": "in: crab, avocado out: spicy salmon, avocado sauce, tobiko, scallion, unagi sauce",
+    "cents": 1795,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "SF Giants",
+    "desc": "in: salmon skin, spicy tuna, cucumber, pickled radish, kaiware out: salmon, albacore, unagi sauce, wasabi sauce, tobiko, scallion",
+    "cents": 2495,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Golden State Warriors",
+    "desc": "in: salmon skin, pickled radish, kaiware, crab, cucumber out: unagi, albacore, scallion, tobiko, unagi sauce, spicy mayo",
+    "cents": 2495,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Red Dragon",
+    "desc": "in: shrimp tempura, crab out: avocado, unagi sauce, tuna, sriracha",
+    "cents": 1895,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Black Dragon",
+    "desc": "in: shrimp tempura, crab out: avocado, unagi sauce, unagi",
+    "cents": 1895,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Green Dragon",
+    "desc": "in: shrimp tempura, crab out: avocado, unagi sauce, avocado",
+    "cents": 1695,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Rainbow Roll",
+    "desc": "in: crab, avocado out: assorted fish, tobiko",
+    "cents": 1895,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Spicy Rainbow",
+    "desc": "in: spicy tuna, avocado out: assorted fish, tobiko",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Cherry Blossom",
+    "desc": "in: tuna, avocado out: tuna, tobiko",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Orange Blossom",
+    "desc": "in: salmon, avocado out: salmon, tobiko",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Tuna Lover",
+    "desc": "in: spicy tuna, cucumber out: tuna, wasabi mayo",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Salmon Lover",
+    "desc": "in: spicy salmon, cucumber out: salmon, wasabi mayo",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Hamachi Lover",
+    "desc": "in: spicy yellowtail, cucumber out: yellowtail, wasabi mayo, scallion",
+    "cents": 2095,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Honey - Glazed Salmon",
+    "desc": "in: smoked salmon, alfalfa sprouts, cream chesse, cucumber, avocado out: mango, lemon, honey, unagi sauce, macadamia nut",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Mango Tango",
+    "desc": "in: mango, salmon, unagi, avocado, crab out: honey, unagi sauce, avocado sauce",
+    "cents": 2095,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Tiger Roll",
+    "desc": "in: shrimp tempura, crab out: salmon, unagi, tobiko, scallion, unagi sauce, spicy mayo, sriracha",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Yummy Yummy",
+    "desc": "in: shrimp tempura, crab out: salmon, ebi, unagi sauce",
+    "cents": 1895,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Rumble Fish on The Fire",
+    "desc": "in: shrimp tempura, crab out: seared assorted fish, onion, tobiko, spicy mayo, unagi sauce, scallion",
+    "cents": 2295,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "911",
+    "desc": "in: shrimp tempura, cucumber, cream cheese out: spicy tuna, jalapeno, tobiko, scallion, unagi sauce, spicy mayo, sriracha",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Geisha Roll",
+    "desc": "in: spicy tuna, cucumber, kaiware, onion out: cooked shrimp, albacore, jalapeno, unagi sauce, sriracha",
+    "cents": 2095,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Vegas Roll",
+    "desc": "in: spicy tuna, cucumber out: albacore, sriracha sauce, garlic ponzu, scallion",
+    "cents": 1895,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Ichiban",
+    "desc": "in: unagi, avocado, cucumber out: yellowtail, avocado, tobiko, scallion, unagi sauce",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Samurai",
+    "desc": "in: crab, salmon out: tuna, unagi, macadamia nut, tobiko, scallion, wasabi mayo, unagi sauce",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Three Amigos",
+    "desc": "in: tuna, salmon, yellowtail, avocado, tobiko, cucumber",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Mighty Protein",
+    "desc": "in: unagi, egg, beet, cashew cream, avocado out: salmon, tuna, avocado sauce, unagi sauce",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Caterpillar Roll",
+    "desc": "in: unagi, cucumber out: avocado, unagi sauce",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Super California",
+    "desc": "in: crab, avocado out: unagi, avocado, unagi sauce",
+    "cents": 1795,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Sakana Garden (NO RICE)",
+    "desc": "a roll wrapped in rice paper, filled with fresh fish and crisp vegetables, topped with spicy mayo, no rice",
+    "cents": 2395,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Yasai Garden (NO RICE)",
+    "desc": "a roll wrapped in rice paper, filled with fresh vegetables and tofu, topped with vegan spicy mayo, no rice, no fish",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "California Garden",
+    "desc": "a roll wrapped in rice paper, filled with crab, shrimp temputa, avocado, lettuce and tobiko, topped with unagi sauce",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Solano Roll",
+    "desc": "crab, avocado, spicy tuna, deep-fried eel, tobiko, scallions with unagi sauce, avocado sauce, and beet crunch",
+    "cents": 2195,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Plant Power",
+    "desc": "deep-fried vegan roll with tofu, asparagus, bell pepper, miso, and house-made cashew cream, finished with vegan unagi sauce and honey. let us know if you prefer vegan honey",
+    "cents": 2095,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Golden Crunch",
+    "desc": "crab and shrimp tempura roll, topped with crispy scallop and langostine, finished with spicy mayo, unagi sauce, green onion and tobiko",
+    "cents": 2795,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Spider Roll",
+    "desc": "soft shell crab, crab meat, avocado, cucumber, lettuce, tobiko, beet crunch, tobiko, unagi sauce",
+    "cents": 1995,
+    "label": "",
+    "section": "Special Rolls"
+   },
+   {
+    "name": "Aloha Poki",
+    "desc": "tuna served with tobiko, onion, cucumber, oshinko, crab, seaweed salad, avocado, jalapeno, sushi rice, spring mix, spicy mayo, unagi sauce & wasabi mayo",
+    "cents": 2495,
+    "label": "",
+    "section": "Poki Bowl"
+   },
+   {
+    "name": "Alaska Poki",
+    "desc": "salmon served with tobiko, onion, cucumber, oshinko, crab, seaweed salad, avocado, jalapeno, sushi rice, spring mix, spicy mayo, unagi sauce & wasabi mayo",
+    "cents": 2495,
+    "label": "",
+    "section": "Poki Bowl"
+   },
+   {
+    "name": "Sakana Poki",
+    "desc": "assorted fish served with tobiko, onion, cucumber, oshinko, crab, seaweed salad, avocado, jalapeno, sushi rice, spring mix, spicy mayo, unagi sauce & wasabi mayo",
+    "cents": 2595,
+    "label": "",
+    "section": "Poki Bowl"
+   },
+   {
+    "name": "Veggie Poki",
+    "desc": "served with tofu, cooked beet, spring mix, onion, cucumber, seaweed salad, avocado, sushi rice, oshinko, shitake, avocado sauce, jalapeno, vegan wasabi mayo, vegan spicy mayo",
+    "cents": 2295,
+    "label": "",
+    "section": "Poki Bowl"
+   },
+   {
+    "name": "Sparkling Water",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Apple Juice",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Ramune (Japanese Soda)",
+    "desc": "",
+    "cents": 450,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Coke",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Diet Coke",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Sprite",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "uji macha",
+    "desc": "uji sparkling macha",
+    "cents": 600,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Dr Pepper",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Itoen Green Tea",
+    "desc": "",
+    "cents": 495,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Pure Leaf Black Tea",
+    "desc": "",
+    "cents": 395,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Nigiri Moriawase",
+    "desc": "mixed premium nigiri platter with miso soup (for one person)",
+    "cents": 5495,
+    "label": "",
+    "section": "Sakana Special"
+   },
+   {
+    "name": "Chirashi Moriawase",
+    "desc": "assorted premium fish over sushi rice, served with miso soup (for one person)",
+    "cents": 5495,
+    "label": "",
+    "section": "Sakana Special"
+   },
+   {
+    "name": "Sashimi Moriawase",
+    "desc": "mixed premium sashimi platter with 2 bowl of rice and 2 miso soups (for two people)",
+    "cents": 12495,
+    "label": "",
+    "section": "Sakana Special"
+   }
+  ],
+  "price_note": "Prices are from their own ordering site; they also have a shop at 303 Arlington Ave in Kensington",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "ordersakana.com is an ordering portal “Managed by 3KO Systems” with no site of its own around it: a stopgap, so the red outline stays.",
+   "Hours left null: the portal lists online-ordering hours (5-9:30pm, to 11pm Fri-Sat), and their Instagram grid shows an “Albany Hours Updated” post that was not legible.",
+   "Sake and beer are left off (no age check in this app)."
+  ]
+ },
+ {
+  "id": "b_pizzagallery",
+  "name_exact": "Pizza Gallery",
+  "one_line": "Halal pizza, slices and wings on Hollis Street",
+  "cuisine": "Halal pizza & wings",
+  "address": "6613 Hollis St, Emeryville, CA 94608",
+  "phone": "(510) 607-8778",
+  "email": "pizzagallery510@gmail.com",
+  "hours": "Sun-Wed 11am-9pm; Thu-Sat 11am-11pm",
+  "instagram": "pizzagallery510",
+  "site_kind": "stopgap",
+  "site_url": "https://pizzagalleryca.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Create Your Own Pizza",
+    "desc": "Classic cheese or create your own pizza",
+    "cents": 2200,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Starry Night Pizza",
+    "desc": "Grilled halal chicken and sautéed mushrooms over a creamy halal vodka sauce, mozzarella and fresh basil",
+    "cents": 2500,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Blank Canvas Pizza",
+    "desc": "Classic cheese pizza",
+    "cents": 2200,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Mona Lisa Margarita Pizza",
+    "desc": "Fresh mozzarella, vine-ripened tomatoes, basil and olive oil",
+    "cents": 2200,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Picasso Pepperoni Pizza",
+    "desc": "Halal pepperoni, mozzarella and red sauce",
+    "cents": 2500,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Truffle Monet Pizza",
+    "desc": "Truffle-infused mushrooms, mozzarella, toasted garlic and red sauce",
+    "cents": 2500,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Da Vinci Pesto Pizza",
+    "desc": "House pesto, mozzarella blend and red pepper flakes",
+    "cents": 2300,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Basquiat BBQ Chicken Pizza",
+    "desc": "BBQ sauce, halal chicken, caramelized onions, red bell peppers and mozzarella",
+    "cents": 2600,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Van Gogh's Garden Pizza",
+    "desc": "Seasonal vegetables, mozzarella and red sauce",
+    "cents": 2300,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Warhol Combo Pizza",
+    "desc": "Vegetables and halal pepperoni with mozzarella and red sauce",
+    "cents": 2600,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Frida Buffalo Pizza",
+    "desc": "Buffalo-style halal chicken, mozzarella and red sauce",
+    "cents": 2500,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "The Frida Chicken Enchilada Pizza",
+    "desc": "Enchilada sauce, mozzarella and cheddar, grilled halal chicken, red peppers and jalapeños",
+    "cents": 2600,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Hot Picasso",
+    "desc": "Halal pepperoni, jalapeños, pineapple and hot honey",
+    "cents": 2600,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Saucey Monet",
+    "desc": "Vodka sauce, mozzarella, garlic mushrooms, red onions, halal beef sausage and truffle oil",
+    "cents": 2600,
+    "label": "",
+    "section": "Pizza"
+   },
+   {
+    "name": "Fries",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "Sides and wings"
+   },
+   {
+    "name": "Gallery Fries",
+    "desc": "Loaded chicken fries, BBQ sauce, caramelized onions, cheddar and house garlic ranch",
+    "cents": 1700,
+    "label": "",
+    "section": "Sides and wings"
+   },
+   {
+    "name": "Halal Wings",
+    "desc": "",
+    "cents": 1400,
+    "label": "",
+    "section": "Sides and wings"
+   }
+  ],
+  "price_note": "Prices are from their own ordering site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu from the schema.org Menu on pizzagalleryca.com, their own ordering site. Three combo specials marked “Out of stock” there are left off.",
+   "HALAL is in their Instagram bio and on nearly every dish; the page carries the halal mark on that basis (their words, not a certification).",
+   "The site is an ordering storefront with nothing else around it: a stopgap, so the red outline stays. Their Instagram link goes to a delivery marketplace, which is not used."
+  ]
+ },
+ {
+  "id": "b_napayard",
+  "name_exact": "Napa Yard & Beer Garden",
+  "one_line": "A beer garden on the Napa River with a garden-to-glass distillery",
+  "cuisine": "Beer garden",
+  "address": "585 1st St, Napa, CA 94559",
+  "phone": "(707) 815-0398",
+  "email": "info@napayard.com",
+  "hours": "Mon-Thu 4-10pm; Fri-Sat 11am-10pm; Sun 11am-9pm",
+  "instagram": "napayard",
+  "site_kind": "own",
+  "site_url": "https://www.napayard.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Hot Pretzel",
+    "desc": "butter, salt, beer cheese",
+    "cents": 900,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Tempura Green Bean",
+    "desc": "Green beans from our garden fried and served with spicy aioli",
+    "cents": 1400,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Hawaiian Ahi Poke",
+    "desc": "seaweed, nori furikake, chili ponzu. served with fresh tortilla chips",
+    "cents": 1800,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Classic Nachos",
+    "desc": "soyrizo black beans, nacho cheese, pico de gallo, sour cream, pickled jalapeños and onions.",
+    "cents": 1300,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Wings",
+    "desc": "Lemon pepper dusted. Served with a side of Buffalo sauce and blue cheese dip.",
+    "cents": 1800,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Buffalo Cauliflower",
+    "desc": "blue cheese dip, crudite",
+    "cents": 1300,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Tomato Caprese",
+    "desc": "heirloom tomato, stracciatella, basil, local olive oil, balsamic",
+    "cents": 1700,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Dry Chimmichurri French Fries",
+    "desc": "Crispy golden seasoned fries with chive aioli. Plain (no dry rub) available.",
+    "cents": 600,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Onion Rings",
+    "desc": "Beer Battered served w/ House Ranch",
+    "cents": 1000,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Garlic Fries",
+    "desc": "Crispy fries tossed with fresh minced garlic and herbs",
+    "cents": 800,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Miso Caesar",
+    "desc": "romaine, white miso caesar dressing, croutons, shaved parmesan - add chicken $5, steak $7",
+    "cents": 1500,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Summer Corn",
+    "desc": "Israeli couscous, spinach, cilantro vinaigrette, queso fresco - add chicken $5, steak $7",
+    "cents": 1700,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Sourdough BLT",
+    "desc": "Bacon, iceberg lettuce, heirloom tomatoes from our garden, aioli on lightly toasted sourdough.",
+    "cents": 1800,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Double Smashburger",
+    "desc": "American cheese, pickles, spread, grilled green & white onions, on a potato bun.",
+    "cents": 1800,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Ahi Tuna Sandwich",
+    "desc": "thai basil & mint slaw, yuzu kosho aioli",
+    "cents": 1900,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Grilled Chicken Sandwich",
+    "desc": "grilled breast, swiss cheese, sprouts, heirloom tomato, tpickles, garlic aioli.",
+    "cents": 1700,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Fish Tacos (2)",
+    "desc": "Blackened spice and grilled rock cod with slaw and spicy aioli.",
+    "cents": 1600,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Carnitas Tacos (2)",
+    "desc": "two carnitas (fried pork) tacos on corn tortillas, onion & cilantro, chips with house made salsa",
+    "cents": 1400,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Al Pastor Tacos (2)",
+    "desc": "pork seasoned with Oaxacan spices served on corn tortillas, fresh onions, cilantro, chips with house made salsa",
+    "cents": 1400,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Carne Asada Tacos (2)",
+    "desc": "Grilled steak served on corn tortillas, onion & cilantro, chips with house made salsa",
+    "cents": 1500,
+    "label": "",
+    "section": "Mains"
+   },
+   {
+    "name": "Kid's Smashburger",
+    "desc": "Plain patty with cheese",
+    "cents": 1200,
+    "label": "",
+    "section": "Kids"
+   },
+   {
+    "name": "Kid's Chicken Tenders",
+    "desc": "Fried all-white-meat tenders",
+    "cents": 1200,
+    "label": "",
+    "section": "Kids"
+   },
+   {
+    "name": "Kid's Nachos",
+    "desc": "Beans, cheese and chicken",
+    "cents": 1200,
+    "label": "",
+    "section": "Kids"
+   }
+  ],
+  "price_note": "Their food menu, from their own site; tacos are priced for two, and they sell three and four too",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Food menu from napayard.com/menus (BentoBox). Cocktails, wine and draft lists are left off (no age check).",
+   "Phone conflict: their site prints 707-815-0398; their Instagram contact sheet says (707) 848-0398. The site’s number is carried.",
+   "Happy hour Mon-Fri 4-5pm and a mini golf course, per their site. Seated on Burgers because the Double Smashburger is theirs and no bar category exists."
+  ]
+ },
+ {
+  "id": "b_okepokewalnutcreek",
+  "name_exact": "Oke Poke Walnut Creek",
+  "one_line": "Poke bowls and pokerritos on Locust Street",
+  "cuisine": "Poke",
+  "address": "1529 Locust St, Walnut Creek, CA 94596",
+  "phone": null,
+  "email": null,
+  "hours": "Daily 11am-8pm",
+  "instagram": "okepokewalnutcreek",
+  "site_kind": "own",
+  "site_url": "https://www.okepoke.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Mini Bowl",
+    "desc": "Build your own",
+    "cents": 1450,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Medium Bowl",
+    "desc": "Build your own",
+    "cents": 1850,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Large Bowl",
+    "desc": "Build your own",
+    "cents": 2095,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Veggie Bowl",
+    "desc": "",
+    "cents": 1450,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "OG",
+    "desc": "Shoyu, sesame, lemon ponzu, garlic, honey, Hawaiian sea salt",
+    "cents": 1850,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "Kona",
+    "desc": "Shoyu, sesame soy, ponzu, sweet soy",
+    "cents": 1850,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "Sweet Fire",
+    "desc": "Spicy mayo, garlic, shoyu, ponzu, sweet soy",
+    "cents": 1850,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "Okeechi",
+    "desc": "Kimchi, garlic, fresh napa cabbage, citrus shoyu, sesame",
+    "cents": 1850,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "Spicy Yaki",
+    "desc": "Spicy mayo, house teriyaki",
+    "cents": 1850,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "Trio",
+    "desc": "Spicy miso, chili oil, house teriyaki",
+    "cents": 1850,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "The Veggie",
+    "desc": "Shoyu, sesame soy, ponzu, sweet soy",
+    "cents": 1450,
+    "label": "",
+    "section": "Signature bowls"
+   },
+   {
+    "name": "Medium Pokerrito",
+    "desc": "",
+    "cents": 1850,
+    "label": "",
+    "section": "Pokerritos"
+   },
+   {
+    "name": "Large Pokerrito",
+    "desc": "",
+    "cents": 2095,
+    "label": "",
+    "section": "Pokerritos"
+   },
+   {
+    "name": "Veggie Burrito",
+    "desc": "",
+    "cents": 1450,
+    "label": "",
+    "section": "Pokerritos"
+   },
+   {
+    "name": "House Nachos",
+    "desc": "",
+    "cents": 1895,
+    "label": "",
+    "section": "Nachos"
+   },
+   {
+    "name": "House Sweet and Savory Nachos",
+    "desc": "",
+    "cents": 1895,
+    "label": "",
+    "section": "Nachos"
+   },
+   {
+    "name": "Firecracker Nachos",
+    "desc": "",
+    "cents": 1895,
+    "label": "",
+    "section": "Nachos"
+   },
+   {
+    "name": "Okeechi Nachos",
+    "desc": "",
+    "cents": 1895,
+    "label": "",
+    "section": "Nachos"
+   },
+   {
+    "name": "Spicy Yaki Nachos",
+    "desc": "",
+    "cents": 1895,
+    "label": "",
+    "section": "Nachos"
+   },
+   {
+    "name": "Miso Soup",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "Fountain Soda",
+    "desc": "",
+    "cents": 325,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "Hawaiian Sun",
+    "desc": "",
+    "cents": 325,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "Hot Green Tea",
+    "desc": "",
+    "cents": 225,
+    "label": "",
+    "section": "Sides and drinks"
+   },
+   {
+    "name": "Dole Whip",
+    "desc": "",
+    "cents": 465,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Hawaiian Shave Ice",
+    "desc": "",
+    "cents": 550,
+    "label": "",
+    "section": "Sweets"
+   }
+  ],
+  "price_note": "Prices are from their own ordering site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu from order.okepoke.com/menu/oke-poke-walnut-creek, the ordering site on their own domain. Merch, the 99-cent side sauce and the poke-by-the-pound builder (no price shown) are left off.",
+   "Their Instagram calls this the flagship of @okepokeco; they also run Napa, San Ramon and SoMa shops.",
+   "No phone is published for the Walnut Creek shop."
+  ]
+ },
+ {
+  "id": "b_sanaacafe",
+  "name_exact": "Sana'a Cafe San Rafael",
+  "one_line": "Yemeni coffee on 4th Street, open late",
+  "cuisine": "Yemeni coffee",
+  "address": "1146 4th St, San Rafael, CA",
+  "phone": null,
+  "email": null,
+  "hours": "Sun-Thu 7am-10pm; Fri-Sat 7:30am-midnight",
+  "instagram": "sanaacafe.sanrafael",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices; they offer 10% off to students, healthcare workers and city employees with ID",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Needs website and pilot program.” Their Instagram “website” link is a Google search, so there is no site.",
+   "The 10% discount is their own August 18 post (“For those who keep our community strong”), quoted as theirs, not a BEASTY offer.",
+   "Est. 2023, premium organic Yemeni coffee, WiFi, per their profile."
+  ]
+ },
+ {
+  "id": "b_pastapelican",
+  "name_exact": "Pasta Pelican Restaurant",
+  "one_line": "Italian and American plates on the water in Mariner Square",
+  "cuisine": "Italian & American",
+  "address": "2455 Mariner Square Dr, Alameda, CA",
+  "phone": "(510) 864-7427",
+  "email": "ppadmin@pastapelican.com",
+  "hours": "Mon-Thu 11:30am-2:30pm and 5-9pm; Fri-Sun 11:30am-9pm",
+  "instagram": "pastapelican",
+  "site_kind": "own",
+  "site_url": "https://www.pastapelican.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Calamari Fritti",
+    "desc": "",
+    "cents": 1900,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Deep Fried Shrimp",
+    "desc": "",
+    "cents": 1900,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Bruschetta",
+    "desc": "",
+    "cents": 1400,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Spinach Dip",
+    "desc": "",
+    "cents": 1900,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Shrimp Cocktail",
+    "desc": "",
+    "cents": 1800,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Rock Shrimp",
+    "desc": "",
+    "cents": 1900,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Fresh Asparagus",
+    "desc": "",
+    "cents": 1700,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Meatballs",
+    "desc": "",
+    "cents": 1600,
+    "label": "",
+    "section": "Starters"
+   },
+   {
+    "name": "Caprese",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Lite fare, after 5pm"
+   },
+   {
+    "name": "Cole Slaw",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Lite fare, after 5pm"
+   },
+   {
+    "name": "Steamed Spinach",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Lite fare, after 5pm"
+   },
+   {
+    "name": "Onion Rings",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Lite fare, after 5pm"
+   },
+   {
+    "name": "Baked or Mashed Potato",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Lite fare, after 5pm"
+   },
+   {
+    "name": "Baby Beet Salad",
+    "desc": "Mixed greens, beets, goat cheese, roasted walnuts",
+    "cents": 1800,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Ahi Tuna Salad",
+    "desc": "Mixed greens, avocado, mango, housemade classic vinaigrette",
+    "cents": 2400,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Honey Lime Chicken Salad",
+    "desc": "Mixed greens, carrots, chicken, cilantro, chips in honey lime dressing",
+    "cents": 2100,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Grilled Salmon Salad",
+    "desc": "Mixed greens, sautéed roma tomato, avocado, mango, capers, olives, classic vinaigrette",
+    "cents": 2200,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Caesar Salad",
+    "desc": "Aged parmesan, croutons, housemade caesar dressing, topped with anchovies",
+    "cents": 1900,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Thai Salad",
+    "desc": "Filet mignon, mixed greens, avocado, mango, housemade thai dressing",
+    "cents": 2600,
+    "label": "",
+    "section": "Salads"
+   },
+   {
+    "name": "Ravioli",
+    "desc": "Choice of beef or ricotta filling in a creamy marinara sauce",
+    "cents": 1800,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Fettuccine Alfredo",
+    "desc": "Fettuccine in a creamy garlic and parmesan sauce",
+    "cents": 1800,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Bolognese",
+    "desc": "Hearty meat sauce topped with meatballs served over fettuccine",
+    "cents": 2000,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Tortellini al Ortolana",
+    "desc": "Tortellini with prosciutto, mushrooms and peas in a creamy parmesan sauce",
+    "cents": 2000,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Spicy Thai Linguine",
+    "desc": "Linguine with carrots, asparagus and peas in housemade thai sauce",
+    "cents": 1900,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Linguine e Basilico",
+    "desc": "Fresh herbs, roasted garlic in olive oil, parmesan, and fresh tomato-basil sauce",
+    "cents": 1800,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Penne Spring",
+    "desc": "Asparagus, green onion, and peas in white creamy parmesan sauce",
+    "cents": 1900,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Penne Meat",
+    "desc": "Penne with meatballs, sausage and ham, tossed with our housemade marinara sauce",
+    "cents": 2100,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Fettuccine con Sugo Caldo",
+    "desc": "Italian sausage and bell peppers in a spicy marinara served over fettuccine",
+    "cents": 1900,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Carbonara",
+    "desc": "Prosciutto, onion and bacon tossed with fettuccine in a creamy parmesan sauce with a hint of garlic",
+    "cents": 2000,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Fettuccine di Tequila",
+    "desc": "Tossed in a creamy and spicy tequila lime sauce with red and green bell pepper, red onion, and fresh cilantro",
+    "cents": 2000,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Pollo con Carciofi",
+    "desc": "Chicken, sun dried tomatoes, artichoke hearts, fresh basil and mushrooms, linguine with a hint of marinara",
+    "cents": 2000,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Fettuccine Primavera con Pollo",
+    "desc": "Chicken and a medley of fresh vegetables tossed with fettuccine in a creamy sun dried tomato pesto sauce",
+    "cents": 2300,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Pollo e Spinace",
+    "desc": "Chicken, spinach, mushrooms and sun dried tomatoes in a creamy curry sauce tossed with fettuccine",
+    "cents": 2300,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Tortellini con Pollo",
+    "desc": "A ricotta-filled tortellini served with chicken, artichoke hearts, fresh basil, and mushrooms in a creamy parmesan sauce",
+    "cents": 2300,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Salmon Picatta",
+    "desc": "Sautéed mushrooms, capers, and fresh basil in a creamy lemon butter white wine sauce, tossed with penne",
+    "cents": 2400,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Fettuccine di Veneto",
+    "desc": "Fettuccine tossed with prawns, mussels and clams with fresh tomato and basil in our housemade classic marinara",
+    "cents": 2900,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Fettuccine Gamberetti",
+    "desc": "Fettuccine tossed with sautéed prawns and mushrooms with fresh dill and lemon zest in a creamy sauce",
+    "cents": 2800,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Seafood Ravioli",
+    "desc": "Seafood filled ravioli in a creamy sun dried tomato pesto sauce with sautéed mushrooms and fresh basil",
+    "cents": 2600,
+    "label": "",
+    "section": "Pasta"
+   },
+   {
+    "name": "Pollo Pelicano",
+    "desc": "Free range chicken topped with mushrooms, fresh tomato, artichoke hearts, capers, and melted pepper jack in a sherry wine sauce",
+    "cents": 2500,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Tilapia",
+    "desc": "Fresh tilapia in a creamy spicy tequila sauce, seasonal vegetables and potato",
+    "cents": 2500,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Barbecue Pork Ribs",
+    "desc": "Tender slow cooked ribs with housemade BBQ sauce, choice of coleslaw or fries",
+    "cents": 3700,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Pasta Pelican Cheeseburger",
+    "desc": "Natural grass-fed Wagyu beef, free of hormones and antibiotics, cheddar cheese, served with fries",
+    "cents": 2500,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "BBQ Meat Loaf",
+    "desc": "Housemade meat loaf topped with BBQ sauce and mushrooms, choice of coleslaw or fries",
+    "cents": 2000,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Meat Loaf Sandwich",
+    "desc": "With sautéed mushrooms and BBQ sauce",
+    "cents": 2000,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Beef Short Ribs",
+    "desc": "Slow cooked boneless ribs with potatoes and vegetables",
+    "cents": 3400,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "New York Strip",
+    "desc": "Prime cut steak served with potatoes and seasonal vegetables",
+    "cents": 4500,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Filet Mignon",
+    "desc": "Prime cut filet served with potatoes and seasonal vegetables",
+    "cents": 4800,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Rib-Eye",
+    "desc": "Prime cut steak served with potatoes and seasonal vegetables",
+    "cents": 4800,
+    "label": "",
+    "section": "Entrées"
+   },
+   {
+    "name": "Fresh Ahi Tuna Sandwich",
+    "desc": "AAA fresh tuna, wasabi, Campari tomato",
+    "cents": 2200,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Beef Short Rib Sandwich",
+    "desc": "Cheddar, crispy onions, BBQ sauce on home-baked ciabatta",
+    "cents": 2200,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Garden Burger",
+    "desc": "Brown rice, barley, bulgur and oats",
+    "cents": 2000,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Fish and Chips",
+    "desc": "",
+    "cents": 1800,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "BLT Sandwich",
+    "desc": "Smoked applewood bacon on whole wheat with mayonnaise",
+    "cents": 1700,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Crispy Salmon Sandwich",
+    "desc": "Homemade, with chef's sauce",
+    "cents": 2100,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Turkey Sandwich",
+    "desc": "Lettuce, tomato, cheese, and avocado",
+    "cents": 2000,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Tuna Melt Sandwich",
+    "desc": "Traditional homemade tuna salad",
+    "cents": 1900,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Mediterranean Burger",
+    "desc": "Ground lamb, Mediterranean spices, feta cheese",
+    "cents": 2000,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Pesto Chicken Sandwich",
+    "desc": "Chicken breast with pesto sauce",
+    "cents": 1900,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Crispy Chicken Sandwich",
+    "desc": "Chicken breast with special breading",
+    "cents": 1900,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Meat Omelet",
+    "desc": "Ground beef, sausage, ham",
+    "cents": 2100,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Veggie Omelet",
+    "desc": "Green onion, mushrooms, tomatoes, spinach, and feta cheese",
+    "cents": 1800,
+    "label": "",
+    "section": "Lunch"
+   },
+   {
+    "name": "Apple Walnut Cobbler Ala Mode",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Tiramisu",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Crème Brûlée",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Chocolate Mousse Truffle",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Key Lime Pie",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Opera Cake",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Desserts"
+   }
+  ],
+  "price_note": "Their dining menu, from their own site; any pasta or entrée takes a cup of soup or a house salad for $5",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu read from the page their site embeds (pastapelican.com/wp-content/uploads/2026/05/pasta-pelican-34.html). Wine pairings printed under each dish, the after-dinner drinks and the wine list are left off. Fresh fish of the day is market price and left off.",
+   "Family owned and operated since 1998; happy hour Fri-Sun 4-6pm, per their site and profile.",
+   "Email: the site says ppadmin@pastapelican.com; their Instagram contact sheet says pasta.pelican.alameda@gmail.com. The site’s is carried."
+  ]
+ },
+ {
+  "id": "b_almadessert",
+  "name_exact": "Alma Dessert",
+  "one_line": "Tiramisu and tea drinks on Murphy Avenue",
+  "cuisine": "Tiramisu & tea",
+  "address": "165 S Murphy Ave, Ste D, Sunnyvale, CA 94086",
+  "phone": null,
+  "email": "almadessert0@gmail.com",
+  "hours": null,
+  "instagram": "almadessert.us",
+  "site_kind": "own",
+  "site_url": "https://www.almadessert.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Classic Tiramisu",
+    "desc": "Espresso-soaked ladyfingers and mascarpone, dusted with cocoa",
+    "cents": 895,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Biscoff Caramel Tiramisu",
+    "desc": "Tiramisu cream with caramel Biscoff cookie",
+    "cents": 995,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Pistachio Tiramisu",
+    "desc": "Tiramisu cream with pistachio cream and pistachio crunch",
+    "cents": 1095,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Mango Tiramisu",
+    "desc": "Handmade mango jam on a tiramisu base",
+    "cents": 995,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Matcha Tiramisu",
+    "desc": "",
+    "cents": 895,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Oreo Tiramisu",
+    "desc": "Tiramisu cream with Oreo crumbles",
+    "cents": 995,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Chocolate Tiramisu",
+    "desc": "",
+    "cents": 1095,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Ube Tiramisu",
+    "desc": "",
+    "cents": 995,
+    "label": "",
+    "section": "Tiramisu"
+   },
+   {
+    "name": "Black Forest Frog",
+    "desc": "Coffee, chocolate and mascarpone, with marshmallow frog eyes",
+    "cents": 795,
+    "label": "",
+    "section": "Tiramisu drinks"
+   },
+   {
+    "name": "Hate My Boss -- Squeeze!",
+    "desc": "Oreo slush with a chocolate crust, in a cup you squeeze",
+    "cents": 895,
+    "label": "",
+    "section": "Tiramisu drinks"
+   },
+   {
+    "name": "TEA-ramisu",
+    "desc": "Tiramisu with a twist of tea",
+    "cents": 795,
+    "label": "",
+    "section": "Tiramisu drinks"
+   },
+   {
+    "name": "Triple Trouble",
+    "desc": "Coffee, caramel and chocolate under tiramisu cream",
+    "cents": 795,
+    "label": "",
+    "section": "Tiramisu drinks"
+   },
+   {
+    "name": "Dubai Chocolate",
+    "desc": "A blended shake",
+    "cents": 895,
+    "label": "",
+    "section": "Tiramisu drinks"
+   },
+   {
+    "name": "Blueberry Coconut Pudding",
+    "desc": "Under blueberry lemon compote jelly",
+    "cents": 995,
+    "label": "",
+    "section": "Coconut pudding"
+   },
+   {
+    "name": "Pineapple Coconut Pudding",
+    "desc": "Topped with pineapple passion fruit jelly",
+    "cents": 995,
+    "label": "",
+    "section": "Coconut pudding"
+   },
+   {
+    "name": "Strawberry Coconut Pudding",
+    "desc": "Topped with strawberry jelly",
+    "cents": 995,
+    "label": "",
+    "section": "Coconut pudding"
+   },
+   {
+    "name": "Cloud Cold Brew Coffee",
+    "desc": "Cold brew with house cheese foam",
+    "cents": 425,
+    "label": "",
+    "section": "Coffee"
+   },
+   {
+    "name": "Cold Brew Coffee",
+    "desc": "",
+    "cents": 425,
+    "label": "",
+    "section": "Coffee"
+   },
+   {
+    "name": "Cold Brew Coffee Latte",
+    "desc": "",
+    "cents": 425,
+    "label": "",
+    "section": "Coffee"
+   }
+  ],
+  "price_note": "Prices are from their own ordering site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu read in a browser from almadessert.com, their own ordering site. The Tiramisu Birthday Cake ($45) and Mango Coconut Pudding were out of stock and are left off; the Fresh Tea, Fresh Fruit, Bundles and Snacks sections did not load and are not listed.",
+   "No phone or hours are published on the site or the profile Glenn sent."
+  ]
+ },
+ {
+  "id": "b_tacoswalnutcreek",
+  "name_exact": "Tacos Walnut Creek",
+  "one_line": "Jalisco family recipes, tacos and burritos on Locust Street",
+  "cuisine": "Mexican",
+  "address": "1690 Locust St, Walnut Creek, CA 94596",
+  "phone": "(925) 464-7489",
+  "email": "tacoswalnutcreek@gmail.com",
+  "hours": "Daily 10am-10pm",
+  "instagram": "tacoswalnutcreekofficial",
+  "site_kind": "own",
+  "site_url": "https://tacoswalnutcreek.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their site lists the whole menu, from carne en su jugo to the Oakland A’s burrito, without prices; pickup orders go through it",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "tacoswalnutcreek.com describes every dish but prints no prices; its pickup button goes to their own ordering page and its other buttons to delivery marketplaces, which are not used.",
+   "Hours are their Instagram bio (“Open Daily 10AM - 10PM”). Carnitas, al pastor, chorizo and carne en su jugo are made on site from family recipes from Guadalajara, per their About."
+  ]
+ },
+ {
+  "id": "b_yummyyummyhibachisanleandro",
+  "name_exact": "Yummy Yummy Hibachi",
+  "one_line": "Hibachi plates to go on East 14th Street",
+  "cuisine": "Hibachi",
+  "address": "1780 E 14th St, San Leandro, CA 94577",
+  "phone": "(510) 488-8738",
+  "email": null,
+  "hours": null,
+  "instagram": "yummy_yummyhibachi",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices; they also cater, in their own words",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Three shops, per their Instagram: San Leandro (510) 488-8738, 73rd Ave Oakland (510) 626-6724, Piedmont Ave Oakland (510) 907-3904.",
+   "NO WORKING WEBSITE: the link in their Instagram bio, yummy-yummy-hibachi.com, returns 404. yummyyummyhibachi.com is a DIFFERENT business in Charleston, South Carolina, and is not linked.",
+   "Glenn: “Please clip this video for each of the locations pages. He’s a fast rising comedian.” The reel is their own post (serving @mojobrookzz); it plays on all three pages."
+  ]
+ },
+ {
+  "id": "b_yummyyummyhibachi73rd",
+  "name_exact": "Yummy Yummy Hibachi",
+  "one_line": "Hibachi plates to go on 73rd Avenue",
+  "cuisine": "Hibachi",
+  "address": "2322 73rd Ave, Oakland, CA 94605",
+  "phone": "(510) 626-6724",
+  "email": null,
+  "hours": null,
+  "instagram": "yummy_yummyhibachi",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices; they also cater, in their own words",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Three shops, per their Instagram: San Leandro (510) 488-8738, 73rd Ave Oakland (510) 626-6724, Piedmont Ave Oakland (510) 907-3904.",
+   "NO WORKING WEBSITE: the link in their Instagram bio, yummy-yummy-hibachi.com, returns 404. yummyyummyhibachi.com is a DIFFERENT business in Charleston, South Carolina, and is not linked.",
+   "Glenn: “Please clip this video for each of the locations pages. He’s a fast rising comedian.” The reel is their own post (serving @mojobrookzz); it plays on all three pages."
+  ]
+ },
+ {
+  "id": "b_yummyyummyhibachipiedmont",
+  "name_exact": "Yummy Yummy Hibachi",
+  "one_line": "Hibachi plates to go on Piedmont Avenue",
+  "cuisine": "Hibachi",
+  "address": "3920 Piedmont Ave, Oakland, CA 94611",
+  "phone": "(510) 907-3904",
+  "email": null,
+  "hours": null,
+  "instagram": "yummy_yummyhibachi",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices; they also cater, in their own words",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Three shops, per their Instagram: San Leandro (510) 488-8738, 73rd Ave Oakland (510) 626-6724, Piedmont Ave Oakland (510) 907-3904.",
+   "NO WORKING WEBSITE: the link in their Instagram bio, yummy-yummy-hibachi.com, returns 404. yummyyummyhibachi.com is a DIFFERENT business in Charleston, South Carolina, and is not linked.",
+   "Glenn: “Please clip this video for each of the locations pages. He’s a fast rising comedian.” The reel is their own post (serving @mojobrookzz); it plays on all three pages."
+  ]
+ },
+ {
+  "id": "b_barrebeat",
+  "name_exact": "BARREbeat Fitness",
+  "one_line": "Barre, dance cardio and sculpt classes on Lone Tree Way",
+  "cuisine": "Barre & dance fitness",
+  "address": "5865 Lone Tree Way, Ste H, Antioch, CA 94531",
+  "phone": "(925) 679-4428",
+  "email": "info@barre-beat.com",
+  "hours": null,
+  "instagram": "barrebeatfitness",
+  "site_kind": "own",
+  "site_url": "https://barre-beat.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "New client special",
+    "desc": "Three weeks unlimited",
+    "cents": 5900,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Standard unlimited",
+    "desc": "A month, on a six-month term",
+    "cents": 13500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Unlimited, month to month",
+    "desc": "A month, no term",
+    "cents": 15000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Limited, 8 classes",
+    "desc": "A month, on a twelve-month term",
+    "cents": 10500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Limited, 8 classes (flex)",
+    "desc": "A month, month to month",
+    "cents": 11500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Family add-on, unlimited",
+    "desc": "With a household unlimited membership",
+    "cents": 9900,
+    "label": "",
+    "section": null
+   }
+  ],
+  "price_note": "Your first class is free; these are their own posted rates",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Rates from barre-beat.com/rates (“New Studio Pricing”); the new-client special is on their home page. “FIRST CLASS FREE” is on both the site and their Instagram.",
+   "Glenn labelled this “Antioch • Goods”; it is a fitness studio, so it takes Antioch’s open Gym seat on the services page, the way two of his labels were corrected before.",
+   "Classes: Barre Burn, Dance Beat Burn, Barre Beat Fusion, Total Body Burn, BARREsculpt, SWEAT and Club Cardio. Founded by Kandyce Jones-Olson, per their site."
+  ]
+ },
+ {
+  "id": "b_elportalsanleandro",
+  "name_exact": "El Portal Mexican Restaurant",
+  "one_line": "Mexican plates and seafood on Lewelling, with a weekend brunch buffet",
+  "cuisine": "Mexican & seafood",
+  "address": "2028 Lewelling Blvd, San Leandro, CA",
+  "phone": null,
+  "email": null,
+  "hours": "Mon-Fri 9am-10pm; brunch buffet Sat-Sun 9am-5:30pm",
+  "instagram": "elportalsanleandro",
+  "site_kind": "own",
+  "site_url": "https://www.elportalrest.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Guacamole dip",
+    "desc": "Flour tortilla chips & guacamole.",
+    "cents": 1599,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Cheese fries",
+    "desc": "Jalapeño, cheese, meet, sour cream.",
+    "cents": 1699,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Super nachos",
+    "desc": "With meat. Sour cream, guacamole, cheese, beans, jalapeño, pico de gallo.",
+    "cents": 1699,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Botana seafood",
+    "desc": "Grilled shrimp & messels",
+    "cents": 2699,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Breaded shrimp",
+    "desc": "7 pieces",
+    "cents": 1999,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Taquitos",
+    "desc": "Ground beef, shredded beef or chicken. (Sour cream, guacamole, parmesan cheese & lettuce.",
+    "cents": 1299,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Buffalo Wings (7)",
+    "desc": "",
+    "cents": 1599,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Wings habanero mango (7)",
+    "desc": "",
+    "cents": 1599,
+    "label": "",
+    "section": "Appetizers / Botanas"
+   },
+   {
+    "name": "Eggs with Mexican sausage & pico de gallo",
+    "desc": "Huevos con chorizo y pico de gallo",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Eggs with shredded beef & pico de gallo",
+    "desc": "Huevos con machaca y pico de gallo.",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Eggs with cactus & pico de gallo",
+    "desc": "Huevos con nopales y pico de gallo.",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Eggs with ham & pico de gallo",
+    "desc": "Huevos con jamón y pico de gallo.",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Eggs with ranchera sauce",
+    "desc": "Huevos Rancheros",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Eggs sunny side up",
+    "desc": "Huevos estrellados",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Scrambled eggs",
+    "desc": "Huevos revueltos.",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Chilaquiles in red or green sauce",
+    "desc": "Chilaquiles con salsa roja o verde.",
+    "cents": 1999,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "/chilaquiles whit meat (chicken or steak)",
+    "desc": "Chilaquiles con pollo o asada.",
+    "cents": 2199,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Caesar salad",
+    "desc": "Served with croutons, boiled eggs, romaine lettuce, parmesan cheese, bell pepper, avocado, grilled chicken, cucumber, tomato & onions,",
+    "cents": 2099,
+    "label": "",
+    "section": "Salads / Ensaladas"
+   },
+   {
+    "name": "Taco salad",
+    "desc": "Served with croutons, boiled eggs, flour tortilla bowl filled with beans, rice, lettuce & meat. Topped with sour cream, guacamole, cheese & salsa.",
+    "cents": 2099,
+    "label": "",
+    "section": "Salads / Ensaladas"
+   },
+   {
+    "name": "Fajitas salad. (steak or chicken)",
+    "desc": "Served with croutons & boiled eggs",
+    "cents": 2099,
+    "label": "",
+    "section": "Salads / Ensaladas"
+   },
+   {
+    "name": "Shrimp salad",
+    "desc": "Served with croutons, boiled eggs, grilled shrimp, romaine lettuce, avocado, tomato, onions, cucumber, red pepper & parmesan cheese.",
+    "cents": 2299,
+    "label": "",
+    "section": "Salads / Ensaladas"
+   },
+   {
+    "name": "Avocado salad",
+    "desc": "Served with croutons, boiled eggs, avocado, tomato, lettuce, onions, red pepper, parmesan cheese.",
+    "cents": 2099,
+    "label": "",
+    "section": "Salads / Ensaladas"
+   },
+   {
+    "name": "Salmon salad",
+    "desc": "Served with croutons, boiled eggs, salmon, romaine lettuce, avocado, tomato, onions, cucumber, red pepper & parmesan cheese.",
+    "cents": 2399,
+    "label": "",
+    "section": "Salads / Ensaladas"
+   },
+   {
+    "name": "Vegetarian burrito",
+    "desc": "Green spinach tortilla, broccoli, zucchini, black beans, cheese & pico de gallo",
+    "cents": 1499,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Breakfast burrito",
+    "desc": "Scrambled eggs, sausage, beans, cheese & sour cream.",
+    "cents": 1599,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Regular burrito",
+    "desc": "Meat, rice, beans, salsa & cheese",
+    "cents": 1699,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Super burrito",
+    "desc": "Meat, rice, beans, salsa, cheese, sour cream & guacamole.",
+    "cents": 1899,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Extras",
+    "desc": "Mixed meats",
+    "cents": 299,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Regular shrimp burrito",
+    "desc": "rice, beans, salsa, cheese",
+    "cents": 1899,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Super shrimp burrito",
+    "desc": "meat, rice, beans, salsa, cheese, sour cream & guacamole",
+    "cents": 2199,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Wet burrito / burrito mojado",
+    "desc": "Big burrito topped with our homemade red sauce, cheese, sour cream & guacamole.",
+    "cents": 2199,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Hamburguer (chicken or beef) with french fries",
+    "desc": "Mayonnaise, tomatoes, onions, lettuce & American cheese.",
+    "cents": 1299,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Torta de birria de res al vapor",
+    "desc": "cilantro, onions, salsa",
+    "cents": 1699,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Torta (steak or grilled chicken)",
+    "desc": "Served with french fries & fresh cheese.",
+    "cents": 1699,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Torta de milanesa (chicken or steak)",
+    "desc": "Fried breaded chicken or steak sandwich. Served with french fries & fresh cheese.",
+    "cents": 1799,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Wet burrito / burrito mojado (Shrimp)",
+    "desc": "Big burrito topped with our homemade red sauce, meat, rice, beans, cheese, sour cream & guacamole.",
+    "cents": 2299,
+    "label": "",
+    "section": "Burritos & Tortas"
+   },
+   {
+    "name": "Bean & cheese burrito",
+    "desc": "",
+    "cents": 999,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Kids cheese quesadilla",
+    "desc": "Served with rice & beans",
+    "cents": 1299,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Chicken nuggets (6) & french fries",
+    "desc": "6 pieces.",
+    "cents": 1299,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Cheeseburguer",
+    "desc": "Mayonnaise & American cheese.",
+    "cents": 1299,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Jade Burrito",
+    "desc": "rice, beans & meat",
+    "cents": 1299,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Chicken tenders & French fries (3)",
+    "desc": "",
+    "cents": 1299,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Mozzarrella cheese sticks & French fries (3)",
+    "desc": "",
+    "cents": 1299,
+    "label": "",
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Add shrimp $2.50 or fish",
+    "desc": "",
+    "cents": 199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "-There will be a charge per charge for every addition.",
+    "desc": "#0 Sope Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 1999,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#5 Tostada",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 1999,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#6 Crispy Taco",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 1999,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#7 Enchilada & Chile Relleno",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#8 Enchilada & Crispy Taco",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#9 Tostada & Crispy Taco",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#10 Tamal & Tostada",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#11 Chille Relleno & Flauta",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#12 Tamal & Enchilada",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#13 Sope & Burrito",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#14 Chile Relleno, Tamal 7 Tostada",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#15 Enchilada, Tostada & Crispy Taco",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "#16 Enchilada, Chile Relleno & Tamal",
+    "desc": "",
+    "cents": 2499,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "El Portal Sope, Chile Relleno & Enchilada",
+    "desc": "Order served with salad, rice and refried beans. *Pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Combinations / Combinaciones"
+   },
+   {
+    "name": "Breadded Chicken / Milanesa de Pollo",
+    "desc": "Salad, rice & refried beans. Tortillas and pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Breaded Steak / Milanesa de Carne",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Steak / Carne Asada",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Carnitas ( served whit pico de gallo)",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Bistec Ranchero",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Bistec Encebollado",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Birria de Res",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Pork in green sauce / Chile Verde",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2599,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Beef in red sauce / Chile Colorado",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2599,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Chicken Mole / Pollo en Mole",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Tepic-Marinated Chicken / Pollo Tepic",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Pollo Ranchero",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Beef Tongue with Green Sauce / Lengua en Salsa Verde",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2799,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Ribs with Green Sauce / Costillas en Salsa Verde",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Grilled Chicken / Pollo a la Plancha",
+    "desc": "With bell pepper & grilled onions. Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Carne en su jugo Molcajete",
+    "desc": "Order served with salad, rice and refried beans *Tortillas and pinto or black beans upon request*",
+    "cents": 2599,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Chicharron en salsa verde",
+    "desc": "Order served with salad, rice and refried beans *Tortillas and pinto or black beans upon request*",
+    "cents": 2099,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Carne adobada/ Marinated Pork",
+    "desc": "Order served with salad, rice and refried beans *Tortillas and pinto or black beans upon request*",
+    "cents": 2599,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "T-bone Steak",
+    "desc": "Roasted potatoes & veggies only",
+    "cents": 2699,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "T-bone Steak & Shrimp",
+    "desc": "Roasted potatoes & veggies only",
+    "cents": 3299,
+    "label": "",
+    "section": "Special Order / Orden Especial"
+   },
+   {
+    "name": "Two Crispy Taco",
+    "desc": "Lettuce, sause & cheese. Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2099,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Soft Tacos",
+    "desc": "Cilantro, onions & sauce. Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2299,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Enchiladas in Mole Sauce",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2399,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Enchiladas",
+    "desc": "Green or red sauce. Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Chiles Rellenos (Cheese)",
+    "desc": "Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Tamales",
+    "desc": "Chicken or Pork. Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2299,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Tostadas",
+    "desc": "Lettuce, sauce, cheese, beans. Order served with salad, rice and refried beans. Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Sopes",
+    "desc": "With sour cream, guacamole, sauce & cheese.",
+    "cents": 2399,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Three Flautas",
+    "desc": "With sour cream, guacamole, sauce, cheese. Order served with salad, rice and refried beans. Pinto or black beans upon request.",
+    "cents": 2199,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Chimichanga",
+    "desc": "Deep Fried Burrito with sour cream, guacamole, sauce, cheese.",
+    "cents": 2299,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Two Enchiladas Shrimp",
+    "desc": "Green or red sauce. Order served with salad, rice and refried beans. * Tortillas and pinto or black beans upon request.",
+    "cents": 2499,
+    "label": "",
+    "section": "Selections / Selecciones"
+   },
+   {
+    "name": "Molcajete",
+    "desc": "Pinto beans, sausage, steak, chicken, chrimp, sauce, cheese, grilled cactus & onions.",
+    "cents": 3499,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Seafood Molcajete",
+    "desc": "Mussels, crab legs, shrimp, clams, octopus, fish, calamari & scallops.",
+    "cents": 3699,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Cat Fish Soup / Caldo de Pescado Bagre",
+    "desc": "",
+    "cents": 2599,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Shrimp Soup / Caldo de Camarón",
+    "desc": "",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Caldo 7 Mares / 7 Seas Soup",
+    "desc": "Mussels, crab legs, shrimp, clams, octopus, fish, calamari & scallops with vegetables.",
+    "cents": 3399,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Grilled Seafood / Mariscada",
+    "desc": "Crab legs, shrimp, clams, octopus, fish, calamari & scallops.",
+    "cents": 3999,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Tostada de Ceviche de Camarón",
+    "desc": "Crispy flat tortilla with shrimp mixed with pico de gallo & lime",
+    "cents": 1299,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Tostada de Ceviche Mixta",
+    "desc": "Crispy flat tortilla with shrimp & octopus mixed with pico de gallo & lime.",
+    "cents": 1399,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Fish Taco",
+    "desc": "",
+    "cents": 899,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Shrimp Taco",
+    "desc": "",
+    "cents": 999,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Shrimp Cocktail / Coctel de Camarón",
+    "desc": "Served with onion, tomato, cilantro, cucumber & avocado.",
+    "cents": 2599,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Campechana / Mixed Shrimp & Octopus Cocktail",
+    "desc": "Served with onion, tomato, cilantro, cucumber & avocado.",
+    "cents": 3099,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Tostada Especial",
+    "desc": "(pulpo, calamari, callo de acha, camarón cocido)",
+    "cents": 1999,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Botana Especial",
+    "desc": "",
+    "cents": 2999,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Ceviche de camarón y mango",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Tostada El Portal",
+    "desc": "",
+    "cents": 1999,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Agua chile verde",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Aguachile Negro",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Aguachile Rojo",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Tostada de pulpo",
+    "desc": "",
+    "cents": 1699,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Coctel El Portal/ Pulpo, Camaron & Ostiones Cocktail",
+    "desc": "Served with onion, tomato, cilantro, cucumber & avocado.",
+    "cents": 3099,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Molcajete Especial Frio",
+    "desc": "pulpo, calamari, callo de acha, camaron cocido",
+    "cents": 3699,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Tostada de Agua Chile Verde",
+    "desc": "",
+    "cents": 1999,
+    "label": "",
+    "section": "Seafood / Mariscos"
+   },
+   {
+    "name": "Two Fish Tacos",
+    "desc": "Served with green sauce, cabbage & pico de Gallo. Order served with salad, rice & refried beans. Tortillas & pinto or black beans upon request.",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Two Shrimp Tacos",
+    "desc": "Served with green sauce, cabbage & pico de Gallo. Order served with salad, rice & refried beans. Tortillas & pinto or black beans upon request.",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Surf and Turf / Mar y Tierra",
+    "desc": "Shrimp & Steak / Camarones y Carne Asada. Order served with salad, rice & refried beans. Tortillas & pinto or black beans upon request.",
+    "cents": 2999,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones a la Diabla",
+    "desc": "Shrimp in spicy sauce. Order served with salad, rice & refried beans. Tortillas & pinto or black beans upon request.",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones al Mojo de Ajo/ Garlic Shrimp",
+    "desc": "Garlic Shrimp. Served with rice, beans and tortillas.",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones Tampiqueña",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones Rancheros",
+    "desc": "Shrimp with peppers, tomatoes & red sauce",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones a la Plancha",
+    "desc": "Grilled Shrimp with garlic and red pepper",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Fried Red Snapper/ Huachinango Frito",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones Empanizados",
+    "desc": "Breaded Shrimp",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones Fiesta",
+    "desc": "Grilled Shrimp with Bacon",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Filete de Pescado Ranchero",
+    "desc": "Fish fillet with red peppers, tomatoes & red sauce",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Filete de Pescado Empanizado",
+    "desc": "Breaded fish fillet",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Filete de Pescado a la Plancha/ Grilled fish fillet with garlic & red sauce",
+    "desc": "Grilled fish with garlic & red sauce",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Tilapia Fish/ Pescado Tilapia",
+    "desc": "",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones Mango Habanero",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Camarones a la Cucaracha",
+    "desc": "",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Alambres de Camaron",
+    "desc": "veggis & potatos roosted only",
+    "cents": 2899,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Filete de Pescado a la Diabla",
+    "desc": "",
+    "cents": 2799,
+    "label": "",
+    "section": "Seafood Dishes / Platillos De Mariscos"
+   },
+   {
+    "name": "Menudo",
+    "desc": "",
+    "cents": 2399,
+    "label": "",
+    "section": "Soup / Caldos"
+   },
+   {
+    "name": "Pozole",
+    "desc": "",
+    "cents": 2399,
+    "label": "",
+    "section": "Soup / Caldos"
+   },
+   {
+    "name": "Beef Soup/ Caldo de Res",
+    "desc": "",
+    "cents": 2199,
+    "label": "",
+    "section": "Soup / Caldos"
+   },
+   {
+    "name": "Chicken Soup/ Caldo de Pollo",
+    "desc": "",
+    "cents": 2099,
+    "label": "",
+    "section": "Soup / Caldos"
+   },
+   {
+    "name": "Caldo Tlalpeño / Spicy Chicken Soup",
+    "desc": "Served with onions, avocado, lime & rice",
+    "cents": 2099,
+    "label": "",
+    "section": "Soup / Caldos"
+   },
+   {
+    "name": "El Portal Taco",
+    "desc": "Meat, salsa, onions, cilantro, cheese, sour cream & guacamole.",
+    "cents": 999,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Soft Taco",
+    "desc": "Salsa, onions & cheese",
+    "cents": 799,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Crispy Taco",
+    "desc": "Lettuce, salsa & cheese",
+    "cents": 575,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Sope",
+    "desc": "Meat, sour cream, lettuce, cheese & guacamole",
+    "cents": 899,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Tostada",
+    "desc": "Meat, beans, cheese, lettuce & salsa.",
+    "cents": 650,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Enchilada",
+    "desc": "",
+    "cents": 625,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Tamal",
+    "desc": "Chicken or Pork",
+    "cents": 699,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Chile Relleno",
+    "desc": "Cheese",
+    "cents": 899,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "2 Flautas",
+    "desc": "Meat, sour cream, lettuce, cheese & guacamole.",
+    "cents": 999,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "4 Crispy potato Tacos & can soda",
+    "desc": "salsa, onions, cilantro, cheese cream & guacamole",
+    "cents": 1299,
+    "label": "",
+    "section": "Single Item"
+   },
+   {
+    "name": "Rice or Beans (16 oz)",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Rice or Beans (32 oz)",
+    "desc": "",
+    "cents": 1099,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Sour Cream (4 oz)",
+    "desc": "",
+    "cents": 399,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Cheese (4oz)",
+    "desc": "",
+    "cents": 399,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Guacamole (8 oz)",
+    "desc": "",
+    "cents": 799,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Corn or flour Tortilla (3)",
+    "desc": "",
+    "cents": 275,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Pico de Gallo (4oz)",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Grilled Jalapeño (2)",
+    "desc": "",
+    "cents": 379,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Pickled Jalapeño",
+    "desc": "",
+    "cents": 299,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Salsa Chips (16 oz)",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "12 Tamales (Chicken or Pork)",
+    "desc": "",
+    "cents": 4099,
+    "label": "",
+    "section": "Side Orders"
+   },
+   {
+    "name": "Flan",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Desserts / Postres"
+   },
+   {
+    "name": "Chocolate Mousse",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Desserts / Postres"
+   },
+   {
+    "name": "Cheesecake",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Desserts / Postres"
+   },
+   {
+    "name": "Tres Leches Cake",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Desserts / Postres"
+   },
+   {
+    "name": "Churros (2)",
+    "desc": "",
+    "cents": 699,
+    "label": "",
+    "section": "Desserts / Postres"
+   },
+   {
+    "name": "Milk/ Leche",
+    "desc": "",
+    "cents": 299,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Hot Chocolate/ Chocolate con Leche",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Coffe/ Café",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Hot Tea/ Te Caliente",
+    "desc": "",
+    "cents": 199,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Agua Fresca (no refill)",
+    "desc": "",
+    "cents": 450,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Ice Tea (one refill)",
+    "desc": "",
+    "cents": 299,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Can of Soda / Lata de Refresco",
+    "desc": "Coca, Diet Seven Up, Dr Pepper, Diet Coke, Pepsi, Sprite",
+    "cents": 250,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Bottle soda/ Refresco de Botella",
+    "desc": "Coca-Cola, Sidral, Fanta, Sangria y Jarritos",
+    "cents": 399,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Fountain Soda/ Soda de Maquina",
+    "desc": "One refill",
+    "cents": 399,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Mangonada",
+    "desc": "",
+    "cents": 1099,
+    "label": "",
+    "section": "Beverages"
+   }
+  ],
+  "price_note": "Their menu, from their own site; $1 oysters Monday to Friday, 3 to 10pm, in their own words",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Menu parsed from elportalrest.com/menu (Wix). The fajitas, quesadillas and fresh-juice sections did not parse cleanly into name-and-price pairs and are left off; alcohol is left off.",
+   "Hours and the $1 oysters are their Instagram bio. Ordering on their site goes to DoorDash, which is not used.",
+   "No phone number in the text of their site or the profile Glenn sent."
+  ]
+ },
+ {
+  "id": "b_betweentheplants",
+  "name_exact": "Between The Plants",
+  "one_line": "Reformer Pilates in Union City, booked through their app",
+  "cuisine": "Reformer Pilates",
+  "address": null,
+  "phone": "(510) 690-7143",
+  "email": null,
+  "hours": null,
+  "instagram": "betweentheplants",
+  "site_kind": "own",
+  "site_url": "https://www.betweentheplants.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Single session",
+    "desc": "Valid for one month",
+    "cents": 2500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "8 sessions a month",
+    "desc": "Monthly",
+    "cents": 18000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Unlimited sessions",
+    "desc": "Monthly",
+    "cents": 29900,
+    "label": "",
+    "section": null
+   }
+  ],
+  "price_note": "Book in the Between The Plants app, for iPhone and Android; late cancellations cost $20, and all passes are final sale",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Plans from betweentheplants.com/plans-pricing; policies from /policy; the text number from the policy page (“by text at 510.690.7143”).",
+   "Glenn: “They have an app to download to book.” The App Store and Google Play links are in their Instagram bio.",
+   "No street address is published on the site or the profile; “Union City, CA” is all either says, so the page has no map pin."
+  ]
+ },
+ {
+  "id": "b_dripdesserthouse",
+  "name_exact": "Drip Dessert House",
+  "one_line": "Waffles, crepes, mini pancakes and milkshakes on Thornton Avenue",
+  "cuisine": "Dessert house",
+  "address": "5632 Thornton Ave, Newark, CA",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "dripdesserthouse",
+  "site_kind": "stopgap",
+  "site_url": "https://dripdesserthouse.square.site/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Belgian Waffle",
+    "desc": "",
+    "cents": 1099,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Mini Pancakes",
+    "desc": "",
+    "cents": 1099,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Brownie",
+    "desc": "",
+    "cents": 1099,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Crepe",
+    "desc": "",
+    "cents": 1099,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "CROWNIE",
+    "desc": "A crepe filled with brownie",
+    "cents": 1999,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Cinnamon Roll Crepe",
+    "desc": "Limited time",
+    "cents": 1399,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Oreo Milkshake",
+    "desc": "",
+    "cents": 999,
+    "label": "",
+    "section": "Milkshakes"
+   },
+   {
+    "name": "Fruity Pebbles Milkshake",
+    "desc": "",
+    "cents": 999,
+    "label": "",
+    "section": "Milkshakes"
+   },
+   {
+    "name": "Biscoff Milkshake",
+    "desc": "",
+    "cents": 999,
+    "label": "",
+    "section": "Milkshakes"
+   }
+  ],
+  "price_note": "These are the featured items on their own Square store; they cater too",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Their only site is a Square Online store (the featured items read in a browser); the Dubai Strawberry Cup was out of stock and is left off. A stopgap, so the red outline stays.",
+   "No phone or hours on the store or the profile Glenn sent."
+  ]
+ },
+ {
+  "id": "b_regentthaimassage",
+  "name_exact": "Regent Thai Massage",
+  "one_line": "Thai, Swedish and deep tissue massage on Union Street",
+  "cuisine": "Thai massage",
+  "address": "2064 Union St, 2nd floor, San Francisco, CA 94123",
+  "phone": "(415) 465-3604",
+  "email": "info@regentthaimassage.com",
+  "hours": "Daily 10am-9pm",
+  "instagram": "regentmassage.sf",
+  "site_kind": "own",
+  "site_url": "https://www.regentthaimassage.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Traditional Thai massage",
+    "desc": "",
+    "cents": 13900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Thai aroma massage",
+    "desc": "",
+    "cents": 13900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Swedish massage",
+    "desc": "",
+    "cents": 13900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Deep tissue massage",
+    "desc": "",
+    "cents": 13900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Neck and shoulder",
+    "desc": "",
+    "cents": 6900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Thai foot reflexology",
+    "desc": "",
+    "cents": 6900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Warm stone massage",
+    "desc": "",
+    "cents": 14900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Prenatal massage",
+    "desc": "From twelve weeks",
+    "cents": 7900,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Couples massage",
+    "desc": "Side by side, separate beds",
+    "cents": 26900,
+    "label": "from",
+    "section": null
+   }
+  ],
+  "price_note": "These are starting prices from their own site; each service comes in longer sessions for more",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Prices from regentthaimassage.com/services. Each service lists three prices (e.g. $139 / $179 / $259) with the session lengths shown only in images, so each is carried as a “from” floor.",
+   "PHONE CONFLICT: their site lists 949-945-9330 and 415-465-3604; their Instagram contact sheet says (415) 949-0192. The site’s 415 number is carried. Email on the site is Info@regentthaimassage.com; Instagram says regentthaiforwork@gmail.com."
+  ]
+ },
+ {
+  "id": "b_seoultotokyokitchen",
+  "name_exact": "Seoul to Tokyo Kitchen",
+  "one_line": "Korean and Japanese kitchen on Marlow Road",
+  "cuisine": "Korean & Japanese",
+  "address": "3082 Marlow Rd, Ste B3, Santa Rosa, CA",
+  "phone": "(707) 919-3014",
+  "email": null,
+  "hours": "Mon-Sat 11am-3pm and 4-9pm; Sun 12-8pm",
+  "instagram": "seoultotokyokitchen",
+  "site_kind": "own",
+  "site_url": "https://seoultotokyokitchen.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is posted as pictures on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "seoultotokyokitchen.com (GoDaddy) links its menu to a Canva design of menu pictures; no text prices. Order Online goes to DoorDash, which is not used.",
+   "Their Instagram calls them a Korean restaurant; their site says Asian fusion."
+  ]
+ },
+ {
+  "id": "b_jazzbraids",
+  "name_exact": "Jazz And Co. LLC",
+  "one_line": "Braids, braid classes and ear piercing on Rich Avenue",
+  "cuisine": "Braids, salon services",
+  "address": "7187 Rich Ave, Newark, CA 94560",
+  "phone": "(510) 894-3975",
+  "email": "JazzAndCo2022@yahoo.com",
+  "hours": "Wed-Thu 10:30am-6:30pm; Fri 12-6pm; Sat 10am-2pm; closed Sun-Tue",
+  "instagram": "jazz_braids_styles",
+  "site_kind": "stopgap",
+  "site_url": "https://www.styleseat.com/m/v/jazzbraidsstyles",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Simple design cornrows",
+    "desc": "About 1 hr 30 min",
+    "cents": 15000,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "3-4 braids",
+    "desc": "About 1 hr",
+    "cents": 10000,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "2 braids with a small design",
+    "desc": "About 1 hr 15 min",
+    "cents": 12500,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "2 braid man bun",
+    "desc": "Top of the head only",
+    "cents": 5000,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "4 braid man bun",
+    "desc": "Top of the head only",
+    "cents": 7500,
+    "label": "from",
+    "section": null
+   },
+   {
+    "name": "Wash and blow dry, whole head",
+    "desc": "About 45 min",
+    "cents": 5500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Wash and blow dry, man bun",
+    "desc": "About 30 min",
+    "cents": 4000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Customized wig",
+    "desc": "Full or partial lace, about 3 hr",
+    "cents": 30000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Teeth whitening",
+    "desc": "One session, three applications",
+    "cents": 20000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Ear piercing with earrings",
+    "desc": "The piercing is free with earrings she carries; 6 months and up",
+    "cents": 1999,
+    "label": "",
+    "section": null
+   }
+  ],
+  "price_note": "Book on her StyleSeat page, where a deposit holds the appointment; hair must be washed and blown out straight",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “This is Janelle folks. Can you put a glow around her icon? Can you make it a pink glow?” and “Needs website.” Her only booking page is StyleSeat: a stopgap, so the red outline stays under the pink glow.",
+   "Services and prices from her StyleSeat profile (4.9 from 220 reviews): stylist at Classics Barbershop, a traveling braider in the Bay Area and Los Angeles, certified in teeth whitening and ear piercing, teaching braid classes since 2016, with merch.",
+   "The clip is her own post: birthday braids for @ludacris, sent with “Can you also clip this video and add it to her page.”"
+  ]
+ },
+ {
+  "id": "b_bustdowncobeasty",
+  "name_exact": "Bust Down & Co.",
+  "one_line": "Custom jewelry and pre-owned luxury watches on Story Road",
+  "cuisine": "Custom jewelry & watches",
+  "address": "1111 Story Rd #1073, San Jose, CA 95122",
+  "phone": "(510) 586-9228",
+  "email": "contact@bustdownandco.com",
+  "hours": "Mon-Fri 11am-5pm; Sat-Sun 11am-6pm",
+  "instagram": "bustdownbilly",
+  "site_kind": "own",
+  "site_url": "https://bustdownandco.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Prices and stock are on their own store, which adds inventory weekly; custom pieces are quoted",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Please put a glow on the BEASTY spot. This is Janelle’s family.” The BEASTY seat carries the glow; the San Jose listing does not.",
+   "Their Shopify store lists 250-plus pieces, almost all pre-owned watches (Rolex, Breitling, Omega and more), from about $435 to $55,350, plus custom rings, earrings and diamonds; none of it is orderable here."
+  ]
+ },
+ {
+  "id": "b_caballerosbarberlounge",
+  "name_exact": "Caballeros BarberLounge",
+  "one_line": "Haircuts, fades and straight razor shaves on Diamond Boulevard",
+  "cuisine": "Barber",
+  "address": "2075 Diamond Blvd, Ste H190, Concord, CA 94520",
+  "phone": "(925) 444-5024",
+  "email": null,
+  "hours": "Tue-Fri 10am-7pm; Sat 8am-5pm; closed Sun-Mon",
+  "instagram": "caballeros_barberlounge",
+  "site_kind": "own",
+  "site_url": "https://www.caballerosbarberlounge.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Haircut with beard line-up",
+    "desc": "Clipper, shears and straight razor",
+    "cents": 7500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "All-clipper cut, fade or taper",
+    "desc": "",
+    "cents": 5000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Shear and clipper haircut",
+    "desc": "",
+    "cents": 5500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Kids under 12, military and seniors",
+    "desc": "",
+    "cents": 4500,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Beard shape-up or line-up",
+    "desc": "",
+    "cents": 4000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Straight razor shave",
+    "desc": "Old school",
+    "cents": 8500,
+    "label": "",
+    "section": null
+   }
+  ],
+  "price_note": "These are their own prices; any added service on a cut is $15 more",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Services and prices from their own booking page, caballerosbarberlounge.setmore.com, which also gives the hours and the number."
+  ]
+ },
+ {
+  "id": "b_moaeventsrentals",
+  "name_exact": "MOA Events & Rentals",
+  "one_line": "Bounce houses, face painting and foam parties, delivered",
+  "cuisine": "Mobile party rentals",
+  "address": null,
+  "phone": "(925) 502-6384",
+  "email": null,
+  "hours": null,
+  "instagram": "moaeventsrentals",
+  "site_kind": "own",
+  "site_url": "https://rentbouncebayarea.com/",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Classic castle bounce house",
+    "desc": "On sale from $370",
+    "cents": 35000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Face painting and balloon twisting",
+    "desc": "",
+    "cents": 25000,
+    "label": "",
+    "section": null
+   },
+   {
+    "name": "Foam machine service",
+    "desc": "",
+    "cents": 15000,
+    "label": "",
+    "section": null
+   }
+  ],
+  "price_note": "Text them to book; these are the prices on their own booking page, and they bring BBQ, waiters, tables and chairs too",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Needs Website. Pilot program.” They DO have a site: rentbouncebayarea.com, with a working booking cart, so there is no red outline. A redesign or pilot pitch, not a missing site.",
+   "Their site gives iinfo@rentbouncebayarea.com — likely a typo for info@ — so no email is carried.",
+   "They serve the whole Bay Area and publish no address; Glenn filed them under Antioch."
+  ]
+ },
+ {
+  "id": "b_hlpeninsulasouthsf",
+  "name_exact": "HL Peninsula Restaurant",
+  "one_line": "Cantonese dim sum and banquet dinners off US-101",
+  "cuisine": "Cantonese dim sum",
+  "address": "608 Dubuque Ave, South San Francisco, CA 94080",
+  "phone": "(650) 616-8168",
+  "email": "southsf@hlpeninsula.com",
+  "hours": "Mon-Fri 10:30am-2:30pm, 5-9:30pm; Sat-Sun 9:45am-2:15pm, 5-9:30pm",
+  "instagram": "hlpeninsula",
+  "site_kind": "own",
+  "site_url": "https://www.hlpeninsula.com/locations",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their dim sum, dinner and set menus are posted as pictures on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Five locations.” Each shop’s address, phone, email and hours are from hlpeninsula.com/locations; menus there are images and are not transcribed.",
+   "The Garden block on their site repeats the South San Francisco description word for word; only its address, phone, email and hours are used. Its email is hotpotgrill@hlpeninsula.com.",
+   "Milpitas lists a second number, 408-262-1088. HL Bakery & HL Express in Castro Valley is a sixth outlet and is not seated."
+  ]
+ },
+ {
+  "id": "b_hlpeninsulapearl",
+  "name_exact": "HL Peninsula Restaurant",
+  "one_line": "Cantonese dim sum on the water by SFO",
+  "cuisine": "Cantonese dim sum",
+  "address": "1590 Old Bayshore Hwy, Burlingame, CA 94010",
+  "phone": "(650) 697-1288",
+  "email": "burlingame@hlpeninsula.com",
+  "hours": "Mon-Fri 10:30am-2:30pm, 5-9:30pm; Sat-Sun 9:45am-2:15pm, 5-9:30pm",
+  "instagram": "hlpeninsula",
+  "site_kind": "own",
+  "site_url": "https://www.hlpeninsula.com/locations",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their dim sum, dinner and set menus are posted as pictures on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Five locations.” Each shop’s address, phone, email and hours are from hlpeninsula.com/locations; menus there are images and are not transcribed.",
+   "The Garden block on their site repeats the South San Francisco description word for word; only its address, phone, email and hours are used. Its email is hotpotgrill@hlpeninsula.com.",
+   "Milpitas lists a second number, 408-262-1088. HL Bakery & HL Express in Castro Valley is a sixth outlet and is not seated."
+  ]
+ },
+ {
+  "id": "b_hlpeninsulacastrovalley",
+  "name_exact": "HL Peninsula Restaurant",
+  "one_line": "Cantonese dim sum at the group’s 28,000 sq ft flagship",
+  "cuisine": "Cantonese dim sum",
+  "address": "3868 Castro Valley Blvd, Castro Valley, CA 94546",
+  "phone": "(510) 999-3838",
+  "email": "castrovalley@hlpeninsula.com",
+  "hours": "Mon-Fri 11am-2:30pm, 5-10:30pm; Sat-Sun 10am-2:15pm, 5-10:30pm",
+  "instagram": "hlpeninsula",
+  "site_kind": "own",
+  "site_url": "https://www.hlpeninsula.com/locations",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their dim sum, dinner and set menus are posted as pictures on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Five locations.” Each shop’s address, phone, email and hours are from hlpeninsula.com/locations; menus there are images and are not transcribed.",
+   "The Garden block on their site repeats the South San Francisco description word for word; only its address, phone, email and hours are used. Its email is hotpotgrill@hlpeninsula.com.",
+   "Milpitas lists a second number, 408-262-1088. HL Bakery & HL Express in Castro Valley is a sixth outlet and is not seated."
+  ]
+ },
+ {
+  "id": "b_hlpeninsulagarden",
+  "name_exact": "HL Peninsula Restaurant",
+  "one_line": "HL Peninsula’s Garden restaurant on Old Bayshore Highway",
+  "cuisine": "Cantonese dim sum",
+  "address": "1600 Old Bayshore Hwy, Burlingame, CA 94010",
+  "phone": "(650) 692-8888",
+  "email": "hotpotgrill@hlpeninsula.com",
+  "hours": "Mon-Fri 11am-2:30pm, 5-10:30pm; Sat-Sun 10am-2:15pm, 5-10:30pm",
+  "instagram": "hlpeninsula",
+  "site_kind": "own",
+  "site_url": "https://www.hlpeninsula.com/locations",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their dim sum, dinner and set menus are posted as pictures on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Five locations.” Each shop’s address, phone, email and hours are from hlpeninsula.com/locations; menus there are images and are not transcribed.",
+   "The Garden block on their site repeats the South San Francisco description word for word; only its address, phone, email and hours are used. Its email is hotpotgrill@hlpeninsula.com.",
+   "Milpitas lists a second number, 408-262-1088. HL Bakery & HL Express in Castro Valley is a sixth outlet and is not seated."
+  ]
+ },
+ {
+  "id": "b_hlpeninsulamilpitas",
+  "name_exact": "HL Peninsula Restaurant",
+  "one_line": "Cantonese dim sum and a 700-seat ballroom off I-880",
+  "cuisine": "Cantonese dim sum",
+  "address": "136 Ranch Dr, Milpitas, CA 95035",
+  "phone": "(408) 262-3988",
+  "email": "milpitas@hlpeninsula.com",
+  "hours": "Mon-Fri 11am-2:30pm, 5-9:30pm; Sat-Sun 10am-2:15pm, 5-9:30pm",
+  "instagram": "hlpeninsula",
+  "site_kind": "own",
+  "site_url": "https://www.hlpeninsula.com/locations",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their dim sum, dinner and set menus are posted as pictures on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Five locations.” Each shop’s address, phone, email and hours are from hlpeninsula.com/locations; menus there are images and are not transcribed.",
+   "The Garden block on their site repeats the South San Francisco description word for word; only its address, phone, email and hours are used. Its email is hotpotgrill@hlpeninsula.com.",
+   "Milpitas lists a second number, 408-262-1088. HL Bakery & HL Express in Castro Valley is a sixth outlet and is not seated."
+  ]
+ },
+ {
+  "id": "b_thehalalcartel",
+  "name_exact": "The Halal Cartel",
+  "one_line": "Halal street food wraps and bowls on Walsh Avenue",
+  "cuisine": "Halal street food",
+  "address": "2120 Walsh Ave, Santa Clara, CA",
+  "phone": null,
+  "email": null,
+  "hours": "Daily 11am-11pm",
+  "instagram": "thehalalcartel",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices; they cater, in their own words",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Santa Clara • Goods, Halal.” Their only link is a Linktree (Google Maps, TikTok, Instagram, YouTube), so there is no website and the red outline applies.",
+   "Their bio: “Wraps | Bowls | Drinks, Open 11AM to 11PM, Modern Street-Style Halal Food #wecater #zabihahalal.” The halal mark is on the page on their own word."
+  ]
+ },
+ {
+  "id": "b_chutneys",
+  "name_exact": "Chutneys Brentwood",
+  "one_line": "Vegetarian Indian cooking: dine in, takeout and catering",
+  "cuisine": "Vegetarian Indian",
+  "address": "2505 Sand Creek Rd, Ste 112, Brentwood, CA 94513",
+  "phone": "(925) 434-5555",
+  "email": null,
+  "hours": "Mon-Fri 11am-9pm; Sat-Sun 8am-9pm",
+  "instagram": "chutneys.brentwood",
+  "site_kind": "stopgap",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their website is not working, so no menu or prices can be read; their Instagram posts a $19.99 weekend buffet",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "REPLACES the batch 19 record, whose research note had become the page’s tagline (“One-page placeholder site: the tagline…”). Everything here is their Instagram, which Glenn sent on 2026-09-19 with “Needs Website update. Current one isn’t working.”",
+   "chutneys.ai is still a GoDaddy placeholder with a contact form and nothing else; the link is taken off the page and the red outline stays.",
+   "Hours are their “We’re open to serve you” post of July 22 (Mon-Fri 11am-9pm, Sat/Sun 8am-9pm)."
+  ]
+ },
+ {
+  "id": "b_thecozyoven",
+  "name_exact": "The Cozy Oven",
+  "one_line": "Cakes to order in Oakley, Antioch and Brentwood",
+  "cuisine": "Custom cakes",
+  "address": null,
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "thecozyoven.co",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They share their menu and order form by DM",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “New new. Needs Website and pilot program.” No website; their bio says DM for menu and order form, and email for business inquiries.",
+   "Since 2024, per their logo."
+  ]
+ },
+ {
+  "id": "b_lovelysburgersoakland",
+  "name_exact": "Lovely's Burgers",
+  "one_line": "Grass-fed burgers and dogs at Two Pitchers Brewing on Webster Street",
+  "cuisine": "Burgers & dogs",
+  "address": "2344 Webster St, Oakland, CA",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "lovelysburgers",
+  "site_kind": "own",
+  "site_url": "https://www.lovelysburgers.com/oakland",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their Oakland menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Oakland hours per their site: Tue-Thu 4-9:30pm, Fri-Sat 4-10pm, Sun 12-6pm, closed Mon. Fish sells out daily, available Tue-Fri.",
+   "Burgers on Oakland’s page one is Cafe Noir’s, so this is the yellow sheet."
+  ]
+ },
+ {
+  "id": "b_mochicasf",
+  "name_exact": "Mochica Kitchen & Bar",
+  "one_line": "Cal-Peruvian kitchen and pisco bar in Potrero Hill",
+  "cuisine": "Peruvian",
+  "address": "1469 18th St, San Francisco, CA 94107",
+  "phone": "(415) 278-0480",
+  "email": "info@mochicasf.com",
+  "hours": null,
+  "instagram": "mochicasf",
+  "site_kind": "own",
+  "site_url": "https://mochicasf.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their bar, brunch, dinner and dessert menus are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Hours per their site: Tue-Thu 4-9pm, Fri-Sat 10am-10pm, Sun 10am-9pm. Chef Carlos Altamirano’s first restaurant, per their story."
+  ]
+ },
+ {
+  "id": "b_lachicharronadacolombiana",
+  "name_exact": "La Chicharronada Colombiana",
+  "one_line": "Colombian restaurant on Hegenberger Road",
+  "cuisine": "Colombian",
+  "address": "280 Hegenberger Rd, Oakland, CA",
+  "phone": "(408) 509-4458",
+  "email": null,
+  "hours": null,
+  "instagram": "lachicharronadacolombiana",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Needs website and pilot program.” Their only link is a Facebook profile.",
+   "Bio: Tue-Wed 9am-5pm, Thu-Sat 9am-10pm, Sun 9am-7pm; two numbers, 408-509-4458 and 408-439-1663 (the first is carried).",
+   "Instagram handle is cut off in the screenshot as “lachicharronadacolombi…”; the profile name is LA CHICHARRONADA COLOMBIANA."
+  ]
+ },
+ {
+  "id": "b_tadaramen",
+  "name_exact": "Tada Ramen & Yakitori",
+  "one_line": "Ramen and binchotan yakitori on Grand Avenue",
+  "cuisine": "Ramen & yakitori",
+  "address": "3415 Grand Ave, Oakland, CA",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": "tadaramen",
+  "site_kind": "none",
+  "site_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "They publish no prices",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Needs website update.” IT IS WORSE THAN THAT: www.tadaramen.com, the link in their bio, does not resolve, and tadaramen.com now serves an Indonesian online-slots gambling site. The domain has lapsed and been taken. Nothing links to it here, and they should take it out of their bio."
+  ]
+ },
+ {
+  "id": "b_barsprezzatura",
+  "name_exact": "Bar Sprezzatura",
+  "one_line": "Italian aperitivo and cicchetti bar by Maritime Plaza",
+  "cuisine": "Italian aperitivo bar",
+  "address": "300 Clay St #100, San Francisco, CA 94111",
+  "phone": null,
+  "email": "info@barsprezzatura.com",
+  "hours": null,
+  "instagram": "barsprezzatura",
+  "site_kind": "own",
+  "site_url": "https://www.barsprezzatura.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menus are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Their site gives One Maritime Plaza #100; their schema and Instagram give 300 Clay St #100, the same building. A Portland room opens fall 2026. A Mina Group restaurant."
+  ]
+ },
+ {
+  "id": "b_poorhousebistro",
+  "name_exact": "Poor House Bistro",
+  "one_line": "New Orleans cooking and live blues in Little Italy",
+  "cuisine": "New Orleans cooking",
+  "address": "317 W St John St, San Jose, CA 95110",
+  "phone": "(408) 292-5837",
+  "email": "manager@poorhousebistro.com",
+  "hours": null,
+  "instagram": "poorhousebistro",
+  "site_kind": "own",
+  "site_url": "https://poorhousebistro.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menus are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Needs website.” They have one — poorhousebistro.com, WordPress, updated 2026-09-08 — so no outline: a redesign pitch. Its banner still mentions a February Mardi Gras date.",
+   "Address is their Instagram’s: “Now OPEN Wednesday-Sunday in Little Italy, 317 W St John St.” Phone 408-29-BLUES."
+  ]
+ },
+ {
+  "id": "b_mimosaswillowglen",
+  "name_exact": "Mimosas of Willow Glen",
+  "one_line": "Breakfast, lunch and night events in Willow Glen",
+  "cuisine": "Brunch",
+  "address": "860 Willow St, Ste 100, San Jose, CA 95125",
+  "phone": "(408) 352-5015",
+  "email": "kimberlin1113@gmail.com",
+  "hours": null,
+  "instagram": "mimosasofwillowglen",
+  "site_kind": "own",
+  "site_url": "https://mimosasofwillowglen.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Email is the one printed on their site. Catering, parties and NFL game days, per their site."
+  ]
+ },
+ {
+  "id": "b_dreamlandartplay",
+  "name_exact": "Dreamland Art & Play",
+  "one_line": "Play town and art studio for kids aged 2 to 12",
+  "cuisine": "Kids' play & art studio",
+  "address": "3457 Blackhawk Plaza Cir, Danville, CA",
+  "phone": "(415) 686-4748",
+  "email": "dreamlandartandplay@gmail.com",
+  "hours": null,
+  "instagram": "dreamlandartandplay",
+  "site_kind": "own",
+  "site_url": "https://www.dreamlandartandplay.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Walk-in tickets, memberships, art classes and parties are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Address conflict: their site says 3457 Blackhawk Plaza Cir; their Instagram says 3471. The site’s is carried.",
+   "Hours per their bio: 10am-5pm weekdays, 11am-3pm weekends. A second number, (415) 914-3419, is given for parties and classes."
+  ]
+ },
+ {
+  "id": "b_cajunbowlsanbruno",
+  "name_exact": "Cajun Bowl",
+  "one_line": "Cajun seafood in the bag on El Camino Real",
+  "cuisine": "Cajun seafood",
+  "address": "1230 El Camino Real #D, San Bruno, CA 94066",
+  "phone": "(650) 636-4550",
+  "email": null,
+  "hours": null,
+  "instagram": "cajun_bowl",
+  "site_kind": "own",
+  "site_url": "https://www.cajunbowlcalifornia.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Two shops per their site: San Bruno and downtown San Mateo (all-you-can-eat there). No seafood category exists, so both are on the yellow sheets."
+  ]
+ },
+ {
+  "id": "b_cajunbowlsanmateo",
+  "name_exact": "Cajun Bowl",
+  "one_line": "Cajun seafood in the bag, all you can eat, on 4th Avenue",
+  "cuisine": "Cajun seafood",
+  "address": "168 E 4th Ave, San Mateo, CA 94401",
+  "phone": "(650) 445-7248",
+  "email": null,
+  "hours": null,
+  "instagram": "cajun_bowl",
+  "site_kind": "own",
+  "site_url": "https://www.cajunbowlcalifornia.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "The all-you-can-eat offer is San Mateo only, dine-in, per their site."
+  ]
+ },
+ {
+  "id": "b_brezoalbany",
+  "name_exact": "Brezo Restaurant",
+  "one_line": "Californian brunch, lunch and dinner on Solano Avenue",
+  "cuisine": "Californian",
+  "address": "1111 Solano Ave, Albany, CA",
+  "phone": "(510) 705-1897",
+  "email": "info@brezorestaurant.com",
+  "hours": null,
+  "instagram": "brezo_restaurant",
+  "site_kind": "own",
+  "site_url": "https://www.brezorestaurant.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Woman-owned, per their bio. Phone conflict: site 510-705-1897, Instagram (510) 725-5452; the site’s is carried."
+  ]
+ },
+ {
+  "id": "b_toastintown",
+  "name_exact": "Toast In Town",
+  "one_line": "Brunch at Foster Square: scrambles, Benedicts and burgers",
+  "cuisine": "Brunch",
+  "address": "1100 Foster Square Ln, Ste 145, Foster City, CA 94404",
+  "phone": "(650) 389-7618",
+  "email": "toastintown@gmail.com",
+  "hours": null,
+  "instagram": "toastintown",
+  "site_kind": "own",
+  "site_url": "https://toastintown.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Hours per their bio: Mon-Fri 9am-2:30pm, Sat-Sun 8am-2:30pm. Their site refuses automated fetches (403) and was read in a browser.",
+   "Glenn: “Can you isolate just the toast/bread for the icon logo?” The icon is the loaf alone, cut from their own logo."
+  ]
+ },
+ {
+  "id": "b_nossooakland",
+  "name_exact": "Nosso",
+  "one_line": "Lounge on 8th Street with oxtail sliders and loaded fries",
+  "cuisine": "Lounge & bites",
+  "address": "532 8th St, Oakland, CA",
+  "phone": "(510) 207-1008",
+  "email": "contact@nossooakland.com",
+  "hours": null,
+  "instagram": "nosso.oak",
+  "site_kind": "own",
+  "site_url": "https://nossooakland.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn sent this with the Barre Beat link pasted again and “Oakland • Goods”; the screenshots are all Nosso’s (nossooakland.com), so the link was a slip and Nosso is what is listed."
+  ]
+ },
+ {
+  "id": "b_kitavasf",
+  "name_exact": "Kitava",
+  "one_line": "Gluten-free bowls and plates on Mission Street",
+  "cuisine": "Gluten-free kitchen",
+  "address": "2011 Mission St, San Francisco, CA 94110",
+  "phone": "(415) 780-1661",
+  "email": null,
+  "hours": null,
+  "instagram": "kitavakitchen",
+  "site_kind": "own",
+  "site_url": "https://www.kitava.com/store-locator/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “Goods, 4 locations.” Addresses and numbers are from kitava.com/store-locator: Walnut Creek, Albany (North Berkeley), Mission SF and Temescal Oakland. Their SFO Terminal 1 counter is not seated.",
+   "Hours per the locator: 11am-9pm daily."
+  ]
+ },
+ {
+  "id": "b_kitavaoakland",
+  "name_exact": "Kitava",
+  "one_line": "Gluten-free bowls and plates on 40th Street in Temescal",
+  "cuisine": "Gluten-free kitchen",
+  "address": "375 40th St, Oakland, CA 94609",
+  "phone": "(510) 496-4055",
+  "email": null,
+  "hours": null,
+  "instagram": "kitavakitchen",
+  "site_kind": "own",
+  "site_url": "https://www.kitava.com/store-locator/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Temescal hours were cut off in the screenshot and are not carried."
+  ]
+ },
+ {
+  "id": "b_kitavaalbany",
+  "name_exact": "Kitava",
+  "one_line": "Gluten-free bowls and plates on Solano Avenue",
+  "cuisine": "Gluten-free kitchen",
+  "address": "1187 Solano Ave, Albany, CA 94706",
+  "phone": "(510) 725-6097",
+  "email": null,
+  "hours": null,
+  "instagram": "kitavakitchen",
+  "site_kind": "own",
+  "site_url": "https://www.kitava.com/store-locator/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Hours per the locator: 11am-9pm daily."
+  ]
+ },
+ {
+  "id": "b_kitavawalnutcreek",
+  "name_exact": "Kitava",
+  "one_line": "Gluten-free bowls and plates, with weekend brunch, in Walnut Creek",
+  "cuisine": "Gluten-free kitchen",
+  "address": "1699 N California Blvd, Walnut Creek, CA 94596",
+  "phone": "(925) 430-2901",
+  "email": null,
+  "hours": null,
+  "instagram": "kitavakitchen",
+  "site_kind": "own",
+  "site_url": "https://www.kitava.com/store-locator/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu is on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Hours per the locator: 11am-9pm daily, brunch 10am-2pm Friday to Sunday."
+  ]
+ },
+ {
+  "id": "b_pampasvacaville",
+  "name_exact": "PAMPAS Brazilian Steakhouse",
+  "one_line": "All-you-can-eat Brazilian churrasco on Helen Power Drive",
+  "cuisine": "Brazilian steakhouse",
+  "address": "1040 Helen Power Dr, Vacaville, CA",
+  "phone": "(707) 514-7228",
+  "email": "business@pampas-braziliansteakhouse.com",
+  "hours": null,
+  "instagram": "pampasvacaville",
+  "site_kind": "own",
+  "site_url": "https://www.pampasbraziliansteakhouse.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menu and prices are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "23 select cuts, salad bar, hot sides and sushi, per their bio. The contact email’s domain has a hyphen; their site’s does not."
+  ]
+ },
+ {
+  "id": "b_essencebjj",
+  "name_exact": "Essence Jiu Jitsu",
+  "one_line": "Brazilian jiu-jitsu classes for all ages 3 and up",
+  "cuisine": "Brazilian jiu-jitsu",
+  "address": "1500 S Main St, Walnut Creek, CA",
+  "phone": "(925) 404-9876",
+  "email": "info@essencebjjwalnutcreek.com",
+  "hours": null,
+  "instagram": "essencebjjwalnutcreek",
+  "site_kind": "own",
+  "site_url": "https://essencebjjwalnutcreek.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Intro classes and schedules are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Walnut Creek’s Gym seat is TruFusion’s, so this is the services yellow sheet. Their bio offers a free intro class."
+  ]
+ },
+ {
+  "id": "b_holbrookhouse",
+  "name_exact": "The Holbrook House",
+  "one_line": "Bar and restaurant with a martini cart at 1 Sansome",
+  "cuisine": "Bar & restaurant",
+  "address": "1 Sansome St, San Francisco, CA 94104",
+  "phone": "(415) 515-6444",
+  "email": null,
+  "hours": null,
+  "instagram": "holbrookhousesf",
+  "site_kind": "own",
+  "site_url": "https://www.holbrookhousesf.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Their menus are on their own site",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Breakfast, lunch and dinner; their bio gives Mon/Tue 8am-10pm and Wed-Fri 8am-11pm but no weekend hours, so hours are not carried."
+  ]
+ },
+ {
+  "id": "b_bustdownco",
+  "name_exact": "Bust Down & Co.",
+  "one_line": "Custom jewelry and pre-owned luxury watches on Story Road",
+  "cuisine": "Custom jewelry & watches",
+  "address": "1111 Story Rd #1073, San Jose, CA 95122",
+  "phone": "(510) 586-9228",
+  "email": "contact@bustdownandco.com",
+  "hours": null,
+  "instagram": "bustdownbilly",
+  "site_kind": "own",
+  "site_url": "https://bustdownandco.com/",
+  "prices_published": false,
+  "items": [],
+  "price_note": "Prices and stock are on their own store",
+  "source_url": null,
+  "logo_url": null,
+  "logo_px": null,
+  "flags": [
+   "Glenn: “San Jose • Services, BEASTY • Services. Please put a glow on the BEASTY spot.” This is the San Jose listing: no glow, on the services yellow sheet (no jeweller category)."
+  ]
+ }
+]

@@ -49,20 +49,30 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 16 Sep | @ilisaeatssf | A walk along Chicago's lakefront, posted June 2025. Not food and not the Bay Area | No |
 | 17 Sep | @mama_sheedz | A wagyu steak, filmed close up in August. No business named anywhere in the post | No business to place it on |
 | 17 Sep | @thespoonlist | The Local, Petaluma — sandwiches, the shop and Chef Chris. Sent with the listing and "please give credit to this person and attach their link to their Instagram" | **Yes.** On The Local's page as a review, credited to her |
+| 17 Sep | @takeoutwithtuck (The Honest Reviewer) | A buttermilk-glazed donut. The post names no shop, only #donutshops | No business named |
+| 17 Sep | @bayareafoodz | His birthday post of September 2024 announcing @hyphyburger, asking for mural artists and staff | No — Hyphy Burger is not on BEASTY |
+| 18 Sep | @imshotta (The Stiletto Stoner) | BHC Modern Korean Fried Chicken, no location in the caption | No |
+| 18 Sep | @bayareawilson (Wilson Leung) | Florecita Panaderia moving to 23rd and Bartlett (formerly Shuggie's), Mission District | No |
+| 18 Sep | @celineeats, a second time | Froyo Park, Krispy Joe's and Kingpin Donuts, Berkeley | No |
+| 18 Sep | @tiff.eatz | A late-night pho shop in Scarborough, Toronto, posted April 2026. Sent without the word, four minutes after a "Foodie" | No, and not the Bay Area |
+| 20 Sep | @peggy_shoo | Jonny's Italian Ice & Cream, Sunnyvale | **Yes.** On Jonny's page as a review |
+| 20 Sep | @sherryeatworld (Sherry Shi) | Pork and chive dumplings at four shops in Chinatown, New York, posted August 2026 | No, and not the Bay Area |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
 DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__, Dc2abz8C7CU, DdIMBHKPfj_ (again), DS8GlMgCf7b,
 DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
-DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok. The profile is
+DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok, DdMhHiJsnc4, DAW5kk6yEWz,
+Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R. The profile is
 instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
 
 From `public/clips/CREDITS.md`: @antoinetterzz (Belly, Deli Board), @thespoonlist (The
-Local), @oaktowngrubhub (Emy's
+Local), @peggy_shoo (Jonny's Italian Ice), @samserved (Lovely's Burgers, sent with the
+listing rather than as a Foodie), @oaktowngrubhub (Emy's
 Cannoli), @grubwitmike (Phosho Dough), @justmostie (Paulo Sausage Co),
-@thesnacksensei (The Yard, Jojo's Hot Chicken), @volha_creative (Glasshouzz),
+@thesnacksensei (The Yard, Jojo's Hot Chicken, Golden Gate Market & Deli), @volha_creative (Glasshouzz),
 @itsmeloslab (Ofie's Kitchen), @smackinfood (House of Raha), @thetastebud
 (Lucky Three Seven) and Jay Chan (Cambodian Street Food).
 
