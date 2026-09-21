@@ -137,7 +137,7 @@ FAIL line. Silence is not a pass.
   in its page's chips, and search finds it by the word. It states their
   claim, never a certification.
 - **Glow** — the paid icon halo is gold by default; `glow: 'pink'` draws it
-  pink (Janelle's page). A tile with no website keeps its red ring inside the
+  pink (Jazz Braids). A tile with no website keeps its red ring inside the
   halo rather than losing it to the animation.
 - **Calendar** — what the businesses have on, stored server-side. Reading is
   public; writing and deleting need `OPERATOR_TOKEN`.

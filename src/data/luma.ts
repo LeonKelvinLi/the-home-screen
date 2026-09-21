@@ -209,7 +209,7 @@ export const ICON_LUMA: Record<string, number> = {
   'moxie-steak-house': 0.2742,
   'mr-m-home-services': 0.9384,
   'mrs-ramen': 0.684,
-  'nana-casas': 0.6072,
+  'nana-casas': 0.0474,
   'napa-yard': 0.8001,
   'naya-green': 0.4787,
   'nicky-diamonds': 0.5763,

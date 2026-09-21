@@ -3238,10 +3238,12 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://bustdownandco.com/',
     siteCta: 'Shop their store',
   }),
-  /* Jazz Braids — Janelle's own. "Newark • Services / BEASTY • Services. Needs
-     website. This is Janelle folks. Can you put a glow around her icon? Can
-     you make it a pink glow?" Newark's open Barber and salon seat and a BEASTY
-     seat, the pink glow on both, and her own post of Ludacris's birthday
+  /* Jazz Braids, from Janelle's circle. "Newark • Services / BEASTY • Services.
+     Needs website. This is Janelle folks. Can you put a glow around her icon?
+     Can you make it a pink glow?" Not Janelle herself — her own page is Nana
+     Casas on BEASTY • Individuals, and this braider's number, (510) 894-3975,
+     is not hers. Newark's open Barber and salon seat and a first-page seat,
+     the pink glow on both, and the braider's own post of Ludacris's birthday
      braids as the film: "Can you also clip this video and add it to her page." */
   seed('jazz-braids', 'Jazz Braids', 'Jazz Braids', 'Braids, salon services', '#4A2A1E', {
     glow: 'pink',

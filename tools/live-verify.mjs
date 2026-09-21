@@ -353,6 +353,20 @@ for (const [id, want] of [
   if (!bar.startsWith(want)) fails.push(`${id}'s clip bar reads "${bar}", expected "${want}"`)
 }
 
+/* Janelle's own page, Nana Casas on BEASTY · Individuals (2026-09-21): the
+   first paragraph of her bio shows, the rest and "Affiliations" drop down. */
+await p.goto(`${base}/?b=b_nanacasas`, { waitUntil: 'networkidle', timeout: 45000 })
+await p.waitForTimeout(600)
+const nana = await p.evaluate(() => ({
+  lead: /quintessential Bay Area native/.test(document.body.innerText),
+  panels: [...document.querySelectorAll('.brand-panel-head')].map((b) => b.textContent.trim()),
+  claimLine: /this spot is hers to claim/.test(document.body.innerText),
+}))
+console.log('nana casas    :', JSON.stringify(nana))
+if (!nana.lead) fails.push("Nana Casas' page does not open on her bio's first paragraph")
+if (!(nana.panels.includes('Her story') && nana.panels.includes('Affiliations'))) fails.push("Nana Casas' page is missing the Her story or Affiliations drop-down")
+if (nana.claimLine) fails.push('Nana Casas\' page still says the spot is "hers to claim"')
+
 /* The halal mark (2026-09-18) and the red collab line on the example offers
    (2026-09-19). */
 await p.goto(`${base}/?b=b_pizzagallery`, { waitUntil: 'networkidle', timeout: 45000 })

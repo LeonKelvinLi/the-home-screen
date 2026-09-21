@@ -4935,13 +4935,54 @@ export const LOCAL_SEED: LocalSeed[] = [
       bio, in her words: "Entrepreneur. A rose that grew from concrete. THE
       BAY. Beyond Amazing Clothing Company. Sticky Situationzz." Her link is
       Vending Enterprise, which has its own spot on the Online sheet. The mark
-      is her profile picture, inside the story ring, from the screenshot.
+      was her profile picture from that screenshot until 2026-09-21, when he
+      sent a portrait for it (see her bio below).
     */
     instagram: '_beyondamazing',
     site: 'https://sites.google.com/vendingenterprise.net/vendingenterprise/home',
     siteCta: 'See Vending Enterprise',
+    /*
+      HER BIO, 2026-09-21. Nana is Janelle Casas, BEASTY's co-founder since
+      2026-09-20. He sent the bio with "can you change this on Janelle's page
+      as her bio. But only show the first paragraph and drop down the rest so
+      it doesn't take up the whole page", then the list for "a drop down and
+      put 'Affiliations'", then "Can you also proofread this for spellcheck
+      and what not. Also grammar. I'm notorious for run-on sentences lol".
+
+      Proofread, not rewritten: his words and his order, with the spelling,
+      the grammar and the run-ons fixed. The notable changes: "pinnacle" to
+      "quintessential", "through out" to "throughout", "seen" to "scene",
+      "accredited to working with" to "has worked with", "POD casts" to
+      "podcasts", "twist of faith" to "twist of fate", "infamous dimples" to
+      "famous dimples". In the list, "Stinje" appeared twice and is listed
+      once, and "B Legit", "MallyMall" and "Jamal TruLove" take the spellings
+      those artists use.
+
+      The first paragraph is the visible line; the rest are drop-downs, the
+      page's own panels. The icon is the portrait he sent the same morning
+      ("Also change this for her icon picture").
+    */
     contactOnly:
-      'A Bay Area entrepreneur, in her own words a rose that grew from concrete: Beyond Amazing Clothing Company and Vending Enterprise are hers. BEASTY has not spoken to her yet; this spot is hers to claim.',
+      "Janelle Casas, a quintessential Bay Area native, is known for her sultry looks throughout the Bay Area's hip-hop scene. Better known in the industry as Nana, she has worked with a multitude of the heavy hitters the Bay Area has to offer.",
+    panels: [
+      {
+        head: 'Her story',
+        body: [
+          'The Jacka, Berner, Baby Bash, B-Legit and Nump, to name just a few, have all sought her presence to make their music videos and events unforgettable.',
+          'Her deep entrepreneurship in the entertainment industry has also kept her name in the conversation, from podcasts with the likes of Marshawn Lynch and Network GODER to the vast network of BEASTY Individuals across the Bay Area.',
+          "Rooted in both the music and cannabis industries, Nana has always been the go-to person for making things happen and running plays, with a hustler's blood flowing naturally through her veins.",
+          "Now, by a twist of fate, she has shifted her focus and energy to giving back to the land that helped put her on the map, as co-founder of the Bay Area's very own beastypages.com.",
+          "Her input in developing the vision for the best affiliate marketing platform not only helps small businesses and their customers, but also extends its reach to the community by raising proceeds for Biggie's Foundation, which aims to allocate funds to the many organizations that need support.",
+          "Janelle's memorable smile, famous dimples and kind heart were the stepping stones to her legacy. Now she is set to leave her mark and pay it forward, extending herself into the tech industry with the launch of beastypages.com and several other BEASTY-related business ventures soon to come.",
+        ],
+      },
+      {
+        head: 'Affiliations',
+        body: [
+          'The Jacka, Berner, Baby Bash, Dem Hoodstarz, Philthy Rich, 40 Keys, B-Legit, Big Rich, J. Stalin, Nump, Jamal Trulove, Lil Yid, Official Kiyomi, Birch Boy Barie, Loaded Up Entertainment, Stinje, Marshawn Lynch, Hanny, Ghazi, Mac Wanda, Rich Rocka, Dutch, Santana, Ricky Antonio, Showy4Mayor, Mally Mall, Cardi B, Method Man, Gary Vee, Headstash, Phil Emerson, Network GODER, G Bizz, Chuey Gomez, Big Von, Rick Lee, Erk Tha Jerk and Lil Boosie.',
+        ],
+      },
+    ],
     items: [],
   },
   {

@@ -933,7 +933,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      named, twice; Caitlyn's on Bakery; Armenta on Gardener in Services (he
      said Goods — it is a landscape contractor; flagged). */
   'antioch-goods2-1': 'b_dadsbbq', //                Mississippi-style BBQ
-  'beasty-goods-14': 'b_jazzbraids', //              Janelle, pink glow — moved to page one 2026-09-21 (was Tony's Style)
+  'beasty-goods-14': 'b_jazzbraids', //              from Janelle's circle, pink glow — page one since 2026-09-21 (was Tony's Style)
   'albany-goods-14': 'b_tonysstyle', //              Chicken wings — "Add on Boba empty spot"
   'san-jose-goods-12': 'b_caitlynssweets', //        Bakery — custom cakes
   'antioch-services-21': 'b_armentalandscape', //    Gardener — landscape design and construction
@@ -1063,7 +1063,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'berkeley-goods-9': 'b_milelimitberkeley', //                     Mediterranean
   'livermore-goods-11': 'b_dumontlivermore', //                     Ice cream shop
   /* 2026-09-17 to 21, research/roster/batch27.json: fifty-eight seats for
-     about forty businesses, Janelle's own page with the pink glow, and
+     about forty businesses, the pink glow for Jazz Braids of Janelle's circle, and
      three films. See that file's flags for every fact. */
   'oakland-goods-12': 'b_realcutiepies', //                        Bakery
   'daly-city-goods-2': 'b_kankiin', //                             Asian food
@@ -1111,7 +1111,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-19': 'b_holbrookhouse', //                 a bar; yellow sheet, Tier 1
   'santa-rosa-goods-7': 'b_seoultotokyokitchen', //                Korean and ramen
   'san-jose-services2-2': 'b_bustdownco', //                       no jeweller seat; yellow sheet, Tier 1
-  'newark-services-0': 'b_jazzbraids', //                          Barber and salon — Janelle, pink glow
+  'newark-services-0': 'b_jazzbraids', //                          Barber and salon — from Janelle's circle, pink glow
   'concord-services-0': 'b_caballerosbarberlounge', //             Barber and salon
   'antioch-services-19': 'b_moaeventsrentals', //                  Event coordinator
   'south-san-francisco-goods-2': 'b_hlpeninsulasouthsf', //        Asian food
@@ -1126,8 +1126,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      sees: Midnite Theories, Chef Jeff's and Gao were already there, and The
      Local, Jazz Braids (seat 15, above) and Bust Down & Co. join them. The
      Local keeps its Petaluma seat, which he is using to recruit that city;
-     Janelle keeps Newark and Bust Down keeps its San Jose listing, but both
-     leave the BEASTY services yellow sheet so neither shows twice there.
+     Jazz Braids keeps Newark and Bust Down keeps its San Jose listing, but
+     both leave the BEASTY services yellow sheet so neither shows twice there.
 
      The three who made room are the page's tiles with no menu that keep a
      city seat of their own. They move to the yellow sheet right behind it,
