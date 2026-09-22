@@ -97,6 +97,13 @@ try {
   await page.evaluate(() => { const x = [...document.querySelectorAll('button')].find((e) => /^Phone\b/.test(e.getAttribute('aria-label') || e.textContent || '')); x?.click() })
   const listed = await page.waitForSelector('.contacts-count', { timeout: 15000 }).then(() => true).catch(() => false)
   check(listed, 'Contacts lists real members for a signed-in member')
+  /* Glenn, 2026-09-22: a drop-down per letter, "just to minimize the page". */
+  check((await page.locator('.contacts-letter-head[aria-expanded="false"]').count()) >= 1 && (await page.locator('text=Ada O.').count()) === 0, 'each letter starts closed, so the list is short')
+  if (process.env.SHOTS) await page.screenshot({ path: `${process.env.SHOTS}/contacts-closed.png` })
+  await page.locator('.contacts-letter-head', { has: page.locator('.contacts-letter-mark', { hasText: /^A$/ }) }).click()
+  if (process.env.SHOTS) await page.screenshot({ path: `${process.env.SHOTS}/contacts-open.png` })
+  check(await page.locator('text=Ada O.').first().isVisible().catch(() => false), 'tapping A shows the names under it')
+  check(await page.locator('.nav-bar-right .chrome-pill.is-share').isVisible().catch(() => false), 'Contacts carries a share button, top right')
   await page.locator('text=Ada O.').first().click({ timeout: 15000 }).catch(() => {})
   const opened = await page.waitForSelector('.member-page', { timeout: 15000 }).then(() => true).catch(() => false)
   check(opened, 'tapping her row opens her page')
@@ -110,6 +117,12 @@ try {
   check(shown.liked.some((n) => /top dog/i.test(n || '')), 'her page shows top dog under Liked')
   check(shown.starred.length === 1, 'her page shows the one business she starred')
   check(/Member since/.test(shown.text) && !/\+1510/.test(shown.text), 'it says when she joined and shows no phone number')
+  /* The shared link: its own preview in a DM, and it opens on Contacts. */
+  const shared = await (await fetch(`${B}/contacts`)).text()
+  check(/<title>BEASTY contacts<\/title>/.test(shared) && /og:title" content="BEASTY contacts"/.test(shared), 'beastypages.com/contacts has its own title and preview')
+  const linked = await b.newPage({ viewport: { width: 393, height: 852 } })
+  await linked.goto(`${B}/contacts`, { waitUntil: 'domcontentloaded' })
+  check(await linked.waitForSelector('.operator-card', { timeout: 15000 }).then(() => true).catch(() => false), 'and opens straight onto Contacts')
   await b.close()
 } catch (e) {
   console.log('FAIL: ' + (e?.stack || e))

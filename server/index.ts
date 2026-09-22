@@ -3301,6 +3301,11 @@ const SHARE_PAGES: Record<string, { title: string; blurb: string }> = {
     blurb:
       'One membership, honoured at every participating BEASTY affiliate. Signing up is free; the pass is the paid part.',
   },
+  contacts: {
+    title: 'BEASTY contacts',
+    blurb:
+      'Reach the owners of beastypages.com directly (text or email is preferred), and see who is on BEASTY.',
+  },
 }
 /* One segment, and unknown ones fall through to the SPA below. */
 app.get('/:page', async (req, res, next) => {

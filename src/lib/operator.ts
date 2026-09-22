@@ -74,12 +74,11 @@ export interface Owner {
   - Glenn, Co-CEO/Co-Founder - Janelle", each with a number and a domain email.
   First names only, as on the rest of the site.
 
-  JANELLE'S EMAIL IS BLANK ON PURPOSE. He asked for janelle@beastypages.com in
-  the same message as "create Janelle an email" — the mailbox is being made in
-  the Workspace, and until it exists the address would bounce. Fill it in here
-  the day it does; the row appears on its own.
+  JANELLE'S EMAIL, 2026-09-22: the address she chose is
+  janellenicole@beastypages.com (Glenn in the thread, 3:14 pm), and Leon made
+  the mailbox in the Workspace the same afternoon, so it no longer bounces.
 */
 export const OWNERS: Owner[] = [
   { name: 'Glenn', role: 'CEO/Founder', phone: OPERATOR.phone, email: OPERATOR.email },
-  { name: 'Janelle', role: 'Co-CEO/Co-Founder', phone: '510-674-8011', email: '' },
+  { name: 'Janelle', role: 'Co-CEO/Co-Founder', phone: '510-674-8011', email: 'janellenicole@beastypages.com' },
 ]
