@@ -38,8 +38,8 @@ if (!up) { console.log('FAIL: server never came up'); console.log(readFileSync(L
 
 /* ---- a tiny client with a cookie jar per actor ---- */
 const jar = () => new Map()
-async function call(method, path, { body, j, token, raw } = {}) {
-  const headers = { 'content-type': 'application/json' }
+async function call(method, path, { body, j, token, raw, headers: extra } = {}) {
+  const headers = { 'content-type': 'application/json', ...(extra ?? {}) }
   if (token) headers.authorization = `Bearer ${token}`
   if (j && j.size) headers.cookie = [...j.entries()].map(([k, v]) => `${k}=${v}`).join('; ')
   const res = await fetch(base + path, { method, headers, body: body === undefined ? undefined : JSON.stringify(body), redirect: 'manual' })
@@ -246,9 +246,13 @@ const fLead = (await call('GET', '/api/crm/leads?q=forged%20cookie', { j: admin 
 check('a forged referral cookie credits nobody', fLead && !fLead.referrer && fLead.sourceType === 'organic')
 
 /* ---- roles, enforced on the server ---- */
-async function member(name, email) {
-  const j = jar()
-  await call('POST', '/api/members/start', { body: { name, email }, j })
+async function member(name, email, extra = {}, j = jar()) {
+  // The sign-up route allows four quick requests; a fifth waits its turn, as a person would.
+  for (let i = 0; i < 4; i++) {
+    const st = await call('POST', '/api/members/start', { body: { name, email, ...extra }, j })
+    if (st.status !== 429) break
+    await sleep(8000)
+  }
   let code
   for (let i = 0; i < 20 && !code; i++) {
     await sleep(250)
@@ -302,6 +306,161 @@ const teamQr = await call('GET', '/api/crm/people/p_janelle/qr.svg', { j: team.j
 check('the team can print any referrer’s code', teamQr.status === 200)
 const anonQr = await call('GET', '/api/crm/people/p_janelle/qr.svg')
 check('and nobody signed out can', anonQr.status === 401)
+
+/* ---- users: people with a BEASTY account, and what they do ---- */
+{
+  const pg = (await import('pg')).default
+  const sql = new pg.Client({ connectionString: TESTDB.url })
+  await sql.connect()
+  const q = async (text, args = []) => (await sql.query(text, args)).rows
+  const events = async (name, where = '', args = []) => Number((await q(`SELECT COUNT(*) AS n FROM analytics_events WHERE name = $1 ${where}`, [name, ...args]))[0].n)
+  const home = async (query = 'period=7d', j = admin) => (await call('GET', `/api/crm/home?${query}`, { j })).body
+  const PT_DAY = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' })
+  const PT_HOUR = new Intl.DateTimeFormat('en-US', { timeZone: 'America/Los_Angeles', hour: 'numeric', hourCycle: 'h23' })
+  const ptDay = (t) => PT_DAY.format(new Date(t))
+  const ptMid = (t) => { const [y, m, d] = ptDay(t).split('-').map(Number); const w = Date.UTC(y, m - 1, d, 8); return Number(PT_HOUR.format(new Date(w))) === 1 ? w - 36e5 : w }
+  const bucket = (h, key) => h.users.series.find((x) => x.bucket === key)?.count ?? 0
+
+  /* who may see what */
+  check('the sign-up list needs a CRM session', (await call('GET', '/api/crm/users')).status === 401)
+  check('a team member cannot see names and contacts', (await call('GET', '/api/crm/users', { j: team.j })).status === 403)
+  check('but sees the user numbers', (await call('GET', '/api/crm/users/cohorts', { j: team.j })).status === 200 && (await call('GET', '/api/crm/home?period=30d', { j: team.j })).status === 200)
+  check('a referral partner sees none of it', (await call('GET', '/api/crm/users/cohorts', { j: partnerM.j })).status === 403 && (await call('GET', '/api/crm/home', { j: partnerM.j })).status === 403)
+  check('only an admin marks a test account', (await call('POST', '/api/crm/users/mb_x/test', { body: { test: true }, j: team.j })).status === 403)
+
+  /* the team's own sign-ups used reserved .invalid addresses: not users */
+  const h0 = await home('period=30d')
+  check('accounts with a reserved test address are left out of every user number', h0.users.total === 0 && h0.users.leftOut >= 2, `total ${h0.users.total}, left out ${h0.users.leftOut}`)
+  check('the Home numbers carry no names or contacts', !JSON.stringify(h0.users).includes('@'))
+
+  /* a real sign-up from a campaign link, through the public screens */
+  const vis = jar()
+  const attribution = { utm_source: 'instagram', utm_medium: 'social', utm_campaign: 'fall-launch', referrer: 'https://l.instagram.com/some/path?u=secret', landing: '/?utm_source=instagram&x=1' }
+  const visit = await call('POST', '/api/t/visit', { body: { attribution }, j: vis })
+  check('a visit is answered with no content, and the device is remembered', visit.status === 204 && vis.has('beasty_device'))
+  const riaEmail = `ria-${port}@audit.beastypages.dev`
+  const ria = await member('Ria Fields', riaEmail, { attribution }, vis)
+  check('she signs up', ria.ok, `verify answered ${ria.status}`)
+  const [riaRow] = await q('SELECT id, referral_code, signup_attribution FROM members WHERE email = $1', [riaEmail])
+  check('what brought her is kept: the campaign, the referring host only, the path without its query', riaRow?.signup_attribution?.utm_source === 'instagram' && riaRow.signup_attribution.referrer === 'l.instagram.com' && riaRow.signup_attribution.landing === '/', JSON.stringify(riaRow?.signup_attribution))
+  const device = (await q(`SELECT actor FROM analytics_events WHERE name = 'site_visited' ORDER BY occurred_at DESC LIMIT 1`))[0]?.actor
+  check('the visit and the sign-up request are counted for the same device', !!device && (await events('signup_started', 'AND actor = $2', [device])) === 1)
+  check('and her sign-up is an event', (await events('user_signed_up', 'AND member_id = $2', [riaRow.id])) === 1)
+  const riaList = await call('GET', `/api/crm/users?q=ria`, { j: admin })
+  const riaU = riaList.body.users?.find((u) => u.id === riaRow.id)
+  check('the sign-up list shows her, from social media', riaU?.source === 'social' && riaU?.email === riaEmail, JSON.stringify(riaU?.sourceLabel))
+
+  /* a friend she invites */
+  const omarEmail = `omar-${port}@audit.beastypages.dev`
+  const omar = await member('Omar Friend', omarEmail, { ref: riaRow.referral_code })
+  const [omarRow] = await q('SELECT id, referred_by FROM members WHERE email = $1', [omarEmail])
+  check('a friend who signs up with her code is hers', omar.ok && omarRow?.referred_by === riaRow.id)
+  check('bringing a friend is an event for her', (await events('friend_joined', 'AND member_id = $2 AND entity_id = $3', [riaRow.id, omarRow.id])) === 1)
+  const friends = await call('GET', '/api/crm/users?source=friend', { j: admin })
+  check('the friend filter finds him, with who invited him', friends.body.users?.some((u) => u.id === omarRow.id && u.referrerName === 'Ria Fields'))
+  check('bringing a friend activates her', (await call('GET', '/api/crm/users?q=ria', { j: admin })).body.users?.find((u) => u.id === riaRow.id)?.activated === true)
+
+  /* what a member does is recorded once where once is what it means */
+  await call('GET', '/api/brands/b_jazzbraids/signals', { j: omar.j })
+  await call('GET', '/api/brands/b_jazzbraids/signals', { j: omar.j })
+  check('opening a business page is one view a day, however many times', (await events('business_viewed', 'AND member_id = $2', [omarRow.id])) === 1)
+  await call('GET', '/api/brands/b_not_a_business/signals', { j: omar.j })
+  check('a business that does not exist is not a view', (await events('business_viewed', 'AND member_id = $2', [omarRow.id])) === 1)
+  await call('POST', '/api/brands/b_jazzbraids/signals/like', { j: omar.j })
+  await call('POST', '/api/brands/b_jazzbraids/signals/like', { j: omar.j })
+  check('a like and its take-back are both recorded', (await events('business_liked', 'AND member_id = $2', [omarRow.id])) === 1 && (await events('business_unliked', 'AND member_id = $2', [omarRow.id])) === 1)
+  await call('GET', '/api/members/me', { j: omar.j })
+  await call('GET', '/api/members/me', { j: omar.j })
+  check('opening the app is once a day', (await events('app_opened', 'AND member_id = $2', [omarRow.id])) === 1)
+  const seen = await events('site_visited')
+  await call('POST', '/api/t/visit', { body: { attribution }, headers: { 'user-agent': 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)' } })
+  await call('POST', '/api/t/visit', { body: { attribution }, j: omar.j })
+  check('a crawler, or a member already signed in, is not a visitor', (await events('site_visited')) === seen)
+  const again = await member('Ria Fields', riaEmail)
+  check('signing back in is an event', again.ok && (await events('user_signed_in', 'AND member_id = $2', [riaRow.id])) === 1)
+  check('no event carries an email address', Number((await q(`SELECT COUNT(*) AS n FROM analytics_events WHERE metadata::text LIKE '%@%' OR COALESCE(actor, '') LIKE '%@%'`))[0].n) === 0)
+
+  /* the numbers: new, active, the funnel, since tracking began minutes ago */
+  const h1 = await home()
+  check('new sign-ups count people, not test accounts', h1.users.added === 2 && h1.users.total === 2, `${h1.users.added} added, ${h1.users.total} in all`)
+  check('active users count only since tracking began, and say so', h1.users.active?.n === 2 && h1.users.active.whole === false && h1.users.active.since >= h1.since, JSON.stringify(h1.users.active))
+  const steps = Object.fromEntries((h1.users.funnel?.steps ?? []).map((x) => [x.key, x.count]))
+  check('the funnel counts each step', steps.visitors >= 1 && steps.started >= 1 && steps.accounts === 2 && steps.activated === 2, JSON.stringify(steps))
+  check('where users came from is counted', h1.users.sources.some((x) => x.key === 'social' && x.count === 1) && h1.users.sources.some((x) => x.key === 'friend' && x.count === 1))
+
+  /* day boundaries, Pacific time: one minute either side of midnight */
+  const since7 = h1.since
+  const today0 = ptMid(Date.now())
+  const put = async (label, at) => {
+    const id = `mb_audit_${label}_${port}`
+    await q(`INSERT INTO members (id, name, email, referral_code, created_at) VALUES ($1, $2, $3, $4, $5)`, [id, `Boundary ${label}`, `${label}-${port}@audit.beastypages.dev`, `AUD${label.toUpperCase()}${port}`.slice(0, 16), at])
+    return id
+  }
+  const beforeRows = { added: h1.users.added, prev: h1.users.addedBefore, first: bucket(h1, ptDay(since7)), yday: bucket(h1, ptDay(today0 - 1)), today: bucket(h1, ptDay(today0)) }
+  await put('a', since7 - 60_000)
+  await put('b', since7 + 60_000)
+  const late = Date.now() - today0 > 90_000
+  const xId = await put('x', today0 - 30_000)
+  if (late) await put('y', today0 + 30_000)
+  const h2 = await home()
+  check('a sign-up one minute before the 7 days began is in the week before, not this one', h2.users.addedBefore === beforeRows.prev + 1)
+  check('one minute after it began is in', bucket(h2, ptDay(since7)) === beforeRows.first + 1)
+  check('30 seconds before midnight is yesterday', bucket(h2, ptDay(today0 - 1)) === beforeRows.yday + 1)
+  if (late) check('30 seconds after midnight is today', bucket(h2, ptDay(today0)) === beforeRows.today + 1)
+  check('and the total for the 7 days is exact', h2.users.added === beforeRows.added + (late ? 3 : 2), `${h2.users.added}`)
+  check('the comparison says how the week before went', h2.users.addedBefore === beforeRows.prev + 1)
+
+  /* an account that is ours can be left out, and put back */
+  const leave = await call('POST', `/api/crm/users/${xId}/test`, { body: { test: true }, j: admin })
+  const h3 = await home()
+  check('an admin can leave an account out of the numbers', leave.status === 200 && h3.users.total === h2.users.total - 1 && h3.users.leftOut === h2.users.leftOut + 1)
+  const left = await call('GET', '/api/crm/users/left-out', { j: admin })
+  check('it is listed as left out, marked by hand', left.body.users?.some((u) => u.id === xId && u.marked))
+  await call('POST', `/api/crm/users/${xId}/test`, { body: { test: false }, j: admin })
+  check('and put back', (await home()).users.total === h2.users.total)
+  check('a mark with no yes or no is refused', (await call('POST', `/api/crm/users/${xId}/test`, { body: {}, j: admin })).status === 400)
+  check('an account that does not exist is a 404', (await call('POST', '/api/crm/users/mb_nobody/test', { body: { test: true }, j: admin })).status === 404)
+
+  /* custom dates */
+  check('a custom range with a date that does not exist is refused', (await call('GET', '/api/crm/home?period=custom&start=2026-02-30&end=2026-03-02', { j: admin })).status === 400)
+  check('a custom range that ends before it starts is refused', (await call('GET', '/api/crm/home?period=custom&start=2026-09-15&end=2026-09-01', { j: admin })).status === 400)
+  const custom = await call('GET', `/api/crm/home?period=custom&start=${ptDay(since7)}&end=${ptDay(Date.now())}`, { j: admin })
+  check('a custom range over the same 7 days counts the same sign-ups', custom.status === 200 && custom.body.users.added === h2.users.added && custom.body.unit === 'day', `${custom.body.users?.added}`)
+  check('the sign-up list filters by date', (await call('GET', `/api/crm/users?from=${ptDay(since7)}&to=${ptDay(Date.now())}&limit=100`, { j: admin })).body.total === h2.users.added)
+
+  /* cohorts: tracking moved back 60 days so there is history to measure */
+  const t = Date.now()
+  await q(`UPDATE analytics_events SET occurred_at = $1 WHERE id = 'ev_tracking_started'`, [t - 60 * 864e5])
+  const dId = await put('d', t - 20 * 864e5)
+  const eId = await put('e', t - 20 * 864e5 + 1000)
+  const fId = await put('f', t - 80 * 864e5)
+  await q(`INSERT INTO analytics_events (id, name, actor_type, member_id, entity_type, entity_id, occurred_at) VALUES ($1, 'business_viewed', 'member', $2, 'business', 'b_jazzbraids', $3), ($4, 'business_viewed', 'member', $2, 'business', 'b_jazzbraids', $5)`, [`ev_aud_d1_${port}`, dId, t - 12 * 864e5, `ev_aud_d2_${port}`, t - 3600e3])
+  const co = await call('GET', '/api/crm/users/cohorts', { j: admin })
+  const dKey = (await q(`SELECT to_char(date_trunc('week', to_timestamp(created_at / 1000.0) AT TIME ZONE 'America/Los_Angeles'), 'YYYY-MM-DD') AS k FROM members WHERE id = $1`, [dId]))[0].k
+  const fKey = (await q(`SELECT to_char(date_trunc('week', to_timestamp(created_at / 1000.0) AT TIME ZONE 'America/Los_Angeles'), 'YYYY-MM-DD') AS k FROM members WHERE id = $1`, [fId]))[0].k
+  const dRow = co.body.rows?.find((r) => r.key === dKey)
+  const fRow = co.body.rows?.find((r) => r.key === fKey)
+  check('a cohort is everybody who signed up that week', dRow?.size === 2, JSON.stringify(dRow?.size))
+  check('week 0 is the sign-up itself', dRow?.cells?.[0]?.state === 'ok' && dRow.cells[0].share === 1)
+  check('week 1 counts who came back that week', dRow?.cells?.[1]?.state === 'ok' && dRow.cells[1].n === 1 && dRow.cells[1].share === 0.5, JSON.stringify(dRow?.cells?.[1]))
+  check('a week that is not over yet has no number', dRow?.cells?.[3]?.state === 'waiting' && dRow.cells[3].n === null)
+  check('a week from before tracking began says so instead of 0', fRow?.cells?.[1]?.state === 'untracked' && fRow.cells[1].n === null, JSON.stringify(fRow?.cells?.[1]))
+  check('monthly cohorts are there too', (await call('GET', '/api/crm/users/cohorts?unit=month', { j: admin })).body.rows?.length >= 2)
+  const drill = await call('GET', `/api/crm/users?cohort=${dKey}&unit=week`, { j: admin })
+  const dU = drill.body.users?.find((u) => u.id === dId)
+  check('a cohort opens to its people, with what each did', drill.body.total === 2 && dU?.firstAction?.label === 'Looked at a business' && dU.lastActiveAt >= t - 3600e3 - 5000, JSON.stringify(dU?.firstAction))
+  check('the cohort filter refuses something that is not a date', (await call('GET', '/api/crm/users?cohort=nope', { j: admin })).status === 400)
+  const h4 = await home()
+  check('with tracking on for all of it, the 7 days count returning users', h4.users.active?.whole === true && h4.users.active.returning >= 1 && h4.users.activeBefore !== null, JSON.stringify(h4.users.active))
+  check('all time answers too, grouped by how long ago it began', (await home('period=all')).users.total >= 8 && ['day', 'week', 'month'].includes((await home('period=all')).unit))
+  void eId
+
+  /* the team's own use of the CRM */
+  const team_ = Object.fromEntries((await q(`SELECT name, COUNT(*) AS n FROM analytics_events WHERE actor_type = 'team' GROUP BY name`)).map((r) => [r.name, Number(r.n)]))
+  check('the team’s work in the CRM is recorded', team_.crm_lead_created >= 2 && team_.crm_stage_changed >= 1 && team_.crm_deal_won >= 1 && team_.crm_followup_completed >= 1, JSON.stringify(team_))
+  check('an import counts only when it ran for real', team_.crm_leads_imported === 2, `${team_.crm_leads_imported}`)
+  await sql.end()
+}
 
 /* ---- open mode: no key, everyone is Glenn, and never in production ---- */
 const { execFileSync } = await import('node:child_process')

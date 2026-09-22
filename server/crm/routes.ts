@@ -53,6 +53,7 @@ import {
   followupView,
   leadDetail,
   listLeads,
+  home,
   overview,
   partnerView,
   pipelineSummary,
@@ -63,6 +64,11 @@ import {
 } from './queries'
 import type { LeadFilters } from './queries'
 import { createFromApplication, runBackfill } from './backfill'
+import { PERIOD_KEYS, PeriodError, periodRange as rangeOf, unitFor } from '../../src/crm/periods'
+import type { PeriodRange } from '../../src/crm/periods'
+import { cohorts, leftOut, markTest, userList, usersOverview } from './users'
+import { track } from '../analytics'
+import type { EventName } from '../analytics'
 
 type Limiter = (perMinute: number, burst: number) => RequestHandler
 
@@ -109,20 +115,22 @@ const h =
 
 const actorOf = (req: Request) => req.crm?.actor ?? 'unknown'
 
-/** "7d", "30d", "month", "year" or "all" as a start time. Month and year are Pacific. */
-export function periodStart(period: unknown, t = now()): number {
-  const p = typeof period === 'string' ? period : 'all'
-  if (p === '7d') return t - 7 * 864e5
-  if (p === '30d') return t - 30 * 864e5
-  if (p === 'month' || p === 'year') {
-    const parts = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit' }).formatToParts(new Date(t))
-    const y = Number(parts.find((x) => x.type === 'year')?.value)
-    const m = Number(parts.find((x) => x.type === 'month')?.value)
-    // 08:00 UTC is midnight Pacific in winter and 1am in summer: close enough for a filter.
-    return Date.UTC(y, p === 'month' ? m - 1 : 0, 1, 8)
+const PT_DAY = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Los_Angeles', year: 'numeric', month: '2-digit', day: '2-digit' })
+
+export const PERIODS: readonly string[] = PERIOD_KEYS
+
+/** periods.ts's range, with its complaints about a custom range as 400s. */
+export function periodRange(period: unknown, t = now(), custom: { start?: unknown; end?: unknown } = {}): PeriodRange {
+  try {
+    return rangeOf(period, t, custom)
+  } catch (err) {
+    if (err instanceof PeriodError) throw new CrmError(400, err.message)
+    throw err
   }
-  return 0
 }
+
+/** A period's start time, for the screens that count from then until now. */
+export const periodStart = (period: unknown, t = now()): number => (period === 'custom' ? 0 : periodRange(period, t).since)
 
 /* ------------------------------------------------------- referral cookie */
 
@@ -199,6 +207,42 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
   const read = rateLimiter(900, 180)
   const write = rateLimiter(120, 30)
 
+  /*
+    THE TEAM'S OWN USE OF THE CRM, one event per successful write, so the CRM
+    can be measured like the app (server/analytics.ts). Kept here as one table
+    rather than a call in every handler, where one would be forgotten.
+  */
+  const TEAM_EVENTS: [string, RegExp, EventName][] = [
+    ['POST', /^\/api\/crm\/leads$/, 'crm_lead_created'],
+    ['PATCH', /^\/api\/crm\/leads\/[^/]+$/, 'crm_lead_updated'],
+    ['POST', /^\/api\/crm\/leads\/[^/]+\/stage$/, 'crm_stage_changed'],
+    ['POST', /^\/api\/crm\/leads\/[^/]+\/activities$/, 'crm_contact_logged'],
+    ['POST', /^\/api\/crm\/leads\/[^/]+\/followups$/, 'crm_followup_created'],
+    ['POST', /^\/api\/crm\/followups\/[^/]+\/complete$/, 'crm_followup_completed'],
+    ['POST', /^\/api\/crm\/leads\/[^/]+\/deals$/, 'crm_deal_created'],
+    ['POST', /^\/api\/crm\/deals\/[^/]+\/won$/, 'crm_deal_won'],
+    ['POST', /^\/api\/crm\/backfill$/, 'crm_leads_imported'],
+  ]
+  app.use('/api/crm', (req, res, next) => {
+    const path = `${req.baseUrl}${req.path}`
+    const hit = TEAM_EVENTS.find(([m, re]) => m === req.method && re.test(path))
+    if (hit) {
+      res.on('finish', () => {
+        if (res.statusCode >= 400 || !req.crm) return
+        if (hit[2] === 'crm_leads_imported' && !(isObj(req.body) && req.body.dryRun === false)) return
+        const on = /\/(leads|deals|followups)\/([^/]+)/.exec(path)
+        void track(hit[2], {
+          actor: req.crm.actor,
+          source: 'crm',
+          entityType: on ? on[1].slice(0, -1) : undefined,
+          entityId: on?.[2],
+          metadata: hit[2] === 'crm_contact_logged' && isObj(req.body) ? { type: str(req.body.type, 30) } : undefined,
+        })
+      })
+    }
+    next()
+  })
+
   /* ---- session ---- */
 
   app.post(
@@ -270,6 +314,77 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
 
   app.get('/api/crm/overview', read, team, h(async (_req, res) => void res.json(await overview())))
   app.get('/api/crm/pipeline', read, team, h(async (_req, res) => void res.json(await pipelineSummary())))
+  /**
+   * Home: one answer for one period. The business (leads, money) and the
+   * users (sign-ups, activity, where they came from), counted in SQL. All
+   * time starts at the first account or lead, and is grouped by day, week or
+   * month depending on how long ago that was.
+   */
+  app.get(
+    '/api/crm/home',
+    read,
+    team,
+    h(async (req, res) => {
+      const q = req.query as Record<string, unknown>
+      const period = typeof q.period === 'string' && PERIODS.includes(q.period) ? q.period : '30d'
+      const range = periodRange(period, now(), { start: q.start, end: q.end })
+      let from = range.since
+      if (period === 'all') {
+        const first = await db
+          .prepare('SELECT LEAST((SELECT MIN(created_at) FROM members), (SELECT MIN(created_at) FROM crm_opportunities)) AS t')
+          .get<{ t: number | null }>()
+        from = Number(first?.t) || range.until
+        range.unit = unitFor(range.until - from)
+      }
+      const [business, users] = await Promise.all([
+        home(range.since, range.until, range.unit, range.prev),
+        usersOverview({ period, ...range }),
+      ])
+      res.json({ period, since: range.since, from, until: range.until, prev: range.prev, unit: range.unit, ...business, users })
+    }),
+  )
+
+  /* ---- users: people with a BEASTY account ---- */
+
+  app.get('/api/crm/users/cohorts', read, team, h(async (req, res) => void res.json(await cohorts(req.query.unit === 'month' ? 'month' : 'week'))))
+
+  /** The sign-up list, a page at a time. Names and contacts: admins only. */
+  app.get(
+    '/api/crm/users',
+    read,
+    admin,
+    h(async (req, res) => {
+      const q = req.query as Record<string, unknown>
+      const dates = q.from || q.to ? periodRange('custom', now(), { start: q.from || '2020-01-01', end: q.to || PT_DAY.format(new Date()) }) : null
+      res.json(
+        await userList({
+          q: optStr(q.q, 80) ?? undefined,
+          source: optStr(q.source, 20) ?? undefined,
+          from: dates?.since,
+          to: dates?.until,
+          cohort: optStr(q.cohort, 10) ?? undefined,
+          unit: q.unit === 'month' ? 'month' : 'week',
+          sort: optStr(q.sort, 10) ?? undefined,
+          dir: optStr(q.dir, 4) ?? undefined,
+          limit: Number(q.limit ?? 25) || 25,
+          offset: Number(q.offset ?? 0) || 0,
+        }),
+      )
+    }),
+  )
+
+  app.get('/api/crm/users/left-out', read, admin, h(async (_req, res) => void res.json({ users: await leftOut() })))
+
+  /** Mark an account as ours or a test, so no user number counts it; or put it back. */
+  app.post(
+    '/api/crm/users/:id/test',
+    write,
+    admin,
+    h(async (req, res) => {
+      if (!isObj(req.body) || typeof req.body.test !== 'boolean') throw new CrmError(400, 'Send { test: true } or { test: false }.')
+      res.json(await markTest(str(req.params.id, 40), req.body.test, actorOf(req)))
+    }),
+  )
 
   /* ---- leads ---- */
 

@@ -128,7 +128,8 @@ land where they were, and each history entry remembers its scroll position.
 
 | Section | What it is for |
 | --- | --- |
-| Overview | Needs Attention (uncontacted referrals, overdue follow-ups, interested with no next step, stale proposals, missing contacts), pipeline counts, money, today's follow-ups. Every number opens the leads behind it. |
+| Home | The numbers first. "Right now" totals (users, leads, customers, monthly plans), what needs Glenn today, then everything over one period picked at the top (7 days, 30 days, 90 days, 12 months, all time or custom dates): users (sign-ups, active, returning, activated, the sign-up chart against the period before, where users came from, the sign-up funnel, cohorts, the sign-up list, what users did) and leads and money. Every number names its days and what it is compared with. See "Users and tracking" below. |
+| To do | Who to reach now: late and due reminders, businesses someone sent, ones to keep warm, ready for a first hello, and ones still missing a phone or Instagram. |
 | Leads | Search plus filters for stage, website status, opportunity, city, category, referrer, assignee, source, phone/email/Instagram present, date added, never contacted and overdue. All filters live in the URL. On a phone, rows become cards with Call / Text / Email / IG. |
 | Lead | Reach them (real `tel:`, `sms:`, `mailto:` and Instagram links; tapping one gets that log type ready), log what happened, move the stage, schedule the next step, quote and close a deal, attribution, who works it, details, the listing and research notes, other locations, timeline and stage history. |
 | Pipeline | Open leads by stage, movable from each card. |
@@ -144,6 +145,59 @@ Team members and partners sign in to beastypages.com as usual; once an admin
 links their account email to their person in Settings and gives them a role,
 `/crm` opens for them. A partner sees only their own page.
 
+## Users and tracking
+
+**A user is a person with a BEASTY account** (a row in `members`), never a
+lead (a business the team is selling to) and never the team. Accounts with a
+reserved test address (`example.com`, `.test`, `.invalid`) or a fictional
+555-01xx number are left out of every user number, and so is any account an
+admin marks as a test account from the sign-up list ("Test account?"; it can
+be put back under "Accounts left out of the numbers"). The Home says how many
+are left out.
+
+| Number | Means | Counted from |
+| --- | --- | --- |
+| Users | Accounts, all time | `members.created_at`, since the first sign-up |
+| New sign-ups | Accounts created in the period, Pacific days | the same, so all history |
+| Active users | Did something **meaningful** in the period | tracked events only, from when tracking began |
+| Returning users | Active in the period, signed up before it began | tracked events only |
+| Activated | Did a **core** thing at any time after signing up | core events, plus the tables that always kept them: likes, saves and shares, orders, pass scans, friends who joined |
+
+A period is compared with the stretch just before it, of the same length
+(`src/crm/periods.ts`), so today's unfinished day is weighed against an
+equally unfinished stretch. A change from zero has no percentage: it reads
+"24 vs 0 in the 30 days before". A stretch tracking did not cover reads "Not
+tracked", never 0, and a cohort cell that is not over yet or began before
+tracking says which.
+
+**Events** (`server/analytics.ts`, table `analytics_events`, append-only). One
+list of names, each marked meaningful and/or core; `track()` never throws and
+never joins the caller's transaction. Members: `user_signed_up`,
+`user_signed_in`, `user_signed_out`, `app_opened` (once a day, not
+meaningful), `business_viewed` (once a day per business), `business_liked` /
+`_unliked`, `business_saved` / `_unsaved`, `business_shared`, `order_placed`,
+`pass_opened` (once a day), `pass_scanned`, `friend_joined`,
+`membership_chosen`. Visitors: `site_visited` (a beacon, once a day per device,
+never for crawlers or signed-in members), `signup_started`. The team, recorded
+after each successful CRM write: `crm_lead_created`, `crm_lead_updated`,
+`crm_stage_changed`, `crm_contact_logged`, `crm_followup_created`,
+`crm_followup_completed`, `crm_deal_created`, `crm_deal_won`,
+`crm_leads_imported`. `tracking_started` is written once, at the first boot
+with this code: nothing before it was tracked.
+
+**Privacy.** No names, emails, phone numbers, IP addresses or full URLs in an
+event. A visitor is a hash of the device cookie. Where a sign-up came from is
+kept on the member (`members.signup_attribution`): the five UTM fields, the
+referring host (never its path) and the landing path (never its query).
+Deleting a member deletes their events.
+
+**API.** `GET /api/crm/home?period=7d|30d|90d|12m|all|custom&start=&end=`
+(team) answers the whole Home in one response, counts only.
+`GET /api/crm/users/cohorts?unit=week|month` (team). `GET /api/crm/users`
+(admin only: names and contacts; search, source, dates, cohort, sort, pages of
+up to 100). `GET /api/crm/users/left-out` and `POST /api/crm/users/:id/test`
+(admin). Partners get none of it.
+
 ## Tests
 
 - `node tools/audit-crm.mjs`: the API end to end on a throwaway database
@@ -152,21 +206,34 @@ links their account email to their person in Settings and gives them a role,
   cookie, roles).
 - `node tools/audit-crm-ui.mjs`: the screen at iPhone size and at desktop
   width (needs `npm run build` first): sign in, import, search, reach,
-  log, move, schedule, sell, credit, Back to the same place, and no page that
-  scrolls sideways.
+  log, move, schedule, sell, credit, Back to the same place, the Home's user
+  numbers and period picker, and no page that scrolls sideways.
+- `node tools/audit-crm-periods.mjs`: the period arithmetic on its own:
+  Pacific days across both clock changes, comparison windows, custom ranges,
+  the wording of a change, chart buckets.
+
+The API audit also covers users: who may see what, a sign-up from a campaign
+link keeping its source, a friend's invite, each tracked action and its
+once-a-day rule, one minute either side of midnight, test accounts, custom
+dates, cohorts and retention cells, and the team's own events.
 
 Both run as part of `node tools/audit-all.mjs`.
 
 ## Deploying
 
 1. Merge to `main`; Render deploys it and `migrate()` creates the `crm_*`
-   tables at boot (every statement is `IF NOT EXISTS` / `ON CONFLICT DO
-   NOTHING`, and nothing existing is altered).
+   tables and `analytics_events` at boot, and adds two nullable columns
+   (`members.signup_attribution`, `login_codes.pending_attribution`) and an
+   index on `members.created_at`. Every statement is `IF NOT EXISTS` / `ON
+   CONFLICT DO NOTHING`; nothing existing is changed. Tracking starts at that
+   boot.
 2. Open `https://beastypages.com/crm`, enter the operator key.
 3. Settings → Import from BEASTY → Preview, read it, then Run the import.
    Running it again later only adds businesses listed since.
 4. In Settings → People, link Janelle's BEASTY account email to her person
    (she has the team role) so she can sign in; add any other referrers.
+5. On Home, in Recent sign-ups, mark the team's own test sign-ups as test
+   accounts so the user numbers count people.
 
-Rolling back the code leaves the tables in place and unused; nothing else
-reads them.
+Rolling back the code leaves the tables and columns in place and unused;
+nothing else reads them, and the old code writes members exactly as before.

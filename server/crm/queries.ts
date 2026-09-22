@@ -5,9 +5,11 @@
   the time of sale, never from today's offer prices.
 */
 import { db } from '../db/schema'
-import { DAY_MS, OPEN_STAGES, STAGES, stageOf } from '../../src/crm/model'
-import { businessById, researchNotes } from './directory'
+import { DAY_MS, OPEN_STAGES, STAGES, qualifiesForWebsite, stageOf } from '../../src/crm/model'
+import { businessById, researchNotes, seatedBusinesses } from './directory'
 import type { DealRow, OppRow, PersonRow } from './core'
+import { bucketSql } from './users'
+import type { Unit } from './users'
 import { CrmError } from './core'
 
 /* ------------------------------------------------------------------ bits */
@@ -904,4 +906,133 @@ export async function pipelineSummary() {
     .prepare('SELECT stage, COUNT(*) AS n, COALESCE(SUM(potential_cents), 0) AS v FROM crm_opportunities GROUP BY stage')
     .all<{ stage: string; n: number; v: number }>()
   return { stages: STAGES.map((st) => { const r = rows.find((x) => x.stage === st.key); return { stage: st.key, count: num(r?.n), valueCents: num(r?.v) } }) }
+}
+
+/* -------------------------------------------------------------------- home */
+
+/**
+ * Counts per day, week or month, in Pacific time, of rows whose `col` falls
+ * in [since, until). The screen fills the empty buckets.
+ */
+async function perBucket(table: 'members' | 'crm_opportunities', col: 'created_at' | 'first_contacted_at', since: number, until: number, unit: Unit) {
+  const rows = await db
+    .prepare(`SELECT ${bucketSql(col, unit)} AS b, COUNT(*) AS n FROM ${table} WHERE ${col} >= ? AND ${col} < ? GROUP BY b ORDER BY b`)
+    .all<{ b: string; n: number }>(since, until)
+  return rows.map((r) => ({ bucket: r.b, count: num(r.n) }))
+}
+
+/** Where a lead came from, as one word the home screen can group by. */
+const ORIGIN = `CASE
+  WHEN o.referrer_id IS NOT NULL AND NOT o.referral_default THEN 'person:' || o.referrer_id
+  WHEN o.application_id IS NOT NULL THEN 'spot'
+  WHEN o.backfill_run_id IS NOT NULL THEN 'listings'
+  WHEN o.source_type IS NOT NULL AND NOT o.referral_default THEN 'source:' || o.source_type
+  ELSE 'team' END`
+
+/**
+ * The home screen's business numbers for one period, [since, until): the
+ * leads, where they came from and where they are now, and money. Users are
+ * counted in users.ts. Only counts leave the server here.
+ */
+export async function home(since: number, until: number, unit: Unit, prev: [number, number] | null = null) {
+  // With nothing to compare against, the "before" window is empty and the screen shows no change.
+  const [b0, b1] = prev ?? [0, 0]
+  const won = STAGES.filter((st) => st.group === 'won').map((st) => `'${st.key}'`).join(',')
+  const leads = await db
+    .prepare(
+      `SELECT COUNT(*) AS total,
+              COUNT(*) FILTER (WHERE created_at >= ? AND created_at < ?) AS added,
+              COUNT(*) FILTER (WHERE created_at >= ? AND created_at < ?) AS added_before,
+              COUNT(*) FILTER (WHERE first_contacted_at IS NOT NULL) AS reached,
+              COUNT(*) FILTER (WHERE first_contacted_at >= ? AND first_contacted_at < ?) AS reached_now,
+              COUNT(*) FILTER (WHERE first_contacted_at >= ? AND first_contacted_at < ?) AS reached_before,
+              COUNT(*) FILTER (WHERE stage IN (${won})) AS customers,
+              COUNT(*) FILTER (WHERE won_at >= ? AND won_at < ?) AS customers_now
+       FROM crm_opportunities`,
+    )
+    .get<Record<string, number>>(since, until, b0, b1, since, until, b0, b1, since, until)
+  const sales = await db
+    .prepare(
+      `SELECT COALESCE(SUM(sold_cents) FILTER (WHERE won_at >= ? AND won_at < ?), 0) AS earned,
+              COUNT(*) FILTER (WHERE won_at >= ? AND won_at < ?) AS sales,
+              COALESCE(SUM(sold_cents) FILTER (WHERE won_at >= ? AND won_at < ?), 0) AS before,
+              COALESCE(SUM(monthly_cents) FILTER (WHERE recurring_active), 0) AS mrr
+       FROM crm_deals WHERE status = 'won'`,
+    )
+    .get<Record<string, number>>(since, until, since, until, b0, b1)
+  const moneyByBucket = await db
+    .prepare(
+      `SELECT ${bucketSql('won_at', unit)} AS b,
+              COALESCE(SUM(sold_cents), 0) AS once,
+              COALESCE(SUM(monthly_cents) FILTER (WHERE recurring_active), 0) AS plans
+       FROM crm_deals WHERE status = 'won' AND won_at >= ? AND won_at < ? GROUP BY b ORDER BY b`,
+    )
+    .all<{ b: string; once: number; plans: number }>(since, until)
+  const sold = await db
+    .prepare(
+      `SELECT COALESCE(offer_name, 'Other') AS label, COALESCE(SUM(sold_cents), 0) AS cents, COUNT(*) AS n
+       FROM crm_deals WHERE status = 'won' AND won_at >= ? AND won_at < ? GROUP BY 1 ORDER BY cents DESC`,
+    )
+    .all<{ label: string; cents: number; n: number }>(since, until)
+  const people_ = await peopleNames()
+  const sources = await db
+    .prepare(`SELECT ${ORIGIN} AS origin, o.source_type, COUNT(*) AS n FROM crm_opportunities o WHERE o.created_at >= ? AND o.created_at < ? GROUP BY origin, o.source_type`)
+    .all<{ origin: string; source_type: string | null; n: number }>(since, until)
+  const labels = new Map(
+    (await db.prepare('SELECT key, label FROM crm_source_types').all<{ key: string; label: string }>()).map((r) => [r.key, r.label]),
+  )
+  const merged = new Map<string, { key: string; label: string; count: number }>()
+  for (const r of sources) {
+    const key = r.origin
+    const label = key.startsWith('person:')
+      ? people_.get(key.slice(7)) ?? 'Someone'
+      : key.startsWith('source:')
+        ? labels.get(key.slice(7)) ?? key.slice(7)
+        : key === 'spot'
+          ? 'Asked for a spot on BEASTY'
+          : key === 'listings'
+            ? 'BEASTY listings with no website'
+            : 'Added by the team'
+    const cur = merged.get(key) ?? { key, label, count: 0 }
+    cur.count += num(r.n)
+    merged.set(key, cur)
+  }
+  const top = async (col: 'city' | 'category') =>
+    (
+      await db
+        .prepare(`SELECT COALESCE(NULLIF(${col}, ''), '') AS v, COUNT(*) AS n FROM crm_opportunities WHERE created_at >= ? AND created_at < ? GROUP BY v ORDER BY n DESC, v`)
+        .all<{ v: string; n: number }>(since, until)
+    ).map((r) => ({ label: r.v, count: num(r.n) }))
+  const stages = await db
+    .prepare('SELECT stage, COUNT(*) AS n FROM crm_opportunities WHERE created_at >= ? AND created_at < ? GROUP BY stage')
+    .all<{ stage: string; n: number }>(since, until)
+  const listed = seatedBusinesses()
+  const before = (n: unknown) => (prev ? num(n) : null)
+  return {
+    listed: { total: listed.length, needWebsite: listed.filter((b) => qualifiesForWebsite(b.websiteStatus)).length },
+    leads: {
+      total: num(leads?.total),
+      added: num(leads?.added),
+      addedBefore: before(leads?.added_before),
+      reached: num(leads?.reached),
+      reachedInPeriod: num(leads?.reached_now),
+      reachedBefore: before(leads?.reached_before),
+      customers: num(leads?.customers),
+      customersInPeriod: num(leads?.customers_now),
+      series: await perBucket('crm_opportunities', 'created_at', since, until, unit),
+      reachedSeries: await perBucket('crm_opportunities', 'first_contacted_at', since, until, unit),
+    },
+    money: {
+      earnedCents: num(sales?.earned),
+      sales: num(sales?.sales),
+      earnedBeforeCents: before(sales?.before),
+      mrrCents: num(sales?.mrr),
+      series: moneyByBucket.map((r) => ({ bucket: r.b, onceCents: num(r.once), plansCents: num(r.plans) })),
+      sold: sold.map((r) => ({ label: r.label, cents: num(r.cents), count: num(r.n) })),
+    },
+    sources: [...merged.values()].sort((a, b) => b.count - a.count || a.label.localeCompare(b.label)),
+    stages: stages.map((r) => ({ stage: r.stage, count: num(r.n) })),
+    cities: await top('city'),
+    kinds: await top('category'),
+  }
 }

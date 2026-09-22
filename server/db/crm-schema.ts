@@ -251,4 +251,17 @@ CREATE TABLE IF NOT EXISTS crm_backfill_runs (
   finished_at BIGINT,
   report      JSONB
 );
+
+/*
+  A BEASTY ACCOUNT THAT IS NOT A REAL USER: Glenn's own test sign-up, a
+  teammate trying the app. Marked by an admin on the Home screen and left out
+  of every user number, so the counts are people, not us. Accounts with a
+  reserved address or a fictional 555-01xx number are left out without a mark.
+*/
+CREATE TABLE IF NOT EXISTS crm_member_flags (
+  member_id  TEXT PRIMARY KEY REFERENCES members(id) ON DELETE CASCADE,
+  internal   BOOLEAN NOT NULL DEFAULT TRUE,
+  set_by     TEXT NOT NULL,
+  updated_at BIGINT NOT NULL
+);
 `

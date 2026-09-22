@@ -10,13 +10,13 @@
     4  sell Website + 1 Year BEASTY, $199 + $30/month: $199 earned, $30 in
        monthly plans, $360 a year, and Janelle's numbers follow
     5  raise the price afterwards: the sold deal stays $199
-    6  an overdue reminder shows first thing on Today
+    6  an overdue reminder shows first thing on To do, and in red on Home
     7  on a 393px phone: open a business, call/text, open Instagram, write a
        note, change the step, set a reminder, without fighting the UI
 
   plus what the BEASTY-book screen adds: "Owner" is the person who runs the
   business, a found phone moves a business on to Say hello, logging outreach
-  moves it on by itself, and Today speaks plain words. And the import from
+  moves it on by itself, and To do speaks plain words. And the import from
   Settings, Back returning to the same place in a list, a referral partner
   seeing only their own page, and no screen that scrolls sideways.
 
@@ -97,8 +97,8 @@ problems.length = 0 // that 401 was the point
 await p.fill('input[type="password"]', TOKEN)
 await p.click('button:has-text("Open the CRM")')
 await p.waitForSelector('.crm-tabbar')
-await p.waitForSelector('h1:has-text("Today")')
-check('the key opens the CRM on Today, as Glenn', /Glenn/.test(await p.textContent('.crm-title p')))
+await p.waitForSelector('.crm-home-head h1')
+check('the key opens the CRM on Home, as Glenn', /Glenn/.test(await p.textContent('.crm-home-head h1')))
 /* The phone has four tabs; the rest is in the menu behind Glenn's face. */
 const nav = async (page, name) => {
   if (await page.locator(`.crm-tabbar a:has-text("${name}")`).count()) return page.click(`.crm-tabbar a:has-text("${name}")`)
@@ -119,13 +119,67 @@ const created = Number(await p.locator('.crm-report .crm-stat:has-text("Created"
 check('running it creates exactly what the preview said', created === wouldCreate)
 check('settings fit the phone', (await sideways(p)) <= 1)
 
-/* ============================================ Today speaks plain words */
-await nav(p, 'Today')
+/* ============================================ To do speaks plain words */
+await nav(p, 'To do')
 await p.waitForSelector('.crm-today .crm-group')
 const todayText = await p.textContent('.crm-view')
-check('Today names what to do, not CRM jargon', !/\b(MRR|ARR|pipeline|leads?|referr(al|er)s?|conversion)\b/i.test(todayText), (todayText.match(/\b(MRR|ARR|pipeline|leads?|referr(al|er)s?|conversion)\b/gi) ?? []).join(', '))
+check('To do names what to do, not CRM jargon', !/\b(MRR|ARR|pipeline|leads?|referr(al|er)s?|conversion)\b/i.test(todayText), (todayText.match(/\b(MRR|ARR|pipeline|leads?|referr(al|er)s?|conversion)\b/gi) ?? []).join(', '))
 check('and every business on it comes with the button to reach it', (await p.locator('.crm-today .crm-row .crm-pill-act').count()) >= 5)
 await shot(p, 'm-today')
+
+/* ================================ Home: numbers first, every one scoped */
+{
+  // One real person signs up on BEASTY, in a browser of their own.
+  const uctx = await browser.newContext()
+  const up = await uctx.newPage()
+  await up.goto(`${base}/`, { waitUntil: 'domcontentloaded' })
+  const uEmail = `uma-${port}@audit.beastypages.dev`
+  await up.evaluate(async (e) => fetch('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'Uma User', email: e, attribution: { utm_source: 'instagram', utm_medium: 'social', landing: '/' } }) }), uEmail)
+  let ucode
+  for (let i = 0; i < 20 && !ucode; i++) {
+    await new Promise((r) => setTimeout(r, 250))
+    ucode = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${uEmail} `)).pop()?.match(/ (\d{6}) /)?.[1]
+  }
+  const uv = await up.evaluate(async ({ e, c }) => (await fetch('/api/members/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: e, code: c }) })).status, { e: uEmail, c: ucode })
+  check('a person signs up on BEASTY', uv < 300, `verify ${uv}`)
+  await uctx.close()
+
+  await nav(p, 'Home')
+  await p.waitForSelector('.crm-kpi-row .crm-tile-stat')
+  const tile = (label) => p.locator('.crm-tile-stat', { has: p.locator('.crm-tile-stat-label', { hasText: new RegExp(`^${label}$`) }) }).first()
+  check('the first number on Home is how many users BEASTY has, marked all time', (await p.locator('.crm-tile-stat').first().locator('.crm-tile-stat-label').textContent()) === 'Users' && (await tile('Users').locator('.crm-tile-stat-value').textContent()) === '1' && (await tile('Users').locator('.crm-tile-stat-scope').textContent()) === 'All time')
+  check('users and leads are separate numbers', (await tile('Leads').locator('.crm-tile-stat-value').textContent()) !== '1' && /businesses/.test(await tile('Leads').textContent()))
+  check('new sign-ups say which days they count', (await tile('New sign-ups').locator('.crm-tile-stat-scope').textContent()) === 'Last 30 days' && (await tile('New sign-ups').locator('.crm-tile-stat-value').textContent()) === '1')
+  check('and what they are compared with', /vs 0 in the 30 days before/.test(await tile('New sign-ups').textContent()))
+  check('the period bar names its exact days and the stretch it is compared with', /Last 30 days/.test(await p.textContent('.crm-period-says')) && /compared with/.test(await p.textContent('.crm-period-says')))
+  check('active users are counted from when tracking began, and say so', /since tracking began/.test(await tile('Active users').textContent()))
+  check('Home fits the phone', (await sideways(p)) <= 1)
+  await shot(p, 'm-home')
+  await p.click('.crm-period-pick button[aria-label="7 days"]')
+  await p.waitForFunction(() => /Last 7 days/.test(document.querySelector('.crm-period-says')?.textContent ?? ''))
+  check('picking 7 days rescopes every period number', (await tile('New sign-ups').locator('.crm-tile-stat-scope').textContent()) === 'Last 7 days' && /the 7 days before/.test(await tile('New sign-ups').textContent()))
+  check('but not the totals', (await tile('Users').locator('.crm-tile-stat-scope').textContent()) === 'All time')
+  await p.click('.crm-period-pick button[aria-label="Custom"]')
+  await p.waitForSelector('.crm-custom-range')
+  const today = await p.evaluate(() => new Date().toLocaleDateString('en-CA', { timeZone: 'America/Los_Angeles' }))
+  await p.fill('.crm-custom-range input >> nth=0', '2026-01-01')
+  await p.fill('.crm-custom-range input >> nth=1', today)
+  await p.click('.crm-custom-range button:has-text("Show")')
+  const shown = await p.waitForFunction(() => /Custom dates\s*Jan 1 – /.test(document.querySelector('.crm-period-says')?.textContent ?? ''), null, { timeout: 8000 }).then(() => true, () => false)
+  check('a custom range shows its own dates', shown, await p.textContent('.crm-period-says'))
+  await p.click('.crm-period-pick button[aria-label="30 days"]')
+  await p.waitForFunction(() => /Last 30 days/.test(document.querySelector('.crm-period-says')?.textContent ?? ''))
+  const card = p.locator('.crm-card-chart', { has: p.locator('h3', { hasText: /^New sign-ups$/ }) })
+  await card.locator('.crm-chart-switch').click()
+  check('every chart has a table behind it', (await card.locator('table.crm-chart-table tbody tr').count()) === 30)
+  await card.locator('.crm-chart-switch').click()
+  check('sign-up cohorts are there, with week 0 as the sign-up itself', await p.locator('.crm-cohort-table td.is-cell').first().textContent().then((x) => x === '100%', () => false))
+  check('the admin sees who signed up, and from where', await p.locator('.crm-people td', { hasText: 'Uma User' }).count().then((n) => n === 1) && /Social media/.test(await p.textContent('.crm-signups')))
+  await p.click('.crm-jump button:has-text("Leads and money")')
+  await p.waitForTimeout(600)
+  check('the jump buttons reach the leads', await p.locator('#leads-h').isVisible())
+  check('Home still fits the phone', (await sideways(p)) <= 1)
+}
 
 /* ================================================ manual QA 1-6, desktop */
 const desk = await browser.newContext({ viewport: { width: 1440, height: 900 }, storageState: await phone.storageState() })
@@ -233,16 +287,18 @@ await d.fill('.crm-fu-form input[type="datetime-local"]', local(Date.now() - 26 
 await d.fill('.crm-fu-form input[placeholder^="e.g."]', 'Send the onboarding form')
 await d.click('button:has-text("Set reminder")')
 await d.waitForSelector('.crm-reminders .crm-row.is-late')
-await go(d, 'overview', '.crm-today')
+await go(d, 'today', '.crm-today')
 const first = d.locator('.crm-due-now .crm-row.is-late', { has: d.locator(`a[href="#/lead/${jazzId}"]`) })
 const firstOk = await first.waitFor().then(() => true, () => false)
-check('TEST 6: the late reminder is the first thing on Today', firstOk && /Send the onboarding form/.test(await first.textContent()))
-check('and Today says it is late', /late/.test(await d.textContent('.crm-title p')))
+check('TEST 6: the late reminder is the first thing on To do', firstOk && /Send the onboarding form/.test(await first.textContent()))
+check('and To do says it is late', /late/.test(await d.textContent('.crm-title p')))
 await first.locator(`a[href="#/lead/${jazzId}"]`).click()
 await d.waitForSelector('.crm-lead-head h1:has-text("Jazz Braids")')
 check('TEST 6: and one tap opens it', true)
-await go(d, 'overview', '.crm-today')
+await go(d, 'today', '.crm-today')
 await shot(d, 'd-overdue')
+await go(d, 'overview', '.crm-needs-row')
+check('Home counts the late reminder in red', await d.locator('.crm-needs-row a.is-late b').textContent().then((x) => Number(x) >= 1, () => false))
 
 /* ======================================== a phone the team found */
 const lost = await p.evaluate(async () => (await (await fetch('/api/crm/leads?stage=need_contact_info&limit=1&sort=name', { credentials: 'same-origin' })).json()).leads[0])
@@ -366,7 +422,7 @@ await p.waitForFunction(() => { const i = document.querySelector('.crm-qr img');
 check("Janelle's page shows her link and a QR code that loads", /\/r\/janelle/.test(await p.textContent('.crm-reflink code')))
 check('and both businesses she sent', (await p.locator(`a[href="#/lead/${target.id}"]`).count()) === 1 && (await p.locator(`a[href="#/lead/${jazzId}"]`).count()) === 1)
 
-for (const [hash, name] of [['overview', 'Today'], ['pipeline', 'Board'], ['businesses', 'Grouped businesses'], ['followups?view=upcoming', 'Reminders'], ['revenue', 'Money'], ['analytics', "How it's going"], ['referrers', 'People']]) {
+for (const [hash, name] of [['overview', 'Glenn'], ['today', 'To do'], ['pipeline', 'Board'], ['businesses', 'Grouped businesses'], ['followups?view=upcoming', 'Reminders'], ['revenue', 'Money'], ['analytics', "How it's going"], ['referrers', 'People']]) {
   await go(p, hash, `h1:has-text("${name}")`)
   await p.waitForTimeout(400)
   check(`${name} fits the phone`, (await sideways(p)) <= 1)
@@ -409,7 +465,7 @@ check("the partner's page fits the phone", (await sideways(pp)) <= 1)
 await shot(pp, 'm-partner')
 
 /* ========================================================== desktop sweep */
-for (const hash of ['overview', 'leads', `lead/${jazzId}`, 'pipeline', 'businesses', 'referrers', 'followups?view=overdue', 'revenue', 'analytics', 'settings']) {
+for (const hash of ['overview', 'today', 'leads', `lead/${jazzId}`, 'pipeline', 'businesses', 'referrers', 'followups?view=overdue', 'revenue', 'analytics', 'settings']) {
   await go(d, hash)
   await d.waitForTimeout(700)
   const name = hash.split(/[/?]/)[0]

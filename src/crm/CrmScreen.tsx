@@ -7,10 +7,11 @@
   where they were. Everything it shows comes from /api/crm, which checks the
   role on every request.
 
-  Four places, named the way the team talks: Today (what to do now),
-  Businesses (every business being worked, with the board), Money, and People
-  (who sends businesses in). A phone gets them as a tab bar; a computer as a
-  top bar, with the business list and the open business side by side.
+  Five places, named the way the team talks: Home (the numbers and charts),
+  To do (who to reach now), Businesses (every business being worked, with the
+  board), Money, and People (who sends businesses in). A phone gets them as a
+  tab bar; a computer as a top bar, with the business list and the open
+  business side by side.
 */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
@@ -20,7 +21,8 @@ import type { Actor, LeadSummary, Meta } from './api'
 import { Avatar, Crm, Failure, Loading, StagePill, Tile, useApi, useCrm, useMedia } from './ui'
 import { Icon } from './icons'
 import type { IconName } from './icons'
-import { Analytics, Businesses, Followups, Overview, Pipeline, Revenue } from './views'
+import { Analytics, Businesses, Followups, Pipeline, Revenue, Today } from './views'
+import { Home } from './home'
 import { Leads } from './leads'
 import { LeadDetail } from './lead'
 import { PartnerHome, ReferrerDetail, Referrers, Settings } from './people'
@@ -46,7 +48,8 @@ interface Place {
 }
 
 const TABS: Place[] = [
-  { key: 'overview', label: 'Today', icon: 'sun' },
+  { key: 'overview', label: 'Home', icon: 'home' },
+  { key: 'today', label: 'To do', icon: 'checkCircle' },
   { key: 'leads', label: 'Businesses', icon: 'store' },
   { key: 'revenue', label: 'Money', icon: 'dollar' },
   { key: 'referrers', label: 'People', icon: 'users' },
@@ -55,7 +58,8 @@ const TABS: Place[] = [
 /** Which tab a page belongs to. */
 const TAB_OF: Record<string, string> = {
   overview: 'overview',
-  followups: 'overview',
+  today: 'today',
+  followups: 'today',
   leads: 'leads',
   lead: 'leads',
   pipeline: 'leads',
@@ -69,7 +73,8 @@ const TAB_OF: Record<string, string> = {
 
 /** Everything the search can jump to, in the words the pages use. */
 const PAGES: Place[] = [
-  { key: 'overview', label: 'Today', icon: 'sun' },
+  { key: 'overview', label: 'Home', icon: 'home' },
+  { key: 'today', label: 'To do', icon: 'checkCircle' },
   { key: 'leads', label: 'Businesses', icon: 'store' },
   { key: 'pipeline', label: 'Board', icon: 'kanban' },
   { key: 'followups?view=upcoming', label: 'Reminders', icon: 'bell' },
@@ -262,8 +267,11 @@ export default function CrmScreen() {
       case 'settings':
         view = <Settings />
         break
+      case 'today':
+        view = <Today />
+        break
       default:
-        view = <Overview />
+        view = <Home />
     }
   }
   const tabOn = TAB_OF[route.name] ?? 'overview'
@@ -277,7 +285,7 @@ export default function CrmScreen() {
             {TABS.map((t) => (
               <a key={t.key} href={`#/${t.key}`} className={tabOn === t.key ? 'is-on' : undefined} aria-current={tabOn === t.key ? 'page' : undefined}>
                 {t.label}
-                {t.key === 'overview' && overdue > 0 && <em className="crm-dot-count">{overdue}</em>}
+                {t.key === 'today' && overdue > 0 && <em className="crm-dot-count">{overdue}</em>}
               </a>
             ))}
           </nav>
@@ -305,7 +313,7 @@ export default function CrmScreen() {
             <a key={t.key} href={`#/${t.key}`} className={tabOn === t.key ? 'is-on' : undefined} aria-current={tabOn === t.key ? 'page' : undefined}>
               <span className="crm-tabbar-icon">
                 <Icon name={t.icon} size={24} stroke={tabOn === t.key ? 2.2 : 1.8} />
-                {t.key === 'overview' && overdue > 0 && <em className="crm-tabbar-badge">{overdue}</em>}
+                {t.key === 'today' && overdue > 0 && <em className="crm-tabbar-badge">{overdue}</em>}
               </span>
               <span>{t.label}</span>
             </a>
@@ -322,7 +330,7 @@ export default function CrmScreen() {
 
 function Brand() {
   return (
-    <a className="crm-brand" href="#/overview" aria-label="BEASTY CRM, today">
+    <a className="crm-brand" href="#/overview" aria-label="BEASTY CRM, home">
       <span className="crm-brand-left">BEASTY</span>
       <span className="crm-brand-right">CRM</span>
     </a>

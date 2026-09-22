@@ -24,6 +24,7 @@ const PATHS: Record<string, string> = {
   chevronRight: 'M9 18l6-6-6-6',
   chevronLeft: 'M15 18l-6-6 6-6',
   chevronDown: 'M6 9l6 6 6-6',
+  chevronUp: 'M18 15l-6-6-6 6',
   arrowUpRight: 'M7 17L17 7M7 7h10v10',
   arrowRight: 'M5 12h14M12 5l7 7-7 7',
   check: 'M20 6L9 17l-5-5',

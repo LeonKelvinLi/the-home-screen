@@ -8,6 +8,7 @@ import { crmOnApplication, mountCrm } from './crm/routes'
 import { crmOpenMode } from './crm/open'
 import { syncSnapshots } from './crm/backfill'
 import { fillGlennDefaults } from './crm/core'
+import { cleanAttribution, isBot, isTestDestination, shortHash, track } from './analytics'
 import { BRANDS, VENDORS } from '../src/data/brands'
 import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
@@ -1024,6 +1025,8 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
     BEGIN it already runs inside is the stronger guarantee.
   */
   await write()
+  /* After COMMIT, never inside it: see the note in analytics.ts. */
+  if (member) await track('order_placed', { memberId: member.id, entityType: 'order', entityId: orderId, metadata: { lines: lines.length, fulfilment } })
   res.status(201).json({ ...(await readOrder(orderId, { forCustomer: true })), cancelKey: cancelKeyFor(orderId) })
 })
 
@@ -1950,7 +1953,7 @@ const hashToken = (t: string) => createHash('sha256').update(t).digest('hex')
   dependency is its own risk. httpOnly keeps it away from any script; SameSite
   Lax still sends it on the top-level navigation a shared referral link is.
 */
-async function startSession(res: Response, memberId: string): Promise<void> {
+async function startSession(res: Response, memberId: string): Promise<string> {
   const token = randomBytes(32).toString('base64url')
   const now = Date.now()
   await db.prepare(
@@ -1974,6 +1977,7 @@ async function startSession(res: Response, memberId: string): Promise<void> {
     if (PROD) bits.push('Secure')
     res.setHeader('Set-Cookie', bits.join('; '))
   }
+  return shortHash(token)
 }
 
 function readCookie(req: Request, name: string): string | null {
@@ -2609,6 +2613,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   */
   const name = str(b.name)
   if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+  /* What brought them here, reduced to what is safe to keep (analytics.ts). */
+  const attribution = cleanAttribution(b.attribution, OWN_HOSTS)
 
   const existing = await db
     .prepare(
@@ -2656,7 +2662,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   ) {
     await db.prepare(
       `UPDATE login_codes SET
-         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?, pending_via = ?
+         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?, pending_via = ?,
+         pending_attribution = COALESCE(?::jsonb, pending_attribution)
        WHERE destination = ?`,
     ).run(
       name || null,
@@ -2664,6 +2671,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
       channel === 'sms' ? destination : str(b.phone) || null,
       str(b.ref).toUpperCase() || null,
       viaFrom(b.via),
+      attribution ? JSON.stringify(attribution) : null,
       destination,
     )
     return res.status(202).json({
@@ -2679,8 +2687,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   await db.prepare(
     `INSERT INTO login_codes
        (destination, channel, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
-        pending_via, attempts, created_at, expires_at)
-     VALUES (?,?,?,?,?,?,?,?,?,0,?,?)
+        pending_via, pending_attribution, attempts, created_at, expires_at)
+     VALUES (?,?,?,?,?,?,?,?,?,?::jsonb,0,?,?)
      ON CONFLICT(destination) DO UPDATE SET
        channel = excluded.channel,
        code_hash = excluded.code_hash,
@@ -2690,6 +2698,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
        pending_phone = excluded.pending_phone,
        pending_ref = excluded.pending_ref,
        pending_via = excluded.pending_via,
+       pending_attribution = excluded.pending_attribution,
        attempts = 0,
        created_at = excluded.created_at,
        expires_at = excluded.expires_at`,
@@ -2703,6 +2712,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     channel === 'sms' ? destination : str(b.phone) || null,
     str(b.ref).toUpperCase() || null,
     viaFrom(b.via),
+    attribution ? JSON.stringify(attribution) : null,
     now,
     now + CODE_TTL_MS,
   )
@@ -2717,6 +2727,11 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
         : await sendLoginCodeSms(destination, code, purpose)
   /* Recorded so a reused start inside the window can answer honestly. */
   await db.prepare('UPDATE login_codes SET delivered = ? WHERE destination = ?').run(delivered, destination)
+  /* A sign-up asked for, by this device: the funnel's second step. Never the
+     number or address itself. */
+  if (purpose === 'signup' && !isTestDestination(destination)) {
+    await track('signup_started', { actor: visitorOf(req, res), metadata: { channel, delivered } })
+  }
   res.status(202).json({ sent: true, delivered, channel, minutes: CODE_TTL_MS / 60000 })
 })
 
@@ -2751,6 +2766,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
         pending_phone: string | null
         pending_ref: string | null
         pending_via: string | null
+        pending_attribution: Record<string, unknown> | null
         attempts: number
         expires_at: number
       }
@@ -2792,7 +2808,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     .get(destination) as MemberRow | undefined
 
   if (existing) {
-    await startSession(res, existing.id)
+    const sessionId = await startSession(res, existing.id)
+    await track('user_signed_in', { memberId: existing.id, sessionId, metadata: { channel: byPhone ? 'sms' : 'email' } })
     return res.json(await memberPayload(existing))
   }
 
@@ -2805,8 +2822,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 
   const id = `mb_${randomBytes(8).toString('hex')}`
   await db.prepare(
-    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, created_at)
-     VALUES (?,?,?,?,?,?,?,?,?)`,
+    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, signup_attribution, created_at)
+     VALUES (?,?,?,?,?,?,?,?,?::jsonb,?)`,
   ).run(
     id,
     row.pending_name ?? 'Member',
@@ -2818,12 +2835,23 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     await newReferralCode(),
     referrer?.id ?? null,
     viaFrom(row.pending_via),
+    row.pending_attribution ? JSON.stringify(row.pending_attribution) : null,
     Date.now(),
   )
   // Their referrer may have just crossed a milestone.
   if (referrer) await syncRaffleTickets(referrer.id)
 
-  await startSession(res, id)
+  const sessionId = await startSession(res, id)
+  await track('user_signed_up', {
+    memberId: id,
+    sessionId,
+    metadata: {
+      channel: byPhone ? 'sms' : 'email',
+      utm_source: String(row.pending_attribution?.utm_source ?? ''),
+      utm_campaign: String(row.pending_attribution?.utm_campaign ?? ''),
+    },
+  })
+  if (referrer) await track('friend_joined', { memberId: referrer.id, entityType: 'member', entityId: id })
   const fresh = await db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
   res.status(201).json(await memberPayload(fresh))
 })
@@ -2832,6 +2860,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 app.get('/api/members/me', rateLimiter(60, 20), async (req, res) => {
   const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  void track('app_opened', { memberId: m.id, source: 'web' })
   res.json(await memberPayload(m))
 })
 
@@ -2956,6 +2985,7 @@ app.get('/api/members/tickets', rateLimiter(60, 20), async (req, res) => {
 app.get('/api/members/pass', rateLimiter(60, 20), async (req, res) => {
   const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  void track('pass_opened', { memberId: m.id, source: 'web' })
   res.set('Cache-Control', 'no-store').json({ ...passTokenFor(m.id), windowMs: PASS_WINDOW_MS })
 })
 
@@ -3005,6 +3035,7 @@ app.post('/api/pass/verify', rateLimiter(120, 40), async (req, res) => {
     }
     throw err
   }
+  await track('pass_scanned', { memberId: m.id, entityType: 'vendor', entityId: vendorId ?? 'operator', metadata: { by: vendorId ? 'shop' : 'operator' } })
   const tier = TIERS.find((t) => t.id === m.tier)
   const active = !!tier && m.tier_status === 'active'
   res.json({
@@ -3017,7 +3048,9 @@ app.post('/api/pass/verify', rateLimiter(120, 40), async (req, res) => {
 /** Sign out on this device. */
 app.post('/api/members/signout', rateLimiter(20, 10), async (req, res) => {
   const token = readCookie(req, SESSION_COOKIE)
+  const m = token ? await memberFromRequest(req) : null
   if (token) await db.prepare('DELETE FROM member_sessions WHERE token_hash = ?').run(hashToken(token))
+  if (m) await track('user_signed_out', { memberId: m.id, sessionId: shortHash(token!) })
   res.setHeader('Set-Cookie', `${SESSION_COOKIE}=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax`)
   res.json({ ok: true })
 })
@@ -3055,6 +3088,7 @@ app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
   await db
     .prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ?, tier_interval = ? WHERE id = ?')
     .run(tier.id, 'pending', Date.now(), interval, m.id)
+  await track('membership_chosen', { memberId: m.id, metadata: { tier: tier.id, interval } })
 
   const row = await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
   res.json({
@@ -3105,6 +3139,48 @@ function actorFor(req: Request, res: Response, memberId: string | null): string 
   return `d:${hashToken(device)}`
 }
 
+/** Hosts that are BEASTY itself, so a click from one page to another is not a referral. */
+const OWN_HOSTS = ['beastypages.com', 'onrender.com', 'localhost']
+
+/** A visitor for analytics: a short hash of the device cookie (set here when missing). */
+function visitorOf(req: Request, res: Response): string {
+  return shortHash(actorFor(req, res, null))
+}
+
+/*
+  A VISIT, from the page itself: navigator.sendBeacon on the first load of the
+  day, carrying what brought the visitor (UTM fields, the referring host, the
+  landing path). One row per device per day, none for crawlers or for signed-in
+  members (their visits are app_opened). It is the funnel's first step and the
+  only record of where a future member first came from.
+*/
+app.post('/api/t/visit', rateLimiter(30, 10), express.text({ type: '*/*', limit: '4kb' }), async (req, res) => {
+  if (isBot(req.get('user-agent')) || (await memberFromRequest(req))) return res.status(204).end()
+  // Before the reply goes out: this may set the device cookie.
+  const visitor = visitorOf(req, res)
+  res.status(204).end()
+  let body: unknown = req.body
+  if (typeof body === 'string') {
+    try {
+      body = JSON.parse(body)
+    } catch {
+      return
+    }
+  }
+  const a = cleanAttribution(isObj(body) ? body.attribution : null, OWN_HOSTS)
+  await track('site_visited', {
+    actor: visitor,
+    source: 'web',
+    metadata: {
+      landing: a?.landing,
+      referrer: a?.referrer,
+      utm_source: a?.utm_source,
+      utm_medium: a?.utm_medium,
+      utm_campaign: a?.utm_campaign,
+    },
+  })
+})
+
 async function signalCounts(brandId: string, actor: string) {
   const rows = await db
     .prepare('SELECT kind, COUNT(*) AS n FROM brand_signals WHERE brand_id = ? GROUP BY kind')
@@ -3128,6 +3204,9 @@ app.get('/api/brands/:id/signals', rateLimiter(240, 60), async (req, res) => {
   const brandId = String(req.params.id)
   const m = await memberFromRequest(req)
   const actor = actorFor(req, res, m?.id ?? null)
+  /* Only the business page asks for these counts, so this is a page opened —
+     kept once a day per business, and only for members. */
+  if (m && BRANDS.some((b) => b.id === brandId)) void track('business_viewed', { memberId: m.id, entityType: 'business', entityId: brandId, source: 'web' })
   res.json(await signalCounts(brandId, actor))
 })
 
@@ -3151,6 +3230,7 @@ app.post('/api/brands/:id/signals/:kind', rateLimiter(60, 20), async (req, res) 
 
   if (existing && kind !== 'share') {
     await db.prepare('DELETE FROM brand_signals WHERE id = ?').run(existing.id)
+    if (m) await track(kind === 'like' ? 'business_unliked' : 'business_unsaved', { memberId: m.id, entityType: 'business', entityId: brandId })
   } else if (!existing) {
     await db
       .prepare(
@@ -3159,6 +3239,13 @@ app.post('/api/brands/:id/signals/:kind', rateLimiter(60, 20), async (req, res) 
          ON CONFLICT (brand_id, kind, actor) DO NOTHING`,
       )
       .run(`bs_${randomBytes(8).toString('hex')}`, brandId, kind, actor, m?.id ?? null, Date.now())
+    if (m) {
+      await track(kind === 'like' ? 'business_liked' : kind === 'share' ? 'business_shared' : 'business_saved', {
+        memberId: m.id,
+        entityType: 'business',
+        entityId: brandId,
+      })
+    }
   }
   res.json(await signalCounts(brandId, actor))
 })

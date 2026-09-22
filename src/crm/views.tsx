@@ -1,18 +1,17 @@
 /*
-  Today (what to do now), the Board, grouped businesses, Reminders, and Money
-  with How it's going. Every row that names a business opens it, and every
-  number says what it counts in words.
+  Home (the numbers and charts), To do (who to reach now), the Board, grouped
+  businesses, Reminders, and Money with How it's going. Every row that names a
+  business opens it, and every number says what it counts and over what time.
 */
 import { useState } from 'react'
 import type { DragEvent, ReactNode } from 'react'
 import { api } from './api'
-import type { LeadSummary, ReferrerMetrics } from './api'
+import type { LeadSummary } from './api'
 import {
   Empty,
   Failure,
   Loading,
   PageTitle,
-  PersonChip,
   ReachLink,
   Section,
   Segmented,
@@ -45,13 +44,7 @@ interface OverviewData {
 
 type LeadList = { total: number; leads: LeadSummary[] }
 
-const greeting = () => {
-  const h = new Date().getHours()
-  return h < 12 ? 'Good morning' : h < 18 ? 'Good afternoon' : 'Good evening'
-}
-
-export function Overview() {
-  const { actor } = useCrm()
+export function Today() {
   const end = endOfToday()
   const ov = useApi<OverviewData>('/api/crm/overview')
   const late = useApi<{ followups: FollowupItem[] }>(`/api/crm/followups?view=overdue&end=${end}`)
@@ -61,7 +54,6 @@ export function Overview() {
   const stale = useApi<LeadList>('/api/crm/leads?attention=stale_proposals&limit=5')
   const ready = useApi<LeadList>('/api/crm/leads?stage=ready_to_contact&limit=5&sort=updated')
   const info = useApi<LeadList>('/api/crm/leads?stage=need_contact_info,new_lead&limit=4&sort=updated')
-  const refs = useApi<{ referrers: ReferrerMetrics[] }>('/api/crm/referrers?period=all')
   const reload = () => {
     for (const x of [ov, late, today, sent, warm, stale, ready, info]) void x.reload()
   }
@@ -71,7 +63,6 @@ export function Overview() {
   const due = [...(late.data?.followups ?? []), ...(today.data?.followups ?? [])]
   const lateN = late.data?.followups.length ?? 0
   const warmLeads = [...(warm.data?.leads ?? []), ...(stale.data?.leads ?? [])]
-  const first = actor.name.split(' ')[0]
 
   const said: string[] = []
   if (due.length) said.push(`${due.length === 1 ? 'One reminder is' : `${due.length} reminders are`} due${lateN ? `, ${lateN === due.length ? (lateN === 1 ? 'and it is late' : 'all late') : `${lateN} late`}` : ''}`)
@@ -79,72 +70,37 @@ export function Overview() {
   if (c.readyToContact) said.push(`${plural(c.readyToContact, 'business is', 'businesses are')} ready for a first hello`)
   if (!said.length) said.push('Nothing is waiting on you')
 
-  const top = (refs.data?.referrers ?? []).filter((r) => r.id !== 'p_glenn' && r.leads > 0).slice(0, 4)
-
   return (
     <div className="crm-view crm-today">
-      <PageTitle title="Today" sub={`${greeting()}, ${first}. ${said.join('. ')}.`} />
-      <div className="crm-today-grid">
-        <div className="crm-today-main">
-          {due.length > 0 && (
-            <Section title="Do these first" className="crm-due-now">
-              <FollowupList items={due} onChange={reload} />
-            </Section>
+      <PageTitle title="To do" sub={`${said.join('. ')}.`} />
+      <div className="crm-todo">
+        {due.length > 0 && (
+          <Section title="Do these first" className="crm-due-now">
+            <FollowupList items={due} onChange={reload} />
+          </Section>
+        )}
+        {!!sent.data?.leads.length && (
+          <Section title="Sent by someone, waiting for a hello" action={sent.data.total > 5 ? <a href="#/leads?attention=uncontacted_referrals">See all {sent.data.total}</a> : undefined}>
+            <LeadRows leads={sent.data.leads} why={(l) => `Sent by ${l.referrer?.name ?? 'someone'}. ${placeLine(l.category, l.city)}`} />
+          </Section>
+        )}
+        {warmLeads.length > 0 && (
+          <Section title="Keep these warm">
+            <LeadRows leads={warmLeads} why={(l) => (l.stage === 'proposal_sent' ? 'Quote sent, and no word for days' : 'Interested, with no reminder set')} />
+          </Section>
+        )}
+        <Section title="Ready for a first hello" action={c.readyToContact > 5 ? <a href="#/leads?step=hello">See all {c.readyToContact}</a> : undefined}>
+          {!ready.data ? <Loading /> : ready.data.leads.length ? <LeadRows leads={ready.data.leads} /> : <Empty icon="checkCircle">Everyone ready has been reached.</Empty>}
+        </Section>
+        <Section title="Find their phone or Instagram" action={(c.needContactInfo ?? 0) > 4 ? <a href="#/leads?step=info">See all {c.needContactInfo}</a> : undefined}>
+          {!info.data ? (
+            <Loading />
+          ) : info.data.leads.length ? (
+            <LeadRows leads={info.data.leads} why={(l) => `${placeLine(l.category, l.city)}. No phone, email or Instagram yet`} />
+          ) : (
+            <Empty icon="checkCircle">Every business has a way to reach it.</Empty>
           )}
-          {!!sent.data?.leads.length && (
-            <Section title="Sent by someone, waiting for a hello" action={sent.data.total > 5 ? <a href="#/leads?attention=uncontacted_referrals">See all {sent.data.total}</a> : undefined}>
-              <LeadRows leads={sent.data.leads} why={(l) => `Sent by ${l.referrer?.name ?? 'someone'}. ${placeLine(l.category, l.city)}`} />
-            </Section>
-          )}
-          {warmLeads.length > 0 && (
-            <Section title="Keep these warm">
-              <LeadRows leads={warmLeads} why={(l) => (l.stage === 'proposal_sent' ? 'Quote sent, and no word for days' : 'Interested, with no reminder set')} />
-            </Section>
-          )}
-          <Section title="Ready for a first hello" action={c.readyToContact > 5 ? <a href="#/leads?step=hello">See all {c.readyToContact}</a> : undefined}>
-            {!ready.data ? <Loading /> : ready.data.leads.length ? <LeadRows leads={ready.data.leads} /> : <Empty icon="checkCircle">Everyone ready has been reached.</Empty>}
-          </Section>
-          <Section title="Find their phone or Instagram" action={(c.needContactInfo ?? 0) > 4 ? <a href="#/leads?step=info">See all {c.needContactInfo}</a> : undefined}>
-            {!info.data ? (
-              <Loading />
-            ) : info.data.leads.length ? (
-              <LeadRows leads={info.data.leads} why={(l) => `${placeLine(l.category, l.city)}. No phone, email or Instagram yet`} />
-            ) : (
-              <Empty icon="checkCircle">Every business has a way to reach it.</Empty>
-            )}
-          </Section>
-        </div>
-
-        <aside className="crm-today-side">
-          <Section title="So far">
-            <div className="crm-glance">
-              <Stat label="Earned" value={money(ov.data.money.oneTimeCents)} sub={plural(c.dealsWon ?? 0, 'sale', 'sales')} />
-              <Stat label="Monthly plans" value={money(ov.data.money.mrrCents)} sub={`${money(ov.data.money.arrCents)} a year`} />
-              <Stat label="Open quotes" value={money(ov.data.money.pipelineCents)} sub="if every open business says yes" />
-            </div>
-          </Section>
-          <Section title="Who's sending businesses" action={<a href="#/referrers">People</a>}>
-            {!refs.data ? (
-              <Loading />
-            ) : top.length ? (
-              <ul className="crm-group">
-                {top.map((r) => (
-                  <li key={r.id}>
-                    <a className="crm-row" href={`#/referrer/${r.id}`}>
-                      <PersonChip id={r.id} name={r.name} size={32} />
-                      <span className="crm-row-end">
-                        {plural(r.leads, 'sent', 'sent')}
-                        {r.won ? `, ${r.won} bought` : ''}
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <Empty icon="share">Nobody else has sent a business yet. Their link is on their page under People.</Empty>
-            )}
-          </Section>
-        </aside>
+        </Section>
       </div>
     </div>
   )
@@ -524,16 +480,26 @@ interface RevenueData {
   byMonth: Slice[]
 }
 
+/** The periods, with the short names a phone shows so all five fit on one line. */
 export const PERIODS = [
-  ['7d', '7 days'],
-  ['30d', '30 days'],
-  ['month', 'This month'],
-  ['year', 'This year'],
-  ['all', 'All time'],
+  ['7d', '7 days', '7 days'],
+  ['30d', '30 days', '30 days'],
+  ['month', 'This month', 'Month'],
+  ['year', 'This year', 'Year'],
+  ['all', 'All time', 'All'],
 ] as const
 
 export function PeriodPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
-  return <Segmented value={value} options={PERIODS} onChange={onChange} label="Period" />
+  return (
+    <div className="crm-seg crm-period-pick" role="tablist" aria-label="Period">
+      {PERIODS.map(([k, text, short]) => (
+        <button type="button" key={k} role="tab" aria-selected={value === k} aria-label={text} className={value === k ? 'is-on' : undefined} onClick={() => onChange(k)}>
+          <span className="is-long">{text}</span>
+          <span className="is-short">{short}</span>
+        </button>
+      ))}
+    </div>
+  )
 }
 
 function MoneyTabs({ on }: { on: 'revenue' | 'analytics' }) {

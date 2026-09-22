@@ -1,6 +1,7 @@
 import { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import { GATED, type GateKey } from '../data/membership'
 import { captureReferral, captureVia, fetchAccount, type Account, type AccountState } from './account'
+import { captureAttribution, sendVisit } from './attribution'
 
 /**
  * WHAT A SIGNED-OUT VISITOR MAY DO, and the prompt when they may not.
@@ -53,6 +54,9 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
     // rewrites the URL or the referrer loses their credit.
     captureReferral()
     captureVia()
+    // What brought this visit, for the sign-up, and one visit a day for the numbers.
+    captureAttribution()
+    sendVisit()
     void refresh()
   }, [refresh])
 
