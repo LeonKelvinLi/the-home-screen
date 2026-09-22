@@ -485,6 +485,8 @@ for (const s of [
      the call-or-text sheet. Signed out, the dock is behind the gate, so the
      card is proved from the bundle rather than by opening it. */
   'Get in touch directly with the owners for any questions', 'Co-CEO/Co-Founder', '510-674-8011', 'calltext-sheet', 'sms:',
+  /* 2026-09-21 evening: "Text or email is preferred" in bold on its own line. */
+  'Text or email is preferred', 'operator-note-preferred',
   'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
   'sin-city-pits-breeder', 'brand-photos-track',
   /* The four reels the sweep found never attached. */

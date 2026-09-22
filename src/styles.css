@@ -4239,7 +4239,18 @@ textarea {
   font-size: 13px;
   line-height: 1.4;
   text-align: center;
+  /* Even lines, as in his markup, rather than a one-word second line. */
+  text-wrap: balance;
   color: var(--muted);
+}
+
+/* "Text or email is preferred", bold and on its own centred line — his red
+   markup of 2026-09-21. Same colour as the sentence above it, as he drew it:
+   the weight is the emphasis. */
+.operator-note-preferred {
+  display: block;
+  margin-top: 2px;
+  font-weight: 700;
 }
 
 /* ---------- BEASTY members ---------- */

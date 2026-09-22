@@ -35,8 +35,14 @@ export const OPERATOR = {
     preferred" — his wording in the same revision, now that there are two of
     them. The old line said "the owner of beastypages.com", which the title
     above it now says on its own.
+
+    SPLIT IN TWO on 2026-09-21, evening: "Would you mind revising it with
+    the bold & centered?" over his red markup of the card — the first
+    sentence as it was, then "Text or email is preferred" in bold on a line
+    of its own, centered, and with no full stop, as he wrote it.
   */
-  note: 'Get in touch directly with the owners for any questions. Text or email is preferred.',
+  note: 'Get in touch directly with the owners for any questions.',
+  preferred: 'Text or email is preferred',
   phone: '510-789-3205',
   /* The domain address, on his ask of 2026-09-02 ("change my email address
      to the domain one"). The mailbox exists: Leon set up the Workspace and

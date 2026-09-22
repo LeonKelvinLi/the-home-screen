@@ -277,7 +277,10 @@ export function PhoneApp({ api }: { api: ShellApi }) {
             <img src="/biggie.webp" alt="" draggable={false} />
           </span>
           <span className="operator-name">{OPERATOR.name}</span>
-          <span className="operator-note">{OPERATOR.note}</span>
+          <span className="operator-note">
+            {OPERATOR.note}
+            <strong className="operator-note-preferred">{OPERATOR.preferred}</strong>
+          </span>
         </div>
 
         {/*
