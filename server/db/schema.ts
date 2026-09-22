@@ -14,6 +14,7 @@
 */
 import { AsyncLocalStorage } from 'node:async_hooks'
 import pg from 'pg'
+import { CRM_SCHEMA } from './crm-schema'
 
 /*
   BIGINT COMES BACK AS A STRING BY DEFAULT, and every timestamp here is
@@ -565,4 +566,6 @@ CREATE INDEX IF NOT EXISTS idx_members_joined_via ON members(joined_via) WHERE j
 export async function migrate() {
   await pool.query(SCHEMA)
   await pool.query(MIGRATIONS)
+  // The CRM's tables, after everything they reference (members, applications).
+  await pool.query(CRM_SCHEMA)
 }

@@ -4,6 +4,8 @@ import { createHash, createHmac, randomBytes, randomInt, timingSafeEqual } from 
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
+import { crmOnApplication, mountCrm } from './crm/routes'
+import { syncSnapshots } from './crm/backfill'
 import { BRANDS, VENDORS } from '../src/data/brands'
 import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
@@ -1363,18 +1365,30 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
   if (business.length < 2) return res.status(400).json({ error: 'Business name is required.' })
   if (contact.length < 5) return res.status(400).json({ error: 'A phone or email is required.' })
 
+  const application = {
+    id: `ap_${randomBytes(8).toString('hex')}`,
+    business,
+    cuisine: str(b.cuisine) || null,
+    contact,
+    city: str(b.city) || null,
+    social: str(b.social) || null,
+    created_at: Date.now(),
+  }
   await db.prepare(
     `INSERT INTO applications (id, business, cuisine, contact, city, social, created_at)
      VALUES (?,?,?,?,?,?,?)`,
   ).run(
-    `ap_${randomBytes(8).toString('hex')}`,
-    business,
-    str(b.cuisine) || null,
-    contact,
-    str(b.city) || null,
-    str(b.social) || null,
-    Date.now(),
+    application.id,
+    application.business,
+    application.cuisine,
+    application.contact,
+    application.city,
+    application.social,
+    application.created_at,
   )
+  /* Into the CRM as a lead, credited to the referral link that brought them
+     if there was one. Never awaited into the response: it cannot fail this. */
+  void crmOnApplication(req, application)
 
   notifyLead({
     business,
@@ -1648,6 +1662,14 @@ app.get('/api/applications', rateLimiter(20, 10), async (req, res) => {
 })
 
 /* ---------- calendar ---------- */
+
+/** The operator token typed into the CRM screen, compared in constant time. */
+function isOperatorToken(sent: string): boolean {
+  if (OPERATOR_TOKEN.length < 16) return false
+  const a = Buffer.from(sent)
+  const b = Buffer.from(OPERATOR_TOKEN)
+  return a.length === b.length && timingSafeEqual(a, b)
+}
 
 /** Reused by the two operator-only routes below. */
 function isOperator(req: Request): boolean {
@@ -3268,6 +3290,28 @@ app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
   }
 })
 
+/*
+  THE CRM: /api/crm/*, the /r/<slug> referral link and the /crm screen's
+  headers. Mounted here, after every other API route and before the /api 404
+  and the page catch-alls, so none of its paths can be swallowed by them.
+*/
+mountCrm(
+  app,
+  {
+    isOperator,
+    isOperatorToken,
+    memberFromRequest: (req) => memberFromRequest(req),
+    readCookie,
+    secret: PASS_SECRET,
+    prod: PROD,
+  },
+  rateLimiter,
+)
+app.get('/crm', (_req, res, next) => {
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow')
+  next()
+})
+
 /**
  * An unmatched /api path is an error, not a page. The SPA catch-all below used
  * to answer it with index.html and a 200, so a client calling a typo'd or
@@ -3364,6 +3408,16 @@ app.use((err: unknown, _req: express.Request, res: express.Response, next: expre
 async function start() {
   await migrate()
   await seedVendors()
+  /* The CRM's copies of each listing's name, city and contacts, refreshed from
+     the repo's data. Failing here must not keep the site down. */
+  try {
+    const sync = await syncSnapshots()
+    if (sync.updated || sync.missing.length) {
+      console.log(`crm: refreshed ${sync.updated} of ${sync.checked} lead snapshots; ${sync.missing.length} point at a business no longer listed`)
+    }
+  } catch (err) {
+    console.error('crm: snapshot refresh failed:', String((err as Error).message ?? err).slice(0, 200))
+  }
     app.listen(PORT, async () => {
     console.log(`api + static on http://localhost:${PORT}`)
     if (!PAYMENTS_WIRED) {
