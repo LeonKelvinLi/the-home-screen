@@ -977,6 +977,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'walnut-creek-goods-15': 'b_chipcookies', //                   Cookies — their Walnut Creek store
   'dublin-goods-15': 'b_chipcookies', //                         Cookies — their Dublin store
   'beasty-individuals-16': 'b_housingauthority', //              a Richmond dance crew, on his "Yes plz"
+  'beasty-individuals-17': 'b_e40', //                           2026-09-21, "Gotta make a page for E-40"; held, not taken
   /* 2026-09-08, morning: Moxie Steak House, "Alameda • Goods". */
   'alameda-goods2-1': 'b_moxiesteakhouse', //                     no steakhouse seat, and the burgers seat is Shaka Shack's; yellow sheet
   /* 2026-09-08, evening: 7 Mile House opens Brisbane; Belly; Wow Mia Pizza. */

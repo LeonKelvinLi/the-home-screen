@@ -3196,7 +3196,11 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'lyrics-born',
-    icon: 'lyrics-born',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons", sent as "Lyrics Born". Cut from his own post ("Shades of
+       Jade", 1 of 3) to the head and shoulders. A new file name so no cache
+       keeps the old wordmark. */
+    icon: 'lyrics-born-2',
     name: 'Lyrics Born',
     label: 'Lyrics Born',
     cuisine: 'Hip-hop artist',
@@ -3259,6 +3263,40 @@ export const LOCAL_SEED: LocalSeed[] = [
     },
     contactOnly:
       'A Bay Area rapper and producer. BEASTY has not spoken to him yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    /*
+      GLENN'S ASK, 2026-09-21, 10:39 pm: "Gotta make a page for E-40. The most
+      prolific icon in the Bay Area." He sent four pictures from E-40's own
+      Instagram and then a fifth with "I like this pic actually": that one is
+      the icon, cut to the head and the jacket collar, clear of the letter at
+      the right edge of his screenshot.
+
+      HIS SITE IS e-40.com, WITH THE HYPHEN. e40.com forwards to a GoDaddy
+      domain-for-sale page and is not linked. e-40.com was registered in 1998,
+      calls itself SickWidItRecords, is written in his own voice and links his
+      Instagram, @e40, the verified account in the posts Glenn sent. It is
+      still a GoDaddy page headed "Website Under Construction", with one real
+      paragraph, and every fact on this page is from that paragraph: a
+      platinum-selling recording artist and actor from Vallejo, Earl Stevens by
+      name, "a rap veteran entrepreneur". "The most prolific icon" is Glenn's
+      line, not his, so it is not on the page.
+    */
+    slug: 'e-40',
+    icon: 'e-40',
+    name: 'E-40',
+    label: 'E-40',
+    cuisine: 'Rapper and entrepreneur',
+    tagline: 'Vallejo rapper, actor and entrepreneur.',
+    color: '#0A0A0A|#B8B8B8',
+    prep: 0,
+    category: 'Artist',
+    site: 'https://e-40.com/',
+    siteCta: 'See his site',
+    instagram: 'e40',
+    contactOnly:
+      'Earl Stevens, known as E-40: a platinum-selling recording artist, actor and entrepreneur from Vallejo, California. BEASTY has not spoken to him yet: this spot is held, not taken.',
     items: [],
   },
   {
@@ -4665,7 +4703,11 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'al-freshko',
-    icon: 'al-freshko',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons", sent as "Al Freshko" / "BEASTY • Individuals pic". His
+       street selfie, cut to the head and shoulders, the pointing hand below the
+       frame. A new file name so no cache keeps the old one. */
+    icon: 'al-freshko-2',
     name: 'Al Freshko',
     /* "There stage name under it will suffice" — his instruction, 2026-08-28. */
     label: 'Al Freshko',
@@ -4687,7 +4729,12 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'lloyd-de-vera',
-    icon: 'lloyd-de-vera',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons". He sent two, "Or maybe this one" and "You choose"; this is
+       the daylight close-up, the clearer and better-lit face, over the
+       full-length post against a brick wall. A new file name so no cache keeps
+       the old one. */
+    icon: 'lloyd-de-vera-2',
     name: 'Lloyd de Vera',
     label: 'Lloyd de Vera',
     cuisine: 'Owner and artrepreneur',
@@ -5023,7 +5070,12 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'larry-june',
-    icon: 'larry-june',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons". The picture is his own pick, sent as a DuckDuckGo image
+       link: a stage photograph on carvdnstone.com, cut to the head, with the
+       mic and most of the hand holding it out of frame. A new file name so no
+       cache keeps the old one. */
+    icon: 'larry-june-2',
     name: 'Larry June',
     label: 'Larry June',
     cuisine: 'Rapper',
@@ -5037,8 +5089,8 @@ export const LOCAL_SEED: LocalSeed[] = [
       would send people to an advert. His working web presence is Midnight
       Organic, which has its own spot on the Online sheet.
 
-      No icon: there is no first-party square photograph of him on anything he
-      controls, and using a press shot found elsewhere is not ours to do.
+      The wordmark below is only the fallback for when no icon is set; the
+      icon is the picture Glenn chose, above.
     */
     logoTemplate: 'wordmark',
     logoFace: 'condensed',
@@ -5090,7 +5142,11 @@ export const LOCAL_SEED: LocalSeed[] = [
       Instagram story ring rather than around it.
     */
     slug: 'nicky-diamonds',
-    icon: 'nicky-diamonds',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons", sent as "Nicky 💎". Cut from his own post of 20 August
+       2023, about his first Nike SB collaboration, to the face, above the
+       shoe. A new file name so no cache keeps the old bear. */
+    icon: 'nicky-diamonds-2',
     name: 'Nicky Diamonds',
     label: 'Nicky Diamonds',
     cuisine: 'Founder, Diamond Supply Co',
@@ -5152,7 +5208,11 @@ export const LOCAL_SEED: LocalSeed[] = [
       Instagram story ring rather than around it.
     */
     slug: 'show-banga',
-    icon: 'show-banga',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons", sent as "Show Banga". Cut from his post with
+       heartbreakgang (4 of 6) to the head and shoulders, below Instagram's
+       header. A new file name so no cache keeps the old one. */
+    icon: 'show-banga-2',
     name: 'Show Banga',
     label: 'Show Banga',
     cuisine: 'Rapper',
@@ -5876,7 +5936,12 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'richie-rich',
-    icon: 'richie-rich',
+    /* A headshot since 2026-09-21: Glenn's "make heads shots the standard for
+       these icons". He sent two and asked "Just headshots though right?"; this
+       is the headshot, cut above the StoneRR logo on the tee. The other is a
+       seated, full-length post. A new file name so no cache keeps the old
+       RR mark. */
+    icon: 'richie-rich-2',
     name: 'Richie Rich',
     label: 'Richie Rich',
     cuisine: 'Rapper',

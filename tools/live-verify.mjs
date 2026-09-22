@@ -288,6 +288,8 @@ for (const [id, want, expect] of [
   ['b_brasilbistro', 'Brasil Bistro', { free: true, call: '(510) 680-5192' }],
   ['b_myofrozenyogurtwalnutcreek', 'MYO Pure Frozen Yogurt', { free: true, call: '(925) 977-9111' }],
   ['b_thehubpackanimals', 'The Hub by Pack Animals', { rows: 13, quote: true, hours: 'Mon 9am-3pm', call: '(828) 482-7225' }],
+  /* 2026-09-21, 10:39 pm: "Gotta make a page for E-40." */
+  ['b_e40', 'E-40', {}],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -534,8 +536,25 @@ for (const [s, what] of [
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],
   ['icon-glow-blue', 'the Nipsey blue keyframes'],
+  /* 2026-09-21, 10:17 to 10:40 pm: headshots for seven more Individuals, and
+     E-40's page on seat 18 of the sheet. */
+  ['icon:"larry-june-2"', "Larry June's headshot"],
+  ['icon:"al-freshko-2"', "Al Freshko's headshot"],
+  ['icon:"show-banga-2"', "Show Banga's headshot"],
+  ['icon:"nicky-diamonds-2"', "Nicky Diamonds' headshot"],
+  ['icon:"lloyd-de-vera-2"', "Lloyd de Vera's headshot"],
+  ['icon:"lyrics-born-2"', "Lyrics Born's headshot"],
+  ['icon:"richie-rich-2"', "Richie Rich's headshot"],
+  ['icon:"e-40"', "E-40's headshot"],
+  ['"beasty-individuals-17":"b_e40"', 'E-40 on BEASTY • Individuals 18'],
 ]) {
   if (!bundles.includes(s)) fails.push(`${what} is not in any deployed chunk (${s})`)
+}
+/* And the files themselves: a name in the bundle with no file behind it draws
+   a broken image on the sheet. */
+for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40']) {
+  const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
+  if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }
 if (bundles.includes('"beasty-online-10":')) fails.push('Vending Enterprise still holds BEASTY • Online 11')
 
