@@ -1,0 +1,1299 @@
+[
+ {
+  "id": "b_yosushivacaville",
+  "address": "2091 Harbison Drive, Suite D, Vacaville, CA 95687",
+  "phone": "(707) 474-9320",
+  "instagram": "yosushivacaville",
+  "name_exact": "Yo Sushi & Ramen",
+  "one_line": "Sushi, ramen and Japanese plates on Harbison Drive",
+  "cuisine": "Sushi & ramen",
+  "email": null,
+  "hours": "Sun-Thu 11am-9pm; Fri-Sat 11am-9:30pm",
+  "site_kind": "own",
+  "site_url": "https://yosushivacaville.com/",
+  "prices_published": true,
+  "price_note": "prices are from the menu on their own site",
+  "flags": [
+   "Their Vallejo shop (114 Robles Way, (707) 647-1100, open 11am-9pm daily) is on their own site but not seated: Glenn named \"Vacaville • Goods\" only.",
+   "Sake, beer and wine are on their menu and left off the page, as on every other listing.",
+   "yosushivacaville.com answers a plain fetch with a Cloudflare check, so the menu was read in a real browser from their own menu page.",
+   "Multi-price items carry the lowest price as a \"from\" floor with the sizes in the description: the green salad, the signature sashimi (priced per fish, $10 to $26) and the party platters."
+  ],
+  "items": [
+   {
+    "name": "Edamame",
+    "desc": "Soy beans with salt",
+    "cents": 750,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Spicy Edamame",
+    "desc": "Chili garlic, house sauce",
+    "cents": 850,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Fried Gyoza",
+    "desc": "6 pieces. Beef & vegetable",
+    "cents": 900,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Steamed Gyoza",
+    "desc": "6 pieces. Beef & vegetable",
+    "cents": 1000,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Shrimp Tempura AP",
+    "desc": "4 pieces",
+    "cents": 1100,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Tempura AP",
+    "desc": "Shrimp (2 pieces), assorted vegetables (4 pieces): broccoli, kabocha squash, onion & sweet potatoes",
+    "cents": 1300,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Calamari Tempura",
+    "desc": null,
+    "cents": 1300,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Chicken Yakitori",
+    "desc": "3 pieces",
+    "cents": 800,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Brussel Sprouts",
+    "desc": null,
+    "cents": 1200,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Soft Shell Crab",
+    "desc": null,
+    "cents": 1350,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Fried Oysters",
+    "desc": "6 pieces",
+    "cents": 1350,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Croquette",
+    "desc": "Crispy creamy potato & vegetables",
+    "cents": 800,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Magic Balls",
+    "desc": "Deep-fried mushrooms stuffed with spicy tuna and crabmeat, drizzled with house spicy aioli and unagi sauce, furikake",
+    "cents": 1200,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Jalapeño Shooters",
+    "desc": "6 pieces. Fried jalapeños stuffed with spicy tuna, cream cheese, drizzle of house spicy aioli",
+    "cents": 1200,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Yo Nacho",
+    "desc": "4 pieces. Crispy wonton cups, crabmeat, chopped tataki tuna, onion, avocado, orange, topped with tobiko, house sauce",
+    "cents": 1300,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Takoyaki",
+    "desc": "Fried chopped octopus, vegetables & bonito flakes",
+    "cents": 900,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Korean Corn Dog",
+    "desc": "Mozzarella cheese",
+    "cents": 600,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Agedashi Tofu",
+    "desc": "6 pieces. Lightly fried tofu, bonito, seaweed & house sauce",
+    "cents": 850,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Hamachi Kama",
+    "desc": "Grilled yellowtail collar",
+    "cents": 1250,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Sake Kama",
+    "desc": "Grilled salmon collar",
+    "cents": 1100,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Korean Style Crispy Fried Chicken",
+    "desc": "3 drummettes and 3 flats, no modifications. Honey butter, soy garlic (mild, medium or spicy) or garlic",
+    "cents": 1500,
+    "label": null,
+    "section": "Appetizer"
+   },
+   {
+    "name": "Spicy Tuna Crispy Rice",
+    "desc": "5 pieces. House spicy tuna mix topped with sliced jalapenos, drizzle of spicy mayo and unagi sauce",
+    "cents": 1800,
+    "label": null,
+    "section": "Crispy Rice"
+   },
+   {
+    "name": "Spicy Salmon Crispy Rice",
+    "desc": "5 pieces. House spicy salmon mix topped with sliced jalapenos, drizzle of spicy mayo and unagi sauce",
+    "cents": 1800,
+    "label": null,
+    "section": "Crispy Rice"
+   },
+   {
+    "name": "Smashed Avocado",
+    "desc": "5 pieces. House avocado mix topped with sliced jalapenos, drizzle of spicy mayo and unagi sauce",
+    "cents": 1700,
+    "label": null,
+    "section": "Crispy Rice"
+   },
+   {
+    "name": "Green Salad",
+    "desc": "Organic mixed greens, carrots, cucumbers, cabbage. Small $4, large $8",
+    "cents": 400,
+    "label": "from",
+    "section": "Salad"
+   },
+   {
+    "name": "Wakame Salad",
+    "desc": "Japanese seaweed salad",
+    "cents": 750,
+    "label": null,
+    "section": "Salad"
+   },
+   {
+    "name": "Cucumber Sunomono",
+    "desc": "Cucumber salad, house dressing",
+    "cents": 800,
+    "label": null,
+    "section": "Salad"
+   },
+   {
+    "name": "Hawaiian Poki Salad",
+    "desc": "Tuna, onion, green onions, wakame & sesame seeds",
+    "cents": 1350,
+    "label": null,
+    "section": "Salad"
+   },
+   {
+    "name": "Ahi Tuna Salad",
+    "desc": "Seared tuna with organic mixed greens, cucumbers, tomatoes, carrots, cilantro & crispy wonton strips",
+    "cents": 1700,
+    "label": null,
+    "section": "Salad"
+   },
+   {
+    "name": "Salmon Teriyaki Salad",
+    "desc": "Salmon teriyaki with organic mixed greens, cucumbers, tomatoes, carrots & house dressing",
+    "cents": 1700,
+    "label": null,
+    "section": "Salad"
+   },
+   {
+    "name": "Bento Box A: 2 Proteins",
+    "desc": "Served with soup, rice and organic mixed greens. Choice of two: beef teriyaki, chicken teriyaki, salmon teriyaki (+$2), shrimp tempura (2 pieces), combo tempura",
+    "cents": 2000,
+    "label": null,
+    "section": "Bento Box"
+   },
+   {
+    "name": "Bento Box B: 1 Protein + 1 California Roll",
+    "desc": "Served with soup, rice and organic mixed greens. One protein and a California roll",
+    "cents": 2000,
+    "label": null,
+    "section": "Bento Box"
+   },
+   {
+    "name": "Bento Box C: 2 Proteins + 1 California Roll",
+    "desc": "Served with soup, rice and organic mixed greens. Two proteins and a California roll",
+    "cents": 2700,
+    "label": null,
+    "section": "Bento Box"
+   },
+   {
+    "name": "Chicken Teriyaki & California Roll",
+    "desc": "Every day, 11am to 3pm only",
+    "cents": 1700,
+    "label": null,
+    "section": "Lunch Special"
+   },
+   {
+    "name": "Choice of Ramen",
+    "desc": "Every day, 11am to 3pm only. Tonkatsu, miso or shoyu ramen with a four-piece sushi roll: California, spicy tuna, salmon or kappa",
+    "cents": 1950,
+    "label": null,
+    "section": "Lunch Special"
+   },
+   {
+    "name": "Signature Sashimi",
+    "desc": "5 pieces. Tuna $10, maguro $10, hamachi $11, sake $11, shiro maguro (white tuna) $11, uni $20, chu toro (bluefin fatty) $24, toro (bluefin belly) $26",
+    "cents": 1000,
+    "label": "from",
+    "section": "Signature Sashimi"
+   },
+   {
+    "name": "Salmon Crudo",
+    "desc": "6 pieces. Salmon, truffle oil, shallots, black tobiko, green onions, tomatoes, jalapeño peppers & house citrus ponzu",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Sashimi"
+   },
+   {
+    "name": "Albacore Tuna",
+    "desc": "6 pieces. White tuna, house orange and lime citrus ponzu, avocado, micro greens & green onions",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Sashimi"
+   },
+   {
+    "name": "Yellowtail Crudo",
+    "desc": "6 pieces. Yellowtail, house spicy ponzu, jalapeños, microgreens, tobiko & crispy onions",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Sashimi"
+   },
+   {
+    "name": "Tataki Tuna",
+    "desc": "6 pieces. Seared bluefin tuna, green onions, house citrus ponzu & microgreens",
+    "cents": 2500,
+    "label": null,
+    "section": "Signature Sashimi"
+   },
+   {
+    "name": "Ceviche & Chips",
+    "desc": "Assorted fish ceviche & shrimp chips",
+    "cents": 1600,
+    "label": null,
+    "section": "Signature Sashimi"
+   },
+   {
+    "name": "Ebi",
+    "desc": "Shrimp",
+    "cents": 800,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Hamachi",
+    "desc": "Yellowtail",
+    "cents": 900,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Hotate",
+    "desc": "Hokkaido scallop",
+    "cents": 800,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Ika",
+    "desc": "Squid",
+    "cents": 800,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Ikura",
+    "desc": "Salmon roe",
+    "cents": 1050,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Inari",
+    "desc": "Tofu skin filled with sushi rice",
+    "cents": 1050,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Kani",
+    "desc": "Crabmeat",
+    "cents": 800,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Maguro",
+    "desc": "Fresh bluefin tuna",
+    "cents": 850,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Saba",
+    "desc": "Vinegared mackerel",
+    "cents": 850,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Sake",
+    "desc": "Salmon",
+    "cents": 850,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Shiro Maguro",
+    "desc": "White tuna",
+    "cents": 900,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Spam Musubi",
+    "desc": null,
+    "cents": 750,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Tako",
+    "desc": "Octopus",
+    "cents": 850,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Tamago",
+    "desc": "Egg",
+    "cents": 700,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Tobiko",
+    "desc": "Flying fish roe",
+    "cents": 850,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Toro",
+    "desc": "Bluefin fatty toro",
+    "cents": 1400,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Unagi",
+    "desc": "Fresh water eel",
+    "cents": 900,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Uni",
+    "desc": "Sea urchin. Please ask for availability",
+    "cents": 2000,
+    "label": null,
+    "section": "Nigiri (2 pieces)"
+   },
+   {
+    "name": "Beef Teriyaki",
+    "desc": "Beef and asparagus with unagi sauce",
+    "cents": 1350,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "California",
+    "desc": "Crabmeat, avocado & sesame seeds",
+    "cents": 850,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Crown California",
+    "desc": "Fried California roll topped with crabmeat, tobiko & unagi sauce",
+    "cents": 1400,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Deluxe California",
+    "desc": "California roll topped with crabmeat, crunchy tempura flakes & unagi sauce",
+    "cents": 1550,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Super California",
+    "desc": "California roll topped with unagi & unagi sauce",
+    "cents": 1450,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Crunchy",
+    "desc": "Ebi, crabmeat, cucumber, crunchy tempura flakes, unagi sauce & house spicy sauce",
+    "cents": 1350,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Deluxe Spicy Tuna",
+    "desc": "Spicy tuna & cucumber topped with crabmeat, tempura crunchies & unagi sauce",
+    "cents": 1550,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Dragon",
+    "desc": "Shrimp tempura and cucumber inside, topped with unagi, avocado & unagi sauce",
+    "cents": 1700,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Godzilla",
+    "desc": "Tempura shrimp, cucumber, spicy tuna, cream cheese, avocado & unagi sauce",
+    "cents": 1650,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Negihama",
+    "desc": "Yellowtail & green onion",
+    "cents": 1000,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Philadelphia",
+    "desc": "Salmon, cream cheese, avocado & cucumber",
+    "cents": 1450,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Salmon",
+    "desc": "Salmon",
+    "cents": 950,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spicy Garlic Salmon",
+    "desc": "Salmon and cucumber roll topped with tobiko and house spicy garlic sauce",
+    "cents": 1300,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spicy Tuna",
+    "desc": "Spicy tuna & cucumber",
+    "cents": 1250,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Spider",
+    "desc": "Soft shell crab, avocado, cucumber & unagi sauce",
+    "cents": 1600,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Shrimp Tempura Roll",
+    "desc": "Shrimp tempura, avocado, cucumber & a drizzle of house unagi sauce",
+    "cents": 1350,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Rainbow",
+    "desc": "California roll topped with the chef's selection of assorted fish",
+    "cents": 1650,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Tempura Rainbow",
+    "desc": "Shrimp tempura, cucumber, topped with crabmeat, an assortment of fish, tobiko & house unagi sauce",
+    "cents": 1750,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Tekka",
+    "desc": "Tuna",
+    "cents": 1100,
+    "label": null,
+    "section": "Classic Rolls"
+   },
+   {
+    "name": "Air Force",
+    "desc": "Deep fried. Fried yellowtail roll topped with unagi, avocado, tobiko & house unagi sauce",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Awesome",
+    "desc": "Shrimp tempura, crabmeat, cucumber, topped with unagi, avocado, ebi, house spicy & special sauce",
+    "cents": 1750,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Bulldog",
+    "desc": "Torched hamachi, crabmeat, cucumber, topped with tuna, thinly sliced jalapenos, green onions with spicy unagi & spicy mayo",
+    "cents": 1650,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Crazy Horse",
+    "desc": "Tuna, salmon, ebi, avocado & cucumber",
+    "cents": 1500,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Crazy Monkey",
+    "desc": "Salmon, yellowtail, unagi, cucumber, tobiko & unagi sauce",
+    "cents": 1750,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Crab Mania",
+    "desc": "Shrimp tempura, crabmeat, cucumber topped with torched crab, drizzle of house spicy mayo & unagi sauce",
+    "cents": 1650,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Dilly Salmon",
+    "desc": "Tuna with yellow onion roll, topped with salmon, garlic salt, parsley, dill blend, lemon juice & tobiko",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Fairfield",
+    "desc": "Cucumber roll wrapped with rice, crabmeat, unagi, tobiko & house unagi sauce",
+    "cents": 1500,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Fantasy",
+    "desc": "Deep fried. Fried California roll topped with green onions & house special sauce",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Fire Cracker",
+    "desc": "Shrimp tempura, avocado, cucumber, cream cheese, topped with spicy tuna, jalapeño, green onion, taki crunchies, house spicy unagi sauce & spicy mayo",
+    "cents": 1450,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Fiona",
+    "desc": "Avocado, shrimp tempura and spicy tuna with soybean paper, topped with tobiko",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Golden Gate",
+    "desc": "California roll topped with tuna, crabmeat & tobiko",
+    "cents": 1750,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Hot Mama",
+    "desc": "Shrimp tempura, spicy tuna, topped with torched white tuna, tobiko, green onion & house special sauce",
+    "cents": 1800,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Island",
+    "desc": "Shrimp tempura, cucumber, topped with salmon, avocado, lemons & house special island sauce",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Lambada",
+    "desc": "Bluefin tuna, salmon, topped with avocado & house special sauce",
+    "cents": 1500,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Lemon Salmon",
+    "desc": "California roll topped with salmon & lemons",
+    "cents": 1500,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Lovers Paradise",
+    "desc": "Tempura lobster and crab rolled in soy wrap, topped with avocado, torched white tuna and tempura crunch, finished with creamy sauce, spicy mayo and unagi sauce",
+    "cents": 2100,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Mi Amor",
+    "desc": "Panko shrimp and spicy tuna topped with avocado, tuna and unagi, finished with tempura crunch, green onion, spicy mayo, unagi sauce and sriracha",
+    "cents": 1800,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Napa",
+    "desc": "Avocado roll topped with salmon",
+    "cents": 1500,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "North Texas",
+    "desc": "Soft shell crab, crabmeat, cucumber, topped with unagi, avocado, tobiko & house unagi sauce",
+    "cents": 1600,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Nut Tree",
+    "desc": "Spicy tuna, panko shrimp, unagi, avocado, tobiko, topped with crushed macadamia nuts, wasabi mayo & house spicy unagi sauce",
+    "cents": 1575,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "O.M.G",
+    "desc": "California roll topped with spicy tuna and fried unagi with house spicy mayo & unagi sauce",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Shrek",
+    "desc": "Gyoza, cucumber and grilled onions, topped with avocado, spicy mayo, unagi sauce & spicy sauce",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Solano",
+    "desc": "Salmon, avocado, topped with torched crabmeat, furikake, house spicy unagi & spicy mayo",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Three Amigo",
+    "desc": "California roll topped with bluefin tuna, salmon & yellowtail",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Titanic",
+    "desc": "Shrimp tempura, cucumber, topped with half bluefin tuna, half salmon, crabmeat, tobiko & house unagi sauce",
+    "cents": 1650,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Torched Salmon",
+    "desc": "Panko shrimp and spicy tuna topped with avocado and torched salmon, finished with tempura crunch, green onion, spicy mayo, unagi sauce and sriracha",
+    "cents": 1750,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Travis",
+    "desc": "Shrimp tempura, crabmeat, cucumber, topped with avocado, unagi & house special sauce",
+    "cents": 1700,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "USA",
+    "desc": "Unagi and cucumber roll topped with avocado, salmon & unagi sauce",
+    "cents": 1550,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Vallejo",
+    "desc": "Shrimp tempura & cucumber, topped with izumidai, spicy tuna, avocado, jalapeño & spicy unagi sauce",
+    "cents": 1750,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Vacaville",
+    "desc": "Fried panko lobster, avocado and house tuna mix roll, topped with torched salmon, house cream sauce, green onion and unagi sauce",
+    "cents": 2450,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Wild Cat",
+    "desc": "Spicy tuna, avocado & cucumber, topped with albacore tuna and thinly sliced jalapeños, finished with a soy sauce and wasabi glaze",
+    "cents": 1400,
+    "label": null,
+    "section": "Signature Rolls"
+   },
+   {
+    "name": "Angry Lion King",
+    "desc": "California roll topped with salmon, crabmeat, tobiko, house special sauce & unagi sauce",
+    "cents": 1850,
+    "label": null,
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Japanese Lasagna",
+    "desc": "California roll, cream cheese & house special sauce",
+    "cents": 1600,
+    "label": null,
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Lion King",
+    "desc": "California roll topped with salmon, tobiko, house unagi & special sauce",
+    "cents": 1800,
+    "label": null,
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Lion Prince",
+    "desc": "Spicy tuna roll topped with salmon, crabmeat, tobiko, green onion & house spicy sauce",
+    "cents": 1900,
+    "label": null,
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Mafia",
+    "desc": "Shredded lobster and avocado topped with salmon, panko crunch & house cream sauce",
+    "cents": 2200,
+    "label": null,
+    "section": "Baked Rolls"
+   },
+   {
+    "name": "Asparagus",
+    "desc": null,
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Avocado",
+    "desc": null,
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Broccoli",
+    "desc": null,
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Gobo",
+    "desc": "Burdock root",
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Kanpyo",
+    "desc": "Dried shavings of calabash",
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Kappa",
+    "desc": "Cucumber",
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Shitake",
+    "desc": null,
+    "cents": 550,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Futo Maki",
+    "desc": "Assorted veggie roll with cucumber, gobo, kanpyo and tamago",
+    "cents": 1300,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Assorted Vegetables",
+    "desc": "With avocado, cucumber and kanpyo",
+    "cents": 850,
+    "label": null,
+    "section": "Vegetable Rolls"
+   },
+   {
+    "name": "Tuna & Salmon Sashimi",
+    "desc": "Tuna (8 pieces) & salmon (8 pieces) with soup & rice",
+    "cents": 2700,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Yo Sashimi",
+    "desc": "16 pieces. Tuna, salmon, hamachi & white tuna",
+    "cents": 2800,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Chef's Omakase",
+    "desc": "Chef's choice, 24 assorted pieces with soup & rice",
+    "cents": 4000,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Sushi Special",
+    "desc": "California roll & 5 pieces of nigiri: tuna, salmon, tamago, ebi, unagi, with soup",
+    "cents": 2300,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Deluxe Sushi Special",
+    "desc": "Spicy tuna roll & 7 pieces of nigiri: tuna, salmon, hamachi, ebi, unagi, white tuna & tako, with soup",
+    "cents": 2500,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Yo Nigiri",
+    "desc": "9 pieces. Tuna, salmon, white tuna, hamachi, ika, unagi, tamago, tobiko, ebi, with soup",
+    "cents": 2250,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Trio",
+    "desc": "California roll, 5 pieces of nigiri and 5 pieces of sashimi, with soup",
+    "cents": 2500,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Nigiri & Sashimi",
+    "desc": "7 pieces of nigiri and 8 pieces of sashimi, with soup & organic mixed green salad",
+    "cents": 2800,
+    "label": null,
+    "section": "Sashimi & Sushi Entrees"
+   },
+   {
+    "name": "Shrimp Tempura",
+    "desc": "4 pieces",
+    "cents": 1500,
+    "label": null,
+    "section": "Tempura Entrees"
+   },
+   {
+    "name": "Combo Tempura",
+    "desc": "Shrimp (2 pieces) and vegetables (7 pieces): green bean, broccoli, kabocha squash, onion, sweet potatoes, bell pepper, carrot, with rice",
+    "cents": 1600,
+    "label": null,
+    "section": "Tempura Entrees"
+   },
+   {
+    "name": "Vegetable Tempura",
+    "desc": "Assorted vegetables (7 pieces): green bean, broccoli, squash, sweet potato, bell pepper, onion, carrot",
+    "cents": 1400,
+    "label": null,
+    "section": "Tempura Entrees"
+   },
+   {
+    "name": "Seafood Tempura",
+    "desc": "Assorted crispy seafood: shrimp, oysters, scallops, calamari, pollock, with rice",
+    "cents": 1700,
+    "label": null,
+    "section": "Tempura Entrees"
+   },
+   {
+    "name": "Chicken Katsu",
+    "desc": "Crispy chicken cutlet",
+    "cents": 1600,
+    "label": null,
+    "section": "Katsu and Curry"
+   },
+   {
+    "name": "Tonkatsu",
+    "desc": "Crispy pork cutlet",
+    "cents": 1600,
+    "label": null,
+    "section": "Katsu and Curry"
+   },
+   {
+    "name": "Curry Rice Bowl",
+    "desc": "Creamy golden Japanese curry with carrots, potatoes and onions, served with rice or udon noodles",
+    "cents": 1400,
+    "label": null,
+    "section": "Katsu and Curry"
+   },
+   {
+    "name": "Katsu Curry",
+    "desc": "Japanese curry served with rice or udon noodles. Choice of chicken katsu, tonkatsu or shrimp",
+    "cents": 2000,
+    "label": null,
+    "section": "Katsu and Curry"
+   },
+   {
+    "name": "Chicken Teriyaki",
+    "desc": null,
+    "cents": 1500,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Beef Teriyaki",
+    "desc": null,
+    "cents": 1700,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Salmon Teriyaki",
+    "desc": null,
+    "cents": 1600,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "3 Way Combo Teriyaki Bowl",
+    "desc": "Beef, chicken & shrimp tempura (2 pieces)",
+    "cents": 1700,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Shrimp Tempura Teriyaki",
+    "desc": null,
+    "cents": 1500,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Unagi Donburi",
+    "desc": "Grilled unagi over rice topped with seaweed flakes & sesame seeds (5 pieces), with miso soup",
+    "cents": 1850,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Chirashi",
+    "desc": "Sashimi assortment over sushi rice with miso soup & green salad",
+    "cents": 2600,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Tekka or Sake Donburi",
+    "desc": "Tuna or salmon sashimi over sushi rice with miso soup & green salad",
+    "cents": 2600,
+    "label": null,
+    "section": "Donburi and Rice Bowls"
+   },
+   {
+    "name": "Tonkotsu Ramen",
+    "desc": "Garnished with egg, chashu, bamboo shoots, bean sprouts, corn, green onions, kikurage mushroom and seaweed. Their broth is made with pork and chicken paitan",
+    "cents": 1650,
+    "label": null,
+    "section": "Ramen"
+   },
+   {
+    "name": "Black Garlic",
+    "desc": "Their signature tonkotsu broth with black garlic sesame oil, garnished with egg, chashu, bamboo shoots, bean sprouts, corn, green onions, kikurage mushroom and seaweed",
+    "cents": 1700,
+    "label": null,
+    "section": "Ramen"
+   },
+   {
+    "name": "Miso",
+    "desc": "Miso, pork and chicken paitan broth, garnished with egg, chashu, bamboo shoots, bean sprouts, corn, green onions, kikurage mushroom and seaweed",
+    "cents": 1650,
+    "label": null,
+    "section": "Ramen"
+   },
+   {
+    "name": "Shoyu",
+    "desc": "Creamy shoyu broth made with pork and chicken paitan, garnished with egg, chashu, bamboo shoots, bean sprouts, corn, green onions, kikurage mushroom and seaweed",
+    "cents": 1550,
+    "label": null,
+    "section": "Ramen"
+   },
+   {
+    "name": "Chicken",
+    "desc": "Chicken broth enhanced with miso paste, garnished with egg, grilled chicken, bamboo shoots, bean sprouts, corn, green onions, kikurage mushroom and seaweed",
+    "cents": 1650,
+    "label": null,
+    "section": "Ramen"
+   },
+   {
+    "name": "Vegetarian",
+    "desc": "Vegetable stock enhanced with miso paste, garnished with egg, tofu, bamboo shoots, bean sprouts, corn, green onions, kikurage mushroom and seaweed",
+    "cents": 1500,
+    "label": null,
+    "section": "Ramen"
+   },
+   {
+    "name": "Classic Udon",
+    "desc": "Fish cake, onion, mushroom, seaweed & tofu skin",
+    "cents": 1200,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Chicken Udon",
+    "desc": "Chicken, fish cake, onion, mushroom, seaweed & tofu skin",
+    "cents": 1550,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Tempura Udon",
+    "desc": "Shrimp tempura (1 piece) & assorted vegetable tempura (4 pieces)",
+    "cents": 1800,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Seafood Udon",
+    "desc": "Bay scallops, oysters, clams, calamari, tilapia, baby shrimp, fish cake, fried tofu, mussels, mushrooms & seaweed",
+    "cents": 1700,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Tofu Udon",
+    "desc": "Tofu, fish cake, onion, mushroom, seaweed & tofu skin",
+    "cents": 1300,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Vegetable Udon",
+    "desc": "Broccoli, zucchini, mushroom, carrot, bell pepper, green onions, bean sprouts",
+    "cents": 1500,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Wakame Udon",
+    "desc": "Seaweed, tofu skin, fish cake, onion, mushroom & seaweed",
+    "cents": 1400,
+    "label": null,
+    "section": "Udon"
+   },
+   {
+    "name": "Chicken Teriyaki Bowl",
+    "desc": null,
+    "cents": 1200,
+    "label": null,
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Kodomo Udon",
+    "desc": "Original udon with crispy tofu skin and fish cake",
+    "cents": 1200,
+    "label": null,
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Kid's Bento Box",
+    "desc": "Choice of two: chicken teriyaki, gyoza (2 pieces), tamago, shrimp tempura, spam or California roll (4 pieces)",
+    "cents": 1200,
+    "label": null,
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Kid's Roll",
+    "desc": "Avocado roll (4 pieces), tamago roll (4 pieces), miso soup",
+    "cents": 1300,
+    "label": null,
+    "section": "Kids Menu"
+   },
+   {
+    "name": "Pepsi",
+    "desc": null,
+    "cents": 295,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Diet Pepsi",
+    "desc": null,
+    "cents": 295,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Dr. Pepper",
+    "desc": null,
+    "cents": 295,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Root Beer",
+    "desc": null,
+    "cents": 295,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Starry",
+    "desc": null,
+    "cents": 295,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Ramune",
+    "desc": "Original, lychee, strawberry or orange",
+    "cents": 395,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Calpico",
+    "desc": "Lychee, mango, melon or white peach",
+    "cents": 490,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Pure Leaf Tea",
+    "desc": "Sweet or unsweetened",
+    "cents": 350,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Ocha Green Tea",
+    "desc": null,
+    "cents": 350,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Banana Flavored Milk",
+    "desc": null,
+    "cents": 300,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Sparkling Water",
+    "desc": null,
+    "cents": 350,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Hot Tea",
+    "desc": null,
+    "cents": 350,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Cream Soda",
+    "desc": "Melon or mango",
+    "cents": 500,
+    "label": null,
+    "section": "Drinks"
+   },
+   {
+    "name": "Chef's Omakase Roll Party Platter",
+    "desc": "Small $90, large $150",
+    "cents": 9000,
+    "label": "from",
+    "section": "Party Trays"
+   },
+   {
+    "name": "Chef's Omakase Sashimi Party Platter",
+    "desc": "Small $90, large $150",
+    "cents": 9000,
+    "label": "from",
+    "section": "Party Trays"
+   },
+   {
+    "name": "Chef's Omakase Nigiri Party Platter",
+    "desc": "Small $110, large $180",
+    "cents": 11000,
+    "label": "from",
+    "section": "Party Trays"
+   },
+   {
+    "name": "Tempura Party Platter",
+    "desc": null,
+    "cents": 12000,
+    "label": null,
+    "section": "Party Trays"
+   }
+  ]
+ }
+]

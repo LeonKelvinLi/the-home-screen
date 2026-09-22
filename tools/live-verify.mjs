@@ -292,6 +292,8 @@ for (const [id, want, expect] of [
   ['b_e40', 'E-40', {}],
   /* 2026-09-21, 10:43 pm: "Grando1k", straight after E-40. */
   ['b_grando', 'Grand-O', {}],
+  /* 2026-09-22, 4:35 am: Yo Sushi & Ramen, "Vacaville • Goods". */
+  ['b_yosushivacaville', 'Yo Sushi & Ramen', { rows: 182, hours: 'Sun-Thu 11am-9pm', call: '(707) 474-9320' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -556,12 +558,15 @@ for (const [s, what] of [
   ['icon:"grand-o"', "Grand-O's headshot"],
   ['"beasty-individuals-18":"b_grando"', 'Grand-O on BEASTY • Individuals 19'],
   ['BEASTY has not spoken to Grand-O yet', "Grand-O's page naming Grand-O rather than guessing a pronoun"],
+  /* 2026-09-22: Glenn's revised bio for Lloyd, and Yo Sushi's seat. */
+  ['Art is Life', "Lloyd's revised bio and its last line"],
+  ['"vacaville-goods-4":"b_yosushivacaville"', 'Yo Sushi on Vacaville Goods 5'],
 ]) {
   if (!bundles.includes(s)) fails.push(`${what} is not in any deployed chunk (${s})`)
 }
 /* And the files themselves: a name in the bundle with no file behind it draws
    a broken image on the sheet. */
-for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40', 'beastmode-2', 'crayone', 'grand-o']) {
+for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40', 'beastmode-2', 'crayone', 'grand-o', 'yo-sushi-vacaville']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

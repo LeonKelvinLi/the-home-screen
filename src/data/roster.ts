@@ -3389,6 +3389,16 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.thehubpack.com/',
     siteCta: 'See their plans',
   }),
+  /* Yo Sushi & Ramen, "Vacaville • Goods", 2026-09-22: Vacaville's open Sushi
+     seat with the whole menu from their own site. A plain fetch of that site
+     gets a Cloudflare check, so it was read in a real browser. Their Vallejo
+     shop is on the same site and is not seated: he named Vacaville. */
+  seed('yo-sushi-vacaville', 'Yo Sushi & Ramen', 'Yo Sushi', 'Sushi & ramen', '#2FA6D9', {
+    icon: 'yo-sushi-vacaville',
+    logoTemplate: 'wordmark', logoLines: ['YO', 'SUSHI'], logoFace: 'grotesk',
+    site: 'https://yosushivacaville.com/',
+    siteCta: 'See their menu',
+  }),
 ]
 
 /**

@@ -349,6 +349,7 @@ export const ICON_LUMA: Record<string, number> = {
   'winter-white-carwash': 0.7869,
   'wow-mia-pizza': 0.8186,
   'yes-moment': 0.9103,
+  'yo-sushi-vacaville': 0.8604,
   'yogasix-brentwood': 0.5545,
   'yummy-yummy-hibachi': 0.3465,
   'z-and-y-peking-duck': 0.8209,

@@ -979,6 +979,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-individuals-16': 'b_housingauthority', //              a Richmond dance crew, on his "Yes plz"
   'beasty-individuals-17': 'b_e40', //                           2026-09-21, "Gotta make a page for E-40"; held, not taken
   'beasty-individuals-18': 'b_grando', //                        2026-09-21, "Grando1k" straight after E-40; held, not taken
+  /* 2026-09-22, 4:35 am: Yo Sushi & Ramen, "Vacaville • Goods". */
+  'vacaville-goods-4': 'b_yosushivacaville', //                  Sushi
   /* 2026-09-08, morning: Moxie Steak House, "Alameda • Goods". */
   'alameda-goods2-1': 'b_moxiesteakhouse', //                     no steakhouse seat, and the burgers seat is Shaka Shack's; yellow sheet
   /* 2026-09-08, evening: 7 Mile House opens Brisbane; Belly; Wow Mia Pizza. */

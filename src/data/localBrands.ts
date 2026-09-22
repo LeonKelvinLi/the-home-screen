@@ -4769,17 +4769,25 @@ export const LOCAL_SEED: LocalSeed[] = [
     name: 'Lloyd de Vera',
     label: 'Lloyd de Vera',
     cuisine: 'Owner and artrepreneur',
-    tagline: 'Artrepreneur, and the owner of Quickly Benicia.',
+    /*
+      GLENN'S REVISION, 2026-09-22, 7:29 am: "Please revise Lloyd. We will have
+      a BEASTY Collab with him soon enough", with a note he wrote at 5:41 am.
+      The text below is his, in his order, with three spelling fixes —
+      "breaths" to "breathes", "hand painted" to "hand-painted" and "T-Shirts"
+      to "T-shirts" — and his bold last line as the tagline. Because a Collab
+      is coming, the line saying BEASTY had not spoken to him is gone; "this
+      spot is held, not taken" stays, because he has not claimed it yet.
+    */
+    tagline: 'Art is Life — He Lives it.',
     color: '#1A1A1A|#E4B23C',
     prep: 0,
     category: 'Artrepreneur',
     site: 'https://quicklybenicia.com/',
     siteCta: 'See Quickly Benicia',
     /* Quickly Benicia already has its own seat on the Benicia page; this is the
-       person who owns it, on the sheet meant for people. His own words for
-       himself are "artrepreneur" and "all pride, no apology". */
+       person who owns it, on the sheet meant for people. */
     contactOnly:
-      'An artist and owner who calls himself an artrepreneur, behind Quickly Benicia on Southampton Road. The shop has its own spot on the app; this is the person. BEASTY has not spoken to him: this spot is held, not taken.',
+      'An artist and owner who calls himself an artrepreneur, behind Quickly Benicia on Southampton Road. Creative director and owner of Henny & Lumpia, renowned for his collectible Filthy Drip\'d hand-painted T-shirts. Co-owned the infamous Thizz Clothing until parting ways a few years back. He eats, breathes and lives Art day to day. This spot is held, not taken.',
     items: [],
   },
   {
