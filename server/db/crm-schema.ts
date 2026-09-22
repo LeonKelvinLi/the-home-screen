@@ -130,6 +130,12 @@ CREATE INDEX IF NOT EXISTS idx_crm_opp_won ON crm_opportunities(won_at) WHERE wo
    default is marked, so the real first referrer can still replace it once
    without an override. Additive, and FALSE for every row that existed. */
 ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS referral_default BOOLEAN NOT NULL DEFAULT FALSE;
+-- Contact details found while working the lead. The phone/email/instagram
+-- columns above are refreshed from the listing at every boot, so what the team
+-- finds lives here and only ever fills a gap the listing leaves.
+ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS found_phone TEXT;
+ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS found_email TEXT;
+ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS found_instagram TEXT;
 
 CREATE TABLE IF NOT EXISTS crm_stage_history (
   id             TEXT PRIMARY KEY,

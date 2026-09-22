@@ -76,6 +76,10 @@ export interface OppRow {
   backfill_run_id: string | null
   /** Referred by Glenn only because nobody else was recorded: replaceable once. */
   referral_default: boolean
+  /** Contacts the team found; they fill gaps in the listing's, never replace them. */
+  found_phone: string | null
+  found_email: string | null
+  found_instagram: string | null
   created_at: number
   updated_at: number
   created_by: string
@@ -155,8 +159,23 @@ export function searchTextOf(o: {
   instagram?: string | null
   contact_name?: string | null
   referrer_name?: string | null
+  found_phone?: string | null
+  found_email?: string | null
+  found_instagram?: string | null
 }): string {
-  return [o.business_name, o.city, o.category, o.phone, o.email, o.instagram ? `@${o.instagram}` : '', o.contact_name, o.referrer_name]
+  return [
+    o.business_name,
+    o.city,
+    o.category,
+    o.phone,
+    o.email,
+    o.instagram ? `@${o.instagram}` : '',
+    o.found_phone,
+    o.found_email,
+    o.found_instagram ? `@${o.found_instagram}` : '',
+    o.contact_name,
+    o.referrer_name,
+  ]
     .filter(Boolean)
     .join(' | ')
     .toLowerCase()
@@ -378,6 +397,52 @@ async function changeStageInTx(oppId: string, to: string, actor: string, note?: 
 }
 
 export const changeStage = db.transaction(changeStageInTx)
+
+export interface FoundContact {
+  phone?: string | null
+  email?: string | null
+  instagram?: string | null
+}
+
+/**
+ * Save a phone, email or Instagram the team found for a lead. The listing is
+ * never written: these fill the gaps it leaves. A lead that was waiting for
+ * contact details moves on to Ready to contact, and the history says why.
+ * An empty value clears what was found; a value that is not a real phone,
+ * email or handle is refused rather than stored.
+ */
+export const setFoundContact = db.transaction(async (oppId: string, found: FoundContact, actor: string) => {
+  const o = await db.prepare('SELECT * FROM crm_opportunities WHERE id = ? FOR UPDATE').get<OppRow>(oppId)
+  if (!o) throw new CrmError(404, 'No such lead.')
+  const sets: string[] = []
+  const args: unknown[] = []
+  const saved: Record<string, string | null> = {}
+  const take = (key: keyof FoundContact, norm: (v: string) => string, what: string) => {
+    if (!(key in found)) return
+    const raw = String(found[key] ?? '').trim()
+    const v = raw ? norm(raw) : ''
+    if (raw && !v) throw new CrmError(400, `That does not look like ${what}.`)
+    sets.push(`found_${key} = ?`)
+    args.push(v || null)
+    saved[key] = v || null
+  }
+  take('phone', normPhone, 'a phone number')
+  take('email', normEmail, 'an email address')
+  take('instagram', normInstagram, 'an Instagram handle')
+  if (!sets.length) return { changed: false, movedTo: null as string | null }
+  const t = now()
+  await db.prepare(`UPDATE crm_opportunities SET ${sets.join(', ')}, updated_at = ? WHERE id = ?`).run(...args, t, oppId)
+  const added = Object.entries(saved).filter(([, v]) => v).map(([k]) => (k === 'instagram' ? 'Instagram' : k))
+  await addActivity(oppId, 'SYSTEM', actor, added.length ? `Contact details found: ${added.join(', ')}` : 'Found contact details cleared', saved, t)
+  const next = { ...o, ...Object.fromEntries(Object.entries(saved).map(([k, v]) => [`found_${k}`, v])) } as OppRow
+  const reachable = !!(next.phone || next.found_phone || next.email || next.found_email || next.instagram || next.found_instagram)
+  let movedTo: string | null = null
+  if (reachable && (o.stage === 'need_contact_info' || o.stage === 'new_lead')) {
+    await changeStageInTx(oppId, 'ready_to_contact', actor, 'Contact details found')
+    movedTo = 'ready_to_contact'
+  }
+  return { changed: true, movedTo }
+})
 
 /** Assign (or unassign) the person who works the lead. Never touches the referrer. */
 export const setAssignee = db.transaction(async (oppId: string, personId: string | null, actor: string) => {

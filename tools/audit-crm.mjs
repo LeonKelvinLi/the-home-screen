@@ -182,6 +182,25 @@ const emails = await call('GET', '/api/crm/leads?hasEmail=1&limit=200', { j: adm
 check('the has-email filter only returns leads with an email', emails.body.total > 0 && emails.body.leads.every((l) => l.channels.email))
 const missing = await call('GET', '/api/crm/leads?attention=missing_contact&limit=200', { j: admin })
 check('missing contact means no phone, email or Instagram', missing.body.leads.every((l) => !l.channels.phone && !l.channels.email && !l.channels.instagram))
+
+/* ---- contact details the team finds ---- */
+const lost = missing.body.leads.find((l) => l.stage === 'need_contact_info')
+const missingBefore = missing.body.total
+const foundRes = await call('PATCH', `/api/crm/leads/${lost.id}`, { body: { phone: '(510) 555-0142' }, j: admin })
+check('a phone the team found is saved on the lead', foundRes.status === 200 && foundRes.body.lead.channels.phone === '5105550142' && foundRes.body.lead.found.phone === '5105550142', `${foundRes.status} ${lost.name}`)
+check('and a lead that was waiting for contact details moves on to Ready to contact', foundRes.body.lead.stage === 'ready_to_contact' && foundRes.body.history.at(-1)?.note === 'Contact details found')
+check('the find is in its timeline', foundRes.body.activities.some((a) => a.type === 'SYSTEM' && /Contact details found: phone/.test(a.body ?? '')))
+const missingAfter = await call('GET', '/api/crm/leads?attention=missing_contact&limit=1', { j: admin })
+check('it leaves the missing-contact list', missingAfter.body.total === missingBefore - 1, `${missingBefore} → ${missingAfter.body.total}`)
+check('the has-phone filter and search both see the found number', (await call('GET', '/api/crm/leads?hasPhone=1&limit=500', { j: admin })).body.leads.some((l) => l.id === lost.id) && (await call('GET', '/api/crm/leads?q=5550142', { j: admin })).body.leads.some((l) => l.id === lost.id))
+const badPhone = await call('PATCH', `/api/crm/leads/${lost.id}`, { body: { phone: 'call me maybe' }, j: admin })
+check('something that is not a phone number is refused, not stored', badPhone.status === 400)
+{
+  const { execFileSync } = await import('node:child_process')
+  execFileSync('npx', ['tsx', '-e', "import { syncSnapshots } from './server/crm/backfill'; syncSnapshots().then(() => process.exit(0), (e) => { console.error(e); process.exit(1) })"], { encoding: 'utf8', env: { ...process.env, DATABASE_URL: TESTDB.url } })
+  const kept = await call('GET', `/api/crm/leads/${lost.id}`, { j: admin })
+  check('the listing refresh that runs at every boot leaves a found number alone', kept.body.lead.channels.phone === '5105550142' && kept.body.lead.found.phone === '5105550142')
+}
 const wonList = await call('GET', '/api/crm/leads?stage=won', { j: admin })
 check('the stage filter works', wonList.body.leads.some((l) => l.id === jazz.id))
 const gs = await call('GET', '/api/crm/search?q=janelle', { j: admin })

@@ -58,6 +58,8 @@ export interface LeadSummary {
   websiteStatus: string | null
   freeListing: boolean
   channels: Channels
+  /** The person who runs the business, when someone has written it down. */
+  contactName: string | null
   stage: string
   stageChangedAt: number
   opportunityType: string

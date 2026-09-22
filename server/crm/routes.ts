@@ -39,6 +39,7 @@ import {
   refreshSearchText,
   setAssignee,
   setClosedBy,
+  setFoundContact,
   setRecurring,
   setReferral,
   addActivity,
@@ -391,6 +392,12 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
       const b = req.body
       const o = await getOpp(id)
       const who = req.crm!
+      if ('phone' in b || 'email' in b || 'instagram' in b) {
+        const pick = (k: string) => (k in b ? (b[k] == null ? '' : String(b[k]).slice(0, 200)) : undefined)
+        const found = Object.fromEntries((['phone', 'email', 'instagram'] as const).filter((k) => k in b).map((k) => [k, pick(k)]))
+        await setFoundContact(id, found, who.actor)
+        await refreshSearchText(id)
+      }
       if ('assignedTo' in b) await setAssignee(id, optStr(b.assignedTo, 60), who.actor)
       if ('closedBy' in b) await setClosedBy(id, optStr(b.closedBy, 60), who.actor)
       const sets: string[] = []

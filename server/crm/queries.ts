@@ -119,12 +119,12 @@ function whereFor(f: LeadFilters, t: number): { sql: string; args: unknown[] } {
     a.push(f.since)
   }
   for (const [col, v] of [
-    ['o.phone', f.hasPhone],
-    ['o.email', f.hasEmail],
-    ['o.instagram', f.hasInstagram],
+    [reach('phone'), f.hasPhone],
+    [reach('email'), f.hasEmail],
+    [reach('instagram'), f.hasInstagram],
   ] as const) {
-    if (v === true) w.push(`COALESCE(${col}, '') <> ''`)
-    if (v === false) w.push(`COALESCE(${col}, '') = ''`)
+    if (v === true) w.push(`${col} <> ''`)
+    if (v === false) w.push(`${col} = ''`)
   }
   if (f.overdue) {
     w.push('o.next_followup_at < ?')
@@ -149,7 +149,7 @@ function whereFor(f: LeadFilters, t: number): { sql: string; args: unknown[] } {
       a.push(t - 5 * DAY_MS)
       break
     case 'missing_contact':
-      w.push(`o.stage IN ${OPEN} AND COALESCE(o.phone,'') = '' AND COALESCE(o.email,'') = '' AND COALESCE(o.instagram,'') = ''`)
+      w.push(`o.stage IN ${OPEN} AND ${reach('phone')} = '' AND ${reach('email')} = '' AND ${reach('instagram')} = ''`)
       break
     case 'no_next_action':
       w.push(`o.stage IN ${OPEN} AND o.next_followup_at IS NULL`)
@@ -167,6 +167,22 @@ const ORDER: Record<string, string> = {
   stage: `(CASE o.stage ${STAGES.map((s, i) => `WHEN '${s.key}' THEN ${i}`).join(' ')} END) ASC, o.updated_at DESC`,
 }
 
+/**
+ * A way to reach the business in SQL: the listing's (or the prospect's own)
+ * value, else what the team found. `alias` is the table's alias, if any.
+ */
+const reach = (col: 'phone' | 'email' | 'instagram', alias = 'o.') => `COALESCE(NULLIF(${alias}${col},''), ${alias}found_${col}, '')`
+
+/** The listing's contacts, with anything the team found filling the gaps. */
+const withFound = (
+  base: { phone: string; email: string; instagram: string },
+  r: { found_phone?: string | null; found_email?: string | null; found_instagram?: string | null },
+) => ({
+  phone: base.phone || r.found_phone || '',
+  email: base.email || r.found_email || '',
+  instagram: base.instagram || r.found_instagram || '',
+})
+
 /** One row of a list: the listing's live details where there is a listing. */
 export function summarize(o: LeadRow) {
   const biz = businessById(o.brand_id)
@@ -181,7 +197,9 @@ export function summarize(o: LeadRow) {
     category: biz?.category ?? o.category,
     websiteStatus: biz?.websiteStatus ?? o.website_status,
     freeListing: biz?.freeListing ?? false,
-    channels: biz ? biz.channels : { phone: o.phone ?? '', email: o.email ?? '', instagram: o.instagram ?? '' },
+    channels: withFound(biz ? biz.channels : { phone: o.phone ?? '', email: o.email ?? '', instagram: o.instagram ?? '' }, o),
+    /** The person who runs the business, when someone has written it down. */
+    contactName: o.contact_name,
     stage: o.stage,
     stageChangedAt: o.stage_changed_at,
     opportunityType: o.opportunity_type,
@@ -284,7 +302,8 @@ export async function leadDetail(id: string) {
   return {
     lead: {
       ...summarize(o),
-      contactName: o.contact_name,
+      /** Only what the team found, so the screen can offer to change or clear it. */
+      found: { phone: o.found_phone ?? '', email: o.found_email ?? '', instagram: o.found_instagram ?? '' },
       preferredChannel: o.preferred_channel,
       campaign: o.campaign,
       referredAt: o.referred_at,
@@ -374,7 +393,7 @@ export async function overview(t = Date.now()) {
          COUNT(*) FILTER (WHERE referrer_id IS NOT NULL AND NOT referral_default AND first_contacted_at IS NULL AND stage IN ${OPEN}) AS uncontacted_referrals,
          COUNT(*) FILTER (WHERE stage IN ('interested','meeting','proposal_sent') AND next_followup_at IS NULL) AS interested_no_next,
          COUNT(*) FILTER (WHERE stage = 'proposal_sent' AND COALESCE(last_activity_at, stage_changed_at) < ?) AS stale_proposals,
-         COUNT(*) FILTER (WHERE stage IN ${OPEN} AND COALESCE(phone,'') = '' AND COALESCE(email,'') = '' AND COALESCE(instagram,'') = '') AS missing_contact,
+         COUNT(*) FILTER (WHERE stage IN ${OPEN} AND ${reach('phone', '')} = '' AND ${reach('email', '')} = '' AND ${reach('instagram', '')} = '') AS missing_contact,
          COUNT(*) FILTER (WHERE next_followup_at < ?) AS overdue_leads
        FROM crm_opportunities`,
     )
@@ -454,7 +473,8 @@ export async function followupView(view: string, bounds: { end: number }, t = Da
   const people = await peopleNames()
   const rows = await db
     .prepare(
-      `SELECT f.*, p.name AS owner_name, o.business_name, o.brand_id, o.stage, o.city, o.phone, o.email, o.instagram
+      `SELECT f.*, p.name AS owner_name, o.business_name, o.brand_id, o.stage, o.city, o.phone, o.email, o.instagram,
+              o.found_phone, o.found_email, o.found_instagram
        FROM crm_followups f
        JOIN crm_opportunities o ON o.id = f.opportunity_id
        LEFT JOIN crm_people p ON p.id = f.owner_id
@@ -478,6 +498,9 @@ export async function followupView(view: string, bounds: { end: number }, t = Da
       phone: string | null
       email: string | null
       instagram: string | null
+      found_phone: string | null
+      found_email: string | null
+      found_instagram: string | null
     }>(...args)
   return {
     kind: 'followups' as const,
@@ -490,7 +513,7 @@ export async function followupView(view: string, bounds: { end: number }, t = Da
         icon: biz?.icon ?? null,
         city: biz?.city ?? r.city,
         stage: r.stage,
-        channels: biz ? biz.channels : { phone: r.phone ?? '', email: r.email ?? '', instagram: r.instagram ?? '' },
+        channels: withFound(biz ? biz.channels : { phone: r.phone ?? '', email: r.email ?? '', instagram: r.instagram ?? '' }, r),
         dueAt: r.due_at,
         priority: r.priority,
         type: r.type,

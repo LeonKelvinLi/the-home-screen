@@ -220,7 +220,7 @@ export async function syncSnapshots(): Promise<{ checked: number; updated: numbe
   const rows = await db
     .prepare(
       `SELECT o.id, o.brand_id, o.business_name, o.city, o.category, o.website_status, o.phone, o.email, o.instagram,
-              o.contact_name, o.search_text, p.name AS referrer_name
+              o.contact_name, o.found_phone, o.found_email, o.found_instagram, o.search_text, p.name AS referrer_name
        FROM crm_opportunities o LEFT JOIN crm_people p ON p.id = o.referrer_id
        WHERE o.brand_id IS NOT NULL`,
     )
@@ -235,6 +235,9 @@ export async function syncSnapshots(): Promise<{ checked: number; updated: numbe
       email: string | null
       instagram: string | null
       contact_name: string | null
+      found_phone: string | null
+      found_email: string | null
+      found_instagram: string | null
       search_text: string
       referrer_name: string | null
     }>()
@@ -255,7 +258,14 @@ export async function syncSnapshots(): Promise<{ checked: number; updated: numbe
       email: b.channels.email || null,
       instagram: b.channels.instagram || null,
     }
-    const text = searchTextOf({ ...next, contact_name: r.contact_name, referrer_name: r.referrer_name })
+    const text = searchTextOf({
+      ...next,
+      contact_name: r.contact_name,
+      referrer_name: r.referrer_name,
+      found_phone: r.found_phone,
+      found_email: r.found_email,
+      found_instagram: r.found_instagram,
+    })
     if (
       next.business_name === r.business_name &&
       next.city === r.city &&

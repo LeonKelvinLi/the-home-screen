@@ -1,17 +1,19 @@
 /*
-  People: the referrer leaderboard, one referrer's page (their link, QR code,
-  funnel and every business they sent), the admin's Settings (people, offers,
-  the import) and the only screen a referral partner ever sees.
+  People: who sends businesses to BEASTY and how far those businesses get,
+  one person's page (their link, QR code and every business they sent), the
+  only page a referral partner ever sees, and the admin's Settings (people
+  and access, prices, bringing BEASTY's listings in).
 */
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { api } from './api'
 import type { LeadSummary, Offer, Person, ReferrerMetrics } from './api'
-import { Avatar, Empty, Failure, Loading, PageHead, Section, StagePill, Stat, dateTime, money, pct, useApi, useCrm } from './ui'
+import { Avatar, Empty, Failure, Loading, PageTitle, Section, StagePill, Stat, Tile, dateTime, money, pct, plural, useApi, useCrm } from './ui'
 import { Icon } from './icons'
 import { opportunityLabel } from './model'
 import { NewLead } from './leads'
 import { PeriodPicker } from './views'
+import { placeLine } from './steps'
 
 const linkFor = (slug: string) => `${window.location.origin}/r/${slug}`
 
@@ -29,10 +31,9 @@ function CopyLink({ slug }: { slug: string }) {
   }
   return (
     <div className="crm-reflink">
-      <Icon name="link" size={15} />
       <code>{url.replace(/^https?:\/\//, '')}</code>
-      <button type="button" className="crm-btn crm-btn-sm" onClick={() => void copy()}>
-        <Icon name={copied ? 'check' : 'copy'} size={14} />
+      <button type="button" className="crm-btn is-dark" onClick={() => void copy()}>
+        <Icon name={copied ? 'check' : 'copy'} size={16} />
         {copied ? 'Copied' : 'Copy'}
       </button>
     </div>
@@ -43,11 +44,11 @@ function Qr({ personId, slug }: { personId: string; slug: string }) {
   const src = `/api/crm/people/${encodeURIComponent(personId)}/qr.svg`
   return (
     <figure className="crm-qr">
-      <img src={src} alt={`QR code for ${linkFor(slug)}`} width={148} height={148} />
+      <img src={src} alt={`QR code for ${linkFor(slug)}`} width={156} height={156} />
       <figcaption>
         <a href={src} download={`beasty-${slug}-qr.svg`}>
-          <Icon name="qr" size={14} />
-          Download the QR code
+          <Icon name="qr" size={16} />
+          Save the QR code
         </a>
       </figcaption>
     </figure>
@@ -55,115 +56,95 @@ function Qr({ personId, slug }: { personId: string; slug: string }) {
 }
 
 function FunnelBars({ m }: { m: Pick<ReferrerMetrics, 'leads' | 'contacted' | 'replied' | 'interested' | 'proposals' | 'won'> }) {
-  const rows: [string, number][] = [
-    ['Referred', m.leads],
-    ['Contacted', m.contacted],
-    ['Replied', m.replied],
-    ['Interested', m.interested],
-    ['Proposal sent', m.proposals],
-    ['Won', m.won],
+  const rows: [string, number, string][] = [
+    ['Sent in', m.leads, 'gray'],
+    ['Reached', m.contacted, 'blue'],
+    ['Replied', m.replied, 'violet'],
+    ['Interested', m.interested, 'violet'],
+    ['Got a quote', m.proposals, 'pink'],
+    ['Said yes', m.won, 'green'],
   ]
   const top = m.leads || 1
   return (
-    <div className="crm-card crm-funnel">
-      {rows.map(([label, n]) => (
+    <div className="crm-panel crm-funnel">
+      {rows.map(([label, n, tone]) => (
         <div key={label} className="crm-funnel-row">
           <span className="crm-funnel-label">{label}</span>
           <span className="crm-funnel-bar">
-            <span style={{ width: `${Math.max(2, (n / top) * 100)}%` }} />
+            <span className={`is-${tone}`} style={{ width: `${Math.max(2, (n / top) * 100)}%` }} />
           </span>
           <span className="crm-funnel-n">{n}</span>
+          <span className="crm-funnel-pct" />
         </div>
       ))}
     </div>
   )
 }
 
-/* --------------------------------------------------------------- referrers */
+const typeOf = (meta: ReturnType<typeof useCrm>['meta'], p: { name: string; sourceType: string }) => {
+  const t = meta.sources.find((s) => s.key === p.sourceType)?.label ?? p.sourceType
+  return t === p.name ? 'BEASTY team' : t
+}
+
+/* ------------------------------------------------------------------ people */
 
 export function Referrers() {
-  const { go, meta } = useCrm()
+  const { meta, actor } = useCrm()
   const [period, setPeriod] = useState('all')
   const [showAll, setShowAll] = useState(false)
   const { data, error, reload } = useApi<{ referrers: ReferrerMetrics[] }>(`/api/crm/referrers?period=${period}`)
   const rows = (data?.referrers ?? []).filter((r) => showAll || r.leads > 0 || r.visits > 0)
-  const sourceLabel = (k: string) => meta.sources.find((s) => s.key === k)?.label ?? k
   const iconOf = (id: string) => meta.people.find((p) => p.id === id)?.icon ?? null
   return (
     <div className="crm-view">
-      <PageHead
-        title="Referrers"
-        sub="Who brings businesses in, and how far those businesses get. A lead counts for the person who referred it first."
-        actions={<PeriodPicker value={period} onChange={setPeriod} />}
+      <PageTitle
+        title="People"
+        sub="Who sends businesses to BEASTY, and how far those businesses get. A business counts for whoever sent it first."
+        actions={
+          actor.role === 'admin' ? (
+            <a className="crm-btn" href="#/settings">
+              <Icon name="settings" size={16} />
+              Settings
+            </a>
+          ) : undefined
+        }
       />
+      <div className="crm-toolbar">
+        <PeriodPicker value={period} onChange={setPeriod} />
+      </div>
       {error && <Failure error={error} retry={reload} />}
       {!data ? (
         <Loading />
       ) : (
         <>
-          <div className="crm-table-wrap">
-            <table className="crm-table">
-              <thead>
-                <tr>
-                  <th>Person</th>
-                  <th className="num">Leads</th>
-                  <th className="num">Contacted</th>
-                  <th className="num">Replied</th>
-                  <th className="num">Interested</th>
-                  <th className="num">Proposals</th>
-                  <th className="num">Won</th>
-                  <th>Conversion</th>
-                  <th className="num">Revenue</th>
-                  <th className="num">MRR</th>
-                  <th className="num">Link visits</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((r) => (
-                  <tr key={r.id} className="is-link" onClick={() => go(`referrer/${r.id}`)}>
-                    <td data-label="Person">
-                      <span className="crm-cell-org">
-                        <Avatar name={r.name} icon={iconOf(r.id)} size={30} kind="person" />
-                        <span className="crm-cell-text">
-                          <a href={`#/referrer/${r.id}`} onClick={(e) => e.stopPropagation()}>
-                            <strong>{r.name}</strong>
-                          </a>
-                          {/* The type under the name, unless it only repeats it (Glenn's type is "Glenn"). */}
-                          <span className="crm-sub">
-                            {[sourceLabel(r.sourceType) === r.name ? null : sourceLabel(r.sourceType), r.active ? null : 'inactive'].filter(Boolean).join(' · ') || 'BEASTY'}
-                          </span>
-                        </span>
-                      </span>
-                    </td>
-                    <td data-label="Leads" className="num"><strong>{r.leads}</strong></td>
-                    <td data-label="Contacted" className="num">{r.contacted}</td>
-                    <td data-label="Replied" className="num">{r.replied}</td>
-                    <td data-label="Interested" className="num">{r.interested}</td>
-                    <td data-label="Proposals" className="num">{r.proposals}</td>
-                    <td data-label="Won" className="num">{r.won}</td>
-                    <td data-label="Conversion">
-                      {r.leads ? (
-                        <span className="crm-conv">
-                          <span className="crm-conv-bar">
-                            <span style={{ width: `${Math.max(2, r.conversion * 100)}%` }} />
-                          </span>
-                          {pct(r.conversion)}
-                        </span>
-                      ) : (
-                        <span className="crm-muted">—</span>
-                      )}
-                    </td>
-                    <td data-label="Revenue" className="num">{money(r.oneTimeCents)}</td>
-                    <td data-label="MRR" className="num">{r.mrrCents ? money(r.mrrCents) : '—'}</td>
-                    <td data-label="Link visits" className="num">{r.visits}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          {!rows.length && <Empty icon="share">No referrals in this period.</Empty>}
+          <ul className="crm-group crm-people">
+            {rows.map((r) => (
+              <li key={r.id}>
+                <a className="crm-row" href={`#/referrer/${r.id}`}>
+                  <Avatar name={r.name} icon={iconOf(r.id)} size={48} />
+                  <span className="crm-row-text">
+                    <strong>{r.name}</strong>
+                    <span>
+                      {r.id === 'p_glenn' ? "Includes BEASTY's own list" : typeOf(meta, r)}
+                      {r.active ? '' : '. Inactive'}
+                    </span>
+                    <span className="crm-row-meta">
+                      {plural(r.leads, 'business sent', 'businesses sent')}
+                      {r.won ? `, ${r.won} bought (${pct(r.conversion)})` : ''}
+                      {r.visits ? `, ${plural(r.visits, 'link visit', 'link visits')}` : ''}
+                    </span>
+                  </span>
+                  <span className="crm-row-end">
+                    {money(r.oneTimeCents)}
+                    {r.mrrCents ? <small>+ {money(r.mrrCents)} a month</small> : null}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+          {!rows.length && <Empty icon="share">Nobody sent a business in this period.</Empty>}
           <button type="button" className="crm-link crm-more-link" onClick={() => setShowAll((s) => !s)}>
-            {showAll ? 'Hide people with no referrals' : `Show everyone (${data.referrers.length})`}
+            {showAll ? 'Hide people who have not sent anyone' : `Show everyone (${data.referrers.length})`}
           </button>
         </>
       )}
@@ -179,9 +160,7 @@ export function ReferrerDetail({ id }: { id: string }) {
   const { back, meta } = useCrm()
   const [period, setPeriod] = useState('all')
   const [adding, setAdding] = useState(false)
-  const { data, error, reload } = useApi<{ person: ReferrerMetrics; businesses: ReferredBusiness[] }>(
-    `/api/crm/referrers/${encodeURIComponent(id)}?period=${period}`,
-  )
+  const { data, error, reload } = useApi<{ person: ReferrerMetrics; businesses: ReferredBusiness[] }>(`/api/crm/referrers/${encodeURIComponent(id)}?period=${period}`)
   if (error) return <Failure error={error} retry={reload} />
   if (!data) return <Loading />
   const p = data.person
@@ -189,73 +168,75 @@ export function ReferrerDetail({ id }: { id: string }) {
   return (
     <div className="crm-view">
       <a className="crm-back" href="#/referrers" onClick={(e) => { e.preventDefault(); back('referrers') }}>
-        <Icon name="chevronLeft" size={16} />
-        Referrers
+        <Icon name="chevronLeft" size={20} stroke={2.2} />
+        People
       </a>
-      <header className="crm-lead-head">
-        <div className="crm-lead-hero">
-          <Avatar name={p.name} icon={icon} size={64} kind="person" />
-          <div className="crm-lead-id">
-            <h1 className="crm-h1">{p.name}</h1>
-            <div className="crm-sub">
-              {meta.sources.find((s) => s.key === p.sourceType)?.label ?? p.sourceType}
-              {p.role !== 'none' ? ` · CRM ${p.role}` : ''}
-              {p.linked ? ' · signs in with their BEASTY account' : ''}
-              {!p.active ? ' · inactive' : ''}
-            </div>
-          </div>
-          <button type="button" className="crm-btn crm-btn-primary crm-hero-action" onClick={() => setAdding(true)}>
-            <Icon name="plus" size={16} />
-            Add a business they referred
-          </button>
+      <header className="crm-lead-head is-person">
+        <Avatar name={p.name} icon={icon} size={96} />
+        <div className="crm-lead-id">
+          <h1>{p.name}</h1>
+          <p>
+            {typeOf(meta, p)}
+            {p.role !== 'none' ? `. Uses the CRM as ${p.role === 'admin' ? 'an admin' : p.role === 'team' ? 'team' : 'a partner'}` : ''}
+            {p.linked ? ', signing in with their BEASTY account' : ''}
+            {!p.active ? '. Inactive' : ''}
+          </p>
         </div>
+        <button type="button" className="crm-btn is-primary" onClick={() => setAdding(true)}>
+          <Icon name="plus" size={16} stroke={2.4} />
+          Add a business they sent
+        </button>
       </header>
       {adding && <NewLead onClose={() => setAdding(false)} initial={{ referrerId: p.id }} />}
 
-      <div className="crm-kpis">
-        <Stat label="Businesses referred" value={p.leads} icon="users" />
-        <Stat label="Won" value={p.won} sub={p.leads ? `${pct(p.conversion)} conversion` : undefined} tone={p.won ? 'good' : undefined} icon="trophy" />
-        <Stat label="Revenue" value={money(p.oneTimeCents)} icon="dollar" />
-        <Stat label="MRR" value={money(p.mrrCents)} icon="trending" />
-        <Stat label="Link visits" value={p.visits} icon="link" />
+      <div className="crm-glance is-row">
+        <Stat label="Businesses sent" value={p.leads} />
+        <Stat label="Customers" value={p.won} sub={p.leads ? `${pct(p.conversion)} said yes` : undefined} tone={p.won ? 'good' : undefined} />
+        <Stat label="Earned" value={money(p.oneTimeCents)} />
+        <Stat label="Monthly plans" value={money(p.mrrCents)} />
+        <Stat label="Link visits" value={p.visits} />
       </div>
 
-      <div className="crm-grid2">
-        <Section title="Their referral link">
-          <div className="crm-card">
+      <div className="crm-two">
+        <Section title="Their link">
+          <div className="crm-panel">
             <CopyLink slug={p.slug} />
-            <p className="crm-lede">
-              Anyone who opens this link and then asks for a spot on BEASTY within 90 days is credited to {p.name}. Add <code>?via=qr</code> for print, or <code>?c=name</code> for a campaign.
+            <p className="crm-note">
+              Anyone who opens this link and then asks for a spot on BEASTY within 90 days counts as sent by {p.name}. Add <code>?via=qr</code> when it is printed, or <code>?c=name</code> for a campaign.
             </p>
             <Qr personId={p.id} slug={p.slug} />
           </div>
         </Section>
-        <Section title="Funnel" action={<PeriodPicker value={period} onChange={setPeriod} />}>
+        <Section title="How far their businesses got" action={<PeriodPicker value={period} onChange={setPeriod} />}>
           <FunnelBars m={p} />
         </Section>
       </div>
 
       <Section title={`Businesses (${data.businesses.length})`}>
         {data.businesses.length ? (
-          <ul className="crm-card crm-list">
+          <ul className="crm-group">
             {data.businesses.map((b) => (
-              <li key={b.id} className="crm-row">
-                <Avatar name={b.name} icon={b.icon} size={32} />
-                <a className="crm-row-main" href={`#/lead/${b.id}`}>
-                  <strong>{b.name}</strong>
-                  <span>
-                    {[b.city, opportunityLabel(b.opportunityType)].filter(Boolean).join(' · ')}
-                    {b.deal
-                      ? ` · ${b.deal.offer_name}: ${b.deal.status === 'won' ? `sold ${money(b.deal.sold_cents)}` : `${b.deal.status === 'lost' ? 'lost' : 'quoted'} ${money(b.deal.quoted_cents)}`}${b.deal.monthly_cents ? ` + ${money(b.deal.monthly_cents)}/mo` : ''}`
-                      : ''}
+              <li key={b.id}>
+                <a className="crm-row" href={`#/lead/${b.id}`}>
+                  <Tile name={b.name} icon={b.icon} stage={b.stage} size={48} />
+                  <span className="crm-row-text">
+                    <strong>{b.name}</strong>
+                    <span>
+                      {placeLine(b.category, b.city)}
+                      {b.deal
+                        ? `. ${b.deal.offer_name}: ${b.deal.status === 'won' ? `sold for ${money(b.deal.sold_cents)}` : `${b.deal.status === 'lost' ? 'lost at' : 'quoted'} ${money(b.deal.quoted_cents)}`}${b.deal.monthly_cents ? `, then ${money(b.deal.monthly_cents)} a month` : ''}`
+                        : b.opportunityType !== 'website'
+                          ? `. ${opportunityLabel(b.opportunityType)}`
+                          : ''}
+                    </span>
                   </span>
+                  <StagePill stage={b.stage} />
                 </a>
-                <StagePill stage={b.stage} />
               </li>
             ))}
           </ul>
         ) : (
-          <Empty icon="share">Nobody credited to {p.name} in this period.</Empty>
+          <Empty icon="share">Nobody sent by {p.name} in this period.</Empty>
         )}
       </Section>
     </div>
@@ -290,34 +271,34 @@ export function PartnerHome({ personId }: { personId: string | null }) {
   const p = data.person
   return (
     <div className="crm-view">
-      <PageHead title={`Hi ${p.name.split(' ')[0]}`} sub="Businesses you send to BEASTY, and how they are doing." />
-      <div className="crm-kpis">
-        <Stat label="Businesses referred" value={p.leads} icon="users" />
-        <Stat label="Contacted" value={p.contacted} icon="phone" />
-        <Stat label="Interested" value={p.interested} icon="flame" />
-        <Stat label="Customers" value={p.won} tone={p.won ? 'good' : undefined} icon="trophy" />
+      <PageTitle title={`Hi ${p.name.split(' ')[0]}`} sub="The businesses you send to BEASTY, and how they are doing." />
+      <div className="crm-glance is-row">
+        <Stat label="Businesses you sent" value={p.leads} />
+        <Stat label="Reached" value={p.contacted} />
+        <Stat label="Interested" value={p.interested} />
+        <Stat label="Customers" value={p.won} tone={p.won ? 'good' : undefined} />
       </div>
       <Section title="Your link">
-        <div className="crm-card">
+        <div className="crm-panel">
           <CopyLink slug={p.slug} />
-          <p className="crm-lede">Share it with a business. When they ask for a spot on BEASTY after opening it, they are credited to you. {p.visits ? `${p.visits} visit${p.visits === 1 ? '' : 's'} so far.` : ''}</p>
+          <p className="crm-note">
+            Share it with a business. When they ask for a spot on BEASTY after opening it, they count as yours.
+            {p.visits ? ` ${plural(p.visits, 'visit', 'visits')} so far.` : ''}
+          </p>
           {personId && <Qr personId={personId} slug={p.slug} />}
         </div>
       </Section>
       <Section title="Your businesses">
         {data.businesses.length ? (
-          <ul className="crm-card crm-list">
+          <ul className="crm-group crm-list">
             {data.businesses.map((b, i) => (
               <li key={`${b.name}-${i}`} className="crm-row">
-                <Avatar name={b.name} size={32} />
-                <div className="crm-row-main">
+                <Tile name={b.name} size={44} stage={b.status === 'Customer' ? 'won' : b.status === 'Closed' ? 'closed_lost' : 'contacted'} />
+                <span className="crm-row-text">
                   <strong>{b.name}</strong>
                   <span>{b.city ?? ''}</span>
-                </div>
-                <span className={`crm-stage crm-tone-${b.status === 'Customer' ? 'green' : b.status === 'Closed' ? 'gray' : 'blue'}`}>
-                  <i className="crm-dot" aria-hidden="true" />
-                  {b.status}
                 </span>
+                <span className={`crm-stage is-${b.status === 'Customer' ? 'green' : b.status === 'Closed' ? 'gray' : 'blue'}`}>{b.status}</span>
               </li>
             ))}
           </ul>
@@ -336,7 +317,7 @@ export function Settings() {
   if (actor.role !== 'admin') return <Failure error="Settings are for admins." />
   return (
     <div className="crm-view">
-      <PageHead title="Settings" sub="People and roles, the price list, and bringing BEASTY's listings in." />
+      <PageTitle title="Settings" sub="Who can use the CRM, the prices a quote starts from, and bringing BEASTY's listings in." />
       <PeopleSettings />
       <OfferSettings />
       <ImportSettings />
@@ -345,10 +326,10 @@ export function Settings() {
 }
 
 const ROLES: [Person['role'], string][] = [
-  ['none', 'No CRM access (referrer only)'],
-  ['partner', 'Partner: sees only their own referrals'],
-  ['team', 'Team: works leads'],
-  ['admin', 'Admin: everything'],
+  ['none', 'Cannot sign in (only sends businesses)'],
+  ['partner', 'Partner: sees only the businesses they sent'],
+  ['team', 'Team: works every business'],
+  ['admin', 'Admin: everything, including Settings'],
 ]
 
 function PeopleSettings() {
@@ -357,17 +338,17 @@ function PeopleSettings() {
   const [adding, setAdding] = useState(false)
   return (
     <Section
-      title="People"
+      title="People and access"
       action={
         !adding ? (
           <button type="button" className="crm-link" onClick={() => setAdding(true)}>
-            <Icon name="plus" size={14} />
+            <Icon name="plus" size={16} stroke={2.2} />
             Add a person
           </button>
         ) : undefined
       }
     >
-      <p className="crm-lede">Referrers, team and partners. To let someone sign in, link the email of their BEASTY account and give them a role; they then open /crm while signed in.</p>
+      <p className="crm-note">To let someone sign in, add the email of their BEASTY account and give them a role. They then open /crm while signed in to BEASTY.</p>
       {adding && (
         <PersonForm
           onDone={() => {
@@ -377,59 +358,42 @@ function PeopleSettings() {
           onCancel={() => setAdding(false)}
         />
       )}
-      <div className="crm-table-wrap">
-        <table className="crm-table">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Link</th>
-              <th>Type</th>
-              <th>Role</th>
-              <th>Account</th>
-              <th />
-            </tr>
-          </thead>
-          <tbody>
-            {meta.people.map((p) =>
-              editing === p.id ? (
-                <tr key={p.id}>
-                  <td colSpan={6}>
-                    <PersonForm
-                      person={p}
-                      onDone={() => {
-                        setEditing(null)
-                        reloadMeta()
-                      }}
-                      onCancel={() => setEditing(null)}
-                    />
-                  </td>
-                </tr>
-              ) : (
-                <tr key={p.id} className={p.active ? undefined : 'is-muted'}>
-                  <td data-label="Name">
-                    <span className="crm-cell-org">
-                      <Avatar name={p.name} icon={p.icon} size={28} kind="person" />
-                      <a href={`#/referrer/${p.id}`}>
-                        <strong>{p.name}</strong>
-                      </a>
-                      {!p.active && <span className="crm-muted"> (inactive)</span>}
-                    </span>
-                  </td>
-                  <td data-label="Link" className="crm-muted">/r/{p.slug}</td>
-                  <td data-label="Type">{meta.sources.find((s) => s.key === p.sourceType)?.label ?? p.sourceType}</td>
-                  <td data-label="Role">{p.role === 'none' ? <span className="crm-muted">—</span> : <span className="crm-tag">{p.role}</span>}</td>
-                  <td data-label="Account">{p.linked ? <span className="crm-good">Linked</span> : <span className="crm-muted">—</span>}</td>
-                  <td>
-                    <button type="button" className="crm-link" onClick={() => setEditing(p.id)}>
-                      Edit
-                    </button>
-                  </td>
-                </tr>
-              ),
-            )}
-          </tbody>
-        </table>
-      </div>
+      <ul className="crm-group">
+        {meta.people.map((p) =>
+          editing === p.id ? (
+            <li key={p.id} className="is-form">
+              <PersonForm
+                person={p}
+                onDone={() => {
+                  setEditing(null)
+                  reloadMeta()
+                }}
+                onCancel={() => setEditing(null)}
+              />
+            </li>
+          ) : (
+            <li key={p.id} className={`crm-row${p.active ? '' : ' is-muted'}`}>
+              <Avatar name={p.name} icon={p.icon} size={40} />
+              <span className="crm-row-text">
+                <strong>
+                  <a href={`#/referrer/${p.id}`}>{p.name}</a>
+                  {!p.active && ' (inactive)'}
+                </strong>
+                <span>
+                  {typeOf(meta, p)}. Link /r/{p.slug}
+                </span>
+                <span className="crm-row-meta">
+                  {p.role === 'none' ? 'Cannot sign in' : p.role === 'admin' ? 'Admin' : p.role === 'team' ? 'Team' : 'Partner'}
+                  {p.linked ? ', BEASTY account linked' : ''}
+                </span>
+              </span>
+              <button type="button" className="crm-link" onClick={() => setEditing(p.id)}>
+                Edit
+              </button>
+            </li>
+          ),
+        )}
+      </ul>
     </Section>
   )
 }
@@ -453,14 +417,7 @@ function PersonForm({ person, onDone, onCancel }: { person?: Person; onDone: () 
     setBusy(true)
     setError(null)
     try {
-      const body: Record<string, unknown> = {
-        name: f.name,
-        slug: f.slug || undefined,
-        sourceType: f.sourceType,
-        role: f.role,
-        brandId: f.brandId || null,
-        active: f.active,
-      }
+      const body: Record<string, unknown> = { name: f.name, slug: f.slug || undefined, sourceType: f.sourceType, role: f.role, brandId: f.brandId || null, active: f.active }
       if (f.memberEmail.trim()) body.memberEmail = f.memberEmail.trim()
       else if (unlink) body.memberEmail = ''
       if (person) await api(`/api/crm/people/${person.id}`, { method: 'PATCH', body })
@@ -473,18 +430,18 @@ function PersonForm({ person, onDone, onCancel }: { person?: Person; onDone: () 
     }
   }
   return (
-    <form className="crm-card crm-person-form" onSubmit={submit}>
-      <div className="crm-form-grid">
+    <form className="crm-panel crm-person-form" onSubmit={submit}>
+      <div className="crm-form">
         <label className="crm-field">
           <span>Name</span>
           <input value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} required minLength={2} />
         </label>
         <label className="crm-field">
-          <span>Link name (beastypages.com/r/…)</span>
-          <input value={f.slug} onChange={(e) => setF({ ...f, slug: e.target.value.toLowerCase() })} placeholder="from the name" pattern="[a-z0-9-]{2,60}" />
+          <span>Their link: beastypages.com/r/…</span>
+          <input value={f.slug} onChange={(e) => setF({ ...f, slug: e.target.value.toLowerCase() })} placeholder="made from the name" pattern="[a-z0-9-]{2,60}" />
         </label>
         <label className="crm-field">
-          <span>Type</span>
+          <span>Who they are</span>
           <select value={f.sourceType} onChange={(e) => setF({ ...f, sourceType: e.target.value })}>
             {meta.sources
               .filter((s) => s.isPerson)
@@ -496,7 +453,7 @@ function PersonForm({ person, onDone, onCancel }: { person?: Person; onDone: () 
           </select>
         </label>
         <label className="crm-field">
-          <span>CRM role</span>
+          <span>What they can do here</span>
           <select value={f.role} onChange={(e) => setF({ ...f, role: e.target.value as Person['role'] })}>
             {ROLES.map(([k, l]) => (
               <option key={k} value={k}>
@@ -506,8 +463,8 @@ function PersonForm({ person, onDone, onCancel }: { person?: Person; onDone: () 
           </select>
         </label>
         <label className="crm-field">
-          <span>{person?.linked ? 'BEASTY account (linked; enter an email to relink)' : 'BEASTY account email (to let them sign in)'}</span>
-          <input type="email" value={f.memberEmail} onChange={(e) => setF({ ...f, memberEmail: e.target.value })} placeholder="their sign-up email" />
+          <span>{person?.linked ? 'BEASTY account (linked; type an email to link another)' : 'Their BEASTY account email, to let them sign in'}</span>
+          <input type="email" value={f.memberEmail} onChange={(e) => setF({ ...f, memberEmail: e.target.value })} placeholder="the email they signed up with" />
         </label>
         <label className="crm-field">
           <span>Their BEASTY page id (optional)</span>
@@ -516,7 +473,7 @@ function PersonForm({ person, onDone, onCancel }: { person?: Person; onDone: () 
         {person && (
           <label className="crm-check">
             <input type="checkbox" checked={f.active} onChange={(e) => setF({ ...f, active: e.target.checked })} />
-            Active (an inactive person's link stops crediting new visitors)
+            Active (when off, their link stops counting new visitors)
           </label>
         )}
         {person?.linked && (
@@ -527,8 +484,8 @@ function PersonForm({ person, onDone, onCancel }: { person?: Person; onDone: () 
         )}
       </div>
       {error && <div className="crm-error">{error}</div>}
-      <div className="crm-row-actions">
-        <button type="submit" className="crm-btn crm-btn-primary" disabled={busy}>
+      <div className="crm-row-btns">
+        <button type="submit" className="crm-btn is-dark" disabled={busy}>
           {busy ? 'Saving…' : person ? 'Save' : 'Add person'}
         </button>
         <button type="button" className="crm-link" onClick={onCancel}>
@@ -544,17 +501,17 @@ function OfferSettings() {
   const [adding, setAdding] = useState(false)
   return (
     <Section
-      title="Offers"
+      title="Prices"
       action={
         !adding ? (
           <button type="button" className="crm-link" onClick={() => setAdding(true)}>
-            <Icon name="plus" size={14} />
-            Add an offer
+            <Icon name="plus" size={16} stroke={2.2} />
+            Add a price
           </button>
         ) : undefined
       }
     >
-      <p className="crm-lede">What a deal can be quoted from. A deal copies the name and prices when it is created, so changing a price here never rewrites what an earlier customer paid.</p>
+      <p className="crm-note">What a quote starts from. A quote keeps the name and prices it was made with, so changing a price here never changes what an earlier customer paid.</p>
       {adding && (
         <OfferForm
           onDone={() => {
@@ -564,7 +521,7 @@ function OfferSettings() {
           onCancel={() => setAdding(false)}
         />
       )}
-      <ul className="crm-card crm-list">
+      <ul className="crm-group">
         {meta.offers.map((o) => (
           <OfferRow key={o.id} o={o} onDone={reloadMeta} />
         ))}
@@ -590,17 +547,14 @@ function OfferRow({ o, onDone }: { o: Offer; onDone: () => void }) {
     )
   return (
     <li className={`crm-row${o.active ? '' : ' is-muted'}`}>
-      <span className="crm-row-icon">
-        <Icon name="file" size={16} />
-      </span>
-      <div className="crm-row-main">
+      <span className="crm-row-text">
         <strong>{o.name}</strong>
         <span>
-          {opportunityLabel(o.opportunityType)} · {money(o.oneTimeCents)}
-          {o.monthlyCents ? ` + ${money(o.monthlyCents)}/mo` : ''}
-          {o.active ? '' : ' · retired'}
+          {money(o.oneTimeCents)}
+          {o.monthlyCents ? `, then ${money(o.monthlyCents)} a month` : ''}. {opportunityLabel(o.opportunityType)}
+          {o.active ? '' : '. Not offered any more'}
         </span>
-      </div>
+      </span>
       <button type="button" className="crm-link" onClick={() => setEditing(true)}>
         Edit
       </button>
@@ -636,15 +590,15 @@ function OfferForm({ offer, onDone, onCancel }: { offer?: Offer; onDone: () => v
     }
   }
   return (
-    <form className="crm-card crm-offer-form" onSubmit={submit}>
-      <div className="crm-form-grid">
+    <form className="crm-panel crm-offer-form" onSubmit={submit}>
+      <div className="crm-form">
         <label className="crm-field is-wide">
           <span>Name</span>
           <input value={f.name} onChange={(e) => setF({ ...f, name: e.target.value })} required minLength={2} />
         </label>
         {!offer && (
           <label className="crm-field">
-            <span>Opportunity</span>
+            <span>Selling</span>
             <select value={f.opportunityType} onChange={(e) => setF({ ...f, opportunityType: e.target.value })}>
               {meta.opportunityTypes.map((t) => (
                 <option key={t.key} value={t.key}>
@@ -665,15 +619,15 @@ function OfferForm({ offer, onDone, onCancel }: { offer?: Offer; onDone: () => v
         {offer && (
           <label className="crm-check">
             <input type="checkbox" checked={f.active} onChange={(e) => setF({ ...f, active: e.target.checked })} />
-            Offered to new deals
+            Offered on new quotes
           </label>
         )}
       </div>
-      {offer && <p className="crm-lede">Existing deals keep the name and prices they were quoted at.</p>}
+      {offer && <p className="crm-note">Quotes already made keep the name and prices they were made with.</p>}
       {error && <div className="crm-error">{error}</div>}
-      <div className="crm-row-actions">
-        <button type="submit" className="crm-btn crm-btn-primary" disabled={busy}>
-          {busy ? 'Saving…' : offer ? 'Save' : 'Add offer'}
+      <div className="crm-row-btns">
+        <button type="submit" className="crm-btn is-dark" disabled={busy}>
+          {busy ? 'Saving…' : offer ? 'Save' : 'Add price'}
         </button>
         <button type="button" className="crm-link" onClick={onCancel}>
           Cancel
@@ -703,11 +657,9 @@ function ImportSettings() {
   const [report, setReport] = useState<BackfillReport | null>(null)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const runs = useApi<{ runs: { id: string; actor: string; started_at: number; finished_at: number | null; report: (BackfillReport & { createdIds: number }) | null }[] }>(
-    '/api/crm/backfill/runs',
-  )
+  const runs = useApi<{ runs: { id: string; actor: string; started_at: number; finished_at: number | null; report: (BackfillReport & { createdIds: number }) | null }[] }>('/api/crm/backfill/runs')
   const go = async (dryRun: boolean) => {
-    if (!dryRun && !window.confirm('Create the leads this preview lists? Existing leads are never changed, and running it again creates nothing new.')) return
+    if (!dryRun && !window.confirm('Add the businesses this preview lists? Nothing already here changes, and running it again adds nothing new.')) return
     setBusy(true)
     setError(null)
     try {
@@ -723,17 +675,17 @@ function ImportSettings() {
     }
   }
   return (
-    <Section title="Import from BEASTY">
-      <div className="crm-card">
-        <p className="crm-lede">
-          Creates a website lead for every listed business whose listing shows no real website (none, Instagram only, a Linktree, an ordering page…), plus a lead for each Reserve-a-spot request. It only adds: a business that already has a lead is skipped, and people on the Individuals sheet are listed for review instead.
+    <Section title="Bring in BEASTY's listings">
+      <div className="crm-panel">
+        <p className="crm-note">
+          Adds every listed business whose listing shows no real website (none, Instagram only, a Linktree, an ordering page…), and everyone who asked for a spot. It only adds: a business already here is left alone, and people on the Individuals sheet are listed for someone to decide.
         </p>
-        <div className="crm-row-actions">
+        <div className="crm-row-btns">
           <button type="button" className="crm-btn" disabled={busy} onClick={() => void go(true)}>
-            <Icon name="search" size={14} />
+            <Icon name="search" size={16} />
             {busy ? 'Working…' : 'Preview'}
           </button>
-          <button type="button" className="crm-btn crm-btn-primary" disabled={busy || !report?.dryRun} onClick={() => void go(false)} title={report?.dryRun ? undefined : 'Preview first'}>
+          <button type="button" className="crm-btn is-dark" disabled={busy || !report?.dryRun} onClick={() => void go(false)} title={report?.dryRun ? undefined : 'Preview first'}>
             Run the import
           </button>
         </div>
@@ -741,17 +693,13 @@ function ImportSettings() {
         {report && <ReportView r={report} />}
       </div>
       {runs.data && runs.data.runs.length > 0 && (
-        <details className="crm-details">
+        <details className="crm-more">
           <summary>Past imports ({runs.data.runs.length})</summary>
-          <ul className="crm-list is-quiet">
+          <ul className="crm-plain">
             {runs.data.runs.map((r) => (
-              <li key={r.id} className="crm-row">
-                <div className="crm-row-main">
-                  <strong>{dateTime(Number(r.started_at))}</strong>
-                  <span>
-                    {r.report ? `${r.report.created} business leads, ${r.report.applications.created} from requests, ${r.report.skippedExisting} already there` : 'Did not finish'} · {r.id}
-                  </span>
-                </div>
+              <li key={r.id}>
+                {dateTime(Number(r.started_at))}:{' '}
+                {r.report ? `${r.report.created} businesses, ${r.report.applications.created} from requests, ${r.report.skippedExisting} already here` : 'did not finish'}
               </li>
             ))}
           </ul>
@@ -765,18 +713,18 @@ function ReportView({ r }: { r: BackfillReport }) {
   return (
     <div className="crm-report">
       <h3>{r.dryRun ? 'Preview: nothing has been written' : `Done: run ${r.runId}`}</h3>
-      <div className="crm-stats">
-        <Stat label="Businesses scanned" value={r.scanned} />
+      <div className="crm-glance is-row">
+        <Stat label="Businesses looked at" value={r.scanned} />
         <Stat label="Need a website" value={r.qualifying} />
         <Stat label={r.dryRun ? 'Would create' : 'Created'} value={r.created} tone="good" />
-        <Stat label="Already had a lead" value={r.skippedExisting} />
+        <Stat label="Already here" value={r.skippedExisting} />
         <Stat label="Have a real site" value={r.skippedHasSite} />
-        <Stat label="Requests to import" value={r.applications.created} sub={`${r.applications.scanned} requests, ${r.applications.skippedCollab} creator requests left out`} />
+        <Stat label="From spot requests" value={r.applications.created} sub={`${r.applications.scanned} requests, ${r.applications.skippedCollab} creator requests left out`} />
       </div>
       {r.manualReview.length > 0 && (
-        <details className="crm-details" open>
-          <summary>For a person to decide ({r.manualReview.length})</summary>
-          <ul className="crm-notes">
+        <details className="crm-more" open>
+          <summary>For someone to decide ({r.manualReview.length})</summary>
+          <ul className="crm-plain">
             {r.manualReview.map((m) => (
               <li key={m.id}>
                 <strong>{m.name}</strong>: {m.reason}
@@ -786,9 +734,9 @@ function ReportView({ r }: { r: BackfillReport }) {
         </details>
       )}
       {r.duplicates.length > 0 && (
-        <details className="crm-details">
-          <summary>Possible duplicates, not merged ({r.duplicates.length})</summary>
-          <ul className="crm-notes">
+        <details className="crm-more">
+          <summary>Might be the same business, not merged ({r.duplicates.length})</summary>
+          <ul className="crm-plain">
             {r.duplicates.map((d) => (
               <li key={`${d.key}|${d.value}`}>
                 Same {d.key} on {d.businesses.map((b) => b.name).join(', ')}
@@ -798,9 +746,9 @@ function ReportView({ r }: { r: BackfillReport }) {
         </details>
       )}
       {r.errors.length > 0 && (
-        <details className="crm-details" open>
+        <details className="crm-more" open>
           <summary>Errors ({r.errors.length})</summary>
-          <ul className="crm-notes">
+          <ul className="crm-plain">
             {r.errors.map((e) => (
               <li key={e.id}>
                 {e.id}: {e.error}

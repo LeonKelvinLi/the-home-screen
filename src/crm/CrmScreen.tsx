@@ -1,5 +1,5 @@
 /*
-  /crm — BEASTY's internal growth screen.
+  /crm — BEASTY's own sales book.
 
   Chosen in main.tsx before the app mounts, like /kitchen: no landing, no
   catalogue, nothing a customer loads. Routes live in the hash (#/leads,
@@ -7,22 +7,24 @@
   where they were. Everything it shows comes from /api/crm, which checks the
   role on every request.
 
-  The frame: a sidebar on a wide screen, a top bar and a bottom tab bar on a
-  phone, and a ⌘K palette on both that finds any business, number, @handle or
-  person and jumps to any page.
+  Four places, named the way the team talks: Today (what to do now),
+  Businesses (every business being worked, with the board), Money, and People
+  (who sends businesses in). A phone gets them as a tab bar; a computer as a
+  top bar, with the business list and the open business side by side.
 */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import type { FormEvent } from 'react'
+import type { FormEvent, ReactNode } from 'react'
 import './crm.css'
 import { api } from './api'
 import type { Actor, LeadSummary, Meta } from './api'
-import { Avatar, Crm, Failure, Loading, StagePill, useApi } from './ui'
+import { Avatar, Crm, Failure, Loading, StagePill, Tile, useApi, useCrm, useMedia } from './ui'
 import { Icon } from './icons'
 import type { IconName } from './icons'
 import { Analytics, Businesses, Followups, Overview, Pipeline, Revenue } from './views'
 import { Leads } from './leads'
 import { LeadDetail } from './lead'
 import { PartnerHome, ReferrerDetail, Referrers, Settings } from './people'
+import { placeLine } from './steps'
 
 interface Route {
   name: string
@@ -37,30 +39,45 @@ function parseHash(): Route {
   return { name: name || 'overview', id: id ? decodeURIComponent(id) : null, params: new URLSearchParams(query) }
 }
 
-interface NavItem {
+interface Place {
   key: string
   label: string
   icon: IconName
-  group: 'main' | 'insights' | 'admin'
 }
 
-const NAV: NavItem[] = [
-  { key: 'overview', label: 'Overview', icon: 'home', group: 'main' },
-  { key: 'leads', label: 'Leads', icon: 'users', group: 'main' },
-  { key: 'pipeline', label: 'Pipeline', icon: 'kanban', group: 'main' },
-  { key: 'followups', label: 'Follow-ups', icon: 'calendar', group: 'main' },
-  { key: 'businesses', label: 'Businesses', icon: 'building', group: 'main' },
-  { key: 'referrers', label: 'Referrers', icon: 'share', group: 'insights' },
-  { key: 'revenue', label: 'Revenue', icon: 'dollar', group: 'insights' },
-  { key: 'analytics', label: 'Analytics', icon: 'chart', group: 'insights' },
-  { key: 'settings', label: 'Settings', icon: 'settings', group: 'admin' },
+const TABS: Place[] = [
+  { key: 'overview', label: 'Today', icon: 'sun' },
+  { key: 'leads', label: 'Businesses', icon: 'store' },
+  { key: 'revenue', label: 'Money', icon: 'dollar' },
+  { key: 'referrers', label: 'People', icon: 'users' },
 ]
 
-const TABS: { key: string; label: string; icon: IconName }[] = [
-  { key: 'overview', label: 'Home', icon: 'home' },
-  { key: 'leads', label: 'Leads', icon: 'users' },
-  { key: 'pipeline', label: 'Pipeline', icon: 'kanban' },
-  { key: 'followups', label: 'Follow-ups', icon: 'calendar' },
+/** Which tab a page belongs to. */
+const TAB_OF: Record<string, string> = {
+  overview: 'overview',
+  followups: 'overview',
+  leads: 'leads',
+  lead: 'leads',
+  pipeline: 'leads',
+  businesses: 'leads',
+  revenue: 'revenue',
+  analytics: 'revenue',
+  referrers: 'referrers',
+  referrer: 'referrers',
+  settings: 'referrers',
+}
+
+/** Everything the search can jump to, in the words the pages use. */
+const PAGES: Place[] = [
+  { key: 'overview', label: 'Today', icon: 'sun' },
+  { key: 'leads', label: 'Businesses', icon: 'store' },
+  { key: 'pipeline', label: 'Board', icon: 'kanban' },
+  { key: 'followups?view=upcoming', label: 'Reminders', icon: 'bell' },
+  { key: 'businesses', label: 'Grouped businesses', icon: 'building' },
+  { key: 'revenue', label: 'Money', icon: 'dollar' },
+  { key: 'analytics', label: "How it's going", icon: 'chart' },
+  { key: 'referrers', label: 'People', icon: 'users' },
+  { key: 'settings', label: 'Settings', icon: 'settings' },
 ]
 
 export default function CrmScreen() {
@@ -69,10 +86,14 @@ export default function CrmScreen() {
   const [meta, setMeta] = useState<Meta | null>(null)
   const [metaError, setMetaError] = useState<string | null>(null)
   const [searching, setSearching] = useState(false)
-  const [more, setMore] = useState(false)
+  const [menu, setMenu] = useState(false)
+  const wide = useMedia('(min-width: 1100px)')
   /* Hash moves made inside the CRM: a back link only uses history.back() when there is one. */
   const moves = useRef(0)
   const scroller = useRef<HTMLDivElement>(null)
+  /* The list's filters, kept while a business is open beside it. */
+  const listParams = useRef<URLSearchParams>(route.name === 'leads' ? route.params : new URLSearchParams())
+  if (route.name === 'leads') listParams.current = route.params
 
   useEffect(() => {
     /* Internal: never in a search index. The server sends X-Robots-Tag too. */
@@ -86,14 +107,14 @@ export default function CrmScreen() {
     document.title = 'BEASTY CRM'
     const onHash = () => {
       moves.current++
-      setMore(false)
+      setMenu(false)
       setRoute(parseHash())
     }
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
 
-  /* ⌘K / Ctrl+K anywhere, and "/" when not typing, open the palette. */
+  /* ⌘K / Ctrl+K anywhere, and "/" when not typing, open the search. */
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const typing = /^(INPUT|TEXTAREA|SELECT)$/.test((e.target as HTMLElement)?.tagName ?? '')
@@ -101,6 +122,7 @@ export default function CrmScreen() {
         e.preventDefault()
         setSearching(true)
       }
+      if (e.key === 'Escape') setMenu(false)
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
@@ -133,6 +155,8 @@ export default function CrmScreen() {
     window.location.hash = hash.startsWith('#') ? hash : `#/${hash.replace(/^\//, '')}`
   }, [])
 
+  const split = wide && (route.name === 'leads' || route.name === 'lead')
+
   /*
     The screen scrolls inside .crm, not the window, so the browser cannot
     restore it. Each history entry keeps its own scroll position in its state:
@@ -140,7 +164,7 @@ export default function CrmScreen() {
   */
   useEffect(() => {
     const el = scroller.current
-    if (!el) return
+    if (!el || split) return
     let t = 0
     const save = () => {
       window.clearTimeout(t)
@@ -154,11 +178,11 @@ export default function CrmScreen() {
       el.removeEventListener('scroll', save)
       window.clearTimeout(t)
     }
-  }, [meta])
+  }, [meta, split])
 
   useEffect(() => {
     const el = scroller.current
-    if (!el) return
+    if (!el || split) return
     el.scrollTop = 0
     const want = Number(window.history.state?.crmScroll ?? 0)
     if (!(want > 0)) return
@@ -169,9 +193,9 @@ export default function CrmScreen() {
       if (Math.abs(el.scrollTop - want) < 2 || ++tries > 40) window.clearInterval(t)
     }, 50)
     return () => window.clearInterval(t)
-  }, [route, meta])
+  }, [route, meta, split])
 
-  /* Live counts for the sidebar and the tab bar, refreshed as you move around. */
+  /* Live counts for the tab bar, refreshed as you move around. */
   const badges = useApi<{ counts: Record<string, number>; attention: { key: string; count: number }[] }>(meta ? `/api/crm/overview?_=${route.name}` : null)
 
   if (!me) return <div className="crm"><Loading /></div>
@@ -179,9 +203,9 @@ export default function CrmScreen() {
   if (me.actor.role === 'partner') {
     return (
       <div className="crm crm-partner" ref={scroller}>
-        <header className="crm-mtop is-always">
+        <header className="crm-bar">
           <Brand />
-          <UserChip actor={me.actor} onSignOut={loadMe} compact />
+          <Account actor={me.actor} onSignOut={loadMe} partner />
         </header>
         <main className="crm-main is-solo">
           <PartnerHome personId={me.actor.personId} />
@@ -194,151 +218,101 @@ export default function CrmScreen() {
 
   const back = (fallback: string) => (moves.current > 0 ? window.history.back() : go(fallback))
   const ctx = { meta, actor: me.actor, reloadMeta: () => void loadMeta(), go, back, openSearch: () => setSearching(true) }
-  let view
-  switch (route.name) {
-    case 'leads':
-      view = <Leads key={route.params.toString()} params={route.params} />
-      break
-    case 'lead':
-      view = route.id ? <LeadDetail key={route.id} id={route.id} /> : null
-      break
-    case 'pipeline':
-      view = <Pipeline />
-      break
-    case 'businesses':
-      view = <Businesses />
-      break
-    case 'referrers':
-      view = <Referrers />
-      break
-    case 'referrer':
-      view = route.id ? <ReferrerDetail key={route.id} id={route.id} /> : null
-      break
-    case 'followups':
-      view = <Followups key={route.params.get('view') ?? 'overdue'} view={route.params.get('view') ?? 'overdue'} />
-      break
-    case 'revenue':
-      view = <Revenue />
-      break
-    case 'analytics':
-      view = <Analytics />
-      break
-    case 'settings':
-      view = <Settings />
-      break
-    default:
-      view = <Overview />
-  }
-  const active = route.name === 'lead' ? 'leads' : route.name === 'referrer' ? 'referrers' : route.name
-  const nav = NAV.filter((n) => n.group !== 'admin' || me.actor?.role === 'admin')
-  const count = (key: string) => {
-    const c = badges.data
-    if (!c) return null
-    if (key === 'leads') return { n: c.counts.total, tone: 'muted' }
-    if (key === 'followups') {
-      const n = c.attention.find((a) => a.key === 'overdue')?.count ?? 0
-      return n ? { n, tone: 'red' } : null
+  const overdue = badges.data?.attention.find((a) => a.key === 'overdue')?.count ?? 0
+
+  let view: ReactNode
+  if (split) {
+    view = (
+      <div className="crm-split">
+        <div className="crm-split-list">
+          <Leads key={listParams.current.toString()} params={listParams.current} selected={route.name === 'lead' ? route.id : null} />
+        </div>
+        <SplitDetail id={route.name === 'lead' ? route.id : null} total={badges.data?.counts.total} />
+      </div>
+    )
+  } else {
+    switch (route.name) {
+      case 'leads':
+        view = <Leads key={route.params.toString()} params={route.params} />
+        break
+      case 'lead':
+        view = route.id ? <LeadDetail key={route.id} id={route.id} params={route.params} /> : null
+        break
+      case 'pipeline':
+        view = <Pipeline />
+        break
+      case 'businesses':
+        view = <Businesses />
+        break
+      case 'referrers':
+        view = <Referrers />
+        break
+      case 'referrer':
+        view = route.id ? <ReferrerDetail key={route.id} id={route.id} /> : null
+        break
+      case 'followups':
+        view = <Followups key={route.params.get('view') ?? 'overdue'} view={route.params.get('view') ?? 'overdue'} />
+        break
+      case 'revenue':
+        view = <Revenue />
+        break
+      case 'analytics':
+        view = <Analytics />
+        break
+      case 'settings':
+        view = <Settings />
+        break
+      default:
+        view = <Overview />
     }
-    return null
   }
-  const title = NAV.find((n) => n.key === active)?.label ?? 'Overview'
+  const tabOn = TAB_OF[route.name] ?? 'overview'
 
   return (
     <Crm.Provider value={ctx}>
-      <div className="crm" ref={scroller}>
-        <div className="crm-app">
-          <aside className="crm-side" aria-label="CRM">
-            <div className="crm-side-top">
-              <Brand />
-            </div>
-            <button type="button" className="crm-search-trigger" onClick={() => setSearching(true)}>
-              <Icon name="search" size={15} />
+      <div className={`crm${split ? ' is-split' : ''}`} ref={scroller}>
+        <header className="crm-bar">
+          <Brand />
+          <nav className="crm-tabs-top" aria-label="Sections">
+            {TABS.map((t) => (
+              <a key={t.key} href={`#/${t.key}`} className={tabOn === t.key ? 'is-on' : undefined} aria-current={tabOn === t.key ? 'page' : undefined}>
+                {t.label}
+                {t.key === 'overview' && overdue > 0 && <em className="crm-dot-count">{overdue}</em>}
+              </a>
+            ))}
+          </nav>
+          <div className="crm-bar-end">
+            <button type="button" className="crm-search-btn" onClick={() => setSearching(true)} aria-label="Search the CRM">
+              <Icon name="search" size={17} stroke={2} />
               <span>Search</span>
               <kbd>⌘K</kbd>
             </button>
-            <nav className="crm-nav" aria-label="CRM sections">
-              {(['main', 'insights', 'admin'] as const).map((g) => {
-                const items = nav.filter((n) => n.group === g)
-                if (!items.length) return null
-                return (
-                  <div className="crm-nav-group" key={g}>
-                    {g !== 'main' && <div className="crm-nav-label">{g === 'insights' ? 'Insights' : 'Workspace'}</div>}
-                    {items.map((n) => {
-                      const b = count(n.key)
-                      return (
-                        <a key={n.key} href={`#/${n.key}`} className={active === n.key ? 'is-on' : undefined} aria-current={active === n.key ? 'page' : undefined}>
-                          <Icon name={n.icon} size={16} />
-                          <span>{n.label}</span>
-                          {b && <em className={`crm-count is-${b.tone}`}>{b.n}</em>}
-                        </a>
-                      )
-                    })}
-                  </div>
-                )
-              })}
-            </nav>
-            <div className="crm-side-foot">
-              <UserChip actor={me.actor} onSignOut={loadMe} />
-            </div>
-          </aside>
-
-          <div className="crm-body">
-            <header className="crm-mtop">
-              <Brand small />
-              <span className="crm-mtop-title">{title}</span>
-              <button type="button" className="crm-iconbtn" aria-label="Search the CRM" onClick={() => setSearching(true)}>
-                <Icon name="search" size={19} />
-              </button>
-            </header>
-            <main className="crm-main">{view}</main>
+            <a className="crm-btn is-primary crm-add-btn" href="#/leads?new=1">
+              <Icon name="plus" size={16} stroke={2.4} />
+              <span>Add a business</span>
+            </a>
+            <a className="crm-add-icon" href="#/leads?new=1" aria-label="Add a business">
+              <Icon name="plus" size={20} stroke={2.6} />
+            </a>
+            <Account actor={me.actor} onSignOut={loadMe} open={menu} setOpen={setMenu} />
           </div>
-        </div>
+        </header>
+
+        <main className={`crm-main${split ? ' is-split' : ''}`}>{view}</main>
 
         <nav className="crm-tabbar" aria-label="Sections">
-          {TABS.map((t) => {
-            const b = count(t.key)
-            return (
-              <a key={t.key} href={`#/${t.key}`} className={active === t.key ? 'is-on' : undefined} aria-current={active === t.key ? 'page' : undefined}>
-                <span className="crm-tabbar-icon">
-                  <Icon name={t.icon} size={22} stroke={active === t.key ? 2.1 : 1.75} />
-                  {b && b.tone === 'red' && <em className="crm-tabbar-badge">{b.n}</em>}
-                </span>
-                <span>{t.label}</span>
-              </a>
-            )
-          })}
-          <button type="button" className={!TABS.some((t) => t.key === active) || more ? 'is-on' : undefined} onClick={() => setMore(true)} aria-haspopup="dialog">
-            <span className="crm-tabbar-icon">
-              <Icon name="grid" size={22} />
-            </span>
-            <span>More</span>
-          </button>
+          {TABS.map((t) => (
+            <a key={t.key} href={`#/${t.key}`} className={tabOn === t.key ? 'is-on' : undefined} aria-current={tabOn === t.key ? 'page' : undefined}>
+              <span className="crm-tabbar-icon">
+                <Icon name={t.icon} size={24} stroke={tabOn === t.key ? 2.2 : 1.8} />
+                {t.key === 'overview' && overdue > 0 && <em className="crm-tabbar-badge">{overdue}</em>}
+              </span>
+              <span>{t.label}</span>
+            </a>
+          ))}
         </nav>
 
-        {more && (
-          <div className="crm-sheet" role="dialog" aria-modal="true" aria-label="More" onClick={() => setMore(false)}>
-            <div className="crm-sheet-card crm-more" onClick={(e) => e.stopPropagation()}>
-              <div className="crm-sheet-grip" aria-hidden="true" />
-              <div className="crm-more-grid">
-                {nav
-                  .filter((n) => !TABS.some((t) => t.key === n.key))
-                  .map((n) => (
-                    <a key={n.key} href={`#/${n.key}`} className={active === n.key ? 'is-on' : undefined}>
-                      <span className="crm-more-icon">
-                        <Icon name={n.icon} size={20} />
-                      </span>
-                      {n.label}
-                    </a>
-                  ))}
-              </div>
-              <div className="crm-more-foot">
-                <UserChip actor={me.actor} onSignOut={loadMe} />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {searching && <Palette onClose={() => setSearching(false)} nav={nav} />}
+        {searching && <Search onClose={() => setSearching(false)} admin={me.actor.role === 'admin'} />}
       </div>
     </Crm.Provider>
   )
@@ -346,43 +320,99 @@ export default function CrmScreen() {
 
 /* ------------------------------------------------------------- chrome */
 
-function Brand({ small = false }: { small?: boolean }) {
+function Brand() {
   return (
-    <a className={`crm-brand${small ? ' is-small' : ''}`} href="#/overview" aria-label="BEASTY CRM, overview">
-      <span className="crm-brand-mark" aria-hidden="true">
-        B
-      </span>
-      <span className="crm-brand-name">
-        BEASTY <span>CRM</span>
-      </span>
+    <a className="crm-brand" href="#/overview" aria-label="BEASTY CRM, today">
+      <span className="crm-brand-left">BEASTY</span>
+      <span className="crm-brand-right">CRM</span>
     </a>
   )
 }
 
-function UserChip({ actor, onSignOut, compact = false }: { actor: Actor; onSignOut: () => void; compact?: boolean }) {
-  const signOut = async () => {
-    await api('/api/crm/session', { method: 'DELETE' }).catch(() => {})
-    onSignOut()
-  }
+/** The right-hand pane on a wide screen: the open business, or a word on what to do. */
+function SplitDetail({ id, total }: { id: string | null; total?: number }) {
+  const pane = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    if (pane.current) pane.current.scrollTop = 0
+  }, [id])
   return (
-    <div className={`crm-user${compact ? ' is-compact' : ''}`}>
-      <Avatar name={actor.name} size={30} kind="person" />
-      <span className="crm-user-text">
-        <strong>{actor.name}</strong>
-        <span className="crm-role">{actor.role}</span>
-      </span>
-      {actor.via === 'operator' && (
-        <button type="button" className="crm-iconbtn" onClick={signOut} aria-label="Sign out" title="Sign out">
-          <Icon name="logout" size={16} />
-        </button>
+    <div className="crm-split-detail" ref={pane}>
+      {id ? (
+        <LeadDetail key={id} id={id} params={new URLSearchParams(window.location.hash.split('?')[1] ?? '')} />
+      ) : (
+        <div className="crm-split-empty">
+          <Icon name="store" size={30} />
+          <p>Pick a business to see where it is and what happens next.</p>
+          {total != null && <span>{total} businesses in the book</span>}
+        </div>
       )}
     </div>
   )
 }
 
-/* ------------------------------------------------------------- ⌘K palette */
+/** Your name, and a menu with the places that are not tabs. */
+function Account({ actor, onSignOut, open = false, setOpen, partner = false }: { actor: Actor; onSignOut: () => void; open?: boolean; setOpen?: (v: boolean) => void; partner?: boolean }) {
+  const signOut = async () => {
+    await api('/api/crm/session', { method: 'DELETE' }).catch(() => {})
+    onSignOut()
+  }
+  if (partner) {
+    return (
+      <div className="crm-account is-static">
+        <Avatar name={actor.name} size={34} />
+        <span className="crm-account-name">
+          <strong>{actor.name}</strong>
+          <span>Partner</span>
+        </span>
+      </div>
+    )
+  }
+  const links: [string, string, IconName][] = [
+    ['#/pipeline', 'Board', 'kanban'],
+    ['#/followups?view=upcoming', 'Reminders', 'bell'],
+    ['#/businesses', 'Grouped businesses', 'building'],
+    ['#/analytics', "How it's going", 'chart'],
+  ]
+  if (actor.role === 'admin') links.push(['#/settings', 'Settings', 'settings'])
+  return (
+    <div className="crm-account">
+      <button type="button" className="crm-account-btn" onClick={() => setOpen?.(!open)} aria-expanded={open} aria-haspopup="menu" aria-label={`${actor.name}'s menu`}>
+        <Avatar name={actor.name} size={36} />
+      </button>
+      {open && (
+        <>
+          <div className="crm-menu-scrim" onClick={() => setOpen?.(false)} />
+          <div className="crm-menu" role="menu">
+            <div className="crm-menu-who">
+              <Avatar name={actor.name} size={40} />
+              <span>
+                <strong>{actor.name}</strong>
+                <span>{actor.role === 'admin' ? 'Admin' : 'Team'}</span>
+              </span>
+            </div>
+            {links.map(([href, label, icon]) => (
+              <a key={href} href={href} role="menuitem" onClick={() => setOpen?.(false)}>
+                <Icon name={icon} size={18} />
+                {label}
+              </a>
+            ))}
+            {actor.via === 'operator' && (
+              <button type="button" role="menuitem" onClick={() => void signOut()}>
+                <Icon name="logout" size={18} />
+                Sign out
+              </button>
+            )}
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
 
-function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
+/* -------------------------------------------------------------- search */
+
+function Search({ onClose, admin }: { onClose: () => void; admin: boolean }) {
+  const { go } = useCrm()
   const [q, setQ] = useState('')
   const [debounced, setDebounced] = useState('')
   const [sel, setSel] = useState(0)
@@ -397,7 +427,10 @@ function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
   const { data } = useApi<{ leads: LeadSummary[]; people: { id: string; name: string; slug: string; leads: number }[] }>(
     debounced.length >= 2 ? `/api/crm/search?q=${encodeURIComponent(debounced)}` : null,
   )
-  const pages = useMemo(() => nav.filter((n) => !q.trim() || n.label.toLowerCase().includes(q.trim().toLowerCase())), [nav, q])
+  const pages = useMemo(
+    () => PAGES.filter((n) => (admin || n.key !== 'settings') && (!q.trim() || n.label.toLowerCase().includes(q.trim().toLowerCase()))),
+    [q, admin],
+  )
   const items: { key: string; hash: string; node: JSX.Element }[] = []
   if (debounced.length >= 2 && data) {
     for (const l of data.leads)
@@ -406,10 +439,10 @@ function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
         hash: `#/lead/${l.id}`,
         node: (
           <>
-            <Avatar name={l.name} icon={l.icon} size={28} />
-            <span className="crm-pal-text">
+            <Tile name={l.name} icon={l.icon} stage={l.stage} size={40} />
+            <span className="crm-found-text">
               <strong>{l.name}</strong>
-              <span>{[l.city, l.category].filter(Boolean).join(' · ')}</span>
+              <span>{placeLine(l.category, l.city)}</span>
             </span>
             <StagePill stage={l.stage} />
           </>
@@ -421,11 +454,11 @@ function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
         hash: `#/referrer/${p.id}`,
         node: (
           <>
-            <Avatar name={p.name} size={28} kind="person" />
-            <span className="crm-pal-text">
+            <Avatar name={p.name} size={36} />
+            <span className="crm-found-text">
               <strong>{p.name}</strong>
               <span>
-                Referrer · {p.leads} lead{p.leads === 1 ? '' : 's'}
+                Sent {p.leads} business{p.leads === 1 ? '' : 'es'}
               </span>
             </span>
           </>
@@ -438,12 +471,11 @@ function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
       hash: `#/${n.key}`,
       node: (
         <>
-          <span className="crm-pal-icon">
-            <Icon name={n.icon} size={16} />
+          <span className="crm-found-icon">
+            <Icon name={n.icon} size={18} />
           </span>
-          <span className="crm-pal-text">
+          <span className="crm-found-text">
             <strong>{n.label}</strong>
-            <span>Go to page</span>
           </span>
         </>
       ),
@@ -456,17 +488,17 @@ function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
     e.preventDefault()
     const it = items[sel]
     if (it) pick(it.hash)
-    else if (q.trim()) pick(`#/leads?q=${encodeURIComponent(q.trim())}`)
+    else if (q.trim()) go(`leads?q=${encodeURIComponent(q.trim())}`)
   }
   return (
-    <div className="crm-palette-wrap" role="dialog" aria-modal="true" aria-label="Search" onClick={onClose}>
+    <div className="crm-overlay" role="dialog" aria-modal="true" aria-label="Search" onClick={onClose}>
       <form className="crm-palette" onSubmit={submit} onClick={(e) => e.stopPropagation()}>
         <div className="crm-search">
-          <Icon name="search" size={18} />
+          <Icon name="search" size={20} stroke={2} />
           <input
             ref={input}
             type="search"
-            placeholder="Search businesses, phones, emails, @handles, people"
+            placeholder="A business, phone number, @instagram or person"
             value={q}
             onChange={(e) => {
               setQ(e.target.value)
@@ -485,27 +517,17 @@ function Palette({ onClose, nav }: { onClose: () => void; nav: NavItem[] }) {
             }}
             aria-label="Search the CRM"
           />
-          <kbd onClick={onClose}>Esc</kbd>
+          <button type="button" className="crm-search-close" onClick={onClose}>
+            Cancel
+          </button>
         </div>
         <div className="crm-search-results" role="listbox">
-          {debounced.length >= 2 && data && !data.leads.length && !data.people.length && <div className="crm-search-none">No businesses or people match “{debounced}”.</div>}
+          {debounced.length >= 2 && data && !data.leads.length && !data.people.length && <div className="crm-search-none">Nothing matches “{debounced}”.</div>}
           {items.map((it, i) => (
             <button type="button" key={it.key} role="option" aria-selected={i === sel} className={i === sel ? 'is-sel' : undefined} onMouseEnter={() => setSel(i)} onClick={() => pick(it.hash)}>
               {it.node}
             </button>
           ))}
-        </div>
-        <div className="crm-palette-foot">
-          <span>
-            <kbd>↑</kbd>
-            <kbd>↓</kbd> to move
-          </span>
-          <span>
-            <kbd>↵</kbd> to open
-          </span>
-          <span>
-            <kbd>Esc</kbd> to close
-          </span>
         </div>
       </form>
     </div>
@@ -541,16 +563,16 @@ function SignIn({ member, onDone }: { member: { name: string } | null; onDone: (
   )
   return (
     <div className="crm crm-signin">
-      <form className="crm-card crm-signin-card" onSubmit={submit}>
+      <form className="crm-signin-card" onSubmit={submit}>
         <Brand />
-        <h1>Welcome back</h1>
+        <h1>The BEASTY book</h1>
         <p>{note}</p>
-        <label>
-          Operator key
+        <label className="crm-field">
+          <span>Operator key</span>
           <input type="password" autoComplete="current-password" value={token} onChange={(e) => setToken(e.target.value)} />
         </label>
         {error && <div className="crm-error">{error}</div>}
-        <button type="submit" className="crm-btn crm-btn-primary" disabled={busy || token.length < 8}>
+        <button type="submit" className="crm-btn is-primary is-big" disabled={busy || token.length < 8}>
           {busy ? 'Checking…' : 'Open the CRM'}
         </button>
         <a className="crm-link" href="/">

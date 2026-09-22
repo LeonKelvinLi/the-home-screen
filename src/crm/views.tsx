@@ -1,38 +1,41 @@
 /*
-  The dashboards: Overview (with the attention queue), Pipeline, Businesses,
-  Follow-ups, Revenue and Analytics. Every number is a button when there is a
-  list behind it, so a count is always one tap from the leads it counts.
+  Today (what to do now), the Board, grouped businesses, Reminders, and Money
+  with How it's going. Every row that names a business opens it, and every
+  number says what it counts in words.
 */
 import { useState } from 'react'
-import type { DragEvent } from 'react'
+import type { DragEvent, ReactNode } from 'react'
 import { api } from './api'
 import type { LeadSummary, ReferrerMetrics } from './api'
 import {
-  Avatar,
-  ContactActions,
   Empty,
   Failure,
   Loading,
-  PageHead,
+  PageTitle,
   PersonChip,
+  ReachLink,
   Section,
+  Segmented,
   StagePill,
   Stat,
-  ago,
-  dateTime,
+  Tile,
+  bestReach,
   durationLabel,
   endOfToday,
   money,
   pct,
+  plural,
   stageTone,
   useApi,
   useCrm,
+  whenLabel,
 } from './ui'
+import type { ContactKind } from './ui'
 import { Icon } from './icons'
-import type { IconName } from './icons'
-import { STAGES, opportunityLabel, stageLabel } from './model'
+import { STAGES } from './model'
+import { nextShort, placeLine, stageName } from './steps'
 
-/* ---------------------------------------------------------------- overview */
+/* ------------------------------------------------------------------ today */
 
 interface OverviewData {
   counts: Record<string, number>
@@ -40,13 +43,7 @@ interface OverviewData {
   attention: { key: string; count: number; text: string }[]
 }
 
-const ATTN_ICON: Record<string, IconName> = {
-  uncontacted_referrals: 'share',
-  overdue: 'clock',
-  interested_no_next: 'flame',
-  stale_proposals: 'file',
-  missing_contact: 'alert',
-}
+type LeadList = { total: number; leads: LeadSummary[] }
 
 const greeting = () => {
   const h = new Date().getHours()
@@ -54,134 +51,137 @@ const greeting = () => {
 }
 
 export function Overview() {
-  const { go, actor } = useCrm()
-  const { data, error, reload } = useApi<OverviewData>('/api/crm/overview')
-  const today = useApi<{ followups: FollowupItem[] }>(`/api/crm/followups?view=due_today&end=${endOfToday()}`)
-  const pipe = useApi<{ stages: { stage: string; count: number; valueCents: number }[] }>('/api/crm/pipeline')
+  const { actor } = useCrm()
+  const end = endOfToday()
+  const ov = useApi<OverviewData>('/api/crm/overview')
+  const late = useApi<{ followups: FollowupItem[] }>(`/api/crm/followups?view=overdue&end=${end}`)
+  const today = useApi<{ followups: FollowupItem[] }>(`/api/crm/followups?view=due_today&end=${end}`)
+  const sent = useApi<LeadList>('/api/crm/leads?attention=uncontacted_referrals&limit=5')
+  const warm = useApi<LeadList>('/api/crm/leads?attention=interested_no_next&limit=5')
+  const stale = useApi<LeadList>('/api/crm/leads?attention=stale_proposals&limit=5')
+  const ready = useApi<LeadList>('/api/crm/leads?stage=ready_to_contact&limit=5&sort=updated')
+  const info = useApi<LeadList>('/api/crm/leads?stage=need_contact_info,new_lead&limit=4&sort=updated')
   const refs = useApi<{ referrers: ReferrerMetrics[] }>('/api/crm/referrers?period=all')
-  if (error) return <Failure error={error} retry={reload} />
-  if (!data) return <Loading />
-  const c = data.counts
-  const attention = data.attention.filter((a) => a.count > 0)
-  const openAttention = (key: string) => (key === 'overdue' ? go('followups?view=overdue') : go(`leads?attention=${key}`))
-  const date = new Date().toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' })
+  const reload = () => {
+    for (const x of [ov, late, today, sent, warm, stale, ready, info]) void x.reload()
+  }
+  if (ov.error) return <Failure error={ov.error} retry={ov.reload} />
+  if (!ov.data) return <Loading />
+  const c = ov.data.counts
+  const due = [...(late.data?.followups ?? []), ...(today.data?.followups ?? [])]
+  const lateN = late.data?.followups.length ?? 0
+  const warmLeads = [...(warm.data?.leads ?? []), ...(stale.data?.leads ?? [])]
   const first = actor.name.split(' ')[0]
-  const bar = (pipe.data?.stages ?? []).filter((s) => s.count > 0 && stageTone(s.stage) !== 'gray' && s.stage !== 'onboarding' && s.stage !== 'active_customer')
-  const barTotal = bar.reduce((n, s) => n + s.count, 0) || 1
-  const top = (refs.data?.referrers ?? []).filter((r) => r.leads > 0).slice(0, 5)
+
+  const said: string[] = []
+  if (due.length) said.push(`${due.length === 1 ? 'One reminder is' : `${due.length} reminders are`} due${lateN ? `, ${lateN === due.length ? (lateN === 1 ? 'and it is late' : 'all late') : `${lateN} late`}` : ''}`)
+  if (sent.data?.total) said.push(`${plural(sent.data.total, 'business someone sent is', 'businesses someone sent are')} waiting for a first hello`)
+  if (c.readyToContact) said.push(`${plural(c.readyToContact, 'business is', 'businesses are')} ready for a first hello`)
+  if (!said.length) said.push('Nothing is waiting on you')
+
+  const top = (refs.data?.referrers ?? []).filter((r) => r.id !== 'p_glenn' && r.leads > 0).slice(0, 4)
+
   return (
-    <div className="crm-view">
-      <PageHead
-        title={`${greeting()}, ${first}`}
-        sub={`${date} · here is what needs you today.`}
-        actions={
-          <button type="button" className="crm-btn crm-btn-primary" onClick={() => go('leads?new=1')}>
-            <Icon name="plus" size={16} />
-            New lead
-          </button>
-        }
-      />
-      <div className="crm-kpis">
-        <Stat label="Pipeline value" value={money(data.money.pipelineCents)} sub="open leads, at their quote" icon="target" onClick={() => go('pipeline')} />
-        <Stat label="One-time revenue" value={money(data.money.oneTimeCents)} sub={`${c.dealsWon} deal${c.dealsWon === 1 ? '' : 's'} won`} icon="dollar" onClick={() => go('revenue')} />
-        <Stat label="MRR" value={money(data.money.mrrCents)} sub={`${money(data.money.arrCents)} a year`} icon="trending" onClick={() => go('revenue')} />
-        <Stat label="CRM leads" value={c.total} sub={`${c.newThisWeek} new this week, not counting imports`} icon="users" onClick={() => go('leads')} />
-      </div>
-
-      <div className="crm-dash">
-        <div className="crm-dash-main">
-          <Section title="Needs attention">
-            {attention.length ? (
-              <div className="crm-card crm-attention">
-                {attention.map((a) => (
-                  <button type="button" key={a.key} className={`crm-attn crm-attn-${a.key}`} onClick={() => openAttention(a.key)}>
-                    <span className="crm-attn-icon">
-                      <Icon name={ATTN_ICON[a.key] ?? 'alert'} size={16} />
-                    </span>
-                    <span className="crm-attn-text">
-                      <strong>{a.count}</strong> {a.text}
-                    </span>
-                    <Icon name="chevronRight" size={16} className="crm-attn-go" />
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <Empty icon="checkCircle">Nothing is waiting on anyone.</Empty>
-            )}
+    <div className="crm-view crm-today">
+      <PageTitle title="Today" sub={`${greeting()}, ${first}. ${said.join('. ')}.`} />
+      <div className="crm-today-grid">
+        <div className="crm-today-main">
+          {due.length > 0 && (
+            <Section title="Do these first" className="crm-due-now">
+              <FollowupList items={due} onChange={reload} />
+            </Section>
+          )}
+          {!!sent.data?.leads.length && (
+            <Section title="Sent by someone, waiting for a hello" action={sent.data.total > 5 ? <a href="#/leads?attention=uncontacted_referrals">See all {sent.data.total}</a> : undefined}>
+              <LeadRows leads={sent.data.leads} why={(l) => `Sent by ${l.referrer?.name ?? 'someone'}. ${placeLine(l.category, l.city)}`} />
+            </Section>
+          )}
+          {warmLeads.length > 0 && (
+            <Section title="Keep these warm">
+              <LeadRows leads={warmLeads} why={(l) => (l.stage === 'proposal_sent' ? 'Quote sent, and no word for days' : 'Interested, with no reminder set')} />
+            </Section>
+          )}
+          <Section title="Ready for a first hello" action={c.readyToContact > 5 ? <a href="#/leads?step=hello">See all {c.readyToContact}</a> : undefined}>
+            {!ready.data ? <Loading /> : ready.data.leads.length ? <LeadRows leads={ready.data.leads} /> : <Empty icon="checkCircle">Everyone ready has been reached.</Empty>}
           </Section>
-
-          <Section title="Pipeline" action={<a href="#/pipeline">Open the board</a>}>
-            <div className="crm-card crm-pipe">
-              {bar.length > 0 && (
-                <div className="crm-pipe-bar" aria-hidden="true">
-                  {bar.map((s) => (
-                    <span key={s.stage} className={`crm-tone-${stageTone(s.stage)}`} style={{ flexGrow: s.count / barTotal }} title={`${stageLabel(s.stage)}: ${s.count}`} />
-                  ))}
-                </div>
-              )}
-              <div className="crm-stats">
-                <Stat label="Need contact info" value={c.needContactInfo} onClick={() => go('leads?stage=need_contact_info')} tone={c.needContactInfo ? 'warn' : undefined} />
-                <Stat label="Ready to contact" value={c.readyToContact} onClick={() => go('leads?stage=ready_to_contact')} />
-                <Stat label="Contacted" value={c.contacted} onClick={() => go('leads?stage=contacted,replied')} />
-                <Stat label="Interested" value={c.interested} onClick={() => go('leads?stage=interested,meeting')} />
-                <Stat label="Proposals out" value={c.proposalsOutstanding} onClick={() => go('leads?stage=proposal_sent')} />
-                <Stat label="Deals won" value={c.dealsWon} onClick={() => go('leads?stage=won,onboarding,active_customer')} tone="good" />
-                <Stat label="Need a website" value={c.needWebsites} onClick={() => go('leads?type=website')} />
-                <Stat label="New this week" value={c.newThisWeek} onClick={() => go(`leads?since=${Date.now() - 7 * 864e5}&imported=0&sort=created`)} />
-              </div>
-            </div>
+          <Section title="Find their phone or Instagram" action={(c.needContactInfo ?? 0) > 4 ? <a href="#/leads?step=info">See all {c.needContactInfo}</a> : undefined}>
+            {!info.data ? (
+              <Loading />
+            ) : info.data.leads.length ? (
+              <LeadRows leads={info.data.leads} why={(l) => `${placeLine(l.category, l.city)}. No phone, email or Instagram yet`} />
+            ) : (
+              <Empty icon="checkCircle">Every business has a way to reach it.</Empty>
+            )}
           </Section>
         </div>
 
-        <div className="crm-dash-side">
-          <Section title="Due today" action={<a href="#/followups?view=due_today">All follow-ups</a>}>
-            {!today.data ? (
-              <Loading />
-            ) : today.data.followups.length ? (
-              <FollowupList
-                items={today.data.followups.slice(0, 6)}
-                onChange={() => {
-                  void today.reload()
-                  void reload()
-                }}
-              />
-            ) : (
-              <Empty icon="calendar">No follow-ups due for the rest of today.</Empty>
-            )}
+        <aside className="crm-today-side">
+          <Section title="So far">
+            <div className="crm-glance">
+              <Stat label="Earned" value={money(ov.data.money.oneTimeCents)} sub={plural(c.dealsWon ?? 0, 'sale', 'sales')} />
+              <Stat label="Monthly plans" value={money(ov.data.money.mrrCents)} sub={`${money(ov.data.money.arrCents)} a year`} />
+              <Stat label="Open quotes" value={money(ov.data.money.pipelineCents)} sub="if every open business says yes" />
+            </div>
           </Section>
-          <Section title="Top referrers" action={<a href="#/referrers">Leaderboard</a>}>
+          <Section title="Who's sending businesses" action={<a href="#/referrers">People</a>}>
             {!refs.data ? (
               <Loading />
             ) : top.length ? (
-              <ul className="crm-card crm-list crm-toprefs">
-                {top.map((r, i) => (
-                  <li key={r.id} className="crm-row">
-                    <span className="crm-rank">{i + 1}</span>
-                    <a className="crm-row-main is-inline" href={`#/referrer/${r.id}`}>
-                      <PersonChip id={r.id} name={r.name} />
+              <ul className="crm-group">
+                {top.map((r) => (
+                  <li key={r.id}>
+                    <a className="crm-row" href={`#/referrer/${r.id}`}>
+                      <PersonChip id={r.id} name={r.name} size={32} />
+                      <span className="crm-row-end">
+                        {plural(r.leads, 'sent', 'sent')}
+                        {r.won ? `, ${r.won} bought` : ''}
+                      </span>
                     </a>
-                    <span className="crm-row-num">
-                      {r.leads}
-                      <small> leads</small>
-                    </span>
-                    <span className="crm-row-num is-good">
-                      {r.won}
-                      <small> won</small>
-                    </span>
                   </li>
                 ))}
               </ul>
             ) : (
-              <Empty icon="share">Nobody has referred a business yet.</Empty>
+              <Empty icon="share">Nobody else has sent a business yet. Their link is on their page under People.</Empty>
             )}
           </Section>
-        </div>
+        </aside>
       </div>
     </div>
   )
 }
 
-/* ---------------------------------------------------------------- pipeline */
+/** Businesses, each with the one button that moves it along. */
+function LeadRows({ leads, why }: { leads: LeadSummary[]; why?: (l: LeadSummary) => string }) {
+  return (
+    <ul className="crm-group">
+      {leads.map((l) => {
+        const kind = bestReach(l.channels)
+        return (
+          <li key={l.id} className="crm-row">
+            <a className="crm-row-main" href={`#/lead/${l.id}`}>
+              <Tile name={l.name} icon={l.icon} stage={l.stage} size={52} />
+              <span className="crm-row-text">
+                <strong>{l.name}</strong>
+                <span>{why ? why(l) : placeLine(l.category, l.city)}</span>
+              </span>
+            </a>
+            {kind ? (
+              <ReachLink c={l.channels} kind={kind} className="crm-pill-act">
+                <span>{kind === 'CALL' ? 'Call' : kind === 'INSTAGRAM_DM' ? 'DM' : 'Email'}</span>
+              </ReachLink>
+            ) : (
+              <a className="crm-pill-act" href={`#/lead/${l.id}?info=1`}>
+                Add info
+              </a>
+            )}
+          </li>
+        )
+      })}
+    </ul>
+  )
+}
+
+/* ------------------------------------------------------------------ board */
 
 const BOARD = ['need_contact_info', 'ready_to_contact', 'contacted', 'replied', 'interested', 'meeting', 'proposal_sent', 'won']
 
@@ -191,7 +191,7 @@ export function Pipeline() {
   const summary = useApi<{ stages: { stage: string; count: number; valueCents: number }[] }>(`/api/crm/pipeline?_=${bump}`)
   const move = async (id: string, from: string, to: string, name: string) => {
     if (from === to) return
-    if (to === 'won' && !window.confirm(`Mark ${name} won with no deal? Revenue is counted from deals: open the lead to record what they paid.`)) return
+    if (to === 'won' && !window.confirm(`Mark ${name} as a customer with no sale? Money is counted from sales: open the business to record what they paid.`)) return
     try {
       await api(`/api/crm/leads/${id}/stage`, { method: 'POST', body: { stage: to } })
       setBump((b) => b + 1)
@@ -199,27 +199,13 @@ export function Pipeline() {
       window.alert((e as Error).message)
     }
   }
-  const total = summary.data?.stages.filter((s) => BOARD.includes(s.stage) && s.stage !== 'won').reduce((n, s) => n + s.valueCents, 0) ?? 0
+  const open = summary.data?.stages.filter((s) => BOARD.includes(s.stage) && s.stage !== 'won').reduce((n, s) => n + s.valueCents, 0) ?? 0
   return (
     <div className="crm-view is-wide">
-      <PageHead
-        title="Pipeline"
-        sub={
-          <>
-            Drag a card to move it; every move is recorded in the lead&rsquo;s history. <strong>{money(total)}</strong> open.
-          </>
-        }
-      />
+      <PageTitle title="Board" sub={`Drag a business to move it; every move goes in its story. ${money(open)} in open quotes.`} />
       <div className="crm-board">
         {BOARD.map((s) => (
-          <Column
-            key={`${s}-${bump}`}
-            stage={s}
-            summary={summary.data?.stages.find((x) => x.stage === s)}
-            dragging={dragging}
-            onDrag={setDragging}
-            onMove={move}
-          />
+          <Column key={`${s}-${bump}`} stage={s} summary={summary.data?.stages.find((x) => x.stage === s)} dragging={dragging} onDrag={setDragging} onMove={move} />
         ))}
       </div>
     </div>
@@ -239,20 +225,19 @@ function Column({
   onDrag: (d: { id: string; from: string } | null) => void
   onMove: (id: string, from: string, to: string, name: string) => void
 }) {
-  const { go } = useCrm()
   const [over, setOver] = useState(false)
-  const { data, error } = useApi<{ total: number; leads: LeadSummary[] }>(`/api/crm/leads?stage=${stage}&limit=30&sort=next`)
+  const { data, error } = useApi<LeadList>(`/api/crm/leads?stage=${stage}&limit=30&sort=next`)
   const drop = (e: DragEvent) => {
     e.preventDefault()
     setOver(false)
     const id = e.dataTransfer.getData('text/plain')
     const lead = data?.leads.find((l) => l.id === id)
-    if (dragging && id) onMove(id, dragging.from, stage, lead?.name ?? 'this lead')
+    if (dragging && id) onMove(id, dragging.from, stage, lead?.name ?? 'this business')
     onDrag(null)
   }
   return (
     <div
-      className={`crm-col${over && dragging?.from !== stage ? ' is-over' : ''}`}
+      className={`crm-col is-${stageTone(stage)}${over && dragging?.from !== stage ? ' is-over' : ''}`}
       onDragOver={(e) => {
         e.preventDefault()
         setOver(true)
@@ -261,18 +246,17 @@ function Column({
       onDrop={drop}
     >
       <div className="crm-col-head">
-        <span className={`crm-col-dot crm-tone-${stageTone(stage)}`} aria-hidden="true" />
-        <span className="crm-col-name">{stageLabel(stage)}</span>
-        <button type="button" className="crm-col-count" onClick={() => go(`leads?stage=${stage}`)} aria-label={`All ${stageLabel(stage)} leads`}>
-          {summary?.count ?? data?.total ?? '…'}
-        </button>
-        {!!summary?.valueCents && <span className="crm-col-value">{money(summary.valueCents)}</span>}
+        <a className="crm-col-name" href={`#/leads?stage=${stage}`}>
+          {stageName(stage)}
+        </a>
+        <span className="crm-col-count">{summary?.count ?? data?.total ?? '…'}</span>
       </div>
+      {!!summary?.valueCents && <div className="crm-col-value">{money(summary.valueCents)} quoted</div>}
       <div className="crm-col-body">
         {error && <Failure error={error} />}
         {data?.leads.map((l) => (
           <div
-            className="crm-pcard"
+            className="crm-card-biz"
             key={l.id}
             draggable
             onDragStart={(e) => {
@@ -282,47 +266,35 @@ function Column({
             }}
             onDragEnd={() => onDrag(null)}
           >
-            <div className="crm-pcard-top">
-              <Avatar name={l.name} icon={l.icon} size={28} />
-              <a href={`#/lead/${l.id}`} className="crm-pcard-name">
-                {l.name}
-              </a>
-            </div>
-            <div className="crm-pcard-meta">
-              {[l.city, opportunityLabel(l.opportunityType)].filter(Boolean).join(' · ')}
-            </div>
-            <div className="crm-pcard-foot">
-              {l.potentialCents ? <span className="crm-pcard-value">{money(l.potentialCents)}</span> : <span />}
-              {l.nextFollowupAt ? (
-                <span className={`crm-due${l.nextFollowupAt < Date.now() ? ' is-late' : ''}`}>
-                  <Icon name="clock" size={12} />
-                  {ago(l.nextFollowupAt)}
-                </span>
-              ) : null}
-              {l.assignee && <Avatar name={l.assignee.name} size={20} kind="person" />}
-            </div>
+            <a className="crm-card-biz-top" href={`#/lead/${l.id}`}>
+              <Tile name={l.name} icon={l.icon} stage={l.stage} size={40} />
+              <span>
+                <strong>{l.name}</strong>
+                <span>{l.city === 'BEASTY pages' ? 'BEASTY pages' : l.city}</span>
+              </span>
+            </a>
+            {l.nextFollowupAt ? <span className={`crm-when${l.nextFollowupAt < Date.now() ? ' is-late' : ''}`}>{whenLabel(l.nextFollowupAt)}</span> : null}
             <select aria-label={`Move ${l.name}`} value={l.stage} onChange={(e) => onMove(l.id, stage, e.target.value, l.name)}>
               {STAGES.map((s) => (
                 <option key={s.key} value={s.key}>
-                  {s.label}
+                  {stageName(s.key)}
                 </option>
               ))}
             </select>
           </div>
         ))}
         {data && data.total > data.leads.length && (
-          <button type="button" className="crm-col-more" onClick={() => go(`leads?stage=${stage}`)}>
+          <a className="crm-col-more" href={`#/leads?stage=${stage}`}>
             {data.total - data.leads.length} more
-            <Icon name="arrowRight" size={14} />
-          </button>
+          </a>
         )}
-        {data && !data.total && <div className="crm-col-empty">Drop a lead here</div>}
+        {data && !data.total && <div className="crm-col-empty">Nobody here yet</div>}
       </div>
     </div>
   )
 }
 
-/* -------------------------------------------------------------- businesses */
+/* ------------------------------------------------------ grouped businesses */
 
 interface Family {
   familyKey: string
@@ -339,7 +311,6 @@ interface Family {
 }
 
 export function Businesses() {
-  const { go } = useCrm()
   const [q, setQ] = useState('')
   const [page, setPage] = useState(0)
   const { data, error, reload } = useApi<{ total: number; families: Family[] }>(
@@ -347,54 +318,45 @@ export function Businesses() {
   )
   return (
     <div className="crm-view">
-      <PageHead title="Businesses" sub="One row per business: locations of the same business roll up. Open one to see each location's lead." />
-      <div className="crm-toolbar">
-        <label className="crm-searchbox">
-          <Icon name="search" size={15} />
-          <input type="search" placeholder="Filter businesses" value={q} onChange={(e) => { setQ(e.target.value); setPage(0) }} aria-label="Filter businesses" />
-        </label>
-      </div>
+      <PageTitle title="Grouped businesses" sub="Every location of the same business together. Open one to see each location." />
+      <label className="crm-find">
+        <Icon name="search" size={17} stroke={2} />
+        <input
+          type="search"
+          placeholder="Find a business"
+          value={q}
+          onChange={(e) => {
+            setQ(e.target.value)
+            setPage(0)
+          }}
+          aria-label="Find a business"
+        />
+      </label>
       {error && <Failure error={error} retry={reload} />}
       {!data ? (
         <Loading />
       ) : (
-        <div className="crm-table-wrap">
-          <table className="crm-table">
-            <thead>
-              <tr>
-                <th>Business</th>
-                <th className="num">Locations</th>
-                <th>Cities</th>
-                <th className="num">Open</th>
-                <th className="num">Won</th>
-                <th className="num">Pipeline</th>
-                <th className="num">Revenue</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.families.map((f) => (
-                <tr key={f.familyKey} className="is-link" onClick={() => go(`leads?family=${encodeURIComponent(f.familyKey)}`)}>
-                  <td data-label="Business">
-                    <span className="crm-cell-org">
-                      <Avatar name={f.name} icon={f.icon} size={28} />
-                      <strong>{f.name}</strong>
+        <>
+          <ul className="crm-group">
+            {data.families.map((f) => (
+              <li key={f.familyKey}>
+                <a className="crm-row" href={`#/leads?family=${encodeURIComponent(f.familyKey)}`}>
+                  <Tile name={f.name} icon={f.icon} size={48} stage={f.won ? 'won' : undefined} />
+                  <span className="crm-row-text">
+                    <strong>{f.name}</strong>
+                    <span>
+                      {f.locations > 1 ? `${f.locations} locations: ${f.cities}` : f.cities}
                     </span>
-                  </td>
-                  <td data-label="Locations" className="num">{f.locations}</td>
-                  <td data-label="Cities" className="crm-muted">{f.cities}</td>
-                  <td data-label="Open" className="num">{f.open}</td>
-                  <td data-label="Won" className="num">{f.won}</td>
-                  <td data-label="Pipeline" className="num">{money(f.pipelineCents)}</td>
-                  <td data-label="Revenue" className="num">
-                    {money(f.oneTimeCents)}
-                    {f.mrrCents ? <small> + {money(f.mrrCents)}/mo</small> : null}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                  </span>
+                  <span className="crm-row-end">
+                    {f.oneTimeCents ? `${money(f.oneTimeCents)} earned` : f.pipelineCents ? `${money(f.pipelineCents)} quoted` : ''}
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
           <Pager total={data.total} page={page} size={50} onPage={setPage} />
-        </div>
+        </>
       )}
     </div>
   )
@@ -402,25 +364,25 @@ export function Businesses() {
 
 export function Pager({ total, page, size, onPage }: { total: number; page: number; size: number; onPage: (p: number) => void }) {
   const pages = Math.ceil(total / size)
-  if (pages <= 1) return <div className="crm-pager">{total} total</div>
+  if (pages <= 1) return <div className="crm-pager">{plural(total, 'business', 'businesses')}</div>
   return (
     <div className="crm-pager">
-      <button type="button" className="crm-btn crm-btn-sm" disabled={page === 0} onClick={() => onPage(page - 1)}>
-        <Icon name="chevronLeft" size={14} />
+      <button type="button" className="crm-btn" disabled={page === 0} onClick={() => onPage(page - 1)}>
+        <Icon name="chevronLeft" size={16} />
         Previous
       </button>
       <span>
         {page * size + 1}–{Math.min(total, (page + 1) * size)} of {total}
       </span>
-      <button type="button" className="crm-btn crm-btn-sm" disabled={page >= pages - 1} onClick={() => onPage(page + 1)}>
+      <button type="button" className="crm-btn" disabled={page >= pages - 1} onClick={() => onPage(page + 1)}>
         Next
-        <Icon name="chevronRight" size={14} />
+        <Icon name="chevronRight" size={16} />
       </button>
     </div>
   )
 }
 
-/* -------------------------------------------------------------- follow-ups */
+/* -------------------------------------------------------------- reminders */
 
 export interface FollowupItem {
   id: string
@@ -439,68 +401,57 @@ export interface FollowupItem {
   completedBy: string | null
 }
 
-const FU_TABS: [string, string, IconName][] = [
-  ['overdue', 'Overdue', 'alert'],
-  ['due_today', 'Due today', 'clock'],
-  ['upcoming', 'Upcoming', 'calendar'],
-  ['no_next_action', 'No next action', 'inbox'],
-  ['recent', 'Recently completed', 'checkCircle'],
-]
+const FU_VIEWS = [
+  ['overdue', 'Late'],
+  ['due_today', 'Today'],
+  ['upcoming', 'Coming up'],
+  ['no_next_action', 'No reminder'],
+  ['recent', 'Done'],
+] as const
 
 export function Followups({ view }: { view: string }) {
+  const { go } = useCrm()
   const { data, error, reload } = useApi<{ kind: 'followups'; followups: FollowupItem[] } | { kind: 'leads'; total: number; leads: LeadSummary[] }>(
     `/api/crm/followups?view=${view}&end=${endOfToday()}`,
   )
   return (
     <div className="crm-view">
-      <PageHead title="Follow-ups" sub="Every open lead should have a next step, with a person and a time." />
-      <div className="crm-tabs" role="tablist">
-        {FU_TABS.map(([k, label, icon]) => (
-          <a key={k} href={`#/followups?view=${k}`} className={view === k ? 'is-on' : undefined} role="tab" aria-selected={view === k}>
-            <Icon name={icon} size={14} />
-            {label}
-          </a>
-        ))}
-      </div>
+      <PageTitle title="Reminders" sub="Every business being worked should have a next time someone gets in touch." />
+      <Segmented value={view} options={FU_VIEWS} onChange={(v) => go(`followups?view=${v}`)} label="Which reminders" />
       {error && <Failure error={error} retry={reload} />}
       {!data ? (
         <Loading />
       ) : data.kind === 'leads' ? (
         data.leads.length ? (
           <>
-            <p className="crm-lede">Open leads with nothing scheduled. Warm ones first: an interested lead with no next step goes cold.</p>
-            <ul className="crm-card crm-list">
-              {data.leads
+            <p className="crm-note">Businesses being worked with nothing scheduled. The warm ones come first: an interested business with no reminder goes cold.</p>
+            <LeadRows
+              leads={data.leads
                 .slice()
-                .sort((a, b) => Number(['interested', 'meeting', 'proposal_sent'].includes(b.stage)) - Number(['interested', 'meeting', 'proposal_sent'].includes(a.stage)))
-                .map((l) => (
-                  <li key={l.id} className="crm-row">
-                    <Avatar name={l.name} icon={l.icon} size={32} />
-                    <a href={`#/lead/${l.id}`} className="crm-row-main">
-                      <strong>{l.name}</strong>
-                      <span>{[l.city, l.category].filter(Boolean).join(' · ')}</span>
-                    </a>
-                    <StagePill stage={l.stage} />
-                    <ContactActions c={l.channels} compact />
-                  </li>
-                ))}
-            </ul>
+                .sort((a, b) => Number(['interested', 'meeting', 'proposal_sent'].includes(b.stage)) - Number(['interested', 'meeting', 'proposal_sent'].includes(a.stage)))}
+              why={(l) => `${stageName(l.stage)}. ${placeLine(l.category, l.city)}`}
+            />
           </>
         ) : (
-          <Empty icon="checkCircle">Every open lead has a next step.</Empty>
+          <Empty icon="checkCircle">Every business being worked has a reminder.</Empty>
         )
       ) : data.followups.length ? (
         <FollowupList items={data.followups} onChange={reload} />
       ) : (
-        <Empty icon="calendar">Nothing here.</Empty>
+        <Empty icon="bell">{view === 'overdue' ? 'Nothing is late.' : view === 'due_today' ? 'Nothing else today.' : 'Nothing here.'}</Empty>
       )}
     </div>
   )
 }
 
+const FU_KIND: Record<string, ContactKind | null> = { call: 'CALL', text: 'TEXT', email: 'EMAIL', instagram: 'INSTAGRAM_DM', meeting: null, other: null }
+const FU_WORD: Record<string, string> = { call: 'Call', text: 'Text', email: 'Email', instagram: 'DM', meeting: 'Meet', other: 'Follow up with' }
+
+/** Reminders, each with its business, when, what to say, and the button to do it. */
 export function FollowupList({ items, onChange }: { items: FollowupItem[]; onChange: () => void }) {
+  const { actor } = useCrm()
   const complete = async (f: FollowupItem) => {
-    const outcome = window.prompt(`What happened with ${f.name}? (optional)`)
+    const outcome = window.prompt(`What happened with ${f.name}? (you can leave this empty)`)
     if (outcome === null) return
     try {
       await api(`/api/crm/followups/${f.id}/complete`, { method: 'POST', body: { outcome: outcome.trim() || null } })
@@ -510,27 +461,36 @@ export function FollowupList({ items, onChange }: { items: FollowupItem[]; onCha
     }
   }
   return (
-    <ul className="crm-card crm-list">
+    <ul className="crm-group">
       {items.map((f) => {
         const late = !f.completedAt && f.dueAt < Date.now()
+        const kind = FU_KIND[f.type] ?? null
+        const mine = !f.owner || f.owner.id === actor.personId
         return (
           <li key={f.id} className={`crm-row${late ? ' is-late' : ''}`}>
-            <Avatar name={f.name} icon={f.icon} size={32} />
-            <a href={`#/lead/${f.leadId}`} className="crm-row-main">
-              <strong>{f.name}</strong>
-              <span>
-                {f.type} · {f.completedAt ? `done ${ago(f.completedAt)}` : `due ${dateTime(f.dueAt)}`}
-                {f.priority === 'high' ? ' · high priority' : ''}
+            <a className="crm-row-main" href={`#/lead/${f.leadId}`}>
+              <Tile name={f.name} icon={f.icon} stage={f.stage} size={52} badge={late ? 1 : null} />
+              <span className="crm-row-text">
+                <strong>{f.name}</strong>
+                <span className={late ? 'is-late' : undefined}>
+                  {FU_WORD[f.type] ?? 'Follow up'} {f.completedAt ? `was done ${whenLabel(f.completedAt)}` : `${late ? 'was due' : 'due'} ${whenLabel(f.dueAt)}`}
+                  {!mine && f.owner ? `, for ${f.owner.name}` : ''}
+                </span>
+                {f.notes && <em>{f.notes}</em>}
               </span>
-              {f.notes && <em>{f.notes}</em>}
             </a>
-            {f.owner && <PersonChip id={f.owner.id} name={f.owner.name} muted />}
-            <ContactActions c={f.channels} compact />
             {!f.completedAt && (
-              <button type="button" className="crm-btn crm-btn-sm" onClick={() => void complete(f)}>
-                <Icon name="check" size={14} />
-                Done
-              </button>
+              <span className="crm-row-acts">
+                {kind && (
+                  <ReachLink c={f.channels} kind={kind} className="crm-pill-act">
+                    <span>{FU_WORD[f.type]}</span>
+                  </ReachLink>
+                )}
+                <button type="button" className="crm-pill-act is-done" onClick={() => void complete(f)}>
+                  <Icon name="check" size={16} stroke={2.4} />
+                  Done
+                </button>
+              </span>
             )}
           </li>
         )
@@ -539,7 +499,7 @@ export function FollowupList({ items, onChange }: { items: FollowupItem[]; onCha
   )
 }
 
-/* ---------------------------------------------------------------- revenue */
+/* ------------------------------------------------------------------ money */
 
 interface Slice {
   key: string
@@ -573,14 +533,19 @@ export const PERIODS = [
 ] as const
 
 export function PeriodPicker({ value, onChange }: { value: string; onChange: (v: string) => void }) {
+  return <Segmented value={value} options={PERIODS} onChange={onChange} label="Period" />
+}
+
+function MoneyTabs({ on }: { on: 'revenue' | 'analytics' }) {
   return (
-    <div className="crm-seg" role="tablist" aria-label="Period">
-      {PERIODS.map(([k, label]) => (
-        <button type="button" key={k} className={value === k ? 'is-on' : undefined} onClick={() => onChange(k)} role="tab" aria-selected={value === k}>
-          {label}
-        </button>
-      ))}
-    </div>
+    <nav className="crm-seg is-links" aria-label="Money">
+      <a href="#/revenue" className={on === 'revenue' ? 'is-on' : undefined} aria-current={on === 'revenue' ? 'page' : undefined}>
+        Earned
+      </a>
+      <a href="#/analytics" className={on === 'analytics' ? 'is-on' : undefined} aria-current={on === 'analytics' ? 'page' : undefined}>
+        How it's going
+      </a>
+    </nav>
   )
 }
 
@@ -589,33 +554,37 @@ export function Revenue() {
   const { data, error, reload } = useApi<RevenueData>(`/api/crm/revenue?period=${period}`)
   return (
     <div className="crm-view">
-      <PageHead title="Revenue" sub="From deals as they were sold: a later price change never rewrites these. MRR is what is active today." actions={<PeriodPicker value={period} onChange={setPeriod} />} />
+      <PageTitle title="Money" sub="What BEASTY earned, as each sale was made: changing a price later never rewrites a sale." />
+      <div className="crm-toolbar">
+        <MoneyTabs on="revenue" />
+        <PeriodPicker value={period} onChange={setPeriod} />
+      </div>
       {error && <Failure error={error} retry={reload} />}
       {!data ? (
         <Loading />
       ) : (
         <>
-          <div className="crm-kpis">
-            <Stat label="One-time revenue" value={money(data.oneTimeCents)} sub={`${data.dealsWon} deal${data.dealsWon === 1 ? '' : 's'} won`} icon="dollar" />
-            <Stat label="MRR" value={money(data.mrrCents)} sub="active monthly plans" icon="trending" />
-            <Stat label="ARR" value={money(data.arrCents)} sub="MRR × 12" icon="chart" />
-            <Stat label="Pipeline value" value={money(data.pipelineCents)} sub={`${data.openLeads} open leads`} icon="target" />
+          <div className="crm-glance is-row">
+            <Stat label="Earned" value={money(data.oneTimeCents)} sub={plural(data.dealsWon, 'sale', 'sales')} />
+            <Stat label="Monthly plans" value={money(data.mrrCents)} sub="coming in every month" />
+            <Stat label="A year of plans" value={money(data.arrCents)} sub="monthly plans for twelve months" />
+            <Stat label="Open quotes" value={money(data.pipelineCents)} sub={`across ${plural(data.openLeads, 'business', 'businesses')}`} />
           </div>
           <Section title="By month">
             {data.byMonth.length ? (
-              <div className="crm-card">
+              <div className="crm-panel">
                 <MonthChart rows={data.byMonth} period={period} />
               </div>
             ) : (
-              <Empty icon="chart">No won deals yet: the months fill in as deals close.</Empty>
+              <Empty icon="chart">No sales yet. The months fill in as businesses say yes.</Empty>
             )}
           </Section>
-          <div className="crm-grid2">
-            <Breakdown title="By referrer" rows={data.byReferrer} />
-            <Breakdown title="By salesperson" rows={data.bySalesperson} />
-            <Breakdown title="By offer" rows={data.byOffer} />
-            <Breakdown title="By city" rows={data.byCity} />
-            <Breakdown title="By category" rows={data.byCategory} />
+          <div className="crm-two">
+            <Breakdown title="Who sent them" rows={data.byReferrer} />
+            <Breakdown title="Who made the sale" rows={data.bySalesperson} />
+            <Breakdown title="What sold" rows={data.byOffer} />
+            <Breakdown title="Where" rows={data.byCity} />
+            <Breakdown title="What kind of business" rows={data.byCategory} />
           </div>
         </>
       )}
@@ -625,10 +594,7 @@ export function Revenue() {
 
 const monthKey = (d: Date) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`
 
-/** Every month from the first to this one, so quiet months show as gaps
-    instead of the bars sitting side by side. "All time" shows at least six
-    months and "This year" starts in January; the short periods only pad
-    between the months they have. */
+/** Every month from the first to this one, so quiet months show as gaps. */
 function monthWindow(rows: Slice[], period: string): Slice[] {
   const now = new Date()
   const keys = rows.map((r) => r.key).sort()
@@ -650,26 +616,28 @@ function MonthChart({ rows: data, period }: { rows: Slice[]; period: string }) {
   const max = Math.max(...rows.map((r) => r.oneTimeCents + r.mrrCents), 1)
   const label = (k: string) => {
     const [y, m] = k.split('-').map(Number)
-    return new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short', year: '2-digit' })
+    return new Date(y, m - 1, 1).toLocaleDateString('en-US', { month: 'short' })
   }
   return (
-    <div className="crm-chart" role="img" aria-label="Revenue by month">
-      {rows.map((r) => (
-        <div key={r.key} className={`crm-chart-col${r.oneTimeCents + r.mrrCents ? '' : ' is-empty'}`}>
-          <span className="crm-chart-val">{r.oneTimeCents ? money(r.oneTimeCents) : ''}</span>
-          <span className="crm-chart-bar">
-            <span className="is-mrr" style={{ height: `${(r.mrrCents / max) * 100}%` }} />
-            <span className="is-once" style={{ height: `${(r.oneTimeCents / max) * 100}%` }} />
-          </span>
-          <span className="crm-chart-x">{label(r.key)}</span>
-        </div>
-      ))}
+    <div className="crm-chart" role="img" aria-label="Money by month">
+      <div className="crm-chart-bars">
+        {rows.map((r) => (
+          <div key={r.key} className={`crm-chart-col${r.oneTimeCents + r.mrrCents ? '' : ' is-empty'}`}>
+            <span className="crm-chart-val">{r.oneTimeCents ? money(r.oneTimeCents) : ''}</span>
+            <span className="crm-chart-bar">
+              <span className="is-mrr" style={{ height: `${(r.mrrCents / max) * 100}%` }} />
+              <span className="is-once" style={{ height: `${(r.oneTimeCents / max) * 100}%` }} />
+            </span>
+            <span className="crm-chart-x">{label(r.key)}</span>
+          </div>
+        ))}
+      </div>
       <div className="crm-chart-legend">
         <span>
-          <i className="is-once" /> One-time
+          <i className="is-once" /> Sales
         </span>
         <span>
-          <i className="is-mrr" /> Monthly
+          <i className="is-mrr" /> Monthly plans
         </span>
       </div>
     </div>
@@ -681,31 +649,31 @@ function Breakdown({ title, rows }: { title: string; rows: Slice[] }) {
   return (
     <Section title={title}>
       {rows.length ? (
-        <div className="crm-card crm-rank-list">
+        <div className="crm-panel crm-bars">
           {rows.map((r) => (
-            <div key={r.key} className="crm-rank-row">
-              <span className="crm-rank-label">{r.label}</span>
-              <span className="crm-rank-bar">
+            <div key={r.key} className="crm-bars-row">
+              <span className="crm-bars-label">{r.label}</span>
+              <span className="crm-bars-track">
                 <span style={{ width: `${Math.max(3, (r.oneTimeCents / max) * 100)}%` }} />
               </span>
-              <span className="crm-rank-val">
+              <span className="crm-bars-val">
                 {money(r.oneTimeCents)}
                 <small>
-                  {r.deals} deal{r.deals === 1 ? '' : 's'}
-                  {r.mrrCents ? ` · ${money(r.mrrCents)}/mo` : ''}
+                  {plural(r.deals, 'sale', 'sales')}
+                  {r.mrrCents ? `, ${money(r.mrrCents)} a month` : ''}
                 </small>
               </span>
             </div>
           ))}
         </div>
       ) : (
-        <Empty icon="dollar">No won deals in this period.</Empty>
+        <Empty icon="dollar">No sales in this period.</Empty>
       )}
     </Section>
   )
 }
 
-/* -------------------------------------------------------------- analytics */
+/* -------------------------------------------------------- how it's going */
 
 interface AnalyticsData {
   funnel: { key: string; label: string; count: number }[]
@@ -717,8 +685,16 @@ interface AnalyticsData {
   last30: { newLeads: number; won: number; wonCents: number }
 }
 
-/** Funnel steps whose key is not the stage's own, so each bar takes its stage's colour. */
-const FUNNEL_STAGE: Record<string, string> = { ready: 'ready_to_contact', proposals: 'proposal_sent' }
+/** The funnel's steps, named like the rest of the screen, and the stage each one's colour comes from. */
+const FUNNEL_WORDS: Record<string, [string, string | null]> = {
+  leads: ['In the book', null],
+  ready: ['Could be reached', 'ready_to_contact'],
+  contacted: ['Reached', 'contacted'],
+  replied: ['Replied', 'replied'],
+  interested: ['Interested', 'interested'],
+  proposals: ['Got a quote', 'proposal_sent'],
+  won: ['Said yes', 'won'],
+}
 
 export function Analytics() {
   const { data, error, reload } = useApi<AnalyticsData>('/api/crm/analytics')
@@ -727,48 +703,54 @@ export function Analytics() {
   const top = data.funnel[0]?.count || 1
   return (
     <div className="crm-view">
-      <PageHead title="Analytics" sub="How leads move: the funnel from every stage change ever recorded, and how long each step takes." />
-      <div className="crm-kpis">
-        <Stat label="Time to first contact" value={durationLabel(data.avgMsToFirstContact)} sub={`average of ${data.firstContactSample}`} icon="clock" />
-        <Stat label="Time to close" value={durationLabel(data.avgMsToClose)} sub={`average of ${data.closeSample}`} icon="trophy" />
-        <Stat label="New leads, 30 days" value={data.last30.newLeads} sub="not counting imports" icon="users" />
-        <Stat label="Won, 30 days" value={data.last30.won} sub={money(data.last30.wonCents)} icon="checkCircle" />
+      <PageTitle title="How it's going" sub="How far businesses get, counted from every move ever made, and how long each step takes." />
+      <div className="crm-toolbar">
+        <MoneyTabs on="analytics" />
       </div>
-      <Section title="Funnel">
-        <div className="crm-card crm-funnel">
-          {data.funnel.map((f, i) => (
-            <div key={f.key} className="crm-funnel-row">
-              <span className="crm-funnel-label">{f.label}</span>
-              <span className="crm-funnel-bar">
-                <span className={i ? `crm-tone-${stageTone(FUNNEL_STAGE[f.key] ?? f.key)}` : undefined} style={{ width: `${Math.max(2, (f.count / top) * 100)}%` }} />
-              </span>
-              <span className="crm-funnel-n">
-                {f.count}
-                {i > 0 && data.funnel[i - 1].count ? <em>{pct(f.count / data.funnel[i - 1].count)}</em> : null}
-              </span>
-            </div>
-          ))}
+      <div className="crm-glance is-row">
+        <Stat label="First hello" value={durationLabel(data.avgMsToFirstContact)} sub={`on average, from ${plural(data.firstContactSample, 'business', 'businesses')}`} />
+        <Stat label="To a yes" value={durationLabel(data.avgMsToClose)} sub={`on average, from ${plural(data.closeSample, 'sale', 'sales')}`} />
+        <Stat label="New, last 30 days" value={data.last30.newLeads} sub="added by hand or sent in" />
+        <Stat label="Sales, last 30 days" value={data.last30.won} sub={money(data.last30.wonCents)} />
+      </div>
+      <Section title="How far businesses get">
+        <div className="crm-panel crm-funnel">
+          {data.funnel.map((f, i) => {
+            const [word, stage] = FUNNEL_WORDS[f.key] ?? [f.label, null]
+            return (
+              <div key={f.key} className="crm-funnel-row">
+                <span className="crm-funnel-label">{word}</span>
+                <span className="crm-funnel-bar">
+                  <span className={stage ? `is-${stageTone(stage)}` : undefined} style={{ width: `${Math.max(2, (f.count / top) * 100)}%` }} />
+                </span>
+                <span className="crm-funnel-n">{f.count}</span>
+                <span className="crm-funnel-pct">{i > 0 && data.funnel[i - 1].count ? pct(f.count / data.funnel[i - 1].count) : ''}</span>
+              </div>
+            )
+          })}
         </div>
       </Section>
-      <Section title="Time in each stage">
-        <div className="crm-card crm-rank-list">
+      <Section title="Time on each step">
+        <ul className="crm-group">
           {data.timeInStage
             .filter((s) => s.samples)
             .map((s) => (
-              <div key={s.stage} className="crm-rank-row">
-                <span className="crm-rank-label">
-                  <StagePill stage={s.stage} />
-                </span>
-                <span className="crm-rank-val">
+              <li key={s.stage} className="crm-row">
+                <StagePill stage={s.stage} />
+                <span className="crm-row-end">
                   {durationLabel(s.avgMs)}
-                  <small>
-                    {s.samples} stay{s.samples === 1 ? '' : 's'}
-                  </small>
+                  <small>{plural(s.samples, 'time', 'times')}</small>
                 </span>
-              </div>
+              </li>
             ))}
-        </div>
+        </ul>
       </Section>
     </div>
   )
+}
+
+/** Next step, in a few words, for list rows. */
+export function NextShort({ l }: { l: LeadSummary }): ReactNode {
+  if (l.nextFollowupAt) return <span className={`crm-when${l.nextFollowupAt < Date.now() ? ' is-late' : ''}`}>{whenLabel(l.nextFollowupAt)}</span>
+  return <span className="crm-next-word">{nextShort(l.stage)}</span>
 }
