@@ -3302,16 +3302,17 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     /*
-      GLENN'S MESSAGE, 2026-09-21, 10:43 pm: "Grando1k", with one of his posts,
-      straight after "Gotta make a page for E-40" and in the same run of
-      Individuals' headshots: a page like E-40's, with that post as the icon,
-      cut to his head, cap to braids, clear of the glass in front of him.
+      GLENN'S MESSAGE, 2026-09-21, 10:43 pm: "Grando1k", with one of Grand-O's
+      posts, straight after "Gotta make a page for E-40" and in the same run
+      of Individuals' headshots: a page like E-40's, with that post as the
+      icon, cut to the head, cap to braids, clear of the glass in front.
 
-      EVERY FACT IS FROM HIS OWN PROFILES. @grando1k is titled GRAND-O and says
-      "I RAP & EAT SNACKS @thesnacksensei"; @thesnacksensei is titled "GRAND-O
-      THE SNACK SENSEI", so that account is his too. The link in his bio is
+      EVERY FACT IS FROM GRAND-O'S OWN PROFILES. @grando1k is titled GRAND-O and
+      says "I RAP & EAT SNACKS @thesnacksensei"; @thesnacksensei is titled
+      "GRAND-O THE SNACK SENSEI", the same person. The link in that bio is
       "Grand-O & DJ Idea - Make It Happen (Official Music Video)" on YouTube,
-      which is the button. Nothing says where he is from, so the page doesn't.
+      which is the button. Nothing says where Grand-O is from, so the page
+      doesn't, and no pronoun is stated, so the copy uses the name.
       No Instagram button: that is a paid feature Glenn approves page by page.
     */
     slug: 'grand-o',
@@ -3326,7 +3327,7 @@ export const LOCAL_SEED: LocalSeed[] = [
     site: 'https://www.youtube.com/watch?v=1a7-K1ofA_I',
     siteCta: 'Watch Make It Happen',
     contactOnly:
-      'Grand-O raps, and eats snacks as The Snack Sensei. His video with DJ Idea, Make It Happen, is on YouTube. BEASTY has not spoken to him yet: this spot is held, not taken.',
+      'Grand-O raps, and eats snacks as The Snack Sensei. The video with DJ Idea, Make It Happen, is on YouTube. BEASTY has not spoken to Grand-O yet: this spot is held, not taken.',
     items: [],
   },
   {
@@ -5531,10 +5532,10 @@ export const LOCAL_SEED: LocalSeed[] = [
       ONE WORD. He sent it as "Cray One"; the store header, the og:site_name and
       the vendor field on all sixty-three products spell it Crayone.
 
-      HIS HEADSHOT IS THE ICON. Glenn, 2026-09-21, 11:02 pm, "Crayone", after
+      THE HEADSHOT IS THE ICON. Glenn, 2026-09-21, 11:02 pm, "Crayone", after
       "let's just pretty much make heads shots the standard for these icons":
-      his own February 2021 post, smiling in front of a wall of 45s, cut to
-      head and shoulders. The store's only mark is a 1200x628 black banner, a
+      Crayone's own February 2021 post, smiling in front of a wall of 45s, cut
+      to head and shoulders. The store's only mark is a 1200x628 black banner, a
       header image and not a logo, so the same face stands for the store on
       the yellow sheet.
     */

@@ -555,6 +555,7 @@ for (const [s, what] of [
   ['icon:"crayone"', "Crayone's headshot"],
   ['icon:"grand-o"', "Grand-O's headshot"],
   ['"beasty-individuals-18":"b_grando"', 'Grand-O on BEASTY • Individuals 19'],
+  ['BEASTY has not spoken to Grand-O yet', "Grand-O's page naming Grand-O rather than guessing a pronoun"],
 ]) {
   if (!bundles.includes(s)) fails.push(`${what} is not in any deployed chunk (${s})`)
 }
