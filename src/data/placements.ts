@@ -1140,4 +1140,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-14': 'b_sincitypits', //                          from page one, seat 14
   'beasty-goods2-15': 'b_tonysstyle', //                           from page one, seat 15
   'beasty-goods2-16': 'b_luckythreeseven', //                      from page one, seat 24
+  /* 2026-09-21, evening: Penelope's five shops ("Berkeley • Goods (5
+     locations)"), Catch and Brasil Bistro on yellow sheets because seafood
+     and Brazilian have no seat, MYO on Walnut Creek's because its Ice cream
+     seat is Milky Flakes', and The Hub on San Ramon's pet seat. */
+  'berkeley-goods-13': 'b_penelopescoffeeberkeley', //             Coffee shop
+  'san-francisco-goods2-20': 'b_penelopescoffeesf', //             Coffee shop is The Farmacy's; yellow sheet, Tier 1
+  'foster-city-goods-13': 'b_penelopescoffeefostercity', //        Coffee shop
+  'san-mateo-goods-13': 'b_penelopescoffeesanmateo', //            Coffee shop
+  'daly-city-goods-13': 'b_penelopescoffeedalycity', //            Coffee shop
+  'san-francisco-goods2-21': 'b_catchsf', //                       no seafood seat; yellow sheet, Tier 1
+  'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
+  'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
+  'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs
 }

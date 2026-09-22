@@ -137,7 +137,8 @@ FAIL line. Silence is not a pass.
   in its page's chips, and search finds it by the word. It states their
   claim, never a certification.
 - **Glow** — the paid icon halo is gold by default; `glow: 'pink'` draws it
-  pink (Jazz Braids, and Janelle's own page, Nana Casas). A tile with no
+  pink (Jazz Braids) and `glow: 'blue'` Nipsey blue, #1F75FE (Janelle's own
+  page, Nana Casas). A tile with no
   website keeps its red ring inside the halo rather than losing it to the
   animation. `beastyOwner: true` (Janelle's page only) takes an owner off the
   red-ring prospect list whether or not a site is set.

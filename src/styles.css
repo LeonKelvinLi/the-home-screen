@@ -11179,6 +11179,68 @@ textarea {
   }
 }
 
+/*
+  NIPSEY BLUE, for Janelle's own tile: "she also told me if you could do a
+  Nipsey blue glow rather. It's her favorite color" (2026-09-21). There is no
+  official Nipsey Blue; the shade his fans asked Crayola to rename after him
+  was its standard Blue, #1F75FE, so that is the colour. Blue is dark next to
+  gold and pink, so it runs at their peak strength throughout.
+*/
+.icon-tile.is-glow.is-glow-blue {
+  animation-name: icon-glow-blue;
+}
+
+@keyframes icon-glow-blue {
+  0%,
+  100% {
+    box-shadow:
+      0 0 8px 3px rgba(31, 117, 254, 0.95),
+      0 0 20px 8px rgba(31, 117, 254, 0.6);
+  }
+  50% {
+    box-shadow:
+      0 0 14px 6px rgba(31, 117, 254, 1),
+      0 0 34px 14px rgba(31, 117, 254, 0.75);
+  }
+}
+
+.icon-tile.is-nosite.is-glow.is-glow-blue {
+  animation-name: icon-glow-blue-nosite;
+}
+
+@keyframes icon-glow-blue-nosite {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 10px 7px rgba(31, 117, 254, 0.95),
+      0 0 22px 10px rgba(31, 117, 254, 0.6);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 16px 9px rgba(31, 117, 254, 1),
+      0 0 36px 15px rgba(31, 117, 254, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile.is-glow.is-glow-blue {
+    box-shadow:
+      0 0 12px 5px rgba(31, 117, 254, 1),
+      0 0 28px 11px rgba(31, 117, 254, 0.65);
+  }
+  .icon-tile.is-nosite.is-glow.is-glow-blue {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 14px 8px rgba(31, 117, 254, 1),
+      0 0 30px 12px rgba(31, 117, 254, 0.65);
+  }
+}
+
 
 /* ---- The pass: the rotating code on the member card ---- */
 .member-code-name {

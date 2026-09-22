@@ -49,7 +49,7 @@ export interface AppDef {
    */
   noSite?: true
   /** The paid icon glow, Tier 3. See LocalSeed.glow. */
-  glow?: true | 'pink'
+  glow?: true | 'pink' | 'blue'
   /**
    * Jump to a home-screen PAGE rather than open a window.
    *

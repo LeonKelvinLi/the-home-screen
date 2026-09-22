@@ -3322,6 +3322,73 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['COZY', 'OVEN'], logoFace: 'script',
     tier: 1,
   }),
+  /* 2026-09-21, evening. Penelope's Coffee & Tea, "Berkeley • Goods (5
+     locations)": five shops, each on its own city's Coffee shop seat. Berkeley,
+     Foster City, San Mateo and Daly City were open; San Francisco's is The
+     Farmacy's, so that shop is a free listing on the yellow sheet. One menu for
+     all five, the PDF their own site links. */
+  seed('penelopes-coffee-berkeley', "Penelope's Coffee & Tea", "Penelope's", 'Coffee & tea', '#5A3825', {
+    icon: 'penelopes-coffee',
+    logoTemplate: 'wordmark', logoLines: ["PENELOPE'S"], logoFace: 'script',
+    site: 'https://penelopescoffee.com/',
+    siteCta: 'Order from their site',
+  }),
+  seed('penelopes-coffee-sf', "Penelope's Coffee & Tea", "Penelope's", 'Coffee & tea', '#5A3825', {
+    icon: 'penelopes-coffee',
+    logoTemplate: 'wordmark', logoLines: ["PENELOPE'S"], logoFace: 'script',
+    site: 'https://penelopescoffee.com/',
+    tier: 1,
+  }),
+  seed('penelopes-coffee-foster-city', "Penelope's Coffee & Tea", "Penelope's", 'Coffee & tea', '#5A3825', {
+    icon: 'penelopes-coffee',
+    logoTemplate: 'wordmark', logoLines: ["PENELOPE'S"], logoFace: 'script',
+    site: 'https://penelopescoffee.com/',
+    siteCta: 'Order from their site',
+  }),
+  seed('penelopes-coffee-san-mateo', "Penelope's Coffee & Tea", "Penelope's", 'Coffee & tea', '#5A3825', {
+    icon: 'penelopes-coffee',
+    logoTemplate: 'wordmark', logoLines: ["PENELOPE'S"], logoFace: 'script',
+    site: 'https://penelopescoffee.com/',
+    siteCta: 'Order from their site',
+  }),
+  seed('penelopes-coffee-daly-city', "Penelope's Coffee & Tea", "Penelope's", 'Coffee & tea', '#5A3825', {
+    icon: 'penelopes-coffee',
+    logoTemplate: 'wordmark', logoLines: ["PENELOPE'S"], logoFace: 'script',
+    site: 'https://penelopescoffee.com/',
+    siteCta: 'Order from their site',
+  }),
+  /* Catch SF, "San Francisco • Goods". Seafood has no seat, so the yellow
+     sheet, with its menu ready behind the free-listing rule. */
+  seed('catch-sf', 'Catch SF', 'Catch', 'Seafood & cocktails', '#02425B', {
+    icon: 'catch-sf',
+    logoTemplate: 'wordmark', logoLines: ['CATCH'], logoFace: 'slab',
+    site: 'https://catchseafoodsf.com/',
+    tier: 1,
+  }),
+  /* Brasil Bistro, "El Cerrito • Goods". Brazilian has no seat either: the
+     yellow sheet, the menu from their own ordering site ready behind the rule. */
+  seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
+    icon: 'brasil-bistro',
+    logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',
+    site: 'https://brasilbistroelcerrito.com/',
+    tier: 1,
+  }),
+  /* MYO Pure Frozen Yogurt, "Walnut Creek • Goods". The Ice cream shop seat is
+     Milky Flakes', so the yellow sheet. Their Alamo shop is not seated. */
+  seed('myo-frozen-yogurt-walnut-creek', 'MYO Pure Frozen Yogurt', 'MYO', 'Frozen yogurt', '#F26F21', {
+    icon: 'myo-frozen-yogurt',
+    logoTemplate: 'wordmark', logoLines: ['MYO'], logoFace: 'grotesk',
+    site: 'https://www.myofrozenyogurt.com/',
+    tier: 1,
+  }),
+  /* The Hub by Pack Animals, "San Ramon • Services": a gym for dogs at City
+     Center Bishop Ranch, on San Ramon's open Pet grooming and walking seat. */
+  seed('the-hub-pack-animals', 'The Hub by Pack Animals', 'The Hub', 'Dog training & daycare', '#009A4E', {
+    icon: 'the-hub-pack-animals',
+    logoTemplate: 'wordmark', logoLines: ['THE HUB'], logoFace: 'condensed',
+    site: 'https://www.thehubpack.com/',
+    siteCta: 'See their plans',
+  }),
 ]
 
 /**

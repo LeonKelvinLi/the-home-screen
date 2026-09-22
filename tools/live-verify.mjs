@@ -277,6 +277,17 @@ for (const [id, want, expect] of [
      Comics on the yellow sheet behind it with its own site's facts. */
   ['b_vendingenterprise', 'Vending Enterprise', { hours: 'Mon-Sat 8am-5pm', call: '415-523-5963' }],
   ['b_drcomicsmrgames', 'Dr. Comics and Mr. Games', { hours: 'Mon 11am-6pm', call: '(510) 601-7800' }],
+  /* 2026-09-21, late evening: Penelope's five shops, Catch, Brasil Bistro,
+     MYO and The Hub. */
+  ['b_penelopescoffeeberkeley', "Penelope's Coffee & Tea", { rows: 80, call: '(510) 229-3768' }],
+  ['b_penelopescoffeefostercity', "Penelope's Coffee & Tea", { rows: 80, call: '(650) 393-4035' }],
+  ['b_penelopescoffeesanmateo', "Penelope's Coffee & Tea", { rows: 80, call: '(650) 212-6049' }],
+  ['b_penelopescoffeedalycity', "Penelope's Coffee & Tea", { rows: 80, call: '(415) 347-7298' }],
+  ['b_penelopescoffeesf', "Penelope's Coffee & Tea", { free: true, call: '(415) 735-7537' }],
+  ['b_catchsf', 'Catch SF', { free: true, call: '(415) 431-5000' }],
+  ['b_brasilbistro', 'Brasil Bistro', { free: true, call: '(510) 680-5192' }],
+  ['b_myofrozenyogurtwalnutcreek', 'MYO Pure Frozen Yogurt', { free: true, call: '(925) 977-9111' }],
+  ['b_thehubpackanimals', 'The Hub by Pack Animals', { rows: 13, quote: true, hours: 'Mon 9am-3pm', call: '(828) 482-7225' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -376,9 +387,9 @@ if (!nana.lead) fails.push("Nana Casas' page does not open on her bio's first pa
 if (!(nana.panels.includes('Her story') && nana.panels.includes('Affiliations'))) fails.push("Nana Casas' page is missing the Her story or Affiliations drop-down")
 if (nana.claimLine) fails.push('Nana Casas\' page still says the spot is "hers to claim"')
 if (nana.vending) fails.push("Nana Casas' page still links or names Vending Enterprise")
-if (nana.icon !== '/icons/nana-casas-2.webp') fails.push(`Nana Casas' page draws "${nana.icon}", expected /icons/nana-casas-2.webp`)
-const nanaIcon = await fetch(`${base}/icons/nana-casas-2.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
-if (nanaIcon !== '200 image/webp') fails.push(`/icons/nana-casas-2.webp answered ${nanaIcon}`)
+if (nana.icon !== '/icons/nana-casas-3.webp') fails.push(`Nana Casas' page draws "${nana.icon}", expected /icons/nana-casas-3.webp`)
+const nanaIcon = await fetch(`${base}/icons/nana-casas-3.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
+if (nanaIcon !== '200 image/webp') fails.push(`/icons/nana-casas-3.webp answered ${nanaIcon}`)
 
 /* The halal mark (2026-09-18) and the red collab line on the example offers
    (2026-09-19). */
@@ -519,8 +530,10 @@ for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, Cal
 for (const [s, what] of [
   ['"b_petshowgrooming","b_vendingenterprise","b_rosebarycarcare"', 'Vending Enterprise in BEASTY • Services 16'],
   ['"beasty-services2-21":"b_drcomicsmrgames"', 'Dr. Comics on the BEASTY services yellow sheet'],
-  ['icon:"nana-casas-2"', "Janelle's portrait under its new name"],
-  ['glow:"pink",beastyOwner:!0', "the pink glow and the owner flag on Janelle's page"],
+  ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
+  ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
+  ['icon:"p-lo-2"', "P-Lo's headshot"],
+  ['icon-glow-blue', 'the Nipsey blue keyframes'],
 ]) {
   if (!bundles.includes(s)) fails.push(`${what} is not in any deployed chunk (${s})`)
 }

@@ -89,11 +89,14 @@ export interface LocalSeed {
    *
    * `'pink'` is the same halo in pink, his ask of 2026-09-20 for Jazz Braids,
    * from Janelle's circle: "Can you put a glow around her icon? Can you make
-   * it a pink glow?" Janelle's own page, Nana Casas, has had it since
-   * 2026-09-21. The colour is the only difference; the rule for who gets one
-   * is the same.
+   * it a pink glow?"
+   *
+   * `'blue'` is Nipsey blue, for Janelle's own page, Nana Casas: "she also
+   * told me if you could do a Nipsey blue glow rather. It's her favorite
+   * color" (2026-09-21). The colour is the only difference; the rule for who
+   * gets one is the same.
    */
-  glow?: true | 'pink'
+  glow?: true | 'pink' | 'blue'
   /** Which affiliate tier this page is drawn at. See brands.ts. */
   tier?: 1 | 2 | 3
   phone?: string
@@ -3217,7 +3220,11 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'p-lo',
-    icon: 'p-lo',
+    /* A headshot since 2026-09-21: "Can you change P.LO icon to this pic too?
+       Let's just pretty much make heads shots the standard for these icons."
+       Cut from the post of his he sent (p_lo with EMPIRE, "Stadium Anthems"),
+       above the caption. A new file name, so no cache keeps the old logo. */
+    icon: 'p-lo-2',
     name: 'P-Lo',
     label: 'P-Lo',
     cuisine: 'Rapper and producer',
@@ -4933,14 +4940,20 @@ export const LOCAL_SEED: LocalSeed[] = [
        the same file name, and icons are cached for a day and served stale for
        a week, so his phone went on showing the old one ("don't forget she
        wants this pic for her icon"). A new name is a new file to every cache. */
-    icon: 'nana-casas-2',
+    /* "-3" on 2026-09-21, evening: "that picture of her is really dark and
+       has a filter on it. Would it be all right when you can exchange it for
+       this as her headshot?" — her own post of 27 December 2025 on
+       @_beyondamazing, cut to her face. */
+    icon: 'nana-casas-3',
     name: 'Nana Casas',
     label: 'Nana Casas',
     cuisine: 'Entrepreneur',
     tagline: 'Bay Area entrepreneur: Beyond Amazing Clothing Company.',
     /* Leon's ask, 2026-09-21, after the pink went on Jazz Braids: "Do on
-       janelle's own page too". */
-    glow: 'pink',
+       janelle's own page too". Then Glenn, the same evening: "she also told
+       me if you could do a Nipsey blue glow rather. It's her favorite color."
+       Jazz Braids keeps its pink. */
+    glow: 'blue',
     /* Janelle is BEASTY's co-founder. Since Vending Enterprise came off this
        page there is no site here, and the red ring that would draw is his
        prospect list, which an owner is not on. See LocalSeed.beastyOwner. */

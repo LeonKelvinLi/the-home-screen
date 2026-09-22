@@ -54,7 +54,7 @@ interface Props {
    * because unlike the mobile and no-website rings it carries no fact about
    * the business — it is decoration somebody bought.
    */
-  glow?: boolean | 'pink'
+  glow?: boolean | 'pink' | 'blue'
 }
 
 function AppIconBase({
@@ -133,7 +133,7 @@ function AppIconBase({
         .join(', ')}
     >
       <span
-        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}${glow ? ' is-glow' : ''}${glow === 'pink' ? ' is-glow-pink' : ''}`}
+        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}${glow ? ' is-glow' : ''}${typeof glow === 'string' ? ` is-glow-${glow}` : ''}`}
         style={{ width: size, height: size }}
       >
         {icon}

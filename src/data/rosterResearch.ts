@@ -2098,6 +2098,239 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Brasil Bistro — gathered 2026-09-21 from own
+     they are: Brazilian
+     flag: Glenn: "El Cerrito • Goods". Brazilian has no category seat, so this is a Tier 1 free listing on the yellow sheet; the menu is ready behind his free-listing rule.
+     flag: Menu read in a real browser from brasilbistroelcerrito.com/menu/brasilbistro (their site answers 403 to plain fetches). Beer and the Mercado/retail grocery aisle are left off; items marked out of stock are kept, since stock changes.
+     flag: Their site is built on an ordering platform with a story page, hours and menu, so no red outline; a site of their own design would be a pitch. Email from their Instagram contact sheet.
+  */
+  'brasil-bistro': {
+    address: "11866 San Pablo Ave, El Cerrito, CA 94530",
+    phone: "(510) 680-5192",
+    email: "brasilbistro.elcerrito@gmail.com",
+    hours: "Daily 7:30am-7:30pm",
+    instagram: "brasil_bistro",
+    cuisine: "Brazilian",
+    tagline: "Brazilian picanha, feijoada, salgados and açaí on San Pablo Avenue",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Bolinho De Bacalhau (6 Unidades) - Codfish Balls (6 Units)","Crispy fried codfish balls, crunchy outside and soft inside",1000],
+        ["Mandioca Frita - Porção (5 Pcs) - Fried Cassava - Portion (5 Pcs)","Golden crispy fried cassava",600],
+        ["Batata Frita - French Fries","Crispy golden french fries",600],
+        ["Tábua De Picanha - Picanha Board","Premium sliced picanha served with grilled onions and portuguese sausage",1999],
+        ["Coxinha (12 Unidades) - Coxinha (12 Pieces)","Crispy chicken coxinhas",900],
+        ["Isca De Frango - Chicken Strips","Crispy breaded chicken strips",1200],
+        ["Isca De Camarão - Shrimp Strips","Crispy breaded shrimp strips",1200],
+        ["Isca De Peixe - Fish Strips","Crispy breaded fish strips",1200],
+        ["Queijo Coalho Com Mel - Grilled Coalho Cheese with Honey","Grilled coalho cheese served with honey",1200],
+      ] },
+      { name: "Beef and grill", items: [
+        ["Picanha BBQ - BBQ Picanha","Italian sausage, rice, tropeiro beans, fried cassava, fried banana, mayo salad, chimichurri",2390],
+        ["Picanha Com Arroz Piamontese E Batata Frita - Picanha with Piamontese Rice and Fries","Piamontese rice, french fries",2100],
+        ["Picanha Com Catupiry - Picanha with Catupiry Cheese","Rice and fries",2100],
+        ["Picanha Acebolada - Picanha with Sautéed Onions","Rice, beans, fried cassava, fried banana, farofa, mayo salad and vinaigrette",2290],
+        ["Picanha Tradicional - Picanha Steak","Rice, beans, french fries, vinaigrette, green salad and farofa",2000],
+        ["Picanha Da Casa - House Special Picanha","Rice, tropeiro beans, fried banana, cassava, vinaigrette and green salad",2400],
+        ["Bife Acebolado - Steak with Sautéed Onions","Rice, beans, french fries, vinaigrette and green salad",1800],
+        ["Bife À Parmegiana - Parmigiana Steak","Rice and french fries",2000],
+        ["Bife À Cavalo - Steak with Fried Egg","Rice, beans, french fries, vinaigrette and green salad",1900],
+        ["Bife À Milanesa - Breaded Steak","Rice, beans, french fries, vinaigrette and green salad",1800],
+        ["Lasanha À Bolognese - Bolognese Lasagna","Rice and green salad",1600],
+        ["Escondidinho De Carne Seca - Jerked Beef Casserole","Rice and green salad",1600],
+        ["Escondidinho De Carne Moída - Ground Beef Casserole","Rice and green salad",1600],
+        ["Ribeye aos 4 Queijos / Ribeye with 4 Cheeses","",2100],
+      ] },
+      { name: "Chicken", items: [
+        ["Frango À Milanesa - Breaded Chicken","Rice, beans, french fries, vinaigrette and green salad",1700],
+        ["Frango À Parmegiana - Chicken Parmigiana","Rice and french fries",1800],
+        ["Fricasse De Frango - Chicken Fricassée","Rice and green salad",1700],
+        ["Lasanha De Frango - Chicken Lasagna","Rice and green salad",1600],
+        ["Escondidinho De Frango - Chicken Casserole","Rice and green salad",1600],
+        ["Frango Grelhado - Grilled Chicken","Rice, fries and beans",1600],
+      ] },
+      { name: "Fish and seafood", items: [
+        ["Tilápia À Milanese Com Molho De Camarão - Tilapia Milanese with Shrimp Sauce","Mashed potatoes, rice and green salad",1600],
+        ["Tilápia À Milanese - Tilapia Milanese","Rice, beans, french fries, vinaigrette and green salad",1600],
+        ["Escondidinho De Camarão - Shrimp Casserole","Rice and green salad",1500],
+        ["Camarão Internacional - International Shrimp","Green salad",1700],
+      ] },
+      { name: "Pork", items: [
+        ["Bisteca - Pork Chop","Rice, mashed potatoes, kale and tropeiro beans",1600],
+      ] },
+      { name: "Salads", items: [
+        ["Frango Grelhado Acebolado - Grilled Chicken with Onions","Complete salad with grilled chicken and onions: mixed greens, tomatoes, olives, carrots and cucumbers; ranch or balsamic",1400],
+        ["Filé De Peixe Empanado - Breaded Fish Fillet","Complete salad with breaded fish: mixed greens, tomatoes, olives, carrots and cucumbers; ranch or balsamic",1400],
+        ["Picanha - Grilled Picanha","Complete salad with grilled picanha: mixed greens, tomatoes, olives, carrots and cucumbers; ranch or balsamic",1600],
+        ["Bife Acebolado - Steak with Sauteed Onions","",1400],
+      ] },
+      { name: "Vegetarian", items: [
+        ["Monte O Seu Prato (5 Itens) - Build Your Plate (5 Items)","Choose from rice, beans, mashed potatoes, mayo salad, fried egg, fried banana, green salad, vinaigrette, cassava, kale and fries",1500],
+      ] },
+      { name: "Sides", items: [
+        ["Arroz - Rice","Side of rice",400],
+        ["Feijão - Beans","Side of brown beans",400],
+        ["Purê - Mashed Potatoes","Side of mashed potatoes",400],
+        ["Salada De Maionese - Mayo Salad","Side of mayo salad",400],
+        ["Banana Frita - Fried Banana","Side of fried banana",400],
+        ["Feijão Tropeiro - Tropeiro Beans","Side of tropeiro beans",400],
+        ["Vinagrete - Vinaigrette","Side of vinaigrette",400],
+        ["Couve - Sautéed Kale","Side of sautéed kale",400],
+        ["Farofa - Toasted Cassava Flour","Side of farofa",300],
+        ["Ovo Frito - Fried Egg","Each; yolk runny or hard",200],
+        ["Side de Tilapia","",900],
+      ] },
+      { name: "Kids", items: [
+        ["Kids Meal","",1199],
+      ] },
+      { name: "Breakfast", items: [
+        ["Monte Seu Omelete - Assemble Your Omelet","Omelet with 4 items (cheese, ham, bacon, tomato, vegetables). Served on french bread",900],
+        ["Pao Na Chapa - Toasted French Bread","Toasted french bread with butter",250],
+        ["Tradicional - Traditional","Cheese, ham, and tomato on french bread",600],
+        ["Especial - Special","Cheese, ham, and egg on french bread",700],
+        ["Supremo - Supreme","Cheese, ham, mozzarella, egg, bacon, and tomato on french bread",800],
+      ] },
+      { name: "Tapiocas", items: [
+        ["Queijo, Presunto E Tomate - Cheese, Ham & Tomato Tapioca","Tapioca filled with cheese, ham and tomato",950],
+        ["Frango Com Catupiry - Chicken with Catupiry Tapioca","Tapioca filled with chicken and catupiry cheese",950],
+        ["Ovo, Presunto E Queijo - Egg, Ham & Cheese Tapioca","Tapioca filled with egg, ham and cheese",950],
+        ["Nutella Com Morango (Novo) - Nutella & Strawberry Tapioca (New)","Tapioca filled with Nutella and strawberry",950],
+        ["Coco Com Leite Condensado - Coconut & Condensed Milk Tapioca","Tapioca filled with coconut and condensed milk",950],
+        ["Goiabada Com Queijo - Guava Paste & Cheese Tapioca","Tapioca filled with guava paste and cheese",950],
+        ["Tapioca Vegetariana - Vegetarian Tapioca","Tapioca filled with vegetables and cheese",950],
+        ["Tapioca Queijo Com Palmito - Cheese & Heart of Palm Tapioca","Tapioca filled with cheese and heart of palm",950],
+      ] },
+      { name: "Salgados", items: [
+        ["Coxinha de frango/ Chicken croquette","Crispy Brazilian chicken croquette filled with seasoned shredded chicken",600],
+        ["Coxinha com catupiry/ Chicken croquette with creamy cheese","Crispy Brazilian croquette filled with shredded chicken and creamy Catupiry® cheese",600],
+        ["Enroladinho de salsicha/ Brazilian sausage roll","Soft, golden pastry wrapped around a seasoned sausage",600],
+        ["Risole de carne/ Beef rissole","Crispy pastry filled with seasoned beef",600],
+        ["Disco / Crispy beef croquette","Brazilian savory pastry made with seasoned beef and a mild hint of spice",600],
+        ["Quibe/ Beef kibbeh","",600],
+        ["Bolinho de aipim com carne/ Cassava & beef croquette","",600],
+        ["Esfiha de carne/ Beef esfiha","Brazilian-style savory pastry filled with seasoned ground beef",600],
+        ["Esfiha de frango/ Chicken esfiha","Brazilian-style savory pastry filled with seasoned shredded chicken",600],
+        ["Americano/ Baked pastry filled cheese, ham & tomato","",600],
+        ["Enroladinho de Queijo","",300],
+      ] },
+      { name: "Pastéis", items: [
+        ["Pastel de Queijo - Cheese Pastry","Cheese filled pastry",800],
+        ["Pastel de Queijo Com Palmito - Cheese & Heart of Palm","Cheese and heart of palm pastry",800],
+        ["Pastel de Pizza - Pizza Pastry","Cheese, ham, tomato and oregano pastry",800],
+        ["Pastel de Frango Com Catupiry - Chicken with Catupiry","Chicken and catupiry cheese pastry",800],
+        ["Pastel de Frango Com Queijo - Chicken & Cheese","Chicken and cheese pastry",800],
+        ["Pastel de Carne - Beef Pastry","Beef filled pastry",800],
+        ["Pastel de Carne Com Queijo - Beef & Cheese","Beef and cheese pastry",800],
+        ["Pastel de Carne Com Palmito - Beef & Heart of Palm","Beef and heart of palm pastry",800],
+        ["Pastel de Romeu E Julieta - Romeo & Juliet","Cheese with guava paste pastry",800],
+        ["Pastel de Banana Com Canela - Banana & Cinnamon","Banana and cinnamon pastry",800],
+        ["Pastel de Nutella Com Morango - Nutella & Strawberry","Nutella and strawberry pastry",800],
+      ] },
+      { name: "Weekend menu", items: [
+        ["Feijoada","Weekends",1800],
+        ["Costela no Bafo","Weekends",2600],
+        ["Bobo de Camarao","Weekends",1700],
+        ["Fricasse","Weekends",1700],
+        ["Camarao Internacional","Weekends",1700],
+      ] },
+      { name: "Daily specials", items: [
+        ["Estrogonofe de Carne/ Beef Stroganoff","Monday special",1700],
+        ["Moqueca de Tilapia/ Tilapia Stew","Monday special",1700],
+        ["Carne de Panela/Beef Stew","Monday special",1700],
+        ["Bife a Milanesa com Creme de Milho","Tuesday special",1700],
+        ["Frango a Milanesa","Tuesday special",1700],
+        ["Bisteca","Tuesday special",1700],
+        ["Costelinha Assada","Wednesday special",1700],
+        ["Frango a Parmegiana (Chicken Parmigiana)","Wednesday special",1700],
+        ["Bife Acebolado","Wednesday special",1700],
+        ["Frango Assado (Roast Chicken)","Thursday special",1700],
+        ["Carne de Panela com Legumes","Thursday special",1700],
+        ["Tilapia a Milanesa","Thursday special",1700],
+        ["Tilapia com Molho de Camarao","Friday special",1700],
+        ["Carne com Mandioca","Friday special",1700],
+        ["Estrogonofe de Frango","Friday special",1700],
+      ] },
+      { name: "Desserts and açaí", items: [
+        ["Bolo de pote de brigadeiro/ Brigadeiro cake jar","",600],
+        ["Bolo de pote prestígio/ Chocolate cake with coconut creamy","",600],
+        ["Bolo de pote de ninho com morango/ Tres leches cake jar","",600],
+        ["Mousse de maracuja/ Passion fruit mousse","",600],
+        ["Mousse Romeu e Julieta/ Creamy cheese mousse with guava","",600],
+        ["Bolo cenoura com brigadeiro/ Carrot cake with chocolate","",600],
+        ["Pudim / Flan","",600],
+        ["Curau de milho/ Corn Pudding","",600],
+        ["Americano - American Style Bowl","Banana, strawberry, granola and honey or agave",1399],
+        ["Samba - Samba Bowl","Banana, strawberry, granola, powdered milk and condensed milk",1499],
+      ] },
+      { name: "Coffee", items: [
+        ["São Paulo Espresso","Classic espresso. 12 oz only",350],
+        ["Paulista Double Espresso","Double espresso. 12 oz only",425],
+        ["Rio Americano","Espresso with hot water",250],
+        ["Copacabana Cappuccino","Creamy cappuccino",595],
+        ["Chocolate Da Serra Mocha","Chocolate mocha",625],
+        ["Café com Leite / Coffee and Milk","",300],
+        ["Brigadeiro Dream","Creamy cappuccino with artisan brigadeiro",795],
+        ["Nutella Bliss","Cappuccino with nutella",795],
+        ["Doce Brasil Caramel","Cappuccino with dulce de leche",795],
+        ["Rio Iced Americano","Iced americano",550],
+        ["Copacabana Iced Cappuccino","Iced cappuccino",695],
+        ["Chocolate Da Serra Iced Mocha","Iced mocha",725],
+        ["Iced Brigadeiro Dream","Espresso, milk, brigadeiro and ice",895],
+        ["Iced Nutella Bliss","Espresso, milk, nutella and ice",895],
+        ["Iced Minas Caramel","Espresso, milk, dulce de leche and ice",895],
+      ] },
+      { name: "Juices, smoothies and shakes", items: [
+        ["Açaí Com Banana E Morango - Açaí with Banana & Strawberry","Açaí smoothie with banana and strawberry",800],
+        ["Morango E Banana - Strawberry & Banana","Strawberry and banana smoothie",800],
+        ["Abacate - Avocado","Avocado smoothie",800],
+        ["Chocolate - Chocolate Milkshake","Creamy chocolate milkshake. Made fresh with premium ice cream",999],
+        ["Morango - Strawberry Milkshake","Creamy strawberry milkshake. Made fresh with premium ice cream",999],
+        ["Ovomaltine - Ovomaltine Milkshake","Vanilla milkshake with ovomaltine. Made fresh with premium ice cream",999],
+        ["Açaí & Leite Ninho - Açaí & Leite Ninho Milkshake","Açaí milkshake with powdered milk",999],
+        ["Doce De Leite - Dulce De Leche Milkshake","Creamy dulce de leche milkshake. Made fresh with premium ice cream",999],
+        ["Leite Ninho - Leite Ninho Milkshake","Vanilla milkshake with powdered milk. Made fresh with premium ice cream",999],
+        ["Leite Ninho & Nutella - Leite Ninho & Nutella Milkshake","Milkshake with powdered milk, nutella and chocolate. Made fresh with premium ice cream",999],
+        ["Paçoca - Paçoca Milkshake","Creamy paçoca peanut candy milkshake",999],
+        ["Abacaxi - Pineapple Juice","Fresh pineapple juice",600],
+        ["Abacaxi Com Menta - Pineapple with Mint","Pineapple juice with mint",600],
+        ["Acerola - Acerola Juice","Fresh acerola juice",600],
+        ["Cajá - Cajá Juice","Fresh cajá fruit juice",600],
+        ["Caju - Cashew Juice","Fresh cashew fruit juice",600],
+        ["Cupuaçu - Cupuaçu Juice","Fresh cupuaçu juice",600],
+        ["Graviola - Soursop Juice","Fresh soursop juice",600],
+        ["Goiaba - Guava Juice","Fresh guava juice",600],
+        ["Laranja - Orange Juice","Fresh orange juice",800],
+        ["Manga - Mango Juice","Fresh mango juice",600],
+        ["Maracujá - Passion Fruit Juice","Fresh passion fruit juice",600],
+        ["Laranja Com Cenoura - Orange with Carrot","Orange juice with carrot",800],
+        ["Laranja, Morango E Maçã - Orange, Strawberry & Apple","Mixed orange, strawberry and apple juice",800],
+        ["Detox - Detox Juice","Kale, apple, pineapple, ginger and coconut water",800],
+      ] },
+      { name: "Iced teas and sodas", items: [
+        ["Brazilian Iced Mate","Mate tea with lemon",250],
+        ["Passion Hibiscus Tea","Hibiscus with passion fruit",250],
+        ["Pineapple Green Tea","Green tea with pineapple and mint",250],
+        ["Brazilian Lemongrass Tea","Lemongrass with lemon",250],
+        ["Chamomile Passion Tea","Chamomile with passion fruit",250],
+        ["Peach Black Tea","Black tea with peach",250],
+        ["Guarana","",300],
+        ["Guarana Zero","",300],
+        ["Coke","",200],
+        ["Coke Zero","",250],
+        ["Diet Coke","",250],
+        ["Sprite","",200],
+        ["Pepsi","",200],
+        ["Guaraviton","",599],
+        ["Todynho","",259],
+        ["Agua/Water","",200],
+        ["Agua com Gas/Sparkling Water 330ml","",300],
+        ["S.Pellegrino Sparkling Natural Mineral Water, Glass Bottle","Glass bottle",400],
+        ["S.Pellegrino 750ml","",500],
+      ] },
+    ],
+    siteNote: "Prices are from the ordering menu on their own site.",
+  },
+
+  /*
      BratPak Dog Kamp — gathered 2026-09-21 from own-domain
      they are: Dog daycare and boarding
      logo: https://bratpakdogkamp.com/assets/bratpak-logo-BKAetVl3.webp — not cut into a tile yet
@@ -2578,6 +2811,90 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "camachosparty",
     cuisine: "Party rentals",
     contactOnly: "'We bring the joy of modern bounce houses, tables, chairs and all you need for your party right to your doorstep!' — delivering across Sonoma County and beyond. Quote-only — every catalogue product shows 'Get a quote today!' and no price; a 25% deposit reserves the date.",
+  },
+
+  /*
+     Catch SF — gathered 2026-09-21 from own
+     they are: Seafood & cocktails
+     flag: Glenn: "San Francisco • Goods". Seafood has no category seat, so this is a Tier 1 free listing on the yellow sheet; the menu is ready behind his free-listing rule.
+     flag: Menu from catchseafoodsf.com (SpotHopper): brunch, lunch, dinner, desserts and the $65 prix fixe. Cocktails, beer and the Fri-Sun 3-6pm happy-hour menu are left off.
+     flag: Their hours line reads "Monday Thursday 4.30 pm to 9.30 pm", read as Monday to Thursday. Menu spellings tidied (shallots, avocado, mignonette); dishes and prices as published.
+  */
+  'catch-sf': {
+    address: "2362 Market St, San Francisco, CA 94114",
+    phone: "(415) 431-5000",
+    email: "catchsf@yahoo.com",
+    hours: "Mon-Thu 4:30pm-9:30pm, Fri noon-9:30pm, Sat-Sun 11am-9pm",
+    instagram: "catch.sf",
+    cuisine: "Seafood & cocktails",
+    tagline: "Seafood, cocktails and weekend brunch on Market Street in the Castro",
+    sections: [
+      { name: "Brunch and lunch", items: [
+        ["Bacon Scrambled Eggs","Scrambled eggs with smoked bacon strips and potatoes",1900],
+        ["Huevos Rancheros","Corn tortilla, fried eggs, beans, mild red sauce, sour cream and cheese",1900],
+        ["Waffles and Chicken","Crispy chicken, fresh fruit and potatoes",1900],
+        ["Fish and Chips","Beer-batter fried fish, coleslaw, French fries",2400],
+        ["Steak and Eggs","New York steak and scrambled eggs, with potatoes",2800],
+        ["Eggs Benedict","Croissant halves with bacon, salmon or ham, poached egg, onions, spinach",2200],
+        ["Veggie Omelette","Mushrooms, tomatoes, spinach, onions, cheddar, mixed greens, French bread",2000],
+        ["Omelet Meats","Bacon, ham or salmon, with tomatoes, onions and a side of fries",2500],
+        ["Lunch Salmon","Risotto, spinach, corn, truffle vinaigrette",2600],
+        ["Salmon Sandwich","Lettuce, tomato, ciabatta, lemon aioli",2100],
+        ["Chicken Sandwich","Lettuce, tomato, ciabatta, aioli dressing",2000],
+        ["The Classic Burger","Angus sirloin, tomato, house-made aioli, French fries",2000],
+      ] },
+      { name: "Starters", items: [
+        ["Grilled Artichokes","With lemon aioli",1800],
+        ["Oysters (6)","With champagne mignonette",2500],
+        ["Calamari","Fried calamari, rock shrimp, green beans, fennel, lemon, tartar sauce",1800],
+        ["Mussels","Sautéed with chorizo, harissa, spicy coconut, arugula",1800],
+        ["Escargots Gratinés à l'Ail","Snails, garlic, parsley, shallots, butter, breadcrumbs",1600],
+        ["Tuna Tartare","Honey sambal, soy, green onion, avocado, cucumber, wonton chips",1900],
+        ["Mushroom Ravioli","Portobello and cremini ravioli, ricotta, parmesan, truffle cream",1700],
+        ["Baked Brie","Melted cheese in puff pastry with fig jam",2000],
+      ] },
+      { name: "Soups and salads", items: [
+        ["French Onion Soup","Caramelized onions, beef broth, Madeira, croutons, Gruyère",1500],
+        ["Seafood Chowder","Mussels, clams",1500],
+        ["Mixed Green Salad","Cucumbers, grapes, Gorgonzola, raspberries, blackberries, pecans, shallot vinaigrette",1400],
+        ["Beet Salad","Arugula, goat cheese, toasted almonds, currants, strawberry vinaigrette",1500],
+        ["Caesar Salad","Add grilled chicken $12, blackened salmon $15 or prawns $13",1200],
+      ] },
+      { name: "Dinner", items: [
+        ["Shrimp Pastis","Asparagus, mushroom risotto, pastis flambé",3400],
+        ["Salmon","Risotto, spinach, corn, truffle vinaigrette",3800],
+        ["Lobster Ravioli","Lobster, parmesan, basil, creamy tomato sauce",3800],
+        ["Seafood Cioppino","Tomato and crab broth with fresh fish, mussels, clams and shrimp",3900],
+        ["Lobster Fettuccine","Spinach, corn, white wine, Alfredo sauce",3800],
+        ["Seafood Mixed Grill","Butternut squash and cauliflower risotto, truffle lemon vinaigrette",3800],
+        ["Cassoulet","Duck leg, cannellini beans, smoked chicken sausage, tomato sauce",4200],
+        ["Filet Mignon","Fries, asparagus, peppercorn sauce",4500],
+        ["New York Steak","Mashed potatoes, broccolini, peppercorn sauce",4500],
+        ["Braised Short Ribs","Mushrooms, bacon, onions, carrots, mashed potatoes, burgundy sauce",3900],
+        ["Chicken Breast","Mashed potatoes, mushroom, broccolini, Marsala",2900],
+        ["Three-Course Prix Fixe","Monday, Wednesday and Thursday: a starter, a main and a dessert from the menu",6500],
+      ] },
+      { name: "Sides", items: [
+        ["Mashed Potatoes","",800],
+        ["Truffle Mashed Potatoes","",1000],
+        ["French Fries","",1000],
+        ["Truffle Parmesan Fries","Fries tossed with parmesan and truffle oil",1200],
+        ["Broccolini","Garlic, shallots, butter, white wine, crispy bacon",1100],
+        ["Sautéed Spinach","Garlic, shallots, butter, white wine, chili flakes",1000],
+        ["Roasted Cauliflower and Butternut Squash","Garlic, shallots, butter",1000],
+      ] },
+      { name: "Desserts", items: [
+        ["Brioche Bread Pudding","With raisins and bourbon whiskey sauce",1200],
+        ["Opera Cake","Coffee, almond buttercream, dark chocolate ganache",1200],
+        ["Mango Panna Cotta","Cream, milk, sugar, mango purée",1200],
+        ["Vanilla Crème Brûlée","Classic custard with vanilla bean",1200],
+        ["French Vanilla Ice Cream","Artisanal French vanilla ice cream",1200],
+        ["Molten Chocolate Cake","With vanilla ice cream",1400],
+        ["Lemon Sorbet","Artisanal lemon sorbet",1000],
+        ["Chocolate Mousse","Rich and creamy chocolate mousse",1200],
+      ] },
+    ],
+    siteNote: "Prices are from the menus on their own site.",
   },
 
   /*
@@ -7392,6 +7709,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     MYO Pure Frozen Yogurt — gathered 2026-09-21 from own
+     they are: Frozen yogurt
+     flag: Glenn: "Walnut Creek • Goods". The Ice cream shop seat is Milky Flakes', so this is a Tier 1 free listing on the yellow sheet.
+     flag: HOURS CONFLICT on their own site: the contact block gives Walnut Creek Sun-Thu 11am-9:30pm and Fri-Sat 11am-10pm; the footer says daily 12pm-9pm. No hours shown until they fix it.
+     flag: Their Alamo shop, 3215 Danville Blvd, (925) 718-5280, is also in the Bay Area and not seated: Glenn named Walnut Creek only. Started in 2009 by two firefighter families, per their About page.
+  */
+  'myo-frozen-yogurt-walnut-creek': {
+    address: "2913 Ygnacio Valley Rd, Walnut Creek, CA 94598",
+    phone: "(925) 977-9111",
+    instagram: "myofrozenyogurt",
+    cuisine: "Frozen yogurt",
+    tagline: "Pure frozen yogurt with live cultures, topped your way, since 2009",
+    contactOnly: "Pure frozen yogurt with live cultures, topped your way, since 2009. They publish no prices.",
+  },
+
+  /*
      Napa Yard & Beer Garden — gathered 2026-09-21 from own
      they are: Beer garden
      flag: Food menu from napayard.com/menus (BentoBox). Cocktails, wine and draft lists are left off (no age check).
@@ -8053,6 +8386,640 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Their dining menu, from their own site; any pasta or entrée takes a cup of soup or a house salad for $5.",
+  },
+
+  /*
+     penelopes-coffee-berkeley — gathered 2026-09-21 from own
+     their spelling: "Penelope's Coffee & Tea" (roster keeps "penelopes-coffee-berkeley")
+     they are: Coffee & tea
+     flag: Glenn: "Berkeley • Goods (5 locations)". Berkeley is the shop he sent (@penelopesberkeley); all five are seated, each on its own city page.
+     flag: 94707 is the ZIP their site and Instagram both print for 2255 Shattuck; that block is 94704 in USPS terms. Carried as they publish it.
+     flag: One menu for all five: the PDF their site links (assets/menu.pdf, dated June 2026). Their site publishes no opening hours, so none are shown.
+     flag: Multi-size drinks carry the small price as a "from" floor, with every size in the description.
+  */
+  'penelopes-coffee-berkeley': {
+    address: "2255 Shattuck Ave, Berkeley, CA 94707",
+    phone: "(510) 229-3768",
+    instagram: "penelopesberkeley",
+    cuisine: "Coffee & tea",
+    tagline: "Coffee and tea house with Greek coffee, freddos and breakfast",
+    sections: [
+      { name: "Specialty drinks", items: [
+        ["Lillian Latte","Espresso shot, lavender, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cookie Monster","Espresso shot, cupcake, cookie dough, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Wild Berry Latte","Espresso shot, raspberry. Small $5.95, medium $6.95",595,null,"from"],
+        ["Penelope's Samoas","Espresso shot, caramel, chocolate sauce, coconut. Small $5.95, medium $6.95",595,null,"from"],
+        ["Salted Caramel","Espresso shot, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cinnamon Dolce","Espresso shot, cinnamon, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+      ] },
+      { name: "Greek coffee and freddos", items: [
+        ["Hot Greek coffee","Small",350],
+        ["Hot Greek white mocha","Small",450],
+        ["Hot Greek mocha","Small",450],
+        ["Iced Greek coffee","Small $4.25, medium $4.95, large $5.25",425,null,"from"],
+        ["Iced Greek white mocha","Small $5.25, medium $6.00, large $6.75",525,null,"from"],
+        ["Iced Greek mocha","Small $5.25, medium $5.95, large $6.50",525,null,"from"],
+        ["Freddo Cappuccino","Iced cappuccino with cold foam. Small $4.75, medium $5.50",475,null,"from"],
+        ["Freddo Espresso","Whipped espresso. Small $4.50, medium $4.95",450,null,"from"],
+      ] },
+      { name: "Coffee and espresso", items: [
+        ["Brewed coffee","Small $3.50, medium $3.70, large $4.00",350,null,"from"],
+        ["Cold brew","Small $4.50, medium $5.75, large $6.75",450,null,"from"],
+        ["Cappuccino","Small $5.10, medium $5.60, large $6.10",510,null,"from"],
+        ["Latte","Small $5.10, medium $5.60, large $6.50",510,null,"from"],
+        ["Mocha","Small $5.95, medium $6.50, large $7.25",595,null,"from"],
+        ["White Mocha","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Caramel Macchiato","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Americano","Small $4.25, medium $5.25, large $5.75",425,null,"from"],
+      ] },
+      { name: "Pour over", items: [
+        ["Amazing Guatemala","Single origin, medium dark: medium body, creamy, dark cocoa undertones. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Ethiopian Jebena","Single origin, medium: balanced body, blueberry cream undertones, bright floral aroma. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Tanzanian Peaberry","Single origin, medium: full body, tangerine berry notes, delicate acidity. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Humble (decaf)","Blend, medium dark decaf: full body, rich flavor, smoky finish. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+      ] },
+      { name: "Matcha", items: [
+        ["Matcha","Matcha, steamed milk. Small $5.75, medium $6.25, large $7.95",575,null,"from"],
+        ["Lavender Matcha","Matcha, lavender, vanilla, steamed milk. Small $6.25, medium $7.25, large $8.50",625,null,"from"],
+        ["Blueberry Iced Berry Matcha","Matcha, blueberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+        ["Strawberry Iced Berry Matcha","Matcha, strawberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+      ] },
+      { name: "Iced tea", items: [
+        ["Kosta Kosta","Green tea, lime, blueberry, raspberry. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Gummy Bear Tea","Green tea, mango, raspberry, gummy bears. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Mango Madness","Black tea, mango. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Party at the Beach","Green tea, strawberry, peach, coconut. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Georgia Peach","Black tea, peach, coconut, honey. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+      ] },
+      { name: "Tea lattes", items: [
+        ["Chai Latte","Spiced, sweetened chai latte. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["London Fog","Earl Grey tea, vanilla steamed foam. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["Berry Topia","Green tea, peach, blueberry. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+      ] },
+      { name: "Breakfast burritos", items: [
+        ["Chicken apple sausage burrito","With egg, cheddar cheese",995],
+        ["Hickory smoked bacon burrito","With egg, cheddar cheese",995],
+        ["Chorizo burrito","Chorizo, scrambled eggs, avocado, potato, shredded cheddar cheese",1095],
+        ["Veggie burrito","Scrambled eggs, avocado, potato, shredded cheddar cheese, green onions, green bell peppers",1095],
+      ] },
+      { name: "Breakfast sandwiches", items: [
+        ["Egg & Cheese","Brioche roll, soft scrambled egg, American cheese, chipotle aioli",795],
+        ["Ham, Egg & Cheese","Brioche roll, ham, soft scrambled egg, American cheese, chipotle aioli",925],
+        ["Morning Melt","Thick toast, ham, sliced cheddar cheese, over-medium egg with a soft runny yolk",895],
+        ["Sausage breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, garlic aioli",975],
+        ["Griddle","Mini waffle buns, American cheese, sausage patty, over-medium egg with a soft runny yolk, and syrup",995],
+        ["Veggie breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, spinach, green onions, green bell peppers, spicy safari sauce",1050],
+      ] },
+      { name: "Lunch sandwiches", items: [
+        ["Turkey Avocado","Sourdough, turkey breast, avocado, spring mix, tomatoes, mayonnaise. Served with chips",1750],
+        ["Ham & Cheese","Sourdough, ham, Swiss cheese, spring mix, mayonnaise. Served with chips",1495],
+        ["Club Sandwich","Turkey, ham, cheddar, mayonnaise, tomato, green leaf lettuce on thick toast. Served with chips",1395],
+        ["Grilled Cheese","Wheat bread, Swiss cheese, butter. Served with chips",995],
+        ["Turkey & Bacon Panini","Turkey, bacon, cheddar and pesto on a sweet roll",1295],
+        ["Ham Panini","Ham, Swiss cheese and pesto on a sweet roll",1295],
+        ["Caprese Panini","Fresh mozzarella, tomato, basil and pesto on a sweet roll",1295],
+      ] },
+      { name: "Specialty toasts", items: [
+        ["Free Range","Avocado, hard-boiled eggs, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Fresco","Avocado, diced tomatoes, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Lox N Toast","Smoked salmon, cream cheese, capers. On artisan sourdough; side salad or chips $3",1295],
+        ["Avocado Delight","Avocado, garlic sauce, tomato pesto, red pepper flakes. On artisan sourdough; side salad or chips $3",1195],
+        ["Sunny Side Toast","Avocado, over-medium egg, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Honey Berry Toast","Cream cheese, sliced strawberries, blueberries, almonds, drizzled in honey. On artisan sourdough; side salad or chips $3",1125],
+      ] },
+      { name: "Womelettes", items: [
+        ["Bacon womelette","Waffle-pressed eggs: bacon, tater tots, shredded cheddar, egg",1495],
+        ["Meat Lovers womelette","Waffle-pressed eggs: bacon, ham, tater tots, shredded cheddar, egg",1495],
+        ["Ham womelette","Waffle-pressed eggs: ham, tater tots, shredded cheddar, egg",1495],
+        ["Chicken Apple Sausage womelette","Waffle-pressed eggs: chicken apple sausage, tater tots, shredded cheddar, egg",1495],
+        ["Popeye's womelette","Waffle-pressed eggs: baby spinach, tater tots, shredded cheddar, egg",1495],
+        ["Veggie womelette","Waffle-pressed eggs: green bell peppers, tomatoes, green onion, cheddar, tater tots, egg",1495],
+      ] },
+      { name: "Waffles and desserts", items: [
+        ["Crispy Belgian","Butter, syrup",1075],
+        ["Fresh Berry Belgian","Strawberries, blueberries, whipped cream",1450],
+        ["Strawberry Nelly","Nutella, strawberries",1325],
+        ["Berry Cream","Waffle, vanilla ice cream, strawberries, caramel sauce, whipped cream",1375],
+        ["Tella Cream","Waffle, vanilla ice cream, Nutella, whipped cream",1375],
+        ["Vanilla ice cream on any waffle","Add to any waffle",295],
+      ] },
+      { name: "Sides, yogurt and French toast", items: [
+        ["Plain Tots","Tater tots",595],
+        ["Loaded Tots","Tater tots, soft egg, green onions, shredded cheese, safari sauce",995],
+        ["Plain yogurt","Greek yogurt. Regular $6.00, large $6.50",600,null,"from"],
+        ["Yogurt with toppings","Three toppings included, from blueberries, strawberries, chocolate chips, crushed Oreos, sliced almonds, Cheerios, brown sugar, granola, honey, coconut and raisins. Regular $10.00, large $11.95",1000,null,"from"],
+        ["French Toast","Thick toast, cinnamon, powdered sugar, whipped cream",1495],
+        ["Nutella French Toast","Thick toast, Nutella, cinnamon, powdered sugar, whipped cream",1495],
+        ["French Berry","Thick toast, strawberries, blueberries, powdered sugar, whipped cream",1595],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site.",
+  },
+
+  /*
+     penelopes-coffee-daly-city — gathered 2026-09-21 from own
+     their spelling: "Penelope's Coffee & Tea" (roster keeps "penelopes-coffee-daly-city")
+     they are: Coffee & tea
+     flag: One menu for all five: the PDF their site links (assets/menu.pdf, dated June 2026). Their site publishes no opening hours, so none are shown.
+     flag: Multi-size drinks carry the small price as a "from" floor, with every size in the description.
+  */
+  'penelopes-coffee-daly-city': {
+    address: "323 Gellert Blvd, Daly City, CA 94015",
+    phone: "(415) 347-7298",
+    instagram: "penelopescoffeeandtea",
+    cuisine: "Coffee & tea",
+    tagline: "Coffee and tea house with Greek coffee, freddos and breakfast",
+    sections: [
+      { name: "Specialty drinks", items: [
+        ["Lillian Latte","Espresso shot, lavender, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cookie Monster","Espresso shot, cupcake, cookie dough, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Wild Berry Latte","Espresso shot, raspberry. Small $5.95, medium $6.95",595,null,"from"],
+        ["Penelope's Samoas","Espresso shot, caramel, chocolate sauce, coconut. Small $5.95, medium $6.95",595,null,"from"],
+        ["Salted Caramel","Espresso shot, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cinnamon Dolce","Espresso shot, cinnamon, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+      ] },
+      { name: "Greek coffee and freddos", items: [
+        ["Hot Greek coffee","Small",350],
+        ["Hot Greek white mocha","Small",450],
+        ["Hot Greek mocha","Small",450],
+        ["Iced Greek coffee","Small $4.25, medium $4.95, large $5.25",425,null,"from"],
+        ["Iced Greek white mocha","Small $5.25, medium $6.00, large $6.75",525,null,"from"],
+        ["Iced Greek mocha","Small $5.25, medium $5.95, large $6.50",525,null,"from"],
+        ["Freddo Cappuccino","Iced cappuccino with cold foam. Small $4.75, medium $5.50",475,null,"from"],
+        ["Freddo Espresso","Whipped espresso. Small $4.50, medium $4.95",450,null,"from"],
+      ] },
+      { name: "Coffee and espresso", items: [
+        ["Brewed coffee","Small $3.50, medium $3.70, large $4.00",350,null,"from"],
+        ["Cold brew","Small $4.50, medium $5.75, large $6.75",450,null,"from"],
+        ["Cappuccino","Small $5.10, medium $5.60, large $6.10",510,null,"from"],
+        ["Latte","Small $5.10, medium $5.60, large $6.50",510,null,"from"],
+        ["Mocha","Small $5.95, medium $6.50, large $7.25",595,null,"from"],
+        ["White Mocha","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Caramel Macchiato","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Americano","Small $4.25, medium $5.25, large $5.75",425,null,"from"],
+      ] },
+      { name: "Pour over", items: [
+        ["Amazing Guatemala","Single origin, medium dark: medium body, creamy, dark cocoa undertones. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Ethiopian Jebena","Single origin, medium: balanced body, blueberry cream undertones, bright floral aroma. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Tanzanian Peaberry","Single origin, medium: full body, tangerine berry notes, delicate acidity. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Humble (decaf)","Blend, medium dark decaf: full body, rich flavor, smoky finish. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+      ] },
+      { name: "Matcha", items: [
+        ["Matcha","Matcha, steamed milk. Small $5.75, medium $6.25, large $7.95",575,null,"from"],
+        ["Lavender Matcha","Matcha, lavender, vanilla, steamed milk. Small $6.25, medium $7.25, large $8.50",625,null,"from"],
+        ["Blueberry Iced Berry Matcha","Matcha, blueberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+        ["Strawberry Iced Berry Matcha","Matcha, strawberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+      ] },
+      { name: "Iced tea", items: [
+        ["Kosta Kosta","Green tea, lime, blueberry, raspberry. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Gummy Bear Tea","Green tea, mango, raspberry, gummy bears. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Mango Madness","Black tea, mango. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Party at the Beach","Green tea, strawberry, peach, coconut. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Georgia Peach","Black tea, peach, coconut, honey. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+      ] },
+      { name: "Tea lattes", items: [
+        ["Chai Latte","Spiced, sweetened chai latte. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["London Fog","Earl Grey tea, vanilla steamed foam. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["Berry Topia","Green tea, peach, blueberry. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+      ] },
+      { name: "Breakfast burritos", items: [
+        ["Chicken apple sausage burrito","With egg, cheddar cheese",995],
+        ["Hickory smoked bacon burrito","With egg, cheddar cheese",995],
+        ["Chorizo burrito","Chorizo, scrambled eggs, avocado, potato, shredded cheddar cheese",1095],
+        ["Veggie burrito","Scrambled eggs, avocado, potato, shredded cheddar cheese, green onions, green bell peppers",1095],
+      ] },
+      { name: "Breakfast sandwiches", items: [
+        ["Egg & Cheese","Brioche roll, soft scrambled egg, American cheese, chipotle aioli",795],
+        ["Ham, Egg & Cheese","Brioche roll, ham, soft scrambled egg, American cheese, chipotle aioli",925],
+        ["Morning Melt","Thick toast, ham, sliced cheddar cheese, over-medium egg with a soft runny yolk",895],
+        ["Sausage breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, garlic aioli",975],
+        ["Griddle","Mini waffle buns, American cheese, sausage patty, over-medium egg with a soft runny yolk, and syrup",995],
+        ["Veggie breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, spinach, green onions, green bell peppers, spicy safari sauce",1050],
+      ] },
+      { name: "Lunch sandwiches", items: [
+        ["Turkey Avocado","Sourdough, turkey breast, avocado, spring mix, tomatoes, mayonnaise. Served with chips",1750],
+        ["Ham & Cheese","Sourdough, ham, Swiss cheese, spring mix, mayonnaise. Served with chips",1495],
+        ["Club Sandwich","Turkey, ham, cheddar, mayonnaise, tomato, green leaf lettuce on thick toast. Served with chips",1395],
+        ["Grilled Cheese","Wheat bread, Swiss cheese, butter. Served with chips",995],
+        ["Turkey & Bacon Panini","Turkey, bacon, cheddar and pesto on a sweet roll",1295],
+        ["Ham Panini","Ham, Swiss cheese and pesto on a sweet roll",1295],
+        ["Caprese Panini","Fresh mozzarella, tomato, basil and pesto on a sweet roll",1295],
+      ] },
+      { name: "Specialty toasts", items: [
+        ["Free Range","Avocado, hard-boiled eggs, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Fresco","Avocado, diced tomatoes, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Lox N Toast","Smoked salmon, cream cheese, capers. On artisan sourdough; side salad or chips $3",1295],
+        ["Avocado Delight","Avocado, garlic sauce, tomato pesto, red pepper flakes. On artisan sourdough; side salad or chips $3",1195],
+        ["Sunny Side Toast","Avocado, over-medium egg, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Honey Berry Toast","Cream cheese, sliced strawberries, blueberries, almonds, drizzled in honey. On artisan sourdough; side salad or chips $3",1125],
+      ] },
+      { name: "Womelettes", items: [
+        ["Bacon womelette","Waffle-pressed eggs: bacon, tater tots, shredded cheddar, egg",1495],
+        ["Meat Lovers womelette","Waffle-pressed eggs: bacon, ham, tater tots, shredded cheddar, egg",1495],
+        ["Ham womelette","Waffle-pressed eggs: ham, tater tots, shredded cheddar, egg",1495],
+        ["Chicken Apple Sausage womelette","Waffle-pressed eggs: chicken apple sausage, tater tots, shredded cheddar, egg",1495],
+        ["Popeye's womelette","Waffle-pressed eggs: baby spinach, tater tots, shredded cheddar, egg",1495],
+        ["Veggie womelette","Waffle-pressed eggs: green bell peppers, tomatoes, green onion, cheddar, tater tots, egg",1495],
+      ] },
+      { name: "Waffles and desserts", items: [
+        ["Crispy Belgian","Butter, syrup",1075],
+        ["Fresh Berry Belgian","Strawberries, blueberries, whipped cream",1450],
+        ["Strawberry Nelly","Nutella, strawberries",1325],
+        ["Berry Cream","Waffle, vanilla ice cream, strawberries, caramel sauce, whipped cream",1375],
+        ["Tella Cream","Waffle, vanilla ice cream, Nutella, whipped cream",1375],
+        ["Vanilla ice cream on any waffle","Add to any waffle",295],
+      ] },
+      { name: "Sides, yogurt and French toast", items: [
+        ["Plain Tots","Tater tots",595],
+        ["Loaded Tots","Tater tots, soft egg, green onions, shredded cheese, safari sauce",995],
+        ["Plain yogurt","Greek yogurt. Regular $6.00, large $6.50",600,null,"from"],
+        ["Yogurt with toppings","Three toppings included, from blueberries, strawberries, chocolate chips, crushed Oreos, sliced almonds, Cheerios, brown sugar, granola, honey, coconut and raisins. Regular $10.00, large $11.95",1000,null,"from"],
+        ["French Toast","Thick toast, cinnamon, powdered sugar, whipped cream",1495],
+        ["Nutella French Toast","Thick toast, Nutella, cinnamon, powdered sugar, whipped cream",1495],
+        ["French Berry","Thick toast, strawberries, blueberries, powdered sugar, whipped cream",1595],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site.",
+  },
+
+  /*
+     penelopes-coffee-foster-city — gathered 2026-09-21 from own
+     their spelling: "Penelope's Coffee & Tea" (roster keeps "penelopes-coffee-foster-city")
+     they are: Coffee & tea
+     flag: One menu for all five: the PDF their site links (assets/menu.pdf, dated June 2026). Their site publishes no opening hours, so none are shown.
+     flag: Multi-size drinks carry the small price as a "from" floor, with every size in the description.
+  */
+  'penelopes-coffee-foster-city': {
+    address: "3 Plaza View Ln, Foster City, CA 94404",
+    phone: "(650) 393-4035",
+    instagram: "penelopescoffeeandtea",
+    cuisine: "Coffee & tea",
+    tagline: "Coffee and tea house with Greek coffee, freddos and breakfast",
+    sections: [
+      { name: "Specialty drinks", items: [
+        ["Lillian Latte","Espresso shot, lavender, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cookie Monster","Espresso shot, cupcake, cookie dough, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Wild Berry Latte","Espresso shot, raspberry. Small $5.95, medium $6.95",595,null,"from"],
+        ["Penelope's Samoas","Espresso shot, caramel, chocolate sauce, coconut. Small $5.95, medium $6.95",595,null,"from"],
+        ["Salted Caramel","Espresso shot, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cinnamon Dolce","Espresso shot, cinnamon, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+      ] },
+      { name: "Greek coffee and freddos", items: [
+        ["Hot Greek coffee","Small",350],
+        ["Hot Greek white mocha","Small",450],
+        ["Hot Greek mocha","Small",450],
+        ["Iced Greek coffee","Small $4.25, medium $4.95, large $5.25",425,null,"from"],
+        ["Iced Greek white mocha","Small $5.25, medium $6.00, large $6.75",525,null,"from"],
+        ["Iced Greek mocha","Small $5.25, medium $5.95, large $6.50",525,null,"from"],
+        ["Freddo Cappuccino","Iced cappuccino with cold foam. Small $4.75, medium $5.50",475,null,"from"],
+        ["Freddo Espresso","Whipped espresso. Small $4.50, medium $4.95",450,null,"from"],
+      ] },
+      { name: "Coffee and espresso", items: [
+        ["Brewed coffee","Small $3.50, medium $3.70, large $4.00",350,null,"from"],
+        ["Cold brew","Small $4.50, medium $5.75, large $6.75",450,null,"from"],
+        ["Cappuccino","Small $5.10, medium $5.60, large $6.10",510,null,"from"],
+        ["Latte","Small $5.10, medium $5.60, large $6.50",510,null,"from"],
+        ["Mocha","Small $5.95, medium $6.50, large $7.25",595,null,"from"],
+        ["White Mocha","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Caramel Macchiato","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Americano","Small $4.25, medium $5.25, large $5.75",425,null,"from"],
+      ] },
+      { name: "Pour over", items: [
+        ["Amazing Guatemala","Single origin, medium dark: medium body, creamy, dark cocoa undertones. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Ethiopian Jebena","Single origin, medium: balanced body, blueberry cream undertones, bright floral aroma. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Tanzanian Peaberry","Single origin, medium: full body, tangerine berry notes, delicate acidity. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Humble (decaf)","Blend, medium dark decaf: full body, rich flavor, smoky finish. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+      ] },
+      { name: "Matcha", items: [
+        ["Matcha","Matcha, steamed milk. Small $5.75, medium $6.25, large $7.95",575,null,"from"],
+        ["Lavender Matcha","Matcha, lavender, vanilla, steamed milk. Small $6.25, medium $7.25, large $8.50",625,null,"from"],
+        ["Blueberry Iced Berry Matcha","Matcha, blueberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+        ["Strawberry Iced Berry Matcha","Matcha, strawberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+      ] },
+      { name: "Iced tea", items: [
+        ["Kosta Kosta","Green tea, lime, blueberry, raspberry. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Gummy Bear Tea","Green tea, mango, raspberry, gummy bears. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Mango Madness","Black tea, mango. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Party at the Beach","Green tea, strawberry, peach, coconut. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Georgia Peach","Black tea, peach, coconut, honey. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+      ] },
+      { name: "Tea lattes", items: [
+        ["Chai Latte","Spiced, sweetened chai latte. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["London Fog","Earl Grey tea, vanilla steamed foam. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["Berry Topia","Green tea, peach, blueberry. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+      ] },
+      { name: "Breakfast burritos", items: [
+        ["Chicken apple sausage burrito","With egg, cheddar cheese",995],
+        ["Hickory smoked bacon burrito","With egg, cheddar cheese",995],
+        ["Chorizo burrito","Chorizo, scrambled eggs, avocado, potato, shredded cheddar cheese",1095],
+        ["Veggie burrito","Scrambled eggs, avocado, potato, shredded cheddar cheese, green onions, green bell peppers",1095],
+      ] },
+      { name: "Breakfast sandwiches", items: [
+        ["Egg & Cheese","Brioche roll, soft scrambled egg, American cheese, chipotle aioli",795],
+        ["Ham, Egg & Cheese","Brioche roll, ham, soft scrambled egg, American cheese, chipotle aioli",925],
+        ["Morning Melt","Thick toast, ham, sliced cheddar cheese, over-medium egg with a soft runny yolk",895],
+        ["Sausage breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, garlic aioli",975],
+        ["Griddle","Mini waffle buns, American cheese, sausage patty, over-medium egg with a soft runny yolk, and syrup",995],
+        ["Veggie breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, spinach, green onions, green bell peppers, spicy safari sauce",1050],
+      ] },
+      { name: "Lunch sandwiches", items: [
+        ["Turkey Avocado","Sourdough, turkey breast, avocado, spring mix, tomatoes, mayonnaise. Served with chips",1750],
+        ["Ham & Cheese","Sourdough, ham, Swiss cheese, spring mix, mayonnaise. Served with chips",1495],
+        ["Club Sandwich","Turkey, ham, cheddar, mayonnaise, tomato, green leaf lettuce on thick toast. Served with chips",1395],
+        ["Grilled Cheese","Wheat bread, Swiss cheese, butter. Served with chips",995],
+        ["Turkey & Bacon Panini","Turkey, bacon, cheddar and pesto on a sweet roll",1295],
+        ["Ham Panini","Ham, Swiss cheese and pesto on a sweet roll",1295],
+        ["Caprese Panini","Fresh mozzarella, tomato, basil and pesto on a sweet roll",1295],
+      ] },
+      { name: "Specialty toasts", items: [
+        ["Free Range","Avocado, hard-boiled eggs, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Fresco","Avocado, diced tomatoes, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Lox N Toast","Smoked salmon, cream cheese, capers. On artisan sourdough; side salad or chips $3",1295],
+        ["Avocado Delight","Avocado, garlic sauce, tomato pesto, red pepper flakes. On artisan sourdough; side salad or chips $3",1195],
+        ["Sunny Side Toast","Avocado, over-medium egg, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Honey Berry Toast","Cream cheese, sliced strawberries, blueberries, almonds, drizzled in honey. On artisan sourdough; side salad or chips $3",1125],
+      ] },
+      { name: "Womelettes", items: [
+        ["Bacon womelette","Waffle-pressed eggs: bacon, tater tots, shredded cheddar, egg",1495],
+        ["Meat Lovers womelette","Waffle-pressed eggs: bacon, ham, tater tots, shredded cheddar, egg",1495],
+        ["Ham womelette","Waffle-pressed eggs: ham, tater tots, shredded cheddar, egg",1495],
+        ["Chicken Apple Sausage womelette","Waffle-pressed eggs: chicken apple sausage, tater tots, shredded cheddar, egg",1495],
+        ["Popeye's womelette","Waffle-pressed eggs: baby spinach, tater tots, shredded cheddar, egg",1495],
+        ["Veggie womelette","Waffle-pressed eggs: green bell peppers, tomatoes, green onion, cheddar, tater tots, egg",1495],
+      ] },
+      { name: "Waffles and desserts", items: [
+        ["Crispy Belgian","Butter, syrup",1075],
+        ["Fresh Berry Belgian","Strawberries, blueberries, whipped cream",1450],
+        ["Strawberry Nelly","Nutella, strawberries",1325],
+        ["Berry Cream","Waffle, vanilla ice cream, strawberries, caramel sauce, whipped cream",1375],
+        ["Tella Cream","Waffle, vanilla ice cream, Nutella, whipped cream",1375],
+        ["Vanilla ice cream on any waffle","Add to any waffle",295],
+      ] },
+      { name: "Sides, yogurt and French toast", items: [
+        ["Plain Tots","Tater tots",595],
+        ["Loaded Tots","Tater tots, soft egg, green onions, shredded cheese, safari sauce",995],
+        ["Plain yogurt","Greek yogurt. Regular $6.00, large $6.50",600,null,"from"],
+        ["Yogurt with toppings","Three toppings included, from blueberries, strawberries, chocolate chips, crushed Oreos, sliced almonds, Cheerios, brown sugar, granola, honey, coconut and raisins. Regular $10.00, large $11.95",1000,null,"from"],
+        ["French Toast","Thick toast, cinnamon, powdered sugar, whipped cream",1495],
+        ["Nutella French Toast","Thick toast, Nutella, cinnamon, powdered sugar, whipped cream",1495],
+        ["French Berry","Thick toast, strawberries, blueberries, powdered sugar, whipped cream",1595],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site.",
+  },
+
+  /*
+     penelopes-coffee-san-mateo — gathered 2026-09-21 from own
+     their spelling: "Penelope's Coffee & Tea" (roster keeps "penelopes-coffee-san-mateo")
+     they are: Coffee & tea
+     flag: Their site prints 94401 for 1326 W. Hillsdale Blvd; carried as published.
+     flag: One menu for all five: the PDF their site links (assets/menu.pdf, dated June 2026). Their site publishes no opening hours, so none are shown.
+     flag: Multi-size drinks carry the small price as a "from" floor, with every size in the description.
+  */
+  'penelopes-coffee-san-mateo': {
+    address: "1326 W Hillsdale Blvd, San Mateo, CA 94401",
+    phone: "(650) 212-6049",
+    instagram: "penelopescoffeeandtea",
+    cuisine: "Coffee & tea",
+    tagline: "Coffee and tea house with Greek coffee, freddos and breakfast",
+    sections: [
+      { name: "Specialty drinks", items: [
+        ["Lillian Latte","Espresso shot, lavender, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cookie Monster","Espresso shot, cupcake, cookie dough, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Wild Berry Latte","Espresso shot, raspberry. Small $5.95, medium $6.95",595,null,"from"],
+        ["Penelope's Samoas","Espresso shot, caramel, chocolate sauce, coconut. Small $5.95, medium $6.95",595,null,"from"],
+        ["Salted Caramel","Espresso shot, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cinnamon Dolce","Espresso shot, cinnamon, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+      ] },
+      { name: "Greek coffee and freddos", items: [
+        ["Hot Greek coffee","Small",350],
+        ["Hot Greek white mocha","Small",450],
+        ["Hot Greek mocha","Small",450],
+        ["Iced Greek coffee","Small $4.25, medium $4.95, large $5.25",425,null,"from"],
+        ["Iced Greek white mocha","Small $5.25, medium $6.00, large $6.75",525,null,"from"],
+        ["Iced Greek mocha","Small $5.25, medium $5.95, large $6.50",525,null,"from"],
+        ["Freddo Cappuccino","Iced cappuccino with cold foam. Small $4.75, medium $5.50",475,null,"from"],
+        ["Freddo Espresso","Whipped espresso. Small $4.50, medium $4.95",450,null,"from"],
+      ] },
+      { name: "Coffee and espresso", items: [
+        ["Brewed coffee","Small $3.50, medium $3.70, large $4.00",350,null,"from"],
+        ["Cold brew","Small $4.50, medium $5.75, large $6.75",450,null,"from"],
+        ["Cappuccino","Small $5.10, medium $5.60, large $6.10",510,null,"from"],
+        ["Latte","Small $5.10, medium $5.60, large $6.50",510,null,"from"],
+        ["Mocha","Small $5.95, medium $6.50, large $7.25",595,null,"from"],
+        ["White Mocha","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Caramel Macchiato","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Americano","Small $4.25, medium $5.25, large $5.75",425,null,"from"],
+      ] },
+      { name: "Pour over", items: [
+        ["Amazing Guatemala","Single origin, medium dark: medium body, creamy, dark cocoa undertones. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Ethiopian Jebena","Single origin, medium: balanced body, blueberry cream undertones, bright floral aroma. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Tanzanian Peaberry","Single origin, medium: full body, tangerine berry notes, delicate acidity. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Humble (decaf)","Blend, medium dark decaf: full body, rich flavor, smoky finish. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+      ] },
+      { name: "Matcha", items: [
+        ["Matcha","Matcha, steamed milk. Small $5.75, medium $6.25, large $7.95",575,null,"from"],
+        ["Lavender Matcha","Matcha, lavender, vanilla, steamed milk. Small $6.25, medium $7.25, large $8.50",625,null,"from"],
+        ["Blueberry Iced Berry Matcha","Matcha, blueberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+        ["Strawberry Iced Berry Matcha","Matcha, strawberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+      ] },
+      { name: "Iced tea", items: [
+        ["Kosta Kosta","Green tea, lime, blueberry, raspberry. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Gummy Bear Tea","Green tea, mango, raspberry, gummy bears. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Mango Madness","Black tea, mango. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Party at the Beach","Green tea, strawberry, peach, coconut. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Georgia Peach","Black tea, peach, coconut, honey. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+      ] },
+      { name: "Tea lattes", items: [
+        ["Chai Latte","Spiced, sweetened chai latte. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["London Fog","Earl Grey tea, vanilla steamed foam. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["Berry Topia","Green tea, peach, blueberry. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+      ] },
+      { name: "Breakfast burritos", items: [
+        ["Chicken apple sausage burrito","With egg, cheddar cheese",995],
+        ["Hickory smoked bacon burrito","With egg, cheddar cheese",995],
+        ["Chorizo burrito","Chorizo, scrambled eggs, avocado, potato, shredded cheddar cheese",1095],
+        ["Veggie burrito","Scrambled eggs, avocado, potato, shredded cheddar cheese, green onions, green bell peppers",1095],
+      ] },
+      { name: "Breakfast sandwiches", items: [
+        ["Egg & Cheese","Brioche roll, soft scrambled egg, American cheese, chipotle aioli",795],
+        ["Ham, Egg & Cheese","Brioche roll, ham, soft scrambled egg, American cheese, chipotle aioli",925],
+        ["Morning Melt","Thick toast, ham, sliced cheddar cheese, over-medium egg with a soft runny yolk",895],
+        ["Sausage breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, garlic aioli",975],
+        ["Griddle","Mini waffle buns, American cheese, sausage patty, over-medium egg with a soft runny yolk, and syrup",995],
+        ["Veggie breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, spinach, green onions, green bell peppers, spicy safari sauce",1050],
+      ] },
+      { name: "Lunch sandwiches", items: [
+        ["Turkey Avocado","Sourdough, turkey breast, avocado, spring mix, tomatoes, mayonnaise. Served with chips",1750],
+        ["Ham & Cheese","Sourdough, ham, Swiss cheese, spring mix, mayonnaise. Served with chips",1495],
+        ["Club Sandwich","Turkey, ham, cheddar, mayonnaise, tomato, green leaf lettuce on thick toast. Served with chips",1395],
+        ["Grilled Cheese","Wheat bread, Swiss cheese, butter. Served with chips",995],
+        ["Turkey & Bacon Panini","Turkey, bacon, cheddar and pesto on a sweet roll",1295],
+        ["Ham Panini","Ham, Swiss cheese and pesto on a sweet roll",1295],
+        ["Caprese Panini","Fresh mozzarella, tomato, basil and pesto on a sweet roll",1295],
+      ] },
+      { name: "Specialty toasts", items: [
+        ["Free Range","Avocado, hard-boiled eggs, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Fresco","Avocado, diced tomatoes, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Lox N Toast","Smoked salmon, cream cheese, capers. On artisan sourdough; side salad or chips $3",1295],
+        ["Avocado Delight","Avocado, garlic sauce, tomato pesto, red pepper flakes. On artisan sourdough; side salad or chips $3",1195],
+        ["Sunny Side Toast","Avocado, over-medium egg, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Honey Berry Toast","Cream cheese, sliced strawberries, blueberries, almonds, drizzled in honey. On artisan sourdough; side salad or chips $3",1125],
+      ] },
+      { name: "Womelettes", items: [
+        ["Bacon womelette","Waffle-pressed eggs: bacon, tater tots, shredded cheddar, egg",1495],
+        ["Meat Lovers womelette","Waffle-pressed eggs: bacon, ham, tater tots, shredded cheddar, egg",1495],
+        ["Ham womelette","Waffle-pressed eggs: ham, tater tots, shredded cheddar, egg",1495],
+        ["Chicken Apple Sausage womelette","Waffle-pressed eggs: chicken apple sausage, tater tots, shredded cheddar, egg",1495],
+        ["Popeye's womelette","Waffle-pressed eggs: baby spinach, tater tots, shredded cheddar, egg",1495],
+        ["Veggie womelette","Waffle-pressed eggs: green bell peppers, tomatoes, green onion, cheddar, tater tots, egg",1495],
+      ] },
+      { name: "Waffles and desserts", items: [
+        ["Crispy Belgian","Butter, syrup",1075],
+        ["Fresh Berry Belgian","Strawberries, blueberries, whipped cream",1450],
+        ["Strawberry Nelly","Nutella, strawberries",1325],
+        ["Berry Cream","Waffle, vanilla ice cream, strawberries, caramel sauce, whipped cream",1375],
+        ["Tella Cream","Waffle, vanilla ice cream, Nutella, whipped cream",1375],
+        ["Vanilla ice cream on any waffle","Add to any waffle",295],
+      ] },
+      { name: "Sides, yogurt and French toast", items: [
+        ["Plain Tots","Tater tots",595],
+        ["Loaded Tots","Tater tots, soft egg, green onions, shredded cheese, safari sauce",995],
+        ["Plain yogurt","Greek yogurt. Regular $6.00, large $6.50",600,null,"from"],
+        ["Yogurt with toppings","Three toppings included, from blueberries, strawberries, chocolate chips, crushed Oreos, sliced almonds, Cheerios, brown sugar, granola, honey, coconut and raisins. Regular $10.00, large $11.95",1000,null,"from"],
+        ["French Toast","Thick toast, cinnamon, powdered sugar, whipped cream",1495],
+        ["Nutella French Toast","Thick toast, Nutella, cinnamon, powdered sugar, whipped cream",1495],
+        ["French Berry","Thick toast, strawberries, blueberries, powdered sugar, whipped cream",1595],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site.",
+  },
+
+  /*
+     penelopes-coffee-sf — gathered 2026-09-21 from own
+     their spelling: "Penelope's Coffee & Tea" (roster keeps "penelopes-coffee-sf")
+     they are: Coffee & tea
+     flag: San Francisco's Coffee shop seat is The Farmacy's, so this shop is a Tier 1 free listing on the yellow sheet.
+     flag: One menu for all five: the PDF their site links (assets/menu.pdf, dated June 2026). Their site publishes no opening hours, so none are shown.
+     flag: Multi-size drinks carry the small price as a "from" floor, with every size in the description.
+  */
+  'penelopes-coffee-sf': {
+    address: "121 Spear St, Suite B12, San Francisco, CA 94105",
+    phone: "(415) 735-7537",
+    instagram: "penelopescoffeeandtea",
+    cuisine: "Coffee & tea",
+    tagline: "Coffee and tea house with Greek coffee, freddos and breakfast",
+    sections: [
+      { name: "Specialty drinks", items: [
+        ["Lillian Latte","Espresso shot, lavender, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cookie Monster","Espresso shot, cupcake, cookie dough, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Wild Berry Latte","Espresso shot, raspberry. Small $5.95, medium $6.95",595,null,"from"],
+        ["Penelope's Samoas","Espresso shot, caramel, chocolate sauce, coconut. Small $5.95, medium $6.95",595,null,"from"],
+        ["Salted Caramel","Espresso shot, salted caramel. Small $5.95, medium $6.95",595,null,"from"],
+        ["Cinnamon Dolce","Espresso shot, cinnamon, French vanilla. Small $5.95, medium $6.95",595,null,"from"],
+      ] },
+      { name: "Greek coffee and freddos", items: [
+        ["Hot Greek coffee","Small",350],
+        ["Hot Greek white mocha","Small",450],
+        ["Hot Greek mocha","Small",450],
+        ["Iced Greek coffee","Small $4.25, medium $4.95, large $5.25",425,null,"from"],
+        ["Iced Greek white mocha","Small $5.25, medium $6.00, large $6.75",525,null,"from"],
+        ["Iced Greek mocha","Small $5.25, medium $5.95, large $6.50",525,null,"from"],
+        ["Freddo Cappuccino","Iced cappuccino with cold foam. Small $4.75, medium $5.50",475,null,"from"],
+        ["Freddo Espresso","Whipped espresso. Small $4.50, medium $4.95",450,null,"from"],
+      ] },
+      { name: "Coffee and espresso", items: [
+        ["Brewed coffee","Small $3.50, medium $3.70, large $4.00",350,null,"from"],
+        ["Cold brew","Small $4.50, medium $5.75, large $6.75",450,null,"from"],
+        ["Cappuccino","Small $5.10, medium $5.60, large $6.10",510,null,"from"],
+        ["Latte","Small $5.10, medium $5.60, large $6.50",510,null,"from"],
+        ["Mocha","Small $5.95, medium $6.50, large $7.25",595,null,"from"],
+        ["White Mocha","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Caramel Macchiato","Small $5.60, medium $6.10, large $6.95",560,null,"from"],
+        ["Americano","Small $4.25, medium $5.25, large $5.75",425,null,"from"],
+      ] },
+      { name: "Pour over", items: [
+        ["Amazing Guatemala","Single origin, medium dark: medium body, creamy, dark cocoa undertones. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Ethiopian Jebena","Single origin, medium: balanced body, blueberry cream undertones, bright floral aroma. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Tanzanian Peaberry","Single origin, medium: full body, tangerine berry notes, delicate acidity. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+        ["Humble (decaf)","Blend, medium dark decaf: full body, rich flavor, smoky finish. Small $5.95, medium $6.75, large $7.25",595,null,"from"],
+      ] },
+      { name: "Matcha", items: [
+        ["Matcha","Matcha, steamed milk. Small $5.75, medium $6.25, large $7.95",575,null,"from"],
+        ["Lavender Matcha","Matcha, lavender, vanilla, steamed milk. Small $6.25, medium $7.25, large $8.50",625,null,"from"],
+        ["Blueberry Iced Berry Matcha","Matcha, blueberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+        ["Strawberry Iced Berry Matcha","Matcha, strawberry puree, steamed milk. Small $6.75, medium $7.95, large $8.95",675,null,"from"],
+      ] },
+      { name: "Iced tea", items: [
+        ["Kosta Kosta","Green tea, lime, blueberry, raspberry. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Gummy Bear Tea","Green tea, mango, raspberry, gummy bears. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Mango Madness","Black tea, mango. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Party at the Beach","Green tea, strawberry, peach, coconut. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+        ["Georgia Peach","Black tea, peach, coconut, honey. Small $5.25, medium $5.95, large $7.25",525,null,"from"],
+      ] },
+      { name: "Tea lattes", items: [
+        ["Chai Latte","Spiced, sweetened chai latte. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["London Fog","Earl Grey tea, vanilla steamed foam. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+        ["Berry Topia","Green tea, peach, blueberry. Small $4.95, medium $5.95, large $6.95",495,null,"from"],
+      ] },
+      { name: "Breakfast burritos", items: [
+        ["Chicken apple sausage burrito","With egg, cheddar cheese",995],
+        ["Hickory smoked bacon burrito","With egg, cheddar cheese",995],
+        ["Chorizo burrito","Chorizo, scrambled eggs, avocado, potato, shredded cheddar cheese",1095],
+        ["Veggie burrito","Scrambled eggs, avocado, potato, shredded cheddar cheese, green onions, green bell peppers",1095],
+      ] },
+      { name: "Breakfast sandwiches", items: [
+        ["Egg & Cheese","Brioche roll, soft scrambled egg, American cheese, chipotle aioli",795],
+        ["Ham, Egg & Cheese","Brioche roll, ham, soft scrambled egg, American cheese, chipotle aioli",925],
+        ["Morning Melt","Thick toast, ham, sliced cheddar cheese, over-medium egg with a soft runny yolk",895],
+        ["Sausage breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, garlic aioli",975],
+        ["Griddle","Mini waffle buns, American cheese, sausage patty, over-medium egg with a soft runny yolk, and syrup",995],
+        ["Veggie breakfast sandwich","Brioche roll, soft scrambled egg, American cheese, spinach, green onions, green bell peppers, spicy safari sauce",1050],
+      ] },
+      { name: "Lunch sandwiches", items: [
+        ["Turkey Avocado","Sourdough, turkey breast, avocado, spring mix, tomatoes, mayonnaise. Served with chips",1750],
+        ["Ham & Cheese","Sourdough, ham, Swiss cheese, spring mix, mayonnaise. Served with chips",1495],
+        ["Club Sandwich","Turkey, ham, cheddar, mayonnaise, tomato, green leaf lettuce on thick toast. Served with chips",1395],
+        ["Grilled Cheese","Wheat bread, Swiss cheese, butter. Served with chips",995],
+        ["Turkey & Bacon Panini","Turkey, bacon, cheddar and pesto on a sweet roll",1295],
+        ["Ham Panini","Ham, Swiss cheese and pesto on a sweet roll",1295],
+        ["Caprese Panini","Fresh mozzarella, tomato, basil and pesto on a sweet roll",1295],
+      ] },
+      { name: "Specialty toasts", items: [
+        ["Free Range","Avocado, hard-boiled eggs, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Fresco","Avocado, diced tomatoes, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Lox N Toast","Smoked salmon, cream cheese, capers. On artisan sourdough; side salad or chips $3",1295],
+        ["Avocado Delight","Avocado, garlic sauce, tomato pesto, red pepper flakes. On artisan sourdough; side salad or chips $3",1195],
+        ["Sunny Side Toast","Avocado, over-medium egg, salt, pepper. On artisan sourdough; side salad or chips $3",1195],
+        ["Honey Berry Toast","Cream cheese, sliced strawberries, blueberries, almonds, drizzled in honey. On artisan sourdough; side salad or chips $3",1125],
+      ] },
+      { name: "Womelettes", items: [
+        ["Bacon womelette","Waffle-pressed eggs: bacon, tater tots, shredded cheddar, egg",1495],
+        ["Meat Lovers womelette","Waffle-pressed eggs: bacon, ham, tater tots, shredded cheddar, egg",1495],
+        ["Ham womelette","Waffle-pressed eggs: ham, tater tots, shredded cheddar, egg",1495],
+        ["Chicken Apple Sausage womelette","Waffle-pressed eggs: chicken apple sausage, tater tots, shredded cheddar, egg",1495],
+        ["Popeye's womelette","Waffle-pressed eggs: baby spinach, tater tots, shredded cheddar, egg",1495],
+        ["Veggie womelette","Waffle-pressed eggs: green bell peppers, tomatoes, green onion, cheddar, tater tots, egg",1495],
+      ] },
+      { name: "Waffles and desserts", items: [
+        ["Crispy Belgian","Butter, syrup",1075],
+        ["Fresh Berry Belgian","Strawberries, blueberries, whipped cream",1450],
+        ["Strawberry Nelly","Nutella, strawberries",1325],
+        ["Berry Cream","Waffle, vanilla ice cream, strawberries, caramel sauce, whipped cream",1375],
+        ["Tella Cream","Waffle, vanilla ice cream, Nutella, whipped cream",1375],
+        ["Vanilla ice cream on any waffle","Add to any waffle",295],
+      ] },
+      { name: "Sides, yogurt and French toast", items: [
+        ["Plain Tots","Tater tots",595],
+        ["Loaded Tots","Tater tots, soft egg, green onions, shredded cheese, safari sauce",995],
+        ["Plain yogurt","Greek yogurt. Regular $6.00, large $6.50",600,null,"from"],
+        ["Yogurt with toppings","Three toppings included, from blueberries, strawberries, chocolate chips, crushed Oreos, sliced almonds, Cheerios, brown sugar, granola, honey, coconut and raisins. Regular $10.00, large $11.95",1000,null,"from"],
+        ["French Toast","Thick toast, cinnamon, powdered sugar, whipped cream",1495],
+        ["Nutella French Toast","Thick toast, Nutella, cinnamon, powdered sugar, whipped cream",1495],
+        ["French Berry","Thick toast, strawberries, blueberries, powdered sugar, whipped cream",1595],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site.",
   },
 
   /*
@@ -12514,6 +13481,41 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices and photos are from their own site.",
+  },
+
+  /*
+     The Hub by Pack Animals — gathered 2026-09-21 from own
+     they are: Dog training & daycare
+     flag: Glenn: "San Ramon • Services". A dog gym (training, daycare, BARKADE, parties) takes San Ramon's open Pet grooming and walking seat.
+     flag: Their only number is (828) 482-7225, a North Carolina area code, with admin@packanimals.com: Pack Animals' own line, not a local one. Worth confirming before a call.
+     flag: Prices from thehubpack.com/pricing. Puppy Yoga on October 3 is on their Instagram; private training is temporarily full.
+  */
+  'the-hub-pack-animals': {
+    address: "6000 Bollinger Canyon Rd, Suite 2200, San Ramon, CA 94583",
+    phone: "(828) 482-7225",
+    email: "admin@packanimals.com",
+    hours: "Mon 9am-3pm, Tue 9am-6:30pm, Wed-Thu 9am-7pm, Fri 9am-6pm, Sat 9:30am-4pm, Sun private events",
+    instagram: "thehub_packanimals",
+    cuisine: "Dog training & daycare",
+    tagline: "A gym for dogs at Bishop Ranch: classes, daycare, BARKADE and parties",
+    groups: [
+      { name: "Prices", items: [
+        ["Essentials membership","Monthly: up to 1 hour a day of group classes, playgroups, daycare and events",15000],
+        ["Flex membership","Monthly: up to 2 hours a day",27500],
+        ["Routine membership","Monthly: up to 4 hours a day, for regular half-day daycare",49500],
+        ["Credits, 4-pack","One credit is one hour at The Hub: $35 an hour. Credits expire 3 months after purchase",14000],
+        ["Credits, 8-pack","$32.50 an hour",26000],
+        ["Credits, 12-pack","$30 an hour",36000],
+        ["Credits, 16-pack","$28 an hour",44800],
+        ["Credits, 20-pack","$26 an hour",52000],
+        ["BARKADE visit","30 minutes, per dog, no evaluation needed; half price, $20, until October 15",4000],
+        ["Dog party, half facility","2.5-hour rental, the first 30 minutes for setup; members $250",30000],
+        ["Dog party, full facility","2.5-hour rental; members $400",50000],
+        ["Gym Buddy Passes, 4-pack","Up to 2 hours of daycare while you work out, for Equinox members; $35 a pass",14000],
+        ["Private lessons, 4-pack","In person or drop-off; members $400. Temporarily full for new clients",50000],
+      ] },
+    ],
+    quoteOnly: "A gym for dogs at Bishop Ranch: classes, daycare, BARKADE and parties. Prices are from their own site. Daycare and group classes start with an evaluation.",
   },
 
   /*
