@@ -359,11 +359,15 @@ export function PhoneApp({ api }: { api: ShellApi }) {
         {live ? (
           OWNERS.map((o) => (
             <ListSection key={o.name} header={o.role}>
-              <ListRow
-                label={o.name}
-                value={o.phone}
-                onClick={() => setDial({ name: o.name, phone: o.phone })}
-              />
+              {o.phone ? (
+                <ListRow
+                  label={o.name}
+                  value={o.phone}
+                  onClick={() => setDial({ name: o.name, phone: o.phone })}
+                />
+              ) : (
+                <ListRow label={o.name} chevron={false} />
+              )}
               {o.email && <ListRow label="Email" value={o.email} href={`mailto:${o.email}`} />}
             </ListSection>
           ))
