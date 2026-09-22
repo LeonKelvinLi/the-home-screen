@@ -37,6 +37,14 @@ export const SHARE_MEMBERS: SharePage = {
   text: 'One membership, honoured at every participating BEASTY affiliate.',
 }
 
+/* The Contacts screen: the owners' numbers and emails, and who is on BEASTY.
+   Glenn, 2026-09-22, asking for its share button back. */
+export const SHARE_CONTACTS: SharePage = {
+  slug: 'contacts',
+  title: 'BEASTY contacts',
+  text: 'Reach the owners of beastypages.com directly, and see who is on BEASTY.',
+}
+
 export const shareUrl = (page: SharePage): string => `${window.location.origin}/${page.slug}`
 
 /**

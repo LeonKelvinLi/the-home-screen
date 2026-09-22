@@ -57,13 +57,14 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 18 Sep | @tiff.eatz | A late-night pho shop in Scarborough, Toronto, posted April 2026. Sent without the word, four minutes after a "Foodie" | No, and not the Bay Area |
 | 20 Sep | @peggy_shoo | Jonny's Italian Ice & Cream, Sunnyvale | **Yes.** On Jonny's page as a review |
 | 20 Sep | @sherryeatworld (Sherry Shi) | Pork and chive dumplings at four shops in Chinatown, New York, posted August 2026 | No, and not the Bay Area |
+| 22 Sep | @eighty6ix_ (What's Going On, Bay Area & Beyond) | Infin8 Ilocos Empanada (@infin8ilocosempanada), a Filipino-owned business in East San Jose making Ilocos-style empanadas with Chef Crischelle. "Part 1", posted 17 April 2025 | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
 DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__, Dc2abz8C7CU, DdIMBHKPfj_ (again), DS8GlMgCf7b,
 DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
 DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok, DdMhHiJsnc4, DAW5kk6yEWz,
-Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R. The profile is
+Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R, DIktz2AR_0M. The profile is
 instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page

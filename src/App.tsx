@@ -23,13 +23,14 @@ const RESERVE = 'slot.join'
 
 /*
   The paths Glenn shares (see lib/share.ts): two open a landing panel, and the
-  membership one opens the app's own screen, the way a shared business link
-  does. Anything else here would be a page nobody can share.
+  membership and contacts ones open the app's own screen (Phone opens on
+  Contacts), the way a shared business link does. Anything else here would be
+  a page nobody can share.
 */
 /* MAKE $ (key 9) opens the panel keyed `careers` — "Make some money with
    BEASTY", his instructions for bringing a business in. */
 const LINKED_PANEL: Record<string, PanelPage | undefined> = { '/collab': 'collabs', '/money': 'careers' }
-const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members' }
+const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone' }
 const path = () =>
   typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '') || '/'
 

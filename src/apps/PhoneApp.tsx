@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import type { ReactNode } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
 import { PetAvatarArt } from './PetAvatar'
@@ -13,6 +14,8 @@ import { OPERATOR, OWNERS, hasOperatorContact } from '../lib/operator'
 import { CallOrTextSheet } from '../ios/ui/CallOrText'
 import { fetchDirectory, fetchMemberCount, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
 import type { PetAvatar } from '../lib/profile'
+import { SHARE_CONTACTS, shareOrCopy, shareUrl } from '../lib/share'
+import { ShareMark } from './dialer/glyphs'
 
 /*
   A PET FOR EVERY MEMBER, DRAWN FROM THEIR ID. Members do not pick an avatar
@@ -36,6 +39,41 @@ function petFor(id: string): PetAvatar {
   }
 }
 const SINCE = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' })
+
+/*
+  ONE DROP-DOWN PER LETTER. Glenn, 2026-09-22: "for every letter on the
+  contacts. Can you have a drop-down for all the names under each letter?
+  Just to minimize the page." Each letter starts closed and says how many
+  names are under it; a tap opens it and another closes it.
+*/
+function LetterGroup({ letter, count, children }: { letter: string; count: number; children: ReactNode }) {
+  const [open, setOpen] = useState(false)
+  const id = `contacts-letter-${letter}`
+  return (
+    <section className="ios-section contacts-letter">
+      <div className="ios-list">
+        <button
+          type="button"
+          className={`ios-row is-tappable contacts-letter-head${open ? ' is-open' : ''}`}
+          aria-expanded={open}
+          aria-controls={id}
+          onClick={() => setOpen((v) => !v)}
+        >
+          <span className="contacts-letter-mark">{letter}</span>
+          <span className="ios-row-body">
+            <span className="ios-row-label">
+              {count} {count === 1 ? 'member' : 'members'}
+            </span>
+          </span>
+          <span className="ios-row-chevron contacts-letter-chevron">
+            <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
+          </span>
+        </button>
+        {open && <div id={id}>{children}</div>}
+      </div>
+    </section>
+  )
+}
 
 /**
  * Phone, laid out the way iOS lays it out: a five-item tab bar, a keypad with
@@ -129,6 +167,19 @@ export function PhoneApp({ api }: { api: ShellApi }) {
     }
   }, [])
   const [digits, setDigits] = useState('')
+  /*
+    SHARE, TOP RIGHT. Glenn, 2026-09-22: "Would you mind including a share
+    button on the top right corner again for this page?" The same pill the
+    membership page carries, handing out beastypages.com/contacts, which opens
+    straight onto this screen (App.tsx) with its own link preview.
+  */
+  const [said, setSaid] = useState<string | null>(null)
+  const share = async () => {
+    const how = await shareOrCopy(SHARE_CONTACTS)
+    if (how === 'shared') return
+    setSaid(how === 'copied' ? 'Link copied' : `Copy this link: ${shareUrl(SHARE_CONTACTS).replace(/^https?:\/\//, '')}`)
+    window.setTimeout(() => setSaid(null), 3000)
+  }
 
   const tabBar = <TabBar items={TABS} active={tab} onSelect={setTab} />
 
@@ -267,7 +318,23 @@ export function PhoneApp({ api }: { api: ShellApi }) {
     const live = hasOperatorContact()
 
     return (
-      <NavScreen title="Contacts" onBack={api.closeApp} backTitle="Home" footer={tabBar}>
+      <NavScreen
+        title="Contacts"
+        onBack={api.closeApp}
+        backTitle="Home"
+        footer={tabBar}
+        right={
+          <button type="button" className="chrome-pill is-share" onClick={share}>
+            <ShareMark size={15} />
+            Share
+          </button>
+        }
+      >
+        {said && (
+          <p className="contacts-said" role="status">
+            {said}
+          </p>
+        )}
         {/*
           The operator's own card, above the list — iOS puts My Card there and
           it is who someone tapping Phone in the dock is trying to reach.
@@ -338,7 +405,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                 return m
               }, new Map<string, DirectoryMember[]>())
               .entries()].map(([letter, members]) => (
-              <ListSection key={letter} header={letter}>
+              <LetterGroup key={letter} letter={letter} count={members.length}>
                 {members.map((mem) => (
                   <ListRow
                     key={mem.id}
@@ -355,11 +422,12 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                     onClick={() => openMember(mem)}
                   />
                 ))}
-              </ListSection>
+              </LetterGroup>
             ))}
             <p className="ios-section-footer">
               {dir.count === 1 ? '1 member so far.' : `${dir.count} members so far.`} Everyone who signs
-              up appears here the moment they do. Open one to see what they have starred and liked.
+              up appears here the moment they do. Tap a letter to see its names, and open one to see
+              what they have starred and liked.
             </p>
           </>
         ) : (

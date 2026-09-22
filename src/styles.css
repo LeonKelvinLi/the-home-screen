@@ -10980,6 +10980,45 @@ textarea {
   color: #141416;
 }
 
+/* A letter's drop-down: the letter in a small disc, its count, a chevron that
+   turns down when the names are open. */
+.contacts-letter {
+  margin-top: 10px;
+}
+.contacts-letter-mark {
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 213, 0, 0.3);
+  color: #141416;
+  font-size: 15px;
+  font-weight: 800;
+}
+.contacts-letter-head .ios-row-label {
+  color: var(--muted);
+}
+.contacts-letter-chevron svg {
+  transition: transform 0.15s;
+}
+.contacts-letter-head.is-open .contacts-letter-chevron svg {
+  transform: rotate(90deg);
+}
+@media (prefers-reduced-motion: reduce) {
+  .contacts-letter-chevron svg {
+    transition: none;
+  }
+}
+.contacts-said {
+  margin: 0 16px 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--ink);
+  text-align: center;
+}
+
 .contacts-count strong {
   font-size: 22px;
   font-weight: 800;
