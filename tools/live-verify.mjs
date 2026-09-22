@@ -290,6 +290,8 @@ for (const [id, want, expect] of [
   ['b_thehubpackanimals', 'The Hub by Pack Animals', { rows: 13, quote: true, hours: 'Mon 9am-3pm', call: '(828) 482-7225' }],
   /* 2026-09-21, 10:39 pm: "Gotta make a page for E-40." */
   ['b_e40', 'E-40', {}],
+  /* 2026-09-21, 10:43 pm: "Grando1k", straight after E-40. */
+  ['b_grando', 'Grand-O', {}],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -547,16 +549,25 @@ for (const [s, what] of [
   ['icon:"richie-rich-2"', "Richie Rich's headshot"],
   ['icon:"e-40"', "E-40's headshot"],
   ['"beasty-individuals-17":"b_e40"', 'E-40 on BEASTY • Individuals 18'],
+  /* 2026-09-21, 10:31 to 11:02 pm: Marshawn's and Crayone's headshots, and
+     Grand-O's page on seat 19. */
+  ['icon:"beastmode-2"', "Marshawn Lynch's headshot on BEASTMODE"],
+  ['icon:"crayone"', "Crayone's headshot"],
+  ['icon:"grand-o"', "Grand-O's headshot"],
+  ['"beasty-individuals-18":"b_grando"', 'Grand-O on BEASTY • Individuals 19'],
 ]) {
   if (!bundles.includes(s)) fails.push(`${what} is not in any deployed chunk (${s})`)
 }
 /* And the files themselves: a name in the bundle with no file behind it draws
    a broken image on the sheet. */
-for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40']) {
+for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40', 'beastmode-2', 'crayone', 'grand-o']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }
 if (bundles.includes('"beasty-online-10":')) fails.push('Vending Enterprise still holds BEASTY • Online 11')
+/* The Instagram button is a paid feature Glenn approves page by page; E-40's
+   went up without his say-so on 2026-09-21 and came off the same night. */
+if (bundles.includes('instagram:"e40"')) fails.push("E-40's page still carries an Instagram button Glenn has not approved")
 
 /* The pass and the till, from outside: no session means no pass, and no vendor
    or operator token means no scan. Both are the doors that must be shut on the

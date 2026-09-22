@@ -3281,7 +3281,9 @@ export const LOCAL_SEED: LocalSeed[] = [
       paragraph, and every fact on this page is from that paragraph: a
       platinum-selling recording artist and actor from Vallejo, Earl Stevens by
       name, "a rap veteran entrepreneur". "The most prolific icon" is Glenn's
-      line, not his, so it is not on the page.
+      line, not his, so it is not on the page. No Instagram button: that is a
+      paid feature Glenn approves page by page (see the Brand type), and he has
+      not for this one.
     */
     slug: 'e-40',
     icon: 'e-40',
@@ -3294,9 +3296,37 @@ export const LOCAL_SEED: LocalSeed[] = [
     category: 'Artist',
     site: 'https://e-40.com/',
     siteCta: 'See his site',
-    instagram: 'e40',
     contactOnly:
       'Earl Stevens, known as E-40: a platinum-selling recording artist, actor and entrepreneur from Vallejo, California. BEASTY has not spoken to him yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    /*
+      GLENN'S MESSAGE, 2026-09-21, 10:43 pm: "Grando1k", with one of his posts,
+      straight after "Gotta make a page for E-40" and in the same run of
+      Individuals' headshots: a page like E-40's, with that post as the icon,
+      cut to his head, cap to braids, clear of the glass in front of him.
+
+      EVERY FACT IS FROM HIS OWN PROFILES. @grando1k is titled GRAND-O and says
+      "I RAP & EAT SNACKS @thesnacksensei"; @thesnacksensei is titled "GRAND-O
+      THE SNACK SENSEI", so that account is his too. The link in his bio is
+      "Grand-O & DJ Idea - Make It Happen (Official Music Video)" on YouTube,
+      which is the button. Nothing says where he is from, so the page doesn't.
+      No Instagram button: that is a paid feature Glenn approves page by page.
+    */
+    slug: 'grand-o',
+    icon: 'grand-o',
+    name: 'Grand-O',
+    label: 'Grand-O',
+    cuisine: 'Rapper',
+    tagline: 'Raps, and eats snacks as The Snack Sensei.',
+    color: '#141414|#D9A441',
+    prep: 0,
+    category: 'Artist',
+    site: 'https://www.youtube.com/watch?v=1a7-K1ofA_I',
+    siteCta: 'Watch Make It Happen',
+    contactOnly:
+      'Grand-O raps, and eats snacks as The Snack Sensei. His video with DJ Idea, Make It Happen, is on YouTube. BEASTY has not spoken to him yet: this spot is held, not taken.',
     items: [],
   },
   {
@@ -5304,7 +5334,11 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'beastmode',
-    icon: 'beastmode',
+    /* HIS HEADSHOT, 2026-09-21, 10:31 pm: in Glenn's run of Individuals'
+       headshots he sent, uncaptioned, Marshawn with the BEASTMODE 24 jersey
+       held up to his chin. Cut to the hood, his eyes and the BEASTMODE
+       lettering. A new file name, so no phone keeps showing the wordmark. */
+    icon: 'beastmode-2',
     name: 'BEASTMODE',
     label: 'BEASTMODE',
     cuisine: 'Athlete and entrepreneur',
@@ -5497,10 +5531,14 @@ export const LOCAL_SEED: LocalSeed[] = [
       ONE WORD. He sent it as "Cray One"; the store header, the og:site_name and
       the vendor field on all sixty-three products spell it Crayone.
 
-      NO ICON. The only mark they serve is a 1200x628 opaque black banner —
-      a wide JPEG with no transparency, which is a header image, not a logo. The
-      app draws its own mark rather than cropping theirs into a square.
+      HIS HEADSHOT IS THE ICON. Glenn, 2026-09-21, 11:02 pm, "Crayone", after
+      "let's just pretty much make heads shots the standard for these icons":
+      his own February 2021 post, smiling in front of a wall of 45s, cut to
+      head and shoulders. The store's only mark is a 1200x628 black banner, a
+      header image and not a logo, so the same face stands for the store on
+      the yellow sheet.
     */
+    icon: 'crayone',
     name: 'Crayone',
     label: 'Crayone',
     cuisine: 'Streetwear',
