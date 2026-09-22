@@ -70,6 +70,8 @@ const go = async (page, hash, ready) => {
 const stat = (page, label) =>
   page.locator('.crm-stat', { has: page.locator('.crm-stat-label', { hasText: new RegExp(`^${label}$`) }) }).locator('.crm-stat-value').textContent()
 const local = (t) => { const x = new Date(t); const z = (n) => String(n).padStart(2, '0'); return `${x.getFullYear()}-${z(x.getMonth() + 1)}-${z(x.getDate())}T${z(x.getHours())}:${z(x.getMinutes())}` }
+/* A person chip is an avatar (initials or their tile) and a name: read the name. */
+const chipName = (loc) => loc.locator('.crm-person > span:not(.crm-avatar)').first().textContent()
 const section = (page, title) => page.locator('.crm-section', { has: page.locator('h2', { hasText: new RegExp(`^${title}$`) }) })
 
 browser = await chromium.launch()
@@ -89,11 +91,17 @@ check('a wrong key is refused on screen', /not right/i.test(await p.textContent(
 problems.length = 0 // that 401 was the point
 await p.fill('input[type="password"]', TOKEN)
 await p.click('button:has-text("Open the CRM")')
-await p.waitForSelector('.crm-nav')
-check('the key opens the CRM', await p.waitForSelector('h1:has-text("Overview")').then(() => true, () => false))
+await p.waitForSelector('.crm-tabbar')
+check('the key opens the CRM, as Glenn', await p.waitForSelector('h1:has-text("Glenn")').then(() => true, () => false))
+/* The phone gets a bottom tab bar and a More sheet instead of the sidebar. */
+const tab = async (page, name) => {
+  if (await page.locator(`.crm-tabbar a:has-text("${name}")`).count()) return page.click(`.crm-tabbar a:has-text("${name}")`)
+  await page.click('.crm-tabbar button:has-text("More")')
+  await page.click(`.crm-more-grid a:has-text("${name}")`)
+}
 
 /* ============================================================ the import */
-await p.click('.crm-nav a:has-text("Settings")')
+await tab(p, 'Settings')
 await p.click('button:has-text("Preview")')
 await p.waitForSelector('text=Preview: nothing has been written')
 const wouldCreate = Number(await p.locator('.crm-report .crm-stat:has-text("Would create") .crm-stat-value').textContent())
@@ -114,7 +122,9 @@ check('the session carries to a desktop browser', await d.locator('.crm-nav').is
 await d.waitForSelector('.crm-stat')
 const janelleBefore = Number(await stat(d, 'Businesses referred'))
 
-/* Jazz Braids, found the way a person would: the search in the bar. */
+/* Jazz Braids, found the way a person would: ⌘K, then its name. */
+await d.keyboard.press('Meta+k')
+check('⌘K opens the search palette', await d.waitForSelector('.crm-palette .crm-search input').then(() => true, () => false))
 await d.fill('.crm-search input', 'Jazz Braids')
 await d.waitForSelector('.crm-search-results button:has-text("Jazz Braids")')
 await d.click('.crm-search-results button:has-text("Jazz Braids")')
@@ -124,6 +134,8 @@ const jazzId = await d.evaluate(() => window.location.hash.split('/')[2])
 const where = section(d, 'Where it came from')
 const who = section(d, 'Who works it')
 
+check('before anyone says otherwise, Jazz Braids is referred by Glenn by default', (await chipName(where.locator('dd a').first())) === 'Glenn' && (await where.locator('.crm-default').count()) === 1)
+check('and owned by Glenn', (await who.locator('select').first().inputValue()) === 'p_glenn')
 // TEST 1
 await where.locator('button:has-text("Set")').click()
 await where.locator('select').first().selectOption('p_janelle')
@@ -142,7 +154,7 @@ await Promise.all([
 await d.reload({ waitUntil: 'networkidle' })
 await d.waitForSelector('.crm-lead-head')
 check('TEST 2: Leon is the salesperson', (await who.locator('select').first().inputValue()) === 'p_leon')
-check('TEST 2: and referred-by is still Janelle', (await where.locator('dd a').first().textContent()) === 'Janelle')
+check('TEST 2: and referred-by is still Janelle', (await chipName(where.locator('dd a').first())) === 'Janelle')
 
 // TEST 3
 for (const [key, label] of [['contacted', 'Contacted'], ['replied', 'Replied'], ['interested', 'Interested'], ['proposal_sent', 'Proposal sent']]) {
@@ -170,7 +182,7 @@ const tos = hist.map((h) => h.split('→').pop().replace('Started at', '').trim(
 check('TEST 3: every transition is in the stage history', JSON.stringify(tos.slice(1)) === JSON.stringify(['Contacted', 'Replied', 'Interested', 'Proposal sent', 'Won']), hist.join(' | '))
 check(
   'referred by, assigned to and closed by are three different people',
-  (await where.locator('dd a').first().textContent()) === 'Janelle' && (await who.locator('select').first().inputValue()) === 'p_leon' && (await who.locator('select').nth(1).inputValue()) === 'p_glenn',
+  (await chipName(where.locator('dd a').first())) === 'Janelle' && (await who.locator('select').first().inputValue()) === 'p_leon' && (await who.locator('select').nth(1).inputValue()) === 'p_glenn',
 )
 await shot(d, 'd-jazz-won')
 await go(d, 'revenue', '.crm-stat')
@@ -219,7 +231,7 @@ const target = await p.evaluate(async () => {
 })
 check('there is a lead with a phone and Instagram to work', !!target, target?.name)
 
-await p.click('.crm-nav a:has-text("Leads")')
+await tab(p, 'Leads')
 await p.waitForSelector('.crm-leads')
 check('the leads list fits the phone', (await sideways(p)) <= 1)
 await shot(p, 'm-leads')
@@ -312,10 +324,10 @@ check('and credited to Janelle', true)
 check('after all that the lead still fits the phone', (await sideways(p)) <= 1)
 
 await p.click('.crm-back')
-await p.click('.crm-nav a:has-text("Revenue")')
+await tab(p, 'Revenue')
 await p.waitForSelector('.crm-stat')
 check('revenue adds the $149 to the $199', (await stat(p, 'One-time revenue')) === '$348' && (await stat(p, 'MRR')) === '$60' && (await stat(p, 'ARR')) === '$720')
-await p.click('.crm-nav a:has-text("Referrers")')
+await tab(p, 'Referrers')
 await p.waitForSelector('.crm-table a:has-text("Janelle")')
 await p.click('.crm-table a:has-text("Janelle")')
 await p.waitForSelector('.crm-qr img')
@@ -323,11 +335,11 @@ await p.waitForFunction(() => { const i = document.querySelector('.crm-qr img');
 check("Janelle's page shows her link and a QR code that loads", /\/r\/janelle/.test(await p.textContent('.crm-reflink code')))
 check('and both businesses she sent', (await p.locator(`a[href="#/lead/${target.id}"]`).count()) === 1 && (await p.locator(`a[href="#/lead/${jazzId}"]`).count()) === 1)
 
-for (const [hash, name] of [['overview', 'Overview'], ['pipeline', 'Pipeline'], ['businesses', 'Businesses'], ['followups?view=upcoming', 'Follow-ups'], ['revenue', 'Revenue'], ['analytics', 'Analytics'], ['referrers', 'Referrers']]) {
+for (const [hash, name] of [['overview', 'Glenn'], ['pipeline', 'Pipeline'], ['businesses', 'Businesses'], ['followups?view=upcoming', 'Follow-ups'], ['revenue', 'Revenue'], ['analytics', 'Analytics'], ['referrers', 'Referrers']]) {
   await go(p, hash, `h1:has-text("${name}")`)
   await p.waitForTimeout(400)
-  check(`${name} fits the phone`, (await sideways(p)) <= 1)
-  await shot(p, `m-${name.toLowerCase().replace(/\W+/g, '-')}`)
+  check(`${name === 'Glenn' ? 'Overview' : name} fits the phone`, (await sideways(p)) <= 1)
+  await shot(p, `m-${hash.split('?')[0]}`)
 }
 await go(p, 'followups?view=upcoming', '.crm-tabs a.is-on:has-text("Upcoming")')
 check('the phone follow-up waits under Upcoming', await p.waitForSelector(`.crm-row:has(a[href="#/lead/${target.id}"])`).then(() => true, () => false))

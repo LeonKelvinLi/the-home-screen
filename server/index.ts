@@ -5,7 +5,9 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
+import { crmOpenMode } from './crm/open'
 import { syncSnapshots } from './crm/backfill'
+import { fillGlennDefaults } from './crm/core'
 import { BRANDS, VENDORS } from '../src/data/brands'
 import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
@@ -3304,9 +3306,14 @@ mountCrm(
     readCookie,
     secret: PASS_SECRET,
     prod: PROD,
+    /* CRM_OPEN=1 opens /crm without the key, as Glenn. Never in production. */
+    open: crmOpenMode(process.env, PROD),
   },
   rateLimiter,
 )
+if (process.env.CRM_OPEN === '1') {
+  console.log(PROD ? 'crm: CRM_OPEN is set but ignored in production; the key is still required' : 'crm: open mode, /crm needs no key and everyone is Glenn (not production)')
+}
 app.get('/crm', (_req, res, next) => {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow')
   next()
@@ -3415,6 +3422,9 @@ async function start() {
     if (sync.updated || sync.missing.length) {
       console.log(`crm: refreshed ${sync.updated} of ${sync.checked} lead snapshots; ${sync.missing.length} point at a business no longer listed`)
     }
+    /* Every blank "who" is Glenn (Leon's rule, 2026-09-22). Only fills blanks. */
+    const filled = await fillGlennDefaults()
+    if (filled.referrals || filled.owners) console.log(`crm: Glenn filled ${filled.referrals} blank referrals and ${filled.owners} blank owners`)
   } catch (err) {
     console.error('crm: snapshot refresh failed:', String((err as Error).message ?? err).slice(0, 200))
   }

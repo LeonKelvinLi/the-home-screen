@@ -1,12 +1,15 @@
 /*
-  Small pieces every CRM view uses: data loading, the stage pill, contact
-  buttons that are real tel:/sms:/mailto:/Instagram links, money and time.
+  Small pieces every CRM view uses: data loading, avatars (the business's own
+  tile where it has one), stage pills, contact buttons that are real
+  tel:/sms:/mailto:/Instagram links, stat cards, money and time.
 */
 import { createContext, useCallback, useContext, useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { api } from './api'
 import type { Actor, Channels, Meta } from './api'
-import { fmtMoney, fmtPhone, stageLabel, stageOf, websiteStatusLabel } from './model'
+import { Icon } from './icons'
+import type { IconName } from './icons'
+import { fmtMoney, fmtPhone, stageLabel, websiteStatusLabel } from './model'
 
 /* ------------------------------------------------------------- context */
 
@@ -17,6 +20,8 @@ export interface CrmCtx {
   go(hash: string): void
   /** Back within the CRM when there is somewhere to go back to; otherwise to the fallback. */
   back(fallback: string): void
+  /** Open the ⌘K palette. */
+  openSearch(): void
 }
 
 export const Crm = createContext<CrmCtx | null>(null)
@@ -100,57 +105,161 @@ export const toLocalInput = (t: number) => {
 }
 export const fromLocalInput = (v: string) => (v ? new Date(v).getTime() : NaN)
 
-/* -------------------------------------------------------------- pieces */
+/* -------------------------------------------------------------- avatars */
+
+const HUES = ['amber', 'blue', 'green', 'violet', 'pink', 'teal', 'orange', 'indigo']
+const hueOf = (s: string) => {
+  let h = 0
+  for (const c of s) h = (h * 31 + c.charCodeAt(0)) >>> 0
+  return HUES[h % HUES.length]
+}
+export const initials = (name: string) =>
+  name
+    .replace(/[^A-Za-z0-9\s]/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((w) => w[0].toUpperCase())
+    .join('') || '?'
+
+/** A business shows its own BEASTY tile; a person, their page's tile or initials. */
+export function Avatar({ name, icon, size = 28, kind = 'org' }: { name: string; icon?: string | null; size?: number; kind?: 'org' | 'person' }) {
+  const [broken, setBroken] = useState(false)
+  const style = { width: size, height: size, fontSize: Math.max(9, Math.round(size * 0.38)) }
+  if (icon && !broken) {
+    return <img className={`crm-avatar is-${kind}`} src={`/icons/${icon}.webp`} alt="" loading="lazy" style={style} onError={() => setBroken(true)} />
+  }
+  return (
+    <span className={`crm-avatar is-${kind} is-initials crm-hue-${hueOf(name)}`} style={style} aria-hidden="true">
+      {initials(name)}
+    </span>
+  )
+}
+
+/** A person, as an avatar and a name; their tile comes from meta.people. */
+export function PersonChip({ id, name, muted = false }: { id?: string | null; name: string; muted?: boolean }) {
+  const { meta } = useCrm()
+  const icon = id ? meta.people.find((p) => p.id === id)?.icon ?? null : null
+  return (
+    <span className={`crm-person${muted ? ' is-muted' : ''}`}>
+      <Avatar name={name} icon={icon} size={20} kind="person" />
+      <span>{name}</span>
+    </span>
+  )
+}
+
+/* -------------------------------------------------------------- pills */
+
+const STAGE_TONE: Record<string, string> = {
+  new_lead: 'gray',
+  need_contact_info: 'amber',
+  ready_to_contact: 'blue',
+  contacted: 'sky',
+  replied: 'teal',
+  interested: 'violet',
+  meeting: 'indigo',
+  proposal_sent: 'pink',
+  won: 'green',
+  onboarding: 'green',
+  active_customer: 'green',
+  no_response: 'gray',
+  not_interested: 'gray',
+  bad_lead: 'gray',
+  closed_lost: 'red',
+}
+export const stageTone = (stage: string) => STAGE_TONE[stage] ?? 'gray'
 
 export function StagePill({ stage }: { stage: string }) {
-  const g = stageOf(stage)?.group ?? 'open'
-  return <span className={`crm-stage crm-stage-${g} crm-stage-${stage}`}>{stageLabel(stage)}</span>
+  return (
+    <span className={`crm-stage crm-tone-${stageTone(stage)} crm-stage-${stage}`}>
+      <i className="crm-dot" aria-hidden="true" />
+      {stageLabel(stage)}
+    </span>
+  )
 }
 
 export function WebsitePill({ status }: { status: string | null }) {
   if (!status) return null
-  return <span className={`crm-web crm-web-${status}`}>{websiteStatusLabel(status)}</span>
+  const tone = status === 'none' ? 'red' : status === 'has_site' ? 'green' : status === 'needs_work' ? 'violet' : 'amber'
+  return (
+    <span className={`crm-web crm-tone-${tone} crm-web-${status}`}>
+      <Icon name="globe" size={12} />
+      {websiteStatusLabel(status)}
+    </span>
+  )
 }
 
+/* -------------------------------------------------------------- contact */
+
 export type ContactKind = 'CALL' | 'TEXT' | 'EMAIL' | 'INSTAGRAM_DM'
+
+const dial = (d: string) => `${d.length === 10 ? '+1' : '+'}${d}`
 
 /**
  * The four ways to reach a business, each a real link, or a clear "none".
  * onUse fires as the link opens, so the lead page can offer to log it.
  */
 export function ContactActions({ c, compact = false, onUse }: { c: Channels; compact?: boolean; onUse?: (kind: ContactKind) => void }) {
-  if (!c.phone && !c.email && !c.instagram) return <span className="crm-needs-contact">Needs contact info</span>
+  if (!c.phone && !c.email && !c.instagram) {
+    return (
+      <span className="crm-needs-contact">
+        <Icon name="alert" size={13} />
+        Needs contact info
+      </span>
+    )
+  }
+  const item = (cls: string, href: string, icon: IconName, label: string, title: string, kind: ContactKind, external = false) => (
+    <a
+      className={`crm-act ${cls}`}
+      href={href}
+      title={title}
+      aria-label={title}
+      onClick={() => onUse?.(kind)}
+      {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
+    >
+      <Icon name={icon} size={compact ? 15 : 17} />
+      {!compact && <span>{label}</span>}
+    </a>
+  )
   return (
     <span className={`crm-actions${compact ? ' is-compact' : ''}`}>
-      {c.phone && (
-        <>
-          <a className="crm-act crm-act-call" href={`tel:${c.phone.length === 10 ? '+1' : '+'}${c.phone}`} title={`Call ${fmtPhone(c.phone)}`} onClick={() => onUse?.('CALL')}>
-            Call
-          </a>
-          <a className="crm-act crm-act-text" href={`sms:${c.phone.length === 10 ? '+1' : '+'}${c.phone}`} title={`Text ${fmtPhone(c.phone)}`} onClick={() => onUse?.('TEXT')}>
-            Text
-          </a>
-        </>
-      )}
-      {c.email && (
-        <a className="crm-act crm-act-email" href={`mailto:${c.email}`} title={c.email} onClick={() => onUse?.('EMAIL')}>
-          Email
-        </a>
-      )}
-      {c.instagram && (
-        <a className="crm-act crm-act-ig" href={`https://www.instagram.com/${c.instagram}/`} target="_blank" rel="noreferrer" title={`@${c.instagram}`} onClick={() => onUse?.('INSTAGRAM_DM')}>
-          {compact ? 'IG' : 'Instagram'}
-        </a>
-      )}
+      {c.phone && item('crm-act-call', `tel:${dial(c.phone)}`, 'phone', 'Call', `Call ${fmtPhone(c.phone)}`, 'CALL')}
+      {c.phone && item('crm-act-text', `sms:${dial(c.phone)}`, 'message', 'Text', `Text ${fmtPhone(c.phone)}`, 'TEXT')}
+      {c.email && item('crm-act-email', `mailto:${c.email}`, 'mail', 'Email', c.email, 'EMAIL')}
+      {c.instagram && item('crm-act-ig', `https://www.instagram.com/${c.instagram}/`, 'instagram', 'Instagram', `@${c.instagram} on Instagram`, 'INSTAGRAM_DM', true)}
     </span>
   )
 }
 
-export function Stat({ label, value, sub, onClick, tone }: { label: string; value: ReactNode; sub?: ReactNode; onClick?: () => void; tone?: 'warn' | 'good' }) {
+/* -------------------------------------------------------------- blocks */
+
+export function Stat({
+  label,
+  value,
+  sub,
+  onClick,
+  tone,
+  icon,
+}: {
+  label: string
+  value: ReactNode
+  sub?: ReactNode
+  onClick?: () => void
+  tone?: 'warn' | 'good'
+  icon?: IconName
+}) {
   const body = (
     <>
+      <span className="crm-stat-top">
+        <span className="crm-stat-label">{label}</span>
+        {icon && (
+          <span className="crm-stat-icon">
+            <Icon name={icon} size={15} />
+          </span>
+        )}
+      </span>
       <span className="crm-stat-value">{value}</span>
-      <span className="crm-stat-label">{label}</span>
       {sub && <span className="crm-stat-sub">{sub}</span>}
     </>
   )
@@ -175,11 +284,39 @@ export function Section({ title, action, className, children }: { title: string;
   )
 }
 
-export const Loading = () => <div className="crm-loading">Loading…</div>
-export const Empty = ({ children }: { children: ReactNode }) => <div className="crm-empty">{children}</div>
+export function PageHead({ title, sub, actions, above }: { title: ReactNode; sub?: ReactNode; actions?: ReactNode; above?: ReactNode }) {
+  return (
+    <header className="crm-page-head">
+      {above}
+      <div className="crm-page-row">
+        <div className="crm-page-title">
+          <h1 className="crm-h1">{title}</h1>
+          {sub && <p className="crm-page-sub">{sub}</p>}
+        </div>
+        {actions && <div className="crm-page-actions">{actions}</div>}
+      </div>
+    </header>
+  )
+}
+
+export const Loading = () => (
+  <div className="crm-loading" role="status">
+    <span className="crm-spinner" aria-hidden="true" />
+    Loading…
+  </div>
+)
+export const Empty = ({ children, icon = 'inbox' }: { children: ReactNode; icon?: IconName }) => (
+  <div className="crm-empty">
+    <span className="crm-empty-icon">
+      <Icon name={icon} size={18} />
+    </span>
+    <span>{children}</span>
+  </div>
+)
 export const Failure = ({ error, retry }: { error: string; retry?: () => void }) => (
-  <div className="crm-error">
-    {error}
+  <div className="crm-error" role="alert">
+    <Icon name="alert" size={15} />
+    <span>{error}</span>
     {retry && (
       <button type="button" onClick={retry}>
         Try again

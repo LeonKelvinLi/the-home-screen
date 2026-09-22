@@ -126,6 +126,10 @@ CREATE INDEX IF NOT EXISTS idx_crm_opp_followup ON crm_opportunities(next_follow
 CREATE INDEX IF NOT EXISTS idx_crm_opp_family ON crm_opportunities(family_key);
 CREATE INDEX IF NOT EXISTS idx_crm_opp_created ON crm_opportunities(created_at DESC);
 CREATE INDEX IF NOT EXISTS idx_crm_opp_won ON crm_opportunities(won_at) WHERE won_at IS NOT NULL;
+/* 2026-09-22: Glenn fills every blank "referred by". A referral he got only by
+   default is marked, so the real first referrer can still replace it once
+   without an override. Additive, and FALSE for every row that existed. */
+ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS referral_default BOOLEAN NOT NULL DEFAULT FALSE;
 
 CREATE TABLE IF NOT EXISTS crm_stage_history (
   id             TEXT PRIMARY KEY,

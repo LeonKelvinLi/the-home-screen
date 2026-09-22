@@ -50,6 +50,8 @@ export interface LeadSummary {
   brandId: string | null
   applicationId: string | null
   name: string
+  /** The listing's tile, /icons/<icon>.webp, when it has one. */
+  icon: string | null
   familyKey: string
   city: string | null
   category: string | null
@@ -61,6 +63,8 @@ export interface LeadSummary {
   opportunityType: string
   potentialCents: number
   referrer: Ref | null
+  /** Glenn only because nobody else was recorded. */
+  referralDefault: boolean
   sourceType: string | null
   assignee: Ref | null
   priority: string
@@ -78,6 +82,8 @@ export interface Person {
   role: 'admin' | 'team' | 'partner' | 'none'
   isTeam: boolean
   brandId: string | null
+  /** Their BEASTY page's tile, if they have one: a face for the avatar. */
+  icon: string | null
   linked: boolean
   active: boolean
 }
@@ -111,6 +117,8 @@ export interface Actor {
   role: 'admin' | 'team' | 'partner'
   personId: string | null
   name: string
+  /** How they got in: the operator key, their member account, or open mode. */
+  via: 'operator' | 'member' | 'open'
 }
 
 export interface ReferrerMetrics {

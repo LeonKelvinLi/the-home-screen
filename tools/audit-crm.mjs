@@ -69,6 +69,7 @@ const good = await call('POST', '/api/crm/session', { body: { token: TOKEN }, j:
 check('the operator key opens a CRM session', good.status === 200 && admin.has('beasty_crm'))
 const me = await call('GET', '/api/crm/me', { j: admin })
 check('the session is an admin', me.body?.actor?.role === 'admin')
+check('and the key acts as Glenn', me.body?.actor?.name === 'Glenn' && me.body?.actor?.personId === 'p_glenn' && me.body?.actor?.via === 'operator')
 
 /* ---- backfill: dry run, real run, rerun ---- */
 const dry = await call('POST', '/api/crm/backfill', { body: { dryRun: true }, j: admin })
@@ -85,6 +86,15 @@ const ovImport = await call('GET', '/api/crm/overview', { j: admin })
 check('imported leads do not count as new this week', ovImport.body.counts.newThisWeek === 0 && ovImport.body.counts.total === run1.body.created + run1.body.applications.created)
 const importedOnly = await call('GET', '/api/crm/leads?imported=1&limit=1', { j: admin })
 check('the imported filter finds exactly the imports', importedOnly.body.total === ovImport.body.counts.total)
+/* Leon's rule of 2026-09-22: every blank "who" is Glenn. */
+const byGlenn = await call('GET', '/api/crm/leads?referrer=p_glenn&limit=200', { j: admin })
+check('every imported lead is referred by Glenn, by default', byGlenn.body.total === ovImport.body.counts.total && byGlenn.body.leads.every((l) => l.referralDefault && l.sourceType === 'glenn'))
+const unowned = await call('GET', '/api/crm/leads?assigned=none&limit=1', { j: admin })
+const glennOwns = await call('GET', '/api/crm/leads?assigned=p_glenn&limit=1', { j: admin })
+check('and owned by Glenn: no lead is left unassigned', unowned.body.total === 0 && glennOwns.body.total === ovImport.body.counts.total)
+check('a default referral does not count as an uncontacted referral', ovImport.body.attention.find((a) => a.key === 'uncontacted_referrals')?.count === 0)
+const pipe = await call('GET', '/api/crm/pipeline', { j: admin })
+check('the pipeline summary counts every lead once', pipe.status === 200 && pipe.body.stages.reduce((n, st) => n + st.count, 0) === ovImport.body.counts.total)
 const runs = await call('GET', '/api/crm/backfill/runs', { j: admin })
 check('each run is recorded with its report', runs.body.runs?.length === 2 && runs.body.runs[0].report)
 
@@ -101,7 +111,7 @@ const found = await call('GET', '/api/crm/leads?q=jazz%20braids', { j: admin })
 const jazz = found.body.leads.find((l) => l.brandId === 'b_jazzbraids')
 check('search finds Jazz Braids', !!jazz)
 const ref = await call('POST', `/api/crm/leads/${jazz.id}/referral`, { body: { referrerId: 'p_janelle', note: 'Janelle brought them' }, j: admin })
-check('Janelle is recorded as the referrer', ref.status === 200)
+check('Janelle is recorded as the referrer, replacing the Glenn default with no override', ref.status === 200)
 let refs = await call('GET', '/api/crm/referrers?period=all', { j: admin })
 const janelle0 = refs.body.referrers.find((r) => r.id === 'p_janelle')
 check("Janelle's dashboard shows one referral", janelle0?.leads === 1)
@@ -121,6 +131,9 @@ check('every transition is in the history', JSON.stringify(hist.slice(1)) === JS
 check('each history row starts where the last ended', d.body.history.every((h, i) => i === 0 || h.from_stage === d.body.history[i - 1].to_stage))
 check('referred by, assigned to and closed by are three people', d.body.lead.referrer?.id === 'p_janelle' && d.body.lead.assignee?.id === 'p_leon' && d.body.lead.closedBy?.id === 'p_glenn')
 check('the timeline records the stage changes and the win', d.body.activities.filter((a) => a.type === 'STAGE_CHANGE').length === 5 && d.body.activities.some((a) => a.type === 'DEAL_WON'))
+check('what the key did reads as Glenn in the timeline', d.body.activities.filter((a) => a.type === 'STAGE_CHANGE').every((a) => a.actor === 'Glenn'))
+const replaced = d.body.activities.find((a) => a.type === 'REFERRAL' && a.data?.replacedDefault)
+check('the log keeps that Glenn was the default before Janelle', replaced?.data?.previous?.referrerId === 'p_glenn')
 let rev = await call('GET', '/api/crm/revenue?period=all', { j: admin })
 check('one-time revenue is $199', rev.body.oneTimeCents === 19900)
 check('MRR is $30 and ARR $360', rev.body.mrrCents === 3000 && rev.body.arrCents === 36000)
@@ -153,6 +166,10 @@ const ovList = await call('GET', '/api/crm/followups?view=overdue', { j: admin }
 check('and in the overdue list', ovList.body.followups?.some((f) => f.id === fu.body.id))
 const filtered = await call('GET', '/api/crm/leads?attention=overdue', { j: admin })
 check('clicking it filters to that lead', filtered.body.leads.some((l) => l.id === shaka.id))
+const fu2 = await call('POST', `/api/crm/leads/${shaka.id}/followups`, { body: { dueAt: Date.now() + 3 * 864e5, type: 'text' }, j: admin })
+const shakaD = await call('GET', `/api/crm/leads/${shaka.id}`, { j: admin })
+check('a follow-up with no owner named is Glenn\'s', shakaD.body.followups.find((f) => f.id === fu2.body.id)?.owner?.id === 'p_glenn')
+await call('POST', `/api/crm/followups/${fu2.body.id}/complete`, { body: {}, j: admin })
 const done = await call('POST', `/api/crm/followups/${fu.body.id}/complete`, { body: { outcome: 'Left a voicemail' }, j: admin })
 d = await call('GET', `/api/crm/leads/${shaka.id}`, { j: admin })
 check('completing it clears the next follow-up', done.status === 200 && d.body.lead.nextFollowupAt === null)
@@ -235,6 +252,11 @@ const teamBackfill = await call('POST', '/api/crm/backfill', { body: { dryRun: t
 check('or run the backfill', teamBackfill.status === 403)
 const teamOverride = await call('POST', `/api/crm/leads/${jazz.id}/referral`, { body: { referrerId: 'p_leon', override: true, reason: 'I think Leon found them' }, j: team.j })
 check('or override an attribution', teamOverride.status === 409)
+const aDefault = (await call('GET', '/api/crm/leads?referrer=p_glenn&limit=1&sort=name', { j: admin })).body.leads.find((l) => l.referralDefault)
+const teamReplace = await call('POST', `/api/crm/leads/${aDefault.id}/referral`, { body: { referrerId: 'p_leon' }, j: team.j })
+check('but the team can replace a Glenn default with the real referrer', teamReplace.status === 200)
+const teamAgain = await call('POST', `/api/crm/leads/${aDefault.id}/referral`, { body: { referrerId: 'p_janelle' }, j: team.j })
+check('once: after that the first real referrer stands', teamAgain.status === 409)
 const noReason = await call('POST', `/api/crm/leads/${refLead.id}/referral`, { body: { referrerId: 'p_leon', override: true }, j: admin })
 check('an admin override needs a reason', noReason.status === 400)
 const withReason = await call('POST', `/api/crm/leads/${refLead.id}/referral`, { body: { referrerId: 'p_leon', override: true, reason: 'Test of the override path' }, j: admin })
@@ -261,6 +283,25 @@ const teamQr = await call('GET', '/api/crm/people/p_janelle/qr.svg', { j: team.j
 check('the team can print any referrer’s code', teamQr.status === 200)
 const anonQr = await call('GET', '/api/crm/people/p_janelle/qr.svg')
 check('and nobody signed out can', anonQr.status === 401)
+
+/* ---- open mode: no key, everyone is Glenn, and never in production ---- */
+const { execFileSync } = await import('node:child_process')
+const guard = execFileSync('npx', ['tsx', '-e', "import { crmOpenMode } from './server/crm/open'; console.log(JSON.stringify([crmOpenMode({ CRM_OPEN: '1' }, false), crmOpenMode({ CRM_OPEN: '1' }, true), crmOpenMode({}, false)]))"], { encoding: 'utf8' }).trim().split('\n').pop()
+check('open mode is honoured outside production only', guard === '[true,false,false]', guard)
+const openPort = await freePort()
+const openDb = await freshTestDb('crmopen')
+const openLog = openSync(`/tmp/audit-crm-open-${openPort}.log`, 'a')
+const openSrv = spawn('npx', ['tsx', 'server/index.ts'], {
+  stdio: ['ignore', openLog, openLog],
+  env: { ...process.env, PORT: String(openPort), DATABASE_URL: openDb.url, NODE_ENV: 'development', CRM_OPEN: '1', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
+})
+let openUp = false
+for (let i = 0; i < 120 && !openUp; i++) { try { openUp = (await fetch(`http://localhost:${openPort}/api/health`)).ok } catch {} if (!openUp) await sleep(250) }
+const openMe = openUp ? await (await fetch(`http://localhost:${openPort}/api/crm/me`)).json() : null
+const openOv = openUp ? (await fetch(`http://localhost:${openPort}/api/crm/overview`)).status : 0
+check('in open mode, /crm needs no key and everyone is Glenn', openMe?.actor?.name === 'Glenn' && openMe?.actor?.via === 'open' && openOv === 200, JSON.stringify(openMe?.actor ?? null))
+openSrv.kill()
+try { await openDb.drop?.() } catch {}
 
 /* ---- the screen is served and kept out of search ---- */
 const page = await call('GET', '/crm', { raw: true })

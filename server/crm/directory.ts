@@ -48,6 +48,8 @@ export interface Business {
   isIndividual: boolean
   beastyOwner: boolean
   pageUrl: string
+  /** The tile's picture, public/icons/<icon>.webp, when the listing has one. */
+  icon: string | null
 }
 
 const slug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, '-')
@@ -81,6 +83,7 @@ for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {
 
 interface BrandLike {
   id: string
+  logo?: { imageUrl?: string }
   name: string
   cuisine?: string
   tagline?: string
@@ -119,6 +122,7 @@ function toBusiness(b: BrandLike): Business {
     isIndividual: seats.some((s) => s.page === 'Individuals'),
     beastyOwner: !!b.beastyOwner,
     pageUrl: `/?b=${b.id}`,
+    icon: b.logo?.imageUrl?.match(/^\/icons\/(.+)\.webp$/)?.[1] ?? null,
   }
 }
 

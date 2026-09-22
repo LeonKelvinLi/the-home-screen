@@ -32,6 +32,7 @@ import {
   createFollowup,
   createOpportunity,
   getOpp,
+  GLENN_ID,
   markDealLost,
   markDealWon,
   now,
@@ -53,6 +54,7 @@ import {
   listLeads,
   overview,
   partnerView,
+  pipelineSummary,
   referrerDetail,
   referrerList,
   revenue,
@@ -191,7 +193,9 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
   const team = requireCrm(deps, 'team')
   const admin = requireCrm(deps, 'admin')
   const partner = requireCrm(deps, 'partner')
-  const read = rateLimiter(240, 60)
+  /* Generous for reads: the board alone asks for eight columns at once, and a
+     person flicking between pages must never see a 429. Writes stay tighter. */
+  const read = rateLimiter(900, 180)
   const write = rateLimiter(120, 30)
 
   /* ---- session ---- */
@@ -251,6 +255,7 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
           role: p.role,
           isTeam: p.is_team,
           brandId: p.brand_id,
+          icon: businessById(p.brand_id)?.icon ?? null,
           linked: !!p.member_id,
           active: p.active,
         })),
@@ -263,6 +268,7 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
   /* ---- dashboard ---- */
 
   app.get('/api/crm/overview', read, team, h(async (_req, res) => void res.json(await overview())))
+  app.get('/api/crm/pipeline', read, team, h(async (_req, res) => void res.json(await pipelineSummary())))
 
   /* ---- leads ---- */
 
@@ -514,7 +520,7 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
       if (!(PRIORITIES as readonly string[]).includes(priority)) throw new CrmError(400, 'Unknown priority.')
       const id = await createFollowup(
         String(req.params.id),
-        { dueAt, ownerId: optStr(b.ownerId, 60) ?? req.crm?.personId ?? null, priority, type, notes: optStr(b.notes, 1000) },
+        { dueAt, ownerId: optStr(b.ownerId, 60) ?? req.crm?.personId ?? GLENN_ID, priority, type, notes: optStr(b.notes, 1000) },
         actorOf(req),
       )
       res.status(201).json({ id })
@@ -569,7 +575,7 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
       const b = isObj(req.body) ? req.body : {}
       await markDealWon(
         String(req.params.id),
-        { soldCents: cents(b.soldCents), closedBy: optStr(b.closedBy, 60) ?? req.crm?.personId ?? null, recurring: bool(b.recurring) },
+        { soldCents: cents(b.soldCents), closedBy: optStr(b.closedBy, 60) ?? req.crm?.personId ?? GLENN_ID, recurring: bool(b.recurring) },
         actorOf(req),
       )
       res.json({ ok: true })

@@ -9,21 +9,35 @@
   3. A BEASTY member session whose member is linked to a crm_people row with a
      role. That is how Glenn, Leon, Janelle and any partner sign in without a
      second password: their existing account, plus a role only an admin grants.
+
+  THE OPERATOR IS GLENN. Leon's ask of 2026-09-22: where no person is named,
+  the CRM names Glenn. So the operator key acts as Glenn's own seat: what it
+  logs reads "Glenn", and what it owns or closes is his by default.
+
+  OPEN MODE, for previews: with CRM_OPEN=1 the screen needs no key at all and
+  everyone is Glenn. The server honours it only when it is NOT production
+  (deps.open is computed that way in server/index.ts, and says so at boot), so
+  a live deploy can never ship without its lock.
 */
 import { createHash, randomBytes } from 'node:crypto'
 import type { NextFunction, Request, Response } from 'express'
 import { db } from '../db/schema'
+import { GLENN_ID } from './core'
 import type { PersonRow } from './core'
 
 export type CrmRole = 'admin' | 'team' | 'partner'
 
 export interface CrmActor {
-  /** What goes into changed_by / actor columns: 'operator' or 'person:<id>'. */
+  /** What goes into changed_by / actor columns: 'person:<id>'. */
   actor: string
   role: CrmRole
   personId: string | null
   name: string
+  /** How they got in: the operator key, their member account, or open mode. */
+  via: 'operator' | 'member' | 'open'
 }
+
+const glenn = (via: CrmActor['via']): CrmActor => ({ actor: `person:${GLENN_ID}`, role: 'admin', personId: GLENN_ID, name: 'Glenn', via })
 
 export interface CrmDeps {
   isOperator(req: Request): boolean
@@ -33,6 +47,8 @@ export interface CrmDeps {
   /** Server secret for signing the referral cookie (domain-separated). */
   secret: string
   prod: boolean
+  /** CRM_OPEN=1 outside production: no key, everyone is Glenn. */
+  open?: boolean
 }
 
 export const CRM_COOKIE = 'beasty_crm'
@@ -46,21 +62,22 @@ declare module 'express-serve-static-core' {
 }
 
 export async function crmActor(req: Request, deps: CrmDeps): Promise<CrmActor | null> {
-  if (deps.isOperator(req)) return { actor: 'operator', role: 'admin', personId: null, name: 'Operator' }
+  if (deps.isOperator(req)) return glenn('operator')
   const token = deps.readCookie(req, CRM_COOKIE)
   if (token && token.length >= 32) {
     const row = await db
       .prepare('SELECT actor FROM crm_sessions WHERE token_hash = ? AND expires_at > ?')
       .get<{ actor: string }>(hash(token), Date.now())
-    if (row) return { actor: row.actor, role: 'admin', personId: null, name: 'Operator' }
+    if (row) return glenn('operator')
   }
   const member = await deps.memberFromRequest(req)
   if (member) {
     const p = await db
       .prepare("SELECT * FROM crm_people WHERE member_id = ? AND active AND role <> 'none'")
       .get<PersonRow>(member.id)
-    if (p) return { actor: `person:${p.id}`, role: p.role as CrmRole, personId: p.id, name: p.name }
+    if (p) return { actor: `person:${p.id}`, role: p.role as CrmRole, personId: p.id, name: p.name, via: 'member' }
   }
+  if (deps.open && !deps.prod) return glenn('open')
   return null
 }
 

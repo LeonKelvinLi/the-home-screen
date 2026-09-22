@@ -9,9 +9,11 @@ import type { FormEvent, ReactNode } from 'react'
 import { api } from './api'
 import type { LeadSummary, Ref } from './api'
 import {
+  Avatar,
   ContactActions,
   Failure,
   Loading,
+  PersonChip,
   Section,
   StagePill,
   WebsitePill,
@@ -26,6 +28,8 @@ import {
   useCrm,
 } from './ui'
 import type { ContactKind } from './ui'
+import { Icon } from './icons'
+import type { IconName } from './icons'
 import { ACTIVITY_LABELS, fmtPhone, opportunityLabel, stageLabel, websiteStatusLabel } from './model'
 
 interface Detail {
@@ -95,6 +99,31 @@ const NEXT: Record<string, string> = {
   meeting: 'proposal_sent',
 }
 
+/** The main road, drawn as the stage bar. Side exits (no response, lost) show as a tag. */
+const PATH: [string, string][] = [
+  ['ready_to_contact', 'Ready'],
+  ['contacted', 'Contacted'],
+  ['replied', 'Replied'],
+  ['interested', 'Interested'],
+  ['meeting', 'Meeting'],
+  ['proposal_sent', 'Proposal'],
+  ['won', 'Won'],
+]
+const PATH_RANK: Record<string, number> = {
+  new_lead: -1,
+  need_contact_info: -1,
+  ready_to_contact: 0,
+  contacted: 1,
+  no_response: 1,
+  replied: 2,
+  interested: 3,
+  meeting: 4,
+  proposal_sent: 5,
+  won: 6,
+  onboarding: 6,
+  active_customer: 6,
+}
+
 export function LeadDetail({ id }: { id: string }) {
   const { back } = useCrm()
   const { data, error, reload } = useApi<Detail>(`/api/crm/leads/${encodeURIComponent(id)}`)
@@ -107,40 +136,63 @@ export function LeadDetail({ id }: { id: string }) {
   return (
     <div className="crm-view crm-lead">
       <a className="crm-back" href="#/leads" onClick={(e) => { e.preventDefault(); back('leads') }}>
-        ‹ Leads
+        <Icon name="chevronLeft" size={16} />
+        Leads
       </a>
       <header className="crm-lead-head">
-        <h1 className="crm-h1">{lead.name}</h1>
-        <div className="crm-sub">
-          {[lead.city, lead.category, opportunityLabel(lead.opportunityType), lead.contactName ? `Contact: ${lead.contactName}` : null].filter(Boolean).join(' · ')}
+        <div className="crm-lead-hero">
+          <Avatar name={lead.name} icon={lead.icon} size={64} />
+          <div className="crm-lead-id">
+            <h1 className="crm-h1">{lead.name}</h1>
+            <div className="crm-sub">
+              {[lead.city, lead.category, opportunityLabel(lead.opportunityType), lead.contactName ? `Contact: ${lead.contactName}` : null].filter(Boolean).join(' · ')}
+            </div>
+            <div className="crm-pills">
+              <StagePill stage={lead.stage} />
+              <WebsitePill status={lead.websiteStatus} />
+              {lead.priority === 'high' && <span className="crm-flag">High priority</span>}
+              {lead.referrer && !lead.referralDefault && <span className="crm-tag">Referred by {lead.referrer.name}</span>}
+            </div>
+          </div>
         </div>
-        <div className="crm-pills">
-          <StagePill stage={lead.stage} />
-          <WebsitePill status={lead.websiteStatus} />
-          {lead.priority === 'high' && <span className="crm-flag">High priority</span>}
-          {lead.referrer && <span className="crm-tag">Referred by {lead.referrer.name}</span>}
+        <div className="crm-reach">
+          <ContactActions c={lead.channels} onUse={setLogKind} />
+          {(lead.channels.phone || lead.channels.email || lead.channels.instagram) && (
+            <div className="crm-reach-lines">
+              {lead.channels.phone && (
+                <span>
+                  <Icon name="phone" size={13} />
+                  {fmtPhone(lead.channels.phone)}
+                </span>
+              )}
+              {lead.channels.email && (
+                <span>
+                  <Icon name="mail" size={13} />
+                  {lead.channels.email}
+                </span>
+              )}
+              {lead.channels.instagram && (
+                <span>
+                  <Icon name="instagram" size={13} />@{lead.channels.instagram}
+                </span>
+              )}
+              {lead.preferredChannel && <span className="crm-muted">Prefers {lead.preferredChannel}</span>}
+            </div>
+          )}
         </div>
         {last && (
           <div className="crm-last">
-            Last: <strong>{ACTIVITY_LABELS[last.type] ?? last.type}</strong> {ago(last.occurredAt)} by {last.actor}
-            {last.body && last.type !== 'STAGE_CHANGE' ? ` · “${last.body.length > 70 ? `${last.body.slice(0, 70)}…` : last.body}”` : ''}
+            <Icon name="activity" size={13} />
+            <span>
+              Last: <strong>{ACTIVITY_LABELS[last.type] ?? last.type}</strong> {ago(last.occurredAt)} by {last.actor}
+              {last.body && last.type !== 'STAGE_CHANGE' ? ` · “${last.body.length > 70 ? `${last.body.slice(0, 70)}…` : last.body}”` : ''}
+            </span>
           </div>
         )}
       </header>
 
       <div className="crm-lead-grid">
         <div className="crm-lead-main">
-          <div className="crm-card crm-reach">
-            <ContactActions c={lead.channels} onUse={setLogKind} />
-            {(lead.channels.phone || lead.channels.email || lead.channels.instagram) && (
-              <div className="crm-reach-lines">
-                {lead.channels.phone && <span>{fmtPhone(lead.channels.phone)}</span>}
-                {lead.channels.email && <span>{lead.channels.email}</span>}
-                {lead.channels.instagram && <span>@{lead.channels.instagram}</span>}
-                {lead.preferredChannel && <span className="crm-muted">Prefers {lead.preferredChannel}</span>}
-              </div>
-            )}
-          </div>
           <LogActivity id={lead.id} kind={logKind} onKindUsed={() => setLogKind(null)} onDone={done} />
           <StageControl id={lead.id} stage={lead.stage} hasOpenDeal={data.deals.some((d) => d.status === 'open')} onDone={done} />
           <Followups id={lead.id} items={data.followups} onDone={done} />
@@ -180,17 +232,23 @@ function useAction(onDone: () => void) {
   return { busy, error, run, setError }
 }
 
-const Err = ({ error }: { error: string | null }) => (error ? <div className="crm-error">{error}</div> : null)
+const Err = ({ error }: { error: string | null }) =>
+  error ? (
+    <div className="crm-error">
+      <Icon name="alert" size={15} />
+      <span>{error}</span>
+    </div>
+  ) : null
 
 /* ------------------------------------------------------------ log activity */
 
-const LOG_TYPES: [string, string][] = [
-  ['NOTE', 'Note'],
-  ['CALL', 'Call'],
-  ['TEXT', 'Text'],
-  ['EMAIL', 'Email'],
-  ['INSTAGRAM_DM', 'Instagram DM'],
-  ['PROPOSAL', 'Proposal'],
+const LOG_TYPES: [string, string, IconName][] = [
+  ['NOTE', 'Note', 'pencil'],
+  ['CALL', 'Call', 'phone'],
+  ['TEXT', 'Text', 'message'],
+  ['EMAIL', 'Email', 'mail'],
+  ['INSTAGRAM_DM', 'Instagram DM', 'instagram'],
+  ['PROPOSAL', 'Proposal', 'file'],
 ]
 
 function LogActivity({ id, kind, onKindUsed, onDone }: { id: string; kind: ContactKind | null; onKindUsed: () => void; onDone: () => void }) {
@@ -225,9 +283,10 @@ function LogActivity({ id, kind, onKindUsed, onDone }: { id: string; kind: Conta
   return (
     <Section title="Log what happened">
       <form className="crm-card crm-log" onSubmit={submit}>
-        <div className="crm-seg" role="radiogroup" aria-label="Activity type">
-          {LOG_TYPES.map(([k, l]) => (
+        <div className="crm-seg is-types" role="radiogroup" aria-label="Activity type">
+          {LOG_TYPES.map(([k, l, icon]) => (
             <button type="button" key={k} role="radio" aria-checked={type === k} className={type === k ? 'is-on' : undefined} onClick={() => { setType(k); setSaved(false) }}>
+              <Icon name={icon} size={14} />
               {l}
             </button>
           ))}
@@ -236,7 +295,7 @@ function LogActivity({ id, kind, onKindUsed, onDone }: { id: string; kind: Conta
           rows={3}
           value={body}
           onChange={(e) => { setBody(e.target.value); setSaved(false) }}
-          placeholder={needsText ? 'What happened, what they said, what is next' : 'Optional: how it went'}
+          placeholder={needsText ? 'What happened, what they said, what is next…' : 'Optional: how it went'}
           aria-label="Activity details"
         />
         <div className="crm-log-foot">
@@ -247,6 +306,7 @@ function LogActivity({ id, kind, onKindUsed, onDone }: { id: string; kind: Conta
             </label>
           ) : (
             <button type="button" className="crm-link" onClick={() => setEarlier(true)}>
+              <Icon name="clock" size={13} />
               It happened earlier?
             </button>
           )}
@@ -254,7 +314,12 @@ function LogActivity({ id, kind, onKindUsed, onDone }: { id: string; kind: Conta
             {busy ? 'Saving…' : `Save ${ACTIVITY_LABELS[type]?.toLowerCase() ?? 'activity'}`}
           </button>
         </div>
-        {saved && <div className="crm-ok">Saved to the timeline.</div>}
+        {saved && (
+          <div className="crm-ok">
+            <Icon name="checkCircle" size={14} />
+            Saved to the timeline.
+          </div>
+        )}
         <Err error={error} />
       </form>
     </Section>
@@ -269,33 +334,52 @@ function StageControl({ id, stage, hasOpenDeal, onDone }: { id: string; stage: s
   const [note, setNote] = useState('')
   const { busy, error, run } = useAction(onDone)
   const move = (target: string) => {
-    const group = meta.stages.find((s) => s.key === target)?.group
-    if (group === 'won' && target === 'won' && !window.confirm(hasOpenDeal ? 'Mark won without closing the deal? Revenue is counted from deals: use "Mark won" on the deal instead.' : 'Mark won with no deal? Revenue is counted from deals: add the deal below to record what they paid.')) return
+    if (target === stage) return
+    if (target === 'won' && !window.confirm(hasOpenDeal ? 'Mark won without closing the deal? Revenue is counted from deals: use "Mark won" on the deal instead.' : 'Mark won with no deal? Revenue is counted from deals: add the deal below to record what they paid.')) return
     void run(() => api(`/api/crm/leads/${id}/stage`, { method: 'POST', body: { stage: target, note: note.trim() || null } })).then((ok) => ok && setNote(''))
   }
   const next = NEXT[stage]
+  const rank = PATH_RANK[stage]
+  const off = rank === undefined || ['no_response', 'not_interested', 'bad_lead', 'closed_lost'].includes(stage)
   return (
     <Section title="Stage">
       <div className="crm-card crm-stage-ctl">
+        <ol className="crm-stepper" aria-label="Stages">
+          {PATH.map(([key, short], i) => {
+            const state = rank !== undefined && rank >= 0 && i < rank ? 'is-done' : key === stage || (rank === 6 && i === 6) ? 'is-now' : ''
+            return (
+              <li key={key} className={state}>
+                <button type="button" onClick={() => move(key)} disabled={busy} title={`Move to ${stageLabel(key)}`}>
+                  <span className="crm-step-dot">{state === 'is-done' ? <Icon name="check" size={11} stroke={2.5} /> : null}</span>
+                  <span className="crm-step-label">{short}</span>
+                </button>
+              </li>
+            )
+          })}
+        </ol>
         <div className="crm-stage-now">
           Now <StagePill stage={stage} />
+          {off && <span className="crm-muted">off the main road</span>}
         </div>
-        {next && (
-          <button type="button" className="crm-btn crm-btn-primary" disabled={busy} onClick={() => move(next)}>
-            Move to {stageLabel(next)}
-          </button>
-        )}
-        <div className="crm-stage-pick">
-          <select value={to} onChange={(e) => setTo(e.target.value)} aria-label="Move to stage">
-            {meta.stages.map((s) => (
-              <option key={s.key} value={s.key}>
-                {s.label}
-              </option>
-            ))}
-          </select>
-          <button type="button" className="crm-btn" disabled={busy || to === stage} onClick={() => move(to)}>
-            Move
-          </button>
+        <div className="crm-stage-actions">
+          {next && (
+            <button type="button" className="crm-btn crm-btn-primary" disabled={busy} onClick={() => move(next)}>
+              Move to {stageLabel(next)}
+              <Icon name="arrowRight" size={15} />
+            </button>
+          )}
+          <div className="crm-stage-pick">
+            <select value={to} onChange={(e) => setTo(e.target.value)} aria-label="Move to stage">
+              {meta.stages.map((s) => (
+                <option key={s.key} value={s.key}>
+                  {s.label}
+                </option>
+              ))}
+            </select>
+            <button type="button" className="crm-btn" disabled={busy || to === stage} onClick={() => move(to)}>
+              Move
+            </button>
+          </div>
         </div>
         <input className="crm-input" value={note} onChange={(e) => setNote(e.target.value)} placeholder="Optional note for the history" aria-label="Stage change note" />
         <Err error={error} />
@@ -328,7 +412,7 @@ function Followups({ id, items, onDone }: { id: string; items: Detail['followups
   const [due, setDue] = useState('')
   const [type, setType] = useState('call')
   const [priority, setPriority] = useState('normal')
-  const [owner, setOwner] = useState(actor.personId ?? '')
+  const [owner, setOwner] = useState(actor.personId ?? 'p_glenn')
   const [notes, setNotes] = useState('')
   const { busy, error, run, setError } = useAction(onDone)
   const open = items.filter((f) => !f.completedAt)
@@ -354,21 +438,25 @@ function Followups({ id, items, onDone }: { id: string; items: Detail['followups
   return (
     <Section title="Next step">
       {open.length > 0 && (
-        <ul className="crm-list">
+        <ul className="crm-card crm-list">
           {open.map((f) => (
             <li key={f.id} className={`crm-row${f.dueAt < Date.now() ? ' is-late' : ''}`}>
+              <span className={`crm-row-icon${f.dueAt < Date.now() ? ' is-late' : ''}`}>
+                <Icon name="calendar" size={16} />
+              </span>
               <div className="crm-row-main">
                 <strong>
                   {f.type} {ago(f.dueAt)}
                 </strong>
                 <span>
                   {dateTime(f.dueAt)}
-                  {f.owner ? ` · ${f.owner.name}` : ''}
                   {f.priority !== 'normal' ? ` · ${f.priority} priority` : ''}
                 </span>
                 {f.notes && <em>{f.notes}</em>}
               </div>
-              <button type="button" className="crm-btn" disabled={busy} onClick={() => complete(f.id)}>
+              {f.owner && <PersonChip id={f.owner.id} name={f.owner.name} muted />}
+              <button type="button" className="crm-btn crm-btn-sm" disabled={busy} onClick={() => complete(f.id)}>
+                <Icon name="check" size={14} />
                 Done
               </button>
             </li>
@@ -402,7 +490,6 @@ function Followups({ id, items, onDone }: { id: string; items: Detail['followups
           <label className="crm-field">
             <span>Who</span>
             <select value={owner} onChange={(e) => setOwner(e.target.value)}>
-              <option value="">Anyone</option>
               {meta.people
                 .filter((p) => p.active && p.isTeam)
                 .map((p) => (
@@ -428,6 +515,7 @@ function Followups({ id, items, onDone }: { id: string; items: Detail['followups
           </label>
         </div>
         <button type="submit" className="crm-btn crm-btn-primary" disabled={busy || !due}>
+          <Icon name="calendar" size={15} />
           {busy ? 'Saving…' : 'Schedule follow-up'}
         </button>
         <Err error={error} />
@@ -483,8 +571,25 @@ function Deals({ id, deals, onDone }: { id: string; deals: Detail['deals']; onDo
     if (ok) setAdding(false)
   }
   return (
-    <Section title="Deal" action={!adding && offers.length > 0 ? <button type="button" className="crm-link" onClick={() => setAdding(true)}>Quote an offer</button> : undefined}>
-      {!deals.length && !adding && <div className="crm-empty">No deal yet. Quote an offer when they are ready for a price.</div>}
+    <Section
+      title="Deal"
+      action={
+        !adding && offers.length > 0 ? (
+          <button type="button" className="crm-link" onClick={() => setAdding(true)}>
+            <Icon name="plus" size={14} />
+            Quote an offer
+          </button>
+        ) : undefined
+      }
+    >
+      {!deals.length && !adding && (
+        <div className="crm-empty">
+          <span className="crm-empty-icon">
+            <Icon name="dollar" size={18} />
+          </span>
+          <span>No deal yet. Quote an offer when they are ready for a price.</span>
+        </div>
+      )}
       {deals.map((d) => (
         <DealCard key={d.id} d={d} onDone={onDone} />
       ))}
@@ -520,11 +625,9 @@ function Deals({ id, deals, onDone }: { id: string; deals: Detail['deals']; onDo
                 <button type="submit" className="crm-btn crm-btn-primary" disabled={busy || !offerId}>
                   {busy ? 'Saving…' : 'Save quote'}
                 </button>
-                {deals.length > 0 && (
-                  <button type="button" className="crm-link" onClick={() => setAdding(false)}>
-                    Cancel
-                  </button>
-                )}
+                <button type="button" className="crm-link" onClick={() => setAdding(false)}>
+                  Cancel
+                </button>
               </div>
             </>
           )}
@@ -539,7 +642,7 @@ function DealCard({ d, onDone }: { d: Detail['deals'][number]; onDone: () => voi
   const { meta, actor } = useCrm()
   const [mode, setMode] = useState<'won' | 'lost' | null>(null)
   const [sold, setSold] = useState(dollars(d.quotedCents))
-  const [closer, setCloser] = useState(actor.personId ?? '')
+  const [closer, setCloser] = useState(actor.personId ?? 'p_glenn')
   const [recurring, setRecurring] = useState(d.monthlyCents > 0)
   const [reason, setReason] = useState('')
   const { busy, error, run } = useAction(onDone)
@@ -555,6 +658,9 @@ function DealCard({ d, onDone }: { d: Detail['deals'][number]; onDone: () => voi
   return (
     <div className={`crm-card crm-deal is-${d.status}`}>
       <div className="crm-deal-head">
+        <span className="crm-deal-icon">
+          <Icon name={d.status === 'won' ? 'trophy' : d.status === 'lost' ? 'x' : 'file'} size={16} />
+        </span>
         <strong>{d.offerName}</strong>
         <span className={`crm-deal-status is-${d.status}`}>{d.status === 'open' ? 'Quoted' : d.status === 'won' ? 'Won' : 'Lost'}</span>
       </div>
@@ -585,6 +691,7 @@ function DealCard({ d, onDone }: { d: Detail['deals'][number]; onDone: () => voi
       {d.status === 'open' && !mode && (
         <div className="crm-row-actions">
           <button type="button" className="crm-btn crm-btn-good" onClick={() => setMode('won')}>
+            <Icon name="trophy" size={15} />
             Mark won
           </button>
           <button type="button" className="crm-btn" onClick={() => setMode('lost')}>
@@ -602,7 +709,6 @@ function DealCard({ d, onDone }: { d: Detail['deals'][number]; onDone: () => voi
             <label className="crm-field">
               <span>Closed by</span>
               <select value={closer} onChange={(e) => setCloser(e.target.value)}>
-                <option value="">Not recorded</option>
                 {meta.people
                   .filter((p) => p.active && p.isTeam)
                   .map((p) => (
@@ -668,10 +774,11 @@ function DealCard({ d, onDone }: { d: Detail['deals'][number]; onDone: () => voi
 function Attribution({ detail, onDone }: { detail: Detail; onDone: () => void }) {
   const { meta, actor } = useCrm()
   const { lead } = detail
-  const has = !!(lead.referrer || lead.sourceType)
+  /* A Glenn default is a placeholder: anyone can set the real referrer once. */
+  const locked = !!(lead.referrer || lead.sourceType) && !lead.referralDefault
   const [editing, setEditing] = useState(false)
-  const [referrerId, setReferrerId] = useState(lead.referrer?.id ?? '')
-  const [sourceType, setSourceType] = useState(lead.sourceType ?? '')
+  const [referrerId, setReferrerId] = useState(lead.referralDefault ? '' : lead.referrer?.id ?? '')
+  const [sourceType, setSourceType] = useState(lead.referralDefault ? '' : lead.sourceType ?? '')
   const [campaign, setCampaign] = useState(lead.campaign ?? '')
   const [note, setNote] = useState(lead.referralNote ?? '')
   const [reason, setReason] = useState('')
@@ -685,21 +792,36 @@ function Attribution({ detail, onDone }: { detail: Detail; onDone: () => void })
     void run(() =>
       api(`/api/crm/leads/${lead.id}/referral`, {
         method: 'POST',
-        body: { referrerId: referrerId || null, sourceType: sourceType || null, campaign: campaign || null, note: note || null, override: has, reason: has ? reason : undefined },
+        body: { referrerId: referrerId || null, sourceType: sourceType || null, campaign: campaign || null, note: note || null, override: locked, reason: locked ? reason : undefined },
       }),
     )
   }
-  const canEdit = !has || actor.role === 'admin'
+  const canEdit = !locked || actor.role === 'admin'
   return (
     <Section
       title="Where it came from"
-      action={canEdit && !editing ? <button type="button" className="crm-link" onClick={() => setEditing(true)}>{has ? 'Change' : 'Set'}</button> : undefined}
+      action={
+        canEdit && !editing ? (
+          <button type="button" className="crm-link" onClick={() => setEditing(true)}>
+            {locked ? 'Change' : 'Set'}
+          </button>
+        ) : undefined
+      }
     >
       <div className="crm-card">
         {!editing && (
           <dl className="crm-dl">
             <dt>Referred by</dt>
-            <dd>{lead.referrer ? <a href={`#/referrer/${lead.referrer.id}`}>{lead.referrer.name}</a> : 'Nobody'}</dd>
+            <dd>
+              {lead.referrer ? (
+                <a href={`#/referrer/${lead.referrer.id}`}>
+                  <PersonChip id={lead.referrer.id} name={lead.referrer.name} />
+                </a>
+              ) : (
+                'Nobody'
+              )}
+              {lead.referralDefault && <span className="crm-default">default</span>}
+            </dd>
             <dt>Source</dt>
             <dd>{lead.sourceLabel ?? lead.sourceType ?? 'Not set'}</dd>
             {lead.campaign && (
@@ -710,7 +832,7 @@ function Attribution({ detail, onDone }: { detail: Detail; onDone: () => void })
             )}
             {lead.referredAt && (
               <>
-                <dt>Referred</dt>
+                <dt>Since</dt>
                 <dd>{dayLabel(lead.referredAt)}</dd>
               </>
             )}
@@ -722,10 +844,11 @@ function Attribution({ detail, onDone }: { detail: Detail; onDone: () => void })
             )}
           </dl>
         )}
-        {!editing && has && actor.role !== 'admin' && <p className="crm-lede">The original source stays. Only an admin can change it, with a reason.</p>}
+        {!editing && lead.referralDefault && <p className="crm-lede">Glenn by default: nobody recorded who brought them. Set the real referrer and it takes over.</p>}
+        {!editing && locked && actor.role !== 'admin' && <p className="crm-lede">The original source stays. Only an admin can change it, with a reason.</p>}
         {editing && (
           <form onSubmit={save}>
-            <div className="crm-form-grid">
+            <div className="crm-form-grid is-single">
               <label className="crm-field">
                 <span>Referred by</span>
                 <select value={referrerId} onChange={(e) => setReferrerId(e.target.value)}>
@@ -758,15 +881,15 @@ function Attribution({ detail, onDone }: { detail: Detail; onDone: () => void })
                 <span>Note</span>
                 <input value={note} onChange={(e) => setNote(e.target.value)} />
               </label>
-              {has && (
-                <label className="crm-field is-wide">
+              {locked && (
+                <label className="crm-field">
                   <span>Why is the original source changing? (kept in the log)</span>
                   <input value={reason} onChange={(e) => setReason(e.target.value)} required minLength={3} />
                 </label>
               )}
             </div>
             <div className="crm-row-actions">
-              <button type="submit" className="crm-btn crm-btn-primary" disabled={busy || (!referrerId && !sourceType) || (has && reason.trim().length < 3)}>
+              <button type="submit" className="crm-btn crm-btn-primary" disabled={busy || (!referrerId && !sourceType) || (locked && reason.trim().length < 3)}>
                 {busy ? 'Saving…' : 'Save'}
               </button>
               <button type="button" className="crm-link" onClick={() => setEditing(false)}>
@@ -791,11 +914,11 @@ function People({ detail, onDone }: { detail: Detail; onDone: () => void }) {
   const patch = (body: Record<string, unknown>) => void run(() => api(`/api/crm/leads/${lead.id}`, { method: 'PATCH', body }))
   return (
     <Section title="Who works it">
-      <div className="crm-card crm-form-grid">
+      <div className="crm-card crm-form-grid is-single">
         <label className="crm-field">
-          <span>Assigned to</span>
+          <span>Owner</span>
           <select value={lead.assignee?.id ?? ''} disabled={busy} onChange={(e) => patch({ assignedTo: e.target.value || null })}>
-            <option value="">Nobody</option>
+            {!lead.assignee && <option value="">Nobody</option>}
             {team.map((p) => (
               <option key={p.id} value={p.id}>
                 {p.name}
@@ -814,7 +937,7 @@ function People({ detail, onDone }: { detail: Detail; onDone: () => void }) {
             ))}
           </select>
         </label>
-        <p className="crm-lede is-wide">Referred by, assigned to and closed by are separate: changing one never changes the others.</p>
+        <p className="crm-lede">Referred by, owner and closed by are separate: changing one never changes the others.</p>
         <Err error={error} />
       </div>
     </Section>
@@ -858,12 +981,12 @@ function Details({ detail, onDone }: { detail: Detail; onDone: () => void }) {
   return (
     <Section title="Details">
       <form className="crm-card" onSubmit={save}>
-        <div className="crm-form-grid">
-          <label className="crm-field">
-            <span>Contact name</span>
-            <input value={f.contactName} onChange={(e) => setF({ ...f, contactName: e.target.value })} />
+        <div className="crm-props">
+          <label className="crm-prop">
+            <span>Contact</span>
+            <input value={f.contactName} onChange={(e) => setF({ ...f, contactName: e.target.value })} placeholder="Name" />
           </label>
-          <label className="crm-field">
+          <label className="crm-prop">
             <span>Prefers</span>
             <select value={f.preferredChannel} onChange={(e) => setF({ ...f, preferredChannel: e.target.value })}>
               <option value="">No preference</option>
@@ -873,7 +996,7 @@ function Details({ detail, onDone }: { detail: Detail; onDone: () => void }) {
               <option value="instagram">Instagram</option>
             </select>
           </label>
-          <label className="crm-field">
+          <label className="crm-prop">
             <span>Priority</span>
             <select value={f.priority} onChange={(e) => setF({ ...f, priority: e.target.value })}>
               {meta.priorities.map((p) => (
@@ -883,11 +1006,11 @@ function Details({ detail, onDone }: { detail: Detail; onDone: () => void }) {
               ))}
             </select>
           </label>
-          <label className="crm-field">
-            <span>Potential value ($)</span>
+          <label className="crm-prop">
+            <span>Value ($)</span>
             <input inputMode="decimal" value={f.potential} onChange={(e) => setF({ ...f, potential: e.target.value.replace(/[^0-9.]/g, '') })} />
           </label>
-          <label className="crm-field">
+          <label className="crm-prop">
             <span>Opportunity</span>
             <select value={f.opportunityType} onChange={(e) => setF({ ...f, opportunityType: e.target.value })}>
               {meta.opportunityTypes.map((o) => (
@@ -899,11 +1022,11 @@ function Details({ detail, onDone }: { detail: Detail; onDone: () => void }) {
           </label>
         </div>
         {dirty && (
-          <button type="submit" className="crm-btn crm-btn-primary" disabled={busy}>
+          <button type="submit" className="crm-btn crm-btn-primary crm-btn-block" disabled={busy}>
             {busy ? 'Saving…' : 'Save details'}
           </button>
         )}
-        <div className="crm-sub">
+        <div className="crm-sub crm-meta-line">
           Added {dayLabel(lead.createdAt)} by {lead.createdBy}
           {lead.firstContactedAt ? ` · first contacted ${dayLabel(lead.firstContactedAt)}` : ' · not contacted yet'}
           {lead.wonAt ? ` · won ${dayLabel(lead.wonAt)}` : ''}
@@ -934,11 +1057,12 @@ function Business({ detail }: { detail: Detail }) {
               {b.site ? (
                 <a href={b.site} target="_blank" rel="noreferrer">
                   {b.site.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '')}
+                  <Icon name="arrowUpRight" size={12} />
                 </a>
               ) : (
                 'None'
-              )}{' '}
-              <span className="crm-muted">({websiteStatusLabel(b.websiteStatus)})</span>
+              )}
+              <span className="crm-muted crm-block">{websiteStatusLabel(b.websiteStatus)}</span>
             </dd>
             {b.address && (
               <>
@@ -960,9 +1084,10 @@ function Business({ detail }: { detail: Detail }) {
             <dd>
               <a href={b.pageUrl} target="_blank" rel="noreferrer">
                 Open the listing
+                <Icon name="arrowUpRight" size={12} />
               </a>
-              {b.freeListing && <span className="crm-muted"> · free listing</span>}
-              {b.isIndividual && <span className="crm-muted"> · BEASTY Individual</span>}
+              {b.freeListing && <span className="crm-muted crm-block">Free listing</span>}
+              {b.isIndividual && <span className="crm-muted crm-block">BEASTY Individual</span>}
             </dd>
             {b.seats.length > 0 && (
               <>
@@ -972,7 +1097,7 @@ function Business({ detail }: { detail: Detail }) {
             )}
             {b.notes.length > 0 && (
               <>
-                <dt>Research notes</dt>
+                <dt>Research</dt>
                 <dd>
                   <ul className="crm-notes">
                     {b.notes.map((n, i) => (
@@ -1038,6 +1163,22 @@ function Business({ detail }: { detail: Detail }) {
 
 /* ---------------------------------------------------------------- timeline */
 
+const TL_ICON: Record<string, IconName> = {
+  NOTE: 'pencil',
+  CALL: 'phone',
+  TEXT: 'message',
+  EMAIL: 'mail',
+  INSTAGRAM_DM: 'instagram',
+  PROPOSAL: 'file',
+  REFERRAL: 'share',
+  STAGE_CHANGE: 'arrowRight',
+  FOLLOW_UP: 'calendar',
+  DEAL_WON: 'trophy',
+  DEAL_LOST: 'x',
+  ASSIGNMENT: 'user',
+  SYSTEM: 'sparkles',
+}
+
 function describe(a: Detail['activities'][number]): ReactNode {
   const d = a.data ?? {}
   switch (a.type) {
@@ -1070,6 +1211,7 @@ function describe(a: Detail['activities'][number]): ReactNode {
         <>
           {a.body}
           {d.campaign ? ` (campaign ${String(d.campaign)})` : ''}
+          {d.replacedDefault ? <em> Replaced Glenn, who was the default.</em> : null}
           {d.override ? <em> Changed from the original: {String(d.reason ?? '')}</em> : null}
         </>
       )
@@ -1085,16 +1227,21 @@ function Timeline({ detail }: { detail: Detail }) {
   return (
     <>
       <Section title="Timeline" className="crm-lead-timeline">
-        <ol className="crm-timeline">
+        <ol className="crm-card crm-timeline">
           {items.map((a) => (
             <li key={a.id} className={`crm-tl crm-tl-${a.type.toLowerCase()}`}>
-              <div className="crm-tl-head">
-                <span className="crm-tl-type">{ACTIVITY_LABELS[a.type] ?? a.type}</span>
-                <span className="crm-tl-meta">
-                  {a.actor} · <time dateTime={new Date(a.occurredAt).toISOString()} title={dateTime(a.occurredAt)}>{ago(a.occurredAt)}</time>
-                </span>
+              <span className="crm-tl-icon" aria-hidden="true">
+                <Icon name={TL_ICON[a.type] ?? 'circle'} size={14} />
+              </span>
+              <div className="crm-tl-content">
+                <div className="crm-tl-head">
+                  <span className="crm-tl-type">{ACTIVITY_LABELS[a.type] ?? a.type}</span>
+                  <span className="crm-tl-meta">
+                    {a.actor} · <time dateTime={new Date(a.occurredAt).toISOString()} title={dateTime(a.occurredAt)}>{ago(a.occurredAt)}</time>
+                  </span>
+                </div>
+                <div className="crm-tl-body">{describe(a)}</div>
               </div>
-              <div className="crm-tl-body">{describe(a)}</div>
             </li>
           ))}
         </ol>
@@ -1110,8 +1257,8 @@ function Timeline({ detail }: { detail: Detail }) {
             {stays.map((h) => (
               <tr key={h.id}>
                 <td>{h.from_stage ? `${stageLabel(h.from_stage)} → ${stageLabel(h.to_stage)}` : `Started at ${stageLabel(h.to_stage)}`}</td>
-                <td>{dateTime(h.changed_at)}</td>
-                <td>{h.changedBy}</td>
+                <td className="crm-muted">{dateTime(h.changed_at)}</td>
+                <td className="crm-muted">{h.changedBy}</td>
                 <td className="num">{durationLabel((h.until ?? Date.now()) - h.changed_at)}</td>
               </tr>
             ))}

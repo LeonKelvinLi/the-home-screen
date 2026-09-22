@@ -34,7 +34,7 @@ function textMatch(col: string, q: string): { sql: string; args: unknown[] } {
 const num = (v: unknown) => Number(v ?? 0)
 
 export const actorLabel = (actor: string, people: Map<string, string>) => {
-  if (actor === 'operator') return 'Operator'
+  if (actor === 'operator') return 'Glenn'
   if (actor.startsWith('person:')) return people.get(actor.slice(7)) ?? 'Someone'
   if (actor === 'system:backfill') return 'Import'
   if (actor === 'system:referral-link') return 'Referral link'
@@ -135,7 +135,7 @@ function whereFor(f: LeadFilters, t: number): { sql: string; args: unknown[] } {
   if (f.imported === false) w.push('o.backfill_run_id IS NULL')
   switch (f.attention) {
     case 'uncontacted_referrals':
-      w.push(`o.referrer_id IS NOT NULL AND o.first_contacted_at IS NULL AND o.stage IN ${OPEN}`)
+      w.push(`o.referrer_id IS NOT NULL AND NOT o.referral_default AND o.first_contacted_at IS NULL AND o.stage IN ${OPEN}`)
       break
     case 'overdue':
       w.push('o.next_followup_at < ?')
@@ -175,6 +175,7 @@ export function summarize(o: LeadRow) {
     brandId: o.brand_id,
     applicationId: o.application_id,
     name: biz?.name ?? o.business_name,
+    icon: biz?.icon ?? null,
     familyKey: o.family_key,
     city: biz?.city ?? o.city,
     category: biz?.category ?? o.category,
@@ -186,6 +187,7 @@ export function summarize(o: LeadRow) {
     opportunityType: o.opportunity_type,
     potentialCents: o.potential_cents,
     referrer: o.referrer_id ? { id: o.referrer_id, name: o.referrer_name ?? '' } : null,
+    referralDefault: !!o.referral_default,
     sourceType: o.source_type,
     assignee: o.assigned_to ? { id: o.assigned_to, name: o.assignee_name ?? '' } : null,
     priority: o.priority,
@@ -369,7 +371,7 @@ export async function overview(t = Date.now()) {
          COUNT(*) FILTER (WHERE stage = 'proposal_sent') AS proposals,
          COUNT(*) FILTER (WHERE opportunity_type IN ('website','website_redesign') AND stage IN ${OPEN}) AS need_websites,
          COALESCE(SUM(potential_cents) FILTER (WHERE stage IN ${OPEN}), 0) AS pipeline_cents,
-         COUNT(*) FILTER (WHERE referrer_id IS NOT NULL AND first_contacted_at IS NULL AND stage IN ${OPEN}) AS uncontacted_referrals,
+         COUNT(*) FILTER (WHERE referrer_id IS NOT NULL AND NOT referral_default AND first_contacted_at IS NULL AND stage IN ${OPEN}) AS uncontacted_referrals,
          COUNT(*) FILTER (WHERE stage IN ('interested','meeting','proposal_sent') AND next_followup_at IS NULL) AS interested_no_next,
          COUNT(*) FILTER (WHERE stage = 'proposal_sent' AND COALESCE(last_activity_at, stage_changed_at) < ?) AS stale_proposals,
          COUNT(*) FILTER (WHERE stage IN ${OPEN} AND COALESCE(phone,'') = '' AND COALESCE(email,'') = '' AND COALESCE(instagram,'') = '') AS missing_contact,
@@ -485,6 +487,7 @@ export async function followupView(view: string, bounds: { end: number }, t = Da
         id: r.id,
         leadId: r.opportunity_id,
         name: biz?.name ?? r.business_name,
+        icon: biz?.icon ?? null,
         city: biz?.city ?? r.city,
         stage: r.stage,
         channels: biz ? biz.channels : { phone: r.phone ?? '', email: r.email ?? '', instagram: r.instagram ?? '' },
@@ -823,6 +826,7 @@ export async function families(q: string | undefined, limit = 50, offset = 0) {
     .prepare(
       `SELECT o.family_key,
               MIN(o.business_name) AS name,
+              MIN(o.brand_id) AS brand_id,
               COUNT(*) AS opportunities,
               COUNT(DISTINCT COALESCE(o.brand_id, o.id)) AS locations,
               STRING_AGG(DISTINCT o.city, ', ') AS cities,
@@ -841,6 +845,7 @@ export async function families(q: string | undefined, limit = 50, offset = 0) {
     .all<{
       family_key: string
       name: string
+      brand_id: string | null
       opportunities: number
       locations: number
       cities: string | null
@@ -855,6 +860,7 @@ export async function families(q: string | undefined, limit = 50, offset = 0) {
     families: rows.map((r) => ({
       familyKey: r.family_key,
       name: r.name,
+      icon: businessById(r.brand_id)?.icon ?? null,
       opportunities: num(r.opportunities),
       locations: num(r.locations),
       cities: r.cities ?? '',
@@ -865,4 +871,14 @@ export async function families(q: string | undefined, limit = 50, offset = 0) {
       mrrCents: num(r.mrr),
     })),
   }
+}
+
+/* ---------------------------------------------------------------- pipeline */
+
+/** Per stage: how many leads, and what they are worth at their quote. One query. */
+export async function pipelineSummary() {
+  const rows = await db
+    .prepare('SELECT stage, COUNT(*) AS n, COALESCE(SUM(potential_cents), 0) AS v FROM crm_opportunities GROUP BY stage')
+    .all<{ stage: string; n: number; v: number }>()
+  return { stages: STAGES.map((st) => { const r = rows.find((x) => x.stage === st.key); return { stage: st.key, count: num(r?.n), valueCents: num(r?.v) } }) }
 }

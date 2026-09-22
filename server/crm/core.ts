@@ -20,6 +20,13 @@ import {
 import { businessById } from './directory'
 
 export const nid = (prefix: string) => `${prefix}_${randomBytes(9).toString('base64url')}`
+
+/**
+ * The owner, seeded as p_glenn. Leon's rule of 2026-09-22: every blank "who"
+ * in the CRM is Glenn — the referrer nobody recorded, the owner nobody
+ * assigned, the closer nobody picked, and whoever signs in with the key.
+ */
+export const GLENN_ID = 'p_glenn'
 export const now = () => Date.now()
 
 export class CrmError extends Error {
@@ -67,6 +74,8 @@ export interface OppRow {
   lost_at: number | null
   search_text: string
   backfill_run_id: string | null
+  /** Referred by Glenn only because nobody else was recorded: replaceable once. */
+  referral_default: boolean
   created_at: number
   updated_at: number
   created_by: string
@@ -164,6 +173,27 @@ export async function refreshSearchText(oppId: string): Promise<void> {
   await db.prepare('UPDATE crm_opportunities SET search_text = ? WHERE id = ?').run(searchTextOf(o), oppId)
 }
 
+/**
+ * Every blank "who" becomes Glenn: leads with no referrer and no source get
+ * Glenn as a default referral, leads with no owner get Glenn as owner.
+ * Idempotent, and it only ever fills blanks. Run at boot and after an import.
+ */
+export async function fillGlennDefaults(): Promise<{ referrals: number; owners: number }> {
+  const t = now()
+  const referred = await db
+    .prepare(
+      `UPDATE crm_opportunities SET referrer_id = ?, source_type = 'glenn', referral_default = TRUE,
+         referred_at = COALESCE(referred_at, created_at), updated_at = ?
+       WHERE referrer_id IS NULL AND source_type IS NULL RETURNING id`,
+    )
+    .all<{ id: string }>(GLENN_ID, t)
+  const owned = await db
+    .prepare('UPDATE crm_opportunities SET assigned_to = ?, updated_at = ? WHERE assigned_to IS NULL RETURNING id')
+    .all<{ id: string }>(GLENN_ID, t)
+  for (const { id } of referred) await refreshSearchText(id)
+  return { referrals: referred.length, owners: owned.length }
+}
+
 /* ------------------------------------------------------------- activities */
 
 export async function addActivity(
@@ -234,7 +264,11 @@ export const createOpportunity = db.transaction(async (input: NewOpportunity, ac
   if (name.length < 2) throw new CrmError(400, 'A business name is required.')
   if (input.referrerId) await requirePerson(input.referrerId)
   if (input.assignedTo) await requirePerson(input.assignedTo, { team: true })
-  const referrer = await getPerson(input.referrerId)
+  /* Nobody named: Glenn, marked as a default so the real referrer can take it. */
+  const defaultReferral = !input.referrerId && !input.sourceType
+  const referrerId = input.referrerId ?? (defaultReferral ? GLENN_ID : null)
+  const assignedTo = input.assignedTo ?? GLENN_ID
+  const referrer = await getPerson(referrerId)
   const row = {
     business_name: name,
     city: biz?.city ?? input.city ?? null,
@@ -249,10 +283,10 @@ export const createOpportunity = db.transaction(async (input: NewOpportunity, ac
       `INSERT INTO crm_opportunities (
          id, brand_id, application_id, business_name, family_key, city, category, website_status,
          phone, email, instagram, opportunity_type, stage, stage_changed_at,
-         referrer_id, source_type, campaign, referred_at, referral_note,
+         referrer_id, source_type, campaign, referred_at, referral_note, referral_default,
          assigned_to, contact_name, potential_cents, search_text, backfill_run_id,
          created_at, updated_at, created_by
-       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     )
     .run(
       id,
@@ -269,12 +303,13 @@ export const createOpportunity = db.transaction(async (input: NewOpportunity, ac
       input.opportunityType,
       stage,
       t,
-      input.referrerId ?? null,
-      input.sourceType ?? (input.referrerId ? referrer?.source_type ?? null : null),
+      referrerId,
+      input.sourceType ?? (referrerId ? referrer?.source_type ?? null : null),
       input.campaign ?? null,
-      input.referrerId || input.sourceType ? input.referredAt ?? t : null,
+      referrerId || input.sourceType ? input.referredAt ?? t : null,
       input.referralNote ?? null,
-      input.assignedTo ?? null,
+      defaultReferral,
+      assignedTo,
       input.contactName ?? null,
       Math.max(0, Math.round(input.potentialCents ?? 0)),
       searchTextOf({ ...row, contact_name: input.contactName, referrer_name: referrer?.name }),
@@ -378,7 +413,9 @@ export const setReferral = db.transaction(
   ) => {
     const o = await db.prepare('SELECT * FROM crm_opportunities WHERE id = ? FOR UPDATE').get<OppRow>(oppId)
     if (!o) throw new CrmError(404, 'No such lead.')
-    const already = !!(o.referrer_id || o.source_type)
+    /* Glenn by default is a placeholder, not an attribution: the first real
+       referrer replaces it without an override. After that the rule holds. */
+    const already = !!(o.referrer_id || o.source_type) && !o.referral_default
     if (already) {
       if (!override.allowed) {
         throw new CrmError(409, 'This lead already has its original source. Only an admin can change it, with a reason.')
@@ -397,7 +434,7 @@ export const setReferral = db.transaction(
     await db
       .prepare(
         `UPDATE crm_opportunities SET referrer_id = ?, source_type = ?, campaign = ?, referral_note = ?,
-           referred_at = ?, updated_at = ? WHERE id = ?`,
+           referred_at = ?, referral_default = FALSE, updated_at = ? WHERE id = ?`,
       )
       .run(input.referrerId ?? null, sourceType, input.campaign ?? null, input.note ?? null, input.referredAt ?? (already ? o.referred_at ?? t : t), t, oppId)
     await addActivity(
@@ -410,6 +447,7 @@ export const setReferral = db.transaction(
         sourceType,
         campaign: input.campaign ?? null,
         ...(already ? { override: true, reason: override.reason, previous: { referrerId: o.referrer_id, sourceType: o.source_type, campaign: o.campaign } } : {}),
+        ...(o.referral_default ? { replacedDefault: true, previous: { referrerId: o.referrer_id, sourceType: o.source_type } } : {}),
       },
     )
     await refreshSearchText(oppId)

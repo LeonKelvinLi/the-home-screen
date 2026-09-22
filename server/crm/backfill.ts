@@ -12,7 +12,7 @@
 */
 import { db } from '../db/schema'
 import { DEFAULT_OFFERS, hasChannel, normEmail, normInstagram, normPhone, qualifiesForWebsite } from '../../src/crm/model'
-import { createOpportunity, nid, now, searchTextOf } from './core'
+import { createOpportunity, fillGlennDefaults, nid, now, searchTextOf } from './core'
 import { businessById, seatedBusinesses } from './directory'
 
 export interface BackfillReport {
@@ -29,6 +29,8 @@ export interface BackfillReport {
   manualReview: { id: string; name: string; reason: string }[]
   errors: { id: string; error: string }[]
   createdIds: string[]
+  /** Blanks filled with Glenn after the run (referrals, owners). */
+  filledDefaults?: { referrals: number; owners: number }
 }
 
 const WEBSITE_POTENTIAL = DEFAULT_OFFERS.find((o) => o.id === 'website_build')?.oneTimeCents ?? 0
@@ -115,10 +117,11 @@ export async function runBackfill(opts: { dryRun: boolean; actor: string }): Pro
           brandId: b.id,
           opportunityType: type,
           stage: hasChannel(b.channels) ? 'ready_to_contact' : 'need_contact_info',
-          /* NO SOURCE. How the business first came to BEASTY was never
-             recorded, and writing "other" here would count as the original
-             attribution and lock out the real one (Janelle, for Jazz Braids)
-             when someone who knows records it. The run id marks the import. */
+          /* NO SOURCE GIVEN, so createOpportunity makes Glenn the referrer
+             BY DEFAULT: he sent every one of these businesses, and a default
+             does not lock out the real first referrer (Janelle, for Jazz
+             Braids) when someone who knows records it. The run id marks the
+             import. */
           sourceType: null,
           potentialCents: WEBSITE_POTENTIAL,
           backfillRunId: runId,
@@ -166,6 +169,9 @@ export async function runBackfill(opts: { dryRun: boolean; actor: string }): Pro
   }
 
   if (!opts.dryRun) {
+    /* Leads from before the Glenn rule, or added by hand with blanks. */
+    const filled = await fillGlennDefaults()
+    report.filledDefaults = filled
     await db
       .prepare('UPDATE crm_backfill_runs SET finished_at = ?, report = ? WHERE id = ?')
       .run(now(), JSON.stringify({ ...report, createdIds: report.createdIds.length }), runId)
