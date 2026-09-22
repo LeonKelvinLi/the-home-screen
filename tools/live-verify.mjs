@@ -273,6 +273,10 @@ for (const [id, want, expect] of [
   ['b_thehalalcartel', 'The Halal Cartel', { hours: 'Daily 11am-11pm' }],
   ['b_thecozyoven', 'The Cozy Oven', { free: true }],
   ['b_chutneys', 'Chutneys', { hours: 'Mon-Fri 11am-9pm', call: '(925) 434-5555' }],
+  /* 2026-09-21 evening: Vending Enterprise on BEASTY • Services 16, and Dr.
+     Comics on the yellow sheet behind it with its own site's facts. */
+  ['b_vendingenterprise', 'Vending Enterprise', { hours: 'Mon-Sat 8am-5pm', call: '415-523-5963' }],
+  ['b_drcomicsmrgames', 'Dr. Comics and Mr. Games', { hours: 'Mon 11am-6pm', call: '(510) 601-7800' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -361,11 +365,20 @@ const nana = await p.evaluate(() => ({
   lead: /quintessential Bay Area native/.test(document.body.innerText),
   panels: [...document.querySelectorAll('.brand-panel-head')].map((b) => b.textContent.trim()),
   claimLine: /this spot is hers to claim/.test(document.body.innerText),
+  /* 2026-09-21 evening: Vending Enterprise off her page ("remove the vending
+     enterprise and give it its own spot"), and the portrait under a new file
+     name so no cache can go on serving the old one. */
+  vending: /Vending Enterprise/i.test(document.body.innerText) || !!document.querySelector('a[href*="vendingenterprise"]'),
+  icon: [...document.querySelectorAll('.brand-body image, .brand-body img')].map((x) => x.getAttribute('href') || x.getAttribute('src') || '').find((u) => u.includes('nana-casas')) ?? '',
 }))
 console.log('nana casas    :', JSON.stringify(nana))
 if (!nana.lead) fails.push("Nana Casas' page does not open on her bio's first paragraph")
 if (!(nana.panels.includes('Her story') && nana.panels.includes('Affiliations'))) fails.push("Nana Casas' page is missing the Her story or Affiliations drop-down")
 if (nana.claimLine) fails.push('Nana Casas\' page still says the spot is "hers to claim"')
+if (nana.vending) fails.push("Nana Casas' page still links or names Vending Enterprise")
+if (nana.icon !== '/icons/nana-casas-2.webp') fails.push(`Nana Casas' page draws "${nana.icon}", expected /icons/nana-casas-2.webp`)
+const nanaIcon = await fetch(`${base}/icons/nana-casas-2.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
+if (nanaIcon !== '200 image/webp') fails.push(`/icons/nana-casas-2.webp answered ${nanaIcon}`)
 
 /* The halal mark (2026-09-18) and the red collab line on the example offers
    (2026-09-19). */
@@ -496,6 +509,20 @@ for (const s of [
 for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP']) {
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
+/* 2026-09-21 evening, read from the data in the bundle because signed out
+   only the first two flagship pages can be swiped to: Vending Enterprise is
+   BEASTY • Services 16 between Pet Show and Rosebary, Dr. Comics is on the
+   yellow sheet, the Online seat is empty again, and Janelle's tile carries
+   the pink glow and the owner's exemption from the red ring. */
+for (const [s, what] of [
+  ['"b_petshowgrooming","b_vendingenterprise","b_rosebarycarcare"', 'Vending Enterprise in BEASTY • Services 16'],
+  ['"beasty-services2-21":"b_drcomicsmrgames"', 'Dr. Comics on the BEASTY services yellow sheet'],
+  ['icon:"nana-casas-2"', "Janelle's portrait under its new name"],
+  ['glow:"pink",beastyOwner:!0', "the pink glow and the owner flag on Janelle's page"],
+]) {
+  if (!bundles.includes(s)) fails.push(`${what} is not in any deployed chunk (${s})`)
+}
+if (bundles.includes('"beasty-online-10":')) fails.push('Vending Enterprise still holds BEASTY • Online 11')
 
 /* The pass and the till, from outside: no session means no pass, and no vendor
    or operator token means no scan. Both are the doors that must be shut on the

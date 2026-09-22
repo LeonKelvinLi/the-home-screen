@@ -3399,7 +3399,12 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_rocknjump', //             13 Rock n' Jump
   'b_djrevroc', //              14 DJ Rev ROC
   'b_petshowgrooming', //       15 Pet Show Grooming - mobile
-  'b_drcomicsmrgames', //       16 Dr. Comics and Mr. Games
+  /* "Can you also remove the vending enterprise and give it its own spot on
+     BEASTY • Services" / "You can bump Dr. comics", 2026-09-21. It came off
+     Janelle's page, where it was her link, and off the Online sheet, which is
+     for brands that ship; Dr. Comics and Mr. Games went to the yellow sheet
+     in data/placements.ts. */
+  'b_vendingenterprise', //     16 Vending Enterprise (was Dr. Comics and Mr. Games)
   'b_rosebarycarcare', //       17 Rosebary Car Care
   'b_highscores', //            18 High Scores arcade
   /* His #19 repeated Ding DongToGo, already seated at #1, and was left open

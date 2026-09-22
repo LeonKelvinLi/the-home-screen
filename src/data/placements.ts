@@ -917,7 +917,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-8': 'b_loveburn', //     wings seat taken; the yellow page
   'alamo-services-2': 'b_thetoxalamo', //        Massage and spa; opens Alamo
   'orinda-services-0': 'b_ethosofcalifornia', // Barber; Lafayette unverified
-  'beasty-online-10': 'b_vendingenterprise', //   Coffee, drinks and vending (widened)
   'beasty-online-23': 'b_overlyhiphop', //        Media, tech and accessories (widened)
   'fairfield-goods-1': 'b_gourmetburritos', //   Mexican food; A & A Gas, his working name
   'beasty-individuals-15': 'b_nanacasas',
@@ -1000,6 +999,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'daly-city-goods-8': 'b_piwings', //                            Chicken wings
   'oakland-goods2-4': 'b_pizzaponte', //                          Italian is Philomena Pizza's; yellow sheet, Tier 1
   'beasty-services2-20': 'b_claireandersonhomes', //              BEASTY Services is full; real estate, a new market
+  /* "You can bump Dr. comics", 2026-09-21: Vending Enterprise took its seat,
+     BEASTY • Services 16, and it moves here rather than off the pages. */
+  'beasty-services2-21': 'b_drcomicsmrgames',
   /* 2026-09-13 morning: Daughter Thai on Oakland's yellow sheet at Tier 1,
      MexiHibachi on Pinole's open Mexican food seat. */
   'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1

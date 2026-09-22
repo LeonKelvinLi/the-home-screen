@@ -11061,9 +11061,11 @@ textarea {
 }
 
 /*
-  PINK, for Janelle's page: "Can you put a glow around her icon? Can you make
-  it a pink glow?" (2026-09-20). The same breath and the same radius as the
-  gold one, in her colour — the paid halo, not a new kind of ring.
+  PINK, first for Jazz Braids, from Janelle's circle: "Can you put a glow
+  around her icon? Can you make it a pink glow?" (2026-09-20), then on
+  Janelle's own page, Nana Casas (2026-09-21). The same breath and the same
+  radius as the gold one, in her colour — the paid halo, not a new kind of
+  ring.
 */
 .icon-tile.is-glow.is-glow-pink {
   animation-name: icon-glow-pink;

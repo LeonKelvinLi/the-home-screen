@@ -116,8 +116,11 @@ export const BRAND_APPS: AppDef[] = BRANDS.map((b) => ({
     are either checked-and-genuinely-siteless or NOT YET CHECKED — and the
     honest thing is that the tile cannot tell those two apart. Check before
     pitching.
+
+    An owner's own page is never outlined (Janelle's, since its one link came
+    off on 2026-09-21): the list is who to pitch. See LocalSeed.beastyOwner.
   */
-  ...(b.site && !b.needsSite ? {} : { noSite: true as const }),
+  ...((b.site && !b.needsSite) || b.beastyOwner ? {} : { noSite: true as const }),
   ...(b.glow ? { glow: b.glow } : {}),
 }))
 

@@ -135,6 +135,8 @@ export interface Brand {
    * have quietly taken them off the list the moment the stopgap went in.
    */
   needsSite?: true
+  /** One of BEASTY's own owners, never outlined. See LocalSeed.beastyOwner. */
+  beastyOwner?: true
   /** The paid icon glow. See LocalSeed.glow. */
   glow?: true | 'pink'
   /**
@@ -382,6 +384,8 @@ interface Seed {
   pageMark?: string
   /** Keep them on the red-outline prospect list even though `site` is set. */
   needsSite?: true
+  /** One of BEASTY's own owners, never outlined. See LocalSeed.beastyOwner. */
+  beastyOwner?: true
   /** The paid icon glow. See LocalSeed.glow. */
   glow?: true | 'pink'
   /**
@@ -1140,6 +1144,7 @@ const fromSeed = (s: Seed): Brand => ({
   email: s.email,
   contactOnly: s.contactOnly,
   needsSite: s.needsSite,
+  beastyOwner: s.beastyOwner,
   glow: s.glow,
   tier: s.tier,
   siteNote: s.siteNote,
@@ -1261,6 +1266,7 @@ export const BRANDS: Brand[] = [
     site: s.site,
     pageMark: s.pageMark,
     needsSite: s.needsSite,
+    beastyOwner: s.beastyOwner,
     glow: s.glow,
     tier: s.tier,
     orderUrl: s.orderUrl,

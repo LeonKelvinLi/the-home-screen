@@ -74,6 +74,12 @@ export interface LocalSeed {
    */
   needsSite?: true
   /**
+   * One of BEASTY's own owners: Janelle's page, Nana Casas. The red outline is
+   * the operator's prospect list, and an owner is never a prospect, so it is
+   * not drawn on this tile whether or not `site` is set. Set on nobody else.
+   */
+  beastyOwner?: true
+  /**
    * The paid icon glow, Tier 3's "+$6" line on the Members page.
    *
    * A halo that breathes around the tile on the city grid, so a business that
@@ -81,10 +87,11 @@ export interface LocalSeed {
    * sold it or is using it as a sample — it means nothing if every tile has
    * one, which is the whole product.
    *
-   * `'pink'` is the same halo in pink, his ask of 2026-09-20 for Janelle's
-   * own page: "Can you put a glow around her icon? Can you make it a pink
-   * glow?" The colour is the only difference; the rule for who gets one is
-   * the same.
+   * `'pink'` is the same halo in pink, his ask of 2026-09-20 for Jazz Braids,
+   * from Janelle's circle: "Can you put a glow around her icon? Can you make
+   * it a pink glow?" Janelle's own page, Nana Casas, has had it since
+   * 2026-09-21. The colour is the only difference; the rule for who gets one
+   * is the same.
    */
   glow?: true | 'pink'
   /** Which affiliate tier this page is drawn at. See brands.ts. */
@@ -4922,25 +4929,41 @@ export const LOCAL_SEED: LocalSeed[] = [
       Instagram story ring rather than around it.
     */
     slug: 'nana-casas',
-    icon: 'nana-casas',
+    /* "-2" since 2026-09-21: the portrait replaced her profile picture under
+       the same file name, and icons are cached for a day and served stale for
+       a week, so his phone went on showing the old one ("don't forget she
+       wants this pic for her icon"). A new name is a new file to every cache. */
+    icon: 'nana-casas-2',
     name: 'Nana Casas',
     label: 'Nana Casas',
     cuisine: 'Entrepreneur',
-    tagline: 'Bay Area entrepreneur: Beyond Amazing Clothing Company and Vending Enterprise.',
+    tagline: 'Bay Area entrepreneur: Beyond Amazing Clothing Company.',
+    /* Leon's ask, 2026-09-21, after the pink went on Jazz Braids: "Do on
+       janelle's own page too". */
+    glow: 'pink',
+    /* Janelle is BEASTY's co-founder. Since Vending Enterprise came off this
+       page there is no site here, and the red ring that would draw is his
+       prospect list, which an owner is not on. See LocalSeed.beastyOwner. */
+    beastyOwner: true,
     color: '#2A1B3D|#F2C94C',
     prep: 0,
     category: 'Entrepreneur',
     /*
       "BEASTY • Individuals" over a screenshot of her profile, 2026-09-03. Her
       bio, in her words: "Entrepreneur. A rose that grew from concrete. THE
-      BAY. Beyond Amazing Clothing Company. Sticky Situationzz." Her link is
-      Vending Enterprise, which has its own spot on the Online sheet. The mark
-      was her profile picture from that screenshot until 2026-09-21, when he
-      sent a portrait for it (see her bio below).
+      BAY. Beyond Amazing Clothing Company. Sticky Situationzz." The mark was
+      her profile picture from that screenshot until 2026-09-21, when he sent
+      a portrait for it (see her bio below).
+
+      NO SITE, since 2026-09-21. Her bio link is Vending Enterprise and this
+      page linked it ("See Vending Enterprise") until he wrote "Can you also
+      remove the vending enterprise and give it its own spot on BEASTY •
+      Services". It has that spot now, seat 16, in data/roster.ts. Her
+      clothing company has no site of its own that could be found to link
+      instead; beyondamazing.co answers with an empty page and nothing ties
+      it to her. Her Instagram is the link out.
     */
     instagram: '_beyondamazing',
-    site: 'https://sites.google.com/vendingenterprise.net/vendingenterprise/home',
-    siteCta: 'See Vending Enterprise',
     /*
       HER BIO, 2026-09-21. Nana is Janelle Casas, BEASTY's co-founder since
       2026-09-20. He sent the bio with "can you change this on Janelle's page

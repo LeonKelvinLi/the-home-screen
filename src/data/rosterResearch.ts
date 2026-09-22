@@ -3651,6 +3651,24 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Dr. Comics and Mr. Games — gathered 2026-09-21 from own
+     their spelling: "Dr. Comics & Mr. Games" (roster keeps "Dr. Comics and Mr. Games")
+     they are: Comics and games
+     flag: gathered when he bumped them to the yellow sheet on 2026-09-21; the page had been the roster placeholder since August
+     flag: their own site is a Tumblr they keep current (a Batman Day list, September 2026); the address, phone, hours, 'since 1988' and the Instagram handle are all from it
+     flag: a shop, not a kitchen: their price lists are weekly comic releases, so none are copied here
+  */
+  'dr-comics-mr-games': {
+    address: "4014 Piedmont Ave, Oakland, CA 94611",
+    phone: "(510) 601-7800",
+    hours: "Mon 11am-6pm, Tue closed, Wed 11am-6pm, Thu 11am-5pm, Fri-Sat 11am-6pm, Sun 11am-5pm",
+    instagram: "drcomicsmrgames",
+    cuisine: "Comics and games",
+    tagline: "Comic books and board games in North Oakland since 1988",
+    contactOnly: "Comic books and board games in North Oakland since 1988. Their weekly new-release lists, with prices, are on their own site.",
+  },
+
+  /*
      Dreamland Art & Play — gathered 2026-09-21 from own
      they are: Kids' play & art studio
      flag: Address conflict: their site says 3457 Blackhawk Plaza Cir; their Instagram says 3471. The site’s is carried.

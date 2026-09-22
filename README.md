@@ -137,8 +137,13 @@ FAIL line. Silence is not a pass.
   in its page's chips, and search finds it by the word. It states their
   claim, never a certification.
 - **Glow** — the paid icon halo is gold by default; `glow: 'pink'` draws it
-  pink (Jazz Braids). A tile with no website keeps its red ring inside the
-  halo rather than losing it to the animation.
+  pink (Jazz Braids, and Janelle's own page, Nana Casas). A tile with no
+  website keeps its red ring inside the halo rather than losing it to the
+  animation. `beastyOwner: true` (Janelle's page only) takes an owner off the
+  red-ring prospect list whether or not a site is set.
+- **Yellow sheets** — blank spots stop at one page's worth, but a sheet runs
+  on to a second page when a seated business would otherwise fall past the
+  last row, so a short screen never drops one.
 - **Calendar** — what the businesses have on, stored server-side. Reading is
   public; writing and deleting need `OPERATOR_TOKEN`.
 - **Accounts and membership** — sign-up and sign-in are one screen: a name

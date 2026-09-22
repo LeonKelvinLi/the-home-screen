@@ -7,6 +7,7 @@ import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { useGate } from '../lib/gate'
 import { BEASTY_SHEETS, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
+import { CITY_PLACEMENTS } from '../data/placements'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -397,10 +398,25 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
           splitting and doubling how far anyone has to swipe. The NUMBERED pages
           do continue, because every one of those spots is a specific business
           or a specific category and none of them can be dropped.
+
+          A SEATED BUSINESS IS NEVER DROPPED EITHER. The blanks were the reason
+          for one page, and by 2026-09-21 BEASTY's More services held twenty-two
+          businesses, with spots 21 and 22 past the twenty a 15 draws in Safari:
+          Claire Anderson Homes and Dr. Comics were seated and not on that
+          screen at all. So a yellow sheet runs on to its last seated spot and no
+          further — its blanks still stop at one page's worth.
         */
-        const total = slotPage.yellow
-          ? Math.min(slotPage.categories.length, slotsPerPage)
-          : slotPage.categories.length
+        let total = slotPage.categories.length
+        if (slotPage.yellow) {
+          total = Math.min(total, slotsPerPage)
+          for (let i = slotPage.categories.length - 1; i >= total; i--) {
+            const slot = `${key}-${slotPage.kind}-${i}`
+            if (CITY_PLACEMENTS[slot] && appForSlot(slot).kind === 'brand') {
+              total = i + 1
+              break
+            }
+          }
+        }
         for (let from = 0; from < total; from += slotsPerPage) {
           const chunk = slotPage.categories.slice(from, Math.min(from + slotsPerPage, total))
           out.push({

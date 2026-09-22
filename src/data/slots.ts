@@ -162,9 +162,10 @@ export const ONLINE_CATEGORIES: SlotCategory[] = [
   { n: 8, name: 'Skincare and beauty', label: 'Skincare' },
   { n: 9, name: 'Grooming and barber supply', label: 'Grooming' },
   { n: 10, name: 'Supplements and nutrition', label: 'Supplements' },
-  /* Widened 2026-09-03 to seat Vending Enterprise, on the same reasoning as
-     n=15 on the services page. */
-  { n: 11, name: 'Coffee, drinks and vending', label: 'Coffee' },
+  /* Widened on 2026-09-03 to "Coffee, drinks and vending" to seat Vending
+     Enterprise, and put back on 2026-09-21 when it moved to BEASTY • Services
+     on his word. The seat is open. */
+  { n: 11, name: 'Coffee and tea', label: 'Coffee' },
   { n: 12, name: 'Hot sauce and condiments', label: 'Sauces' },
   { n: 13, name: 'Snacks and sweets', label: 'Snacks' },
   { n: 14, name: 'Car parts and performance', label: 'Car parts' },

@@ -1,0 +1,22 @@
+[
+  {
+    "id": "b_drcomicsmrgames",
+    "name_exact": "Dr. Comics & Mr. Games",
+    "one_line": "Comic books and board games in North Oakland since 1988",
+    "cuisine": "Comics and games",
+    "address": "4014 Piedmont Ave, Oakland, CA 94611",
+    "phone": "(510) 601-7800",
+    "hours": "Mon 11am-6pm, Tue closed, Wed 11am-6pm, Thu 11am-5pm, Fri-Sat 11am-6pm, Sun 11am-5pm",
+    "instagram": "drcomicsmrgames",
+    "site_kind": "own",
+    "site_url": "https://drcomicsmrgames.tumblr.com/",
+    "prices_published": false,
+    "items": [],
+    "price_note": "their weekly new-release lists, with prices, are on their own site",
+    "flags": [
+      "gathered when he bumped them to the yellow sheet on 2026-09-21; the page had been the roster placeholder since August",
+      "their own site is a Tumblr they keep current (a Batman Day list, September 2026); the address, phone, hours, 'since 1988' and the Instagram handle are all from it",
+      "a shop, not a kitchen: their price lists are weekly comic releases, so none are copied here"
+    ]
+  }
+]
