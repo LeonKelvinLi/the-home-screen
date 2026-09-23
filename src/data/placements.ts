@@ -1006,6 +1006,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* "You can bump Dr. comics", 2026-09-21: Vending Enterprise took its seat,
      BEASTY • Services 16, and it moves here rather than off the pages. */
   'beasty-services2-21': 'b_drcomicsmrgames',
+  /* "You can bump Roman Iron to the yellow pages for her", 2026-09-22: The
+     BeauDega by Maine took BEASTY • Services #2, and Roman Iron moves here
+     rather than off the pages. */
+  'beasty-services2-22': 'b_romantraileriron',
   /* 2026-09-13 morning: Daughter Thai on Oakland's yellow sheet at Tier 1,
      MexiHibachi on Pinole's open Mexican food seat. */
   'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1

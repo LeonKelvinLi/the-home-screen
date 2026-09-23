@@ -3238,6 +3238,21 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://bustdownandco.com/',
     siteCta: 'Shop their store',
   }),
+  /* The BeauDega by Maine, Janelle's sister, who asked for a spot through the
+     Reserve a Spot form on 2026-09-22. Glenn: "BEASTY • Services" / "Needs
+     website pilot program", "Can you give her icon that glow thing like on
+     the scan button?" and "You can bump Roman Iron to the yellow pages for
+     her". So: BEASTY • Services #2, the Scan button's light sweep across her
+     logo (glow: 'sweep', not the paid halo), and the red outline, because she
+     has no website yet. Facts from her request and her own Instagram bio. */
+  seed('the-beaudega-by-maine', 'The BeauDega by Maine', 'BeauDega', 'Makeup and permanent makeup', '#0A1433', {
+    glow: 'sweep',
+    needsSite: true,
+    /* Her own slogan, from her logo. */
+    tagline: 'Your beauty. Your bodega.',
+    icon: 'the-beaudega-by-maine',
+    logoTemplate: 'wordmark', logoLines: ['BEAU', 'DEGA'], logoFace: 'condensed',
+  }),
   /* Jazz Braids, from Janelle's circle. "Newark • Services / BEASTY • Services.
      Needs website. This is Janelle folks. Can you put a glow around her icon?
      Can you make it a pink glow?" Not Janelle herself — her own page is Nana
@@ -3458,7 +3473,10 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
 
 export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_dingdongtogo', //          1  Ding DongToGo
-  'b_romantraileriron', //      2  Roman Trailer & Iron work
+  /* "You can bump Roman Iron to the yellow pages for her", 2026-09-22: Roman
+     Trailer & Iron Work moves to the yellow sheet (data/placements.ts) and
+     Janelle's sister's business takes the seat. */
+  'b_thebeaudegabymaine', //    2  The BeauDega by Maine (was Roman Trailer & Iron work)
   'b_luckybarbershop', //       3  Lucky barbershop
   'b_poddtg', //                4  POD DTG
   'b_frankjrenglish', //        5  Frank Jr. English general contractor

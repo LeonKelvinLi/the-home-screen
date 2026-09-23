@@ -13303,6 +13303,24 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     The BeauDega by Maine — gathered 2026-09-22 from none
+     they are: Makeup and permanent makeup
+     flag: the tagline is her own slogan, from her logo ('Your beauty. Your bodega.'), set on the seed so the description does not repeat it
+     flag: Janelle's sister; she asked for a spot through the Reserve a Spot form on 2026-09-22: 'Permanent Beauty services', Hayward, social @thebeaudegabymaine
+     flag: Glenn, the same evening: 'BEASTY • Services. Needs website pilot program', the glow 'like on the scan button' (the dock's light sweep, not the paid halo), and Roman Iron bumped to the yellow sheet to make room
+     flag: her own Instagram bio, read signed out: 'BEAUTY BODEGA • BAY AREA, CA. Where Beauty Fits all Ages', Beauty Professional, 'MAKEUP ARTIST • PMU EXPERT • TOOTH...'; highlights named Tinsel, Tooth Gems, Tiny Tattoos, Ombre Brows and Make-up
+     flag: no website of her own (a pilot-program candidate), and no prices, hours or street address published anywhere; phone and email as Glenn sent them
+     flag: the Instagram button waits for Glenn's word, as on every page
+  */
+  'the-beaudega-by-maine': {
+    address: "Hayward, CA",
+    phone: "(510) 461-4705",
+    email: "thebeaudegabymaine@gmail.com",
+    cuisine: "Makeup and permanent makeup",
+    contactOnly: "Makeup and permanent makeup, ombre brows, tooth gems, tiny tattoos and hair tinsel in Hayward; there is no price list online, so call, text or email her to book.",
+  },
+
+  /*
      The Cozy Oven — gathered 2026-09-21 from none
      they are: Custom cakes
      flag: Glenn: “New new. Needs Website and pilot program.” No website; their bio says DM for menu and order form, and email for business inquiries.

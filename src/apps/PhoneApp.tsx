@@ -399,8 +399,9 @@ export function PhoneApp({ api }: { api: ShellApi }) {
               to show how the community is growing" — so it sits at the top,
               not in a footer nobody scrolls to.
             */}
+            {/* "members & growing" over "on BEASTY": his markup of 2026-09-22. */}
             <p className="contacts-count">
-              <strong>{dir.count}</strong> {dir.count === 1 ? 'member' : 'members'} on BEASTY
+              <strong>{dir.count}</strong> {dir.count === 1 ? 'member' : 'members'} &amp; growing
             </p>
             {[...dir.members
               .reduce((m, mem) => {
@@ -438,7 +439,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
           <div className="contacts-join">
             {count !== null && count > 0 && (
               <p className="contacts-count">
-                <strong>{count}</strong> {count === 1 ? 'member' : 'members'} on BEASTY
+                <strong>{count}</strong> {count === 1 ? 'member' : 'members'} &amp; growing
               </p>
             )}
             <p className="contacts-join-copy">
