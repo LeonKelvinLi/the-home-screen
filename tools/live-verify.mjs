@@ -551,6 +551,8 @@ for (const [s, what] of [
   ['"beasty-online-3":"b_siacollective"', 'SIA Collective on BEASTY • Online'],
   ['icon:"black-crown-tattoo"', "Black Crown's crest"],
   ['icon:"cravingz"', "Cravingz's logo"],
+  /* 10:16 pm: "Can you add her ig plz Janelle asked". */
+  ['instagram:"thebeaudegabymaine"', "The BeauDega by Maine's Instagram button"],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],

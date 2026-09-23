@@ -1065,7 +1065,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'richmond-goods2-1': 'b_brazucaacai', //                         no açaí seat, Ice cream is Waffles Cream's; yellow sheet, Tier 1
   'san-rafael-services-4': 'b_gravityvaultmarin', //               Gym — "Marin"; San Rafael is on their address
   'lafayette-goods2-1': 'b_batchandbrine', //                      Burgers is Kabab Burger's; yellow sheet, Tier 1
-  'beasty-online-4': 'b_pupcup', //                                Bags and luggage — a dog travel bottle; Pet goods is Pawddle's
+  'beasty-online-4': 'b_pupcup', //                                the Jewellery seat — a dog travel bottle; Pet goods is Pawddle's
   'walnut-creek-goods-2': 'b_thaithanioishi', //                   Asian food — Thai and sushi
   'milpitas-goods-13': 'b_brewandbanhmi', //                       Coffee shop
   'oakland-goods-4': 'b_delageoakland', //                         Sushi

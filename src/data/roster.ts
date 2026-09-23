@@ -3250,6 +3250,9 @@ export const ROSTER_SEED: LocalSeed[] = [
     needsSite: true,
     /* Her own slogan, from her logo. */
     tagline: 'Your beauty. Your bodega.',
+    /* Glenn, 10:16 pm the same night: "Can you add her ig plz Janelle
+       asked", with the link. His word, which the Instagram button waits for. */
+    instagram: 'thebeaudegabymaine',
     icon: 'the-beaudega-by-maine',
     logoTemplate: 'wordmark', logoLines: ['BEAU', 'DEGA'], logoFace: 'condensed',
   }),
