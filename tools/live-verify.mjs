@@ -507,6 +507,8 @@ for (const s of [
   /* 2026-09-22: Contacts gets a drop-down per letter, its Share button and
      link, Janelle's mailbox, and Leon's line under his title. */
   'contacts-letter', 'BEASTY contacts', 'janellenicole@beastypages.com', 'CTO/Co-Founder', '& growing', 'the-beaudega-by-maine', 'is-sweep',
+  /* 2026-09-22, 9:15 pm: Reserve a Spot in his words, with his boxes. */
+  'Business information', 'List your hours', 'Business description', 'Add a web link and/or IG handle',
   'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
   'sin-city-pits-breeder', 'brand-photos-track',
   /* The four reels the sweep found never attached. */
@@ -528,7 +530,7 @@ for (const s of [
 /* And what he asked to have taken off: the old addresses, the city line, the
    $20 holding card, Leon's number, the old acronym. A deploy that still ships
    one of these is the old build. */
-for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP']) {
+for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, California', 'Holding your spot', '5108267735', 'BARP', 'What you cook', 'A shared cart']) {
   if (bundles.includes(s)) fails.push(`"${s}" is still in a deployed chunk`)
 }
 /* 2026-09-21 evening, read from the data in the bundle because signed out
@@ -539,6 +541,8 @@ for (const s of ['Glennmalicdem78', 'leondragon3798', 'splk3798', 'Richmond, Cal
 for (const [s, what] of [
   ['"b_petshowgrooming","b_vendingenterprise","b_rosebarycarcare"', 'Vending Enterprise in BEASTY • Services 16'],
   ['"beasty-services2-21":"b_drcomicsmrgames"', 'Dr. Comics on the BEASTY services yellow sheet'],
+  /* 2026-09-22, 9:28 pm: ABVE the Basics beside Bay Area Event Lights. */
+  ['"san-jose-services2-3":"b_abvethebasics"', "ABVE the Basics on San Jose's yellow Services sheet"],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],

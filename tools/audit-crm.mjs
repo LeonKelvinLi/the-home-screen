@@ -245,6 +245,19 @@ await sleep(800)
 const fLead = (await call('GET', '/api/crm/leads?q=forged%20cookie', { j: admin })).body.leads[0]
 check('a forged referral cookie credits nobody', fLead && !fLead.referrer && fLead.sourceType === 'organic')
 
+/* Reserve a Spot as Glenn rewrote it, 2026-09-22: a phone and an email in
+   boxes of their own, the hours and an address, and no city box. */
+await call('POST', '/api/applications', { body: { business: 'New Form Tacos', hours: 'Fri–Sun 5–10pm', address: '9 San Pablo Ave, Hayward, CA 94541', phone: '(510) 555-0144', email: 'Tacos@New-Form.invalid', social: '@newformtacos' }, j: jar() })
+await sleep(800)
+const nfId = (await call('GET', '/api/crm/leads?q=new%20form%20tacos', { j: admin })).body.leads[0]?.id
+const nf = nfId ? (await call('GET', `/api/crm/leads/${nfId}`, { j: admin })).body : null
+check('a request in the new boxes becomes a lead with its own phone and email', nf?.lead?.channels?.phone === '5105550144' && nf?.lead?.channels?.email === 'tacos@new-form.invalid', JSON.stringify(nf?.lead?.channels ?? null))
+check('in the city its address names, not the one its street is named for', nf?.lead?.city === 'Hayward', nf?.lead?.city)
+check('with the hours and the address at the top of its history', !!nf?.activities?.some((x) => (x.body ?? '').includes('Hours: Fri–Sun 5–10pm. Address: 9 San Pablo Ave, Hayward, CA 94541')))
+check('and every box of the request on the lead', nf?.application?.hours === 'Fri–Sun 5–10pm' && nf?.application?.address === '9 San Pablo Ave, Hayward, CA 94541' && nf?.application?.phone === '(510) 555-0144' && nf?.application?.email === 'tacos@new-form.invalid')
+const cityOf = (await import('node:child_process')).execFileSync('npx', ['tsx', '-e', "import { cityFromAddress } from './server/crm/city'; console.log(JSON.stringify(['1 Test Way, Hayward, CA', '123 San Pablo Ave, Oakland, CA 94612', 'South San Francisco, CA', '2 Audit Ave, San Leandro, California 94577-1234', 'Hayward', '5 Palmetto Ave, Pacifica, CA', 'Somewhere, NV', ''].map(cityFromAddress)))"], { encoding: 'utf8' }).trim().split('\n').pop()
+check('an address gives its city, and only a city BEASTY has pages for', cityOf === '["Hayward","Oakland","South San Francisco","San Leandro","Hayward","Pacifica",null,null]', cityOf)
+
 /* ---- roles, enforced on the server ---- */
 async function member(name, email, extra = {}, j = jar()) {
   // The sign-up route allows four quick requests; a fifth waits its turn, as a person would.

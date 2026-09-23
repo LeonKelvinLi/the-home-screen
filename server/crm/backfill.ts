@@ -14,6 +14,7 @@ import { db } from '../db/schema'
 import { DEFAULT_OFFERS, hasChannel, normEmail, normInstagram, normPhone, qualifiesForWebsite } from '../../src/crm/model'
 import { createOpportunity, fillGlennDefaults, nid, now, searchTextOf } from './core'
 import { businessById, seatedBusinesses } from './directory'
+import { cityFromAddress } from './city'
 
 export interface BackfillReport {
   runId: string
@@ -140,8 +141,8 @@ export async function runBackfill(opts: { dryRun: boolean; actor: string }): Pro
   /* Reserve-a-spot requests are businesses asking to be on BEASTY. Creator
      (Collab) requests are people, not businesses, and stay out. */
   const apps = await db
-    .prepare('SELECT id, business, cuisine, contact, city, social, created_at FROM applications ORDER BY created_at')
-    .all<{ id: string; business: string; cuisine: string | null; contact: string; city: string | null; social: string | null; created_at: number }>()
+    .prepare('SELECT id, business, cuisine, contact, city, social, phone, email, address, hours, created_at FROM applications ORDER BY created_at')
+    .all<Parameters<typeof createFromApplication>[0]>()
   const appsDone = new Set(
     (await db.prepare('SELECT application_id FROM crm_opportunities WHERE application_id IS NOT NULL').all<{ application_id: string }>()).map((r) => r.application_id),
   )
@@ -181,16 +182,34 @@ export async function runBackfill(opts: { dryRun: boolean; actor: string }): Pro
 
 /** A Reserve-a-spot request as a lead: the only record of that business. */
 export async function createFromApplication(
-  a: { id: string; business: string; cuisine: string | null; contact: string; city: string | null; social: string | null; created_at: number },
+  a: {
+    id: string
+    business: string
+    cuisine: string | null
+    contact: string
+    city: string | null
+    social: string | null
+    created_at: number
+    /* The boxes of Glenn's revision, 2026-09-22; absent on older requests. */
+    phone?: string | null
+    email?: string | null
+    address?: string | null
+    hours?: string | null
+  },
   opts: { actor: string; runId?: string; referrerId?: string | null; sourceType?: string | null; campaign?: string | null; referredAt?: number | null },
 ): Promise<string> {
-  const email = /[^\s@]+@[^\s@]+\.[^\s@]+/.exec(a.contact)?.[0] ?? ''
-  const phone = a.contact.replace(email, '')
+  /* An older request has one box for both, to pull them out of. */
+  const email = a.email || (/[^\s@]+@[^\s@]+\.[^\s@]+/.exec(a.contact)?.[0] ?? '')
+  const phone = a.phone || a.contact.replace(email, '')
+  /* A lead has no place for hours or an address of its own, so they go in
+     the note that opens its history, where the team reads them. */
+  const said = [a.hours ? `Hours: ${a.hours}` : '', a.address ? `Address: ${a.address}` : ''].filter(Boolean).join('. ')
+  const note = opts.runId ? 'Imported from a Reserve-a-spot request' : 'Reserve-a-spot request'
   return createOpportunity(
     {
       applicationId: a.id,
       businessName: a.business,
-      city: a.city,
+      city: a.city || cityFromAddress(a.address),
       category: a.cuisine,
       phone: normPhone(phone) || null,
       email: normEmail(email) || null,
@@ -204,7 +223,7 @@ export async function createFromApplication(
       campaign: opts.campaign ?? null,
       referredAt: opts.referredAt ?? a.created_at,
       backfillRunId: opts.runId ?? null,
-      note: opts.runId ? 'Imported from a Reserve-a-spot request' : 'Reserve-a-spot request',
+      note: said ? `${note}. ${said}` : note,
     },
     opts.actor,
   )

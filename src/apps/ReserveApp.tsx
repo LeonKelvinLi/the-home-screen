@@ -32,18 +32,27 @@ const KITCHEN_COUNT = KITCHENS.length
 /** Those with real vendor artwork — the only ones the proof row may show. */
 const WITH_ART = KITCHENS.filter((b) => b.logo.imageUrl)
 
+/* Loose, like the server's: something@something.tld. The mail provider is the
+   real judge; this only keeps the button from lighting up for "gmail". */
+const EMAIL_SHAPE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
+
 export function ReserveApp({ api }: { api: ShellApi }) {
   const [name, setName] = useState('')
-  const [cuisine, setCuisine] = useState('')
-  const [contact, setContact] = useState('')
-  const [city, setCity] = useState('')
+  const [hours, setHours] = useState('')
+  const [address, setAddress] = useState('')
+  const [phone, setPhone] = useState('')
+  const [email, setEmail] = useState('')
   const [social, setSocial] = useState('')
   const [sending, setSending] = useState(false)
   const [sent, setSent] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const sentOnce = useRef(false)
 
-  const valid = name.trim().length > 1 && contact.trim().length > 5
+  /* "Name and a way to reach you are enough to start": a phone with at least
+     seven digits or an email, whichever they have. */
+  const valid =
+    name.trim().length > 1 &&
+    (phone.replace(/\D/g, '').length >= 7 || EMAIL_SHAPE.test(email.trim()))
 
   const submit = async () => {
     if (!valid || sending || sentOnce.current) return
@@ -52,9 +61,10 @@ export function ReserveApp({ api }: { api: ShellApi }) {
     try {
       await submitApplication({
         business: name.trim(),
-        cuisine: cuisine.trim(),
-        contact: contact.trim(),
-        city: city.trim(),
+        hours: hours.trim(),
+        address: address.trim(),
+        phone: phone.trim(),
+        email: email.trim(),
         social: social.trim(),
       })
       sentOnce.current = true
@@ -141,26 +151,32 @@ export function ReserveApp({ api }: { api: ShellApi }) {
         )}
       </div>
 
+      {/*
+        GLENN'S WORDING, 2026-09-22, over his markup of this list: every kind
+        of business, not only kitchens, so no menu, prices or shared cart. The
+        middle row wears the info mark he drew in, on a lighter blue than the
+        bag above it so the two tiles stay apart.
+      */}
       <ListSection header="What you get">
         <ListRow
           icon="bag.fill"
           iconBg="#007AFF"
           label="Your own icon"
-          detail="Your logo, your name, opening straight into your menu"
+          detail="Your logo and name opening straight into your page"
           chevron={false}
         />
         <ListRow
-          icon="creditcard.fill"
-          iconBg="#34C759"
-          label="Your prices, your menu"
-          detail="You set your own items and prices. Nobody else edits them"
+          icon="info.circle.fill"
+          iconBg="#32ADE6"
+          label="Business information"
+          detail="List your hours, address and contacts"
           chevron={false}
         />
         <ListRow
           icon="star.fill"
           iconBg="#FF9500"
-          label="A shared cart"
-          detail="One cart and one checkout across every kitchen here"
+          label="Business description"
+          detail="Describe what goods or services your business provides. Add a web link and/or IG handle"
           chevron={false}
         />
       </ListSection>
@@ -182,29 +198,53 @@ export function ReserveApp({ api }: { api: ShellApi }) {
           onChange={(e) => setName(e.target.value)}
           maxLength={80}
         />
+        {/*
+          His revision of the boxes, 2026-09-22: "What you cook" became his
+          hours, an address box went in, and "Phone or email" split in two,
+          email taking the place of City. The address is left to them rather
+          than autofilled: a browser would offer a home address, and this one
+          goes on a public page.
+        */}
         <input
           className="co-input"
-          placeholder="What you cook"
-          aria-label="What you cook"
-          value={cuisine}
-          onChange={(e) => setCuisine(e.target.value)}
-          maxLength={60}
+          placeholder="List your hours"
+          aria-label="List your hours"
+          value={hours}
+          onChange={(e) => setHours(e.target.value)}
+          maxLength={120}
         />
         <input
           className="co-input"
-          placeholder="Phone or email"
-          aria-label="Phone or email"
-          value={contact}
-          onChange={(e) => setContact(e.target.value)}
-          maxLength={100}
+          placeholder="Address"
+          aria-label="Address"
+          autoComplete="off"
+          value={address}
+          onChange={(e) => setAddress(e.target.value)}
+          maxLength={120}
         />
         <input
           className="co-input"
-          placeholder="City"
-          aria-label="City"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-          maxLength={60}
+          type="tel"
+          inputMode="tel"
+          autoComplete="tel"
+          placeholder="Phone"
+          aria-label="Phone"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+          maxLength={40}
+        />
+        <input
+          className="co-input"
+          type="email"
+          inputMode="email"
+          autoComplete="email"
+          autoCapitalize="none"
+          spellCheck={false}
+          placeholder="Email"
+          aria-label="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          maxLength={120}
         />
         <input
           className="co-input"

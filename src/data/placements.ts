@@ -1010,6 +1010,10 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      BeauDega by Maine took BEASTY • Services #2, and Roman Iron moves here
      rather than off the pages. */
   'beasty-services2-22': 'b_romantraileriron',
+  /* ABVE the Basics, "San Jose • Services", 2026-09-22: a caterer, and Event
+     coordinator is Bloom Balloon's on San Jose, so the yellow sheet next to
+     Bay Area Event Lights, the free Tier 1 listing. */
+  'san-jose-services2-3': 'b_abvethebasics',
   /* 2026-09-13 morning: Daughter Thai on Oakland's yellow sheet at Tier 1,
      MexiHibachi on Pinole's open Mexican food seat. */
   'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1

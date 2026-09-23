@@ -3414,6 +3414,27 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://yosushivacaville.com/',
     siteCta: 'See their menu',
   }),
+  /* ABVE the Basics, "San Jose • Services", 2026-09-22, 9:28 pm, with their
+     site and screenshots of it and of their Instagram (@abvethebasicscatering).
+     Caterers from San Jose, "The Bay's Catering Specialists" by their own bio:
+     tacos, smash burgers and more for any occasion, in the cooking their site
+     calls AMEX, Mexican-American with a street food twist, made from scratch.
+     Catering has no seat among the twenty-four and Event coordinator is Bloom
+     Balloon's on San Jose, so the yellow sheet, as Bay Area Event Lights, and
+     with it the free Tier 1 listing: their initials on a tile in their black,
+     the number and email from their Instagram's Contact sheet, and the link
+     (their bio: "DM or Visit Our Website for a Quote"). No street address, no
+     hours and no prices: their site sits behind a bot check, and its own link
+     preview is all of it that was read. */
+  seed('abve-the-basics', 'ABVE the Basics', 'ABVE', 'Taco & smash burger catering', '#111111', {
+    logoTemplate: 'monogram', logoInitials: 'AB', logoFace: 'condensed',
+    address: 'San Jose, CA',
+    phone: '(408) 569-5581',
+    email: 'abvethebasics@gmail.com',
+    site: 'https://www.abvethebasics.com/',
+    siteCta: 'Get a quote',
+    tier: 1,
+  }),
 ]
 
 /**

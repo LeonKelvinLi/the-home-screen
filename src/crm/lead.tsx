@@ -73,7 +73,20 @@ interface Detail {
     isIndividual: boolean
     notes: string[]
   } | null
-  application: { id: string; business: string; cuisine: string | null; contact: string; city: string | null; social: string | null; created_at: number } | null
+  application: {
+    id: string
+    business: string
+    cuisine: string | null
+    contact: string
+    city: string | null
+    social: string | null
+    /* The boxes of Glenn's revision of the form, 2026-09-22; null before it. */
+    phone: string | null
+    email: string | null
+    address: string | null
+    hours: string | null
+    created_at: number
+  } | null
   history: { id: string; from_stage: string | null; to_stage: string; changed_at: number; changedBy: string; note: string | null }[]
   activities: { id: string; type: string; body: string | null; data: Record<string, unknown> | null; actor: string; occurredAt: number }[]
   followups: { id: string; dueAt: number; owner: Ref | null; priority: string; type: string; notes: string | null; completedAt: number | null; completedBy: string | null }[]
@@ -1107,10 +1120,37 @@ function OnBeasty({ detail }: { detail: Detail }) {
                 <dt>Sent</dt>
                 <dd>{dateTime(a.created_at)}</dd>
               </div>
-              <div>
-                <dt>Contact</dt>
-                <dd>{a.contact}</dd>
-              </div>
+              {/* One box for both on a request sent before the form's revision. */}
+              {!a.phone && !a.email && (
+                <div>
+                  <dt>Contact</dt>
+                  <dd>{a.contact}</dd>
+                </div>
+              )}
+              {a.phone && (
+                <div>
+                  <dt>Phone</dt>
+                  <dd>{a.phone}</dd>
+                </div>
+              )}
+              {a.email && (
+                <div>
+                  <dt>Email</dt>
+                  <dd>{a.email}</dd>
+                </div>
+              )}
+              {a.hours && (
+                <div>
+                  <dt>Hours</dt>
+                  <dd>{a.hours}</dd>
+                </div>
+              )}
+              {a.address && (
+                <div>
+                  <dt>Address</dt>
+                  <dd>{a.address}</dd>
+                </div>
+              )}
               {a.cuisine && (
                 <div>
                   <dt>Kind</dt>
@@ -1125,7 +1165,7 @@ function OnBeasty({ detail }: { detail: Detail }) {
               )}
               {a.social && (
                 <div>
-                  <dt>Social</dt>
+                  <dt>Instagram</dt>
                   <dd>{a.social}</dd>
                 </div>
               )}

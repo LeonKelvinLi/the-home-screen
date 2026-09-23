@@ -174,7 +174,7 @@ export function readRef(req: Request, deps: CrmDeps): RefCookie | null {
  */
 export async function crmOnApplication(
   req: Request,
-  a: { id: string; business: string; cuisine: string | null; contact: string; city: string | null; social: string | null; created_at: number },
+  a: Parameters<typeof createFromApplication>[0],
 ): Promise<void> {
   try {
     const ref = DEPS ? readRef(req, DEPS) : null

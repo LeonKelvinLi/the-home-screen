@@ -599,6 +599,17 @@ ON CONFLICT DO NOTHING;
 ALTER TABLE members ADD COLUMN IF NOT EXISTS signup_attribution JSONB;
 ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_attribution JSONB;
 CREATE INDEX IF NOT EXISTS idx_members_created ON members(created_at);
+
+/*
+  RESERVE A SPOT, AS GLENN REWROTE IT ON 2026-09-22: hours, an address, and a
+  phone and an email in boxes of their own, in place of "What you cook", the
+  single "Phone or email" box and the city. The old columns stay for the
+  requests already made, and contact is still filled for every new one.
+*/
+ALTER TABLE applications ADD COLUMN IF NOT EXISTS hours TEXT;
+ALTER TABLE applications ADD COLUMN IF NOT EXISTS address TEXT;
+ALTER TABLE applications ADD COLUMN IF NOT EXISTS phone TEXT;
+ALTER TABLE applications ADD COLUMN IF NOT EXISTS email TEXT;
 `
 
 /**

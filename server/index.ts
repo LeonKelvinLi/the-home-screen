@@ -1366,22 +1366,57 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
   const str = (v: unknown) => (typeof v === 'string' ? v.trim().slice(0, MAX_APP_FIELD) : '')
 
   const business = str(b.business)
-  const contact = str(b.contact)
   if (business.length < 2) return res.status(400).json({ error: 'Business name is required.' })
-  if (contact.length < 5) return res.status(400).json({ error: 'A phone or email is required.' })
+
+  /*
+    A PHONE AND AN EMAIL, EACH IN ITS OWN BOX, since Glenn's revision of the
+    form on 2026-09-22 (with the hours and the address, which took the places
+    of "What you cook" and "City"). One of the two is enough, and it has to be
+    one somebody can use: seven digits or more, or an address shaped like one.
+
+    `contact` is the single "Phone or email" box the form used to have. A page
+    opened before the change still sends it, so it is still taken; for a new
+    request it is filled with whichever of the two they gave, so anything that
+    reads the old column keeps working.
+  */
+  const phone = str(b.phone)
+  const email = str(b.email).toLowerCase()
+  const phoneOk = phone.replace(/\D/g, '').length >= 7
+  const emailOk = EMAIL_SHAPE.test(email)
+  const contact = [phoneOk ? phone : '', emailOk ? email : ''].filter(Boolean).join(' · ') || str(b.contact)
+  if (contact.length < 5) {
+    return res.status(400).json({
+      error: phone || email ? 'That phone number or email does not look right.' : 'A phone number or email is required.',
+    })
+  }
+  const lead = {
+    business,
+    contact,
+    phone,
+    email,
+    hours: str(b.hours),
+    address: str(b.address),
+    cuisine: str(b.cuisine),
+    city: str(b.city),
+    social: str(b.social),
+  }
 
   const application = {
     id: `ap_${randomBytes(8).toString('hex')}`,
     business,
-    cuisine: str(b.cuisine) || null,
+    cuisine: lead.cuisine || null,
     contact,
-    city: str(b.city) || null,
-    social: str(b.social) || null,
+    city: lead.city || null,
+    social: lead.social || null,
+    hours: lead.hours || null,
+    address: lead.address || null,
+    phone: phone || null,
+    email: email || null,
     created_at: Date.now(),
   }
   await db.prepare(
-    `INSERT INTO applications (id, business, cuisine, contact, city, social, created_at)
-     VALUES (?,?,?,?,?,?,?)`,
+    `INSERT INTO applications (id, business, cuisine, contact, city, social, hours, address, phone, email, created_at)
+     VALUES (?,?,?,?,?,?,?,?,?,?,?)`,
   ).run(
     application.id,
     application.business,
@@ -1389,19 +1424,17 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
     application.contact,
     application.city,
     application.social,
+    application.hours,
+    application.address,
+    application.phone,
+    application.email,
     application.created_at,
   )
   /* Into the CRM as a lead, credited to the referral link that brought them
      if there was one. Never awaited into the response: it cannot fail this. */
   void crmOnApplication(req, application)
 
-  notifyLead({
-    business,
-    contact,
-    cuisine: str(b.cuisine),
-    city: str(b.city),
-    social: str(b.social),
-  })
+  notifyLead(lead)
 
   res.status(201).json({ ok: true })
 })
@@ -1487,20 +1520,36 @@ async function sendLeadEmail(
 
 function notifyLead(lead: Record<string, string>) {
   const f = (v: string) => slackSafe(v)
+  /* The hours and the address are left out of the log: the email and the
+     webhook carry them, and an address can be somebody's home. */
   const line = `NEW VENDOR LEAD  ${f(lead.business)} | ${f(lead.contact)}` +
     `${lead.cuisine ? ` | ${f(lead.cuisine)}` : ''}${lead.city ? ` | ${f(lead.city)}` : ''}` +
     `${lead.social ? ` | ${f(lead.social)}` : ''}`
   console.log(line)
 
+  /*
+    One line per box they filled, the ways to reach them first. A request from
+    a page opened before Glenn's revision has the old single contact box, what
+    they do and a city instead of the phone, email, hours and address.
+  */
+  const rows: [string, string][] = [
+    ['Phone', lead.phone],
+    ['Email', lead.email],
+    ['Contact', lead.phone || lead.email ? '' : lead.contact],
+    ['Hours', lead.hours],
+    ['Address', lead.address],
+    ['What they do', lead.cuisine],
+    ['City', lead.city],
+    ['Instagram', lead.social],
+  ]
   void sendLeadEmail(
     process.env.LEAD_EMAIL,
     `BEASTY: new spot request from ${lead.business}`,
     `${lead.business} asked for a spot on BEASTY pages.\n\n` +
-      `Contact: ${lead.contact}\n` +
-      `${lead.cuisine ? `What they do: ${lead.cuisine}\n` : ''}` +
-      `${lead.city ? `City: ${lead.city}\n` : ''}` +
-      `${lead.social ? `Social: ${lead.social}\n` : ''}` +
+      rows.filter(([, v]) => v).map(([k, v]) => `${k}: ${v}\n`).join('') +
       `\nSent from the Reserve a Spot form. Nothing is committed until you reply to them.`,
+    /* Reply goes straight to the business when they gave an email. */
+    lead.email || (EMAIL_SHAPE.test(lead.contact) ? lead.contact : undefined),
   )
 
   const url = process.env.LEAD_WEBHOOK_URL

@@ -268,7 +268,7 @@ export async function leadDetail(id: string) {
   const people = await peopleNames()
   const biz = businessById(o.brand_id)
   const application = o.application_id
-    ? await db.prepare('SELECT id, business, cuisine, contact, city, social, created_at FROM applications WHERE id = ?').get(o.application_id)
+    ? await db.prepare('SELECT id, business, cuisine, contact, city, social, phone, email, address, hours, created_at FROM applications WHERE id = ?').get(o.application_id)
     : null
   const history = await db
     .prepare('SELECT * FROM crm_stage_history WHERE opportunity_id = ? ORDER BY changed_at, id')
