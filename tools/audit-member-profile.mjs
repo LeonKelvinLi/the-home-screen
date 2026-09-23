@@ -104,6 +104,8 @@ try {
   if (process.env.SHOTS) await page.screenshot({ path: `${process.env.SHOTS}/contacts-open.png` })
   check(await page.locator('text=Ada O.').first().isVisible().catch(() => false), 'tapping A shows the names under it')
   check(await page.locator('.nav-bar-right .chrome-pill.is-share').isVisible().catch(() => false), 'Contacts carries a share button, top right')
+  const heads = await page.$$eval('.ios-section-header', (h) => h.map((e) => e.textContent?.trim()))
+  check(heads.indexOf('Co-Founder/CTO') === heads.indexOf('Co-CEO/Co-Founder') + 1 && heads.indexOf('Co-CEO/Co-Founder') > heads.indexOf('CEO/Founder'), 'Leon\'s line sits right below Janelle\'s, under his title', heads.slice(0, 4).join(' | '))
   await page.locator('text=Ada O.').first().click({ timeout: 15000 }).catch(() => {})
   const opened = await page.waitForSelector('.member-page', { timeout: 15000 }).then(() => true).catch(() => false)
   check(opened, 'tapping her row opens her page')

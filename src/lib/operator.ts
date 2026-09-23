@@ -64,6 +64,7 @@ export interface Owner {
   name: string
   /** His wording, as he wrote it: "CEO/Founder", "Co-CEO/Co-Founder". */
   role: string
+  /** Blank for someone not reached by phone: the row is then just the name. */
   phone: string
   /** Blank until the mailbox exists — an address that bounces is worse than none. */
   email: string
@@ -78,7 +79,14 @@ export interface Owner {
   janellenicole@beastypages.com (Glenn in the thread, 3:14 pm), and Leon made
   the mailbox in the Workspace the same afternoon, so it no longer bounces.
 */
+/*
+  LEON, 2026-09-22. Glenn: "I think under contacts you should include your
+  information. At least an email and your title. Right below, Janelle's."
+  Leon chose the title Co-Founder/CTO and no email for now, so the line is
+  his name under that title; an address goes in here when he has one to show.
+*/
 export const OWNERS: Owner[] = [
   { name: 'Glenn', role: 'CEO/Founder', phone: OPERATOR.phone, email: OPERATOR.email },
   { name: 'Janelle', role: 'Co-CEO/Co-Founder', phone: '510-674-8011', email: 'janellenicole@beastypages.com' },
+  { name: 'Leon', role: 'Co-Founder/CTO', phone: '', email: '' },
 ]

@@ -1304,7 +1304,7 @@ function Panel({
               <span className="dialer-owner-role">
                 {o.role} — {o.name}
               </span>
-              <CallOrText phone={o.phone} name={o.name} className="dialer-owner-link" />
+              {o.phone && <CallOrText phone={o.phone} name={o.name} className="dialer-owner-link" />}
               {o.email && (
                 <a className="dialer-owner-link" href={`mailto:${o.email}`}>
                   {o.email}
