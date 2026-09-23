@@ -418,11 +418,13 @@ export async function cancelOrder(o: PlacedOrder): Promise<PlacedOrder> {
 
 /* ---------- vendor applications ---------- */
 
+/* The Reserve a Spot boxes, as Glenn rewrote them on 2026-09-22. */
 export interface ApplicationInput {
   business: string
-  cuisine: string
-  contact: string
-  city: string
+  hours: string
+  address: string
+  phone: string
+  email: string
   social: string
 }
 
