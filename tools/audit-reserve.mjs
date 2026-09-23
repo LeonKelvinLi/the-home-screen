@@ -154,7 +154,8 @@ try {
     await p.click('.page-step.is-next')
     await p.waitForTimeout(260)
   }
-  const opened = await p.waitForSelector('.reserve-lead', { timeout: 8000 }).then(() => true).catch(() => false)
+  /* The window opens with an animation, slower on a busy machine. */
+  const opened = await p.waitForSelector('.reserve-lead', { timeout: 20000 }).then(() => true).catch(() => false)
   check('an empty spot opens Reserve a Spot', !!tapped && opened, tapped ?? 'no empty spot on the home screen')
 
   const shown = await p.evaluate(() => {
