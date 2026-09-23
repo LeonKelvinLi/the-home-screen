@@ -3488,6 +3488,121 @@ export const ROSTER_SEED: LocalSeed[] = [
       },
     ],
   }),
+  /* ---- 2026-09-23, morning. Janelle's friends, a yakitori bar and Gold
+     Bean's shops. Glenn sent each with its city page and, for Janelle's
+     friends, a glow colour; the research is in research/roster/batch32.json.
+     Every logo is cut from his screenshots of their own site or Instagram. */
+  /* Skillet'z Cafe, "Fremont • Goods / Janelle's friends restaurant / Give
+     them a blue glow": breakfast and brunch on Niles Blvd. No brunch seat, so
+     Fremont's open Coffee shop seat, the way Brunch & Bloom took Brentwood's. */
+  seed('skilletz-cafe', "Skillet'z Cafe", "Skillet'z", 'Breakfast & brunch', '#232323', {
+    glow: 'blue',
+    icon: 'skilletz-cafe',
+    logoTemplate: 'wordmark', logoLines: ["SKILLET'Z"], logoFace: 'slab',
+    site: 'https://skilletz.cafe/',
+    siteCta: 'See their menu',
+  }),
+  /* Billy Roy's Burger Co., "Fremont • Goods / Janelle's friend Restaurant /
+     Give them a blue glow": Fremont's open Burgers seat. */
+  seed('billy-roys-burger-co', "Billy Roy's Burger Co.", "Billy Roy's", 'Burgers', '#4A2A1E', {
+    glow: 'blue',
+    icon: 'billy-roys-burger-co',
+    logoTemplate: 'wordmark', logoLines: ['BILLY', "ROY'S"], logoFace: 'script',
+    site: 'https://billyroysburgerco.com/',
+    siteCta: 'Order online',
+  }),
+  /* Garageworks, "Hayward • Services / Give them a blue glow / Janelle's
+     friend Shop": auto body and paint restoration. A collision shop has no
+     seat among the twenty-four (Sin Mex went to a yellow sheet for that), but
+     a glow is a whole page, so Hayward's open Auto detailing seat, the nearer
+     one for paint work. His to move. */
+  seed('garageworks', 'Garageworks', 'Garageworks', 'Auto body & paint', '#1F2160', {
+    glow: 'blue',
+    icon: 'garageworks',
+    logoTemplate: 'wordmark', logoLines: ['GARAGE', 'WORKS'], logoFace: 'condensed',
+    site: 'https://www.garageworksusa.com/',
+    siteCta: 'Book or see their work',
+  }),
+  /* The Breeze Café, "Newark • Goods / Janelle's friends restaurant / Give
+     them a green glow": breakfast and lunch on Cedar Blvd, on Newark's open
+     Coffee shop seat, a café by name. The green glow is new with it. */
+  seed('the-breeze-cafe', 'The Breeze Café', 'The Breeze', 'Breakfast & lunch café', '#6E9A78', {
+    glow: 'green',
+    icon: 'the-breeze-cafe',
+    logoTemplate: 'wordmark', logoLines: ['the', 'breeze'], logoFace: 'script',
+    site: 'https://www.thebreeze-cafe.com/',
+    siteCta: 'See their menu',
+  }),
+  /* Macs by Icky, "Union City • Goods / Janelle's friends Restaurant / Give
+     them a blue glow": "Home of the ube ice cream taco", a Filipino-inspired
+     menu and catering, on Union City's open Filipino food seat. */
+  seed('macs-by-icky', 'Macs by Icky', 'Macs by Icky', 'Filipino-inspired treats', '#4B3FB8', {
+    glow: 'blue',
+    icon: 'macs-by-icky',
+    logoTemplate: 'wordmark', logoLines: ['MACS', 'BY ICKY'], logoFace: 'script',
+    site: 'https://macsbyicky.store/',
+    siteCta: 'See their menu',
+  }),
+  /* The Une, "Union city • Goods / Janelle's friends Restaurant / Give them a
+     pink glow": rice plates and noodle soup at 3902 Smith St, next door to
+     Macs by Icky, on Union City's open Asian food seat. Their only link is a
+     DoorDash store, so there is no link here, no menu (no prices are taken
+     from a delivery app), and the red ring for his pilot list. Hours as their
+     own Instagram bio gives them. */
+  seed('the-une', 'The Une', 'The Une', 'Rice plates & noodle soup', '#D96BD6', {
+    glow: 'pink',
+    needsSite: true,
+    icon: 'the-une',
+    logoTemplate: 'wordmark', logoLines: ['THE', 'UNE'], logoFace: 'condensed',
+    address: '3902 Smith St, Union City, CA',
+    hours: 'Tue-Sat 12-6pm; The Secret Door Fri-Sat 9pm-3am; closed Sun-Mon',
+    contactOnly:
+      'Rice plates and noodle soup on Smith Street in Union City, open noon to 6pm, and The Secret Door on Friday and Saturday nights from 9pm to 3am. Closed Sundays and Mondays. Their menu is only on a delivery app, so it is not shown here.',
+  }),
+  /* The Yakitori Bar, "Fremont • Goods": yakitori on Warm Springs Blvd, with
+     no sushi or ramen on the menu, and Fremont's Asian food seat is House of
+     Raha's, so the yellow sheet, the free Tier 1 listing. Their menu is three
+     pictures from 2021, so no prices are carried, as with HL Peninsula. */
+  seed('the-yakitori-bar', 'The Yakitori Bar', 'Yakitori Bar', 'Yakitori', '#111111', {
+    icon: 'the-yakitori-bar',
+    logoTemplate: 'wordmark', logoLines: ['YAKITORI', 'BAR'], logoFace: 'condensed',
+    site: 'https://theyakitoribar.us/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
+  /* Gold Bean, with its bio's four shops: "Three locations" and "Actually,
+     the fourth one coming soon". San Leandro and Pleasanton take their open
+     Coffee shop seats with the whole page (Pleasanton opens soon); Berkeley's
+     coffee seat is Penelope's, so the two Berkeley shops are free listings
+     on its yellow sheet. One logo, the cup, for all four. */
+  seed('gold-bean-san-leandro', 'Gold Bean', 'Gold Bean', 'Coffee shop', '#111111', {
+    icon: 'gold-bean',
+    logoTemplate: 'monogram', logoInitials: 'GB', logoFace: 'grotesk',
+    site: 'https://www.gldbeancafe.com/',
+    siteCta: 'See their menu',
+    /* This shop's own ordering page, where the prices on the page are from. */
+    orderUrl: 'https://order.snackpass.co/goldbeansl',
+  }),
+  seed('gold-bean-pleasanton', 'Gold Bean', 'Gold Bean', 'Coffee shop, opening soon', '#111111', {
+    icon: 'gold-bean',
+    logoTemplate: 'monogram', logoInitials: 'GB', logoFace: 'grotesk',
+    site: 'https://www.gldbeancafe.com/',
+    siteCta: 'See their shops',
+  }),
+  seed('gold-bean-durant', 'Gold Bean', 'Gold Bean', 'Coffee shop', '#111111', {
+    icon: 'gold-bean',
+    logoTemplate: 'monogram', logoInitials: 'GB', logoFace: 'grotesk',
+    site: 'https://www.gldbeancafe.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
+  seed('gold-bean-hearst', 'Gold Bean', 'Gold Bean', 'Coffee shop', '#111111', {
+    icon: 'gold-bean',
+    logoTemplate: 'monogram', logoInitials: 'GB', logoFace: 'grotesk',
+    site: 'https://www.gldbeancafe.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
 ]
 
 /**

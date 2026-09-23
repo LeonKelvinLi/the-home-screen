@@ -1024,6 +1024,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      Facet Fine's and Midnight Organic's, so SIA takes the first open seat,
      next to them; his to move. */
   'beasty-online-3': 'b_siacollective', //             Bags and luggage seat; apparel and sneakers taken
+  /* 2026-09-23, morning: Janelle's friends with the glows he gave them, The
+     Yakitori Bar and Gold Bean's shops. The reasons are on the seeds. */
+  'fremont-goods-0': 'b_billyroysburgerco', //       Burgers
+  'fremont-goods-13': 'b_skilletzcafe', //           Coffee shop; a brunch café, as Brunch & Bloom
+  'hayward-services-7': 'b_garageworks', //          Auto detailing; body and paint, with his glow
+  'newark-goods-13': 'b_thebreezecafe', //           Coffee shop; a breakfast and lunch café
+  'union-city-goods-10': 'b_macsbyicky', //          Filipino food
+  'union-city-goods-2': 'b_theune', //               Asian food; rice plates and noodle soup
+  'fremont-goods2-0': 'b_theyakitoribar', //         no yakitori seat, Asian food is House of Raha's; yellow sheet, Tier 1
+  'san-leandro-goods-13': 'b_goldbeansanleandro', // Coffee shop
+  'pleasanton-goods-13': 'b_goldbeanpleasanton', //  Coffee shop; opening soon
+  'berkeley-goods2-2': 'b_goldbeandurant', //        Coffee is Penelope's; yellow sheet, Tier 1
+  'berkeley-goods2-3': 'b_goldbeanhearst', //        same
   /* 2026-09-13 morning: Daughter Thai on Oakland's yellow sheet at Tier 1,
      MexiHibachi on Pinole's open Mexican food seat. */
   'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1
