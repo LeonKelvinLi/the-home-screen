@@ -3518,6 +3518,8 @@ export const ROSTER_SEED: LocalSeed[] = [
      one for paint work. His to move. */
   seed('garageworks', 'Garageworks', 'Garageworks', 'Auto body & paint', '#1F2160', {
     glow: 'blue',
+    /* Their own Instagram bio: "a Award Winning Auto Body & Paint Restoration shop". */
+    tagline: 'Award-winning auto body and paint restoration',
     icon: 'garageworks',
     logoTemplate: 'wordmark', logoLines: ['GARAGE', 'WORKS'], logoFace: 'condensed',
     site: 'https://www.garageworksusa.com/',
@@ -3578,13 +3580,13 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('gold-bean-san-leandro', 'Gold Bean', 'Gold Bean', 'Coffee shop', '#111111', {
     icon: 'gold-bean',
     logoTemplate: 'monogram', logoInitials: 'GB', logoFace: 'grotesk',
-    site: 'https://www.gldbeancafe.com/',
-    siteCta: 'See their menu',
     /* This shop's own ordering page, where the prices on the page are from. */
-    orderUrl: 'https://order.snackpass.co/goldbeansl',
+    site: 'https://order.snackpass.co/goldbeansl',
+    siteCta: 'Order ahead',
   }),
   seed('gold-bean-pleasanton', 'Gold Bean', 'Gold Bean', 'Coffee shop, opening soon', '#111111', {
     icon: 'gold-bean',
+    tagline: 'Opening soon',
     logoTemplate: 'monogram', logoInitials: 'GB', logoFace: 'grotesk',
     site: 'https://www.gldbeancafe.com/',
     siteCta: 'See their shops',

@@ -4926,7 +4926,6 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     email: "garageworksln@gmail.com",
     hours: "Mon-Fri 10am-5pm",
     cuisine: "Auto body & paint",
-    tagline: "Award-winning auto body and paint restoration",
     groups: [
       { name: "Prices", items: [
         ["Estimate at shop","Only available in person if car is coming to shop. Will be credit to you if you choose to follow through with service",5000],
@@ -4935,7 +4934,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
         ["Estimation on location","Car estimation at your location $100, will be credit back if you choose to follow through with service.",10000],
       ] },
     ],
-    quoteOnly: "Award-winning auto body and paint restoration. Only the bumper respray is a price for the work; the estimates are fees and the drop-off is a deposit, each credited toward the job, all from their own booking page. Their Instagram says appointments are closed for now: email or text to join the waitlist.",
+    quoteOnly: "Only the bumper respray is a price for the work; the estimates are fees and the drop-off is a deposit, each credited toward the job, all from their own booking page. Their Instagram says appointments are closed for now: email or text to join the waitlist.",
   },
 
   /*
@@ -5425,8 +5424,7 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     address: "440 Main St, Pleasanton, CA 94566",
     email: "cafe@gldbeancafe.com",
     cuisine: "Coffee shop, opening soon",
-    tagline: "Opening soon at 440 Main Street",
-    contactOnly: "Opening soon at 440 Main Street. Prices are from this shop's own Snackpass ordering page; their website lists the menu without prices.",
+    contactOnly: "Opening soon at 440 Main Street; their other shops are on Durant Ave and Hearst Ave in Berkeley, and in San Leandro.",
   },
 
   /*

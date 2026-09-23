@@ -2551,7 +2551,7 @@
  {
   "id": "b_garageworks",
   "name_exact": "Garageworks",
-  "one_line": "Award-winning auto body and paint restoration",
+  "one_line": "",
   "cuisine": "Auto body & paint",
   "address": "1967 W Winton Ave, Hayward, CA 94545",
   "phone": "(510) 980-0845",
@@ -5326,7 +5326,7 @@
  {
   "id": "b_goldbeanpleasanton",
   "name_exact": "Gold Bean",
-  "one_line": "Opening soon at 440 Main Street",
+  "one_line": "",
   "cuisine": "Coffee shop, opening soon",
   "address": "440 Main St, Pleasanton, CA 94566",
   "phone": null,
@@ -5337,7 +5337,7 @@
   "site_url": "https://www.gldbeancafe.com/",
   "prices_published": false,
   "items": [],
-  "price_note": "prices are from this shop's own Snackpass ordering page; their website lists the menu without prices",
+  "price_note": "opening soon at 440 Main Street; their other shops are on Durant Ave and Hearst Ave in Berkeley, and in San Leandro",
   "flags": [
    "Sources: gldbeancafe.com (home, /sippin Drinks, /yummy Food, /story, /contact) and this location's Snackpass ordering page, all read 2026-09-23.",
    "Ordering page: https://order.snackpass.co/goldbeanpleasanton (Snackpass names it 'Gold Bean Cafe (Main Street)').",
