@@ -3250,6 +3250,9 @@ export const ROSTER_SEED: LocalSeed[] = [
     needsSite: true,
     /* Her own slogan, from her logo. */
     tagline: 'Your beauty. Your bodega.',
+    /* Glenn, 10:16 pm the same night: "Can you add her ig plz Janelle
+       asked", with the link. His word, which the Instagram button waits for. */
+    instagram: 'thebeaudegabymaine',
     icon: 'the-beaudega-by-maine',
     logoTemplate: 'wordmark', logoLines: ['BEAU', 'DEGA'], logoFace: 'condensed',
   }),
@@ -3435,6 +3438,56 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'Get a quote',
     tier: 1,
   }),
+  /* Black Crown Tattoo Studio, "Pittsburg • Services / Needs website pilot
+     program", 2026-09-22, 9:54 pm, with their Instagram and what its Email
+     button writes to. Pittsburg's open Tattoo and piercing seat, the whole
+     page: their crest, cut from his crop of their profile picture, and the
+     address, hours, number and walk-in rule from their own bio. The site
+     their bio links, blackcrowntattoos.com, is a Wix domain "not connected to
+     a site", so no link and the red ring for his pilot list; worth telling
+     them their bio points at nothing. */
+  seed('black-crown-tattoo', 'Black Crown Tattoo Studio', 'Black Crown', 'Tattoo studio', '#111111', {
+    needsSite: true,
+    icon: 'black-crown-tattoo',
+    logoTemplate: 'monogram', logoInitials: 'BC', logoFace: 'slab',
+    tagline: 'Walk-ins welcome, 18 and over with a valid photo ID',
+    address: '655 Railroad Ave, Pittsburg, CA 94565',
+    phone: '(925) 267-9320',
+    email: 'BlackCrownTattoos@yahoo.com',
+    hours: 'Mon-Sun 12-7pm',
+    contactOnly:
+      'A tattoo studio on Railroad Avenue in downtown Pittsburg, open every day from noon to 7pm. Walk-ins are welcome; you must be 18 or over with a valid photo ID. Call or email them to book or to ask about a piece.',
+  }),
+  /* Cravingz, "Redwood city • Goods / Needs website pilot / Janelle's
+     brothers brand", 2026-09-22, 10:06 pm, with their new logo, their
+     Instagram, their gift-card page and their own story: "Seeesh… definitely
+     needs a drop down lol". Redwood City's open Ice cream shop seat, the whole
+     page: the logo he sent ("Logo new"), 826 Main St and "specialty shakes •
+     scoops • treats" from their bio, the first paragraph of their story as
+     the text on the page and the other two in a drop-down, as on Janelle's.
+     Their only link is a Square gift-card page, so it is the button and the
+     tile keeps the red ring for his pilot list. No hours, number or prices of
+     theirs anywhere, so none are shown. */
+  seed('cravingz', 'Cravingz', 'Cravingz', 'Ice cream shop', '#8E5CC8', {
+    needsSite: true,
+    icon: 'cravingz',
+    logoTemplate: 'wordmark', logoLines: ['CRAVINGZ'], logoFace: 'condensed',
+    tagline: 'Specialty shakes, scoops and treats',
+    address: '826 Main St, Redwood City, CA',
+    site: 'https://app.squareup.com/gift/MLQ54M0TS4Q84/order',
+    siteCta: 'Buy a gift card',
+    contactOnly:
+      'Cravingz was created to bring back that feeling of hearing the ice cream truck coming down the street—the excitement, the nostalgia, and knowing you were about to get your favorite treat—only elevated.',
+    panels: [
+      {
+        head: 'Our story',
+        body: [
+          'Family-owned and Bay Area-born, our downtown Redwood City dessert shop takes the flavors and treats we grew up loving and gives them a twist. From specialty shakes and creative sundaes to ice cream sandwiches, dirty sodas, and seasonal creations, our menu is designed to feel familiar while still giving you something you haven’t had before.',
+          'Think childhood favorites, grown-up creativity, over-the-top presentation, and a little bit of nostalgia in every order. Cravingz is that ice-cream-truck feeling you remember—just all grown up.',
+        ],
+      },
+    ],
+  }),
 ]
 
 /**
@@ -3455,9 +3508,11 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   'b_downtownbbq', //      7  Downtown BBQ
   'b_glasshouzz', //       8  Glass Houzz
   'b_pippal', //           9  Pippal
-  /* SIA Collective takes this seat, on "BEASTY • Goods, replace EAT tile
-     please". EAT keeps its services seat at #9 and its place in the dock. */
-  'b_siacollective', //    10 SIA Collective
+  /* SIA Collective took this seat on "BEASTY • Goods, replace EAT tile
+     please". On 2026-09-22, 10:10 pm, Cravingz takes it: "Add also to BEASTY
+     • Goods and bump SIA to BEASTY • Online instead" (see data/placements.ts
+     for SIA's Online seat). Cravingz keeps its Redwood City seat as well. */
+  'b_cravingz', //         10 Cravingz (was SIA Collective)
   /* "Can you move belly to the front home screen? You can move Paulo
      sausage somewhere else because they close down recently." — 2026-09-09.
      Belly takes the seat; Paulo Sausage Co keeps its Pittsburg seat, which

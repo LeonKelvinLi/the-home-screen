@@ -1014,6 +1014,16 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      coordinator is Bloom Balloon's on San Jose, so the yellow sheet next to
      Bay Area Event Lights, the free Tier 1 listing. */
   'san-jose-services2-3': 'b_abvethebasics',
+  /* 2026-09-22, 9:54 and 10:06 pm, both "Needs website pilot": Black Crown
+     on Pittsburg's open Tattoo and piercing seat, and Cravingz, Janelle's
+     brother's shop, on Redwood City's open Ice cream shop seat. */
+  'pittsburg-services-3': 'b_blackcrowntattoo', //   Tattoo and piercing
+  'redwood-city-goods-11': 'b_cravingz', //           Ice cream shop
+  /* "bump SIA to BEASTY • Online instead", 10:10 pm, when Cravingz took its
+     BEASTY • Goods seat. The Online sheet's apparel and sneaker seats are
+     Facet Fine's and Midnight Organic's, so SIA takes the first open seat,
+     next to them; his to move. */
+  'beasty-online-3': 'b_siacollective', //             Bags and luggage seat; apparel and sneakers taken
   /* 2026-09-13 morning: Daughter Thai on Oakland's yellow sheet at Tier 1,
      MexiHibachi on Pinole's open Mexican food seat. */
   'oakland-goods2-5': 'b_daughterthai', //                        Asian food is Cambodian Street Food's; yellow sheet, Tier 1
@@ -1055,7 +1065,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'richmond-goods2-1': 'b_brazucaacai', //                         no açaí seat, Ice cream is Waffles Cream's; yellow sheet, Tier 1
   'san-rafael-services-4': 'b_gravityvaultmarin', //               Gym — "Marin"; San Rafael is on their address
   'lafayette-goods2-1': 'b_batchandbrine', //                      Burgers is Kabab Burger's; yellow sheet, Tier 1
-  'beasty-online-4': 'b_pupcup', //                                Bags and luggage — a dog travel bottle; Pet goods is Pawddle's
+  'beasty-online-4': 'b_pupcup', //                                the Jewellery seat — a dog travel bottle; Pet goods is Pawddle's
   'walnut-creek-goods-2': 'b_thaithanioishi', //                   Asian food — Thai and sushi
   'milpitas-goods-13': 'b_brewandbanhmi', //                       Coffee shop
   'oakland-goods-4': 'b_delageoakland', //                         Sushi
