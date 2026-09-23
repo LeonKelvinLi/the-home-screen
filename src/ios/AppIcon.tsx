@@ -55,7 +55,7 @@ interface Props {
    * the business — it is decoration somebody bought. `'sweep'` is instead the
    * Scan button's light crossing the artwork (see LocalSeed.glow).
    */
-  glow?: boolean | 'pink' | 'blue' | 'sweep'
+  glow?: boolean | 'pink' | 'blue' | 'green' | 'sweep'
 }
 
 function AppIconBase({

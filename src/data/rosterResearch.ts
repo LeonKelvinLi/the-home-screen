@@ -1634,6 +1634,204 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     billy-roys-burger-co — gathered 2026-09-23 from own
+     their spelling: "Billy Roy's Burger Co." (roster keeps "billy-roys-burger-co")
+     they are: Burgers
+     flag: Sources used: billyroysburgerco.com (home, /menu) and its own Toast online-ordering page, order.toasttab.com/online/billy-roys-burgers (the site's ORDER PICKUP link), read 2026-09-23 with a headless browser. Items, prices, descriptions and sections come from the Toast page (menus 'Food Menu' and 'Sweets'); size prices from Toast's item views (opened read-only; nothing added to a cart, no checkout, no sign-in).
+     flag: Blocked (partly): billyroysburgerco.com/gift-cards/ redirects to Toast's gift-card page, which showed a Cloudflare 'Performing security verification' bot check (about 19:55 UTC). I stopped all Toast access at that point and did not try to get past it. The menu, sizes and hours had already been read with no check (19:40–19:52 UTC), and nothing else was needed from that page.
+     flag: Hours: the website itself shows no hours. The Toast page's 'Location and Ordering Hours' (All hours list, day by day) says: Sunday 11:00AM - 8:00PM; Monday, Tuesday, Wednesday, Thursday 11:00AM - 8:00PM each; Friday 11:00AM - 9:00PM; Saturday 11:00AM - 9:00PM. That is the only source, so there is no conflict, but they may be online-ordering hours rather than dining-room hours.
+     flag: Phone: the site shows no phone number. Its only phone link (tel:12093222953, i.e. (209) 322-2953) sits in a header button that is hidden on desktop, tablet and mobile. The same hidden links point to 'Backwoods Burgers Oakdale' (Toast gift cards, facebook.com/backwoodsburgersoakdale, instagram.com/backwoodsburgersoakdale), so it looks left over from another restaurant's site. Toast shows the placeholder (999) 999-9999. phone is null; confirm a number before publishing.
+     flag: Address matches what was given: site footer '3909 Thornton Ave, Fremont, CA 94536' (header '3909 Thornton Avenue, Fremont, Ca'); Toast '3909 Thornton Avenue, Fremont, CA 94536'. No email appears anywhere, so email is null.
+     flag: Price conflict between their own sources: the site's /menu page is three menu images (uploaded Feb 2026, transcribed in billyroys-menu-images-transcription.txt). Their prices match Toast except fries: the image says 'FRIES (Regular ~ Garlic ~ Cajun ~ Sweet Potato) HALF / FULL 4/8', but Toast says Half $5.00 / Full $8.00. Toast was used, so fries are from $5.00. Some image descriptions are worded differently (e.g., image 'Hickory Smoked Bacon' vs Toast 'Peppered Bacon'; the image lists Grilled Pineapple on The Grilled Hawaiian and Toast does not); Toast wording was used.
+     flag: label 'from' (8): The Southwest, The Backwoods Cobb, Fries, Cajun Fries, Garlic Fries, Sweet Potato Fries, Fried Zucchini, Onion Rings. The fries, zucchini and rings show '$x.00+' on Toast (Half/Full sizes). The two salads cost $13.00 with 'No Meat', and meat is priced extra (the site's menu image also prints 'Chicken…6 Pulled Pork…6 Ribeye…12'). Optional extras seen only inside an item's order view (e.g., Add Bacon +$2.00 on burgers, kids' side upgrades +$1.00) were not treated as extra prices.
+     flag: Left out for no price: 2 (COMBO VANILLA NO WHIP in Milkshakes; LEO DOGGY CUP🐕💓💖 in Milkshakes).
+     flag: Alcohol: none on the Toast menu or the site's menu images, so nothing was left out for alcohol. 'Jalapeño Beer Cheese' in the Sliders description is a food side.
+     flag: Marked OUT OF STOCK on Toast at fetch time but kept, because they are listed with a price (the site's menu image also lists Wings 14): 💥NEW SWEET SRIRACHA WINGS 💥 ($14.00), Mango Habanero Wings ($14.00), Garlic Pepper Wings ($14.00), Buffalo Wings ($14.00), BBQ Wings ($14.00).
+     flag: Non-food lines kept as listed: HIGHLAND COW $15.00 (section 'TOYs') and PLASTIC WATER CUP $0.25 (Drinks). Toast's 'Featured Items' carousel (repeats of The Billy Roy, Fries and The Haystack) was skipped. An empty Toast menu 'specizls' (group 'LUNCH:1977 Smash Burger & Fries', 0 items) was ignored.
+     flag: Names keep Toast's own spelling, capitals and emoji (e.g., 'chicken quesadilla', '💥NEW💥 Breaded Cheese Raviolis', 'S Garlic Bread'); trailing spaces trimmed. Items with no Toast description have desc ''.
+     flag: Instagram: the site's only Instagram link is hidden and points to instagram.com/backwoodsburgersoakdale (a different restaurant). instagram is null. The site's footer credits 'Retention Media'.
+     flag: Ordering provider: Toast. The site's ORDER PICKUP links go to toasttab.com/billy-roys-burgers/v3 and to billyroysburgerco.com/online-ordering/, which redirects to order.toasttab.com/online/billy-roys-burgers (the page used). The Toast page's cookie banner was not clicked. The page also loads an invisible reCAPTCHA widget; it never showed a challenge and was not touched.
+     flag: On review: the one-item TOYs section and the 25-cent plastic water cup charge are left off (not menu items), and the section names are in sentence case.
+  */
+  'billy-roys-burger-co': {
+    address: "3909 Thornton Ave, Fremont, CA 94536",
+    hours: "Mon-Thu 11am-8pm; Fri-Sat 11am-9pm; Sun 11am-8pm",
+    cuisine: "Burgers",
+    sections: [
+      { name: "Burgers", items: [
+        ["New York Steak & Fries","",2495],
+        ["ALL HAT CATTLE FRIES WITH RIBEYE STEAK","",2195],
+        ["FUNNEL CHURRO FRIES","",1595],
+        ["The Billy Roy","Thousand Island, American Cheese",1500],
+        ["The Haystack","Haystack Onion, Peppered Bacon, Pepper Jack Cheese, Sweet BBQ Sauce",1600],
+        ["Cattle Smash","",1400],
+        ["The Sweet And Swine","Angus Burger, Swiss Cheese, Grilled Pineapple, Pulled Pork, Teriyaki Glaze",1700],
+        ["El Diablo","Pepper Jack Cheese, Guacamole, Peppered Bacon, Pickled Jalapeno, Tomatillo Salsa",1600],
+        ["Sliders","Three Pretzel Bun Sliders, American Cheese, Mayo, and Pickle. Served With Side Of Jalapeño Beer Cheese.",1600],
+        ["The Butcher's Cut","6- oz Ribeye, Haystack Onion, A-1 Aioli, Pepper Jack Cheese",2300],
+        ["The Gourmet Garden","**Vegetarian** Plant-Based Patty (Beyond), Guacamole",1600],
+        ["BAB: Bacon American Cheese NO PRODUCE NO SAUCE","",1600],
+        ["Pulled Pork Sliders 3","",1695],
+        ["JUST A BURGER (BREAD & CHEESE ONLY)","",1400],
+        ["PULLED PORK BURGER","",1600],
+        ["1977 Fremont Smash Burger (no sides)","",1600],
+      ] },
+      { name: "Chicken sandwiches & poultry", items: [
+        ["The Chipotle Pesto","Grilled Chicken, Sun-dried Tomato, Peppered Bacon, Guacamole, Southwest Chipotle Pesto Sauce, Swiss Cheese, Ciabatta Roll",1600],
+        ["The Grilled Hawaiian","Grilled Chicken, Grilled Onion, Teriyaki Glaze, Swiss Cheese, Grilled Sourdough",1600],
+        ["The Jalapeño Melt","Oven-Browned Turkey Breast, Pepper Jack Cheese, Pickled Jalapeño, Haystack Onion, Sweet BBQ Sauce, Ciabatta Roll",1600],
+        ["Cali Chicken Burger","Ground Chicken Patty, Pepper Jack Cheese, Avocado, Spring Mix, Tomato, Onion, Pickle, Chipotle Ranch, Oil Top Bun",1600],
+        ["Spicy Chicken Torta","",1700],
+        ["CBR: Chicken Patty Bacon Billy Roy Burger","",1600],
+        ["BBQ Grilled Chicken Haystack","",1600],
+      ] },
+      { name: "Salads", items: [
+        ["The Southwest","Chicken or Pulled Pork, Black Beans, Corn Salad, Guacamole, Bacon, Cherry Tomato, Tortilla Strips, Red Bell Pepper, Cucumber, Shredded Cheese | Salad Meat (Required, Select 1): No Meat, Grilled Chicken +$6.00, CRISPY CHX +$6.00, Double Chicken +$11.00, Pork +$6.00, Ribeye +$12.00, Double Pork +$12.00, Double Ribeye +$20.00, Beyond Patty +$8.00, Beef Patty +$6.00",1300,null,"from"],
+        ["The Backwoods Cobb","Chicken or Pulled Pork, Blue Cheese Crumbles, Cherry Tomato, Egg, Bacon, Cucumber, Red Bell Pepper | Salad Meat (Required, Select 1): No Meat, Grilled Chicken +$6.00, CRISPY CHX +$6.00, Double Chicken +$11.00, Pork +$6.00, Ribeye +$12.00, Double Pork +$12.00, Double Ribeye +$20.00, Beyond Patty +$8.00, Beef Patty +$6.00",1300,null,"from"],
+        ["The Firebird","Crispy Chicken, Buffalo Sauce, Blue Cheese Crumbles, Tomato, Cucumber, Avocado",1700],
+        ["New York Steak & Wedge Salad","",2695],
+        ["Grilled Chicken Wedge Salad","",2395],
+        ["Buffalo Crispy Chicken Wedge Salad","",2295],
+        ["Sliced Turkey Southwest Salad with Bacon","",2195],
+        ["Taco Bowl Salad","",2100],
+      ] },
+      { name: "Kids", items: [
+        ["Kids Chicken Strips","Served With Choice of Mac N' Cheese or Fries and Soft Drink or Milk",1200],
+        ["Kids Grilled Cheese","Served With Choice of Mac N' Cheese or Fries and Soft Drink or Milk",1200],
+        ["Kids Sliders","2 Pretzel Bun Sliders, American Cheese, Mayo, Pickle Served With Choice of Mac N' Cheese or Fries and Soft Drink or Milk.",1300],
+      ] },
+      { name: "Sides", items: [
+        ["Fries","Size: Half $5.00 / Full $8.00",500,null,"from"],
+        ["Cajun Fries","Size: Half $5.00 / Full $8.00",500,null,"from"],
+        ["Garlic Fries","Size: Half $5.00 / Full $8.00",500,null,"from"],
+        ["Sweet Potato Fries","Size: Half $5.00 / Full $8.00",500,null,"from"],
+        ["Fried Zucchini","Size: Half $6.00 / Full $9.00",600,null,"from"],
+        ["Onion Rings","Size: Half $6.00 / Full $9.00",600,null,"from"],
+        ["Linguica Baked Beans","",600],
+        ["Hushpuppies","",600],
+        ["Mac N Cheese","Topped with Bacon Bits and Shredded Cheese",500],
+        ["Corn Salad","",500],
+        ["House Salad","Onion, Tomato, Pepperoncini, Cucumber",900],
+        ["Wedge Salad","",1400],
+        ["4 Chicken Strips Only","",1300],
+        ["NEW Breaded Cheese Raviolis","",1595],
+        ["Mozzarella Sticks","",1095],
+        ["NEW SWEET SRIRACHA WINGS","",1400],
+        ["Mango Habanero Wings","",1400],
+        ["Garlic Pepper Wings","",1400],
+        ["Buffalo Wings","",1400],
+        ["BBQ Wings","",1400],
+        ["Jalapeno Poppers","",1095],
+        ["Popcorn Fries","",1695],
+        ["S Garlic Bread","",695],
+        ["Side of Bacon","",795],
+        ["Porkie Smack Down","",1695],
+        ["Chicken Smack Down Bowl","",1595],
+        ["Oakdale Chili Fries","",1695],
+        ["chicken quesadilla","",1700],
+        ["Steak Quesadilla","",1795],
+        ["Nacho Fries","",1900],
+        ["Side Tater Tots","",800],
+        ["Corn Ribs","",1100],
+      ] },
+      { name: "Drinks", items: [
+        ["Fountain Drink","",400],
+        ["Apple Juice","",400],
+        ["Arizona Arnold Palmer","",400],
+        ["Arizona Green Tea","",400],
+        ["Arizona Mango","",400],
+        ["Arizona Kiwi Strawberry","",400],
+        ["BOTTLED WATER","",400],
+        ["Can soda","",400],
+        ["Coca-Cola, Can","Coca-Cola Original Taste — the crisp, refreshing taste you know and love",400],
+        ["Coca-Cola, Glass","Coca-Cola Original Taste — the crisp, refreshing taste you know and love",500],
+        ["Coconut water","",600],
+        ["Jarritos Fruit Punch","",400],
+        ["Jarritos Guava","",400],
+        ["Jarritos Lime","",400],
+        ["Jarritos Mandarin","",400],
+        ["Jarritos Mango","",400],
+        ["Jarritos Pineapple","",400],
+        ["Jarritos Strawberry","",400],
+        ["Jarritos Tamarindo","",400],
+        ["Jarritos Watermelon","",400],
+        ["Just Iced Tea Honey Green","",400],
+        ["Just Iced Tea Orange Mango","",400],
+        ["Kids Fountain Drink","",300],
+        ["Kids Milk- Organic Valley","",250],
+        ["La Croix Sparkling Water","",400],
+        ["No Cap Soda Apple","",500],
+        ["No Cap Soda Berry","",500],
+        ["No Cap Soda Strawberry","",500],
+        ["No Cap Soda Watermelon","",500],
+        ["Ryl Tea Blue Raspberry","",400],
+        ["Ryl Tea Cherry","",400],
+        ["Ryl Tea Green Citrus","",400],
+        ["Ryl Tea Rocket Pop","",400],
+        ["Waterloo Sparkling Water","",400],
+      ] },
+      { name: "Milkshakes", items: [
+        ["SHAKE OF THE DAY","",1000],
+        ["Strawberry Milkshake","",1000],
+        ["Coffee Milkshake","",1000],
+        ["Chocolate Milkshake","",1000],
+        ["Oreo Milkshake","",1000],
+        ["Banana Milkshake","",1000],
+        ["Banana Nutella Milkshake","",1000],
+        ["Strawberry Nutella Milkshake","",1000],
+        ["Vanilla Milkshake","",1000],
+        ["Strawberry and Banana Milkshake","",1000],
+        ["OREO COFFEE","",1000],
+        ["STRAWBERRY OREO","",1000],
+        ["Nutella Milkshake","",1000],
+        ["OREO CHOCOLATE CARAMEL","",1000],
+        ["Coffee Strawberry","",1000],
+        ["Brownie Milkshake","",1000],
+        ["Mint Chocolate Chip Milkshake","",1000],
+        ["Ube Milkshake","",1000],
+        ["Kookie Dough Milkshake","",1000],
+        ["Pecan Caramel Milkshake","",1000],
+        ["Toasted Almond Milkshake","",1000],
+        ["Neapolitan Milkshake","",1000],
+        ["Biscoff Milkshake","",1000],
+        ["Banana Coffee Milkshake","",1000],
+        ["Banana Fruity Pebble Milkshake","",1000],
+      ] },
+      { name: "New milkshake flavors", items: [
+        ["NEW SHAKE OF THE DAY (LOARDS ICE CREAM)","",1000],
+        ["Mint Oreo","",1000],
+        ["Biscoff Kookie Dough","",1000],
+        ["Hella Strawberry Fruity Pebbles","",1000],
+        ["Pecan Coffee","",1000],
+        ["Chocolate Mint","",1000],
+        ["Toffee Coffee","",1000],
+        ["Chocolate Mocha","",1000],
+        ["Biscoff coffee","",1000],
+        ["Banana Toffee","",1000],
+        ["Chocolate Toffee","",1000],
+        ["Mint Choco Coffee","",1000],
+        ["Neapolitan","",1000],
+      ] },
+      { name: "Matchas", items: [
+        ["Strawberry Matcha","",1000],
+        ["Banana Matcha","",1000],
+        ["Oreo Matcha","",1000],
+        ["Nutella Matcha","",1000],
+        ["Chocolate Matcha","",1000],
+        ["Cajeta Matcha","",1000],
+        ["Ube matcha","",1000],
+        ["Matcha Milkshake","",1000],
+      ] },
+      { name: "Sundaes", items: [
+        ["BISCOFF","",1000],
+        ["STRAW OREO","",1000],
+        ["TOFFEE CARAMEL CHOCO","",1000],
+      ] },
+    ],
+    siteNote: "Prices are from their own Toast online-ordering page (linked as ORDER PICKUP on their site).",
+  },
+
+  /*
      Bloom Balloon — gathered 2026-09-21 from own-domain
      their spelling: "BLOOM BALLOON" (roster keeps "Bloom Balloon")
      they are: Balloon decor
@@ -4705,6 +4903,41 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Garageworks — gathered 2026-09-23 from own
+     they are: Auto body & paint
+     flag: Sources (own site only, all loaded normally, no CAPTCHA or bot check; the only reCAPTCHA is a notice on the contact form): garageworksusa.com (the bare domain redirects to https://www.garageworksusa.com/), /s/shop, /s/order (redirects to /s/shop), the keychain product page, the Accessories and Apparel pages, and sitemap.xml.
+     flag: Services come from the shop's own Square Appointments page, opened once via the site's 'Book now' button: https://book.squareup.com/appointments/8d3bf0c5-0019-4bd8-844e-d7045039e88d/location/2YJNCGF6WDK9R/services. Nothing was selected, booked, submitted, added to a cart or signed up for.
+     flag: CONFIRMED by the site: street address 1967 W Winton Ave, Hayward, CA 94545 (the site writes 'Hayward, California 94545'); phone (510) 980-0845; email garageworksln@gmail.com (also in the booking page's data).
+     flag: NOT CONFIRMED: 'Unit B'. Neither the site nor the booking page shows a unit; the booking page's data has no second address line.
+     flag: HOURS CONFLICT: the site's Location & Hours block shows Monday-Friday 10:00 am - 5:00 pm, Saturday Closed, Sunday Closed. The booking page's data matches (Mon-Fri 10:00-17:00, Sat/Sun closed). The map listing's 'Mon-Fri 11am-4pm' is not supported.
+     flag: NOT CONFIRMED: 'appointments only'. The site never says it; it just offers online booking through the 'Book now' button.
+     flag: Second phone: the booking page's embedded location data lists (510) 585-7529, which is not shown as visible text on the website. Kept the site's displayed (510) 980-0845.
+     flag: Services: the booking page lists 4 under 'Services', all fixed prices (durations: Estimate at shop 30 min, Bumper Respray 30 min, Appointment For Car Drop Off 1 hr, Estimation on location 30 min). The website itself has no services page and never uses the words 'auto body', 'paint' or 'restoration'. The cuisine label comes from the services plus the Instagram bio in the brief.
+     flag: Price caveats (the business's own text is in desc): Appointment For Car Drop Off $500 is a deposit credited toward the full job. Estimate at shop $50 and Estimation on location $100 are estimate fees credited back if you go ahead. Bumper Respray $600 notes extra cost if repairs are needed.
+     flag: Left out as merchandise, not services: the site shop's only item, Garageworks Signature Flight Tag Keychain, $12.00 (Accessories). The Apparel page says 'Items aren't available for sale yet'. The homepage also features a 'Jun Gold Deep Reach Marker' linked to Amazon, with no price on the site.
+     flag: Name: the Location & Hours block, the booking page and the logo text read 'Garageworks' (logo: 'GARAGE Works, HAYWARD, CA'); the page title and logo alt text say 'Garageworks USA'.
+     flag: The site has no Instagram link. The instagram field is left null per the template.
+     flag: Items without a price: 0.
+     flag: On review: one_line from their own Instagram bio ('a Award Winning Auto Body & Paint Restoration shop'); the waitlist line is the same bio's 'Appointment Closed email or text for inquiries for waitlist'.
+  */
+  'garageworks': {
+    address: "1967 W Winton Ave, Hayward, CA 94545",
+    phone: "(510) 980-0845",
+    email: "garageworksln@gmail.com",
+    hours: "Mon-Fri 10am-5pm",
+    cuisine: "Auto body & paint",
+    groups: [
+      { name: "Prices", items: [
+        ["Estimate at shop","Only available in person if car is coming to shop. Will be credit to you if you choose to follow through with service",5000],
+        ["Bumper Respray","Respray new or used bumper. If repairs are needed extra cost will incur.",60000],
+        ["Appointment For Car Drop Off","Deposit credited toward full job when dropped off",50000],
+        ["Estimation on location","Car estimation at your location $100, will be credit back if you choose to follow through with service.",10000],
+      ] },
+    ],
+    quoteOnly: "Only the bumper respray is a price for the work; the estimates are fees and the drop-off is a deposit, each credited toward the job, all from their own booking page. Their Instagram says appointments are closed for now: email or text to join the waitlist.",
+  },
+
+  /*
      Gay Nineties Pizza & Pasta Co. — gathered 2026-09-21 from own-domain
      their spelling: "Gay Nineties Pizza" (roster keeps "Gay Nineties Pizza & Pasta Co.")
      they are: Pizza and pasta
@@ -4789,6 +5022,592 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "'Your Pet's Home Away From Home' — pet grooming and daycare in Brentwood where pets are treated like family. A full grooming grid on their homepage by coat type and five sizes, $50-$185; the meet-and-greet is free; multi-dog and multi-day daycare discounts on request.",
+  },
+
+  /*
+     Gold Bean — gathered 2026-09-23 from own
+     they are: Cafe
+     flag: Sources: gldbeancafe.com (home, /sippin Drinks, /yummy Food, /story, /contact) and this location's Snackpass ordering page, all read 2026-09-23.
+     flag: Ordering page: https://order.snackpass.co/goldbeancafe (Snackpass names it 'Gold Bean Cafe (Durant Ave)').
+     flag: Their website has no ordering link, no phone, no prices and no hours (it says 'Check Google for our hours. Locations may differ!'); its Drinks/Food pages list items without prices.
+     flag: Snackpass link: not linked anywhere on gldbeancafe.com (pages, raw HTML, sitemap), and Instagram showed a login wall (not bypassed), so the full 'order.snackpass.co/Gold-B...' bio link could not be read. The store pages were found through Snackpass's own public store lookup (no listing site) and matched by name + street address; URLs given are Snackpass's canonical store routes.
+     flag: Menus differ by location on Snackpass (different item sets; e.g., Glaze Doughnut $2.50 at Durant vs $2.00 at Hearst), so items are listed per location.
+     flag: Drinks with a Size choice list the Medium price (label 'from'); Large costs extra as shown in desc. Other add-on/modifier prices ignored.
+     flag: No alcohol on any Gold Bean menu; nothing left out for alcohol.
+     flag: name_exact 'Gold Bean' is the site title/logo; their story page says 'Gold Bean Cafe'.
+     flag: one_line is the first sentence of the homepage 'EXPERIENCE GOLD BEAN' blurb (the site has no meta description or tagline).
+     flag: Status: open. Listed under LOCATIONS on gldbeancafe.com; the Snackpass page shows it Open and lists it in the Gold Bean Cafe location chooser (Durant Ave, Hearst Ave, Pelton Plaza).
+     flag: Hours are from the 'Hours' panel on their Snackpass page, which shows: Monday 7:00 AM - 6:00 PM; Tuesday 6:55 AM - 6:00 PM; Wednesday 6:55 AM - 6:00 PM; Thursday 6:55 AM - 6:20 PM; Friday 6:55 AM - 6:00 PM; Saturday 7:55 AM - 6:00 PM; Sunday 9:00 AM - 6:00 PM. Their website gives no hours, so no own-source conflict.
+     flag: Phone is from the store record the Snackpass page loads (not printed on the page or the website); Durant, Hearst and San Leandro all use the same number.
+     flag: Address written as on gldbeancafe.com; the Snackpass page writes it '2131 Durant Ave, Berkeley, CA 94704'.
+     flag: Left out: the 'Popular' section (duplicates of items listed in their own sections) and promo/deal tiles; Gift Cards section (Physical Gift Card; Digital Gift Card — not menu items; the Digital Gift Card shows no price).
+     flag: Menu items with no price left out: 0.
+     flag: 12 item(s) showed 'Sold Out' at capture time and are kept: Single Shot; Iced Egg Coffee; Iced Protein Coffee; Chocolate Croissant; Almond Croissant; Banana Nut Bread; Cinnamon Twist; Glaze Doughnut; Chocolate Chip W/ Sea Salt Cookie; Ciabatta Bacon, Egg & Spinach; Ciabatta Ham & Swiss Melt; Fairlife Protein Shake.
+     flag: Snackpass also has a 'Gold Bean Cafe (Corporate)' store at 2131 Durant Ave with 'No items on menu' — an admin account, ignored.
+     flag: On review: no phone. The only number is in the store record the ordering page loads, printed nowhere, so it is not put on a public page.
+  */
+  'gold-bean-durant': {
+    address: "2131 Durant Avenue, Berkeley CA 94704",
+    email: "cafe@gldbeancafe.com",
+    hours: "Mon 7am-6pm; Tue-Wed 6:55am-6pm; Thu 6:55am-6:20pm; Fri 6:55am-6pm; Sat 7:55am-6pm; Sun 9am-6pm",
+    cuisine: "Cafe",
+    sections: [
+      { name: "Fall Menu", items: [
+        ["Iced Pumpkin Spice Latte","Warm pumpkin, bold espresso, milk, and cozy fall spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Pumpkin Spice Latte","Warm pumpkin, bold espresso, milk, and cozy fall spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Caramel Apple Pie Matcha","Ceremonial iced matcha topped with caramel coffee foam. Sweetened by our Fresh Apple Filling. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",800,null,"from"],
+        ["Iced Pumpkin Blondie","Warm pumpkin, bold espresso, white chocolate, and cozy fall spices. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Pumpkin Blondie","Warm pumpkin, bold espresso, white chocolate, and cozy fall spices. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Pumpkin Cream Matcha","Ceremonial iced matcha topped with pumpkin spice foam, offering a creamy, naturally sweet twist. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Pumpkin Cream Iced Coffee","Iced coffee topped with creamy pumpkin spice foam. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Pumpkin Cream Iced Chai","Iced chai with creamy pumpkin spice foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Classics", items: [
+        ["Single Shot","",175],
+        ["Drip Coffee","Our process extracts flavors from the coffee grounds, creating a clean, smooth, and well-balanced cup of coffee. Sizes: Medium, Large (+$0.50).",385,null,"from"],
+        ["Double Espresso","Our well-prepared double espresso has a deep, bold taste with a full-bodied texture, accompanied by a layer of golden crema—a frothy, aromatic foam that sits atop the espresso shot.",350],
+        ["Cold Brew","A smooth, refreshing coffee made by steeping coarsely ground coffee beans in cold water for a full 24 hours. The long steeping time allows the coffee to develop rich, nuanced flavors, with notes of chocolate, caramel, and nuttiness. Made iced. Sizes: Medium, Large (+$1.00).",560,null,"from"],
+        ["Cortado","A smooth, balanced coffee drink that consists of equal parts espresso and steamed milk.",375],
+        ["Cafe Au Lait","A French coffee drink made with equal parts of brewed coffee and steamed milk. Sizes: Medium, Large (+$0.50).",450,null,"from"],
+        ["Tea","Our steeping process extracts the flavors, antioxidants, and essential oils from the tea bag, creating a flavorful and fragrant hot drink. Sizes: Medium, Large (+$1.00).",350,null,"from"],
+        ["Hot Chocolate","A comforting drink made from chocolate, mixed with your choice of milk. The rich, velvety texture and deep, indulgent flavor makes it a beloved treat. Sizes: Medium, Large (+$0.50).",400,null,"from"],
+        ["Cappuccino (12Oz)","A classic espresso-based coffee drink made with a perfect balance of espresso, steamed milk, and milk foam.",530],
+        ["Iced Americano","A flavorful coffee drink made by diluting two shots of espresso with hot water. The result is a coffee that has the depth and richness of espresso but with a milder strength and smoother body, similar to our Drip Coffee. Sizes: Medium, Large (+$0.50).",430,null,"from"],
+        ["Hot Americano","A flavorful coffee drink made by diluting two shots of espresso with hot water. The result is a coffee that has the depth and richness of espresso but with a milder strength and smoother body, similar to our Drip Coffee. Sizes: Medium, Large (+$0.50).",430,null,"from"],
+      ] },
+      { name: "Cereal Collection", items: [
+        ["Lucky Charms Matcha","Made with oat milk, topped with Lucky Charms cream top and beloved marshmallow charms. Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Lucky Charms Iced Coffee","Our signature iced coffee topped with Lucky Charms cream and marshmallow charms. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Cinnamon Toast Crunch Matcha","Creamy matcha latte topped with cold foam blended with real Cinnamon Toast Crunch, finished with a crunchy cereal sprinkle. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Cinnamon Toast Crunch Iced Coffee","Creamy iced coffee topped with cold foam blended with real Cinnamon Toast Crunch, finished with a crunchy cereal sprinkle. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Honey Nut Cheerio Latte","Naturally sweet honey latte with hints of brown sugar, topped with complimentary vanilla sweet foam for a well rounded sip. Now on our permanent menu :) Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+      ] },
+      { name: "Gold Cream Series", items: [
+        ["Iced Crème Brûlée Latte","Thick caramel and vanilla to mimic rich crème brûlée sweetness. Made with Dairy. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Crème Brûlée Latte","Thick caramel and vanilla to mimic rich crème brûlée sweetness. Made with Dairy. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Iced Chocolate Banana Latte","Infused banana and dark chocolate, mixed breve style for rich, velvety smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Chocolate Banana Latte","Infused banana and dark chocolate, mixed breve style for rich, velvety smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Iced Macadamia Latte","Chocolate macadamia latte crafted breve style for rich, velvety & nutty smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Macadamia Latte","Chocolate macadamia latte crafted breve style for rich, velvety & nutty smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Latte/Mocha", items: [
+        ["Iced Caramel Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and caramel syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Caramel Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and caramel syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Latte","A smooth, creamy balance of espresso and milk which is served cold or hot, making it a popular choice for any season. Sizes: Medium, Large (+$1.00).",580,null,"from"],
+        ["Hot Latte","A smooth, creamy balance of espresso and milk which is served cold or hot, making it a popular choice for any season. Sizes: Medium, Large (+$1.00).",580,null,"from"],
+        ["Iced Vanilla Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and vanilla syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Vanilla Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and vanilla syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced HazelNut Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and hazelnut syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot HazelNut Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and hazelnut syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Chai Latte","A beautifully spiced, creamy beverage that blends the robust flavor of aromatic spices and velvety steamed or chilled milk. Our drink is known for its balance of bold, warm flavors and smooth, comforting texture. Sizes: Medium, Large (+$1.00).",635,null,"from"],
+        ["Hot Chai Latte","A beautifully spiced, creamy beverage that blends the robust flavor of aromatic spices and velvety steamed or chilled milk. Our drink is known for its balance of bold, warm flavors and smooth, comforting texture. Sizes: Medium, Large (+$1.00).",635,null,"from"],
+        ["Iced Dark Mocha","A dark mocha is an indulgent, rich coffee drink that combines the boldness of espresso, the smoothness of steamed milk, and the deep, bittersweet flavor of dark chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Dark Mocha","A dark mocha is an indulgent, rich coffee drink that combines the boldness of espresso, the smoothness of steamed milk, and the deep, bittersweet flavor of dark chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced White Mocha","A sweet, creamy coffee drink that combines espresso, velvety steamed milk, and the smooth, indulgent flavor of white chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot White Mocha","A sweet, creamy coffee drink that combines espresso, velvety steamed milk, and the smooth, indulgent flavor of white chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+      ] },
+      { name: "Ceremonial Specialty Matcha", items: [
+        ["Iced Matcha Latte","A smooth and soothing beverage that blends the rich, earthy flavor of matcha with the creaminess of steamed or chilled milk. (made with oat milk) Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Matcha Latte","A smooth and soothing beverage that blends the rich, earthy flavor of matcha with the creaminess of steamed or chilled milk. (made with oat milk) Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Oat Horchata Matcha","A delightful fusion of two beloved beverages—horchata, a creamy, cinnamon-infused oat milk rice drink, and matcha, the vibrant, earthy green tea powder. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Hot Oat Horchata Matcha","A delightful fusion of two beloved beverages—horchata, a creamy, cinnamon-infused oat milk rice drink, and matcha, the vibrant, earthy green tea powder. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Iced Cafe De Olla Matcha","A Café de Olla Matcha sweetened with house-made syrup. it's warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Hot Cafe De Olla Matcha","A Café de Olla Matcha sweetened with house-made syrup. it's warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Matcha-Pan Latte","Earthy matcha meets sweet, almondy mazapan. It creates a smooth, creamy latte with a subtly nutty, dessert-like finish. (made with oat milk) Made iced. (contains nuts) Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Iced Cookie Butter Matcha","our cookie butter matcha, made with ceremonial matcha & hints of biscoff. made with oat milk. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Iced Vanilla Matcha Chai","A deliciously unique and comforting beverage that brings together the rich, earthy flavors of matcha, the warming spices of chai, and the smooth sweetness of vanilla. A perfect balance of energizing green tea, aromatic chai spices, and a touch of vanilla's creamy sweetness. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Fresa Con Crema Matcha","Inspired by the traditional Mexican Treat Fresa Con Crema, which typically features strawberries and sweet cream, this modern twist lays on top of our Matcha to elevate the drink with a perfect balance of fruity sweetness and rich matcha flavor. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Vanilla Sweet Cream Matcha","Creamy oat milk matcha topped with vanilla sweet cream. Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Ube Matcha","Ube Matcha is a fusion of two of our vibrant and flavorful ingredients: ube and matcha. When combined, these ingredients create a visually striking and delicious treat with a unique flavor profile. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Tiramisu Matcha","Creamy tiramisu cold foam topped with earthy, vibrant matcha flavor. (topped with cacao powder) (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Pandan Cream Matcha","creamy pandan foam meets bold, earthy matcha for a sweet, aromatic, and ultra-smooth sip. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",775,null,"from"],
+      ] },
+      { name: "Refreshers", items: [
+        ["Strawberry Refresher","Strawberry infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Watermelon Cucumber Mint Refresher","Watermelon Cucumber infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Peach Mango Refresher","Peach Mango infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Hibiscus Berry Refresher","hibiscus Berry infused green tea. Comes standard with a light touch of sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+      ] },
+      { name: "Specialty Drinks", items: [
+        ["Iced Cookie Butter Latte","A creamy latte with rich cookie butter, topped with crunchy Biscoff crumbs for extra flavor. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Dulce De Leche","A balanced, dessert-inspired drink with a silky texture and a warm, comforting flavor. Ideal for those who love a sweet, caramelized twist on their classic latte, this drink is both indulgent and satisfying. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Dulce De Leche","A balanced, dessert-inspired drink with a silky texture and a warm, comforting flavor. Ideal for those who love a sweet, caramelized twist on their classic latte, this drink is both indulgent and satisfying. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Dirty Chai","A deliciously bold twist on the classic chai latte, blending the warmth of spiced chai with the rich, deep flavor of espresso. Sizes: Medium, Large (+$1.00).",700,null,"from"],
+        ["Hot Dirty Chai","A deliciously bold twist on the classic chai latte, blending the warmth of spiced chai with the rich, deep flavor of espresso. Sizes: Medium, Large (+$1.00).",700,null,"from"],
+        ["Iced Cafe De Olla Latte","A Café de Olla Latte made with house-made syrup. Its warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Cafe De Olla Latte","A Café de Olla Latte made with house-made syrup. Its warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Spanish Latte","A smooth and indulgent coffee drink that combines espresso, milk, and sweetened condensed milk. The addition of condensed milk gives the drink a rich, caramel-like sweetness, setting it apart from a classic latte. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Spanish Latte","A smooth and indulgent coffee drink that combines espresso, milk, and sweetened condensed milk. The addition of condensed milk gives the drink a rich, caramel-like sweetness, setting it apart from a classic latte. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Mexican Mocha","A flavorful, spicy twist on the traditional mocha, combining the boldness of espresso, the richness of chocolate, and the warmth of Mexican spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Mexican Mocha","A flavorful, spicy twist on the traditional mocha, combining the boldness of espresso, the richness of chocolate, and the warmth of Mexican spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Shaken Brown Sugar Espresso","A deliciously sweet and frothy coffee drink that combines the boldness of espresso with the warm, caramel-like flavor of real brown sugar. Made iced. Sizes: Medium, Large (+$1.00).",675,null,"from"],
+        ["Iced Flan Latte","A sweet, creamy coffee drink inspired by the rich flavors of traditional flan—a smooth, caramel custard dessert. Made iced. Sizes: Medium, Large (+$1.00).",690,null,"from"],
+        ["Iced Churro Latte","A deliciously sweet and spiced coffee drink inspired by the warm, cinnamon-sugar goodness of churros. Made iced. Sizes: Medium, Large (+$1.00).",690,null,"from"],
+        ["Vietnamese-Style Iced Coffee","A strong, sweet, and refreshing coffee drink that perfectly balances bold coffee flavors with creamy sweetness. Made iced. Sizes: Medium, Large (+$1.00).",630,null,"from"],
+        ["Thai Tea","a vibrant, orange-colored drink with a perfect balance of bold, spiced black tea and smooth sweetness. It’s a popular street drink in Thailand and a favorite worldwide for its exotic taste and refreshing qualities. Made iced. Sizes: Medium, Large (+$1.00).",650,null,"from"],
+        ["Iced Egg Coffee","A sweet, smooth, and creamy beverage with a bold coffee flavor and a rich, mousse-like texture, offering a delightful contrast between the bitter coffee and the sweet, creamy egg mixture. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Tiramisu Iced Coffee","A creamy, bold coffee with our signature tiramisu foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Vanilla Sweet Cream Iced Coffee","Creamy iced coffee topped with a delicious vanilla sweet cream. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Pandan Cream Iced Coffee","A creamy, bold coffee with our signature panda cream foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Cold Brew Collection", items: [
+        ["Oat Horchata Cold Brew","A smooth, creamy, and refreshing coffee drink that blends the boldness of cold brew coffee with the sweet, spiced flavors of traditional horchata. Made with oat milk, this dairy-free version brings a velvety texture to the drink. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Protein Coffee","A perfect combination of energizing cold brew coffee with a boost of protein (30g) to keep you fueled throughout the day. Made iced.",660],
+        ["Thai Tea Cold Brew","A refreshing and bold twist on the classic Thai Iced Tea, combining the deep, smooth flavor of cold brew coffee with the aromatic spices and creamy sweetness of traditional Thai tea. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Black Tie","A bold and decadent coffee drink that combines the rich, smooth flavor of cold brew coffee with the sweet, creamy indulgence of sweetened condensed milk & a hint of vanilla. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Mazapan Cold Brew","A delightful and unique coffee drink that combines the smooth, rich flavor of cold brew coffee with the sweet, nutty taste of mazapán, a traditional Mexican candy made from peanuts. Made with oat milk. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Cafe De Olla Cold Brew","A Café de Olla Cold Brew sweetened with house-made syrup. Finished with a splash of your choice. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+      ] },
+      { name: "Banana Collection", items: [
+        ["Banana Cream Matcha","Ceremonial iced matcha topped with real banana foam, offering a creamy, naturally sweet twist. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Banana Cream Iced Coffee","Iced coffee topped with creamy banana foam, made with real bananas for a smooth, flavorful twist. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Banana Cream Iced Chai","Iced chai with creamy banana foam made from real bananas, offering a sweet, spiced twist. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Juice/Smoothie", items: [
+        ["Orange Juice","Our natural orange juice is made locally. Sizes: Medium, Large (+$1.00).",550,null,"from"],
+        ["Berry Madness Smoothie","A mix of apple juice, blackberry, blueberry, & strawberry. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Mango Mania Smoothie","A mix of mango & apple juice. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Tropical Smoothie","A mix of papaya, pineapple, strawberry, & mango. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Orange Mania Smoothie","A mix of squeezed orange juice & pineapple. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Mangonada","A mix of chamoy & mango which is brought together for a delicious refreshing drink. Sizes: Medium, Large (+$1.00).",775,null,"from"],
+        ["Matcha Blast","A mix of squeezed orange juice, mango, & our ceremonial matcha. Sizes: Medium, Large (+$1.00).",800,null,"from"],
+      ] },
+      { name: "Bakery Made Daily", items: [
+        ["Chocolate Croissant","A delicious pastry that combines the flaky, buttery layers of a classic croissant with a rich, melty filling of dark chocolate.",395],
+        ["Almond Croissant","A rich, sweet almond paste filled pastry. Topped with sliced almonds and a light dusting of powdered sugar.",395],
+        ["Banana Nut Bread","A flavorful, moist bread that combines the natural sweetness of ripe bananas with the crunchy texture of chopped walnuts.",400],
+        ["Cinnamon Twist","A warm, flaky, and soft pastry that has a sweet, cinnamon filling swirled throughout.",395],
+        ["Glaze Doughnut","A buttery, fluffy, and perfectly sweet doughnut with no need for elaborate toppings.",250],
+        ["Chocolate Chip W/ Sea Salt Cookie","A combination of semi-sweet chocolate chips with the unexpected touch of flaky sea salt, creating a contrast that enhances the cookie's flavor.",295],
+      ] },
+      { name: "Breakfast", items: [
+        ["The Gold Combo","Your Choice of Bagel that includes: -Egg & Cheese -Bacon, Sausage, Turkey or Ham -Medium Regular Coffee or Tea *You can upgrade to any other drink*",1500],
+        ["Ciabatta Bacon, Egg & Spinach","A perfect combination of savory flavors, all packed into a fresh, chewy ciabatta roll. This sandwich brings together crispy bacon, eggs, our house sauce, and fresh spinach, creating a satisfying meal that can be enjoyed for breakfast, brunch, or any time you're craving a flavorful, filling sandwich.",1200],
+        ["Famous Egg & Cheese","A simple yet satisfying sandwich that combines the richness of eggs with the melty goodness of cheese, all nestled in a warm, chewy bagel of your choice.",1000],
+        ["Lox Bagel","A sandwich that combines the rich flavor of lox (smoked salmon) with the chewy texture of a freshly toasted bagel, along with creamy spreads and fresh toppings.",1400],
+        ["BLT Sandwich","a classic that perfectly balances the crispy, salty bacon, the crunchy freshness of lettuce, and the juicy, tangy sweetness of tomatoes tied with our sauce—all sandwiched between two slices of toasted bread.",1200],
+        ["Any Bagel W/ Spread","A delicious breakfast or snack option that combines the chewy texture of a freshly toasted bagel with the creamy, flavorful richness of your favorite spread.",600],
+        ["Veggie Bagel","A mix of fresh avocado, tomatoes & onions paired with a creamy or tangy spread of your choice. Our veggie bagel is customizable, so you can easily adjust the ingredients to fit your taste.",1150],
+        ["Avocado Toast","This combines the creamy richness of ripe avocado with the satisfying crunch of toasted wheat bread.",900],
+      ] },
+      { name: "Lunch", items: [
+        ["Ciabatta Ham & Swiss Melt","It features thinly sliced, savory ham paired with smooth swiss cheese & mayonaisse, all nestled between two slices of airy, rustic ciabatta bread.",900],
+        ["Berkeley Turkey Sandwich","It consists of slices of tender, apple-wood cooked turkey breast placed between two slices of bread. It's accompanied by swiss cheese, lettuce, tomato, onions & our house sauce.",1300],
+        ["Pesto Chicken Panini","A flavorful and indulgent sandwich made with seasoned grilled tender, juicy chicken breast, and pairing it with a rich, aromatic pesto sauce & smooth swiss cheese.",1500],
+        ["Chipotle Chicken Panini","A flavorful and indulgent sandwich made with seasoned grilled tender, juicy chicken breast, and pairing it with a rich, spicy chipotle sauce & smooth swiss cheese.",1500],
+        ["Super Veggie Sandwich","A fresh, vibrant medley of plant-based ingredients, designed to be both nourishing and delicious. Your choice of hummus paired with ripe avocado, fresh cucumber, lettuce, tomato & onions.",1300],
+        ["Club Sandwich","Made with three slices of bread—toasted whole wheat—the sandwich is stacked with layers of tender, sliced turkey & ham, crisp bacon, fresh lettuce, juicy tomato, savory cheddar cheese and a generous spread of our house sauce.",1500],
+      ] },
+      { name: "Beverages", items: [
+        ["Smart Water","",300],
+        ["Sparkling Water","",300],
+        ["Celsius","",300],
+        ["Redbull","",250],
+        ["Fairlife Protein Shake","",300],
+        ["Coke","",250],
+        ["Diet Coke","",250],
+        ["Bai","",300],
+        ["Poppi","",250],
+        ["Golden Oolong Tea","",250],
+        ["Bucked Up (Energy)","",300],
+        ["Body Armor Lyte","",300],
+      ] },
+    ],
+    siteNote: "Prices are from this shop's own Snackpass ordering page; their website lists the menu without prices.",
+  },
+
+  /*
+     Gold Bean — gathered 2026-09-23 from own
+     they are: Cafe
+     flag: Sources: gldbeancafe.com (home, /sippin Drinks, /yummy Food, /story, /contact) and this location's Snackpass ordering page, all read 2026-09-23.
+     flag: Ordering page: https://order.snackpass.co/goldbeanhearst (Snackpass names it 'Gold Bean Cafe (Hearst Ave)').
+     flag: Their website has no ordering link, no phone, no prices and no hours (it says 'Check Google for our hours. Locations may differ!'); its Drinks/Food pages list items without prices.
+     flag: Snackpass link: not linked anywhere on gldbeancafe.com (pages, raw HTML, sitemap), and Instagram showed a login wall (not bypassed), so the full 'order.snackpass.co/Gold-B...' bio link could not be read. The store pages were found through Snackpass's own public store lookup (no listing site) and matched by name + street address; URLs given are Snackpass's canonical store routes.
+     flag: Menus differ by location on Snackpass (different item sets; e.g., Glaze Doughnut $2.50 at Durant vs $2.00 at Hearst), so items are listed per location.
+     flag: Drinks with a Size choice list the Medium price (label 'from'); Large costs extra as shown in desc. Other add-on/modifier prices ignored.
+     flag: No alcohol on any Gold Bean menu; nothing left out for alcohol.
+     flag: name_exact 'Gold Bean' is the site title/logo; their story page says 'Gold Bean Cafe'.
+     flag: one_line is the first sentence of the homepage 'EXPERIENCE GOLD BEAN' blurb (the site has no meta description or tagline).
+     flag: Status: open. Listed under LOCATIONS on gldbeancafe.com; the Snackpass page shows it Open and lists it in the Gold Bean Cafe location chooser (Durant Ave, Hearst Ave, Pelton Plaza).
+     flag: Hours are from the 'Hours' panel on their Snackpass page, which shows: Monday 8:00 AM - 6:00 PM; Tuesday 8:00 AM - 6:00 PM; Wednesday 8:00 AM - 6:00 PM; Thursday 8:00 AM - 6:00 PM; Friday 8:00 AM - 6:00 PM; Saturday 8:55 AM - 6:00 PM; Sunday 9:55 AM - 6:00 PM. Their website gives no hours, so no own-source conflict.
+     flag: Phone is from the store record the Snackpass page loads (not printed on the page or the website); Durant, Hearst and San Leandro all use the same number.
+     flag: Address written as on gldbeancafe.com; the Snackpass page writes it '2503 Hearst Ave, Berkeley, CA 94709'.
+     flag: Left out: the 'Popular' section (duplicates of items listed in their own sections) and promo/deal tiles; Gift Cards section (Digital Gift Card; Physical Gift Card — not menu items; the Digital Gift Card shows no price).
+     flag: Menu items with no price left out: 0.
+     flag: 12 item(s) showed 'Sold Out' at capture time and are kept: Caramel Apple Pie Matcha; Iced Egg Coffee; Tiramisu Iced Coffee; Iced Oat Horchata Matcha; Hot Oat Horchata Matcha; Tiramisu Matcha; Oat Horchata Cold Brew; Mango Mania Smoothie; Mangonada; Matcha Blast; Almond Croissant; Glaze Doughnut.
+     flag: On review: no phone. The only number is in the store record the ordering page loads, printed nowhere, so it is not put on a public page.
+  */
+  'gold-bean-hearst': {
+    address: "2503 Hearst Avenue, Berkeley CA 94709",
+    email: "cafe@gldbeancafe.com",
+    hours: "Mon-Fri 8am-6pm; Sat 8:55am-6pm; Sun 9:55am-6pm",
+    cuisine: "Cafe",
+    sections: [
+      { name: "Fall Menu", items: [
+        ["Iced Pumpkin Spice Latte","Warm pumpkin, bold espresso, milk, and cozy fall spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Pumpkin Spice Latte","Warm pumpkin, bold espresso, milk, and cozy fall spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Caramel Apple Pie Matcha","Ceremonial iced matcha topped with caramel coffee foam. Sweetened by our Fresh Apple Filling. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",800,null,"from"],
+        ["Iced Pumpkin Blondie","Warm pumpkin, bold espresso, white chocolate, and cozy fall spices. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Pumpkin Blondie","Warm pumpkin, bold espresso, white chocolate, and cozy fall spices. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Pumpkin Cream Iced Coffee","Iced coffee topped with creamy pumpkin spice foam. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Pumpkin Cream Iced Chai","Iced chai with creamy pumpkin spice foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Pumpkin Cream Matcha","Ceremonial iced matcha topped with pumpkin spice foam, offering a creamy, naturally sweet twist. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+      ] },
+      { name: "Classics", items: [
+        ["Single Shot","",175],
+        ["Double Espresso","Our well-prepared double espresso has a deep, bold taste with a full-bodied texture, accompanied by a layer of golden crema—a frothy, aromatic foam that sits atop the espresso shot.",350],
+        ["Drip Coffee","Our process extracts flavors from the coffee grounds, creating a clean, smooth, and well-balanced cup of coffee. Sizes: Medium, Large (+$0.50).",385,null,"from"],
+        ["Cortado","A smooth, balanced coffee drink that consists of equal parts espresso and steamed milk.",375],
+        ["Cold Brew","A smooth, refreshing coffee made by steeping coarsely ground coffee beans in cold water for a full 24 hours. The long steeping time allows the coffee to develop rich, nuanced flavors, with notes of chocolate, caramel, and nuttiness. Made iced. Sizes: Medium, Large (+$1.00).",560,null,"from"],
+        ["Cafe Au Lait","A French coffee drink made with equal parts of brewed coffee and steamed milk. Sizes: Medium, Large (+$0.50).",450,null,"from"],
+        ["Tea","Our steeping process extracts the flavors, antioxidants, and essential oils from the tea bag, creating a flavorful and fragrant hot drink. Sizes: Medium, Large (+$1.00).",350,null,"from"],
+        ["Hot Chocolate","A comforting drink made from chocolate, mixed with your choice of milk. The rich, velvety texture and deep, indulgent flavor makes it a beloved treat. Sizes: Medium, Large (+$0.50).",400,null,"from"],
+        ["Cappuccino (12Oz)","A classic espresso-based coffee drink made with a perfect balance of espresso, steamed milk, and milk foam.",530],
+        ["Iced Americano","A flavorful coffee drink made by diluting two shots of espresso with hot water. The result is a coffee that has the depth and richness of espresso but with a milder strength and smoother body, similar to our Drip Coffee. Sizes: Medium, Large (+$0.50).",430,null,"from"],
+        ["Hot Americano","A flavorful coffee drink made by diluting two shots of espresso with hot water. The result is a coffee that has the depth and richness of espresso but with a milder strength and smoother body, similar to our Drip Coffee. Sizes: Medium, Large (+$0.50).",430,null,"from"],
+      ] },
+      { name: "Latte/Mocha", items: [
+        ["Iced Latte","A smooth, creamy balance of espresso and milk which is served cold or hot, making it a popular choice for any season. Sizes: Medium, Large (+$1.00).",580,null,"from"],
+        ["Hot Latte","A smooth, creamy balance of espresso and milk which is served cold or hot, making it a popular choice for any season. Sizes: Medium, Large (+$1.00).",580,null,"from"],
+        ["Iced HazelNut Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and hazelnut syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot HazelNut Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and hazelnut syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Caramel Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and caramel syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Caramel Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and caramel syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Vanilla Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and vanilla syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Vanilla Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and vanilla syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Chai Latte","A beautifully spiced, creamy beverage that blends the robust flavor of aromatic spices and velvety steamed or chilled milk. Our drink is known for its balance of bold, warm flavors and smooth, comforting texture. Sizes: Medium, Large (+$1.00).",635,null,"from"],
+        ["Hot Chai Latte","A beautifully spiced, creamy beverage that blends the robust flavor of aromatic spices and velvety steamed or chilled milk. Our drink is known for its balance of bold, warm flavors and smooth, comforting texture. Sizes: Medium, Large (+$1.00).",635,null,"from"],
+        ["Iced Dark Mocha","A dark mocha is an indulgent, rich coffee drink that combines the boldness of espresso, the smoothness of steamed milk, and the deep, bittersweet flavor of dark chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Dark Mocha","A dark mocha is an indulgent, rich coffee drink that combines the boldness of espresso, the smoothness of steamed milk, and the deep, bittersweet flavor of dark chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced White Mocha","A sweet, creamy coffee drink that combines espresso, velvety steamed milk, and the smooth, indulgent flavor of white chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot White Mocha","A sweet, creamy coffee drink that combines espresso, velvety steamed milk, and the smooth, indulgent flavor of white chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+      ] },
+      { name: "Refreshers", items: [
+        ["Watermelon Cucumber Mint Refresher","Our infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Strawberry Refresher","Strawberry infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Peach Mango Refresher","Peach Mango infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Hibiscus Berry Refresher","Hibiscus Berry infused green tea. Comes standard with light sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+      ] },
+      { name: "Gold Cream Series", items: [
+        ["Iced Crème Brûlée Latte","Thick caramel and vanilla to mimic rich crème brûlée sweetness. Made with Dairy. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Crème Brûlée Latte","Thick caramel and vanilla to mimic rich crème brûlée sweetness. Made with Dairy. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Iced Chocolate Banana Latte","Infused banana and dark chocolate, mixed breve style for rich, velvety smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Chocolate Banana Latte","Infused banana and dark chocolate, mixed breve style for rich, velvety smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Iced Macadamia Latte","Chocolate macadamia latte crafted breve style for rich, velvety & nutty smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Macadamia Latte","Chocolate macadamia latte crafted breve style for rich, velvety & nutty smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Cereal Collection", items: [
+        ["Lucky Charms Matcha","Made with oat milk, topped with Lucky Charms cream top and beloved marshmallow charms. Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Lucky Charms Iced Coffee","Our signature iced coffee topped with Lucky Charms cream and marshmallow charms. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Cinnamon Toast Crunch Iced Coffee","Creamy iced coffee topped with cold foam blended with real Cinnamon Toast Crunch, finished with a crunchy cereal sprinkle. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Cinnamon Toast Crunch Matcha","Creamy matcha latte topped with cold foam blended with real Cinnamon Toast Crunch, finished with a crunchy cereal sprinkle. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Honey Nut Cheerio Latte","Naturally sweet honey latte with hints of brown sugar, topped with complimentary vanilla sweet foam for a well rounded sip. Now on our permanent menu :) Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+      ] },
+      { name: "Banana Collection", items: [
+        ["Banana Cream Iced Coffee","Iced coffee topped with creamy banana foam, made with real bananas for a smooth, flavorful twist. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Banana Cream Iced Chai","Iced chai with creamy banana foam made from real bananas, offering a sweet, spiced twist. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Banana Cream Matcha","Ceremonial iced matcha topped with real banana foam, offering a creamy, naturally sweet twist. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+      ] },
+      { name: "Specialty Drinks", items: [
+        ["Iced Dulce De Leche","A balanced, dessert-inspired drink with a silky texture and a warm, comforting flavor. Ideal for those who love a sweet, caramelized twist on their classic latte, this drink is both indulgent and satisfying. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Dulce De Leche","A balanced, dessert-inspired drink with a silky texture and a warm, comforting flavor. Ideal for those who love a sweet, caramelized twist on their classic latte, this drink is both indulgent and satisfying. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Dirty Chai","A deliciously bold twist on the classic chai latte, blending the warmth of spiced chai with the rich, deep flavor of espresso. Sizes: Medium, Large (+$1.00).",700,null,"from"],
+        ["Hot Dirty Chai","A deliciously bold twist on the classic chai latte, blending the warmth of spiced chai with the rich, deep flavor of espresso. Sizes: Medium, Large (+$1.00).",700,null,"from"],
+        ["Iced Spanish Latte","A smooth and indulgent coffee drink that combines espresso, milk, and sweetened condensed milk. The addition of condensed milk gives the drink a rich, caramel-like sweetness, setting it apart from a classic latte. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Spanish Latte","A smooth and indulgent coffee drink that combines espresso, milk, and sweetened condensed milk. The addition of condensed milk gives the drink a rich, caramel-like sweetness, setting it apart from a classic latte. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Cafe De Olla Latte","A Café de Olla Latte made with house-made syrup. Its warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Cafe De Olla Latte","A Café de Olla Latte made with house-made syrup. Its warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Vietnamese-Style Iced Coffee","A strong, sweet, and refreshing coffee drink that perfectly balances bold coffee flavors with creamy sweetness. Made iced. Sizes: Medium, Large (+$1.00).",630,null,"from"],
+        ["Iced Shaken Brown Sugar Espresso","A deliciously sweet and frothy coffee drink that combines the boldness of espresso with the warm, caramel-like flavor of real brown sugar. Made iced. Sizes: Medium, Large (+$1.00).",675,null,"from"],
+        ["Iced Flan Latte","A sweet, creamy coffee drink inspired by the rich flavors of traditional flan—a smooth, caramel custard dessert. Made iced. Sizes: Medium, Large (+$1.00).",690,null,"from"],
+        ["Iced Churro Latte","A deliciously sweet and spiced coffee drink inspired by the warm, cinnamon-sugar goodness of churros. Made iced. Sizes: Medium, Large (+$1.00).",690,null,"from"],
+        ["Thai Tea","a vibrant, orange-colored drink with a perfect balance of bold, spiced black tea and smooth sweetness. It’s a popular street drink in Thailand and a favorite worldwide for its exotic taste and refreshing qualities. Made iced. Sizes: Medium, Large (+$1.00).",650,null,"from"],
+        ["Iced Cookie Butter Latte","A creamy latte with rich cookie butter, topped with crunchy Biscoff crumbs for extra flavor. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Egg Coffee","A sweet, smooth, and creamy beverage with a bold coffee flavor and a rich, mousse-like texture, offering a delightful contrast between the bitter coffee and the sweet, creamy egg mixture. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Tiramisu Iced Coffee","A creamy, bold coffee with our signature tiramisu foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Vanilla Sweet Cream Iced Coffee","Creamy iced coffee topped with a delicious vanilla sweet cream. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Pandan Cream Iced Coffee","A creamy, bold coffee with our signature panda cream foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Ceremonial Specialty Matcha", items: [
+        ["Iced Matcha Latte","A smooth and soothing beverage that blends the rich, earthy flavor of matcha with the creaminess of steamed or chilled milk. (made with oat milk) Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Matcha Latte","A smooth and soothing beverage that blends the rich, earthy flavor of matcha with the creaminess of steamed or chilled milk. (made with oat milk) Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Oat Horchata Matcha","A delightful fusion of two beloved beverages—horchata, a creamy, cinnamon-infused oat milk rice drink, and matcha, the vibrant, earthy green tea powder. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Hot Oat Horchata Matcha","A delightful fusion of two beloved beverages—horchata, a creamy, cinnamon-infused oat milk rice drink, and matcha, the vibrant, earthy green tea powder. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Iced Cafe De Olla Matcha","A Café de Olla Matcha sweetened with house-made syrup. it's warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Hot Cafe De Olla Matcha","A Café de Olla Matcha sweetened with house-made syrup. it's warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Fresa Con Crema Matcha","Inspired by the traditional Mexican Treat Fresa Con Crema, which typically features strawberries and sweet cream, this modern twist lays on top of our Matcha to elevate the drink with a perfect balance of fruity sweetness and rich matcha flavor. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Iced Cookie Butter Matcha","our cookie butter matcha, made with ceremonial matcha & hints of biscoff. made with oat milk. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Matcha-Pan Latte","Earthy matcha meets sweet, almondy mazapan. It creates a smooth, creamy latte with a subtly nutty, dessert-like finish. (made with oat milk) Made iced. (contains nuts) Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Iced Vanilla Matcha Chai","A deliciously unique and comforting beverage that brings together the rich, earthy flavors of matcha, the warming spices of chai, and the smooth sweetness of vanilla. A perfect balance of energizing green tea, aromatic chai spices, and a touch of vanilla's creamy sweetness. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Pandan Cream Matcha","creamy pandan foam meets bold, earthy matcha for a sweet, aromatic, and ultra-smooth sip. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",775,null,"from"],
+        ["Vanilla Sweet Cream Matcha","Creamy oat milk matcha topped with vanilla sweet cream. Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Ube Matcha","Ube Matcha is a fusion of two of our vibrant and flavorful ingredients: ube and matcha. When combined, these ingredients create a visually striking and delicious treat with a unique flavor profile. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Tiramisu Matcha","Creamy tiramisu cold foam topped with earthy, vibrant matcha flavor. (topped with cacao powder) (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+      ] },
+      { name: "Cold Brew Collection", items: [
+        ["Oat Horchata Cold Brew","A smooth, creamy, and refreshing coffee drink that blends the boldness of cold brew coffee with the sweet, spiced flavors of traditional horchata. Made with oat milk, this dairy-free version brings a velvety texture to the drink. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Protein Coffee","A perfect combination of energizing cold brew coffee with a boost of protein (30g) to keep you fueled throughout the day. Made iced.",660],
+        ["Mazapan Cold Brew","A delightful and unique coffee drink that combines the smooth, rich flavor of cold brew coffee with the sweet, nutty taste of mazapán, a traditional Mexican candy made from peanuts. Made with oat milk. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Thai Tea Cold Brew","A refreshing and bold twist on the classic Thai Iced Tea, combining the deep, smooth flavor of cold brew coffee with the aromatic spices and creamy sweetness of traditional Thai tea. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Black Tie","A bold and decadent coffee drink that combines the rich, smooth flavor of cold brew coffee with the sweet, creamy indulgence of sweetened condensed milk & a hint of vanilla. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Cafe De Olla Cold Brew","A Café de Olla Cold Brew sweetened with house-made syrup. Finished with a splash of your choice. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+      ] },
+      { name: "Juice/Smoothie", items: [
+        ["Orange Juice","Our natural orange juice is made locally. Sizes: Medium, Large (+$1.00).",550,null,"from"],
+        ["Berry Madness Smoothie","A mix of apple juice, blackberry, blueberry, & strawberry. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Orange Mania Smoothie","A mix of squeezed orange juice & pineapple. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Tropical Smoothie","A mix of papaya, pineapple, strawberry, & mango. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Mango Mania Smoothie","A mix of mango & apple juice. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Mangonada","A mix of chamoy & mango which is brought together for a delicious refreshing drink. Sizes: Medium, Large (+$1.00).",775,null,"from"],
+        ["Matcha Blast","A mix of squeezed orange juice, mango, & our ceremonial matcha. Sizes: Medium, Large (+$1.00).",800,null,"from"],
+      ] },
+      { name: "Bakery Made Daily", items: [
+        ["Chocolate Croissant","A delicious pastry that combines the flaky, buttery layers of a classic croissant with a rich, melty filling of dark chocolate.",395],
+        ["Almond Croissant","A rich, sweet almond paste filled pastry. Topped with sliced almonds and a light dusting of powdered sugar.",395],
+        ["Chocolate Chip W/ Sea Salt Cookie","A combination of semi-sweet chocolate chips with the unexpected touch of flaky sea salt, creating a contrast that enhances the cookie's flavor.",295],
+        ["Glaze Doughnut","A buttery, fluffy, and perfectly sweet doughnut with no need for elaborate toppings.",200],
+      ] },
+      { name: "Breakfast", items: [
+        ["Lox Bagel","A sandwich that combines the rich flavor of lox (smoked salmon) with the chewy texture of a freshly toasted bagel, along with creamy spreads and fresh toppings.",1400],
+        ["BLT Sandwich","a classic that perfectly balances the crispy, salty bacon, the crunchy freshness of lettuce, and the juicy, tangy sweetness of tomatoes tied with our sauce—all sandwiched between two slices of toasted bread.",1200],
+        ["Any Bagel W/ Spread","A delicious breakfast or snack option that combines the chewy texture of a freshly toasted bagel with the creamy, flavorful richness of your favorite spread.",600],
+        ["Veggie Bagel","A mix of fresh avocado, tomatoes & onions paired with a creamy or tangy spread of your choice. Our veggie bagel is customizable, so you can easily adjust the ingredients to fit your taste.",1150],
+        ["Avocado Toast","This combines the creamy richness of ripe avocado with the satisfying crunch of toasted wheat bread.",900],
+        ["Famous Egg & Cheese","A simple yet satisfying sandwich that combines the richness of eggs with the melty goodness of cheese, all nestled in a warm, chewy bagel of your choice.",1000],
+        ["The Gold Combo","Your Choice of Bagel that includes: -Egg & Cheese -Bacon, Sausage, Turkey or Ham -Medium Regular Coffee or Tea *You can upgrade to any other drink*",1500],
+        ["Ciabatta Bacon, Egg & Spinach","A perfect combination of savory flavors, all packed into a fresh, chewy ciabatta roll. This sandwich brings together crispy bacon, eggs, our house sauce, and fresh spinach, creating a satisfying meal that can be enjoyed for breakfast, brunch, or any time you're craving a flavorful, filling sandwich.",1200],
+      ] },
+      { name: "Lunch", items: [
+        ["Ciabatta Ham & Swiss Melt","It features thinly sliced, savory ham paired with smooth swiss cheese & mayonaisse, all nestled between two slices of airy, rustic ciabatta bread.",900],
+        ["Berkeley Turkey Sandwich","It consists of slices of tender, apple-wood cooked turkey breast placed between two slices of bread. It's accompanied by swiss cheese, lettuce, tomato, onions & our house sauce.",1300],
+        ["Pesto Chicken Panini","A flavorful and indulgent sandwich made with seasoned grilled tender, juicy chicken breast, and pairing it with a rich, aromatic pesto sauce & smooth swiss cheese.",1500],
+        ["Chipotle Chicken Panini","A flavorful and indulgent sandwich made with seasoned grilled tender, juicy chicken breast, and pairing it with a rich, spicy chipotle sauce & smooth swiss cheese.",1500],
+        ["Super Veggie Sandwich","A fresh, vibrant medley of plant-based ingredients, designed to be both nourishing and delicious. Your choice of hummus paired with ripe avocado, fresh cucumber, lettuce, tomato & onions.",1300],
+        ["Club Sandwich","Made with three slices of bread—toasted whole wheat—the sandwich is stacked with layers of tender, sliced turkey & ham, crisp bacon, fresh lettuce, juicy tomato, savory cheddar cheese and a generous spread of our house sauce.",1500],
+      ] },
+      { name: "Beverages", items: [
+        ["Smart Water","",300],
+        ["Sparkling Water","",300],
+        ["Celsius","",300],
+        ["Redbull","",250],
+        ["Fairlife Protein Shake","",300],
+        ["Coke","",250],
+        ["Diet Coke","",250],
+      ] },
+    ],
+    siteNote: "Prices are from this shop's own Snackpass ordering page; their website lists the menu without prices.",
+  },
+
+  /*
+     Gold Bean — gathered 2026-09-23 from own
+     they are: Coffee shop, opening soon
+     flag: Sources: gldbeancafe.com (home, /sippin Drinks, /yummy Food, /story, /contact) and this location's Snackpass ordering page, all read 2026-09-23.
+     flag: Ordering page: https://order.snackpass.co/goldbeanpleasanton (Snackpass names it 'Gold Bean Cafe (Main Street)').
+     flag: Their website has no ordering link, no phone, no prices and no hours (it says 'Check Google for our hours. Locations may differ!'); its Drinks/Food pages list items without prices.
+     flag: Snackpass link: not linked anywhere on gldbeancafe.com (pages, raw HTML, sitemap), and Instagram showed a login wall (not bypassed), so the full 'order.snackpass.co/Gold-B...' bio link could not be read. The store pages were found through Snackpass's own public store lookup (no listing site) and matched by name + street address; URLs given are Snackpass's canonical store routes.
+     flag: Menus differ by location on Snackpass (different item sets; e.g., Glaze Doughnut $2.50 at Durant vs $2.00 at Hearst), so items are listed per location.
+     flag: Drinks with a Size choice list the Medium price (label 'from'); Large costs extra as shown in desc. Other add-on/modifier prices ignored.
+     flag: No alcohol on any Gold Bean menu; nothing left out for alcohol.
+     flag: name_exact 'Gold Bean' is the site title/logo; their story page says 'Gold Bean Cafe'.
+     flag: one_line is the first sentence of the homepage 'EXPERIENCE GOLD BEAN' blurb (the site has no meta description or tagline).
+     flag: Status: COMING SOON per their Instagram bio (given in the brief); NOT listed on gldbeancafe.com (the site lists only Durant, Hearst and San Leandro). CONFLICT: its Snackpass page 'Gold Bean Cafe (Main Street)' shows 'Open, Until 6:00PM' with pickup ordering (ASAP 10-15 mins), but it is not in the Gold Bean Cafe chain/location chooser on Snackpass. Treat as coming soon until confirmed.
+     flag: hours null: the Snackpass page shows Mon-Wed 7am-6pm; Thu 7am-6:20pm; Fri 7am-6pm; Sat-Sun 8am-6pm (Monday 7:00 AM - 6:00 PM; Tuesday 7:00 AM - 6:00 PM; Wednesday 7:00 AM - 6:00 PM; Thursday 7:00 AM - 6:20 PM; Friday 7:00 AM - 6:00 PM; Saturday 8:00 AM - 6:00 PM; Sunday 8:00 AM - 6:00 PM), but the location is marked COMING SOON in their own Instagram bio, so opening hours are unconfirmed.
+     flag: Address from the Snackpass page (not on gldbeancafe.com); Instagram bio writes it '440 Main Street, Pleasanton'.
+     flag: phone null: nothing printed on the Snackpass page or the website; the store record the Snackpass page loads has (510) 316-2751, a different number from the other three locations — not confirmed.
+     flag: Items are from the Pleasanton Snackpass page; prices shown there match Durant's for the items both have.
+     flag: Left out: the 'Popular' section (duplicates of items listed in their own sections) and promo/deal tiles.
+     flag: Menu items with no price left out: 0.
+     flag: On review: no phone. The only number is in the store record the ordering page loads, printed nowhere, so it is not put on a public page.
+     flag: On review: opening soon (their bio, and Glenn: "Actually, the fourth one coming soon"), so neither hours nor the 123-item menu its ordering page already shows are carried until it opens.
+  */
+  'gold-bean-pleasanton': {
+    address: "440 Main St, Pleasanton, CA 94566",
+    email: "cafe@gldbeancafe.com",
+    cuisine: "Coffee shop, opening soon",
+    contactOnly: "Opening soon at 440 Main Street; their other shops are on Durant Ave and Hearst Ave in Berkeley, and in San Leandro.",
+  },
+
+  /*
+     Gold Bean — gathered 2026-09-23 from own
+     they are: Cafe
+     flag: Sources: gldbeancafe.com (home, /sippin Drinks, /yummy Food, /story, /contact) and this location's Snackpass ordering page, all read 2026-09-23.
+     flag: Ordering page: https://order.snackpass.co/goldbeansl (Snackpass names it 'Gold Bean Cafe (Pelton Plaza)').
+     flag: Their website has no ordering link, no phone, no prices and no hours (it says 'Check Google for our hours. Locations may differ!'); its Drinks/Food pages list items without prices.
+     flag: Snackpass link: not linked anywhere on gldbeancafe.com (pages, raw HTML, sitemap), and Instagram showed a login wall (not bypassed), so the full 'order.snackpass.co/Gold-B...' bio link could not be read. The store pages were found through Snackpass's own public store lookup (no listing site) and matched by name + street address; URLs given are Snackpass's canonical store routes.
+     flag: Menus differ by location on Snackpass (different item sets; e.g., Glaze Doughnut $2.50 at Durant vs $2.00 at Hearst), so items are listed per location.
+     flag: Drinks with a Size choice list the Medium price (label 'from'); Large costs extra as shown in desc. Other add-on/modifier prices ignored.
+     flag: No alcohol on any Gold Bean menu; nothing left out for alcohol.
+     flag: name_exact 'Gold Bean' is the site title/logo; their story page says 'Gold Bean Cafe'.
+     flag: one_line is the first sentence of the homepage 'EXPERIENCE GOLD BEAN' blurb (the site has no meta description or tagline).
+     flag: Status: open. Listed under LOCATIONS on gldbeancafe.com; the Snackpass page shows it Open and lists it in the Gold Bean Cafe location chooser (Durant Ave, Hearst Ave, Pelton Plaza).
+     flag: Hours are from the 'Hours' panel on their Snackpass page, which shows: Monday 7:00 AM - 7:00 PM; Tuesday 7:00 AM - 7:00 PM; Wednesday 7:00 AM - 7:00 PM; Thursday 7:00 AM - 7:00 PM; Friday 7:00 AM - 7:00 PM; Saturday 8:00 AM - 7:00 PM; Sunday 8:00 AM - 7:00 PM. Their website gives no hours, so no own-source conflict.
+     flag: Phone is from the store record the Snackpass page loads (not printed on the page or the website); Durant, Hearst and San Leandro all use the same number.
+     flag: gldbeancafe.com banner: 'San Leandro Location Now Open!'.
+     flag: Address written as on gldbeancafe.com; the Snackpass page writes it '138 Pelton Center Way, San Leandro, CA 94577'.
+     flag: Left out: the 'Popular' section (duplicates of items listed in their own sections) and promo/deal tiles; Gift Cards section (Digital Gift Card — not menu items; the Digital Gift Card shows no price).
+     flag: Menu items with no price left out: 0.
+     flag: 2 item(s) showed 'Sold Out' at capture time and are kept: Iced Egg Coffee; Maple Scone.
+     flag: On review: no phone. The only number is in the store record the ordering page loads, printed nowhere, so it is not put on a public page.
+  */
+  'gold-bean-san-leandro': {
+    address: "138 Pelton Center Way, San Leandro CA 94577",
+    email: "cafe@gldbeancafe.com",
+    hours: "Mon-Fri 7am-7pm; Sat-Sun 8am-7pm",
+    cuisine: "Cafe",
+    sections: [
+      { name: "Fall Menu", items: [
+        ["Iced Pumpkin Spice Latte","Warm pumpkin, bold espresso, milk, and cozy fall spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Pumpkin Spice Latte","Warm pumpkin, bold espresso, milk, and cozy fall spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Caramel Apple Pie Matcha","Ceremonial iced matcha topped with caramel coffee foam. Sweetened by our Fresh Apple Filling. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",800,null,"from"],
+        ["Iced Pumpkin Blondie","Warm pumpkin, bold espresso, white chocolate, and cozy fall spices. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Pumpkin Blondie","Warm pumpkin, bold espresso, white chocolate, and cozy fall spices. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Pumpkin Cream Iced Coffee","Iced coffee topped with creamy pumpkin spice foam. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Pumpkin Cream Iced Chai","Iced chai with creamy pumpkin spice foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Pumpkin Cream Matcha","Ceremonial iced matcha topped with pumpkin spice foam, offering a creamy, naturally sweet twist. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+      ] },
+      { name: "Gold Cream Series", items: [
+        ["Iced Crème Brûlée Latte","Thick caramel and vanilla to mimic rich crème brûlée sweetness. Made with Dairy. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Crème Brûlée Latte","Thick caramel and vanilla to mimic rich crème brûlée sweetness. Made with Dairy. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Iced Chocolate Banana Latte","Infused banana and dark chocolate, mixed breve style for rich, velvety smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Chocolate Banana Latte","Infused banana and dark chocolate, mixed breve style for rich, velvety smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Iced Macadamia Latte","Chocolate macadamia latte crafted breve style for rich, velvety & nutty smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Hot Macadamia Latte","Chocolate macadamia latte crafted breve style for rich, velvety & nutty smoothness. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Cereal Collection", items: [
+        ["Cinnamon Toast Crunch Matcha","Creamy matcha latte topped with cold foam blended with real Cinnamon Toast Crunch, finished with a crunchy cereal sprinkle. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Cinnamon Toast Crunch Iced Coffee","Creamy iced coffee topped with cold foam blended with real Cinnamon Toast Crunch, finished with a crunchy cereal sprinkle. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Lucky Charms Matcha","Made with oat milk, topped with Lucky Charms cream top and beloved marshmallow charms. Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Lucky Charms Iced Coffee","Our signature iced coffee topped with Lucky Charms cream and marshmallow charms. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Honey Nut Cheerio Latte","Naturally sweet honey latte with hints of brown sugar, topped with complimentary vanilla sweet foam for a well rounded sip. Now on our permanent menu :) Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+      ] },
+      { name: "Banana Collection", items: [
+        ["Banana Cream Iced Coffee","Iced coffee topped with creamy banana foam, made with real bananas for a smooth, flavorful twist. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Banana Cream Iced Chai","Iced chai with creamy banana foam made from real bananas, offering a sweet, spiced twist. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Banana Cream Matcha","Ceremonial iced matcha topped with real banana foam, offering a creamy, naturally sweet twist. (Matcha is made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+      ] },
+      { name: "Latte/Mocha", items: [
+        ["Iced Latte","A smooth, creamy balance of espresso and milk which is served cold or hot, making it a popular choice for any season. Sizes: Medium, Large (+$1.00).",580,null,"from"],
+        ["Hot Latte","A smooth, creamy balance of espresso and milk which is served cold or hot, making it a popular choice for any season. Sizes: Medium, Large (+$1.00).",580,null,"from"],
+        ["Iced Vanilla Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and vanilla syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Vanilla Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and vanilla syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Caramel Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and caramel syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Caramel Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and caramel syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced HazelNut Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and hazelnut syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot HazelNut Latte","A popular variation of the classic latte, made with two shots of espresso, steamed milk, and hazelnut syrup for added sweetness and flavor. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Chai Latte","A beautifully spiced, creamy beverage that blends the robust flavor of aromatic spices and velvety steamed or chilled milk. Our drink is known for its balance of bold, warm flavors and smooth, comforting texture. Sizes: Medium, Large (+$1.00).",635,null,"from"],
+        ["Hot Chai Latte","A beautifully spiced, creamy beverage that blends the robust flavor of aromatic spices and velvety steamed or chilled milk. Our drink is known for its balance of bold, warm flavors and smooth, comforting texture. Sizes: Medium, Large (+$1.00).",635,null,"from"],
+        ["Iced Dark Mocha","A dark mocha is an indulgent, rich coffee drink that combines the boldness of espresso, the smoothness of steamed milk, and the deep, bittersweet flavor of dark chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Dark Mocha","A dark mocha is an indulgent, rich coffee drink that combines the boldness of espresso, the smoothness of steamed milk, and the deep, bittersweet flavor of dark chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced White Mocha","A sweet, creamy coffee drink that combines espresso, velvety steamed milk, and the smooth, indulgent flavor of white chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot White Mocha","A sweet, creamy coffee drink that combines espresso, velvety steamed milk, and the smooth, indulgent flavor of white chocolate. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+      ] },
+      { name: "Refreshers", items: [
+        ["Watermelon Cucumber Mint Refresher","Our infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Strawberry Refresher","Strawberry infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Peach Mango Refresher","Peach Mango infused green tea. Comes standard with mild sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+        ["Hibiscus Berry Refresher","Hibiscus Berry infused green tea. Comes standard with a light touch of sweetness for a refreshing sip. Sizes: Medium, Large (+$0.50).",550,null,"from"],
+      ] },
+      { name: "Specialty Drinks", items: [
+        ["Iced Dulce De Leche","A balanced, dessert-inspired drink with a silky texture and a warm, comforting flavor. Ideal for those who love a sweet, caramelized twist on their classic latte, this drink is both indulgent and satisfying. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Dulce De Leche","A balanced, dessert-inspired drink with a silky texture and a warm, comforting flavor. Ideal for those who love a sweet, caramelized twist on their classic latte, this drink is both indulgent and satisfying. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Spanish Latte","A smooth and indulgent coffee drink that combines espresso, milk, and sweetened condensed milk. The addition of condensed milk gives the drink a rich, caramel-like sweetness, setting it apart from a classic latte. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Spanish Latte","A smooth and indulgent coffee drink that combines espresso, milk, and sweetened condensed milk. The addition of condensed milk gives the drink a rich, caramel-like sweetness, setting it apart from a classic latte. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Dirty Chai","A deliciously bold twist on the classic chai latte, blending the warmth of spiced chai with the rich, deep flavor of espresso. Sizes: Medium, Large (+$1.00).",700,null,"from"],
+        ["Hot Dirty Chai","A deliciously bold twist on the classic chai latte, blending the warmth of spiced chai with the rich, deep flavor of espresso. Sizes: Medium, Large (+$1.00).",700,null,"from"],
+        ["Iced Cafe De Olla Latte","A Café de Olla Latte made with house-made syrup. Its warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Hot Cafe De Olla Latte","A Café de Olla Latte made with house-made syrup. Its warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Mexican Mocha","A flavorful, spicy twist on the traditional mocha, combining the boldness of espresso, the richness of chocolate, and the warmth of Mexican spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Mexican Mocha","A flavorful, spicy twist on the traditional mocha, combining the boldness of espresso, the richness of chocolate, and the warmth of Mexican spices. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Vietnamese-Style Iced Coffee","A strong, sweet, and refreshing coffee drink that perfectly balances bold coffee flavors with creamy sweetness. Made iced. Sizes: Medium, Large (+$1.00).",630,null,"from"],
+        ["Thai Tea","a vibrant, orange-colored drink with a perfect balance of bold, spiced black tea and smooth sweetness. It’s a popular street drink in Thailand and a favorite worldwide for its exotic taste and refreshing qualities. Made iced. Sizes: Medium, Large (+$1.00).",650,null,"from"],
+        ["Iced Shaken Brown Sugar Espresso","A deliciously sweet and frothy coffee drink that combines the boldness of espresso with the warm, caramel-like flavor of real brown sugar. Made iced. Sizes: Medium, Large (+$1.00).",675,null,"from"],
+        ["Iced Flan Latte","A sweet, creamy coffee drink inspired by the rich flavors of traditional flan—a smooth, caramel custard dessert. Made iced. Sizes: Medium, Large (+$1.00).",690,null,"from"],
+        ["Iced Churro Latte","A deliciously sweet and spiced coffee drink inspired by the warm, cinnamon-sugar goodness of churros. Made iced. Sizes: Medium, Large (+$1.00).",690,null,"from"],
+        ["Vanilla Sweet Cream Iced Coffee","Creamy iced coffee topped with a delicious vanilla sweet cream. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Cookie Butter Latte","A creamy latte with rich cookie butter, topped with crunchy Biscoff crumbs for extra flavor. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Egg Coffee","A sweet, smooth, and creamy beverage with a bold coffee flavor and a rich, mousse-like texture, offering a delightful contrast between the bitter coffee and the sweet, creamy egg mixture. Made iced. Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Tiramisu Iced Coffee","A creamy, bold coffee with our signature tiramisu foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+        ["Pandan Cream Iced Coffee","A creamy, bold coffee with our signature panda cream foam. Made iced. Sizes: Medium, Large (+$1.00).",685,null,"from"],
+      ] },
+      { name: "Ceremonial Specialty Matcha", items: [
+        ["Iced Matcha Latte","A smooth and soothing beverage that blends the rich, earthy flavor of matcha with the creaminess of steamed or chilled milk. (made with oat milk) Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Hot Matcha Latte","A smooth and soothing beverage that blends the rich, earthy flavor of matcha with the creaminess of steamed or chilled milk. (made with oat milk) Sizes: Medium, Large (+$1.00).",680,null,"from"],
+        ["Iced Cafe De Olla Matcha","A Café de Olla Matcha sweetened with house-made syrup. it's warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Hot Cafe De Olla Matcha","A Café de Olla Matcha sweetened with house-made syrup. it's warm, spiced, and deeply comforting. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Iced Oat Horchata Matcha","A delightful fusion of two beloved beverages—horchata, a creamy, cinnamon-infused oat milk rice drink, and matcha, the vibrant, earthy green tea powder. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Hot Oat Horchata Matcha","A delightful fusion of two beloved beverages—horchata, a creamy, cinnamon-infused oat milk rice drink, and matcha, the vibrant, earthy green tea powder. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Matcha-Pan Latte","Earthy matcha meets sweet, almondy mazapan. It creates a smooth, creamy latte with a subtly nutty, dessert-like finish. (made with oat milk) Made iced. (contains nuts) Sizes: Medium, Large (+$1.00).",695,null,"from"],
+        ["Iced Cookie Butter Matcha","our cookie butter matcha, made with ceremonial matcha & hints of biscoff. made with oat milk. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Iced Vanilla Matcha Chai","A deliciously unique and comforting beverage that brings together the rich, earthy flavors of matcha, the warming spices of chai, and the smooth sweetness of vanilla. A perfect balance of energizing green tea, aromatic chai spices, and a touch of vanilla's creamy sweetness. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",725,null,"from"],
+        ["Vanilla Sweet Cream Matcha","Creamy oat milk matcha topped with vanilla sweet cream. Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Fresa Con Crema Matcha","Inspired by the traditional Mexican Treat Fresa Con Crema, which typically features strawberries and sweet cream, this modern twist lays on top of our Matcha to elevate the drink with a perfect balance of fruity sweetness and rich matcha flavor. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Ube Matcha","Ube Matcha is a fusion of two of our vibrant and flavorful ingredients: ube and matcha. When combined, these ingredients create a visually striking and delicious treat with a unique flavor profile. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",785,null,"from"],
+        ["Tiramisu Matcha","Creamy tiramisu cold foam topped with earthy, vibrant matcha flavor. (topped with cacao powder) (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",795,null,"from"],
+        ["Pandan Cream Matcha","creamy pandan foam meets bold, earthy matcha for a sweet, aromatic, and ultra-smooth sip. (made with oat milk) Made iced. Sizes: Medium, Large (+$1.00).",775,null,"from"],
+      ] },
+      { name: "Classics", items: [
+        ["Single Shot","",175],
+        ["Drip Coffee","Our process extracts flavors from the coffee grounds, creating a clean, smooth, and well-balanced cup of coffee. Sizes: Medium, Large (+$0.50).",385,null,"from"],
+        ["Cortado","A smooth, balanced coffee drink that consists of equal parts espresso and steamed milk.",375],
+        ["Double Espresso","Our well-prepared double espresso has a deep, bold taste with a full-bodied texture, accompanied by a layer of golden crema—a frothy, aromatic foam that sits atop the espresso shot.",350],
+        ["Cold Brew","A smooth, refreshing coffee made by steeping coarsely ground coffee beans in cold water for a full 24 hours. The long steeping time allows the coffee to develop rich, nuanced flavors, with notes of chocolate, caramel, and nuttiness. Made iced. Sizes: Medium, Large (+$1.00).",560,null,"from"],
+        ["Cafe Au Lait","A French coffee drink made with equal parts of brewed coffee and steamed milk. Sizes: Medium, Large (+$0.50).",450,null,"from"],
+        ["Tea","Our steeping process extracts the flavors, antioxidants, and essential oils from the tea bag, creating a flavorful and fragrant hot drink. Sizes: Medium, Large (+$1.00).",350,null,"from"],
+        ["Hot Chocolate","A comforting drink made from chocolate, mixed with your choice of milk. The rich, velvety texture and deep, indulgent flavor makes it a beloved treat. Sizes: Medium, Large (+$0.50).",400,null,"from"],
+        ["Cappuccino (12Oz)","A classic espresso-based coffee drink made with a perfect balance of espresso, steamed milk, and milk foam.",530],
+        ["Iced Americano","A flavorful coffee drink made by diluting two shots of espresso with hot water. The result is a coffee that has the depth and richness of espresso but with a milder strength and smoother body, similar to our Drip Coffee. Sizes: Medium, Large (+$0.50).",430,null,"from"],
+        ["Hot Americano","A flavorful coffee drink made by diluting two shots of espresso with hot water. The result is a coffee that has the depth and richness of espresso but with a milder strength and smoother body, similar to our Drip Coffee. Sizes: Medium, Large (+$0.50).",430,null,"from"],
+      ] },
+      { name: "Cold Brew Collection", items: [
+        ["Oat Horchata Cold Brew","A smooth, creamy, and refreshing coffee drink that blends the boldness of cold brew coffee with the sweet, spiced flavors of traditional horchata. Made with oat milk, this dairy-free version brings a velvety texture to the drink. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Cafe De Olla Cold Brew","A Café de Olla Cold Brew sweetened with house-made syrup. Finished with a splash of your choice. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Iced Protein Coffee","A perfect combination of energizing cold brew coffee with a boost of protein (30g) to keep you fueled throughout the day. Made iced.",660],
+        ["Black Tie","A bold and decadent coffee drink that combines the rich, smooth flavor of cold brew coffee with the sweet, creamy indulgence of sweetened condensed milk & a hint of vanilla. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Mazapan Cold Brew","A delightful and unique coffee drink that combines the smooth, rich flavor of cold brew coffee with the sweet, nutty taste of mazapán, a traditional Mexican candy made from peanuts. Made with oat milk. Made iced. Sizes: Medium, Large (+$1.00).",660,null,"from"],
+        ["Thai Tea Cold Brew","A refreshing and bold twist on the classic Thai Iced Tea, combining the deep, smooth flavor of cold brew coffee with the aromatic spices and creamy sweetness of traditional Thai tea. Made iced. Sizes: Medium, Large (+$1.00).",695,null,"from"],
+      ] },
+      { name: "Juice/Smoothie", items: [
+        ["Orange Juice","Our natural orange juice is made locally. Sizes: Medium, Large (+$1.00).",550,null,"from"],
+        ["Berry Madness Smoothie","A mix of apple juice, blackberry, blueberry, & strawberry. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Orange Mania Smoothie","A mix of squeezed orange juice & pineapple. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Tropical Smoothie","A mix of papaya, pineapple, strawberry, & mango. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Mango Mania Smoothie","A mix of mango & apple juice. Sizes: Medium, Large (+$1.00).",770,null,"from"],
+        ["Mangonada","A mix of chamoy & mango which is brought together for a delicious refreshing drink. Sizes: Medium, Large (+$1.00).",775,null,"from"],
+        ["Matcha Blast","A mix of squeezed orange juice, mango, & our ceremonial matcha. Sizes: Medium, Large (+$1.00).",800,null,"from"],
+      ] },
+      { name: "Snacks (All Day)", items: [
+        ["Tosti-Bites","Authentically known as Tosti-Elotes. Crunchy Tostichips loaded with corn topped with sour cream or mayo, crumbly cotija cheese, & your choice of spicy chili powder. (chili powder is very spicy)",900],
+        ["Elote-Bites","Authentically known as Esquite. Corn topped with sour cream or mayo, crumbly cotija cheese, & your choice of spicy chili powder. (chili powder is very spicy)",700],
+        ["Original Fresas Con Crema","Fresh strawberries with made-daily sweet cream, sprinkled with crunchy almond slices.",950],
+        ["Biscoff Fresas Con Crema","Fresh strawberries with made-daily sweet cream, mixed with Biscoff cookie crumbs.",1150],
+        ["Gansito Fresas Con Crema","Fresh strawberries with made-daily sweet cream, mixed with Gansito snack cake.",1150],
+        ["Bubulubu Fresas Con Crema","Fresh strawberries with made-daily sweet cream, mixed with Bubulubu candy.",1150],
+        ["Oreo Fresas Con Crema","Fresh strawberries with made-daily sweet cream, mixed with Oreo.",1150],
+      ] },
+      { name: "Bakery Made Daily", items: [
+        ["Chocolate Croissant","A delicious pastry that combines the flaky, buttery layers of a classic croissant with a rich, melty filling of dark chocolate.",395],
+        ["Almond Croissant","A rich, sweet almond paste filled pastry. Topped with sliced almonds and a light dusting of powdered sugar.",395],
+        ["Berry Scone","Sweet, crumbly scone with juicy berries.",425],
+        ["Maple Scone","Sweet, crumbly scone with juicy berries.",425],
+      ] },
+      { name: "Breakfast", items: [
+        ["Avocado Toast","This combines the creamy richness of ripe avocado with the satisfying crunch of toasted wheat bread.",900],
+        ["Famous Egg & Cheese","A simple yet satisfying sandwich that combines the richness of eggs with the melty goodness of cheese, all nestled in a warm, chewy bagel of your choice.",1000],
+        ["Lox Bagel","A sandwich that combines the rich flavor of lox (smoked salmon) with the chewy texture of a freshly toasted bagel, along with creamy spreads and fresh toppings.",1400],
+        ["BLT Sandwich","a classic that perfectly balances the crispy, salty bacon, the crunchy freshness of lettuce, and the juicy, tangy sweetness of tomatoes tied with our sauce—all sandwiched between two slices of toasted bread.",1200],
+        ["Veggie Bagel","A mix of fresh avocado, tomatoes & onions paired with a creamy or tangy spread of your choice. Our veggie bagel is customizable, so you can easily adjust the ingredients to fit your taste.",1150],
+        ["Any Bagel W/ Spread","A delicious breakfast or snack option that combines the chewy texture of a freshly toasted bagel with the creamy, flavorful richness of your favorite spread.",600],
+        ["Ciabatta Bacon, Egg & Spinach","A perfect combination of savory flavors, all packed into a fresh, chewy ciabatta roll. This sandwich brings together crispy bacon, eggs, our house sauce, and fresh spinach, creating a satisfying meal that can be enjoyed for breakfast, brunch, or any time you're craving a flavorful, filling sandwich.",1200],
+      ] },
+      { name: "Lunch", items: [
+        ["Berkeley Turkey Sandwich","It consists of slices of tender, apple-wood cooked turkey breast placed between two slices of bread. It's accompanied by swiss cheese, lettuce, tomato, onions & our house sauce.",1300],
+        ["Pesto Chicken Panini","A flavorful and indulgent sandwich made with seasoned grilled tender, juicy chicken breast, and pairing it with a rich, aromatic pesto sauce & smooth swiss cheese.",1500],
+        ["Chipotle Chicken Panini","A flavorful and indulgent sandwich made with seasoned grilled tender, juicy chicken breast, and pairing it with a rich, spicy chipotle sauce & smooth swiss cheese.",1500],
+        ["Club Sandwich","Made with three slices of bread—toasted whole wheat—the sandwich is stacked with layers of tender, sliced turkey & ham, crisp bacon, fresh lettuce, juicy tomato, savory cheddar cheese and a generous spread of our house sauce.",1500],
+        ["Ciabatta Ham & Swiss Melt","It features thinly sliced, savory ham paired with smooth swiss cheese & mayonaisse, all nestled between two slices of airy, rustic ciabatta bread.",900],
+      ] },
+    ],
+    siteNote: "Prices are from this shop's own Snackpass ordering page; their website lists the menu without prices.",
   },
 
   /*
@@ -7230,6 +8049,32 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "Dog and cat grooming, three shops in San Jose and Santa Clara. By weight and coat type, from their own dog and cat price pages; a $4 material fee is added to every groom and bath, and first visits are 20% off, per their site.",
+  },
+
+  /*
+     Macs by Icky — gathered 2026-09-23 from own
+     they are: Filipino-inspired desserts
+     flag: Sources: macsbyicky.store, a Shopify store whose page title is 'My Store': home, /pages/menu, /pages/about-us, /pages/contact, /collections, /collections/all, /collections/wood-ornaments, /products.json, and the site's own 'FIND US IN-STORE' store-locator panel. No CAPTCHA or bot check was shown.
+     flag: The menu exists only as images on /pages/menu: 2 in-store menu images (files named '2025_MBI_MENU', updated 2026-02-23) and a 4-slide 'CATERING MENU' carousel (updated 2024-11-22). Prices were read from the images by eye. The images are small (549–711px wide), but every price was legible. My transcription is in macs_menu_images_transcription.txt and the screenshots are macs_instore_*.png and macs_catering_*.png.
+     flag: HOURS is null because the site shows no opening hours. It only says 'AVAILABLE AT 10AM' for dessert croffles, halo halo and soft serve, marks Filipino Melon Juice 'FRI-SUN ONLY', gives Monday–Friday for catering phone calls and says 'WE DELIVER 5 DAYS A WEEK'. The Instagram bio given has no hours either.
+     flag: The address comes from the site's store-locator panel ('MACS BY ICKY ( Smith Street ) 3900 Smith Street, Union City California 94587') and matches the given address. The phone ('Call or text: 510-899-3900') and email are from the catering menu's 'How to order' slide. The Contact page is only a form, which was not submitted.
+     flag: Drinks under '(ICED OR HOT)': iced comes in Regular (16oz) or Large (24oz) for +$1 more, and hot only in Regular (16oz). This is written into each desc and those drinks are labeled 'from'. Brewed Coffee and Hot Tea are hot drinks, so they have one price. The drinks panel has no other heading, so its section is 'Iced or Hot'. For drinks shown as '$6 | $7' the menu does not name the two sizes.
+     flag: Add-on price lists are not listed as items: Extras (espresso shot +.75; caramel, chocolate or white chocolate drizzle +.50), Soft tops (sweet cream, chocolate or strawberry +$1; ube or pistachio +$1.50), Syrups +.50, Milk options (breve +.50; oat or almond +.75), soft-serve toppings +.75 (cup only). Also not listed: flavor lists with no prices (lemonade syrups, purees, 'popular lemonade combos').
+     flag: LEFT OUT 3 unpriced catering salads that are choices inside the Signature Salad Box: Caesar Salad (only '+ chicken $2.50' is priced; that is noted in the box's desc), Mixed Greens Salad (VGN GF), Beet Pistachio Salad. The classic and signature sandwich choices (Ham & Cheese, Turkey & Cheese, Vegetarian; California Turkey, Grilled Chicken Pesto, Margherita, Tuna Salad) are priced only through the boxes, and part of that list is covered by a white box in the image.
+     flag: Goodie Tray appears on both the Lunch and Breakfast catering slides with the same prices, so it is listed once. Catering conditions not put in descs: continental combos have a 10 person minimum in increments of 5; delivery needs a $50 subtotal, with a fee of $25 or 8% (whichever is greater); desserts need an email inquiry and 1–2 weeks' notice.
+     flag: LEFT OUT all Shopify store products, since every one is sold out. Merch: UC Native hoodie from $50, UC Native tees from $25, Macs by Icky x Who Cares longsleeve $45 (on sale, was $60), wood ornaments $10, Union City Ornament Bundle $25 (was $30). December 2024 holiday pre-order food for 12/24–12/25 pickup: 1 Dozen Assorted Cookies $40, 1 Dozen Assorted Macarons $35, Assorted Mini Cookie Croissant (box of 8) $28, Banana Bread Loaf $10, Muddy Snack Mix Party Bowl $45 (80oz) or $85 (160oz), Tres Leches Cake Tray $50. There is no active food ordering on the site.
+     flag: There is no alcohol on the menus. Items with no price: the 3 salads above.
+     flag: The Instagram bio says 'Home of the ube ice cream taco', but the site's menus only show the catering 'Mini Ice Cream Tacos $5/ea (minimum 12 per flavor)'. The in-store menu has no ice cream taco. The 'smashed lemonade' is the in-store Lemonade, $8 for 32oz.
+     flag: Item names are written in title case because the menu images use all caps. Descs keep the published wording, including 'buko panda syrup' and 'Souflee'. One clipped letter was restored: the catering image says 'ndividual boxed lunches', written here as 'Individual'.
+     flag: Name: the site writes 'Macs by Icky' (About page); the Shopify store title is 'My Store'. The site links Instagram @macs.by.icky and TikTok @macs.by.icky. 'instagram' is left null as the output shape asks.
+     flag: On review: the 64 prices read from the menu pictures are not carried, as with The Yakitori Bar, HL Peninsula and Street Social. The phone and email are read from their own catering menu picture.
+  */
+  'macs-by-icky': {
+    address: "3900 Smith Street, Union City, CA 94587",
+    phone: "(510) 899-3900",
+    email: "macs.by.icky@gmail.com",
+    cuisine: "Filipino-inspired desserts",
+    contactOnly: "Their menu, in-store and catering, is pictures on their own site, so the page points there rather than copying prices.",
   },
 
   /*
@@ -11818,6 +12663,284 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     skilletz-cafe — gathered 2026-09-23 from own
+     their spelling: "Skillet'z Cafe" (roster keeps "skilletz-cafe")
+     they are: Breakfast & brunch
+     flag: Sources used: skilletz.cafe only (home, /menu, /contact, /our-story, /order-online, /blog, /press, /careers), read 2026-09-23 with a headless browser. Items are exactly what the /menu page displays, tab by tab (Brunch, Happy Hour, Dinner, Drinks 🥤, Tea-Rek'z 🧋🦖). No CAPTCHA or bot check was met on skilletz.cafe.
+     flag: Hours: every page's Location & Hours block (home, menu, contact, our-story, order-online, blog, press, careers) says 'Monday-Wednesday: 8am - 2pm / Thursday-Sunday: 8am - 8pm / Breakfast until 3pm, Dinner from 3pm'; the contact page's Hours section says 'Monday-Wednesday: 8am - 2pm; Thursday-Sunday: 8am - 8pm'; the Instagram bio (given) says 'Open Mon-Wed 8AM-2PM | Thu-Sun 8AM-8PM'. These all agree, so hours = 'Mon-Wed 8am-2pm; Thu-Sun 8am-8pm'. The only dissent is the site's hidden <meta name="description"> (same on every page, never shown on the page): 'Open weekdays 8am-2pm, weekends 8am-8pm' — this conflicts on Thursday and Friday. Treated as stale search-snippet text; set hours to null if you count it as a source.
+     flag: Address, phone and email on the site match what was given: 37378 Niles Blvd, Fremont, CA 94536 (site adds the ZIP); (510) 793-8161; hello@skilletz.cafe (contact page).
+     flag: section is written as '<menu tab> / <section heading>' because the same headings appear in several tabs at different prices (e.g., Brunch / Burgers 🍔 vs Dinner / Burgers 🍔, Happy Hour / Appetizers at $5.00 vs Dinner / Appetizers 🧀). Names and headings keep the menu's own emoji.
+     flag: Item counts: Brunch 141, Happy Hour 7 (all $5.00 appetizers; the page gives no happy-hour times), Dinner 52, Drinks 🥤 0, Tea-Rek'z 🧋🦖 76.
+     flag: Drinks 🥤 tab shows nothing on the live site (its code looks for a menu named 'Drinks 🥤' but the data holds 'Drinks 🥤M-W' / 'Drinks 🥤 Thu-Sun'), so no coffee/juice prices are published on the page. The 18 hidden drink entries in the page data (e.g., Hot Coffee ☕️ $4, Fresh Squeezed Orange Juice 🍊 $8) were left out; they are in skilletz-menu.next_data.json if wanted.
+     flag: Alcohol: none is shown on the menu page, so nothing visible was dropped. The page's hidden data does hold an 'Alcoholic Beverages 🍻' menu (House Margarita $12) — left out (alcohol, and not shown).
+     flag: Also in the page data but never shown by the page, so left out: Dinner 'Daily Specials 🌟' (5 items, hidden by the site's own code), and menus not attached to any tab (Brunch M-W, Brunch M-W Doordash, Nuestra Cocina Tu Casa 🇲🇽 with 27 items, Dino Bites with 16 items). The Brunch tab shows the 'Brunch Thu-Sun' version; the M-W version has the same prices.
+     flag: Left out for no price: 1 ('Seranos' listed at $0.00 in Brunch / Sides 🍟).
+     flag: Exact repeats inside one tab (same name, price and description) kept once, in the later section: 'Rafa Quintero Steak & Eggs' (Brunch / Specials 🌟 → kept in Brunch / Specialty Dishes 🍽️); plus 10 Tea-Rek'z Favorites 💖 repeats (41 Tiger Milk with Boba 🐯🌙, 81 Vietnamese Iced Coffee 🇻🇳❄️☕️, 82 Crème Brûlée Vietnamese Iced Coffee, 76 Dino Freeze 🍓🥭🍑🦖❄️🌙, 51 Lychee Jasmine Green, 53 Mango Passionfruit Jasmine Green, 75 Mango Grapefruit Crystal 🥭🥥💎(🌙), 62 Strawberry Lemonade 🍓🍋🌙, 33 Strawberry Matcha Latte 🍓🍵, 42 Crème Brûlée Tiger Milk (with Boba) 🌙) kept only in their regular sections.
+     flag: Tea-Rek'z 🧋🦖 is a separate tea/boba brand with its own site (tearekz.cafe, linked in the footer, not visited); its menu is a tab on Skillet'z's own menu page, so its 76 items are included under sections starting "Tea-Rek'z 🧋🦖 / " — drop them if this listing should cover Skillet'z food only. That tab includes merch (Mini Rex Stuffie Keychain $6.50, Skillet'z T-shirt $20.00) and 12 add-on/topping items at $0.75.
+     flag: Descriptions are the menu's own text, kept exactly even where they look mismatched: 'Ribeye Steak & Eggs w Mushrooms & Onions' says 'New York Steak with chorizo and chopped serranos.'; 'Coulotte Steak & Eggs w Mushrooms & Onions' says 'Rib Eye Steak & Eggs. Available as a special only.' Items with no description have desc ''.
+     flag: Brunch / Specials 🌟 has day-limited items (Chicken and Waffles 'Available Tuesdays!', Carne Asada Chilaquiles Rojos Saturdays / Verdes Sundays, Veggie Chilaquiles weekends) and a 'Restaurant Week Special' at $25.00. The site shows one price per item, so no item uses label 'from'. Dinner Burgers/Sandwiches note 'Upgrade 🥒 or 🧅 rings por $2 mas.' (optional upgrade, not treated as a second price).
+     flag: Ordering provider: the site's Order Online / Order Delivery / Order Pickup buttons and 'Order in the DoorDash app' go to DoorDash's order.online storefront — not opened or used (no-DoorDash rule). /reservations/ redirects to SevenRooms, and /catering/ redirects to a Google Doc titled 'Skillet'z Cafe Catering Menu (January 2025)'. Neither was used for any fact, so catering prices are not included.
+     flag: The site links Instagram as instagram.com/skilletz.cafe (instagram field left null as in the template).
+     flag: On review: the 76 Tea-Rek'z items (their sister tea and boba brand, a tab on the same menu page) are left off; this page is the cafe's. Brunch sections keep their own names, then Happy Hour, then the Dinner sections.
+     flag: On review: the tagline is the line under their own logo, "OL' COUNTRY COOKIN'".
+  */
+  'skilletz-cafe': {
+    address: "37378 Niles Blvd, Fremont, CA 94536",
+    phone: "(510) 793-8161",
+    email: "hello@skilletz.cafe",
+    hours: "Mon-Wed 8am-2pm; Thu-Sun 8am-8pm",
+    cuisine: "Breakfast & brunch",
+    tagline: "Ol' Country Cookin'",
+    sections: [
+      { name: "Specials", items: [
+        ["Restaurant Week Special","Our Popular Oreo Pancakes, Served with 2 Eggs, Crispy Hash Browns, and Bacon or Sausage",2500],
+        ["Chicken and Waffles","Honey stung chicken with waffle, delicious homemade mac & cheese, bacon, potatoes. Available Tuesdays!",2195],
+        ["Carne Asada Chilaquiles Rojos","Carne asada, tortilla chips, potatoes, red salsa, avocado, with choice of eggs. Available Saturdays!",2295],
+        ["Carne Asada Chilaquiles Verdes","Carne asada, tortilla chips, potatoes, green salsa, avocado, with choice of eggs. Available Sundays!",2295],
+        ["Deluxe Billy's New York Steak and Eggs","New York Steak and Eggs with Grilled Onions and Mushrooms",2595],
+        ["King's Platter","Link sausage, country sausage, bacon, ham.",2195],
+        ["Ribeye Steak & Eggs w Mushrooms & Onions","New York Steak with chorizo and chopped serranos.",3195],
+        ["Veggie Chilaquiles","Veggie chilaquiles comes with refried beans, tortilla chips, feta cheese, with fresh red salsa (Saturdays) or green salsa (Sundays) with avocado 🥑 and choice of eggs. Available weekends.",1995],
+        ["Veggie Quesadilla","Eggs, veggies, cheese in a perfectly crispy tortilla. Topped with sliced avocado.",1995],
+        ["Quinas Quezadilla","Sliced ham, scrambled eggs, veggies, cheese in a perfectly crispy tortilla. Topped with sliced avocado.",1895],
+        ["Coulotte Steak & Eggs w Mushrooms & Onions","Rib Eye Steak & Eggs. Available as a special only.",2795],
+        ["Porter house steak","",3295],
+      ] },
+      { name: "Traditional Omelettes", items: [
+        ["All Meats Omelette","Bacon, linguica, ham, sausage, & chorizo (optional).",1995],
+        ["All Veggies Omelette","Spinach, bell peppers, onions, tomatoes, mushrooms, jalapeños, zucchini, & avocado.",1895],
+        ["Ham Omelette","Ham, cheese.",1695],
+        ["Linguica Omelette","Linguica, cheese.",1695],
+        ["Ground Beef & Onion Omelette","Ground beef, onion, cheese.",1695],
+        ["Bacon Omelette","Bacon, cheese.",1695],
+        ["Denver Omelette","Ham, bell peppers, onions, cheese.",1695],
+        ["Mushroom & Onion Omelette","Mushrooms, onions, cheese.",1695],
+        ["Avocado Omelette","Avocado, cheese.",1695],
+        ["Chicken Apple Sausage Omelette","Chicken apple sausage, cheese.",1695],
+        ["Sausage Omelette","Sausage, cheese.",1695],
+        ["4 Veggie Omelette","4 vegetables, cheese.",1795],
+      ] },
+      { name: "Specialty Omelettes", items: [
+        ["Rosa Bravo Omelette","Homemade chorizo, bacon, spinach, bell peppers, avocado, cheddar cheese, & serrano.",1995],
+        ["Chicago J. Omelette","Linguica, ground beef, bacon, MUSHROOMS, bell peppers, jalapeños, & cheddar cheese",1995],
+        ["La Frida Linda Omelette","Chicken apple sausage, spinach, tomatoes, jalapeños, bell peppers, & pepper jack cheese.",1995],
+        ["Bravo Omelette","Bacon, ham, onions, tomatoes, mushrooms, bell peppers, avocado, & cheddar cheese.",1995],
+        ["El Quina Omelette","Bacon, smoked ham, bell peppers, avocado, & cheddar cheese.",1995],
+        ["La Lolita Omelette","Grilled chicken, spinach, bell peppers, zucchini, avocado, & cheddar cheese.",1995],
+        ["Gollo El Gallero Omelette","Ground beef, bacon, grilled chicken, mushrooms, bell peppers, spinach, swiss cheese.",1995],
+        ["Carmelita Omelette","Chicken apple sausage, grilled chicken, all vegetables, & cheddar cheese.",1995],
+        ["Rafael Omelette","Diced linguica, spinach, jalapeños, pepper jack cheese.",1895],
+      ] },
+      { name: "Scrambles", items: [
+        ["Veggie Scramble","All veggies, cheese.",1895],
+        ["Tio Pancho Scramble","Homemade chorizo, mixed with scrambled eggs, and potatoes topped with cheddar, avocado, biscuits and gravy, jalapeños on the side",1995],
+        ["Papa Benjamin Scramble","All meats mixed with scrambled eggs, topped with cheddar cheese and avocado along with jalapeños.",1995],
+        ["Old Alva Scramble","Homemade chorizo, bacon, sausage, serranos, tomatoes, onions, cheddar, topped with avocado and pepperjack cheese.",1995],
+        ["King Leo Scramble","All meats, double-battered french fries, scrambled eggs, melted cheddar cheese.",1995],
+        ["Bill Sinodinos Scramble","Diced linguica, scrambled eggs, mixed in with potatoes. Jalapeños on the side.",1695],
+        ["Niles Popeye Scramble","Spinach, Ground Beef, Onions, Cheddar",1695],
+        ["Joe's Scramble","Ground beef, grilled onions, spinach, mushrooms, with cheddar cheese.",1695],
+      ] },
+      { name: "Specialty Dishes", items: [
+        ["Biscuits & Gravy","2 fluffy biscuits with country gravy. Choice of meat: bacon, linguica, sausage, or ham.",1495],
+        ["Mexican Chicken Fried Steak & Eggs","Chicken fried steak topped with homemade chorizo, cheddar cheese and a serrano.",1995],
+        ["Deluxe Chicken Fried Steak & Eggs","Chicken fried steak topped with bacon, grilled onions, and jalapeños.",1995],
+        ["Rafa Quintero Steak & Eggs","Ground beef, gravy, chorizo, cheddar cheese, serrano.",1995],
+        ["Decoto Loaded Hash Browns","Hash browns topped with all veggies and cheddar cheese.",1995],
+        ["Tio Cosme","Boneless pork chops topped with sautéed veggies, cheddar cheese, and potatoes.",2195],
+        ["Chorizo Con Huevos","Scrambled eggs mixed in with chorizo. Topped with cheddar cheese, avocado. Jalapeños on the side.",1995],
+        ["Billy's Hamburger Steak & Eggs","Ground beef patty topped with cheddar cheese, avocado. Choice of potatoes and eggs.",1995],
+        ["Billy's New York Steak & Eggs","New York strip steak topped with cheddar cheese, avocado. Choice of potatoes and eggs.",2495],
+        ["Mi Chendo's Pork Chops","2 Pork chops topped with country gravy, bacon, cheddar, and serranos along with chorizo con huevo.",2195],
+        ["La Maria Juana","Tomatoes, avocado, all berries bowl, choice of potatoes.",1495],
+        ["West Side Chicken & Eggs","",1995],
+      ] },
+      { name: "Meat & Eggs", items: [
+        ["Two Eggs","Two eggs, served with a side of your choice of potatoes.",1395],
+        ["Bacon & Eggs","Bacon, eggs. A classic.",1595],
+        ["Chicken Apple Sausage & Eggs","Chicken apple sausage and eggs.",1595],
+        ["Linguica & Eggs","Linguica, eggs.",1595],
+        ["Sausage & Eggs","Sausage, eggs",1495],
+        ["Chicken Fried Steak & Eggs","Chicken fried steak, eggs. Gravy has sausage.",1695],
+        ["New York Steak & Eggs","New York strip steak, eggs.",2395],
+        ["Ham Steak & Eggs","A generous thick cut of ham steak served with choice of eggs and potatoes.",1695],
+        ["Grilled Chicken & Eggs","Grilled chicken breast, eggs",1695],
+        ["Pork Chops & Eggs","2 pork chops, eggs.",1695],
+        ["Hamburger Steak & Eggs","Hamburger steak served with choice of eggs, potatoes.",1695],
+        ["Corned Beef Hash & Eggs","Try our special corned beef hash recipe including grilled onions, bell peppers, & mushrooms. Absolutely delicious!",1695],
+        ["Country Sausage & Eggs","",1495],
+      ] },
+      { name: "Burritos", items: [
+        ["Charlie's Burrito","Choice of protein, cheese, and potatoes. Includes eggs. NOTE: For our burritos, potatoes (choice of french fries, skillet potatoes, or hash browns) are wrapped INTO the burrito, because it tastes THA BOMB!",1495],
+        ["Veggie Burrito","All veggies, cheese, eggs. NOTE: For our burritos, potatoes (choice of french fries, skillet potatoes, or hash browns) are wrapped INTO the burrito, because it tastes THA BOMB!",1695],
+        ["Tupac Wrap","Chicken, chorizo, bacon, avocado, bell peppers, spinach, jalapeño, eggs. NOTE: For our burritos, potatoes (choice of french fries, skillet potatoes, or hash browns) are wrapped INTO the burrito, because it tastes THA BOMB!",1895],
+      ] },
+      { name: "Sandwiches", items: [
+        ["Sandy's Breakfast Sandwich","Scrambled eggs, meat, cheese.",1495],
+        ["J Team Sandwich","Scrambled eggs, all veggies, cheese.",1495],
+        ["BLT","Bacon, lettuce, tomatoes, and mayo.",1395],
+        ["Club Sandwich","Choice of turkey, ham, or both.",1595],
+        ["Cold Tuna Salad Sandwich","Freshly prepared cold tuna salad with choice of potatoes.",1295],
+        ["Patty Melt","Beef patty, grilled onions, swiss cheese on grilled rye bread.",1495],
+        ["Grilled Chicken Sandwich","Grilled chicken on a french roll.",1595],
+        ["Spicy Chicken Melt","Spicy grilled chicken, pepper jack cheese, bacon, lettuce, tomato, and avocado.",1895],
+        ["New York Steak Sandwich","Tender New York strip steak with melted cheese, lettuce, onions, served on a french roll, plus choice of potatoes.",2095],
+        ["Newark BLTA","Linguica, bacon, pepper jack cheese, lettuce, tomato, avocado.",1895],
+        ["Chef Genaro Chicken Melt","Grilled chicken, American cheese, lettuce, tomato, avocado, raw onions.",1695],
+        ["Grilled Cheese Sandwich","Our take on a classic. Customize with choice of cheese and bread.",1295],
+        ["Grilled Ham & Cheese","Grilled ham and cheese.",1395],
+        ["Grilled Bacon & Cheese","Delicious grilled bacon and cheese.",1395],
+        ["Grilled Turkey Cheese & Bacon","Grilled turkey, bacon, cheese.",1395],
+        ["Linguica on a French Roll","Linguica, served on a French Roll.",1395],
+        ["Tuna Melt","Grilled tuna salad, cheese, and bread.",1395],
+        ["Monte Cristo","A delectable combination of sweet and savory! Layers of ham, turkey, and cheese between French toast slices, dusted with powdered sugar. Served with your choice of potatoes.",1695],
+        ["Skillet'z Sandwich","Beef patty, Denver scramble, cheese.",1695],
+        ["Hella Bay","Beef patty, Denver with chorizo scrambled, American cheese.",1695],
+        ["Lucas Breakfast BLTA","Ground chicken patty, scrambled eggs with chorizo, pepper jack cheese, bacon, avocado, lettuce, and tomato.",1895],
+        ["Chicken Breakfast Patty Melt","Ground chicken patty, swiss + American cheese, bacon, avocado, over hard eggs.",1795],
+        ["Hella Spicy Tuna Melt","Spicy. Grilled tuna salad, pepper jack cheese. Jalapeño, avocado, tomatoes, lettuce, and bacon on grilled sourdough bread.",1895],
+        ["Fish Sandwich","Crispy battered fish with lettuce, tomatoes, mayo.",1695],
+      ] },
+      { name: "Burgers", items: [
+        ["Just A Burger","Beef patty, mayo, lettuce, tomato, and onion.",1295],
+        ["Bacon Cheeseburger","Beef patty, BACON, cheese, mayo, lettuce, tomato, and onion.",1395],
+        ["Ed & the Crew Burger","Beef patty, mayo, grilled onions, bell peppers, mushrooms, and American cheese.",1695],
+        ["Greek Burger","Beef patty, feta cheese, mayo, bacon, avocado, tomato, and onion.",1595],
+        ["Sunrise Burger","Beef patty, mayo, bacon, sunny side up egg, American cheese, lettuce, tomato, and onion.",1595],
+        ["The Burger You Can't Finish","Double beef patty, all cheeses, bacon, grilled onions, sunny-side up egg.",1895],
+      ] },
+      { name: "Pancakes, Waffles & More", items: [
+        ["Skillet'z Special","2 pancakes, 2 French toast, or 1 waffle choice of sausage or bacon and two eggs.",1695],
+        ["1 Pancake","1 fluffy pancake.",595],
+        ["Short Stack","2 fluffy pancakes!",1095],
+        ["Stack of 3","3 fluffy pancakes!",1595],
+        ["Impossible Stack (6 Pancakes)","6 fluffy pancakes!",1995],
+        ["1/2 French Toast","Two pieces of French toast.",995],
+        ["Full French Toast","Three pieces of French toast.",1095],
+        ["Waffle","Homemade waffle with served with butter and syrup. Option to customize with various toppings.",1095],
+        ["Porkie Pig Pancakes","Two of our delicious and fluffy pancakes with jalapeño and bacon!",1795],
+        ["Beignets","Each serving comes with 3 pieces of beignets with a delicious creme filling, served piping hot (careful!) and topped with drizzled chocolate and powdered sugar.",895],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Billy's French Toast","Our popular French toast, served with a choice of protein.",995],
+        ["Niles Kids Breakfast","A kid's portion of eggs, potatoes, and choice of protein.",1095],
+        ["Mickey Mouse Pancake","Fluffy pancake shaped like Mickey Mouse, topped with powdered sugar, a dollop of whipped cream, and a small cookie. Served with a side of syrup.",995],
+        ["Chicken tenders & Fries","Crispy chicken strips paired with golden fries.",1200],
+        ["Nutella Sandwich","Slices of bread spread with Nutella, served with a side of mixed fruits including strawberries, bananas, blackberries, blueberries, and melon, topped with powdered sugar.",995],
+        ["Kids Mac and Cheese Bites & Fries","Macaroni and cheese bites with a choice of potatoes or fruit.",1095],
+      ] },
+      { name: "Salads", items: [
+        ["Grilled Chicken Salad","Romaine lettuce, grilled chicken, tomatoes, cucumbers, cheddar cheese, and croutons.",1495],
+        ["Greek Chicken Salad","Grilled chicken, bacon, avocado, tomatoes, cucumbers, strawberries, blueberries, feta cheese, and croutons.",1895],
+        ["Grilled Chicken Caesar Salad","Romaine, grilled chicken, bacon, avocado, parmesan cheese, and croutons.",1895],
+      ] },
+      { name: "Sides", items: [
+        ["Sausage","",695],
+        ["Bacon","",695],
+        ["Linguica","",695],
+        ["Corned Beef Hash","",695],
+        ["Grilled Chicken","",695],
+        ["Chicken Apple Sausage","",695],
+        ["Country Sausage","",695],
+        ["Ham","",695],
+        ["Skillet Potatoes","",595],
+        ["Hash Browns #⃣","",595],
+        ["Crispy Hash Browns #⃣","",595],
+        ["French Fries","",595],
+        ["Fruit","",595],
+        ["Berries Bowl","Fresh bowl of mixed berries including blueberries, blackberries, and sliced strawberries.",695],
+        ["2 Eggs","",395],
+        ["Zucchini Fries","",1095],
+        ["Mac Bites","",695],
+        ["Oatmeal","",695],
+        ["Avocado","Thinly sliced fresh avocado 🥑.",295],
+        ["French Toast","",495],
+        ["Tortilla","One heart-warming tortilla served lightly grilled and neatly folded.",295],
+        ["Toast","",295],
+        ["1/2 Biscuit & Gravy","",395],
+      ] },
+      { name: "Happy Hour", items: [
+        ["French Fries","",500],
+        ["Onion Rings","",500],
+        ["Zucchini Fries","",500],
+        ["Mozarella Sticks","",500],
+        ["Guacamole and Chips","Fresh guacamole, tortilla chips",500],
+        ["Mac Bites","",500],
+        ["Cheese Fries","",500],
+      ] },
+      { name: "Dinner: Appetizers", items: [
+        ["Zucchini Fries","",1200],
+        ["Guacamole and Chips","Fresh guacamole, tortilla chips",1200],
+        ["Mozarella Sticks","",1000],
+        ["Cheese Fries","French fries, cheese, bacon, chives, jalapeño, and sour cream",1000],
+        ["Onion Rings","",1000],
+      ] },
+      { name: "Dinner: Salads", items: [
+        ["Grilled Chicken Caesar Salad","Romaine, grilled chicken, bacon, avocado, parmesan cheese, and croutons.",1700],
+        ["Greek Chicken Salad","Grilled chicken, bacon, avocado, tomatoes, cucumbers, strawberries, blueberries, feta cheese, and croutons.",1800],
+        ["Grilled Chicken Salad","Romaine lettuce, grilled chicken, tomatoes, cucumbers, cheddar cheese, and croutons.",1700],
+        ["Skillet'z Chef's Salad","",1895],
+        ["Steak Salad","",2295],
+        ["Side Salad","",800],
+      ] },
+      { name: "Dinner: Burgers", items: [
+        ["Niles Burger","7 oz ground beef patty, lettuce, tomatoes, onions, pickles. Served with a side of french fries.",1200],
+        ["Skillet'z Burger (Cheeseburger)","7 oz ground beef patty, American cheese, lettuce, tomatoes, onions, pickles. Served with a side of french fries.",1300],
+        ["El Toro Burger (Spicy)","7 oz ground beef patty, bacon, guacamole, jalapeños, pepper jack cheese, lettuce, tomatoes, onion, pickles. Served with a side of french fries.",1600],
+        ["Charlie Chaplin Burger (Chicken)","7oz ground chicken patty, swiss cheese, bacon, avocado, lettuce, tomatoes, onions, pickles. Served with a side of french fries.",1600],
+        ["Hawaiian Burger","",1895],
+        ["Smash Burger","",1695],
+        ["Cowboy Burger","",1895],
+        ["Spicy Crispy Chicken Burger","",1895],
+      ] },
+      { name: "Dinner: From the Grill", items: [
+        ["Rib-Eye Steak","14 oz hand-cut steak",3500],
+        ["Coulotte Steak","16 oz hand-cut steak",3000],
+        ["New York Steak","12 oz hand-cut steak",2800],
+        ["Grilled Chicken Breast","",2100],
+        ["Bone-In Pork Chop","",2200],
+      ] },
+      { name: "Dinner: Comfort Favorites", items: [
+        ["Spaghetti Dinner with Garlic Bread","Spaghetti, homemade ground beef marinara sauce, garlic bread, parmesan cheese.",2000],
+      ] },
+      { name: "Dinner: Sandwiches", items: [
+        ["BLT","Bacon, lettuce, tomatoes, and mayo.",1400],
+        ["Club Sandwich","Choice of turkey, ham, or both.",1600],
+        ["Cold Tuna Salad Sandwich","Freshly prepared cold tuna salad with choice of potatoes.",1300],
+        ["Patty Melt","Beef patty, grilled onions, swiss cheese on grilled rye bread.",1500],
+        ["Grilled Chicken Sandwich","Grilled chicken on a french roll.",1600],
+        ["Spicy Chicken Melt","Spicy grilled chicken, pepper jack cheese, bacon, lettuce, tomato, and avocado.",1900],
+        ["New York Steak Sandwich","Tender New York strip steak with melted cheese, lettuce, onions, served on a french roll, plus choice of potatoes.",2100],
+        ["Newark BLTA","Linguica, bacon, pepper jack cheese, lettuce, tomato, avocado.",1900],
+        ["Chef Genaro Chicken Melt","Grilled chicken, American cheese, lettuce, tomato, avocado, raw onions.",1700],
+        ["Grilled Cheese Sandwich","Our take on a classic. Customize with choice of cheese and bread.",1300],
+        ["Grilled Ham & Cheese","Grilled ham and cheese.",1400],
+        ["Grilled Bacon & Cheese","Delicious grilled bacon and cheese.",1400],
+        ["Grilled Turkey Cheese & Bacon","Grilled turkey, bacon, cheese.",1400],
+        ["Linguica on a French Roll","Linguica, served on a French Roll.",1400],
+        ["Tuna Melt","Grilled tuna salad, cheese, and bread.",1400],
+        ["Hella Spicy Tuna Melt","Spicy. Grilled tuna salad, pepper jack cheese. Jalapeño, avocado, tomatoes, lettuce, and bacon on grilled sourdough bread.",1900],
+        ["Fish Sandwich","Crispy battered fish with lettuce, tomatoes, mayo.",1700],
+      ] },
+      { name: "Dinner: Kids", items: [
+        ["Kid's Grilled Cheese with Fries","Served with fries",1200],
+        ["Chicken tenders & Fries","Crispy chicken strips paired with golden fries.",1200],
+        ["Kids Mac and Cheese Bites & Fries","Macaroni and cheese bites with a choice of potatoes or fruit.",1200],
+        ["Kid's Spaghetti with Garlic Bread","",1400],
+      ] },
+      { name: "Dinner: Desserts", items: [
+        ["Beignets","Each serving comes with 3 pieces of beignets with a delicious creme filling, served piping hot (careful!) and topped with drizzled chocolate and powdered sugar.",900],
+        ["Oreo Cheesecake","Smooth, creamy cheesecake with a chocolate Oreo crust, topped with a rich chocolate shell and a drizzle of white chocolate. Served with whipped cream and chocolate sauce. 🍫✨",900],
+        ["Sweet Surprise","Ask your server what's sweet today!",900],
+        ["Vanilla Ice Cream (Single Scoop)","",300],
+        ["Mini Ice Cream Sundae","Single scoop ice cream sundae in a small cup.",500],
+        ["Ice Cream Sundae","Double scoop ice cream sundae in a bowl.",800],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site (skilletz.cafe/menu).",
+  },
+
+  /*
      Sliceit Pizza — gathered 2026-09-21 from own-domain
      they are: Pizza
      logo: https://static-content.owner.com/bd186f9f-0209-4fd5-ae43-632d42b0b67e.png — not cut into a tile yet
@@ -13321,6 +14444,206 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     The Breeze Café — gathered 2026-09-23 from own
+     their spelling: "The Breeze Cafe" (roster keeps "The Breeze Café")
+     they are: Breakfast & lunch café
+     flag: Sources: thebreeze-cafe.com (www redirects there): home, /menu, the 18 /menu-* section pages, /catering, /reviews; plus the Toast ordering page the site links to (order.toasttab.com/online/the-breeze-cafe-39698-cedar-blvd). No CAPTCHA or bot check was shown. Toast loads an invisible reCAPTCHA script, but no challenge appeared, and its cookie banner was left untouched.
+     flag: Items, prices and descriptions come from the 18 text menu section pages. /menu also embeds a 5-page Canva menu. 1 item appears only there and was taken from it: Chilaquiles Verde $19 (Toast lists 'Chilaquiles Verdes' $20).
+     flag: LEFT OUT 4 items because the site's two menus give different prices: Espresso ($4 on the text page, $3.50 in the embedded menu; Toast 'double espresso' $3.50), Veggie Skillet ($24 vs $17; Toast $17), Organic Steelcut Oatmeal ($12 vs $17; not on Toast), Cup Of Soup ($4 vs $6; Toast $4).
+     flag: LEFT OUT 7 alcoholic drinks: Mimosas $10, Red Sangria $11, Bottle Beer $5.50, Michelada $10, Chavela $10, Mega Michelada $13, Mega Chavela $13.
+     flag: Items with no price: 0.
+     flag: HOURS set to null because the sources disagree. The website shows no hours. The Toast page ('Location and Ordering Hours', same in its schema.org data) says Sunday–Saturday 7:00AM–2:30PM every day. The Instagram bio says Mon–Thu 7am–2:30pm and Fri–Sun 7am–3pm. They disagree on the Fri–Sun closing time (2:30pm vs 3pm).
+     flag: The website shows no address or phone. Both come from the Toast ordering page: 39698 Cedar Blvd, Newark, CA 94560 (same as the given address) and (510) 270-8142. The email info@thebreeze-cafe.com is from the website's Catering page.
+     flag: Name: the website writes 'The Breeze Cafe' (no accent). Toast writes 'The Breeze Café'.
+     flag: Toast online prices differ from the site menu for 50 of the 111 dishes found on both. 49 are higher on Toast (e.g. The Breeze Breakfast Board $42 vs $35, California Benedict $18.50 vs $17) and 1 is lower (Veggie Skillet, left out above), so Toast prices were not used. Toast also lists items not on the site menu (2 crepes, more sides and sauces, more drinks); these were not added. Toast showed 'Currently not accepting online orders' when checked.
+     flag: 'from' is used where an entry lists an extra price (orange juice carafe $15.50; add fresh fruit $2; add chicken $3; add tri-tip $7). It is also used for every item in Breakfast Classics, Omelettes and Scrambles, whose section note offers 'add pancake. $2'; that note is appended to those descs. Section notes with no price were not copied: Skillets 'served choice of toast'; Breeze Benedicts 'served with choice of hash browns or country potatoes'; Sandwiches and Burgers 'served with soup of the day, salad, french fries or potato salad'.
+     flag: Only in the embedded menu, not applied to items: 'add espresso $3.25' for Iced Ube and Ube Latte; almond or oat milk +$.75; 'substitutions may be subject to an additional charge'. It also lists Soft Drinks as 'Pepsi, Diet Pepsi, Starry, Dr. Pepper' where the text page says 'sierra mist'.
+     flag: Small fixes: 'Fun Size Beneditc' on the text page is written 'Fun Size Benedict', as the embedded menu spells it. The Avocado Toast desc is taken from the embedded menu because the text page's copy is garbled ('...served with eggs any style egg any style style on sourdough'). 'Carnitas Breakfast' (text page, $17) is called 'Carnitas Benedict' in the embedded menu and on Toast; the text-page name was kept. Fresh Fruit ($8) is listed in both Healthy Options and Sides and both were kept.
+     flag: Not used: the Catering page has no prices (it only gives an email and an inquiry form); the Reviews page has only placeholder 'Lorem ipsum' text; the 'DOWNLOAD MENU' PDF was not opened because it is a file download.
+     flag: Raw texts saved next to this file: breeze_*.txt (site pages, Toast page, Toast hours) and breeze_canva_lines.txt (the embedded menu).
+  */
+  'the-breeze-cafe': {
+    address: "39698 Cedar Blvd, Newark, CA 94560",
+    phone: "(510) 270-8142",
+    email: "info@thebreeze-cafe.com",
+    cuisine: "Breakfast & lunch café",
+    sections: [
+      { name: "Beverages", items: [
+        ["Soft Drinks","pepsi, diet pepsi, sierra mist, Dr. Pepper",300],
+        ["Arnold Palmer","",350],
+        ["Apple Juice, Cranberry Juice","",400],
+        ["Lemonade, Pink Lemonade","",300],
+        ["Strawberry Lemonade, Shirley Temple","",450],
+        ["Fresh Orange Juice","carafe. $15.50",550,null,"from"],
+        ["Milk","",400],
+        ["Hot Chocolate","",400],
+        ["Coffee, Decaf Coffee","",375],
+        ["Americano","",400],
+        ["Cappuccino","",400],
+        ["Cafe Latte","",450],
+        ["Vanilla Latte","",500],
+        ["Mocha Cafe","",550],
+        ["Matcha Latte","",550],
+        ["Iced Caramel Macchiato","",650],
+        ["Iced Vanilla Latte","",600],
+        ["Iced Mocha","",600],
+        ["Iced Caramel Matcha","",650],
+        ["Iced Matcha","",550],
+        ["Iced Ube","",550],
+        ["Ube Latte","",550],
+        ["Hot Tea","",250],
+        ["Iced Brew Tea","",400],
+      ] },
+      { name: "Breakfast Boards", items: [
+        ["Berry Breakfast Boards","8 little pancakes with fresh strawberries, blueberries, raspberries, blackberries, whipped cream, syrup, bacon, sausage & ham.",3000],
+        ["French Toast Breakfast Board","classic french toast, croissant french toast, bread pudding french toast, grilled bananas, walnuts, raisins, whisky sauce, syrup cinnamon roll toast, whipped cream, bacon, sausage & ham.",3500],
+        ["The Breeze Breakfast Board","4 little pancakes, 4 pieces of waffles, 2 pieces of french toast with fresh strawberries, blueberries, raspberries, blackberries, bananas, whipped cream, syrup, bacon, sausage & ham.",3500],
+      ] },
+      { name: "Pancakes", items: [
+        ["Buttermilk Pancakes","powdered sugar & whipped cream.",1000],
+        ["Strawberry Pancakes","with powdered sugar & whipped cream.",1200],
+        ["Blueberry Pancakes","with powdered sugar & whipped cream.",1200],
+        ["Banana Pancakes","with powdered sugar & whipped cream.",1200],
+        ["Luna's S'mores Pancakes","2 buttermilk pancakes with chocolate sauce, marshmallows, crumbled graham crackers & topped with powdered sugar.",1200],
+        ["Cookies N’ Cream Pancakes","2 buttermilk pancakes filled with crumbled oreos, topped with powdered sugar, & whipped cream",1200],
+        ["Chocolate Chip Pancakes","2 buttermilk pancakes filled with chocolate chips & topped with powdered sugar & whipped cream.",1200],
+      ] },
+      { name: "Waffles", items: [
+        ["Classic Belgian Waffle","powdered sugar & whipped cream. add fresh fruit . $2",1000,null,"from"],
+        ["Chicken ‘N Waffle","belgian waffle with fried chicken.",1700],
+        ["Monkey Waffle","belgian waffle topped with nutella, bananas, powdered sugar & whipped cream.",1300],
+        ["Churro Waffle","belgian waffle topped with cinnamon sugar, strawberries & drizzled with dulce de leche.",1300],
+        ["Ube Waffle","Ube waffle topped with strawberries, drizzled with ube & whipped cream",1400],
+      ] },
+      { name: "French Toast", items: [
+        ["Classic French Toast","powdered sugar & whipped cream. add fresh fruit. $2",1000,null,"from"],
+        ["Tres Leches French Toast","thick brioche topped with powdered sugar, tres leches cream, strawberries & whipped cream.",1500],
+        ["Croissant French Toast","croissant topped with powdered sugar & whipped cream.",1400],
+        ["Bread Pudding French Toast","bread pudding, walnuts, raisins, topped with powdered sugar, grilled bananas, whipped cream & whisky sauce.",1400],
+        ["Cinnamon Roll French Toast","powdered sugar & whipped cream.",1400],
+      ] },
+      { name: "Breakfast Classics", items: [
+        ["Steak & Eggs","tri-tip steak & 3 eggs any style. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",2400,null,"from"],
+        ["Country Fried Steak & Eggs","with 3 eggs any style, country gravy & baked biscuit. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",2000,null,"from"],
+        ["Lox Salmon & Eggs","smoked salmon, sliced red onions, capers, sliced tomatoes, served with 2 eggs any style, served with a bagel. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",2200,null,"from"],
+        ["Ranchero Steak & Eggs","tri-tip steak strips & 2 eggs any style, topped with Ranchera sauce. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",2000,null,"from"],
+        ["The Classic","2 eggs any style, choice of bacon, sausage, ham, or linguica. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Corn Beef Hash & Eggs","corn beef hash & 2 eggs any style. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1800,null,"from"],
+      ] },
+      { name: "Skillets", items: [
+        ["Chipotle Skillet","tri-tip, mushrooms, bell peppers, onions, cheddar cheese with chipotle sauce, topped with eggs any style, sour cream & avocado, served with hashbrowns.",1800],
+        ["Breeze Skillet","linguica, mushrooms, onions, bell peppers, tomatoes, cheddar cheese, topped with eggs any style, sour cream & avocado, served with country potatoes.",1800],
+      ] },
+      { name: "Omelettes", items: [
+        ["Meat Lover’s Omelette","filled with bacon, sausage & ham, jack, american cheese & topped with pico de gallo. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1700,null,"from"],
+        ["Veggie Omelette","filled with tomatoes, spinach,mushrooms, onions, cheddar cheese & topped with avocado · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Californian Omelette","filled with mushrooms, green onions, tomatoes, jack & cheddar cheese & topped with sour cream & avocado. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Denver Omelette","four egg omelette filled with onions, bell peppers, ham, american cheese & topped with avocado · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Texas Omelette","filled with ground beef, onions, bell peppers, cheddar cheese & topped with fresh salsa. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Maserati Omelette","filled with italian sausage, mushrooms, onions, bell peppers, swiss cheese & topped with salsa. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["My Way Omelette","choose 5 ingredients, please ask your server for options. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1800,null,"from"],
+      ] },
+      { name: "Scrambles", items: [
+        ["Santa Ana Scramble","scrambled egg, chicken apple sausage, mushrooms, green onions, tomatoes, jack cheese, topped with sour cream. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Southern Scramble","scrambled egg, country sausage, country gravy, on top of a baked biscuit. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1700,null,"from"],
+        ["New York Scramble","scrambled egg, smoked salmon, green onions, jack cheese, & topped with avocado. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1700,null,"from"],
+        ["Breeze Scramble","scrambled egg, ground beef, onions, spinach, mushrooms, topped with swiss cheese & avocado. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+        ["Santa Cruz Scramble","scrambled egg, chicken apple sausage, mushrooms, tomatoes, spinach, swiss cheese, topped with fresh salsa. · served with choice of hash browns or country potatoes & choice of toast, tortillas, or add pancake. $2",1600,null,"from"],
+      ] },
+      { name: "Breeze Benedicts", items: [
+        ["Canadian Eggs Benedict","canadian bacon, poached eggs on an english muffin, topped with hollandaise sauce.",1650],
+        ["California Benedict","2 strips of bacon, avocado, tomatoes & poached eggs on an english muffin, topped with hollandaise sauce.",1700],
+        ["Breeze Benedict","tri-tip steak, bell peppers, jalapeños, onions, avocado & poached eggs on an english muffin, topped with hollandaise sauce.",1900],
+        ["Veggie Benedict","mushrooms, tomatoes, grilled onions, bellpeppers, avocado & poached eggs on an english muffin, topped with hollandaise sauce.",1600],
+        ["Crab Cakes Benedict","2 crab cakes, avocado & poached eggs on an english muffin, topped with hollandaise sauce.",1700],
+        ["Salmon Benedict","smoked salmon, red onion, capers & poached eggs on a bagel with cream cheese, topped with holandaise sauce.",2200],
+        ["Cordon Bleu Benedict","ham, swiss cheese & scrambled eggs, on a croissant, topped with holandaise sauce.",1600],
+        ["Corn Beef Hash Benedict","grilled bellpeppers, onions, corn beef hash & poached eggs on an english muffin, topped with holandaise sauce.",1800],
+      ] },
+      { name: "Sandwiches", items: [
+        ["B.L.T Sandwich","bacon, lettuce, tomatoes & mayo on your choice of toasted bread.",1350],
+        ["French Dip Sandwich","thinly sliced sirloin, topped with melted jack cheese on a grilled french roll, served with au jus.",1800],
+        ["Cheese Steak Sandwich","grilled sirloin steak, onions, bellpeppers, mushrooms, jack cheese on grilled french roll.",1700],
+        ["Turkey Acapulco Sandwich","turkey, jack cheese, green chiles, avocado on sourdough bread.",1650],
+        ["Tuna Melt Sandwich","tuna salad with melted cheddar cheese on rye bread.",1600],
+        ["The Cali Club Sandwich","ham, turkey, tomatoes, avocado & jack cheese on your choice of toasted bread.",1700],
+        ["Chicken Sandwich","chicken breast, jack cheese, lettuce, bacon & tomatoes on grilled sourdough.",1700],
+        ["Classic Club Sandwich","turkey, bacon, tomatoes, lettuce, mayo on white bread.",1600],
+        ["Breakfast Sandwich","Scrambled eggs, bacon, & cheddar cheese on a grilled croissant, served with choice of hashbrowns or country potatoes",1400],
+      ] },
+      { name: "Burgers", items: [
+        ["Brunch Burger","angus beef, fried egg, bacon, hashbrowns, american cheese, thousand island",1800],
+        ["Club Burger","angus beef, bacon, avocado, jack cheese, lettuce, tomato & mayo.",1700],
+        ["Cheese Burger","angus beef, cheddar cheese, lettuce, tomato & mayo.",1700],
+        ["Texas Burger","angus beef, grilled onions, bacon, cheddar cheese, bbq sauce, lettuce, tomato & mayo.",1700],
+        ["Spicy Cajun Burger","cajun seasoned angus beef, cheddar cheese, jalapeños, onions, lettuce, tomato & mayo.",1700],
+        ["Patty Melt Sandwich","angus beef, grilled onions, swiss cheese on rye bread.",1500],
+      ] },
+      { name: "A Taste Of Mexico", items: [
+        ["Breeze Burrito","four eggs stuffed with chorizo, onions ortega green chilies, tomatoes, cheddar cheese, rolled in a flour tortilla, served with fresh salsa & sour cream, with choice of hashbrowns or country potatoes.",1700],
+        ["Chilaquiles","eggs scrambled with corn tortillas, chorizo, onions, jalapeños, jack cheese & topped with salsa & tri-tip, served with choice of hashbrowns or country potatoes",2000],
+        ["Breakfast Quesadilla","flour tortilla stuffed with scrambled eggs, sausage, bacon, peppers, onions, cilantro, cheddar cheese & jack cheese, served with fresh salsa & sour cream, with choice of hashbrowns or country potatoes.",1700],
+        ["Chorizo Scramble","mexican chorizo, onions, avocado, tomatoes & topped with cheddar cheese and fresh salsa.",1500],
+        ["Machaca Scramble","scrambled egg, shredded beef, onions, tomatoes, cilantro, topped with salsa.",1500],
+        ["Mexicano Omelette","filled with jalapeño chilies, onions, tomatoes, avocado, refried beans, sour cream, jack cheese & topped with fresh salsa.",1600],
+        ["Chorizo Omelette","filled with mexican chorizo, onions, avocado, cheddar cheese & topped with fresh salsa.",1600],
+        ["Carnitas Skillet","pulled pork, mushrooms, bellpepers, onions, jack cheese, topped with two eggs any style, pico de gallo, salsa, avocado, sour cream, served with country potatoes.",1700],
+        ["Carnitas Breakfast","pulled pork, tomatoes, grilled onions, avocado & poached eggs on an english muffin, topped with fresh salsa.",1700],
+        ["Huevos Rancheros","fried tortillas, topped with refried beans, eggs any style, jack cheese, & ranchera sauce.",1600],
+        ["Fajita Omelette","Tri-tip meat, onions, bell peppers, mushrooms, American cheese, topped with sour cream& avocado.",1600],
+        ["Spicy Chilaquiles","Corn tortillas in red sauce, onions, jalapeños, topped with cotija cheese & sour cream, served with eggs any style & black beans. Add tri- tip $7",1900,null,"from"],
+        ["Chilaquiles Verde","Corn tortillas in green sauce, onions, topped with jack cheese, cilantro, red onions & sour cream, served with eggs any style.",1900],
+      ] },
+      { name: "Salads", items: [
+        ["Chicken Caesar Salad","grilled chicken breast, romaine lettuce, croutons, grated parmesan cheese & caesar dressing.",1600],
+        ["Cobb Salad","turkey, ham, bacon, blue cheese crumble, cheddar cheese, avocado, tomatoes, chopped lettuce with your choice of dressing.",1600],
+        ["Greek Salad","olives, feta cheese, cucumbers, red onions, tomatoes, romaine with greek dressing. add chicken. $3",1500,null,"from"],
+        ["Chicken Breast Salad","iceberg lettuce, tomatoes, corn, black beans, cilantro, avocado, tortilla chips, with balsamic vinaigrette",1600],
+      ] },
+      { name: "Healthy Options", items: [
+        ["Avocado Toast","fresh avocado, topped with everything bagel seasoning, grape tomatoes, red onions on sourdough toast, served with eggs any style.",1600],
+        ["Yogurt Parfait","layered greek yogurt with honey, fresh strawberries, blueberries & granola.",1200],
+        ["Fresh Fruit","cup of seasonal fruit.",800],
+        ["Protein Scramble","egg whites scrambled with chicken apple sausage, mushrooms, aspargus, spinach, onions & garlic",1700],
+        ["Healthy Omelette","egg whites omelette filled with turkey burger, tomatoes, mushrooms, avocado, cheddar cheese.",1700],
+      ] },
+      { name: "Funsize Breakfast", items: [
+        ["Fun Size Omelette","half order of any omelette.",1300],
+        ["Fun Size Benedict","half order of any benedict.",1300],
+        ["Fun Size French Toast","half order of classic french toast or tres leches french toast.",800],
+        ["Fun Size Pancakes","4 little pancakes of your choice.",1100],
+        ["Fun Size Breeze","one egg & fresh hashbrowns, served with a biscuit & country gravy.",1000],
+      ] },
+      { name: "Kid's Menu", items: [
+        ["Kid's Belgian Waffle","with 2 strips of bacon or link sausages & eggs.",900],
+        ["Kid’s Pancakes","2 little pancakes served with 2 strips of bacon or link sausage & eggs.",1000],
+        ["Kid’s French Toast","1 slice of french toast with 2 strips of bacon or link sausages & eggs.",900],
+        ["My Egg","1 egg with 2 strips of bacon or link sausages.",800],
+        ["Kid’s Cheese Burger","served with fries.",900],
+        ["Kid’s Grilled Cheese Sandwich","served with fries.",800],
+        ["Kid’s Chicken Tenders","served with fries.",800],
+      ] },
+      { name: "Sides", items: [
+        ["Bowl Of Soup","",600],
+        ["Fresh Fruit","cup of seasonal fruit.",800],
+        ["Ham","",600],
+        ["Linguica","",700],
+        ["Bacon","",600],
+        ["Link Sausage","",600],
+        ["Country Sausage","",700],
+        ["Toast","",200],
+        ["Hashbrown","",500],
+        ["Country Potatoes","",500],
+        ["Fries","",500],
+        ["Two Eggs","",500],
+        ["Half Avocado","",350],
+        ["Side Of Tortillas","",250],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site; their online-ordering prices can differ.",
+  },
+
+  /*
      The Cozy Oven — gathered 2026-09-21 from none
      they are: Custom cakes
      flag: Glenn: “New new. Needs Website and pilot program.” No website; their bio says DM for menu and order form, and email for business inquiries.
@@ -13759,6 +15082,37 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Lymphatic body sculpting",
     tagline: "Lymphatic body sculpting at Alamo Plaza, The Tox Technique",
     contactOnly: "Lymphatic body sculpting at Alamo Plaza, The Tox Technique. The studio books through its link in bio; The Tox Technique's site lists the treatments, the 60-minute Master Tox and the 100-minute Master Tox with sculpting facial, without prices.",
+  },
+
+  /*
+     The Yakitori Bar — gathered 2026-09-23 from own
+     they are: Japanese yakitori
+     flag: Sources (own site only, all loaded normally, no CAPTCHA or bot check): theyakitoribar.us home, /our-menu/ (the VIEW MENU target), /drinks-menu/, /contact-us/, /gallery/, the reposted 'First Look' article page, and the WordPress sitemaps.
+     flag: MENU IS IMAGE-ONLY: /our-menu/ has no menu text, only 3 JPG pages. All 40 food items and prices were transcribed from those images at full resolution and checked tile by tile. Every price was clearly printed and nothing was guessed. Transcription: yakitori-menu-images-transcription.txt. Drop the items if image-read prices are not acceptable.
+     flag: Freshness: the menu images were uploaded Aug 2021, the site footer says (c) 2021, and /our-menu/ was last modified Dec 2021. Prices may be out of date.
+     flag: SUSHI / RAMEN: neither appears anywhere on the food menu. The closest rice item is Grilled Rice Ball (Yaki Onigiri). The 2021 press article reposted on the site calls the place 'a more laid back, yakitori-only affair'.
+     flag: Alcohol left out: /drinks-menu/ is 4 image pages, entirely sake. That is 29 entries in 7 sections (Dry/Smooth, Fruity/Citrusy, Rich/Grains, Woody/Earthy, Unique/Special incl. plum wine, Flight/House, Limited/Reserved), all excluded. No beer and no non-alcoholic drinks are listed.
+     flag: 'Fresh Salmon (Sake)' is a salmon skewer, not alcohol, so it is kept.
+     flag: Items without a price: 0.
+     flag: Hours confirmed on the site (header, Contact page and footer): 'TUE - SUN : 5 PM - 12 AM', 'MON : CLOSED'. This matches the Instagram bio 'Open Tue - Sun'.
+     flag: PHONE CONFLICT: the site shows 510-573-6683 everywhere (header, Contact page, footer and the printed menu). The Instagram number (415) 828-0989 appears nowhere on the site. Used the site's number.
+     flag: EMAIL NOT CONFIRMED: the site lists no email (the Contact page has only a form, which was not used). theyakitoribar@gmail.com from Instagram is unconfirmed, so email is null.
+     flag: Address confirmed exactly: '46260 Warm Springs Blvd, Unit 529, Fremont CA, 94539' (the reposted article says 'Suite 529').
+     flag: The site links to instagram.com/theyakitoribar and facebook.com/TheYakitoriBar. The instagram field is left null per the template.
+     flag: Menu wording: the menus are printed in all caps. Names are converted to title case with spelling kept as printed ('Avacado', 'Hiza Nankotus', 'Shishitou', 'Yashi Gushi'). Menu numbers were dropped. 'W_' printed on three items is written 'w/'. desc holds the menu's own portion text ('Skewer- 2', 'Whole', 'Half' and so on); the Snacks page has no descriptions.
+     flag: The chicken page says the restaurant now serves 'Jidori(R) Chicken', raised locally range-free at small farms in Los Angeles. The site itself never says 'organic' (the Instagram bio does).
+     flag: Ignored as WordPress theme demo content (on the domain but not linked in the site navigation): /our-menu/boxed/ and /menu-cat/* (Tuna Nicoise, Haddock, Pizza/Salads/Soups/Desserts, lorem ipsum), the /reservation/ 'Book a Table' demo form, and the 'John Doe / Jane Doe' placeholder reviews on the homepage.
+     flag: The 'First Look' article (June 2, 2021) is third-party press reposted on the site. It was used only to corroborate hours and the no-sushi point, never for items or prices; its 2021 prices differ from the menu images.
+     flag: On review: the 40 prices read from the menu pictures are not carried, as with HL Peninsula and Street Social, whose menus were also pictures; these are from 2021 besides.
+     flag: On review: email from the Contact sheet of their own Instagram (Glenn's screenshot), since the site lists none; the phone is the site's (510) 573-6683, not the Instagram's (415) 828-0989, as with Napa Yard and Brezo.
+  */
+  'the-yakitori-bar': {
+    address: "46260 Warm Springs Blvd, Unit 529, Fremont, CA 94539",
+    phone: "(510) 573-6683",
+    email: "theyakitoribar@gmail.com",
+    hours: "Tue-Sun 5pm-12am",
+    cuisine: "Japanese yakitori",
+    contactOnly: "Their menu is three pictures on their own site, dated 2021, so no prices are carried here.",
   },
 
   /*

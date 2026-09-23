@@ -553,6 +553,20 @@ for (const [s, what] of [
   ['icon:"cravingz"', "Cravingz's logo"],
   /* 10:16 pm: "Can you add her ig plz Janelle asked". */
   ['instagram:"thebeaudegabymaine"', "The BeauDega by Maine's Instagram button"],
+  /* 2026-09-23, morning: Janelle's friends with their glows, The Yakitori
+     Bar, Gold Bean's four shops, and the green glow. */
+  ['"fremont-goods-0":"b_billyroysburgerco"', "Billy Roy's on Fremont Burgers"],
+  ['"fremont-goods-13":"b_skilletzcafe"', "Skillet'z on Fremont's coffee seat"],
+  ['"hayward-services-7":"b_garageworks"', 'Garageworks on Hayward Services'],
+  ['"newark-goods-13":"b_thebreezecafe"', "The Breeze on Newark's coffee seat"],
+  ['"union-city-goods-10":"b_macsbyicky"', 'Macs by Icky on Union City Filipino food'],
+  ['"union-city-goods-2":"b_theune"', 'The Une on Union City Asian food'],
+  ['"fremont-goods2-0":"b_theyakitoribar"', "The Yakitori Bar on Fremont's yellow sheet"],
+  ['"san-leandro-goods-13":"b_goldbeansanleandro"', 'Gold Bean San Leandro'],
+  ['"pleasanton-goods-13":"b_goldbeanpleasanton"', 'Gold Bean Pleasanton'],
+  ['"berkeley-goods2-2":"b_goldbeandurant"', 'Gold Bean Durant on the Berkeley yellow sheet'],
+  ['icon-glow-green', 'the green glow keyframes'],
+  ['Eligible to earn money', 'the BEASTY PASS row'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],

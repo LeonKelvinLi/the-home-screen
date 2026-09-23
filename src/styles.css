@@ -10004,6 +10004,19 @@ textarea {
   opacity: 0.78;
 }
 
+/* TAP HERE in his markup: bold and underlined in the card's own ink, so it
+   reads as the thing to tap on the white card and on the dark one. */
+.members-perk-link {
+  color: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  /* A bigger place to tap than the words, without moving them. */
+  padding: 8px 2px;
+  margin: -8px -2px;
+}
+
 /* ---------- the member's own code and what it earned ---------- */
 
 .mp { display: flex; flex-direction: column; gap: 4px; }
@@ -11316,6 +11329,66 @@ textarea {
   }
 }
 
+
+/*
+  GREEN, for The Breeze Café, 2026-09-23: "Give them a green glow". A bright
+  green, #2EE678, that reads on the dark wallpapers the way the pink and the
+  Nipsey blue do, run at the blue's strengths.
+*/
+.icon-tile.is-glow.is-glow-green {
+  animation-name: icon-glow-green;
+}
+
+@keyframes icon-glow-green {
+  0%,
+  100% {
+    box-shadow:
+      0 0 8px 3px rgba(46, 230, 120, 0.95),
+      0 0 20px 8px rgba(46, 230, 120, 0.6);
+  }
+  50% {
+    box-shadow:
+      0 0 14px 6px rgba(46, 230, 120, 1),
+      0 0 34px 14px rgba(46, 230, 120, 0.75);
+  }
+}
+
+.icon-tile.is-nosite.is-glow.is-glow-green {
+  animation-name: icon-glow-green-nosite;
+}
+
+@keyframes icon-glow-green-nosite {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 10px 7px rgba(46, 230, 120, 0.95),
+      0 0 22px 10px rgba(46, 230, 120, 0.6);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 16px 9px rgba(46, 230, 120, 1),
+      0 0 36px 15px rgba(46, 230, 120, 0.75);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile.is-glow.is-glow-green {
+    box-shadow:
+      0 0 12px 5px rgba(46, 230, 120, 1),
+      0 0 28px 11px rgba(46, 230, 120, 0.65);
+  }
+  .icon-tile.is-nosite.is-glow.is-glow-green {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 14px 8px rgba(46, 230, 120, 1),
+      0 0 30px 12px rgba(46, 230, 120, 0.65);
+  }
+}
 
 /* ---- The pass: the rotating code on the member card ---- */
 .member-code-name {
