@@ -10004,6 +10004,19 @@ textarea {
   opacity: 0.78;
 }
 
+/* TAP HERE in his markup: bold and underlined in the card's own ink, so it
+   reads as the thing to tap on the white card and on the dark one. */
+.members-perk-link {
+  color: inherit;
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  white-space: nowrap;
+  /* A bigger place to tap than the words, without moving them. */
+  padding: 8px 2px;
+  margin: -8px -2px;
+}
+
 /* ---------- the member's own code and what it earned ---------- */
 
 .mp { display: flex; flex-direction: column; gap: 4px; }

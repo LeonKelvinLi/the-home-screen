@@ -114,7 +114,19 @@ function PerkRow({ perk }: { perk: Perk }) {
           />
         </svg>
       </button>
-      {open && <p className="members-perk-body">{perk.detail}</p>}
+      {open && (
+        <p className="members-perk-body">
+          {perk.detail}
+          {perk.link && (
+            <>
+              {' '}
+              <a className="members-perk-link" href={perk.link.href}>
+                {perk.link.label}
+              </a>
+            </>
+          )}
+        </p>
+      )}
     </li>
   )
 }

@@ -205,6 +205,23 @@ if (both !== 2) fails.push(`opening a row on the second card left ${both} open, 
 if (survived.bodies !== 2 || survived.expanded !== 2) fails.push(`a perk closed itself on re-render — ${survived.expanded} open after 3.6s, expected 2. This is the About-page glitch again: a component declared inside a render body.`)
 if (bad.length) fails.push('failed requests: ' + [...new Set(bad)].join(', '))
 
+/*
+  HIS MARKUP OF 2026-09-23: "Eligible to earn money" on the BEASTY PASS card,
+  and TAP HERE in it opening MAKE $ at /money ("can you create a link to the
+  MAKE $ page ... when they press TAP HERE?").
+*/
+const earn = await p.evaluate(async () => {
+  const card = [...document.querySelectorAll('.members-plan')].find((c) => /BEASTY\s*PASS/.test(c.querySelector('.members-plan-name')?.textContent || ''))
+  const head = [...(card?.querySelectorAll('.members-perk-head') ?? [])].find((h) => /Eligible to earn money/.test(h.textContent || ''))
+  head?.click()
+  await new Promise((r) => setTimeout(r, 250))
+  const a = card?.querySelector('.members-perk-link')
+  return { row: !!head, text: a?.textContent?.trim() ?? null, href: a?.getAttribute('href') ?? null }
+})
+console.log('earn money    :', JSON.stringify(earn))
+if (!earn.row) fails.push('the BEASTY PASS card has no "Eligible to earn money" row')
+if (earn.text !== 'TAP HERE' || earn.href !== '/money') fails.push(`TAP HERE should open MAKE $ at /money, found ${JSON.stringify(earn)}`)
+
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); await done(1) }
 console.log('\nPASS: two passes, every perk on one line, opening one explains it and it stays open.')
 await done(0)

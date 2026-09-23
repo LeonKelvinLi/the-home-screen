@@ -82,6 +82,8 @@ export type Perk = {
   label: string
   /** His full sentence, shown when the row is opened. */
   detail: string
+  /** A link after the sentence, where his markup puts one. */
+  link?: { label: string; href: string }
 }
 
 /** $10 off for every 3 sign-ups, and 1 raffle ticket for every 3. His numbers. */
@@ -154,6 +156,18 @@ export const TIERS: Tier[] = [
         label: '20% off BEASTY Goods',
         detail:
           '20% off any BEASTY Goods purchase from the up-and-coming BEASTY website.',
+      },
+      /*
+        HIS MARKUP OF THIS CARD, 2026-09-23: a row of its own under the last
+        one, in his words, and "hey bro, can you create a link to the MAKE $
+        page from the landing page so they can read the information from there
+        when they press TAP HERE?" TAP HERE opens beastypages.com/money, the
+        address he already shares for MAKE $, which lands on that panel.
+      */
+      {
+        label: 'Eligible to earn money',
+        detail: 'Eligible to earn extra money through our limited time BARK rewards program.',
+        link: { label: 'TAP HERE', href: '/money' },
       },
     ],
   },
