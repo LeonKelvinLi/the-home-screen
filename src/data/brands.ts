@@ -137,8 +137,8 @@ export interface Brand {
   needsSite?: true
   /** One of BEASTY's own owners, never outlined. See LocalSeed.beastyOwner. */
   beastyOwner?: true
-  /** The paid icon glow. See LocalSeed.glow. */
-  glow?: true | 'pink' | 'blue'
+  /** The paid icon glow, or the Scan button's light sweep. See LocalSeed.glow. */
+  glow?: true | 'pink' | 'blue' | 'sweep'
   /**
    * Which affiliate tier this page is drawn at. See data/affiliateTiers.ts.
    *
@@ -386,8 +386,8 @@ interface Seed {
   needsSite?: true
   /** One of BEASTY's own owners, never outlined. See LocalSeed.beastyOwner. */
   beastyOwner?: true
-  /** The paid icon glow. See LocalSeed.glow. */
-  glow?: true | 'pink' | 'blue'
+  /** The paid icon glow, or the Scan button's light sweep. See LocalSeed.glow. */
+  glow?: true | 'pink' | 'blue' | 'sweep'
   /**
    * Which affiliate tier this page is drawn at. See data/affiliateTiers.ts.
    *

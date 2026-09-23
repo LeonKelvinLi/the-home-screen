@@ -82,11 +82,12 @@ export interface Owner {
 /*
   LEON, 2026-09-22. Glenn: "I think under contacts you should include your
   information. At least an email and your title. Right below, Janelle's."
-  Leon chose the title Co-Founder/CTO and no email for now, so the line is
-  his name under that title; an address goes in here when he has one to show.
+  Leon chose Co-Founder/CTO and no email for now; that evening Glenn asked to
+  "flip your title? CTO/CO-FOUNDER", the role first like his own and
+  Janelle's. An address goes in here when Leon has one to show.
 */
 export const OWNERS: Owner[] = [
   { name: 'Glenn', role: 'CEO/Founder', phone: OPERATOR.phone, email: OPERATOR.email },
   { name: 'Janelle', role: 'Co-CEO/Co-Founder', phone: '510-674-8011', email: 'janellenicole@beastypages.com' },
-  { name: 'Leon', role: 'Co-Founder/CTO', phone: '', email: '' },
+  { name: 'Leon', role: 'CTO/Co-Founder', phone: '', email: '' },
 ]

@@ -506,7 +506,7 @@ for (const s of [
   'Text or email is preferred', 'operator-note-preferred',
   /* 2026-09-22: Contacts gets a drop-down per letter, its Share button and
      link, Janelle's mailbox, and Leon's line under his title. */
-  'contacts-letter', 'BEASTY contacts', 'janellenicole@beastypages.com', 'Co-Founder/CTO',
+  'contacts-letter', 'BEASTY contacts', 'janellenicole@beastypages.com', 'CTO/Co-Founder', '& growing', 'the-beaudega-by-maine', 'is-sweep',
   'BEASTY Affiliate Member', 'Affiliate tiers', 'Get in touch', 'Referral Klub (BARK)',
   'sin-city-pits-breeder', 'brand-photos-track',
   /* The four reels the sweep found never attached. */

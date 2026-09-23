@@ -48,8 +48,8 @@ export interface AppDef {
    * button the day somebody added one.
    */
   noSite?: true
-  /** The paid icon glow, Tier 3. See LocalSeed.glow. */
-  glow?: true | 'pink' | 'blue'
+  /** The paid icon glow, Tier 3, or the Scan button's sweep. See LocalSeed.glow. */
+  glow?: true | 'pink' | 'blue' | 'sweep'
   /**
    * Jump to a home-screen PAGE rather than open a window.
    *

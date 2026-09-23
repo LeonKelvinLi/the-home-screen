@@ -11058,6 +11058,42 @@ textarea {
   color: rgba(20, 20, 20, 0.72);
 }
 
+/*
+  THE SCAN BUTTON'S SWEEP, on a business's own tile. Glenn, 2026-09-22, for
+  The BeauDega by Maine: "Can you give her icon that glow thing like on the
+  scan button?" The same light and the same clip-sweep movement as the
+  Designs and Share & Scan dock icons, clipped to the tile's rounded square
+  (24%, the figure the rings use) so it crosses the artwork and never the
+  corners. The red "no website" ring is a box-shadow, which a clip does not
+  touch, so a tile can wear both.
+*/
+.icon-tile.is-sweep {
+  position: relative;
+  overflow: hidden;
+  border-radius: 24%;
+}
+
+.icon-tile.is-sweep::after {
+  content: '';
+  position: absolute;
+  inset: -40% -120%;
+  background: linear-gradient(
+    76deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.4) 50%,
+    transparent 58%
+  );
+  animation: clip-sweep 4.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile.is-sweep::after {
+    animation: none;
+    opacity: 0.35;
+  }
+}
+
 /* ---------- the paid icon glow, Tier 3's "+$6" ---------- */
 
 /*

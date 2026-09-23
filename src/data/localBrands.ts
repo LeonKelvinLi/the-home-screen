@@ -95,8 +95,13 @@ export interface LocalSeed {
    * told me if you could do a Nipsey blue glow rather. It's her favorite
    * color" (2026-09-21). The colour is the only difference; the rule for who
    * gets one is the same.
+   *
+   * `'sweep'` is not a halo: it is the light that crosses the Designs and
+   * Share & Scan dock icons, run across the tile's own artwork. His ask of
+   * 2026-09-22 for The BeauDega by Maine: "Can you give her icon that glow
+   * thing like on the scan button?"
    */
-  glow?: true | 'pink' | 'blue'
+  glow?: true | 'pink' | 'blue' | 'sweep'
   /** Which affiliate tier this page is drawn at. See brands.ts. */
   tier?: 1 | 2 | 3
   phone?: string

@@ -52,9 +52,10 @@ interface Props {
   /**
    * The paid icon glow, Tier 3's "+$6". A halo around the tile; not spoken,
    * because unlike the mobile and no-website rings it carries no fact about
-   * the business — it is decoration somebody bought.
+   * the business — it is decoration somebody bought. `'sweep'` is instead the
+   * Scan button's light crossing the artwork (see LocalSeed.glow).
    */
-  glow?: boolean | 'pink' | 'blue'
+  glow?: boolean | 'pink' | 'blue' | 'sweep'
 }
 
 function AppIconBase({
@@ -133,7 +134,7 @@ function AppIconBase({
         .join(', ')}
     >
       <span
-        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}${glow ? ' is-glow' : ''}${typeof glow === 'string' ? ` is-glow-${glow}` : ''}`}
+        className={`icon-tile${mobile ? ' is-mobile' : ''}${noSite ? ' is-nosite' : ''}${glow === 'sweep' ? ' is-sweep' : glow ? ' is-glow' : ''}${typeof glow === 'string' && glow !== 'sweep' ? ` is-glow-${glow}` : ''}`}
         style={{ width: size, height: size }}
       >
         {icon}
