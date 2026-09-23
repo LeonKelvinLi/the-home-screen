@@ -543,6 +543,14 @@ for (const [s, what] of [
   ['"beasty-services2-21":"b_drcomicsmrgames"', 'Dr. Comics on the BEASTY services yellow sheet'],
   /* 2026-09-22, 9:28 pm: ABVE the Basics beside Bay Area Event Lights. */
   ['"san-jose-services2-3":"b_abvethebasics"', "ABVE the Basics on San Jose's yellow Services sheet"],
+  /* 2026-09-22, 9:54 to 10:10 pm: Black Crown in Pittsburg, Cravingz in
+     Redwood City and on BEASTY • Goods 10, SIA moved to BEASTY • Online. */
+  ['"pittsburg-services-3":"b_blackcrowntattoo"', 'Black Crown on Pittsburg Services'],
+  ['"redwood-city-goods-11":"b_cravingz"', 'Cravingz on Redwood City Goods'],
+  ['"b_pippal","b_cravingz","b_belly"', 'Cravingz in BEASTY • Goods 10'],
+  ['"beasty-online-3":"b_siacollective"', 'SIA Collective on BEASTY • Online'],
+  ['icon:"black-crown-tattoo"', "Black Crown's crest"],
+  ['icon:"cravingz"', "Cravingz's logo"],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],
