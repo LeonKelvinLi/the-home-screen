@@ -7,6 +7,7 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { api } from './api'
+import { site } from './api'
 import type { LeadSummary, Offer, Person, ReferrerMetrics } from './api'
 import { Avatar, Empty, Failure, Loading, PageTitle, Section, StagePill, Stat, Tile, dateTime, money, pct, plural, useApi, useCrm } from './ui'
 import { Icon } from './icons'
@@ -15,7 +16,7 @@ import { NewLead } from './leads'
 import { PeriodPicker } from './views'
 import { placeLine } from './steps'
 
-const linkFor = (slug: string) => `${window.location.origin}/r/${slug}`
+const linkFor = (slug: string) => `${site.origin}/r/${slug}`
 
 function CopyLink({ slug }: { slug: string }) {
   const [copied, setCopied] = useState(false)

@@ -619,9 +619,28 @@ ALTER TABLE applications ADD COLUMN IF NOT EXISTS email TEXT;
  * top-level schema build would race the first request and fail intermittently
  * on a cold start — the worst kind of bug to reproduce.
  */
+/*
+  ONE BOOT AT A TIME. beastypages.com and the CRM's own service share this
+  database and deploy from the same push, so two boots can run this at once,
+  and two CREATE ... IF NOT EXISTS for the same table collide in Postgres's
+  catalog: two migrate() calls on a fresh database failed three runs out of
+  three ("duplicate key value violates unique constraint
+  pg_type_typname_nsp_index"). A session lock makes the second wait for the
+  first, after which every statement in it is a no-op. A crash mid-way ends
+  the session, and the lock with it.
+*/
+const MIGRATE_LOCK = 72409222
+
 export async function migrate() {
-  await pool.query(SCHEMA)
-  await pool.query(MIGRATIONS)
-  // The CRM's tables, after everything they reference (members, applications).
-  await pool.query(CRM_SCHEMA)
+  const client = await pool.connect()
+  try {
+    await client.query('SELECT pg_advisory_lock($1)', [MIGRATE_LOCK])
+    await client.query(SCHEMA)
+    await client.query(MIGRATIONS)
+    // The CRM's tables, after everything they reference (members, applications).
+    await client.query(CRM_SCHEMA)
+  } finally {
+    await client.query('SELECT pg_advisory_unlock($1)', [MIGRATE_LOCK]).catch(() => {})
+    client.release()
+  }
 }

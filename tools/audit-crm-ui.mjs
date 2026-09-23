@@ -86,7 +86,9 @@ watch(p, 'phone')
 
 /* ================================================================ sign in */
 await p.goto(`${base}/crm`, { waitUntil: 'networkidle' })
-check('signed out, /crm asks for a key', await p.locator('.crm-signin-card').isVisible())
+check('signed out, /crm asks who you are', await p.locator('.crm-signin-card').isVisible())
+check('with a code to your BEASTY account first', await p.locator('.crm-signin-card button:has-text("Send me a code")').isVisible())
+await p.click('button:has-text("Have the operator key?")')
 const robots = await p.evaluate(() => document.querySelector('meta[name="robots"]')?.getAttribute('content'))
 check('the screen tells search engines to stay out', /noindex/.test(robots ?? ''))
 await p.fill('input[type="password"]', 'not-the-key-not-the-key')
@@ -447,6 +449,29 @@ const verified = await pp.evaluate(async ({ e, c }) => (await fetch('/api/member
 check('a partner signs in to BEASTY the usual way', started < 300 && verified < 300, `${started}, ${verified}`)
 await pp.reload({ waitUntil: 'networkidle' })
 check('with no CRM role yet, /crm says so', /no CRM role yet/.test(await pp.textContent('.crm-signin-card')))
+/* The CRM's own card: a code to the account they have, on a phone that has
+   never signed in, which is how it works where the CRM has its own address. */
+{
+  const cardCtx = await browser.newContext({ viewport: { width: 393, height: 852 }, isMobile: true, hasTouch: true })
+  const cp = await cardCtx.newPage()
+  watch(cp, 'card')
+  await cp.goto(`${base}/crm`, { waitUntil: 'networkidle' })
+  const codesBefore = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${email} `)).length
+  await cp.fill('.crm-signin-card input[type="email"]', email)
+  await cp.click('button:has-text("Send me a code")')
+  await cp.waitForSelector('.crm-signin-card >> text=code is on its way')
+  let cardCode
+  for (let i = 0; i < 20 && !cardCode; i++) {
+    await new Promise((r) => setTimeout(r, 250))
+    const lines = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${email} `))
+    if (lines.length > codesBefore) cardCode = lines.pop()?.match(/ (\d{6}) /)?.[1]
+  }
+  await cp.fill('.crm-signin-card input[autocomplete="one-time-code"]', cardCode ?? '')
+  await cp.click('.crm-signin-card button:has-text("Sign in")')
+  const inByCard = await cp.waitForSelector('.crm-signin-card >> text=no CRM role yet', { timeout: 10000 }).then(() => true, () => false)
+  check('the card signs a member in with a code sent to their account', !!cardCode && inByCard)
+  await cardCtx.close()
+}
 const pid = await d.evaluate(async (e) => {
   const r = await fetch('/api/crm/people', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'Pat Partner', slug: 'pat', sourceType: 'influencer', role: 'partner', memberEmail: e }) })
   return (await r.json()).id

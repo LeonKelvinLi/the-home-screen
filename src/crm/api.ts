@@ -14,6 +14,14 @@ export class ApiError extends Error {
   }
 }
 
+/*
+  WHERE THE PUBLIC SITE IS. The CRM can run at an address of its own (CRM_ONLY
+  on the server), and a referral link, its QR code or "Go to beastypages.com"
+  must still open the site. /api/crm/me says where; until it has, and whenever
+  the CRM is on the site itself, it is this page's own origin.
+*/
+export const site = { origin: window.location.origin }
+
 export async function api<T>(path: string, init: { method?: string; body?: unknown } = {}): Promise<T> {
   const res = await fetch(path, {
     method: init.method ?? 'GET',

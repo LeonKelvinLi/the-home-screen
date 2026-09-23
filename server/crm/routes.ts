@@ -272,7 +272,8 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
       res.set('Cache-Control', 'no-store')
       const who = await crmActor(req, deps)
       const member = who ? null : await deps.memberFromRequest(req)
-      res.json({ actor: who, member: member ? { name: member.name } : null })
+      /* publicUrl: where the CRM's links must open, when it has its own address. */
+      res.json({ actor: who, member: member ? { name: member.name } : null, publicUrl: deps.publicUrl || null })
     }),
   )
 
@@ -864,7 +865,7 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
       const p = await db.prepare('SELECT slug FROM crm_people WHERE id = ?').get<{ slug: string }>(String(req.params.id))
       if (!p) throw new CrmError(404, 'No such person.')
       const host = String(req.get('host') ?? '').replace(/[^A-Za-z0-9.:-]/g, '') || 'beastypages.com'
-      const origin = deps.prod ? `https://${host}` : `${req.protocol}://${host}`
+      const origin = deps.publicUrl || (deps.prod ? `https://${host}` : `${req.protocol}://${host}`)
       const { toString } = await import('qrcode')
       const svg = await toString(`${origin}/r/${p.slug}?via=qr`, { type: 'svg', margin: 2, errorCorrectionLevel: 'M' })
       res.type('image/svg+xml').set('Cache-Control', 'private, max-age=3600').send(svg)

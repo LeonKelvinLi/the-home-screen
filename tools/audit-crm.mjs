@@ -494,6 +494,97 @@ check('in open mode, /crm needs no key and everyone is Glenn', openMe?.actor?.na
 openSrv.kill()
 try { await openDb.drop?.() } catch {}
 
+/* ---- sign-in only: the CRM's card never makes an account ---- */
+/* The sign-in route allows four quick requests; after that each waits its turn. */
+async function startCode(body) {
+  let r
+  for (let i = 0; i < 4; i++) {
+    r = await call('POST', '/api/members/start', { body })
+    if (r.status !== 429) break
+    await sleep(8000)
+  }
+  return r
+}
+const stranger = `stranger-${port}@example.invalid`
+const soStart = await startCode({ name: 'BEASTY team', email: stranger, signinOnly: true })
+await sleep(600)
+check('the CRM card answers an unknown address like a known one', soStart.status === 202 && soStart.body.sent === true)
+check('but sends it no code', !readFileSync(LOG, 'utf8').includes(`[login-code] ${stranger} `))
+/* A code made for joining (the site's own sign-up) is not spent by the card. */
+const joiner = `joiner-${port}@example.invalid`
+await startCode({ name: 'Jo Iner', email: joiner })
+let jcode
+for (let i = 0; i < 20 && !jcode; i++) { await sleep(250); jcode = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${joiner} `)).pop()?.match(/ (\d{6}) /)?.[1] }
+const viaCard = await call('POST', '/api/members/verify', { body: { email: joiner, code: jcode, signinOnly: true } })
+check('the card will not turn a joining code into an account', viaCard.status === 403 && /no BEASTY account/.test(viaCard.body.error ?? ''), `${viaCard.status}`)
+const viaSite = await call('POST', '/api/members/verify', { body: { email: joiner, code: jcode }, j: jar() })
+check('and the same code still finishes joining on the site', viaSite.status === 201, `${viaSite.status}`)
+
+/* ---- the CRM at an address of its own: CRM_ONLY, on the same database ---- */
+{
+  const PUBLIC = 'http://public.example.invalid'
+  const crmPort = await freePort()
+  const crmLogPath = `/tmp/audit-crm-only-${crmPort}.log`
+  try { rmSync(crmLogPath, { force: true }) } catch {}
+  const crmLog = openSync(crmLogPath, 'a')
+  const crmSrv = spawn('npx', ['tsx', 'server/index.ts'], {
+    stdio: ['ignore', crmLog, crmLog],
+    env: { ...process.env, PORT: String(crmPort), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', CRM_ONLY: '1', PUBLIC_URL: PUBLIC, OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
+  })
+  const cb = `http://localhost:${crmPort}`
+  let crmUp = false
+  for (let i = 0; i < 120 && !crmUp; i++) { try { crmUp = (await fetch(`${cb}/api/health`)).ok } catch {} if (!crmUp) await sleep(250) }
+  check('the CRM-only service starts on the same database', crmUp)
+  const at = async (path, init = {}) => fetch(cb + path, { redirect: 'manual', ...init })
+  const home = await at('/')
+  check('its front door is the CRM', home.status === 302 && home.headers.get('location') === '/crm')
+  const page = await at('/crm')
+  check('which it serves, kept out of search', page.status === 200 && /noindex/.test(page.headers.get('x-robots-tag') ?? ''))
+  const other = await at('/collab?x=1')
+  check('any other page is the public site\u2019s', other.status === 302 && other.headers.get('location') === `${PUBLIC}/collab?x=1`, other.headers.get('location'))
+  const refLink = await at('/r/janelle?via=qr')
+  check('a referral link goes to the site too, where the visit is credited', refLink.status === 302 && refLink.headers.get('location') === `${PUBLIC}/r/janelle?via=qr`, refLink.headers.get('location'))
+  const robotsTxt = await (await at('/robots.txt')).text()
+  check('and robots are told to stay out of all of it', /Disallow: \/\s*$/.test(robotsTxt))
+  const shop = await at('/api/orders', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' })
+  check('the site\u2019s own API is not answered there', shop.status === 404)
+  const meOnly = await (await at('/api/crm/me')).json()
+  check('the screen is told where the public site is', meOnly.publicUrl === PUBLIC, meOnly.publicUrl)
+  /* Sign-in there: a stranger gets no code, a linked member gets in. */
+  const nobody = `nobody-${crmPort}@example.invalid`
+  const nobodyStart = await at('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'No Body', email: nobody }) })
+  await sleep(600)
+  check('there, an unknown address is sent no code, even without asking', nobodyStart.status === 202 && !readFileSync(crmLogPath, 'utf8').includes(`[login-code] ${nobody} `))
+  const jEmail = `janelle-${port}@example.invalid`
+  await at('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'BEASTY team', email: jEmail, signinOnly: true }) })
+  let ccode
+  for (let i = 0; i < 20 && !ccode; i++) { await sleep(250); ccode = readFileSync(crmLogPath, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${jEmail} `)).pop()?.match(/ (\d{6}) /)?.[1] }
+  const jv = await at('/api/members/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: jEmail, code: ccode, signinOnly: true }) })
+  const jCookie = (jv.headers.getSetCookie?.() ?? []).map((c) => c.split(';')[0]).join('; ')
+  const jMe = await (await at('/api/crm/me', { headers: { cookie: jCookie } })).json()
+  check('and a linked team member signs in there with a code', jv.status === 200 && jMe.actor?.personId === 'p_janelle' && jMe.actor?.via === 'member', JSON.stringify(jMe.actor ?? null))
+  crmSrv.kill()
+
+  /* Both services deploy from the same push, so two boots can migrate at once. */
+  const raceDb = await freshTestDb('crmrace')
+  const raced = (await import('node:child_process')).execFileSync('npx', ['tsx', '-e', "import { migrate, pool } from './server/db/schema'; Promise.all([migrate(), migrate()]).then(() => console.log('both finished'), (e) => console.log('FAILED: ' + e.message)).finally(() => pool.end())"], { env: { ...process.env, DATABASE_URL: raceDb.url }, encoding: 'utf8' }).trim().split('\n').pop()
+  check('two boots at once both finish their migrations', raced === 'both finished', raced)
+  try { await raceDb.drop?.() } catch {}
+
+  /* The public service, told where the CRM now lives, sends /crm there. */
+  const pubPort = await freePort()
+  const pubLog = openSync(`/tmp/audit-crm-pub-${pubPort}.log`, 'a')
+  const pubSrv = spawn('npx', ['tsx', 'server/index.ts'], {
+    stdio: ['ignore', pubLog, pubLog],
+    env: { ...process.env, PORT: String(pubPort), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', CRM_URL: 'http://crm.example.invalid', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
+  })
+  let pubUp = false
+  for (let i = 0; i < 120 && !pubUp; i++) { try { pubUp = (await fetch(`http://localhost:${pubPort}/api/health`)).ok } catch {} if (!pubUp) await sleep(250) }
+  const door = pubUp ? await fetch(`http://localhost:${pubPort}/crm`, { redirect: 'manual' }) : null
+  check('beastypages.com/crm then opens the CRM at its own address', door?.status === 302 && door.headers.get('location') === 'http://crm.example.invalid/crm', door?.headers.get('location'))
+  pubSrv.kill()
+}
+
 /* ---- the screen is served and kept out of search ---- */
 const page = await call('GET', '/crm', { raw: true })
 check('/crm serves the app and asks not to be indexed', page.status === 200 && /noindex/.test(page.headers.get('x-robots-tag') ?? ''))

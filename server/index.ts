@@ -52,6 +52,23 @@ const PORT = Number(process.env.PORT ?? 8787)
 const PROD = process.env.NODE_ENV === 'production'
 
 /*
+  THE CRM AT AN ADDRESS OF ITS OWN. Leon, 2026-09-22: "CRM dashboard will be
+  another url in render". The same code runs as a second Render service with
+  CRM_ONLY=1, on the same database: it answers /crm, the API the CRM calls and
+  the sign-in it needs, and sends every other page to the public site, so a
+  stray link never opens a second copy of beastypages.com there. PUBLIC_URL is
+  that site. CRM_URL, set on the public service, is where its /crm now lives.
+  The two services are written up in docs/CRM.md.
+*/
+const CRM_ONLY = process.env.CRM_ONLY === '1'
+const originOf = (v: string | undefined) => {
+  const s = String(v ?? '').trim().replace(/\/+$/, '')
+  return /^https?:\/\/[A-Za-z0-9.-]+(:\d+)?$/.test(s) ? s : ''
+}
+const PUBLIC_URL = originOf(process.env.PUBLIC_URL) || (CRM_ONLY ? 'https://beastypages.com' : '')
+const CRM_URL = CRM_ONLY ? '' : originOf(process.env.CRM_URL)
+
+/*
  * Render terminates TLS upstream and forwards over http, so without this
  * req.ip is the proxy's address, req.protocol is always 'http', and every
  * visitor shares one rate-limit bucket. `1` — not `true` — because trusting
@@ -129,6 +146,25 @@ app.use((_req, res, next) => {
   }
   next()
 })
+
+if (CRM_ONLY) {
+  /* The API the CRM screen calls and the sign-in it offers; nothing else. */
+  const CRM_API = /^\/api\/(crm\/|health$|members\/(start|verify|signout|channels)$)/
+  app.use((req, res, next) => {
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow')
+    const p = req.path
+    if (p === '/robots.txt') return res.type('text/plain').send('User-agent: *\nDisallow: /\n')
+    if (p.startsWith('/api/')) return CRM_API.test(p) ? next() : res.status(404).json({ error: 'Not on this address.' })
+    if (p === '/') return res.redirect(302, '/crm')
+    if (p === '/crm' || p === '/crm/') return next()
+    /* Files: the CRM's scripts, styles and fonts, and the businesses' icons. */
+    if (/\.[A-Za-z0-9]{2,11}$/.test(p)) return next()
+    /* Every other page is the public site's, a referral link included, so the
+       visit is credited there, on the cookie the sign-up will read. */
+    if (req.method === 'GET' || req.method === 'HEAD') return res.redirect(302, `${PUBLIC_URL}${req.originalUrl}`)
+    res.status(404).json({ error: 'Not on this address.' })
+  })
+}
 
 /*
   JSON EVERYWHERE EXCEPT THE STRIPE WEBHOOK.
@@ -287,7 +323,8 @@ if (process.env.STRIPE_SECRET_KEY && !PAYMENTS_WIRED) {
  * it, so a demo deploy can show real movement and nobody mistakes it for a
  * kitchen actually working the ticket.
  */
-const SIMULATE_KITCHEN = process.env.SIMULATE_KITCHEN === '1'
+/* Never on the CRM's own service: one timer on the shared database is enough. */
+const SIMULATE_KITCHEN = process.env.SIMULATE_KITCHEN === '1' && !CRM_ONLY
 
 /* ---------- vendor bootstrap ---------- */
 
@@ -2674,6 +2711,19 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     .get(destination) as { id: string } | undefined
   const purpose = existing ? 'signin' : 'signup'
 
+  /*
+    SIGN-IN ONLY, for the CRM's own sign-in card (2026-09-22): the team uses
+    the account they already have, and an address with none is not made into
+    one there. The answer is the same either way, so the card cannot be used
+    to learn who is a member; only a real member is sent a code, and the pause
+    stands in for the send so the reply takes about as long. The CRM at its own
+    address is always sign-in only.
+  */
+  if (!existing && (CRM_ONLY || b.signinOnly === true)) {
+    await new Promise((r) => setTimeout(r, 300 + Math.random() * 500))
+    return res.status(202).json({ sent: true, delivered: true, channel, minutes: CODE_TTL_MS / 60000 })
+  }
+
   const now = Date.now()
 
   /*
@@ -2850,11 +2900,18 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     return dead()
   }
 
-  await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
-
   const existing = await db
     .prepare(byPhone ? 'SELECT * FROM members WHERE phone = ?' : 'SELECT * FROM members WHERE email = ?')
     .get(destination) as MemberRow | undefined
+
+  /* Sign-in only (see the start route): a code that would make an account is
+     left unspent, so its owner can still finish joining on the site. Only the
+     holder of a right code ever reads this answer. */
+  if (!existing && (CRM_ONLY || req.body.signinOnly === true)) {
+    return res.status(403).json({ error: 'That has no BEASTY account yet. Join on beastypages.com first, then sign in here.' })
+  }
+
+  await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
 
   if (existing) {
     const sessionId = await startSession(res, existing.id)
@@ -3444,14 +3501,18 @@ mountCrm(
     prod: PROD,
     /* CRM_OPEN=1 opens /crm without the key, as Glenn. Never in production. */
     open: crmOpenMode(process.env, PROD),
+    /* Where a referral link or its QR code has to open: the public site. */
+    publicUrl: PUBLIC_URL,
   },
   rateLimiter,
 )
 if (process.env.CRM_OPEN === '1') {
   console.log(PROD ? 'crm: CRM_OPEN is set but ignored in production; the key is still required' : 'crm: open mode, /crm needs no key and everyone is Glenn (not production)')
 }
-app.get('/crm', (_req, res, next) => {
+app.get('/crm', (req, res, next) => {
   res.setHeader('X-Robots-Tag', 'noindex, nofollow')
+  /* Its own address, once it has one: the old one keeps working as a door. */
+  if (CRM_URL) return res.redirect(302, `${CRM_URL}${req.originalUrl}`)
   next()
 })
 

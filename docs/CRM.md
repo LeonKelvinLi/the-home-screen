@@ -237,3 +237,52 @@ Both run as part of `node tools/audit-all.mjs`.
 
 Rolling back the code leaves the tables and columns in place and unused;
 nothing else reads them, and the old code writes members exactly as before.
+
+### The CRM at an address of its own
+
+Leon, 2026-09-22: "CRM dashboard will be another url in render". The same
+repository runs as a second Render web service, on the same database:
+
+| | beastypages.com (the existing service) | the CRM service (new) |
+|---|---|---|
+| Branch | `main` | `main` |
+| Build / start | as now | the same: `npm ci --include=dev && npm run build`, `npm start` |
+| Health check | `/api/health` | `/api/health` |
+| `DATABASE_URL` | beasty-db | the same beasty-db |
+| `CRM_ONLY` | unset | `1` |
+| `PUBLIC_URL` | unset | `https://beastypages.com` |
+| `CRM_URL` | the CRM service's address, once it is up | unset |
+| Everything else | as now | the same values (Render's environment groups share them), except `CRM_OPEN`, which is never set on either |
+
+What each one answers:
+
+- **The CRM service** answers `/crm`, `/api/crm/*`, the member sign-in
+  endpoints (`/api/members/start`, `verify`, `signout`, `channels`) and
+  `/api/health`. `/` opens `/crm`. Every other page, a referral link
+  (`/r/<slug>`) included, is sent to `PUBLIC_URL`, so the visit is credited on
+  the cookie the sign-up reads. Every other API path is a 404, everything is
+  `noindex`, and its `robots.txt` disallows all of it. The kitchen simulator
+  never runs there.
+- **beastypages.com** keeps everything the CRM learns from: sign-ups and
+  tracking, `/r/<slug>`, and Reserve a Spot turning into leads. With
+  `CRM_URL` set, `beastypages.com/crm` sends people to the new address.
+
+Signing in there: a browser keeps a site's sign-in to that site, so being
+signed in on beastypages.com does not carry over. The sign-in card offers a
+code to the BEASTY account a person already has (by text or email, whichever
+the site can deliver) and the operator key. The card only ever signs in: an
+address with no account is answered like one with an account but sent no
+code, and the CRM service never makes an account at all. Referral links and
+their QR codes are built with `PUBLIC_URL`, so they always open
+beastypages.com.
+
+Both services run `migrate()` at boot. Every statement in it is
+`IF NOT EXISTS` / `ON CONFLICT DO NOTHING`, and it holds a database lock
+while it runs, because two boots creating the same new table at the same
+moment collide in Postgres (tried: three runs out of three failed without
+the lock, none with it).
+
+Order: deploy `main` with the CRM merged, create the CRM service with the
+variables above, check its address, then set `CRM_URL` on beastypages.com.
+A custom domain (for example crm.beastypages.com) is a CNAME at the domain's
+DNS, added in Render's Custom Domains for the CRM service.

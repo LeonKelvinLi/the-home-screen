@@ -16,7 +16,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
 import './crm.css'
-import { api } from './api'
+import { api, site } from './api'
 import type { Actor, LeadSummary, Meta } from './api'
 import { Avatar, Crm, Failure, Loading, StagePill, Tile, useApi, useCrm, useMedia } from './ui'
 import { Icon } from './icons'
@@ -135,7 +135,9 @@ export default function CrmScreen() {
 
   const loadMe = useCallback(async () => {
     try {
-      setMe(await api('/api/crm/me'))
+      const m = await api<{ actor: Actor | null; member: { name: string } | null; publicUrl: string | null }>('/api/crm/me')
+      if (m.publicUrl) site.origin = m.publicUrl
+      setMe(m)
     } catch {
       setMe({ actor: null, member: null })
     }
@@ -544,7 +546,149 @@ function Search({ onClose, admin }: { onClose: () => void; admin: boolean }) {
 
 /* --------------------------------------------------------------- sign in */
 
+/*
+  TWO WAYS IN. The team and referral partners use the BEASTY account they
+  already have: a code to their phone or email, whichever the site can
+  deliver, and on this card only ever a sign-in, never a new account
+  (signinOnly on the server). Glenn's operator key is one tap away. Both work
+  wherever the CRM is served, on beastypages.com or at its own address,
+  because the session is set on whichever that is.
+*/
 function SignIn({ member, onDone }: { member: { name: string } | null; onDone: () => void }) {
+  const [useKey, setUseKey] = useState(false)
+  return (
+    <div className="crm crm-signin">
+      <div className="crm-signin-card">
+        <Brand />
+        <h1>The BEASTY book</h1>
+        {member && (
+          <p>
+            You are signed in to BEASTY as {member.name}, but your account has no CRM role yet. An admin can add you in CRM
+            Settings.
+          </p>
+        )}
+        {useKey ? <KeyForm onDone={onDone} /> : !member && <CodeForm onDone={onDone} />}
+        <button type="button" className="crm-link" onClick={() => setUseKey(!useKey)}>
+          {useKey ? (member ? 'Back' : 'Sign in with your BEASTY account instead') : 'Have the operator key?'}
+        </button>
+        <a className="crm-link" href={site.origin}>
+          Go to beastypages.com
+        </a>
+      </div>
+    </div>
+  )
+}
+
+function CodeForm({ onDone }: { onDone: () => void }) {
+  /* Which way a code can arrive, as the site's own sign-in asks: a text when
+     texting works, an email otherwise, or the choice when both do. */
+  const [channels, setChannels] = useState<{ sms: boolean; email: boolean } | null>(null)
+  const [preferEmail, setPreferEmail] = useState(false)
+  const [to, setTo] = useState('')
+  const [sentTo, setSentTo] = useState<string | null>(null)
+  const [code, setCode] = useState('')
+  const [error, setError] = useState<string | null>(null)
+  const [busy, setBusy] = useState(false)
+  useEffect(() => {
+    api<{ sms: boolean; email: boolean }>('/api/members/channels').then(setChannels, () => setChannels({ sms: false, email: true }))
+  }, [])
+  const byPhone = !!channels?.sms && !(preferEmail && channels.email)
+  const where = (v: string) => (byPhone ? { phone: v } : { email: v })
+  const ready = byPhone ? to.replace(/\D/g, '').length >= 10 : /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to.trim())
+
+  const send = async (e: FormEvent) => {
+    e.preventDefault()
+    setBusy(true)
+    setError(null)
+    try {
+      /* The name is only ever kept for a new account, which this never makes. */
+      await api('/api/members/start', { method: 'POST', body: { name: 'BEASTY team', ...where(to.trim()), signinOnly: true } })
+      setSentTo(to.trim())
+      setCode('')
+    } catch (err) {
+      setError((err as Error).message)
+    } finally {
+      setBusy(false)
+    }
+  }
+  const verify = async (e: FormEvent) => {
+    e.preventDefault()
+    if (!sentTo) return
+    setBusy(true)
+    setError(null)
+    try {
+      await api('/api/members/verify', { method: 'POST', body: { ...where(sentTo), code, signinOnly: true } })
+      onDone()
+    } catch (err) {
+      setError((err as Error).message)
+      setBusy(false)
+    }
+  }
+
+  if (!channels) return <Loading />
+  if (sentTo) {
+    return (
+      <form className="crm-signin-step" onSubmit={verify}>
+        <p>
+          If {sentTo} has a BEASTY account, a 6-digit code is on its way {byPhone ? 'by text' : 'by email'}.
+        </p>
+        <label className="crm-field">
+          <span>Code</span>
+          <input
+            inputMode="numeric"
+            autoComplete="one-time-code"
+            maxLength={6}
+            value={code}
+            onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))}
+            autoFocus
+          />
+        </label>
+        {error && <div className="crm-error">{error}</div>}
+        <button type="submit" className="crm-btn is-primary is-big" disabled={busy || code.length !== 6}>
+          {busy ? 'Checking…' : 'Sign in'}
+        </button>
+        <button type="button" className="crm-link" onClick={() => setSentTo(null)}>
+          {byPhone ? 'Use a different number' : 'Use a different email'}
+        </button>
+      </form>
+    )
+  }
+  return (
+    <form className="crm-signin-step" onSubmit={send}>
+      <p>Team members and referral partners: sign in with your BEASTY account. We will send you a code.</p>
+      <label className="crm-field">
+        <span>{byPhone ? 'Mobile number' : 'Email'}</span>
+        <input
+          type={byPhone ? 'tel' : 'email'}
+          inputMode={byPhone ? 'tel' : 'email'}
+          autoComplete={byPhone ? 'tel' : 'email'}
+          autoCapitalize="none"
+          spellCheck={false}
+          value={to}
+          onChange={(e) => setTo(e.target.value)}
+        />
+      </label>
+      {error && <div className="crm-error">{error}</div>}
+      <button type="submit" className="crm-btn is-primary is-big" disabled={busy || !ready}>
+        {busy ? 'Sending…' : 'Send me a code'}
+      </button>
+      {channels.sms && channels.email && (
+        <button
+          type="button"
+          className="crm-link"
+          onClick={() => {
+            setPreferEmail(!preferEmail)
+            setTo('')
+          }}
+        >
+          {byPhone ? 'Use my email instead' : 'Use my mobile number instead'}
+        </button>
+      )}
+    </form>
+  )
+}
+
+function KeyForm({ onDone }: { onDone: () => void }) {
   const [token, setToken] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [busy, setBusy] = useState(false)
@@ -562,31 +706,16 @@ function SignIn({ member, onDone }: { member: { name: string } | null; onDone: (
       setBusy(false)
     }
   }
-  const note = useMemo(
-    () =>
-      member
-        ? `You are signed in to BEASTY as ${member.name}, but your account has no CRM role yet. An admin can add you in CRM Settings.`
-        : 'Team members and referral partners: sign in to beastypages.com on this device first, then open /crm again.',
-    [member],
-  )
   return (
-    <div className="crm crm-signin">
-      <form className="crm-signin-card" onSubmit={submit}>
-        <Brand />
-        <h1>The BEASTY book</h1>
-        <p>{note}</p>
-        <label className="crm-field">
-          <span>Operator key</span>
-          <input type="password" autoComplete="current-password" value={token} onChange={(e) => setToken(e.target.value)} />
-        </label>
-        {error && <div className="crm-error">{error}</div>}
-        <button type="submit" className="crm-btn is-primary is-big" disabled={busy || token.length < 8}>
-          {busy ? 'Checking…' : 'Open the CRM'}
-        </button>
-        <a className="crm-link" href="/">
-          Go to beastypages.com
-        </a>
-      </form>
-    </div>
+    <form className="crm-signin-step" onSubmit={submit}>
+      <label className="crm-field">
+        <span>Operator key</span>
+        <input type="password" autoComplete="current-password" value={token} onChange={(e) => setToken(e.target.value)} autoFocus />
+      </label>
+      {error && <div className="crm-error">{error}</div>}
+      <button type="submit" className="crm-btn is-primary is-big" disabled={busy || token.length < 8}>
+        {busy ? 'Checking…' : 'Open the CRM'}
+      </button>
+    </form>
   )
 }

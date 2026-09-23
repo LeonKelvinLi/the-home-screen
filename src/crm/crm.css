@@ -3749,6 +3749,12 @@ a.crm-row:hover,
 .crm-signin-card .crm-link {
   align-self: center;
 }
+/* One way in at a time: the code, or the operator key. */
+.crm-signin-step {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
 
 /* --------------------------------------------------------------- widths */
 

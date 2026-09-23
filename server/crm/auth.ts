@@ -49,6 +49,12 @@ export interface CrmDeps {
   prod: boolean
   /** CRM_OPEN=1 outside production: no key, everyone is Glenn. */
   open?: boolean
+  /**
+   * The public site's origin when the CRM runs at an address of its own
+   * (CRM_ONLY): referral links and their QR codes must open the site, where
+   * the visit is credited. Empty when the CRM is on the site itself.
+   */
+  publicUrl?: string
 }
 
 export const CRM_COOKIE = 'beasty_crm'
