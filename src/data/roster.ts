@@ -3618,6 +3618,260 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'See their menu',
     tier: 1,
   }),
+  /* ---- 2026-09-23, afternoon: Glenn's messages from 2:35 to 6:43 pm, most
+     of Union City's "coming from Janelle FYI". Each went to the seat of its
+     kind on the city page he named; where that seat was taken, or there is no
+     seat of its kind, the city's yellow sheet at his free Tier 1. The research
+     is in research/roster/batch33.json, and every logo is cut from his
+     screenshots of their own Instagram or site. */
+  /* Paleta Planeta, "San Jose • Goods": three brothers' paleta shop on East
+     Santa Clara St, on San Jose's open Ice cream shop seat. */
+  seed('paleta-planeta', 'Paleta Planeta', 'Paleta Planeta', 'Paleta shop', '#4B1E8C', {
+    icon: 'paleta-planeta',
+    logoTemplate: 'wordmark', logoLines: ['PALETA', 'PLANETA'], logoFace: 'condensed',
+    tagline: 'Authentic Mexican artisan paletas',
+    site: 'https://www.paletaplaneta.com/',
+    siteCta: 'See their menu',
+    panels: [
+      {
+        head: 'Catering',
+        body: [
+          'Catering packages start at $6.75 a paleta for their Galaxy or White Cart, and $6.00 a paleta for their Galaxy Cooler.',
+          'The minimum is 100 paletas for a cart and 75 for the cooler. From their own catering page.',
+        ],
+      },
+    ],
+  }),
+  /* Maza, "San Jose • Goods": Mariscos el Mazatleco on N 13th St. Mexican is
+     Tacos Mi Reynita's; their menu has its own sushi section, so the Sushi seat. */
+  seed('maza-san-jose', 'Maza', 'Maza', 'Mariscos', '#111111', {
+    icon: 'maza-san-jose',
+    logoTemplate: 'wordmark', logoLines: ['MAZA'], logoFace: 'slab',
+    tagline: 'Mariscos el Mazatleco, 100% outdoor and dog-friendly',
+    site: 'https://www.maza-restaurant-bar.com/',
+    siteCta: 'Order to go',
+  }),
+  /* Divino Ristorante, "Belmont • Goods": Belmont's open Italian seat. */
+  seed('divino-ristorante', 'Divino Ristorante', 'Divino', 'Italian', '#D71920', {
+    icon: 'divino-ristorante',
+    logoTemplate: 'wordmark', logoLines: ['DIVINO'], logoFace: 'slab',
+    tagline: 'Twenty years of regional Italian in Belmont',
+    site: 'https://divinoristorante.com/',
+    siteCta: 'See their menus',
+  }),
+  /* Favorite Indian Restaurant, "Hayward • Goods": Hayward's open Indian seat.
+     Their site sits behind a bot check, so the page is their Instagram's. */
+  seed('favorite-indian-restaurant', 'Favorite Indian Restaurant', 'Favorite', 'Indian', '#5A3A22', {
+    icon: 'favorite-indian-restaurant',
+    logoTemplate: 'wordmark', logoLines: ['FAVORITE'], logoFace: 'slab',
+    tagline: 'Where every bite tells a story',
+    site: 'https://favoriteindia.com/',
+    siteCta: 'Order on their site',
+  }),
+  /* The Port of Peri Peri, Fremont — "Fremont • Goods / Website needs
+     updating": their site renders a blank page, so no link, and the red ring
+     for his pilot list. Fremont's open Wings seat, the one Brasa Bros' holds
+     in San Francisco, where the other shop sits on the yellow sheet. */
+  seed('port-of-peri-peri-fremont', 'The Port of Peri Peri', 'Peri Peri Fremont', 'Peri peri chicken', '#111111', {
+    needsSite: true,
+    icon: 'port-of-peri-peri-fremont',
+    logoTemplate: 'wordmark', logoLines: ['PERI', 'PERI'], logoFace: 'condensed',
+    tagline: 'Portuguese peri peri on Walnut Avenue',
+    dietary: ['Halal'],
+  }),
+  /* DO Martial Arts, "Castro Valley • Services": taekwondo and judo, on
+     Castro Valley's open Gym seat, as Essence BJJ is a gym in Walnut Creek. */
+  seed('do-martial-arts', 'DO Martial Arts', 'DO Martial Arts', 'Martial arts studio', '#111111', {
+    icon: 'do-martial-arts',
+    logoTemplate: 'monogram', logoInitials: 'DO', logoFace: 'grotesk',
+    tagline: 'Taekwondo and judo, kids to adults',
+    site: 'https://www.usdomartialarts.com/',
+    siteCta: 'Book a trial class',
+  }),
+  /* Zadna Grill, "Redwood City • Goods": Lebanese, on the open Mediterranean seat. */
+  seed('zadna-grill', 'Zadna Grill', 'Zadna Grill', 'Lebanese', '#E4262B', {
+    icon: 'zadna-grill',
+    logoTemplate: 'wordmark', logoLines: ['ZADNA'], logoFace: 'slab',
+    tagline: 'Lebanese wraps, kebabs and soups',
+    site: 'https://www.zadnagrill.com/',
+    siteCta: 'Order online',
+  }),
+  /* YAYOI, "3 city locations • Goods": their three shops, Palo Alto,
+     Cupertino and Hillsdale in San Mateo, each on its city's Asian food seat
+     but Hillsdale's, where Pho De Nguyen sits; their to-go menu has ramen,
+     so San Mateo's open Korean and ramen seat. */
+  seed('yayoi-palo-alto', 'YAYOI Palo Alto', 'YAYOI', 'Japanese teishoku', '#FFFFFF', {
+    icon: 'yayoi',
+    logoTemplate: 'wordmark', logoLines: ['YAYOI'], logoFace: 'grotesk',
+    tagline: 'Japanese teishoku comfort meals',
+    site: 'https://www.yayoi-us.com/togo',
+    siteCta: 'See the to-go menu',
+  }),
+  seed('yayoi-cupertino', 'YAYOI Cupertino', 'YAYOI', 'Japanese teishoku', '#FFFFFF', {
+    icon: 'yayoi',
+    logoTemplate: 'wordmark', logoLines: ['YAYOI'], logoFace: 'grotesk',
+    tagline: 'Japanese teishoku comfort meals',
+    site: 'https://www.yayoi-us.com/togo',
+    siteCta: 'See the to-go menu',
+  }),
+  seed('yayoi-san-mateo', 'YAYOI Hillsdale', 'YAYOI', 'Japanese teishoku', '#FFFFFF', {
+    icon: 'yayoi',
+    logoTemplate: 'wordmark', logoLines: ['YAYOI'], logoFace: 'grotesk',
+    tagline: 'Japanese teishoku comfort meals',
+    site: 'https://www.yayoi-us.com/togo',
+    siteCta: 'See the to-go menu',
+  }),
+  /* Union City's goods: Tacos Papo on the Mexican seat, DoughWeiMe on the
+     Bakery seat, K On The Go on the Coffee shop seat. Backyard Bayou (Cajun,
+     no seat of its kind), Golden Bay (dim sum; Asian food is The Une's) and
+     San Honoré (bakery, after DoughWeiMe) are on the yellow sheet. */
+  seed('tacos-papo', 'Tacos Papo', 'Tacos Papo', 'Mexican', '#F28C28', {
+    icon: 'tacos-papo',
+    logoTemplate: 'wordmark', logoLines: ['TACOS', 'PAPO'], logoFace: 'condensed',
+    tagline: 'Authentic Mexican taqueria, since 2019',
+    site: 'https://tacospapo.com/',
+    siteCta: 'Order online',
+  }),
+  seed('doughweime', 'DoughWeiMe Bakery & Cafe', 'DoughWeiMe', 'Bakery', '#F2A77E', {
+    icon: 'doughweime',
+    logoTemplate: 'wordmark', logoLines: ['DOUGH', 'WEIME'], logoFace: 'slab',
+    tagline: 'Thursday to Sunday, 9 to 3 or sellout',
+    site: 'https://doughweime.com/',
+    siteCta: 'Preorder',
+  }),
+  /* No site of their own: a Linktree, a delivery storefront and a Calendly for
+     tea time, so the button is the tea-time booking and the red ring shows. */
+  seed('k-on-the-go-union-city', 'K On The Go', 'K On The Go', 'Cafe and high tea', '#B7D3CF', {
+    icon: 'k-on-the-go',
+    logoTemplate: 'monogram', logoInitials: 'K', logoFace: 'slab',
+    tagline: 'Specialty coffee, boba and high tea',
+    site: 'https://calendly.com/konthegouc/tea-time-reservation',
+    siteCta: 'Reserve tea time',
+  }),
+  seed('backyard-bayou', 'Backyard Bayou', 'Backyard Bayou', 'Cajun seafood', '#F4F1EA', {
+    icon: 'backyard-bayou',
+    logoTemplate: 'wordmark', logoLines: ['BACKYARD', 'BAYOU'], logoFace: 'slab',
+    site: 'https://backyardbayou.com/',
+    siteCta: 'See their menu',
+    tier: 1,
+  }),
+  seed('golden-bay-seafood-harbor', 'Golden Bay Seafood Harbor', 'Golden Bay', 'Dim sum and seafood', '#FFFFFF', {
+    icon: 'golden-bay-seafood-harbor',
+    logoTemplate: 'wordmark', logoLines: ['GOLDEN', 'BAY'], logoFace: 'slab',
+    site: 'https://goldenbayca.com/',
+    siteCta: 'See the menu and order',
+    tier: 1,
+  }),
+  /* San Honoré Panaderia, "Union City • Goods / Needs Website pilot program",
+     at the address he sent, 4128 Dyer St. Their Instagram: authentic Filipino
+     baked goods, "nestled within select Island Pacific Supermarkets across
+     California and Nevada". No site, so no link and the red ring. */
+  seed('san-honore-panaderia', 'San Honoré Panaderia', 'San Honoré', 'Filipino bakery', '#F5EDE2', {
+    needsSite: true,
+    icon: 'san-honore-panaderia',
+    logoTemplate: 'wordmark', logoLines: ['SAN', 'HONORÉ'], logoFace: 'slab',
+    address: '4128 Dyer St, Union City, CA 94587',
+    contactOnly:
+      'Authentic Filipino baked goods, from a panaderia inside select Island Pacific Supermarkets across California and Nevada, in their own words. They publish no menu or prices.',
+    tier: 1,
+  }),
+  /* Union City's services: The Moon Nails on the Nail salon seat. The Hot
+     Spot Studios (paint-your-own pottery, no seat of its kind), The Lion's
+     Mane (the Barber seat is The Company Barber's) and JAS Nail Spa (after
+     The Moon Nails) are on the yellow sheet. */
+  seed('the-moon-nails', 'The Moon Nails', 'Moon Nails', 'Nail salon', '#0F2A4D', {
+    icon: 'the-moon-nails',
+    logoTemplate: 'wordmark', logoLines: ['THE', 'MOON'], logoFace: 'slab',
+    tagline: 'Mani, pedi, lashes and waxing',
+    site: 'https://themoonnailsunioncity.com/',
+    siteCta: 'See their prices',
+  }),
+  seed('the-hot-spot-studios-union-city', 'The Hot Spot Studios', 'Hot Spot', 'Paint-your-own pottery', '#F6E7D0', {
+    icon: 'the-hot-spot-studios',
+    logoTemplate: 'wordmark', logoLines: ['HOT', 'SPOT'], logoFace: 'script',
+    site: 'https://www.thehotspotstudios.com/union-city-ca/',
+    siteCta: 'Visit their studio page',
+    tier: 1,
+  }),
+  seed('the-lions-mane-barbershop', "The Lion's Mane Barbershop", "Lion's Mane", 'Barbershop', '#3A3A3A', {
+    icon: 'the-lions-mane-barbershop',
+    logoTemplate: 'monogram', logoInitials: 'LM', logoFace: 'slab',
+    address: '31808 Alvarado Blvd, Union City, CA 94587',
+    site: 'https://booksy.com/en-us/431617_edzel-ford-the-lions-mane-barbershop_barber-shop_103699_union-city',
+    siteCta: 'Book on Booksy',
+    tier: 1,
+  }),
+  seed('jas-nail-spa', 'JAS Nail Spa', 'JAS Nail Spa', 'Nail salon', '#F2F2F2', {
+    icon: 'jas-nail-spa',
+    logoTemplate: 'monogram', logoInitials: 'J', logoFace: 'slab',
+    site: 'https://jasnailspaunioncity.com/',
+    siteCta: 'See their prices',
+    tier: 1,
+  }),
+  /* Honey Pot Gelato, "Petaluma • Goods / Needs website": Petaluma's open
+     Ice cream shop seat. Everything is off their own Instagram: open at last,
+     701 Sonoma Mountain Pkwy, noon to 9pm every day. The bio's only link is a
+     newspaper story about them, so no button and the red ring. */
+  seed('honey-pot-gelato', 'Honey Pot Gelato', 'Honey Pot', 'Gelato', '#FFFFFF', {
+    needsSite: true,
+    icon: 'honey-pot-gelato',
+    logoTemplate: 'wordmark', logoLines: ['HONEY', 'POT'], logoFace: 'grotesk',
+    tagline: 'Gelato, open every day, Mondays too',
+    address: '701 Sonoma Mountain Pkwy, Petaluma, CA',
+    hours: 'Every day 12–9pm',
+    contactOnly:
+      'A gelato shop on Sonoma Mountain Parkway, open from noon to 9pm every day, Mondays included, in their own words. They publish no menu or prices yet.',
+  }),
+  /* Walnut Creek's four: North Italia on the open Italian seat; Galpão Gaucho
+     (Brazilian), Havana (Cuban) and LITA (Miami and the Caribbean) have no
+     seat of their kind, so the yellow sheet. Galpão's and North Italia's
+     screenshots never reached this Mac, so their tiles are drawn. */
+  seed('north-italia-walnut-creek', 'North Italia', 'North Italia', 'Italian', '#1F2A30', {
+    logoTemplate: 'wordmark', logoLines: ['NORTH', 'ITALIA'], logoFace: 'slab',
+    tagline: 'Handmade pasta and pizza on Locust Street',
+    site: 'https://www.northitalia.com/locations/north-italia-walnut-creek-ca/',
+    siteCta: 'See their menus',
+    panels: [
+      {
+        head: 'Hours by menu',
+        body: [
+          'Lunch Monday to Friday, 11:30am to 4pm, and brunch Saturday and Sunday, 10am to 4pm.',
+          'Dinner Sunday to Thursday, 4pm to 10pm, and Friday and Saturday, 4pm to 11pm.',
+          'Happy hour Monday to Friday, 3pm to 6pm. From their own Walnut Creek page.',
+        ],
+      },
+    ],
+  }),
+  seed('galpao-gaucho-walnut-creek', 'Galpão Gaucho', 'Galpão', 'Brazilian steakhouse', '#1B1B1B', {
+    logoTemplate: 'wordmark', logoLines: ['GALPÃO', 'GAUCHO'], logoFace: 'slab',
+    site: 'https://galpaogauchousa.com/location/walnut-creek-ca/',
+    siteCta: 'See their prices',
+    tier: 1,
+  }),
+  seed('havana-walnut-creek', 'Havana', 'Havana', 'California-Cuban', '#000000', {
+    icon: 'havana-walnut-creek',
+    logoTemplate: 'wordmark', logoLines: ['Havana'], logoFace: 'grotesk',
+    site: 'https://www.havanarestaurant.net/',
+    siteCta: 'See their menus',
+    tier: 1,
+  }),
+  seed('lita-walnut-creek', 'LITA', 'LITA', 'Caribbean-Latin', '#4A6583', {
+    icon: 'lita-walnut-creek',
+    logoTemplate: 'wordmark', logoLines: ['lita'], logoFace: 'script',
+    site: 'https://www.litawalnutcreek.com/',
+    siteCta: 'See their menus',
+    tier: 1,
+  }),
+  /* Shady Oak, "Santa Rosa • Goods": a brewery, whose beer is never listed
+     here, with a beer garden and an arcade. No seat of its kind, so Santa
+     Rosa's yellow sheet. */
+  seed('shady-oak-brewing', 'Shady Oak Brewing Company', 'Shady Oak', 'Brewery taproom', '#F4EAD5', {
+    icon: 'shady-oak-barrel-house',
+    logoTemplate: 'wordmark', logoLines: ['SHADY', 'OAK'], logoFace: 'script',
+    site: 'https://www.shadyoakbrewing.com/',
+    siteCta: 'See what is on',
+    tier: 1,
+  }),
 ]
 
 /**

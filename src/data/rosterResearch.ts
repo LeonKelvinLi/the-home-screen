@@ -522,6 +522,105 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Backyard Bayou — gathered 2026-09-24 from own
+     they are: Cajun seafood
+     flag: Sources: Linktree https://linktr.ee/backyardbayou -> own site https://backyardbayou.com/ (address, phone, email, hours block) and its food menu https://backyardbayou.com/union-city-bay-area-backyard-bayou-food-menu (items); own ordering app https://backyardbayou.appfront.app/ and own Toast waitlist page (phone/address match) used as cross-checks.
+     flag: Hours: the own site HOURS block only gives last-call times, copied exactly; it publishes no opening time. The ordering app page data (not shown as text on its landing page) holds "Sunday-Thursday 11:30am-9:30pm | Friday & Saturday 11:30am-10:30pm", which fits the last-call times; confirm with the owner before using it.
+     flag: Left out 9 market-price (MP) boiled seafood items (crawfish, shrimp, headless shrimp, clams, mussels, Dungeness crab, snow crab legs, king crab legs, lobster).
+     flag: Left out 10 items with no price on the menu (8 boil/fixin sauces, and desserts Beignets and Cheesecake).
+     flag: Left out the whole drink menu page (beer, wine, cocktails, spirits: all alcohol). Non-alcoholic drinks are not listed on the website menu.
+     flag: Several items with two published prices use the lowest with label "from" and all prices in desc (wings 1/2 dozen vs dozen, oysters on half shell 6 vs 12).
+     flag: The ordering app data shows different prices/names for some items (e.g. Catfish Po Boy $18 vs site $16, some rice bowls) and extra items (crab fries, party trays, soft drinks); website menu kept as the published menu.
+     flag: Linktree tagline: "The Best Cajun Restaurant In The Bay Area!". Waitlist page lists website thebackyardbayou.com; Linktree and email use backyardbayou.com / thebackyardbayou.com.
+     flag: On review: hours from their own Instagram bio ("Sun-Thurs:11:30AM-9:30PM, Fri-Sat:11:30AM-10:30PM"), which their ordering app agrees with and their site's last-call times fit.
+  */
+  'backyard-bayou': {
+    address: "32280 Dyer Street, Union City, CA 94587",
+    phone: "(510) 675-0095",
+    email: "han@thebackyardbayou.com",
+    hours: "Sun–Thu 11:30am–9:30pm, Fri–Sat 11:30am–10:30pm",
+    cuisine: "Cajun seafood",
+    sections: [
+      { name: "Backyard Buckets", items: [
+        ["Selfie Bucket","3 Choices: Crawfish, Clams, Mussels, & Shrimps, Headless Shrimps +$2.00 | includes 2 Corns, 2 Potatoes, 4 Piece Sausages.",5400],
+        ["Bayou Bucket","1 Choice: Dungeness Crab, Lobster King Crab Legs, Snow Crab Legs | 2 Choices: Crawfish, Clams, Mussels, Shrimps, Headless Shrimps +$2.00 | Includes 3 Corns, 4 Potatoes, and 8 Piece Sausages.",10000],
+        ["Family Bucket","1 Choice: Dungeness Crab, Lobster King Crab Legs, Snow Crab Legs | 4 Choices: Crawfish, Clams, Mussels, Shrimps, Headless Shrimps +$2.00 | Includes 4 Corns, 6 Potatoes, and 16 Piece Sausages.",12000],
+      ] },
+      { name: "Fried Fixin Baskets", items: [
+        ["Oyster Fried Basket","",1700],
+        ["Shrimp Fried Basket","",1800],
+        ["Fried Calamari Basket","",1800],
+        ["Catfish Fried Basket","",1700],
+        ["Shrimp Wraps (10 Pieces)","",1700],
+        ["BB Cajun Chicken Wings","1/2 Dozen $9.00 | 1 Dozen $18.00",900,null,"from"],
+        ["Chicken Tenders With Cajun Fries","",1200],
+      ] },
+      { name: "Off The Bayou", items: [
+        ["Garlic Noodles","Add Shrimps +$5.00 | Sausages +$5.00",1200],
+        ["Clam Chowder (12oz)","",900],
+        ["BB’s House Gumbo (12oz)","",900],
+        ["Jambalaya","",1700],
+        ["Red Beans & Rice With Smoked Turkey","",900],
+        ["Mac & Cheese (12oz)","",900],
+        ["Lobster Mac & Cheese (12oz)","",2600],
+        ["Corn Bread (3)","",600],
+        ["Garlic Bread","",600],
+        ["Collard Greens With Smoked Turkey","",900],
+        ["Grilled Gator With Cajun Fries","",1800],
+        ["Grilled Frog Legs With Cajun Fries","",1800],
+        ["Oysters on Half Shell","Fresh Shuck Washington State Oysters. $18.00/6, $36.00/12",1800,null,"from"],
+      ] },
+      { name: "Po Boys & Sandwiches", items: [
+        ["Fried Shrimp Po Boys","",1700],
+        ["Fried Oyster Po Boys","",1700],
+        ["Fried Catfish Po Boys","",1600],
+        ["Hotlinks Po Boys","",1600],
+        ["Chicken Tender Po Boys","",1600],
+        ["Soft Shell Crab Po Boy","",1800],
+        ["Lobster Roll","",3200],
+      ] },
+      { name: "Extras", items: [
+        ["Corn on The Cob (1)","$2.00/each",200],
+        ["Boiled Potatoes (3)","",250],
+        ["Sausages Hotlinks (10 Slices)","",600],
+        ["Steamed Rice (16oz Cup)","",300],
+        ["Andouille Sausage (10 Slices)","",600],
+        ["Hard Boiled Egg (1)","",200],
+        ["Ramen","",620],
+        ["Hard Boiled Egg (2) & Ramen","",800],
+      ] },
+      { name: "Fries", items: [
+        ["Cajun Fries or Regular","",600],
+        ["Cajun Edamame","",500],
+        ["Sweet Potato Fries","",600],
+        ["Garlic Fries","",600],
+        ["Cajun Garlic Fries","",600],
+      ] },
+      { name: "Rice Bowls", items: [
+        ["Shrimps (Boiled Tail – Blackened Backyard Style)","Serve Over Rice with Mix Veggies",1700],
+        ["Sausages (12 Pieces of Andouille or Hotlinks)","Serve Over Rice with Mix Veggies",1600],
+        ["Cajun Wings (BB Cajun Dry Rub)","Serve Over Rice with Mix Veggies",1600],
+        ["Blackened Catfish (Creamy Backyard Sauce)","Serve Over Rice with Mix Veggies",1700],
+        ["Blackened Salmon (Creamy Backyard Sauce)","Serve Over Rice with Mix Veggies",1800],
+        ["Blackened Snow Crab (Half Lbs Snow Crab, Creamy Backyard Sauce)","Serve Over Rice with Mix Veggies",2200],
+        ["Mix Shellfish (Clams & Mussels Over Creamy Backyard Sauce)","Serve Over Rice with Mix Veggies",2000],
+      ] },
+      { name: "Salads", items: [
+        ["Grilled Salmon","Salad Sauces: Balsamic Vinegar, Ranch, Thousand Island & Ceasar",1400],
+        ["Caesar","Salad Sauces: Balsamic Vinegar, Ranch, Thousand Island & Ceasar",800],
+        ["Fried Softshell Crab","Salad Sauces: Balsamic Vinegar, Ranch, Thousand Island & Ceasar",1700],
+        ["Fried Shrimps","Salad Sauces: Balsamic Vinegar, Ranch, Thousand Island & Ceasar",1400],
+      ] },
+      { name: "On The Grill", items: [
+        ["Grilled Gator","Choice of Cajun Fries or Steam Rice",1900],
+        ["Grilled Frog Legs","Choice of Cajun Fries or Steam Rice",1900],
+        ["Grilled Oysters","special garlic butter. $27.00/6",2700],
+      ] },
+    ],
+    siteNote: "Prices are from the food menu on their own site; the seafood boils are at market price.",
+  },
+
+  /*
      Baithak — gathered 2026-09-21 from own-domain
      they are: Awadhi and North Indian
      logo: https://baithak.us/wp-content/uploads/2025/03/Logo-Orange_small_website.png — not cut into a tile yet
@@ -3716,6 +3815,53 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Divino Ristorante — gathered 2026-09-24 from own
+     they are: Regional Italian
+     flag: Sources: divinoristorante.com (Home, Menu, Contact Us, About Us, Reservations, Private Dining, Catering, Order Online).
+     flag: Menu page links out only: Lunch = Canva design "LUNCH DIVINO AGO25 (8 x 14 in)" on canva.com (a print-style document, not their site); Dinner = "Menu Divino Dinner.png" on Google Drive (image). Treated as document/image menus: items left empty by rule.
+     flag: Their "Order Online" page links only to DoorDash, Uber Eats and Grubhub (not used); no own ordering page. Reservations use an OpenTable widget (not used).
+     flag: Hours null: no opening hours appear anywhere on their own site.
+     flag: Address, phone and email printed visibly on the Contact Us page (email also on About Us).
+     flag: instagram left null per template (site links @divinobelmont).
+  */
+  'divino-ristorante': {
+    address: "968 Ralston Ave, Belmont, CA 94002",
+    phone: "(650) 620-9102",
+    email: "belmont@divinoristorante.com",
+    cuisine: "Regional Italian",
+    contactOnly: "Regional Italian on Ralston Avenue, twenty years in Belmont by their own account, with private dining and catering. Their lunch and dinner menus are a print design and a picture, so the button goes to their site rather than copying prices.",
+  },
+
+  /*
+     DO Martial Arts — gathered 2026-09-24 from own
+     they are: Martial arts studio
+     flag: Sources: usdomartialarts.com (Wix) home, programs, taekwondo, judo, competition-team, schedules, camp-info, book-online (Wix Bookings "TRIAL APPOINTMENTS"), contact, runningday.
+     flag: Hours null: no business hours are published. The class timetable on /schedules is image-only and was not transcribed. As text, /judo lists "Judo Class (Self Defense Class)- All Levels. Thursday 6:40 - 8:20 PM, Saturday 10:00 - 11:30 AM".
+     flag: Only trial prices are published. Monthly tuition/membership prices are not published anywhere on the site. Item desc = the class days and duration shown by the booking widget.
+     flag: Conflict on their own pages about the judo minimum age: home and programs say 10 and up ("Judo (From 10 years old)", "AGES 10 & UP"); the contact form ("Judo (From 7 years old)") and the schedule image ("JUDO CLASS FROM 7 Y.O") say 7.
+     flag: Camp page ("DO Martial Arts Camp 2025") gives no camp prices, only a $60-per-week cancellation fee. It lists a camp text line, 925-579-3673, which is not used as the main phone.
+     flag: Name: structured data and body text use "DO Martial Arts"; the page title and footer use "Do martial arts".
+     flag: Instagram linked from own site: instagram.com/DO_martialarts (field left null per spec).
+     flag: On review: filed as b_domartialarts (research id b_usdomartialarts) to match its seed.
+     flag: On review: cuisine "Martial arts studio", their Instagram's own category, so the page is a service with quoted prices rather than a menu.
+  */
+  'do-martial-arts': {
+    address: "3963 E Castro Valley Blvd, Castro Valley, CA 94552",
+    phone: "(510) 363-8781",
+    email: "usdomartialarts@gmail.com",
+    cuisine: "Martial arts studio",
+    groups: [
+      { name: "Prices", items: [
+        ["Little Warriors 4-6 yrs (3 TKD classes)","Mon, Tue, Wed, Thu, Sat, Sun · Duration Varies",8000],
+        ["Kids Class for 7-12 yrs (3 TKD classes)","Mon, Wed, Thu, Sat, Sun · Duration Varies",8000],
+        ["Teen and Adult (3 TKD classes)","Mon, Wed · 1 hr 30 min",8000],
+        ["Judo (1 class)","Thu, Sat · Duration Varies",1000],
+      ] },
+    ],
+    quoteOnly: "Taekwondo for kids from four, teens and adults, and judo, on East Castro Valley Boulevard. Only their trial classes are priced, from their own booking page; ask them about monthly tuition.",
+  },
+
+  /*
      Dog Haus Biergarten — gathered 2026-09-21 from own-domain
      their spelling: "Dog Haus Biergarten Berkeley" (roster keeps "Dog Haus Biergarten")
      they are: Hot dogs and burgers
@@ -4058,6 +4204,42 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menu on their own website.",
+  },
+
+  /*
+     DoughWeiMe Bakery & Cafe — gathered 2026-09-24 from own
+     their spelling: "Doughweime Bakery&Cafe" (roster keeps "DoughWeiMe Bakery & Cafe")
+     they are: Artisan bakery & cafe
+     flag: Sources: doughweime.com home, /products store page and all 10 product pages (read-only; nothing added to bag).
+     flag: Hours agree across the site: header says "Thurs, Fri, Sat, Sun 9-3 or sellout"; "Regular hours" block lists Thursday-Sunday 9:00 AM-3:00 PM.
+     flag: The store has no category headings, so section = "Store" (nav label and "Home/Store" breadcrumb); the home page links the same products under "Preorder".
+     flag: About text says the menu is "regularly-changing"; the store lists 10 preorder products at fetch time, so the list may rotate.
+     flag: Left out: "Gift Certificate" ($1.99 listing with $20-$100 amount choices; not food).
+     flag: Five items have no description text on their product pages (desc "").
+     flag: Address shown without ZIP: "31858 Alvarado Blvd, Union City, CA".
+     flag: Footer Facebook/Instagram/X links point to the generic homepages (placeholders), so no social handle is published.
+     flag: No alcohol listed.
+  */
+  'doughweime': {
+    address: "31858 Alvarado Blvd, Union City, CA",
+    phone: "(510) 309-0162",
+    email: "doughweime.llc@gmail.com",
+    hours: "Thursday 9:00 AM-3:00 PM; Friday 9:00 AM-3:00 PM; Saturday 9:00 AM-3:00 PM; Sunday 9:00 AM-3:00 PM (or sellout)",
+    cuisine: "Artisan bakery & cafe",
+    sections: [
+      { name: "Store", items: [
+        ["Whole Basque Guava Cheesecake 6in(8-12 Servings)","",5500],
+        ["UBE Mochi (6)","",2700],
+        ["6 Gochujang Furikake Sesame Cookie","6 Gochujang Furikake Cookies",2400],
+        ["Malasada Box Preorder","Pandan Jackfruit, Salted Duck Egg, Jasmine Pineapple, Oolong Jujube Red Bean, Banana Crème Brûlée, Dubai Chocolate",3900],
+        ["6 Chocolate Chunk Pecan Cookies","Mix of Valrhona, Guittard, dark, milk and semisweet chunks and toasted pecan",3300],
+        ["12 Mini Party Malasada Box Preorder","2 Strawberry, 2 Rocher, 2 Cinnamon Apple, 2 matcha, 2 White Rabbit Candy, 2 Pumpkin Cheesecake",5000],
+        ["Quarter Guava Basque Cheesecake (2-3 Servings)","",1375],
+        ["4 Banana Bread","",2600],
+        ["6 Croissant Salt Bread","",3000],
+      ] },
+    ],
+    siteNote: "Preorder prices from their own store; the menu changes regularly, and they bake Thursday to Sunday until they sell out.",
   },
 
   /*
@@ -4861,6 +5043,23 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Favorite Indian Restaurant — gathered 2026-09-24 from own
+     they are: Indian
+     flag: BLOCKED: https://favoriteindia.com/ returned HTTP 403 with a Cloudflare 'Just a moment... / Performing security verification' bot check (Ray ID a3fe68f91b3767a6) on 2026-09-23. Stopped there per the rules; no retry or workaround.
+     flag: Because the site could not be read, its online-ordering link could not be found, so no menu, prices, address, phone, email or hours were collected. name_exact is the name given in the brief, not verified on the site.
+     flag: No other sources used (no DoorDash/Uber Eats/Grubhub/Yelp/Google).
+     flag: On review: filed as b_favoriteindianrestaurant (research id b_favoriteindia) to match its seed.
+     flag: On review: address, phone and email from their own Instagram (Glenn's screenshots: "24052 Mission Blvd., Hayward, California", "+1 (510) 583-7550", Contact sheet customer@favoriteindia.com). Their site's bot check was not got around, so no menu, prices or hours are carried.
+  */
+  'favorite-indian-restaurant': {
+    address: "24052 Mission Blvd, Hayward, CA",
+    phone: "(510) 583-7550",
+    email: "customer@favoriteindia.com",
+    cuisine: "Indian",
+    contactOnly: "Authentic Indian cuisine in Hayward since 2009, in their own words. They take orders on their own site, where the menu and prices are.",
+  },
+
+  /*
      Forno Piombo — gathered 2026-09-21 from own-domain
      they are: Pizza ovens
      logo: https://fornopiombo.com/cdn/shop/files/FPO_Logo_FINAL-Letters-only_927e992a-09ac-47ba-ae13-1c751f373fe5_300x.png?v=1626473863 (300x182) — not cut into a tile yet
@@ -4900,6 +5099,39 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "thefrenchspot",
     cuisine: "French patisserie",
     contactOnly: "'An independent, artisanal family bakery' by Vincent Attali and Maria Zapata — French technique with Asian and tropical twists, home of the Mochicro. The menu is item names only — croissants, pain au chocolat, the Ube Mochicro, kouign amann, guava cream-cheese danish, croque monsieur — with no prices anywhere.",
+  },
+
+  /*
+     Galpão Gaucho — gathered 2026-09-24 from own
+     their spelling: "Galpão Gaucho Brazilian Steakhouse" (roster keeps "Galpão Gaucho")
+     they are: Brazilian steakhouse
+     flag: Sources: galpaogauchousa.com/location/walnut-creek-ca/ (address, phone, hours, and the 'Menu Prices' panel for Walnut Creek), plus /menu/, /menu/salads/, /menu/grill/, /menu/desserts/ (chain-wide menu descriptions without prices).
+     flag: Churrasco is priced per person: 'Full Experience' = unlimited 18 grill selections + salad bar + sides; 'Salad Bar and Hot Sides' = the lighter option. Individual grill cuts (18) and the 45+ item salad bar are included in these prices and not listed as items.
+     flag: Left out, no price: 5 desserts (Tres Leches Cake, Chocolate Molten, Brazilian Pudim, Papaya Cream, Crème Brulee) are listed on /menu/desserts/ without prices.
+     flag: Left out, alcohol: '$35.00 corkage fee per 750ml' (wine). No drinks list with prices appears on the site.
+     flag: Their page says: '*Hours of operation and pricing may vary on holidays and special dates.'
+     flag: Hours are shown only on the Walnut Creek page, so there was nothing to compare them against. No email is shown on their pages. Reservations go to Resy and gift cards to Toast e-gift; both are outside the allowed sources and were not used.
+     flag: On review: hours written as one schedule from their own page (lunch, dinner and brunch together); their meal-by-meal times are unchanged, only joined.
+  */
+  'galpao-gaucho-walnut-creek': {
+    address: "1444 N. California Blvd, Walnut Creek, CA 94596",
+    phone: "(925) 278-1859",
+    hours: "Mon–Thu 11:30am–2:30pm and 5–9pm, Fri 11:30am–2:30pm and 5–9:30pm, Sat 12–9:30pm, Sun 12–8pm",
+    cuisine: "Brazilian steakhouse",
+    sections: [
+      { name: "Lunch Monday to Friday", items: [
+        ["Salad Bar and Hot Sides","",4600],
+        ["Full Experience","includes unlimited 18 selections from the grill, salad bar and sides",5900],
+      ] },
+      { name: "Dinner and Weekends", items: [
+        ["Salad Bar and Hot Sides","",4600],
+        ["Full Experience","includes unlimited 18 selections from the grill, salad bar and sides",7900],
+      ] },
+      { name: "Menu Prices", items: [
+        ["Ages 4-6","Children 7-11 50% off meal price. Children 3 and under are complimentary.",600],
+      ] },
+    ],
+    siteNote: "A fixed price per person, from their own Walnut Creek page; children 7 to 11 are half price and 3 and under free.",
   },
 
   /*
@@ -5608,6 +5840,295 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from this shop's own Snackpass ordering page; their website lists the menu without prices.",
+  },
+
+  /*
+     Golden Bay Seafood Harbor — gathered 2026-09-24 from own
+     they are: Cantonese seafood & dim sum
+     flag: Sources: own site https://goldenbayca.com/ (address, phone, hours, name) and its "See MENU & Order" page https://www.bestfoodtodayus.com/ordering/restaurant/menu?restaurant_uid=74e460d4-4e7f-420e-b783-3810d86f1831 (Best Food Today, the site builder; menu and prices).
+     flag: Hours only published on the own site; the ordering page shows none, so no conflict.
+     flag: Left out 18 market-price / seasonal / pre-order items published at 0.00 (lobster dishes incl. lobster noodles and lobster salad, Dungeness crab, coral shrimp, concubine clam, geoduck, grouper, turbot and other live fish, Buddha Jumps Over the Wall soup).
+     flag: No alcohol is listed on the ordering menu.
+     flag: Prices on the ordering page are printed without a $ sign (e.g. "6.80"); taken as USD. Item names kept exactly as published (Chinese + English), including typos like "Kind Crab Meat" and "Noddle".
+     flag: Some dishes appear under both a LUNCH and a DINNER heading at different prices; both kept with their own section.
+     flag: BANQUET section = King crab feast set menus A-F ($488-$1,888) with Chinese-only descriptions; kept.
+     flag: Site banner also advertises "Weekday Dine-In Special: 3 Dishes + 1 Soup $46.88 (Mon–Fri Only)" (not on the ordering menu; not added as an item).
+     flag: Site also uses the Chinese name 金海灣漁港. No email on own pages (the ordering page footer email belongs to Best Food Today). No Instagram link on own site.
+  */
+  'golden-bay-seafood-harbor': {
+    address: "34348 Alvarado-Niles Rd, Union City, CA 94587",
+    phone: "(510) 250-3288",
+    hours: "Monday ～ Friday 11:00 AM - 2:30 PM, 5:00 PM - 9:00 PM; Saturday ～ Sunday 10:00 AM - 3:00 PM, 5:00 PM - 8:30 PM",
+    cuisine: "Cantonese seafood & dim sum",
+    sections: [
+      { name: "Lunch 午餐｜Special 特點", items: [
+        ["焗酥皮菠蘿包 Crispy Pineapple Buns","",680],
+        ["榴蓮酥 Durian Custard Pie","",880],
+        ["芝士糯米雞 Sticky Rice w/ Cheese","",988],
+        ["金剛蝦腸 Fried Shrimp Rice Noodle Roll","",788],
+        ["蝦子鱈魚餃子 Shrimp and Cod Dumplings","",788],
+        ["海中寶 Prosperity Fortune Pot","",1028],
+        ["紫菜炸蟹柳卷 Fried Crab Balls with seaweed","",938],
+        ["排骨蒸腸粉 Spareribs Rice Roll","",1088],
+        ["脆皮芝士蝦卷 Deep Fried Shrimp with Cheese","",788],
+        ["欖菜肉鬆四季豆 Sauteed Spring Beans with Minced Pork","",1299],
+        ["黑毛豬沙葛包 Pork & Jicama Bun","",680],
+        ["百花釀炸兩 Stuffed Fried DoughNoodle Roll","",899],
+      ] },
+      { name: "Lunch 午餐｜Small 小點", items: [
+        ["馬拉糕 Malay Paste","",558],
+        ["芝麻煎堆仔 Sesame Puff","",558],
+        ["芒果布丁 Mango Pudding","",558],
+        ["油條 Chinese Donuts","",558],
+        ["龜苓膏 Tortoise Jelly","",558],
+        ["白玉腸粉 Plain Rice Noodle Roll","",558],
+      ] },
+      { name: "Lunch 午餐｜Medium 中點", items: [
+        ["潮州粉果 Chew Chow Fun Gor","",658],
+        ["香茜餃 Steamed Cilantro w/ Shrimp Dumpling","",658],
+        ["蜜汁叉燒包 Steamed B.B.Q Pork Bun","",658],
+        ["奶香滑蛋撻 Egg Custard","",658],
+        ["流沙芝麻球 Fried Black SesameBall","",658],
+        ["班蘭奶黃球 Fried Egg Custard Ball","",658],
+        ["家鄉鹹水角 Home Style Meat Dumpling","",658],
+        ["香滑流沙包 Steamed Salted Egg Yolk Bun","",658],
+        ["香滑芝麻卷 Sesame Roll","",658],
+        ["香麻擂砂餅 Sweet Black Sesame Ball","",658],
+        ["煎芋丝糕 Fried taro cake","",658],
+        ["蜂巢芋角 Deep Fried Taro Root","",658],
+        ["芫茜腸 Cilantro Rice Noodle Roll","",658],
+        ["豉汁蒸鳳爪 Steamed Chicken Feet w/ Black Bean Sauce","",658],
+        ["香芋豉汁蒸排骨 Steamed Spareribs w/ Black Bean Sauce","",658],
+        ["山竹牛肉球 Steamed Beef Ball","",658],
+        ["蝦籽蒸燒賣 Pork Siu Mai","",658],
+        ["薑汁千層糕 Ginger Mille-Feuille","",658],
+        ["薑蔥牛柏葉 Ginger Green Onion Beef Tripe","",658],
+        ["香芋齋春卷 Fried Veggie Egg Roll","",658],
+        ["焗雪山叉燒包 Baked BBQ Pork Bun","",658],
+        ["香滑奶王包 Steamed Egg Yolk Bun","",658],
+        ["蠔皇鮮竹卷 Bean Curd Sheet w/ Oyster Sauce","",658],
+        ["叉燒酥 Baked B.B.Q. Pork Biscuit","",658],
+        ["香滑芝麻卷 Sweet Black Sesame Roll","",658],
+      ] },
+      { name: "Lunch 午餐｜Large 大點", items: [
+        ["叉燒腸 B.B.Q Pork Rice Noodle Roll","",758],
+        ["鮮蝦腸 Shrimp Rice Noodle Roll","",758],
+        ["斎腸 Plain Rice Noodle Roll","",758],
+        ["瑤柱糯米雞 Sticky Rice w/ Chicken","",758],
+        ["XO醬帶子餃 Scallop Dumpling","",758],
+        ["鮮蝦豆苗餃 Scallop Dumpling","",758],
+        ["香茜牛肉腸 Beef Rice Noodle Roll","",758],
+        ["咖喱魚蛋 Curry Fish Balls","",758],
+        ["炸兩 Fried Dough Rice Noodle Roll","",758],
+        ["韭菜脆蝦卷 Fried Leek Egg Roll","",758],
+        ["榴蓮糯米糍 Durian Glutinous Rice Cake","",758],
+        ["生煎菜肉包 Pan Fried Pork Bun","",758],
+        ["金海灣蝦餃皇 Grand Golden Bay Shrimp Dumpling","",758],
+        ["XO醬香煎蘿蔔糕 Pan Fried X.O. Turnip Cake","",758],
+        ["香煎韭菜果 Pan Fried Leek Gor","",758],
+        ["葡撻 Portuguese Tart","",758],
+        ["鮮蝦腐皮卷 Fried Bean Curd w/ Shrimp","",758],
+        ["沙律明蝦角 Fried Shrimp Dumpling w/ Mayo","",758],
+        ["蜂巢鳳尾蝦角 Deep Fried Shrimp","",758],
+        ["香芒炸蝦筒 Fried Shrimp w/Mango","",758],
+        ["酥絲炸蝦球 Deep Fried Shrimp Ball","",758],
+      ] },
+      { name: "Lunch 午餐｜Chef's Special 廚點", items: [
+        ["百花釀豆腐 Stuffed Bean Curd w/ Minced Shrimp","",1199],
+        ["韭菜豬紅 Pork Blood w/ Chives","",1199],
+        ["生炒糯米飯 Pan Fried Sticky Rice","",1299],
+        ["煎釀茄子 Stuffed Eggplant","",1199],
+        ["椒鹽豆腐粒 Salt & Pepper Tofu","",1099],
+        ["煎釀青椒 Stuffed Green Pepper","",1199],
+        ["五香牛什 Five Spices w/ Beef Offal","",1299],
+        ["芥末豬肚撈雞 Wasabi Pork Stomach w/ Chicken","",1399],
+        ["金沙南瓜 Pumpkin w/ Mashed Salted Egg","",999],
+        ["鮑汁鳳爪 Chicken Feet w/ Abalone Sauce","",1199],
+        ["牛腩啫啫腸粉煲 Beef Stew w/ Rice Noodle","",1399],
+        ["蠔油芥蘭 Chinese Broccoli w/ Oyster Sauce","",1099],
+        ["椒鹽雞翼 Salt & Pepper Fried Chicken Wings","",1199],
+        ["椒鹽魷魚 Salt & Pepper Fried Squid","",1199],
+        ["椒鹽多春魚 Salt & Pepper Fried Fish","",1199],
+        ["白灼牛百葉 Boiled Beef Tripe","",1099],
+        ["拍蒜唐生菜 Sauteed Chinese Lettuce with Garlic","",999],
+        ["白果支竹上湯浸豆苗 Pea Sprouts in Broth w/ Ginkgo & Bean Curd","",1299],
+        ["XO 醬腸粉 Pan Fried Rice Noodle Roll w/ X.O Sauce","",999],
+        ["排骨蒸陳村粉 Steamed Spareribs w/ Rice Noodle Roll","",1499],
+        ["花膠海參水餃 Sea Cucumber & Fish Maw Dumpling","",1599],
+        ["XO醬炒羅卜糕 Fried Turnip Cake w/ XO Sauce","",1299],
+        ["素鹅 Bean Curd Skin Roll","",1199],
+        ["拍蒜黃瓜 Shredded Cucumber with Garlic","",1099],
+      ] },
+      { name: "Lunch 午餐｜Porridge, Rice & Noodles 招牌特色粥粉麵飯", items: [
+        ["三寶鮑汁炆伊麵 Braised Noodles w/ Abalone, Sea Cucumber, Maw","",3688],
+        ["小炒皇干炒河 Home Style Chow Fun","",2099],
+        ["海鮮煎米粉 Seafood Pan Fried Noodles","",2299],
+        ["招牌煎麵 House Special Pan Fried Rice Noodle","",2099],
+        ["肉絲煎麵 Pan Fried Rice Noodle w/ Shredded Pork","",2099],
+        ["XO 醬貴妃蚌煎米粉 X.O. Sauce w/ Clam Pan Fried Rice Noodle","",2699],
+        ["XO 醬海鮮炆伊麵 Seafood Yee-Noodle w/ X.O Sauce","",1899],
+        ["乾炒牛河 Beef Chow Fun","",1899],
+        ["家鄉炒米粉 Home Style Stir-Fried Vermicelli","",1999],
+        ["海鮮粥 Seafood porridge","",1480],
+        ["生滾牛肉粥 Raw beef porridge","",1280],
+        ["皮蛋瘦肉粥 Century Egg & Pork Porridge","",1280],
+        ["貴妃蚌粥 Imperial Concubine Clam Porridge","",1580],
+        ["潮州海鮮蟹粥 Teochew seafood crab porridge","",3588],
+        ["魚片粥 Fish fillet porridge","",1480],
+        ["豉油皇炒麵 Soy Sauce Chow Mein","",999],
+        ["揚州炒飯 Yang Zhou Fried Rice","",1899],
+        ["鹹魚雞粒炒飯 Salted Fish & Chicken Fried Rice","",1899],
+        ["金雙蛋牛鬆炒飯 Double Egg & Beef Fried Rice","",1899],
+        ["瑤柱蛋白炒飯 Dried Scallop & Egg White Fried Rice","",1899],
+        ["金雙蛋海鮮炒飯 House Special Seafood Fried Rice","",1899],
+      ] },
+      { name: "Dinner 晚餐｜Seafood 海鲜類", items: [
+        ["金海灣一賣：蠔皇扣鮑魚 Braised Abalone w/ Oyster Sauce","",1699],
+        ["金海灣雙寶：蠔皇扣鮑魚，海參 Braised Abalone & Fish Maw w/ Oyster Sauce","",2899],
+        ["金海灣三寶：蠔皇扣鮑魚，海參，花膠 Braised Abalone, Sea Cucumber & Fish Maw w/ Oyster Sauce","",3888],
+        ["夏日迷你佛跳牆 Summer Mini Buddha Jumps Over the Wall","",2399],
+        ["金雙蛋蟹肉炒銀絲 Golden Silver Egg Fried Silver Noddle","",2299],
+        ["潮式欖菜四季豆 Olive Vegetable w/ Green beans","",1999],
+        ["燒汁黑椒牛坑腩 Beef w/Black Pepper Sauce","",3888],
+        ["潮式豆醬焗海蝦 Baked Sea Shrimp w/ Bean Sauce","",2099],
+        ["藥膳煲走地雞 Chicken Clay Pot","",2199],
+        ["潮式鹹肉炒包菜 Stir-Fried Cabbage w/Salt-Cured Meat","",1999],
+        ["花膠瑤柱鮑汁燴飯 Fish Maw Stewed Rice w/ Abalone Sauce & Dried Scallop","",2699],
+        ["潮式煎蚝餅 Pan-Fried Oyster Omelette","",1999],
+        ["椒鹽魷魚 Salt & Pepper Squids","",1999],
+        ["金海灣小炒皇 Golden Bay Mixed Stir Fry","",2299],
+        ["咖喱海鮮球 Curry Seafood Combination","",1999],
+        ["X.O醬炒雙脆 Scallops w/ Cuttle Fish & Shrimp","",2299],
+        ["XO醬炒海參 Stir-Fried Sea Cucumber w/X.O. Sauce","",2999],
+        ["菜遠炒斑球 Filet of Cod w/Vegetables","",1999],
+        ["五柳斑球 Sweet & Sour Filet of Cod","",1999],
+        ["香草斑球 Vanilla Filet of Cod","",1999],
+        ["椒鹽斑球 Salt & Pepper Fish Filet","",1999],
+        ["川島醬明蝦球 Chuandao Sauce Shrimp","",2299],
+        ["核桃明蝦球 Walnut Prawns","",2299],
+        ["茶皇明蝦球 Tea Shrimps","",2299],
+        ["油泡帶子蝦球 Stir-Fried Shrimp & Scallops","",2899],
+        ["油泡斑球 Stir-Fried Rock Cod Fish","",2299],
+        ["黑椒帶子蝦球 Pan-Fried Scallops & Shrimps w/ Black Peppers","",2899],
+        ["豉椒炒大蜆 Stir-Fried Clams with Black Bean Sauce","",2199],
+        ["椒鹽多春魚 Salt & Pepper Fried Fish","",1999],
+        ["金香蒜粉絲蒸貴妃蚌 Steamed Giant Surf Clam w/Garlic and Silver Noodles（隻）","",999],
+      ] },
+      { name: "Dinner 晚餐｜Chef Specials 廚師推介", items: [
+        ["燒汁黑椒牛坑腩 Beef w/Black Pepper Sauce","",2699],
+        ["椒鹽金菇拼玉子豆腐 Salt & Pepper Mushrooms w/ Japanese Tofu","",1899],
+        ["金海灣一寶： 鮑汁，花膠 Clay Pot w/ Fish Maw & Abalone Sauce","",1699],
+        ["金海灣雙寶： 鮑魚，花膠 Clay Pot w/ Fish Maw & Abalone","",2899],
+        ["金海灣三寶： 鮑魚，花膠，海參 Clay Pot w/ Fish Maw & Abalone & Sea Cucumber","",3888],
+        ["夏日迷你佛跳牆 Summer Mini Buddha Jumps Over the Wall","",1999],
+        ["金雙蛋蟹肉炒銀絲 Golden Silver Egg Fried Silver Noddle","",2099],
+        ["潮式欖菜四季豆 Olive Vegetable w/ Green beans","",1899],
+        ["潮式豆醬焗海蝦 Baked Sea Shrimp w/ Bean Sauce","",2099],
+        ["藥膳煲走地雞 Chicken Clay Pot","",1899],
+        ["潮式鹹肉炒包菜 Stir-Fried Cabbage w/ Salt-Cured Meat","",1899],
+        ["花膠瑤柱鮑汁燴飯 Fish Maw Stewed Rice w/ Abalone Sauce & Dried Scallop","",2699],
+      ] },
+      { name: "Dinner 晚餐｜Chicken, Pork, Beef 雞豬牛", items: [
+        ["川味雞球 Szechuan Chicken","",1899],
+        ["西蘭雞球 Broccoli Chicken","",1899],
+        ["菠蘿咕嚕肉 Sweet and Sour Pork","",1999],
+        ["西蘭牛 Broccoli Beef","",1999],
+        ["蒙古牛 Mongolian Beef","",1999],
+        ["黑椒牛柳粒 Beef w/Black Pepper Sauce","",2399],
+        ["川醬牛肉 Szechuan Style Beef","",1999],
+        ["凉瓜牛肉 Bitter Melon Beef","",1999],
+        ["牛鬆扒菠菜 Minced Beef Over Spinach","",1999],
+        ["咖喱牛腩 Curry Beef Stew","",1999],
+        ["柱候牛腩 Braised Beef Stew","",1999],
+        ["法式牛柳粒 Chef' s Specialty Steak Bites","",2399],
+        ["水煮肥牛 Szechuan Boiled Beef","",1899],
+        ["黑椒牛柳絲 Sliced Beef w/Black Pepper Sauce","",2399],
+        ["港式生炒骨 Hong Kong Style Stir-Fried Pork Ribs","",1999],
+        ["XO醬什菌牛柳粒 XO Sauce Diced Beef Fillet & Mushrooms","",2399],
+        ["貴妃黃毛雞 Special Chicken","",1888],
+        ["金海灣至尊糯米雞 (預定) Glutinous Rice with Chicken ( Pre-order required）","(10 Abalones, Mushrooms, Preserved Meat, Dried Shrimps)(十只鲍鱼、靓冬菇、腊味、虾米)",7800],
+        ["紅燒乳鴿 Roasted Squab（隻）","",2399],
+      ] },
+      { name: "Dinner 晚餐｜Vegetables 蔬菜類", items: [
+        ["什菌玉子豆腐 Assorted Mushrooms Japanese Tofu","",2299],
+        ["紅燒豆腐 Braised Tofu w/ Assorted Vegetable","",1999],
+        ["麻婆豆腐 Ma Po Tofu","",1899],
+        ["椒鹽豆腐粒 Salt & Pepper Tofu","",1899],
+        ["魚香茄子 Eggplant w/ Garlic Sauce","Allergens: Hot",1899],
+        ["金銀蛋上湯浸菠菜 Golden Silver Egg Spinach Soup","",1999],
+        ["糖酒炒芥蘭 Sauteed Chinese Broccoli w/ Sugar & Wine","",1999],
+        ["蠔油芥蘭 Chinese Broccoli w/Oyster Sauce","",1999],
+        ["大地魚炒芥蘭 Stir-Fried Fish Fillet w/ Broccoli","",2099],
+        ["拍蒜西生菜 Sauteed Chinese Lettuce w/ Garlic","",1999],
+        ["蒜子金銀蛋波菜 Golden Silver Egg and Spinach","",1999],
+        ["金銀蛋豆苗 Golden Silver Egg and Pea Sprout","",2399],
+        ["潮式炸豆腐 Fried Crispy Tofu","",1999],
+        ["什菌炒碧綠 Sauteed Assorted Mushrooms w/Tender Greens","",1899],
+        ["蒜子炒豆苗 Sauteed Bean Sprouts w/ Garlic","",2199],
+        ["瑤柱玉子豆腐扒豆苗 Pea sprouts w/ Fried Egg Tofu","",2388],
+      ] },
+      { name: "Dinner 晚餐｜Clay Pot 煲仔類", items: [
+        ["金海灣一品煲 Golden Bay Signature Clay Pot","(Abalone, Scallop, Sea Cucumber, Fish Maw)(鮑魚，瑤柱，海參，花膠)",4899],
+        ["金海灣海鮮豆腐煲 Tofu w/Seafood Clay Pot","",2388],
+        ["鮑魚乾迫黃毛雞煲 Abalone & Chicken Clay Pot","",2899],
+        ["鹹魚雞粒茄子煲 Chicken & Salted Fish Eggplant Clay Pot","",1999],
+        ["紅燒班腩煲 Braised Fish w/ Tofu in Clay Pot","",2399],
+        ["支竹羊腩煲 Braised Lamb Belly Clay Pot","",3899],
+        ["清湯牛腩煲 Beef Brisket in Clear Broth","",2699],
+        ["鹹魚雞粒豆腐煲 Tofu w/Salted Fish & Chicken Clay Pot","",1999],
+        ["鹹豬骨芥菜煲 Braised Salted Pork Bone w/Leaf Mustard in Clay Pot","",2099],
+      ] },
+      { name: "Dinner 晚餐｜Noodles & Rice 粉麵飯", items: [
+        ["鮑魚花膠海參撈麵 Abalone, Fish Maw, and Sea Cucumber Lo Mein","",4699],
+        ["招牌煎麵 House Special Pan-Fried Egg Noodles","",1999],
+        ["海鮮煎米粉 Seafood Fried Rice Noodles","",2299],
+        ["豉油皇炒麵 Soy Sauce Chow Mein","",1899],
+        ["乾燒伊麵 Braised E-Fu Noodles","",1999],
+        ["乾炒牛河 Beef Chow Fun (Dry)","",1999],
+        ["金銀蛋白海鮮炒飯 Golden Silver Egg Fried Rice w/ Seafood","",1899],
+        ["凉瓜瑤柱蛋白炒米線 Fried Rice Noodle w/ Bitter Melon, Scallop & Egg White","",2099],
+        ["XO醬貴妃蚌煎米粉 Pan-Fried Giant Surf Clam Rice Noodle w/ X.O. Sauce","",2399],
+        ["星洲炒米粉 Singapore Rice Noodles","",1999],
+        ["泰式炒米粉 Thai Style Rice Noodles","",1999],
+        ["金雙蛋牛鬆炒飯 Golden Silver Egg Fried Rice","",2099],
+        ["海鮮炒飯 Seafood Fried Rice","",2099],
+        ["瑤柱蛋白炒飯 Dried Scallop & Egg White Fried Rice","",1999],
+        ["鹹魚雞粒炒飯 Salted Fish & Chicken Fried Rice","",1999],
+        ["揚州炒飯 Yang Zhou Fried Rice","",1999],
+        ["鮮蝦球炒飯 Shrimp Fried Rice","",1999],
+        ["金銀蛋白海鮮炒飯 Golden Silver Egg Fried Rice w/ Seafood","",2099],
+        ["家鄉炒米粉 Home Style Stir-Fried Vermicelli","",1999],
+      ] },
+      { name: "Dinner 晚餐｜Soup 湯類", items: [
+        ["帝皇蟹肉花膠羹 King Crab Meat & Fish Maw Soup","",2399],
+        ["帝皇蟹肉冬茸羹 Kind Crab Meat & Winter Melon Soup","",2399],
+        ["帝皇蟹肉粟米羹 Kind Crab Meat & Corn Soup","",2399],
+        ["酸辣湯 Hot and Sour Soup","",1899],
+        ["海鮮豆腐羹 Seafood & Tofu Soup","",2099],
+        ["西湖牛肉羹 West Lake Beef Soup","",2099],
+        ["薑汁花膠紅棗糖水 Ginger Fish Maw Sweet Soup（盅）","",899],
+        ["冬瓜盅 (預定) Winter Melon Soup (Pre-order required)","(Abalone, Scallop, Sea Cucumber, Fish Maw, Ham, etc.)(鮑魚，瑤柱，海參，花膠，火腿，等)",7800],
+        ["竹絲雞花膠燉湯 Silkie Chicken & Fish Maw Soup","",4800],
+      ] },
+      { name: "Dinner 晚餐｜Porridge 粥類", items: [
+        ["皮蛋瘦肉粥 Century Egg & Pork Porridge","",1899],
+        ["海鮮粥 Seafood Porridge","",1199],
+        ["雞球粥 Chinese Porridge","",1199],
+        ["牛肉粥 Beef Porridge","",1199],
+        ["魚片粥 Fish Fillet Porridge","",1199],
+        ["貴妃蚌粥 Surf Clam Porridge","",1499],
+        ["大蜆海鮮粥 Clam Porridge","",1999],
+      ] },
+      { name: "Banquet 宴會聚餐", items: [
+        ["金海灣漁港［帝皇蟹盛宴］套餐A","優惠價：1888, 每天空運新鮮游水挪威帝皇蟹，自營海鮮批發，…感受舌尖上的美味跳動！贈送一人一位【花膠紅棗薑汁糖水】。",188800],
+        ["金海灣漁港［帝皇蟹盛宴］套餐B","優惠價：1388, 每天空運新鮮游水挪威帝皇蟹，自營海鮮批發，…感受舌尖上的美味跳動！贈送一人一位【花膠紅棗薑汁糖水】。",138800],
+        ["金海灣漁港［帝皇蟹盛宴］套餐C","優惠價：888, 每天空運新鮮游水挪威帝皇蟹，自營海鮮批發，…感受舌尖上的美味跳動！贈送一人一位【花膠紅棗薑汁糖水】。",88800],
+        ["金海灣漁港［帝皇蟹盛宴］套餐D","優惠價：688, 每天空運新鮮游水挪威帝皇蟹，自營海鮮批發，…感受舌尖上的美味跳動！贈送一人一位【花膠紅棗薑汁糖水】。",68800],
+        ["金海灣漁港［帝皇蟹盛宴］套餐E","優惠價：638, 每天空運新鮮游水挪威帝皇蟹，自營海鮮批發，…感受舌尖上的美味跳動！贈送一人一位【花膠紅棗薑汁糖水】。",63800],
+        ["金海灣漁港［帝皇蟹盛宴］套餐F","優惠價：488, 每天空運新鮮游水挪威帝皇蟹，自營海鮮批發，…感受舌尖上的美味跳動！贈送一人一位【花膠紅棗薑汁糖水】。",48800],
+      ] },
+    ],
+    siteNote: "Prices are from their own online ordering; live seafood is at market price.",
   },
 
   /*
@@ -6332,6 +6853,90 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Havana — gathered 2026-09-24 from own
+     their spelling: "Havana Restaurant & Catering" (roster keeps "Havana")
+     they are: California-Cuban
+     flag: Sources: havanarestaurant.net home, /location/havana/ (Hours & Location), /menus/ (tabs Brunch, Mojitos & Rum, Wine & Beer, Dinner, Dessert; read from the page and its embedded menu data, which match), /contact/; Toast ordering order.toasttab.com/online/havana-walnut-creek (linked as 'Order Pickup').
+     flag: HOURS NULL, their sources disagree on Monday. The website's Hours & Location page says: 'Bottomless Brunch Saturday & Sunday 10 am – 2:30 pm (Lunch Menu from 2:30-4pm); Dinner Monday 4 pm - 10 pm, Tuesday 4 pm - 9 pm, Wednesday 4 pm- 9 pm, Thursday 4 pm - 9 pm, Friday 4 pm - 10 pm, Saturday 10 am - 10 pm, Sunday 10 am - 9 pm'. Toast's 'Location and Ordering Hours' say Mon 4pm-9pm, Tue-Thu 4pm-9pm, Fri 4pm-10pm, Sat 10am-10pm, Sun 10am-9pm, so Monday closing is 10 pm on the website and 9 pm on Toast.
+     flag: PRICE CONFLICT: items use the website Menus page. The Toast online menu has mostly higher prices and a partly different set of dishes: 3 matching dishes have the same price and 15 differ (Twice Fried Plantains $12.95 on website vs $15.95 on Toast; Vegetarian Empanadas $15.95 on website vs $16.95 on Toast; Croquettes $13.95 on website vs $16.95 on Toast; Mojo Chicken Wings $15.95 on website vs $17.95 on Toast; Grilled Shrimp $18.95 on website vs $19.95 on Toast; Yucca Fries $12.95 on website vs $15.95 on Toast; …). Dishes that appear only on Toast were not added, including Vaca Frita, Lechon Asado, Shrimp & Octopus Cazuela, Snapper Ceviche and a Kids menu at $13.95 per entrée.
+     flag: Left out, alcohol: 54 drinks (bottomless mimosas and mojitos, sipping rums, alcoholic mojitos, cocktails, sangria, sparkling wine, beer and wine lists, plus the Grown Up Root Beer Float, which contains vodka). The only drink listed is the Virgin Mojito.
+     flag: Left out, add-ons: Add a Fried Egg $2.50 and Add Avocado $3 (brunch); salad 'Add:' Shrimp $7.50, Grilled Steak $8.50, Chicken Breast $6.50, Seared Ahi Tuna $9.50.
+     flag: Left out, no price: Ceviche of the Day (A.Q).
+     flag: Kept as food although they are made with rum: Plantain French Toast (Zaya rum-brown sugar glaze), Chicken & Waffle (golden rum maple syrup), Caramel Rum Flan, Coconut Tres Leches Cake (Pilar rum whipped cream).
+     flag: Menu notes: 20% gratuity will be added to parties of 6+. Bottomless drinks have a 90 minute table limit.
+     flag: Name: the page title and reservation form say 'Havana Restaurant & Catering'; the site's structured data says 'Havana Restaurant'. Havana Catering is a sister business at havanacatering.net and was not researched. The website gives the address as '1516 Bonanza'; Toast gives '1516 Bonanza Street'.
+     flag: Not blocked: the reCAPTCHA frame on the pages is the invisible badge that protects their forms, not a bot check, and all pages loaded normally. The DoorDash 'Order Delivery' link was not used.
+  */
+  'havana-walnut-creek': {
+    address: "1516 Bonanza Street, Walnut Creek, CA 94596",
+    phone: "(925) 939-4555",
+    email: "info@havanarestaurant.net",
+    cuisine: "California-Cuban",
+    sections: [
+      { name: "Brunch Menu", items: [
+        ["Croque Cubano","Our Signature Cuban Sandwich, Bechamel, Cheese & Fried Egg, Mixed Greens & Vinaigrette",1895],
+        ["Chicken Ropa Vieja Chilaquiles","Crispy Tortillas, Salsa, Eggs, Queso Fresco, Onion, Avocado, Sour Cream, Cilantro. Salsa Verde or Salsa Rojo (Hot); Scrambled or Fried Egg",1995],
+        ["Ropa Vieja & Hash","Braised Beef with Onions, Peppers and Tomato, Black Beans, Boniato-Poblano Pepper Hash, Fried Egg",2395],
+        ["Plantain French Toast","Custard Soaked French Bread, Zaya Rum-Brown Sugar Glazed Maduros, Spiced Pecans",1795],
+        ["Steak & Eggs","Chimichurri Steak, Fried Eggs, Yucca Fries, Caramelized Onion",2795],
+        ["Shrimp Po’Boy","Crispy Shrimp, Pickled Red Onion, Oaxaca Cheese, Chimichurri Aioli",1895],
+        ["Dungeness Crab Croquette Benedict","Dungeness Crab Croquette, Poached Eggs, Sweet Habenero Hollandaise, Potato Cake, Mixed Greens",2695],
+        ["Chicken & Waffle","Habanero Butter, Golden Rum Maple Syrup, Pickled Onions & Jalapeno",1995],
+        ["The Burger","Angus Beef, Candied Bacon, Manchego Cheese, Caramelized Onion, Cachucha Pepper Aioli, Yucca Fries, Guava BBQ Sauce",1895],
+      ] },
+      { name: "Mojitos", items: [
+        ["Virgin Mojito","Soda Water, Fresh Mint, Sugar, Lime Juice. Options: $5; With Seasonal Fresh Fruit $6",500,null,"from"],
+      ] },
+      { name: "Table Snacks", items: [
+        ["Spicy Yucca Chips & Mango Salsa","",1195],
+        ["Plantain Chips & Avocado Mash","Lime, Red Onion",1295],
+      ] },
+      { name: "Tapas", items: [
+        ["Twice Fried Plantains","Pineapple Salsa",1295],
+        ["Vegetarian Empanadas","Lentil-Picadillo, Olive, Raisins, Hand Chopped Chimichurri",1595],
+        ["Ropa Vieja Empanadas","Chipotle Aioli",1695],
+        ["Tuna Tartare","Spicy Yucca Chips",1995],
+        ["Day Boat Scallops","Boniato Mash, Truffle-Cumin Crema",1995],
+        ["Croquettes","Ham & Manchego",1395],
+        ["Mojo Chicken Wings","Citrus Soya Glaze",1595],
+        ["Grilled Shrimp","Sofrito Rice, Cilantro-Lime Sauce",1895],
+        ["Yucca Fries","Garlic Mojo, Jalapeno-Cilantro Sauce",1295],
+        ["Cuban Sandwich","Pork Loin, Ham, Pickles, Oaxaca, Mustard",1495],
+        ["Crispy Shrimp Enchilado","Creole Tomato Sauce, Spiced Lime",1895],
+        ["Grilled Lamb Chops","Hand Chopped Chimichurri",1895],
+        ["Chino-Cubano Fried Rice","Mojo & Soy Glazed Pork Belly, Scallops, Mango, Peas, Egg",1895],
+      ] },
+      { name: "Salad", items: [
+        ["Kale Salad","White Onion, Avocado, Pomegranate, Sunflower, Pumpkin & Sesame Seeds, Soy Dressing",1495],
+        ["Mango Spinach Salad","Spiced Pecans, Avocado, Queso Fresco, Mango Salsa & Vinaigrette",1495],
+      ] },
+      { name: "Entrees", items: [
+        ["Plantain Crusted True Cod","Tomatillo-Avocado Salsa, Sofrito Rice, Cuban Corn Sauté",2995],
+        ["Paella","Shrimp, Clams, Mussels, Chicken & Chorizo Simmered in Saffron Stock with Spanish Rice & Peas",2995],
+        ["Green Garlic & Cauliflower Paella","Green Garlic Sofrito, Onion, Rainbow Cauliflower, Manchego Cheese, Peas, Truffle Oil",2795],
+        ["Mojo Marinated Half Chicken","Yucca Fries, Truffle-Cumin Crema, Green Papaya & Chayote Slaw",2895],
+        ["Puerco Cubano","Roasted Pork Shoulder, Chayote & Purple Potatoes, Pickled Vegetables, Jalapeno-Cilantro Salsa, Tortillas",2895],
+        ["Ropa Vieja","Braised Brisket with Onions, Tomato & Peppers, Sofrito Rice, Cuban Black Beans, Plantain Maduros",2895],
+        ["Chimichurri Steak","Marinated & Grilled Skirt Steak, Boniato Mash, Cuban Corn Sauté",3195],
+      ] },
+      { name: "Sides", items: [
+        ["Sofrito Rice","",400],
+        ["Black Beans","",400],
+        ["Boniato Mash","",400],
+        ["Cuban Corn Sauté","",450],
+        ["Plantain Maduros","",450],
+      ] },
+      { name: "Dessert", items: [
+        ["Caramel Rum Flan","Classic Cuban Custard Dessert",900],
+        ["Coconut Tres Leches Cake","Sponge Cake Soaked in Condensed Milk, Coconut Milk & Evaporated Milk, Pilar Rum Whipped Cream",1000],
+        ["Sorbet","Inquire about our daily selection",900],
+        ["Churros","Cinnamon Sugar, Chocolate Sauce",900],
+      ] },
+    ],
+    siteNote: "Prices are from the menus on their own site; their online ordering charges more.",
+  },
+
+  /*
      HL Peninsula Restaurant — gathered 2026-09-21 from own
      they are: Cantonese dim sum
      flag: Glenn: “Five locations.” Each shop’s address, phone, email and hours are from hlpeninsula.com/locations; menus there are images and are not transcribed.
@@ -6829,6 +7434,107 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     JAS Nail Spa — gathered 2026-09-24 from own
+     they are: Nail salon
+     flag: Source: jasnailspaunioncity.com (a one-page GoDaddy site). Hours come from its hours widget expanded to the full week (a display toggle): Mon-Thu 09:00 am – 07:00 pm, Fri and Sat 08:30 am – 07:00 pm, Sun 08:30 am – 06:30 pm. No other source on the site gives hours. The site says "Please call to make an appointment!", and "BOOK YOUR APPOINTMENT" is a phone link.
+     flag: The site also shows price-list images (e.g. "Copy of NAIL ENHANCEMENTS"). They were not transcribed or compared; all items come from the text menu.
+     flag: Names: the page title and intro say "JAS Nail Spa"; the contact block says "Jas Nail Spa".
+     flag: NAIL ENHANCEMENTS rows show "Full Set $X+" with "Fill-in $Y" beneath. The fill-in rows were named "<product> Fill-in" by me. "Color Powder with Tip" Fill-in is shown as "$55*" with no footnote, so it is recorded as 5500 with no label.
+     flag: Template placeholder text ("Add a description about this item" on Gel X Medium and Gel X Long; "Add a footnote if this applies...") was left out.
+     flag: WAXING "Cheat $45+" is kept as written (probably Chest).
+     flag: KID SERVICES prices (for under 10) appear only inside SEO sentences. The 6 items take their names from that wording, and desc quotes the sentence. The kids PEDICURE $25 sentence says "regular manicure with traditional polish".
+     flag: Pedicure and manicure desc text is the site's own SEO-heavy copy, kept as written.
+     flag: Cookie banner not accepted. The "LEARN MORE" and reviews links go to Yelp and were not used. Instagram linked: instagram.com/jasnailspa (field left null per spec). No email is shown.
+  */
+  'jas-nail-spa': {
+    address: "31828 Alvarado Blvd, Union City, CA 94587",
+    phone: "(510) 487-8083",
+    hours: "Mon-Thu 09:00 am – 07:00 pm; Fri-Sat 08:30 am – 07:00 pm; Sun 08:30 am – 06:30 pm",
+    cuisine: "Nail salon",
+    groups: [
+      { name: "Prices, from", items: [
+        ["SIGNATURE PEDICURE","Our nail salon near you offers a comprehensive manicure and pedicure experience, including nail shaping, cuticle trimming, and buffing. We also provide a light callus treatment and an exfoliating scrub to ensure soft, smooth skin. Enjoy a relaxing 5-minute massage and the added luxury of a steaming hot towel, all while using high-quality builder gel and Gel X for stunning results.",3800],
+        ["DELUXE PEDICURE","• Enjoy a warm neck pillow while you receive your manicure with builder gel or Gel X options • Indulge in a refreshing sea salt and sugar scrub • Experience a soothing paraffin wax treatment • Follow it up with a 7-minute massage, finished with a hot towel at our nail salon near you, perfect for your pedicure needs.",4800],
+        ["HEELS CARE PEDICURE","Enjoy a warm neck pillow while indulging in a luxurious manicure featuring builder gel and Gel X options. Our treatment includes a sea salt and sugar scrub for exfoliation, effective callus removal, and a refreshing mask with a hot towel wrap. Complete your experience with a paraffin wax treatment followed by a soothing 10-minute massage, finished off with a hot towel. Visit our nail salon near you for the perfect pedicure and pampering session.",5800],
+        ["TROPICAL PEDICURE","• Warm neck pillow • Sea salt • Organic sugar scrub • Fresh fruit to gently exfoliate your feet and legs, helping remove calluses and dead skin for a smoother feel • Organic mask with steam hot towel wrap • Paraffin wax • 10-minute massage with hot stones, all finished with a hot towel, perfect for a complete manicure or pedicure experience. Visit your local nail salon near me to enjoy these rejuvenating treatments and explore options like Builder gel or Gel x for your nails.",5800],
+        ["JELLY COLLAGEN PEDICURE","• Warm neck pillow • Jelly soak deeply moisturizes • Sugar scrub • Manicure with a mask and hot towel wrap • Paraffin wax treatment • 12 minutes of feet massage with hot stones, finished with a hot towel, perfect for a pedicure experience. Visit our nail salon near me for Builder gel and Gel x options.",6800],
+        ["MILKY HONEY PEDICURE","• Warm neck pillow for ultimate relaxation • Creamy rich taste Vitamin D milk • Sea Salt bath for rejuvenation • Callus removal during your manicure • Milk and Honey sugar scrub treatment • Mask with hot towel wrap • Paraffin wax treatment for your hands • Enjoy a 12-minute feet massage with hot stones, finishing with a hot towel, perfect after a pedicure. Visit our nail salon near me for the best in Builder gel and Gel x options.",7800],
+        ["JAS PEDICURE","Experience relaxation with our warm neck pillow while enjoying a rejuvenating manicure using builder gel and Gel X techniques at our nail salon near you. Treat yourself to our luxurious gold soak powder and indulge in a rich gold scrub for effective callus removal. Pamper your feet with our collagen sock paraffin wax treatment, followed by a soothing pedicure. Don’t miss our gold body butter to hydrate your skin and a gold mud mask paired with a hot towel wrap serum. Complete your experience with a relaxing 18-minute massage featuring gold massage cream and hot stones, all finished off with a hot towel for ultimate comfort.",8800],
+        ["SWEETHEART PEDICURE","Indulge in our luxurious services, including a mineral sea salt soak and a meticulous sugar scrub, perfect for gentle callus care. Enjoy a paraffin wax treatment that leaves your skin pampered, followed by an aromatherapy candle oil massage. Refresh your nails with a builder gel or Gel x manicure, and don't miss our hydrating mask with a hot towel wrap. Complete your experience with a relaxing 12-minute hot stone massage finished with a steaming hot towel. For the ultimate in self-care, visit our nail salon near you for a rejuvenating pedicure.",6800],
+        ["MATCHA-CHA-CHA PEDICURE","• Detox Matcha soak • Matcha sea salt bomb • Callus removal • Matcha sugar scrub • Hydrating Matcha mask with hot towel wrap • Paraffin wax treatment • Collagen socks treatment • Aromatherapy candle massage • 15 minutes hot stone massage finished with hot towel. Enhance your nail care with our Builder gel and Gel X options for the perfect manicure at our nail salon near you. Don’t forget to treat your feet to a luxurious pedicure after these refreshing treatments.",7800],
+        ["STRAWBERRY PEDICURE","• Strawberry sea salt bomb • strawberry sea salt soak • Callus removal treatment • Strawberry exfoliating sugar scrub • Nourishing mask with hot towel wrap • Paraffin wax treatment • Relaxing candle massage oil • 12 minutes hot stone massage finished with hot towel, perfect for enhancing your manicure or pedicure. Experience the benefit of builder gel and Gel X techniques during your visit to our nail salon near you.",6800],
+        ["CLASSIC MANICURE","This manicure service includes a hands soak, nail cutting, shaping, and cuticle care, topped off with hand lotion, a light hand massage, and a hot towel wrap. Consider trying out Builder gel or Gel X for a perfect finish. Don't forget to also treat your feet to a pedicure while visiting your local nail salon near me.",2800],
+        ["COLLAGEN MANICURE","Enjoy a classic manicure that includes a collagen gloves mask and a soothing 5-minute massage, perfect for a relaxing experience at your local nail salon near me. For those looking to enhance their nails further, ask about our builder gel and Gel X options, and don’t forget to treat yourself to a pedicure as well!",3800],
+        ["PAMPER ME MANICURE","Our Classic Manicure plus Paraffin Dip at our nail salon near you leaves your hands feeling soft. We finish with a soothing lotion oil massage, allowing for the ultimate relaxation, complemented by a 5-minute massage. You can also explore our Builder gel and Gel X options for beautiful nails, along with our relaxing pedicure services.",3800],
+        ["ROYAL MANICURE","Treat yourself to this luxurious manicure using builder gel and embrace the diamond standard of beauty! Visit our nail salon near you for an indulgent experience. Enjoy a soothing hot wax treatment followed by a relaxing 7-minute massage with hot stones, and consider a pedicure to complete your pampering session.",4800],
+        ["JAS SPA MANICURE","Experience our rejuvenating JAS Manicure at our nail salon near you, a luxurious five-step treatment designed to refresh your hands and mind. Enjoy a gentle gold sugar scrub that exfoliates and hydrates your skin, and relax with a 10-minute massage using hot stones and aromatic candle oil. Indulge in an enriching golden mask that promotes a radiant glow, and complete your experience with rich body butter for deep hydration. Leave with hands that feel incredibly soft, a touch of elegance, and perfectly prepared for your next gel x or builder gel application. Whether you're looking for a manicure or pedicure, we provide the ultimate pampering experience.",6500],
+        ["Acrylic Full Set","$60+",6000,"from"],
+        ["Acrylic Fill-in","$55+",5500,"from"],
+        ["Pink & White Full Set","$65+",6500,"from"],
+        ["Pink & White Fill-in","$55+",5500,"from"],
+        ["Overlay Acrylic Full Set","$60+",6000,"from"],
+        ["Overlay Acrylic Fill-in","$55+",5500,"from"],
+        ["Color Powder with Tip Full Set","$60+",6000,"from"],
+        ["Color Powder with Tip Fill-in","$55*",5500],
+        ["Ombre Powder Full Set","$70+",7000,"from"],
+        ["Ombre Powder Fill-in","$60+",6000,"from"],
+        ["Acrylic on Toes Full Set","$55+",5500,"from"],
+        ["Acrylic on Toes Fill-in","",5000],
+        ["Hard Gel/Builder Gel Full Set","$60+",6000,"from"],
+        ["Hard Gel/Builder Gel Fill-in","$55+",5500,"from"],
+        ["Rubber Base","$45+",4500,"from"],
+        ["Gel-X Short","",6000],
+        ["Gel X Medium","",6500],
+        ["Gel X Long","",7000],
+        ["Dipping Powder","",5500],
+        ["Dipping Powder with Tip","",6500],
+        ["Gel removal without service","",1000],
+        ["Acrylic/Gel-X/ Hard Gel removal without service","",2000],
+        ["Dipping powder removal without service","",1500],
+        ["Acrylic removal with service","",1500],
+        ["Gel-X removal with Services","$10+",1000,"from"],
+        ["Regular polish change","",1500],
+        ["Gel Polish change","",2500],
+        ["Length","$5+",500,"from"],
+        ["Regular French Tip","",1000],
+        ["Deep French Tip","$15-$20",1500,"from"],
+        ["Add Ombre","",1500],
+        ["Matte Coat","",500],
+        ["Cat Eyes/Chrome","",1500],
+        ["Acrylic for 2 Big Toes","",1500],
+        ["Acrylic Fill-in for 2 Big Toes","",1000],
+        ["3 - 5 Colors","",500],
+        ["Cuticle Clean","",1000],
+        ["Shine Buff","",500],
+        ["Nail Repair","",500],
+        ["Eyebrows","",1500],
+        ["Lip","",1000],
+        ["Chin","",1200],
+        ["Cheek","",1500],
+        ["Sideburns","",1500],
+        ["Full Face","",4500],
+        ["Stomach","$30+",3000,"from"],
+        ["Under Arms","",2000],
+        ["Half Arm","$30+",3000,"from"],
+        ["Full Arms","$55+",5500,"from"],
+        ["Half Legs","$40+",4000,"from"],
+        ["Full Legs","$65+",6500,"from"],
+        ["Bikini","$50+",5000,"from"],
+        ["Brazilian","$60+",6000,"from"],
+        ["Cheat","$45+",4500,"from"],
+        ["Back","$50+",5000,"from"],
+        ["Gel Polish","Gel Polish at $25 offers a perfect complement to your manicure",2500],
+        ["Regular Polish","our Regular Polish is available for just $15",1500],
+        ["Gel Polish","Gel Polish application is available for $35",3500],
+        ["Regular Polish","If you prefer a regular manicure with traditional polish, it's just $25.",2500],
+        ["Polish change","a polish change will cost $10",1000],
+        ["Gel polish change","a gel polish change, including options like Builder gel and Gel X, is offered for $15",1500],
+      ] },
+    ],
+    quoteOnly: "Prices are from the text menu on their own site; builder gel is $10 more on a manicure or pedicure.",
+  },
+
+  /*
      Jazz Braids — gathered 2026-09-21 from stopgap
      their spelling: "Jazz And Co. LLC" (roster keeps "Jazz Braids")
      they are: Braids, salon services
@@ -7042,6 +7748,32 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "Bounce house and soft play rentals 'where luxury meets fun,' delivered to your doorstep in the Bay Area. Flat per-package rental prices, $240-$580 across about twenty-five packages; travel fee by location; the mechanical bull is quote-only.",
+  },
+
+  /*
+     K On The Go — gathered 2026-09-24 from stopgap
+     their spelling: "K on the Go Union City" (roster keeps "K On The Go")
+     they are: Cafe and high tea
+     flag: No own website: the Linktree (linktr.ee/konthegounioncity) links Instagram, TikTok, Facebook, an Eventbrite event, "Order Now", a Calendly "Tea Time Reservation" and a "Collaborate with Us" form.
+     flag: "Order Now" goes to order.online/store/k-on-the-go-union-city-29577580 (DoorDash Storefront, reached through a Google ordering link, utm_source=gfo). Not opened or used because of the no-DoorDash rule, so no cafe menu, hours or address were collected. If you count DoorDash Storefront as their own ordering page, this is where the full menu is.
+     flag: Eventbrite anniversary event link not used (ticketing listing site).
+     flag: Only source used beyond the Linktree: their Calendly page calendly.com/konthegouc/tea-time-reservation (read-only; no booking). Phone (669) 600-5555 and email teareservation@gmail.com are the contact line given there for tea reservations.
+     flag: Tea time: label "from" because the Banh mi board savory adds $5; $25 per person charge for same-day cancellation; a credit card on file is required.
+     flag: Hours null: no hours published on the Linktree or Calendly page.
+     flag: Address null: Calendly location reads only "K on the Go Union City".
+     flag: Calendly loads an invisible reCAPTCHA badge; no challenge was shown and nothing was submitted.
+     flag: No alcohol listed.
+     flag: Instagram listed on the Linktree: https://instagram.com/konthego.unioncity (field left null per template).
+     flag: On review: address and "M-S 10-7pm" from their own Instagram bio (Glenn's screenshot), email from its Contact sheet; the tea time is in the sentence rather than a menu item, since it is a reservation, not something ordered here. No site of their own: the button is their tea-time booking page and the tile wears the red ring.
+  */
+  'k-on-the-go-union-city': {
+    address: "31877 Alvarado Blvd, Union City, CA 94587",
+    phone: "(669) 600-5555",
+    email: "konthegouc@gmail.com",
+    hours: "Mon–Sat 10am–7pm",
+    cuisine: "Cafe and high tea",
+    needsSite: true,
+    contactOnly: "Specialty coffee, boba, snacks and desserts on Alvarado Boulevard, and high tea by reservation: $50 a person plus tax on their own booking page, with a $25 charge for cancelling the same day.",
   },
 
   /*
@@ -7880,6 +8612,26 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     LITA — gathered 2026-09-24 from own
+     they are: Caribbean-Latin
+     flag: Sources: litawalnutcreek.com, a one-page BentoBox site. /menus/, /hours-and-location-/ and /DoorDash/ are sections of that same page, and all menu tabs were read, including the hidden ones: Lunch, Dinner, #DrinkLITA, Mezcal Mondays, Happy Hour, Sol Thursdays.
+     flag: Every menu lists dishes with no prices (the price fields only hold notes such as '2 pc' or empanada fillings). Left out, no price: 49 Lunch items, 43 Dinner items, 11 Happy Hour items and 17 Sol Thursdays items, so items is [].
+     flag: Left out, alcohol: the #DrinkLITA tab (Signature and Reserve Cocktails, Wine Selections, Beer), Mezcal Mondays and the drinks on the Happy Hour and Sol Thursdays tabs. None of it is priced. A 'Sober Curious' section of non-alcoholic drinks exists but is also unpriced.
+     flag: No own ordering page: 'Order Online' only links to DoorDash and Grubhub, which were not used. Reservations are on OpenTable, also not used.
+     flag: Hours on the page match the site's structured data exactly, so there is no conflict. Other times shown: Happy Hour Monday-Friday 2:30-5:00; Mezcal Mondays all-day specials with a DJ 7-close; Sol Thursdays 7pm-close (excluding holidays). 'Dinner Reservation highly recommended'.
+     flag: The phone is shown only as the vanity number 925-933-LITA, which is 925-933-5482 on a keypad.
+     flag: On review: hours written as one schedule from their own page (lunch, dinner and brunch together); their meal-by-meal times are unchanged, only joined.
+  */
+  'lita-walnut-creek': {
+    address: "1602 Bonanza St, Walnut Creek, CA 94596",
+    phone: "925-933-LITA",
+    email: "Info@litawalnutcreek.com",
+    hours: "Mon–Wed 11:30am–9pm, Thu–Fri 11:30am–10pm, Sat 11am–10pm, Sun 11am–9pm",
+    cuisine: "Caribbean-Latin",
+    contactOnly: "Miami flavors with Caribbean influences on Bonanza Street, in their own words. Their menus list no prices.",
+  },
+
+  /*
      Love Burn Hot Chicken — gathered 2026-09-21 from stopgap
      they are: Nashville hot chicken
      flag: all facts from their Instagram bio; Toast blocks reading the menu
@@ -8209,6 +8961,147 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Filipino desserts",
     tagline: "Filipino snack bar serving sago desserts, onigiri, and drinks",
     contactOnly: "Filipino snack bar serving sago desserts, onigiri, and drinks. Their menu board and their online ordering page disagree on prices, so none are listed here until they settle on one.",
+  },
+
+  /*
+     Maza — gathered 2026-09-24 from own
+     they are: Mariscos, sushi & Mexican
+     flag: Sources: maza-restaurant-bar.com (Home, /menu) and their Toast page order.toasttab.com/online/maza-782-north-13th-street (linked as "Order To-Go").
+     flag: Hours null: own sources disagree on closing time. Home page: "Monday - Friday 2pm - 10pm; Saturday - Sunday 11am to 10pm". Toast "Location and Ordering Hours": Mon-Fri 2:00PM - 9:30PM, Sat-Sun 11:00AM - 9:30PM (may be an online-ordering cutoff, but not labelled as such). Opening times agree.
+     flag: Alcohol left out: 2X1 Micheladas Monday, $6 Margarita, $15 Double shot tall margarita, $24 Jaras de Margaritas, Sábado Cervecero ($20 beer bucket/jar); plus the add-on line "& for $10 more get bottomless mimosas." removed from 5 brunch descriptions.
+     flag: Kept non-alcoholic drinks labelled as such on Toast: Michelada Virgen, Sangria Prep (NO alcohol), Mineral Prep (NO alcohol), Pina Colada Virgen, Paloma Virgen. Drop them if the directory avoids alcohol-style names.
+     flag: 1 item without a price left out: Sundays Kids Eat Free ("Kids eat free" promo).
+     flag: $2 Taco Tuesday item requires a drink purchase and is dine-in only (per its own description). Brunch is "Saturday and Sunday from 11 AM to 2 PM" per the menu.
+     flag: Toast "Featured Items" duplicates (Divorciado, Jalapeno, Maza's Shrimp Wrap) kept once under their own sections. Menu typos kept as published.
+     flag: Name variants on own pages: "Maza", "Maza Mexican Restaurant", subtitle "Mariscos el Mazatleco". Home page: "Dog-friendly | 100% Outdoor", "Pay CASH Get 3% OFF", Happy Hour 2-6pm.
+     flag: No email on own pages (the "Work with us" page is a job form). instagram left null per template (site links @mazasanjoseca).
+     flag: On review: filed as b_mazasanjose (research id b_mazarestaurantbar) to match its seed.
+     flag: On review: San Jose's Mexican seat is Tacos Mi Reynita's and their menu has a "Japan Maza's Sushi" section, so it takes the open Sushi seat, as Sushi Naloa did in Redwood City.
+  */
+  'maza-san-jose': {
+    address: "782 North 13th Street, San Jose, CA 95112",
+    phone: "(669) 235-6776",
+    cuisine: "Mariscos, sushi & Mexican",
+    sections: [
+      { name: "Para Empezar", items: [
+        ["Guacamole con chicharron","Homedade fresh when you order chicharron and guacamole with queso fresco, red sauce and sour cream.",1900],
+        ["Regular Guacamole","Made fresh when you order.",1075],
+        ["Shrimp Empanadas","Stuffed with shrimp and veggies mix (tomato, onion and cilantro) cheese with our signature aguachile and chipotle sauces.",1600],
+        ["Maza's Shrimp Wrap","Our juicy shrimp, wrapped in crispy bacon and fillled with rich melted cheddar cheese. Each bite offers a delightful combination of smoky and creamy flavors.",1600],
+        ["Octopus al Ajillo","Tender octopus cooked in olive oil and cayenne pepper, simmered with garlic and onions. This dish flavors showcasing the natural richness of the octopus complemented by the subtle heat of the cayenne pepper and the savory aroma of simmered garlic and onios.",3200],
+        ["Fried Calamar","Deep fried squid with chipotle sauce.",1875],
+        ["Chicharrones de Pez","Deep fried battered fish with lime veggi salad and serrano pepper sauce on the side.",1900],
+        ["Camarones Michelados","Shrimp sauteed with chipotle and tapatio sauce.",2300],
+        ["Camarones Cucaracha","Shrimp sauteed to crispy with tapatio sauce with our signature lime serrano pepper sauce on the side with a lime veggie salad.",2300],
+        ["Parmesan Garlic Fries","",950],
+        ["Chicken Wings","",1600],
+      ] },
+      { name: "Classic Mexicanos", items: [
+        ["Chilaquiles de Arachera","8oz USD prime grilled Asada in our zesty sauce. finished with a sprinkle of fresh cheese, sour cream, onions, cilantro and egg cook to choice on top.",2800],
+        ["Fajitas Trio","Good for one or two people A sizzling skillet loaded with tender arrachera steak, marinated chicken, and juicy shrimp, grilled with bell peppers and onions. Served with Mexican rice, refried beans, warm tortillas, and all the classic fixings so you can build your perfect fajita every time.",4500],
+        ["Cheese Enchiladas Plate","Topped with a zesty sauce. Finished with a sprinkle of fresh cheese.",2250],
+        ["Flautas de Papa with chicken","Crispy, golden flautas fillled with seasoned potato and tender shredded chicken, served with fresh salsa and creamy guacamole. This delightful Mexican dish offers a perfect balance of textures and flavors making it a satisfying and flavorful choice.",1350],
+        ["Frijoles Puercos","A must savory Mexican stew featuring tender pork and pinto beans, simmered with aromatic spices for a rich and satisfying flavor experience.",1100],
+        ["Cup of Tortilla Soup","Tortilla chips, onions, cilantro, avocado, cheese with our tomato sauce recipe.",1300],
+        ["3 - Street Tacos","with onion, cilantro, red sauce, serrano pepper and lime on the side.",1200],
+        ["Salmon Tacos","Cabbage, chipotle sauce, mayo, pico de gallo with and red sauce on the side.",2000],
+        ["Chicharron Habanero Tacos","Porkbud with our ground pork recipe, cream, beans, cabbage and habanero pickle with tanned onions.",1450],
+        ["2 - Gobernadores Tacos","Bell pepper, onion, garlic oil, cheese on a double tortilla, and cucumber, serrano pepper, chipotle sauce on the side.",1500],
+        ["Capeados Tacos","Pico de gallo, guacamole, mayonnaise, chipotle sauce, cabbage and cucumber, red sauce, serrano pepper, lime on the side.",1500],
+        ["Fajitas","Grilled skirt beef with bell pepper, onions, tomato with rice and beans on the side.",2600],
+        ["Camarones Rancheros","Homedade tomato garlic sauce with a pinch of cilantro at the end for aromatic flavor with rice and salad on the side.",2800],
+        ["Camarones a la Diabla","Spicy shrimp with our chipotle chili cream sauce, salad, rice and tortilla.",2800],
+        ["Fried Mojarra","pico de gallo, beans, fries, red sauce and tortillas on the side.",2100],
+        ["USD PRIME Carne Asada","Grilled beef with rice, salad, spring onions with red sauce and tortillas on the side.",2800],
+        ["Mar y Tierra","Grilled beef, shrimp, pork chop with rice, salad, spring onions with red sauce and tortillas on the side.",3800],
+        ["Tostadas Trio","",1500],
+        ["Super Quesadilla","",1600],
+        ["Super Burrito","",1800],
+        ["Vegi Burrito","",1400],
+        ["Vegi Quesadilla","",1200],
+        ["Chorriadas Mix","Chorizo, asada, birria topped with a zesty little spicy sauce, sour cream, guac finished with a sprinkle of fresh cheese.",1425],
+        ["Tacos Jalapeños","Dos jalapeños rellenos de carne asada, gratinados con queso a la plancha, acompañados de guacamole, crema, cebolla cambray y pico de gallo encima.",1400],
+      ] },
+      { name: "Mariscos Mazatlan", items: [
+        ["Torre de Mariscos","Shrimp, crab, scallops, octopus, onion, cucumber, avocado, cooked on our signature lime serrano black soy sauce and chilpitin pepper on top.",4900],
+        ["Botana Maza","Shrimp, crab, scallops, octopus, onion, cucumber, avocado, cooked on our signature lime serrano black soy sauce and chilpitin pepper on top.",6500],
+        ["Callo de Acha","Scallops, with our signature lime serrano sauce and top with chipitin pepper.",4500],
+        ["Campechana","Shrimp, octopus, scallops & oysters with homemade seafood broth, pico de gallo with our signature soy serrano lime sauce, tapatio and chilpitin pepper.",2900],
+        ["Coctel Mixto","Shrimp & octopus with homemade seafood broth, pico de gallo with our signature soy serrano lime sauce, tapatio and chipitin pepper.",2500],
+        ["Coctel de Camaron","shrimp with homemade seafood broth, pico de gallo with our signature soy serrano lime sauce, tapatio and chilpitin pepper.",2200],
+        ["Consome","Shrimp, pico de gallo with homemade seafood broth.",900],
+        ["Cazo de Mariscos","Lobster, shrimp michelados, shrimp cucaracha, shrimp empanizados, shrimp wrap, octopus al ajillo all this on a bad of taco sauce with cheese.",6875],
+        ["7 Mares Soup","Shrimp, octopus, scallops and mussels homemade seafood broth soup.",3100],
+        ["Caldo de Camaron","Shrimp homemade seafood broth soup.",2700],
+        ["Tostada Aguachile Mingito","butterfly shrimp, avocado, tomato, onions, cucumber, cilantro with our signature lime serrano black soy sauce and chilpitin pepper on top.",1500],
+        ["Tostada Aguachile negro","Buttlerfly shrimp, avocado, tomato, onions, cucumber, cilantro, slices of serrano with our signature lime serrano pepper sauce.",1300],
+        ["Tostada Aguachile Verde","Butterfly shrimp, tomato, onions, cucumber with our signature lime serrano sauce and chilpitin pepper on top.",1200],
+        ["Tostada Aguachile rojo","Butterfly shrimp, tomato, onions, cucumber with our signature lime chilpitin pepper sauce.",1200],
+        ["Tostada Mango","Diced boiled shrimp, mango, pico de gallo, sweet & sour sauce, tajini sauce and our signature tamarind sauce.",1500],
+        ["Tostada Pescado","fish, tomato, onions, cucumber, cilantro with our signature lime serrano sauce and chilpiitn pepper on top.",1000],
+        ["Tostada Camaron","shrimp, tomato, onions, cucumber, cilantro with our signature lime serrano sauce and chilpitin pepper on top.",1200],
+        ["Tostada Mixta ( Camarón Pulpo)","shrimp & octopus, tomato, onions, cucumber, cilantro with our signature lime serrano sauce and chilpitin pepper on top.",1400],
+        ["Tostada Jaiva ( real crab)","real crab, cucumber, onion, mayo, salt & pepper and chilpitin pepper.",1500],
+        ["Tostada Perrona","Shrimp, octopus, real crab, scallops, tomato, onions, cucumber, cilantro and avocado with our signature lime serrano sauce and chilpitin pepper on top",1800],
+        ["Aguachile Maza","",3500],
+        ["Tostada Ceviche Mingito","Raw shrimp ceviche and octopus mix with our black signature serrano soy sauce lime juice with fresh onions and chilpitin pepper seasoning (a little bit spicy).",1800],
+        ["Aguachile Mango Habanero","24 Camarones aguachiles con salsa habanero reseta secreta",4300],
+      ] },
+      { name: "Carnivoros", items: [
+        ["Ribeye Steak 12oz","Medium cooked, spring onion, panela cheese, jalapeno, nopalito, rice, beans with cheese and tortillas on the side.",3600],
+        ["Cazo de Carne","Good for one or two people. Grilled beef, shrimp, pork chop, chicken, panela cheese with rice, salad, spring onions, with red sauce and tortillas in the side.",4500],
+        ["Cheeseburger","Hamburger, tomato, onion,lettuce, american cheese, mayo and french fries.",1400],
+        ["Con todo Burger","Hamburger with bacon, tomato, onion, lettuce, american cheese, mayonnaise, avocado and french fries.",2400],
+      ] },
+      { name: "Japan Maza's Sushi", items: [
+        ["Divorciado","Deep fry sushi with crab meat, cream cheese, shrimp, beef, cucumber, sesame seed, avocado, chipotle sauce, jalapeno sauce, unagi sauce.",2200],
+        ["Cocono","Deep fry sushi with crab meat, cream cheese, shrimp, mango, cucumber, sesame seed, avocado, chipotle sauce, unagi sauce.",2200],
+        ["California Roll","Crab meat, cream cheese, cucumber, avocado, sesame seed and jalapeno, soy, chipotle, unagi sauce the side.",1700],
+        ["Jalapeno","Deep fry sushi with crab meat, cooked shrimp, avocado, cucumber, cream cheese, sesame seed, jalapeno sauce, unagi sauce",2200],
+        ["Cali Tempura","includes crab meat surimi, cucumber, sweet and sour sauce, avocado, sesame seeds, chipotle and unagi sauce.",2100],
+        ["Cachichurris","Deep fry sushi with crab meat, shrimp, octopus, cream cheese, cucumber, avocado,sesame seed, chipotle sauce, unagi sauce.",2200],
+        ["Venenoso","Deep fry sushi with crab meat, real crab, cream cheese, cucumber, chiltipin, sesame seed, avocado, chipotle sauce, unagi sauce.",2200],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Kids Burger","Tomato, onion, lettuce with american cheese and french fries.",1300],
+        ["Chicken Nuggets","French fries & nuggets and ranch on the side.",1400],
+        ["Kids Camaron Empanizado","French fries & breaded shrimp and ranch on the side.",1700],
+        ["Mozzarella Sticks","and ranch on the side.",1200],
+        ["Kids Pasta Alfredo","with veggies and garlic bread on the side.",1600],
+        ["Kids Burrito","Only with rice & beans.",1400],
+        ["Kid's Quesadilla","Only cheese and meat.",1300],
+        ["Kid's Cheese Quesadilla","Only cheese.",900],
+      ] },
+      { name: "Sweet Dessert", items: [
+        ["Flan Caramelo","Flan caramelo with whipping cream.",800],
+      ] },
+      { name: "Drinks", items: [
+        ["Aguas Frescas","",700],
+        ["Sodas","",500],
+        ["Orange Juice","",500],
+        ["Michelada Virgen","",1000],
+        ["Sangria Prep (NO alcohol)","",800],
+        ["Mineral Prep (NO alcohol)","",800],
+        ["Pina Colada Virgen","",1000],
+        ["Paloma Virgen","",1000],
+      ] },
+      { name: "Charolas para Llevar", items: [
+        ["Charola de Aguachile Trio","Charola de Aguachile Trío — para 10 a 15 personas. 150 camarones repartidos en tres aguachiles: verde, salsa negra y chilpitín. Bien picante, tres sabores, un solo plato. Para tu partido, tu cumpleaños o la reunión con los de siempre.",25000],
+        ["Charola de sushi Mexicano","Charola de Sushi Mexicano Mixto — para 10 a 15 personas. Rollos de camarón, pulpo y aguacate con toques de chile y limón, al estilo de la costa. Sushi con sabor mexicano, listo para compartir. Para tu partido, tu cumpleaños o la reunión con los de siempre.",22000],
+        ["Charola Botana el Mazatleco","Botana El Mazatleco — para 10 a 15 personas. ¿Buscas todo lo que el mar te puede dar en una sola charola? Aquí está: ceviche de camarón, callos de hacha, ostiones, camarón para pelar, pulpo y cangrejo. Lo mejor de Mazatlán, reunido para compartir con los tuyos. Para cuando quieres que todos digan \"¿qué es esto?\" y nadie se quede sin probar.",30000],
+      ] },
+      { name: "$2 Taco Tuesday all Day", items: [
+        ["$2 Taco Tuesday all Day","Taco Tuesday Policy: $2 tacos with the purchase of a drink ( per guest) -Dine in only, no-takeout, no to-go's, or leftovers boxes -Maximum 10 tacos per guest per order -No sharing tacos between guests",200],
+      ] },
+      { name: "Brunch", items: [
+        ["Brunch Breakfast Chilaquiles","4oz USD prime grilled Asada in our zesty sauce. finished with a sprinkle of fresh cheese, sour cream, onions, cilantro and egg cook to choice on top.",2500],
+        ["Brunch Huevos Rancheros","4oz USD prime grilled Asada in our zesty sauce. On top of two grilled tortillas, beans our home red sauce with two eggs cook to choice on top.",2500],
+        ["Brunch Breakfast Burrito","Four eggs scramble with chorizo mixed with rice red sauce, sour cream",2500],
+        ["Brunch Sopitas con huevo","Four eggs scramble with chorizo mixed with tortilla chips onions and sour cream with fresh cheese",2500],
+        ["Brunch Huevos Revueltos","Four eggs scrambled with chorizo and veggies with sour cream sauce, and guacamole, beans and cheese on the side",2500],
+      ] },
+    ],
+    siteNote: "Prices are from their own Toast ordering page and the specials on their own site; their site adds that paying cash takes 3% off.",
   },
 
   /*
@@ -8621,6 +9514,192 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     North Italia — gathered 2026-09-24 from own
+     they are: Italian
+     flag: Sources: linktr.ee/eatnorthitalia, then 'View Our Menu' northitalia.com/menus/ (redirects to /locations/), then the Walnut Creek page /locations/north-italia-walnut-creek-ca/. That page has its own menus (Lunch, Dinner, Brunch, Dessert, Kids, Happy Hour) with Walnut Creek PDFs, and those prices were used. Also checked their own ordering page order.northitalia.com/menu/walnut-creek-ca.
+     flag: Hours are from the location page. They agree with the page's structured data and with the ordering page's business hours (Sun 10am-10pm, Mon-Thu 11:30am-10pm, Fri 11:30am-11pm, Sat 10am-11pm).
+     flag: PRICE CONFLICT: the online-ordering page charges more for some dessert/coffee items. 52 shared items have the same price and 11 differ (Hazelnut Torta $12 vs $13.50 online; Bombolini $12 vs $13.50 online; Brookie Sundae $13 vs $14 online; Tiramisu* $12 vs $13.50 online; Jump Start $6.50 vs $7.50 online; Dirty Almond Chai $6 vs $6.50 online; Drip Coffee $4.50 vs $5.25 online; Espresso $5 vs $5.50 online; Macchiato $6 vs $6.50 online; Cappuccino $6 vs $6.50 online; Latte $6 vs $6.50 online). Items use the location-page menu.
+     flag: Dishes that appear on more than one menu (Lunch/Dinner/Brunch) are listed once. Where the price differs by menu, the lowest price is used with label 'from' and the per-menu prices are in desc: Chicken Scarpariello (Lunch $22; Dinner $28); Roasted Salmon* (Lunch $29; Dinner $35; Brunch $29).
+     flag: Happy Hour items (Mon - Fri 3pm - 6pm) are listed separately with section 'Happy Hour' at their happy-hour prices. Kids items are under 'For the Lil' Ones' and 'The Sweetest Things'.
+     flag: Left out, alcohol: 201 drink entries across the six menus. Many repeat, because the same wine and beer lists appear on Lunch, Dinner and Brunch. They cover cocktails, spritz, sangria, wine, beer, amaro, cordials, cognac, port, grappa, the Espresso Martini, and the happy-hour 'Spritz & Snacks' at $15.
+     flag: Zero Proof mocktails are included because the menu marks them non-alcoholic. De-alcoholized wines were left out to be safe: NA Sparkling Wine ($8); Sauvignon Blanc 0.0 ($8).
+     flag: Left out, no base price: Kids Beverage (Kids menu: soft drinks (5-260 cal) +$2; fresh-squeezed o.j. (40 cal) +$2.50).
+     flag: Modifiers not listed: salad add chicken $7, steak $12 or salmon* $15; pizza 'bomba style' crust +$5 or gluten-free crust +$4; gluten-free pasta or vegetable noodles +$3.50.
+     flag: Some dishes are cooked with wine or spirits (vodka sauce, Marsala, white-wine mussels, dark rum butterscotch on the Banana Coffee Cake); they are kept as food.
+     flag: No email is shown on the location page. The Linktree's DoorDash link was not used.
+     flag: On review: hours written as one schedule from their own page (lunch, dinner and brunch together); their meal-by-meal times are unchanged, only joined.
+  */
+  'north-italia-walnut-creek': {
+    address: "1179 Locust St, Walnut Creek, CA 94596",
+    phone: "(925) 441-4615",
+    hours: "Mon–Thu 11:30am–10pm, Fri 11:30am–11pm, Sat 10am–11pm, Sun 10am–10pm",
+    cuisine: "Italian",
+    sections: [
+      { name: "Small Plates", items: [
+        ["Grilled Bread & Good Olive Oil","grana padano & herbs",1100],
+        ["Zucca Chips","Yum!",1200],
+        ["Grilled Artichoke","sea salt, agrumato, lemon aioli",1600],
+        ["White Truffle Garlic Bread","house-made ricotta, mozzarella, grana padano, fresh herbs",1850],
+        ["Heirloom Tomato & Burrata","grilled ciabatta, arugula, shaved red onion, calabrian vinaigrette",1850],
+        ["Cacio e Pepe Arancini","crispy risotto, pecorino romano, crushed pepper blend, pesto aioli",1600],
+        ["Crispy Eggplant Parmesan","fresh mozzarella, spicy vodka sauce, torn basil",1800],
+        ["Calamari Fritti","house giardiniera, sugo, calabrian aioli, grilled lemon",2000],
+        ["Smoked Salmon Avocado Toast*","caper relish, watermelon radish, toasted pine nut, pickled red onion",1800],
+        ["Wild Shrimp Scampi","blistered tomato, grana padano, garlic confit, herb butter, grilled bread",2000],
+        ["Yellowtail Crudo*","castelvetrano olive, caper, orange, sicilian pistachio, mint, avocado, aleppo pepper",2100],
+        ["Italian Meatballs","creamy polenta, rustic marinara, grana padano",1850],
+        ["Beef Carpaccio*","pecorino stagionato, toasted pine nut, salsa verde, arugula, grilled bread",2000],
+        ["Black Mediterranean Mussels","calabrese, white wine, garlic butter, fresh herbs, grilled bread",2000],
+        ["Daily Soup","",1200],
+        ["House-Made Focaccia","wild oregano, rosemary, sea salt",1250],
+      ] },
+      { name: "Chef's Board", items: [
+        ["Chef's Board","prosciutto di parma, speck, stracciatella & black truffle honey, pecorino stagionato, campari glazed nuts, marinated olive, giardiniera, fig jam",2400],
+      ] },
+      { name: "Salads", items: [
+        ["Little Gem Caesar","grated grana padano, torn crouton, cracked pepper",1750],
+        ["Arugula & Avocado","shaved fennel, lemon, grana padano, evoo",1650],
+        ["Kale & Goat Cheese","fresh strawberry, avocado, broccolini, campari mixed nuts, poppyseed vinaigrette",1700],
+        ["Chopped Chicken","heirloom tomato, candied bacon, pickled red onion, gorgonzola, pine nut, garden herb",1850],
+        ["Seasonal Vegetable","grilled asparagus, heirloom tomato, snap pea, corn, avocado, pecorino, garlic breadcrumb, green goddess",1800],
+        ["Italian Cobb","sopressatta, calabrese, pistachio mortadella, fresh mozzarella, provolone, heirloom tomato, pepperoncini, olive, cucumber, piquillo pepper, herb breadcrumb, oregano vinaigrette",1900],
+        ["Heirloom Beet & Chicken","avocado, cucumber, goat cheese, fregola, red wine vinaigrette",1850],
+        ["Grilled Steak Panzanella","charred ciabatta, heirloom tomato, green bean, cucumber, cage-free egg, roasted shallot vinaigrette",2200],
+        ["Simple","heirloom tomato, pickled red onion, gorgonzola, pine nut, garden herb vinaigrette",1300],
+      ] },
+      { name: "Pizza", items: [
+        ["Margherita","mozzarella, fresh basil, red sauce, evoo",2300],
+        ["Hot Honey & Smoked Prosciutto","scamorza, speck, calabrian honey, arugula, pecorino toscano",2500],
+        ["Funghi","roasted mushroom, truffle, cipollini, smoked mozzarella",2400],
+        ["Cacio e Pepe","pecorino romano fonduta, mozzarella, shaved garlic, cracked black pepper",2300],
+        ["Spicy Meatball","provolone piccante, house ricotta, mozzarella, pecorino romano, red sauce",2400],
+        ["Fig & Prosciutto","fontina, rosemary, black truffle honey",2400],
+        ["The Pig","pepperoni, calabrese, sopressatta, italian sausage",2500],
+      ] },
+      { name: "Fresh Pasta & Entrées", items: [
+        ["Spicy Rigatoni Vodka","italian sausage, crispy pancetta, shaved garlic, torn basil, grana padano",2750],
+        ["Agnolotti al Pomodoro","ricotta, pecorino, simple tomato sauce, basil",2550],
+        ["Trottole Chicken Pesto","sweet basil, shaved garlic, toasted pine nut, crispy caper",2650],
+        ["Bolognese (House Specialty)","traditional meat sauce, pappardelle, grana padano, wild oregano",2800],
+        ["Braised Short Rib Lumache","grana padano crema, horseradish gremolata, herb breadcrumb, arugula",2700],
+        ["Strozzapreti","herb-roasted chicken, mushroom, spinach, parmesan cream, truffle, pine nut",2650],
+        ["Crushed Meatball Ragu","crispy pancetta, blistered onion, bucatini, pecorino, wild oregano",2500],
+        ["Sunday Night Lasagna","braised short rib, italian sausage, rustic marinara, ricotta, provolone",2700],
+        ["Squid Ink Tonnarelli","tiger shrimp, calamari, fennel pollen, mint, spicy tomato sauce",2800],
+        ["Ricotta Cavatelli","lump crab, tiger shrimp, peperoncino, mint, lemon olive oil",2800],
+        ["Chicken Parmesan","crushed tomato, aged provolone, mozzarella, parmesan rigatoni",2900],
+        ["Sicilian Meatball Garlic Knot Sliders","peperonata, smoked mozzarella, calabrian aioli; served with fresh greens (100 cal) or parmesan herb fries (650 cal)",1700],
+        ["Chicken Pesto Garlic Knot Sliders","spicy vodka sauce, provolone, basil pesto; served with fresh greens (100 cal) or parmesan herb fries (650 cal)",1700],
+        ["Hot Italian Stromboli","italian sausage, calabrese, red onion, piquillo pepper, mozzarella, fontina, sugo",1750],
+        ["Giardino Stromboli","roasted mushroom, peperonata, castelvetrano olive, braised kale, fontina",1750],
+      ] },
+      { name: "Lunch Specialties", items: [
+        ["Caprese Sandwich","heirloom tomato, stracciatella, arugula, basil pesto",1750],
+        ["Parmesan Chicken Sandwich","prosciutto, rustic marinara, mozzarella, aged provolone, calabrian aioli",1800],
+        ["Italian Short Rib Dip","peperonata, provolone, fennel-onion jam, arugula, horseradish aioli, rosemary au jus",1800],
+        ["Spicy Italian Grinder","sopressatta, calabrese, pistachio mortadella, provolone, piquillo pepper, cherry tomato, giardiniera",1800],
+        ["Trottole Pesto Primavera","zucchini, roasted pepper, sweet basil, toasted pine nut, crispy caper",2200],
+        ["Chicken Parmigiana Verde","crushed tomato, basil pesto, provolone, mozzarella, rigatoni alla vodka",1850],
+        ["Chicken Scarpariello","chicken thighs, fennel sausage, piquillo pepper, mascarpone polenta. Options: Lunch $22; Dinner $28",2200,null,"from"],
+        ["Roasted Salmon*","caramelized romanesco, broccolini, fregola, basil pesto, lemon gremolata, affinato. Options: Lunch $29; Dinner $35; Brunch $29",2900,null,"from"],
+      ] },
+      { name: "For The Table", items: [
+        ["Spicy Broccolini","",1050],
+        ["Grilled Asparagus","",1050],
+        ["Roasted Mushrooms","",1050],
+        ["Glazed Chioggia Beets","",1050],
+        ["Sweet Corn & Fontina Polenta","",1050],
+        ["Summer Vegetable Risotto","",1050],
+      ] },
+      { name: "Zero Proof", items: [
+        ["Just Peachy","white peach, raspberry, lemon, ginger beer",1250],
+        ["00 Spritz","mionetto n/a aperitivo, crushed lemon, bubbles",1350],
+        ["La Spezia","pentire n/a, blood orange, honey, lemon",1350],
+        ["Pina No-Lada","coconut, pineapple, fresh lime, bubbles",1250],
+        ["Faux Me Twice","n/a sauvignon blanc, strawberry, pineapple, smashed citrus",1300],
+        ["Phony Negroni","st. agrestis n/a",1200],
+      ] },
+      { name: "Entrées", items: [
+        ["Grilled Branzino","broccolini, sugar snap pea, romanesco cauliflower, roasted fennel, lemon caper butter",3700],
+        ["Seared Scallops","asparagus, pancetta, crispy shallot, sweet corn risotto, calabrian vinaigrette",4200],
+        ["Braised Short Rib Marsala","beech mushroom, snap pea, heirloom carrot, black truffle risotto, affinato",3800],
+        ["Prime New York Tagliata*","wild arugula, shaved grana padano, evoo, affinato, sea salt",4800],
+      ] },
+      { name: "Breakfast", items: [
+        ["Banana Coffee Cake","Perfect to share! Dark rum butterscotch, caramelized banana, crème fraîche",1400],
+        ["Strawberries & Cream French Toast","cinnamon custard brioche, cannoli cream, butter maple syrup",1650],
+        ["Americano*","choice of bacon or prosciutto, two eggs, hash potatoes, grilled bread",1850],
+        ["Eggs in Purgatory*","spicy marinara, grana padano, heirloom cherry tomato, arugula, grilled ciabatta",1700],
+        ["Breakfast Carbonara Pasta*","poached egg, pancetta, english pea, lumache, herb breadcrumb, pecorino",2000],
+        ["Pollo Fritto*","crispy chicken breast, italian sausage gravy, sunny-side up eggs, hash potatoes",1900],
+        ["Tuscan Hash*","choice of braised short rib or pulled chicken, fried egg, sweet onion, piquillo pepper, bomba sauce",1900],
+        ["Bistro Steak & Eggs*","sunny-side up eggs, calabrian potato hash, rosemary bearnaise",2500],
+        ["Breakfast Sandwich*","bacon, sausage, calabrese, egg, roasted pepper, scamorza, calabrian aioli, hash potato",1900],
+        ["Morning Market Board","caramelized onion frittata, burrata, shaved asparagus & arugula salad, heirloom cherry tomato, affinato, hearth bread",1800],
+      ] },
+      { name: "Sides", items: [
+        ["Italian Donuts","",700],
+        ["Applewood Bacon","",700],
+        ["Hash Potatoes","",700],
+        ["Fresh Fruit","",700],
+      ] },
+      { name: "Pizza & Stromboli", items: [
+        ["Breakfast Rosa*","sweet italian sausage, crispy pancetta, smoked mozzarella, two eggs, torn basil, spicy vodka sauce",2200],
+      ] },
+      { name: "Dessert", items: [
+        ["Hazelnut Torta","housemade nutella, candied hazelnut, salted caramel gelato",1200],
+        ["Salted Caramel Budino","espresso fudge, banana, chantilly crème, toasted pecan toffee",1300],
+        ["Bombolini","(italian donuts) lemon curd, blueberry compote",1200],
+        ["Affogato","vanilla gelato, espresso",1200],
+        ["Seasonal Butter Cake","Sometimes sweet, maybe tart - for sure delicious!",1200],
+        ["Brookie Sundae","vanilla, pistachio & chocolate gelato, dark chocolate, banana, strawberry, pecan",1300],
+        ["Tiramisu*","espresso-soaked ladyfingers, mascarpone mousse",1200],
+        ["Gelato & Sorbetto","changes daily",800],
+      ] },
+      { name: "Coffee", items: [
+        ["Jump Start","2 oz. espresso, chocolate cream, shaken & served cold",650],
+        ["Dirty Almond Chai","2 oz. espresso, almond milk, chai tea, shaken & served cold",600],
+        ["Drip Coffee","(0 cal)",450],
+        ["Espresso","",500],
+        ["Macchiato","",600],
+        ["Cappuccino","",600],
+        ["Latte","",600],
+        ["Hot Tea","(0 cal)",475],
+      ] },
+      { name: "For the Lil' Ones", items: [
+        ["Kids Pasta","Choice of marinara, meat sauce or alfredo. (510/480/1130 cal)",1200],
+        ["Cheese Pizza","",1250],
+        ["Grilled Chicken","Choice of sautéed vegetables or alfredo noodles. (340/1650 cal)",1300],
+        ["Crispy Chicken Strips","served with crispy fries",1300],
+        ["Meatball Sliders","Choice of green salad or crispy fries. (680/1120 cal)",1200],
+        ["Grilled Cheese","Choice of green salad or crispy fries. (1200/1640 cal)",1100],
+      ] },
+      { name: "The Sweetest Things", items: [
+        ["Gelato","",600],
+        ["Donut Holes","chocolate dipping sauce",700],
+      ] },
+      { name: "Happy Hour", items: [
+        ["Zucca Chips","",1000],
+        ["Cacio e Pepe Arancini","",1000],
+        ["Garlic Knot Sliders","(900/1000 cal)",1000],
+        ["Sicilian Meatballs","",1000],
+        ["Grilled Mortadella Skewers","",1000],
+        ["Margherita Flatbread","",1000],
+        ["Double Pepperoni Flatbread","",1000],
+        ["White Truffle Garlic Bread","",1200],
+        ["Smoked Salmon Avocado Toast*","",1200],
+        ["Fritto Misto","",1200],
+        ["Prosciutto di Parma","",1200],
+        ["Baked Burrata alla Diavola","",1200],
+        ["Pink Slip","pentire seaward, fresh grapefruit, agave, lemon",800],
+        ["Faux Me Twice","non-alc. sauvignon blanc, strawberry, pineapple, smashed citrus",800],
+        ["Phony Negroni","st. agrestis, non-alcoholic",800],
+      ] },
+    ],
+    siteNote: "Prices are from the Walnut Creek menus on their own site; their online ordering charges more for some desserts and coffees.",
+  },
+
+  /*
      Nosso — gathered 2026-09-21 from own
      they are: Lounge & bites
      flag: Glenn sent this with the Barre Beat link pasted again and “Oakland • Goods”; the screenshots are all Nosso’s (nossooakland.com), so the link was a slip and Nosso is what is listed.
@@ -8970,6 +10049,27 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "paintgo.usa",
     cuisine: "Auto tint and PPF",
     contactOnly: "A Vallejo shop for 'premium automotive protection, restoration, and customization' — detailing, ceramic coating, PPF, window tinting, body and paint. Quote-based — 'Free Estimate, No Obligation' — with no prices on any service page.",
+  },
+
+  /*
+     Paleta Planeta — gathered 2026-09-24 from own
+     they are: Paletas & frozen treats
+     flag: Sources: Linktree linktr.ee/paletaplaneta ("Paleta Planeta Official") -> own site paletaplaneta.com (Home, Menu, Catering, Our Story, Contact pages).
+     flag: Menu is image-only ("Menu for website 5-26-1 (4).png"); items left empty by rule. No own online-ordering page is linked (site nav and Linktree only point to DoorDash / Uber Eats order.store, not used).
+     flag: Catering page text lists catering rates ("start at $6.75/paleta for our Galaxy or White Cart and $6.00/paleta for our Galaxy Cooler"; minimum 100 paletas carts / 75 cooler); not added as menu items.
+     flag: Hours from the Home page footer only (Mon 12:00pm - 8:30pm, Tue-Thu 12:00pm - 08:30pm, Fri-Sun 12:00pm - 09:30pm); Linktree lists no hours, so no conflict.
+     flag: One San Jose address shown on own site (downtown storefront). Address, phone and email are all printed visibly on the Home page.
+     flag: Own site describes an ice cream / paleta shop ("Handcrafted paletas", "ice cream shop", catering carts); it sells food, so the "San Jose • Goods" filing may deserve a food category.
+     flag: Linktree Email/Payment icons are not plain links and were not opened; email comes from the visible site text instead. instagram left null per template (own site links @paletaplaneta).
+     flag: On review: the catering rates ($6.75 a paleta for the Galaxy or White Cart, $6.00 for the Galaxy Cooler; minimum 100 and 75) go in a drop-down on the seed, in their own words from their catering page.
+  */
+  'paleta-planeta': {
+    address: "150 East Santa Clara Street, San Jose, CA 95113",
+    phone: "(408) 647-5847",
+    email: "info@paletaplaneta.com",
+    hours: "Mon-Thu 12pm-8:30pm; Fri-Sun 12pm-9:30pm",
+    cuisine: "Paletas & frozen treats",
+    contactOnly: "Handcrafted Mexican paletas from three brothers raised in San Jose, on East Santa Clara Street. Their menu is a picture on their own site, so the button goes there rather than copying prices.",
   },
 
   /*
@@ -11330,6 +12430,25 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     The Port of Peri Peri — gathered 2026-09-24 from none
+     they are: Peri peri chicken
+     flag: WEBSITE BROKEN: https://myportofperiperi.com/ (also www., /orderonline, /contact-us) loads with HTTP 200 but renders a completely blank page: empty <title>, zero visible text, no links, no menu, no address, no hours (checked 2026-09-23; no bot check involved).
+     flag: Cause: the site serves a shared multi-restaurant Angular template (its code has cases for ~58 other restaurant domains) with no content set up for myportofperiperi.com; the page crashes with 'Cannot read properties of undefined (reading brandName)'. The code contains no mention of Port of Peri Peri, Fremont, Walnut Ave or the phone number.
+     flag: So it is not possible to say whether the site has a wrong location or old menu; nothing is shown at all. Other things seen: it loads Square's sandbox (test-mode) payment script, a Convertful widget that returns 'access.404', and a malformed Google Fonts URL.
+     flag: Fremont vs San Francisco: the site shows no locations at all, so no Fremont menu or prices could be separated. items is empty and no prices were collected.
+     flag: Address, phone and hours come only from the Instagram bio supplied in the brief (screenshot). Nothing on the website confirms or conflicts with them, so the bio's hours are kept exactly as written. Halal/zabiha and Portuguese are also from the bio.
+     flag: No other sources used (no DoorDash/Uber Eats/Grubhub/Yelp/Google).
+     flag: On review: hours reformatted from their bio's "Mon-Thu 11a-10p Fri-Sat 11a-11p Sun12p-10pm"; no site link, since myportofperiperi.com renders nothing ("Website needs updating", Glenn). The chain site myperiperi.com, whose menu the SF page carries, answered a bot check (403) on 2026-09-23, so it was not read for Fremont.
+  */
+  'port-of-peri-peri-fremont': {
+    address: "3283 Walnut Ave, Fremont, CA",
+    phone: "(510) 256-9901",
+    hours: "Mon–Thu 11am–10pm, Fri–Sat 11am–11pm, Sun 12pm–10pm",
+    cuisine: "Peri peri chicken",
+    contactOnly: "Portuguese peri peri, halal and zabiha by their own description, on Walnut Avenue. Their website shows a blank page for now, and they take orders through the delivery apps, so no menu or prices are shown here.",
+  },
+
+  /*
      Quickly Benicia — gathered 2026-09-21 from own-domain
      they are: Boba and Filipino snacks
      logo: https://www.quicklybenicia.com/images/quickly-logo.jpg (1818x1818) — not cut into a tile yet
@@ -12337,6 +13456,26 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Korean & Japanese",
     tagline: "Korean and Japanese kitchen on Marlow Road",
     contactOnly: "Korean and Japanese kitchen on Marlow Road. Their menu is posted as pictures on their own site.",
+  },
+
+  /*
+     Shady Oak Brewing Company — gathered 2026-09-24 from own
+     their spelling: "Shady Oak" (roster keeps "Shady Oak Brewing Company")
+     they are: Brewery taproom, food trucks
+     flag: Sources: shadyoakbrewing.com home, /about-us, /whatshappening (food & events calendar, Sept 2026), /faq, /contactus. shadyoakbarrelhouse.com (the footer links) redirects to shadyoakbrewing.com.
+     flag: Beer and hard seltzer are never listed. The FAQ says 'non-alcoholic beverages and snacks' are available at the bar, but no prices or item names are published, so items is [].
+     flag: What they offer (from their pages): a craft brewery taproom in downtown Santa Rosa near the SOFA Arts District; a large beer garden; an arcade and pinball; giant Connect Four; family friendly (under 21 must be supervised) and dog friendly (on leash, treats at the bar). No kitchen of their own; rotating food trucks and pop-ups, usually 3-8 pm Tue-Fri and 2-8 pm Sat/Sun (Sept 2026: Tacos El Gran Mac, Fully Loaded 707, Bayou on the Bay, Xies Sushi Rolls, War Pigs BBQ, La Pinche Crazy Burger, Smash N' Dash, Patty's Mexican Food, SanRomana Pupusas, Momo Man, Drip Sandwiches, Tita's Cuisine). North Bay Trivia on Thursdays 7-9 pm. The taproom and beer garden can be rented for private events (form on /contactus; events@shadyoakbarrelhouse.com). Parties of 25+ need a reservation and bar minimum. Gift cards are sold in the taproom up to $500. Parking: limited street parking and two garages within a block.
+     flag: Hours are the ones shown on the home page, the only page that shows hours. The site's hidden Squarespace structured data (LocalBusiness openingHours: Th 15:00-21:00, Fr 15:00-21:00, Sa 12:00-21:00, Su 12:00-21:00) disagrees, but it is not shown on any page and looks stale: the Sept 2026 events calendar has food trucks Tuesday-Sunday and nothing on Mondays, which fits the visible hours. Set hours to null if hidden metadata counts as one of their sources.
+     flag: The phone is also shown as 707.575.SOUR, the same number. The visible address is 420 First Street, Santa Rosa; the structured data says only 'Sonoma County, California'. The legal/brand name in the structured data is 'Shady Oak Barrel House'.
+     flag: On review: beer is never listed here, and they publish no other prices. Hours are the ones on their home page; the page data hidden from visitors disagrees, and what they show is what they publish.
+  */
+  'shady-oak-brewing': {
+    address: "420 First Street, Santa Rosa, CA 95401",
+    phone: "(707) 575-7687",
+    email: "info@shadyoakbarrelhouse.com",
+    hours: "Mon: CLOSED; Tues - Fri: 3-11 pm; Sat: 2-11 pm; Sun: 2-9 pm",
+    cuisine: "Brewery taproom, food trucks",
+    contactOnly: "A craft brewery taproom in downtown Santa Rosa with a beer garden, an arcade and pinball, live music and food trucks; families are welcome, with under-21s supervised.",
   },
 
   /*
@@ -13877,6 +15016,119 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Tacos Papo — gathered 2026-09-24 from own
+     they are: Mexican, tacos & birria
+     flag: Sources: tacospapo.com (home, menu.html, contact.html) and its embedded ordering page order.getrevi.com/tacos-papo-1416 (menu + "Store info" panel, read-only).
+     flag: Hours null: their sources disagree. tacospapo.com (contact page and home meta) says "8am - 9pm Monday - Sunday"; the Revi ordering page "Store info" > Business hours says Mon, Wed, Thu, Sun 8:00 AM - 8:30 PM and Tue, Fri, Sat 8:00 AM - 11:00 PM.
+     flag: Phone conflict: tacospapo.com shows 510.431.5202 / (510)-431-5202 (used); the Revi "Store info" panel shows (510) 600-8927.
+     flag: Address as on contact page: "2617 Decoto Rd, Union City Ca, 94587" (Revi shows 2617 Decoto Rd, Union City, CA).
+     flag: 3 menu items have no published price and were left out: Jarritos (also out of stock), Glass Bottle Coke, Canned Sodas.
+     flag: Left out: "Digital Gift Card" (not food, no fixed price).
+     flag: 8 included items were marked "Out Of Stock (Be Back Soon!)" on the ordering page at fetch time: Caldo De Res - Beef Soup with vegetables, Tamales -Preparados, Champurrado, Half Dozen- Tamales, 2 tamales - Rice & Beans, Dozen Tamales, TAMALES, Coconut Water.
+     flag: Only one base price is shown per item on the menu listing; option prices (meat choice, "Choice between 24oz and 32oz!" for Agua Frescas) sit inside item dialogs beside Add to cart and were not opened, so all labels are null.
+     flag: Quesabirria Plate and Quesabirria -Single say "*NOT AVAILABLE TUESDAY’S".
+     flag: No alcohol listed on the menu.
+     flag: Instagram linked from their site: https://www.instagram.com/tacospapo/ (field left null per template).
+     flag: On review: hours left off (their site says 8am-9pm daily, their ordering page gives different closing times by day).
+  */
+  'tacos-papo': {
+    address: "2617 Decoto Rd, Union City, CA 94587",
+    phone: "(510) 431-5202",
+    email: "tacospapo@gmail.com",
+    cuisine: "Mexican, tacos & birria",
+    sections: [
+      { name: "Birria Specialities", items: [
+        ["Quesabirria Plate","3 Handmade corn tortilla lightly crisp with melted cheese, beef birria, onions, cilantro and sauce Consome on the side (Beef broth) to dip your taco in. *NOT AVAILABLE TUESDAY’S",1699],
+        ["Flour Quesabirria","Flour tortilla, cheese, beef birria, onions, cilantro, sauce and grilled jalapeno on the side. * Includes Broth",1699],
+        ["Tapatio Birria Ramen","Ramen noodles with beef shredded birria and beef broth. Topped with onions, cilantro and green sauce.",1499],
+        ["Quesabirria -Single","1 single Handmade corn tortilla lightly crisp with melted cheese, beef birria, onions, cilantro and sauce Consome on the side (Beef broth) to dip your taco in. *NOT AVAILABLE TUESDAY’S",699],
+      ] },
+      { name: "Tacos", items: [
+        ["Papo's Super Taco","Choice of meat, onions, cilantro, sauce, lettuce, tomato, sour cream, cheese and guacamole",699],
+        ["Street Tacos","Street style taco with onions, cilantro and sauce",350],
+        ["Fish or Shrimp Tacos","Mayonnaise, cabbage, onions, cilantro, tomato, and special orange sauce",699],
+        ["3 Taco Combo","3 street style taco with rice & beans on the side",1399],
+        ["2 Papo's Super Taco Combo","2 super tacos with rice & beans on the side",1699],
+        ["Vampiros","Crispy tortilla, cheese, choice of meat, onions, cilantro, salsa, guacamole and sour cream",399],
+      ] },
+      { name: "Specialties!", items: [
+        ["Caldo De Res - Beef Soup with vegetables","Traditional Mexican beef soup with vegetables and rich flavor broth. Served hot with rice, lime and tortillas on the side",2183],
+        ["Tortas","Choice of meat, beans mayonnaise,cheese lettuce, tomato, Guacamole",1399],
+        ["Super Nachos","Choice of meat, beans, cheese, onions, cilantro, sauce, jalapeño, tomato, sour cream and Guacamole",1499],
+        ["Nacho Fries","Choice of meat, beans, cheese, onions, cilantro, sauce, jalapeño, tomato, sour cream and Guacamole",1499],
+        ["Cheese Nachos (No Meat)","Plain nachos with yellow melted cheese",599],
+      ] },
+      { name: "Quesadilla", items: [
+        ["Cheese Quesadilla","No Meat!",699],
+        ["Mulitas","2 hand made corn tortillas with cheese your choice of meat onion cilantro and sauce inside",899],
+        ["Super Quesadilla","No Meat!",1399],
+      ] },
+      { name: "Burritos", items: [
+        ["Shrimp Burrito","Rice, Beans, onions, cilantro, salsa, lettuce, tomato, sour cream, cheese, and guacamole",1799],
+        ["Regular Burrito","Choice of meat, rice, beans, onions, cilantro, sauce",1199],
+        ["Super Burrito","Choice of meat, rice, beans, onions,cilantro, sauce, lettuce, tomato sour cream cheese, guacamole",1499],
+        ["Wet Burrito","Choice of meat, rice, beans, onions, cilantro, sauce, sour cream cheese inside. Wet in our taco Hot and mild sauce with sourcream, melted cheese, and guacamole on top includes side of chips!",1699],
+        ["Hot Cheeto Burrito","Choice of meat, rice, monterey jack cheese, nacho cheese, sour cream, french fries, hot cheetos.",1599],
+        ["Burrito Bowl","Choice of meat, rice, beans, onions, cilantro, sauce, lettuce, tomato, sour cream, cheese, guacamole",1499],
+      ] },
+      { name: "Breakfast", items: [
+        ["Breakfast Burrito","Choice of meat (ham, bacon or mexican sausage), potato, egg, beans, cheese & sauce",1450],
+        ["Veg Breakfast Burrito","Potato, egg, beans, cheese, sauce & guacamole",1450],
+        ["Huevos Con Chorizo","Scrambled eggs and mexican sausage. Includes rice, beans and 4 hand made tortillas.",1599],
+        ["Chilaquiles","Choose between red or green sauce. 2 eggs, top with onions, cilantro. sour cream & cotija cheese. No Meat!",1599],
+        ["Chilaquiles Con Carne","Same just add you choice of meat!",1850],
+      ] },
+      { name: "Veggie Menu", items: [
+        ["Veggie Tacos","All veggie items come with (rice, beans, onions, cilantro, lettuce, tomato, sour cream, cheese and guacamole )",350],
+        ["Super Veggies Taco","",699],
+        ["Reg Veg Burrito","No sour cream and no cheese",1066],
+        ["Super Veg Burrito","",1378],
+        ["Veggie Bowl","",1378],
+        ["Veg Wet Burrito","",1699],
+        ["Cheese Enchiladas","3 cheese enchiladas with rice and beans, topped with lettuce, sour cream, and cotija cheese",1699],
+      ] },
+      { name: "Platillos/Plates & More", items: [
+        ["Enchiladas","3 chicken enchiladas with rice and beans. topped with lettuce, sour cream and queso fresco",1699],
+        ["Carne Asada","Served with grilled jalapeno, onions,rice, beans, salad, guacamole and 4 hand made corn tortillas",1799],
+        ["Taco Salad","Fried flour tortilla made into a bowl with your choice of meat, rice, beans. onions,cilantro, sauce, lettuce, tomato sour cream cheese, guacamole",1499],
+        ["Chicken Flautas","3 chicken flautas with rice and beans, topped with lettuce sour cream guacamole, sauce and cotija cheese",1699],
+        ["Carnitas Plate","Shredded pork carnitas served with grilled jalapeno and onions, rice, beans, salad, guacamole and 4 hand made corn tortillas",1799],
+        ["Sopes","Fried handmade thick corn tortilla with choice of meat, melted cheese on the bottom topped with onions, cilantro. lettuce, sour cream and cotija cheese.",450],
+        ["Birria de Res","Birria soup bowl with onions, cilantro, lime on the side includes 4 hand made tortillas",1559],
+        ["Bacon Wrap Hotdog","Mayonnaise, ketchup, onions, cilantro and grilled jalapeño",899],
+      ] },
+      { name: "Tamales&Champurrado", items: [
+        ["Tamales -Preparados","2 tamales with mild green salsa, sour cream and cheese",1050],
+        ["Champurrado","Champurrado is a warm, traditional Mexican chocolate drink made with masa, cinnamon, and piloncillo. It has a rich, creamy texture and a comforting flavor that’s perfect for cold weather. Served hot, it’s a classic drink enjoyed during the holidays and with tamales.",425],
+        ["Half Dozen- Tamales","6 tamales",2000],
+        ["2 tamales - Rice & Beans","2 tamales of your choice rice and beans on the side",1250],
+        ["Dozen Tamales","12 tamales",3600],
+        ["TAMALES","Pork-Chicken-Rajas",399],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Beans & Cheese Burrito","",599],
+        ["Kids Taco","",699],
+        ["Kids Quesadilla","Rice & Beans on the side",699],
+        ["Chicken Nuggets & Fries","",599],
+      ] },
+      { name: "Sides", items: [
+        ["Side of Rice","",312],
+        ["Side Beans","",312],
+        ["Side Rice & Beans","",520],
+        ["Grilled Jalapenos & Onions","",299],
+      ] },
+      { name: "Drinks", items: [
+        ["Water Bottle","",200],
+        ["Agua Frescas","Choice between 24oz and 32oz!",699],
+        ["Coconut Water","",312],
+        ["Glass bottled Drink","",375],
+        ["Mineragua - Sparkling Water","",375],
+      ] },
+    ],
+    siteNote: "Prices are from the ordering menu on their own site.",
+  },
+
+  /*
      Tacos Walnut Creek — gathered 2026-09-21 from own
      they are: Mexican
      flag: tacoswalnutcreek.com describes every dish but prints no prices; its pickup button goes to their own ordering page and its other buttons to delivery marketplaces, which are not used.
@@ -14825,6 +16077,37 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     The Hot Spot Studios — gathered 2026-09-24 from own
+     they are: Paint-your-own pottery
+     flag: Sources: the Union City location page on the franchise site thehotspotstudios.com, the studio-locations page, and the studio's own Square booking site the-hot-spot-studios-union-city.square.site (the page's "Book Online" link), including its Classes tab.
+     flag: The site is the franchise brand's site with a dedicated location page. The location page calls it "The Hot Spot Studios - East Bay / Union City, California", Square calls it "The Hot Spot Studios Union City", and the franchise site also lists a separate "East Bay / Fremont" studio.
+     flag: Phone (530) 518-8350 is shown on both the location page and Square. The 530 area code is unusual for Union City, but it is reported exactly as shown.
+     flag: Hours come only from the location page. They agree with Square's status line ("Opening Thursday 11:00 am", fetched on a Wednesday evening).
+     flag: No per-project price list is published. The location page says "Average project cost is $30-36 (includes everything). Zero studio fees." and "Avg. $30." No item was made from these averages.
+     flag: Party items: Square lists each at $50.00, which is a non-refundable booking fee. Per-guest prices ($30 Mini, $32 Mega) are used as "from" prices. The Teen package publishes only the $50 booking fee plus 15% gratuity, with no per-teen price. Add-on: "+30 min extension: $50". Extra non-participants $15 each.
+     flag: Left out: 2 Square services with no real price ("kids Field Trip" listed as $0.00; "Host a Meeting with Activity" $0.00, "Please call us for pricing"); 2 dated one-off Square classes (Parents Night Out $40.00 on Fri Sep 25, 2026; Kintsugi Workshop $85.00 on Fri Oct 9, 2026); Kids Camps ("Contact us for available dates and pricing"); Sip & Create and adult events (no prices, contact form).
+     flag: The September events calendar is a Google Drive download and was not opened.
+     flag: The Square page embeds an invisible reCAPTCHA for its booking form. The page content loaded with no challenge, and nothing was clicked or submitted apart from the Classes tab.
+     flag: Instagram linked: instagram.com/thehotspotunioncity (field left null per spec). No email is shown; there is an inquiry form only.
+     flag: On review: email from the Contact sheet of their own Instagram (Glenn's screenshot).
+  */
+  'the-hot-spot-studios-union-city': {
+    address: "31868 Alvarado Blvd., Union City, CA 94587",
+    phone: "(530) 518-8350",
+    email: "unioncityca@thehotspotstudios.com",
+    hours: "Sunday 11:00 AM - 7:00 PM; Monday CLOSED; Tuesday-Saturday 11:00 AM - 7:00 PM",
+    cuisine: "Paint-your-own pottery",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Mini Kids pARTy (8–14 participants) Ages 5–10","$50 Booking Fee (non-refundable). Holds your time slot (not a deposit). Per Guest (paid on event day): $30 + tax + 15% gratuity. 2 Hours Total. Ages 5–10 (2 Projects Included).",3000,"from"],
+        ["Mega Kids pARTy (15-30 participants) Ages 5–10","$50 Booking Fee (non-refundable). Holds your time slot (not a deposit). Per Guest (paid on event day): $32 + tax + 15% gratuity. 2.5 Hours Total. Ages 5–10 (2 Projects Included).",3200,"from"],
+        ["Teen pARTy Package(11-18)","50$ Booking Fee( Non refundable ,Holds your time slot ,set up fee. (Not a deposit). 15% Gratuity is automatically added to final bill the day of the party. Party is for 2 hours and includes decorating and eating time.",5000],
+      ] },
+    ],
+    quoteOnly: "Pay per project with no studio fee, about $30 to $36 on average by their own page; party prices are per guest after a $50 booking fee.",
+  },
+
+  /*
      The Hub by Pack Animals — gathered 2026-09-21 from own
      they are: Dog training & daycare
      flag: Glenn: "San Ramon • Services". A dog gym (training, daycare, BARKADE, parties) takes San Ramon's open Pet grooming and walking seat.
@@ -14857,6 +16140,28 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "A gym for dogs at Bishop Ranch: classes, daycare, BARKADE and parties. Prices are from their own site. Daycare and group classes start with an evaluation.",
+  },
+
+  /*
+     the-lions-mane-barbershop — gathered 2026-09-24 from stopgap
+     their spelling: "The Lions Mane Barbershop" (roster keeps "the-lions-mane-barbershop")
+     they are: Barbershop
+     flag: This is ONE barber's Booksy page inside the shop: the listing is named "Edzel_Ford@The Lions Mane Barbershop", and reviews name the staffer as "Edzel Tongson". Services, prices and hours are his and may not cover the whole shop.
+     flag: Source: only the Booksy page (cdl.booksy.com/IABRoim59Xb redirects to the booksy.com URL above). No shop website is linked, so it is marked stopgap.
+     flag: Hours: Booksy "Business hours" expanded to the full week (a display toggle), matching the page's structured data. Booksy note: "Sunday and Monday extra charge. Please text me directly for availability."
+     flag: Booking policies shown: "No walk-ins", "No waiting area". About: "Family Friendly Barbershop atmosphere!"
+     flag: Phone and email are not shown; Booksy asks you to log in to contact the business. The address is shown without a state ("31808 Alvarado Blvd, Union City, 94587"), so CA was added.
+     flag: Booksy's auto "Popular Services" block repeats 3 of the 5 services; each is counted once, under the page's "Other Services" heading. Durations shown: 45min, 1h, 30min, 30min, 45min.
+     flag: Booksy page links Instagram instagram.com/thelionsmanebarbershop (field left null per spec). The cookie banner was left untouched.
+     flag: On review: the Booksy page is one barber's (Edzel), so his five prices and hours are not carried as the shop's. Phone and email from the Contact sheet of their own Instagram (Glenn's screenshot).
+  */
+  'the-lions-mane-barbershop': {
+    address: "31808 Alvarado Blvd, Union City, CA 94587",
+    phone: "(510) 489-5522",
+    email: "thelionsmanebarbershop@yahoo.com",
+    cuisine: "Barbershop",
+    needsSite: true,
+    contactOnly: "A barbershop on Alvarado Boulevard; book with a barber on Booksy.",
   },
 
   /*
@@ -14958,6 +16263,118 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ["Lunch Sandwich Platter","Serves 12: twelve sandwiches, tea, kettle chips, cookies",25000],
     ],
     siteNote: "These prices are from their catering PDF ('items and pricing subject to change'); cafe prices live only in their Toast and Square ordering apps.",
+  },
+
+  /*
+     The Moon Nails — gathered 2026-09-24 from own
+     they are: Nail salon
+     flag: Page kind: themoon.hayven.ai is a hosted marketing funnel page (LeadConnector/HighLevel on hayven.ai, titled "The Moon Nails funnel"). It is a "New Client Special: Sign up to receive 10% OFF" form, not a website. It shows the address, the hours "Mon - Sat : 9am - 7pm | Sun 9am - 6pm" and a Call Us link, (510) 952-0088.
+     flag: That funnel links "Our Service" to the salon's own website, themoonnailsunioncity.com (WordPress, by Mac Marketing), so site_kind is own. Services, prices, hours and phone come from its home, services, about, contact and policy pages. The 2 seasonal items come from the funnel's /seasonal-pedicure page.
+     flag: Hours agree across the funnel page and every own-site page.
+     flag: Pedicure and manicure notes: "*An Additional $5 fee applies for gel polish removal to regular polish" and "*Add gel $10".
+     flag: Left out, no price: 1 row, "3-5 Color" shown as "$" in the TAKE-OFF WITH SERVICE block. A second "3-5 Color" row ($5+) is included.
+     flag: Layout quirks: the "TAKE-OFF WITH SERVICE" subheading also covers general add-ons (French tip, paraffin, polish change, etc.), and all eyelash rows sit under an "ADD-ON" subheading (not used as section). Three eyelash rows are named just "Refill" ($80, $100, $120), placed beside Classic Lash, Hybrid Lash and Volume Lash respectively.
+     flag: Seasonal items (from the funnel's "AUTUMN GLOW: SEASONAL PEDICURE" page) are seasonal promos: regular polish $79, gel polish $89.
+     flag: The own site's About Us page contains template text for another salon ("Welcome to Lemon Nails & Spa"), which was not used. The Policy page says "Updating…". No email is shown.
+     flag: Booking links: own site "BOOK NOW" goes to lk.macmarketing.us/TheMoonNails-Booking; the funnel "Book Online" goes to abcapp.us. Neither was opened.
+     flag: Instagram linked: instagram.com/themoonnails.uc (field left null per spec).
+  */
+  'the-moon-nails': {
+    address: "31879 Alvarado Blvd, Union City, CA 94587",
+    phone: "(510) 952-0088",
+    hours: "Mon - Sat: 09:00 AM - 07:00 PM; Sunday: 9:00 AM - 06:00 PM",
+    cuisine: "Nail salon",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Essential Pedicure","Cuticle trimming, nail shaping, and buffing; Indulge in a refreshing pedicure featuring a luxurious sugar scrub; 5-minute lotion massage; Finish with your choice of nail polish",3900],
+        ["The Lux Pedicure (Scent Lavender or Lemon)","Cuticle trimming, nail shaping, and buffing; A luxurious sugar scrub; Enjoy a 7-minute massage with paraffin wax treatment for silky soft feet; Finish with your choice of nail polish",4900],
+        ["Royal Pedicure (Scent Milk & Honey/ Cherry Blossom)","Cuticle trimming, nail shaping, and buffing; Sea Salt Soak, Sugar scrub. Mask wrap hot towel; 10-minute massage with paraffin treatment and hot stones; Finish with your choice of nail polish",5900],
+        ["Refreshing Pedicure (scent Green Tea & Honey)","Includes cuticle trimming, nail shaping, buffing, Sea Salt Soak, Sugar Scrub, mask wrapped with hot towels, 10-minute massage with Paraffin Wax and Hot Stones, and callus treatment.",6900],
+        ["The Moon Pedicure (Scent Honeydew Cucumber/ Pineapple & Mango)","Relax with a fresh lemon, orange, and bath bomb soak; Come with essential and candles; Cuticle trimming, nail shaping, and buffing; Sea Salt Soak, Sugar scrub. Mask wrap hot towel; 15-minute massage with Collagen Socks and Hot Stones",7900],
+        ["The Volcano Pedicure","Included Callus Treatment; Relax with a fresh lemon, orange, and rose flower, soak your feet in Volcano Sea Salt; Cuticle trimming, nail shaping, and buffing; Sugar scrub. Mask wrap hot towel; 20-minute massage with 24K gold Volcano Lotion; Candles oil and Collagen Socks",8900],
+        ["Essential Manicure","Pamper your hands with a soothing soak, nail shaping, cuticle care, and a relaxing lotion massage. Enjoy a warm towel wrap and finish with your choice of polish for perfectly polished, refreshed hands.",2900],
+        ["The Lux Manicure","Pamper your hands with a soothing soak, cleansing, shaping, and cuticle care. Enjoy a 5-minute hand massage, paraffin wax, and a warm towel wrap, finishing with your choice of polish for the ultimate touch of elegance.",3900],
+        ["Royal Manicure","Include Essential Manicure with Sugar Scrub, Mineral. Mask wrap with a warm towel. Enjoy a 7-minute massage with hot stones and Paraffin Wax for hands, bringing soft, rejuvenated skin. The perfect touch of luxury for your hands.",4900],
+        ["The Moon Manicure","Relax with a fresh lemon , orange and bath bomb soak . Come with essential oil. This service includes a mask wrap with hot towels, a 10-minute hot stone massage, and nourishing collagen gloves for soft, rejuvenated skin.",5900],
+        ["Gel Polish","",1000],
+        ["Hybrid/ Dipping","",1500],
+        ["Acrylic/ Gel X/ Builder Gel","",2000],
+        ["Acrylic","",1500],
+        ["Hybrid Gel/Dipping","",1000],
+        ["Gel X/ Builder Gel","$10+",1000,"from"],
+        ["Acrylic for 2 Big Toes","",1500],
+        ["Acrylic Fill-in for 2 Big Toes","",1000],
+        ["Regular French Tip","",1000],
+        ["Deep French Tip","$15 - $20",1500,"from"],
+        ["Ombre/ Chrome/ Cat Eye","",1500],
+        ["Long Length","$5+",500,"from"],
+        ["Design","$5+",500,"from"],
+        ["Nail Repair","$5+",500,"from"],
+        ["Cuticle Clean","",1000],
+        ["Shine Buff","",1000],
+        ["Callus Treatment","",1000],
+        ["Paraffin","",1000],
+        ["Collagen Gloves/ Socks","",1000],
+        ["Regular Polish Change","",1500],
+        ["Gel Polish Change","",2500],
+        ["3-5 Color","$5+",500,"from"],
+        ["Acrylic Full Set","$55+",5500,"from"],
+        ["Acrylic Fill","$50+",5000,"from"],
+        ["Acrylic Full Set on Toes","",5000],
+        ["Acrylic Fill on Toes","$45+",4500,"from"],
+        ["Pink & White Full Set","$60+",6000,"from"],
+        ["Pink & White Fill In","$55+",5500,"from"],
+        ["Ombre Powder Full Set","$65+",6500,"from"],
+        ["Ombre Powder Fill In","$55+",5500,"from"],
+        ["Builder Gel/ Hard Gel Full Set","$60+",6000,"from"],
+        ["Builder Gel/ Hard Gel Fill In","$55+",5500,"from"],
+        ["Gel X Extensions Short","",6000],
+        ["Gel X Extensions Medium","",6500],
+        ["Gel X Extensions Long","",7000],
+        ["Hybrid Gel Full Set","",6000],
+        ["Hybrid Gel Fill In","",5500],
+        ["Rubber Base Gel","$45+",4500,"from"],
+        ["Dipping Powder on Natural Nails","$50+",5000,"from"],
+        ["Dipping Powder with Tips","$60+",6000,"from"],
+        ["Removal with Service","",2000],
+        ["Removal without Service","",3000],
+        ["Lash Lift","",7000],
+        ["Lash Lift with Tint","",9500],
+        ["Lamination Brow with Tint (Come with Eyebrow Wax)","",11000],
+        ["Classic Lash","Done 60’",10000],
+        ["Refill","Done 45’",8000],
+        ["Hybrid Lash","Done 90’",12000],
+        ["Refill","Done 75’",10000],
+        ["Volume Lash","Done 120’",14000],
+        ["Refill","Done 90’",12000],
+        ["Eyebrows","",1500],
+        ["Upper Lips","",1000],
+        ["Chin","",1200],
+        ["Sideburns","",1500],
+        ["Cheeks","",1500],
+        ["Full Face","",5000],
+        ["Under Arms","",2500],
+        ["Half Arms","$30+",3000,"from"],
+        ["Full Arms","$50+",5000,"from"],
+        ["Half Legs","$40+",4000,"from"],
+        ["Full Legs","$65+",6500,"from"],
+        ["Bikini Line","$45+",4500,"from"],
+        ["Brazilian","$55+",5500,"from"],
+        ["Chest","$40+",4000,"from"],
+        ["Back","$50+",5000,"from"],
+        ["Stomach","$30+",3000,"from"],
+        ["Shoulders","$30+",3000,"from"],
+        ["Mani Regular","",2000],
+        ["Mani Gel","",3000],
+        ["Pedi Regular","",2500],
+        ["Pedi Gel","",3500],
+        ["Polish Change Regular (Hands/Toes)","",1500],
+        ["Polish Change Gel (Hands/Toes)","",2000],
+        ["PUMPKIN SPICE PEDICURE","Warm • Cozy • Nourishing. REGULAR POLISH — $79 | GEL POLISH — $89",7900,"from"],
+        ["APPLE CIDER GLOW PEDICURE","Fresh • Hydrating • Glowing. REGULAR POLISH — $79 | GEL POLISH — $89",7900,"from"],
+      ] },
+    ],
+    quoteOnly: "Prices are from the full list on their own site; gel is $10 more, and taking gel off for regular polish $5.",
   },
 
   /*
@@ -16360,6 +17777,296 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     YAYOI Cupertino — gathered 2026-09-24 from own
+     they are: Japanese teishoku
+     flag: Sources: own site https://www.yayoi-us.com/find-us (address, phone, hours) and https://www.yayoi-us.com/togo (menu: 'Main Menu' and 'Side Menu, Products & Beverages' tabs); own Toast ordering page https://order.toasttab.com/online/yayoi-cupertino-new-20682-homestead-road used only to cross-check.
+     flag: Hours conflict, so hours = null: own site Find Us page says 'SUN-THR 11:30AM-8PM; FRI&SAT 11:30AM-9PM', own Toast ordering page says 'Sunday-Thursday 10:30AM - 8:00PM, Friday-Saturday 10:30AM - 9:00PM'.
+     flag: Left out 7 alcohol items from the to-go 'Alcoholic drink' section (Sapporo Premium Light beer, sake and sparkling sake).
+     flag: Items are the to-go menu on yayoi-us.com/togo (the menu the brief pointed to); the dine-in menu at yayoi-us.com/menu (Teishoku set menu, Don/Ju, Sushi-Bites, kids meal etc.) has separate dine-in prices and was not included.
+     flag: Menu item numbers (e.g. "901.") dropped from names; desc is the Japanese name printed under each item on the site. Names otherwise as published, including site typos ("Tofu Sald", "Oi Och", "Jasmin green tea").
+     flag: The /togo page HTML also holds three older curry entries (Curry Rice $14.00, Pork Katsu Curry $20.50, Chicken Katsu Curry $20.50) hidden underneath the A LA CARTE photos and not visible on the page; left out, the visible prices were used.
+     flag: Two A LA CARTE entries are both published as "Wagyu Sukiyaki (A la carte)": the $38.50 one is the double-portion (Japanese name 和牛2倍すき焼き, item 1427).
+     flag: Price differences on own Toast page (regular site price kept): Curry Rice site $15.90 vs Toast $11.40; Chicken Katsu Curry site $22.90 vs Toast $19.40; Pork Katsu Curry site $22.90 vs Toast $19.40. The own site news post "YAYOI Curry Fair – Only in Cupertino!" (https://www.yayoi-us.com/post/yayoi-curry-fair-only-in-cupertino) explains these: limited-time to-go curry prices $11.40 / $19.40 / $19.40 from September 15 through October 12, 2026 (plus a dine-in-only Fried Shrimp Omelet Curry $19.00).
+     flag: Not listed on this location's Toast page: 1416 DX Tonkotsu Ramen; 1418 Chasu Ramen; 729 Golden Oolong Tea; 730 Jasmin green tea.
+     flag: Toast page also lists items not on the site's to-go menu (not included): Kara Age; Kara age(A LA CARTE); Matcha Tiramisu; Kokuto Matcha Iced Latte; Matcha Iced tea; Whipped Matcha Iced Milk; Matcha Iced Milk.
+     flag: Toast showed these as OUT OF STOCK when checked on 2026-09-23 (still listed here): Saba Shio; Spicy Tonkotsu Ramen; Edamame; Large Edamame; Saba Shio (A la carte); Matcha warabi mochi; Oi Och.
+     flag: No email published on own pages (contact form only). Instagram link from the home page Official Accounts section.
+     flag: On review: email from the Contact sheet of their own Instagram (Glenn's screenshot), which serves all three shops.
+  */
+  'yayoi-cupertino': {
+    address: "20682 Homestead Rd., Cupertino, CA 95014",
+    phone: "(408) 564-8852",
+    email: "hello@yayoi-us.com",
+    cuisine: "Japanese teishoku",
+    sections: [
+      { name: "Main Menu", items: [
+        ["Saba Shio","サバの塩焼き",2450],
+        ["Shoga Yaki","しょうが焼き",2650],
+        ["Double Wagyu Sukiyaki","和牛2倍すき焼き",4250],
+        ["Curry Rice","カレーライス",1590],
+        ["Chicken Katsu","とりカツ",2750],
+        ["Teriyaki Chicken","照り焼きチキン",2390],
+        ["Shima Hokke","しまほっけの塩焼き",2950],
+        ["Chicken Katsu Curry","チキンカツカレー",2290],
+        ["Teriyaki Salmon","鮭の照り焼き",3190],
+        ["Niku Yasai itame","肉野菜炒め",2650],
+        ["Wagyu Yakiniku Ju","和牛焼肉重",2850],
+        ["Pork Katsu Curry","カツカレー",2290],
+        ["Ton Katsu","とんかつ",2750],
+        ["Wagyu Sukiyaki","和牛すき焼き",3450],
+        ["Una Ju","うな重",3450],
+      ] },
+      { name: "A La Carte", items: [
+        ["Saba Shio (A la carte)","サバの塩焼き",2050],
+        ["Shoga Yaki (A la carte)","しょうが焼き",2250],
+        ["Niku Yasai itame (A la carte)","肉野菜炒め",2250],
+        ["Wagyu Sukiyaki (A la carte)","和牛すき焼き",3050],
+        ["Ton Katsu (A la carte)","とんかつ",2350],
+        ["Shima Hokke (A la carte)","しまほっけの塩焼き",2550],
+        ["Wagyu Sukiyaki (A la carte)","和牛2倍すき焼き",3850],
+        ["Chicken Katsu (A la carte)","とりカツ",2350],
+        ["Teriyaki Salmon (A la carte)","鮭の照り焼き",2790],
+        ["Teriyaki Chicken (A la carte)","照り焼きチキン",1990],
+      ] },
+      { name: "Noodles", items: [
+        ["Tonkotsu Ramen","豚骨ラーメン",1850],
+        ["Spicy Tonkotsu Ramen","スパイシー豚骨ラーメン",1950],
+        ["Wagyu Niku Udon","和牛肉うどん",2050],
+      ] },
+      { name: "Cupertino and Hillsdale only", items: [
+        ["DX Tonkotsu Ramen","デラックス豚骨ラーメン",2250],
+        ["Chasu Ramen","焼豚豚骨ラーメン",2450],
+      ] },
+      { name: "Palo Alto and Cupertino only", items: [
+        ["Oyako Ju","親子重",2350],
+        ["Katsu Toji Ju","かつとじ重",2550],
+        ["Chicken Katsu Toji ju","鶏かつとじ重",2550],
+      ] },
+      { name: "Side Menu, Products & Beverages", items: [
+        ["Tofu Sald","豆腐サラダ",1650],
+        ["Gyoza 6pcs","餃子(6pcs)",1190],
+        ["Takoyaki","たこ焼き",1190],
+        ["Edamame","枝豆",790],
+        ["Ikageso Kara Age","イカゲソの唐揚げ",950],
+        ["Large Edamame","４人前枝豆",1050],
+        ["Veggie Gyoza(VG) 6pcs","ベジ餃子(6pcs)",1190],
+        ["Chicken Karaage Petite 2pcs","からあげ小鉢",690],
+        ["Miso soup","味噌汁",450],
+        ["Gohan","ご飯",450],
+        ["Large Size Gohan","ご飯",990],
+        ["Medium Size Curry Sauce","カレーソース",750],
+        ["Large Size Curry Sauce","カレーソース",2290],
+      ] },
+      { name: "Dessert", items: [
+        ["Matcha warabi mochi","抹茶わらび餅",690],
+      ] },
+      { name: "Beverages", items: [
+        ["Oi Och","おーいお茶",340],
+        ["Ramune","ラムネ",400],
+        ["Sparkling Water","スパークリングウォーター",350],
+        ["Golden Oolong Tea","金の烏龍茶",340],
+        ["Coke","コカコーラ",260],
+        ["Jasmin green tea","ジャスミン茶",340],
+        ["Diet Coke","ダイエットコーク",260],
+        ["Calpico","カルピコ",340],
+        ["Sprite","スプライト",260],
+      ] },
+    ],
+    siteNote: "To-go prices from their own site's to-go menu, for this shop; the dine-in menu is priced separately.",
+  },
+
+  /*
+     YAYOI Palo Alto — gathered 2026-09-24 from own
+     they are: Japanese teishoku
+     flag: Sources: own site https://www.yayoi-us.com/find-us (address, phone, hours) and https://www.yayoi-us.com/togo (menu: 'Main Menu' and 'Side Menu, Products & Beverages' tabs); own Toast ordering page https://www.toasttab.com/local/order/yayoi-palo-alto-403-university-ave used only to cross-check.
+     flag: Hours conflict, so hours = null: own site Find Us page says 'MON-SUN 11:30AM-8PM', own Toast ordering page says 'Sunday-Saturday 10:30 am - 8:00 pm'.
+     flag: Left out 7 alcohol items from the to-go 'Alcoholic drink' section (Sapporo Premium Light beer, sake and sparkling sake).
+     flag: Items are the to-go menu on yayoi-us.com/togo (the menu the brief pointed to); the dine-in menu at yayoi-us.com/menu (Teishoku set menu, Don/Ju, Sushi-Bites, kids meal etc.) has separate dine-in prices and was not included.
+     flag: Menu item numbers (e.g. "901.") dropped from names; desc is the Japanese name printed under each item on the site. Names otherwise as published, including site typos ("Tofu Sald", "Oi Och", "Jasmin green tea").
+     flag: The /togo page HTML also holds three older curry entries (Curry Rice $14.00, Pork Katsu Curry $20.50, Chicken Katsu Curry $20.50) hidden underneath the A LA CARTE photos and not visible on the page; left out, the visible prices were used.
+     flag: Two A LA CARTE entries are both published as "Wagyu Sukiyaki (A la carte)": the $38.50 one is the double-portion (Japanese name 和牛2倍すき焼き, item 1427).
+     flag: Left out items the site marks 'Cupertino / Hillsdale location only To-Go menu' (not offered at this location).
+     flag: Not listed on this location's Toast page: 729 Golden Oolong Tea; 730 Jasmin green tea.
+     flag: Toast page also lists items not on the site's to-go menu (not included): Kara Age; Kara age(A LA CARTE); Matcha Tiramisu; Kokuto Matcha Iced Latte; Matcha Iced tea; Whipped Matcha Iced Milk; Matcha Iced Milk.
+     flag: Toast showed these as OUT OF STOCK when checked on 2026-09-23 (still listed here): Matcha warabi mochi.
+     flag: No email published on own pages (contact form only). Instagram link from the home page Official Accounts section.
+     flag: On review: email from the Contact sheet of their own Instagram (Glenn's screenshot), which serves all three shops.
+  */
+  'yayoi-palo-alto': {
+    address: "403 University Ave., Palo Alto, CA 94301",
+    phone: "(650) 494-4437",
+    email: "hello@yayoi-us.com",
+    cuisine: "Japanese teishoku",
+    sections: [
+      { name: "Main Menu", items: [
+        ["Saba Shio","サバの塩焼き",2450],
+        ["Shoga Yaki","しょうが焼き",2650],
+        ["Double Wagyu Sukiyaki","和牛2倍すき焼き",4250],
+        ["Curry Rice","カレーライス",1590],
+        ["Chicken Katsu","とりカツ",2750],
+        ["Teriyaki Chicken","照り焼きチキン",2390],
+        ["Shima Hokke","しまほっけの塩焼き",2950],
+        ["Chicken Katsu Curry","チキンカツカレー",2290],
+        ["Teriyaki Salmon","鮭の照り焼き",3190],
+        ["Niku Yasai itame","肉野菜炒め",2650],
+        ["Wagyu Yakiniku Ju","和牛焼肉重",2850],
+        ["Pork Katsu Curry","カツカレー",2290],
+        ["Ton Katsu","とんかつ",2750],
+        ["Wagyu Sukiyaki","和牛すき焼き",3450],
+        ["Una Ju","うな重",3450],
+      ] },
+      { name: "A La Carte", items: [
+        ["Saba Shio (A la carte)","サバの塩焼き",2050],
+        ["Shoga Yaki (A la carte)","しょうが焼き",2250],
+        ["Niku Yasai itame (A la carte)","肉野菜炒め",2250],
+        ["Wagyu Sukiyaki (A la carte)","和牛すき焼き",3050],
+        ["Ton Katsu (A la carte)","とんかつ",2350],
+        ["Shima Hokke (A la carte)","しまほっけの塩焼き",2550],
+        ["Wagyu Sukiyaki (A la carte)","和牛2倍すき焼き",3850],
+        ["Chicken Katsu (A la carte)","とりカツ",2350],
+        ["Teriyaki Salmon (A la carte)","鮭の照り焼き",2790],
+        ["Teriyaki Chicken (A la carte)","照り焼きチキン",1990],
+      ] },
+      { name: "Noodles", items: [
+        ["Tonkotsu Ramen","豚骨ラーメン",1850],
+        ["Spicy Tonkotsu Ramen","スパイシー豚骨ラーメン",1950],
+        ["Wagyu Niku Udon","和牛肉うどん",2050],
+      ] },
+      { name: "Palo Alto and Cupertino only", items: [
+        ["Oyako Ju","親子重",2350],
+        ["Katsu Toji Ju","かつとじ重",2550],
+        ["Chicken Katsu Toji ju","鶏かつとじ重",2550],
+      ] },
+      { name: "Side Menu, Products & Beverages", items: [
+        ["Tofu Sald","豆腐サラダ",1650],
+        ["Gyoza 6pcs","餃子(6pcs)",1190],
+        ["Takoyaki","たこ焼き",1190],
+        ["Edamame","枝豆",790],
+        ["Ikageso Kara Age","イカゲソの唐揚げ",950],
+        ["Large Edamame","４人前枝豆",1050],
+        ["Veggie Gyoza(VG) 6pcs","ベジ餃子(6pcs)",1190],
+        ["Chicken Karaage Petite 2pcs","からあげ小鉢",690],
+        ["Miso soup","味噌汁",450],
+        ["Gohan","ご飯",450],
+        ["Large Size Gohan","ご飯",990],
+        ["Medium Size Curry Sauce","カレーソース",750],
+        ["Large Size Curry Sauce","カレーソース",2290],
+      ] },
+      { name: "Dessert", items: [
+        ["Matcha warabi mochi","抹茶わらび餅",690],
+      ] },
+      { name: "Beverages", items: [
+        ["Oi Och","おーいお茶",340],
+        ["Ramune","ラムネ",400],
+        ["Sparkling Water","スパークリングウォーター",350],
+        ["Golden Oolong Tea","金の烏龍茶",340],
+        ["Coke","コカコーラ",260],
+        ["Jasmin green tea","ジャスミン茶",340],
+        ["Diet Coke","ダイエットコーク",260],
+        ["Calpico","カルピコ",340],
+        ["Sprite","スプライト",260],
+      ] },
+    ],
+    siteNote: "To-go prices from their own site's to-go menu, for this shop; the dine-in menu is priced separately.",
+  },
+
+  /*
+     YAYOI Hillsdale — gathered 2026-09-24 from own
+     they are: Japanese teishoku
+     flag: Sources: own site https://www.yayoi-us.com/find-us (address, phone, hours) and https://www.yayoi-us.com/togo (menu: 'Main Menu' and 'Side Menu, Products & Beverages' tabs); own Toast ordering page https://www.toasttab.com/local/order/yayoi-san-mateo-em-new-389-hillsdale-mall used only to cross-check.
+     flag: Hours conflict, so hours = null: own site Find Us page says 'MON-SUN 11:30AM-8PM', own Toast ordering page says 'Sunday-Saturday 11:00 am - 8:00 pm'.
+     flag: Left out 7 alcohol items from the to-go 'Alcoholic drink' section (Sapporo Premium Light beer, sake and sparkling sake).
+     flag: Items are the to-go menu on yayoi-us.com/togo (the menu the brief pointed to); the dine-in menu at yayoi-us.com/menu (Teishoku set menu, Don/Ju, Sushi-Bites, kids meal etc.) has separate dine-in prices and was not included.
+     flag: Menu item numbers (e.g. "901.") dropped from names; desc is the Japanese name printed under each item on the site. Names otherwise as published, including site typos ("Tofu Sald", "Oi Och", "Jasmin green tea").
+     flag: The /togo page HTML also holds three older curry entries (Curry Rice $14.00, Pork Katsu Curry $20.50, Chicken Katsu Curry $20.50) hidden underneath the A LA CARTE photos and not visible on the page; left out, the visible prices were used.
+     flag: Two A LA CARTE entries are both published as "Wagyu Sukiyaki (A la carte)": the $38.50 one is the double-portion (Japanese name 和牛2倍すき焼き, item 1427).
+     flag: Left out items the site marks 'Palo Alto/Cupertino location only To-Go menu' (not offered at this location).
+     flag: Not listed on this location's Toast page: 1416 DX Tonkotsu Ramen; 1418 Chasu Ramen; 729 Golden Oolong Tea; 730 Jasmin green tea.
+     flag: Toast page also lists items not on the site's to-go menu (not included): Kara Age; Vegetarian Ramen; Kara age(A LA CARTE); Kokuto Matcha Iced Latte; Matcha Iced tea; Whipped Matcha Iced Milk; Matcha Iced Milk.
+     flag: Toast showed these as OUT OF STOCK when checked on 2026-09-23 (still listed here): Matcha warabi mochi.
+     flag: No email published on own pages (contact form only). Instagram link from the home page Official Accounts section.
+     flag: Site calls this location "YAYOI Hillsdale" (Hillsdale Mall, San Mateo); id uses the city San Mateo. Brief said "3 city locations": the site lists exactly three US locations, all Bay Area (Palo Alto, Cupertino, San Mateo).
+     flag: On review: email from the Contact sheet of their own Instagram (Glenn's screenshot), which serves all three shops.
+     flag: On review: San Mateo's Asian food seat is Pho De Nguyen's; their to-go menu has tonkotsu and chashu ramen, so the open "Korean and ramen" seat.
+  */
+  'yayoi-san-mateo': {
+    address: "389 Hillsdale Mall, San Mateo, CA 94403",
+    phone: "(650) 315-2287",
+    email: "hello@yayoi-us.com",
+    cuisine: "Japanese teishoku",
+    sections: [
+      { name: "Main Menu", items: [
+        ["Saba Shio","サバの塩焼き",2450],
+        ["Shoga Yaki","しょうが焼き",2650],
+        ["Double Wagyu Sukiyaki","和牛2倍すき焼き",4250],
+        ["Curry Rice","カレーライス",1590],
+        ["Chicken Katsu","とりカツ",2750],
+        ["Teriyaki Chicken","照り焼きチキン",2390],
+        ["Shima Hokke","しまほっけの塩焼き",2950],
+        ["Chicken Katsu Curry","チキンカツカレー",2290],
+        ["Teriyaki Salmon","鮭の照り焼き",3190],
+        ["Niku Yasai itame","肉野菜炒め",2650],
+        ["Wagyu Yakiniku Ju","和牛焼肉重",2850],
+        ["Pork Katsu Curry","カツカレー",2290],
+        ["Ton Katsu","とんかつ",2750],
+        ["Wagyu Sukiyaki","和牛すき焼き",3450],
+        ["Una Ju","うな重",3450],
+      ] },
+      { name: "A La Carte", items: [
+        ["Saba Shio (A la carte)","サバの塩焼き",2050],
+        ["Shoga Yaki (A la carte)","しょうが焼き",2250],
+        ["Niku Yasai itame (A la carte)","肉野菜炒め",2250],
+        ["Wagyu Sukiyaki (A la carte)","和牛すき焼き",3050],
+        ["Ton Katsu (A la carte)","とんかつ",2350],
+        ["Shima Hokke (A la carte)","しまほっけの塩焼き",2550],
+        ["Wagyu Sukiyaki (A la carte)","和牛2倍すき焼き",3850],
+        ["Chicken Katsu (A la carte)","とりカツ",2350],
+        ["Teriyaki Salmon (A la carte)","鮭の照り焼き",2790],
+        ["Teriyaki Chicken (A la carte)","照り焼きチキン",1990],
+      ] },
+      { name: "Noodles", items: [
+        ["Tonkotsu Ramen","豚骨ラーメン",1850],
+        ["Spicy Tonkotsu Ramen","スパイシー豚骨ラーメン",1950],
+        ["Wagyu Niku Udon","和牛肉うどん",2050],
+      ] },
+      { name: "Cupertino and Hillsdale only", items: [
+        ["DX Tonkotsu Ramen","デラックス豚骨ラーメン",2250],
+        ["Chasu Ramen","焼豚豚骨ラーメン",2450],
+      ] },
+      { name: "Side Menu, Products & Beverages", items: [
+        ["Tofu Sald","豆腐サラダ",1650],
+        ["Gyoza 6pcs","餃子(6pcs)",1190],
+        ["Takoyaki","たこ焼き",1190],
+        ["Edamame","枝豆",790],
+        ["Ikageso Kara Age","イカゲソの唐揚げ",950],
+        ["Large Edamame","４人前枝豆",1050],
+        ["Veggie Gyoza(VG) 6pcs","ベジ餃子(6pcs)",1190],
+        ["Chicken Karaage Petite 2pcs","からあげ小鉢",690],
+        ["Miso soup","味噌汁",450],
+        ["Gohan","ご飯",450],
+        ["Large Size Gohan","ご飯",990],
+        ["Medium Size Curry Sauce","カレーソース",750],
+        ["Large Size Curry Sauce","カレーソース",2290],
+      ] },
+      { name: "Dessert", items: [
+        ["Matcha warabi mochi","抹茶わらび餅",690],
+      ] },
+      { name: "Beverages", items: [
+        ["Oi Och","おーいお茶",340],
+        ["Ramune","ラムネ",400],
+        ["Sparkling Water","スパークリングウォーター",350],
+        ["Golden Oolong Tea","金の烏龍茶",340],
+        ["Coke","コカコーラ",260],
+        ["Jasmin green tea","ジャスミン茶",340],
+        ["Diet Coke","ダイエットコーク",260],
+        ["Calpico","カルピコ",340],
+        ["Sprite","スプライト",260],
+      ] },
+    ],
+    siteNote: "To-go prices from their own site's to-go menu, for this shop; the dine-in menu is priced separately.",
+  },
+
+  /*
      Yes Moment — gathered 2026-09-21 from own-domain
      they are: Proposal planning
      logo: https://yes-moment.com/assets/img/logos/new_logo.png (269x231) — not cut into a tile yet
@@ -16897,5 +18604,121 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menu on their own website.",
+  },
+
+  /*
+     Zadna Grill — gathered 2026-09-24 from own
+     they are: Lebanese
+     flag: Sources: zadnagrill.com (home, /menus, /catering, /online-ordering) and its own ordering page order.zadnagrill.com/order (Menufy), fetched 2026-09-23; no bot checks.
+     flag: Hours as shown in the site footer; the ordering page's structured hours agree (Mon and Wed-Sun 12:00-21:00, Tue closed).
+     flag: Price conflict: Falafel (Hot) is $12.00 on /menus but $15.00 on order.zadnagrill.com; entered as from $12.00.
+     flag: Left out alcohol: 'Lebanise White Wine' ($14.00) and 'Corke Fee' ($25.00, corkage) on the ordering page, plus the homepage happy-hour offer (25% off wine and beer, M-F 3-6PM) and Lebanese beer/wine mentions (Batroun Mountains, Almaza). Also left out 'Laziza Non-Alcoholic Beer' ($7.00) as a beer-type drink.
+     flag: 3 family/kebab packs ($100-$120) come only from the ordering page (names kept exactly as published, typos included). Ordering-page-only add-ons (Add Chicken/Kafta/Lamb/Beef/Falafel, Add Skewer ..., Add Ryash) left out.
+     flag: Catering: ~40 tray items on the ordering page left out; several half/full tray prices look swapped (e.g. Hummus FULL TRAY (30PPL) $65.00 vs HALF TRAY (15PPL) $120.00) and a 'Catering' item is $0.00. /catering page has no prices.
+     flag: Site issues (not required): /online-ordering (Wix store) shows a template pickup address '500 Terry Francine Street, San Francisco, CA 94158' and 'No items to show yet'; homepage 'Reserve Table' links to /order which is a 404; homepage review block is Wix placeholder text; footer reads '© 2035 by Studio Siete Marketing Consultancy LLC'.
+     flag: Menu text keeps the site's own spellings (e.g. 'VEGETERIAN DISHES', 'Add Chiken Shawerma', 'Mabroume Pestachio', 'Flaver Spirkling Water').
+     flag: All items have prices; 0 items missing a price.
+  */
+  'zadna-grill': {
+    address: "2653 Broadway St, Redwood City, CA 94063",
+    phone: "(650) 366-9600",
+    email: "zadnagrillrwc@gmail.com",
+    hours: "Sunday-Monday 12pm - 9pm; Tuesday: Closed; Wednesday-Saturday 12pm-9pm",
+    cuisine: "Lebanese",
+    sections: [
+      { name: "Entree Mashawi", items: [
+        ["Ribeye Steak","Tender, juicy, and charbroiled. Served with fries and salad.",4000],
+        ["Shish Taouk","Cubes of charbroiled chicken breast. Served with rice, hummus, and salad.",2300],
+        ["Kafta Kabab","Minced beef and lamb with blended herbs. Served with salad, rice, and hummus.",2300],
+        ["Lamb Shish Kabab","Cubes of charbroiled dry aged lamb. Served with salad, rice, and hummus.",2500],
+        ["Beef Shish Kabab","Cubes of charbroiled rib eye. Served with salad, rice, and hummus.",2500],
+        ["Combo Kabab","Chicken, kafta, and choice of lamb or beef. Served with salad, rice, and hummus.",2800],
+        ["Reyash","Rib cut charbroiled domestic rack of lamb. Served with salad, rice, and hummus.",3000],
+        ["Jawanih Chicken Wings","Garlic, lemon juice, and house hot sauce. Served with French fries and hummus.",2200],
+        ["Beef And Lamb Shawerma Plate","Marinated Beef&Lamb Slowly Roasted, {Served With Rice, Salad & Humus}",2400],
+        ["Farouj Meshwe Garlic (Grilled Chicken )","Grilled Chicken Marinate with Garlic, Lemon Juice, Hot Sauce {Served With Humus, Salad and French Fries",2300],
+        ["Chicken Shawarma Plate","Marinated Chicken Slowly Roasted {Served With Rice, Salad & Humus}",2300],
+        ["Family Pack 2 Serve 4-5 Include 3 Checkin 3 Kafta 2 Beef Or Lamb Serve W Rice Or Friese","",10000],
+        ["Family Pack 1chicken Shawerma Serve With Rice Or Friese","",10000],
+        ["Grilled Delux Kebab Pack","",12000],
+      ] },
+      { name: "Cold Meza", items: [
+        ["Hummus","Organic garbanzo beans, tahini, lemon juice, extra virgin olive oil.",900],
+        ["Hummus Bayrooty","Garbanzo beans, parsley, garlic, tahini, lemon juice, extra virgin olive oil.",1000],
+        ["Baba Ghanouj","Smoked eggplant, tahini, garlic, extra virgin olive oil.",1000],
+        ["Muhamara","Sweet red bell peppers, walnuts, burgul (crushed wheat), extra virgin olive oil.",1200],
+        ["Labni B'Khyar","Cucumber, yogurt, garlic, mint.",1200],
+        ["Warak Enab","Grape leaves stuffed with rice, parsley, mint, olive oil lemon juice",1100],
+        ["Kabis Mix","Mixed pickles, turnip, cucumber, olives.",1000],
+      ] },
+      { name: "Hot Meza", items: [
+        ["Falafel (Hot)","Garbanzo and fava beans, onion, garlic, parsley, and all spices.",1200,null,"from"],
+        ["Zahara [Cauliflower]","Deep fried with garlic and tahini sauce.",1400],
+        ["Halloumi Cheese","Flat melted, cucumber, mist, tomatoes, fried.",1400],
+        ["Hummus Lamb","Garbanzo beans, tahini sauce, grilled lamb.",1700],
+        ["HUMMUS SHAWERMA - CHICKEN","Organic Garbanzo Beans ,Tahini Sauce,& Shaved Beef & Lam Or Chicken Shawarma",1700],
+      ] },
+      { name: "Salad", items: [
+        ["Tabuli","Parsley, onions, tomatoes, bulgur (crushed wheat), olive oil.",1500],
+        ["Fattouch","Mixed greens, cucumber, tomatoes, mint, onions, radishes, Italian parsley, bell peppers, and lemon or pomegranate juice.",1800],
+        ["Zadna Salad","Mixed greens, onions, tomatoes, olives, mint, feta cheese.",1800],
+        ["Add Chiken Shawerma","",800],
+        ["Add Beef And Lamb Shawarma","",900],
+      ] },
+      { name: "Soup", items: [
+        ["Lentil Soup","Red lentils, garlic, onions, potatoes, tomatoes, carrots, extra virgin olive oil.",900],
+      ] },
+      { name: "Wrap Sajj Bread V", items: [
+        ["Chicken Shawarma Wrap","Marinated chicken slowly roasted, pickles, garlic sauce.",1600],
+        ["Falafel Wrap","Lettuce, tomato, pickles, tahini sauce.",1600],
+        ["Beef And Lamb Shawerma Wrap","Chaved Beff & Lamb Slowly Roasted, Tomato, Parslely, Lettuce, Pickles, Onion Tahini Sauces",1700],
+        ["Arabic Style Chicken Shawerma Include Fries","Served With French Fries, Pickles",2300],
+        ["Arabic Style Beef & Lamb Shawerma Include Fries","Served With French Fries, Pickles",2400],
+      ] },
+      { name: "Sides", items: [
+        ["Pita Basket","",500],
+        ["Rice Bowl","",800],
+        ["French Fries","",800],
+        ["Toum Garlik","",900],
+        ["Hot Sauce","",800],
+      ] },
+      { name: "Tabekh / Stew", items: [
+        ["Dawood Basha","Sauteed meat balls, onions, tomato sauce, cilantro. Served with rice.",2500],
+        ["Okra Lamb Shank","Sauteed okra, tomatoes, cilantro, garlic with lamb shank. Served with rice.",3000],
+        ["Kabab Halabi","Ground lamb, onions, parsley, garlic, and tomato sauce. Served with rice.",2500],
+        ["Gambare","Grilled prawns, tomatoes, garlic, jalapenos. Served with rice.",2500],
+        ["Fasolia Sooteed","Kidney beans, onions, tomato, cilantro, lamb cubes. Served with rice.",3000],
+        ["Sheikh El Mahshi","Eggplant stuffed with ground beef, pine nuts, garlic, tomato sauce. Served with rice.",2800],
+      ] },
+      { name: "Vegeterian Dishes", items: [
+        ["Mounazale Entree","Eggplant, stewed onions, tomatoes, garlic, green or red bell peppers, garbanzo. Served with rice.",2400],
+        ["Falafel Entree","Organic garbanzo beans, tahini sauce served with hummus, baba ghanouj, salad, and pickles.",2200],
+        ["Bemieh Veggie Entree","Sauteed okra, tomatoes, cilantro, garlic. Served with rice.",2400],
+        ["MOO-JADARRA","Rice & Lentils Cooked On Slow Heat, Garnished With Caramelized Onion &Cumin {Served With Salad}",2200],
+      ] },
+      { name: "Desserts", items: [
+        ["Basbousa","",900],
+        ["Pistachio Baklava","",700],
+        ["Walnut Baklava","",700],
+        ["Kunafa","",1200],
+        ["Baklava Ice Cream","",1200],
+        ["Mabroume Pestachio","",900],
+      ] },
+      { name: "Drinks", items: [
+        ["Sparkling Water","",600],
+        ["Bottle Water","",300],
+        ["Soda Coke","",500],
+        ["Soda Sprite","",500],
+        ["Home Brewed Ice Tea","",600],
+        ["Fresh Lemonade","",600],
+        ["Laban Ayran [Yogurt]","",600],
+        ["Hot Tea","",500],
+        ["Hot Lemon","",300],
+        ["Arabic Cafe","",500],
+        ["Soda Diet","",500],
+        ["Flaver Spirkling Water","",300],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own site.",
   },
 }

@@ -1189,6 +1189,35 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs
+  /* 2026-09-23, afternoon: most of Union City from Janelle, San Jose,
+     Belmont, Hayward, Fremont, Castro Valley, Redwood City, YAYOI's three
+     shops, Petaluma, Walnut Creek and Santa Rosa. */
+  'san-jose-goods-11': 'b_paletaplaneta', //                       Ice cream shop
+  'san-jose-goods-4': 'b_mazasanjose', //                          Sushi: Mexican is Tacos Mi Reynita's; they have a sushi menu
+  'belmont-goods-5': 'b_divinoristorante', //                      Italian
+  'hayward-goods-3': 'b_favoriteindianrestaurant', //              Indian
+  'fremont-goods-8': 'b_portofperiperifremont', //                 Wings
+  'castro-valley-services-4': 'b_domartialarts', //                Gym: taekwondo and judo
+  'redwood-city-goods-9': 'b_zadnagrill', //                       Mediterranean
+  'palo-alto-goods-2': 'b_yayoipaloalto', //                       Asian food
+  'cupertino-goods-2': 'b_yayoicupertino', //                      Asian food
+  'san-mateo-goods-7': 'b_yayoisanmateo', //                       Korean and ramen: Asian food is Pho De Nguyen's
+  'union-city-goods-1': 'b_tacospapo', //                          Mexican
+  'union-city-goods-12': 'b_doughweime', //                        Bakery
+  'union-city-goods-13': 'b_konthegounioncity', //                 Coffee shop
+  'union-city-goods2-0': 'b_backyardbayou', //                     Cajun, no seat; yellow sheet, Tier 1
+  'union-city-goods2-1': 'b_goldenbayseafoodharbor', //            Asian food is The Une's; yellow sheet, Tier 1
+  'union-city-goods2-2': 'b_sanhonorepanaderia', //                Bakery is DoughWeiMe's; yellow sheet, Tier 1
+  'union-city-services-1': 'b_themoonnails', //                    Nail salon
+  'union-city-services2-1': 'b_thehotspotstudiosunioncity', //     pottery painting, no seat; yellow sheet, Tier 1
+  'union-city-services2-2': 'b_thelionsmanebarbershop', //         Barber is The Company Barber's; yellow sheet, Tier 1
+  'union-city-services2-3': 'b_jasnailspa', //                     Nail salon is The Moon Nails'; yellow sheet, Tier 1
+  'petaluma-goods-11': 'b_honeypotgelato', //                      Ice cream shop
+  'walnut-creek-goods-5': 'b_northitaliawalnutcreek', //           Italian
+  'walnut-creek-goods2-6': 'b_galpaogauchowalnutcreek', //         Brazilian, no seat; yellow sheet, Tier 1
+  'walnut-creek-goods2-7': 'b_havanawalnutcreek', //               Cuban, no seat; yellow sheet, Tier 1
+  'walnut-creek-goods2-8': 'b_litawalnutcreek', //                 Miami and Caribbean, no seat; yellow sheet, Tier 1
+  'santa-rosa-goods2-0': 'b_shadyoakbrewing', //                   a brewery, no seat; yellow sheet, Tier 1
 }
 
 /*
