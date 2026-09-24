@@ -9,6 +9,9 @@ interface ImportMetaEnv {
   readonly VITE_PAYMENTS?: string
 }
 
+/** The build's short commit, stamped on every tracked event (vite.config.ts). */
+declare const __APP_VERSION__: string
+
 interface ImportMeta {
   readonly env: ImportMetaEnv
 }

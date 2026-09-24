@@ -2,6 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { GATED, type GateKey } from '../data/membership'
 import { captureReferral, captureVia, fetchAccount, type Account, type AccountState } from './account'
 import { captureAttribution, sendVisit } from './attribution'
+import { startTracking } from './track'
 
 /**
  * WHAT A SIGNED-OUT VISITOR MAY DO, and the prompt when they may not.
@@ -50,6 +51,8 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
   const setAccount = useCallback((a: Account | null) => setState(a), [])
 
   useEffect(() => {
+    // How this visit arrived, read before anything below tidies the address.
+    startTracking()
     // A shared QR lands here first; the code has to be kept before anything
     // rewrites the URL or the referrer loses their credit.
     captureReferral()

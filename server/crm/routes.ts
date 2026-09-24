@@ -950,7 +950,9 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
           createHash('sha256').update(ref.nonce).digest('hex').slice(0, 32),
           now(),
         )
-      res.redirect(302, '/money')
+      /* ?from=r tells the page's own tracking the visit came by a referral link
+         (src/lib/track.ts); the MAKE $ panel opens the same either way. */
+      res.redirect(302, '/money?from=r')
     }),
   )
 }

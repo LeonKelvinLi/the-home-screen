@@ -610,6 +610,128 @@ ALTER TABLE applications ADD COLUMN IF NOT EXISTS hours TEXT;
 ALTER TABLE applications ADD COLUMN IF NOT EXISTS address TEXT;
 ALTER TABLE applications ADD COLUMN IF NOT EXISTS phone TEXT;
 ALTER TABLE applications ADD COLUMN IF NOT EXISTS email TEXT;
+
+/*
+  THE INTELLIGENCE LAYER'S FOUNDATION, 2026-09-24 (docs/INTELLIGENCE.md).
+
+  VISITORS: one row per device, keyed by the same anon id the events carry (a
+  hash of the httpOnly device cookie). First touch is written once and never
+  overwritten; member_id is set when that device signs in or up, which is how
+  a member's browsing from before they joined is joined to their account
+  without rewriting a single earlier event.
+*/
+CREATE TABLE IF NOT EXISTS analytics_visitors (
+  anon_id     TEXT PRIMARY KEY,
+  first_seen  BIGINT NOT NULL,
+  last_seen   BIGINT NOT NULL,
+  first_touch JSONB NOT NULL DEFAULT '{}'::jsonb,
+  member_id   TEXT REFERENCES members(id) ON DELETE SET NULL,
+  linked_at   BIGINT,
+  is_internal BOOLEAN NOT NULL DEFAULT FALSE
+);
+CREATE INDEX IF NOT EXISTS idx_avisitors_member ON analytics_visitors(member_id) WHERE member_id IS NOT NULL;
+
+/*
+  SESSIONS: a visit, minted in the browser and ended by 30 idle minutes or a
+  new campaign link. What brought THIS visit (last touch) lives here, next to
+  the visitor's first touch, so neither overwrites the other.
+*/
+CREATE TABLE IF NOT EXISTS analytics_sessions (
+  session_id   TEXT PRIMARY KEY,
+  anon_id      TEXT,
+  member_id    TEXT REFERENCES members(id) ON DELETE SET NULL,
+  started_at   BIGINT NOT NULL,
+  last_at      BIGINT NOT NULL,
+  entry_type   TEXT,
+  landing      TEXT,
+  referrer     TEXT,
+  utm_source   TEXT,
+  utm_medium   TEXT,
+  utm_campaign TEXT,
+  device       TEXT,
+  platform     TEXT,
+  app_version  TEXT,
+  events       INTEGER NOT NULL DEFAULT 0,
+  is_bot       BOOLEAN NOT NULL DEFAULT FALSE,
+  is_internal  BOOLEAN NOT NULL DEFAULT FALSE
+);
+CREATE INDEX IF NOT EXISTS idx_asessions_anon ON analytics_sessions(anon_id, started_at);
+CREATE INDEX IF NOT EXISTS idx_asessions_started ON analytics_sessions(started_at);
+
+/*
+  EVENTS GAIN THEIR CONTEXT AS COLUMNS: who (anon id), which business, where
+  (city, page kind, seat), how it was reached (surface, position), a search's
+  normalized words, the device, and whether it was the team or a bot. Stored
+  at the moment it happens, because seats, names and page breaks change.
+*/
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS anon_id TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS brand_id TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS city TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS page_kind TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS seat TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS surface TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS position INTEGER;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS query_norm TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS device TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS platform TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS app_version TEXT;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS is_internal BOOLEAN NOT NULL DEFAULT FALSE;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS is_bot BOOLEAN NOT NULL DEFAULT FALSE;
+ALTER TABLE analytics_events ADD COLUMN IF NOT EXISTS client_at BIGINT;
+CREATE INDEX IF NOT EXISTS idx_aevents_brand ON analytics_events(brand_id, occurred_at) WHERE brand_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_aevents_anon ON analytics_events(anon_id, occurred_at) WHERE anon_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_aevents_session ON analytics_events(session_id) WHERE session_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_aevents_city ON analytics_events(city, occurred_at) WHERE city IS NOT NULL;
+
+/*
+  DELETING A MEMBER NO LONGER DELETES WHAT THEY DID (Leon's call, 2026-09-24):
+  their events stay, with the member link cleared, so last month's totals do
+  not change when somebody leaves. Nothing personal is in an event to keep.
+*/
+DO $$
+BEGIN
+  IF EXISTS (
+    SELECT 1 FROM information_schema.referential_constraints
+    WHERE constraint_name = 'analytics_events_member_id_fkey' AND delete_rule = 'CASCADE'
+  ) THEN
+    ALTER TABLE analytics_events DROP CONSTRAINT analytics_events_member_id_fkey;
+    ALTER TABLE analytics_events ADD CONSTRAINT analytics_events_member_id_fkey
+      FOREIGN KEY (member_id) REFERENCES members(id) ON DELETE SET NULL;
+  END IF;
+END $$;
+
+/*
+  WHAT A BUSINESS WAS, DAY BY DAY, and WHICH BUSINESS HELD WHICH SEAT WHEN.
+  Both live in the repo and change with every deploy; these keep the history
+  the repo overwrites, so an event can be grouped by what the business was
+  that day and a seat's numbers read by who sat in it.
+*/
+CREATE TABLE IF NOT EXISTS analytics_brand_days (
+  pt_date  TEXT NOT NULL,
+  brand_id TEXT NOT NULL,
+  name     TEXT NOT NULL,
+  tier     INTEGER,
+  category TEXT,
+  city     TEXT,
+  seats    JSONB NOT NULL DEFAULT '[]'::jsonb,
+  has_site BOOLEAN,
+  PRIMARY KEY (pt_date, brand_id)
+);
+CREATE TABLE IF NOT EXISTS analytics_placements (
+  seat     TEXT NOT NULL,
+  brand_id TEXT NOT NULL,
+  from_at  BIGINT NOT NULL,
+  to_at    BIGINT,
+  PRIMARY KEY (seat, brand_id, from_at)
+);
+CREATE INDEX IF NOT EXISTS idx_aplacements_open ON analytics_placements(seat) WHERE to_at IS NULL;
+
+/* When each kind of measurement began, beside tracking_started: a number is
+   never shown for a time before its own tracking existed. */
+INSERT INTO analytics_events (id, name, actor_type, source, metadata, dedupe_key, occurred_at)
+VALUES ('ev_tracking_sessions', 'tracking_started', 'system', 'server', '{"what":"sessions, impressions, search and outbound clicks"}'::jsonb,
+        'tracking_started|sessions', (EXTRACT(EPOCH FROM clock_timestamp()) * 1000)::bigint)
+ON CONFLICT DO NOTHING;
 `
 
 /**

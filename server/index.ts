@@ -9,6 +9,7 @@ import { crmOpenMode } from './crm/open'
 import { syncSnapshots } from './crm/backfill'
 import { fillGlennDefaults } from './crm/core'
 import { cleanAttribution, isBot, isTestDestination, shortHash, track } from './analytics'
+import { ingest, linkVisitor, markInternal, prune, snapshotDirectory, teamToken } from './intel'
 import { BRANDS, VENDORS } from '../src/data/brands'
 import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
@@ -168,6 +169,28 @@ if (CRM_ONLY) {
        visit is credited there, on the cookie the sign-up will read. */
     if (req.method === 'GET' || req.method === 'HEAD') return res.redirect(302, `${PUBLIC_URL}${req.originalUrl}`)
     res.status(404).json({ error: 'Not on this address.' })
+  })
+}
+
+/*
+  THE DEVICE COOKIE ON THE FIRST PAGE, not on the first beacon. It used to be
+  minted on the reply to the visit beacon, and whether a browser keeps a
+  cookie set on a sendBeacon reply is not something to bet a visitor count on.
+  Pages only (no API call, no file), never for a bot, and never for a browser
+  sending Global Privacy Control. The CRM's own address sets none.
+*/
+if (!CRM_ONLY) {
+  app.use((req, res, next) => {
+    if (
+      req.method === 'GET' &&
+      !req.path.startsWith('/api/') &&
+      !/\.[A-Za-z0-9]{2,11}$/.test(req.path) &&
+      req.get('sec-gpc') !== '1' &&
+      !isBot(req.get('user-agent'))
+    ) {
+      visitorOf(req, res)
+    }
+    next()
   })
 }
 
@@ -2920,7 +2943,10 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 
   if (existing) {
     const sessionId = await startSession(res, existing.id)
-    await track('user_signed_in', { memberId: existing.id, sessionId, metadata: { channel: byPhone ? 'sms' : 'email' } })
+    /* The device they signed in on is theirs from now on; see server/intel.ts. */
+    const anon = req.get('sec-gpc') === '1' ? null : visitorOf(req, res)
+    await linkVisitor(anon, existing.id)
+    await track('user_signed_in', { memberId: existing.id, actor: anon, sessionId, metadata: { channel: byPhone ? 'sms' : 'email' } })
     return res.json(await memberPayload(existing))
   }
 
@@ -2953,8 +2979,13 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   if (referrer) await syncRaffleTickets(referrer.id)
 
   const sessionId = await startSession(res, id)
+  /* The device they joined on, so their browsing before joining reads as their
+     history; the anon id goes on the event itself too. */
+  const joinedOn = req.get('sec-gpc') === '1' ? null : visitorOf(req, res)
+  await linkVisitor(joinedOn, id)
   await track('user_signed_up', {
     memberId: id,
+    actor: joinedOn,
     sessionId,
     metadata: {
       channel: byPhone ? 'sms' : 'email',
@@ -3290,6 +3321,36 @@ app.post('/api/t/visit', rateLimiter(30, 10), express.text({ type: '*/*', limit:
       utm_campaign: a?.utm_campaign,
     },
   })
+})
+
+/*
+  WHAT THE PAGE REPORTS ABOUT ITSELF: batches of named events from
+  src/lib/track.ts, checked and stored by server/intel.ts. Answered before
+  anything is written, so a slow database never slows the page. A browser
+  sending Global Privacy Control is counted without a visitor, session or
+  member. Outside production, ?wait=1 returns what was kept, for the audits.
+*/
+app.post('/api/t/events', rateLimiter(120, 60), express.text({ type: '*/*', limit: '32kb' }), async (req, res) => {
+  const gpc = req.get('sec-gpc') === '1'
+  const anon = gpc ? null : visitorOf(req, res)
+  const member = await memberFromRequest(req).catch(() => null)
+  const who = { anon, memberId: member?.id ?? null, ua: req.get('user-agent') ?? '', gpc }
+  if (!PROD && req.query.wait === '1') return res.json(await ingest(req.body, who))
+  res.status(204).end()
+  await ingest(req.body, who)
+})
+
+/*
+  THE TEAM'S OWN PHONES: opening this private link marks the device as the
+  team's, and everything it does after is left out of the numbers (the link
+  is shown to admins in the CRM). A wrong token just goes home.
+*/
+app.get('/t/team/:token', async (req, res) => {
+  if (req.params.token === teamToken(PASS_SECRET)) {
+    await markInternal(visitorOf(req, res)).catch(() => {})
+    return res.redirect(302, '/?team=1')
+  }
+  res.redirect(302, '/')
 })
 
 async function signalCounts(brandId: string, actor: string) {
@@ -3638,6 +3699,18 @@ async function start() {
   }
     app.listen(PORT, async () => {
     console.log(`api + static on http://localhost:${PORT}`)
+    /* The directory's day and any seats that changed hands, then the raw-event
+       retention window (ANALYTICS_RETENTION_DAYS, 395 by default), daily. The
+       public service does both; the CRM's own copy of the server does not. */
+    if (!CRM_ONLY) {
+      snapshotDirectory()
+        .then((r) => console.log(`intel: ${r.brands} businesses snapshot, ${r.opened} seats opened, ${r.closed} closed`))
+        .catch((err) => console.warn('intel: snapshot failed:', String((err as Error)?.message ?? err).slice(0, 160)))
+      const keep = Number(process.env.ANALYTICS_RETENTION_DAYS ?? 395)
+      const pruneOld = () => prune(keep).catch(() => 0)
+      void pruneOld()
+      setInterval(pruneOld, 864e5).unref()
+    }
     if (!PAYMENTS_WIRED) {
       console.warn('*** MOCK PAYMENTS: orders are accepted and NOTHING is charged. ***')
     }

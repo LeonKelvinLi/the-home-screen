@@ -230,7 +230,7 @@ check('leads added by hand count as new this week', ovNew.body.counts.newThisWee
 /* ---- the referral link, through a real Reserve-a-spot request ---- */
 const visitor = jar()
 const r1 = await call('GET', '/r/janelle', { j: visitor, raw: true })
-check('the referral link redirects to the page that sells a tile', r1.status === 302 && r1.headers.get('location') === '/money')
+check('the referral link redirects to the page that sells a tile', r1.status === 302 && r1.headers.get('location') === '/money?from=r')
 const cookie1 = visitor.get('beasty_crm_ref')
 await call('GET', '/r/leon?via=qr', { j: visitor, raw: true })
 check('a second link does not replace the first', visitor.get('beasty_crm_ref') === cookie1)
