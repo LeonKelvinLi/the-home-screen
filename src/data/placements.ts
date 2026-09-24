@@ -892,7 +892,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
 
   /* Two shops for one barber, which is what he filed it as. */
   'fremont-services-0': 'b_thecompanybarber', //   Barber and salon
-  'union-city-services-0': 'b_thecompanybarber',
+  'union-city-services-0': 'b_thecompanybarberunioncity', // its own page for the Whipple Rd shop, 2026-09-23
   /* Window and door screens, not phone screens. No screens category exists. */
   'brentwood-services-22': 'b_screenking', //      Handyman and home repair
   /* Ice cream on page one is Polly Ann's. */

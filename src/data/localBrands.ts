@@ -8028,6 +8028,9 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'the-company-barber',
+    /* Their stained-glass seal, cut from Glenn's crop of their Instagram
+       picture — "Update icon and add to the second city", 2026-09-23. */
+    icon: 'the-company-barber-seal',
     hours: 'Mon–Sun 9am–5:30pm (Sunday varies)',
     name: 'The Company Barber',
     label: 'Company Barber',
@@ -8061,13 +8064,56 @@ export const LOCAL_SEED: LocalSeed[] = [
       2024, 2025 and 2026 — so no award is repeated here.
     */
     quoteOnly:
-      'A barbershop with two rooms, Fremont and Union City: fades, skin fades, tapers, lineups, beard trims and straight-razor shaves. Nine-thirty to half five, most days. Cash only, and they publish no prices.',
+      'A barbershop with two rooms, Fremont and Union City: fades, skin fades, tapers, lineups, beard trims and straight-razor shaves. Open 9am to 5:30pm every day, though Sunday varies; call for walk-ins. Cash only, and they publish no prices.',
     panels: [
       {
         head: 'Both shops',
         body: [
           'Fremont — 3833 Peralta Blvd, Suite D, (510) 894-3432',
           'Union City — 1842 Whipple Rd, (510) 300-6793',
+          'Monday to Sunday, 9am to 5:30pm. Their own note: hours move with barber availability, and Sunday varies.',
+        ],
+      },
+    ],
+    items: [],
+  },
+  /*
+    THE SECOND CITY'S OWN PAGE. "Update icon and add to the second city",
+    Glenn, 2026-09-23, with their profile: "BARBERSHOP | FREMONT & UNION CITY",
+    3833 Peralta Blvd with 510.894.3432 and 1842 Whipple Rd with
+    510.300.6793. One page sat on both city pages, so Union City's tile opened
+    Fremont's address and Fremont's number. This is the Whipple Rd shop, as
+    Gold Bean's and Penelope's shops each have their own; the page above is
+    Peralta Blvd's. The same seal, site, email, hours and policy, all shared by
+    the two shops on their own site, which gives this shop's ZIP and number
+    under "TWO LOCATIONS". Both pages said "Nine-thirty to half five" until
+    today; their site says 9am to 5:30pm, Monday to Sunday, as the hours
+    line always did, so the sentence now agrees with it.
+  */
+  {
+    slug: 'the-company-barber-union-city',
+    icon: 'the-company-barber-seal',
+    hours: 'Mon–Sun 9am–5:30pm (Sunday varies)',
+    name: 'The Company Barber',
+    label: 'Company Barber',
+    cuisine: 'Barbershop',
+    tagline: 'Fades and straight-razor shaves, two shops.',
+    color: '#131313|#B08A4A',
+    prep: 0,
+    category: 'Barber and salon',
+    phone: '(510) 300-6793',
+    address: '1842 Whipple Rd, Union City, CA 94587',
+    email: 'thecompanybarber@gmail.com',
+    instagram: 'thecompanybarber',
+    site: 'https://www.thecompanybarber.com/',
+    quoteOnly:
+      'Their Union City shop, on Whipple Road; the other is on Peralta Blvd in Fremont. Fades, skin fades, tapers, lineups, beard trims and straight-razor shaves. Open 9am to 5:30pm every day, though Sunday varies; call for walk-ins. Cash only, and they publish no prices.',
+    panels: [
+      {
+        head: 'Both shops',
+        body: [
+          'Union City — 1842 Whipple Rd, (510) 300-6793',
+          'Fremont — 3833 Peralta Blvd, Suite D, (510) 894-3432',
           'Monday to Sunday, 9am to 5:30pm. Their own note: hours move with barber availability, and Sunday varies.',
         ],
       },

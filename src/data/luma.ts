@@ -321,6 +321,7 @@ export const ICON_LUMA: Record<string, number> = {
   'the-beaudega-by-maine': 0.1488,
   'the-breeze-cafe': 0.8964,
   'the-bubble-house': 0.4135,
+  'the-company-barber-seal': 0.1535,
   'the-cozy-oven': 0.7746,
   'the-farmacy': 0.908,
   'the-halal-cartel': 0.044,

@@ -567,9 +567,13 @@ for (const [s, what] of [
   ['"berkeley-goods2-2":"b_goldbeandurant"', 'Gold Bean Durant on the Berkeley yellow sheet'],
   ['icon-glow-green', 'the green glow keyframes'],
   ['Eligible to earn money', 'the BEASTY PASS row'],
-  /* 2026-09-23, evening: the way back to a business's city. */
+  /* 2026-09-23, evening: the way back to a business's city, @grubwitmike's
+     Cravingz review, and The Company Barber's seal and Union City page. */
   ['"More in ",', "the city rows on a business page"],
   ['brand-city-mark', "the city row's pin"],
+  ['/clips/cravingz.mp4', "@grubwitmike's review on Cravingz's page"],
+  ['icon:"the-company-barber-seal"', "The Company Barber's stained-glass seal"],
+  ['"union-city-services-0":"b_thecompanybarberunioncity"', "The Company Barber's Whipple Rd shop on Union City Services"],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],
