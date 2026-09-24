@@ -574,6 +574,7 @@ for (const [s, what] of [
   ['"More in ",', "the city rows on a business page"],
   ['brand-city-mark', "the city row's pin"],
   ['/clips/cravingz.mp4', "@grubwitmike's review on Cravingz's page"],
+  ['/clips/yank-sing.mp4', "@sherryeatworld's review on Yank Sing's page"],
   ['icon:"the-company-barber-seal"', "The Company Barber's stained-glass seal"],
   ['"union-city-services-0":"b_thecompanybarberunioncity"', "The Company Barber's Whipple Rd shop on Union City Services"],
   /* 2026-09-23, afternoon: most of Union City from Janelle, and San Jose,

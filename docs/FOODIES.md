@@ -62,7 +62,7 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 23 Sep | @hella._local.mo (Hella Local Mo) | A flash sale at The Burger Spot Co. | No |
 | 23 Sep | @capturedbysado | "Corner slice in Livermore": a pizza slice shop in Livermore | No |
 | 23 Sep | Charlene Louie (@charweeezy) | Ry's Poke Shack (@ryspokeshack), "now in the Bay Area coming straight from Oahu" | No |
-| 24 Sep | @sherryeatworld (Sherry Shi, already listed on 20 Sep) | "Old-school dim sum in San Francisco with Michelin recognition": Yank Sing, sent with its listing, "Can we use this link for their page?" | **Yes.** On Yank Sing's page (San Francisco's yellow sheet) as a review since 24 Sep, as a link to the reel; it plays on the page once Leon says to download it |
+| 24 Sep | @sherryeatworld (Sherry Shi, already listed on 20 Sep) | "Old-school dim sum in San Francisco with Michelin recognition": Yank Sing, sent with its listing, "Can we use this link for their page?" | **Yes.** On Yank Sing's page (San Francisco's yellow sheet) as a review (0s–24s of 33s), downloaded on 24 Sep with Leon's go-ahead |
 | 24 Sep | @whatthejessi_ | "Lunch with @__tiiipppseats at Aung Myanmar", 542B 9th St, Oakland: Burmese | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,

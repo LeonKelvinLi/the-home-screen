@@ -3397,9 +3397,13 @@ export const ROSTER_SEED: LocalSeed[] = [
     tagline: "San Francisco's contemporary & traditional dim sum",
     site: 'https://yanksing.com/',
     orderUrl: 'https://order.toasttab.com/online/yank-sing-stevenson-49-stevenson-st',
-    /* @sherryeatworld's review, which Glenn sent for this page. A link to the
-       reel for now; it plays here once Leon says to download it. */
+    /* @sherryeatworld's review, which Glenn sent for this page; downloaded
+       the same day on Leon's "DOWNLOAD ALL". 0s-24s of 33s: her "San
+       Francisco's most iconic dim sum spot" title, the room, the carts and
+       the dim sum. A food creator's film, not the restaurant's, credited to her. */
     clip: {
+      src: '/clips/yank-sing.mp4',
+      poster: '/clips/yank-sing-poster.webp',
       href: 'https://www.instagram.com/reel/DdqF3P3P67w/',
       credit: 'Filmed by @sherryeatworld',
       platform: 'Instagram',
