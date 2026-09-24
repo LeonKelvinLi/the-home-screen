@@ -4045,11 +4045,14 @@ textarea {
   bar a second menu rather than a signpost to the first.
 */
 .menu-picks {
-  margin: 0 16px 10px;
+  margin: 0 16px 12px;
 }
 
 .menu-picks-bar {
   width: 100%;
+  /* A full thumb's height: it measured 38px, under Apple's 44 (Leon, on an
+     iPhone: "the app looks too tight"). */
+  min-height: 44px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -10612,6 +10615,9 @@ textarea {
    edge on every page with both a menu and a number. */
 .brand-body > .brand-call {
   margin: 10px 16px 12px;
+  /* 44px tall, a thumb's target; it was 34. */
+  min-height: 44px;
+  padding: 10px 16px;
 }
 .brand-body > .brand-call.is-text {
   margin: 8px 24px 0;

@@ -266,16 +266,24 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     const slotAir = 12
     const slotRoom = screen.h - topPad - headingH - bottomReserve - slotAir
     /*
-      52 is the floor for "looks like a home screen". Below it the label is
-      nearly as wide as the icon above it, which is the exact thing being
-      complained about. It is only a floor — where there is room the tile is the
-      operator's own 66.
+      A ROW FITS ONLY IF IT FITS COMFORTABLY: a 60px tile with 12px between one
+      row's labels and the next row's icons. Leon, 2026-09-23: "on iPhone the
+      app looks too tight". The floor had been a 52px tile and a 6px gap, so a
+      15 Pro in Safari drew five rows of 56px tiles with labels all but touching
+      the icons below, while a 13 mini drew four rows of 66px: the bigger phone
+      looked the more cramped. Now a row that would cost that much goes to the
+      next page, which is what an iPhone's own home screen does. Where there is
+      room the tile is still the operator's 66 and the gap his 19.
+      tools/audit-home-grid.mjs measures it on five iPhones.
     */
-    const niceTile = 52
-    const nicePitch = niceTile + ICON_LABEL_H + minRowGap
+    const niceTile = 60
+    const niceGap = 12
+    const nicePitch = niceTile + ICON_LABEL_H + niceGap
     const slotRows = Math.max(3, Math.min(Math.ceil(SPOTS_PER_PAGE / cols), Math.floor(slotRoom / nicePitch)))
     const slotPitch = Math.min(rowPitch, slotRoom / slotRows)
-    const slotGap = Math.max(minRowGap, Math.min(rowGap, slotPitch - screen.iconSize - ICON_LABEL_H))
+    /* The gap is kept before the tile: a few pixels off a 66px tile read as
+       nothing, rows run together read as cramped. */
+    const slotGap = Math.max(slotRows * nicePitch <= slotRoom ? niceGap : minRowGap, Math.min(rowGap, slotPitch - screen.iconSize - ICON_LABEL_H))
     const slotTile = Math.max(
       minTile,
       Math.min(screen.iconSize, Math.floor(slotPitch - ICON_LABEL_H - slotGap)),
