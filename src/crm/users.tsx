@@ -250,10 +250,11 @@ function Definitions({ activation, tracked }: { activation: string; tracked: str
         <dd>Active users who signed up before those days began.</dd>
         <dt>Activated</dt>
         <dd>Somebody who {activation}, at any time since signing up.</dd>
-        <dt>Cohort</dt>
-        <dd>Everybody who signed up in the same week (Monday to Sunday) or month.</dd>
-        <dt>Retention</dt>
-        <dd>The share of a cohort who did something meaningful in a later week or month of their time on BEASTY.</dd>
+        <dt>Coming back</dt>
+        <dd>
+          Of everybody who signed up in the same week (Monday to Sunday) or month, the share who did something meaningful in
+          each later week or month on BEASTY. Other tools call these groups cohorts and this number retention.
+        </dd>
       </dl>
     </details>
   )
@@ -361,13 +362,15 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
     <section className="crm-card-chart crm-cohorts is-wrap" aria-labelledby="cohort-h">
       <header>
         <div>
-          <h3 id="cohort-h">Sign-up cohorts</h3>
+          {/* Plain words, not "cohorts": Glenn, 2026-09-23, "I just had to google
+              that word". */}
+          <h3 id="cohort-h">Do they come back?</h3>
           <p>
             Everyone, grouped by the {unit} they signed up{unit === 'week' ? ' (Monday to Sunday)' : ''}. Each column after that is one more {unit} on BEASTY: the share who did
             something meaningful in it. All sign-ups, not only the period above.
           </p>
         </div>
-        <div className="crm-seg" role="tablist" aria-label="Group cohorts by">
+        <div className="crm-seg" role="tablist" aria-label="Group sign-ups by">
           {(['week', 'month'] as const).map((k) => (
             <button key={k} type="button" role="tab" aria-selected={unit === k} className={unit === k ? 'is-on' : undefined} onClick={() => { setUnit(k); setOpen(null) }}>
               {k === 'week' ? 'Weekly' : 'Monthly'}
@@ -379,19 +382,19 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
       {!data ? (
         <Loading />
       ) : !data.rows.length ? (
-        <p className="crm-chart-empty">No sign-ups yet. Cohorts appear when people create accounts.</p>
+        <p className="crm-chart-empty">No sign-ups yet. This fills in when people create accounts.</p>
       ) : (
         <>
           {!measured && (
             <Waiting>
-              These fill in as {unit}s pass. A cell gets its number once that {unit} is over for everyone in the cohort, counting from {tracked}, when tracking began.
+              These fill in as {unit}s pass. A cell gets its number once that {unit} is over for everyone in its row, counting from {tracked}, when tracking began.
             </Waiting>
           )}
           <div className="crm-cohort-wrap">
             <table className="crm-cohort-table">
               <thead>
                 <tr>
-                  <th scope="col">Cohort</th>
+                  <th scope="col">{unit === 'week' ? 'Week of' : 'Month of'}</th>
                   <th scope="col">Signed up</th>
                   <th scope="col">Activated</th>
                   {data.columns.map((k) => (
@@ -441,7 +444,7 @@ function Cohorts({ admin, tracked }: { admin: boolean; tracked: string }) {
             <span>
               <i className="is-waiting" /> blank: not over yet
             </span>
-            {admin && <span>Pick a cohort to see who is in it.</span>}
+            {admin && <span>Pick a row to see who is in it.</span>}
           </p>
           {admin && open && <CohortPeople cohort={open} unit={data.unit} onClose={() => setOpen(null)} />}
         </>
@@ -532,7 +535,7 @@ function PeopleTable({ rows, showFirst = false, sort, onSort, onChange }: { rows
             {head('source', 'Source')}
             <th scope="col">Status</th>
             {head('active', 'Last active')}
-            {showFirst ? <th scope="col">First thing they did</th> : <th scope="col">Cohort</th>}
+            {showFirst ? <th scope="col">First thing they did</th> : <th scope="col">Signed up in</th>}
             <th scope="col">
               <span className="crm-sr">Count this account</span>
             </th>
@@ -573,7 +576,7 @@ function PeopleTable({ rows, showFirst = false, sort, onSort, onChange }: { rows
                   )}
                 </td>
               ) : (
-                <td data-label="Cohort" className="is-cohort">
+                <td data-label="Signed up in" className="is-cohort">
                   Week of {weekOf(u.signedUpAt).split(' – ')[0]}
                 </td>
               )}

@@ -420,7 +420,7 @@ function JumpTo({ admin }: { admin: boolean }) {
   }
   const spots: [string, string][] = [
     ['users-h', 'Users'],
-    ['cohort-h', 'Cohorts'],
+    ['cohort-h', 'Coming back'],
     ...(admin ? ([['signups-h', 'Sign-ups']] as [string, string][]) : []),
     ['leads-h', 'Leads and money'],
   ]
