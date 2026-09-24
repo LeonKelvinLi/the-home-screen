@@ -7,8 +7,11 @@
   2. A CRM session made from that token on the /crm screen: an httpOnly
      cookie, stored hashed, 30 days. The token itself never lives in the page.
   3. A BEASTY member session whose member is linked to a crm_people row with a
-     role. That is how Glenn, Leon, Janelle and any partner sign in without a
-     second password: their existing account, plus a role only an admin grants.
+     role: their existing account, plus a role only an admin grants. OFF unless
+     CRM_MEMBER_SIGNIN=1 (deps.memberSignin). Leon, 2026-09-23: "only login
+     through operator key remove email login now". The partner view and the
+     code sign-in stay in the code, asleep, so turning them back on is a
+     setting and not a rewrite.
 
   THE OPERATOR IS GLENN. Leon's ask of 2026-09-22: where no person is named,
   the CRM names Glenn. So the operator key acts as Glenn's own seat: what it
@@ -55,6 +58,8 @@ export interface CrmDeps {
    * the visit is credited. Empty when the CRM is on the site itself.
    */
   publicUrl?: string
+  /** CRM_MEMBER_SIGNIN=1: a linked member account opens the CRM too. */
+  memberSignin?: boolean
 }
 
 export const CRM_COOKIE = 'beasty_crm'
@@ -76,7 +81,7 @@ export async function crmActor(req: Request, deps: CrmDeps): Promise<CrmActor | 
       .get<{ actor: string }>(hash(token), Date.now())
     if (row) return glenn('operator')
   }
-  const member = await deps.memberFromRequest(req)
+  const member = deps.memberSignin ? await deps.memberFromRequest(req) : null
   if (member) {
     const p = await db
       .prepare("SELECT * FROM crm_people WHERE member_id = ? AND active AND role <> 'none'")

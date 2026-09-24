@@ -87,8 +87,9 @@ watch(p, 'phone')
 /* ================================================================ sign in */
 await p.goto(`${base}/crm`, { waitUntil: 'networkidle' })
 check('signed out, /crm asks who you are', await p.locator('.crm-signin-card').isVisible())
-check('with a code to your BEASTY account first', await p.locator('.crm-signin-card button:has-text("Send me a code")').isVisible())
-await p.click('button:has-text("Have the operator key?")')
+/* The operator key and nothing else (Leon, 2026-09-23): no code form and no
+   way round to one, unless CRM_MEMBER_SIGNIN=1, which this server leaves off. */
+check('with the operator key and nothing else', (await p.locator('.crm-signin-card input[type="password"]').isVisible()) && (await p.locator('.crm-signin-card button:has-text("Send me a code"), .crm-signin-card input[type="email"], .crm-signin-card button:has-text("operator key?")').count()) === 0)
 const robots = await p.evaluate(() => document.querySelector('meta[name="robots"]')?.getAttribute('content'))
 check('the screen tells search engines to stay out', /noindex/.test(robots ?? ''))
 await p.fill('input[type="password"]', 'not-the-key-not-the-key')
@@ -433,7 +434,10 @@ for (const [hash, name] of [['overview', 'Glenn'], ['today', 'To do'], ['pipelin
 await go(p, 'followups?view=upcoming', '.crm-seg button.is-on:has-text("Coming up")')
 check('the phone reminder waits under Coming up', await p.waitForSelector(`.crm-row:has(a[href="#/lead/${target.id}"])`).then(() => true, () => false))
 
-/* ============================================ a referral partner's view */
+/* ============================ a BEASTY account alone does not open the CRM */
+/* Member sign-in is off by default, so a partner linked to their account is
+   still shown the key card: the partner view is asleep until
+   CRM_MEMBER_SIGNIN=1, and audit-crm.mjs proves the roles with it on. */
 const partner = await browser.newContext({ viewport: { width: 393, height: 852 }, isMobile: true, hasTouch: true })
 const pp = await partner.newPage()
 watch(pp, 'partner')
@@ -447,47 +451,16 @@ for (let i = 0; i < 20 && !code; i++) {
 }
 const verified = await pp.evaluate(async ({ e, c }) => (await fetch('/api/members/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: e, code: c }) })).status, { e: email, c: code })
 check('a partner signs in to BEASTY the usual way', started < 300 && verified < 300, `${started}, ${verified}`)
+await d.evaluate(async (e) => fetch('/api/crm/people', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'Pat Partner', slug: 'pat', sourceType: 'influencer', role: 'partner', memberEmail: e }) }), email)
 await pp.reload({ waitUntil: 'networkidle' })
-check('with no CRM role yet, /crm says so', /no CRM role yet/.test(await pp.textContent('.crm-signin-card')))
-/* The CRM's own card: a code to the account they have, on a phone that has
-   never signed in, which is how it works where the CRM has its own address. */
-{
-  const cardCtx = await browser.newContext({ viewport: { width: 393, height: 852 }, isMobile: true, hasTouch: true })
-  const cp = await cardCtx.newPage()
-  watch(cp, 'card')
-  await cp.goto(`${base}/crm`, { waitUntil: 'networkidle' })
-  const codesBefore = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${email} `)).length
-  await cp.fill('.crm-signin-card input[type="email"]', email)
-  await cp.click('button:has-text("Send me a code")')
-  await cp.waitForSelector('.crm-signin-card >> text=code is on its way')
-  let cardCode
-  for (let i = 0; i < 20 && !cardCode; i++) {
-    await new Promise((r) => setTimeout(r, 250))
-    const lines = readFileSync(LOG, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${email} `))
-    if (lines.length > codesBefore) cardCode = lines.pop()?.match(/ (\d{6}) /)?.[1]
-  }
-  await cp.fill('.crm-signin-card input[autocomplete="one-time-code"]', cardCode ?? '')
-  await cp.click('.crm-signin-card button:has-text("Sign in")')
-  const inByCard = await cp.waitForSelector('.crm-signin-card >> text=no CRM role yet', { timeout: 10000 }).then(() => true, () => false)
-  check('the card signs a member in with a code sent to their account', !!cardCode && inByCard)
-  await cardCtx.close()
-}
-const pid = await d.evaluate(async (e) => {
-  const r = await fetch('/api/crm/people', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'Pat Partner', slug: 'pat', sourceType: 'influencer', role: 'partner', memberEmail: e }) })
-  return (await r.json()).id
-}, email)
-const shaka = await d.evaluate(async () => (await (await fetch('/api/crm/leads?q=shaka%20shack&limit=1')).json()).leads[0].id)
-await d.evaluate(async ({ id, who }) => fetch(`/api/crm/leads/${id}/referral`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ referrerId: who }) }), { id: shaka, who: pid })
-await pp.reload({ waitUntil: 'networkidle' })
-await pp.waitForSelector('h1:has-text("Hi Pat")')
-check('linked as a partner, they see their own page', true)
-check('with no way into the businesses', (await pp.locator('.crm-tabbar a, .crm-tabs-top a').count()) === 0)
-const qrOk = await pp.waitForFunction(() => { const i = document.querySelector('.crm-qr img'); return i && i.complete && i.naturalWidth > 0 }).then(() => true, () => false)
-check('their link and a QR code that loads', /\/r\/pat$/.test((await pp.textContent('.crm-reflink code')).trim()) && qrOk)
-const theirs = await pp.textContent('.crm-list')
-check('and the business they sent, with only its name, city and status', /Shaka Shack/.test(theirs) && /In progress/.test(theirs) && !/\d{3}\)?[ -]?\d{3}-?\d{4}|@/.test(theirs))
-check("the partner's page fits the phone", (await sideways(pp)) <= 1)
-await shot(pp, 'm-partner')
+check('linked as a partner, their account still meets the key card', (await pp.locator('.crm-signin-card input[type="password"]').isVisible()) && !(await pp.locator('h1:has-text("Hi Pat")').count()))
+const partnerApi = await pp.evaluate(async () => (await fetch('/api/crm/partner/me')).status)
+check('and the partner API refuses them', partnerApi === 401, `${partnerApi}`)
+/* Those 401s were the point; only the partner's own are dropped, so nothing
+   recorded earlier in the run is hidden. The console lines are the browser
+   reporting the same refused requests. */
+for (let i = problems.length - 1; i >= 0; i--) if (/^partner /.test(problems[i]) && /401/.test(problems[i])) problems.splice(i, 1)
+await partner.close()
 
 /* ========================================================== desktop sweep */
 for (const hash of ['overview', 'today', 'leads', `lead/${jazzId}`, 'pipeline', 'businesses', 'referrers', 'followups?view=overdue', 'revenue', 'analytics', 'settings']) {

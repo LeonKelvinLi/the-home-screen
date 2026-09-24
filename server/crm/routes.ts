@@ -271,9 +271,10 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
     h(async (req, res) => {
       res.set('Cache-Control', 'no-store')
       const who = await crmActor(req, deps)
-      const member = who ? null : await deps.memberFromRequest(req)
-      /* publicUrl: where the CRM's links must open, when it has its own address. */
-      res.json({ actor: who, member: member ? { name: member.name } : null, publicUrl: deps.publicUrl || null })
+      const member = who || !deps.memberSignin ? null : await deps.memberFromRequest(req)
+      /* publicUrl: where the CRM's links must open, when it has its own address.
+         memberSignin: whether the card offers a code to a BEASTY account at all. */
+      res.json({ actor: who, member: member ? { name: member.name } : null, publicUrl: deps.publicUrl || null, memberSignin: !!deps.memberSignin })
     }),
   )
 

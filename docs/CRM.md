@@ -140,10 +140,15 @@ land where they were, and each history entry remembers its scroll position.
 | Analytics | The funnel from stage history, time to first contact, time to close, time in each stage. |
 | Settings (admin) | People and roles, offers and prices, and the import (preview first). |
 
-Signing in: the operator key typed once makes a 30-day CRM session cookie.
-Team members and partners sign in to beastypages.com as usual; once an admin
-links their account email to their person in Settings and gives them a role,
-`/crm` opens for them. A partner sees only their own page.
+Signing in: **the operator key, and only that for now** (Leon, 2026-09-23:
+"only login through operator key remove email login now"). Typed once, it
+makes a 30-day CRM session cookie. Member sign-in is off: a BEASTY account,
+even one linked to a person with a role, does not open the CRM, the card
+offers no code, and the CRM service does not answer the member sign-in
+endpoints. The code is all still there, asleep: set `CRM_MEMBER_SIGNIN=1` on
+both services and team members and partners sign in with a code to their own
+BEASTY account again, once an admin links their account email to their person
+in Settings and gives them a role. A partner then sees only their own page.
 
 ## Users and tracking
 
@@ -231,7 +236,9 @@ Both run as part of `node tools/audit-all.mjs`.
 3. Settings → Import from BEASTY → Preview, read it, then Run the import.
    Running it again later only adds businesses listed since.
 4. In Settings → People, link Janelle's BEASTY account email to her person
-   (she has the team role) so she can sign in; add any other referrers.
+   (she has the team role) and add any other referrers. With member sign-in
+   off, the link records who she is; it lets her in only once
+   `CRM_MEMBER_SIGNIN=1` is set.
 5. On Home, in Recent sign-ups, mark the team's own test sign-ups as test
    accounts so the user numbers count people.
 
@@ -252,13 +259,14 @@ repository runs as a second Render web service, on the same database:
 | `CRM_ONLY` | unset | `1` |
 | `PUBLIC_URL` | unset | `https://beastypages.com` |
 | `CRM_URL` | the CRM service's address, once it is up | unset |
+| `CRM_MEMBER_SIGNIN` | unset (off) | unset (off); `1` on both brings back code sign-in |
 | Everything else | as now | the same values (Render's environment groups share them), except `CRM_OPEN`, which is never set on either |
 
 What each one answers:
 
-- **The CRM service** answers `/crm`, `/api/crm/*`, the member sign-in
-  endpoints (`/api/members/start`, `verify`, `signout`, `channels`) and
-  `/api/health`. `/` opens `/crm`. Every other page, a referral link
+- **The CRM service** answers `/crm`, `/api/crm/*` and `/api/health`, and the
+  member sign-in endpoints (`/api/members/start`, `verify`, `signout`,
+  `channels`) only when `CRM_MEMBER_SIGNIN=1`. `/` opens `/crm`. Every other page, a referral link
   (`/r/<slug>`) included, is sent to `PUBLIC_URL`, so the visit is credited on
   the cookie the sign-up reads. Every other API path is a 404, everything is
   `noindex`, and its `robots.txt` disallows all of it. The kitchen simulator
@@ -268,9 +276,10 @@ What each one answers:
   `CRM_URL` set, `beastypages.com/crm` sends people to the new address.
 
 Signing in there: a browser keeps a site's sign-in to that site, so being
-signed in on beastypages.com does not carry over. The sign-in card offers a
-code to the BEASTY account a person already has (by text or email, whichever
-the site can deliver) and the operator key. The card only ever signs in: an
+signed in on beastypages.com does not carry over. The sign-in card offers the
+operator key only. With `CRM_MEMBER_SIGNIN=1` it also offers a code to the
+BEASTY account a person already has (by text or email, whichever the site can
+deliver), and then the card only ever signs in: an
 address with no account is answered like one with an account but sent no
 code, and the CRM service never makes an account at all. Referral links and
 their QR codes are built with `PUBLIC_URL`, so they always open
@@ -284,5 +293,7 @@ the lock, none with it).
 
 Order: deploy `main` with the CRM merged, create the CRM service with the
 variables above, check its address, then set `CRM_URL` on beastypages.com.
+Done on 2026-09-23: the service is `beasty-crm` (srv-daq9b30jo6nc73dk2740,
+starter plan, Oregon beside the database) at https://beasty-crm.onrender.com.
 A custom domain (for example crm.beastypages.com) is a CNAME at the domain's
 DNS, added in Render's Custom Domains for the CRM service.

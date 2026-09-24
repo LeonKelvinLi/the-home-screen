@@ -87,7 +87,7 @@ const PAGES: Place[] = [
 
 export default function CrmScreen() {
   const [route, setRoute] = useState<Route>(parseHash)
-  const [me, setMe] = useState<{ actor: Actor | null; member: { name: string } | null } | null>(null)
+  const [me, setMe] = useState<{ actor: Actor | null; member: { name: string } | null; memberSignin?: boolean } | null>(null)
   const [meta, setMeta] = useState<Meta | null>(null)
   const [metaError, setMetaError] = useState<string | null>(null)
   const [searching, setSearching] = useState(false)
@@ -135,7 +135,7 @@ export default function CrmScreen() {
 
   const loadMe = useCallback(async () => {
     try {
-      const m = await api<{ actor: Actor | null; member: { name: string } | null; publicUrl: string | null }>('/api/crm/me')
+      const m = await api<{ actor: Actor | null; member: { name: string } | null; publicUrl: string | null; memberSignin?: boolean }>('/api/crm/me')
       if (m.publicUrl) site.origin = m.publicUrl
       setMe(m)
     } catch {
@@ -206,7 +206,7 @@ export default function CrmScreen() {
   const badges = useApi<{ counts: Record<string, number>; attention: { key: string; count: number }[] }>(meta ? `/api/crm/overview?_=${route.name}` : null)
 
   if (!me) return <div className="crm"><Loading /></div>
-  if (!me.actor) return <SignIn member={me.member} onDone={loadMe} />
+  if (!me.actor) return <SignIn member={me.member} memberSignin={!!me.memberSignin} onDone={loadMe} />
   if (me.actor.role === 'partner') {
     return (
       <div className="crm crm-partner" ref={scroller}>
@@ -547,15 +547,31 @@ function Search({ onClose, admin }: { onClose: () => void; admin: boolean }) {
 /* --------------------------------------------------------------- sign in */
 
 /*
-  TWO WAYS IN. The team and referral partners use the BEASTY account they
-  already have: a code to their phone or email, whichever the site can
-  deliver, and on this card only ever a sign-in, never a new account
-  (signinOnly on the server). Glenn's operator key is one tap away. Both work
-  wherever the CRM is served, on beastypages.com or at its own address,
-  because the session is set on whichever that is.
+  THE OPERATOR KEY, AND ONLY THAT FOR NOW. Leon, 2026-09-23: "only login
+  throguh operator key remove email login now". The card is the key form and
+  nothing else, unless the server says member sign-in is on
+  (CRM_MEMBER_SIGNIN=1): then the team and referral partners get a code to the
+  BEASTY account they already have, only ever a sign-in, never a new account
+  (signinOnly on the server), with the key one tap away. The session is set on
+  whichever address serves the CRM.
 */
-function SignIn({ member, onDone }: { member: { name: string } | null; onDone: () => void }) {
+function SignIn({ member, memberSignin, onDone }: { member: { name: string } | null; memberSignin: boolean; onDone: () => void }) {
   const [useKey, setUseKey] = useState(false)
+  if (!memberSignin) {
+    return (
+      <div className="crm crm-signin">
+        <div className="crm-signin-card">
+          <Brand />
+          <h1>The BEASTY book</h1>
+          <p>Sign in with the operator key.</p>
+          <KeyForm onDone={onDone} />
+          <a className="crm-link" href={site.origin}>
+            Go to beastypages.com
+          </a>
+        </div>
+      </div>
+    )
+  }
   return (
     <div className="crm crm-signin">
       <div className="crm-signin-card">

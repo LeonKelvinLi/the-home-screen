@@ -28,7 +28,10 @@ const out = openSync(LOG, 'a')
 const TOKEN = `op_${randomBytes(20).toString('hex')}`
 const srv = spawn('npx', ['tsx', 'server/index.ts'], {
   stdio: ['ignore', out, out],
-  env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', ALLOW_MOCK_PAYMENTS: '1', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
+  /* Member sign-in ON here, so the roles below (team, partner) are still
+     proven; it is off by default, and the CRM-only service further down runs
+     at that default to prove the key is then the only way in. */
+  env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', ALLOW_MOCK_PAYMENTS: '1', CRM_MEMBER_SIGNIN: '1', OPERATOR_TOKEN: TOKEN, PASS_SECRET: `ps_${randomBytes(16).toString('hex')}`, RESEND_API_KEY: '', LEAD_EMAIL: '' },
 })
 const base = `http://localhost:${port}`
 let up = false
@@ -550,19 +553,18 @@ check('and the same code still finishes joining on the site', viaSite.status ===
   check('the site\u2019s own API is not answered there', shop.status === 404)
   const meOnly = await (await at('/api/crm/me')).json()
   check('the screen is told where the public site is', meOnly.publicUrl === PUBLIC, meOnly.publicUrl)
-  /* Sign-in there: a stranger gets no code, a linked member gets in. */
-  const nobody = `nobody-${crmPort}@example.invalid`
-  const nobodyStart = await at('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'No Body', email: nobody }) })
-  await sleep(600)
-  check('there, an unknown address is sent no code, even without asking', nobodyStart.status === 202 && !readFileSync(crmLogPath, 'utf8').includes(`[login-code] ${nobody} `))
-  const jEmail = `janelle-${port}@example.invalid`
-  await at('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'BEASTY team', email: jEmail, signinOnly: true }) })
-  let ccode
-  for (let i = 0; i < 20 && !ccode; i++) { await sleep(250); ccode = readFileSync(crmLogPath, 'utf8').split('\n').filter((l) => l.includes(`[login-code] ${jEmail} `)).pop()?.match(/ (\d{6}) /)?.[1] }
-  const jv = await at('/api/members/verify', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ email: jEmail, code: ccode, signinOnly: true }) })
-  const jCookie = (jv.headers.getSetCookie?.() ?? []).map((c) => c.split(';')[0]).join('; ')
-  const jMe = await (await at('/api/crm/me', { headers: { cookie: jCookie } })).json()
-  check('and a linked team member signs in there with a code', jv.status === 200 && jMe.actor?.personId === 'p_janelle' && jMe.actor?.via === 'member', JSON.stringify(jMe.actor ?? null))
+  /* Sign-in there, at the default: the operator key and nothing else. Leon,
+     2026-09-23: "only login throguh operator key remove email login now". */
+  const meDefault = await (await at('/api/crm/me')).json()
+  check('there, the card is told member sign-in is off', meDefault.memberSignin === false)
+  const codeStart = await at('/api/members/start', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ name: 'BEASTY team', email: `nobody-${crmPort}@example.invalid`, signinOnly: true }) })
+  check('and the code sign-in is not answered there at all', codeStart.status === 404, `${codeStart.status}`)
+  const teamThere = await at('/api/crm/overview', { headers: { cookie: [...team.j.entries()].map(([k, v]) => `${k}=${v}`).join('; ') } })
+  check('a linked team member\u2019s own account does not open the CRM there', teamThere.status === 401, `${teamThere.status}`)
+  const keyThere = await at('/api/crm/session', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ token: TOKEN }) })
+  const keyCookie = (keyThere.headers.getSetCookie?.() ?? []).map((c) => c.split(';')[0]).join('; ')
+  const keyMe = await (await at('/api/crm/me', { headers: { cookie: keyCookie } })).json()
+  check('while the operator key does', keyThere.status < 300 && keyMe.actor?.via === 'operator', JSON.stringify(keyMe.actor ?? null))
   crmSrv.kill()
 
   /* Both services deploy from the same push, so two boots can migrate at once. */

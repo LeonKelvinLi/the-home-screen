@@ -67,6 +67,8 @@ const originOf = (v: string | undefined) => {
 }
 const PUBLIC_URL = originOf(process.env.PUBLIC_URL) || (CRM_ONLY ? 'https://beastypages.com' : '')
 const CRM_URL = CRM_ONLY ? '' : originOf(process.env.CRM_URL)
+/* Off: the operator key is the only way into the CRM. See server/crm/auth.ts. */
+const CRM_MEMBER_SIGNIN = process.env.CRM_MEMBER_SIGNIN === '1'
 
 /*
  * Render terminates TLS upstream and forwards over http, so without this
@@ -148,8 +150,11 @@ app.use((_req, res, next) => {
 })
 
 if (CRM_ONLY) {
-  /* The API the CRM screen calls and the sign-in it offers; nothing else. */
-  const CRM_API = /^\/api\/(crm\/|health$|members\/(start|verify|signout|channels)$)/
+  /* The API the CRM screen calls and, only when member sign-in is on, the
+     code sign-in it offers; nothing else. */
+  const CRM_API = CRM_MEMBER_SIGNIN
+    ? /^\/api\/(crm\/|health$|members\/(start|verify|signout|channels)$)/
+    : /^\/api\/(crm\/|health$)/
   app.use((req, res, next) => {
     res.setHeader('X-Robots-Tag', 'noindex, nofollow')
     const p = req.path
@@ -3503,6 +3508,7 @@ mountCrm(
     open: crmOpenMode(process.env, PROD),
     /* Where a referral link or its QR code has to open: the public site. */
     publicUrl: PUBLIC_URL,
+    memberSignin: CRM_MEMBER_SIGNIN,
   },
   rateLimiter,
 )
