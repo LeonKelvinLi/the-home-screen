@@ -62,7 +62,8 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 23 Sep | @hella._local.mo (Hella Local Mo) | A flash sale at The Burger Spot Co. | No |
 | 23 Sep | @capturedbysado | "Corner slice in Livermore": a pizza slice shop in Livermore | No |
 | 23 Sep | Charlene Louie (@charweeezy) | Ry's Poke Shack (@ryspokeshack), "now in the Bay Area coming straight from Oahu" | No |
-| 24 Sep | @sherryeatworld (Sherry Shi, already listed on 20 Sep) | "Old-school dim sum in San Francisco with Michelin recognition": Yank Sing, sent with its listing, "Can we use this link for their page?" | **Yes, once it is listed.** For Yank Sing's page as a review, once Leon says to download it |
+| 24 Sep | @sherryeatworld (Sherry Shi, already listed on 20 Sep) | "Old-school dim sum in San Francisco with Michelin recognition": Yank Sing, sent with its listing, "Can we use this link for their page?" | **Yes.** On Yank Sing's page (San Francisco's yellow sheet) as a review since 24 Sep, as a link to the reel; it plays on the page once Leon says to download it |
+| 24 Sep | @whatthejessi_ | "Lunch with @__tiiipppseats at Aung Myanmar", 542B 9th St, Oakland: Burmese | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
@@ -70,7 +71,7 @@ DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__, Dc2abz8C7CU, DdIMBHKPfj_ (again), DS8GlMg
 DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
 DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok, DdMhHiJsnc4, DAW5kk6yEWz,
 Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R, DIktz2AR_0M,
-DAmWXRISz7P, Ddo0xf9MplM, DdCZTx7Ppei, DdphZkJAn6v, DdqF3P3P67w. The profile is
+DAmWXRISz7P, Ddo0xf9MplM, DdCZTx7Ppei, DdphZkJAn6v, DdqF3P3P67w, DdZ_vmtP9SZ. The profile is
 instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
