@@ -3255,6 +3255,65 @@ textarea {
   opacity: 0.4;
 }
 
+/*
+  The page a business's tile is on, at the top right of its page (Glenn's
+  mockup: "Union City • Goods >"). The same blue and size as Home opposite it,
+  so the bar reads as two ways out. A long name ("American Canyon • More
+  services") gives way with an ellipsis rather than pushing the bar off a
+  phone, and on this screen the title between them shrinks too, so the three
+  never overlap when the bar collapses.
+*/
+.nav-screen.has-place .nav-bar-row {
+  grid-template-columns: auto minmax(0, 1fr) minmax(0, auto);
+  column-gap: 4px;
+}
+
+.nav-screen.has-place .nav-bar-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nav-screen.has-place .nav-bar-right {
+  min-width: 0;
+  gap: 6px;
+  align-items: center;
+}
+
+.nav-place {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
+  padding: 0 4px 0 8px;
+  color: var(--blue-text);
+  font-size: 17px;
+  letter-spacing: -0.4px;
+}
+
+.nav-place-text {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.nav-place svg {
+  flex: none;
+}
+
+.nav-place:active {
+  opacity: 0.4;
+}
+
+.nav-place:focus-visible {
+  outline: 2px solid var(--blue-text);
+  outline-offset: -2px;
+  border-radius: 8px;
+}
+
 .nav-sticky {
   flex: 0 0 auto;
   padding: 0 16px 8px;
@@ -10548,6 +10607,15 @@ textarea {
   text-decoration: none;
 }
 .brand-call:active { opacity: 0.65; }
+/* On a business page the pill sits in the page's own column, inset like the
+   address card above it; it had no side margin and touched the screen's left
+   edge on every page with both a menu and a number. */
+.brand-body > .brand-call {
+  margin: 10px 16px 12px;
+}
+.brand-body > .brand-call.is-text {
+  margin: 8px 24px 0;
+}
 
 .news-intro {
   margin: 0 0 14px;

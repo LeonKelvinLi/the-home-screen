@@ -599,6 +599,9 @@ for (const [s, what] of [
   ['"santa-rosa-goods2-0":"b_shadyoakbrewing"', 'Shady Oak on the Santa Rosa yellow sheet'],
   ['icon:"honey-pot-gelato"', "Honey Pot Gelato's pot"],
   ['icon:"yayoi"', "YAYOI's mark"],
+  /* 8:13 pm: Glenn's mockup, "Union City • Goods >" opposite Home. */
+  ['nav-place', "the button to the page a business's tile is on"],
+  ['brand-body>.brand-call', 'the phone pill inset like the address card'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],

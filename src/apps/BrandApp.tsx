@@ -6,7 +6,8 @@ import { HalalMark, isHalal } from '../ios/HalalMark'
 import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
-import { citiesOf } from '../data/placements'
+import { citiesOf, seatsOf } from '../data/seats'
+import { Symbol } from '../ios/ui/Symbol'
 import { readableOn } from '../ios/contrast'
 import { isFavorite, toggleFavorite } from '../lib/favorites'
 import { EMPTY_SIGNALS, formatCount, readSignals, sendSignal } from '../lib/signals'
@@ -146,7 +147,9 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   */
   const tier = brand.tier ?? 3
   const film = tier >= 3 ? brand.clip?.src : undefined
-  /* The city pages its tile is on — see citiesOf, and the button below. */
+  /* The pages its tile is on: the first is the button at the top right, and a
+     business in several cities also gets a row per city below. See seats.ts. */
+  const place = seatsOf(brand.id)[0]
   const cities = citiesOf(brand.id)
   const menuCount = brand.menu.reduce((n, c) => n + c.items.length, 0)
 
@@ -178,12 +181,34 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
         title={brand.name}
         onBack={api.closeApp}
         tint={brand.logo.bg.split('|')[0]}
+        className={place ? 'has-place' : undefined}
         right={
-          inCart > 0 ? (
-            <button className="chrome-pill" onClick={() => api.openApp('sys.cart')}>
-              {inCart}
-            </button>
-          ) : null
+          <>
+            {/*
+              TO THE PAGE ITS TILE IS ON, opposite Home. Glenn's mockup of
+              2026-09-23: "Union City • Goods >" at the top right of The Une's
+              page. Home returns to wherever the home screen was, which from
+              Search is BEASTY • Goods; this closes the page and lands on the
+              page with the tile, so the rest of that city is one tap away.
+            */}
+            {place && (
+              <button
+                className="nav-place"
+                onClick={() => api.goToCity(place.city, brand.id)}
+                aria-label={`Go to the ${place.city} ${place.page} page`}
+              >
+                <span className="nav-place-text">
+                  {place.city} • {place.page}
+                </span>
+                <Symbol name="chevron.right" size={15} weight={2.6} />
+              </button>
+            )}
+            {inCart > 0 && (
+              <button className="chrome-pill" onClick={() => api.openApp('sys.cart')}>
+                {inCart}
+              </button>
+            )}
+          </>
         }
         footer={
           cart.count > 0 ? (
@@ -517,19 +542,15 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           )}
 
           {/*
-            BACK TO ITS CITY, on every business page with a city tile. Glenn,
-            2026-09-23: from Search, the back button went Home to BEASTY ·
-            Goods, and "it would work best if you had the option to go back to
-            where that city of the business is", to look through that city's
-            other restaurants without searching for the city again.
-
-            Home stays the back button, because that is where a page opened
-            from BEASTY's own sheets should return. This is the second way out,
-            under where and when, and it lands on the page the tile is on:
-            Fremont's Services page for a barber, a yellow sheet for a free
-            listing. One row per city a business sits in, in his city order.
+            A ROW PER CITY, for a business seated in more than one. Glenn,
+            2026-09-23: from Search, Home went to BEASTY · Goods, and "it would
+            work best if you had the option to go back to where that city of
+            the business is". The button at the top right names one page; a
+            business in several cities (Butter Pecan is in seven) lists them
+            all here, in his city order, each landing on the page its tile is
+            on. With one city the button says it all, so there are no rows.
           */}
-          {cities.length > 0 && (
+          {cities.length > 1 && (
             <div className="brand-cities">
               {cities.map((c) => (
                 <button className="brand-city" key={c} onClick={() => api.goToCity(c, brand.id)}>
