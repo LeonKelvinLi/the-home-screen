@@ -17777,6 +17777,110 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Yank Sing — gathered 2026-09-24 from own
+     they are: Dim sum
+     flag: Only one location on their site: Stevenson. Homepage notice: 'After 27 years, our lease has ended at Rincon Center. Please visit us at our Stevenson St. location!' No Rincon Center entry made.
+     flag: Hours confirmed: identical on yanksing.com home, /locations/, /order-online/, the homepage Rincon notice (Tue-Fri: 11 am - 3 pm; Sat & Sun: 10 am - 3 pm) and Toast's structured data (Tue-Fri 11:00-15:00, Sat-Sun 10:00-15:00, no Monday). Closed Mondays by omission.
+     flag: Phone 415-541-4949 is the number printed on the site and on Toast. (415) 781-1111 is not printed with the area code on the site; the About page says their number is still '781-1111'.
+     flag: Email info@yanksing.com is printed on their site only in the Privacy Policy (as the data controller contact, 'ICF, Inc.').
+     flag: Tagline 'Traditional & Contemporary Dim Sum Since 1958' does not appear on the site. The site says 'SAN FRANCISCO'S CONTEMPORARY & TRADITIONAL DIM SUM' and 'Founded in 1958'.
+     flag: 'Indoor & Covered Outdoor Dining' and 'Takeout / Delivery' confirmed on the site. The Toast page itself said 'Pickup Only' and 'Only accepting scheduled orders' when read.
+     flag: The yanksing.com /menu/ page lists 36 dishes with no prices. It also says 'OVER 100 ROTATING VARIETIES OF DIM SUM SERVED DAILY' from pushcarts. All prices here come from the Toast takeout menu.
+     flag: Left out 1 item that has no real price: 'UTENSILS and SAUCE' ($0.00, not a food item).
+     flag: Left out 2 unclear items in Toast's 'Combination Meals' section: 'zero' ($18.00, no description) and 'AAPI DRINK' ($5.00, no description; can't tell whether it contains alcohol).
+     flag: Left out all alcohol: Beer (8), Cocktails (canned) (3), Sake (2), Sparkling Wine (2), White Wine (2, plus one untitled '?' line with no price), Rose & Red Wine (3).
+     flag: Toast shows an 'ID REQUIRED' tag on Crab Claw and on Martinelli's Sparkling Cider. Both are kept: Martinelli's is non-alcoholic cider, and the tag on Crab Claw looks like a Toast setup mistake.
+     flag: Dishes on the site's menu page but not on Toast (so no price): Rice Noodle Soup (with shrimp wontons or BBQ pork), Egg Noodle Soup with BBQ pork, Honey Walnut Prawns. Toast items not on the site's menu page include Curried Shrimp Wonton, Pork and Chive Dumpling Soup, Long Life Noodle, Beijing Ribs, Choy Sum w/ Garlic and Orange Jello.
+     flag: Linktree 'TAKEOUT + DELIVERY' link (toasttab.com/yank-sing-spear-st-101-spear-st, the old Rincon/Spear St Toast page) returns 404. Linktree 'PRIVATE EVENTS' link (yanksing.com/private-events/) returns 404. The site's GIFT CARDS link still points to the Spear St Toast gift-card page (not opened).
+     flag: No CAPTCHA or bot check was hit. The site loads an invisible reCAPTCHA script, but it never showed a challenge. Nothing was added to a cart and nothing was signed into.
+     flag: On review: filed as b_yanksing (research id b_yanksingstevenson) to match its seed.
+     flag: On review: email left off, since info@yanksing.com appears only in their privacy policy as the data contact, not as a way to reach the restaurant. Hours written as one line from their own "Tue-Fri: 11 am - 3 pm; Sat & Sun: 10 am - 3 pm".
+     flag: On review: Glenn, 2026-09-24 7:46 am, "San Francisco • Goods". Asian food is House of Thai's seat, so the yellow sheet; a full page rather than the free listing, because he sent Sherry Shi's reel for it ("Can we use this link for their page?") and only a full page shows a reel.
+  */
+  'yank-sing': {
+    address: "49 Stevenson Street, San Francisco, CA 94105",
+    phone: "(415) 541-4949",
+    hours: "Tue–Fri 11am–3pm, Sat–Sun 10am–3pm; closed Mon",
+    cuisine: "Dim sum",
+    sections: [
+      { name: "Dim Sum", items: [
+        ["Shrimp Dumpling","4 pc",950],
+        ["Pork & Shrimp Siu Mye","4 pc",950],
+        ["Pork and Chive Dumpling Soup","6 pc dumplings with a pork, chive & napa cabbage filling, served with a clear broth and vinegar on the side",1550],
+        ["Chicken & Mushroom Dumpling","2 pc",850],
+        ["Spinach Dumpling (vegan)","3 pc",750],
+        ["Savory Vegetable Dumpling (vegan)","3 pc",750],
+        ["Steamed BBQ Pork Bun","2 pc",750],
+        ["Stuffed Lotus Leaf","1 pc",750],
+        ["Phoenix Tail Prawn","4 pc",1600],
+        ["Crab Claw","2 pcs",1550],
+        ["Pork Potsticker","6 pc",1400],
+        ["Chicken Spring Roll","4 pc",1400],
+        ["Curried Shrimp Wonton","8 pcs",1350],
+        ["Pan-fried Chicken Bun","4 pcs",1350],
+        ["Mandarin Dumpling","3 pcs",900],
+        ["Seafood Basil Dumpling","3 pcs",950],
+        ["Scallop Siu Mye","3 pcs",950],
+        ["Steamed Spareribs","",750],
+        ["Beancurd Roll","2 pcs",750],
+        ["Snowpea Shoots Dumpling","2 pcs",750],
+        ["Mushroom Dumpling","3 pcs",750],
+        ["Turnip Cake","3 pc",900],
+      ] },
+      { name: "Noodles & Rice", items: [
+        ["Egg Noodle Soup with Shrimp Wontons","served with clear chicken broth, Choi Sum vegetables and Yank Sing Chili Pepper sauce on the side",1550],
+        ["Egg Noodle Soup w Pork & Chive Dumpling","served with clear chicken broth, Choi Sum vegetables and Yank Sing Chili Pepper sauce on the side",1550],
+        ["Long Life Noodle (V)","vegetarian",1550],
+        ["BBQ Pork Fried Rice","for one",650],
+        ["Chicken Chow Mein","for one",650],
+        ["Steamed Rice","for one",400],
+      ] },
+      { name: "Sides & Specials", items: [
+        ["Beijing Ribs","",1650],
+        ["Szechuan Chicken","",1400],
+        ["Scallop Balls on Skewer","2 pcs",1400],
+        ["Chicken Satay","3 pcs",1350],
+        ["Sauteed String Beans with Dried Shrimp","",1250],
+        ["Eggplant w/ Hunan sauce","",950],
+        ["Crispy Tofu (vegetarian)","",1200],
+        ["Choy Sum w/ Garlic - stir fried","",1300],
+        ["Chinese Broccoli (chilled) w/ oyster sauce","",950],
+        ["Snap Peas (chilled) w/ chili soy sauce","",950],
+      ] },
+      { name: "Combination Meals", items: [
+        ["Phoenix","1 spring roll, 2 potsticker, 1 siu mye, chicken chow mein, BBQ pork fried rice",1250],
+        ["Dim Sum Platter","1 spring roll, 2 potsticker, 2 shrimp dumpling, 2 siu mye, 1 steamed BBQ pork bun, 1 egg custard tart",1650],
+      ] },
+      { name: "Desserts", items: [
+        ["Egg Custard Tart","4 pc",1500],
+        ["Sesame Ball","4 pc",1500],
+        ["Mango Pudding","",800],
+        ["Orange Jello","6 pcs",800],
+      ] },
+      { name: "Beverages", items: [
+        ["Martinelli's Sparkling Cider","750 ml",1100],
+        ["Pellegrino (750 Ml)","",800],
+        ["Marin Kombucha","Kombucha choice: Pinot Sage, Ginger Lemongrass",800],
+        ["Reed's Original Ginger Beer (N/A)","12 oz",500],
+        ["Honest Tea","Honest Tea Choice: Just Green, Just Black, Peach Oolong",500],
+        ["Tejava Black Tea (unsweetened)","",350],
+        ["Proud Source Spring Water (16 oz)","",265],
+        ["Soda","Soda Choice: Coke, Diet Coke, Sprite, Coke Zero",350],
+        ["Itoen Green Tea (unsweetened)","",300],
+        ["Itoen Oolong Tea (unsweetened)","",300],
+        ["Itoen Jasmine Tea (unsweetened)","",300],
+      ] },
+      { name: "Hot Tea", items: [
+        ["Jasmine","",300],
+        ["Oolong","",300],
+        ["Pu-erh","",350],
+        ["Chrysanthemum Tea (choose # of cup)","",350],
+      ] },
+    ],
+    siteNote: "San Francisco's contemporary and traditional dim sum, founded in 1958, in their own words, on Stevenson Street. Prices are from their own takeout ordering; in the restaurant the dim sum comes round on carts, and those prices are not published.",
+  },
+
+  /*
      YAYOI Cupertino — gathered 2026-09-24 from own
      they are: Japanese teishoku
      flag: Sources: own site https://www.yayoi-us.com/find-us (address, phone, hours) and https://www.yayoi-us.com/togo (menu: 'Main Menu' and 'Side Menu, Products & Beverages' tabs); own Toast ordering page https://order.toasttab.com/online/yayoi-cupertino-new-20682-homestead-road used only to cross-check.

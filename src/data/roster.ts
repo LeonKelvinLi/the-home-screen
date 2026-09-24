@@ -3385,6 +3385,27 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   /* Brasil Bistro, "El Cerrito • Goods". Brazilian has no seat either: the
      yellow sheet, the menu from their own ordering site ready behind the rule. */
+  /* Yank Sing, "San Francisco • Goods" (Glenn, 2026-09-24 7:46 am). Asian
+     food is House of Thai's seat, so the yellow sheet, but the whole page
+     rather than the free listing: he sent Sherry Shi's reel with it, "Can we
+     use this link for their page?", and only a whole page shows a reel. The
+     menu is their own takeout ordering; only the Stevenson Street restaurant,
+     since their Rincon Center lease has ended. Their seal, in their red. */
+  seed('yank-sing', 'Yank Sing', 'Yank Sing', 'Dim sum', '#EA1E28', {
+    icon: 'yank-sing',
+    logoTemplate: 'wordmark', logoLines: ['YANK SING'], logoFace: 'slab',
+    tagline: "San Francisco's contemporary & traditional dim sum",
+    site: 'https://yanksing.com/',
+    orderUrl: 'https://order.toasttab.com/online/yank-sing-stevenson-49-stevenson-st',
+    /* @sherryeatworld's review, which Glenn sent for this page. A link to the
+       reel for now; it plays here once Leon says to download it. */
+    clip: {
+      href: 'https://www.instagram.com/reel/DdqF3P3P67w/',
+      credit: 'Filmed by @sherryeatworld',
+      platform: 'Instagram',
+      by: 'sherryeatworld',
+    },
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',

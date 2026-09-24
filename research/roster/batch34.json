@@ -1,0 +1,452 @@
+[
+ {
+  "id": "b_yanksing",
+  "name_exact": "Yank Sing",
+  "one_line": "",
+  "cuisine": "Dim sum",
+  "address": "49 Stevenson Street, San Francisco, CA 94105",
+  "phone": "(415) 541-4949",
+  "email": null,
+  "hours": "Tue–Fri 11am–3pm, Sat–Sun 10am–3pm; closed Mon",
+  "instagram": null,
+  "site_kind": "own",
+  "site_url": "https://yanksing.com/",
+  "order_url": "https://order.toasttab.com/online/yank-sing-stevenson-49-stevenson-st",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Shrimp Dumpling",
+    "desc": "4 pc",
+    "cents": 950,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Pork & Shrimp Siu Mye",
+    "desc": "4 pc",
+    "cents": 950,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Pork and Chive Dumpling Soup",
+    "desc": "6 pc dumplings with a pork, chive & napa cabbage filling, served with a clear broth and vinegar on the side",
+    "cents": 1550,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Chicken & Mushroom Dumpling",
+    "desc": "2 pc",
+    "cents": 850,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Spinach Dumpling (vegan)",
+    "desc": "3 pc",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Savory Vegetable Dumpling (vegan)",
+    "desc": "3 pc",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Steamed BBQ Pork Bun",
+    "desc": "2 pc",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Stuffed Lotus Leaf",
+    "desc": "1 pc",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Phoenix Tail Prawn",
+    "desc": "4 pc",
+    "cents": 1600,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Crab Claw",
+    "desc": "2 pcs",
+    "cents": 1550,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Pork Potsticker",
+    "desc": "6 pc",
+    "cents": 1400,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Chicken Spring Roll",
+    "desc": "4 pc",
+    "cents": 1400,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Curried Shrimp Wonton",
+    "desc": "8 pcs",
+    "cents": 1350,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Pan-fried Chicken Bun",
+    "desc": "4 pcs",
+    "cents": 1350,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Mandarin Dumpling",
+    "desc": "3 pcs",
+    "cents": 900,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Seafood Basil Dumpling",
+    "desc": "3 pcs",
+    "cents": 950,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Scallop Siu Mye",
+    "desc": "3 pcs",
+    "cents": 950,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Steamed Spareribs",
+    "desc": "",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Beancurd Roll",
+    "desc": "2 pcs",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Snowpea Shoots Dumpling",
+    "desc": "2 pcs",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Mushroom Dumpling",
+    "desc": "3 pcs",
+    "cents": 750,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Turnip Cake",
+    "desc": "3 pc",
+    "cents": 900,
+    "label": "",
+    "section": "Dim Sum"
+   },
+   {
+    "name": "Egg Noodle Soup with Shrimp Wontons",
+    "desc": "served with clear chicken broth, Choi Sum vegetables and Yank Sing Chili Pepper sauce on the side",
+    "cents": 1550,
+    "label": "",
+    "section": "Noodles & Rice"
+   },
+   {
+    "name": "Egg Noodle Soup w Pork & Chive Dumpling",
+    "desc": "served with clear chicken broth, Choi Sum vegetables and Yank Sing Chili Pepper sauce on the side",
+    "cents": 1550,
+    "label": "",
+    "section": "Noodles & Rice"
+   },
+   {
+    "name": "Long Life Noodle (V)",
+    "desc": "vegetarian",
+    "cents": 1550,
+    "label": "",
+    "section": "Noodles & Rice"
+   },
+   {
+    "name": "BBQ Pork Fried Rice",
+    "desc": "for one",
+    "cents": 650,
+    "label": "",
+    "section": "Noodles & Rice"
+   },
+   {
+    "name": "Chicken Chow Mein",
+    "desc": "for one",
+    "cents": 650,
+    "label": "",
+    "section": "Noodles & Rice"
+   },
+   {
+    "name": "Steamed Rice",
+    "desc": "for one",
+    "cents": 400,
+    "label": "",
+    "section": "Noodles & Rice"
+   },
+   {
+    "name": "Beijing Ribs",
+    "desc": "",
+    "cents": 1650,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Szechuan Chicken",
+    "desc": "",
+    "cents": 1400,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Scallop Balls on Skewer",
+    "desc": "2 pcs",
+    "cents": 1400,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Chicken Satay",
+    "desc": "3 pcs",
+    "cents": 1350,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Sauteed String Beans with Dried Shrimp",
+    "desc": "",
+    "cents": 1250,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Eggplant w/ Hunan sauce",
+    "desc": "",
+    "cents": 950,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Crispy Tofu (vegetarian)",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Choy Sum w/ Garlic - stir fried",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Chinese Broccoli (chilled) w/ oyster sauce",
+    "desc": "",
+    "cents": 950,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Snap Peas (chilled) w/ chili soy sauce",
+    "desc": "",
+    "cents": 950,
+    "label": "",
+    "section": "Sides & Specials"
+   },
+   {
+    "name": "Phoenix",
+    "desc": "1 spring roll, 2 potsticker, 1 siu mye, chicken chow mein, BBQ pork fried rice",
+    "cents": 1250,
+    "label": "",
+    "section": "Combination Meals"
+   },
+   {
+    "name": "Dim Sum Platter",
+    "desc": "1 spring roll, 2 potsticker, 2 shrimp dumpling, 2 siu mye, 1 steamed BBQ pork bun, 1 egg custard tart",
+    "cents": 1650,
+    "label": "",
+    "section": "Combination Meals"
+   },
+   {
+    "name": "Egg Custard Tart",
+    "desc": "4 pc",
+    "cents": 1500,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Sesame Ball",
+    "desc": "4 pc",
+    "cents": 1500,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Mango Pudding",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Orange Jello",
+    "desc": "6 pcs",
+    "cents": 800,
+    "label": "",
+    "section": "Desserts"
+   },
+   {
+    "name": "Martinelli's Sparkling Cider",
+    "desc": "750 ml",
+    "cents": 1100,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Pellegrino (750 Ml)",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Marin Kombucha",
+    "desc": "Kombucha choice: Pinot Sage, Ginger Lemongrass",
+    "cents": 800,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Reed's Original Ginger Beer (N/A)",
+    "desc": "12 oz",
+    "cents": 500,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Honest Tea",
+    "desc": "Honest Tea Choice: Just Green, Just Black, Peach Oolong",
+    "cents": 500,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Tejava Black Tea (unsweetened)",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Proud Source Spring Water (16 oz)",
+    "desc": "",
+    "cents": 265,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Soda",
+    "desc": "Soda Choice: Coke, Diet Coke, Sprite, Coke Zero",
+    "cents": 350,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Itoen Green Tea (unsweetened)",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Itoen Oolong Tea (unsweetened)",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Itoen Jasmine Tea (unsweetened)",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Beverages"
+   },
+   {
+    "name": "Jasmine",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Hot Tea"
+   },
+   {
+    "name": "Oolong",
+    "desc": "",
+    "cents": 300,
+    "label": "",
+    "section": "Hot Tea"
+   },
+   {
+    "name": "Pu-erh",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Hot Tea"
+   },
+   {
+    "name": "Chrysanthemum Tea (choose # of cup)",
+    "desc": "",
+    "cents": 350,
+    "label": "",
+    "section": "Hot Tea"
+   }
+  ],
+  "price_note": "San Francisco's contemporary and traditional dim sum, founded in 1958, in their own words, on Stevenson Street. Prices are from their own takeout ordering; in the restaurant the dim sum comes round on carts, and those prices are not published",
+  "flags": [
+   "Only one location on their site: Stevenson. Homepage notice: 'After 27 years, our lease has ended at Rincon Center. Please visit us at our Stevenson St. location!' No Rincon Center entry made.",
+   "Hours confirmed: identical on yanksing.com home, /locations/, /order-online/, the homepage Rincon notice (Tue-Fri: 11 am - 3 pm; Sat & Sun: 10 am - 3 pm) and Toast's structured data (Tue-Fri 11:00-15:00, Sat-Sun 10:00-15:00, no Monday). Closed Mondays by omission.",
+   "Phone 415-541-4949 is the number printed on the site and on Toast. (415) 781-1111 is not printed with the area code on the site; the About page says their number is still '781-1111'.",
+   "Email info@yanksing.com is printed on their site only in the Privacy Policy (as the data controller contact, 'ICF, Inc.').",
+   "Tagline 'Traditional & Contemporary Dim Sum Since 1958' does not appear on the site. The site says 'SAN FRANCISCO'S CONTEMPORARY & TRADITIONAL DIM SUM' and 'Founded in 1958'.",
+   "'Indoor & Covered Outdoor Dining' and 'Takeout / Delivery' confirmed on the site. The Toast page itself said 'Pickup Only' and 'Only accepting scheduled orders' when read.",
+   "The yanksing.com /menu/ page lists 36 dishes with no prices. It also says 'OVER 100 ROTATING VARIETIES OF DIM SUM SERVED DAILY' from pushcarts. All prices here come from the Toast takeout menu.",
+   "Left out 1 item that has no real price: 'UTENSILS and SAUCE' ($0.00, not a food item).",
+   "Left out 2 unclear items in Toast's 'Combination Meals' section: 'zero' ($18.00, no description) and 'AAPI DRINK' ($5.00, no description; can't tell whether it contains alcohol).",
+   "Left out all alcohol: Beer (8), Cocktails (canned) (3), Sake (2), Sparkling Wine (2), White Wine (2, plus one untitled '?' line with no price), Rose & Red Wine (3).",
+   "Toast shows an 'ID REQUIRED' tag on Crab Claw and on Martinelli's Sparkling Cider. Both are kept: Martinelli's is non-alcoholic cider, and the tag on Crab Claw looks like a Toast setup mistake.",
+   "Dishes on the site's menu page but not on Toast (so no price): Rice Noodle Soup (with shrimp wontons or BBQ pork), Egg Noodle Soup with BBQ pork, Honey Walnut Prawns. Toast items not on the site's menu page include Curried Shrimp Wonton, Pork and Chive Dumpling Soup, Long Life Noodle, Beijing Ribs, Choy Sum w/ Garlic and Orange Jello.",
+   "Linktree 'TAKEOUT + DELIVERY' link (toasttab.com/yank-sing-spear-st-101-spear-st, the old Rincon/Spear St Toast page) returns 404. Linktree 'PRIVATE EVENTS' link (yanksing.com/private-events/) returns 404. The site's GIFT CARDS link still points to the Spear St Toast gift-card page (not opened).",
+   "No CAPTCHA or bot check was hit. The site loads an invisible reCAPTCHA script, but it never showed a challenge. Nothing was added to a cart and nothing was signed into.",
+   "On review: filed as b_yanksing (research id b_yanksingstevenson) to match its seed.",
+   "On review: email left off, since info@yanksing.com appears only in their privacy policy as the data contact, not as a way to reach the restaurant. Hours written as one line from their own \"Tue-Fri: 11 am - 3 pm; Sat & Sun: 10 am - 3 pm\".",
+   "On review: Glenn, 2026-09-24 7:46 am, \"San Francisco • Goods\". Asian food is House of Thai's seat, so the yellow sheet; a full page rather than the free listing, because he sent Sherry Shi's reel for it (\"Can we use this link for their page?\") and only a full page shows a reel."
+  ]
+ }
+]

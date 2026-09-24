@@ -294,6 +294,8 @@ for (const [id, want, expect] of [
   ['b_grando', 'Grand-O', {}],
   /* 2026-09-22, 4:35 am: Yo Sushi & Ramen, "Vacaville • Goods". */
   ['b_yosushivacaville', 'Yo Sushi & Ramen', { rows: 182, hours: 'Sun-Thu 11am-9pm', call: '(707) 474-9320' }],
+  /* 2026-09-24, 7:46 am: Yank Sing, "San Francisco • Goods", with Sherry Shi's reel. */
+  ['b_yanksing', 'Yank Sing', { rows: 59, hours: 'Tue–Fri 11am–3pm', call: '(415) 541-4949' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -608,6 +610,7 @@ for (const [s, what] of [
   ['"beasty-services2-24":"b_1850properties"', '1850 Properties on BEASTY More services'],
   ['"beasty-services2-23":"b_georgeprolandscape"', 'George Landscape moved to the yellow sheet'],
   ['"b_ezraluzjohns"', 'Ezra Luz Johns on BEASTY • Services #23'],
+  ['"san-francisco-goods2-22":"b_yanksing"', 'Yank Sing on San Francisco More goods'],
   ['members-perk.has-link', 'the earning row in yellow capitals'],
   ['Do they come back?', 'plain words for cohorts in the CRM'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
