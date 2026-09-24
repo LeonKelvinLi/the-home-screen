@@ -1092,6 +1092,7 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
   await write()
   /* After COMMIT, never inside it: see the note in analytics.ts. */
   if (member) await track('order_placed', { memberId: member.id, entityType: 'order', entityId: orderId, metadata: { lines: lines.length, fulfilment } })
+  else await track('guest_order_placed', { actor: deviceOf(req, res), entityType: 'order', entityId: orderId, metadata: { lines: lines.length, fulfilment } })
   res.status(201).json({ ...(await readOrder(orderId, { forCustomer: true })), cancelKey: cancelKeyFor(orderId) })
 })
 
@@ -1495,6 +1496,8 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
     application.email,
     application.created_at,
   )
+  /* The device that asked, so a Reserve a Spot request joins the visit it came from. */
+  await track('lead_submitted', { actor: deviceOf(req, res), entityType: 'application', entityId: application.id })
   /* Into the CRM as a lead, credited to the referral link that brought them
      if there was one. Never awaited into the response: it cannot fail this. */
   void crmOnApplication(req, application)
@@ -3289,6 +3292,11 @@ function visitorOf(req: Request, res: Response): string {
   return shortHash(actorFor(req, res, null))
 }
 
+/** The visitor's device for an event, or none under Global Privacy Control or for a crawler. */
+function deviceOf(req: Request, res: Response): string | null {
+  return req.get('sec-gpc') === '1' || isBot(req.get('user-agent')) ? null : visitorOf(req, res)
+}
+
 /*
   A VISIT, from the page itself: navigator.sendBeacon on the first load of the
   day, carrying what brought the visitor (UTM fields, the referring host, the
@@ -3457,7 +3465,7 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
     '/api/stripe/webhook',
     express.raw({ type: 'application/json', limit: '1mb' }),
     async (req, res) => {
-      let event: { type: string; data: { object: Record<string, unknown> } }
+      let event: { id?: string; type: string; data: { object: Record<string, unknown> } }
       try {
         const { default: Stripe } = await import('stripe')
         /* Never used to call Stripe. See the note above the mount. */
@@ -3496,6 +3504,7 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
         await db.prepare(
           "UPDATE members SET tier_status = 'active', tier_since = ?, stripe_customer = COALESCE(?, stripe_customer) WHERE id = ?",
         ).run(Date.now(), customer, memberId)
+        await track('membership_activated', { memberId, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server' })
         console.log('membership active:', memberId)
       } else if (
         event.type === 'customer.subscription.deleted' ||
@@ -3508,9 +3517,17 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
         */
         const customer = typeof obj.customer === 'string' ? obj.customer : ''
         if (customer) {
+          /* Only a membership that was running can stop: a second failed
+             invoice on an already-lapsed one is not a second lapse. */
+          const stopping = await db
+            .prepare("SELECT id FROM members WHERE stripe_customer = ? AND tier_status = 'active'")
+            .all<{ id: string }>(customer)
           await db.prepare("UPDATE members SET tier_status = 'lapsed' WHERE stripe_customer = ?").run(
             customer,
           )
+          for (const m of stopping) {
+            await track('membership_lapsed', { memberId: m.id, entityType: 'stripe_event', entityId: String(event.id ?? ''), source: 'server', metadata: { why: event.type === 'invoice.payment_failed' ? 'payment_failed' : 'cancelled' } })
+          }
           console.log('membership lapsed:', customer)
         }
       }

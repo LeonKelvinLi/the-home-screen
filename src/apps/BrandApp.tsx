@@ -8,6 +8,8 @@ import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { citiesOf, seatsOf } from '../data/seats'
 import { Symbol } from '../ios/ui/Symbol'
+import { KIND_BY_HEADING, takeOrigin, track } from '../lib/track'
+import { useInPreview } from '../ios/preview'
 import { readableOn } from '../ios/contrast'
 import { isFavorite, toggleFavorite } from '../lib/favorites'
 import { EMPTY_SIGNALS, formatCount, readSignals, sendSignal } from '../lib/signals'
@@ -113,6 +115,26 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
     return () => { live = false }
   }, [brand?.id])
 
+  /*
+    WHAT PEOPLE DO HERE (src/lib/track.ts): the open, with where it came from
+    (a tile, a search result, a shared link), how long they stayed, and every
+    way out: a call, directions, their site, their ordering, their Instagram.
+    Never from a card in the app switcher, which is a picture of the page.
+  */
+  const preview = useInPreview()
+  useEffect(() => {
+    if (preview || !brand?.id) return
+    const id = brand.id
+    track('business_opened', { brand: id, ...takeOrigin(id) })
+    const opened = Date.now()
+    return () => track('business_closed', { brand: id, dwell_ms: Date.now() - opened })
+  }, [brand?.id, preview])
+  const out = (kind: string) => () => {
+    if (!preview && brand?.id) track('outbound_clicked', { brand: brand.id, kind })
+  }
+  /* What the site button is for, by what it says: "Order online", "Book", or their site. */
+  const siteKind = /order/i.test(brand?.siteCta ?? '') ? 'order' : /book|reserve|appoint/i.test(brand?.siteCta ?? '') ? 'booking' : 'website'
+
   const tap = async (kind: SignalKind) => {
     if (!brand?.id) return
     // Optimistic, then corrected by the server's own answer: a tap that waits on
@@ -201,7 +223,10 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             {place && (
               <button
                 className="nav-place"
-                onClick={() => api.goToCity(place.city, brand.id)}
+                onClick={() => {
+                  if (!preview) track('place_navigated', { brand: brand.id, city: place.city, page_kind: KIND_BY_HEADING[place.page], surface: 'nav_place' })
+                  api.goToCity(place.city, brand.id)
+                }}
                 aria-label={`Go to the ${place.city} ${place.page} page`}
               >
                 <span className="nav-place-text">
@@ -374,6 +399,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                      whether somebody actually sent it, so the honest thing to
                      count is the intent, once per person. */
                   void tap('share')
+                  if (!preview) track('share_clicked', { brand: brand.id, surface: 'business_page' })
                   try {
                     if (navigator.share) await navigator.share({ title: brand.name, url })
                     else {
@@ -489,6 +515,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 href={mapsHref(brand.address, brand.name)}
                 target="_blank"
                 rel="noreferrer"
+                onClick={out('directions')}
                 aria-label={`Directions to ${brand.name}`}
               >
                 <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -533,6 +560,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             <a
               className="brand-call"
               href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}
+              onClick={out('call')}
               aria-label={`Call ${brand.name}`}
             >
               <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -560,7 +588,14 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           {cities.length > 1 && (
             <div className="brand-cities">
               {cities.map((c) => (
-                <button className="brand-city" key={c} onClick={() => api.goToCity(c, brand.id)}>
+                <button
+                  className="brand-city"
+                  key={c}
+                  onClick={() => {
+                    if (!preview) track('place_navigated', { brand: brand.id, city: c, surface: 'city_row' })
+                    api.goToCity(c, brand.id)
+                  }}
+                >
                   <span className="brand-city-mark" aria-hidden="true">
                     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
                       <path d="M12 2.2a7.2 7.2 0 0 1 7.2 7.2c0 4.9-5.4 11-6.6 12.3a.8.8 0 0 1-1.2 0C10.2 20.4 4.8 14.3 4.8 9.4A7.2 7.2 0 0 1 12 2.2Zm0 4.4a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z" />
@@ -627,7 +662,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>
-              {clipOpen && <BrandClip clip={brand.clip} logo={brand.logo} />}
+              {clipOpen && <BrandClip clip={brand.clip} logo={brand.logo} brand={brand.id} />}
             </div>
           )}
 
@@ -944,17 +979,17 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 </p>
               )}
               {brand.phone && (
-                <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`}>
+                <a className="btn-primary" href={`tel:${brand.phone.replace(/[^0-9+]/g, '')}`} onClick={out('call')}>
                   Call {brand.phone}
                 </a>
               )}
               {brand.email && (
-                <a className="btn-secondary" href={`mailto:${brand.email}`}>
+                <a className="btn-secondary" href={`mailto:${brand.email}`} onClick={out('email')}>
                   Email {brand.email}
                 </a>
               )}
               {brand.site && (
-                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer">
+                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer" onClick={out(siteKind)}>
                   {brand.siteCta ?? 'Open their page'}
                 </a>
               )}
@@ -974,7 +1009,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               {brand.phone && <p className="brand-free-line">Phone {brand.phone}</p>}
               {brand.email && <p className="brand-free-line">Email {brand.email}</p>}
               {brand.site && (
-                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer">
+                <a className="btn-secondary" href={brand.site} target="_blank" rel="noreferrer" onClick={out(siteKind)}>
                   {brand.siteCta ?? 'Open their page'}
                 </a>
               )}
@@ -1012,6 +1047,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               href={`https://www.instagram.com/${brand.instagram}/`}
               target="_blank"
               rel="noreferrer"
+              onClick={out('instagram')}
             >
               <svg viewBox="0 0 24 24" aria-hidden="true" className="brand-ig-mark">
                 <rect x="3" y="3" width="18" height="18" rx="5.4" fill="none" stroke="currentColor" strokeWidth="1.9" />
@@ -1029,13 +1065,13 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               naming the destination honestly when there is nothing to add. */}
           {tier >= 2 && brand.siteNote && !brand.contactOnly ? (
             <p className="brand-foot">
-              <a href={brand.site ?? brand.orderUrl} target="_blank" rel="noreferrer">
+              <a href={brand.site ?? brand.orderUrl} target="_blank" rel="noreferrer" onClick={out(brand.site ? siteKind : 'order')}>
                 {brand.siteNote}
               </a>
             </p>
           ) : tier >= 2 && brand.orderUrl && !brand.contactOnly ? (
             <p className="brand-foot">
-              <a href={brand.orderUrl} target="_blank" rel="noreferrer">
+              <a href={brand.orderUrl} target="_blank" rel="noreferrer" onClick={out('order')}>
                 They also take orders on {orderHost(brand.orderUrl)}
               </a>
             </p>

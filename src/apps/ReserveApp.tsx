@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
 import { BrandLogo } from '../ios/BrandLogo'
@@ -6,6 +6,8 @@ import { LISTED_KITCHENS } from '../data/brands'
 import { submitApplication } from '../lib/api'
 import { CITY_PAGES } from './registry'
 import type { ShellApi } from '../ios/Device'
+import { track } from '../lib/track'
+import { useInPreview } from '../ios/preview'
 
 /**
  * The empty slots on the last page are the platform's own sales pitch.
@@ -36,7 +38,17 @@ const WITH_ART = KITCHENS.filter((b) => b.logo.imageUrl)
    real judge; this only keeps the button from lighting up for "gmail". */
 const EMAIL_SHAPE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
 
-export function ReserveApp({ api }: { api: ShellApi }) {
+export function ReserveApp({ api, seat }: { api: ShellApi; seat?: string }) {
+  /* Which blank tile was tapped, when it was one: `oakland-goods-5` names the
+     city and the page. Reserve opened from elsewhere (`join`) has no seat. */
+  const preview = useInPreview()
+  useEffect(() => {
+    if (preview) return
+    const m = seat?.match(/^(.+)-(goods2?|services2?|online|individuals)-\d{1,2}$/)
+    if (!m) return track('reserve_started')
+    const city = [...CITY_PAGES, 'BEASTY'].find((c) => c.toLowerCase().replace(/[^a-z0-9]+/g, '-') === m[1])
+    track('reserve_started', { seat, page_kind: m[2], ...(city ? { city } : {}) })
+  }, [preview, seat])
   const [name, setName] = useState('')
   const [hours, setHours] = useState('')
   const [address, setAddress] = useState('')

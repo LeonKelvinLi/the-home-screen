@@ -2,7 +2,7 @@ import { createContext, useCallback, useContext, useEffect, useMemo, useState } 
 import { GATED, type GateKey } from '../data/membership'
 import { captureReferral, captureVia, fetchAccount, type Account, type AccountState } from './account'
 import { captureAttribution, sendVisit } from './attribution'
-import { startTracking } from './track'
+import { startTracking, track } from './track'
 
 /**
  * WHAT A SIGNED-OUT VISITOR MAY DO, and the prompt when they may not.
@@ -124,6 +124,7 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
         return true
       }
       setAsking({ key, what })
+      track('gate_shown', { door: key })
       return false
     },
     [loading, account],

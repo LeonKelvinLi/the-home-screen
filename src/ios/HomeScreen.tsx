@@ -20,6 +20,7 @@ import {
   ROW_GAP_PHONE,
 } from './constants'
 import { DEFAULT_CITY } from '../lib/place'
+import { noteOrigin, track } from '../lib/track'
 import { ICON_LUMA, WALLPAPER_TILT } from '../data/luma'
 import { wallpaperFor } from './Wallpaper'
 
@@ -40,6 +41,10 @@ interface Page {
   wall?: string
   /** Dark-ink treatment for the yellow BEASTY pages. */
   yellow?: boolean
+  /** The page's kind (goods, services, goods2...), for tracking. */
+  kind?: string
+  /** Which seat each tile on this page is in, by app id, for tracking. */
+  seatOf?: Record<string, string>
   /**
    * Tile edge and row gap for THIS page, where the page cannot use the screen's
    * own. Only a city page sets them — see where the pages are built.
@@ -429,9 +434,17 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
         }
         for (let from = 0; from < total; from += slotsPerPage) {
           const chunk = slotPage.categories.slice(from, Math.min(from + slotsPerPage, total))
+          const seatOf: Record<string, string> = {}
+          chunk.forEach((_, i) => {
+            const seat = `${key}-${slotPage.kind}-${from + i}`
+            const app = appForSlot(seat)
+            if (app.kind === 'brand') seatOf[app.id] = seat
+          })
           out.push({
             city: cityName,
             section: slotPage.heading,
+            kind: slotPage.kind,
+            seatOf,
             tile: slotTile,
             rowGap: slotGap,
             ...(slotPage.yellow ? { wall: '/wallpapers/_beasty-pages.webp', yellow: true } : {}),
@@ -524,6 +537,35 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     const where = p?.city ? `, ${p.city}${p.section ? `, ${p.section}` : ''}` : ''
     return `Page ${i + 1} of ${pages.length}${where}`
   }
+
+  /*
+    WHAT WAS ON SCREEN. A page that has settled for a second, with nothing open
+    over it, reports itself and every business tile on it: an impression is a
+    tile somebody could see, not one that was merely drawn off to the side.
+    The server keeps one per seat per visit (server/intel.ts), so swiping back
+    and forth adds nothing.
+  */
+  useEffect(() => {
+    if (hidden || receding || inert) return
+    const page = pages[safePage]
+    if (!page) return
+    const t = window.setTimeout(() => {
+      track('page_viewed', { ...(page.city ? { city: page.city } : {}), ...(page.kind ? { page_kind: page.kind } : {}), position: safePage + 1 })
+      if (!page.city) return
+      page.apps.forEach((app, i) => {
+        if (app.kind !== 'brand') return
+        track('tile_impression', {
+          brand: app.id,
+          surface: 'home_tile',
+          city: page.city,
+          ...(page.kind ? { page_kind: page.kind } : {}),
+          ...(page.seatOf?.[app.id] ? { seat: page.seatOf[app.id] } : {}),
+          position: i + 1,
+        })
+      })
+    }, 1000)
+    return () => window.clearTimeout(t)
+  }, [safePage, pages, hidden, receding, inert])
 
   /*
     Search asked for a city. Move there and tell the shell it is done, so the
@@ -917,7 +959,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
                   noSite={app.noSite}
                   glow={app.glow}
                   size={page.tile ?? screen.iconSize}
-                  onOpen={(rect) => onOpen(app.id, rect)}
+                  onOpen={(rect) => {
+                    /* Where this open came from, for the business page to report. */
+                    if (app.kind === 'brand') {
+                      noteOrigin({
+                        brand: app.id,
+                        surface: 'home_tile',
+                        seat: page.seatOf?.[app.id],
+                        city: page.city,
+                        page_kind: page.kind,
+                        position: page.apps.indexOf(app) + 1,
+                      })
+                    }
+                    onOpen(app.id, rect)
+                  }}
                 />
               ))}
             </div>

@@ -10,8 +10,8 @@ its findings are summarised below), and this plan, which Leon approved with
 | Phase | State |
 |---|---|
 | 1. Audit | Done, 2026-09-24 |
-| 2. Foundation | Built, 2026-09-24: `server/intel.ts`, `src/lib/track.ts`, the tables below, `POST /api/t/events`, the device cookie on the first page, the identity link on sign-up and sign-in, the team-device link `/t/team/<token>`, the directory snapshot and seat history at boot, retention. Proven by `tools/audit-analytics.mjs` (30 checks against the rows). Only `session_started` is reported so far. |
-| 3. Instrumentation | Next |
+| 2. Foundation | Built, 2026-09-24: `server/intel.ts`, `src/lib/track.ts`, the tables below, `POST /api/t/events`, the device cookie on the first page, the identity link on sign-up and sign-in, the team-device link `/t/team/<token>`, the directory snapshot and seat history at boot, retention. |
+| 3. Instrumentation | Built, 2026-09-24. The page reports `page_viewed` and `tile_impression` (the home screen, settled 1 s), `business_opened` with where it came from (home tile, search result, Search's list, city row, Glenn's button, a shared link) and `business_closed` with dwell, `search_started`, `search_submitted` (typing paused 1.2 s, or a result tapped, with the result count), `search_result_clicked` (business, item or city, with rank), `outbound_clicked`, `place_navigated`, `share_clicked`, `gate_shown`, `reserve_started` (with the blank seat), and `clip_played` (2 s actually watched). The server adds `lead_submitted` and `guest_order_placed` against the device, and `membership_activated` and `membership_lapsed` from Stripe. The app switcher's previews count nothing. Positions count from 1. Proven by `tools/audit-analytics.mjs` (51 checks against the rows, including a visit tapped through on a phone). Not yet: `search_results_shown` (its count rides on `search_submitted`), `gate_converted`, a share id carried in the link, and the recents, favourites, news and gallery surfaces. |
 | 4-7 | To come |
 
 Decisions taken (Leon, "continue", 2026-09-24): a deleted member's events are

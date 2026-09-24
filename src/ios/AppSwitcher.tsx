@@ -5,6 +5,7 @@ import type { ShellApi } from './Device'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { EASE_IOS } from './constants'
+import { InPreview } from './preview'
 
 /**
  * Card stack. The cards hold the real app, rendered small and inert, rather
@@ -174,7 +175,7 @@ export function AppSwitcher({ recents, renderApp, api, onPick, onClose, onDismis
                   className="switcher-card-inner"
                   style={{ width: screen.w, height: screen.h, transform: `scale(${CARD_SCALE})` }}
                 >
-                  {renderApp(id, api)}
+                  <InPreview.Provider value={true}>{renderApp(id, api)}</InPreview.Provider>
                 </div>
               </div>
             </div>

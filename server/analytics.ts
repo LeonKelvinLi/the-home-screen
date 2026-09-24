@@ -60,10 +60,16 @@ export const EVENTS = {
   pass_scanned: { actor: 'member', label: 'Used their pass at a shop', meaningful: true, core: true },
   friend_joined: { actor: 'member', label: 'Brought a friend', meaningful: true, core: true },
   membership_chosen: { actor: 'member', label: 'Chose a paid membership', meaningful: true },
+  /* From Stripe: the payment that makes it real, and the one that stops it.
+     A retried webhook is the same Stripe event, so one a day per event. */
+  membership_activated: { actor: 'member', label: 'Paid for a membership', meaningful: true, once: 'day-entity' },
+  membership_lapsed: { actor: 'member', label: 'Membership payments stopped', once: 'day-entity' },
 
   /* visitors: no account yet */
   site_visited: { actor: 'visitor', label: 'Visited BEASTY', once: 'day' },
   signup_started: { actor: 'visitor', label: 'Asked for a sign-up code' },
+  guest_order_placed: { actor: 'visitor', label: 'Ordered without an account' },
+  lead_submitted: { actor: 'visitor', label: 'Asked to reserve a spot' },
 
   /* the BEASTY team, in the CRM */
   crm_lead_created: { actor: 'team', label: 'Added a lead' },

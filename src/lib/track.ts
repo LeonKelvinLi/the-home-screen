@@ -218,3 +218,54 @@ export function startTracking(): void {
     /* never in the way */
   }
 }
+
+/*
+  WHERE AN OPEN CAME FROM. Whatever opens a business (a tile, a search result,
+  a city row) notes it here a moment before; the business page takes it when
+  it opens. Ten seconds, and only for the same business, so a stale note can
+  never be pinned on a later open.
+*/
+export interface Origin {
+  brand: string
+  surface: string
+  seat?: string
+  city?: string
+  page_kind?: string
+  position?: number
+  query?: string
+}
+
+let origin: (Origin & { at: number }) | null = null
+/* The first business opened on a visit that arrived by a shared link is that link's. */
+let firstOpenTaken = false
+
+export function noteOrigin(o: Origin): void {
+  origin = { ...o, at: Date.now() }
+}
+
+/** The note for this business, once; otherwise how the visit arrived. */
+export function takeOrigin(brand: string): Omit<Origin, 'brand'> {
+  const o = origin
+  origin = null
+  if (o && o.brand === brand && Date.now() - o.at < 10_000) {
+    const { brand: _b, at: _a, ...rest } = o
+    return rest
+  }
+  const arrived = ctx?.entry
+  if (!firstOpenTaken && (arrived === 'shared_business' || arrived === 'register_qr')) {
+    firstOpenTaken = true
+    return { surface: 'share_link' }
+  }
+  firstOpenTaken = true
+  return { surface: 'other' }
+}
+
+/** The page kinds the home screen heads its pages with, by heading. */
+export const KIND_BY_HEADING: Record<string, string> = {
+  Goods: 'goods',
+  Services: 'services',
+  'More goods': 'goods2',
+  'More services': 'services2',
+  Online: 'online',
+  Individuals: 'individuals',
+}

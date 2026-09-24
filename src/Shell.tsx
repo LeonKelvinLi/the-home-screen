@@ -59,7 +59,7 @@ function renderApp(appId: string, api: ShellApi) {
     case 'settings':
       return <SettingsApp api={api} />
     case 'reserve':
-      return <ReserveApp api={api} />
+      return <ReserveApp api={api} seat={appId.startsWith('slot.') ? appId.slice(5) : undefined} />
     case 'designs':
       return <DesignsApp api={api} />
     case 'share':

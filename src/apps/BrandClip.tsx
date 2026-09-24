@@ -1,4 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
+import { track } from '../lib/track'
+import { useInPreview } from '../ios/preview'
 import { BrandLogo } from '../ios/BrandLogo'
 import type { Logo } from '../data/brands'
 
@@ -79,8 +81,18 @@ function PlayMark({ size = 40 }: { size?: number }) {
   )
 }
 
-export function BrandClip({ clip, logo }: { clip: Clip; logo: Logo }) {
+export function BrandClip({ clip, logo, brand }: { clip: Clip; logo: Logo; brand?: string }) {
   const ref = useRef<HTMLVideoElement | null>(null)
+  /* Watched: two seconds of it actually played, once per page. Scrolling past
+     starts it too, so the start alone says nothing. */
+  const preview = useInPreview()
+  const counted = useRef(false)
+  const onTime = () => {
+    const el = ref.current
+    if (counted.current || preview || !el || el.currentTime < 2) return
+    counted.current = true
+    track('clip_played', brand ? { brand } : {})
+  }
   const [reduced, setReduced] = useState(false)
   /*
     SOUND, ON A TAP. It starts muted because nothing else starts a phone
@@ -135,6 +147,7 @@ export function BrandClip({ clip, logo }: { clip: Clip; logo: Logo }) {
             playsInline
             preload="none"
             controls={reduced}
+            onTimeUpdate={onTime}
           />
           <button
             type="button"
