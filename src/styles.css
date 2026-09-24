@@ -11534,6 +11534,69 @@ textarea {
   }
 }
 
+/*
+  WHITE, for 1850 Properties, 2026-09-24: "White glow would be nice". A soft
+  white on the dark city wallpapers, with a thin dark line inside it, because
+  the tile sits on BEASTY's yellow sheet, where white alone would vanish.
+*/
+.icon-tile.is-glow.is-glow-white {
+  animation-name: icon-glow-white;
+}
+
+@keyframes icon-glow-white {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1.5px rgba(20, 20, 22, 0.55),
+      0 0 8px 3px rgba(255, 255, 255, 0.95),
+      0 0 20px 8px rgba(255, 255, 255, 0.55);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1.5px rgba(20, 20, 22, 0.55),
+      0 0 14px 6px rgba(255, 255, 255, 1),
+      0 0 34px 14px rgba(255, 255, 255, 0.7);
+  }
+}
+
+.icon-tile.is-nosite.is-glow.is-glow-white {
+  animation-name: icon-glow-white-nosite;
+}
+
+@keyframes icon-glow-white-nosite {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 10px 7px rgba(255, 255, 255, 0.95),
+      0 0 22px 10px rgba(255, 255, 255, 0.55);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 16px 9px rgba(255, 255, 255, 1),
+      0 0 36px 15px rgba(255, 255, 255, 0.7);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .icon-tile.is-glow.is-glow-white {
+    box-shadow:
+      0 0 0 1.5px rgba(20, 20, 22, 0.55),
+      0 0 12px 5px rgba(255, 255, 255, 1),
+      0 0 28px 11px rgba(255, 255, 255, 0.6);
+  }
+  .icon-tile.is-nosite.is-glow.is-glow-white {
+    box-shadow:
+      0 0 0 2px rgba(10, 12, 14, 0.55),
+      0 0 0 4px #ff3b30,
+      0 0 14px 8px rgba(255, 255, 255, 1),
+      0 0 30px 12px rgba(255, 255, 255, 0.6);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .icon-tile.is-glow.is-glow-green {
     box-shadow:

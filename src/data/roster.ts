@@ -3872,6 +3872,57 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'See what is on',
     tier: 1,
   }),
+  /* ---- 2026-09-24. */
+  /* Ezra Luz Johns, "BEASTY • Services / This is my friend ... make her a page
+     based on her LinkedIn info" (Glenn called her a freelance photographer;
+     none of her own pages mention photography, so, on Leon's call, the page is
+     what they do say). Seat #23, George Professional Landscape's: "You can
+     bump George Landscape to the yellow page". Everything is her own: the
+     headline, the consultation and podcast on the pages her Linktree links,
+     her LinkedIn's service list, and the phone and email on her Instagram's
+     contact sheet. Her Linktree's product and referral links are left off. No
+     site of her own, so the button is her booking page and the ring is red. */
+  seed('ezra-luz-johns', 'Ezra Luz Johns', 'Ezra Johns', 'Life insurance & coaching', '#6B2E1E', {
+    needsSite: true,
+    icon: 'ezra-luz-johns',
+    logoTemplate: 'monogram', logoInitials: 'EJ', logoFace: 'slab',
+    tagline: 'Financial literacy, entrepreneurship and intentional living',
+    phone: '(415) 535-0242',
+    email: 'ilml.inquire@gmail.com',
+    site: 'https://calendar.app.google/H3jYLqLSj43nWvKg6',
+    siteCta: 'Book a free consultation',
+    contactOnly:
+      'Empowering individuals through financial literacy, entrepreneurship and intentional living, in her own words. She offers free 30-minute consultations on life insurance, living benefits and Indexed Universal Life (IUL), and hosts the Women of Insurance podcast. Book a time, or text or email her.',
+    panels: [
+      {
+        head: 'What she offers',
+        body: [
+          'Life insurance, small business insurance and financial planning.',
+          'Training, corporate training, team building and public speaking.',
+          'Strategic planning, marketing consulting and career development coaching.',
+          'From her LinkedIn, San Francisco.',
+        ],
+      },
+    ],
+  }),
+  /* 1850 Properties, "BEASTY • Services / this is a friend of mine's
+     business ... White glow would be nice" (Glenn, 2026-09-24): Ross
+     Hillesheim's real estate company, "He builds gas stations". BEASTY
+     Services is full, so the yellow sheet, the whole page as every BEASTY
+     spot gets. Address, phone, email and every word from their own site. */
+  seed('1850-properties', '1850 Properties', '1850 Properties', 'Real estate development', '#223246', {
+    glow: 'white',
+    icon: '1850-properties',
+    logoTemplate: 'wordmark', logoLines: ['1850'], logoFace: 'slab',
+    tagline: 'Service stations and automotive real estate',
+    address: '3195 Danville Blvd, Alamo, CA 94507',
+    phone: '(831) 392-6424',
+    email: 'ross@1850properties.com',
+    site: 'https://www.1850properties.com/',
+    siteCta: 'See their properties',
+    contactOnly:
+      'Developing and owning real estate in California and the Mountain West for over twelve years, with more than $60,000,000 in service stations and automotive real estate controlled, managed and built, in their own words. Their properties include Stockton and Laurel Rd. Call or email Ross to connect.',
+  }),
 ]
 
 /**
@@ -3975,7 +4026,9 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   /* "You can bump ic to yellow pages" — Inter Chiro moved to the yellow sheet
      and Frank2Artistic takes the seat it leaves. */
   'b_frank2artistic', //        22 Frank2Artistic
-  'b_georgeprolandscape', //    23 George Professional Landscape
+  /* "You can bump George Landscape to the yellow page", 2026-09-24: Ezra
+     Luz Johns takes the seat; George is on the yellow sheet in placements.ts. */
+  'b_ezraluzjohns', //          23 Ezra Luz Johns (was George Professional Landscape)
   /* Rene Custom Cabinetry was here and is GONE — "bump out Rene and complete
      remove him. He's not ready." Removed rather than benched: a seat held for
      somebody who is not coming is a spot he cannot sell. Rywire takes it. */

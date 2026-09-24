@@ -602,6 +602,14 @@ for (const [s, what] of [
   /* 8:13 pm: Glenn's mockup, "Union City • Goods >" opposite Home. */
   ['nav-place', "the button to the page a business's tile is on"],
   ['brand-body>.brand-call', 'the phone pill inset like the address card'],
+  /* 2026-09-24: the iPhone grid with room, Home to BEASTY • Goods, TAP HERE
+     every time in yellow capitals, Ezra, 1850 Properties and the white glow. */
+  ['icon-glow-white', 'the white glow keyframes'],
+  ['"beasty-services2-24":"b_1850properties"', '1850 Properties on BEASTY More services'],
+  ['"beasty-services2-23":"b_georgeprolandscape"', 'George Landscape moved to the yellow sheet'],
+  ['"b_ezraluzjohns"', 'Ezra Luz Johns on BEASTY • Services #23'],
+  ['members-perk.has-link', 'the earning row in yellow capitals'],
+  ['Do they come back?', 'plain words for cohorts in the CRM'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],

@@ -1010,6 +1010,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      BeauDega by Maine took BEASTY • Services #2, and Roman Iron moves here
      rather than off the pages. */
   'beasty-services2-22': 'b_romantraileriron',
+  /* 2026-09-24: George moves here from BEASTY • Services #23 for Ezra Luz
+     Johns, and 1850 Properties, Glenn's friend Ross's company, joins (the
+     sheet now runs past twenty-four; see OPEN_SPOTS in slots.ts). */
+  'beasty-services2-23': 'b_georgeprolandscape', //                 from page one, seat 23
+  'beasty-services2-24': 'b_1850properties', //                     BEASTY Services is full; white glow
   /* ABVE the Basics, "San Jose • Services", 2026-09-22: a caterer, and Event
      coordinator is Bloom Balloon's on San Jose, so the yellow sheet next to
      Bay Area Event Lights, the free Tier 1 listing. */

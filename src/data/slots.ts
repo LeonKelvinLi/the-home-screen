@@ -189,7 +189,11 @@ export const ONLINE_CATEGORIES: SlotCategory[] = [
  * yellow pages behind it hold "the businesses that didn't act in time" —
  * unlimited, uncategorised, first come first served.
  */
-export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) => ({
+/* Forty-eight, not twenty-four: "unlimited" in his words, and on 2026-09-24
+   BEASTY's own More services had seated all twenty-four when Glenn added 1850
+   Properties. Blanks still stop at one page's worth (HomeScreen), so only a
+   sheet with businesses past the twenty-fourth grows a page. */
+export const OPEN_SPOTS: SlotCategory[] = Array.from({ length: 48 }, (_, i) => ({
   n: i + 1,
   name: 'Open spot',
   label: 'Available',
@@ -313,4 +317,4 @@ export const categoriesFor = (kind: string | undefined): SlotCategory[] | undefi
  * screen. A page never paginates, so this is a number the grid has to obey
  * rather than one it gets to choose.
  */
-export const SPOTS_PER_PAGE = Math.max(...SLOT_PAGES.map((p) => p.categories.length))
+export const SPOTS_PER_PAGE = Math.max(...SLOT_PAGES.filter((p) => !p.yellow).map((p) => p.categories.length))

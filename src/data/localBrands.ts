@@ -101,7 +101,7 @@ export interface LocalSeed {
    * 2026-09-22 for The BeauDega by Maine: "Can you give her icon that glow
    * thing like on the scan button?"
    */
-  glow?: true | 'pink' | 'blue' | 'green' | 'sweep'
+  glow?: true | 'pink' | 'blue' | 'green' | 'white' | 'sweep'
   /** Which affiliate tier this page is drawn at. See brands.ts. */
   tier?: 1 | 2 | 3
   phone?: string

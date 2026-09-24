@@ -11,6 +11,7 @@
  */
 
 export const ICON_LUMA: Record<string, number> = {
+  '1850-properties': 0.0671,
   '1up-retro': 0.565,
   '7-mile-house': 0.7681,
   'ace-king-bbq': 0.8191,
@@ -130,6 +131,7 @@ export const ICON_LUMA: Record<string, number> = {
   'emporium-sf': 0.049,
   'emys-cannoli': 0.1925,
   'essence-bjj': 0.8489,
+  'ezra-luz-johns': 0.0819,
   'favorite-indian-restaurant': 0.1653,
   'fire-slice-pizza': 0.7747,
   'firebunz': 0.0773,
