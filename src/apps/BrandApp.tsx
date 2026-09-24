@@ -179,7 +179,14 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
     <>
       <AppChrome
         title={brand.name}
-        onBack={api.closeApp}
+        /*
+          HOME IS BEASTY • GOODS. Glenn, 2026-09-24: "when you tap HOME on
+          anyone's page it goes directly to BEASTY • Goods as the HOME page".
+          It used to return to whichever page the home screen was on, so from a
+          city tile it went back to that city. The button opposite now covers
+          "the page this business is on"; Home always means the front page.
+        */
+        onBack={() => api.goToCity('BEASTY')}
         tint={brand.logo.bg.split('|')[0]}
         className={place ? 'has-place' : undefined}
         right={

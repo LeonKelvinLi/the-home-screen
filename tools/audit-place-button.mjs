@@ -107,6 +107,24 @@ for (const [what, id, want, lands] of cases) {
   await p.close()
 }
 
+/* HOME IS BEASTY • GOODS, from any business page. Glenn, 2026-09-24: "when
+   you tap HOME on anyone's page it goes directly to BEASTY • Goods as the HOME
+   page". Checked from the hardest case: a business opened from its own tile
+   on its city page, where Home used to return to that city page. */
+{
+  const p = await page()
+  await open(p, 'b_zadnagrill')
+  await p.click('.nav-place')
+  await waitWhere(p, 'Redwood City, Goods')
+  await p.locator('button[aria-label^="Zadna Grill"]').first().click()
+  await p.waitForSelector('.nav-back', { timeout: 20000 }).catch(() => {})
+  await p.waitForTimeout(800)
+  await p.click('.nav-back')
+  const w = await waitWhere(p, 'BEASTY, Goods')
+  step('Home goes to BEASTY • Goods, even from a city tile', !!w && /^Page 1 of \d+, BEASTY, Goods$/.test(w), `${w}`)
+  await p.close()
+}
+
 /* His exact path: Search, a business, the button. Search is for members, so
    this one signs in first, the way the site does it. */
 {
