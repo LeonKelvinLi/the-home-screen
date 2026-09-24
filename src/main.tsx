@@ -14,11 +14,20 @@ import './styles.css'
 const KitchenScreen = lazy(() => import('./apps/KitchenScreen'))
 const isKitchen = /^\/kitchen\/?$/.test(window.location.pathname)
 
+/* /crm, the team's growth screen, is chosen the same way and for the same
+   reasons: no customer ever downloads it, and it never plays the landing. */
+const CrmScreen = lazy(() => import('./crm/CrmScreen'))
+const isCrm = /^\/crm\/?$/.test(window.location.pathname)
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {isKitchen ? (
       <Suspense fallback={<div className="kitchen-screen" />}>
         <KitchenScreen />
+      </Suspense>
+    ) : isCrm ? (
+      <Suspense fallback={<div className="crm" />}>
+        <CrmScreen />
       </Suspense>
     ) : (
       <App />

@@ -16,6 +16,7 @@
  * server decides who is asking.
  */
 import { drain, drainNull } from './http'
+import { pendingAttribution } from './attribution'
 
 export interface Rewards {
   milestones: number
@@ -215,7 +216,12 @@ export async function startSignUp(fields: SignUp): Promise<StartResult> {
       method: 'POST',
       headers: json,
       credentials: 'same-origin',
-      body: JSON.stringify({ ...fields, ref: pendingReferral() ?? undefined, via: pendingVia() ?? undefined }),
+      body: JSON.stringify({
+        ...fields,
+        ref: pendingReferral() ?? undefined,
+        via: pendingVia() ?? undefined,
+        attribution: pendingAttribution() ?? undefined,
+      }),
     })
     const body = await r.json().catch(() => ({}))
     if (!r.ok) return { ok: false, error: body?.error ?? 'Could not send a code just now.' }

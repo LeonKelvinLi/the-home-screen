@@ -14,6 +14,7 @@
 */
 import { AsyncLocalStorage } from 'node:async_hooks'
 import pg from 'pg'
+import { CRM_SCHEMA } from './crm-schema'
 
 /*
   BIGINT COMES BACK AS A STRING BY DEFAULT, and every timestamp here is
@@ -555,6 +556,51 @@ ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_via TEXT;
 CREATE INDEX IF NOT EXISTS idx_members_joined_via ON members(joined_via) WHERE joined_via IS NOT NULL;
 
 /*
+  WHAT PEOPLE DO, 2026-09-22. Glenn's Home screen asked how many people use
+  BEASTY and whether they come back, and nothing recorded a member doing
+  anything after signing up except a like, a save, a share, an order or a pass
+  scan, and a sign-in only until they signed out. So: one append-only row per
+  action, named from the list in server/analytics.ts.
+
+  member_id when a member did it (deleting a member deletes their events);
+  actor for a visitor's hashed device or a CRM person. dedupe_key is set only
+  for events where a repeat means nothing (opening the app twice in a day), and
+  its UNIQUE index makes the second one a no-op. No names, contacts, IPs or full
+  URLs, ever: see the privacy note in server/analytics.ts.
+*/
+CREATE TABLE IF NOT EXISTS analytics_events (
+  id          TEXT PRIMARY KEY,
+  name        TEXT NOT NULL,
+  actor_type  TEXT NOT NULL CHECK (actor_type IN ('member','visitor','team','system')),
+  member_id   TEXT REFERENCES members(id) ON DELETE CASCADE,
+  actor       TEXT,
+  entity_type TEXT,
+  entity_id   TEXT,
+  session_id  TEXT,
+  source      TEXT NOT NULL DEFAULT 'server',
+  metadata    JSONB NOT NULL DEFAULT '{}'::jsonb,
+  dedupe_key  TEXT UNIQUE,
+  occurred_at BIGINT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_aevents_member ON analytics_events(member_id, occurred_at) WHERE member_id IS NOT NULL;
+CREATE INDEX IF NOT EXISTS idx_aevents_name ON analytics_events(name, occurred_at);
+CREATE INDEX IF NOT EXISTS idx_aevents_time ON analytics_events(occurred_at);
+
+/* The moment tracking began, once: nothing before it was recorded, and the
+   screen says so instead of reading the silence as nobody doing anything. */
+INSERT INTO analytics_events (id, name, actor_type, source, dedupe_key, occurred_at)
+VALUES ('ev_tracking_started', 'tracking_started', 'system', 'server', 'tracking_started',
+        (EXTRACT(EPOCH FROM clock_timestamp()) * 1000)::bigint)
+ON CONFLICT DO NOTHING;
+
+/* WHAT BROUGHT A MEMBER IN, from the visit that led to their sign-up: UTM
+   fields, the referring host, the landing path. Null for everyone who signed
+   up before this was kept, which the screen shows as "Unknown". */
+ALTER TABLE members ADD COLUMN IF NOT EXISTS signup_attribution JSONB;
+ALTER TABLE login_codes ADD COLUMN IF NOT EXISTS pending_attribution JSONB;
+CREATE INDEX IF NOT EXISTS idx_members_created ON members(created_at);
+
+/*
   RESERVE A SPOT, AS GLENN REWROTE IT ON 2026-09-22: hours, an address, and a
   phone and an email in boxes of their own, in place of "What you cook", the
   single "Phone or email" box and the city. The old columns stay for the
@@ -573,7 +619,28 @@ ALTER TABLE applications ADD COLUMN IF NOT EXISTS email TEXT;
  * top-level schema build would race the first request and fail intermittently
  * on a cold start — the worst kind of bug to reproduce.
  */
+/*
+  ONE BOOT AT A TIME. beastypages.com and the CRM's own service share this
+  database and deploy from the same push, so two boots can run this at once,
+  and two CREATE ... IF NOT EXISTS for the same table collide in Postgres's
+  catalog: two migrate() calls on a fresh database failed three runs out of
+  three ("duplicate key value violates unique constraint
+  pg_type_typname_nsp_index"). A session lock makes the second wait for the
+  first, after which every statement in it is a no-op. A crash mid-way ends
+  the session, and the lock with it.
+*/
+const MIGRATE_LOCK = 72409222
+
 export async function migrate() {
-  await pool.query(SCHEMA)
-  await pool.query(MIGRATIONS)
+  const client = await pool.connect()
+  try {
+    await client.query('SELECT pg_advisory_lock($1)', [MIGRATE_LOCK])
+    await client.query(SCHEMA)
+    await client.query(MIGRATIONS)
+    // The CRM's tables, after everything they reference (members, applications).
+    await client.query(CRM_SCHEMA)
+  } finally {
+    await client.query('SELECT pg_advisory_unlock($1)', [MIGRATE_LOCK]).catch(() => {})
+    client.release()
+  }
 }

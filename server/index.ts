@@ -4,6 +4,11 @@ import { createHash, createHmac, randomBytes, randomInt, timingSafeEqual } from 
 import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
+import { crmOnApplication, mountCrm } from './crm/routes'
+import { crmOpenMode } from './crm/open'
+import { syncSnapshots } from './crm/backfill'
+import { fillGlennDefaults } from './crm/core'
+import { cleanAttribution, isBot, isTestDestination, shortHash, track } from './analytics'
 import { BRANDS, VENDORS } from '../src/data/brands'
 import { TIERS, rewardsFor } from '../src/data/membership'
 import { FALLBACK_TAX_BPS, addedTaxFor, embeddedTaxFor } from '../src/lib/tax'
@@ -45,6 +50,23 @@ for (const method of ['get', 'post', 'put', 'patch', 'delete', 'all'] as const) 
 
 const PORT = Number(process.env.PORT ?? 8787)
 const PROD = process.env.NODE_ENV === 'production'
+
+/*
+  THE CRM AT AN ADDRESS OF ITS OWN. Leon, 2026-09-22: "CRM dashboard will be
+  another url in render". The same code runs as a second Render service with
+  CRM_ONLY=1, on the same database: it answers /crm, the API the CRM calls and
+  the sign-in it needs, and sends every other page to the public site, so a
+  stray link never opens a second copy of beastypages.com there. PUBLIC_URL is
+  that site. CRM_URL, set on the public service, is where its /crm now lives.
+  The two services are written up in docs/CRM.md.
+*/
+const CRM_ONLY = process.env.CRM_ONLY === '1'
+const originOf = (v: string | undefined) => {
+  const s = String(v ?? '').trim().replace(/\/+$/, '')
+  return /^https?:\/\/[A-Za-z0-9.-]+(:\d+)?$/.test(s) ? s : ''
+}
+const PUBLIC_URL = originOf(process.env.PUBLIC_URL) || (CRM_ONLY ? 'https://beastypages.com' : '')
+const CRM_URL = CRM_ONLY ? '' : originOf(process.env.CRM_URL)
 
 /*
  * Render terminates TLS upstream and forwards over http, so without this
@@ -124,6 +146,25 @@ app.use((_req, res, next) => {
   }
   next()
 })
+
+if (CRM_ONLY) {
+  /* The API the CRM screen calls and the sign-in it offers; nothing else. */
+  const CRM_API = /^\/api\/(crm\/|health$|members\/(start|verify|signout|channels)$)/
+  app.use((req, res, next) => {
+    res.setHeader('X-Robots-Tag', 'noindex, nofollow')
+    const p = req.path
+    if (p === '/robots.txt') return res.type('text/plain').send('User-agent: *\nDisallow: /\n')
+    if (p.startsWith('/api/')) return CRM_API.test(p) ? next() : res.status(404).json({ error: 'Not on this address.' })
+    if (p === '/') return res.redirect(302, '/crm')
+    if (p === '/crm' || p === '/crm/') return next()
+    /* Files: the CRM's scripts, styles and fonts, and the businesses' icons. */
+    if (/\.[A-Za-z0-9]{2,11}$/.test(p)) return next()
+    /* Every other page is the public site's, a referral link included, so the
+       visit is credited there, on the cookie the sign-up will read. */
+    if (req.method === 'GET' || req.method === 'HEAD') return res.redirect(302, `${PUBLIC_URL}${req.originalUrl}`)
+    res.status(404).json({ error: 'Not on this address.' })
+  })
+}
 
 /*
   JSON EVERYWHERE EXCEPT THE STRIPE WEBHOOK.
@@ -282,7 +323,8 @@ if (process.env.STRIPE_SECRET_KEY && !PAYMENTS_WIRED) {
  * it, so a demo deploy can show real movement and nobody mistakes it for a
  * kitchen actually working the ticket.
  */
-const SIMULATE_KITCHEN = process.env.SIMULATE_KITCHEN === '1'
+/* Never on the CRM's own service: one timer on the shared database is enough. */
+const SIMULATE_KITCHEN = process.env.SIMULATE_KITCHEN === '1' && !CRM_ONLY
 
 /* ---------- vendor bootstrap ---------- */
 
@@ -1020,6 +1062,8 @@ app.post('/api/orders', rateLimiter(30, 10), async (req, res) => {
     BEGIN it already runs inside is the stronger guarantee.
   */
   await write()
+  /* After COMMIT, never inside it: see the note in analytics.ts. */
+  if (member) await track('order_placed', { memberId: member.id, entityType: 'order', entityId: orderId, metadata: { lines: lines.length, fulfilment } })
   res.status(201).json({ ...(await readOrder(orderId, { forCustomer: true })), cancelKey: cancelKeyFor(orderId) })
 })
 
@@ -1394,22 +1438,38 @@ app.post('/api/applications', rateLimiter(6, 3), async (req, res) => {
     social: str(b.social),
   }
 
+  const application = {
+    id: `ap_${randomBytes(8).toString('hex')}`,
+    business,
+    cuisine: lead.cuisine || null,
+    contact,
+    city: lead.city || null,
+    social: lead.social || null,
+    hours: lead.hours || null,
+    address: lead.address || null,
+    phone: phone || null,
+    email: email || null,
+    created_at: Date.now(),
+  }
   await db.prepare(
     `INSERT INTO applications (id, business, cuisine, contact, city, social, hours, address, phone, email, created_at)
      VALUES (?,?,?,?,?,?,?,?,?,?,?)`,
   ).run(
-    `ap_${randomBytes(8).toString('hex')}`,
-    business,
-    lead.cuisine || null,
-    contact,
-    lead.city || null,
-    lead.social || null,
-    lead.hours || null,
-    lead.address || null,
-    phone || null,
-    email || null,
-    Date.now(),
+    application.id,
+    application.business,
+    application.cuisine,
+    application.contact,
+    application.city,
+    application.social,
+    application.hours,
+    application.address,
+    application.phone,
+    application.email,
+    application.created_at,
   )
+  /* Into the CRM as a lead, credited to the referral link that brought them
+     if there was one. Never awaited into the response: it cannot fail this. */
+  void crmOnApplication(req, application)
 
   notifyLead(lead)
 
@@ -1694,6 +1754,14 @@ app.get('/api/applications', rateLimiter(20, 10), async (req, res) => {
 
 /* ---------- calendar ---------- */
 
+/** The operator token typed into the CRM screen, compared in constant time. */
+function isOperatorToken(sent: string): boolean {
+  if (OPERATOR_TOKEN.length < 16) return false
+  const a = Buffer.from(sent)
+  const b = Buffer.from(OPERATOR_TOKEN)
+  return a.length === b.length && timingSafeEqual(a, b)
+}
+
 /** Reused by the two operator-only routes below. */
 function isOperator(req: Request): boolean {
   if (OPERATOR_TOKEN.length < 16) return false
@@ -1971,7 +2039,7 @@ const hashToken = (t: string) => createHash('sha256').update(t).digest('hex')
   dependency is its own risk. httpOnly keeps it away from any script; SameSite
   Lax still sends it on the top-level navigation a shared referral link is.
 */
-async function startSession(res: Response, memberId: string): Promise<void> {
+async function startSession(res: Response, memberId: string): Promise<string> {
   const token = randomBytes(32).toString('base64url')
   const now = Date.now()
   await db.prepare(
@@ -1995,6 +2063,7 @@ async function startSession(res: Response, memberId: string): Promise<void> {
     if (PROD) bits.push('Secure')
     res.setHeader('Set-Cookie', bits.join('; '))
   }
+  return shortHash(token)
 }
 
 function readCookie(req: Request, name: string): string | null {
@@ -2630,6 +2699,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   */
   const name = str(b.name)
   if (name.length < 2) return res.status(400).json({ error: 'Your name is required.' })
+  /* What brought them here, reduced to what is safe to keep (analytics.ts). */
+  const attribution = cleanAttribution(b.attribution, OWN_HOSTS)
 
   const existing = await db
     .prepare(
@@ -2639,6 +2710,19 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     )
     .get(destination) as { id: string } | undefined
   const purpose = existing ? 'signin' : 'signup'
+
+  /*
+    SIGN-IN ONLY, for the CRM's own sign-in card (2026-09-22): the team uses
+    the account they already have, and an address with none is not made into
+    one there. The answer is the same either way, so the card cannot be used
+    to learn who is a member; only a real member is sent a code, and the pause
+    stands in for the send so the reply takes about as long. The CRM at its own
+    address is always sign-in only.
+  */
+  if (!existing && (CRM_ONLY || b.signinOnly === true)) {
+    await new Promise((r) => setTimeout(r, 300 + Math.random() * 500))
+    return res.status(202).json({ sent: true, delivered: true, channel, minutes: CODE_TTL_MS / 60000 })
+  }
 
   const now = Date.now()
 
@@ -2677,7 +2761,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   ) {
     await db.prepare(
       `UPDATE login_codes SET
-         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?, pending_via = ?
+         pending_name = ?, pending_instagram = ?, pending_phone = ?, pending_ref = ?, pending_via = ?,
+         pending_attribution = COALESCE(?::jsonb, pending_attribution)
        WHERE destination = ?`,
     ).run(
       name || null,
@@ -2685,6 +2770,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
       channel === 'sms' ? destination : str(b.phone) || null,
       str(b.ref).toUpperCase() || null,
       viaFrom(b.via),
+      attribution ? JSON.stringify(attribution) : null,
       destination,
     )
     return res.status(202).json({
@@ -2700,8 +2786,8 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
   await db.prepare(
     `INSERT INTO login_codes
        (destination, channel, code_hash, purpose, pending_name, pending_instagram, pending_phone, pending_ref,
-        pending_via, attempts, created_at, expires_at)
-     VALUES (?,?,?,?,?,?,?,?,?,0,?,?)
+        pending_via, pending_attribution, attempts, created_at, expires_at)
+     VALUES (?,?,?,?,?,?,?,?,?,?::jsonb,0,?,?)
      ON CONFLICT(destination) DO UPDATE SET
        channel = excluded.channel,
        code_hash = excluded.code_hash,
@@ -2711,6 +2797,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
        pending_phone = excluded.pending_phone,
        pending_ref = excluded.pending_ref,
        pending_via = excluded.pending_via,
+       pending_attribution = excluded.pending_attribution,
        attempts = 0,
        created_at = excluded.created_at,
        expires_at = excluded.expires_at`,
@@ -2724,6 +2811,7 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
     channel === 'sms' ? destination : str(b.phone) || null,
     str(b.ref).toUpperCase() || null,
     viaFrom(b.via),
+    attribution ? JSON.stringify(attribution) : null,
     now,
     now + CODE_TTL_MS,
   )
@@ -2738,6 +2826,11 @@ app.post('/api/members/start', rateLimiter(8, 4), async (req, res) => {
         : await sendLoginCodeSms(destination, code, purpose)
   /* Recorded so a reused start inside the window can answer honestly. */
   await db.prepare('UPDATE login_codes SET delivered = ? WHERE destination = ?').run(delivered, destination)
+  /* A sign-up asked for, by this device: the funnel's second step. Never the
+     number or address itself. */
+  if (purpose === 'signup' && !isTestDestination(destination)) {
+    await track('signup_started', { actor: visitorOf(req, res), metadata: { channel, delivered } })
+  }
   res.status(202).json({ sent: true, delivered, channel, minutes: CODE_TTL_MS / 60000 })
 })
 
@@ -2772,6 +2865,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
         pending_phone: string | null
         pending_ref: string | null
         pending_via: string | null
+        pending_attribution: Record<string, unknown> | null
         attempts: number
         expires_at: number
       }
@@ -2806,14 +2900,22 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     return dead()
   }
 
-  await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
-
   const existing = await db
     .prepare(byPhone ? 'SELECT * FROM members WHERE phone = ?' : 'SELECT * FROM members WHERE email = ?')
     .get(destination) as MemberRow | undefined
 
+  /* Sign-in only (see the start route): a code that would make an account is
+     left unspent, so its owner can still finish joining on the site. Only the
+     holder of a right code ever reads this answer. */
+  if (!existing && (CRM_ONLY || req.body.signinOnly === true)) {
+    return res.status(403).json({ error: 'That has no BEASTY account yet. Join on beastypages.com first, then sign in here.' })
+  }
+
+  await db.prepare('DELETE FROM login_codes WHERE destination = ?').run(destination)
+
   if (existing) {
-    await startSession(res, existing.id)
+    const sessionId = await startSession(res, existing.id)
+    await track('user_signed_in', { memberId: existing.id, sessionId, metadata: { channel: byPhone ? 'sms' : 'email' } })
     return res.json(await memberPayload(existing))
   }
 
@@ -2826,8 +2928,8 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 
   const id = `mb_${randomBytes(8).toString('hex')}`
   await db.prepare(
-    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, created_at)
-     VALUES (?,?,?,?,?,?,?,?,?)`,
+    `INSERT INTO members (id, name, email, instagram, phone, referral_code, referred_by, joined_via, signup_attribution, created_at)
+     VALUES (?,?,?,?,?,?,?,?,?::jsonb,?)`,
   ).run(
     id,
     row.pending_name ?? 'Member',
@@ -2839,12 +2941,23 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
     await newReferralCode(),
     referrer?.id ?? null,
     viaFrom(row.pending_via),
+    row.pending_attribution ? JSON.stringify(row.pending_attribution) : null,
     Date.now(),
   )
   // Their referrer may have just crossed a milestone.
   if (referrer) await syncRaffleTickets(referrer.id)
 
-  await startSession(res, id)
+  const sessionId = await startSession(res, id)
+  await track('user_signed_up', {
+    memberId: id,
+    sessionId,
+    metadata: {
+      channel: byPhone ? 'sms' : 'email',
+      utm_source: String(row.pending_attribution?.utm_source ?? ''),
+      utm_campaign: String(row.pending_attribution?.utm_campaign ?? ''),
+    },
+  })
+  if (referrer) await track('friend_joined', { memberId: referrer.id, entityType: 'member', entityId: id })
   const fresh = await db.prepare('SELECT * FROM members WHERE id = ?').get(id) as MemberRow
   res.status(201).json(await memberPayload(fresh))
 })
@@ -2853,6 +2966,7 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
 app.get('/api/members/me', rateLimiter(60, 20), async (req, res) => {
   const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  void track('app_opened', { memberId: m.id, source: 'web' })
   res.json(await memberPayload(m))
 })
 
@@ -2977,6 +3091,7 @@ app.get('/api/members/tickets', rateLimiter(60, 20), async (req, res) => {
 app.get('/api/members/pass', rateLimiter(60, 20), async (req, res) => {
   const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
+  void track('pass_opened', { memberId: m.id, source: 'web' })
   res.set('Cache-Control', 'no-store').json({ ...passTokenFor(m.id), windowMs: PASS_WINDOW_MS })
 })
 
@@ -3026,6 +3141,7 @@ app.post('/api/pass/verify', rateLimiter(120, 40), async (req, res) => {
     }
     throw err
   }
+  await track('pass_scanned', { memberId: m.id, entityType: 'vendor', entityId: vendorId ?? 'operator', metadata: { by: vendorId ? 'shop' : 'operator' } })
   const tier = TIERS.find((t) => t.id === m.tier)
   const active = !!tier && m.tier_status === 'active'
   res.json({
@@ -3038,7 +3154,9 @@ app.post('/api/pass/verify', rateLimiter(120, 40), async (req, res) => {
 /** Sign out on this device. */
 app.post('/api/members/signout', rateLimiter(20, 10), async (req, res) => {
   const token = readCookie(req, SESSION_COOKIE)
+  const m = token ? await memberFromRequest(req) : null
   if (token) await db.prepare('DELETE FROM member_sessions WHERE token_hash = ?').run(hashToken(token))
+  if (m) await track('user_signed_out', { memberId: m.id, sessionId: shortHash(token!) })
   res.setHeader('Set-Cookie', `${SESSION_COOKIE}=; Max-Age=0; Path=/; HttpOnly; SameSite=Lax`)
   res.json({ ok: true })
 })
@@ -3076,6 +3194,7 @@ app.post('/api/members/tier', rateLimiter(12, 6), async (req, res) => {
   await db
     .prepare('UPDATE members SET tier = ?, tier_status = ?, tier_since = ?, tier_interval = ? WHERE id = ?')
     .run(tier.id, 'pending', Date.now(), interval, m.id)
+  await track('membership_chosen', { memberId: m.id, metadata: { tier: tier.id, interval } })
 
   const row = await db.prepare('SELECT * FROM members WHERE id = ?').get(m.id) as MemberRow
   res.json({
@@ -3126,6 +3245,48 @@ function actorFor(req: Request, res: Response, memberId: string | null): string 
   return `d:${hashToken(device)}`
 }
 
+/** Hosts that are BEASTY itself, so a click from one page to another is not a referral. */
+const OWN_HOSTS = ['beastypages.com', 'onrender.com', 'localhost']
+
+/** A visitor for analytics: a short hash of the device cookie (set here when missing). */
+function visitorOf(req: Request, res: Response): string {
+  return shortHash(actorFor(req, res, null))
+}
+
+/*
+  A VISIT, from the page itself: navigator.sendBeacon on the first load of the
+  day, carrying what brought the visitor (UTM fields, the referring host, the
+  landing path). One row per device per day, none for crawlers or for signed-in
+  members (their visits are app_opened). It is the funnel's first step and the
+  only record of where a future member first came from.
+*/
+app.post('/api/t/visit', rateLimiter(30, 10), express.text({ type: '*/*', limit: '4kb' }), async (req, res) => {
+  if (isBot(req.get('user-agent')) || (await memberFromRequest(req))) return res.status(204).end()
+  // Before the reply goes out: this may set the device cookie.
+  const visitor = visitorOf(req, res)
+  res.status(204).end()
+  let body: unknown = req.body
+  if (typeof body === 'string') {
+    try {
+      body = JSON.parse(body)
+    } catch {
+      return
+    }
+  }
+  const a = cleanAttribution(isObj(body) ? body.attribution : null, OWN_HOSTS)
+  await track('site_visited', {
+    actor: visitor,
+    source: 'web',
+    metadata: {
+      landing: a?.landing,
+      referrer: a?.referrer,
+      utm_source: a?.utm_source,
+      utm_medium: a?.utm_medium,
+      utm_campaign: a?.utm_campaign,
+    },
+  })
+})
+
 async function signalCounts(brandId: string, actor: string) {
   const rows = await db
     .prepare('SELECT kind, COUNT(*) AS n FROM brand_signals WHERE brand_id = ? GROUP BY kind')
@@ -3149,6 +3310,9 @@ app.get('/api/brands/:id/signals', rateLimiter(240, 60), async (req, res) => {
   const brandId = String(req.params.id)
   const m = await memberFromRequest(req)
   const actor = actorFor(req, res, m?.id ?? null)
+  /* Only the business page asks for these counts, so this is a page opened —
+     kept once a day per business, and only for members. */
+  if (m && BRANDS.some((b) => b.id === brandId)) void track('business_viewed', { memberId: m.id, entityType: 'business', entityId: brandId, source: 'web' })
   res.json(await signalCounts(brandId, actor))
 })
 
@@ -3172,6 +3336,7 @@ app.post('/api/brands/:id/signals/:kind', rateLimiter(60, 20), async (req, res) 
 
   if (existing && kind !== 'share') {
     await db.prepare('DELETE FROM brand_signals WHERE id = ?').run(existing.id)
+    if (m) await track(kind === 'like' ? 'business_unliked' : 'business_unsaved', { memberId: m.id, entityType: 'business', entityId: brandId })
   } else if (!existing) {
     await db
       .prepare(
@@ -3180,6 +3345,13 @@ app.post('/api/brands/:id/signals/:kind', rateLimiter(60, 20), async (req, res) 
          ON CONFLICT (brand_id, kind, actor) DO NOTHING`,
       )
       .run(`bs_${randomBytes(8).toString('hex')}`, brandId, kind, actor, m?.id ?? null, Date.now())
+    if (m) {
+      await track(kind === 'like' ? 'business_liked' : kind === 'share' ? 'business_shared' : 'business_saved', {
+        memberId: m.id,
+        entityType: 'business',
+        entityId: brandId,
+      })
+    }
   }
   res.json(await signalCounts(brandId, actor))
 })
@@ -3313,6 +3485,37 @@ app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
   }
 })
 
+/*
+  THE CRM: /api/crm/*, the /r/<slug> referral link and the /crm screen's
+  headers. Mounted here, after every other API route and before the /api 404
+  and the page catch-alls, so none of its paths can be swallowed by them.
+*/
+mountCrm(
+  app,
+  {
+    isOperator,
+    isOperatorToken,
+    memberFromRequest: (req) => memberFromRequest(req),
+    readCookie,
+    secret: PASS_SECRET,
+    prod: PROD,
+    /* CRM_OPEN=1 opens /crm without the key, as Glenn. Never in production. */
+    open: crmOpenMode(process.env, PROD),
+    /* Where a referral link or its QR code has to open: the public site. */
+    publicUrl: PUBLIC_URL,
+  },
+  rateLimiter,
+)
+if (process.env.CRM_OPEN === '1') {
+  console.log(PROD ? 'crm: CRM_OPEN is set but ignored in production; the key is still required' : 'crm: open mode, /crm needs no key and everyone is Glenn (not production)')
+}
+app.get('/crm', (req, res, next) => {
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow')
+  /* Its own address, once it has one: the old one keeps working as a door. */
+  if (CRM_URL) return res.redirect(302, `${CRM_URL}${req.originalUrl}`)
+  next()
+})
+
 /**
  * An unmatched /api path is an error, not a page. The SPA catch-all below used
  * to answer it with index.html and a 200, so a client calling a typo'd or
@@ -3414,6 +3617,19 @@ app.use((err: unknown, _req: express.Request, res: express.Response, next: expre
 async function start() {
   await migrate()
   await seedVendors()
+  /* The CRM's copies of each listing's name, city and contacts, refreshed from
+     the repo's data. Failing here must not keep the site down. */
+  try {
+    const sync = await syncSnapshots()
+    if (sync.updated || sync.missing.length) {
+      console.log(`crm: refreshed ${sync.updated} of ${sync.checked} lead snapshots; ${sync.missing.length} point at a business no longer listed`)
+    }
+    /* Every blank "who" is Glenn (Leon's rule, 2026-09-22). Only fills blanks. */
+    const filled = await fillGlennDefaults()
+    if (filled.referrals || filled.owners) console.log(`crm: Glenn filled ${filled.referrals} blank referrals and ${filled.owners} blank owners`)
+  } catch (err) {
+    console.error('crm: snapshot refresh failed:', String((err as Error).message ?? err).slice(0, 200))
+  }
     app.listen(PORT, async () => {
     console.log(`api + static on http://localhost:${PORT}`)
     if (!PAYMENTS_WIRED) {
