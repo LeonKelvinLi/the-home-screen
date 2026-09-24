@@ -10141,8 +10141,20 @@ textarea {
 
 /* TAP HERE in his markup: bold and underlined in the card's own ink, so it
    reads as the thing to tap on the white card and on the dark one. */
+/*
+  The earning row in BEASTY yellow capitals, and its TAP HERE yellow too:
+  Glenn's markup of 2026-09-24, "changing the font to yellow and capitalize it
+  like you see here. As well as tap here in yellow". Only the row with a link
+  (it is on the dark BEASTY PASS card, where the yellow reads).
+*/
+.members-perk.has-link .members-perk-label {
+  color: #f6d800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
 .members-perk-link {
-  color: inherit;
+  color: #f6d800;
   font-weight: 800;
   text-decoration: underline;
   text-underline-offset: 2px;

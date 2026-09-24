@@ -222,6 +222,44 @@ console.log('earn money    :', JSON.stringify(earn))
 if (!earn.row) fails.push('the BEASTY PASS card has no "Eligible to earn money" row')
 if (earn.text !== 'TAP HERE' || earn.href !== '/money') fails.push(`TAP HERE should open MAKE $ at /money, found ${JSON.stringify(earn)}`)
 
+/* His markup of 2026-09-24: the row in yellow capitals, TAP HERE yellow. */
+const look = await p.evaluate(() => {
+  const card = [...document.querySelectorAll('.members-plan')].find((c) => /BEASTY\s*PASS/.test(c.querySelector('.members-plan-name')?.textContent || ''))
+  const label = [...(card?.querySelectorAll('.members-perk-label') ?? [])].find((l) => /Eligible to earn money/i.test(l.textContent || ''))
+  const a = card?.querySelector('.members-perk-link')
+  const cs = label && getComputedStyle(label)
+  return { labelColor: cs?.color, upper: cs?.textTransform, linkColor: a && getComputedStyle(a).color }
+})
+console.log('earn look     :', JSON.stringify(look))
+if (look.labelColor !== 'rgb(246, 216, 0)' || look.upper !== 'uppercase' || look.linkColor !== 'rgb(246, 216, 0)') fails.push(`the earning row should be yellow capitals with TAP HERE yellow, found ${JSON.stringify(look)}`)
+
+/*
+  AND IT WORKS THE SECOND TIME. Glenn, 2026-09-24: "It only works the first
+  time you do it". His path: TAP HERE, close MAKE $, open Members from the
+  dialer (the address stays /money, marked "in the app"), TAP HERE again.
+*/
+const makeOpen = () => p.evaluate(() => /Make some money|MAKE \$/i.test(document.querySelector('.dialer-panel, [role="dialog"]')?.textContent || ''))
+const tapEarn = async () => {
+  if (!(await p.locator('.members-perk-link').first().isVisible().catch(() => false))) {
+    await p.locator('.members-perk-head', { hasText: /Eligible to earn money/i }).first().click()
+    await p.waitForTimeout(300)
+  }
+  await p.locator('.members-perk-link').first().click()
+  for (let i = 0; i < 40 && !(await makeOpen().catch(() => false)); i++) await p.waitForTimeout(250)
+  return makeOpen().catch(() => false)
+}
+const first = await tapEarn()
+await p.locator('[aria-label="Close"], .dialer-panel-close').first().click({ timeout: 4000 }).catch(() => p.keyboard.press('Escape'))
+await p.waitForTimeout(1000)
+await p.click('[aria-label="8"]').catch(() => {})
+await p.waitForTimeout(400)
+await p.locator('text=MEMBERS').first().click({ timeout: 5000 }).catch(() => {})
+await p.waitForSelector('.members-plan', { timeout: 15000 }).catch(() => {})
+const second = await tapEarn()
+console.log('tap here twice:', JSON.stringify({ first, second, url: p.url().replace(/^https?:\/\/[^/]+/, '') }))
+if (!first) fails.push('TAP HERE did not open MAKE $')
+if (!second) fails.push('TAP HERE opened MAKE $ once, but not the second time, from Members opened in the app')
+
 if (fails.length) { console.log('\nFAIL: ' + fails.join('; ')); await done(1) }
 console.log('\nPASS: two passes, every perk on one line, opening one explains it and it stays open.')
 await done(0)

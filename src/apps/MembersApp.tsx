@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import type { MouseEvent } from 'react'
 import { AppChrome } from './AppChrome'
 import { ShareMark } from './dialer/glyphs'
 import { SHARE_MEMBERS, shareOrCopy, shareUrl } from '../lib/share'
@@ -92,10 +93,33 @@ const OFFER_PARTNER = WITH_OFFERS[0]?.name ?? ''
  * it and its state resets. That is the About page glitch Glenn reported, and
  * tools/audit-nested-components.mjs now fails the build over it.
  */
+/*
+  A PERK'S LINK OPENS ITS PAGE EVERY TIME, not only the first. Glenn,
+  2026-09-24: "I found a glitch when you press tap here. It only works the
+  first time". TAP HERE goes to /money, whose MAKE $ panel opens on the landing
+  screen. After that first visit, closing the panel and opening Members from
+  the dialer leaves the address on /money with its history entry marked "in
+  the app", so the second tap was a link to the address already showing: the
+  browser reloaded it, the app saw "in the app" and went straight to the home
+  screen, and MAKE $ never opened. Clearing that mark before the reload makes
+  the second tap a first arrival, like the first. A link to any other address
+  is left to the browser.
+*/
+const openLinkedPage = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
+  if (new URL(href, window.location.href).pathname !== window.location.pathname) return
+  e.preventDefault()
+  try {
+    window.history.replaceState(null, '', window.location.href)
+  } catch {
+    /* no history API: the reload below still opens the page */
+  }
+  window.location.reload()
+}
+
 function PerkRow({ perk }: { perk: Perk }) {
   const [open, setOpen] = useState(false)
   return (
-    <li className={`members-perk${open ? ' is-open' : ''}`}>
+    <li className={`members-perk${open ? ' is-open' : ''}${perk.link ? ' has-link' : ''}`}>
       <button
         type="button"
         className="members-perk-head"
@@ -120,7 +144,7 @@ function PerkRow({ perk }: { perk: Perk }) {
           {perk.link && (
             <>
               {' '}
-              <a className="members-perk-link" href={perk.link.href}>
+              <a className="members-perk-link" href={perk.link.href} onClick={(e) => openLinkedPage(e, perk.link!.href)}>
                 {perk.link.label}
               </a>
             </>
