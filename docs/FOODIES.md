@@ -58,7 +58,7 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 20 Sep | @peggy_shoo | Jonny's Italian Ice & Cream, Sunnyvale | **Yes.** On Jonny's page as a review |
 | 20 Sep | @sherryeatworld (Sherry Shi) | Pork and chive dumplings at four shops in Chinatown, New York, posted August 2026 | No, and not the Bay Area |
 | 22 Sep | @eighty6ix_ (What's Going On, Bay Area & Beyond) | Infin8 Ilocos Empanada (@infin8ilocosempanada), a Filipino-owned business in East San Jose making Ilocos-style empanadas with Chef Crischelle. "Part 1", posted 17 April 2025 | No |
-| 22 Sep | @grubwitmike | Cravingz, Redwood City: an ice cream sandwich and a peach cobbler milkshake. Sent with Cravingz's own messages, without the word | **Yes.** For Cravingz's page as a review, once Leon says to download it |
+| 22 Sep | @grubwitmike | Cravingz, Redwood City: an ice cream sandwich and a peach cobbler milkshake. Sent with Cravingz's own messages, without the word | **Yes.** On Cravingz's page as a review (16s–40s of 89s), downloaded on 23 Sep with Leon's go-ahead |
 | 23 Sep | @hella._local.mo (Hella Local Mo) | A flash sale at The Burger Spot Co. | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
@@ -75,7 +75,7 @@ instagram.com/bayarea_fooddreamz.
 From `public/clips/CREDITS.md`: @antoinetterzz (Belly, Deli Board), @thespoonlist (The
 Local), @peggy_shoo (Jonny's Italian Ice), @samserved (Lovely's Burgers, sent with the
 listing rather than as a Foodie), @oaktowngrubhub (Emy's
-Cannoli), @grubwitmike (Phosho Dough), @justmostie (Paulo Sausage Co),
+Cannoli), @grubwitmike (Phosho Dough, Cravingz), @justmostie (Paulo Sausage Co),
 @thesnacksensei (The Yard, Jojo's Hot Chicken, Golden Gate Market & Deli), @volha_creative (Glasshouzz),
 @itsmeloslab (Ofie's Kitchen), @smackinfood (House of Raha), @thetastebud
 (Lucky Three Seven) and Jay Chan (Cambodian Street Food).

@@ -3476,6 +3476,19 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '826 Main St, Redwood City, CA',
     site: 'https://app.squareup.com/gift/MLQ54M0TS4Q84/order',
     siteCta: 'Buy a gift card',
+    /* @grubwitmike's review, the reel Glenn sent at 10:06 pm on 2026-09-22
+       beside this listing; Leon said to download it on 2026-09-23. 16s-40s
+       of 89s: the shop's neon bear under his "ICE CREAM SANDWICH / PEACH
+       COBBLER MILKSHAKE / REDWOOD CITY, CA" title, then the shake tasted
+       outside. A food reviewer's film, not the shop's, credited to him. */
+    clip: {
+      src: '/clips/cravingz.mp4',
+      poster: '/clips/cravingz-poster.webp',
+      href: 'https://www.instagram.com/reel/DAmWXRISz7P/',
+      credit: 'Filmed by @grubwitmike',
+      platform: 'Instagram',
+      by: 'grubwitmike',
+    },
     contactOnly:
       'Cravingz was created to bring back that feeling of hearing the ice cream truck coming down the street—the excitement, the nostalgia, and knowing you were about to get your favorite treat—only elevated.',
     panels: [
