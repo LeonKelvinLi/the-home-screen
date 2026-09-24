@@ -32,8 +32,12 @@ export interface ShellApi {
    * Search uses it: typing "Oakland" should take you to Oakland, which is the
    * thing a customer means by searching for a place. The shell owns the page
    * because the home screen is behind the app window, not inside it.
+   *
+   * With an app id, the page of that city its tile is on — a business page's
+   * city button lands on the page with the business, Services or a yellow
+   * sheet included, rather than the city's first page.
    */
-  goToCity: (city: string) => void
+  goToCity: (city: string, appId?: string) => void
 }
 
 type Phase = 'home' | 'opening' | 'open' | 'closing' | 'switcher'
@@ -344,14 +348,14 @@ export function Device({ renderApp, openOnMount }: Props) {
     A city the home screen has been asked to move to, held here rather than in
     HomeScreen because the request comes from an app on top of it.
   */
-  const [jumpCity, setJumpCity] = useState<string | null>(null)
+  const [jumpCity, setJumpCity] = useState<{ city: string; appId?: string } | null>(null)
 
   const api: ShellApi = {
     openApp: (id) => openApp(id),
     closeApp,
     currentAppId: appId,
-    goToCity: (city) => {
-      setJumpCity(city)
+    goToCity: (city, appId) => {
+      setJumpCity({ city, appId })
       closeApp()
     },
   }
@@ -385,7 +389,8 @@ export function Device({ renderApp, openOnMount }: Props) {
               receding={homeReceding}
               hidden={homeHidden}
               inert={inSwitcher}
-              jumpToCity={jumpCity}
+              jumpToCity={jumpCity?.city}
+              jumpToApp={jumpCity?.appId}
               onJumped={() => setJumpCity(null)}
             />
 

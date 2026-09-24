@@ -3845,6 +3845,79 @@ textarea {
   color: var(--muted);
 }
 
+.brand-cities {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 14px 16px 2px;
+}
+
+/* A row like the address card above it, and like Search's city rows, whose
+   pin and wording ("Go to the Oakland page") it repeats on purpose: the same
+   place, reached the same way from either screen. */
+.brand-city {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 56px;
+  padding: 10px 14px;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.brand-city:active {
+  opacity: 0.7;
+}
+
+.brand-city:focus-visible {
+  outline: 2px solid #1da345;
+  outline-offset: 2px;
+}
+
+.brand-city-mark {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  border-radius: 10px;
+  background: rgba(29, 163, 69, 0.12);
+  color: #1da345;
+}
+
+.brand-city-text {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.brand-city-text strong {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.brand-city-text em {
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1.3;
+  color: var(--muted);
+}
+
+.brand-city-chev {
+  flex: 0 0 auto;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
 /* Auto width and no stretch: the shared .btn-secondary is a full-width block
    button, which here would push the address onto its own line and turn a row
    into a card. */

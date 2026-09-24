@@ -30,6 +30,7 @@
  */
 
 import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from './roster'
+import { CITY_PAGES } from './cities'
 
 /*
   The flagship pages are DERIVED from the roster arrays rather than typed out
@@ -1188,4 +1189,27 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs
+}
+
+/*
+  WHICH CITY PAGES A BUSINESS'S TILE IS ON, for the "back to the city" button
+  on its page. Glenn, 2026-09-23: "when you search for their business and you
+  press home it takes you back to the BEASTY • Goods homepage. It would work
+  best if you had the option to go back to where that city of the business is.
+  That way you can look for other restaurants from that city and not having to
+  keep searching the city."
+
+  Read from the seats, not from the address: a business belongs to the pages it
+  is seated on (The Company Barber has two, BEASTY's own pages are not a city),
+  and an address can name a town that has no page. In the order of his city
+  list, so a business on two pages always offers them the same way round.
+*/
+const citySlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
+
+export function citiesOf(brandId: string): string[] {
+  const seated = new Set<string>()
+  for (const [slot, id] of Object.entries(CITY_PLACEMENTS)) {
+    if (id === brandId) seated.add(slot.replace(/-[a-z0-9]+-\d+$/, ''))
+  }
+  return CITY_PAGES.filter((c) => seated.has(citySlug(c)))
 }

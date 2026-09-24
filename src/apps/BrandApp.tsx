@@ -6,6 +6,7 @@ import { HalalMark, isHalal } from '../ios/HalalMark'
 import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
+import { citiesOf } from '../data/placements'
 import { readableOn } from '../ios/contrast'
 import { isFavorite, toggleFavorite } from '../lib/favorites'
 import { EMPTY_SIGNALS, formatCount, readSignals, sendSignal } from '../lib/signals'
@@ -145,6 +146,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   */
   const tier = brand.tier ?? 3
   const film = tier >= 3 ? brand.clip?.src : undefined
+  /* The city pages its tile is on — see citiesOf, and the button below. */
+  const cities = citiesOf(brand.id)
   const menuCount = brand.menu.reduce((n, c) => n + c.items.length, 0)
 
   const inCart = cart.countForBrand(brand.id)
@@ -511,6 +514,40 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               it in its own block further down. */}
           {brand.phone && !brand.contactOnly && !brand.quoteOnly && tier === 2 && (
             <p className="brand-call is-text">{brand.phone}</p>
+          )}
+
+          {/*
+            BACK TO ITS CITY, on every business page with a city tile. Glenn,
+            2026-09-23: from Search, the back button went Home to BEASTY ·
+            Goods, and "it would work best if you had the option to go back to
+            where that city of the business is", to look through that city's
+            other restaurants without searching for the city again.
+
+            Home stays the back button, because that is where a page opened
+            from BEASTY's own sheets should return. This is the second way out,
+            under where and when, and it lands on the page the tile is on:
+            Fremont's Services page for a barber, a yellow sheet for a free
+            listing. One row per city a business sits in, in his city order.
+          */}
+          {cities.length > 0 && (
+            <div className="brand-cities">
+              {cities.map((c) => (
+                <button className="brand-city" key={c} onClick={() => api.goToCity(c, brand.id)}>
+                  <span className="brand-city-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                      <path d="M12 2.2a7.2 7.2 0 0 1 7.2 7.2c0 4.9-5.4 11-6.6 12.3a.8.8 0 0 1-1.2 0C10.2 20.4 4.8 14.3 4.8 9.4A7.2 7.2 0 0 1 12 2.2Zm0 4.4a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z" />
+                    </svg>
+                  </span>
+                  <span className="brand-city-text">
+                    <strong>More in {c}</strong>
+                    <em>Go to the {c} page</em>
+                  </span>
+                  <svg className="brand-city-chev" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                    <path d="m9 5 7 7-7 7" />
+                  </svg>
+                </button>
+              ))}
+            </div>
           )}
 
           {brand.pricesEstimated && (

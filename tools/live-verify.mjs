@@ -567,6 +567,9 @@ for (const [s, what] of [
   ['"berkeley-goods2-2":"b_goldbeandurant"', 'Gold Bean Durant on the Berkeley yellow sheet'],
   ['icon-glow-green', 'the green glow keyframes'],
   ['Eligible to earn money', 'the BEASTY PASS row'],
+  /* 2026-09-23, evening: the way back to a business's city. */
+  ['"More in ",', "the city rows on a business page"],
+  ['brand-city-mark', "the city row's pin"],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
   ['glow:"blue",beastyOwner:!0', "the Nipsey blue glow and the owner flag on Janelle's page"],
   ['icon:"p-lo-2"', "P-Lo's headshot"],

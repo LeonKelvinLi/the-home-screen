@@ -61,11 +61,13 @@ interface Props {
   inert?: boolean
   /** A city name to move to, set when Search asks for one. */
   jumpToCity?: string | null
+  /** With it, the app whose tile the page must hold — see ShellApi.goToCity. */
+  jumpToApp?: string
   /** Called once the jump has been made, so the request is not repeated. */
   onJumped?: () => void
 }
 
-export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJumped }: Props) {
+export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpToApp, onJumped }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
   /*
@@ -521,11 +523,15 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, onJump
   */
   useEffect(() => {
     if (!jumpToCity) return
-    const i = pages.findIndex((p) => p.city?.toLowerCase() === jumpToCity.toLowerCase())
+    const inCity = (p: Page) => p.city?.toLowerCase() === jumpToCity.toLowerCase()
+    /* A business page asking for its own city wants the page its tile is on;
+       a city with no such tile (or Search, which names no app) gets its first. */
+    const withApp = jumpToApp ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp)) : -1
+    const i = withApp >= 0 ? withApp : pages.findIndex(inCity)
     if (i >= 0) setPage(i)
     onJumped?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [jumpToCity, pages.length])
+  }, [jumpToCity, jumpToApp, pages.length])
 
   /*
     Say which page we landed on, wherever the turn came from — a dot, an arrow
