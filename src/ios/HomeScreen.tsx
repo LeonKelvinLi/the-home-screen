@@ -819,6 +819,42 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     goToPage(to, onDots || !!target?.closest('.home-pager'))
   }
 
+  /*
+    THE FIRST-VISIT BUBBLE. Glenn, 2026-09-25: "When users 1st visit the Home
+    Screen, after a few seconds have a context bubble appear to give them an
+    idea at what they are looking at. You will be surprised how slow people
+    are." His words, above the Search pill they point at. Three seconds after
+    the home screen is actually in front, once per device: closing it, or
+    tapping Search, means it has done its job.
+  */
+  const HINT_KEY = 'fb.homeHint.v1'
+  const [hint, setHint] = useState(false)
+  const hintSeen = () => {
+    /* An automated browser (the site's own checks) is not a first-time
+       visitor, and the bubble would sit over the tiles those checks tap.
+       tools/audit-landing-asks.mjs turns it back on to check the bubble itself. */
+    if (typeof navigator !== 'undefined' && navigator.webdriver) return true
+    try {
+      return localStorage.getItem(HINT_KEY) === '1'
+    } catch {
+      return false
+    }
+  }
+  const dismissHint = () => {
+    setHint(false)
+    try {
+      localStorage.setItem(HINT_KEY, '1')
+    } catch {
+      /* storage blocked: it may show again next visit, which is harmless */
+    }
+  }
+  useEffect(() => {
+    if (hidden || receding || inert || hint || hintSeen()) return
+    const t = window.setTimeout(() => setHint(true), 3000)
+    return () => window.clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hidden, receding, inert])
+
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
     /* Friend requests waiting for an answer (apps/Friends.tsx). */
@@ -1059,6 +1095,30 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
 
       {/* iOS 16+ puts a Spotlight pill between the dots and the dock. */}
       <div className="spotlight-row">
+        {hint && !hidden && !receding && !inert && (
+          <div className="home-hint" role="note" onClick={dismissHint}>
+            <p>
+              Type the city in the search bar below to find discounts offered by local Goods &amp; Service
+              business Affiliates of Beasty Pages.
+            </p>
+            <p>
+              In the mood for something new or just looking to find some great exclusive deals? The discovery
+              and savings are endless.
+            </p>
+            <strong>Just Tap Away.&trade;</strong>
+            <button
+              type="button"
+              className="home-hint-close"
+              aria-label="Close"
+              onClick={(e) => {
+                e.stopPropagation()
+                dismissHint()
+              }}
+            >
+              &times;
+            </button>
+          </div>
+        )}
         {/*
           Back to the landing screen, beside Search rather than in it.
 
@@ -1148,11 +1208,14 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           ref={spotlightRef}
           className="spotlight"
           onClick={() => {
+            if (hint) dismissHint()
             const el = spotlightRef.current
             const rect = el && rectInScreen(el)
             if (rect) gate('search', () => onOpen('sys.search', rect))
           }}
         >
+          {/* The moving glow, "like the share button" (styles.css .spotlight-sweep). */}
+          <span className="spotlight-sweep" aria-hidden="true" />
           <svg width="12" height="12" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor">
             <path d="M44 16a28 28 0 0 1 22 45.3l17.4 17.4a4.5 4.5 0 0 1-6.4 6.4L59.6 67.7A28 28 0 1 1 44 16Zm0 9a19 19 0 1 0 0 38 19 19 0 0 0 0-38Z" />
           </svg>

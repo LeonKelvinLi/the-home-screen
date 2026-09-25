@@ -6,7 +6,7 @@ import type { KeyAction, PanelPage } from './dialer/keys'
 import { PAGES, type AboutSection } from './dialer/copy'
 import { recentVisits, whenLabel } from '../lib/recents'
 import { favorites, isFavorite, toggleFavorite } from '../lib/favorites'
-import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark, ShareMark } from './dialer/glyphs'
+import { CameraMark, EnterMark, KEY_MARKS, PANEL_MARKS, ReviewsMark, ShareMark, SignInMark } from './dialer/glyphs'
 import { Gem } from './MembersApp'
 import { QrScanner, beastyPathFrom } from './QrScanner'
 import { CollabForm } from './CollabForm'
@@ -739,7 +739,24 @@ export function IntroScreen({ onEnter, onWater, onJoin, onOpen, skipIntro, openP
                 className="dialer-key-digit"
                 style={{ '--spin-i': i } as React.CSSProperties}
               >
-                {stage === 'beasty' && k.mark ? (
+                {stage === 'beasty' && k.mark === 'signin' ? (
+                  /*
+                    SIGN UP AS WELL AS SIGN IN. Glenn, 2026-09-25: "Make the
+                    'sign in' button flip back-and-forth to 'sign up - sign in'
+                    just like the enter button. I am finding a lot of people
+                    don't know where to sign up." The same card as ENTER: the
+                    icon, then the words, then the icon, half a cycle out of
+                    step with ENTER so the two take turns. The card says SIGN UP
+                    and the label under it SIGN IN, so the key reads as his
+                    "sign up - sign in" without saying SIGN IN twice.
+                  */
+                  <span className="dialer-key-flip">
+                    <span className="dialer-key-face is-icon">
+                      <SignInMark size={30} />
+                    </span>
+                    <span className="dialer-key-face is-word">SIGN UP</span>
+                  </span>
+                ) : stage === 'beasty' && k.mark ? (
                   (() => {
                     const Mark = KEY_MARKS[k.mark]
                     return <Mark size={30} />

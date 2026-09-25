@@ -621,6 +621,10 @@ for (const [s, what] of [
   ['"livermore-goods-9":"b_demitristaverna"', "Demitri's Taverna on Livermore Mediterranean"],
   ['"dublin-goods-8":"b_cheriessouthernkitchen"', "Cherie's Southern Kitchen on Dublin Chicken wings"],
   ['icon:"demitris-taverna-mark"', "Demitri's laurel wreath"],
+  /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
+  ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
+  ['spotlight-sweep', 'the moving glow on Search'],
+  ['Just Tap Away', "the first-visit bubble, in Glenn's words"],
   ['members-perk.has-link', 'the earning row in yellow capitals'],
   ['Do they come back?', 'plain words for cohorts in the CRM'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
