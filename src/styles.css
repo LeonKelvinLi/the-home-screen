@@ -12754,13 +12754,14 @@ span.top3-add {
   A MOVING GLOW ON SEARCH, "like the share button" (Glenn, 2026-09-25): the
   same light and the same clip-sweep movement as the Share & Scan tile in the
   dock. On its own layer, clipped to the pill, because the pill's ::after is
-  its 44px tap area and clipping the pill would clip that too.
+  its 44px tap area and clipping the pill would clip that too. clip-path, not
+  overflow: the light is painted to the pill's shape, and the layer is not a
+  scrolling box with something cut off inside it.
 */
 .spotlight-sweep {
   position: absolute;
   inset: 0;
-  border-radius: inherit;
-  overflow: hidden;
+  clip-path: inset(0 round 16px);
   pointer-events: none;
 }
 

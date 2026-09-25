@@ -72,9 +72,9 @@ const sweep = await p.evaluate(() => {
   const s = document.querySelector('.spotlight .spotlight-sweep')
   const a = s && getComputedStyle(s, '::after')
   const hit = getComputedStyle(document.querySelector('.spotlight'), '::after')
-  return { anim: a && `${a.animationName} ${a.animationDuration}`, clipped: s && getComputedStyle(s).overflow, hit: hit.height }
+  return { anim: a && `${a.animationName} ${a.animationDuration}`, clipped: s && getComputedStyle(s).clipPath, hit: hit.height }
 })
-step('Search has the moving glow, the same sweep as Share & Scan', sweep.anim === 'clip-sweep 4.2s' && sweep.clipped === 'hidden', JSON.stringify(sweep))
+step('Search has the moving glow, the same sweep as Share & Scan, clipped to the pill', sweep.anim === 'clip-sweep 4.2s' && /inset/.test(sweep.clipped || ''), JSON.stringify(sweep))
 step('and its tap area is still 44px tall', sweep.hit === '44px', sweep.hit)
 await wait(1500)
 step('no bubble in the first seconds', (await p.locator('.home-hint').count()) === 0)
