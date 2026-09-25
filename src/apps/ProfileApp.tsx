@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { MemberPanel } from './MemberPanel'
 import { PetAvatarArt, SPECIES, COATS, BACKDROPS, ACCESSORIES } from './PetAvatar'
@@ -20,21 +20,24 @@ import {
   type Profile,
 } from '../lib/profile'
 import type { ShellApi } from '../ios/Device'
+import { MyFriendsSection } from './Friends'
+import { myPageLink, syncMyPet } from '../lib/friends'
+import { shareOrCopy } from '../lib/share'
 
 /**
  * Someone's profile: where they have been, and what they liked.
  *
- * The operator's brief was explicit about what this is NOT — no followers, no
- * following, no counts that measure popularity. It is a page other people can
- * be nosey at. So everything on it is a place you can tap through to, and
- * nothing on it is a score about the person.
+ * The operator's first brief was explicit about what this is NOT — no
+ * followers, no following, no counts that measure popularity. On 2026-09-24
+ * Glenn asked for "top 3 friends", "exactly like myspace concept": friend
+ * requests, a friend count and a numbered Top 3 (apps/Friends.tsx). The rest
+ * is still places you can tap through to.
  *
- * ON THIS DEVICE ONLY. There is no account system and no server-side profile in
- * this app, so nothing here is visible to anybody else yet — this is a working
- * preview of a shared profile, not a shared one. The page says that in the one
- * place someone would otherwise assume differently, because filling in a
- * profile believing strangers can already see it is a bad surprise to hand
- * somebody later.
+ * WHAT IS SHARED. Signed in, the pet a member built, their friends and their
+ * Top 3 are on the account, so other members see them from Contacts. A photo,
+ * the name typed here and the places visited stay on this device. The page
+ * says so in its fine print, because filling in a profile believing strangers
+ * can or cannot see it is a bad surprise to hand somebody later.
  */
 
 type Sheet = null | 'avatar' | 'visited' | 'recent' | 'top'
@@ -105,7 +108,21 @@ export function ProfileApp({ api }: { api: ShellApi }) {
   const recents = recentVisits()
   const topSpot = p.topSpotId ? brandById(p.topSpotId) : undefined
 
-  const update = (next: Partial<Profile>) => setP(saveProfile(next))
+  /*
+    THE PET GOES TO THE ACCOUNT, so friends see it (lib/friends.ts). A photo
+    never does: choosing one clears what other members see back to the pet
+    Contacts draws from the member's id. Once on opening too, so a pet built
+    before this existed reaches the account.
+  */
+  const update = (next: Partial<Profile>) => {
+    const saved = saveProfile(next)
+    setP(saved)
+    if (account && ('kind' in next || 'pet' in next)) syncMyPet(saved.kind, saved.pet ?? DEFAULT_PET)
+  }
+  useEffect(() => {
+    if (account) syncMyPet(p.kind, p.pet ?? DEFAULT_PET)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [account?.id])
   const setPet = (patch: Partial<Profile['pet']>) =>
     update({ kind: 'pet', pet: { ...(p.pet ?? DEFAULT_PET), ...patch } })
 
@@ -135,6 +152,19 @@ export function ProfileApp({ api }: { api: ShellApi }) {
     somebody is trying to show a friend their page. When profiles have real
     URLs this becomes the real thing and the label goes back.
   */
+  /*
+    SIGNED IN, IT IS THEIR PAGE NOW. Profiles have an address for members
+    (Contacts, opened on them), so the button says Share my page and sends it,
+    carrying their referral code: a stranger who joins through it is theirs.
+  */
+  const [shareSaid, setShareSaid] = useState<string | null>(null)
+  const shareMine = async () => {
+    if (!account) return
+    const how = await shareOrCopy(myPageLink(account.id, account.referralCode))
+    if (how === 'shared') return
+    setShareSaid(how === 'copied' ? 'Link copied' : 'Could not share just now')
+    window.setTimeout(() => setShareSaid(null), 3000)
+  }
   const shareApp = async () => {
     const url = location.origin
     try {
@@ -219,9 +249,15 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           <button className="btn-primary prof-action" onClick={() => setSheet('avatar')}>
             Edit profile
           </button>
-          <button className="btn-secondary prof-action" onClick={shareApp}>
-            Share the app
-          </button>
+          {account ? (
+            <button className="btn-secondary prof-action" onClick={shareMine}>
+              {shareSaid ?? 'Share my page'}
+            </button>
+          ) : (
+            <button className="btn-secondary prof-action" onClick={shareApp}>
+              Share the app
+            </button>
+          )}
         </div>
 
         {/*
@@ -313,6 +349,9 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             </div>
           )}
         </section>
+
+        {/* His Top 8, cut to three: signed-in members only. */}
+        <MyFriendsSection api={api} />
 
         {/* The nine, as drawn: a 3x3 of tiles other people can tap through. */}
         <section>
@@ -410,11 +449,13 @@ export function ProfileApp({ api }: { api: ShellApi }) {
 
         {/* Signed in, the first sentence was simply false: accounts exist and
             the member list in Contacts is built from them. */}
+        {/* Friends changed what other members see (Glenn, 2026-09-24, "exactly
+            like myspace"): a built pet, the friend count and the Top 3 are on
+            the account now. A photo still never leaves this phone. */}
         <p className="prof-fineprint">
           {account
-            ? 'Other members can open you from Contacts and see your name, the month you joined, and the businesses you have starred or liked. Your picture and what you have visited are on this phone only and have been sent nowhere. No followers, no following, and no numbers about you: everything'
-            : 'This profile is on this phone only. You are not signed in, so nothing here has been sent anywhere and nobody else can see it. No followers, no following, and no numbers about you: everything'}
-          on this page is a place someone can tap and go to.
+            ? 'Other members can open you from Contacts and see your name, the month you joined, the pet you built, how many friends you have, your Top 3, and the businesses you have starred or liked. A photo and the places you have visited stay on this phone and are sent nowhere.'
+            : 'This profile is on this phone only. You are not signed in, so nothing here has been sent anywhere and nobody else can see it.'}
         </p>
 
         {sheet === 'avatar' && (

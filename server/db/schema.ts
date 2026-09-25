@@ -732,6 +732,49 @@ INSERT INTO analytics_events (id, name, actor_type, source, metadata, dedupe_key
 VALUES ('ev_tracking_sessions', 'tracking_started', 'system', 'server', '{"what":"sessions, impressions, search and outbound clicks"}'::jsonb,
         'tracking_started|sessions', (EXTRACT(EPOCH FROM clock_timestamp()) * 1000)::bigint)
 ON CONFLICT DO NOTHING;
+
+/*
+  FRIENDS, THE MYSPACE WAY (Glenn, 2026-09-24; docs/superpowers/specs/
+  2026-09-25-top-friends-design.md). One row per PAIR, whichever of the two
+  asked: the index on the ordered pair makes a second row for the same two
+  people impossible, so "A asked B" and "B asked A" can never both be pending.
+
+  A declined request stays as 'declined' and keeps the asker from asking again
+  for 30 days; the asker is not told (server/friends.ts). requester_hidden is
+  the asker withdrawing a request that was already, silently, declined.
+*/
+CREATE TABLE IF NOT EXISTS member_friendships (
+  requester_id     TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  addressee_id     TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  status           TEXT NOT NULL CHECK (status IN ('pending','accepted','declined')),
+  requester_hidden BOOLEAN NOT NULL DEFAULT FALSE,
+  created_at       BIGINT NOT NULL,
+  responded_at     BIGINT,
+  CHECK (requester_id <> addressee_id)
+);
+CREATE UNIQUE INDEX IF NOT EXISTS idx_friendships_pair
+  ON member_friendships (LEAST(requester_id, addressee_id), GREATEST(requester_id, addressee_id));
+CREATE INDEX IF NOT EXISTS idx_friendships_addressee ON member_friendships (addressee_id, status);
+CREATE INDEX IF NOT EXISTS idx_friendships_requester ON member_friendships (requester_id, created_at);
+
+/* A member's Top 3, in order. Only accepted friends, checked by the server. */
+CREATE TABLE IF NOT EXISTS member_top_friends (
+  member_id TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  position  SMALLINT NOT NULL CHECK (position BETWEEN 1 AND 3),
+  friend_id TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  PRIMARY KEY (member_id, position),
+  UNIQUE (member_id, friend_id)
+);
+
+/* The pet a member built, so other members see it. A photo never comes here. */
+CREATE TABLE IF NOT EXISTS member_avatars (
+  member_id  TEXT PRIMARY KEY REFERENCES members(id) ON DELETE CASCADE,
+  species    TEXT NOT NULL,
+  coat       TEXT NOT NULL,
+  backdrop   TEXT NOT NULL,
+  accessory  TEXT NOT NULL DEFAULT '',
+  updated_at BIGINT NOT NULL
+);
 `
 
 /**

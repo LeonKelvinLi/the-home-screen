@@ -80,7 +80,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     two flagship pages and every business on them; the six doors below raise the
     sign-up prompt instead of opening.
   */
-  const { gate } = useGate()
+  const { gate, account } = useGate()
   const [page, setPage] = useState(0)
   /*
     Which of the three dock sets is showing — his "Default is 1".
@@ -821,6 +821,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
 
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
+    /* Friend requests waiting for an answer (apps/Friends.tsx). */
+    if (appId === 'sys.profile') return account?.friendRequests ?? 0
     if (appId.startsWith('sys.')) return 0
     return cart.countForBrand(appId)
   }
@@ -955,6 +957,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
                   label={app.label}
                   name={app.name}
                   badge={badgeFor(app.id)}
+                  badgeWhat={app.id === 'sys.profile' ? (badgeFor(app.id) === 1 ? 'friend request' : 'friend requests') : undefined}
                   mobile={app.mobile}
                   noSite={app.noSite}
                   glow={app.glow}
@@ -1234,6 +1237,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
             label={app.label}
             name={app.name}
             badge={badgeFor(app.id)}
+                  badgeWhat={app.id === 'sys.profile' ? (badgeFor(app.id) === 1 ? 'friend request' : 'friend requests') : undefined}
             size={screen.iconSize}
             hideLabel
             /*

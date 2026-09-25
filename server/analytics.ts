@@ -64,6 +64,10 @@ export const EVENTS = {
      A retried webhook is the same Stripe event, so one a day per event. */
   membership_activated: { actor: 'member', label: 'Paid for a membership', meaningful: true, once: 'day-entity' },
   membership_lapsed: { actor: 'member', label: 'Membership payments stopped', once: 'day-entity' },
+  /* Friends, the MySpace way (server/friends.ts). */
+  friend_requested: { actor: 'member', label: 'Sent a friend request', meaningful: true },
+  friend_accepted: { actor: 'member', label: 'Accepted a friend request', meaningful: true },
+  friend_removed: { actor: 'member', label: 'Removed a friend' },
 
   /* visitors: no account yet */
   site_visited: { actor: 'visitor', label: 'Visited BEASTY', once: 'day' },

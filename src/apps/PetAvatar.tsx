@@ -15,27 +15,7 @@ import type { PetAvatar as Pet } from '../lib/profile'
  * they came from the same hand.
  */
 
-export const SPECIES: { key: string; label: string }[] = [
-  { key: 'dog', label: 'Dog' },
-  { key: 'cat', label: 'Cat' },
-  { key: 'rabbit', label: 'Rabbit' },
-  { key: 'hamster', label: 'Hamster' },
-  { key: 'bird', label: 'Bird' },
-  // He said "dog, hamster or even ostrich", so there is an ostrich.
-  { key: 'ostrich', label: 'Ostrich' },
-]
-
-export const COATS = ['#C98A4B', '#3B3B3F', '#F2F2F4', '#E7A33E', '#8C6239', '#B9C3CC', '#E86F5B', '#7FB069']
-
-export const BACKDROPS = ['#FFE9A8', '#CDE8FF', '#FFD9E0', '#D8F5D0', '#E8E0FF', '#FFE3CC', '#E9ECEF', '#141416']
-
-export const ACCESSORIES: { key: string; label: string }[] = [
-  { key: '', label: 'None' },
-  { key: 'collar', label: 'Collar' },
-  { key: 'bow', label: 'Bow' },
-  { key: 'cap', label: 'Cap' },
-  { key: 'shades', label: 'Shades' },
-]
+export { SPECIES, COATS, BACKDROPS, ACCESSORIES } from '../data/pets'
 
 /** Ears and any species-specific shape, drawn behind the face. */
 function Behind({ species, coat }: { species: string; coat: string }) {

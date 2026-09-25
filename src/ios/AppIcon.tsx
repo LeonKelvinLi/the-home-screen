@@ -40,6 +40,8 @@ interface Props {
    */
   name?: string
   badge?: number
+  /** What the badge counts, spoken. Unset, it is items in the cart. */
+  badgeWhat?: string
   /** Measured at tap time so the app can zoom out of this exact icon. */
   onOpen: (rect: IconRect) => void
   hideLabel?: boolean
@@ -63,6 +65,7 @@ function AppIconBase({
   label,
   name,
   badge,
+  badgeWhat = 'in cart',
   onOpen,
   hideLabel,
   size = ICON_SIZE,
@@ -128,7 +131,7 @@ function AppIconBase({
         /* Spoken for the same reason "mobile" is: a ring is the whole of the
            signal for a sighted customer and none of it for anyone else. */
         noSite ? 'no website' : '',
-        badge ? `${badge} in cart` : '',
+        badge ? `${badge} ${badgeWhat}` : '',
       ]
         .filter(Boolean)
         .join(', ')}

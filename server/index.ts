@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
+import { mountFriends, petsFor, profileExtras, waitingCount } from './friends'
 import { crmOpenMode } from './crm/open'
 import { syncSnapshots } from './crm/backfill'
 import { fillGlennDefaults } from './crm/core'
@@ -2351,6 +2352,8 @@ async function memberPayload(m: MemberRow) {
     rewards,
     /* So the member card can count a pass down without guessing the window. */
     passWindowMs: PASS_WINDOW_MS,
+    /* Friend requests waiting for an answer: the red number on Profile. */
+    friendRequests: await waitingCount(m.id),
   }
 }
 
@@ -3024,9 +3027,11 @@ app.get('/api/members/directory', rateLimiter(60, 20), async (req, res) => {
   const rows = await db
     .prepare('SELECT id, name, created_at FROM members ORDER BY LOWER(name) ASC, created_at ASC LIMIT 1000')
     .all() as { id: string; name: string; created_at: number }[]
+  /* The pet each member built, so the list shows it (server/friends.ts). */
+  const pets = await petsFor(rows.map((r) => r.id))
   res.json({
     count: rows.length,
-    members: rows.map((r) => ({ id: r.id, name: shortName(r.name), since: r.created_at, me: r.id === me.id })),
+    members: rows.map((r) => ({ id: r.id, name: shortName(r.name), since: r.created_at, me: r.id === me.id, pet: pets.get(r.id) ?? null })),
   })
 })
 
@@ -3090,6 +3095,9 @@ app.get('/api/members/:id/profile', rateLimiter(60, 20), async (req, res) => {
     likes: rows.filter((r) => r.kind === 'like').map((r) => r.brand_id),
     favourites: rows.filter((r) => r.kind === 'favourite').map((r) => r.brand_id),
     me: m.id === me.id,
+    /* Friends, the MySpace way: their pet, their count, their Top 3, and the
+       viewer's button (server/friends.ts). */
+    ...(await profileExtras(me.id, m.id, shortName)),
   })
 })
 
@@ -3605,6 +3613,8 @@ app.get('/crm', (req, res, next) => {
  * to answer it with index.html and a 200, so a client calling a typo'd or
  * removed endpoint got HTML and a success code and could not tell.
  */
+mountFriends(app, { memberFromRequest, rateLimiter, shortName })
+
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 
 /*

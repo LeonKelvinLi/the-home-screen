@@ -17,6 +17,7 @@
  */
 import { drain, drainNull } from './http'
 import { pendingAttribution } from './attribution'
+import type { FriendPerson, FriendPet, Relation } from './friends'
 
 export interface Rewards {
   milestones: number
@@ -48,6 +49,8 @@ export interface Account {
   tierInterval: 'month' | 'year'
   /** How often the pass on the member card rotates, so the card can count down. */
   passWindowMs: number
+  /** Friend requests waiting for this member's answer: the red number on Profile. */
+  friendRequests?: number
 }
 
 export interface SignUp {
@@ -274,6 +277,8 @@ export interface DirectoryMember {
   name: string
   since: number
   me: boolean
+  /** The pet they built, or null. */
+  pet?: FriendPet | null
 }
 
 /**
@@ -396,6 +401,12 @@ export interface MemberProfile {
   likes: string[]
   favourites: string[]
   me: boolean
+  /* Friends, the MySpace way (lib/friends.ts). Optional so an older server's
+     answer still reads. */
+  pet?: FriendPet | null
+  friendCount?: number
+  top3?: (FriendPerson & { position: number })[]
+  relation?: Relation
 }
 
 export async function fetchMemberProfile(id: string): Promise<MemberProfile | null> {

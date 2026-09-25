@@ -2,7 +2,9 @@ import { useEffect, useState } from 'react'
 import type { ReactNode } from 'react'
 import { NavScreen } from '../ios/ui/NavScreen'
 import { ListRow, ListSection } from '../ios/ui/List'
-import { PetAvatarArt } from './PetAvatar'
+import { FriendFace } from './FriendFace'
+import { FriendButton, TopThreeRow } from './Friends'
+import { takeMemberLink } from '../lib/friends'
 import { readableOn } from '../ios/contrast'
 import { TabBar } from '../ios/ui/TabBar'
 import type { TabItem } from '../ios/ui/TabBar'
@@ -13,31 +15,9 @@ import type { ShellApi } from '../ios/Device'
 import { OPERATOR, OWNERS, hasOperatorContact } from '../lib/operator'
 import { CallOrTextSheet } from '../ios/ui/CallOrText'
 import { fetchDirectory, fetchMemberCount, fetchMemberProfile, type DirectoryMember, type MemberProfile } from '../lib/account'
-import type { PetAvatar } from '../lib/profile'
 import { SHARE_CONTACTS, shareOrCopy, shareUrl } from '../lib/share'
 import { ShareMark } from './dialer/glyphs'
 
-/*
-  A PET FOR EVERY MEMBER, DRAWN FROM THEIR ID. Members do not pick an avatar
-  yet, and a list of identical grey circles reads as a placeholder. The same
-  id always gets the same animal, so a row looks the same tomorrow.
-*/
-/* Light coats only: a dark coat fills the whole animal and the row reads as a
-   black disc, which is what the first cut of this looked like. */
-const DIR_SPECIES = ['dog', 'cat', 'rabbit', 'hamster']
-const DIR_COATS = ['#B5651D', '#C9A66B', '#E0C9A6', '#9A9A9A', '#F2F2F2', '#D98C5F']
-const DIR_BACKDROPS = ['#FFE9A8', '#DCEBFF', '#FFD9D9', '#DFF5E1', '#EEE0FF', '#FFE6C7']
-const DIR_ACCESSORIES = ['', 'collar', 'bow', 'cap', 'shades', '']
-function petFor(id: string): PetAvatar {
-  let h = 7
-  for (let i = 0; i < id.length; i++) h = (h * 31 + id.charCodeAt(i)) >>> 0
-  return {
-    species: DIR_SPECIES[h % DIR_SPECIES.length],
-    coat: DIR_COATS[(h >> 3) % DIR_COATS.length],
-    backdrop: DIR_BACKDROPS[(h >> 6) % DIR_BACKDROPS.length],
-    accessory: DIR_ACCESSORIES[(h >> 9) % DIR_ACCESSORIES.length],
-  }
-}
 const SINCE = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' })
 
 /*
@@ -142,6 +122,15 @@ export function PhoneApp({ api }: { api: ShellApi }) {
       setOpen((cur) => (cur && cur.row.id === row.id ? { row, profile: p } : cur)),
     )
   }
+  /* A member named by id (a Top 3 face, a shared page link): their row from
+     the list if it is there, else enough of one for the page to load. */
+  const openMemberId = (id: string) =>
+    openMember(dir?.members.find((m) => m.id === id) ?? { id, name: 'Member', since: 0, me: false })
+  /* After a button on their page, read it again: the count and Top 3 follow. */
+  const reloadOpen = () => {
+    const row = open?.row
+    if (row) void fetchMemberProfile(row.id).then((p) => setOpen((cur) => (cur && cur.row.id === row.id ? { row, profile: p } : cur)))
+  }
   /*
     THE REAL LIST. Glenn, 2026-09-02: "how soon can we have the contact list
     update every time a user signs up?" Fetched once when the app opens; null
@@ -166,6 +155,13 @@ export function PhoneApp({ api }: { api: ShellApi }) {
       on = false
     }
   }, [])
+  /* "Share my page", or a Top 3 face on Profile: open that member once the list is in. */
+  useEffect(() => {
+    if (!dir) return
+    const id = takeMemberLink()
+    if (id) openMemberId(id)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [dir])
   const [digits, setDigits] = useState('')
   /*
     SHARE, TOP RIGHT. Glenn, 2026-09-22: "Would you mind including a share
@@ -241,16 +237,44 @@ export function PhoneApp({ api }: { api: ShellApi }) {
         <div className="prof member-page">
           <header className="prof-head">
             <span className="prof-avatar" aria-hidden="true">
-              <PetAvatarArt pet={petFor(open.row.id)} size={96} />
+              <FriendFace id={open.row.id} pet={loaded?.pet ?? open.row.pet} size={96} />
             </span>
             <div className="prof-id">
               <span className="prof-name">
-                {open.row.name}
+                {loaded?.name ?? open.row.name}
                 {open.row.me ? ' (you)' : ''}
               </span>
-              <p className="prof-spread">Member since {SINCE.format(new Date(open.row.since))}</p>
+              <p className="prof-spread">Member since {SINCE.format(new Date(loaded?.since ?? open.row.since))}</p>
+              {loaded && typeof loaded.friendCount === 'number' && (
+                <p className="prof-spread member-friends">
+                  {loaded.friendCount} {loaded.friendCount === 1 ? 'friend' : 'friends'}
+                </p>
+              )}
             </div>
           </header>
+
+          {loaded?.relation && (
+            <FriendButton
+              id={open.row.id}
+              name={loaded.name}
+              relation={loaded.relation}
+              onChange={(relation) => {
+                setOpen((cur) => (cur && cur.profile && cur.profile !== 'loading' ? { ...cur, profile: { ...cur.profile, relation } } : cur))
+                reloadOpen()
+              }}
+            />
+          )}
+
+          {loaded?.top3 && (
+            <section className="prof-top3">
+              <h2 className="prof-h">{open.row.me ? 'Your Top 3 friends' : `${loaded.name.split(' ')[0]}\u2019s Top 3 friends`}</h2>
+              {loaded.top3.length ? (
+                <TopThreeRow people={loaded.top3} onOpen={openMemberId} />
+              ) : (
+                <p className="prof-empty">{open.row.me ? 'You have' : 'They have'} not picked a Top 3 yet.</p>
+              )}
+            </section>
+          )}
 
           {prof === 'loading' && <p className="prof-empty">Loading…</p>}
           {prof === null && <p className="prof-empty">Could not load this member just now.</p>}
@@ -304,8 +328,9 @@ export function PhoneApp({ api }: { api: ShellApi }) {
               </section>
 
               <p className="prof-fineprint">
-                What {who} starred and liked on business pages, and when {who} joined. Nothing else
-                — no number, no address, no handle. Every business here is real and opens.
+                {open.row.me ? 'Your' : 'Their'} friends and Top 3, what {who} starred and liked on business
+                pages, and when {who} joined. Nothing else — no number, no address, no handle. Every
+                business here is real and opens.
               </p>
             </>
           )}
@@ -417,7 +442,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                     label={
                       <span className="contact-row">
                         <span className="contact-mark">
-                          <PetAvatarArt pet={petFor(mem.id)} size={30} />
+                          <FriendFace id={mem.id} pet={mem.pet} size={30} />
                         </span>
                         {mem.name}
                         {mem.me ? ' (you)' : ''}

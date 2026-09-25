@@ -3,6 +3,7 @@ import { GATED, type GateKey } from '../data/membership'
 import { captureReferral, captureVia, fetchAccount, type Account, type AccountState } from './account'
 import { captureAttribution, sendVisit } from './attribution'
 import { startTracking, track } from './track'
+import { captureMemberLink } from './friends'
 
 /**
  * WHAT A SIGNED-OUT VISITOR MAY DO, and the prompt when they may not.
@@ -56,6 +57,8 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
     // A shared QR lands here first; the code has to be kept before anything
     // rewrites the URL or the referrer loses their credit.
     captureReferral()
+    // "Share my page" names the member to open (lib/friends.ts).
+    captureMemberLink()
     captureVia()
     // What brought this visit, for the sign-up, and one visit a day for the numbers.
     captureAttribution()
