@@ -1191,6 +1191,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'daly-city-goods-13': 'b_penelopescoffeedalycity', //            Coffee shop
   'san-francisco-goods2-21': 'b_catchsf', //                       no seafood seat; yellow sheet, Tier 1
   'san-francisco-goods2-22': 'b_yanksing', //                      Asian is House of Thai's; yellow sheet, whole page for the reel
+  'livermore-goods-9': 'b_demitristaverna', //                   Mediterranean
+  'dublin-goods-8': 'b_cheriessouthernkitchen', //              Chicken wings: soul food with wings on the menu
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs

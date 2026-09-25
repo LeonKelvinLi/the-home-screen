@@ -296,6 +296,9 @@ for (const [id, want, expect] of [
   ['b_yosushivacaville', 'Yo Sushi & Ramen', { rows: 182, hours: 'Sun-Thu 11am-9pm', call: '(707) 474-9320' }],
   /* 2026-09-24, 7:46 am: Yank Sing, "San Francisco • Goods", with Sherry Shi's reel. */
   ['b_yanksing', 'Yank Sing', { rows: 59, hours: 'Tue–Fri 11am–3pm', call: '(415) 541-4949' }],
+  /* 2026-09-24, 7:14 and 9:52 pm: Demitri's Taverna (Livermore) and Cherie's Southern Kitchen (Dublin). */
+  ['b_demitristaverna', "Demitri's Taverna", { rows: 102, hours: 'Tue–Thu 11am–9pm', call: '(925) 373-0306' }],
+  ['b_cheriessouthernkitchen', "Cherie's Southern Kitchen", { rows: 32, call: '(925) 361-5725' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -612,6 +615,12 @@ for (const [s, what] of [
   ['"beasty-services2-23":"b_georgeprolandscape"', 'George Landscape moved to the yellow sheet'],
   ['"b_ezraluzjohns"', 'Ezra Luz Johns on BEASTY • Services #23'],
   ['"san-francisco-goods2-22":"b_yanksing"', 'Yank Sing on San Francisco More goods'],
+  /* 2026-09-25: Top 3 friends, the MySpace way, and the two new pages. */
+  ['Top 3 friends', "the Top 3 friends row on Profile and member pages"],
+  ['/api/friends/requests', 'friend requests from a member page'],
+  ['"livermore-goods-9":"b_demitristaverna"', "Demitri's Taverna on Livermore Mediterranean"],
+  ['"dublin-goods-8":"b_cheriessouthernkitchen"', "Cherie's Southern Kitchen on Dublin Chicken wings"],
+  ['icon:"demitris-taverna-mark"', "Demitri's laurel wreath"],
   ['members-perk.has-link', 'the earning row in yellow capitals'],
   ['Do they come back?', 'plain words for cohorts in the CRM'],
   ['icon:"nana-casas-3"', "Janelle's headshot of 21 September, evening"],
@@ -675,9 +684,12 @@ const doors = {
   signups: await status('/api/register-signups'),
   cancel: await status('/api/orders/o_no_such_order/cancel', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{}' }),
   mine: await status('/api/members/orders'),
+  /* Friends are for signed-in members only (2026-09-25). */
+  friends: await status('/api/friends'),
+  befriend: await status('/api/friends/requests', { method: 'POST', headers: { 'content-type': 'application/json' }, body: '{"to":"mb_nobody"}' }),
 }
 console.log('doors         :', JSON.stringify(doors))
-for (const [k, want] of Object.entries({ kitchenMe: 401, queue: 401, issue: 401, keys: 401, revoke: 401, signups: 401, cancel: 404, mine: 401 })) {
+for (const [k, want] of Object.entries({ kitchenMe: 401, queue: 401, issue: 401, keys: 401, revoke: 401, signups: 401, cancel: 404, mine: 401, friends: 401, befriend: 401 })) {
   if (doors[k] !== want) fails.push(`${k} answered ${doors[k]} from outside, expected ${want}`)
 }
 const count = await fetch(base + '/api/members/count').then((r) => r.json()).catch(() => null)

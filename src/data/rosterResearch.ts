@@ -3195,6 +3195,84 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     cheries-southern-kitchen — gathered 2026-09-25 from own
+     their spelling: "Cherie's Southern Kitchen" (roster keeps "cheries-southern-kitchen")
+     they are: Soul food
+     flag: Hours conflict on the same homepage, so hours is null. The text block (shown 4 times) says: 'Open Wed-Sat: 12-3pm, 4-8pm / Sun: 12-3pm, 4-7pm / Or, until Sold Out!!'. The site's contact hours widget and its schema.org data say: Mon Closed, Tue Closed, Wed-Sun 12:00 pm - 08:00 pm. They differ on the 3-4pm break and on Sunday closing (7pm vs 8pm). Neither is dated. Both agree Monday and Tuesday are closed.
+     flag: The menu heading 'Lunch and Dinner Served Daily' clashes with both hours sources, which show Mon/Tue closed.
+     flag: Stale banner across the whole site: 'We'll be open August 9th from 11AM to 5PM. We will be serving our 2nd Sunday Menu!' The sitemap says the site was last edited 2026-08-09, so this refers to Sunday Aug 9 2026, which has passed. Not used for hours.
+     flag: Phone and email on their own site differ from Instagram. Site: 925-361-5725 (also printed as 925.361.5725) and cherieybarfield@live.com (also written Cherieybarfield@live.com). Instagram: (650) 862-4769 and cherieyvette19@gmail.com. The site's values are used as instructed. The site's 'Message us on WhatsApp' link goes to wa.me/16508624769, which is the same number as the Instagram phone.
+     flag: Name: the website writes 'Cherie's Southern Kitchen' with no accent. Instagram writes 'Chérie's'. name_exact uses the website's spelling.
+     flag: Address as printed on the site: '4920 Dublin Boulevard, Suite 220, Dublin, California 94568, United States'. It matches Instagram (4920 Dublin Blvd, Suite 220, Dublin CA 94568). 'United States' was dropped.
+     flag: No online ordering. The site's /shop page is a GoDaddy Online Store with 0 products (its products API returned total_count 0). No Toast, Square, ChowNow, Clover or other ordering link was found, so order_url is null.
+     flag: site_kind 'own': a GoDaddy Website Builder site on their own domain, with a real full menu, prices, address, hours and contact details. It still has unfinished template leftovers. The 'Mother's Day Menu' page only shows GoDaddy sample events (e.g. 'Sunday Supper Club' at 144 W Elm St, Chicago; 'Evenings in the Park'). The shop is empty. There is one stock blog post ('Discover Southern Comfort Food', with a Getty stock image), and there are generic 'Organic Options' and 'Meal Planning' blurbs. None of this was used.
+     flag: Left out: 'Smoked BBQ Beef Brisket (special order, 48 hr. notice, confirm required)', because its price is 'Call for price'.
+     flag: No alcohol is on the menu. No $0.00 lines.
+     flag: Menu structure: the site's own menu categories are 'Combination Plates' and 'Desserts'. 'Wings', 'Specialties', 'Sides' and 'Beverages' are sub-headings (entered on the site as price-less menu lines). They are used as the section names.
+     flag: Dessert prices are '$7 per slice' / '$7 per serving'. They are stored as 700 cents, with 'Per slice.' / 'Per serving.' moved into desc.
+     flag: Drinks priced '(SM) ... (Lrg.) ...' are stored at the small price with label 'from'. Both sizes are in desc.
+     flag: Typo fixes: 'Viniagrette' changed to 'Vinaigrette' (Cherie's House Salad). 'Sunday's and Holiday's.' changed to 'Sundays and Holidays.' (Sweet Potato Pie). Double spaces were collapsed in the wing and house-salad descriptions. 'Dasanni Special' was kept as published.
+     flag: Other site policy, not in items: parties of six or more need confirmed reservations and pay an 18% service charge; parties of nine or more get a set menu. Full-service catering is offered (inquiries to cherieybarfield@live.com).
+     flag: The homepage was readable with curl (GoDaddy renders it on the server). The hours widget, shop and Mother's Day page needed a headless browser (Playwright). Nothing was blocked, and no cart, sign-in or form was used.
+     flag: On review: Glenn, 2026-09-24 9:52 pm, "Dublin • Goods". Soul food has no seat of its own; their menu has a Wings section beside the fried chicken, and Dublin's Chicken wings seat was open, so the whole page there, as Brasa Bros' rotisserie chicken took San Francisco's.
+     flag: On review: phone and email are their site's (925-361-5725, cherieybarfield@live.com); their Instagram, which Glenn screenshotted, gives (650) 862-4769 and cherieyvette19@gmail.com. The site's are used, as for Napa Yard, Brezo and Dreamland; worth asking which they want. Name as their site writes it, without the accent, so a search for 'cheries' finds them; their logo keeps it.
+     flag: On review: hours left off. Their homepage gives Wed-Sat 12-3pm and 4-8pm, Sun 12-3pm and 4-7pm 'or until sold out', while its hours widget says Wed-Sun 12-8pm; both close Mon and Tue.
+  */
+  'cheries-southern-kitchen': {
+    address: "4920 Dublin Blvd, Suite 220, Dublin, CA 94568",
+    phone: "(925) 361-5725",
+    email: "cherieybarfield@live.com",
+    cuisine: "Soul food",
+    sections: [
+      { name: "Combination Plates", items: [
+        ["Southern Fried Chicken","Includes choice of two sides & cornbread muffin. Choice of pieces (3); Wings, Thighs or Legs. $2.50 per additional wing, leg or thigh.",2300],
+        ["Smothered Oxtails","Includes rice & gravy and cornbread muffin.",3200],
+        ["Fried Catfish Fillets","Includes two sides and cornbread muffin.",2400],
+        ["Smothered Chicken","Includes chicken thighs, two sides and cornbread muffin.",2200],
+        ["Dasanni Special","Includes two pieces of chicken, fries & a small drink. (kids meal).",1500],
+      ] },
+      { name: "Wings", items: [
+        ["BBQ (8 Bone-in)","Comes with choice of one side and small drink. $1.50 per additional piece.",1800],
+        ["Honey Garlic (8 Bone-in)","Comes with choice of one side and small drink. $1.50 per additional piece.",1800],
+        ["Lemon Pepper (8 Bone-in)","Comes with choice of one side and small drink. $1.50 per additional piece.",1800],
+      ] },
+      { name: "Specialties", items: [
+        ["Shrimp Creole","Shrimp, tomatoes & garlic, in a flavorful creole sauce (served with yellow grits or white rice).",2500],
+        ["Cajun Chicken & Beef Sausage Gumbo","Includes white rice and cornbread muffin. Catering and Brunch menu item.",2200],
+        ["Seafood Gumbo","Includes white rice and cornbread muffin. (served daily).",2800],
+      ] },
+      { name: "Sides", items: [
+        ["Macaroni & Cheese","Three cheese blend.",500],
+        ["Collard Greens","Comes with smoked turkey.",500],
+        ["Cabbage","Vegetarian",500],
+        ["Candied Yams","",500],
+        ["Rice & Gravy","",400],
+        ["Macaroni Salad","",500],
+        ["Cherie's House Salad","Croutons, baby tomatoes, cucumber, aged cheddar cheese: choice of dressing Ranch, Thousand Island or Vinaigrette.",700],
+        ["Baked Beans","",500],
+        ["Green Beans","Simmered with golden potatoes, onion and garlic. Vegetarian.",500],
+        ["French Fries","",400],
+        ["Brown Butter Cornbread Muffin","",250],
+      ] },
+      { name: "Desserts", items: [
+        ["Naomi's 7up Pound Cake","Per slice.",700],
+        ["Caramel Peach Cobbler","Per serving.",700],
+        ["Nana's Banana Pudding","Per serving.",700],
+        ["Cherie's Caramel Cake","Per slice.",700],
+        ["Sweet Potato Pie","Per slice. Sundays and Holidays.",700],
+      ] },
+      { name: "Beverages", items: [
+        ["Fresh Squeezed Lemonade","Small $3.00, Large $3.75.",300,null,"from"],
+        ["Southern Style Sweet Tea","Small $3.00, Large $3.75.",300,null,"from"],
+        ["Grape Kool-Aid","Small $2.00, Large $3.00.",200,null,"from"],
+        ["Cherry Kool-Aid","Small $2.00, Large $3.00.",200,null,"from"],
+        ["Coke, Diet Coke, 7up","",300],
+      ] },
+    ],
+    siteNote: "Soul food on Dublin Boulevard, bringing southern charm to the West Coast, Black-owned, in their own words. Prices are from the menu on their own site; they are open until sold out.",
+  },
+
+  /*
      Chikin Drip — gathered 2026-09-21 from own-domain
      they are: Nashville hot chicken
      flag: they have a second San Jose kitchen at 81 Curtner Ave on the same menu, hours and number
@@ -3743,6 +3821,159 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menu on their own website.",
+  },
+
+  /*
+     demitris-taverna — gathered 2026-09-25 from own
+     their spelling: "Demitri's Taverna" (roster keeps "demitris-taverna")
+     they are: Greek & Mediterranean
+     flag: The research agent's curl and headless reads hit a Cloudflare check (403, 'Just a moment...'). Read on 2026-09-25 in the in-app browser, a normal browser, where the page loaded with no challenge shown; nothing was solved or got around.
+     flag: Menu: 102 priced items in 14 sections from their own ordering menu (demitristavernalivermore.com/menu, an Owner.com site on their own domain). 'Most ordered' repeats items from the other sections and is left out. No alcohol is listed on the ordering menu (their site mentions cocktails and local and imported wines; none carried).
+     flag: A price shown with '+' (Caesar, the pitas, three sandwiches) rises with options: carried as a 'from' price.
+     flag: Hours: the 'Store' tab of their site's hours panel: Sun 11:30 AM-8:00 PM, Mon closed, Tue-Thu 11:00 AM-9:00 PM, Fri 11:00 AM-10:00 PM, Sat 11:30 AM-10:00 PM; the page's 'Today: 11:00 AM - 10:00 PM' on Friday agrees.
+     flag: Address, phone and email from their site's location card: 2235 First St, Livermore, CA 94550; (925) 373-0306 (matches their Instagram); demitristaverna@yahoo.com.
+     flag: Spelling fixes: 'Mozzerella' to 'Mozzarella' (Crispy Chicken Melt), 'tomaro' to 'tomato' (Naxos Chicken Ranch), 'side veggies' capitalised. Dish names otherwise as published (Pastitso, Mousaka).
+     flag: On review: Livermore's Mediterranean seat was open, so the whole page there. Glenn sent their Instagram and site on 2026-09-24 at 7:14 pm without naming a page; Livermore is their only location.
+  */
+  'demitris-taverna': {
+    address: "2235 First St, Livermore, CA 94550",
+    phone: "(925) 373-0306",
+    email: "demitristaverna@yahoo.com",
+    hours: "Tue–Thu 11am–9pm, Fri 11am–10pm, Sat 11:30am–10pm, Sun 11:30am–8pm; closed Mon",
+    cuisine: "Greek & Mediterranean",
+    sections: [
+      { name: "Meze", items: [
+        ["Chargrilled Octopus","Demitri’s Favorite. Tender chargrilled octopus — simple, honest, and deeply Greek.",1900],
+        ["Crispy Calamari","Served with our homemade marinara and tzatziki sauce.",1900],
+        ["Demitri’s Sliders","Topped with grilled onions, tomato and feta spread.",1700],
+        ["Dolmathes","Grape leaves stuffed with ground chuck, lamb, rice and fresh herbs. Served with avgolemono sauce.",2000],
+        ["Dolmathes- Veggie","Grape leaves stuffed with herbed rice. Served with tzatziki sauce.",1600],
+        ["Falafel","Baked ball of chickpeas mixed with fresh herbs. Drizzled with olive oil and served with Demitri’s sauce",1400],
+        ["Feta Cheese & Olives","",1300],
+        ["Flamed Saganaki","Asiago cheese served with pita, onions, tomatoes and capers. Best flamed!",1700],
+        ["Flavors of Greece Dips & Pita","Feta spread, hummus, tzatziki and Mediterranean salsa. Served with warm pita bread and cucumbers.",2100],
+        ["Hummus & Pita","Served with sliced cucumbers.",1300],
+        ["Jumbo Prawn Cocktail","Served with house Mediterranean salsa.",1900],
+        ["Lamb Pops","Chargrilled baby lamb chops (4), Served with tzatziki & pita.",2800],
+        ["Spanakotiropita","Baked phyllo crust, stuffed with spinach, green onions, leeks, fresh herbs and feta cheese.",1700],
+        ["Taverna Bites","Gyro meat, red onions, tomatoes, warm pita slices and tzatziki sauce.",1500],
+        ["Taverna Mezze Board","Grilled pita tzatziki, hummus, olives, dolmathes, feta cheese, Greek sausage and falafel. Built for the table.",3600],
+        ["Whipped Feta & Pita","Served with sliced cucumbers.",1300],
+      ] },
+      { name: "Soup", items: [
+        ["Avgolemono- Bowl","Yia Yia's Homemade recipe of fresh chicken, lemon, egg and rice.",1200],
+        ["Fasolatha- Bowl","Nick’s traditional Greek white bean soup with fresh vegetables.",1100],
+      ] },
+      { name: "Salad Entrees", items: [
+        ["Horiatiki Greek Village Salad","Tossed tomatoes, cucumbers, arugula, bell peppers, red onions and kalamata olives with Greek house dressing. Topped with a thick slice of feta cheese. Add chicken, gyro, tri-tip or prawns for an additional charge.",1600],
+        ["Niko's Caesar","Romaine lettuce tossed in house Caesar dressing with pita chips, tomato, crumbled feta.",1300,null,"from"],
+        ["Mediterranean Chicken Cobb","Tossed baby greens, cucumber, tomato, kalamata olives, jicama and pepperoncini in our Greek vinaigrette dressing. Topped with fresh blue cheese crumbles and pork pancetta.",1900],
+        ["Charbroiled Prawns Salad","Mixed garden greens, feta cheese crumbles and Mediterranean salsa in a light olive oil vinaigrette dressing.",2000],
+        ["Naxos Chicken Ranch","Crispy chicken over mixed greens with tomato, onion, bell pepper, cucumber, Greek-style ranch.",1800],
+      ] },
+      { name: "Pitas", items: [
+        ["Bifteki","Charbroiled ground beef, pork and lamb patty. *Topped with grilled onion and tomato. Served with side of tzatziki sauce.",1900,null,"from"],
+        ["Chicken Souvlaki","Charbroiled Greek marinated chicken breast. Topped with homemade Tzatziki, grilled onion and tomato.",1800,null,"from"],
+        ["Gyro","Mix of ground chuck and lamb. Topped with homemade Tzatziki, grilled onion and tomato.",1600,null,"from"],
+        ["Charbroiled Prawns Pita","Charbroiled Greek marinated jumbo prawns. Topped with homemade Tzatziki, grilled onion and tomato.",2000,null,"from"],
+        ["Souvlaki","Charbroiled Greek marinated pork tenderloin. Topped with homemade Tzatziki, grilled onion and tomato.",1700,null,"from"],
+        ["Falafel Pita","Oven baked balls of chickpeas mixed with fresh herbs. Topped with homemade Tzatziki, grilled onion and tomato.",1400,null,"from"],
+        ["Tinos Veggie Pita","Mixed arugula, bell peppers, onions, tomatoes and cucumbers. Served open faced with manouri cheese and a side of Greek dressing",1300,null,"from"],
+      ] },
+      { name: "Sandwiches", items: [
+        ["Gyro House Burger","Half lb. ground chuck patty. Piled with slices of gyro meat, lettuce, tomato, onions and tzatziki sauce. Topped with mozzarella on a sourdough bun.",2100,null,"from"],
+        ["Mediterranean Burger","Seasoned patty with Greek dressing, lettuce, tomato and onions. Topped with feta cheese on a sourdough bun.",1900,null,"from"],
+        ["Tri-Tip Melt","Topped with grilled onions, bell peppers and melted mozzarella on a sourdough roll.",1900,null,"from"],
+        ["Classic Lamb Burger","Half-pound house-made lamb patty with balsamic grilled onions, arugula, tomato, Demitri’s sauce, and feta on a toasted bun.",1900],
+        ["Crispy Chicken Mozzarella Melt","Crispy chicken breast with arugula, tomato, and melted mozzarella cheese, on a sourdough bun.",1800],
+      ] },
+      { name: "Pastas", items: [
+        ["Bekri Makaronada","Chicken, sausage, bell pepper, and onions simmered in Lazaridi Amethystos red wine and herbed tomato sauce, finished with Saganaki cheese.",2000],
+        ["Chicken Aioli Pasta","Mediterranean salsa and light olive oil butter sauce. Topped with shredded mizithra cheese.",1900],
+        ["Chicken Mushroom Pesto","Mushrooms, tomatoes and garlic sautéed in a pesto aioli sauce. Topped with arugula, chicken breast, and mizithra cheese.",2100],
+        ["Gyro Pasta","Gyro meat, fresh onions and tomatoes sautéed in a creamy tzatziki tomato sauce. Sprinkled with mizithra cheese.",1900],
+        ["Chicken \"Gyro\" Pasta","Chicken souvlaki, fresh onions and tomatoes sautéed in a creamy tzatziki tomato sauce. Sprinkled with mizithra cheese.",1700],
+        ["Mediterranean Seafood Pasta","Jumbo Prawns, calamari and octopus in a herbed white-wine tomato sauce, finished with feta crumbles.",2300],
+        ["Pastitso","Classic Greek oven-baked pasta and meat pie layered with family Bolognese and parmesan béchamel.",2100],
+        ["Prawns Florentine","A light olive oil butter sauce with Mediterranean salsa and fresh spinach. Topped with mizithra cheese.",1875],
+        ["Yia Yia's Bolognese","Our homemade tomato sauce made up of ground chuck, sausage, shredded pork loin and tri-tip. Topped with shredded asiago",1900],
+      ] },
+      { name: "Taverna Plates", items: [
+        ["Chicken Kebob","Skewered chicken with bell peppers, charbroiled and served with rice pilaf, sautéed vegetables, and tzatziki.",2300],
+        ["Chicken Reganati","Marinated in herbs, garlic, and olive oil. Topped with our house Mediterranean salsa and feta cheese.",2700],
+        ["Mousaka","Layers of eggplant, ground meat and potatoes baked and topped with a parmesan Bechamel sauce. Served with fresh sautéed vegetables.",2700],
+        ["Taverna Lamb Chops","Charbroiled marinated baby lamb chops (4). Served with rice pilaf and sautéed vegetables.",4900],
+        ["Taverna Platter- Chicken","A generous serving of chicken souvlaki piled high and plated with sautéed vegetables, rice pilaf, tzatziki and warm pita bread.",2900],
+        ["Taverna Platter- Gyro","A generous serving of sliced gyro meat piled high and plated with sautéed vegetables, rice pilaf, tzatziki and warm pita bread.",2900],
+        ["Taverna Platter- Chicken & Gyro","A generous serving of half gyro meat and half chicken souvlaki piled high and plated with sautéed vegetables, rice pilaf, tzatziki and warm pita bread.",2900],
+        ["Yia Yia's Veggie Pie","Layers of potato, spinach, zucchini, eggplant and bell pepper bathed in a light tomato sauce. Topped with a mozzarella cream sauce. Served with rice pilaf.",2600],
+      ] },
+      { name: "Sides", items: [
+        ["Bread Basket","",475],
+        ["Demitri's Fries","",900],
+        ["Feta Garlic Fries","",1200],
+        ["Garlic Fries","",1025],
+        ["Side Hummus","",700],
+        ["Kid's Meat Sauce","",275],
+        ["Side Marinara","",75],
+        ["Meat Sauce","",500],
+        ["Pasta Salad","",475],
+        ["Pita Chips","",200],
+        ["Side Prawns","",1200],
+        ["Rice Pilaf","",525],
+        ["Side Skordalia","",225],
+        ["Side Souvlaki","",675],
+        ["Side Tri-tip","",875],
+        ["Tzatziki","",225],
+        ["Single Pita","",150],
+        ["Single Pita Basket with Skord","",375],
+        ["Small Caesar Salad","",775],
+        ["Small Greek Salad","",875],
+        ["Small House Salad","",700],
+        ["Side Veggies","",500],
+      ] },
+      { name: "Dessert", items: [
+        ["Mama's Baklava","Classic flaky pastry with nuts and honey syrup, served with vanilla ice cream and Greek yogurt.",1000],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Kids Chicken Strips","",850],
+        ["Kids Grilled Chicken & Green Beans","",850],
+        ["Kids Sliders","",850],
+        ["Kids Fried Shrimp","",850],
+        ["Kids Mozzarella Pita Sandwich","",850],
+        ["Kids Meat Pasta","",850],
+        ["Kids Butter Pasta","",850],
+        ["Kids Marinara Pasta","",850],
+      ] },
+      { name: "Soda", items: [
+        ["Sierra Mist","",400],
+        ["Pepsi","",400],
+        ["Diet Pepsi","",400],
+        ["Root Beer","",400],
+        ["Arnold Palmer","",400],
+        ["Shirley Temple","",400],
+        ["Soda Water","",375],
+      ] },
+      { name: "Juice", items: [
+        ["Lemonade","",500],
+        ["Cranberry Juice","",500],
+        ["Orange Juice","",500],
+      ] },
+      { name: "Tea/Coffee", items: [
+        ["Hot Tea","",400],
+        ["Ice Tea","",400],
+        ["Coffee","",400],
+        ["Greek Coffee Single","",500],
+        ["Greek Coffee Double","",600],
+      ] },
+      { name: "Other", items: [
+        ["Ginger Beer","",575],
+        ["Tonic","",400],
+        ["Milk","",475],
+        ["Pellegrino","",600],
+      ] },
+    ],
+    siteNote: "A family-owned Greek taverna in Downtown Livermore since 2008, with recipes passed down through generations, in their own words. Prices are from the online-ordering menu on their own site.",
   },
 
   /*

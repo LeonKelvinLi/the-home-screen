@@ -3410,6 +3410,28 @@ export const ROSTER_SEED: LocalSeed[] = [
       by: 'sherryeatworld',
     },
   }),
+  /* Demitri's Taverna, Glenn's link of 2026-09-24, 7:14 pm (no page named;
+     Livermore is their one location). Livermore's Mediterranean seat was open:
+     the whole page. Their laurel-wreath D from their own site, in its maroon.
+     Their site sits behind a Cloudflare check that turns away scripts; it was
+     read in a normal browser, where it opened with no challenge. */
+  seed('demitris-taverna', "Demitri's Taverna", "Demitri's", 'Greek & Mediterranean', '#8A2E1B', {
+    icon: 'demitris-taverna-mark',
+    logoTemplate: 'wordmark', logoLines: ["DEMITRI'S"], logoFace: 'slab',
+    tagline: 'Family-owned Greek taverna in Downtown Livermore since 2008',
+    site: 'https://demitristavernalivermore.com/',
+    orderUrl: 'https://demitristavernalivermore.com/menu',
+  }),
+  /* Cherie's Southern Kitchen, "Dublin • Goods" (Glenn, 2026-09-24,
+     9:52 pm). Soul food has no seat; their menu has wings beside the fried
+     chicken and Dublin's Chicken wings seat was open, so the whole page there.
+     Their own logo, the masked face over "Chérie's". */
+  seed('cheries-southern-kitchen', "Cherie's Southern Kitchen", "Chérie's", 'Soul food', '#4A2459', {
+    icon: 'cheries-southern-kitchen',
+    logoTemplate: 'wordmark', logoLines: ["CHÉRIE'S"], logoFace: 'script',
+    tagline: 'Bringing southern charm to the West Coast',
+    site: 'https://cheriesouthernkitchen.com/',
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',
