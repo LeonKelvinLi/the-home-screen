@@ -23,8 +23,49 @@ const fails = []
 const b = await chromium.launch()
 const p = await b.newPage({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 2 })
 
+/*
+  A SLOW PAGE IS A FINDING, NOT A CRASH. Every page was opened with a bare
+  goto(..., { waitUntil: 'networkidle' }), so on 2026-09-22 at 10:39 pm one
+  slow /?b=b_lovelysburgerssf threw a TimeoutError and ended the whole run —
+  a page that, seconds later, loaded in half a second and went idle in under
+  three. Now a page that does not load, or does not settle, gets one more
+  try; if that fails too, it goes into `fails` like any other finding and the
+  run carries on, so the report names every problem rather than the first.
+*/
+let failedInARow = 0
+async function visit(url, timeout = 45000) {
+  const where = url.slice(base.length) || '/'
+  for (const attempt of [1, 2]) {
+    let loaded = false
+    try {
+      await p.goto(url, { waitUntil: 'domcontentloaded', timeout })
+      loaded = true
+      await p.waitForLoadState('networkidle', { timeout })
+      failedInARow = 0
+      return
+    } catch (e) {
+      const detail = e.name === 'TimeoutError' ? `within ${timeout / 1000} s` : `(${e.message.split('\n')[0]})`
+      const why = loaded ? `loaded but never went network-idle ${detail}` : `did not load ${detail}`
+      console.log(`slow page     : ${where} ${why}${attempt === 1 ? ', trying once more' : ' again'}`)
+      if (attempt === 1) continue
+      fails.push(`${where} ${why}, on both tries`)
+      /* A page that never loaded may still be loading: blank it, so the checks
+         that follow read an empty page rather than the one before it, or a
+         document that swaps out from under them mid-read. */
+      if (!loaded) await p.goto('about:blank').catch(() => {})
+      /* Three in a row is the site, not a page. Waiting out every page left,
+         twice over, could take hours, so stop and say so. */
+      if (++failedInARow === 3) {
+        await b.close()
+        console.log('\nFAIL: ' + [...fails, 'three pages in a row failed on both tries, so the run stopped there'].join('; '))
+        process.exit(1)
+      }
+    }
+  }
+}
+
 // ---- Glenn's bug, on the live site --------------------------------------
-await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+await visit(base + '/', 60000)
 await p.click('[aria-label="1"]').catch(() => {})
 await p.waitForSelector('[aria-label="1. ABOUT"]', { timeout: 20000 }).catch(() => {})
 await p.click('[aria-label="1. ABOUT"]').catch(() => {})
@@ -57,7 +98,7 @@ for (const [id, want] of [
   ['b_alorasocial', 'Alora Social'],
   ['b_napapedalcrusher', 'Napa Pedal Crusher'],
 ]) {
-  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await visit(`${base}/?b=${id}`)
   await p.waitForTimeout(600)
   const title = await p.evaluate(() => document.querySelector('h1')?.textContent?.trim() ?? null)
   console.log(`${id.padEnd(22)}: ${title}`)
@@ -300,7 +341,7 @@ for (const [id, want, expect] of [
   ['b_demitristaverna', "Demitri's Taverna", { rows: 102, hours: 'Tue–Thu 11am–9pm', call: '(925) 373-0306' }],
   ['b_cheriessouthernkitchen', "Cherie's Southern Kitchen", { rows: 32, call: '(925) 361-5725' }],
 ]) {
-  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await visit(`${base}/?b=${id}`)
   await p.waitForTimeout(600)
   /* The whole menu sits behind a bar since 2026-09-09; the rows are counted
      with it open, which is how a customer counts them too. */
@@ -335,7 +376,7 @@ for (const [id, want, expect] of [
 }
 
 // ---- the reviewer's film, his 2026-09-09 protocol ----------------------
-await p.goto(`${base}/?b=b_belly`, { waitUntil: 'networkidle', timeout: 45000 })
+await visit(`${base}/?b=b_belly`)
 await p.waitForTimeout(600)
 const review = await p.evaluate(() => {
   const bar = document.querySelector('.brand-clip-drop .menu-picks-bar')
@@ -356,7 +397,7 @@ if (!credit.mockOffer) fails.push("Belly's page does not show his example offer,
 
 /* The films of 2026-09-17: a creator's on The Local, the shop's own on Mile Limit. */
 for (const [id, want] of [['b_thelocalpetaluma', 'Watch a review by @thespoonlist'], ['b_milelimitberkeley', 'Watch their video']]) {
-  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await visit(`${base}/?b=${id}`)
   await p.waitForTimeout(600)
   const bar = await p.evaluate(() => document.querySelector('.brand-clip-drop .menu-picks-bar')?.textContent?.replace(/\s+/g, ' ').trim() ?? '')
   console.log(`${id.padEnd(22)}: ${bar}`)
@@ -372,7 +413,7 @@ for (const [id, want] of [
   ['b_yummyyummyhibachi73rd', 'Watch their video'],
   ['b_jazzbraids', 'Watch their video'],
 ]) {
-  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await visit(`${base}/?b=${id}`)
   await p.waitForTimeout(600)
   const bar = await p.evaluate(() => document.querySelector('.brand-clip-drop .menu-picks-bar')?.textContent?.replace(/\s+/g, ' ').trim() ?? '')
   console.log(`${id.padEnd(22)}: ${bar}`)
@@ -381,7 +422,7 @@ for (const [id, want] of [
 
 /* Janelle's own page, Nana Casas on BEASTY · Individuals (2026-09-21): the
    first paragraph of her bio shows, the rest and "Affiliations" drop down. */
-await p.goto(`${base}/?b=b_nanacasas`, { waitUntil: 'networkidle', timeout: 45000 })
+await visit(`${base}/?b=b_nanacasas`)
 await p.waitForTimeout(600)
 const nana = await p.evaluate(() => ({
   lead: /quintessential Bay Area native/.test(document.body.innerText),
@@ -404,11 +445,11 @@ if (nanaIcon !== '200 image/webp') fails.push(`/icons/nana-casas-3.webp answered
 
 /* The halal mark (2026-09-18) and the red collab line on the example offers
    (2026-09-19). */
-await p.goto(`${base}/?b=b_pizzagallery`, { waitUntil: 'networkidle', timeout: 45000 })
+await visit(`${base}/?b=b_pizzagallery`)
 await p.waitForTimeout(500)
 const halal = await p.evaluate(() => !!document.querySelector('.chip-halal .halal-mark'))
 for (const [id, who] of [['b_jojoshotchicken', 'Jojo’s HC x @TheSnackSensei'], ['b_theyardbrentwood', 'The Yard x @TheSnackSensei']]) {
-  await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
+  await visit(`${base}/?b=${id}`)
   await p.waitForTimeout(500)
   const tag = await p.evaluate(() => document.querySelector('.brand-offer-collab')?.textContent?.trim() ?? '')
   console.log(`collab ${id.padEnd(15)}: ${tag}`)
@@ -418,14 +459,14 @@ console.log('halal mark    :', halal)
 if (!halal) fails.push("Pizza Gallery's page does not carry the halal mark")
 
 /* Deli Board's film is @antoinetterzz's too, sent with the listing on 2026-09-16. */
-await p.goto(`${base}/?b=b_deliboard`, { waitUntil: 'networkidle', timeout: 45000 })
+await visit(`${base}/?b=b_deliboard`)
 await p.waitForTimeout(600)
 const deliBar = await p.evaluate(() => document.querySelector('.brand-clip-drop .menu-picks-bar')?.textContent?.replace(/\s+/g, ' ').trim() ?? '')
 console.log('deli review   :', deliBar)
 if (!deliBar.startsWith('Watch a review by @antoinetterzz')) fails.push(`Deli Board's clip bar reads "${deliBar}", expected "Watch a review by @antoinetterzz"`)
 
 // ---- the Instagram button ------------------------------------------------
-await p.goto(`${base}/?b=b_baymemoriesbooth`, { waitUntil: 'networkidle', timeout: 45000 })
+await visit(`${base}/?b=b_baymemoriesbooth`)
 await p.waitForTimeout(600)
 const ig = await p.evaluate(() => {
   const a = document.querySelector('.brand-ig')
@@ -448,7 +489,7 @@ console.log('channels      :', JSON.stringify(chans))
 if (!chans) fails.push('/api/members/channels did not answer — the form cannot know what works')
 else if (!chans.sms && !chans.email) fails.push('NEITHER texting nor email is configured live — nobody can sign in at all')
 
-await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+await visit(base + '/', 60000)
 const enter = p.locator('[aria-label="Enter BEASTY"]').first()
 try { await enter.waitFor({ state: 'visible', timeout: 15000 }); await enter.click(); await p.waitForTimeout(2600) } catch { await p.waitForTimeout(1200) }
 if (await p.locator('[aria-label="Enter BEASTY"]').count()) { await enter.click().catch(() => {}); await p.waitForTimeout(2600) }
@@ -703,7 +744,7 @@ if (!count || !Number.isInteger(count.count) || count.count < 1) fails.push('/ap
 const kr = await fetch(base + '/kitchen')
 const policy = kr.headers.get('permissions-policy') || ''
 if (!/camera=\(self\)/.test(policy)) fails.push(`the camera is still blocked by the live Permissions-Policy: "${policy}"`)
-await p.goto(base + '/kitchen', { waitUntil: 'networkidle', timeout: 45000 })
+await visit(base + '/kitchen')
 const kitchen = await p.waitForSelector('.kitchen-signin h1', { timeout: 20000 }).then(async () => ({
   title: await p.textContent('.kitchen-signin h1'),
   robots: await p.evaluate(() => document.querySelector('meta[name="robots"]')?.getAttribute('content') ?? null),
@@ -717,7 +758,7 @@ else {
   if (kitchen.shell) fails.push('the customer app loaded behind the kitchen screen')
 }
 
-await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+await visit(base + '/', 60000)
 await p.locator('[aria-label="Enter BEASTY"]').first().waitFor({ state: 'visible', timeout: 30000 }).catch(() => {})
 await p.locator('[aria-label="Scan"]').first().click({ timeout: 10000 }).catch(() => {})
 const scanTab = await p.getByRole('button', { name: 'Start the camera' }).isVisible({ timeout: 10000 }).catch(() => false)
@@ -731,7 +772,7 @@ for (const s of ['Sign in or join free', 'contacts-join', 'That code is not a BE
 /* ---- 2026-09-16: BEASTY Collab, his invitation and the creator form ----
    READ-ONLY: the form is opened and read, never sent. The endpoint is asked
    with an empty body, which it refuses before anything is written. */
-await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
+await visit(base + '/', 60000)
 await p.locator('[aria-label="7"]').first().click({ timeout: 15000 }).catch(() => {})
 await p.locator('[aria-label="7. COLLABS"]').first().click({ timeout: 15000 }).catch(() => {})
 const collab = await p.waitForSelector('.dialer-panel .collab-form', { timeout: 15000 }).then(() => p.evaluate(() => ({
@@ -750,7 +791,7 @@ else {
 if (collabApi !== 400) fails.push(`/api/collabs answered ${collabApi} to an empty body, expected 400`)
 /* The link Glenn sends to creators' DMs opens onto the invitation and its Share button. */
 const collabHead = await fetch(base + '/collab').then((r) => r.text()).catch(() => '')
-await p.goto(base + '/collab', { waitUntil: 'networkidle', timeout: 60000 })
+await visit(base + '/collab', 60000)
 const linked = await p.waitForSelector('.dialer-panel .collab-share', { timeout: 15000 }).then(() => true).catch(() => false)
 console.log('collab link   :', JSON.stringify({ title: /<title>BEASTY Collab<\/title>/.test(collabHead), preview: /og:title/.test(collabHead), opens: linked }))
 if (!/<title>BEASTY Collab<\/title>/.test(collabHead) || !/og:title/.test(collabHead)) fails.push('beastypages.com/collab does not carry its own title and preview')
@@ -758,7 +799,7 @@ if (!linked) fails.push('beastypages.com/collab does not open onto the invitatio
 /* The two pages he asked to share the next morning: MAKE $ and membership. */
 for (const [slug, title, sel] of [['money', 'Make money with BEASTY', '.dialer-panel .dialer-panel-action.is-share'], ['members', 'BEASTY membership', '.chrome-pill.is-share']]) {
   const head = await fetch(`${base}/${slug}`).then((r) => r.text()).catch(() => '')
-  await p.goto(`${base}/${slug}`, { waitUntil: 'networkidle', timeout: 60000 })
+  await visit(`${base}/${slug}`, 60000)
   const opens = await p.waitForSelector(sel, { timeout: 20000 }).then(() => true).catch(() => false)
   console.log(`collab ${slug.padEnd(8)}:`, JSON.stringify({ title: head.includes(`<title>${title}</title>`), opens }))
   if (!head.includes(`<title>${title}</title>`) || !/og:title/.test(head)) fails.push(`beastypages.com/${slug} does not carry its own title and preview`)
@@ -774,7 +815,7 @@ for (const s of ['sample profile', 'Marisol R.', 'Terrell B.', 'Glenn Malicdem']
 /* 2026-09-19: the landing's count line is gone ("Could you remove this also
    when you can?"). The owners on Contacts are checked in the bundle list
    above: signed out, the dock that opens Contacts raises the sign-up prompt. */
-await p.goto(base, { waitUntil: 'networkidle', timeout: 60000 })
+await visit(base, 60000)
 await p.click('[aria-label="1"]', { timeout: 4000 }).catch(() => {})
 await p.waitForTimeout(3200)
 const landingLine = await p.evaluate(() => /local businesses\. Open tiles/.test(document.body.innerText))
