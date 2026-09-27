@@ -244,6 +244,7 @@ export function PhoneApp({ api }: { api: ShellApi }) {
                 {loaded?.name ?? open.row.name}
                 {open.row.me ? ' (you)' : ''}
               </span>
+              {loaded?.bio && <p className="prof-bio-line">{`\u201C${loaded.bio}\u201D`}</p>}
               <p className="prof-spread">Member since {SINCE.format(new Date(loaded?.since ?? open.row.since))}</p>
               {loaded && typeof loaded.friendCount === 'number' && (
                 <p className="prof-spread member-friends">

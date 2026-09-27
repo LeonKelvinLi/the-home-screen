@@ -766,6 +766,10 @@ CREATE TABLE IF NOT EXISTS member_top_friends (
   UNIQUE (member_id, friend_id)
 );
 
+/* A member's one line about themselves, shown under their name on their
+   Profile and their page: Glenn's mockup of 2026-09-27 ("No ordinary pup!"). */
+ALTER TABLE members ADD COLUMN IF NOT EXISTS bio TEXT;
+
 /* The pet a member built, so other members see it. A photo never comes here. */
 CREATE TABLE IF NOT EXISTS member_avatars (
   member_id  TEXT PRIMARY KEY REFERENCES members(id) ON DELETE CASCADE,

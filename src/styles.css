@@ -12854,3 +12854,110 @@ span.top3-add {
 @media (prefers-reduced-motion: reduce) {
   .home-hint { animation: none; }
 }
+
+/*
+  PROFILE, SLIMMED (Glenn's mockup, 2026-09-27): Edit profile small under the
+  picture, the count beside the name, the member's own line in quotes under
+  it, and Share as the arrow in the bar.
+*/
+.prof-head {
+  align-items: flex-start;
+}
+
+.prof-avatar-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.prof-edit-pill {
+  position: relative;
+  min-height: 30px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #e5e5ea;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* 44 tall to a thumb without drawing a bigger button. */
+.prof-edit-pill::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 44px;
+  transform: translateY(-50%);
+}
+
+.prof-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.prof-name-row .prof-count {
+  align-self: auto;
+}
+
+.prof-bio,
+.prof-bio-line {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  overflow-wrap: anywhere;
+}
+
+.prof-bio {
+  min-height: 44px;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.prof-bio.is-empty {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--blue-text);
+}
+
+.prof-bio-input {
+  font-size: 17px;
+}
+
+.prof-bio-line {
+  font-size: 17px;
+  margin: 2px 0;
+}
+
+.prof-share-btn {
+  min-width: 44px;
+  min-height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  background: none;
+  padding: 0;
+  color: var(--ink);
+  cursor: pointer;
+}
+
+.prof-share-said {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--blue-text);
+  white-space: nowrap;
+}
+

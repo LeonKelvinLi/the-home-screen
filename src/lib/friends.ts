@@ -61,6 +61,9 @@ export const answerFriendRequest = (from: string, accept: boolean) =>
 export const removeFriend = (id: string) =>
   call<{ relation: Relation }>('DELETE', `/api/friends/${encodeURIComponent(id)}`).then((r) => r.relation)
 
+/** My one line, under my name. Sixty characters, no links, numbers or emails. */
+export const saveBio = (bio: string) => call<{ bio: string }>('PUT', '/api/members/me/bio', { bio }).then((r) => r.bio)
+
 export const saveTopFriends = (ids: string[]) => call<{ top: string[] }>('PUT', '/api/friends/top', { ids }).then((r) => r.top)
 
 /** The pet I built goes to my account; a photo or nothing clears it. Never throws. */

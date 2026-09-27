@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
-import { mountFriends, petsFor, profileExtras, waitingCount } from './friends'
+import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
 import { crmOpenMode } from './crm/open'
 import { syncSnapshots } from './crm/backfill'
 import { fillGlennDefaults } from './crm/core'
@@ -2354,6 +2354,8 @@ async function memberPayload(m: MemberRow) {
     passWindowMs: PASS_WINDOW_MS,
     /* Friend requests waiting for an answer: the red number on Profile. */
     friendRequests: await waitingCount(m.id),
+    /* Their one line, under their name (server/friends.ts). */
+    bio: await bioOf(m.id),
   }
 }
 

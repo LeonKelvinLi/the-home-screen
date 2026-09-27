@@ -230,6 +230,19 @@ step('Profile runs Top 3 friends, the top restaurants, then Recent, with the QR 
 await fay.evaluate(() => document.querySelector('.prof')?.closest('.nav-scroll, .app-scroll, main, [class*="scroll"]')?.scrollTo?.(0, 0))
 await fay.evaluate(() => { let e = document.querySelector('.prof'); while (e && e.scrollHeight <= e.clientHeight + 2) e = e.parentElement; if (e) e.scrollTop = 0 })
 await fay.waitForTimeout(300)
+
+/* Her one line, from Glenn's mockup of 2026-09-27: written on her Profile, refused if it is a number. */
+await fay.locator('.prof-bio').click()
+await fay.fill('.prof-bio-input', 'call 510 555 0199')
+await fay.keyboard.press('Enter')
+await fay.waitForTimeout(600)
+step('a line that is a phone number is refused, and says why', /no links, numbers or emails/.test((await fay.locator('.prof-head, .prof').first().textContent()) ?? ''))
+await fay.fill('.prof-bio-input', 'No ordinary pup!')
+await fay.keyboard.press('Enter')
+await fay.waitForTimeout(800)
+step('Fay writes her line: it shows in quotes under her name', /\u201CNo ordinary pup!\u201D/.test((await fay.locator('.prof-bio').textContent()) ?? ''))
+const bar = await fay.evaluate(() => ({ share: !!document.querySelector('.prof-share-btn[aria-label="Share my page"]'), edit: !!document.querySelector('.prof-avatar-col .prof-edit-pill'), row: document.querySelectorAll('.prof-actions').length }))
+step("the mockup's layout: Share in the bar, Edit profile under the picture, no button row", bar.share && bar.edit && bar.row === 0, JSON.stringify(bar))
 await shot(fay, '8-fay-profile-top')
 
 await openContactsOn(gus, 'F', 'Fay F.')
@@ -243,6 +256,7 @@ await gus.waitForTimeout(500)
 for (const head of await gus.locator('.contacts-letter-head').all()) await head.click()
 step('every face in the Contacts list has its colours', await facesOk(gus), String(await gus.locator('.contact-row .pet-art').count()) + ' faces')
 await openContactsOn(gus, 'F', 'Fay F.')
+step("and Gus sees her line on her page", /No ordinary pup!/.test((await gus.locator('.member-page .prof-bio-line').textContent().catch(() => '')) ?? ''))
 step("Gus sees Friends, 1 friend, and himself at #1 in Fay's Top 3", gusView.btn === 'Friends ✓' && /1 friend/.test(gusView.count) && /#1Gus G\./.test(gusView.top), JSON.stringify(gusView))
 await shot(gus, '7-gus-sees-top3')
 

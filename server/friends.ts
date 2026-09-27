@@ -129,10 +129,39 @@ export async function topOf(id: string, shortName: (n: string) => string): Promi
   return rows.map((r) => ({ position: Number(r.position), id: r.id, name: shortName(r.name), pet: pets.get(r.id) ?? null }))
 }
 
-/** What a member's page adds for friends: their pet, count, Top 3, and where the viewer stands. */
+/** What a member's page adds for friends: their pet, line, count, Top 3, and where the viewer stands. */
 export async function profileExtras(viewer: string, id: string, shortName: (n: string) => string) {
-  const [pets, count, top3, relation] = await Promise.all([petsFor([id]), friendCount(id), topOf(id, shortName), relationOf(viewer, id)])
-  return { pet: pets.get(id) ?? null, friendCount: count, top3, relation }
+  const [pets, count, top3, relation, bio] = await Promise.all([petsFor([id]), friendCount(id), topOf(id, shortName), relationOf(viewer, id), bioOf(id)])
+  return { pet: pets.get(id) ?? null, friendCount: count, top3, relation, bio }
+}
+
+/*
+  A MEMBER'S ONE LINE, like "No ordinary pup!" (Glenn's mockup, 2026-09-27).
+  Sixty characters on one line, and not a way to post a number, an address
+  or a link: every member can read it, and the rest of the page is careful
+  never to show those.
+*/
+export const BIO_MAX = 60
+
+export function cleanBio(v: unknown): string | null {
+  if (typeof v !== 'string') return null
+  const s = v.replace(/[\u0000-\u001f\u007f]/g, ' ').replace(/\s+/g, ' ').trim()
+  if (!s) return ''
+  if (s.length > BIO_MAX) return null
+  if (/https?:|www\.|\.(com|net|org|io|co|me|app|link)\b|@[a-z0-9-]+\.|\d[\d\s().-]{6,}\d/i.test(s)) return null
+  return s
+}
+
+export async function bioOf(id: string): Promise<string> {
+  const r = await db.prepare('SELECT bio FROM members WHERE id = ?').get<{ bio: string | null }>(id)
+  return r?.bio ?? ''
+}
+
+export async function saveBio(me: string, v: unknown): Promise<string> {
+  const bio = cleanBio(v)
+  if (bio === null) throw new Refused(400, `One line of up to ${BIO_MAX} characters, with no links, numbers or emails.`)
+  await db.prepare('UPDATE members SET bio = ? WHERE id = ?').run(bio || null, me)
+  return bio
 }
 
 class Refused extends Error {
@@ -355,6 +384,11 @@ export function mountFriends(app: Express, { memberFromRequest, rateLimiter, sho
     '/api/friends/top',
     rateLimiter(30, 10),
     handle(async (me, req) => ({ top: await setTop(me.id, (req.body as { ids?: unknown })?.ids) })),
+  )
+  app.put(
+    '/api/members/me/bio',
+    rateLimiter(30, 10),
+    handle(async (me, req) => ({ bio: await saveBio(me.id, (req.body as { bio?: unknown })?.bio) })),
   )
   app.put(
     '/api/members/me/avatar',

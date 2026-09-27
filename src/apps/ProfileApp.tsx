@@ -21,7 +21,8 @@ import {
 } from '../lib/profile'
 import type { ShellApi } from '../ios/Device'
 import { MyFriendsSection } from './Friends'
-import { myPageLink, syncMyPet } from '../lib/friends'
+import { petFor } from './FriendFace'
+import { myPageLink, saveBio, syncMyPet } from '../lib/friends'
 import { shareOrCopy } from '../lib/share'
 
 /**
@@ -48,6 +49,10 @@ export function ProfileApp({ api }: { api: ShellApi }) {
   const [editingName, setEditingName] = useState(false)
   const [nameDraft, setNameDraft] = useState(() => readProfile().name)
   const [photoError, setPhotoError] = useState<string | null>(null)
+  /* The one line under the name (Glenn's mockup, 2026-09-27). */
+  const [editingBio, setEditingBio] = useState(false)
+  const [bioDraft, setBioDraft] = useState('')
+  const [bioError, setBioError] = useState<string | null>(null)
   const fileRef = useRef<HTMLInputElement | null>(null)
 
   const m = member()
@@ -60,7 +65,7 @@ export function ProfileApp({ api }: { api: ShellApi }) {
     when they joined; the device store is the fallback for a visitor who has
     made a local card and never signed in.
   */
-  const { account } = useGate()
+  const { account, refresh } = useGate()
   /*
     SIGNED IN IS NOT THE SAME AS BEING A MEMBER, and the first cut of this
     treated them as one — so anybody with a free account lost the "become a
@@ -165,6 +170,18 @@ export function ProfileApp({ api }: { api: ShellApi }) {
     setShareSaid(how === 'copied' ? 'Link copied' : 'Could not share just now')
     window.setTimeout(() => setShareSaid(null), 3000)
   }
+  const commitBio = async () => {
+    const next = bioDraft.trim()
+    if (next === (account?.bio ?? '')) return setEditingBio(false)
+    try {
+      await saveBio(next)
+      setBioError(null)
+      setEditingBio(false)
+      void refresh()
+    } catch (e) {
+      setBioError(e instanceof Error ? e.message : 'That did not save.')
+    }
+  }
   const shareApp = async () => {
     const url = location.origin
     try {
@@ -176,9 +193,34 @@ export function ProfileApp({ api }: { api: ShellApi }) {
   }
 
   return (
-    <AppChrome title="Profile" onBack={api.closeApp}>
+    /*
+      GLENN'S MOCKUP OF 2026-09-27, "minimizing the profile page": Share is the
+      arrow in the bar, Edit profile sits small under the picture, the count
+      rides beside the name, and a line of the member's own goes under it.
+    */
+    <AppChrome
+      title="Profile"
+      onBack={api.closeApp}
+      right={
+        <button
+          type="button"
+          className="prof-share-btn"
+          onClick={account ? shareMine : shareApp}
+          aria-label={account ? 'Share my page' : 'Share the app'}
+        >
+          {shareSaid ? (
+            <span className="prof-share-said">{shareSaid}</span>
+          ) : (
+            <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor" aria-hidden="true">
+              <path d="M13.5 4.5 21 11l-7.5 6.5v-3.9c-5.2 0-8.6 1.6-10.5 5.2.6-5.6 3.6-10.4 10.5-11.3V4.5Z" />
+            </svg>
+          )}
+        </button>
+      }
+    >
       <div className="prof">
         <header className="prof-head">
+          <div className="prof-avatar-col">
           <button
             className="prof-avatar"
             onClick={() => setSheet('avatar')}
@@ -189,9 +231,14 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             ) : p.kind === 'pet' ? (
               <PetAvatarArt pet={p.pet} size={96} />
             ) : (
-              <span className="prof-avatar-empty" aria-hidden="true">
-                <PetAvatarArt pet={DEFAULT_PET} size={96} />
-              </span>
+              account ? (
+                /* Signed in, the face other members already see for them, at full strength. */
+                <PetAvatarArt pet={petFor(account.id)} size={96} />
+              ) : (
+                <span className="prof-avatar-empty" aria-hidden="true">
+                  <PetAvatarArt pet={DEFAULT_PET} size={96} />
+                </span>
+              )
             )}
             <span className="prof-avatar-badge" aria-hidden="true">
               <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
@@ -199,8 +246,13 @@ export function ProfileApp({ api }: { api: ShellApi }) {
               </svg>
             </span>
           </button>
+          <button type="button" className="prof-edit-pill" onClick={() => setSheet('avatar')}>
+            Edit profile
+          </button>
+          </div>
 
           <div className="prof-id">
+            <div className="prof-name-row">
             {editingName ? (
               <input
                 className="co-input prof-name-input"
@@ -217,7 +269,8 @@ export function ProfileApp({ api }: { api: ShellApi }) {
               />
             ) : (
               <button className="prof-name" onClick={() => setEditingName(true)}>
-                {p.name || 'Add your name'}
+                {/* Signed in, their account's first name until they type one. */}
+                {p.name || (account ? account.name.trim().split(/\s+/)[0] : '') || 'Add your name'}
               </button>
             )}
 
@@ -233,8 +286,46 @@ export function ProfileApp({ api }: { api: ShellApi }) {
               aria-label={`${visited.length} places visited. Show the list.`}
             >
               <Gem size={18} />
-              <span>[{visited.length}]</span>
+              <span>{visited.length}</span>
             </button>
+            </div>
+
+            {/* Their line, in quotes, as the mockup has it. Signed-in members
+                only: it lives on the account so friends see it too. */}
+            {account &&
+              (editingBio ? (
+                <input
+                  className="co-input prof-bio-input"
+                  value={bioDraft}
+                  onChange={(e) => setBioDraft(e.target.value)}
+                  onBlur={commitBio}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') void commitBio()
+                    if (e.key === 'Escape') setEditingBio(false)
+                  }}
+                  placeholder="A line about you"
+                  aria-label="A line about you"
+                  maxLength={60}
+                  autoFocus
+                />
+              ) : (
+                <button
+                  type="button"
+                  className={`prof-bio${account.bio ? '' : ' is-empty'}`}
+                  onClick={() => {
+                    setBioDraft(account.bio ?? '')
+                    setBioError(null)
+                    setEditingBio(true)
+                  }}
+                >
+                  {account.bio ? `\u201C${account.bio}\u201D` : 'Add a line about you'}
+                </button>
+              ))}
+            {bioError && (
+              <p className="friend-note is-error" role="alert">
+                {bioError}
+              </p>
+            )}
 
             {cities.size > 0 && (
               <p className="prof-spread">
@@ -245,20 +336,6 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           </div>
         </header>
 
-        <div className="prof-actions">
-          <button className="btn-primary prof-action" onClick={() => setSheet('avatar')}>
-            Edit profile
-          </button>
-          {account ? (
-            <button className="btn-secondary prof-action" onClick={shareMine}>
-              {shareSaid ?? 'Share my page'}
-            </button>
-          ) : (
-            <button className="btn-secondary prof-action" onClick={shareApp}>
-              Share the app
-            </button>
-          )}
-        </div>
 
         {/* Where they have been, opened from the count above. */}
         {sheet === 'visited' && (

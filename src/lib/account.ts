@@ -51,6 +51,8 @@ export interface Account {
   passWindowMs: number
   /** Friend requests waiting for this member's answer: the red number on Profile. */
   friendRequests?: number
+  /** Their one line, under their name. */
+  bio?: string
 }
 
 export interface SignUp {
@@ -407,6 +409,8 @@ export interface MemberProfile {
   friendCount?: number
   top3?: (FriendPerson & { position: number })[]
   relation?: Relation
+  /** Their one line, under their name. */
+  bio?: string
 }
 
 export async function fetchMemberProfile(id: string): Promise<MemberProfile | null> {
