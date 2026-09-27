@@ -219,6 +219,18 @@ const topRow = await fay.locator('.prof-top3 .top3-slot').first().textContent()
 step('Fay puts Gus at #1 on her Top 3', /#1/.test(topRow) && /Gus G\./.test(topRow), topRow)
 await fay.locator('.prof-top3').scrollIntoViewIfNeeded()
 await shot(fay, '6-fay-top3')
+/* Leon for Glenn, 2026-09-27: "put qr code last and top 3 friend and top restaurants first". */
+const order = await fay.evaluate(() => {
+  const at = (sel) => { const e = document.querySelector(sel); return e ? [...document.querySelectorAll('*')].indexOf(e) : -1 }
+  return { friends: at('.prof-top3'), topSpot: at('.prof-top'), nine: at('.prof-grid'), recent: at('.prof-recent-toggle'), qr: at('img[src="/api/members/qr.svg"]') }
+})
+step('Profile runs Top 3 friends, the top restaurants, then Recent, with the QR code last',
+  order.friends > 0 && order.friends < order.topSpot && order.topSpot < order.nine && order.nine < order.recent && order.recent < order.qr,
+  JSON.stringify(order))
+await fay.evaluate(() => document.querySelector('.prof')?.closest('.nav-scroll, .app-scroll, main, [class*="scroll"]')?.scrollTo?.(0, 0))
+await fay.evaluate(() => { let e = document.querySelector('.prof'); while (e && e.scrollHeight <= e.clientHeight + 2) e = e.parentElement; if (e) e.scrollTop = 0 })
+await fay.waitForTimeout(300)
+await shot(fay, '8-fay-profile-top')
 
 await openContactsOn(gus, 'F', 'Fay F.')
 const gusView = await gus.evaluate(() => ({

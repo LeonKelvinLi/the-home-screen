@@ -260,16 +260,6 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           )}
         </div>
 
-        {/*
-          THEIR CODE AND WHAT IT HAS EARNED — his "the User gets their own
-          personalized QR code assigned to their profile page".
-
-          Above the visited/favourites sections rather than below them: it is the
-          thing that pays them for opening this screen, and it renders nothing at
-          all for a visitor who has not signed up, so it costs them no space.
-        */}
-        <MemberPanel />
-
         {/* Where they have been, opened from the count above. */}
         {sheet === 'visited' && (
           <section className="prof-drop">
@@ -294,6 +284,15 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             )}
           </section>
         )}
+
+        {/*
+          THE ORDER, Leon for Glenn, 2026-09-27: "put qr code last and top 3
+          friend and top restaurants first". The people first, then the places
+          (the Number one spot and the Top 9), then Recent visits and the member
+          line, and the code with what it has earned at the end.
+        */}
+        {/* His Top 8, cut to three: signed-in members only. */}
+        <MyFriendsSection api={api} />
 
         {/* The single favourite, top billing, edited in one tap. */}
         <section className="prof-top">
@@ -349,9 +348,6 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             </div>
           )}
         </section>
-
-        {/* His Top 8, cut to three: signed-in members only. */}
-        <MyFriendsSection api={api} />
 
         {/* The nine, as drawn: a 3x3 of tiles other people can tap through. */}
         <section>
@@ -446,6 +442,14 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             </button>
           )}
         </div>
+
+        {/*
+          THEIR CODE AND WHAT IT HAS EARNED — his "the User gets their own
+          personalized QR code assigned to their profile page". Last since
+          2026-09-27, as asked; it renders nothing for a visitor who has not
+          signed up.
+        */}
+        <MemberPanel />
 
         {/* Signed in, the first sentence was simply false: accounts exist and
             the member list in Contacts is built from them. */}
