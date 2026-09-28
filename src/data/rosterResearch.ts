@@ -76,6 +76,57 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Aberration Studio — gathered 2026-09-28 from own
+     they are: Wedding photo & video studio
+     flag: CITY CHECK: Glenn named San Francisco and the Instagram bio says 'Based in San Francisco', but the studio's own About page says 'Based out of Vacaville, California' (Solano County, about 55 miles northeast of SF), 'right between the San Francisco Bay Area and the Sacramento Metropolitan Area'. No street address is published anywhere; it is an on-location studio. Its portfolio is largely Bay Area (SF City Hall, Palace of Fine Arts, Golden Gate Bridge, 'Bay Area' weddings). Address left null.
+     flag: PHONE CONFLICT: the footer on every page (also in Glenn's screenshot IMG_5534) shows (707) 372-4295; the body text of the Contact page says (707) 828-6134. Used the footer number, which appears on every page.
+     flag: Hours 'Daily 9am - 5pm PT' come only from the site footer (Instagram shows none). These are office/contact hours for an on-location studio, not storefront hours.
+     flag: Wedding prices exist only as images: a 20-slide 'Pricing and SERVICES' gallery on wedding.html. The text is clear and legible, so I transcribed it (see raw_b_aberrationstudio_price-images-transcript.txt). Basic tier price '$3500/$5000' sits against coverage '6hr/All Day' and I read it as $3,500 for 6 hours or $5,000 all day, so it is listed as from $3,500. Photo + Video Basic '$6000/$7500' is read the same way.
+     flag: Engagement shoot/film and raw footage add-on prices differ by tier, so they are in each package's desc rather than listed as separate items. Raw footage requires the client to 'mail us a 4TB hard drive'.
+     flag: Real estate package names are inconsistent on the site: the budget package is titled 'Economy' but its rates are headed 'ESSENTIAL RATES'. The top package is titled 'Luxury' but its service list says 'PREMIUM', and other pages call it 'Deluxe'. I used the page titles Economy and Luxury. The rates table is identical on both pages. No price is published for Economy homes over 3,999 sq ft or Luxury homes over 5,999 sq ft.
+     flag: No prices are published for these, so they were left out: Commercial real estate package, real estate video, 3D tours (Zillow 3D, Matterport, 3D Vista), acreage add-on, 'Other' vehicle type (request a quote), individual/group/graduation portraits, events, performance, promotional, standalone retouching/composites and wedding logo/monogram. All are quoted through the contact form.
+     flag: The automotive price chart prints plain numbers (150/200/300 etc.) with no '$' sign, under a 'PRICING' heading. I read them as US dollars.
+     flag: Prints and albums are not sold by the studio. Its slides refer clients to ZNO, a third-party online store, at direct-to-consumer cost. No prices.
+     flag: Booking: no online booking or deposit page. Clients request a quote through the contact form (a JotForm embedded on contact.html and the service pages, asking only name, email and message), by emailing contact@aberration.studio, by phone, or through Instagram's Message/Email buttons. order_url is set to their contact page. I did not submit the form.
+     flag: site_url is set to the wedding page, which is what the Instagram bio and Glenn link to. The homepage is https://www.aberration.studio/, a full multi-page Weebly site on their own domain. The site also has older pages linked from inside it (wed-info.html 'Introduction and Pricing', wedding2, wed-photo, wed-video, wed-logo). They reuse the same slides and show no different prices.
+     flag: About page: founded early 2020 by Frank E. G. Shiner and Evan Schramm. Instagram category is 'Visual Arts', with 234 posts and 3,387 followers at the time of the screenshot. The site shows badges for Zillow Certified Photographer and LGBTQ+ friendly.
+     flag: IMG_5533 is an iPhone Mail compose window addressed to contact@aberration.studio, opened from Instagram's Email button. It confirms the email; nothing was sent.
+     flag: Logo: IMG_5536 is Glenn's zoomed crop of the round Instagram avatar. It shows a white, cyan and red 'A' mark on a black circle. The site header uses an 'ABERRATION' wordmark with red/cyan double R's instead.
+     flag: On review: their site says they are based in Vacaville and their Instagram says San Francisco; they shoot on location, so seated where Glenn filed them. Worth asking which city they want.
+     flag: On review: seated at san-francisco-services2-12 (yellow sheet: San Francisco's Photo and video seat is iSnapped's). Glenn's messages of 27-28 September.
+  */
+  'aberration-studio': {
+    phone: "(707) 372-4295",
+    email: "contact@aberration.studio",
+    hours: "Daily 9am-5pm",
+    cuisine: "Wedding photo & video studio",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Photography Basic","200-400 photos; 6 hr coverage $3,500 or all day $5,000; basic monogram; basic retouch/composites; engagement shoot +$1,000",350000,"from"],
+        ["Photography Standard","300-500 photos; all-day coverage; fully custom monogram; basic retouch/composites; book design service; drone; engagement shoot +$500",580000],
+        ["Photography Premier","500-1000 photos; all-day coverage; fully custom monogram; premier retouch/composites; book design service; drone; engagement shoot included",680000],
+        ["Videography Basic","3-5 minute highlight film; 6 hr coverage $3,500 or all day $5,000; basic monogram; social media mini film; engagement film +$1,000; raw footage +$500 (you mail them a 4TB hard drive)",350000,"from"],
+        ["Videography Standard","5-10 minute highlight film; all-day coverage; fully custom monogram; social media mini film; continuous video; drone; engagement film +$500; raw footage +$250 (you mail them a 4TB hard drive)",580000],
+        ["Videography Premier","10-15 minute highlight film; all-day coverage; fully custom monogram; social media mini film; continuous video; drone; video interviews; engagement film and raw footage included",680000],
+        ["Photo + Video Basic","200-400 photos and 3-5 minute highlight film; 6 hr coverage $6,000 or all day $7,500; basic monogram; basic retouch/composites; social media mini film; engagement shoot + film +$2,000; raw footage +$500",600000,"from"],
+        ["Photo + Video Standard","300-500 photos and 5-10 minute highlight film; all-day coverage; fully custom monogram; basic retouch/composites; social media mini film; continuous video; book design service; drone; engagement shoot + film +$1,000; raw footage +$250",850000],
+        ["Photo + Video Premier","500-1000 photos and 10-15 minute highlight film; all-day coverage; fully custom monogram; premier retouch/composites; social media mini film; continuous video; book design service; drone; video interviews; engagement shoot + film and raw footage included",1050000],
+        ["Economy Real Estate Photo Package","30 images, interior and exterior, ambient light, basic lighting and color correction, digital front yard sign removal, one virtual twilight/nightlight image; under 1,999 sq ft $250, 2,000-3,999 sq ft $300",25000,"from"],
+        ["Luxury Real Estate Photo Package","50 images, flash/ambient (flambient) lighting, advanced lighting and color correction, digital front yard sign removal, fireplace effects, Living Windows, real twilight or virtual twilight/nightlight; under 1,999 sq ft $400, 2,000-3,999 sq ft $500, 4,000-5,999 sq ft $600",40000,"from"],
+        ["Aerial","15 aerial images, added to a real estate photo package",20000],
+        ["Virtual staging","Per image; Luxury package add-on",3000],
+        ["Extra virtual twilight/nightlight","Per image; Economy package add-on",2000],
+        ["Object removal","Per item",1000],
+        ["Extra images","Per image",500],
+        ["Motorcycle","Photo only $150, video only $200, photo and video bundle $300",15000,"from"],
+        ["Car, pickup, van, SUV","Photo only $200, video only $300, photo and video bundle $400",20000,"from"],
+        ["Bus, limo, RV, semi truck","Photo only $250, video only $400, photo and video bundle $500",25000,"from"],
+      ] },
+    ],
+    quoteOnly: "Luxury cinema and photography for weddings and advertising, in their own words, shooting on location around the Bay Area. Package prices are from their own site.",
+  },
+
+  /*
      Ace King BBQ — gathered 2026-09-21 from own-domain
      they are: Chinese BBQ skewers
      flag: Glenn: 'Newark • Goods', sent 2026-09-14 08:28 PT with screenshots of @acekingnewark and acekingbbqus.com
@@ -3742,6 +3793,70 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "Family-owned since 2015 — the 'Pet Valley Block' in Castro Valley: an award-winning grooming spa, a mobile travel spa, a dog school, a self-wash and a boutique. Grooming is priced in ranges by size and breed, small through XXXL; the mobile travel spa costs more than in-salon; a $25 dog or $50 cat booking deposit.",
+  },
+
+  /*
+     Contra Costa Fitness — gathered 2026-09-28 from own
+     they are: Group fitness, yoga & personal training
+     flag: The four plans sit in an embedded frame on the Pricing page (/plans-pricing1) that plain curl does not show. I read them with Playwright and from the frame's own HTML. Each plan links to a contracostafitness.gymmasteronline.com signup form. I opened no signup form.
+     flag: Personal training and nutrition coaching: no prices are published. The site offers a free personal training consultation through its 'Get Started' form. Coaches listed are Brandon (physical therapy degree), Rebecca (remote weight loss for women), Destiny and Michele (yoga).
+     flag: Not included: their GymMaster class-booking popup shows $25.00 on each class (the casual/drop-in fee field), but it is not labelled on the site, so I left it out. It is worth confirming whether single drop-ins cost $25.
+     flag: Not included: the 'CCF Gear Store' (/shop) sells merchandise such as tanks $26.99, a hat $25 and hoodies $45. It is apparel, not a service.
+     flag: Hours are null because the site and Instagram publish no opening hours. The class schedule (their GymMaster schedule embedded at /class-schedule) for the week of 28 Sep 2026: Mon-Thu classes 5am-6:45pm with Open Gym blocks in the day; Fri 5am-5:45pm; Sat 8:30am and 9:30am ALIVE circuits; Sun 9:30am Yoga Flow. Classes are ALIVE (strength & cardio HIIT circuit), MOTIVATE (weights & cardio blast), STRONG (strength interval circuit), MINDFUL / Enhanced (stretch & mobility), and Yoga Flow.
+     flag: Phone conflict between first-party sources. The Instagram Contact sheet shows Call (925) 407-5901. The website shows '925-940-4CCF' on every page, '+1-925-940-4223' on the Get Started page, and 9259404223 in its tel link and structured data. I recorded the website number. The Instagram number may be a personal or cell line.
+     flag: ZIP 94520 is from the site's own business structured data. The visible address on both the site and Instagram is '1635 Challenge Dr. Concord, CA' with no ZIP. The site adds 'just off I-680 at Willow Pass'.
+     flag: City check: Concord, which matches Glenn's 'Concord • Services' page. Glenn noted it is 'Ideal for a Collab shoot'.
+     flag: order_url is the site's 'Book a Class' page, which embeds their GymMaster schedule (contracostafitness.gymmasteronline.com/portal/account/book/class/schedule). The Instagram bio links 'contracostafitness.com and 1 more'; the second link is not visible in the screenshots.
+     flag: The Instagram bio promo 'Get a week for $25!' matches the site's '1 Week for $25' plan.
+     flag: Logo: I used the site's own logo (green 'CONTRA COSTA FITNESS' ring around a pit bull drawing, on white) from Glenn's screenshot 246431_IMG_5522. The Instagram avatar is the same art on a black circle (246431_IMG_5524).
+     flag: On review: Glenn's note, 'Ideal for a Collab shoot'.
+     flag: On review: the site's number is used; their Instagram gives (925) 407-5901.
+     flag: On review: seated at concord-services2-2 (yellow sheet: Concord's Gym is Urban Air's). Glenn's messages of 27-28 September.
+  */
+  'contra-costa-fitness': {
+    address: "1635 Challenge Dr., Concord, CA 94520",
+    phone: "(925) 940-4223",
+    email: "info@contracostafitness.com",
+    groups: [
+      { name: "Prices", items: [
+        ["1 Week of Unlimited Classes","$25 for one week. Try a week of classes with no signup fee.",2500],
+        ["Class Unlimited","$164 per month. Unlimited in-studio classes. No contracts or cancellation fees.",16400],
+        ["Couples Unlimited","$257 per month. Unlimited classes for you and your partner.",25700],
+        ["10-Class Pack","$180 per pack. Ten classes, with no signup fee.",18000],
+      ] },
+    ],
+    quoteOnly: "A real, inclusive fitness space for group fitness, yoga and personal training, in their own words, with no initiation fees or contracts. Prices are from the pricing page on their own site.",
+  },
+
+  /*
+     CoreNest Pilates — gathered 2026-09-28 from own
+     they are: Pilates & yoga studio
+     flag: Opening: the studio is not open yet. Instagram says 'Coming Soon to Concord, CA', 'Pre- Sale! Opening Date October !' and '#firstclassroom oct5th'. A pinned post says 'START DATE OCTOBER 5TH'. On their Mindbody schedule (embedded at pilatescorenest.com/book), 28 Sep 2026 shows 'Next available class: Go to October 5, 2026'. The website itself states no opening date.
+     flag: ADDRESS CONFLICT between first-party sources. The website (footer, Contact page, and the site code) says '4425 Treat Blvd, Concord, CA 94521'. The Instagram bio location says '4475 Treat Blvd, Concord, California'. I recorded the website address, but it should be confirmed with the studio before publishing.
+     flag: Walnut Creek: pilatescorenest.com lists only the Concord studio and no Walnut Creek address. Only their Instagram hiring posts mention it ('a new boutique studio opening in Concord & Walnut Creek!' and 'CORENEST PILATES / CONCORD • WALNUT CREEK' on the Now Hiring graphic). Treat it as a Concord studio. There is no Walnut Creek location to list yet.
+     flag: City check: 4425/4475 Treat Blvd, Concord matches Glenn's 'Concord • Services' page.
+     flag: Intro offers differ between sources. The website says 'Your first class is free' when booked directly through the site. Instagram says 'First 2 weeks $10, then $149 Unlimited Class'. The free first class is $0, so it is left out as an item and mentioned here only.
+     flag: The Founding Members graphic on the site reads '$149 MONTHLY / PRE-SALE / UNLIMITED CLASSES for the rest of your life / LIMITED SPOTS AVAILABLE'. It is saved as b_corenestpilates_founding_members_brochure.png. No other membership or drop-in prices are published on the site or visible on the Mindbody schedule.
+     flag: Classes on the site (no per-class prices): Mat Pilates (55 min, max 10), Inferno Hot Pilates (50 min), Hot Fusion (55 min), Cold Pilates (55 min), Vinyasa Flow Yoga (60 min, max 12), Flow (55 min), Gentle / Restorative Yoga (60 min, max 10), and Meditation (30 min). Showers are on-site.
+     flag: Hours are null because no opening hours are published. The Mindbody schedule for opening week (5-11 Oct 2026) shows Mon-Fri classes at 6:00 AM and 6:00 PM (Hot Yoga, Yoga, Pilates), Sat 10:00 AM and 3:00 PM Pilates, and Sun 10:00 AM Pilates, 11:00 AM Hot Yoga and 3:00 PM Pilates.
+     flag: Site kind: the Instagram link is corenest-pilates.lovable.app, but it now 302-redirects to the full site on their own domain, pilatescorenest.com (built with Lovable, booking powered by Mindbody). I counted it as 'own'.
+     flag: Instagram category is 'Yoga Studio'. The Instagram avatar is a portrait photo, not a logo, so as instructed the logo is the dandelion 'CoreNest PILATES' mark from pilatescorenest.com (Glenn's screenshot 246420_IMG_5500).
+     flag: The site names the owner as 'Eva, Owner'. The Instagram Facebook link is to a personal profile. No personal details are recorded beyond what the site says.
+     flag: On review: the site's 4425 Treat Blvd is used; their Instagram says 4475. Worth asking.
+     flag: On review: seated at concord-services2-1 (yellow sheet: Concord's Gym is Urban Air's). Glenn's messages of 27-28 September.
+  */
+  'corenest-pilates': {
+    address: "4425 Treat Blvd, Concord, CA 94521",
+    phone: "(510) 880-9486",
+    email: "core.nest26@gmail.com",
+    cuisine: "Pilates & yoga studio",
+    groups: [
+      { name: "Prices", items: [
+        ["Founding Members","Pre-sale: $149 monthly for unlimited classes, for the rest of your life. Limited spots available.",14900],
+        ["First 2 Weeks","Opening offer from their Instagram post: first 2 weeks $10, then $149 unlimited class. Start date October 5th.",1000],
+      ] },
+    ],
+    quoteOnly: "A family and woman-owned Pilates and yoga studio in Concord, opening on 5 October, in their own words. The founding-member price is from their own site and the two-week trial from their Instagram.",
   },
 
   /*
@@ -7965,6 +8080,67 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Impower Sports Performance & Rehab — gathered 2026-09-28 from own
+     they are: Sports chiropractic & rehab
+     flag: This is a sports chiropractic and rehab office, not a gym: there are no training memberships or classes. The 'memberships' listed are their monthly treatment-session memberships from the Pricing page.
+     flag: Left out: 'Discovery Call (15 minutes)', listed as Free on the site and $0.00 on Jane.
+     flag: Packages and memberships are bought in-office. Single sessions are booked online through Jane. Descriptions for the package and membership rows are mine (the site shows only the name and price under each session heading); the price lines are as published.
+     flag: Jane booking page (impowersportsperformance.janeapp.com) agrees on every single-session price: Initial Exam + Treatment $160, 15 min $65, 30 min $95, 60 min $150, Cupping Only $40. Small wording difference: the site says cupping covers 'multiple regions', Jane says '1-2 regions'.
+     flag: Hours come from the site's Location & Contact hours widget, which is JavaScript-only; I read it with Playwright. The site also says 'By appointment only'. Instagram shows no hours.
+     flag: City check: 1801 Oakland Blvd, Suite 115, Walnut Creek 94596 is on both the site and Instagram. It matches Glenn's 'Walnut Creek • Services' page.
+     flag: Email: the Instagram Contact sheet shows dralexisgriffith@gmail.com and the site shows DrAlexisGriffith@gmail.com. It is the same address, written in lowercase here.
+     flag: Phone (925) 322-2002 is 'Call or Text' on the site, and 'Text' on the Instagram Contact sheet.
+     flag: The site's Instagram link goes to instagram.com/dr.aye.lexis (the doctor's account), not to @impowersportsperformance. The handle recorded here comes from Glenn's screenshots.
+     flag: The '$30 OFF ALL AUGUST' Instagram post is an old promo (August), so it is left out.
+     flag: Insurance (from the FAQ): they do not bill most insurance directly and give a superbill instead. They do bill Medicare Part B, and they accept HSA/FSA.
+     flag: The site is on GoDaddy Website Builder under the business's own domain, so I counted it as 'own'.
+     flag: On review: seated at walnut-creek-services2-3 (yellow sheet: a sports chiropractor, and Walnut Creek's Gym is TruFusion's). Glenn's messages of 27-28 September.
+  */
+  'impower-sports-performance': {
+    address: "1801 Oakland Blvd, Suite 115, Walnut Creek, CA 94596",
+    phone: "(925) 322-2002",
+    email: "dralexisgriffith@gmail.com",
+    hours: "Mon 2pm-7pm, Tue 9am-7pm, Thu 9am-7pm, Fri 9am-1pm; closed Wed, Sat, Sun; by appointment only",
+    cuisine: "Sports chiropractic & rehab",
+    groups: [
+      { name: "Prices", items: [
+        ["Initial Examination + Treatment (60 minutes)","For new patients; this appointment includes a consultation and examination, as well as your first treatment. Treatment may include a combination of chiropractic adjustments and soft tissue therapies. We will also discuss a rehabilitation and exercise plan if needed.",16000],
+        ["Single Session","A focused, efficient session, ideal when you're short on time or need quick relief. Typically includes chiropractic adjustments and minimal soft tissue work.",6500],
+        ["6 Session Package","Six 15-minute follow up sessions. Packages are purchased in-office.",33000],
+        ["2 Sessions per Month Membership","$100/Month. Autopay upfront each month for 2 sessions per month. Memberships are purchased in-office.",10000],
+        ["4 Sessions per Month Membership","$185/Month. Autopay upfront each month for 4 sessions per month. Memberships are purchased in-office.",18500],
+        ["Single Session","A well-rounded treatment session allowing time for a combination of therapies. May include chiropractic adjustments, soft tissue work (such as deep tissue or trigger point therapy), and modalities like cupping, muscle scraping, or e-stim as needed.",9500],
+        ["6 Session Package","Six 30-minute follow up sessions. Packages are purchased in-office.",51000],
+        ["2 Sessions per Month Membership","$160/Month. Autopay upfront each month for 2 sessions per month. Memberships are purchased in-office.",16000],
+        ["4 Sessions per Month Membership","$300/Month. Autopay upfront each month for 4 sessions per month. Memberships are purchased in-office.",30000],
+        ["Single Session","A comprehensive session designed for deeper work and/or multiple regions of concern. Includes a combination of chiropractic adjustments, soft tissue work (such as deep tissue or trigger point therapy), and modalities like cupping, muscle scraping, or e-stim as needed. This session also allows time for rehab exercise as needed.",15000],
+        ["6 Session Package","Six 60-minute follow up sessions. Packages are purchased in-office.",84000],
+        ["Cupping Only (15 minutes)","This appointment includes cupping only, for multiple regions.",4000],
+      ] },
+    ],
+    quoteOnly: "Pain and injury care for athletes and beyond, in their own words: sports chiropractic, soft-tissue therapy and rehab with Dr. Alexis Griffith. Prices are from the pricing page on their own site.",
+  },
+
+  /*
+     Ink From Tatooine — gathered 2026-09-28 from none
+     they are: Botanical and fine line tattoo
+     flag: Glenn put this on "Walnut Creek • Goods", but it's a tattoo artist (IG category "Tattoo & Piercing Shop"), so it belongs on Walnut Creek • Services. City check: the bio says Walnut Creek, California, and the pinned post says "Resident Artist at The Last Dodo Studio, Walnut Creek, CA". That matches Walnut Creek.
+     flag: Name: the IG display name is "TATTOO Bay Area, CA". I used "Ink From Tatooine" as it's written on the logo (the handle is inkfromtatooine and a post writes "Inkfromtatooine"). The artist's real name isn't in the screenshots, so I didn't guess one.
+     flag: Studio site: the bio link is instagram.com/dodotattooshop (the studio's IG, not in Glenn's screenshots). dodotattooshop.com is the studio's GoDaddy one-page site, titled "The Last Dodo Tattoo Shop". It has only the tagline "Inked with Individuality" and a contact form (reCAPTCHA), with no address, hours or phone. I checked it with curl and headless render, and did not submit the form.
+     flag: Address not confirmed: Glenn's Bizapedia screenshot (not first-party) shows 1601 N Main St Ste 106, Walnut Creek, CA 94596 as the principal/mailing address of an entity whose name isn't visible in the screenshot. No first-party source (the artist's IG or dodotattooshop.com) gives a street address, so address is null. Confirm with the artist.
+     flag: Hours null: none published by the artist or the studio. Phone null: none printed; contact is by DM or email (inkfromtatooine@gmail.com, from the bio and Glenn's email sheet).
+     flag: site_kind none: the artist has no website of their own. The studio's dodotattooshop.com would count as a stopgap (an unfinished GoDaddy template). This fits Glenn's note "Needs website pilot program".
+     flag: No prices: items [] and prices_published false. Booking is "DM to book", so order_url is null.
+     flag: IG highlights also include PMU and "PMU tra..." (permanent makeup and PMU training), plus "Reviews" and "HEALED". A pinned post advertises a mini tattoo training on October 23-24 ("ONLY 3 SPOTS"). No piercing service is stated beyond the IG category label.
+     flag: Logo is the round IG avatar: black starfield with gold outlined "INK FROM TATOOINE" lettering (Glenn's zoomed screenshot, IMG_5488). The square crop's corners catch Instagram's story ring, so mask it to a circle.
+     flag: On review: no street address. The Bizapedia page Glenn found says 1601 N Main St Ste 106, but The Last Dodo's own site is a placeholder that does not confirm it.
+     flag: On review: seated at walnut-creek-services-3 (Tattoo; Glenn wrote Goods, and a tattoo artist sits on the Services page). Glenn's messages of 27-28 September.
+  */
+  'ink-from-tatooine': {
+    email: "inkfromtatooine@gmail.com",
+  },
+
+  /*
      INTL Kitchen — gathered 2026-09-21 from own-domain — BLOCKED: Cloudflare 'Just a moment' challenge on every path; not bypassed — nothing readable
      flag: Cloudflare managed challenge on /, /sitemap.xml and /robots.txt with both user agents
      flag: menu: 88 items read from https://intlkitchen.com/menu on 2026-09-05
@@ -9820,6 +9996,37 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Matt Ahn — gathered 2026-09-28 from own
+     they are: Tattoo artist
+     flag: Page owner is Matt Ahn, as Glenn asked. Glenn said he "just works out of that tattoo parlor", but the shop's own site (About page and /matt-ahn) calls him "the founder of Golden Star Tattoo in SF's Chinatown" and a "Bronx-raised artist with over 20 years of experience". Worth telling Glenn.
+     flag: Address, phone, email and hours are the shop's (Glenn's instruction). 850 Clay St with ZIP 94108 is from the site footer; the IG bio says 850 Clay St, San Francisco. The site places the studio on Clay St between Stockton St and Grant Ave, under the historic Golden Star Radio sign. City check: San Francisco matches Glenn's page.
+     flag: Email: Matt's own IG has an Email button, but Glenn didn't open it, so his personal email is unknown. I used the shop's email from its IG Contact sheet (goldenstartattoo@gmail.com). The site writes it as GoldenStarTattoo@gmail.com.
+     flag: Hours: the shop's IG says "Open 7 Days" and "By Appointment or Walk in". The site publishes no times (its LocalBusiness openingHours is empty), and its About page says "Walk-ins are always welcome." The hours line therefore has no times.
+     flag: Prices: both items are shop-wide rates from the FAQ ("Our shop minimum is $200, and our shop's hourly rate is $300 per hour. Small tattoos are priced at a fixed rate."), not rates set for Matt alone. The FAQ also says consultations are free, the artist gives a quote, and a non-refundable deposit (applied to the final cost) secures the session. If the page should show only artist-specific prices, set items [] and prices_published false.
+     flag: Booking: Matt's IG says "DM for project inquiries". The site says "contact your artist directly or use our submission form" and offers the consultation form in its Book now section (/#booknow), which is order_url. Not filled or submitted.
+     flag: site_kind own: goldenstartattoosf.com is the Squarespace site of the shop he founded, with his own artist page (/matt-ahn), which is site_url. The page's newsletter block shows editor placeholder text ("This newsletter signup form needs a storage option..."), so that signup is not set up.
+     flag: cuisine: the site says Matt "blends Asian traditions with bold, thoughtful design" and "Our artists specialize in Asian Tattoo work". His IG grid is mostly Japanese-style sleeves and leg pieces (koi, daruma, tiger).
+     flag: Logo is Golden Star Tattoo's round badge (Glenn's crop, IMG_5482). It is the shop's logo, not a personal mark of Matt's. The badge itself includes the shop phone 415-872-9242.
+     flag: The IG handle has two underscores (matt__ahn); the shop site's Instagram link confirms it.
+     flag: On review: the page is Matt Ahn's, as Glenn asked ('Put Matt Ahn as the owner of this page. He just works out of that tattoo parlor'), with the shop's address, number and hours. The shop's own site calls him its founder, which is worth Glenn knowing.
+     flag: On review: seated at san-francisco-services2-11 (yellow sheet: San Francisco's Tattoo seat is Rakani's). Glenn's messages of 27-28 September.
+  */
+  'matt-ahn': {
+    address: "850 Clay St, San Francisco, CA 94108",
+    phone: "(415) 872-9242",
+    email: "goldenstartattoo@gmail.com",
+    hours: "Open 7 days, by appointment or walk-in",
+    cuisine: "Tattoo artist",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Shop minimum","Golden Star Tattoo's shop minimum. Small tattoos are priced at a fixed rate.",20000,"from"],
+        ["Hourly rate","$300 per hour, the shop's hourly rate. Each piece is quoted at a free consultation.",30000],
+      ] },
+    ],
+    quoteOnly: "Tattooing for the individual since 2003, in his own words, at Golden Star Tattoo in Chinatown. The shop's $200 minimum and $300 an hour are from its own site, and each piece is quoted at a free consultation.",
+  },
+
+  /*
      maverick-jacks-burlingame — gathered 2026-09-27 from own
      their spelling: "Maverick Jack's" (roster keeps "maverick-jacks-burlingame")
      they are: Burgers & shakes
@@ -10630,6 +10837,51 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Frozen yogurt",
     tagline: "Pure frozen yogurt with live cultures, topped your way, since 2009",
     contactOnly: "Pure frozen yogurt with live cultures, topped your way, since 2009. They publish no prices.",
+  },
+
+  /*
+     The Nail Edit Studio — gathered 2026-09-28 from own
+     they are: Russian manicure & pedicure
+     flag: Price conflict between two first-party pages. On five services the Services page shows a higher price than the online booking page, and the booking page is the same for all three stylists (Susan, Michelle, Amy): Builder gel mani/One Color $120 vs $110; Builder gel Mani / French Tip $130 vs $125; Single Nail Fix $15 vs $10; Chrome Powder $20 vs $15; Cat Eye Gel Polish $20 vs $15. I recorded the lower booking-page price with label 'from' and put both prices in desc. The main session may prefer the Services-page price.
+     flag: 'Detailed Art' ($180) and 'French' ($30) appear on the Services page but none of the three stylists offers them on the online booking page ('14 services available'). I kept them because they are published with prices.
+     flag: Sections are the Services page's own tabs: Manicure, Additional Service (the tab appears twice on the site), and Pedicure. Durations are from the Services page, and the booking page agrees on all of them.
+     flag: Services, prices and booking load only with JavaScript (SvelteKit + Firebase), so I read them with Playwright. For the booking page I picked a stylist and pressed Next to see step 2 (the service list). Nothing was submitted and no account was used.
+     flag: Typo fixed: 'Fixes chipped ,cracked' became 'Fixes chipped, cracked' (Single Nail Fix). Everything else is as published, including their capitalisation.
+     flag: Hours 'Mon - Sun: 9:00 AM - 7:00 PM' come from the site (home, footer, contact). Instagram shows no hours, so there is no conflict.
+     flag: Website: the Instagram bio links www.thenaileditstudio.com, which redirects to naileditstud.io (the link Glenn sent). The email hello@thenaileditstudio.com is on both the site and the Instagram Contact sheet.
+     flag: Phone is printed three ways: '1(925)262-5518' in the Instagram bio, '(925) 262-5518' on the Instagram Contact sheet, and '9252625518' on the site.
+     flag: City check: 1530 S Main St, Suite B, Walnut Creek 94596 is on both Instagram and the site. It matches Glenn's 'Walnut Creek • Services' page.
+     flag: The site also sells gift certificates (/gift-certificate/purchase), but no fixed prices are listed, so nothing was added.
+     flag: Instagram name is 'The_Nail_Edit_Studio'. The site uses 'The Nail Edit Studio' (footer) and 'The Nail Edit' (headings).
+     flag: On review: seated at walnut-creek-services2-4 (yellow sheet: Walnut Creek's Nails is Varnish Nail Boutique's). Glenn's messages of 27-28 September.
+  */
+  'nail-edit-studio': {
+    address: "1530 S Main Street, Suite B, Walnut Creek, CA 94596",
+    phone: "(925) 262-5518",
+    email: "hello@thenaileditstudio.com",
+    hours: "Mon-Sun 9am-7pm",
+    cuisine: "Russian manicure & pedicure",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Builder gel Mani/ Simple Art","Nail shaping and trimming, Cuticle care with e-file, structure gel with 2-4 finger designs, Moisturizing. 1h 40min.",12500],
+        ["Builder gel mani","E-file dry manicure with expert nail shaping and detailed cuticle care, finished with a durable builder gel overlay, lotion. 1h 30min.",10000],
+        ["Builder gel mani/One Color","Nail shaping and trimming, Cuticle care with e-file, builder gel single color, Moisturizing. 1h 30min. $110 on the online booking page, $120 on the Services page.",11000,"from"],
+        ["Builder gel Mani / French Tip","Nail shaping and trimming, Cuticle care with e-file, structure gel with French tip, Moisturizing. 1h 40min. $125 on the online booking page, $130 on the Services page.",12500,"from"],
+        ["Detailed Art","cuticle cleaning, nail shaping, builder gel and 10 fingers design, moisturizing and lotion. 2h.",18000],
+        ["Structured Gel Extension","Nail shaping and trimming, Cuticle care with e-file, structure gel with extensions including single color, Moisturizing. 2h.",15000],
+        ["Manicure-regular nail polish","e-file dry manicure with expert nail shaping and detailed cuticle care finished with a durable (Non-toxic 10-free) regular nail polish, lotion. 1h.",8000],
+        ["Regular Manicure Without Polish","Nail shaping and trimming, detailed cuticle care with e-file, Moisturizing, no polish. 45 min.",5000],
+        ["Single Nail Fix","Fixes chipped, cracked, or broken nails. Nail extension can be added if length needs to be rebuilt. 15 min. $10 on the online booking page, $15 on the Services page.",1000,"from"],
+        ["Chrome Powder","Experience a dazzling, mirror-like finish with our chrome powder manicure, delivering a sleek and eye-catching metallic shine to your nails. 10 min. $15 on the online booking page, $20 on the Services page.",1500,"from"],
+        ["Cat Eye Gel Polish","Transform your nails with our cat eye gel, featuring a mesmerizing, multidimensional shimmer that shifts and glows with every movement. 15 min. $15 on the online booking page, $20 on the Services page.",1500,"from"],
+        ["French","French is so classic and any type of color you can choose. 30 min.",3000],
+        ["Soak Off / Acrylic / Dip","Gentle removal of existing soak-off gel, acrylic, or dip powder enhancements using safe techniques to preserve natural nail health, followed by nail shaping, cuticle care, and moisturizing for a refreshed finish. 30 min.",3000],
+        ["Gel Pedicure and Callus Cleaning","E-file dry pedicure, detailed cuticle care, callus removal, long-lasting gel polish finish. 1h 30min.",10000],
+        ["Pedicure-regular nail polish","e-file dry pedicure with nail shaping and detailed cuticle care, callus removal, finished with a non-toxic regular nail polish, massage with a lotion. 1h.",9000],
+        ["Regular Pedicure Without Polish","Nail shaping and trimming, gentle cuticle care, callus removal, and a relaxing moisturizing treatment—finished without polish for a clean, natural look. 40 min.",6000],
+      ] },
+    ],
+    quoteOnly: "Luxury Russian-style manicures and pedicures in Walnut Creek, in their own words. Prices are from their own online booking.",
   },
 
   /*
@@ -11783,6 +12035,98 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Their dining menu, from their own site; any pasta or entrée takes a cup of soup or a house salad for $5.",
+  },
+
+  /*
+     Paul Domingo — gathered 2026-09-28 from none
+     they are: Black and grey tattoo
+     flag: The page is for Paul Domingo (IG @peezycasso, category "Artist", "Black & Grey Artist", "DM to BOOK"). His bio says "Bay Area, CA @trueline.tattoo", so he works at True Line Tattoo.
+     flag: Address is from True Line Tattoo's own IG bio ("4820 bissell ave Richmond"; capitalization fixed). City check: Richmond matches Glenn's page.
+     flag: ZIP left out: neither Paul nor True Line publishes one first-party. The US Census geocoder matches 4820 Bissell Ave, Richmond to ZIP 94805, but a search-engine summary of listing sites said 94806. Confirm before adding.
+     flag: No website for True Line Tattoo (Richmond) found. truelinetattoo.com is an UNRELATED True Line Tattoo in Stratford, NJ (412 N. White Horse Pike). Do not link it. Raw text is saved as raw_b_pauldomingo_truelinetattoo-com_UNRELATED_NJ_shop.txt.
+     flag: Phone is the shop's line, from True Line's IG ("Call (510) 210-6729"). Paul's own contact is DM, or email peezycasso@gmail.com (Glenn's email sheet).
+     flag: Hours null: no first-party hours. Listing sites seen in search results (Yahoo Local/Yelp) show Mon-Sat 12pm-8pm and Sun 12pm-6pm. These are not first-party, so I didn't use them.
+     flag: True Line's IG bio lists the shop styles as "Fine line, Black & Grey Realism, Color realism" and the owners as @tattoosbysergiomendez and @joey_hella.
+     flag: Paul's "!!" IG highlight warns that he has only one TikTok and one Instagram (@peezycasso) and "will never reach out to you to get tatted". This anti-impersonation note could be useful on the page.
+     flag: No prices: items [] and prices_published false. Booking is by DM, so order_url is null.
+     flag: Logo null: he has none (his avatar is a photo of himself). Glenn: "Needs website and logo/branding", so the page uses his initials. site_kind none.
+     flag: On review: his initials on the tile until he has a logo, as Glenn noted he needs one.
+     flag: On review: seated at richmond-services-3 (Tattoo). Glenn's messages of 27-28 September.
+  */
+  'paul-domingo': {
+    address: "4820 Bissell Ave, Richmond, CA",
+    phone: "(510) 210-6729",
+    email: "peezycasso@gmail.com",
+    cuisine: "Black and grey tattoo",
+    contactOnly: "A black and grey tattoo artist at True Line Tattoo on Bissell Avenue in Richmond. No prices are published: he books by Instagram message and by email.",
+  },
+
+  /*
+     Peaches Patties — gathered 2026-09-28 from own
+     they are: Jamaican
+     flag: Glenn's link solo.to/peachespatties is their link-in-bio page. It has one button ("Corporate and Event Catering / Place Your Order Today!") that goes to peachespatties.com/catering/. Their real site is peachespatties.com (BentoBox), so site_kind is own.
+     flag: Two addresses. The Instagram bio address, 2948 Folsom St, San Francisco, CA 94110, is their La Cocina catering and production kitchen: catering pick-ups only, no dine-in, Mon-Fri 9am-5pm, Sun closed (Saturday not listed). The record uses the customer-facing Ferry Building kiosk (North Arcade, facing the Embarcadero) because the bio says they serve "at the @ferrybuilding daily".
+     flag: Ferry Building hours as published: Mon-Fri 9:00 AM-8:00 PM, Sat 8:00 AM-7:00 PM, Sun 10:00 AM-4:00 PM, with last call 10 minutes before close each day.
+     flag: City check: San Francisco. This matches Glenn's page (San Francisco • Goods).
+     flag: Catering price conflict between two first-party pages. Items use the catering order page (the checkout price). The Menus page says: Escovitch Fish large $200 (order page $160); Jerk Roast $100/$200 (order page $120/$240); Jamaican Oxtails $120/$240 (order page $100/$200); Jerk Salmon $100/$200 (order page $120/$240); Rustic Mushroom and Spinach Patties $90 per dozen (order page $93).
+     flag: The Menus page also lists half-dozen catering patties ($46.50 beef or curry chicken, $45 mushroom or spinach). The catering order page sells only by the dozen, so the half dozens are left out.
+     flag: Catering orders must be placed at least 96 hours (4 days) ahead. order_url is catering only. No online ordering was found for the Ferry Building kiosk.
+     flag: The catering order page is JavaScript-only, so I read it with headless Playwright. Nothing was added to a cart.
+     flag: No alcohol on the menu. Rasta Stew's "splash of wine for taste" is a cooking ingredient, so it was kept. Ginger Beer is their freshly brewed, lightly sweetened Jamaican ginger beer (a soft drink), also kept.
+     flag: Obvious typos fixed: "dice tomatoes" to "diced tomatoes", "filled black beans" to "filled with black beans", "highly- seasoned" to "highly-seasoned"; "*contains soy*" written as "Contains soy." The order page's "Steamed Green" is written "Steamed Greens" as on the Menus page.
+     flag: Kiosk patties are listed by filling ("Beef", "Curry Chicken", "Irie Lentil", "Spinach") under Jamaican Patties, as published.
+     flag: Instagram display name is "Bay Area Jamaican Food 🇯🇲" with category Caribbean Restaurant, owned by @missjamerican. The site names the founder and executive chef as Shani Jones.
+     flag: Logo is the round Instagram avatar in IMG_5469 (full logo with "A Jamaican Kitchen"), only about 257px wide. The solo.to avatar in IMG_5471 is bigger but shows only the patty emblem, cut off by the circle. A larger logo file is on their site: media-cdn.getbento.com/accounts/19c186af922fbd088e342e5c77c64217/media/images/40078logo22x.png.
+     flag: On review: where the site's Menus page and its catering checkout disagree, the checkout's price is used, as that is what a customer pays.
+     flag: On review: seated at san-francisco-goods2-26 (yellow sheet: no Caribbean seat, and San Francisco's Bakery is U Dessert Story's). Glenn's messages of 27-28 September.
+  */
+  'peaches-patties': {
+    address: "1 Ferry Building NA 50, San Francisco, CA 94111",
+    phone: "(415) 562-7589",
+    email: "peachespatties@gmail.com",
+    hours: "Mon-Fri 9am-8pm, Sat 8am-7pm, Sun 10am-4pm",
+    cuisine: "Jamaican",
+    sections: [
+      { name: "Jamaican Patties", items: [
+        ["Beef","",775],
+        ["Curry Chicken","",775],
+        ["Irie Lentil","",750],
+        ["Spinach","",750],
+        ["Jamaican Patty Box","Your choice of 8 beef, curry chicken, spinach, or lentil patties",5200],
+      ] },
+      { name: "Jamaican Meals", items: [
+        ["Jerk Chicken Meal","Grilled jerk chicken, fried plantains, rice and peas, and a side of vegetables. Contains soy.",1999],
+        ["Rasta Stew Meal","Hearty vegan stew filled with black beans, chickpeas, diced tomatoes, onions, garlic, and a splash of wine for taste. Fried plantains, rice and peas, and a side of vegetables",1700],
+        ["Jamaican Patty Meal","Your choice of 1 patty, a side of vegetables and fried plantains",1650],
+      ] },
+      { name: "Jamaican Beverages", items: [
+        ["Sorrel (Jamaican Hibiscus)","Jamaican hibiscus freshly steeped lightly sweetened",500],
+        ["Ginger Beer","Freshly brewed Jamaican ginger beer lightly sweetened",500],
+        ["Water","",400],
+      ] },
+      { name: "Catering Entrees", items: [
+        ["Jerk Chicken","Marinated jerk chicken grilled to perfection. Contains soy. Small (feeds 10) $75, large (feeds 20) $150.",7500,null,"from"],
+        ["Escovitch Fish","Pan-fried fish drenched with a Jamaican pickling sauce made from vinegar, pepper, onions, and pimento. Small (feeds 10) $100, large (feeds 20) $160.",10000,null,"from"],
+        ["Curry Chicken & Potatoes","Chopped chicken thighs and potatoes stewed in traditional Jamaican curry seasoning. Small (feeds 10) $65, large (feeds 20) $130.",6500,null,"from"],
+        ["Jerk Roast","Marinated jerk beef chuck roll cooked tenderly in its flavorful juices. Small (feeds 10) $120, large (feeds 20) $240.",12000,null,"from"],
+        ["Rasta Stew","Hearty vegan stew filled with black beans, chickpeas, diced tomatoes, onions, garlic, and a splash of wine for taste. Small (feeds 10) $50, large (feeds 20) $100.",5000,null,"from"],
+        ["Jamaican Oxtails","Tender Jamaican seasoned oxtails. Small (feeds 10) $100, large (feeds 20) $200.",10000,null,"from"],
+        ["Jerk Salmon","Moist, flaky, highly-seasoned, pan-seared jerk salmon with a lemony spicy kick. Small (feeds 10) $120, large (feeds 20) $240.",12000,null,"from"],
+      ] },
+      { name: "Catering Sides", items: [
+        ["Rice & Peas","Jasmine rice and red kidney beans steamed in coconut milk. Small (feeds 10) $50, large (feeds 20) $100.",5000,null,"from"],
+        ["Steamed Greens","Steamed collard greens cooked with olive oil, chopped garlic, and onions. Small (feeds 10) $50, large (feeds 20) $100.",5000,null,"from"],
+        ["Steamed Curry Cabbage","Cabbage seasoned with the pungent flavors of turmeric, mustard, and curry powder lightly steamed. Small (feeds 10) $50, large (feeds 20) $100.",5000,null,"from"],
+        ["Plantains","Ripe and sweet plantains lightly fried. Small (feeds 10) $50, large (feeds 20) $100.",5000,null,"from"],
+      ] },
+      { name: "Catering Patties", items: [
+        ["Beef Patties","Jamaican baked savory pastry filled with ground beef seasoned with garlic, onion, and peppers. Per dozen.",9300],
+        ["Curry Chicken Patties","Jamaican baked savory pastry filled with ground chicken seasoned with traditional Jamaican curry chicken. Per dozen.",9300],
+        ["Rustic Mushroom Patties","Jamaican baked savory pastry filled with button mushrooms, green onions, garlic, onions, gruyere cheese. Per dozen.",9300],
+        ["Spinach Patties","Jamaican baked savory pastry filled with seasoned spinach. Per dozen.",9300],
+      ] },
+    ],
+    siteNote: "Fresh homemade Jamaican patties and Jamaican dishes, in their own words, at their Ferry Building kiosk and for catering. Prices are from the kiosk menu and the catering order page on their own site.",
   },
 
   /*
@@ -14775,6 +15119,28 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Yemeni coffee",
     tagline: "Yemeni coffee on 4th Street, open late",
     contactOnly: "Yemeni coffee on 4th Street, open late. They publish no prices; they offer 10% off to students, healthcare workers and city employees with ID.",
+  },
+
+  /*
+     Sandbar Oakland — gathered 2026-09-28 from stopgap
+     they are: Caribbean beach club (bar)
+     flag: No working website. sandbaroakland.com appears to be theirs: the search index titles it "Sandbar Oakland – Your Urban Beach Vacation" and says it had placeholder text. Today it is a broken WordPress install. The homepage is blank (an empty cached 200), and every other path, including www, returns "There has been a critical error on this website." Their Instagram does not link it. That makes it an unfinished template, so site_kind is stopgap. Do not show the link while it errors; switch to "none" if you prefer. This fits Glenn's note "Needs website pilot program".
+     flag: No first-party ordering or booking page found (I looked for Toast, Square, Clover, Tock and Eventbrite). Listing sites were ignored.
+     flag: It is a bar: all alcohol is left out. The pinned Happy Hour post shows $11 craft cocktails and $2 off draft beers, wines and sangria, and well drinks. The "Gorilla Milk" post is a drink promo. No food items or food prices appear in the screenshots.
+     flag: Hours null: the Instagram bio is cut off at "Wed - 4-12am... more", and the rest is not in Glenn's screenshot. Listing sites repeat a fuller line (Wed 4-12am, Thu 4-12am, Fri 4-1am, Sat 2-1am, Sun 2-12am). It is not confirmed first-party, so it is not used. Tapping "more" on their Instagram would confirm it.
+     flag: The pinned Happy Hour post (Wednesday all day, Thursday & Friday 4-7pm, Saturday & Sunday 2-5pm) is consistent with a Wednesday-Sunday schedule that opens at 2pm on weekends. It is not full hours.
+     flag: Address as published: "2418 Broadway, Oakland" (bio and location tag). No ZIP is printed. 2418 Broadway in Oakland is in ZIP 94612 (postal geography), not added.
+     flag: No phone or email: the profile has no Contact button, only Following and Message.
+     flag: City check: Oakland. This matches Glenn's page (Oakland • Goods).
+     flag: Logo is the zoomed Instagram avatar in IMG_5485. A square crop that holds the whole black circle also catches the pink-orange Instagram story ring in its corners; a round mask hides it.
+     flag: On review: no link to sandbaroakland.com, which errors on every page and which their Instagram does not link; the page carries Glenn's needs-a-website ring.
+     flag: On review: seated at oakland-goods2-14 (yellow sheet: no seat for a bar or Caribbean food). Glenn's messages of 27-28 September.
+  */
+  'sandbar-oakland': {
+    address: "2418 Broadway, Oakland, CA",
+    cuisine: "Caribbean beach club (bar)",
+    needsSite: true,
+    contactOnly: "A Caribbean beach club in Oakland, in their own words. They publish no food menu of their own, so no prices show.",
   },
 
   /*
@@ -17963,6 +18329,159 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Shish Grill — gathered 2026-09-28 from own
+     they are: Lebanese / Mediterranean
+     flag: BLOCKED: their Toast ordering page (order.toasttab.com/online/shishgrill) shows a Cloudflare bot check ("Performing security verification") to curl and to headless Chromium. I did not try to get past it. Every "Menu" and "Order" link on their site goes there, so the full regular (dine-in and take-out) menu was not read. The main session can open it in a normal browser to add it.
+     flag: Items are only the catering menu from theshishgrill.com/catering/ (order 48 hours ahead; the party packs need 1 hour).
+     flag: Left out: "Kibbeh (10 Pcs)", listed as "Unavailable" with no price.
+     flag: Old menu not used. The "Shish Grill Menu" link on their Our Story page opens a one-page PDF from July 2021 on their old site builder's CDN (0201.nccdn.net). It is a joint Shish Market grocery and restaurant menu with old phone (925) 415-3233 and address 1061 Market Place B. It is five years old, so none of its prices are used.
+     flag: Phone conflict. Glenn's screenshot of the site (IMG_5475) shows "+ (925) 291-9323" twice under Contact Us. The live site today shows (925) 415-3270 on every page, and so do the Instagram contact sheet and the number printed on the logo. The record uses (925) 415-3270.
+     flag: Address: the site says "1061 Market Place, A1, San Ramon, CA 94583"; Instagram says "1061 Market Place Suite A, San Ramon, California". The record uses the site's version.
+     flag: Hours on the live site match Glenn's screenshot: Monday-Thursday 11am-8pm, Friday-Saturday 11am-9pm, Sunday closed.
+     flag: City check: San Ramon. This matches Glenn's page (San Ramon • Goods).
+     flag: Name: Instagram and the logo say "Shish Grill"; the site footer says "The Shish Grill"; the domain and handle are theshishgrill.
+     flag: Obvious typos fixed: "Lavash Wrap (10 Wraps))" and "Half Tray of Baba Ghanouj)" (extra parenthesis removed); "1 humus" to "1 hummus" in Party Appetizers.
+     flag: The homepage says "Voted Best in the East Bay 9 years"; the Instagram bio says "Best in the East Bay x 10yrs". This is marketing copy only; neither is in the record.
+     flag: No alcohol on the catering menu. The site's page title calls them "San Ramon Greek Food & Catering"; the page copy says Lebanese, Greek and Mediterranean.
+     flag: On review: the full menu, 99 items, was read from their own Toast ordering page in a normal browser, where no bot check was shown (headless browsers were shown one and nothing was attempted there). It replaces the 21 catering items from their site, which it also carries.
+     flag: On review: halal, from the halal logo on their own site.
+     flag: On review: seated at san-ramon-goods2-0 (yellow sheet: San Ramon's Mediterranean is Alora Social's). Glenn's messages of 27-28 September.
+  */
+  'the-shish-grill': {
+    address: "1061 Market Place, A1, San Ramon, CA 94583",
+    phone: "(925) 415-3270",
+    email: "shishgrill@att.net",
+    hours: "Mon-Thu 11am-8pm, Fri-Sat 11am-9pm; closed Sun",
+    cuisine: "Lebanese / Mediterranean",
+    sections: [
+      { name: "Monday/Tuesday Special", items: [
+        ["Mansaf","A Popular Levantine Dish, Whute Rice, Topped With A Whole Lamb Shank, Falling Off The Bone Tender Lamb Cooked In Aged Yogurt (Jameed)",3199],
+      ] },
+      { name: "Appetizers", items: [
+        ["Baba Ghanouj","A dip made with smoked eggplant, blended with garlic, lemon juice and tahini. Served with 1 pita bread.",1299],
+        ["Hummus","A dip made with garbanzo beans, blended with garlic, lemon juice and tahini. Served with 1 pita bread. Vegan.",1299],
+        ["Spicy Potato (Vegan)","Sauteed cubes of potato mixed with cilantro, garlic, lemon juice and our chef’s special spices. Served with garlic sauce. Vegan.",1299],
+        ["Kibbeh (3pcs)","3 pieces. A mixture of ground meat and cracked wheat, stuffed with seasoned meat and onions, cooked to perfection. Served with tzatziki sauce.",1299],
+        ["Sambusik (3pcs)","3 pieces. Specialty dough stuffed with seasoned meat, cooked to perfection. Served with garlic sauce.",1299],
+        ["Spinach Pie (3pcs)","3 pieces. Specialty dough stuffed with spinach, onions and sumac seasoning. Served with tzatziki sauce.",1299],
+        ["Yolanchy (6pcs)","6 pieces. Grape leaves stuffed with rice, tomatoes, parsley, onions and lemon juice.",1299],
+        ["Spicy Shish Vegetables","Deep fried eggplant or Zucchini topped with fresh garlic, spicy sauce and Fresh cilantro. Served with pita bread.",1299],
+        ["Four Falafel Bites In A Pita","4 Falafel In A Pita Bites Served With Tahini",1299],
+      ] },
+      { name: "Salads", items: [
+        ["Fatoush Salad","Cucumber, tomatoes, lettuce, onions, parsley, pita chips, sumac, lemon juice and olive oil.",1299],
+        ["Tabouli Salad","Chopped parsley, tomatoes, onions, cracked wheat, lemon juice and olive oil.",1299],
+        ["Greek Salad","Lettuce, tomatoes, onions, parsley, cucumber, lemon juice, feta cheese and olives.",1299],
+        ["Shish Salad","House salad topped with (choose 1: falafel, chicken, beef shawarma or gyro) marinated with our specialty selected seasoning served with specialty garlic or tahini sauce.",1999],
+      ] },
+      { name: "Sandwiches", items: [
+        ["Chicken Shewarma Sandwich","Chicken seasoned and marinated with our authentic shawarma spices, smothered with garlic sauce. Includes pickles, lettuce and tomatoes.",1799],
+        ["Beef Shewarma Sandwich","Beef sandwich seasoned and marinated with our authentic shawarma spices, smothered with tahini sauce. Includes onions, grilled tomatoes, lettuce and pickles.",1799],
+        ["Shewarma Shish Grill Sandwich","Your choice of a mixture of beef and lamb or chicken shawarma. Choose a side of fries with our house blended spices, with a spicy kick! Includes pickles, fries and our specialty spicy garlic sauce (the beef shawarma has grilled tomatoes).",1799],
+        ["Kafta Sandwich","Fresh ground beef and lamb, mixed with parsley and onions, seasoned to perfection and smothered with garlic sauce. Includes parsley, onions, lettuce, tomatoes and pickles.",1799],
+        ["Chicken Kebab Sandwich","Charbroiled cuts of chicken breast smothered with garlic sauce. Includes lettuce, tomatoes and pickles.",1799],
+        ["Gyro Sandwich","A mix of beef and lamb, smothered with tzatziki sauce. Includes lettuce, tomatoes, onions and pickles.",1799],
+        ["Souvlaki Chicken Sandwich","Skinless kebobs of chicken breast, marinated in our specially selected seasoning, smothered with tzatziki sauce. Includes lettuce, tomatoes and pickles.",1799],
+        ["Shish Lamb Burger","Fresh lamb and beef patty served with our Shish specialty sauce on a bun. Add cheese for an additional charge. Includes lettuce, tomatoes, pickles and onions.",1799],
+        ["Falafel Sandwich","Crushed chick peas and fava beans, seasoned with cumin and coriander, fried to golden perfection, smothered with tahini sauce. Vegan. Includes lettuce, tomatoes, pickles, onions and parsley.",1799],
+        ["Philly Steak","Thinly sliced steak, cheese, peppers and onions. Served in a bun.",1799],
+        ["Double Lamb Burger","TWO fresh lamb and beef patties served with our Shish specialty sauce in a bun. Add cheese for an additional charge. Includes lettuce, tomatoes, pickles and onions.",1999],
+        ["Hummus Sandwich","Made with garbanzo beans, blended with garlic, lemon juice and tahini. Includes lettuce, tomatoes, cucumbers, parsley, pickles and onions. Vegan.",1799],
+        ["Baba Ghanouj Sandwich","Smothered with smoked eggplant, blended with garlic, lemon juice and tahini. Includes lettuce, tomatoes, pickles, cucumbers, onions and parsley. Vegan.",1799],
+      ] },
+      { name: "Entrees", items: [
+        ["Shish Tawook (Chicken)","Skinless chicken breast kabobs, marinated in our specialty selected seasoning. Charbroiled to perfection. Served with garlic sauce, rice, veggies and a side.",2399],
+        ["Shish Kabob","Tender choice cuts of lamb or beef, complimented by our specially selected seasoning. Charbroiled to perfection. Served with garlic sauce, rice, veggies and a side.",2699],
+        ["Kafta","Freshly ground beef and lamb, mixed with parsley and onions. Charbroiled to perfection. Served with garlic sauce, rice and a side.",2399],
+        ["Shish Combo Plate","A mix of beef, chicken and kafta kebob. Charbroiled to perfection. Served with garlic sauce, rice, veggies and a side.",2799],
+        ["Falafel (Vegan)","6 pieces. Crushed chick peas and fava beans, seasoned with cumin and coriander, fried to golden perfection. Served with tahini sauce, pita bread, rice and a side.",2399],
+        ["Gyro","A mix of beef and lamb cooked to perfection. Served with shish specialty tzatziki sauce, rice and a side.",2399],
+        ["Vegetarian Plate","An assortment of stuffed grape leaves, falafel, hummus and baba ghanouj. Served with a choice of pita bread or rice, tahini sauce and a side.",2399],
+        ["Chicken Shewarma","Tender chicken breast thinly sliced, seasoned and marinated with our authentic shawarma spices. Served with our garlic sauce, rice and a side.",2399],
+        ["Beef Shewarma","Tender beef thinly sliced, seasoned and marinated with our authentic shawarma spices. Served with our sesame cream (tahini) sauce, rice and a side.",2399],
+        ["Shewarma Shish Grill","Your choice of beef, lamb or chicken with our new house blend spices, with a little spicy kick! Served with our spicy garlic sauce, rice and a side.",2399],
+        ["Hummus Shewarma","Garbanzo bean dip, blended with garlic, lemon juice and sesame cream (tahini) sauce, topped with beef shawarma. Served with pita bread, rice and a side.",2399],
+        ["Spicy Chicken","Chef's favorite! Chicken breast cubes, stir-fried with onions, bell peppers, roasted garlic and our own shish grill hot sauce. Served with our specialty garlic sauce, rice, veggies and a side.",2399],
+        ["Lavash Wrap","A mixture of ground beef and lamb, spread on pita bread, topped with onions, parsley and our specialty garlic sauce. Served with rice and a side.",2399],
+        ["Souvlaki Chicken","Skinless kabobs of chicken breast, charbroiled to perfection, marinated in our specially selected seasoning. Served with our tzatziki sauce, rice, veggies and a side.",2399],
+        ["Fried Trout","Lebanese style! Lightly breaded and fried to golden perfection, served with Baba Ghanouj, pita bread, spicy potato and tahini sauce. No soup, salad or rice.",2799],
+      ] },
+      { name: "Soup", items: [
+        ["Lentil Soup","8 oz of liquid gold (lentil).",699],
+        ["Medium Soup","24 oz of liquid gold (lentil).",999],
+        ["Super Soup","32 oz of liquid gold (lentil).",1299],
+      ] },
+      { name: "Sides", items: [
+        ["Rice","",699],
+        ["French Fries","",699],
+        ["Zaatar Garlic Fries","",899],
+        ["Bulgar Pilaf","",699],
+      ] },
+      { name: "Kids Meal", items: [
+        ["Chicken Kabob Rice Bowl","Skinless chicken breast grilled to perfection served with rice pilaf and our specialty garlic sauce.",1499],
+        ["Chicken Strips","Deep fried chicken strips served with our specialty garlic sauce and rice.",1499],
+      ] },
+      { name: "Desserts", items: [
+        ["Ashtalia","A must try for Lebanese sweets! Has a pudding like texture on the top with a crunchy bread on the bottom. Drizzled with our homemade syrup and topped with pistachios.",799],
+        ["Baklava","Lebanese backlava made fresh at Shish Grill by Chef Nancy. Nothing you have tasted before!",499],
+        ["Kanefeh","",1299],
+        ["Turkish Delight","",199],
+        ["Small Baklava","Locally made Baklava.",299],
+        ["Triangle Baklava","",599],
+        ["Cake Slice","",799],
+      ] },
+      { name: "Extras", items: [
+        ["Extra Sauce","",99],
+        ["Pita Bread","",100],
+        ["Single Falafel","",199],
+        ["Single Kibbeh","",499],
+        ["Single Sambusik","",499],
+        ["Single Yolanchy","",199],
+        ["Single Spinach Pie","",499],
+        ["Kabob Skewer","",1499],
+        ["8 Oz Sauce","",699],
+        ["12 Oz Sauce","",899],
+      ] },
+      { name: "Catering", items: [
+        ["Whole Lamb w/Rice","Please order 48 hours in advance.",65000],
+        ["Shish Tawook (Chicken) (10 Skewers)","Please order 48 hours in advance.",14000],
+        ["1/2 Tray Spicy Chicken","Please order 48 hours in advance.",14000],
+        ["Lavash Wrap (10 Wraps)","Please order 48 hours in advance.",14000],
+        ["Kafta (10 Skewers)","Please order 48 hours in advance.",14000],
+        ["Chicken Shewarma (10 Servings)","Please order 48 hours in advance.",14000],
+        ["Falafel (25 Pcs)","Please order 48 hours in advance.",4599],
+        ["Yolanchy (20 Pcs)","Please order 48 hours in advance.",4599],
+        ["Spinach Pie (10 Pcs)","Please order 48 hours in advance.",4599],
+        ["Sambusik (10 Pcs)","Please order 48 hours in advance.",4599],
+        ["Kibbeh (10 Pcs)","Please order 48 hours in advance.",4599],
+        ["1/2 Tray Baba Ghanouj","",10000],
+        ["1/2 Tray Spicy Potato (Vegan)","Please order 48 hours in advance.",9999],
+        ["1/2 Tray Hummus (Vegan)","Please order 48 hours in advance.",9999],
+        ["1/2 Tray Tabouli","Please order 48 hours in advance.",9999],
+        ["1/2 Tray Fatoush","Please order 48 hours in advance.",9999],
+        ["Baklava 1/2 Tray","",8000],
+        ["Ashtalia 1/2 Tray","",8000],
+        ["Half Tray of Knafeh","Please order 48 hours in advance.",7999],
+        ["1/2 Tray Rice Pilaf","Please order 48 hours in advance.",5000],
+        ["Lamb Shanks (10 Ppl Min)","One order is for one person, minimum 10 orders. Please order 48 hours in advance. (Priced per PERSON)",3199],
+        ["Party Meal","Serves 5-6 people. Includes 6 rice, 6 house salads, 3 chicken kabob skewers and 2 kafta skewers. Order 1 hour in advance.",14000],
+        ["Party Appetizers","Serves 5-6 people. Includes 1 humus, 1 baba ghanouj, 1 tabouli, 6 pieces of pita bread, 6 pieces of yolanchy and 1 order of spicy potatoes. Order 1 hour in advance.",7999],
+      ] },
+      { name: "Drinks", items: [
+        ["Lebanese Tea","",399],
+        ["Fountain or Canned Soda","",399],
+        ["Bottled Drink","",400],
+        ["Laziza","",499],
+        ["Water","",299],
+        ["Milaf Date Cola","",399],
+        ["Lebanese Coffee","",399],
+        ["Yogurt","",399],
+      ] },
+    ],
+    siteNote: "Authentic Lebanese cuisine, family owned, in San Ramon, in their own words. Prices are from their own online ordering.",
+  },
+
+  /*
      The Tox Alamo — gathered 2026-09-21 from own-domain
      they are: Lymphatic body sculpting
      flag: the studio is by @courtneyyeager per the bio; the franchise's studio locator does not list Alamo yet
@@ -18817,6 +19336,37 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menu on their own website.",
+  },
+
+  /*
+     2$CWBY Tattoo — gathered 2026-09-28 from stopgap
+     their spelling: "2$CWBY" (roster keeps "2$CWBY Tattoo")
+     they are: Traditional tattoo
+     flag: name_exact: I chose "2$CWBY", as he writes it in his IG display name ("2$CWBY | Traditional Tattoo") and on the logo poster. "Two Dollar Cowboy" is the spoken form (handle two.dollar.cowboy, email twodollarcowboy@gmail.com, Glenn's note). You may want it for the page slug and display text, since "$" is awkward in URLs. His real name isn't shown.
+     flag: City check: his bio says "Downtown Livermore, CA @oldfirsttattoo". That matches Livermore.
+     flag: Address null: no Old First Tattoo website found (oldfirsttattoo.com doesn't resolve, and searches return only listing sites), and the shop's IG wasn't in the screenshots. Glenn's Apple Maps card (not first-party) shows Old First Tattoo at 2582 Old First St, Livermore, CA 94550, with hours "Add Hours" (none) and website yelp.com. Listing sources also tie 2582 Old First St to an earlier shop name, "Immovable Tattoo" (a Yelp page title and the Alameda County body-art permit list), and a search summary cited 2612 Old First St for an Old First Tattoo Yelp page (unverified). Confirm the street address with him.
+     flag: Phone match: the +1 (925) 533-8071 on the Apple Maps card for Old First Tattoo is the same number as his own IG Contact sheet, (925) 533-8071. So the shop's public listing uses his number, which suggests he runs or answers for the shop. That doesn't confirm the street address, though.
+     flag: Hours null: none published first-party. His bio says "Books Open" and "DM for Appointments".
+     flag: Booking: the bio link forms.gle/M8jJ2BFjJ9zkaqwH9 opens a Google Form titled "Tattoo Request Form". I read only its public title page and policy text, and did not fill or submit it. It asks for name, email, phone, a tattoo description (size and placement) and preferred timing. That link is order_url.
+     flag: Prices, from the form's "DEPOSIT AND GENERAL BOOKING POLICY": "My rate is $150/hr for custom and large scale work. I also charge by the piece for flash and pre drawn tattoos." It gives no per-piece flash prices. The $50 deposit is non-refundable and goes toward the tattoo. Rescheduling at least 48 hours ahead keeps the deposit; a later reschedule or cancellation, or rescheduling more than once, voids it. The deposit is in the item's desc, not a separate item.
+     flag: site_kind stopgap: his only web link is the Google booking form, with no website. Glenn: "Needs website pilot program and logo branding". If you'd rather treat a Google Form as no site, switch to none with site_url null.
+     flag: Logo: the "2$CWBY / TATTOO" poster Glenn found (IMG_5516). The poster is tall (about 1:1.77) and taller than the screenshot is wide, so no square box can hold the whole poster. The crop is the full white poster, inset past the post's black side and bottom bands. Pad it to a square with white.
+     flag: Branding caution: the poster's character is Jerry in a cowboy hat, and his IG avatar (IMG_5497) is Tom, both from Warner Bros.' Tom and Jerry. That's fine as his own IG art, but risky as the logo on a site we build; Glenn may want an original mark for the logo/branding work.
+     flag: On review: the logo is the poster Glenn found (8:34 pm). It draws Jerry, a Tom and Jerry character, which is worth raising with him if BEASTY designs his branding.
+     flag: On review: no street address; the Apple Maps card Glenn sent (2582 Old First St) is not confirmed by a site of theirs.
+     flag: On review: seated at livermore-services-3 (Tattoo). Glenn's messages of 27-28 September.
+  */
+  'two-dollar-cowboy': {
+    phone: "(925) 533-8071",
+    email: "twodollarcowboy@gmail.com",
+    cuisine: "Traditional tattoo",
+    needsSite: true,
+    groups: [
+      { name: "Prices", items: [
+        ["Custom and large scale work","$150 per hour. Flash and pre-drawn tattoos are charged by the piece. All appointments need a $50 non-refundable deposit, which goes toward the price of your tattoo.",15000],
+      ] },
+    ],
+    quoteOnly: "Traditional, Japanese and black and grey tattooing in downtown Livermore at Old First Tattoo, in his own words. $150 an hour for custom and large work, with a $50 deposit, from his own tattoo request form.",
   },
 
   /*

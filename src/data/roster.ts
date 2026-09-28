@@ -3524,6 +3524,110 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://narfood.com/',
     orderUrl: 'https://pos.chowbus.com/online-ordering/store/NAR-Restaurant/22992',
   }),
+  /* 2026-09-27, 5:24 pm, to 28 September, 5:59 am: Glenn's links and screenshots
+     (research/roster/batch37.json has every call made). Tattoo seats were open in
+     Walnut Creek, Richmond and Livermore; the rest are free listings on their
+     cities' yellow sheets because the seat they would take is someone's. */
+  /* Peaches Patties, "San Francisco • Goods": no Caribbean seat, so the yellow sheet. */
+  seed('peaches-patties', 'Peaches Patties', 'Peaches Patties', 'Jamaican patties', '#E8962E', {
+    icon: 'peaches-patties',
+    logoTemplate: 'wordmark', logoLines: ['PEACHES', 'PATTIES'], logoFace: 'script',
+    site: 'https://www.peachespatties.com/',
+    orderUrl: 'https://www.peachespatties.com/catering-store-v2/',
+    tier: 1,
+  }),
+  /* Shish Grill, "San Ramon • Goods": Mediterranean is Alora Social's, so the yellow sheet. Halal, by the logo on their own site. */
+  seed('the-shish-grill', 'Shish Grill', 'Shish Grill', 'Lebanese', '#C4401F', {
+    icon: 'shish-grill',
+    logoTemplate: 'wordmark', logoLines: ['SHISH', 'GRILL'], logoFace: 'slab',
+    site: 'https://theshishgrill.com/',
+    orderUrl: 'https://order.toasttab.com/online/shishgrill',
+    dietary: ['Halal'],
+    tier: 1,
+  }),
+  /* Sandbar Oakland, "Oakland • Goods / Needs website pilot program": the yellow
+     sheet, no link (their old site errors on every page), and the red ring. */
+  seed('sandbar-oakland', 'Sandbar Oakland', 'Sandbar', 'Caribbean beach club', '#1B8FA6', {
+    needsSite: true,
+    icon: 'sandbar-oakland',
+    logoTemplate: 'wordmark', logoLines: ['SANDBAR'], logoFace: 'grotesk',
+    tier: 1,
+  }),
+  /* Matt Ahn at Golden Star Tattoo, "San Francisco • Services": "Put Matt Ahn as
+     the owner of this page. He just works out of that tattoo parlor." His page,
+     the shop's logo, address and number. Tattoo is Rakani's, so the yellow sheet. */
+  seed('matt-ahn', 'Matt Ahn', 'Matt Ahn', 'Tattoo artist', '#1B1B19', {
+    icon: 'golden-star-tattoo',
+    logoTemplate: 'monogram', logoInitials: 'MA', logoFace: 'slab',
+    site: 'https://www.goldenstartattoosf.com/matt-ahn',
+    tier: 1,
+  }),
+  /* Ink From Tatooine, "Walnut Creek • Goods / Needs website pilot program": a
+     tattoo artist, so Walnut Creek's open Tattoo seat on Services, whole page. */
+  seed('ink-from-tatooine', 'Ink From Tatooine', 'Ink From Tatooine', 'Fine-line tattoo artist', '#0A0A0A', {
+    needsSite: true,
+    icon: 'ink-from-tatooine',
+    logoTemplate: 'wordmark', logoLines: ['INK FROM', 'TATOOINE'], logoFace: 'condensed',
+    tagline: 'Botanical and fine-line tattooing in Walnut Creek',
+    email: 'inkfromtatooine@gmail.com',
+    address: 'Walnut Creek, CA',
+    contactOnly:
+      'Botanical and fine-line tattooing, as resident artist at The Last Dodo Studio in Walnut Creek. No prices are published: they book by Instagram message, or email them to ask about a piece.',
+  }),
+  /* Paul Domingo, "Richmond • Services / Needs website and logo/branding. Make
+     page for that artist": Richmond's open Tattoo seat, whole page, his initials
+     until he has a mark. */
+  seed('paul-domingo', 'Paul Domingo', 'Paul Domingo', 'Black & grey tattoo', '#111111', {
+    needsSite: true,
+    logoTemplate: 'monogram', logoInitials: 'PD', logoFace: 'slab',
+    tagline: 'Black and grey tattooing at True Line Tattoo',
+  }),
+  /* 2$CWBY Tattoo, "Livermore • Services / Needs website pilot program and logo
+     branding / Two Dollar cowboy", and at 8:34 pm "Found this": his poster.
+     Livermore's open Tattoo seat, whole page; his booking form is the button. */
+  seed('two-dollar-cowboy', '2$CWBY Tattoo', '2$CWBY', 'Traditional tattoo', '#111111', {
+    needsSite: true,
+    icon: 'two-dollar-cowboy',
+    logoTemplate: 'wordmark', logoLines: ['2$CWBY'], logoFace: 'condensed',
+    site: 'https://forms.gle/M8jJ2BFjJ9zkaqwH9',
+    siteCta: 'Request a tattoo',
+    tagline: 'Two Dollar Cowboy: traditional, Japanese, black and grey',
+  }),
+  /* Aberration Studio, "San Francisco • Services": Photo and video is iSnapped's, so the yellow sheet. */
+  seed('aberration-studio', 'Aberration Studio', 'Aberration', 'Wedding photo & video studio', '#111111', {
+    icon: 'aberration-studio',
+    logoTemplate: 'monogram', logoInitials: 'A', logoFace: 'grotesk',
+    site: 'https://www.aberration.studio/wedding.html',
+    tier: 1,
+  }),
+  /* Impower Sports Performance & Rehab, "Walnut Creek • Services": a sports chiropractor; the yellow sheet. */
+  seed('impower-sports-performance', 'Impower Sports Performance & Rehab', 'Impower', 'Sports chiropractic & rehab', '#111111', {
+    icon: 'impower-sports',
+    logoTemplate: 'wordmark', logoLines: ['IMPOWER'], logoFace: 'grotesk',
+    site: 'https://impowersportsperformance.com/',
+    tier: 1,
+  }),
+  /* The Nail Edit Studio, "Walnut Creek • Services": Nails is Varnish's, so the yellow sheet. */
+  seed('nail-edit-studio', 'The Nail Edit Studio', 'The Nail Edit', 'Russian manicure & pedicure studio', '#141414', {
+    icon: 'nail-edit-studio',
+    logoTemplate: 'wordmark', logoLines: ['THE NAIL', 'EDIT'], logoFace: 'script',
+    site: 'https://naileditstud.io/',
+    tier: 1,
+  }),
+  /* CoreNest Pilates, "Concord • Services": opens 5 October; Gym is Urban Air's, so the yellow sheet. */
+  seed('corenest-pilates', 'CoreNest Pilates', 'CoreNest', 'Pilates & yoga studio', '#6E8F9C', {
+    icon: 'corenest-pilates',
+    logoTemplate: 'wordmark', logoLines: ['CORENEST'], logoFace: 'grotesk',
+    site: 'https://pilatescorenest.com/',
+    tier: 1,
+  }),
+  /* Contra Costa Fitness, "Concord • Services / Ideal for a Collab shoot": the yellow sheet behind Urban Air. */
+  seed('contra-costa-fitness', 'Contra Costa Fitness', 'Contra Costa Fitness', 'Group fitness & yoga', '#2FB34A', {
+    icon: 'contra-costa-fitness',
+    logoTemplate: 'wordmark', logoLines: ['CONTRA COSTA', 'FITNESS'], logoFace: 'condensed',
+    site: 'https://www.contracostafitness.com/',
+    tier: 1,
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',

@@ -55,7 +55,7 @@ if (existsSync(OUT)) {
 
 /* Word-bounded where a token is short enough to hide inside another word —
    "tow" sat inside "Downtown" and filed a barbecue menu as quoted services. */
-const SERVICE = /detail|repair|groom|\bspa\b|salon|\bgym\b|fitness|yoga|rental|photo|booth|\btow(ing)?\b|\bwash|\bpaint|\blaw\b|attorney|\bmedia\b|production|advertis|virtual|\bturf|paver|charter|\bbus(es)?\b|balloon|\bevent|\bgolf|paintball|trampoline|\bpark\b|wiring|proposal|\bdesign|studio|\bclean|\btint|coating|muffler|mechanic|\btires?\b|hauling|landscap|lighting|contractor|barber|\bnails?\b|massage|\bdance|tutor|\bcoach|daycare|kennel|walking|sitting|electronics|planning|\bcrm\b|automation|marketing|playground|party|admission|pilates/i
+const SERVICE = /detail|repair|groom|\bspa\b|salon|\bgym\b|fitness|yoga|rental|photo|booth|\btow(ing)?\b|\bwash|\bpaint|\blaw\b|attorney|\bmedia\b|production|advertis|virtual|\bturf|paver|charter|\bbus(es)?\b|balloon|\bevent|\bgolf|paintball|trampoline|\bpark\b|wiring|proposal|\bdesign|studio|\bclean|\btint|coating|muffler|mechanic|\btires?\b|hauling|landscap|lighting|contractor|barber|\bnails?\b|massage|\bdance|tutor|\bcoach|daycare|kennel|walking|sitting|electronics|planning|\bcrm\b|automation|marketing|playground|party|admission|pilates|tattoo|chiropract|rehab/i
 
 const entries = {}
 const report = { files: 0, businesses: 0, priced: 0, quoted: 0, unpriced: 0, blocked: 0, unknownId: [], droppedItems: 0 }

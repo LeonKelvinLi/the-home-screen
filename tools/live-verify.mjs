@@ -312,6 +312,19 @@ for (const [id, want, expect] of [
   ['b_fourchairs', 'Four Chairs', { free: true, call: '(415) 400-4788' }],
   ['b_napavalleyburgersausalito', 'Napa Valley Burger Company', { rows: 10, hours: 'Daily 11:30am-6pm', call: '(415) 332-1454' }],
   ['b_narrestaurant', 'NAR Restaurant', { rows: 130, hours: 'Mon–Fri 11:30am–2pm', call: '(650) 705-2007' }],
+  /* 2026-09-27 evening to 28 September morning: Glenn's twelve. */
+  ['b_peachespatties', 'Peaches Patties', { free: true, hours: 'Mon-Fri 9am-8pm', call: '(415) 562-7589' }],
+  ['b_theshishgrill', 'Shish Grill', { free: true, hours: 'Mon-Thu 11am-8pm', call: '(925) 415-3270' }],
+  ['b_sandbaroakland', 'Sandbar Oakland', { free: true }],
+  ['b_mattahn', 'Matt Ahn', { free: true, hours: 'Open 7 days', call: '(415) 872-9242' }],
+  ['b_inkfromtatooine', 'Ink From Tatooine', {}],
+  ['b_pauldomingo', 'Paul Domingo', { call: '(510) 210-6729' }],
+  ['b_twodollarcowboy', '2$CWBY Tattoo', { call: '(925) 533-8071' }],
+  ['b_aberrationstudio', 'Aberration Studio', { free: true, hours: 'Daily 9am-5pm', call: '(707) 372-4295' }],
+  ['b_impowersportsperformance', 'Impower Sports Performance & Rehab', { free: true, hours: 'Mon 2pm-7pm', call: '(925) 322-2002' }],
+  ['b_naileditstudio', 'The Nail Edit Studio', { free: true, hours: 'Mon-Sun 9am-7pm', call: '(925) 262-5518' }],
+  ['b_corenestpilates', 'CoreNest Pilates', { free: true, call: '(510) 880-9486' }],
+  ['b_contracostafitness', 'Contra Costa Fitness', { free: true, call: '(925) 940-4223' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -652,6 +665,19 @@ for (const [s, what] of [
   ['"sausalito-goods-0":"b_napavalleyburgersausalito"', 'Napa Valley Burger on Sausalito Burgers'],
   ['"mountain-view-goods-9":"b_narrestaurant"', 'NAR on Mountain View Mediterranean'],
   ['icon:"kaisen-don-mark"', "Kaisen Don's logo from Glenn's resend"],
+  /* 2026-09-27 evening to 28 September morning: Glenn's twelve. */
+  ['"san-francisco-goods2-26":"b_peachespatties"', 'Peaches Patties on San Francisco More goods'],
+  ['"san-ramon-goods2-0":"b_theshishgrill"', 'Shish Grill on San Ramon More goods'],
+  ['"oakland-goods2-14":"b_sandbaroakland"', 'Sandbar on Oakland More goods'],
+  ['"san-francisco-services2-11":"b_mattahn"', 'Matt Ahn on San Francisco More services'],
+  ['"walnut-creek-services-3":"b_inkfromtatooine"', 'Ink From Tatooine on Walnut Creek Tattoo'],
+  ['"richmond-services-3":"b_pauldomingo"', 'Paul Domingo on Richmond Tattoo'],
+  ['"livermore-services-3":"b_twodollarcowboy"', '2$CWBY on Livermore Tattoo'],
+  ['"san-francisco-services2-12":"b_aberrationstudio"', 'Aberration Studio on San Francisco More services'],
+  ['"walnut-creek-services2-3":"b_impowersportsperformance"', 'Impower on Walnut Creek More services'],
+  ['"walnut-creek-services2-4":"b_naileditstudio"', 'The Nail Edit on Walnut Creek More services'],
+  ['"concord-services2-1":"b_corenestpilates"', 'CoreNest on Concord More services'],
+  ['"concord-services2-2":"b_contracostafitness"', 'Contra Costa Fitness on Concord More services'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],
@@ -690,7 +716,9 @@ for (const [s, what] of [
    a broken image on the sheet. */
 for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40', 'beastmode-2', 'crayone', 'grand-o', 'yo-sushi-vacaville',
   'woof-gang-bakery', 'old-crow-tattoo', 'rakani-tattoo', 'hungry-cow', 'long-bridge-pizza', 'maverick-jacks', 'los-agaves-taqueria',
-  'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark']) {
+  'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark',
+  'peaches-patties', 'shish-grill', 'sandbar-oakland', 'golden-star-tattoo', 'ink-from-tatooine', 'two-dollar-cowboy',
+  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

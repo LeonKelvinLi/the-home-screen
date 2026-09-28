@@ -1206,6 +1206,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-25': 'b_fourchairs', //                   no brunch seat; yellow sheet, Tier 1
   'sausalito-goods-0': 'b_napavalleyburgersausalito', //          Burgers
   'mountain-view-goods-9': 'b_narrestaurant', //                  Mediterranean: South Caucasus cooking
+  /* 2026-09-27 to 28: Glenn's links and screenshots from Saturday evening and Sunday morning. */
+  'san-francisco-goods2-26': 'b_peachespatties', //               no Caribbean seat; Bakery is U Dessert Story's; yellow sheet, Tier 1
+  'san-ramon-goods2-0': 'b_theshishgrill', //                     Mediterranean is Alora Social's; yellow sheet, Tier 1
+  'oakland-goods2-14': 'b_sandbaroakland', //                     no seat for a beach club; yellow sheet, Tier 1
+  'san-francisco-services2-11': 'b_mattahn', //                   Tattoo is Rakani's; yellow sheet, Tier 1
+  'walnut-creek-services-3': 'b_inkfromtatooine', //              Tattoo — he wrote Goods
+  'richmond-services-3': 'b_pauldomingo', //                      Tattoo
+  'livermore-services-3': 'b_twodollarcowboy', //                 Tattoo
+  'san-francisco-services2-12': 'b_aberrationstudio', //          Photo and video is iSnapped's; yellow sheet, Tier 1
+  'walnut-creek-services2-3': 'b_impowersportsperformance', //    a sports chiropractor; Gym is TruFusion's; yellow sheet, Tier 1
+  'walnut-creek-services2-4': 'b_naileditstudio', //              Nails is Varnish's; yellow sheet, Tier 1
+  'concord-services2-1': 'b_corenestpilates', //                  Gym is Urban Air's; yellow sheet, Tier 1
+  'concord-services2-2': 'b_contracostafitness', //               Gym is Urban Air's; yellow sheet, Tier 1
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs
