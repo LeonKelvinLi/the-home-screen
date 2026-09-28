@@ -1193,6 +1193,19 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-22': 'b_yanksing', //                      Asian is House of Thai's; yellow sheet, whole page for the reel
   'livermore-goods-9': 'b_demitristaverna', //                   Mediterranean
   'dublin-goods-8': 'b_cheriessouthernkitchen', //              Chicken wings: soul food with wings on the menu
+  /* 2026-09-25 to 27: Glenn's links from the weekend. */
+  'oakley-services-14': 'b_woofgangbakeryoakley', //              Grooming
+  'berkeley-services-3': 'b_oldcrowtattoo', //                    Tattoo
+  'san-francisco-services-3': 'b_rakanitattoo', //                Tattoo
+  'fremont-goods-7': 'b_hungrycow', //                            Korean
+  'san-francisco-goods2-23': 'b_longbridgepizza', //              Italian is Stella Pastry's; yellow sheet, Tier 1
+  'burlingame-goods-0': 'b_maverickjacksburlingame', //           Burgers
+  'san-mateo-goods-0': 'b_maverickjackssanmateo', //              Burgers
+  'daly-city-goods-1': 'b_losagavesdalycity', //                  Mexican
+  'san-francisco-goods2-24': 'b_alushecoffee', //                 Coffee is The Farmacy's; yellow sheet, Tier 1
+  'san-francisco-goods2-25': 'b_fourchairs', //                   no brunch seat; yellow sheet, Tier 1
+  'sausalito-goods-0': 'b_napavalleyburgersausalito', //          Burgers
+  'mountain-view-goods-9': 'b_narrestaurant', //                  Mediterranean: South Caucasus cooking
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs

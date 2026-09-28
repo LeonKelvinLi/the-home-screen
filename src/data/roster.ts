@@ -859,8 +859,12 @@ export const ROSTER_SEED: LocalSeed[] = [
      address. Checked rather than assumed, because seating a business under
      another's website is the kind of error nobody catches later. */
   seed('kaisen-don', 'Kaisen Don', 'Kaisen Don', 'Sushi and donburi', '#1B1B22', {
+    /* Their fish-in-a-circle mark, from the Instagram Glenn resent on
+       2026-09-27, in place of the KD initials; and their Toast ordering. */
+    icon: 'kaisen-don-mark',
     logoTemplate: 'monogram', logoInitials: 'KD', logoFace: 'grotesk',
     site: 'https://www.tetsujinsushi.com/',
+    orderUrl: 'https://order.toasttab.com/online/kaisen-don',
     address: '1042 Marina Blvd, San Leandro',
   }),
   seed('polly-ann', 'Polly Ann Ice Cream', 'Polly Ann', 'Ice cream', '#C0335E', {
@@ -3431,6 +3435,94 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ["CHÉRIE'S"], logoFace: 'script',
     tagline: 'Bringing southern charm to the West Coast',
     site: 'https://cheriesouthernkitchen.com/',
+  }),
+  /* Glenn's links of 25 to 27 September 2026, researched from their own sites and
+     ordering pages (research/roster/batch36.json has every call made). */
+  /* Woof Gang Bakery & Grooming, "Oakley • Services": the Grooming seat. */
+  seed('woof-gang-bakery-oakley', 'Woof Gang Bakery & Grooming', 'Woof Gang', 'Dog grooming & pet supplies', '#6B3A1E', {
+    icon: 'woof-gang-bakery',
+    logoTemplate: 'wordmark', logoLines: ['WOOF GANG'], logoFace: 'slab',
+    site: 'https://shop.woofgangbakery.com/206703/booking',
+    siteCta: 'Book a groom',
+    tagline: 'Full-service grooming and pet treats in Oakley',
+  }),
+  /* Old Crow Tattoo, "Berkeley • Services": the Tattoo seat, on Telegraph since the move from Oakland. */
+  seed('old-crow-tattoo', 'Old Crow Tattoo', 'Old Crow', 'Tattoo studio', '#141414', {
+    icon: 'old-crow-tattoo',
+    logoTemplate: 'wordmark', logoLines: ['OLD CROW'], logoFace: 'slab',
+    site: 'https://www.oldcrowtattoo.com/',
+    tagline: 'Ornamental, blackwork, fine-line and custom tattooing since 2008',
+  }),
+  /* Rakani Tattoo, "San Francisco • Services": the Tattoo seat. By appointment; no street address. */
+  seed('rakani-tattoo', 'Rakani Tattoo', 'Rakani', 'Tattoo artist', '#0B0907', {
+    icon: 'rakani-tattoo',
+    logoTemplate: 'wordmark', logoLines: ['RAKANI'], logoFace: 'grotesk',
+    site: 'https://rakanitattoo.com/',
+    siteCta: 'Book a consultation',
+    tagline: 'Cover-ups, scar and burn camouflage, by Karyna Pulcho',
+  }),
+  /* Hungry Cow, "Fremont • Goods", where Glenn, Janelle and Leon met: the Korean seat. */
+  seed('hungry-cow', 'Hungry Cow', 'Hungry Cow', 'Korean BBQ', '#121212', {
+    icon: 'hungry-cow',
+    logoTemplate: 'wordmark', logoLines: ['HUNGRY COW'], logoFace: 'slab',
+    site: 'https://www.myhungrycow.com/',
+    tagline: 'Korean BBQ and shabu shabu on Albrae Street',
+  }),
+  /* Long Bridge Pizza Co., "San Francisco • Goods": Italian is Stella Pastry's, so the yellow sheet. */
+  seed('long-bridge-pizza', 'Long Bridge Pizza Co.', 'Long Bridge', 'Sourdough pizza', '#EF5623', {
+    icon: 'long-bridge-pizza',
+    logoTemplate: 'wordmark', logoLines: ['LONG BRIDGE'], logoFace: 'slab',
+    site: 'https://www.longbridgepizza.com/',
+    orderUrl: 'https://order.toasttab.com/online/long-bridge-pizza-2347-3rd-st',
+    tier: 1,
+  }),
+  /* Maverick Jack's, "Burlingame • Goods / San Mateo • Goods": each shop on its city's Burgers seat, with its own prices. */
+  seed('maverick-jacks-burlingame', "Maverick Jack's", "Maverick Jack's", 'Burgers & shakes', '#141414', {
+    icon: 'maverick-jacks',
+    logoTemplate: 'wordmark', logoLines: ['MAVERICK', "JACK'S"], logoFace: 'grotesk',
+    site: 'https://maverickjacks.com/',
+    orderUrl: 'https://maverickjacks.com/order/maverick-jacks-burlingame-1190-california-drive',
+  }),
+  seed('maverick-jacks-san-mateo', "Maverick Jack's", "Maverick Jack's", 'Burgers & shakes', '#141414', {
+    icon: 'maverick-jacks',
+    logoTemplate: 'wordmark', logoLines: ['MAVERICK', "JACK'S"], logoFace: 'grotesk',
+    site: 'https://maverickjacks.com/',
+    orderUrl: 'https://maverickjacks.com/order/maverickjacks-san-mateo',
+  }),
+  /* Taqueria Los Agaves, "Daly City • Goods": the Mexican seat. */
+  seed('los-agaves-daly-city', 'Taqueria Los Agaves', 'Los Agaves', 'Mexican', '#1F7FC4', {
+    icon: 'los-agaves-taqueria',
+    logoTemplate: 'wordmark', logoLines: ['LOS AGAVES'], logoFace: 'script',
+    site: 'https://www.losagavesdalycity.com/',
+    orderUrl: 'https://www.toasttab.com/local/order/taqueria-los-agaves-2408-b-junipero-serra-boulevard',
+  }),
+  /* Alushe Coffee Bar, "San Francisco • Goods": Coffee is The Farmacy's, so the yellow sheet. */
+  seed('alushe-coffee', 'Alushe Coffee Bar', 'Alushe', 'Coffee & tamales', '#141414', {
+    icon: 'alushe-coffee',
+    logoTemplate: 'wordmark', logoLines: ['ALUSHE'], logoFace: 'slab',
+    site: 'https://alushecoffee.com/',
+    orderUrl: 'https://order.toasttab.com/online/alushe-coffee-bar-em-4201-geary-boulevard',
+    tier: 1,
+  }),
+  /* Four Chairs, "San Francisco • Goods": no brunch seat, so the yellow sheet. */
+  seed('four-chairs', 'Four Chairs', 'Four Chairs', 'Breakfast & brunch', '#9A7B36', {
+    icon: 'four-chairs',
+    logoTemplate: 'wordmark', logoLines: ['FOUR CHAIRS'], logoFace: 'grotesk',
+    site: 'https://www.fourchairssf.com/',
+    tier: 1,
+  }),
+  /* Napa Valley Burger Company, "Sausalito • Goods": the Burgers seat. */
+  seed('napa-valley-burger-sausalito', 'Napa Valley Burger Company', 'Napa Valley Burger', 'Burgers', '#5A4A2C', {
+    icon: 'napa-valley-burger',
+    logoTemplate: 'wordmark', logoLines: ['NAPA VALLEY', 'BURGER'], logoFace: 'slab',
+    site: 'https://www.napavalleyburgercompany.com/',
+  }),
+  /* NAR Restaurant, "Mountain View • Goods": South Caucasus cooking on the Mediterranean seat. */
+  seed('nar-restaurant', 'NAR Restaurant', 'NAR', 'Azerbaijani', '#9C1B24', {
+    icon: 'nar-restaurant',
+    logoTemplate: 'wordmark', logoLines: ['NAR'], logoFace: 'slab',
+    site: 'https://narfood.com/',
+    orderUrl: 'https://pos.chowbus.com/online-ordering/store/NAR-Restaurant/22992',
   }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',

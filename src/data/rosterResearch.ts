@@ -465,6 +465,274 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Alushe Coffee Bar — gathered 2026-09-27 from own
+     they are: Coffee, tamales & breakfast
+     flag: HOURS CONFLICT, hours set null: the website hours widget (and its schema data) says Mon-Fri 7am-3pm, Sat 9am-2pm, closed Sun; their Toast page ('Location and Ordering Hours') says Mon-Fri 7am-2pm, Sat 9am-1:30pm, closed Sun. The Toast times are probably an online-ordering cutoff, so the website's Mon-Fri 7am-3pm, Sat 9am-2pm; closed Sun is the likely store hours. Instagram only says 'Breakfast served Mon-Sat', which fits both.
+     flag: City check OK: 4201 Geary Boulevard is in San Francisco's Inner Richmond, matching Glenn's page 'San Francisco • Goods'. The ZIP 94118 comes from their Toast page; the website prints '4201 Geary Boulevard, San Francisco, CA, USA' without a ZIP.
+     flag: Phone: the website prints 415-571-8492; the Instagram Contact sheet shows (415) 571-8492 (same number). Email: website mailto alushecoffeebar@gmail.com; Instagram shows AlusheCoffeebar@gmail.com (same address, different capitalization).
+     flag: Glenn's tagline 'Todos Bienvenidos — Everyone Welcome' is printed on the website home page.
+     flag: site_kind 'own': a real GoDaddy Website Builder site with their story (Marcos and Jessica Moonayas), catering info, contact and hours. Its 'Shop' page is empty ('New products are coming soon!'). The 'MENU' link goes to a Canva design titled 'Alushe Full Menu 2026' on canva.com; not used for prices (it is a design file off their domain and its prices differ in places, e.g. tamale $6.50+ there vs $7.00 on Toast).
+     flag: Prices with a size choice come from each item's own Toast detail (required size option); lowest size is 'cents' with label 'from' and the sizes are in desc. House-special lattes list $7.00 and add $1.00 for 16oz, so they read 'from $7.00, 12oz $7.00, 16oz $8.00' (PECAN APPLE CRISP LATTE has no size option, flat $7.00).
+     flag: Items shown 'OUT OF STOCK' on Toast at read time (a Sunday, when the cafe is closed) were kept with their listed price, since they are regular menu items: TACO DE POC-CHUC, HOT BUTTERED APPLE CIDER, RISE OF CUPID MATCHA LATTE, ROSE PISTOLA, COLD BREW, ALMOND CROISSANT, BABKA, BRAN MUFFIN, BACON ONION PRETZEL CROISSANT, BLUEBERRY MUFFIN, BROWNIE, CINNAMON ROLL, COFFEE CAKE, DANISH, FRUIT SCONE, LEMON POPPY MUFFIN, MORNING BUN, OATMEAL COOKIE, PUMPKIN CREAM CHEESE MUFFIN, SALTED CHOCOLATE COOKIE, SNICKER DOODLE, VANILLA BEAN SCONE, CHOCOFLAN, CLASSIC FLAN, KING YUCATECO BREAKFAST, TAMALE DE POLLO (SALVADOREAN), MINESTRONE VEGETABLE SOUP, FRIJOLES CHARROS SOUP, ALUSHE COBB SALAD, TROPICAL JICAMA MANGO SALAD, POC-CHUC TORTA, XOLO JUICE, MOKOSA BEET JUICE, BANANA BUSSINESS SMOOTHIE, TOPO CHICO MINERAL WATER, NABISCO (CHIPS AHOY, OREO, NILLA). For the out-of-stock items with a '+' price (RISE OF CUPID MATCHA LATTE, ROSE PISTOLA, COLD BREW, MINESTRONE VEGETABLE SOUP, FRIJOLES CHARROS SOUP) the size breakdown could not be opened, so only the 'from' price is given.
+     flag: Duplicates removed: Toast repeats several items in 'NEW ARRIVALS/SPECIALS OF THE DAY' and 'Featured Items'; each is kept once, in its regular section. CHOCOFLAN and CLASSIC FLAN are $9.00 in the specials section but $8.00 under pastries/desserts; kept once at $8.00 with label 'from'.
+     flag: No alcohol on their Toast menu, so nothing left out for alcohol. No $0.00 lines left after size prices were filled in.
+     flag: Obvious typos fixed: names 'CROISASNT' to 'CROISSANT', 'BREAFAST' to 'BREAKFAST', 'MACCHIATTO' to 'MACCHIATO', 'FRIJOLES CHARROZ' to 'FRIJOLES CHARROS', and the cut-off 'NABISCO (CHIPS AHOY,OREO,NILLA,' closed as 'NABISCO (CHIPS AHOY, OREO, NILLA)'; in descriptions 'CHIICE' to 'CHOICE', 'HOMADE' to 'HOMEMADE', 'proeting' to 'protein', 'Baslamic' to 'Balsamic', 'papper' to 'pepper', 'Queso Freso' to 'Queso Fresco', 'Tellera' to 'Telera', 'CARDAMON' to 'CARDAMOM', 'wholesom' to 'wholesome', 'Portabello' to 'Portobello'. Kept as published: all-caps names, 'MILANEZA' (used consistently), 'BANANA BUSSINESS SMOOTHIE' (looks like a deliberate pun), and the SAUSAGE / EGG HAM / EGG AVOCADO sandos, whose Toast descriptions copy the bacon sando text word for word.
+     flag: Toast shows the tagline 'ALUSHE COFFEE Ancient roots. Modern flavor.' and says it was 'Only accepting scheduled orders' at read time (Sunday, closed). Toast adds a 3.00% credit-card surcharge.
+     flag: Retail items are included as published (candy $0.35, gum, bottled drinks, Red Bull) since they carry prices; drop them if the page should show only the kitchen menu.
+     flag: No blocks: the website, Toast and the Canva link all loaded (Toast needed headless Playwright; the cookie banner was answered with 'Reject Non-Necessary Cookies').
+     flag: On review: hours from their own site; their ordering page stops earlier (Mon-Fri 2pm, Sat 1:30pm), which reads as the online-order cutoff.
+     flag: On review: San Francisco's Coffee seat is The Farmacy's, so the free listing on the yellow sheet.
+     flag: On review: seated at san-francisco-goods2-24 (yellow sheet: Coffee is The Farmacy's). Glenn's message of 25-27 September.
+  */
+  'alushe-coffee': {
+    address: "4201 Geary Boulevard, San Francisco, CA 94118",
+    phone: "(415) 571-8492",
+    email: "alushecoffeebar@gmail.com",
+    hours: "Mon–Fri 7am–3pm, Sat 9am–2pm; closed Sun",
+    cuisine: "Coffee, tamales & breakfast",
+    sections: [
+      { name: "NEW ARRIVALS/SPECIALS OF THE DAY", items: [
+        ["BEEF VEGETABLE SOUP","RICH, HEARTY BEEF VEGETABLE SOUP, CARROTS, SQUASH, POTATOES, CORN, CABBAGE, GARNISHED WITH RADISH AND LEMON, FINISHED WITH A SQUEEZE OF LEMON",1000],
+        ["POZOLE ROJO SOUP","Traditional Mexican pozole rojo, rich, brothy soup made with pork, hominy, and red chiles. served with cilantro, cabbage, radish, tortilla chips, lime TORTILLA CHIPS AND GARNISHES WILL BE ON THE SIDE.",900],
+        ["VEGGIE TEMPURA AVOCADO TACO","CORN TORTILLAS, CHIPOTLE MAYO, COLESLAW, FRIED AVOCADO, PICKLED ONIONS, CILANTRO, LEMON",600],
+        ["TACOS DE PESCADO/ FISH TACOS","BASA BEER BATTERED TACOS, CHIPOTLE MAYO, CABBAGE COLESLAW, PICKLED ONIONS, LEMON",600],
+        ["TACO DE POC-CHUC","",550],
+      ] },
+      { name: "HOUSE SPECIALS- ESPRESSO AND TEA", items: [
+        ["APPLE CARAMEL LATTE MACCHIATO","ESPRESSO, CHOICE OF MILK, ROSE CARDAMOM SYRUP. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["BANANA BREAD LATTE","ESPRESSO, CHOICE OF MILK, HOUSE MADE BANANA SYRUP. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["BROWN DERBY CHAI LATTE","CHAI, BROWN SUGAR CARDAMOM SYRUP, ESPRESSO, CHOICE OF MILK. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["BROWN SUGAR DATE LATTE","ESPRESSO, CHOICE OF MILK, BROWN SUGAR DATE SYRUP. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["CARDAMOM LATTE","ESPRESSO, CHOICE OF MILK, CARDAMOM SYRUP. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["CARROT CAKE LATTE","ESPRESSO, WALNUT CARROT SYRUP, CHOICE OF MILK. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["DUVALIN","Vanilla Milk, Choice of Milk, Strawberry, Hazelnut, Matcha. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["HAZELNUT LATTE","ESPRESSO, HOMEMADE HAZELNUT SYRUP, CHOICE OF MILK. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["HONEY BUNCHES OF OAT LATTE","ESPRESSO, OAT MILK, HONEY, HAZELNUT, VANILLA SYRUP TOPPED WITH CEREAL. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["HONEY CINNAMON LATTE","ESPRESSO, HONEY CINNAMON, CHOICE OF MILK. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["HOT BUTTERED APPLE CIDER","HOUSE MADE APPLE BUTTER, HOUSE MADE SPICED APPLE CIDER",700],
+        ["MAYAN MOCHA","XOCOATL/ CHUKWA SMOKY MAYAN CHOCOLATE, CHOCOLATE SOURCED FROM YUCATÁN, MADE INTO A PASTE, BLENDED WITH, VANILLA, CINNAMON, GROUND CLOVES, SALT, ESPRESSO, CHOICE OF MILK, CINNAMON, MAYAN CHOCOLATE. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["MEXICAN MOCHA","MEXICAN ABUELITA CHOCOLATE MADE INTO A SAUCE, CINNAMON, ESPRESSO, CHOICE OF MILK. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["MILLIONAIRE LATTE","ESPRESSO, CHOICE OF MILK, HONEY CINNAMON AND CARDAMOM SYRUP. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["PEANUT BUTTER SANDY LATTE","ESPRESSO, CHOICE OF MILK, ALMOND PEANUT BUTTER SAUCE. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["PECAN APPLE CRISP LATTE","ESPRESSO, CHOICE OF MILK, HOUSE MADE PECAN APPLE SPICED SYRUP",700],
+        ["PEPPERMINT DARK OR WHITE MOCHA","CHOICE OF DARK OR WHITE CHOCOLATE MIXED WITH HOMEMADE PEPPERMINT SYRUP, ESPRESSO, CHOICE OF MILK. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["PISTACHIO LIME LATTE","ESPRESSO, CHOICE OF MILK, PISTACHIO LIME SAUCE. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["PUMPKIN SPICED LATTE","12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["REESE'S PIECES PEANUT BUTTER LATTE","ESPRESSO, COCOA, CHOICE OF MILK, REESES PIECES PEANUT BUTTER SAUCE, REESES PIECES CANDY GARNISH. 12oz $7.00, 16oz $8.00",700,null,"from"],
+        ["RISE OF CUPID MATCHA LATTE","MATCHA, CHOICE OF MILK, HIBISCUS ROSE BEET SYRUP, ROSE FOAM",700,null,"from"],
+        ["ROSE PISTOLA","Rose Milk, Matcha, Strawberry Cold Foam ICED ONLY",700,null,"from"],
+        ["SABAH SPICED CHAI LATTE","CHAI, CHOICE OF MILK, CARDAMOM BROWN SUGAR SYRUP. 12oz $5.50, 16oz $6.50, 20oz (cold only) $7.50",550,null,"from"],
+        ["STRAWBERRY MATCHA LATTE","MATCHA, CHOICE OF MILK, STRAWBERRY SAUCE, STRAWBERRY FOAM, DEHYDRATED STRAWBERRY. 12oz $6.50, 16oz $7.50, 20oz (cold only) $8.50",650,null,"from"],
+        ["VENUS LATTE","ESPRESSO, CHOICE OF MILK, CARDAMOM LAVENDER SYRUP. 12oz $7.00, 16oz $8.00",700,null,"from"],
+      ] },
+      { name: "ESPRESSO/COFFEE/TEA/COLD BREW", items: [
+        ["DRIP COFFEE","8oz $3.00, 12oz $4.00, 16oz $5.00",300,null,"from"],
+        ["LATTE","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["CAPPUCCINO","8oz $4.50, 12oz $5.50, 16oz $6.50",450,null,"from"],
+        ["ESPRESSO","",425],
+        ["AMERICANO","8oz $4.25, 12oz $4.75, 16oz $5.25",425,null,"from"],
+        ["CORTADO","ONE TO ONE RATIO ESPRESSO AND STEAMED MILK",450],
+        ["MACCHIATO","",450],
+        ["MOCHA","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["POUR OVER COFFEE","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["HOT CHOCOLATE","8oz $4.50, 12oz $5.50, 16oz $6.50",450,null,"from"],
+        ["COLD BREW","",550,null,"from"],
+        ["FLAT WHITE","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["GOLDEN MILK","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["LONDON FOG","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["SPICED CHAI LATTE","12oz $5.50, 16oz $6.50",550,null,"from"],
+        ["MATCHA LATTE","12oz $5.50, 16oz $6.50, 20oz $7.50",550,null,"from"],
+        ["SF HERB COMPANY TEA","12oz $5.00, 16oz $6.00",500,null,"from"],
+      ] },
+      { name: "STARTER BAKERY PASTRIES/DESSERTS", items: [
+        ["ALMOND CROISSANT","",550],
+        ["BABKA","",575],
+        ["BRAN MUFFIN","",450],
+        ["BACON ONION PRETZEL CROISSANT","",550],
+        ["BLUEBERRY MUFFIN","",450],
+        ["BROWNIE","",450],
+        ["BUTTER CROISSANT","",550],
+        ["CHOCOLATE CROISSANT","",550],
+        ["CINNAMON ROLL","",450],
+        ["COFFEE CAKE","",450],
+        ["DANISH","",450],
+        ["FRUIT SCONE","",450],
+        ["LEMON POPPY MUFFIN","",450],
+        ["MORNING BUN","",450],
+        ["OATMEAL COOKIE","",400],
+        ["PUMPKIN CREAM CHEESE MUFFIN","",450],
+        ["SALTED CHOCOLATE COOKIE","",400],
+        ["SNICKER DOODLE","",400],
+        ["VANILLA BEAN SCONE","",450],
+        ["CHOCOFLAN","Combination of chocolate cake on the bottom with a luscious flan on top. strawberry and chocolate sauce on the side.",800,null,"from"],
+        ["CLASSIC FLAN","A silky caramel-topped custard. rich, creamy, and perfectly wobbling.",800,null,"from"],
+        ["CONCHA","",300],
+      ] },
+      { name: "BREAKFAST SANDWICHES/MORNING CUPS/TOASTS", items: [
+        ["GRANOLA","Wholesome granola served hot or cold, your choice. Made with your choice of milk, topped with fresh fruit, a drizzle of raw honey, and a sprinkle of warming cinnamon. A simple, nourishing way to start your morning.",650],
+        ["YOGURT PARFAIT","Creamy non-fat yogurt layered with fresh fruit, crunchy granola, raw honey, and a touch of cinnamon. Light, refreshing, and satisfying — the perfect balance of sweet and wholesome",750],
+        ["SEASONAL MIXED FRUIT","An assortment of the freshest seasonal fruit, curated daily. Bright, colorful, and naturally sweet — the perfect light start or complement to any meal.",600],
+        ["APPLE, BACON TOAST","TOASTED SOURDOUGH TOAST, HOMEMADE APPLE BUTTER, SLICED APPLES, STRAWBERRIES, DATES, TOASTED WALNUTS, BACON CRUMBLES, CINNAMON, MAPLE DRIZZLE",1200],
+        ["POWER TOAST","Thick-cut sourdough piled high with creamy peanut butter, sliced bananas, fresh strawberries, chewy Medjool dates, a generous drizzle of raw honey, and a sprinkle of cinnamon. Fuel for your whole morning.",1000],
+        ["HAM & CHEESE CROISSANT","Ham and cheese croissant",700],
+        ["#0 BAGEL & CREAM CHEESE","A classic done right. Your choice of bagel — plain, sesame, jalapeño cheddar, everything, or asiago — toasted and topped with a sliced cream cheese. Simple, fresh, and always satisfying.",500],
+        ["YUCATECO CROISSANT","A flaky, buttery croissant layered with sautéed tomatoes, onions, and eggs, black beans, creamy avocado, crumbled queso fresco, and cool sour cream. Bold Yucatecan flavors wrapped in a golden croissant.",1200],
+        ["BACON EGG & CHEESE SANDO","A breakfast staple elevated. Crispy bacon, a perfectly cooked scrambled egg patty, and melted cheese on your choice of bagel, english muffin, or a buttery croissant, Simple, satisfying, and totally craveable. Swap bacon for sausage, ham, or avocado at no extra charge.",875],
+        ["SAUSAGE EGG & CHEESE SANDO","A breakfast staple elevated. Crispy bacon, a perfectly cooked scrambled egg patty, and melted cheese on your choice of bagel, english muffin, or a buttery croissant, Simple, satisfying, and totally craveable. Swap bacon for sausage, ham, or avocado at no extra charge.",875],
+        ["EGG HAM & CHEESE SANDO","A breakfast staple elevated. Crispy bacon, a perfectly cooked scrambled egg patty, and melted cheese on your choice of bagel, english muffin, or a buttery croissant, Simple, satisfying, and totally craveable. Swap bacon for sausage, ham, or avocado at no extra charge.",875],
+        ["EGG AVOCADO & CHEESE SANDO","A breakfast staple elevated. Crispy bacon, a perfectly cooked scrambled egg patty, and melted cheese on your choice of bagel, english muffin, or a buttery croissant, Simple, satisfying, and totally craveable. Swap bacon for sausage, ham, or avocado at no extra charge.",875],
+        ["MEATLOVERS BREAKFAST SANDO","Built for the hungriest mornings. Your choice of croissant, bagel, or English muffin loaded with ham, sausage, crispy bacon, and fluffy eggs, all topped with melted cheese. A powerhouse breakfast sandwich.",1200],
+        ["#4 VEGGIE BREAKFAST SANDO","Light and fresh on a toasted English muffin. Fluffy white eggs, crisp lettuce, ripe tomato, thinly sliced onions, crunchy sprouts, and creamy avocado. A clean, satisfying morning sandwich.",1000],
+        ["#5 BLTA BREAKFAST SANDO","The classic BLT gets the Alushe upgrade. Crispy bacon, fresh lettuce, ripe tomato, and creamy avocado piled on your choice of bagel or English muffin, finished with a swipe of mayo. Perfectly balanced and always delicious.",1000],
+        ["YUCATECO BAGEL SANDO","A Yucatán-inspired twist on the classic breakfast bagel. Eggs scrambled with sweet sautéed tomatoes and onions, layered with rich cream cheese and sliced avocado on your choice of bagel. Creamy, savory, and deeply flavorful.",900],
+        ["GEARY BAGEL SANDO","Named for our home on Geary Blvd. A toasted bagel or English muffin topped with a fluffy egg, grilled tomato, fresh spinach, and melted swiss cheese. A neighborhood classic with a little something extra.",800],
+        ["LOX BAGEL SANDO","Premium smoked salmon on your choice of toasted bagel, spread with cream cheese, and layered with crisp lettuce, ripe tomato, thinly sliced onions, refreshing cucumber, and bright sprouts. A San Francisco classic done beautifully.",1000],
+        ["BACON & CHEESE BAGEL","",800],
+        ["CHIPOTLE BREAKFAST SANDO","ON CIABATTA, CHIPOTLE MAYO, MARINATED CHICKEN, SWISS CHEESE, CRISPY BACON, FRIED EGG",1200],
+        ["AVOCADO AND EGG TOAST","Golden sourdough topped with smashed avocado, a perfectly fried egg, house-pickled onions, crunchy sprouts, and a sprinkle of sesame seeds. Fresh, simple, and endlessly satisfying.",1000],
+        ["SMOKED SALMON AVOCADO TOAST","Thick-cut sourdough spread with creamy hummus and topped with silky smoked salmon, peppery radish, fresh arugula, cream cheese, and house-pickled onions. A sophisticated, restaurant-quality toast you'll come back for.",1500],
+        ["CHORIZO MOLLETE","A warm telera toast spread with refried beans and topped with smoky scrambled chorizo and eggs, melted cheese, creamy avocado, and fresh pico de gallo. A Mexican mollete with serious personality.",1000],
+      ] },
+      { name: "BREAKFAST BURRITOS/SPECIALTIES/CHILAQUILES", items: [
+        ["SAUSAGE A ALA MEXICANA BURRITO","SCRAMBLED EGGS, DICED PORK SAUSAGE, GREEN AND RED BELL-PEPPERS, ONIONS, TOMATOES, MEXICAN CHEESE, SIDE HOME POTATOES",1700],
+        ["BACON AVOCADO SUPREME","EGGS SAUTÉED WITH SPINACH, BACON, AVOCADO, SHREDDED CHEESE, RICE, BEANS, SOUR CREAM, CHIPOTLE MAYO, SIDE HOME POTATOES, KETCHUP AND RANCHERA SALSA ON THE SIDE",1900],
+        ["MEATLOVERS BREAKFAST BURRITO","For those who want it all. Fluffy eggs, savory ham, crispy bacon, seasoned sausage, golden home potatoes, and melted cheese, brought together with smoky chipotle mayo. Served with chips and salsa.",1700],
+        ["BACON AVOCADO BURRITO","Fresh, vibrant, and filling. Spinach, scrambled eggs, ripe tomato, shredded cheese, golden home potatoes, and plenty of creamy avocado — all wrapped up and served with chips and salsa.",1600],
+        ["CHORIZO BREAKFAST BURRITO","Bold, smoky chorizo paired with scrambled eggs, hearty black beans, golden home potatoes, creamy avocado, cool sour cream, and zesty pico de gallo, wrapped in a warm flour tortilla. Served with side chips and salsa.",1700],
+        ["EL YUCATECO BREAKFAST BURRITO","A lighter, flavor-forward burrito. Sautéed tomatoes and onions, scrambled eggs, hearty black beans, golden home potatoes, creamy avocado, queso fresco, and sour cream. Served with chips and salsa.",1500],
+        ["MEXICAN MEATLOVERS BURRITO","HAM, BACON, CHORIZO, SAUSAGE, CHEESE, PICO DE GALLO, SOUR CREAM, MILD SALSA, AVOCADO, BEANS, JALAPEÑOS, SIDE HOME POTATOES",1800],
+        ["PRINCIPE COCHINITA BF BURRITO","Yucatecan Roast Pork, Eggs, Pickled Onions, Beans, Cheese, Sour Cream, Avocado, Chips and Salsa",1700],
+        ["STEAK AND EGGS BURRITO","A protein-packed powerhouse. Seasoned egg whites, tender steak, wilted spinach, golden potatoes, ripe tomato, melted cheese, and creamy avocado, wrapped and served with home potatoes on the side.",1800],
+        ["VEGGIE BREAKFAST BURRITO","Eggs, Spinach, Onions, Mushrooms, Home Potatoes, Cheese, Avocado",1500],
+        ["CHILAQUILES PLATE","Homemade Tortilla Chips, Tossed on your choice of green or red salsa, Topped with 2 eggs, queso fresco, sour cream, pico de gallo, beans",1700],
+        ["EL YUCATECO SPECIALTY PLATE","Tomatoes Sauteed with Onions and Eggs, Black Beans, Avocado, Queso Fresco, Home Potatoes, Cilantro, Toast/Tortilla",1800],
+        ["2 EGG COMBO PLATE","2 eggs any style, avocado, home potatoes, fresh fruit, toast, butter",1800],
+        ["TAMALE SUPREMA SPECIALTY PLATE","2 eggs, chicken tamale, avocado, beans, queso fresco, tomato mild salsa",1600],
+        ["KING YUCATECO BREAKFAST","GREEN OR RED CHILAQUILES, CHICKEN TAMALE, 2 EGGS YOUR WAY, SIDE BEANS, TOMATO MILD SALSA, CHIMICHURRI ON THE SIDE, SIDE HABANERO HOT SAUCE",2100],
+      ] },
+      { name: "TAMALES/EMPANADAS/SOUPS/SALADS", items: [
+        ["TAMALE DE POLLO","Yucatecan Style Tamale, Wrapped in Banana Leaves, Chicken Adobo, Finished with a tomato salsa and a side of habanero hot sauce",700],
+        ["TAMALE DE POLLO (SALVADOREAN)","SALVADOREAN STYLE STEAMED TAMALE, SILKY MOIST TEXTURE, STUFFED WITH CHICKPEAS, BELL PEPPERS, POTATO, WRAPPED IN BANANA LEAVES (LIMITED SUPPLY)",800],
+        ["TAMALE DE PUERCO (PORK)","Yucatecan tamale characterized by its silky, pudding-like, strained corn masa texture. Wrapped in banana leaves, it is filled with pork, red recado (achiote) sauce, and thickened with lard and k'ool (a thickened broth), (LIMITED SUPPLY)",800],
+        ["STEAK EMPANADA","Grass fed beef, potatoes, green onions, bell pepper, caramelized onions, hard boiled eggs",800],
+        ["CHICKEN EMPANADA","Chicken Cage Free Chicken, Potatoes, Green Onion, Caramelized Onions, Bell Pepper",750],
+        ["MUSHROOM EMPANADA (VEGGIE)","Organic Portobello and Brown Mushrooms, Jak and Mozzarella Cheese, Sauteed Onions, Bell Pepper, Celery",750],
+        ["HUMITA CORN EMPANADA (VEGAN)","Corn, Caramelized Onions, Bell pepper, Vegan, Contains Nuts",750],
+        ["MINESTRONE VEGETABLE SOUP","SOUP Changes Weekly Squash, Celery, Corn, Beans, Carrots, Cabbage, Potatoes, Bell Peppers Side lime",900,null,"from"],
+        ["FRIJOLES CHARROS SOUP","",900,null,"from"],
+        ["CAESAR SALAD","ROMAINE LETTUCE, CROUTONS, PARMESAN CHEESE, HOMEMADE CAESAR DRESSING (Picture has added chicken)",1200],
+        ["SPINACH WALNUT SALAD","Spinach, Pickled Onions, Walnuts, Cranberries, Hard Boiled Egg, Balsamic Vinaigrette",1200],
+        ["ALUSHE COBB SALAD","ROMAINE LETTUCE, AVOCADO, CHERRY TOMATOES, SWEET CORN, BACON, HARD BOILED EGGS, BLUE CHEESE, LEMON VINAIGRETTE",1400],
+        ["TROPICAL JICAMA MANGO SALAD","JICAMA, MANGO, ORANGE SEGMENTS, GREEN AND RED BELL PEPPERS, MINT, SOUR ORANGE VINAIGRETTE",1200],
+      ] },
+      { name: "TORTAS/BURRITOS/QUESADILLAS", items: [
+        ["VEGGIE (LUNCH) BURRITO","Rice, Beans, Cheese, Veggies, Avocado, Pico de Gallo",1200],
+        ["REGULAR BURRITO (LUNCH)","Rice, Beans, Pico De Gallo, Choice of Protein",1400],
+        ["SUPER BURRITO (LUNCH)","Rice, Beans, Avocado, Sour Cream, Cheese, Pico de Gallo, Choice of Protein",1700],
+        ["VEGGIE QUESADILLA","Monterey Jack Cheese, Lettuce, Avocado, Pico de Gallo, Veggies",1200],
+        ["REGULAR QUESADILLA","Monterey Jack cheese, pico de gallo, choice of protein",1200],
+        ["SUPER QUESADILLA","Monterey Jack cheese, Avocado, Sour Cream, pico de gallo, choice of protein",1500],
+        ["SUPER SUIZA QUESADILLA","Pinto Beans, Mozzarella Cheese, Jalapenos, Avocado, Sour Cream, Choice of Protein",1700],
+        ["MILANEZA TORTA","Breaded Fried Chicken, Queso Fresco, Mayo, Lettuce, Tomatoes, Onions, Jalapenos, On A Telera",1600],
+        ["ASADA TORTA","Asada Torta with Refried Beans, Mozzarella Cheese, Avocado, Onions, Lettuce, Radish, Telera Bread",1700],
+        ["CHICKEN CHIPOTLE SANDWICH (LUNCH)","Bacon, House Chipotle Mayo, Lettuce, Tomato, Onions, Swiss Cheese on a Ciabatta",1500],
+        ["COCHINITA TORTA","Mayan Traditional Slow Roasted Pork, Cabbage, Pickled Onions, Side Habanero on a Ciabatta",1600],
+        ["HAM AND CHEESE SANDWICH","Mayo, Lettuce, Tomatoes, Onions, Jalapenos, Mustard, Pickles, Telera Bread",1600],
+        ["VEGGIE LUNCH SANDWICH","Sprouts, Tomato, Avocado, Cucumber, Onions, Spinach, Pickles, Hummus on Sourdough",1500],
+        ["TUNA MELT SANDWICH","Tuna, Mayo, Celery, Onions, Swiss Cheese, Lettuce, Tomatoes, on Sourdough Bread",1400],
+        ["TORTA CUBANA","Steak, Egg, Ham, Sausage, Lettuce, Tomato, Onion, Mayo, Jalapeño, Queso Fresco, Telera Bread",1900],
+        ["BLTA LUNCH SANDWICH","Bacon, Lettuce, Tomato, Avocado, Mayo",1400],
+        ["POC-CHUC TORTA","MARINATED PORK IN BEER AND SOUR ORANGE JUICE, BLACK BEAN SPREAD, CABBAGE, RADISH, PICKLED ONIONS, AVOCADO",1700],
+        ["MEXICAN TUNA MELT","OUR CLASSIC TUNA MELT WITH ADDED JALAPEÑOS AND AVOCADO",1700],
+      ] },
+      { name: "LUNCH COMBOS/LUNCH BOWLS", items: [
+        ["2 TAMALES + 1 SIDE (COMBO 1)","",1700],
+        ["2 EMPANADAS + 1 SIDE (COMBO 2)","CHOICE OF 2 INDIVIDUAL EMPANADAS, MIX OR MATCH, CHOOSE YOUR SIDE",1700],
+        ["1 EMPANADA + 1 TAMALE + 1 SIDE (COMBO 3)","ONE EMPANADA, ONE TAMALE COMBO, CHOOSE YOUR SIDE",1700],
+        ["MILANEZA SUPREME BOWL","Rice, Black Beans, Panko Breaded Chicken, Lettuce, Queso Fresco, Avocado, Jalapenos",1700],
+        ["COCHINITA PIBIL SUPREME BOWL","Traditional Yucatecan Slow Roasted Pork, Rice, Pinto Beans, Lettuce, Avocado, Sour Cream, Cheese, Pico De Gallo",1800],
+        ["CHICKEN PROTEIN BOWL","Chicken, Rice, Beans, Avocado, Cabbage, Pico De Gallo, Corn, Squash, Carrot Blend, Sour Cream, Queso Fresco, Hot Salsa on the Side, Lime Wedge",1700],
+        ["VEGGIE LUNCH BOWL (BOWL)","Rice, Beans, Cheese, Veggies, Avocado, Pico de Gallo",1200],
+        ["REGULAR LUNCH BOWL (BOWL)","Rice, Beans, Pico De Gallo, Choice of Protein",1400],
+        ["SUPER LUNCH BOWL (BOWL)","Rice, Beans, Avocado, Sour Cream, Cheese, Pico de Gallo, Choice of Protein",1700],
+      ] },
+      { name: "FRESH PRESSED JUICES/SMOOTHIES/REFRESHMENTS", items: [
+        ["XOLO JUICE","Mandarin, Orange, Carrot, Ginger",900],
+        ["ITOTIA GREEN JUICE","Spinach, Pineapple, Apples, Cucumber, Celery, Ginger, Lime",900],
+        ["MOKOSA BEET JUICE","Beet Juice, Mandarin Orange, Carrot, Ginger, Lime",900],
+        ["JAGUAR PUNCH","Strawberries, Orange, Apple, Pineapple, Lemon",900],
+        ["FOLLOW UP JUICE","Pineapple, Orange, Apple, Lemon, Turmeric",900],
+        ["JETSKI JUICE","Apples, Spinach, Mint, Lemon",900],
+        ["VAMPIRO JUICE","BLEND OF CARROTS AND BEET JUICE",900],
+        ["WATERMELON FIGHT JUICE","Watermelon, Strawberries, Lime, Mint, Agave",900],
+        ["ORANGE JUICE (OJ)","FRESH SQUEEZED ORANGE JUICE",550],
+        ["AKNA GREEN GODDESS SMOOTHIE","Honeydew, Spinach, Avocado, Mint, Oat Milk, Maple",1200],
+        ["GREEN POWER RANGER SMOOTHIE","Pineapple, Banana, Spinach, Fresh Apple Juice",1200],
+        ["BANANA BUSSINESS SMOOTHIE","Banana, Oat Milk, Dates, Vanilla, Peanut Butter",1200],
+        ["ACAI-ME SMOOTHIE","Organic Acai, Pineapple, Banana, Pineapple Juice, Coconut Milk, Vanilla",1200],
+        ["ORANGE MEAN MACHINE SMOOTHIE","Pineapple, Peach, Peanut Butter, Orange Juice, Soy Milk, Vanilla",1200],
+        ["WATERMELON WATERBOY SMOOTHIE","Watermelon, Strawberries, Pineapple, Watermelon Juice, Agave",1200],
+        ["AGUA FRESCA","changes weekly. 12oz $4.50, 16oz $5.50, 20oz $6.50",450,null,"from"],
+        ["HOUSE LEMONADE","Fresh Lemonades made with our very own flavored syrups. 12oz $4.50, 16oz $5.50, 20oz $6.50",450,null,"from"],
+        ["BLACK ICED TEA","San francisco herb company china black tea. 12oz $4.50, 16oz $5.50, 20oz $6.50",450,null,"from"],
+        ["ARNOLD PALMER","HOUSE MADE LEMONADE, BLACK CHINA ICED TEA. 12oz $4.50, 16oz $5.50, 20oz $6.50",450,null,"from"],
+      ] },
+      { name: "BOTTLED AND CANNED BEVERAGES", items: [
+        ["CAN SODA","CHOICE BETWEEN REGULAR COKE, COKE ZERO, DIET COKE, SPRITE, PEPSI",250],
+        ["SMART WATER (33.8 FL)","",375],
+        ["CRISTAL GEYSER WATER","",150],
+        ["COCA-COLA MEXICAN BOTTLE","",450],
+        ["APPLE JUICE MARTINELLI'S","",250],
+        ["RED BULL","",425],
+        ["COCONUT WATER","",375],
+        ["ITO GREEN TEA","",375],
+        ["TOPO CHICO MINERAL WATER","",400],
+        ["IZZE","",275],
+        ["LARGE PELLEGRINO","",475],
+        ["SUGAR FREE RED BULL","",425],
+      ] },
+      { name: "FRESH FRUIT/ SNACKS", items: [
+        ["NABISCO (CHIPS AHOY, OREO, NILLA)","",200],
+        ["MADELINES","",200],
+        ["FIG BAR","",200],
+        ["GRANOLA BAR","",200],
+        ["BISCOTTI","",200],
+        ["EXTRA PEPPERMINT GUM","",275],
+        ["FUJI APPLE FRUIT","",100],
+        ["BANANA FRUIT","",100],
+        ["WHOLE MANDARIN FRUIT","",100],
+        ["WHOLE ORANGE FRUIT","",100],
+        ["SNACKS","",200],
+        ["CANDY","",35],
+        ["GUSHERS CANDY 0.8OZ BAG","",75],
+      ] },
+      { name: "SIDES AND EXTRA ADD ONS", items: [
+        ["SIDE RICE","",300],
+        ["SIDE BLACK BEANS","",300],
+        ["SIDE WHOLE BEANS","",300],
+        ["SIDE AVOCADO","",300],
+        ["SIDE HOME POTATOES","",350],
+        ["SIDE TOAST","",300],
+        ["TOASTED ENGLISH MUFFIN","",425],
+        ["SIDE PLANTAINS","",600],
+        ["SIDE TORTILLAS","",300],
+        ["SMALL CAESAR SALAD","",700],
+        ["SMALL SPINACH SALAD","",700],
+        ["SINGLE EGGS","",200],
+        ["CHIPOTLE MAYO","",75],
+        ["SIDE MAYO","",75],
+        ["SIDE STEAK","",500],
+        ["SIDE BACON","",300],
+        ["SIDE HAM","",300],
+        ["SIDE SAUSAGE","",300],
+        ["SIDE CHORIZO","",300],
+        ["SIDE CHICKEN","",500],
+      ] },
+    ],
+    siteNote: "A husband-and-wife café celebrating Mayan heritage in the Inner Richmond, with tamales and house-made lattes; todos bienvenidos. Prices are from their own online ordering.",
+  },
+
+  /*
      Andrew Shin — gathered 2026-09-21 from own-domain
      their spelling: "Law Offices of Andrew B. Shin" (roster keeps "Andrew Shin")
      they are: Personal injury law
@@ -5316,6 +5584,135 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Four Chairs — gathered 2026-09-27 from own
+     they are: Breakfast & brunch
+     flag: HOURS CONFLICT on their own site, hours set null: the home page lists Mon 10am-2:30pm, Tue 10am-2:30pm, Wed-Fri 10am-2:30pm, Sat-Sun 9am-3pm; the About Us page (/contact) lists the same except 'Tuesday: Closed'. Instagram shows no hours. Everything but Tuesday agrees (Mon, Wed-Fri 10am-2:30pm; Sat-Sun 9am-3pm), so only Tuesday needs checking.
+     flag: City check OK: 3282 Mission Street, San Francisco, CA 94110 (Bernal Heights) matches Glenn's page 'San Francisco • Goods'.
+     flag: Name: the logo and About text say 'Four Chairs'; the site title, hours block and Instagram say 'Four Chairs Restaurant'. Used 'Four Chairs'.
+     flag: Email: the website prints info@fourchairssf.com; the Instagram Contact sheet shows fourchairs.sf@gmail.com. Both first-party; used the website address.
+     flag: Phone printed as 415.400.4788 on the site and Instagram bio; the Instagram Contact sheet shows (415) 400-4788.
+     flag: Menu source: the site's Menu page only links a 14-page PDF on their own domain (https://www.fourchairssf.com/_files/ugd/84dca7_7cc97b11de7f4247b16b4581664f91c8.pdf, modified 2026-06-02). It has a real text layer and is clearly legible (checked rendered pages 11, 13, 14 against the text), so it was transcribed. Pages 1-10 are photo promos of the same dishes; prices come from page 11 (drinks), 13 (brunch) and 14 (wraps, sandwiches, salads, kids, sides).
+     flag: order_url null: the site's order button ('Click here') goes to DoorDash and 'Reserve now' goes to Yelp (both listing sites, not their own). The site says it takes reservations only for weekdays. Wix has a hidden, unlinked 'Order Online' page that was not used.
+     flag: Left out all alcohol: Bloody Mary with Soju ($12, +$3 bacon), Sangria with Red Wine, Prosecco, Mimosa (OJ/Cranberry/Piña coco), Stella Artois, Sapporo, House Hot Sake, House Red Cabernet Sauvignon, House White Chardonnay, the 'Add Soju shot +4' drink add-on, and the $20 corkage fee. Also left out the $10 cakeage fee.
+     flag: 'Two Eggs Any Style' is $13 plain; the menu's 'Add-ons' list gives the full price with a protein (smoked salmon 18, beef bacon 17, turkey ham / turkey bacon / chicken apple sausage 16), so it reads 'from $13.00' with those in desc. Toast in the sides list is $4 with English muffin +$1, so 'from $4.00'. Matcha drinks and Choco Milk list Oatly or almond +$1 in desc.
+     flag: Obvious typos fixed: 'Muchroom' salad to 'Mushroom'; side 'Smoke salmon' to 'Smoked salmon'. Kept as published: 'Omeletes', 'Kinder Garden', 'two scramble eggs', 'grilled marinade chicken', 'Seoulmate'.
+     flag: Menu notes: no substitutions; 20% gratuity for parties of six or more; limit 2 cards per party; limited gluten-free toast on request.
+     flag: The website's About text mentions 'Citrus French Toast', but the current PDF has 'Crème Brûlée French Toast' and no citrus French toast (Glenn's text quotes the About line).
+     flag: No blocks: the site and PDF downloaded with curl/Playwright without issue.
+     flag: On review: no brunch seat, and San Francisco's Sandwiches and Coffee seats are taken, so the free listing on the yellow sheet.
+     flag: On review: hours left off; their home page opens Tuesdays and their About page says closed Tuesday.
+     flag: On review: seated at san-francisco-goods2-25 (yellow sheet: no brunch seat). Glenn's message of 25-27 September.
+  */
+  'four-chairs': {
+    address: "3282 Mission Street, San Francisco, CA 94110",
+    phone: "(415) 400-4788",
+    email: "info@fourchairssf.com",
+    cuisine: "Breakfast & brunch",
+    sections: [
+      { name: "Two Eggs Any Style", items: [
+        ["Two Eggs Any Style","Served with Home fries and Toast (Ciabatta/Whole wheat/Sourdough; English muffin +$1). With Smoked salmon $18, Hickory smoked beef bacon $17, Turkey ham $16, Applewood smoked Turkey bacon $16, or Chicken apple breakfast sausage $16.",1300,null,"from"],
+      ] },
+      { name: "Scrambles", items: [
+        ["Loco Plato","Garlic shrimps, spinach, red onion, capers, roasted red bell pepper, pepper jack cheese. Served with Home fries and Toast.",2300],
+        ["Southwest","Applewood smoked Turkey bacon, cherry tomato, cilantro, red onion, roasted red bell pepper, green bell pepper, goat cheese. Served with Home fries and Toast.",2000],
+        ["Chicken Apple","Chicken apple sausage, avocado, roasted red bell pepper, cheddar cheese. Served with Home fries and Toast.",2000],
+        ["Kinder Garden","Spinach, mushroom, roasted red bell pepper, green onion, pepper jack cheese. Served with Home fries and Toast.",1900],
+      ] },
+      { name: "Omeletes", items: [
+        ["Nova","Smoked salmon, parsley, green onion, black pepper, capers, sour cream. Served with Home fries and Toast.",2300],
+        ["Hawaiian","Turkey ham, pineapple, red onion, cilantro, pepper jack cheese. Served with Home fries and Toast.",2000],
+        ["Lively","Spinach, avocado, green bell pepper, red onion, green onion, cheddar cheese. Served with Home fries and Toast.",1900],
+      ] },
+      { name: "Special Egg Bennies", items: [
+        ["K-Bomb benny","Korean fried chicken, cabbage, Chipotle hollandaise served on Ciabatta; contains sesame seeds and seaweed. Served with Home fries and House salad.",2100],
+        ["Pacific Sunrise","Smoked salmon, sautéed spinach, Tom yum hollandaise served on Brioche. Served with Home fries and House salad.",2300],
+        ["By The Bay","Grilled shrimp, cherry tomato, mushroom, Tom yum hollandaise served on Brioche. Served with Home fries and House salad.",2300],
+      ] },
+      { name: "Egg Bennies", items: [
+        ["Chipotle","Spicy chicken chorizo, avocado, jalapeno, Chipotle hollandaise, on English muffin with Home fries and House salad.",2000],
+        ["The Original","Turkey ham, Meyer lemon hollandaise, on English muffin with Home fries and House salad.",1800],
+        ["Leafy Green","Sautéed spinach, cherry tomato, Meyer lemon hollandaise, on English muffin with Home fries and House salad.",1800],
+      ] },
+      { name: "Four Chairs Specialties", items: [
+        ["Mascarpone Pancake","Stack of three served with banana, berries, whipped mascarpone, syrup",1700],
+        ["Crème Brûlée French Toast","Brioche served with Vanilla custard on top, berries",1700],
+        ["Chicken & Waffle","Crispy bone-in fried chicken with house sweet & sour sauce, whipped butter, syrup",1900],
+      ] },
+      { name: "Wrapped Up", items: [
+        ["Breakfast Chorizo","Wrapped in a flour tortilla: spicy chicken chorizo, two scramble eggs, avocado, pepper jack cheese, Mexican style sour cream, served with Home fries",2000],
+        ["Seoulmate","Wrapped in a flour tortilla: grilled marinade chicken breast, avocado, red onion, romaine, ranch, K-Bomb sauce, served with French fries",2000],
+      ] },
+      { name: "Sandwiches & Burgers", items: [
+        ["K-Bomb Chicken Sandwich","Korean fried chicken, Sriracha mayo coleslaw, pickle, Brioche bun. Served with French fries, Home fries or House salad.",1900],
+        ["Crispy Chicken Sandwich","Crispy chicken breast, lettuce, tomato, white cheddar, chipotle aioli, Miche sandwich. Served with French fries, Home fries or House salad.",1900],
+        ["Classic Cheeseburger","8 oz Angus beef chuck, lettuce, tomato, red onion, pickle, white cheddar, aioli, Brioche bun. Served with French fries, Home fries or House salad.",1900],
+        ["Portobello Burger","Crispy breaded portobello, arugula, tomato, Tonkatsu mayo, Brioche bun. Served with French fries, Home fries or House salad.",1800],
+        ["BLTA","Applewood smoked Turkey bacon, lettuce, tomato, avocado, aioli, Miche sandwich. Served with French fries, Home fries or House salad.",1800],
+      ] },
+      { name: "Salads", items: [
+        ["Berries Harvest","Shrimp, arugula salad, berries, apple, parmesan, house lemon dressing. Served with toast.",1800],
+        ["Grilled Chicken Avocado","Grilled marinade chicken breast, mixed green, avocado, cherry tomato, red onion, cucumber, ranch. Served with toast.",1700],
+        ["Mushroom","Grilled Shimeji mushroom, mixed green, cherry tomato, red onion, cucumber, goat cheese, house balsamic vinaigrette. Served with toast.",1600],
+      ] },
+      { name: "Kid's Menu", items: [
+        ["Grilled Ham & Cheese","Turkey ham, white cheddar, brioche with French fries (kids 10 and younger)",1400],
+        ["Kid's Pancake","With your one choice of: Turkey ham, Applewood Turkey bacon, Chicken apple sausage, Scrambled eggs, Fruits cup (kids 10 and younger)",1200],
+      ] },
+      { name: "Sides", items: [
+        ["Okonomiyaki fries","French fries with Japanese mayo, katsu sauce, bonito flakes (dried tuna)",1000],
+        ["Side waffle","",1000],
+        ["Side pancake","",800],
+        ["Side French toast (plain)","",800],
+        ["Side Grilled Chicken","",700],
+        ["Smoked salmon","",800],
+        ["Hickory smoked beef bacon","",700],
+        ["Chicken apple breakfast sausage","",600],
+        ["Applewood smoked Turkey bacon","",600],
+        ["Turkey ham","",600],
+        ["Two eggs","",600],
+        ["Home fries/ French fries","",500],
+        ["Toast","Ciabatta, Whole wheat or Sourdough $4; English muffin $5",400,null,"from"],
+        ["Garlic spinach","",600],
+        ["Avocado (half)","",400],
+        ["Fresh fruits cup","",400],
+        ["House salad","",400],
+        ["Hollandaise","Lemon, Chipotle or Tom Yum",300],
+      ] },
+      { name: "Instagrammable Drinks", items: [
+        ["Volcano Coffee","",700],
+        ["Mocha Lava","",800],
+        ["Choco Milk","Chocolate, milk and marshmallows; Oatly or almond milk +$1",700],
+        ["Matcha Latte","Whole milk; Oatly or almond +$1",700],
+        ["Strawberry Matcha","Whole milk; Oatly or almond +$1",700],
+        ["Mango Matcha","Whole milk; Oatly or almond +$1",700],
+        ["Butterfly Lychee","",700],
+        ["Mango Tango","",700],
+        ["Piña Coco","",700],
+      ] },
+      { name: "Something Cold", items: [
+        ["Strawberry Lemonade","",600],
+        ["Mango Lemonade","",600],
+        ["Lemonade","",600],
+        ["Arnold Palmer","",600],
+        ["Thai Iced Tea","",600],
+        ["Orange Juice","",500],
+        ["Cranberry Juice","",500],
+        ["Apple Juice","",500],
+        ["Unsweetened Iced Tea","Refill",400],
+        ["Coke","",350],
+        ["Diet Coke","",350],
+        ["Sprite","",350],
+      ] },
+      { name: "Something Hot", items: [
+        ["House Coffee","Refill",500],
+        ["Decaf Coffee","Refill",500],
+        ["Tea Forte","Jasmine Green, Earl Grey, English Breakfast, White Ginger Pear, Green Mango Peach, Citrus Mint (Decaf)",450],
+      ] },
+    ],
+    siteNote: "A friends-and-family-owned breakfast and brunch spot in Bernal Heights, in their own words. Prices are from the menu on their own site.",
+  },
+
+  /*
      The French Spot — gathered 2026-09-21 from own-domain
      they are: French patisserie
      logo: https://images.squarespace-cdn.com/content/v1/5f6b54d6483daf47f3ca0c32/25acebb3-09a0-44fe-89a6-e45e04de3875/newlogoagray.png (340x570) — not cut into a tile yet
@@ -7512,6 +7909,38 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Hungry Cow — gathered 2026-09-27 from own
+     they are: Korean BBQ & shabu shabu
+     flag: City check: 40470 Albrae St, Fremont, CA 94538. It is the same on the site title, home, contact page and IG bio, and matches Glenn's 'Fremont' page.
+     flag: The menu exists only as two clearly legible images on myhungrycow.com/our-menu, both transcribed: 'SIGNATURE SET $43.00' and 'PREMIUM SET $59.00' (HUNGRY COW Korean BBQ & Shabu House). The images do not literally say 'per person' or 'all you can eat'. That reading comes from the printed policies: a 90-minute table limit with last call at 70 minutes, 'Entire party must order the same menu course', a minimum party of 2, kids pricing, and a $6 fee per plate of excessive food waste.
+     flag: Kids tier as published: 'Kids under 3 ft free, 3–4 ft half price, 4 ft and above full price'. No dollar kids price is printed, so it is in the item descriptions rather than as separate items. Half price would be $21.50 (Signature) and $29.50 (Premium) if the main session wants kids rows.
+     flag: No lunch/dinner or weekday/weekend price tiers are published on the site. Lunch specials may be in the IG 'SPECIALS' highlight, but it is not in Glenn's screenshots and was not checked.
+     flag: Shabu shabu: the site title says 'Korean BBQ Shabu Shabu', the menu header says 'Korean BBQ & Shabu House' and the Vision text mentions shabu. But no shabu menu or price is published. Both set menus are Korean BBQ.
+     flag: Other published policies: an extra 30 minutes during peak hours costs a 30% overage charge, an 18% gratuity is included for parties of 6 or more, no outside food or drinks, and all orders must be grilled before the next order. The Premium image prints the food-waste fee blurrily; the Signature image clearly says $6.
+     flag: The set descriptions are condensed from the printed item lists, not copied in full. Signature has 13 starters/sides, 10 beef & lamb, 7 pork, 3 chicken, 5 seafood and 5 desserts. Premium adds the items named in its description.
+     flag: Hours agree across the home page ('Mon - Fri: 11:30am - 11:00pm; Sat - Sun: 11am - 11pm'), the contact page and the IG bio.
+     flag: Phone is printed '(510)573-8200' on the site and '(510) 573-8200' on the IG Contact sheet. The email hungrycowfmt@gmail.com is on both the site contact page and the IG Contact sheet.
+     flag: Drinks: the IG bio says 'Korean BBQ | Food | Music | Drinks', and the site photos show a full bar. No drink prices are published, and alcohol is left out anyway.
+     flag: site_kind 'own', but the Wix template is unfinished. The footer 'Instagram' and 'Facebook' icons link to Wix's own accounts, 'Yelp' links to tripadvisor.com, and 'RESERVE A TABLE', 'VIEW MENU' and 'EXPLORE OUR MENU' all link back to the home page. There is no online ordering or booking page (order_url null). The contact form has a 'Private Event' enquiry type; it was not submitted. The footer says '© 2024 by Willson Designs'.
+     flag: Name: the site says 'Hungry Cow', IG says 'HUNGRY COW Korean BBQ', and the menu images say 'HUNGRY COW Korean BBQ & Shabu House'.
+     flag: On review: seated at fremont-goods-7 (Korean). Glenn's message of 25-27 September.
+  */
+  'hungry-cow': {
+    address: "40470 Albrae St, Fremont, CA 94538",
+    phone: "(510) 573-8200",
+    email: "hungrycowfmt@gmail.com",
+    hours: "Mon-Fri 11:30am-11pm, Sat-Sun 11am-11pm",
+    cuisine: "Korean BBQ & shabu shabu",
+    sections: [
+      { name: "Korean BBQ", items: [
+        ["Signature Set","Menu course (all you can eat within a 90-minute table limit). Starter/side, beef & lamb, pork, chicken, seafood and dessert, including Premium Brisket, USDA Prime Angus Chuck Tail Flap, Premium Beef Rib Finger, Sliced Bone-in Short Rib – LA Galbi, Angus Marinated Bulgogi, Pork Belly, Premium Pork Jowl, Garlic Chicken, Spicy Baby Octopus, Japchae and Kimchi Fried Rice. Kids under 3 ft free, 3–4 ft half price.",4300],
+        ["Premium Set","All Signature Set items plus Roasted Bone Marrow (1/person), Deep Fried Gyoza, Fried Calamari, Steam Eggs, Prime Angus Hand Cut Short Rib (original or marinated), Prime Angus Woodae Galbi (original or marinated), American Wagyu Brisket, Angus Ribeye Steak, Angus Filet Mignon Steak, Sausage, Tiger Shrimp, Spicy Calamari and Scallop. 90-minute table limit. Kids under 3 ft free, 3–4 ft half price.",5900],
+      ] },
+    ],
+    siteNote: "Korean BBQ for friends and family, in their own words. Two sets, from the menu on their own site: 90 minutes, the whole party orders the same set, kids under 3 ft free and 3 to 4 ft half price.",
+  },
+
+  /*
      i.snapped Photo Booths — gathered 2026-09-21 from own-domain
      they are: Photo booths
      flag: no street address — mobile, listing counties served
@@ -8863,6 +9292,230 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Long Bridge Pizza Co. — gathered 2026-09-27 from own
+     they are: Sourdough pizza
+     flag: City check: 2347 3rd Street, San Francisco, CA 94107 (Dogpatch) on longbridgepizza.com and on the Toast page. This matches Glenn's 'San Francisco' page.
+     flag: Prices are from the Toast online-ordering page (order.toasttab.com/online/long-bridge-pizza-2347-3rd-st, linked from the site's ORDER ONLINE button), pickup mode. Online prices can differ from in-store. The site's /menu page has no prices. curl on Toast returned a Cloudflare 'Just a moment...' 403. Headless Playwright loaded the page normally with no challenge shown, and nothing was bypassed or clicked.
+     flag: Hours agree across first-party sources: the IG bio says 'Tuesday to Sunday 11am to 9pm • Closed Mondays', and the site says 'Tues - Sun 11a - 9p'. The Toast page showed 'Closes at 8:45PM' on Sunday, which is the online-ordering cutoff. Glenn's IMG_5398 is an Apple Maps listing, so it was not used.
+     flag: Pizzas: Toast lists Small 12" and Large 18" as separate items. I merged them into one item per pizza, with the small price as 'from' and both prices in desc. The 'Small'/'Large' prefix is dropped from the names.
+     flag: Some pizza descriptions differ between the site's /menu and Toast. I used the Toast text, since the prices come from Toast. Examples: Kale-Fornia Dreamin' is 'Mozzarella' on the site but 'Smoked Mozzarella' on Toast. Nico is 'Mozzarella, Smoked Mozzarella ... Roasted Pepper' on the site but 'Smoked Mozzarella ... Red Bell Pepper' on Toast. House Salad has 'Hot Pepper' on the site but 'Pepperoncini' on Toast. Joey, Buffalo Chicken and Paulie Mac's appear only on Toast.
+     flag: Typos fixed: 'Peppronchini' to 'Pepperoncini' (House Salad), 'meaat' to 'meat' (Meatballs), 'Pepperoni,Sausage' to 'Pepperoni, Sausage' (A Love Supreme). Large Margherita's 'Oliver Oil' is not used because the small description, 'Olive Oil', is used instead.
+     flag: OUT OF STOCK on Toast when read (Sunday): all 10 Gluten-Free Square pizzas, Large Buffalo Chicken (the small was available) and Meatballs (Bites). They are kept at their listed prices.
+     flag: Day-only items are left out because they have no published price. The site lists them without prices, and they were not on the Sunday Toast menu. These are SQUARE THURSDAYS Detroit-style squares in a 10" x 8" pan (Square Cheese, Square Mushroom, Square Loading Dock, Square Pepperoni, Square Sausage & Peppers), BURGER TUESDAYS ('double patty Smack Stack cheeseburger with curly fries'), and the Wednesday-only sandwiches (Drunk Cluck Van Parm, Vinny's Gabagool, Meatball Sandwich, Chicken Parm).
+     flag: Alcohol left out: 6 cans/bottles of beer, including 'Sierra Nevada - Trail Pass Golden - N/A' ($6.65). That one is non-alcoholic but sits in the beer section, so it is left out too. Also left out: 4 bottles of wine ($40.30-$49.35) and the site's craft-beer/beers-to-go section.
+     flag: Also left out: Utensils (no price), merchandise (13 T-shirts at $23.35, a '12th Anniversary' tee at $20.60 and a Black & White Hoodie at $42.45), and eGift cards. Merch could be added if wanted. Toast's stock Coca-Cola/Sprite marketing blurbs are dropped from the drink descriptions.
+     flag: No email is published: the site has only a CONTACT US button, for events, the private dining room and catering. Phone is printed as 415.829.8999 on the site and 415-829-8999 in the IG bio.
+     flag: site_kind 'own': longbridgepizza.com is a real Wix site with menu, hours and story (founders Neal DeNardi and Andrew Markoulis, named after the old wooden causeway to Dogpatch). The IG bio links to linktr.ee/longbridgepizza instead. The site footer says '© 2023', and one heading anchor reads 'SQUARE MODAYS' (a leftover; the text says Thursdays).
+     flag: In-store 'Vibes' rewards program, and Toast rewards (1 point per $2). No prices are involved.
+     flag: On review: San Francisco's Italian seat is Stella Pastry's, so the free listing on the yellow sheet, menu ready behind the rule.
+     flag: On review: seated at san-francisco-goods2-23 (yellow sheet: Italian is Stella Pastry's). Glenn's message of 25-27 September.
+  */
+  'long-bridge-pizza': {
+    address: "2347 3rd Street, San Francisco, CA 94107",
+    phone: "415-829-8999",
+    hours: "Tue-Sun 11am-9pm; closed Mon",
+    cuisine: "Sourdough pizza",
+    sections: [
+      { name: "Pizzas", items: [
+        ["Cheese","Tomato Sauce, Mozzarella, Parmesan. Small 12\" $19.60, large 18\" $32.10.",1960,null,"from"],
+        ["Margherita","Tomato Sauce, Mozzarella, Basil, Olive Oil, Parmesan. Small 12\" $19.60, large 18\" $32.10.",1960,null,"from"],
+        ["Mushroom","Tomato Sauce, Mozzarella, Mushroom, Garlic, Thyme, Parmesan. Small 12\" $19.90, large 18\" $35.80.",1990,null,"from"],
+        ["Pesto","Tomato Sauce, Mozzarella, Ricotta, Garlic, Red Onion, House Pesto, Parmesan. Small 12\" $19.90, large 18\" $35.80.",1990,null,"from"],
+        ["White Pie","Mozzarella, Ricotta, Spinach, Garlic, Olive Oil, Parmesan (no sauce). Small 12\" $19.90, large 18\" $35.80.",1990,null,"from"],
+        ["Veggie Combo","Tomato Sauce, Mozzarella, Mushrooms, Spinach, Red Peppers, Red Onion. Small 12\" $20.70, large 18\" $37.90.",2070,null,"from"],
+        ["Kale-Fornia Dreamin'","Kale, Smoked Mozzarella, Red Onion, Spicy Cherry Peppers, Lemon Juice, Black Pepper, Parmesan (No Sauce). Small 12\" $20.45, large 18\" $36.05.",2045,null,"from"],
+        ["Sofia","Mozzarella, Ricotta, House Made Vodka Sauce, Honey, Mama Lil’s Hot & Sweet Peppers, Red Onion, Parmesan. Small 12\" $21.75, large 18\" $41.10.",2175,null,"from"],
+        ["Pepperoni","Tomato Sauce, Mozzarella, Ezzo Pepperoni, Parmesan. Small 12\" $20.45, large 18\" $36.85.",2045,null,"from"],
+        ["Loading Dock","Tomato Sauce, Mozzarella, Soppressata, Sausage, Mushroom, Garlic, Thyme, Parmesan. Small 12\" $21.75, large 18\" $41.10.",2175,null,"from"],
+        ["Hot N' Honey","Tomato Sauce, Mozzarella, Hot Coppa, Basil, Calabrian Chili Paste, Honey, Parmesan. Small 12\" $21.75, large 18\" $41.10.",2175,null,"from"],
+        ["Island Vibin'","Tomato Sauce, Mozzarella, Cheddar/Jack Blend, Pineapple, Pepperoni, Hot Coppa, Red Onion, Scallion, Calabrian Chili Paste. Small 12\" $21.75, large 18\" $41.10.",2175,null,"from"],
+        ["Nico","Tomato Sauce, Smoked Mozzarella, Sausage, Red Onion, Red Bell Pepper, Parmesan. Small 12\" $21.50, large 18\" $37.15.",2150,null,"from"],
+        ["Meatball","Tomato Sauce, House Made Meatballs, Provolone, Ricotta, Roasted Garlic, Calabrian Chili Paste, Parmesan. We source our meat from our neighbor Olivier's Butchery. Small 12\" $21.75, large 18\" $41.10.",2175,null,"from"],
+        ["A Love Supreme","Tomato Sauce, Mozzarella, Pepperoni, Sausage, Black Olives, Mushrooms, Green Bell Pepper, Red Onion, Parmesan. Small 12\" $22.55, large 18\" $41.35.",2255,null,"from"],
+        ["Joey","Tomato Sauce, Mozzarella, Pepperoni, Garlic, Jalapeño, Red Onion, Parmesan. Small 12\" $21.50, large 18\" $37.15.",2150,null,"from"],
+        ["Buffalo Chicken","Tomato Sauce, Mozzarella/Cheddar Blend, Crispy Chicken, Red Onion, Buffalo Sauce, Ranch, Green Onion, Parmesan. Small 12\" $21.75, large 18\" $39.80.",2175,null,"from"],
+        ["Paulie Mac's","Tomato Sauce, Mozzarella, Maestro Sausage, Shaved Onion, Pecorino Romano. Small 12\" $19.90, large 18\" $35.80.",1990,null,"from"],
+      ] },
+      { name: "Gluten-Free Square Pizza", items: [
+        ["Gluten-Free Square Cheese","Marinara, Mozzarella/Cheddar, Parmesan. Gluten-free Detroit-style square pizza.",2415],
+        ["Gluten-Free Square Mushroom","Marinara, Mozzarella/Cheddar, Mushroom, Parmesan. Gluten-free Detroit-style square pizza.",2625],
+        ["Gluten-Free Square Pesto","Marinara, Mozzarella / Cheddar Blend, Ricotta, Garlic, Red Onion, House Pesto, Parmesan. Gluten-free Detroit-style square pizza.",2520],
+        ["Gluten-Free Square Sofia","Mozzarella/Cheddar Blend, Ricotta, House Made Vodka Sauce, Honey, Mama Lil’s Hot & Sweet Peppers, Red Onion, Parmesan. Gluten-free Detroit-style square pizza.",2680],
+        ["Gluten-Free Square Pepperoni","Marinara, Mozzarella/Cheddar, Pepperoni, Parmesan. Gluten-free Detroit-style square pizza.",2625],
+        ["Gluten-Free Square Sausage & Peppers","Marinara, Mozzarella/Cheddar, Sausage, Mama Lil's Hot & Sweet Peppers, Parmesan. Gluten-free Detroit-style square pizza.",2920],
+        ["Gluten-Free Square Loading Dock","Marinara, Mozzarella/Cheddar, Soppressata, Sausage, Mushroom, Garlic, Thyme, Parmesan. Gluten-free Detroit-style square pizza.",2920],
+        ["Gluten-Free Square Hot N' Honey","Marinara, Mozzarella / Cheddar Blend, Hot Coppa, Calabrian Chili Paste, Basil, Honey, Parmesan. Gluten-free Detroit-style square pizza.",2920],
+        ["Gluten-Free Square Buffalo Chicken","Mozzarella/Cheddar Blend, Crispy Chicken, Red Onion, Buffalo Sauce, Ranch, Green Onion, Parmesan. Gluten-free Detroit-style square pizza.",2920],
+        ["Gluten-Free Square Paulie Mac's","Marinara, Mozzarella/Cheddar Blend, Maestro Sausage, Shaved Red Onion, Pecorino Romano. Gluten-free Detroit-style square pizza.",2705],
+      ] },
+      { name: "Salads", items: [
+        ["Caesar Salad","Romaine, House Caesar Dressing, Shaved Parmesan, Croutons (Dressing and Croutons served on the side)",1380],
+        ["House Salad","Romaine, Kidney Beans, Garbanzo Beans, Red Onion, Carrots, Pepperoncini, House Italian Dressing (Dressing served on the side)",1380],
+      ] },
+      { name: "Bites", items: [
+        ["Meatballs","House made Beef and Pork Meatballs. We source our meat from our neighbor Olivier's Butchery. Served with a Side of House Marinara and three pieces of toasted bread",1700],
+      ] },
+      { name: "Sides", items: [
+        ["Side of Marinara (Vegetarian)","",235],
+        ["Side of Ranch","",135],
+        ["Side of Chili Paste","",345],
+        ["Side of House Dressing","",135],
+        ["Side of Caesar Dressing","",135],
+        ["Side of Pesto","",135],
+        ["Side of Honey","",235],
+        ["Side Parmesan","",50],
+        ["Side Chili Flakes","",25],
+        ["Chips","",295],
+        ["Side of Anchovies","",345],
+        ["Side of Grilled Chicken","",555],
+      ] },
+      { name: "Drinks", items: [
+        ["Coca-Cola Can","",345],
+        ["Diet Coke Can","",345],
+        ["Sunkist Orange Soda Can","",345],
+        ["Sprite Can","",345],
+        ["Coca-Cola Zero Sugar Can","",345],
+        ["San Pellegrino Sparkling Water","",410],
+        ["Coca Cola Bottle","",690],
+        ["IBC Root Beer","",455],
+        ["Crystal Geyser Water Bottle","",270],
+        ["Honest Kids","Flavors will vary",345],
+      ] },
+    ],
+    siteNote: "Thin-crust sourdough pizza in the Dogpatch, in their own words. Prices are from their own online ordering.",
+  },
+
+  /*
+     Taqueria Los Agaves — gathered 2026-09-27 from own
+     they are: Mexican taqueria
+     flag: HOURS CONFLICT, hours set null: the website (Business Hours block) and Instagram bio both say Mon-Tue 9am-9:30pm, Wed-Sun 9am-10pm; their own Toast ordering page lists 9am-10pm every day. The site and Instagram agree with each other, so Mon-Tue 9am-9:30pm, Wed-Sun 9am-10pm is the likely answer if you want to set it.
+     flag: City check OK: 2408 B Junipero Serra Blvd, Daly City, CA 94015 matches Glenn's page 'Daly City • Goods'.
+     flag: Name: the website and Toast write 'Taqueria Los Agaves'; the Instagram display name is 'Los Agaves Taqueria' (handle losagaves.dc). Used the website form.
+     flag: Instagram bio misspells the street as 'Junipero Serro Blvd' and leaves out the unit; used the website/Toast address '2408 B Junipero Serra Blvd'.
+     flag: Phone is from the Instagram bio (415-769-5055) and matches the Toast Call link (tel:4157695055); the website itself prints no phone.
+     flag: No email printed anywhere first-party: the Instagram 'Email' button does not show the address in Glenn's screenshots. email null.
+     flag: site_kind 'own': the Wix home page is real (about text, hours, address), but the site's Menu, Catering and Contact Us links all go to Toast, and the Wix /menu, /blank-1 (Catering) and /blank-2 (Contact Us) pages are empty template pages with a '© 2035 by Business Name. Built on Wix Studio' footer.
+     flag: Left out all alcohol (whole 'Alcohol Beverage' section on Toast): Imported Beer, Regular Michelada, Michelada SUPREMA, Cantaritos, Margarita, Sangria Preparada, Cahuama, Seicito botanero, Cubeta. 'Seicito botanero' is the 'Seisito Botanero' pictured on the home page; it sits in the alcohol section, so it is left out. Home-page mentions of micheladas are also left out.
+     flag: Quesabirrias shows $0.00 on the Toast list, but the item's own Toast detail requires a size choice (1 quesabirria $6.59, 2 quesabirria plate $17.96, 3 quesabirrias $19.75). Kept it as 'from $6.59' with the options in desc, because it is a signature item Glenn named, not an unpriced line. Toast writes '3 QUESABIRRA'; fixed the typo to 'quesabirrias'.
+     flag: Combined size pairs into one item each: Agua Fresca SM $3.99 / LG $4.99, small/large beans $6.99 / $11.96, small/large rice $6.99 / $11.96 (lowest price, label 'from').
+     flag: Obvious typos fixed: 'HUEVOS CON HAMON' to 'HUEVOS CON JAMON'; in descriptions 'riceand' to 'rice and', 'sour creamand' to 'sour cream and', 'cambrey onions' to 'cambray onions', and missing spaces after commas. Name capitalization kept as Toast publishes it (e.g. 'PLATO ASADA', 'TACO CRISPY').
+     flag: Toast notes a 3.00% surcharge on credit card payments; Toast also shows a 'Spend $30, Save 25%' offer (not used).
+     flag: Glenn's logo search link was ignored as told; the logo comes from the Instagram avatar in his screenshot.
+     flag: No blocks: the website and Toast both loaded (Toast needed headless Playwright; the cookie banner was answered with 'Reject Non-Necessary Cookies').
+     flag: On review: hours from their site and Instagram, which agree; their ordering page's 9am-10pm daily is when it takes orders.
+     flag: On review: seated at daly-city-goods-1 (Mexican). Glenn's message of 25-27 September.
+  */
+  'los-agaves-daly-city': {
+    address: "2408 B Junipero Serra Blvd, Daly City, CA 94015",
+    phone: "415-769-5055",
+    hours: "Mon–Tue 9am–9:30pm, Wed–Sun 9am–10pm",
+    cuisine: "Mexican taqueria",
+    sections: [
+      { name: "Burritos", items: [
+        ["Super Burrito","Meat, sour cream, pico, guacamole, cheese, rice & beans.",1599],
+        ["Regular Burrito","Meat, pico, rice & beans.",1475],
+        ["Wet burrito","Meat, cheese, rice, beans, pico, Guacamole, Sour cream & your choice of green or red sauce.",1799],
+        ["California Burrito","Meat, pico, sour cream, Guacamole, cheese & potatoes.",1699],
+        ["Baby Burrito","Rice, beans, cheese & meat.",1247],
+        ["Vegetarian Burrito","Rice, black beans, spinach, corn, guacamole, sour cream, Cheese & pico.",1465],
+        ["Shrimp Super Burrito","shrimp, sour cream, pico, guacamole, cheese, rice & beans.",1787],
+        ["Little Burrito","",962],
+      ] },
+      { name: "Tacos", items: [
+        ["Regular Taco","Meat, salsa, cilantro & onion",389],
+        ["Super Taco","Meat, onion, cilantro, salsa, guaca, sour cream, lettuce & cheese.",625],
+        ["Veggie Taco","W/rice, beans, guaca, sour cream, onion, lettuce, Cilantro, cheese & salsa.",599],
+        ["Fish Taco","Cabbage, Sour cream, chipotle sauce and Mayo.",623],
+        ["2 Taco Plate","Meat, rice & beans.",1534],
+        ["Quesabirrias","Cheese, cilantro, onion & marinated beef. 1 quesabirria $6.59; 2 quesabirria plate $17.96; 3 quesabirrias $19.75.",659,null,"from"],
+        ["TACO CRISPY","Meat, cheese, cilantro, onion, lettuce, sour cream & salsa.",488],
+        ["TACO AGAVE","Meat, cheese, cilantro, onion, guaca & spicy salsa.",499],
+      ] },
+      { name: "Quesadillas", items: [
+        ["Super Quesadilla","Meat, sour cream, Guacamole, pico & cheese, lettuce",1575],
+        ["Quesadilla La Costa","Shrimp or fish, fajitas, Sour cream, pico, lettuce & guacamole & cheese.",1757],
+        ["Quesadilla Suiza","Meat and cheese",1175],
+        ["Quesadilla","Cheese",425],
+      ] },
+      { name: "Enchiladas", items: [
+        ["1 Enchilada","Choice of meat, rice, beans, sour cream, Pico, lettuce & guacamole.",1534],
+        ["2 Enchiladas","Choice of meat, rice, beans, sour cream, Pico, lettuce & guacamole.",1975],
+      ] },
+      { name: "Fajitas", items: [
+        ["Beef Fajitas","Served with rice, beans, sour cream, pico, guacamole, lettuce, cheese & side of tortillas.",2299],
+        ["Chicken Fajitas","Served with rice, beans, sour cream, pico, guacamole, lettuce, cheese & side of tortillas.",2099],
+        ["Shrimp Fajitas","Served with rice, beans, sour cream, pico, guacamole, lettuce, cheese & side of tortillas.",2399],
+        ["Mix Fajitas","Served with rice, beans, sour cream, pico, guacamole, lettuce, cheese & side of tortillas.",2499],
+      ] },
+      { name: "Nachos and fries", items: [
+        ["Super Nachos","Choice of meat, tortilla chips, sour cream, guacamole, cheese, frito and pico.",1550],
+        ["Crazy fries","Choice of meat, fries, sour cream, guacamole, cheese, and pico.",1650],
+        ["Crazy Waffle Fries","Choice of meat, waffle fries, sour cream, guacamole, cheese, and pico.",1699],
+      ] },
+      { name: "Chile Rellenos", items: [
+        ["1 Chile Relleno","Served with rice, beans, sour cream, pico, guacamole, lettuce, cheese & side of tortillas.",1559],
+        ["2 Chile Rellenos","Served with rice, beans, sour cream, pico, guacamole, lettuce, cheese & side of tortillas.",1975],
+      ] },
+      { name: "Hot Plates", items: [
+        ["PLATO ASADA","Served with rice, fried beans, Guacamole, sour cream, cheese, Lettuce & pico.",2199],
+        ["PLATO CARNITAS","Served with rice, fried beans, Guacamole, sour cream, cheese, Lettuce & pico.",1999],
+        ["Grilled Chicken","Served with rice, fried beans, Guacamole, sour cream, cheese, Lettuce & pico.",1999],
+        ["Alambre","Mix of Beef, Ham, Chorizo topped with melted cheese. Side of rice and refried beans. Corn or flour tortillas",2099],
+        ["Milanesa","Served with rice, fried beans, Guacamole, sour cream, cheese, Lettuce & pico.",2099],
+        ["3 Flautas","Served with rice, refried beans, lettuce, sour crème, cheese and salsa",1749],
+      ] },
+      { name: "Hot VIP", items: [
+        ["Plato Mix","Chicken fajita, steak, shrimp, rice and refried beans.",2399],
+        ["Molcajete","Chicken breast, steak, shrimp, chorizo, cactus, cambray onions, avocado, cheese, jalapenos.",3499],
+      ] },
+      { name: "Seafood", items: [
+        ["Cóctel","",1899],
+        ["Campechana","",2099],
+        ["Tostada De ceviche","",831],
+        ["Fish Fillet","",2099],
+        ["Camarones al Ajillo","",2199],
+        ["Camarones a la diabla","",2199],
+        ["Mojarra","",2199],
+      ] },
+      { name: "Salads", items: [
+        ["Taco Salad","Meat, rice, beans, sour cream, lettuce, guacamole, pico and cheese.",1599],
+        ["Mexican Salad","Chicken breast, Lettuce, Tomatoes, corn, cucumber, fajitas and avocado.",1450],
+      ] },
+      { name: "Tortas", items: [
+        ["Torta Cubana","Milanesa, ham, egg, chorizo, sausage, lettuce, tomato & avocado",2199],
+        ["Torta Méx","Lettuce, tomato, cheese, avocado, fried beans, sour cream",1599],
+        ["TORTA MILANESA","Breaded steak",1799],
+      ] },
+      { name: "Breakfast", items: [
+        ["Chilaquiles","Steak, egg, black beans, sour cream and cheese",1767],
+        ["HUEVOS CON JAMON","includes: Fried beans, Rice, cheese, lettuce, sour cream, Guacamole & pico.",1559],
+        ["Huevos rancheros","includes: Fried beans, Rice, cheese, lettuce, sour cream, Guacamole & pico.",1559],
+        ["Huevos con chorizo","includes: Fried beans, Rice, cheese, lettuce, sour cream, Guacamole & pico.",1559],
+      ] },
+      { name: "Sides", items: [
+        ["Guacamole","",296],
+        ["Avocado","",234],
+        ["extra chips","",104],
+        ["Beans","Small $6.99, Large $11.96",699,null,"from"],
+        ["Rice","Small $6.99, Large $11.96",699,null,"from"],
+      ] },
+      { name: "Weekends only", items: [
+        ["Menudo","",1899],
+        ["Pozole","",1699],
+      ] },
+      { name: "Drinks", items: [
+        ["Agua Fresca","Small $3.99, Large $4.99",399,null,"from"],
+        ["Jarritos","",385],
+        ["Bottled coke","",490],
+        ["Can Soda","",259],
+        ["Coffee","",275],
+        ["Water Bottle","",207],
+      ] },
+    ],
+    siteNote: "Daly City's favorite taqueria, in their own words: molcajetes, quesabirrias, tacos, burritos and seafood made to order. Prices are from their own online ordering.",
+  },
+
+  /*
      Love Burn Hot Chicken — gathered 2026-09-21 from stopgap
      they are: Nashville hot chicken
      flag: all facts from their Instagram bio; Toast blocks reading the menu
@@ -9164,6 +9817,292 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   'marina-bay-media': {
     instagram: "marinabaymedia",
     cuisine: "Marketing agency",
+  },
+
+  /*
+     maverick-jacks-burlingame — gathered 2026-09-27 from own
+     their spelling: "Maverick Jack's" (roster keeps "maverick-jacks-burlingame")
+     they are: Burgers & shakes
+     flag: City check: 1190 California Drive, Burlingame, CA 94010 matches Glenn's 'Burlingame' page. maverickjacks.com lists BOTH shops (Burlingame and San Mateo) with their own phone, address, hours and order page. The @maverickjacks IG bio in Glenn's screenshot lists only 'Burlingame: 1190 California Dr.'. The site footer links a separate San Mateo Instagram, @maverickjackssm, which is not in Glenn's screenshots.
+     flag: The menus are NOT identical between the two shops. The items mostly match, but the prices differ, so each file uses that shop's own Toast order page (maverickjacks.com/order/...). Burlingame is higher on drinks ($4.50 vs $3.25), shakes ($9.50/$10.50 vs $9.00/$10.00), floats/freezes ($9 vs $8), fries and sides, and the Impossible Burger ($20.95 vs $19.45). The site's public 'View Menu' page (/view-menu) shows the San Mateo menu and prices without saying so. The /menu/<location> links in the site nav return 404.
+     flag: maverickjacks.com is a Toast-hosted site on their own domain (About Us, Catering, Events/Fundraiser pages), so site_kind is 'own'. curl got a Cloudflare 'Just a moment...' 403. Headless Playwright loaded the pages normally with no challenge shown, and nothing was bypassed. To read 'All hours', the cookie banner was dismissed with 'Reject Non-Necessary Cookies'. Nothing was added to a cart.
+     flag: Hours come from the site's 'All hours' dialog for this shop: Sunday-Saturday 11:00AM-8:00PM. The IG bio has no hours, so there is no conflict. Glenn's IMG_5419 (Sunday morning) says 'Closed • Opens Sunday at 11AM', which is consistent.
+     flag: LEFT OUT the '$15 Lunch Special' (Weekday Lunch): it is priced $19.95 on this shop's order page ('Classic Cheeseburger, Classic Chicken or Classic Vegetarian burger with Fries or Salad'). The pinned IG post says '$15 MON-FRI 11:00AM TO 4:00PM' for a classic cheeseburger + fries + soda (no refill), 'San Mateo & Burlingame'. The two first-party prices disagree.
+     flag: Both order pages add 'an additional 2.70%' when paying by credit card, to offset processing costs.
+     flag: Main-section note ('served with fries or house salad') is appended to each main's description. Toast's stock Coca-Cola/Sprite/Fanta marketing blurbs are dropped from the drink descriptions. Kids shake flavors are collapsed into one 'Kids Shakes' item, with the prices by flavor in desc.
+     flag: No alcohol appears on either online menu, although site photos show wine and beer on a shelf. 'Beermeister' (Sierra Nevada Pale Ale mustard) and the beer-battered sides are food and are kept.
+     flag: Email: the IG profile has an 'Email' button, but the address is not shown, and no email is printed on the site (contact is by the Events/Fundraiser inquiry form). Set to null.
+     flag: Their own words vary on age: the home page says 'Charbroiled since 2008, Peninsula proud!', About says 'serving ... the Peninsula for the past 18 years', and the logo says 'EST. 2016'.
+     flag: PHONE CONFLICT: the site prints (650) 436-5825 for Burlingame, but the @maverickjacks IG bio prints 650-347-3061 next to the Burlingame address. The site's number is used here; confirm which one is current.
+     flag: Burlingame's order page says the Main group is 'All natural 1/3lb seasoned Niman Ranch beef'. But its Classic Hamburger and Blue Ribbon descriptions say '6oz Painted Hills burger patty'. Both are kept as printed.
+     flag: Left out as duplicates on the Burlingame order page: 'Fries (VEG)' ($7.45, same price as Maverick's Fries) and 'Garlic Fries' ($8.95, same text and price as Parmesan Garlic Fries).
+     flag: Typos fixed: 'toped' to 'topped', 'fired egg' to 'fried egg' (Better Burger), 'Garlic&herb' to 'Garlic & herb', spacing in the Brunch Burger description, and 'and and' to 'and' (kids meals).
+     flag: Burlingame has no Kids Drinks section and no Adult Sliders & Fries, Kids Cone, Caramel Crunch shake or Caesar Salad (Full Tray). It adds To Go Soda, Fanta Orange, Coke Zero, Side Salad, Sub Caesar, Kids Just Peachy and an Orange Freeze.
+     flag: On review: phone is their site's, (650) 436-5825; their Instagram bio gives 650-347-3061.
+     flag: On review: seated at burlingame-goods-0 (Burgers). Glenn's message of 25-27 September.
+  */
+  'maverick-jacks-burlingame': {
+    address: "1190 California Drive, Burlingame, CA 94010",
+    phone: "(650) 436-5825",
+    hours: "Daily 11am-8pm",
+    cuisine: "Burgers & shakes",
+    sections: [
+      { name: "Specials", items: [
+        ["Brunch Burger","American cheese, Fried egg, Smoked bacon, French Fries, Tabasco Mayo sauce.",2195],
+        ["Irish Nacho Tots","French fries topped with cheddar cheese, crispy bacon bits, finished with green onions and Tabasco mayo on the side",995],
+        ["Chicken Wings","Breaded Drumettes & Flats with your choice of Buffalo, Parmesan Garlic or Crispy natural style, tossed or on the side, you decide. Served with Ranch, Blue Cheese or Spicy Mango. From $12.95.",1295,null,"from"],
+      ] },
+      { name: "Main", items: [
+        ["Maverick's Classic Hamburger","6oz Painted Hills burger patty, sea salt & black pepper, iceberg lettuce, kosher dill pickle, red onion, tomatoes, Mavericks Burger Sauce served on an American bun. Served with fries or house salad.",1995],
+        ["Impossible Burger","The Impossible® Patty made entirely from plants, sea salt & black pepper, iceberg lettuce, kosher dill pickle, red onion, tomatoes, Mavericks Burger Sauce on an American bun! Add cheese: American, Cheddar, Monterey Jack, Pepper Jack or Blue Cheese. Served with fries or house salad.",2095],
+        ["Bacon Ultimatum","Cheddar cheese, hickory smoked bacon, tomato, iceberg lettuce, maple bacon mayo on an American Bun. Served with fries or house salad.",2195],
+        ["Hot Hawaiian","Jack cheese, grilled onions, grilled pineapple, chili spiked teriyaki, Maverick's Burger Sauce. Served with fries or house salad.",2145],
+        ["Beermeister","Jack cheese, sautéed mushrooms, deep-fried pickles, iceberg lettuce, Sierra Nevada Pale Ale mustard on an American Bun. Served with fries or house salad.",2145],
+        ["Outlaw","Pepper jack cheese, hickory smoked bacon, crispy onion strings, jalapeños, red onion, BBQ sauce & Chipotle mayo on an American Bun. Served with fries or house salad.",2195],
+        ["Runaway Freight","Cheddar cheese, bourbon glazed mushrooms, crispy onion strings, Mavericks Burger Sauce. Served with fries or house salad.",2145],
+        ["Monterey Express","Monterey Jack cheese, hickory smoked bacon, mixed greens, avocado, tomatoes, roasted garlic aioli on an American Bun. Served with fries or house salad.",2195],
+        ["Chicken Club","Garlic & herb seasoned grilled chicken filet, jack cheese, hickory smoked bacon, avocado, green leaf lettuce, tomato, basil pesto mayo served on toasted sourdough bread. Served with fries or house salad.",2095],
+        ["Soprano Chicken","Garlic & herb seasoned chicken filet, fresh mozzarella, mixed greens, tomatoes, basil pesto mayo served on a parmesan dusted wheat bun. Served with fries or house salad.",2095],
+        ["Southwest Veggie Burger","House made black bean veggie patty, topped with pepper jack cheese, jalapeños, red onion, mixed greens, tortilla strips, chipotle mayo served on a wheat bun. Served with fries or house salad.",1945],
+        ["Jacked Up Crispy Chicken","Buttermilk chicken filet seasoned & deep-fried til' crispy, bread & butter pickles, iceberg lettuce, roasted garlic aioli on an American bun. Served with fries or house salad.",2045],
+        ["Napa Valley Turkey","Turkey patty topped with jack cheese, cabernet/balsamic onions, sautéed mushrooms, mixed greens, tomatoes, Mavericks Burger sauce served on a wheat bun. Served with fries or house salad.",2145],
+        ["Chicken Strips","Four tender chicken strips fried up to perfection & served with Ranch on the side. Served with fries or house salad.",1795],
+        ["Better Burger (Protein Plate)","Your choice of chicken filet or angus beef patty, fried egg, avocado, hickory smoked bacon, lettuce, tomato, pickles, red onions. Served with fries or house salad.",2195],
+        ["Blue Ribbon","6oz Painted Hills burger patty, sea salt & black pepper, blue cheese crumbles, mixed greens, kosher dill pickle, onion strings, tomatoes, roasted garlic aioli served on an American bun. Served with fries or house salad.",2145],
+      ] },
+      { name: "Meal Salads", items: [
+        ["Texacali","Romaine lettuce, grilled chicken filet, black beans roasted corn, avocado, tortilla strips, and home made salsa served with house made Chipotle Vinaigrette dressing.",2145],
+        ["San Fransokyo","Mix of romaine and slaw, with a teriyaki glazed chicken filet, crispy wontons & rice noodles, avocado, pickled ginger, green onions, and sesame seeds with an Asian-style dressing",2145],
+        ["Chicken Caesar Supreme","Romaine lettuce, grilled chicken filet, cherry tomatoes, avocado, fresh grated parmesan cheese and croutons",2045],
+        ["Jack's Cobb","Romaine lettuce, grilled chicken filet, bacon, hard boiled egg, blue cheese crumbles, cherry tomatoes, avocado served with Ranch dressing",2245],
+      ] },
+      { name: "Shareables", items: [
+        ["Maverick's Fries","Maverick's crisp french fries!",745],
+        ["Parmesan Garlic Fries","French fries tossed in Gilroy garlic-parsley butter, finished with fresh grated parmesan cheese",895],
+        ["Sweet Potato Fries","Sweet potato fries dusted in our unique seasoning and served with house made Tiger Ranch dressing",895],
+        ["Maverick's Tots","Mavericks tots deep fried until perfectly crisp",895],
+        ["Onion Rings","Beer battered onion rings salted and served with Smokey Russian dressing on the side",895],
+        ["Fried Pickles","Beer battered deep fried pickles served with ranch dressing on the side",995],
+        ["Side Salad","Mixed greens, cucumber, cherry tomato & red onions",700],
+        ["Sub Caesar","Romaine lettuce, fresh grated parmesan & house made croutons",700],
+        ["Irish Nacho Fries","French fries topped with cheddar cheese, crispy bacon bits, finished with green onions and Tabasco mayo on the side",1045],
+        ["Bacon Parmesan Sprouts","Deep Fried til' crispy brussel sprouts then tossed in our house made garlic sauce topped with parmesan cheese and bacon.",895],
+      ] },
+      { name: "Drinks", items: [
+        ["To Go Soda","To Go soda 16oz",300],
+        ["Coke","",450],
+        ["Diet Coke","",450],
+        ["Coke Zero","",450],
+        ["Sprite","",450],
+        ["Rootbeer","",450],
+        ["Dr. Pepper","",450],
+        ["Lemonade","",450],
+        ["Iced Tea","",450],
+        ["Arnold Palmer","",450],
+        ["Fanta Orange","",450],
+        ["Shirley Temple","",495],
+        ["Roy Rogers","",495],
+        ["Strawberry Lemonade","",495],
+        ["Raspberry Iced Tea","",495],
+        ["Peach Iced Tea","",495],
+      ] },
+      { name: "Shakes", items: [
+        ["Chocolate Shake","",950],
+        ["Vanilla Shake","",950],
+        ["Black & White Shake","",950],
+        ["Coffee Shake","",950],
+        ["Mint Chocolate Chip Shake","",950],
+        ["Strawberry Shake","",950],
+        ["Blonde Bombshell Shake","",1050],
+        ["Cookies & Cream","",1050],
+        ["Mint & Cookies","",1050],
+        ["Neapolitan","",1050],
+        ["Chocolate Peanut Butter","",1050],
+        ["Mocha Chip","",1050],
+        ["Just Peachy","",950],
+        ["Kids Shakes","$6.50: Vanilla, Chocolate, Strawberry, Mint Chocolate Chip, Black & White, Coffee, Chocolate Peanut Butter, Mocha Chip, Neapolitan, Just Peachy; $7.00: Cookies & Cream, Blonde Bombshell, Mint & Cookies",650,null,"from"],
+      ] },
+      { name: "Kids Meals", items: [
+        ["Sliders NO Cheese","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Sliders With Cheese","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Grilled Cheese","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Hot Dog","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Chicken Fingers","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+      ] },
+      { name: "Sundaes", items: [
+        ["Maverick's Classic Sundae","",1000],
+        ["Hot Fudge Volcano","",1100],
+        ["Candy Bar Crunch Sundae","Vanilla soft serve topped with Hershey's® hot fudge, caramel sauce and crunchy peanuts!",1100],
+        ["Peanut Butter Twist","",1100],
+      ] },
+      { name: "Floats", items: [
+        ["Coke Float","",900],
+        ["Rootbeer Float","",900],
+        ["Strawberry Float","",900],
+        ["Cherry Pop Float","",900],
+      ] },
+      { name: "Freezes", items: [
+        ["Orange Freeze","",900],
+        ["Pineapple Freeze","",900],
+        ["Rootbeer Freeze","",900],
+        ["Coke Freeze","",900],
+      ] },
+      { name: "Party Catering", items: [
+        ["\"Dirty Dozen\" Classic Cheese Sliders","12 Classic Cheeseburger Style Slider Pack. Beef sliders with your choice of cheese, tomato, pickles & red onion with Mavericks Burger Sauce",7999],
+        ["'Dirty Dozen' Gourmet Sliders","Choose up to 3 styles of Sliders for this perfect Party Pleaser with 12 individual sliders.",9999],
+        ["Kids Dozen Sliders","12 Plain sliders with meat, cheese & buns. ketchup served on the side",5999],
+        ["Kids Party Box","Party Box: 10 hot dogs, 20 beef sliders & 20 chicken tenders served with Ketchup, Mustard & Ranch",29999],
+        ["Team Burgers n' Fries","Feeds 12 people. Tray of Burgers n' Fries. Each Tray has 12 plain cheese burgers & fries. All condiments.",19999],
+        ["Tray of Tater Tots","Tray of Tater tots feeds 25 people",5500],
+        ["Texacali Salad ( Full Pan)","Romaine lettuce, grilled chicken filet, black beans roasted corn, avocado, tortilla strips, and home made salsa served with chipotle vinaigrette dressing. Feeds 10ppl",9999],
+        ["San Fransokyo Salad (Full Pan)","Mix of romaine and slaw, with a teriyaki glazed chicken filet, crispy wontons & rice noodles, avocado, pickled ginger, green onions, and sesame seeds with an Asian-style dressing Feeds 10ppl",9999],
+        ["Chicken Caesar Supreme Salad ( Full Pan)","Romaine lettuce, grilled chicken filet, cherry tomatoes, avocado, fresh grated parmesan cheese and croutons Feeds 10 ppl",9999],
+        ["Mixed Greens Salad (Full Pan)","Mixed greens salad with cherry tomatoes, cucumber & red onions served with Balsamic vinaigrette on the side",4495],
+      ] },
+    ],
+    siteNote: "Charbroiled burgers, meal salads and milkshakes, in their own words. Prices are from this shop's own online ordering; they add 2.7% for card payments.",
+  },
+
+  /*
+     maverick-jacks-san-mateo — gathered 2026-09-27 from own
+     their spelling: "Maverick Jack's" (roster keeps "maverick-jacks-san-mateo")
+     they are: Burgers & shakes
+     flag: City check: 4000 South El Camino Real, San Mateo, CA 94403 matches Glenn's 'San Mateo' page. maverickjacks.com lists BOTH shops (Burlingame and San Mateo) with their own phone, address, hours and order page. The @maverickjacks IG bio in Glenn's screenshot lists only 'Burlingame: 1190 California Dr.'. The site footer links a separate San Mateo Instagram, @maverickjackssm, which is not in Glenn's screenshots.
+     flag: The menus are NOT identical between the two shops. The items mostly match, but the prices differ, so each file uses that shop's own Toast order page (maverickjacks.com/order/...). Burlingame is higher on drinks ($4.50 vs $3.25), shakes ($9.50/$10.50 vs $9.00/$10.00), floats/freezes ($9 vs $8), fries and sides, and the Impossible Burger ($20.95 vs $19.45). The site's public 'View Menu' page (/view-menu) shows the San Mateo menu and prices without saying so. The /menu/<location> links in the site nav return 404.
+     flag: maverickjacks.com is a Toast-hosted site on their own domain (About Us, Catering, Events/Fundraiser pages), so site_kind is 'own'. curl got a Cloudflare 'Just a moment...' 403. Headless Playwright loaded the pages normally with no challenge shown, and nothing was bypassed. To read 'All hours', the cookie banner was dismissed with 'Reject Non-Necessary Cookies'. Nothing was added to a cart.
+     flag: Hours come from the site's 'All hours' dialog for this shop: Sunday-Saturday 11:00AM-8:00PM. The IG bio has no hours, so there is no conflict. Glenn's IMG_5419 (Sunday morning) says 'Closed • Opens Sunday at 11AM', which is consistent.
+     flag: LEFT OUT the '$15 Lunch Special' (Weekday Lunch): it is priced $19.95 on this shop's order page ('Classic Cheeseburger, Classic Chicken or Classic Vegetarian burger with Fries or Salad'). The pinned IG post says '$15 MON-FRI 11:00AM TO 4:00PM' for a classic cheeseburger + fries + soda (no refill), 'San Mateo & Burlingame'. The two first-party prices disagree.
+     flag: Both order pages add 'an additional 2.70%' when paying by credit card, to offset processing costs.
+     flag: Main-section note ('served with fries or house salad') is appended to each main's description. Toast's stock Coca-Cola/Sprite/Fanta marketing blurbs are dropped from the drink descriptions. Kids shake flavors are collapsed into one 'Kids Shakes' item, with the prices by flavor in desc.
+     flag: No alcohol appears on either online menu, although site photos show wine and beer on a shelf. 'Beermeister' (Sierra Nevada Pale Ale mustard) and the beer-battered sides are food and are kept.
+     flag: Email: the IG profile has an 'Email' button, but the address is not shown, and no email is printed on the site (contact is by the Events/Fundraiser inquiry form). Set to null.
+     flag: Their own words vary on age: the home page says 'Charbroiled since 2008, Peninsula proud!', About says 'serving ... the Peninsula for the past 18 years', and the logo says 'EST. 2016'.
+     flag: Phone (650) 638-1479 is from the site. The @maverickjacks IG bio lists only the Burlingame phone.
+     flag: Left out 'National Cheeseburger Day $20' ($20.00, Classic Cheeseburger with fries or side salad). It is still on the Specials list, but it is a one-day promotion, and National Cheeseburger Day (Sept 18) had already passed on 2026-09-27.
+     flag: OUT OF STOCK when read: Chicken Fingers (kids meal) and the Chocolate Peanut Butter shake. Both are kept at their listed prices.
+     flag: Chicken Wings are '$12.95+' on the order page and '$12.95 - $45.95' on /view-menu, so the item uses 'from' $12.95.
+     flag: Typos fixed: 'Bacon Parmnesan Sprouts' to 'Bacon Parmesan Sprouts', and 'and and' to 'and' (kids meals).
+     flag: On review: seated at san-mateo-goods-0 (Burgers). Glenn's message of 25-27 September.
+  */
+  'maverick-jacks-san-mateo': {
+    address: "4000 South El Camino Real, San Mateo, CA 94403",
+    phone: "(650) 638-1479",
+    hours: "Daily 11am-8pm",
+    cuisine: "Burgers & shakes",
+    sections: [
+      { name: "Specials", items: [
+        ["The Brunch Burger","6oz Painted Hills beef patty with melted American cheese, crispy bacon with a syrup drizzle, a fried egg, sitting on top of a bed of fries with our house made maple bacon mayo and served on an American bun!",2195],
+        ["Irish Nacho Tots","Crispy french fries smothered in melted cheddar cheese, topped with bacon bits and finished with green onions",995],
+        ["Chicken Wings","Breaded Drumettes & Flats with your choice of Buffalo, Parmesan Garlic or Crispy natural style, tossed or on the side, you decide. Served with Ranch, Blue Cheese or Spicy Mango. Priced $12.95-$45.95.",1295,null,"from"],
+      ] },
+      { name: "Main", items: [
+        ["Maverick's Classic Hamburger","Sea salt & black pepper, iceberg lettuce, kosher dill pickle, red onion, tomatoes, Mavericks Burger Sauce served on an American bun. Served with fries or house salad.",1995],
+        ["Impossible Burger","The Impossible® Patty made entirely from plants, sea salt & black pepper, iceberg lettuce, kosher dill pickle, red onion, tomatoes, Mavericks Burger Sauce served on an American bun! Add cheese: American, Cheddar, Monterey Jack, Pepper Jack or Blue Cheese. Served with fries or house salad.",1945],
+        ["Bacon Ultimatum","Cheddar cheese, hickory smoked bacon, tomato, iceberg lettuce, maple bacon mayo on an American Bun. Served with fries or house salad.",2195],
+        ["Outlaw","Pepper jack cheese, hickory smoked bacon, crispy onion strings, jalapeños, red onion, BBQ sauce & Chipotle mayo on an American Bun. Served with fries or house salad.",2195],
+        ["Beermeister","Jack cheese, sautéed mushrooms, deep-fried pickles, iceberg lettuce, Sierra Nevada Pale Ale mustard on an American Bun. Served with fries or house salad.",2145],
+        ["Runaway Freight","Cheddar cheese, bourbon glazed mushrooms, crispy onion strings, Mavericks Burger Sauce. Served with fries or house salad.",2145],
+        ["Monterey Express","Monterey Jack cheese, hickory smoked bacon, mixed greens, avocado, tomatoes, roasted garlic aioli on an American Bun. Served with fries or house salad.",2195],
+        ["Blue Ribbon","Blue cheese, crispy onion strings, mixed greens, tomatoes, kosher dill pickles, roasted garlic aioli on an American Bun. Served with fries or house salad.",2095],
+        ["Hot Hawaiian","Jack cheese, sautéed onions, grilled pineapple, chili spiked teriyaki, Mavericks burger sauce on an American bun. Served with fries or house salad.",2145],
+        ["Soprano Chicken","Garlic & herb seasoned chicken filet, fresh mozzarella, mixed greens, tomatoes, basil pesto mayo served on a parmesan dusted wheat bun. Served with fries or house salad.",2095],
+        ["Jacked Up Crispy Chicken","Buttermilk chicken filet seasoned & deep-fried til' crispy, bread & butter pickles, iceberg lettuce, roasted garlic aioli on an American bun. Served with fries or house salad.",2045],
+        ["Napa Valley Turkey","Turkey patty topped with jack cheese, cabernet/balsamic onions, sautéed mushrooms, mixed greens, tomatoes, Mavericks Burger sauce served on a wheat bun. Served with fries or house salad.",2145],
+        ["Chicken Strips","Four tender chicken strips fried up to perfection and served with ranch dressing on the side. Served with fries or house salad.",1795],
+        ["Southwest Veggie Burger","House made black bean veggie patty, topped with pepper jack cheese, jalapeños, red onion, mixed greens, tortilla strips, chipotle ranch served on a wheat bun. Served with fries or house salad.",1945],
+        ["Chicken Club","Chicken Filet topped with jack cheese and smoked bacon served on a toasted sourdough with basil pesto mayo, avocado, lettuce & tomatoes. Served with fries or house salad.",2095],
+        ["Better Burger (Protein Plate)","Protein plate with 6oz Painted Hills beef patty, bacon, fried egg & avocado served with side salad",2195],
+        ["Adult Sliders & Fries","Two Classic Beef slider patty with lettuce, tomato, pickle, onions and pickles. served with Mavericks Burger Sauce & Fries",1445],
+      ] },
+      { name: "Meal Salads", items: [
+        ["Texacali","Romaine lettuce, grilled chicken filet, black beans roasted corn, avocado, tortilla strips, and home made salsa served with chipotle vinaigrette dressing.",2145],
+        ["San Fransokyo","Mix of romaine and slaw, with a teriyaki glazed chicken filet, crispy wontons & rice noodles, avocado, pickled ginger, green onions, and sesame seeds with an Asian-style dressing",2145],
+        ["Chicken Caesar Supreme","Romaine lettuce, grilled chicken filet, cherry tomatoes, avocado, fresh grated parmesan cheese and croutons",2045],
+        ["Jack's Cobb","Romaine lettuce, grilled chicken filet, bacon, hard boiled egg, blue cheese crumbles, cherry tomatoes, avocado served with Ranch dressing",2245],
+      ] },
+      { name: "Shareables", items: [
+        ["Fries","Maverick's crisp french fries!",695],
+        ["Parmesan Garlic Fries","French fries tossed in Gilroy garlic-parsley butter, finished with fresh grated parmesan cheese",745],
+        ["Sweet Potato Fries","Sweet potato fries dusted in our unique seasoning and served with house made Tiger Ranch dressing",745],
+        ["Irish Nacho Fries","Crispy french fries smothered in melted cheddar cheese, topped with bacon bits and finished with green onions",995],
+        ["Tater Tots","Mavericks tots deep fried until perfectly crisp",745],
+        ["Onion Rings","Beer battered onion rings salted and served with ranch dressing on the side",895],
+        ["Fried Pickles","Beer battered deep fried pickles served with ranch dressing on the side",995],
+        ["Bacon Parmnesan Sprouts","Brussel sprouts flash fried, tossed in garlic butter and topped with crispy bacon bits & Parmesan cheese",895],
+      ] },
+      { name: "Drinks", items: [
+        ["Coca-Cola","",325],
+        ["Diet Coke","",325],
+        ["Sprite","",325],
+        ["Rootbeer","",325],
+        ["Dr. Pepper","",325],
+        ["Lemonade","",325],
+        ["Iced Tea","",325],
+        ["Arnold Palmer","",325],
+        ["Shirley Temple","",375],
+        ["Roy Rogers","",375],
+        ["Strawberry Lemonade","",375],
+        ["Peach Iced Tea","",375],
+        ["Raspberry Iced Tea","",375],
+      ] },
+      { name: "Kids Meals", items: [
+        ["Sliders NO Cheese","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Sliders With Cheese","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Grilled Cheese","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Hot Dog","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Chicken Fingers","All kids meals are served with fries and apple juice. You can substitute the fries or beverage.",1295],
+        ["Kids Drinks","$2.00: Coca-Cola, Diet Coke, Coca-Cola Zero Sugar, Lemonade, Organic Juice, Rootbeer, Iced Tea, Arnold Palmer, Milk, Chocolate Milk, Dr. Pepper, Sprite; $2.50: Strawberry Lemonade",200,null,"from"],
+      ] },
+      { name: "Floats", items: [
+        ["Coke Float","",800],
+        ["Rootbeer Float","",800],
+        ["Strawberry Fields","",800],
+        ["Cherry Pop","",800],
+      ] },
+      { name: "Freezes", items: [
+        ["Pineapple Freeze","",800],
+        ["Rootbeer Freeze","",800],
+        ["Coke Freeze","",800],
+      ] },
+      { name: "Sundaes", items: [
+        ["Jack's Classic Sundae","",1000],
+        ["Hot Fudge Volcano","",1100],
+        ["Candy Bar Crunch Sundae","Vanilla soft serve layered with Hershey's® hot fudge & caramel sauce topped with crunchy peanuts.",1100],
+        ["Peanut Butter Twist","",1100],
+        ["Kids Cone","",500],
+      ] },
+      { name: "Shakes", items: [
+        ["Chocolate Shake","",900],
+        ["Vanilla Shake","",900],
+        ["Black & White Shake","",900],
+        ["Coffee Shake","",900],
+        ["Mint Chocolate Chip Shake","",900],
+        ["Strawberry Shake","",900],
+        ["Blonde Bombshell","",1000],
+        ["Cookies & Cream","",1000],
+        ["Caramel Crunch","",1000],
+        ["Mint & Cookies","",1000],
+        ["Neapolitan","",1000],
+        ["Chocolate Peanut Butter","",1000],
+        ["Mocha Chip","",1000],
+        ["Just Peachy","Double 8 Dairy soft serve blended with sweet peaches & topped with peach puree",950],
+        ["Kids Shakes","$7.00: Vanilla, Chocolate, Strawberry, Mint Chocolate Chip, Black & White, Coffee, Cookies & Cream, Blonde Bombshell, Chocolate Peanut Butter, Mocha Chip, Mint & Cookies, Neapolitan",700],
+      ] },
+      { name: "Party Catering", items: [
+        ["\"Dirty Dozen\" Classic Cheese Sliders","12 Classic Cheeseburger Style Slider Pack. Beef sliders with your choice of cheese, tomato, pickles & red onion with Mavericks Burger Sauce",7999],
+        ["'Dirty Dozen' Gourmet Sliders","Choose up to 3 gourmet styles of Sliders for this perfect Party Pleaser with 12 individual sliders.",9999],
+        ["Kids Party Mix","Party Box: 10 hot dogs, 20 beef sliders & 20 chicken tenders served with Ketchup, Mustard & Ranch",29999],
+        ["Kids Dozen Sliders","12 plain sliders with meat, cheese & bun. Ketchup served on the side",5999],
+        ["Team Burgers n' Fries","Feeds 12 people. Tray of Burgers n' Fries. Each Tray has 12 plain cheese burgers & fries. All condiments on the side.",19999],
+        ["Tray of Tater Tots","Tray of Tater tots",5500],
+        ["Texacali Salad (Full Pan)","Romaine lettuce, grilled chicken filet, black beans roasted corn, avocado, tortilla strips, and home made salsa served with chipotle vinaigrette dressing. Feeds 10ppl",9999],
+        ["San Fransokyo Salad (Full Pan)","Mix of romaine and slaw, with a teriyaki glazed chicken filet, crispy wontons & rice noodles, avocado, pickled ginger, green onions, and sesame seeds with an Asian-style dressing Feeds 10ppl",9999],
+        ["Chicken Caesar Salad ( Full Pan)","Romaine lettuce, grilled chicken filet, cherry tomatoes, avocado, fresh grated parmesan cheese and croutons Feeds 10 ppl",9999],
+        ["Mixed Greens Salad (Full Pan)","Mixed greens, cherry tomatoes, cucumbers & red onions served with a side of balsamic vinaigrette",4495],
+        ["Caesar Salad (Full Tray)","Romaine lettuce, cherry tomatoes, avocado, fresh grated parmesan cheese and croutons Feeds 10 ppl",4995],
+      ] },
+    ],
+    siteNote: "Charbroiled burgers, meal salads and milkshakes, in their own words. Prices are from this shop's own online ordering; they add 2.7% for card payments.",
   },
 
   /*
@@ -9694,6 +10633,46 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Napa Valley Burger Company — gathered 2026-09-27 from own
+     they are: Gourmet burgers
+     flag: Prices come from the scanned 2-page menu PDF linked on their site as 'View or Download our Full Menu' (https://cdn.prod.website-files.com/61141d9504e7e17a2d98d12e/633b48e48f08a978ec2e588c_NVBC%20Updated%20Menu%2010_2022.pdf). The file is dated October 2022, so these burger prices may be out of date. The menu section on their web page lists the same dishes with no prices.
+     flag: The PDF gives prices only for the 10 specialty burgers and sandwiches. Every 'Fries & More' item (Seasoned Fries, Sweet Potato Fries, Waffle Fries, Napa Truffle Fries, Basket of Onion Rings, Guacamole & Chips, Crispy Brussels Sprouts, Nacho Waffle Fries, Marin Kale & Quinoa Salad, Napa Organic Green Chicken Salad, San Francisco Fish and Chips) and every soft drink has no printed price, so they were left out.
+     flag: Left out as alcohol: the Local Beers, Afternoon Refreshments cocktails, Margarita Bar, White Wine, Red Wine and Bottled Beer sections (none of them print prices anyway).
+     flag: The PDF says the burgers are 100% Certified Angus Beef and come with lettuce, tomato, onion, special sauces and a Marin Organic Green Salad, with a choice of brioche bun or lettuce wrap. The gluten-free or vegan bun is +$2. This add-on is not listed as an item.
+     flag: The PDF footer says all burgers are cooked to medium (160 degrees), substitutions are politely declined, a 20% gratuity is added for parties of 6 or more, and no personal checks.
+     flag: Hours come from the site, which says 'Daily 11:30am - 6:00pm', with closing time weather permitting and open on holidays except Christmas. The Instagram screenshots show no hours, so the two sources do not conflict.
+     flag: There is no online ordering. The site says 'Call 415-332-1454 for takeout', so order_url is null. The site also has a 'Quick Booking' form, which was not used.
+     flag: The phone prints as both '415-332-1454' and '(415) 332-1454' on the site and Instagram. The email winemaker@napavalleyburgercompany.com is printed on both the site and the Instagram Contact sheet.
+     flag: City check: 670 Bridgeway, Sausalito, CA 94965 matches Glenn's 'Sausalito • Goods' page. The site shows only this one location, with no other shops found.
+     flag: Background from their own site: the restaurant is in Sausalito's oldest brick building, built in 1885, and the Instagram bio says 'since 2011'. The site footer reads 'Copyright © 2010-2023'.
+     flag: The site's web menu has a stray typo in the Napa Truffle Fries description ('asdasdasdasdwith shaved & grated parmesan'). That item is not used because it has no price.
+     flag: On review: the only priced menu is their October 2022 PDF; the page says its date so nobody takes it for today's.
+     flag: On review: seated at sausalito-goods-0 (Burgers). Glenn's message of 25-27 September.
+  */
+  'napa-valley-burger-sausalito': {
+    address: "670 Bridgeway, Sausalito, CA 94965",
+    phone: "(415) 332-1454",
+    email: "winemaker@napavalleyburgercompany.com",
+    hours: "Daily 11:30am-6pm (closing time weather permitting; open holidays except Christmas)",
+    cuisine: "Gourmet burgers",
+    sections: [
+      { name: "Specialty Burgers", items: [
+        ["Vintage Cheese Burger","Our signature burger with sharp cheddar cheese, special sauce",1700],
+        ["Baja Burger","Applewood bacon, pepperjack cheese, guacamole, chipotle aioli",1900],
+        ["Turkey Swiss Avocado Burger","All natural ground turkey & onion patty, baby swiss cheese, avocado, creamy mayo",1800],
+        ["Roasted Chicken Salad Sandwich","All-natural diced roasted chicken breast, mayonnaise, onion, celery, red grapes, lettuce, tomato, avocado",1800],
+        ["Stinson Beach BBQ Burger","Smoked gouda, applewood bacon, crispy onion ring, bourbon barbeque sauce",1900],
+        ["Whiskey Bacon Burger","Beef burger blended with whiskey marinated applewood bacon, pepperjack cheese, arugula, sriracha aioli (marked spicy)",2000],
+        ["Yountville Burger","Applewood bacon, sharp cheddar cheese, arugula, roasted garlic aioli, parmesan cheese crisp",1900],
+        ["Crispy Chicken Breast Burger","Buttermilk fried chicken breast, applewood bacon, jalapeño maple dijon aioli",2000],
+        ["James Beard Competition Burger","Beef burger blended with pinot noir marinated cremini & oyster mushrooms, arugula, basil aioli, parmesan cheese crisp",2400],
+        ["Silverado Veggie Burger","Chef's original mushrooms, black bean, arugula kale mix, golden beet, red onion, carrot & quinoa burger, roasted peppers, provolone cheese, chipotle aioli (contains egg & bread crumbs)",2400],
+      ] },
+    ],
+    siteNote: "A taste of Napa Valley wine country in downtown Sausalito: gourmet made-from-scratch burgers, in their own words. Prices are from the menu on their own site, dated October 2022.",
+  },
+
+  /*
      Napa Yard & Beer Garden — gathered 2026-09-21 from own
      they are: Beer garden
      flag: Food menu from napayard.com/menus (BentoBox). Cocktails, wine and draft lists are left off (no age check).
@@ -9742,6 +10721,220 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Their food menu, from their own site; tacos are priced for two, and they sell three and four too.",
+  },
+
+  /*
+     NAR Restaurant — gathered 2026-09-27 from own
+     they are: South Caucasus (Azerbaijani)
+     flag: Hours are set to null because two first-party sources disagree. narfood.com lists Mon-Fri 11:30AM-2PM & 5-10PM and Sat-Sun 9AM-3PM & 5-10PM. The site's own Chowbus online-ordering page linked from the site showed 'SUN (Today) 10:00 AM - 09:45 PM' on 2026-09-27, with no midday break. The Chowbus window may be pickup hours only. The prix fixe menu separately says Mon-Fri 11:30AM-2:00PM and Sat-Sun 11:30AM-3:00PM, which is when the prix fixe is served. If Glenn wants the site hours, use: 'Mon-Fri 11:30am-2pm & 5-10pm; Sat-Sun 9am-3pm & 5-10pm'.
+     flag: Prices come from the 11 menu images on narfood.com (served from /site_images/, typeset and clearly legible). They are undated. Lunch and dinner are priced separately and published as separate menus, so a dish can appear twice at two prices. For example, Nar Plate is $55 at lunch and $65 at dinner, and Lule Kebab is $27 at lunch and $31 at dinner. Items are kept in the meal sections where they appear.
+     flag: The Chowbus online-ordering page (order_url) shows a different, smaller 'Nar Menu (Online)' at lower prices, and also shows a 'Take a look' tile for 'Olivia Bros Halal Mediterranean'. Examples: Burger $11.99 vs $16 on the lunch menu, Chicken Shawarma Wrap $13.99 vs $19, Fried Calamari $12.99 vs $17, Cheesesteak Sub $15.99+ vs $18. It also lists 'Olivia Triple Burger', Saj Plate and Chicken Lule Plate, which are not on the site menus. These online prices were NOT used. The raw text is in raw_b_narrestaurant_chowbus.txt.
+     flag: The menus conflict on the tea pot price: the breakfast drinks list 'Tea Pot - $8', but the drinks page lists 'House Tea Pot (serves up to 4 guests) $12' and the tea set page lists 'Teapot (Serves up to 4 Guests) - $12'. Both prices are kept as published. Fries also differ: $8 on the lunch 'Casual bites' list and 'French Fries' $7 on the dinner sides.
+     flag: Left out as alcohol: the whole WINES menu image, Beers (Heineken, Stella Artois, Corona, Amstel Light), Sangria (Sol de España), the Fruit Wine Cocktails and Fruit Wine Tasting Flight, and the prix fixe option 'pair with any glass of wine +$10'. Also left out: the 'Non-alcoholic beer' lines (Heineken Original, Stella Artois, $10 each), because they are beer-branded. Add them back if wanted.
+     flag: Items merged by size or flavor, with the lowest price used and label 'from': Pomegranate Juice (glass $7, 16 oz decanter $14) and Bizim Tarla Compote 1L ($15-$17 by flavor). The Three Nations Grill Platter 'Add Ribeye - $30' add-on is noted in its description, not listed as an item.
+     flag: Obvious typos fixed: 'Satuday' became 'Saturday' in the prix fixe hours, and the stray double spaces were removed. The 'Buratta' spelling on the site's web food list was not used; the menus say 'Burrata'. Dish names are otherwise kept as printed, including (V) vegetarian markers and the spellings Basdırma and Cız Bız.
+     flag: Not transcribed: the four catering menus ('Family & Party Tray', 'Corporate Lunch Prix Fixe Packages', 'Premium Dinner / Event Package', 'Corporate Catering'), which open as pop-ups on the home page.
+     flag: Menu footers: a 20% service fee is added for parties of 6 or more, and there is a $25 corkage fee per bottle. The FAQ says the meats are halal. The chef is named on the menus as Chef Teymur Piriyev.
+     flag: The home page's customer reviews and stats look like template placeholders ('Sarah Johnson', 'Emily Carter' with stock avatar images, '480K+ Customer Reviews'), so none of them were used.
+     flag: Address: the Instagram bio and site footer both say 286 W El Camino Real, Mountain View, CA 94040, and Chowbus says '286 West El Camino Real'. The site's Uber Eats link has '286-e-el-camino-real' in its URL slug. That is third-party and was ignored.
+     flag: City check: Mountain View matches Glenn's 'Mountain View • Goods' page. A March 2026 news post says NAR joined the Los Altos Village Association, but no Los Altos location is mentioned anywhere.
+     flag: Booking is on OpenTable (https://www.opentable.com/r/nar-restaurant-mountain-view, linked from Instagram and the site). Gift cards are sold through Chowbus.
+     flag: Logo: the vector logo is at https://narfood.com/assets/logo-BX7SdOtX.svg (the site favicon), with a red pomegranate and 'NAR RESTAURANT'. The crop below is the same logo from Glenn's screenshot of the narfood.com splash.
+     flag: On review: hours from their own site; their ordering page's Sunday 10am-9:45pm is its pickup window.
+     flag: On review: Mountain View's Mediterranean seat, the nearest of the twenty-four to South Caucasus cooking.
+     flag: On review: seated at mountain-view-goods-9 (Mediterranean: the nearest seat to South Caucasus cooking). Glenn's message of 25-27 September.
+  */
+  'nar-restaurant': {
+    address: "286 W El Camino Real, Mountain View, CA 94040",
+    phone: "(650) 705-2007",
+    email: "narrinmv@gmail.com",
+    hours: "Mon–Fri 11:30am–2pm & 5–10pm, Sat–Sun 9am–3pm & 5–10pm",
+    cuisine: "South Caucasus (Azerbaijani)",
+    sections: [
+      { name: "Breakfast", items: [
+        ["Breakfast Set for 2","A complete Caucasus-style breakfast experience for two, with unlimited fresh bread and tea. Includes sour cream, honey, butter, chocolate spread, condensed milk, jam, feta or Philadelphia cheese, cucumber & tomato, olives; choose 1 main: Acharuli Khachapuri, Pomidor-Yumurta, Sosiska-Yumurta, Omelette or Kükü.",6000],
+        ["Breakfast Set for 4","A generous Caucasus-style breakfast board for four, with unlimited fresh bread and tea. Adds yogurt, smoked sliced turkey breast and 4 boiled eggs to the set for 2; choose 2 mains.",9000],
+        ["(V) Pomidor-Yumurta (Shakshuka)","Traditional Caucasus-style sautéed tomatoes cooked with eggs.",1600],
+        ["(V) Kükü (Dill Omelette)","Fluffy herb omelette made with fresh dill and greens.",1600],
+        ["Sosiska Yumurta (Sausage & Egg Scramble)","Pan-fried sliced sausages cooked with eggs.",1600],
+        ["(V) Acharuli Khachapuri","Boat-shaped bread filled with melted cheese and topped with an egg yolk.",1700],
+        ["(V) Omelette","Classic three-egg omelette with optional add-ins.",1300],
+        ["(V) Blincik (Caucasus Crepes)","Three soft 10-inch Caucasus-style crepes served with your choice of topping: chocolate, honey, sour cream, condensed milk, or jam (daily house selection).",1500],
+      ] },
+      { name: "Breakfast sides & spreads", items: [
+        ["Sour Cream","",300],
+        ["Butter","",300],
+        ["Feta Cheese","",400],
+        ["Philadelphia Cheese","",300],
+        ["Honey","",300],
+        ["Chocolate Spread","",300],
+        ["Condensed Milk","",300],
+        ["Jam","Daily house selection",300],
+        ["Yogurt","",200],
+        ["Smoked Sliced Turkey Breast","",400],
+        ["Cucumber & Tomato","",400],
+        ["Olives","Daily house selection",300],
+        ["Boiled Eggs (2 pcs)","",300],
+        ["Bread","",500],
+      ] },
+      { name: "Breakfast drinks", items: [
+        ["Tea Pot","",800],
+        ["Americano","",600],
+        ["Cappuccino","",700],
+        ["Fresh Juice","Daily house selection",500],
+        ["Still Water","",600],
+        ["Sparkling Water","",600],
+      ] },
+      { name: "Lunch · Appetizers", items: [
+        ["Nar Plate","Selection of NAR's signature appetizers: eggplant rolls, suzme, hummus, mangal vegetables, ikra, grilled eggplant spread, house-marinated olives, hummus pesto, crispy fried gurza, calamari, and beef dolma.",5500],
+        ["(V) Mangal","Chargrilled seasonal vegetables drizzled with olive oil and pomegranate glaze.",1100],
+        ["Meat Dolma","Grape leaves stuffed with beef, rice and herbs, served warm with yogurt.",1300],
+        ["(V) Eggplant Rolls","Soft fried eggplant slices rolled with a flavorful walnut-garlic filling.",1300],
+        ["(V) Suzme","Strained yogurt dip blended with herbs, dill, and a hint of garlic.",1000],
+        ["(V) Hummus","Creamy chickpea purée with tahini, garlic, and olive oil.",1000],
+      ] },
+      { name: "Lunch · Soups", items: [
+        ["(V) Lentil Soup","Hearty red lentil soup with a touch of carrot, tomato, and mild spices.",1000],
+        ["(V) Mushroom soup","Creamy mushroom soup with sautéed onions, finished with a smooth texture and rich, earthy flavor.",1200],
+      ] },
+      { name: "Lunch · Salads", items: [
+        ["(V) Eggplant Salad","Chef's special. Fried eggplant with cherry tomatoes and special sauce.",1500],
+        ["(V) Choban (Shepherd) Salad","Tomatoes, cucumbers, onions, olives, and feta in olive-oil dressing.",1200],
+        ["(V) Burrata Salad","Creamy burrata paired with tomatoes, arugula, pesto sauce, and balsamic glaze.",1500],
+        ["Smoked Salmon Salad","Smoked salmon, lettuce, tomato, cucumber with special sauce.",1300],
+        ["(V) Absheron Salad","Fresh tomatoes with basil, red onion, and cherry, finished with our special sauce.",1500],
+      ] },
+      { name: "Lunch · Casual bites", items: [
+        ["Fries","",800],
+        ["Fried Calamari","",1700],
+        ["Fried baby potatoes","",1000],
+      ] },
+      { name: "Lunch · Plates", items: [
+        ["Lule Kebab","Grilled minced lamb kebab, spring mix tomato onion salad, served with fried baby potato.",2700],
+        ["Grilled Chicken Plate","Marinated grilled chicken thighs served with fresh salad and rice.",2500],
+        ["Lamb Chops (3 pcs)","Grilled lamb chops marinated in herbs, served with fried baby potato, spring mix and tomato onion salad.",3300],
+      ] },
+      { name: "Lunch · Chef's special", items: [
+        ["Khachapuri","Cheese filled boat bread baked golden with an egg yolk center.",2100],
+        ["Ciz-Biz","Traditional sizzling beef liver and pan fried with potato and spices.",2500],
+        ["Garden Chicken","Tender grilled chicken breast finished with signature cherry sauce, accompanied by roasted cauliflower, mushrooms, and fresh asparagus.",2800],
+        ["Caucasus Sun Chicken","Chef's special. Confit whole Cornish hen served with house fries, grilled asparagus, and avocado yogurt sauce.",3000],
+        ["Lamb Shank","Braised lamb shank with vegetables and aromatic herbs served with mash potato.",2900],
+        ["Basdırma beef skewers","Marinated beef tenderloin skewers, grilled and served with roasted potatoes, grilled tomato, pepper, house meat sauce, white sauce, and fresh red onion salad.",3600],
+        ["Mediterranean Branzino","Boneless fillet of sea bass with herbs and olive oil, served with mashed potato.",2800],
+      ] },
+      { name: "Lunch · Sandwiches", items: [
+        ["Chicken Shawarma Wrap","Tender marinated grilled chicken wrapped in warm lavash with fries inside, pickles, and special garlic sauce.",1900],
+        ["Cheesesteak Sub","Thin-sliced beef sautéed with onions, mushroom, pepper, topped with melted cheese, served on a warm sub roll.",1800],
+        ["Lule Wrap","Grilled minced lamb kebab, tomato onion salad, served inside the lavash.",2300],
+        ["Fish (Seabass) Sandwich","Grilled sea bass fillet layered in crispy bread with fresh vegetables, herbs, and a light house sauce.",2200],
+      ] },
+      { name: "Lunch · Burgers", items: [
+        ["Burger","Juicy beef patty with lettuce, tomato, onion, pickles, on a toasted bun. Comes with fries and jalapeño pepper.",1600],
+        ["Double Burger","Two juicy beef patties stacked with lettuce, tomato, onion, pickles, and house sauce on a toasted bun. Comes with fries and jalapeño pepper.",1900],
+        ["Cheeseburger","Juicy grilled beef patty topped with melted cheese, lettuce, tomato, onion, pickles, and house sauce on a toasted bun. Comes with fries and jalapeño pepper.",1700],
+        ["Triple Burger","Three juicy beef patties stacked with lettuce, tomato, onion, pickles, and house sauce on a toasted bun. Comes with fries and jalapeño pepper.",2100],
+      ] },
+      { name: "Dinner · Cold appetizers", items: [
+        ["Nar Plate","Selection of NAR's signature appetizers: eggplant rolls, suzme, hummus, mangal vegetables, ikra, grilled eggplant spread, house-marinated olives, hummus pesto, crispy fried gurza, calamari, and beef dolma.",6500],
+        ["(V) Eggplant Roll","Fried eggplant stuffed with walnut, red onion, herbs and the hint of garlic.",1500],
+        ["(V) Suzme","Strained yogurt dip blended with herbs, dill, and a hint of garlic.",1200],
+        ["(V) Mangal","Grilled seasonal vegetables drizzled with olive oil.",1300],
+        ["(V) Hummus","Creamy chickpea purée with tahini, garlic, and olive oil.",1200],
+        ["(V) Trio Mezze","A sampler of hummus, suzme, and mangal.",2500],
+      ] },
+      { name: "Dinner · Hot appetizers", items: [
+        ["Gurza","Traditional steamed dumplings filled with beef, served with yogurt sauce on the side.",1600],
+        ["Dolma","Grape leaves stuffed with beef, rice and herbs, served warm with yogurt.",1600],
+        ["(V) Three cheese mushrooms","Fresh mushrooms baked with mozzarella, feta, parmesan cheese and garlic.",1800],
+        ["Fried Khinkali (3 pcs)","Crispy golden dumplings with juicy meat filling.",1700],
+        ["Grilled Lamb Bites","Tender marinated 2 lamb chops grilled over open flame, served with green mix.",1900],
+        ["Fried Calamari","Lightly battered calamari served with lemon and garlic aioli.",1800],
+      ] },
+      { name: "Dinner · Salads", items: [
+        ["(V) Choban (Shepherd) Salad","Tomatoes, cucumbers, onions, olives, and feta in olive oil dressing.",1600],
+        ["(V) Eggplant Salad","Chef's special. Fried eggplant with cherry tomatoes and special sauce.",1800],
+        ["(V) Watermelon Salad","Fresh watermelon cubes with feta, mint, and pomegranate glaze.",1500],
+        ["(V) Burrata Salad","Creamy burrata paired with tomatoes, arugula, pesto sauce, and balsamic glaze.",1700],
+        ["(V) Absheron Salad","Fresh tomatoes with basil, red onion, and cherry, finished with our special sauce.",1700],
+        ["Mountain Salad","Chef's special. Grilled beef with tomato, cucumber, celery, spring mix, red onion, and walnut, finished with a spicy sauce.",1900],
+      ] },
+      { name: "Dinner · Soups", items: [
+        ["(V) Lentil","Hearty red lentil soup with a touch of carrot, tomato and mild spices.",1200],
+        ["(V) Mushroom soup","Creamy mushroom soup with sautéed onions, finished with a smooth texture and rich, earthy flavor.",1300],
+      ] },
+      { name: "Dinner · Meat", items: [
+        ["Khan Kebab","Chef's special. Layers of prime ribeye and lamb fat, grilled and served with fried baby potatoes, grilled asparagus, sautéed mushrooms, turshu, and chef's signature sauce.",6200],
+        ["Basdırma Beef Skewers","Marinated beef tenderloin skewers, grilled and served with roasted potatoes, grilled tomato, pepper, house meat sauce, white sauce, and fresh red onion salad.",4900],
+        ["Cız Bız (Sizzling Beef Delicacy)","Traditional sizzling beef liver and pan-fried with potato and spices.",3100],
+        ["Lule Kebab","Grilled minced lamb kebab, spring mix tomato onion salad, served with fried baby potato.",3100],
+        ["Nar Meat","Chef's special. Lamb chops cooked with mixed berries (blueberry, raspberry, blackberry, cherry), served with roasted asparagus and cauliflower.",4500],
+        ["Lamb Shank","Braised lamb shank with vegetables and aromatic herbs served with mash potato.",3500],
+        ["Shah Plov","Chef's special. Crispy lavash wrapped rice baked with beef, dried fruits and spices.",3400],
+        ["Lamb Chops (3 pcs)","Grilled lamb chops marinated in herbs, served with fried baby potato, spring mix and tomato onion salad.",4200],
+        ["Khinkali (5 pcs)","Traditional hand folded dumplings stuffed with beef and lamb.",2800],
+        ["Nar Burger","Beef burger with cheese, pickle, tomato, caramelized onions and Nar sauce.",2700],
+        ["Piti","Slow cooked lamb stew with chickpeas, onion and lamb fat served in clay pot.",3100],
+        ["Three Nations Grill Platter","A shared experience for 4 guests: Shah Plov, 2 lamb lule kebabs, 2 chicken lule kebabs, 4 grilled lamb chops and grilled chicken thighs, served with grilled vegetables. Add ribeye +$30.",17900],
+      ] },
+      { name: "Dinner · Chicken", items: [
+        ["Garden Chicken","Tender grilled chicken breast finished with signature cherry sauce, accompanied by roasted cauliflower, mushrooms, and fresh asparagus.",3100],
+        ["Caucasus Sun Chicken","Chef's special. Confit whole Cornish hen served with house fries, grilled asparagus, and avocado yogurt sauce.",3000],
+      ] },
+      { name: "Dinner · Seafood", items: [
+        ["Mediterranean Branzino","Boneless fillet of sea bass with herbs & olive oil, served with mash potato.",3400],
+        ["Grilled Salmon","Grilled salmon brushed with butter and herbs, served with mash potato.",3100],
+      ] },
+      { name: "Dinner · Vegetarian", items: [
+        ["(V) Pumpkin Plov","Sweet savory rice baked with pumpkin, nuts and fruits.",2600],
+        ["(V) Khachapuri","Cheese filled boat bread baked golden with egg yolk center.",2600],
+        ["(V) Ajapsandal","Sautéed eggplant, tomatoes, bell peppers, onions, potatoes, mushrooms, garlic, and herbs.",2600],
+      ] },
+      { name: "Dinner · Sides", items: [
+        ["Mashed Potatoes","",800],
+        ["Fried baby potatoes","",1000],
+        ["Rice","",700],
+        ["French Fries","",700],
+        ["Asparagus","",900],
+        ["Bread","",500],
+        ["Turshu","Home-made seasonal pickled vegetables; ask your server for today's selection.",1500],
+      ] },
+      { name: "Prix fixe", items: [
+        ["Prix Fixe","Per person; each guest must order one. Mon-Fri 11:30AM-2PM, Sat-Sun 11:30AM-3PM. Choose a cold appetizer (suzme, mangal, hummus or eggplant roll), a soup or salad, and a main course (Ciz Biz, Choban govurma, Lule Kebab, Lamb Chops (2 pcs), Khinkali (3 pcs), Nar Burger, Garden Chicken, Mediterranean Branzino, Grilled Salmon, Khachapuri, Ajapsandal or Pumpkin Plov).",3990],
+      ] },
+      { name: "Desserts", items: [
+        ["Honey Cake","Layered honey sponge with light cream.",1500],
+        ["Caucasus Pakhlava","Layered pastry with walnuts, honey syrup, and spices.",1200],
+        ["San Sebastian Cheesecake","Basque-style cheesecake with caramelized crust and creamy center.",1500],
+        ["Fruit Crepe Bouquet","Delicate crepes filled with fresh strawberries, banana and cream.",1700],
+        ["Ice Cream","Classic creamy homemade ice cream (ask for available syrups).",1200],
+      ] },
+      { name: "Beverages", items: [
+        ["Coca-Cola / Sprite / Fanta Orange","12 oz",500],
+        ["Mexican Coca-Cola","Glass bottle, 12 oz",700],
+        ["Saratoga Still Water","24 oz",700],
+        ["Saratoga Sparkling Mineral Water","24 oz",700],
+        ["Unsweetened Iced Tea","12 oz",600],
+        ["House Tea Pot","Serves up to 4 guests",1200],
+        ["Pomegranate Juice","Glass $7; 16 oz decanter $14",700,null,"from"],
+      ] },
+      { name: "Mocktails", items: [
+        ["Mojito","Mocktail",1200],
+        ["Pomegranate Mojito","Mocktail",1400],
+        ["Strawberry Splash","Mocktail",1200],
+        ["Blue raspberry Breeze","Mocktail",1200],
+        ["Tropical Mango","Mocktail",1200],
+      ] },
+      { name: "From the orchard", items: [
+        ["Grante Pomegranate Juice","750 ml bottle. Imported from Azerbaijan, served chilled.",1600],
+        ["Bizim Tarla Compote","1L bottle of traditional fruit compote imported from Azerbaijan: Quince, Cherry, Apricot, Plum or Peach $15; Cornelian Cherry $16; Feijoa or Feijoa and black hawthorn $17.",1500,null,"from"],
+      ] },
+      { name: "Tea set", items: [
+        ["Traditional Azerbaijani Tea Set for Four","2 teapots of freshly brewed tea, choice of 2 preserves, choice of 2 desserts (Honey Cake, Caucasus Pakhlava, San Sebastian Cheesecake, Fruit Crepe Bouquet), rock sugar (qənd), fresh lemon slices, roasted chickpeas (ləbləbi). Maximum seating time 2 hours.",8000],
+        ["Preserves","Each: white cherry, blackberry, strawberry, raspberry, fig, walnut or rose.",1000],
+      ] },
+    ],
+    siteNote: "Authentic Caucasus flavors, inspired by Azerbaijan, in the heart of Silicon Valley, in their own words. Prices are from the menus on their own site.",
   },
 
   /*
@@ -9998,6 +11191,34 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from their own ordering site.",
+  },
+
+  /*
+     Old Crow Tattoo — gathered 2026-09-27 from own
+     they are: Tattoo & piercing studio
+     flag: City check: the studio is in BERKELEY, which matches Glenn's page. The IG bio, every footer on oldcrowtattoo.com, the contact page and the 2026-06-28 'New Ownership Announcement' post all give 2812 Telegraph Ave, Berkeley, CA 94705. The 'Oakland, CA' on the Linktree bio ('Tattoo Studio & Art Gallery, Oakland, CA') and in the site's Reviews page title is out of date. The ownership post says the shop was 'Originally founded in 2008 on Grand Ave. in Oakland' and is now 'at our studio in Berkeley', under new ownership since January 2026 (Gaia, @cosmikali).
+     flag: HOURS set to null because the walk-in hours conflict across their own site. The home page banner says 'Walk-in Hours Thurs-Sunday 1-6pm'. The contact page says 'walk-ins Friday through Sunday, 1pm to 6pm'. Further down, the home page also says 'Summer weekend walk-ins available Saturday and Sunday, 1-6pm' and 'Weekend walk-in hours are available Saturday and Sunday, 1pm to 7pm!'. Carolyne's page says 'Sundays for walk-ins from noon to 7pm'. The contact page also says 'We have artists available seven days a week', mostly by appointment. No general opening hours are published.
+     flag: No deposit amount is published anywhere on the site (all pages and the recent blog posts checked). The shop minimum is repeated on the contact-form checkbox: 'I understand the shop minimum is $150. I understand each artist has their own pricing structure.'
+     flag: Left out: gift certificates on /gift-card ($100, $200, $500, $1,000), which are not a service but could be added; piercing (Angel, by appointment, 'text the shop at 510-834-2769'), which has no prices; flash days (Oct 10 'Autumn Portal' and Oct 24 'Hallows Eve', 11am-6pm), which are events with no prices.
+     flag: order_url is the site's contact/booking-request form (you pick an artist and describe the tattoo), not a scheduler. Several artists take bookings directly, e.g. Arie at ariefeelstattoo@gmail.com.
+     flag: Fixed obvious typos in the pricing text used in desc: 'Each artists sets' became 'Each artist sets', and 'full day rates to larger projects' became 'full-day rates for larger projects'.
+     flag: Email is printed as OLDCROWTATTOO@GMAIL.COM on the contact page and in lowercase on the home page; I used lowercase.
+     flag: The Linktree is a link-in-bio page, but the shop has a full site of its own (Wix, 17 pages), so site_kind is 'own'. The IG category is 'Tattoo & Piercing Shop'.
+     flag: On review: Berkeley, as Glenn filed it. The 'Oakland, CA' on their Linktree is from before the move to 2812 Telegraph Ave under new owners (their June 2026 post).
+     flag: On review: seated at berkeley-services-3 (Tattoo). Glenn's message of 25-27 September.
+  */
+  'old-crow-tattoo': {
+    address: "2812 Telegraph Ave, Berkeley, CA 94705",
+    phone: "510-834-2769",
+    email: "oldcrowtattoo@gmail.com",
+    cuisine: "Tattoo & piercing studio",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Shop minimum","$150 shop minimum for all services",15000],
+        ["Tattoo (hourly rate)","$150 to $300 per hour, depending on the artist's experience. Each artist sets their own rates, and many senior artists work on full-day rates for larger projects.",15000,"from"],
+      ] },
+    ],
+    quoteOnly: "Ornamental, blackwork, fine-line and custom tattooing since 2008, in their own words, now on Telegraph Avenue in Berkeley. A $150 shop minimum, then $150 to $300 an hour by artist, from their own site.",
   },
 
   /*
@@ -12726,6 +13947,29 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices and photos are from their own site.",
+  },
+
+  /*
+     Rakani Tattoo — gathered 2026-09-27 from own
+     they are: Tattoo artist, cover-ups & scar camouflage
+     flag: NO SAN FRANCISCO ADDRESS PUBLISHED: rakanitattoo.com is a single-page site with no street, ZIP or studio name, only 'Based in San Francisco and Los Angeles, working by appointment.' The address is set to 'San Francisco, CA' with no street.
+     flag: City check: the IG location tag is 'Los Angeles, California' and the IG bio says '📍SF — September / 📍LA — Sep/Oct' and 'Your tattoo artist /mentor in LA/SF'. She splits her time between the two cities, so her time in San Francisco may be seasonal or guest-spot based. Glenn's page is 'San Francisco'; confirm she has a standing SF studio before listing.
+     flag: No booking system: every 'Book' / 'Book a Session' / 'Book a Consultation' button goes to the on-page intake form (#questionnaire), which opens the visitor's email app addressed to pulchokaryna@gmail.com ('nothing is sent automatically'). She is also reachable on WhatsApp and Telegram at +1 213 200 7438 and by IG DM (@rakani_tattoo).
+     flag: The phone is printed only as a WhatsApp/Telegram number (213 is a Los Angeles area code), not as a voice line.
+     flag: No rates or deposit are on the site. The IG has a story highlight titled 'Deposit' that Glenn did not open, so deposit terms may be there. The IG bio is cut off at '... more'.
+     flag: Services listed without prices: Custom Tattoo ('Starting at — by consultation'), Cover-Up & Reconstructive Work ('Starting at — by consultation'; scar, burn and stretch-mark camouflage, Ink Revive Method), Design Consultation ('By appointment'), Mentorship & Training ('Inquire for availability').
+     flag: Hours as published: 'working by appointment'. No set hours.
+     flag: Name: the site header reads 'RAKANI TATTOO' over 'Karyna Pulcho' and the page title is 'rakani_tattoo — Karyna Pulcho'. The IG name is 'Karyna Pulcho | TATTOO San Francisco'. I used 'Rakani Tattoo'.
+     flag: On review: no San Francisco street address is published (by appointment), and her Instagram bio reads 'SF - September / LA - Sep/Oct', so her time in SF may be seasonal. Seated as Glenn filed it; worth confirming with her.
+     flag: On review: phone as printed, a WhatsApp/Telegram number with an LA area code.
+     flag: On review: seated at san-francisco-services-3 (Tattoo). Glenn's message of 25-27 September.
+  */
+  'rakani-tattoo': {
+    address: "San Francisco, CA",
+    phone: "(213) 200-7438",
+    email: "pulchokaryna@gmail.com",
+    hours: "By appointment",
+    contactOnly: "Karyna Pulcho, a tattoo artist specialising in cover-ups and scar and burn camouflage, working by appointment in San Francisco and Los Angeles. Her site prices every piece by consultation.",
   },
 
   /*
@@ -17891,6 +19135,45 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "'Professional car care, ceramic protection, and showroom-level results delivered right to your location.' Fixed per-size prices on their booking pages; some packages are ranges; ceramic Gold Package $2,499-$3,299; interior add-ons $29-$69.",
+  },
+
+  /*
+     Woof Gang Bakery & Grooming — gathered 2026-09-27 from own
+     their spelling: "Woof Gang Bakery & Grooming Oakley" (roster keeps "Woof Gang Bakery & Grooming")
+     they are: Dog grooming & pet supplies
+     flag: City check: 990 Laurel Rd., Suite A, Oakley, CA 94561 matches Glenn's 'Oakley' page.
+     flag: OPENING STATUS: the Oakley location page (and the store-locator popup in Glenn's screenshot) labels the shop 'COMING SOON'. The Instagram ad says 'Now booking' and the shop's booking page is live (groomers listed, store marked open). No opening date is published, so confirm it has opened before listing it as open.
+     flag: PHONE CONFLICT: the location page and store locator print (949) 298-6370 (an Orange County area code). The shop's own booking page (shop.woofgangbakery.com/206703/booking) prints (925) 401-5266 (a local East Bay number). I used the location-page number because it is what Glenn saw; the 925 number may be the real store line, so confirm.
+     flag: Prices are specific to this shop, not a chain template: the Clayton page's table is $5 lower on every line (Full Groom Standard S $75 vs Oakley $80). The page footnote says 'Prices start at the amounts listed. Final pricing may vary after the groomer evaluates coat condition and size', so every item is 'from'.
+     flag: Weight brackets disagree on the page: the size explainer says 'Medium Dogs 24-40 lbs' but the price table says M 21–40lbs. I used the price-table brackets.
+     flag: Left out (no prices published): Extra Pampering add-ons (Walk-In Nail Trim & Grind, Nail Painting, Teeth Brushing, De-Matting, Ear Cleansing, Hypoallergenic Shampoo, Flea & Tick), Spa Wellness upgrades (Blueberry Pie Facial, Hairy Beast, Diamond Dog, Plush Pup, Happy Barkday, Teddy Bear), and all retail (treats, food, chews, toys).
+     flag: Promo not added as an item: the corporate @woofgangbakery Instagram ad in Glenn's screenshot says 'NEW CUSTOMER SPECIAL! $70 GROOMING APPOINTMENT, ANY BREED, ADDITIONAL $20 DOGS OVER 50LBS; mention ad when booking, spa upgrades excluded, terms and conditions apply'.
+     flag: Glenn's screenshots are of the corporate franchise account @woofgangbakery and its Linktree (linktr.ee/woofgangbakery, a corporate link page that only points to the store locator). The Oakley shop has its own Instagram @woofgangoakley and Facebook facebook.com/WoofGangOakley, both linked from its page. Only Oakley-page facts were used.
+     flag: The booking page gives the address as '990 Laurel Road' without 'Suite A'. The booking page shows no prices and no hours.
+     flag: Name: the page uses both 'Woof Gang Bakery & Grooming Oakley' and 'Woof Gang Oakley'; the booking page says 'Woof Gang Oakley, CA'; the chain Instagram says 'Woof Gang Bakery & Grooming®'.
+     flag: Grooming hours are published the same as store hours (Mon–Sat 9am–7pm, Sun 10am–6pm), and the location page and store-locator popup agree.
+     flag: On review: phone kept as their own shop page and Instagram give it, (949) 298-6370; their booking page shows (925) 401-5266, which may be the store line. Worth asking which to show.
+     flag: On review: seated at oakley-services-14 (Grooming). Glenn's message of 25-27 September.
+  */
+  'woof-gang-bakery-oakley': {
+    address: "990 Laurel Rd., Suite A, Oakley, CA 94561",
+    phone: "(949) 298-6370",
+    email: "oakleyca@woofgangbakery.com",
+    hours: "Mon-Sat 9am-7pm, Sun 10am-6pm",
+    cuisine: "Dog grooming & pet supplies",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Full Groom","Luxury Bath, Full-Style Haircut, Sanitary Trim, Anal Gland Expression (upon request). S (up to 20lbs) $80, M (21–40lbs) $90, L (41–75lbs) $105, XL (76–100lbs) $120, XXL (over 100lbs) $135",8000,"from"],
+        ["Mini Groom","Luxury Bath plus Face, Visor, Paws, Tail & Ear Trim. S (up to 20lbs) $65, M (21–40lbs) $75, L (41–75lbs) $90, XL (76–100lbs) $105, XXL (over 100lbs) $120",6500,"from"],
+        ["Luxury Bath","Classic Bath plus Nail Trimming & Grinding, Cologne, Cute Bandana. S (up to 20lbs) $50, M (21–40lbs) $60, L (41–75lbs) $70, XL (76–100lbs) $80, XXL (over 100lbs) $90",5000,"from"],
+        ["Classic Bath","Shampoo & Conditioner, Gentle Ear Cleansing, Full-Body Brushing, Hand & Blow Dry. S (up to 20lbs) $40, M (21–40lbs) $50, L (41–75lbs) $60, XL (76–100lbs) $70, XXL (over 100lbs) $80",4000,"from"],
+        ["Full Groom","Luxury Bath, Full-Style Haircut, Sanitary Trim, Anal Gland Expression (upon request). S (up to 20lbs) $100, M (21–40lbs) $110, L (41–75lbs) $125, XL (76–100lbs) $140, XXL (over 100lbs) $155",10000,"from"],
+        ["Mini Groom","Luxury Bath plus Face, Visor, Paws, Tail & Ear Trim. S (up to 20lbs) $85, M (21–40lbs) $95, L (41–75lbs) $110, XL (76–100lbs) $125, XXL (over 100lbs) $140",8500,"from"],
+        ["Luxury Bath","Classic Bath plus Nail Trimming & Grinding, Cologne, Cute Bandana. S (up to 20lbs) $65, M (21–40lbs) $75, L (41–75lbs) $85, XL (76–100lbs) $95, XXL (over 100lbs) $105",6500,"from"],
+        ["Classic Bath","Shampoo & Conditioner, Gentle Ear Cleansing, Full-Body Brushing, Hand & Blow Dry. S (up to 20lbs) $55, M (21–40lbs) $65, L (41–75lbs) $75, XL (76–100lbs) $85, XXL (over 100lbs) $95",5500,"from"],
+      ] },
+    ],
+    quoteOnly: "Full-service grooming and nutritious treats and food, in their own words. Grooming prices are from this shop's own page and start at the amounts shown, by coat and weight; the page calls the shop coming soon, and booking is open.",
   },
 
   /*

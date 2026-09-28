@@ -299,6 +299,19 @@ for (const [id, want, expect] of [
   /* 2026-09-24, 7:14 and 9:52 pm: Demitri's Taverna (Livermore) and Cherie's Southern Kitchen (Dublin). */
   ['b_demitristaverna', "Demitri's Taverna", { rows: 102, hours: 'Tue–Thu 11am–9pm', call: '(925) 373-0306' }],
   ['b_cheriessouthernkitchen', "Cherie's Southern Kitchen", { rows: 32, call: '(925) 361-5725' }],
+  /* 2026-09-25 to 27: Glenn's twelve links from the weekend, and Kaisen Don's logo. */
+  ['b_woofgangbakeryoakley', 'Woof Gang Bakery & Grooming', { rows: 8, hours: 'Mon-Sat 9am-7pm', call: '(949) 298-6370' }],
+  ['b_oldcrowtattoo', 'Old Crow Tattoo', { call: '510-834-2769' }],
+  ['b_rakanitattoo', 'Rakani Tattoo', { hours: 'By appointment', call: '(213) 200-7438' }],
+  ['b_hungrycow', 'Hungry Cow', { rows: 2, hours: 'Mon-Fri 11:30am-11pm', call: '(510) 573-8200' }],
+  ['b_longbridgepizza', 'Long Bridge Pizza Co.', { free: true, hours: 'Tue-Sun 11am-9pm', call: '415-829-8999' }],
+  ['b_maverickjacksburlingame', "Maverick Jack's", { rows: 90, hours: 'Daily 11am-8pm', call: '(650) 436-5825' }],
+  ['b_maverickjackssanmateo', "Maverick Jack's", { rows: 89, hours: 'Daily 11am-8pm', call: '(650) 638-1479' }],
+  ['b_losagavesdalycity', 'Taqueria Los Agaves', { rows: 68, hours: 'Mon–Tue 9am–9:30pm', call: '415-769-5055' }],
+  ['b_alushecoffee', 'Alushe Coffee Bar', { free: true, hours: 'Mon–Fri 7am–3pm', call: '(415) 571-8492' }],
+  ['b_fourchairs', 'Four Chairs', { free: true, call: '(415) 400-4788' }],
+  ['b_napavalleyburgersausalito', 'Napa Valley Burger Company', { rows: 10, hours: 'Daily 11:30am-6pm', call: '(415) 332-1454' }],
+  ['b_narrestaurant', 'NAR Restaurant', { rows: 130, hours: 'Mon–Fri 11:30am–2pm', call: '(650) 705-2007' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -621,6 +634,24 @@ for (const [s, what] of [
   ['"livermore-goods-9":"b_demitristaverna"', "Demitri's Taverna on Livermore Mediterranean"],
   ['"dublin-goods-8":"b_cheriessouthernkitchen"', "Cherie's Southern Kitchen on Dublin Chicken wings"],
   ['icon:"demitris-taverna-mark"', "Demitri's laurel wreath"],
+  /* 2026-09-26 to 27: Profile in Glenn's order, then slimmed to his mockup. */
+  ['prof-share-btn', 'the share arrow at the top of Profile'],
+  ['Add a line about you', 'the line of your own under the name'],
+  ['/api/members/me/bio', 'saving that line'],
+  /* 2026-09-25 to 27: the weekend's twelve pages and Kaisen Don's logo. */
+  ['"oakley-services-14":"b_woofgangbakeryoakley"', 'Woof Gang on Oakley Grooming'],
+  ['"berkeley-services-3":"b_oldcrowtattoo"', 'Old Crow on Berkeley Tattoo'],
+  ['"san-francisco-services-3":"b_rakanitattoo"', 'Rakani on San Francisco Tattoo'],
+  ['"fremont-goods-7":"b_hungrycow"', 'Hungry Cow on Fremont Korean'],
+  ['"san-francisco-goods2-23":"b_longbridgepizza"', 'Long Bridge on San Francisco More goods'],
+  ['"burlingame-goods-0":"b_maverickjacksburlingame"', "Maverick Jack's on Burlingame Burgers"],
+  ['"san-mateo-goods-0":"b_maverickjackssanmateo"', "Maverick Jack's on San Mateo Burgers"],
+  ['"daly-city-goods-1":"b_losagavesdalycity"', 'Los Agaves on Daly City Mexican'],
+  ['"san-francisco-goods2-24":"b_alushecoffee"', 'Alushe on San Francisco More goods'],
+  ['"san-francisco-goods2-25":"b_fourchairs"', 'Four Chairs on San Francisco More goods'],
+  ['"sausalito-goods-0":"b_napavalleyburgersausalito"', 'Napa Valley Burger on Sausalito Burgers'],
+  ['"mountain-view-goods-9":"b_narrestaurant"', 'NAR on Mountain View Mediterranean'],
+  ['icon:"kaisen-don-mark"', "Kaisen Don's logo from Glenn's resend"],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],
@@ -657,7 +688,9 @@ for (const [s, what] of [
 }
 /* And the files themselves: a name in the bundle with no file behind it draws
    a broken image on the sheet. */
-for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40', 'beastmode-2', 'crayone', 'grand-o', 'yo-sushi-vacaville']) {
+for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds-2', 'lloyd-de-vera-2', 'lyrics-born-2', 'richie-rich-2', 'e-40', 'beastmode-2', 'crayone', 'grand-o', 'yo-sushi-vacaville',
+  'woof-gang-bakery', 'old-crow-tattoo', 'rakani-tattoo', 'hungry-cow', 'long-bridge-pizza', 'maverick-jacks', 'los-agaves-taqueria',
+  'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }
