@@ -678,6 +678,9 @@ for (const [s, what] of [
   ['"walnut-creek-services2-4":"b_naileditstudio"', 'The Nail Edit on Walnut Creek More services'],
   ['"concord-services2-1":"b_corenestpilates"', 'CoreNest on Concord More services'],
   ['"concord-services2-2":"b_contracostafitness"', 'Contra Costa Fitness on Concord More services'],
+  /* 2026-09-28, 1:14 pm: Carlyle's, with @booziebrunch's reel. */
+  ['"oakland-goods2-15":"b_carlyleschickenwings"', "Carlyle's Chicken Wings on Oakland More goods"],
+  ['/clips/carlyles-chicken-wings.mp4', "@booziebrunch's reel on Carlyle's page"],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],
@@ -718,7 +721,7 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'woof-gang-bakery', 'old-crow-tattoo', 'rakani-tattoo', 'hungry-cow', 'long-bridge-pizza', 'maverick-jacks', 'los-agaves-taqueria',
   'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark',
   'peaches-patties', 'shish-grill', 'sandbar-oakland', 'golden-star-tattoo', 'ink-from-tatooine', 'two-dollar-cowboy',
-  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness']) {
+  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

@@ -3628,6 +3628,28 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.contracostafitness.com/',
     tier: 1,
   }),
+  /* Carlyle's Chicken Wings, "Oakland • Goods", 2026-09-28, 1:14 pm, with
+     @booziebrunch's reel and "Clip video for page plz". Oakland's Chicken wings
+     seat is Lucky Three Seven's, so the yellow sheet; with a film it has the
+     whole page (the batch27 rule), for the Jack London shop at 439 Water St. */
+  seed('carlyles-chicken-wings', "Carlyle's Chicken Wings", "Carlyle's", 'Grilled chicken wings', '#C8102E', {
+    icon: 'carlyles-chicken-wings',
+    logoTemplate: 'wordmark', logoLines: ["CARLYLE'S"], logoFace: 'grotesk',
+    tagline: 'Home of the grilled chicken wings',
+    site: 'https://carlyleschickenwings.com/',
+    orderUrl: 'https://carlyles-chicken-wings2-oakland.cloveronline.com/',
+    /* 3s-27s of 51s: her "Trying a new Black Owned Wing Spot in Jack London
+       Oakland" title outside the shop, the owner at the counter, the grill,
+       the sauces and a basket of wings. A food creator's film, credited to her. */
+    clip: {
+      src: '/clips/carlyles-chicken-wings.mp4',
+      poster: '/clips/carlyles-chicken-wings-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd1606uB7cK/',
+      credit: 'Filmed by @booziebrunch',
+      platform: 'Instagram',
+      by: 'booziebrunch',
+    },
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',

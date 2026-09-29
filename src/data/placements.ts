@@ -1219,6 +1219,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'walnut-creek-services2-4': 'b_naileditstudio', //              Nails is Varnish's; yellow sheet, Tier 1
   'concord-services2-1': 'b_corenestpilates', //                  Gym is Urban Air's; yellow sheet, Tier 1
   'concord-services2-2': 'b_contracostafitness', //               Gym is Urban Air's; yellow sheet, Tier 1
+  'oakland-goods2-15': 'b_carlyleschickenwings', //               Chicken wings is Lucky Three Seven's; yellow sheet, whole page for the reel
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs

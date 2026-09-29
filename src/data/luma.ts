@@ -79,6 +79,7 @@ export const ICON_LUMA: Record<string, number> = {
   'cali-party-bus': 0.116,
   'camachos-party-rentals': 0.3576,
   'cambodian-street-food': 0.3661,
+  'carlyles-chicken-wings': 0.0068,
   'catch-sf': 0.0949,
   'chef-jeffs-smash-burger': 0.7171,
   'cheries-southern-kitchen': 0.7627,

@@ -3430,6 +3430,50 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     carlyles-chicken-wings — gathered 2026-09-29 from own
+     their spelling: "Carlyle's Chicken Wings" (roster keeps "carlyles-chicken-wings")
+     they are: Grilled chicken wings
+     flag: Read by the main session from their own Shopify site (Locations, About us, Pick-up, Contact, /products.json) and the Oakland shop's own Clover ordering page, which the site's Pick-up page links; the research agent stalled.
+     flag: Locations, from their own Locations page: the Oakland Storefront, 439 Water St, Oakland 94607, Tue-Sun 11:30am-8pm, closed Mondays, 'or until sold-out'; the Tracy Storefront, 549 W Clover Rd; and two farmers markets, Downtown Tracy (Sat 8am-1pm) and Jack London Square (Webster St & Embarcadero West, Sun 11am-4pm). The page is the Oakland shop's.
+     flag: Prices: Oakland's own Clover ordering, which runs about 3.6% above the Tracy shop's and the Shopify store's (10 wings $14.50 in Oakland, $13.99 in Tracy, $14.99 on Shopify). Oakland's are used.
+     flag: Flavors from their own product descriptions: Cajun, BBQ Sweet and Louisiana Hot Honey. @booziebrunch's reel also names a hot honey and BBQ combination.
+     flag: Tracy's hours differ between their Locations page (Fri-Sat to 10pm) and About us (Fri-Sat to 11pm); not this page's shop.
+     flag: Their Menu link goes to a DoorDash store named Emeryville; not used.
+     flag: Owner: Jamale Carlyle (Instagram name); their site calls him Mr. Carlyle.
+     flag: On review: seated at oakland-goods2-15 (yellow sheet: Oakland's Chicken wings is Lucky Three Seven's), with the whole page for @booziebrunch's reel. Glenn's message of 28 September, 1:14 pm.
+  */
+  'carlyles-chicken-wings': {
+    address: "439 Water St, Oakland, CA 94607",
+    phone: "510-600-2239",
+    email: "jcarlyle@carlyleschickenwings.com",
+    hours: "Tue-Sun 11:30am-8pm, or until sold out; closed Mon",
+    cuisine: "Grilled chicken wings",
+    sections: [
+      { name: "Wing Combo", items: [
+        ["5 Wing Combo","5 wings, 2 sides and a drink: garlic butter rice, fries or tater tots, and a canned soda",1450],
+        ["8 Wing Combo","8 wings, 2 sides and a drink: garlic butter rice, fries or tater tots, and a canned soda",1761],
+      ] },
+      { name: "Wings Only", items: [
+        ["5 Wings","Grilled chicken wings: Cajun, BBQ Sweet or Louisiana Hot Honey",932],
+        ["10 Wings","Grilled chicken wings: Cajun, BBQ Sweet or Louisiana Hot Honey",1450],
+        ["15 Wings","Grilled chicken wings: Cajun, BBQ Sweet or Louisiana Hot Honey",2072],
+        ["25 Wings","Grilled chicken wings: Cajun, BBQ Sweet or Louisiana Hot Honey",3108],
+        ["35 Wings","Grilled chicken wings: Cajun, BBQ Sweet or Louisiana Hot Honey",4351],
+        ["50 Wings","Grilled chicken wings: Cajun, BBQ Sweet or Louisiana Hot Honey",6217],
+      ] },
+      { name: "Sides", items: [
+        ["Garlic Butter Rice","",413],
+        ["Fries","Golden, crispy fries with a light seasoning",413],
+        ["Tater Tots","Crispy golden tots, perfect for dipping",413],
+      ] },
+      { name: "Drinks", items: [
+        ["Canned Soda","Pepsi, Diet Pepsi or Dr Pepper",310],
+      ] },
+    ],
+    siteNote: "Home of the grilled chicken wings, in their own words: Mr. Carlyle's family recipe, grilled for ten years before he opened in August 2025. Prices are from the online ordering for their Oakland shop in Jack London.",
+  },
+
+  /*
      Catch SF — gathered 2026-09-21 from own
      they are: Seafood & cocktails
      flag: Glenn: "San Francisco • Goods". Seafood has no category seat, so this is a Tier 1 free listing on the yellow sheet; the menu is ready behind his free-listing rule.
