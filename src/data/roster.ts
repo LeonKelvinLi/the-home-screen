@@ -3668,6 +3668,29 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://www.bascotacafe.com/',
     tier: 1,
   }),
+  /* 2026-09-28, 9:21 to 9:25 pm: two wagyu grills in Milpitas and Wagyu Master in San Jose. */
+  /* 牛浪人 Wagyu Grill, "Milpitas • Goods": all-you-can-eat wagyu barbecue and sushi, on the open Sushi seat. */
+  seed('wagyu-grill-milpitas', 'Wagyu Grill', 'Wagyu Grill', 'AYCE wagyu BBQ & sushi', '#1C1C1C', {
+    icon: 'wagyu-grill',
+    logoTemplate: 'wordmark', logoLines: ['WAGYU', 'GRILL'], logoFace: 'slab',
+    tagline: 'Japanese A5, Australian M9 and US wagyu, all you can eat',
+    site: 'https://wagyu-grill.com/',
+  }),
+  /* Meat Time Yakiniku, "Milpitas • Goods": Japanese barbecue on the Korean and ramen seat, the nearest. */
+  seed('meat-time-yakiniku', 'Meat Time Yakiniku', 'Meat Time', 'Japanese yakiniku', '#0E0E0E', {
+    icon: 'meat-time',
+    logoTemplate: 'wordmark', logoLines: ['MEAT TIME'], logoFace: 'grotesk',
+    tagline: 'Local Japanese BBQ in your neighborhood',
+    site: 'https://www.meattimeyakiniku.com/',
+  }),
+  /* Wagyu Master, "San Jose • Goods": Asian and Sushi are taken, so the yellow sheet. */
+  seed('wagyu-master-san-jose', 'Wagyu Master', 'Wagyu Master', 'A5 wagyu shabu & sukiyaki', '#1A1A1A', {
+    icon: 'wagyu-master',
+    logoTemplate: 'wordmark', logoLines: ['WAGYU', 'MASTER'], logoFace: 'grotesk',
+    site: 'https://wagyumastershabu.com/project/wagyu-master-san-jose/',
+    orderUrl: 'https://pos.chowbus.com/online-ordering/store/WAGYU-MASTER-SUKIYAKI-SAN-JOSE/23506',
+    tier: 1,
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',

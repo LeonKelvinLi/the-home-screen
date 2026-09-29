@@ -10689,6 +10689,129 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Meat Time Yakiniku — gathered 2026-09-29 from own
+     they are: Japanese yakiniku (BBQ)
+     flag: City check: 260 S Abel Street, Milpitas, CA 95035 (site, contact page, Instagram bio, Tock, Toast all agree) matches Glenn's page Milpitas. But Glenn named the category 'Goods' and this is a sit-down restaurant (Instagram category 'Restaurant'), so it may belong on a food page rather than Goods.
+     flag: Name: the site header, H1 and <title> say 'Meat Time Yakiniku' (logo: 'MEAT TIME / YAKINIKU JAPAN'); the Instagram display name and Toast say 'Meat Time'; Tock says 'Meat Time - Milpitas'. I used 'Meat Time Yakiniku'.
+     flag: Hours: the site footer (every page) says Mon-Thu 5:30pm-9pm, Fri-Sat 5pm-10:30pm, Sun 5pm-9pm. The Instagram 'NEW STORE HOURS' post in screenshot 246659_IMG_5592 is legible and says the same (Monday-Thursday 5:30 PM-9 PM, Friday & Saturday 5:00 PM-10:30 PM, Sunday 5:00 PM-9 PM), and Tock shows 'Today 5:30 PM - 9:00 PM' for Tuesday, which also agrees.
+     flag: Hours conflict: their Toast ordering page (linked from the site's Services page) still shows OLDER hours: Sun 11am-3pm & 5pm-9pm, Mon-Thu 5pm-9pm, Fri 5pm-11pm, Sat 11am-3pm & 5pm-11pm. Toast online ordering is turned off ('Online ordering is currently unavailable'). The brief's rule says two disagreeing first-party sources mean hours null. I kept the site hours because the Instagram post is explicitly headed 'NEW STORE HOURS' and matches the site and Tock, so Toast looks stale. Set hours to null if you want to follow the rule strictly.
+     flag: Instagram grid also shows a 'SORRY WE ARE CLOSED 09.18 - 09.21, We will reopen on Tuesday 09.22' post. That closure has already passed (today is 2026-09-29), so hours are unaffected.
+     flag: Happy hour times, as printed on the Happy Hour tab: 'monday - thursday all day, fri & sat 9 pm to close, sunday 8 pm to close'. Happy-hour food and the one non-alcoholic drink are in section 'Happy Hour'. Drop that section if you only want regular prices.
+     flag: Left out, alcohol: all of the Drinks tab except Soft Drink (beer, draft, chu-hi, shochu, fruit liquor, sake, small sake), plus the happy-hour Barebottle beer, Kirin ice bucket, Takara chu-hi, Iichiko shot, Umepon, Sapporo and Suntory taps.
+     flag: Left out, no price: the Sauces lists (golden egg-yolk sauce, green onion sauce, shio koji tare, sweet miso, nanban miso, chili paste, sesame oil) and every AYCE item that is included in a plan price. AYCE 'SHINSHU WAGYU YAKISHABU - KABURI' (rib cap) has '4 oz' in its price slot, followed by a nameless '$10 / plate' entry. That is almost certainly Kaburi 4 oz at $10/plate, but the site does not state it that way, so it is left out.
+     flag: AYCE: the $4/plate lines are extra charges on the Base Plan (the same cuts are included in the Premium Plan). The $5/$7/$14 lines are extra charges under 'Japanese Wagyu & Exclusive Cuts' on the Premium Plan. The $10 food-waste charge is kept in the Base Plan desc. The FAQ says AYCE has 'reasonable pricing for kids 5-12' and that kids under 8 eat free on Mondays and Tuesdays. No kids' price is published.
+     flag: Premium Plan desc is condensed from the site's 'includes all items from BASE PLAN and items below' plus its listed extras (kainomi, ichibo, miso rosu, harami, seafood & vegetables, wagyu fried rice).
+     flag: Bento catering: not priced anywhere first-party. The contact page says 'Explore our Menu to see available Bento selections', but the Menu page has no bento tab. The Services page links daily yakiniku bento takeout to Toast (toasttab.com/local/order/meat-time-260-s-abel-st), and that page shows no menu, only 'Online ordering is currently unavailable. Please contact the restaurant to place an order.' The site says premium bentos for office catering are by call or the contact form.
+     flag: Not priced: Omakase course sets and private events ('Call to make a private reservation'). Nabe Day (Motsu Nabe hot pot every other Thursday, booked on Tock, 'Different price for each Nabe Day'; the Tock event pages were not read for prices because they are one-off dated events). Taco Tuesday (Japanese-inspired tacos, every Tuesday, no price).
+     flag: Tock (www.exploretock.com/meat-time-milpitas, their own booking page from the IG bio and site) lists no menu prices, just reservations for 1-10 guests and '$$'. It is used as order_url because Toast online ordering is off.
+     flag: Blocks: Toast and Tock both returned Cloudflare 403 'Just a moment' to curl. Each loaded normally in one headless Playwright visit with no challenge shown, so nothing was bypassed.
+     flag: Typos fixed: 'thick beef brothe' to 'broth', 'serve with wagyu bits' to 'served with' (House Curry Rice), 'seasweed' to 'seaweed' (Wakame Soup), 'KIMINO SPARKING JUICE' to 'SPARKLING'. Names are kept in the site's all-caps.
+     flag: Phone printed on the site as '(669) 263 - 6152'. Normalized spacing to (669) 263-6152. No email is printed anywhere on the site (only a contact form).
+     flag: On review: hours from their own site, which match their 'NEW STORE HOURS' post and their Tock page; only their Toast page, where online ordering is off, still shows the old hours.
+     flag: On review: seated at milpitas-goods-7 (Korean and ramen: the nearest seat to a Japanese grill-at-your-table barbecue). Glenn's messages of 28 September, 9:21 to 9:25 pm.
+  */
+  'meat-time-yakiniku': {
+    address: "260 S Abel Street, Milpitas, CA 95035",
+    phone: "(669) 263-6152",
+    hours: "Mon-Thu 5:30pm-9pm, Fri-Sat 5pm-10:30pm, Sun 5pm-9pm",
+    cuisine: "Japanese yakiniku (BBQ)",
+    sections: [
+      { name: "Appetizers", items: [
+        ["HIYASHI WAKAME SALAD","seaweed salad",700],
+        ["CHILLED EGGPLANT","pickled eggplant",700],
+        ["APPETIZER TRIO","homemade kimchi, bean sprout namul, and shiodare cucumber on one platter",900],
+        ["BEAN SPROUT NAMUL MOUNTAIN","pickled bean sprouts",600],
+        ["HOMEMADE KIMCHI","in-house kimchi",800],
+        ["SHIODARE CUCUMBER","pickled cucumber marinated in shio sauce",700],
+        ["NEGI SAUCE COLD TOFU","soft tofu topped with green onion sauce",700],
+        ["KARAAGE","japanese-style fried chicken",800],
+        ["KOREAN SEAWEED","seaweed paper",400],
+        ["SPICY GARLIC CHIVES","fermented spicy chives",500],
+        ["CHOREGI SALAD","mixed greens with sesame-based dressing",800],
+        ["WRAPPING LETTUCE","romaine lettuce",500],
+      ] },
+      { name: "Rice, Noodle & Soup", items: [
+        ["WAGYU-FRIED RICE","wagyu bits, garlic, egg, asparagus, and green onions",1800],
+        ["HOUSE CURRY RICE","thick beef broth and melted vegetables, served with wagyu bits",1500],
+        ["WAKAME SOUP","seaweed, chicken and dashi broth, green onion, and sesame oil",300],
+        ["WHITE RICE","",300],
+      ] },
+      { name: "Shinshu Premium Wagyu", items: [
+        ["YAKISHABU RIBEYE (2.5 oz)","signature cut of ribeye, served with golden egg yolk sauce",3600],
+        ["STRIPLOIN (4 oz)","ultimate buttery flavor",3600],
+      ] },
+      { name: "US Wagyu", items: [
+        ["OOTORO KALBI","4 oz",2200],
+        ["SHIODARE KALBI","4 oz",2200],
+        ["YAKISHABU KALBI - BEEF BELLY","4 oz",2000],
+        ["TERES MAJOR TENDER STEAK","5 oz",2200],
+        ["ICHIBO - PICANHA","4 oz",2500],
+        ["MISO ROSU","4 oz",2500],
+        ["GARLIC MARINATED KALBI","5 oz",1900],
+        ["YAKISHABU BRISKET","7 oz",1800],
+      ] },
+      { name: "American Beef", items: [
+        ["THICK-CUT BEEF TONGUE","2 pc",2200],
+        ["THIN-SLICE BEEF TONGUE","4 oz",2100],
+      ] },
+      { name: "Horumon", items: [
+        ["TECCHAN - LARGE INTESTINE","5 oz",1200],
+      ] },
+      { name: "Pork", items: [
+        ["TON TORO PORK CHEEK","5 oz",1400],
+        ["PORK BELLY","5 oz",1100],
+        ["JAPANESE-STYLE SAUSAGE","5 pc",1100],
+      ] },
+      { name: "Seafood & Vegetable", items: [
+        ["GARLIC SHRIMP","6 pc",1200],
+        ["HOKKAIDO SCALLOP","4 pc",1600],
+        ["ASSORTED VEGETABLES","shiitake mushrooms, onion, asparagus",800],
+      ] },
+      { name: "All-You-Can-Eat", items: [
+        ["BASE PLAN","per person. 90 minute total time-limit. 2 meats per person for the first round, followed by 1 meat/person for each round after. unlimited side orders. food waste charge of $10 for more than half an order per meat.",5400],
+        ["PREMIUM PLAN","per person. includes all items from BASE PLAN plus kainomi (premium sirloin flap), ichibo - picanha, miso rosu, harami, garlic shrimp, Hokkaido scallop, assorted vegetables and wagyu fried rice. same 90 minute time-limit.",7200],
+      ] },
+      { name: "All-You-Can-Eat per-plate charges", items: [
+        ["THIN CUT BEEF TONGUE","per plate, on the Base Plan",400],
+        ["HARAMI - OUTSIDE SKIRT","per plate, on the Base Plan",400],
+        ["OOTORO KALBI","per plate, on the Base Plan",400],
+        ["SHIODARE KALBI","per plate, on the Base Plan",400],
+        ["YAKISHABU KALBI - BEEF BELLY","per plate, on the Base Plan",400],
+        ["TERES MAJOR TENDER STEAK","per plate, on the Base Plan",400],
+        ["THICK CUT PREMIUM BEEF TONGUE","2 pc, per plate, Japanese Wagyu & Exclusive Cuts on the Premium Plan",500],
+        ["SHINSHU WAGYU YAKISHABU - RIBEYE","2.5 oz, per plate, Japanese Wagyu & Exclusive Cuts on the Premium Plan",700],
+        ["SHINSHU WAGYU YAKISHABU - STRIPLOIN","4 oz, per plate, Japanese Wagyu & Exclusive Cuts on the Premium Plan",1400],
+      ] },
+      { name: "Happy Hour", items: [
+        ["APPETIZER TRIO","shiodare cucumber, kimchi, and bean sprout namul; happy hour price",500],
+        ["NEGI SAUCE COLD TOFU","happy hour price",500],
+        ["HIYASHI WAKAME SALAD","happy hour price",500],
+        ["KARAAGE","happy hour price",650],
+        ["WAGYU FRIED RICE","happy hour price",1600],
+        ["OOTORO KALBI","US wagyu, 4 oz; happy hour price",1750],
+        ["SHIODARE KALBI","US wagyu, 4 oz; happy hour price",1750],
+        ["YAKISHABU KALBI - BEEF BELLY","US wagyu, 4 oz; happy hour price",1600],
+        ["HARAMI OUTSIDE SKIRT","US wagyu, 4 oz; happy hour price",1800],
+        ["GARLIC MARINATED KALBI","US wagyu, 5 oz; happy hour price",1500],
+        ["YAKISHABU BRISKET","US wagyu, 7 oz; happy hour price",1450],
+        ["TECCHAN - LARGE INTESTINE","5 oz; happy hour price",950],
+        ["TON TORO PORK CHEEK","5 oz; happy hour price",950],
+        ["PORK BELLY","5 oz; happy hour price",850],
+        ["JAPANESE STYLE SAUSAGE","5 pc; happy hour price",800],
+        ["GARLIC SHRIMP","6 pc; happy hour price",950],
+        ["KIMINO SPARKLING JUICE","non-alcoholic, ume, mikan, momo, ringo, or yuzu; happy hour price",450],
+      ] },
+      { name: "Soft Drink", items: [
+        ["COKE / DIET COKE / SPRITE","",300],
+        ["APPLE JUICE","",300],
+        ["ICE GREEN / OOLONG TEA","",300],
+        ["SPARKLING BLACK TEA","unsweetened or add peach syrup",600],
+      ] },
+    ],
+    siteNote: "The only machi yakiniku, local Japanese BBQ in your neighborhood, in their own words. Prices are from the menus on their own site.",
+  },
+
+  /*
      MexiHibachi — gathered 2026-09-21 from own-domain
      they are: Mexican-Japanese fusion
      logo: https://img1.wsimg.com/isteam/ip/c5a0b373-0e44-4bd6-bdfc-16df4f99c6ce/IMG_1501.PNG — not cut into a tile yet
@@ -19754,6 +19877,166 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     needsSite: true,
     tagline: "Vending machines placed free in Bay Area businesses and offices",
     contactOnly: "Vending machines placed free in Bay Area businesses and offices. Placement is free to the host business, their own words; no prices are published.",
+  },
+
+  /*
+     Wagyu Grill — gathered 2026-09-29 from own
+     their spelling: "牛浪人 Wagyu Grill" (roster keeps "Wagyu Grill")
+     they are: AYCE Japanese yakiniku & sushi
+     flag: City check: 500 Barber Ln, Milpitas, CA 95035 is on the site's Contact page, footer and schema.org data, and in the Instagram bio. It matches Glenn's page (Milpitas • Goods).
+     flag: Hours come from the site. The Contact page table, the footer on every page and the schema.org data agree: Mon-Thu 11:00 AM-9:30 PM, Fri 11:00 AM-10:30 PM, Sat 11:30 AM-10:30 PM, Sun 11:30 AM-9:30 PM. The Instagram screenshots show no hours, so there is no conflict.
+     flag: Lunch vs dinner: there is no separate dinner price. Lunch at $25.95 is Mon-Fri 11am-4pm only. Silver ($35.95), Gold ($43.95) and Premium ($65.95) are 'Available all day' at one price. No weekend or dinner surcharge is published.
+     flag: Child pricing goes by height, not age (menu page Dining Guidelines): under 40″ dine free, 40″–50″ half price, over 50″ full price. No child dollar amounts are printed, so I made no separate child items and added the rule to each tier's desc instead.
+     flag: Other Dining Guidelines on the menu page: at most 10 orders at a time per table, 90-minute limit per seating, excess leftovers may be charged, no outside food or drinks, 18% service fee for parties of 6 or more.
+     flag: Left out: about 80 food items on the menu page (Wagyu Selections, Other Proteins, Sushi Rolls, Appetizers, Sides) with no individual prices, because they are included in the AYCE tiers. The site does not say which items belong to which tier beyond each tier's three bullet points.
+     flag: Alcohol: the site mentions a full bar (sake, craft cocktails, Japanese beer, wine) but prices no alcohol, so no alcohol lines appear. The Beverages list says 'Priced separately — not included in all-you-can-eat tiers' and is all non-alcoholic. I kept Pina Colada Smoothie as listed there; the site does not say it contains alcohol.
+     flag: order_url is null. The site's Reserve / Reserve a Table buttons go to Yelp Reservations (https://www.yelp.com/reservations/wagyu-grill-ayce-milpitas). Yelp is a listing site, so the main session should decide whether to link it. There is no own online-ordering page.
+     flag: Name: the site calls itself 'Wagyu Grill' with alternateName '牛浪人 Wagyu Grill'. The Instagram display name is '牛浪人 Wagyu Grill AYCE Barbeque, Sushi & Bar' and the logo reads '牛浪人 Wagyu Grill / ayce barbeque, sushi & bar'. I used '牛浪人 Wagyu Grill'. The 'Barbeque' spelling is theirs and was kept.
+     flag: site_kind 'own': a real multi-page site on their own domain (Home, About, Menu, Gallery, Contact, Privacy, Terms, Accessibility), footer 'Powered by Tooo.ai'. All pages loaded with plain curl; no Playwright was needed and nothing was blocked.
+     flag: No email is published on the site or in the screenshots. The phone is written '+1 (408) 649-3106' on the site and in the screenshot.
+     flag: The Instagram reels grid shows a Father's Day special (free Häagen-Dazs ice cream for every dad, June 21). It is a past promotion and was not included.
+     flag: Logo: cropped the site's logo image (white square with 牛浪人 X mark, ronin-bull illustration and 'Wagyu Grill' bar) from 246614_IMG_5584. The source is a little soft or low-res, so a clean original from the site (images/logo-white.png) or Instagram may be better.
+     flag: On review: their Reserve buttons go to Yelp Reservations, a listing site, so no order link.
+     flag: On review: seated at milpitas-goods-4 (Sushi: they serve all-you-can-eat sushi beside the barbecue). Glenn's messages of 28 September, 9:21 to 9:25 pm.
+  */
+  'wagyu-grill-milpitas': {
+    address: "500 Barber Ln, Milpitas, CA 95035",
+    phone: "(408) 649-3106",
+    hours: "Mon-Thu 11am-9:30pm, Fri 11am-10:30pm, Sat 11:30am-10:30pm, Sun 11:30am-9:30pm",
+    sections: [
+      { name: "All-You-Can-Eat Tiers", items: [
+        ["Lunch","Per person, Mon-Fri 11am-4pm. Select wagyu cuts, sushi rolls, appetizers & sides. Kids under 40″ free, 40″–50″ half price.",2595],
+        ["Silver","Per person, available all day. Australian wagyu cuts, full sushi selection, appetizers & sides. Kids under 40″ free, 40″–50″ half price.",3595],
+        ["Gold","Per person, available all day. Premium wagyu selection, specialty sushi rolls, full appetizer menu. Kids under 40″ free, 40″–50″ half price.",4395],
+        ["Premium","Per person, available all day. Japanese A5 wagyu, all sushi & rolls, complete menu access. Kids under 40″ free, 40″–50″ half price.",6595],
+      ] },
+      { name: "Beverages", items: [
+        ["Fountain Drinks","",250],
+        ["Hot Tea","Per person",200],
+        ["Juice","",500],
+        ["Fiji Water","",550],
+        ["Pellegrino","",550],
+        ["Red Bull","",500],
+        ["Japanese Soda","",500],
+        ["Mango Mania Smoothie","",1200],
+        ["Pina Colada Smoothie","",1200],
+        ["Berry Bonanza Smoothie","",1200],
+      ] },
+    ],
+    siteNote: "Authentic Japanese A5, Australian M9 and US wagyu, all you can eat, with sushi and a bar, in their own words. Prices are per person, from the menu on their own site.",
+  },
+
+  /*
+     Wagyu Master — gathered 2026-09-29 from own
+     their spelling: "Wagyu Master San Jose" (roster keeps "Wagyu Master")
+     they are: A5 wagyu sukiyaki & shabu AYCE, hand rolls
+     flag: City check: 1410 El Paseo de Saratoga, San Jose, CA 95130 is on the site's San Jose page, in the Instagram bio and on their Chowbus page. It matches Glenn's 'San Jose' page. Glenn filed it under 'Goods', but this is a sit-down restaurant (wagyu sukiyaki/shabu AYCE plus a hand roll bar), so the category may need to be Food.
+     flag: Name varies by source: the site page says 'Wagyu Master San Jose', the site logo says 'Wagyu Master Shabu House', Instagram says 'Wagyu Master Sukiyaki', Resy says 'Wagyu Master Sukiyaki House - San Jose' and Chowbus says 'WAGYU MASTER SUKIYAKI (San Jose, CA)'. I used the San Jose page's name.
+     flag: The brand has several locations (the site also has Pasadena, NYC/Chubby Nori and Arizona pages; the Instagram bio names Manhattan NY and a Peoria AZ soft opening). This is NOT one menu shared by all locations. The menus used are the ones on the San Jose page, and their files are named 'Wagyu-Master-Nori-San-Jose-Menu' and 'WMSJ_DRINK_MENU'. The NYC page has its own separate menu images. The menu images themselves do not name a city.
+     flag: The menus exist only as images on their own site, but the text is clearly legible, so I transcribed them (full text is in raw_b_wagyumastersanjose_menu_images.txt). Each image shows a regular price in black and a member price in red. I used the regular price as cents and put the member price in desc.
+     flag: The Shabu AYCE menu lists hand rolls, sides (Vegetable Platter, Tempura Platter, Chicken Karaage, Wagyu Curry Rice, Wagyu Gyudon, Udon, Salmon Carpaccio, Yellowtail Carpaccio, Wagyu Tallow Chicken Wings), 'Deserts' (sic: Matcha Warabi Mochi, Matcha Mille Crêpe Cake, Matcha Ice Cream, Vanilla Ice Cream, Egg Tart) and five broths (Spicy Miso Tonkotsu, Creamy Tomato, Bonito Dashi, House Special Sukiyaki, Wagyu Bone Broth), none with prices. These presumably come with AYCE and were left out as unpriced items. The menu does not say whether the AYCE prices are per person, so I did not add that.
+     flag: The fourth image in the San Jose page's Menu section (0403_WMSan-Jose_Menu-merged-4) is a Chubby Club membership-benefits graphic with no menu prices.
+     flag: Alcohol: the San Jose drink menu image has only non-alcoholic drinks, so nothing was left out. Lychee Sparkling Water ($4.99) appears only on the Chowbus page and is included.
+     flag: Typo fixes: 'Iced Olong Tea' became 'Iced Oolong Tea' (Chowbus spells it oolong). The AYCE menu's 'Yellowtail with cirtrus soy' uses the Handroll Bar menu's spelling, 'citrus'. '* Available only when order Sukiyaki base' was reworded to 'only when ordering the Sukiyaki base'.
+     flag: The 'To-go:' sections come from their Chowbus online-ordering page (pos.chowbus.com store 23506, linked from wagyumastershabu.com under Order Online > San Jose; it is server-rendered, so curl worked). Each item there shows two prices: one with a 'point' icon (a points price) and a grey regular price. I used the regular price. Chowbus writes item names in lowercase and descriptions in Title Case; I capitalized the names and put the descriptions in sentence case. Drop these sections if the page should show only the dine-in menu.
+     flag: Chowbus hand roll prices differ from the dine-in Handroll Bar menu (for example Tuna Roll is $9 vs $7, Wagyu Ribeye Yaki Shabu Roll $14 vs $12, Mega Chubby Roll $52 vs $50; the 3/4/5/6 Hand Roll Sets are $23+/$28+/$39+/$48+ there vs $21/$28/$35/$39 dine-in, and are described as 'chef-selected'). Only the dine-in hand roll prices are in items. The Chowbus hand roll and set listings were not added as duplicates.
+     flag: Hours come from the 'Hours of Operation' block on the site's San Jose page. The Chowbus page shows different pickup hours: Mon-Thu 11:30am-2:30pm & 5:30pm-9pm, Fri 11:30am-2:30pm & 5:30pm-10pm, Sat 11:30am-10pm, Sun 11:30am-9pm. These mostly line up with the site's last-seating times and look like online-ordering windows, not dining hours, so I kept the site's dining hours instead of setting hours to null. The brief's strict rule would null them; that call is left to the main session.
+     flag: Phone: wagyumastershabu.com does not print a phone number anywhere (its Contact Us page is only a form with a CAPTCHA, which I did not touch). +1 (408) 549-7891 comes from the store info on their Chowbus ordering page, which the site links. Glenn's screenshots have no Instagram Contact sheet.
+     flag: Email: none printed for the restaurant. Instagram shows an Email button, but the address is not visible. The only address on the site is hr@chubbgroup.com, for job resumes, and it was not used.
+     flag: Booking: 'Book Now' on the San Jose page opens Resy (venue 98329, 'Wagyu Master Sukiyaki House - San Jose'). order_url is set to their Chowbus ordering page instead.
+     flag: Instagram: the handle 'wagyumastersukiyaki' comes from Glenn's screenshot. Its bio says the account is 'Curated by @joinchubbyclub' (Chubby Group). The site also links instagram.com/wagyumastersanjose, which is not in the screenshots and was not checked.
+     flag: No blocks: every page loaded with curl, and Playwright was not needed.
+     flag: On review: the phone is from their own Chowbus ordering; their site prints none.
+     flag: On review: seated at san-jose-goods2-6 (yellow sheet: San Jose's Asian and Sushi seats are taken, and shabu is not Korean). Glenn's messages of 28 September, 9:21 to 9:25 pm.
+     flag: On review: hours shortened to the schedule; last seatings per their site are 2:30pm and 9pm Mon-Thu, 10pm Fri-Sat, 9pm Sun.
+  */
+  'wagyu-master-san-jose': {
+    address: "1410 El Paseo de Saratoga, San Jose, CA 95130",
+    phone: "(408) 549-7891",
+    hours: "Mon-Thu 11:30am-3pm & 5:30pm-10pm, Fri-Sat 11:30am-11pm, Sun 11:30am-10pm",
+    sections: [
+      { name: "Wagyu AYCE", items: [
+        ["Classic A4 Wagyu AYCE","Member price $58. Specialty dish included: tableside service A5 Shoulder Sukiyaki (only when ordering the Sukiyaki base), served with Jidori egg yolk, Tokyo negi and snow peas. Wagyu selections: A4 Shoulder, A4 Brisket, A5 Top Round, A5 Shank, A5 Neck Meat.",6800],
+        ["Signature A5 Wagyu AYCE","Member price $75. Specialty dish included: tableside service A5 Ribeye Sukiyaki (only when ordering the Sukiyaki base), served with Jidori egg yolk, Tokyo negi and snow peas. Wagyu selections: A5 Brisket, A4 Chuck Roll, A4 Brisket, A4 Shoulder, A5 Top Round, A5 Chuck Tender, A5 Shank, A5 Neck Meat, A5 Shoulder.",8800],
+        ["Premium A5 Wagyu AYCE","Member price $109. Specialty dish included: tableside service A5 Ribeye Sukiyaki (only when ordering the Sukiyaki base), served with Jidori egg yolk, Tokyo negi and snow peas. Wagyu selections: A5 Ribeye, A5 Brisket, A4 Chuck Roll, A4 Brisket, A4 Shoulder, A5 Top Round, A5 Chuck Tender, A5 Shank, A5 Neck Meat, A5 Shoulder.",12800],
+      ] },
+      { name: "Hand Roll AYCE", items: [
+        ["Hand Roll AYCE","Unlimited hand rolls, excluding Monthly Special Hand Rolls. Member price $47.",5000],
+      ] },
+      { name: "Hand Roll Sets", items: [
+        ["3 Hand Roll Set","Tuna Roll, Salmon Roll, Wagyu Tartare Roll. Member price $18.",2100],
+        ["4 Hand Roll Set","Toro Taku Roll, Lobster Roll, Wagyu Ribeye Yaki Shabu Roll, Wagyu Tartare Roll. Member price $24.",2800],
+        ["5 Hand Roll Set","Toro Taku Roll, Spicy Salmon Roll, Wagyu Tartare Roll, Wagyu Ribeye Yaki Shabu Roll, Lobster Roll. Member price $30.",3500],
+        ["6 Hand Roll Set","Toro Taku Roll, Yellowtail Roll, Salmon Roll, Wagyu Tartare Roll, Wagyu Ribeye Yaki Shabu Roll, Lobster Roll. Member price $34.",3900],
+      ] },
+      { name: "Classic Hand Rolls", items: [
+        ["Tuna Roll","Minced tuna. Member price $6.",700],
+        ["Salmon Roll","Minced salmon. Member price $5.",600],
+        ["Spicy Tuna Roll","Spicy minced tuna. Member price $6.",700],
+        ["Spicy Salmon Roll","Spicy minced salmon. Member price $5.",600],
+        ["Toro Taku Roll","Minced fatty tuna with takuan. Member price $7.",800],
+        ["Yellowtail Roll","Yellowtail with citrus soy. Member price $7.",800],
+        ["Cucumber Roll","Pickled cucumber, shiso. Member price $5.",600],
+        ["Shrimp Tempura Roll","Shrimp tempura with Japanese mayo. Member price $7.",800],
+        ["King Crab Roll","King crab meat with Japanese curry mayo. Member price $9.",1000],
+        ["Hotate Roll","Hokkaido scallop. Member price $9.",1000],
+      ] },
+      { name: "Signature Hand Rolls", items: [
+        ["Lobster Roll","Lobster with Japanese curry mayo. Member price $9.",1000],
+        ["Wagyu Tartare Roll","Minced raw wagyu. Member price $8.",900],
+        ["Wagyu Ribeye Yaki Shabu Roll","BBQ ribeye with egg yolk sauce. Member price $11.",1200],
+        ["Unagi Roll","Japanese BBQ freshwater eel. Member price $8.",900],
+      ] },
+      { name: "Monthly Special Hand Rolls", items: [
+        ["Mega Chubby Roll","Uni, caviar & wagyu. Member price $49.",5000],
+        ["Uni Roll","Hokkaido Bafun uni. Member price $17.",1800],
+      ] },
+      { name: "Add-ons", items: [
+        ["Uni","",1500],
+        ["Caviar","",1500],
+        ["Foie Gras","",1500],
+      ] },
+      { name: "Drinks", items: [
+        ["Sparkle Yuzu","",499],
+        ["Choya Ume Soda","",499],
+        ["Iced Green Tea","",499],
+        ["Iced Oolong Tea","",499],
+        ["Ramune","",499],
+        ["Iced Matcha Latte","",499],
+        ["Bottled Water","",499],
+        ["Perrier","",499],
+        ["Lychee Sparkling Water","Listed on their online ordering page.",499],
+        ["Pepsi","",399],
+        ["Starry","",399],
+        ["Dr. Pepper","",399],
+        ["Hot Green Tea","",399],
+      ] },
+      { name: "To-go: Wagyu Hot Pot Bowls", items: [
+        ["Signature Sukiyaki Wagyu Pot","Signature wagyu served in a rich and savory sukiyaki broth, simmered with premium ingredients for a comforting Japanese hot pot.",1999],
+        ["Spicy Tonkotsu Wagyu Pot","Tender wagyu served in a rich and spicy tonkotsu broth with bold, savory flavors.",1999],
+        ["Japanese Dashi Beef Pot","Tender beef served in a delicate Japanese dashi broth made with bonito for a light and savory flavor.",2095],
+        ["Tomato Wagyu Hot Pot","Premium wagyu simmered in a rich tomato broth with a perfect balance of sweetness and acidity.",2295],
+        ["Premium A5 Ribeye Sukiyaki Pot","Premium A5 ribeye wagyu served in a traditional sukiyaki broth with exceptional richness and tenderness.",3195],
+      ] },
+      { name: "To-go: Wagyu Rice Bowls", items: [
+        ["A5 Wagyu Gyudon","Sliced A5 wagyu served over steamed rice with a savory house sauce.",1995],
+        ["Sukiyaki Beef Bowl","Sukiyaki-style sliced beef served over steamed rice with a rich, savory-sweet flavor.",1895],
+        ["A5 Wagyu Curry Rice","Tender A5 wagyu served over rice with rich and creamy Japanese curry.",2295],
+      ] },
+      { name: "To-go: Appetizers", items: [
+        ["Chicken Karaage","Japanese-style marinated fried chicken, crispy on the outside and juicy on the inside.",1095],
+        ["Snow Crab Croquette","Crispy croquettes filled with sweet snow crab and creamy potato.",1295],
+        ["Tempura Assortment","An assortment of lightly battered Japanese tempura, fried until perfectly crispy.",1295],
+        ["Salmon Carpaccio","Thinly sliced fresh salmon served with a light citrus-inspired dressing.",999],
+        ["Yellowtail Carpaccio","",999],
+      ] },
+      { name: "To-go: Chicken", items: [
+        ["Crispy Chicken Drumsticks 2pcs","2 crispy chicken drumsticks.",799],
+        ["Chubby Chicken Feast Bucket","2 crispy chicken drumsticks, 2 crispy chicken wings, 2 crispy chicken strips, 6 chicken nuggets.",2799],
+        ["Chubby Chicken Feast Bucket + 2 Portuguese Egg Tarts","2 crispy chicken drumsticks, 2 crispy chicken wings, 2 crispy chicken strips, 6 chicken nuggets, 2 Portuguese egg tarts.",2999],
+      ] },
+    ],
+    siteNote: "A5 wagyu sukiyaki and shabu, all you can eat, and premium hand rolls, in their own words. Prices are from the San Jose menus on their own site and their own online ordering.",
   },
 
   /*

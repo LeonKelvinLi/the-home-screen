@@ -329,6 +329,10 @@ for (const [id, want, expect] of [
   ['b_carlyleschickenwings', "Carlyle's Chicken Wings", { rows: 12, hours: 'Tue-Sun 11:30am-8pm', call: '510-600-2239' }],
   ['b_curiobar', 'Curio', { free: true, hours: 'Brunch Sat-Sun', call: '(415) 551-7306' }],
   ['b_bascotacafe', 'Bascota Café', { free: true, call: '(510) 953-9510' }],
+  /* 2026-09-28, 9:21 to 9:25 pm: the wagyu places. */
+  ['b_wagyugrillmilpitas', 'Wagyu Grill', { rows: 14, hours: 'Mon-Thu 11am-9:30pm', call: '(408) 649-3106' }],
+  ['b_meattimeyakiniku', 'Meat Time Yakiniku', { rows: 67, hours: 'Mon-Thu 5:30pm-9pm', call: '(669) 263-6152' }],
+  ['b_wagyumastersanjose', 'Wagyu Master', { free: true, hours: 'Mon-Thu 11:30am-3pm', call: '(408) 549-7891' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -687,6 +691,9 @@ for (const [s, what] of [
   ['/clips/carlyles-chicken-wings.mp4', "@booziebrunch's reel on Carlyle's page"],
   ['"san-francisco-goods2-27":"b_curiobar"', 'Curio on San Francisco More goods'],
   ['"berkeley-services2-2":"b_bascotacafe"', 'Bascota on Berkeley More services'],
+  ['"milpitas-goods-4":"b_wagyugrillmilpitas"', 'Wagyu Grill on Milpitas Sushi'],
+  ['"milpitas-goods-7":"b_meattimeyakiniku"', 'Meat Time on Milpitas Korean'],
+  ['"san-jose-goods2-6":"b_wagyumastersanjose"', 'Wagyu Master on San Jose More goods'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],
@@ -727,7 +734,7 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'woof-gang-bakery', 'old-crow-tattoo', 'rakani-tattoo', 'hungry-cow', 'long-bridge-pizza', 'maverick-jacks', 'los-agaves-taqueria',
   'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark',
   'peaches-patties', 'shish-grill', 'sandbar-oakland', 'golden-star-tattoo', 'ink-from-tatooine', 'two-dollar-cowboy',
-  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe']) {
+  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe', 'wagyu-grill', 'meat-time', 'wagyu-master']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

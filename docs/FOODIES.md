@@ -64,6 +64,8 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 23 Sep | Charlene Louie (@charweeezy) | Ry's Poke Shack (@ryspokeshack), "now in the Bay Area coming straight from Oahu" | No |
 | 24 Sep | @sherryeatworld (Sherry Shi, already listed on 20 Sep) | "Old-school dim sum in San Francisco with Michelin recognition": Yank Sing, sent with its listing, "Can we use this link for their page?" | **Yes.** On Yank Sing's page (San Francisco's yellow sheet) as a review (0s–24s of 33s), downloaded on 24 Sep with Leon's go-ahead |
 | 24 Sep | @whatthejessi_ | "Lunch with @__tiiipppseats at Aung Myanmar", 542B 9th St, Oakland: Burmese | No |
+| 28 Sep | @booziebrunch (Novi Mitchell) | Carlyle's Chicken Wings, Jack London, Oakland: "Trying a new Black Owned Wing Spot". Sent with the listing and "Clip video for page plz", not marked "Foodie" | **Yes.** On Carlyle's page (Oakland's yellow sheet, whole page) as a review (3s–27s of 51s), downloaded the same day |
+| 28 Sep | @areweeatingyet (Michelle @ SF) | Truong Thanh Restaurant (@truongthanhrestaurant), Ulferts Center, Milpitas: Vietnamese, banh khot, Thai-style dry egg noodles, banh canh cua. Posted 21 October 2024, "Thanks for the invite!" | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
@@ -71,7 +73,8 @@ DdCY9_wP5R_, DdNCA9Qyb7W, Dc_mLl8uA__, Dc2abz8C7CU, DdIMBHKPfj_ (again), DS8GlMg
 DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
 DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok, DdMhHiJsnc4, DAW5kk6yEWz,
 Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R, DIktz2AR_0M,
-DAmWXRISz7P, Ddo0xf9MplM, DdCZTx7Ppei, DdphZkJAn6v, DdqF3P3P67w, DdZ_vmtP9SZ. The profile is
+DAmWXRISz7P, Ddo0xf9MplM, DdCZTx7Ppei, DdphZkJAn6v, DdqF3P3P67w, DdZ_vmtP9SZ, Dd1606uB7cK,
+DBY9wl6PM3f. The profile is
 instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
@@ -82,7 +85,8 @@ listing rather than as a Foodie), @oaktowngrubhub (Emy's
 Cannoli), @grubwitmike (Phosho Dough, Cravingz), @justmostie (Paulo Sausage Co),
 @thesnacksensei (The Yard, Jojo's Hot Chicken, Golden Gate Market & Deli), @volha_creative (Glasshouzz),
 @itsmeloslab (Ofie's Kitchen), @smackinfood (House of Raha), @thetastebud
-(Lucky Three Seven) and Jay Chan (Cambodian Street Food).
+(Lucky Three Seven), @sherryeatworld (Yank Sing), @booziebrunch (Carlyle's Chicken
+Wings) and Jay Chan (Cambodian Street Food).
 
 ## Open with Glenn
 
