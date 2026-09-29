@@ -325,6 +325,10 @@ for (const [id, want, expect] of [
   ['b_naileditstudio', 'The Nail Edit Studio', { free: true, hours: 'Mon-Sun 9am-7pm', call: '(925) 262-5518' }],
   ['b_corenestpilates', 'CoreNest Pilates', { free: true, call: '(510) 880-9486' }],
   ['b_contracostafitness', 'Contra Costa Fitness', { free: true, call: '(925) 940-4223' }],
+  /* 2026-09-28, afternoon and evening: Carlyle's with its reel, Curio and Bascota. */
+  ['b_carlyleschickenwings', "Carlyle's Chicken Wings", { rows: 12, hours: 'Tue-Sun 11:30am-8pm', call: '510-600-2239' }],
+  ['b_curiobar', 'Curio', { free: true, hours: 'Brunch Sat-Sun', call: '(415) 551-7306' }],
+  ['b_bascotacafe', 'Bascota Café', { free: true, call: '(510) 953-9510' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -681,6 +685,8 @@ for (const [s, what] of [
   /* 2026-09-28, 1:14 pm: Carlyle's, with @booziebrunch's reel. */
   ['"oakland-goods2-15":"b_carlyleschickenwings"', "Carlyle's Chicken Wings on Oakland More goods"],
   ['/clips/carlyles-chicken-wings.mp4', "@booziebrunch's reel on Carlyle's page"],
+  ['"san-francisco-goods2-27":"b_curiobar"', 'Curio on San Francisco More goods'],
+  ['"berkeley-services2-2":"b_bascotacafe"', 'Bascota on Berkeley More services'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],
@@ -721,7 +727,7 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'woof-gang-bakery', 'old-crow-tattoo', 'rakani-tattoo', 'hungry-cow', 'long-bridge-pizza', 'maverick-jacks', 'los-agaves-taqueria',
   'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark',
   'peaches-patties', 'shish-grill', 'sandbar-oakland', 'golden-star-tattoo', 'ink-from-tatooine', 'two-dollar-cowboy',
-  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings']) {
+  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

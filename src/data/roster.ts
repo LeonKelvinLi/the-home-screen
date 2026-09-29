@@ -3650,6 +3650,24 @@ export const ROSTER_SEED: LocalSeed[] = [
       by: 'booziebrunch',
     },
   }),
+  /* Bascota Café, "Berkeley • Services", 2026-09-28, 6:09 pm: an Egyptian-owned
+     pop-up coffee and matcha cart for events, and matcha by the tin. Berkeley's
+     Events seat is Perfect Nine's, so the yellow sheet. */
+  /* Curio, "San Francisco • Goods", 2026-09-28, 4:20 pm: a cocktail bar with a
+     kitchen on Valencia, The Chapel's sister. No seat for a bar, so the yellow
+     sheet; the page carries their food and none of the drinks. */
+  seed('curio-bar', 'Curio', 'Curio', 'Brunch & bar food', '#272110', {
+    icon: 'curio-bar',
+    logoTemplate: 'wordmark', logoLines: ['CURIO'], logoFace: 'slab',
+    site: 'https://www.curiobarsf.com/',
+    tier: 1,
+  }),
+  seed('bascota-cafe', 'Bascota Café', 'Bascota', 'Pop-up coffee & matcha cart', '#8A5A2B', {
+    icon: 'bascota-cafe',
+    logoTemplate: 'wordmark', logoLines: ['BASCOTA'], logoFace: 'slab',
+    site: 'https://www.bascotacafe.com/',
+    tier: 1,
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',

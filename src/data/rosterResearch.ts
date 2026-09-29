@@ -1332,6 +1332,37 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Bascota Café — gathered 2026-09-29 from own
+     they are: Event coffee & matcha cart
+     flag: CITY CHECK: Glenn named 'Berkeley • Services', but nothing first-party places them in Berkeley. It is a mobile pop-up cart with no street address or storefront. The Instagram bio says 'Bay Area & Sac'; the site says 'serving the San Francisco Bay Area'. The only local hint is the 510 (East Bay) phone number, which does not confirm Berkeley.
+     flag: What they sell: BOTH. (1) An event coffee/matcha cart you hire for weddings, corporate events, showers, birthdays, etc. The inquiry form offers 'Full-Service Cart', 'Bottled Drinks', 'Both' or 'Not Sure Yet'. (2) Retail matcha: one Squarespace product, 'Bascota Matcha', with six selections.
+     flag: Event pricing is NOT published. No packages, per-guest or per-drink prices, minimums or travel fees appear anywhere on the site. The inquiry form asks for event date and times, location, 'How many drinks would you like prepared?' (required) and 'Do you have a budget in mind for your event?' (required). The form was read only, not submitted.
+     flag: Retail matcha: the site sells one product, 'Bascota Matcha', with a 'Selection' dropdown of 50g Miori Tin $45, 50g Aika Tin $55, 250g Miori Pouch $150, 250g Aika Pouch $200, 500g Miori Pouch $250 and 500g Aika Pouch $275. I split it into two items by grade (Miori, Aika), each priced 'from' its 50g tin with the sizes in desc. All six show unlimited stock and none is on sale. The shop says 'Free shipping on orders over $100!'
+     flag: order_url is the event inquiry page (/inquire), since booking the cart is their main service and the site's 'Book Bascota!' button leads there. The matcha shop is https://www.bascotacafe.com/shop (product page https://www.bascotacafe.com/shop/p/product-2-5c6mb-j8mng-gylh2).
+     flag: Left out, because it is published without prices: the event drink menu on the homepage. It lists The Classics (Latte, Americano, Espresso; Regular or Oat milk) and Specialty Drinks (Tiramisu Latte, Sharbat Latte, Sobia Latte, Cardamom Latte, Strawberry Matcha, Strawberry Cloud, Mango Matcha, Guava Matcha, Matcha Einspanner, Karkadé Refresher).
+     flag: Left out: the homepage's '10% OFF FLUR Glassware' affiliate discount link (flurglassware.com). It is a third-party product, not theirs.
+     flag: The Instagram bio says 'Inquire & order @bascota.matcha below'. @bascota.matcha is a separate matcha account that was not in Glenn's screenshots, so I did not use it. The site shop covers the matcha prices.
+     flag: Hours null: they have no fixed hours or location and work events by booking.
+     flag: The site footer names the founder, Salma Elnaggar (the homepage says 'Hi, I'm Salma, the founder of Bascota!'), and the company, '© 2026 Bascota LLC'. Glenn's screenshot IMG_5579 shows the same footer, email and phone.
+     flag: Name: the Instagram display name and site header both read 'Bascota Café' (the header adds the Arabic بسكوتة). The page title says 'Bascota | Bay Area Coffee Cart & Mobile Espresso Bar'.
+     flag: The site is Squarespace with Home, Inquire, Shop and Gallery pages. curl worked on every page with no block, so Playwright was not needed.
+     flag: On review: seated in Berkeley as Glenn filed it, though nothing of theirs names Berkeley (Bay Area & Sac, a 510 number).
+     flag: On review: seated at berkeley-services2-2 (yellow sheet: Berkeley's Events seat is Perfect Nine Events'). Glenn's messages of 28 September, 4:20 and 6:09 pm.
+  */
+  'bascota-cafe': {
+    phone: "(510) 953-9510",
+    email: "info.bascota@gmail.com",
+    cuisine: "Event coffee & matcha cart",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Bascota Matcha – Miori","Single-origin ceremonial matcha made from shade-grown tencha leaves of the Samidori cultivar, sourced from Shizuoka, Japan. First spring harvest, stone-ground; smooth, balanced flavor with gentle umami, light sweetness and a clean, creamy finish. JAS Certified Organic. 50g tin $45, 250g pouch $150, 500g pouch $250.",4500,"from"],
+        ["Bascota Matcha – Aika","Award-winning single-origin ceremonial matcha of the Saemidori cultivar from Shizuoka, Japan, recognized at the Japan National Tea Competition with the Minister of Agriculture and Forestry Award. First spring harvest, stone-ground; pronounced natural sweetness, layered umami, ultra-smooth creamy finish. JAS Certified Organic. 50g tin $55, 250g pouch $200, 500g pouch $275.",5500,"from"],
+      ] },
+    ],
+    quoteOnly: "An Egyptian-owned pop-up coffee and matcha cart for weddings, corporate events and parties around the Bay Area and Sacramento, in their own words. The cart is priced by quote; the matcha prices are from their own shop.",
+  },
+
+  /*
      Batch & Brine — gathered 2026-09-21 from own-domain
      they are: World kitchen & cocktails
      logo: https://batchandbrine.com/wp-content/uploads/2023/04/batch-and-brine-logo-full-gold-retina.png (406x120) — not cut into a tile yet
@@ -3901,6 +3932,113 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "A family and woman-owned Pilates and yoga studio in Concord, opening on 5 October, in their own words. The founding-member price is from their own site and the two-week trial from their Instagram.",
+  },
+
+  /*
+     Curio — gathered 2026-09-29 from own
+     they are: Brunch & bar food
+     flag: FOOD ONLY per instruction: left out every cocktail, brunch cocktail, mimosa (single/bottomless), draft beer, cider, hard seltzer, wine, and the happy-hour drink specials (Tecate, draft cider, $2 off pints, house wine, Chupacabra, Mermaid).
+     flag: Left out the happy-hour '#ThrowbackThursday Burger + Tater Tots + Beer + Shot | 18' deal because it includes alcohol (also shown in a pinned Instagram post as 'All for $18', 5pm-7pm every Thursday).
+     flag: Also left out all non-alcoholic drinks under the 'FOOD only' instruction: brunch/dinner coffee & non-alcoholic list (espresso single $4 / double $7, regular coffee $4, Americano $4, cappuccino $6, latte $6, milk $3 (brunch), tea/hot tea $4, lemonade $5 (+$2 passionfruit or raspberry), Sprite/Coke/Diet Coke/Ginger Ale $4, orange juice $5 (brunch), Yerdrink $7), plus the mocktails Faux-jito $7 and Miss Duende $8 and Best Day N/A beer $7. Easy to add back if the page should list non-alcoholic drinks.
+     flag: Coca-Cola Braised Ribs Platter lists 'Fernet Branca BBQ' (an amaro in the sauce). Kept it as a cooked food dish; drop it if the page must avoid any alcohol ingredient.
+     flag: Hours: from the Info page (Curio Brunch Sat-Sun 11am-4pm; Curio Dinner Thu 5pm-9pm, Fri 5pm-10pm, Sat 5pm-10pm; 'Standard closure for restaurant on Monday, Tuesday, Wednesday or for private buyouts'). Happy hour Thu-Fri 5pm-7pm from the Menus page. Instagram bio (Thu-Sat Dinner+Drinks, Sat-Sun Brunch, Thu-Fri HH 5-7) gives days only and agrees; no conflict.
+     flag: The bar itself stays open later than the kitchen per the Info page: Curio Bar Thu 5pm-9pm, Fri 5pm-2am, Sat 11am-2am, Sun 11am-4pm. The hours line shows food service only.
+     flag: Info page lists extra 'Special Dinner Nights: Join Us Before the Show' on Wed Sep 30, Wed Oct 7, Tue Oct 20, Wed Oct 21, Mon Oct 26 2026 and Tue Feb 9 2027; not put in the hours line.
+     flag: Several dishes appear on more than one menu with different prices/descriptions (Deviled Eggs brunch $15 / dinner $14 / happy hour $2 each; Beef Quesabirria 2 for $18 brunch and dinner, 2 for $14 at happy hour; Ribs Platter and Green Goddess Cobb on both brunch and dinner; mixed greens salad on both). Kept each under its own menu section.
+     flag: Section placement: the site uses a Squarespace grid; the 'entrees' heading sits above Pan Seared Salmon, Quesabirria, Ribs and Udon on desktop, so those are under Dinner: Entrees. The brunch Deviled Eggs sits under the LUNCH heading on desktop but at the end of the BRUNCH list on mobile; put it under Brunch.
+     flag: Names converted from the menu's all-caps styling to title case; wording otherwise as published. Diet tags (gf, vg, v) kept as the site prints them, in parentheses.
+     flag: Priced as a pair: Quesabirria '2 for $18' (happy hour '2 for $14'); happy-hour Deviled Eggs '$2 each'. Salads priced half $8 / full $14, recorded as from $8.
+     flag: Site meta description mentions 'fresh oysters' and 'bottomless mimosas'; no oysters appear on the current Menus page, so none listed.
+     flag: order_url is their OpenTable reservation page linked from the site's RESERVE NOW button. The site's Toast link (toasttab.com/curio-bar/giftcards) is gift cards only; no online food ordering is linked.
+     flag: Phone printed as '415.551.7306' on the Info page and '(415) 551-7306' in the site footer (same number). Email info@curiobarsf.com from the site. Private events: Patricia@thechapelsf.com, 415.551.5142 (not used as the main contact).
+     flag: City check: 775 Valencia Street, San Francisco, CA 94110 (Mission District) matches Glenn's 'San Francisco' page. Glenn's category 'Goods' is unusual for a bar/restaurant; Instagram category is 'Cocktail Bar'.
+     flag: Logo: used the round Instagram avatar (hand emblem + CURIO wordmark on dark brown), crop taken inside the Instagram gradient ring so corners may show ring color; mask as a circle. Sharper alternative: the cream CURIO MMXVIII wordmark on the site header in shots/246478_IMG_5566.png, about [0.13,0.07,0.87,0.30] (wide, not square), bg #282210.
+     flag: No blocks: the whole site loaded with plain curl; no Playwright needed.
+     flag: On review: the logo is the CURIO MMXVIII wordmark Glenn zoomed in on (IMG_5566).
+     flag: On review: seated at san-francisco-goods2-27 (yellow sheet: a cocktail bar has no seat, and San Francisco's food seats are taken). Glenn's messages of 28 September, 4:20 and 6:09 pm.
+  */
+  'curio-bar': {
+    address: "775 Valencia Street, San Francisco, CA 94110",
+    phone: "(415) 551-7306",
+    email: "info@curiobarsf.com",
+    hours: "Brunch Sat-Sun 11am-4pm; dinner Thu 5pm-9pm, Fri-Sat 5pm-10pm; happy hour Thu-Fri 5pm-7pm; closed Mon-Wed",
+    cuisine: "Brunch & bar food",
+    sections: [
+      { name: "Brunch", items: [
+        ["Fried Chicken on Waffle Bites","pickled strawberries, maple syrup",1600],
+        ["Brioche French Toast","house-made toasted brioche, stuffed with whipped strawberry frosting, maple syrup, creme fraiche, powdered sugar, strawberries (vg)",1600],
+        ["Classic Breakfast","2 eggs any style, bacon, choice of home fries or salad, seasonal fruit, choice of toast or English muffin",1900],
+        ["Huevos Rancheros","two layers of crispy tortilla, house-made ranchero salsa, charro beans, papas con chorizo, queso fresco, avocado",1800],
+        ["Birriaquiles","house guajillo red salsa, braised birria, sunny side up egg, habanero crema, queso fresco, red onion, cilantro",1900],
+        ["Breakfast Napoleon","puff pastry, eggs, fried chicken, bacon, truffle cream, lemon hollandaise",1900],
+        ["Breakfast Burrito","Oaxaca cheese, tater tots, scrambled eggs, lime crema, avocado, red pickled onion, house salsa (vg); or choose meat: bacon, ham, chorizo",1600],
+        ["Deviled Eggs","tempura crunch, chili garlic crisp (vg)",1500],
+      ] },
+      { name: "Brunch: Lunch", items: [
+        ["Brunch Burger","toasted potato chip sesame bun, secret sauce, American white cheese, side of lettuce, red onion, bread & butter pickles; side salad half +$4 or full +$8, or fries +$3; add bacon +$3, egg +$2, make it Impossible (vg) +$2",1600],
+        ["Fried Chicken Po'Boy","spicy house remoulade, coleslaw, tomato, red pickled onion",1600],
+        ["Beef Quesabirria with Spiced Pho Caldo","Oaxaca & Chihuahua cheese, guajillo salsa, micro cilantro, lime (gf); 2 for $18",1800],
+        ["Coca-Cola Braised Ribs Platter","Fernet Branca BBQ, coleslaw, bread & butter pickles, charro beans, cornbread",2200],
+        ["House Mixed Greens Salad","mango vinaigrette, cucumber, seasonal fruit, red onion, feta cheese, puffed quinoa (gf, vg); half $8, full $14; add grilled chicken +$8 or fried tofu +$5",800,null,"from"],
+        ["Green Goddess Cobb Curio","fried chicken strips, crisp crumbled bacon, feta, red pickled onion, grilled corn, cherry tomato, brie deviled egg, romaine lettuce (gf)",1900],
+      ] },
+      { name: "Brunch: Benedicts", items: [
+        ["Classic Eggs Benedict","grilled ham, preserved lemon hollandaise, chives; on an English muffin with 2 poached eggs, choice of salad or sage home fries",1900],
+        ["Florentine Benedict","sauteed spinach, preserved lemon hollandaise, tomato, red pickled onion; on an English muffin with 2 poached eggs, choice of salad or sage home fries",1800],
+      ] },
+      { name: "Brunch: A la carte", items: [
+        ["2 Eggs","",700],
+        ["Bacon","",600],
+        ["Home Fries","",600],
+        ["Potato Strings","",600],
+        ["Toast & Jam","",400],
+        ["English Muffin & Jam","",400],
+        ["Avocado","",400],
+        ["Seasonal Fruit","",400],
+      ] },
+      { name: "Dinner: Snacks & bites", items: [
+        ["Curio Jacks","roasted nuts, salted caramel popcorn (gf)",600],
+        ["Braised Birria Lumpia","Oaxaca cheese, consommé caldo, onion & cilantro, dipping salsas",1600],
+        ["Jalapeño Cheddar Potato Bites","sweet habanero sauce & secret sauce",1400],
+        ["Miso Garlic Tater Tots","shaved parmesan, togarashi, jalapeno mayo, heinz",1300],
+        ["Impossible Stuffed Mushrooms","sweet garlic chili sauce, herb oil, micro herbs (gf, v)",1500],
+        ["Deviled Eggs","triple creme brie, chili garlic crisp, tempura crunch, micro greens (gf)",1400],
+        ["Fried Calamari","sweet garlic chili sauce, jalapeno aioli, fried homemade butter pickles, sliced jalapeño, charred lemon (gf)",1600],
+        ["Grilled Tofu Spring Roll","pickled carrots & daikon, seasonal fruit, spicy peanut, herbs, vegan XO sauce (gf, v)",1500],
+        ["Passion Fruit Habanero Wings","jalapeno lime aioli, charred lemon, chili, sesame seeds, scallions (gf)",1600],
+        ["Coffee Rubbed Fried Chicken Strips","with house-made ranch sauce, BBQ & secret sauce (gf)",1400],
+        ["Shoestring Fries","",700],
+        ["Original Tater Tots","",900],
+      ] },
+      { name: "Dinner: Burgers & sandwiches", items: [
+        ["The Americana Burger","toasted potato bun, Curio burger sauce, American white cheese, side of lettuce, red onion, bread & butter pickles",1600],
+        ["MC Rib Burger","house BBQ sauce, bread and butter pickles, onion, cabbage slaw",1800],
+        ["Impossible Burger (plant-based patty)","toasted potato bun, Curio burger sauce, American white cheese, side of lettuce, red onion, bread & butter pickles (vg)",1800],
+        ["Buttermilk Fried Chicken Sandwich","chili dusted brined chicken, ranch, house pickles, red onions, cabbage slaw",1800],
+      ] },
+      { name: "Dinner: Entrees", items: [
+        ["Pan Seared Salmon","creamed corn, grilled broccolini, red pepper coulis, micro greens, herb oil (gf); add potato wedges, fries, or a half salad for $5",2800],
+        ["Beef Quesabirria with Spiced Pho Caldo","Oaxaca & Chihuahua cheese, guajillo salsa, micro cilantro, lime (gf); 2 for $18",1800],
+        ["Coca-Cola Braised Ribs Platter","Fernet Branca BBQ, coleslaw, bread & butter pickles, charro beans, cornbread",2200],
+        ["Udon Stir-Fry","udon, soy reduction, baby bok choy, shiitake mushroom & chili garlic crisp, tempura crunch, fried tofu; sub shrimp +$6",2000],
+      ] },
+      { name: "Dinner: Salads & sides", items: [
+        ["Green Goddess Cobb Curio","fried chicken strips, crisp crumbled bacon, feta, red pickled onion, grilled corn, cherry tomato, brie deviled egg, romaine lettuce (gf)",1900],
+        ["House Mixed Green Salad","mango vinaigrette, cucumber, seasonal fruit, red onion, feta cheese, crispy onions, puffed quinoa (gf, vg); half $8, full $14; add grilled chicken +$8, fried tofu +$5 or salmon +$12",800,null,"from"],
+      ] },
+      { name: "Dinner: Dessert", items: [
+        ["Honey Butter Toasted Brioche","filled with coconut gelato, honey drizzle, fruit topping, white chocolate crispy caviar",1100],
+        ["Mango Tart","coconut whipped cream, mango coulis, fruit topping",1000],
+      ] },
+      { name: "Happy hour (Thu-Fri 5pm-7pm)", items: [
+        ["Deviled Eggs","triple creme brie, chili garlic crisp, tempura crunch, micro greens (gf); $2 each",200],
+        ["Passion Fruit Habanero Wings","jalapeno lime aioli, charred lemon, chili, sesame seeds, scallions (gf)",1200],
+        ["Smoked Potato Wedges","with house ranch (gf; v without sauce)",600],
+        ["Beef Quesabirria w/ Spiced Pho Caldo","Oaxaca & Chihuahua cheese, guajillo salsa, micro cilantro, charred lime (gf); 2 for $14",1400],
+        ["Coffee Rubbed Fried Chicken Strips","with house ranch, BBQ & secret sauce (gf)",1000],
+      ] },
+    ],
+    siteNote: "A Mission bar and kitchen on Valencia Street, sister to The Chapel next door, with dinner Thursday to Saturday and brunch at weekends. Food prices are from the menus on their own site; drinks are left out.",
   },
 
   /*
