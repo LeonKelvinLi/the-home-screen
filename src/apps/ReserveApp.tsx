@@ -5,6 +5,7 @@ import { BrandLogo } from '../ios/BrandLogo'
 import { LISTED_KITCHENS } from '../data/brands'
 import { submitApplication } from '../lib/api'
 import { CITY_PAGES } from './registry'
+import { SEAT_RE } from '../data/slots'
 import type { ShellApi } from '../ios/Device'
 import { track } from '../lib/track'
 import { useInPreview } from '../ios/preview'
@@ -44,7 +45,7 @@ export function ReserveApp({ api, seat }: { api: ShellApi; seat?: string }) {
   const preview = useInPreview()
   useEffect(() => {
     if (preview) return
-    const m = seat?.match(/^(.+)-(goods2?|services2?|online|individuals|boutiques)-\d{1,2}$/)
+    const m = seat ? SEAT_RE.exec(seat) : null
     if (!m) return track('reserve_started')
     const city = [...CITY_PAGES, 'BEASTY'].find((c) => c.toLowerCase().replace(/[^a-z0-9]+/g, '-') === m[1])
     track('reserve_started', { seat, page_kind: m[2], ...(city ? { city } : {}) })

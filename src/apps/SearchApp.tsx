@@ -10,6 +10,44 @@ import type { ShellApi } from '../ios/Device'
 import { OPEN_MS } from '../ios/constants'
 import { noteOrigin, track } from '../lib/track'
 import { useInPreview } from '../ios/preview'
+import { ALL_BEASTY_PAGES } from '../data/slots'
+import { ALL_PLACEMENTS } from '../data/categorySeats'
+
+/*
+  THE CATEGORIES LIST. Glenn, 2026-09-30: "Once all these extra BEASTY pages
+  are made, create a category button on the search page to list them all."
+  Leon: "A dropdown for categories". Every BEASTY page, A to Z, each opening its
+  page; nine of them are also on the home screen, the rest only open from here.
+*/
+const SHEET_ABOUT: Record<string, string> = {
+  goods: 'Restaurants and food',
+  boutiques: 'Small boutiques',
+  services: 'Local services',
+  online: 'Brands that ship',
+  individuals: 'People, not shops',
+  goods2: 'Free listings for food',
+  services2: 'Free listings for services',
+}
+interface CategoryRow {
+  kind: string
+  heading: string
+  about: string
+  /** A small copy of the page's background, or null for BEASTY's own photograph. */
+  thumb: string | null
+  count: number
+}
+const CATEGORY_ROWS: CategoryRow[] = ALL_BEASTY_PAGES.map((p) => ({
+  kind: p.kind,
+  heading: p.heading,
+  about: p.about ?? SHEET_ABOUT[p.kind] ?? '',
+  thumb: p.wall ? p.wall.replace(/\.webp$/, '-thumb.webp') : p.yellow ? '/wallpapers/cat-yellow-thumb.webp' : '/wallpapers/cat-beasty-thumb.webp',
+  count: Object.keys(ALL_PLACEMENTS).filter((seat) => seat.startsWith(`beasty-${p.kind}-`)).length,
+})).sort((a, b) => a.heading.localeCompare(b.heading))
+const CITIES_AZ = [...CITY_PAGES].sort((a, b) => a.localeCompare(b))
+
+/** "DJ's" is found by "djs" and "dj", "Pit's" by "pits". */
+const fold = (t: string) => t.toLowerCase().replace(/['’]/g, '')
+const countLine = (n: number) => (n === 0 ? '24 spots open' : n === 1 ? '1 business' : `${n} businesses`)
 
 /**
  * Search across every kitchen at once. This is the argument for the whole
@@ -53,9 +91,15 @@ export function SearchApp({ api }: { api: ShellApi }) {
   const [q, setQ] = useState('')
   const preview = useInPreview()
 
-  const { cityHits, brandHits, itemHits } = useMemo(() => {
+  /* Which drop-down is open under the field: Categories, Cities, or neither. */
+  const [drop, setDrop] = useState<'categories' | 'cities' | null>(null)
+
+  const { categoryHits, cityHits, brandHits, itemHits } = useMemo(() => {
     const term = q.trim().toLowerCase()
-    if (term.length < 2) return { cityHits: [], brandHits: [], itemHits: [] as Hit[] }
+    if (term.length < 2) return { categoryHits: [] as CategoryRow[], cityHits: [], brandHits: [], itemHits: [] as Hit[] }
+
+    /* A category first of all: "tattoo" means BEASTY · Tattoo. */
+    const categoryHits = CATEGORY_ROWS.filter((c) => fold(c.heading).includes(fold(term)) || fold(c.kind).includes(fold(term)))
 
     /*
       Cities first, because a place is a different KIND of answer.
@@ -96,7 +140,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
         }
       }
     }
-    return { cityHits, brandHits, itemHits: itemHits.slice(0, 30) }
+    return { categoryHits, cityHits, brandHits, itemHits: itemHits.slice(0, 30) }
   }, [q])
 
   /*
@@ -105,7 +149,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
     a row are one search.
   */
   const sent = useRef('')
-  const count = cityHits.length + brandHits.length + itemHits.length
+  const count = categoryHits.length + cityHits.length + brandHits.length + itemHits.length
   const submit = (term: string, n: number) => {
     if (preview || term.length < 2 || term === sent.current) return
     sent.current = term
@@ -123,13 +167,44 @@ export function SearchApp({ api }: { api: ShellApi }) {
   }, [q, count])
 
   /* A tapped result: the search that found it, then which answer it was. */
-  const picked = (kind: 'city' | 'brand' | 'item', position: number, target: { brand?: string; city?: string }) => {
+  const picked = (kind: 'category' | 'city' | 'brand' | 'item', position: number, target: { brand?: string; city?: string }) => {
     const term = q.trim().toLowerCase()
     submit(term, count)
     if (preview) return
     track('search_result_clicked', { query: term, position, kind, ...target })
     if (target.brand) noteOrigin({ brand: target.brand, surface: 'search_result', query: term, position })
   }
+
+  const openCategory = (c: CategoryRow, surface: 'search_list' | 'search_result') => {
+    if (!preview) track('category_opened', { page_kind: c.kind, surface })
+    api.goToCity('BEASTY', undefined, c.kind)
+  }
+  const categoryRow = (c: CategoryRow, onPick: () => void) => (
+    <button className="search-brand is-cat" key={c.kind} onClick={onPick}>
+      <span className="search-cat-thumb" aria-hidden="true" style={c.thumb ? { backgroundImage: `url(${c.thumb})` } : undefined} />
+      <span>
+        <strong>BEASTY • {c.heading}</strong>
+        <em>
+          {c.about} · {countLine(c.count)}
+        </em>
+      </span>
+      <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
+    </button>
+  )
+  const cityRow = (c: string, onPick: () => void) => (
+    <button className="search-brand is-city" key={c} onClick={onPick}>
+      <span className="search-city-mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
+          <path d="M12 2.2a7.2 7.2 0 0 1 7.2 7.2c0 4.9-5.4 11-6.6 12.3a.8.8 0 0 1-1.2 0C10.2 20.4 4.8 14.3 4.8 9.4A7.2 7.2 0 0 1 12 2.2Zm0 4.4a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z" />
+        </svg>
+      </span>
+      <span>
+        <strong>{c}</strong>
+        <em>Go to the {c} page</em>
+      </span>
+      <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
+    </button>
+  )
 
   /* A city among the suggestions, so the behaviour is discoverable rather than
      something you have to already know about. */
@@ -144,8 +219,8 @@ export function SearchApp({ api }: { api: ShellApi }) {
           </svg>
           <input
             ref={field}
-            placeholder="Dishes, kitchens, cities"
-          aria-label="Dishes, kitchens, cities"
+            placeholder="Dishes, businesses, categories, cities"
+            aria-label="Dishes, businesses, categories, cities"
             value={q}
             onChange={(e) => setQ(e.target.value)}
           />
@@ -158,6 +233,40 @@ export function SearchApp({ api }: { api: ShellApi }) {
 
         {q.trim().length < 2 ? (
           <>
+            {/* The two drop-downs. Cities left the home screen's swipe on
+                2026-09-30, so this is where the whole list of them lives. */}
+            <div className="search-drops">
+              <button
+                type="button"
+                className={`search-drop-btn${drop === 'categories' ? ' is-open' : ''}`}
+                aria-expanded={drop === 'categories'}
+                aria-controls="search-drop-categories"
+                onClick={() => setDrop(drop === 'categories' ? null : 'categories')}
+              >
+                Categories
+                <Symbol name="chevron.down" size={12} weight={2.8} />
+              </button>
+              <button
+                type="button"
+                className={`search-drop-btn${drop === 'cities' ? ' is-open' : ''}`}
+                aria-expanded={drop === 'cities'}
+                aria-controls="search-drop-cities"
+                onClick={() => setDrop(drop === 'cities' ? null : 'cities')}
+              >
+                Cities
+                <Symbol name="chevron.down" size={12} weight={2.8} />
+              </button>
+            </div>
+            {drop === 'categories' && (
+              <div className="search-drop-list" id="search-drop-categories">
+                {CATEGORY_ROWS.map((c) => categoryRow(c, () => openCategory(c, 'search_list')))}
+              </div>
+            )}
+            {drop === 'cities' && (
+              <div className="search-drop-list" id="search-drop-cities">
+                {CITIES_AZ.map((c) => cityRow(c, () => api.goToCity(c)))}
+              </div>
+            )}
             <h3 className="search-h">Try</h3>
             <div className="search-sugg">
               {suggestions.map((s) => (
@@ -193,30 +302,27 @@ export function SearchApp({ api }: { api: ShellApi }) {
           </>
         ) : (
           <>
+            {categoryHits.length > 0 && (
+              <>
+                <h3 className="search-h">Categories</h3>
+                {categoryHits.map((c, i) =>
+                  categoryRow(c, () => {
+                    picked('category', i + 1, {})
+                    openCategory(c, 'search_result')
+                  }),
+                )}
+              </>
+            )}
+
             {cityHits.length > 0 && (
               <>
                 <h3 className="search-h">Cities</h3>
-                {cityHits.map((c, i) => (
-                  <button
-                    className="search-brand is-city"
-                    key={c}
-                    onClick={() => {
-                      picked('city', i + 1, { city: c })
-                      api.goToCity(c)
-                    }}
-                  >
-                    <span className="search-city-mark" aria-hidden="true">
-                      <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor">
-                        <path d="M12 2.2a7.2 7.2 0 0 1 7.2 7.2c0 4.9-5.4 11-6.6 12.3a.8.8 0 0 1-1.2 0C10.2 20.4 4.8 14.3 4.8 9.4A7.2 7.2 0 0 1 12 2.2Zm0 4.4a2.9 2.9 0 1 0 0 5.8 2.9 2.9 0 0 0 0-5.8Z" />
-                      </svg>
-                    </span>
-                    <span>
-                      <strong>{c}</strong>
-                      <em>Go to the {c} page</em>
-                    </span>
-                    <Symbol name="chevron.right" size={13} color="rgba(60,60,67,0.3)" weight={2.8} />
-                  </button>
-                ))}
+                {cityHits.map((c, i) =>
+                  cityRow(c, () => {
+                    picked('city', i + 1, { city: c })
+                    api.goToCity(c)
+                  }),
+                )}
               </>
             )}
 
@@ -290,10 +396,10 @@ export function SearchApp({ api }: { api: ShellApi }) {
               </>
             )}
 
-            {cityHits.length === 0 && brandHits.length === 0 && itemHits.length === 0 && (
+            {count === 0 && (
               <div className="empty">
                 <h2>Nothing for “{q}”</h2>
-                <p>Try a dish, a cuisine, or a kitchen name.</p>
+                <p>Try a dish, a business name, a category or a city.</p>
               </div>
             )}
           </>

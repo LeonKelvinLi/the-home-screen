@@ -225,7 +225,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
                 className="nav-place"
                 onClick={() => {
                   if (!preview) track('place_navigated', { brand: brand.id, city: place.city, page_kind: place.kind, surface: 'nav_place' })
-                  api.goToCity(place.city, brand.id)
+                  api.goToCity(place.city, brand.id, place.kind)
                 }}
                 aria-label={`Go to the ${place.city} ${place.page} page`}
               >

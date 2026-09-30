@@ -10,6 +10,7 @@
 export type SymbolName =
   | 'chevron.right'
   | 'chevron.left'
+  | 'chevron.down'
   | 'phone.fill'
   | 'star.fill'
   | 'clock.fill'
@@ -40,6 +41,7 @@ export type SymbolName =
 const P: Record<SymbolName, string> = {
   'chevron.right': 'M9 5.5 15.5 12 9 18.5',
   'chevron.left': 'M15 5.5 8.5 12 15 18.5',
+  'chevron.down': 'M5.5 9 12 15.5 18.5 9',
   'phone.fill':
     'M6.6 3.2c.8-.5 1.8-.3 2.3.5l1.9 2.9c.5.7.3 1.7-.4 2.2l-1.2.9c-.3.2-.4.6-.2.9a14 14 0 0 0 4.4 4.4c.3.2.7.1.9-.2l.9-1.2c.5-.7 1.5-.9 2.2-.4l2.9 1.9c.8.5 1 1.5.5 2.3l-1.1 1.6c-.7 1-2 1.4-3.1 1A21 21 0 0 1 4 7.9c-.4-1.1 0-2.4 1-3.1Z',
   'star.fill': 'm12 3.6 2.6 5.4 5.9.8-4.3 4.1 1 5.9-5.2-2.8-5.2 2.8 1-5.9L3.5 9.8l5.9-.8Z',
@@ -92,7 +94,7 @@ const P: Record<SymbolName, string> = {
 }
 
 /** Symbols drawn as strokes rather than fills. */
-const STROKED: SymbolName[] = ['chevron.right', 'chevron.left', 'checkmark']
+const STROKED: SymbolName[] = ['chevron.right', 'chevron.left', 'chevron.down', 'checkmark']
 
 interface Props {
   name: SymbolName

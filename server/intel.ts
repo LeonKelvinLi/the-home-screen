@@ -22,9 +22,10 @@
 import { createHmac } from 'node:crypto'
 import { pool } from './db/schema'
 import { BRANDS } from '../src/data/brands'
-import { CITY_PLACEMENTS } from '../src/data/placements'
+import { ALL_PLACEMENTS } from '../src/data/categorySeats'
 import { CITY_PAGES } from '../src/data/cities'
 import { seatsOf } from '../src/data/seats'
+import { PAGE_KINDS as ALL_PAGE_KINDS, SEAT_RE } from '../src/data/slots'
 import { isBot } from './analytics'
 
 type Prop = 'brand' | 'city' | 'page_kind' | 'seat' | 'surface' | 'position' | 'query' | 'kind' | 'count' | 'dwell_ms' | 'door'
@@ -45,13 +46,14 @@ export const CLIENT_EVENTS: Record<string, { label: string; props: Prop[] }> = {
   gate_shown: { label: 'Was asked to sign up', props: ['door'] },
   clip_played: { label: 'Watched a clip', props: ['brand'] },
   reserve_started: { label: 'Opened Reserve a Spot', props: ['seat', 'city', 'page_kind'] },
+  category_opened: { label: 'Opened a BEASTY category', props: ['page_kind', 'surface'] },
 }
 
 const BRAND_IDS = new Set(BRANDS.map((b) => b.id))
 const CITIES = new Set([...CITY_PAGES, 'BEASTY'])
-const PAGE_KINDS = new Set(['goods', 'services', 'goods2', 'services2', 'online', 'individuals', 'boutiques'])
+const PAGE_KINDS = new Set(ALL_PAGE_KINDS)
 const SURFACES = new Set(['home_tile', 'search_result', 'search_list', 'city_row', 'nav_place', 'reel', 'share_link', 'recents', 'favorites', 'news', 'gallery', 'dock', 'business_page', 'landing', 'members', 'other'])
-const KINDS = new Set(['call', 'text', 'email', 'directions', 'website', 'order', 'menu', 'instagram', 'clip', 'booking', 'brand', 'item', 'city'])
+const KINDS = new Set(['call', 'text', 'email', 'directions', 'website', 'order', 'menu', 'instagram', 'clip', 'booking', 'brand', 'item', 'city', 'category'])
 export const ENTRY_TYPES = new Set(['direct', 'shared_business', 'register_qr', 'member_ref', 'crm_ref', 'campaign', 'search_engine', 'social', 'referral', 'shared_page'])
 const DEVICES = new Set(['phone', 'tablet', 'desktop'])
 
@@ -80,7 +82,7 @@ function clean(prop: Prop, v: unknown): string | number | null {
     case 'page_kind':
       return typeof v === 'string' && PAGE_KINDS.has(v) ? v : null
     case 'seat':
-      return typeof v === 'string' && /^[a-z0-9-]{3,60}-(goods2?|services2?|online|individuals|boutiques)-\d{1,2}$/.test(v) ? v : null
+      return typeof v === 'string' && v.length <= 80 && /^[a-z0-9-]+$/.test(v) && SEAT_RE.test(v) ? v : null
     case 'surface':
       return typeof v === 'string' && SURFACES.has(v) ? v : null
     case 'kind':
@@ -370,12 +372,13 @@ export async function snapshotDirectory(now = Date.now()): Promise<{ brands: num
   let opened = 0
   let closed = 0
   for (const [seat, brand] of was) {
-    if (CITY_PLACEMENTS[seat] !== brand) {
+    if (ALL_PLACEMENTS[seat] !== brand) {
       await pool.query('UPDATE analytics_placements SET to_at = $3 WHERE seat = $1 AND brand_id = $2 AND to_at IS NULL', [seat, brand, now])
       closed++
     }
   }
-  for (const [seat, brand] of Object.entries(CITY_PLACEMENTS)) {
+  /* Category-page seats included: a tattoo studio holds BEASTY · Tattoo as well as its city seat. */
+  for (const [seat, brand] of Object.entries(ALL_PLACEMENTS)) {
     if (was.get(seat) === brand) continue
     await pool.query('INSERT INTO analytics_placements (seat, brand_id, from_at) VALUES ($1, $2, $3) ON CONFLICT DO NOTHING', [seat, brand, now])
     opened++

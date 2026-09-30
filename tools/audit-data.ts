@@ -17,9 +17,15 @@
   up the root tsconfig, which does not carry the `react-jsx` runtime, and this
   audit imports the registry, which is full of JSX. The flag is the whole fix.
 */
+import { existsSync } from 'node:fs'
+import { dirname, join } from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { BRANDS, VENDORS, brandById } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
+import { BEASTY_CATEGORIES, CATEGORY_KINDS, CATEGORY_SPOTS } from '../src/data/categories'
+import { CATEGORY_PLACEMENTS } from '../src/data/categorySeats'
+import { PAGE_KINDS, HOME_PAGES } from '../src/data/slots'
 import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
 import {
   GOODS_CATEGORIES,
@@ -56,6 +62,7 @@ for (const [id, n] of seen) if (n > 1) err(`brand id ${id} appears ${n}× — tw
   The alternation below is BUILT from these keys rather than written out again,
   so adding the next page kind here is the only edit needed.
 */
+const ROOT_DIR = join(dirname(fileURLToPath(import.meta.url)), '..')
 const KINDS: Record<string, number> = {
   goods: GOODS_CATEGORIES.length,
   services: SERVICE_CATEGORIES.length,
@@ -64,6 +71,8 @@ const KINDS: Record<string, number> = {
   online: ONLINE_CATEGORIES.length,
   individuals: INDIVIDUAL_SPOTS.length,
   boutiques: BOUTIQUE_SPOTS.length,
+  /* The BEASTY category pages, twenty-four each (src/data/categories.ts). */
+  ...Object.fromEntries(CATEGORY_KINDS.map((k) => [k, CATEGORY_SPOTS])),
 }
 /* Longest first, so `goods2` is not eaten by `goods`. */
 const KEY_RE = new RegExp(
@@ -103,6 +112,30 @@ for (const [id, keys] of seatOf) {
   if (realCities.length > 1)
     warn(`${brandById(id)?.name ?? id} is seated in ${realCities.length} cities: ${keys.join(', ')} — check it really has that many locations`)
   else note(`${brandById(id)?.name ?? id} sits on the BEASTY sheet and in its city (intended): ${keys.join(', ')}`)
+}
+
+// ---- 2a. the BEASTY category pages ---------------------------------------
+/*
+  Glenn, 2026-09-30: nine category pages on the home screen, every other one in
+  Search, each holding its best twenty-four. The list of page kinds is read by
+  the server and the CRM too, so a kind missing from it is a seat nobody counts.
+*/
+for (const k of Object.keys(KINDS)) if (!PAGE_KINDS.includes(k)) err(`page kind ${k} is not in slots.ts PAGE_KINDS`)
+if (HOME_PAGES.filter((p) => !p.yellow).length !== 9) err(`the home screen has ${HOME_PAGES.filter((p) => !p.yellow).length} category pages, not 9`)
+for (const c of BEASTY_CATEGORIES) {
+  if (!/^[a-z]+$/.test(c.kind)) err(`category kind ${c.kind} is not plain lower-case letters`)
+  if (!existsSync(join(ROOT_DIR, 'public', c.wall))) err(`category ${c.heading} has no background at public${c.wall}`)
+  if (!existsSync(join(ROOT_DIR, 'public', c.wall.replace(/\.webp$/, '-thumb.webp')))) err(`category ${c.heading} has no Search thumbnail`)
+  const seats = Object.entries(CATEGORY_PLACEMENTS).filter(([s]) => s.startsWith(`beasty-${c.kind}-`))
+  const held = new Set<string>()
+  for (const [seat, id] of seats) {
+    if (!ids.has(id)) err(`category seat ${seat} points at ${id}, which is not a brand`)
+    if (held.has(id)) err(`${brandById(id)?.name ?? id} holds two spots on BEASTY · ${c.heading}`)
+    held.add(id)
+  }
+  const matching = c.test ? BRANDS.filter((b) => c.test!.test(b.cuisine) && !c.not?.test(b.cuisine)).length : 0
+  if (matching > CATEGORY_SPOTS) warn(`${matching} businesses fit BEASTY · ${c.heading}; only ${CATEGORY_SPOTS} show — pick the best by seating them by hand`)
+  note(`BEASTY · ${c.heading}: ${seats.length} of ${CATEGORY_SPOTS} spots filled`)
 }
 
 // ---- 2b. menus nobody has confirmed -----------------------------------

@@ -492,6 +492,19 @@ await p.goto(base + '/', { waitUntil: 'networkidle', timeout: 60000 })
 const enter = p.locator('[aria-label="Enter BEASTY"]').first()
 try { await enter.waitFor({ state: 'visible', timeout: 15000 }); await enter.click(); await p.waitForTimeout(2600) } catch { await p.waitForTimeout(1200) }
 if (await p.locator('[aria-label="Enter BEASTY"]').count()) { await enter.click().catch(() => {}); await p.waitForTimeout(2600) }
+/* 2026-09-30: the swipe is BEASTY's nine category pages and the yellow sheets,
+   no cities ("You won't be able to scroll for cities unless you just search
+   for that city"). Read from the page dots, which name every page. */
+const swipe = await p.evaluate(() => [...document.querySelectorAll('.page-dots .dot')].map((d) => d.getAttribute('aria-label') ?? ''))
+const swipeTotal = Number(/ of (\d+)/.exec(swipe[0] ?? '')?.[1] ?? 0)
+const nine = swipe.slice(0, 9).map((l) => l.replace(/^Page \d+ of \d+, BEASTY, /, ''))
+console.log('home swipe    :', JSON.stringify({ pages: swipeTotal, first: nine }))
+if (nine.join(',') !== 'Eats,Goods,Services,Online,Individuals,Tattoo,Whips,Gyms,Salons') fails.push(`the home screen's nine category pages read ${nine.join(', ')}`)
+if (!swipeTotal || swipeTotal > 20) fails.push(`the home screen swipe is ${swipeTotal} pages long; the cities should only come from Search`)
+for (const w of ['cat-tattoo.webp', 'cat-realtors-thumb.webp', 'cat-beasty-thumb.webp']) {
+  const r = await fetch(`${base}/wallpapers/${w}`).catch(() => null)
+  if (!r?.ok || !/image\/webp/.test(r.headers.get('content-type') ?? '')) fails.push(`/wallpapers/${w} is not served as an image`)
+}
 await p.evaluate(() => window.dispatchEvent(new CustomEvent('beasty:join')))
 await p.waitForSelector('.join', { timeout: 20000 }).catch(() => {})
 const form = await p.evaluate(() => ({
@@ -569,6 +582,8 @@ for (const s of [
      (the switch itself stays hidden until a yearly price exists). */
   'api/members/pass', 'Refreshes in', 'single scan', 'api/members/', '/profile', 'Nothing liked yet',
   'api/members/tickets', 'ticket-stub', 'members-interval',
+  /* 2026-09-30: the BEASTY category pages and Search's Categories and Cities drop-downs. */
+  'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', 'cat-barbershops.webp', 'Barbers, cuts and shaves',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

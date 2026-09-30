@@ -326,3 +326,12 @@ nearly-large-enough one gets a resample.
   same corner of town as his link, which was a DuckDuckGo image result of the
   DoubleTree at Sierra Point, a TripAdvisor photograph and not ours to use.
   3629x2410, so no super-resolution. The page opened for 7 Mile House.
+
+## BEASTY category pages (cat-*.webp)
+
+Not photographs. The nineteen `cat-<kind>.webp` backgrounds for the BEASTY
+category pages (Tattoo, Whips, Gyms and the rest, 2026-09-30) are drawn by
+`tools/make-category-walls.py` from gradients and simple shapes, so there is no
+licence to check. Glenn asked for "an appropriate background for each
+category"; any of them can be replaced by a photograph under the same file name.
+The `-thumb.webp` files are 132px squares of each for Search's Categories list.

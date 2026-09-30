@@ -6,8 +6,9 @@ import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { useGate } from '../lib/gate'
-import { BEASTY_SHEETS, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
-import { CITY_PLACEMENTS } from '../data/placements'
+import { ALL_BEASTY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
+import type { SlotPage } from '../data/slots'
+import { ALL_PLACEMENTS } from '../data/categorySeats'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -51,6 +52,11 @@ interface Page {
    */
   tile?: number
   rowGap?: number
+  /**
+   * Added for one visit rather than always in the swipe: a city, or a BEASTY
+   * category past the home screen's nine. Its dots are its own run.
+   */
+  extra?: true
 }
 
 interface Props {
@@ -68,11 +74,40 @@ interface Props {
   jumpToCity?: string | null
   /** With it, the app whose tile the page must hold — see ShellApi.goToCity. */
   jumpToApp?: string
+  /** With it, which page: `tattoo` for BEASTY · Tattoo, `services` for a city's Services. */
+  jumpToKind?: string
   /** Called once the jump has been made, so the request is not repeated. */
   onJumped?: () => void
 }
 
-export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpToApp, onJumped }: Props) {
+/*
+  WHAT A JUMP NEEDS ADDED TO THE SWIPE, as `city:Oakland` or `kind:realtors`,
+  or null when the page is already on the home screen.
+
+  Glenn, 2026-09-30: "we will limit the amount of pages on the home screen to
+  let's say 9 categories … You won't be able to scroll for cities unless you
+  just search for that city to get on that page." So the swipe holds BEASTY's
+  nine categories and the two yellow sheets, and a city or another category is
+  put on the end for as long as someone is visiting it.
+*/
+const ON_HOME = new Set(HOME_PAGES.map((p) => p.kind))
+function extraFor(city: string, appId?: string, kind?: string): string | null {
+  if (city.toLowerCase() !== 'beasty') {
+    const name = CITY_PAGES.find((c) => c.toLowerCase() === city.toLowerCase())
+    return name ? `city:${name}` : null
+  }
+  if (kind) return ON_HOME.has(kind) ? null : ALL_BEASTY_PAGES.some((p) => p.kind === kind) ? `kind:${kind}` : null
+  /* A business whose only BEASTY seat is on a category page past the nine. */
+  if (appId) {
+    const kinds = Object.entries(ALL_PLACEMENTS)
+      .filter(([seat, id]) => id === appId && seat.startsWith('beasty-'))
+      .map(([seat]) => seat.split('-')[1])
+    if (kinds.length && !kinds.some((k) => ON_HOME.has(k))) return `kind:${kinds[0]}`
+  }
+  return null
+}
+
+export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpToApp, jumpToKind, onJumped }: Props) {
   const cart = useCart()
   const screen = useScreenSize()
   /*
@@ -82,6 +117,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
   */
   const { gate, account } = useGate()
   const [page, setPage] = useState(0)
+  /** The city or category being visited, on the end of the swipe — see extraFor. */
+  const [extra, setExtra] = useState<string | null>(null)
   /*
     Which of the three dock sets is showing — his "Default is 1".
 
@@ -389,15 +426,15 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       drift apart in shape, and so the order below is fixed in exactly one
       place: SLOT_PAGES.
     */
-    const buildCity = (cityName: string) => {
+    const buildCity = (cityName: string, sheets: SlotPage[], visiting = false) => {
       const key = cityName.toLowerCase().replace(/[^a-z0-9]+/g, '-')
       /*
-        The flagship carries one sheet the cities do not: BEASTY · Online, for
-        brands that ship. A city's 48 numbered spots and its two yellow sheets
-        are exactly as they were, so "the first 48 are the first two pages"
-        still holds everywhere it is sold.
+        BEASTY runs its own sheets (HOME_PAGES, or the one category being
+        visited); a city runs SLOT_PAGES. A city's 48 numbered spots and its
+        two yellow sheets are exactly as they were, so "the first 48 are the
+        first two pages" still holds everywhere it is sold.
       */
-      for (const slotPage of cityName === 'BEASTY' ? BEASTY_SHEETS : SLOT_PAGES) {
+      for (const slotPage of sheets) {
         /*
           Chunked, and the INDEX IS GLOBAL. A slot's id is its position in the
           operator's category list, not its position on the page it happens to
@@ -422,11 +459,13 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           further — its blanks still stop at one page's worth.
         */
         let total = slotPage.categories.length
-        if (slotPage.yellow) {
+        /* A category page's open spots are the same kind of "there is room
+           here" as a yellow sheet's, so they stop at one page's worth too. */
+        if (slotPage.yellow || slotPage.wall) {
           total = Math.min(total, slotsPerPage)
           for (let i = slotPage.categories.length - 1; i >= total; i--) {
             const slot = `${key}-${slotPage.kind}-${i}`
-            if (CITY_PLACEMENTS[slot] && appForSlot(slot).kind === 'brand') {
+            if (ALL_PLACEMENTS[slot] && appForSlot(slot).kind === 'brand') {
               total = i + 1
               break
             }
@@ -448,16 +487,21 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
             tile: slotTile,
             rowGap: slotGap,
             ...(slotPage.yellow ? { wall: '/wallpapers/_beasty-pages.webp', yellow: true } : {}),
-            apps: litOrder(
-              chunk.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${from + i}`)),
-              cityName,
-            ),
+            /* A category page brings its own background, and keeps its spots in
+               number order: litOrder aims at the light parts of BEASTY's photo,
+               which is not behind it. */
+            ...(slotPage.wall ? { wall: slotPage.wall } : {}),
+            ...(visiting ? { extra: true as const } : {}),
+            apps: (() => {
+              const apps = chunk.map((_, i) => appForSlot(`${key}-${slotPage.kind}-${from + i}`))
+              return slotPage.wall ? apps : litOrder(apps, cityName)
+            })(),
           })
         }
       }
     }
 
-    buildCity('BEASTY')
+    buildCity('BEASTY', HOME_PAGES)
 
     for (const group of APP_GROUPS) {
       if (!group.length) continue
@@ -484,10 +528,20 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       and so a tapped tile can be resolved back to a category, which is all
       makeSlot has to go on.
     */
-    for (const cityName of CITY_PAGES) buildCity(cityName)
+    /*
+      NOT EVERY CITY ANY MORE — only the one being visited. The four pages per
+      city are unchanged; they are simply not in the swipe until Search, or a
+      business page's place button, asks for them (extraFor, above). With every
+      city in, the swipe was eighty-odd pages long.
+    */
+    if (extra?.startsWith('city:')) buildCity(extra.slice(5), SLOT_PAGES, true)
+    if (extra?.startsWith('kind:')) {
+      const sheet = ALL_BEASTY_PAGES.find((p) => p.kind === extra.slice(5))
+      if (sheet) buildCity('BEASTY', [sheet], true)
+    }
 
     return out.length ? out : [{ apps: [] }]
-  }, [screen.columns, screen.iconSize, screen.h, screen.device])
+  }, [screen.columns, screen.iconSize, screen.h, screen.device, extra])
 
   // Never strand the user on a page that no longer exists after a resize.
   const safePage = Math.min(page, pages.length - 1)
@@ -513,12 +567,26 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
 
     The app-group pages carry no city, so they get their own run.
   */
-  const dotGroup = (i: number) => pages[i]?.city ?? '\u0000apps'
+  const dotGroup = (i: number) => (pages[i]?.extra ? '\u0000extra' : pages[i]?.city ?? '\u0000apps')
   const here = dotGroup(safePage)
   let dotFrom = safePage
   while (dotFrom > 0 && dotGroup(dotFrom - 1) === here) dotFrom--
   let dotTo = safePage
   while (dotTo < pages.length - 1 && dotGroup(dotTo + 1) === here) dotTo++
+  /*
+    AS MANY AS FIT BETWEEN THE ARROWS. BEASTY's run is eleven categories, and
+    on a short screen in Safari several of them take two pages, which came to
+    twenty-four dots running under the step arrows on an iPhone SE. Past what
+    fits, the row shows the stretch around the current page; every dot still
+    says "Page 7 of 24" to a reader. A dot is 7px with an 8px gap, and each
+    arrow keeps 54px of the edge (.page-step and its hit area).
+  */
+  const maxDots = Math.max(5, Math.floor((screen.w - 2 * 54 + 8) / 15))
+  if (dotTo - dotFrom + 1 > maxDots) {
+    const from = Math.min(Math.max(dotFrom, safePage - Math.floor(maxDots / 2)), dotTo - maxDots + 1)
+    dotFrom = from
+    dotTo = from + maxDots - 1
+  }
   /* Page one has no city of its own, so it keeps the default photograph. */
   const city = pages[safePage]?.city ?? DEFAULT_CITY
   /* Yellow sheets bring their own paper; everything else follows the city. */
@@ -573,15 +641,24 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
   */
   useEffect(() => {
     if (!jumpToCity) return
+    /* Put the city or category on the end of the swipe first; this runs again
+       once the pages have been rebuilt with it. Going home takes it off. */
+    const want = extraFor(jumpToCity, jumpToApp, jumpToKind)
+    if (want !== extra) {
+      setExtra(want)
+      return
+    }
     const inCity = (p: Page) => p.city?.toLowerCase() === jumpToCity.toLowerCase()
+    const onPage = (p: Page) => inCity(p) && (!jumpToKind || p.kind === jumpToKind)
     /* A business page asking for its own city wants the page its tile is on;
        a city with no such tile (or Search, which names no app) gets its first. */
-    const withApp = jumpToApp ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp)) : -1
-    const i = withApp >= 0 ? withApp : pages.findIndex(inCity)
+    const withApp = jumpToApp ? pages.findIndex((p) => onPage(p) && p.apps.some((a) => a.id === jumpToApp)) : -1
+    const anyWithApp = jumpToApp && withApp < 0 ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp)) : -1
+    const i = [withApp, anyWithApp, pages.findIndex(onPage), pages.findIndex(inCity)].find((n) => n >= 0) ?? -1
     if (i >= 0) setPage(i)
     onJumped?.()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [jumpToCity, jumpToApp, pages.length])
+  }, [jumpToCity, jumpToApp, jumpToKind, pages])
 
   /*
     Say which page we landed on, wherever the turn came from — a dot, an arrow

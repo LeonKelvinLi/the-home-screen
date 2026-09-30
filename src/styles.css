@@ -13254,3 +13254,61 @@ span.top3-add {
 
 .earn-out { display: flex; flex-direction: column; gap: 10px; padding: 8px 0 4px; }
 .earn-out p { margin: 0; font-size: 14px; line-height: 1.45; color: var(--muted); }
+
+/* ---------- Search: the Categories and Cities drop-downs (2026-09-30) ---------- */
+
+.search-drops {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.search-drop-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  min-height: 46px;
+  padding: 10px 14px;
+  border-radius: var(--radius);
+  background: #1c1c1e;
+  color: #f6d800;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.search-drop-btn svg {
+  transition: transform 0.2s ease;
+}
+
+.search-drop-btn.is-open svg {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-drop-btn svg {
+    transition: none;
+  }
+}
+
+.search-drop-list {
+  margin-top: 8px;
+}
+
+/* The words take the row, so every chevron lines up at the right edge. */
+.search-brand.is-cat > span:nth-child(2),
+.search-brand.is-city > span:nth-child(2) {
+  flex: 1 1 auto;
+}
+
+/* A category row: a small piece of the page's own background where a logo goes.
+   Two classes, to win over .search-brand span. */
+.search-brand .search-cat-thumb {
+  display: block;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 auto;
+  border-radius: 12px;
+  background: #1c1c1e center / cover no-repeat;
+}

@@ -6,7 +6,7 @@ import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
 import { SQUIRCLE_100 } from '../ios/squircle'
 import { GLYPHS } from '../data/glyphs'
-import { CITY_PLACEMENTS } from '../data/placements'
+import { ALL_PLACEMENTS } from '../data/categorySeats'
 import { categoriesFor } from '../data/slots'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
@@ -195,7 +195,7 @@ export { CITY_PAGES } from '../data/cities'
  * a typo should leave a spot looking unsold, not take the home screen down.
  */
 export const appForSlot = (key: string | number): AppDef => {
-  const claimed = CITY_PLACEMENTS[String(key)]
+  const claimed = ALL_PLACEMENTS[String(key)]
   if (claimed) {
     const app = ALL_APPS.find((a) => a.id === claimed)
     if (app) return app
@@ -631,7 +631,7 @@ export const appById = (id: string) =>
   and the few brands neither on his roster nor placed in a city. Roster-only
   name seeds are excluded outright — their tile IS their seat.
 */
-const SEATED = new Set(Object.values(CITY_PLACEMENTS))
+const SEATED = new Set(Object.values(ALL_PLACEMENTS))
 const OTHER_BRANDS = BRAND_APPS.filter((a) => {
   if (SEATED.has(a.id)) return false
   return !brandById(a.id)?.rosterOnly

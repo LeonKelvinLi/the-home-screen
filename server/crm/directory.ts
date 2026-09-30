@@ -11,8 +11,8 @@ import { readdirSync, readFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { BRANDS } from '../../src/data/brands'
-import { CITY_PLACEMENTS } from '../../src/data/placements'
-import { BEASTY_SHEETS, SLOT_PAGES } from '../../src/data/slots'
+import { ALL_BEASTY_PAGES, SEAT_RE, SLOT_PAGES } from '../../src/data/slots'
+import { ALL_PLACEMENTS } from '../../src/data/categorySeats'
 import { CITY_PAGES } from '../../src/data/cities'
 import { channelsOf, familyKey, websiteStatusOf } from '../../src/crm/model'
 import type { Channels, WebsiteStatus } from '../../src/crm/model'
@@ -55,11 +55,12 @@ export interface Business {
 const slug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 const CITY_BY_SLUG = new Map<string, string>([['beasty', 'BEASTY']])
 for (const c of CITY_PAGES) CITY_BY_SLUG.set(slug(c), c)
-const PAGES = [...BEASTY_SHEETS, ...SLOT_PAGES]
-const SEAT_RE = /^(.*)-(goods2|services2|goods|services|online|individuals|boutiques)-(\d+)$/
+const PAGES = [...ALL_BEASTY_PAGES, ...SLOT_PAGES]
 
 const seatsById = new Map<string, Seat[]>()
-for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {
+/* The category pages' seats too (BEASTY · Tattoo and the rest), so a business's
+   card lists every page it is on. */
+for (const [key, id] of Object.entries(ALL_PLACEMENTS)) {
   const m = SEAT_RE.exec(key)
   if (!m) continue
   const [, citySlug, kind, idx] = m

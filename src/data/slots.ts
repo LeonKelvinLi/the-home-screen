@@ -1,3 +1,5 @@
+import { BEASTY_CATEGORIES, CATEGORY_SPOTS } from './categories'
+
 /**
  * The spots on a city's pages, and what each one is for.
  *
@@ -233,7 +235,10 @@ export const BOUTIQUE_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) 
   label: 'Available',
 }))
 
-/** Which of a city's pages a set of spots belongs to. */
+/**
+ * Which of a city's pages a set of spots belongs to. A BEASTY category page
+ * (tattoo, gyms, …) is named by its own word from categories.ts.
+ */
 export type SlotPageKind =
   | 'goods'
   | 'goods2'
@@ -242,6 +247,7 @@ export type SlotPageKind =
   | 'online'
   | 'individuals'
   | 'boutiques'
+  | (string & {})
 
 export interface SlotPage {
   /**
@@ -263,6 +269,10 @@ export interface SlotPage {
    * customer at a glance that the spots on it are still available.
    */
   yellow?: true
+  /** A BEASTY category page's own background, in place of the city photograph. */
+  wall?: string
+  /** One line saying what the page is for, shown in Search's Categories list. */
+  about?: string
 }
 
 /**
@@ -321,9 +331,53 @@ export const BEASTY_SHEETS: SlotPage[] = [
   SLOT_PAGES[3],
 ]
 
+/*
+  THE CATEGORY PAGES — BEASTY · Tattoo, BEASTY · Gyms and the rest (see
+  categories.ts). Twenty-four spots each, named for the page, so a blank on
+  BEASTY · Tattoo opens Reserve as "Tattoo — spot available".
+*/
+export const CATEGORY_PAGES: SlotPage[] = BEASTY_CATEGORIES.map((c) => ({
+  kind: c.kind,
+  heading: c.heading,
+  wall: c.wall,
+  about: c.about,
+  categories: Array.from({ length: CATEGORY_SPOTS }, (_, i) => ({ n: i + 1, name: c.heading, label: 'Available' })),
+}))
+
+/*
+  WHAT THE HOME SCREEN SWIPES THROUGH. Glenn, 2026-09-30: "we will limit the
+  amount of pages on the home screen to let's say 9 categories … You won't be
+  able to scroll for cities unless you just search for that city".
+
+  Nine category pages: his five flagship sheets in his order, then the four
+  category pages with the most businesses on them today. After them come the
+  two yellow sheets, which are not categories but the free listings behind Eats
+  and Services. Every other category and every city opens from Search.
+*/
+export const HOME_KINDS: string[] = ['goods', 'boutiques', 'services', 'online', 'individuals', 'tattoo', 'whips', 'gyms', 'salons']
+
+/** Every BEASTY page there is: the flagship sheets, then the category pages. */
+export const ALL_BEASTY_PAGES: SlotPage[] = [...BEASTY_SHEETS, ...CATEGORY_PAGES]
+
+/** The home screen's BEASTY run, in order: the nine categories, then the yellow sheets. */
+export const HOME_PAGES: SlotPage[] = [
+  ...HOME_KINDS.map((k) => ALL_BEASTY_PAGES.find((p) => p.kind === k)!),
+  ...BEASTY_SHEETS.filter((p) => p.yellow),
+]
+
+/**
+ * Every word a seat id can carry between the city and the number. The server's
+ * event check, the CRM and the audits read this one list, so a new page kind is
+ * added in one place.
+ */
+export const PAGE_KINDS: string[] = [...new Set([...SLOT_PAGES, ...ALL_BEASTY_PAGES].map((p) => p.kind))]
+
+/** A seat id, `oakland-goods-5` or `beasty-tattoo-3`: the place, the page, the spot. Longest kind first, so `goods2` is not read as `goods`. */
+export const SEAT_RE = new RegExp(`^(.+)-(${[...PAGE_KINDS].sort((a, b) => b.length - a.length).join('|')})-(\\d{1,2})$`)
+
 /** The categories on a city page, or nothing if the id names no known page. */
 export const categoriesFor = (kind: string | undefined): SlotCategory[] | undefined =>
-  BEASTY_SHEETS.find((p) => p.kind === kind)?.categories
+  ALL_BEASTY_PAGES.find((p) => p.kind === kind)?.categories
 
 /**
  * The most spots a single city page holds — his twenty-four.

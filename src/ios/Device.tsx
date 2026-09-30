@@ -36,8 +36,13 @@ export interface ShellApi {
    * With an app id, the page of that city its tile is on — a business page's
    * city button lands on the page with the business, Services or a yellow
    * sheet included, rather than the city's first page.
+   *
+   * With a page kind, that page: `goToCity('BEASTY', undefined, 'tattoo')` is
+   * BEASTY · Tattoo, which Search's Categories list opens. A city's pages and
+   * the category pages past the home screen's nine are not in the swipe; the
+   * home screen adds the one asked for (see HomeScreen's `extra`).
    */
-  goToCity: (city: string, appId?: string) => void
+  goToCity: (city: string, appId?: string, kind?: string) => void
 }
 
 type Phase = 'home' | 'opening' | 'open' | 'closing' | 'switcher'
@@ -348,14 +353,14 @@ export function Device({ renderApp, openOnMount }: Props) {
     A city the home screen has been asked to move to, held here rather than in
     HomeScreen because the request comes from an app on top of it.
   */
-  const [jumpCity, setJumpCity] = useState<{ city: string; appId?: string } | null>(null)
+  const [jumpCity, setJumpCity] = useState<{ city: string; appId?: string; kind?: string } | null>(null)
 
   const api: ShellApi = {
     openApp: (id) => openApp(id),
     closeApp,
     currentAppId: appId,
-    goToCity: (city, appId) => {
-      setJumpCity({ city, appId })
+    goToCity: (city, appId, kind) => {
+      setJumpCity({ city, appId, kind })
       closeApp()
     },
   }
@@ -391,6 +396,7 @@ export function Device({ renderApp, openOnMount }: Props) {
               inert={inSwitcher}
               jumpToCity={jumpCity?.city}
               jumpToApp={jumpCity?.appId}
+              jumpToKind={jumpCity?.kind}
               onJumped={() => setJumpCity(null)}
             />
 

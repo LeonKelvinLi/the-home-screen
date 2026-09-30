@@ -148,7 +148,7 @@ for (const [what, id, want, lands] of cases) {
   await p.waitForTimeout(800)
   const before = await where(p)
   await p.locator('button', { hasText: /^Search$/ }).first().click()
-  await p.fill('input[aria-label="Dishes, kitchens, cities"]', 'Zadna')
+  await p.fill('input[aria-label="Dishes, businesses, categories, cities"]', 'Zadna')
   await p.locator('.search-brand', { hasText: 'Zadna Grill' }).first().click()
   await p.waitForSelector('.nav-place', { timeout: 20000 }).catch(() => {})
   const l = await label(p)
