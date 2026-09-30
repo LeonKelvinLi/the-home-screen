@@ -173,8 +173,11 @@ const AUDIT = `(() => {
       }
     }
 
-    // A box shorter than its own text, clipped, and not saying so.
-    if ((cs.overflow === 'hidden' || cs.overflowY === 'hidden') &&
+    // A box shorter than its own text, clipped, and not saying so. A 1px box
+    // is not that: it is text for screen readers only (.home-live, .sr-only),
+    // hidden on purpose and spoken, never drawn.
+    if (!(el.clientWidth <= 1 && el.clientHeight <= 1) &&
+        (cs.overflow === 'hidden' || cs.overflowY === 'hidden') &&
         cs.textOverflow !== 'ellipsis' &&
         !cs.webkitLineClamp?.match(/^[1-9]/) &&
         el.scrollHeight > el.clientHeight + 4 &&
@@ -438,8 +441,27 @@ try {
     /* A blank spot, which is the thing an affiliate is pitched with. */
     await p.goto(base, { waitUntil: 'networkidle' })
     await enter(p)
-    const blank = p.locator('[aria-label*="Available"], [aria-label*="Open spot"]').first()
-    if (await present(p, '[aria-label*="Available"], [aria-label*="Open spot"]', 6000)) {
+    /*
+      A BLANK ON SCREEN, not the first in the page's code. Since 2026-09-30
+      BEASTY's first sheet has open seats on its second page, and the first
+      blank in the DOM sat off to the right where no finger can reach it; a
+      visitor swipes to it, so this does too.
+    */
+    for (let i = 0; i < 6; i++) {
+      const onScreen = await p.evaluate(() => {
+        const el = [...document.querySelectorAll('[aria-label*="Available"], [aria-label*="Open spot"]')].find((e) => {
+          const r = e.getBoundingClientRect()
+          return r.width > 0 && r.left >= 0 && r.right <= innerWidth && r.top >= 0 && r.bottom <= innerHeight
+        })
+        if (el) el.setAttribute('data-ux-blank', '1')
+        return !!el
+      })
+      if (onScreen) break
+      await p.evaluate(() => document.querySelector('.page-step.is-next')?.click())
+      await p.waitForTimeout(700)
+    }
+    const blank = p.locator('[data-ux-blank="1"]').first()
+    if (await present(p, '[data-ux-blank="1"]', 6000)) {
       await blank.click(); await p.waitForTimeout(900)
       await inspect(p, tag('blank-spot'))
     }

@@ -221,6 +221,18 @@ export const INDIVIDUAL_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i
   label: 'Available',
 }))
 
+/*
+  BEASTY • Goods, the boutique sheet. Glenn, 2026-09-30: "change BEASTY • Goods
+  to say BEASTY • Eats. Then create a BEASTY • Goods page to follow it right
+  before BEASTY • Services, this is dedicated for small boutiques; etc now."
+  Twenty-four open spots, like Individuals, until he names categories.
+*/
+export const BOUTIQUE_SPOTS: SlotCategory[] = Array.from({ length: 24 }, (_, i) => ({
+  n: i + 1,
+  name: 'Open spot',
+  label: 'Available',
+}))
+
 /** Which of a city's pages a set of spots belongs to. */
 export type SlotPageKind =
   | 'goods'
@@ -229,6 +241,7 @@ export type SlotPageKind =
   | 'services2'
   | 'online'
   | 'individuals'
+  | 'boutiques'
 
 export interface SlotPage {
   /**
@@ -294,13 +307,17 @@ export const SLOT_PAGES: SlotPage[] = [
  * nowhere. Cities are untouched by it.
  */
 export const BEASTY_SHEETS: SlotPage[] = [
-  SLOT_PAGES[0],
+  /* The first sheet is food now, so on BEASTY it says so; its seats keep their
+     `goods` ids, and a city's first page is still Goods. */
+  { ...SLOT_PAGES[0], heading: 'Eats' },
+  { kind: 'boutiques', heading: 'Goods', categories: BOUTIQUE_SPOTS },
   SLOT_PAGES[1],
   { kind: 'online', heading: 'Online', categories: ONLINE_CATEGORIES },
   /* "We can create this page after BEASTY • Online" — his words, and this is
      that position. Cities are untouched by it, exactly as Online is. */
   { kind: 'individuals', heading: 'Individuals', categories: INDIVIDUAL_SPOTS },
-  SLOT_PAGES[2],
+  /* The yellow sheet behind Eats holds the food that overflowed it. */
+  { ...SLOT_PAGES[2], heading: 'More eats' },
   SLOT_PAGES[3],
 ]
 

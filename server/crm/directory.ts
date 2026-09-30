@@ -56,7 +56,7 @@ const slug = (n: string) => n.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 const CITY_BY_SLUG = new Map<string, string>([['beasty', 'BEASTY']])
 for (const c of CITY_PAGES) CITY_BY_SLUG.set(slug(c), c)
 const PAGES = [...BEASTY_SHEETS, ...SLOT_PAGES]
-const SEAT_RE = /^(.*)-(goods2|services2|goods|services|online|individuals)-(\d+)$/
+const SEAT_RE = /^(.*)-(goods2|services2|goods|services|online|individuals|boutiques)-(\d+)$/
 
 const seatsById = new Map<string, Seat[]>()
 for (const [key, id] of Object.entries(CITY_PLACEMENTS)) {

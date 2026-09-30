@@ -307,7 +307,7 @@ const slotSeat = await jp.evaluate(() => {
   return x?.getAttribute('aria-label') ?? null
 })
 const [rs] = slotSeat ? await until('reserve_started') : []
-step('Reserve a Spot, from a blank tile, is reported with its seat', !!rs && /^[a-z0-9-]+-(goods2?|services2?|online|individuals)-\d+$/.test(rs.seat ?? '') && !!rs.page_kind, `${slotSeat} -> ${rs?.seat} ${rs?.city ?? ''}`)
+step('Reserve a Spot, from a blank tile, is reported with its seat', !!rs && /^[a-z0-9-]+-(goods2?|services2?|online|individuals|boutiques)-\d+$/.test(rs.seat ?? '') && !!rs.page_kind, `${slotSeat} -> ${rs?.seat} ${rs?.city ?? ''}`)
 
 const strays = await one("SELECT COUNT(*)::int n FROM analytics_events WHERE name IN ('business_opened','search_submitted','search_result_clicked') AND metadata::text ~ '@|login|code'")
 step('none of it carries anything personal', strays.n === 0)

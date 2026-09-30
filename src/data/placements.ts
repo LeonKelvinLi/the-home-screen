@@ -1176,7 +1176,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      not off the BEASTY pages: Sin City Pits (Las Vegas), Tony's Style (Albany)
      and Lucky Three Seven (Oakland). */
   'beasty-goods-13': 'b_thelocalpetaluma', //                     The Local — glow; was Sin City Pits
-  'beasty-goods-23': 'b_bustdowncobeasty', //                     Bust Down & Co. — glow; was Lucky Three Seven
   'beasty-goods2-14': 'b_sincitypits', //                          from page one, seat 14
   'beasty-goods2-15': 'b_tonysstyle', //                           from page one, seat 15
   'beasty-goods2-16': 'b_luckythreeseven', //                      from page one, seat 24
@@ -1232,6 +1231,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'livermore-goods2-1': 'b_bollywoodpizzalivermore', //           Indian and Italian are taken; yellow sheet, Tier 1, coming soon
   'santa-clara-goods2-0': 'b_basqhaus', //                        Bakery is Bloom Zephyr's; yellow sheet, whole page for the reel
   'beasty-goods2-17': 'b_veganmob', //                             from page one, seat 17, for Lovely's
+  /* 2026-09-30, 12:12 pm: BEASTY • Goods is Eats now, and a new BEASTY • Goods
+     sheet for small boutiques follows it (data/slots.ts). Elemonkey goes "right
+     in the center" of it: seat 10, the third row's second tile. Bust Down & Co.
+     left Eats 24 for BEASTY • Services (data/roster.ts), and Frank Jr. English
+     went to the yellow sheet behind Services to make room. */
+  'beasty-boutiques-9': 'b_elemonkey', //                          centre of the new Goods sheet
+  'beasty-services2-25': 'b_frankjrenglish', //                     from BEASTY • Services 5, for Bust Down & Co.
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs

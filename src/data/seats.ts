@@ -23,13 +23,17 @@ export interface Seat {
   city: string
   /** The heading of the page the tile is on. */
   page: string
+  /** The page's kind, as in the seat id (goods, services, boutiques, …). */
+  kind: string
 }
 
 const citySlug = (name: string) => name.toLowerCase().replace(/[^a-z0-9]+/g, '-')
 const CITY_BY_SLUG = new Map(CITY_PAGES.map((c, i) => [citySlug(c), { name: c, order: i }]))
-const SHEETS = [...SLOT_PAGES, ...BEASTY_SHEETS]
-const HEADING = new Map<string, string>(SHEETS.map((p) => [p.kind, p.heading]))
-const KIND_ORDER = new Map<string, number>(SHEETS.map((p, i) => [p.kind, i]))
+/* BEASTY's sheets have their own headings (its first sheet is Eats since
+   2026-09-30), so a city's Goods and BEASTY's Eats are looked up apart. */
+const CITY_HEADING = new Map<string, string>(SLOT_PAGES.map((p) => [p.kind, p.heading]))
+const BEASTY_HEADING = new Map<string, string>(BEASTY_SHEETS.map((p) => [p.kind, p.heading]))
+const KIND_ORDER = new Map<string, number>(BEASTY_SHEETS.map((p, i) => [p.kind, i]))
 
 /**
  * Every page the business is seated on: its cities first, in his city order,
@@ -43,12 +47,12 @@ export function seatsOf(brandId: string): Seat[] {
     const m = slot.match(/^(.+)-([a-z0-9]+)-\d+$/)
     if (!m) continue
     const [, where, kind] = m
-    const page = HEADING.get(kind)
+    const page = (where === 'beasty' ? BEASTY_HEADING : CITY_HEADING).get(kind)
     if (!page) continue
     const city = where === 'beasty' ? { name: 'BEASTY', order: CITY_PAGES.length } : CITY_BY_SLUG.get(where)
     if (!city) continue
     if (found.some((f) => f.seat.city === city.name && f.seat.page === page)) continue
-    found.push({ seat: { city: city.name, page }, order: city.order, kind: KIND_ORDER.get(kind) ?? 0 })
+    found.push({ seat: { city: city.name, page, kind }, order: city.order, kind: KIND_ORDER.get(kind) ?? 0 })
   }
   return found.sort((a, b) => a.order - b.order || a.kind - b.kind).map((f) => f.seat)
 }

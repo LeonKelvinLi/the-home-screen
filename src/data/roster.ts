@@ -4392,7 +4392,9 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
      reads open here but placements.ts seats Tony's Style in it. */
   'b_chefjeffssmashburger', // 18 Chef Jeff's Smash Burger
   'b_gaovietkitchen', //   19 Gao
-  'b_elemonkey', //        20 Elemonkey
+  /* Elemonkey moved to BEASTY • Goods, the boutique sheet, "right in the center"
+     (Glenn, 2026-09-30); see data/placements.ts. */
+  null, //                 20 open (was Elemonkey)
   'b_meadowlarkdairy', //  21 Meadowlark Dairy
   'b_masa', //             22 Masa
   'b_harumiayce', //       23 Harumi - AYCE
@@ -4407,7 +4409,10 @@ export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_thebeaudegabymaine', //    2  The BeauDega by Maine (was Roman Trailer & Iron work)
   'b_luckybarbershop', //       3  Lucky barbershop
   'b_poddtg', //                4  POD DTG
-  'b_frankjrenglish', //        5  Frank Jr. English general contractor
+  /* "Bump Bust down Billy's page to BEASTY • Services & bump Frank Jr. to yellow
+     pages", 2026-09-30: Bust Down & Co. from BEASTY • Eats 24, Frank Jr. English
+     to the yellow sheet (data/placements.ts). */
+  'b_bustdowncobeasty', //      5  Bust Down & Co. (was Frank Jr. English)
   'b_paintgo', //               6  PaintGo
   'b_ubreakifix', //            7  uBreakiFix
   'b_marinabaymedia', //        8  Marina Bay Media

@@ -26,7 +26,7 @@ import {
   SERVICE_CATEGORIES,
   OPEN_SPOTS,
   ONLINE_CATEGORIES,
-  INDIVIDUAL_SPOTS,
+  INDIVIDUAL_SPOTS, BOUTIQUE_SPOTS,
 } from '../src/data/slots'
 import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
@@ -63,6 +63,7 @@ const KINDS: Record<string, number> = {
   services2: OPEN_SPOTS.length,
   online: ONLINE_CATEGORIES.length,
   individuals: INDIVIDUAL_SPOTS.length,
+  boutiques: BOUTIQUE_SPOTS.length,
 }
 /* Longest first, so `goods2` is not eaten by `goods`. */
 const KEY_RE = new RegExp(

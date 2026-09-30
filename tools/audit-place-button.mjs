@@ -60,6 +60,10 @@ const cases = [
   ['a Services seat', 'b_thecompanybarber', 'Fremont • Services', 'Fremont, Services'],
   ['a yellow sheet', 'b_goldbeandurant', 'Berkeley • More goods', 'Berkeley, More goods'],
   ['BEASTY only', 'b_siacollective', 'BEASTY • Online', 'BEASTY, Online'],
+  /* 2026-09-30: BEASTY's first sheet is Eats, and a new Goods sheet for boutiques follows it. */
+  ['BEASTY Eats', 'b_topdog', 'BEASTY • Eats', 'BEASTY, Eats'],
+  ['the new BEASTY Goods', 'b_elemonkey', 'BEASTY • Goods', 'BEASTY, Goods'],
+  ['moved to BEASTY Services', 'b_bustdowncobeasty', 'BEASTY • Services', 'BEASTY, Services'],
 ]
 for (const [what, id, want, lands] of cases) {
   const p = await page()
@@ -120,8 +124,8 @@ for (const [what, id, want, lands] of cases) {
   await p.waitForSelector('.nav-back', { timeout: 20000 }).catch(() => {})
   await p.waitForTimeout(800)
   await p.click('.nav-back')
-  const w = await waitWhere(p, 'BEASTY, Goods')
-  step('Home goes to BEASTY • Goods, even from a city tile', !!w && /^Page 1 of \d+, BEASTY, Goods$/.test(w), `${w}`)
+  const w = await waitWhere(p, 'BEASTY, Eats')
+  step('Home goes to BEASTY • Eats (the first page), even from a city tile', !!w && /^Page 1 of \d+, BEASTY, Eats$/.test(w), `${w}`)
   await p.close()
 }
 

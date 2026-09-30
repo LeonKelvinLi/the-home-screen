@@ -260,12 +260,3 @@ export function takeOrigin(brand: string): Omit<Origin, 'brand'> {
   return { surface: 'other' }
 }
 
-/** The page kinds the home screen heads its pages with, by heading. */
-export const KIND_BY_HEADING: Record<string, string> = {
-  Goods: 'goods',
-  Services: 'services',
-  'More goods': 'goods2',
-  'More services': 'services2',
-  Online: 'online',
-  Individuals: 'individuals',
-}

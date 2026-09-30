@@ -44,7 +44,7 @@ export function ReserveApp({ api, seat }: { api: ShellApi; seat?: string }) {
   const preview = useInPreview()
   useEffect(() => {
     if (preview) return
-    const m = seat?.match(/^(.+)-(goods2?|services2?|online|individuals)-\d{1,2}$/)
+    const m = seat?.match(/^(.+)-(goods2?|services2?|online|individuals|boutiques)-\d{1,2}$/)
     if (!m) return track('reserve_started')
     const city = [...CITY_PAGES, 'BEASTY'].find((c) => c.toLowerCase().replace(/[^a-z0-9]+/g, '-') === m[1])
     track('reserve_started', { seat, page_kind: m[2], ...(city ? { city } : {}) })

@@ -716,6 +716,11 @@ for (const [s, what] of [
   ['instagram:"peezycasso"', "Paul Domingo's Instagram button, on Glenn's say-so"],
   ['prof-tabs', "Profile's My page and Earn tabs"],
   ['Purple Ribbon Foundation', 'the foundation line on Earn and the dashboard'],
+  /* 2026-09-30, 12:12 pm: BEASTY • Goods is Eats, and a new Goods sheet for boutiques follows it. */
+  ['heading:"Eats"', 'BEASTY \u2022 Eats, the first sheet'],
+  ['kind:"boutiques",heading:"Goods"', 'the new BEASTY \u2022 Goods sheet'],
+  ['"beasty-boutiques-9":"b_elemonkey"', 'Elemonkey in the centre of BEASTY \u2022 Goods'],
+  ['"beasty-services2-25":"b_frankjrenglish"', 'Frank Jr. English to the BEASTY Services yellow sheet'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],

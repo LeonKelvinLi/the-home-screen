@@ -8,7 +8,7 @@ import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { citiesOf, seatsOf } from '../data/seats'
 import { Symbol } from '../ios/ui/Symbol'
-import { KIND_BY_HEADING, takeOrigin, track } from '../lib/track'
+import { takeOrigin, track } from '../lib/track'
 import { useInPreview } from '../ios/preview'
 import { readableOn } from '../ios/contrast'
 import { isFavorite, toggleFavorite } from '../lib/favorites'
@@ -224,7 +224,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
               <button
                 className="nav-place"
                 onClick={() => {
-                  if (!preview) track('place_navigated', { brand: brand.id, city: place.city, page_kind: KIND_BY_HEADING[place.page], surface: 'nav_place' })
+                  if (!preview) track('place_navigated', { brand: brand.id, city: place.city, page_kind: place.kind, surface: 'nav_place' })
                   api.goToCity(place.city, brand.id)
                 }}
                 aria-label={`Go to the ${place.city} ${place.page} page`}
