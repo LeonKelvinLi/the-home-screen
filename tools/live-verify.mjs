@@ -712,6 +712,10 @@ for (const [s, what] of [
   ['/clips/little-sheep-newark.mp4', "@iamnikkieg's review on Little Sheep's page"],
   ['/clips/bollywood-pizza-sf.mp4', "Bollywood Pizza's own film"],
   ['/api/affiliate/me', 'the affiliate dashboard'],
+  ['/clips/chef-jeffs-smash-burger.mp4', "@takeoutwithtuck's review on Chef Jeff's page"],
+  ['instagram:"peezycasso"', "Paul Domingo's Instagram button, on Glenn's say-so"],
+  ['prof-tabs', "Profile's My page and Earn tabs"],
+  ['Purple Ribbon Foundation', 'the foundation line on Earn and the dashboard'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],

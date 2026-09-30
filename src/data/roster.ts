@@ -2207,6 +2207,18 @@ export const ROSTER_SEED: LocalSeed[] = [
     instagram: 'chefjeffssmashburger',
     needsSite: true,
     logoTemplate: 'band', logoLines: ['SMASH', 'BURGER'], logoFace: 'condensed',
+    /* "Do you have time to clip this video to add on the page within the next
+       hour? I'm gonna deliver to him and see if I can lock in an offer from
+       the owner", 2026-09-30, 11:20 am. 2s-26s of 68s: his "Top burger spots
+       in the 925" title, the burgers and the loaded fries. @takeoutwithtuck's. */
+    clip: {
+      src: '/clips/chef-jeffs-smash-burger.mp4',
+      poster: '/clips/chef-jeffs-smash-burger-poster.webp',
+      href: 'https://www.instagram.com/reel/DQe8tiVkpCK/',
+      credit: 'Filmed by @takeoutwithtuck',
+      platform: 'Instagram',
+      by: 'takeoutwithtuck',
+    },
     sections: [
       {
         name: 'Burgers and sandwiches',
@@ -3589,6 +3601,9 @@ export const ROSTER_SEED: LocalSeed[] = [
      until he has a mark. */
   seed('paul-domingo', 'Paul Domingo', 'Paul Domingo', 'Black & grey tattoo', '#111111', {
     needsSite: true,
+    /* "Can you also add this Instagram to this person's page?", 2026-09-30,
+       11:28 am, with a post of his: Glenn's say-so for the button. */
+    instagram: 'peezycasso',
     logoTemplate: 'monogram', logoInitials: 'PD', logoFace: 'slab',
     tagline: 'Black and grey tattooing at True Line Tattoo',
   }),

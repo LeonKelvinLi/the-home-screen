@@ -71,6 +71,8 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 30 Sep | @iamnikkieg (Nikkie G) | Little Sheep hot pot, Newpark Mall, Newark | **Yes.** Little Sheep went on BEASTY the same morning; on its page as a review |
 | 30 Sep | @justmostie (Mostie, already listed) | House of Silog, Brentwood: "Please add this to the house of silog's page" | **Yes.** On House of Silog's page as a review |
 | 30 Sep | @foodgiveness (FOODGIVENESS) | Tony's Cable Car Restaurant, Geary Boulevard, San Francisco: a cheeseburger and crinkle-cut fries | No |
+| 30 Sep | @realtorandreviewer (Aidan Hymowitz) | A Wingstop order, no location named | No — a national chain, not on BEASTY |
+| 30 Sep | @takeoutwithtuck (The Honest Reviewer, already listed on 17 Sep) | Chef Jeff's Smash Burger, Antioch: "clip this video to add on the page within the next hour", for Glenn's delivery there | **Yes.** On Chef Jeff's page as a review |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
@@ -79,7 +81,8 @@ DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
 DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok, DdMhHiJsnc4, DAW5kk6yEWz,
 Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R, DIktz2AR_0M,
 DAmWXRISz7P, Ddo0xf9MplM, DdCZTx7Ppei, DdphZkJAn6v, DdqF3P3P67w, DdZ_vmtP9SZ, Dd1606uB7cK,
-DBY9wl6PM3f, DalLO65pHLY, Dczd9jQxFes, DdftkVVTK7h, Dd5HDT4zZQJ, Dd2mwZRRBhm. The profile is
+DBY9wl6PM3f, DalLO65pHLY, Dczd9jQxFes, DdftkVVTK7h, Dd5HDT4zZQJ, Dd2mwZRRBhm, Dd1qIgYqblI,
+DQe8tiVkpCK. The profile is
 instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
