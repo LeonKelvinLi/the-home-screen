@@ -1225,6 +1225,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'milpitas-goods-4': 'b_wagyugrillmilpitas', //                  Sushi: AYCE wagyu barbecue and sushi
   'milpitas-goods-7': 'b_meattimeyakiniku', //                    Korean and ramen: the nearest seat to Japanese yakiniku
   'san-jose-goods2-6': 'b_wagyumastersanjose', //                 Asian and Sushi are taken; yellow sheet, Tier 1
+  /* 2026-09-29 and 30. */
+  'newark-goods-7': 'b_kingkatsulandnewark', //                   Korean and ramen: Korean katsu
+  'newark-goods2-1': 'b_littlesheepnewark', //                    Asian is Phonation's; yellow sheet, whole page for the reel
+  'san-francisco-goods-3': 'b_bollywoodpizzasf', //               Indian: Indian fusion pizza
+  'livermore-goods2-1': 'b_bollywoodpizzalivermore', //           Indian and Italian are taken; yellow sheet, Tier 1, coming soon
+  'santa-clara-goods2-0': 'b_basqhaus', //                        Bakery is Bloom Zephyr's; yellow sheet, whole page for the reel
+  'beasty-goods2-17': 'b_veganmob', //                             from page one, seat 17, for Lovely's
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
   'san-ramon-services-14': 'b_thehubpackanimals', //               Pet grooming and walking: a gym for dogs

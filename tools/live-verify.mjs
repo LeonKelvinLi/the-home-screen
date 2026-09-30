@@ -333,6 +333,12 @@ for (const [id, want, expect] of [
   ['b_wagyugrillmilpitas', 'Wagyu Grill', { rows: 14, hours: 'Mon-Thu 11am-9:30pm', call: '(408) 649-3106' }],
   ['b_meattimeyakiniku', 'Meat Time Yakiniku', { rows: 67, hours: 'Mon-Thu 5:30pm-9pm', call: '(669) 263-6152' }],
   ['b_wagyumastersanjose', 'Wagyu Master', { free: true, hours: 'Mon-Thu 11:30am-3pm', call: '(408) 549-7891' }],
+  /* 2026-09-29 and 30. */
+  ['b_kingkatsulandnewark', 'King Katsu Land', { rows: 29, hours: 'Sun-Thu 11am-9pm', call: '(510) 838-5449' }],
+  ['b_littlesheepnewark', 'Little Sheep', {}],
+  ['b_bollywoodpizzasf', 'Bollywood Pizza', { rows: 54, hours: 'Daily 10am-4am', call: '(415) 869-6617' }],
+  ['b_bollywoodpizzalivermore', 'Bollywood Pizza', { free: true }],
+  ['b_basqhaus', 'Basq Haus', { rows: 13, hours: 'Pre-order only', call: '415-988-2528' }],
 ]) {
   await p.goto(`${base}/?b=${id}`, { waitUntil: 'networkidle', timeout: 45000 })
   await p.waitForTimeout(600)
@@ -694,6 +700,18 @@ for (const [s, what] of [
   ['"milpitas-goods-4":"b_wagyugrillmilpitas"', 'Wagyu Grill on Milpitas Sushi'],
   ['"milpitas-goods-7":"b_meattimeyakiniku"', 'Meat Time on Milpitas Korean'],
   ['"san-jose-goods2-6":"b_wagyumastersanjose"', 'Wagyu Master on San Jose More goods'],
+  ['"newark-goods-7":"b_kingkatsulandnewark"', 'King Katsu Land on Newark Korean'],
+  ['"newark-goods2-1":"b_littlesheepnewark"', 'Little Sheep on Newark More goods'],
+  ['"san-francisco-goods-3":"b_bollywoodpizzasf"', 'Bollywood Pizza on San Francisco Indian'],
+  ['"livermore-goods2-1":"b_bollywoodpizzalivermore"', 'Bollywood Pizza on Livermore More goods'],
+  ['"santa-clara-goods2-0":"b_basqhaus"', 'Basq Haus on Santa Clara More goods'],
+  ['"beasty-goods2-17":"b_veganmob"', 'Vegan Mob bumped to BEASTY More goods'],
+  ['/clips/king-katsu-land.mp4', "@kimjsseats's review on King Katsu Land's page"],
+  ['/clips/house-of-silog.mp4', "@justmostie's review on House of Silog's page"],
+  ['/clips/basq-haus.mp4', "@hungrydanz's review on Basq Haus's page"],
+  ['/clips/little-sheep-newark.mp4', "@iamnikkieg's review on Little Sheep's page"],
+  ['/clips/bollywood-pizza-sf.mp4', "Bollywood Pizza's own film"],
+  ['/api/affiliate/me', 'the affiliate dashboard'],
   /* 2026-09-25 afternoon: Glenn's four landing and home-screen asks. */
   ['dialer-key-flip', 'the Sign in key flipping to SIGN UP'],
   ['spotlight-sweep', 'the moving glow on Search'],
@@ -734,7 +752,8 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'woof-gang-bakery', 'old-crow-tattoo', 'rakani-tattoo', 'hungry-cow', 'long-bridge-pizza', 'maverick-jacks', 'los-agaves-taqueria',
   'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark',
   'peaches-patties', 'shish-grill', 'sandbar-oakland', 'golden-star-tattoo', 'ink-from-tatooine', 'two-dollar-cowboy',
-  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe', 'wagyu-grill', 'meat-time', 'wagyu-master']) {
+  'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe', 'wagyu-grill', 'meat-time', 'wagyu-master',
+  'king-katsu-land', 'little-sheep', 'bollywood-pizza', 'basq-haus']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

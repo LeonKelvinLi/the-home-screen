@@ -66,6 +66,11 @@ Dates are Pacific. Every handle below is the creator's own Instagram account.
 | 24 Sep | @whatthejessi_ | "Lunch with @__tiiipppseats at Aung Myanmar", 542B 9th St, Oakland: Burmese | No |
 | 28 Sep | @booziebrunch (Novi Mitchell) | Carlyle's Chicken Wings, Jack London, Oakland: "Trying a new Black Owned Wing Spot". Sent with the listing and "Clip video for page plz", not marked "Foodie" | **Yes.** On Carlyle's page (Oakland's yellow sheet, whole page) as a review (3s–27s of 51s), downloaded the same day |
 | 28 Sep | @areweeatingyet (Michelle @ SF) | Truong Thanh Restaurant (@truongthanhrestaurant), Ulferts Center, Milpitas: Vietnamese, banh khot, Thai-style dry egg noodles, banh canh cua. Posted 21 October 2024, "Thanks for the invite!" | No |
+| 29 Sep | @kimjsseats (Where Jess at) | King Katsu Land, Newark. "I'm thinking of asking her if she would like to spearhead our movement with food reviews on behalf of BEASTY pages" | **Yes.** On King Katsu Land's page (whole Tier 3) as a review, the page he will use to recruit her |
+| 30 Sep | @hungrydanz (Dan) | Basq Haus, Santa Clara. Sent with "Clip this video please", then "Foodie" | **Yes.** On Basq Haus's page as a review |
+| 30 Sep | @iamnikkieg (Nikkie G) | Little Sheep hot pot, Newpark Mall, Newark | **Yes.** Little Sheep went on BEASTY the same morning; on its page as a review |
+| 30 Sep | @justmostie (Mostie, already listed) | House of Silog, Brentwood: "Please add this to the house of silog's page" | **Yes.** On House of Silog's page as a review |
+| 30 Sep | @foodgiveness (FOODGIVENESS) | Tony's Cable Car Restaurant, Geary Boulevard, San Francisco: a cheeseburger and crinkle-cut fries | No |
 
 Reel links, in the same order after the profile: instagram.com/reel/DdFKK1RSPBd,
 DdIMBHKPfj_, Dcg3Bl_B0iX, Dcw6WX7zN-Q, DdFgh8TvwdA, DdIUO2Jxj1s, Dc5CExIhdSX,
@@ -74,7 +79,7 @@ DdN7XUmvmzU, DdU9R3Myj9x, DdVGzARTQiS, DdVGXn4NxbO, DTJ0lqhEWoy, C40pt1TRanq,
 DBwc4CtSw4Q, DdUUdRJKpQd, DLi5st0J5kq, DcSX7lpucp-, DdXV9jQveok, DdMhHiJsnc4, DAW5kk6yEWz,
 Dc4BefxI5b7, Ddbm9IwBTWj, DdXmljSpM-M, DXuAt06lPp9, DdT5OWxhEBz, DbzDNfLtM0R, DIktz2AR_0M,
 DAmWXRISz7P, Ddo0xf9MplM, DdCZTx7Ppei, DdphZkJAn6v, DdqF3P3P67w, DdZ_vmtP9SZ, Dd1606uB7cK,
-DBY9wl6PM3f. The profile is
+DBY9wl6PM3f, DalLO65pHLY, Dczd9jQxFes, DdftkVVTK7h, Dd5HDT4zZQJ, Dd2mwZRRBhm. The profile is
 instagram.com/bayarea_fooddreamz.
 
 ## Creators already credited on a business's page
@@ -86,7 +91,8 @@ Cannoli), @grubwitmike (Phosho Dough, Cravingz), @justmostie (Paulo Sausage Co),
 @thesnacksensei (The Yard, Jojo's Hot Chicken, Golden Gate Market & Deli), @volha_creative (Glasshouzz),
 @itsmeloslab (Ofie's Kitchen), @smackinfood (House of Raha), @thetastebud
 (Lucky Three Seven), @sherryeatworld (Yank Sing), @booziebrunch (Carlyle's Chicken
-Wings) and Jay Chan (Cambodian Street Food).
+Wings), @kimjsseats (King Katsu Land), @hungrydanz (Basq Haus), @iamnikkieg (Little
+Sheep) and Jay Chan (Cambodian Street Food).
 
 ## Open with Glenn
 

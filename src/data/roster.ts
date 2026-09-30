@@ -1724,6 +1724,16 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'Inside the Filipino Streetfood Hub, Wednesday to Friday 11am to 9pm and Saturday noon ' +
       'to 9pm, in their own words. Also on DoorDash and Uber Eats.',
+    /* "Please add this to the house of silog's page", 2026-09-30, 5:33 am.
+       3s-27s of 68s: the silog bento box and the sisig. @justmostie's. */
+    clip: {
+      src: '/clips/house-of-silog.mp4',
+      poster: '/clips/house-of-silog-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd5HDT4zZQJ/',
+      credit: 'Filmed by @justmostie',
+      platform: 'Instagram',
+      by: 'justmostie',
+    },
   }),
   /*
     Frank2Artistic — "BEASTY • Services, Murals. No website. I'm going to try to
@@ -3691,6 +3701,88 @@ export const ROSTER_SEED: LocalSeed[] = [
     orderUrl: 'https://pos.chowbus.com/online-ordering/store/WAGYU-MASTER-SUKIYAKI-SAN-JOSE/23506',
     tier: 1,
   }),
+  /* 2026-09-29 and 30: Glenn's links from Tuesday and Wednesday morning. */
+  /* King Katsu Land, "Newark • Goods": "Clip this video and give their page the
+     whole tier 3 treatment. I'm going to use this page as a way to recruit her."
+     Korean katsu on Newark's open Korean and ramen seat. */
+  seed('king-katsu-land-newark', 'King Katsu Land', 'King Katsu', 'Korean katsu', '#161514', {
+    icon: 'king-katsu-land',
+    logoTemplate: 'wordmark', logoLines: ['KING', 'KATSU LAND'], logoFace: 'script',
+    tagline: 'The King of Korean Katsu, near Costco in Newark',
+    site: 'https://www.kingkatsuland.com/',
+    /* 1s-25s of 34s: her 'King Katsu Land, Newark' opening and the katsu. @kimjsseats, the creator Glenn wants to recruit. */
+    clip: {
+      src: '/clips/king-katsu-land.mp4',
+      poster: '/clips/king-katsu-land-poster.webp',
+      href: 'https://www.instagram.com/reel/DalLO65pHLY/',
+      credit: 'Filmed by @kimjsseats',
+      platform: 'Instagram',
+      by: 'kimjsseats',
+    },
+  }),
+  /* Little Sheep, "Newark • Goods / Needs Website pilot program". Asian is
+     Phonation's, so the yellow sheet; @iamnikkieg's film of it (sent as a
+     Foodie at 5:18 am) gives it the whole page. */
+  seed('little-sheep-newark', 'Little Sheep', 'Little Sheep', 'AYCE hot pot & yakitori', '#1F5E3B', {
+    needsSite: true,
+    icon: 'little-sheep',
+    logoTemplate: 'wordmark', logoLines: ['LITTLE', 'SHEEP'], logoFace: 'grotesk',
+    tagline: 'All you can eat hot pot and yakitori',
+    address: '2016 Newpark Mall, Newark, CA 94560',
+    /* 26s-50s of 101s: the hot pot bar and the pots. @iamnikkieg's, a food creator's. */
+    clip: {
+      src: '/clips/little-sheep-newark.mp4',
+      poster: '/clips/little-sheep-newark-poster.webp',
+      href: 'https://www.instagram.com/reel/DdftkVVTK7h/',
+      credit: 'Filmed by @iamnikkieg',
+      platform: 'Instagram',
+      by: 'iamnikkieg',
+    },
+  }),
+  /* Bollywood Pizza, "San Francisco • Goods / Livermore • Goods". San
+     Francisco's Indian seat was open: Indian fusion pizza, the whole page, with
+     their own video ("Clip this video plz"). Livermore is coming soon. */
+  seed('bollywood-pizza-sf', 'Bollywood Pizza', 'Bollywood Pizza', 'Indian fusion pizza', '#E31B23', {
+    icon: 'bollywood-pizza',
+    logoTemplate: 'monogram', logoInitials: 'BP', logoFace: 'condensed',
+    tagline: 'Beyond Ordinary, Beyond Flavors',
+    site: 'https://bollywoodpizza.com/san-francisco-fremont-st/',
+    orderUrl: 'https://order.toasttab.com/online/bollywood-pizza-san-francisco-215-fremont-street',
+    /* 83s-107s of 108s: the pizza itself. Their own post. */
+    clip: {
+      src: '/clips/bollywood-pizza-sf.mp4',
+      poster: '/clips/bollywood-pizza-sf-poster.webp',
+      href: 'https://www.instagram.com/p/Dd3AYRzseyv/',
+      credit: 'Their own film, @bollywoodpizzausa',
+      platform: 'Instagram',
+      by: 'bollywoodpizzausa',
+    },
+  }),
+  seed('bollywood-pizza-livermore', 'Bollywood Pizza', 'Bollywood Pizza', 'Indian fusion pizza', '#E31B23', {
+    icon: 'bollywood-pizza',
+    logoTemplate: 'monogram', logoInitials: 'BP', logoFace: 'condensed',
+    site: 'https://bollywoodpizza.com/locations/',
+    address: 'Livermore, CA (coming soon)',
+    tier: 1,
+  }),
+  /* Basq Haus, "Santa Clara • Goods", with @hungrydanz's reel ("Clip this video
+     please"). Bakery is Bloom Zephyr's, so the yellow sheet, whole page for the film. */
+  seed('basq-haus', 'Basq Haus', 'Basq Haus', 'Basque cheesecake, pre-order', '#2D619E', {
+    icon: 'basq-haus',
+    logoTemplate: 'wordmark', logoLines: ['BASQ', 'HAUS'], logoFace: 'grotesk',
+    tagline: 'Basque cheesecakes by pre-order, picked up in Santa Clara',
+    site: 'https://www.basqhaus.com/',
+    orderUrl: 'https://www.basqhaus.com/collections/all',
+    /* 1s-25s of 25s: his 'best basque cheesecake in the Bay Area' and the slices. @hungrydanz's, a food creator's. */
+    clip: {
+      src: '/clips/basq-haus.mp4',
+      poster: '/clips/basq-haus-poster.webp',
+      href: 'https://www.instagram.com/reel/Dczd9jQxFes/',
+      credit: 'Filmed by @hungrydanz',
+      platform: 'Instagram',
+      by: 'hungrydanz',
+    },
+  }),
   seed('brasil-bistro', 'Brasil Bistro', 'Brasil Bistro', 'Brazilian', '#111111', {
     icon: 'brasil-bistro',
     logoTemplate: 'wordmark', logoLines: ['BRASIL', 'BISTRO'], logoFace: 'slab',
@@ -4272,7 +4364,11 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
      data/placements.ts, which wins over this array; the seat is NOT free. */
   null, //                 15 Tony's Style, via placements.ts
   'b_butterpecan', //      16 Butter Pecan bake shop
-  'b_veganmob', //         17 Vegan Mob
+  /* "Let's put this on the home screen page just because it's Sam Smith /
+     Bump Vegan Mob", 2026-09-30, 5:48 am: Lovely's takes the seat, and Vegan
+     Mob goes to the yellow sheet behind this page (data/placements.ts).
+     Lovely's keeps its San Francisco Burgers seat as well. */
+  'b_lovelysburgerssf', //  17 Lovely's Burgers (was Vegan Mob)
   /* "Bump poof of Alchemy to yellow goods pages", 2026-08-28 — same move as
      Smash Burgers above, and for the same reason: the seat is his to reassign.
      Reseated on beasty-goods2 in data/placements.ts, which left 18 open — and

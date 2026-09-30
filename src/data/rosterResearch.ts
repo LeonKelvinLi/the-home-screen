@@ -1363,6 +1363,51 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Basq Haus — gathered 2026-09-30 from own
+     they are: Basque cheesecake
+     flag: PRE-ORDER, PICK-UP ONLY, as the site says: the banner reads "PICK-UP ADDRESS: 2223 CALLE DE LUNA, SANTA CLARA, CA 95054 (Pre-order only)", every product note says "All cakes must be pre-ordered", and every product's "Order Policy" option is "Pick-up only". No delivery, no walk-in shop and no regular opening hours are published.
+     flag: Hours are dated pick-up slots, not regular hours, and will go stale after Oct 31, 2026: Fri Oct 9 8-9pm, Mon Oct 12 8-9pm, Sat Oct 17 7-8pm, Fri Oct 23 8-9pm, Sat Oct 24 7-8pm, Fri Oct 30 8-9pm, Sat Oct 31 7-8pm. Sep 19, Sep 21 and Sep 30 (8-9pm) slots are still listed but sold out. Pickup instructions are emailed on the pickup day around noon. Recheck in November.
+     flag: Not every cake is offered on every date: Taro (whole and slice) only Oct 12, 17, 23, 31; Ube (added Sep 23) from Oct 9. Some date/flavor combinations are sold out; price does not change by date.
+     flag: All 13 products in the shop (products.json) are listed: 7 whole 6-inch cakes and 6 slices. Rum Raisin is whole cake only.
+     flag: Rum Raisin cake is kept: it is a cheesecake with raisins soaked in rum, not a drink. Drop it if the no-alcohol rule should cover food made with alcohol.
+     flag: Names: the site writes product names in capitals (e.g. "CLASSIC ORIGINAL"); written here in title case. Fixed typo "PRIMIUM" -> "Premium" in "Kyoto Koyamaen Matcha (Premium Matcha)".
+     flag: Phone: the site footer prints "Contact Number: 415-988-2528"; the contact page also shows it as "415-9882528" (same number). No email is printed; the contact page has a form only (not used).
+     flag: Instagram handle basqhaus.bakery comes from the site's Instagram link; Glenn's screenshot (246878_IMG_5680) cuts the handle off after "basq" and shows the category "Bakery". Also on TikTok as @basqhaus.ca.
+     flag: Address check: the pick-up address 2223 Calle De Luna, Santa Clara, CA 95054 matches Glenn's "Santa Clara" page. The product notes call it "PICK-UP ADDRESS (BAY AREA)"; it is a pick-up point, not a shop with opening hours.
+     flag: Refund policy (their site): no refunds for cancellations or no-shows; one reschedule allowed if asked 72+ hours before pickup.
+     flag: Glenn's screenshot banner reads "OCTOBER PICK-UP AVAILABLE NOW", same as the live site today.
+     flag: site_kind own: a Shopify shop on its own domain with About, Contact and policy pages; order_url is its product list.
+     flag: On review: hours kept evergreen; their October pick-ups are Oct 9, 12, 23 and 30, 8-9pm, and Oct 17, 24 and 31, 7-8pm, per their site.
+     flag: On review: seated at santa-clara-goods2-0 (yellow sheet: Santa Clara's Bakery seat is Bloom Zephyr's), whole page with @hungrydanz's reel. Glenn's messages of 29-30 September.
+  */
+  'basq-haus': {
+    address: "2223 Calle De Luna, Santa Clara, CA 95054",
+    phone: "415-988-2528",
+    hours: "Pre-order only, evening pick-up on set dates",
+    cuisine: "Basque cheesecake",
+    sections: [
+      { name: "Whole Cake", items: [
+        ["Classic Original","6 inch whole cake. Our signature cheesecake blends simplicity with indulgence. Infused with pure vanilla bean, then baked at high heat to form a golden caramelized top with a soft, creamy center. Rich but light, every bite melts in your mouth and reflects the true spirit of Basque tradition.",4900],
+        ["Dark Chocolate","6 inch whole cake. Bittersweet dark chocolate blended into a rich cream base, combined with fresh eggs and premium cream cheese. Baked to a deep golden finish with a delicately caramelized top and a smooth, velvety center.",5600],
+        ["Kyoto Koyamaen Matcha (Premium Matcha)","6 inch whole cake. Crafted with premium Japanese matcha from Marukyu Koyamaen in Kyoto. Blended into a silky cream base with fresh eggs and fine cream cheese, then slow-baked to create a delicately caramelized surface and a smooth, custard-soft center. Finished with a deep, aromatic matcha flavor and a balanced bittersweet finish.",7500],
+        ["Rum Raisin","6 inch whole cake. Creamy, soft, and slightly caramelized on the outside. Raisins soaked in rum bring a gentle warmth and a deeper flavor. Soft in the center, with just enough sweetness to keep it balanced.",5600],
+        ["Taro","6 inch whole cake. Silky taro purée layered over a delicate crumble cookie base, creating a contrast of creamy smoothness and subtle crunch.",7000],
+        ["Black Sesame","6 inch whole cake. Roasted black sesame brings a deep, toasted nuttiness to our signature Basque cheesecake. Rich, fragrant, and balanced with just the right amount of sweetness.",5600],
+        ["Ube","6 inch whole cake. A rich and creamy Ube Basque Cheesecake made with purple yam, featuring a smooth, custardy center and delicate sweetness. Fragrant, indulgent, and perfectly balanced without being overly sweet.",5600],
+      ] },
+      { name: "Slice Cake", items: [
+        ["Classic Original","Slice. Our signature cheesecake blends simplicity with indulgence. Infused with pure vanilla bean, then baked at high heat to form a golden caramelized top with a soft, creamy center. Rich but light, every bite melts in your mouth and reflects the true spirit of Basque tradition.",750],
+        ["Kyoto Koyamaen Matcha (Premium Matcha)","Slice. Crafted with premium Japanese matcha from Marukyu Koyamaen in Kyoto. Blended into a silky cream base with fresh eggs and fine cream cheese, then slow-baked to create a delicately caramelized surface and a smooth, custard-soft center. Finished with a deep, aromatic matcha flavor and a balanced bittersweet finish.",1150],
+        ["Black Sesame","Slice. Roasted black sesame brings a deep, toasted nuttiness to our signature Basque cheesecake. Rich, fragrant, and balanced with just the right amount of sweetness.",850],
+        ["Dark Chocolate","Slice. Bittersweet dark chocolate blended into a rich cream base, combined with fresh eggs and premium cream cheese. Baked to a deep golden finish with a delicately caramelized top and a smooth, velvety center.",850],
+        ["Ube","Slice. A rich and creamy Ube Basque Cheesecake made with purple yam, featuring a smooth, custardy center and delicate sweetness. Fragrant, indulgent, and perfectly balanced without being overly sweet.",850],
+        ["Taro","Slice. Silky taro purée layered over a delicate crumble cookie base, creating a contrast of creamy smoothness and subtle crunch.",1100],
+      ] },
+    ],
+    siteNote: "Basque cheesecakes, golden and caramelized outside with a molten center, by pre-order for pick-up in Santa Clara. Prices are from the shop on their own site.",
+  },
+
+  /*
      Batch & Brine — gathered 2026-09-21 from own-domain
      they are: World kitchen & cocktails
      logo: https://batchandbrine.com/wp-content/uploads/2023/04/batch-and-brine-logo-full-gold-retina.png (406x120) — not cut into a tile yet
@@ -2612,6 +2657,130 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "Reformer Pilates studios on Lakeshore Ave and in Rockridge, Oakland. Prices from the bodyrok.com studio pages (identical on Berkeley, Alamo, Oakland and Rockridge; Walnut Creek founding rates on its own page) and confirmed item-by-item on their Mindbody store (site ID 283626, read in the browser on 2026-09-07); no opening hours are published anywhere, only class schedules on Mindbody.",
+  },
+
+  /*
+     Bollywood Pizza — gathered 2026-09-30 from own
+     they are: Indian fusion pizza
+     flag: NOT OPEN YET: bollywoodpizza.com (home, locations, contact, FAQ pages) lists Livermore as "Coming soon" with the address shown only as "Opening soon, Livermore, CA"; the Instagram bio says "Livermore COMING SOON". No street address, opening date, phone or hours are published anywhere on the site (store data says hours "Announcing soon"; no Livermore page exists, /livermore/ is a 404, sitemap has none).
+     flag: Address check: only the city (Livermore) is published, which matches Glenn's "Livermore" page; there is no street to compare.
+     flag: Menu left empty on purpose: the site's menu page store switcher only has Sacramento and San Francisco, and its FAQ says "Prices and menus are set per location", so nothing says the SF (or Sacramento) menu applies to Livermore.
+     flag: No Livermore ordering link: the store's order field on the site is empty; the home page "Get launch alerts" button only links to the /locations/ page (no sign-up form was used).
+     flag: Phone null: the site prints phones only per open store (Sacramento (916) 758-8975, SF (415) 869-6617). The Instagram Contact sheet's (915) 758-8975 looks like the Sacramento number with a wrong area code, so it is not used here.
+     flag: Email info@bollywoodpizza.com is the brand's general address (Instagram Contact sheet and site contact page), not Livermore-specific.
+     flag: The site's store finder maps ZIPs 94550, 94551, 94568 and 94588 to Livermore, but that is a search mapping, not an address.
+     flag: Recheck later for the address, opening date and menu before this page goes live.
+     flag: On review: seated at livermore-goods2-1 (yellow sheet: Livermore's Indian seat is Pijja Paradise's and Italian is Glass Houzz's). Glenn's messages of 29-30 September.
+  */
+  'bollywood-pizza-livermore': {
+    email: "info@bollywoodpizza.com",
+    cuisine: "Indian fusion pizza",
+  },
+
+  /*
+     Bollywood Pizza — gathered 2026-09-30 from own
+     they are: Indian fusion pizza
+     flag: Prices are per location: the site's menu page defaults to Sacramento prices (pizzas $19.25) and its FAQ says prices and menus are set per store. San Francisco prices were taken from the SF Toast ordering page (the site's "Order from here" link for 215 Fremont St) and cross-checked against the site's own San Francisco price data (data-pSf) and the SF store page: every base price matches.
+     flag: Specialty pizzas list at $21.95, which is the 10" small on Toast; the 12", 14" and 18" sizes are +$9.50, +$14.70 and +$20.70, so those are shown in desc and $21.95 is marked "from". BYO and Half & Half start at 14"; cheese sticks and wings show $0.00 base on Toast with a required size, so the smallest size price is used as "from".
+     flag: Some pizzas (Butter Chicken, Lamb Kebab, Halal Chicken Tikka and others) have an optional Toast add-on called "Halal" at +$2/$3/$4/$5 by size; not listed as separate items.
+     flag: Names and descriptions follow the Toast SF menu. Where Toast has no description or only tags (Halal Chicken Tikka, Masala Potatoes, Garlic Cheese Sticks, wings, pastas, pie, lassi, nimbu pani, BYO, Half & Half), the description is the site's own wording for the same item. "Halal." was added to Lamb Kebab and Shawarma Pizza because the site lists them under Halal.
+     flag: Name conflict: Toast calls the dessert "Nutella M&M Pie"; the site calls it "Nutella Marshmallow Pie" (same $11.95). Kept the Toast name because it is the store's live menu.
+     flag: Fixed capitals/typos: Toast "curry veggies pizza" -> "Curry Veggies Pizza"; "halal chicken tikka" -> "Halal Chicken Tikka" (the site's spelling); "Thumsup can" -> "Thums Up can" (the site's spelling); "homemade Masala Ranch" -> "Homemade Masala Ranch".
+     flag: "Curry Veggies Pizza" is on the Toast SF menu with no description and is not on the website menu (the site does list a separate "Vegan Curry Veggie", also on Toast).
+     flag: Vegan Curry Chicken showed OUT OF STOCK on Toast when checked; kept on the list.
+     flag: The site's "Half Specialty & Half BYO" and plain "Chicken Wings" are Sacramento-only (site data and FAQ), so they are left out here.
+     flag: Dips and sauces ($0.99-$1.49) are listed under Toast's own section name "Extra Ranch".
+     flag: Hours conflict: the site (SF store page, locations page and FAQ) says 10:00 AM - 4:00 AM daily; Toast's "Location and Ordering Hours" says 10:00AM - 3:45AM every day. Kept the site's store hours; Toast's 3:45 looks like the online-ordering cutoff. Instagram bio only says "Monday-Sunday".
+     flag: Phone conflict: the site's SF page and contact page print (415) 869-6617 (kept). The Toast SF page footer prints (510) 401-4328. The Instagram Contact sheet shows (915) 758-8975, which looks like the Sacramento store's (916) 758-8975 with a wrong area code; not used for SF.
+     flag: Address check: 215 Fremont St, San Francisco, CA 94105 matches Glenn's "San Francisco" page. Toast writes it "215 Fremont Street, 2B" (suite 2B not on the site).
+     flag: Email info@bollywoodpizza.com is printed on the Instagram Contact sheet and on the site's contact page (general enquiries), not SF-specific.
+     flag: site_url points at the site's San Francisco store page; Glenn's link was the home page https://bollywoodpizza.com/. The brand also has a Sacramento store (6601 Folsom Blvd #100) and a Livermore store coming soon.
+     flag: No alcohol on the SF menu. Toast opened fine in headless Chromium; no cart, sign-in or forms used (cookie banner: rejected non-necessary).
+     flag: On review: seated at san-francisco-goods-3 (Indian: Indian fusion pizza), whole page with their own video. Glenn's messages of 29-30 September.
+  */
+  'bollywood-pizza-sf': {
+    address: "215 Fremont St, San Francisco, CA 94105",
+    phone: "(415) 869-6617",
+    email: "info@bollywoodpizza.com",
+    hours: "Daily 10am-4am",
+    cuisine: "Indian fusion pizza",
+    sections: [
+      { name: "Desi Fusion Pizzas (Veg)", items: [
+        ["Shahi Paneer","Makhani sauce, bell peppers, red onions, diced tomatoes marinated paneer and fresh cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Curry Paneer","Spicy curry sauce, mozzarella cheese, mushrooms, bell peppers, olives, red onions, diced tomatoes and fresh cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Desi Garden","Traditional red sauce, mozzarella cheese, mushrooms, bell peppers, olives, red onions, diced tomatoes, ginger and hari mirchi (spicy pepper). Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Achari Gobhi","Creamy garlic sauce, mozzarella cheese, red onions, diced tomatoes and gobhi (cauliflower). Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Malai Paneer","Spice level: low. Malai sauce, mozzarella cheese, bell peppers, red onions, diced tomatoes and marinated paneer. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Aloo Chat","Spice level: low. Creamy savory sauce, mozzarella, onions, potatoes, cilantro, mint sauce, chat masala. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Palak Paneer","Spice level: low. Pesto sauce, mozzarella cheese, baby spinach, onions and marinated paneer. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Curry Veggies Pizza","Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+      ] },
+      { name: "Desi Fusion Pizzas (Non-Veg)", items: [
+        ["Butter Chicken","Makhni sauce, mozzarella cheese, bell peppers, red onions, tomatoes, and fresh cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Tandoori Chicken","Creamy garlic sauce, mozzarella cheese, bell peppers, red onions, diced tomatoes, tandoori chicken, green onions, and fresh cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Chicken Tikka","Creamy garlic sauce, mozzarella cheese, red onions, diced tomatoes, chicken tikka, green onions and cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Curry Chicken","Spicy curry sauce, mozzarella cheese, bell peppers, red onions, diced tomatoes, curry chicken, green onions and fresh cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Malai Chicken","Spice level: low. Malai sauce, mozzarella cheese, bell peppers, red onions, diced tomatoes and Malai chicken. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Achari Chicken","Creamy garlic sauce, mozzarella cheese, red onions, diced tomatoes and achari chicken. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Desi Garlic Chicken","Garlic sauce, cheese, mushrooms, olives, bell peppers, onions, tomatoes, garlic chicken, hari mirch, ginger, fresh garlic and cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Lamb Kebab","Halal. Non-vegetarian. White sauce, cheese, onions, spiced ground lamb, cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Shawarma Pizza","Halal. Spice level: low. Non-vegetarian. White sauce, onion, ginger, jalapeno, cilantro and shawarma chicken. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Halal Chicken Tikka","Halal chicken tikka on a creamy garlic base with red onion and cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+      ] },
+      { name: "Classic Pizzas", items: [
+        ["Original Margherita","Spice level: low. Traditional red sauce, oregano, basil, diced tomatoes, hint of olive oil and topped with mozzarella cheese. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Classic Veggie","Spice level: low. Mushrooms, olive, bell peppers, diced tomatoes, red onions and artichoke hearts. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Classic Combo","Spice level: low. Non-vegetarian. Pepperoni, salami, beef, sausage, mushrooms, olives, diced tomatoes, bell peppers and red onions. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Meat Lovers Combination","Spice level: low. Non-vegetarian. Ham, salami, pepperoni, beef and Italian sausages. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Garlic Chicken Combination","Spice level: low. Non-vegetarian. Creamy garlic sauce, grilled chicken, bacon, diced tomatoes and green onions. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["BBQ Chicken Combination","Spice level: low. Non-vegetarian. BBQ sauce, grilled chicken, bacon, red onions and pineapple. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+      ] },
+      { name: "Vegan Pizzas", items: [
+        ["Vegan Chicken Tikka","Vegan white sauce, vegan cheese, onions, tomatoes, plant-based chicken tikka. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Vegan Curry Chicken","Vegan curry sauce, vegan cheese, bell peppers, onions, tomatoes, plant-based curry chicken. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+        ["Vegan Curry Veggie","Vegan curry sauce, vegan cheese, mushrooms, bell peppers, olives, red onions, diced tomatoes and fresh cilantro. Sizes: 10\" $21.95, 12\" $31.45, 14\" $36.65, 18\" $42.65.",2195,null,"from"],
+      ] },
+      { name: "Build Your Own Pizzas", items: [
+        ["BYO Pizza","Start with dough, sauce and cheese, then build it exactly how you want it. Thin or traditional crust. 14\" $19.95, 18\" $24.95; toppings extra.",1995,null,"from"],
+        ["Half & Half Specialty Pizza","Two specialty pizzas on one base. Thin or traditional crust. 14\" $38.95, 18\" $44.95.",3895,null,"from"],
+      ] },
+      { name: "Appetizers", items: [
+        ["Mozzarella Sticks","5 pcs",595],
+        ["Masala Potatoes","Crispy wedges tossed in house masala.",795],
+        ["Garlic Cheese Sticks","Fresh dough, garlic butter and stretchy mozzarella. Small $8.95, Medium $13.95.",895,null,"from"],
+        ["Tandoori Cheese Sticks","Onions, pineapple and jalapenos. Small $8.95, Medium $13.95.",895,null,"from"],
+        ["Desi Cheese Sticks","Ginger, cilantro, onions, jalapenos and pineapple. Small $13.95, Medium $17.95.",1395,null,"from"],
+        ["Tandoori Wings","Tandoori-marinated wings, charred and finished with lime. 6pc $12.95, 12pc $19.95, 18pc $27.95.",1295,null,"from"],
+        ["Achari Wings","Wings in achari pickling spice. 6pc $12.95, 12pc $19.95, 18pc $27.95.",1295,null,"from"],
+      ] },
+      { name: "Pasta", items: [
+        ["Shahi Paneer Pasta","Penne in shahi gravy with paneer.",1495],
+        ["Pesto Chicken Pasta","Basil pesto with grilled chicken.",1495],
+        ["Butter Chicken Pasta","Penne in makhani sauce with tandoori chicken.",1495],
+      ] },
+      { name: "Dessert", items: [
+        ["Nutella M&M Pie","Warm dough, Nutella, toasted marshmallows and candy.",1195],
+      ] },
+      { name: "Drinks", items: [
+        ["Mango Lassi","Thick, cold and properly mango.",500],
+        ["Nimbu Pani","Indian lemonade, salted and sharp.",400],
+        ["Glass Bottled Soda","",400],
+        ["Can Soda","",319],
+        ["Bottled Water","",400],
+        ["Limca can","",399],
+        ["Thums Up can","",399],
+      ] },
+      { name: "Extra Ranch", items: [
+        ["Homemade Masala Ranch","",149],
+        ["Buttermilk Ranch","",99],
+        ["Home Made Mint Sauce","",149],
+        ["Buffalo Sauce","",99],
+        ["Marinara Sauce","",99],
+        ["BBQ Sauce","",99],
+        ["Garlic Sauce","",149],
+      ] },
+    ],
+    siteNote: "Beyond ordinary, beyond flavors: Indian fusion pizza, in their own words. Prices are from the San Francisco shop's own online ordering.",
   },
 
   /*
@@ -9276,6 +9445,77 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     King Katsu Land — gathered 2026-09-30 from own
+     they are: Korean katsu
+     flag: Newark vs Daly City: the site publishes a single menu headed “Daly City & Newark / The menu”, with no per-location prices and no location switch in the page or its scripts, so the Newark page uses that shared menu. Delivery-app prices may differ and were not checked or used.
+     flag: No first-party ordering page: the site's “Order online” button for Newark only links out to Grubhub, DoorDash and Uber Eats (third-party marketplaces), so order_url is null.
+     flag: Hours come only from the Instagram bio (“Sun-Thur 11am-9pm Fri & Sat 11am-10pm”), a single line printed under both addresses; the website publishes no hours. Assumed to apply to Newark. “Sun-Thur” written as “Sun-Thu”.
+     flag: Left out alcohol: Beer (Small $6.95 / Large $12.95) and Soju ($12.95).
+     flag: “Add curry sauce” is a line on the menu page (“Add curry sauce to King Katsu or Chicken Katsu for $2.00”), not a named dish; listed as an add-on item. Name is ours; the wording in desc is theirs.
+     flag: The Legendary Challenger is a challenge meal: $38.95 if you don't finish, free if you finish in 30 minutes; 5 challengers per day. Kept as a priced item in its own section.
+     flag: Item descriptions use the menu page wording; the homepage teaser words a few slightly differently (e.g. Cheese Katsu “Pork cutlet with cheese.”). Prices on both pages match.
+     flag: Section names: the site's headings and menu tabs (The signatures, Noodles, Korean chicken, Kids, Sides, Drinks); “Challenge” is from the site's nav.
+     flag: Address check: Newark address 5890 Mowry School Rd, Newark, CA 94560 matches the Newark page and the Instagram bio. Newark phone (510) 838-5449 matches on both.
+     flag: Email kingkatsuland@gmail.com is printed on their website (first-party); it is shared by both locations.
+     flag: The kingkatsuland.com screenshot (IMG_5618) shows a black splash with the crown logo; the live site's design differs somewhat, but the domain, logo and details match.
+     flag: On review: the whole Tier 3 page, as Glenn asked: 'Clip this video and give their page the whole tier 3 treatment. I'm going to use this page as a way to recruit her.'
+     flag: On review: seated at newark-goods-7 (Korean and ramen: Korean katsu), whole page with @kimjsseats's reel. Glenn's messages of 29-30 September.
+  */
+  'king-katsu-land-newark': {
+    address: "5890 Mowry School Rd, Newark, CA 94560",
+    phone: "(510) 838-5449",
+    email: "kingkatsuland@gmail.com",
+    hours: "Sun-Thu 11am-9pm, Fri-Sat 11am-10pm",
+    cuisine: "Korean katsu",
+    sections: [
+      { name: "The signatures", items: [
+        ["King Katsu","Korean-style wide, thin pork cutlet. Regular or spicy sauce.",1995],
+        ["Chicken Katsu","Chicken cutlet. Regular or spicy sauce.",1995],
+        ["Cheese Katsu","Pork cutlet filled with cheese. Regular or spicy sauce.",2195],
+        ["Snowflake Cheese Katsu","Pork cutlet topped with shredded cheese. Regular or spicy sauce.",2195],
+        ["Sweet Potato Katsu","Pork cutlet with sweet potato mousse. Regular or spicy sauce.",1995],
+        ["Fish Katsu","Fish cutlet with tartar sauce.",2095],
+        ["Tteok-bo-ki Katsu","Spicy Korean rice cakes with pork or chicken katsu.",2295],
+        ["Hamburger Steak","Korean-style marinated beef and pork patty. Regular or spicy sauce.",1995],
+        ["King’s Combo","Pork or chicken katsu, fish katsu and hamburger steak. Regular or spicy sauce.",2595],
+        ["Add curry sauce","Add curry sauce to King Katsu or Chicken Katsu.",200],
+      ] },
+      { name: "Noodles", items: [
+        ["Udon","Traditional udon with fish cake.",1895],
+        ["Cold Soba","Cold buckwheat noodles.",1895],
+        ["ZzolMyun","Cold, chewy noodles served with spicy sauce.",1895],
+      ] },
+      { name: "Korean chicken", items: [
+        ["Fried Chicken","Korean-style fried chicken. Small $18.95, Large $25.95.",1895,null,"from"],
+        ["Yang-nyeom Chicken","Fried chicken with sweet and tangy sauce. Small $18.95, Large $25.95.",1895,null,"from"],
+        ["Butter Garlic Chicken","Fried chicken with butter garlic sauce. Small $18.95, Large $25.95.",1895,null,"from"],
+        ["Half & Half Chicken","Choose two: Original, Yang-nyeom or Butter Garlic.",2695],
+      ] },
+      { name: "Kids", items: [
+        ["Kids Katsu","Small pork or chicken katsu.",1395],
+        ["Kids Katsu with Curry","Small pork or chicken katsu with curry.",1495],
+      ] },
+      { name: "Sides", items: [
+        ["Corn Cheese","",1095],
+        ["Fried Shrimp","",1095],
+        ["Tteok-bo-ki","Spicy Korean rice cakes.",1295],
+        ["Extra Rice","",195],
+        ["Extra Fried Rice","",295],
+        ["Side Curry","",295],
+      ] },
+      { name: "Drinks", items: [
+        ["Rice Punch Slush","Sikhye, a Korean sweet rice drink.",495],
+        ["Lemonade Slush","",495],
+        ["Soda","",295],
+      ] },
+      { name: "Challenge", items: [
+        ["The Legendary Challenger","Super-size King Katsu with double rice. Finish within 30 minutes and it’s free. Limited to 5 challengers per day. Ask your server to enter.",3895],
+      ] },
+    ],
+    siteNote: "The King of Korean Katsu, in their own words, in Newark and Daly City. Prices are from the menu on their own site.",
+  },
+
+  /*
      Kitava — gathered 2026-09-21 from own
      they are: Gluten-free kitchen
      flag: Hours per the locator: 11am-9pm daily.
@@ -9647,6 +9887,27 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     hours: "Mon–Wed 11:30am–9pm, Thu–Fri 11:30am–10pm, Sat 11am–10pm, Sun 11am–9pm",
     cuisine: "Caribbean-Latin",
     contactOnly: "Miami flavors with Caribbean influences on Bonanza Street, in their own words. Their menus list no prices.",
+  },
+
+  /*
+     Little Sheep — gathered 2026-09-30 from none
+     they are: All-you-can-eat hot pot & yakitori
+     flag: Glenn's link was a Yelp page, which is a listing site, so it was not used for anything.
+     flag: The Instagram bio's only link is a Google Maps short link (maps.app.goo.gl/MdZJzkAY5xwk6s2PA). There is no website, link-in-bio page or ordering page, so it was not opened for facts.
+     flag: No first-party site covers this location. littlesheepusa.com (“Little Sheep Hot Pot & Bar”) lists only 1 American Dream Way, East Rutherford, NJ. The Little Sheep corporate site littlesheep.com (小肥羊, Yum China) lists US restaurants only under New Jersey in its finder. Neither lists 2016 Newpark Mall, Newark, CA, so neither counts as first-party for this page.
+     flag: littlesheephotpot.com, the old US Little Sheep domain, now redirects to an unrelated gambling spam site; ignored. Several guessed domains (littlesheepnewark.com, littlesheepca.com and others) do not resolve.
+     flag: It is unconfirmed whether this Newark restaurant is part of the Little Sheep chain. Its all-you-can-eat hot pot & yakitori format and small Instagram (1,035 followers) suggest an independent or separately run shop using the name and a sheep logo.
+     flag: No phone, email or hours appear in the screenshots (no Contact sheet was opened), so they are null.
+     flag: Instagram highlights are titled AYCE, Yummy…, Yakitori…, Customer, Rice No… and Ap…, but no prices are visible in the screenshots.
+     flag: Address check: the Instagram bio's “2016 Newpark Mall, Newark, CA 94560” is in Newark and matches the Newark page. The spelling “Newpark” is kept as they write it; the mall styles itself NewPark.
+     flag: Bio spacing “Hot Pot &Yakitori” normalized to “Hot Pot & Yakitori” in price_note.
+     flag: Glenn tagged it “Needs Website pilot program”, which fits: they have no site of their own.
+     flag: On review: Glenn's link was Yelp, a listing site, not used; no site of theirs, so the red ring for his website pilot.
+     flag: On review: seated at newark-goods2-1 (yellow sheet: Newark's Asian seat is Phonation's), whole page for @iamnikkieg's reel. Glenn's messages of 29-30 September.
+  */
+  'little-sheep-newark': {
+    address: "2016 Newpark Mall, Newark, CA 94560",
+    contactOnly: "All you can eat hot pot and yakitori at Newpark Mall, in their own words. They publish no prices of their own.",
   },
 
   /*
