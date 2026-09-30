@@ -6,6 +6,7 @@ import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
+import { businessSlug, flagReferral, isOwnDevice, mountAffiliate } from './affiliate'
 import { crmOpenMode } from './crm/open'
 import { syncSnapshots } from './crm/backfill'
 import { fillGlennDefaults } from './crm/core'
@@ -2959,11 +2960,19 @@ app.post('/api/members/verify', rateLimiter(12, 6), async (req, res) => {
   }
 
   const refCode = row.pending_ref ?? ''
-  const referrer = refCode
+  let referrer = refCode
     ? (await db.prepare('SELECT id FROM members WHERE referral_code = ?').get(refCode) as
         | { id: string }
         | undefined)
     : undefined
+  /* A sign-up on the referrer's own device earns the referrer nothing
+     (server/affiliate.ts), and the attempt is kept for the admin. Only READ
+     the device here: a phone with no device cookie has never been anyone's,
+     and minting one now would put it ahead of the session cookie. */
+  if (referrer && (await isOwnDevice(knownVisitor(req), referrer.id))) {
+    await flagReferral(referrer.id, 'self_signup', { code: refCode, channel: byPhone ? 'sms' : 'email' })
+    referrer = undefined
+  }
 
   const id = `mb_${randomBytes(8).toString('hex')}`
   await db.prepare(
@@ -3297,9 +3306,21 @@ function actorFor(req: Request, res: Response, memberId: string | null): string 
 /** Hosts that are BEASTY itself, so a click from one page to another is not a referral. */
 const OWN_HOSTS = ['beastypages.com', 'onrender.com', 'localhost']
 
+/** This server's own address as the browser reached it, for links it hands out. */
+function originFor(req: Request): string {
+  return PROD ? `https://${req.get('host')}` : `${req.protocol}://${req.get('host')}`
+}
+
 /** A visitor for analytics: a short hash of the device cookie (set here when missing). */
 function visitorOf(req: Request, res: Response): string {
   return shortHash(actorFor(req, res, null))
+}
+
+/** The device this request already carries, without giving it one: null for a new device. */
+function knownVisitor(req: Request): string | null {
+  if (req.get('sec-gpc') === '1') return null
+  const device = readCookie(req, DEVICE_COOKIE)
+  return device ? shortHash(`d:${hashToken(device)}`) : null
 }
 
 /** The visitor's device for an event, or none under Global Privacy Control or for a crawler. */
@@ -3567,8 +3588,9 @@ if (process.env.STRIPE_WEBHOOK_SECRET) {
 app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
   const m = await memberFromRequest(req)
   if (!m) return res.status(401).json({ error: 'Not signed in.' })
-  const origin = PROD ? `https://${req.get('host')}` : `${req.protocol}://${req.get('host')}`
-  const url = `${origin}/?ref=${m.referral_code}`
+  const origin = originFor(req)
+  /* ?for=business draws their business link (/r/<slug>) instead of the friend link. */
+  const url = req.query.for === 'business' ? `${origin}/r/${await businessSlug(m)}` : `${origin}/?ref=${m.referral_code}`
   try {
     const { toString } = await import('qrcode')
     const svg = await toString(url, { type: 'svg', margin: 1, width: 512 })
@@ -3616,6 +3638,8 @@ app.get('/crm', (req, res, next) => {
  * removed endpoint got HTML and a success code and could not tell.
  */
 mountFriends(app, { memberFromRequest, rateLimiter, shortName })
+/* The affiliate dashboard: what a member has brought to BEASTY (server/affiliate.ts). */
+mountAffiliate(app, { memberFromRequest, rateLimiter, deviceOf, isOperator, origin: originFor })
 
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 

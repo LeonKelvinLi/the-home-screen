@@ -17,6 +17,7 @@ import { ReserveApp } from './apps/ReserveApp'
 import { DesignsApp } from './apps/DesignsApp'
 import { ShareApp } from './apps/ShareApp'
 import { JoinApp } from './apps/JoinApp'
+import { AffiliateApp } from './apps/AffiliateApp'
 import { MembersApp } from './apps/MembersApp'
 import { CalendarApp } from './apps/CalendarApp'
 import { MemberCardApp } from './apps/MemberCardApp'
@@ -74,6 +75,8 @@ function renderApp(appId: string, api: ShellApi) {
       return <MemberCardApp api={api} />
     case 'profile':
       return <ProfileApp api={api} />
+    case 'affiliate':
+      return <AffiliateApp api={api} />
     case 'supply':
       return <SupplyApp api={api} />
     case 'gallery':

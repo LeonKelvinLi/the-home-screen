@@ -779,6 +779,56 @@ CREATE TABLE IF NOT EXISTS member_avatars (
   accessory  TEXT NOT NULL DEFAULT '',
   updated_at BIGINT NOT NULL
 );
+
+/*
+  THE AFFILIATE DASHBOARD (server/affiliate.ts, docs/AFFILIATE.md).
+
+  A click: one device opening a member's ?ref= link, once per California day.
+  The device is the same short hash the analytics use; the owner's own devices,
+  signed-in members and crawlers are never written here.
+*/
+CREATE TABLE IF NOT EXISTS referral_clicks (
+  id         BIGSERIAL PRIMARY KEY,
+  member_id  TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  visitor    TEXT NOT NULL,
+  day        TEXT NOT NULL,
+  landing    TEXT,
+  created_at BIGINT NOT NULL,
+  UNIQUE (member_id, visitor, day)
+);
+CREATE INDEX IF NOT EXISTS idx_refclicks_member ON referral_clicks(member_id, created_at);
+
+/* A referral that earned nothing and why, for the admin: today, a sign-up on
+   the referrer's own device. */
+CREATE TABLE IF NOT EXISTS referral_flags (
+  id         TEXT PRIMARY KEY,
+  member_id  TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  kind       TEXT NOT NULL,
+  detail     JSONB,
+  created_at BIGINT NOT NULL
+);
+CREATE INDEX IF NOT EXISTS idx_refflags_member ON referral_flags(member_id, created_at);
+
+/*
+  Rewards that pay, points or cash, when BEASTY starts paying them. Empty until
+  then, and the dashboard says so. One row per source per kind, so the same
+  friend or business can never be paid for twice.
+*/
+CREATE TABLE IF NOT EXISTS affiliate_rewards (
+  id          TEXT PRIMARY KEY,
+  member_id   TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+  source_kind TEXT NOT NULL CHECK (source_kind IN ('user','business','other')),
+  source_id   TEXT,
+  kind        TEXT NOT NULL CHECK (kind IN ('points','cash')),
+  amount      INTEGER NOT NULL CHECK (amount >= 0),
+  status      TEXT NOT NULL CHECK (status IN ('pending','earned','paid','void')),
+  note        TEXT,
+  created_at  BIGINT NOT NULL,
+  updated_at  BIGINT NOT NULL,
+  paid_at     BIGINT,
+  UNIQUE (member_id, source_kind, source_id, kind)
+);
+CREATE INDEX IF NOT EXISTS idx_affrewards_member ON affiliate_rewards(member_id, created_at);
 `
 
 /**

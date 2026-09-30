@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
 import { MemberPanel } from './MemberPanel'
+import { AffiliateCard } from './AffiliateApp'
 import { PetAvatarArt, SPECIES, COATS, BACKDROPS, ACCESSORIES } from './PetAvatar'
 import { Gem } from './MembersApp'
 import { member, isMember } from '../lib/member'
@@ -526,6 +527,13 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           2026-09-27, as asked; it renders nothing for a visitor who has not
           signed up.
         */}
+        {/*
+          THE WAY INTO THE AFFILIATE DASHBOARD, with four of its numbers, so a
+          member sees what they have brought without leaving Profile. The code
+          and QR below stay where Glenn put them.
+        */}
+        <AffiliateCard api={api} />
+
         <MemberPanel />
 
         {/* Signed in, the first sentence was simply false: accounts exist and

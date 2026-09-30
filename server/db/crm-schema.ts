@@ -26,6 +26,7 @@ CREATE TABLE IF NOT EXISTS crm_source_types (
 INSERT INTO crm_source_types (key, label, is_person, sort, created_at) VALUES
   ('celebrity', 'Celebrity', TRUE, 10, ${NOW_MS}),
   ('individual', 'BEASTY Individual', TRUE, 20, ${NOW_MS}),
+  ('member', 'BEASTY member', TRUE, 25, ${NOW_MS}),
   ('influencer', 'Influencer', TRUE, 30, ${NOW_MS}),
   ('glenn', 'Glenn', TRUE, 40, ${NOW_MS}),
   ('leon', 'Leon', TRUE, 50, ${NOW_MS}),

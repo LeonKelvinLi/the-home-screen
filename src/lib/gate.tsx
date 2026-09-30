@@ -4,6 +4,7 @@ import { captureReferral, captureVia, fetchAccount, type Account, type AccountSt
 import { captureAttribution, sendVisit } from './attribution'
 import { startTracking, track } from './track'
 import { captureMemberLink } from './friends'
+import { sendReferralClick } from './affiliate'
 
 /**
  * WHAT A SIGNED-OUT VISITOR MAY DO, and the prompt when they may not.
@@ -57,6 +58,8 @@ export function GateProvider({ children }: { children: React.ReactNode }) {
     // A shared QR lands here first; the code has to be kept before anything
     // rewrites the URL or the referrer loses their credit.
     captureReferral()
+    // And the click on that member's link, counted by the server (lib/affiliate.ts).
+    sendReferralClick()
     // "Share my page" names the member to open (lib/friends.ts).
     captureMemberLink()
     captureVia()

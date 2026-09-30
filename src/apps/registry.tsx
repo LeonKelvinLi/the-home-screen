@@ -18,7 +18,7 @@ import type { SystemGlyph } from '../ios/SystemIcon'
 export type SystemKey =
   | 'cart' | 'orders' | 'rewards' | 'help' | 'search' | 'account' | 'phone' | 'settings'
   | 'reserve' | 'designs' | 'share' | 'members' | 'calendar' | 'membercard' | 'profile'
-  | 'supply' | 'gallery' | 'watch' | 'join' | 'news'
+  | 'supply' | 'gallery' | 'watch' | 'join' | 'news' | 'affiliate'
 
 export interface AppDef {
   id: string
@@ -467,6 +467,30 @@ export const PROFILE_APP: AppDef = {
   tint: '#141416',
 }
 
+/*
+  THE AFFILIATE DASHBOARD, opened from Profile (Glenn's "user/affiliate
+  dashboard", September 2026). On no grid: it is a member's own page, reached
+  from their Profile, like the sign-up screen is reached from the gate.
+*/
+const AffiliateIcon = () => (
+  <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
+    <rect width="100" height="100" fill="#141416" />
+    <rect x="22" y="56" width="12" height="22" rx="3" fill="#fff" />
+    <rect x="44" y="42" width="12" height="36" rx="3" fill="#fff" />
+    <rect x="66" y="26" width="12" height="52" rx="3" fill="#F6D800" />
+  </svg>
+)
+
+export const AFFILIATE_APP: AppDef = {
+  id: 'sys.affiliate',
+  name: 'Affiliate dashboard',
+  label: 'Affiliate',
+  icon: <AffiliateIcon />,
+  kind: 'system',
+  systemKey: 'affiliate',
+  tint: '#141416',
+}
+
 /** The BEASTY Supply Co tile: his Shopify store, in the dock's BEASTY set. */
 const SupplyIcon = () => (
   <svg viewBox="0 0 100 100" aria-hidden="true" style={{ display: 'block', width: '100%', height: '100%' }}>
@@ -570,6 +594,8 @@ export const ALL_APPS: AppDef[] = [
   WATCH_APP,
   /* Reachable by id even though it is on no grid: the gate prompt opens it. */
   JOIN_APP,
+  /* Likewise: Profile opens it. */
+  AFFILIATE_APP,
 ]
 
 /*

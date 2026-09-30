@@ -23,6 +23,7 @@ import {
   normPhone,
 } from '../../src/crm/model'
 import { crmActor, endCrmSession, requireCrm, startCrmSession } from './auth'
+import { ensurePerson } from '../affiliate'
 import type { CrmDeps } from './auth'
 import {
   CrmError,
@@ -918,9 +919,16 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
     rateLimiter(60, 20),
     h(async (req, res) => {
       const slug = str(req.params.slug, 60).toLowerCase()
-      const person = /^[a-z0-9-]{2,60}$/.test(slug)
+      let person = /^[a-z0-9-]{2,60}$/.test(slug)
         ? await db.prepare('SELECT id FROM crm_people WHERE slug = ? AND active').get<{ id: string }>(slug)
         : undefined
+      /* A member's own business link, beastypages.com/r/<their code>: their
+         CRM row is made on this first real click (server/affiliate.ts), so a
+         member who never shares it never appears among the referrers. */
+      if (!person) {
+        const id = await ensurePerson(slug)
+        if (id) person = { id }
+      }
       res.set('Cache-Control', 'no-store')
       if (!person) return res.redirect(302, '/')
       const via = req.query.via === 'qr' ? 'qr_code' : 'referral_link'
