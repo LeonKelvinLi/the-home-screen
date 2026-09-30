@@ -583,7 +583,7 @@ for (const s of [
   'api/members/pass', 'Refreshes in', 'single scan', 'api/members/', '/profile', 'Nothing liked yet',
   'api/members/tickets', 'ticket-stub', 'members-interval',
   /* 2026-09-30: the BEASTY category pages and Search's Categories and Cities drop-downs. */
-  'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', 'cat-barbershops.webp', 'Barbers, cuts and shaves',
+  'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', '/wallpapers/cat-', 'Barbers, cuts and shaves',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }
