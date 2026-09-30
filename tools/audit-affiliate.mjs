@@ -189,6 +189,16 @@ step('another member sees only their own dashboard', dB.lifetime.users === 0 && 
 const qr = await phoneA.call('GET', '/api/members/qr.svg?for=business', undefined, true)
 step('a QR code for the business link is drawn', qr.status === 200 && /svg/.test(qr.headers.get('content-type') ?? ''))
 
+/* The foundation: $9 a month from each member she brought who pays, never from one who has not yet. */
+const [f1, f2] = [F1.id, F2.id]
+await q("UPDATE members SET tier = 'pass', tier_status = 'active' WHERE id = $1", [f1])
+await q("UPDATE members SET tier = 'diamond', tier_status = 'pending' WHERE id = $1", [f2])
+d = await me(phoneA)
+step('the foundation line counts the paying member and not the pending one', d.foundation.payingMembers === 1 && d.foundation.monthlyCents === 900 && d.foundation.name === "Biggie's Purple Ribbon Foundation", JSON.stringify(d.foundation))
+await q("UPDATE members SET tier = 'diamond', tier_status = 'active' WHERE id = $1", [f2])
+d = await me(phoneA)
+step('a second paying member makes it $18 a month', d.foundation.monthlyCents === 1800)
+
 /* The admin's read. */
 const adminNo = await new Device().call('GET', '/api/admin/affiliates')
 step('the admin list is refused without the operator key', adminNo.status === 401)
@@ -206,27 +216,44 @@ const open = async (dev, viewport) => {
   const p = await ctx.newPage()
   p.errors = []
   p.on('pageerror', (e) => p.errors.push(e.message))
+  return profileOn(p)
+}
+/* Home, then Profile, on a page that is already open: the same phone. */
+const profileOn = async (p) => {
   await p.goto(`${base}/?b=b_zadnagrill`, { waitUntil: 'domcontentloaded' })
   await p.waitForSelector('.nav-back', { timeout: 30000 })
   await p.click('.nav-back')
   await p.waitForTimeout(1200)
   await p.evaluate(() => [...document.querySelectorAll('button[aria-label]')].find((x) => /^Profile/.test(x.getAttribute('aria-label')))?.click())
-  await p.waitForSelector('.aff-entry', { timeout: 20000 })
+  await p.waitForSelector('.prof-tabs', { timeout: 20000 })
   return p
+}
+const toEarn = async (p) => {
+  await p.click('.prof-tabs [data-tab="earn"]')
+  await p.waitForSelector('.earn-numbers', { timeout: 20000 })
+  await p.waitForFunction(() => !/–/.test(document.querySelector('.earn-numbers')?.textContent ?? '–'), null, { timeout: 15000 }).catch(() => {})
 }
 const shot = async (p, name) => { if (SHOTS) await p.screenshot({ path: `${SHOTS}/${name}.png`, fullPage: false }) }
 
 const phone = await open(phoneA, { width: 393, height: 852 })
-await phone.waitForFunction(() => /\b3\b/.test(document.querySelector('.aff-entry-stats')?.textContent ?? ''), null, { timeout: 15000 }).catch(() => {})
-const entry = await phone.locator('.aff-entry-stats').textContent()
-step('Profile shows her numbers on the way in, in plain English', /3\s*people/.test(entry) && /1\s*business(?!es)/.test(entry) && /2\s*conversions/.test(entry), entry)
-const order = await phone.evaluate(() => {
-  const e = document.querySelector('.aff-entry'); const mp = document.querySelector('.mp')
-  return !!(e && mp && e.compareDocumentPosition(mp) & Node.DOCUMENT_POSITION_FOLLOWING)
+step('Profile opens on My page, with no code on it', (await phone.getAttribute('.prof-tabs [data-tab="mine"]', 'aria-selected')) === 'true' && (await phone.locator('.mp').count()) === 0 && (await phone.locator('.top3, .friends-empty, .prof-top').count()) > 0)
+await shot(phone, '0-profile-mine')
+await toEarn(phone)
+const entry = await phone.locator('.earn-numbers').textContent()
+step('Earn shows her numbers in plain English', /3\s*people/.test(entry) && /1\s*business(?!es)/.test(entry) && /2\s*conversions/.test(entry), entry)
+step('then the foundation line, from the paying members', /\$18 a month/.test(await phone.locator('.earn-foundation').textContent()))
+const earnOrder = await phone.evaluate(() => {
+  const n = document.querySelector('.earn-numbers'); const f = document.querySelector('.earn-foundation'); const mp = document.querySelector('.mp'); const o = document.querySelector('.earn-open')
+  const after = (a, b) => !!(a && b && a.compareDocumentPosition(b) & Node.DOCUMENT_POSITION_FOLLOWING)
+  return after(n, f) && after(f, mp) && after(mp, o)
 })
-step('and keeps her code and QR below it', order)
-await shot(phone, '1-profile-card')
-await phone.click('.aff-entry')
+step('then her code and QR, then the way into the dashboard', earnOrder)
+step('the code on Earn is hers, with a business link too', (await phone.locator('.mp-code').textContent())?.trim() === A.referralCode && (await phone.locator('.mp-qr-side .btn-secondary', { hasText: 'Share business link' }).count()) === 1)
+await phone.click('.mp-qr-switch button:nth-child(2)')
+await phone.waitForTimeout(400)
+step('its QR switches to the business link', /for=business/.test((await phone.getAttribute('.mp-qr img', 'src')) ?? ''))
+await shot(phone, '1-profile-earn')
+await phone.click('.earn-open')
 await phone.waitForSelector('.aff-hero', { timeout: 20000 })
 await phone.waitForTimeout(500)
 await shot(phone, '2-dashboard-top')
@@ -244,16 +271,21 @@ await shot(phone, '3-dashboard-lists')
 const lists = await phone.locator('.aff').textContent()
 step('the lists show the business and the friends by initial only', lists.includes('Affiliate Test Tacos') && lists.includes('F•••') && !/Finn|Gia|Hal/.test(lists))
 step('no errors on the page', phone.errors.length === 0, phone.errors.join(' | '))
+await profileOn(phone)
+step('back on Profile later, the phone remembers she was on Earn', (await phone.getAttribute('.prof-tabs [data-tab="earn"]', 'aria-selected')) === 'true')
 
 const desk = await open(phoneA, { width: 1280, height: 900 })
-await desk.click('.aff-entry')
+await toEarn(desk)
+await desk.click('.earn-open')
 await desk.waitForSelector('.aff-kpi', { timeout: 20000 })
 const cols = await desk.evaluate(() => getComputedStyle(document.querySelector('.aff-kpis')).gridTemplateColumns.split(' ').length)
 await shot(desk, '4-dashboard-desktop')
 step('on a wide screen the numbers sit four across', cols === 4 || (await desk.evaluate(() => window.innerWidth)) < 700, cols)
 
 const fresh = await open(phoneB, { width: 393, height: 852 })
-await fresh.click('.aff-entry')
+await toEarn(fresh)
+step('a new affiliate\u2019s foundation line says $0 so far', /\$0 a month/.test(await fresh.locator('.earn-foundation').textContent()))
+await fresh.click('.earn-open')
 await fresh.waitForSelector('.aff-hero', { timeout: 20000 })
 await fresh.waitForTimeout(400)
 await shot(fresh, '5-new-affiliate')

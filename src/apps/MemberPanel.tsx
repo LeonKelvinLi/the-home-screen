@@ -21,24 +21,28 @@ import { tierById, PER_MILESTONE_REFERRALS, DISCOUNT_PER_MILESTONE } from '../da
  * THE LINK IS SHOWN BESIDE IT because most people will SEND their code rather
  * than have it scanned. A QR alone is useless in a text message.
  */
-export function MemberPanel() {
+export function MemberPanel({ businessLink }: { businessLink?: string } = {}) {
   const { account } = useGate()
-  const [copied, setCopied] = useState(false)
+  const [copied, setCopied] = useState<'friend' | 'business' | null>(null)
+  /* Since 2026-09-30 it lives on Profile's Earn tab, with a second code: the
+     business link (/r/<code>), for a business asking for a spot. */
+  const [qr, setQr] = useState<'friend' | 'business'>('friend')
   if (!account) return null
 
   const tier = tierById(account.tier)
   const link = shareLink(account.referralCode)
   const { referrals, rewards, raffleTickets } = account
 
-  async function share() {
+  async function share(which: 'friend' | 'business') {
+    const url = which === 'business' && businessLink ? businessLink : link
     try {
       if (navigator.share) {
-        await navigator.share({ title: 'BEASTY', url: link })
+        await navigator.share({ title: 'BEASTY', url })
         return
       }
-      await navigator.clipboard.writeText(link)
-      setCopied(true)
-      window.setTimeout(() => setCopied(false), 2000)
+      await navigator.clipboard.writeText(url)
+      setCopied(which)
+      window.setTimeout(() => setCopied(null), 2000)
     } catch {
       /* sheet dismissed — not an error worth a message */
     }
@@ -49,17 +53,37 @@ export function MemberPanel() {
       <h2 className="prof-h">Your code</h2>
 
       <div className="mp-qr">
-        <img src="/api/members/qr.svg" alt={`QR code for referral ${account.referralCode}`} />
+        <img
+          src={qr === 'business' ? '/api/members/qr.svg?for=business' : '/api/members/qr.svg'}
+          alt={`QR code for ${qr === 'business' ? 'your business link' : `referral ${account.referralCode}`}`}
+        />
         <div className="mp-qr-side">
           <span className="mp-code">{account.referralCode}</span>
           <p className="mp-lead">
-            Anyone who signs up through this counts as your referral.
+            {qr === 'business'
+              ? 'A business that asks for a spot through this counts as yours.'
+              : 'Anyone who signs up through this counts as your referral.'}
           </p>
-          <button className="btn-secondary" onClick={share}>
-            {copied ? 'Link copied' : 'Share your link'}
+          <button className="btn-secondary" onClick={() => void share('friend')}>
+            {copied === 'friend' ? 'Link copied' : 'Share friend link'}
           </button>
+          {businessLink && (
+            <button className="btn-secondary" onClick={() => void share('business')}>
+              {copied === 'business' ? 'Link copied' : 'Share business link'}
+            </button>
+          )}
         </div>
       </div>
+      {businessLink && (
+        <div className="aff-seg aff-seg-small mp-qr-switch" role="tablist" aria-label="Which QR code">
+          <button role="tab" aria-selected={qr === 'friend'} className={qr === 'friend' ? 'on' : ''} onClick={() => setQr('friend')}>
+            QR for friends
+          </button>
+          <button role="tab" aria-selected={qr === 'business'} className={qr === 'business' ? 'on' : ''} onClick={() => setQr('business')}>
+            QR for businesses
+          </button>
+        </div>
+      )}
 
       <h2 className="prof-h">What it has earned</h2>
       <div className="mp-stats">

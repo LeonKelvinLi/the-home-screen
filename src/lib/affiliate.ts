@@ -90,6 +90,14 @@ export interface Affiliate {
     cash: { pendingCents: number; earnedCents: number; paidCents: number }
   }
   activity: { at: number; kind: string; text: string }[]
+  /** $9 a month per paying member or business brought in (server/affiliate.ts FOUNDATION). */
+  foundation: {
+    name: string
+    perMonthCents: number
+    payingMembers: number
+    payingBusinesses: number
+    monthlyCents: number
+  }
 }
 
 export async function fetchAffiliate(): Promise<Affiliate> {

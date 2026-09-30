@@ -134,6 +134,9 @@ step('8  the gate stops firing without a reload', !after)
 // ---- 5. their QR and code are on the profile -----------------------------
 await p.evaluate(() => { const x = [...document.querySelectorAll('button')].find((n) => /Profile/i.test(n.getAttribute('aria-label') || n.textContent || '')); x?.click() })
 await p.waitForTimeout(1500)
+/* The code and QR are on Profile's Earn tab since 2026-09-30. */
+await p.evaluate(() => document.querySelector('.prof-tabs [data-tab="earn"]')?.click())
+await p.waitForTimeout(1200)
 const prof = await p.evaluate(() => {
   const img = document.querySelector('.mp-qr img')
   return { qr: !!img && img.complete && img.naturalWidth > 0, code: document.querySelector('.mp-code')?.textContent?.trim() ?? null }

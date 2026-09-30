@@ -72,6 +72,9 @@ await p.evaluate(()=>window.dispatchEvent(new CustomEvent('beasty:join')))
 await p.waitForTimeout(400)
 await p.evaluate(()=>{ const b=[...document.querySelectorAll('button')].find(x=>/Profile/i.test(x.getAttribute('aria-label')||x.textContent||'')); b?.click() })
 await p.waitForTimeout(1400)
+/* The code and QR are on Profile's Earn tab since 2026-09-30. */
+await p.evaluate(()=>document.querySelector('.prof-tabs [data-tab="earn"]')?.click())
+await p.waitForTimeout(1200)
 const prof = await p.evaluate(()=>{
   const img=document.querySelector('.mp-qr img')
   return { panel: !!document.querySelector('.mp'),

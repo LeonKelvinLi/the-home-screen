@@ -150,6 +150,9 @@ function Dashboard({
           <span>
             <b>{data.rewards.tickets.earned}</b> raffle {data.rewards.tickets.earned === 1 ? 'ticket' : 'tickets'}
           </span>
+          <span>
+            <b>{money(data.foundation.monthlyCents)}</b> a month for the foundation
+          </span>
         </div>
       </header>
 
@@ -278,6 +281,25 @@ function Dashboard({
                 : 'Not switched on yet'}
             </span>
           </div>
+        </div>
+        {/* Glenn, 2026-09-30: $9 of every paying member's and business's monthly fee goes to the foundation. */}
+        <div className="earn-foundation aff-foundation">
+          <span className="earn-foundation-name">{data.foundation.name}</span>
+          <p className="earn-foundation-line">
+            {data.foundation.monthlyCents > 0 ? (
+              <>
+                Your people are raising <b>{money(data.foundation.monthlyCents)} a month</b>
+              </>
+            ) : (
+              <>
+                Raising <b>$0 a month</b> so far
+              </>
+            )}
+          </p>
+          <p className="earn-foundation-how">
+            {money(data.foundation.perMonthCents)} a month from every member you bring who takes a membership ({data.foundation.payingMembers}{' '}
+            now) and every business you bring on a monthly plan ({data.foundation.payingBusinesses} now).
+          </p>
         </div>
         <p className="aff-note">
           {data.rewards.toNextTicket} more {data.rewards.toNextTicket === 1 ? 'person' : 'people'} for your next raffle ticket. Every{' '}
@@ -560,52 +582,5 @@ function Share({ data }: { data: Affiliate }) {
         </div>
       </div>
     </section>
-  )
-}
-
-/**
- * The card on Profile: a few of the same numbers and the way in. Signed-in
- * members only; it draws nothing until the numbers arrive, so a slow network
- * never shows a zero that is not true.
- */
-export function AffiliateCard({ api }: { api: ShellApi }) {
-  const { account } = useGate()
-  const [data, setData] = useState<Affiliate | null>(null)
-  useEffect(() => {
-    if (!account) return
-    let live = true
-    fetchAffiliate()
-      .then((d) => live && setData(d))
-      .catch(() => {})
-    return () => {
-      live = false
-    }
-  }, [account])
-  if (!account) return null
-  const life = data?.lifetime
-  return (
-    <button type="button" className="aff-entry" onClick={() => api.openApp('sys.affiliate')}>
-      <span className="aff-entry-head">
-        <span className="aff-entry-title">Affiliate dashboard</span>
-        <span className="aff-entry-go" aria-hidden="true">
-          ›
-        </span>
-      </span>
-      <span className="aff-entry-stats">
-        {(
-          [
-            [life?.users, 'person', 'people'],
-            [life?.businesses, 'business', 'businesses'],
-            [life?.clicks, 'click', 'clicks'],
-            [life?.conversions, 'conversion', 'conversions'],
-          ] as const
-        ).map(([n, one, many]) => (
-          <span key={many}>
-            <b>{n ?? '–'}</b> {n === 1 ? one : many}
-          </span>
-        ))}
-      </span>
-      <span className="aff-entry-sub">What you have brought to BEASTY, your links and your rewards</span>
-    </button>
   )
 }

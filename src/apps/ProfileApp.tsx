@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { AppChrome } from './AppChrome'
-import { MemberPanel } from './MemberPanel'
-import { AffiliateCard } from './AffiliateApp'
+import { ProfileEarn } from './ProfileEarn'
 import { PetAvatarArt, SPECIES, COATS, BACKDROPS, ACCESSORIES } from './PetAvatar'
 import { Gem } from './MembersApp'
 import { member, isMember } from '../lib/member'
@@ -44,7 +43,31 @@ import { shareOrCopy } from '../lib/share'
 
 type Sheet = null | 'avatar' | 'visited' | 'recent' | 'top'
 
+/*
+  TWO TABS, Leon, 2026-09-30: "My page" is what friends see, "Earn" is what a
+  member brings to BEASTY (ProfileEarn.tsx). Remembered on the phone, so a
+  member who lives in Earn lands there. Opens on My page the first time.
+*/
+type Tab = 'mine' | 'earn'
+const TAB_KEY = 'fb.profileTab.v1'
+const readTab = (): Tab => {
+  try {
+    return localStorage.getItem(TAB_KEY) === 'earn' ? 'earn' : 'mine'
+  } catch {
+    return 'mine'
+  }
+}
+
 export function ProfileApp({ api }: { api: ShellApi }) {
+  const [tab, setTabState] = useState<Tab>(readTab)
+  const setTab = (t: Tab) => {
+    setTabState(t)
+    try {
+      localStorage.setItem(TAB_KEY, t)
+    } catch {
+      /* storage blocked: the tab is simply not remembered */
+    }
+  }
   const [p, setP] = useState<Profile>(() => readProfile())
   const [sheet, setSheet] = useState<Sheet>(null)
   const [editingName, setEditingName] = useState(false)
@@ -363,11 +386,44 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           </section>
         )}
 
+        <div className="prof-tabs" role="tablist" aria-label="Profile">
+          <button
+            type="button"
+            role="tab"
+            data-tab="mine"
+            aria-selected={tab === 'mine'}
+            className={tab === 'mine' ? 'on' : ''}
+            onClick={() => setTab('mine')}
+          >
+            My page
+            {(account?.friendRequests ?? 0) > 0 && (
+              <span className="prof-tab-badge" aria-label={`${account!.friendRequests} friend requests`}>
+                {account!.friendRequests}
+              </span>
+            )}
+          </button>
+          <button
+            type="button"
+            role="tab"
+            data-tab="earn"
+            aria-selected={tab === 'earn'}
+            className={tab === 'earn' ? 'on' : ''}
+            onClick={() => setTab('earn')}
+          >
+            Earn
+          </button>
+        </div>
+
+        {tab === 'earn' && <ProfileEarn api={api} />}
+
+        {tab === 'mine' && (
+        <>
         {/*
           THE ORDER, Leon for Glenn, 2026-09-27: "put qr code last and top 3
           friend and top restaurants first". The people first, then the places
           (the Number one spot and the Top 9), then Recent visits and the member
-          line, and the code with what it has earned at the end.
+          line. The code and what it has earned moved to the Earn tab on
+          2026-09-30.
         */}
         {/* His Top 8, cut to three: signed-in members only. */}
         <MyFriendsSection api={api} />
@@ -521,21 +577,6 @@ export function ProfileApp({ api }: { api: ShellApi }) {
           )}
         </div>
 
-        {/*
-          THEIR CODE AND WHAT IT HAS EARNED — his "the User gets their own
-          personalized QR code assigned to their profile page". Last since
-          2026-09-27, as asked; it renders nothing for a visitor who has not
-          signed up.
-        */}
-        {/*
-          THE WAY INTO THE AFFILIATE DASHBOARD, with four of its numbers, so a
-          member sees what they have brought without leaving Profile. The code
-          and QR below stay where Glenn put them.
-        */}
-        <AffiliateCard api={api} />
-
-        <MemberPanel />
-
         {/* Signed in, the first sentence was simply false: accounts exist and
             the member list in Contacts is built from them. */}
         {/* Friends changed what other members see (Glenn, 2026-09-24, "exactly
@@ -546,6 +587,8 @@ export function ProfileApp({ api }: { api: ShellApi }) {
             ? 'Other members can open you from Contacts and see your name, the month you joined, the pet you built, how many friends you have, your Top 3, and the businesses you have starred or liked. A photo and the places you have visited stay on this phone and are sent nowhere.'
             : 'This profile is on this phone only. You are not signed in, so nothing here has been sent anywhere and nobody else can see it.'}
         </p>
+        </>
+        )}
 
         {sheet === 'avatar' && (
           <section className="prof-editor">

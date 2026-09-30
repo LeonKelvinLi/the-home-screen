@@ -205,6 +205,7 @@ await fay.evaluate(() => [...document.querySelectorAll('button[aria-label]')].fi
 await fay.waitForSelector('.friend-requests', { timeout: 20000 })
 await fay.waitForTimeout(600)
 await shot(fay, '4-fay-profile-request')
+step('the My page tab carries the red number for it', (await fay.locator('.prof-tabs [data-tab="mine"] .prof-tab-badge').textContent().catch(() => null)) === '1')
 await fay.locator('.friend-requests .friend-mini', { hasText: 'Accept' }).click()
 await fay.waitForSelector('.friend-requests', { state: 'detached', timeout: 10000 }).catch(() => {})
 await fay.waitForTimeout(800)
@@ -219,14 +220,20 @@ const topRow = await fay.locator('.prof-top3 .top3-slot').first().textContent()
 step('Fay puts Gus at #1 on her Top 3', /#1/.test(topRow) && /Gus G\./.test(topRow), topRow)
 await fay.locator('.prof-top3').scrollIntoViewIfNeeded()
 await shot(fay, '6-fay-top3')
-/* Leon for Glenn, 2026-09-27: "put qr code last and top 3 friend and top restaurants first". */
+/* Leon for Glenn, 2026-09-27: "put qr code last and top 3 friend and top restaurants first";
+   since 2026-09-30 the code lives on Profile's Earn tab, and My page is the rest. */
 const order = await fay.evaluate(() => {
   const at = (sel) => { const e = document.querySelector(sel); return e ? [...document.querySelectorAll('*')].indexOf(e) : -1 }
   return { friends: at('.prof-top3'), topSpot: at('.prof-top'), nine: at('.prof-grid'), recent: at('.prof-recent-toggle'), qr: at('img[src="/api/members/qr.svg"]') }
 })
-step('Profile runs Top 3 friends, the top restaurants, then Recent, with the QR code last',
-  order.friends > 0 && order.friends < order.topSpot && order.topSpot < order.nine && order.nine < order.recent && order.recent < order.qr,
+step('My page runs Top 3 friends, the top restaurants, then Recent, and the QR code is not on it',
+  order.friends > 0 && order.friends < order.topSpot && order.topSpot < order.nine && order.nine < order.recent && order.qr === -1,
   JSON.stringify(order))
+await fay.click('.prof-tabs [data-tab="earn"]')
+await fay.waitForSelector('img[src="/api/members/qr.svg"]', { timeout: 15000 }).catch(() => {})
+step('the QR code is on the Earn tab', (await fay.locator('img[src="/api/members/qr.svg"]').count()) === 1)
+await fay.click('.prof-tabs [data-tab="mine"]')
+await fay.waitForTimeout(300)
 await fay.evaluate(() => document.querySelector('.prof')?.closest('.nav-scroll, .app-scroll, main, [class*="scroll"]')?.scrollTo?.(0, 0))
 await fay.evaluate(() => { let e = document.querySelector('.prof'); while (e && e.scrollHeight <= e.clientHeight + 2) e = e.parentElement; if (e) e.scrollTop = 0 })
 await fay.waitForTimeout(300)

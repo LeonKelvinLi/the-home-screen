@@ -24,6 +24,17 @@ import { BRANDS } from '../src/data/brands'
 import { CITY_PLACEMENTS } from '../src/data/placements'
 import { DISCOUNT_PER_MILESTONE, PER_MILESTONE_REFERRALS, TIERS, rewardsFor } from '../src/data/membership'
 
+/*
+  THE FOUNDATION. Glenn, 2026-09-30: "allocating $9 from each user and
+  affiliate monthly membership fee towards the foundation", and "the affiliate
+  can see this money being raised on the dashboard". So a member brought in
+  who holds an active paid membership, and a business brought in on an active
+  monthly plan, each send $9 a month to it. Counted from statuses, never
+  estimated: a pending payment raises nothing.
+*/
+export const FOUNDATION = { name: "Biggie's Purple Ribbon Foundation", perMonthCents: 900 }
+const PAID_TIERS = new Set(['pass', 'diamond'])
+
 /** Clicks on a member's link are counted from the day this shipped; before it nothing was recorded. */
 export const CLICKS_COUNTED_FROM = Date.UTC(2026, 8, 30, 7) // 30 September 2026, midnight in California
 
@@ -201,6 +212,8 @@ interface Referred {
   name: string
   created_at: number
   qualified_at: number | null
+  tier: string
+  tier_status: string
 }
 
 interface BizRow {
@@ -214,6 +227,7 @@ interface BizRow {
   deal_status: string | null
   sold_cents: number | null
   monthly_cents: number | null
+  recurring_active: boolean | null
 }
 
 export interface Bucket {
@@ -255,7 +269,7 @@ export async function affiliateStats(m: MemberLite, origin: string, now = Date.n
   const referred = (
     await db
       .prepare(
-        `SELECT m.id, m.name, m.created_at, ${QUALIFIED_AT} AS qualified_at
+        `SELECT m.id, m.name, m.created_at, m.tier, m.tier_status, ${QUALIFIED_AT} AS qualified_at
          FROM members m WHERE m.referred_by = ? ORDER BY m.created_at ASC LIMIT 2000`,
       )
       .all<Referred>(m.id)
@@ -287,10 +301,10 @@ export async function affiliateStats(m: MemberLite, origin: string, now = Date.n
           .prepare(
             `SELECT o.id, o.business_name, o.city, o.brand_id, o.stage,
                     COALESCE(o.referred_at, o.created_at) AS referred_at, o.won_at,
-                    d.status AS deal_status, d.sold_cents, d.monthly_cents
+                    d.status AS deal_status, d.sold_cents, d.monthly_cents, d.recurring_active
              FROM crm_opportunities o
              LEFT JOIN LATERAL (
-               SELECT status, sold_cents, monthly_cents FROM crm_deals
+               SELECT status, sold_cents, monthly_cents, recurring_active FROM crm_deals
                WHERE opportunity_id = o.id ORDER BY (status = 'won') DESC, created_at DESC LIMIT 1
              ) d ON TRUE
              WHERE o.referrer_id = ?
@@ -383,6 +397,8 @@ export async function affiliateStats(m: MemberLite, origin: string, now = Date.n
   const tier = TIERS.find((t) => t.id === m.tier)
   const rewards = rewardsFor(referred.length, tier)
   const cents = (status: string) => ledger.filter((r) => r.kind === 'cash' && r.status === status).reduce((a, r) => a + r.amount, 0)
+  const payingMembers = referred.filter((r) => PAID_TIERS.has(r.tier) && r.tier_status === 'active').length
+  const payingBusinesses = biz.filter((b) => b.deal_status === 'won' && !!b.recurring_active && num(b.monthly_cents) > 0).length
 
   const users = [...referred]
     .map((r, i) => {
@@ -481,6 +497,13 @@ export async function affiliateStats(m: MemberLite, origin: string, now = Date.n
       cash: { pendingCents: cents('pending'), earnedCents: cents('earned'), paidCents: cents('paid') },
     },
     activity: activity.slice(0, 30),
+    foundation: {
+      name: FOUNDATION.name,
+      perMonthCents: FOUNDATION.perMonthCents,
+      payingMembers,
+      payingBusinesses,
+      monthlyCents: FOUNDATION.perMonthCents * (payingMembers + payingBusinesses),
+    },
   }
 }
 
