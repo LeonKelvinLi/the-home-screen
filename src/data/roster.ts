@@ -1,5 +1,6 @@
 import type { LocalSeed } from './localBrands'
 import { ROSTER_RESEARCH } from './rosterResearch'
+import { IMESSAGE_ADDITIONS } from './imessageAdditions'
 
 /**
  * The operator's own rosters for the two flagship pages, exactly as he sent
@@ -4336,6 +4337,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'Developing and owning real estate in California and the Mountain West for over twelve years, with more than $60,000,000 in service stations and automotive real estate controlled, managed and built, in their own words. Their properties include Stockton and Laurel Rd. Call or email Ross to connect.',
   }),
+  ...IMESSAGE_ADDITIONS,
 ]
 
 /**

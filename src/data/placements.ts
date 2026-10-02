@@ -1270,4 +1270,41 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'walnut-creek-goods2-7': 'b_havanawalnutcreek', //               Cuban, no seat; yellow sheet, Tier 1
   'walnut-creek-goods2-8': 'b_litawalnutcreek', //                 Miami and Caribbean, no seat; yellow sheet, Tier 1
   'santa-rosa-goods2-0': 'b_shadyoakbrewing', //                   a brewery, no seat; yellow sheet, Tier 1
+  // Missing submissions only, refetched 2026-10-02; occupied seats stay intact.
+  "emeryville-goods-8": "b_robbensemeryville",
+  "livermore-goods-0": "b_calikidlivermore",
+  "pleasant-hill-goods2-1": "b_calikidpleasanthill",
+  "san-francisco-goods2-28": "b_yuanbaojiaozisf",
+  "burlingame-goods2-1": "b_yuanbaojiaoziburlingame",
+  "san-francisco-goods2-29": "b_pineapplekingsf",
+  "oakland-goods2-16": "b_understoryoakland",
+  "san-francisco-goods2-30": "b_tonyspizzanapoletana",
+  "los-gatos-goods2-0": "b_thecatslosgatos",
+  "el-cerrito-goods2-1": "b_pakaomathailao",
+  "berkeley-goods2-4": "b_calialley",
+  "berkeley-goods-2": "b_praawthai",
+  "oakland-services2-2": "b_fourfortyfourevents",
+  "berkeley-goods-5": "b_rosepizzeriaberkeley",
+  "san-francisco-goods2-31": "b_rosepizzeriasf",
+  "san-rafael-services2-0": "b_absolutevolleyballsanrafael",
+  "san-jose-services-0": "b_propercutssanjose",
+  "dublin-goods-7": "b_goldendonkatsudublin",
+  "oakland-goods2-17": "b_townbiznesshibachi",
+  "san-jose-goods2-7": "b_phohanoisanjose",
+  "cupertino-goods2-0": "b_phohanoicupertino",
+  "palo-alto-goods2-1": "b_phohanoipaloalto",
+  "milpitas-goods2-2": "b_phohanoimilpitas",
+  "fremont-goods2-1": "b_phohanoifremont",
+  "fountain-valley-goods-2": "b_phohanoifountainvalley",
+  "berkeley-goods2-5": "b_phohanoiberkeley",
+  "san-francisco-goods2-32": "b_phohanoisanfrancisco",
+  "beasty-cooks-6": "b_ryecookin",
+  "beasty-meats-0": "b_nomadspremiummeats",
+
+  // Preserve the three existing automatic category seats that new roster
+  // entries would otherwise precede. These businesses keep their old spots.
+  'beasty-ai-0': 'b_looki',
+  'beasty-cooks-5': 'b_lolcatering',
+  'beasty-barbershops-5': 'b_thecompanybarber',
+
 }

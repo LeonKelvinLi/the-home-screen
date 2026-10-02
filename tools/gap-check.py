@@ -81,7 +81,7 @@ BRAND_SHOPPING = re.compile(r'^(beasty|bsty|beausty)[a-z]*$')
 # which holds a third of the catalogue — so it reported Kaisen Don and JDI Auto
 # Detailing as never added when both had been seated for weeks. A gap check that
 # reads only some of the data invents gaps.
-SEED_FILES = ('localBrands.ts', 'brands.ts', 'roster.ts', 'placements.ts')
+SEED_FILES = ('localBrands.ts', 'brands.ts', 'roster.ts', 'imessageAdditions.ts', 'placements.ts')
 
 norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
 
