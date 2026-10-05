@@ -6,32 +6,56 @@ affiliate will be on their own cities page as well", "limit the amount of pages
 on the home screen to let's say 9 categories … all of these extra categories are
 searchable", and "create a category button on the search page to list them all".
 
-## What is where
+## What is where (since 2026-10-05)
 
-**Home screen swipe** (`HOME_KINDS` in `src/data/slots.ts`) has nine category
-pages, then the two yellow sheets, then the apps page:
+**BEASTY • Pages is the first page** (Glenn, 2026-10-03: "What if we make the
+Home Screen BEASTY • Pages? Then have 24 top categories spots as the BEASTY
+categories on each spot?"). It holds 24 category tiles (`PAGES_TILES` in
+`src/data/categoryGlyphs.ts`), each a square of its page's background with a
+line drawing. A tile for a page on the swipe turns to it. A tile for any other
+page adds that page to the swipe, and asks a signed-out visitor to sign up
+first, as Search does. Home on a business page lands here.
 
-- Eats, Goods, Services, Online, Individuals (the flagship sheets, in Glenn's order)
-- Tattoo, Whips, Gyms, Salons (the four category pages with the most businesses on 30 September)
+**Then the nine** (`HOME_KINDS` in `src/data/slots.ts`): Eats, Sweets ("after
+BEASTY • Eats"), AYCE ("after BEASTY • Sweets"), Goods, Services, Online,
+Individuals, Tattoo, Automotive. Then the two yellow sheets, then the apps
+page.
 
 **Search.** Two buttons under the field:
 
-- **Categories** lists all 26 BEASTY pages A to Z, each with a piece of its
-  background and how many businesses are on it.
+- **Categories** lists all 31 BEASTY pages A to Z, each with its tile and how
+  many businesses are on it.
 - **Cities** lists every city A to Z.
 
-Typing a category ("tattoo", "gym", "djs") shows it first.
+Typing a category ("tattoo", "gym", "djs") shows it first. Search has a Share
+button too; the link is beastypages.com/search.
 
-**Cities are no longer in the swipe.** A city's four pages are added to the end
-of the swipe when someone opens it from Search, or from the place button on a
-business page ("Oakland • Goods >"). Going Home takes them off again. A
-category that is not one of the nine works the same way.
+**Cities are not in the swipe.** A city's four pages are added to the end of
+the swipe when someone opens it from Search, or from the place button on a
+business page ("Oakland • Goods >"). Going Home takes them off again.
 
-## The 19 new categories
+## BEASTY • Eats and BEASTY • Sweets: one business per kind
 
-The list is in `src/data/categories.ts`, in Glenn's order: Tattoo, Athletes, AI,
-Artists, Dancers, Donations, DJ's, Cooks, Foodies, Realtors, Media,
-Photographers, Whips, Pit's, Models, Meats, Gyms, Barbershops, Salons.
+Glenn, 2026-09-30: "BEASTY • Eats will showcase 24 of the best variety of
+cuisine. No two cuisines alike on this page … the first who signs up holds a
+spot", with his list of 24 cuisines, and a list of 24 kinds of dessert for
+Sweets. Each spot is a kind of food (`EATS_CATEGORIES`, `SWEETS_CATEGORIES`).
+A business seated by hand (`BEASTY_EATS_ROSTER`, `BEASTY_SWEETS_ROSTER` in
+`src/data/roster.ts`) keeps its spot; an open spot fills with the first
+business on BEASTY whose type line fits that kind, leaving out free Tier 1
+listings and businesses already seated on one of BEASTY's own sheets. Glenn's
+earlier picks that did not fit a cuisine, or shared one with a glowing tile,
+went to More eats, as he said ("Any forgotten varieties of food will push over
+to the second yellow pages"). A kind nobody fits shows as an open spot named
+for it ("Udon — spot available").
+
+## The category pages
+
+The list is in `src/data/categories.ts`: Tattoo, Athletes, AI, Artists, Dancers,
+Donations, DJ's, Cooks, Foodies, Realtors, Media, Photographers, Automotive
+(the first Whips, renamed on 2026-10-04 with the repair shops added), Whips
+(the cars themselves; MeterSF is spot 1), Pit's, Models, Meats, Gyms,
+Barbershops, Salons, AYCE, Food Trucks and Coffee.
 
 Each category page holds 24 spots. Seat ids look like `beasty-tattoo-0` through
 `beasty-tattoo-23`, the same shape as every other seat.
@@ -53,7 +77,7 @@ Each category page holds 24 spots. Seat ids look like `beasty-tattoo-0` through
 24 businesses fit a category, because then only the first 24 show and the best
 should be seated by hand.
 
-On 30 September:
+On 30 September (before Automotive, Coffee, AYCE and Food Trucks):
 
 | Filled | Categories |
 |---|---|

@@ -78,6 +78,11 @@ function BrandPanels({ panels }: { panels?: BrandPanel[] }) {
                 {p.body?.map((line) => (
                   <p key={line}>{line}</p>
                 ))}
+                {p.links?.map((l) => (
+                  <a className="brand-panel-link" key={l.href} href={l.href} target="_blank" rel="noopener noreferrer">
+                    {l.label}
+                  </a>
+                ))}
               </div>
             )}
           </div>

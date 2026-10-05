@@ -10,6 +10,7 @@ import { useDrag } from './useDrag'
 import { ScreenSizeProvider, useMeasuredScreen } from './ScreenSize'
 import { appById } from '../apps/registry'
 import { rememberVisit } from '../lib/recents'
+import { track } from '../lib/track'
 import { brandById } from '../data/brands'
 import { motionMs } from './motion'
 import {
@@ -43,6 +44,17 @@ export interface ShellApi {
    * home screen adds the one asked for (see HomeScreen's `extra`).
    */
   goToCity: (city: string, appId?: string, kind?: string) => void
+}
+
+/** App id to the name its taps are counted under (see openApp). */
+const BUTTON_OF: Record<string, string> = {
+  'sys.gallery': 'gallery',
+  'sys.watch': 'watch',
+  'sys.news': 'news',
+  'sys.calendar': 'calendar',
+  'sys.share': 'scan',
+  'sys.phone': 'contacts',
+  'sys.search': 'search',
 }
 
 type Phase = 'home' | 'opening' | 'open' | 'closing' | 'switcher'
@@ -162,6 +174,12 @@ export function Device({ renderApp, openOnMount }: Props) {
     (id: string, rect?: IconRect) => {
       generation.current++
       clearTimers()
+      /* The buttons Glenn asked to see on the dashboard (2026-10-03): "will it
+         show analytics for the gallery, video reel, newsfeed button and
+         calendar button? … Maybe have one for the QR code button and the
+         contact button just so we can see." Every open goes through here. */
+      const button = BUTTON_OF[id]
+      if (button) track('button_tapped', { kind: button })
 
       const from = rect ?? origins.current.get(id) ?? centre()
       origins.current.set(id, from)

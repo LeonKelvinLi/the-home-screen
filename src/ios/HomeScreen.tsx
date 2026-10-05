@@ -9,6 +9,8 @@ import { useGate } from '../lib/gate'
 import { ALL_BEASTY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { SlotPage } from '../data/slots'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
+import { PAGES_TILES } from '../data/categoryGlyphs'
+import { CategoryIcon, thumbFor } from './CategoryIcon'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -91,6 +93,27 @@ interface Props {
   put on the end for as long as someone is visiting it.
 */
 const ON_HOME = new Set(HOME_PAGES.map((p) => p.kind))
+
+/*
+  BEASTY • PAGES, the first page of the home screen: a tile for each of 24
+  categories. Glenn, 2026-10-03: "What if we make the Home Screen BEASTY •
+  Pages? Then have 24 top categories spots as the BEASTY categories on each
+  spot?" A tile opens its category's page, on the swipe or added to it.
+*/
+const PAGES_APPS: AppDef[] = PAGES_TILES.flatMap((kind) => {
+  const page = ALL_BEASTY_PAGES.find((p) => p.kind === kind)
+  if (!page) return []
+  return [
+    {
+      id: `cat.${kind}`,
+      name: `BEASTY • ${page.heading}`,
+      label: page.heading,
+      icon: <CategoryIcon kind={kind} thumb={thumbFor(page)} />,
+      kind: 'system' as const,
+      tint: '#1C1C1E',
+    },
+  ]
+})
 function extraFor(city: string, appId?: string, kind?: string): string | null {
   if (city.toLowerCase() !== 'beasty') {
     const name = CITY_PAGES.find((c) => c.toLowerCase() === city.toLowerCase())
@@ -119,6 +142,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
   const [page, setPage] = useState(0)
   /** The city or category being visited, on the end of the swipe — see extraFor. */
   const [extra, setExtra] = useState<string | null>(null)
+  /** A category tile on BEASTY • Pages was tapped: its page, to go to. */
+  const [tileJump, setTileJump] = useState<string | null>(null)
   /*
     Which of the three dock sets is showing — his "Default is 1".
 
@@ -501,6 +526,10 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       }
     }
 
+    /* BEASTY • Pages first, in as many pages as the 24 tiles need here. */
+    for (let from = 0; from < PAGES_APPS.length; from += slotsPerPage) {
+      out.push({ city: 'BEASTY', section: 'Pages', kind: 'pages', tile: slotTile, rowGap: slotGap, apps: PAGES_APPS.slice(from, from + slotsPerPage) })
+    }
     buildCity('BEASTY', HOME_PAGES)
 
     for (const group of APP_GROUPS) {
@@ -640,25 +669,37 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     request cannot fire again on the next render.
   */
   useEffect(() => {
-    if (!jumpToCity) return
+    /* From the shell (Search, a business page), or from a tile on BEASTY • Pages. */
+    const req = jumpToCity
+      ? { city: jumpToCity, appId: jumpToApp, kind: jumpToKind }
+      : tileJump
+        ? { city: 'BEASTY', appId: undefined, kind: tileJump }
+        : null
+    if (!req) return
+    const done = () => (jumpToCity ? onJumped?.() : setTileJump(null))
     /* Put the city or category on the end of the swipe first; this runs again
        once the pages have been rebuilt with it. Going home takes it off. */
-    const want = extraFor(jumpToCity, jumpToApp, jumpToKind)
+    const want = extraFor(req.city, req.appId, req.kind)
     if (want !== extra) {
       setExtra(want)
       return
     }
-    const inCity = (p: Page) => p.city?.toLowerCase() === jumpToCity.toLowerCase()
-    const onPage = (p: Page) => inCity(p) && (!jumpToKind || p.kind === jumpToKind)
+    const jumpToApp_ = req.appId
+    const jumpToKind_ = req.kind
+    const inCity = (p: Page) => p.city?.toLowerCase() === req.city.toLowerCase()
+    const onPage = (p: Page) => inCity(p) && (!jumpToKind_ || p.kind === jumpToKind_)
     /* A business page asking for its own city wants the page its tile is on;
        a city with no such tile (or Search, which names no app) gets its first. */
-    const withApp = jumpToApp ? pages.findIndex((p) => onPage(p) && p.apps.some((a) => a.id === jumpToApp)) : -1
-    const anyWithApp = jumpToApp && withApp < 0 ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp)) : -1
+    const withApp = jumpToApp_ ? pages.findIndex((p) => onPage(p) && p.apps.some((a) => a.id === jumpToApp_)) : -1
+    const anyWithApp = jumpToApp_ && withApp < 0 ? pages.findIndex((p) => inCity(p) && p.apps.some((a) => a.id === jumpToApp_)) : -1
     const i = [withApp, anyWithApp, pages.findIndex(onPage), pages.findIndex(inCity)].find((n) => n >= 0) ?? -1
-    if (i >= 0) setPage(i)
-    onJumped?.()
+    if (i >= 0) {
+      if (tileJump && !jumpToCity) goToPage(i)
+      else setPage(i)
+    }
+    done()
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [jumpToCity, jumpToApp, jumpToKind, pages])
+  }, [jumpToCity, jumpToApp, jumpToKind, tileJump, pages])
 
   /*
     Say which page we landed on, wherever the turn came from — a dot, an arrow
@@ -932,6 +973,34 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hidden, receding, inert])
 
+  /* The reels bubble: once per visit (sessionStorage), 15 to 45 seconds after
+     the home screen is in front, never while the first-visit bubble is up,
+     and not for automated browsers, whose checks tap what it would cover. */
+  const [reelHint, setReelHint] = useState(false)
+  useEffect(() => {
+    if (hidden || receding || inert || hint || reelHint) return
+    if (typeof navigator !== 'undefined' && navigator.webdriver) return
+    try {
+      if (sessionStorage.getItem('fb.reelHint.v1') === '1') return
+    } catch {
+      return
+    }
+    const t = window.setTimeout(() => {
+      setReelHint(true)
+      try {
+        sessionStorage.setItem('fb.reelHint.v1', '1')
+      } catch {
+        /* it may show again; harmless */
+      }
+    }, 15000 + Math.random() * 30000)
+    return () => window.clearTimeout(t)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hidden, receding, inert, hint])
+  useEffect(() => {
+    if (!reelHint) return
+    const t = window.setTimeout(() => setReelHint(false), 9000)
+    return () => window.clearTimeout(t)
+  }, [reelHint])
   const badgeFor = (appId: string) => {
     if (appId === 'sys.cart') return cart.count
     /* Friend requests waiting for an answer (apps/Friends.tsx). */
@@ -1076,6 +1145,17 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
                   glow={app.glow}
                   size={page.tile ?? screen.iconSize}
                   onOpen={(rect) => {
+                    /* A category tile on BEASTY • Pages turns to that category's
+                       page. One on the swipe is free like a swipe; one added
+                       from outside it asks a signed-out visitor to sign up,
+                       like Search, which is the other way to reach it. */
+                    if (app.id.startsWith('cat.')) {
+                      const kind = app.id.slice(4)
+                      track('category_opened', { page_kind: kind, surface: 'home_tile' })
+                      if (ON_HOME.has(kind)) setTileJump(kind)
+                      else gate('cities', () => setTileJump(kind))
+                      return
+                    }
                     /* Where this open came from, for the business page to report. */
                     if (app.kind === 'brand') {
                       noteOrigin({
@@ -1242,9 +1322,30 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           making them wait through a login. His reason, in his words: "most
           people have a short attention span."
         */}
+        {/*
+          THE REELS BUBBLE. Glenn, 2026-10-02: "Reminder to put a moving glow on
+          the video reel button and maybe have a random pop up bubble saying
+          something like watch foodie reviews here to discover a new gems."
+          Once a visit, after a random wait; tapping it opens the reels.
+        */}
+        {reelHint && !hidden && !receding && !inert && (
+          <button
+            type="button"
+            className="reel-hint"
+            onClick={() => {
+              setReelHint(false)
+              const el = watchRef.current
+              const rect = el && rectInScreen(el)
+              if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
+            }}
+          >
+            Watch foodie reviews here to discover new gems.
+          </button>
+        )}
         <button
           className="spotlight-glass is-watch"
           onClick={() => {
+            setReelHint(false)
             const el = watchRef.current
             const rect = el && rectInScreen(el)
             if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
@@ -1252,6 +1353,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           ref={watchRef}
           aria-label="Watch"
         >
+          {/* The moving glow, the same light as Search's. */}
+          <span className="spotlight-sweep is-round" aria-hidden="true" />
           <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
             <rect x="2.6" y="4.6" width="18.8" height="14.8" rx="3.2" />
             <path d="M10.2 9.4l5.2 3.1-5.2 3.1V9.4Z" fill="currentColor" stroke="none" />

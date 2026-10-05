@@ -3669,6 +3669,10 @@ const SHARE_PAGES: Record<string, { title: string; blurb: string }> = {
     blurb:
       'One membership, honoured at every participating BEASTY affiliate. Signing up is free; the pass is the paid part.',
   },
+  search: {
+    title: 'Search BEASTY pages',
+    blurb: 'Every category and every city on BEASTY pages, and the exclusive offers from the businesses in them.',
+  },
   contacts: {
     title: 'BEASTY contacts',
     blurb:

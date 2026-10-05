@@ -13310,5 +13310,86 @@ span.top3-add {
   height: 44px;
   flex: 0 0 auto;
   border-radius: 12px;
+  overflow: hidden;
+  background: #1c1c1e;
+}
+
+/* What Search's Share button did, on a screen with no share sheet. */
+.search-said {
+  margin: 8px 16px 0;
+  font-size: 13px;
+  text-align: center;
+  color: var(--muted);
+}
+
+/* ---------- BEASTY • Pages: a category as a tile (2026-10-05) ---------- */
+
+.cat-icon {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
   background: #1c1c1e center / cover no-repeat;
+}
+
+.cat-icon svg {
+  width: 62%;
+  height: 62%;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+}
+
+/* A link inside a business page's drop-down (MeterSF's shops). */
+.brand-panel-link {
+  display: block;
+  margin: 6px 0 2px;
+  font-weight: 600;
+  color: #0a66c2;
+  text-decoration: none;
+}
+
+/* ---------- The reels button's glow and bubble (2026-10-05) ---------- */
+
+.spotlight-glass.is-watch {
+  position: relative;
+}
+
+.spotlight-sweep.is-round {
+  clip-path: circle(50%);
+}
+
+.reel-hint {
+  position: absolute;
+  left: 12px;
+  bottom: calc(100% + 12px);
+  max-width: 220px;
+  padding: 10px 13px;
+  border: 0;
+  border-radius: 14px;
+  background: #f6d800;
+  color: #141416;
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  animation: reel-hint-in 0.3s ease-out;
+  z-index: 3;
+}
+
+.reel-hint::after {
+  content: '';
+  position: absolute;
+  left: 52px;
+  top: 100%;
+  border: 8px solid transparent;
+  border-top-color: #f6d800;
+}
+
+@keyframes reel-hint-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reel-hint { animation: none; }
 }

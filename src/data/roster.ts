@@ -2043,6 +2043,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     site: 'https://7milehouse.com/',
     siteCta: 'See the menu',
     siteNote: 'Ube Bake-Off, September 30 to October 5: the sampler comes with two ballots',
+    /* Their own reel of the Sizzling Garlic Mushrooms, "@thesnacksensei approved", sent 2026-10-01 with "Clip this video plz". */
+    clip: {
+      src: '/clips/7-mile-house.mp4',
+      poster: '/clips/7-mile-house-poster.webp',
+      href: 'https://www.instagram.com/reel/DXUviEUj9i8/',
+      credit: 'Posted by 7 Mile House',
+      platform: 'Instagram',
+    },
     contactOnly:
       'SF comfort food on Bayshore Boulevard, established 1858 by their own sign: a restaurant, sports bar and live-music room ' +
       'with a heated, dog-friendly patio, a dog menu of its own and Sunday brunch. The menu on their site is pictures and the ' +
@@ -2364,7 +2372,17 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['Daughter'], logoFace: 'script',
     site: 'https://daughterthai.com/',
     siteCta: 'Order online',
-    tier: 1,
+    /* "Clip this video plz for Daughters kitchen", 2026-10-01 (the reel tags 6118
+       Medau Pl). A yellow-sheet business with a film gets the whole page, so the
+       free Tier 1 listing ends here. */
+    clip: {
+      src: '/clips/daughter-thai.mp4',
+      poster: '/clips/daughter-thai-poster.webp',
+      href: 'https://www.instagram.com/reel/Ddptshixa3e/',
+      credit: 'Filmed by @bayareamunchies510',
+      platform: 'Instagram',
+      by: 'bayareamunchies510',
+    },
   }),
   /* MexiHibachi, "Pinole • Goods" — Mexican and Japanese hibachi together, on
      Fitzgerald Drive. Pinole's Mexican food seat was open, and Mexican is the
@@ -2891,10 +2909,22 @@ export const ROSTER_SEED: LocalSeed[] = [
   /* Kan Kiin, "Daly City • Goods" — Thai brunch and dinner on Southgate
      Avenue, on Daly City's open Asian food seat, with their whole brunch menu. */
   seed('kan-kiin', 'Kan Kiin', 'Kan Kiin', 'Thai brunch & dinner', '#1D3B2F', {
-    icon: 'kan-kiin',
+    /* Re-read 2026-10-05 for Glenn's "Clip this video plz for Kan Kin page":
+       the full brunch and dinner menus, their Toast pickup, a sharper mark
+       from their own site, and @foodieberrie's brunch reel. */
+    icon: 'kan-kiin-2',
     logoTemplate: 'wordmark', logoLines: ['KAN', 'KIIN'], logoFace: 'condensed',
     site: 'https://www.kankiineatery.com/',
     siteCta: 'See their menus',
+    orderUrl: 'https://order.toasttab.com/online/kankiineatery',
+    clip: {
+      src: '/clips/kan-kiin.mp4',
+      poster: '/clips/kan-kiin-poster.webp',
+      href: 'https://www.instagram.com/reel/DdfKJIgPDzm/',
+      credit: 'Filmed by @foodieberrie',
+      platform: 'Instagram',
+      by: 'foodieberrie',
+    },
   }),
   /* Lovely's Burgers, "Oakland • Goods / San Francisco • Goods" — two shops.
      San Francisco takes the open Burgers seat with the whole page; Oakland's
@@ -3161,7 +3191,17 @@ export const ROSTER_SEED: LocalSeed[] = [
     icon: 'nosso-oakland',
     logoTemplate: 'wordmark', logoLines: ['NOSSO'], logoFace: 'script',
     site: 'https://nossooakland.com/',
-    tier: 1,
+    /* @festusfeasts on Nosso, sent 2026-10-02 with "Clip this video plz / For that page", minutes before "Bump Nossa onto BEASTY • Eats page". 40s-64s of 104s. */
+    clip: {
+      src: '/clips/nosso-oakland.mp4',
+      poster: '/clips/nosso-oakland-poster.webp',
+      href: 'https://www.instagram.com/reel/Ddh94RIgaxM/',
+      credit: 'Filmed by @festusfeasts',
+      platform: 'Instagram',
+      by: 'festusfeasts',
+    },
+    /* Was a free Tier 1 listing on Oakland's yellow sheet; on BEASTY • Eats
+       since 2026-10-05, where a spot is the whole page. */
   }),
   /* El Portal, "San Leandro • Goods" — the open Mexican seat, their own menu. */
   seed('el-portal-san-leandro', 'El Portal Mexican Restaurant', 'El Portal', 'Mexican & seafood', '#8A4A1E', {
@@ -3489,6 +3529,15 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['HUNGRY COW'], logoFace: 'slab',
     site: 'https://www.myhungrycow.com/',
     tagline: 'Korean BBQ and shabu shabu on Albrae Street',
+    /* "Clip this video plz / For Hungry cow", 2026-10-02: Grand-O's Top Five Korean BBQ spots; 51s-75s of 155s. */
+    clip: {
+      src: '/clips/hungry-cow.mp4',
+      poster: '/clips/hungry-cow-poster.webp',
+      href: 'https://www.instagram.com/reel/DSEaJrgkZe6/',
+      credit: 'Filmed by @thesnacksensei',
+      platform: 'Instagram',
+      by: 'thesnacksensei',
+    },
   }),
   /* Long Bridge Pizza Co., "San Francisco • Goods": Italian is Stella Pastry's, so the yellow sheet. */
   seed('long-bridge-pizza', 'Long Bridge Pizza Co.', 'Long Bridge', 'Sourdough pizza', '#EF5623', {
@@ -4336,71 +4385,678 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'Developing and owning real estate in California and the Mountain West for over twelve years, with more than $60,000,000 in service stations and automotive real estate controlled, managed and built, in their own words. Their properties include Stockton and Laurel Rd. Call or email Ross to connect.',
   }),
+  /*
+    BATCH 42, 2026-10-05: Glenn's links of 30 September to 4 October
+    (research/roster/batch42.json, built by build42.py). A yellow-sheet
+    business he sent a film for gets the whole page; the rest of the yellow
+    sheet is the free Tier 1 listing.
+  */
+  /* Oakland • Eats */
+  seed('rob-bens-restaurant', 'Rob Ben\'s Restaurant & Lounge', 'Rob Ben\'s', 'Southern soul food', '#0E0C0A', {
+    icon: 'rob-bens-restaurant',
+    tagline: 'Southern soul food, in Emeryville',
+    site: 'https://robbensrestaurant.com/',
+    clip: {
+      src: '/clips/rob-bens-restaurant.mp4',
+      poster: '/clips/rob-bens-restaurant-poster.webp',
+      href: 'https://www.instagram.com/reel/DEgHeK_yfL-/',
+      credit: 'Filmed by @bayarea_fooddreamz',
+      platform: 'Instagram',
+      by: 'bayarea_fooddreamz',
+    },
+  }),
+  /* Oakland • Eats (2 locations) */
+  seed('understory', 'Understory', 'Understory', 'Worker-owned cafe and weeken', '#010101', {
+    icon: 'understory',
+    tagline: 'Worker-owned cafe and weekend brunch, Filipino and global flavours, in Oakland',
+    site: 'https://understoryoakland.com/',
+    orderUrl: 'https://order.toasttab.com/online/understory-oakland-3340-international-boulevard',
+    clip: {
+      src: '/clips/understory.mp4',
+      poster: '/clips/understory-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd7Gag4NaBV/',
+      credit: 'Filmed by @festusfeasts',
+      platform: 'Instagram',
+      by: 'festusfeasts',
+    },
+  }),
+  /* Oakland • Eats */
+  seed('town-bizness-hibachi', 'Town Bizness Hibachi', 'Town Bizness', 'Hibachi grill (takeout and d', '#B1312B', {
+    icon: 'town-bizness-hibachi',
+    tagline: 'Hibachi grill (takeout and delivery), in Oakland',
+    site: 'https://townbiznesshibachi.com/',
+    orderUrl: 'https://online-ordering.innowi.com/branch/npkoakland',
+    tier: 1,
+  }),
+  /* Oakland • Eats */
+  seed('brundo-spices', 'Brundo Spice Company', 'Brundo', 'Ethiopian spices and herbs (', '#4C4C4C', {
+    icon: 'brundo-spices',
+    tagline: 'Ethiopian spices and herbs (online shop)',
+    site: 'https://www.brundo.com/',
+    clip: {
+      src: '/clips/brundo-spices.mp4',
+      poster: '/clips/brundo-spices-poster.webp',
+      href: 'https://www.instagram.com/reel/DeAygs_vTtd/',
+      credit: 'Filmed by @bayareafoodz',
+      platform: 'Instagram',
+      by: 'bayareafoodz',
+    },
+  }),
+  /* Oakland • Services */
+  seed('four-forty-four-events', 'Four Forty Four Events', '444 Events', 'Event design, styling and pl', '#504B46', {
+    icon: 'four-forty-four-events',
+    tagline: 'Event design, styling and planning, in Oakland',
+    site: 'https://www.fourfortyfourevents.com/',
+    clip: {
+      src: '/clips/four-forty-four-events.mp4',
+      poster: '/clips/four-forty-four-events-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd70LCuMMsD/',
+      credit: 'Posted by Four Forty Four Events',
+      platform: 'Instagram',
+    },
+  }),
+  /* El Cerrito • Eats */
+  seed('pakaoma', 'Pakaoma', 'Pakaoma', 'Thai Isan and Lao', '#464E45', {
+    icon: 'pakaoma',
+    tagline: 'Thai Isan and Lao, in El Cerrito',
+    site: 'https://www.pakaomathailao.com/',
+    orderUrl: 'https://order.toasttab.com/online/pakaoma-thai-lao-diner',
+    clip: {
+      src: '/clips/pakaoma.mp4',
+      poster: '/clips/pakaoma-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd7cwHQv9lo/',
+      credit: 'Filmed by @foodandsachi',
+      platform: 'Instagram',
+      by: 'foodandsachi',
+    },
+  }),
+  /* Berkeley • Eats */
+  seed('cali-alley', 'Cali Alley', 'Cali Alley', 'Artisan burgers, sandwiches ', '#893673', {
+    icon: 'cali-alley',
+    tagline: 'Artisan burgers, sandwiches and plates from an outdoor food window, in Berkeley',
+    site: 'https://calialley.com/',
+    orderUrl: 'https://ordering.chownow.com/order/26508/locations',
+    clip: {
+      src: '/clips/cali-alley.mp4',
+      poster: '/clips/cali-alley-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd4ydyFto4G/',
+      credit: 'Filmed by @festusfeasts',
+      platform: 'Instagram',
+      by: 'festusfeasts',
+    },
+  }),
+  /* Berkeley • Eats */
+  seed('praaw-thai', 'Praaw Thai', 'Praaw Thai', 'Thai', '#234122', {
+    icon: 'praaw-thai',
+    tagline: 'Thai, in Berkeley',
+    site: 'https://praawthai.com/',
+    orderUrl: 'https://praawthaica.smiledining.com/',
+    clip: {
+      src: '/clips/praaw-thai.mp4',
+      poster: '/clips/praaw-thai-poster.webp',
+      href: 'https://www.instagram.com/reel/DdhPdjsPH71/',
+      credit: 'Filmed by @foodandsachi',
+      platform: 'Instagram',
+      by: 'foodandsachi',
+    },
+  }),
+  /* Berkeley • Eats AND San Francisco • Eats */
+  seed('rose-pizzeria-berkeley', 'Rose Pizzeria', 'Rose Pizzeria', 'Thin-crust pizza and natural', '#484D4E', {
+    icon: 'rose-pizzeria-berkeley',
+    tagline: 'Thin-crust pizza and natural wine, in Berkeley',
+    site: 'https://www.rosepizzeria.com/location-berkeley',
+    orderUrl: 'https://order.toasttab.com/online/rosetogo',
+  }),
+  /* Berkeley • Eats AND San Francisco • Eats */
+  seed('rose-pizzeria-san-francisco', 'Rose Pizzeria', 'Rose Pizzeria', 'Thin-crust pizza and natural', '#484D4E', {
+    icon: 'rose-pizzeria-san-francisco',
+    tagline: 'Thin-crust pizza and natural wine, in San Francisco',
+    site: 'https://www.rosepizzeria.com/location-sanfrancisco',
+    orderUrl: 'https://order.toasttab.com/online/rosepizzeriasf',
+    clip: {
+      src: '/clips/rose-pizzeria-san-francisco.mp4',
+      poster: '/clips/rose-pizzeria-san-francisco-poster.webp',
+      href: 'https://www.instagram.com/reel/DdEjNGpqKm9/',
+      credit: 'Filmed by @seekeasyeats',
+      platform: 'Instagram',
+      by: 'seekeasyeats',
+    },
+  }),
+  /* Berkeley • Eats (multiple Bay Area locations) */
+  seed('hinodeya-ramen-berkeley', 'HINODEYA Ramen & Bar', 'Hinodeya', 'Japanese dashi ramen', '#4C4C4C', {
+    icon: 'hinodeya-ramen-berkeley',
+    tagline: 'Japanese dashi ramen, in Berkeley',
+    site: 'https://hinodeyaramen.com/berkeley1',
+    orderUrl: 'https://hinodeyaramen.com/menu/berkeley1',
+    clip: {
+      src: '/clips/hinodeya-ramen-berkeley.mp4',
+      poster: '/clips/hinodeya-ramen-berkeley-poster.webp',
+      href: 'https://www.instagram.com/reel/DdohRAlvwjj/',
+      credit: 'Filmed by @hungere.for.diy',
+      platform: 'Instagram',
+      by: 'hungere.for.diy',
+    },
+  }),
+  /* Berkeley • Eats */
+  seed('thai-table-berkeley', 'Thai Table', 'Thai Table', 'Thai, homemade style', '#BD0D0D', {
+    icon: 'thai-table-berkeley',
+    tagline: 'Thai, homemade style, in Berkeley',
+    site: 'https://www.thaitableberkeley.com/',
+    orderUrl: 'https://order.toasttab.com/online/thai-table',
+    tier: 1,
+  }),
+  /* San Francisco • Eats */
+  seed('yuanbao-jiaozi-san-francisco', 'Yuanbao Jiaozi', 'Yuanbao', 'Handmade Chinese dumplings a', '#4C4C4C', {
+    icon: 'yuanbao-jiaozi-san-francisco',
+    tagline: 'Handmade Chinese dumplings and noodles, in San Francisco',
+    site: 'https://yuanbaojiaozitogo.com/',
+    clip: {
+      src: '/clips/yuanbao-jiaozi-san-francisco.mp4',
+      poster: '/clips/yuanbao-jiaozi-san-francisco-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd78almhYaR/',
+      credit: 'Filmed by @allie.eats',
+      platform: 'Instagram',
+      by: 'allie.eats',
+    },
+  }),
+  /* Burlingame • Eats */
+  seed('yuanbao-jiaozi-burlingame', 'Yuanbao Jiaozi', 'Yuanbao', 'Handmade Chinese dumplings a', '#4C4C4C', {
+    icon: 'yuanbao-jiaozi-burlingame',
+    tagline: 'Handmade Chinese dumplings and noodles, in Burlingame',
+    site: 'https://yuanbaojiaozitogo.com/',
+    orderUrl: 'https://dinfo.me/onlineorder/#/home/menu/?restid=yuanbaojiaozi',
+    clip: {
+      src: '/clips/yuanbao-jiaozi-san-francisco.mp4',
+      poster: '/clips/yuanbao-jiaozi-san-francisco-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd78almhYaR/',
+      credit: 'Filmed by @allie.eats',
+      platform: 'Instagram',
+      by: 'allie.eats',
+    },
+  }),
+  /* San Francisco • Sweets */
+  seed('pineapple-king-bakery-san-francisco', 'Pineapple King Bakery', 'Pineapple King', 'Hong Kong-style bakery', '#4C4C4C', {
+    icon: 'pineapple-king-bakery-san-francisco',
+    tagline: 'Hong Kong-style bakery, in San Francisco',
+    site: 'https://www.pineapplekingbakery.com/',
+    orderUrl: 'https://pineapple-king-bakery.square.site/',
+    clip: {
+      src: '/clips/pineapple-king-bakery-san-francisco.mp4',
+      poster: '/clips/pineapple-king-bakery-san-francisco-poster.webp',
+      href: 'https://www.instagram.com/reel/DdX5Vztgv0A/',
+      credit: 'Filmed by @allie.eats',
+      platform: 'Instagram',
+      by: 'allie.eats',
+    },
+  }),
+  /* San Francisco • Eats */
+  seed('tonys-pizza-napoletana', 'Tony\'s Pizza Napoletana', 'Tony\'s Pizza', 'Pizzeria: Neapolitan, New Yo', '#4C4C4C', {
+    icon: 'tonys-pizza-napoletana',
+    tagline: 'Pizzeria: Neapolitan, New York, Detroit, Sicilian and more, in San Francisco',
+    site: 'https://tonyspizzanapoletana.com/',
+    orderUrl: 'https://order.toasttab.com/online/tonys-pizza-napoletana',
+    clip: {
+      src: '/clips/tonys-pizza-napoletana.mp4',
+      poster: '/clips/tonys-pizza-napoletana-poster.webp',
+      href: 'https://www.instagram.com/reel/DYyHYXRI202/',
+      credit: 'Filmed by @thesnacksensei',
+      platform: 'Instagram',
+      by: 'thesnacksensei',
+    },
+  }),
+  /* San Francisco • Coffee */
+  seed('q-specialty-coffee-san-francisco', 'Q Specialty Coffee', 'Q Coffee', 'Specialty coffee roaster and', '#4C4C4C', {
+    icon: 'q-specialty-coffee-san-francisco',
+    tagline: 'Specialty coffee roaster and cafe, in San Francisco',
+    site: 'https://www.qspecialtycoffee.com/',
+    tier: 1,
+  }),
+  /* San Francisco • Eats */
+  seed('rg-lounge', 'R&G Lounge', 'R&G Lounge', 'Cantonese', '#4C4C4C', {
+    icon: 'rg-lounge',
+    tagline: 'Cantonese, in San Francisco',
+    site: 'https://www.rnglounge.com/',
+    tier: 1,
+  }),
+  /* Redwood City • Eats */
+  seed('alhambra-irish-house', 'Alhambra Irish House', 'Alhambra', 'Irish gastropub', '#4C4C4C', {
+    icon: 'alhambra-irish-house',
+    tagline: 'Irish gastropub, in Redwood City',
+    site: 'https://alhambra-irish-house.com/',
+    orderUrl: 'https://alhambra-irish-house.com/order',
+    clip: {
+      src: '/clips/alhambra-irish-house.mp4',
+      poster: '/clips/alhambra-irish-house-poster.webp',
+      href: 'https://www.instagram.com/reel/DaWWDv1hXvH/',
+      credit: 'Filmed by @singlecatm0m',
+      platform: 'Instagram',
+      by: 'singlecatm0m',
+    },
+  }),
+  /* San Rafael • Services */
+  seed('absolute-volleyball-club', 'Absolute Volleyball Club', 'Absolute VB', 'Youth volleyball club: teams', '#232122', {
+    icon: 'absolute-volleyball-club',
+    tagline: 'Youth volleyball club: teams, clinics and private lessons, in San Rafael',
+    site: 'https://www.absolutevb.com/',
+    clip: {
+      src: '/clips/absolute-volleyball-club.mp4',
+      poster: '/clips/absolute-volleyball-club-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd91dqSMBDg/',
+      credit: 'Posted by Absolute Volleyball Club',
+      platform: 'Instagram',
+    },
+  }),
+  /* BEASTY • Eats */
+  seed('kopi-bar-and-bakery', 'Kopi Bar & Bakery', 'Kopi Bar', 'Singaporean- and Indonesian-', '#4C4C4C', {
+    icon: 'kopi-bar-and-bakery',
+    tagline: 'Singaporean- and Indonesian-inspired cafe and bakery, in Berkeley',
+    site: 'https://www.thekopibar.com/',
+    orderUrl: 'https://www.thekopibar.com/store/23872',
+  }),
+  /* Los Gatos • Eats */
+  seed('the-cats', 'The Cats', 'The Cats', 'Texas BBQ and Filipino favor', '#000000', {
+    icon: 'the-cats',
+    tagline: 'Texas BBQ and Filipino favorites, with a bar and live music, in Los Gatos',
+    site: 'https://www.thecatslosgatos.com/',
+    orderUrl: 'https://online.skytab.com/6900ec73ace70df71d640a3a2b221eda',
+  }),
+  /* San Jose • Eats */
+  seed('sticky-rice-thai', 'Sticky Rice Thai', 'Sticky Rice', 'Thai, with Isan dishes', '#1C1C1E', {
+    tagline: 'Thai, with Isan dishes, in San Jose',
+    orderUrl: 'https://stickyricethaillc.toast.site/order',
+    needsSite: true,
+    clip: {
+      src: '/clips/sticky-rice-thai.mp4',
+      poster: '/clips/sticky-rice-thai-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd1o8N_tB5C/',
+      credit: 'Filmed by @orangeginger',
+      platform: 'Instagram',
+      by: 'orangeginger',
+    },
+  }),
+  /* San Jose • Eats */
+  seed('blue-pagoda', 'Blue Pagoda', 'Blue Pagoda', 'Japanese omakase and sushi', '#4C4C4C', {
+    icon: 'blue-pagoda',
+    tagline: 'Japanese omakase and sushi, in San Jose',
+    site: 'https://bluepagodadining.com/',
+    clip: {
+      src: '/clips/blue-pagoda.mp4',
+      poster: '/clips/blue-pagoda-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd4J1SRq4UA/',
+      credit: 'Filmed by @janeethefoodie',
+      platform: 'Instagram',
+      by: 'janeethefoodie',
+    },
+  }),
+  /* San Jose • Eats */
+  seed('tempura-kaneko-hannosuke', 'Tempura Kaneko Hannosuke', 'Hannosuke', 'Japanese tempura and tendon', '#534A49', {
+    icon: 'tempura-kaneko-hannosuke',
+    tagline: 'Japanese tempura and tendon, in San Jose',
+    site: 'https://tempura-kaneko-hannosuke.com/',
+    clip: {
+      src: '/clips/tempura-kaneko-hannosuke.mp4',
+      poster: '/clips/tempura-kaneko-hannosuke-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd9emqGs0zV/',
+      credit: 'Filmed by @bestbayareafood',
+      platform: 'Instagram',
+      by: 'bestbayareafood',
+    },
+  }),
+  /* Santa Clara • Eats */
+  seed('master-oh', 'Master Oh', 'Master Oh', 'Korean, known for raw marina', '#4C4C4B', {
+    icon: 'master-oh',
+    tagline: 'Korean, known for raw marinated seafood, in Santa Clara',
+    site: 'https://master-oh.com/',
+    orderUrl: 'https://masterohs.menu11.com/sc/order',
+    clip: {
+      src: '/clips/master-oh.mp4',
+      poster: '/clips/master-oh-poster.webp',
+      href: 'https://www.instagram.com/reel/DcSP10VN8uz/',
+      credit: 'Filmed by @annna_eats',
+      platform: 'Instagram',
+      by: 'annna_eats',
+    },
+  }),
+  /* San Jose • Eats */
+  seed('sourdough-eatery', 'Sourdough Eatery', 'Sourdough', 'Sandwich shop with fresh-bak', '#73423F', {
+    icon: 'sourdough-eatery',
+    tagline: 'Sandwich shop with fresh-baked sourdough, in San Jose',
+    site: 'https://sourdougheatery.com/',
+  }),
+  /* San Jose • Eats */
+  seed('rantei-japanese-cuisine', 'Rantei Japanese Cuisine', 'Rantei', 'Japanese: sushi bar and yaki', '#4F4C38', {
+    icon: 'rantei-japanese-cuisine',
+    tagline: 'Japanese: sushi bar and yakitori, in Santa Clara',
+    site: 'https://www.ranteijapanesecuisine.com/',
+    orderUrl: 'https://www.ranteijapanesecuisine.com/gsnrgav5/rantei-japanese-cuisine-santa-clara-95050/order-online',
+  }),
+  /* BEASTY • Barbershops */
+  seed('sj-proper-cuts', 'Proper Cuts Barber Shop', 'Proper Cuts', 'Barbershop', '#4C4C4C', {
+    icon: 'sj-proper-cuts',
+    tagline: 'Barbershop, in San Jose',
+    site: 'https://www.sjpropercuts.com/',
+    orderUrl: 'https://getsquire.com/booking/book/propercuts-barbershop-san-jose',
+  }),
+  /* San Jose • Eats */
+  seed('pho-ha-noi-san-jose', 'Pho Ha Noi', 'Pho Ha Noi', 'Vietnamese, Northern-style p', '#4C4C4C', {
+    icon: 'pho-ha-noi-san-jose',
+    tagline: 'Vietnamese, Northern-style phở, in San Jose',
+    site: 'https://phohanoi.com/san-jose-en.html',
+    tier: 1,
+  }),
+  /* Cupertino • Eats */
+  seed('pho-ha-noi-cupertino', 'Pho Ha Noi', 'Pho Ha Noi', 'Vietnamese, Northern-style p', '#4C4C4C', {
+    icon: 'pho-ha-noi-cupertino',
+    tagline: 'Vietnamese, Northern-style phở, in Cupertino',
+    site: 'https://phohanoi.com/cupertino-en.html',
+    tier: 1,
+  }),
+  /* Palo Alto • Eats */
+  seed('pho-ha-noi-palo-alto', 'Pho Ha Noi', 'Pho Ha Noi', 'Vietnamese, Northern-style p', '#4C4C4C', {
+    icon: 'pho-ha-noi-palo-alto',
+    tagline: 'Vietnamese, Northern-style phở, in Palo Alto',
+    site: 'https://phohanoi.com/palo-alto-en.html',
+    tier: 1,
+  }),
+  /* Milpitas • Eats */
+  seed('pho-ha-noi-milpitas', 'Pho Ha Noi', 'Pho Ha Noi', 'Vietnamese, Northern-style p', '#4C4C4C', {
+    icon: 'pho-ha-noi-milpitas',
+    tagline: 'Vietnamese, Northern-style phở, in Milpitas',
+    site: 'https://phohanoi.com/milpitas-en.html',
+    tier: 1,
+  }),
+  /* Fremont • Eats */
+  seed('pho-ha-noi-fremont', 'Pho Ha Noi', 'Pho Ha Noi', 'Vietnamese, Northern-style p', '#4C4C4C', {
+    icon: 'pho-ha-noi-fremont',
+    tagline: 'Vietnamese, Northern-style phở, in Fremont',
+    site: 'https://phohanoi.com/fremont-en.html',
+    tier: 1,
+  }),
+  /* Livermore • Eats */
+  seed('calikid-burgers-livermore', 'CaliKid Burgers ’n Shakes', 'CaliKid', 'California-style burgers and', '#000000', {
+    icon: 'calikid-burgers-livermore',
+    tagline: 'California-style burgers and shakes, in Livermore',
+    site: 'https://www.calikidburgers.com/',
+    orderUrl: 'https://order.toasttab.com/online/calikidburgers',
+    clip: {
+      src: '/clips/calikid-burgers-livermore.mp4',
+      poster: '/clips/calikid-burgers-livermore-poster.webp',
+      href: 'https://www.instagram.com/reel/DdW5SubguQ1/',
+      credit: 'Filmed by @capturedbysado',
+      platform: 'Instagram',
+      by: 'capturedbysado',
+    },
+  }),
+  /* Pleasant Hill • Eats */
+  seed('calikid-burgers-pleasant-hill', 'CaliKid Burgers ’n Shakes', 'CaliKid', 'California-style burgers and', '#000000', {
+    icon: 'calikid-burgers-pleasant-hill',
+    tagline: 'California-style burgers and shakes, in Pleasant Hill',
+    site: 'https://www.calikidburgers.com/',
+    orderUrl: 'https://order.toasttab.com/online/cali-kid-burgers-n-shakes-pleasant-hill/',
+    clip: {
+      src: '/clips/calikid-burgers-livermore.mp4',
+      poster: '/clips/calikid-burgers-livermore-poster.webp',
+      href: 'https://www.instagram.com/reel/DdW5SubguQ1/',
+      credit: 'Filmed by @capturedbysado',
+      platform: 'Instagram',
+      by: 'capturedbysado',
+    },
+  }),
+  /* Dublin • Eats */
+  seed('golden-donkatsu-dublin', 'Golden Donkatsu', 'Donkatsu', 'Korean donkatsu and Korean f', '#4D4C4C', {
+    icon: 'golden-donkatsu-dublin',
+    tagline: 'Korean donkatsu and Korean fusion, in Dublin',
+    needsSite: true,
+    clip: {
+      src: '/clips/golden-donkatsu-dublin.mp4',
+      poster: '/clips/golden-donkatsu-dublin-poster.webp',
+      href: 'https://www.instagram.com/reel/DdOwOeePuNJ/',
+      credit: 'Filmed by @hungere.for.diy',
+      platform: 'Instagram',
+      by: 'hungere.for.diy',
+    },
+  }),
+  /* Fremont • Eats */
+  seed('katsu-factory', 'Katsu Factory', 'Katsu Factory', 'Japanese tonkatsu', '#101010', {
+    icon: 'katsu-factory',
+    tagline: 'Japanese tonkatsu, in Fremont',
+    needsSite: true,
+    clip: {
+      src: '/clips/katsu-factory.mp4',
+      poster: '/clips/katsu-factory-poster.webp',
+      href: 'https://www.instagram.com/reel/Dcr493rMTD5/',
+      credit: 'Filmed by @ugc.with.frances',
+      platform: 'Instagram',
+      by: 'ugc.with.frances',
+    },
+  }),
+  /* Fremont • Eats */
+  seed('wadaya-fremont', 'Wadaya', 'Wadaya', 'Japanese mazemen and ramen', '#4C4C4C', {
+    icon: 'wadaya-fremont',
+    tagline: 'Japanese mazemen and ramen, in Fremont',
+    site: 'https://wadaya.co/',
+    orderUrl: 'https://order.spoton.com/so-wadaya-mazeman-and-ramen-23846/fremont-ca/68238eb695eeea50142ed51b',
+    tier: 1,
+  }),
+  /* Fremont • Services */
+  seed('mission-hills-swim', 'Mission Hills Racquet & Swim Club', 'Mission Hills', 'Swim lessons and swim teams', '#214370', {
+    icon: 'mission-hills-swim',
+    tagline: 'Swim lessons and swim teams, in Fremont',
+    site: 'https://www.themissionhillsclub.com/swim',
+    tier: 1,
+  }),
+  /* Pleasanton • Services */
+  seed('amp-mode', 'AMP MODE', 'AMP Mode', 'Active gaming arena with pri', '#192734', {
+    icon: 'amp-mode',
+    tagline: 'Active gaming arena with private game pods, in Pleasanton',
+    site: 'https://goampmode.com/',
+  }),
+  /* Walnut Creek • Eats */
+  seed('burma-2', 'Burma 2', 'Burma 2', 'Burmese', '#564A3F', {
+    icon: 'burma-2',
+    tagline: 'Burmese, in Walnut Creek',
+    site: 'https://www.burma2.com/',
+    orderUrl: 'https://order.toasttab.com/online/burma-2-1616-north-main-street',
+    dietary: ['Halal-friendly'],
+    offers: { welcome: '20% off when you scan the QR code on their menu and sign up with your phone number' },
+  }),
+  /* Brentwood • Sweets */
+  seed('handels-brentwood', 'Handel\'s Homemade Ice Cream', 'Handel\'s', 'Ice cream shop', '#494B5C', {
+    icon: 'handels-brentwood',
+    tagline: 'Ice cream shop, in Brentwood',
+    site: 'https://handelsicecream.com/store/brentwood/',
+    clip: {
+      src: '/clips/handels-brentwood.mp4',
+      poster: '/clips/handels-brentwood-poster.webp',
+      href: 'https://www.instagram.com/reel/DaT3xX1u9PY/',
+      credit: 'Filmed by @jantrinanicole',
+      platform: 'Instagram',
+      by: 'jantrinanicole',
+    },
+  }),
+  /* Walnut Creek • Sweets */
+  seed('handels-walnut-creek', 'Handel\'s Homemade Ice Cream', 'Handel\'s', 'Ice cream shop', '#494B5C', {
+    icon: 'handels-walnut-creek',
+    tagline: 'Ice cream shop, in Walnut Creek',
+    site: 'https://handelsicecream.com/store/walnut-creek/',
+    tier: 1,
+  }),
+  /* Livermore • Sweets */
+  seed('handels-livermore', 'Handel\'s Homemade Ice Cream', 'Handel\'s', 'Ice cream shop', '#494B5C', {
+    icon: 'handels-livermore',
+    tagline: 'Ice cream shop, in Livermore',
+    site: 'https://handelsicecream.com/store/livermore/',
+    tier: 1,
+  }),
+  /* Brentwood • Sweets */
+  seed('johns-ice-cream', 'John\'s Ice Cream', 'John\'s', 'Ice cream shop with homemade', '#9E3635', {
+    icon: 'johns-ice-cream',
+    tagline: 'Ice cream shop with homemade waffle cones, in Brentwood',
+    needsSite: true,
+    tier: 1,
+  }),
+  /* Richmond • Eats */
+  seed('the-burger-spot-co', 'The Burger Spot Co.', 'Burger Spot', 'Smash burgers and beef tallo', '#4C4C4C', {
+    icon: 'the-burger-spot-co',
+    tagline: 'Smash burgers and beef tallow fries, in Richmond',
+    site: 'https://www.theburgerspotco.com/',
+    orderUrl: 'https://order.spoton.com/so-the-burger-spot-co-25860/richmond-ca/690521beae71ab780d67140a',
+    clip: {
+      src: '/clips/the-burger-spot-co.mp4',
+      poster: '/clips/the-burger-spot-co-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd-GqUFPqH4/',
+      credit: 'Filmed by @foodandsachi',
+      platform: 'Instagram',
+      by: 'foodandsachi',
+    },
+  }),
+  /* Vallejo • Eats */
+  seed('buds-burgers', 'Buds Burgers', 'Bud\'s', 'Burgers', '#414D5E', {
+    icon: 'buds-burgers',
+    tagline: 'Burgers, in Vallejo',
+    needsSite: true,
+    tier: 1,
+  }),
+  /* Newark • Goods */
+  seed('shibam-coffee-newark', 'Shibam Coffee Co.', 'Shibam', 'Yemeni coffee and desserts', '#4C4C4C', {
+    icon: 'shibam-coffee-newark',
+    tagline: 'Yemeni coffee and desserts, in Newark',
+    needsSite: true,
+    tier: 1,
+  }),
+  /* BEASTY • Online */
+  seed('droneshow', 'Droneshow', 'Drone Show', 'Drone light shows', '#4C4C4C', {
+    icon: 'droneshow',
+    tagline: 'Drone light shows',
+    site: 'https://www.droneshow.com',
+  }),
+  /* BEASTY • Online */
+  seed('bottomline', 'Bottomline', 'Bottomline', 'Streetwear clothing brand', '#000000', {
+    icon: 'bottomline',
+    tagline: 'Streetwear clothing brand',
+    site: 'https://shopbottomline.com',
+    offers: { welcome: '10% off your order' },
+  }),
+  /* BEASTY • Online */
+  seed('steves-mobile-security', 'Steve\'s Mobile Security', 'Steve\'s', 'Security screen doors and wi', '#594B30', {
+    icon: 'steves-mobile-security',
+    tagline: 'Security screen doors and window screens',
+    site: 'https://www.stevesmobilesecurity.com',
+    orderUrl: 'https://www.stevesmobilesecurity.com/request-a-quote',
+  }),
+  /* BEASTY • Cooks */
+  seed('rye-cookin', 'Rye Cookin', 'Rye Cookin\'', 'Filipino food creator: bagoo', '#4C4C4C', {
+    icon: 'rye-cookin',
+    tagline: 'Filipino food creator: bagoong and merch',
+    site: 'https://www.ryecookin.com',
+  }),
+  /* BEASTY • Meats */
+  seed('nomads', 'Nomads', 'Nomads', 'Grass-fed steak jerky and be', '#251306', {
+    icon: 'nomads',
+    tagline: 'Grass-fed steak jerky and beef tallow',
+    site: 'https://eatnomads.com',
+  }),
+  /* BEASTY • Sweets */
+  seed('gregorys-gourmet-desserts', 'Gregory\'s Gourmet Desserts', 'Gregory\'s', 'Dessert bakery: cheesecakes,', '#030303', {
+    icon: 'gregorys-gourmet-desserts',
+    tagline: 'Dessert bakery: cheesecakes, cakes, pies and cobblers, in Oakland',
+    site: 'https://gregorysgourmetdesserts.com',
+    orderUrl: 'https://www.toasttab.com/catering/gregorys-gourmet-desserts-oakland-285-23rd-street',
+    clip: {
+      src: '/clips/gregorys-gourmet-desserts.mp4',
+      poster: '/clips/gregorys-gourmet-desserts-poster.webp',
+      href: 'https://www.instagram.com/reel/DJ5UW0ySv_n/',
+      credit: 'Filmed by @takeoutwithtuck',
+      platform: 'Instagram',
+      by: 'takeoutwithtuck',
+    },
+  }),
+  /* BEASTY • Services */
+  seed('souva-mobile-pet-grooming', 'Souva Mobile Pet Grooming', 'Souva', 'Mobile pet grooming', '#4E4E36', {
+    icon: 'souva-mobile-pet-grooming',
+    tagline: 'Mobile pet grooming',
+    site: 'https://www.souvagrooming.com',
+    clip: {
+      src: '/clips/souva-mobile-pet-grooming.mp4',
+      poster: '/clips/souva-mobile-pet-grooming-poster.webp',
+      href: 'https://www.instagram.com/reel/DeA2Mz4oQwx/',
+      credit: 'Posted by Souva Mobile Pet Grooming',
+      platform: 'Instagram',
+    },
+  }),
+  /* BEASTY • Services */
+  seed('kind-bubbles', 'Kind Bubbles', 'Kind Bubbles', 'Bubble party entertainment', '#000000', {
+    icon: 'kind-bubbles',
+    tagline: 'Bubble party entertainment',
+    site: 'https://www.kindbubbles.com',
+    orderUrl: 'https://www.kindbubbles.com/book-now',
+  }),
+  /* BEASTY • Services */
+  seed('precision-auto-service', 'Precision Auto Service', 'Precision', 'Auto service shop, muscle ca', '#624644', {
+    icon: 'precision-auto-service',
+    tagline: 'Auto service shop, muscle cars',
+    needsSite: true,
+  }),
 ]
 
 /**
  * His numbered spots, as slot indexes on the flagship pages. `null` is a spot
- * his list left effectively open (his #19 repeats an entry — kept open rather
- * than seating the same business twice on one page).
+ * nobody holds by hand.
  *
  * Names that map to brands the app already has use the EXISTING id — the
  * roster never forks a second copy of a researched business.
+ *
+ * BEASTY • EATS SINCE 2026-10-05 is one restaurant per cuisine, in Glenn's
+ * order (EATS_CATEGORIES in slots.ts), seats `beasty-eats-N`. His picks moved
+ * to their cuisine; where two shared one, the glowing tile kept it ("every
+ * glowing tile on page one", 2026-09-21) and the other went to More eats, as
+ * he said: "Any forgotten varieties of food will push over to the second
+ * yellow pages". Open spots fill with the first business that fits
+ * (categorySeats.ts). Off this page that day: Cravingz, Butter Pecan and
+ * Meadowlark to BEASTY • Sweets, Midnite Theories to BEASTY • Goods, Jazz
+ * Braids to BEASTY • Salons ("move midnight theories and jazz braids off of
+ * the eats page onto their appropriate category", 2026-09-30), and Rain's
+ * Plates, Glasshouzz, Bread Winners, Winky Dinky Dogs and Lovely's to More
+ * eats (placements.ts).
  */
-export const BEASTY_GOODS_ROSTER: (string | null)[] = [
-  'b_midnighttheories', // 1  Midnight Theories
-  'b_topdog', //           2  Top Dog
-  'b_bulapies', //         3  Bula pies
-  'b_breadwinners', //     4  Bread winners
-  'b_winkydinkydogs', //   5  Winky dinky dogs
-  'b_rainsplates', //      6  Chef Rain
-  'b_downtownbbq', //      7  Downtown BBQ
-  'b_glasshouzz', //       8  Glass Houzz
-  'b_pippal', //           9  Pippal
-  /* SIA Collective took this seat on "BEASTY • Goods, replace EAT tile
-     please". On 2026-09-22, 10:10 pm, Cravingz takes it: "Add also to BEASTY
-     • Goods and bump SIA to BEASTY • Online instead" (see data/placements.ts
-     for SIA's Online seat). Cravingz keeps its Redwood City seat as well. */
-  'b_cravingz', //         10 Cravingz (was SIA Collective)
-  /* "Can you move belly to the front home screen? You can move Paulo
-     sausage somewhere else because they close down recently." — 2026-09-09.
-     Belly takes the seat; Paulo Sausage Co keeps its Pittsburg seat, which
-     is the somewhere else it already had, until he says more — their own
-     site carries no closing notice, so the page does not say one. */
-  'b_belly', //            11 Belly
-  'b_lumpiacompany', //    12 Lumpia Company
-  'b_hotboyschicken', //   13 Hot boys
-  /* 14 and 24 are seated in data/placements.ts since 2026-09-21: the glowing
-     tiles moved to this page, and Sin City Pits and Lucky Three Seven went to
-     the yellow sheet behind it. */
-  null, //                 14 The Local, via placements.ts (was Sin City Pits)
-  /* "Can you bump SMASH burgers into the more goods space" — moved to the
-     yellow sheet in data/placements.ts, so this seat is open again. Tony's
-     Style has sat in it since 2026-09-05 through an explicit override in
-     data/placements.ts, which wins over this array; the seat is NOT free. */
-  null, //                 15 Tony's Style, via placements.ts
-  'b_butterpecan', //      16 Butter Pecan bake shop
-  /* "Let's put this on the home screen page just because it's Sam Smith /
-     Bump Vegan Mob", 2026-09-30, 5:48 am: Lovely's takes the seat, and Vegan
-     Mob goes to the yellow sheet behind this page (data/placements.ts).
-     Lovely's keeps its San Francisco Burgers seat as well. */
-  'b_lovelysburgerssf', //  17 Lovely's Burgers (was Vegan Mob)
-  /* "Bump poof of Alchemy to yellow goods pages", 2026-08-28 — same move as
-     Smash Burgers above, and for the same reason: the seat is his to reassign.
-     Reseated on beasty-goods2 in data/placements.ts, which left 18 open — and
-     18 is "that empty space on the home screen" he gave Chef Jeff's on
-     2026-09-10. It is the only seat on this page that is actually free: 15
-     reads open here but placements.ts seats Tony's Style in it. */
-  'b_chefjeffssmashburger', // 18 Chef Jeff's Smash Burger
-  'b_gaovietkitchen', //   19 Gao
-  /* Elemonkey moved to BEASTY • Goods, the boutique sheet, "right in the center"
-     (Glenn, 2026-09-30); see data/placements.ts. */
-  null, //                 20 open (was Elemonkey)
-  'b_meadowlarkdairy', //  21 Meadowlark Dairy
-  'b_masa', //             22 Masa
-  'b_harumiayce', //       23 Harumi - AYCE
-  null, //                 24 Bust Down & Co., via placements.ts (was Lucky Three Seven)
+export const BEASTY_EATS_ROSTER: (string | null)[] = [
+  'b_downtownbbq', //          1  BBQ
+  'b_belly', //                2  Korean
+  null, //                     3  Chinese
+  'b_harumiayce', //           4  Sushi
+  'b_masa', //                 5  Mexican
+  'b_lumpiacompany', //        6  Filipino food
+  'b_pippal', //               7  Indian food
+  null, //                     8  Greek food
+  null, //                     9  Italian food
+  null, //                     10 French cuisine
+  null, //                     11 Udon
+  'b_gaovietkitchen', //       12 Pho
+  null, //                     13 Ramen
+  'b_bulapies', //             14 Fijian food
+  null, //                     15 Jamaican food
+  'b_chefjeffssmashburger', // 16 Burger
+  'b_hotboyschicken', //       17 Chicken sandwich
+  'b_thelocalpetaluma', //     18 Sandwiches (The Local's glow; Bread Winners to More eats)
+  'b_banhmioven', //           19 Banh mi (up from More eats)
+  null, //                     20 Steakhouse
+  null, //                     21 Hot pot
+  /* "Bump Nossa onto BEASTY • Eats page" — 2026-10-02. A lounge known for its
+     sliders and wings, so the fried chicken spot. */
+  'b_nossooakland', //         22 Fried chicken
+  'b_topdog', //               23 Hot dogs
+  'b_kingswcpizza', //         24 Pizza (up from More eats)
 ]
-
+/**
+ * BEASTY • Sweets, seated by hand: the three dessert shops that were on Eats,
+ * at their kind's spot (SWEETS_CATEGORIES). "Move Meadowlark onto BEASTY •
+ * Sweets page" — 2026-10-02.
+ */
+export const BEASTY_SWEETS_ROSTER: Record<number, string> = {
+  3: 'b_cravingz', //          Ice cream
+  6: 'b_butterpecan', //       Cookies
+  17: 'b_meadowlarkdairy', //  Soft serve
+}
 export const BEASTY_SERVICES_ROSTER: (string | null)[] = [
   'b_dingdongtogo', //          1  Ding DongToGo
   /* "You can bump Roman Iron to the yellow pages for her", 2026-09-22: Roman

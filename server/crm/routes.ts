@@ -737,6 +737,39 @@ export function mountCrm(app: Express, deps: CrmDeps, rateLimiter: Limiter) {
   app.get('/api/crm/referrers/:id', read, team, h(async (req, res) => void res.json(await referrerDetail(String(req.params.id), periodStart(req.query.period)))))
   app.get('/api/crm/revenue', read, team, h(async (req, res) => void res.json(await revenue(periodStart(req.query.period)))))
   app.get('/api/crm/analytics', read, team, h(async (_req, res) => void res.json(await analytics())))
+  /*
+    THE HOME-SCREEN BUTTONS. Glenn, 2026-10-03: "will it show analytics for the
+    gallery, video reel, newsfeed button and calendar button? … Maybe have one
+    for the QR code button and the contact button just so we can see." Every
+    open of those screens is a `button_tapped` event (ios/Device.tsx); the
+    team's own phones are left out.
+  */
+  app.get(
+    '/api/crm/buttons',
+    read,
+    team,
+    h(async (req, res) => {
+      const q = req.query as Record<string, unknown>
+      const period = typeof q.period === 'string' && PERIODS.includes(q.period) ? q.period : '30d'
+      const range = periodRange(period, now(), { start: q.start, end: q.end })
+      const from = period === 'all' ? 0 : range.since
+      const rows = await db
+        .prepare(
+          `SELECT metadata->>'kind' AS kind, COUNT(*) AS taps, COUNT(DISTINCT COALESCE(member_id, actor, session_id)) AS people
+           FROM analytics_events
+           WHERE name = 'button_tapped' AND actor_type <> 'team' AND occurred_at >= ? AND occurred_at < ?
+           GROUP BY 1`,
+        )
+        .all<{ kind: string | null; taps: number | string; people: number | string }>(from, range.until)
+      const since = await db.prepare(`SELECT MIN(occurred_at) AS t FROM analytics_events WHERE name = 'button_tapped'`).get<{ t: number | string | null }>()
+      res.json({
+        from,
+        until: range.until,
+        countingSince: since?.t ? Number(since.t) : null,
+        buttons: rows.filter((r) => r.kind).map((r) => ({ kind: r.kind as string, taps: Number(r.taps), people: Number(r.people) })),
+      })
+    }),
+  )
   app.get(
     '/api/crm/search',
     read,

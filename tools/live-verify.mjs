@@ -497,9 +497,10 @@ if (await p.locator('[aria-label="Enter BEASTY"]').count()) { await enter.click(
    for that city"). Read from the page dots, which name every page. */
 const swipe = await p.evaluate(() => [...document.querySelectorAll('.page-dots .dot')].map((d) => d.getAttribute('aria-label') ?? ''))
 const swipeTotal = Number(/ of (\d+)/.exec(swipe[0] ?? '')?.[1] ?? 0)
-const nine = swipe.slice(0, 9).map((l) => l.replace(/^Page \d+ of \d+, BEASTY, /, ''))
+const nine = swipe.map((l) => l.replace(/^Page \d+ of \d+, BEASTY, /, '')).filter((x, i, a) => x !== a[i - 1]).slice(0, 10)
 console.log('home swipe    :', JSON.stringify({ pages: swipeTotal, first: nine }))
-if (nine.join(',') !== 'Eats,Goods,Services,Online,Individuals,Tattoo,Whips,Gyms,Salons') fails.push(`the home screen's nine category pages read ${nine.join(', ')}`)
+/* 2026-10-05: BEASTY • Pages first, then the nine. */
+if (nine.join(',') !== 'Pages,Eats,Sweets,AYCE,Goods,Services,Online,Individuals,Tattoo,Automotive') fails.push(`the home screen's first pages read ${nine.join(', ')}`)
 if (!swipeTotal || swipeTotal > 20) fails.push(`the home screen swipe is ${swipeTotal} pages long; the cities should only come from Search`)
 for (const w of ['cat-tattoo.webp', 'cat-realtors-thumb.webp', 'cat-beasty-thumb.webp']) {
   const r = await fetch(`${base}/wallpapers/${w}`).catch(() => null)
@@ -584,6 +585,8 @@ for (const s of [
   'api/members/tickets', 'ticket-stub', 'members-interval',
   /* 2026-09-30: the BEASTY category pages and Search's Categories and Cities drop-downs. */
   'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', '/wallpapers/cat-', 'Barbers, cuts and shaves',
+  /* 2026-10-05: BEASTY • Pages tiles, Sweets and AYCE, the reels bubble, button counts, Search's share link. */
+  'cat-icon', 'Watch foodie reviews here to discover new gems.', 'button_tapped', 'Search BEASTY pages', 'Barbers, cuts and shaves', 'Shaved ice', 'Chicken sandwich', 'brand-panel-link',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
 }

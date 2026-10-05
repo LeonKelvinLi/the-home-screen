@@ -155,6 +155,43 @@ the most movement — to 540x960 with sound.
 | `house-of-silog.mp4` | House of Silog, Brentwood | instagram.com/reel/Dd5HDT4zZQJ — **an excerpt**, 3s–27s of 68s — the silog bento box and the sisig; posted by @justmostie (Mostie), a food creator, not the restaurant — sent on 2026-09-30 with "Please add this to the house of silog's page" |
 | `little-sheep-newark.mp4` | Little Sheep, Newark | instagram.com/reel/DdftkVVTK7h — **an excerpt**, 26s–50s of 101s — the hot pot bar and the pots; posted by @iamnikkieg (Nikkie G), a food creator, not the restaurant — sent on 2026-09-30 as a "Foodie", and it goes on the page because Little Sheep went on BEASTY the same morning |
 | `chef-jeffs-smash-burger.mp4` | Chef Jeff's Smash Burger, Antioch | instagram.com/reel/DQe8tiVkpCK — **an excerpt**, 2s–26s of 68s — his "Top burger spots in the 925" title, the burgers and the loaded fries; posted by @takeoutwithtuck (The Honest Reviewer), a food creator, not the restaurant — sent on 2026-09-30 with "clip this video to add on the page within the next hour" |
+| `7-mile-house.mp4` | 7 Mile House, Brisbane | instagram.com/reel/DXUviEUj9i8 (@7milehouse) |
+| `hungry-cow.mp4` | Hungry Cow, Fremont | instagram.com/reel/DSEaJrgkZe6 (@thesnacksensei) |
+| `daughter-thai.mp4` | Daughter Thai Kitchen, Oakland | instagram.com/reel/Ddptshixa3e (@bayareamunchies510) |
+| `nosso-oakland.mp4` | Nosso, Oakland | instagram.com/reel/Ddh94RIgaxM (@festusfeasts) |
+| `bread-winners.mp4` | Bread Winners, Oakland | instagram.com/reel/DeBPEB8uDJ4 (@marketing_kings) |
+| `metersf.mp4` | MeterSF (BEASTY • Whips) | instagram.com/reel/DdeeJsApfBw (@metersf) |
+| `kan-kiin.mp4` | Kan Kiin, Daly City | instagram.com/reel/DdfKJIgPDzm (@foodieberrie) |
+| `rob-bens-restaurant.mp4` | Rob Ben's Restaurant & Lounge, Emeryville | instagram.com/reel/DEgHeK_yfL- (@bayarea_fooddreamz) |
+| `understory.mp4` | Understory, Oakland | instagram.com/reel/Dd7Gag4NaBV (@festusfeasts) |
+| `brundo-spices.mp4` | Brundo Spice Company | instagram.com/reel/DeAygs_vTtd (@bayareafoodz) |
+| `four-forty-four-events.mp4` | Four Forty Four Events, Oakland | instagram.com/reel/Dd70LCuMMsD (@four_forty_four_events) |
+| `pakaoma.mp4` | Pakaoma, El Cerrito | instagram.com/reel/Dd7cwHQv9lo (@foodandsachi) |
+| `cali-alley.mp4` | Cali Alley, Berkeley | instagram.com/reel/Dd4ydyFto4G (@festusfeasts) |
+| `praaw-thai.mp4` | Praaw Thai, Berkeley | instagram.com/reel/DdhPdjsPH71 (@foodandsachi) |
+| `rose-pizzeria-san-francisco.mp4` | Rose Pizzeria, San Francisco | instagram.com/reel/DdEjNGpqKm9 (@seekeasyeats) |
+| `hinodeya-ramen-berkeley.mp4` | HINODEYA Ramen & Bar, Berkeley | instagram.com/reel/DdohRAlvwjj (@hungere.for.diy) |
+| `yuanbao-jiaozi-san-francisco.mp4` | Yuanbao Jiaozi, San Francisco | instagram.com/reel/Dd78almhYaR (@allie.eats) |
+| `pineapple-king-bakery-san-francisco.mp4` | Pineapple King Bakery, San Francisco | instagram.com/reel/DdX5Vztgv0A (@allie.eats) |
+| `tonys-pizza-napoletana.mp4` | Tony's Pizza Napoletana, San Francisco | instagram.com/reel/DYyHYXRI202 (@thesnacksensei) |
+| `alhambra-irish-house.mp4` | Alhambra Irish House, Redwood City | instagram.com/reel/DaWWDv1hXvH (@singlecatm0m) |
+| `absolute-volleyball-club.mp4` | Absolute Volleyball Club, San Rafael | instagram.com/reel/Dd91dqSMBDg (@absolutevolleyball) |
+| `sticky-rice-thai.mp4` | Sticky Rice Thai, San Jose | instagram.com/reel/Dd1o8N_tB5C (@orangeginger) |
+| `blue-pagoda.mp4` | Blue Pagoda, San Jose | instagram.com/reel/Dd4J1SRq4UA (@janeethefoodie) |
+| `tempura-kaneko-hannosuke.mp4` | Tempura Kaneko Hannosuke, San Jose | instagram.com/reel/Dd9emqGs0zV (@bestbayareafood) |
+| `master-oh.mp4` | Master Oh, Santa Clara | instagram.com/reel/DcSP10VN8uz (@annna_eats) |
+| `calikid-burgers-livermore.mp4` | CaliKid Burgers ’n Shakes, Livermore | instagram.com/reel/DdW5SubguQ1 (@capturedbysado) |
+| `golden-donkatsu-dublin.mp4` | Golden Donkatsu, Dublin | instagram.com/reel/DdOwOeePuNJ (@hungere.for.diy) |
+| `katsu-factory.mp4` | Katsu Factory, Fremont | instagram.com/reel/Dcr493rMTD5 (@ugc.with.frances) |
+| `handels-brentwood.mp4` | Handel's Homemade Ice Cream, Brentwood | instagram.com/reel/DaT3xX1u9PY (@jantrinanicole) |
+| `the-burger-spot-co.mp4` | The Burger Spot Co., Richmond | instagram.com/reel/Dd-GqUFPqH4 (@foodandsachi) |
+| `gregorys-gourmet-desserts.mp4` | Gregory's Gourmet Desserts, Oakland | instagram.com/reel/DJ5UW0ySv_n (@takeoutwithtuck) |
+| `souva-mobile-pet-grooming.mp4` | Souva Mobile Pet Grooming | instagram.com/reel/DeA2Mz4oQwx (@souvagrooming) |
+| `omer-ariely-ai.mp4` | omer.ariely.ai (BEASTY • AI) | instagram.com/reel/Dd6QL95jdjr (@thisaintcanon) |
+| `kory-chester.mp4` | Kory Chester (BEASTY • AI) | instagram.com/reel/Dd7CQPYsSnu (@thesessionca) |
+| `stgdesignz.mp4` | STGDesignz (BEASTY • AI) | instagram.com/reel/Dd9xqwsJsYS (@stgdesignz) |
+| `dauren-altynbek.mp4` | Dauren Altynbek (BEASTY • AI) | instagram.com/reel/DeB4M74RM6d (@downey.ai) |
+| `tue-twaydabae.mp4` | Tuệ (BEASTY • Cooks) | instagram.com/reel/Dd_0C1OtZUJ (@twaydabae) |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

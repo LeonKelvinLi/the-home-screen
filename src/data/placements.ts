@@ -29,7 +29,7 @@
  * and a seat must never be dressed up as more than its source supports.
  */
 
-import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from './roster'
+import { BEASTY_EATS_ROSTER, BEASTY_SERVICES_ROSTER, BEASTY_SWEETS_ROSTER } from './roster'
 
 /*
   The flagship pages are DERIVED from the roster arrays rather than typed out
@@ -38,9 +38,10 @@ import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from './roster'
   that drifts.
 */
 const flagship: Record<string, string> = {}
-BEASTY_GOODS_ROSTER.forEach((id, i) => {
-  if (id) flagship[`beasty-goods-${i}`] = id
+BEASTY_EATS_ROSTER.forEach((id, i) => {
+  if (id) flagship[`beasty-eats-${i}`] = id
 })
+for (const [i, id] of Object.entries(BEASTY_SWEETS_ROSTER)) flagship[`beasty-sweets-${i}`] = id
 BEASTY_SERVICES_ROSTER.forEach((id, i) => {
   if (id) flagship[`beasty-services-${i}`] = id
 })
@@ -229,7 +230,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-0': 'b_santaclarasuperkitchen',
   'beasty-goods2-1': 'b_willybillysmokedmeat',
   'beasty-goods2-2': 'b_redchili',
-  'beasty-goods2-3': 'b_banhmioven',
+  'beasty-goods2-3': 'b_rainsplates', //  from BEASTY • Eats, 2026-10-05 (Banh Mi Oven went up to Eats' banh mi spot)
   'beasty-services2-1': 'b_adzeela',
   'beasty-services2-2': 'b_allyvirtual',
   /* "Mobile Bay Area", his words — no city, so no city page. */
@@ -647,7 +648,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
     page to sit in until the Pittsburg page existed this week. A business on a
     BEASTY sheet AND in its own city is the intended shape, not a duplicate.
   */
-  'pittsburg-goods-6': 'b_paulosausage', //        Sandwiches — off the front page since 2026-09-09 ("they close down recently"); this seat is his call
+  /* Their Pittsburg shop closed; since 2026-10-05 Paulo is on Martinez's
+     Sandwiches seat and Brentwood's yellow sheet (Brentwood's Sandwiches seat is
+     Salad Makers'), the two farmers markets they sell at. */
+  'martinez-goods-6': 'b_paulosausage', //         Sandwiches
+  'brentwood-goods2-3': 'b_paulosausage', //       Sandwiches is Salad Makers'
   /*
     2026-08-28, 01:01-01:28. THREE OF THESE FOUR HAVE NO CATEGORY among the
     twenty-four — BBQ, a distillery and a Cajun seafood boil are none of them,
@@ -804,7 +809,7 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      the Daly City seat since the 27th; this is the half that was missed. The
      numbered BEASTY Goods sheet has only Boba and Dog boutique open and it is
      a pizzeria, so the yellow one. */
-  'beasty-goods2-10': 'b_kingswcpizza',
+  'beasty-goods2-10': 'b_glasshouzz', //  from BEASTY • Eats, 2026-10-05 (Kings West Coast went up to Eats' pizza spot)
 
   /* 2026-08-29. A dessert counter, a Greek counter and a photo booth — none of
      the three has a seat among the twenty-four, and the two food ones are in
@@ -932,7 +937,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      named, twice; Caitlyn's on Bakery; Armenta on Gardener in Services (he
      said Goods — it is a landscape contractor; flagged). */
   'antioch-goods2-1': 'b_dadsbbq', //                Mississippi-style BBQ
-  'beasty-goods-14': 'b_jazzbraids', //              from Janelle's circle, pink glow — page one since 2026-09-21 (was Tony's Style)
+  /* Jazz Braids left BEASTY • Eats for BEASTY • Salons on 2026-10-05 ("move …
+     jazz braids off of the eats page onto their appropriate category"); Salons
+     seats every braider and salon on BEASTY by itself (categorySeats.ts). */
   'albany-goods-14': 'b_tonysstyle', //              Chicken wings — "Add on Boba empty spot"
   'san-jose-goods-12': 'b_caitlynssweets', //        Bakery — custom cakes
   'antioch-services-21': 'b_armentalandscape', //    Gardener — landscape design and construction
@@ -1175,7 +1182,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      city seat of their own. They move to the yellow sheet right behind it,
      not off the BEASTY pages: Sin City Pits (Las Vegas), Tony's Style (Albany)
      and Lucky Three Seven (Oakland). */
-  'beasty-goods-13': 'b_thelocalpetaluma', //                     The Local — glow; was Sin City Pits
   'beasty-goods2-14': 'b_sincitypits', //                          from page one, seat 14
   'beasty-goods2-15': 'b_tonysstyle', //                           from page one, seat 15
   'beasty-goods2-16': 'b_luckythreeseven', //                      from page one, seat 24
@@ -1237,6 +1243,15 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      left Eats 24 for BEASTY • Services (data/roster.ts), and Frank Jr. English
      went to the yellow sheet behind Services to make room. */
   'beasty-boutiques-9': 'b_elemonkey', //                          centre of the new Goods sheet
+  /* 2026-10-05, BEASTY • Eats became one restaurant per cuisine. The ones whose
+     cuisine already had a business, or that are not on his list of 24, go to
+     the yellow sheet behind it; Midnite Theories, a skate shop, goes to Goods. */
+  'beasty-goods2-18': 'b_breadwinners', //                         Sandwiches is The Local's
+  'beasty-goods2-19': 'b_winkydinkydogs', //                       Hot dogs is top dog's
+  'beasty-goods2-20': 'b_lovelysburgerssf', //                     Burger is Chef Jeff's
+  'beasty-boutiques-0': 'b_midnighttheories', //                   "their appropriate category"
+  /* "Create a new BEASTY • Whips and add Meter SF on there as the 1st spot" — 2026-10-04. */
+  'beasty-whips-0': 'b_metersf',
   'beasty-services2-25': 'b_frankjrenglish', //                     from BEASTY • Services 5, for Bust Down & Co.
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1
@@ -1270,4 +1285,68 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'walnut-creek-goods2-7': 'b_havanawalnutcreek', //               Cuban, no seat; yellow sheet, Tier 1
   'walnut-creek-goods2-8': 'b_litawalnutcreek', //                 Miami and Caribbean, no seat; yellow sheet, Tier 1
   'santa-rosa-goods2-0': 'b_shadyoakbrewing', //                   a brewery, no seat; yellow sheet, Tier 1
+  /* Batch 42, 2026-10-05 (roster.ts). */
+  'emeryville-goods2-0': 'b_robbensrestaurant',
+  'oakland-goods2-16': 'b_understory',
+  'oakland-goods2-17': 'b_townbiznesshibachi',
+  'oakland-goods2-18': 'b_brundospices',
+  'oakland-services2-2': 'b_fourfortyfourevents',
+  'el-cerrito-goods2-1': 'b_pakaoma',
+  'berkeley-goods-6': 'b_calialley',
+  'berkeley-goods-2': 'b_praawthai',
+  'berkeley-goods-5': 'b_rosepizzeriaberkeley',
+  'san-francisco-goods2-28': 'b_rosepizzeriasanfrancisco',
+  'berkeley-goods2-4': 'b_hinodeyaramenberkeley',
+  'berkeley-goods2-5': 'b_thaitableberkeley',
+  'san-francisco-goods2-29': 'b_yuanbaojiaozisanfrancisco',
+  'burlingame-goods2-1': 'b_yuanbaojiaoziburlingame',
+  'san-francisco-goods2-30': 'b_pineapplekingbakerysanfrancisco',
+  'san-francisco-goods2-31': 'b_tonyspizzanapoletana',
+  'san-francisco-goods2-32': 'b_qspecialtycoffeesanfrancisco',
+  'san-francisco-goods2-33': 'b_rglounge',
+  'redwood-city-goods2-0': 'b_alhambrairishhouse',
+  'san-rafael-services2-0': 'b_absolutevolleyballclub',
+  'beasty-goods2-21': 'b_kopibarandbakery',
+  'berkeley-goods2-6': 'b_kopibarandbakery',
+  'los-gatos-goods-10': 'b_thecats',
+  'san-jose-goods2-7': 'b_stickyricethai',
+  'san-jose-goods2-8': 'b_bluepagoda',
+  'san-jose-goods2-9': 'b_tempurakanekohannosuke',
+  'santa-clara-goods-7': 'b_masteroh',
+  'san-jose-goods-6': 'b_sourdougheatery',
+  'santa-clara-goods-4': 'b_ranteijapanesecuisine',
+  'san-jose-services-0': 'b_sjpropercuts',
+  'san-jose-goods2-10': 'b_phohanoisanjose',
+  'cupertino-goods2-0': 'b_phohanoicupertino',
+  'palo-alto-goods2-1': 'b_phohanoipaloalto',
+  'milpitas-goods2-2': 'b_phohanoimilpitas',
+  'fremont-goods2-1': 'b_phohanoifremont',
+  'livermore-goods-0': 'b_calikidburgerslivermore',
+  'pleasant-hill-goods2-1': 'b_calikidburgerspleasanthill',
+  'dublin-goods-7': 'b_goldendonkatsudublin',
+  'fremont-goods2-2': 'b_katsufactory',
+  'fremont-goods2-3': 'b_wadayafremont',
+  'fremont-services2-0': 'b_missionhillsswim',
+  'pleasanton-services-19': 'b_ampmode',
+  'walnut-creek-goods2-9': 'b_burma2',
+  'brentwood-goods-11': 'b_handelsbrentwood',
+  'walnut-creek-goods2-10': 'b_handelswalnutcreek',
+  'livermore-goods2-2': 'b_handelslivermore',
+  'brentwood-goods2-4': 'b_johnsicecream',
+  'richmond-goods2-2': 'b_theburgerspotco',
+  'vallejo-goods2-0': 'b_budsburgers',
+  'newark-goods2-2': 'b_shibamcoffeenewark',
+  'beasty-online-7': 'b_droneshow',
+  'beasty-online-5': 'b_bottomline',
+  'beasty-online-8': 'b_stevesmobilesecurity',
+  'beasty-cooks-6': 'b_ryecookin',
+  'beasty-meats-0': 'b_nomads',
+  'beasty-sweets-0': 'b_gregorysgourmetdesserts',
+  'oakland-goods2-19': 'b_gregorysgourmetdesserts',
+  'beasty-services2-26': 'b_souvamobilepetgrooming',
+  'beasty-services2-27': 'b_kindbubbles',
+  'beasty-services2-28': 'b_precisionautoservice',
+  'san-leandro-services-5': 'b_precisionautoservice',
+  /* BEASTY • Cooks, from Glenn's "BEASTY • Cooks" reel of 2026-10-03 (localBrands.ts). */
+  'beasty-cooks-7': 'b_tuetwaydabae',
 }

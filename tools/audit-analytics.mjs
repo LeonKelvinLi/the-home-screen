@@ -212,11 +212,19 @@ let [closed] = await until('business_closed')
 step('leaving it reports how long it was open', closed?.brand_id === 'b_zadnagrill' && closed?.metadata?.dwell_ms > 300, `${closed?.metadata?.dwell_ms} ms`)
 
 await jp.waitForTimeout(1600)
-const [pv] = await until('page_viewed', 1, "AND city = 'BEASTY'")
-step('the home screen page in front is reported, as BEASTY Goods page 1', pv?.page_kind === 'goods' && pv?.position === 1, `${pv?.city} ${pv?.page_kind} ${pv?.position}`)
+const [pagesView] = await until('page_viewed', 1, "AND city = 'BEASTY'")
+step('the first page in front is reported, as BEASTY • Pages', pagesView?.page_kind === 'pages' && pagesView?.position === 1, `${pagesView?.city} ${pagesView?.page_kind} ${pagesView?.position}`)
+/* BEASTY • Eats follows BEASTY • Pages (2026-10-05): turn to it. */
+await jp.evaluate(() => {
+  const dots = [...document.querySelectorAll('.page-dots .dot')]
+  dots.find((d) => /BEASTY, Eats$/.test(d.getAttribute('aria-label') ?? ''))?.click()
+})
+await jp.waitForTimeout(1600)
+const [pv] = await until('page_viewed', 1, "AND city = 'BEASTY' AND page_kind = 'eats'")
+step('turning to BEASTY • Eats is reported, with its place in the swipe', pv?.page_kind === 'eats' && pv?.position >= 2, `${pv?.city} ${pv?.page_kind} ${pv?.position}`)
 const tiles = await until('tile_impression', 6)
 const first = tiles.find((t) => t.position === 1)
-step('with an impression for each business tile on it, seat and position', tiles.length >= 6 && tiles.every((t) => t.surface === 'home_tile' && t.city === 'BEASTY' && /^beasty-goods-\d+$/.test(t.seat ?? '')) && !!first, `${tiles.length} tiles, first ${first?.brand_id} at ${first?.seat}`)
+step('with an impression for each business tile on it, seat and position', tiles.length >= 6 && tiles.every((t) => t.surface === 'home_tile' && t.city === 'BEASTY' && /^beasty-eats-\d+$/.test(t.seat ?? '')) && !!first, `${tiles.length} tiles, first ${first?.brand_id} at ${first?.seat}`)
 
 const labels = await frontTiles()
 await jp.evaluate((l) => [...document.querySelectorAll('.home-pager button[aria-label]')].find((x) => !x.closest('[inert]') && x.getAttribute('aria-label') === l)?.click(), labels[0])
@@ -224,7 +232,7 @@ await jp.waitForSelector('.nav-place', { timeout: 20000 }).catch(() => {})
 const tileOpens = await until('business_opened', 1, "AND surface = 'home_tile'")
 const tileOpen = tileOpens[0]
 const seen = tiles.find((t) => t.brand_id === tileOpen?.brand_id)
-step('a tile tapped: the open names the tile it was, seat, page and place', !!tileOpen && !!seen && tileOpen.seat === seen.seat && tileOpen.position === seen.position && tileOpen.page_kind === 'goods' && tileOpen.city === 'BEASTY', `${labels[0]} -> ${tileOpen?.brand_id} ${tileOpen?.seat} #${tileOpen?.position}`)
+step('a tile tapped: the open names the tile it was, seat, page and place', !!tileOpen && !!seen && tileOpen.seat === seen.seat && tileOpen.position === seen.position && tileOpen.page_kind === 'eats' && tileOpen.city === 'BEASTY', `${labels[0]} -> ${tileOpen?.brand_id} ${tileOpen?.seat} #${tileOpen?.position}`)
 
 const outs = await jp.evaluate(() => [...document.querySelectorAll('.brand-body a[href^="tel:"], .brand-body a[href*="maps"], .brand-body a[target="_blank"]')].length)
 if (outs) {
@@ -234,7 +242,9 @@ if (outs) {
 } else step('a call, directions or website tap is reported, with which', false, 'no outbound link on that page')
 await jp.click('.nav-place')
 const [nav] = await until('place_navigated')
-step("Glenn's button is reported, from the page it was pressed on", nav?.brand_id === tileOpen?.brand_id && nav?.surface === 'nav_place' && nav?.city === 'BEASTY', `${nav?.city} ${nav?.page_kind}`)
+/* The button names the business's first page: its city where it has one (BEASTY • Eats
+   now holds restaurants seated in their cities too), else BEASTY. */
+step("Glenn's button is reported, from the page it was pressed on", nav?.brand_id === tileOpen?.brand_id && nav?.surface === 'nav_place' && !!nav?.city && !!nav?.page_kind, `${nav?.city} ${nav?.page_kind}`)
 
 /* Signed out, Search asks them to join first. */
 await jp.waitForTimeout(900)
@@ -298,7 +308,13 @@ await jp.waitForTimeout(900)
 await jp.locator('button', { hasText: /^Search$/ }).first().click()
 await jp.fill('input[aria-label="Dishes, businesses, categories, cities"]', 'Crockett')
 await jp.locator('.search-brand.is-city').first().click()
-await jp.waitForTimeout(2000)
+/* A city is added to the swipe before the page turns to it: wait until it has. */
+for (let i = 0; i < 40; i++) {
+  const here = await jp.evaluate(() => document.querySelector('.page-dots [aria-current="page"]')?.getAttribute('aria-label') ?? '')
+  if (/Crockett, Goods$/.test(here)) break
+  await wait(250)
+}
+await jp.waitForTimeout(600)
 const [cityPick] = await until('search_result_clicked', 1, "AND metadata->>'kind' = 'city'")
 step('a city chosen in Search is reported as a city', cityPick?.city === 'Crockett' && cityPick?.query_norm === 'crockett', `${cityPick?.city}`)
 const slotSeat = await jp.evaluate(() => {

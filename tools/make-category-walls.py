@@ -267,7 +267,7 @@ def m_photographers(rng):
     return composite(img, over, blur=10)
 
 
-def m_whips(rng):
+def m_automotive(rng):
     img = gradient("#0a0a0b", "#1f2023")
     img = glow(img, W * 0.5, H * 0.33, 800, "#f59e0b", 0.25)
     over, d = layer()
@@ -360,6 +360,79 @@ def m_salons(rng):
     return composite(img, over, blur=14)
 
 
+def m_whips(rng):
+    # Tail lights streaking past at night: long red and amber trails.
+    img = gradient("#05050a", "#140812")
+    img = glow(img, W * 0.5, H * 0.62, 900, "#7f1d1d", 0.4)
+    over, d = layer()
+    for i in range(16):
+        y = H * rng.uniform(0.35, 0.9)
+        x0 = rng.uniform(-W * 0.3, W * 0.4)
+        length = rng.uniform(W * 0.6, W * 1.4)
+        c = rng.choice(["#ef4444", "#f97316", "#dc2626", "#fbbf24"])
+        d.line([(x0, y), (x0 + length, y - length * 0.18)], fill=rgba(c, rng.uniform(0.25, 0.5)), width=int(rng.uniform(6, 16)))
+    return composite(img, over, blur=5)
+
+
+def m_sweets(rng):
+    img = gradient("#1a0614", "#3b0b2c")
+    img = glow(img, W * 0.7, H * 0.25, 1000, "#db2777", 0.45)
+    over, d = layer()
+    colors = ["#f9a8d4", "#fde68a", "#a5f3fc", "#c4b5fd", "#fdba74"]
+    for i in range(140):
+        x, y = rng.uniform(0, W), rng.uniform(0, H)
+        a = rng.uniform(0, math.pi)
+        L, w = rng.uniform(20, 46), 12
+        d.line([(x - L * math.cos(a), y - L * math.sin(a)), (x + L * math.cos(a), y + L * math.sin(a))], fill=rgba(rng.choice(colors), 0.32), width=w)
+    return composite(img, over, blur=1)
+
+
+def m_ayce(rng):
+    img = gradient("#0d0806", "#2a1306")
+    img = glow(img, W * 0.5, H * 0.45, 1100, "#b45309", 0.4)
+    over, d = layer()
+    step = 330
+    for row in range(-1, H // step + 2):
+        for col in range(-1, W // step + 2):
+            cx = col * step + (step // 2 if row % 2 else 0)
+            cy = row * step
+            d.ellipse([cx - 120, cy - 120, cx + 120, cy + 120], outline=rgba("#fde68a", 0.16), width=8)
+            d.ellipse([cx - 80, cy - 80, cx + 80, cy + 80], outline=rgba("#fde68a", 0.09), width=4)
+    return composite(img, over, blur=2)
+
+
+def m_foodtrucks(rng):
+    img = gradient("#0a0f1a", "#1e293b")
+    img = glow(img, W * 0.5, H * 0.15, 1000, "#ca8a04", 0.35)
+    over, d = layer()
+    # A striped awning across the top and string lights below it.
+    for i in range(0, W + 160, 160):
+        d.polygon([(i, 0), (i + 80, 0), (i + 80, 360), (i, 360)], fill=rgba("#f6d800", 0.16))
+        d.pieslice([i, 290, i + 160, 450], 0, 180, fill=rgba("#f6d800" if (i // 160) % 2 == 0 else "#ffffff", 0.14))
+    for row in range(3):
+        y0 = 620 + row * 520
+        pts = [(x, y0 + 90 * math.sin(x / W * math.pi)) for x in range(-40, W + 40, 20)]
+        curve(d, pts, rgba("#fef3c7", 0.12), 4)
+        for x in range(30, W, 110):
+            y = y0 + 90 * math.sin(x / W * math.pi)
+            d.ellipse([x - 14, y + 6, x + 14, y + 34], fill=rgba("#fde68a", 0.35))
+    return composite(img, over, blur=3)
+
+
+def m_coffee(rng):
+    img = gradient("#0c0705", "#2b170c")
+    img = glow(img, W * 0.3, H * 0.7, 1100, "#92400e", 0.45)
+    over, d = layer()
+    for i in range(14):
+        cx, cy, r = rng.uniform(0, W), rng.uniform(0, H), rng.uniform(120, 260)
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=rgba("#d6a76c", 0.16), width=int(rng.uniform(10, 22)))
+    for i in range(6):
+        x0 = W * (0.1 + i * 0.16)
+        pts = [(x0 + 50 * math.sin(y / 220 + i), y) for y in range(H, int(H * 0.2), -12)]
+        curve(d, pts, rgba("#fef3c7", 0.08), 22)
+    return composite(img, over, blur=6)
+
+
 MOTIFS = {
     "tattoo": m_tattoo,
     "athletes": m_athletes,
@@ -373,7 +446,12 @@ MOTIFS = {
     "realtors": m_realtors,
     "media": m_media,
     "photographers": m_photographers,
+    "automotive": m_automotive,
     "whips": m_whips,
+    "sweets": m_sweets,
+    "ayce": m_ayce,
+    "foodtrucks": m_foodtrucks,
+    "coffee": m_coffee,
     "pits": m_pits,
     "models": m_models,
     "meats": m_meats,

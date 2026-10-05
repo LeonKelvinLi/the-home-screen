@@ -19,6 +19,8 @@
 import { BRANDS } from './brands'
 import { CITY_PLACEMENTS } from './placements'
 import { BEASTY_CATEGORIES, CATEGORY_SPOTS } from './categories'
+import { BEASTY_SHEETS } from './slots'
+import type { SlotCategory } from './slots'
 
 /** Same rule as the CRM's familyKey: one business, however many locations. */
 const family = (name: string) =>
@@ -61,10 +63,51 @@ function seatCategory(kind: string, test: RegExp | undefined, not: RegExp | unde
   return out
 }
 
-/** Seat id to business id, for every filled spot on every category page. */
+/*
+  BEASTY'S NAMED SHEETS, Eats and Sweets: each spot is a kind of food ("only one
+  sushi, only one Chinese") and holds one business. A spot seated by hand keeps
+  its business. An open spot takes "the first who signs up": the first business
+  on BEASTY, in joining order, whose type line fits that spot.
+
+  Left out of the automatic fill: businesses already seated by hand on one of
+  BEASTY's own sheets (so nobody shows twice in the swipe) and free Tier 1
+  listings (a flagship spot is a whole page).
+*/
+const ON_A_BEASTY_SHEET = new Set(Object.entries(CITY_PLACEMENTS).filter(([seat]) => seat.startsWith('beasty-')).map(([, id]) => id))
+function seatNamed(kind: string, spots: SlotCategory[]): Record<string, string> {
+  const out: Record<string, string> = {}
+  const families = new Set<string>()
+  const open: number[] = []
+  spots.forEach((_, i) => {
+    const id = CITY_PLACEMENTS[`beasty-${kind}-${i}`]
+    if (id) {
+      out[`beasty-${kind}-${i}`] = id
+      families.add(family(nameOf.get(id) ?? id))
+    } else open.push(i)
+  })
+  for (const i of open) {
+    const spot = spots[i]
+    if (!spot.test) continue
+    const b = BRANDS.find(
+      (b) =>
+        spot.test!.test(b.cuisine) &&
+        !spot.not?.test(b.cuisine) &&
+        b.tier !== 1 &&
+        !ON_A_BEASTY_SHEET.has(b.id) &&
+        !families.has(family(b.name)),
+    )
+    if (!b) continue
+    out[`beasty-${kind}-${i}`] = b.id
+    families.add(family(b.name))
+  }
+  return out
+}
+
+/** Seat id to business id, for every filled spot on every category page and named sheet. */
 export const CATEGORY_PLACEMENTS: Record<string, string> = Object.assign(
   {},
   ...BEASTY_CATEGORIES.map((c) => seatCategory(c.kind, c.test, c.not)),
+  ...BEASTY_SHEETS.filter((p) => p.categories.some((c) => c.test)).map((p) => seatNamed(p.kind, p.categories)),
 )
 
 /** Every filled spot anywhere: the city pages and BEASTY's own sheets, then the category pages. */

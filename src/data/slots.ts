@@ -47,6 +47,13 @@ export interface SlotCategory {
   name: string
   /** Short enough to sit under a tile without truncating. */
   label: string
+  /**
+   * On BEASTY's named sheets (Eats, Sweets): which businesses can fill this
+   * spot on their own, read from their type line. A spot set by hand wins.
+   * See categorySeats.ts.
+   */
+  test?: RegExp
+  not?: RegExp
 }
 
 /**
@@ -316,10 +323,81 @@ export const SLOT_PAGES: SlotPage[] = [
  * real: a city sells 48 local spots and this sells 24 more that belong to
  * nowhere. Cities are untouched by it.
  */
+/*
+  BEASTY • EATS, one restaurant per cuisine. Glenn, 2026-09-30: "BEASTY • Eats
+  will showcase 24 of the best variety of cuisine. No two cuisines alike on this
+  page. Only one sushi, only one Chinese, only one Mexican, etc… Basically, the
+  first who signs up holds a spot", with his list of the 24 that evening, and
+  "Any forgotten varieties of food will push over to the second yellow pages".
+  His order. A spot seated by hand (BEASTY_EATS_ROSTER) keeps it; an open one
+  fills with the first business on BEASTY whose type line fits.
+*/
+export const EATS_CATEGORIES: SlotCategory[] = [
+  { n: 1, name: 'BBQ', label: 'BBQ', test: /\bbbq\b|barbecue|barbeque|smoked meat|smokehouse/i, not: /korean|hibachi|vegan|plant-based|grill(s)? (and|&)|caterer|catering/i },
+  { n: 2, name: 'Korean', label: 'Korean', test: /korean/i },
+  { n: 3, name: 'Chinese', label: 'Chinese', test: /chinese|dim sum|szechuan|sichuan|cantonese|dumpling/i, not: /bakery|dessert/i },
+  { n: 4, name: 'Sushi', label: 'Sushi', test: /sushi/i },
+  { n: 5, name: 'Mexican', label: 'Mexican', test: /mexican|taco|taquer|burrito|tamale/i, not: /bakery|pastr|panader|hibachi/i },
+  { n: 6, name: 'Filipino food', label: 'Filipino', test: /filipino/i, not: /dessert|bakery/i },
+  { n: 7, name: 'Indian food', label: 'Indian', test: /indian/i, not: /pizza|dessert|sweets/i },
+  { n: 8, name: 'Greek food', label: 'Greek', test: /greek|gyro/i },
+  { n: 9, name: 'Italian food', label: 'Italian', test: /italian|pasta|trattoria/i, not: /pizza|ice|gelato|cannoli|pastr|dessert|deli|sausage|sandwich/i },
+  { n: 10, name: 'French cuisine', label: 'French', test: /french|crêpe|crepe|brasserie/i, not: /fries|toast|bakery|pastr|patisserie/i },
+  { n: 11, name: 'Udon', label: 'Udon', test: /udon/i },
+  { n: 12, name: 'Pho', label: 'Pho', test: /\bpho\b|vietnamese/i, not: /banh mi|sandwich|coffee|dessert/i },
+  { n: 13, name: 'Ramen', label: 'Ramen', test: /ramen/i },
+  { n: 14, name: 'Fijian food', label: 'Fijian', test: /fiji/i },
+  { n: 15, name: 'Jamaican food', label: 'Jamaican', test: /jamaican|caribbean|jerk/i },
+  { n: 16, name: 'Burger', label: 'Burger', test: /burger/i, not: /vegan|plant-based|ice cream/i },
+  { n: 17, name: 'Chicken sandwich', label: 'Chicken sand.', test: /chicken sandwich/i },
+  { n: 18, name: 'Sandwiches', label: 'Sandwiches', test: /sandwich|\bdeli\b|\bsubs?\b/i, not: /chicken sandwich|banh mi/i },
+  { n: 19, name: 'Banh mi', label: 'Banh mi', test: /banh mi/i },
+  { n: 20, name: 'Steakhouse', label: 'Steakhouse', test: /steak ?house|steakhouse|\bsteaks?\b/i, not: /cheesesteak/i },
+  { n: 21, name: 'Hot pot', label: 'Hot pot', test: /hot ?pot|shabu/i },
+  { n: 22, name: 'Fried chicken', label: 'Fried chicken', test: /fried chicken|hot chicken|\bwings\b/i, not: /sandwich/i },
+  { n: 23, name: 'Hot dogs', label: 'Hot dogs', test: /hot ?dog|sausage/i },
+  { n: 24, name: 'Pizza', label: 'Pizza', test: /pizz/i, not: /oven/i },
+]
+
+/*
+  BEASTY • SWEETS, "anything dessert", after Eats. Glenn, 2026-09-30: "I forgot
+  that I wanted to add BEASTY • Sweets after BEASTY • Eats. This will be a great
+  category in itself and it will create more space on the EATS page", and his
+  list of 24, "in no special order". One shop per kind, filled like Eats.
+*/
+export const SWEETS_CATEGORIES: SlotCategory[] = [
+  { n: 1, name: 'Cakes', label: 'Cakes', test: /\bcakes?\b|cake shop/i, not: /cheesecake|cupcake|pancake|crab ?cake|class|decorating/i },
+  { n: 2, name: 'Donuts', label: 'Donuts', test: /donut|doughnut/i },
+  { n: 3, name: 'Boba', label: 'Boba', test: /boba|bubble tea|milk tea/i },
+  { n: 4, name: 'Ice cream', label: 'Ice cream', test: /ice cream|creamery/i, not: /waffle/i },
+  { n: 5, name: 'Waffles and pancakes', label: 'Waffles', test: /waffle|pancake/i },
+  { n: 6, name: 'Shaved ice', label: 'Shaved ice', test: /shaved ice|shave ice|bingsu|snow ice/i },
+  { n: 7, name: 'Cookies', label: 'Cookies', test: /cookie/i },
+  { n: 8, name: 'Pastries', label: 'Pastries', test: /pastr|bakery|bake ?shop|croissant|patisserie/i, not: /mexican|cookie|dog|cake shop/i },
+  { n: 9, name: 'Milkshakes', label: 'Milkshakes', test: /milkshake/i },
+  { n: 10, name: 'Smoothies', label: 'Smoothies', test: /smoothie|juice bar|acai|açaí/i },
+  { n: 11, name: 'Pies', label: 'Pies', test: /\bpies?\b/i, not: /meat|pizza|savory/i },
+  { n: 12, name: 'Cheesecakes', label: 'Cheesecake', test: /cheesecake/i },
+  { n: 13, name: 'Custard and flan', label: 'Custard', test: /custard|\bflan\b/i },
+  { n: 14, name: 'Cupcakes', label: 'Cupcakes', test: /cupcake/i },
+  { n: 15, name: 'Tarts', label: 'Tarts', test: /\btarts?\b/i },
+  { n: 16, name: 'Mochi', label: 'Mochi', test: /mochi/i },
+  { n: 17, name: 'Gelato', label: 'Gelato', test: /gelato/i },
+  { n: 18, name: 'Soft serve', label: 'Soft serve', test: /soft[- ]?serve|frozen yogurt|froyo/i },
+  { n: 19, name: 'Dirty soda', label: 'Dirty soda', test: /dirty soda|soda shop/i },
+  { n: 20, name: 'Asian desserts', label: 'Asian', test: /asian dessert|taiyaki|hong kong|chinese bakery|japanese dessert|korean dessert/i },
+  { n: 21, name: 'Filipino desserts', label: 'Filipino', test: /filipino (dessert|bakery|sweets)|\bube\b|halo[- ]halo/i },
+  { n: 22, name: 'Indian desserts', label: 'Indian', test: /indian (dessert|sweets)|mithai/i },
+  { n: 23, name: 'Mexican pastries', label: 'Mexican', test: /panader|mexican (pastr|bakery|dessert)|concha|churro|paleta/i },
+  { n: 24, name: 'Candy shop', label: 'Candy', test: /candy|chocolat|confection/i, not: /ice cream/i },
+]
+
 export const BEASTY_SHEETS: SlotPage[] = [
-  /* The first sheet is food now, so on BEASTY it says so; its seats keep their
-     `goods` ids, and a city's first page is still Goods. */
-  { ...SLOT_PAGES[0], heading: 'Eats' },
+  /* BEASTY's first sheet is food, one restaurant per cuisine; seats are
+     `beasty-eats-N` since 2026-10-05 (they were `goods`, on the city list).
+     A city's first page is still Goods. */
+  { kind: 'eats', heading: 'Eats', categories: EATS_CATEGORIES },
+  { kind: 'sweets', heading: 'Sweets', categories: SWEETS_CATEGORIES, wall: '/wallpapers/cat-sweets.webp', about: 'Anything dessert, one shop of each kind' },
   { kind: 'boutiques', heading: 'Goods', categories: BOUTIQUE_SPOTS },
   SLOT_PAGES[1],
   { kind: 'online', heading: 'Online', categories: ONLINE_CATEGORIES },
@@ -349,12 +427,14 @@ export const CATEGORY_PAGES: SlotPage[] = BEASTY_CATEGORIES.map((c) => ({
   amount of pages on the home screen to let's say 9 categories … You won't be
   able to scroll for cities unless you just search for that city".
 
-  Nine category pages: his five flagship sheets in his order, then the four
-  category pages with the most businesses on them today. After them come the
-  two yellow sheets, which are not categories but the free listings behind Eats
-  and Services. Every other category and every city opens from Search.
+  Nine category pages. Since 2026-10-05: Eats, then Sweets ("after BEASTY •
+  Eats"), then AYCE ("put it after BEASTY • Sweets"), then Goods, Services,
+  Online and Individuals in his order, then Tattoo (his example) and
+  Automotive (the old Whips, the fullest page). Gyms and Salons left the swipe
+  to make room; they are on BEASTY • Pages and in Search. After the nine come
+  the two yellow sheets, the free listings behind Eats and Services.
 */
-export const HOME_KINDS: string[] = ['goods', 'boutiques', 'services', 'online', 'individuals', 'tattoo', 'whips', 'gyms', 'salons']
+export const HOME_KINDS: string[] = ['eats', 'sweets', 'ayce', 'boutiques', 'services', 'online', 'individuals', 'tattoo', 'automotive']
 
 /** Every BEASTY page there is: the flagship sheets, then the category pages. */
 export const ALL_BEASTY_PAGES: SlotPage[] = [...BEASTY_SHEETS, ...CATEGORY_PAGES]
@@ -377,7 +457,9 @@ export const SEAT_RE = new RegExp(`^(.+)-(${[...PAGE_KINDS].sort((a, b) => b.len
 
 /** The categories on a city page, or nothing if the id names no known page. */
 export const categoriesFor = (kind: string | undefined): SlotCategory[] | undefined =>
-  ALL_BEASTY_PAGES.find((p) => p.kind === kind)?.categories
+  /* The city pages too: since BEASTY's first sheet became `eats` (2026-10-05),
+     a city's `goods` is on no BEASTY sheet, and its blanks lost their names. */
+  [...ALL_BEASTY_PAGES, ...SLOT_PAGES].find((p) => p.kind === kind)?.categories
 
 /**
  * The most spots a single city page holds — his twenty-four.

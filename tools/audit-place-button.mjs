@@ -124,8 +124,10 @@ for (const [what, id, want, lands] of cases) {
   await p.waitForSelector('.nav-back', { timeout: 20000 }).catch(() => {})
   await p.waitForTimeout(800)
   await p.click('.nav-back')
-  const w = await waitWhere(p, 'BEASTY, Eats')
-  step('Home goes to BEASTY • Eats (the first page), even from a city tile', !!w && /^Page 1 of \d+, BEASTY, Eats$/.test(w), `${w}`)
+  /* Since 2026-10-05 the first page is BEASTY • Pages ("make the Home Screen
+     BEASTY • Pages", Glenn, 2026-10-03). */
+  const w = await waitWhere(p, 'BEASTY, Pages')
+  step('Home goes to BEASTY • Pages (the first page), even from a city tile', !!w && /^Page 1 of \d+, BEASTY, Pages$/.test(w), `${w}`)
   await p.close()
 }
 

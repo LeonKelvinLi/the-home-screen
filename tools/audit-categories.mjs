@@ -83,17 +83,43 @@ await toHome(p)
 
 // ---- the swipe ------------------------------------------------------------
 const run = await dots(p)
-const sections = run.map((l) => l?.replace(/^Page \d+ of \d+, BEASTY, /, ''))
-const want = ['Eats', 'Goods', 'Services', 'Online', 'Individuals', 'Tattoo', 'Whips', 'Gyms', 'Salons']
-step('the home screen opens on BEASTY • Eats', (await where(p))?.endsWith('BEASTY, Eats'), await where(p))
-step('nine category pages, in order', want.every((w, i) => sections[i] === w), sections.slice(0, 9).join(', '))
-step('then the yellow sheets', sections.includes('More eats') && sections.includes('More services'), sections.slice(9).join(', '))
+/* One name per page, a page that runs on to a second screen counted once. */
+const sections = run.map((l) => l?.replace(/^Page \d+ of \d+, BEASTY, /, '')).filter((x, i, a) => x !== a[i - 1])
+/* 2026-10-05: BEASTY • Pages first (Glenn: "make the Home Screen BEASTY •
+   Pages"), then the nine: Sweets after Eats, AYCE after Sweets, Whips renamed
+   Automotive. */
+const want = ['Pages', 'Eats', 'Sweets', 'AYCE', 'Goods', 'Services', 'Online', 'Individuals', 'Tattoo', 'Automotive']
+step('the home screen opens on BEASTY • Pages', (await where(p))?.endsWith('BEASTY, Pages'), await where(p))
+step('then the nine category pages, in order', want.every((w, i) => sections[i] === w), sections.slice(0, 10).join(', '))
+step('then the yellow sheets', sections.includes('More eats') && sections.includes('More services'), sections.slice(10).join(', '))
 const pagesAtHome = await total(p)
 step('the whole swipe is short: no city pages in it', pagesAtHome > 0 && pagesAtHome <= 20, `${pagesAtHome} pages`)
 
 // ---- a category page ------------------------------------------------------
-await goDot(p, 5)
-step('page six is BEASTY • Tattoo', (await where(p))?.endsWith('BEASTY, Tattoo'), await where(p))
+const dotOf = async (name) => (await dots(p)).findIndex((l) => l.endsWith(`BEASTY, ${name}`))
+/* BEASTY • Pages: a tile per category, each opening its page. */
+const tiles = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
+step('BEASTY • Pages is a tile per category', tiles.length >= 12 && tiles.includes('BEASTY • Eats') && tiles.includes('BEASTY • Coffee'), `${tiles.length}: ${tiles.slice(0, 5).join(', ')} …`)
+await shot(p, '0-pages')
+/* Signed out, a tile on the swipe turns to its page; one off the swipe asks
+   to sign up first, as Search does (checked again signed in, below). */
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Tattoo"]').first().click()
+const viaTile = await waitWhere(p, 'BEASTY, Tattoo')
+step('a tile for a category on the swipe turns to its page', !!viaTile?.endsWith('BEASTY, Tattoo'), viaTile)
+await goDot(p, 0)
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Coffee"]').first().click()
+await p.waitForTimeout(600)
+step('signed out, a category off the swipe asks to sign up first', (await p.locator('.gate[role="dialog"]').count()) === 1)
+await p.locator('.gate-scrim').first().click().catch(() => {})
+await p.waitForTimeout(400)
+await goDot(p, await dotOf('Eats'))
+const eats = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
+step('BEASTY • Eats: one restaurant per cuisine, open ones named for theirs', eats.some((l) => /^Downtown BBQ/.test(l)) && eats.some((l) => /^Udon — spot available/.test(l)) && !eats.some((l) => /^Midnite Theories|^Jazz Braids|^Cravingz/.test(l)), eats.slice(0, 6).join(' | '))
+await goDot(p, await dotOf('Sweets'))
+const sweets = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
+step('BEASTY • Sweets carries the dessert shops', sweets.some((l) => /^Meadowlark/.test(l)) && sweets.some((l) => /^Cravingz/.test(l)), sweets.slice(0, 6).join(' | '))
+await goDot(p, await dotOf('Tattoo'))
+step('BEASTY • Tattoo is on the swipe', (await where(p))?.endsWith('BEASTY, Tattoo'), await where(p))
 const tattoo = await p.evaluate(() => {
   const page = [...document.querySelectorAll('.home-page')].find((el) => !el.hasAttribute('inert'))
   const icons = [...(page?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label'))
@@ -123,8 +149,8 @@ await shot(p, '2-redwood-city')
 await p.goto(`${base}/?b=b_zadnagrill`, { waitUntil: 'domcontentloaded' })
 await p.waitForSelector('.nav-back', { timeout: 20000 }).catch(() => {})
 await p.click('.nav-back')
-const back = await waitWhere(p, 'BEASTY, Eats')
-step('Home goes back to BEASTY • Eats', !!back?.endsWith('BEASTY, Eats'), back)
+const back = await waitWhere(p, 'BEASTY, Pages')
+step('Home goes back to BEASTY • Pages', !!back?.endsWith('BEASTY, Pages'), back)
 
 // ---- Search, signed in -----------------------------------------------------
 const email = `categories-${port}@audit.beastypages.dev`
@@ -144,13 +170,17 @@ const openSearch = async () => {
   await p.waitForSelector('.search-drops', { timeout: 10000 }).catch(() => {})
   await p.waitForTimeout(500)
 }
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Coffee"]').first().click()
+const coffee = await waitWhere(p, 'BEASTY, Coffee')
+step('signed in, a tile for a category off the swipe opens its page', !!coffee?.endsWith('BEASTY, Coffee'), coffee)
 await openSearch()
 step('Search has a Categories button and a Cities button', (await p.locator('.search-drop-btn', { hasText: 'Categories' }).count()) === 1 && (await p.locator('.search-drop-btn', { hasText: 'Cities' }).count()) === 1)
 await p.locator('.search-drop-btn', { hasText: 'Categories' }).click()
 const cats = await p.locator('#search-drop-categories .search-brand strong').allTextContents()
-step('Categories lists every BEASTY page', cats.length === 26 && cats.every((c) => c.startsWith('BEASTY • ')), `${cats.length}: ${cats.slice(0, 6).join(', ')} …`)
+step('Categories lists every BEASTY page', cats.length === 31 && cats.every((c) => c.startsWith('BEASTY • ')), `${cats.length}: ${cats.slice(0, 6).join(', ')} …`)
+step('Search has a Share button', (await p.locator('.chrome-pill.is-share', { hasText: 'Share' }).count()) >= 1)
 step('A to Z', cats.every((c, i) => i === 0 || cats[i - 1].localeCompare(c) <= 0))
-const thumbs = await p.evaluate(() => [...document.querySelectorAll('#search-drop-categories .search-cat-thumb')].filter((t) => /url\(/.test(t.style.backgroundImage)).length)
+const thumbs = await p.evaluate(() => [...document.querySelectorAll('#search-drop-categories .search-cat-thumb .cat-icon')].filter((t) => /url\(/.test(t.style.backgroundImage)).length)
 step('each with a piece of its background', thumbs === cats.length, `${thumbs} of ${cats.length}`)
 await shot(p, '3-categories')
 await p.locator('#search-drop-categories .search-brand', { hasText: 'BEASTY • Realtors' }).click()

@@ -22,6 +22,8 @@ export type BrandPanel = {
   body?: string[]
   /** Their own photographs. `src` is a basename under /food. */
   photos?: { src: string; alt: string; caption?: string }[]
+  /** Links out, one per line, opened in a new tab (MeterSF's shops, 2026-10-05). */
+  links?: { label: string; href: string }[]
 }
 
 export interface LocalSeed {
@@ -1287,6 +1289,20 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'bread-winners',
+    /*
+      "Clip this video plz for their page", 2026-10-04, 7:52 am. Glenn sent it
+      after Precision Auto Service's shop info, but the reel is @marketing_kings
+      on this shop ("Go check out my new joint @breadwinnersoak"), so it is on
+      the page it is about. Ask Glenn if Precision's was meant.
+    */
+    clip: {
+      src: '/clips/bread-winners.mp4',
+      poster: '/clips/bread-winners-poster.webp',
+      href: 'https://www.instagram.com/reel/DeBPEB8uDJ4/',
+      credit: 'Posted by @marketing_kings',
+      platform: 'Instagram',
+      by: 'marketing_kings',
+    },
     name: 'Bread Winners',
     label: 'Bread Winners',
     cuisine: 'Sandwiches',
@@ -1474,31 +1490,37 @@ export const LOCAL_SEED: LocalSeed[] = [
       credit: 'Filmed by @justmostie',
       platform: 'Instagram',
     },
-    cuisine: 'Italian sandwiches, sausage',
-    tagline: 'Traditionally made sausage and specialty Italian sandwiches. Pittsburg.',
+    cuisine: 'Fresh sausage',
+    tagline: 'Fresh sausage, traditionally made. Brentwood and Martinez farmers markets.',
     color: '#111111',
     icon: 'paulo-sausage',
-    prep: 15,
+    prep: 0,
     category: 'Sandwiches',
     site: 'https://www.paulosausageco.com',
-    orderUrl: 'https://www.paulosausageco.com/sandwich-pre-order',
-    address: '2951 Harbor Street Suite E, Pittsburg',
-    // Counter prices from their OWN Square Online catalogue, not a delivery
-    // platform. DoorDash adds a flat $3.00 to every overlapping item, measured
-    // across six of them, so the platform figures were not used.
-    siteNote: 'Pre-order sandwiches direct at paulosausageco.com',
-    items: [],
-    /* Their whole published menu, read from https://www.paulosausageco.com/ on 2026-09-04 with their own photos; sections as they publish them. */
-    sections: [
-      { name: "Sandwiches", items: [
-        ["Italian Dip", "Savor the rich flavors of our Italian Dip Sandwich, featuring a blend of Italian pork and beef sausage, sautéed onions, roasted garlic, and mushrooms", 1500, "paulosausage-italian-dip"],
-        ["Meatball Sub", "Sink your teeth into this hearty classic featuring our tender, flavorful meatballs simmered in our vodka cream tomato sauce", 1550, "paulosausage-meatball-sub"],
-        ["Ham & Burrata", "Indulge in a delightful blend of flavors with our Ham & Burrata Sandwich", 1600, "paulosausage-ham-burrata"],
-        ["Italian Cold Cut", "Enjoy a classic Italian cold cut sandwich stacked with capicola, salami, pepperoni, ham, and provolone all served on our freshly baked focaccia", 2000, "paulosausage-italian-cold-cut"],
-        ["Salami & Stuffed Pepperoncini", "Enjoy the bold flavors of savory salami paired with cream cheese stuffed pepperoncini, fresh arugula, & ripe tomato, all balanced with a touch of creamy mayo", 1550, "paulosausage-salami-stuffed-pepperoncini"],
-      ] },
+    /*
+      THE PITTSBURG SHOP HAS CLOSED. Glenn, 2026-10-01: "would you move Paulo S.
+      onto Martinez • Eats & Brentwood • Eats and also add this information for
+      their business addresses for each city. They closed that Pittsburgh
+      location but still sell at the farmers market." Their own site, read
+      2026-10-05, now sells fresh sausage only (seven pork, six chicken) and
+      lists the two markets; the sandwich menu and its pre-order page are gone,
+      so they are gone from here too. The flavours and per-pound prices exist
+      only as pictures on their site, which this app does not transcribe.
+    */
+    email: 'info@paulosausageco.com',
+    address: "Brentwood Farmer's Market, First Street, Brentwood, CA 94513",
+    panels: [
+      {
+        head: 'Where to find them',
+        body: [
+          "Brentwood Farmer's Market, every Saturday: First Street, Brentwood, CA 94513",
+          "Martinez Farmer's Market, every Sunday: Main Street, Martinez, CA 94553",
+        ],
+      },
     ],
-    /* Their whole published menu, read from https://www.paulosausageco.com/ on 2026-09-04 with their own photos; sections as they publish them. */
+    contactOnly:
+      "Fresh pork and chicken sausage, traditionally made and boldly flavored, sold at the Brentwood Farmer's Market every Saturday and the Martinez Farmer's Market every Sunday. Their flavors and prices are on their own site.",
+    items: [],
   },
   {
     slug: 'pippal',
@@ -2227,9 +2249,9 @@ export const LOCAL_SEED: LocalSeed[] = [
       weddings are in the city.
     */
     slug: 'flowers-valley',
-    logoTemplate: 'wordmark',
-    logoLines: ['Flowers', 'VALLEY'],
-    logoFace: 'script',
+    /* "Please update Flowers Valley's icon" — 2026-10-01, with their Instagram
+       picture: the white tulip on black. It replaces the drawn wordmark. */
+    icon: 'flowers-valley-2',
     name: 'The Flowers Valley',
     label: 'Flowers Valley',
     cuisine: 'Florist',
@@ -8445,6 +8467,181 @@ export const LOCAL_SEED: LocalSeed[] = [
         ],
       },
     ],
+    items: [],
+  },
+  {
+    /*
+      METERSF, the first spot on BEASTY • Whips. Glenn, 2026-10-04: "I want to
+      start the BEASTY • Whips with my boys car right here. So let's make him a
+      page with this video clip and add a gallery too. I'll send more pics.
+      I'll find a few shops ig you can put on his page as well … Just name his
+      page MeterSF", then a Precision Auto Service post with "Add this ig link
+      to his page".
+
+      Facts from his own profile (@metersf, "METER SUCKAFREE 415") and his
+      post's tags (#chevelless #lsasupercharged #notbankownedcarclub
+      #dropzbayarea). The gallery is four stills from that video, his own
+      footage, until Glenn sends the pictures he mentioned. The Instagram
+      button is on Glenn's say-so; the shop's link is in "The shops".
+    */
+    slug: 'metersf',
+    icon: 'metersf',
+    name: 'MeterSF',
+    label: 'MeterSF',
+    cuisine: 'Chevelle SS build',
+    tagline: 'A supercharged black Chevelle SS out of San Francisco, the 415.',
+    color: '#0B0B0B|#D9D9D9',
+    prep: 0,
+    category: 'Whips',
+    instagram: 'metersf',
+    clip: {
+      src: '/clips/metersf.mp4',
+      poster: '/clips/metersf-poster.webp',
+      href: 'https://www.instagram.com/reel/DdeeJsApfBw/',
+      credit: 'Posted by @metersf',
+      platform: 'Instagram',
+    },
+    photos: [
+      { src: '/photos/metersf-1.webp', alt: 'The black Chevelle SS convertible, top down, from the front driver side.', credit: 'From @metersf’s video' },
+      { src: '/photos/metersf-2.webp', alt: 'The Chevelle’s twin headlights, chrome grille and SS badge.', credit: 'From @metersf’s video' },
+      { src: '/photos/metersf-3.webp', alt: 'A black multi-spoke wheel with a red brake caliper.', credit: 'From @metersf’s video' },
+      { src: '/photos/metersf-4.webp', alt: 'The rear quarter: tail light, chrome bumper and twin exhaust tips.', credit: 'From @metersf’s video' },
+    ],
+    panels: [
+      {
+        head: 'The shops',
+        body: ['Precision Auto Service, muscle cars and classics. Their own page is on BEASTY \u2022 Services.'],
+        links: [{ label: 'Precision Auto Service on Instagram', href: 'https://www.instagram.com/p/DcwX_gsjwbd/' }],
+      },
+    ],
+    contactOnly:
+      'MeterSF\u2019s black Chevelle SS, supercharged, out of San Francisco, the 415. He rolls with the Not Bank Owned car club and Dropz Bay Area. Nothing here is for sale: BEASTY \u2022 Whips is for the cars and the people who build them.',
+    items: [],
+  },
+  /*
+    BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
+    "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).
+    Each page is the creator's own post and what its caption says, nothing
+    more; no Instagram button (Glenn approves those page by page). The AI page
+    seats them by their type line, "AI video creator" (categories.ts); Tuệ is
+    seated on Cooks by hand (placements.ts).
+  */
+  {
+    slug: 'omer-ariely-ai',
+    name: 'omer.ariely.ai',
+    label: 'Omer Ariely',
+    cuisine: 'AI video creator',
+    tagline: 'AI movie mash-ups, made with Higgsfield AI.',
+    color: '#101014',
+    prep: 0,
+    category: 'AI',
+    clip: {
+      src: '/clips/omer-ariely-ai.mp4',
+      poster: '/clips/omer-ariely-ai-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd6QL95jdjr/',
+      credit: 'Posted by @thisaintcanon',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'AI-made movie mash-ups, like White Chicks x Training Day, made with Higgsfield AI, in their own post. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'kory-chester',
+    name: 'Kory Chester',
+    label: 'Kory Chester',
+    cuisine: 'AI video creator',
+    tagline: 'AI videos, and how to make them.',
+    color: '#14101A',
+    prep: 0,
+    category: 'AI',
+    clip: {
+      src: '/clips/kory-chester.mp4',
+      poster: '/clips/kory-chester-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd7CQPYsSnu/',
+      credit: 'Posted by @thesessionca',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'AI videos from the A.I Prince, with a course on making them, and commissions and business inquiries by DM, in the creator\'s own words. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'kyvora-ai',
+    name: 'Kyvora AI',
+    label: 'Kyvora AI',
+    cuisine: 'AI video creator',
+    tagline: 'AI-made comedy clips.',
+    color: '#0C1220',
+    prep: 0,
+    category: 'AI',
+    clip: {
+      href: 'https://www.instagram.com/reel/Dd47jMjkfcs/',
+      credit: 'Posted by @kyvora.ai',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'AI-made comedy clips, like the studio session in the post Glenn sent. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'stgdesignz',
+    name: 'STGDesignz',
+    label: 'STGDesignz',
+    cuisine: 'AI video creator',
+    tagline: 'AI video edits.',
+    color: '#121418',
+    prep: 0,
+    category: 'AI',
+    clip: {
+      src: '/clips/stgdesignz.mp4',
+      poster: '/clips/stgdesignz-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd9xqwsJsYS/',
+      credit: 'Posted by @stgdesignz',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'AI video edits; the dance in the post Glenn sent is credited to @calebrownnnnn. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'dauren-altynbek',
+    name: 'Dauren Altynbek',
+    label: 'Dauren',
+    cuisine: 'AI video creator',
+    tagline: 'AI videos and tutorials.',
+    color: '#0E1516',
+    prep: 0,
+    category: 'AI',
+    clip: {
+      src: '/clips/dauren-altynbek.mp4',
+      poster: '/clips/dauren-altynbek-poster.webp',
+      href: 'https://www.instagram.com/reel/DeB4M74RM6d/',
+      credit: 'Posted by @downey.ai',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'AI videos and tutorials; Neymar posted one, and it passed ten million views in an hour, by Dauren\'s own account. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    slug: 'tue-twaydabae',
+    name: 'Tuệ',
+    label: 'Tuệ',
+    cuisine: 'Home cook',
+    tagline: 'Extra crispy wings and home cooking.',
+    color: '#1A120C',
+    prep: 0,
+    category: 'Cooks',
+    clip: {
+      src: '/clips/tue-twaydabae.mp4',
+      poster: '/clips/tue-twaydabae-poster.webp',
+      href: 'https://www.instagram.com/reel/Dd_0C1OtZUJ/',
+      credit: 'Posted by @twaydabae',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'Home cooking, like the extra crispy lime pepper wings in the post Glenn sent, with the full recipe sent to anyone who comments "recipe". BEASTY has not spoken to them yet: this spot is held, not taken.',
     items: [],
   },
 ]

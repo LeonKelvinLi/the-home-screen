@@ -57,13 +57,33 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'realtors', heading: 'Realtors', about: 'Real estate agents', wall: wall('realtors'), test: /real estate|realtor|realty/i },
   { kind: 'media', heading: 'Media', about: 'Media companies and creators', wall: wall('media'), test: /media company|creative agency|\bpodcast|\bmagazine/i },
   { kind: 'photographers', heading: 'Photographers', about: 'Photographers, videographers and photo booths', wall: wall('photographers'), test: /photo|videograph|video production/i },
-  { kind: 'whips', heading: 'Whips', about: 'Detailing, tint, wraps and car audio', wall: wall('whips'), test: /car audio|auto (detail|spa|design)|detailing|tint|paint protection|\bppf\b|car wash|vinyl wrap/i, not: /cake|jewel/i },
+  /*
+    AUTOMOTIVE was this page's first name, Whips. Glenn, 2026-10-04: "change
+    BEASTY • whips to BEASTY • Automotive since all those affiliates are there
+    already. Then create a new BEASTY • Whips and add Meter SF on there as the
+    1st spot." So the shops are here, with the repair shops added, and Whips
+    below is for the cars themselves.
+  */
+  { kind: 'automotive', heading: 'Automotive', about: 'Detailing, tint, wraps, car audio and repair', wall: wall('automotive'), test: /car audio|auto (detail|spa|design|repair|body|service)|detailing|tint|paint protection|\bppf\b|car wash|vinyl wrap|mechanic|smog|muffler|brake|\btires?\b|auto ?sport|collision/i, not: /cake|jewel/i },
+  /* "I want to start the BEASTY • Whips with my boys car right here … Just name
+     his page MeterSF" — Glenn, 2026-10-04. Builds and the people behind them;
+     seated by hand only (placements.ts), so nothing fills it by itself. */
+  { kind: 'whips', heading: 'Whips', about: 'Custom cars and the people who build them', wall: wall('whips') },
   { kind: 'pits', heading: "Pit's", about: 'Pit bull kennels and breeders', wall: wall('pits'), test: /pit ?bull/i },
   { kind: 'models', heading: 'Models', about: 'Models and modeling agencies', wall: wall('models'), test: /\bmodel(s|ing)?\b/i },
   { kind: 'meats', heading: 'Meats', about: 'Independent ranchers and butchers', wall: wall('meats'), test: /rancher|\branch\b|butcher/i },
   { kind: 'gyms', heading: 'Gyms', about: 'Gyms, studios and climbing walls', wall: wall('gyms'), test: /\bgym\b|fitness|crossfit|boxing|climbing|yoga|barre|martial arts|pilates/i },
   { kind: 'barbershops', heading: 'Barbershops', about: 'Barbers, cuts and shaves', wall: wall('barbershops'), test: /barber/i },
   { kind: 'salons', heading: 'Salons', about: 'Hair, nails, braids and beauty', wall: wall('salons'), test: /salon|braid|\bnails?\b|beauty|lash/i, not: /barber/i },
+  /* "Can you create a BEASTY • AYCE page and put it after BEASTY • Sweets. I know
+     a dozen already to put on that page" — Glenn, 2026-10-02. */
+  { kind: 'ayce', heading: 'AYCE', about: 'All you can eat', wall: wall('ayce'), test: /\bayce\b|all[- ]you[- ]can[- ]eat/i },
+  /* "BEASTY • Food Trucks … There's so many of them too" — Glenn, 2026-09-30,
+     on Leon's "We should target food trucks more". */
+  { kind: 'foodtrucks', heading: 'Food Trucks', about: 'Food trucks and pop-ups', wall: wall('foodtrucks'), test: /food truck|taco truck|\btruck\b/i, not: /brew|taproom|winery/i },
+  /* "We should create a BEASTY • Coffee page to put into the BEASTY • Pages
+     category" — Glenn, 2026-10-03. Boba has its own spot on Sweets. */
+  { kind: 'coffee', heading: 'Coffee', about: 'Coffee shops and roasters', wall: wall('coffee'), test: /coffee|espresso|roaster/i, not: /boba|bubble tea|milk tea|ice cream/i },
 ]
 
 /** Every category page holds his twenty-four. */

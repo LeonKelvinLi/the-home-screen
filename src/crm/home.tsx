@@ -255,6 +255,8 @@ export function Home() {
 
       <UsersBlock u={h.users} scope={scope} busy={busy} />
 
+      <ButtonsBlock query={query} scope={scope} />
+
       <section className={`crm-block${busy ? ' is-busy' : ''}`} aria-labelledby="leads-h">
         <BlockHead id="leads-h" title="Leads and money" scope={`${scope.title}, ${scope.range}`} note="Leads are businesses the team is selling a website to. They are not users." />
         <div className="crm-kpi-row">
@@ -436,6 +438,54 @@ function JumpTo({ admin }: { admin: boolean }) {
 }
 
 /** Grey shapes where the numbers go, while the first answer is on its way. */
+/*
+  THE HOME-SCREEN BUTTONS: how often each was opened, and by how many people.
+  Glenn, 2026-10-03, asking for the gallery, video reel, newsfeed and calendar
+  buttons, then "the QR code button and the contact button".
+*/
+const BUTTON_NAMES: [string, string][] = [
+  ['watch', 'Video reels'],
+  ['gallery', 'Gallery'],
+  ['news', 'News'],
+  ['calendar', 'Calendar'],
+  ['scan', 'Share & Scan (QR code)'],
+  ['contacts', 'Contacts'],
+  ['search', 'Search'],
+]
+function ButtonsBlock({ query, scope }: { query: string; scope: Scope }) {
+  const b = useApi<{ countingSince: number | null; buttons: { kind: string; taps: number; people: number }[] }>(`/api/crm/buttons?${query}`)
+  const by = new Map((b.data?.buttons ?? []).map((x) => [x.kind, x]))
+  const rows = BUTTON_NAMES.map(([k, label]) => ({ label, value: by.get(k)?.taps ?? 0, people: by.get(k)?.people ?? 0 }))
+  const total = rows.reduce((n, r) => n + r.value, 0)
+  return (
+    <section className={`crm-block${b.loading ? ' is-busy' : ''}`} aria-labelledby="buttons-h">
+      <BlockHead
+        id="buttons-h"
+        title="Home-screen buttons"
+        scope={`${scope.title}, ${scope.range}`}
+        note={
+          b.data?.countingSince
+            ? `Counted since ${new Date(b.data.countingSince).toLocaleDateString('en-US', { month: 'long', day: 'numeric' })}. The team's own phones are left out.`
+            : 'Counting starts with the next visit. The team\u2019s own phones are left out.'
+        }
+      />
+      {b.error ? (
+        <Failure error={b.error} retry={b.reload} />
+      ) : (
+        <div className="crm-dash-row">
+          <ChartCard
+            title="Times opened"
+            sub={`${plural(total, 'open', 'opens')} ${scope.phrase}, by button.`}
+            table={{ head: ['Button', 'Opens', 'People'], rows: rows.map((r) => [r.label, r.value, r.people]) }}
+          >
+            <HBars rows={rows} total={total} empty={`Nobody opened these ${scope.phrase}.`} />
+          </ChartCard>
+        </div>
+      )}
+    </section>
+  )
+}
+
 function HomeSkeleton() {
   return (
     <div className="crm-skeleton" aria-hidden="true">

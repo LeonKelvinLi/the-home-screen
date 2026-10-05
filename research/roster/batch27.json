@@ -25,300 +25,661 @@
  },
  {
   "id": "b_kankiin",
-  "name_exact": "Kan Kiin Brunch & Thai Eatery",
-  "one_line": "Thai brunch and Thai comfort dinners on Southgate Avenue",
-  "cuisine": "Thai brunch & dinner",
+  "name_exact": "Kan Kiin",
+  "one_line": "",
+  "cuisine": "Modern Thai brunch by day, traditional Thai dinner by night",
   "address": "201 Southgate Ave, Daly City, CA 94015",
   "phone": "(650) 755-8749",
   "email": "kankiineatery@gmail.com",
-  "hours": "Brunch Mon-Fri 11am-2pm, Sat-Sun 10am-3pm; Thai dinner daily 5-8:30pm",
-  "instagram": "kan_kiin",
+  "hours": "Mon-Fri 11am-2pm & 5-8:30pm, Sat-Sun 10am-3pm & 5-8:30pm",
+  "instagram": null,
   "site_kind": "own",
-  "site_url": "https://www.kankiineatery.com/",
+  "site_url": "https://www.kankiineatery.com",
+  "order_url": "https://order.toasttab.com/online/kankiineatery",
   "prices_published": true,
   "items": [
    {
-    "name": "Kan Kiin French Toast",
+    "name": "\"Kan Kiin\" French Toast",
     "desc": "Brioche French toast, 2-way banana, homemade coconut syrup, coconut flakes and mixed fruit (add vanilla ice cream +$4)",
     "cents": 1800,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Matcha Buttermilk Pancakes",
-    "desc": "Matcha infused buttermilk pancake, mixed fruit and Matcha sauce",
+    "desc": "Matcha-infused buttermilk pancake, mixed fruit and matcha sauce",
     "cents": 1900,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Belly & Sunny",
-    "desc": "Herb braised pork belly, roasted potato, wok fried brussels sprouts, sunny - side up eggs, toast",
+    "desc": "Herb-braised pork belly, roasted potato, wok-fried Brussels sprouts, sunny-side-up eggs, toast",
     "cents": 2200,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
-    "name": "Hat Yai Fried Chicken & Waffle",
-    "desc": "Crispy “Southern of Thailand-Style” fried Mary’s free range chicken & vanilla waffle, maple syrup",
+    "name": "\"Hat Yai\" Fried Chicken & Waffle",
+    "desc": "Crispy Southern-Thailand-style fried Mary's free-range chicken and vanilla waffle, maple syrup",
     "cents": 2200,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "American Fried Rice",
-    "desc": "Homemade Ketchup fried rice, raisin, fried chicken, turkey sausage patty, chicken apple sausage, bacon and sunny - side up fried egg",
+    "desc": "Homemade ketchup fried rice, raisin, fried chicken, turkey sausage patty, chicken apple sausage, bacon and a sunny-side-up fried egg",
     "cents": 2200,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
-    "name": "Jok Crispy Pork Belly",
-    "desc": "“Tom Yum” Rice porridge with house crispy pork belly, poached egg, ginger, shiitake mushroom, green onion, SMOKED SALMON TARTINE Wild smoked salmon, scramble eggs, green onions, avocado, cream cheese on ciabatta served with potato wedges",
+    "name": "\"Jok\" Crispy Pork Belly",
+    "desc": "\"Tom Yum\" rice porridge with house crispy pork belly, poached egg, ginger, shiitake mushroom, green onion, served with fried doughnut",
     "cents": 2500,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
+   },
+   {
+    "name": "Smoked Salmon Tartine",
+    "desc": "Wild smoked salmon, scrambled eggs, green onions, avocado, cream cheese on ciabatta, served with potato wedges",
+    "cents": 2500,
+    "label": "",
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Sweet Corn Cake & Crab Benedict",
-    "desc": "Poached eggs, crispy sweet corn cake, Dungeness crab chunk, house hollandaise, fresh cucumber salad.",
+    "desc": "Poached eggs, crispy sweet corn cake, Dungeness crab chunks, house hollandaise, fresh cucumber salad",
     "cents": 2800,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Steak & Eggs",
-    "desc": "8.oz NY-steak, two sunny - side up accompanied with “Ka Pow” Thai basil fried rice",
+    "desc": "8oz NY steak, two sunny-side-up eggs, with \"Ka Pow\" Thai basil fried rice",
     "cents": 3000,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Bangkok Golden",
-    "desc": "A flavorful Thai stir-fry featuring Dungeness crab, shrimp, squid, and scallops, all cooked in our signature house curry sauce with onions, bell peppers, and three eggs. Served with a side of jasmine rice and house salad",
+    "desc": "Thai stir-fry of Dungeness crab, shrimp, squid and scallops in their signature house curry sauce with onions, bell peppers and three eggs, served with jasmine rice and house salad",
     "cents": 3200,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Claypot Belly",
-    "desc": "Slow- braised pork belly, served over jasmine rice paired with Shiitake mushroom, onion, white sesame and poached egg",
+    "desc": "Slow-braised pork belly over jasmine rice with shiitake mushroom, onion, white sesame and poached egg",
     "cents": 2200,
     "label": "",
-    "section": "Signatures"
+    "section": "Brunch: Kan Kiin Signature"
    },
    {
     "name": "Two Eggs Any Style",
-    "desc": "",
+    "desc": "Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",
     "cents": 1500,
     "label": "",
-    "section": "Egg plates"
+    "section": "Brunch: Egg Plates"
    },
    {
     "name": "Two Eggs with Chicken Apple Sausage Patty",
-    "desc": "",
+    "desc": "Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",
     "cents": 1700,
     "label": "",
-    "section": "Egg plates"
+    "section": "Brunch: Egg Plates"
    },
    {
     "name": "Two Eggs with Applewood Smoked Bacon",
-    "desc": "",
+    "desc": "Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",
     "cents": 1800,
     "label": "",
-    "section": "Egg plates"
+    "section": "Brunch: Egg Plates"
    },
    {
-    "name": "Two Eggs with Applewood Smoked Bacon, Chicken Apple Patty, Smoked Ham",
-    "desc": "",
+    "name": "Two Eggs with Bacon, Chicken Apple Patty and Smoked Ham",
+    "desc": "Applewood smoked bacon, chicken apple sausage patty and smoked ham. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",
     "cents": 2000,
     "label": "",
-    "section": "Egg plates"
+    "section": "Brunch: Egg Plates"
    },
    {
     "name": "Harvest Heaven Omelette",
-    "desc": "Spinach, mushroom, onion, avocado, bell pepper, tomato and Monterey jack",
+    "desc": "Spinach, mushroom, onion, avocado, bell pepper, tomato and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",
     "cents": 1800,
     "label": "",
-    "section": "Omelettes"
+    "section": "Brunch: Omelettes"
    },
    {
     "name": "Western Sunrise Omelette",
-    "desc": "Canadian bacon, onion, mushroom, bell pepper and Monterey jack",
+    "desc": "Canadian bacon, onion, mushroom, bell pepper and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",
     "cents": 1900,
     "label": "",
-    "section": "Omelettes"
+    "section": "Brunch: Omelettes"
    },
    {
     "name": "The Meat Wagon Omelette",
-    "desc": "Applewood smoked bacon, smoked ham, onion, chorizo and cheddar",
+    "desc": "Applewood smoked bacon, smoked ham, onion, chorizo and cheddar. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",
     "cents": 2000,
     "label": "",
-    "section": "Omelettes"
+    "section": "Brunch: Omelettes"
    },
    {
     "name": "Applewood Scramble",
-    "desc": "Applewood smoke bacon, spinach, mushroom, and Cheddar",
+    "desc": "Applewood smoked bacon, spinach, mushroom and cheddar. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",
     "cents": 1800,
     "label": "",
-    "section": "Scrambles"
+    "section": "Brunch: Scrambles"
    },
    {
     "name": "Duo of the Sea Scramble",
-    "desc": "Shrimp, Scallop, mushroom, bell pepper, and Monterey jack",
+    "desc": "Shrimp, scallop, mushroom, bell pepper and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",
     "cents": 2500,
     "label": "",
-    "section": "Scrambles"
+    "section": "Brunch: Scrambles"
    },
    {
     "name": "Crab Lover Scramble",
-    "desc": "Fresh crabmeat, spinach, mushroom onion and Monterey jack",
+    "desc": "Fresh crabmeat, spinach, mushroom, onion and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",
     "cents": 2700,
     "label": "",
-    "section": "Scrambles"
+    "section": "Brunch: Scrambles"
    },
    {
     "name": "Classic Benedict",
-    "desc": "Canadian bacon, poached eggs and hollandaise sauce",
+    "desc": "Canadian bacon, poached eggs and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",
     "cents": 1700,
     "label": "",
-    "section": "Benedicts"
+    "section": "Brunch: Benedicts"
    },
    {
     "name": "Crispy Chicken Benedict",
-    "desc": "Crispy chicken, poached eggs, pesto mayo and hollandaise sauce",
+    "desc": "Crispy chicken, poached eggs, pesto mayo and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",
     "cents": 1800,
     "label": "",
-    "section": "Benedicts"
+    "section": "Brunch: Benedicts"
    },
    {
     "name": "Crispy Belly Benedict",
-    "desc": "Crispy pork belly, poached eggs, avocado, jalapeños and hollandaise sauce",
+    "desc": "Crispy pork belly, poached eggs, avocado, jalapeños and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",
     "cents": 2200,
     "label": "",
-    "section": "Benedicts"
+    "section": "Brunch: Benedicts"
    },
    {
     "name": "Alaskan Benedict",
-    "desc": "Wild Smoked salmon, red onion, poached eggs, and hollandaise sauce",
+    "desc": "Wild smoked salmon, red onion, poached eggs and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",
     "cents": 2300,
     "label": "",
-    "section": "Benedicts"
+    "section": "Brunch: Benedicts"
    },
    {
     "name": "Green Curry Spaghetti",
-    "desc": "Chicken or Beef, bell pepper, Thai basil and green curry sauce",
+    "desc": "Chicken or beef, bell pepper, Thai basil and green curry sauce. Chicken $17 / Beef $19",
     "cents": 1700,
-    "label": "",
-    "section": "Spaghetti"
+    "label": "from",
+    "section": "Brunch: Spaghetti"
    },
    {
     "name": "Drunken Seafood Spaghetti",
     "desc": "Shrimp, scallop, calamari, mussel, bell pepper, Thai basil, jalapeños and homemade spicy sauce",
     "cents": 2500,
     "label": "",
-    "section": "Spaghetti"
+    "section": "Brunch: Spaghetti"
    },
    {
-    "name": "Mid-night Bacon Spaghetti",
-    "desc": "Applewood smoked bacon, Thai basil, bell pepper, jalapeños, and spicy Thai chili sauce",
+    "name": "Midnight Bacon Spaghetti",
+    "desc": "Applewood smoked bacon, Thai basil, bell pepper, jalapeños and spicy Thai chili sauce",
     "cents": 1800,
     "label": "",
-    "section": "Spaghetti"
+    "section": "Brunch: Spaghetti"
    },
    {
     "name": "Breakfast Burger",
-    "desc": "Scrambled egg, bacon, chicken apple sausage patty, American cheese and homemade mayo",
+    "desc": "Scrambled egg, bacon, chicken apple sausage patty, American cheese and homemade mayo, served with French fries",
     "cents": 1900,
     "label": "",
-    "section": "Burgers and sandwiches"
+    "section": "Brunch: Burgers & Sandwiches"
    },
    {
     "name": "Spicy Crispy Chicken Burger",
-    "desc": "Fried chicken, tomato, lettuce, pickle and homemade spicy mayo",
+    "desc": "Fried chicken, tomato, lettuce, pickle and homemade spicy mayo, served with French fries",
     "cents": 1800,
     "label": "",
-    "section": "Burgers and sandwiches"
+    "section": "Brunch: Burgers & Sandwiches"
    },
    {
     "name": "Cheese Burger",
-    "desc": "Hamburger beef patty, American cheese, tomato, lettuce, onion and pickle",
+    "desc": "Beef patty, American cheese, tomato, lettuce, onion and pickle, served with French fries",
     "cents": 1800,
     "label": "",
-    "section": "Burgers and sandwiches"
+    "section": "Brunch: Burgers & Sandwiches"
    },
    {
     "name": "Corn Fritters",
-    "desc": "Corn fritters served with plum dipping and peanuts",
+    "desc": "Served with plum dipping sauce and peanuts",
     "cents": 1300,
     "label": "",
-    "section": "Starters"
+    "section": "Brunch: Appetizers"
    },
    {
-    "name": "Brussel Sprouts & Fries",
-    "desc": "Fried brussels sprouts and French fries with pesto mayo dip",
+    "name": "Brussels Sprouts & Fries",
+    "desc": "Fried Brussels sprouts and French fries with pesto mayo dip",
     "cents": 1200,
     "label": "",
-    "section": "Starters"
+    "section": "Brunch: Appetizers"
+   },
+   {
+    "name": "\"E-Sarn\" Chicken Wings",
+    "desc": "Fried chicken wings, sweet and sour sauce (E-Sarn: Northeastern Thailand)",
+    "cents": 1500,
+    "label": "",
+    "section": "Brunch: Appetizers"
    },
    {
     "name": "Kan Kiin Salad",
-    "desc": "Seasonal fruit, yellow corn, mix green, romaine lettuce, cucumber, cherry tomato, carrot, and beet",
+    "desc": "Seasonal fruit, yellow corn, mixed greens, romaine, cucumber, cherry tomato, carrot and beet",
     "cents": 1300,
     "label": "",
-    "section": "Salads"
+    "section": "Brunch: Salads"
    },
    {
     "name": "Chicken Salad",
-    "desc": "Crispy chicken, baby romaine lettuce, cucumber, cherry tomato, carrot, avocado, and poached egg",
+    "desc": "Crispy chicken, baby romaine, cucumber, cherry tomato, carrot, avocado and poached egg",
     "cents": 1600,
     "label": "",
-    "section": "Salads"
+    "section": "Brunch: Salads"
    },
    {
     "name": "Mango & Sticky Rice",
-    "desc": "Fresh mango, sweet sticky rice served with homemade coconut milk",
+    "desc": "Fresh mango, sweet sticky rice, homemade coconut milk",
     "cents": 1300,
     "label": "",
-    "section": "Sweet corner"
+    "section": "Brunch: Sweet Corner"
    },
    {
     "name": "Kid Approved Waffle",
-    "desc": "Belgian vanilla waffle served with vanilla ice cream, whipped cream, mix fruits, and homemade coconut syrup",
+    "desc": "Belgian vanilla waffle with vanilla ice cream, whipped cream, mixed fruit and homemade coconut syrup",
     "cents": 1300,
     "label": "",
-    "section": "Sweet corner"
+    "section": "Brunch: Sweet Corner"
    },
    {
     "name": "Roti & Fried Banana Split",
-    "desc": "Roti breads and fried banana served with vanilla ice cream and coconut caramel",
+    "desc": "Roti bread and fried banana with vanilla ice cream and coconut caramel",
     "cents": 1300,
     "label": "",
-    "section": "Sweet corner"
+    "section": "Brunch: Sweet Corner"
    },
    {
     "name": "Choco Banana Toast",
     "desc": "Sweet toast, caramelized banana, Nutella, chocolate syrup and chocolate chips",
     "cents": 1400,
     "label": "",
-    "section": "Sweet corner"
+    "section": "Brunch: Sweet Corner"
    },
    {
-    "name": "E-Sarn Chicken Wings",
-    "desc": "Fried chicken wings, sweet and sour sauce",
+    "name": "Corn Fritters",
+    "desc": "Served with plum dipping sauce and peanuts",
+    "cents": 1300,
+    "label": "",
+    "section": "Dinner: Appetizers"
+   },
+   {
+    "name": "Samosa Curry Puffs",
+    "desc": "Mashed curry potato, onion and carrot in house-made puff pastry, with cucumber salad and roasted peanuts",
+    "cents": 1400,
+    "label": "",
+    "section": "Dinner: Appetizers"
+   },
+   {
+    "name": "\"E-Sarn\" Chicken Wings",
+    "desc": "Fried chicken wings, sweet and sour sauce (E-Sarn: Northeastern Thailand)",
     "cents": 1500,
     "label": "",
-    "section": "Starters"
+    "section": "Dinner: Appetizers"
+   },
+   {
+    "name": "\"Chiang Mai\" Sausage",
+    "desc": "Homemade herbal Northern-Thailand-style pork sausage served with fresh herbs",
+    "cents": 1700,
+    "label": "",
+    "section": "Dinner: Appetizers"
+   },
+   {
+    "name": "Fresh Spring Rolls",
+    "desc": "Fresh organic vegetables, thin rice paper, peanut dipping sauce",
+    "cents": 1200,
+    "label": "",
+    "section": "Dinner: Appetizers"
+   },
+   {
+    "name": "Seafood \"Tom Yum\" Soup Hot Pot",
+    "desc": "Hot and sour spicy soup with fresh mussels, calamari and shrimp, served in a hot pot. Serves 4 (mild, medium or hot)",
+    "cents": 3200,
+    "label": "",
+    "section": "Dinner: Soup"
+   },
+   {
+    "name": "Papaya Salad",
+    "desc": "Green papaya salad, toasted peanuts, cherry tomatoes, tamarind dressing (mild, medium or hot)",
+    "cents": 1400,
+    "label": "",
+    "section": "Dinner: Salads"
+   },
+   {
+    "name": "Chicken Larb Salad",
+    "desc": "Minced chicken salad, toasted rice powder, smoked chili, cabbage (add sticky rice $5)",
+    "cents": 1700,
+    "label": "",
+    "section": "Dinner: Salads"
+   },
+   {
+    "name": "Beef Larb Salad",
+    "desc": "Finely chopped beef larb, toasted rice powder, smoked chili, green leaves (add sticky rice $5)",
+    "cents": 2000,
+    "label": "",
+    "section": "Dinner: Salads"
+   },
+   {
+    "name": "Crispy Rice Salad",
+    "desc": "Chef's special. Northeastern-Thailand-style fermented pork sausage tossed with mint, ginger, peanuts, onion, cilantro and chili-lime dressing",
+    "cents": 2300,
+    "label": "",
+    "section": "Dinner: Salads"
+   },
+   {
+    "name": "Thai Fried Rice",
+    "desc": "Classic Thai fried rice with egg, tomatoes and onion. Tofu $16 / Chicken $17 / Beef $18",
+    "cents": 1600,
+    "label": "from",
+    "section": "Dinner: Fried Rice"
+   },
+   {
+    "name": "Fried Chicken over Fried Rice",
+    "desc": "Crispy fried chicken breast over egg fried rice with sweet chili dipping sauce",
+    "cents": 2000,
+    "label": "",
+    "section": "Dinner: Fried Rice"
+   },
+   {
+    "name": "Pineapple Fried Rice",
+    "desc": "Prawn and chicken pineapple fried rice with egg, tomatoes and onion (vegetarian version available)",
+    "cents": 2300,
+    "label": "",
+    "section": "Dinner: Fried Rice"
+   },
+   {
+    "name": "Fresh Crab Fried Rice",
+    "desc": "Chef's special. Loaded fresh Dungeness crab and egg fried rice served in a coconut shell, with \"Prik Nam Pla\" chili fish sauce",
+    "cents": 3800,
+    "label": "",
+    "section": "Dinner: Fried Rice"
+   },
+   {
+    "name": "Pad See Ew",
+    "desc": "Wok-fried fresh rice noodles, soy sauce caramel, broccoli, Chinese broccoli. Tofu $16 / Chicken $17 / Beef $18 / Shrimp $22 / Seafood $25",
+    "cents": 1600,
+    "label": "from",
+    "section": "Dinner: Fried Noodles"
+   },
+   {
+    "name": "Drunken Noodles",
+    "desc": "Wok-fried fresh rice noodles, Thai basil, mushroom, green bean, onion, bell pepper. Tofu $17 / Chicken $18 / Beef $20 / Shrimp $22 / Seafood $25",
+    "cents": 1700,
+    "label": "from",
+    "section": "Dinner: Fried Noodles"
+   },
+   {
+    "name": "Pad Thai",
+    "desc": "Fresh thin rice noodles, tamarind reduction, bean sprouts, peanuts. Tofu or Chicken $17 / Prawns $23",
+    "cents": 1700,
+    "label": "from",
+    "section": "Dinner: Fried Noodles"
+   },
+   {
+    "name": "Crabby Pad Thai",
+    "desc": "Chef's special. Wok-fried rice noodles with Dungeness crab meat, tofu, bean sprouts and chives wrapped in egg, topped with peanuts and lime",
+    "cents": 3400,
+    "label": "",
+    "section": "Dinner: Fried Noodles"
+   },
+   {
+    "name": "Rad-Na \"Ta-Lay\"",
+    "desc": "Thai comfort street food: thick rice noodles with fresh prawns, scallops, mussels and calamari in gravy sauce",
+    "cents": 3000,
+    "label": "",
+    "section": "Dinner: Chef's Specials"
+   },
+   {
+    "name": "Papaya Salad Combo",
+    "desc": "Chicken wings, crispy whole tilapia, crispy pork belly and pork loaf with green papaya salad mixed with salted crab, cherry tomatoes, green bean, garlic, Thai chili and fish sauce",
+    "cents": 3900,
+    "label": "",
+    "section": "Dinner: Chef's Specials"
+   },
+   {
+    "name": "Tamarind Sea Bass",
+    "desc": "Crispy whole sea bass, onion, bell pepper, tamarind garlic-chili sauce and crispy basil",
+    "cents": 4500,
+    "label": "",
+    "section": "Dinner: Chef's Specials"
+   },
+   {
+    "name": "\"Gang Som\" Sea Bass",
+    "desc": "Whole sea bass, cabbage, carrot and green bean in \"Gang Som\", a not-so-spicy tamarind curry",
+    "cents": 4500,
+    "label": "",
+    "section": "Dinner: Chef's Specials"
+   },
+   {
+    "name": "\"Ka Pow\" Bo Lan (Thai Spicy Basil)",
+    "desc": "Classic Thai street-food spicy basil stir-fry with a fried egg and jasmine rice. Minced chicken $18 / Minced beef $20 / Crispy pork $26 / Seafood $27",
+    "cents": 1800,
+    "label": "from",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "\"Kai Pa Lo\" Pork Belly Stew",
+    "desc": "Thai comfort pork belly stew, five-spice boiled egg, jasmine rice",
+    "cents": 2300,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Salt & Pepper Pork Belly",
+    "desc": "Crunchy homemade pork belly wok-tossed with garlic-pepper, bell pepper and jalapeño, with jasmine rice",
+    "cents": 3200,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Lazy Herbal Beef",
+    "desc": "Thai-street-style grilled Angus steak and fried egg over Thai basil fried rice",
+    "cents": 3800,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "\"Hat Yai\" Fried Chicken",
+    "desc": "Crispy Southern-Thailand-style fried chicken with spicy tamarind reduction and sticky rice",
+    "cents": 2600,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Cloudy Chicken",
+    "desc": "Stir-fried crispy chicken, cashew nuts, onion, bell pepper, hot and smoked chili glaze, with jasmine rice",
+    "cents": 2200,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Spicy Catfish Clay Pot",
+    "desc": "Wok-fried spicy catfish in spicy coconut sauce with Thai basil and bell pepper, with jasmine rice",
+    "cents": 2400,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Bangkok Golden",
+    "desc": "Thai stir-fry of Dungeness crab, shrimp, squid and scallops in their signature house curry sauce with onions, bell peppers and three eggs, served with jasmine rice and house salad",
+    "cents": 3200,
+    "label": "",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "\"Pa Ram\" Peanut Lover",
+    "desc": "Steamed spinach, broccoli, carrot and cabbage topped with warm peanut sauce, with jasmine rice. Tofu $16 / Chicken $18 / Beef $20",
+    "cents": 1600,
+    "label": "from",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Spicy Eggplant",
+    "desc": "Wok-fried eggplant, chili, Thai basil and bell peppers with jasmine rice. Tofu $16 / Chicken $18 / Beef $20",
+    "cents": 1600,
+    "label": "from",
+    "section": "Dinner: Main Course"
+   },
+   {
+    "name": "Yellow Curry",
+    "desc": "Creamy coconut yellow curry, potatoes, onion and carrots with jasmine rice. Tofu $17 / Chicken $18 / Beef $20",
+    "cents": 1700,
+    "label": "from",
+    "section": "Dinner: Curry"
+   },
+   {
+    "name": "Green Curry",
+    "desc": "Traditional green curry, eggplant, bell peppers, bamboo shoots and basil with jasmine rice. Tofu $17 / Chicken $18 / Beef $20",
+    "cents": 1700,
+    "label": "from",
+    "section": "Dinner: Curry"
+   },
+   {
+    "name": "Roti Mussaman Curry Beef Chuck",
+    "desc": "Boneless pot-roasted beef chuck in traditional Mussaman curry, with roti flatbread",
+    "cents": 2600,
+    "label": "",
+    "section": "Dinner: Curry"
+   },
+   {
+    "name": "Berry Thai Tea",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "Cloudy Cacao",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "Matcha Caramel Latte",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "Lavender Lemonade",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "Strawberry Hurricane",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "Green Goddess Colada",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "Mango A-Go-Go",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Drinks: Mocktails"
+   },
+   {
+    "name": "House Coffee",
+    "desc": "",
+    "cents": 500,
+    "label": "",
+    "section": "Drinks: Coffee & More"
+   },
+   {
+    "name": "House Hot Tea",
+    "desc": "",
+    "cents": 500,
+    "label": "",
+    "section": "Drinks: Coffee & More"
+   },
+   {
+    "name": "Thai Iced Tea",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Drinks: Coffee & More"
+   },
+   {
+    "name": "Thai Iced Coffee",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Drinks: Coffee & More"
+   },
+   {
+    "name": "Fresh Young Coconut",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Drinks: Coffee & More"
+   },
+   {
+    "name": "Orange Juice",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Drinks: Coffee & More"
+   },
+   {
+    "name": "Sparkling Water (San Pellegrino 250ml)",
+    "desc": "",
+    "cents": 500,
+    "label": "",
+    "section": "Drinks: Coffee & More"
    }
   ],
-  "price_note": "This is their brunch menu, from their own site; the Thai dinner menu is on their site too",
-  "source_url": null,
-  "logo_url": null,
-  "logo_px": null,
+  "price_note": "Prices are from the brunch and dinner menus on Kan Kiin's own website; their Toast pickup menu prices some brunch dishes a little higher.",
   "flags": [
-   "Brunch menu read from kankiineatery.com/menus (Wix). Wines and beers on the same page are left off: this app has no age check.",
-   "Their Instagram bio says “Recognized by the MICHELIN Guide 2024-2026” and the site has a MICHELIN GUIDE 2026 page; the page does not repeat the claim.",
-   "Weekend brunch is first come, first served, per their site."
+   "City: Glenn's label says San Francisco, but Kan Kiin's own site and Toast page both give 201 Southgate Ave, Daly City, CA 94015, so city is \"Daly City\". Glenn or Leon decide whether it sits under San Francisco • Eats or Daly City.",
+   "Already on BEASTY: Kan Kiin has had a page since 2026-09-21 (roster seed 'kan-kiin', id b_kankiin, placed on the Daly City Goods Asian food seat 'daly-city-goods-2', with only the brunch menu). Glenn's message ('Clip this video plz for Kan Kin page') may mean adding the reel to that page, not making a new one. This record uses the same id and slug, so Leon must decide: update the existing page (adding the dinner menu and drinks) or make a separate one.",
+   "Spelling: Glenn wrote 'Kan Kin'. The business writes 'Kan Kiin' (header 'KAN KIIN'; logo 'KAN KIIN BRUNCH & THAI EATERY'; site title and footer 'Kan Kiin Eatery'; Toast 'Kan Kiin'). Their Instagram handle is kan_kiin.",
+   "No link was sent. Their website, kankiineatery.com (built on Wix), was found by web search. It links to instagram.com/kan_kiin, which confirms the site is theirs.",
+   "Prices come from the Breakfast & Brunch and Thai Comfort Dinner menus on kankiineatery.com/menus. Their Toast pickup page has different prices for most brunch dishes, usually $1 higher: French toast $19 vs $18, chicken & waffle $23 vs $22, and Steak & Egg $38 vs $30. Toast also lists dishes that are not on the site menu (Ube Toast $19, a sides list) and uses different wording for some dishes. When checked, Toast said 'Currently not accepting online orders' and showed only the weekday brunch menu, so the dinner prices could not be cross-checked. If the Toast prices are newer, the brunch prices here may be slightly low.",
+   "Hours from their site: Mon-Fri brunch 11am-2pm and Thai dinner 5-8:30pm; Sat-Sun brunch 10am-3pm and dinner 5-8:30pm. Toast's ordering hours end 15 minutes before each service closes (1:45pm, 2:45pm, 8:15pm). That looks like an online-ordering cutoff, not a disagreement. Their site says weekend brunch is first come, first served.",
+   "Phone (650) 755-8749 is in every page footer on their site, on their contact page and on Toast. Their Reservations page says 'call 650-754-8749', which looks like a typo and was not used.",
+   "Reservations go through a Yelp Reservations widget on their site's Reservations page. Their Order Now page links pickup to Toast and delivery to DoorDash, Uber Eats and Grubhub.",
+   "Left out: cocktails, wine, beer and the Rose Mimosa (alcohol). Mocktails and the non-alcoholic Coffee & More list are kept. Menu notes from their site: $30 corkage per 750ml bottle, and an automatic 20% gratuity for parties of 6 or more.",
+   "The dinner menu lists Crabby Pad Thai and Fresh Crab Fried Rice twice: once marked Chef's Special under Fried Noodles and Fried Rice, and again under Kan Kiin Chef's Specials. Each is kept once, under Fried Noodles and Fried Rice. Corn Fritters, E-Sarn Chicken Wings and Bangkok Golden are on both the brunch and dinner menus at the same price, so they are listed under each.",
+   "Brunch dishes are served Mon-Fri 11am-2pm and Sat-Sun 10am-3pm (stated on the brunch menu). Dishes with several protein choices are entered at the lowest price with label 'from', and every price is in the description.",
+   "Dietary: the site tags some dishes Vegan, Vegetarian or Gluten free, but some Vegan tags clash with the ingredients. The Harvest Heaven omelette has eggs and Monterey Jack, the Roti & Fried Banana Split comes with vanilla ice cream, and the Brussels sprouts come with pesto mayo. So 'Vegan options' is not claimed. Only 'Vegetarian options' (e.g. Corn Fritters, Samosa Curry Puffs, Fresh Spring Rolls) and 'Gluten-free options' (e.g. Kan Kiin Salad, Papaya Salad, larb, curries) are listed.",
+   "Their site has a 'MICHELIN GUIDE 2026' page that links to their entry on guide.michelin.com. The page is images only and states no award level in text.",
+   "Typos on the menu were fixed in item names and sections: 'Chaing Mai' to 'Chiang Mai', 'Burger & Sanwich' to 'Burgers & Sandwiches', 'Appitizers' to 'Appetizers', 'Mid-Night' to 'Midnight', 'Mango A-GO-G0' to 'Mango A-Go-Go'.",
+   "Icon: made with --square from their site's logo (full-size PNG, 500x774, from static.wixstatic.com), shown whole and centred on its own green. It replaced the existing public/icons/kan-kiin.webp from commit bf9e607, which was softer, had dark side bars, and had the wordmark tight to the bottom edge. The old file is saved at scratchpad/g6/kan-kiin-OLD.webp; run 'git checkout public/icons/kan-kiin.webp' to restore it.",
+   "Instagram @kan_kiin is theirs; the Instagram button is Glenn's to approve, so it is not on the page."
   ]
  },
  {

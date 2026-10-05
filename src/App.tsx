@@ -30,7 +30,7 @@ const RESERVE = 'slot.join'
 /* MAKE $ (key 9) opens the panel keyed `careers` — "Make some money with
    BEASTY", his instructions for bringing a business in. */
 const LINKED_PANEL: Record<string, PanelPage | undefined> = { '/collab': 'collabs', '/money': 'careers' }
-const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone' }
+const LINKED_APP: Record<string, string | undefined> = { '/members': 'sys.members', '/contacts': 'sys.phone', '/search': 'sys.search' }
 const path = () =>
   typeof window === 'undefined' ? '' : window.location.pathname.replace(/\/+$/, '') || '/'
 

@@ -33,6 +33,7 @@ export type TrackEvent =
   | 'clip_played'
   | 'reserve_started'
   | 'category_opened'
+  | 'button_tapped'
 
 export type TrackProps = Partial<{
   brand: string

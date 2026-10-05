@@ -25,16 +25,16 @@ import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
 import { BEASTY_CATEGORIES, CATEGORY_KINDS, CATEGORY_SPOTS } from '../src/data/categories'
 import { CATEGORY_PLACEMENTS } from '../src/data/categorySeats'
-import { PAGE_KINDS, HOME_PAGES } from '../src/data/slots'
+import { PAGE_KINDS, HOME_PAGES, categoriesFor } from '../src/data/slots'
 import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
 import {
   GOODS_CATEGORIES,
   SERVICE_CATEGORIES,
   OPEN_SPOTS,
   ONLINE_CATEGORIES,
-  INDIVIDUAL_SPOTS, BOUTIQUE_SPOTS,
+  INDIVIDUAL_SPOTS, BOUTIQUE_SPOTS, EATS_CATEGORIES, SWEETS_CATEGORIES,
 } from '../src/data/slots'
-import { BEASTY_GOODS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
+import { BEASTY_EATS_ROSTER, BEASTY_SERVICES_ROSTER } from '../src/data/roster'
 import { ALL_APPS, DOCK_SETS, APP_GROUPS } from '../src/apps/registry'
 
 type Finding = { level: 'ERROR' | 'WARN' | 'NOTE'; what: string }
@@ -71,6 +71,8 @@ const KINDS: Record<string, number> = {
   online: ONLINE_CATEGORIES.length,
   individuals: INDIVIDUAL_SPOTS.length,
   boutiques: BOUTIQUE_SPOTS.length,
+  eats: EATS_CATEGORIES.length,
+  sweets: SWEETS_CATEGORIES.length,
   /* The BEASTY category pages, twenty-four each (src/data/categories.ts). */
   ...Object.fromEntries(CATEGORY_KINDS.map((k) => [k, CATEGORY_SPOTS])),
 }
@@ -121,6 +123,10 @@ for (const [id, keys] of seatOf) {
   the server and the CRM too, so a kind missing from it is a seat nobody counts.
 */
 for (const k of Object.keys(KINDS)) if (!PAGE_KINDS.includes(k)) err(`page kind ${k} is not in slots.ts PAGE_KINDS`)
+/* Every kind names its blanks: a city's blank tile reads "Burgers — spot
+   available", not "Reserve a Spot" (lost for a deploy's worth of testing on
+   2026-10-05 when BEASTY's first sheet stopped being a city kind). */
+for (const k of Object.keys(KINDS)) if (!categoriesFor(k)?.length) err(`page kind ${k} has no spot names (categoriesFor)`)
 if (HOME_PAGES.filter((p) => !p.yellow).length !== 9) err(`the home screen has ${HOME_PAGES.filter((p) => !p.yellow).length} category pages, not 9`)
 for (const c of BEASTY_CATEGORIES) {
   if (!/^[a-z]+$/.test(c.kind)) err(`category kind ${c.kind} is not plain lower-case letters`)
@@ -159,7 +165,7 @@ if (unverified.length)
 
 // ---- 3. the flagship rosters ---------------------------------------------
 for (const [name, roster] of [
-  ['BEASTY goods', BEASTY_GOODS_ROSTER],
+  ['BEASTY eats', BEASTY_EATS_ROSTER],
   ['BEASTY services', BEASTY_SERVICES_ROSTER],
 ] as [string, (string | null)[]][]) {
   if (roster.length !== 24) err(`${name} roster has ${roster.length} seats, expected 24`)

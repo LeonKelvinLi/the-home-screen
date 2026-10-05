@@ -127,6 +127,40 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Absolute Volleyball Club — gathered 2026-10-05 from own
+     they are: Youth volleyball club: teams, clinics and private lessons
+     flag: Glenn's link is a LeagueApps registration page for "Absolute NORTH 3rd-8th Grade: 2026 Fall Pre-Tryouts Clinics" ($30 per session, Sept 25-Oct 4, 2026 at Windsor, Petaluma and Casa Grande high schools). It ended on 4 October, the day before this check, so it is not listed as an item.
+     flag: Their own website is absolutevb.com (SportsEngine); it links to that same LeagueApps camp and to @absolutevolleyball, so it is first-party. Prices come from its High School Fall Clinics, 2027 AVC North Tryouts and Private Lessons pages.
+     flag: High school fall clinic dates (2026): Sept 12, 19, 26, Oct 3, 17, 24 and Nov 7, 2-4pm. Only Oct 17, 24 and Nov 7 are still ahead, so the $600 seven-clinic package may no longer be offered; Glenn may want those two clinic items removed after November 7.
+     flag: Tryouts: the site shows "COST: $50" and "COST: $70*** 1 Week before Tryouts". AVC North 13s-14s and 10s-12s tryouts are Sunday, October 11 in San Rafael, so this item goes stale after the tryout weekend.
+     flag: Private lessons: "STARTING MAY 1ST: NEW PRICE" 1 player $150, 2 players $100, 3 players $80, 4 players max $70, per person; payments go directly to the coach; a parent must be present.
+     flag: No phone: the site lists no club phone, only the personal number of their strength and conditioning coach, which was left out. Email avcinfo@absolutevb.com is on the site. No opening hours (sessions are scheduled).
+     flag: Address is from Glenn's Instagram screenshot ("2145 Francisco Blvd E, San Rafael") and the site ("2145 Francisco E. Blvd, San Rafael, CA 94901").
+     flag: Logo is the Instagram profile disc (black, ABSOLUTE VOLLEYBALL CLUB) inside the story ring.
+     flag: Instagram @absolutevolleyball is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'absolute-volleyball-club': {
+    address: "2145 Francisco Blvd E, San Rafael, CA 94901",
+    email: "avcinfo@absolutevb.com",
+    sections: [
+      { name: "Private lessons", items: [
+        ["Private lesson, 1 player","60-minute session at the AVC facility in San Rafael, volleyball and/or strength and conditioning. Paid directly to the coach.",15000],
+        ["Private lesson, 2 players","Per person. 60-minute session at the AVC facility.",10000],
+        ["Private lesson, 3 players","Per person. 60-minute session at the AVC facility.",8000],
+        ["Private lesson, 4 players (max)","Per person. 60-minute session at the AVC facility.",7000],
+      ] },
+      { name: "Clinics", items: [
+        ["High school fall clinic","9th-12th grade, all levels, open to AVC and non-AVC players. Saturdays 2-4pm at the AVC facility; each clinic focuses on one skill and ends with 30 minutes of gameplay.",10000],
+        ["High school fall clinics, all 7","The full 2026 series of seven Saturday clinics.",60000],
+      ] },
+      { name: "Tryouts", items: [
+        ["Club tryouts","Girls tryouts for the 2026-27 club season. $50, or $70 in the final week before tryouts.",5000,null,"from"],
+      ] },
+    ],
+    siteNote: "Prices are from their own website.",
+  },
+
+  /*
      Ace King BBQ — gathered 2026-09-21 from own-domain
      they are: Chinese BBQ skewers
      flag: Glenn: 'Newark • Goods', sent 2026-09-14 08:28 PT with screenshots of @acekingnewark and acekingbbqus.com
@@ -372,6 +406,113 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices and photos are from their own site.",
+  },
+
+  /*
+     Alhambra Irish House — gathered 2026-10-05 from own
+     they are: Irish gastropub
+     flag: Hours come from the hours box on their website (the only first-party source; Instagram bio gives none). The box lists Fri 11:30 AM-01:00 AM and two Saturday rows, "12:00 AM-01:00 AM" and "11:00 AM-12:00 AM"; the site's structured data says the same ("Fr 11:30-00:00", "Sa 00:00-01:00", "Sa 11:00-00:00"). Read as Friday open until 1am and Saturday 11am to midnight. Glenn's screenshot of the site shows "Today's hours: 11:30 AM - 01:00 AM", which fits Friday. Leon may want Glenn to confirm Saturday closes at midnight, not 1am.
+     flag: A trivia flyer in Glenn's Instagram screenshot says "Kitchen open until 9"; the menu prices are kitchen items. Happy hour is Mon-Fri 4-6pm per their Happy Hour page (no prices published). Holiday party packages "start at $30 per person" per their homepage; not an item.
+     flag: Items: the full online menu (Appetizers through Beverages; gift cards left out; the bar list is not on the online menu) plus the Brunch menu page, served Sat & Sun 11am-3pm. Chicken Wings is one item with the five flavours at the same $16; Caesar and House salads are small $8 / regular $14 (label "from"); Eggs Benedict is $19, or $21 with brisket (label "from").
+     flag: Four descriptions shown cut off ("...") on the menu page were taken in full from the same page's data (Chipotle Lime Chicken Salad, Lentil & Garbanzo Stew, Spicy Castro Burger, Fried Chicken Sandwich). Typos fixed in descriptions: "lrish" to Irish, brunch "aloli" to aioli and "6 a side" to "& a side". Names converted from all caps.
+     flag: Ordering on their own site is Sociavore (alhambra-irish-house.com/order); reservations also go through OpenTable.
+     flag: Logo is the gold triskele roundel from their website (Alhambra / Irish House).
+     flag: Instagram @alhambra_irish_house is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'alhambra-irish-house': {
+    address: "831 Main St, Redwood City, CA 94063",
+    phone: "(650) 366-4366",
+    hours: "Mon-Thu 11:30am-10pm, Fri 11:30am-1am, Sat 11am-12am, Sun 11am-9pm",
+    cuisine: "Irish gastropub",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Pork Scratchings","Pork scratchings (chicharron) made to order, buffalo ranch",1200],
+        ["Crispy Buffalo Cod Bites","Buffalo battered cod 'wings' with a zesty citrus aioli",1500],
+        ["Fish Tacos","A trio of beer battered Haddock, red cabbage, pico de gallo, radish, chipotle mayo, flour tortilla",1600],
+        ["Smoked Salmon on Brown Soda Bread","Freshly made Irish soda bread, topped with cream cheese, smoked salmon & capers",1900],
+        ["Sausage Rolls","House made pork sausage rolled in puff pastry, baked to perfection",1500],
+        ["Chicken Strips","Fried golden brown in crispy breadcrumbs, side of ranch",1600],
+        ["Guinness Beer Cheese Pretzels","Soft baked pretzel sticks Guinness & Irish cheddar beer cheese sauce.",1400],
+        ["Chicken Wings","Choice of flavor (House Hot Sauce, Guinness BBQ, Smoky Habanero, Lemon Pepper or Salt & Vinegar) with carrots, celery & ranch.",1600],
+        ["House Fries","Steak cut fries, house seasoning & ranch",900],
+        ["Scotch Eggs","Soft boiled eggs wrapped in house sausage blend & panko crusted, mustard mayo",1400],
+        ["Cauli Bites","Golden fried beer battered cauliflower florets with blue cheese and buffalo dip.",1200],
+        ["Wisconsin Cheese Curds","Hand dipped in beer batter, in house, ranch & Guinness BBQ sauce",1300],
+        ["Lemon & Almond Brussel Sprouts","Flash fried and tossed in fresh lemon juice, toasted almonds and house seasoning",1300],
+      ] },
+      { name: "Salads, Bowls & Healthy Options", items: [
+        ["Goats Cheese Salad","Spring mix, baby spinach, fresh berries, apple, candied pecans, goats cheese crumbles & cranberry & raspberry dressing.",1900],
+        ["Roasted Vegetables and Organic Tri-Color Quinoa Bowl","Roasted Cauliflower, Bell Peppers, Asparagus, Red Beets, Golden Beets, Zucchini, Lemon Zest, Shaved Cabbage & Mint Lemon Vinaigrette",1900],
+        ["Greek Rice Bowl","Romaine, rice, feta cheese, cucumber, onion, cherry tomatoes, roasted red bell peppers, Kalamata olives & lemon oregano sauce",1900],
+        ["Chipotle Lime Chicken Salad","Romaine hearts lettuce, grilled corn, roasted bell peppers, onion, cherry tomatoes, pepper jack cheese, avocado, tortilla chips & chipotle lime dressing",1900],
+        ["Smoked Salmon & Arugula","Baby arugula, cherry tomatoes, fried capers, red onion, & crispy fennel tossed in a lemon lime oregano vinaigrette",2400],
+        ["Roast Beets Salad","Wild arugula, orange, shaved carrots, parsnip, feta cheese, pistachios & citrus vinaigrette",1800],
+        ["Classic Greek Salad","Crispy romaine, cherry tomatoes, cucumber, red onion, Kalamata olives & feta cheese dressed in a flavored oregano lemon—lime vinaigrette",1700],
+        ["Caesar Salad","Small $8, regular $14",800,null,"from"],
+        ["House Salad","Small $8, regular $14",800,null,"from"],
+      ] },
+      { name: "Irish Favourites & Entrees", items: [
+        ["15 Hour Slow Braised Brisket Plate","Guinness BBQ sauce, onion straws, mashed potatoes, seasonal vegetables",2700],
+        ["Sausage & Mash","Jumbo Irish Pork Sausages on a bed of creamy colcannon & smothered in a red onion gravy.",2500],
+        ["Gaelic Chicken","Pan seared chicken breast, Irish whiskey, mushroom & rosemary cream sauce, mashed potatoes, seasonal vegetables.",2400],
+        ["Irish Pub Chicken Curry","A real favorite, Irish pub curry, sweet & not too spicy, choice of rice, steak fries or both!",2400],
+        ["Shepherds Pie","Ground beef with root vegetables in a rich gravy, topped with creamy mash, & side of locally grown vegetable",2400],
+        ["Guinness Steak Pie","Tender beef, rich Guinness gravy in a flaky puff pastry pie with locally grown vegetables & creamy mash",2600],
+        ["Vodka Chicken Fettuccine","Diced chicken breast, leeks, garlic, marinara, heavy cream, pepper flakes, white wine & parmesan",2200],
+        ["Grilled Salmon","Grilled fresh Salmon served with grilled asparagus & rice",2800],
+        ["Ultimate Fish & Chips","3/4lb North Atlantic Haddock, beer battered, steak cut potato fries, tarter sauce",2700],
+        ["Lentil & Garbanzo Stew","Garbanzo Beans, quinoa, & lentils simmered in a spiced tomato-spinach puree with garlic, ginger, & aromatic Indian spices. Finished with fresh arugula & toasted almonds",2300],
+      ] },
+      { name: "Burgers & Sandwiches", items: [
+        ["Spicy Castro Burger","Half pound angus beef patty on a brioche bun topped with house made chorizo, melted pepper jack cheese, sautéed onions, sizzling poblano chilies & Anaheim peppers with steak fries",2200],
+        ["Southwestern Burger","½lb angus beef patty topped with jalapeno, bacon, melted cheddar, honey roasted onions, grilled pineapple & BBQ sauce, steak fries",2200],
+        ["Signature Lamb Smash Burger","Two house made lamb patties Dubliner Irish cheese, pickled onion, arugula, house curry aioli, steak fries",2500],
+        ["Steak Sandwich","Confit garlic herb aioli, mixed green, mozzarella, caramelized onion, ciabatta roll & shoestring fries",2600],
+        ["Brisket Sandwich","15 hour slow roasted brisket, crispy fried onion straws, Guinness BBQ sauce, brioche bun & steak fries.",2400],
+        ["Kobe Burger","½lb Kobe beef patty, honey roasted onions, lettuce, tomato, pickles & Dubliner Irish cheese, chili aioli & French fries",2600],
+        ["Impossible Burger","100% plant based patty. brioche bun, lettuce, tomato, onion & 1000 island. Steak fries",2200],
+        ["House Burger","½lb black angus beef patty, lettuce, tomato & red onion, brioche bun, choice of cheese, steak fries",2000],
+        ["Fried Chicken Sandwich","Fresh chicken breast marinated in buttermilk & house secret spices, fried and served on a toasted brioche bun with lettuce, pickles and a Tullamore Dew whiskey mayonnaise. Shoestring fries",2000],
+      ] },
+      { name: "Sides", items: [
+        ["Steak Cut Fries","",700],
+        ["Skinny Fries","",700],
+        ["Side Vegetables","",500],
+        ["Side Mash","",600],
+        ["Side Colcannon","",700],
+        ["Garlic Bread","",500],
+        ["Curry Chips","Steak cut fries served with Irish pub–style chicken curry sauce",1500],
+        ["Loaded Fries","House fries topped with Guinness beer cheese sauce, bacon, tomatoes, and seasoned sour cream.",1300],
+        ["Garlic Fries","Steak cut fries tossed with fresh garlic, butter, parsley, and parmesan.",1200],
+      ] },
+      { name: "Dessert", items: [
+        ["Trinity Cheesecake","House-made Guinness chocolate brownie, creamy Baileys cheesecake, and Irish Whiskey ganache",1100],
+        ["Bread Pudding","With warm toffee sauce & house-made Guinness gelato",1100],
+      ] },
+      { name: "Beverages", items: [
+        ["Sprite Can","",400],
+        ["Coke Can","",400],
+        ["Coke Zero Can","",400],
+        ["Diet Coke Can","",400],
+        ["Ginger Ale Can","",425],
+        ["Sparkling Water Can","",300],
+        ["Ginger Beer Can","",350],
+      ] },
+      { name: "Brunch (Sat-Sun 11am-3pm)", items: [
+        ["The Proper Full Irish Breakfast","Irish style sausages, black & white pudding, Irish bacon, eggs, grilled tomatoes, soda bread, Heinz baked beans & hash brown patties.",2000],
+        ["Mini Irish Breakfast","Smaller version of The Proper Irish Breakfast. Sausage, rasher, egg, black & white pudding, soda bread & hash brown.",1600],
+        ["All American Breakfast","Eggs, 3 slices thick cut bacon, 3 pork sausages, sourdough toast & seasoned breakfast potatoes",1700],
+        ["Croissant French Toast","Croissant dipped in cinnamon milk & sweetened beaten eggs, pan-fried & covered in powdered sugar with house-made chocolate orange syrup & fresh berries.",1400],
+        ["Chorizo & Egg Scramble","House made chorizo & egg scramble, pico de gallo, breakfast potatoes & sourdough toast.",1800],
+        ["Veggie Scramble","Cabbage, roasted peppers, tomatoes, onions & egg scramble with seasoned breakfast potatoes",1600],
+        ["Eggs Benedict","Irish bacon, chorizo or corned beef $19; brisket $21. Toasted English muffin, poached eggs & hollandaise, seasoned breakfast potatoes.",1900,null,"from"],
+        ["Jumbo Irish Breakfast Roll","Irish style sausage, rasher, black & white pudding, egg & hash browns with an H.P. aioli.",1600],
+        ["Chorizo & Egg Burrito","House made chorizo & egg scramble, pico de gallo, wrapped in a flour tortilla & served with hash browns.",1600],
+        ["American Breakfast Sandwich","Bacon or pork sausage, cheddar cheese, scrambled egg & a side of hash brown patties. Choice of brioche bun or toasted croissant.",1500],
+        ["Irish Bacon Sandwich","Irish rasher bacon on a toasted brioche bun served with a side of hash brown patties.",1400],
+      ] },
+    ],
+    siteNote: "Prices are from the online menu and brunch page on their own website.",
   },
 
   /*
@@ -781,6 +922,77 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "A husband-and-wife café celebrating Mayan heritage in the Inner Richmond, with tamales and house-made lattes; todos bienvenidos. Prices are from their own online ordering.",
+  },
+
+  /*
+     AMP MODE — gathered 2026-10-05 from own
+     they are: Active gaming arena with private game pods
+     flag: AMP MODE is open by reservation or appointment only; the hours are their published reservation schedule, and they ask for bookings at least 1 day ahead.
+     flag: The phone number is published as a text line ('text us at 408-412-3877'), and the site says to call or text it for walk-throughs.
+     flag: Party prices are listed in three columns (60, 75 and 90 minutes of play), so each package size appears three times; the site marks 90 minutes as most popular.
+     flag: Team-event pages also list Hosted Play at $50 (AMP) and $75 (AMP+) as 'included for free', so it is not a separate item.
+     flag: Party pages say a $25 cleaning charge may apply only when an event needs much more than ordinary cleanup.
+     flag: The site's copyright line names VUNSH, INC., and some links point to myvunsh.com.
+     flag: No email address is published on the site or in Glenn's screenshots.
+     flag: Instagram @goampmode is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'amp-mode': {
+    address: "4125 Mohr Ave, Suite F, Pleasanton, CA 94566",
+    phone: "(408) 412-3877",
+    hours: "Mon-Thu 4pm-8:30pm, Fri 9am-8:30pm, Sat-Sun 10am-8:30pm",
+    sections: [
+      { name: "Playdates, family and friends", items: [
+        ["Private pod, 1 hour","Price per pod, 55 minutes of play, 2 players included; each extra player $22.50. Access to all games from your private pod.",4499],
+        ["Private pod, 1.5 hours","Price per pod, 85 minutes of play, 2 players included; each extra player $32.50. Access to all games from your private pod.",6499],
+        ["Private pod, 2 hours","Price per pod, 115 minutes of play, 2 players included; each extra player $39.99. Access to all games from your private pod.",7999],
+      ] },
+      { name: "Junior birthday parties (age 6)", items: [
+        ["Up to 16 players, 60-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",39500],
+        ["Up to 16 players, 75-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",48500],
+        ["Up to 16 players, 90-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",52500],
+        ["Up to 24 players, 60-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",52500],
+        ["Up to 24 players, 75-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",59500],
+        ["Up to 24 players, 90-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",72500],
+      ] },
+      { name: "Kids birthday parties (ages 7-9)", items: [
+        ["Up to 12 players, 60-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",27500],
+        ["Up to 12 players, 75-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",33500],
+        ["Up to 12 players, 90-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",39500],
+        ["Up to 18 players, 60-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",39500],
+        ["Up to 18 players, 75-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",46500],
+        ["Up to 18 players, 90-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",56500],
+        ["Up to 24 players, 60-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",48500],
+        ["Up to 24 players, 75-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",58500],
+        ["Up to 24 players, 90-minute play","Exclusive use of AMP MODE and a 45-minute celebration.",68500],
+      ] },
+      { name: "Older kids and teens parties (ages 10+)", items: [
+        ["Up to 10 players, 60-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",22500],
+        ["Up to 10 players, 75-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",27500],
+        ["Up to 10 players, 90-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",32500],
+        ["Up to 15 players, 60-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",29900],
+        ["Up to 15 players, 75-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",34900],
+        ["Up to 15 players, 90-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",42500],
+        ["Up to 20 players, 60-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",37500],
+        ["Up to 20 players, 75-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",42500],
+        ["Up to 20 players, 90-minute play","Reserved gaming pods, a dedicated event host and a 45-minute celebration.",52500],
+      ] },
+      { name: "Team building and corporate events", items: [
+        ["AMP: 10 participants, 2 pods","60 minutes of play. Hosted tournament play included.",22500],
+        ["AMP: 15 participants, 3 pods","60 minutes of play. Hosted tournament play included.",30900],
+        ["AMP: 20 participants, 4 pods","60 minutes of play. Hosted tournament play included.",39500],
+        ["AMP+: 10 participants, 2 pods","90 minutes of play. Hosted tournament play included.",32500],
+        ["AMP+: 15 participants, 3 pods","90 minutes of play. Hosted tournament play included.",44900],
+        ["AMP+: 20 participants, 4 pods","90 minutes of play. Hosted tournament play included.",54900],
+        ["Extra participant, AMP","Per extra participant on a 60-minute team event.",2250],
+        ["Extra participant, AMP+","Per extra participant on a 90-minute team event.",3250],
+        ["Dining space, 45 minutes","Add-on for team events.",5000],
+      ] },
+      { name: "Party add-ons", items: [
+        ["Kids’ food package, Domino’s","Per child, for parties.",600],
+        ["Kids’ food package, Mountain Mike’s","Per child, for parties.",800],
+      ] },
+    ],
+    siteNote: "Prices are from AMP MODE’s own website (pod, party and team-event pages); custom events are quoted separately.",
   },
 
   /*
@@ -2341,6 +2553,94 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Blue Pagoda — gathered 2026-10-05 from own
+     they are: Japanese omakase and sushi
+     flag: Omakase prices: their omakase page lists Dining Room Experience at $128 and Sushi Bar Experience at $138 per guest. The homepage notice says these took effect on August 8, 2026 (up from $108 and $118), so the new prices are used.
+     flag: Their omakase page has text that reads like an internal note left on the live site by mistake. Under both omakase options it says the mandatory 25% service fee should only apply to parties of 20 or more, and asks someone to update the website. Their July 2026 menu PDFs already say the 25% fee applies to parties of 20 or more, with no other gratuity expected. Only the fee is mentioned here; the request in that note was not acted on. Leon may want to tell the owner.
+     flag: The A5 Wagyu Omakase and the Omakase Sake Pairing are on their menu page with course lists only (PDFs) and no price, so they are left out. The September omakase menu is an image (omakase-menu-september.png); no prices were taken from it.
+     flag: À la carte prices come from 'ala-carte-july-2026-03.pdf' and kids prices from 'kids-july-2026-03.pdf', both linked from their homepage. The older 'bp-full-menu-april-ver2.pdf' (April) was not used for prices.
+     flag: Drinks are left out. Their September 2026 drink menu is mostly cocktails, sake, whisky and champagne, with only a few soft drinks and teas.
+     flag: Section names follow their PDF headings. 'Sashimi Selection — The Essence of the Ocean' is shortened to 'Sashimi Selection', and 'Echoes of Flame — Warm Kitchen Journey' to 'Echoes of Flame (Warm Kitchen)'. Item names keep their wording, with spacing after commas and capitalisation tidied (for example 'Uni Ikura,Sea Jewel Parfait').
+     flag: The menu PDFs do not say whether nigiri prices are per piece or per pair, so they are listed with no unit.
+     flag: Hours: the homepage footer, the contact page and Glenn's screenshot all agree on lunch Wed-Sun 12-2pm, dinner Tue/Wed/Thu/Sun 5:30-9:30pm and Fri-Sat 5-10:30pm. Monday is in neither list, so they are presumably closed Mondays, but they never say so, and 'closed Mon' was not added. The footer also says 'Kitchen Closes at 9:30pm', which conflicts with the 10:30pm Fri-Sat closing. Reservations are offered from 5:00pm to 8:00pm, and walk-ins are accepted when there is space.
+     flag: Happy hour (from the site banner): Tuesday, Wednesday, Thursday and Sunday, 5:30-6:30pm.
+     flag: Address: the contact page and Instagram bio say 'North Capitol Avenue' / 'N.Capitol Ave'. The site footer misspells it 'North Capital Avenue'. The Capitol spelling is used.
+     flag: Reservations are through Tock (https://www.exploretock.com/blue-pagoda-san-jose, linked from their site and Instagram). This is a booking link, not an ordering page, so order_url is null. They have no online ordering.
+     flag: Instagram bio (Glenn's screenshot): 'Omakase, Reimagined in San Jose', '26+ Years Master-Trained Chefs', and 'Autumn Crab Kaiseki Nov 21 on sale now' (a one-off event, not added as an item).
+     flag: No email address is published on the site or in the screenshots.
+     flag: Instagram @bluepagodasj is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'blue-pagoda': {
+    address: "1613 North Capitol Avenue, San Jose, CA 95132",
+    phone: "(669) 309-7920",
+    hours: "Tue 5:30-9:30pm, Wed-Thu 12-2pm & 5:30-9:30pm, Fri-Sat 12-2pm & 5-10:30pm, Sun 12-2pm & 5:30-9:30pm",
+    cuisine: "Japanese omakase and sushi",
+    sections: [
+      { name: "Omakase", items: [
+        ["Omakase, Dining Room Experience","A multi-course seasonal omakase in the main dining room, with each course served as a set of creations together. Per guest.",12800],
+        ["Omakase, Sushi Bar Experience","At the sushi bar, with each piece prepared and served one at a time in front of you. Per guest.",13800],
+      ] },
+      { name: "Sashimi Selection", items: [
+        ["Botan Shrimp with Black Truffle Sauce","",1000],
+        ["Uni Ikura, Sea Jewel Parfait","",1500],
+        ["Hokkaido Scallop Ikura Pearl, Truffle Kiss","",2200],
+        ["Smoked Amberjack, Southeast Asian Essence","",2200],
+        ["Ocean Trout, Sea Soil Elegance with Black Truffle","",2200],
+        ["Chef’s Selection Sashimi (Six Cuts)","",3600],
+        ["Bluefin Tuna Tasting, Three Expressions","",4200],
+        ["Full Tin Caviar Service","50g tin.",15000],
+      ] },
+      { name: "Echoes of Flame (Warm Kitchen)", items: [
+        ["Truffle Butter Edamame","",800],
+        ["Kisu Tempura, Matcha Sea Salt","",800],
+        ["Silken Chawanmushi, Essence of the Season","",1500],
+        ["Pressed Duck Breast, Yuzu Kosho Breeze","",1800],
+        ["Monkfish Liver Onsen Egg, Umami Embrace","",1800],
+        ["Signature A5 Wagyu Sando","",3000],
+        ["Slow-Simmered Abalone, Deep Ocean Harmony","",4200],
+        ["A5 Wagyu, Stone-Grilled Rendered to Perfection","",5900],
+      ] },
+      { name: "Nigiri Selection", items: [
+        ["Ocean Trout","",600],
+        ["Madai","",700],
+        ["Shima Aji","",700],
+        ["Kampachi","",700],
+        ["Bluefin Tuna Akami","",700],
+        ["Hokkaido Scallop","",700],
+        ["Zuke Bluefin Tuna Chutoro","",800],
+        ["Bluefin Tuna Otoro","",1000],
+        ["Botan Ebi","",1000],
+        ["A5 Japanese Wagyu Beef","",1000],
+        ["Hokkaido Scallop with Uni","",1200],
+        ["Santa Barbara Uni","",1200],
+        ["Ikura with Uni","",1200],
+        ["Hokkaido Uni","",1500],
+        ["Bluefin Tuna Otoro with Uni","",1500],
+        ["Bluefin Tuna Otoro with Caviar","",1500],
+        ["A5 Japanese Wagyu Beef with Uni","",1500],
+        ["A5 Japanese Wagyu Beef with Caviar","",1500],
+      ] },
+      { name: "Temaki Selection", items: [
+        ["Unagi Hand Roll","",1000],
+        ["Ikura Hand Roll","",1500],
+        ["Negitoro Hand Roll","",1500],
+        ["Uni Hand Roll","",2800],
+        ["Uni with Ikura Hand Roll","",2800],
+        ["Hokkaido Scallop with Caviar Hand Roll","",2800],
+      ] },
+      { name: "Dessert Selection", items: [
+        ["Yuzu Cheesecake","",500],
+        ["Lychee Sherbet","",500],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Dragon’s Delight Eel Bowl","Eel rice.",2599],
+        ["Imperial A5 Wagyu Feast","Japanese A5 wagyu.",6999],
+      ] },
+    ],
+    siteNote: "Prices are from the omakase page and the à la carte and kids menus on their own website.",
+  },
+
+  /*
      Boba Club — gathered 2026-09-21 from ordering-platform
      they are: Milk Tea & Sandwiches
      flag: Neither screenshot shows an address, phone or hours; both are of the Instagram profile @bobaclub2025 (the second is a zoomed crop of that same profile, not the ordering page's header)
@@ -2781,6 +3081,46 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Beyond ordinary, beyond flavors: Indian fusion pizza, in their own words. Prices are from the San Francisco shop's own online ordering.",
+  },
+
+  /*
+     Bottomline — gathered 2026-10-05 from own
+     they are: Streetwear clothing brand
+     flag: Glenn: this is his wife's family's clothing line, and he approved a 10% off welcome discount for the page. The store itself publishes no such code, so the code or mechanism still has to be agreed with them.
+     flag: Their IG story video cannot be used (we never open stories).
+     flag: Items are the 13 products in stock on 5 Oct 2026 (19 store listings, counting colorways); the other 22 listings (earlier rounds, tie-dye tees, Fault Line hats, 1800FDS tee, hoodies, sweatpants) show sold out and were left off. Product names keep the store's own spelling, including 'LONG SLEVE'.
+     flag: Store policies: ships from California; on-hand items ship in 3-5 business days; pre-orders take 3-5 weeks; no returns, exchanges or cancellations. Email bottomline@shopbottomline.com is on their contact-information page; no phone or address is published.
+     flag: IG bio (Glenn's screenshot): 'Clothing (Brand) · express and spread love · 10/10 | @everybodyeatsfestival'; a pinned post promotes Everybody Eats Festival on 10 October at Gold Bar Hangar, Alameda. That is an event appearance, not a store address.
+     flag: Logo icon uses the black 'BL' disc from the IG profile picture; the disc's edge merges into a black tile.
+     flag: Instagram @__bottomline is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'bottomline': {
+    email: "bottomline@shopbottomline.com",
+    cuisine: "Streetwear clothing brand",
+    sections: [
+      { name: "Tees", items: [
+        ["BOTTOMLINE “LOVE” TEE V2","Oversized cropped boxy tee, 60% cotton / 40% polyester. \"Focus on what truly matters: love.\"",4999],
+        ["BOTTOMLINE “LAPU LAPU” TEE","Honours Lapu Lapu, the first Filipino warrior and hero; 100% cotton, true to size. Black or white.",4999],
+        ["BOTTOMLINE X CHARLIE SAR TEE","\"In loving memory of those we miss and in support of those still here.\" Premium 100% cotton, oversized. Black or white.",4999],
+        ["BOTTOMLINE \"SKULL ON FIRE\" TEE","Oversized cropped boxy tee, 60% cotton / 40% polyester, in red or lime.",4999],
+        ["BOTTOMLINE ESSENTIAL TEE • ROUND 2","Oversized 100% cotton essential tee in black or white.",4999],
+      ] },
+      { name: "Long sleeves & jerseys", items: [
+        ["BOTTOMLINE “LOVE” THERMAL LONG SLEVE V2","Black oversized thermal long sleeve, premium 100% cotton.",5999],
+        ["BOTTOMLINE ESSENTIAL THERMAL LONG SLEEVE • ROUND 3","Oversized 100% cotton thermal in grey.",5999],
+        ["BOTTOMLINE \"SKULL ON FIRE\" JERSEY V1","Oversized premium jersey in black.",6999],
+      ] },
+      { name: "Bottoms", items: [
+        ["BOTTOMLINE ESSENTIAL SHORTS V1","Essential shorts, black and white.",6999],
+        ["BOTTOMLINE PAISLEY SHORTS V1","Paisley shorts in a black and white colorway.",6999],
+        ["BOTTOMLINE ESSENTIAL 3/4 SWEATPANTS • ROUND 3","Lightweight oversized 3/4-length sweatpants in black.",6999],
+      ] },
+      { name: "Hats", items: [
+        ["PAISLEY HAT V2","5-panel snapback, one size: embroidered \"BL\" logo on the front, Old English \"Bottomline\" and \"Bottomline Paisley\" on the side panels. Six colorways.",4999],
+        ["PAISLEY HAT V1","The original paisley snapback with embroidered \"BL\" logo, in black/white.",4999],
+      ] },
+    ],
+    siteNote: "Prices are Bottomline's own from shopbottomline.com, where shipping is free on all orders.",
   },
 
   /*
@@ -3314,6 +3654,196 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Brundo Spice Company — gathered 2026-10-05 from own
+     they are: Ethiopian spices and herbs (online shop)
+     flag: Glenn's four screenshots for Brundo (IMG_5947, IMG_5950, IMG_5951, IMG_5954) no longer exist on disk (they were in a Messages temporary folder that has been cleared), so nothing could be read from them; the icon was made instead from the logo image on their own website (brundo.com header logo, flattened onto white).
+     flag: Brundo is an online spice shop, not a restaurant or storefront: their site publishes no street address, phone, email (contact form only) or opening hours. Their story page says they import from their own facility in Modjo, Ethiopia to Oakland, so city is null; Glenn's label places it under Oakland • Eats.
+     flag: Their Linktree also links to 'Order Food from Cafe Colucci - Powered by Brundo!'. Cafe Colucci is the founder Fetlework Tefferi's Ethiopian restaurant (their site calls it 'our Oakland, CA restaurant'); as a sister brand it was left off this page, but it could be its own BEASTY page.
+     flag: Items are their shop products with shop prices; products sold in two sizes (Mitmita, Berbere) are entered at the smaller price with label 'from' and both sizes in the description. Left out: gift card and the $0.50 shaker-top add-on.
+     flag: Glenn's link was their Linktree (linktr.ee/brundospices); site_url points to their own shop brundo.com, which the Linktree links to.
+     flag: Good one-liner material from their site: heirloom spices processed in Modjo, Ethiopia, a team about 85% women, founded by Fetlework Tefferi, who opened Cafe Colucci in Berkeley in 1991.
+     flag: Instagram @brundospices is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'brundo-spices': {
+    sections: [
+      { name: "Traditional Blends", items: [
+        ["Alicha Kimem","Ethiopian Mild Savory Blend",1100],
+        ["Mitmita","Hot Chili Blend (2 oz $11.00, 8 oz $18.00)",1100,null,"from"],
+        ["Shai Kimem","Traditional Tea Spice Blend",1000],
+        ["Shiro Mitten","Ethiopian Chickpea Blend",1700],
+        ["Berbere","Ethiopian Chili Pepper Blend (2 oz $11.00, 8 oz Refill Pack $19.00)",1100,null,"from"],
+      ] },
+      { name: "Specialty Blends", items: [
+        ["Cacoco Berbere Mix","Spice Blend, 7 oz. Berbere cocoa mix made with Coracao organic cocoa.",1600],
+        ["Mekelesha","Spice Blend",1100],
+        ["Makulaya","Spice Blend",1100],
+        ["Matafecha","Spice Blend",1100],
+        ["Manteria","Butter Seasoning Blend",1100],
+      ] },
+      { name: "Seeds & Herbs", items: [
+        ["Korerima","Black Cardamom",1300],
+        ["Bessobela","Basil",1200],
+        ["Koseret","Clarifying Herb",1100],
+        ["Tikur Azmud","Ethiopian Nigella Seed",1100],
+        ["Netch Azmud","Caraway Seed",1100],
+        ["Ird","Wild Turmeric",1100],
+      ] },
+      { name: "Condiments", items: [
+        ["Ethiopian Niter Kibbeh","Spiced clarified butter from Ethiopia and Eritrea, sometimes called tesmi.",1600],
+        ["Awaze","Traditional Ethiopian Condiment",1100],
+      ] },
+      { name: "Pantry", items: [
+        ["Gluten Free Teff Flour","",1100],
+      ] },
+      { name: "Home Brewing", items: [
+        ["Gesho Entchet","Hops Stems",1400],
+        ["Gesho Kitel","Hops Leaves",1200],
+      ] },
+      { name: "Cooking Kits", items: [
+        ["Surf & Turf Tibs Kit","Bring the sizzle of Ethiopian cooking into your kitchen with Tibs - a rich, full-flavored main entrée that’s as aromatic as it is satisfying.",6000],
+        ["Vegan Feast Kit","The Vegan Feast Kit is your gateway to the rich, vibrant world of traditional Ethiopian cooking.",12800],
+      ] },
+      { name: "Gifts & Extras", items: [
+        ["Spiced Spirits Bundle","Explore the flavors shaping a new generation of cocktails with our Spiced Spirits Bundle.",4500],
+        ["Spiced Spirits Cocktail Zine","Contemporary African Cocktail Zine.",1200],
+        ["Ethiopia Skate X Café Colucci Shirt","Café Colucci (our Oakland, CA restaurant) partnered with Ethiopia Skate on a fresh t-shirt design.",4500],
+      ] },
+    ],
+    siteNote: "Prices are from Brundo Spice Company's own online shop at brundo.com.",
+  },
+
+  /*
+     Buds Burgers — gathered 2026-10-05 from instagram
+     they are: Burgers
+     flag: Their Facebook page (Glenn's link) returned an error without logging in, so nothing was taken from it.
+     flag: Address is from their Instagram bio. Glenn's Apple Maps screenshot shows phone (707) 642-3252 and 10:30am-7:30pm for one day only; Apple Maps is not first-party, so phone and hours are null. Leon may choose to accept them, as was done for Shibam.
+     flag: Their Instagram profile picture is a burger photo, not a logo, so the icon is cut from Glenn's photo of their roadside 'Bud's GIANT BURGERS' sign; that photo came from visitvallejo.com, not from the business.
+     flag: Their Instagram display name is 'Buds Burgers.' and the sign reads 'Bud's'; name_exact follows the Instagram spelling without the trailing period.
+     flag: Instagram @budsburgers is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'buds-burgers': {
+    address: "3849 Sonoma Blvd, Vallejo, CA 94589",
+    cuisine: "Burgers",
+    contactOnly: "Buds Burgers does not publish prices on its own pages.",
+  },
+
+  /*
+     Burma 2 — gathered 2026-10-05 from own
+     they are: Burmese
+     flag: Their Instagram bio says 'Vegan & Halal-Friendly' (Glenn also says halal), so halal is true, but their own word is 'Halal-Friendly' and they run a full bar; Leon may prefer a 'halal-friendly' badge over a plain halal one.
+     flag: Hours are from their website (lunch 11:30am-3pm, happy hour 3-5pm and dinner Mon-Fri, all day on weekends). Their Toast page lists ordering hours ending 15 minutes earlier (8:45pm and 9:45pm), which reads as an online-ordering cutoff rather than a disagreement; last seating is 30 minutes before close.
+     flag: Glenn reports a welcome offer in the restaurant: 20% off when you scan the QR code on their menu and sign up with your phone number. It could not be seen online, so it is not in any field.
+     flag: Their site describes a dog-friendly patio with heated outdoor dining, live music nights and catering.
+     flag: Wine and sake/soju menus on Toast were left off; the non-alcoholic drinks are kept.
+     flag: Samosa 5- and 6-piece variants and the bulk sauce and dressing sizes on Toast were left off to keep the menu short.
+     flag: Their website menu page lists the dishes without prices; items and prices are from Toast.
+     flag: Instagram @burma2ca is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'burma-2': {
+    address: "1616 North Main St, Walnut Creek, CA 94596",
+    phone: "(925) 261-8580",
+    email: "burmatwo@gmail.com",
+    hours: "Mon-Thu 11:30am-9pm, Fri-Sat 11:30am-10pm, Sun 11:30am-9pm",
+    cuisine: "Burmese",
+    sections: [
+      { name: "Family-Style Meal", items: [
+        ["Family Meal #1","Samosas x4, Tea Leaf Salad, Samosa Soup, Minted Jalapeno Chicken, String Beans, Rice, and Shwe Gyi.",7000],
+        ["Family Meal #2","Samosas x4, Mango Salad, Samosa Soup, Burmese Curry, Broccoli & Garlic, Rice, and Sticky Rice.",7000],
+      ] },
+      { name: "Appetizers", items: [
+        ["Deep Fried Lotus Root","With seaweed aioli. Gluten-free.",1465],
+        ["Fried Tofu","Deep fried soft tofu served with a sweet and sour chile sauce. Gluten-free.",1365],
+        ["Palata","A flaky layered flatbread bread with choice of curry. Not gluten-free.",1200],
+        ["Samosas","Hand-made wheat-flour wraps fried and filled with potatoes, onions, and spices. Served with our special house sauce. *Allergens: Wheat, Soy, Nightshade, Allium **Cannot be Modified. Vegan. Not gluten-free.",1400],
+        ["Salt & Pepper Calamari","",1695],
+        ["Salt & Pepper Chicken","Choice of the following, deep-fried with scallions, jalapenos, white pepper and five spice, served with a sweet and sour chili sauce.",1695],
+        ["Salt & Pepper Shrimp","",1895],
+        ["Lettuce Wrap Tofu","Romaine lettuce wraps with tofu, carrots, green bell peppers, mushrooms, radish, ginger, garlic, water chestnuts, sesame seeds and hoisin sauce.",1565],
+        ["Lettuce Wrap Chicken","Romaine lettuce wraps with chicken, carrots, green bell peppers, mushrooms, radish, ginger, garlic, water chestnuts, sesame seeds and hoisin sauce.",1665],
+        ["Lettuce Wrap Shrimp","Romaine lettuce wraps with shrimp, carrots, green bell peppers, mushrooms, radish, ginger, garlic, water chestnuts, sesame seeds and hoisin sauce.",1765],
+      ] },
+      { name: "Salads", items: [
+        ["Tea Leaf Salad","A mix of Burmese fermented tea leaves, fried garlic, yellow beans, peanuts, sesame seeds, sunflower seeds, tomatoes, jalapenos and lemon on a bed of romaine lettuce and cabbage. ( Vegan ). Gluten-free. Vegan.",1795],
+        ["Mango Salad","Pickled mango with fried garlic, cabbage, red onions, cucumber, cilantro, yellow pea powder and fried onions, onion oil on a bed of romaine lettuce and cabbage. ( Vegan ). Gluten-free. Vegan.",1695],
+        ["Samosa Salad","Samosas with red onion, cilantro, cucumber, jalapenos, mint, sesame seeds, fried garlic, fried onions, yellow pea powder, tamarind sauce and a splash of samosa soup on a bed of romaine lettuce and cabbage.",1695],
+        ["Burmese Chicken Salad","Bite-sized fried chicken with red onions, cucumber, yellow pea powder, cabbage, cilantro, fried wontons, fried onions, sesame seeds, onion oil and chili sauce on a bed of romaine lettuce and cabbage. ( Gluten free optioon available ).",1795],
+      ] },
+      { name: "Soups", items: [
+        ["Moh Hin Gha (Pureed Catfish Chowder)","Pureed catfish bisque with lemongrass, ginger, garlic, onions, cilantro, egg yolk, rice powder, fish sauce, black pepper, and rice noodles.",1665],
+        ["Samosa Soup","Samosa and falafel with potatoes, chickpeas, mint, cabbage, jalapenos, red onions, bay leaves, paprika, masala, tamarind, turmeric and dried chili.",1665],
+        ["Ohn-no Khao Swè (Coconut Noodle Soup)","A rich and creamy bisque with flour noodles, served with chicken, onion, turmeric powder, paprika and garnished with a hard boiled egg, onions, cilantro and lemon. ( Vegetarian, vegan and gluten free option available).",1695],
+      ] },
+      { name: "Noodles", items: [
+        ["Burmese Garlic Noodles","Flat egg noodles tossed with with fried garlic, scallion, cucumbers, garlic oil and special garlic noodles sauce. ( Vegan and gluten free option available ).",1495],
+        ["Burma Noodles","Wheat noodles tossed with tofu, cucumber, cilantro, cabbage, red onions, fried onions, onion oil and chile sauce. ( Vegan option available ).",1665],
+        ["Nan Gyi Dok","Rice noodles with coconut chicken curry, yellow pea powder, cilantro, red onions, fried onions, fried wonton, lemon, fish sauce and topped with a hardboiled egg. ( Gluten free option available ).",1995],
+        ["Burmese Pad Thai","Rice noodles mixed with tofu, red bell peppers, cabbage, onions, scallions, bean sprouts, egg, peanuts, tamarind, paprika and fish sauce. (Vegan option available ). Gluten-free.",1700],
+      ] },
+      { name: "Main Dishes", items: [
+        ["Burma 2 Chicken Wings","Marinated in our Chef's special blend of spices and garnished with cilantro and green onions. Not gluten-free.",1895],
+        ["Basil & Chile","Dried red chile flake, Thai chile, jalapeno, onion, black pepper, and basil. Gluten-free.",1795],
+        ["Black Pepper","Onion, red & green bell pepper, celery, carrot, ginger, garlic, scallion, white wine, black bean sauce, soy sauce, and black & white pepper. Gluten-free.",1795],
+        ["Burmese Shrimp","Juicy shrimp stir-fried in an aromatic blend of vegan oyster and hoisin sauces, spiced with curry, Chinese five spice, sambal, and white wine, finished with garlic, ginger, and a touch of chili heat. Gluten-free.",2395],
+        ["Broccoli & Garlic","Broccoli tossed in wok with white wine, garlic, a little salt and garnished with fried onions. Gluten-free.",1700],
+        ["Eggplant & Garlic","Sauteed eggplant with garlic, ginger, scallions, basil, soy sauce and dried chilies. Gluten-free.",1795],
+        ["Burmese Fried Chicken","Marinated chicken, deep fried, topped w/ onions, red bell pepper, red onions, fresh mango cilantro, lemongrass, pineapple, cucumbers and our special Burmese sauce. Gluten-free.",1995],
+        ["Kebat","Stir-fried w/ onion, tomato, mint, cilantro, jalapeno, turmeric, tamarind, masala, and paprika. Gluten-free.",1795],
+        ["Mango","Wok-fired w/ soy sauce, Thai basil, onion, sambal chile, and mango purée. Gluten-free.",1795],
+        ["Pan Fried Salmon","Marinated salmon with ginger, garlic, cilantro, black pepper, white wine, egg white and cornstarch. Gluten-free.",2595],
+        ["Salmon Lemongrass Fusion","Grilled salmon with sambal chili, dried chilies, garlic, soy sauce, fish sauce, snap peas, red bell peppers, onions, scallions, lemongrass and fresh basil. Gluten-free.",2595],
+        ["Sesame","Lightly fried in soy sauce, vinegar, honey, topped w/ sesame seed. Gluten-free.",1795],
+        ["Burma String Beans","Stir-fried string beans with garlic, ginger, soy sauce and sambal chile sauce. Gluten-free.",1765],
+        ["Tofu","Gluten-free.",1795],
+        ["Walnut Shrimp","Lightly fried shrimp tossed in a wok with sweet sauce, topped with toasted walnuts and sesame seeds. Gluten-free.",2395],
+        ["Minted Jalapeño Chicken","Minced chicken with sambal chili sauce, mint leaves, garlic, ginger, jalapenos, cilantro, soy sauce, fennel seed powder and mustard seed powder. Gluten-free.",2295],
+        ["Lemongrass Chicken","Sambal chili, dried chilies, garlic, soy sauce, fish sauce, snap peas, red bell peppers, lemongrass and fresh basil.",2095],
+        ["Chicken & Shrimp Biryani","Shrimp and Marinated Chicken w/ onions, red and green bell peppers, celery, carrots, ginger, garlic, scallions, white wine, black bean sauce, soy sauce, and black & white pepper. Gluten-free.",2500],
+        ["Burmese Curry","Gluten-free.",1795],
+        ["Dry Curry","Coconut milk, evaporated milk, string bean, okra, lemongrass, garlic, turmeric, paprika, curry powder, blue ginger. Gluten-free.",1795],
+        ["Pumpkin Curry","Locally-sourced pumpkin, coconut milk, evaporated milk, curry powder, broccoli, carrot, and bay leaf. Gluten-free.",1795],
+        ["Coconut Chicken Curry","Gluten-free.",2095],
+      ] },
+      { name: "Rice", items: [
+        ["Homestyle Fried Rice","Choice of jasmine or brown rice with onions, yellow pea, turmeric, fried onions and egg. (Vegan option available ). Gluten-free.",1665],
+        ["Pineapple Fried Rice","Choice of jasmine or brown rice with pineapple., green beans, carrots, egg, onions, scallions. Soy sauce and turmeric. ( Vegan option available ). Gluten-free.",1765],
+        ["Burmese Indian Rice","Basmati rice prepared with green cardamom, cinnamon, biryani masala, raisin, bay leaves, cloves and light butter.",400],
+        ["Coconut Rice","",350],
+        ["Jasmine Rice","Soft and fluffy w/ a mild flavor and a light, airy texture. A versatile classic, perfect for complementing any dish.",300],
+        ["Brown Rice","Hearty and wholesome w/ a slightly nutty flavor and a satisfying, chewy texture.",300],
+      ] },
+      { name: "Dessert", items: [
+        ["Fried Coconut Pudding","Coconut pudding made with yellow bean powder, flour, cornstarch, sugar, and deepfried, topped with fresh strawberries and coconut cream, served with a scoop of chocolate, vanilla or mango ice cream.",1150],
+        ["Fried Banana","Fresh banana dipped in ( cornstarch, flour, salt, sugar, water, cooking oil) deep fried and topped with fresh strawberries and condensed milk, served with a scoop of chocolate, vanilla or mango ice cream.",1150],
+        ["Dessert Palata","Palata with fresh banana and strawberries topped with condensed milk, served with a scoop of chocolate, vanilla or mango ice cream.",1300],
+        ["Sticky Rice","Black sweet rice with brown sugar, coconut milk and condensed milk, served with a scoop of chocolate, vanilla or mango ice cream.",1150],
+        ["Shwe Gyi (Burmese Semolina Cake)","Semolina flour, eggs, butter, sugar, water, coconut cream, evaporated milk and poppy seeds, served with a scoop of chocolate, vanilla or mango ice cream.",1150],
+        ["Ice Cream","Chocolate, vanilla or mango.",700],
+      ] },
+      { name: "Beverages", items: [
+        ["Burmese Ice Tea","",600],
+        ["Baby Coconut","",900],
+        ["Regatta Ginger Beer","",500],
+        ["Fiji","",700],
+        ["San Benedetto Sparkling (1L)","",700],
+        ["Coca-Cola","Coca-Cola Original Taste — the crisp, refreshing taste you know and love.",350],
+        ["Diet Coke","Take a Diet Coke break with this refreshing, no-calorie soft drink.",350],
+        ["Sprite","Classic, cool, crisp lemon-lime flavored taste that's caffeine free.",350],
+        ["Ginger Ale","",350],
+        ["Lemonade","",350],
+        ["Iced Tea","",350],
+        ["Club Soda Water","",250],
+        ["Kids Soft Drink","",300],
+        ["N/A Hibiscus Mojito","",800],
+        ["Mexican Coca-Cola","",500],
+        ["Mexican Sprite","",500],
+        ["Cranberry Juice","",400],
+        ["Orange Juice","",400],
+      ] },
+    ],
+    siteNote: "Prices are from Burma 2’s own Toast online ordering page; protein choices and add-ons may cost extra.",
+  },
+
+  /*
      Bust Down & Co. — gathered 2026-09-21 from own
      they are: Custom jewelry & watches
      flag: Glenn: “San Jose • Services, BEASTY • Services. Please put a glow on the BEASTY spot.” This is the San Jose listing: no glow, on the services yellow sheet (no jeweller category).
@@ -3584,6 +4114,82 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Cali Alley — gathered 2026-10-05 from own
+     they are: Artisan burgers, sandwiches and plates from an outdoor food window
+     flag: Address, phone, email and hours match Glenn's note and the website footer (1012 Grayson Street, Berkeley 94710; T (510) 644-4473; order@calialley.com; 11:30AM-8PM, closed Sunday). Their ChowNow page adds 'STE B' to the street address, which the website and Instagram bio leave off.
+     flag: Their ChowNow ordering page accepts orders from 11:15am, slightly before the 11:30am opening on the website; hours use the website's 11:30am.
+     flag: The Instagram bio says 'The Bay Area's Artisan Food Counter', 'A Black-Owned Berkeley Restaurant', and names the chef as @chefdov (Chef Dov Sims on the website). Good one-liner material, along with the website's 'fully outdoor artisan food window' down an alley in West Berkeley.
+     flag: Catering is run through a separate account, @californiarosecatering (the website's Catering link and californiarose.com); it was not included as a separate business.
+     flag: Items are the ChowNow menu with duplicates removed (the 'Popular Items' and 'Today's Specials' sections repeat regular items). Left out: the gift card and a $0 Chocolate Chipotle BBQ sauce add-on. The 4 Burger Combo ($60) is marked on their menu as exempt from promos and discounts.
+     flag: The icon was cut from the pink header of their website (Glenn's screenshot), because the Instagram profile-picture version has the wordmark pressed against the circle edge.
+     flag: Instagram @cali.alley is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'cali-alley': {
+    address: "1012 Grayson Street, Berkeley, CA 94710",
+    phone: "(510) 644-4473",
+    email: "order@calialley.com",
+    hours: "Mon-Sat 11:30am-8pm, Sun closed",
+    sections: [
+      { name: "Burgers & Sandwiches", items: [
+        ["The Fat Cat","Our fried chicken sandwich. All Natural chicken breast marinated in buttermilk, lightly dusted with our flour spice mix and fried. Stacked with pepperoncini's, fried shallots, marinated cabbage and house made thousand island aioli.",1900],
+        ["The Brunch Burger","Our house ground brisket burger. Smoked & Rendered Bacon. Cheddar Cheese. Fried Egg. Avocado. Onion Marmalade. Tomato. Aioli. Acme brioche bun",2100],
+        ["The Cali Alley Burger","Chargrilled, fresh ground brisket & short rib burger, served on a toasted brioche bun with crisp lettuce, tomato, onion marmalade & garlic aioli. Served with a mixed green salad or fries.",1800],
+        ["The Alley 'Beyond' Burger","Fire grilled plant based patty, topped with swiss cheese. Layered with pepperoncini's, fried shallots, onion marmalade and fresh avocado.",1900],
+        ["Banh Mi Burger","Our brisket burger, topped with pork belly, pickled cucumber, fresh cilantro, pickled carrot, jalepeno, soisin glaze and 'beni shoga' aioli",1900],
+        ["The Cali Alley 4 Burger Combo","Order 4 Cali Alley hamburgers for $60. EXEMPT FROM ALL PROMOS AND DISCOUNTS",6000],
+        ["The Chef Burger","A staple among the chefs. Over 9oz of choice beef! Chargrilled ground brisket & short rib burger (6.5oz), served on a toasted brioche bun with 3oz house smoked tri tip steak, swiss cheese, pepperoncini, onion marmalade, onions & housemade Thousand Island aioli. Served with a mixed green salad or fries.",2100],
+        ["Smoked Tri Tip Sandwich","Over 6oz of house smoked tri tip steak stacked with our cabbage salad, house made buttermilk dressing and melted swiss cheese on a brioche bun. Served with a side of our chocolate chipotle bbq sauce.",1900],
+      ] },
+      { name: "Housemade Belgian Waffles", items: [
+        ["Cali Alley Buttermilk Waffle","Our own recipe. Made with Buttermilk and Sour Cream, our waffle has a crisp outside with a soft custard like center. Served with Cinnamon Butter, Real Vermont Maple Syrup and our house made Fruit Compote",1500],
+        ["Fried Chicken & Waffle","Our buttermilk Fried Chicken Tenders (3) served with the Cali Alley Waffle. Served with Vermont Maple Syrup and Cinnamon Butter.",2100],
+      ] },
+      { name: "Plates", items: [
+        ["Mojo Pork Plate","We sear, then braise the pork in fresh lime juice, fresh orange juice, Spanish sherry, fresh garlic and herbs. Served with coconut black beans, fried cabbage rice, fried plantains and giardiniera!",2100],
+        ["Buttermilk Fried Chicken","Lightly fried buttermilk marinated boneless chicken breast tenders served with coconut black beans, Chef Kathy's mac & cheese & chimichurri vinaigrette.",1900],
+        ["Steamed Bao Bun Plate (4pc)","pickled carrot, cilantro, toasted peanuts, vegetarian fried rice. grilled pineapple. furikake, soisin sauce",1800],
+        ["Loco Moco (Gluten Free)","Comfort at its best. Our brisket burger is topped with a fried egg and fresh mushroom gravy. Stacked with sauteed kale and our vegetarian fried rice.",1900],
+      ] },
+      { name: "Bowl (Rice or Salad)", items: [
+        ["Grilled Prawn Bowl (Rice or Salad)","Bamboo grilled prawns served with vegetarian fried rice, soft boiled egg, pickled carrots, cucumbers, 'gingered' kale & crispy rice noodles.",1900],
+        ["Grilled Tofu Bowl (rice or salad)","Marinated & grilled tofu served with vegetarian fried rice, soft boiled egg, pickled carrots, cucumbers, 'gingered' kale & crispy rice noodles.",1800],
+        ["Pork Belly Bowl (rice or salad)","Our house braised five spice pork belly, grilled and served with vegetarian fried rice, soft boiled egg, pickled carrots, cucumbers, 'gingered' kale & crispy rice noodles. Topped with Soisin sauce.",1900],
+        ["Brisket Burger Bowl","Our char grilled 6oz Brisket Burger set atop cabbage fried rice. Topped with Wakame (seaweed salad), pickled ginger, sauteed kale, pickled carrot/jalapeno, crisply noodles and our 8 minute egg.",1900],
+      ] },
+      { name: "Sides", items: [
+        ["Mac n' Cheese","Chef Katia's famous, homemade, mac n' cheese!",700],
+        ["Cali Alley Salad","Crisp Mixed Greens topped with our grilled corn and cherry tomato medley. Served with a side of balsamic vinaigrette.",800],
+        ["Side of Black Beans","Our coconut - chipotle black beans topped with queso fresco",600],
+        ["Bamboo Grilled Prawns","Large Prawns. Four prawns to a skewer. Olive oil, salt and pepper. Fire Grilled.",1000],
+        ["Side of Cabbage Fried Rice","Jasmine rice quickly sautéed with our marinated cabbage, pickled carrot and jalapeno",600],
+        ["Parmesan, Garlic & Truffle Fries","Fresh garlic and finely grated parmesan tossed with our crispy fries and truffle oil.",1000],
+        ["Cali Alley Fries","Best fries in the Bay Area! Contains Gluten",700],
+        ["Loaded Mac & Cheese","chef Katia's mac & cheese prepared with smoked bacon, scallions, 6 cheeses and topped with truffle oil!",1000],
+        ["Fried Plantains","Side of delicious fried plantains",1000],
+      ] },
+      { name: "Kids", items: [
+        ["Fried Chicken, Mac n' Cheese","A small mac n' cheese, one fried chicken tender and a whole fruit.",1000],
+        ["Fried Chicken & Fries","One fried chicken tender, crispy fries and whole fruit",1000],
+        ["Meat & Bun Burger","3.5oz brisket burger on fresh brioche bun. Meat and bun only. No aioli or toppings. Fries and whole fruit.",1000],
+      ] },
+      { name: "Desserts", items: [
+        ["Nonna's Cheesecake","",600],
+      ] },
+      { name: "Beverages", items: [
+        ["Fresh Mint Limeade","Made in house with freshly juiced limes, fresh mint and a lil sugar!",600],
+        ["Fresh Thai Iced Tea (add boba)","We make our own Thai Tea mix with ChaTraMue, a Thai Black Tea using Assam. Strong and delicious . Condensed milk and fresh Boba (optional). 16oz.",500],
+        ["Mexican Bottle Coke","",600],
+        ["Diet Coke 20oz Bottle","plastic 20oz",600],
+        ["Bundaberg Ginger Beer","",600],
+        ["Housemade Iced Tea (black tea)","House made ice tea",500],
+        ["Arnold Palmer","Our house limeade and ice tea combination",600],
+        ["Squirt Mexican Soda Bottle","12oz",600],
+      ] },
+    ],
+    siteNote: "Prices are from Cali Alley's own ChowNow online ordering menu, linked from their website.",
+  },
+
+  /*
      Cali Party Bus — gathered 2026-09-21 from own-domain
      they are: Party bus rental
      flag: a travel fee may apply beyond 40 miles of their Oakland terminal, their own note
@@ -3609,6 +4215,180 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "Party buses and limo vans out of an Oakland terminal. Their own published starting rates, Sunday to Friday; Friday night and Saturday are $5 to $10 an hour more, and the rate covers tax, fuel, tolls and the driver's gratuity.",
+  },
+
+  /*
+     CaliKid Burgers ’n Shakes — gathered 2026-10-05 from own
+     they are: California-style burgers and shakes
+     flag: Their own site says they serve halal and plant-based options (alongside Certified Angus beef and bacon), so halal is false and the options are listed under dietary instead.
+     flag: Hours come from their Instagram bio (Mon-Sat 11am-9pm, Sun 11am-8pm), which matches the hours their Toast page publishes for both locations; the bio was cut off with 'more', so any extra line after it was not seen.
+     flag: Their website menu pages list dishes without prices; every price here is from their Toast ordering page.
+     flag: The Chimi Bomb burger is marked as a seasonal item on their site.
+     flag: Merch (tumbler, stickers) and items marked out of stock on Toast were left off.
+     flag: Glenn named both Livermore and Pleasant Hill; this is the Livermore record, and the Pleasant Hill store (234 Golf Club Road) has its own record.
+     flag: Their Instagram has an Email button but the address itself is not shown in Glenn's screenshot or on their site, so email is null.
+     flag: Instagram @calikidburgers is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'calikid-burgers-livermore': {
+    address: "4587 Livermore Outlets Drive, Livermore, CA 94551",
+    phone: "(925) 495-4572",
+    hours: "Mon-Sat 11am-9pm, Sun 11am-8pm",
+    sections: [
+      { name: "Burgers", items: [
+        ["The Cali Kid","Aged White Cheddar, Butter Lettuce, Carmelized Onions, Tomato, Cali Sauce, House Pickle Mix (Pickled Onions and Zucchini)",999],
+        ["Happy Hippie","Sliced Avocado, Havarti, Arugula, Spicy Cherry Bomb Sauce, House Pickle Mix (Pickled Onions & Zucchini)",1099],
+        ["BBQ Bluegrass","Smoked Gouda, Thick-Cut Bacon, Crispy Onion Ring, Brown Sugar BBQ Sauce, Arugula, Tomato",1199],
+        ["Green Dream","Griddled Mozzarella, Sliced Avocado, Green Goddess Sauce, Arugula, House Pickle Mix (Pickled Onions and Zucchini)",1099],
+        ["Chile Smash","Pepperjack, Sliced Avocado, Charred Corn & Jalapeno Relish, Tortilla Strips, Butter Lettuce, Spicy Cherry Bomb Sauce",1199],
+        ["Hangover Helper","Aged White Cheddar, Thick-Cut Bacon, Sunny Egg, Waffled Hash Brown, Tomato, Cali Sauce, Tabasco",1299],
+        ["Create Your Own","",999],
+        ["Chimi Bomb","Seasonal. Pepperjack, Spicy Cherry Peppers, Arugula, Chimi Verde Sauce, Spicy Cherry Bomb Sauce.",1149],
+      ] },
+      { name: "Salads", items: [
+        ["Taco Chop","Romaine & Arugula Mix, Sliced Avocado, Charred Corn & Jalapeno Salsa, Queso Fresco, Grape Tomato, Radish, Chopped Cilantro, Tortilla Strips, tossed in Lemon Vinaigrette, Spicy Cherry Bomb Drizzle",950],
+        ["Green Goddess Salad","Romaine & Arugula Mix, Sliced Avocado, Feta, Radish, Cucumber, Mint, Pepitas, Crispy Chickpeas, Fresh Black Pepper, tossed in Green Goddess Dressing, Chimi Verde Sauce Drizzle.",950],
+        ["Spicy Caesar","Romaine, Ground Parmesan Cheese, Chopped Parsley, Grape Tomato, Fresh Black Pepper, Onion Rings, tossed in Spicy Caesar Dressing.",899],
+      ] },
+      { name: "Sides", items: [
+        ["Russet Fries","Crispy Coated Fries tossed in our Signature Cali Seasoning",399],
+        ["Thick-Cut Onion Rings","Gourmet Breaded Onion Rings",450],
+        ["Buffalo Cauliflower Wings","Fried Hand-Breaded Cauliflower tossed in our Signature Cali Seasoning, served with a side of Buffalo Ranch Dipping Sauce",650],
+        ["Crispy Brussels","Fried Brussels Sprouts tossed in a Creamy Garlic Sauce, Ground Parmesan, Chopped Parsley. Served with a side of Spicy Cherry Bomb Dipping Sauce",649],
+        ["House Frickles","Crispy, Hand-Breaded Fried Zucchini and Onion Pickles",399],
+        ["Garlic Fries","Crispy Coated Fries tossed in our Signature Cali Seasoning, Garlic Aioli Drizzle, Ground Parmesan Cheese, Chopped Parsley",649],
+        ["Chimi Bomb Fries","",699],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Kid Hamburger","Angus Beef Patty, Ketchup and Mayo",899],
+        ["Kid Grilled Cheese","Cheddar and Havarti Cheese, Cali Sauce, griddled crisp on an inverted Brioche Bun",799],
+      ] },
+      { name: "Shakes", items: [
+        ["Vanilla","Premium Organic Vanilla Ice Cream, Whipped Cream, Mini Donut",699],
+        ["Salted Malted Caramel","Premium Organic Vanilla Ice Cream, Malt, Chopped Whopper Candy, Caramel Drizzle, Whipped Cream, Mini Donut",699],
+        ["Strawberry Shortie","Premium Organic Strawberry Ice Cream, Strawberry Preserve, Shortbread Cookie Crumble, Whipped Cream, Mini Donut",699],
+        ["Chocolate","Premium Organic Chocolate Ice Cream, Whipped Cream, Mini Donut",699],
+        ["Oreo Crumble","Premium Organic Vanilla Ice Cream, Oreo Crumble, Whipped Cream, Mini Donut",699],
+        ["Wicked Peanut Butter Boo Shake","Premium Organic Vanilla Ice Cream, Reese's Peanut Butter Crumbles, Peanut Butter Candy Crunch, Chocolate Drizzle, Wicked Sprinkles, Whipped Cream, Mini Donut",699],
+        ["Cold Coffee","Premium Organic Vanilla Ice Cream, Coffee, Chocolate Drizzle, Cocoa Powder, Whipped Cream, Mini Donut",699],
+      ] },
+      { name: "CaliFreeze", items: [
+        ["Crimson Berry Freeze","",699],
+      ] },
+      { name: "Sweets", items: [
+        ["Mini Donuts","Fried Donut Holes tossed in Cinnamon Cardamom Sugar. Served with a side of Caramel Dipping sauce.",599],
+      ] },
+      { name: "Sauces", items: [
+        ["Cali Sauce","",75],
+        ["Spicy Cherry Bomb","",75],
+        ["Green Goddess Sauce","",75],
+        ["Buffalo Ranch","",75],
+        ["Yogurt Ranch","",75],
+        ["Brown Sugar BBQ","",75],
+        ["Garlic Aioli","",75],
+        ["12 oz Bottled Cali Sauce","",900],
+        ["12 oz Bottled Cherry Bomb Sauce","",900],
+      ] },
+      { name: "Beverages", items: [
+        ["Cola","",375],
+        ["Diet Cola","",375],
+        ["Lemon Lime","",375],
+        ["Orange","",375],
+        ["Ginger Beer","",375],
+        ["Rootbeer","",375],
+        ["Creme Soda","",375],
+        ["Poivre MD","",375],
+        ["Bottled Water","",250],
+        ["Root Beer Float","",650],
+      ] },
+    ],
+    siteNote: "Prices are from CaliKid’s own Toast online ordering page for this location; add-ons can cost extra.",
+  },
+
+  /*
+     CaliKid Burgers ’n Shakes — gathered 2026-10-05 from own
+     they are: California-style burgers and shakes
+     flag: Their own site says they serve halal and plant-based options (alongside Certified Angus beef and bacon), so halal is false and the options are listed under dietary instead.
+     flag: Hours come from their Instagram bio (Mon-Sat 11am-9pm, Sun 11am-8pm), which matches the hours their Toast page publishes for both locations; the bio was cut off with 'more', so any extra line after it was not seen.
+     flag: Their website menu pages list dishes without prices; every price here is from their Toast ordering page.
+     flag: The Chimi Bomb burger is marked as a seasonal item on their site.
+     flag: Merch (tumbler, stickers) and items marked out of stock on Toast were left off.
+     flag: Glenn named both Livermore and Pleasant Hill; this is the Pleasant Hill record, and the Livermore store (4587 Livermore Outlets Drive) has its own record.
+     flag: The Pleasant Hill Toast menu differs slightly from Livermore's (it has Crimson Berry and Orange Dreamsicle CaliFreezes); prices for shared items are the same.
+     flag: Their Instagram has an Email button but the address itself is not shown in Glenn's screenshot or on their site, so email is null.
+     flag: Instagram @calikidburgers is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'calikid-burgers-pleasant-hill': {
+    address: "234 Golf Club Road, Pleasant Hill, CA 94523",
+    phone: "(925) 421-1146",
+    hours: "Mon-Sat 11am-9pm, Sun 11am-8pm",
+    sections: [
+      { name: "Burgers", items: [
+        ["The Cali Kid","Aged White Cheddar, Butter Lettuce, Carmelized Onions, Tomato, Cali Sauce, House Pickle Mix (Pickled Onions and Zucchini)",999],
+        ["Happy Hippie","Sliced Avocado, Havarti, Arugula, Spicy Cherry Bomb Sauce, House Pickle Mix (Pickled Onions & Zucchini)",1099],
+        ["BBQ Bluegrass","Smoked Gouda, Thick-Cut Bacon, Crispy Onion Ring, Brown Sugar BBQ Sauce, Arugula, Tomato",1199],
+        ["Green Dream","Griddled Mozzarella, Avocado, Green Goddess Sauce, Arugula, House Pickle Mix (Pickled Onions and Zucchini)",1099],
+        ["Chile Smash","Pepperjack, Avocado, Charred Corn & Jalapeno Relish, Tortilla Strips, Butter Lettuce, Spicy Cherry Bomb Sauce",1199],
+        ["Hangover Helper","Aged White Cheddar, Thick-Cut Bacon, Sunny Egg, Waffled Hash Brown, Tomato, Cali Sauce, Tabasco",1299],
+        ["Create Your Own","",999],
+        ["Chimi Bomb","Seasonal. Pepperjack, Spicy Cherry Peppers, Arugula, Chimi Verde Sauce, Spicy Cherry Bomb Sauce.",1149],
+      ] },
+      { name: "Salads", items: [
+        ["Taco Chop","Romaine & Arugula Mix, Sliced Avocado, Charred Corn & Jalapeno Salsa, Queso Fresco, Grape Tomato, Radish, Chopped Cilantro, Tortilla Strips, tossed in Lemon Vinaigrette, Spicy Cherry Bomb Drizzle.",950],
+        ["Green Goddess Salad","Romaine & Arugula Mix, Sliced Avocado, Feta, Radish, Cucumber, Mint, Pepitas, Crispy Chickpeas, Fresh Black Pepper tossed in Green Goddess Dressing, Chimi Verde Sauce Drizzle.",950],
+        ["Spicy Caesar","Romaine, Ground Parmesan Cheese, Chopped Parsley, Grape Tomato, Fresh Black Pepper, Chopped Onion Rings, tossed in Spicy Caesar Dressing.",899],
+      ] },
+      { name: "Sides", items: [
+        ["Russet Fries","Crispy Coated Fries tossed in our Signature Cali Seasoning",399],
+        ["Thick-Cut Onion Rings","Gourmet Breaded Onion Rings",450],
+        ["Buffalo Cauliflower Wings","Fried, Hand-Breaded Cauliflower tossed in our Signature Cali Seasoning. Served with a side of Buffalo Ranch Dipping Sauce.",650],
+        ["Crispy Brussels","Fried Brussels Sprouts tossed in a Creamy Garlic Sauce, Ground Parmesan, Chopped Parsley. Served with a side of Spicy Cherry Bomb Dipping Sauce.",649],
+        ["House Frickles","Crispy, Hand-Breaded Fried Zucchini and Onion Pickles",399],
+        ["Garlic Fries","Crispy Coated Fries tossed in our Signature Cali Seasoning, Garlic Aioli Drizzle, Ground Parmesan Cheese, Chopped Parsley",649],
+        ["Chimi Bomb Fries","",699],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Kid Hamburger","Angus Beef Patty, Ketchup and Mayo",899],
+        ["Kid Grilled Cheese","Cheddar and Havarti Cheese, Cali Sauce, griddled crisp on an inverted Brioche Bun",799],
+      ] },
+      { name: "Shakes", items: [
+        ["Vanilla","Premium Organic Vanilla Ice Cream, Whipped Cream, Mini Donut",699],
+        ["Salted Malted Caramel","Premium Organic Vanilla Ice Cream, Malt, Chopped Whopper Candy, Caramel Drizzle, Whipped Cream, Mini Donut",699],
+        ["Strawberry Shortie","Premium Organic Strawberry Ice Cream, Strawberry Preserve, Shortbread Cookie Crumble, Whipped Cream, Mini Donut",699],
+        ["Chocolate","Premium Organic Chocolate Ice Cream, Whipped Cream, Mini Donut",699],
+        ["Oreo Crumble","Premium Organic Vanilla Ice Cream, Oreo Crumble, Whipped Cream, Mini Donut",699],
+        ["Wicked Peanut Butter Boo Shake","Premium Organic Vanilla Ice Cream, Reese's Peanut Butter Crumble, Peanut Butter Candy Crunch, Chocolate Drizzle, Wicked Sprinkles, Whipped Cream, Mini Donut",699],
+        ["Cold Coffee","Premium Organic Vanilla Ice Cream, Coffee, Chocolate Drizzle, Cocoa Powder, Whipped Cream, Mini Donut",699],
+      ] },
+      { name: "CaliFreeze", items: [
+        ["Crimson Berry","",699],
+      ] },
+      { name: "Sweets", items: [
+        ["Mini Donuts","Fried Donut Holes tossed in Cinnamon Cardamom Sugar. Served with a side of Caramel Dipping Sauce.",599],
+      ] },
+      { name: "Sauces", items: [
+        ["Cali Sauce","",75],
+        ["Spicy Cherry Bomb","",75],
+        ["Green Goddess Sauce","",75],
+        ["Buffalo Ranch","",75],
+        ["Yogurt Ranch","",75],
+        ["Brown Sugar BBQ","",75],
+        ["Garlic Aioli","",75],
+        ["12 oz Bottled Cali Sauce","",900],
+        ["12 oz Bottled Cherry Bomb Sauce","",900],
+      ] },
+      { name: "Beverages", items: [
+        ["Cola","",375],
+        ["Diet Cola","",375],
+        ["Lemon Lime","",375],
+        ["Orange","",375],
+        ["Ginger Beer","",375],
+        ["Rootbeer","",375],
+        ["Creme Soda","",375],
+        ["Bottled Water","",250],
+        ["Root Beer Float","",650],
+      ] },
+    ],
+    siteNote: "Prices are from CaliKid’s own Toast online ordering page for this location; add-ons can cost extra.",
   },
 
   /*
@@ -5377,6 +6157,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Droneshow — gathered 2026-10-05 from own
+     they are: Drone light shows
+     flag: Droneshow publishes three packages but no prices ('We don't publish a rate card'), so items is empty: Signature Show (up to 100 drones, 10-12 minutes, choreography from their show library, licensed soundtrack); Semi-Custom Show (up to 150 drones, 2-3 custom animations, your logo in the sky); Custom Production (150-400+ drones, 15-25 custom animations, storyboard and 3D preview).
+     flag: They are based in Utah ('Based in Utah. Flying anywhere with sky.'), not the Bay Area; their locations page lists San Francisco (1 show) and Sacramento among the places they fly, and quotes travel as a line item.
+     flag: Phone 801-855-6700 is in the site footer and in Glenn's screenshot; no email is published (quotes go through the site's request form, answered by co-founder Ashly Stone).
+     flag: Owned and run by Ashly and Jesse Stone; FAA-authorized, fully permitted, no pyrotechnics (site's own wording). The /packages link in their menu 404s; the working packages page is https://www.droneshow.com/drone-show-packages.
+     flag: No street address or hours are published; city left null as an online/travelling business.
+     flag: Instagram @droneshowdotcom is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'droneshow': {
+    phone: "(801) 855-6700",
+    cuisine: "Drone light shows",
+    contactOnly: "Droneshow doesn't publish prices: every show is quoted to the event, with travel and permitting itemised before you sign.",
+  },
+
+  /*
      Dumont Creamery & Cafe — gathered 2026-09-21 from own-domain — BLOCKED: The Livermore shop has no page on dumont.us (https://dumont.us/pages/livermore is HTTP 404) and no first-party priced menu, phone or hours could be found for it; all Livermore-specific facts here come from their Instagram.
      they are: Ice cream, coffee and boba
      logo: https://dumont.us/cdn/shop/files/Untitled_200_x_170_px_200_x_100_px.png?v=1745934752 (200x100) — not cut into a tile yet
@@ -6176,6 +6972,30 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "A friends-and-family-owned breakfast and brunch spot in Bernal Heights, in their own words. Prices are from the menu on their own site.",
+  },
+
+  /*
+     Four Forty Four Events — gathered 2026-10-05 from own
+     they are: Event design, styling and planning
+     flag: No street address, phone or hours are published: it is a mobile event business whose Instagram bio says 'SF/OAK/SJ, CA', and inquiries go through the website form. City is set to Oakland to match Glenn's label; it could also be listed in San Francisco and San Jose.
+     flag: Email fourfortyfourevents@gmail.com is from the accessibility statement on their own website; the Instagram Email button's address is not visible in Glenn's screenshot.
+     flag: Price ranges (Silver and Gold backdrops) are entered at the lower price with label 'from'; the planning services are published as '$3,500+' and '$7,000+' and are also entered as 'from'. Add-ons (custom sweets, centerpieces, welcome sign, candy cart, garden swing) have no published prices.
+     flag: Their Instagram bio sends individual rentals to a separate account, @bayareaproprentals444, which was not included.
+     flag: The Instagram display name is 'Four Forty Four Events by Nancy' and the logo reads 'Four Forty Four Events by Nancy'; the founder is Nancy, a first-generation Mexican American born and raised in the Bay Area (from their Our Story page). Their Instagram bio says 'Now Booking 2027'.
+     flag: Instagram @four_forty_four_events is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'four-forty-four-events': {
+    email: "fourfortyfourevents@gmail.com",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Silver Tier Backdrop","Clean, elegant backdrop with minimal detailing, about 10'w x 8'h: sketch, custom colour palette, personalised name, organic balloon garland, 1-2 plinths, dessert stands. $2,850-$3,350 plus delivery; add-ons available.",285000,"from"],
+        ["Gold Tier Backdrop","Their most popular tier, about 14'w x 8'h: layered design, personalised signage, custom graphic design, premium props, 2 balloon garlands or flower sprays, 1-3 plinths, dessert stands. $3,500-$3,950 plus delivery; add-ons available.",350000,"from"],
+        ["Diamond Tier Backdrop","High-impact luxury installation, about 18'w x 8'h: custom panels and graphics, personalised signage, premium props, 2-3 luxe balloon garlands or flower sprays, 1-3 plinths, dessert stands. Plus delivery; add-ons available.",420000],
+        ["Event Design & Styling","Full event design concept and mood board, colour palette and styling direction, coordination of design vendors, site visit and layout, sourcing of rentals and decor, 4 hours of on-site styling. Service fee only.",350000,"from"],
+        ["Event Planning & Design","Everything in Design & Styling plus event planning and management, budget tracking, vendor sourcing and management, timeline creation, and day-of coordination. Service fee only.",700000,"from"],
+      ] },
+    ],
+    quoteOnly: "Prices are the package prices on Four Forty Four Events' own services page; backdrops add delivery and planning prices are service fees only.",
   },
 
   /*
@@ -7226,6 +8046,22 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Golden Donkatsu — gathered 2026-10-05 from instagram
+     they are: Korean donkatsu and Korean fusion
+     flag: No website of their own: their Instagram bio links only to a DoorDash marketplace store, which the brief excludes, so there are no items or prices.
+     flag: Street address is from their Instagram bio; the ZIP code 94568 is from their own post graphic ('DUBLIN, CA 94568'), not the bio.
+     flag: No phone, email or hours appear in Glenn's screenshots of their Instagram, so all three are null.
+     flag: Their Instagram display name is 'GOLDEN DONKATSU DUBLIN' and the logo reads 골든 왕돈까스 (Golden Wang Donkatsu); one of their posts names 'Golden Wang Donkatsu Santa Clara/Dublin, CA', so a sister location in Santa Clara appears to exist.
+     flag: A DoorDash promo post of theirs lists Dublin, Pleasanton and San Ramon, which looks like delivery coverage rather than extra locations.
+     flag: Cuisine line is built from their own words ('Crispy, golden comfort food', 'giant donkatsu and amazing Korean fusion dishes').
+     flag: Instagram @golden.donkatsu.dublin is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'golden-donkatsu-dublin': {
+    address: "7222 Regional St, Dublin, CA 94568",
+    contactOnly: "Golden Donkatsu does not publish prices on its own pages.",
+  },
+
+  /*
      Golden Gate Market & Deli — gathered 2026-09-21 from own
      they are: Sandwiches & market
      flag: Menu read in a browser from goldengatemarketdeli.com/Menu (a base44 site with its own ordering). Chips and drinks are on it; the market’s beer, wine and spirits are not listed and would not be here.
@@ -7637,6 +8473,82 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Gregory\'s Gourmet Desserts — gathered 2026-10-05 from own
+     their spelling: "Gregory's Gourmet Desserts" (roster keeps "Gregory\'s Gourmet Desserts")
+     they are: Dessert bakery: cheesecakes, cakes, pies and cobblers
+     flag: Name: the domain, IG, Facebook and founder story say 'Gregory's Gourmet Desserts' (used here); the current logo and Toast page say 'Gregory's Underground Bakery' ('Oakland's Underground Bakery'), and the page title misspells it 'Gregorys Gourmet Deserts'. Glenn or Leon should pick which name heads the page.
+     flag: Two locations. This record is Oakland (285 23rd Street, the address in Glenn's screenshot and on their Contact page and Toast). A second shop in San Ramon (their Toast link is named for 2410 San Ramon Valley Blvd, 140) has pickup Wed-Sat 10am-6pm and is closed Sun-Tue. Glenn labelled it BEASTY • Sweets without naming a city, so the slug has no city suffix.
+     flag: Hours are the 'Pickup' hours in their site footer, the only first-party source. Delivery runs later: Tue 9:30am-9:30pm, Wed-Sat 9:30am-midnight, Sun 12-8pm.
+     flag: Items are their whole-item menu from the Toast page their 'Order for Pickup' link opens (43 items: whole cakes, cheesecakes, half/full cobbler trays, pies, cookies by the dozen, brownie and lemon bar trays). Toast says orders must be placed by 3am the day before. Their site says they do not ship; all orders are pickup.
+     flag: Two of the four screenshots Glenn sent (IMG_5930, IMG_5937) were temporary files that no longer exist, so the IG handle comes from the link on their site.
+     flag: No email is published.
+     flag: Instagram @gregorysgourmetdesserts is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'gregorys-gourmet-desserts': {
+    address: "285 23rd St, Oakland, CA 94612",
+    phone: "(510) 272-9722",
+    hours: "Tue-Sat 9:30am-6:30pm, Sun 12pm-8pm, Mon closed",
+    sections: [
+      { name: "Cakes", items: [
+        ["8-Up Cake, Whole","You've heard of the 7-up pound cake. Well, we one-up'd it! One whole famous 8-up Cake!",5195],
+        ["Carrot Cake, Whole","A moist and spiced cake made with freshly grated carrots, warm cinnamon, and chopped nuts, layered with a creamy, tangy cream cheese frosting.",6795],
+        ["Chocolate on Chocolate Cake, Whole","Indulge your senses with our decadent Chocolate on Chocolate Cake, a true masterpiece of cocoa delight.",6795],
+        ["Yellow on Chocolate Cake, Whole","Indulge your senses with our decadent Yellow on Chocolate Cake. This rich and moist chocolate cake is the best of both worlds.",6795],
+        ["German Chocolate Cake, Whole","Indulge in a decadent delight that's been a favorite for generations.",6995],
+        ["Red Velvet Cake, Whole","A rich, velvety-soft cocoa-infused cake with a striking red hue, layered with cream cheese frosting.",6795],
+        ["Sweet Potato Cake, Whole","Savor the warm and comforting flavors of our Sweet Potato Cake, a delightful dessert that celebrates the earthy sweetness of sweet potatoes in a delectable form.",6995],
+        ["U Crazy Coconut Cake, Whole","A luscious fusion of tropical coconut and fresh strawberries, this moist vanilla cake is layered with creamy coconut frosting and house-made strawberry compote.",6795],
+      ] },
+      { name: "Cheesecakes", items: [
+        ["\"The Best Milkshake I've Ever Tasted\" Cheesecake, Whole","Gregory has turned the best milkshake he ever had into a cheesecake. A chocolate wafer-crusted cheesecake with coffee cream cheese filling with chunks of oreo inside.",7095],
+        ["Apple Streusel Cheesecake, Whole","Prepare your palate for a delectable journey with our Apple Streusel Cheesecake where classic flavors meet a delightful twist of autumn.",7095],
+        ["Banana Pudding Cheesecake, Whole","Embark on a delightful journey through the comforting flavors of the South with our Banana Pudding Cheesecake.",7095],
+        ["Blackberry Cobbler Cheesecake, Whole","Experience the best of two worlds in one unforgettable dessert with our Blackberry Cobbler Cheesecake.",7195],
+        ["Blueberry Streusel Cheesecake, Whole","Indulge in the perfect harmony of flavors with our Blueberry Streusel Cheesecake.",7095],
+        ["Caramel Pecan Cheesecake, Whole","",7195],
+        ["Cookies 'n Cream Cheesecake, Whole","Dive into a world of sweet indulgence with our Cookies 'n Cream Cheesecake, a dessert that flawlessly combines the classic flavors of cookies and cream with the...",7095],
+        ["Lake Merritt Special Cheesecake, Whole","\"The Oakland Classic\" | Chocolate wafer crust topped with bananas and brownie chunks, finished with New York cheesecake and chocolate ganache",7195],
+        ["New York Style Cheesecake, Whole","\"The Uptown Classic\" | Rich and creamy New York cheesecake with a silky sour cream topping on a golden graham crust.",7095],
+        ["Peach Cobbler Cheesecake, Whole","\"East Coast Meets the South\" | New York cheesecake topped after baking with our signature peach cobbler",7095],
+        ["Strawberry Streusel Cheesecake, Whole","\"The Red-Top Sweetheart\" | Fresh strawberry compote folded into creamy cheesecake, topped with butter-cinnamon streusel",7095],
+        ["Sweet Potato Cheesecake, Whole","Savor the comforting flavors of the South with our Sweet Potato Cheesecake, a delectable dessert that combines the richness of sweet potatoes with the creamy elegance...",7095],
+        ["Ugly Duckling Lemon Cookie Cheesecake, Whole","\"The Glow Up\" | Lemon-honey cheesecake on a butter cookie crust with a caramelized creme brulee top",7095],
+      ] },
+      { name: "Cobblers", items: [
+        ["Blackberry Cobbler, Half Tray","Immerse yourself in the rustic charm of the South with our delightful Blackberry Cobbler.",4295],
+        ["Blackberry Cobbler, Full Tray","Immerse yourself in the rustic charm of the South with our delightful Blackberry Cobbler.",7395],
+        ["Peach Cobbler, Half Tray","Experience the warmth and comfort of our Peach Cobbler, a quintessential Southern dessert that's a true testament to the sweet, juicy goodness of ripe peaches.",4295],
+        ["Peach Cobbler, Full Tray","Experience the warmth and comfort of our Peach Cobbler, a quintessential Southern dessert that's a true testament to the sweet, juicy goodness of ripe peaches.",7395],
+      ] },
+      { name: "Pies", items: [
+        ["Chocolate Cream Pie, Whole","Indulge your senses in a symphony of chocolate with our decadent Chocolate Cream Pie.",6516],
+        ["Chocolate Pecan Pie, Whole","Classic caramel pecan pie with pockets of rich melted chocolate in every few bites. Crunchy, warm, and a perfect chocolate surprise.",4774],
+        ["Coconut Cream Pie, Whole","A tropical delight with a velvety coconut-infused custard, topped with a cloud of fresh whipped cream and sprinkled with toasted coconut flakes.",6200],
+        ["Key Lime Pie, Whole","Transport your taste buds to a tropical paradise with our Key Lime Pie, a zesty and refreshing dessert that captures the essence of the Florida Keys in every bite.",6350],
+        ["Pecan Pie, Whole","Savor the warmth and nostalgia of the South with our classic pecan pie.",4623],
+        ["Pecan Sweet Potato Pie, Whole","Celebrate the cozy flavors of fall and the holidays with our Pecan Sweet Potato Pie, a delectable dessert that combines the earthy sweetness of sweet potatoes with...",4774],
+        ["Sweet Potato Pie, Whole","Embrace the comforting flavors of the South with our Sweet Potato Pie, a beloved dessert that celebrates the sweet and earthy essence of this humble tuber.",4556],
+      ] },
+      { name: "Cookies", items: [
+        ["Assorted Cookies, Dozen","An assortment of 12 of today's cookies",3200],
+        ["Blueberry White Chocolate Chip Cookies, Dozen","",3200],
+        ["Chocolate Chip Cookies, Dozen","Chocolate Chip Cookies are a timeless classic. These cookies are a perfect balance of soft and chewy, and they are generously studded with luscious chocolate chips.",3200],
+        ["Chocolate Chip Walnut Cookies, Dozen","",3200],
+        ["Cookies 'n Cream Cookies, Dozen","Satisfy your cookie cravings with our Cookies 'n Cream Cookie, a delightful treat that combines the timeless charm of chocolate cookies and the rich, creamy goodness...",3200],
+        ["Dark Chocolate Espresso Cookies, Dozen","Awaken your senses and delight your taste buds with our Dark Chocolate Coffee Cookie, a sophisticated treat that marries the bold flavors of dark chocolate and rich...",3200],
+        ["Oatmeal Raisin Cookies, Dozen","",3200],
+        ["Snickerdoodle Cookies, Dozen","Delight in the simple yet irresistible charm of our Snickerdoodle Cookies, a classic treat known for its soft, buttery goodness and signature cinnamon-sugar coating.",3200],
+      ] },
+      { name: "Speciality", items: [
+        ["Brownies, Full Tray","Decadent Chocolate Brownie * Contains Nuts",6000],
+        ["Lemon Bars, Half Tray","Savor the refreshing, tangy delight of our Lemon Bar, a classic and beloved dessert that captures the essence of citrusy sunshine in each delectable bite.",4050],
+        ["Lemon Bar, Full Tray","Savor the refreshing, tangy delight of our Lemon Bar, a classic and beloved dessert that captures the essence of citrusy sunshine in each delectable bite.",6500],
+      ] },
+    ],
+    siteNote: "Prices are Gregory's own for whole cakes, pies, trays and dozens on their Oakland Toast pickup ordering page; slices in the shop aren't priced online.",
+  },
+
+  /*
      Gumbo Social — gathered 2026-09-21 from own-domain — BLOCKED: Their Toast Online Ordering storefront (order.toasttab.com/online/gumbo-social, plus order.toasttab.com/egiftcards/gumbo-social and www.toasttab.com/catering/gumbo-social) returned a Cloudflare bot check (HTTP 403 'Just a moment...' / 'Performing security verification') to WebFetch, curl and headless Playwright. It was not bypassed, so live Toast prices and hours could not be cross-checked; the priced menu comes from gumbosocial.com/menu instead.
      they are: Soul food & gumbo
      logo: https://static.wixstatic.com/media/25988e_aa2b741887d246cd8e58d9d6c3978501~mv2.png — not cut into a tile yet
@@ -7715,6 +8627,64 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menu on Gumbo Social's own website, which says the menu changes regularly.",
+  },
+
+  /*
+     Handel\'s Homemade Ice Cream — gathered 2026-10-05 from own
+     their spelling: "Handel's Homemade Ice Cream" (roster keeps "Handel\'s Homemade Ice Cream")
+     they are: Ice cream shop
+     flag: Handel's is a national chain; Glenn named Brentwood, Walnut Creek and Livermore, and all three are on the chain's own store locator. No other Bay Area store is listed (the other Northern California stores are around Sacramento).
+     flag: Hours are the same on each store page and in the Bay Area Instagram bio; the store pages mark them 'subject to change'.
+     flag: No prices on the chain's website. Each store's 'Order Now' link goes to a DoorDash-run order.online storefront, which was not used for prices because the brief excludes DoorDash; Leon can decide whether that storefront counts as their own.
+     flag: The Instagram account handelsbayarea covers all three Bay Area stores.
+     flag: The Brentwood store page shows no phone number, so phone is null.
+     flag: The store is in The Streets of Brentwood, per its store page.
+     flag: Instagram @handelsbayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/store/handel-s-homemade-ice-cream-brentwood-42728995?pickup=true is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'handels-brentwood': {
+    address: "2455 Sand Creek Road, Brentwood, CA 94513",
+    hours: "Sun-Thu 11am-10pm, Fri-Sat 11am-11pm",
+    cuisine: "Ice cream shop",
+    contactOnly: "Handel's does not publish prices on its own website.",
+  },
+
+  /*
+     Handel\'s Homemade Ice Cream — gathered 2026-10-05 from own
+     their spelling: "Handel's Homemade Ice Cream" (roster keeps "Handel\'s Homemade Ice Cream")
+     they are: Ice cream shop
+     flag: Handel's is a national chain; Glenn named Brentwood, Walnut Creek and Livermore, and all three are on the chain's own store locator. No other Bay Area store is listed (the other Northern California stores are around Sacramento).
+     flag: Hours are the same on each store page and in the Bay Area Instagram bio; the store pages mark them 'subject to change'.
+     flag: No prices on the chain's website. Each store's 'Order Now' link goes to a DoorDash-run order.online storefront, which was not used for prices because the brief excludes DoorDash; Leon can decide whether that storefront counts as their own.
+     flag: The Instagram account handelsbayarea covers all three Bay Area stores.
+     flag: Instagram @handelsbayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/store/handel-s-homemade-ice-cream-1st-st-48498588?pickup=true is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'handels-livermore': {
+    address: "1912 First Street, Suite H, Livermore, CA 94550",
+    phone: "(925) 215-6414",
+    hours: "Sun-Thu 11am-10pm, Fri-Sat 11am-11pm",
+    cuisine: "Ice cream shop",
+    contactOnly: "Handel's does not publish prices on its own website.",
+  },
+
+  /*
+     Handel\'s Homemade Ice Cream — gathered 2026-10-05 from own
+     their spelling: "Handel's Homemade Ice Cream" (roster keeps "Handel\'s Homemade Ice Cream")
+     they are: Ice cream shop
+     flag: Handel's is a national chain; Glenn named Brentwood, Walnut Creek and Livermore, and all three are on the chain's own store locator. No other Bay Area store is listed (the other Northern California stores are around Sacramento).
+     flag: Hours are the same on each store page and in the Bay Area Instagram bio; the store pages mark them 'subject to change'.
+     flag: No prices on the chain's website. Each store's 'Order Now' link goes to a DoorDash-run order.online storefront, which was not used for prices because the brief excludes DoorDash; Leon can decide whether that storefront counts as their own.
+     flag: The Instagram account handelsbayarea covers all three Bay Area stores.
+     flag: Instagram @handelsbayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/store/handel's-homemade-ice-cream-walnut-creek-28066905/?hideModal=true&pickup=true is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'handels-walnut-creek': {
+    address: "1273 Locust St, Walnut Creek, CA 94596",
+    phone: "(925) 951-6555",
+    hours: "Sun-Thu 11am-10pm, Fri-Sat 11am-11pm",
+    cuisine: "Ice cream shop",
+    contactOnly: "Handel's does not publish prices on its own website.",
   },
 
   /*
@@ -8028,6 +8998,75 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menus on their own site; their online ordering charges more.",
+  },
+
+  /*
+     HINODEYA Ramen & Bar — gathered 2026-10-05 from own
+     they are: Japanese dashi ramen
+     flag: Hours left null because first-party sources disagree: the Berkeley page of their website lists Sun-Thu 10am-10pm and Fri-Sat 10am-12am, while the hinodeya_berkeley Instagram bio says 'Hours: 10 AM - 10 PM' (no late weekend hours).
+     flag: hinodeyaramen.com sits behind a Cloudflare check that blocked curl; a headless browser loaded it normally without any challenge, so the facts come from their own pages.
+     flag: Phone (341) 254-9207 and email yasu@sasaladining.com are what the website lists for the Berkeley location (Sasala Dining USA is the operating company named in the site footer); the email looks like a person's work address, so Glenn may prefer to leave it off.
+     flag: The Berkeley location is new (Instagram bio: 'Grand Opening 6/1') and does not yet appear on the site's main Locations page or in its homepage location list, but it has its own page (/berkeley1), menu and ordering, and is first in the ordering location picker.
+     flag: Other Bay Area locations (from their website): San Francisco Japantown, 1737 Buchanan St; Union Square, 219 O'Farrell St; Downtown, 680 Clay St; Chestnut, 3340 Steiner St; Newark, 5724 Thornton Ave Ste B; San Jose, 9 N Market St; Campbell, 2210 S Bascom Ave. Outside the Bay Area: Los Angeles (Palms, Little Tokyo) and Dallas (Greenville).
+     flag: Left out: merchandise, the spice-level add-ons (Level 1 free, Level 2 +$0.50, Level 3 +$1, Level 4 +$1.50) and the Chashu Bun, whose online description is an internal note that it has run out.
+     flag: Chicken Umami Ramen ($25+) and Sukiyaki Beef Ramen ($26+) are entered with label 'from' because the ordering menu shows a '+' price. 'Berkeley' was removed from two item names where the ordering menu appended it.
+     flag: The Berkeley Instagram account is separate from the main brand; its bio says 'Japanese Dashi Ramen Since 1885'.
+     flag: Instagram @hinodeya_berkeley is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'hinodeya-ramen-berkeley': {
+    address: "2309 Telegraph Ave, Berkeley, CA 94704",
+    phone: "(341) 254-9207",
+    email: "yasu@sasaladining.com",
+    cuisine: "Japanese dashi ramen",
+    sections: [
+      { name: "Ramen", items: [
+        ["Chicken Umami Ramen","A light yet rich soy sauce ramen made with carefully selected clear chicken broth and hinodeya’s secret soup stock recipe handed down for four generations wheat noodles, chashu chicken, menma (bamboo shoots), ajitsuke tamago (marinated soft-boiled egg), nori seaweed, baby spinach, green onion, shiitake mushroom, sesame seeds, chili strings",2500,null,"from"],
+        ["Hinodeya Ramen (House Ramen)","Carefully prepared umami-happy dashi broth made with bonito flakes, kombu seaweed, scallop bouillon, and pork oil. Wheat noodles, chashu pork, menma (bamboo shoots), ajitsuke tamago (marinated soft-boiled egg), nori seaweed, baby spinach, green onion, sesame seeds, chili strings *contains wheat, egg (removable), fish, shellfish, soy, sesame (removable)",1700],
+        ["Hamaguri Ramen (Littleneck Clams)","Light buttery dashi broth with notes of garlic, topped with umami-filled littleneck clams “hamaguri” harvested from asia. Wheat noodles, hamaguri (littleneck clams), green onion, sesame seeds, chili strings *contains wheat, dairy (removable), fish, shellfish, soy, sesame",2100],
+        ["Spicy Miso Ramen","Spicy dashi broth made with savory miso and chicken stock with a special blend of chili bean sauce and chili oil. (contains pork oil) wheat noodles, chashu pork, menma, ajitsuke tamago, nori seaweed, green onion, sesame seeds, chili strings *contains wheat, dairy, egg (removable), fish, soy, sesame",1900],
+        ["Creamy Ramen (Vegan)","Rich and creamy vegan broth made with shiitake mushroom dashi, soy milk, and original sesame sauce. Spinach noodles, Inari (sweet fried tofu), Nori seaweed, Bell pepper, Arugula, Corn, Shiitake mushroom, Sesame seeds *Contains Wheat, Soy, Sesame",1800],
+        ["Sukiyaki Beef Ramen","Popular Japanese hot pot dish \"Sukiyaki\" + HINODEYA's \"Dashi\" Ramen = \"UMAMI\" sensation! Wheat noodles, Sukiyaki Beef (sweet & savory simmered beef), Menma (bamboo shoots), Ajitsuke Tamago, Nori Seaweed, Baby Spinach, Green Onion, Red Ginger, Sesame Seeds *Contains Wheat, Egg (Removable), Fish, Shellfish, Soy, Sesame (Removable)",2600,null,"from"],
+      ] },
+      { name: "Appetizers", items: [
+        ["Green Gyoza (5 pcs) Vegan","Spinach dumplings filled with edamame, onion, and tofu. Served with sesame sauce and sriracha.",800],
+        ["Gyoza (5 Pcs)","Dumplings filled with pork and chicken. Served with dashi-based sauce and Sriracha.",800],
+        ["Edamame (Vegan)","Izakaya-style soybean snack.",600],
+        ["Spicy Edamame","Tossed in hot sauce with garlic and dashi sauce. Spicy and savory!! (no vegan)",500],
+      ] },
+      { name: "Extras", items: [
+        ["Baby Spinach","",200],
+        ["Butter","",150],
+        ["Chashu Chicken (3 Pcs)","3 pieces of sous vide chicken breast. Gluten-free.",600],
+        ["Chashu Pork (3 Pcs)","*contains wheat, fish, dairy, soy, and sesame.",700],
+        ["Corn","",200],
+        ["Egg (2 Pcs)","Ajitsuke tamago; two halves of a marinated soft-boiled egg. Contains wheat, fish, and soy.",200],
+        ["Extra Noodles","Extra noodles are served on the side to avoid the absorption of soup during the meal. All noodles in our ramen are vegan. Regular is wheat noodles, spinach noodles are our wheat noodles made with added spinach, and silver noodles are made of yam and are gluten-free.",300,null,"from"],
+        ["Extra Soup","Full portion of soup for those of you who can't get enough of our dashi soup!",600],
+        ["Green Onion (Negi)","",300],
+        ["Menma (Bamboo Shoots)","Marinated bamboo shoots.",300],
+        ["Naruto 4pcs","",200],
+        ["Nori Seaweed (4 Pcs)","Dried seaweed.",200],
+        ["Sukiyaki Beef","Thinly sliced, simmered sukiyaki beef with onion.",1200],
+        ["Inari (3 Pcs)","Sweet fried tofu.",400],
+        ["Shiitake Mushroom","",300],
+        ["Spicy Miso Pork","",600],
+        ["Tabera (Grande)","16 ounce container filled to the rim with your favorite fried garlic and onion condiment with chili oil!!",1000],
+        ["Arugula","",200],
+      ] },
+      { name: "Soft Drinks", items: [
+        ["Sprite","",300],
+        ["Sparkling Water (330ml)","",400],
+        ["Yuzu Soda (11.8 Fl oz 350ml)","Alcohol-free, refreshing yuzu citrus fruit liquor soda-taste beverage.",400],
+        ["Ume Soda (11.8 Fl oz 350ml)","Made of 100% ripe plum that comes from wakayama prefecture, japan. Non-alcoholic cocktail with very low calories!!",400],
+        ["Calpico Soda (335ml)","The unique taste of calpico is made with proprietary cultured milk derived from an original fermentation process. It hits just the right spot of sweet but not too sweet, tangy, and a surprisingly fruity sensation!!",400],
+        ["Ramune (Japanese Soda)","Experience the refreshing taste of ramune, a delightful Japanese soda with a unique bottle design and a fun marble stopper. Quench your thirst and add a touch of excitement to your beverage collection with ramune!!",500],
+        ["Ice Green Tea \"OI OCHA\"","Japan's number green tea brand itoen's oi ocha teas bring you the pure, unsweetened green tea flavor you're looking for without the added calories or sugars of sweetened tea.",400],
+        ["Black Coffee","",500],
+        ["Cafe Latte","",400],
+        ["Matcha Milk Tea","",600],
+      ] },
+    ],
+    siteNote: "Prices are from the Berkeley online ordering menu on Hinodeya's own website.",
   },
 
   /*
@@ -8841,6 +9880,23 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     John\'s Ice Cream — gathered 2026-10-05 from instagram
+     their spelling: "John's Ice Cream" (roster keeps "John\'s Ice Cream")
+     they are: Ice cream shop with homemade waffle cones
+     flag: Address check: the worklist note says 6060 Lone Tree Wy, but Glenn's Instagram screenshot clearly reads 6660 Lone Tree Wy Suite 2, Brentwood; the record uses 6660. The bio gives no ZIP code, so none was added.
+     flag: The phone is published as a text line on their Instagram contact sheet ('Text (925) 262-7041').
+     flag: Their bio says 'Open Every Day!' with no times, so hours are null.
+     flag: No website of their own; facts are from Glenn's screenshots of their Instagram ('Since 2008, we've been scooping joy in the East Bay', homemade recipes and waffle cones).
+     flag: Instagram @johnsicecreamca is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'johns-ice-cream': {
+    address: "6660 Lone Tree Wy Suite 2, Brentwood, CA",
+    phone: "(925) 262-7041",
+    email: "bbb.johnsicecream@gmail.com",
+    contactOnly: "John's Ice Cream does not publish prices on its own pages.",
+  },
+
+  /*
      Jolly Roger Land — gathered 2026-09-21 from own-domain
      they are: Indoor playground
      logo: https://static.wixstatic.com/media/c1e1da_8e1aa65d7a3a488998ad46cf46e81b03~mv2.png (579x99) — not cut into a tile yet
@@ -9365,83 +10421,201 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
-     Kan Kiin — gathered 2026-09-21 from own
-     their spelling: "Kan Kiin Brunch & Thai Eatery" (roster keeps "Kan Kiin")
-     they are: Thai brunch & dinner
-     flag: Brunch menu read from kankiineatery.com/menus (Wix). Wines and beers on the same page are left off: this app has no age check.
-     flag: Their Instagram bio says “Recognized by the MICHELIN Guide 2024-2026” and the site has a MICHELIN GUIDE 2026 page; the page does not repeat the claim.
-     flag: Weekend brunch is first come, first served, per their site.
+     Kan Kiin — gathered 2026-10-05 from own
+     they are: Modern Thai brunch by day, traditional Thai dinner by night
+     flag: City: Glenn's label says San Francisco, but Kan Kiin's own site and Toast page both give 201 Southgate Ave, Daly City, CA 94015, so city is "Daly City". Glenn or Leon decide whether it sits under San Francisco • Eats or Daly City.
+     flag: Already on BEASTY: Kan Kiin has had a page since 2026-09-21 (roster seed 'kan-kiin', id b_kankiin, placed on the Daly City Goods Asian food seat 'daly-city-goods-2', with only the brunch menu). Glenn's message ('Clip this video plz for Kan Kin page') may mean adding the reel to that page, not making a new one. This record uses the same id and slug, so Leon must decide: update the existing page (adding the dinner menu and drinks) or make a separate one.
+     flag: Spelling: Glenn wrote 'Kan Kin'. The business writes 'Kan Kiin' (header 'KAN KIIN'; logo 'KAN KIIN BRUNCH & THAI EATERY'; site title and footer 'Kan Kiin Eatery'; Toast 'Kan Kiin'). Their Instagram handle is kan_kiin.
+     flag: No link was sent. Their website, kankiineatery.com (built on Wix), was found by web search. It links to instagram.com/kan_kiin, which confirms the site is theirs.
+     flag: Prices come from the Breakfast & Brunch and Thai Comfort Dinner menus on kankiineatery.com/menus. Their Toast pickup page has different prices for most brunch dishes, usually $1 higher: French toast $19 vs $18, chicken & waffle $23 vs $22, and Steak & Egg $38 vs $30. Toast also lists dishes that are not on the site menu (Ube Toast $19, a sides list) and uses different wording for some dishes. When checked, Toast said 'Currently not accepting online orders' and showed only the weekday brunch menu, so the dinner prices could not be cross-checked. If the Toast prices are newer, the brunch prices here may be slightly low.
+     flag: Hours from their site: Mon-Fri brunch 11am-2pm and Thai dinner 5-8:30pm; Sat-Sun brunch 10am-3pm and dinner 5-8:30pm. Toast's ordering hours end 15 minutes before each service closes (1:45pm, 2:45pm, 8:15pm). That looks like an online-ordering cutoff, not a disagreement. Their site says weekend brunch is first come, first served.
+     flag: Phone (650) 755-8749 is in every page footer on their site, on their contact page and on Toast. Their Reservations page says 'call 650-754-8749', which looks like a typo and was not used.
+     flag: Reservations go through a Yelp Reservations widget on their site's Reservations page. Their Order Now page links pickup to Toast and delivery to DoorDash, Uber Eats and Grubhub.
+     flag: Left out: cocktails, wine, beer and the Rose Mimosa (alcohol). Mocktails and the non-alcoholic Coffee & More list are kept. Menu notes from their site: $30 corkage per 750ml bottle, and an automatic 20% gratuity for parties of 6 or more.
+     flag: The dinner menu lists Crabby Pad Thai and Fresh Crab Fried Rice twice: once marked Chef's Special under Fried Noodles and Fried Rice, and again under Kan Kiin Chef's Specials. Each is kept once, under Fried Noodles and Fried Rice. Corn Fritters, E-Sarn Chicken Wings and Bangkok Golden are on both the brunch and dinner menus at the same price, so they are listed under each.
+     flag: Brunch dishes are served Mon-Fri 11am-2pm and Sat-Sun 10am-3pm (stated on the brunch menu). Dishes with several protein choices are entered at the lowest price with label 'from', and every price is in the description.
+     flag: Dietary: the site tags some dishes Vegan, Vegetarian or Gluten free, but some Vegan tags clash with the ingredients. The Harvest Heaven omelette has eggs and Monterey Jack, the Roti & Fried Banana Split comes with vanilla ice cream, and the Brussels sprouts come with pesto mayo. So 'Vegan options' is not claimed. Only 'Vegetarian options' (e.g. Corn Fritters, Samosa Curry Puffs, Fresh Spring Rolls) and 'Gluten-free options' (e.g. Kan Kiin Salad, Papaya Salad, larb, curries) are listed.
+     flag: Their site has a 'MICHELIN GUIDE 2026' page that links to their entry on guide.michelin.com. The page is images only and states no award level in text.
+     flag: Typos on the menu were fixed in item names and sections: 'Chaing Mai' to 'Chiang Mai', 'Burger & Sanwich' to 'Burgers & Sandwiches', 'Appitizers' to 'Appetizers', 'Mid-Night' to 'Midnight', 'Mango A-GO-G0' to 'Mango A-Go-Go'.
+     flag: Icon: made with --square from their site's logo (full-size PNG, 500x774, from static.wixstatic.com), shown whole and centred on its own green. It replaced the existing public/icons/kan-kiin.webp from commit bf9e607, which was softer, had dark side bars, and had the wordmark tight to the bottom edge. The old file is saved at scratchpad/g6/kan-kiin-OLD.webp; run 'git checkout public/icons/kan-kiin.webp' to restore it.
+     flag: Instagram @kan_kiin is theirs; the Instagram button is Glenn's to approve, so it is not on the page.
   */
   'kan-kiin': {
     address: "201 Southgate Ave, Daly City, CA 94015",
     phone: "(650) 755-8749",
     email: "kankiineatery@gmail.com",
-    hours: "Brunch Mon-Fri 11am-2pm, Sat-Sun 10am-3pm; Thai dinner daily 5-8:30pm",
-    instagram: "kan_kiin",
-    cuisine: "Thai brunch & dinner",
-    tagline: "Thai brunch and Thai comfort dinners on Southgate Avenue",
+    hours: "Mon-Fri 11am-2pm & 5-8:30pm, Sat-Sun 10am-3pm & 5-8:30pm",
     sections: [
-      { name: "Signatures", items: [
-        ["Kan Kiin French Toast","Brioche French toast, 2-way banana, homemade coconut syrup, coconut flakes and mixed fruit (add vanilla ice cream +$4)",1800],
-        ["Matcha Buttermilk Pancakes","Matcha infused buttermilk pancake, mixed fruit and Matcha sauce",1900],
-        ["Belly & Sunny","Herb braised pork belly, roasted potato, wok fried brussels sprouts, sunny - side up eggs, toast",2200],
-        ["Hat Yai Fried Chicken & Waffle","Crispy “Southern of Thailand-Style” fried Mary’s free range chicken & vanilla waffle, maple syrup",2200],
-        ["American Fried Rice","Homemade Ketchup fried rice, raisin, fried chicken, turkey sausage patty, chicken apple sausage, bacon and sunny - side up fried egg",2200],
-        ["Jok Crispy Pork Belly","“Tom Yum” Rice porridge with house crispy pork belly, poached egg, ginger, shiitake mushroom, green onion, SMOKED SALMON TARTINE Wild smoked salmon, scramble eggs, green onions, avocado, cream cheese on ciabatta served with potato wedges",2500],
-        ["Sweet Corn Cake & Crab Benedict","Poached eggs, crispy sweet corn cake, Dungeness crab chunk, house hollandaise, fresh cucumber salad.",2800],
-        ["Steak & Eggs","8.oz NY-steak, two sunny - side up accompanied with “Ka Pow” Thai basil fried rice",3000],
-        ["Bangkok Golden","A flavorful Thai stir-fry featuring Dungeness crab, shrimp, squid, and scallops, all cooked in our signature house curry sauce with onions, bell peppers, and three eggs. Served with a side of jasmine rice and house salad",3200],
-        ["Claypot Belly","Slow- braised pork belly, served over jasmine rice paired with Shiitake mushroom, onion, white sesame and poached egg",2200],
+      { name: "Brunch: Kan Kiin Signature", items: [
+        ["\"Kan Kiin\" French Toast","Brioche French toast, 2-way banana, homemade coconut syrup, coconut flakes and mixed fruit (add vanilla ice cream +$4)",1800],
+        ["Matcha Buttermilk Pancakes","Matcha-infused buttermilk pancake, mixed fruit and matcha sauce",1900],
+        ["Belly & Sunny","Herb-braised pork belly, roasted potato, wok-fried Brussels sprouts, sunny-side-up eggs, toast",2200],
+        ["\"Hat Yai\" Fried Chicken & Waffle","Crispy Southern-Thailand-style fried Mary's free-range chicken and vanilla waffle, maple syrup",2200],
+        ["American Fried Rice","Homemade ketchup fried rice, raisin, fried chicken, turkey sausage patty, chicken apple sausage, bacon and a sunny-side-up fried egg",2200],
+        ["\"Jok\" Crispy Pork Belly","\"Tom Yum\" rice porridge with house crispy pork belly, poached egg, ginger, shiitake mushroom, green onion, served with fried doughnut",2500],
+        ["Smoked Salmon Tartine","Wild smoked salmon, scrambled eggs, green onions, avocado, cream cheese on ciabatta, served with potato wedges",2500],
+        ["Sweet Corn Cake & Crab Benedict","Poached eggs, crispy sweet corn cake, Dungeness crab chunks, house hollandaise, fresh cucumber salad",2800],
+        ["Steak & Eggs","8oz NY steak, two sunny-side-up eggs, with \"Ka Pow\" Thai basil fried rice",3000],
+        ["Bangkok Golden","Thai stir-fry of Dungeness crab, shrimp, squid and scallops in their signature house curry sauce with onions, bell peppers and three eggs, served with jasmine rice and house salad",3200],
+        ["Claypot Belly","Slow-braised pork belly over jasmine rice with shiitake mushroom, onion, white sesame and poached egg",2200],
       ] },
-      { name: "Egg plates", items: [
-        ["Two Eggs Any Style","",1500],
-        ["Two Eggs with Chicken Apple Sausage Patty","",1700],
-        ["Two Eggs with Applewood Smoked Bacon","",1800],
-        ["Two Eggs with Applewood Smoked Bacon, Chicken Apple Patty, Smoked Ham","",2000],
+      { name: "Brunch: Egg Plates", items: [
+        ["Two Eggs Any Style","Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",1500],
+        ["Two Eggs with Chicken Apple Sausage Patty","Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",1700],
+        ["Two Eggs with Applewood Smoked Bacon","Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",1800],
+        ["Two Eggs with Bacon, Chicken Apple Patty and Smoked Ham","Applewood smoked bacon, chicken apple sausage patty and smoked ham. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3).",2000],
       ] },
-      { name: "Omelettes", items: [
-        ["Harvest Heaven Omelette","Spinach, mushroom, onion, avocado, bell pepper, tomato and Monterey jack",1800],
-        ["Western Sunrise Omelette","Canadian bacon, onion, mushroom, bell pepper and Monterey jack",1900],
-        ["The Meat Wagon Omelette","Applewood smoked bacon, smoked ham, onion, chorizo and cheddar",2000],
+      { name: "Brunch: Omelettes", items: [
+        ["Harvest Heaven Omelette","Spinach, mushroom, onion, avocado, bell pepper, tomato and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",1800],
+        ["Western Sunrise Omelette","Canadian bacon, onion, mushroom, bell pepper and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",1900],
+        ["The Meat Wagon Omelette","Applewood smoked bacon, smoked ham, onion, chorizo and cheddar. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",2000],
       ] },
-      { name: "Scrambles", items: [
-        ["Applewood Scramble","Applewood smoke bacon, spinach, mushroom, and Cheddar",1800],
-        ["Duo of the Sea Scramble","Shrimp, Scallop, mushroom, bell pepper, and Monterey jack",2500],
-        ["Crab Lover Scramble","Fresh crabmeat, spinach, mushroom onion and Monterey jack",2700],
+      { name: "Brunch: Scrambles", items: [
+        ["Applewood Scramble","Applewood smoked bacon, spinach, mushroom and cheddar. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",1800],
+        ["Duo of the Sea Scramble","Shrimp, scallop, mushroom, bell pepper and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",2500],
+        ["Crab Lover Scramble","Fresh crabmeat, spinach, mushroom, onion and Monterey Jack. Served with potato medley and toasted ciabatta (swap either for mixed fruit +$3; egg whites +$3).",2700],
       ] },
-      { name: "Benedicts", items: [
-        ["Classic Benedict","Canadian bacon, poached eggs and hollandaise sauce",1700],
-        ["Crispy Chicken Benedict","Crispy chicken, poached eggs, pesto mayo and hollandaise sauce",1800],
-        ["Crispy Belly Benedict","Crispy pork belly, poached eggs, avocado, jalapeños and hollandaise sauce",2200],
-        ["Alaskan Benedict","Wild Smoked salmon, red onion, poached eggs, and hollandaise sauce",2300],
+      { name: "Brunch: Benedicts", items: [
+        ["Classic Benedict","Canadian bacon, poached eggs and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",1700],
+        ["Crispy Chicken Benedict","Crispy chicken, poached eggs, pesto mayo and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",1800],
+        ["Crispy Belly Benedict","Crispy pork belly, poached eggs, avocado, jalapeños and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",2200],
+        ["Alaskan Benedict","Wild smoked salmon, red onion, poached eggs and hollandaise sauce. Served with salad and rainbow potatoes (mixed berries instead of potatoes +$4; add avocado +$3).",2300],
       ] },
-      { name: "Spaghetti", items: [
-        ["Green Curry Spaghetti","Chicken or Beef, bell pepper, Thai basil and green curry sauce",1700],
+      { name: "Brunch: Spaghetti", items: [
+        ["Green Curry Spaghetti","Chicken or beef, bell pepper, Thai basil and green curry sauce. Chicken $17 / Beef $19",1700,null,"from"],
         ["Drunken Seafood Spaghetti","Shrimp, scallop, calamari, mussel, bell pepper, Thai basil, jalapeños and homemade spicy sauce",2500],
-        ["Mid-night Bacon Spaghetti","Applewood smoked bacon, Thai basil, bell pepper, jalapeños, and spicy Thai chili sauce",1800],
+        ["Midnight Bacon Spaghetti","Applewood smoked bacon, Thai basil, bell pepper, jalapeños and spicy Thai chili sauce",1800],
       ] },
-      { name: "Burgers and sandwiches", items: [
-        ["Breakfast Burger","Scrambled egg, bacon, chicken apple sausage patty, American cheese and homemade mayo",1900],
-        ["Spicy Crispy Chicken Burger","Fried chicken, tomato, lettuce, pickle and homemade spicy mayo",1800],
-        ["Cheese Burger","Hamburger beef patty, American cheese, tomato, lettuce, onion and pickle",1800],
+      { name: "Brunch: Burgers & Sandwiches", items: [
+        ["Breakfast Burger","Scrambled egg, bacon, chicken apple sausage patty, American cheese and homemade mayo, served with French fries",1900],
+        ["Spicy Crispy Chicken Burger","Fried chicken, tomato, lettuce, pickle and homemade spicy mayo, served with French fries",1800],
+        ["Cheese Burger","Beef patty, American cheese, tomato, lettuce, onion and pickle, served with French fries",1800],
       ] },
-      { name: "Starters", items: [
-        ["Corn Fritters","Corn fritters served with plum dipping and peanuts",1300],
-        ["Brussel Sprouts & Fries","Fried brussels sprouts and French fries with pesto mayo dip",1200],
-        ["E-Sarn Chicken Wings","Fried chicken wings, sweet and sour sauce",1500],
+      { name: "Brunch: Appetizers", items: [
+        ["Corn Fritters","Served with plum dipping sauce and peanuts",1300],
+        ["Brussels Sprouts & Fries","Fried Brussels sprouts and French fries with pesto mayo dip",1200],
+        ["\"E-Sarn\" Chicken Wings","Fried chicken wings, sweet and sour sauce (E-Sarn: Northeastern Thailand)",1500],
       ] },
-      { name: "Salads", items: [
-        ["Kan Kiin Salad","Seasonal fruit, yellow corn, mix green, romaine lettuce, cucumber, cherry tomato, carrot, and beet",1300],
-        ["Chicken Salad","Crispy chicken, baby romaine lettuce, cucumber, cherry tomato, carrot, avocado, and poached egg",1600],
+      { name: "Brunch: Salads", items: [
+        ["Kan Kiin Salad","Seasonal fruit, yellow corn, mixed greens, romaine, cucumber, cherry tomato, carrot and beet",1300],
+        ["Chicken Salad","Crispy chicken, baby romaine, cucumber, cherry tomato, carrot, avocado and poached egg",1600],
       ] },
-      { name: "Sweet corner", items: [
-        ["Mango & Sticky Rice","Fresh mango, sweet sticky rice served with homemade coconut milk",1300],
-        ["Kid Approved Waffle","Belgian vanilla waffle served with vanilla ice cream, whipped cream, mix fruits, and homemade coconut syrup",1300],
-        ["Roti & Fried Banana Split","Roti breads and fried banana served with vanilla ice cream and coconut caramel",1300],
+      { name: "Brunch: Sweet Corner", items: [
+        ["Mango & Sticky Rice","Fresh mango, sweet sticky rice, homemade coconut milk",1300],
+        ["Kid Approved Waffle","Belgian vanilla waffle with vanilla ice cream, whipped cream, mixed fruit and homemade coconut syrup",1300],
+        ["Roti & Fried Banana Split","Roti bread and fried banana with vanilla ice cream and coconut caramel",1300],
         ["Choco Banana Toast","Sweet toast, caramelized banana, Nutella, chocolate syrup and chocolate chips",1400],
       ] },
+      { name: "Dinner: Appetizers", items: [
+        ["Corn Fritters","Served with plum dipping sauce and peanuts",1300],
+        ["Samosa Curry Puffs","Mashed curry potato, onion and carrot in house-made puff pastry, with cucumber salad and roasted peanuts",1400],
+        ["\"E-Sarn\" Chicken Wings","Fried chicken wings, sweet and sour sauce (E-Sarn: Northeastern Thailand)",1500],
+        ["\"Chiang Mai\" Sausage","Homemade herbal Northern-Thailand-style pork sausage served with fresh herbs",1700],
+        ["Fresh Spring Rolls","Fresh organic vegetables, thin rice paper, peanut dipping sauce",1200],
+      ] },
+      { name: "Dinner: Soup", items: [
+        ["Seafood \"Tom Yum\" Soup Hot Pot","Hot and sour spicy soup with fresh mussels, calamari and shrimp, served in a hot pot. Serves 4 (mild, medium or hot)",3200],
+      ] },
+      { name: "Dinner: Salads", items: [
+        ["Papaya Salad","Green papaya salad, toasted peanuts, cherry tomatoes, tamarind dressing (mild, medium or hot)",1400],
+        ["Chicken Larb Salad","Minced chicken salad, toasted rice powder, smoked chili, cabbage (add sticky rice $5)",1700],
+        ["Beef Larb Salad","Finely chopped beef larb, toasted rice powder, smoked chili, green leaves (add sticky rice $5)",2000],
+        ["Crispy Rice Salad","Chef's special. Northeastern-Thailand-style fermented pork sausage tossed with mint, ginger, peanuts, onion, cilantro and chili-lime dressing",2300],
+      ] },
+      { name: "Dinner: Fried Rice", items: [
+        ["Thai Fried Rice","Classic Thai fried rice with egg, tomatoes and onion. Tofu $16 / Chicken $17 / Beef $18",1600,null,"from"],
+        ["Fried Chicken over Fried Rice","Crispy fried chicken breast over egg fried rice with sweet chili dipping sauce",2000],
+        ["Pineapple Fried Rice","Prawn and chicken pineapple fried rice with egg, tomatoes and onion (vegetarian version available)",2300],
+        ["Fresh Crab Fried Rice","Chef's special. Loaded fresh Dungeness crab and egg fried rice served in a coconut shell, with \"Prik Nam Pla\" chili fish sauce",3800],
+      ] },
+      { name: "Dinner: Fried Noodles", items: [
+        ["Pad See Ew","Wok-fried fresh rice noodles, soy sauce caramel, broccoli, Chinese broccoli. Tofu $16 / Chicken $17 / Beef $18 / Shrimp $22 / Seafood $25",1600,null,"from"],
+        ["Drunken Noodles","Wok-fried fresh rice noodles, Thai basil, mushroom, green bean, onion, bell pepper. Tofu $17 / Chicken $18 / Beef $20 / Shrimp $22 / Seafood $25",1700,null,"from"],
+        ["Pad Thai","Fresh thin rice noodles, tamarind reduction, bean sprouts, peanuts. Tofu or Chicken $17 / Prawns $23",1700,null,"from"],
+        ["Crabby Pad Thai","Chef's special. Wok-fried rice noodles with Dungeness crab meat, tofu, bean sprouts and chives wrapped in egg, topped with peanuts and lime",3400],
+      ] },
+      { name: "Dinner: Chef's Specials", items: [
+        ["Rad-Na \"Ta-Lay\"","Thai comfort street food: thick rice noodles with fresh prawns, scallops, mussels and calamari in gravy sauce",3000],
+        ["Papaya Salad Combo","Chicken wings, crispy whole tilapia, crispy pork belly and pork loaf with green papaya salad mixed with salted crab, cherry tomatoes, green bean, garlic, Thai chili and fish sauce",3900],
+        ["Tamarind Sea Bass","Crispy whole sea bass, onion, bell pepper, tamarind garlic-chili sauce and crispy basil",4500],
+        ["\"Gang Som\" Sea Bass","Whole sea bass, cabbage, carrot and green bean in \"Gang Som\", a not-so-spicy tamarind curry",4500],
+      ] },
+      { name: "Dinner: Main Course", items: [
+        ["\"Ka Pow\" Bo Lan (Thai Spicy Basil)","Classic Thai street-food spicy basil stir-fry with a fried egg and jasmine rice. Minced chicken $18 / Minced beef $20 / Crispy pork $26 / Seafood $27",1800,null,"from"],
+        ["\"Kai Pa Lo\" Pork Belly Stew","Thai comfort pork belly stew, five-spice boiled egg, jasmine rice",2300],
+        ["Salt & Pepper Pork Belly","Crunchy homemade pork belly wok-tossed with garlic-pepper, bell pepper and jalapeño, with jasmine rice",3200],
+        ["Lazy Herbal Beef","Thai-street-style grilled Angus steak and fried egg over Thai basil fried rice",3800],
+        ["\"Hat Yai\" Fried Chicken","Crispy Southern-Thailand-style fried chicken with spicy tamarind reduction and sticky rice",2600],
+        ["Cloudy Chicken","Stir-fried crispy chicken, cashew nuts, onion, bell pepper, hot and smoked chili glaze, with jasmine rice",2200],
+        ["Spicy Catfish Clay Pot","Wok-fried spicy catfish in spicy coconut sauce with Thai basil and bell pepper, with jasmine rice",2400],
+        ["Bangkok Golden","Thai stir-fry of Dungeness crab, shrimp, squid and scallops in their signature house curry sauce with onions, bell peppers and three eggs, served with jasmine rice and house salad",3200],
+        ["\"Pa Ram\" Peanut Lover","Steamed spinach, broccoli, carrot and cabbage topped with warm peanut sauce, with jasmine rice. Tofu $16 / Chicken $18 / Beef $20",1600,null,"from"],
+        ["Spicy Eggplant","Wok-fried eggplant, chili, Thai basil and bell peppers with jasmine rice. Tofu $16 / Chicken $18 / Beef $20",1600,null,"from"],
+      ] },
+      { name: "Dinner: Curry", items: [
+        ["Yellow Curry","Creamy coconut yellow curry, potatoes, onion and carrots with jasmine rice. Tofu $17 / Chicken $18 / Beef $20",1700,null,"from"],
+        ["Green Curry","Traditional green curry, eggplant, bell peppers, bamboo shoots and basil with jasmine rice. Tofu $17 / Chicken $18 / Beef $20",1700,null,"from"],
+        ["Roti Mussaman Curry Beef Chuck","Boneless pot-roasted beef chuck in traditional Mussaman curry, with roti flatbread",2600],
+      ] },
+      { name: "Drinks: Mocktails", items: [
+        ["Berry Thai Tea","",900],
+        ["Cloudy Cacao","",900],
+        ["Matcha Caramel Latte","",900],
+        ["Lavender Lemonade","",800],
+        ["Strawberry Hurricane","",800],
+        ["Green Goddess Colada","",800],
+        ["Mango A-Go-Go","",800],
+      ] },
+      { name: "Drinks: Coffee & More", items: [
+        ["House Coffee","",500],
+        ["House Hot Tea","",500],
+        ["Thai Iced Tea","",600],
+        ["Thai Iced Coffee","",600],
+        ["Fresh Young Coconut","",800],
+        ["Orange Juice","",600],
+        ["Sparkling Water (San Pellegrino 250ml)","",500],
+      ] },
     ],
-    siteNote: "This is their brunch menu, from their own site; the Thai dinner menu is on their site too.",
+    siteNote: "Prices are from the brunch and dinner menus on Kan Kiin's own website; their Toast pickup menu prices some brunch dishes a little higher.",
+  },
+
+  /*
+     Katsu Factory — gathered 2026-10-05 from own
+     they are: Japanese tonkatsu
+     flag: Glenn listed this as 'Katsu Tonkatsu' after the domain katsutonkatsu.com, but the business's own name on the site and on its Instagram logo is 'Katsu Factory' ('by satomi on mowry'); the slug uses Katsu Factory.
+     flag: katsutonkatsu.com looks machine-generated from a Google listing: its menu lists 'Sake Sports Bar', 'Satomi' and 'Mango' as dishes and prices some items in JPY, so no items or prices were taken from it, and Leon may want to treat Katsu Factory as needing a real site. Its three USD lines were Tonkatsu $21.95, Cheese Tonkatsu $20.95 and Tomahawk Tonkatsu $23.95, unverified.
+     flag: The site lists hours for Monday and Tuesday only (11:30am-2:30pm, 5pm-9pm), so hours are null; Glenn's Apple Maps screenshot shows the same split for one day only.
+     flag: Guest quotes on the site say Katsu Factory operates inside Satomi, a Japanese restaurant at the same address; the logo's 'by satomi on mowry' agrees.
+     flag: Glenn's screenshot is the Instagram share-profile sheet, which does not show the handle, and the site links no Instagram, so instagram is null.
+     flag: Their site link is a page generated from a map listing, not their own, so the page carries no site.
+  */
+  'katsu-factory': {
+    address: "5022 Mowry Ave, Fremont, CA 94538",
+    phone: "(510) 505-0360",
+    cuisine: "Japanese tonkatsu",
+    contactOnly: "Katsu Factory does not publish a reliable menu with prices on its own pages.",
+  },
+
+  /*
+     Kind Bubbles — gathered 2026-10-05 from own
+     they are: Bubble party entertainment
+     flag: Mobile business serving San Francisco, Palo Alto, Walnut Creek, San Mateo, Marin and Greater Sacramento ('Bay Area + Greater Sacramento'); no address or hours are published, so city is null.
+     flag: Booking terms from their site: $100 nonrefundable deposit (refundable if rain chance is over 30% within 48 hours), balance due the day before; no travel fee; fully insured; best for ages 2-12 and 10-30 children; an indoor Bubble Play version is offered with no separate price.
+     flag: Run by a dad and daughter ('a scientist dad + his Montessori daughter'). No phone is published; email chris@kindbubbles.com is on the site and IG has an Email button.
+     flag: Logo icon is the rainbow 'KB' mark from their site header; their IG profile picture is a party photo, not the logo.
+     flag: Instagram @kind.bubbles is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'kind-bubbles': {
+    email: "chris@kindbubbles.com",
+    cuisine: "Bubble party entertainment",
+    groups: [
+      { name: "Prices", items: [
+        ["Bubble Play, 30 minutes","All four signature acts (Giant Bubbles, Billion Bubble Wand, The Smiley Face, Bubble Storm), professional equipment and solution, interactive play, setup and breakdown. Great for younger children and tighter schedules.",39500],
+        ["Bubble Play, 45 minutes","Most popular. Everything in the 30-minute experience with more time at each act and more birthday-child moments.",49500],
+        ["Bubble Play + Create, 60 minutes","The fullest experience: everything in 45 minutes, then a giant bubble station and handheld bubble stations where kids make their own bubbles with plastic-free tools.",59500],
+      ] },
+    ],
+    quoteOnly: "Prices are Kind Bubbles' own; travel is included, and a $100 deposit holds your date.",
   },
 
   /*
@@ -9570,6 +10744,83 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Gluten-free kitchen",
     tagline: "Gluten-free bowls and plates, with weekend brunch, in Walnut Creek",
     contactOnly: "Gluten-free bowls and plates, with weekend brunch, in Walnut Creek. Their menu is on their own site.",
+  },
+
+  /*
+     Kopi Bar & Bakery — gathered 2026-10-05 from own
+     they are: Singaporean- and Indonesian-inspired cafe and bakery
+     flag: Glenn's label "BEASTY • Eats" names no city. The cafe is in Berkeley, on the second floor of BAMPFA (the Berkeley Art Museum and Pacific Film Archive), so city is Berkeley; Glenn or Leon should confirm the page label (Berkeley • Eats or Berkeley • Coffee).
+     flag: Hours agree on the website and in the Instagram bio: Wed-Fri 9am-4pm, Sat-Sun 10am-5pm; the website lists Monday and Tuesday as Closed.
+     flag: Phone 510-443-1215 is on the website and in the Instagram contact sheet. Email kopiavocadousa@gmail.com is from the Instagram contact sheet in Glenn's screenshot only.
+     flag: Items are the whole online ordering menu (Chowly, on their own domain) except one wine (Buzzkill Cabernet, $12). The site names Kopi Avocado, Coconut Cappuccino and Pandan Chendol Latte among its best-known drinks, but they are not on the ordering menu, so they have no price here. Most ordering items have no description.
+     flag: The letter codes in item names (V, VEG, WF, S, SM, N, EGG) are theirs and are not explained on the site (likely vegan, vegetarian, wheat-free and allergens); kept as written. "Cappucino" corrected to Cappuccino.
+     flag: Dietary "Vegan options" because their FAQ says they feature "Coffee, Pastries, and Vegan Options".
+     flag: Logo is the cup-and-saucer KOPI BAR / AND BAKERY mark from Glenn's screenshot of their website.
+     flag: Instagram @kopibar.us is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'kopi-bar-and-bakery': {
+    address: "2155 Center St, 2nd Floor, Berkeley, CA 94704",
+    phone: "(510) 443-1215",
+    email: "kopiavocadousa@gmail.com",
+    hours: "Wed-Fri 9am-4pm, Sat-Sun 10am-5pm, Mon-Tue closed",
+    sections: [
+      { name: "Brunch and Lunch", items: [
+        ["Salad - Kale Caesar","",1700],
+        ["Chicken Rice (S | SM)","",2100],
+        ["Lontong Bowl (WF | V)","",1900],
+        ["Soup- Carrot Pumpkin Ginger with Pumpkin Seed Green Sambal (V)","",1300],
+        ["Gado Gado Protein Bowl (V | WF | SM)","",1900],
+        ["Benedict - Smoked Salmon with Side Salad (EGG)","",1700],
+        ["Sando - Breakfast All Day (VEG | EGG)","",1200],
+        ["Sando - TLTA - Tempeh Lettuce Tomato Avocado (V | S)","",1400],
+        ["Toast - Tuna Salad","",1400],
+        ["Toast - Avocado Toast (V)","",1400],
+        ["Biscuit with Butter & Jam (VEG)","",700],
+        ["Toast - Kaya (VEG)","",600],
+      ] },
+      { name: "Beverages", items: [
+        ["Bali Fog with Matcha Foam","",700],
+        ["Pumpkin Lapis with Cold Cream Foam","",700],
+        ["Jamu - Wellness Drink","Ginger Juice, Turmeric Juice, Orange Juice, Coconut Blue Pea Cold Foam",700],
+        ["Matcha Latte","",700],
+        ["Pandan Blue Pea Limeade","",700],
+        ["Blue Pea Flower Limeade","",600],
+        ["Americano","",450],
+        ["Cappuccino","",550],
+        ["Cortado","",450],
+        ["Drip Coffee","",450],
+        ["Espresso","",400],
+        ["Golden Latte","",650],
+        ["Hot Tea","",600],
+        ["Iced Black Tea","",600],
+        ["Pandan Iced Tea","",600],
+        ["Cold Brew","",500],
+        ["Kopi (Contains Condensed Milk)","",550],
+        ["Latte","",600],
+        ["Macchiato","",500],
+        ["Mocha","",650],
+        ["Teh Halia","",600],
+        ["Kids Chocolate","",450],
+        ["Hot Chocolate","",600],
+        ["Babyccino","",300],
+        ["Orange Juice","",500],
+        ["Guava Juice","",500],
+        ["Moringa Latte","",650],
+      ] },
+      { name: "Pastries", items: [
+        ["Cake - Flourless Choc Cake (Wheat Free)","",500],
+        ["Swirl - Pumpkin","",600],
+      ] },
+      { name: "Retail drinks", items: [
+        ["Pellegrino","",300],
+        ["Root Beer","",300],
+        ["Diet Coke","",300],
+        ["7-Up","",300],
+        ["Ginger Ale","",300],
+        ["Coconut Water","",400],
+      ] },
+    ],
+    siteNote: "Prices are from the online ordering menu on their own website.",
   },
 
   /*
@@ -10439,6 +11690,118 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Master Oh — gathered 2026-10-05 from own
+     they are: Korean, known for raw marinated seafood
+     flag: Hours do not agree, so hours is null. The website (footer on every page, and Glenn's screenshot) says Mon-Fri 11am-2:30pm & 5-10pm, Sat-Sun 11am-10pm. Their Instagram bio says Mon-Wed 11am-2:30pm & 5-10pm, Thu 11am-2:30pm & 5-11pm, Fri-Sat 11am-11pm, Sun 11am-10pm. Leon or Glenn should ask which is current.
+     flag: Prices: items come from master-oh.com/food-menu (66 dishes). Their own ordering page (masterohs.menu11.com, linked as 'Order' on their site) shows different prices for many of the same dishes, mostly $1-$10 higher. Examples: Beef Tartare $29 on the site vs $33 on the ordering page, Assorted Grilled Fish $65 vs $75, Bibimbop $21 vs $23, the knife-cut noodles $21 vs $22. Some go the other way, such as the Spicy Assorted Seafood Soup at Medium $95 / Large $125 on the site vs $85 / $105 on the ordering page. The site menu is used throughout; Leon may prefer the ordering-page prices.
+     flag: The ordering page also lists dishes that are not on the site menu: Mul, Bibim and Hwe Naengmyeon, Pork and Kimchi Dumplings, and Grilled Dried Yellow Croaker. They were not added, so that all prices come from one source.
+     flag: Jeongol dishes with two sizes ('Medium $77.00 | Large $97.00') are entered at the Medium price with label 'from', and both sizes are given in desc.
+     flag: Spicy markers were not carried into descriptions. On the site the chili icon sits between items, and in at least one case (Soy Sauce Marinated Abalone) it does not match the ordering page, so it could not be tied to the right dish reliably.
+     flag: Their wording is kept: 'Barly Rice Set Menu', 'Bibimbop', 'Spicy Octopus, Trip, and Shrimp Stew'. One obvious typo in a description, 'Soy Sayce Marinated Crab', was corrected to 'Soy Sauce'.
+     flag: Name: the site and the logo text say 'Master Oh'. The Instagram display name is 'Master Oh (오선생)', and the ordering page says 'MASTER OH'S'. The Google reviews quoted on their site mention new owners and a reopening.
+     flag: Email masterohsantaclara@gmail.com and phone (408) 246-1484 are printed in the site footer and visible in Glenn's screenshot.
+     flag: Logo: the Instagram profile picture, a line drawing of two onggi jars (Glenn's IMG_6026, a zoomed profile picture with no story ring), cut with --disc. The website header only has the words 'MASTER OH' in text.
+     flag: They also offer catering and private parties (master-oh.com/party), and table reservations are mentioned on the site.
+     flag: Instagram @masteroh_santaclara is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'master-oh': {
+    address: "1484 Halford Ave, Santa Clara, CA 95051",
+    phone: "(408) 246-1484",
+    email: "masterohsantaclara@gmail.com",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Tteokbokki","",1900],
+        ["Tteokbokki with Ramen","",2100],
+        ["Bossam (M)","",2800],
+        ["Bossam (L)","",4200],
+        ["Seafood Pancake","",2400],
+        ["Korean Beef Pancake","",2800],
+        ["Beef Tartare","",2900],
+      ] },
+      { name: "Knife-Cut Noodle", items: [
+        ["Clam Soup Noodle","",2100],
+        ["Perilla Seeds Soup Noodle","",2100],
+        ["Hand-Torn Dough Clam Soup","",2100],
+        ["Chicken Soup Noodle","",2100],
+      ] },
+      { name: "Bibimbap", items: [
+        ["Bibimbop","Choice of protein: Beef or Pork.",2100],
+        ["Stone Bowl Bibimbop","Choice of protein: Beef or Pork.",2500],
+      ] },
+      { name: "Soup & Stew", items: [
+        ["Pork Backbone Stew","",2200],
+        ["Beef Short Rib Soup","",2600],
+        ["Beef Short Rib Soup with Cabbage Leaves","",2400],
+        ["Seolleongtang","",2200],
+        ["Soybean Paste Stew","",2100],
+        ["Kimchi Stew","",2100],
+        ["Spicy Soft Tofu Stew","Tofu Stew Protein: Beef, Seafood or Mix.",2100],
+        ["Spicy Chicken Soup","",2100],
+        ["Spicy Beef Stew","",2400],
+      ] },
+      { name: "Barly Rice Set Menu", items: [
+        ["Barly Rice Set Menu","Kimchi Stew or Soybean Paste Stew + Choice of Your Protein + Assorted Seasoned Vegetables.",3300],
+      ] },
+      { name: "Grilled Fish", items: [
+        ["Assorted Grilled Fish","Served with Kimchi Stew or Soybean Paste Stew.",6500],
+        ["Grilled Croaker","Served with Kimchi Stew or Soybean Paste Stew.",3300],
+        ["Grilled Mackerel","Served with Kimchi Stew or Soybean Paste Stew.",2700],
+        ["Grilled Flounder","Served with Kimchi Stew or Soybean Paste Stew.",3000],
+      ] },
+      { name: "Marinated Raw Seafood", items: [
+        ["Assorted Marinated Seafood","Soy Sauce Marinated Crab, Shrimp, and Abalone + Spicy Sauce Marinated Crab, Served with 2 Fish Roe Rice Bowl. Add Roe Rice +$10.00.",14000],
+        ["Spicy Marinated Crab","Served with 1 Fish Roe Rice Bowl. Add Roe Rice +$10.00.",4000],
+        ["Soy Sauce Marinated Abalone","Served with 1 Fish Roe Rice Bowl. Add Roe Rice +$10.00.",4000],
+        ["Soy Sauce Marinated Crab","Served with 1 Fish Roe Rice Bowl. Add Roe Rice +$10.00.",4500],
+        ["Soy Sauce Marinated Shrimp","Served with 1 Fish Roe Rice Bowl. Add Roe Rice +$10.00.",3000],
+      ] },
+      { name: "Stir-Fried, Braised", items: [
+        ["Stir-Fried Octopus with Noodles","",3600],
+        ["Braised Silver Cod in Soy Sauce","",5500],
+        ["Stir-Fried Squid with Noodles","",3600],
+        ["Braised Hairtail in Spicy Sauce","",3900],
+      ] },
+      { name: "Jeongol", items: [
+        ["Spicy Assorted Steamed Seafood","Medium $77.00, Large $97.00.",7700,null,"from"],
+        ["Spicy Assorted Seafood Soup","Medium $95.00, Large $125.00.",9500,null,"from"],
+        ["Spicy Steamed Monkfish","Medium $67.00, Large $87.00.",6700,null,"from"],
+        ["Clear Monkfish Soup","Medium $60.00, Large $80.00.",6000,null,"from"],
+        ["Pork Backbone Stew","",6900],
+        ["Spicy Beef Intestine Stew","",7000],
+        ["Spicy Octopus, Trip, and Shrimp Stew","",7500],
+        ["Bulgogi and Octopus Stew","",7000],
+        ["Angus Beef Short Rib and Spicy Octopus Stew","",8000],
+        ["Angus Beef Short Rib, Spicy Octopus, and Shrimp Stew","",8900],
+        ["Volcano Angus Bulgogi","",9900],
+        ["Steamed Pork Jowl Meat","Medium $50.00, Large $70.00.",5000,null,"from"],
+        ["Spicy Fish Roe Soup","",4000],
+        ["Braised Beef Short Ribs","",7500],
+        ["Spicy Braised Beef Short Ribs","",7700],
+      ] },
+      { name: "BBQ", items: [
+        ["Combination Grilled Beef Intestines","",8600],
+        ["Beef Bulgogi","",3200],
+        ["Spicy Pork Bulgogi","",3000],
+        ["Beef Shortrib","",4300],
+        ["Grilled Hagfish","",4300],
+        ["Spicy Grilled Hagfish","",4400],
+      ] },
+      { name: "Extra", items: [
+        ["Ramen Noodle","",300],
+        ["Udon Noodle","",300],
+        ["Rice Cake","",300],
+        ["Hand-Torn Dough","",500],
+        ["Knife Cut Noodle","",500],
+        ["Glass Noodle","",300],
+        ["Rice","",200],
+        ["Fried Rice","",500],
+        ["Roe Rice Bowl","",1000],
+      ] },
+    ],
+    siteNote: "Prices are from the food menu on their own website; their online ordering page charges a little more for some dishes.",
+  },
+
+  /*
      Matt Ahn — gathered 2026-09-28 from own
      they are: Tattoo artist
      flag: Page owner is Matt Ahn, as Glenn asked. Glenn said he "just works out of that tattoo parlor", but the shop's own site (About page and /matt-ahn) calls him "the founder of Golden Star Tattoo in SF's Chinatown" and a "Bronx-raised artist with over 20 years of experience". Worth telling Glenn.
@@ -11241,6 +12604,43 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Mission Hills Racquet & Swim Club — gathered 2026-10-05 from own
+     they are: Swim lessons and swim teams
+     flag: Hours are the club's opening hours from its site footer; swim lessons themselves run Mon-Fri 4pm-8pm and Sat-Sun 9:30am-1:30pm.
+     flag: Private lessons have no published price; the swim page says to fill in the form or call (341) 236-6219, a separate swim line from the club's main number used here.
+     flag: Instagram is the swim program's own account (themissionhills_swimming, display name 'Pierre Koehler', the swim director); the club's main account linked from the site is themissionhillsclub.
+     flag: The club's legal name in its footer is 'Mission Hills Racquet and Swim Club LLC', and the page title says 'The Mission Hills Club'; name_exact follows the logo wording.
+     flag: The heated pool is kept between 88 and 92°F, per the swim page.
+     flag: No classes on Thanksgiving (Nov 26-27, 2026) or over winter break (Dec 21, 2026 to Jan 3, 2027), per the swim page.
+     flag: Instagram @themissionhills_swimming is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'mission-hills-swim': {
+    address: "10 E Las Palmas Ave, Fremont, CA 94539",
+    phone: "(510) 656-2250",
+    email: "management@themissionhillsclub.com",
+    hours: "Mon-Fri 7am-10pm, Sat-Sun 7am-9pm",
+    cuisine: "Swim lessons and swim teams",
+    sections: [
+      { name: "Swim lessons", items: [
+        ["Group lesson, member","Per lesson, up to 4 students. No registration fee for members.",3500],
+        ["Group lesson, non-member","Per lesson, up to 4 students. Non-members also pay a one-time $100 registration fee.",4000],
+        ["Semi-private lesson, member","Per lesson, up to 2 students. No registration fee for members.",5200],
+        ["Semi-private lesson, non-member","Per lesson, up to 2 students. Non-members also pay a one-time $100 registration fee.",6500],
+      ] },
+      { name: "Swim teams", items: [
+        ["Silver Team, member","Per lesson. Mon, Wed, Fri 5:30pm-6:30pm; 2 days a week required, 3 encouraged.",5200],
+        ["Silver Team, non-member","Per lesson. Mon, Wed, Fri 5:30pm-6:30pm. Plus a $100 non-member registration fee.",5800],
+        ["Gold Team, member","Per lesson, emphasis on all four strokes. Mon, Wed, Fri 6:30pm-8pm; 2 days a week required.",7500],
+        ["Gold Team, non-member","Per lesson, emphasis on all four strokes. Plus a $100 non-member registration fee.",8200],
+      ] },
+      { name: "Fees", items: [
+        ["Non-member registration fee","One-time fee for non-members joining lessons or a swim team.",10000],
+      ] },
+    ],
+    siteNote: "Prices are from the swim and swim-team pages on the club’s own website; private lessons are priced on request.",
+  },
+
+  /*
      MOA Events & Rentals — gathered 2026-09-21 from own
      they are: Mobile party rentals
      flag: Glenn: “Needs Website. Pilot program.” They DO have a site: rentbouncebayarea.com, with a working booking cart, so there is no red outline. A redesign or pilot pitch, not a missing site.
@@ -11753,6 +13153,33 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Authentic Caucasus flavors, inspired by Azerbaijan, in the heart of Silicon Valley, in their own words. Prices are from the menus on their own site.",
+  },
+
+  /*
+     Nomads — gathered 2026-10-05 from own
+     they are: Grass-fed steak jerky and beef tallow
+     flag: Nomads is a Texas family business shipping nationwide ('We ship throughout the USA from Texas'), not a Bay Area shop; city is null.
+     flag: Email differs by source: the site's help box and contact page say contact@eatnomads.com (used here); their contact-information and refund policy pages say contact@nomadsnax.com. Phone 972-520-5448 is printed on their contact-information page. Support hours are Mon-Fri 9am-5pm CT, which are help-desk hours rather than opening hours, so hours is null.
+     flag: Discounts differ by source: the IG bio says 'Up to 40% OFF for a limited time', the site says 'UP TO 35% OFF BUNDLES' (10% for 2 items, 15% for 3, 20% for 4+). New members get 10% off the first order (code CARAVAN10).
+     flag: Brisket Jerky is on sale at $33.00 (was $34.99). All flavors of each cut are the same price. Ribeye Classic is sold out.
+     flag: The site claims 100% grass-fed beef and no preservatives; left out of dietary since that field is for diet labels such as Halal.
+     flag: Instagram @getnomads is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'nomads': {
+    phone: "(972) 520-5448",
+    email: "contact@eatnomads.com",
+    sections: [
+      { name: "Jerky slabs", items: [
+        ["Brisket Jerky","Thick-cut Texas brisket, slow-smoked; 5 oz. Seven flavors: Classic, Teriyaki, Sweet & Spicy, Spicy Habanero, BBQ, Sea Salt, Garlic Pepper.",3300],
+        ["Ribeye","Premium grass-fed Black Angus ribeye jerky, dried low and slow. Garlic & Rosemary, Cracked Peppercorn, Sea Salt, Jalapeño Lime, Smoked Paprika or Classic.",4200],
+        ["NY Strip","Grass-fed New York strip. Classic, Sea Salt, Garlic Rosemary, Cracked Peppercorn, Smoked Paprika or Jalapeño Lime.",3600],
+        ["Beef Ribs","Grass-fed beef ribs, smoked and air-dried. Classic, Garlic & Rosemary, Sea Salt, Cracked Peppercorn, Smoked Paprika or Jalapeño Lime.",3300],
+      ] },
+      { name: "Tallow", items: [
+        ["Tallow","Hand-crafted flavored beef tallow, slow-rendered in small batches. Original, Garlic & Rosemary, Chipotle Lime, Cayenne Pepper, Black Truffle & Porcini or Hickory Smoke.",2499],
+      ] },
+    ],
+    siteNote: "Prices are Nomads' own from eatnomads.com; they ship across the USA from Texas, free over $75, with bundle discounts of 10-20%.",
   },
 
   /*
@@ -12319,6 +13746,156 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "paintgo.usa",
     cuisine: "Auto tint and PPF",
     contactOnly: "A Vallejo shop for 'premium automotive protection, restoration, and customization' — detailing, ceramic coating, PPF, window tinting, body and paint. Quote-based — 'Free Estimate, No Obligation' — with no prices on any service page.",
+  },
+
+  /*
+     Pakaoma — gathered 2026-10-05 from own
+     they are: Thai Isan and Lao
+     flag: Glenn wrote the name as 'Pa Kao Ma Thai Lao'; the business writes it as one word, 'Pakaoma' (site title 'Pakaoma | Thai-Lao Diner', logo 'Thai - Lao Pakaoma Diner', Instagram display name 'Pakaoma'), so name_exact and slug use 'Pakaoma'.
+     flag: Hours agree on the website and the Instagram bio: open daily, lunch 11am-2:30pm and dinner 4:30-9pm; happy hour Mon-Fri 4:30-6:30pm, dine-in only, not on holidays; last seating 15 minutes before closing.
+     flag: Prices come from the menus on their own website; their Toast online ordering page (order_url) was not cross-checked and may price items differently.
+     flag: Dietary labels in item descriptions are the site's own codes (gf, gfo, v, vo); items marked * are fried in shared oil with gluten and non-vegan foods, which the site says is not recommended for severe gluten allergies.
+     flag: Left out: the cocktail, beer and wine lists (alcohol); the happy hour drink specials, which show no prices; and the per-item add-on lines (tofu or vegetables, chicken or pork, beef +$2, shrimp or calamari +$4, crispy pork belly +$6).
+     flag: Their order page also links to DoorDash, which was not used as a source.
+     flag: Instagram @pakaoma.thai.lao is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'pakaoma': {
+    address: "11880 San Pablo Ave, El Cerrito, CA 94530",
+    phone: "(510) 680-5590",
+    email: "pakaoma.thailao@gmail.com",
+    hours: "Mon-Sun 11am-2:30pm, 4:30pm-9pm",
+    cuisine: "Thai Isan and Lao",
+    sections: [
+      { name: "Specialties", items: [
+        ["Jumbo Papaya Salad Platter","Serves approx. 2-4 people — Choice of papaya salad: Thai-Style (contains peanuts) / Lao-Style / Tum Luang Prabang (+2); add salted crab or salted egg +3; garlic wings, Lao sausage, crispy pork belly, cabbage, vermicelli noodles, sticky rice, pork rinds, tomato jaew sauce, sweet and sour sauce",6500],
+        ["Pakaoma Short Rib","Slow-cooked beef short rib, bell peppers, red onions, kaffir lime leaves, lemongrass, peppercorns, fingerroot, shrimp paste, fermented fish sauce, cucumbers, prik nam pla sauce, jasmine rice (gluten-free option)",3000],
+        ["Mok Pla","Catfish fillet, roasted rice powder, herbs, steamed in banana leaves, steamed vegetables, tomato jaew sauce, sticky rice (gluten-free)",2400],
+        ["Fried Clear Rice Roll Wrap","Fried clear rice paper roll with pork, vermicelli noodles, lettuce, fresh herbs, ground peanuts, sweet and sour sauce",2000],
+        ["Crispy Pork Belly","Fried pork belly, jaew sauce (gluten-free; fried in shared oil)",2000],
+        ["Pun Pla","Fried whole tilapia, fresh herbs, cucumbers, lime, red onions, lettuce, fresh chili, vermicelli noodles, pork rinds, peanuts, tamarind sauce",3500],
+        ["Jung Goh Sizzling","Thai Isan-style stir-fried beef, bell peppers, red onions, basil, kaffir lime leaves, lemongrass, peppercorns, galangal, shrimp paste, served on hot sizzling plate, jasmine rice (gluten-free option)",2500],
+        ["Fried Chicken Set","Choice of papaya salad: Thai-Style (contains peanuts) / Lao-Style; crispy chicken thigh, sticky rice, sweet and sour sauce",2500],
+        ["Barbecue Pork","Marinated grilled pork, steamed vegetables, jaew sauce, sticky rice",2200],
+        ["Gangsom Pak Ruam","Fried whole tilapia, carrots, cabbage, cilantro, green beans, homemade spicy tamarind sauce, served on hot pot fish tray, jasmine rice (gluten-free; fried in shared oil)",3200],
+        ["Lao Sausage","Medium spicy Lao-style pork sausage, herbs, tomato jaew sauce (gluten-free; fried in shared oil)",1800],
+        ["Calamari Salted Egg","House saute chili sauce, white and green onions, bell peppers, calamari, salted egg, served on hot sizzling plate, jasmine rice",2500],
+      ] },
+      { name: "Starters", items: [
+        ["Combo Platter","Spring rolls (5), crispy shrimp rolls (6), fish cake (2), crunchy peanuts, cucumber salad",2300],
+        ["Crispy Veggie Rolls","Homemade crispy rolls (5) stuffed with vegetables, sweet and sour sauce (vegan; fried in shared oil)",1200],
+        ["Fresh Rolls","Soft rice paper rolls (4), marinated tofu, spring mix, carrots, cucumbers, chives, mint, peanut sauce (gluten-free option, vegan)",1100],
+        ["Crispy Shrimp Rolls","Homemade marinated shrimp rolls (6), sweet and sour sauce",1400],
+        ["Fried Tofu","Crispy fried tofu (12), sweet and sour sauce, peanuts (vegan; fried in shared oil)",1000],
+        ["Roti Dip","Crispy buttered roti (12 slices), yellow curry sauce (vegan option)",1200],
+        ["Chicken Satay","Grilled chicken marinated in coconut milk and curry powder (4), lathered in peanut sauce, cucumber salad (gluten-free)",1400],
+        ["Spicy Wings","Crispy chicken wings (7), tossed with sweet and sour sauce, crispy basil leaves (~10 minutes prep time)",1500],
+        ["Garlic Wings","Crispy chicken wings (7), fried garlic, green onions, sweet and sour sauce (~10 minutes prep time) (gluten-free option; fried in shared oil)",1500],
+        ["Crab Rangoon","Crispy wonton (6) stuffed with imitation crab, cream cheese, green onions, sweet and sour sauce",1300],
+        ["House Dumplings","Marinated ground pork dumplings (7), onions, fried garlic, mild chili soy sauce",1300],
+        ["Crispy Calamari","Tempura flour battered calamari rings and tentacles, sweet sriracha dipping sauce (gluten-free option; fried in shared oil)",1500],
+        ["Beef Jerky","Deep fried marinated and sun-dried beef, jaew sauce",1200],
+        ["Thai Fish Cake","Fried fish paste mixed with red curry paste, kaffir lime, green beans, cucumber salad, lathered in sweet and sour sauce, crunchy peanuts",1200],
+      ] },
+      { name: "Salads", items: [
+        ["Papaya Salad (Thai-Style)","Shredded green papaya, carrots, green beans, cherry tomatoes, chili, peanuts, chili-lime dressing, vermicelli noodles, pork rinds (add salted crab or salted egg +3) (gluten-free)",1750],
+        ["Papaya Salad (Lao-Style)","Shredded green papaya, green beans, cherry tomatoes, chili, fermented fish sauce, chili-lime dressing, vermicelli noodles, pork rinds (add salted crab +3) (gluten-free)",1750],
+        ["Tum Luang Prabang","Shredded flat green papaya, green beans, cherry tomatoes, chili, fermented fish sauce, chili-lime dressing, vermicelli noodles, pork rinds, salted crab (gluten-free)",1850],
+        ["Yum Woon Sen","Silver glass noodles, calamari, shrimp, onions, cilantro, various spices, mint, spicy chili-lime dressing (gluten-free)",1900],
+        ["Laab Gai","Minced chicken, chicken gizzard, mixed greens, cucumbers, red onions, mint, cilantro, roasted rice powder, tamarind dressing (gluten-free)",1600],
+        ["Laab Seen","Minced beef, beef tripe, mixed greens, cucumbers, red onions, mint, cilantro, roasted rice powder, tamarind dressing (gluten-free)",1800],
+        ["Laab Tofu","Fried tofu, onions, cilantro, rice powder, various spices, mint, cucumbers, chili-lime dressing (gluten-free; fried in shared oil)",1500],
+        ["Nam Kao Tod","Deep fried rice ball mixed with fermented pork sausage, cilantro, green onions, fresh herbs, dried chili, peanuts (gluten-free; fried in shared oil)",1900],
+      ] },
+      { name: "Soups", items: [
+        ["Tom Yum","Sour and spicy soup, mushrooms, tomatoes, red onions, fragrant herbs, choice of add-ons: tofu* / vegetables / chicken / shrimp or calamari +4. Small (16oz) $10 / large (32oz) $17.",1000,null,"from"],
+        ["Tom Kha","Coconut milk soup, mushrooms, tomatoes, red onions, galangal, fragrant herbs, choice of add-ons: tofu* / vegetables / chicken / shrimp or calamari +4 (gluten-free, vegan). Small (16oz) $10 / large (32oz) $17.",1000,null,"from"],
+        ["Kao Soi","Lao-style, flat rice noodles, spicy ground pork, pork meatballs, bean sprouts, cilantro, green onions, pork broth",1700],
+        ["Kao Piek","Lao-style noodles, chicken thigh, pork belly, pork meatballs, bean sprouts, cilantro, green onions, fried garlic and shallots, chicken gravy broth",1800],
+        ["Kao Poon","Lao-style vermicelli noodles, chicken breast, pork meatballs, bean sprouts, cilantro, cabbage, green onions, fried garlic and shallots, medium spicy chicken red curry broth (can substitute with tofu)",1700],
+        ["Beef Noodle Soup","Thin rice noodles, sliced beef, beef meatballs, pork rinds, bean sprouts, Chinese broccoli, green onions, garlic, beef broth",1800],
+        ["Short Rib Noodle Soup","Slow cooked beef short rib, thin rice noodles, beef meatballs, bean sprouts, Chinese broccoli, green onions, cilantro, garlic, beef broth",2900],
+      ] },
+      { name: "Thai Classics (stir-fried noodles)", items: [
+        ["Pad Thai","Stir-fried thin rice noodles, tangy tamarind sauce, eggs, fried tofu, chives, bean sprouts, ground peanuts, choice of add-ons (fried chicken thigh +8)",1700],
+        ["Pad See Ew","Stir-fried flat rice noodles, homemade sweet sauce, eggs, Chinese broccoli, choice of add-ons (gluten-free option, vegan option)",1700],
+        ["Pad Kee Mao","Stir-fried flat rice noodles, homemade spicy sauce, eggs, bell peppers, onions, tomatoes, basil, choice of add-ons (gluten-free option, vegan option)",1700],
+        ["Pad Woon Sen","Silver glass noodles, eggs, onions, tomatoes, carrots, cabbage, choice of add-ons (gluten-free option, vegan option)",1700],
+      ] },
+      { name: "Thai Classics (stir-fried rice)", items: [
+        ["Thai Fried Rice","Stir-fried Thai jasmine rice, eggs, onions, tomatoes, Chinese broccoli, choice of add-ons (fried chicken thigh +8) (gluten-free option, vegan option)",1700],
+        ["Basil Fried Rice","Spicy stir-fried Thai jasmine rice, eggs, basil, bell peppers, Thai chili, onions, tomatoes, choice of add-ons (gluten-free option, vegan option)",1700],
+        ["Pineapple Fried Rice","Stir-fried Thai jasmine rice, eggs, pineapple, curry powder, cashew nuts, raisins, onions, tomatoes, chicken, shrimp, cucumbers, prik nam pla sauce (gluten-free option, vegan option)",2200],
+        ["Crab Fried Rice","Stir-fried Thai jasmine rice, jumbo lump crab meat, eggs, onions, tomatoes, cucumbers, prik nam pla sauce (gluten-free option)",2700],
+      ] },
+      { name: "Thai Classics (saute)", items: [
+        ["Spicy Basil","Thai basil saute sauce, onions, bell peppers, green beans, basil, chili, garlic, choice of add-ons (recommended with fried egg +4) (gluten-free option, vegan option)",1600],
+        ["Spicy Eggplant","Eggplant saute, spicy Thai basil sauce, bell peppers, onions, basil, choice of add-ons (gluten-free option, vegan option)",1600],
+        ["Chinese Broccoli","House saute sauce, Chinese broccoli, choice of add-ons(recommended with crispy pork belly +6) (gluten-free option, vegan option)",1700],
+        ["Cashew Nut","House saute chili sauce, cashew nuts, onions, bell peppers, carrots, dry chili, choice of add-ons (gluten-free option, vegan option)",1600],
+        ["Veggie Deluxe","Garlic saute sauce, cabbage, carrots, Chinese broccoli, bell peppers, bean sprouts, choice of add-ons (gluten-free option, vegan option)",1600],
+        ["Pra Ram","Steamed cabbage, carrots, Chinese broccoli, green beans, peanut sauce, ground peanuts, choice of add-ons (gluten-free, vegan option)",1600],
+      ] },
+      { name: "Thai Classics (curry)", items: [
+        ["Green Curry","Spicy green curry, bell peppers, eggplants, green beans, basil, choice of add-ons (gluten-free)",1600],
+        ["Red Curry","Medium spicy red curry, bell peppers, bamboo shoots, green beans, basil, choice of add-ons (gluten-free)",1600],
+        ["Pumpkin Curry","Medium spicy red curry, pumpkin, bell peppers, basil, choice of add-ons (gluten-free)",1600],
+        ["Panang Curry","Medium spicy gravy peanut red curry, bell peppers, choice of add-ons (gluten-free)",1600],
+        ["Yellow Curry","Mild yellow curry, potatoes, carrots, onions, choice of add-ons (gluten-free, vegan)",1600],
+      ] },
+      { name: "Sides", items: [
+        ["Jasmine Rice","",350],
+        ["Sticky Rice","",400],
+        ["Steamed Noodles","(thin rice or vermicelli)",400],
+        ["Steamed Vegetables","(mix of cabbage, carrots, green beans)",600],
+        ["Roti","",500],
+        ["Lao Sausage","",900],
+        ["Fried Chicken Thigh","",1000],
+        ["Fried Egg","",400],
+        ["Cucumber Salad","",600],
+        ["Peanut Sauce","(2oz)",150],
+        ["Peanut or Yellow Curry Sauce","(8oz)",600],
+        ["Jaew Maklen","(tomato jaew sauce 8oz)",700],
+        ["Pork Rinds","(bag)",600],
+        ["Lettuce","",250],
+        ["Broth","",500],
+        ["Sweet Sticky Rice","Sweet coconut milk, sticky rice",500],
+      ] },
+      { name: "Dessert", items: [
+        ["Mango Sticky Rice","Sweet coconut milk, fresh mango, sweet sticky rice, sesame seeds, mint (gluten-free, vegan)",1200],
+        ["Fried Banana w/ Vanilla Ice Cream","Mint, honey",1200],
+        ["Stuffed Roti","Crispy roti stuffed with sweet sticky rice and bananas, vanilla ice cream, chocolate sauce, honey, whipped cream, mint",1300],
+        ["Vanilla Ice Cream","Single scoop",500],
+      ] },
+      { name: "Lunch Combo", items: [
+        ["Lunch Combo","Weekday lunch only, not on holidays: one appetizer and one entree from the lunch list (noodles, fried rice, saute or curry with jasmine rice); protein add-ons extra, some appetizers +$1.",1695,null,"from"],
+      ] },
+      { name: "Happy Hour", items: [
+        ["Crispy Veggie Rolls","Quantity 3. (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",600],
+        ["Lao Sausage","Quantity 1. (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",800],
+        ["Crispy Shrimp Rolls","Quantity 3. (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",600],
+        ["Spicy Wings","Quantity 5. (~10 minutes prep time) (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",995],
+        ["Garlic Wings","Quantity 5. (~10 minutes prep time) (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",995],
+        ["Crab Rangoon","Quantity 3. (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",600],
+        ["Mini Laab Gai","(happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",1100],
+        ["Mini Nam Kao Tod","(contains peanuts) (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",1100],
+        ["Mini Papaya Salad","Choice of: Thai-Style (contains peanuts) or Lao-Style only; does not include pork rinds and vermicelli noodles (happy hour, dine-in only, Mon-Fri 4:30-6:30pm)",1000],
+      ] },
+      { name: "Drinks", items: [
+        ["Thai Iced Tea","sub oat milk +1",600],
+        ["Thai Iced Coffee","sub oat milk +1",600],
+        ["Longan Iced Tea","",700],
+        ["Lavender Lemonade","",700],
+        ["Coconut Juice","",700],
+        ["Apple Juice / Pineapple Juice","",500],
+        ["Coke / Sprite / Diet Coke","",400],
+        ["San Pellegrino Sparkling Water","",500],
+        ["Unsweetened Iced Tea","refillable",500],
+        ["Hot Milo","chocolate, condensed milk",600],
+        ["Hot Tea","jasmine / Thai / lotus / chrysanthemum",400],
+        ["Decaf Hot Tea","chamomile",400],
+      ] },
+    ],
+    siteNote: "Prices are from the food, lunch combo, happy hour and drinks menus on Pakaoma's own website.",
   },
 
   /*
@@ -13685,6 +15262,556 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Pho Ha Noi — gathered 2026-10-05 from own
+     they are: Vietnamese, Northern-style phở
+     flag: Pho Ha Noi has five open Bay Area locations on phohanoi.com (San Jose, Cupertino, Palo Alto, Milpitas, Fremont), and this is one record per location. Glenn named no city, so glenn_label is set to '<City> • Eats' for each; check that this is the label Glenn wants. Their site also lists Berkeley (2433 Telegraph Ave, 'Opening early 2027 due to contruction permitting'), San Francisco (1700 California St, 'Planning to open on October 2027') and Fountain Valley in Orange County (soft opening January 16, 2026; Instagram @phohanoioc). These are not open in the Bay Area yet or are outside it, so they have no record.
+     flag: Each location has its own menu page with different prices and item lists, so every record uses its own location's menu (phohanoi.com/<city>-en.html).
+     flag: Items with two prices on their menu (for example '$16.6 $18.6' on most phở) are entered at the lower price with label 'from', and both prices are in desc. The site does not label the two prices; they are probably regular and large, but that is not stated.
+     flag: Beer (Corona, Heineken, Blue Moon) is left out as alcohol. Non-alcoholic drinks and coffee are kept.
+     flag: Hours, address and phone agree across their homepage, the Restaurants series page, the Contact page and Glenn's screenshots of the site. For San Jose, the Instagram profile picture also shows 408-239-0888, 969 Story Road #6048 and 'in the back end of the plaza'.
+     flag: Ordering: every location page links 'ONLINE ORDER' to one shared storefront, https://order.online/business/pho-ha-noi-325165, used as order_url. The eGift card links go to Toast. The Fremont page's eGift card link points at the Milpitas Toast page, which looks like a mistake on their site.
+     flag: Name: the site writes 'PHO HA NOI' / 'Pho Ha Noi'. The logo and Instagram display name use 'Phở Hà Nội'. name_exact uses the plain-letter version; switch to the accented one if Leon prefers. Instagram is phohanoibayarea for all locations, and there is a Facebook page facebook.com/PhoHaNoiSanJose.
+     flag: From their site: sourcing from local farms with organic produce, Harris Ranch Angus beef, Stockton Poultry free-range brown chicken, and phở spices from Vietnam's Central Valley mountains. Northern-style phở comes without bean sprouts (free on request). They also do catering (phohanoi.com/catering.html).
+     flag: Logo: the 'Phở Hà Nội' script with the dragon bowl and chopsticks, from the top of their website (Glenn's IMG_5897), cut --square. The same icon is used for all five locations.
+     flag: Cupertino menu: 75 items kept.
+     flag: Instagram @phohanoibayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/business/pho-ha-noi-325165 is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'pho-ha-noi-cupertino': {
+    address: "10100 S De Anza Blvd, Cupertino, CA 95014",
+    phone: "(408) 899-4164",
+    hours: "Mon-Thu 11am-2pm & 5-8:30pm, Fri 11am-2pm & 5-9pm, Sat 11am-3pm & 4:30-9pm, Sun 11am-3pm & 4:30-8:30pm",
+    sections: [
+      { name: "Appetizers & Rolls", items: [
+        ["Imperial Crab Roll 2pcs","Nem Cua Bể.",985],
+        ["Pork Egg Roll","Chả Giò Heo.",900],
+        ["Garlic & Fish Sauce Wings","Cánh gà chiên nước mắm.",1250],
+        ["Crispy Salt & Pepper Tofu","Đậu hủ rang muối.",1250],
+        ["Vietnamese Grilled Pork Sausage Rolls","Nem nướng Ninh Hoà. Contains peanut sauce.",985],
+        ["Nori Tofu Mushroom Rolls","Cuốn Chay.",985],
+        ["Chargrilled Pork Rolls","Cuốn thịt nướng.",985],
+        ["Spring Rolls","Gỏi Cuốn.",985],
+        ["Ha Noi Special Rolls","Cuốn 3 Loại.",1500],
+      ] },
+      { name: "Beef Noodle Soup", items: [
+        ["Special Combination Pho","PHỞ BÒ ĐẶC BIỆT. Rare USDA choice flap meat, flank, brisket, tendon, short rib meat, and meatball.",1975],
+        ["Rare USDA Choice Flap Meat & Welldone Pho","Phở tái thịt chín.",1895],
+        ["Rare Steak, Brisket, Flank Pho","Phở Tái Nạm Gầu.",1895],
+        ["Rare USDA Choice Flap Meat & Meatball Pho","Phở tái bò viên.",1895],
+        ["Rare Steak & Tendon Pho","Phở Tái Gân.",1895],
+        ["Sauteed Flank Steak Pho","Phở Tái Lăn.",1935],
+        ["1 LB of Short Rib Pho (Special Bone In)","Phở sườn bò.",1980],
+        ["Rare USDA Choice Flap Meat & Ribs Meat (No Bone) Pho","Phở tái & thịt sườn bò.",1980],
+        ["No Meat, Beef Broth Pho","Phở không thịt.",1095],
+        ["Oxtail Pho","Phở đuôi bò.",1980],
+        ["Kid Size Pho (Well Done or Meatball","Phở Cho trẻ em chín hoặc bò viên.",1100],
+        ["Rare Beef USDA Choice Flap Meat & Oxtail Pho","Phở tái đuôi bò.",1980],
+      ] },
+      { name: "Free-Range Brown Chicken Pho", items: [
+        ["Combination Chicken Pho","Phở gà đặc biệt.",1875],
+        ["Chicken thigh Pho","Phở Gà Đùi.",1925],
+        ["No Meat Chicken Broth Pho","Phở gà không thịt.",1095],
+        ["Chicken Breast Pho","Phở gà thịt ức.",1825],
+        ["Veggies Pho with Chicken Soup or Beef Soup","Phở rau cải ( soup bò / gà )",1895],
+      ] },
+      { name: "House Specialties", items: [
+        ["1/2 Roasted Kui Fei Chicken Egg Noodles","Mì gà rôti 1/2 con. (Wait 10')",1950],
+        ["1/2 Roasted Kui Fei Chicken & Tomato Rice","Cơm gà rôti 1/2 con. (Wait 10')",1950],
+        ["1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Crispy Sticky Rice","Xôi chiên giòn gà rôti 1/2 con. (Wait 15')",2100],
+        ["Rock and Roll Steak with Garlic Noodle","Bò lúc lắc mì tỏi. USDA choice fillet mignon cube steak, small salad onion, garlic noodle.",2400],
+        ["Spicy Hue Noodle with 1 LB of Short Rib","Bún bò huế sườn bò.",1950],
+        ["1 LB Korean BBQ Short Ribs","Cơm với 1 lbs sườn bò Đại Hàn. Korean BBQ choice short ribs with white rice.. Two prices on their menu: $21.50 and $25.50.",2150,null,"from"],
+        ["Tamarind Prawns with Garlic Noodle or Jasmine Rice","Tôm xào me với mì tỏi / cơm.",2150],
+        ["1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Garlic Noodles","Mì tỏi gà rôti 1/2 con. (Wait 10')",1950],
+        ["S4. 1/2 Roasted Kui Fei Chicken & Sticky Rice","Xôi gà rôti 1/2 con. (Wait 10')",2100],
+        ["Ha Noi Special Grilled Pork Vermicelli","Bún chả Hà Nội.",1800],
+        ["Rock and Roll Steak with Tomato Rice","Cơm bò lúc lắc. USDA choice fillet mignon cube steak, small salad onion, tomato rice.",2250],
+        ["Slow-cook beef brisket, tendon & carrot.","Bánh mì bò kho.",1700],
+        ["Vietnamese Sizzling Steak","USDA Prime Fillet Mignon, pâté, pork meatball, sunny side egg, bread, and fries. No fries sub vinegar salad for $1.00 extra / Bò né ( thịt bò fillet mignon). Không khoai tây chiên thế xà lách dầu giấm thêm $1.00.",2450],
+        ["Steamed Brown Chicken with Hainanese Rice","Cơm gà hải nam.",1900],
+        ["Steamed Brown Chicken with Sticky Rice","Xôi Gà Hải Nam.",1900],
+        ["Grilled Pork Vermicelli","Bún Thịt Nướng.",1600],
+        ["Grilled Pork & Pork Egg Roll Vermicelli","Bún Thịt Nướng Chả Giò.",1600],
+        ["Grilled Pork & Crab Roll Vermicelli","Bún Thịt Nướng Nem Cua Bể.",1850],
+        ["Imperial Crab Roll Vermicelli","Nem Cua Bể.",1875],
+        ["Grilled Pork Chop Jasmine Rice","Cơm Sườn Heo Nướng.",1600],
+      ] },
+      { name: "Side Orders", items: [
+        ["2 Egg Yolks with Soup","Trứng trần.",350],
+        ["Extra Garlic Noodles or Sticky Rice","Thêm bún, phở, mì, xôi.",350],
+        ["Extra Dish or Bowl of Rare Flank Steak Soup on the Side","Đĩa / chén tái riêng có soup.",900],
+        ["Small Bowl of Meatballs/ Brisket/ Well Done","Thêm Chén nạm, chín, gầu hoặc bò viên.",750],
+        ["Chinese Breadsticks or Vietnamese Baguette","Dầu cháo quẩy / bánh mì.",275],
+        ["Side Order of Steam Chicken","Thêm Phần thịt ức/ đùi/ cánh gà luộc. Breast | Thigh | Wings.",900],
+        ["Bowl of Oxtail","Chén Đuôi Bò.",1000],
+        ["A Bowl of White Rice, Tomatoes Rice, or Chicken Rice","Chén cơm trắng/ cơm đỏ hoặc cơm gà.",350],
+        ["1 LB of Braised Beef Short Rib","Sườn bò hầm.",1200],
+      ] },
+      { name: "Beverages and Coffee", items: [
+        ["Vietnamese Ice Coffee with Condensed Milk","Cà phê sữa đá.",650],
+        ["Thai Tea","Trà Thái.",650],
+        ["Hot Lemonade with Ginger and Honey","Chanh gừng mật ong nóng.",600],
+        ["Fresh Lemon Soda","Soda Chanh.",650],
+        ["Salty Plum Soda","Soda Xí Muội.",650],
+        ["Mango Smoothie","Sinh Tố Xoài.",750],
+        ["All kinds of soda coke, sprite, Fanta","Nước Ngọt Các Loại.",225],
+        ["Fresh Squeezed Orange Juice","Nước Cam Tươi.",800],
+        ["Coconut Juice","Nước Dừa.",700],
+        ["Vietnamese Three Color Dessert","(Chè ba màu). Red bean, mung bean, jelly, coconut milk.",750],
+        ["French Style Black Ice Coffee","Cà phê đen đá.",550],
+        ["Ice Tea / Hot Tea","Trà Đá / Trà Nóng.",175],
+        ["Salty Lemon Soda","Soda Chanh Muối.",650],
+        ["Strawberry Smoothie","Sinh Tố Dâu.",750],
+        ["Passionfruit Drink","Chanh Dây.",650],
+        ["Sugarcane juice with Kumquat or Orange","Kumquat /orange/pineapple Sugar cane juice.",750],
+        ["Fresh Squeezed Orange Juice (No Ice)","Nước Cam Tươi (Không Đá)",900],
+        ["Fresh Lemonade","Đá chanh.",550],
+        ["Young Coconut and Kumquat","Nước Dừa Tắc.",700],
+        ["Special Healthy Drink","Sương sáo, hạt é. Grass jelly with basil seeds and coconut juice.",750],
+      ] },
+    ],
+    siteNote: "Prices are from the Cupertino menu on their own website; each location sets its own prices.",
+  },
+
+  /*
+     Pho Ha Noi — gathered 2026-10-05 from own
+     they are: Vietnamese, Northern-style phở
+     flag: Pho Ha Noi has five open Bay Area locations on phohanoi.com (San Jose, Cupertino, Palo Alto, Milpitas, Fremont), and this is one record per location. Glenn named no city, so glenn_label is set to '<City> • Eats' for each; check that this is the label Glenn wants. Their site also lists Berkeley (2433 Telegraph Ave, 'Opening early 2027 due to contruction permitting'), San Francisco (1700 California St, 'Planning to open on October 2027') and Fountain Valley in Orange County (soft opening January 16, 2026; Instagram @phohanoioc). These are not open in the Bay Area yet or are outside it, so they have no record.
+     flag: Each location has its own menu page with different prices and item lists, so every record uses its own location's menu (phohanoi.com/<city>-en.html).
+     flag: Items with two prices on their menu (for example '$16.6 $18.6' on most phở) are entered at the lower price with label 'from', and both prices are in desc. The site does not label the two prices; they are probably regular and large, but that is not stated.
+     flag: Beer (Corona, Heineken, Blue Moon) is left out as alcohol. Non-alcoholic drinks and coffee are kept.
+     flag: Hours, address and phone agree across their homepage, the Restaurants series page, the Contact page and Glenn's screenshots of the site. For San Jose, the Instagram profile picture also shows 408-239-0888, 969 Story Road #6048 and 'in the back end of the plaza'.
+     flag: Ordering: every location page links 'ONLINE ORDER' to one shared storefront, https://order.online/business/pho-ha-noi-325165, used as order_url. The eGift card links go to Toast. The Fremont page's eGift card link points at the Milpitas Toast page, which looks like a mistake on their site.
+     flag: Name: the site writes 'PHO HA NOI' / 'Pho Ha Noi'. The logo and Instagram display name use 'Phở Hà Nội'. name_exact uses the plain-letter version; switch to the accented one if Leon prefers. Instagram is phohanoibayarea for all locations, and there is a Facebook page facebook.com/PhoHaNoiSanJose.
+     flag: From their site: sourcing from local farms with organic produce, Harris Ranch Angus beef, Stockton Poultry free-range brown chicken, and phở spices from Vietnam's Central Valley mountains. Northern-style phở comes without bean sprouts (free on request). They also do catering (phohanoi.com/catering.html).
+     flag: Logo: the 'Phở Hà Nội' script with the dragon bowl and chopsticks, from the top of their website (Glenn's IMG_5897), cut --square. The same icon is used for all five locations.
+     flag: Fremont menu: 71 items kept.
+     flag: Instagram @phohanoibayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/business/pho-ha-noi-325165 is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'pho-ha-noi-fremont': {
+    address: "43316 Christy St, Fremont, CA 94538",
+    phone: "(510) 771-9602",
+    hours: "Mon-Thu 11am-2pm & 5-8:30pm, Fri 11am-2pm & 5-9:30pm, Sat 11am-3pm & 5-9:30pm, Sun 11am-3pm & 5-8:30pm",
+    sections: [
+      { name: "Appetizers & Rolls", items: [
+        ["A1. Imperial Crab Rolls (2PCS)","Crab, shrimp, pork & lettuce.",925],
+        ["A2. Pork Egg Rolls (3PCS)","Pork, Taro, Carrot.",850],
+        ["A3. Garlic & Fish Sauce Wings","",1400],
+        ["A9. Crispy Salt & Pepper Tofu","",1150],
+        ["A4. Vietnamese Grilled Pork Sausage Rolls","Contains peanut sauce.",850],
+        ["A8. Nori Tofu Mushroom Rolls","Vegetarian rolls w/ peanut sauce.",850],
+        ["A5. Chargrilled Pork Rolls","",850],
+        ["A6. Spring Rolls","Pork and shrimp w/ peanut sauce.",850],
+        ["A7. Ha Noi Special Rolls","Two pieces of each A5, A7, and A8. Contains peanut sauce.",1400],
+      ] },
+      { name: "Beef Noodle Soup", items: [
+        ["P1. Special Combination Pho","Rare USDA choice flap meat, flank, brisket, tendon, short rib meat, and meatball.",1899],
+        ["P3. Rare USDA Choice Flap Meat & Flank Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P7. 1 LB of Short Rib Pho (Special Bone In)","",1885],
+        ["P4. Rare USDA Choice Flap Meat, Brisket and Fatty Brisket Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P5. Rare USDA Choice Flap Meat & Meatball Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P6. Sautéed Flank Steak Pho","Two prices on their menu: $18.35 and $19.35.",1835,null,"from"],
+        ["P2. Rare Beef USDA Choice Flap Meat Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P8. Rare USDA Choice Flap Meat & Ribs Meat (No Bone) Pho","",1885],
+        ["P12. Kid Size Pho (Well Done or Meatball","",1000],
+        ["P10. Oxtail Pho","",1935],
+        ["P11. Rare Beef USDA Choice Flap Meat & Oxtail Pho","",1935],
+        ["P9. No Meat, Beef Broth Pho","",1150],
+      ] },
+      { name: "Free-Range Brown Chicken Pho", items: [
+        ["C1. Chicken Thigh Pho","Two prices on their menu: $17.00 and $18.60.",1700,null,"from"],
+        ["Veggies Pho with Chicken Soup or Beef Soup","Two prices on their menu: $16.60 and $17.60.",1660,null,"from"],
+        ["C3. No Meat Chicken Broth Pho","",1050],
+        ["C2. Chicken Breast Pho","Two prices on their menu: $15.60 and $17.60.",1560,null,"from"],
+      ] },
+      { name: "House Specialties", items: [
+        ["S1. 1/2 Roasted Kui Fei Chicken & Egg Noodles","",1800],
+        ["S3. 1/2 Roasted Kui Fei Chicken & Sticky Rice","Xôi gà rôti 1/2 con. (Wait 10')",1800],
+        ["S2. 1/2 Roasted Kui Fei Chicken & Tomato Rice","",1800],
+        ["S4. 1/2 Roasted Kui Fei Chicken & Crispy Sticky Rice","",1950],
+        ["S11. Ha Noi Special Grilled Pork Vermicelli","",1700],
+        ["S5. Rock and Roll Steak with Tomato Rice","USDA choice fillet mignon cube steak, small salad onion, tomato rice.",1950],
+        ["S13. Spicy Hue Noodle with 1 LB of Short Rib","",1950],
+        ["S8. Slow-cook beef brisket, tendon & carrot.","",1600],
+        ["S11. Korean Prime BBQ Short Ribs Jasmine Rice","$21.00: 2 ribs & 1 sunny side egg. $26.00: 3 ribs only.. Two prices on their menu: $19.00 and $24.00.",1900,null,"from"],
+        ["S7. Vietnamese Sizzling Steak","USDA Prime Fillet Mignon, pâté, pork meatball, sunny side egg, bread, and fries.",2100],
+        ["S20. Tamarind Prawns with Garlic Noodle or Jasmine Rice","",2150],
+        ["S18. Grilled Pork & Pork Egg Roll Vermicelli","",1550],
+        ["S19. Grilled Pork & Crab Roll Vermicelli","",1650],
+        ["S16. Imperial Crab Rolls Vermicelli","Crab, shrimp, pork, vermicelli & lettuce.",1875],
+        ["S15. Grilled Pork Chop White Rice","",1550],
+      ] },
+      { name: "Side Orders", items: [
+        ["2 Egg Yolks with Soup","Trứng trần.",250],
+        ["Extra Garlic Noodles or Sticky Rice","Thêm bún, phở, mì, xôi.",350],
+        ["Extra Dish or Bowl of Rare Flank Steak Soup on the Side","Đĩa / chén tái riêng có soup.",800],
+        ["Small Bowl of Meatballs/ Brisket/ Well Done","Thêm Chén nạm, chín, gầu hoặc bò viên.",650],
+        ["Chinese Breadsticks or Vietnamese Baguette","Dầu cháo quẩy / bánh mì.",225],
+        ["Side Order of Steam Chicken","Thêm Phần thịt ức/ đùi/ cánh gà luộc. Breast | Thigh | Wings.",850],
+        ["Bowl of Oxtail","Chén Đuôi Bò.",950],
+        ["A Bowl of White Rice, Tomatoes Rice, or Chicken Rice","Chén cơm trắng/ cơm đỏ hoặc cơm gà.",350],
+        ["1 LB of Braised Beef Short Rib","Sườn bò hầm.",1000],
+      ] },
+      { name: "Beverages and Coffee", items: [
+        ["Vietnamese Ice Coffee with Condensed Milk","Cà phê sữa đá.",650],
+        ["Thai Tea","Trà Thái.",650],
+        ["Hot Lemonade with Ginger and Honey","Chanh gừng mật ong nóng.",600],
+        ["Fresh Lemon Soda","Soda Chanh.",650],
+        ["Salty Plum Soda","Soda Xí Muội.",650],
+        ["Mango Smoothie","Sinh Tố Xoài.",750],
+        ["All kinds of soda coke, sprite, Fanta","Nước Ngọt Các Loại.",275],
+        ["Fresh Squeezed Orange Juice","Nước Cam Tươi.",800],
+        ["Sparkling Water","Nước Khoáng Có Gas.",600],
+        ["Coconut Juice","Nước Dừa.",650],
+        ["Vietnamese Three Color Dessert","(Chè ba màu). Red bean, mung bean, jelly, coconut milk.",750],
+        ["French Style Black Ice Coffee","Cà phê đen đá.",550],
+        ["Ice Tea / Hot Tea","Trà Đá / Trà Nóng.",175],
+        ["Soft Drinks","Coke, Diet Coke, Sprite.",250],
+        ["Salty Lemon Soda","Soda Chanh Muối.",650],
+        ["Strawberry Smoothie","Sinh Tố Dâu.",750],
+        ["Passionfruit Drink","Chanh Dây.",650],
+        ["Sugarcane juice with Kumquat or Orange","Kumquat /orange/pineapple Sugar cane juice.",750],
+        ["Fresh Squeezed Orange Juice (No Ice)","Nước Cam Tươi (Không Đá)",900],
+        ["Fresh Lemonade","Đá chanh.",550],
+        ["Young Coconut and Kumquat","Nước Dừa Tắc.",700],
+        ["Special Healthy Drink","Sương sáo, hạt é. Grass jelly with basil seeds and coconut juice.",750],
+      ] },
+    ],
+    siteNote: "Prices are from the Fremont menu on their own website; each location sets its own prices.",
+  },
+
+  /*
+     Pho Ha Noi — gathered 2026-10-05 from own
+     they are: Vietnamese, Northern-style phở
+     flag: Pho Ha Noi has five open Bay Area locations on phohanoi.com (San Jose, Cupertino, Palo Alto, Milpitas, Fremont), and this is one record per location. Glenn named no city, so glenn_label is set to '<City> • Eats' for each; check that this is the label Glenn wants. Their site also lists Berkeley (2433 Telegraph Ave, 'Opening early 2027 due to contruction permitting'), San Francisco (1700 California St, 'Planning to open on October 2027') and Fountain Valley in Orange County (soft opening January 16, 2026; Instagram @phohanoioc). These are not open in the Bay Area yet or are outside it, so they have no record.
+     flag: Each location has its own menu page with different prices and item lists, so every record uses its own location's menu (phohanoi.com/<city>-en.html).
+     flag: Items with two prices on their menu (for example '$16.6 $18.6' on most phở) are entered at the lower price with label 'from', and both prices are in desc. The site does not label the two prices; they are probably regular and large, but that is not stated.
+     flag: Beer (Corona, Heineken, Blue Moon) is left out as alcohol. Non-alcoholic drinks and coffee are kept.
+     flag: Hours, address and phone agree across their homepage, the Restaurants series page, the Contact page and Glenn's screenshots of the site. For San Jose, the Instagram profile picture also shows 408-239-0888, 969 Story Road #6048 and 'in the back end of the plaza'.
+     flag: Ordering: every location page links 'ONLINE ORDER' to one shared storefront, https://order.online/business/pho-ha-noi-325165, used as order_url. The eGift card links go to Toast. The Fremont page's eGift card link points at the Milpitas Toast page, which looks like a mistake on their site.
+     flag: Name: the site writes 'PHO HA NOI' / 'Pho Ha Noi'. The logo and Instagram display name use 'Phở Hà Nội'. name_exact uses the plain-letter version; switch to the accented one if Leon prefers. Instagram is phohanoibayarea for all locations, and there is a Facebook page facebook.com/PhoHaNoiSanJose.
+     flag: From their site: sourcing from local farms with organic produce, Harris Ranch Angus beef, Stockton Poultry free-range brown chicken, and phở spices from Vietnam's Central Valley mountains. Northern-style phở comes without bean sprouts (free on request). They also do catering (phohanoi.com/catering.html).
+     flag: Logo: the 'Phở Hà Nội' script with the dragon bowl and chopsticks, from the top of their website (Glenn's IMG_5897), cut --square. The same icon is used for all five locations.
+     flag: Milpitas menu: 74 items kept.
+     flag: Instagram @phohanoibayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/business/pho-ha-noi-325165 is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'pho-ha-noi-milpitas': {
+    address: "1228 S Abel St, Milpitas, CA 95035",
+    phone: "(408) 708-7965",
+    hours: "Mon, Wed-Thu 11am-2pm & 5-8:30pm, Fri 11am-2pm & 5-9:30pm, Sat 11am-3pm & 5-9:30pm, Sun 11am-3pm & 5-8:30pm",
+    sections: [
+      { name: "Appetizers & Rolls", items: [
+        ["A1. Imperial Crab Rolls (2PCS)","Crab, shrimp, pork.",925],
+        ["A2. Pork Egg Rolls (3PCS)","Taro, Pork, Carrot.",850],
+        ["A3. Garlic & Fish Sauce Chicken Wings","A3. Cánh gà chiên nước mắm.",1200],
+        ["A4. Vietnamese Pork Sausage Rolls","Sauce contains peanut.",850],
+        ["A5. Chargrilled Pork Rolls","",850],
+        ["A6. Spring Rolls","Pork and shrimp w/ peanut sauce.",850],
+        ["A7. Ha Noi Special Rolls","Combination of Spring Rolls, Grilled Pork Sausage Rolls, and Chargrilled Pork Rolls.",1400],
+        ["A8. Nori Tofu Mushroom Rolls","Vegetarian rolls w/ peanut sauce.",850],
+        ["A9. Crispy Salt & Pepper Tofu","",1200],
+      ] },
+      { name: "Beef Noodle Soup", items: [
+        ["P1. Special Combination Pho","Rare USDA choice flap meat, flank, brisket, tendon, short rib meat (no bone), and meatball.",1899],
+        ["P2. Rare Beef USDA Choice Flap Meat Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P3. Rare USDA Choice Flap Meat & Flank Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P4. Rare USDA Choice Flap Meat, Brisket and Fatty Brisket Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P5. Rare USDA Choice Flap Meat & Meatball Pho","Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["P10. Oxtail Pho","",1935],
+        ["P6. Sautéed Flank Steak Pho","Two prices on their menu: $18.35 and $19.35.",1835,null,"from"],
+        ["P7. 20OZ Beef Short Rib Pho (Special Bone-In)","",1885],
+        ["P8. Rare USDA Choice Flap Meat & Ribs Meat (No Bone) Pho","",1885],
+        ["P9. No Meat, Beef Broth Pho","Phở không thịt.",1150],
+        ["P11. Rare Beef USDA Choice Flap Meat & Oxtail Pho","",1935],
+        ["P13. Vegetable Pho W/ Beef Broth","Two prices on their menu: $16.00 and $17.60.",1600,null,"from"],
+      ] },
+      { name: "Chicken Noodles Soup", items: [
+        ["C1. Chicken Thigh Pho","Two prices on their menu: $17.00 and $18.60.",1700,null,"from"],
+        ["C2. Chicken Breast Pho","Two prices on their menu: $15.60 and $17.60.",1560,null,"from"],
+        ["C3. No Meat Chicken Broth Pho","",1150],
+        ["C4. Veggies Pho with Chicken Soup","Two prices on their menu: $16.60 and $17.60.",1660,null,"from"],
+      ] },
+      { name: "Rice, Sticky Rice, and House Specialties", items: [
+        ["S1. 1/2 Roasted Kui Fei Chicken & Egg Noodles","Mì gà rôti 1/2 con. (Wait 10')",1800],
+        ["S2. 1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Tomato Rice","",1800],
+        ["S3. Roasted Kui Fei Chicken Sticky Rice","",1800],
+        ["S4. 1/2 Roasted Kui Fei Chicken & Crispy Sticky Rice","",1950],
+        ["S5. Rock and Roll Steak with Tomato Rice","USDA choice fillet mignon cube steak, small salad onion, tomato rice.",1950],
+        ["S6. Korean BBQ Short Ribs White Rice","$19.00: 2 pieces of ribs and a sunny side egg $24.00: 3 pieces of ribs. Two prices on their menu: $19.00 and $24.00.",1900,null,"from"],
+        ["S7. Vietnamese Sizzling Steak","USDA Prime Fillet Mignon, pâté, pork meatball, sunny side egg, bread, and fries.",2100],
+        ["S8. Vietnamese Short-rib Beef Stew","",1600],
+        ["S9. Spicy Hue Noodle with 20OZ of USDA Choice Short Rib","",1950],
+        ["S11. Ha Noi Special Grilled Pork Vermicelli","Bún chả Hà Nội.",1700],
+        ["S12. Spicy Hue Style Beef Noodle Soup","Pork Ham & Beef Shank.",1700],
+        ["S14. Grilled Lemongrass Short Ribs White Rice","",1700],
+        ["S15. Grilled Pork Chop White Rice","",1550],
+        ["S16. Imperial Crab Rolls Vermicelli","Crab, shrimp, pork, vermicelli, lettuce, herbs & fish sauce.",1875],
+        ["S17. Grilled Pork Vermicelli","Grilled pork, vermicelli with bean sprouts, cucumber, lettuce, herbs, and peanuts served with fish sauce.",1550],
+        ["S18. Grilled Pork & Pork Egg Roll Vermicelli","Grilled pork, pork egg roll, vermicelli with bean sprouts, cucumber, lettuce, herbs, and peanuts served with fish sauce.",1550],
+        ["S20. Grilled Pork & Crab Roll Vermicelli","Grilled pork, crab roll, vermicelli with bean sprouts, cucumber, lettuce, herbs, and peanuts served with fish sauce.",1650],
+        ["S20. Tamarind Prawns with Garlic Noodle or Jasmine Rice","",2150],
+      ] },
+      { name: "Side Orders", items: [
+        ["X2. Bowl of Sticky Rice","",400],
+        ["X4. Small Bowl of Meatballs or Brisket or Well Done or Tendon","Chén bò viên hoặc gầu hoặc / thịt chín hoặc gân.",600],
+        ["X5. Bowl of Rare Steak","",800],
+        ["X6. Side of Noodle (No Soup)","Choice of Fresh noodle, Regular noolde, Egg noodle or Vermicelli.",350],
+        ["X7. Side of Rice","Tomato rice or White rice.",300],
+        ["X8 1LB Braised Short Rib","",900],
+        ["X9. Chinese Breadstick","",250],
+        ["X10. Crispy Sticky Rice","",800],
+        ["X15. 1⁄2 Roasted Chicken","",1500],
+      ] },
+      { name: "Beverages and Coffee", items: [
+        ["Vietnamese Ice Coffee with Condensed Milk","Cà phê sữa đá.",650],
+        ["Thai Tea","Trà Thái.",650],
+        ["Hot Lemonade with Ginger and Honey","Chanh gừng mật ong nóng.",600],
+        ["Fresh Lemon Soda","Soda Chanh.",650],
+        ["Salty Plum Soda","Soda Xí Muội.",650],
+        ["Mango Smoothie","Sinh Tố Xoài.",750],
+        ["All kinds of soda coke, sprite, Fanta","Nước Ngọt Các Loại.",275],
+        ["Fresh Squeezed Orange Juice","Nước Cam Tươi.",800],
+        ["Sparkling Water","Nước Khoáng Có Gas.",600],
+        ["Coconut Juice","Nước Dừa.",650],
+        ["Vietnamese Three Color Dessert","(Chè ba màu). Red bean, mung bean, jelly, coconut milk.",750],
+        ["French Style Black Ice Coffee","Cà phê đen đá.",550],
+        ["Ice Tea / Hot Tea","Trà Đá / Trà Nóng.",175],
+        ["Soft Drinks","Coke, Diet Coke, Sprite.",250],
+        ["Salty Lemon Soda","Soda Chanh Muối.",650],
+        ["Strawberry Smoothie","Sinh Tố Dâu.",750],
+        ["Passionfruit Drink","Chanh Dây.",650],
+        ["Sugarcane juice with Kumquat or Orange","Kumquat /orange/pineapple Sugar cane juice.",750],
+        ["Fresh Squeezed Orange Juice (No Ice)","Nước Cam Tươi (Không Đá)",900],
+        ["Fresh Lemonade","Đá chanh.",550],
+        ["Young Coconut and Kumquat","Nước Dừa Tắc.",700],
+        ["Special Healthy Drink","Sương sáo, hạt é. Grass jelly with basil seeds and coconut juice.",750],
+      ] },
+    ],
+    siteNote: "Prices are from the Milpitas menu on their own website; each location sets its own prices.",
+  },
+
+  /*
+     Pho Ha Noi — gathered 2026-10-05 from own
+     they are: Vietnamese, Northern-style phở
+     flag: Pho Ha Noi has five open Bay Area locations on phohanoi.com (San Jose, Cupertino, Palo Alto, Milpitas, Fremont), and this is one record per location. Glenn named no city, so glenn_label is set to '<City> • Eats' for each; check that this is the label Glenn wants. Their site also lists Berkeley (2433 Telegraph Ave, 'Opening early 2027 due to contruction permitting'), San Francisco (1700 California St, 'Planning to open on October 2027') and Fountain Valley in Orange County (soft opening January 16, 2026; Instagram @phohanoioc). These are not open in the Bay Area yet or are outside it, so they have no record.
+     flag: Each location has its own menu page with different prices and item lists, so every record uses its own location's menu (phohanoi.com/<city>-en.html).
+     flag: Items with two prices on their menu (for example '$16.6 $18.6' on most phở) are entered at the lower price with label 'from', and both prices are in desc. The site does not label the two prices; they are probably regular and large, but that is not stated.
+     flag: Beer (Corona, Heineken, Blue Moon) is left out as alcohol. Non-alcoholic drinks and coffee are kept.
+     flag: Hours, address and phone agree across their homepage, the Restaurants series page, the Contact page and Glenn's screenshots of the site. For San Jose, the Instagram profile picture also shows 408-239-0888, 969 Story Road #6048 and 'in the back end of the plaza'.
+     flag: Ordering: every location page links 'ONLINE ORDER' to one shared storefront, https://order.online/business/pho-ha-noi-325165, used as order_url. The eGift card links go to Toast. The Fremont page's eGift card link points at the Milpitas Toast page, which looks like a mistake on their site.
+     flag: Name: the site writes 'PHO HA NOI' / 'Pho Ha Noi'. The logo and Instagram display name use 'Phở Hà Nội'. name_exact uses the plain-letter version; switch to the accented one if Leon prefers. Instagram is phohanoibayarea for all locations, and there is a Facebook page facebook.com/PhoHaNoiSanJose.
+     flag: From their site: sourcing from local farms with organic produce, Harris Ranch Angus beef, Stockton Poultry free-range brown chicken, and phở spices from Vietnam's Central Valley mountains. Northern-style phở comes without bean sprouts (free on request). They also do catering (phohanoi.com/catering.html).
+     flag: Logo: the 'Phở Hà Nội' script with the dragon bowl and chopsticks, from the top of their website (Glenn's IMG_5897), cut --square. The same icon is used for all five locations.
+     flag: Left out 'Soft Drinks' (Coke, Diet Coke, Sprite), which their Palo Alto menu prices at '$75', clearly a typo on their site.
+     flag: Palo Alto menu: 71 items kept.
+     flag: Instagram @phohanoibayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/business/pho-ha-noi-325165 is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'pho-ha-noi-palo-alto': {
+    address: "185 University Ave, Palo Alto, CA 94301",
+    phone: "(650) 561-3240",
+    hours: "Mon-Thu 11:30am-2pm & 5-9pm, Fri 11:30am-2pm & 5-10pm, Sat 11am-3pm & 5-10pm, Sun 11am-3pm & 5-9pm",
+    sections: [
+      { name: "Appetizers & Rolls", items: [
+        ["Imperial Crab Roll","Crab, shrimp, pork & lettuce.",1155],
+        ["Garlic & Fish Sauce Wings","Cánh gà chiên nước mắm.",1350],
+        ["Vietnamese Grilled Pork Sausage Rolls","Nem nướng Ninh Hoà. Contains peanut sauce.",1095],
+        ["Chargrilled Pork Rolls","Cuốn thịt nướng.",1095],
+        ["Ha Noi Special Rolls","3 Kinds of Rolls.",1875],
+        ["Vegetable Egg Rolls","3 pieces.",850],
+        ["Pork Egg Roll","Chả Giò Heo.",950],
+        ["Crispy Salt & Pepper Tofu","Đậu hủ rang muối.",1250],
+        ["Nori Tofu Mushroom Rolls","Vegetarian rolls w/ peanut sauce.",1095],
+        ["Spring Rolls","Pork and shrimp w/ peanut sauce.",1095],
+        ["Green Apple Salad","Green apple mixed with spring salad & sautéed flank steak / Gỏi táo xanh với bò xào.",1650],
+      ] },
+      { name: "Beef Noodle Soup", items: [
+        ["Special Combination Pho","PHỞ BÒ ĐẶC BIỆT. Rare USDA choice flap meat, flank, brisket, tendon, short rib meat, and meatball.",1945],
+        ["Rare USDA Choice Flap Meat & Flank Pho","Phở tái chín.",1895],
+        ["Rare USDA Choice Flap Meat & Meatball Pho","Phở tái bò viên.",1895],
+        ["1 LB of Short Rib Pho (Special Bone In)","Phở sườn bò.",1935],
+        ["No Meat, Beef Broth Pho","Phở không thịt.",1050],
+        ["Oxtail Pho","Phở đuôi bò.",2200],
+        ["Rare Beef USDA Choice Flap Meat Pho","Phở tái đập.",1895],
+        ["Rare USDA Choice Flap Meat, Brisket and Fatty Brisket Pho","Phở tái nạm gầu.",1895],
+        ["Sautéed Flank Steak Pho","Phở tái lăn.",2045],
+        ["Rare USDA Choice Flap Meat & Ribs Meat (No Bone) Pho","Phở tái & thịt sườn bò.",1975],
+        ["Kid Size Pho (Well Done or Meatball","Phở Cho trẻ em chín hoặc bò viên.",1100],
+        ["Rare Beef USDA Choice Flap Meat & Oxtail Pho","Phở tái đuôi bò.",2200],
+      ] },
+      { name: "Free-Range Brown Chicken Pho", items: [
+        ["Combination Chicken Pho","Phở gà đặc biệt.",1895],
+        ["No Meat Chicken Broth Pho","Phở gà không thịt.",1100],
+        ["Veggies Pho with Chicken Soup or Beef Soup","Phở rau cải ( soup bò / gà )",1895],
+        ["Chicken Thigh Pho","Phở gà thịt đùi.",1945],
+        ["Chicken Breast Pho","Phở gà thịt ức.",1845],
+      ] },
+      { name: "House Specialties", items: [
+        ["1/2 Roasted Kui Fei Chicken Egg Noodles","Mì gà rôti 1/2 con. (Wait 10')",2050],
+        ["1/2 Roasted Kui Fei Chicken & Tomato Rice","Cơm gà rôti 1/2 con. (Wait 10')",2050],
+        ["1/2 Roasted Kui Fei Chicken & Crispy Sticky Rice","Xôi chiên giòn gà rôti 1/2 con. (Wait 15')",2250],
+        ["Rock and Roll Steak with Garlic Noodle","Bò lúc lắc mì tỏi. USDA choice fillet mignon cube steak, small salad onion, garlic noodle.",2585],
+        ["Spicy Hue Noodle with 1 LB of Short Rib","Bún bò huế sườn bò.",2000],
+        ["1 LB Korean BBQ Short Ribs","Cơm với 1 lbs sườn bò Đại Hàn. Korean BBQ choice short ribs with white rice.. Two prices on their menu: $24.50 and $29.50.",2450,null,"from"],
+        ["Tamarind Prawns with Garlic Noodle or Jasmine Rice","Tôm xào me với mì tỏi / cơm.",2300],
+        ["1/2 Roasted Kui Fei Chicken & Garlic Noodles","Mì tỏi gà rôti 1/2 con. (Wait 10')",2050],
+        ["S4. 1/2 Roasted Kui Fei Chicken, Soft Boiled Egg & Sticky Rice","Xôi gà rôti 1/2 con. (Wait 10')",2050],
+        ["Ha Noi Special Grilled Pork Vermicelli","Bún chả Hà Nội.",1850],
+        ["Rock and Roll Steak with Tomato Rice","Cơm bò lúc lắc. USDA choice fillet mignon cube steak, small salad onion, tomato rice.",2950],
+        ["Slow-cook beef brisket, tendon & carrot.","Bánh mì bò kho.",1750],
+        ["Vietnamese Sizzling Steak","USDA Prime Fillet Mignon, pâté, pork meatball, sunny side egg, bread, and fries. No fries sub vinegar salad for $1.00 extra / Bò né ( thịt bò fillet mignon). Không khoai tây chiên thế xà lách dầu giấm thêm $1.00.",3000],
+      ] },
+      { name: "Side Orders", items: [
+        ["2 Egg Yolks with Soup","Trứng trần.",350],
+        ["Extra Garlic Noodles or Sticky Rice","Thêm bún, phở, mì, xôi.",350],
+        ["Extra Dish or Bowl of Rare Flank Steak Soup on the Side","Đĩa / chén tái riêng có soup.",900],
+        ["Small Bowl of Meatballs/ Brisket/ Well Done","Thêm Chén nạm, chín, gầu hoặc bò viên.",750],
+        ["Chinese Breadsticks or Vietnamese Baguette","Dầu cháo quẩy / bánh mì.",225],
+        ["Side Order of Steam Chicken","Thêm Phần thịt ức/ đùi/ cánh gà luộc. Breast | Thigh | Wings.",900],
+        ["Bowl of Oxtail","Chén Đuôi Bò.",1000],
+        ["A Bowl of White Rice, Tomatoes Rice, or Chicken Rice","Chén cơm trắng/ cơm đỏ hoặc cơm gà.",350],
+        ["1 LB of Braised Beef Short Rib","Sườn bò hầm.",1250],
+      ] },
+      { name: "Beverages and Coffee", items: [
+        ["Vietnamese Ice Coffee with Condensed Milk","Cà phê sữa đá.",675],
+        ["Thai Tea","Trà Thái.",675],
+        ["Hot Lemonade with Ginger and Honey","Chanh gừng mật ong nóng.",650],
+        ["Fresh Lemon Soda","Soda Chanh.",675],
+        ["Salty Plum Soda","Soda Xí Muội.",675],
+        ["Mango Smoothie","Sinh Tố Xoài.",775],
+        ["All kinds of soda coke, sprite, Fanta","Nước Ngọt Các Loại.",275],
+        ["Fresh Squeezed Orange Juice","Nước Cam Tươi.",825],
+        ["Sparkling Water","Nước Khoáng Có Gas.",625],
+        ["Coconut Juice","Nước Dừa.",675],
+        ["Vietnamese Three Color Dessert","(Chè ba màu). Red bean, mung bean, jelly, coconut milk.",775],
+        ["French Style Black Ice Coffee","Cà phê đen đá.",575],
+        ["Ice Tea / Hot Tea","Trà Đá / Trà Nóng.",200],
+        ["Salty Lemon Soda","Soda Chanh Muối.",675],
+        ["Strawberry Smoothie","Sinh Tố Dâu.",775],
+        ["Passionfruit Drink","Chanh Dây.",675],
+        ["Sugarcane juice with Kumquat or Orange","Kumquat /orange/pineapple Sugar cane juice.",775],
+        ["Fresh Squeezed Orange Juice (No Ice)","Nước Cam Tươi (Không Đá)",925],
+        ["Fresh Lemonade","Đá chanh.",575],
+        ["Young Coconut and Kumquat","Nước Dừa Tắc.",725],
+        ["Special Healthy Drink","Sương sáo, hạt é. Grass jelly with basil seeds and coconut juice.",775],
+      ] },
+    ],
+    siteNote: "Prices are from the Palo Alto menu on their own website; each location sets its own prices.",
+  },
+
+  /*
+     Pho Ha Noi — gathered 2026-10-05 from own
+     they are: Vietnamese, Northern-style phở
+     flag: Pho Ha Noi has five open Bay Area locations on phohanoi.com (San Jose, Cupertino, Palo Alto, Milpitas, Fremont), and this is one record per location. Glenn named no city, so glenn_label is set to '<City> • Eats' for each; check that this is the label Glenn wants. Their site also lists Berkeley (2433 Telegraph Ave, 'Opening early 2027 due to contruction permitting'), San Francisco (1700 California St, 'Planning to open on October 2027') and Fountain Valley in Orange County (soft opening January 16, 2026; Instagram @phohanoioc). These are not open in the Bay Area yet or are outside it, so they have no record.
+     flag: Each location has its own menu page with different prices and item lists, so every record uses its own location's menu (phohanoi.com/<city>-en.html).
+     flag: Items with two prices on their menu (for example '$16.6 $18.6' on most phở) are entered at the lower price with label 'from', and both prices are in desc. The site does not label the two prices; they are probably regular and large, but that is not stated.
+     flag: Beer (Corona, Heineken, Blue Moon) is left out as alcohol. Non-alcoholic drinks and coffee are kept.
+     flag: Hours, address and phone agree across their homepage, the Restaurants series page, the Contact page and Glenn's screenshots of the site. For San Jose, the Instagram profile picture also shows 408-239-0888, 969 Story Road #6048 and 'in the back end of the plaza'.
+     flag: Ordering: every location page links 'ONLINE ORDER' to one shared storefront, https://order.online/business/pho-ha-noi-325165, used as order_url. The eGift card links go to Toast. The Fremont page's eGift card link points at the Milpitas Toast page, which looks like a mistake on their site.
+     flag: Name: the site writes 'PHO HA NOI' / 'Pho Ha Noi'. The logo and Instagram display name use 'Phở Hà Nội'. name_exact uses the plain-letter version; switch to the accented one if Leon prefers. Instagram is phohanoibayarea for all locations, and there is a Facebook page facebook.com/PhoHaNoiSanJose.
+     flag: From their site: sourcing from local farms with organic produce, Harris Ranch Angus beef, Stockton Poultry free-range brown chicken, and phở spices from Vietnam's Central Valley mountains. Northern-style phở comes without bean sprouts (free on request). They also do catering (phohanoi.com/catering.html).
+     flag: Logo: the 'Phở Hà Nội' script with the dragon bowl and chopsticks, from the top of their website (Glenn's IMG_5897), cut --square. The same icon is used for all five locations.
+     flag: San Jose menu: 73 items kept.
+     flag: Instagram @phohanoibayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Their ordering link https://order.online/business/pho-ha-noi-325165 is a delivery company's storefront, not theirs, so it is not used.
+  */
+  'pho-ha-noi-san-jose': {
+    address: "969 Story Rd, Unit 6048, San Jose, CA 95122",
+    phone: "(408) 239-0888",
+    hours: "Mon-Thu 10am-3pm & 5-9:30pm, Fri 10am-3pm & 5-10pm, Sat 10am-10pm, Sun 10am-9pm",
+    sections: [
+      { name: "Appetizers & Rolls", items: [
+        ["Imperial Crab Roll (2pcs)","Nem cua bể. Crab, shrimp, pork.",925],
+        ["Vietnamese Grilled Pork Sausage Rolls","Nem Nướng Cuốn. Contains peanut sauce.",850],
+        ["Garlic & Fish Sauce Wings","Cánh gà chiên nước mắm.",1450],
+        ["Pork Egg Roll (3pcs)","Chả giò heo khoa môn.",850],
+        ["Spring Rolls","Gỏi Cuốn. Pork and shrimp w/ peanut sauce.",850],
+        ["Ha Noi Special Rolls","3 loại Gỏi Cuốn. Combination of Spring rolls, Chargrilled pork rolls, and Grilled pork sausage rolls**",1400],
+        ["Chargrilled Pork Rolls","Cuốn thịt nướng.",850],
+      ] },
+      { name: "Beef Noodle Soup", items: [
+        ["Special Combination Pho","Rare USDA choice flap meat, flank, brisket, tendon, short rib meat, and meatball.",1899],
+        ["Rare USDA Choice Flap Meat Pho","Phở tái. Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["Rare USDA Choice Flap Meat & Welldone steak Pho","Phở tái thịt chín. Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["Rare USDA Choice Flap Meat, Brisket and Fatty Brisket Pho","Phở tái nạm gầu. Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["Rare USDA Choice Flap Meat and meatball Pho","Phở tái bò viên. Two prices on their menu: $16.60 and $18.60.",1660,null,"from"],
+        ["Sauteed Flap Meat Pho","Phở Tái Lăn. Two prices on their menu: $18.35 and $19.35.",1835,null,"from"],
+        ["No Meat, Beef Broth Pho","Phở không thịt.",1150],
+        ["1 LB of Short Rib Pho (Special Bone In)","Phở sườn bò.",1885],
+        ["Oxtail Pho","Phở đuôi bò.",1935],
+        ["Kid Size Pho (Well Done or Meatball","Phở Cho trẻ em chín hoặc bò viên.",1000],
+        ["Rare USDA Choice Flap Meat & Ribs Meat (No Bone) Pho","Phở tái & thịt sườn bò.",1885],
+        ["Rare Beef USDA Choice Flap Meat & Oxtail Pho","Phở tái đuôi bò.",1935],
+      ] },
+      { name: "Free-Range Brown Chicken Pho", items: [
+        ["Chicken Thigh Pho","Phở gà đùi. Two prices on their menu: $17.00 and $18.60.",1700,null,"from"],
+        ["No Meat Chicken Broth Pho","Phở gà không thịt.",1050],
+        ["Veggies Pho with Chicken Soup","Phở rau cải soup gà. Two prices on their menu: $16.60 and $17.60.",1660,null,"from"],
+        ["Chicken Breast Pho","Phở gà thịt ức. Two prices on their menu: $15.60 and $17.60.",1560,null,"from"],
+      ] },
+      { name: "House Specialties", items: [
+        ["Ha Noi Special Grilled Pork Vermicelli","Bún chả Hà Nội.",1700],
+        ["Spicy beef noodle soup HUE style","Bún bò huế.",1800],
+        ["Spicy Hue Noodle with 1 LB of Short Rib","Bún bò huế sườn bò.",1950],
+        ["Grilled Pork Vermicelli","Bún Thịt Nướng.",1550],
+        ["Grilled Pork Vermicelli","Bún Thịt Nướng Chả Giò.",1550],
+        ["Grilled Pork & Crab Roll Vermicelli","Bún Thịt Nướng Nem Cua Bể.",1650],
+        ["Imperial Crab Roll","Nem Cua Bể.",1875],
+        ["1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Egg Noodles","Mì gà rôti 1/2 con.",1800],
+        ["Grilled Pork Chop Jasmine Rice","Cơm Sườn Heo Nướng.",1550],
+        ["1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Tomato Rice","Cơm gà rôti 1/2 con. (Wait 10')",1800],
+        ["1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Crispy Sticky Rice","Xôi chiên giòn gà rôti 1/2 con. (Wait 15')",2200],
+        ["1/2 Roasted Kui Fei Chicken Soft Boiled Egg & Sticky Rice","Xôi Gà rô ti.",1800],
+        ["S4. 1/2 Roasted Kui Fei Chicken, Soft Boiled Egg & Crispy Sticky Rice","Xôi chiên giòn gà rô ti.",1950],
+        ["Hainanase chicken and rice","Cơm Gà Hải Nam.",1750],
+        ["Hainanase chicken and sticky rice","Xôi Gà Hải Nam.",1750],
+        ["Rock and Roll Steak with Tomato Rice","Cơm bò lúc lắc. USDA choice fillet mignon cube steak, small salad onion, tomato rice.",1950],
+        ["1 LB Korean BBQ Short Ribs","Cơm với 1 lbs sườn bò Đại Hàn. Korean BBQ choice short ribs with white rice.. Two prices on their menu: $19.00 and $24.00.",1900,null,"from"],
+        ["Vietnamese Sizzling Steak","Bò Né. Fillet Mignon, eggs, pate, pork ham, fries.",2100],
+        ["Grilled Lemongrass short ribs","Cơm Sườn Bò Sả Ớt.",1700],
+        ["Slow-cook beef Stew","Bánh mì bò kho.",1600],
+        ["Tamarind Prawns with Jasmine Rice","Tôm Rang me cơm trắng.",2150],
+      ] },
+      { name: "Side Orders", items: [
+        ["2 Egg Yolks with Soup (dine in only)","Trứng trần (dine in only)",350],
+        ["Extra noodle, egg noodle, vermicelli","Thêm bún, phở, mì.",350],
+        ["Extra Dish or Bowl of Rare Flank Steak Soup on the Side","Đĩa / chén tái riêng có soup.",800],
+        ["Small Bowl of Meatballs/ Brisket/ Well Done/Flank","Thêm Chén nạm, chín, gầu hoặc bò viên.",650],
+        ["Chinese Breadsticks","Dầu Cháo Quẩy.",250],
+        ["A Bowl of Tomatoes Rice, or Chicken Rice","Chén cơm đỏ hoặc cơm gà.",300],
+        ["1 LB of Braised Beef Short Rib","Sườn bò hầm.",900],
+        ["1/2 roasted chicken","1/2 gà rô ti.",1500],
+        ["Bowl of sticky rice","Chén xôi.",400],
+      ] },
+      { name: "Beverages and Coffee", items: [
+        ["Vietnamese Ice Coffee with Condensed Milk","Cà phê sữa đá.",600],
+        ["Thai Tea","Trà Thái.",700],
+        ["Hot Lemonade with Ginger and Honey","Chanh gừng mật ong nóng.",600],
+        ["Fresh Lemon Soda","Soda Chanh.",600],
+        ["Salty Plum Soda","Soda Xí Muội.",600],
+        ["Mango Smoothie","Sinh Tố Xoài.",700],
+        ["All kinds of soda coke, sprite, Fanta","Nước Ngọt Các Loại.",250],
+        ["Fresh Squeezed Orange Juice","Nước Cam Tươi.",650],
+        ["Coconut Juice","Nước Dừa.",650],
+        ["Vietnamese Three Color Dessert","Chè 3 Màu.",700],
+        ["French Style Black Ice Coffee","Cà phê đen đá.",500],
+        ["Ice Tea / Hot Tea","Trà Đá / Trà Nóng.",175],
+        ["Salty Lemon Soda","Soda Chanh Muối.",600],
+        ["Strawberry Smoothie","Sinh Tố Dâu.",700],
+        ["Passionfruit Drink","Chanh Dây.",600],
+        ["Sugarcane juice with Kumquat or Orange","Kumquat /orange/pineapple Sugar cane juice.",700],
+        ["Fresh Squeezed Orange Juice (No Ice)","Nước Cam Tươi (Không Đá)",800],
+        ["Fresh Lemonade","Đá chanh.",500],
+        ["Young Coconut and Kumquat","Nước Dừa Tắc.",700],
+        ["Special Healthy Drink","Sương sáo, hạt é.",700],
+      ] },
+    ],
+    siteNote: "Prices are from the San Jose menu on their own website; each location sets its own prices.",
+  },
+
+  /*
      Pho Nation — gathered 2026-09-21 from stopgap
      they are: Vietnamese
      flag: hours, phone and address from the Apple Maps card he sent
@@ -14143,6 +16270,103 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from their Pittsburg shop’s online ordering page.",
+  },
+
+  /*
+     Pineapple King Bakery — gathered 2026-10-05 from own
+     they are: Hong Kong-style bakery
+     flag: Hours left null: their Contact Us page lists "SAN FRANCISCO STORE HOURS" as Mon-Fri 8:00AM-6:00PM, Sat-Sun 8:00AM-6:30PM, but the same page also says "We are open daily from 7:30AM to 8:00PM", and the Square store offers pickup 9am-5pm daily. Glenn should confirm which is current.
+     flag: Other locations: Fremont store at Mission Square Plaza, 46827 Warm Springs Blvd, Suite 101, Fremont, CA 94539 (fremont@pineapplekingbakery.com; Mon 11-6, Tue closed, Wed-Sun 11am-6pm per the site; its own Toast ordering page). The site also says "SAN MATEO STORE HOURS: Coming Soon!". Only San Francisco is built here, as Glenn labelled it.
+     flag: Phone (415) 702-6118 comes from the Contact button in Glenn's Instagram screenshot; the website shows no number in its text. Email info@pineapplekingbakery.com is on both the site's contact page and the Instagram contact sheet.
+     flag: Items come from their Square online store for the 1915 Irving Street shop (linked from their site as "San Francisco Online Store"). Left out: the 22 seasonal mooncakes (mostly out of stock after Mid-Autumn) and Merch / Retail (bags, tote, caps, T-shirts). Items listed under several store categories are kept once, in their most specific category; Best Sellers keeps only the ones not listed elsewhere.
+     flag: Item names drop the Chinese name and the Spanish label the store adds in brackets (e.g. "菠蘿油 Pineapple Bun with Butter (Mantequilla Original)" becomes Pineapple Bun with Butter). Descriptions are their wording, trimmed, without the repeated pickup notes ("made fresh upon your arrival", "asked to wait").
+     flag: Hot Milk Tea, Hot Coffee Milk Tea (Yuanyang) and Hot Coffee are priced by size in the store ($5.25-$6.95, $5.25-$6.95, $3.65-$4.65), so they carry the floor price with label "from". Their drinks come with a complimentary Pineapple Bite, as their store says.
+     flag: The store limits regular Pineapple Buns to 12 per customer on weekends. Meringue Taro Egg Tart showed "Out of stock" on 5 October but is a menu item, so it stays.
+     flag: Logo is the site header lockup (菠蘿王 港式餅店 / Pineapple King Bakery); the Instagram disc crops the wordmark ("Pineapple King B"), so the site version is used.
+     flag: Instagram @pineapplekingbakery is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'pineapple-king-bakery-san-francisco': {
+    address: "1915 Irving St, San Francisco, CA 94122",
+    phone: "(415) 702-6118",
+    email: "info@pineapplekingbakery.com",
+    cuisine: "Hong Kong-style bakery",
+    sections: [
+      { name: "Craft Tart Series", items: [
+        ["Peach Egg Tart","A golden, flaky croissant-style egg tart topped with fresh sweet peach pieces. The buttery, crisp shell pairs with smooth custard and sweet peach flavor for a light, refreshing summer treat.",435],
+        ["Ten Blessings Gift Box (Seasonal)","Enjoy our curated collection of 5 handcrafted tarts and 5 mini pineapple buns. This festive set features a signature blend of traditional flavors and artisanal pastry techniques, perfect for gifting or sharing.",3200],
+        ["Craft Tart Gift Box","This curated gift box is a delightful treat for tart lovers, featuring a variety of unique flavors: croissant egg tart, NEW peach egg tart, pineapple crust BBQ pork tart, salted egg pork floss egg tart, and pandan croissant egg tart.",1995],
+        ["Croissant Egg Tart","The most popular tart in Hong Kong, Macau and China right now. This is an upgrade of the traditional egg tart with croissant crust and caramelized top.",390],
+        ["Pandan Croissant Egg Tart","A buttery, flaky croissant crust filled with silky pandan-infused custard.",415],
+        ["Salted Egg Pork Floss Egg Tart","A bold twist on the classic egg tart — rich, savory salted egg yolk custard nestled in a flaky, buttery crust, then topped with a generous layer of crispy pork floss and shredded seaweed.",415],
+        ["Pineapple Crust BBQ Pork Tart","A one-of-a-kind creation you’ll only find at Pineapple King Bakery. This unique tart brings together three iconic favorites in one unforgettable bite.",415],
+        ["Meringue Taro Egg Tart","Flaky croissant egg tart filled with smooth egg custard and taro filling, and topped with cloud-soft torched meringue—light, airy, and delicately sweet.",415],
+        ["Croissant Coconut Tart","A Hong Kong classic with a flaky twist! Our traditional coconut tart features a rich, chewy coconut filling baked in a buttery, flaky croissant crust, finished with a classic red cherry on top.",390],
+      ] },
+      { name: "Signature Buns", items: [
+        ["Pineapple Bites","Pineapple Bites (6 pcs) — Bite-size versions of our signature pineapple buns, perfectly golden and crumbly on top. Served with a smooth custard dipping sauce of your choice: vanilla, mango, or matcha.",450],
+        ["Extra Dipping Sauce for Pineapple Bites","Extra dipping sauce for pineapple bites. Choose vanilla, mango or matcha",200],
+        ["Pineapple Bun Gift Box","6 of our best flavors, 9 buns in a box. This is your best choice as a gift or if you want to try our most famous items. It has 3 regular size buns of guava butter, gold butter and pandan butter.",2450],
+        ["Deluxe Box","A sampler containing each of mini pineapple bun with butter, original puff, mango puff, and matcha puff.",890],
+        ["Butter Supreme Box","This sampler includes four mini version of pineapple buns with butter including chocolate marshmallow, guava, salted egg, and original. Try them all!",1075],
+        ["Guava Butter Pineapple Bun","This is one of our most popular items. Cold, sweet, and smooth butter inside a warm pineapple bun, amazing combination!",465],
+        ["Pandan Coconut Butter Pineapple Bun","Pandan juice is extracted from actual pandan leaves, combining with coconut milk to create this one of a kind butter.",465],
+        ["Chocolate Marshmallow Pineapple Butter","",490],
+        ["Salted Egg Butter Pineapple Bun","Must try if you like salted egg. Cold and salted egg flavored butter with salted egg crumbs inside a warm and sweet pineapple bun.",510],
+        ["Pineapple Butter Gold","Pineapple Bun with Premium Butter from Grass-fed Cows. Silky Smooth & Intensely Rich Taste!",465],
+        ["Pineapple Bun with Butter","Try this classic! Like what our customer said \"How can something be so simple but taste so good?!\". There is a reason why this traditional HK snack has survived for generations.",310],
+        ["Matcha Mochi Pineapple Bun","",485],
+        ["Pineapple Bun","",195],
+        ["Original Pineapple Puffs (2 pieces)","Cold and smooth egg custard inside 2 small pineapple buns. This has been a favorite among our customers since day one.",370],
+        ["Matcha Pineapple Puffs (2 pieces)","Home-made matcha custard in 2 small pineapple buns. Must try for matcha lovers!",380],
+        ["Mango Pineapple Puffs (2 pieces)","Cold and rich mango custard pumped into 2 small pineapple buns.",400],
+        ["Mini Pineapple Bun","",150],
+        ["Salted Egg Custard Pineapple Bun","",325],
+        ["Ube Pineapple Bun","",420],
+        ["Taro Pineapple Bun","",285],
+        ["Sesame Pineapple Bun","",285],
+        ["Red Bean Pineapple Bun","",285],
+        ["Pineapple Bun with Pineapple Inside","",285],
+        ["BBQ Pork Pineapple Bun","",260],
+        ["Pineapple Bun with Custard","",250],
+        ["Pineapple Bun with Mango Butter & Tajin","A Hong Kong favorite with a tropical twist—creamy mango butter inside our signature pineapple bun, topped with a sprinkle of Tajín for a sweet, tangy, and mildly spicy finish.",465],
+      ] },
+      { name: "Popular Baked Goods", items: [
+        ["Egg Custard Tart","Available after 10am",235],
+        ["Spam & Egg Bun","",480],
+        ["Ham and Egg Bun","",295],
+        ["Cocktail Bun","",180],
+        ["Floss Roll","",335],
+        ["Hot Dog Bun","",260],
+        ["BBQ Pork Bun","",250],
+        ["Coconut Cream Bun","",235],
+        ["Raisin Twist Bread","",250],
+        ["Scallion Bun","",250],
+        ["Onion Ham Bun with Scallion","",290],
+      ] },
+      { name: "Favorites Pastries", items: [
+        ["Sweetheart Pastry","",380],
+        ["Chicken Cookie","",120],
+        ["Egg Yolk Pastry","",310],
+        ["My Sweetheart Pastry","Celebrate love with a beautiful twist on a timeless tradition. Our My Sweetheart Pastry reimagines the classic Lo Po Bang (Wife Cake) into a charming heart-shaped treat, perfect for gifting or sharing a special moment.",395],
+      ] },
+      { name: "Drinks", items: [
+        ["Hot Milk Tea","Comes with a complimentary Pineapple Bite. $5.25-$6.95 by size.",525,null,"from"],
+        ["Hot Coffee Milk Tea (Yuanyang)","Comes with a complimentary Pineapple Bite. $5.25-$6.95 by size.",525,null,"from"],
+        ["Hot Coffee","Comes with a complimentary Pineapple Bite. $3.65-$4.65 by size.",365,null,"from"],
+        ["Ice-chilled Milk Tea","Comes with a complimentary Pineapple Bite.",720],
+        ["Iced Chilled Coffee Milk Tea - Yuanyang","Comes with a complimentary Pineapple Bite.",720],
+        ["Ice Chilled Thai Ice Tea","Comes with a complimentary Pineapple Bite.",720],
+        ["Lemon Iced Tea","Comes with a complimentary Pineapple Bite.",500],
+        ["Chrysanthemum Drink","Comes with a complimentary Pineapple Bite.",600],
+      ] },
+      { name: "Quick Grab & Go Meals", items: [
+        ["Breakfast Meal A","Pineapple Bun with Butter + Mini Pineapple Bun + Coffee/Milk Tea/Yuanyang; choose your drink, size and sweetness",850],
+        ["Breakfast Meal B","Spam & Egg Bun + Mini Pineapple Bun + Coffee/Milk Tea/Yuanyang; choose your drink, size and sweetness",1000],
+        ["Breakfast Meal C","Ham & Egg Bun + Mini Pineapple Bun + Coffee/Milk Tea/Yuanyang; choose your drink, size and sweetness",870],
+        ["Breakfast Meal D","Hot Dog Bun + Mini Pineapple Bun + Coffee/Milk Tea/Yuanyang; choose your drink, size and sweetness",820],
+      ] },
+    ],
+    siteNote: "Prices are from their own San Francisco online store.",
   },
 
   /*
@@ -14811,6 +17035,243 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Praaw Thai — gathered 2026-10-05 from own
+     they are: Thai
+     flag: Hours left null because their two first-party sources disagree: the website says 'Mon: Closed, Tue - Sat: 4:30PM - 9:00PM' and does not mention Sunday, while their online ordering page's menu hours show Sun, Fri and Sat 11:30am-3pm and 5-8:45pm, Tue-Thu 5-8:45pm, Mon closed. The Instagram bio gives no hours. Glenn or Leon should ask which is current (in particular whether they open Sundays and for weekend lunch).
+     flag: Address, phone and email are from the website (the email is shown in Glenn's screenshot as Praawthai@gmail.com); the address matches the Instagram bio.
+     flag: The Instagram display name is 'PRAAW (พราว)' and the bio says 'PRAAW (พราว) Thai Berkeley'; the website calls it 'Praaw Thai, Berkeley, CA', so name_exact is 'Praaw Thai'.
+     flag: The website's 'Our menu' section is only photos, so items come from their SmilePOS ordering page instead. Obvious typos were tidied ('GUI Chai' to 'Gui Chai', 'Grilled Pumpking Curry' to 'Grilled Pumpkin Curry', 'Shripm', 'deep-freid'); one item is listed as 'Kao-Soi 13' with a description starting '9', entered as 'Kao Soi' ($23). 'MP Pad Thai' ($26, grilled tiger prawns) keeps its published name.
+     flag: Pad Thai, Pad See-Ew, Yellow Curry and Green Curry are entered at $18 with label 'from' because their descriptions give tofu $18, chicken or beef $19, shrimp $23. Kapow and Spicy Eggplant also say 'choice of meat' but list only $18.
+     flag: Some items were marked out of stock on the ordering page when checked (Gui Chai, Papaya Salad, Sea Bass Yellow Curry, MP Pad Thai, Mango Ice Tea); they were kept.
+     flag: Instagram @praawthai is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'praaw-thai': {
+    address: "1277-1279 Gilman St, Berkeley, CA 94706",
+    phone: "(510) 529-4144",
+    email: "praawthai@gmail.com",
+    cuisine: "Thai",
+    sections: [
+      { name: "Small Bites", items: [
+        ["Crispy Tofu","Crispy deep-fried firm tofu with sweet and sour sauce, topped with peanut",1400],
+        ["Chicken Satay","Grilled marinated chicken with peanut sauce and cucumber salad",1400],
+        ["Emily's Dumplings","Ground chicken and shrimp, cilantro, scallion and touch of sesame oil and Praaw’s house sauce Served with spicy soy vinaigrette and crispy garlic on top",1500],
+        ["Gui Chai","Crispy Chives cake, Rice flour dusted fried chive cakes with spicy soy vinaigrette",1500],
+        ["Tao Huu","Crispy deep-fried homemade tofu with tamarind sauce",1500],
+        ["Warorot Crispy Roll","Fried crispy veggies roll with Silver noodles, cabbages and carrots served with sweet chili sauce on the side",1400],
+      ] },
+      { name: "Salads", items: [
+        ["Papaya Salad","Shredded green papaya, tomato, green bean with tangy lime dressing, spicy chili, and a touch of coconut sugar topped with roasted peanuts",1400],
+        ["Tum Strawberry","Fresh organic strawberry , green apple , tomato , roasted peanut with tangy lime dressing, spicy chili, and a touch of coconut sugar topped with ground roasted fish",1400],
+        ["Plah Goong","Grilled Shrimp in a vibrant lemongrass and chili dressing. Accompanied by a bouquet of freshly-picked Thai herbs and crowned with crispy golden shallots.",1600],
+        ["Yum Neur","Grilled sliced beef, onion, mint, cilantro served with spicy lime dressing come with Mixed greens",1600],
+      ] },
+      { name: "Soups", items: [
+        ["Tom Yum Goong Hot Pot","Sour and spicy Tom Yum soup with fresh Tiger prawns come with mushrooms and a variety of fragrant herbs.",2400],
+        ["Tom Yum Gai Hot Pot","Sour and spicy Tom Yum soup with chicken come with mushrooms and a variety of fragrant herbs.",1800],
+        ["Tom Kah Gai Hot Pot","Coconut milk soup with galangal, lemon grass, mushroom, tomato and kaffir leaves come with Chicken",1800],
+      ] },
+      { name: "Praaw's Specials", items: [
+        ["Pla Pad Cha","Sea bass with a pungent pad cha paste of fingerroot, young peppercorns, and bird's eye chili, tossed with a verdant array of Thai basil and kaffir lime leaves.",3000],
+        ["Nookie's Ka-Ree Koong","A flavorful Praaw Thai signature sautéed Tiger Prawns in creamy egg curry sauce, red pepper, scallions, onion and celery.",3000],
+        ["Chicken Cashew Nut","Stir fried battered chicken with onion, green onion, cashew nuts and roasted chili in sweet chili past",1800],
+        ["Spicy Brussels Sprouts","",1300],
+        ["Sea Bass Yellow Curry","Sear sea bass Turmeric curry in coconut milk with mashed potato, onion topped with crispy shallot",3000],
+        ["Kao Pad Mun Puu","(Crab Fried Rice)Flavorful Thai crab fried rice with crab ,egg , onion,green onions on top with soft Thai omelette.",2900],
+        ["Kanah Numman Hoy Beef","Stir Fried beef and Chinese broccoli with Oyster Sauce",1800],
+        ["MP Pad Thai","Grilled tiger prawns with Stir-fried thin rice noodles with tamarind sauce ,egg, bean sprouts and green onion served with ground peanuts on top",2600],
+        ["Kao Soi","Northern-style curry, egg noodles, spicy Northern Thai style with grilled chicken like. Serve it pickled radish, red onion and crispy egg noodles",2300],
+        ["Mama Pad Kee Mao Beef","Stir-fried egg noodle with tomato, onion, basil, young peppercorns in spicy garlic sauce come with beef",1900],
+        ["Ribeye Green Curry","Grilled ribeye with Green curry in coconut milk with bamboo shoot, Brussels sprouts , eggplant and basil, red pepper",3000],
+        ["Kad Luang Fried Rice","Fried rice with chicken, egg, onion, tomato, green onion and chinese broccoli. stir fry with Praaw's house sauce.",1850],
+        ["Grilled Pumpkin Curry","Red curry, grilled pumpkin with chicken and shrimp, basil ,red pepper, Brussels sprouts",2300],
+        ["May Punk Eggplant","Sauteed prawns and chicken in a rich blend of green curry and peanut sauce, wok-tossed with eggplant, red pepper, onion and sweet basil.",2100],
+      ] },
+      { name: "Thai Street Food", items: [
+        ["Pad Thai","Stir-fried thin rice noodles, egg, bean sprouts and green onion choice of meat Choice of tofu $18 , chicken or beef $19 , shrimp $23",1800,null,"from"],
+        ["Pad See-Ew","Stir-fried flat rice noodle with egg, Chinese broccoli in black soy sauce. Choice of meat Choice of tofu $18 , chicken or beef $19 , shrimp $23",1800,null,"from"],
+        ["Kapow","Stir fried choice of meat with onion in house basil sauce",1800],
+        ["Spicy Eggplant","Stir fried eggplant with house sauce onion, sweet basil in light garlic chili sauce , Brussels sprouts choice of meat",1800],
+        ["Yellow Curry","Turmeric curry in coconut milk with potato, carrot, onion topped with crispy shallot choice of meat Choice of tofu $18 , chicken or beef $19 , shrimp $23",1800,null,"from"],
+        ["Green Curry","Green curry in coconut milk with bamboo shoot, bell pepper, eggplant and basil choice of meat Choice of tofu $18 , chicken or beef $19 , shrimp $23",1800,null,"from"],
+      ] },
+      { name: "Sides", items: [
+        ["Jasmine Rice","",300],
+        ["Brown Rice","",350],
+        ["Sticky Rice","",350],
+        ["Steam Noodle","",300],
+        ["Cucumber Salad","",400],
+        ["Peanut Sauce","",400],
+        ["Kanah Side","",1200],
+        ["Grilled Chicken","",1300],
+        ["Thai Fried Egg","",300],
+      ] },
+      { name: "Drinks", items: [
+        ["Coke","",400],
+        ["Diet Coke","",400],
+        ["Sprite","",400],
+        ["Jasmine Tea","",400],
+        ["Green Tea","",400],
+        ["Sparkling Water Small","",600],
+        ["Sparkling Water Large","",1000],
+        ["Black Ice Tea","",500],
+        ["Mango Ice Tea","",500],
+        ["Lemonade","",600],
+        ["Thai Ice Tea","",600],
+        ["Thai Ice Coffee","",500],
+      ] },
+      { name: "Dessert", items: [
+        ["Dok Jok","Crispy Thai flower cookies paired with fragrant pandan ice cream. A beautiful harmony of texture and aroma light floral, and irresistibly Thai.",1300],
+      ] },
+    ],
+    siteNote: "Prices are from Praaw Thai's own online ordering menu, linked from their website.",
+  },
+
+  /*
+     Precision Auto Service — gathered 2026-10-05 from instagram
+     they are: Auto service shop, muscle cars
+     flag: No location page exists for this shop on precisiontune.com: the franchise's store locator lists only four California centers (Milpitas, Santa Clara, San Jose East, El Cajon), none in San Leandro. So there are no first-party facts beyond their IG.
+     flag: Glenn's 'shop info' screenshot is an Apple Maps card, not the business's own page: 'Precision Auto Care', 13990 E 14th St, San Leandro, CA 94578, +1 (510) 351-8211, website precisiontune.com, 'Closed Today', hours not shown. Address, phone and city are left null until Glenn confirms them; if he does, they can go straight in.
+     flag: Name differs by source: IG and the shop sign in their photos say 'Precision Auto Service'; the Apple Maps card says 'Precision Auto Care'; the logo Glenn sent is the national Precision Tune Auto Care trademark.
+     flag: Icon is cut from their own IG profile picture (a red classic car, about 270 px in the screenshot, so it is soft). The Precision Tune Auto Care logo was not used because the franchise doesn't list this shop.
+     flag: IG bio (Glenn's screenshot): 'Always grinding never can stop when it comes to muscle cars. Think I have motor oil in my blood.' No services or prices are published anywhere, and there is no website of their own (precisionautoservice.com is an unrelated shop in Langley, BC).
+     flag: Instagram @precisionautoservice is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+     flag: Address and phone are from the shop card Glenn sent with "This is the shop info" (2026-10-04); the franchise site does not list this shop.
+  */
+  'precision-auto-service': {
+    address: "13990 E 14th St, San Leandro, CA 94578",
+    phone: "(510) 351-8211",
+    contactOnly: "Precision Auto Service doesn't publish prices.",
+  },
+
+  /*
+     Q Specialty Coffee — gathered 2026-10-05 from own
+     they are: Specialty coffee roaster and cafe
+     flag: Two shops in San Francisco per the Instagram bio: 3490 California Street and 405 Howard Street. One record because Glenn named one city. The website mentions only 3490 California St (address, phone 415-757-0536, "Monday - Sunday 7:00 am - 5:30 pm"), so address, phone and hours are for California Street; the Howard Street shop has no first-party phone or hours.
+     flag: Glenn's third screenshot is Apple Maps (adds "Ste A" and the same phone and hours); it is not first-party, so "Ste A" was not added. Phone and hours match the website.
+     flag: Menu: the website's menu page lists names and prices in separate columns for Classic Espresso, Tea, Classic Hot Drinks, Lady M Mille Crepes, Fresh Baked Pastry and Sandwich & Bites; the pairing was checked against a rendered screenshot of the page.
+     flag: Spelling tidied from their menu: Sparking to Sparkling, Hondura to Honduras, Columbia Huilas to Colombia Huila, English Break Fast to English Breakfast, Carmel to Caramel, Crean to Cream, Honey MIlk to Honey Milk, Steam Milk to Steamed Milk, plural pastry names made singular. Descriptions are their ingredient lists written as phrases; pour-over descriptions keep tasting notes, region and cup score and drop the variety lines.
+     flag: Sparkling Strawberry Cloud ($7.95): the site's description reads "Sparking Lime Water/ Matcha Cloud", which looks copied from the matcha drink, so the description was left empty.
+     flag: N2 drinks are described on the site as "Organic NITRO Cold Brew/ Organic Jasmine Tea"; read as a choice of either base.
+     flag: Lady M mille crepes are a partner brand they stock (the site says they partner with Lady M Cakes).
+     flag: Logo is the Instagram profile picture (black Q mark over "Specialty Coffee"), cropped inside the white disc.
+     flag: Instagram @q.specialtycoffee is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'q-specialty-coffee-san-francisco': {
+    address: "3490 California St, San Francisco, CA 94118",
+    phone: "(415) 757-0536",
+    hours: "Mon-Sun 7am-5:30pm",
+    sections: [
+      { name: "Signature pour over", items: [
+        ["Kenya Kaganda Natural","Dark chocolate, caramel, papaya, green apple. Region: Kiharu division. Cup score 86.",595],
+        ["Mexico Finca Fatima Natural","Strawberry, tropical fruit, cane sugar, lemon. Region: Coatepec. Cup score 86.",595],
+        ["Brazil Cerrado Natural","Chocolate, hazelnut, brown sugar, black tea. Region: Cerrado. Cup score 87.",675],
+        ["Ethiopia Guji Danbi G2 Natural","Tropical fruit, lavender, citrus, black tea. Region: Danbi Udo. Cup score 88.",675],
+        ["Kenya Gikanda Kangocho Washed","Key lime, apple, honey, red plum. Region: Nyeri. Cup score 90.",745],
+        ["Guatemala FTO Natural","Organic. White peach, red plum, gummy bear, apricot. Region: Joybaj. Cup score 90.",745],
+        ["Honduras La Avi Washed","Organic. Cherry, apple cobbler, orange, caramel. Region: Copan. Cup score 92.",895],
+        ["Ethiopia Guji G1 Natural","Organic. Grape hard candy, raspberry, fruit cocktail, yellow plum. Region: Guji. Cup score 94.",975],
+        ["Colombia Huila Fabian Acevedo Washed","Caramel, toffee, hazelnut, honey. Region: Huila. Cup score 90.",695],
+        ["Super Blend","Dark chocolate, caramel, hazelnut. Region: Latin America, East Africa. Cup score 92.",695],
+      ] },
+      { name: "Classic espresso", items: [
+        ["Americano","",515],
+        ["Macchiato","",425],
+        ["Espresso","",355],
+        ["Latte","",585],
+        ["Cappuccino","",575],
+        ["Cortado","",435],
+        ["Mocha","",675],
+        ["Flat White","",545],
+      ] },
+      { name: "Tea", items: [
+        ["Jasmine Green Tea","",395],
+        ["Earl Grey","",395],
+        ["English Breakfast","",395],
+        ["Oolong Tea","",395],
+        ["Spice Chai Black Tea","",395],
+        ["Gingerbread Black Tea","",395],
+        ["Darjeeling Pure Black Tea","",395],
+        ["Peppermint Herbal Tea","",395],
+        ["Lemon Ginger Herbal Tea","",395],
+        ["Camomile, Honey, Vanilla Herbal Tea","",395],
+        ["Nightly Calm Herbal Tea","",395],
+        ["Decaf Black Tea","",395],
+      ] },
+      { name: "Espresso cream cloud", items: [
+        ["Sunrise Espresso Cloud","Organic orange juice with espresso cream cloud, topped with orange peel",795],
+        ["Coco Drop Espresso Cloud","Organic coconut water with espresso cream cloud, topped with toasted coconut chips",795],
+        ["Sparkling Lime Espresso Cloud","Lime sparkling water with espresso cream cloud, topped with lime peel",795],
+        ["Mocha Dream Espresso Cloud","Chocolate and milk with espresso cream cloud, topped with a biscuit",795],
+        ["Spiced Chai Espresso Cloud","Spiced chai latte with espresso cream cloud, topped with chai granola",795],
+        ["Coco Snow Espresso Cloud","Organic coconut milk with espresso cream cloud, topped with coconut chips",795],
+        ["Caramel Latte Espresso Cloud","Caramel latte with espresso cream cloud, topped with a biscuit",795],
+      ] },
+      { name: "Specialty matcha cloud", items: [
+        ["Classic Matcha Latte","Milk, matcha",735],
+        ["Classic Hojicha Latte","Milk, hojicha",735],
+        ["Sparkling Matcha Cloud","Sparkling lime water, matcha cloud",795],
+        ["Coco Wave Matcha Cloud","Coconut water, matcha cloud",795],
+        ["Citrus Matcha Cloud","Organic orange juice with matcha cloud",795],
+        ["Velvet Matcha Cloud","Matcha latte, matcha cloud",825],
+        ["Velvet Hojicha Cloud","Hojicha latte, hojicha cloud",825],
+        ["Yuzu Matcha Air Cream Cloud","Matcha latte, matcha cloud, yuzu matcha air cloud",875],
+      ] },
+      { name: "Strawberry cloud", items: [
+        ["Orange Strawberry Cloud","Organic orange juice, house-made strawberry cloud, dried strawberry",795],
+        ["Coco Water Strawberry Cloud","Organic coconut water, house-made strawberry cloud, dried strawberry",795],
+        ["Sparkling Strawberry Cloud","",795],
+        ["Hojicha Strawberry Cloud","Organic hojicha latte, house-made strawberry cloud, dried strawberry",825],
+        ["Matcha Strawberry Cloud","Organic matcha latte, house-made strawberry cloud, dried strawberry",825],
+      ] },
+      { name: "Signature artisan N2 (organic)", items: [
+        ["N2 Mango","Organic mango juice, organic nitro cold brew or organic jasmine tea",795],
+        ["N2 Guava","Organic guava juice, organic nitro cold brew or organic jasmine tea",795],
+      ] },
+      { name: "Classic hot drinks", items: [
+        ["Drip Coffee","",385],
+        ["Decaf Coffee","",395],
+        ["Cafe au Lait","",525],
+        ["London Fog","",575],
+        ["Black Eye","",525],
+        ["Vanilla Latte","",595],
+        ["Caramel Latte","",595],
+        ["Honey Latte","",595],
+        ["Hot Matcha Latte","",675],
+        ["Hot Hojicha Latte","",675],
+        ["Hot Spicy Chai Latte","",625],
+        ["Hot Chocolate","",575],
+        ["Steamed Milk","",245],
+        ["Honey Milk","",255],
+        ["Cold Brew","",575],
+      ] },
+      { name: "Lady M mille crepes", items: [
+        ["Dubai Strawberry Mille Crepes","Lady M",1575],
+        ["Matcha Mille Crepes","Lady M",1275],
+        ["Lavender Mille Crepes","Lady M",1275],
+      ] },
+      { name: "Fresh baked pastry", items: [
+        ["Almond Croissant","",525],
+        ["Chocolate Croissant","",525],
+        ["Cinnamon Twist Croissant","",525],
+        ["Ham & Cheese Croissant","",575],
+        ["Morning Bun Croissant","",525],
+        ["Plain Croissant","",475],
+        ["Blueberry Crumble Muffin","",490],
+        ["Vegan Morning Glory Muffin","",490],
+        ["Blueberry Scone","",490],
+        ["Reduced Fat Berry Peach Scone","",490],
+        ["Chocolate Chip with Sea Salt Cookie","",455],
+        ["Cinnamon Roll","",495],
+      ] },
+      { name: "Sandwich & bites", items: [
+        ["Applewood Smoked Bacon, Egg & Cheese Sandwich","",575],
+        ["Shredded Steak & Cheese Burrito","",575],
+      ] },
+    ],
+    siteNote: "Prices are from the menu on their own website.",
+  },
+
+  /*
      Quickly Benicia — gathered 2026-09-21 from own-domain
      they are: Boba and Filipino snacks
      logo: https://www.quicklybenicia.com/images/quickly-logo.jpg (1818x1818) — not cut into a tile yet
@@ -14880,6 +17341,196 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     email: "pulchokaryna@gmail.com",
     hours: "By appointment",
     contactOnly: "Karyna Pulcho, a tattoo artist specialising in cover-ups and scar and burn camouflage, working by appointment in San Francisco and Los Angeles. Her site prices every piece by consultation.",
+  },
+
+  /*
+     Rantei Japanese Cuisine — gathered 2026-10-05 from own
+     they are: Japanese: sushi bar and yakitori
+     flag: City: Glenn labelled this 'San Jose • Eats', but their site and Instagram both give 1271 Franklin Mall, Santa Clara, CA 95050, so city is Santa Clara. glenn_label is kept as Glenn sent it; Leon should decide whether it goes under San Jose or Santa Clara.
+     flag: Fetching the site with curl got a Vercel Security Checkpoint (HTTP 429). A headless browser got the real page straight away with HTTP 200 and no challenge, so nothing was solved or bypassed.
+     flag: Hours are labelled 'Hours of Operation (Takeout)' on their site (the same as in Glenn's screenshot). They may not match the dine-in hours, and no other first-party source gives dine-in hours.
+     flag: Prices: all 137 items are from the ordering menu on their own domain (an ordering-platform storefront; 'View Menu' links to the same page). Many prices end in odd cents ($4.63, $13.34, $19.49, $34.94), which looks like an online-order markup, so dine-in prices may be lower. They are kept as published.
+     flag: Section names keep their bilingual headings (for example 'Appetizer アペタイザー'), and item names keep the Japanese where they give it. The section notes 'Served with Soup and Salad' (Entree) and '2 Skewers Per Order' (Yakitori) were added to the desc of each item in those sections.
+     flag: Drinks kept: 6 soft drinks. No alcohol is on the ordering menu.
+     flag: Their wording is kept, including typos: 'not includ soup and salad', 'Japanese beef stew undon', 'Curry undon'. 'Curry Udon' ($20.95) and 'Curry undon' ($19.52) both appear, with near-identical descriptions; both are kept.
+     flag: Logo: the Instagram profile picture, a photo of their wooden 'RANTEI JAPANESE CUISINE' sign (Glenn's IMG_6067), cut with --disc. It is small in the screenshot, so the icon is a little soft. The website header shows a generic sushi clip-art icon and a broken image, so it was not used.
+     flag: Instagram bio: 'Traditional Tatami-Style Japanese Cuisine, Sushi bar&Yakitori'.
+     flag: Instagram @ranteijapanesecuisine is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'rantei-japanese-cuisine': {
+    address: "1271 Franklin Mall, Santa Clara, CA 95050",
+    phone: "(408) 352-5683",
+    hours: "Mon-Thu 4:30-9pm, Fri-Sat 4:30-9:30pm, Sun 4:30-9pm",
+    sections: [
+      { name: "Appetizer アペタイザー", items: [
+        ["Edamame 枝豆","Boiled Soy Beans",463],
+        ["Baked Mussel ムール貝","Baked Mussel w/ Scallion, Tobiko, Spicy Mayo",1334],
+        ["Takoyaki たこ焼き","Octopus Balls",1165],
+        ["Gyoza 餃子","Meat Pot Stickers (5pc)",825],
+        ["Chicken Karaage 唐揚げ","Fried Chicken w/ Spicy Mayo On Side",922],
+        ["Soft Shell Crab ソフトシェルクラブ","Fried Soft Shell Crab w/ House Sauce",1128],
+        ["Agedashi Tofu 揚げ出し豆腐","Fried Tofu w/ Scallion, Peeled Ginger, Bonito Flake",850],
+        ["Veggie Tempura 野菜天ぷら","Fried Assorted Vegetables",1025],
+        ["Shrimp Tempura えび天","Fried Shrimp (4pc)",1125],
+        ["Mixed Tempura 天ぷら","2 pcs Shrimp & 6pcs Vegetables (Deep Fried)",1125],
+        ["Garlic Edamame ニンニク枝豆","Boiled Soy Beans Stir Fried in Garlic",675],
+        ["Hiyashi Tofu 冷し豆腐","Cold Tofu, Ginger, Scallion, Bonito Flakes",825],
+        ["Kaki Fried かきフライ","Japanese Fried Oysters w/ Tempura Sauce",1150],
+      ] },
+      { name: "Soup and Salad スープ・サラダ", items: [
+        ["Miso Soup みそ汁","Soybean Paste Soup w/ Tofu, Seaweed, Scallion",350],
+        ["Wakame-Sunomono わかめの酢の物","Seaweed, Cucumber",825],
+        ["Saba-Sunomono 鯖の酢の物","Marinated Mackerel, Seaweed, Cucumber",925],
+        ["Tako-Sunomono タコの酢の物","Octopus, Seaweed, Cucumber",925],
+        ["Mori-Sunomono 酢の物","Assorted Fish, Seaweed, Cucumber",1525],
+        ["Green Salad サラダ","Served With House Dressing",575],
+        ["Wakame わかめ","Seaweed Salad",695],
+        ["White Rice ご飯","Steamed White Rice",325],
+        ["Sushi Rice すし飯","Rice w/ Vinegar",375],
+        ["Fresh Wasabi わさび","Freshly Grated Wasabi",450],
+        ["Tako Wasabi","",925],
+      ] },
+      { name: "Sashimi&Sushi すし・刺身", items: [
+        ["Sake 鮭","",1050],
+        ["Sake Toro 鮭トロ","",1125],
+        ["Maguro (Akami) 鮪","",1125],
+        ["Shiro Maguro 白鮪","",1050],
+        ["Shiro Maguro Toro 白鮪トロ","",1125],
+        ["Hamachi 魬","",1050],
+        ["Hamachi Toro 魬トロ","",1125],
+        ["Tako 章魚","",900],
+        ["Walu 油底魚","",1025],
+        ["Saba 鯖","",900],
+        ["Amaebi 甘エビ","",1643],
+        ["Hotate 帆立","",1288],
+        ["Ebi 海老 (Nigiri)","",795],
+        ["Kani (real crab)蟹 (Nigiri)","",1128],
+        ["Unagi 鰻","",922],
+        ["Tamago 玉子 (Nigiri)","Nigiri",750],
+        ["Tobiko 飛子 (Nigiri)","Nigiri",819],
+        ["Ikura いくら (Nigiri)","Nigiri",1695],
+      ] },
+      { name: "Chef's Special スペシャル", items: [
+        ["Fish Taco (2PCS) フィッシュタコス","Seared Albacore, Salmon, Avocado, Homemade Salad On Deep Fried Nori",1425],
+        ["Jalapeno Boom","Jalapeno, Spicy Tuna w/ Cream Cheese Deep Fried, House Sauce",1331],
+        ["Salmon Carpaccio 鮭カルパッチョ","Salmon Seared, Avocado, Microgreens, Ponzu Sauce",1868],
+        ["Hamachi Carpaccio 魬カルパッチョ","Yellowtail, Sweet Onion, Radish, Microgreens, Ponzu Sauce",1949],
+        ["Albacore Tataki ビンナガたたき","Albacore Seared, Sweet Onion, Radish, Microgreens, Tataki Sauce",1849],
+      ] },
+      { name: "Sushi & Sashimi Combination すし・刺身コンボ", items: [
+        ["Chirashi Don チラシ丼 (not includ soup and salad)","Assorted Sashimi, Tamago, Ikura Over Sushi Rice",3494],
+        ["Chirashi Don Deluxe 特別チラシ丼 (not includ soup and salad)","Assorted Sashimi, Amaebi, Sea Urchin, Tamago, Ikura Over Sushi Rice",4527],
+        ["Sake-Uni Oyako Don 鮭親子丼","Salmon, Sea Urchin, Ikura Over Sushi Rice",4424],
+        ["Kaisen Don 海鮮丼","Uni, Hotate, Blue FinToro, Kani, Ikura over Rice",6895],
+        ["Chef Sashimi Regular 刺身レギュラー","Chef’s Choice of Assorted Sashimi 10 Pieces",2979],
+        ["Chef Sashimi Deluxe 刺身デラックス","Chef’s Choice of Assorted Sashimi 20 Pieces",4836],
+        ["Chef Sashimi Special 刺身スペシャル","Chef’s Choice of Assorted Sashimi 30 Pieces",6793],
+        ["Chef Nigiri Sushi すし盛り合わせ","Chef’s Choice of Nigiri Sushi 5 Pieces w/ Tekka Maki Or Salmon Maki",2776],
+        ["Omakase Sushi お任せすし","Chef’s Choice of Special Nigiri Sushi 8 Pieces",4527],
+      ] },
+      { name: "Chef's Rolls シェフの巻", items: [
+        ["Ginza","Yellowtail, Avocado,Topped w/ Seared Escolar, Jalapeno, Spicy Mayo, Black Tobiko",1949],
+        ["Lion King","Crab Meat, Avocado, Topped w/ Baked Salmon, Green Onion, Tobiko, Spicy Mayo, Eel Sauce, Sesame Seed",1949],
+        ["Valentine's Day","Real Crab Salad, Tuna, Avocado, Topped w/ Green Onion, Black Tobiko",2055],
+        ["Salmon Crunchy","Real Crab, Avocado, Topped w/ Seared Salmon, Spicy Mayo, Eel Sauce, Crunchy Flake, Green Onion, Black Tobiko",2055],
+        ["Sakura","Tamago, Eel, Avocado, Topped w/ Seared Salmon, Black Tobiko",1949],
+        ["Victoria","Spicy Tuna, Avocado, Topped w/ Deep Fried Fish, Hot Sauce, Honey Mustard, Eel Sauce, Green onion, Tobiko",1952],
+        ["White Dragon","Shrimp Tempura, Cucumber, Topped w/ Spicy Tuna, Seared Albacore, Spicy Mayo, Fried Garlic, Green Onion",1949],
+        ["Dragon","Shrimp Tempura, Cucumber, Topped w/ Eel, Avocado, Eel Sauce, Sesame Seed",1949],
+        ["Caterpillar","Eel, Cucumber, Topped w/ Avocado, Eel Sauce, Sesame Seed",1949],
+        ["Warriors","Salmon, Avocado, Topped w/ Yellowtail, Black Tobiko",1949],
+        ["Mango Lover","Shrimp Tempura, Cucumber, Topped w/ Snow Crab Meat Salad, Mango, Black Tobiko, Mango Sauce",1949],
+        ["Bay Scallop","Spicy Tuna, Avocado, Topped w/ Scallop Seared, Green Onion, Tobiko, Spicy Mayo",1949],
+        ["49er","Cucumber, Avocado, Tobiko, Topped w/ Salmon, Lemon Silced",1949],
+        ["Rantei","Yellowtail, Avocado, Topped w/ Salmon, Tuna, Tobiko, Spicy Mayo",1949],
+        ["Mango Spider","Soft Shelled Crab, Cucumber, Avocado, topped w/ Spicy Tuna, Tobiko, Mango, Spicy Mayo, Mango Sauce",2055],
+        ["Volcano","Shrimp Tempura, Cucumber, Tamago, Crab Meat, Tuna, Avocado, Fried Garlic, Kaiware, Black Tobiko, Eel Sauce, Sp. Mayo",2055],
+        ["Rainbow","Crab Meat, Avocado, Topped w/ Assorted Fish, Avocado",1849],
+        ["Green Island","Tuna, Yellowtail, Salmon, Avocado, Wrapped In Cucumber, Ponzu Sauce, Tobiko",1849],
+      ] },
+      { name: "Simple Rolls 巻物", items: [
+        ["Tekka Maki 鉄火巻き","Tuna",725],
+        ["Negi Hama ネギ魬巻き","Chopped Yellowtail, Green Onion",725],
+        ["California Roll","Snow Crab Meat Salad, Avocado",725],
+        ["Philly Roll","Cream Cheese,Salmon",825],
+        ["Spicy Tuna","Spicy Tuna , Cucumber, Kaiware, Shiso",725],
+        ["Salmon Avocado","Salmon, Avocado",825],
+        ["Shrimp Tempura 海老天巻き","Cucumber, Shrimp Deep Fried",725],
+        ["Rock n Roll","Unagi, Avocado",825],
+        ["Tuna Avocado","",725],
+        ["Spider","Soft Shell Crab, Cucumber, Shiso, Kaiware, Avocado, Eel Sauce",895],
+        ["Salmon Skin","Deep Fried Salmon Skin, Shiso, Cucumber, Kaiware, Eel Sauce",825],
+        ["Spicy Scallop","Spicy Mayo w/ Scallop, Cucumber",925],
+        ["Ebi Q","Shrimp, Cucumber",750],
+      ] },
+      { name: "Deep Fried Rolls 揚げ巻", items: [
+        ["Crunchy California","Deep Fried California Roll,Topped w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",1331],
+        ["Crunchy Tuna","Deep Fried Spicy Tuna Roll,Topped w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",1331],
+        ["Crunchy Philly","Deep Fried Salmon And Cream Cheese Roll w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",1331],
+        ["Super Dynamite","Deep Fried Assorted Fish, Avocado w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",1331],
+      ] },
+      { name: "Entree ライス", items: [
+        ["Tonkatsu トンカツ","Fried Pork Chop w/ Dipping Sauce On Side. Served with Soup and Salad.",1849],
+        ["Curry Katsu かつカレー","Fried Pork Chop In Japanese Curry. Served with Soup and Salad.",1849],
+        ["Chicken Katsu チキンカツ","Fried Chicken Cutlet w/ Dipping Sauce On Side. Served with Soup and Salad.",1849],
+        ["Chicken Katsu Curry ﾁｷﾝｶﾂｶﾚｰ","Fried Chicken Cutlet In Japanese Curry. Served with Soup and Salad.",1849],
+        ["Chicken Teriyaki チキン照り焼き","Grilled Chicken w/ Teriyaki Sauce. Served with Soup and Salad.",1746],
+        ["Salmon Teriyaki サーモン照り焼き","Grilled Salmon w/ Teriyaki Sauce. Served with Soup and Salad.",1905],
+        ["Salmon Shioyaki 鮭塩焼き","Lightly Salt Grilled Salmon. Served with Soup and Salad.",1905],
+        ["Saba Shioyaki 鯖塩焼き","Lightly Salt Grilled Mackerel. Served with Soup and Salad.",1746],
+        ["Oyako Don 親子丼","Chicken, Egg, Mushroom, Scallion. Served with Soup and Salad.",1746],
+        ["Katsu Don かつ丼","Fried Pork Cutlet, Mushroom, Egg, Scallion. Served with Soup and Salad.",1746],
+        ["Unagi Don うなぎ丼","BBQ Eel w/ Eel Sauce. Served with Soup and Salad.",2258],
+      ] },
+      { name: "Noodles 麺類", items: [
+        ["Plain Udon うどん","Udon Noodles",1081],
+        ["Veggie Udon 野菜うどん","Mixed Vegetables",1185],
+        ["Tempura Udon 天ぷらうどん","Mixed Tempura",1895],
+        ["Curry Udon カレーうどん","Pork Cutlet In Curry & Udon",2095],
+        ["Sukiyaki udon","Japanese beef stew undon",1946],
+        ["Curry undon","Undon w/fried pork chop in japanese curry",1952],
+      ] },
+      { name: "Yakitori やきとり", items: [
+        ["Mi み","Thigh-Salt, Tare, Ponzu, Radish, Ume. 2 Skewers Per Order.",850],
+        ["Bacon Mochi ベーコンもち","Smoked Pork Belly. 2 Skewers Per Order.",850],
+        ["Ebi Bacon エビベーコン","Grilled Shrimp wrapped with Bacon. 2 Skewers Per Order.",850],
+        ["Beef Skewer 牛肉","Beef, Tare. 2 Skewers Per Order.",1128],
+        ["Ika Maruni イカ丸煮","Whole Squid. 2 Skewers Per Order.",1643],
+        ["Hamachi Kama 魬かま","Yellowtail Collar. 2 Skewers Per Order.",2158],
+        ["Sake Kama 鮭かま","Salmon Collar. 2 Skewers Per Order.",1128],
+      ] },
+      { name: "Vegetables 野菜", items: [
+        ["Asparagus アスパラ","Asparagus-Salt",773],
+        ["Shishito 獅子唐","",922],
+        ["Shiitake しいたけ","Grilled Mushroom",995],
+      ] },
+      { name: "Vegetarian ベジタリアン", items: [
+        ["Kappa Maki かっぱ巻き","Cucumber",695],
+        ["Avocado Maki アボカド巻き","Avocado",695],
+        ["Oshinko Maki お新香巻き","Yellow Pickle",644],
+        ["Q and A","Cucumber, Avocado",901],
+        ["Garden","Cucumber, Avocado, Asparagus, Kaiware",901],
+        ["Futo Maki 太巻き","Cucumber, Avocado, Tamago, Takuan",895],
+        ["Sweet Potato","Fried Sweet Potato",895],
+        ["Veggie Tempura","Mixed Veggie Tempura Wrap w/ Soy Paper",1004],
+        ["Veggie Dragon","Fried Sweet Potato, Topped w/ Eggplant, Avocado",1595],
+      ] },
+      { name: "Beverages ドリンク", items: [
+        ["Coke","",300],
+        ["Diet Coke","",300],
+        ["Sprite","",300],
+        ["Fanta","",300],
+        ["Sparkling Water","",567],
+        ["Ramune","",510],
+      ] },
+      { name: "Desserts デザート", items: [
+        ["Green Tea Cheesecake (1pc)","",700],
+        ["Mochi (2pc)","",407],
+        ["Japanese soft waffles","",670],
+        ["Crepe cake","Original flavor",824],
+      ] },
+    ],
+    siteNote: "Prices are from the online ordering menu on their own website.",
   },
 
   /*
@@ -15053,6 +17704,86 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     R&G Lounge — gathered 2026-10-05 from own
+     they are: Cantonese
+     flag: Glenn's "RNG Lounge" is R&G Lounge (嶺南小館), Instagram @randglounge, website rnglounge.com; the page uses the name as they write it.
+     flag: Hours left null: the Instagram bio says "Su-Th 11a-9p Fr- Sa 11a- 9:30p" and their Contact page says Sunday-Thursday 11:00am-9:00pm, Friday-Saturday 11:00am-9:30pm, but the footer on every page of their site says Sunday-Thursday 11:00-8:45pm, Friday-Saturday 11:00-9:15pm (probably last seating). Glenn should pick; the bio/contact-page version is the likely opening-hours line.
+     flag: Items are the full Lunch Menu PDF on their site (R&G Lounge Lunch Menu 2026-08-25), served Mon-Fri 11am-2:30pm excluding holidays; the PDF says prices are subject to change. Their full menu PDF (20260824 full menu) is image-only apart from a few garbled lines, so per the rules no dinner prices were transcribed. Banquet, drinks and party-tray PDFs were not used.
+     flag: "Spicy" in descriptions marks dishes printed with a chili icon on the lunch menu. Names are the English names, converted from all caps.
+     flag: No order_url: their "Order online" link goes to order.online (DoorDash's storefront) and delivery is DoorDash, neither first-party under the rules. Reservations are via Tock and OpenTable.
+     flag: Phone (415) 982-7877 and email info@rnglounge.com are on their Contact page (the email is behind Cloudflare's email protection there, decoded from the page).
+     flag: Their site has a drinks-menu path under /las-vegas/, which suggests a Las Vegas location; nothing on the site names another Bay Area location.
+     flag: Logo is the red bamboo seal from their website header, cropped away from the wordmark next to it.
+     flag: Instagram @randglounge is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'rg-lounge': {
+    address: "631 Kearny St, San Francisco, CA 94108",
+    phone: "(415) 982-7877",
+    email: "info@rnglounge.com",
+    cuisine: "Cantonese",
+    sections: [
+      { name: "Soup (cup)", items: [
+        ["Chicken & Corn Soup","",500],
+        ["Hot & Sour Soup","",500],
+      ] },
+      { name: "Chef's recommendations", items: [
+        ["R&G Special Beef over Rice","",1800],
+        ["Diced Honey Garlic Chicken over Rice","",1500],
+        ["BBQ Pork & Wonton Noodle Soup","",1900],
+        ["Seafood Garlic Noodle","",2100],
+        ["Golden Supreme Fried Rice","",1700],
+      ] },
+      { name: "Cantonese BBQ luncheon plate", items: [
+        ["Cantonese BBQ Luncheon Plate, one item","Choice of one: Soy sauce chicken, princess chicken, BBQ pork, marinated ham hock, roast duck, baby octopus, jelly fish, beef briskets or soy sauce tofu. Served with steamed rice & vegetable, or noodle soup instead (+$2).",1600],
+        ["Cantonese BBQ Luncheon Plate, two-item combo","Choice of two: Soy sauce chicken, princess chicken, BBQ pork, marinated ham hock, roast duck, baby octopus, jelly fish, beef briskets or soy sauce tofu. Served with steamed rice & vegetable, or noodle soup instead (+$2).",1800],
+      ] },
+      { name: "Vegetarian", items: [
+        ["Vegetarian Egg Roll (2 pcs)","",600],
+        ["Vegetable Chow Mein","",1500],
+        ["Mapo Tofu over Rice","Spicy",1600],
+        ["Vegetables & Tofu over Rice","",1500],
+        ["Vegetables Fried Rice","",1500],
+        ["Garlic Eggplant over Rice","Spicy",1600],
+      ] },
+      { name: "Rice plates", items: [
+        ["Kung-Pao Chicken","Served with egg fried rice. Spicy",1500],
+        ["Lemon Chicken","Served with egg fried rice",1500],
+        ["Cashew Nut Chicken","Served with egg fried rice",1500],
+        ["Salt & Pepper Pork Ribs","Served with egg fried rice",1600],
+        ["Honey Spare Ribs","Served with egg fried rice",1600],
+        ["Kung-Pao Prawns","Served with egg fried rice. Spicy",1700],
+        ["Thai Style Sea Bass","Served with egg fried rice",1800],
+        ["Beef with Seasonal Green","Served with egg fried rice",1800],
+        ["Mongolian Beef","Served with egg fried rice. Spicy",1800],
+      ] },
+      { name: "Fried rice", items: [
+        ["Fried Rice: Chicken, Beef, BBQ Pork or Shrimp","",1500],
+        ["Chicken & Salted Fish Fried Rice","",1600],
+        ["Dried Scallops & Egg White Fried Rice","",1700],
+        ["Seafood Fried Rice","",1700],
+        ["Yang Zhou Fried Rice","",1600],
+      ] },
+      { name: "Noodles / chow fun", items: [
+        ["Chicken & Tender Green Chow Fun","",1500],
+        ["Shredded Pork with Snow Cabbage Vermicelli Soup","",1600],
+        ["Scrambled Egg & Shrimp Chow Fun","",1800],
+        ["X.O. Sauce Seafood Combo Vermicelli","Spicy",2100],
+        ["Beef Chow Fun with Black Bean Sauce","",1800],
+        ["Beef Chow Fun","",1800],
+        ["Assorted Meat Stir Fry Vermicelli","",1800],
+        ["Singapore Curry Vermicelli Noodle","Spicy",1800],
+      ] },
+      { name: "Chow mein", items: [
+        ["Chow Mein: Chicken or BBQ Pork","Beef or shrimp +$2. Pan-fried noodles +$3.",1500,null,"from"],
+        ["Shredded Pork & Chives with E-Fu Noodle","",1600],
+        ["Beef & Tomato Chow Mein","",1800],
+        ["Combination Chow Mein","",1800],
+      ] },
+    ],
+    siteNote: "Prices are from their weekday lunch menu (Mon-Fri 11am-2:30pm); their full dinner menu is posted as pictures, so those prices aren't listed here.",
+  },
+
+  /*
      Roast Eatery Co. — gathered 2026-09-21 from none — BLOCKED: instagram.com/roast_eatery_co returns only an empty JS app shell to an automated read; the profile facts used are the ones transcribed in the brief.
      they are: Hong Kong Chinese BBQ
      flag: Record: Roast Eatery Co., the single grab-and-go Chinese BBQ shop at 3120 Balfour Rd Ste A, Brentwood. Their Instagram grid has an 'OPENING DAY Feb 12 2025' post, so they have been open since 12 Feb 2025; nothing seen suggests they have closed.
@@ -15074,6 +17805,187 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     cuisine: "Hong Kong Chinese BBQ",
     tagline: "Grab-and-go Hong Kong style Chinese BBQ and soy sauce braised goods",
     contactOnly: "Grab-and-go Hong Kong style Chinese BBQ and soy sauce braised goods. They publish no prices.",
+  },
+
+  /*
+     Rob Ben\'s Restaurant & Lounge — gathered 2026-10-05 from own
+     their spelling: "Rob Ben's Restaurant & Lounge" (roster keeps "Rob Ben\'s Restaurant & Lounge")
+     they are: Southern soul food
+     flag: The address on their website and in their Instagram bio is 3627 San Pablo Avenue, Emeryville, CA 94608, not Oakland; one of their own Instagram posts says 'Delicious Soul Food in Oakland, CA', so Glenn must decide whether this page sits under Oakland or Emeryville (city is set to Emeryville).
+     flag: Hours left null because the two first-party sources disagree: the website says breakfast starts at 9:00am (Tue, and Wed-Sat), while the Instagram bio says breakfast Tue-Sat starts at 9:30. Both agree on Mon closed, breakfast until 1:30pm, happy hour Wed-Fri 12:30-3:30pm, dinner Wed-Sat 3:30-8pm and Sunday 12:30-6pm.
+     flag: The website menu lists 'The Brookfield' ($13.00) with the description 'Steak and eggs', the same description as 'The Market Street' ($26.75); this looks like a copy error on their site, kept as published.
+     flag: Item names keep the site's wording, with obvious typos tidied ('Chococate Mix' to 'Chocolate Mix', 'Omellete' to 'Omelette', 'Kool - Aid' to 'Kool-Aid'); the catering menu's 'Beach Cobbler' was left as published (almost certainly Peach Cobbler), for Glenn to decide.
+     flag: Catering items priced by half pan / full pan or by piece count are entered at the lower price with label 'from' and the full price range in the description.
+     flag: Left out: catering Oxtails (listed as market price, no number) and catering 'Gravy on Request' (shows $25.00 but its description lists 1/2 Pan $40 / Full Pan $75, so the price is unclear).
+     flag: Left out the breakfast Cocktails section (alcohol only), per the brief.
+     flag: The site's ordering-menu link is only a template script with no visible ordering button, so order_url is null.
+     flag: Instagram @robbens_restaurant is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'rob-bens-restaurant': {
+    address: "3627 San Pablo Avenue, Emeryville, CA 94608",
+    phone: "(510) 250-9636",
+    email: "robbens2002@gmail.com",
+    cuisine: "Southern soul food",
+    sections: [
+      { name: "Breakfast: Meals", items: [
+        ["The Foothill","Ham and steak. Served with two eggs, choice of grits, rice or home potatoes, and toast.",1750],
+        ["The East 14th","2 pork chops. Served with two eggs, choice of grits, rice or home potatoes, and toast.",2150],
+        ["The San Pablo","One hotlink. Served with two eggs, choice of grits, rice or home potatoes, and toast.",1475],
+        ["The Adeline","Two bacon or two pork sausage patties. Served with two eggs, choice of grits, rice or home potatoes, and toast.",1724],
+        ["The Skid Row","One chicken apple sausage. Served with two eggs, choice of grits, rice or home potatoes, and toast.",1475],
+        ["The Market Street","Steak and eggs. Served with two eggs, choice of grits, rice or home potatoes, and toast.",2675],
+        ["The Brookfield","Steak and eggs. Served with two eggs, choice of grits, rice or home potatoes, and toast.",1300],
+      ] },
+      { name: "Breakfast: Sides", items: [
+        ["Oatmeal","Served with raisins and brown sugar",925],
+        ["Grits","",650],
+        ["Toast","",425],
+        ["Fruit Bowl","",625],
+        ["Side Egg","",375],
+        ["Home Potatoes","",750],
+        ["Turkey Bacon","4 pieces",725],
+        ["One Hotlink","",524],
+        ["Chicken Apple Sausage","",650],
+        ["Turkey Sausage","",650],
+        ["Pork Chop","",660],
+        ["Wing a La Carte","",300],
+        ["Two Homemade Pork Sausages Patties","",825],
+        ["Salmon Croquet","",450],
+      ] },
+      { name: "Breakfast: All Time Favorite", items: [
+        ["The Nudge Breakfast Sandwich","2 eggs with choice of bread with choice of bacon, pork sausage, hot link or ham & cheddar cheese | To Substitute Meat +$2.50",1145],
+        ["Garlic Shrimp & Grits","Creamy grits topped with cheddar cheese, shrimp sauteed in our garlic butter sauce, mixed bell peppers, and garnished with green onions",2150],
+        ["Sin City Croquet & 2 Eggs","Salmon croquet, served with a choice of grits, rice or home potatoes & toast",2150],
+        ["Corned Beef & Hash","Red potatoes with mixed bell peppers, onions with braised corned beef served with 2 eggs",2600],
+        ["The Al's Special","Rice topped with 3 eggs, bell peppers, onions, with choice of hot links, sausage or ground beef on top of rice & cheddar cheese | For Additional Meat +$2.50",1924],
+        ["Fish & Grits","3 pieces of fish (basa) - 1 side of grits topped with cheddar cheese, bacon, and green onions",1724],
+      ] },
+      { name: "Breakfast: Omelette", items: [
+        ["Pony Omelette","Ham, mixed bell peppers, onions and onions and cheddar cheese. 3-egg omelette served with choice of grits, rice or home potatoes, and toast.",2024],
+        ["Baby Omelette","Crab, Monterey Jack and green onions. 3-egg omelette served with choice of grits, rice or home potatoes, and toast.",2450],
+        ["40L Cheese Omelette","With cheddar or Monterey Jack cheese. 3-egg omelette served with choice of grits, rice or home potatoes, and toast.",1624],
+        ["On Mommas Omelette","Bacon, tomato, onions and cheddar cheese. 3-egg omelette served with choice of grits, rice or home potatoes, and toast.",2400],
+        ["Veggie Omelette","3-egg omelette served with choice of grits, rice or home potatoes, and toast.",1950],
+      ] },
+      { name: "Breakfast: Griddle", items: [
+        ["Buttermilk Pancakes","Served with 2 eggs and fresh fruit.",1724],
+        ["French Toast","Served with 2 eggs and fresh fruit.",1765],
+        ["Buttermilk Waffle","Served with 2 eggs and fresh fruit.",1624],
+        ["1 Cornmeal Waffle","",1475],
+        ["1 Buttermilk Waffle","",775],
+        ["1 Buttermilk Pancake","",850],
+        ["1 Caramel Waffle","",950],
+        ["1 French Toast","",975],
+      ] },
+      { name: "Breakfast: Drinks", items: [
+        ["Brown Sugar Lemonade","",525],
+        ["Assorted Sodas","",200],
+        ["Kool-Aid","",450],
+        ["Hot Coffee / Tea","",750],
+        ["Juice","",550],
+        ["Milk","",425],
+        ["Chocolate Mix","",425],
+      ] },
+      { name: "Dinner: Main Dishes", items: [
+        ["Smothered Pork Chops","Over rice with 2 sides",2624],
+        ["Garlic Shrimp & Grits","Creamy grits topped with cheddar cheese, shrimp sauteed in our garlic butter sauce, mixed bell peppers, and garnished with green onions | Add Bacon +$1.50",2150],
+        ["Savory Shrimps & Grits (Topped with Bacon)","Creamy grits topped with cheddar cheese, shrimp, beef links, sauteed mixed bell peppers, and our Cajun-seasoned gravy, topped with bacon and green onions",2450],
+        ["6 Jumbo Party Wings & 1 Side","Plain, BBQ Honey garlic, Honey mustard | Additional Crystal Hennessy +$2.50",1824],
+        ["Fish & Grits","3 pieces of fish (basa) - 1 side of grits topped with cheddar cheese, bacon, and green onions",1724],
+      ] },
+      { name: "Dinner: Sandwiches", items: [
+        ["Rojo's Crystal Henny Sandwich","Fried Chicken breast dipped in our famous crystal Henesy honey sauce topped with cabbage slaw on a toasted roll",2350],
+        ["Mark's Pork Chop Sandwich","Fried pork chop, lettuce, mayo or aioli, mustard, tomatoes, onions and pickles on a Texas toast",1750],
+        ["Fell's Fried Chicken Sandwich","Fried chicken breast, lettuce or cabbage slaw, mayo or aioli, mustard, tomatoes, onions, and pickles on atoasted roll or Texas toast",2150],
+        ["R.R.R.N. Fish Sandwich","Large fried fish fillet (Swai), lettuce or cabbage slaw, mayo or aioli, mustard, tomatoes, onions, and pickles on a toasted roll or Texas toast",1950],
+        ["Rell's Shrimp or Oyster Po' Boy Sandwich","Lettuce or cabbage slaw, mayo, mustard, tomatoes, onions, and pickles on a toasted roll",2395],
+      ] },
+      { name: "Dinner: A La Carte", items: [
+        ["Cheese & Green Onion Cornbread Muffin","",125],
+        ["3 Seafood","",300],
+        ["Pork Chop","",450],
+        ["Chicken Wings","",350],
+      ] },
+      { name: "Dinner: Thirst Quenchers", items: [
+        ["Assorted Soda","",250],
+        ["Kool-Aid","",550],
+        ["Brown Sugar Lemonade","",550],
+      ] },
+      { name: "Dinner: Dessert", items: [
+        ["Banana Pudding","",700],
+        ["Henny Cake","",1000],
+        ["Peach Cobbler","",700],
+        ["Cake of The Day","",1000],
+        ["Hennessy Cake","Made with pecans",1150],
+      ] },
+      { name: "Dinner: Combinations", items: [
+        ["Beastmode Platter - (5) Lg Sides","Ten Wings, Six Pieces of Fish (BASA) Six oysters, Six Jumbo Prawns, Four Pork Chops, and Five Corn Muffins",9550],
+        ["The Moma","Five prawns and five oysters",2950],
+        ["The Momma Lynch","Three fish, three wings, and two porkchops",3224],
+        ["The Antee Rose","Five fish and five prawns",3150],
+        ["Two Pork Chops with One Side","",1650],
+        ["Three Wings with One Side","",1824],
+        ["Four Wings with One Side","",2124],
+        ["Ten Wings with Two Large Sides","",3450],
+        ["Three Seafood with One Side","Choice of Fish, Jumbo Prawns, or Oysters",1650],
+        ["Six Piece Jumbo Prawns or Oysters with Two Sides","",2650],
+        ["Six Piece Fish with Two Sides","",2650],
+        ["Ten Piece Jumbo Prawns or Oysters with Two Sides","",3150],
+      ] },
+      { name: "Dinner: Daily Specials", items: [
+        ["Gumbo with Rice","Friday special",3050],
+        ["Smothered Steak & Rice with 2 Sides","Saturday special",2750],
+        ["Turkey Wings with Dressing & 2 Sides","Sunday special",3100],
+        ["Smothered Oxtails Over Rice with 2 Sides","Sunday special",3150],
+      ] },
+      { name: "Dinner: Side Dishes", items: [
+        ["French Fries","",650],
+        ["Rice & Gravy","",650],
+        ["Greens","",650],
+        ["Yams","",650],
+        ["Macaroni & Cheese","",650],
+        ["Green Beans","",650],
+        ["Cornbread Dressing","Sunday Only",650],
+        ["Grits","",650],
+        ["Potato Salad","",650],
+        ["Coleslaw","",650],
+      ] },
+      { name: "Catering: Main Dish", items: [
+        ["Savory Shrimp & Grits","1/2 Pan $240.00| Full Pan $300.00",24000,null,"from"],
+        ["Fried Swai Fish","50 pieces $180.00 | 100 pieces $340.00",18000,null,"from"],
+        ["Fried Jumbo Prawns","1/2 Pan (80 pieces) $230.00 | Full Pan (180 pieces) $410.00",23000,null,"from"],
+        ["Fried Pork Chops","25 Pieces $125.00 | 50 Pieces $245.00",12500,null,"from"],
+        ["Chicken & Beef Links Jambalaya","1/2 Pan $80.00 | Full Pan $150.00",8000,null,"from"],
+        ["Turkey Wings","1/2 Pan $230.00 Full Pan $360.00 • 1 per serving",23000,null,"from"],
+        ["Fried Jumbo Chicken Wings","50 Pieces $180.00 | 100 Pieces $340.00",18000,null,"from"],
+        ["Smothered Pork Chops","25 Pieces $145.00 | 50 Pieces $270.00",14500,null,"from"],
+        ["Baked Chicken","50 Pieces $250.00 | 100 Pieces $480.00",25000,null,"from"],
+        ["Party Wings","100 Pieces $180.00 | 200 Pieces $260.00",18000,null,"from"],
+      ] },
+      { name: "Catering: Side Dish", items: [
+        ["Mac & Cheese","1/2 Pan $90.00 | Full $160.00",9000,null,"from"],
+        ["Cornbread Dressing","1/2 Pan $140| Full $260.00",14000,null,"from"],
+        ["Collard Greens","1/2 Pan $80.00 | Full $140.00",8000,null,"from"],
+        ["Candied Yams","1/2 Pan $120.00 | Full $210.00",12000,null,"from"],
+        ["Green Beans","1/2 Pan $80.00 | Full Pan $160.00",8000,null,"from"],
+        ["Baked Beans","1/2 Pan $80.00 | Full Pan $140.00",8000,null,"from"],
+        ["Corn Bread Muffins","1/2 Pan (24) $30.00 | Full Pan (48) $60.00",3000,null,"from"],
+        ["Corn","1/2 Pan $45.00 | Full Pan $90.00",4500,null,"from"],
+        ["Red Beans","1/2 Pan $80.00 | Full Pan $120.00",8000,null,"from"],
+        ["Coleslaw","1/2 Pan $50.00 | Full Pan $90.00",5000,null,"from"],
+        ["Potato Salad","1/2 Pan $70.00 | Full Pan $130.00",7000,null,"from"],
+        ["Rice","1/2 Pan $40.00 | Full Pan $75.00",4000,null,"from"],
+        ["Black Eyed Peas","1/2 Pan $55.00 | Full Pan $110.00",5500,null,"from"],
+      ] },
+      { name: "Catering: Dessert", items: [
+        ["Beach Cobbler","1/2 Pan $130.00 | Full Pan $230.00",13000,null,"from"],
+        ["Banana Pudding","1/2 Pan $80.00 | Full Pan $140.00",8000,null,"from"],
+        ["Cakes","All cakes are cut in 12 6x6 Choice of full Sheet or Large squares and individually wrapped • Chocolate Oreo, Lemon, Vanilla Pudding Butter Cake with Chocolate Frosting, Strawberry Crunch Cake, Strawberry Lemonade Crunch Cake, German Chocolate, Butter Pecan W/Candied Pecans, Chocolate Fudge, and Red Velvet | Additional flavors available upon request",11000],
+        ["Assorted Soda","Per person",150],
+        ["Kool-Aid","Per gallon",1500],
+      ] },
+    ],
+    siteNote: "Prices are from the breakfast, dinner and catering menus on Rob Ben's own website.",
   },
 
   /*
@@ -15121,6 +18033,108 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     instagram: "rocketmctow",
     cuisine: "Motorcycle towing",
     contactOnly: "Safe and efficient towing and transport of motorcycles and ATVs, serving the whole San Francisco Bay Area and surroundings. Quote-based only — 'Get Your Free Towing Quote' — with a 15% senior and military discount advertised.",
+  },
+
+  /*
+     Rose Pizzeria — gathered 2026-10-05 from own
+     they are: Thin-crust pizza and natural wine
+     flag: Rose Pizzeria has two locations, Berkeley (1960 University Ave) and San Francisco (1 Clement St, Inner Richmond); Glenn labelled both cities, so there is one record per city, each with its own menu and prices from that location's page on rosepizzeria.com.
+     flag: No phone: their website says 'NO PHONE' for both locations and that they take no phone or email orders; all orders go through Toast. The email hello@rosepizzeria.com is shared by both locations (website and Glenn's screenshot of their Instagram Email button).
+     flag: Left out the wine, beer and aperitivo lists (alcohol); soft drinks kept.
+     flag: Good one-liner material from their About page: opened in 2021 by Gerad Gobel and Alexis Rorabaugh, thin-crust 'Cal-Ital' pizza, named one of the 22 best pizzerias in the US by the New York Times and on the SF Chronicle Top 100 list. The house rules mention no modifications on most pies and limited takeout; online ordering is sometimes paused around 6pm.
+     flag: The icon is the wordmark from the header of their website (Glenn's screenshot); the Instagram profile picture in Glenn's screenshot is cut off by the screen edge with the story ring, so it could not be cleanly cropped.
+     flag: Berkeley hours are Wednesday-Sunday 12pm-9pm on every page of their site (Mon-Tue closed is implied by the site listing only Wed-Sun).
+     flag: The Berkeley menu marks several starters and pizzas '(V)', including 'Prosciutto & Figs (V)', which contains speck, so the '(V)' tags were dropped from item names rather than repeat a likely error; ask before claiming vegetarian items.
+     flag: The Berkeley web menu shows no desserts section; the website menu is seasonal (e.g. Persimmon Macha pizza, Watermelon & Feta).
+     flag: Instagram @rose.pizzeria is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'rose-pizzeria-berkeley': {
+    address: "1960 University Ave, Berkeley, CA 94704",
+    email: "hello@rosepizzeria.com",
+    hours: "Wed-Sun 12pm-9pm, Mon-Tue closed",
+    sections: [
+      { name: "Starters", items: [
+        ["Olives","Castelvetrano olives, taralli crackers",800],
+        ["Fancy Anchovies","Pickled / cured anchovies, orange vinaigrette, potato chips, dill & sumac",1200],
+        ["Prosciutto & Figs","Burrata, fresh figs, smoked prosciutto (speck), mint & aged balsamico",1800],
+        ["Spicy Caesar Salad","Romaine, shared cultures miso, calabrian chili dressing, black pepper, pecorino & croutons",1400],
+        ["Watermelon & Feta","Heirloom tomatoes, watermelon, cucumbers, dill, red onions, feta & sunflower seeds",1400],
+        ["Gigante Beans","Marinated gigante beans, sheep's milk feta, pickled artichokes, sumac, parsley & red onion — served hot with bread",1800],
+      ] },
+      { name: "Pizza", items: [
+        ["The Cheese","Double 8 dairy mozzarella, tomato sauce, pecorino & sicilian oregano",2000],
+        ["Margherita","Double 8 dairy mozzarella, tomato sauce, basil, pecorino",2200],
+        ["Classic Pep","Ezzo pepperoni, pickled jalapeño, sicilian oregano, tomato, mozzarella & pecorino",2600],
+        ["Pepp & Basil","Ezzo pepperoni, mozzarella, tomato sauce, pecorino, fresh basil, sicilian oregano",2400],
+        ["Old Faithful","Fennel pork sausage, goat horn peppers (spicy!), red onion, mozzarella, pecorino, tomato sauce, sicilian oregano",2600],
+        ["She Wolf","Burrata, tomato sauce, garlic confit, olives, capers, sicilian oregano",2600],
+        ["The Spicy Fig","Taleggio cheese, fig jam, mozzarella, leeks, spicy pickled peppers, arugula, lemon",2600],
+        ["Champione","Roasted mushrooms, mozzarella, black pepper, pecorino, cream & leeks (white sauce pizza)",2600],
+        ["Persimmon Macha","Free spirit farm persimmons, roasted fennel, red onion, mozzarella, cream & pepita (pumpkin seed) macha (white sauce pizza)",2600],
+        ["Louie-Louie","Fennel pork sausage, red onion, pickled jalapeño, mozzarella, cream & pecorino (white sauce pizza)",2600],
+      ] },
+      { name: "Soft Drinks", items: [
+        ["Blood Orange Soda","",500],
+        ["Lemon Soda","",500],
+        ["Sparkling Water","",500],
+        ["Iced Tea","",500],
+      ] },
+    ],
+    siteNote: "Prices are from the Berkeley menu on Rose Pizzeria's own website.",
+  },
+
+  /*
+     Rose Pizzeria — gathered 2026-10-05 from own
+     they are: Thin-crust pizza and natural wine
+     flag: Rose Pizzeria has two locations, Berkeley (1960 University Ave) and San Francisco (1 Clement St, Inner Richmond); Glenn labelled both cities, so there is one record per city, each with its own menu and prices from that location's page on rosepizzeria.com.
+     flag: No phone: their website says 'NO PHONE' for both locations and that they take no phone or email orders; all orders go through Toast. The email hello@rosepizzeria.com is shared by both locations (website and Glenn's screenshot of their Instagram Email button).
+     flag: Left out the wine, beer and aperitivo lists (alcohol); soft drinks kept.
+     flag: Good one-liner material from their About page: opened in 2021 by Gerad Gobel and Alexis Rorabaugh, thin-crust 'Cal-Ital' pizza, named one of the 22 best pizzerias in the US by the New York Times and on the SF Chronicle Top 100 list. The house rules mention no modifications on most pies and limited takeout; online ordering is sometimes paused around 6pm.
+     flag: The icon is the wordmark from the header of their website (Glenn's screenshot); the Instagram profile picture in Glenn's screenshot is cut off by the screen edge with the story ring, so it could not be cleanly cropped.
+     flag: San Francisco hours are Monday-Sunday 11:30am-9pm (the footer writes '11:30am - 9:00' without pm, every other mention says 9pm). The homepage marks this location 'Now open!'.
+     flag: The SF menu says pizzas are 14-inch, 6 slices, and only The Cheese can be customised with add-ons (limit two), so the add-on prices are in its description.
+     flag: Instagram @rose.pizzeria is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'rose-pizzeria-san-francisco': {
+    address: "1 Clement St, San Francisco, CA 94118",
+    email: "hello@rosepizzeria.com",
+    hours: "Mon-Sun 11:30am-9pm",
+    sections: [
+      { name: "Starters", items: [
+        ["Olives","Mixed olives, rosemary, lemon zest (served warm)",600],
+        ["Rancho Gordo Beans","Large white beans, celery, red onion, green olives, grated bottarga (fish), mint, dill & lots of olive oil",1400],
+        ["Spicy Caesar Salad","Little Gem lettuces, Shared Cultures miso, Calabrian chili dressing, croutons, parmesan & pecorino",1400],
+        ["Big Green Salad","Farm lettuces, cucumber, mint, basil, mustard vinaigrette, black pepper, shaved pecorino",1400],
+        ["Summertime","Charentais melon, heirloom tomatoes, feta cheese, cucumbers, caper-citrus vinaigrette, red onion, oregano, dill & basil",1600],
+        ["Burrata & Prosciutto","Fresh figs from Gauchito Hill Farm, prosciutto di Parma, whipped burrata, olive oil, mint & aged balsamico; comes with focaccia bread",1800],
+      ] },
+      { name: "Pizza", items: [
+        ["The Cheese","Fior di latte mozzarella, tomato sauce, parmesan, Sicilian oregano (14-inch, 6 slices) Add-ons: mushrooms +$4, pepperoni +$5, sausage +$5, red onion +$2, pickled jalapeño +$3 (limit two per pizza).",2000],
+        ["Margherita","Fior di latte mozzarella, tomato sauce, basil, parmesan, Sicilian oregano (14-inch, 6 slices)",2100],
+        ["Pepp & Basil","Ezzo pepperoni, mozzarella, tomato sauce, fresh basil, parmesan, Sicilian oregano (14-inch, 6 slices)",2500],
+        ["She Wolf","Burrata, tomato sauce, slow roasted tomato, garlic confit, olives, capers, Sicilian oregano (14-inch, 6 slices)",2600],
+        ["Old Faithful","Fennel pork sausage, goat horn peppers (spicy), red onion, mozzarella, tomato sauce, parmesan, Sicilian oregano (14-inch, 6 slices)",2600],
+        ["Third Coast","Molinari salami, pepperoncini, red onion, mozzarella, tomato sauce, parmesan, Sicilian oregano (14-inch, 6 slices)",2600],
+        ["Beach Club","Pork mortadella, pineapple, pickled jalapeño, mozzarella, tomato sauce, parmesan, Sicilian oregano (14-inch, 6 slices)",2700],
+        ["Calabrese Summer","Brentwood sweet corn, Journeyman pork n'duja, Jimmy Nardello peppers, chives, tomato sauce, mozzarella, parmesan, oregano & basil (14-inch, 6 slices)",2700],
+        ["Champion","Roasted mushrooms, mozzarella, black pepper, parmesan, cream & leeks (white sauce pizza) (14-inch, 6 slices)",2600],
+        ["Louie-Louie","Fennel pork sausage, pickled jalapeño, red onion, mozzarella, cream, parmesan, black pepper (white sauce pizza) (14-inch, 6 slices)",2600],
+        ["Green Deluxe","Broccoli rabe (rapini), roasted garlic, mozzarella, cream, parmesan, black pepper, lemon (white sauce pizza) (14-inch, 6 slices)",2600],
+      ] },
+      { name: "Sides", items: [
+        ["Rose's Ranch","",300],
+        ["East Bay Green Sauce","",300],
+        ["Anchovies","",400],
+      ] },
+      { name: "Soft Drinks", items: [
+        ["Coke","",400],
+        ["Diet Coke","",400],
+        ["Blood Orange Soda","",500],
+        ["Lemon Soda","",500],
+        ["Sparkling Water","",500],
+      ] },
+    ],
+    siteNote: "Prices are from the San Francisco menu on Rose Pizzeria's own website.",
   },
 
   /*
@@ -15272,6 +18286,31 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices and photos are from their own site.",
+  },
+
+  /*
+     Rye Cookin — gathered 2026-10-05 from own
+     they are: Filipino food creator: bagoong and merch
+     flag: Name: the site writes 'Rye Cookin' (title and copyright; the newsletter line says Rye Cookin'), the IG name is 'Rye Cookin LLC'. Glenn wrote 'Rye Cookin''.
+     flag: Their site banner says 'In-Store pick up available' but never says where; no address, phone or hours are published, so city is null (IG bio just says 'Bay Area').
+     flag: The only email (ryecookin@gmail.com) sits in hidden page data, not on the page, so it was left out.
+     flag: Rye Cookin Snapbacks - Black ($20, 'Chef Raccoon' embroidery) is listed but sold out, so it was left off.
+     flag: IG bio (Glenn's screenshot): 'Rye Boyardee aka Chef RyeCasso · Judo coach but the Kitchen is my Dojo · Bay Area · Follow for recipes, food content & just watch me eat'. The site sells Dora's Bagoong (Kapampangan family recipe) and merch; it isn't a restaurant.
+     flag: Instagram @ryecookin is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'rye-cookin': {
+    sections: [
+      { name: "Dora's Bagoong", items: [
+        ["Dora's Bagoong - Original Flavor","Kapampangan family recipe. No MSG, all-natural ingredients. Contains crustaceans.",2599],
+        ["Dora's Bagoong - Xtra Spicy","For that extra kick of spice. Kapampangan family recipe, no MSG. Contains crustaceans.",2599],
+        ["Dora's Bagoong - Coconut","The newest flavor: coconut. Kapampangan family recipe, no MSG. Contains crustaceans.",2599],
+      ] },
+      { name: "Merch", items: [
+        ["Kare-Kare Gang T-Shirts","True-to-size black tee, designs front and back.",3500],
+        ["Kare-Kare Gang Hoodies","True-to-size black hoodie, designs front and back. Small $50; M, L, XL and XXL $55.",5000,null,"from"],
+      ] },
+    ],
+    siteNote: "Prices are Rye Cookin's own from ryecookin.com.",
   },
 
   /*
@@ -15980,6 +19019,24 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Shibam Coffee Co. — gathered 2026-10-05 from instagram
+     they are: Yemeni coffee and desserts
+     flag: Hours match between their own Instagram 'Opening Hours' post and the Apple Maps panel in Glenn's screenshot.
+     flag: The phone is from the Apple Maps panel in Glenn's screenshot, used because the brief's note says to treat it as a Glenn-sent fact; it does not appear on their Instagram.
+     flag: A brand site, shibamcoffee.com, exists for a Shibam Coffee Co. chain, but its locations page does not list Newark and it shows no prices, so it was not used and needs_site stays true.
+     flag: Their bio says 'NOW OPEN!' and posts mention a pop-up series with @thehalalcon; that is not a halal claim, so halal is false.
+     flag: Glenn's label files this under Goods although it is a café.
+     flag: Instagram @shibamnewark is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'shibam-coffee-newark': {
+    address: "34903 Newark Blvd, Newark, CA 94560",
+    phone: "(510) 287-6817",
+    hours: "Mon-Thu 7am-11pm, Fri-Sun 7am-12am",
+    cuisine: "Yemeni coffee and desserts",
+    contactOnly: "Shibam Coffee Co. Newark does not publish prices on its own pages.",
+  },
+
+  /*
      Yakiniku Shodai — gathered 2026-09-21 from own-domain
      they are: Japanese yakiniku
      logo: https://static.wixstatic.com/media/f185cd_96379718b60b44938280a5d9151db6ee~mv2.png (1500x1500) — not cut into a tile yet
@@ -16206,6 +19263,83 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ["Soul Bowl","Build your own: a base, a protein and two sides",2999],
     ],
     siteNote: "Only the Soul Bowl is priced on their own site.",
+  },
+
+  /*
+     Proper Cuts Barber Shop — gathered 2026-10-05 from own
+     they are: Barbershop
+     flag: Prices: from their Squire booking page (the 'Book Now' link on sjpropercuts.com), on the 'Book with any professional' list. Each service there shows a duration and either one price or a range across barbers. Ranges are entered as the floor with label 'from', and the range is in desc. Service descriptions come from the same booking page's service data.
+     flag: Squire lists services per barber, so similar services appear more than once with different prices, for example 'Male Haircut' ($40-$60), 'Haircut' ($50-$60), 'Men's Haircut' ($55), 'Men’s Haircut' ($50) and 'Line up' twice. They are kept as separate items because the booking page shows them that way. Leon may want to merge them into a few headline services.
+     flag: Left out two Squire 'services' that are really contact placeholders for two barbers: 'Booking 650 315-9163' (CR, call or text to book) and 'TEXT: 7023272672' (Shawn). Those personal numbers are not the shop's phone, so they were not used.
+     flag: Section names (Haircuts; Beard, shave and line-ups; Color; Braids; Other) are ours; Squire gives the services no categories. One barber (Samssteelo on Squire, probably 'Samantha' on the team page) also offers color, balayage, braids and women's cuts, which is why those are on a barbershop's list.
+     flag: Their wording is kept, including typos: 'Haricut and Beard', 'Hairc & Eyebrows'.
+     flag: Phone (408) 217-8906 is from the Call button on their Instagram profile (Glenn's IMG_5876). The site does not print a phone number.
+     flag: Hours are from their website ('Open 7 days a week': Monday-Friday 9am-7pm, Saturday 7am-5pm, Sunday 9am-5pm; 'Walk-ins Welcome'). Instagram has no hours to compare against. The Instagram bio says 'walk-ins available / appointments preferred'.
+     flag: Email: the Squire shop data has an email address, but it is not shown on any page, so it was left out under the hidden-data rule.
+     flag: Name: the site title is 'Proper Cuts Barber Shop'. Instagram and Squire say 'ProperCuts Barbershop', and Glenn calls it 'SJ Proper Cuts' (the domain is sjpropercuts.com). Slug sj-proper-cuts follows Glenn.
+     flag: The team page lists Shawn and CR (founders and barbers), Samantha, Eian, Bobby, RC and Cris. Squire's barber list is slightly different (Ben, Eian, Samssteelo, RC, Cristian V., Shawn, CR).
+     flag: Logo: 'PROPER' in a blocky typeface, from the Instagram profile picture in Glenn's IMG_5875, cut inside the story ring. The zoomed copy (IMG_5877) has the Photos app's 'Today 10:18 PM' header over the top of the disc, so it was not used.
+     flag: Also on their site: Events, 'University' and a Merch shop. The Instagram bio puts them in Japantown.
+     flag: Instagram @_propercuts is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'sj-proper-cuts': {
+    address: "131 Jackson St, San Jose, CA 95112",
+    phone: "(408) 217-8906",
+    hours: "Mon-Fri 9am-7pm, Sat 7am-5pm, Sun 9am-5pm",
+    cuisine: "Barbershop",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Beard Shaping","Trim, line up or blended in. 25 min.",2500],
+        ["Male Haircut","Hair trim, fade, taper and sheer work. 30 min - 50 min. $40-$60 depending on the barber.",4000,"from"],
+        ["Haricut and Beard","Fade, taper and or gentlemen's cut also includes sheer work. Any beard work (line up, faded in and or trimmed). 30 min - 1h. $60-$75 depending on the barber.",6000,"from"],
+        ["Kids haircut","Fade, taper and or gentlemen's cut, sheer work included as well. 40 min - 1h. $30-$45 depending on the barber.",3000,"from"],
+        ["Haircut","Haircut with scissor trim. 45 min - 1h. $50-$60 depending on the barber.",5000,"from"],
+        ["Shear cuts (Mohawk to combover)","1h.",6000],
+        ["Line up","25 min - 30 min. $30-$35 depending on the barber.",3000,"from"],
+        ["Beard Trim","30 min.",3500],
+        ["Straight Razor Shave","15 min.",4000],
+        ["Beard","15 min.",3000],
+        ["Little boys haircut under 12","Clipper haircut for kids under 12 years old. 30 min.",4500],
+        ["Men's Haircut","Clipper haircut with shears in top. Cleaned up with balding or straight blade. 45 min.",5500],
+        ["Root touch up","Root touch up grow out on 2 inches or less. Does not include overall gloss. 2h.",13000],
+        ["Bald razor shave","Head shave with straight razor includes hot towel. 45 min.",5500],
+        ["Beard & haircut","1h 5m.",6500],
+        ["Balayage touch up","Touching up new growth on current balayage. 4-5 hour process. Includes gloss & root shadow. 80$ min refundable retention. 4h 30m.",38000],
+        ["Signature layered haircut","Layered haircut; on short, medium or long hair includes hair wash & blow out style. Finished with texturizing. Customized to client. 1h 30m.",12000],
+        ["Full Highlight","Highlights all over hair with touch up on base color (root) Finished with a gloss. 3-4 hour process. $80 non refundable retention. 3h 45m.",28000],
+        ["All over color","Permanent, Semi/Demi color all over hair. 2.5 hour process. Pricing starting at $180 for shoulder length hair. Longer hair requires more product price can vary up to $240. 2h 30m.",18000,"from"],
+        ["2 Braids","1h.",5000],
+        ["Balayage","Balayage/foilayge on clean canvas (even color all over) includes gloss & root shadow. 5-6 hour session. Must have consultation prior to first session. 100$ non refundable retention for service. 5h.",42000],
+        ["Root touch up + gloss","Color touch up on new growth (1.5 inches or less) + color gloss toner to refresh mid to ends color. 2h 15m.",17000],
+        ["Men's haircut on medium to long hair","Haircut done with no clippers only shear work. Hair wash included finished with customized texturizing. Shoulder length hair & longer. 1h 15m.",6500],
+        ["Partial highlight","Partial highlight is half of the full set of hair. Customized to your own choice. Number 1 hairline partial or number 2 top half of head partial. 4h.",25000],
+        ["Bang cut","Bang trim only. Any style of bangs curtain bangs, straight bangs,. 30 min.",1200],
+        ["Eyebrows","Eyebrow clean up with razor. No wax. 10 min - 15 min. $7-$15 depending on the barber.",700,"from"],
+        ["Young girl haircut long hair under 12","This haircut is for shoulder length hair or longer. Includes wash & blowout styling. 1h.",7500],
+        ["4 Braids","4 braids with any design. 1h 15m.",9000],
+        ["6 braids","1h 30m.",11500],
+        ["Consultation","30 min.",500],
+        ["Toner","Toner gloss to refresh/cancel/enhance current color. 1 hour appointment. 1h.",7500],
+        ["2 braid simple design","Please have clean hair prior service, if hair is curly/textured please have it stretched out throughly. No product. Thank you!. 1h 15m.",7500],
+        ["Women's short haircut","This haircut choice is for Pixie haircut or bob, anything above the shoulders. Hair wash, cut & blow out style or heat style. 1h 30m.",10000],
+        ["4 braids simple design","Please have clean hair prior service, if hair is curly/textured please have it stretched out throughly. No product. Thank you!. 1h 30m.",11000],
+        ["8 braids simple design","Please have clean hair prior service, if hair is curly/textured please have it stretched out throughly. No product. Thank you!. 2h 15m.",16000],
+        ["6 braids simple design","1h 45m.",12500],
+        ["Front half braids","1h 30m.",8000],
+        ["Hairc & Eyebrows","1h.",7000],
+        ["Full Service","1h.",8000],
+        ["Men’s Haircut","45 min.",5000],
+        ["Kid’s Haircut (K-12th grade)","45 min.",4500],
+        ["Men’s Haircut + Beard","1h.",6000],
+        ["razor shave and hot towel","1h.",6500],
+        ["Proper service","haircut and beard/shave, hot towel, face mask, 10min massage. 1h 20m.",13000],
+        ["Beard line up (No haircut)","Beard line up only. Service does not include haircut. 20 min.",2500],
+        ["Line up","Line up only no cutting. 20 min.",2500],
+        ["Haircut and beard","55 min.",4500],
+        ["Blow out style","Hair wash includes scalp massage & blow out service. 1h.",7000],
+      ] },
+    ],
+    quoteOnly: "Prices are from their own Squire booking page; some services cost more or less depending on the barber.",
   },
 
   /*
@@ -16705,6 +19839,59 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Sourdough Eatery — gathered 2026-10-05 from own
+     they are: Sandwich shop with fresh-baked sourdough
+     flag: The menu on their site (sourdougheatery.com/menu.html, with a larger version at menubig.html) is an image only (images/menu-sm.jpg), and the site is copyright 2002. Per the rules, no prices were transcribed from it and items is empty. It is probably also out of date. If Leon wants a menu, the shop would need to send a current one.
+     flag: Hours agree across first-party sources. The site's location page says 'Mon. thru Fri. - 11am. to 2pm.' and the Instagram bio says 'Open M - F | 11am - 2pm (Or Sell Out)'. Weekends are not mentioned, so 'closed Sat-Sun' was not written; Glenn's Apple Maps screenshot shows Saturday and Sunday as closed, but that is not first-party.
+     flag: Address and phone are from the site's location page: '848 N. First St. San Jose Ca. 95112', 'ph:408-295-7709'. A fax number (408-998-2089) is also printed there and left out.
+     flag: Name: the Instagram account and the site write 'Sourdough Eatery'. Their banner logo and Apple Maps say 'The Sourdough Eatery'.
+     flag: Logo: their painted brick-wall banner ('the Sourdough EATERY' with the prospector figure) from the top of their site (Glenn's IMG_6048), cut --asis. It is a wide banner, so it sits as a strip in the middle of a square tile. The Instagram profile picture is a sandwich photo, not a logo.
+     flag: Story from their site and the 'Picture This' article on it: family-run sandwich shop, bread baked on site, art gallery dining rooms with owner Barbara Lenhart's oil paintings, and a large brick courtyard patio in the early-1900s Lenhart building across from the old San Jose City Hall.
+     flag: Instagram @sourdougheatery is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'sourdough-eatery': {
+    address: "848 N First St, San Jose, CA 95112",
+    phone: "(408) 295-7709",
+    hours: "Mon-Fri 11am-2pm (or until sold out)",
+    contactOnly: "Their menu is published only as a picture, so no prices are listed here.",
+  },
+
+  /*
+     Souva Mobile Pet Grooming — gathered 2026-10-05 from own
+     they are: Mobile pet grooming
+     flag: Glenn's link was souva-mobile-pet-grooming.vercel.app; their IG links www.souvagrooming.com, which serves the same site, so site_url uses the own domain.
+     flag: Possible launch-status conflict: the IG bio says 'Luxury mobile grooming, coming soon · Follow along for our launch', while the site takes bookings, shows 7-day hours and prints client reviews.
+     flag: Service area differs by source: the site covers San Francisco (Sunset, West Portal, Lake Merced, Ingleside, Glen Park) and the Peninsula down to Mountain View and Half Moon Bay (34 ZIP codes); Glenn's screenshot of the site splash says 'San Francisco Bay Area & Select East Bay'. Mobile business with no address, so city is null.
+     flag: Phone +1 (850) 960-0034 (a Florida area code) is the site's call and WhatsApp number. Hours 'Mon - Sun (7 Days) 8:30 AM - 7:00 PM PST' are from the site footer, also in Glenn's screenshot.
+     flag: Size-by-size prices show when a size is tapped on their Services & Pricing section (checked for all four sizes). Pays at the door by cash, Zelle, Visa, Mastercard, Apple Pay or check. Operated by SOUVA CORP.
+     flag: Instagram @souvagrooming is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'souva-mobile-pet-grooming': {
+    phone: "(850) 960-0034",
+    email: "info@souvagrooming.com",
+    hours: "Mon-Sun 8:30am-7pm",
+    cuisine: "Mobile pet grooming",
+    groups: [
+      { name: "Prices, from", items: [
+        ["Bath & Refresh","45-60 min. Bath, blow-dry, ear cleaning, nail trim, finishing fragrance, Souva bandana and a treat. Starting rates: Small (up to 15 lb) $65, Medium (16-35 lb) $85, Large (36-50 lb) $100, X-Large (over 50 lb) $130.",6500,"from"],
+        ["Bath & Tidy","60-75 min. Everything in Bath & Refresh plus paw pad, sanitary and face trims. Starting rates: Small (up to 15 lb) $80, Medium (16-35 lb) $100, Large (36-50 lb) $115, X-Large (over 50 lb) $145.",8000,"from"],
+        ["Essential Full Groom","75-90 min. A full short haircut or shave-down for easy upkeep. Starting rates: Small (up to 15 lb) $110, Medium (16-35 lb) $130, Large (36-50 lb) $150, X-Large (over 50 lb) $170.",11000,"from"],
+        ["Signature Grooming","90-115 min. Customized signature haircut with detailed scissoring, for longer, breed-inspired or Asian Fusion styles. Starting rates: Small (up to 15 lb) $125, Medium (16-35 lb) $150, Large (36-50 lb) $170, X-Large (over 50 lb) $190.",12500,"from"],
+        ["Nail Grinding Upgrade","Smooths and rounds the nails after trimming.",1500],
+        ["Teeth Brushing & Breath Refresh","Gentle brushing to freshen breath.",1500],
+        ["Paw & Nose Balm","Moisturizing balm for dry paw pads and nose.",1200],
+        ["Deep Conditioning Treatment","Moisture, softness and shine for dry or dull coats.",2000],
+        ["Sensitive Skin Treatment","Hypoallergenic wash and soothing botanical rinse for reactive skin.",1500],
+        ["De-Shedding Treatment","Multi-step undercoat treatment; price varies with size, coat density and time.",2500,"from"],
+        ["De-Matting","$25 per additional 15 minutes when mat removal needs extra brushing; severe matting may need a shorter cut.",2500],
+        ["Excessive Coat & Additional Brushing","For exceptionally dense, impacted or overgrown coats.",2500,"from"],
+        ["Special Handling","For pets needing extra time and support (anxiety, mobility, sensitivity or behavior).",2500],
+      ] },
+    ],
+    quoteOnly: "Prices are Souva's own published starting rates; the final price depends on breed, size, coat, style and time, and a second dog at the same visit is 20% off.",
+  },
+
+  /*
      Stella Pastry & Cafe — gathered 2026-09-21 from none
      they are: Italian bakery/cafe
      flag: Menu sweep 2026-09-09: first research record for this seat
@@ -16717,6 +19904,153 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   'stella-pastry': {
     cuisine: "Italian bakery/cafe",
     tagline: "Italian bakery and cafe in San Francisco's North Beach",
+  },
+
+  /*
+     Steve\'s Mobile Security — gathered 2026-10-05 from own
+     their spelling: "Steve's Mobile Security" (roster keeps "Steve\'s Mobile Security")
+     they are: Security screen doors and window screens
+     flag: No prices are published, so items is empty. Product lines on their site: Viewguard security screen doors (woven stainless mesh, 16 colors), Designer security doors (40+ designs), Patio/sliding security doors (optional pet door), Security window screens, Vistaview doors, and whole-home security; lifetime break-in warranty, lifetime no-rust guarantee and 10-year parts and finish warranty.
+     flag: Phone differs by source: the site's main number is (866) 467-6527 (used here); the contact page also lists Ripon +1 209-599-2043, Central Valley +1 209-982-1806, East Bay Area +1 925-240-3931 and Northern California +1 916-745-6707. The IG Contact button in Glenn's screenshot shows (209) 599-2043.
+     flag: Email differs by source: the site says office@stevesmobilesecurity.com (used here); the IG Contact button says sales@stevesmobilesecurity.com.
+     flag: No street address or hours are published. Showrooms are in Modesto and Sacramento, by appointment only. CA Lic # 1087329. Family owned, installing in Northern California since 1999 (IG says '25+ years').
+     flag: Service area pages include East Bay cities (Antioch, Brentwood, Oakley, Pittsburg, Discovery Bay, Livermore, Pleasanton) plus Sacramento, Stockton, Modesto and the Central Valley. Glenn labelled it BEASTY • Online; it is an installer who comes to your home, so BEASTY • Services may fit better.
+     flag: Logo icon is the four-tile mark from their site header (the 'S' of the wordmark beside it was left out).
+     flag: Instagram @stevesmobilesecuritydoors is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'steves-mobile-security': {
+    phone: "(866) 467-6527",
+    email: "office@stevesmobilesecurity.com",
+    contactOnly: "Steve's Mobile Security doesn't publish prices; they measure at your home and give you an upfront quote.",
+  },
+
+  /*
+     Sticky Rice Thai — gathered 2026-10-05 from toast
+     they are: Thai, with Isan dishes
+     flag: Glenn's three screenshots for this business (IMG_5939, IMG_5942, IMG_5944) were temporary iMessage files under /var/folders/.../com.apple.imagent/TemporaryItems and no longer exist on disk, and nothing by those names is in ~/Library/Messages/Attachments, so the logo, the Instagram handle and anything else only in those screenshots could not be checked. logo is null and instagram is null; Glenn or Leon needs to re-send or re-save the screenshots (especially the profile picture).
+     flag: The Toast page has no restaurant logo (only Toast's own branding), so there was no first-party logo to use instead.
+     flag: Instagram: Glenn's link carried utm_source=ig / link_in_bio, so they have an Instagram account, but its handle is not shown on the Toast page. The reel in the worklist belongs to @orangeginger (from the reel page's og:url), which looks like a creator account, not the restaurant, so it was not used as their handle.
+     flag: Name: the Toast page writes it 'Sticky rice thai llc'; Glenn calls it 'Sticky Rice Thai'. name_exact uses 'Sticky Rice Thai' without the LLC; change it if Leon prefers the Toast spelling.
+     flag: Address as Toast prints it is '50 Skyport dr.suite 20, San Jose, CA 95110' (the ZIP appears only in the page footer; the header line has no ZIP). Tidied to '50 Skyport Dr, Suite 20, San Jose, CA 95110'.
+     flag: Phone (901) 799-2688 is the number on their own Toast page (Location and Hours footer). 901 is a Memphis, Tennessee area code, which is unusual for a San Jose restaurant (possibly the owner's mobile). It is published by them, so it is kept, but worth a check before it goes live.
+     flag: Hours are from Toast's 'All hours' panel (Sun-Thu 11:00AM-8:45PM, Fri-Sat 11:00AM-9:15PM). Toast is the only first-party source available here (no own website, screenshots missing), so they were not cross-checked. These may be online-ordering hours, not the dining-room hours.
+     flag: When checked (Mon 5 Oct 2026, morning), the Toast page said 'Currently not accepting online orders' and 'Opens at 11AM'. The order link may only work during open hours, or online ordering may be switched off.
+     flag: 14 menu items were marked OUT OF STOCK on Toast when checked: Bamee Pok Pok, Branzino Cashewnuts, Brown Rice, Crispy Rice Salad (Nam Khao Tod), Duck Lychee Curry, Fried Banana & Ice Cream, Kao Moo Dang Moo Krob, Kao Na Phed, Kor Mu Yang, Mussaman Short Ribs, Pad Pong Karee, Thai Tea Kaya Toast, Tod Mun Goong, Tom Zabb Pork Ribs. They are still listed with their published prices because they are on the menu; drop them if Leon only wants items that can be ordered today.
+     flag: Tom Kha and Tom Yum are listed on Toast as '$10.00+' (price depends on the options chosen). Entered as $10 with label 'from'.
+     flag: Toast shows a second 'Dessert' list under Drinks that repeats Mango Pandan Sticky Rice and Thai Tea Kaya Toast and adds 'Roti&Ice cream' ($11) and 'Pandas Cream brûlée’' ($13). The repeats were merged and the two new ones were added to Desserts, with names kept as written.
+     flag: Drinks kept: 10 non-alcoholic drinks (Thai iced tea, coconut juice, sodas and others). No alcohol is on the Toast menu.
+     flag: No website of their own was found: Glenn's link and the toast.site root both open the Toast ordering page. needs_site is true.
+  */
+  'sticky-rice-thai': {
+    address: "50 Skyport Dr, Suite 20, San Jose, CA 95110",
+    phone: "(901) 799-2688",
+    hours: "Sun-Thu 11am-8:45pm, Fri-Sat 11am-9:15pm",
+    cuisine: "Thai, with Isan dishes",
+    sections: [
+      { name: "Starters", items: [
+        ["Esaan Sausage","Fried pork sausage served with ginger and roasted peanut",1300],
+        ["Gai Satay","Marinated chicken breast on skewers with rich peanut sauce & cucumber relish",1400],
+        ["Mu Ping","Tender Thai street-style grilled pork skewers marinated with aromatic Thai herbs",1300],
+        ["Poh Pia Tod (Spring Roll)","Crispy spring rolls stuffed with vermicelli noodle, carrot and cabbage with sweet chili sauce",1200],
+        ["Poh Pia Sod","Choice of shrimp or tofu with lettuce, basil, carrot, cucumber and golden crispy wrapper served with peanut sauce",1200],
+        ["Crispy Calamari","Crispy fried calamari with homemade sweet chili sauce",1600],
+        ["Tod Mun Goong","Crispy Thai prawn cakes with a golden crust and sweet plum sauce",1500],
+        ["Chicken Wing (5 pieces)","Crispy chicken wings tossed with fragrant lemongrass and Thai herbs",1300],
+        ["Crispy Fried Tofu","Organic fried tofu with peanut and sweet chili sauce",1000],
+        ["Roti Curry","Crispy pan fried roti served with yellow curry dipping sauce",1300],
+      ] },
+      { name: "Soup", items: [
+        ["Tom Kha","Aromatic silky coconut soup infused with galangal, chicken, mushroom, and cilantro. Listed as $10.00+ (price depends on options).",1000,null,"from"],
+        ["Tom Yum","Bold Thai hot and sour broth infused with lemongrass, shrimp, mushroom, and cilantro. Listed as $10.00+ (price depends on options).",1000,null,"from"],
+        ["Tom Zabb Pork Ribs","Spicy baby pork ribs soup with Thai herbs",2300],
+      ] },
+      { name: "Salad", items: [
+        ["Papaya Salad","Shredded green papaya with dry shrimp, garlic, tomatoes, carrots, green beans, fresh lime, and crunchy peanuts, served with romaine",1400],
+        ["Esaan Papaya Salad","Shredded green papaya with salted black crab, garlic, tomatoes, carrot, green beans, and fermented fish sauce",1600],
+        ["Larb","Minced chicken or pork tossed with mint, red onions, scallions, cilantro in a zesty lime vinaigrette, topped with roasted rice powder",1700],
+        ["Yum Woon Sen","Glass noodle salad with ground pork, shrimp, dry shrimp, white onions, tomatoes, celery, peanut and spicy lime dressing",1900],
+        ["Crispy Rice Salad (Nam Khao Tod)","Tossed with crispy rice, savory pork, fresh herbs, roasted peanuts, and a bold lime dressing",1900],
+        ["Yum Neua (Thai Beef Salad)","Grilled beef with tomato, cucumber, mint, red onion, green onion, and roasted chili lime dressing",2200],
+      ] },
+      { name: "Grill", items: [
+        ["Crying Thaiger","Flame-grilled beef New York Steak served with tamarind Jaew sauce (bold, smoky chili dipping sauce)",2700],
+        ["Kor Mu Yang","Char-grilled marinated lean pork jowl, served with lettuce, Jaew sauce, and sticky rice",2400],
+      ] },
+      { name: "Wok Noodle", items: [
+        ["Pad Thai","Stir-fried thin rice noodle, tofu, egg, bean sprouts, chives, peanut with homemade tamarind sauce",1800],
+        ["Pad See Ew","Stir-fried flat rice noodle, Chinese broccoli and egg with black soy sauce",1800],
+        ["Pad Kee Mao","Stir-fried flat rice noodle with young peppercorn, bell pepper, tomatoes and basil leaves",1800],
+        ["Pad Woon Sen","Stir-fried glass noodle with egg, cabbage, carrot, tomatoes and green onion",1800],
+      ] },
+      { name: "Noodle Soup", items: [
+        ["Boat Noodle","Rich and aromatic beef broth simmered with fragrant spices and herbs, rice noodle, meatball, Chinese broccoli, bean sprouts, and scallions",2200],
+        ["Tom Yum Noodle","Rice noodle, Tom Yum broth, meatball, minced pork, sliced pork, peanut, lime and chili",2000],
+        ["Bamee Pok Pok","Egg noodles with Thai-style BBQ pork, pork wontons, bok choy, crispy garlic, and green onions in a savory broth",2200],
+        ["Kao Soi","Northern Thai style curry broth with chicken drumsticks, crispy and steamed egg noodles, chili, shallots and pickled mustard greens",2200],
+      ] },
+      { name: "Rice Plate", items: [
+        ["Kao Na Phed","Roasted duck served over steamed rice with savory Thai duck sauce",2400],
+        ["Kao Moo Dang Moo Krob","BBQ pork, crispy pork belly, Chinese sausage, boiled egg, served with spicy black soy sauce and savory gravy sauce",2200],
+      ] },
+      { name: "Stir Fried", items: [
+        ["Pad Kaprow","A classic Thai stir-fry with basil, garlic, and chili, served with your choice of protein",1800],
+        ["Pad Kana","Crisp Chinese broccoli stir-fried with garlic and savory sauce",1800],
+        ["Pad Pak (Mixed Veggies)","Stir-fried mixed vegetable with garlic sauce",1800],
+        ["Pad Ma Kheu","Wok-tossed tender eggplant with garlic and basil in a brown sauce",1800],
+        ["Pad Prik Khing","Sauteed string bean with a dry roasted red curry paste, bell pepper, basil and makrut lime leaves",1800],
+      ] },
+      { name: "Curry", items: [
+        ["Green Curry","Bamboo shoots, eggplant, bell peppers, basil, and coconut milk",1800],
+        ["Panang Curry","Aromatic Panang curry paste, bell pepper, makrut lime leaves, and coconut milk",1800],
+        ["Yellow Curry","Carrot, onion, potato, and coconut milk",1800],
+      ] },
+      { name: "Fried Rice", items: [
+        ["Thai Fried Rice","Thai-style wok-fried rice with egg, onions, tomatoes, and green onions",1800],
+        ["Pineapple Fried Rice","Wok-tossed jasmine rice with curry powder, egg, pineapple, white onions, green onions, and roasted cashews",2500],
+        ["Basil Fried Rice","Wok-fried rice with basil, onions, and chili",1800],
+        ["Crab Fried Rice","Fresh crab meat, eggs, scallion wok-tossed to perfection served with Thai seafood chili sauce",3000],
+      ] },
+      { name: "Chef Specials", items: [
+        ["Duck Lychee Curry","Roasted duck in Panang curry sauce with pineapple, tomatoes, bell peppers, and crispy basil",2800],
+        ["Pad Pong Karee","Crabmeat stir-fried with yellow curry cream sauce, scallions, onions, bell peppers, carrots, celery, and egg",2800],
+        ["Pad Cha Seafood","A fiery Thai stir-fry featuring mixed seafood tossed with garlic, chili, basil, peppercorns, and finger root",2600],
+        ["Steamed Mussels","Fresh mussels steamed with fragrant lemongrass, onion, garlic, and Thai basil leaves",2500],
+        ["Branzino Cashewnuts","Crispy whole branzino with a savory fish sauce glaze, served with fresh mango salad",3500],
+        ["Mussaman Short Ribs","Slow-braised beef short ribs simmered in rich Massaman curry with potatoes, onions, and roasted peanuts",2800],
+      ] },
+      { name: "Side Order", items: [
+        ["Jasmine Rice","",300],
+        ["Brown Rice","",400],
+        ["Sticky Rice","",400],
+        ["Steamed Noodle","",400],
+        ["Steamed Mix Veggies","",400],
+        ["Fried Egg","",500],
+        ["Peanut Sauce","",400],
+        ["Cucumber Relish","",500],
+        ["Roti","",500],
+      ] },
+      { name: "Desserts", items: [
+        ["Mango Pandan Sticky Rice","Pandan infused sticky rice, fresh mango, coconut cream, mung bean",1300],
+        ["Thai Tea Kaya Toast","",1400],
+        ["Fried Banana & Ice Cream","",1100],
+        ["Ice Cream","",600],
+        ["Roti&Ice cream","",1100],
+        ["Pandas Cream brûlée’","",1300],
+      ] },
+      { name: "Drinks", items: [
+        ["Thai Ice Tea","",600],
+        ["Thai Ice Coffe","",600],
+        ["Lychee Ice Tea","",600],
+        ["Unsweetened Ice Tea","",500],
+        ["Butterfly Pea Lemonade","",600],
+        ["Coke","",500],
+        ["Diet Coke","",500],
+        ["Sparkling water","",500],
+        ["Saratoga water","",500],
+        ["Fresh Coconut Juice","",900],
+      ] },
+    ],
+    siteNote: "Prices are from their own Toast ordering page.",
   },
 
   /*
@@ -17734,6 +21068,201 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Tempura Kaneko Hannosuke — gathered 2026-10-05 from own
+     they are: Japanese tempura and tendon
+     flag: Their site (run by OISHES Co., Ltd.) covers shops in Japan, Taiwan, Hong Kong, the Philippines, Thailand, Indonesia, Canada and the US. Only the San Jose entry is used here: '4320 Moorpark Ave, San Jose, CA 95129, USA', with Instagram tempura.hannosuke. Their Instagram bio says 'Tempura from Japan at Mitsuwa Marketplace' and 'SAN JOSE opening 9/3!', so the shop is inside the Mitsuwa market at that address. The other US shops are at Mitsuwa in Los Angeles and in Edgewater, NJ, which is not the Bay Area.
+     flag: Phone and hours: the site lists no phone or hours for San Jose. Glenn's third screenshot is an Apple Maps card (11:00 AM-1:30 PM and 5:00 PM-9:00 PM, +1 (408) 320-1867, 'More on Yelp'), but Apple Maps and Yelp are not first-party sources, so phone and hours are null. Leon could ask the shop to confirm both.
+     flag: No menu or prices are published on their site, and there is no first-party ordering page for San Jose, so items is empty and prices_published is false.
+     flag: Name: the site calls the brand 'Nihonbashi Tendon Kaneko Hannosuke' / 'Kaneko Hannosuke'. The domain is tempura-kaneko-hannosuke.com, and the US Instagram's display name is 'Tempura Hannosuke USA'. Glenn wrote 'Tempura Kaneko Hannosuke', which matches the domain, so that is used.
+     flag: Logo: the red seal mark from the top of their website (Glenn's screenshot IMG_6013), cut with --square. The Instagram profile picture also shows the 金子半之助 calligraphy under the seal, but it was too small to use.
+     flag: The Instagram profile in Glenn's screenshot carries Instagram's 'AI-generated profile' label above the bio. Noted only; the bio facts match the website.
+     flag: Instagram @tempura.hannosuke is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'tempura-kaneko-hannosuke': {
+    address: "4320 Moorpark Ave, San Jose, CA 95129",
+    cuisine: "Japanese tempura and tendon",
+    contactOnly: "They publish no menu prices online for the San Jose shop.",
+  },
+
+  /*
+     Thai Table — gathered 2026-10-05 from own
+     they are: Thai, homemade style
+     flag: Hours left null because their own sources disagree: the Instagram bio, the website banner ('Open everyday 12PM noon - 9:30 PM') and their Toast page all say 12pm-9:30pm daily, but the Location & Hours block on the same website (Glenn's screenshot) says 1:00pm-9:30pm every day. Most likely 12pm-9:30pm daily; Glenn or Leon should confirm.
+     flag: No email is published on the website or in Glenn's Instagram screenshot (the Instagram profile shows no Email or Contact button).
+     flag: The website's Menu page is only a photo plus ordering links, and a 'Download Menu PDF' button with no file behind it, so items come from their Toast pickup menu (order_url). The Toast page notes 'All Entrées DO NOT come with rice.'
+     flag: Left out from Toast: cocktails, beer, wine and the wine spritzer (alcohol), plus unpriced condiments (Pik Nam Pla, hot sauce, soy sauce). Non-alcoholic mocktails are kept.
+     flag: Item names are as written on Toast, including some long ones with Thai script (e.g. the grilled salmon mango salad); only obvious typos were fixed ('Shirmp', 'Prowns', a doubled 'with Sticky Rice').
+     flag: The Instagram bio says they are also on DoorDash, Uber Eats and Grubhub, with pickup ordering through their website; those third-party apps were not used as sources.
+     flag: Name: the website calls it 'Thai Table' with the tagline 'Homemade Style'; the Instagram display name and logo say 'Thai Table Berkeley'.
+     flag: Instagram @thaitableberkeley is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'thai-table-berkeley': {
+    address: "913 University Ave, Berkeley, CA 94710",
+    phone: "(510) 705-1083",
+    cuisine: "Thai, homemade style",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Crispy Vegetable Rolls","(Vegan) Crispy spring rolls with carrots, cabbage, and ground peanuts",995],
+        ["Crispy Shrimp Rolls","Served with sweet and sour sauce.",1295],
+        ["Fresh Vegetable Rolls","(Vegan/Gluten-Free) Fresh rice paper rolls stuffed with cabbage, lettuce, cucumber, carrot, cilantro, mint, Served with house-made peanut sauce.",1295],
+        ["Fresh Shrimp Rolls","(Gluten-Free) Fresh rice paper rolls stuffed with cabbage, lettuce, cucumber, carrot, cilantro, mint, shrimp. Served with house-made peanut sauce.",1295],
+        ["Chicken Satay","Grilled chicken breast marinated in coconut milk and Thai herbs",1395],
+        ["Sweet Pumpkin Curry Puffs","(Vegetarian) A house favorite. Deep-fried puffs filled with sweet pumpkin and potato",1295],
+        ["Fried Taro Coconut Puffs","Fried Taro Coconut Puffs Vegan",1295],
+        ["Thai Chicken Wings","Thai-style chicken wings served with sweet and sour sauce",1595],
+        ["Fried Calamari","Served with housemade ground peanut sauce",1595],
+        ["Fried Tofu","(Vegan) Deep-fried tofu served with sweet sauce and ground peanuts",1295],
+        ["Fried Chicken & Pork Dumplings","Served with housemade sauce",995],
+        ["Mushroom Dumplings","(Vegan) Served with ginger sauce",1495],
+        ["Roti With Yellow Curry","(Vegan) Indian roti bread served with yellow curry",1295],
+        ["Roti With Peanut Sauce","(Vegan) Indian roti bread served with peanut sauce",1295],
+        ["Pineapple Cream Cheese Wonton","Stuffed Pineapple with Cream Cheese green onion Homemade sauce",1195],
+        ["Grilled Pork Skewers (Moo Ping) Thai-Style หมูปิ้ง","Grilled marinate Pork skewers and Jaw Sauce",1395],
+        ["Sai Aou - Pork Sausage","Northern Thai-style grilled sausage, ginger, lime slices, with a side of peanuts",1595],
+        ["Grilled Lemongrass chicken with Sticky Rice","Served with jeaw sauce and sweet chili sauce Serve with sticky rice",1995],
+        ["Grilled Pork Neck with Sticky Rice","Served with jeaw sauce and sweet chili sauce Serve with sticky rice",1995],
+      ] },
+      { name: "Dessert", items: [
+        ["Mango Sticky Rice","A Thai dessert favorite! Fresh sweet mango served alongside glutinous rice and coconut milk",1495],
+      ] },
+      { name: "Thai Salads", items: [
+        ["Thai Papaya Salad - Somtum Thai","Famous Thai Street Food. Fresh green papaya with lime, garlic, peanuts, green beans, and tomatoes",1795],
+        ["Lao Papaya Salad - Somtum Lao","Does not come with Sticky Rice Famous Lao-style salad. A bit more funky. Fresh green papaya with lime, garlic, tomatoes, and fermented fish sauce",1795],
+        ["Larb Chicken Lettuce Wraps - Larb Gai","Ground chicken lime dressing, red onions, cilantro, mint, dry chili",1795],
+        ["Larb Pork Lettuce Wraps - Larb Moo","Ground Pork lime dressing, red onions, cilantro, mint, dry chili",1795],
+        ["Larb Tofu Lettuce Wraps - Larb Tofu Vegan","Tofu lime dressing, red onions, cilantro, mint, dry chili",1595],
+        ["Larb Shrimp Lettuce Wraps - Larb Goong","with lime dressing, red onions, cilantro, mint, and dry chili herbs, chilies,",2095],
+        ["Nam Khao Lettuce Wraps","Crispy rice salad, Lao-style fermented pork sausage, peanuts, scallions, shallots, mint, cilantro, and lime juice",1795],
+        ["Crunchy Peanut Sauce Coconut Lime Salad","Crunchy peanut sauce Coconut lime Salad Green salad Healthy and delicious Gluten free Vegan Vegetarian",1695],
+        ["Ginger Sesame Edamame Salad","Edamame, lettuce, tomatoes, sesame, cucumber, mint, red onion, green onion, cabbage, rice seasoning",1695],
+        ["Fresh Mango Salad","Fresh mango, red onion, scallions, carrots, cashew nuts, mild Thai chili paste Edamame Tometoe",1995],
+        ["Mango Shrimp Salad","Shrimp and Fresh mango, red onion, scallions, carrots, cashew nuts, mild Thai chili paste Edamame Tometoe",2390],
+      ] },
+      { name: "Chef's Recommendations", items: [
+        ["Grilled Salmon Fresh Mango Thai Salsa Chili paste Cashew Nut, Edamame Tomatoes ยำแซลมอนมะม่วง","",2895],
+        ["Spicy Seafood Pad Ke Mao Ramen Noodle","Spicy Seafood Scallops, mussels, shrimp, and squid Pad Ke Mao Egg Noodle",2295],
+        ["Silver Noodle Crab Meat (Pad Woon Sen)","Thai Glass Noodles Stir Fry with Crab Meat Green onion, Tomato, Eggs",2595],
+        ["Silver Noodle Big Head Prawns (Pad Woon Sen)","",2595],
+        ["Seafood and crab Meat Curry Sauce, Eggs Onion, Bell Pepper","Stir frying Seafood and Crab Meat Curry Powder, double egg Onion, Bell Pepper",3995],
+        ["Pad Thai with Fresh Water Big Head Prawns ผัดไทยกุ้งใหญ่","",2595],
+        ["OMG! Spicy Southern Thai Curry with Spareribs, rice","Tender braised pork ribs in a Thai curry with layers of heat.",2295],
+        ["khua kling Minced pork w/ rice","",1995],
+        ["OMG! Basa Fish with Rice","",2295],
+        ["Freshwater Big Head Prawn Garlic Lime with Rice กุ้งใหญ่กระเทียม","",2895],
+        ["Khao Kluk Pla Tu ข้าวคลุกปลาทู","Grilled Mackerel Rice Salad with Namprik,cucumber mint red onion, ginger (lime chili sauce)",2695],
+        ["Ribeye Steak W/ Brown Rice Crying Tiger","Grilled premium boneless ribeye steak (medium well) served sliced with Nam Jim Jaew, (a spicy, tangy, dipping sauce tamarind,lime juice, chili) Served with Brown Rice.",2300],
+      ] },
+      { name: "Seafood", items: [
+        ["Mango Shrimp","Fiery wok-fried tiger shrimp and sweet mango with basil and chili garlic sauce, (Recommend order rice on the side)",2395],
+        ["Spicy Seafood Mix with Eggplant","Scallops, mussels, shrimp, and squid stir-fried with sweet chili sauce and eggplant",2695],
+        ["Grilled Salmon Lychee yellow Curry Sauce","Lychee curry with Kaffir lime leaf. Served with side of vegetables, (Recommend order rice on the side)",2895],
+        ["Garlic Lime Big Shrimp top Jasmine Rice, green mint sauce","Garlic pepper shrimp come with rice and green mint sauce/ Big Head Prawns",2595],
+        ["Herb Chili Lemongrass Basa Fish","Herb Fish Basa chili lemongrass green bean chili paste kaffir lime leave",1995],
+        ["Fish Red Curry Choochee","Red Cream curry Sauce top with fried fish, (Recommend order rice on the side)",2595],
+        ["Fish Pla Sam Rod","(Popular Item) Delicious Fried Whole Fish with sweet and sour, garlic, Pineapple sauce, Bell pepper and top crispy basil (Recommend order rice on the side)",2595],
+        ["Turmeric Herb Crispy fried whole fish with garlic lime sauce","Turmeric Herb Crispy Garlic Whole Fish Green Sauce mint lime, cashew nut (noodle on the side) Pompano",2495],
+      ] },
+      { name: "Soup", items: [
+        ["Tom Kha Chicken Coconut Soup","(Gluten-Free) Coconut Soup. Rich and creamy, yet tangy and salty. Made with real Thai coconut milk",1795],
+        ["Tom Kha Tofu Coconut Soup Vegan","(Vegan/Gluten-Free) Coconut Soup. Rich and creamy, yet tangy and salty. Made with real Thai coconut milk Tofu",1795],
+        ["Seafood Tom Kha (Coconut Soup)","Scallops Mussels Shrimp and Squid (Gluten-free) Rich and creamy, yet tangy and salty, Made with real Thai coconut milk.",2495],
+        ["Spicy Seafood Thai Street Food Tom Yum","Scallops Mussels Shrimp and Squid (Gluten-free) Lemongrass, Thai red chili, galangal, minced tomato, and kaffir lime leaves. dairy",2495],
+        ["Tom Yum Chicken Soup","(Gluten-Free) Does not include shrimp heads Lemongrass, Thai red chili, galangal, minced tomato, kaffir lime leaves dairy",1795],
+        ["Tom Yum Tofu Soup","(Vegan/Gluten-Free) Does not include shrimp heads Lemongrass, Thai red chili, galangal, minced tomato, kaffir lime leaves dairy",1795],
+        ["Tom Yum Shrimp Soup","(Gluten-Free) Does not include shrimp heads Lemongrass, Thai red chili, galangal, minced tomato, kaffir lime leaves dairy",2095],
+        ["Tom yum soup Fresh water Big Head Prawns","Fresh Water Prawn Big Head (Gluten-free) Lemongrass, Thai red chili, galangal, minced tomato, and kaffir lime leaves. dairy",2595],
+        ["Tom Yum Fish Lemongrass Soup","Basa Fish (Gluten-free) Lemongrass, Thai red chili, galangal, minced tomato, and kaffir lime leaves. dairy",2095],
+        ["Tom Zap Pork Ribs With Rice","Spicy soup. Slow-cooked pork spare ribs in spicy broth, Come With Jasmine Rice",2195],
+        ["Beef Stew Soup (Tom Neuy) With Rice","Slow-cooked beef stew soup comes with Jasmine Rice",2395],
+      ] },
+      { name: "Noodle Soup", items: [
+        ["Vegetable Noodle Ginger Soup","Thai-style soup with homemade broth Vegetable Noodle Ginger Soup Vegetarian",1695],
+        ["Pork Rib Noodles Soup","Tender Spare Rip Pork with Egg Noodle Soup",1895],
+        ["Khao Soi","Chicken drumstick with Egg noodles in coconut curry. Lime, red onion, cilantro, and pickled lettuce",1995],
+        ["Beef stew noodle Soup","egg noodle",1995],
+      ] },
+      { name: "Curry", items: [
+        ["Massaman Curry with Chicken","Chicken quarters with Creamy peanut butter and coconut,cinnamon, cumin leaves, dried chili peppers,lemongrass, galangal, pepper, and tamarind, GF (Recommend order rice on the side)",2495],
+        ["Panang Curry with Beef (Slow-cooked Beef)","(Gluten-Free) Authentic Panang curry. Rich and creamy. Slow-cooked in coconut cream, (Recommend order rice on the side)",2395],
+        ["Panang Curry Grilled Salmon","Grilled Salmon (Gluten-Free) Authentic Panang curry. Rich and creamy. in coconut cream, (Recommend order rice on the side)",2895],
+        ["Yellow Curry","(Vegan/Gluten-Free) Choice of protein simmered in coconut milk, yellow curry, turmeric, potatoes, onion, carrots, and crispy shallots",1995],
+        ["Red Curry","(Gluten-Free) Choice of protein simmered in coconut milk, red curry, bamboo shoots, Thai basil, and zucchini",1995],
+        ["Green Curry","(Gluten-Free) Choice of protein simmered in coconut milk, green curry, eggplant, green beans, and Thai basil leaves / (Recommend order rice on the side)",1995],
+        ["Pumpkin Curry","(Gluten-Free) Choice of protein simmered in coconut milk, red curry, pumpkin, bell pepper, carrots, Thai basil, and zucchini",1995],
+      ] },
+      { name: "Entrées", items: [
+        ["Gra Prow Basil Garlic with Ground Meat","*does not come with rice Wok-fried with garlic, fresh chili, basil, onion, bell pepper, and zucchini",1995],
+        ["Gra Prow Ground Pork Come with Rice and Sunny Egg","",2195],
+        ["Gra Prow Ground Chicken Come with Rice and Sunny Egg","",2195],
+        ["Gra Prow Mixed Seafood Come with Rice and Sunny Egg","",2695],
+        ["Pad Cashew Nuts","Stir-fried with zucchini, scallions, Cashew nuts, broccoli, and carrots",1995],
+        ["Prik King Green Beans","Wok-fried green beans with sweet kaffir lime leaves, galangal, lemongrass, and curry paste",1995],
+        ["Eggplant Basil","Sautéed eggplant with basil and mushroom sauce, bell peppers, and",1995],
+        ["Fresh Ginger Stir-Fry","Wok-fried mixed vegetables in garlic, ginger, and soy sauce/",1995],
+        ["Gra Prow Basil Garlic","Wok-fried with garlic, fresh chili, basil, onion, bell peppers,",1995],
+        ["Pra Ram Peanut Sauce with Beef","Tossed with mixed vegetables",1995],
+        ["Pra Ram Peanut Sauce with Tofu","Tossed with mixed vegetables",1995],
+        ["Pra Ram Peanut Sauce with Chicken","Tossed with mixed vegetables",1995],
+        ["Chili Lemongrass Lamb Sizzling stir-fried","",2395],
+        ["Chili Lemongrass Beef Sizzling stir-fried","",2395],
+        ["Chili Lemongrass Stir Fry Chicken","",2395],
+      ] },
+      { name: "Noodles & Fried Rice", items: [
+        ["Crab Fried Rice","Crab meat, eggs, green onion Fried Rice",2495],
+        ["Fried Rice Pork Sausage (Kao Pad Nam)","Khao Pad Naem is a popular Thai stir-fried rice dish featuring fermented sour pork sausage (naem), creating a savory, tangy, and slightly spicy flavor. It is typically prepared with jasmine rice, eggs, garlic, and onions, served with lime, sliced chili, and fresh vegetables.",2195],
+        ["Pad Thai Noodle","Gluten free / Wok-fried thin rice noodles with egg, ground peanuts, and fresh bean sprouts in tamarind sauce(vinegar, palm sugar, and real tamarind fruit) (Already made sauce with fish sauce** Vegan not available)",1895],
+        ["Pad Seew Noodle","Wok-fried rice noodles sautéed with Egg, broccoli, garlic, vinegar, plam sugar, and soy sauce",1895],
+        ["Pad Ke Mao Garlic Noodle","Wok-fried rice noodles sautéed with fresh chili, garlic, egg, and basil leaves tomatoes",1895],
+        ["Pad WoonSen (Silver Noodle)","Stir-fried silver noodles with eggs, green onions, and mixed vegetables including broccoli, cabbage, tomatoes, mushrooms, baby corn, onions, and carrots. Sesame Oil",1895],
+        ["Thai Fried Rice","Thai-style fried rice with vegetables, egg, garlic, onion, green onion, and tomatoes",1895],
+        ["Pineapple Fried Rice","Pineapple fried rice with vegetables, cashew nuts, yellow curry paste, Egg",1895],
+        ["Spicy Basil Garlic Fried Rice","Basil and garlic fried rice with egg, onion, green onion, and bell pepper",1895],
+      ] },
+      { name: "Side Orders", items: [
+        ["Jasmine Rice","",300],
+        ["Brown Rice","",400],
+        ["Sticky Rice","",400],
+        ["Fried Egg","",400],
+        ["Side Roti","",500],
+        ["Cucumber Salad","",600],
+        ["Steamed Veggies","",400],
+        ["Peanut Sauce","",600],
+        ["Steamed Skinny Noodle","",400],
+        ["Steamed Flat Noodle","",400],
+        ["Egg Noodle steamed","",400],
+        ["Bird Eye Thai Chili","",400],
+        ["Side Yellow Curry Sauce 8oz","",695],
+        ["Omelet (Khai Jiao) Thai-Style with Sriracha Sauce come with Rice","Thai-Style Omelet (Khai Jiao) with Sriracha Sauce onion green onion Vegetarian come with jasmine Rice",1195],
+        ["Side Rice Top Sunny Egg","",600],
+      ] },
+      { name: "Tea & Drinks", items: [
+        ["Thai Iced Tea","",500],
+        ["Thai Ice Tea w/ Coconut Milk","",600],
+        ["Thai Iced Coffee","",500],
+        ["Thai Ice Coffee w/ Coconut Milk","",600],
+        ["Lemonade w/ Fresh Ginger","",500],
+        ["Pineapple Juice","",500],
+        ["Lychee Iced Tea","",500],
+        ["Limeade Iced Tea","",500],
+      ] },
+      { name: "Mocktails", items: [
+        ["Lychee Mojito Non-alcoholic","",800],
+        ["Pineapple Margarita Non-alcoholic","",800],
+        ["Pina Colada Non Alcoholic","",800],
+        ["Mango Daiquiri Non-alcoholic","",900],
+        ["Spicy Tamarind Fizz Non-Alcoholic","",800],
+      ] },
+      { name: "Drinks", items: [
+        ["Coca-Cola","Coca-Cola Original Taste — the crisp, refreshing taste you know and love",400],
+        ["Diet Coke","Take a Diet Coke break with this refreshing, no-calorie soft drink",400],
+        ["Aranciata Rossa Blood Orange Sparkling Juice San Pellegrino","Blood Orange Sparkling Juice San Pellegrino",500],
+        ["Sparkling Water Key Lime (LaCroix)","",400],
+      ] },
+    ],
+    siteNote: "Prices are from Thai Table's own Toast pickup ordering menu, linked from their website; entrees do not come with rice, which is ordered as a side.",
+  },
+
+  /*
      Thai Thani and Oishi — gathered 2026-09-21 from own-domain
      they are: Thai & Japanese sushi
      logo: https://www.thaithanioishi.com/wp-content/uploads/2019/10/thaithaniOishi4-02.png (2082x526) — not cut into a tile yet
@@ -18300,6 +21829,123 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     siteNote: "Prices are from the menu on their own site; their online-ordering prices can differ.",
+  },
+
+  /*
+     The Burger Spot Co. — gathered 2026-10-05 from own
+     they are: Smash burgers and beef tallow fries
+     flag: Glenn's three screenshots for this business are no longer on disk (they were in a temporary Messages folder), so nothing here comes from them; the logo is their own header image from theburgerspotco.com, flattened onto white.
+     flag: Hours disagree: their website says Tue-Thu and Sun 11am-9pm, Fri 11am-10pm, Sat 9am-10pm, Mon closed, while their SpotOn ordering schedule has Sunday from 10am and Saturday from 11am, so hours are null.
+     flag: Some prices differ between their website menu and their SpotOn ordering page (sweet potato fries $6.00 vs $6.18, sodas $3.00 vs $3.09, water $2.00 vs $2.06, kids combo $7.00 vs $7.21, hot dog $9.55 vs $9.84); the SpotOn prices are used because their site says to order online for the most up-to-date menu.
+     flag: No phone or email is shown on their site; a phone number appears only inside the ordering page's hidden data, so it was left out.
+     flag: Their site's Instagram and Facebook links point to the bare instagram.com and facebook.com home pages, and Glenn's screenshots are gone, so instagram is null.
+     flag: The site's home page describes a 'Classic Smash' (double patties, American cheese, pickles, house sauce) that is not on the menu or the ordering page; it was left out.
+     flag: A $1.03 'Small hot dog' listed under 'Event specials' on the ordering page was left off.
+  */
+  'the-burger-spot-co': {
+    address: "12560 San Pablo Ave, Richmond, CA 94805",
+    sections: [
+      { name: "Burgers", items: [
+        ["Single Burger","Boss Sauce, Lettuce, Tomatoes, Caramelized Onions",1155],
+        ["Single Burger w/ Cheese","Boss Sauce, Lettuce, Tomatoes, Caramelized Onions",1255],
+        ["Double Burger","Boss Sauce, Lettuce, Tomatoes, Caramelized Onions",1455],
+        ["Double Burger w/ Cheese","Boss Sauce, Lettuce, Tomatoes, Caramelized Onions",1555],
+        ["Triple Burger","Boss Sauce, Lettuce, Tomatoes, Caramelized Onions",1755],
+        ["Triple Burger w/ Cheese","Boss Sauce, Lettuce, Tomatoes, Caramelized Onions",1855],
+        ["Impossible Burger","Plant-based patty.",1355],
+      ] },
+      { name: "Sides", items: [
+        ["Loaded Fries","Cheese, Boss Sauce, Grilled Onions",710],
+        ["Tallow Fries","Hand-cut fries fried in pure beef tallow.",455],
+        ["Side Salad","",824],
+        ["Chili Cheese Fries","Smothered in chili and melted cheese.",810],
+        ["Onion Rings","Battered and fried to order.",600],
+        ["Sweet Potato Fries","Golden sweet potato fries.",618],
+      ] },
+      { name: "Beverages", items: [
+        ["Sodas","Fountain sodas.",309],
+        ["Bottled Water","",206],
+      ] },
+      { name: "Combos", items: [
+        ["Fried Chicken Sandwich Combo","",1699],
+        ["Single Smash Combo","",1455],
+        ["Value Smash Combo","",700],
+        ["Double Smash Combo","",1699],
+        ["Impossible Burger Combo","",1599],
+        ["Grilled Chicken Sandwich Combo","",1699],
+        ["Triple Smash Combo","",1999],
+        ["Corn Dog Combo","",772],
+      ] },
+      { name: "Hot Dogs", items: [
+        ["Corn Dog","",412],
+        ["Mexican Dog","",1236],
+        ["Regular Hot Dog","",1025],
+        ["Chili Cheese Dog","",1236],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Kids Cheeseburger Combo","A kid-sized cheeseburger combo.",721],
+      ] },
+      { name: "Sandwiches & More", items: [
+        ["Fried Chicken Sandwich","Boss Sauce, Pickles, lettuce",1455],
+        ["Grilled Chicken Sandwich","Grilled chicken on a toasted bun.",1455],
+        ["Hot Dog","Classic all-beef hot dog.",984],
+      ] },
+      { name: "Specialty Burgers", items: [
+        ["Western Burger","",1650],
+        ["Texas Style","",1650],
+      ] },
+    ],
+    siteNote: "Prices are from The Burger Spot Co.’s own SpotOn online ordering page, which their site names as the most up-to-date menu.",
+  },
+
+  /*
+     The Cats — gathered 2026-10-05 from own
+     they are: Texas BBQ and Filipino favorites, with a bar and live music
+     flag: Hours from the "Opening Hours" block on every page of their site: brunch buffet Sat & Sun 11 AM-3 PM; dinner Fri 5-10 PM, Sat 5-10 PM, Sun 5-9 PM. Monday to Thursday are not listed (presumably closed, not stated). The homepage separately gives the BBQ dinner buffet window as Fri, Sat 5-9 PM & Sun 5-8 PM; that is the buffet window inside dinner hours, not a conflict. Instagram bio gives no hours.
+     flag: Dinner menu (BBQ dinner buffet price, a la carte, shareables and frozen drinks, cocktails, wine and beer) is published only as images on their Dine-In Menu page, so per the rules none of it was transcribed. Items are the brunch buffet and slider prices printed as text on their BBQ Brunch Buffet page, plus their SkyTab "The Cats BBQ To-Go" menu (SkyTab is the restaurant's own Shift4 POS ordering page, linked from their site as Order BBQ TO-GO).
+     flag: To-go descriptions are their SkyTab wording, shortened; BBQ plates come with BBQ beans & coleslaw and grill plates with coleslaw & mashed potato, as the to-go menu says. Corn Bread Muffin is listed at $14.00 on the to-go menu (likely a batch); kept as published.
+     flag: Names: website "The Cats Restaurant", Instagram "The Cats Restaurant & Bar" (est. 1896). name_exact is "The Cats".
+     flag: Email thecats@chefcentury.com is the customer-service address on their contact page (ChefCentury appears to be the operator). Private events and buyouts are a big part of their pitch (no venue fee).
+     flag: Logo is the black disc with THE CATS / RESTAURANT & BAR / EST. 1896, as Glenn asked ("Black logo looks better"; his 247108 screenshot is IMG_5790 here).
+     flag: Instagram @thecatslosgatos is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'the-cats': {
+    address: "17533 Santa Cruz Hwy, Los Gatos, CA 95033",
+    phone: "(408) 354-3060",
+    email: "thecats@chefcentury.com",
+    hours: "Fri 5pm-10pm, Sat 11am-3pm & 5pm-10pm, Sun 11am-3pm & 5pm-9pm",
+    sections: [
+      { name: "Brunch buffet (Sat-Sun 11am-3pm)", items: [
+        ["BBQ Brunch Buffet, adult","All-you-can-eat Texas-Filipino BBQ brunch buffet, Saturday & Sunday 11am-3pm: salad bar, St. Louis pork rib, brisket sisig, pulled pork adobo, Manila chicken, lumpia and sides. Selections may vary.",3000],
+        ["BBQ Brunch Buffet, youth (6-12)","Children 5 and under eat free.",2000],
+      ] },
+      { name: "Brunch sliders", items: [
+        ["Any 2 BBQ sliders","Brisket sisig, pulled pork adobo or Manila chicken, mix and match, on Hawaiian rolls.",1200],
+        ["Any 2 BBQ sliders + 1 side","Sides: lumpia, cornbread, mac & cheese or mango coleslaw.",1500],
+        ["Brunch side","Lumpia, cornbread, mac & cheese or mango coleslaw.",500],
+      ] },
+      { name: "BBQ to go", items: [
+        ["BBQ Buffet To-Go Box","A 4-compartment box with your choice of 2 BBQ meats, 1 salad and 2 sides from the dinner buffet menu.",2800],
+        ["Pulled Pork Plate","Slow-smoked pulled pork with the house rub. Served with BBQ beans & coleslaw.",2500],
+        ["Texas Style Brisket","Slow-smoked for 12 hours with the house rub. Served with BBQ beans & coleslaw.",3000],
+        ["Smoked Dino Beef Ribs","Slow-smoked, lightly seasoned, with their signature BBQ sauce. Served with BBQ beans & coleslaw.",3900],
+        ["The Cats Fusion Combo Plate","St. Louis ribs, pulled pork & beef brisket with their signature BBQ sauce. Served with BBQ beans & coleslaw.",3000],
+        ["Manila Chicken Plate","Classic Filipino street food, marinated sweet & savory, with cucumber salad and garlic rice.",2500],
+      ] },
+      { name: "Grill to go", items: [
+        ["Lemon Pepper Salmon","Salmon fillet with grilled onions, lemon & rosemary, seasoned with lemon pepper. Served with coleslaw & mashed potato.",3000],
+        ["Seared Ribeye with Chimichurri Butter","10oz ribeye finished with cowboy steak butter. Served with coleslaw & mashed potato.",3900],
+      ] },
+      { name: "Shareables to go", items: [
+        ["Corn Bread Muffin","",1400],
+        ["Lumpia","Crispy fried Filipino egg rolls filled with seasoned ground pork and vegetables, with homemade sweet & sour sauce.",1600],
+      ] },
+      { name: "Desserts to go", items: [
+        ["Caramel Apple Blossom","",1000],
+        ["Sizzling Lava Cake","",1000],
+      ] },
+    ],
+    siteNote: "Prices are from their brunch page and their own SkyTab to-go menu; their dinner menu is posted as pictures.",
   },
 
   /*
@@ -19349,6 +22995,119 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Tony\'s Pizza Napoletana — gathered 2026-10-05 from own
+     their spelling: "Tony's Pizza Napoletana" (roster keeps "Tony\'s Pizza Napoletana")
+     they are: Pizzeria: Neapolitan, New York, Detroit, Sicilian and more
+     flag: Hours: the website and the Instagram bio agree (Mon-Thu 12pm-10pm, Fri-Sun 12pm-11pm). The website marks the closing times "*last seating". Their Toast ordering page separately says pickup ordering opens at 11:30AM; that is the online-ordering window, not dining hours.
+     flag: Items: the whole Toast pickup menu (65 items; names converted from all caps), plus Margherita ($30), Marinara ($18.50) and Capodimonte ($27) from the Napoletana section of the dinner menu PDF on their site (TPN-Dinner-Menu-090126.pdf), because the pizzeria's signature Neapolitan pies are not on the Toast menu. Spot checks of Toast prices against the PDF match (garlic bread $12, green beans $13.25, Caesar $17.50, Little Italy $19.50).
+     flag: Not transcribed: the rest of the dine-in PDF (Canotto, California, Roman, more Detroit/Sicilian and other styles, many with different prices) because its multi-column layout cannot be read reliably as text; the cocktail and wine menu; the banquet menu. The dinner menu says items may not always be available.
+     flag: Toast showed "Currently not accepting online orders" when checked (outside hours). They also ship pizzas through Goldbelly and list DoorDash, Caviar, Uber Eats and Postmates for delivery; none of those were used.
+     flag: Logo is the Instagram profile disc inside the story ring (chef holding a pizza next to the TONY'S PIZZA NAPOLETANA box). A faint light-grey disc edge remains on the icon. A crop from the website header was tried but kept fragments of the story ring, so the ring crop was kept.
+     flag: Instagram @tonyspizza415 is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'tonys-pizza-napoletana': {
+    address: "1570 Stockton St, San Francisco, CA 94133",
+    phone: "(415) 835-9888",
+    email: "info@tonyspizzanapoletana.com",
+    hours: "Mon-Thu 12pm-10pm, Fri-Sun 12pm-11pm",
+    sections: [
+      { name: "Antipasti", items: [
+        ["Deep Fried Green Beans","tossed with garlic and olive oil",1325],
+        ["Meatballs","(Contains gluten), pecorino, parsley",1150],
+        ["Garlic Bread","served with marinara, nduja and agave/garlic",1200],
+        ["2 Meatballs","",850],
+      ] },
+      { name: "Insalate", items: [
+        ["Blue Gem","little gem lettuce, medjool dates, point reyes blue cheese crumble dressing, candied walnuts, red onions, sweety drop peppers, smoked applewood bacon",2150],
+        ["Caesar","caesar dressing with romaine, house crouton, parmigiano, white anchovies",1750],
+        ["Caprese Pizzuta","fresh mozzarella, tomato pizzuti, basil, sea salt, pepper, evoo",1850],
+        ["Italian Chop Salad","romaine, mediterranean olives, red onion, italian salami, banana & peppadew peppers, shaved parmigiano, provolone, fresh mozzarella, vinaigrette",2150],
+        ["Little Italy","mixed greens, chopped castelveltrano olives, walnuts, imported italian gorgonzola, olive oil, balsamic reduction, cherry tomatoes, shaved parmigiano",1950],
+      ] },
+      { name: "Napoletana (12\", wood fired)", items: [
+        ["Margherita","San Marzano tomatoes D.O.P., sea salt, mozzarella fior di latte, fresh basil, extra virgin olive oil; dough finished by hand with Caputo blue flour and proofed in napoletana wood boxes. Limit 73 per day (World Pizza Cup winner, Naples).",3000],
+        ["Marinara","Caputo blue blended with house stone-ground integrale multigrain, San Marzano tomatoes D.O.P., sea salt, oregano, garlic, extra virgin olive oil",1850],
+        ["Capodimonte","Caputo blue blended with house stone-ground integrale multigrain, dried dorati tomatoes, basil, sea salt, olive oil",2700],
+      ] },
+      { name: "Classic American & Italian 12\"", items: [
+        ["Artichoke Joe","mozzarella, artichoke, smoked provolone, spinach, garlic, crema di parmigiano, lemon, no sauce",3450],
+        ["Cal Italia","asiago, mozzarella, italian gorgonzola, croatian sweet fig preserve, prosciutto di parma, parmigiano, balsamic reduction, no sauce",3450],
+        ["Classic Cheese","rustic medium or thin crust with pecorino and oregano",2750],
+        ["Classic Pepperoni","rustic medium or thin crust with pecorino and oregano",2900],
+        ["Combo Americano","mozzarella, pepperoni, salami, mushrooms, onions, bell peppers, black olives, italian sausage, linguica, smoked applewood bacon, cherry tomatoes, scallions",3750],
+        ["Diavola","hot red pepper oil, soppressata picante, arugula, mozzarella, parmigiano",3450],
+        ["Jersey's Trenton Tomato Pie","sliced mozzarella cheese, hand crushed tomato sauce, oregano, garlic, parmigiano, olive oil",2800],
+        ["Piccante","mozzarella, garlic, pepperoni, linguica, calabrese peppers, serrano & banana peppers, pork chorizo, green onions, cholula, ricotta",3350],
+        ["Prosciutto e Pomodorini","mozzarella, prosciutto di parma, arugula, cherry tomatoes, parmigiano",3325],
+        ["St. Anthony","housemade link sausage, italian fennel sausage, garlic, roasted peppers, ricotta, hot pepper oil, basil (no sauce)",3325],
+        ["The Carnivore","salami, thick & thin cup n char pepperoni, sliced link Italian sausage, smoked applewood bacon, ham",3750],
+        ["The Little Kahuna","freshly sliced pineapple rings, smoked applewood bacon, mozzarella, ham, honey, pineapple syrup",3325],
+        ["Uncle Vito","thin crust white pizza, mozzarella, caramelized onion, smoked applewood bacon, pesto, ricotta, romano, garlic oil",3300],
+        ["Veggie","mushrooms, red onions, mozzarella, bell pepper, black olives, feta cheese, peppadew peppers",3325],
+        ["Tony's Tandoori Masala","",3200],
+      ] },
+      { name: "New York 20\"", items: [
+        ["20\" Cheese","finished with pecorino and oregano",3525],
+        ["20\" Triple Sausage","double italian fresh sausage, san-del hot & sweet peppers, shaved parmigiano",4250],
+        ["20\" Franco","salami, pepperoni, mushrooms, sausage, garlic",4250],
+        ["20\" Hot Tony","chorizo, garlic, green onions, cholula, ricotta, linguica, serrano peppers, banana peppers, pepperoni",4250],
+        ["20\" Meatball, Ricotta, Garlic","finished with pecorino and oregano",4250],
+        ["20\" Pepperoni","finished with pecorino and oregano",4050],
+        ["20\" The Big Kahuna","freshly sliced pineapple rings, smoked applewood bacon, ham, honey, pineapple syrup",4250],
+        ["20\" Old Smokey","",4250],
+      ] },
+      { name: "Coal Fired", items: [
+        ["Don Giovanni","vodka tomato cream sauce with garlic and white onion, avorio mozzarella, romano, oregano, parsley, garlic oil, sea salt & pepper",3650],
+        ["Gotham","avorio mozzarella, hand crushed tomato, thick & thin cup and char pepperoni, roasted peppers, italian sausage, smoked applewood bacon, agave garlic, basil",3950],
+        ["New Haven Lou","avorio mozzarella, ricotta, spinach, garlic, crushed red pepper",3850],
+        ["New Yorker","avorio mozzarella, hand crushed tomato sauce, cup & char pepperoni, sliced italian fennel sausage, calabrese sausage, ricotta, chopped garlic & oregano",4050],
+        ["Original Tomato Pie w/ Cheese","",3000],
+      ] },
+      { name: "Pan Pizzas", items: [
+        ["Detroit","square pizza cooked in steel pans from detroit and topped with wisconsin brick mozzarella cheese, white cheddar, tomato sauce and garlic butter toasted corners. Topped with pecorino, oregano, garlic, extra virgin olive oil",3525],
+        ["Grandma","square pan",3450],
+        ["Sicilian","all sicilian style pan pizzas are topped with vine ripened tomato sauce and mozzarella cheese",3725],
+      ] },
+      { name: "Gluten-free/Meatless Pizzas", items: [
+        ["Gluten-Free Thin Crust (11-inch round, contains eggs)","tomato sauce, mozzarella THIN cauliflower crust",2050],
+        ["Gluten-Free Thick Crust (7-inch square)","THICK crust detroit or sicilian style",2050],
+        ["Pepper Plant (Meatless)","tomato sauce, selfish cow vegan cheese, Happy Little Plants pepperoni, oregano, garlic oil",2900],
+      ] },
+      { name: "Housemade Pasta", items: [
+        ["Bucatini","pork ragu cream sauce with calabrese peppers, ground beef, served with a calabrese sausage link, pecorino, parsley (very spicy)",2700],
+        ["Carbonara","rigatoni, farm egg yolk, pancetta, onion, parmigiano, pecorino romano, cream, parsley",2700],
+        ["Lasagna","pomodoro sauce with a savory combination of ricotta, italian sausage, mozzarella, parmigiano, parsley",2250],
+        ["Pasta Genovese","rigatoni, pesto cream, goat cheese, sun-dried tomatoes, artichoke hearts, roasted pinenuts",2700],
+        ["Spaghetti & Meatballs","pecorino, parsley",2700],
+        ["Pomodoro","",1950],
+        ["Penne alla Vodka","",2700],
+      ] },
+      { name: "Italian Specialties", items: [
+        ["Chicken Parmigiana","Caputo Gluten-free breaded",1950],
+        ["Chicken Wings","Brined, baked then fried. Served with blue cheese and with a choice of: BBQ, Sweet Limoncello or Frank’s Red Hot sauce",1750],
+      ] },
+      { name: "Sandwiches & Subs", items: [
+        ["Honey Fried Chicken Sandwich","with pickled bell peppers, peppadew peppers, horseradish aioli, mozzarella, honey drizzle",1800],
+        ["Italian Beef Sandwich","in au jus bread and spicy giardiniera",1900],
+        ["Meatball Sub","with marinara, mozzarella, garlic & parmigiano",1750],
+        ["Sausage & Pepper Sub","with roasted bell peppers and onions, house made sausage, mozzarella, garlic, oregano, parmigiano",1750],
+      ] },
+      { name: "Sides", items: [
+        ["Gluten Free Breadsticks","no cheese, rosemary, garlic and a side of honey",550],
+        ["Grilled Chicken","",650],
+        ["Burrata","",650],
+        ["Spinach","sautéed spinach with olive oil and garlic",700],
+        ["Side of Ranch","",150],
+        ["Side Marinara","",75],
+        ["Hot Pepper Oil","",150],
+        ["BBQ Sauce","",100],
+        ["Pesto Sauce","",150],
+      ] },
+    ],
+    siteNote: "Prices are from their own Toast pickup menu, plus the Napoletana pizzas from the dinner menu on their website.",
+  },
+
+  /*
      tonys-style — gathered 2026-09-21 from stopgap
      their spelling: "Tony's Style" (roster keeps "tonys-style")
      they are: Chicken wings
@@ -19369,6 +23128,116 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     needsSite: true,
     tagline: "Chicken wings on San Pablo Ave in Albany, serving the Bay 15+ years",
     contactOnly: "Chicken wings on San Pablo Ave in Albany, serving the Bay 15+ years. Hours and the menu are posted on their Instagram story daily; no site yet.",
+  },
+
+  /*
+     Town Bizness Hibachi — gathered 2026-10-05 from own
+     they are: Hibachi grill (takeout and delivery)
+     flag: Address conflict: the website and the online ordering page both say 595 15th Street, Oakland, CA 94612, but the Instagram bio says 597 15th st, Oakland; 595 was used.
+     flag: Phone conflict: the website and ordering page list (510) 817-4717 (used); the Instagram bio and Contact button list +1 (510) 561-8352, 'Call or text to make an order'. Glenn may want both, or to ask which one to show.
+     flag: The Instagram Contact button gives the email mandomarketing6@gmail.com, which looks like a marketing person's address rather than the restaurant's, so email was left null; Glenn can add it if he confirms it is theirs.
+     flag: Hours are from the website only (11am-11pm, seven days); the Instagram bio says 'NOW OPEN' with no hours, so there is no conflict.
+     flag: The Instagram bio says 'THE ONE AND ONLY ORIGINAL TOWN BIZNESS HIBACHI', which suggests a similarly named business may exist; make sure the page links to this account.
+     flag: Item names were lightly tidied from the ordering page (capitalisation, 'New Yourk' to 'New York', 'Trio $ Filet Mignon' to 'Trio & Filet Mignon', side orders marked '(side)', burritos named '... Burrito'); prices are unchanged.
+     flag: The site's own 'Menu' link (/menu/) returns a 404; the menu exists only on the Innowi ordering page.
+     flag: Instagram @town_bizness_hibachi is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'town-bizness-hibachi': {
+    address: "595 15th Street, Oakland, CA 94612",
+    phone: "(510) 817-4717",
+    hours: "Mon-Sun 11am-11pm",
+    sections: [
+      { name: "4-Way Plates", items: [
+        ["Trio & Salmon","Trio plus a fourth protein.",5899],
+        ["Trio & Scallops","Trio plus a fourth protein.",5899],
+        ["Trio & Lobster","Trio plus a fourth protein.",5899],
+        ["Trio & Filet Mignon","Trio plus a fourth protein.",5899],
+        ["Seafood (Trio)","",5999],
+      ] },
+      { name: "Hibachi Noodles", items: [
+        ["Garlic Noodles","",1500],
+        ["Spicy Noodles","",1500],
+        ["Chicken Noodles","",2000],
+        ["New York Steak Noodles","",2500],
+        ["Shrimp Noodles","",2500],
+        ["Filet Mignon Noodles","",2800],
+        ["Lobster Noodles","",3100],
+        ["Scallops Noodles","",2500],
+        ["Salmon Noodles","",2500],
+      ] },
+      { name: "Hibachi Plates", items: [
+        ["New York Steak Plate","All plates come with white rice, & veggies.",2500],
+        ["Shrimp Plate","All plates come with white rice, & veggies.",2500],
+        ["Salmon Plate","All plates come with rice, & veggies.",2500],
+        ["Chicken Plate","All plates come with white rice, & veggies.",2000],
+        ["Filet Mignon Plate","All plates come with white rice, & veggies.",2800],
+        ["Lobster Plate","All plates come with white rice, & veggies.",3100],
+        ["Scallops Plate","All plates come with White rice, & veggies.",2500],
+      ] },
+      { name: "Combos", items: [
+        ["New York Steak, Shrimp, Lobster (Trio)","",4500],
+        ["Filet Mignon, Shrimp, Chicken (Trio)","All plates come with rice, veggies & drink.",3700],
+        ["Filet Mignon & Shrimp","All plates come with rice, veggies & drink.",3300],
+        ["Filet Mignon & Lobster","All plates come with rice, veggies & drink.",4300],
+        ["Filet Mignon & Chicken","All plates come with rice, veggies & drink.",3000],
+        ["Filet Mignon & Salmon","All plates come with rice, veggies & drink.",4000],
+        ["Filet Mignon & Scallops","All plates come with rice, veggies & drink.",3300],
+        ["New York Steak & Shrimp","All plates come with rice, veggies & drink.",3000],
+        ["New York Steak & Lobster","All plates come with rice, veggies & drink.",4000],
+        ["New York Steak & Chicken","All plates come with rice, veggies & drink.",2700],
+        ["New York Steak & Salmon","All plates come with rice, veggies & drink.",3700],
+        ["New York Steak & Scallops","All plates come with rice, veggies & drink.",3000],
+        ["Shrimp, Chicken, Lobster (Trio)","All plates come with rice, veggies & drink.",4200],
+        ["Shrimp & Chicken","All plates come with rice, veggies & drink.",2700],
+        ["Shrimp & Lobster","All plates come with rice, veggies & drink.",4000],
+        ["Shrimp & Salmon","All plates come with rice, veggies & drink.",3300],
+        ["Shrimp & Scallop","All plates come with rice, veggies & drink.",3200],
+        ["Salmon, Shrimp, Lobster (Trio)","All plates come with rice, veggies & drink.",4800],
+        ["Salmon & Lobster","All plates come with rice, veggies & drink.",4300],
+        ["Salmon & Chicken","All plates come with rice, veggies & drink.",3000],
+        ["Salmon & Scallop","All plates come with rice, veggies & drink.",3300],
+        ["Chicken & Scallops","All plates come with rice, veggies & drink.",3000],
+        ["Steak Shrimp Chicken (Trio)","",3500],
+        ["Chicken & Lobster","All plates come with rice, veggies & drink.",3500],
+        ["Steak Shrimp & Lobster (Trio)","",4800],
+      ] },
+      { name: "Burritos", items: [
+        ["Trio Burrito","Comes with fried rice, veggies & yummy sauce.",2500],
+        ["Steak & Shrimp Burrito","Comes with fried rice, veggies & yummy sauce.",2200],
+        ["Steak & Chicken Burrito","Comes with fried rice, veggies & yummy sauce.",2200],
+        ["Chicken & Shrimp Burrito","Comes with fried rice, veggies & yummy sauce.",2100],
+        ["Steak Burrito","Comes with fried rice, veggies & yummy sauce.",2000],
+        ["Shrimp Burrito","Comes with fried rice, veggies & yummy sauce.",2000],
+        ["Chicken Burrito","Comes with fried rice, veggies & yummy sauce.",1900],
+      ] },
+      { name: "Side Orders", items: [
+        ["Fried Rice","",600],
+        ["New York Steak (side)","",1500],
+        ["Shrimp (side)","",1000],
+        ["Salmon (side)","",1400],
+        ["Lobster (side)","",2000],
+        ["Chicken Fried Rice","",1200],
+        ["Scallops (side)","",1000],
+        ["Filet Mignon (side)","",1800],
+        ["Veggies","",400],
+        ["Steamed Rice","",300],
+        ["Chicken (side)","",600],
+        ["Shrimp Fried Rice","",1600],
+        ["Yummy Sauce","",50],
+        ["Garlic Butter","",50],
+        ["Teriyaki","",50],
+        ["Ginger","",50],
+        ["Lemon Wedge","",25],
+        ["Soda","",200],
+      ] },
+      { name: "Substitute Sides", items: [
+        ["Substitute Fried Rice","",295],
+        ["Substitute Chicken Fried Rice","",395],
+        ["Substitute Shrimp Fried Rice","",495],
+        ["Substitute Chicken & Shrimp Fried Rice","",595],
+      ] },
+    ],
+    siteNote: "Prices are from Town Bizness Hibachi's own online ordering page, linked from their website.",
   },
 
   /*
@@ -19985,6 +23854,96 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
   },
 
   /*
+     Understory — gathered 2026-10-05 from own
+     they are: Worker-owned cafe and weekend brunch, Filipino and global flavours
+     flag: Glenn's label says 2 locations, but Understory's own website, Linktree, Instagram bio and Toast page show only one location, 3340 International Blvd in Fruitvale. The second address (528 8th St, Oakland, CA 94607, phone +1 (510) 817-4356) comes only from Glenn's Apple Maps screenshot (sourced from Foursquare), so it was not added; Glenn or Leon must confirm with the business whether it is a real, current second location.
+     flag: Phone (510) 315-3780 is from their Toast ordering page; Glenn's Apple Maps screenshot shows a different number, (510) 740-8427 (Yelp-sourced), which was not used.
+     flag: Hours come from the website and Instagram bio, which agree (cafe Mon-Fri 10am-4pm, brunch Sat-Sun 11am-3pm); their Toast page showed online ordering closing at 3:30pm, which looks like an ordering cutoff rather than different opening hours.
+     flag: The weekend brunch dishes on their website (Tocilog, Tapsilog, Vegan Longganisa, Ube Waffles, Banana Heart Salad, Chicken Biscuit Sandwich, Collective Meal sampler for 2) have no published prices, so they are not in items; the website notes the menu is seasonal and changes.
+     flag: Left out from the Toast menu: beer, cider and wine (alcohol), merch (zine, tea kit), and the 'Pozole Para Todxs' community offering, which Toast lists at $0+ (pay-what-you-can style).
+     flag: Dietary: the site says the menu has a strong emphasis on vegan and gluten-free offerings, and the website's grilled chicken rice bowl uses halal chicken thigh; the restaurant itself is not described as halal, so halal is false.
+     flag: The website and Linktree describe Understory as worker-owned and majority queer-owned, founded in 2020; good material for the one-liner.
+     flag: Instagram @understoryoakland is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'understory': {
+    address: "3340 International Blvd, Oakland, CA 94601",
+    phone: "(510) 315-3780",
+    email: "hello@understoryoakland.com",
+    hours: "Mon-Fri 10am-4pm, Sat-Sun 11am-3pm",
+    sections: [
+      { name: "Cafe", items: [
+        ["Understory Hash","Potato, sweet potato, butternut squash, & brussel sprouts topped with fresh herbs and pickle red onion. Choice of lechon (pork belly), vegan pork, oyster mushrooms, or vegan longganisa.",1800,null,"from"],
+        ["Fried Oyster Mushroom","",1400],
+        ["Pork Lumpia","",1200],
+        ["Pamapa Chicken Sandwich","Pamapa seasoning (Coconut ash, lemongrass, galangal), atchara (green papaya & carrot pickles), arugula, aioli on a toasted brioche bun. Choice of crispy fried chicken thigh or vegan fried chicken.",1700],
+        ["Beef Tapa Rice Bowl","Thinly sliced sweet-cured beef, java rice, atchara, spiced vinegar (GF)",1700],
+        ["Pork Tocino Rice Bowl","Sweet-cured pork, java rice, atchara (green papaya & carrot pickle), spiced vinegar (GF)",1700],
+        ["Chicken Rice Bowl","Java rice (garlic annatto), cabbage slaw, cucumber, tomato, spiced aioli (vegan). Your choice of Fried or Grilled version of chicken thigh or vegan chicken.",1700],
+        ["Chile Relleno","Battered whole Poblano chile stuffed with carrots, eggplant, oyster mushrooms, java rice, & mozzarella cheese. Choice of rice bowl or flour tortilla burrito (Burrito only comes with chips and salsa).",1700],
+        ["Papaya Burger","Choice of Beef or Housemade Fava Bean Patty, choice of cheddar cheese or vegan cheddar, caramelized papaya, arugula, aioli on a toasted brioche bun. (+$4 for fries or $5 for salad)",1600,null,"from"],
+        ["Watermelon Salad (V/GF)","Fresh watermelon cubes, coconut feta, arugula, gem lettuce with herb vinaigrette",1500],
+        ["Vegan Caesar Salad","",1600],
+        ["Tofu Satay Sandwich (Vegan)","Curry-seasoned tofu, pepitas satay sauce, ajad (cucumber & shallot pickles), cabbage slaw, aioli",1700],
+      ] },
+      { name: "Sides & Extras", items: [
+        ["Fries","",400],
+        ["House Salad","",500],
+        ["Avocado","",300],
+        ["Fried Egg","One sunny-side up fried egg. Please specify cooking preference otherwise.",200],
+        ["Java Rice","Garlic Annatto Rice",400],
+        ["Grilled Chicken (GF)","",600],
+        ["Fried Chicken (GF)","",600],
+        ["Vegan Grilled Chicken (GF)","",600],
+        ["Vegan Fried Chicken (GF)","",600],
+        ["Crispy Lechon","",500],
+        ["Vegan Lechon","",500],
+        ["Ube Butter","Housemade vegan ube butter (2oz) Vegan & Gluten Free.",100],
+        ["Banana BBQ","Housemade Banana BBQ sauce (Vegan & Gluten Free)",100],
+      ] },
+      { name: "Drinks", items: [
+        ["Ube Horchata","creamy rice and oat milk blended with ube, cinnamon, and vanilla for a dreamy, lightly sweet sip (vegan & gluten free)",500],
+        ["Agua Fresca","House made flavors: Jamaica (Hibiscus) or Seasonal Fruit (weekly rotation)",500],
+        ["Hot Chocolate","House blend of roasted Filipino chocolate and dark chocolate, cane sugar, choice of milk (whole, coconut-oat milk, or oat milk). Smoky, rich, not too sweet.",500],
+        ["Heart Healing Tea","House-favorite herbal tea blend: Tulsi (holy basil), hibiscus, lemon balm, lemon verbena, passion flower, Hawthorne berry, chamomile, and sweetened with agave. Hot or Iced.",500],
+        ["Tepache","Tangy, naturally fermented drink made with ripe mango, pineapple rind, brown sugar, and cinnamon. Refreshingly tart and bubbly. (vegan & gluten free)",500],
+        ["Agua de Coco","10.5 fl oz Canned Coconut Water",500],
+        ["Iced Green Tea (Unsweetened)","",500],
+      ] },
+      { name: "Coffee & Tea", items: [
+        ["Drip Coffee","Selected Coffee from Equal Exchange or Mother Tongue Coffee (Roasted in Oakland).",400],
+        ["Decaf","Selected Decaffienated Coffee from Equal Exchange or Mother Tongue Coffee (Roasted in Oakland).",400],
+        ["Loose Leaf Tea","White, Red, Oolong, Green, or Herbal teas sourced from 101 Tea in Fremont and Blue Willow Tea in Berkeley.",400,null,"from"],
+        ["Daly City Fog","Earl Grey (Blue Willow Tea), pandan syrup, oat milk foam.",600],
+        ["Tres Leches Tea Latte","Tres Leches milk (oat milk, coconut milk, brown sugar, vanilla, cinnamon, & rose water) with your choice of tea: Matcha or Hojicha (roasted green tea). Hot or Iced.",700],
+        ["Pandan Cold Brew","Curated Cold Brew Blend (Ethiopia+Mexico), pandan syrup, coconut-oatmilk.",600],
+        ["Cafe de Olla","Coffee brewed with brown sugar, cinnamon, star anise, cardamom, cloves, orange peel. Cold version comes with orange coconut oat milk foam.",500],
+        ["Mocha","Filipino and Dark Chocolate blend, cane sugar, coffee, and your choice of milk.",600],
+        ["Cala-Cello Coffee Tonic","A tropical play on limoncello; Calamansi(Filipino citrus), pandan, coconut water, cane sugar with Cold Brew Blend (Ethiopia+Mexico), housemade tonic syrup and sparkling water.",700],
+        ["Turon Latte","A dessert as a drink! Cold Brew Blend (Ethiopia+Mexico), pandan syrup, and Turon foam (banana, jackfruit, coconut+oat milk) with a mini fried Turon garnish. (Gluten Free version available)",800],
+        ["Strawberry Orange Blossom","Spring/Summer Seasonal Drink. Farmer's Market organic strawberries, orange blossom, choice of milk, matcha or hojicha (roasted green tea).",700],
+        ["Drip REFILL","",200],
+      ] },
+      { name: "House Sodas", items: [
+        ["Strawberry Shiso","",400],
+        ["Ginger Lemongrass","",400],
+        ["Calamansi Green Tea","",400],
+        ["Salt Soda","",400],
+      ] },
+      { name: "Desserts & Pastries", items: [
+        ["Pandesal (Vegan)","",600],
+        ["Biscuit & jam (Vegetarian)","",600],
+        ["Poğaça (Vegetarian)","Turkish Breakfast Pastry. Housemade Feta & Yogurt, dill, parsley, & sesame seeds. Vegetarian. *Contains dairy, gluten, egg, butter, & sesame",600],
+        ["Chocnut Tart (Vegan)","",800],
+        ["Ube Flan (V+GF)","",800],
+        ["Maja Blanca (V+GF)","Creamy Coconut Pudding with Mango Topping",800],
+        ["Strawberry Rhubarb Sorbet (V+GF)","",800],
+        ["Vegan Rice Cream (GF)","Rice based vegan ice cream with strawberry caramel and balsamic topping",800],
+      ] },
+    ],
+    siteNote: "Prices are from Understory's own Toast online ordering menu; the weekend brunch menu on their website has no prices.",
+  },
+
+  /*
      United Curb Painting — gathered 2026-09-21 from own-domain
      they are: Curb painting
      logo: https://assets.zyrosite.com/YX4ag7qEwETX3w2p/unitedc-mv02KZxDXLuvJKOb.jpg (1472x832) — not cut into a tile yet
@@ -20138,6 +24097,137 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
     needsSite: true,
     tagline: "Vending machines placed free in Bay Area businesses and offices",
     contactOnly: "Vending machines placed free in Bay Area businesses and offices. Placement is free to the host business, their own words; no prices are published.",
+  },
+
+  /*
+     Wadaya — gathered 2026-10-05 from own
+     they are: Japanese mazemen and ramen
+     flag: Hours disagree between first-party sources: their site's Fremont listing says Mon-Fri 11:30am-2pm and 5pm-9pm, Sat 11am-9:30pm, Sun 11am-9pm, while their Instagram bio says Friday dinner runs to 9:30pm (and its Sunday line was cut off), so hours are null.
+     flag: Wadaya is a chain: the site also lists West LA, Costa Mesa and Fullerton, all outside the Bay Area; Fremont is their only Northern California store.
+     flag: The site's food menu has no prices; all prices are from the Fremont SpotOn ordering page, which is that store's own account.
+     flag: Their ordering page notes that all mazemen and ramen contain shrimp and/or sesame, and that 'fish umami' is mackerel and sardine.
+     flag: Email Info@wadaya.co is the chain-wide address on their site, not a Fremont-specific one.
+     flag: Their Instagram display name ends in '📍SF' while the bio and address say Fremont.
+     flag: A vegan section is on their own menu (Vegan Tokyo Mazemen, Vegan Ramen), so 'Vegan options' is listed under dietary.
+     flag: Instagram @wadaya_bayarea is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'wadaya-fremont': {
+    address: "34460 Fremont Blvd #F, Fremont, CA 94555",
+    phone: "(510) 598-4299",
+    email: "Info@wadaya.co",
+    cuisine: "Japanese mazemen and ramen",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Chicken Karaage","WADAYA Style Fried Chicken. Housemade red sauce. Spicy mayo.",1000],
+        ["Pumpkin Croquette","Naturally sweet Japanese pumpkin coated in crispy panko breadcrumbs",800],
+        ["Edamame","Boiled soy bean, Lightly Salted.",600],
+        ["Ikageso","Fried squid legs, Japanese Mayo, Lemon wedge.",800],
+        ["Kimuchi","Kimchi, Fermented Cabbage.",600],
+        ["Shishito","Flash-fried Japanese Peppers with Salt, Lemon Wedge.",800],
+        ["Takowasa","Raw Octopus w/ Wasabi",600],
+        ["French Fries","Lightly Seasoned w/ Salt and seaweed. Spicy Mayo",650],
+        ["Takoyaki Osaka","Soft shell. savory pancake battered filled with octopus.",850],
+        ["Takoyaki LA","Crispy shell. savory pancake battered filled with octopus.",850],
+        ["Agedashi Takoyaki","Crispy shell takoyaki served with broth. Topped with scallions and bonito flakes.",850],
+        ["Seaweed Salad","",500],
+        ["Vegan Nuggets 5pc","Impossible chicken nuggets made from plants. Ketchup.",800],
+        ["Kurobuta Sausage","Pork Sausage. Ketchup.",650],
+        ["Moyashi","Bean Sprouts w/ Minced Pork.",600],
+      ] },
+      { name: "Desserts", items: [
+        ["Hokkaido Milk Mille Crepe Cake","",1200],
+        ["YUZU Cheesecake","",600],
+        ["Durian Crepe Cake","A limited seasonal creation. The Musang King Durian Crepe Cake layers twenty delicate crepes with a smooth cream infused with the prized Musang King durian. Bold yet refined, its rich aroma and velvety texture capture the essence of Asia’s “King of Fruits, ” offering a distinctive indulgence unlike any other dessert experience.",1400],
+        ["Matcha Mille Crepe Cake","",1200],
+        ["Blk Sesame Cheesecake","Black Sesame Cheesecake, vanilla ice cream",600],
+      ] },
+      { name: "Mazemen", items: [
+        ["Deluxe Mazemen","Sliced pork chashu, spiced minced pork, poached egg, scallions, chives, minced garlic, fish umami, seaweed flakes. Medium Spicy.",2150],
+        ["Tokyo Mazemen","Spicy minced pork, poached egg, scallions, chives, minced garlic, fish umami, seaweed flakes, seaweed, soft-boiled egg. Medium Spicy, Mogu's Favorites.",1750],
+        ["Saitama Mazemen","Peppered ground chicken, poached egg, scallions, chives, minced garlic, fish umami, seaweed flakes, seaweed, soft-boiled egg. -NO SHRIMP OIL, Medium Spicy",1750],
+        ["Kyoto Mazemen","Soy marinated diced chashu, Kale, Poached egg, scallions, minced garlic, fish umami, seaweed flakes.",1750],
+        ["Mentaiko Mazemen","Mentai Caviar, Masago, Poached egg, Scallions, Jumbo Crispy Shrimp Tempura, Torched Cheese, Mixed Greens, Minced garlic, Kamaboko Fish Cake, Seaweed flakes.",2400],
+        ["Cheese Mazemen","Monterey Jack Cheese, Spicy minced pork, poached egg, scallions, chives, minced garlic, fish umami, seaweed flakes. Medium Spicy.",1850],
+        ["Spicy Mentaiko Mazemen","Mentai Caviar (Spicy), Masago, Poached egg, Scallions, Jumbo Crispy Shrimp Tempura, Torched Cheese, Mixed Greens, Minced garlic, Kamaboko Fish Cake, Seaweed flakes.",2400],
+        ["Curry Mazemen","Spiced minced pork, Japanese curry powder, kale poached egg, scallions, minced garlic, fish umami, seaweed flakes. Medium Spicy.",1850],
+        ["Veggie Miso","Blended spicy miso, tofu, kale, corn, sliced red onion, yellow and red bell peppers, sliced lotus roots, fish umami. Medium Spicy.",1850],
+        ["Plain Mazemen","Extra mazemen noodles. NO sauce",400],
+        ["Ex Mazemen","Extra mazemen noodles with sauce",400],
+      ] },
+      { name: "Ramen", items: [
+        ["California Tonkotsu","Rich pork and chicken broth. Sliced pork chasu. Scallions. Soft boiled egg. Woodear mushrooms. Seaweed. Shrimp oil.",1800],
+        ["Spicy Miso Ramen","Rich pork and chicken broth and spicy miso. Sliced pork chasu. Scallions. Soft boiled egg. Corn. Beansprouts. Shrimp oil.",1850],
+        ["Miso Ramen","Rich pork and chicken broth and miso. Sliced pork chasu. Scallions. Soft boiled egg. Corn. Beansprouts. Shrimp oil.",1850],
+        ["Plain Miso Ramen","Noodles and soup only. Shrimp oil",1000],
+        ["Side Soup Miso","Soup only. Shrimp oil.",550],
+        ["Side Soup Tonkotsu","Soup only. Shrimp oil.",500],
+        ["Extra Ramen","Extra Ramen noodle. Shrimp oil",350],
+        ["Side Soup Spicy Miso","Soup only. Shrimp oil.",550],
+        ["Plain Tonkotsu Ramen","Noodles and soup only. Shrimp oil",950],
+        ["Plain Spicy Miso Ramen","Noodles and soup only. Shrimp oil.",1000],
+      ] },
+      { name: "Rice Bowl", items: [
+        ["Karaage Bowl","Wadaya style fried chicken, Rice, Scallions, Sriracha Mayo. Medium Spicy",800],
+        ["Large Karaage Bowl","Wadaya style fried chicken, Rice, Scallions, Sriracha Mayo. Medium Spicy",1300],
+        ["Chashu Bowl","Sauté Diced Pork chashu, Rice, Scallions, Japanese Mayo, Seaweed Flakes.",800],
+        ["Large Chashu Bowl","Sauté Diced Pork chashu, Rice, Scallions, Japanese Mayo, Seaweed Flakes.",1300],
+        ["Umami Bowl","Spicy minced pork, rice, scallions, cilantro. Medium Spicy",650],
+        ["Large Umami Bowl","Spicy minced pork, rice, scallions, cilantro. Medium Spicy",950],
+        ["White Rice","Plain white rice.",300],
+      ] },
+      { name: "Vegan", items: [
+        ["Vegan Ramen","Soy based miso broth, Italian squash, broccoli, tomato, sliced lotus roots, spinach",1800],
+        ["Vegan Tokyo Mazemen","Plant-based ground meat, Button Mushrooms, Brussel Sprouts, Corn, Avocado, Kale, Red Radish, Minced Garlic, Plant Butter, Black Pepper With Side of Spicy Chili Sauce.",1950],
+        ["Plain Vegan Ramen","Noodles and soup only.",950],
+        ["Side Soup Vegan","Soup only",550],
+      ] },
+      { name: "Toppings", items: [
+        ["Soft Boiled Egg","",250],
+        ["Bamboo Shoot","",250],
+        ["Poached Egg","",250],
+        ["Cilantro","",100],
+        ["Chives","",100],
+        ["Corn","",100],
+        ["Add Moyashi","add beansprout",250],
+        ["Scallion","",100],
+        ["Avocado","",200],
+        ["Broccoli","",150],
+        ["Brussel Sprouts","",200],
+        ["Button Mushroom","",100],
+        ["Kale","",100],
+        ["Lotus Roots","",100],
+        ["Tofu","",150],
+        ["Tomato","",100],
+        ["Black Garlic Oil","",150],
+        ["Wood Ear Mushrooms","",100],
+        ["Seaweed 3pc","",150],
+        ["Extra Garlic","",50],
+        ["Red Radish","",50],
+        ["Curry Powder","",150],
+        ["Add Cheese","",200],
+        ["Shrimp Tempura (Jumbo Tiger)","",500],
+        ["Hello Kitty Kamaboko Fish Cake","",375],
+        ["Extra Meat (Chashu Bowl)","",350],
+        ["Extra Karaage","",500],
+        ["Spicy Minced Pork","",400],
+        ["Peppered Ground Chicken","",350],
+        ["Sliced Pork Chashu (3 PC )","",500],
+        ["Dice Chashu","",450],
+        ["Extra Impossible Meat","",350],
+      ] },
+      { name: "Soft Drinks", items: [
+        ["Calpico","Japanese soft drink, 12oz Can.",400],
+        ["Asahi Super Dry 0.0% ALC","Non-Alcoholic beer with crisp, clean, refreshing finish",700],
+        ["Ramune - Strawberry","Strawberry flavor. Japanese soda",400],
+        ["Ramune - Lychee","Lychee flavor. Japanese soda",400],
+        ["Diet Coke","12oz Can",300],
+        ["Ito-en Green Tea","16oz Bottle",400],
+        ["Mexican Coke (500ml)","Made with Cane Sugar",600],
+        ["S. Pellegrino","Italian Sparkling Water",400],
+        ["Sprite","12oz Can",300],
+      ] },
+    ],
+    siteNote: "Prices are from Wadaya Fremont’s own SpotOn online ordering page.",
   },
 
   /*
@@ -21248,6 +25338,154 @@ export const ROSTER_RESEARCH: Record<string, Partial<LocalSeed>> = {
       ] },
     ],
     quoteOnly: "'A boutique yoga fitness studio changing the way people think and experience yoga,' with six core classes from Y6 101 to Sculpt and Flow. Only the intro offer is priced; for memberships the page says 'please contact our studio directly'.",
+  },
+
+  /*
+     Yuanbao Jiaozi — gathered 2026-10-05 from own
+     they are: Handmade Chinese dumplings and noodles
+     flag: Glenn's link (dinfo.me/yuanbaojiaozitogo.com) is where their own domain yuanbaojiaozitogo.com (the link in their Instagram bio) redirects: a Dinatouch template page that lists only the Burlingame address and links to a Dinatouch online-ordering page for the Burlingame shop.
+     flag: Instagram bio lists two shops: 1841 El Camino Real, Burlingame, CA 94010 and 2110 Irving St, San Francisco, CA 94122, so there is one record per city as the note asked.
+     flag: Logo: the profile picture (gold dumpling mark on white) is cropped as the whole disc, so the profile picture's thin light-grey edge circle is still faintly visible; the tool's disc mode kept locking onto the inner dumpling outline and cut the wordmark, so an as-is crop was used.
+     flag: Hours left null: the website says "Business Hour: 11AM-3PM 5PM-9PM" with no days, while the online ordering page shows "11:00 am - 03:00 pm 05:00 pm - 08:50 pm" and "3-5pm is our break time". The closing times differ (9pm vs 8:50pm, probably last online order) and neither source names the days, so Glenn should confirm; a likely line is "Daily 11am-3pm & 5pm-9pm".
+     flag: Phone (650) 231-9900 is printed in the header of their own ordering page for the Burlingame shop; the website itself shows no phone.
+     flag: Items are every visible item on the Burlingame ordering page except the Beer section (bottled Heineken, Tsingtao, Sapporo, $6 each) and the gift card line. Items the page hides (several hot teas, Modelo, pale ale, corkage) are not included.
+     flag: Each boiled-dumpling filling is offered on the ordering page as "(Dumpling) (水餃)" or "(Soup) (湯餃)" at the same $13.99, so each filling is listed once with both styles in the description. The page does not say how many pieces come in these plates.
+     flag: Descriptions are the Chinese names the ordering page prints under each dish. Fixed obvious typos in item names: "Eqg" to Egg, "Chrvsanthemum" to Chrysanthemum, "Chill Oil" to Chili Oil. The (V) marks are theirs.
+     flag: Sea Urchin Pork Dumpling (2 pcs, $7.99) is marked "Limited 1 order per person" on the ordering page.
+     flag: Instagram @yuanbaojiaozi is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'yuanbao-jiaozi-burlingame': {
+    address: "1841 El Camino Real, Burlingame, CA 94010",
+    phone: "(650) 231-9900",
+    sections: [
+      { name: "Appetizers", items: [
+        ["Marinated Beef","醬牛肉",1199],
+        ["Hot Spicy Beef Tendon","麻辣牛筋",1199],
+        ["Shredded Pig Ear Chili Oil","紅油耳絲",1099],
+        ["Sliced Beef Ox Tripe Chili Oil","夫妻肺片",1199],
+        ["Shredded Potato Salad","土豆絲",799],
+        ["Celery Peanut Salad","西芹花生",799],
+        ["Cucumber Salad","涼拌黃瓜",799],
+        ["Tofu Skin Stick Salad","涼拌腐竹",799],
+        ["Sliced Lotus Roots Salad","燴拌藕片",799],
+        ["Wood Ear Fungus Salad","涼拌木耳",999],
+        ["Special Mix Salad","拌花菜",1199],
+      ] },
+      { name: "Noodles", items: [
+        ["Beef Noodle Soup","牛肉麵",1599],
+        ["Pickled Cabbage Beef Noodle","酸菜牛肉麵",1599],
+        ["Braised Spareribs Noodle Soup","排骨麵",1599],
+        ["Noodles Bean Paste","炸醬麵",1299],
+        ["Dandan Noodles","擔擔面",1299],
+        ["Dan Dan W/ Bean Paste Noodle","鴛鴦拌面",1499],
+      ] },
+      { name: "Dumplings", items: [
+        ["Sea Urchin Pork Dumpling (2 pcs)","海膽豬肉 (2pcs)",799],
+        ["Beef Lamb Fish Dumpling","牛羊魚. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Lamb Carrot Dumpling","羊肉胡蘿蔔. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Shiitake Mushroom Fish Dumpling","香菇魚肉. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Chicken Corn Dumpling","玉米雞肉. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Mushroom Chicken","香菇雞肉. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Napa Cabbage Pork Dumpling","白菜鮮肉. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Shrimp Egg Zucchini Dumpling","蝦仁角瓜. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Shrimp Chives Egg Dumpling","蝦三鮮. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Pork Shrimp Chive Egg Dumpling","肉三鮮. Boiled (水餃) or in soup (湯餃)",1399],
+        ["Chive Egg Dumpling (V)","韭菜雞蛋(V). Boiled (水餃) or in soup (湯餃)",1399],
+        ["Zucchini Egg Dumpling (V)","角瓜雞蛋(V). Boiled (水餃) or in soup (湯餃)",1399],
+        ["Pickle Cabbage And Pork Dumpling","酸菜豬肉 (水餃)",1399],
+      ] },
+      { name: "Soup Dumpling", items: [
+        ["Pork Xiao Long Bao (6 pcs)","(豬)小籠包(6pcs)",1299],
+        ["Beef Xiao Long Bao (6 pcs)","(牛)小籠包(6Pcs)",1399],
+        ["Crab Roe Xiao Long Bao (6 pcs)","(蟹)小籠包(6Pcs)",1699],
+      ] },
+      { name: "Dumplings Chili Oil", items: [
+        ["Napa Cabbage Pork Dumplings In Chili Oil (8)","白菜豬肉紅油水餃(8)",1299],
+        ["Pork, Shrimp, Chive Dumplings In Chili Oil (8)","肉三鮮 紅油水餃(8)",1299],
+        ["Corn & Chicken Dumplings In Chili Oil (8)","玉米雞肉紅油水餃(8)",1299],
+      ] },
+      { name: "Potstickers", items: [
+        ["Napa Cabbage Pork Potstickers (12)","白菜豬肉煎餃(12)",1599],
+        ["Corn Chicken Potstickers (12)","玉米雞肉煎餃(12)",1599],
+        ["Pork Shrimp Chive Egg Potstickers (12)","肉三鮮煎餃(12)",1599],
+      ] },
+      { name: "Dessert", items: [
+        ["Cheesecake","芝士蛋糕",850],
+      ] },
+      { name: "Tea Per Pot", items: [
+        ["Iron Goddess Tea (Hot)","鐵觀音 (熱)",499],
+        ["Chrysanthemum Puer Tea (Hot)","菊普茶 (熱)",499],
+        ["Da Hong Pao Tea (Hot)","大紅袍 (熱)",499],
+      ] },
+      { name: "Beverages", items: [
+        ["Iced Jasmine Green Tea","茉莉綠茶",500],
+        ["Iced Jasmine Green Milk Tea","茉莉奶茶",550],
+        ["Iced Assam Black Tea","阿薩姆紅茶",500],
+        ["Iced Assam Black Milk Tea","阿薩姆奶茶",550],
+        ["Iced Lychee Green Tea","荔枝綠茶",550],
+        ["Iced Lychee Black Tea","荔枝紅茶",550],
+        ["Iced Mango Green Tea","芒果綠茶",550],
+        ["Iced Mango Black Tea","芒果紅茶",550],
+        ["Iced Peach Green Tea","桃子綠茶",550],
+        ["Iced Peach Black Tea","桃子紅茶",550],
+        ["Iced Passion Fruit Green Tea","百香果綠茶",550],
+        ["Iced Passion Fruit Black Tea","百香果紅茶",550],
+        ["Iced Roasted Oolong Milk Tea","炭烤烏龍奶茶",550],
+        ["Iced Roasted Oolong Tea","炭烤烏龍茶",500],
+        ["Soy Milk","豆奶",400],
+        ["Sprite","",300],
+        ["Coke","",300],
+        ["Diet Coke","",300],
+        ["王老吉","",300],
+        ["Coke Zero","",300],
+        ["Chi Forest (Grape Delight) (Bottle)","元气森林葡萄(瓶)",400],
+        ["Chi Forest (Lychee) (Bottle)","元气森林荔枝(瓶)",400],
+        ["Chi Forest (White Peach) (Bottle)","元气森林白桃(瓶)",400],
+        ["Mexican Sprite (Glass Bottle)","雪碧(玻璃瓶)",400],
+        ["Mexican Fanta (Glass Bottle)","芬達(玻璃瓶)",400],
+        ["Mexican Cocacola (Glass Bottle)","墨西哥可樂 (玻璃瓶)",400],
+      ] },
+      { name: "Frozen Dumplings", items: [
+        ["Beef Lamb Fish Dumpling (15 pcs)","牛羊魚凍餃(15pcs)",1299],
+        ["Lamb Carrot Dumpling (15 pcs)","羊肉胡蘿蔔凍餃(15pcs)",1299],
+        ["Shiitake Mushroom Fish Dumpling (15 pcs)","香菇魚肉凍餃(15pcs)",1299],
+        ["Chicken Corn Dumpling (15 pcs)","玉米雞肉凍餃(15pcs)",1299],
+        ["Mushroom Chicken (15 pcs)","香菇雞肉凍餃(15pcs)",1299],
+        ["Napa Cabbage Pork Dumpling (15 pcs)","白菜鮮肉凍餃(15pcs)",1299],
+        ["Shrimp Chives Egg Dumpling (15 pcs)","蝦三鮮凍餃(15pcs)",1299],
+        ["Pork Shrimp Chive Egg Dumpling (15 pcs)","肉三鮮凍餃(15pcs)",1299],
+        ["Shrimp Egg Zucchini Dumpling (15 pcs)","蝦仁角瓜凍餃(15pcs)",1299],
+        ["Frozen Xiao Long Bao (8 pcs)","凍小籠包 (8pcs)",1399],
+      ] },
+      { name: "Side", items: [
+        ["Extra Noodle","加麵",450],
+        ["Extra Braised Sparerib Soup","加排骨湯",300],
+        ["Extra Beef Soup","加牛肉湯",300],
+        ["Extra Chicken Soup","加雞湯",300],
+        ["Extra Beef","加牛肉",550],
+        ["Extra Pickle Cabbage","加酸菜",300],
+        ["Extra Bok Choy","加小白菜",300],
+        ["Extra Tea Egg","加茶葉蛋",250],
+        ["Extra Braised Spareribs","加排骨",500],
+        ["Extra Minced Pork","加肉末",450],
+      ] },
+    ],
+    siteNote: "Prices are from the Burlingame shop's own online ordering page.",
+  },
+
+  /*
+     Yuanbao Jiaozi — gathered 2026-10-05 from own
+     they are: Handmade Chinese dumplings and noodles
+     flag: Glenn's link (dinfo.me/yuanbaojiaozitogo.com) is where their own domain yuanbaojiaozitogo.com (the link in their Instagram bio) redirects: a Dinatouch template page that lists only the Burlingame address and links to a Dinatouch online-ordering page for the Burlingame shop.
+     flag: Instagram bio lists two shops: 1841 El Camino Real, Burlingame, CA 94010 and 2110 Irving St, San Francisco, CA 94122, so there is one record per city as the note asked.
+     flag: Logo: the profile picture (gold dumpling mark on white) is cropped as the whole disc, so the profile picture's thin light-grey edge circle is still faintly visible; the tool's disc mode kept locking onto the inner dumpling outline and cut the wordmark, so an as-is crop was used.
+     flag: The San Francisco shop appears only in Glenn's screenshot of the Instagram bio ("2110 Irving st, San Francisco, Ca 94122"). Their website and ordering page mention only Burlingame, and four guesses at a separate SF ordering page id returned nothing, so there is no first-party phone, hours or menu for this location.
+     flag: Items left empty on purpose: the only published menu is the Burlingame ordering page, and the rules say not to assume the Irving Street prices match. If Glenn confirms the menu is the same, Leon can copy the 89 Burlingame items.
+     flag: Instagram @yuanbaojiaozi is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page.
+  */
+  'yuanbao-jiaozi-san-francisco': {
+    address: "2110 Irving St, San Francisco, CA 94122",
+    contactOnly: "They don't publish prices for the Irving Street shop yet; their online menu is for the Burlingame shop.",
   },
 
   /*

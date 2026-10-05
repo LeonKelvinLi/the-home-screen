@@ -12,6 +12,9 @@ import { noteOrigin, track } from '../lib/track'
 import { useInPreview } from '../ios/preview'
 import { ALL_BEASTY_PAGES } from '../data/slots'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
+import { CategoryIcon, thumbFor } from '../ios/CategoryIcon'
+import { SHARE_SEARCH, shareOrCopy, shareUrl } from '../lib/share'
+import { ShareMark } from './dialer/glyphs'
 
 /*
   THE CATEGORIES LIST. Glenn, 2026-09-30: "Once all these extra BEASTY pages
@@ -40,7 +43,7 @@ const CATEGORY_ROWS: CategoryRow[] = ALL_BEASTY_PAGES.map((p) => ({
   kind: p.kind,
   heading: p.heading,
   about: p.about ?? SHEET_ABOUT[p.kind] ?? '',
-  thumb: p.wall ? p.wall.replace(/\.webp$/, '-thumb.webp') : p.yellow ? '/wallpapers/cat-yellow-thumb.webp' : '/wallpapers/cat-beasty-thumb.webp',
+  thumb: thumbFor(p),
   count: Object.keys(ALL_PLACEMENTS).filter((seat) => seat.startsWith(`beasty-${p.kind}-`)).length,
 })).sort((a, b) => a.heading.localeCompare(b.heading))
 const CITIES_AZ = [...CITY_PAGES].sort((a, b) => a.localeCompare(b))
@@ -89,6 +92,13 @@ export function SearchApp({ api }: { api: ShellApi }) {
   }, [])
 
   const [q, setQ] = useState('')
+  /* What the Share button did, where a phone has no share sheet. */
+  const [said, setSaid] = useState<string | null>(null)
+  const share = async () => {
+    const how = await shareOrCopy(SHARE_SEARCH)
+    if (how === 'shared') return
+    setSaid(how === 'copied' ? 'Link copied' : `Copy this link: ${shareUrl(SHARE_SEARCH).replace(/^https?:\/\//, '')}`)
+  }
   const preview = useInPreview()
 
   /* Which drop-down is open under the field: Categories, Cities, or neither. */
@@ -181,7 +191,9 @@ export function SearchApp({ api }: { api: ShellApi }) {
   }
   const categoryRow = (c: CategoryRow, onPick: () => void) => (
     <button className="search-brand is-cat" key={c.kind} onClick={onPick}>
-      <span className="search-cat-thumb" aria-hidden="true" style={c.thumb ? { backgroundImage: `url(${c.thumb})` } : undefined} />
+      <span className="search-cat-thumb" aria-hidden="true">
+        <CategoryIcon kind={c.kind} thumb={c.thumb} />
+      </span>
       <span>
         <strong>BEASTY • {c.heading}</strong>
         <em>
@@ -211,7 +223,22 @@ export function SearchApp({ api }: { api: ShellApi }) {
   const suggestions = ['tacos', 'wings', 'Oakland', 'vegan', 'boba', 'Berkeley', 'coffee']
 
   return (
-    <AppChrome title="Search" onBack={api.closeApp} tint="#1DA345">
+    <AppChrome
+      title="Search"
+      onBack={api.closeApp}
+      tint="#1DA345"
+      right={
+        <button type="button" className="chrome-pill is-share" onClick={share}>
+          <ShareMark size={15} />
+          Share
+        </button>
+      }
+    >
+      {said && (
+        <p className="search-said" role="status">
+          {said}
+        </p>
+      )}
       <div className="search-body">
         <div className="search-field">
           <svg width="16" height="16" viewBox="0 0 100 100" aria-hidden="true" fill="currentColor">

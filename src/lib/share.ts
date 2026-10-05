@@ -45,6 +45,13 @@ export const SHARE_CONTACTS: SharePage = {
   text: 'Reach the owners of beastypages.com directly, and see who is on BEASTY.',
 }
 
+/* Search, with its Categories and Cities lists. Glenn, 2026-09-30, over a
+   screenshot of it: "can we add a share button on this page for the hell of it?" */
+export const SHARE_SEARCH: SharePage = {
+  slug: 'search',
+  title: 'Search BEASTY pages',
+  text: 'Every category and every city on BEASTY pages, and the exclusive offers in them.',
+}
 export const shareUrl = (page: SharePage): string => `${window.location.origin}/${page.slug}`
 
 /**
