@@ -799,7 +799,8 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }
-if (bundles.includes('"beasty-online-10":')) fails.push('Vending Enterprise still holds BEASTY • Online 11')
+/* The seat itself is Sandiwa Collection's since 2026-10-05; only Vending Enterprise in it is wrong. */
+if (bundles.includes('"beasty-online-10":"b_vendingenterprise"')) fails.push('Vending Enterprise still holds BEASTY • Online 11')
 /* The Instagram button is a paid feature Glenn approves page by page; E-40's
    went up without his say-so on 2026-09-21 and came off the same night. */
 if (bundles.includes('instagram:"e40"')) fails.push("E-40's page still carries an Instagram button Glenn has not approved")
