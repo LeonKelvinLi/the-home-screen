@@ -169,7 +169,8 @@ for (const [id, want, expect] of [
   ['b_pizzaponte', 'Pizza Ponte', { free: true, call: '(510) 658-7788' }],
   ['b_claireandersonhomes', 'Claire Anderson', { call: '(510) 435-7822' }],
   /* 2026-09-13 morning. */
-  ['b_daughterthai', 'Daughter Thai Kitchen', { free: true, call: '(510) 823-2354' }],
+  /* Whole page since 2026-10-05: Glenn sent a film for it (the yellow-sheet film rule). */
+  ['b_daughterthai', 'Daughter Thai Kitchen', { call: '(510) 823-2354' }],
   ['b_mexihibachi', 'MexiHibachi', { call: '415.604.7135' }],
   /* 2026-09-15 and 16: thirty-two city seats and PupCup. */
   ['b_marymar', 'Mar Y Mar', {  }],
@@ -216,7 +217,8 @@ for (const [id, want, expect] of [
   ['b_dumontlivermore', 'Dumont Creamery & Cafe', {  }],
   /* 2026-09-17 to 21: the batch of forty-odd, Janelle's page and five HL rooms. */
   ['b_realcutiepies', 'Real Cutie Pies', { hours: 'Tue-Sat 12-5pm' }],
-  ['b_kankiin', 'Kan Kiin', { rows: 35, hours: 'Brunch Mon-Fri', call: '(650) 755-8749' }],
+  /* Re-read 2026-10-05: brunch and dinner menus, one hours line. */
+  ['b_kankiin', 'Kan Kiin', { rows: 60, hours: 'Mon-Fri 11am-2pm', call: '(650) 755-8749' }],
   ['b_lovelysburgerssf', "Lovely's Burgers", { rows: 10, quote: true }],
   ['b_lovelysburgersoakland', "Lovely's Burgers", { free: true }],
   ['b_whackdonuts', 'Whack Donuts!', { call: '(415) 754-8451' }],
@@ -247,7 +249,8 @@ for (const [id, want, expect] of [
   ['b_yummyyummyhibachipiedmont', 'Yummy Yummy Hibachi', { call: '(510) 907-3904' }],
   ['b_toastintown', 'Toast In Town', { free: true, call: '(650) 389-7618' }],
   ['b_barrebeat', 'BARREbeat Fitness', { rows: 6, quote: true, call: '(925) 679-4428' }],
-  ['b_nossooakland', 'Nosso', { free: true, call: '(510) 207-1008' }],
+  /* On BEASTY • Eats since 2026-10-05, a whole page. */
+  ['b_nossooakland', 'Nosso', { call: '(510) 207-1008' }],
   ['b_elportalsanleandro', 'El Portal Mexican Restaurant', { rows: 150, hours: 'Mon-Fri 9am-10pm' }],
   ['b_kitavasf', 'Kitava', { free: true, call: '(415) 780-1661' }],
   ['b_kitavaoakland', 'Kitava', { free: true, call: '(510) 496-4055' }],
@@ -610,7 +613,8 @@ for (const [s, what] of [
      Redwood City and on BEASTY • Goods 10, SIA moved to BEASTY • Online. */
   ['"pittsburg-services-3":"b_blackcrowntattoo"', 'Black Crown on Pittsburg Services'],
   ['"redwood-city-goods-11":"b_cravingz"', 'Cravingz on Redwood City Goods'],
-  ['"b_pippal","b_cravingz","b_belly"', 'Cravingz in BEASTY • Goods 10'],
+  /* 2026-10-05: BEASTY • Eats by cuisine; Cravingz moved to Sweets. */
+  ['"b_downtownbbq","b_belly",null,"b_harumiayce"', 'BEASTY • Eats in cuisine order'],
   ['"beasty-online-3":"b_siacollective"', 'SIA Collective on BEASTY • Online'],
   ['icon:"black-crown-tattoo"', "Black Crown's crest"],
   ['icon:"cravingz"', "Cravingz's logo"],
