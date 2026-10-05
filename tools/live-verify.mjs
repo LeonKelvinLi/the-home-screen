@@ -507,6 +507,11 @@ console.log('home swipe    :', JSON.stringify({ pages: swipeTotal, first: nine }
 /* 2026-10-05: BEASTY • Pages first, then the nine. */
 if (nine.join(',') !== 'Pages,Eats,Sweets,AYCE,Goods,Services,Online,Individuals,Tattoo,Automotive') fails.push(`the home screen's first pages read ${nine.join(', ')}`)
 if (!swipeTotal || swipeTotal > 20) fails.push(`the home screen swipe is ${swipeTotal} pages long; the cities should only come from Search`)
+/* A Foodies review's own copy is served (its name is built in code, so it is not in the bundle). */
+{
+  const r = await fetch(`${base}/clips/review-DduKTl4hokY.mp4`, { method: 'HEAD' }).catch(() => null)
+  if (!r?.ok || !/video\/mp4/.test(r.headers.get('content-type') ?? '')) fails.push('/clips/review-DduKTl4hokY.mp4 is not served as a video')
+}
 for (const w of ['cat-tattoo.webp', 'cat-realtors-thumb.webp', 'cat-beasty-thumb.webp']) {
   const r = await fetch(`${base}/wallpapers/${w}`).catch(() => null)
   if (!r?.ok || !/image\/webp/.test(r.headers.get('content-type') ?? '')) fails.push(`/wallpapers/${w} is not served as an image`)
@@ -592,7 +597,7 @@ for (const s of [
   'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', '/wallpapers/cat-', 'Barbers, cuts and shaves',
   /* 2026-10-05: BEASTY • Pages tiles, Sweets and AYCE, the reels bubble, button counts, Search's share link. */
   /* 2026-10-05, later: BEASTY • Foodies pages and the review lists. */
-  'foodie-reviews', 'Their reviews', 'Foodie reviews', 'review-DduKTl4hokY',
+  'foodie-reviews', 'Their reviews', 'Foodie reviews', '/clips/review-',
   'cat-icon', 'Watch foodie reviews here to discover new gems.', 'button_tapped', 'Search BEASTY pages', 'Barbers, cuts and shaves', 'Shaved ice', 'Chicken sandwich', 'brand-panel-link',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)
