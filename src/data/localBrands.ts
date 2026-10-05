@@ -20,6 +20,8 @@ export type BrandPanel = {
   head: string
   /** Paragraphs, or one line per address. */
   body?: string[]
+  /** Public source links, such as the shops featured on a car showcase. */
+  links?: { title: string; href: string }[]
   /** Their own photographs. `src` is a basename under /food. */
   photos?: { src: string; alt: string; caption?: string }[]
 }
@@ -1475,14 +1477,15 @@ export const LOCAL_SEED: LocalSeed[] = [
       platform: 'Instagram',
     },
     cuisine: 'Italian sandwiches, sausage',
-    tagline: 'Traditionally made sausage and specialty Italian sandwiches. Pittsburg.',
+    tagline: 'Traditionally made sausage and specialty Italian sandwiches. Farmers markets in Brentwood and Martinez.',
     color: '#111111',
     icon: 'paulo-sausage',
     prep: 15,
     category: 'Sandwiches',
     site: 'https://www.paulosausageco.com',
     orderUrl: 'https://www.paulosausageco.com/sandwich-pre-order',
-    address: '2951 Harbor Street Suite E, Pittsburg',
+    address: 'Martinez Farmers Market, Main Street, Martinez, CA 94553',
+    panels: [{ head: 'Farmers markets', body: ['Saturday: Brentwood Farmers Market, First Street, Brentwood, CA 94513.', 'Sunday: Martinez Farmers Market, Main Street, Martinez, CA 94553.', 'Confirm this week’s market schedule and availability with Paulo Sausage Co.'] }],
     // Counter prices from their OWN Square Online catalogue, not a delivery
     // platform. DoorDash adds a flat $3.00 to every overlapping item, measured
     // across six of them, so the platform figures were not used.
@@ -2227,6 +2230,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       weddings are in the city.
     */
     slug: 'flowers-valley',
+    icon: 'flowers-valley-current',
     logoTemplate: 'wordmark',
     logoLines: ['Flowers', 'VALLEY'],
     logoFace: 'script',

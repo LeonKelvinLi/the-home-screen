@@ -1,0 +1,4128 @@
+{
+  "date": "2026-10-04",
+  "baselineCommit": "f1f5a14d947fe8f2cd750774070c872f5ae720ec",
+  "coverage": {
+    "incomingMessages": 4067,
+    "availableImageAttachments": 440,
+    "unavailableImageAttachments": 1323
+  },
+  "additions": [
+    {
+      "slug": "gregorys-gourmet-desserts",
+      "name": "Gregory’s Gourmet Desserts",
+      "messageId": 247244,
+      "source": "https://gregorysgourmetdesserts.com/"
+    },
+    {
+      "slug": "sticky-rice-thai-sj",
+      "name": "Sticky Rice Thai",
+      "messageId": 247248,
+      "source": "https://stickyricethaillc.toast.site/"
+    },
+    {
+      "slug": "brundo-spices",
+      "name": "Brundo Spices",
+      "messageId": 247279,
+      "source": "https://linktr.ee/brundospices"
+    },
+    {
+      "slug": "the-burger-spot-co",
+      "name": "The Burger Spot Co.",
+      "messageId": 247281,
+      "source": "https://www.theburgerspotco.com/"
+    },
+    {
+      "slug": "katsu-factory-fremont",
+      "name": "Katsu Factory by Satomi",
+      "messageId": 247288,
+      "source": "https://www.katsutonkatsu.com/"
+    },
+    {
+      "slug": "buds-burgers-vallejo",
+      "name": "Bud’s Burgers",
+      "messageId": 247290,
+      "source": "https://www.facebook.com/BudsBurgersVallejo/"
+    },
+    {
+      "slug": "alhambra-irish-house",
+      "name": "Alhambra Irish House",
+      "messageId": 247292,
+      "source": "https://www.alhambra-irish-house.com/"
+    },
+    {
+      "slug": "handels-brentwood",
+      "name": "Handel’s Ice Cream",
+      "messageId": 247297,
+      "source": "https://handelsicecream.com/"
+    },
+    {
+      "slug": "handels-walnut-creek",
+      "name": "Handel’s Ice Cream",
+      "messageId": 247297,
+      "source": "https://handelsicecream.com/"
+    },
+    {
+      "slug": "handels-livermore",
+      "name": "Handel’s Ice Cream",
+      "messageId": 247297,
+      "source": "https://handelsicecream.com/"
+    },
+    {
+      "slug": "blue-pagoda-sj",
+      "name": "Blue Pagoda",
+      "messageId": 247303,
+      "source": "https://bluepagodadining.com/"
+    },
+    {
+      "slug": "tempura-hannosuke-sj",
+      "name": "Tempura Hannosuke",
+      "messageId": 247316,
+      "source": "https://tempura-kaneko-hannosuke.com/"
+    },
+    {
+      "slug": "hinodeya-berkeley",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "hinodeya-sf-downtown",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "hinodeya-sf-union-square",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "hinodeya-sf-japantown",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "hinodeya-sf-chestnut",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "hinodeya-newark",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "hinodeya-san-jose",
+      "name": "Hinodeya Ramen",
+      "messageId": 247321,
+      "source": "https://hinodeyaramen.com/"
+    },
+    {
+      "slug": "q-specialty-coffee-california",
+      "name": "Q Specialty Coffee",
+      "messageId": 247328,
+      "source": "https://www.qspecialtycoffee.com/"
+    },
+    {
+      "slug": "q-specialty-coffee-howard",
+      "name": "Q Specialty Coffee",
+      "messageId": 247328,
+      "source": "https://www.qspecialtycoffee.com/"
+    },
+    {
+      "slug": "master-oh-santa-clara",
+      "name": "Master Oh",
+      "messageId": 247332,
+      "source": "https://master-oh.com/"
+    },
+    {
+      "slug": "sourdough-eatery-sj",
+      "name": "Sourdough Eatery",
+      "messageId": 247357,
+      "source": "https://www.sourdougheatery.com/"
+    },
+    {
+      "slug": "rantei-santa-clara",
+      "name": "Rantei Japanese Cuisine",
+      "messageId": 247418,
+      "source": "https://www.ranteijapanesecuisine.com/"
+    },
+    {
+      "slug": "thai-table-berkeley",
+      "name": "Thai Table",
+      "messageId": 247424,
+      "source": "https://www.thaitableberkeley.com/"
+    },
+    {
+      "slug": "souva-mobile-pet-grooming",
+      "name": "Souva Mobile Pet Grooming",
+      "messageId": 247430,
+      "source": "https://www.souvagrooming.com/"
+    },
+    {
+      "slug": "kind-bubbles",
+      "name": "Kind Bubbles",
+      "messageId": 247435,
+      "source": "https://www.kindbubbles.com/"
+    },
+    {
+      "slug": "kopi-bar-berkeley",
+      "name": "Kopi Bar & Bakery",
+      "messageId": 247439,
+      "source": "https://thekopibar.com/"
+    },
+    {
+      "slug": "rg-lounge-sf",
+      "name": "R&G Lounge",
+      "messageId": 247443,
+      "source": "https://www.rnglounge.com/"
+    },
+    {
+      "slug": "johns-ice-cream-brentwood",
+      "name": "John’s Ice Cream",
+      "messageId": 247445,
+      "source": "https://www.instagram.com/johnsicecreamca/"
+    },
+    {
+      "slug": "metersf",
+      "name": "MeterSF",
+      "messageId": 247449,
+      "source": "https://www.instagram.com/metersf/"
+    },
+    {
+      "slug": "precision-auto-service",
+      "name": "Precision Auto Service",
+      "messageId": 247452,
+      "source": "https://www.instagram.com/precisionautoservice/"
+    },
+    {
+      "slug": "shibam-coffee-newark",
+      "name": "Shibam Coffee Co.",
+      "messageId": 247479,
+      "source": "https://www.instagram.com/shibamnewark/"
+    },
+    {
+      "slug": "amp-mode-pleasanton",
+      "name": "AMP Mode",
+      "messageId": 247482,
+      "source": "https://www.goampmode.com/"
+    },
+    {
+      "slug": "burma2-walnut-creek",
+      "name": "Burma 2",
+      "messageId": 247486,
+      "source": "https://www.burma2.com/"
+    },
+    {
+      "slug": "mission-hills-fremont",
+      "name": "Mission Hills Racquet & Swim Club",
+      "messageId": 247462,
+      "source": "https://www.themissionhillsclub.com/swim"
+    },
+    {
+      "slug": "wadaya-fremont",
+      "name": "WADAYA Mazemen & Ramen",
+      "messageId": 247465,
+      "source": "https://wadaya.co/"
+    },
+    {
+      "slug": "creator-bayarea-fooddreamz",
+      "name": "@bayarea_fooddreamz",
+      "messageId": 244210,
+      "source": "https://www.instagram.com/bayarea_fooddreamz/"
+    },
+    {
+      "slug": "creator-oaktowngrubhub",
+      "name": "@oaktowngrubhub",
+      "messageId": 244302,
+      "source": "https://www.instagram.com/oaktowngrubhub/"
+    },
+    {
+      "slug": "creator-charlikestoeat",
+      "name": "@charlikestoeat",
+      "messageId": 244473,
+      "source": "https://www.instagram.com/charlikestoeat/"
+    },
+    {
+      "slug": "creator-imadoniseats",
+      "name": "@imadoniseats",
+      "messageId": 244475,
+      "source": "https://www.instagram.com/imadoniseats/"
+    },
+    {
+      "slug": "creator-justmostie",
+      "name": "@justmostie",
+      "messageId": 244488,
+      "source": "https://www.instagram.com/justmostie/"
+    },
+    {
+      "slug": "creator-chefmelissaking",
+      "name": "@chefmelissaking",
+      "messageId": 244524,
+      "source": "https://www.instagram.com/chefmelissaking/"
+    },
+    {
+      "slug": "creator-grubwitmike",
+      "name": "@grubwitmike",
+      "messageId": 244672,
+      "source": "https://www.instagram.com/grubwitmike/"
+    },
+    {
+      "slug": "creator-meggyeatz",
+      "name": "@meggyeatz",
+      "messageId": 244675,
+      "source": "https://www.instagram.com/meggyeatz/"
+    },
+    {
+      "slug": "creator-hellahansel",
+      "name": "@hellahansel",
+      "messageId": 244698,
+      "source": "https://www.instagram.com/hellahansel/"
+    },
+    {
+      "slug": "creator-celineeats",
+      "name": "@celineeats",
+      "messageId": 244756,
+      "source": "https://www.instagram.com/celineeats/"
+    },
+    {
+      "slug": "creator-felicitythefoodie",
+      "name": "@felicitythefoodie",
+      "messageId": 244812,
+      "source": "https://www.instagram.com/felicitythefoodie/"
+    },
+    {
+      "slug": "creator-thesauceboss-",
+      "name": "@thesauceboss_",
+      "messageId": 244910,
+      "source": "https://www.instagram.com/thesauceboss_/"
+    },
+    {
+      "slug": "creator-geraldfermin",
+      "name": "@geraldfermin",
+      "messageId": 244912,
+      "source": "https://www.instagram.com/geraldfermin/"
+    },
+    {
+      "slug": "creator-janeethefoodie",
+      "name": "@janeethefoodie",
+      "messageId": 244935,
+      "source": "https://www.instagram.com/janeethefoodie/"
+    },
+    {
+      "slug": "creator-pimchanyum",
+      "name": "@pimchanyum",
+      "messageId": 244945,
+      "source": "https://www.instagram.com/pimchanyum/"
+    },
+    {
+      "slug": "creator-mukbangyourmama",
+      "name": "@mukbangyourmama",
+      "messageId": 244975,
+      "source": "https://www.instagram.com/mukbangyourmama/"
+    },
+    {
+      "slug": "creator-ilisaeatssf",
+      "name": "@ilisaeatssf",
+      "messageId": 244977,
+      "source": "https://www.instagram.com/ilisaeatssf/"
+    },
+    {
+      "slug": "creator-mama-sheedz",
+      "name": "@mama_sheedz",
+      "messageId": 245128,
+      "source": "https://www.instagram.com/mama_sheedz/"
+    },
+    {
+      "slug": "creator-takeoutwithtuck",
+      "name": "@takeoutwithtuck",
+      "messageId": 245197,
+      "source": "https://www.instagram.com/takeoutwithtuck/"
+    },
+    {
+      "slug": "creator-bayareafoodz",
+      "name": "@bayareafoodz",
+      "messageId": 245204,
+      "source": "https://www.instagram.com/bayareafoodz/"
+    },
+    {
+      "slug": "creator-imshotta",
+      "name": "@imshotta",
+      "messageId": 245379,
+      "source": "https://www.instagram.com/imshotta/"
+    },
+    {
+      "slug": "creator-peggy-shoo",
+      "name": "@peggy_shoo",
+      "messageId": 245589,
+      "source": "https://www.instagram.com/peggy_shoo/"
+    },
+    {
+      "slug": "creator-sherryeatworld",
+      "name": "@sherryeatworld",
+      "messageId": 245606,
+      "source": "https://www.instagram.com/sherryeatworld/"
+    },
+    {
+      "slug": "creator-eighty6ix-",
+      "name": "@eighty6ix_",
+      "messageId": 245777,
+      "source": "https://www.instagram.com/eighty6ix_/"
+    },
+    {
+      "slug": "creator-hella--local-mo",
+      "name": "@hella._local.mo",
+      "messageId": 245927,
+      "source": "https://www.instagram.com/hella._local.mo/"
+    },
+    {
+      "slug": "creator-charweeezy",
+      "name": "@charweeezy",
+      "messageId": 246017,
+      "source": "https://www.instagram.com/charweeezy/"
+    },
+    {
+      "slug": "creator-whatthejessi-",
+      "name": "@whatthejessi_",
+      "messageId": 246113,
+      "source": "https://www.instagram.com/whatthejessi_/"
+    },
+    {
+      "slug": "creator-areweeatingyet",
+      "name": "@areweeatingyet",
+      "messageId": 246665,
+      "source": "https://www.instagram.com/areweeatingyet/"
+    },
+    {
+      "slug": "creator-hungrydanz",
+      "name": "@hungrydanz",
+      "messageId": 246881,
+      "source": "https://www.instagram.com/hungrydanz/"
+    },
+    {
+      "slug": "creator-iamnikkieg",
+      "name": "@iamnikkieg",
+      "messageId": 246884,
+      "source": "https://www.instagram.com/iamnikkieg/"
+    },
+    {
+      "slug": "creator-realtorandreviewer",
+      "name": "@realtorandreviewer",
+      "messageId": 246919,
+      "source": "https://www.instagram.com/realtorandreviewer/"
+    },
+    {
+      "slug": "creator-maya-munches",
+      "name": "@maya_munches",
+      "messageId": 247121,
+      "source": "https://www.instagram.com/maya_munches/"
+    },
+    {
+      "slug": "creator-katfoodsf",
+      "name": "@katfoodsf",
+      "messageId": 247240,
+      "source": "https://www.instagram.com/katfoodsf/"
+    },
+    {
+      "slug": "creator-wendan-vs-world",
+      "name": "@wendan.vs.world",
+      "messageId": 247251,
+      "source": "https://www.instagram.com/wendan.vs.world/"
+    },
+    {
+      "slug": "creator-singlecatm0m",
+      "name": "@singlecatm0m",
+      "messageId": 247294,
+      "source": "https://www.instagram.com/singlecatm0m/"
+    },
+    {
+      "slug": "creator-bestbayareafood",
+      "name": "@bestbayareafood",
+      "messageId": 247313,
+      "source": "https://www.instagram.com/bestbayareafood/"
+    },
+    {
+      "slug": "creator-hungere-for-diy",
+      "name": "@hungere.for.diy",
+      "messageId": 247325,
+      "source": "https://www.instagram.com/hungere.for.diy/"
+    },
+    {
+      "slug": "creator-downey-ai",
+      "name": "@downey.ai",
+      "messageId": 247381,
+      "source": "https://www.instagram.com/downey.ai/"
+    },
+    {
+      "slug": "creator-twaydabae",
+      "name": "@twaydabae",
+      "messageId": 247405,
+      "source": "https://www.instagram.com/twaydabae/"
+    },
+    {
+      "slug": "creator-annna-eats",
+      "name": "@annna_eats",
+      "messageId": 247334,
+      "source": "https://www.instagram.com/annna_eats/"
+    },
+    {
+      "slug": "creator-sjaroundthebay",
+      "name": "@sjaroundthebay",
+      "messageId": 244764,
+      "source": "https://www.instagram.com/sjaroundthebay/"
+    },
+    {
+      "slug": "creator-bayareawilson",
+      "name": "@bayareawilson",
+      "messageId": 245418,
+      "source": "https://www.instagram.com/bayareawilson/"
+    },
+    {
+      "slug": "creator-foodgiveness",
+      "name": "@foodgiveness",
+      "messageId": 246892,
+      "source": "https://www.instagram.com/foodgiveness/"
+    },
+    {
+      "slug": "creator-orangeginger",
+      "name": "@orangeginger",
+      "messageId": 247273,
+      "source": "https://www.instagram.com/orangeginger/"
+    }
+  ],
+  "sourceVideos": [
+    {
+      "messageIds": [
+        247143
+      ],
+      "source": "https://www.instagram.com/reel/Dd4ydyFto4G/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd4ydyFto4G.mp4"
+    },
+    {
+      "messageIds": [
+        247159
+      ],
+      "source": "https://www.instagram.com/reel/DdhPdjsPH71/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdhPdjsPH71.mp4"
+    },
+    {
+      "messageIds": [
+        247165
+      ],
+      "source": "https://www.instagram.com/p/Dd70LCuMMsD/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd70LCuMMsD.mp4"
+    },
+    {
+      "messageIds": [
+        247170
+      ],
+      "source": "https://www.instagram.com/reel/DdEjNGpqKm9/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdEjNGpqKm9.mp4"
+    },
+    {
+      "messageIds": [
+        247152
+      ],
+      "source": "https://www.instagram.com/p/Dd91dqSMBDg/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd91dqSMBDg.mp4"
+    },
+    {
+      "messageIds": [
+        247194
+      ],
+      "source": "https://www.instagram.com/reel/DdOwOeePuNJ/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdOwOeePuNJ.mp4"
+    },
+    {
+      "messageIds": [
+        247245
+      ],
+      "source": "https://www.instagram.com/reel/DJ5UW0ySv_n/",
+      "status": "hosted",
+      "src": "/clips/refetch-DJ5UW0ySv_n.mp4"
+    },
+    {
+      "messageIds": [
+        247263
+      ],
+      "source": "https://www.instagram.com/reel/Dd1o8N_tB5C/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd1o8N_tB5C.mp4"
+    },
+    {
+      "messageIds": [
+        247280
+      ],
+      "source": "https://www.instagram.com/reel/DeAygs_vTtd/",
+      "status": "hosted",
+      "src": "/clips/refetch-DeAygs_vTtd.mp4"
+    },
+    {
+      "messageIds": [
+        247282
+      ],
+      "source": "https://www.instagram.com/reel/Dd-GqUFPqH4/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd-GqUFPqH4.mp4"
+    },
+    {
+      "messageIds": [
+        247283
+      ],
+      "source": "https://www.instagram.com/reel/Ddh94RIgaxM/",
+      "status": "hosted",
+      "src": "/clips/refetch-Ddh94RIgaxM.mp4"
+    },
+    {
+      "messageIds": [
+        247289
+      ],
+      "source": "https://www.instagram.com/reel/Dcr493rMTD5/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dcr493rMTD5.mp4"
+    },
+    {
+      "messageIds": [
+        247291
+      ],
+      "source": "https://www.instagram.com/reel/DSEaJrgkZe6/",
+      "status": "hosted",
+      "src": "/clips/refetch-DSEaJrgkZe6.mp4"
+    },
+    {
+      "messageIds": [
+        247293
+      ],
+      "source": "https://www.instagram.com/reel/DaWWDv1hXvH/",
+      "status": "hosted",
+      "src": "/clips/refetch-DaWWDv1hXvH.mp4"
+    },
+    {
+      "messageIds": [
+        247299
+      ],
+      "source": "https://www.instagram.com/reel/DaT3xX1u9PY/",
+      "status": "hosted",
+      "src": "/clips/refetch-DaT3xX1u9PY.mp4"
+    },
+    {
+      "messageIds": [
+        247305
+      ],
+      "source": "https://www.instagram.com/reel/Dd4J1SRq4UA/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd4J1SRq4UA.mp4"
+    },
+    {
+      "messageIds": [
+        247318
+      ],
+      "source": "https://www.instagram.com/reel/Dd9emqGs0zV/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd9emqGs0zV.mp4"
+    },
+    {
+      "messageIds": [
+        247323
+      ],
+      "source": "https://www.instagram.com/reel/DdohRAlvwjj/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdohRAlvwjj.mp4"
+    },
+    {
+      "messageIds": [
+        247334
+      ],
+      "source": "https://www.instagram.com/reel/DcSP10VN8uz/",
+      "status": "hosted",
+      "src": "/clips/refetch-DcSP10VN8uz.mp4"
+    },
+    {
+      "messageIds": [
+        247432
+      ],
+      "source": "https://www.instagram.com/reel/DeA2Mz4oQwx/",
+      "status": "hosted",
+      "src": "/clips/refetch-DeA2Mz4oQwx.mp4"
+    },
+    {
+      "messageIds": [
+        247446
+      ],
+      "source": "https://www.instagram.com/reel/DdeeJsApfBw/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdeeJsApfBw.mp4"
+    },
+    {
+      "messageIds": [
+        247456
+      ],
+      "source": "https://www.instagram.com/reel/DeBPEB8uDJ4/",
+      "status": "hosted",
+      "src": "/clips/refetch-DeBPEB8uDJ4.mp4"
+    },
+    {
+      "messageIds": [
+        247026
+      ],
+      "source": "https://www.instagram.com/reel/DEgHeK_yfL-/",
+      "status": "hosted",
+      "src": "/clips/refetch-DEgHeK_yfL-.mp4"
+    },
+    {
+      "messageIds": [
+        247053
+      ],
+      "source": "https://www.instagram.com/reel/DdW5SubguQ1/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdW5SubguQ1.mp4"
+    },
+    {
+      "messageIds": [
+        247072
+      ],
+      "source": "https://www.instagram.com/reel/Dd78almhYaR/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd78almhYaR.mp4"
+    },
+    {
+      "messageIds": [
+        247079
+      ],
+      "source": "https://www.instagram.com/reel/DdX5Vztgv0A/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdX5Vztgv0A.mp4"
+    },
+    {
+      "messageIds": [
+        247081
+      ],
+      "source": "https://www.instagram.com/reel/Ddptshixa3e/",
+      "status": "hosted",
+      "src": "/clips/refetch-Ddptshixa3e.mp4"
+    },
+    {
+      "messageIds": [
+        247086
+      ],
+      "source": "https://www.instagram.com/reel/Dd7Gag4NaBV/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd7Gag4NaBV.mp4"
+    },
+    {
+      "messageIds": [
+        247090
+      ],
+      "source": "https://www.instagram.com/reel/DXUviEUj9i8/",
+      "status": "hosted",
+      "src": "/clips/refetch-DXUviEUj9i8.mp4"
+    },
+    {
+      "messageIds": [
+        247095
+      ],
+      "source": "https://www.instagram.com/reel/DdfKJIgPDzm/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdfKJIgPDzm.mp4"
+    },
+    {
+      "messageIds": [
+        247102
+      ],
+      "source": "https://www.instagram.com/reel/DYyHYXRI202/",
+      "status": "hosted",
+      "src": "/clips/refetch-DYyHYXRI202.mp4"
+    },
+    {
+      "messageIds": [
+        244302
+      ],
+      "source": "https://www.instagram.com/reel/DdFKK1RSPBd/",
+      "status": "reused",
+      "src": "/clips/emys-cannoli.mp4"
+    },
+    {
+      "messageIds": [
+        244473
+      ],
+      "source": "https://www.instagram.com/reel/DdIMBHKPfj_/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdIMBHKPfj_.mp4"
+    },
+    {
+      "messageIds": [
+        244475
+      ],
+      "source": "https://www.instagram.com/reel/Dcg3Bl_B0iX/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dcg3Bl_B0iX.mp4"
+    },
+    {
+      "messageIds": [
+        244488
+      ],
+      "source": "https://www.instagram.com/reel/Dcw6WX7zN-Q/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dcw6WX7zN-Q.mp4"
+    },
+    {
+      "messageIds": [
+        244524
+      ],
+      "source": "https://www.instagram.com/reel/DdFgh8TvwdA/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdFgh8TvwdA.mp4"
+    },
+    {
+      "messageIds": [
+        244672
+      ],
+      "source": "https://www.instagram.com/reel/DdIUO2Jxj1s/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdIUO2Jxj1s.mp4"
+    },
+    {
+      "messageIds": [
+        244675
+      ],
+      "source": "https://www.instagram.com/reel/Dc5CExIhdSX/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dc5CExIhdSX.mp4"
+    },
+    {
+      "messageIds": [
+        244698
+      ],
+      "source": "https://www.instagram.com/reel/DdNCA9Qyb7W/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdNCA9Qyb7W.mp4"
+    },
+    {
+      "messageIds": [
+        244756
+      ],
+      "source": "https://www.instagram.com/reel/Dc2abz8C7CU/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dc2abz8C7CU.mp4"
+    },
+    {
+      "messageIds": [
+        244812
+      ],
+      "source": "https://www.instagram.com/reel/DdN7XUmvmzU/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdN7XUmvmzU.mp4"
+    },
+    {
+      "messageIds": [
+        244910
+      ],
+      "source": "https://www.instagram.com/reel/DdVGXn4NxbO/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdVGXn4NxbO.mp4"
+    },
+    {
+      "messageIds": [
+        244912
+      ],
+      "source": "https://www.instagram.com/reel/DTJ0lqhEWoy/",
+      "status": "hosted",
+      "src": "/clips/refetch-DTJ0lqhEWoy.mp4"
+    },
+    {
+      "messageIds": [
+        244935
+      ],
+      "source": "https://www.instagram.com/reel/C40pt1TRanq/",
+      "status": "hosted",
+      "src": "/clips/refetch-C40pt1TRanq.mp4"
+    },
+    {
+      "messageIds": [
+        244945
+      ],
+      "source": "https://www.instagram.com/reel/DBwc4CtSw4Q/",
+      "status": "hosted",
+      "src": "/clips/refetch-DBwc4CtSw4Q.mp4"
+    },
+    {
+      "messageIds": [
+        244975
+      ],
+      "source": "https://www.instagram.com/reel/DdUUdRJKpQd/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdUUdRJKpQd.mp4"
+    },
+    {
+      "messageIds": [
+        244977
+      ],
+      "source": "https://www.instagram.com/reel/DLi5st0J5kq/",
+      "status": "hosted",
+      "src": "/clips/refetch-DLi5st0J5kq.mp4"
+    },
+    {
+      "messageIds": [
+        245128
+      ],
+      "source": "https://www.instagram.com/reel/DcSX7lpucp-/",
+      "status": "hosted",
+      "src": "/clips/refetch-DcSX7lpucp-.mp4"
+    },
+    {
+      "messageIds": [
+        245197
+      ],
+      "source": "https://www.instagram.com/reel/DdMhHiJsnc4/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdMhHiJsnc4.mp4"
+    },
+    {
+      "messageIds": [
+        245204
+      ],
+      "source": "https://www.instagram.com/reel/DAW5kk6yEWz/",
+      "status": "hosted",
+      "src": "/clips/refetch-DAW5kk6yEWz.mp4"
+    },
+    {
+      "messageIds": [
+        245379
+      ],
+      "source": "https://www.instagram.com/reel/Dc4BefxI5b7/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dc4BefxI5b7.mp4"
+    },
+    {
+      "messageIds": [
+        245446
+      ],
+      "source": "https://www.instagram.com/reel/DdXmljSpM-M/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdXmljSpM-M.mp4"
+    },
+    {
+      "messageIds": [
+        245589
+      ],
+      "source": "https://www.instagram.com/reel/DdT5OWxhEBz/",
+      "status": "reused",
+      "src": "/clips/jonnys-italian-ice.mp4"
+    },
+    {
+      "messageIds": [
+        245606
+      ],
+      "source": "https://www.instagram.com/reel/DbzDNfLtM0R/",
+      "status": "hosted",
+      "src": "/clips/refetch-DbzDNfLtM0R.mp4"
+    },
+    {
+      "messageIds": [
+        245777
+      ],
+      "source": "https://www.instagram.com/reel/DIktz2AR_0M/",
+      "status": "hosted",
+      "src": "/clips/refetch-DIktz2AR_0M.mp4"
+    },
+    {
+      "messageIds": [
+        245927
+      ],
+      "source": "https://www.instagram.com/reel/Ddo0xf9MplM/",
+      "status": "hosted",
+      "src": "/clips/refetch-Ddo0xf9MplM.mp4"
+    },
+    {
+      "messageIds": [
+        245936
+      ],
+      "source": "https://www.instagram.com/reel/DdCZTx7Ppei/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdCZTx7Ppei.mp4"
+    },
+    {
+      "messageIds": [
+        246017
+      ],
+      "source": "https://www.instagram.com/reel/DdphZkJAn6v/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdphZkJAn6v.mp4"
+    },
+    {
+      "messageIds": [
+        246113
+      ],
+      "source": "https://www.instagram.com/reel/DdZ_vmtP9SZ/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdZ_vmtP9SZ.mp4"
+    },
+    {
+      "messageIds": [
+        246665
+      ],
+      "source": "https://www.instagram.com/reel/DBY9wl6PM3f/",
+      "status": "hosted",
+      "src": "/clips/refetch-DBY9wl6PM3f.mp4"
+    },
+    {
+      "messageIds": [
+        246881
+      ],
+      "source": "https://www.instagram.com/reel/Dczd9jQxFes/",
+      "status": "reused",
+      "src": "/clips/basq-haus.mp4"
+    },
+    {
+      "messageIds": [
+        246884
+      ],
+      "source": "https://www.instagram.com/reel/DdftkVVTK7h/",
+      "status": "reused",
+      "src": "/clips/little-sheep-newark.mp4"
+    },
+    {
+      "messageIds": [
+        246919
+      ],
+      "source": "https://www.instagram.com/reel/Dd1qIgYqblI/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd1qIgYqblI.mp4"
+    },
+    {
+      "messageIds": [
+        247045
+      ],
+      "source": "https://www.instagram.com/reel/Dd7CQPYsSnu/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd7CQPYsSnu.mp4"
+    },
+    {
+      "messageIds": [
+        247055
+      ],
+      "source": "https://www.instagram.com/reel/DdapLKiATum/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdapLKiATum.mp4"
+    },
+    {
+      "messageIds": [
+        247088
+      ],
+      "source": "https://www.instagram.com/reel/Dd4StNkNAA1/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd4StNkNAA1.mp4"
+    },
+    {
+      "messageIds": [
+        247097
+      ],
+      "source": "https://www.instagram.com/reel/DY6Qf_qJdQV/",
+      "status": "hosted",
+      "src": "/clips/refetch-DY6Qf_qJdQV.mp4"
+    },
+    {
+      "messageIds": [
+        247121
+      ],
+      "source": "https://www.instagram.com/reel/DXYA3bzjOTc/",
+      "status": "hosted",
+      "src": "/clips/refetch-DXYA3bzjOTc.mp4"
+    },
+    {
+      "messageIds": [
+        247172
+      ],
+      "source": "https://www.instagram.com/reel/DLi7ChcvhbM/",
+      "status": "hosted",
+      "src": "/clips/refetch-DLi7ChcvhbM.mp4"
+    },
+    {
+      "messageIds": [
+        247187
+      ],
+      "source": "https://www.instagram.com/reel/Dd9xqwsJsYS/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd9xqwsJsYS.mp4"
+    },
+    {
+      "messageIds": [
+        247189
+      ],
+      "source": "https://www.instagram.com/reel/DduKTl4hokY/",
+      "status": "hosted",
+      "src": "/clips/refetch-DduKTl4hokY.mp4"
+    },
+    {
+      "messageIds": [
+        247240
+      ],
+      "source": "https://www.instagram.com/reel/C1z-YxlvO12/",
+      "status": "hosted",
+      "src": "/clips/refetch-C1z-YxlvO12.mp4"
+    },
+    {
+      "messageIds": [
+        247251
+      ],
+      "source": "https://www.instagram.com/reel/DdeTKlrOHud/",
+      "status": "failed",
+      "src": null
+    },
+    {
+      "messageIds": [
+        247294
+      ],
+      "source": "https://www.instagram.com/reel/DWwiNxYCSiI/",
+      "status": "hosted",
+      "src": "/clips/refetch-DWwiNxYCSiI.mp4"
+    },
+    {
+      "messageIds": [
+        247325
+      ],
+      "source": "https://www.instagram.com/reel/DdrCC5YhN2z/",
+      "status": "hosted",
+      "src": "/clips/refetch-DdrCC5YhN2z.mp4"
+    },
+    {
+      "messageIds": [
+        247381
+      ],
+      "source": "https://www.instagram.com/reel/DeB4M74RM6d/",
+      "status": "hosted",
+      "src": "/clips/refetch-DeB4M74RM6d.mp4"
+    },
+    {
+      "messageIds": [
+        247405
+      ],
+      "source": "https://www.instagram.com/reel/Dd_0C1OtZUJ/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd_0C1OtZUJ.mp4"
+    },
+    {
+      "messageIds": [
+        244764
+      ],
+      "source": "https://www.instagram.com/reel/DS8GlMgCf7b/",
+      "status": "hosted",
+      "src": "/clips/refetch-DS8GlMgCf7b.mp4"
+    },
+    {
+      "messageIds": [
+        245418
+      ],
+      "source": "https://www.instagram.com/reel/Ddbm9IwBTWj/",
+      "status": "hosted",
+      "src": "/clips/refetch-Ddbm9IwBTWj.mp4"
+    },
+    {
+      "messageIds": [
+        246892
+      ],
+      "source": "https://www.instagram.com/reel/Dd2mwZRRBhm/",
+      "status": "hosted",
+      "src": "/clips/refetch-Dd2mwZRRBhm.mp4"
+    },
+    {
+      "messageIds": [
+        247273
+      ],
+      "source": "https://www.instagram.com/reel/DRGFltxkklB/",
+      "status": "hosted",
+      "src": "/clips/refetch-DRGFltxkklB.mp4"
+    }
+  ],
+  "baselineBrands": [
+    {
+      "id": "b_midnighttheories",
+      "name": "Midnite Theories"
+    },
+    {
+      "id": "b_downtownbbq",
+      "name": "Downtown BBQ"
+    },
+    {
+      "id": "b_eat",
+      "name": "EAT"
+    },
+    {
+      "id": "b_smashburgersbros",
+      "name": "Smash Burgers Bros"
+    },
+    {
+      "id": "b_meadowlarkdairy",
+      "name": "Meadowlark Dairy"
+    },
+    {
+      "id": "b_harumiayce",
+      "name": "Harumi"
+    },
+    {
+      "id": "b_luckythreeseven",
+      "name": "Lucky Three Seven"
+    },
+    {
+      "id": "b_fornopiombo",
+      "name": "Forno Piombo"
+    },
+    {
+      "id": "b_almasautotires",
+      "name": "Almas Auto & Tires"
+    },
+    {
+      "id": "b_gofrette",
+      "name": "Gofrette Pamper & Play"
+    },
+    {
+      "id": "b_goldenstateballerz",
+      "name": "Golden State Ballerz"
+    },
+    {
+      "id": "b_unitedcurbpainting",
+      "name": "United Curb Painting"
+    },
+    {
+      "id": "b_classycanines",
+      "name": "Classy Canine's Wiggle Rumps"
+    },
+    {
+      "id": "b_oneillssignature",
+      "name": "O'Neills Signature Sports"
+    },
+    {
+      "id": "b_trufusionwalnutcreek",
+      "name": "TruFusion Walnut Creek"
+    },
+    {
+      "id": "b_camachospartyrentals",
+      "name": "Camacho's Party Rentals"
+    },
+    {
+      "id": "b_boucajun",
+      "name": "Boudreaux Cajun Steak House"
+    },
+    {
+      "id": "b_bloomballoon",
+      "name": "Bloom Balloon"
+    },
+    {
+      "id": "b_yogasixbrentwood",
+      "name": "YogaSix East Contra Costa"
+    },
+    {
+      "id": "b_macstalgia",
+      "name": "Macstalgia"
+    },
+    {
+      "id": "b_healthyspotberkeley",
+      "name": "Healthy Spot Berkeley"
+    },
+    {
+      "id": "b_barrelbistro",
+      "name": "The Barrel Bistro & Wine Bar"
+    },
+    {
+      "id": "b_bayareapowerwash",
+      "name": "Bay Area Power Wash Pros"
+    },
+    {
+      "id": "b_romantraileriron",
+      "name": "Roman Trailer & Iron Work"
+    },
+    {
+      "id": "b_luckybarbershop",
+      "name": "Lucky Barbershop"
+    },
+    {
+      "id": "b_frankjrenglish",
+      "name": "Frank Jr. English"
+    },
+    {
+      "id": "b_paintgo",
+      "name": "PaintGo"
+    },
+    {
+      "id": "b_ubreakifix",
+      "name": "uBreakiFix"
+    },
+    {
+      "id": "b_marinabaymedia",
+      "name": "Marina Bay Media"
+    },
+    {
+      "id": "b_germanautosport",
+      "name": "German Auto Sport"
+    },
+    {
+      "id": "b_bobvalentineselectric",
+      "name": "Bob Valentine's"
+    },
+    {
+      "id": "b_hightechcaraudio",
+      "name": "High Tech Car Audio"
+    },
+    {
+      "id": "b_rocknjump",
+      "name": "Rockin' Jump"
+    },
+    {
+      "id": "b_djrevroc",
+      "name": "DJ Rev ROC"
+    },
+    {
+      "id": "b_petshowgrooming",
+      "name": "Pet Show Grooming"
+    },
+    {
+      "id": "b_drcomicsmrgames",
+      "name": "Dr. Comics and Mr. Games"
+    },
+    {
+      "id": "b_rosebarycarcare",
+      "name": "Rosebary Car Care"
+    },
+    {
+      "id": "b_andrewshinlaw",
+      "name": "Andrew Shin"
+    },
+    {
+      "id": "b_winterwhitecarwash",
+      "name": "Winter White Car Wash & Detail"
+    },
+    {
+      "id": "b_interchiro",
+      "name": "Inter Chiro"
+    },
+    {
+      "id": "b_georgeprolandscape",
+      "name": "George Professional Landscape"
+    },
+    {
+      "id": "b_jdiautodetailing",
+      "name": "JDI Auto Detailing"
+    },
+    {
+      "id": "b_jnwdetailing",
+      "name": "J&W Mobile Detailing"
+    },
+    {
+      "id": "b_perfectnineevents",
+      "name": "Perfect Nine"
+    },
+    {
+      "id": "b_themodelbakery",
+      "name": "The Model Bakery"
+    },
+    {
+      "id": "b_townfuturistmedia",
+      "name": "TOWNFUTURIST MEDIA"
+    },
+    {
+      "id": "b_thehangoutbreakfast",
+      "name": "The Hangout"
+    },
+    {
+      "id": "b_happybaypaws",
+      "name": "Happy Bay Paws"
+    },
+    {
+      "id": "b_xnoodledumpling",
+      "name": "X Noodles & Dumplings"
+    },
+    {
+      "id": "b_mimischocolates",
+      "name": "Mimi’s Chocolates"
+    },
+    {
+      "id": "b_phodenguyen",
+      "name": "Pho De Nguyen"
+    },
+    {
+      "id": "b_maymayscravings",
+      "name": "Maymay’s Cravings"
+    },
+    {
+      "id": "b_banhmixpress",
+      "name": "Banh Mi Xpress"
+    },
+    {
+      "id": "b_royaleeatery",
+      "name": "The Royale Eatery"
+    },
+    {
+      "id": "b_onehousebistro",
+      "name": "One House Bistro"
+    },
+    {
+      "id": "b_beniciagrill",
+      "name": "Benicia Grill"
+    },
+    {
+      "id": "b_intlkitchen",
+      "name": "INTL Kitchen"
+    },
+    {
+      "id": "b_majesticboutique",
+      "name": "Majestic Boutique"
+    },
+    {
+      "id": "b_lavanta",
+      "name": "Lavanta"
+    },
+    {
+      "id": "b_kaisendon",
+      "name": "Kaisen Don"
+    },
+    {
+      "id": "b_pollyann",
+      "name": "Polly Ann Ice Cream"
+    },
+    {
+      "id": "b_houseofthai",
+      "name": "House Of Thai"
+    },
+    {
+      "id": "b_udessertstory",
+      "name": "U Dessert Story"
+    },
+    {
+      "id": "b_thefarmacy",
+      "name": "The Farmacy"
+    },
+    {
+      "id": "b_soltaqueria",
+      "name": "Sol Taqueria"
+    },
+    {
+      "id": "b_onehousebakery",
+      "name": "One House Bakery"
+    },
+    {
+      "id": "b_sandwichmonkey",
+      "name": "The Sandwich Monkey"
+    },
+    {
+      "id": "b_senorsisig",
+      "name": "Señor Sisig"
+    },
+    {
+      "id": "b_jollycafe",
+      "name": "Jolly Cafe"
+    },
+    {
+      "id": "b_donutfarm",
+      "name": "Donut Farm"
+    },
+    {
+      "id": "b_milkyflakes",
+      "name": "Milky Flakes"
+    },
+    {
+      "id": "b_bobertea",
+      "name": "Bober Tea & Mochi"
+    },
+    {
+      "id": "b_pizzeriacardamomo",
+      "name": "Pizzeria Cardamomo"
+    },
+    {
+      "id": "b_greatimpasta",
+      "name": "Great Impasta"
+    },
+    {
+      "id": "b_chutneys",
+      "name": "Chutneys"
+    },
+    {
+      "id": "b_frenchspot",
+      "name": "The French Spot"
+    },
+    {
+      "id": "b_joybound",
+      "name": "Joybound People & Pets"
+    },
+    {
+      "id": "b_bodylinesdayspa",
+      "name": "Bodylines Day Spa"
+    },
+    {
+      "id": "b_solasalons",
+      "name": "Sola Salons East Bay"
+    },
+    {
+      "id": "b_santaclarasuperkitchen",
+      "name": "Santa Clara Super Kitchen"
+    },
+    {
+      "id": "b_willybillysmokedmeat",
+      "name": "Willy Billy Smoked Meat"
+    },
+    {
+      "id": "b_redchili",
+      "name": "Red Chili"
+    },
+    {
+      "id": "b_banhmioven",
+      "name": "Banh Mi Oven"
+    },
+    {
+      "id": "b_adzeela",
+      "name": "Adzeela"
+    },
+    {
+      "id": "b_allyvirtual",
+      "name": "Ally Virtual"
+    },
+    {
+      "id": "b_rubenhibachigrill",
+      "name": "Ruben Hibachi Grill"
+    },
+    {
+      "id": "b_loveburn",
+      "name": "Love Burn Hot Chicken"
+    },
+    {
+      "id": "b_thetoxalamo",
+      "name": "The Tox Alamo"
+    },
+    {
+      "id": "b_ethosofcalifornia",
+      "name": "Ethos Of California"
+    },
+    {
+      "id": "b_vendingenterprise",
+      "name": "Vending Enterprise"
+    },
+    {
+      "id": "b_overlyhiphop",
+      "name": "Overly Hip Hop"
+    },
+    {
+      "id": "b_russfamkitchen",
+      "name": "Russ Fam Kitchen"
+    },
+    {
+      "id": "b_walkfree",
+      "name": "Walk Free"
+    },
+    {
+      "id": "b_lushspaw",
+      "name": "Lush Spaw"
+    },
+    {
+      "id": "b_dadsbbq",
+      "name": "Dad's BBQ"
+    },
+    {
+      "id": "b_tonysstyle",
+      "name": "Tony's Style"
+    },
+    {
+      "id": "b_caitlynssweets",
+      "name": "Caitlyn's Sweets"
+    },
+    {
+      "id": "b_armentalandscape",
+      "name": "Armenta Landscape Co."
+    },
+    {
+      "id": "b_elranchogrande",
+      "name": "Rancho Grande Taqueria"
+    },
+    {
+      "id": "b_calipartybus",
+      "name": "Cali Party Bus"
+    },
+    {
+      "id": "b_pijjaparadisepittsburg",
+      "name": "Pijja Paradise"
+    },
+    {
+      "id": "b_pijjaparadiselivermore",
+      "name": "Pijja Paradise"
+    },
+    {
+      "id": "b_chikindripunioncity",
+      "name": "Chikin Drip"
+    },
+    {
+      "id": "b_chikindripsanjose",
+      "name": "Chikin Drip"
+    },
+    {
+      "id": "b_phonationnewark",
+      "name": "Pho Nation"
+    },
+    {
+      "id": "b_phonationalameda",
+      "name": "Pho Nation"
+    },
+    {
+      "id": "b_phonationsf",
+      "name": "Pho Nation SF"
+    },
+    {
+      "id": "b_gourmetburritos",
+      "name": "Gourmet Burritos"
+    },
+    {
+      "id": "b_empirestatepizza",
+      "name": "Empire State Pizza"
+    },
+    {
+      "id": "b_baysidefencing",
+      "name": "Bay Side Fencing Co"
+    },
+    {
+      "id": "b_houseofwings",
+      "name": "House of Wings California"
+    },
+    {
+      "id": "b_tastinpeachy",
+      "name": "Tastin Peachy"
+    },
+    {
+      "id": "b_shakashack",
+      "name": "Shaka Shack"
+    },
+    {
+      "id": "b_mrsramen",
+      "name": "Mrs. Ramen Concord"
+    },
+    {
+      "id": "b_rocketmctow",
+      "name": "Rocket MC Tow"
+    },
+    {
+      "id": "b_chiquoandeva",
+      "name": "Chiquo & Eva’s"
+    },
+    {
+      "id": "b_cajuncrackn",
+      "name": "Cajun Crack N"
+    },
+    {
+      "id": "b_yesmoment",
+      "name": "Yes Moment"
+    },
+    {
+      "id": "b_brasabros",
+      "name": "Brasa Bros"
+    },
+    {
+      "id": "b_gayninetiespizza",
+      "name": "Gay Nineties Pizza & Pasta Co."
+    },
+    {
+      "id": "b_bayareacharters",
+      "name": "Bay Area Charters"
+    },
+    {
+      "id": "b_breaktimetea",
+      "name": "Breaktime Tea"
+    },
+    {
+      "id": "b_babsdeltadiner",
+      "name": "Babs Delta Diner"
+    },
+    {
+      "id": "b_simplysoups",
+      "name": "Simply Soups"
+    },
+    {
+      "id": "b_cafenoiroak",
+      "name": "Cafe Noir"
+    },
+    {
+      "id": "b_jumpandroll",
+      "name": "Jump & Roll"
+    },
+    {
+      "id": "b_urbanair",
+      "name": "Urban Air"
+    },
+    {
+      "id": "b_eightacres",
+      "name": "Eight Acres Kitchen & Bar"
+    },
+    {
+      "id": "b_laslomasribpalace",
+      "name": "Las Lomas Rib Palace"
+    },
+    {
+      "id": "b_playland707",
+      "name": "Playland 707"
+    },
+    {
+      "id": "b_chipcookies",
+      "name": "Chip Cookies"
+    },
+    {
+      "id": "b_macsoldhouse",
+      "name": "Mac’s Old House"
+    },
+    {
+      "id": "b_philomenapizza",
+      "name": "Philomena Pizza"
+    },
+    {
+      "id": "b_kababburger",
+      "name": "Kabab Burger"
+    },
+    {
+      "id": "b_sweetpipers",
+      "name": "Sweet Pipers"
+    },
+    {
+      "id": "b_eaglepetgrooming",
+      "name": "Eagle Pet Grooming"
+    },
+    {
+      "id": "b_diabloautodetailing",
+      "name": "Diablo Auto Detailing"
+    },
+    {
+      "id": "b_suptealab",
+      "name": "SupTea Lab"
+    },
+    {
+      "id": "b_stellapastry",
+      "name": "Stella Pastry & Cafe"
+    },
+    {
+      "id": "b_isnappedphotobooths",
+      "name": "i.snapped Photo Booths"
+    },
+    {
+      "id": "b_jenuinefitness",
+      "name": "Jenuine Fitness"
+    },
+    {
+      "id": "b_magicjuans",
+      "name": "Magic Juan’s Barbershop"
+    },
+    {
+      "id": "b_quicklybenicia",
+      "name": "Quickly Benicia"
+    },
+    {
+      "id": "b_salathai",
+      "name": "Sala Thai"
+    },
+    {
+      "id": "b_siacollective",
+      "name": "SIA Collective"
+    },
+    {
+      "id": "b_houseofsilog",
+      "name": "House of Silog"
+    },
+    {
+      "id": "b_frank2artistic",
+      "name": "Frank2Artistic"
+    },
+    {
+      "id": "b_1upretro",
+      "name": "1-Up Retro"
+    },
+    {
+      "id": "b_scoopnchill",
+      "name": "Scoop N Chill"
+    },
+    {
+      "id": "b_alpastorpapi",
+      "name": "Al Pastor Papi"
+    },
+    {
+      "id": "b_rywire",
+      "name": "Rywire"
+    },
+    {
+      "id": "b_emyscannoli",
+      "name": "Emy’s Cannoli"
+    },
+    {
+      "id": "b_sushinaloa",
+      "name": "Sushinaloa"
+    },
+    {
+      "id": "b_kusanuyghurcuisinesanjose",
+      "name": "Kusan Uyghur Cuisine"
+    },
+    {
+      "id": "b_kusanbazaarmilpitas",
+      "name": "Kusan Bazaar"
+    },
+    {
+      "id": "b_kusanbazaarmountainview",
+      "name": "Kusan Bazaar"
+    },
+    {
+      "id": "b_varnishnailboutiquewalnutcreek",
+      "name": "Varnish Nail Boutique"
+    },
+    {
+      "id": "b_varnishnailboutiqueantioch",
+      "name": "Varnish Nail Boutique"
+    },
+    {
+      "id": "b_bodyrokberkeley",
+      "name": "BODYROK East Bay"
+    },
+    {
+      "id": "b_bodyrokalamo",
+      "name": "BODYROK East Bay"
+    },
+    {
+      "id": "b_bodyrokoakland",
+      "name": "BODYROK East Bay"
+    },
+    {
+      "id": "b_bhanmaevane",
+      "name": "Bhan Mae Vane"
+    },
+    {
+      "id": "b_jollyrogerland",
+      "name": "Jolly Roger Land"
+    },
+    {
+      "id": "b_paradanewperu",
+      "name": "Parada New Peru"
+    },
+    {
+      "id": "b_goodcompenny",
+      "name": "Good Compenny"
+    },
+    {
+      "id": "b_bobaclub",
+      "name": "Boba Club"
+    },
+    {
+      "id": "b_doodlecakes",
+      "name": "Doodle Cakes"
+    },
+    {
+      "id": "b_moxiesteakhouse",
+      "name": "Moxie Steak House"
+    },
+    {
+      "id": "b_7milehouse",
+      "name": "7 Mile House"
+    },
+    {
+      "id": "b_belly",
+      "name": "Belly"
+    },
+    {
+      "id": "b_wowmiapizza",
+      "name": "Wow Mia Pizza"
+    },
+    {
+      "id": "b_saladmakers",
+      "name": "Salad Makers"
+    },
+    {
+      "id": "b_streetsocial",
+      "name": "Street Social"
+    },
+    {
+      "id": "b_alivekitchen",
+      "name": "Alive Kitchen"
+    },
+    {
+      "id": "b_baithak",
+      "name": "Baithak"
+    },
+    {
+      "id": "b_bayareaeventlights",
+      "name": "Bay Area Event Lights"
+    },
+    {
+      "id": "b_chefjeffssmashburger",
+      "name": "Chef Jeff's Smash Burger"
+    },
+    {
+      "id": "b_bratpakdogkamp",
+      "name": "BratPak Dog Kamp"
+    },
+    {
+      "id": "b_sliceitpizza",
+      "name": "Sliceit Pizza"
+    },
+    {
+      "id": "b_doghausberkeley",
+      "name": "Dog Haus Biergarten"
+    },
+    {
+      "id": "b_piwings",
+      "name": "P.I. Wings"
+    },
+    {
+      "id": "b_pizzaponte",
+      "name": "Pizza Ponte"
+    },
+    {
+      "id": "b_claireandersonhomes",
+      "name": "Claire Anderson"
+    },
+    {
+      "id": "b_daughterthai",
+      "name": "Daughter Thai Kitchen"
+    },
+    {
+      "id": "b_mexihibachi",
+      "name": "MexiHibachi"
+    },
+    {
+      "id": "b_gumbosocial",
+      "name": "Gumbo Social"
+    },
+    {
+      "id": "b_acekingbbq",
+      "name": "Ace King BBQ"
+    },
+    {
+      "id": "b_sushiuma",
+      "name": "Sushi Uma"
+    },
+    {
+      "id": "b_harborviewsf",
+      "name": "Harborview Restaurant & Bar"
+    },
+    {
+      "id": "b_theseabyash",
+      "name": "The Sea by Alexander's Steakhouse"
+    },
+    {
+      "id": "b_marymar",
+      "name": "Mar Y Mar"
+    },
+    {
+      "id": "b_tacosmireynitasanlorenzo",
+      "name": "Tacos Mi Reynita"
+    },
+    {
+      "id": "b_tacosmireynitahayward",
+      "name": "Tacos Mi Reynita"
+    },
+    {
+      "id": "b_tacosmireynitasanjose",
+      "name": "Tacos Mi Reynita"
+    },
+    {
+      "id": "b_tacosmireynitafremont",
+      "name": "Tacos Mi Reynita"
+    },
+    {
+      "id": "b_turtletower",
+      "name": "Turtle Tower"
+    },
+    {
+      "id": "b_plazacafepleasanthill",
+      "name": "Plaza Cafe"
+    },
+    {
+      "id": "b_honepiercing",
+      "name": "Hone Piercing"
+    },
+    {
+      "id": "b_cyclebarberkeley",
+      "name": "CycleBar Berkeley"
+    },
+    {
+      "id": "b_rumbleboxingsanramon",
+      "name": "Rumble Boxing San Ramon"
+    },
+    {
+      "id": "b_trufflepokebelmont",
+      "name": "Truffle Poke Bar"
+    },
+    {
+      "id": "b_trufflepokeburlingame",
+      "name": "Truffle Poke Bar"
+    },
+    {
+      "id": "b_trufflepokessf",
+      "name": "Truffle Poke Bar"
+    },
+    {
+      "id": "b_trufflepokesanmateo",
+      "name": "Truffle Poke Bar"
+    },
+    {
+      "id": "b_balompie",
+      "name": "Balompié Sports Bar & Grill"
+    },
+    {
+      "id": "b_paperplanesj",
+      "name": "Paper Plane"
+    },
+    {
+      "id": "b_benchmarkclimbingberkeley",
+      "name": "Benchmark Climbing"
+    },
+    {
+      "id": "b_benchmarkclimbingsf",
+      "name": "Benchmark Climbing"
+    },
+    {
+      "id": "b_deliboard",
+      "name": "Deli Board"
+    },
+    {
+      "id": "b_brazucaacai",
+      "name": "Brazuca Açaí"
+    },
+    {
+      "id": "b_gravityvaultmarin",
+      "name": "The Gravity Vault Marin"
+    },
+    {
+      "id": "b_batchandbrine",
+      "name": "Batch & Brine"
+    },
+    {
+      "id": "b_thaithanioishi",
+      "name": "Thai Thani and Oishi"
+    },
+    {
+      "id": "b_brewandbanhmi",
+      "name": "Brew & Banh Mi Cafe"
+    },
+    {
+      "id": "b_delageoakland",
+      "name": "Delage"
+    },
+    {
+      "id": "b_tajmahallivermore",
+      "name": "Taj Mahal"
+    },
+    {
+      "id": "b_shodaisf",
+      "name": "Yakiniku Shodai"
+    },
+    {
+      "id": "b_thirsteasanleandro",
+      "name": "ThirsTea"
+    },
+    {
+      "id": "b_zandypekingduck",
+      "name": "Z & Y Peking Duck"
+    },
+    {
+      "id": "b_bibosalon",
+      "name": "BIBO Salon"
+    },
+    {
+      "id": "b_pizzadeliandgrill",
+      "name": "Pizza Deli & Grill"
+    },
+    {
+      "id": "b_calburger",
+      "name": "Cal Burger & More"
+    },
+    {
+      "id": "b_roasteateryco",
+      "name": "Roast Eatery Co."
+    },
+    {
+      "id": "b_dimsumbasket",
+      "name": "Dim Sum Basket"
+    },
+    {
+      "id": "b_brentwoodrehabpt",
+      "name": "Brentwood Rehab & Performance PT"
+    },
+    {
+      "id": "b_doublerainbowcafe",
+      "name": "Double Rainbow Cafe"
+    },
+    {
+      "id": "b_studiofloras",
+      "name": "Studio Flora's"
+    },
+    {
+      "id": "b_thelocalpetaluma",
+      "name": "The Local"
+    },
+    {
+      "id": "b_milelimitberkeley",
+      "name": "Mile Limit"
+    },
+    {
+      "id": "b_dumontlivermore",
+      "name": "Dumont Creamery & Cafe"
+    },
+    {
+      "id": "b_realcutiepies",
+      "name": "Real Cutie Pies"
+    },
+    {
+      "id": "b_kankiin",
+      "name": "Kan Kiin"
+    },
+    {
+      "id": "b_lovelysburgerssf",
+      "name": "Lovely's Burgers"
+    },
+    {
+      "id": "b_lovelysburgersoakland",
+      "name": "Lovely's Burgers"
+    },
+    {
+      "id": "b_whackdonuts",
+      "name": "Whack Donuts!"
+    },
+    {
+      "id": "b_mochicasf",
+      "name": "Mochica Kitchen & Bar"
+    },
+    {
+      "id": "b_taqueriaaztecadublin",
+      "name": "Taqueria Azteca"
+    },
+    {
+      "id": "b_lachicharronadacolombiana",
+      "name": "La Chicharronada Colombiana"
+    },
+    {
+      "id": "b_goldpiepizza",
+      "name": "Goldpie Pizza"
+    },
+    {
+      "id": "b_goldengatemarketdeli",
+      "name": "Golden Gate Market & Deli"
+    },
+    {
+      "id": "b_tadaramen",
+      "name": "Tada Ramen & Yakitori"
+    },
+    {
+      "id": "b_barsprezzatura",
+      "name": "Bar Sprezzatura"
+    },
+    {
+      "id": "b_poorhousebistro",
+      "name": "Poor House Bistro"
+    },
+    {
+      "id": "b_sakanasushialbany",
+      "name": "Sakana Sushi & Roll"
+    },
+    {
+      "id": "b_pizzagallery",
+      "name": "Pizza Gallery"
+    },
+    {
+      "id": "b_napayard",
+      "name": "Napa Yard & Beer Garden"
+    },
+    {
+      "id": "b_mimosaswillowglen",
+      "name": "Mimosas of Willow Glen"
+    },
+    {
+      "id": "b_dreamlandartplay",
+      "name": "Dreamland Art & Play"
+    },
+    {
+      "id": "b_cajunbowlsanbruno",
+      "name": "Cajun Bowl"
+    },
+    {
+      "id": "b_cajunbowlsanmateo",
+      "name": "Cajun Bowl"
+    },
+    {
+      "id": "b_okepokewalnutcreek",
+      "name": "Oke Poke Walnut Creek"
+    },
+    {
+      "id": "b_sanaacafe",
+      "name": "Sana'a Cafe"
+    },
+    {
+      "id": "b_pastapelican",
+      "name": "Pasta Pelican"
+    },
+    {
+      "id": "b_almadessert",
+      "name": "Alma Dessert"
+    },
+    {
+      "id": "b_brezoalbany",
+      "name": "Brezo Restaurant"
+    },
+    {
+      "id": "b_tacoswalnutcreek",
+      "name": "Tacos Walnut Creek"
+    },
+    {
+      "id": "b_yummyyummyhibachisanleandro",
+      "name": "Yummy Yummy Hibachi"
+    },
+    {
+      "id": "b_yummyyummyhibachi73rd",
+      "name": "Yummy Yummy Hibachi"
+    },
+    {
+      "id": "b_yummyyummyhibachipiedmont",
+      "name": "Yummy Yummy Hibachi"
+    },
+    {
+      "id": "b_toastintown",
+      "name": "Toast In Town"
+    },
+    {
+      "id": "b_barrebeat",
+      "name": "BARREbeat Fitness"
+    },
+    {
+      "id": "b_nossooakland",
+      "name": "Nosso"
+    },
+    {
+      "id": "b_elportalsanleandro",
+      "name": "El Portal Mexican Restaurant"
+    },
+    {
+      "id": "b_kitavasf",
+      "name": "Kitava"
+    },
+    {
+      "id": "b_kitavaoakland",
+      "name": "Kitava"
+    },
+    {
+      "id": "b_kitavaalbany",
+      "name": "Kitava"
+    },
+    {
+      "id": "b_kitavawalnutcreek",
+      "name": "Kitava"
+    },
+    {
+      "id": "b_betweentheplants",
+      "name": "Between The Plants"
+    },
+    {
+      "id": "b_pampasvacaville",
+      "name": "PAMPAS Brazilian Steakhouse"
+    },
+    {
+      "id": "b_essencebjj",
+      "name": "Essence Jiu Jitsu"
+    },
+    {
+      "id": "b_dripdesserthouse",
+      "name": "Drip Dessert House"
+    },
+    {
+      "id": "b_regentthaimassage",
+      "name": "Regent Thai Massage"
+    },
+    {
+      "id": "b_holbrookhouse",
+      "name": "The Holbrook House"
+    },
+    {
+      "id": "b_seoultotokyokitchen",
+      "name": "Seoul to Tokyo Kitchen"
+    },
+    {
+      "id": "b_bustdownco",
+      "name": "Bust Down & Co."
+    },
+    {
+      "id": "b_bustdowncobeasty",
+      "name": "Bust Down & Co."
+    },
+    {
+      "id": "b_thebeaudegabymaine",
+      "name": "The BeauDega by Maine"
+    },
+    {
+      "id": "b_jazzbraids",
+      "name": "Jazz Braids"
+    },
+    {
+      "id": "b_caballerosbarberlounge",
+      "name": "Caballeros BarberLounge"
+    },
+    {
+      "id": "b_moaeventsrentals",
+      "name": "MOA Events & Rentals"
+    },
+    {
+      "id": "b_hlpeninsulasouthsf",
+      "name": "HL Peninsula Restaurant"
+    },
+    {
+      "id": "b_hlpeninsulapearl",
+      "name": "HL Peninsula Pearl"
+    },
+    {
+      "id": "b_hlpeninsulacastrovalley",
+      "name": "HL Peninsula Restaurant"
+    },
+    {
+      "id": "b_hlpeninsulagarden",
+      "name": "HL Peninsula Garden"
+    },
+    {
+      "id": "b_hlpeninsulamilpitas",
+      "name": "HL Peninsula Restaurant"
+    },
+    {
+      "id": "b_thehalalcartel",
+      "name": "The Halal Cartel"
+    },
+    {
+      "id": "b_thecozyoven",
+      "name": "The Cozy Oven"
+    },
+    {
+      "id": "b_penelopescoffeeberkeley",
+      "name": "Penelope's Coffee & Tea"
+    },
+    {
+      "id": "b_penelopescoffeesf",
+      "name": "Penelope's Coffee & Tea"
+    },
+    {
+      "id": "b_penelopescoffeefostercity",
+      "name": "Penelope's Coffee & Tea"
+    },
+    {
+      "id": "b_penelopescoffeesanmateo",
+      "name": "Penelope's Coffee & Tea"
+    },
+    {
+      "id": "b_penelopescoffeedalycity",
+      "name": "Penelope's Coffee & Tea"
+    },
+    {
+      "id": "b_catchsf",
+      "name": "Catch SF"
+    },
+    {
+      "id": "b_yanksing",
+      "name": "Yank Sing"
+    },
+    {
+      "id": "b_demitristaverna",
+      "name": "Demitri's Taverna"
+    },
+    {
+      "id": "b_cheriessouthernkitchen",
+      "name": "Cherie's Southern Kitchen"
+    },
+    {
+      "id": "b_woofgangbakeryoakley",
+      "name": "Woof Gang Bakery & Grooming"
+    },
+    {
+      "id": "b_oldcrowtattoo",
+      "name": "Old Crow Tattoo"
+    },
+    {
+      "id": "b_rakanitattoo",
+      "name": "Rakani Tattoo"
+    },
+    {
+      "id": "b_hungrycow",
+      "name": "Hungry Cow"
+    },
+    {
+      "id": "b_longbridgepizza",
+      "name": "Long Bridge Pizza Co."
+    },
+    {
+      "id": "b_maverickjacksburlingame",
+      "name": "Maverick Jack's"
+    },
+    {
+      "id": "b_maverickjackssanmateo",
+      "name": "Maverick Jack's"
+    },
+    {
+      "id": "b_losagavesdalycity",
+      "name": "Taqueria Los Agaves"
+    },
+    {
+      "id": "b_alushecoffee",
+      "name": "Alushe Coffee Bar"
+    },
+    {
+      "id": "b_fourchairs",
+      "name": "Four Chairs"
+    },
+    {
+      "id": "b_napavalleyburgersausalito",
+      "name": "Napa Valley Burger Company"
+    },
+    {
+      "id": "b_narrestaurant",
+      "name": "NAR Restaurant"
+    },
+    {
+      "id": "b_peachespatties",
+      "name": "Peaches Patties"
+    },
+    {
+      "id": "b_theshishgrill",
+      "name": "Shish Grill"
+    },
+    {
+      "id": "b_sandbaroakland",
+      "name": "Sandbar Oakland"
+    },
+    {
+      "id": "b_mattahn",
+      "name": "Matt Ahn"
+    },
+    {
+      "id": "b_inkfromtatooine",
+      "name": "Ink From Tatooine"
+    },
+    {
+      "id": "b_pauldomingo",
+      "name": "Paul Domingo"
+    },
+    {
+      "id": "b_twodollarcowboy",
+      "name": "2$CWBY Tattoo"
+    },
+    {
+      "id": "b_aberrationstudio",
+      "name": "Aberration Studio"
+    },
+    {
+      "id": "b_impowersportsperformance",
+      "name": "Impower Sports Performance & Rehab"
+    },
+    {
+      "id": "b_naileditstudio",
+      "name": "The Nail Edit Studio"
+    },
+    {
+      "id": "b_corenestpilates",
+      "name": "CoreNest Pilates"
+    },
+    {
+      "id": "b_contracostafitness",
+      "name": "Contra Costa Fitness"
+    },
+    {
+      "id": "b_carlyleschickenwings",
+      "name": "Carlyle's Chicken Wings"
+    },
+    {
+      "id": "b_curiobar",
+      "name": "Curio"
+    },
+    {
+      "id": "b_bascotacafe",
+      "name": "Bascota Café"
+    },
+    {
+      "id": "b_wagyugrillmilpitas",
+      "name": "Wagyu Grill"
+    },
+    {
+      "id": "b_meattimeyakiniku",
+      "name": "Meat Time Yakiniku"
+    },
+    {
+      "id": "b_wagyumastersanjose",
+      "name": "Wagyu Master"
+    },
+    {
+      "id": "b_kingkatsulandnewark",
+      "name": "King Katsu Land"
+    },
+    {
+      "id": "b_littlesheepnewark",
+      "name": "Little Sheep"
+    },
+    {
+      "id": "b_bollywoodpizzasf",
+      "name": "Bollywood Pizza"
+    },
+    {
+      "id": "b_bollywoodpizzalivermore",
+      "name": "Bollywood Pizza"
+    },
+    {
+      "id": "b_basqhaus",
+      "name": "Basq Haus"
+    },
+    {
+      "id": "b_brasilbistro",
+      "name": "Brasil Bistro"
+    },
+    {
+      "id": "b_myofrozenyogurtwalnutcreek",
+      "name": "MYO Pure Frozen Yogurt"
+    },
+    {
+      "id": "b_thehubpackanimals",
+      "name": "The Hub by Pack Animals"
+    },
+    {
+      "id": "b_yosushivacaville",
+      "name": "Yo Sushi & Ramen"
+    },
+    {
+      "id": "b_abvethebasics",
+      "name": "ABVE the Basics"
+    },
+    {
+      "id": "b_blackcrowntattoo",
+      "name": "Black Crown Tattoo Studio"
+    },
+    {
+      "id": "b_cravingz",
+      "name": "Cravingz"
+    },
+    {
+      "id": "b_skilletzcafe",
+      "name": "Skillet'z Cafe"
+    },
+    {
+      "id": "b_billyroysburgerco",
+      "name": "Billy Roy's Burger Co."
+    },
+    {
+      "id": "b_garageworks",
+      "name": "Garageworks"
+    },
+    {
+      "id": "b_thebreezecafe",
+      "name": "The Breeze Café"
+    },
+    {
+      "id": "b_macsbyicky",
+      "name": "Macs by Icky"
+    },
+    {
+      "id": "b_theune",
+      "name": "The Une"
+    },
+    {
+      "id": "b_theyakitoribar",
+      "name": "The Yakitori Bar"
+    },
+    {
+      "id": "b_goldbeansanleandro",
+      "name": "Gold Bean"
+    },
+    {
+      "id": "b_goldbeanpleasanton",
+      "name": "Gold Bean"
+    },
+    {
+      "id": "b_goldbeandurant",
+      "name": "Gold Bean"
+    },
+    {
+      "id": "b_goldbeanhearst",
+      "name": "Gold Bean"
+    },
+    {
+      "id": "b_paletaplaneta",
+      "name": "Paleta Planeta"
+    },
+    {
+      "id": "b_mazasanjose",
+      "name": "Maza"
+    },
+    {
+      "id": "b_divinoristorante",
+      "name": "Divino Ristorante"
+    },
+    {
+      "id": "b_favoriteindianrestaurant",
+      "name": "Favorite Indian Restaurant"
+    },
+    {
+      "id": "b_portofperiperifremont",
+      "name": "The Port of Peri Peri"
+    },
+    {
+      "id": "b_domartialarts",
+      "name": "DO Martial Arts"
+    },
+    {
+      "id": "b_zadnagrill",
+      "name": "Zadna Grill"
+    },
+    {
+      "id": "b_yayoipaloalto",
+      "name": "YAYOI Palo Alto"
+    },
+    {
+      "id": "b_yayoicupertino",
+      "name": "YAYOI Cupertino"
+    },
+    {
+      "id": "b_yayoisanmateo",
+      "name": "YAYOI Hillsdale"
+    },
+    {
+      "id": "b_tacospapo",
+      "name": "Tacos Papo"
+    },
+    {
+      "id": "b_doughweime",
+      "name": "DoughWeiMe Bakery & Cafe"
+    },
+    {
+      "id": "b_konthegounioncity",
+      "name": "K On The Go"
+    },
+    {
+      "id": "b_backyardbayou",
+      "name": "Backyard Bayou"
+    },
+    {
+      "id": "b_goldenbayseafoodharbor",
+      "name": "Golden Bay Seafood Harbor"
+    },
+    {
+      "id": "b_sanhonorepanaderia",
+      "name": "San Honoré Panaderia"
+    },
+    {
+      "id": "b_themoonnails",
+      "name": "The Moon Nails"
+    },
+    {
+      "id": "b_thehotspotstudiosunioncity",
+      "name": "The Hot Spot Studios"
+    },
+    {
+      "id": "b_thelionsmanebarbershop",
+      "name": "The Lion's Mane Barbershop"
+    },
+    {
+      "id": "b_jasnailspa",
+      "name": "JAS Nail Spa"
+    },
+    {
+      "id": "b_honeypotgelato",
+      "name": "Honey Pot Gelato"
+    },
+    {
+      "id": "b_northitaliawalnutcreek",
+      "name": "North Italia"
+    },
+    {
+      "id": "b_galpaogauchowalnutcreek",
+      "name": "Galpão Gaucho"
+    },
+    {
+      "id": "b_havanawalnutcreek",
+      "name": "Havana"
+    },
+    {
+      "id": "b_litawalnutcreek",
+      "name": "LITA"
+    },
+    {
+      "id": "b_shadyoakbrewing",
+      "name": "Shady Oak Brewing Company"
+    },
+    {
+      "id": "b_ezraluzjohns",
+      "name": "Ezra Luz Johns"
+    },
+    {
+      "id": "b_1850properties",
+      "name": "1850 Properties"
+    },
+    {
+      "id": "b_thisaintcanon",
+      "name": "This Ain't Canon"
+    },
+    {
+      "id": "b_robbensemeryville",
+      "name": "Rob Ben’s Restaurant & Lounge"
+    },
+    {
+      "id": "b_calikidlivermore",
+      "name": "CaliKid Burgers ’N Shakes"
+    },
+    {
+      "id": "b_calikidpleasanthill",
+      "name": "CaliKid Burgers ’N Shakes"
+    },
+    {
+      "id": "b_droneshow",
+      "name": "Droneshow.com"
+    },
+    {
+      "id": "b_bottomline",
+      "name": "Bottomline"
+    },
+    {
+      "id": "b_stevesmobilesecurity",
+      "name": "Steve’s Mobile Security Doors"
+    },
+    {
+      "id": "b_yuanbaojiaozisf",
+      "name": "Yuanbao Jiaozi"
+    },
+    {
+      "id": "b_yuanbaojiaoziburlingame",
+      "name": "Yuanbao Jiaozi"
+    },
+    {
+      "id": "b_pineapplekingsf",
+      "name": "Pineapple King Bakery"
+    },
+    {
+      "id": "b_understoryoakland",
+      "name": "Understory"
+    },
+    {
+      "id": "b_ryecookin",
+      "name": "Rye Cookin LLC"
+    },
+    {
+      "id": "b_tonyspizzanapoletana",
+      "name": "Tony’s Pizza Napoletana"
+    },
+    {
+      "id": "b_thecatslosgatos",
+      "name": "The Cats Restaurant & Bar"
+    },
+    {
+      "id": "b_pakaomathailao",
+      "name": "Pakaoma Thai-Lao Diner"
+    },
+    {
+      "id": "b_calialley",
+      "name": "Cali Alley"
+    },
+    {
+      "id": "b_nomadspremiummeats",
+      "name": "Nomads Premium Meats"
+    },
+    {
+      "id": "b_praawthai",
+      "name": "Praaw Thai"
+    },
+    {
+      "id": "b_fourfortyfourevents",
+      "name": "Four Forty Four Events by Nancy"
+    },
+    {
+      "id": "b_rosepizzeriaberkeley",
+      "name": "Rose Pizzeria"
+    },
+    {
+      "id": "b_rosepizzeriasf",
+      "name": "Rose Pizzeria"
+    },
+    {
+      "id": "b_absolutevolleyballsanrafael",
+      "name": "Absolute Volleyball Club"
+    },
+    {
+      "id": "b_propercutssanjose",
+      "name": "ProperCuts Barbershop"
+    },
+    {
+      "id": "b_goldendonkatsudublin",
+      "name": "Golden Donkatsu Dublin"
+    },
+    {
+      "id": "b_townbiznesshibachi",
+      "name": "Town Bizness Hibachi"
+    },
+    {
+      "id": "b_phohanoisanjose",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoicupertino",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoipaloalto",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoimilpitas",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoifremont",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoifountainvalley",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoiberkeley",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_phohanoisanfrancisco",
+      "name": "Phở Hà Nội"
+    },
+    {
+      "id": "b_thesessionca",
+      "name": "@thesessionca"
+    },
+    {
+      "id": "b_kyvoraai",
+      "name": "Kyvora AI"
+    },
+    {
+      "id": "b_stgdesignz",
+      "name": "@stgdesignz"
+    },
+    {
+      "id": "b_capturedbysado",
+      "name": "@capturedbysado"
+    },
+    {
+      "id": "b_allieeats",
+      "name": "@allie.eats"
+    },
+    {
+      "id": "b_wthellydanyelly",
+      "name": "@wthellydanyelly"
+    },
+    {
+      "id": "b_thesnobbiefoodie",
+      "name": "@thesnobbiefoodie"
+    },
+    {
+      "id": "b_seekeasyeats",
+      "name": "@seekeasyeats"
+    },
+    {
+      "id": "b_festusfeasts",
+      "name": "@festusfeasts"
+    },
+    {
+      "id": "b_topdog",
+      "name": "top dog"
+    },
+    {
+      "id": "b_larbthaitapas",
+      "name": "Larb Thai Food & Tapas"
+    },
+    {
+      "id": "b_grindcafe707",
+      "name": "The Grind Café"
+    },
+    {
+      "id": "b_petbutlerwalnutcreek",
+      "name": "Pet Butler of Walnut Creek"
+    },
+    {
+      "id": "b_theyardbrentwood",
+      "name": "The Yard"
+    },
+    {
+      "id": "b_jonnysitalianice",
+      "name": "Jonny's Italian Ice"
+    },
+    {
+      "id": "b_sincitypits",
+      "name": "Sin City Pits"
+    },
+    {
+      "id": "b_tequilastaqueria",
+      "name": "Tequila's Taquería"
+    },
+    {
+      "id": "b_jojoshotchicken",
+      "name": "Jojo's Hot Chicken"
+    },
+    {
+      "id": "b_lumpiacompany",
+      "name": "The Lumpia Company"
+    },
+    {
+      "id": "b_bulapies",
+      "name": "Bula Pies Fiji"
+    },
+    {
+      "id": "b_breadwinners",
+      "name": "Bread Winners"
+    },
+    {
+      "id": "b_rainsplates",
+      "name": "Rain's Plates"
+    },
+    {
+      "id": "b_elemonkey",
+      "name": "Elemonkey"
+    },
+    {
+      "id": "b_curio",
+      "name": "Curio"
+    },
+    {
+      "id": "b_poddtg",
+      "name": "POD DTG"
+    },
+    {
+      "id": "b_hybridworkz",
+      "name": "Hybrid Workz"
+    },
+    {
+      "id": "b_paulosausage",
+      "name": "Paulo Sausage Co"
+    },
+    {
+      "id": "b_pippal",
+      "name": "Pippāl"
+    },
+    {
+      "id": "b_glasshouzz",
+      "name": "Glasshouzz"
+    },
+    {
+      "id": "b_poofofalchemy",
+      "name": "Poof of Alchemy"
+    },
+    {
+      "id": "b_allisdogwalking",
+      "name": "Alli's Dog Walking & Petsitting"
+    },
+    {
+      "id": "b_noctilucente",
+      "name": "Noctilucente"
+    },
+    {
+      "id": "b_ricoricotaco",
+      "name": "Rico Rico Taco"
+    },
+    {
+      "id": "b_islafilipino",
+      "name": "Isla Filipino Restaurant"
+    },
+    {
+      "id": "b_jacdreamscapes",
+      "name": "JAC Dreamscapes"
+    },
+    {
+      "id": "b_funcloudevents",
+      "name": "Fun Cloud Events"
+    },
+    {
+      "id": "b_flowersvalley",
+      "name": "The Flowers Valley"
+    },
+    {
+      "id": "b_petalandpebbles",
+      "name": "Petal & Pebbles"
+    },
+    {
+      "id": "b_stansdonutshop",
+      "name": "Stan’s Donut Shop"
+    },
+    {
+      "id": "b_pjsjunkremoval",
+      "name": "PJ’s Junk Removal"
+    },
+    {
+      "id": "b_khaki",
+      "name": "Khaki"
+    },
+    {
+      "id": "b_cambodianstreetfood",
+      "name": "Cambodian Street Food"
+    },
+    {
+      "id": "b_aulounge",
+      "name": "Au Lounge"
+    },
+    {
+      "id": "b_ofieskitchen",
+      "name": "Ofie’s Kitchen"
+    },
+    {
+      "id": "b_hdpartysf",
+      "name": "HD Party SF"
+    },
+    {
+      "id": "b_houseofraha",
+      "name": "House of Raha"
+    },
+    {
+      "id": "b_papiclaryskitchen",
+      "name": "Papi Clary's Kitchen"
+    },
+    {
+      "id": "b_crushedlemonade",
+      "name": "Crushed Handcrafted Lemonade"
+    },
+    {
+      "id": "b_bloomzephyr",
+      "name": "BloomZephyr"
+    },
+    {
+      "id": "b_nolastcallbartending",
+      "name": "NO LAST CALL Bartending"
+    },
+    {
+      "id": "b_heyyogurt",
+      "name": "Hey Yogurt"
+    },
+    {
+      "id": "b_goldenautomuffler",
+      "name": "Golden Auto Muffler & Brake Service"
+    },
+    {
+      "id": "b_affinageboards",
+      "name": "Affinage Boards"
+    },
+    {
+      "id": "b_cleanasere",
+      "name": "Clean Asere Car Detailing"
+    },
+    {
+      "id": "b_doubletakeautospa",
+      "name": "DoubleTake Auto Spa"
+    },
+    {
+      "id": "b_antonioshauling",
+      "name": "Antonio Hauling SF"
+    },
+    {
+      "id": "b_oasiswinelounge",
+      "name": "Oasis Wine Lounge"
+    },
+    {
+      "id": "b_serranoturflandscape",
+      "name": "Serrano Turf Landscape"
+    },
+    {
+      "id": "b_nayagreen",
+      "name": "Naya Green"
+    },
+    {
+      "id": "b_lovethai",
+      "name": "Love Thai Restaurant"
+    },
+    {
+      "id": "b_facetfine",
+      "name": "Facet Fine"
+    },
+    {
+      "id": "b_lyricsborn",
+      "name": "Lyrics Born"
+    },
+    {
+      "id": "b_plo",
+      "name": "P-Lo"
+    },
+    {
+      "id": "b_e40",
+      "name": "E-40"
+    },
+    {
+      "id": "b_grando",
+      "name": "Grand-O"
+    },
+    {
+      "id": "b_pawddle",
+      "name": "Pawddle"
+    },
+    {
+      "id": "b_aglowoutdoorlighting",
+      "name": "Aglow Outdoor Lighting"
+    },
+    {
+      "id": "b_fireslicepizza",
+      "name": "Fire Slice Pizza"
+    },
+    {
+      "id": "b_cryocanine",
+      "name": "Cryo Canine Semen Bank"
+    },
+    {
+      "id": "b_lavishpaws",
+      "name": "Lavish Paws"
+    },
+    {
+      "id": "b_pouraonwheels",
+      "name": "Poura on Wheels"
+    },
+    {
+      "id": "b_milkcloudbakery",
+      "name": "Milk Cloud Bakery"
+    },
+    {
+      "id": "b_mrmhomeservices",
+      "name": "Mr. M Home Services"
+    },
+    {
+      "id": "b_phoshodough",
+      "name": "Phosho Dough"
+    },
+    {
+      "id": "b_karamsf",
+      "name": "Karam Mediterranean Cuisine"
+    },
+    {
+      "id": "b_emporiumsf",
+      "name": "Emporium San Francisco"
+    },
+    {
+      "id": "b_kingswcpizza",
+      "name": "Kings West Coast Pizzeria"
+    },
+    {
+      "id": "b_petersdesigncompany",
+      "name": "Peters Design Company"
+    },
+    {
+      "id": "b_tinywheels",
+      "name": "Tiny Wheels"
+    },
+    {
+      "id": "b_fruitsbyheart",
+      "name": "Fruits Byheart"
+    },
+    {
+      "id": "b_thebubblehouse",
+      "name": "The Bubble House"
+    },
+    {
+      "id": "b_totspotsoftplay",
+      "name": "Tot Spot Soft Play Rentals"
+    },
+    {
+      "id": "b_momentus",
+      "name": "Moment.Us"
+    },
+    {
+      "id": "b_olesiacakestudio",
+      "name": "Olesia Cake Studio"
+    },
+    {
+      "id": "b_glowpaws",
+      "name": "GlowPaws"
+    },
+    {
+      "id": "b_looki",
+      "name": "Looki"
+    },
+    {
+      "id": "b_pupcup",
+      "name": "PupCup"
+    },
+    {
+      "id": "b_drypup",
+      "name": "DryPup"
+    },
+    {
+      "id": "b_puppiepack",
+      "name": "PuppiePack"
+    },
+    {
+      "id": "b_traballosbackyardbbq",
+      "name": "Traballo’s Backyard BBQ"
+    },
+    {
+      "id": "b_eatwithsie",
+      "name": "Eat With Sie"
+    },
+    {
+      "id": "b_griffodistillery",
+      "name": "Griffo Distillery"
+    },
+    {
+      "id": "b_rockincrawfish",
+      "name": "Rockin’ Crawfish"
+    },
+    {
+      "id": "b_eastbaytinting",
+      "name": "East Bay Tinting"
+    },
+    {
+      "id": "b_alfreshko",
+      "name": "Al Freshko"
+    },
+    {
+      "id": "b_lloyddevera",
+      "name": "Lloyd de Vera"
+    },
+    {
+      "id": "b_doughburger",
+      "name": "Dough Burger"
+    },
+    {
+      "id": "b_asianbox",
+      "name": "Asian Box"
+    },
+    {
+      "id": "b_sipsbottleemporium",
+      "name": "SIPS The Bottle Emporium"
+    },
+    {
+      "id": "b_bayareabrewboat",
+      "name": "Bay Area Brew Boat"
+    },
+    {
+      "id": "b_statebirdprovisions",
+      "name": "State Bird Provisions"
+    },
+    {
+      "id": "b_nanacasas",
+      "name": "Nana Casas"
+    },
+    {
+      "id": "b_larryjune",
+      "name": "Larry June"
+    },
+    {
+      "id": "b_midnightorganic",
+      "name": "Midnight Organic"
+    },
+    {
+      "id": "b_nickydiamonds",
+      "name": "Nicky Diamonds"
+    },
+    {
+      "id": "b_diamondsupplyco",
+      "name": "Diamond Supply Co"
+    },
+    {
+      "id": "b_showbanga",
+      "name": "Show Banga"
+    },
+    {
+      "id": "b_housingauthority",
+      "name": "Housing Authority"
+    },
+    {
+      "id": "b_iamsu",
+      "name": "IAMSU!"
+    },
+    {
+      "id": "b_beastmode",
+      "name": "BEASTMODE"
+    },
+    {
+      "id": "b_beatdropfitness",
+      "name": "Beat Drop Fitness"
+    },
+    {
+      "id": "b_foursmedia",
+      "name": "Fours Media"
+    },
+    {
+      "id": "b_sinmexautobody",
+      "name": "SINMEX Auto Body"
+    },
+    {
+      "id": "b_palacegames",
+      "name": "Palace Games"
+    },
+    {
+      "id": "b_crayone",
+      "name": "Crayone"
+    },
+    {
+      "id": "b_transformfxfitness",
+      "name": "Transform FX Fitness"
+    },
+    {
+      "id": "b_crossfitsweatshop",
+      "name": "Crossfit Sweat Shop"
+    },
+    {
+      "id": "b_plarkplayspace",
+      "name": "Plark PlaySpace"
+    },
+    {
+      "id": "b_audioaccessoriesmobile",
+      "name": "Audio Accessories Mobile"
+    },
+    {
+      "id": "b_jackiesplace",
+      "name": "Jackie's Place"
+    },
+    {
+      "id": "b_citybachi",
+      "name": "CityBachi"
+    },
+    {
+      "id": "b_sugarmurals",
+      "name": "SUGARMURALS"
+    },
+    {
+      "id": "b_richierich",
+      "name": "Richie Rich"
+    },
+    {
+      "id": "b_mbnel",
+      "name": "MBNel"
+    },
+    {
+      "id": "b_homeofchickenandwaffles",
+      "name": "Home of Chicken and Waffles"
+    },
+    {
+      "id": "b_pacificpetgrooming",
+      "name": "Pacific Pet Grooming"
+    },
+    {
+      "id": "b_mcar",
+      "name": "Mcar"
+    },
+    {
+      "id": "b_underdogscantina",
+      "name": "Underdogs Cantina"
+    },
+    {
+      "id": "b_biryaniz",
+      "name": "Biryaniz"
+    },
+    {
+      "id": "b_thesweetspot",
+      "name": "The Sweet Spot"
+    },
+    {
+      "id": "b_gyroking",
+      "name": "Gyro King"
+    },
+    {
+      "id": "b_baymemoriesbooth",
+      "name": "Bay Memories Booth"
+    },
+    {
+      "id": "b_tayho",
+      "name": "Tây Hồ"
+    },
+    {
+      "id": "b_ruaymitr",
+      "name": "Ruay Mitr"
+    },
+    {
+      "id": "b_kungfumala",
+      "name": "Kung Fu Mala"
+    },
+    {
+      "id": "b_djlex",
+      "name": "DJ Lex"
+    },
+    {
+      "id": "b_pamilya",
+      "name": "Pamilya"
+    },
+    {
+      "id": "b_firebunz",
+      "name": "Firebunz"
+    },
+    {
+      "id": "b_valenails",
+      "name": "VALE NAILS"
+    },
+    {
+      "id": "b_beautybybellez",
+      "name": "Beauty by Bellez"
+    },
+    {
+      "id": "b_pawsnug",
+      "name": "PawSnug"
+    },
+    {
+      "id": "b_theyappyhourclub",
+      "name": "The Yappy Hour Club"
+    },
+    {
+      "id": "b_pinkonion",
+      "name": "Pink Onion"
+    },
+    {
+      "id": "b_alorasocial",
+      "name": "Alora Social"
+    },
+    {
+      "id": "b_napapedalcrusher",
+      "name": "Napa Pedal Crusher"
+    },
+    {
+      "id": "b_autodesignpro",
+      "name": "AUTO DESIGN PRO"
+    },
+    {
+      "id": "b_precisionshine",
+      "name": "Precision Shine Detailing"
+    },
+    {
+      "id": "b_carabao",
+      "name": "Carabao"
+    },
+    {
+      "id": "b_ellistonvineyards",
+      "name": "Elliston Vineyards"
+    },
+    {
+      "id": "b_brunchandbloom",
+      "name": "Brunch & Bloom"
+    },
+    {
+      "id": "b_johnnyboi",
+      "name": "Johnny Boi Smash Burgers"
+    },
+    {
+      "id": "b_butterpecan",
+      "name": "Butter Pecan Bakeshop"
+    },
+    {
+      "id": "b_delahcoffee",
+      "name": "Delah Coffee House"
+    },
+    {
+      "id": "b_portofperiperisf",
+      "name": "The Port of Peri Peri"
+    },
+    {
+      "id": "b_weasy",
+      "name": "Weasy"
+    },
+    {
+      "id": "b_seatmate",
+      "name": "SeatMate"
+    },
+    {
+      "id": "b_houndsy",
+      "name": "Houndsy"
+    },
+    {
+      "id": "b_thecompanybarber",
+      "name": "The Company Barber"
+    },
+    {
+      "id": "b_thecompanybarberunioncity",
+      "name": "The Company Barber"
+    },
+    {
+      "id": "b_screenking",
+      "name": "Screen King"
+    },
+    {
+      "id": "b_sweetestsound",
+      "name": "Sweetest Sound"
+    },
+    {
+      "id": "b_coba",
+      "name": "Cô Ba"
+    },
+    {
+      "id": "b_persiankabobs",
+      "name": "Persian Kabobs"
+    },
+    {
+      "id": "b_eatmorepho",
+      "name": "Eat More Pho"
+    },
+    {
+      "id": "b_hellagoodburger",
+      "name": "HELLA GOOD BURGER"
+    },
+    {
+      "id": "b_eastbaybuffet",
+      "name": "East Bay Buffet"
+    },
+    {
+      "id": "b_dingdongtogo",
+      "name": "DingDongtogo"
+    },
+    {
+      "id": "b_sharescan",
+      "name": "Share & Scan"
+    },
+    {
+      "id": "b_lolcatering",
+      "name": "LOL Catering"
+    },
+    {
+      "id": "b_hotboyschicken",
+      "name": "World Famous Hotboys"
+    },
+    {
+      "id": "b_bakedblooms",
+      "name": "Baked Blooms"
+    },
+    {
+      "id": "b_wildforkfoods",
+      "name": "Wild Fork Foods"
+    },
+    {
+      "id": "b_veganmob",
+      "name": "Vegan Mob"
+    },
+    {
+      "id": "b_bossburgers",
+      "name": "Boss.Burgers"
+    },
+    {
+      "id": "b_gaovietkitchen",
+      "name": "Gao Viet Kitchen"
+    },
+    {
+      "id": "b_beastyh20",
+      "name": "Beasty H20 Co"
+    },
+    {
+      "id": "b_winkydinkydogs",
+      "name": "Winky Dinky Dogs"
+    },
+    {
+      "id": "b_boba",
+      "name": "Boba"
+    },
+    {
+      "id": "b_masa",
+      "name": "Masa Tamales & Taqueria"
+    },
+    {
+      "id": "b_wafflescream",
+      "name": "Waffles & Cream"
+    },
+    {
+      "id": "b_highscores",
+      "name": "High Scores Arcade"
+    }
+  ],
+  "baselinePlacements": {
+    "beasty-goods-0": "b_midnighttheories",
+    "beasty-goods-1": "b_topdog",
+    "beasty-goods-2": "b_bulapies",
+    "beasty-goods-3": "b_breadwinners",
+    "beasty-goods-4": "b_winkydinkydogs",
+    "beasty-goods-5": "b_rainsplates",
+    "beasty-goods-6": "b_downtownbbq",
+    "beasty-goods-7": "b_glasshouzz",
+    "beasty-goods-8": "b_pippal",
+    "beasty-goods-9": "b_cravingz",
+    "beasty-goods-10": "b_belly",
+    "beasty-goods-11": "b_lumpiacompany",
+    "beasty-goods-12": "b_hotboyschicken",
+    "beasty-goods-15": "b_butterpecan",
+    "beasty-goods-16": "b_lovelysburgerssf",
+    "beasty-goods-17": "b_chefjeffssmashburger",
+    "beasty-goods-18": "b_gaovietkitchen",
+    "beasty-goods-20": "b_meadowlarkdairy",
+    "beasty-goods-21": "b_masa",
+    "beasty-goods-22": "b_harumiayce",
+    "beasty-services-0": "b_dingdongtogo",
+    "beasty-services-1": "b_thebeaudegabymaine",
+    "beasty-services-2": "b_luckybarbershop",
+    "beasty-services-3": "b_poddtg",
+    "beasty-services-4": "b_bustdowncobeasty",
+    "beasty-services-5": "b_paintgo",
+    "beasty-services-6": "b_ubreakifix",
+    "beasty-services-7": "b_marinabaymedia",
+    "beasty-services-8": "b_eat",
+    "beasty-services-9": "b_germanautosport",
+    "beasty-services-10": "b_bobvalentineselectric",
+    "beasty-services-11": "b_bayareacharters",
+    "beasty-services-12": "b_rocknjump",
+    "beasty-services-13": "b_djrevroc",
+    "beasty-services-14": "b_petshowgrooming",
+    "beasty-services-15": "b_vendingenterprise",
+    "beasty-services-16": "b_rosebarycarcare",
+    "beasty-services-17": "b_highscores",
+    "beasty-services-18": "b_lolcatering",
+    "beasty-services-19": "b_nolastcallbartending",
+    "beasty-services-20": "b_winterwhitecarwash",
+    "beasty-services-21": "b_frank2artistic",
+    "beasty-services-22": "b_ezraluzjohns",
+    "beasty-services-23": "b_rywire",
+    "las-vegas-goods-17": "b_sincitypits",
+    "livermore-goods-1": "b_tequilastaqueria",
+    "livermore-goods-5": "b_glasshouzz",
+    "san-jose-goods-8": "b_jojoshotchicken",
+    "brentwood-goods-0": "b_theyardbrentwood",
+    "sunnyvale-goods-11": "b_jonnysitalianice",
+    "dublin-goods-3": "b_pippal",
+    "vallejo-goods-13": "b_grindcafe707",
+    "brentwood-services-7": "b_jdiautodetailing",
+    "berkeley-services-7": "b_jnwdetailing",
+    "concord-services-7": "b_diabloautodetailing",
+    "berkeley-services-19": "b_perfectnineevents",
+    "brentwood-goods-2": "b_xnoodledumpling",
+    "napa-goods-12": "b_themodelbakery",
+    "el-cerrito-goods-2": "b_larbthaitapas",
+    "el-cerrito-services-8": "b_ubreakifix",
+    "petaluma-services-12": "b_townfuturistmedia",
+    "san-mateo-goods-2": "b_phodenguyen",
+    "milpitas-goods-2": "b_intlkitchen",
+    "walnut-creek-goods-10": "b_maymayscravings",
+    "vacaville-goods-6": "b_banhmixpress",
+    "vacaville-goods-12": "b_emyscannoli",
+    "benicia-goods-0": "b_beniciagrill",
+    "crockett-goods-19": "b_majesticboutique",
+    "oakland-goods-14": "b_suptealab",
+    "san-francisco-goods-2": "b_houseofthai",
+    "san-francisco-goods-11": "b_pollyann",
+    "san-francisco-goods-12": "b_udessertstory",
+    "san-leandro-goods-4": "b_kaisendon",
+    "san-leandro-goods-9": "b_lavanta",
+    "berkeley-goods-1": "b_soltaqueria",
+    "benicia-goods-12": "b_onehousebakery",
+    "foster-city-goods-6": "b_sandwichmonkey",
+    "oakland-goods-10": "b_senorsisig",
+    "oakland-goods-13": "b_jollycafe",
+    "oakland-goods-16": "b_donutfarm",
+    "walnut-creek-goods-11": "b_milkyflakes",
+    "martinez-goods-14": "b_bobertea",
+    "redwood-city-goods-5": "b_pizzeriacardamomo",
+    "danville-goods-5": "b_greatimpasta",
+    "brentwood-goods-3": "b_chutneys",
+    "concord-goods-12": "b_frenchspot",
+    "walnut-creek-services-15": "b_joybound",
+    "san-ramon-services-2": "b_bodylinesdayspa",
+    "pleasanton-services-0": "b_solasalons",
+    "fremont-services-5": "b_hybridworkz",
+    "san-rafael-goods-12": "b_bakedblooms",
+    "richmond-goods-11": "b_wafflescream",
+    "richmond-goods-14": "b_boba",
+    "philadelphia-services-14": "b_allisdogwalking",
+    "san-pablo-services-0": "b_magicjuans",
+    "beasty-services2-5": "b_noctilucente",
+    "beasty-services2-6": "b_curio",
+    "san-francisco-goods-5": "b_stellapastry",
+    "san-francisco-services-12": "b_isnappedphotobooths",
+    "beasty-services2-7": "b_jenuinefitness",
+    "benicia-goods-14": "b_quicklybenicia",
+    "richmond-goods-2": "b_salathai",
+    "brentwood-goods-10": "b_houseofsilog",
+    "beasty-goods2-4": "b_smashburgersbros",
+    "beasty-services2-8": "b_interchiro",
+    "sacramento-goods-23": "b_1upretro",
+    "berkeley-goods-11": "b_scoopnchill",
+    "oakland-goods-1": "b_alpastorpapi",
+    "richmond-services-19": "b_bayareacharters",
+    "concord-services-19": "b_rocknjump",
+    "vallejo-services-7": "b_paintgo",
+    "beasty-goods2-0": "b_santaclarasuperkitchen",
+    "beasty-goods2-1": "b_willybillysmokedmeat",
+    "beasty-goods2-2": "b_redchili",
+    "beasty-goods2-3": "b_banhmioven",
+    "beasty-services2-1": "b_adzeela",
+    "beasty-services2-2": "b_allyvirtual",
+    "beasty-services2-3": "b_eaglepetgrooming",
+    "beasty-services2-4": "b_rocketmctow",
+    "benicia-goods2-0": "b_chiquoandeva",
+    "concord-goods2-0": "b_cajuncrackn",
+    "san-jose-services-19": "b_bloomballoon",
+    "san-francisco-goods-8": "b_brasabros",
+    "san-francisco-services2-0": "b_yesmoment",
+    "pleasanton-goods-5": "b_gayninetiespizza",
+    "san-francisco-services-19": "b_bayareacharters",
+    "el-cerrito-services-6": "b_hightechcaraudio",
+    "concord-goods-14": "b_breaktimetea",
+    "vallejo-goods-0": "b_babsdeltadiner",
+    "antioch-goods-6": "b_simplysoups",
+    "antioch-goods-0": "b_macsoldhouse",
+    "oakland-goods-0": "b_cafenoiroak",
+    "oakland-goods-5": "b_philomenapizza",
+    "oakland-services-19": "b_jumpandroll",
+    "oakland-goods-8": "b_luckythreeseven",
+    "beasty-online-12": "b_goldenstateballerz",
+    "beasty-services2-9": "b_unitedcurbpainting",
+    "beasty-services2-10": "b_classycanines",
+    "castro-valley-services-14": "b_classycanines",
+    "pleasanton-services-23": "b_oneillssignature",
+    "walnut-creek-services-4": "b_trufusionwalnutcreek",
+    "santa-rosa-services-19": "b_camachospartyrentals",
+    "fairfield-goods-0": "b_boucajun",
+    "milpitas-services-19": "b_bloomballoon",
+    "brentwood-services-4": "b_yogasixbrentwood",
+    "beasty-online-11": "b_macstalgia",
+    "berkeley-services-14": "b_healthyspotberkeley",
+    "san-mateo-goods-5": "b_barrelbistro",
+    "oakley-services-20": "b_bayareapowerwash",
+    "newark-services-5": "b_almasautotires",
+    "brentwood-services-14": "b_gofrette",
+    "beasty-goods2-5": "b_fornopiombo",
+    "american-canyon-goods-5": "b_fornopiombo",
+    "concord-services-4": "b_urbanair",
+    "petaluma-services-4": "b_playland707",
+    "brentwood-goods-15": "b_chipcookies",
+    "brentwood-goods2-1": "b_eightacres",
+    "antioch-goods2-0": "b_laslomasribpalace",
+    "lafayette-goods-0": "b_kababburger",
+    "pinole-goods-10": "b_sweetpipers",
+    "pleasant-hill-goods-0": "b_royaleeatery",
+    "san-ramon-goods-0": "b_onehousebistro",
+    "dublin-goods-12": "b_mimischocolates",
+    "san-francisco-goods-13": "b_thefarmacy",
+    "san-ramon-goods-1": "b_ricoricotaco",
+    "san-ramon-goods-3": "b_khaki",
+    "pleasant-hill-goods-10": "b_islafilipino",
+    "san-francisco-services-21": "b_jacdreamscapes",
+    "concord-services-13": "b_flowersvalley",
+    "santa-rosa-services-17": "b_funcloudevents",
+    "san-francisco-services-13": "b_petalandpebbles",
+    "santa-clara-goods-16": "b_stansdonutshop",
+    "oakland-goods-2": "b_cambodianstreetfood",
+    "fremont-goods-2": "b_houseofraha",
+    "concord-goods-0": "b_ofieskitchen",
+    "oakland-goods2-0": "b_aulounge",
+    "san-francisco-goods2-0": "b_hdpartysf",
+    "walnut-creek-services2-0": "b_petbutlerwalnutcreek",
+    "fairfield-services2-0": "b_pjsjunkremoval",
+    "beasty-services2-0": "b_happybaypaws",
+    "pleasant-hill-goods2-0": "b_thehangoutbreakfast",
+    "walnut-creek-goods2-0": "b_thehangoutbreakfast",
+    "concord-goods-10": "b_papiclaryskitchen",
+    "san-jose-goods-14": "b_crushedlemonade",
+    "santa-clara-goods-12": "b_bloomzephyr",
+    "beasty-services2-11": "b_andrewshinlaw",
+    "san-mateo-goods-11": "b_heyyogurt",
+    "san-francisco-services-5": "b_goldenautomuffler",
+    "antioch-services-7": "b_cleanasere",
+    "fremont-services-7": "b_doubletakeautospa",
+    "pleasanton-goods-9": "b_oasiswinelounge",
+    "vallejo-services2-0": "b_antonioshauling",
+    "san-francisco-services2-1": "b_affinageboards",
+    "antioch-services-23": "b_serranoturflandscape",
+    "beasty-individuals-0": "b_nayagreen",
+    "concord-goods-2": "b_lovethai",
+    "beasty-online-0": "b_facetfine",
+    "beasty-individuals-1": "b_lyricsborn",
+    "beasty-individuals-2": "b_plo",
+    "beasty-online-17": "b_pawddle",
+    "pleasanton-services-22": "b_aglowoutdoorlighting",
+    "concord-goods-5": "b_fireslicepizza",
+    "las-vegas-services-15": "b_cryocanine",
+    "beasty-online-9": "b_lavishpaws",
+    "beasty-services2-12": "b_pouraonwheels",
+    "berkeley-goods-12": "b_milkcloudbakery",
+    "beasty-services2-13": "b_mrmhomeservices",
+    "beasty-goods2-6": "b_phoshodough",
+    "san-francisco-goods-9": "b_karamsf",
+    "san-francisco-services2-2": "b_emporiumsf",
+    "daly-city-goods-5": "b_kingswcpizza",
+    "beasty-online-19": "b_petersdesigncompany",
+    "beasty-online-18": "b_tinywheels",
+    "beasty-online-13": "b_fruitsbyheart",
+    "san-francisco-services2-3": "b_thebubblehouse",
+    "san-francisco-services2-4": "b_totspotsoftplay",
+    "san-francisco-services2-5": "b_momentus",
+    "san-francisco-services2-6": "b_olesiacakestudio",
+    "beasty-online-14": "b_glowpaws",
+    "beasty-online-15": "b_drypup",
+    "beasty-online-16": "b_puppiepack",
+    "pittsburg-goods-6": "b_paulosausage",
+    "benicia-goods2-1": "b_traballosbackyardbbq",
+    "beasty-individuals-3": "b_eatwithsie",
+    "petaluma-goods-0": "b_griffodistillery",
+    "san-pablo-goods-0": "b_rockincrawfish",
+    "oakley-services-7": "b_eastbaytinting",
+    "beasty-individuals-4": "b_alfreshko",
+    "beasty-individuals-5": "b_lloyddevera",
+    "san-jose-goods-0": "b_doughburger",
+    "san-francisco-goods2-1": "b_asianbox",
+    "benicia-goods2-2": "b_sipsbottleemporium",
+    "alameda-services-0": "b_bayareabrewboat",
+    "san-francisco-goods2-2": "b_statebirdprovisions",
+    "beasty-individuals-6": "b_larryjune",
+    "beasty-online-1": "b_midnightorganic",
+    "beasty-individuals-7": "b_nickydiamonds",
+    "beasty-online-2": "b_diamondsupplyco",
+    "beasty-individuals-8": "b_showbanga",
+    "beasty-individuals-9": "b_iamsu",
+    "beasty-individuals-10": "b_beastmode",
+    "san-francisco-services-4": "b_beatdropfitness",
+    "rohnert-park-services-12": "b_foursmedia",
+    "oakland-services2-0": "b_sinmexautobody",
+    "san-francisco-services2-7": "b_palacegames",
+    "san-francisco-services2-8": "b_sugarmurals",
+    "concord-services2-0": "b_transformfxfitness",
+    "walnut-creek-services2-1": "b_crossfitsweatshop",
+    "richmond-services2-0": "b_plarkplayspace",
+    "beasty-services2-14": "b_audioaccessoriesmobile",
+    "beasty-goods2-7": "b_crayone",
+    "beasty-goods2-8": "b_citybachi",
+    "san-jose-goods2-0": "b_jackiesplace",
+    "beasty-individuals-11": "b_richierich",
+    "beasty-individuals-12": "b_mbnel",
+    "beasty-services2-15": "b_rywire",
+    "beasty-services2-16": "b_pacificpetgrooming",
+    "san-bruno-services-7": "b_mcar",
+    "san-francisco-goods-1": "b_underdogscantina",
+    "dublin-goods2-0": "b_biryaniz",
+    "beasty-goods2-9": "b_poofofalchemy",
+    "san-jose-services-6": "b_audioaccessoriesmobile",
+    "san-bruno-services-14": "b_pacificpetgrooming",
+    "beasty-individuals-13": "b_crayone",
+    "beasty-goods2-10": "b_kingswcpizza",
+    "walnut-creek-goods2-1": "b_thesweetspot",
+    "san-francisco-goods2-3": "b_gyroking",
+    "beasty-services2-17": "b_baymemoriesbooth",
+    "oakland-goods2-1": "b_tayho",
+    "oakland-goods2-2": "b_kungfumala",
+    "dublin-goods2-1": "b_baithak",
+    "san-francisco-goods2-4": "b_ruaymitr",
+    "beasty-individuals-14": "b_djlex",
+    "redwood-city-goods-10": "b_pamilya",
+    "union-city-goods-0": "b_firebunz",
+    "belmont-services-1": "b_valenails",
+    "beasty-services2-18": "b_beautybybellez",
+    "beasty-goods2-11": "b_pawsnug",
+    "san-jose-services-14": "b_theyappyhourclub",
+    "san-francisco-goods2-5": "b_pinkonion",
+    "san-ramon-goods-9": "b_alorasocial",
+    "napa-services-0": "b_napapedalcrusher",
+    "richmond-goods-0": "b_johnnyboi",
+    "napa-goods-10": "b_carabao",
+    "brentwood-goods-13": "b_brunchandbloom",
+    "pittsburg-services-7": "b_autodesignpro",
+    "san-ramon-services-7": "b_precisionshine",
+    "sunol-services-0": "b_ellistonvineyards",
+    "pinole-goods-12": "b_butterpecan",
+    "emeryville-goods-12": "b_butterpecan",
+    "pleasant-hill-goods-12": "b_butterpecan",
+    "fairfield-goods-12": "b_butterpecan",
+    "vallejo-goods-12": "b_butterpecan",
+    "hayward-goods-12": "b_butterpecan",
+    "antioch-goods-12": "b_butterpecan",
+    "oakland-goods2-3": "b_delahcoffee",
+    "san-francisco-goods2-6": "b_portofperiperisf",
+    "berkeley-goods2-0": "b_udessertstory",
+    "beasty-online-20": "b_weasy",
+    "beasty-online-21": "b_seatmate",
+    "beasty-online-22": "b_houndsy",
+    "fremont-services-0": "b_thecompanybarber",
+    "union-city-services-0": "b_thecompanybarberunioncity",
+    "brentwood-services-22": "b_screenking",
+    "san-francisco-goods2-7": "b_sweetestsound",
+    "san-jose-goods-13": "b_coba",
+    "cupertino-goods-9": "b_persiankabobs",
+    "sunnyvale-goods-2": "b_eatmorepho",
+    "san-jose-goods2-1": "b_hellagoodburger",
+    "alameda-goods-0": "b_shakashack",
+    "concord-goods-7": "b_mrsramen",
+    "antioch-services-22": "b_baysidefencing",
+    "san-ramon-goods-5": "b_empirestatepizza",
+    "san-lorenzo-goods-2": "b_rubenhibachigrill",
+    "san-francisco-goods2-8": "b_loveburn",
+    "alamo-services-2": "b_thetoxalamo",
+    "orinda-services-0": "b_ethosofcalifornia",
+    "beasty-online-23": "b_overlyhiphop",
+    "fairfield-goods-1": "b_gourmetburritos",
+    "beasty-individuals-15": "b_nanacasas",
+    "pleasanton-goods-1": "b_elranchogrande",
+    "antioch-goods2-1": "b_dadsbbq",
+    "beasty-goods-14": "b_jazzbraids",
+    "albany-goods-14": "b_tonysstyle",
+    "san-jose-goods-12": "b_caitlynssweets",
+    "antioch-services-21": "b_armentalandscape",
+    "beasty-goods2-12": "b_walkfree",
+    "santa-clara-services-14": "b_lushspaw",
+    "san-jose-services2-0": "b_lushspaw",
+    "san-jose-services2-1": "b_bayareaeventlights",
+    "daly-city-goods-10": "b_russfamkitchen",
+    "pittsburg-goods-3": "b_pijjaparadisepittsburg",
+    "livermore-goods-3": "b_pijjaparadiselivermore",
+    "union-city-goods-8": "b_chikindripunioncity",
+    "san-jose-goods2-2": "b_chikindripsanjose",
+    "oakland-services2-1": "b_calipartybus",
+    "newark-goods-2": "b_phonationnewark",
+    "alameda-goods-2": "b_phonationalameda",
+    "san-francisco-goods2-9": "b_phonationsf",
+    "pittsburg-goods-8": "b_houseofwings",
+    "beasty-services2-19": "b_tastinpeachy",
+    "redwood-city-goods-4": "b_sushinaloa",
+    "san-jose-goods-2": "b_kusanuyghurcuisinesanjose",
+    "milpitas-goods2-0": "b_kusanbazaarmilpitas",
+    "mountain-view-goods-2": "b_kusanbazaarmountainview",
+    "walnut-creek-services-1": "b_varnishnailboutiquewalnutcreek",
+    "antioch-services-1": "b_varnishnailboutiqueantioch",
+    "berkeley-services-4": "b_bodyrokberkeley",
+    "alamo-services-4": "b_bodyrokalamo",
+    "oakland-services-4": "b_bodyrokoakland",
+    "alameda-goods2-0": "b_bhanmaevane",
+    "union-city-services2-0": "b_jollyrogerland",
+    "walnut-creek-goods2-2": "b_paradanewperu",
+    "beasty-goods2-13": "b_goodcompenny",
+    "livermore-goods-14": "b_bobaclub",
+    "alameda-goods-12": "b_doodlecakes",
+    "walnut-creek-goods-15": "b_chipcookies",
+    "dublin-goods-15": "b_chipcookies",
+    "beasty-individuals-16": "b_housingauthority",
+    "beasty-individuals-17": "b_e40",
+    "beasty-individuals-18": "b_grando",
+    "vacaville-goods-4": "b_yosushivacaville",
+    "alameda-goods2-1": "b_moxiesteakhouse",
+    "brisbane-goods-0": "b_7milehouse",
+    "oakland-goods-7": "b_belly",
+    "san-jose-goods-5": "b_wowmiapizza",
+    "brentwood-goods-6": "b_saladmakers",
+    "petaluma-goods2-0": "b_streetsocial",
+    "concord-goods2-1": "b_alivekitchen",
+    "walnut-creek-goods2-3": "b_alivekitchen",
+    "lafayette-goods2-0": "b_alivekitchen",
+    "livermore-services-14": "b_bratpakdogkamp",
+    "martinez-goods-5": "b_sliceitpizza",
+    "berkeley-goods-0": "b_doghausberkeley",
+    "daly-city-goods-8": "b_piwings",
+    "oakland-goods2-4": "b_pizzaponte",
+    "beasty-services2-20": "b_claireandersonhomes",
+    "beasty-services2-21": "b_drcomicsmrgames",
+    "beasty-services2-22": "b_romantraileriron",
+    "beasty-services2-23": "b_georgeprolandscape",
+    "beasty-services2-24": "b_1850properties",
+    "san-jose-services2-3": "b_abvethebasics",
+    "pittsburg-services-3": "b_blackcrowntattoo",
+    "redwood-city-goods-11": "b_cravingz",
+    "beasty-online-3": "b_siacollective",
+    "fremont-goods-0": "b_billyroysburgerco",
+    "fremont-goods-13": "b_skilletzcafe",
+    "hayward-services-7": "b_garageworks",
+    "newark-goods-13": "b_thebreezecafe",
+    "union-city-goods-10": "b_macsbyicky",
+    "union-city-goods-2": "b_theune",
+    "fremont-goods2-0": "b_theyakitoribar",
+    "san-leandro-goods-13": "b_goldbeansanleandro",
+    "pleasanton-goods-13": "b_goldbeanpleasanton",
+    "berkeley-goods2-2": "b_goldbeandurant",
+    "berkeley-goods2-3": "b_goldbeanhearst",
+    "oakland-goods2-5": "b_daughterthai",
+    "pinole-goods-1": "b_mexihibachi",
+    "san-francisco-goods2-10": "b_gumbosocial",
+    "beasty-online-6": "b_looki",
+    "san-francisco-goods-4": "b_sushiuma",
+    "newark-goods2-0": "b_acekingbbq",
+    "san-francisco-goods2-11": "b_harborviewsf",
+    "palo-alto-goods2-0": "b_theseabyash",
+    "san-bruno-goods-1": "b_marymar",
+    "san-lorenzo-goods-1": "b_tacosmireynitasanlorenzo",
+    "hayward-goods-1": "b_tacosmireynitahayward",
+    "san-jose-goods-1": "b_tacosmireynitasanjose",
+    "fremont-goods-1": "b_tacosmireynitafremont",
+    "san-francisco-goods2-12": "b_turtletower",
+    "pleasant-hill-goods-7": "b_plazacafepleasanthill",
+    "san-jose-services-3": "b_honepiercing",
+    "berkeley-services2-0": "b_cyclebarberkeley",
+    "san-ramon-services-4": "b_rumbleboxingsanramon",
+    "belmont-goods-4": "b_trufflepokebelmont",
+    "burlingame-goods-4": "b_trufflepokeburlingame",
+    "south-san-francisco-goods-4": "b_trufflepokessf",
+    "san-mateo-goods-4": "b_trufflepokesanmateo",
+    "richmond-goods2-0": "b_balompie",
+    "san-jose-goods2-3": "b_paperplanesj",
+    "berkeley-services2-1": "b_benchmarkclimbingberkeley",
+    "san-francisco-services2-9": "b_benchmarkclimbingsf",
+    "san-francisco-goods-6": "b_deliboard",
+    "richmond-goods2-1": "b_brazucaacai",
+    "san-rafael-services-4": "b_gravityvaultmarin",
+    "lafayette-goods2-1": "b_batchandbrine",
+    "beasty-online-4": "b_pupcup",
+    "walnut-creek-goods-2": "b_thaithanioishi",
+    "milpitas-goods-13": "b_brewandbanhmi",
+    "oakland-goods-4": "b_delageoakland",
+    "livermore-goods2-0": "b_tajmahallivermore",
+    "san-francisco-goods2-13": "b_shodaisf",
+    "san-leandro-goods-14": "b_thirsteasanleandro",
+    "san-francisco-goods2-14": "b_zandypekingduck",
+    "oakland-services-0": "b_bibosalon",
+    "oakland-goods2-6": "b_pizzadeliandgrill",
+    "berkeley-goods2-1": "b_calburger",
+    "brentwood-goods2-0": "b_roasteateryco",
+    "brentwood-goods2-2": "b_dimsumbasket",
+    "brentwood-services2-0": "b_brentwoodrehabpt",
+    "san-rafael-goods-11": "b_doublerainbowcafe",
+    "san-francisco-services2-10": "b_studiofloras",
+    "petaluma-goods-6": "b_thelocalpetaluma",
+    "berkeley-goods-9": "b_milelimitberkeley",
+    "livermore-goods-11": "b_dumontlivermore",
+    "oakland-goods-12": "b_realcutiepies",
+    "daly-city-goods-2": "b_kankiin",
+    "san-francisco-goods-0": "b_lovelysburgerssf",
+    "oakland-goods2-7": "b_lovelysburgersoakland",
+    "san-francisco-goods-16": "b_whackdonuts",
+    "san-francisco-goods2-15": "b_goldengatemarketdeli",
+    "san-francisco-goods2-16": "b_mochicasf",
+    "dublin-goods-1": "b_taqueriaaztecadublin",
+    "dublin-goods-2": "b_eastbaybuffet",
+    "oakland-goods2-8": "b_lachicharronadacolombiana",
+    "richmond-goods-5": "b_goldpiepizza",
+    "oakland-goods2-9": "b_tadaramen",
+    "san-francisco-goods2-17": "b_barsprezzatura",
+    "san-jose-goods2-4": "b_poorhousebistro",
+    "albany-goods-4": "b_sakanasushialbany",
+    "emeryville-goods-5": "b_pizzagallery",
+    "napa-goods-0": "b_napayard",
+    "san-jose-goods2-5": "b_mimosaswillowglen",
+    "danville-services2-0": "b_dreamlandartplay",
+    "san-bruno-goods2-0": "b_cajunbowlsanbruno",
+    "san-mateo-goods2-0": "b_cajunbowlsanmateo",
+    "walnut-creek-goods-4": "b_okepokewalnutcreek",
+    "san-rafael-goods-13": "b_sanaacafe",
+    "alameda-goods-5": "b_pastapelican",
+    "sunnyvale-goods-14": "b_almadessert",
+    "albany-goods2-0": "b_brezoalbany",
+    "walnut-creek-goods-1": "b_tacoswalnutcreek",
+    "san-leandro-goods-2": "b_yummyyummyhibachisanleandro",
+    "oakland-goods2-12": "b_yummyyummyhibachi73rd",
+    "oakland-goods2-13": "b_yummyyummyhibachipiedmont",
+    "foster-city-goods2-0": "b_toastintown",
+    "antioch-services-4": "b_barrebeat",
+    "oakland-goods2-10": "b_nossooakland",
+    "san-leandro-goods-1": "b_elportalsanleandro",
+    "san-francisco-goods2-18": "b_kitavasf",
+    "oakland-goods2-11": "b_kitavaoakland",
+    "albany-goods2-1": "b_kitavaalbany",
+    "walnut-creek-goods2-4": "b_kitavawalnutcreek",
+    "union-city-services-4": "b_betweentheplants",
+    "vacaville-goods2-0": "b_pampasvacaville",
+    "walnut-creek-services2-2": "b_essencebjj",
+    "newark-goods-12": "b_dripdesserthouse",
+    "san-francisco-services-16": "b_regentthaimassage",
+    "san-francisco-goods2-19": "b_holbrookhouse",
+    "santa-rosa-goods-7": "b_seoultotokyokitchen",
+    "san-jose-services2-2": "b_bustdownco",
+    "newark-services-0": "b_jazzbraids",
+    "concord-services-0": "b_caballerosbarberlounge",
+    "antioch-services-19": "b_moaeventsrentals",
+    "south-san-francisco-goods-2": "b_hlpeninsulasouthsf",
+    "burlingame-goods-2": "b_hlpeninsulapearl",
+    "castro-valley-goods-2": "b_hlpeninsulacastrovalley",
+    "burlingame-goods2-0": "b_hlpeninsulagarden",
+    "milpitas-goods2-1": "b_hlpeninsulamilpitas",
+    "santa-clara-goods-9": "b_thehalalcartel",
+    "antioch-goods2-2": "b_thecozyoven",
+    "beasty-goods-13": "b_thelocalpetaluma",
+    "beasty-goods2-14": "b_sincitypits",
+    "beasty-goods2-15": "b_tonysstyle",
+    "beasty-goods2-16": "b_luckythreeseven",
+    "berkeley-goods-13": "b_penelopescoffeeberkeley",
+    "san-francisco-goods2-20": "b_penelopescoffeesf",
+    "foster-city-goods-13": "b_penelopescoffeefostercity",
+    "san-mateo-goods-13": "b_penelopescoffeesanmateo",
+    "daly-city-goods-13": "b_penelopescoffeedalycity",
+    "san-francisco-goods2-21": "b_catchsf",
+    "san-francisco-goods2-22": "b_yanksing",
+    "livermore-goods-9": "b_demitristaverna",
+    "dublin-goods-8": "b_cheriessouthernkitchen",
+    "oakley-services-14": "b_woofgangbakeryoakley",
+    "berkeley-services-3": "b_oldcrowtattoo",
+    "san-francisco-services-3": "b_rakanitattoo",
+    "fremont-goods-7": "b_hungrycow",
+    "san-francisco-goods2-23": "b_longbridgepizza",
+    "burlingame-goods-0": "b_maverickjacksburlingame",
+    "san-mateo-goods-0": "b_maverickjackssanmateo",
+    "daly-city-goods-1": "b_losagavesdalycity",
+    "san-francisco-goods2-24": "b_alushecoffee",
+    "san-francisco-goods2-25": "b_fourchairs",
+    "sausalito-goods-0": "b_napavalleyburgersausalito",
+    "mountain-view-goods-9": "b_narrestaurant",
+    "san-francisco-goods2-26": "b_peachespatties",
+    "san-ramon-goods2-0": "b_theshishgrill",
+    "oakland-goods2-14": "b_sandbaroakland",
+    "san-francisco-services2-11": "b_mattahn",
+    "walnut-creek-services-3": "b_inkfromtatooine",
+    "richmond-services-3": "b_pauldomingo",
+    "livermore-services-3": "b_twodollarcowboy",
+    "san-francisco-services2-12": "b_aberrationstudio",
+    "walnut-creek-services2-3": "b_impowersportsperformance",
+    "walnut-creek-services2-4": "b_naileditstudio",
+    "concord-services2-1": "b_corenestpilates",
+    "concord-services2-2": "b_contracostafitness",
+    "oakland-goods2-15": "b_carlyleschickenwings",
+    "berkeley-services2-2": "b_bascotacafe",
+    "san-francisco-goods2-27": "b_curiobar",
+    "milpitas-goods-4": "b_wagyugrillmilpitas",
+    "milpitas-goods-7": "b_meattimeyakiniku",
+    "san-jose-goods2-6": "b_wagyumastersanjose",
+    "newark-goods-7": "b_kingkatsulandnewark",
+    "newark-goods2-1": "b_littlesheepnewark",
+    "san-francisco-goods-3": "b_bollywoodpizzasf",
+    "livermore-goods2-1": "b_bollywoodpizzalivermore",
+    "santa-clara-goods2-0": "b_basqhaus",
+    "beasty-goods2-17": "b_veganmob",
+    "beasty-boutiques-9": "b_elemonkey",
+    "beasty-services2-25": "b_frankjrenglish",
+    "el-cerrito-goods2-0": "b_brasilbistro",
+    "walnut-creek-goods2-5": "b_myofrozenyogurtwalnutcreek",
+    "san-ramon-services-14": "b_thehubpackanimals",
+    "san-jose-goods-11": "b_paletaplaneta",
+    "san-jose-goods-4": "b_mazasanjose",
+    "belmont-goods-5": "b_divinoristorante",
+    "hayward-goods-3": "b_favoriteindianrestaurant",
+    "fremont-goods-8": "b_portofperiperifremont",
+    "castro-valley-services-4": "b_domartialarts",
+    "redwood-city-goods-9": "b_zadnagrill",
+    "palo-alto-goods-2": "b_yayoipaloalto",
+    "cupertino-goods-2": "b_yayoicupertino",
+    "san-mateo-goods-7": "b_yayoisanmateo",
+    "union-city-goods-1": "b_tacospapo",
+    "union-city-goods-12": "b_doughweime",
+    "union-city-goods-13": "b_konthegounioncity",
+    "union-city-goods2-0": "b_backyardbayou",
+    "union-city-goods2-1": "b_goldenbayseafoodharbor",
+    "union-city-goods2-2": "b_sanhonorepanaderia",
+    "union-city-services-1": "b_themoonnails",
+    "union-city-services2-1": "b_thehotspotstudiosunioncity",
+    "union-city-services2-2": "b_thelionsmanebarbershop",
+    "union-city-services2-3": "b_jasnailspa",
+    "petaluma-goods-11": "b_honeypotgelato",
+    "walnut-creek-goods-5": "b_northitaliawalnutcreek",
+    "walnut-creek-goods2-6": "b_galpaogauchowalnutcreek",
+    "walnut-creek-goods2-7": "b_havanawalnutcreek",
+    "walnut-creek-goods2-8": "b_litawalnutcreek",
+    "santa-rosa-goods2-0": "b_shadyoakbrewing",
+    "emeryville-goods-8": "b_robbensemeryville",
+    "livermore-goods-0": "b_calikidlivermore",
+    "pleasant-hill-goods2-1": "b_calikidpleasanthill",
+    "san-francisco-goods2-28": "b_yuanbaojiaozisf",
+    "burlingame-goods2-1": "b_yuanbaojiaoziburlingame",
+    "san-francisco-goods2-29": "b_pineapplekingsf",
+    "oakland-goods2-16": "b_understoryoakland",
+    "san-francisco-goods2-30": "b_tonyspizzanapoletana",
+    "los-gatos-goods2-0": "b_thecatslosgatos",
+    "el-cerrito-goods2-1": "b_pakaomathailao",
+    "berkeley-goods2-4": "b_calialley",
+    "berkeley-goods-2": "b_praawthai",
+    "oakland-services2-2": "b_fourfortyfourevents",
+    "berkeley-goods-5": "b_rosepizzeriaberkeley",
+    "san-francisco-goods2-31": "b_rosepizzeriasf",
+    "san-rafael-services2-0": "b_absolutevolleyballsanrafael",
+    "san-jose-services-0": "b_propercutssanjose",
+    "dublin-goods-7": "b_goldendonkatsudublin",
+    "oakland-goods2-17": "b_townbiznesshibachi",
+    "san-jose-goods2-7": "b_phohanoisanjose",
+    "cupertino-goods2-0": "b_phohanoicupertino",
+    "palo-alto-goods2-1": "b_phohanoipaloalto",
+    "milpitas-goods2-2": "b_phohanoimilpitas",
+    "fremont-goods2-1": "b_phohanoifremont",
+    "fountain-valley-goods-2": "b_phohanoifountainvalley",
+    "berkeley-goods2-5": "b_phohanoiberkeley",
+    "san-francisco-goods2-32": "b_phohanoisanfrancisco",
+    "beasty-cooks-6": "b_ryecookin",
+    "beasty-meats-0": "b_nomadspremiummeats",
+    "beasty-ai-0": "b_looki",
+    "beasty-cooks-5": "b_lolcatering",
+    "beasty-barbershops-5": "b_thecompanybarber"
+  }
+}

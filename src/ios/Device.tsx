@@ -1,3 +1,4 @@
+import { track } from '../lib/track'
 import { useCallback, useEffect, useRef, useState } from 'react'
 import type { ReactNode } from 'react'
 import { HomeScreen } from './HomeScreen'
@@ -173,6 +174,14 @@ export function Device({ renderApp, openOnMount }: Props) {
         keypad and Search all end here.
       */
       const opened = appById(id)
+      if (opened?.pageKind) {
+        track('category_opened', { page_kind: opened.pageKind, surface: 'home_tile' })
+        setJumpCity({ city: 'BEASTY', kind: opened.pageKind })
+        return
+      }
+      if (opened?.systemKey && ['gallery', 'watch', 'news', 'calendar', 'share', 'phone'].includes(opened.systemKey)) {
+        track('feature_opened', { kind: opened.systemKey })
+      }
       if (opened?.kind === 'brand') {
         const b = brandById(id)
         if (b) {

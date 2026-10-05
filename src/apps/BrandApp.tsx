@@ -3,7 +3,7 @@ import { AppChrome } from './AppChrome'
 import { ItemSheet } from './ItemSheet'
 import { BrandLogo } from '../ios/BrandLogo'
 import { HalalMark, isHalal } from '../ios/HalalMark'
-import { BrandClip } from './BrandClip'
+import { BrandReviews } from './BrandReviews'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { citiesOf, seatsOf } from '../data/seats'
@@ -65,6 +65,7 @@ function BrandPanels({ panels }: { panels?: BrandPanel[] }) {
             </button>
             {isOpen && (
               <div className="brand-panel-body">
+                {p.links?.map((link) => <p key={link.href}><a href={link.href} target="_blank" rel="noopener noreferrer">{link.title}</a></p>)}
                 {p.photos && (
                   <ul className="brand-panel-photos">
                     {p.photos.map((ph) => (
@@ -153,8 +154,6 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
   }
   /** The week's picks, collapsed by default. See the bar below. */
   const [picksOpen, setPicksOpen] = useState(false)
-  /** Their video, behind a bar — see the clip block below. */
-  const [clipOpen, setClipOpen] = useState(false)
   /** The whole menu, behind a bar — his ask of 2026-09-09. See below. */
   const [menuOpen, setMenuOpen] = useState(false)
   const [activeCat, setActiveCat] = useState(0)
@@ -648,23 +647,7 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             line until somebody wants it, and the bar says there is a video
             rather than making them scroll to find out.
           */}
-          {brand.clip && tier >= 3 && (
-            <div className="menu-picks brand-clip-drop">
-              <button
-                className={`menu-picks-bar${clipOpen ? ' is-open' : ''}`}
-                onClick={() => setClipOpen((o) => !o)}
-                aria-expanded={clipOpen}
-              >
-                {/* A reviewer's film says so on the bar — his 2026-09-09
-                    protocol for "other food reviewers' videos". */}
-                <span>{brand.clip.by ? `Watch a review by @${brand.clip.by}` : 'Watch their video'}</span>
-                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-              {clipOpen && <BrandClip clip={brand.clip} logo={brand.logo} brand={brand.id} />}
-            </div>
-          )}
+          {tier >= 3 && <BrandReviews brand={brand} />}
 
           {/*
             One photograph of the place, same slot and same reasoning as the

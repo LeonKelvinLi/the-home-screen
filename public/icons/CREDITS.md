@@ -135,3 +135,5 @@ exists to prevent.
 **To replace it:** drop in their real artwork under the same filename. The
 tile picks it up with no other change, and this section should then be
 deleted along with the row above.
+
+- flowers-valley-current.webp — current square profile artwork from @flowers_valley.events, linked by theflowersvalley.com; downloaded 2026-10-04. Glenn request 247057.

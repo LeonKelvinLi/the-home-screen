@@ -360,6 +360,35 @@ def m_salons(rng):
     return composite(img, over, blur=14)
 
 
+def m_coffee(rng):
+    img = gradient("#100b08", "#3b2115")
+    over, d = layer()
+    for y in range(260, H, 540):
+        for x in (230, 830):
+            d.ellipse([x, y, x+200, y+260], fill=rgba("#c78b50", .16), outline=rgba("#dfa970", .2), width=8)
+            d.arc([x+45, y+30, x+160, y+240], 80, 260, fill=rgba("#301a0e", .7), width=15)
+    return composite(img, over, blur=2)
+
+
+def m_sweets(rng):
+    img = gradient("#160a19", "#35112c")
+    over, d = layer()
+    for y in range(300, H, 650):
+        for x in (230, 900):
+            d.polygon([(x-90,y+20),(x+90,y+20),(x,y+250)], fill=rgba("#e5b276", .18))
+            d.ellipse([x-110,y-170,x+110,y+50], fill=rgba("#f0a5c3", .2))
+    return composite(img, over, blur=2)
+
+
+def m_ayce(rng):
+    img = gradient("#091215", "#12313a")
+    over, d = layer()
+    for y in range(320, H, 650):
+        d.ellipse([270,y,1050,y+340], outline=rgba("#b8d8da", .18), width=12)
+        d.ellipse([350,y+55,970,y+285], outline=rgba("#b8d8da", .12), width=6)
+    return composite(img, over, blur=2)
+
+
 MOTIFS = {
     "tattoo": m_tattoo,
     "athletes": m_athletes,
@@ -374,6 +403,10 @@ MOTIFS = {
     "media": m_media,
     "photographers": m_photographers,
     "whips": m_whips,
+    "automotive": m_whips,
+    "coffee": m_coffee,
+    "sweets": m_sweets,
+    "ayce": m_ayce,
     "pits": m_pits,
     "models": m_models,
     "meats": m_meats,
