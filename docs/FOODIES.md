@@ -107,3 +107,53 @@ different work:
 2. The recruiting list for the food-review add-on he described on 29 August.
 3. A standing list to draw on when a restaurant a creator filmed signs up, so
    the review is ready for its page.
+
+## BEASTY • Foodies (built 2026-10-05)
+
+Glenn, 2026-10-03: "BEASTY • Foodies; dedicated to the top 24 reviewers, each
+foodie will have a list … of Restaurant names with video clips of that
+restaurant on their BEASTY page", and "if a restaurant had five different
+foodies review it … will they be able to see the five different foodies that
+reviewed that restaurant on a list?"
+
+- **Where the reviews come from** (`src/data/foodieIndex.ts`): every film on a
+  business page made by a creator (`clip.by`) counts as that creator's review
+  of that business, with no second list to keep. The reels sent as "Foodie" of
+  places not on BEASTY, or a second review of one that is, are `OTHER_REVIEWS`
+  in `src/data/foodies.ts`; the ones that show on a page play a 15-second copy
+  (`/clips/review-<code>.mp4`).
+- **Pages:** `FOODIE_PAGES` is the 24, ranked by reviews sent so far: Festus
+  Ezeli (@festusfeasts) first, Grand-O second (@thesnacksensei, on his existing
+  page), then Sachi, Hunger E for DIY, Mostie, capturedbysado, Allie Tong,
+  Seekeasy, Liz Maw, antoinetterzz, The Honest Reviewer, Melissa King, celine,
+  Grubwitmike, Tiffany, Where Jess at, NowThatLooksGooD, The Spoon List, Sherry
+  Shi, Novi Mitchell, Dan, Nikkie G, Jane and peggy xu. Each page lists the
+  places reviewed; a row opens to the film and, for a business on BEASTY, to
+  its page.
+- **On a business page:** "Foodie reviews" lists every reviewer when there are
+  two or more (one review is the film already at the top), each linking to the
+  reviewer's page.
+
+To add a review: put the film on the business's page with `by` (it counts on
+its own), or add a line to `OTHER_REVIEWS`. `tools/audit-foodies.mjs` checks it.
+
+### Foodie reels, 30 September to 3 October
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 1 Oct | @capturedbysado | Pier 39, San Francisco | On their Foodies page |
+| 1 Oct | @allie.eats (Allie Tong) | An Outer Sunset crawl: Pineapple King Bakery and Gao Viet Kitchen | **Yes.** On Pineapple King's page |
+| 1 Oct | @wthellydanyelly (Danielle) | Romana Pizzeria, Danville | Listed in OTHER_REVIEWS; she has no Foodies page yet |
+| 1 Oct | @thesnobbiefoodie (Winnie) | Mensho, Walnut Creek | Listed in OTHER_REVIEWS |
+| 1 Oct | @maya_munches (Maya Waldman) | Frozen yogurt in SF, no place named | No business named |
+| 1 Oct | @seekeasyeats (Seekeasy) | Whiz Burger, 18th and South Van Ness, San Francisco | On their Foodies page |
+| 2 Oct | @festusfeasts (Festus Ezeli) | Terracotta Warriors, Outer Sunset, San Francisco | On his Foodies page |
+| 2 Oct | @katfoodsf | Butter & Crumble, North Beach, San Francisco | Listed in OTHER_REVIEWS |
+| 2 Oct | (could not be downloaded) | DdeTKlrOHud | — |
+| 2 Oct | @orangeginger (Liz Maw) | Champ Onigiri, San Jose | On her Foodies page |
+| 2 Oct | @singlecatm0m (Tiffany) | El 2 Carnales Taqueria and Pizzeria, Stockton | On her Foodies page |
+| 2 Oct | @janeethefoodie (Jane) | Blue Pagoda, San Jose | **Yes.** On Blue Pagoda's page |
+| 3 Oct | @bestbayareafood | Tempura Kaneko Hannosuke, San Jose | **Yes.** On its page |
+| 3 Oct | @hungere.for.diy (Hunger E for DIY) | Cavaña, San Francisco | On their Foodies page |
+| 3 Oct | @annna_eats (Anna) | Master Oh, Santa Clara | **Yes.** On its page |
+

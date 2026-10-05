@@ -7,6 +7,8 @@ import { BrandClip } from './BrandClip'
 import { ItemThumb } from '../ios/ItemThumb'
 import { brandById } from '../data/brands'
 import { citiesOf, seatsOf } from '../data/seats'
+import { FoodieReviews } from './FoodieReviews'
+import { foodieOfBrand, reviewsBy, reviewsOf } from '../data/foodieIndex'
 import { Symbol } from '../ios/ui/Symbol'
 import { takeOrigin, track } from '../lib/track'
 import { useInPreview } from '../ios/preview'
@@ -173,6 +175,8 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
     the link — and everything below that reads the tier before it renders.
   */
   const tier = brand.tier ?? 3
+  /* The creator whose BEASTY page this is, when it is a foodie's. */
+  const foodie = foodieOfBrand(brand.id)
   const film = tier >= 3 ? brand.clip?.src : undefined
   /* The pages its tile is on: the first is the button at the top right, and a
      business in several cities also gets a row per city below. See seats.ts. */
@@ -1032,6 +1036,19 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
           )}
 
           {tier >= 2 && <BrandPanels panels={brand.panels} />}
+
+          {/*
+            BEASTY • FOODIES (Glenn, 2026-10-03). On a foodie's page, the places
+            they reviewed; on a business's page, every foodie who reviewed it,
+            "on a list". One review alone is the film already at the top.
+          */}
+          {foodie ? (
+            <FoodieReviews title="Their reviews" reviews={reviewsBy(foodie)} side="place" api={api} here={brand.id} />
+          ) : (
+            reviewsOf(brand.id).length >= 2 && (
+              <FoodieReviews title="Foodie reviews" reviews={reviewsOf(brand.id)} side="foodie" api={api} here={brand.id} />
+            )
+          )}
 
           {/*
             A DIRECT LINE TO THEIR INSTAGRAM, where he has sold one.

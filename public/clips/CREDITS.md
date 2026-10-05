@@ -192,6 +192,21 @@ the most movement — to 540x960 with sound.
 | `stgdesignz.mp4` | STGDesignz (BEASTY • AI) | instagram.com/reel/Dd9xqwsJsYS (@stgdesignz) |
 | `dauren-altynbek.mp4` | Dauren Altynbek (BEASTY • AI) | instagram.com/reel/DeB4M74RM6d (@downey.ai) |
 | `tue-twaydabae.mp4` | Tuệ (BEASTY • Cooks) | instagram.com/reel/Dd_0C1OtZUJ (@twaydabae) |
+| `review-DduKTl4hokY.mp4` | Terracotta Warriors (a BEASTY • Foodies review, 15s) | instagram.com/reel/DduKTl4hokY (@festusfeasts) |
+| `review-DdrCC5YhN2z.mp4` | Cavaña (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdrCC5YhN2z (@hungere.for.diy) |
+| `review-DLi7ChcvhbM.mp4` | Whiz Burger (a BEASTY • Foodies review, 15s) | instagram.com/reel/DLi7ChcvhbM (@seekeasyeats) |
+| `review-DRGFltxkklB.mp4` | Champ Onigiri (a BEASTY • Foodies review, 15s) | instagram.com/reel/DRGFltxkklB (@orangeginger) |
+| `review-DdapLKiATum.mp4` | Pier 39 (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdapLKiATum (@capturedbysado) |
+| `review-DWwiNxYCSiI.mp4` | El 2 Carnales Taqueria and Pizzeria (a BEASTY • Foodies review, 15s) | instagram.com/reel/DWwiNxYCSiI (@singlecatm0m) |
+| `review-Dcw6WX7zN-Q.mp4` | Slice House (a BEASTY • Foodies review, 15s) | instagram.com/reel/Dcw6WX7zN-Q (@justmostie) |
+| `review-DdCZTx7Ppei.mp4` | A corner slice shop (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdCZTx7Ppei (@capturedbysado) |
+| `review-DdFgh8TvwdA.mp4` | Ruby King (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdFgh8TvwdA (@chefmelissaking) |
+| `review-DdU9R3Myj9x.mp4` | Lana’s (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdU9R3Myj9x (@chefmelissaking) |
+| `review-Dc2abz8C7CU.mp4` | Souled Out Pastries at Signal Coffee Roasters (a BEASTY • Foodies review, 15s) | instagram.com/reel/Dc2abz8C7CU (@celineeats) |
+| `review-DdXmljSpM-M.mp4` | Froyo Park, Krispy Joe’s and Kingpin Donuts (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdXmljSpM-M (@celineeats) |
+| `review-DdIUO2Jxj1s.mp4` | Donut Savant (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdIUO2Jxj1s (@grubwitmike) |
+| `review-DdVGXn4NxbO.mp4` | Deli Board (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdVGXn4NxbO (@thesauceboss_) |
+| `review-Ddo0xf9MplM.mp4` | The Burger Spot Co. (a BEASTY • Foodies review, 15s) | instagram.com/reel/Ddo0xf9MplM (@hella._local.mo) |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

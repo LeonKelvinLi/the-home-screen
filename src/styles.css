@@ -13393,3 +13393,107 @@ span.top3-add {
 @media (prefers-reduced-motion: reduce) {
   .reel-hint { animation: none; }
 }
+
+/* ---------- BEASTY • Foodies: reviews as drop-downs (2026-10-05) ---------- */
+
+.foodie-reviews {
+  margin: 18px 0 6px;
+}
+
+.foodie-reviews-h {
+  margin: 0 4px 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  color: var(--muted);
+}
+
+.foodie-review {
+  margin-bottom: 1px;
+  background: var(--paper);
+}
+
+.foodie-review:first-of-type {
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.foodie-review:last-of-type {
+  border-radius: 0 0 var(--radius) var(--radius);
+}
+
+.foodie-review-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.foodie-review-head > span {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.foodie-review-head strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.foodie-review-head em {
+  font-style: normal;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+.foodie-review-chev {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--muted);
+  transition: transform 0.2s ease;
+}
+
+.foodie-review.is-open .foodie-review-chev {
+  transform: rotate(180deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .foodie-review-chev { transition: none; }
+}
+
+.foodie-review-body {
+  padding: 0 14px 14px;
+}
+
+.foodie-review-video {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  border-radius: 12px;
+  background: #000;
+}
+
+.foodie-review-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.foodie-review-links a,
+.foodie-review-links button {
+  min-height: 40px;
+  padding: 9px 14px;
+  border-radius: 12px;
+  background: #1c1c1e;
+  color: #f6d800;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}

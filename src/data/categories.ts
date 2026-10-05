@@ -53,7 +53,7 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'donations', heading: 'Donations', about: 'Causes and foundations to give to', wall: wall('donations'), test: /foundation|non-?profit|charity/i },
   { kind: 'djs', heading: "DJ's", about: 'DJs for parties and events', wall: wall('djs'), test: /\bDJ\b/ },
   { kind: 'cooks', heading: 'Cooks', about: 'Caterers and private chefs', wall: wall('cooks'), test: /catering|private chef|personal chef/i },
-  { kind: 'foodies', heading: 'Foodies', about: 'Food reviewers and creators', wall: wall('foodies'), test: /food (reviewer|creator|blogger)/i },
+  { kind: 'foodies', heading: 'Foodies', about: 'Food reviewers and creators', wall: wall('foodies'), test: /food reviewer|food blogger/i },
   { kind: 'realtors', heading: 'Realtors', about: 'Real estate agents', wall: wall('realtors'), test: /real estate|realtor|realty/i },
   { kind: 'media', heading: 'Media', about: 'Media companies and creators', wall: wall('media'), test: /media company|creative agency|\bpodcast|\bmagazine/i },
   { kind: 'photographers', heading: 'Photographers', about: 'Photographers, videographers and photo booths', wall: wall('photographers'), test: /photo|videograph|video production/i },

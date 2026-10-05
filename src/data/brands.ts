@@ -2,6 +2,7 @@ import type { GlyphName } from './glyphs'
 import { LOCAL_SEED } from './localBrands'
 import type { BrandPanel } from './localBrands'
 import { ROSTER_SEED } from './roster'
+import { FOODIE_SEED } from './foodies'
 
 /**
  * Catalogue ported from the operator's existing hub at goodneighborbuilder.com.
@@ -1261,6 +1262,8 @@ export const BRANDS: Brand[] = [
   ...[
     ...ROSTER_SEED.map((s) => [s, true] as const),
     ...LOCAL_SEED.map((s) => [s, false] as const),
+    /* BEASTY • Foodies, the reviewers' own pages (foodies.ts). */
+    ...FOODIE_SEED.map((s) => [s, false] as const),
   ].map(([s, rosterOnly]) => ({
     ...fromSeed(s as unknown as Seed),
     site: s.site,

@@ -251,6 +251,8 @@ for (const [id, want, expect] of [
   ['b_barrebeat', 'BARREbeat Fitness', { rows: 6, quote: true, call: '(925) 679-4428' }],
   /* On BEASTY • Eats since 2026-10-05, a whole page. */
   ['b_nossooakland', 'Nosso', { call: '(510) 207-1008' }],
+  /* BEASTY • Foodies, 2026-10-05: a foodie's own page. */
+  ['b_foodiefestusfeasts', 'Festus Ezeli', {}],
   ['b_elportalsanleandro', 'El Portal Mexican Restaurant', { rows: 150, hours: 'Mon-Fri 9am-10pm' }],
   ['b_kitavasf', 'Kitava', { free: true, call: '(415) 780-1661' }],
   ['b_kitavaoakland', 'Kitava', { free: true, call: '(510) 496-4055' }],
@@ -589,6 +591,8 @@ for (const s of [
   /* 2026-09-30: the BEASTY category pages and Search's Categories and Cities drop-downs. */
   'search-drop-categories', 'search-drop-cities', 'search-cat-thumb', 'category_opened', '/wallpapers/cat-', 'Barbers, cuts and shaves',
   /* 2026-10-05: BEASTY • Pages tiles, Sweets and AYCE, the reels bubble, button counts, Search's share link. */
+  /* 2026-10-05, later: BEASTY • Foodies pages and the review lists. */
+  'foodie-reviews', 'Their reviews', 'Foodie reviews', 'review-DduKTl4hokY',
   'cat-icon', 'Watch foodie reviews here to discover new gems.', 'button_tapped', 'Search BEASTY pages', 'Barbers, cuts and shaves', 'Shaved ice', 'Chicken sandwich', 'brand-panel-link',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)

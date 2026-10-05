@@ -1349,4 +1349,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-leandro-services-5': 'b_precisionautoservice',
   /* BEASTY • Cooks, from Glenn's "BEASTY • Cooks" reel of 2026-10-03 (localBrands.ts). */
   'beasty-cooks-7': 'b_tuetwaydabae',
+  /* BEASTY • Foodies: Grand-O (@thesnacksensei) is second by number of reviews; the rest seat themselves (foodies.ts). */
+  'beasty-foodies-1': 'b_grando',
 }
