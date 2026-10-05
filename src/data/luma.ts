@@ -379,6 +379,7 @@ export const ICON_LUMA: Record<string, number> = {
   'san-honore-panaderia': 0.8136,
   'sanaa-cafe': 0.059,
   'sandbar-oakland': 0.675,
+  'sandiwa': 0.9067,
   'sandwich-monkey': 0.3017,
   'santa-clara-super-kitchen': 0.4137,
   'scoop-n-chill': 0.5594,

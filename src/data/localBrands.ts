@@ -8644,4 +8644,86 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Home cooking, like the extra crispy lime pepper wings in the post Glenn sent, with the full recipe sent to anyone who comments "recipe". BEASTY has not spoken to them yet: this spot is held, not taken.',
     items: [],
   },
+  {
+    /*
+      SANDIWA COLLECTION, "BEASTY • Online" — Glenn, 2026-10-05, with their
+      Instagram (@sandiwacollection, "Filipino Clothing | Bay Area") and
+      sandiwa.com/accessories, then their own reel ("Clip this video plz").
+      Prices are their own shop's, read 2026-10-05 (in stock only; the men's
+      barongs were out of stock). The contact is the address their Contact Us
+      link opens. No Instagram button: that is Glenn's call per page.
+    */
+    slug: 'sandiwa',
+    icon: 'sandiwa',
+    name: 'Sandiwa Collection',
+    label: 'Sandiwa',
+    cuisine: 'Filipino heritage clothing',
+    tagline: 'The Filipino Heritage Store, made by Filipino artisans.',
+    color: '#F4F2EE|#1D3E8F',
+    prep: 0,
+    category: 'Online',
+    site: 'https://www.sandiwa.com/',
+    siteCta: 'Shop sandiwa.com',
+    email: 'imeldapedrigal@sandiwa.com',
+    clip: {
+      src: '/clips/sandiwa.mp4',
+      poster: '/clips/sandiwa-poster.webp',
+      href: 'https://www.instagram.com/reel/DeCy8c_vxCy/',
+      credit: 'Posted by Sandiwa Collection',
+      platform: 'Instagram',
+    },
+    quoteOnly:
+      'A family-run, women-owned online store of authentic Filipino goods made by Filipino artisans, indigenous communities and underprivileged makers across the Philippines: traditional fashion, Palawan pearls, crafts and, newest, dog barongs and scarves. These are their own published prices, before sales tax; buy on sandiwa.com. BEASTY has not spoken to them yet: this spot is held, not taken.',
+    menuNote: 'What they sell',
+    groups: [
+      {
+        name: 'Merchandise',
+        items: [
+          ['Makabayan (Patriotic) Shirt', '', 3000],
+          ['Mapagpakumbaba (Humble) Shirt', '', 3000],
+          ['Matalino (Intelligent) Shirt', '', 3000],
+          ['Madiskarte (Resourceful) Shirt', '', 3000],
+          ['Magalang (Respectful) Shirt', '', 3000],
+          ['Mapagmahal (Loving) Shirt', '', 3000],
+        ],
+      },
+      {
+        name: 'Accessories',
+        items: [
+          ['Tote Bag', '', 2000],
+          ['Daloy Bottle Holder', '', 2000],
+          ['Palawan South Sea Pearl Bracelet', '', 15000],
+          ['South Palawan Pearl White Earring Set', '', 20000],
+          ['South Sea Palawan Pearl Pistachio Earrings and Necklace Set', '', 25000],
+          ['Palawan South Sea Black Pearl Earring, Pendant and Bracelet Set', '', 45000],
+          ['Palawan South Sea Pearl White Earring, Bracelet, Pendant Set', '', 50000],
+        ],
+      },
+      {
+        name: "Women's",
+        items: [
+          ["Women's Hugo Boss Filipina Barong Blouse", '', 10000],
+          ["Women's Hugo Boss Pink Filipina Barong Blouse", '', 10000],
+          ["Women's Indigenous Red and Pink Batik Bolero", '', 10000],
+          ["Women's Indigenous Multicolor Batik Bolero", '', 10000],
+          ["Women's Pinya Cocoon Maroon Bolero with Flower Design", '', 12000],
+          ["Women's Pinya Cocoon Black Bolero with Flower Design", '', 12000],
+          ["Women's Pinya Cocoon Traditional Beige Bolero with Flower Design", '', 12000],
+          ["Women's Pinya Cocoon Gray Bolero with White Flower Design", '', 12000],
+          ["Women's Indigenous Blue and Red Batik Bolero", '', 13000],
+          ["Women's Indigenous Red and Black Batik Bolero", '', 13000],
+          ['Pinya Cocoon Gray Filipiniana Blouse with Black Flower Embroidery', '', 14000],
+          ["Women's Pinya Cocoon Yellow Filipina Dress with Black Embroidery", '', 20000],
+          ["Women's Pinya Cocoon Yellow Barong Tagalog Dress", '', 25500],
+          ["Women's Pinya Cocoon Blue Barong Tagalog Dress", '', 25500],
+          ["Women's Pinya Cocoon Green Barong Tagalog Dress", '', 25500],
+          ["Women's Pina Cocoon Filipiniana Purple Terno", '', 40000],
+          ["Women's Pina Cocoon Filipiniana Yellow Terno", '', 45000],
+          ['Solid Color Espadrilles Shoes', '', 6000],
+          ['Indigenous Pattern Espadrilles Shoes', '', 6000],
+        ],
+      },
+    ],
+    items: [],
+  },
 ]

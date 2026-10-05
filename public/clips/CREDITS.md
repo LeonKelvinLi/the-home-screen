@@ -207,6 +207,7 @@ the most movement — to 540x960 with sound.
 | `review-DdIUO2Jxj1s.mp4` | Donut Savant (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdIUO2Jxj1s (@grubwitmike) |
 | `review-DdVGXn4NxbO.mp4` | Deli Board (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdVGXn4NxbO (@thesauceboss_) |
 | `review-Ddo0xf9MplM.mp4` | The Burger Spot Co. (a BEASTY • Foodies review, 15s) | instagram.com/reel/Ddo0xf9MplM (@hella._local.mo) |
+| `sandiwa.mp4` | Sandiwa Collection (BEASTY • Online) | instagram.com/reel/DeCy8c_vxCy (@sandiwacollection) |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

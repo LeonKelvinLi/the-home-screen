@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from 'react'
 import { AddToHomeCoach } from './AddToHomeCoach'
 import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
@@ -6,11 +6,12 @@ import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
 import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { useGate } from '../lib/gate'
-import { ALL_BEASTY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
+import { ALL_BEASTY_PAGES, CATEGORY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { SlotPage } from '../data/slots'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
 import { PAGES_TILES } from '../data/categoryGlyphs'
 import { CategoryIcon, thumbFor } from './CategoryIcon'
+import { SlotIcon } from './SlotIcon'
 import type { AppDef } from '../apps/registry'
 import { useCart } from '../store/cart'
 import { Wallpaper } from './Wallpaper'
@@ -100,7 +101,7 @@ const ON_HOME = new Set(HOME_PAGES.map((p) => p.kind))
   Pages? Then have 24 top categories spots as the BEASTY categories on each
   spot?" A tile opens its category's page, on the swipe or added to it.
 */
-const PAGES_APPS: AppDef[] = PAGES_TILES.flatMap((kind) => {
+const categoryApp = (kind: string): AppDef[] => {
   const page = ALL_BEASTY_PAGES.find((p) => p.kind === kind)
   if (!page) return []
   return [
@@ -113,6 +114,22 @@ const PAGES_APPS: AppDef[] = PAGES_TILES.flatMap((kind) => {
       tint: '#1C1C1E',
     },
   ]
+}
+const PAGES_APPS: AppDef[] = PAGES_TILES.flatMap(categoryApp)
+/*
+  THE YELLOW PAGE BEHIND IT. Glenn, 2026-10-05: "Can you extend the extra
+  BEASTY pages categories onto a yellow page? And we will fill it as we go with
+  new categories." The categories past the 24 tiles, then open tiles for the
+  ones still to come.
+*/
+const MORE_PAGES_APPS: AppDef[] = CATEGORY_PAGES.filter((p) => !PAGES_TILES.includes(p.kind)).flatMap((p) => categoryApp(p.kind))
+const newCategoryApp = (i: number): AppDef => ({
+  id: `cat.new-${i}`,
+  name: 'A new BEASTY category, coming soon',
+  label: 'Coming soon',
+  icon: <SlotIcon fill />,
+  kind: 'system',
+  tint: '#1C1C1E',
 })
 function extraFor(city: string, appId?: string, kind?: string): string | null {
   if (city.toLowerCase() !== 'beasty') {
@@ -140,6 +157,28 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
   */
   const { gate, account } = useGate()
   const [page, setPage] = useState(0)
+  /*
+    THE PHONE'S REAL INSETS, read off the stylesheet's own --status-h and
+    --bottom-h. The page math below assumed a Safari tab (20 and 12); installed
+    to the home screen they are the true insets, 59 and 34 on a 15 Pro, which
+    started the grid 39px lower and the dots 22px higher than planned, and the
+    last row of BEASTY • Pages ran into the dots on Glenn's phone (2026-10-05).
+  */
+  const [insets, setInsets] = useState({ top: 20, bottom: 12 })
+  useLayoutEffect(() => {
+    const probe = (v: string) => {
+      const el = document.createElement('div')
+      el.style.cssText = `position:fixed;visibility:hidden;pointer-events:none;width:1px;height:var(${v})`
+      document.body.appendChild(el)
+      const h = el.getBoundingClientRect().height
+      el.remove()
+      return Math.round(h)
+    }
+    const top = probe('--status-h')
+    const bottom = probe('--bottom-h')
+    if (top !== insets.top || bottom !== insets.bottom) setInsets({ top, bottom })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [screen.w, screen.h])
   /** The city or category being visited, on the end of the swipe — see extraFor. */
   const [extra, setExtra] = useState<string | null>(null)
   /** A category tile on BEASTY • Pages was tapped: its page, to go to. */
@@ -252,14 +291,18 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       have to agree, or the row count is computed against a grid that starts
       somewhere else — which is exactly how a 25px row gap silently cost a row.
     */
-    const topPad = screen.device === 'pad' ? 96 : 32
+    /* The phone's real status band, measured (see `insets`): 20 in a Safari
+       tab, the true inset (59 on a 15 Pro) when installed to the home screen. */
+    const topPad = screen.device === 'pad' ? 96 : insets.top + 12
     /*
       Room kept below the grid: the page dots, the Spotlight row and the dock.
 
       No longer includes a band for the city label — that moved into the
       Spotlight row, which is what freed the seventh row of apps.
     */
-    const bottomReserve = screen.device === 'pad' ? 190 : 172
+    /* The dots sit 150 above --bottom-h on a phone (styles.css), so the room
+       they need grows with the home-bar inset: 12 in a tab, 34 installed. */
+    const bottomReserve = screen.device === 'pad' ? 190 : insets.bottom + 160
     const rows = Math.max(3, Math.floor((screen.h - topPad - bottomReserve) / rowPitch))
     const perPage = Math.max(cols, cols * rows)
 
@@ -530,6 +573,19 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     for (let from = 0; from < PAGES_APPS.length; from += slotsPerPage) {
       out.push({ city: 'BEASTY', section: 'Pages', kind: 'pages', tile: slotTile, rowGap: slotGap, apps: PAGES_APPS.slice(from, from + slotsPerPage) })
     }
+    out.push({
+      city: 'BEASTY',
+      section: 'More pages',
+      kind: 'pages2',
+      tile: slotTile,
+      rowGap: slotGap,
+      wall: '/wallpapers/_beasty-pages.webp',
+      yellow: true,
+      apps: [
+        ...MORE_PAGES_APPS.slice(0, slotsPerPage),
+        ...Array.from({ length: Math.max(0, slotsPerPage - MORE_PAGES_APPS.length) }, (_, i) => newCategoryApp(i)),
+      ],
+    })
     buildCity('BEASTY', HOME_PAGES)
 
     for (const group of APP_GROUPS) {
@@ -570,7 +626,7 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
     }
 
     return out.length ? out : [{ apps: [] }]
-  }, [screen.columns, screen.iconSize, screen.h, screen.device, extra])
+  }, [screen.columns, screen.iconSize, screen.h, screen.device, extra, insets.top, insets.bottom])
 
   // Never strand the user on a page that no longer exists after a resize.
   const safePage = Math.min(page, pages.length - 1)
@@ -1149,6 +1205,8 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
                        page. One on the swipe is free like a swipe; one added
                        from outside it asks a signed-out visitor to sign up,
                        like Search, which is the other way to reach it. */
+                    /* An open tile on the yellow page: a category to come. */
+                    if (app.id.startsWith('cat.new-')) return
                     if (app.id.startsWith('cat.')) {
                       const kind = app.id.slice(4)
                       track('category_opened', { page_kind: kind, surface: 'home_tile' })
@@ -1299,6 +1357,26 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           site to show somebody the dog it is named after would be the wrong
           direction of travel.
         */}
+        {/*
+          BEASTY • PAGES, one tap. Glenn, 2026-10-05: "To the left of the
+          gallery button, can you make a square button with the right corner
+          triangle button like our icon button. That button will default to the
+          BEASTY pages home page … Or you can put B•P in the circle." Both: the
+          app icon's folded corner, with B•P on it.
+        */}
+        <button
+          type="button"
+          className="spotlight-pages"
+          aria-label="BEASTY • Pages"
+          onClick={() => {
+            if (extra) setExtra(null)
+            goToPage(0)
+          }}
+        >
+          <span className="spotlight-pages-face" aria-hidden="true">
+            B&bull;P
+          </span>
+        </button>
         <button
           className="spotlight-glass is-gallery"
           onClick={() => {
@@ -1328,38 +1406,43 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
           something like watch foodie reviews here to discover a new gems."
           Once a visit, after a random wait; tapping it opens the reels.
         */}
-        {reelHint && !hidden && !receding && !inert && (
+        {/* The bubble hangs off the reels button itself, not the row: on
+            Glenn's installed iPhone a row-relative bubble drew half off the
+            screen's left edge (2026-10-05, "fix this context glitch"). */}
+        <span className="spotlight-watch-wrap">
+          {reelHint && !hidden && !receding && !inert && (
+            <button
+              type="button"
+              className="reel-hint"
+              onClick={() => {
+                setReelHint(false)
+                const el = watchRef.current
+                const rect = el && rectInScreen(el)
+                if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
+              }}
+            >
+              Watch foodie reviews here to discover new gems.
+            </button>
+          )}
           <button
-            type="button"
-            className="reel-hint"
+            className="spotlight-glass is-watch"
             onClick={() => {
               setReelHint(false)
               const el = watchRef.current
               const rect = el && rectInScreen(el)
               if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
             }}
+            ref={watchRef}
+            aria-label="Watch"
           >
-            Watch foodie reviews here to discover new gems.
+            {/* The moving glow, the same light as Search's. */}
+            <span className="spotlight-sweep is-round" aria-hidden="true" />
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
+              <rect x="2.6" y="4.6" width="18.8" height="14.8" rx="3.2" />
+              <path d="M10.2 9.4l5.2 3.1-5.2 3.1V9.4Z" fill="currentColor" stroke="none" />
+            </svg>
           </button>
-        )}
-        <button
-          className="spotlight-glass is-watch"
-          onClick={() => {
-            setReelHint(false)
-            const el = watchRef.current
-            const rect = el && rectInScreen(el)
-            if (rect) gate('watch', () => onOpen(WATCH_APP.id, rect))
-          }}
-          ref={watchRef}
-          aria-label="Watch"
-        >
-          {/* The moving glow, the same light as Search's. */}
-          <span className="spotlight-sweep is-round" aria-hidden="true" />
-          <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.9" strokeLinejoin="round" aria-hidden="true">
-            <rect x="2.6" y="4.6" width="18.8" height="14.8" rx="3.2" />
-            <path d="M10.2 9.4l5.2 3.1-5.2 3.1V9.4Z" fill="currentColor" stroke="none" />
-          </svg>
-        </button>
+        </span>
 
         {/*
           A HOUSE, not a left arrow — "create a home button like you see there

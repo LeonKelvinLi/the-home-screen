@@ -88,10 +88,17 @@ const sections = run.map((l) => l?.replace(/^Page \d+ of \d+, BEASTY, /, '')).fi
 /* 2026-10-05: BEASTY • Pages first (Glenn: "make the Home Screen BEASTY •
    Pages"), then the nine: Sweets after Eats, AYCE after Sweets, Whips renamed
    Automotive. */
-const want = ['Pages', 'Eats', 'Sweets', 'AYCE', 'Goods', 'Services', 'Online', 'Individuals', 'Tattoo', 'Automotive']
+/* And its yellow page, More pages, for the categories past the 24 tiles (Glenn, 2026-10-05). */
+const want = ['Pages', 'More pages', 'Eats', 'Sweets', 'AYCE', 'Goods', 'Services', 'Online', 'Individuals', 'Tattoo', 'Automotive']
 step('the home screen opens on BEASTY • Pages', (await where(p))?.endsWith('BEASTY, Pages'), await where(p))
-step('then the nine category pages, in order', want.every((w, i) => sections[i] === w), sections.slice(0, 10).join(', '))
-step('then the yellow sheets', sections.includes('More eats') && sections.includes('More services'), sections.slice(10).join(', '))
+step('then the nine category pages, in order', want.every((w, i) => sections[i] === w), sections.slice(0, 11).join(', '))
+step('then the yellow sheets', sections.includes('More eats') && sections.includes('More services'), sections.slice(11).join(', '))
+await goDot(p, await (async () => (await dots(p)).findIndex((l) => l.endsWith('BEASTY, More pages')))())
+const more = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
+step('More pages holds the categories past the 24, then room for new ones', more.includes('BEASTY • Dancers') && more.includes('BEASTY • Media') && more.some((l) => /coming soon/.test(l)), more.slice(0, 7).join(' | '))
+step('B•P is left of the gallery button and turns to BEASTY • Pages', (await p.locator('.spotlight-pages').count()) === 1)
+await p.locator('.spotlight-pages').click()
+step('B•P lands on BEASTY • Pages', !!(await waitWhere(p, 'BEASTY, Pages'))?.endsWith('BEASTY, Pages'))
 const pagesAtHome = await total(p)
 step('the whole swipe is short: no city pages in it', pagesAtHome > 0 && pagesAtHome <= 20, `${pagesAtHome} pages`)
 

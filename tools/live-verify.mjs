@@ -502,10 +502,10 @@ if (await p.locator('[aria-label="Enter BEASTY"]').count()) { await enter.click(
    for that city"). Read from the page dots, which name every page. */
 const swipe = await p.evaluate(() => [...document.querySelectorAll('.page-dots .dot')].map((d) => d.getAttribute('aria-label') ?? ''))
 const swipeTotal = Number(/ of (\d+)/.exec(swipe[0] ?? '')?.[1] ?? 0)
-const nine = swipe.map((l) => l.replace(/^Page \d+ of \d+, BEASTY, /, '')).filter((x, i, a) => x !== a[i - 1]).slice(0, 10)
+const nine = swipe.map((l) => l.replace(/^Page \d+ of \d+, BEASTY, /, '')).filter((x, i, a) => x !== a[i - 1]).slice(0, 11)
 console.log('home swipe    :', JSON.stringify({ pages: swipeTotal, first: nine }))
 /* 2026-10-05: BEASTY • Pages first, then the nine. */
-if (nine.join(',') !== 'Pages,Eats,Sweets,AYCE,Goods,Services,Online,Individuals,Tattoo,Automotive') fails.push(`the home screen's first pages read ${nine.join(', ')}`)
+if (nine.join(',') !== 'Pages,More pages,Eats,Sweets,AYCE,Goods,Services,Online,Individuals,Tattoo,Automotive') fails.push(`the home screen's first pages read ${nine.join(', ')}`)
 if (!swipeTotal || swipeTotal > 20) fails.push(`the home screen swipe is ${swipeTotal} pages long; the cities should only come from Search`)
 /* A Foodies review's own copy is served (its name is built in code, so it is not in the bundle). */
 {
@@ -598,6 +598,8 @@ for (const s of [
   /* 2026-10-05: BEASTY • Pages tiles, Sweets and AYCE, the reels bubble, button counts, Search's share link. */
   /* 2026-10-05, later: BEASTY • Foodies pages and the review lists. */
   'foodie-reviews', 'Their reviews', 'Foodie reviews', '/clips/review-',
+  /* B•P and the yellow More pages sheet, the bubble on the reels button (2026-10-05, evening). */
+  'spotlight-pages', 'spotlight-watch-wrap', 'A new BEASTY category, coming soon',
   'cat-icon', 'Watch foodie reviews here to discover new gems.', 'button_tapped', 'Search BEASTY pages', 'Barbers, cuts and shaves', 'Shaved ice', 'Chicken sandwich', 'brand-panel-link',
 ]) {
   if (!bundles.includes(s)) fails.push(`"${s}" is not in any deployed chunk`)

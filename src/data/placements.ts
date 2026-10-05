@@ -1351,4 +1351,6 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-cooks-7': 'b_tuetwaydabae',
   /* BEASTY • Foodies: Grand-O (@thesnacksensei) is second by number of reviews; the rest seat themselves (foodies.ts). */
   'beasty-foodies-1': 'b_grando',
+  /* "BEASTY • Online", 2026-10-05: Sandiwa Collection (localBrands.ts). */
+  'beasty-online-10': 'b_sandiwa',
 }

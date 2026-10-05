@@ -96,6 +96,10 @@ window.__audit = (() => {
       }
       return [...document.querySelectorAll(sel)]
         .filter(e => e.offsetParent !== null)
+        /* A page beside the one in front is drawn off screen and inert; its
+           text is measured when it is in front, on its own paper (the yellow
+           More pages sheet sits beside BEASTY • Pages since 2026-10-05). */
+        .filter(e => !e.closest('[inert]'))
         .filter(e => (e.textContent || '').trim().length > 0)
         .filter(e => !overMedia(e))
         .map(e => {

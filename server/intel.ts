@@ -52,8 +52,8 @@ export const CLIENT_EVENTS: Record<string, { label: string; props: Prop[] }> = {
 
 const BRAND_IDS = new Set(BRANDS.map((b) => b.id))
 const CITIES = new Set([...CITY_PAGES, 'BEASTY'])
-/* 'pages' is BEASTY • Pages, the grid of category tiles, which has no seats. */
-const PAGE_KINDS = new Set([...ALL_PAGE_KINDS, 'pages'])
+/* 'pages' is BEASTY • Pages, the grid of category tiles, and 'pages2' the yellow page behind it; neither has seats. */
+const PAGE_KINDS = new Set([...ALL_PAGE_KINDS, 'pages', 'pages2'])
 const SURFACES = new Set(['home_tile', 'search_result', 'search_list', 'city_row', 'nav_place', 'reel', 'share_link', 'recents', 'favorites', 'news', 'gallery', 'dock', 'business_page', 'landing', 'members', 'other'])
 const KINDS = new Set(['call', 'text', 'email', 'directions', 'website', 'order', 'menu', 'instagram', 'clip', 'booking', 'brand', 'item', 'city', 'category', 'gallery', 'watch', 'news', 'calendar', 'scan', 'contacts', 'search'])
 export const ENTRY_TYPES = new Set(['direct', 'shared_business', 'register_qr', 'member_ref', 'crm_ref', 'campaign', 'search_engine', 'social', 'referral', 'shared_page'])

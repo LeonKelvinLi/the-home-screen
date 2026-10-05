@@ -697,7 +697,8 @@ textarea {
 */
 .spotlight-row {
   --switch-w: 88px;
-  --left-buttons: 3;
+  /* B•P, gallery, reels, home (2026-10-05). */
+  --left-buttons: 4;
   --left-w: calc((34px + 8px) * var(--left-buttons));
   --right-w: calc(var(--switch-w) + 8px);
 }
@@ -711,7 +712,11 @@ textarea {
 .spotlight-row::after {
   content: '';
   flex: 0 0 auto;
-  width: max(0px, calc(var(--left-w) - var(--right-w)));
+  /* Never wider than the row can spare: with B•P a fourth button on the left
+     (2026-10-05), centring Search exactly needs more than a 393pt phone has,
+     and the balance pushed B•P off the screen's left edge. Search gives up a
+     little centring instead (94 is its pill, 16 the side margins). */
+  width: max(0px, min(calc(var(--left-w) - var(--right-w)), calc(100% - 2 * 16px - var(--left-w) - 94px - var(--right-w))));
 }
 
 .spotlight {
@@ -13357,11 +13362,19 @@ span.top3-add {
   clip-path: circle(50%);
 }
 
+/* The reels button and its bubble: the bubble is placed from the button. */
+.spotlight-watch-wrap {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+}
+
 .reel-hint {
   position: absolute;
-  left: 12px;
+  left: -14px;
   bottom: calc(100% + 12px);
-  max-width: 220px;
+  width: max-content;
+  max-width: min(220px, calc(100vw - 32px));
   padding: 10px 13px;
   border: 0;
   border-radius: 14px;
@@ -13379,7 +13392,7 @@ span.top3-add {
 .reel-hint::after {
   content: '';
   position: absolute;
-  left: 52px;
+  left: 24px;
   top: 100%;
   border: 8px solid transparent;
   border-top-color: #f6d800;
@@ -13496,4 +13509,77 @@ span.top3-add {
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
+}
+
+/* ---------- B•P: BEASTY • Pages in one tap (2026-10-05) ---------- */
+
+/*
+  Glenn's "square button with the right corner triangle … like our icon
+  button": the app icon's folded corner on a glass square, with B•P on it.
+*/
+.spotlight-pages {
+  position: relative;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+/* The 44pt a thumb needs, like the round glass buttons beside it. */
+.spotlight-pages::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 44px;
+  height: 44px;
+  transform: translate(-50%, -50%);
+}
+
+.spotlight-pages-face {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  box-shadow: 0 0 0 0.5px rgba(255, 255, 255, 0.16) inset;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+}
+
+/* The fold: the corner turned down, as on the icon. */
+.spotlight-pages-face::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-style: solid;
+  border-width: 0 11px 11px 0;
+  border-color: transparent #f6d800 transparent transparent;
+}
+
+.spotlight-pages:active .spotlight-pages-face { transform: scale(0.9); }
+
+.home.has-yellow-page .spotlight-pages-face {
+  background: rgba(0, 0, 0, 0.1);
+  color: #141416;
+}
+
+/* Under 360pt (a first iPhone SE) four buttons, Search and the dock switch do
+   not fit in one row: Search keeps its magnifier and drops the word. */
+@media (max-width: 359px) {
+  .spotlight {
+    gap: 0;
+    padding: 8px 11px;
+    font-size: 0;
+  }
 }
