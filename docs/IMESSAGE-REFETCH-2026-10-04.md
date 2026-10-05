@@ -40,6 +40,6 @@ Baseline: `f1f5a14d947fe8f2cd750774070c872f5ae720ec`, 591 existing pages. Result
 - Data audit: zero errors, 64 warnings, 127 notes. Existing pricing warnings remain; new category-capacity warnings mean overflow entries remain accessible through Search.
 - Independent October 4 contract: all original page identities and unchanged placements retained; only the two explicit old-seat moves differ; 24 doors have destinations; review targets and local assets exist; Watch contains each source once.
 - Mutation check: replacing MeterSF with the mechanic in Whips' first seat makes the contract fail; restoring the correct seat passes.
-- Chrome phone checks at 390 × 844: category grid, Whips navigation, MeterSF video readiness/playback, gallery and shop destination, recovered creator Search and switching named review videos pass. Temporary viewport is reset after review.
+- Chrome phone checks at 390 × 844: category grid, Whips navigation, MeterSF video readiness/playback, gallery and shop destination, recovered creator Search and switching named review videos pass. A 320 × 568 check confirms the 24 doors paginate into two screens; the compact utility toolbar is noted for further UI refinement. Temporary viewport is reset after review.
 
 Deployment verification is recorded separately after the production deploy finishes.

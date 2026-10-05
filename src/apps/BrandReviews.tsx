@@ -37,4 +37,3 @@ export function BrandReviews({ brand }: { brand: Brand }) {
     </>}
   </div>
 }
-

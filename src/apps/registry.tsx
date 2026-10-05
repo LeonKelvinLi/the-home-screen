@@ -584,7 +584,7 @@ export const GOODS_APP: AppDef = {
 export const CATEGORY_PORTAL_APPS: AppDef[] = PORTAL_KINDS.map((kind) => {
   const page = ALL_BEASTY_PAGES.find((p) => p.kind === kind)!
   return {
-    id: `page.${kind}`, name: `BEASTY · ${page.heading}`, label: page.heading,
+    id: `page.${kind}`, name: `BEASTY · ${page.heading}`, label: kind === 'photographers' ? 'Photo & Video' : page.heading,
     kind: 'system', pageKind: kind, tint: '#18212C',
     icon: <CategoryIcon kind={kind} />,
   }
