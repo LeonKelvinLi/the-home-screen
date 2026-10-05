@@ -323,6 +323,4 @@ export const CITY_PAGES = [
     town — see public/wallpapers/CREDITS.md.
   */
   'Brisbane',
-  // Phở Hà Nội’s published location, sent by Glenn on 2026-10-02.
-  'Fountain Valley',
 ] as const

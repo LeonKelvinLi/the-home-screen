@@ -25,7 +25,7 @@ import { CITY_PLACEMENTS } from '../src/data/placements'
 import { CITY_PAGES } from '../src/data/cities'
 import { BEASTY_CATEGORIES, CATEGORY_KINDS, CATEGORY_SPOTS } from '../src/data/categories'
 import { CATEGORY_PLACEMENTS } from '../src/data/categorySeats'
-import { PAGE_KINDS, HOME_PAGES, PORTAL_KINDS, ALL_BEASTY_PAGES } from '../src/data/slots'
+import { PAGE_KINDS, HOME_PAGES } from '../src/data/slots'
 import { ARCHIVE_DAYS, currentNews, archivedNews, dayLabel, upcoming } from '../src/data/news'
 import {
   GOODS_CATEGORIES,
@@ -121,9 +121,7 @@ for (const [id, keys] of seatOf) {
   the server and the CRM too, so a kind missing from it is a seat nobody counts.
 */
 for (const k of Object.keys(KINDS)) if (!PAGE_KINDS.includes(k)) err(`page kind ${k} is not in slots.ts PAGE_KINDS`)
-if (HOME_PAGES.length !== 0) err('category sheets must open through BEASTY Pages or Search')
-if (PORTAL_KINDS.length !== 24 || new Set(PORTAL_KINDS).size !== 24) err('BEASTY Pages must have 24 distinct category doors')
-for (const kind of PORTAL_KINDS) if (!ALL_BEASTY_PAGES.some((p) => p.kind === kind)) err(`portal door ${kind} has no destination`)
+if (HOME_PAGES.filter((p) => !p.yellow).length !== 9) err(`the home screen has ${HOME_PAGES.filter((p) => !p.yellow).length} category pages, not 9`)
 for (const c of BEASTY_CATEGORIES) {
   if (!/^[a-z]+$/.test(c.kind)) err(`category kind ${c.kind} is not plain lower-case letters`)
   if (!existsSync(join(ROOT_DIR, 'public', c.wall))) err(`category ${c.heading} has no background at public${c.wall}`)

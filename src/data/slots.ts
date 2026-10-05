@@ -344,11 +344,26 @@ export const CATEGORY_PAGES: SlotPage[] = BEASTY_CATEGORIES.map((c) => ({
   categories: Array.from({ length: CATEGORY_SPOTS }, (_, i) => ({ n: i + 1, name: c.heading, label: 'Available' })),
 }))
 
-/** The October 3 request replaces the swipe of categories with BEASTY · Pages. */
-export const HOME_KINDS: string[] = []
+/*
+  WHAT THE HOME SCREEN SWIPES THROUGH. Glenn, 2026-09-30: "we will limit the
+  amount of pages on the home screen to let's say 9 categories … You won't be
+  able to scroll for cities unless you just search for that city".
+
+  Nine category pages: his five flagship sheets in his order, then the four
+  category pages with the most businesses on them today. After them come the
+  two yellow sheets, which are not categories but the free listings behind Eats
+  and Services. Every other category and every city opens from Search.
+*/
+export const HOME_KINDS: string[] = ['goods', 'boutiques', 'services', 'online', 'individuals', 'tattoo', 'whips', 'gyms', 'salons']
+
+/** Every BEASTY page there is: the flagship sheets, then the category pages. */
 export const ALL_BEASTY_PAGES: SlotPage[] = [...BEASTY_SHEETS, ...CATEGORY_PAGES]
-export const HOME_PAGES: SlotPage[] = []
-export const PORTAL_KINDS = ['goods', 'boutiques', 'services', 'sweets', 'ayce', 'coffee', 'online', 'individuals', 'tattoo', 'automotive', 'whips', 'gyms', 'salons', 'barbershops', 'foodies', 'cooks', 'ai', 'artists', 'athletes', 'dancers', 'djs', 'realtors', 'photographers', 'meats']
+
+/** The home screen's BEASTY run, in order: the nine categories, then the yellow sheets. */
+export const HOME_PAGES: SlotPage[] = [
+  ...HOME_KINDS.map((k) => ALL_BEASTY_PAGES.find((p) => p.kind === k)!),
+  ...BEASTY_SHEETS.filter((p) => p.yellow),
+]
 
 /**
  * Every word a seat id can carry between the city and the number. The server's

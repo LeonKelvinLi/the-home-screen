@@ -1,7 +1,5 @@
 import type { LocalSeed } from './localBrands'
 import { ROSTER_RESEARCH } from './rosterResearch'
-import { IMESSAGE_ADDITIONS } from './imessageAdditions'
-import { IMESSAGE_OCTOBER4 } from './imessageOctober4'
 
 /**
  * The operator's own rosters for the two flagship pages, exactly as he sent
@@ -3163,7 +3161,7 @@ export const ROSTER_SEED: LocalSeed[] = [
     icon: 'nosso-oakland',
     logoTemplate: 'wordmark', logoLines: ['NOSSO'], logoFace: 'script',
     site: 'https://nossooakland.com/',
-    tier: 3,
+    tier: 1,
   }),
   /* El Portal, "San Leandro • Goods" — the open Mexican seat, their own menu. */
   seed('el-portal-san-leandro', 'El Portal Mexican Restaurant', 'El Portal', 'Mexican & seafood', '#8A4A1E', {
@@ -4338,8 +4336,6 @@ export const ROSTER_SEED: LocalSeed[] = [
     contactOnly:
       'Developing and owning real estate in California and the Mountain West for over twelve years, with more than $60,000,000 in service stations and automotive real estate controlled, managed and built, in their own words. Their properties include Stockton and Laurel Rd. Call or email Ross to connect.',
   }),
-  ...IMESSAGE_ADDITIONS,
-  ...IMESSAGE_OCTOBER4,
 ]
 
 /**
@@ -4399,7 +4395,7 @@ export const BEASTY_GOODS_ROSTER: (string | null)[] = [
   /* Elemonkey moved to BEASTY • Goods, the boutique sheet, "right in the center"
      (Glenn, 2026-09-30); see data/placements.ts. */
   null, //                 20 open (was Elemonkey)
-  'b_nossooakland', //  21 Nosso — Meadowlark moved to Sweets, October 3 request
+  'b_meadowlarkdairy', //  21 Meadowlark Dairy
   'b_masa', //             22 Masa
   'b_harumiayce', //       23 Harumi - AYCE
   null, //                 24 Bust Down & Co., via placements.ts (was Lucky Three Seven)

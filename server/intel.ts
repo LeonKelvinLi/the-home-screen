@@ -46,7 +46,6 @@ export const CLIENT_EVENTS: Record<string, { label: string; props: Prop[] }> = {
   gate_shown: { label: 'Was asked to sign up', props: ['door'] },
   clip_played: { label: 'Watched a clip', props: ['brand'] },
   reserve_started: { label: 'Opened Reserve a Spot', props: ['seat', 'city', 'page_kind'] },
-  feature_opened: { label: 'Opened Gallery, Reels, News, Calendar, Share or Contacts', props: ['kind'] },
   category_opened: { label: 'Opened a BEASTY category', props: ['page_kind', 'surface'] },
 }
 
@@ -54,7 +53,7 @@ const BRAND_IDS = new Set(BRANDS.map((b) => b.id))
 const CITIES = new Set([...CITY_PAGES, 'BEASTY'])
 const PAGE_KINDS = new Set(ALL_PAGE_KINDS)
 const SURFACES = new Set(['home_tile', 'search_result', 'search_list', 'city_row', 'nav_place', 'reel', 'share_link', 'recents', 'favorites', 'news', 'gallery', 'dock', 'business_page', 'landing', 'members', 'other'])
-const KINDS = new Set(['call', 'text', 'email', 'directions', 'website', 'order', 'menu', 'instagram', 'clip', 'booking', 'brand', 'item', 'city', 'category', 'gallery', 'watch', 'news', 'calendar', 'share', 'phone'])
+const KINDS = new Set(['call', 'text', 'email', 'directions', 'website', 'order', 'menu', 'instagram', 'clip', 'booking', 'brand', 'item', 'city', 'category'])
 export const ENTRY_TYPES = new Set(['direct', 'shared_business', 'register_qr', 'member_ref', 'crm_ref', 'campaign', 'search_engine', 'social', 'referral', 'shared_page'])
 const DEVICES = new Set(['phone', 'tablet', 'desktop'])
 

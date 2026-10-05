@@ -1,4 +1,3 @@
-import { REVIEW_LINKS } from './reviewLinks'
 import type { GlyphName } from './glyphs'
 import { LOCAL_SEED } from './localBrands'
 import type { BrandPanel } from './localBrands'
@@ -1112,15 +1111,6 @@ const SEED: Seed[] = [
 /** One line, every partner. Curated menus are the whole model here. */
 export const MENU_NOTE = "Choose from this week's favorites!"
 
-// Review relationships supply a playable first video without changing an existing hosted clip.
-const sourceReviews = new Map(REVIEW_LINKS.map((r) => [r.clip.href, r.clip]))
-const firstReview = new Map<string, NonNullable<Brand['clip']>>()
-for (const review of REVIEW_LINKS) {
-  for (const id of [review.businessId, review.creatorId]) {
-    if (id && !firstReview.has(id)) firstReview.set(id, review.clip)
-  }
-}
-
 const fromSeed = (s: Seed): Brand => ({
   id: `b_${s.slug.replace(/-/g, '')}`,
   vendorId: `v_${s.slug.replace(/-/g, '')}`,
@@ -1162,7 +1152,7 @@ const fromSeed = (s: Seed): Brand => ({
   panels: s.panels,
   hours: s.hours,
   quoteOnly: s.quoteOnly,
-  clip: s.clip?.src ? s.clip : s.clip ? { ...s.clip, ...sourceReviews.get(s.clip.href) } : firstReview.get(`b_${s.slug.replace(/-/g, '')}`),
+  clip: s.clip,
   photo: s.photo,
   photos: s.photos,
   // "This week's favourites" is a food line. A service catalogue is not a

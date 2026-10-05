@@ -13312,11 +13312,3 @@ span.top3-add {
   border-radius: 12px;
   background: #1c1c1e center / cover no-repeat;
 }
-
-/* BEASTY Pages: category doors retain readable labels on every wallpaper. */
-.category-door { position:relative; width:100%; height:100%; overflow:hidden; border-radius:23%; background:#152334; }
-.brand-clip-drop > .menu-picks-bar { box-shadow:0 0 0 1px rgba(57,190,240,.35); animation:review-glow 4s ease-in-out infinite; }
-@keyframes review-glow { 50% { box-shadow:0 0 0 1px rgba(57,190,240,.8), 0 0 12px rgba(57,190,240,.2); } }
-@media (prefers-reduced-motion:reduce) { .brand-clip-drop > .menu-picks-bar { animation:none; } }
-.review-choice { display:block; margin:12px 14px; }
-.review-choice select { width:100%; margin-top:6px; padding:10px; border-radius:10px; background:#171a21; color:white; border:1px solid #6a7180; }

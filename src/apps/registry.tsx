@@ -1,14 +1,13 @@
 import type { ReactNode } from 'react'
 import { BRANDS, brandById } from '../data/brands'
 import { BrandLogo } from '../ios/BrandLogo'
-import { CategoryIcon } from '../ios/CategoryIcon'
 import { CalendarIcon } from '../ios/CalendarIcon'
 import { SystemIcon } from '../ios/SystemIcon'
 import { SlotIcon } from '../ios/SlotIcon'
 import { SQUIRCLE_100 } from '../ios/squircle'
 import { GLYPHS } from '../data/glyphs'
 import { ALL_PLACEMENTS } from '../data/categorySeats'
-import { ALL_BEASTY_PAGES, PORTAL_KINDS, categoriesFor } from '../data/slots'
+import { categoriesFor } from '../data/slots'
 import type { SystemGlyph } from '../ios/SystemIcon'
 
 /**
@@ -59,7 +58,6 @@ export interface AppDef {
    * Page carries, which is what HomeScreen already matches on for Search.
    */
   page?: string
-  pageKind?: string
 }
 
 /**
@@ -580,20 +578,9 @@ export const GOODS_APP: AppDef = {
   page: 'BEASTY',
 }
 
-/** Twenty-four category doors on BEASTY · Pages; every other page remains in Search. */
-export const CATEGORY_PORTAL_APPS: AppDef[] = PORTAL_KINDS.map((kind) => {
-  const page = ALL_BEASTY_PAGES.find((p) => p.kind === kind)!
-  return {
-    id: `page.${kind}`, name: `BEASTY · ${page.heading}`, label: kind === 'photographers' ? 'Photo & Video' : page.heading,
-    kind: 'system', pageKind: kind, tint: '#18212C',
-    icon: <CategoryIcon kind={kind} />,
-  }
-})
-
 export const ALL_APPS: AppDef[] = [
   ...BRAND_APPS,
   ...SYSTEM_APPS,
-  ...CATEGORY_PORTAL_APPS,
   PHONE_APP,
   DESIGNS_APP,
   SHARE_APP,

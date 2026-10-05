@@ -52,11 +52,6 @@ export const KIND_LABEL: Record<NewsKind, string> = {
 
 const ITEMS: NewsItem[] = [
   {
-    date: '2026-10-04', kind: 'beasty', headline: 'Explore BEASTY Pages',
-    body: 'The home screen now brings 24 category doors together. Browse Sweets, AYCE and Coffee, find car services in Automotive, and explore MeterSF on the new Whips page. New business and creator pages include credited restaurant videos.',
-    brands: ['b_metersf', 'b_gregorysgourmetdesserts', 'b_theburgerspotco', 'b_shibamcoffeenewark'],
-  },
-  {
     /*
       FROM THEIR OWN POSTS: ThirsTea San Leandro's Instagram, in his
       screenshots of 2026-09-16. The eventDate puts the soft opening on the

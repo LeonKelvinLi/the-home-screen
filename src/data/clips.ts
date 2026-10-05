@@ -10,7 +10,6 @@
  * business's own page instead, which is what that card is for.
  */
 import { BRANDS } from './brands'
-import { REVIEW_LINKS } from './reviewLinks'
 
 export interface Reel {
   brandId: string
@@ -26,12 +25,7 @@ export interface Reel {
   href?: string
 }
 
-const primarySources = new Set<string>()
-export const REELS: Reel[] = BRANDS.filter((b) => {
-  if (!b.clip?.src || primarySources.has(b.clip.src)) return false
-  primarySources.add(b.clip.src)
-  return true
-}).map((b) => ({
+export const REELS: Reel[] = BRANDS.filter((b) => b.clip?.src).map((b) => ({
   brandId: b.id,
   name: b.name,
   line: b.cuisine,
@@ -41,14 +35,3 @@ export const REELS: Reel[] = BRANDS.filter((b) => {
   by: b.clip!.by,
   href: b.clip!.href,
 }))
-
-// Additional supplied reviews also belong in Watch, once per source video.
-const seenSources = new Set(REELS.map((r) => r.src))
-for (const review of REVIEW_LINKS) {
-  if (!review.clip.src || seenSources.has(review.clip.src)) continue
-  const brand = BRANDS.find((b) => b.id === (review.businessId ?? review.creatorId))
-  if (!brand) continue
-  REELS.push({ brandId: brand.id, name: brand.name, line: review.title, src: review.clip.src,
-    poster: review.clip.poster, credit: review.clip.credit, by: review.clip.by, href: review.clip.href })
-  seenSources.add(review.clip.src)
-}

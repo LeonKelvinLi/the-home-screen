@@ -4,7 +4,7 @@ import { AppIcon, rectInScreen } from './AppIcon'
 import type { IconRect } from './AppIcon'
 import { useDrag } from './useDrag'
 import { useScreenSize } from './ScreenSize'
-import { APP_GROUPS, CATEGORY_PORTAL_APPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
+import { APP_GROUPS, CITY_PAGES, DOCK_SETS, GALLERY_APP, WATCH_APP, appForSlot } from '../apps/registry'
 import { useGate } from '../lib/gate'
 import { ALL_BEASTY_PAGES, HOME_PAGES, SLOT_PAGES, SPOTS_PER_PAGE } from '../data/slots'
 import type { SlotPage } from '../data/slots'
@@ -84,8 +84,11 @@ interface Props {
   WHAT A JUMP NEEDS ADDED TO THE SWIPE, as `city:Oakland` or `kind:realtors`,
   or null when the page is already on the home screen.
 
-  The October 3 home screen is a directory of category doors, followed by the
-  system page. A city or category opens at the end while someone visits it.
+  Glenn, 2026-09-30: "we will limit the amount of pages on the home screen to
+  let's say 9 categories … You won't be able to scroll for cities unless you
+  just search for that city to get on that page." So the swipe holds BEASTY's
+  nine categories and the two yellow sheets, and a city or another category is
+  put on the end for as long as someone is visiting it.
 */
 const ON_HOME = new Set(HOME_PAGES.map((p) => p.kind))
 function extraFor(city: string, appId?: string, kind?: string): string | null {
@@ -498,9 +501,6 @@ export function HomeScreen({ onOpen, receding, hidden, inert, jumpToCity, jumpTo
       }
     }
 
-    for (let i = 0; i < CATEGORY_PORTAL_APPS.length; i += slotsPerPage) {
-      out.push({ city: 'BEASTY', section: 'Pages', apps: CATEGORY_PORTAL_APPS.slice(i, i + slotsPerPage), tile: slotTile, rowGap: slotGap })
-    }
     buildCity('BEASTY', HOME_PAGES)
 
     for (const group of APP_GROUPS) {
