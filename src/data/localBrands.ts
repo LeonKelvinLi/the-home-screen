@@ -8518,6 +8518,57 @@ export const LOCAL_SEED: LocalSeed[] = [
       'MeterSF\u2019s black Chevelle SS, supercharged, out of San Francisco, the 415. He rolls with the Not Bank Owned car club and Dropz Bay Area. Nothing here is for sale: BEASTY \u2022 Whips is for the cars and the people who build them.',
     items: [],
   },
+  {
+    /*
+      MRCHEEZE408, the second car on BEASTY \u2022 Whips. Glenn, 2026-10-05: a
+      screenshot of @mrcheeze408's profile with "BEASTY \u2022 Whips", @theshedbuilt's
+      reel of his CRX with "Clip this video plz", and "I plan to message him to
+      get some pictures for his gallery. This was my favorite car throughout
+      high school."
+
+      Facts from his own profile ("I train \u2026 I travel. And I collect Hondas")
+      and the reel: "my 92 CRX" in his words on it, the build list from the
+      shed's caption. Named by his handle, as MeterSF is. The gallery is four
+      stills from the shed's video, taken between its burned-in captions, until
+      Glenn's pictures come. No Instagram button (Glenn approves those page by
+      page).
+    */
+    slug: 'mrcheeze408',
+    icon: 'mrcheeze408',
+    name: 'MrCheeze408',
+    label: 'MrCheeze408',
+    cuisine: 'Honda CRX build',
+    tagline: 'A 1992 Honda CRX in a full Mugen body kit, out of the 408.',
+    color: '#45494D|#D9D9D9',
+    prep: 0,
+    category: 'Whips',
+    clip: {
+      src: '/clips/mrcheeze408.mp4',
+      poster: '/clips/mrcheeze408-poster.webp',
+      href: 'https://www.instagram.com/reel/DeGQ1-2t3hG/',
+      credit: 'Posted by @theshedbuilt',
+      platform: 'Instagram',
+    },
+    photos: [
+      { src: '/photos/mrcheeze408-1.webp', alt: 'The grey CRX from the side, CRX lettering on the door and chrome wheels.', credit: 'From @theshedbuilt\u2019s video' },
+      { src: '/photos/mrcheeze408-2.webp', alt: 'The CRX from behind, its glass top and the red tail light bar.', credit: 'From @theshedbuilt\u2019s video' },
+      { src: '/photos/mrcheeze408-3.webp', alt: 'Inside: the Mugen steering wheel and the grey seats.', credit: 'From @theshedbuilt\u2019s video' },
+      { src: '/photos/mrcheeze408-4.webp', alt: 'Under the hood: the polished engine and its row of throttle bodies.', credit: 'From @theshedbuilt\u2019s video' },
+    ],
+    panels: [
+      {
+        head: 'The build',
+        body: [
+          'A full Mugen body kit and a glass top.',
+          'Mugen MR5 wheels and a Mugen steering wheel.',
+          'A B-series engine with individual throttle bodies.',
+        ],
+      },
+    ],
+    contactOnly:
+      'MrCheeze408\u2019s 1992 Honda CRX, in a full Mugen body kit, out of the 408. In his own words he trains, he travels and he collects Hondas. BEASTY has not spoken to him yet: this spot is held, not taken. Nothing here is for sale: BEASTY \u2022 Whips is for the cars and the people who build them.',
+    items: [],
+  },
   /*
     BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
     "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).

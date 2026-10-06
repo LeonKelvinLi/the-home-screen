@@ -199,6 +199,20 @@ const realtorWall = await wallIs(p, /cat-realtors\.webp/)
 step('and its own background', /cat-realtors\.webp/.test(realtorWall), realtorWall)
 await shot(p, '4-realtors')
 
+/* Glenn, 2026-10-05: "place these cars from the center and work your way out
+   & also put Meter SF in the center". The centre is seat 9, the third row's
+   second tile; the next car sits beside it. */
+await openSearch()
+await p.locator('.search-drop-btn', { hasText: 'Categories' }).click()
+await p.locator('#search-drop-categories .search-brand', { hasText: 'BEASTY • Whips' }).click()
+const whips = await waitWhere(p, 'BEASTY, Whips')
+step('BEASTY • Whips opens from the list', !!whips?.endsWith('BEASTY, Whips'), whips)
+const whipTiles = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
+step('MeterSF sits in the centre of Whips, MrCheeze408 beside it', /^MeterSF/.test(whipTiles[9] ?? '') && /^MrCheeze408/.test(whipTiles[10] ?? ''), `9: ${whipTiles[9]} | 10: ${whipTiles[10]}`)
+step('and the spots round them are open', whipTiles.slice(0, 9).every((l) => /spot available/.test(l ?? '')), whipTiles.slice(0, 2).join(' | '))
+await p.waitForTimeout(1200)
+await shot(p, '4b-whips')
+
 await openSearch()
 await p.locator('.search-drop-btn', { hasText: 'Cities' }).click()
 const cities = await p.locator('#search-drop-cities .search-brand strong').allTextContents()

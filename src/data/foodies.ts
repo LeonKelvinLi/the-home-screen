@@ -106,6 +106,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'whatthejessi_', place: 'Aung Myanmar', city: 'Oakland', reel: reel('DdZ_vmtP9SZ') },
   { by: 'areweeatingyet', place: 'Truong Thanh Restaurant', city: 'Milpitas', reel: reel('DBY9wl6PM3f') },
   { by: 'foodgiveness', place: 'Tony’s Cable Car Restaurant', city: 'San Francisco', reel: reel('Dd2mwZRRBhm') },
+  { by: 'asideofsweet', place: 'Britex Fabrics', city: 'San Francisco', reel: reel('Dd-TwU4vo9x') },
 ]
 
 /*

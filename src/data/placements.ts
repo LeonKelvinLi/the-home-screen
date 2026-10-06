@@ -1250,8 +1250,14 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-goods2-19': 'b_winkydinkydogs', //                       Hot dogs is top dog's
   'beasty-goods2-20': 'b_lovelysburgerssf', //                     Burger is Chef Jeff's
   'beasty-boutiques-0': 'b_midnighttheories', //                   "their appropriate category"
-  /* "Create a new BEASTY • Whips and add Meter SF on there as the 1st spot" — 2026-10-04. */
-  'beasty-whips-0': 'b_metersf',
+  /* "Create a new BEASTY • Whips and add Meter SF on there as the 1st spot" — 2026-10-04.
+     Then 2026-10-05: "Can you place these cars from the center and work your
+     way out & also put Meter SF in the center please." The centre is seat 9,
+     the third row's second tile (as Elemonkey's on Goods); the next cars go
+     10, 13, 14, then 5, 6, 17, 18, then 8, 11, 12, 15, then 4, 7, 16, 19,
+     then the top and bottom rows: 1, 2, 21, 22, 0, 3, 20, 23. */
+  'beasty-whips-9': 'b_metersf',
+  'beasty-whips-10': 'b_mrcheeze408', //                           @theshedbuilt's reel of his Mugen CRX
   'beasty-services2-25': 'b_frankjrenglish', //                     from BEASTY • Services 5, for Bust Down & Co.
   'el-cerrito-goods2-0': 'b_brasilbistro', //                      no Brazilian seat; yellow sheet, Tier 1
   'walnut-creek-goods2-5': 'b_myofrozenyogurtwalnutcreek', //      Ice cream shop is Milky Flakes'; yellow sheet, Tier 1

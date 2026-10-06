@@ -284,6 +284,7 @@ export const ICON_LUMA: Record<string, number> = {
   'moment-us': 0.0687,
   'moxie-steak-house': 0.2742,
   'mr-m-home-services': 0.9384,
+  'mrcheeze408': 0.3346,
   'mrs-ramen': 0.684,
   'myo-frozen-yogurt': 0.4539,
   'nail-edit-studio': 0.0201,

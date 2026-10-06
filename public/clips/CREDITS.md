@@ -161,6 +161,7 @@ the most movement — to 540x960 with sound.
 | `nosso-oakland.mp4` | Nosso, Oakland | instagram.com/reel/Ddh94RIgaxM (@festusfeasts) |
 | `bread-winners.mp4` | Bread Winners, Oakland | instagram.com/reel/DeBPEB8uDJ4 (@marketing_kings) |
 | `metersf.mp4` | MeterSF (BEASTY • Whips) | instagram.com/reel/DdeeJsApfBw (@metersf) |
+| `mrcheeze408.mp4` | MrCheeze408 (BEASTY • Whips) | instagram.com/reel/DeGQ1-2t3hG — **an excerpt**, 18s–42s of 59s — his 1992 CRX in a full Mugen kit; posted by @theshedbuilt, not the owner — sent on 2026-10-05 with "Clip this video plz" |
 | `kan-kiin.mp4` | Kan Kiin, Daly City | instagram.com/reel/DdfKJIgPDzm (@foodieberrie) |
 | `rob-bens-restaurant.mp4` | Rob Ben's Restaurant & Lounge, Emeryville | instagram.com/reel/DEgHeK_yfL- (@bayarea_fooddreamz) |
 | `understory.mp4` | Understory, Oakland | instagram.com/reel/Dd7Gag4NaBV (@festusfeasts) |
