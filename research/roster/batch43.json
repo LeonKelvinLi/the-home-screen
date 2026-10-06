@@ -1,0 +1,2479 @@
+[
+ {
+  "id": "b_hakashisushibar",
+  "name_exact": "Hakashi Sushi Bar & Grill",
+  "one_line": "",
+  "cuisine": "Sushi and Japanese kitchen",
+  "address": "1385 N Main St Suite C, Walnut Creek, CA 94596",
+  "phone": "(925) 433-5068",
+  "email": "sushi@hakashisushibar.com",
+  "hours": "Mon-Sun 11:30am-2:30pm & 5pm-10pm",
+  "instagram": null,
+  "site_kind": "own",
+  "site_url": "https://www.hakashisushibar.com/",
+  "order_url": null,
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Katsu Don",
+    "desc": "crispy pork or chicken katsu; served with steam rice, salad and miso soup",
+    "cents": 1700,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Tendon",
+    "desc": "seasonal tempura vegetables over rice; in house tempura sauce and miso sou",
+    "cents": 1600,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Gyu Don",
+    "desc": "thinly sliced beef onions simmered in savory sweet soy sauce over rice; served with miso soup",
+    "cents": 1700,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Tonkatsu",
+    "desc": "deep fried prok or chicken cutlet, served with salad, rice and miso soup",
+    "cents": 1600,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Oyako Don",
+    "desc": "chicken and onions gently simmered in dashi over rice",
+    "cents": 1500,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Chirashi-Don",
+    "desc": "chef choice selection over sushi rice bowl with 15 pieces of fish",
+    "cents": 3500,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "House Poke-Don",
+    "desc": "assorted diced fish mixed with veggies in house sauce over rice; served with miso soup",
+    "cents": 1700,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Sashimi 15 Pcs",
+    "desc": "Chef's choice selection of assorted fish; served with miso soup",
+    "cents": 3000,
+    "label": "",
+    "section": "Lunch Specials"
+   },
+   {
+    "name": "Kumamoto Oysters, Half Dozen",
+    "desc": "Half dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1800,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Kumamoto Oysters, 1 Dozen",
+    "desc": "1 dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 3000,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Kusshi Oysters, Half Dozen",
+    "desc": "Half dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1500,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Kusshi Oysters, 1 Dozen",
+    "desc": "1 dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 2800,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Point Reyes (Miyagi) Oysters, Half Dozen",
+    "desc": "Half dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1400,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Point Reyes (Miyagi) Oysters, 1 Dozen",
+    "desc": "1 dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 2800,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Shigoku Oysters, Half Dozen",
+    "desc": "Half dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1500,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Shigoku Oysters, 1 Dozen",
+    "desc": "1 dozen. (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 2800,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "3pcs Oyster Dinamite",
+    "desc": "baked half shell oysters topped with mild spicy mayo, green onions and tobiko (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1200,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Akami Agua Chiles",
+    "desc": "tuna, onions, shiso and house citrus sauce with hints of spicy jalapeños (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1400,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Hamachi Crudo",
+    "desc": "yellowtail, ponzu, red onions, jalapeños, crispy rice and green onions (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1200,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Salmon Crudo",
+    "desc": "salmon, house ponzu, onions, black tobiko, crispy rice and jalapeños (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1200,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Tuna Tataki",
+    "desc": "seared tuna, ponzu, sriracha, quail eggs, red onions, tobiko (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1400,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Seafood Salad",
+    "desc": "diced fish, veggies mixed with house dressing (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1300,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Eringi No Tempura",
+    "desc": "king oyster mushrooms, dressed in truffle salt and blue seaweed (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1000,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Sesame Tofu",
+    "desc": "fresh tofu with ikura, green onions, fermented sesame and spices swimming in a house made ponzu (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1000,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Garlic Edamame",
+    "desc": "soy beans sautéed with garlic (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 550,
+    "label": "",
+    "section": "Happy Hour"
+   },
+   {
+    "name": "Hamachi Kampachi 4pc",
+    "desc": "yellowtail, onions, jalapeños, ponzu sauce and tobiko (happy hour, every day 11:30am-2:30pm and 5-7pm)",
+    "cents": 1200,
+    "label": "",
+    "section": "Happy Hour"
+   }
+  ],
+  "price_note": "Prices are from the lunch specials and happy hour pages on Hakashi's own website; the rest of their menu is listed there without prices.",
+  "flags": [
+   "Hours are from their own website (the same on every page): open 7 days a week, lunch 11:30am-2:30pm and dinner 5pm-10pm. Their Instagram bio gives no hours; a pinned Instagram post says the lunch special is available daily 11:30am-2:30pm, which agrees.",
+   "No online ordering page of their own: the 'Online Ordering' page on their site says they offer take-out and to call the take-out line, (925) 433-5068. The red 'Order online with…' bar at the bottom of Glenn's screenshot (hakashi-3) is not part of their site when it is loaded directly; it looks like Instagram's in-app browser overlay, so order_url is null.",
+   "Only the lunch specials (8) and the happy hour food (18) have prices on their site. The appetizers, specialty rolls, hand rolls, maki, nigiri/sashimi, hot dishes, udon soups, omakase courses and desserts are listed with no prices, so they are left out. On the Seasonal Japanese Fish page a 'Today's Chef Special' Hokkaido Uni shows 20.00; it is a daily special, so it is left out too.",
+   "Happy hour is 'everyday' 11:30am-2:30pm and 5-7pm per their happy hour page ('Full Bar • Sushi • Small Plates'). Each oyster type is priced per half dozen and per dozen, so each is two items. The happy hour cocktails, beer, sake and wine are left out (alcohol).",
+   "Name: the site header, logo and title say 'Hakashi Sushi Bar & Grill'; the Instagram display name adds 'Walnut Creek'; the site footer says 'Hakashi Japanese Bar' and the About text 'Hakashi Japanese Sushi Bar & Grill'.",
+   "Address: their site writes '1385 N Main Street Suite C, Walnut Creek, CA 94596' and the Instagram bio '1385 N Main St Suite C, Walnut Creek'. Email is from their site's contact block.",
+   "Reservations are by phone only, per their 'Our Policy' page. That page also says they have no vegan or vegetarian menu but the chef can accommodate, and they can handle most allergies (shellfish, gluten), so dietary is left empty.",
+   "Their Instagram bio mentions 'Bluefin Tuna Events'; a post in Glenn's screenshot advertises 'The Bluefin Tuna Experience' on Saturday, Oct 17 2026 (tuna cutting, 15-course tasting, live DJ). The price and booking details are too small to read, so it is not included.",
+   "Their wording is kept, including typos ('miso sou' in Tendon, 'prok' in Tonkatsu, 'Dinamite'); item names are put in title case from their all-caps headings.",
+   "Logo: cut from the header of their own website (hakashi-1), which has the full mark with the 'HAKASHI Sushi Bar & Grill' wordmark on black; the Instagram profile picture has the geisha only.",
+   "Instagram @hakashisushibarwc is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ },
+ {
+  "id": "b_ginzasushi",
+  "name_exact": "Ginza Sushi",
+  "one_line": "",
+  "cuisine": "Sushi and Japanese",
+  "address": "3153 Meridian Ave, Suite A, San Jose, CA 95124",
+  "phone": "(408) 841-9837",
+  "email": "GinzaSushiSJ@gmail.com",
+  "hours": null,
+  "instagram": null,
+  "site_kind": "own",
+  "site_url": "https://sushimakesuhappy.com/",
+  "order_url": "https://order.toasttab.com/online/ginzasushisj",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "California Party Tray",
+    "desc": "7 California Rolls (42 pcs) (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 5000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Cooked Party Tray",
+    "desc": "Dragon Roll (8 pcs) Lion King (8pcs) Ginza Tempura (5 pcs) Mucho Grande (5 pcs) Bay Scallops (8 pcs) Shrimp Tempura (5 pcs) (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 9000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Nippon Festive Tray",
+    "desc": "Tuna (4 pcs sashimi) Salmon (4 pcs sashimi) Hamachi (4 pcs sashimi) Variety Nigiri (10 pcs) Any 2 Ginza Special Rolls (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 9900,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Small Vegetarian Party Tray",
+    "desc": "Futomaki (10 pcs) Kappa Maki (6 pcs) Avocado Roll (6 pcs) Veggie Caterpillar (8 pcs) Golden Bliss Roll (6 pcs) Oshinko Roll (6 pcs) Inari (2 pcs) Tamago (4 pcs) Seaweed Salad (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 7000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Large Vegetarian Party Tray",
+    "desc": "Futomaki (10 pcs) Veggie Caterpillar (16 pcs) Veggie Tempura (10 pcs) Kappa Maki (12 pcs) Avocado Roll (12 pcs) Golden Bliss Roll (12 pcs) Oshinko Roll (12 pcs) Inari (4 pcs) (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 14000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Rolls Combo Party Tray",
+    "desc": "49ers (16 pcs) Orange Blossom (16 pcs) California (16 pcs) Sake Maki (12 pcs) Tekka Maki (12 pcs) Shrimp Tempura R (12 pcs) (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 13000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Ginza Special Rolls Party Tray",
+    "desc": "Crazy Mango (8 pcs) Paradise (8 pcs) Fire Dragon (8 pcs) Ultimate Shrimp Delight (8pcs) Spicy Dragon (8 pcs) My Roll (6 pcs) Sexy Victoria (8 pcs) Hamachi Delight (8 pcs) Orange Blossom (8 pcs) (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 15000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Sushi Sashimi Party Tray",
+    "desc": "Tuna (8 pcs sashimi, 4 pcs nigiri) Salmon (8 pcs sashimi, 4 pcs nigiri) Hamachi (8 pcs sashimi, 4 pcs nigiri) White fish of the day Hirame/Tai/Albacore (8 pcs sashimi, 4 pcs nigiri) (Takes at least 60 minutes to prepare; call them with your pickup time.)",
+    "cents": 18000,
+    "label": "",
+    "section": "Party Tray - Sushi"
+   },
+   {
+    "name": "Sunomono (Cucumber)",
+    "desc": "Japanese cucumber salad. You can add Tako or Ebi as an option for your protein.",
+    "cents": 400,
+    "label": "",
+    "section": "Salad"
+   },
+   {
+    "name": "Wakame (Seaweed)",
+    "desc": "Seasoned Japanese style of seaweed salad.",
+    "cents": 600,
+    "label": "",
+    "section": "Salad"
+   },
+   {
+    "name": "Hawaiian Poke",
+    "desc": "Tuna, mango, cucumber, wakame, white onion, tobiko served w/ poke sauce.",
+    "cents": 1900,
+    "label": "",
+    "section": "Salad"
+   },
+   {
+    "name": "Tropical Mango",
+    "desc": "Seared salmon, mango, spring mix served w/ yuzu special dressing.",
+    "cents": 1900,
+    "label": "",
+    "section": "Salad"
+   },
+   {
+    "name": "Tuna Tataki",
+    "desc": "Seared tuna, spring mix served w/ tataki special sauce.",
+    "cents": 1900,
+    "label": "",
+    "section": "Salad"
+   },
+   {
+    "name": "Sashimi Salad",
+    "desc": "Assorted fish, spring mix served w/ special ponzu dressing.",
+    "cents": 2000,
+    "label": "",
+    "section": "Salad"
+   },
+   {
+    "name": "Edamame",
+    "desc": "Steamed and lightly salted green beans.",
+    "cents": 600,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Garlic Edamame",
+    "desc": "Sauteed green beans with garlic sauce.",
+    "cents": 800,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Shishito Pepper",
+    "desc": "Lightly fried and salted shishito pepper.",
+    "cents": 800,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Gyoza (Potstickers)",
+    "desc": "6pcs of deep fried pork potstickers.",
+    "cents": 800,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Agedashi Tofu",
+    "desc": "Deep fried tofu served in tempura sauce w/ bonito flakes.",
+    "cents": 800,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Takoyaki",
+    "desc": "Deep fried octopus balls served w/ katsu sauce and bonito flakes.",
+    "cents": 800,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Tempura - Mix",
+    "desc": "Japanese style deep fried shrimp and assorted vegetables.",
+    "cents": 1200,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Tempura - Veggies",
+    "desc": "Japanese style deep fried assorted vegetables.",
+    "cents": 900,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Tempura - Shrimp",
+    "desc": "Japanese style deep fried shrimp.",
+    "cents": 1100,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Hamachi Kama",
+    "desc": "Grilled yellowtail fish collar served w/ ponzu sauce.",
+    "cents": 1600,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Sake Kama",
+    "desc": "Grilled salmon fish collar served w/ ponzu sauce.",
+    "cents": 1400,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Soft Shell Crab",
+    "desc": "Deep fried premium soft shell crabs served w/ Ginza special mix sauce.",
+    "cents": 1500,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Baked Green Mussel",
+    "desc": "Baked mussels with enoki and served w/ Ginza special sauce.",
+    "cents": 1200,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Ginza Fries",
+    "desc": "Served w/ spicy mayo, tobiko and green onion. Fries options: regular fries or sweet potato fries.",
+    "cents": 900,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Tori No (Chicken) Karaage",
+    "desc": "Japanese style deep fried chicken served w/ Ginza Sauce.",
+    "cents": 1200,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Ika (Squid) Karaage",
+    "desc": "Japanese style deep fried squid tentacles served w/ Ginza Sauce.",
+    "cents": 1200,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Dynamite",
+    "desc": "Deep fried Jalapeno stuffed w/ spicy tuna, cream cheese, eel sauce and spicy mayo.",
+    "cents": 1200,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Crunch Tuna",
+    "desc": "Crispy deep fried rice w/ spicy tuna, jalapeno, spicy mayo and eel sauce on top.",
+    "cents": 1200,
+    "label": "",
+    "section": "Hot Appetizer"
+   },
+   {
+    "name": "Fresh Oyster",
+    "desc": "",
+    "cents": 2500,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Sashimi Sampler",
+    "desc": "Chef’s choice of 6pcs sashimi, cannot be customized.",
+    "cents": 1800,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Otoro On The Rock",
+    "desc": "6pcs of premium bluefin tuna belly served w/ Kizumi wasabi, yuzu sauce on the top of Himalayan salt rock.",
+    "cents": 3000,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Hamachi Toro On The Rock",
+    "desc": "6pcs of yellowtail belly served w/ Kizumi wasabi, yuzu sauce on the top of Himalayan salt rock.",
+    "cents": 2600,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Garlic Hamachi",
+    "desc": "Yellowtail, cilantro, jalapeno, garlic chips w/ carpaccio sauce.",
+    "cents": 2200,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Salmon Belly Miso",
+    "desc": "Salmon belly served w/ sweet miso sauce and jalapeno, micro green on top.",
+    "cents": 2200,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Hirame Ponzu Appetizer",
+    "desc": "Fresh Korea halibut, caper w/ Ginza special ponzu sauce.",
+    "cents": 2400,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Hokkaido Scallop Tiradito",
+    "desc": "Premium-grade jumbo Hokkaido scallop served w/ cilantro and spicy lime dressing.",
+    "cents": 2000,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Poke Chips",
+    "desc": "Crispy wonton chips topped with fresh mix fish, spicy mayo, scallion and tobiko - crunchy, fresh, and flavorful.",
+    "cents": 1800,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Tuna Tartar",
+    "desc": "Premium-grade tuna and crab meat combined cold with Ginza special dressing, avocado and sushi rice.",
+    "cents": 1600,
+    "label": "",
+    "section": "Cold Appetizer"
+   },
+   {
+    "name": "Bento Box, 2 Items",
+    "desc": "Served w/ miso soup, salad and white steamed rice. You will be able to pick 1 protein and 1 side dish, or 2 proteins with the extra charge.",
+    "cents": 1400,
+    "label": "",
+    "section": "Bento Box"
+   },
+   {
+    "name": "Bento Box, 3 Items",
+    "desc": "Served w/ miso soup, salad and white steamed rice. You will be able to pick 2 proteins and 1 side dish",
+    "cents": 1700,
+    "label": "",
+    "section": "Bento Box"
+   },
+   {
+    "name": "Chicken Teriyaki Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1500,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Salmon Teriyaki Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1700,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Beef Teriyaki Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1800,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Saba Shioyaki Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1600,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Salmon Shioyaki Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1700,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Chicken Katsu Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1600,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Tonkatsu (Pork) Entree",
+    "desc": "Meal served w/ miso soup, salad and white steamed rice.",
+    "cents": 1700,
+    "label": "",
+    "section": "Entree"
+   },
+   {
+    "name": "Chicken Udon",
+    "desc": "",
+    "cents": 1700,
+    "label": "",
+    "section": "Udon"
+   },
+   {
+    "name": "Kitsune Udon",
+    "desc": "",
+    "cents": 1500,
+    "label": "",
+    "section": "Udon"
+   },
+   {
+    "name": "Niku (Beef) Udon",
+    "desc": "",
+    "cents": 1800,
+    "label": "",
+    "section": "Udon"
+   },
+   {
+    "name": "Plain Udon",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Udon"
+   },
+   {
+    "name": "Seafood Udon",
+    "desc": "",
+    "cents": 1900,
+    "label": "",
+    "section": "Udon"
+   },
+   {
+    "name": "Tempura Udon",
+    "desc": "",
+    "cents": 1600,
+    "label": "",
+    "section": "Udon"
+   },
+   {
+    "name": "Amaebi (Sweet Shrimp) Nigiri",
+    "desc": "",
+    "cents": 1500,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Ebi (Cooked Shrimp) Nigiri",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Hamachi (Yellowtail) Nigiri",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Hirame (Halibut) Nigiri",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Hotate (Hokkaido Scallop) Nigiri",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Ika (Squid) Nigiri",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Ikura (Salmon Roe) Nigiri",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Inari (Braised Tofu Skin) Nigiri",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Maguro (Tuna) Nigiri",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Otoro (Fatty Tuna) Nigiri",
+    "desc": "",
+    "cents": 2000,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Saba (Mackerel) Nigiri",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Sake (Salmon) Nigiri",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Sake Toro (Salmon Belly) Nigiri",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Shiro Maguro (Albacore) Nigiri",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Tai (Snapper) Nigiri",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Tako (Octopus) Nigiri",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Tamago (Sweet Egg) Nigiri",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Tobiko (Flying Fish Roe) Nigiri",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Unagi (Eel) Nigiri",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Uni (Sea Urchin) Nigiri",
+    "desc": "",
+    "cents": 1800,
+    "label": "",
+    "section": "Nigiri (2pcs)"
+   },
+   {
+    "name": "Amaebi (Sweet Shrimp) Sashimi",
+    "desc": "",
+    "cents": 2500,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Ebi (Cooked Shrimp) Sashimi",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Hamachi (Yellowtail) Sashimi",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Hirame (Halibut) Sashimi",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Hotate (Hokkaido Scallop) Sashimi",
+    "desc": "",
+    "cents": 1500,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Ika (Squid) Sashimi",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Ikura (Salmon Roe) Sashimi",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Maguro (Tuna) Sashimi",
+    "desc": "",
+    "cents": 1500,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Otoro (Bluefin Tuna) Sashimi",
+    "desc": "",
+    "cents": 2800,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Saba (Mackerel) Sashimi",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Sake (Salmon) Sashimi",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Sake Toro (Salmon Belly) Sashimi",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Shiro Maguro (Albacore) Sashimi",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Tai (Snapper) Sashimi",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Tako (Octopus) Sashimi",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Tamago (Sweet Egg) Sashimi",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Tobiko (Flying Fish Roe) Sashimi",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Unagi (Eel) Sashimi",
+    "desc": "",
+    "cents": 1300,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Uni (Sea Urchin) Sashimi",
+    "desc": "",
+    "cents": 2700,
+    "label": "",
+    "section": "Sashimi (4pcs)"
+   },
+   {
+    "name": "Hamachi (Yellowtail) Fusion",
+    "desc": "2pcs of yellowtail Nigiri served w/ carpaccio sauce, garlic chip, jalapeno, micro green.",
+    "cents": 1100,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Hirame (Halibut) Fusion",
+    "desc": "2pcs of halibut Nigiri served w/ ponzu sauce and capers.",
+    "cents": 1100,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Hotate (Hokkaido Scallop) Fusion",
+    "desc": "2pcs of Hokkaido Scallop Nigiri served w/ truffle salt, carpaccio sauce, micro green.",
+    "cents": 1200,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Maguro (Tuna) Fusion",
+    "desc": "2pcs of seared tuna Nigiri served w/ spicy garlic ponzu and micro green.",
+    "cents": 1200,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Sake (Salmon) Fusion",
+    "desc": "2pcs of salmon Nigiri served w/ sweet miso paste and micro green.",
+    "cents": 1100,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Sake Toro (Salmon Belly) Fusion",
+    "desc": "2pcs of seared salmon belly Nigiri served w/ carpaccio sauce and real pickled wasabi.",
+    "cents": 1200,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Tai (Snapper) Fusion",
+    "desc": "2pcs of Snapper Nigiri served w/ balsamic sauce and micro green.",
+    "cents": 1100,
+    "label": "",
+    "section": "Fusion Nigiri"
+   },
+   {
+    "name": "Chirashi",
+    "desc": "10pcs mix sashimi over rice",
+    "cents": 3000,
+    "label": "",
+    "section": "Donburi (BOWL)"
+   },
+   {
+    "name": "Chirashi Special",
+    "desc": "10pcs mix sashimi plus Uni (sea urchin) and Ikura over rice",
+    "cents": 4000,
+    "label": "",
+    "section": "Donburi (BOWL)"
+   },
+   {
+    "name": "Sakedon",
+    "desc": "10pcs of Salmon sashimi over rice",
+    "cents": 2800,
+    "label": "",
+    "section": "Donburi (BOWL)"
+   },
+   {
+    "name": "Unadon",
+    "desc": "10pcs of Unagi sashimi over rice",
+    "cents": 2800,
+    "label": "",
+    "section": "Donburi (BOWL)"
+   },
+   {
+    "name": "Tekkadon",
+    "desc": "10pcs of Yellowtail sashimi over rice",
+    "cents": 3000,
+    "label": "",
+    "section": "Donburi (BOWL)"
+   },
+   {
+    "name": "Nigiri Moriawase",
+    "desc": "Chef choice of 6pcs Nigiri and Spicy Tuna Roll or California Roll, served w/ miso soup, side salad.",
+    "cents": 2700,
+    "label": "",
+    "section": "Sushibar Omakase"
+   },
+   {
+    "name": "Nigiri Moriawase Special",
+    "desc": "Chef choice of 10pcs Nigiri and Spicy Tuna Roll or California Roll, served w/ miso soup, side salad.",
+    "cents": 3700,
+    "label": "",
+    "section": "Sushibar Omakase"
+   },
+   {
+    "name": "Sashimi Moriawase",
+    "desc": "Chef choice of 12pcs premium fresh Sashimi served w/ miso soup, side salad and real paste or real pickled wasabi.",
+    "cents": 3900,
+    "label": "",
+    "section": "Sushibar Omakase"
+   },
+   {
+    "name": "Sashimi Moriawase Special",
+    "desc": "Chef choice of 18pcs premium fresh Sashimi served w/ miso soup, side salad and real paste or real pickled wasabi.",
+    "cents": 5500,
+    "label": "",
+    "section": "Sushibar Omakase"
+   },
+   {
+    "name": "Ginza Moriawase",
+    "desc": "Chef choice of 12pcs Sashimi and 8pcs Nigiri served w/ real pickled or real paste wasabi. Set served w/ miso soup and salad.",
+    "cents": 7500,
+    "label": "",
+    "section": "Sushibar Omakase"
+   },
+   {
+    "name": "Nippon Festive",
+    "desc": "Chef choice of 12pcs Sashimi and 10pcs Nigiri. Plus customer choice of 2 special rolls. Served w/ 2 miso soup, 2 side salad and real pickled or paste wasabi.",
+    "cents": 9900,
+    "label": "",
+    "section": "Sushibar Omakase"
+   },
+   {
+    "name": "California Roll",
+    "desc": "Inside: avocado, crab meat. (They use imitation crab meat in all rolls.)",
+    "cents": 800,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Ebi Roll (Cooked Shrimp)",
+    "desc": "Inside: cooked shrimp. **You can add any ingredients with extra charge from the options.",
+    "cents": 800,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Negihama Maki (Yellowtail)",
+    "desc": "Inside: yellowtail fish. **You can add any ingredients with extra charge from the options.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Negitoro Maki (Fatty Tuna)",
+    "desc": "",
+    "cents": 1200,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Philadelphia Roll",
+    "desc": "Inside: salmon, cream cheese, avocado.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Sake Maki (Salmon)",
+    "desc": "Inside: salmon fish. **You can add any ingredients with extra charge from the options.",
+    "cents": 900,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Salmon Skin Roll",
+    "desc": "Inside: baked salmon skin, cucumber, Japanese carrot. **You can add any ingredients with extra charge from the options.",
+    "cents": 800,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Shrimp Tempura Roll",
+    "desc": "Inside: shrimp tempura, crab meat, cucumber, avocado w/eel sauce on top. (They use imitation crab meat in all rolls.)",
+    "cents": 1200,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Spicy California Roll",
+    "desc": "Inside: avocado, spicy crab meat. (They use imitation crab meat in all rolls.)",
+    "cents": 900,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Spicy Salmon Roll",
+    "desc": "Inside: spicy salmon, cucumber. **You can add any ingredients with extra charge from the options.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Spicy Scallop Roll",
+    "desc": "Inside: spicy baby scallops, cucumber. **You can add any ingredients with extra charge from the options.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Spicy Tuna Roll",
+    "desc": "Inside: spicy tuna, cucumber. **You can add any ingredients with extra charge from the options.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Spicy Yellowtail Roll",
+    "desc": "Inside: spicy yellowtail, cucumber. **You can add any ingredients with extra charge from the options.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Tekka Maki (Tuna)",
+    "desc": "Inside: tuna fish. **You can add any ingredients with extra charge from the options.",
+    "cents": 900,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Unagi Roll (Eel)",
+    "desc": "Inside: fresh water eel, avocado. Outside: eel sauce.",
+    "cents": 1000,
+    "label": "",
+    "section": "Makimono"
+   },
+   {
+    "name": "Avocado Roll",
+    "desc": "Inside: avocado. **You can add any ingredients with extra charge from the options.",
+    "cents": 700,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Cream Cheese Roll",
+    "desc": "Inside: cream cheese. **You can add any ingredients with extra charge from the options.",
+    "cents": 700,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Inari Roll",
+    "desc": "Inside: Japanese style sweet braised tofu skin. **You can add any ingredients with extra charge from the options.",
+    "cents": 700,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Kappa Maki (Cucumber)",
+    "desc": "Inside: cucumber. **You can add any ingredients with extra charge from the options.",
+    "cents": 700,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Oshinko Roll",
+    "desc": "Inside: Japanese style yellow pickled radish. **You can add any ingredients with extra charge from the options.",
+    "cents": 700,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Tamago Roll",
+    "desc": "Inside: Japanese style sweet omelette. **You can add any ingredients with extra charge from the options.",
+    "cents": 700,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Futomaki",
+    "desc": "Inside: cucumber, avocado, burdock root, dried gourd, shitake mushroom.",
+    "cents": 1200,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Golden Bliss (Soy Paper Wrap)",
+    "desc": "Inside: Japanese pumpkin tempura, cream cheese.",
+    "cents": 1100,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Veggie Caterpillar",
+    "desc": "Inside: cucumber, mango, shitake mushrooms. Outside: avocado, yuzu ponzu sauce.",
+    "cents": 1200,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Veggie Tempura Roll",
+    "desc": "Inside: Vegetables tempura (yam, carrot, bell pepper).",
+    "cents": 1100,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Wakame Delight",
+    "desc": "Inside: wakame, tamago, Japanese carrot.",
+    "cents": 1500,
+    "label": "",
+    "section": "Veggie Roll"
+   },
+   {
+    "name": "Avocado Hand Roll",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "California Hand Roll",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Cream Cheese Hand Roll",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Cucumber Hand Roll",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Ebi Hand Roll",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Futomaki Hand Roll",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Golden Bliss Hand Roll",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Inari Hand Roll",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Negihama Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Negitoro Hand Roll",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Oshinko Hand Roll",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Philadelphia Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Salmon Hand Roll",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Salmon Skin Hand Roll",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Shrimp Tempura Hand Roll",
+    "desc": "",
+    "cents": 1100,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Spicy California Hand Roll",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Spicy Salmon Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Spicy Scallop Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Spicy Tuna Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Spicy Yellowtail Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Tamago Hand Roll",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Tuna Hand Roll",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Unagi Hand Roll",
+    "desc": "",
+    "cents": 900,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Veggie Tempura Hand Roll",
+    "desc": "",
+    "cents": 1000,
+    "label": "",
+    "section": "Hand Roll"
+   },
+   {
+    "name": "Golden California",
+    "desc": "Inside: crab meat, avocado. Sauce on the top: eel sauce, spicy mayo. (They use imitation crab meat in all rolls.)",
+    "cents": 1200,
+    "label": "",
+    "section": "Deep Fried Roll"
+   },
+   {
+    "name": "Golden Spicy California",
+    "desc": "Inside: spicy crab meat, avocado. Sauce on the top: eel sauce, spicy mayo. (They use imitation crab meat in all rolls.)",
+    "cents": 1300,
+    "label": "",
+    "section": "Deep Fried Roll"
+   },
+   {
+    "name": "Golden Philadelphia",
+    "desc": "Inside: salmon, cream cheese, avocado. Sauce on the top: eel sauce, spicy mayo.",
+    "cents": 1300,
+    "label": "",
+    "section": "Deep Fried Roll"
+   },
+   {
+    "name": "Golden Spicy Tuna",
+    "desc": "Inside: spicy tuna, cucumber. Sauce on the top: eel sauce, spicy mayo.",
+    "cents": 1300,
+    "label": "",
+    "section": "Deep Fried Roll"
+   },
+   {
+    "name": "Ginza Tempura",
+    "desc": "Inside: crab meat, eel, cream cheese, avocado. On the top: tempura Crumbs, eel sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1400,
+    "label": "",
+    "section": "Deep Fried Roll"
+   },
+   {
+    "name": "Mucho Grande",
+    "desc": "Inside: spicy crab, spicy tuna, cream cheese, avocado. On the top: tempura crumbs, eel sauce, spicy mayo. (They use imitation crab meat in all rolls.)",
+    "cents": 1500,
+    "label": "",
+    "section": "Deep Fried Roll"
+   },
+   {
+    "name": "Lion King",
+    "desc": "Inside: crab meat, avocado. On the top: salmon, tobiko, green onion, eel sauce, spicy mayo (They use imitation crab meat in all rolls.)",
+    "cents": 1400,
+    "label": "",
+    "section": "Baked Roll"
+   },
+   {
+    "name": "Spicy Lion King",
+    "desc": "Inside: spicy crab meat, avocado. On the top: tobiko, green onion, eel sauce, spicy mayo. (They use imitation crab meat in all rolls.)",
+    "cents": 1500,
+    "label": "",
+    "section": "Baked Roll"
+   },
+   {
+    "name": "Bay Island",
+    "desc": "Inside: crab meat, avocado. On the top: baby scallops, tobiko, green onion, eel sauce, spicy mayo. (They use imitation crab meat in all rolls.)",
+    "cents": 1500,
+    "label": "",
+    "section": "Baked Roll"
+   },
+   {
+    "name": "Sea Voyager",
+    "desc": "Inside: crab meat, avocado. On the top: cream cheese, eel sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1000,
+    "label": "",
+    "section": "Baked Roll"
+   },
+   {
+    "name": "49ers",
+    "desc": "Inside: crab meat, avocado. Outside: salmon, lemon slices, eel sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1600,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Blanca",
+    "desc": "Inside: shrimp tempura, cucumber. Outside: albacore tuna, spicy tuna, spicy crab, jalapeño, sriracha, spicy garlic ponzu. (They use imitation crab meat in all rolls.)",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Blonde Bomb",
+    "desc": "Inside: cucumber, spicy crab. Outside: salmon, yellowtail, carpaccio sauce, micro green. (They use imitation crab meat in all rolls.)",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Caterpillar",
+    "desc": "Inside: eel, crab meat, cucumber . Outside: avocado, eel sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1600,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Cherry Blossom",
+    "desc": "Inside: tuna, avocado. Outside: tuna, tobiko, micro green.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Climax",
+    "desc": "Inside: shrimp tempura, avocado, cucumber. Outside: crab meat, tobiko, eel sauce, spicy mayo, green onion. (They use imitation crab meat in all rolls.)",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Coastal Delight",
+    "desc": "Inside: shrimp tempura, cucumber, cream cheese. Outside: spicy crab, tobiko, eel sauce, spicy mayo. (They use imitation crab meat in all rolls.)",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Crazy Horse",
+    "desc": "",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Crazy Mango",
+    "desc": "Inside: mango, spicy crab meat. Outside: salmon, avocado, tempura crumbs, spicy mayo, eel sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Dragon",
+    "desc": "Inside: shrimp tempura, cucumber. Outside: eel, avocado, tobiko, eel sauce, green onion.",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Spicy Dragon",
+    "desc": "Inside: shrimp tempura, cucumber. Outside: spicy tuna, eel, avocado, tobiko, eel sauce, green onion.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Fire Dragon",
+    "desc": "Inside: tuna, salmon, avocado. Outside: spicy tuna, spicy mayo, eel sauce, sweet chili, tobiko, green onion.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Flaming Dragon",
+    "desc": "Seared roll. Inside: shrimp tempura, spicy tuna. Outside: tuna, albacore, spicy mayo, eel sauce, sriracha, tobiko, green onion.",
+    "cents": 1900,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Fantasy",
+    "desc": "Inside: shrimp tempura, mango, cucumber. Outside: tuna, salmon, micro green, balsamic vinegar.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Flame Kissed",
+    "desc": "Inside: spicy tuna, cucumber, jalapeño. Outside: salmon, jalapeño, sriracha, spicy mayo.",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Geisha Inferno",
+    "desc": "Inside: shrimp tempura, spicy crab. Outside: albacore, avocado, jalapeno sauce, sichimi, cilantro. (They use imitation crab meat in all rolls.)",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Hamachi Delight",
+    "desc": "Inside: yellowtail, cucumber, cilantro. Outside: yellowtail, avocado, micro green, garlic chip, carpaccio sauce.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Johnny",
+    "desc": "Inside: soft shell crab, cucumber. Outside: tuna, salmon, yellowtail, tobiko, spicy garlic ponzu sauce.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Meridian Avenue",
+    "desc": "Inside: crab, shrimp tempura Outside: salmon, avocado, jalapeno, with seared parmesan cheese sauce, unagi sauce, and tobiko (They use imitation crab meat in all rolls.)",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "MY (no rice)",
+    "desc": "Inside: tuna, salmon, yellowtail, crab meat, avocado. Outside: cucumber, carpaccio sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Orange Blossom",
+    "desc": "Inside: salmon, avocado. Outside: salmon, tobiko, micro green.",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Paradise",
+    "desc": "Inside: shrimp tempura, cucumber, mango. Outside: salmon, avocado, coconut flakes, spicy garlic ponzu sauce.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Rainbow",
+    "desc": "Inside: crab meat, avocado. Outside: tuna, salmon, yellowtail, shrimp, white fish. (They use imitation crab meat in all rolls.)",
+    "cents": 1600,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Hot Rainbow",
+    "desc": "Inside: crab meat, avocado. Outside: tuna, salmon, yellowtail, shrimp, white fish. (They use imitation crab meat in all rolls.)",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Sexy Lady",
+    "desc": "Inside: spicy tuna, cucumber. Outside: tuna, scallion, tobiko, spicy garlic ponzu.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Sexy Victoria (soy paper wrap)",
+    "desc": "Inside: tuna, salmon, yellowtail. Outside: avocado, spicy mayo, carpaccio sauce.",
+    "cents": 1800,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Spider",
+    "desc": "Inside: soft shell crab, cucumber. Outside: avocado, eel sauce.",
+    "cents": 1400,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "Ultimate Shrimp",
+    "desc": "Inside: shrimp tempura, spicy crab, cucumber. Outside: cooked shrimp, avocado, spicy mayo, eel sauce. (They use imitation crab meat in all rolls.)",
+    "cents": 1700,
+    "label": "",
+    "section": "Special Roll"
+   },
+   {
+    "name": "XOXO",
+    "desc": "Inside: crab meat, salmon, unagi, soft shell crab, avocado, cucumber. Outside: fresh tuna, unagi sauce Separate dipping sauce: Ginza dipping sauce (They use imitation crab meat in all rolls.)",
+    "cents": 2100,
+    "label": "",
+    "section": "Special Roll"
+   }
+  ],
+  "price_note": "Prices are from Ginza Sushi's own Toast pickup ordering page, linked from their website.",
+  "flags": [
+   "Hours are null because their own sources disagree. Their website's hours list says Mon 11am-5pm, Tue-Sat 11am-9pm, Sun 12pm-9pm, with the note 'We close between 2:30-5pm Mon-Fri.' Their Toast page's ordering hours are Mon-Fri 11am-1:45pm & 5pm-8:45pm, Sat-Sun 12pm-8:45pm. Monday (the site says it closes at 5pm; Toast takes Monday dinner orders) and Saturday's opening time (11am vs 12pm) don't match. Glenn or Leon should confirm the hours with the owner.",
+   "Address: 'Suite A' and the ZIP 95124 are from their Toast page; their website also gives ZIP 95124 ('3153 Meridian Avenue, San Jose, California 95124'). 'Hacienda Gardens' appears only in Glenn's Google Maps screenshot (sushimakesuhappy-2), which was not used as a source, so it is not in the address.",
+   "Their Toast page is pickup only. Party trays take at least 60 minutes, and the page asks you to call with your pickup time.",
+   "To keep the list near 200 items, these Toast sections are left out: Sake (9 bottles, alcohol), Non Alcohol Drink (14), Sides (6, e.g. miso soup $3, rice $3), Side of Entree (7 à la carte teriyaki/katsu portions, $7-8), Extra Sauce (8, $0.80-1) and Party Tray - Kitchen (28 catering trays, $25-$240). 203 items are kept.",
+   "The Special Roll section on Toast says 'We use imitation crab meat for all rolls.' That note was added to the description of every roll that mentions crab (soft shell crab aside).",
+   "Section notes were folded into item descriptions: Bento Box and Entree come with miso soup, salad and rice, and the omakase sets with miso soup and salad. 'Party Tray - Sushi (prep time 60 mins)' is shortened to 'Party Tray - Sushi', with the prep time moved into each tray's description.",
+   "Their wording is kept as on Toast, including 'atleast', 'Jalapeno' and 'Kizumi wasabi'.",
+   "Their website's 'Order Now / See Menu' button links to the Toast page with ad-tracking parameters; order_url is the clean Toast link.",
+   "Their website says 'Rolling in Flavor: New Menu COMING!', so prices and dishes may change soon.",
+   "Logo: cut from Glenn's zoomed screenshot of their Instagram profile picture (sushimakesuhappy-1). Instagram's thin grey outline around the picture clipped the corners, so the icon was made from a copy with everything outside the picture's circle painted white: g1/ginza-avatar-clean.png in the scratchpad (same crop, --square). The Google Maps screenshot shows a different round 'GINZA SUSHI' logo, which was not used.",
+   "Glenn's Google Maps screenshot (rating, 'LGBTQ+ friendly', 'Traditional Japanese Cuisine and Freestyle Sushi') was not used for any fact.",
+   "Instagram @ginzasushisj is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ },
+ {
+  "id": "b_tacosdonchai",
+  "name_exact": "Tacos Don Chai",
+  "one_line": "",
+  "cuisine": "Mexican, brisket birria",
+  "address": "35 Howe Rd, Martinez, CA 94553",
+  "phone": "(925) 592-1052",
+  "email": "Bryan@tacosdonchai.com",
+  "hours": "Mon 7am-3pm, Tue-Fri 7am-5pm, Sat 8am-5pm, Sun 8am-3pm",
+  "instagram": null,
+  "site_kind": "own",
+  "site_url": "https://tacosdonchai.com/",
+  "order_url": "https://tacosdonchai.com/menu",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Breakfast Burrito",
+    "desc": "Your choice of meat with cheese, eggs and tater tots. $10 with ham, bacon, sausage or chorizo; $12 with asada, pollo or al pastor; $13 with birria.",
+    "cents": 1000,
+    "label": "from",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Huevos Divorciados",
+    "desc": "Eggs your way on tostadas with half spicy red salsa, half mild green salsa, queso cotija, sour cream, onions and cilantro, served with rice and beans. Add meat $2-$5.",
+    "cents": 1000,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Chilaquiles Rojos",
+    "desc": "Spicy red salsa, Monterey Jack, queso cotija, sour cream, onions, cilantro and eggs your way. Add meat $2-$5.",
+    "cents": 800,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Chilaquiles Verdes",
+    "desc": "Mild green salsa, Monterey Jack, queso cotija, sour cream, onions, cilantro and two eggs your way. Add meat $2-$5.",
+    "cents": 800,
+    "label": "",
+    "section": "Breakfast"
+   },
+   {
+    "name": "Brisket Quesabirria",
+    "desc": "Tender brisket in melted Monterey Jack with cilantro and onions. Consommé on request. Price per taco.",
+    "cents": 400,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Soft Taco",
+    "desc": "6-inch corn tortilla with asada or chicken, cilantro and onion. Price per taco.",
+    "cents": 350,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Quesataco",
+    "desc": "Your choice of meat with Monterey Jack, cilantro and onion. Price per taco.",
+    "cents": 400,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Regular Burrito",
+    "desc": "12-inch flour tortilla with your choice of meat, rice, beans, pico de gallo and Monterey Jack.",
+    "cents": 1200,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Super Burrito",
+    "desc": "14-inch flour tortilla with your choice of meat, rice, beans, crema, guacamole, onion, cilantro and Monterey Jack.",
+    "cents": 1400,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Regular Quesadilla",
+    "desc": "12-inch flour tortilla with melted cheese, your choice of meat, cilantro and onions.",
+    "cents": 1100,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Super Quesadilla",
+    "desc": "14-inch flour tortilla with melted cheese, asada, chicken or al pastor, guacamole and sour cream.",
+    "cents": 1300,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Brisket Birria Ramen",
+    "desc": "32-oz bowl of udon noodles in consommé with brisket birria, onion and cilantro. Add cheese $0.50.",
+    "cents": 1100,
+    "label": "",
+    "section": "Lunch & More"
+   },
+   {
+    "name": "Chips & Salsa",
+    "desc": "Chips with two 1-oz salsas.",
+    "cents": 200,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Cheese Quesadilla",
+    "desc": "",
+    "cents": 500,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Bean & Cheese Burrito",
+    "desc": "",
+    "cents": 700,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Rice, Bean & Cheese Burrito",
+    "desc": "",
+    "cents": 800,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Side Rice & Beans",
+    "desc": "",
+    "cents": 400,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Side Rice",
+    "desc": "",
+    "cents": 200,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Side Beans",
+    "desc": "",
+    "cents": 200,
+    "label": "",
+    "section": "À La Carte"
+   },
+   {
+    "name": "Horchata Bundle",
+    "desc": "Their #1 seller: baked shaved-coconut cocada with dulce de leche and horchata creme. Contains dairy, nuts, cinnamon and eggs.",
+    "cents": 999,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Double Cocada Horchata",
+    "desc": "Their viral double cocada. Contains nuts and dairy; refrigerate after opening.",
+    "cents": 999,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Double Cocada Coffee",
+    "desc": "Their viral double cocada. Contains nuts and dairy; refrigerate after opening.",
+    "cents": 999,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Double Cocada Mexican Chocolate",
+    "desc": "Their viral double cocada. Contains nuts and dairy; refrigerate after opening.",
+    "cents": 999,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Double Cocada Pecan (Nuez)",
+    "desc": "Their viral double cocada. Contains nuts and dairy; refrigerate after opening.",
+    "cents": 999,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Double Cocada Pink (Horchata & Jamaica)",
+    "desc": "Their viral double cocada. Contains nuts and dairy; refrigerate after opening.",
+    "cents": 999,
+    "label": "",
+    "section": "Sweets"
+   },
+   {
+    "name": "Canned Drinks",
+    "desc": "",
+    "cents": 250,
+    "label": "",
+    "section": "Drinks"
+   },
+   {
+    "name": "Bottled Drinks",
+    "desc": "Sparkling water or Jarritos $4; Coke medio litro $5.",
+    "cents": 400,
+    "label": "from",
+    "section": "Drinks"
+   }
+  ],
+  "price_note": "Prices are from Tacos Don Chai's own online ordering page at tacosdonchai.com.",
+  "flags": [
+   "Phone (925) 592-1052 and email Bryan@tacosdonchai.com are from their own site; the Apple Maps panel in Glenn's screenshot shows a different number, (925) 247-8159, which was not used.",
+   "Hours come from their own site, where the location text and the hours table agree (they also match the Apple Maps panel); the site also lists one-off holiday closures, which are not in the hours line.",
+   "The four Breakfast items were not shown on the online menu when checked (1pm on a Tuesday), because the breakfast section only shows during breakfast hours; each item page said 'Item not available'. The meat add-on prices were visible on those pages, but the base prices ($8 burrito before meat, $10 huevos divorciados, $8 chilaquiles) were read from the ordering page's own menu data. Re-check them in the morning before publishing.",
+   "'Taco Tuesday Tacos' ($2.50 each, $3 with cheese) is still featured on their homepage but was missing from the menu and marked 'Item not available' on a Tuesday afternoon, so it was left off.",
+   "Left off six packaged chamoy candies (five labelled 'COMPA MUNCHIES', plus Sandillitas) as a sister snack brand sharing the menu page; kept their own Horchata Bundle and Double Cocadas.",
+   "The Bottled Drinks description says 'from $2', but the menu lists $4.00+ (a $2 base plus a required $2-$3 drink choice), so the floor is $4.",
+   "For the one-line: their reel features the breakfast burrito with brisket slow-cooked 8 hours and pineapple salsa; on the ordering page the salsa is 'Signature Piña Salsa (Mild)' and the meat option is just 'Birria'.",
+   "Their Instagram handle is 'tacodonchai' (no s), but their domain is tacosdonchai.com.",
+   "Instagram @tacodonchai is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ },
+ {
+  "id": "b_kiyomicaphe",
+  "name_exact": "Kiyomi Cà Phê",
+  "one_line": "",
+  "cuisine": "Vietnamese coffee, matcha and brunch",
+  "address": "1439 Taraval St, San Francisco, CA 94116",
+  "phone": null,
+  "email": "Kiyomiblooms@gmail.com",
+  "hours": "Mon-Fri 10am-2:30pm",
+  "instagram": null,
+  "site_kind": "instagram",
+  "site_url": null,
+  "order_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "Kiyomi Cà Phê doesn't publish prices online; their Instagram posts each week's menu.",
+  "flags": [
+   "Glenn's link is DoorDash, so no prices, hours or menu were taken from it.",
+   "No website or ordering page of their own was found: kiyomicaphe.com does not exist, and their Instagram bio links to Yelp plus one more link that the screenshot doesn't show. Instagram can't be read without logging in. needs_site is true and there are no items.",
+   "Hours come only from their Instagram bio ('Hours 10am-2:30 pm Mon-Fri'). The Yelp panel in Glenn's screenshot also shows Monday 5-8:30pm, weekends closed and a phone number, +1 415 608 1817. That panel is not first-party, so none of it was used.",
+   "The address is from their own reel caption and also shows on a reel thumbnail in Glenn's screenshot.",
+   "The email in their bio is labelled for catering ('Catering: Kiyomiblooms@gmail.com').",
+   "Their bio lists a menu that changes weekly ('This week's menu: Pho Ga, Hainan chicken, Bo Ne'), so those dishes were not added as items.",
+   "Their logo says 'ESTD 2026'. A review site (The Infatuation, not first-party) calls it a Vietnamese pop-up operating out of Lost And Found at the same address, and a reel thumbnail shows a neon 'lost' sign. Glenn may want to confirm whether it's a standalone café or a daytime pop-up inside another venue before the page says so.",
+   "Instagram @kiyomi_ca_phe is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ },
+ {
+  "id": "b_vostokshawarma",
+  "name_exact": "Vostok gyro & shawarma",
+  "one_line": "",
+  "cuisine": "Halal shawarma and Central Asian food truck",
+  "address": null,
+  "phone": "(408) 690-6916",
+  "email": "info@vostokfood.com",
+  "hours": null,
+  "instagram": null,
+  "site_kind": "instagram",
+  "site_url": null,
+  "order_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "Vostok doesn't publish a menu with prices online.",
+  "flags": [
+   "Glenn sent no link. The domain in their email, vostokfood.com, is registered but has no website (no address record) as of 6 Oct 2026. No ordering page of their own was found, and Instagram can't be read without logging in. needs_site is true, with no items and no prices.",
+   "Both locations, phones and hours come from their Instagram bio in Glenn's screenshot. The bio gives no ZIP codes, so the addresses have none. The SF hours 'Monday-Saturday 11-8PM' were read as 11am-8pm; the bio doesn't say whether SF is open on Sunday.",
+   "Top-level phone is null because each spot has its own number. Their Instagram Contact button gives only the Santa Clara number, (408) 690-6916, and info@vostokfood.com.",
+   "Their Instagram name says 'Food truck' but the profile category is 'Halal Restaurant'. Whether the San Francisco spot at 98 Franklin St is a truck or a counter isn't stated.",
+   "Halal comes from their own bio ('Halal food', category 'Halal Restaurant'). Third-party listings (Uber Eats, KQED, restaurantji) exist but were not used for any fact.",
+   "The logo is a flat mark inside Instagram's grey 'seen' ring, so it was cropped to the wordmark on white (square mode) to keep out the ring and the thin circle inside it.",
+   "The page's phone is the Santa Clara number, the one their Instagram Contact button gives; both numbers are in Where to find them.",
+   "Instagram @vostok_shawarma is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ },
+ {
+  "id": "b_snatchedbychinita",
+  "name_exact": "Snatched by Chinita",
+  "one_line": "",
+  "cuisine": "Post-op care and body sculpting",
+  "address": "29621 Mission Blvd, Hayward, CA",
+  "phone": "(650) 421-1340",
+  "email": "snatchedbychinitaa@gmail.com",
+  "hours": null,
+  "instagram": null,
+  "site_kind": "instagram",
+  "site_url": null,
+  "order_url": null,
+  "prices_published": false,
+  "items": [],
+  "price_note": "Snatched by Chinita works by appointment only and publishes no prices: send them a DM or call to book and ask for a quote. They speak Spanish and Portuguese.",
+  "flags": [
+   "snatched-body.com is NOT their site: it is a separate Shopify shapewear store called 'Snatched body' (Colombian fajas, based at 6371 NW 102nd Ave, Doral, FL), and the link in their IG bio, snatched-body.com/JANETTE11169, redirects to ?snowball=JANETTE11169&utm_source=snowball, a Social Snowball affiliate referral code; nothing on that store mentions Chinita or Hayward, so site_url is null and none of its products or prices were used.",
+   "They have no website of their own (needs_site true); booking is by Instagram DM or the Contact button, by appointment only, per their bio.",
+   "No prices are published anywhere first-party (bio, contact sheet); story highlights (Our Team, Clients, Yelp, Policies) were not opened, per the rules.",
+   "Hours left null: the bio says 'BY APPOINTMENT ONLY' and gives no opening hours.",
+   "Address is exactly as their bio gives it (29621 Mission Blvd, Hayward, California) with no ZIP or suite; a ZIP was not added because they do not publish one.",
+   "Phone (650) 421-1340 and email snatchedbychinitaa@gmail.com come from the IG Contact sheet in Glenn's screenshot snatched-3.png; note the email has a double 'a' ('chinitaa'), copied exactly.",
+   "Their bio says 'Hablamos Español / Portugués' (they speak Spanish and Portuguese) and 'Surgeon Recommended' (their own claim); IG category is Health/beauty. There is no field for languages, so the page copy should carry it.",
+   "Their IG display name is 'Post Op Care & Body Sculpting'; name_exact comes from the handle and the logo ('Snatched by Chinita').",
+   "A Booksy listing titled 'Snatched by chinita (name of storefront)' at the same address belongs to a braider ('BraidsByFlipps', Braids and locs) working out of the storefront, not to Snatched by Chinita; it was not used.",
+   "Icon made from the small profile picture in snatched-1.png (ring removed): the big crop in snatched-2.png has Instagram's ring cut off at the right edge, so the tool could not remove it cleanly. The icon is a little soft (upscaled) and keeps Instagram's faint grey hairline round the disc; a sharper logo file from the business would be better.",
+   "Instagram @snatchedbychinita is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ },
+ {
+  "id": "b_sidewalkjuice",
+  "name_exact": "Sidewalk Juice",
+  "one_line": "",
+  "cuisine": "Juice bar, smoothies and acai bowls",
+  "address": "791 Haight St, San Francisco, CA 94117",
+  "phone": null,
+  "email": null,
+  "hours": null,
+  "instagram": null,
+  "site_kind": "own",
+  "site_url": "https://sidewalkjuice.com/",
+  "order_url": "https://order.sidewalkjuice.com/order",
+  "prices_published": true,
+  "items": [
+   {
+    "name": "Banana Açaí",
+    "desc": "Almond milk, açaí, banana, NF vanilla frozen yogurt, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Blueberry Almond",
+    "desc": "Almond milk, Blueberries, Banana, Almond butter, NF vanilla frozen yogurt, and Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Blueberry Colada",
+    "desc": "Coconut juice, blueberries, coconut shreds, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Blueberry Granola",
+    "desc": "Almond milk, blueberries, banana, granola, NF vanilla frozen yogurt, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Chai Banana",
+    "desc": "Almond Milk, Chai Tea, Banana, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Good Morning Granola®",
+    "desc": "Almond Milk, Granola, Strawberries, Banana, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Kale Colada",
+    "desc": "Coconut juice, kale, coconut shreds, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Mango Colada",
+    "desc": "Coconut juice, mango, coconut shreds, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Nutella Almond",
+    "desc": "Almond milk, Nutella, Banana, Almond butter, NF vanilla frozen yogurt, and Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Original Colada",
+    "desc": "Coconut juice, coconut shreds, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Peach Colada",
+    "desc": "Coconut juice, peach, coconut shreds, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Pineapple Berry",
+    "desc": "Orange juice, strawberries, blueberries, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Sidewalk Juli",
+    "desc": "Almond Milk, Banana, Mango, Pineapple, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Strawberry Almond",
+    "desc": "Almond Milk, Strawberries, Banana, Almond Butter, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Strawberry Banana",
+    "desc": "Almond Milk, Orange Juice, Strawberries, Banana, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Strawberry Bomb",
+    "desc": "Apple Juice, Strawberries, Ginger, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Strawberry Colada",
+    "desc": "Coconut juice, strawberries, coconut shreds, pineapple, pineapple sherbet, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Super Powers",
+    "desc": "Almond Milk, Kale, Pineapple, Vegan Protein Powder, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "El Niño",
+    "desc": "Orange Juice, Spinach, Kale, Pineapple, Peach, Ginger, Pineapple Sherbert, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Nuts About Nutella",
+    "desc": "Almond Milk, Peanut Butter, Nutella, Banana, NF Vanilla Frozen Yogurt, Ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Almond Delight Smoothie",
+    "desc": "Almond milk, banana, almond butter, NF vanilla frozen yogurt, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Smoothies"
+   },
+   {
+    "name": "Berry Bliss",
+    "desc": "Orange juice, açaí, strawberries, raspberry sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Blueberry Mango",
+    "desc": "Apple juice, blueberries, mango, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Creamy Berries Valencia",
+    "desc": "Almond Milk, Blueberries, Strawberries, Banana, Raspberry Sorbet, Ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Mango Berry",
+    "desc": "Apple juice, strawberries, blueberries, mango, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Mission Mango",
+    "desc": "Apple juice, mango, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "OMG®",
+    "desc": "Almond milk, peanut butter, pitaya, banana, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Peach Blueberry",
+    "desc": "Apple juice, peach, blueberries, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Peach Mango",
+    "desc": "Apple juice, peach, mango, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Peach Strawberry",
+    "desc": "Apple juice, peach, strawberries, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Strawberry Mango",
+    "desc": "Apple juice, strawberries, mango, mango tangerine sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Tropical Pitaya",
+    "desc": "Apple juice, pitaya, mango, pineapple, and ice",
+    "cents": 1100,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Tropical Valencia",
+    "desc": "Coconut juice, strawberries, blueberries, pineapple, raspberry sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "JJ Tropics Smoothie",
+    "desc": "Orange juice, apple juice, mango, pineapple, strawberries, raspberry sorbet, and ice",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Berries Valencia",
+    "desc": "Banana, orange juice, raspberry sorbet, ice, blueberries, and strawberries",
+    "cents": 1000,
+    "label": "",
+    "section": "Vegan Smoothies"
+   },
+   {
+    "name": "Chuy 2.0 Juice",
+    "desc": "Ginger, lemon, apple, pear, kale, spinach, pineapple, and turmeric",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Citrus Hurricane",
+    "desc": "Ginger, lemon, orange juice, and pineapple",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Green Energy Juice",
+    "desc": "Apple, ginger, lemon, cucumber, celery, leaf kale, parsley, and spinach",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "JJ's Tropics Juice",
+    "desc": "Apple, pear, carrot, and pineapple",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Juice Lee",
+    "desc": "Apple, inch ginger, apple, orange juice, spinach, and kale",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Orange Juice",
+    "desc": "Seasonal oranges",
+    "cents": 900,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Purple Energy",
+    "desc": "Apple, ginger, lemon, beet, celery, and carrot",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Sweet Greens",
+    "desc": "Apple, kale, spinach, and pear",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Tumeric Tornado Juice",
+    "desc": "Carrot, lemon, orange juice, pineapple, and turmeric",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Watermelon Empire",
+    "desc": "Watermelon, lemon, ginger, and apple",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Yoga Class",
+    "desc": "Carrot, ginger, lemon, cucumber, orange juice, parsley, and spinach",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Healthy Sugar Rush",
+    "desc": "Carrot, apple, beet, pear, orange juice, pineapple",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Hella Fresh",
+    "desc": "Pineapple, Apple, Beet, Lemon",
+    "cents": 1200,
+    "label": "",
+    "section": "Fresh Juice"
+   },
+   {
+    "name": "Custom Smoothie",
+    "desc": "Pick a base (almond milk, orange juice, apple juice or coconut water), up to 3 fruits and up to 2 frozen elements",
+    "cents": 1100,
+    "label": "",
+    "section": "Create Your Own"
+   },
+   {
+    "name": "Custom Fresh Juice",
+    "desc": "Build your own juice from up to 7 fruits and vegetables",
+    "cents": 1200,
+    "label": "",
+    "section": "Create Your Own"
+   },
+   {
+    "name": "Berry Bowl",
+    "desc": "Double blueberries, double strawberries, and banana",
+    "cents": 1500,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Butter Bowl",
+    "desc": "Almond butter, peanut butter, banana, and granola",
+    "cents": 1700,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Nuts About Bowl",
+    "desc": "Strawberries, banana, granola and double Nutella",
+    "cents": 1500,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Original Açaí Bowl®",
+    "desc": "Banana, strawberries, blueberries, granola, and coconut shreds",
+    "cents": 1500,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Tropics Bowl",
+    "desc": "Pineapple, strawberries, banana, and coconut shreds",
+    "cents": 1500,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Twister Bowl",
+    "desc": "Açaí, pitaya, banana, strawberries, blueberries, granola, and coconut shreds",
+    "cents": 1500,
+    "label": "",
+    "section": "Bowls"
+   },
+   {
+    "name": "Almond Butter Toast",
+    "desc": "Almond butter, banana, honey, granola, and coconut shreds",
+    "cents": 1100,
+    "label": "",
+    "section": "Toast"
+   },
+   {
+    "name": "Avocado Toast",
+    "desc": "Avocado, olive oil, microgreens, chili flakes, flax seeds, and cherry tomatoes",
+    "cents": 1300,
+    "label": "",
+    "section": "Toast"
+   },
+   {
+    "name": "Nutella Toast",
+    "desc": "Nutella, strawberries, walnuts, granola, and coconut shreds",
+    "cents": 1000,
+    "label": "",
+    "section": "Toast"
+   },
+   {
+    "name": "Peanut Butter Toast",
+    "desc": "Peanut butter, banana, honey, granola, and coconut shreds",
+    "cents": 1000,
+    "label": "",
+    "section": "Toast"
+   },
+   {
+    "name": "Citrus Hurricane Cold-Pressed Juice",
+    "desc": "Pineapple, orange, lemon, and ginger",
+    "cents": 1000,
+    "label": "",
+    "section": "Cold-Pressed Organic Juices"
+   },
+   {
+    "name": "JJ's Tropics Cold-Pressed Juice",
+    "desc": "Apple, pear, pineapple, and carrot",
+    "cents": 1000,
+    "label": "",
+    "section": "Cold-Pressed Organic Juices"
+   },
+   {
+    "name": "Ginger Shot",
+    "desc": "",
+    "cents": 500,
+    "label": "",
+    "section": "Shots"
+   },
+   {
+    "name": "Wheat Grass Shot",
+    "desc": "",
+    "cents": 600,
+    "label": "",
+    "section": "Shots"
+   },
+   {
+    "name": "Smoothie add-on",
+    "desc": "Each: almond butter, peanut butter, Nutella, protein powder, kale, spinach, coconut shreds, gluten-free granola, honey, flax, chia, goji berries, cacao nibs, extra fruit, açaí, pitaya, sorbet or froyo",
+    "cents": 100,
+    "label": "",
+    "section": "Add-ons"
+   },
+   {
+    "name": "Juice add-on",
+    "desc": "Each: kale, spinach, parsley, carrot, apple, celery, ginger, lemon, turmeric, pear, cucumber, pineapple, watermelon or orange",
+    "cents": 100,
+    "label": "",
+    "section": "Add-ons"
+   },
+   {
+    "name": "Bowl or toast add-on",
+    "desc": "Each: fruit, chia, goji berries, cacao nibs, flax, honey, peanut butter, almond butter, Nutella, coconut shreds or gluten-free granola",
+    "cents": 100,
+    "label": "",
+    "section": "Add-ons"
+   },
+   {
+    "name": "Hard-boiled egg",
+    "desc": "Add to avocado toast",
+    "cents": 200,
+    "label": "",
+    "section": "Add-ons"
+   }
+  ],
+  "price_note": "Prices are from Sidewalk Juice's own online ordering page for the Haight St shop, checked 6 October 2026.",
+  "flags": [
+   "Hours left null because their own sources disagree: the Haight page on sidewalkjuice.com (and Glenn's screenshot) says Monday-Saturday 7:00 AM-7:00 PM, Sunday 8:00 AM-6:00 PM, but their own ordering page sets Haight St pickup at 9:00 AM-5:45 PM every day ('Accepting orders until 5:45 PM'). The website shows the identical 7-7 / 8-6 hours on every location page, airports included, so it looks like template text; Glenn should confirm.",
+   "Their site lists two more San Francisco shops: Folsom St (3100 24th St, San Francisco, CA 94110, between Folsom and Shotwell) and Valencia St (3287 21st St, San Francisco, CA 94110). It also lists SFO International Airport Terminal 3 Boarding Area F, and SFO Harvey Milk Terminal 1 inside Gateside Market (marked Coming Soon).",
+   "Other California locations on their site: Burlingame (240 Park Road, 94010), Daly City (41 Serramonte Center, 94015), Millbrae (525 Broadway, 94030; its page shows (650) 239-9708), San Mateo (3081 S Delaware St, Suite B, 94403), and Sacramento Airport Concourse A and Concourse B (95837).",
+   "Location count does not line up: their IG bio says '11 California Locations', the site lists 10 entries, the site banner says 'San Mateo & Sacramento Airport are now open!', yet the Locations page puts both Sacramento Airport concourses (and SFO Terminal 1) under Coming Soon.",
+   "No phone is published for the Haight shop; the ordering system holds one but marks it not visible to customers, so it was left out.",
+   "Email mikea@sidewalkjuice.com is the contact shown on their Haight St location page; it is a named staff member's address, so Leon may prefer to leave it off and point people to the site's contact form instead.",
+   "Prices are the Haight St ordering menu (identical to the San Mateo menu, which also has 3 items Haight does not: Sidewalk Split, La Niña, Blueberry Blast). Custom Smoothie and Custom Fresh Juice appear in several sections there and are listed once under Create Your Own.",
+   "Only the 2 cold-pressed juices and 2 shots actually shown on the Haight page are listed; the other 4 cold-pressed juices are out of stock and hidden there, and a Turmeric Shot ($7) sits in the menu data but is not shown, so they were left off.",
+   "Their website also lists coffee (drip, iced coffee, americano, latte, cappuccino, mocha, chai latte) and organic bottled juice with no prices, and coffee is not on the Haight ordering menu, so coffee was left off.",
+   "'Vegan options' comes from their own 'Vegan Smoothies' menu section. Their allergy notice says food may have come into contact with peanuts, tree nuts, wheat, soybean, milk and eggs.",
+   "Glenn's label is 'Sweets'; it is a juice and smoothie bar (est. 2006 per their IG bio), so the cuisine line says juice bar as the note asked. They also take orders through their own Sidewalk Juice app (iOS and Android).",
+   "The only email on their Haight page is a staff member's own address (mikea@sidewalkjuice.com), so the page carries none; their site has a contact form.",
+   "Instagram @sidewalkjuice is in their own profile; the Instagram button is Glenn's to approve, so it is not on the page."
+  ]
+ }
+]

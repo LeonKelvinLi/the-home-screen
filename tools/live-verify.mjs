@@ -795,7 +795,8 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'alushe-coffee', 'four-chairs', 'napa-valley-burger', 'nar-restaurant', 'kaisen-don-mark',
   'peaches-patties', 'shish-grill', 'sandbar-oakland', 'golden-star-tattoo', 'ink-from-tatooine', 'two-dollar-cowboy',
   'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe', 'wagyu-grill', 'meat-time', 'wagyu-master',
-  'king-katsu-land', 'little-sheep', 'bollywood-pizza', 'basq-haus']) {
+  'king-katsu-land', 'little-sheep', 'bollywood-pizza', 'basq-haus',
+  'hakashi-sushi-bar', 'ginza-sushi', 'tacos-don-chai', 'kiyomi-ca-phe', 'vostok-shawarma', 'snatched-by-chinita', 'sidewalk-juice', 'kung-fu-mala-2']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }
@@ -804,6 +805,10 @@ if (bundles.includes('"beasty-online-10":"b_vendingenterprise"')) fails.push('Ve
 /* Whips from the centre out, Glenn 2026-10-05: MeterSF in the centre, MrCheeze408 beside it. */
 if (!bundles.includes('"beasty-whips-9":"b_metersf"')) fails.push('MeterSF is not in the centre of BEASTY • Whips')
 if (!bundles.includes('"beasty-whips-10":"b_mrcheeze408"')) fails.push('MrCheeze408 is not beside MeterSF on BEASTY • Whips')
+/* Batch 43, 2026-10-06: the new seats, and the three category spots pinned so the newcomers land after them. */
+for (const [seat, id] of [['martinez-goods-1', 'b_tacosdonchai'], ['hayward-services-2', 'b_snatchedbychinita'], ['san-francisco-goods2-35', 'b_sidewalkjuice'], ['beasty-coffee-9', 'b_grindcafe707'], ['beasty-foodtrucks-0', 'b_ofieskitchen']]) {
+  if (!bundles.includes(`"${seat}":"${id}"`)) fails.push(`${seat} does not hold ${id}`)
+}
 for (const f of ['/clips/mrcheeze408.mp4', '/photos/mrcheeze408-1.webp', '/icons/mrcheeze408.webp']) {
   const st = await fetch(base + f, { method: 'HEAD' }).then((r) => r.status).catch(() => 0)
   if (st !== 200) fails.push(`${f} answered ${st}`)

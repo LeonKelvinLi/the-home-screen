@@ -6786,7 +6786,8 @@ export const LOCAL_SEED: LocalSeed[] = [
   },
   {
     slug: 'kung-fu-mala',
-    icon: 'kung-fu-mala',
+    /* -2: the first crop cut off the bottom of their round logo (2026-10-06). */
+    icon: 'kung-fu-mala-2',
     /* Their own profile sets it in both scripts: KUNG FU MALA 쿵푸마라. */
     name: 'Kung Fu Mala',
     label: 'Kung Fu Mala',

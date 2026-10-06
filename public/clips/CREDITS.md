@@ -209,6 +209,8 @@ the most movement — to 540x960 with sound.
 | `review-DdVGXn4NxbO.mp4` | Deli Board (a BEASTY • Foodies review, 15s) | instagram.com/reel/DdVGXn4NxbO (@thesauceboss_) |
 | `review-Ddo0xf9MplM.mp4` | The Burger Spot Co. (a BEASTY • Foodies review, 15s) | instagram.com/reel/Ddo0xf9MplM (@hella._local.mo) |
 | `sandiwa.mp4` | Sandiwa Collection (BEASTY • Online) | instagram.com/reel/DeCy8c_vxCy (@sandiwacollection) |
+| `kiyomi-ca-phe.mp4` | Kiyomi Cà Phê, San Francisco | instagram.com/reel/DeJOlPgvkkA (@kiyomi_ca_phe) |
+| `tacos-don-chai.mp4` | Tacos Don Chai, Martinez | instagram.com/reel/DeH-BvAyDIb (@tacodonchai) |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

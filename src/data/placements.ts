@@ -1359,4 +1359,17 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-foodies-1': 'b_grando',
   /* "BEASTY • Online", 2026-10-05: Sandiwa Collection (localBrands.ts). */
   'beasty-online-10': 'b_sandiwa',
+  /* Batch 43, 2026-10-06 (roster.ts). */
+  /* A new roster seed joins BRANDS ahead of the hand-written local pages, so
+     on its own Kiyomi would take BEASTY • Coffee 10 from The Grind Café and
+     Vostok Food Trucks 1 from Ofie's. These keep the numbers they had. */
+  'beasty-coffee-9': 'b_grindcafe707',
+  'beasty-coffee-10': 'b_delahcoffee',
+  'beasty-foodtrucks-0': 'b_ofieskitchen',
+  'walnut-creek-goods2-11': 'b_hakashisushibar',
+  'san-jose-goods2-11': 'b_ginzasushi',
+  'martinez-goods-1': 'b_tacosdonchai',
+  'san-francisco-goods2-34': 'b_kiyomicaphe',
+  'hayward-services-2': 'b_snatchedbychinita',
+  'san-francisco-goods2-35': 'b_sidewalkjuice',
 }

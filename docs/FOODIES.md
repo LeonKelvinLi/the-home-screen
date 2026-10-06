@@ -157,3 +157,4 @@ its own), or add a line to `OTHER_REVIEWS`. `tools/audit-foodies.mjs` checks it.
 | 3 Oct | @hungere.for.diy (Hunger E for DIY) | Cavaña, San Francisco | On their Foodies page |
 | 3 Oct | @annna_eats (Anna) | Master Oh, Santa Clara | **Yes.** On its page |
 | 5 Oct | @asideofsweet | Britex Fabrics, Post Street, San Francisco: a fabric store, for Halloween costumes | Listed in OTHER_REVIEWS |
+| 6 Oct | @shrimpfriedroice (Roice) | A McDonald's Filet-O-Fish with Big Mac sauce: a chain's menu hack, not a local business | No |

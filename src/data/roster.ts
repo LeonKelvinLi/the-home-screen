@@ -4997,6 +4997,83 @@ export const ROSTER_SEED: LocalSeed[] = [
     tagline: 'Auto service shop, muscle cars',
     needsSite: true,
   }),
+  /*
+    BATCH 43, 2026-10-06: Glenn's links of 5 and 6 October
+    (research/roster/batch43.json, built by build43.py). A yellow-sheet
+    business he sent a film for gets the whole page; the rest of the yellow
+    sheet is the free Tier 1 listing.
+  */
+  /* Walnut Creek • Eats */
+  seed('hakashi-sushi-bar', 'Hakashi Sushi Bar & Grill', 'Hakashi', 'Sushi and Japanese kitchen', '#000000', {
+    icon: 'hakashi-sushi-bar',
+    tagline: 'Sushi and Japanese kitchen, in Walnut Creek',
+    site: 'https://www.hakashisushibar.com/',
+    tier: 1,
+  }),
+  /* San Jose • Eats */
+  seed('ginza-sushi', 'Ginza Sushi', 'Ginza Sushi', 'Sushi and Japanese', '#4C4C4C', {
+    icon: 'ginza-sushi',
+    tagline: 'Sushi and Japanese, in San Jose',
+    site: 'https://sushimakesuhappy.com/',
+    orderUrl: 'https://order.toasttab.com/online/ginzasushisj',
+    tier: 1,
+  }),
+  /* Martinez • Eats */
+  seed('tacos-don-chai', 'Tacos Don Chai', 'Don Chai', 'Mexican, brisket birria', '#000000', {
+    icon: 'tacos-don-chai',
+    tagline: 'Mexican, brisket birria, in Martinez',
+    site: 'https://tacosdonchai.com/',
+    orderUrl: 'https://tacosdonchai.com/menu',
+    clip: {
+      src: '/clips/tacos-don-chai.mp4',
+      poster: '/clips/tacos-don-chai-poster.webp',
+      href: 'https://www.instagram.com/reel/DeH-BvAyDIb/',
+      credit: 'Posted by Tacos Don Chai',
+      platform: 'Instagram',
+    },
+  }),
+  /* BEASTY • Coffee */
+  seed('kiyomi-ca-phe', 'Kiyomi Cà Phê', 'Kiyomi', 'Vietnamese coffee', '#4C4C4C', {
+    icon: 'kiyomi-ca-phe',
+    tagline: 'Vietnamese coffee, matcha and brunch, in San Francisco',
+    needsSite: true,
+    clip: {
+      src: '/clips/kiyomi-ca-phe.mp4',
+      poster: '/clips/kiyomi-ca-phe-poster.webp',
+      href: 'https://www.instagram.com/reel/DeJOlPgvkkA/',
+      credit: 'Posted by Kiyomi Cà Phê',
+      platform: 'Instagram',
+    },
+  }),
+  /* BEASTY • Food Truck */
+  seed('vostok-shawarma', 'Vostok gyro & shawarma', 'Vostok', 'Halal shawarma food truck', '#4C4C4C', {
+    icon: 'vostok-shawarma',
+    tagline: 'Halal shawarma and Central Asian food truck',
+    needsSite: true,
+    dietary: ['Halal-friendly'],
+    panels: [
+      {
+        head: 'Where to find them',
+        body: [
+          '36 Washington St, Santa Clara, CA, (408) 690-6916, Mon-Sun 12pm-11pm',
+          '98 Franklin St, San Francisco, CA, (415) 850-2171, Mon-Sat 11am-8pm',
+        ],
+      },
+    ],
+  }),
+  /* Hayward • Services */
+  seed('snatched-by-chinita', 'Snatched by Chinita', 'Snatched', 'Post-op care and sculpting', '#4C4C4C', {
+    icon: 'snatched-by-chinita',
+    tagline: 'Post-op care and body sculpting, in Hayward',
+    needsSite: true,
+  }),
+  /* San Francisco • Sweets (multiple locations) */
+  seed('sidewalk-juice', 'Sidewalk Juice', 'Sidewalk', 'Juice bar and smoothies', '#4C4C4C', {
+    icon: 'sidewalk-juice',
+    tagline: 'Juice bar, smoothies and acai bowls, in San Francisco',
+    site: 'https://sidewalkjuice.com/',
+    orderUrl: 'https://order.sidewalkjuice.com/order',
+  }),
 ]
 
 /**
