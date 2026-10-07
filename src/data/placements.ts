@@ -1372,4 +1372,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-34': 'b_kiyomicaphe',
   'hayward-services-2': 'b_snatchedbychinita',
   'san-francisco-goods2-35': 'b_sidewalkjuice',
+  /* 2026-10-06, afternoon: The Tastebud on Cooks, GADA ("Needs Website Pilot")
+     on San Francisco's yellow sheet, and Sana'a Cafe's Hayward shop, which
+     Glenn sent for BEASTY • Coffee: it holds the Sana'a spot there (3), the
+     one the San Rafael shop held, and Hayward's open Coffee shop seat. */
+  'beasty-cooks-8': 'b_thetastebud',
+  'san-francisco-goods2-36': 'b_gada',
+  'beasty-coffee-2': 'b_sanaacafehayward',
+  'hayward-goods-13': 'b_sanaacafehayward',
 }

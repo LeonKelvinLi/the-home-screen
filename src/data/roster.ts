@@ -3096,9 +3096,14 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'Order from their site',
   }),
   /* Sana'a Cafe, "San Rafael • Goods. Needs website and pilot program" —
-     Yemeni coffee, San Rafael's open Coffee seat. */
+     Yemeni coffee, San Rafael's open Coffee seat. Since then the chain has a
+     site of its own, thesanaacafe.com, which lists this shop at the same
+     address with its phone (2026-10-06); its hours there are one line for
+     every shop, so the hours from their own profile stay. */
   seed('sanaa-cafe', "Sana'a Cafe", "Sana'a", 'Yemeni coffee', '#2A2016', {
     icon: 'sanaa-cafe',
+    site: 'https://thesanaacafe.com/',
+    phone: '(415) 295-7101',
     logoTemplate: 'wordmark', logoLines: ["SANA'A"], logoFace: 'slab',
   }),
   /* Pasta Pelican, "Alameda • Goods" — Alameda's open Italian seat, with

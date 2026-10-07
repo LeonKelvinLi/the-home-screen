@@ -8570,6 +8570,122 @@ export const LOCAL_SEED: LocalSeed[] = [
       'MrCheeze408\u2019s 1992 Honda CRX, in a full Mugen body kit, out of the 408. In his own words he trains, he travels and he collects Hondas. BEASTY has not spoken to him yet: this spot is held, not taken. Nothing here is for sale: BEASTY \u2022 Whips is for the cars and the people who build them.',
     items: [],
   },
+  {
+    /*
+      THE TASTEBUD, BEASTY \u2022 Cooks. Glenn, 2026-10-06: his reel with "BEASTY \u2022
+      Cooks", then thetastebud.co and a screenshot of its header. Everything
+      here is from his own site: Vince, "The Tastebud", a Bay Area home cook
+      and food creator who recreates the Filipino food of his childhood, posts
+      easy recipes and comfort food, sells a calamansi barbecue sauce and runs
+      a food tour of the Ferry Building. Seated on Cooks by hand
+      (placements.ts); no Instagram button. The email on his About page is
+      missing its ".com", so the page sends people to his site instead.
+    */
+    slug: 'the-tastebud',
+    icon: 'the-tastebud',
+    name: 'The Tastebud',
+    label: 'Tastebud',
+    cuisine: 'Recipe creator',
+    tagline: 'Filipino and comfort-food recipes from Vince, the Bay Area\u2019s Tastebud.',
+    color: '#FFFFFF|#111111',
+    prep: 0,
+    category: 'Cooks',
+    site: 'https://www.thetastebud.co/',
+    clip: {
+      src: '/clips/the-tastebud.mp4',
+      poster: '/clips/the-tastebud-poster.webp',
+      href: 'https://www.instagram.com/reel/DL8fMMXSqFB/',
+      credit: 'Posted by @thetastebud',
+      platform: 'Instagram',
+    },
+    panels: [
+      {
+        head: 'Recipes',
+        body: ['Filipino favourites and easy comfort food, like kare kare spring rolls, Crock Pot beef pares and pork belly sisig.'],
+        links: [{ label: 'His recipes', href: 'https://www.thetastebud.co/recipes' }],
+      },
+      {
+        head: 'Food tour',
+        body: ['A guided tasting tour of San Francisco\u2019s Ferry Building with Vince, booked through Airbnb Experiences.'],
+        links: [{ label: 'Book the food tour', href: 'https://www.thetastebud.co/food-tour' }],
+      },
+      {
+        head: 'Merch',
+        body: ['The Tastebud Calamansi Barbecue Sauce, small-batch, with calamansi and garlic, and the \u201cBecause health\u201d trucker hat.'],
+        links: [{ label: 'His merch', href: 'https://www.thetastebud.co/merch' }],
+      },
+    ],
+    contactOnly:
+      'Vince, The Tastebud: a Bay Area home cook and food creator who recreates the Filipino food of his childhood and shares easy recipes, comfort food and food hacks. The post here is his beef stew, the \u201cred sauce\u201d he grew up on. BEASTY has not spoken to him yet: this spot is held, not taken.',
+    items: [],
+  },
+  {
+    /*
+      GADA, "San Francisco \u2022 Eats", "Needs Website Pilot". Glenn, 2026-10-06,
+      with their Instagram (@gada_raclette) and @seekeasyeats' reel ("Clip
+      this video plz"). Facts from their own profile: comfort food under the
+      Tunisian flag, the hours, 2375 Market St. The reel's caption calls it a
+      Tunisian sandwich shop in the Castro. No site and no published prices.
+      San Francisco's Mediterranean and Sandwiches seats are taken, so it is on
+      the yellow sheet, with the whole page for the reel.
+    */
+    slug: 'gada',
+    icon: 'gada',
+    name: 'GADA',
+    label: 'GADA',
+    cuisine: 'Tunisian comfort food',
+    tagline: 'Tunisian comfort food on Market Street, in the Castro.',
+    color: '#E9A23B|#2F3B1C',
+    prep: 0,
+    category: 'Tunisian',
+    address: '2375 Market St, San Francisco, CA 94114',
+    hours: 'Sun-Mon & Wed 11:30am-8pm, Thu-Sat 11:30am-9pm, Tue closed',
+    needsSite: true,
+    clip: {
+      src: '/clips/gada.mp4',
+      poster: '/clips/gada-poster.webp',
+      href: 'https://www.instagram.com/reel/Dc1ueO_SL7j/',
+      credit: 'Filmed by @seekeasyeats',
+      platform: 'Instagram',
+      by: 'seekeasyeats',
+    },
+    quoteOnly:
+      'Tunisian comfort food on Market Street in the Castro. They have no website yet and publish no prices.',
+    items: [],
+  },
+  {
+    /*
+      SANA'A CAFE, HAYWARD, "BEASTY \u2022 Coffee". Glenn, 2026-10-06, with
+      @sanaacafe.whipple's profile ("2472 Whipple Rd, Hayward"),
+      thesanaacafe.com, and @bayareafoodz' reel there ("Clip this video plz").
+      The chain's own site does not list the Whipple Road shop yet, so there
+      are no hours or phone. This is the one he sent for BEASTY \u2022 Coffee, so it
+      holds the Sana'a spot there (placements.ts); the San Rafael shop keeps
+      its city seat.
+    */
+    slug: 'sanaa-cafe-hayward',
+    icon: 'sanaa-cafe',
+    name: "Sana'a Cafe",
+    label: "Sana'a",
+    cuisine: 'Yemeni coffee',
+    tagline: 'Yemeni coffee on Whipple Road, in Hayward.',
+    color: '#2A2016',
+    prep: 0,
+    category: 'Coffee',
+    address: '2472 Whipple Rd, Hayward, CA',
+    site: 'https://thesanaacafe.com/',
+    clip: {
+      src: '/clips/sanaa-cafe-hayward.mp4',
+      poster: '/clips/sanaa-cafe-hayward-poster.webp',
+      href: 'https://www.instagram.com/reel/DYfd8rOvQUd/',
+      credit: 'Filmed by @bayareafoodz',
+      platform: 'Instagram',
+      by: 'bayareafoodz',
+    },
+    contactOnly:
+      'Yemeni coffee and pastries at the Hayward shop of Sana\u2019a Cafe, on Whipple Road. Their site does not list this shop or its menu prices yet.',
+    items: [],
+  },
   /*
     BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
     "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).
