@@ -8686,6 +8686,50 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Yemeni coffee and pastries at the Hayward shop of Sana\u2019a Cafe, on Whipple Road. Their site does not list this shop or its menu prices yet.',
     items: [],
   },
+  {
+    /*
+      AROMA CONCESSIONS, "BEASTY \u2022 Food Truck". Glenn, 2026-10-08, with their
+      contact page, their site's logo and their Instagram (@aromaconcessionsinc,
+      "Full-service mobile kitchen. Pop ups, catering, food truck. San
+      Francisco"). Everything here is from aromaconcessions.com: family-owned,
+      based in San Francisco, at festivals and events across Northern
+      California; the phone and email on their contact page; the menu on their
+      menu page, which has no prices, so the dishes are named without them.
+      BEASTY \u2022 Food Trucks seats it by its type line (categories.ts).
+    */
+    slug: 'aroma-concessions',
+    icon: 'aroma-concessions',
+    name: 'Aroma Concessions',
+    label: 'Aroma',
+    cuisine: 'Smoked meats food truck',
+    tagline: 'Smoked turkey legs, tri-tip and comfort food, cooked on site from their food trailer.',
+    color: '#FFFFFF|#E31B23',
+    prep: 0,
+    category: 'Food truck',
+    phone: '(510) 485-9931',
+    email: 'aromaconcessions@gmail.com',
+    site: 'https://www.aromaconcessions.com/',
+    panels: [
+      {
+        head: 'The menu',
+        body: [
+          'Smoked turkey legs, BBQ oysters and teriyaki chicken kabobs.',
+          'Tri-tip, Philly cheesesteak, and Cajun, Italian and Polish sausage sandwiches; cheeseburgers, hot dogs and corn dogs.',
+          'Garlic fries, fried artichokes, fried mushrooms, fried zucchini, and fish and chips.',
+          'Penne al pesto, alla vodka and ai funghi; Cobb and Mexican salads; bagels.',
+        ],
+        links: [{ label: 'Their menu', href: 'https://www.aromaconcessions.com/menu' }],
+      },
+      {
+        head: 'Where to find them',
+        body: ['Festivals, fairs and food-truck stops around Northern California, posted on their own calendar.'],
+        links: [{ label: 'Their upcoming events', href: 'https://www.aromaconcessions.com/find-us' }],
+      },
+    ],
+    contactOnly:
+      'A family-owned mobile kitchen out of San Francisco: food truck, pop-ups and full-service catering, cooked fresh on site from their food trailer at festivals, private parties and corporate events across Northern California. They publish no prices; ask them for a catering quote.',
+    items: [],
+  },
   /*
     BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
     "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).

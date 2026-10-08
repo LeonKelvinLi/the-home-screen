@@ -30,6 +30,7 @@ export const ICON_LUMA: Record<string, number> = {
   'amp-mode': 0.0544,
   'antonios-hauling': 0.1327,
   'armenta-landscape': 0.9242,
+  'aroma-concessions': 0.8472,
   'asian-box': 0.2848,
   'audio-accessories-mobile': 0.1352,
   'backyard-bayou': 0.7857,
