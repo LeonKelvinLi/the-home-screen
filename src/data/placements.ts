@@ -1385,4 +1385,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      in South San Francisco, on its open Filipino food seat. */
   'san-francisco-goods2-37': 'b_brendasfrenchsoulfood',
   'south-san-francisco-goods-10': 'b_karilagan', //               Filipino food
+  /* 2026-10-09: Zut! on Fourth on Berkeley's yellow sheet (Mediterranean is
+     Mile Limit's; the whole page for the reel), Vision Media on Santa Rosa's
+     Photo and video seat, and King Lou as the first spot on the new BEASTY •
+     Pets ("BEASTY • Pets"). */
+  'berkeley-goods2-7': 'b_zutonfourth',
+  'santa-rosa-services-12': 'b_visionmediaproduction', //       Photo and video
+  'beasty-pets-0': 'b_kinglou',
 }

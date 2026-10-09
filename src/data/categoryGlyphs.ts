@@ -44,6 +44,7 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   meats: { paths: ['M15 3c4 0 6 3 6 7 0 6-6 11-12 11-4 0-6-2-6-5 0-4 4-5 6-7s2-6 6-6Z', ring(15, 9, 2)] },
   dancers: { paths: ['M9 18V5l12-2v13', ring(6, 18, 3), ring(18, 16, 3)] },
   donations: { paths: ['M10 12C7 9 8 3 12 3s5 6 2 9', 'M9.5 21l5-9', 'M14.5 21l-5-9'] },
+  pets: { paths: [ring(5.5, 9.5, 2.5), ring(5.5, 14.5, 2.5), ring(18.5, 9.5, 2.5), ring(18.5, 14.5, 2.5), 'M7.6 10.8h8.8', 'M7.6 13.2h8.8'] },
   pits: { paths: [], dots: [[12, 16, 4], [5.5, 10, 2], [9.5, 6, 2], [14.5, 6, 2], [18.5, 10, 2]] },
   models: { paths: ['M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7Z'] },
   media: { paths: ['M9 3h6v11a3 3 0 0 1-6 0Z', 'M5 11a7 7 0 0 0 14 0', 'M12 18v3', 'M9 21h6'] },

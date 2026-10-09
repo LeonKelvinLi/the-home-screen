@@ -216,6 +216,8 @@ the most movement — to 540x960 with sound.
 | `sanaa-cafe-hayward.mp4` | Sana'a Cafe, Hayward | instagram.com/reel/DYfd8rOvQUd — **an excerpt**, 2s–26s of 61s; posted by @bayareafoodz, a food creator, not the cafe — sent on 2026-10-06 with "Clip this video plz" |
 | `brendas-french-soul-food.mp4` | Brenda's French Soul Food, San Francisco | instagram.com/reel/DdDE5PzhqIK — **an excerpt**, 3s–27s of 58s; posted by @dariananthony_ (Darian Gemora), a food creator, not the restaurant — sent on 2026-10-08 with "Clip this video plz" and "Foodie too" |
 | `karilagan.mp4` | Karilagan, South San Francisco | instagram.com/reel/DeQQO6hgT8y — **an excerpt**, 3s–27s of 89s; posted by @charweeezy (Charlene Louie), a food creator, not the restaurant — sent on 2026-10-08 with "Clip this video plz" |
+| `zut-on-fourth.mp4` | Zut! on Fourth, Berkeley | instagram.com/reel/DHuRXQdyynn (@zutonfourth) — **an excerpt**, 3s–27s of 29s |
+| `clear-vision-headlights.mp4` | Clear Vision Headlight Restoration (BEASTY • Automotive) | instagram.com/reel/DdOMkTSqMkx (@cvheadlightrestorations) — **an excerpt**, 7s–31s of 35s |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

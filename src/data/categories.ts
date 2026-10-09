@@ -64,12 +64,17 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
     1st spot." So the shops are here, with the repair shops added, and Whips
     below is for the cars themselves.
   */
-  { kind: 'automotive', heading: 'Automotive', about: 'Detailing, tint, wraps, car audio and repair', wall: wall('automotive'), test: /car audio|auto (detail|spa|design|repair|body|service)|detailing|tint|paint protection|\bppf\b|car wash|vinyl wrap|mechanic|smog|muffler|brake|\btires?\b|auto ?sport|collision/i, not: /cake|jewel/i },
+  { kind: 'automotive', heading: 'Automotive', about: 'Detailing, tint, wraps, car audio and repair', wall: wall('automotive'), test: /car audio|auto (detail|spa|design|repair|body|service)|detailing|tint|paint protection|\bppf\b|car wash|vinyl wrap|mechanic|smog|muffler|brake|\btires?\b|auto ?sport|collision|headlight/i, not: /cake|jewel/i },
   /* "I want to start the BEASTY • Whips with my boys car right here … Just name
      his page MeterSF" — Glenn, 2026-10-04. Builds and the people behind them;
      seated by hand only (placements.ts), so nothing fills it by itself. */
   { kind: 'whips', heading: 'Whips', about: 'Custom cars and the people who build them', wall: wall('whips') },
   { kind: 'pits', heading: "Pit's", about: 'Pit bull kennels and breeders', wall: wall('pits'), test: /pit ?bull/i },
+  /* "BEASTY • Pets" — Glenn, 2026-10-09, with King Lou's single-ingredient
+     treats, which hold spot 1 by hand (placements.ts). Everything else whose
+     type line is about pets fills it: groomers, walkers, daycare, pet gear.
+     Hot dogs and the like are not pets, and breeding stays on Pit's. */
+  { kind: 'pets', heading: 'Pets', about: 'Pet food, treats, grooming and care', wall: wall('pets'), test: /\bpets?\b|\bdogs?\b|\bdoggy\b|\bcats?\b|\bpupp(y|ies)\b|\bkennels?\b|\bk9\b|\bcanine\b|\bfeline\b/i, not: /pit ?bull|hot ?dogs?|corn ?dogs?|burgers? ?& ?dogs|breed|reproduction/i },
   { kind: 'models', heading: 'Models', about: 'Models and modeling agencies', wall: wall('models'), test: /\bmodel(s|ing)?\b/i },
   { kind: 'meats', heading: 'Meats', about: 'Independent ranchers and butchers', wall: wall('meats'), test: /rancher|\branch\b|butcher/i },
   { kind: 'gyms', heading: 'Gyms', about: 'Gyms, studios and climbing walls', wall: wall('gyms'), test: /\bgym\b|fitness|crossfit|boxing|climbing|yoga|barre|martial arts|pilates/i },

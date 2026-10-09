@@ -54,7 +54,7 @@ for it ("Udon — spot available").
 The list is in `src/data/categories.ts`: Tattoo, Athletes, AI, Artists, Dancers,
 Donations, DJ's, Cooks, Foodies, Realtors, Media, Photographers, Automotive
 (the first Whips, renamed on 2026-10-04 with the repair shops added), Whips
-(the cars themselves, seated from the centre out: MeterSF in the centre, spot 10, then MrCheeze408 beside it; the order is in `placements.ts`), Pit's, Models, Meats, Gyms,
+(the cars themselves, seated from the centre out: MeterSF in the centre, spot 10, then MrCheeze408 beside it; the order is in `placements.ts`), Pit's, Pets (from 2026-10-09; King Lou is spot 1), Models, Meats, Gyms,
 Barbershops, Salons, AYCE, Food Trucks and Coffee.
 
 Each category page holds 24 spots. Seat ids look like `beasty-tattoo-0` through

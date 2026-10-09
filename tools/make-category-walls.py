@@ -301,6 +301,27 @@ def m_pits(rng):
     return composite(img, over, blur=2)
 
 
+def m_pets(rng):
+    img = gradient("#071a1f", "#0f2f36")
+    img = glow(img, W * 0.35, H * 0.3, 1100, "#0891b2", 0.4)
+    over, d = layer()
+    # Scattered bones, at an angle each.
+    for i in range(22):
+        cx, cy = rng.uniform(0, W), rng.uniform(0, H)
+        s = rng.uniform(60, 120)
+        rot = rng.uniform(0, math.pi)
+        c = rgba("#a5f3fc", rng.uniform(0.08, 0.15))
+        ca, sa = math.cos(rot), math.sin(rot)
+        x0, y0, x1, y1 = cx - ca * s, cy - sa * s, cx + ca * s, cy + sa * s
+        d.line([(x0, y0), (x1, y1)], fill=c, width=int(s * 0.35))
+        for (bx, by) in ((x0, y0), (x1, y1)):
+            for k in (-1, 1):
+                ox, oy = -sa * s * 0.22 * k, ca * s * 0.22 * k
+                r = s * 0.24
+                d.ellipse([bx + ox - r, by + oy - r, bx + ox + r, by + oy + r], fill=c)
+    return composite(img, over, blur=3)
+
+
 def m_models(rng):
     img = gradient("#050505", "#15110a")
     over, d = layer()
@@ -453,6 +474,7 @@ MOTIFS = {
     "foodtrucks": m_foodtrucks,
     "coffee": m_coffee,
     "pits": m_pits,
+    "pets": m_pets,
     "models": m_models,
     "meats": m_meats,
     "gyms": m_gyms,

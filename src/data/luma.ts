@@ -107,6 +107,7 @@ export const ICON_LUMA: Record<string, number> = {
   'claire-anderson-homes': 0.1978,
   'classy-canines': 0.3707,
   'clean-asere': 0.2937,
+  'clear-vision-headlights': 0.7498,
   'contra-costa-fitness': 0.7978,
   'corenest-pilates': 0.8525,
   'cravingz': 0.5225,
@@ -238,6 +239,7 @@ export const ICON_LUMA: Record<string, number> = {
   'khaki': 0.2098,
   'kind-bubbles': 0.1328,
   'king-katsu-land': 0.1687,
+  'king-lou': 0.3016,
   'kitava': 0.9159,
   'kiyomi-ca-phe': 0.8554,
   'kopi-bar-and-bakery': 0.862,
@@ -477,6 +479,7 @@ export const ICON_LUMA: Record<string, number> = {
   'urban-air': 0.8909,
   'varnish-nail-boutique': 0.2749,
   'vegan-mob': 0.0507,
+  'vision-media-production': 0.0361,
   'vostok-shawarma': 0.9415,
   'wadaya-fremont': 0.6475,
   'waffles-cream': 0.0529,
@@ -500,6 +503,7 @@ export const ICON_LUMA: Record<string, number> = {
   'yummy-yummy-hibachi': 0.3465,
   'z-and-y-peking-duck': 0.8209,
   'zadna-grill': 0.2671,
+  'zut-on-fourth': 0.2444,
 }
 
 export const WALLPAPER_TILT: Record<string, number> = {
@@ -551,6 +555,8 @@ export const WALLPAPER_TILT: Record<string, number> = {
   'cat-media': -0.0123,
   'cat-models-thumb': -0.0016,
   'cat-models': -0.0012,
+  'cat-pets-thumb': 0.0059,
+  'cat-pets': 0.0063,
   'cat-photographers-thumb': 0.0011,
   'cat-photographers': -0.0069,
   'cat-pits-thumb': 0.0008,

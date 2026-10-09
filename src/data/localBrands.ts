@@ -9022,6 +9022,254 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    /*
+      ZUT! ON FOURTH, "Berkeley • Eats". Glenn, 2026-10-09, with their
+      Instagram (@zutonfourth, "Seasonal California–Mediterranean fare"), their
+      site's hours and their own reel ("Clip this video plz"). Address, phone,
+      email and hours from zutonfourth.com; the menu with prices from their own
+      SpotOn ordering page, read 2026-10-09 (the wine, beer and bar left off;
+      they say the menu changes with the season). Berkeley's Mediterranean
+      seat is Mile Limit's, so it is on the yellow sheet with the whole page
+      for the reel.
+    */
+    slug: 'zut-on-fourth',
+    icon: 'zut-on-fourth',
+    name: 'Zut! on Fourth',
+    label: 'Zut!',
+    cuisine: 'California-Mediterranean',
+    tagline: 'Seasonal California-Mediterranean on Fourth Street: lunch, brunch and dinner.',
+    color: '#EE6A2C|#111111',
+    prep: 0,
+    category: 'Mediterranean',
+    address: '1820 Fourth St, Berkeley, CA 94710',
+    phone: '(510) 644-0444',
+    email: 'info@zutonfourth.com',
+    hours: 'Mon-Thu 11:30am-2pm & 5pm-8pm, Fri 11:30am-2pm & 5pm-9pm, Sat 11am-9pm, Sun 11am-8pm',
+    site: 'https://www.zutonfourth.com/',
+    orderUrl: 'https://olo.spoton.com/5eea67a124b4c470f673b5a8',
+    menuNote: 'Their menu changes with the season; prices are from their own ordering page.',
+    clip: {
+      src: '/clips/zut-on-fourth.mp4',
+      poster: '/clips/zut-on-fourth-poster.webp',
+      href: 'https://www.instagram.com/reel/DHuRXQdyynn/',
+      credit: 'Posted by Zut!',
+      platform: 'Instagram',
+    },
+    sections: [
+      { name: 'Appetizers and Salads', items: [
+        ['Crispy Brussels Sprouts', 'with Lemon & Parmigiano', 1500],
+        ['Burrata', 'with Gold & Red Beet, Hazelnut & Red Grape, Arugula & Saba, Flatbread', 1800],
+        ['Butter Lettuces', 'Avocado, Feta, Toasted Pumpkin Seed, Red Onion, Lemon-Honey Vinaigrette', 2000],
+        ['Zut! Caesar Salad', 'Little Gems with Crouton, Garlic & Anchovy Dressing, Parmesan', 2000],
+        ['Fish & Chips', 'Crispy Rock Cod with Mango Coleslaw & Tartar Sauce, Garlic Fries', 2800],
+        ['Mezze Platter', 'A full plate with Falafel & Hummus, Beluga Lentil Salad and Farm Veggies', 2300],
+      ] },
+      { name: 'Sandwiches (with garlic fries or garden lettuces)', items: [
+        ['Grilled Eggplant, Bell Pepper & Zucchini Sandwich', 'with Provolone, Arugula, Pesto & Aioli on Toasted Sourdough', 1600],
+        ['BLTA', 'Bacon, Lettuce, Tomato & Avocado, with Aioli', 1600],
+        ['Crab Salad Sandwich', 'with Avocado on Toasted Sourdough', 2400],
+        ['Buttermilk Fried Chicken Sandwich', 'with Jalapeño Slaw, Jalapeño Aioli on Acme Bun', 1800],
+        ['Impossible Burger', 'with Aioli & Fixins on Acme Bun, choice of Fries or Salad', 2100],
+        ['Zut! Burger', 'with Aioli & Fixins on Acme Bun, choice of Fries or Salad', 2200],
+      ] },
+      { name: 'Pizza', items: [
+        ['Cheese Pizza', 'a classic... add toppings and create your own masterpiece!', 1600],
+        ['Margherita', 'with Fresh-pulled Mozzarella, Basil, Sauce Tomate', 2000],
+        ['Salsiccia con Olio Santo', 'Fennel Sausage & Red Onion, Sauce Tomate, Calabrian Chili Oil', 2400],
+      ] },
+      { name: 'Main Courses', items: [
+        ['Fish & Chips', 'Crispy Rock Cod with Mango Coleslaw & Tartar Sauce, Garlic Fries', 2800],
+        ['Impossible Burger', 'with Aioli & Fixins on Acme Bun, choice of Fries or Salad', 2100],
+        ['Seared Salmon Nicoise', 'Seared Salmon, Haricot, Black Olive, Tomato, Fingerling Potato and Farm Egg', 2800],
+        ['Steak Frites', 'with Garlic Fries, Garlic Haricot Vert, Herb Butter', 4200],
+        ['Zut! Burger', 'with Aioli & Fixins on Acme Bun, choice of Fries or Salad', 2200],
+      ] },
+      { name: 'Desserts', items: [
+        ['Apple Crisp', 'with Straus Vanilla', 1300],
+        ['Coffee Cantata Sundae', 'with Straus Coffee & Dutch Chocolate Ice Cream, Hot Fudge, Caramel Drizzle, Whipped Cream, Fabbri Amarena Cherry', 1300],
+        ['Flourless Chocolate Cake', 'With Straus Vanilla Ice Cream and Caramel', 1300],
+        ['Vanilla Panna Cotta', 'with Berry Coulis, Lemon Zest', 1300],
+        ['Sorbetto', 'Lemon & Raspberry, with Ginger Biscuit', 1300],
+        ['Zut! Tuxedo Sundae', 'with Straus Vanilla & Dutch Chocolate Ice Cream, Hot Fudge, Caramel Drizzle, Whipped Cream, Fabbri Amarena Cherry', 1300],
+      ] },
+      { name: 'Coffee & Tea', items: [
+        ['Café au Lait', 'Berkeley Disposable Cup Charge +$0.25', 600],
+        ['Caffè Latte', 'Berkeley Disposable Cup Charge +$0.25', 600],
+        ['Caffè Americano', 'Berkeley Disposable Cup Charge +$0.25', 600],
+        ['Cortado', 'Berkeley Disposable Cup Charge +$0.25', 800],
+        ['Cappuccino', 'Berkeley Disposable Cup Charge +$0.25', 600],
+        ['Drip Coffee', 'Berkeley Disposable Cup Charge +$0.25', 500],
+        ['Espresso', 'Berkeley Disposable Cup Charge +$0.25', 400],
+        ['Hot Chocolate', 'Berkeley Disposable Cup Charge +$0.25', 500],
+        ['Hot Tea', 'Berkeley Disposable Cup Charge +$0.25', 500],
+        ['Macchiato', 'Berkeley Disposable Cup Charge +$0.25', 600],
+        ['Milk', 'Berkeley Disposable Cup Charge +$0.25', 500],
+        ['Caffè Mocha', 'Berkeley Disposable Cup Charge +$0.25', 700],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      VISION MEDIA & PRODUCTION, "Santa Rosa • Services". Glenn, 2026-10-09,
+      with their Instagram (@visionmedia.production) and their site. Everything
+      here is from visionmediaandproduction.com: video production, content and
+      social, paid media, brand and strategy, for Sonoma County, Napa and Bay
+      Area businesses, from their Santa Rosa HQ. No prices are published. Its
+      type line seats it on BEASTY • Media too.
+    */
+    slug: 'vision-media-production',
+    icon: 'vision-media-production',
+    name: 'Vision Media & Production',
+    label: 'Vision',
+    cuisine: 'Media company and marketing',
+    tagline: 'Video, content, local SEO and marketing for Sonoma County and Bay Area businesses.',
+    color: '#1A1A1A|#FFFFFF',
+    prep: 0,
+    category: 'Media',
+    address: '3345 Industrial Dr, Unit 15, Santa Rosa, CA 95403',
+    phone: '(707) 620-8758',
+    site: 'https://visionmediaandproduction.com/',
+    siteCta: 'Book a call',
+    panels: [
+      {
+        head: 'What they do',
+        body: [
+          'Video production: brand films, commercials and social video, shot in house.',
+          'Content and social: Reels, TikToks and brand storytelling.',
+          'Paid media: Meta ads and lead campaigns.',
+          'Brand and strategy: positioning and creative direction.',
+        ],
+      },
+    ],
+    contactOnly:
+      'A media and marketing agency out of Santa Rosa: video, content, local SEO and paid ads for contractors, wineries, restaurants, gyms, realtors and other local businesses across Sonoma County, Napa and the Bay Area. They publish no prices; book a call for a quote.',
+    items: [],
+  },
+  {
+    /*
+      KING LOU, "BEASTY • Pets", the first business on the new Pets page.
+      Glenn, 2026-10-09, with their Instagram (@kingloupets, "Single-Ingredient
+      Super Treats, 100% USA, Human-grade, Raw processed, Zionsville, Indiana")
+      and their Linktree. They sell online, so there is no city seat. The
+      products and prices are their own shop's (kingloupets.com), in stock on
+      2026-10-09; the clothing and other merch are left off.
+    */
+    slug: 'king-lou',
+    icon: 'king-lou',
+    name: 'King Lou',
+    label: 'King Lou',
+    cuisine: 'Pet treats and raw pet food',
+    tagline: 'Single-ingredient, human-grade super treats for dogs, made in the USA.',
+    color: '#0A8DB5|#FFFFFF',
+    prep: 0,
+    category: 'Pets',
+    site: 'https://kingloupets.com/',
+    siteCta: 'Shop King Lou',
+    menuNote: 'Prices from their own online shop; they ship from Zionsville, Indiana.',
+    sections: [
+      { name: 'Treats', items: [
+        ['Beef heart jerky', '', 2500],
+        ['Beef liver bites', '', 2500],
+        ['Beef lung', '', 2500],
+        ['Beef tendons', '', 2500],
+        ['Bison liver bites', '', 2500],
+        ['Bison tripe', '', 2500],
+        ['Chicken breast jerky', '', 2500],
+        ['Chicken wing tips', 'From $25; bigger sizes up to $89', 2500],
+        ['Cod skin rolls', '', 2500],
+        ['KING size bully sticks', 'From $25; bigger sizes up to $199', 2500],
+        ['Lamb heart bites', '', 2500],
+        ['Petite whole minnows', '', 2500],
+        ['Pig ear strips', 'From $25; bigger sizes up to $109', 2500],
+        ['Pork heart bites', '', 2500],
+        ['Salmon skin rolls', '', 2500],
+        ['Sweet potatoes', '', 2500],
+        ['Turkey breast jerky', '', 2500],
+        ['Turkey tendons', '', 2500],
+        ['Whole chicken feet', 'From $25; bigger sizes up to $229', 2500],
+        ['Whole chicken heads', '', 2500],
+        ['Whole chicken hearts', '', 2500],
+        ['Whole duck feet', 'From $25; bigger sizes up to $229', 2500],
+        ['Whole duck heads', 'From $25; bigger sizes up to $249', 2500],
+        ['Whole duck hearts', '', 2500],
+        ['Whole duck necks', 'From $25; bigger sizes up to $89', 2500],
+        ['Whole duck wings', '', 2500],
+        ['Whole minnows', '', 2500],
+        ['Whole pig ears', 'From $25; bigger sizes up to $109', 2500],
+        ['Whole salmon skin', 'From $25; bigger sizes up to $60', 2500],
+        ['Whole trout heads', 'From $25; bigger sizes up to $249', 2500],
+        ['Wild salmon bites', '', 2500],
+        ['Beef trachea', 'From $30; bigger sizes up to $139', 3000],
+        ['King Lou Small Mystery Box', '', 3000],
+        ['Grass fed bully sticks', 'From $40; bigger sizes up to $299', 4000],
+        ['Chicken feet & duck feet mixed bucket', '', 17900],
+        ['Single ingredient training treats- 1.5lb bucket', '', 17900],
+      ] },
+      { name: 'Meal toppers', items: [
+        ['Beef blood sprinkles', '', 2500],
+        ['Duck liver sprinkles', '', 2500],
+        ['Bone broth booster - digestive support', '', 3000],
+        ['Bone broth booster - holistic defense', '', 3000],
+        ['Bone broth booster - joint support', '', 3000],
+      ] },
+      { name: 'Complete raw food', items: [
+        ['Complete raw food- beef', '', 5000],
+        ['Complete raw food- chicken', '', 5000],
+        ['Complete raw food- pork', '', 5000],
+        ['Complete raw food- turkey', '', 5000],
+      ] },
+      { name: 'Bundles', items: [
+        ['Crunchy Bundle', '', 6900],
+        ['Intro Bundle', '', 6900],
+        ['Training Bundle', '', 6900],
+        ['Complete Health Bundle', '', 7500],
+        ['10 Pack: Heart Health Bundle', '', 22000],
+        ['10 Pack: Dental Health Bundle', '', 22900],
+        ['8 Pack: Bulk Box Bundle', '', 59900],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      CLEAR VISION HEADLIGHT RESTORATION, "BEASTY • Automotive". Glenn,
+      2026-10-09, sent headlightmagic.com with screenshots of
+      @cvheadlightrestorations and their own reel ("Clip this video plz").
+      The business is Clear Vision, a Bay Area mobile headlight restoration
+      service; Headlight Magic is the kit maker they are an affiliate of, and
+      the site link is their own affiliate link to it. They take bookings by
+      Instagram DM and publish no prices. Automotive seats it by its type line
+      (categories.ts, "headlight").
+    */
+    slug: 'clear-vision-headlights',
+    icon: 'clear-vision-headlights',
+    name: 'Clear Vision Headlight Restoration',
+    label: 'Clear Vision',
+    cuisine: 'Mobile headlight restoration',
+    tagline: 'Mobile headlight restoration around the Bay Area: cloudy lenses made clear again.',
+    color: '#0B1F3A|#FFFFFF',
+    prep: 0,
+    category: 'Automotive',
+    clip: {
+      src: '/clips/clear-vision-headlights.mp4',
+      poster: '/clips/clear-vision-headlights-poster.webp',
+      href: 'https://www.instagram.com/reel/DdOMkTSqMkx/',
+      credit: 'Posted by Clear Vision Headlight Restoration',
+      platform: 'Instagram',
+    },
+    panels: [
+      {
+        head: 'Headlight Magic',
+        body: ['They are a Headlight Magic affiliate: the kits they use, sold through their own link.'],
+        links: [{ label: 'Headlight Magic', href: 'https://www.headlightmagic.com/?ref=Clear+Vision' }],
+      },
+    ],
+    contactOnly:
+      'A mobile headlight restoration service around the Bay Area: they come to you and bring oxidized, cloudy headlights back to clear, for far less than new ones. They book by Instagram message and publish no prices.',
+    items: [],
+  },
   /*
     BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
     "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).
