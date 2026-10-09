@@ -1380,4 +1380,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-36': 'b_gada',
   'beasty-coffee-2': 'b_sanaacafehayward',
   'hayward-goods-13': 'b_sanaacafehayward',
+  /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
+     sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
+     in South San Francisco, on its open Filipino food seat. */
+  'san-francisco-goods2-37': 'b_brendasfrenchsoulfood',
+  'south-san-francisco-goods-10': 'b_karilagan', //               Filipino food
 }

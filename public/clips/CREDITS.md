@@ -214,6 +214,8 @@ the most movement — to 540x960 with sound.
 | `the-tastebud.mp4` | The Tastebud (BEASTY • Cooks) | instagram.com/reel/DL8fMMXSqFB (@thetastebud) — **an excerpt**, 8s–32s of 32s |
 | `gada.mp4` | GADA, San Francisco | instagram.com/reel/Dc1ueO_SL7j — **an excerpt**, 1s–25s of 72s; posted by @seekeasyeats (Seekeasy), a food creator, not the restaurant — sent on 2026-10-06 with "Clip this video plz" |
 | `sanaa-cafe-hayward.mp4` | Sana'a Cafe, Hayward | instagram.com/reel/DYfd8rOvQUd — **an excerpt**, 2s–26s of 61s; posted by @bayareafoodz, a food creator, not the cafe — sent on 2026-10-06 with "Clip this video plz" |
+| `brendas-french-soul-food.mp4` | Brenda's French Soul Food, San Francisco | instagram.com/reel/DdDE5PzhqIK — **an excerpt**, 3s–27s of 58s; posted by @dariananthony_ (Darian Gemora), a food creator, not the restaurant — sent on 2026-10-08 with "Clip this video plz" and "Foodie too" |
+| `karilagan.mp4` | Karilagan, South San Francisco | instagram.com/reel/DeQQO6hgT8y — **an excerpt**, 3s–27s of 89s; posted by @charweeezy (Charlene Louie), a food creator, not the restaurant — sent on 2026-10-08 with "Clip this video plz" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

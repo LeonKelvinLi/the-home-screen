@@ -797,7 +797,7 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'aberration-studio', 'impower-sports', 'nail-edit-studio', 'corenest-pilates', 'contra-costa-fitness', 'carlyles-chicken-wings', 'curio-bar', 'bascota-cafe', 'wagyu-grill', 'meat-time', 'wagyu-master',
   'king-katsu-land', 'little-sheep', 'bollywood-pizza', 'basq-haus',
   'hakashi-sushi-bar', 'ginza-sushi', 'tacos-don-chai', 'kiyomi-ca-phe', 'vostok-shawarma', 'snatched-by-chinita', 'sidewalk-juice', 'kung-fu-mala-2',
-  'the-tastebud', 'gada', 'aroma-concessions']) {
+  'the-tastebud', 'gada', 'aroma-concessions', 'brendas-french-soul-food', 'karilagan']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }
@@ -808,7 +808,8 @@ if (!bundles.includes('"beasty-whips-9":"b_metersf"')) fails.push('MeterSF is no
 if (!bundles.includes('"beasty-whips-10":"b_mrcheeze408"')) fails.push('MrCheeze408 is not beside MeterSF on BEASTY • Whips')
 /* Batch 43, 2026-10-06: the new seats, and the three category spots pinned so the newcomers land after them. */
 for (const [seat, id] of [['martinez-goods-1', 'b_tacosdonchai'], ['hayward-services-2', 'b_snatchedbychinita'], ['san-francisco-goods2-35', 'b_sidewalkjuice'], ['beasty-coffee-9', 'b_grindcafe707'], ['beasty-foodtrucks-0', 'b_ofieskitchen'],
-  ['beasty-cooks-8', 'b_thetastebud'], ['san-francisco-goods2-36', 'b_gada'], ['beasty-coffee-2', 'b_sanaacafehayward'], ['hayward-goods-13', 'b_sanaacafehayward']]) {
+  ['beasty-cooks-8', 'b_thetastebud'], ['san-francisco-goods2-36', 'b_gada'], ['beasty-coffee-2', 'b_sanaacafehayward'], ['hayward-goods-13', 'b_sanaacafehayward'],
+  ['san-francisco-goods2-37', 'b_brendasfrenchsoulfood'], ['south-san-francisco-goods-10', 'b_karilagan']]) {
   if (!bundles.includes(`"${seat}":"${id}"`)) fails.push(`${seat} does not hold ${id}`)
 }
 for (const f of ['/clips/mrcheeze408.mp4', '/photos/mrcheeze408-1.webp', '/icons/mrcheeze408.webp']) {
