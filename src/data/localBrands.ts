@@ -9270,6 +9270,62 @@ export const LOCAL_SEED: LocalSeed[] = [
       'A mobile headlight restoration service around the Bay Area: they come to you and bring oxidized, cloudy headlights back to clear, for far less than new ones. They book by Instagram message and publish no prices.',
     items: [],
   },
+  {
+    /*
+      MI JALISCO TAQUIZAS, "BEASTY • Food Truck". Glenn, 2026-10-09, with their
+      Instagram (@mijaliscotaquizas, "On-Site Taco Catering, Serving the Bay
+      Area"), their site and LaRussell's reel ("Clip this video plz"): his
+      free-taco day there on 7/07, a past event, so the page says so. Address,
+      phone and hours from mijaliscotaquiza.com; the menu and prices from their
+      own ordering page (boons.io, which also runs their site), read
+      2026-10-09. BEASTY • Food Trucks seats it by its type line.
+    */
+    slug: 'mi-jalisco-taquizas',
+    icon: 'mi-jalisco-taquizas',
+    name: 'Mi Jalisco Taquizas',
+    label: 'Mi Jalisco',
+    cuisine: 'Jalisco-style taco food truck',
+    tagline: 'Jalisco-style tacos, quesabirrias and burritos from a truck on Sonoma Blvd.',
+    color: '#000000|#FFFFFF',
+    prep: 0,
+    category: 'Food truck',
+    address: '738 Sonoma Blvd, Vallejo, CA 94590',
+    phone: '(707) 653-9293',
+    hours: 'Mon-Fri 10am-8pm, Sat-Sun closed',
+    site: 'https://www.mijaliscotaquiza.com/',
+    orderUrl: 'https://order.boons.io/site/mi-jalisco-taquizas/374/y',
+    clip: {
+      src: '/clips/mi-jalisco-taquizas.mp4',
+      poster: '/clips/mi-jalisco-taquizas-poster.webp',
+      href: 'https://www.instagram.com/reel/DagxDrOgACz/',
+      credit: 'Posted by @larussell',
+      platform: 'Instagram',
+    },
+    sections: [
+      { name: 'Mi Jalisco menu', items: [
+        ['Tacos', 'Choice of meat, cilantro and onions. Each', 300],
+        ['Quesabirrias', 'Cheese, cilantro and onions', 400],
+        ['Queso Taco', '', 400],
+        ['Combo: 3 tacos with rice & beans', 'Cilantro and onions', 1000],
+        ['Rice & Beans Plate', '', 300],
+        ['Quesadillas', 'Cilantro and onions', 1200],
+        ['Burrito', 'Choice of meat, rice, beans, cilantro, onions, cheese and sour cream', 1300],
+        ['Nachos', 'Choice of meat, beans, nacho cheese, jalapeños and green onions', 1400],
+        ['Tortas', 'Choice of meat, beans, onions, tomato, lettuce, jalapeños and cheese', 1500],
+      ] },
+      { name: 'Drinks', items: [
+        ['Can Soda', 'Coke, Sprite', 200],
+        ['Bottled Water', '', 200],
+        ['Jarritos', '', 300],
+        ['Coke Bottle', '', 300],
+        ['Horchata', '', 400],
+        ['Strawberry Horchata', '', 400],
+        ['Pineapple Agua Fresca', '', 400],
+      ] },
+    ],
+    menuNote: 'Prices from their own ordering page. They also cater on site around the Bay Area. The reel is LaRussell\u2019s free-taco day there on 7/07, a past event.',
+    items: [],
+  },
   /*
     BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
     "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).

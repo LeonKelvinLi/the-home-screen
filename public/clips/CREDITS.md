@@ -218,6 +218,7 @@ the most movement — to 540x960 with sound.
 | `karilagan.mp4` | Karilagan, South San Francisco | instagram.com/reel/DeQQO6hgT8y — **an excerpt**, 3s–27s of 89s; posted by @charweeezy (Charlene Louie), a food creator, not the restaurant — sent on 2026-10-08 with "Clip this video plz" |
 | `zut-on-fourth.mp4` | Zut! on Fourth, Berkeley | instagram.com/reel/DHuRXQdyynn (@zutonfourth) — **an excerpt**, 3s–27s of 29s |
 | `clear-vision-headlights.mp4` | Clear Vision Headlight Restoration (BEASTY • Automotive) | instagram.com/reel/DdOMkTSqMkx (@cvheadlightrestorations) — **an excerpt**, 7s–31s of 35s |
+| `mi-jalisco-taquizas.mp4` | Mi Jalisco Taquizas, Vallejo (BEASTY • Food Trucks) | instagram.com/reel/DagxDrOgACz — the whole 20s; posted by @larussell, not the truck: his free-taco day there on 7/07 — sent on 2026-10-09 with "Clip this video plz" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

@@ -282,6 +282,7 @@ export const ICON_LUMA: Record<string, number> = {
   'meat-time': 0.0931,
   'metersf': 0.1161,
   'mexihibachi': 0.0305,
+  'mi-jalisco-taquizas': 0.08,
   'midnight-organic': 0.88,
   'midnight-theories': 0.0995,
   'mile-limit-berkeley': 0.3807,
