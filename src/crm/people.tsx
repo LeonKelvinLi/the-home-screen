@@ -102,12 +102,18 @@ export function Referrers() {
         title="People"
         sub="Who sends businesses to BEASTY, and how far those businesses get. A business counts for whoever sent it first."
         actions={
-          actor.role === 'admin' ? (
-            <a className="crm-btn" href="#/settings">
-              <Icon name="settings" size={16} />
-              Settings
+          <>
+            <a className="crm-btn" href="#/affiliates">
+              <Icon name="file" size={16} />
+              Affiliates
             </a>
-          ) : undefined
+            {actor.role === 'admin' && (
+              <a className="crm-btn" href="#/settings">
+                <Icon name="settings" size={16} />
+                Settings
+              </a>
+            )}
+          </>
         }
       />
       <div className="crm-toolbar">

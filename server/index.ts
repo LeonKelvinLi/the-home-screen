@@ -5,6 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
+import { mountOnboarding } from './onboarding'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
 import { businessSlug, flagReferral, isOwnDevice, mountAffiliate } from './affiliate'
 import { crmOpenMode } from './crm/open'
@@ -3605,23 +3606,20 @@ app.get('/api/members/qr.svg', rateLimiter(30, 15), async (req, res) => {
   headers. Mounted here, after every other API route and before the /api 404
   and the page catch-alls, so none of its paths can be swallowed by them.
 */
-mountCrm(
-  app,
-  {
-    isOperator,
-    isOperatorToken,
-    memberFromRequest: (req) => memberFromRequest(req),
-    readCookie,
-    secret: PASS_SECRET,
-    prod: PROD,
-    /* CRM_OPEN=1 opens /crm without the key, as Glenn. Never in production. */
-    open: crmOpenMode(process.env, PROD),
-    /* Where a referral link or its QR code has to open: the public site. */
-    publicUrl: PUBLIC_URL,
-    memberSignin: CRM_MEMBER_SIGNIN,
-  },
-  rateLimiter,
-)
+const crmDeps = {
+  isOperator,
+  isOperatorToken,
+  memberFromRequest: (req: Request) => memberFromRequest(req),
+  readCookie,
+  secret: PASS_SECRET,
+  prod: PROD,
+  /* CRM_OPEN=1 opens /crm without the key, as Glenn. Never in production. */
+  open: crmOpenMode(process.env, PROD),
+  /* Where a referral link or its QR code has to open: the public site. */
+  publicUrl: PUBLIC_URL,
+  memberSignin: CRM_MEMBER_SIGNIN,
+}
+mountCrm(app, crmDeps, rateLimiter)
 if (process.env.CRM_OPEN === '1') {
   console.log(PROD ? 'crm: CRM_OPEN is set but ignored in production; the key is still required' : 'crm: open mode, /crm needs no key and everyone is Glenn (not production)')
 }
@@ -3640,6 +3638,17 @@ app.get('/crm', (req, res, next) => {
 mountFriends(app, { memberFromRequest, rateLimiter, shortName })
 /* The affiliate dashboard: what a member has brought to BEASTY (server/affiliate.ts). */
 mountAffiliate(app, { memberFromRequest, rateLimiter, deviceOf, isOperator, origin: originFor })
+/* Affiliate onboarding: invite, get paid, sign, submit, review (server/onboarding.ts). */
+mountOnboarding(app, {
+  memberFromRequest,
+  rateLimiter,
+  origin: originFor,
+  publicUrl: PUBLIC_URL,
+  sendEmail: sendLeadEmail,
+  leadEmail: process.env.LEAD_EMAIL,
+  crm: crmDeps,
+  prod: PROD,
+})
 
 app.all('/api/*', (_req, res) => res.status(404).json({ error: 'Unknown endpoint.' }))
 

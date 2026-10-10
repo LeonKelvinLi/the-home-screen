@@ -1,0 +1,1094 @@
+/*
+  /join: the BEASTY affiliate onboarding portal (server/onboarding.ts).
+
+  One connected journey, phone first: invite link -> sign in with the usual
+  BEASTY code -> four steps (your information, get paid, agreement, review)
+  -> a dashboard that says where the application stands. Stripe and DocuSeal
+  each open on their own page for the one thing they do, and the step tells you
+  before it sends you there and checks again when you come back.
+
+  Nothing on these screens claims more than is true: a step that is not set up
+  yet says so, "saved" appears only after the server confirms it, and signing
+  is read back from DocuSeal, never inferred from a button press.
+*/
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import './join.css'
+
+/* ------------------------------------------------------------------ api ---- */
+
+class ApiErr extends Error {
+  constructor(public status: number, public body: Record<string, unknown>) {
+    super(String(body.error ?? `HTTP ${status}`))
+  }
+}
+
+async function api<T>(path: string, opts: { method?: string; body?: unknown } = {}): Promise<T> {
+  const r = await fetch(path, {
+    method: opts.method ?? 'GET',
+    credentials: 'same-origin',
+    headers: opts.body !== undefined ? { 'content-type': 'application/json' } : undefined,
+    body: opts.body !== undefined ? JSON.stringify(opts.body) : undefined,
+  })
+  const body = (await r.json().catch(() => ({}))) as Record<string, unknown>
+  if (!r.ok) throw new ApiErr(r.status, body)
+  return body as T
+}
+
+/* ---------------------------------------------------------------- types ---- */
+
+interface Profile {
+  legalFirst?: string
+  legalLast?: string
+  preferredName?: string
+  email?: string
+  phone?: string
+  line1?: string
+  line2?: string
+  city?: string
+  state?: string
+  zip?: string
+  kind?: 'individual' | 'business'
+  businessName?: string
+  website?: string
+  instagram?: string
+  tiktok?: string
+  youtube?: string
+  promote?: string[]
+  promoteNote?: string
+}
+type Tri = 'needed' | 'pending' | 'complete'
+interface Bundle {
+  id: string
+  status: 'in_progress' | 'submitted' | 'changes_requested' | 'approved' | 'rejected' | 'suspended'
+  revision: number
+  profile: Profile
+  steps: {
+    profile: { complete: boolean; problems: Record<string, string> }
+    payouts: { available: boolean; started: boolean; complete: boolean; identity: Tri; tax: Tri; bank: 'needed' | 'complete'; bankLast4: string | null }
+    agreement: { available: boolean; status: string; affiliateSigned: boolean; countersigned: boolean; completedAt: number | null }
+  }
+  submittedAt: number | null
+  decidedAt: number | null
+  decisionNote: string
+  testMode: boolean
+}
+
+/* Same rules as server/onboarding.ts profileProblems, so the form can say
+   what's missing before a round trip; the server stays the judge. */
+const STATES = new Set('AL AK AZ AR CA CO CT DE DC FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY PR'.split(' '))
+function problems(p: Profile): Record<string, string> {
+  const e: Record<string, string> = {}
+  const t = (s?: string) => (s ?? '').trim()
+  if (!t(p.legalFirst)) e.legalFirst = 'Your legal first name, as on your ID.'
+  if (!t(p.legalLast)) e.legalLast = 'Your legal last name, as on your ID.'
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t(p.email))) e.email = 'An email address we can reach you at.'
+  const d = t(p.phone).replace(/\D/g, '')
+  if (d.length < 10 || d.length > 15) e.phone = 'A phone number with area code.'
+  if (!t(p.line1)) e.line1 = 'Street address.'
+  if (!t(p.city)) e.city = 'City.'
+  if (!STATES.has(t(p.state).toUpperCase())) e.state = 'Two-letter state, like CA.'
+  if (!/^\d{5}(-?\d{4})?$/.test(t(p.zip))) e.zip = 'Five-digit ZIP code.'
+  if (p.kind !== 'individual' && p.kind !== 'business') e.kind = 'Choose individual or business.'
+  if (p.kind === 'business' && !t(p.businessName)) e.businessName = 'The business’s legal name.'
+  if (!p.promote?.length) e.promote = 'Pick at least one way you’ll share BEASTY.'
+  return e
+}
+
+const PROMOTE: [string, string][] = [
+  ['instagram', 'Instagram'],
+  ['tiktok', 'TikTok'],
+  ['youtube', 'YouTube'],
+  ['facebook', 'Facebook'],
+  ['website', 'My website'],
+  ['in_person', 'In person'],
+  ['email', 'Email or text'],
+  ['other', 'Something else'],
+]
+
+const STEPS = ['Your information', 'Get paid', 'Agreement', 'Review & submit'] as const
+
+/* ---------------------------------------------------------------- icons ---- */
+
+const Lock = () => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+    <rect x="4" y="11" width="16" height="10" rx="2" />
+    <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+  </svg>
+)
+const Check = () => (
+  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M5 12.5l4.5 4.5L19 7.5" />
+  </svg>
+)
+
+/* ---------------------------------------------------------------- shell ---- */
+
+type SaveState = 'idle' | 'saving' | 'saved' | 'error'
+
+function Shell({ children, save, test }: { children: React.ReactNode; save?: SaveState; test?: boolean }) {
+  const label = save === 'saving' ? 'Saving…' : save === 'saved' ? 'All changes saved' : save === 'error' ? 'Not saved — retrying' : ''
+  return (
+    <div className="onb">
+      <header className="onb-bar">
+        <a className="onb-mark" href="/" aria-label="BEASTY Pages home">
+          <span className="onb-mark-tile" aria-hidden="true">B•P</span>
+          <span>
+            <span className="onb-mark-name">BEASTY</span> <span className="onb-mark-sub">Affiliates</span>
+          </span>
+        </a>
+        <div className="onb-bar-right">
+          {test && <span className="onb-test">Test mode</span>}
+          {label && (
+            <span className="onb-save" data-state={save} role="status" aria-live="polite">
+              {label}
+            </span>
+          )}
+        </div>
+      </header>
+      {children}
+    </div>
+  )
+}
+
+function Loading() {
+  return (
+    <Shell>
+      <main className="onb-main" aria-busy="true">
+        <div className="onb-card">
+          <div className="onb-skeleton" style={{ width: '45%', height: 30 }} />
+          <div className="onb-skeleton" style={{ width: '80%' }} />
+          <div className="onb-skeleton" style={{ width: '70%' }} />
+        </div>
+      </main>
+    </Shell>
+  )
+}
+
+function Message({ title, children }: { title: string; children: React.ReactNode }) {
+  return (
+    <Shell>
+      <main className="onb-main">
+        <div className="onb-card">
+          <h2>{title}</h2>
+          <div className="onb-lede">{children}</div>
+        </div>
+      </main>
+    </Shell>
+  )
+}
+
+/* -------------------------------------------------------------- welcome ---- */
+
+function Welcome({ name, onStart }: { name: string; onStart: () => void }) {
+  const first = name.trim().split(/\s+/)[0]
+  return (
+    <Shell>
+      <main className="onb-main">
+        <section className="onb-hero">
+          {first && <p className="onb-hello">Hi {first},</p>}
+          <h1>Join the BEASTY affiliate program</h1>
+          <p className="onb-lede">Share BEASTY with your people and get paid for the members and businesses you bring in. Four steps, about ten minutes, and you can stop and pick it up later.</p>
+          <ol className="onb-steps">
+            {[
+              ['Your information', 'Name, contact details and how you’ll share BEASTY.'],
+              ['Get paid', 'Verify your identity, add tax details and a bank account with Stripe.'],
+              ['Agreement', 'Read and sign the BEASTY affiliate agreement.'],
+              ['Review & submit', 'Check everything and send it to BEASTY.'],
+            ].map(([t, d], i) => (
+              <li key={t}>
+                <span className="onb-num">{i + 1}</span>
+                <div>
+                  <b>{t}</b>
+                  <span>{d}</span>
+                </div>
+              </li>
+            ))}
+          </ol>
+          <div className="onb-hero-foot">
+            <button className="onb-btn onb-btn-primary" onClick={onStart}>
+              Get started
+            </button>
+            <span className="onb-quiet" style={{ color: '#a7a7a1' }}>
+              Your progress saves as you go.
+            </span>
+          </div>
+        </section>
+        <div className="onb-trust">
+          <Lock />
+          <p>Your Social Security number, bank account and ID go straight to Stripe, BEASTY’s payments partner. BEASTY never sees or stores them.</p>
+        </div>
+      </main>
+    </Shell>
+  )
+}
+
+/* -------------------------------------------------------------- sign in ---- */
+
+function SignIn({ defaultName, onSignedIn }: { defaultName: string; onSignedIn: () => void }) {
+  const [by, setBy] = useState<'phone' | 'email'>('phone')
+  const [name, setName] = useState(defaultName)
+  const [dest, setDest] = useState('')
+  const [code, setCode] = useState('')
+  const [sent, setSent] = useState(false)
+  const [busy, setBusy] = useState(false)
+  const [err, setErr] = useState('')
+
+  const send = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setErr('')
+    setBusy(true)
+    try {
+      await api('/api/members/start', { method: 'POST', body: { name: name.trim(), [by]: dest.trim() } })
+      setSent(true)
+    } catch (x) {
+      setErr(x instanceof ApiErr ? x.message : 'Couldn’t reach BEASTY. Check your connection and try again.')
+    } finally {
+      setBusy(false)
+    }
+  }
+  const verify = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setErr('')
+    setBusy(true)
+    try {
+      await api('/api/members/verify', { method: 'POST', body: { [by]: dest.trim(), code: code.trim() } })
+      onSignedIn()
+    } catch (x) {
+      setErr(x instanceof ApiErr ? x.message : 'Couldn’t reach BEASTY. Check your connection and try again.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  return (
+    <Shell>
+      <main className="onb-main">
+        <div className="onb-card" style={{ maxWidth: 520, margin: '0 auto' }}>
+          <h2>{sent ? 'Enter your code' : 'Sign in or create your account'}</h2>
+          <p className="onb-lede">
+            {sent
+              ? `We sent a 6-digit code to ${dest}.`
+              : 'Use your BEASTY account if you have one. If you don’t, this makes one; there’s no password, just a code.'}
+          </p>
+          {!sent ? (
+            <form onSubmit={send} className="onb-section">
+              <div className="onb-fields">
+                <div className="onb-field">
+                  <label htmlFor="j-name">Your name</label>
+                  <input id="j-name" className="onb-input" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} />
+                </div>
+                <div className="onb-choice" role="group" aria-label="Send my code by">
+                  <button type="button" aria-pressed={by === 'phone'} onClick={() => setBy('phone')}>
+                    Text me
+                  </button>
+                  <button type="button" aria-pressed={by === 'email'} onClick={() => setBy('email')}>
+                    Email me
+                  </button>
+                </div>
+                <div className="onb-field">
+                  <label htmlFor="j-dest">{by === 'phone' ? 'Mobile number' : 'Email'}</label>
+                  <input
+                    id="j-dest"
+                    className="onb-input"
+                    type={by === 'phone' ? 'tel' : 'email'}
+                    inputMode={by === 'phone' ? 'tel' : 'email'}
+                    autoComplete={by === 'phone' ? 'tel' : 'email'}
+                    value={dest}
+                    onChange={(e) => setDest(e.target.value)}
+                    required
+                  />
+                </div>
+              </div>
+              {err && <p className="onb-err" role="alert">{err}</p>}
+              <div className="onb-actions">
+                <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || name.trim().length < 2 || !dest.trim()}>
+                  {busy ? 'Sending…' : 'Send my code'}
+                </button>
+              </div>
+            </form>
+          ) : (
+            <form onSubmit={verify} className="onb-section">
+              <div className="onb-field">
+                <label htmlFor="j-code">6-digit code</label>
+                <input
+                  id="j-code"
+                  className="onb-input onb-code"
+                  inputMode="numeric"
+                  autoComplete="one-time-code"
+                  maxLength={6}
+                  value={code}
+                  onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))}
+                  autoFocus
+                />
+              </div>
+              {err && <p className="onb-err" role="alert">{err}</p>}
+              <div className="onb-actions">
+                <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || code.length !== 6}>
+                  {busy ? 'Checking…' : 'Continue'}
+                </button>
+                <button type="button" className="onb-link" onClick={() => { setSent(false); setCode(''); setErr('') }}>
+                  Use a different {by === 'phone' ? 'number' : 'email'}
+                </button>
+              </div>
+            </form>
+          )}
+        </div>
+      </main>
+    </Shell>
+  )
+}
+
+/* ---------------------------------------------------------- onboarding ---- */
+
+function useAutosave(bundle: Bundle, onConflict: (p: Profile, rev: number) => void) {
+  const [save, setSave] = useState<SaveState>('idle')
+  const rev = useRef(bundle.revision)
+  const pending = useRef<Profile | null>(null)
+  const inflight = useRef(false)
+  const timer = useRef<number | undefined>(undefined)
+
+  const flush = useCallback(async (): Promise<boolean> => {
+    if (inflight.current) return false
+    const next = pending.current
+    if (!next) return true
+    pending.current = null
+    inflight.current = true
+    setSave('saving')
+    try {
+      const r = await api<{ revision: number }>('/api/onboarding/me/profile', { method: 'PUT', body: { revision: rev.current, profile: next } })
+      rev.current = r.revision
+      inflight.current = false
+      if (pending.current) return flush()
+      setSave('saved')
+      return true
+    } catch (x) {
+      inflight.current = false
+      if (x instanceof ApiErr && x.status === 409 && typeof x.body.revision === 'number') {
+        rev.current = x.body.revision as number
+        if (x.body.profile) onConflict(x.body.profile as Profile, rev.current)
+        setSave('saved')
+        return true
+      }
+      /* Keep the unsaved change and try again shortly; never drop typing. */
+      pending.current = pending.current ?? next
+      setSave('error')
+      window.clearTimeout(timer.current)
+      timer.current = window.setTimeout(() => void flush(), 3000)
+      return false
+    }
+  }, [onConflict])
+
+  const queue = useCallback(
+    (p: Profile) => {
+      pending.current = p
+      window.clearTimeout(timer.current)
+      timer.current = window.setTimeout(() => void flush(), 700)
+    },
+    [flush],
+  )
+
+  useEffect(() => () => window.clearTimeout(timer.current), [])
+  return { save, queue, flush }
+}
+
+function Field({ id, label, optional, error, hint, children }: { id: string; label: string; optional?: boolean; error?: string; hint?: string; children: React.ReactNode }) {
+  return (
+    <div className="onb-field">
+      <label htmlFor={id}>
+        {label}
+        {optional && <small>Optional</small>}
+      </label>
+      {children}
+      {error ? <p className="onb-err" id={`${id}-err`}>{error}</p> : hint ? <p className="onb-hint">{hint}</p> : null}
+    </div>
+  )
+}
+
+function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: (b: Bundle) => void; reload: (refresh?: boolean) => Promise<void> }) {
+  const firstOpen = !bundle.steps.profile.complete ? 0 : !bundle.steps.payouts.complete ? 1 : !bundle.steps.agreement.affiliateSigned ? 2 : 3
+  const [step, setStep] = useState(firstOpen)
+  const [profile, setProfile] = useState<Profile>(bundle.profile)
+  const [touched, setTouched] = useState<Record<string, boolean>>({})
+  const [showAll, setShowAll] = useState(false)
+  const [notice, setNotice] = useState('')
+  const [busy, setBusy] = useState(false)
+  const [err, setErr] = useState('')
+  const top = useRef<HTMLDivElement>(null)
+
+  const onConflict = useCallback((p: Profile) => {
+    setProfile(p)
+    setNotice('Your information was updated on another device, so this page now shows that version.')
+  }, [])
+  const { save, queue, flush } = useAutosave(bundle, onConflict)
+  const errs = useMemo(() => problems(profile), [profile])
+  const profileDone = Object.keys(errs).length === 0
+  const done = [profileDone, bundle.steps.payouts.complete, bundle.steps.agreement.affiliateSigned, false]
+
+  const set = (k: keyof Profile, v: string | string[]) => {
+    const next = { ...profile, [k]: v }
+    setProfile(next)
+    queue(next)
+  }
+  const show = (k: string) => (showAll || touched[k] ? errs[k] : undefined)
+  const blur = (k: string) => () => setTouched((t) => ({ ...t, [k]: true }))
+  const input = (k: keyof Profile, extra: React.InputHTMLAttributes<HTMLInputElement> = {}) => ({
+    id: `p-${k}`,
+    className: 'onb-input',
+    value: (profile[k] as string | undefined) ?? '',
+    onChange: (e: React.ChangeEvent<HTMLInputElement>) => set(k, e.target.value),
+    onBlur: blur(k),
+    'aria-invalid': show(k) ? true : undefined,
+    'aria-describedby': show(k) ? `p-${k}-err` : undefined,
+    ...extra,
+  })
+
+  const go = async (n: number) => {
+    await flush()
+    setErr('')
+    setStep(n)
+    top.current?.scrollIntoView({ block: 'start' })
+    if (n > 0) void reload()
+  }
+
+  const nextFromProfile = async () => {
+    if (!profileDone) {
+      setShowAll(true)
+      const first = Object.keys(errs)[0]
+      document.getElementById(`p-${first}`)?.focus()
+      return
+    }
+    await go(1)
+  }
+
+  const openProvider = async (path: string) => {
+    setBusy(true)
+    setErr('')
+    try {
+      await flush()
+      const r = await api<{ url: string }>(path, { method: 'POST' })
+      window.location.assign(r.url)
+    } catch (x) {
+      setErr(x instanceof ApiErr ? x.message : 'Couldn’t reach BEASTY. Check your connection and try again.')
+      setBusy(false)
+    }
+  }
+
+  const submit = async () => {
+    setBusy(true)
+    setErr('')
+    try {
+      await flush()
+      const b = await api<Bundle>('/api/onboarding/me/submit', { method: 'POST' })
+      setBundle(b)
+    } catch (x) {
+      setErr(x instanceof ApiErr ? x.message : 'Couldn’t reach BEASTY. Check your connection and try again.')
+    } finally {
+      setBusy(false)
+    }
+  }
+
+  const p = bundle.steps.payouts
+  const a = bundle.steps.agreement
+  const tri = (s: Tri | 'needed' | 'complete'): [string, string] =>
+    s === 'complete' ? ['Done', 'good'] : s === 'pending' ? ['Stripe is checking', 'warn'] : [p.started ? 'Still needed' : 'Not started', '']
+
+  return (
+    <Shell save={save} test={bundle.testMode}>
+      <div ref={top} />
+      <div className="onb-progress" aria-hidden="true">
+        <p className="onb-progress-label">
+          Step {step + 1} of 4 — <b>{STEPS[step]}</b>
+        </p>
+        <div className="onb-progress-bar">
+          {STEPS.map((s, i) => (
+            <span key={s} data-on={i === step || undefined} data-done={(done[i] && i !== step) || undefined} />
+          ))}
+        </div>
+      </div>
+      <main className="onb-main">
+        <div className="onb-grid">
+          <nav className="onb-rail" aria-label="Onboarding steps">
+            <ol>
+              {STEPS.map((s, i) => (
+                <li key={s}>
+                  <button aria-current={i === step ? 'step' : undefined} onClick={() => void go(i)}>
+                    <span className="onb-num" data-done={done[i] || undefined}>
+                      {done[i] ? <Check /> : i + 1}
+                    </span>
+                    {s}
+                  </button>
+                </li>
+              ))}
+            </ol>
+            <p className="onb-rail-note">Saved as you go. Close this page any time and come back to beastypages.com/join.</p>
+          </nav>
+
+          <div>
+            {bundle.status === 'changes_requested' && (
+              <div className="onb-note" data-tone="warn" role="status" style={{ marginBottom: 16 }}>
+                <div>
+                  <b>BEASTY asked for a change.</b> {bundle.decisionNote}
+                </div>
+              </div>
+            )}
+            {notice && (
+              <div className="onb-note" role="status" style={{ marginBottom: 16 }}>
+                {notice}
+              </div>
+            )}
+
+            {step === 0 && (
+              <section className="onb-card" aria-labelledby="s0">
+                <h2 id="s0">Your information</h2>
+                <p className="onb-lede">Use your legal name, the one on your ID. It goes on your agreement and your tax form.</p>
+
+                <div className="onb-section">
+                  <h3>About you</h3>
+                  <div className="onb-fields two">
+                    <Field id="p-legalFirst" label="Legal first name" error={show('legalFirst')}>
+                      <input {...input('legalFirst', { autoComplete: 'given-name' })} />
+                    </Field>
+                    <Field id="p-legalLast" label="Legal last name" error={show('legalLast')}>
+                      <input {...input('legalLast', { autoComplete: 'family-name' })} />
+                    </Field>
+                    <Field id="p-preferredName" label="What should we call you?" optional>
+                      <input {...input('preferredName', { autoComplete: 'nickname' })} />
+                    </Field>
+                    <Field id="p-phone" label="Mobile number" error={show('phone')}>
+                      <input {...input('phone', { type: 'tel', inputMode: 'tel', autoComplete: 'tel' })} />
+                    </Field>
+                    <Field id="p-email" label="Email" error={show('email')}>
+                      <input {...input('email', { type: 'email', inputMode: 'email', autoComplete: 'email' })} />
+                    </Field>
+                  </div>
+                </div>
+
+                <div className="onb-section">
+                  <h3>Address</h3>
+                  <div className="onb-fields">
+                    <Field id="p-line1" label="Street address" error={show('line1')}>
+                      <input {...input('line1', { autoComplete: 'address-line1' })} />
+                    </Field>
+                    <Field id="p-line2" label="Apartment, suite, unit" optional>
+                      <input {...input('line2', { autoComplete: 'address-line2' })} />
+                    </Field>
+                  </div>
+                  <div className="onb-fields addr" style={{ marginTop: 16 }}>
+                    <Field id="p-city" label="City" error={show('city')}>
+                      <input {...input('city', { autoComplete: 'address-level2' })} />
+                    </Field>
+                    <Field id="p-state" label="State" error={show('state')}>
+                      <input {...input('state', { autoComplete: 'address-level1', maxLength: 2, style: { textTransform: 'uppercase' } })} />
+                    </Field>
+                    <Field id="p-zip" label="ZIP" error={show('zip')}>
+                      <input {...input('zip', { autoComplete: 'postal-code', inputMode: 'numeric', maxLength: 10 })} />
+                    </Field>
+                  </div>
+                </div>
+
+                <div className="onb-section">
+                  <h3>Joining as</h3>
+                  <div className="onb-choice" role="group" aria-label="Joining as" id="p-kind">
+                    <button type="button" aria-pressed={profile.kind === 'individual'} onClick={() => { set('kind', 'individual'); setTouched((t) => ({ ...t, kind: true })) }}>
+                      An individual
+                    </button>
+                    <button type="button" aria-pressed={profile.kind === 'business'} onClick={() => { set('kind', 'business'); setTouched((t) => ({ ...t, kind: true })) }}>
+                      A business
+                    </button>
+                  </div>
+                  {show('kind') && <p className="onb-err">{show('kind')}</p>}
+                  {profile.kind === 'business' && (
+                    <div className="onb-fields" style={{ marginTop: 16 }}>
+                      <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint="As registered. Your EIN goes to Stripe in the next step, not here.">
+                        <input {...input('businessName', { autoComplete: 'organization' })} />
+                      </Field>
+                    </div>
+                  )}
+                </div>
+
+                <div className="onb-section">
+                  <h3>How you’ll share BEASTY</h3>
+                  <div className="onb-chip-row" role="group" aria-label="How you’ll share BEASTY" id="p-promote">
+                    {PROMOTE.map(([k, l]) => {
+                      const on = !!profile.promote?.includes(k)
+                      return (
+                        <button
+                          key={k}
+                          type="button"
+                          className="onb-chip"
+                          aria-pressed={on}
+                          onClick={() => {
+                            const cur = profile.promote ?? []
+                            set('promote', on ? cur.filter((x) => x !== k) : [...cur, k])
+                            setTouched((t) => ({ ...t, promote: true }))
+                          }}
+                        >
+                          {l}
+                        </button>
+                      )
+                    })}
+                  </div>
+                  {show('promote') && <p className="onb-err">{show('promote')}</p>}
+                  <div className="onb-fields two" style={{ marginTop: 16 }}>
+                    <Field id="p-instagram" label="Instagram" optional>
+                      <input {...input('instagram', { placeholder: '@yourhandle', autoCapitalize: 'none' })} />
+                    </Field>
+                    <Field id="p-tiktok" label="TikTok" optional>
+                      <input {...input('tiktok', { placeholder: '@yourhandle', autoCapitalize: 'none' })} />
+                    </Field>
+                    <Field id="p-youtube" label="YouTube" optional>
+                      <input {...input('youtube', { autoCapitalize: 'none' })} />
+                    </Field>
+                    <Field id="p-website" label="Website" optional>
+                      <input {...input('website', { type: 'url', inputMode: 'url', placeholder: 'https://', autoCapitalize: 'none' })} />
+                    </Field>
+                  </div>
+                  <div className="onb-fields" style={{ marginTop: 16 }}>
+                    <div className="onb-field">
+                      <label htmlFor="p-promoteNote">
+                        Anything else about how you’ll share BEASTY? <small>Optional</small>
+                      </label>
+                      <textarea
+                        id="p-promoteNote"
+                        className="onb-input"
+                        rows={3}
+                        value={profile.promoteNote ?? ''}
+                        maxLength={300}
+                        onChange={(e) => set('promoteNote', e.target.value)}
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div className="onb-actions">
+                  <button className="onb-btn onb-btn-dark" onClick={() => void nextFromProfile()}>
+                    Continue
+                  </button>
+                  {showAll && !profileDone && <p className="onb-err" role="alert">A few things above still need filling in.</p>}
+                </div>
+              </section>
+            )}
+
+            {step === 1 && (
+              <section className="onb-card" aria-labelledby="s1">
+                <h2 id="s1">Get paid</h2>
+                <p className="onb-lede">BEASTY pays affiliates through Stripe. Stripe checks who you are, takes your tax details for your 1099, and adds the bank account your commissions go to.</p>
+                <div className="onb-section">
+                  <ul className="onb-rows">
+                    {(
+                      [
+                        ['Identity check', 'Your legal name, date of birth and, if Stripe asks, a photo of your ID.', p.identity],
+                        ['Tax details', p_kind(bundle) === 'business' ? 'Your business’s EIN, for your 1099.' : 'Your Social Security number, for your 1099.', p.tax],
+                        ['Bank account', p.bankLast4 ? `Account ending ${p.bankLast4}.` : 'Where your commissions are deposited.', p.bank],
+                      ] as [string, string, Tri][]
+                    ).map(([t, d, s]) => {
+                      const [label, tone] = tri(s)
+                      return (
+                        <li key={t}>
+                          <div className="onb-row-text">
+                            <b>{t}</b>
+                            <span>{d}</span>
+                          </div>
+                          <span className="onb-pill" data-tone={tone || undefined}>
+                            {p.available ? label : 'Opens soon'}
+                          </span>
+                        </li>
+                      )
+                    })}
+                  </ul>
+                </div>
+                <div className="onb-trust">
+                  <Lock />
+                  <p>These details go straight to Stripe on Stripe’s own page. BEASTY never sees or stores your SSN, bank account or ID; we only see whether each step is done.</p>
+                </div>
+                {!p.available ? (
+                  <div className="onb-note onb-section" role="status">
+                    <div>
+                      <b>Payout setup opens soon.</b> BEASTY is finishing its Stripe setup. You can keep going with the other steps and come back to this one.
+                    </div>
+                  </div>
+                ) : null}
+                {err && <p className="onb-err" role="alert">{err}</p>}
+                <div className="onb-actions">
+                  <button className="onb-btn onb-btn-ghost onb-back" onClick={() => void go(0)} aria-label="Back to Your information">
+                    Back
+                  </button>
+                  {p.available && !p.complete && (
+                    <button className="onb-btn onb-btn-primary" disabled={busy} onClick={() => void openProvider('/api/onboarding/me/payouts/link')}>
+                      {busy ? 'Opening Stripe…' : p.started ? 'Continue with Stripe' : 'Set up payouts with Stripe'}
+                    </button>
+                  )}
+                  <button className={`onb-btn ${p.complete || !p.available ? 'onb-btn-dark' : 'onb-btn-ghost'}`} onClick={() => void go(2)}>
+                    {p.complete ? 'Continue' : 'Skip for now'}
+                  </button>
+                  {p.available && !p.complete && <p className="onb-quiet">You’ll leave BEASTY for Stripe’s secure page, then come straight back here.</p>}
+                </div>
+              </section>
+            )}
+
+            {step === 2 && (
+              <section className="onb-card" aria-labelledby="s2">
+                <h2 id="s2">Your affiliate agreement</h2>
+                <p className="onb-lede">Read the terms of the partnership and sign. BEASTY countersigns after you, and the signed copy appears on your dashboard.</p>
+                <div className="onb-section">
+                  <h3>What it covers</h3>
+                  <ul className="onb-list">
+                    <li>How you earn commission, and what counts as a qualified referral</li>
+                    <li>When and how you’re paid</li>
+                    <li>Refunds and chargebacks</li>
+                    <li>How you can promote BEASTY</li>
+                    <li>Confidentiality, ending the agreement, and that you’re an independent contractor</li>
+                  </ul>
+                </div>
+                <div className="onb-section">
+                  <ul className="onb-rows">
+                    <li>
+                      <div className="onb-row-text">
+                        <b>Your signature</b>
+                        <span>{a.affiliateSigned ? 'Signed. Thank you.' : a.status === 'declined' ? 'You declined to sign.' : a.status === 'expired' ? 'The signing link expired. Open it again.' : 'Not signed yet.'}</span>
+                      </div>
+                      <span className="onb-pill" data-tone={a.affiliateSigned ? 'good' : a.status === 'declined' || a.status === 'expired' ? 'bad' : undefined}>
+                        {!a.available ? 'Opens soon' : a.affiliateSigned ? 'Signed' : 'To do'}
+                      </span>
+                    </li>
+                    <li>
+                      <div className="onb-row-text">
+                        <b>BEASTY’s countersignature</b>
+                        <span>{a.countersigned ? 'Countersigned.' : 'Added by BEASTY after you sign.'}</span>
+                      </div>
+                      <span className="onb-pill" data-tone={a.countersigned ? 'good' : undefined}>
+                        {a.countersigned ? 'Done' : 'After you'}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+                {!a.available && (
+                  <div className="onb-note onb-section" role="status">
+                    <div>
+                      <b>The agreement is being finalized.</b> It will be ready to sign here soon. Everything else you’ve entered is saved.
+                    </div>
+                  </div>
+                )}
+                {err && <p className="onb-err" role="alert">{err}</p>}
+                <div className="onb-actions">
+                  <button className="onb-btn onb-btn-ghost onb-back" onClick={() => void go(1)} aria-label="Back to Get paid">
+                    Back
+                  </button>
+                  {a.available && !a.affiliateSigned && (
+                    <button className="onb-btn onb-btn-primary" disabled={busy || !profileDone} onClick={() => void openProvider('/api/onboarding/me/agreement/sign')}>
+                      {busy ? 'Opening…' : 'Review and sign'}
+                    </button>
+                  )}
+                  <button className={`onb-btn ${a.affiliateSigned || !a.available ? 'onb-btn-dark' : 'onb-btn-ghost'}`} onClick={() => void go(3)}>
+                    {a.affiliateSigned ? 'Continue' : 'Skip for now'}
+                  </button>
+                  {a.available && !a.affiliateSigned && (
+                    <p className="onb-quiet">{profileDone ? 'The agreement opens on DocuSeal, our e-signature service, already filled in with your details. You’ll come back here after signing.' : 'Finish your information first; the agreement is filled in from it.'}</p>
+                  )}
+                </div>
+              </section>
+            )}
+
+            {step === 3 && (
+              <section className="onb-card" aria-labelledby="s3">
+                <h2 id="s3">You’re almost there</h2>
+                <p className="onb-lede">Check each part is done, then send your application to BEASTY.</p>
+                <div className="onb-section">
+                  <ul className="onb-rows">
+                    {(
+                      [
+                        ['Your information', profileDone, 0, profileDone ? 'Complete' : 'Needs a few details'],
+                        ['Payout setup', p.complete, 1, p.complete ? `Complete${p.bankLast4 ? `, bank ending ${p.bankLast4}` : ''}` : p.available ? 'Not finished' : 'Opens soon'],
+                        ['Affiliate agreement', a.affiliateSigned, 2, a.affiliateSigned ? 'Signed' : a.available ? 'Not signed yet' : 'Opens soon'],
+                      ] as [string, boolean, number, string][]
+                    ).map(([t, ok, n, d]) => (
+                      <li key={t}>
+                        <div className="onb-row-text">
+                          <b>{t}</b>
+                          <span>{d}</span>
+                        </div>
+                        {ok ? (
+                          <span className="onb-pill" data-tone="good">Done</span>
+                        ) : (
+                          <button className="onb-link" onClick={() => void go(n)}>
+                            Finish
+                          </button>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {err && <p className="onb-err" role="alert">{err}</p>}
+                <div className="onb-actions">
+                  <button className="onb-btn onb-btn-ghost onb-back" onClick={() => void go(2)} aria-label="Back to Agreement">
+                    Back
+                  </button>
+                  <button className="onb-btn onb-btn-primary" disabled={busy || !(profileDone && p.complete && a.affiliateSigned)} onClick={() => void submit()}>
+                    {busy ? 'Sending…' : 'Submit application'}
+                  </button>
+                  {!(profileDone && p.complete && a.affiliateSigned) && <p className="onb-quiet">Submit opens once every part above is done.</p>}
+                </div>
+              </section>
+            )}
+          </div>
+        </div>
+      </main>
+    </Shell>
+  )
+}
+
+const p_kind = (b: Bundle) => b.profile.kind ?? 'individual'
+
+/* ------------------------------------------------------------ dashboard ---- */
+
+const STATUS_COPY: Record<Bundle['status'], [string, string, string]> = {
+  in_progress: ['In progress', '', ''],
+  changes_requested: ['Action needed', 'warn', ''],
+  submitted: ['Under review', 'warn', 'Thanks for applying. BEASTY is reviewing your application and will email you when it’s done.'],
+  approved: ['Approved', 'good', 'You’re a BEASTY affiliate. Share your code and link from the Earn tab in the BEASTY app.'],
+  rejected: ['Not approved', 'bad', 'BEASTY isn’t able to approve your application right now.'],
+  suspended: ['Paused', 'bad', 'Your affiliate account is paused. Message BEASTY if you have questions.'],
+}
+
+function Dashboard({ bundle }: { bundle: Bundle }) {
+  const [label, tone, copy] = STATUS_COPY[bundle.status]
+  const pr = bundle.profile
+  const p = bundle.steps.payouts
+  const a = bundle.steps.agreement
+  const first = pr.preferredName || pr.legalFirst || ''
+  return (
+    <Shell test={bundle.testMode}>
+      <main className="onb-main" style={{ maxWidth: 760 }}>
+        <section className="onb-card onb-status">
+          <div className="onb-status-top">
+            <h2>{bundle.status === 'approved' ? `Welcome to BEASTY${first ? `, ${first}` : ''}` : `${first ? `${first}, your` : 'Your'} application`}</h2>
+            <span className="onb-pill" data-tone={tone || undefined}>{label}</span>
+          </div>
+          <p className="onb-lede">{copy}</p>
+          {bundle.decisionNote && <div className="onb-note" style={{ marginTop: 10 }}>{bundle.decisionNote}</div>}
+        </section>
+
+        <section className="onb-card">
+          <h3>Documents</h3>
+          <ul className="onb-rows" style={{ marginTop: 14 }}>
+            <li>
+              <div className="onb-row-text">
+                <b>Affiliate agreement</b>
+                <span>{a.countersigned ? 'Signed by you and BEASTY.' : a.affiliateSigned ? 'Signed by you; waiting for BEASTY’s countersignature.' : 'Not signed.'}</span>
+              </div>
+              {a.countersigned && !bundle.testMode ? (
+                <a className="onb-link" href="/api/onboarding/me/agreement.pdf">Download</a>
+              ) : (
+                <span className="onb-pill" data-tone={a.countersigned ? 'good' : a.affiliateSigned ? 'warn' : undefined}>{a.countersigned ? 'Complete' : a.affiliateSigned ? 'Countersigning' : 'Missing'}</span>
+              )}
+            </li>
+            <li>
+              <div className="onb-row-text">
+                <b>Tax details</b>
+                <span>Held by Stripe, which files your 1099.</span>
+              </div>
+              <span className="onb-pill" data-tone={p.tax === 'complete' ? 'good' : undefined}>{p.tax === 'complete' ? 'Complete' : 'Missing'}</span>
+            </li>
+          </ul>
+        </section>
+
+        <section className="onb-card">
+          <h3>Payouts</h3>
+          <dl className="onb-kv" style={{ marginTop: 14 }}>
+            <div>
+              <dt>Paid through</dt>
+              <dd>Stripe</dd>
+            </div>
+            <div>
+              <dt>Bank account</dt>
+              <dd>{p.bankLast4 ? `Ending ${p.bankLast4}` : 'Not added'}</dd>
+            </div>
+          </dl>
+        </section>
+
+        <section className="onb-card">
+          <h3>Commissions</h3>
+          <p className="onb-lede" style={{ fontSize: 15 }}>Commission payments aren’t switched on yet. When they are, what you’ve earned and when it’s paid will show here.</p>
+        </section>
+
+        <section className="onb-card">
+          <h3>Your details</h3>
+          <dl className="onb-kv" style={{ marginTop: 14 }}>
+            <div>
+              <dt>Name</dt>
+              <dd>{`${pr.legalFirst ?? ''} ${pr.legalLast ?? ''}`.trim()}</dd>
+            </div>
+            {pr.kind === 'business' && (
+              <div>
+                <dt>Business</dt>
+                <dd>{pr.businessName}</dd>
+              </div>
+            )}
+            <div>
+              <dt>Email</dt>
+              <dd>{pr.email}</dd>
+            </div>
+            <div>
+              <dt>Phone</dt>
+              <dd>{pr.phone}</dd>
+            </div>
+          </dl>
+          <p className="onb-quiet" style={{ marginTop: 14 }}>Need to change something? Message BEASTY and we’ll update it with you.</p>
+        </section>
+      </main>
+    </Shell>
+  )
+}
+
+/* -------------------------------------------------- test-mode stand-ins ---- */
+
+function StandIn({ kind, onDone }: { kind: 'payouts' | 'sign'; onDone: () => void }) {
+  const [busy, setBusy] = useState(false)
+  const [err, setErr] = useState('')
+  const finish = async () => {
+    setBusy(true)
+    try {
+      await api(`/api/onboarding/me/mock/${kind}`, { method: 'POST' })
+      onDone()
+    } catch (x) {
+      setErr(x instanceof ApiErr ? x.message : 'Failed.')
+      setBusy(false)
+    }
+  }
+  return (
+    <Shell test>
+      <main className="onb-main" style={{ maxWidth: 620 }}>
+        <div className="onb-standin">
+          <span className="onb-test">Test mode</span>
+          <h2>{kind === 'payouts' ? 'Stripe’s payout setup would open here' : 'DocuSeal’s signing page would open here'}</h2>
+          <p className="onb-lede">
+            {kind === 'payouts'
+              ? 'On the live site this is Stripe’s own page, where the affiliate enters their SSN, bank account and ID. In test mode nothing is collected; finishing marks the test account as set up.'
+              : 'On the live site this is the DocuSeal agreement, filled in with the affiliate’s details. In test mode nothing is signed for real; finishing marks the test agreement as signed by the affiliate.'}
+          </p>
+          {err && <p className="onb-err">{err}</p>}
+          <div className="onb-actions">
+            <button className="onb-btn onb-btn-dark" disabled={busy} onClick={() => void finish()}>
+              {kind === 'payouts' ? 'Finish test payout setup' : 'Sign test agreement'}
+            </button>
+          </div>
+        </div>
+      </main>
+    </Shell>
+  )
+}
+
+/* ----------------------------------------------------------------- root ---- */
+
+type Phase =
+  | { k: 'loading' }
+  | { k: 'invite-bad'; state: string }
+  | { k: 'welcome'; name: string }
+  | { k: 'signin'; name: string }
+  | { k: 'no-app' }
+  | { k: 'app'; bundle: Bundle }
+  | { k: 'error'; msg: string }
+
+export default function JoinScreen() {
+  const path = window.location.pathname
+  const tokenRef = useRef<string | null>((path.match(/^\/join\/([A-Za-z0-9_-]{20,80})\/?$/) ?? [])[1] ?? null)
+  const params = new URLSearchParams(window.location.search)
+  const [mock, setMock] = useState(params.get('mock'))
+  const [phase, setPhase] = useState<Phase>({ k: 'loading' })
+  const inviteName = useRef('')
+
+  const load = useCallback(async (refresh = false) => {
+    try {
+      const b = await api<Bundle>(`/api/onboarding/me${refresh ? '?refresh=1' : ''}`)
+      setPhase({ k: 'app', bundle: b })
+    } catch (x) {
+      if (x instanceof ApiErr && x.status === 404) return setPhase({ k: 'no-app' })
+      if (x instanceof ApiErr && x.status === 401) return setPhase({ k: 'welcome', name: inviteName.current })
+      setPhase({ k: 'error', msg: 'Couldn’t reach BEASTY. Check your connection and refresh.' })
+    }
+  }, [])
+
+  const afterSignIn = useCallback(async () => {
+    const token = tokenRef.current
+    if (token) {
+      try {
+        const b = await api<Bundle>(`/api/onboarding/invite/${token}/redeem`, { method: 'POST' })
+        tokenRef.current = null
+        window.history.replaceState(null, '', '/join')
+        return setPhase({ k: 'app', bundle: b })
+      } catch (x) {
+        if (x instanceof ApiErr && (x.status === 409 || x.status === 410)) {
+          /* Their own invite, already used: their application is still here. */
+          try {
+            const b = await api<Bundle>('/api/onboarding/me')
+            tokenRef.current = null
+            window.history.replaceState(null, '', '/join')
+            return setPhase({ k: 'app', bundle: b })
+          } catch {
+            return setPhase({ k: 'invite-bad', state: x.status === 409 ? 'redeemed' : 'expired' })
+          }
+        }
+        return setPhase({ k: 'error', msg: x instanceof ApiErr ? x.message : 'Couldn’t reach BEASTY.' })
+      }
+    }
+    await load(params.has('payouts') || params.has('agreement'))
+    if (params.has('payouts') || params.has('agreement')) window.history.replaceState(null, '', '/join')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [load])
+
+  useEffect(() => {
+    void (async () => {
+      const token = tokenRef.current
+      if (token) {
+        try {
+          const inv = await api<{ state: string; name: string }>(`/api/onboarding/invite/${token}`)
+          inviteName.current = inv.name
+          if (inv.state === 'expired' || inv.state === 'revoked') return setPhase({ k: 'invite-bad', state: inv.state })
+        } catch {
+          return setPhase({ k: 'invite-bad', state: 'unknown' })
+        }
+      }
+      const signedIn = await fetch('/api/members/me', { credentials: 'same-origin' }).then((r) => r.ok).catch(() => false)
+      if (signedIn) return afterSignIn()
+      setPhase({ k: 'welcome', name: inviteName.current })
+    })()
+  }, [afterSignIn])
+
+  if (phase.k === 'loading') return <Loading />
+  if (phase.k === 'error') return <Message title="Something went wrong">{phase.msg}</Message>
+  if (phase.k === 'invite-bad') {
+    const copy: Record<string, string> = {
+      expired: 'This invite link has expired. Ask BEASTY to send you a new one.',
+      revoked: 'This invite was cancelled. Ask BEASTY if you think that’s a mistake.',
+      redeemed: 'This invite has already been used. If it was you, sign in with the same phone or email you used before.',
+      unknown: 'This link isn’t valid. Check you copied all of it, or ask BEASTY for a new one.',
+    }
+    return <Message title="This invite can’t be used">{copy[phase.state] ?? copy.unknown}</Message>
+  }
+  if (phase.k === 'welcome') return <Welcome name={phase.name} onStart={() => setPhase({ k: 'signin', name: phase.name })} />
+  if (phase.k === 'signin') return <SignIn defaultName={phase.name} onSignedIn={() => void afterSignIn()} />
+  if (phase.k === 'no-app')
+    return (
+      <Message title="Affiliate sign-ups are by invitation">
+        BEASTY invites affiliates personally. If you’d like to join, message BEASTY and ask for your invite link; it brings you straight back here.
+      </Message>
+    )
+
+  const b = phase.bundle
+  if (mock && b.testMode && (mock === 'payouts' || mock === 'sign')) {
+    return (
+      <StandIn
+        kind={mock}
+        onDone={() => {
+          setMock(null)
+          window.history.replaceState(null, '', '/join')
+          void load(true)
+        }}
+      />
+    )
+  }
+  if (b.status === 'in_progress' || b.status === 'changes_requested') {
+    return <Onboarding key={b.id} bundle={b} setBundle={(nb) => setPhase({ k: 'app', bundle: nb })} reload={(r) => load(r)} />
+  }
+  return <Dashboard bundle={b} />
+}

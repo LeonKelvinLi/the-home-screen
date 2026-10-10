@@ -26,6 +26,7 @@ import { Home } from './home'
 import { Leads } from './leads'
 import { LeadDetail } from './lead'
 import { PartnerHome, ReferrerDetail, Referrers, Settings } from './people'
+import { AffiliateDetail, Affiliates } from './affiliates'
 import { placeLine } from './steps'
 
 interface Route {
@@ -69,6 +70,8 @@ const TAB_OF: Record<string, string> = {
   referrers: 'referrers',
   referrer: 'referrers',
   settings: 'referrers',
+  affiliates: 'referrers',
+  affiliate: 'referrers',
 }
 
 /** Everything the search can jump to, in the words the pages use. */
@@ -82,6 +85,7 @@ const PAGES: Place[] = [
   { key: 'revenue', label: 'Money', icon: 'dollar' },
   { key: 'analytics', label: "How it's going", icon: 'chart' },
   { key: 'referrers', label: 'People', icon: 'users' },
+  { key: 'affiliates', label: 'Affiliates', icon: 'file' },
   { key: 'settings', label: 'Settings', icon: 'settings' },
 ]
 
@@ -268,6 +272,12 @@ export default function CrmScreen() {
         break
       case 'settings':
         view = <Settings />
+        break
+      case 'affiliates':
+        view = <Affiliates />
+        break
+      case 'affiliate':
+        view = route.id ? <AffiliateDetail key={route.id} id={route.id} /> : null
         break
       case 'today':
         view = <Today />

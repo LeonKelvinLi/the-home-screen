@@ -15,6 +15,7 @@
 import { AsyncLocalStorage } from 'node:async_hooks'
 import pg from 'pg'
 import { CRM_SCHEMA } from './crm-schema'
+import { ONBOARDING_SCHEMA } from './onboarding-schema'
 
 /*
   BIGINT COMES BACK AS A STRING BY DEFAULT, and every timestamp here is
@@ -858,6 +859,8 @@ export async function migrate() {
     await client.query(MIGRATIONS)
     // The CRM's tables, after everything they reference (members, applications).
     await client.query(CRM_SCHEMA)
+    // Affiliate onboarding (server/onboarding.ts), after members.
+    await client.query(ONBOARDING_SCHEMA)
   } finally {
     await client.query('SELECT pg_advisory_unlock($1)', [MIGRATE_LOCK]).catch(() => {})
     client.release()

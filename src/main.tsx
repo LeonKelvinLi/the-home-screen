@@ -19,6 +19,11 @@ const isKitchen = /^\/kitchen\/?$/.test(window.location.pathname)
 const CrmScreen = lazy(() => import('./crm/CrmScreen'))
 const isCrm = /^\/crm\/?$/.test(window.location.pathname)
 
+/* /join, the affiliate onboarding portal (src/join), chosen the same way: an
+   affiliate opening their invite link never downloads the phone UI. */
+const JoinScreen = lazy(() => import('./join/JoinScreen'))
+const isJoin = /^\/join(\/[A-Za-z0-9_-]{20,80})?\/?$/.test(window.location.pathname)
+
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     {isKitchen ? (
@@ -28,6 +33,10 @@ createRoot(document.getElementById('root')!).render(
     ) : isCrm ? (
       <Suspense fallback={<div className="crm" />}>
         <CrmScreen />
+      </Suspense>
+    ) : isJoin ? (
+      <Suspense fallback={<div className="onb" />}>
+        <JoinScreen />
       </Suspense>
     ) : (
       <App />
