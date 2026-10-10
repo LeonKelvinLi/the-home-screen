@@ -13330,17 +13330,56 @@ span.top3-add {
 /* ---------- BEASTY • Pages: a category as a tile (2026-10-05) ---------- */
 
 .cat-icon {
+  position: relative;
   display: grid;
   place-items: center;
   width: 100%;
   height: 100%;
   background: #1c1c1e center / cover no-repeat;
+  /* The squircle mask is set inline (CategoryIcon), so it scales with the box. */
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
 }
 
-.cat-icon svg {
-  width: 62%;
-  height: 62%;
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.45));
+/* Glass: light from above, a little weight below, so the drawing sits on the
+   tile instead of floating on a photo. Clipped to the squircle by the mask. */
+.cat-icon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(120% 70% at 50% -10%, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 62%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0) 52%, rgba(0, 0, 0, 0.32) 100%);
+  pointer-events: none;
+}
+
+/* A hairline round the edge, so a dark tile still reads as a tile on a dark
+   wallpaper. The mask cuts the outer half of the stroke. */
+.cat-icon .cat-icon-edge {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.15);
+  stroke-width: 2px;
+  pointer-events: none;
+}
+
+.cat-icon .cat-icon-glyph {
+  position: relative;
+  width: 60%;
+  height: 60%;
+  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.35)) drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+}
+
+/* Search's list draws its own box round the thumb; the squircle is the box now. */
+.search-brand .search-cat-thumb:has(.cat-icon) {
+  border-radius: 0;
+  background: none;
+  overflow: visible;
 }
 
 /* A link inside a business page's drop-down (MeterSF's shops). */
