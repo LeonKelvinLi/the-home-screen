@@ -798,7 +798,7 @@ for (const n of ['larry-june-2', 'al-freshko-2', 'show-banga-2', 'nicky-diamonds
   'king-katsu-land', 'little-sheep', 'bollywood-pizza', 'basq-haus',
   'hakashi-sushi-bar', 'ginza-sushi', 'tacos-don-chai', 'kiyomi-ca-phe', 'vostok-shawarma', 'snatched-by-chinita', 'sidewalk-juice', 'kung-fu-mala-2',
   'the-tastebud', 'gada', 'aroma-concessions', 'brendas-french-soul-food', 'karilagan',
-  'zut-on-fourth', 'vision-media-production', 'king-lou', 'clear-vision-headlights', 'mi-jalisco-taquizas']) {
+  'zut-on-fourth', 'vision-media-production', 'king-lou', 'clear-vision-headlights', 'mi-jalisco-taquizas', 'mamas-boy-pizza', 'lil-hawaii']) {
   const got = await fetch(`${base}/icons/${n}.webp`).then((r) => `${r.status} ${r.headers.get('content-type')}`).catch(() => 'no answer')
   if (got !== '200 image/webp') fails.push(`/icons/${n}.webp answered ${got}`)
 }

@@ -1392,4 +1392,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'berkeley-goods2-7': 'b_zutonfourth',
   'santa-rosa-services-12': 'b_visionmediaproduction', //       Photo and video
   'beasty-pets-0': 'b_kinglou',
+  /* 2026-10-10: Mama's Boy Pizza on Oakland's yellow sheet (Italian is
+     Philomena's; the whole page for the reel). Lil Hawaii fills BEASTY •
+     Dancers by his type line. */
+  'oakland-goods2-20': 'b_mamasboypizza',
 }

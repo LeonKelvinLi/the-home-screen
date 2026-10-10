@@ -219,6 +219,8 @@ the most movement — to 540x960 with sound.
 | `zut-on-fourth.mp4` | Zut! on Fourth, Berkeley | instagram.com/reel/DHuRXQdyynn (@zutonfourth) — **an excerpt**, 3s–27s of 29s |
 | `clear-vision-headlights.mp4` | Clear Vision Headlight Restoration (BEASTY • Automotive) | instagram.com/reel/DdOMkTSqMkx (@cvheadlightrestorations) — **an excerpt**, 7s–31s of 35s |
 | `mi-jalisco-taquizas.mp4` | Mi Jalisco Taquizas, Vallejo (BEASTY • Food Trucks) | instagram.com/reel/DagxDrOgACz — the whole 20s; posted by @larussell, not the truck: his free-taco day there on 7/07 — sent on 2026-10-09 with "Clip this video plz" |
+| `mamas-boy-pizza.mp4` | Mama's Boy Pizza, Oakland | instagram.com/reel/DeSvZDoP80N — **an excerpt**, 4s–28s of 84s; posted by @grubwitmike, a food creator, not the restaurant — sent on 2026-10-10 with "Clip this video plz" |
+| `lil-hawaii.mp4` | Lil Hawaii (BEASTY • Dancers) | instagram.com/reel/DeF5bRzO6fp (@yungphil_) — **an excerpt**, 28s–42s of 42s |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

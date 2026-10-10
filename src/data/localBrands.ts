@@ -9326,6 +9326,119 @@ export const LOCAL_SEED: LocalSeed[] = [
     menuNote: 'Prices from their own ordering page. They also cater on site around the Bay Area. The reel is LaRussell\u2019s free-taco day there on 7/07, a past event.',
     items: [],
   },
+  {
+    /*
+      MAMA'S BOY PIZZA, "Oakland • Eats". Glenn, 2026-10-10, with their site
+      and @grubwitmike's reel ("Clip this video plz"); his two screenshots did
+      not reach this Mac, so the logo is their site's own. Address, hours and
+      phone from mamasboypizza.com; the 20" pies, salads, sides and drinks with
+      prices from their own Toast page, read 2026-10-10. Oakland's Italian seat
+      is Philomena's, so it is on the yellow sheet with the whole page for the
+      reel, which also lands on Grubwitmike's Foodies page.
+    */
+    slug: 'mamas-boy-pizza',
+    icon: 'mamas-boy-pizza',
+    name: "Mama's Boy Pizza",
+    label: "Mama's Boy",
+    cuisine: 'New York-style pizza',
+    tagline: 'A New York-style slice shop on Grand Avenue.',
+    color: '#FFFFFF|#E1251B',
+    prep: 0,
+    category: 'Pizza',
+    address: '15 Grand Ave, Oakland, CA 94612',
+    phone: '(510) 400-5404',
+    hours: 'Sun-Thu 11am-10pm, Fri-Sat 11am-12am',
+    site: 'https://www.mamasboypizza.com/',
+    orderUrl: 'https://www.toasttab.com/mamas-boy-pizza-oakland',
+    menuNote: 'Whole 20-inch pies feed three or four. Prices from their own ordering page.',
+    clip: {
+      src: '/clips/mamas-boy-pizza.mp4',
+      poster: '/clips/mamas-boy-pizza-poster.webp',
+      href: 'https://www.instagram.com/reel/DeSvZDoP80N/',
+      credit: 'Filmed by @grubwitmike',
+      platform: 'Instagram',
+      by: 'grubwitmike',
+    },
+    sections: [
+      { name: 'Pizza', items: [
+        ['20" Cheese Pie', 'Tomato sauce, mozzarella, parm', 3600],
+        ['20" Pepperoni Pie', 'Tomato sauce, mozzarella, pepperoni, parm', 4000],
+        ['20" Sausage Pie', 'Tomato sauce, mozzarella, house-made fennel sausage, capers, Calabrian peppers, green onion, parm', 4300],
+        ['20" Mushroom Pie', 'Lemon cream, mozzarella, mushrooms, spinach, garlic, parsley, parm', 4300],
+        ['20" White Pie', 'Low moisture mozzarella, fresh mozzarella, garlic, parsley, parm', 4000],
+        ['20" Vegan Cheese Pie', 'Their vegan option changes; ask or check their Instagram', 3600],
+        ['20" Burrata', 'Tomato sauce, mozzarella, burrata, basil, Mike\'s Hot Honey, parm', 4800],
+        ['20" Supreme 🌶', 'Tomato sauce, mozzarella, pepperoni, fennel sausage, mushroom, onion, jalapeño', 4600],
+        ['20" Pineapple 🌶', 'Mozzarella, bacon, pineapple, onion, pickled serrano peppers', 4200],
+        ['20" Pesto', 'Spinach/basil pesto, mozzarella, fennel sausage, mushroom, onion, sweet ricotta, parm', 4200],
+        ['20" Veggie', 'Tomato sauce, mozzarella, mushroom, spinach, bell pepper, garlic, onion, kalamata olive, parm', 4400],
+        ['20" Vegan Mushroom', 'Tomato sauce, Miyoko\'s vegan cheese, mushrooms, garlic', 4000],
+        ['20" (100% Vegan) Mob Supreme', 'Tomato sauce, Vegan Mozzarella, Prime Roots Vegan Pepperoni, Vegan Sausage, Mushroom, Onion, Jalapeno', 4600],
+      ] },
+      { name: 'Salad', items: [
+        ['Chopped Salad', 'Romaine, radicchio, cucumber, chickpeas, pepperoncini, kalamata olive, cherry tomato, red onion, red wine vinaigrette', 1200],
+        ['Caesar Salad', 'Romaine, shaved parm, garlic breadcrumbs, house-made caesar dressing (with anchovy)', 1100],
+      ] },
+      { name: 'Sides', items: [
+        ['Ranch', '', 100],
+        ['Large Ranch (16oz)', '', 850],
+        ['Pickled Hot Peppers 🌶🌶', 'House pickled jalapeños', 100],
+        ['Large Pickled Hot Peppers (16oz) 🌶🌶', '', 850],
+        ['Small side of Burrata (3oz)', '', 450],
+        ['Large side of Burrata (6oz)', '', 850],
+        ['Side of Mike\'s Hot Honey', '', 150],
+        ['Mike\'s Hot Honey 12oz', '', 1500],
+        ['Mike\'s Extra Hot Honey 12oz', '', 1500],
+        ['Garlic Dough Balls (5)', '', 800],
+        ['Garlic Dough Balls (2)', '', 400],
+        ['Mama\'s Boy Magic (3oz)', 'Whipped Burrata & Hot Honey', 300],
+        ['Side of Meatballs', '', 900],
+      ] },
+      { name: 'Dessert', items: [
+        ['Chocolate Chip Cookie', 'Home-made with a touch of sea salt', 500],
+      ] },
+      { name: 'Soft Drinks', items: [
+        ['Coca-Cola', '', 300],
+        ['Diet Coke', '', 300],
+        ['Sprite', '', 300],
+        ['San Pellegrino Blood Orange', '', 400],
+        ['San Pellegrino Lemon', '', 400],
+        ['San Pellegrino Sparkling', '', 400],
+        ['Apple Juice', '', 400],
+        ['Crystal Geyser', '', 300],
+        ['Coca-Cola Zero Sugar', '', 300],
+        ['A&W Root Beer', '', 300],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      LIL HAWAII, "BEASTY • Dancers". Glenn, 2026-10-10, with his Instagram
+      (@yungphil_, "pro dancer | store owner | bay area", business inquiries
+      by DM) and his own reel ("Clip this video plz"). His type line seats him
+      on Dancers (categories.ts). No Instagram button until Glenn says so.
+    */
+    slug: 'lil-hawaii',
+    icon: 'lil-hawaii',
+    name: 'Lil Hawaii',
+    label: 'Lil Hawaii',
+    cuisine: 'Pro dancer',
+    tagline: 'Bay Area pro dancer and store owner.',
+    color: '#0E2233|#FFFFFF',
+    prep: 0,
+    category: 'Dancers',
+    clip: {
+      src: '/clips/lil-hawaii.mp4',
+      poster: '/clips/lil-hawaii-poster.webp',
+      href: 'https://www.instagram.com/reel/DeF5bRzO6fp/',
+      credit: 'Posted by @yungphil_',
+      platform: 'Instagram',
+    },
+    contactOnly:
+      'A pro dancer from the Bay Area who also runs his own store. For bookings and business he takes messages on Instagram. BEASTY has not spoken to him yet: this spot is held, not taken.',
+    items: [],
+  },
   /*
     BEASTY • AI AND BEASTY • COOKS, 2026-10-05. Glenn sent these reels with
     "BEASTY • Ai" (30 September to 3 October) and "BEASTY • Cooks" (3 October).
