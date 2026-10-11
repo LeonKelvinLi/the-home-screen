@@ -1,0 +1,4547 @@
+[
+  {
+    "id": "b_seawagyuhouse",
+    "name_exact": "Sea Wagyu House",
+    "one_line": "Japanese BBQ grilled at the table, chef's choice sushi and Dragon Seafood Towers in Milpitas, open late until 1 AM with luxury private rooms.",
+    "cuisine": "Japanese BBQ & sushi",
+    "address": "503 E Calaveras Blvd, Milpitas, CA 95035",
+    "phone": "(669) 226-5301",
+    "email": "seawagyuhouse@gmail.com",
+    "hours": "Mon-Fri 5pm-1am, Sat-Sun & holidays 12pm-1am",
+    "instagram": "seawagyu.house",
+    "site_kind": "own",
+    "site_url": "https://www.seawagyuhouse.com/",
+    "order_url": null,
+    "prices_published": false,
+    "items": [],
+    "price_note": "Sea Wagyu House publishes its menu without prices, so call the restaurant for current pricing.",
+    "flags": [
+      "Sources: own Wix site (www.seawagyuhouse.com: home, /menu, /locations, /contactus, /aboutus; menu page also rendered in Playwright) plus Glenn's Instagram screenshots 247834-*. Address, hours and 'open till 1AM' agree between site and Instagram bio.",
+      "PHONE - editor decide: the Contact Us page lists two numbers, +1 (669) 205-9709 and +1 (669) 226-5301; the page says to call (669) 226-5301 for reservations, so that one is in `phone`. Instagram bio shows no phone.",
+      "Email is written 'Seawagyuhouse@gmail.com' on the Contact Us page (lowercased here).",
+      "Hours exactly as on Contact Us: 'Monday - Friday 5:00PM - 1:00AM; Sat - Sun & Holidays 12:00PM - 1:00AM'. Home page also mentions daily happy hour 'specials on drinks and food' with no times or prices.",
+      "AYCE NOT CONFIRMED first-party: the site never says 'all-you-can-eat'/'AYCE' and shows no price anywhere (searched raw HTML and rendered text). The /menu page is organised as SILVER MENU, GOLD MENU and DIAMOND MENU tiers with 'Included in All Tiers' sides and '(One Platter Per Table)' notes, which reads like AYCE tiers, but no tier price or AYCE wording is published. The '$45 per person' figure comes only from a creator reel and from reel thumbnails on the Instagram grid ('$45 AYCE WAGYU', 'AYCE wagyu + sushi + seafood'; one carries a TikTok @natalieduyen watermark), not from the bio or site. Per the brief, AYCE is left out of the cuisine line.",
+      "No priced items: the menu lists names only (Appetizers e.g. Shrimp Tempura, Takoyaki, Truffle Fries; Soup, Noodles & Rice; Silver/Gold/Diamond tier BBQ meats such as Wagyu Beef Toro, A5 Wagyu Short Rib, Premium Caviar; Dragon Seafood Tower; BBQ sides; Daily Specials; Omakase Sushi Bar; Cold Appetizers; House-made Desserts). `items` is empty because nothing has a price.",
+      "Site <title> says 'SUSHI, BBQ & SHABU SHABU' but the menu page has no shabu shabu section; not used.",
+      "Alcohol left out (menu 'Japanese Sake & Beer'; home page bar with cocktails, Japanese beer and premium sake).",
+      "'RESERVE A TABLE' button links to a Yelp reservations page (not first-party; not used as order_url). No online ordering link on the site.",
+      "Locations page: Milpitas 'NOW OPEN'; Westminster (15042 Goldenwest St, Westminster, CA 92683) and Daly City (365 Gellert Blvd, Daly City, CA 94015) both 'COMING SOON'. Site nav spells it 'Loctions'."
+    ]
+  },
+  {
+    "id": "b_vestarwc",
+    "name_exact": "Vesta",
+    "one_line": "Wood-fired pizza and small plates made from thoughtfully sourced, local and organic ingredients on Broadway in Redwood City.",
+    "cuisine": "Wood-fired pizza",
+    "address": "2022 Broadway, Redwood City, CA 94063",
+    "phone": "(650) 362-5052",
+    "email": "info@vestarwc.com",
+    "hours": "Mon-Sat 11am-9pm",
+    "instagram": "vestarwc",
+    "site_kind": "own",
+    "site_url": "https://www.vestarwc.com/",
+    "order_url": "https://order.online/business/vesta-1925",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Butter lettuce",
+        "desc": "shaved fennel, fresh parsley, nectarine plum vinaigrette; large $15.25",
+        "cents": 1125,
+        "label": "",
+        "section": "Salads"
+      },
+      {
+        "name": "Wild arugula",
+        "desc": "toasted hazelnuts, shaved parmigiano reggiano, apricot vinaigrette; large $16.25",
+        "cents": 1225,
+        "label": "",
+        "section": "Salads"
+      },
+      {
+        "name": "Creamy gorgonzola",
+        "desc": "romaine, lolla rosa, oak leaf, blushed gem, cherry tomato, radish; large $16.25",
+        "cents": 1225,
+        "label": "",
+        "section": "Salads"
+      },
+      {
+        "name": "Calabrian Caesar",
+        "desc": "little gems, parmigiano reggiano, sourdough croutons; large $16.25",
+        "cents": 1225,
+        "label": "",
+        "section": "Salads"
+      },
+      {
+        "name": "Kale",
+        "desc": "jalapeno pickled raisins, breadcrumbs, pecorino, green onion avocado dressing",
+        "cents": 1325,
+        "label": "",
+        "section": "Salads"
+      },
+      {
+        "name": "Beets",
+        "desc": "frisee, arugula, avocado, pistachios, ricotta salata, orange vinaigrette",
+        "cents": 1400,
+        "label": "",
+        "section": "Salads"
+      },
+      {
+        "name": "Pork Meatballs",
+        "desc": "arugula, jalapeno aioli, parmigiano reggiano",
+        "cents": 1525,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Pork Meatballs",
+        "desc": "tomato sauce, parmigiano reggiano",
+        "cents": 1525,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Mushroom toast",
+        "desc": "sauteed mushrooms, thyme, crème fraiche, grilled bread",
+        "cents": 1500,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Burrata Plate",
+        "desc": "fresh burrata cheese, fleur de sel, grilled bread; add prosciutto $6",
+        "cents": 1400,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Charcuterie",
+        "desc": "spicy capicollo, soppressata, prosciutto Americano, marinated olives",
+        "cents": 1900,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Pork Shoulder",
+        "desc": "applewood smoked bacon, cabbage slaw, polenta cakes",
+        "cents": 1800,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Cauliflower",
+        "desc": "toasted almonds, currants, serrano chili, honey, breadcrumbs",
+        "cents": 1325,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Grilled carrots",
+        "desc": "cilantro, paprika, cumin, garlic, lemon yogurt",
+        "cents": 1325,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Zucchini Cakes",
+        "desc": "french feta, dill, lemon yogurt",
+        "cents": 1400,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Grilled Bread",
+        "desc": "with California olive oil",
+        "cents": 400,
+        "label": "",
+        "section": "Small Plates"
+      },
+      {
+        "name": "Marinara",
+        "desc": "tomato sauce, basil, oregano, fresh garlic, olive oil, fleur de sel",
+        "cents": 1825,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Margherita",
+        "desc": "tomato sauce, fresh mozzarella, basil, olive oil; add arugula $2, soppressata $5, spicy Italian sausage $5, prosciutto $6, pepperoni $5",
+        "cents": 2125,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Bubalina Margherita",
+        "desc": "tomato sauce, buffalo mozzarella, basil, olive oil",
+        "cents": 2525,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Cheese",
+        "desc": "tomato sauce, pecorino, white cheddar",
+        "cents": 2225,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Basil Burrata",
+        "desc": "tomato sauce, fresh burrata cheese, basil, parmigiano reggiano",
+        "cents": 2525,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Sausage & Honey",
+        "desc": "tomato sauce, spicy Italian sausage, mascarpone, honey, serrano chili",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Prosciutto & Pineapple",
+        "desc": "tomato sauce, fresh mozzarella, grilled pineapple, prosciutto Americano, serrano chili",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Soppressata",
+        "desc": "tomato sauce, smoked mozzarella, spinach, soppressata",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Grassfed Beef & Pickled Peppers",
+        "desc": "tomato sauce, grassfed organic beef (prepared with tomato, garlic & onion), white cheddar, pecorino, oregano, pickled peppers, red onion",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Pepperoni",
+        "desc": "tomato sauce, pepperoni, fresh mozzarella, oregano, calabrian chili honey, black pepper",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Vegan Pesto",
+        "desc": "pistachio pesto, spinach, tomato sauce",
+        "cents": 2150,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Vegan Margherita",
+        "desc": "tomato sauce, vegan mozzarella, basil, olive oil",
+        "cents": 2200,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Vegan Maple Mushroom",
+        "desc": "tomato sauce, fresh parsley, sauteed mushrooms, vegan mozzarella, serrano chili, maple drizzle, wild arugula",
+        "cents": 2650,
+        "label": "",
+        "section": "Pizzas: Red Pies"
+      },
+      {
+        "name": "Mushroom",
+        "desc": "sauteed mushrooms, thyme, goat cheese, truffle oil",
+        "cents": 2550,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Onion Mushroom Pizza",
+        "desc": "sauteed mushrooms, pecorino cheese, red onion, truffle oil",
+        "cents": 2650,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Pesto Cheese",
+        "desc": "pistachio pesto, fresh mozzarella, white cheddar",
+        "cents": 2350,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Spicy Vegan Pesto",
+        "desc": "pistachio pesto, sauteed mushrooms, red onion, garlic, spinach, chili flakes",
+        "cents": 2350,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Bacon & Cherry Tomato",
+        "desc": "fresh garlic, cherry tomatoes, fresh mozzarella, French feta, basil, parsley, applewood smoked bacon",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Pesto & Soppressata",
+        "desc": "pistachio pesto, fresh garlic, basil, soppressata, fresh mozzarella, chili flakes",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Green Olive",
+        "desc": "Castelvetrano olives, fresh mozzarella, pecorino, basil, fresh garlic, chili flakes",
+        "cents": 2500,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Spinach and Ham",
+        "desc": "dill creme fraiche, spinach, smoked ham, pecorino, honey",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Rosemary Potato and Bacon",
+        "desc": "potato, white cheddar, pecorino, rosemary, Applewood smoked bacon",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Carbonara",
+        "desc": "mascarpone, pecorino, farm egg, applewood smoked bacon, parsley, garlic, black pepper, parmigiano reggiano, red onion",
+        "cents": 2700,
+        "label": "",
+        "section": "Pizzas: White Pies"
+      },
+      {
+        "name": "Gelato Pints",
+        "desc": "Lush Gelato, San Francisco: Tahitian Vanilla Bean, Dark Chocolate, Rocky Road, Fresh Mint Chip, Vegan Peanut Butter & Chocolate Chunk",
+        "cents": 1300,
+        "label": "",
+        "section": "Dessert"
+      },
+      {
+        "name": "Gelato Scoop",
+        "desc": "Lush Gelato, San Francisco: Tahitian Vanilla Bean, Dark Chocolate, Rocky Road, Fresh Mint Chip, Vegan Peanut Butter & Chocolate Chunk",
+        "cents": 600,
+        "label": "",
+        "section": "Dessert"
+      },
+      {
+        "name": "Pint of Whipped Cream",
+        "desc": "",
+        "cents": 350,
+        "label": "",
+        "section": "Dessert"
+      },
+      {
+        "name": "Mexican Chocolate Bread Pudding",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Dessert"
+      },
+      {
+        "name": "Basque Cheesecake",
+        "desc": "",
+        "cents": 1300,
+        "label": "",
+        "section": "Dessert"
+      },
+      {
+        "name": "Mountain Spring Sparkling Water (1L)",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Refreshers"
+      },
+      {
+        "name": "Abita Root Beer",
+        "desc": "",
+        "cents": 500,
+        "label": "",
+        "section": "Refreshers"
+      },
+      {
+        "name": "Galvanina Organic Soda",
+        "desc": "Blood Orange or Ginger Ale",
+        "cents": 600,
+        "label": "",
+        "section": "Refreshers"
+      },
+      {
+        "name": "Black Iced Tea",
+        "desc": "",
+        "cents": 525,
+        "label": "",
+        "section": "Refreshers"
+      },
+      {
+        "name": "Fresh Brown Sugar Lemonade",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "Refreshers"
+      },
+      {
+        "name": "Fresh Squeezed Orange Juice",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "Refreshers"
+      },
+      {
+        "name": "Espresso",
+        "desc": "Equator Coffee, San Rafael",
+        "cents": 500,
+        "label": "",
+        "section": "Espresso"
+      },
+      {
+        "name": "Americano",
+        "desc": "Equator Coffee, San Rafael",
+        "cents": 500,
+        "label": "",
+        "section": "Espresso"
+      },
+      {
+        "name": "Macchiato",
+        "desc": "Equator Coffee, San Rafael",
+        "cents": 525,
+        "label": "",
+        "section": "Espresso"
+      },
+      {
+        "name": "Cappuccino",
+        "desc": "Equator Coffee, San Rafael",
+        "cents": 600,
+        "label": "",
+        "section": "Espresso"
+      },
+      {
+        "name": "Latte",
+        "desc": "Equator Coffee, San Rafael",
+        "cents": 625,
+        "label": "",
+        "section": "Espresso"
+      },
+      {
+        "name": "Golden Milk Latte",
+        "desc": "no espresso",
+        "cents": 600,
+        "label": "",
+        "section": "Espresso"
+      }
+    ],
+    "price_note": "Prices are from the menu on Vesta's own website (vestarwc.com/new-menu) and may change; online orders go through their order.online page.",
+    "flags": [
+      "Sources: own Wix site www.vestarwc.com (home, /new-menu, /seasonal-features, /patio-gatherings) plus Glenn's screenshots 247841-* (order.online page and Instagram bio). Address, phone and hours agree across site, Instagram and order.online.",
+      "Address written '2022 Broadway, Redwood City, CA 94063' on the site; order.online writes '2022 Broadway Street'. Used the site form.",
+      "Hours: site 'MONDAY- SATURDAY 11am-9pm', Instagram 'monday - saturday 11am-9pm'. Sunday is not listed anywhere (presumably closed, not stated). order.online screenshot shows 'Online ordering hours: 11:00 AM - 9:10 PM'.",
+      "order.online could not be read: headless Chromium got a Cloudflare 'Performing security verification' page, which was not bypassed. All prices therefore come from the site's own /new-menu page (prices printed without $; sizes like '11.25/15.25' = small/large salad, smallest used as the price).",
+      "Menu notes on the site: 'add: farm egg $3' is printed between Rosemary Potato and Bacon and Carbonara (left out of descs because which pie it belongs to is unclear); 'during our busiest moments, pizzas may take 25+ minutes'.",
+      "Site spells the sparkling water 'Mountian Spring Sparkling Water (1L)' (typo corrected to 'Mountain').",
+      "Left out as alcohol: all beer (including the two non-alcoholic Athletic Brewing beers, $8, kept out because they sit in the beer list), hard cider, hard kombucha, all wines by glass/bottle, Mimosa.",
+      "Seasonal Features page lists dishes with NO prices (left out): Butternut Squash Soup, Grilled Pears & Fresh Burrata, Ricotta Toast, Brussels Sprouts, Sausage & Leek Pizza.",
+      "Stale notice on the home page: 'VESTA will be closed September 29 - October 1 for a little refresh. We look forward to welcoming you in on Friday, October 2.' That closure is over as of 11 Oct 2026; do not publish it.",
+      "Other first-party links: reservations via OpenTable (restref 264391), gift cards via toasttab.com/vestarwc/giftcards, private patio gatherings inquiry form, 'In the News' page. Site footer '© CB 2017'."
+    ]
+  },
+  {
+    "id": "b_kodawarisushi",
+    "name_exact": "Kodawari Japanese Cuisine",
+    "one_line": "Sushi bar, yakitori and a tatami room in San Mateo, with chef's rolls, omakase nigiri, chirashi and kaisen don.",
+    "cuisine": "Sushi bar & yakitori",
+    "address": "32 42nd Ave, San Mateo, CA 94403",
+    "phone": "(650) 315-2023",
+    "email": null,
+    "hours": "Mon-Thu 4:30pm-9pm, Fri-Sat 4:30pm-9:30pm, Sun 4:30pm-9pm",
+    "instagram": "kodawarijapanesecuisine",
+    "site_kind": "own",
+    "site_url": "https://kodawarisushi.com/",
+    "order_url": "https://dinfo.me/onlineordernew/#/home/menu/?restid=kodawarisanmateo",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Edamame",
+        "desc": "Boiled Soy Beans",
+        "cents": 450,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Garlic Edamame",
+        "desc": "Boiled Soy Beans Stir Fried in Garlic",
+        "cents": 650,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Geso",
+        "desc": "",
+        "cents": 1050,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Takoyaki",
+        "desc": "Octopus Balls (4pc)",
+        "cents": 1095,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Gyoza",
+        "desc": "Meat Pot Stickers (5pc)",
+        "cents": 795,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Chicken Karaage",
+        "desc": "Fried Chicken w/ Spicy Mayo On Side",
+        "cents": 895,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Kaki Fried",
+        "desc": "Japanese Fried Oysters w/ Tempura Sauce",
+        "cents": 1095,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Soft Shell Crab",
+        "desc": "Fried Soft Shell Crab w/ House Sauce",
+        "cents": 1095,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Agedashi Tofu",
+        "desc": "Fried Tofu w/ Scallion, Peeled Ginger, Bonito Flake",
+        "cents": 895,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Veggie Tempura",
+        "desc": "Fried Assorted Vegetables",
+        "cents": 925,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Shrimp Tempura",
+        "desc": "Fried Shrimp (4pc)",
+        "cents": 1095,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Mixed Tempura",
+        "desc": "2 Shrimp & 6 Vegetables Fried",
+        "cents": 1095,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Hiyashi Tofu",
+        "desc": "Cold Tofu, Ginger, Scallion, Bonito Flakes",
+        "cents": 795,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Ankimo (Homemade)",
+        "desc": "Monkfish Liver, Sweet Onion, Green Onion, Radish, Ponzu",
+        "cents": 1695,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Crispy Rice Nuggets (3Pc)",
+        "desc": "Salmon, Seared Albacore, Avocado, Nori Flakes, Spicy Mayo",
+        "cents": 2100,
+        "label": "",
+        "section": "Appetizer"
+      },
+      {
+        "name": "Miso Soup",
+        "desc": "Soybean Paste Soup w/ Tofu, Seaweed, Scallion",
+        "cents": 325,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Green Salad",
+        "desc": "Served With House Dressing",
+        "cents": 550,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Wakame",
+        "desc": "Seaweed Salad",
+        "cents": 650,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "White Rice",
+        "desc": "Steamed White Rice",
+        "cents": 300,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Fresh Wasabi",
+        "desc": "Freshly Grated Wasabi",
+        "cents": 425,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Tako Wasabi",
+        "desc": "Octopus with Wasabi",
+        "cents": 895,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Ginger",
+        "desc": "",
+        "cents": 350,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Sushi Rice",
+        "desc": "",
+        "cents": 325,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Nori",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Soup Salad"
+      },
+      {
+        "name": "Mi",
+        "desc": "Thigh-Salt, Tare, Ponzu, Radish, Ume",
+        "cents": 825,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Bacon Mochi",
+        "desc": "Smoked Pork Belly",
+        "cents": 825,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Ebi Bacon",
+        "desc": "Grilled Shrimp wrapped with Bacon",
+        "cents": 825,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Beef Skewer",
+        "desc": "Beef, Tare",
+        "cents": 1095,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Ika Maruni",
+        "desc": "Whole Squid",
+        "cents": 1595,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Hamachi Kama",
+        "desc": "Yellowtail Collar",
+        "cents": 2095,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Sake Kama",
+        "desc": "Salmon Collar",
+        "cents": 1095,
+        "label": "",
+        "section": "Yakitori"
+      },
+      {
+        "name": "Asparagus",
+        "desc": "Asparagus-Salt",
+        "cents": 775,
+        "label": "",
+        "section": "Vegetables"
+      },
+      {
+        "name": "Shishito",
+        "desc": "Green Japanese Pepper",
+        "cents": 895,
+        "label": "",
+        "section": "Vegetables"
+      },
+      {
+        "name": "Shiitake",
+        "desc": "Grilled Mushroom",
+        "cents": 875,
+        "label": "",
+        "section": "Vegetables"
+      },
+      {
+        "name": "Curry Katsu",
+        "desc": "Fried Pork Chop In Japanese Curry",
+        "cents": 1995,
+        "label": "",
+        "section": "Entree"
+      },
+      {
+        "name": "Chicken Katsu Curry",
+        "desc": "Fried Chicken Cutlet In Japanese Curry",
+        "cents": 1995,
+        "label": "",
+        "section": "Entree"
+      },
+      {
+        "name": "Saba Shioyaki",
+        "desc": "Lightly Salt Grilled Mackerel",
+        "cents": 1795,
+        "label": "",
+        "section": "Entree"
+      },
+      {
+        "name": "Katsu Don",
+        "desc": "Fried Pork Cutlet, Mushroom, Egg, Scallion",
+        "cents": 1795,
+        "label": "",
+        "section": "Entree"
+      },
+      {
+        "name": "Unagi Don",
+        "desc": "BBQ Eel w/ Eel Sauce",
+        "cents": 2095,
+        "label": "",
+        "section": "Entree"
+      },
+      {
+        "name": "Chicken Katsu",
+        "desc": "",
+        "cents": 1895,
+        "label": "",
+        "section": "Entree"
+      },
+      {
+        "name": "Plain Udon",
+        "desc": "",
+        "cents": 1050,
+        "label": "",
+        "section": "Noodles"
+      },
+      {
+        "name": "Tempura Udon",
+        "desc": "",
+        "cents": 1850,
+        "label": "",
+        "section": "Noodles"
+      },
+      {
+        "name": "Curry Udon",
+        "desc": "",
+        "cents": 1895,
+        "label": "",
+        "section": "Noodles"
+      },
+      {
+        "name": "Unagi Yaki Udon",
+        "desc": "",
+        "cents": 1750,
+        "label": "",
+        "section": "Noodles"
+      },
+      {
+        "name": "Tekka Maki",
+        "desc": "Tuna; hand roll $6.95, roll $7.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Negi Hama",
+        "desc": "Chopped Yellowtail, Green Onion; hand roll $6.95, roll $7.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "California Roll",
+        "desc": "Snow Crab Meat Salad, Avocado, Sesame; hand roll $6.95, roll $7.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Philly Roll",
+        "desc": "Cream Cheese, Salmon, Sesame; hand roll $7.95, roll $8.95",
+        "cents": 795,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Spicy Tuna",
+        "desc": "Spicy Tuna , Cucumber, Kaiware, Shiso, Sesame; hand roll $6.95, roll $8.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Salmon Avocado",
+        "desc": "Salmon, Avocado, Sesame; hand roll $7.95, roll $8.95",
+        "cents": 795,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Shrimp Tempura",
+        "desc": "Cucumber, Shrimp Deep Fried, Sesame, unagi Sauce; hand roll $6.95, roll $8.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Rock N Roll",
+        "desc": "Unagi, Avocado, Sesame; hand roll $7.95, roll $8.95",
+        "cents": 795,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Tuna Avocado",
+        "desc": "Tuna Avocado, Sesame; hand roll $6.95, roll $8.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Spider",
+        "desc": "Soft Shell Crab, Cucumber, Shiso, Kaiware, Avocado, Eel Sauce, Sesame; hand roll $8.50, roll $11.95",
+        "cents": 850,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Salmon Skin",
+        "desc": "Deep Fried Salmon Skin, Shiso, Cucumber, Kaiware, Eel Sauce, Sesame; hand roll $7.95, roll $8.95",
+        "cents": 795,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Spicy Scallop",
+        "desc": "Spicy Mayo w/ Scallop, Cucumber, Sesame; hand roll $8.95, roll $10.95",
+        "cents": 895,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Ebi Q",
+        "desc": "Shrimp, Cucumber, Sesame; hand roll $6.95, roll $7.95",
+        "cents": 695,
+        "label": "",
+        "section": "Simple Rolls"
+      },
+      {
+        "name": "Crunchy California",
+        "desc": "Deep Fried California Roll,Topped w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",
+        "cents": 1295,
+        "label": "",
+        "section": "Deep Fried Rolls"
+      },
+      {
+        "name": "Crunchy Tuna",
+        "desc": "Deep Fried Spicy Tuna Roll,Topped w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",
+        "cents": 1295,
+        "label": "",
+        "section": "Deep Fried Rolls"
+      },
+      {
+        "name": "Crunchy Philly",
+        "desc": "Deep Fried Salmon And Cream Cheese Roll w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",
+        "cents": 1295,
+        "label": "",
+        "section": "Deep Fried Rolls"
+      },
+      {
+        "name": "Fire Cracker",
+        "desc": "Deep Fried Tuna Roll, Green Onion, Tobiko, Eel Sauce, Spicy Mayo",
+        "cents": 1295,
+        "label": "",
+        "section": "Deep Fried Rolls"
+      },
+      {
+        "name": "Super Dynamite",
+        "desc": "Deep Fried Assorted Fish, Avocado w/ Green Onion, Tobiko, Spicy Mayo, Eel Sauce",
+        "cents": 1295,
+        "label": "",
+        "section": "Deep Fried Rolls"
+      },
+      {
+        "name": "Sake Nigiri",
+        "desc": "",
+        "cents": 1025,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Sake Toro Nigiri",
+        "desc": "",
+        "cents": 1095,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Maguro (Akami) Nigiri",
+        "desc": "",
+        "cents": 1095,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "O-Toro Nigiri",
+        "desc": "",
+        "cents": 1895,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Shiro Maguro Nigiri",
+        "desc": "",
+        "cents": 995,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Shiro Maguro Toro Nigiri",
+        "desc": "",
+        "cents": 1095,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Hamachi Nigiri",
+        "desc": "",
+        "cents": 1025,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Hamachi Toro Nigiri",
+        "desc": "",
+        "cents": 1095,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Walu Nigiri",
+        "desc": "",
+        "cents": 995,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Amaebi Nigiri",
+        "desc": "",
+        "cents": 1595,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Hotate Nigiri",
+        "desc": "",
+        "cents": 1250,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Uni Nigiri",
+        "desc": "",
+        "cents": 3600,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Ebi Nigiri",
+        "desc": "",
+        "cents": 795,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Kani (Real Crab) Nigiri",
+        "desc": "",
+        "cents": 1095,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Unagi Nigiri",
+        "desc": "",
+        "cents": 895,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Tamago Nigiri",
+        "desc": "",
+        "cents": 795,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Tobiko Nigiri",
+        "desc": "",
+        "cents": 795,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Ikura Nigiri",
+        "desc": "",
+        "cents": 1295,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Wagyu (A5) Nigiri",
+        "desc": "",
+        "cents": 3000,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Engawa Nigiri",
+        "desc": "",
+        "cents": 1895,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Hirame Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Shima-Aji Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Tai Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Kampachi Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Kurodai Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Aji Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Kinmedai Nigiri",
+        "desc": "",
+        "cents": 1695,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Tsubugai Nigiri",
+        "desc": "",
+        "cents": 1395,
+        "label": "",
+        "section": "Nigiri"
+      },
+      {
+        "name": "Sake",
+        "desc": "4pc $15.95, 8pc $25.95",
+        "cents": 1595,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Sake Toro",
+        "desc": "4pc $16.95, 8pc $26.95",
+        "cents": 1695,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Maguro (Akami)",
+        "desc": "4pc $17.95, 8pc $29.95",
+        "cents": 1795,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "O-Toro",
+        "desc": "4pc $35.00",
+        "cents": 3500,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Shiro Maguro",
+        "desc": "4pc $15.95, 8pc $26.00",
+        "cents": 1595,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Shiro Maguro Toro",
+        "desc": "4pc $16.95, 8pc $27.95",
+        "cents": 1695,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Hamachi",
+        "desc": "4pc $16.95, 8pc $28.95",
+        "cents": 1695,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Hamachi Toro",
+        "desc": "4pc $18.95, 8pc $29.95",
+        "cents": 1895,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Walu",
+        "desc": "4pc $15.95, 8pc $21.95",
+        "cents": 1595,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Amaebi",
+        "desc": "4pc $27.95, 8pc $52.95",
+        "cents": 2795,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Hotate",
+        "desc": "6pc $17.95, 12pc $30.95",
+        "cents": 1795,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Uni",
+        "desc": "4pc $58.00, 8pc $105.00",
+        "cents": 5800,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Unagi",
+        "desc": "4pc $15.95, 8pc $28.95",
+        "cents": 1595,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Tamago",
+        "desc": "4pc $13.95",
+        "cents": 1395,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Tsubugai Sashimi 4Pc",
+        "desc": "",
+        "cents": 2195,
+        "label": "",
+        "section": "Sashimi Sushi"
+      },
+      {
+        "name": "Ginza",
+        "desc": "Yellowtail, Avocado,Topped w/ Seared Escolar, Jalapeno, Spicy Mayo, Black Tobiko",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Lion King",
+        "desc": "Imitation Crab Meat, Avocado, Topped w/ Baked Salmon, Green Onion, Tobiko, Spicy Mayo, Eel Sauce, Sesame Seed",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Valentine’s Day",
+        "desc": "Real Kani Salad, Tuna, Avocado, Topped w/ Green Onion, Black Tobiko, Crispy Lotus Root, Spicy Mayo",
+        "cents": 1995,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Salmon Crunchy",
+        "desc": "Real Crab, Avocado, Topped w/ Seared Salmon, Spicy Mayo, Eel Sauce, Crunchy Flake, Green Onion, Black Tobiko",
+        "cents": 1995,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Sakura",
+        "desc": "Tamago, Eel, Avocado, Topped w/ Seared Salmon, Black Tobiko",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Victoria",
+        "desc": "Spicy Tuna, Avocado, Topped w/ Deep Fried Fish, Honey Mustard, Eel Sauce, Green onion, Tobiko",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "White Dragon",
+        "desc": "Shrimp Tempura, Cucumber, Spicy Tuna, Seared Albacore, Spicy Mayo, Fried Garlic, Green Onion, Fried Onion",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Dragon",
+        "desc": "Shrimp Tempura, Cucumber, Topped w/ Eel, Avocado, Eel Sauce, Sesame Seed",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Caterpillar",
+        "desc": "Eel, Cucumber, Topped w/ Avocado, Eel Sauce, Sesame Seed",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Warriors",
+        "desc": "Salmon, Avocado, Topped w/ Yellowtail, Black Tobiko",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Mango Lover",
+        "desc": "Shrimp Tempura, Cucumber, Topped w/ Imit. Crab Meat Salad, Mango, Black Tobiko, Mango Sauce",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Bay Scallop",
+        "desc": "Spicy Tuna, Avocado, Topped w/ Scallop Seared, Green Onion, Tobiko, Spicy Mayo",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "49er",
+        "desc": "Cucumber, Avocado, Tobiko, Topped w/ Salmon, Lemon Silced",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Kodawari",
+        "desc": "Yellowtail, Avocado, Topped w/ Salmon, Tuna, Tobiko, Spicy Mayo",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Mango Spider",
+        "desc": "Soft Shelled Crab, Cucumber, Avocado, topped w/ Spicy Tuna, Tobiko, Mango, Spicy Mayo, Mango Sauce",
+        "cents": 1995,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Volcano",
+        "desc": "Shrimp Tempura, Cucumber, Tamago, Imit. Crab, Tuna, Avocado, Fried Garlic, Kaiware, Black Tobiko, Eel Sauce, Sp. Mayo",
+        "cents": 1995,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Rainbow",
+        "desc": "Imitation Crab Meat, Avocado, Topped w/ Assorted Fish, Avocado",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Green Island",
+        "desc": "Tuna, Yellowtail, Salmon, Avocado, Wrapped In Cucumber, Ponzu Sauce, Tobiko",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Rolls"
+      },
+      {
+        "name": "Fish Taco (2Pcs)",
+        "desc": "Seared Albacore, Salmon, Avocado, Homemade Salad On Deep Fried Nori",
+        "cents": 1395,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Jalapeno Boom",
+        "desc": "Jalapeno, Spicy Tuna w/ Cream Cheese Deep Fried, House Sauce",
+        "cents": 1295,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Salmon Carpaccio",
+        "desc": "Salmon Seared, Avocado, Microgreens, Ponzu Sauce",
+        "cents": 1795,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Hamachi Carpaccio",
+        "desc": "Yellowtail, Sweet Onion, Radish, Microgreens, Ponzu Sauce",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Shiro Maguro Tataki",
+        "desc": "Albacore Seared, Microgreens, Spring Mix, Honey Mustard, Ponzu Sauce",
+        "cents": 1795,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Akami Tataki",
+        "desc": "Seared Bluefin Tuna, Spring Mix, Microgreens, Honey Mustard, Ponzu Sauce",
+        "cents": 2095,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Hirame Usudzukuri",
+        "desc": "Halibut, Radish, Microgreens, Trufle Ponzu Sauce",
+        "cents": 2895,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Inari Set (4Pc)",
+        "desc": "Chef’s Choice Combination of Four Fried Tofu",
+        "cents": 2800,
+        "label": "",
+        "section": "Chef's Special"
+      },
+      {
+        "name": "Chef Nigiri Sushi",
+        "desc": "Chef’s Choice of Nigiri Sushi 5 Pieces w/ Tekka Maki Or Salmon Maki",
+        "cents": 2795,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Chef Sashimi Regular",
+        "desc": "Chef’s Choice of Assorted Sashimi 10 Pieces",
+        "cents": 2895,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Chef Sashimi Deluxe",
+        "desc": "Chef’s Choice of Assorted Sashimi 20 Pieces",
+        "cents": 4795,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Chef Sashimi Premium",
+        "desc": "Chef’s Choice of Assorted Sashimi 30 Pieces",
+        "cents": 6695,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Chirashi Don",
+        "desc": "Assorted Sashimi, Tamago, Ikura Over Sushi Rice, Ebi",
+        "cents": 3395,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Chirashi Don Deluxe",
+        "desc": "Assorted Sashimi, Amaebi, Sea Urchin, Tamago, Ikura Over Sushi Rice, Fresh Wasabi",
+        "cents": 4495,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Sake-Uni Oyako Don",
+        "desc": "Salmon, Sea Urchin, Ikura Over Sushi Rice, Yuzu Kosho",
+        "cents": 4395,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Omakase Sushi",
+        "desc": "Chef’s Choice of Special Nigiri Sushi 8 Pieces",
+        "cents": 4395,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Kaisen Don",
+        "desc": "Uni, Hotate, Blue FinToro, Kani, Ikura over Rice",
+        "cents": 6495,
+        "label": "",
+        "section": "Sushisashimi Comb"
+      },
+      {
+        "name": "Kappa Maki",
+        "desc": "Cucumber",
+        "cents": 695,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Avocado Maki",
+        "desc": "Avocado",
+        "cents": 695,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Asparagus Maki",
+        "desc": "Asparagus",
+        "cents": 795,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Oshinko Maki",
+        "desc": "Yellow Pickle",
+        "cents": 650,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Q And A",
+        "desc": "Cucumber, Avocado, Sesame",
+        "cents": 895,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Garden",
+        "desc": "Cucumber, Avocado, Asparagus, Kaiware",
+        "cents": 895,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Futo Maki",
+        "desc": "Cucumber, Avocado, Tamago, Takuan",
+        "cents": 895,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Sweet Potato",
+        "desc": "Fried Sweet Potato, Sesame",
+        "cents": 895,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Veggie Tempura Roll",
+        "desc": "Mixed Veggie Tempura Wrap w/ Soy Paper",
+        "cents": 995,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Veggie Dragon",
+        "desc": "Fried Sweet Potato, Topped w/ Eggplant, Avocado, Sesame",
+        "cents": 1595,
+        "label": "",
+        "section": "Vegetarian"
+      },
+      {
+        "name": "Coke",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Diet Coke",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Sprite",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Fanta",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Ramune",
+        "desc": "Lychee or Original",
+        "cents": 500,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Sakura Sencha",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Yuzu Matcha Kukicha",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "Beverages"
+      },
+      {
+        "name": "Green Tea Cheesecake (1Pc)",
+        "desc": "",
+        "cents": 675,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "Waffles (2Pc)",
+        "desc": "Strawberry and Hokkaido Milk",
+        "cents": 650,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "Mochi (2Pc)",
+        "desc": "",
+        "cents": 395,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "Crepe Cake (1Pc)",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "Tiramisu (1Pc)",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Desserts"
+      }
+    ],
+    "price_note": "Prices are from Kodawari's own online menu and take-out ordering page linked from kodawarisushi.com, and may change.",
+    "flags": [
+      "Sources: own site kodawarisushi.com (302-redirects to https://dinfo.me/kodawarisushi.com, a Dinatouch-built site; same page Glenn reached) and its 'ORDER NOW' link, the dinfo.me 'View Menu & Take Out' page (rendered in Playwright; prices read from the page's own menu feed and cross-checked against the rendered page text). Plus Glenn's Instagram screenshots 247867-*.",
+      "Address, phone and hours agree across site contact section, ordering feed and Instagram (Instagram shows street and city only). Ordering feed opening hours: 16:30-21:00 daily except 16:30-21:30 Fri-Sat, matching the site. No email published.",
+      "NAME - editor decide: Instagram display name and logo say 'Kodawari Japanese Cuisine' (used here); the site <title> says 'Kodawari Sushi San Mateo' and the ordering page says 'Kodawari Sushi'.",
+      "Site template leftover: the home page heading reads 'Welcome to Soko Soko Japanese Cuisine' (another restaurant's name in the Dinatouch template). Ignore it.",
+      "Site 'Chef's Special' carousel shows Chrashi [sic] Don Deluxe, Premium Beef Katsu, Miso Salmon, Bacon mochi, Mi, Beef skewer, Kaisen Don with no prices; Premium Beef Katsu and Miso Salmon do not appear on the priced ordering menu, so they are not in items.",
+      "Sized items: Simple Rolls priced as hand roll (smaller price) with roll price in desc; Sashimi priced by the 4 pc (Hotate 6 pc) portion with the 8 pc (12 pc) price in desc.",
+      "Left out for no price: Ebi, Kani (Real Crab), Tobiko and Ikura sashimi (4 pc/8 pc show no price), Tamago sashimi 8 pc. A 'Shirako' entry exists in the feed but is not shown on the page; left out.",
+      "Name clean-ups from the ordering feed: '4Fresh Wasabi' -> 'Fresh Wasabi', '3Crunchy Tuna' -> 'Crunchy Tuna', '49Er' -> '49er', 'Curry Undon' -> 'Curry Udon', 'Unagi Yaki Undon' -> 'Unagi Yaki Udon'. Descriptions kept verbatim (their Title Case, incl. 'Trufle Ponzu', 'Lemon Silced'). Section 'Sushisashimi Comb' is written that way on the ordering page.",
+      "Left out as alcohol: whole 'Sake Wine' and 'Beer' sections, and Sapporo (small $6 / large $10) listed under Beverages.",
+      "Instagram bio also says 'DM for Food Collaboration' and links 'kodawarisushi.com and 1 more' plus a Facebook page 'Kodawari sushi'."
+    ]
+  },
+  {
+    "id": "b_fusiondumpling",
+    "name_exact": "Fusion Dumpling",
+    "one_line": "Shanghai soul and Szechuan spice in SF Chinatown: soup dumplings, pan-fried baos and modern Chinese fusion, handmade fresh daily.",
+    "cuisine": "Modern Chinese fusion",
+    "address": "650 Jackson St, San Francisco, CA 94133",
+    "phone": "(415) 981-0803",
+    "email": null,
+    "hours": "Mon-Tue 11am-9:30pm, Wed closed, Thu-Sun 11am-9:30pm",
+    "instagram": "fusiondumplingsf",
+    "site_kind": "own",
+    "site_url": "https://www.fusiondumplingca.com/",
+    "order_url": "https://www.fusiondumplingca.com/wtcl9u2j/fusion-dumpling-san-francisco-94133/order-online",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Braised Peking Duck W/Duck Pancakes (8/pc)",
+        "desc": "",
+        "cents": 3200,
+        "label": "",
+        "section": "Chef's Signature"
+      },
+      {
+        "name": "Pan-Seared Chilean Sea Bass Served With Potatoes",
+        "desc": "",
+        "cents": 4200,
+        "label": "",
+        "section": "Chef's Signature"
+      },
+      {
+        "name": "BBQ Cumin Lamb Ribs Served With Potatoes",
+        "desc": "",
+        "cents": 3200,
+        "label": "",
+        "section": "Chef's Signature"
+      },
+      {
+        "name": "Crispy Garlic Black Tiger Prawns (Jumbo)",
+        "desc": "",
+        "cents": 2800,
+        "label": "",
+        "section": "Chef's Signature"
+      },
+      {
+        "name": "Tea-Smoked Duck (Half)",
+        "desc": "",
+        "cents": 3000,
+        "label": "",
+        "section": "Chef's Signature"
+      },
+      {
+        "name": "A4 Wagyu Cubes",
+        "desc": "Black pepper or black truffle flavor",
+        "cents": 3500,
+        "label": "",
+        "section": "Chef's Signature"
+      },
+      {
+        "name": "Cucumber Salad",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Fresh Greens With Creamy Avocado",
+        "desc": "",
+        "cents": 1200,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Tea-Smoked Duck Salad With Mustard Notes",
+        "desc": "",
+        "cents": 1600,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Green Onion Pancake",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Vegetable Spring Roll (3/pc)",
+        "desc": "Crispy fried roll filled with shredded vegetables.",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Crab Puff (4/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Pork Potstickers (3/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Peking Duck Potsticker (3/pc)",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Crispy Chicken Dumpling (4/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Spicy Wonton W/ Chili Oil (Wonton Filled W/Pork)",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Shanghai Sticky Rice Shumai (3/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Beef Scallion Pancake Roll",
+        "desc": "",
+        "cents": 1800,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Sweet & Sour Spare Ribs",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Dong-Po Pork Belly",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Princess Chicken Wings",
+        "desc": "",
+        "cents": 1600,
+        "label": "",
+        "section": "Salads/Appetizers"
+      },
+      {
+        "name": "Pork Soup Dumpling (XLB) (6/pc)",
+        "desc": "",
+        "cents": 1600,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Spicy Pork Soup Dumpling (6/pc)",
+        "desc": "",
+        "cents": 1600,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Black Truffle & Wagyu Soup Dumpling (3/pc)",
+        "desc": "",
+        "cents": 1200,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Crab Pork & Shrimp Giant XLB (1pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Pan-Fried Pork Soup Bao (6/pc)",
+        "desc": "",
+        "cents": 1700,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Pan-Fried Black Truffle & Wagyu Soup Bao (3/pc)",
+        "desc": "",
+        "cents": 1500,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Cheese & Corn Pan-Fried Bao (3/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Steamed Pork Bao (3/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Steamed Vegetable Bao (3/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Vegetable Dumpling (6/pc)",
+        "desc": "Pan-seared dumplings filled with a delicate blend of vegetables, served with a light dipping sauce.",
+        "cents": 1200,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Juicy Pork And Chives Dumpling (6/pc)",
+        "desc": "",
+        "cents": 1200,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Juicy Shrimp Dumpling (6/pc)",
+        "desc": "",
+        "cents": 1400,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Juicy Pork Shrimp And Chives Dumpling (6/pc)",
+        "desc": "",
+        "cents": 1400,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Juicy Happy Family Dumpling (9/pc)",
+        "desc": "Come w/pork chives, pork shrimp chives and shrimp dumpling 3 of each",
+        "cents": 1800,
+        "label": "",
+        "section": "Dumplings/Baos"
+      },
+      {
+        "name": "Wonton Soup (Wonton Filled W/Pork)",
+        "desc": "Tender wontons, served in a light broth.",
+        "cents": 1000,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Pea Sprouts Bean Curd Soup",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Japanese Miso Soup",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Kung Pao Chicken",
+        "desc": "Crispy chicken, peanuts, and vegetables in a spicy sauce.",
+        "cents": 2100,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "General Tso's Chicken",
+        "desc": "Crispy-fried chicken tossed in a sweet and spicy General Tso's sauce.",
+        "cents": 2100,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Orange Chicken",
+        "desc": "Crispy-fried chicken tossed in a sweet and tangy orange sauce.",
+        "cents": 2100,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Sesame Chicken",
+        "desc": "Crispy fried chicken tossed in a sweet and spicy sesame sauce",
+        "cents": 2100,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Chicken W/Explosive Chili Pepper",
+        "desc": "",
+        "cents": 2800,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Honey Walnut Prawns",
+        "desc": "",
+        "cents": 2800,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Crispy Garlic Chilean Sea Bass",
+        "desc": "",
+        "cents": 3800,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Spicy Fish W/Flaming Chili Oil",
+        "desc": "",
+        "cents": 3000,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Fish With Home Made Pickled Mustard Greens",
+        "desc": "",
+        "cents": 3000,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "B.B.Q Whole Fish (Cat Fish)",
+        "desc": "",
+        "cents": 4800,
+        "label": "",
+        "section": "Classic Entrees"
+      },
+      {
+        "name": "Wuhan Dry Noodle",
+        "desc": "",
+        "cents": 1600,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Tan Tan Noodle",
+        "desc": "Come With Pork or You Can Request For No Meat",
+        "cents": 1800,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Guilin Rice Noodle Soup W/Beef",
+        "desc": "",
+        "cents": 1900,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Spicy Beef Noodle Soup",
+        "desc": "",
+        "cents": 1900,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Szechuan Cold Noodle Served In Ice Bowl",
+        "desc": "Due to melting concerns, we don't provide ice bowls for take out order",
+        "cents": 1900,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Crab Meat Lomein",
+        "desc": "",
+        "cents": 2100,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "House Combo Chow Mein",
+        "desc": "Come With Chicken, Shrimp and Veggie or You Can Choose One Kind",
+        "cents": 2100,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "House Fried Rice",
+        "desc": "Come With Chicken, Shrimp and Veggie or You Can Choose One Kind",
+        "cents": 2100,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Wonton Noodle Soup W/Shrimp And Black Truffle Flavor (Wonton Filled W/Pork)",
+        "desc": "",
+        "cents": 2400,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Steamed White Rice",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Noodles & Rice"
+      },
+      {
+        "name": "Ma Po Tofu",
+        "desc": "Spicy Sichuan-style tofu dish in a rich, flavorful sauce.",
+        "cents": 1900,
+        "label": "",
+        "section": "Vegetables Seasonal"
+      },
+      {
+        "name": "Garlic Pea Sprouts",
+        "desc": "",
+        "cents": 2200,
+        "label": "",
+        "section": "Vegetables Seasonal"
+      },
+      {
+        "name": "Organic Cauliflower W/ Flaming Pot",
+        "desc": "",
+        "cents": 1900,
+        "label": "",
+        "section": "Vegetables Seasonal"
+      },
+      {
+        "name": "Dry Sautéed String Beans",
+        "desc": "",
+        "cents": 1900,
+        "label": "",
+        "section": "Vegetables Seasonal"
+      },
+      {
+        "name": "String Beans Cauliflower Mixed W/Truffle Salt",
+        "desc": "",
+        "cents": 2000,
+        "label": "",
+        "section": "Vegetables Seasonal"
+      },
+      {
+        "name": "Black Sesame Bao (2/pc)",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Sweets"
+      },
+      {
+        "name": "Sesame Ball (Filled W/Red Bean Paste) (3/pc)",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Sweets"
+      },
+      {
+        "name": "Ghirardelli Chocolate XLB (3/pc)",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Sweets"
+      },
+      {
+        "name": "Green Tea Cheese Cake",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Sweets"
+      },
+      {
+        "name": "Brown Sugar Rice Cake",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Sweets"
+      },
+      {
+        "name": "Yam Cherry (6/pc)",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Sweets"
+      },
+      {
+        "name": "Soft Drink",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Cold Brew Sweet Ice Tea",
+        "desc": "",
+        "cents": 400,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Sparkling Water S. Pellegrino",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Still Water Saratoga",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Orange Juice",
+        "desc": "",
+        "cents": 400,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Sweet Ice Soy Milk",
+        "desc": "",
+        "cents": 400,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Thai Ice Tea",
+        "desc": "",
+        "cents": 500,
+        "label": "",
+        "section": "Non Alcoholic Selection"
+      },
+      {
+        "name": "Jasmine Jade Dew",
+        "desc": "Per pot",
+        "cents": 800,
+        "label": "",
+        "section": "Premium Tea Selection"
+      },
+      {
+        "name": "Dark Oolong",
+        "desc": "Per pot",
+        "cents": 800,
+        "label": "",
+        "section": "Premium Tea Selection"
+      },
+      {
+        "name": "Black Tea",
+        "desc": "Per pot",
+        "cents": 800,
+        "label": "",
+        "section": "Premium Tea Selection"
+      },
+      {
+        "name": "Chrysanthemum",
+        "desc": "Per pot",
+        "cents": 800,
+        "label": "",
+        "section": "Premium Tea Selection"
+      },
+      {
+        "name": "Pink Rose",
+        "desc": "Per pot",
+        "cents": 800,
+        "label": "",
+        "section": "Premium Tea Selection"
+      },
+      {
+        "name": "Puer",
+        "desc": "Per pot",
+        "cents": 800,
+        "label": "",
+        "section": "Premium Tea Selection"
+      }
+    ],
+    "price_note": "Prices are from Fusion Dumpling's own online ordering menu at fusiondumplingca.com and may change.",
+    "flags": [
+      "Sources: Fusion Dumpling's ordering page and home page on their own domain fusiondumplingca.com (rendered in Playwright; plain curl got HTTP 429), plus Glenn's Instagram screenshots 247901-*. Address and phone agree between the site and the Instagram bio.",
+      "HOURS: taken from the site's 'Hours of Operation (Takeout)' / ordering 'Pickup Hours': Monday - Tuesday 11:00 am - 09:30 pm, Wednesday Closed, Thursday - Sunday 11:00 am - 09:30 pm. No separate dine-in hours are published; Instagram bio shows no hours.",
+      "HOME PAGE COPY LOOKS LEFT OVER - editor decide: the fusiondumplingca.com home page header says 'Pot & Noodle' and its About text talks about 'BBQ, House Special Mini Hot Pot, and delicious Noodles', which does not match the current dumpling menu. Do not use that copy; one_line is based on the Instagram bio instead.",
+      "Instagram bio links OpenTable for table booking (www.opentable.com/r/fusion-dumpling-sa..., truncated in the screenshot); not used as order_url. Site phone written '4159810803'.",
+      "Menu names on the ordering page are bilingual English + Chinese; only the English part is kept in item names (several Chinese names contain apparent typos). Piece counts like '(6/pc)' kept.",
+      "Clean-ups: 'Crispy Garlic Black Tiger Prawns (Jambo)' -> '(Jumbo)'; 'Beef. Scallion Pancake Roll' -> 'Beef Scallion Pancake Roll'; 'String Beans Cauliflouer…' -> 'Cauliflower'; 'GHIRARDELLI', 'S. PELLEGRINO', 'SARATOGA' recapitalised; 'Pan-Fried Black Truffle (3/pc) & Wagyu Soup Bao' reordered to '… Wagyu Soup Bao (3/pc)'; desc typos 'concems' -> 'concerns', 'Veggle' -> 'Veggie'. A4 Wagyu Cubes desc 'Black pepper or black truffle flavor' is a translation of their Chinese '黑椒味/黑松露味'.",
+      "All 82 menu items on the page are priced and included; the online menu shows no alcohol section. Szechuan Cold Noodle note: ice bowl not provided for take-out orders.",
+      "Delivery: ordering page says 'Doesn't offer delivery' (pickup only, about 15 min)."
+    ]
+  },
+  {
+    "id": "b_elagaveazul",
+    "name_exact": "El Agave Azul",
+    "one_line": "Jalisco-style Mexican kitchen on San Pablo Avenue in Richmond since 2019, serving breakfast, lunch and dinner.",
+    "cuisine": "Mexican (Jalisco)",
+    "address": "12955 San Pablo Ave, Richmond, CA 94805",
+    "phone": "(510) 307-5749",
+    "email": "hello@agaveazulca.com",
+    "hours": "Mon-Thu 11am-9pm, Fri 11am-10:30pm, Sat 10am-10:30pm, Sun 9am-9pm",
+    "instagram": "agaveazulca",
+    "site_kind": "own",
+    "site_url": "https://www.agaveazulca.com/",
+    "order_url": "https://order.toasttab.com/online/elagaveazul",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Chips and Salsa",
+        "desc": "Basket of chips and red salsa. Spice level varies. No refills.",
+        "cents": 395,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Tostaditas de Tinga de Pollo",
+        "desc": "Two fried mini-corn tortillas topped with black refried beans, shredded marinated chicken, sour cream, lettuce, queso fresco, and chipotle aioli.",
+        "cents": 1495,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Wings",
+        "desc": "Tequila BBQ, garlic, buffalo, mango habanero(very spicy) or plain. Slde of carrots, celery, and ranch dressing. 6 wings; 9 wings $19.95.",
+        "cents": 1395,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Chimichangas",
+        "desc": "Four(4) rolled tortilla stuffed with chicken, chorizo and cheese and fried; chipotle aioli drizzle, queso fresco sprinkle. Side of medium-sweet sauce and mango salsa.",
+        "cents": 1395,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Choriqueso",
+        "desc": "Mild chorizo, refried beans, Monterrey Jack cheese, pickled jalapeño.",
+        "cents": 1295,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Oysters",
+        "desc": "Raw oysters: over ice, served with lime wedges. Six (6); Twelve (12) $27.",
+        "cents": 1700,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Aguachiles Verdes",
+        "desc": "Raw prawns cured in cilantro, lime, serrano chile, cucumbers. (Aguachiles take extra time to prepare.)",
+        "cents": 2295,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Guacamole",
+        "desc": "7 oz. Fresh avocado, diced tomatoes, onions, cilantro, jalapeños, fresh lime juice served with chips.",
+        "cents": 1095,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Solo Prawns",
+        "desc": "Twelve (12) prawns; choose one of three different styles: A la Cucaracha: whole & unpeeled, and fried in a spicy red sauce. A la Plancha: butterflied and grilled. Empanizados: breaded.",
+        "cents": 2795,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Sabor Agave",
+        "desc": "(Big enough to share) A mix of 3 tequila BBQ wings, Agave nachos, chimichanga, cheese quesadilla, pico de Gallo, queso fresco.",
+        "cents": 2195,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Aguachiles Rojos",
+        "desc": "Raw prawns cured in cilantro, lime, Chile de Arbor, red aioli, cucumbers. Garnished with tomatoes, red onion and oranges. (Aguachiles take extra time to prepare.)",
+        "cents": 2295,
+        "label": "",
+        "section": "Appetizers"
+      },
+      {
+        "name": "Sopa de Elote",
+        "desc": "Creamy corn soup with corn kernels and crema fresca. Medium spice.",
+        "cents": 1295,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Chicken-Tortilla Soup",
+        "desc": "Cup-sized tomato-based soup, Mexican spices, chicken, cilantro, crispy tortilla strips, queso fresco.",
+        "cents": 1195,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Caldo Tlalpeño",
+        "desc": "Chicken, carrots, zucchini, garbanzo beans, spicy chipotle chicken broth. Served with a side of rice and tortillas.",
+        "cents": 1795,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Siete Mares",
+        "desc": "Mussels, clams, octopus, scallops, prawns, red snapper, crab legs, in a fish broth. Served with tortillas.",
+        "cents": 2895,
+        "label": "",
+        "section": "Soup"
+      },
+      {
+        "name": "Consome de Pollo",
+        "desc": "Shredded chicken, broth and vegetables.",
+        "cents": 1095,
+        "label": "",
+        "section": "Main Dishes"
+      },
+      {
+        "name": "Pozole",
+        "desc": "Tender pieces of pork slowly simmered in a chile guajillo broth with hominy served with chopped cabbage, radishes, and limes.",
+        "cents": 1895,
+        "label": "",
+        "section": "Main Dishes"
+      },
+      {
+        "name": "Menudo Rojo",
+        "desc": "A flavorful chile guajillo broth with beef tripe. Served with onion, oregano, lime, and tortillas.",
+        "cents": 1895,
+        "label": "",
+        "section": "Main Dishes"
+      },
+      {
+        "name": "Birria",
+        "desc": "Tender beef in a red broth, served with a side of chopped onions, cilantro, lime, and tortillas.",
+        "cents": 1895,
+        "label": "",
+        "section": "Main Dishes"
+      },
+      {
+        "name": "Green Salad",
+        "desc": "Mixed greens, tomatoes, onions. Choice of dressing.",
+        "cents": 795,
+        "label": "",
+        "section": "Salad"
+      },
+      {
+        "name": "Agave Salad",
+        "desc": "Mixed greens, pico de gallo, corn, black beans, tortilla strips. Choice of dressing on the side.",
+        "cents": 1295,
+        "label": "",
+        "section": "Salad"
+      },
+      {
+        "name": "Mexican Caesar Salad",
+        "desc": "Hearts of romaine, croutons, grilled corn, queso fresco.",
+        "cents": 1395,
+        "label": "",
+        "section": "Salad"
+      },
+      {
+        "name": "Sombrero Salad",
+        "desc": "Fried flour shell, lettuce, rice, beans, pico de gallo, guacamole, sour cream, and queso fresco.",
+        "cents": 1695,
+        "label": "",
+        "section": "Salad"
+      },
+      {
+        "name": "Chicken",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "Salad Add-Ons"
+      },
+      {
+        "name": "Steak",
+        "desc": "",
+        "cents": 800,
+        "label": "",
+        "section": "Salad Add-Ons"
+      },
+      {
+        "name": "Prawns",
+        "desc": "",
+        "cents": 1000,
+        "label": "",
+        "section": "Salad Add-Ons"
+      },
+      {
+        "name": "Quesabirria Tacos",
+        "desc": "Three (3) beef tacos with melted Monterey Jack cheese, side of cilantro, onions, limes, and a cup of consomé.",
+        "cents": 1995,
+        "label": "",
+        "section": "Tacos"
+      },
+      {
+        "name": "A la Cart Taco (Grilled Chicken)",
+        "desc": "Single serving taco with pico de gallo and queso fresco, unless noted.",
+        "cents": 695,
+        "label": "",
+        "section": "A la Cart (ALC)"
+      },
+      {
+        "name": "A la Cart Taco (Carnitas)",
+        "desc": "Single serving taco with pico de gallo and queso fresco, unless noted.",
+        "cents": 795,
+        "label": "",
+        "section": "A la Cart (ALC)"
+      },
+      {
+        "name": "A la Cart Taco (Veggies)",
+        "desc": "Single serving taco with pico de gallo and queso fresco, unless noted.",
+        "cents": 695,
+        "label": "",
+        "section": "A la Cart (ALC)"
+      },
+      {
+        "name": "A la Cart Taco (Ground Beef)",
+        "desc": "Picadillo. Single serving taco with pico de gallo and queso fresco, unless noted.",
+        "cents": 695,
+        "label": "",
+        "section": "A la Cart (ALC)"
+      },
+      {
+        "name": "A la Cart Taco (Grilled Beef)",
+        "desc": "Single serving taco with pico de gallo and queso fresco, unless noted.",
+        "cents": 795,
+        "label": "",
+        "section": "A la Cart (ALC)"
+      },
+      {
+        "name": "A la Cart Taco (Birria)",
+        "desc": "With cilantro, onions, limes. Single serving taco with pico de gallo and queso fresco, unless noted.",
+        "cents": 795,
+        "label": "",
+        "section": "A la Cart (ALC)"
+      },
+      {
+        "name": "Taco Plate (Grilled Chicken)",
+        "desc": "Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1695,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Carnitas)",
+        "desc": "Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1795,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Veggies)",
+        "desc": "Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1695,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Shrimp)",
+        "desc": "Includes aioli and cabbage. Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 2095,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Ground Beef)",
+        "desc": "Picadillo. Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1695,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Grilled Beef)",
+        "desc": "Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1795,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Birria)",
+        "desc": "With cilantro, onions, limes. Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1795,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Taco Plate (Fish)",
+        "desc": "Topped with aioli and cabbage. Served with 2 tacos, choice of meat and served with pico de gallo, queso fresco. Served with rice and beans.",
+        "cents": 1995,
+        "label": "",
+        "section": "Taco Plate"
+      },
+      {
+        "name": "Sope",
+        "desc": "",
+        "cents": 795,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Chile Relleno",
+        "desc": "",
+        "cents": 1095,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Enchilada",
+        "desc": "",
+        "cents": 795,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Tamale",
+        "desc": "",
+        "cents": 695,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Fries",
+        "desc": "",
+        "cents": 495,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Beans/Rice",
+        "desc": "",
+        "cents": 325,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Pico de Gallo",
+        "desc": "small (2 oz); large (4 oz) $3.95.",
+        "cents": 195,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Guacamole",
+        "desc": "2 oz",
+        "cents": 295,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Queso Fresco",
+        "desc": "2 oz",
+        "cents": 225,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Cheese",
+        "desc": "2 oz",
+        "cents": 125,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Sour Cream",
+        "desc": "2 oz",
+        "cents": 125,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Pickled Jalapeños",
+        "desc": "2oz",
+        "cents": 195,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Chiles Toreados",
+        "desc": "Roasted jalapeños.",
+        "cents": 150,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Tortillas",
+        "desc": "",
+        "cents": 195,
+        "label": "",
+        "section": "Sides"
+      },
+      {
+        "name": "Meat Options",
+        "desc": "Chicken, Asada, or Carnitas",
+        "cents": 2495,
+        "label": "",
+        "section": "Fajitas"
+      },
+      {
+        "name": "Veggie Options",
+        "desc": "Zucchini, Carrots, Broccoli, Mushrooms",
+        "cents": 2195,
+        "label": "",
+        "section": "Fajitas"
+      },
+      {
+        "name": "Prawns",
+        "desc": "",
+        "cents": 2795,
+        "label": "",
+        "section": "Fajitas"
+      },
+      {
+        "name": "Dos Amigos",
+        "desc": "Any two options. Options: Chicken, Carnitas, Veggie, Asada, Prawns",
+        "cents": 2895,
+        "label": "",
+        "section": "Fajita Combos"
+      },
+      {
+        "name": "Tres Amigos",
+        "desc": "Any three options. Options: Chicken, Carnitas, Veggie, Asada, Prawns",
+        "cents": 3195,
+        "label": "",
+        "section": "Fajita Combos"
+      },
+      {
+        "name": "Seafood Enchiladas",
+        "desc": "Two enchiladas filled with shrimp and crab, cheese, grilled corn, spring onions, covered with a creamy green sauce. Served with white rice and vegetables.",
+        "cents": 2395,
+        "label": "",
+        "section": "Seafood Enchiladas"
+      },
+      {
+        "name": "Bistec Ranchero",
+        "desc": "Arrachera beef sautéed with onions, tomatoes, peppers, medium-spicy ranchera sauce.",
+        "cents": 2595,
+        "label": "",
+        "section": "Beef Plates"
+      },
+      {
+        "name": "Carne Asasa",
+        "desc": "Grilled sirloin beef.",
+        "cents": 2595,
+        "label": "",
+        "section": "Beef Plates"
+      },
+      {
+        "name": "New York Steak",
+        "desc": "Grilled New York steak topped with sautéed mushrooms, jalapeños, garlic, chipotle herb butter. Served with baby potatoes and salad.",
+        "cents": 3295,
+        "label": "",
+        "section": "Beef Plates"
+      },
+      {
+        "name": "Carnitas",
+        "desc": "Slow-cooked pork served over grilled cactus.",
+        "cents": 2495,
+        "label": "",
+        "section": "Pork Plates"
+      },
+      {
+        "name": "Chile Verde",
+        "desc": "Pork slowly simmered in medium spicy chile verde sauce.",
+        "cents": 2295,
+        "label": "",
+        "section": "Pork Plates"
+      },
+      {
+        "name": "Pork Tamales",
+        "desc": "Hand-rolled, corn masa topped with a salsa ranchera.",
+        "cents": 1995,
+        "label": "",
+        "section": "Pork Plates"
+      },
+      {
+        "name": "Birria",
+        "desc": "Tender beef in a red broth, served with onions, cilantro, lime and tortillas.",
+        "cents": 1895,
+        "label": "",
+        "section": "Pork Plates"
+      },
+      {
+        "name": "Sopes",
+        "desc": "Picadillo(ground beef), refried beans, lettuce, pico de gallo, sour cream.",
+        "cents": 1895,
+        "label": "",
+        "section": "Chef Specials"
+      },
+      {
+        "name": "Chile Relleno",
+        "desc": "A poblano chile stuffed with Monterrey Jack cheese, topped with salsa ranchera. Served with Tortillas.",
+        "cents": 2395,
+        "label": "",
+        "section": "Chef Specials"
+      },
+      {
+        "name": "Combos",
+        "desc": "Choose two different items: chile relleno, enchilada, seafood enchilada, pork tamale, sope. Served with rice and beans.",
+        "cents": 2295,
+        "label": "",
+        "section": "Combos"
+      },
+      {
+        "name": "Mexican Burger",
+        "desc": "An 8 oz Angus patty, mayonnaise, mustard, onions, jalapeños, lettuce, tomato, bacon and melted Monterey Jack cheese.",
+        "cents": 1795,
+        "label": "",
+        "section": "Sandwiches"
+      },
+      {
+        "name": "Agave Sandwich",
+        "desc": "Choice of meat, beans, Monterey cheese, mayonnaise, mustard, onions, jalapeños, lettuce, and tomato.",
+        "cents": 1695,
+        "label": "",
+        "section": "Sandwiches"
+      },
+      {
+        "name": "Burrito",
+        "desc": "Your choice of meat; with rice, beans and pico de Gallo. Prawns add $4.",
+        "cents": 1495,
+        "label": "",
+        "section": "Burritos"
+      },
+      {
+        "name": "Super Burrito",
+        "desc": "Choice of meat, rice, beans, and pico de gallo. Prawns add $4.",
+        "cents": 1795,
+        "label": "",
+        "section": "Burritos"
+      },
+      {
+        "name": "Campechana Cocktail",
+        "desc": "Shrimp and octopus cocktail; red onions, cilantro, tomato fish stock. Served cold, warm or hot.",
+        "cents": 2495,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Coctel de Camaron",
+        "desc": "Mexican-style shrimp cocktail, red onions, cilantro, tomato fish stock. Served cold, warm or hot.",
+        "cents": 2295,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Pulpo a la Diabla",
+        "desc": "Octopus in a very spicy sauce.",
+        "cents": 2695,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Filete de Pescado",
+        "desc": "Seared fish fillet with white rice, veggies, garlic bread.",
+        "cents": 2395,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Salmon Tropical",
+        "desc": "Seared salmon topped with tropical salsa, served with white rice, vegetables and garlic bread.",
+        "cents": 2895,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Salmon al Chipotle",
+        "desc": "Seared salmon topped with creamy chipotle sauce, served with white rice, vegetables and garlic bread.",
+        "cents": 2895,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Huachinango Frito",
+        "desc": "Whole fried red snapper. Served with rice, beans and tortillas. Choice of garlic or spicy red sauce.",
+        "cents": 3095,
+        "label": "",
+        "section": "Seafood"
+      },
+      {
+        "name": "Molcajete",
+        "desc": "Steak, chicken, prawns, chorizo, costillita, grilled queso fresco, chiles toreados, served over a bed of nopales, topped with medium ranchera salsa. Served with rice, beans and tortillas.",
+        "cents": 2895,
+        "label": "",
+        "section": "Molcajete"
+      },
+      {
+        "name": "Mariscada",
+        "desc": "Grilled half pineapple, topped with prawns, octopus, fish fillet, scallops, king crab legs, clams, mussels, served with rice, vegetables and garlic bread. Medium spicy.",
+        "cents": 5195,
+        "label": "",
+        "section": "Mariscada"
+      },
+      {
+        "name": "Simple Eggs",
+        "desc": "Two eggs prepared your way, bacon or ham.",
+        "cents": 1695,
+        "label": "",
+        "section": "Breakfast"
+      },
+      {
+        "name": "Chorizo con Huevos",
+        "desc": "Mild Mexican style pork sausage scrambled with eggs.",
+        "cents": 1795,
+        "label": "",
+        "section": "Breakfast"
+      },
+      {
+        "name": "Huevos Rancheros",
+        "desc": "Two eggs over-easy topped with fresh salsa ranchera on two crispy tortillas.",
+        "cents": 1795,
+        "label": "",
+        "section": "Breakfast"
+      },
+      {
+        "name": "Nopales con Huevos",
+        "desc": "Scrambled eggs with grilled cactus.",
+        "cents": 1795,
+        "label": "",
+        "section": "Breakfast"
+      },
+      {
+        "name": "Chilaquiles con Huevos",
+        "desc": "Red or green chilaquiles, bacon strips and eggs.",
+        "cents": 1795,
+        "label": "",
+        "section": "Breakfast"
+      },
+      {
+        "name": "Steak and Eggs",
+        "desc": "Flat meat with 2 eggs.",
+        "cents": 2695,
+        "label": "",
+        "section": "Breakfast"
+      },
+      {
+        "name": "Egg",
+        "desc": "",
+        "cents": 295,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Bacon Strips",
+        "desc": "(4 strips)",
+        "cents": 595,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Beans",
+        "desc": "",
+        "cents": 495,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Rice",
+        "desc": "",
+        "cents": 495,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Guacamole",
+        "desc": "(2 oz)",
+        "cents": 395,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Sour Cream",
+        "desc": "(2 oz)",
+        "cents": 195,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Pico de Gallo",
+        "desc": "(4 oz)",
+        "cents": 395,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Pickled Jalapeños",
+        "desc": "(2 oz)",
+        "cents": 295,
+        "label": "",
+        "section": "Extras"
+      },
+      {
+        "name": "Tortillas",
+        "desc": "(3)",
+        "cents": 295,
+        "label": "",
+        "section": "Extras"
+      }
+    ],
+    "price_note": "Prices are from the menu on El Agave Azul's own website (agaveazulca.com/menu); their Toast online-ordering prices can differ.",
+    "flags": [
+      "Sources: agaveazulca.com (home, /menu, /contact, /blank-2 careers page), their Toast online ordering page (linked from the site as \"Online Orders\"), and Glenn's screenshots 247857-* (site Contact section + @agaveazulca Instagram profile). All fetched 2026-10-11.",
+      "PHONE CONFLICT: the brief says (510) 307-5741, but the site footer on every page and the tel: link say (510) 307-5749; the Contact page body (and Glenn's screenshot) shows a typo \"(510) 307-57491\". Used (510) 307-5749. Toast page was not checked for a phone.",
+      "Hours match on the site footer and the Instagram bio. Breakfast is \"served daily through 2PM\" per the site menu.",
+      "Items come ONLY from the website menu (/menu, one menu \"Our Menu\", 26 sections). The website menu has no drinks, desserts or kids section.",
+      "TOAST PRICES DIFFER from the website menu on most dishes (Toast is usually $1-2 lower, a few higher), e.g. 6 wings $12.95 vs site $13.95, Chimichangas $11.95 vs $13.95, Choriqueso $13.95 vs $12.95, Pozole $16.95 vs $18.95, Steak and Eggs $32.95 vs $26.95, Molcajete $30.95 vs $28.95, Mariscada $49.95 vs $51.95, Burrito $15.95 vs $14.95. Editor decides which source to show; I used the website menu throughout.",
+      "Toast-only non-alcoholic items NOT included (editor may add, prices are Toast's): Coca-Cola/Sprite/Lemonade/Iced Tea/Diet Coke $3.95; Agua de Horchata $4.50; Agua de Pina $4.50; Mexican Coke bottle $4.25; Jarritos (tamarind, mandarin, lime) $4.25; desserts Flan, Churros, Chocolate Cake, Tres Leches Cake $9.95 each, Platanos Flameados $12.95, Ice Cream Scoop $2.50; Kids menu (cheeseburger, chicken nuggets, chimichanga, grilled chicken, burrito, quesadilla) $9.95 each; plus dishes not on the site menu such as Ceviche de Camaron $14.95, Nachos Marinos $28.95, Pollo con Mole $20.95, Machaca $17.95, Mexican Omelet $16.95, Huachinango al Horno $30.95.",
+      "Alcohol left out: Toast \"Bar Menu\" (margaritas, beer, micheladas) and the site banner about Soft Serve Margaritas. \"Campechana Cocktail\"/\"Coctel de Camaron\" are seafood cocktails (food) and are kept; \"Tequila BBQ\" wings are a sauce and kept.",
+      "Left out (no usable price): Quesadilla (Appetizers): no base price on the site menu (only add-ons: Add meat $6.95; Add prawns $8.95) | Agave-Nachos (Appetizers): no base price on the site menu (only add-ons: Add meat $6.95; Add prawns $8.95) | A la Cart Taco (Shrimp) listed at $20.95 on the site menu, the same price as the shrimp Taco Plate; looks like a copy error (Toast online ordering lists AC Shrimp Taco $8.95, AC Fish Taco $7.95), so left out | A la Cart Taco (Fish) listed at $19.95 on the site menu, the same price as the fish Taco Plate; looks like a copy error (Toast online ordering lists AC Shrimp Taco $8.95, AC Fish Taco $7.95), so left out | Enchiladas (Enchiladas): no base price on the site menu (only add-ons: Add Mole Sauce $2) | Famoso Wet Burrito (Burritos): no base price on the site menu (only add-ons: for mixed sauces $1) | Camarones al Gusto (Seafood): no base price on the site menu | Seafood Molcajete (no price; description is placeholder text on the site) | Camarones al Gusto: no price published | Dressings (Agave vinaigrette, ranch, caesar): unpriced choices.",
+      "A la Cart Taco / Taco Plate: the site lists one price per protein; each protein is its own item. The site truncates the veggie and birria option text (\"Veggies (carrots, broccoli, zucchini, mu\", \"Birria (with cilantro, onions, limes on\"); I did not complete the veggie list (description left as the section text) and cut the birria text at \"limes\".",
+      "\"Combos\" price ($22.95) comes from the combos section header on the site (\"Choose two different items. Served with rice and beans. 22.95\").",
+      "Kept site spellings: \"Carne Asasa\" (typo for Asada on the site), \"Consome de Pollo\", \"Chile de Arbor\". Guacamole appears three times with different published prices: appetizer 7 oz $10.95, sides 2 oz $2.95, breakfast extras 2 oz $3.95. Birria appears under Main Dishes and Pork Plates ($18.95 both). Names converted from ALL CAPS to title case.",
+      "Instagram: Glenn's screenshot is @agaveazulca (\"Mexican Restaurant\"), which the site also links. The site separately links instagram.com/elagaveazul and TikTok @elagaveazul_510. The site says \"Richmond, California since 2019\".",
+      "Reservations: the site's \"Reserve Table\" goes to a Google reservation link (not used). Private room page exists at /privateroomreservations. Gift cards: order.toasttab.com/egiftcards/elagaveazul."
+    ]
+  },
+  {
+    "id": "b_shattuckandbutter",
+    "name_exact": "Shattuck & Butter",
+    "one_line": "A family-owned breakfast and brunch room on Shattuck Ave in North Berkeley, opening October 2026.",
+    "cuisine": "Breakfast & brunch",
+    "address": "1511 Shattuck Ave, Berkeley, CA 94709",
+    "phone": null,
+    "email": "shattucknbutter@gmail.com",
+    "hours": "Daily 7am-3pm (from opening)",
+    "instagram": "shattucknbutter",
+    "site_kind": "own",
+    "site_url": "https://shattuckandbutter.com/",
+    "order_url": null,
+    "prices_published": false,
+    "items": [],
+    "price_note": "Shattuck & Butter has not published a menu or prices yet; they open in October 2026.",
+    "flags": [
+      "Sources: shattuckandbutter.com (home, /story, /reserve, /careers, /gift-cards; /menu returns their 404 page \"Not on the menu\"), and Glenn's screenshots 247860-* (site + @shattucknbutter Instagram). Fetched 2026-10-11.",
+      "OPEN YET? NO, as far as their own site shows on 2026-10-11. The home page says \"Opening Oct '26 / soft launch coming\"; the footer and meta description say \"Opening October 2026 — now hiring\"; /story ends \"See you on Shattuck, October 2026\"; /reserve says the virtual queue \"goes live on opening day, October 2026\". No exact opening day is published anywhere on the site. The Instagram grid (screenshot) has a \"coming soon!\" reel and a \"thank you, Berkeley\" reel, which may mean a preview event, but nothing first-party gives a date. Editor should treat as \"Opening October 2026\" and re-check.",
+      "HOURS CONFLICT: the visible site says \"Hours (from launch) Daily 7:00a – 3:00p\" (home header \"7a – 3p daily\"), but the site's structured data (JSON-LD) says Mo-Fr 07:00-15:00, Sa-Su 08:00-16:00. Used the visible text.",
+      "DATE CONFLICT: /gift-cards says digital gift cards ($25, $50, $100, custom) \"will go on sale with the soft launch in September\", while everything else says October 2026. Gift card amounts are not menu items, so not listed.",
+      "No phone published (site or Instagram). Email shattucknbutter@gmail.com is on the site and the Instagram has an Email button. ZIP 94709 is from the site footer (\"1511 Shattuck Ave · Berkeley, CA 94709\").",
+      "No menu or prices published. Dishes they name (no prices): soft scrambles on toasted bread, chilaquiles with a salsa verde, brown-butter French toast, sunny eggs, crispy chicken, coffee; the site hero image is chicken and waffles. Walk-in only with a virtual queue (no reservations); groups of 8+ are asked to email.",
+      "Other site facts: family-owned, \"a tight knit group of cooks and 4 neighbours\", ingredients from women-owned Bay Area suppliers, \"a short walk from campus\". Currently hiring the opening team (line/prep cook, barista, server, host, dishwasher, GM). Instagram bio: \"Your next favorite brunch spot in the Bay Area!\""
+    ]
+  },
+  {
+    "id": "b_comtamthienhuong",
+    "name_exact": "Com Tam Thien Huong",
+    "one_line": "Saigon-style broken-rice plates, phở and Hainan chicken rice at two San Jose shops, on Story Road and East Capitol Expressway.",
+    "cuisine": "Vietnamese com tam & pho",
+    "address": "909 Story Rd Unit 100, San Jose, CA 95122",
+    "phone": "(408) 275-6650",
+    "email": null,
+    "hours": "Mon-Sun 10am-2:45pm & 4pm-7:45pm",
+    "instagram": "comtam_thienhuong",
+    "site_kind": "own",
+    "site_url": "https://comtamthienhuong.net/",
+    "order_url": "https://order.blogicsystems.com/client/store/2020302/detail/2020829",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Chả Giò",
+        "desc": "Egg roll. 3 rolls.",
+        "cents": 800,
+        "label": "",
+        "section": "Khai Vị - Appetizer"
+      },
+      {
+        "name": "Bánh Kẹp Lá Dứa",
+        "desc": "Pandan waffle. 1 pc.",
+        "cents": 300,
+        "label": "",
+        "section": "Khai Vị - Appetizer"
+      },
+      {
+        "name": "Phở Đặc Biệt",
+        "desc": "Rare, flank, fat brisket, tendon, meatball.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái, Nam, Gầu, Gân",
+        "desc": "Rare, flank, fat, bricket, tendon.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái, Nam, Gân",
+        "desc": "Rare, flank, tendon.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tải, Nam, Gầu",
+        "desc": "Rare, flank, fat brisket.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái, Nam",
+        "desc": "Rare, flank.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái, Gân",
+        "desc": "Rare, tendon.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái, Gầu",
+        "desc": "Rare, fat brisket.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái, Chín",
+        "desc": "Rare, well done, brisker.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tái",
+        "desc": "Rare",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Nam, Gầu, Gân",
+        "desc": "Well done, brisket, flank, fat brisket, and tendon.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Nam, Gan",
+        "desc": "Well done, brisket, flank,and tendon.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Nạm, Gau",
+        "desc": "Well done brisket, flank fat brisket.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Nam",
+        "desc": "Well done, brisket, flank.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Gân",
+        "desc": "Well done, brisket, tendon.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Gầu",
+        "desc": "Well done brisket, fat brisket.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chín, Nam, Vè Dòn",
+        "desc": "Well done, brisket, flank, crunchy flank.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Nam, Về Dòn",
+        "desc": "Flank, crunchy flank.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Chin",
+        "desc": "Well done, brisket.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Phở Bò Viên",
+        "desc": "Beef meatball noodle.",
+        "cents": 1395,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Phở Không Thịt",
+        "desc": "No meat noodle soup.",
+        "cents": 900,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Kid's Meal (Chín, Bộ viên & nước ngọt)",
+        "desc": "Well done, brisket, beef meatball & soda.",
+        "cents": 900,
+        "label": "",
+        "section": "Phở"
+      },
+      {
+        "name": "Tàu Hủ Ky",
+        "desc": "Fried shrimp cake with rice.",
+        "cents": 1895,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chá, Tàu Hủ Ky",
+        "desc": "Shredded pork skin, egg cake, fried shrimp cake with rice.",
+        "cents": 1895,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Thịt Nướng, Tàu Hủ Ky",
+        "desc": "BBQ pork, fried shrimp cake with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Nướng, Tàu Hủ Ky",
+        "desc": "BBQ pork chop, fried shrimp cake with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Gà Nướng, Tàu Hủ Ky",
+        "desc": "BBQ chicken, fried shrimp cake with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Tôm Nướng, Tàu Hủ Kỵ",
+        "desc": "BBQ Shrimp, fried shrimp cake with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Bò Đại Hàn, Tàu Hủ Ky",
+        "desc": "BBQ beef rib, fried shrimp cake with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Tàu Hủ Ky, Chạo Tôm",
+        "desc": "Fried shrimp cake, grilled shrimp on sugarcane with rice.",
+        "cents": 1895,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Nướng, Chạo Tôm",
+        "desc": "BBQ pork chop, grilled shrimp on sugarcane with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Gà Nướng, Chạo Tôm",
+        "desc": "BBQ chicken, grilled shrimp on sugarcane with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Bò Đại Hàn, Chạo Tôm",
+        "desc": "BBQ beef rib, grilled shrimp on sugarcane with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Thịt Nướng, Chạo Tôm",
+        "desc": "BBQ pork, grilled shrimp on sugarcane with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bi, Chả, Chạo Tôm",
+        "desc": "Shredded pork skin, egg cake, grilled shrimp on sugarcane with rice.",
+        "cents": 1895,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chả, Tôm Nướng",
+        "desc": "Shredded pork skin, egg cake, and BBQ shrimp with rice.",
+        "cents": 1895,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Thịt Nướng, Tôm Nướng",
+        "desc": "BBQ pork, BBQ shrimp with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Nướng, Tôm Nướng",
+        "desc": "BBQ pork chop, BBQ shrimp with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Gà Nướng, Tôm Nướng",
+        "desc": "BBQ chicken, BBQ shrimp with rice.",
+        "cents": 2050,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Bò Đại Hàn, Tôm Nướng",
+        "desc": "BBQ beef rib, BBQ shrimp with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Tôm Nướng",
+        "desc": "BBQ shrimp with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bi, Chả, Thịt Nướng",
+        "desc": "Shredded pork skin, egg cake, and BBQ pork with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chả, Sườn Nướng",
+        "desc": "Shredded pork skin, egg cake, and BBQ pork chop with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chả, Gà Nướng",
+        "desc": "Shredded pork skin, egg cake, and BBQ chicken with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chả, Sườn Bò Đại Hàn",
+        "desc": "Shredded pork skin, egg cake, BBQ beef rib with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bi, Thịt Nướng",
+        "desc": "Shredded pork skin, BBQ pork with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Sườn Nướng",
+        "desc": "Shredded pork skin, BBQ pork chop with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Gà Nướng",
+        "desc": "Shredded pork skin, BBQ chicken with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Sườn Bỏ Đại Hàn",
+        "desc": "Shredded pork skin, BBQ beef rib with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chả",
+        "desc": "Shredded pork skin, egg cake with rice.",
+        "cents": 1795,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Thịt Nướng",
+        "desc": "BBQ pork with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Nướng",
+        "desc": "BBQ pork chop with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Gà Nướng",
+        "desc": "BBQ chicken with rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Bò Đại Hàn",
+        "desc": "BBQ beef rib with rice.",
+        "cents": 2095,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Sườn Nướng, Tàu Hủ Ky",
+        "desc": "Shredded pork skin, BBQ pork chop, fried shrimp cake with rice.",
+        "cents": 2150,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Gà Nướng, Tàu Hủ Ky",
+        "desc": "Shredded pork skin, BBQ chicken, fried shrimp cake with rice.",
+        "cents": 2150,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Bì, Chả, Sườn Nướng, Tàu Hủ Ky",
+        "desc": "Shredded pork skin, egg cake, BBQ pork chop, fried shrimp cake with rice.",
+        "cents": 2250,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Thịt Nướng, Tôm Nướng, Tàu Hủ Ky",
+        "desc": "BBQ pork, BBQ shrimp, fried shrimp cake with rice.",
+        "cents": 2195,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Gà Nướng, Tôm Nướng, Tàu Hủ Ky",
+        "desc": "BBQ chicken, BBQ shrimp, fried shrimp cake with rice.",
+        "cents": 2195,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Sườn Nướng, Chạo Tôm, Tàu Hủ Ky",
+        "desc": "BBQ pork chop, grilled shrimp on sugarcane, fried shrimp cake with rice.",
+        "cents": 2195,
+        "label": "",
+        "section": "Cơm Tấm Thiên Hương"
+      },
+      {
+        "name": "Thịt Nướng, Tàu Hủ Ky, Bi, Chả, Chạo Tôm",
+        "desc": "BBQ pork, fried shrimp cake, shredded pork skin, egg cake, grilled shrimp on sugarcane with rice.",
+        "cents": 2495,
+        "label": "",
+        "section": "Đặc Biệt - Special Rice Combinations"
+      },
+      {
+        "name": "Sườn Nướng, Tàu Hủ Ky, Bì, Chả, Chạo Tôm",
+        "desc": "BBQ pork chop, fried shrimp cake, shredded pork skin, egg cake, grilled shrimp on sugarcane with rice.",
+        "cents": 2495,
+        "label": "",
+        "section": "Đặc Biệt - Special Rice Combinations"
+      },
+      {
+        "name": "Gà Nướng, Tàu Hủ Ky, Bì, Chá, Chạo Tôm",
+        "desc": "BBQ chicken, fried shrimp cake, shredded pork skin, egg cake, and grilled shrimp on sugarcane with rice.",
+        "cents": 2495,
+        "label": "",
+        "section": "Đặc Biệt - Special Rice Combinations"
+      },
+      {
+        "name": "Sườn Bò Đại Hàn, Tàu Hủ Ky, Bì, Chả, Chạo Tôm",
+        "desc": "BBQ beef rib, fried shrimp cake, shredded pork skin, egg cake, grilled shrimp on sugarcane with rice.",
+        "cents": 2495,
+        "label": "",
+        "section": "Đặc Biệt - Special Rice Combinations"
+      },
+      {
+        "name": "Tôm Thịt Nướng",
+        "desc": "Grilled shrimp and BBQ pork with rice vermicelli.",
+        "cents": 2095,
+        "label": "",
+        "section": "Bún Vermicelli"
+      },
+      {
+        "name": "Thịt Nướng",
+        "desc": "BBQ pork with rice vermicelli.",
+        "cents": 2095,
+        "label": "",
+        "section": "Bún Vermicelli"
+      },
+      {
+        "name": "Thịt Nướng, Chả Giò",
+        "desc": "BBQ pork and egg roll with rice vermicelli.",
+        "cents": 2095,
+        "label": "",
+        "section": "Bún Vermicelli"
+      },
+      {
+        "name": "Cơm Gà Đùi",
+        "desc": "Chicken thigh with style rice.",
+        "cents": 1950,
+        "label": "",
+        "section": "Cơm Gà Hải Nam - Hainan Chicken Rice"
+      },
+      {
+        "name": "Cơm Gà Ức",
+        "desc": "Chicken breast meat with style rice.",
+        "cents": 1995,
+        "label": "",
+        "section": "Cơm Gà Hải Nam - Hainan Chicken Rice"
+      },
+      {
+        "name": "Cơm Gà Cánh",
+        "desc": "Chicken wings with style rice.",
+        "cents": 1950,
+        "label": "",
+        "section": "Cơm Gà Hải Nam - Hainan Chicken Rice"
+      },
+      {
+        "name": "Cơm Gà Rô Ti",
+        "desc": "House special rotisserie chicken with tomato rice.",
+        "cents": 1950,
+        "label": "",
+        "section": "Cơm Gà Hải Nam - Hainan Chicken Rice"
+      },
+      {
+        "name": "Cơm Trắng (1 Chén)",
+        "desc": "Steamed rice (Bowl).",
+        "cents": 350,
+        "label": "",
+        "section": "Side Orders"
+      },
+      {
+        "name": "Trứng Ốpla (1 Trùng)",
+        "desc": "Fried egg (Each).",
+        "cents": 200,
+        "label": "",
+        "section": "Side Orders"
+      },
+      {
+        "name": "Lạp Xưởng (1 Cái)",
+        "desc": "Chinese sausage (Each).",
+        "cents": 400,
+        "label": "",
+        "section": "Side Orders"
+      },
+      {
+        "name": "Ly Súp",
+        "desc": "Soup (To Go).",
+        "cents": 350,
+        "label": "",
+        "section": "Side Orders"
+      },
+      {
+        "name": "Café Đen (Đá Nóng)",
+        "desc": "Vietnamese style black iced coffee | (Iced/Hot)",
+        "cents": 650,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Café Sữa (Đá Nóng)",
+        "desc": "Vietnamese style condensed milk iced coffee | (Iced/Hot)",
+        "cents": 700,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Trà (Đá Nóng)",
+        "desc": "Tea (Iced/Hot)",
+        "cents": 200,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Cam Vát",
+        "desc": "Fresh orange juice.",
+        "cents": 750,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Nước Dừa",
+        "desc": "Coconut",
+        "cents": 650,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Đá Chanh",
+        "desc": "Fresh lemonade",
+        "cents": 650,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Soda Chanh",
+        "desc": "Fresh lemon soda",
+        "cents": 750,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Soda Xí Muội",
+        "desc": "Salty plum soda",
+        "cents": 750,
+        "label": "",
+        "section": "Café - Vietnamese Style Coffee"
+      },
+      {
+        "name": "Jasmine Milk Tea",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Passion Fruits",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Lychee & Rose",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Strawberry",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Strawberry Lychee",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Guava",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Mango",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Peach",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Assam Milk Tea",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Winter Melon Oolong",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Tea"
+      },
+      {
+        "name": "Thai Milk Tea",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "House Special"
+      },
+      {
+        "name": "Coconut Milk",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "House Special"
+      },
+      {
+        "name": "Taro Milk",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "House Special"
+      },
+      {
+        "name": "Honeydew Milk",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "House Special"
+      },
+      {
+        "name": "Sinh Tố Dâu",
+        "desc": "Strawberry shake",
+        "cents": 750,
+        "label": "",
+        "section": "Sinh Tổ - Fruit Mixed Drink"
+      },
+      {
+        "name": "Sinh Tố Bơ",
+        "desc": "Avocado shake",
+        "cents": 750,
+        "label": "",
+        "section": "Sinh Tổ - Fruit Mixed Drink"
+      },
+      {
+        "name": "Sinh Tố Xoài",
+        "desc": "Mango shake",
+        "cents": 750,
+        "label": "",
+        "section": "Sinh Tổ - Fruit Mixed Drink"
+      },
+      {
+        "name": "Pearl",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Crystal Pearl",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Passion Fruit Popping",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Strawberry Popping Ball",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Mango Popping Ball",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Coffee Jelly",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Lychee Jelly",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Grass Jelly",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Rainbow Jelly",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Mango Jelly",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      },
+      {
+        "name": "Heart Strawberry Jelly",
+        "desc": "",
+        "cents": 95,
+        "label": "",
+        "section": "Toppings"
+      }
+    ],
+    "price_note": "Prices are from the menu on Com Tam Thien Huong's own website; the Story Rd shop's online ordering lists lower prices on rice plates.",
+    "flags": [
+      "Sources: comtamthienhuong.net (home, food menu, drink menu, locations page), their BLogic online ordering page linked from the site's \"Order\" button (Capitol shop) and the same ordering site's Story Rd shop reached via its \"Change Location\" picker (browsing only, no cart), and Glenn's screenshots 247876-* (@comtam_thienhuong Instagram + site footer). Fetched 2026-10-11.",
+      "SHOP 1 (main fields): 909 Story Rd Unit 100, San Jose, CA 95122 · (408) 275-6650 · Mon-Sun 10am-2:45pm & 4pm-7:45pm (site locations page). The home-page footer drops \"Unit 100\".",
+      "SHOP 2: 1759 East Capitol Expressway, San Jose, CA 95121 · (408) 274-8188 · Mon-Sun 10am-2:45pm & 4pm-7:45pm (site). The site header phone (408)-274-8188 is this shop's.",
+      "DO PRICES DIFFER BETWEEN SHOPS? The website publishes ONE menu for both shops. The Capitol shop's online ordering matches the website menu (only difference: Cơm Gà Ức $19.50 online vs $19.95 on the site). The Story Rd shop's online ordering lists LOWER prices on 53 dishes, mostly $2.50-$3.50 less (e.g. Thịt Nướng $18.00 vs $20.95; Bì, Chả $15.00 vs $17.95; special combos $22.00 vs $24.95; Cơm Gà Rô Ti $11.95 vs $19.50); phở is $13.95 at both. The Story Rd ordering page also shows different hours (10:00 AM - 08:00 PM) and ZIP 95135, so it may be out of date. Editor decides; I used the website menu prices.",
+      "order_url is the link on their site, which opens the Capitol shop. The Story Rd shop's ordering page is https://order.blogicsystems.com/client/store/2020302/detail/2020302 (reached from the Change Location picker, not linked directly from the site).",
+      "Items: every priced item on the website food menu (76) and drink menu (36, including 11 bubble-tea toppings at $0.95 each). No alcohol on either menu. \"$8.00/3 rolls\" and \"$3.00/1 pc\" are kept as the price with the unit added to the description. The site's menu-wide note (raw/undercooked consumer advisory) and section add-ons are not items: Appetizer \"Add Extra Sauce +$1.00\"; Phở \"Extra Meatball +$2.50 | Steak on the Side +$1.50 | Extra Chén: Nạm, Gầu, Gân, Bò Viên +$7.00 | Extra Chén: Tải +$9.00\".",
+      "Names and descriptions kept exactly as the site writes them, including its spelling slips (e.g. \"Tải, Nam, Gầu\", \"bricket\", \"brisker\", \"Sinh Tổ\" section name, \"Bi, Chả\"). The site writes the name \"Cơm Tấm Thiên Hương\" with Vietnamese marks; page title, logo and Instagram use \"Com Tam Thien Huong\" (used in name_exact).",
+      "The site does not link the Instagram (only Facebook and Google); handle comtam_thienhuong is from Glenn's screenshot (bio: \"Taste of Saigon, right here in San Jose\"). No email published. The site offers catering, reservations and private parties.",
+      "Related businesses on the same site's locations page (\"Our family\"), not part of this page: Trung Nguyen Legend Coffee, 909 Story Rd Unit 100 (ordering site says unit D110), (408) 564-5490, Mon-Sun 8am-7:45pm, trungnguyenlegendsj.com; Thien Huong Sandwiches, 1631 E Capitol Expy Ste #107, San Jose 95121, (408) 499-3638, Mon-Sun 5am-7:45pm, thienhuongsandwiches.com."
+    ]
+  },
+  {
+    "id": "b_createdbyyou",
+    "name_exact": "Created By You",
+    "one_line": "Hands-on DIY art studio in Brentwood for walk-in projects, kids' and adult classes, homeschool enrichment and private parties.",
+    "cuisine": "DIY art studio",
+    "address": "1300 Central Blvd., Suite D, Brentwood, CA 94513",
+    "phone": "(925) 392-8672",
+    "email": "createdbyyoubrentwood@gmail.com",
+    "hours": "Tue-Sat 11am-4pm (posted as summer hours); closed Sun-Mon",
+    "instagram": "createdbyyouartbrentwood",
+    "site_kind": "own",
+    "site_url": "https://createdby-you.com/",
+    "order_url": "https://createdby-you.com/events/",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Package 1 – Same Day Ceramics",
+        "desc": "10 guests, 2 hours in the private party room; additional guests $13 each. Ceramic pieces priced $13 and under, clear glazed & sealed, decorative only, take home same day.",
+        "cents": 23500,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 2 – DIY Wood Signs",
+        "desc": "Option B small signs 7\" x 8\", 10 guests (additional guests $18 each). Option A large signs 5.5\" x 24\" or 11\" x 12\": $295 for 10 guests (additional guests $22 each).",
+        "cents": 24000,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 3 – Canvas Painting",
+        "desc": "8\" x 10\" canvas, 10 guests; 12\" x 12\" canvas $265. Additional guests $15 each.",
+        "cents": 24500,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 4 – Resin Art",
+        "desc": "Create a 6\" x 6\" resin tile, ocean or geode theme. 10 participants maximum, later time slot only, 2 hours in party room. Charcuterie board price determined by size.",
+        "cents": 29000,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 5 – Craft Creations: Dream Catchers",
+        "desc": "10 guests. 3D wood art also available, price varies by project.",
+        "cents": 28000,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 8 – Charm Factory",
+        "desc": "Picture Frame, 10 guests included; Decorative Box $235, Combo (med brush, frame, box) $235, Hair Brush $250. Additional guests $15 each. Charms, beads, glitter & sparkle.",
+        "cents": 22500,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 9 – Jewelry & Charms",
+        "desc": "10 guests; each guest receives 3 oz of beads & charms to design their own jewelry (2-3 bracelets). Additional guests $13 each.",
+        "cents": 24000,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 10 – Candle Making",
+        "desc": "10 guests; create a candle in a teacup, bucket or jar (10-12oz), choose scent and color, decorate with dried flowers and charms. Additional guests $17 each.",
+        "cents": 27000,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "Package 11 – Hat Painting & Decorating",
+        "desc": "Baseball hats, 10 people; straw hats $270, felt hats $290. Additional participants $17 each.",
+        "cents": 26000,
+        "label": "",
+        "section": "Party Packages"
+      },
+      {
+        "name": "On-Site Photo Booth Prints",
+        "desc": "25 2×3 prints; 40 2×3 prints $35; 4×6 prints: 25 for $32, 40 for $45. Props and styled backdrop included.",
+        "cents": 2500,
+        "label": "",
+        "section": "Party Add-Ons"
+      },
+      {
+        "name": "Face Painting Add-On",
+        "desc": "2 hours; faces, hands and arms painted with festive designs.",
+        "cents": 9000,
+        "label": "",
+        "section": "Party Add-Ons"
+      },
+      {
+        "name": "5.5 X 24 inch or 11 x 12 inch",
+        "desc": "DIY wood sign; you pick the stencil, colors, stain and distressing.",
+        "cents": 3500,
+        "label": "",
+        "section": "DIY Wood Signs"
+      },
+      {
+        "name": "15 in round",
+        "desc": "DIY wood sign.",
+        "cents": 4500,
+        "label": "",
+        "section": "DIY Wood Signs"
+      },
+      {
+        "name": "11 X 24 inch",
+        "desc": "DIY wood sign.",
+        "cents": 6000,
+        "label": "",
+        "section": "DIY Wood Signs"
+      },
+      {
+        "name": "18 inch round",
+        "desc": "DIY wood sign.",
+        "cents": 6000,
+        "label": "",
+        "section": "DIY Wood Signs"
+      },
+      {
+        "name": "11 X 24 inch or 18 inch Serving Tray or 18 inch Lazy Susan",
+        "desc": "DIY wood serving tray or lazy Susan.",
+        "cents": 6500,
+        "label": "",
+        "section": "DIY Wood Signs"
+      },
+      {
+        "name": "11 X 48 inch Porch Boards",
+        "desc": "DIY wood porch board.",
+        "cents": 7000,
+        "label": "",
+        "section": "DIY Wood Signs"
+      },
+      {
+        "name": "4th to 6th Grade – Science/History/Art & Drama",
+        "desc": "Tuesdays 11-2:45, Aug 11 2026 to May 2027. Per month.",
+        "cents": 15000,
+        "label": "",
+        "section": "Homeschool Classes"
+      },
+      {
+        "name": "7th & Up – Science/History/Art & Drama",
+        "desc": "Wednesdays 11-2:45, Aug 12 2026 to May 2027. Per month.",
+        "cents": 15000,
+        "label": "",
+        "section": "Homeschool Classes"
+      },
+      {
+        "name": "2nd & 3rd Grade – Science/History/Art",
+        "desc": "Thursdays 11-2:15, Aug 13 2026 to May 20 2027. Per month.",
+        "cents": 15000,
+        "label": "",
+        "section": "Homeschool Classes"
+      },
+      {
+        "name": "Kinder & 1st Grade – Science/History/Art",
+        "desc": "Fridays 11-1, Aug 14 2026 to May 21 2027. Per month.",
+        "cents": 11000,
+        "label": "",
+        "section": "Homeschool Classes"
+      },
+      {
+        "name": "High School – Life Skills with Art",
+        "desc": "Fridays 2-3, Aug 14 to Dec 18 2026.",
+        "cents": 10000,
+        "label": "",
+        "section": "Homeschool Classes"
+      },
+      {
+        "name": "Girls Art Club",
+        "desc": "Age 7 & up, 1 hour, meets monthly. Next: Mon Oct 12, 4-5PM.",
+        "cents": 2000,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Littles Art Class – 3 sessions",
+        "desc": "Ages 5 to 8, $25 per session. Oct 14, 21 & 28 and Nov 4, 11 & 18, 4-5PM.",
+        "cents": 7500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Sketching Art Class for Beginners",
+        "desc": "2 sessions (Dec 1 & 8, 4-5PM, ages 7 & up); 3-session series Oct 13, 20 & 27 is $75 (ages 9 & up, $25 per session).",
+        "cents": 5000,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Sketching Art Class for Intermediate – 2 sessions",
+        "desc": "Ages 9 & up. Nov 11 & 18 and Dec 9 & 16, 5:30-6:30PM.",
+        "cents": 5000,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Intermediate Art Class – 3-Session Series",
+        "desc": "Ages 7 & up. Oct 14, 21 & 28, 5-6PM.",
+        "cents": 7500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Creative Art Experience – 3 weeks",
+        "desc": "Ages 9 to adult; painting, sewing, jewelry, resin, porcelain clay and more. Tuesdays 5-6PM: Oct 13/20/27, Nov 3/10/17, Dec 1/8/15.",
+        "cents": 7500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Art Club – 3 Sessions",
+        "desc": "Ages 7 & up, $25 per session; wood, canvas, resin and more. Saturdays 12-1PM: Nov 7/14/21, Dec 5/12/19.",
+        "cents": 7500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Porcelain Clay Workshop",
+        "desc": "Ages 7 & up, air-dry porcelain clay. Fri Oct 16 and Fri Dec 4, 4-5PM.",
+        "cents": 2500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Jewelry Class",
+        "desc": "Ages 7 & up, 6 students; clay beads, glass, charms, stones, metal. Oct 29, 4-5PM.",
+        "cents": 5000,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Cracked Glass Mosaic & Resin Art Workshop",
+        "desc": "Sat Oct 17, 2-4PM.",
+        "cents": 3500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "The Alchemist’s Table: Spooky Potion & Bracelet Workshop",
+        "desc": "Custom Halloween potion bottle and matching bracelet; square vial, round-bellied bottle or apothecary flask. Sat Oct 17, 5-6:30PM.",
+        "cents": 3200,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Bonsai Workshop",
+        "desc": "Prune, shape and groom your own bonsai. Sat Oct 24, 2-4PM.",
+        "cents": 4500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Resin Geode Art Workshop",
+        "desc": "8\" x 10\" geode wall art; 9\" x 11\" $75, 14\" x 7\" charcuterie board $80. Oct 29, 6:30-8:30PM.",
+        "cents": 6500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Ocean Resin Charcuterie Board Workshop",
+        "desc": "15 x 7 acacia board with handle; ages 13 to adult, max 8 students. Nov 13, 5-6:30PM.",
+        "cents": 9500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Resin Gift Workshop",
+        "desc": "7 x 14 acacia board with handle; bamboo shapes $80-$90, 14 inch round acacia $85, apple wood United States 16 x 9 $95. Dec 17, 6:30-8:30PM.",
+        "cents": 7500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Beginning Crochet – 2 classes",
+        "desc": "Ages 12 & up 4-5:30PM, or adults only 6-7:30PM. Nov 10 & 12 and Nov 17 & 19.",
+        "cents": 500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Paint, Plant & Bingo",
+        "desc": "Adults-only night: paint a flower pot, plant a flower to take home, play bingo. Nov 20 and Dec 18, 6-8PM.",
+        "cents": 3500,
+        "label": "",
+        "section": "Classes & Workshops"
+      },
+      {
+        "name": "Sip N Paint Bingo Night",
+        "desc": "Off-site paint-and-bingo nights at partner venues: Favalora Tasting Room (Oakley) Oct 21 $30; The Lounge Oct 15 & Nov 12 $35, Dec 3 $40; Vic Stewart's Dec 10 $40.",
+        "cents": 3000,
+        "label": "",
+        "section": "Off-Site Events"
+      }
+    ],
+    "price_note": "Prices come from Created By You's own website: the party packages page, the DIY wood sign size list, the homeschool page and the ticket prices on their events calendar.",
+    "flags": [
+      "Sources: createdby-you.com home, /party, /woodsigns, /school, /off-site-events-collaborations, and the site's own events calendar (The Events Calendar + WooCommerce tickets, read via the site's public /wp-json endpoints). Nothing was added to cart or submitted.",
+      "Address conflict: website says 1300 Central Blvd., Suite D, Brentwood, CA 94513 (\"corner of Central and Brentwood Blvd.\"); Instagram bio says Suite 3. Used the website's Suite D.",
+      "Hours conflict: homepage still labels Tue-Sat 11-4PM as 'Summer HOURS' (closed Sun & Mon; opens 10AM on art-camp days; later for events, classes and parties). The /party page lists 'Regular Hours: Tuesday–Thursday 12–6, Friday 11-5, Saturday 11–4'. Editor to pick; I used the homepage hours.",
+      "order_url is their own events/tickets calendar (https://createdby-you.com/events/), where classes and workshops are booked; set to null if only food-style ordering counts.",
+      "Classes & Workshops and Off-Site Events items are dated sessions taken from the calendar as of 11 Oct 2026 (prices vary a little between runs, e.g. Girls Art Club was $18 in Sept and $20 in Oct; Jewelry Class $25 in earlier runs, $50 on Oct 29). They will go stale; editor may keep only the recurring formats or drop the dated detail. Past sessions were excluded.",
+      "'Sip N Paint Bingo Night' is a paint/bingo ticket held at bars/tasting rooms (no drinks priced); drop it if off-site bar events should not appear. Also left out: 'Vic Stewart's Wood Sign Sip N Paint' Nov 5 ($48-$75, same wood-sign pieces), 'Book Your Party' calendar slots ($50 = party deposit), a Nov 6 porcelain clay and Nov 10 & 17 beginner sketch session with no price listed.",
+      "Party packages left out because no price is published: Package 6 – DIY Wood Shop ('Project pricing based on selection') and Package 7 – Custom Creative Party (tie dye, glass painting, rock painting, plant arrangements, science projects; 'Pricing determined by project selection'). 3D wood art and resin charcuterie boards are 'price varies'/'size TBD'.",
+      "Party booking terms (not items): $50 deposit within 48 hours of booking, non-refundable after 72 hours; 2-hour window plus 15 min before/after; $50 per 15 min past end time; after-hours parties +$75. Bring your own food & drinks (drinks must have lids). Saturday parties book online; other days contact Laura at 925-392-8672 / createdbyyoubrentwood@gmail.com.",
+      "Homeschool: each $ amount on /school follows that class's block (4th-6th $150/mo, 7th & up $150/mo, 2nd-3rd $150/mo, K-1st $110/mo, High school Life Skills $100 with no period stated). Approved vendor with Vista Oaks, Valley View, Visions & Compass; enrollment by email.",
+      "Walk-ins: ceramics, canvas, wood projects etc. during business hours; no walk-in price list is published apart from the wood sign sizes (party page says ceramic pieces are 'priced $13 and under').",
+      "Instagram display name 'Created By You'; bio: DIY art studio in Brentwood (wood signs, resin, wood art, ceramics, painting, drawing, glass art, crafts, art classes, homeschool classes)."
+    ]
+  },
+  {
+    "id": "b_thehendrys",
+    "name_exact": "The Hendrys",
+    "one_line": "Offbeat, candid wedding and elopement photography from Sarah and Darren, a Scottish duo based in Sebastopol, serving Sonoma County and the Bay Area.",
+    "cuisine": "Wedding photographers",
+    "address": null,
+    "phone": "(626) 489-8656",
+    "email": "howdy@thehendrys.co",
+    "hours": null,
+    "instagram": "the_hendrys",
+    "site_kind": "own",
+    "site_url": "https://thehendrys.co/",
+    "order_url": null,
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Weddings",
+        "desc": "6 continuous hours of coverage, 2 photographers, 50 images per hour, photography timeline, online gallery with downloadable images, personal and printing rights. Weddings in Los Angeles County and the Bay Area; travel fees elsewhere. Extra coverage at hourly rates.",
+        "cents": 570000,
+        "label": "From",
+        "section": "Pricing"
+      },
+      {
+        "name": "Bay Area Elopements",
+        "desc": "4 hours of coverage. Monday through Thursday only, 15 people maximum.",
+        "cents": 390000,
+        "label": "From",
+        "section": "Pricing"
+      },
+      {
+        "name": "Elopements",
+        "desc": "2 continuous hours, 1 photographer, 50 images per hour, basic planning help. This rate applies to elopements within 25 miles of Pasadena only; travel fees further afield.",
+        "cents": 220000,
+        "label": "From",
+        "section": "Pricing"
+      },
+      {
+        "name": "Sessions",
+        "desc": "1.5 continuous hours, 1 photographer, 75 images, one location. Local sessions within 15 miles of Pasadena, Monday through Wednesday only.",
+        "cents": 127000,
+        "label": "From",
+        "section": "Pricing"
+      }
+    ],
+    "price_note": "Starting prices are from the pricing page on The Hendrys' own website; final quotes depend on coverage and travel.",
+    "flags": [
+      "Pricing source: https://thehendrys.co/pricing/ is public and first-party but NOT linked from the site menu (found in the site's own WordPress page index); last modified 15 Feb 2026. It is written for their Los Angeles/Pasadena base (elopement and session rates tied to Pasadena), so it may predate the move north. Editor: decide whether to publish these prices; only 'Bay Area Elopements from $3,900' and 'Weddings from $5,700' are clearly Bay Area-relevant.",
+      "Other price statements on their site: the FAQ says 'elopements and Weddings start from $2,200 and sessions start from $1,270' (conflicts with weddings from $5,700); the Sebastopol and Bay Area landing pages say they are trimming $500 off their regular wedding rate for a limited time ('for our move up north in 2026'). The discount is not applied to any item.",
+      "Service area: homepage says 'Based in Sebastopol, Serving Sonoma County and THE BAY AREA'; FAQ says home is Sebastopol, Sonoma County. FAQ is inconsistent on travel (one answer: traveling around the USA for weddings/elopements with a travel fee, sessions local to Pasadena; another: only traveling around the West Coast). No street address published (address left null; city is Sebastopol, CA). No hours published.",
+      "Contact: contact page shows howdy@thehendrys.co and 626-489-8656 (a Los Angeles-area number) plus a booking form (not submitted). The site's structured data also lists thehendrys@hotmail.com. Facebook: facebook.com/thehendrysimages; Pinterest: the_hendrys.",
+      "Instagram (Glenn's screenshot 247882): @the_hendrys, verified, display name 'The Hendrys | Sonoma County and Bay Area Wedding Photographers', category Photographer, bio 'BAY AREA / Your friendly Scottish neighborhood photographers! ... Weird + wonderful = our jam', location Sebastopol, California, link thehendrys.co.",
+      "Background from their site: photographing weddings since 2011, together 20+ years, vegan and sober, two rescue bunnies; press mentions on the site include NYT, HuffPost, Vogue Australia, Rock n Roll Bride, Junebug.",
+      "Booking process per site: contact form, optional video call, sign agreement and pay booking retainer (full amount for sessions), timeline draft 1-2 months before."
+    ]
+  },
+  {
+    "id": "b_wiseupnshine",
+    "name_exact": "Wise Up N Shine Mobile Detailing",
+    "one_line": "Luxury mobile auto detailing that comes to you anywhere in the Bay Area, plus 24/7 tire and roadside assistance; grand opening Oct 17 in San Rafael.",
+    "cuisine": "Mobile auto detailing",
+    "address": null,
+    "phone": null,
+    "email": null,
+    "hours": "24/7 tire & roadside assistance; detailing hours not published",
+    "instagram": "wiseupnshine",
+    "site_kind": "linktree",
+    "site_url": "https://linktr.ee/WiseUpNShine",
+    "order_url": null,
+    "prices_published": false,
+    "items": [],
+    "price_note": "Wise Up N Shine doesn't publish prices on its own pages; contact them for a quote.",
+    "flags": [
+      "Linktree (linktr.ee/WiseUpNShine, title 'WiseUpNShine', bio 'Luxury mobile auto care and 24/7 tire & roadside assistance. Join us for our grand opening on October 17!') has exactly 3 links: an Eventbrite grand-opening page, their Instagram, and their TikTok (@wise.up.n.shine). No own website: their 23 Sep 2026 Instagram caption says 'Website & Our Very Own Mobile App Launching Soon!'. site_kind = linktree.",
+      "No prices anywhere first-party. Their Instagram has a 'PACKAGES ✨' story highlight, but logged-out Instagram shows 'Sign up to see more story highlights' (login wall), so package prices were not seen. Pinned post captions contain no prices. items left empty.",
+      "Grand opening (from the Eventbrite page their Linktree links to; organizer listed as 'The Jamison Agency LLC'): Sat Oct 17 2026, 4-8PM, venue 'Wise Up N Shine, 135 Gary Place, San Rafael, CA 94901'; all ages, face painting for kids, special guests Big Sad 1900 and Philthy Rich; tickets free to $23.18. Editor decides whether 135 Gary Place is their business address (venue is named Wise Up N Shine, but the business describes itself as mobile 'We come to YOU' and the page was made by an agency) — address left null.",
+      "No phone or email published on Linktree, Instagram bio or TikTok bio (Instagram has a Message button only).",
+      "Instagram (Glenn's screenshots 247848 + logged-out view 11 Oct 2026): @wiseupnshine, verified, display name 'WISE UP N SHINE MOBILE DETAILING', category Auto Detailing Service; bio: Serving The Bay Area, @wiseupspotlight, Luxury Mobile Auto Care, 24/7 Tire & Roadside Assistance, Coffee • PS5 • Sports, 5 Star Google Rated. Captions describe a van with a fridge, coffee machine, two TVs, a PS5 and their own Spotless Water System; started July 2025.",
+      "'5 Star Google Rated' is a self-claim about a third-party rating; not used in copy."
+    ]
+  },
+  {
+    "id": "b_chefmike",
+    "name_exact": "Chef Mike at Oakland Athletic Club",
+    "one_line": "Oakland native Chef Michael Woods brings bold, soulful cooking to Oakland Athletic Club, the 59 Grand Ave sports bar two blocks from Lake Merritt.",
+    "cuisine": "Sports bar & tavern food",
+    "address": "59 Grand Ave, Oakland, CA 94612",
+    "phone": "(510) 285-6458",
+    "email": "info@oaklandathleticclub.com",
+    "hours": "Mon-Fri 11am-11pm, Sat 8am-11pm, Sun 8am-10pm (dinner 5-10pm)",
+    "instagram": "oakathclub",
+    "site_kind": "own",
+    "site_url": "https://www.oaklandathleticclub.com/",
+    "order_url": "https://order.toasttab.com/online/oakland-athletic-club-59-grand-avenue",
+    "prices_published": true,
+    "items": [
+      {
+        "name": "Bar Nuts",
+        "desc": "A mix of peanuts, pumpkin seeds, almonds, and crispy chickpeas, tossed with fresh rosemary oil. Vegan, GF.",
+        "cents": 500,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Cheese & Pretzels",
+        "desc": "Melted Chihuahua Cheese, Firebrand Salted Pretzel. Veg.",
+        "cents": 1200,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Fried Burrata",
+        "desc": "Roasted Red Pepper Sauce. Veg.",
+        "cents": 1400,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Braised Oxtail Fries",
+        "desc": "Cheddar Cheese Sauce.",
+        "cents": 1900,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Lemon Pepper Wings",
+        "desc": "Avocado Blue Cheese Dipping Sauce, Pickled Veggies. GF.",
+        "cents": 1400,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Buffalo Wings",
+        "desc": "Avocado Blue Cheese Dipping Sauce, Pickled Veggies. GF.",
+        "cents": 1400,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Nachos",
+        "desc": "Black Beans, Chihuahua Cheddar Cheese Sauce, Serrano Peppers, Guacamole. Add carnitas or chicken tingas +$4. Veg.",
+        "cents": 1400,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Chips & Guacamole",
+        "desc": "Veg, GF.",
+        "cents": 1200,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Black Beans and/or Green Brown Rice",
+        "desc": "Queso Fresco. Add fried plantain +$3; add carnitas or chicken tinga +$4. Veg, GF.",
+        "cents": 1400,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Mac & Cheese",
+        "desc": "Add carnitas, tingas, oxtail, or bacon +$6. Veg.",
+        "cents": 1200,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Corn Bread",
+        "desc": "Honey Butter. Veg.",
+        "cents": 800,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "2 Tacos",
+        "desc": "Chicken Tingas, Guacamole, Queso Fresco – or – Carnitas, Salsa Macha, Pickled Red Onions.",
+        "cents": 1200,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Burger",
+        "desc": "Choice of Cheddar, Blue, or Chihuahua Cheese, Fries. Add bacon +$3; add oxtail gravy to fries +$8.",
+        "cents": 1800,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Baby Kale Salad",
+        "desc": "Roasted Cauliflower, Pumpkin Seeds, Toasted Garlic Sherry Dressing, Cotija cheese. Veg.",
+        "cents": 1600,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Chopped Chicken Salad",
+        "desc": "Poached Egg, Blue Cheese, Green Beans, Lemon Dressing, Crispy Garbanzo Beans. GF.",
+        "cents": 1800,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Little Gem Caesar Salad",
+        "desc": "Croutons. Add grilled chicken or shrimp +$5.",
+        "cents": 1500,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Spicy Shrimp Ceviche",
+        "desc": "Squid Ink, Cucumber, Fresno Peppers, Red Onion, Mango, Tostones.",
+        "cents": 1800,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Burrito",
+        "desc": "Flour Tortilla, Black Beans, Green Rice, Chihuahua Cheese, Guacamole, Salsa Macha, side of Chips. Contains peanuts and sesame.",
+        "cents": 1700,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Side of fries",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Onion Rings",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "All Day"
+      },
+      {
+        "name": "Yam and Cheese Sandwich",
+        "desc": "Griddled Yams, Roasted Poblano Peppers, Fiscalini Cheddar, Croissant Toast, Chopped Salad, Sherry Dressing. Veg.",
+        "cents": 1500,
+        "label": "",
+        "section": "Lunch"
+      },
+      {
+        "name": "Fried Chicken Sandwich",
+        "desc": "Red Cabbage-Jalapeno Coleslaw, Spicy Mayonnaise, Ciabatta Roll, Onion Rings.",
+        "cents": 1600,
+        "label": "",
+        "section": "Lunch"
+      },
+      {
+        "name": "Cubano Sandwich",
+        "desc": "Braised Pork, Slow-Cooked Brisket, Chihuahua Cheese, Dijon Mustard, Pickles, Boule Bread, Fried Plantain. Also on weekend brunch.",
+        "cents": 1800,
+        "label": "",
+        "section": "Lunch"
+      },
+      {
+        "name": "Heirloom Tomato BLT",
+        "desc": "Heirloom Tomatoes, Thick Cut Bacon, Little Gems, Lemon Aioli, French Fries.",
+        "cents": 1500,
+        "label": "",
+        "section": "Lunch"
+      },
+      {
+        "name": "36-hr Brisket",
+        "desc": "Cornbread, Chimichurri Mayo, Roasted Cauliflower Quarter.",
+        "cents": 3200,
+        "label": "",
+        "section": "Dinner"
+      },
+      {
+        "name": "Whole Roasted Sweet Potato",
+        "desc": "Roasted Poblano Peppers, Sikil Pak, Cojita Cheese. Veg, GF.",
+        "cents": 2400,
+        "label": "",
+        "section": "Dinner"
+      },
+      {
+        "name": "Coffee-Crusted Pork Loin",
+        "desc": "Jameson Cream Sauce, Toasted Bread, Braised Baby Kale.",
+        "cents": 3000,
+        "label": "",
+        "section": "Dinner"
+      },
+      {
+        "name": "Paprika-Seared Shrimp",
+        "desc": "Green Brown Rice, Lemon Aioli. GF.",
+        "cents": 3200,
+        "label": "",
+        "section": "Dinner"
+      },
+      {
+        "name": "Crispy Roasted Chicken",
+        "desc": "Roasted Red Pepper Sauce, Black Beans, Queso Fresco. GF.",
+        "cents": 2800,
+        "label": "",
+        "section": "Dinner"
+      },
+      {
+        "name": "Fried Chicken & Waffles",
+        "desc": "Crispy Chicken, Cornmeal Waffle, Hot Honey Sauce.",
+        "cents": 1700,
+        "label": "",
+        "section": "Brunch"
+      },
+      {
+        "name": "Shrimp & Grits",
+        "desc": "Sauteed Paprika Shrimp, Andouille Sausage, Blue Corn Cheddar Cheese Grits, Red Peppers, Green Onions. Add an egg +$3. GF.",
+        "cents": 2000,
+        "label": "",
+        "section": "Brunch"
+      },
+      {
+        "name": "Two-Egg Breakfast",
+        "desc": "Two eggs any style, Yukon Gold Home Fries; choice of toasted sourdough bread or English muffin, bacon or andouille sausage.",
+        "cents": 1600,
+        "label": "",
+        "section": "Brunch"
+      },
+      {
+        "name": "Croissant French Toast",
+        "desc": "Firebrand Croissant Toast, Orange Berry Compote, Lavender Whipped Cream. Veg.",
+        "cents": 1600,
+        "label": "",
+        "section": "Brunch"
+      },
+      {
+        "name": "Egg OACMuffin",
+        "desc": "Firebrand English Muffin, 36-hr Brisket, Crispy Fiscalini Cheddar, Scrambled Egg, Yukon Gold Home Fries.",
+        "cents": 1800,
+        "label": "",
+        "section": "Brunch"
+      },
+      {
+        "name": "Sweet Potato Hash",
+        "desc": "Crispy Sweet Potatoes, Maitake Mushrooms, Red Bell Peppers, Confit Shallots & Garlic, Charred Scallion. Add an egg +$3. Vegan, GF.",
+        "cents": 1600,
+        "label": "",
+        "section": "Brunch"
+      },
+      {
+        "name": "Bacon",
+        "desc": "",
+        "cents": 500,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "Andouille Sausage",
+        "desc": "",
+        "cents": 500,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "Blue Corn Cheddar Cheese Grits",
+        "desc": "",
+        "cents": 400,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "Yukon Gold Home Fries",
+        "desc": "",
+        "cents": 400,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "Sourdough Toast",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "English Muffin",
+        "desc": "",
+        "cents": 300,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "1 Egg Side",
+        "desc": "2 Eggs Side $4.",
+        "cents": 300,
+        "label": "",
+        "section": "Brunch Sides"
+      },
+      {
+        "name": "Tcho Chocolate Brownie, Pistachio Ice Cream",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "Vanilla Ice Cream, Maldon Salted Chocolate Chip Cookie",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "Croissant Loaf Rum Raisin Bread Pudding, Whipped Cream",
+        "desc": "",
+        "cents": 900,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "3 scoops Rocky Road Ice Cream",
+        "desc": "",
+        "cents": 700,
+        "label": "",
+        "section": "Desserts"
+      },
+      {
+        "name": "San Pellegrino",
+        "desc": "",
+        "cents": 600,
+        "label": "",
+        "section": "NA Beverages"
+      },
+      {
+        "name": "Ginger Beer",
+        "desc": "",
+        "cents": 500,
+        "label": "",
+        "section": "NA Beverages"
+      },
+      {
+        "name": "Squirt",
+        "desc": "",
+        "cents": 350,
+        "label": "",
+        "section": "NA Beverages"
+      }
+    ],
+    "price_note": "Prices come from Oakland Athletic Club's own menu on oaklandathleticclub.com and its Toast online-ordering page.",
+    "flags": [
+      "Chef Mike (first-party facts only): Oakland Athletic Club's own Instagram post of 10 Oct 2026 (collab with @mik3_w00ds, instagram.com/oakathclub/p/DeVPNcCmSs6/) introduces 'Oakland native Chef Michael Woods' bringing bold, soulful cooking to OAC; says his cuisine is Pan-African, he is a Le Cordon Bleu graduate, worked at Zuni Cafe, Delfina, Plum and Gather, staged at The Fat Duck and The Ledbury, and draws on New Orleans and the Caribbean. The club's website does not name him anywhere (searched all pages for chef/Mike/Michael/Woods).",
+      "Chef Mike's own Instagram @mik3_w00ds loaded logged-out without a login wall (11 Oct 2026): display name 'Michael Woods'; bio '1st Corinthians 13:11 / Chopped Black History Month '22 / Supermarket Stakeout S7 E4 Winner / @foodnetwork / Father / Private Chef'; link linktr.ee/Mr.Woods and 1 more (not followed, per brief). The festusfeasts reel was not used as a source.",
+      "instagram field holds the club's handle (oakathclub) per the brief's 'club facts in the fields'; editor may prefer mik3_w00ds since the page is named for Chef Mike.",
+      "Menu sources: (1) the menu image on oaklandathleticclub.com/menu (screenshot dated 27 Jul 2026: All Day, Lunch 11AM-3PM, Dinner 5-10PM) and its brunch menu image; (2) live Toast ordering page (rendered 11 Oct 2026, a Sunday, so it showed only Weekend All Day, Brunch and NA Beverages). Spicy Shrimp Ceviche, Burrito, Side of fries, Onion Rings, brunch sides, desserts and sodas are Toast-only. Burrito showed OUT OF STOCK on Toast.",
+      "Price conflicts site image vs Toast: Shrimp & Grits $19 vs $20, Sweet Potato Hash $15 vs $16 — used Toast (current ordering). All other overlapping prices match. Toast lists wings as one 'Wings' item $14 and tacos as separate Chicken Tingas / Carnitas Tacos $12; the site menu wording was kept.",
+      "Spelling fixes: Toast 'San Pelligrino' → San Pellegrino, 'GingerBeer' → Ginger Beer. 'Cojita Cheese' kept as printed on their menu (likely Cotija).",
+      "Left out (alcohol): weekday happy hour 3-6pm ($1 off draft beer, tap wine, house and well cocktails; Radler + Mezcal, Modelo + Whiskey, Henny + Hazy, Margarita and Mezcalera pitchers) and brunch cocktails (Mimosa, Bloody Mary, Michelada, CJ, Margarita, Mezcalera).",
+      "Hours: contact page table Mon-Fri 11:00am-11pm, Sat 8:00am-11pm, Sun 8:00am-10pm (dinner 5-10pm); 'on specific game days we open earlier'. Brunch times conflict across their pages: menu page 'Saturdays and Sundays from 8am to 3pm', homepage 10am-3pm with pre-brunch 8-10am, FAQ 10am-3pm, brunch menu image 11AM-3PM; Instagram bio says weekend brunch 8-3 and 'Doors & kitchen 6:45am weekends'. Weekday lunch 11-3, happy hour 3-6 (Mon-Fri).",
+      "Club background (their site): reopened in 2026 at 59 Grand by six Oakland residents (OIAST, LLC) after the Athletic Club Oakland closed; official bar partner of the Golden State Valkyries, Oakland Roots & Soul and Oakland Ballers; 40 TVs; all ages until the kitchen closes around 10pm; no animals; reservations via Toast Tables; gift cards via Toast. 20% gratuity on parties of 10 or more. Contact form/email for events. Phone from the site's structured data and the Toast page."
+    ]
+  }
+]

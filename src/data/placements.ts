@@ -1378,6 +1378,23 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      one the San Rafael shop held, and Hayward's open Coffee shop seat. */
   'beasty-cooks-8': 'b_thetastebud',
   'san-francisco-goods2-36': 'b_gada',
+  /* Batch 44, 2026-10-11 (localBrands.ts). Richmond's Mexican food seat was open;
+     the rest are yellow sheets because the seat for their kind is taken (Milpitas
+     Sushi and Korean, Redwood City Italian, Berkeley has no brunch seat, San Mateo
+     Sushi, San Jose and San Francisco Asian food). */
+  'richmond-goods-1': 'b_elagaveazul',
+  'milpitas-goods2-3': 'b_seawagyuhouse',
+  'redwood-city-goods2-1': 'b_vestarwc',
+  'berkeley-goods2-8': 'b_shattuckandbutter',
+  'san-mateo-goods2-1': 'b_kodawarisushi',
+  'san-jose-goods2-12': 'b_comtamthienhuong',
+  'san-francisco-goods2-38': 'b_fusiondumpling',
+  /* "Brentwood • Services", "Need proper website pilot": no art-studio seat on the
+     services page, so the yellow sheet, as the free listing. */
+  'brentwood-services2-1': 'b_createdbyyou',
+  /* BEASTY • Chefs (the Cooks page, renamed): Chef Mike, from Festus' reel. Wise Up
+     N Shine and The Hendrys seat themselves on Automotive and Photographers. */
+  'beasty-cooks-9': 'b_chefmike',
   'beasty-coffee-2': 'b_sanaacafehayward',
   'hayward-goods-13': 'b_sanaacafehayward',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
