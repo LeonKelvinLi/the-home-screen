@@ -40,6 +40,20 @@ function parseBg(bg: string): { from: string; to: string; flat: boolean } {
 }
 
 /** Stable per-logo id so two icons never share a gradient definition. */
+/* The colour a gradient tile shows behind its middle. The gradient runs from
+   the top-left corner toward (35%, 100%), so the centre sits about 60% along. */
+function middleOf(from: string, to: string): string {
+  const rgb = (h: string) => {
+    const x = h.replace('#', '')
+    const f = x.length === 3 ? x.split('').map((c) => c + c).join('') : x
+    return [0, 2, 4].map((i) => parseInt(f.slice(i, i + 2), 16))
+  }
+  const a = rgb(from)
+  const b = rgb(to)
+  if (a.some(Number.isNaN) || b.some(Number.isNaN)) return from
+  return `#${a.map((v, i) => Math.round(v + (b[i] - v) * 0.6).toString(16).padStart(2, '0')).join('')}`
+}
+
 function uid(logo: Logo): string {
   const key = `${logo.template}${logo.bg}${logo.fg}${logo.initials ?? ''}${logo.glyph ?? ''}${(
     logo.lines ?? []
@@ -88,6 +102,12 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
      tile on a dark wallpaper got a BLACK hairline and therefore no edge at all,
      which is what made POD DTG's black artwork read as floating letters. */
   const edge = readableOn(logo.bg).isDark ? 'rgba(255,255,255,0.16)' : 'rgba(0,0,0,0.10)'
+  /* A badge's ring and initials sit on the middle of the tile, so they take
+     their ink from the colour there; white on Kings' cream middle vanished. */
+  const badgeInk =
+    logo.template === 'badge' && !logo.glyph && logo.fg === '#ffffff' && !logo.accent
+      ? readableOn(flat ? from : middleOf(from, to)).fg
+      : accent
 
   return (
     <svg
@@ -173,26 +193,47 @@ export function BrandLogo({ logo, size = 60, masked = true, fill = false }: Prop
 
         {logo.template === 'badge' && (
           <>
-            <circle cx="50" cy="50" r="35" fill="none" stroke={accent} strokeWidth="2.2" />
-            <circle cx="50" cy="50" r="30.5" fill="none" stroke={accent} strokeWidth="0.9" opacity="0.55" />
-            {logo.glyph && (
+            <circle cx="50" cy="50" r="35" fill="none" stroke={badgeInk} strokeWidth="2.2" />
+            <circle cx="50" cy="50" r="30.5" fill="none" stroke={badgeInk} strokeWidth="0.9" opacity="0.55" />
+            {logo.glyph ? (
               <g transform="translate(50 43) scale(0.42) translate(-50 -50)" fill={logo.fg}>
                 <path d={GLYPHS[logo.glyph]} />
               </g>
+            ) : (
+              /* A badge with no glyph drew an empty ring: five businesses (Kings
+                 West Coast first on BEASTY • Eats) showed a blank tile. Their
+                 initials go in the middle instead. */
+              logo.initials && (
+                <text
+                  x="50"
+                  y={strapline ? 45 : 50}
+                  textAnchor="middle"
+                  dominantBaseline="central"
+                  fill={badgeInk}
+                  fontFamily={face}
+                  fontSize={logo.initials.length > 2 ? 20 : 25}
+                  fontWeight="700"
+                  letterSpacing="0.5"
+                >
+                  {logo.initials}
+                </text>
+              )
             )}
-            <text
-              x="50"
-              y="64"
-              textAnchor="middle"
-              dominantBaseline="central"
-              fill={logo.fg}
-              fontFamily={face}
-              fontSize={(logo.lines?.[0]?.length ?? 0) > 9 ? 7.5 : 10}
-              fontWeight="700"
-              letterSpacing="0.8"
-            >
-              {logo.lines?.[0]}
-            </text>
+            {strapline && (
+              <text
+                x="50"
+                y="64"
+                textAnchor="middle"
+                dominantBaseline="central"
+                fill={logo.fg}
+                fontFamily={face}
+                fontSize={strapline.length > 9 ? 7.5 : 10}
+                fontWeight="700"
+                letterSpacing="0.8"
+              >
+                {strapline}
+              </text>
+            )}
           </>
         )}
 
