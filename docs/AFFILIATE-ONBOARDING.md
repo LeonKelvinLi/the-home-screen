@@ -5,30 +5,39 @@ Social Security number, checking routing and account number, a picture of
 their ID, and a signed agreement. This is that, built so BEASTY's own database
 never holds the sensitive parts.
 
+**No Stripe for affiliates, for now** (Leon, 2026-10-11: "lets not have stripe
+set up and have that running for now"). The journey is three steps; the W-9,
+the direct-deposit form and the ID photo are pages of the same DocuSeal packet
+as the agreement, and Glenn pays affiliates himself from the signed packet. The
+Stripe Connect step below is still built and appears only when
+`AFFILIATE_PAYOUTS` is set.
+
 ## How it fits together
 
 | Piece | Where | What it does |
 |---|---|---|
-| Portal | `src/join/JoinScreen.tsx`, `src/join/join.css` | `beastypages.com/join` and `/join/<invite>`. Welcome, sign in with a code, four steps, review, then the affiliate's dashboard. Autosaves as they type. |
+| Portal | `src/join/JoinScreen.tsx`, `src/join/join.css` | `beastypages.com/join` and `/join/<invite>`. Welcome, sign in with a code, three steps (four with Stripe payouts on), then the affiliate's dashboard. Autosaves as they type. |
 | API | `server/onboarding.ts` | `/api/onboarding/*` for the affiliate, `/api/crm/onboarding*` for the team, the DocuSeal webhook. |
-| Outside services | `server/onboarding-providers.ts` | Stripe Connect (payouts, ID, tax, bank) and DocuSeal (the agreement). Each is `off`, `mock` or `live`. |
+| Outside services | `server/onboarding-providers.ts` | DocuSeal (the forms and agreement) and, when switched on, Stripe Connect (payouts, ID, tax, bank). Each is `off`, `mock` or `live`. |
 | Tables | `server/db/onboarding-schema.ts` | `onboarding_invites`, `onboarding_applications`, `onboarding_documents`, `onboarding_events`, `onboarding_webhook_events`. |
 | CRM pages | `src/crm/affiliates.tsx` | People → Affiliates: the list, invites, one person's page, countersign, approve. |
 | Test | `tools/audit-onboarding.mjs` | The whole journey in test mode, API and browser, phone and computer. |
 
-The four steps the affiliate sees:
+The steps the affiliate sees:
 
 1. **Your information.** Legal name, preferred name, email, phone, mailing
    address, individual or business, social links, where they will promote.
    Stored in `onboarding_applications.profile`.
-2. **Get paid.** Opens Stripe's own hosted page. Stripe collects the Social
-   Security number or EIN, date of birth, bank account and, when it asks, an ID
-   photo, and the tax details a W-9 asks for (Stripe can also file the 1099s
-   once that is turned on in Stripe). BEASTY keeps the Stripe
-   account id plus Stripe's yes/no answers and the last four digits.
-3. **Agreement.** Opens DocuSeal. The affiliate signs; Glenn countersigns from
-   the CRM. "Signed" is only ever what DocuSeal reports (webhook plus a
-   re-check on page load), never a button press.
+2. **Get paid** (only with `AFFILIATE_PAYOUTS` set; off for now). Opens Stripe's
+   own hosted page. Stripe collects the Social Security number or EIN, date of
+   birth, bank account and, when it asks, an ID photo, and the tax details a W-9
+   asks for. BEASTY keeps the Stripe account id plus Stripe's yes/no answers and
+   the last four digits.
+3. **Forms & agreement** (just "Agreement" when Stripe is on). Opens DocuSeal:
+   one packet with the W-9, the direct-deposit form, an ID photo upload and the
+   agreement, filled in from step 1. The affiliate fills in and signs; Glenn
+   countersigns from the CRM. "Signed" is only ever what DocuSeal reports
+   (webhook plus a re-check on page load), never a button press.
 4. **Review & submit.** Locks the application for review and emails it to
    `LEAD_EMAIL` and the affiliate. A step whose service is not switched on yet
    (Stripe Connect, DocuSeal) does not block submitting: the affiliate sends
@@ -49,10 +58,10 @@ someone down needs a note, which is emailed to them.
 | Step 1 details, autosave, conflict check between two tabs, resume where they left off | Built and working |
 | Team list, filters, search, person page, history of every action (including who opened the record) | Built and working |
 | Approve, ask for a change, turn down, pause, reinstate, with emails | Built and working (emails need `RESEND_API_KEY` and `OTP_FROM_EMAIL`, as for all site email) |
-| Stripe payouts step | Built, **not switched on**: needs Glenn's Stripe account activated and Connect enabled. Until then it says "opens soon" and does not block submitting |
-| DocuSeal agreement and countersign | Built, **not switched on**: needs a DocuSeal account and the agreement template. Until then it says "opens soon", does not block submitting, and approval waits for it |
+| Stripe payouts step | Built, **off on purpose** (no Stripe for affiliates for now). Hidden while off; the journey is three steps |
+| DocuSeal forms, agreement and countersign | Built, **not switched on**: needs a DocuSeal account and the packet template below. Until then it says "opens soon", does not block submitting, and approval waits for it |
 | Agreement wording | **Needs Glenn and a lawyer.** Nothing here invents terms. |
-| Commissions and payouts to affiliates | **Not built.** The dashboard says they aren't switched on yet. |
+| Commissions and payouts to affiliates | **Not built.** Glenn pays from the W-9 and direct-deposit form in the signed packet; the dashboard says commission tracking isn't switched on yet. |
 | Test mode (`AFFILIATE_PROVIDERS=mock`) | Local and audits only; refused in production. Every test screen is labelled. |
 
 Until each service is configured, the portal says that step "opens soon" and
@@ -60,7 +69,7 @@ the CRM says what is waiting; nothing pretends to work.
 
 ## Switching it on
 
-### Stripe (payouts)
+### Stripe (payouts), later and only if wanted
 
 1. Glenn activates his Stripe account and enables **Connect** (Express
    accounts) in the Stripe dashboard.
@@ -72,13 +81,24 @@ the CRM says what is waiting; nothing pretends to work.
 4. Optional: in Connect settings, brand the onboarding pages with the BEASTY
    logo and yellow.
 
-### DocuSeal (agreement)
+### DocuSeal (forms and agreement)
 
 1. Create a DocuSeal account (cloud, or self-hosted and set `DOCUSEAL_URL`).
-2. Make the affiliate agreement a template with two signer roles, named
-   **Affiliate** and **BEASTY** (or set `DOCUSEAL_AFFILIATE_ROLE` and
-   `DOCUSEAL_COMPANY_ROLE`). Fields named `Legal Name`, `Business Name`,
-   `Email` and `Address` on the Affiliate role are filled in from step 1.
+2. Make one template, the packet, with two signer roles named **Affiliate** and
+   **BEASTY** (or set `DOCUSEAL_AFFILIATE_ROLE` and `DOCUSEAL_COMPANY_ROLE`).
+   Its pages, all filled in by the Affiliate role:
+   - **Form W-9** (the IRS PDF, uploaded): name, business name, tax
+     classification, address, SSN or EIN, signature and date.
+   - **Direct deposit**: bank name, routing number, account number, checking or
+     savings, and a voided check or bank letter as an optional upload.
+   - **ID**: an image field for a photo of their driver's license, state ID or
+     passport.
+   - **The affiliate agreement** (wording from Glenn and his lawyer), signed by
+     the Affiliate, then countersigned by the BEASTY role.
+   Fields named `Legal Name`, `Business Name`, `Email`, `Phone`, `Address`,
+   `Street Address`, `City`, `State` and `ZIP` are filled in from step 1; name
+   the W-9's fields that way and they arrive filled. The server reads the
+   template's field names first and sends only the ones it has.
 3. On the **site** service set `DOCUSEAL_API_KEY` and
    `DOCUSEAL_AFFILIATE_TEMPLATE_ID`. Optional: `DOCUSEAL_COMPANY_EMAIL`,
    `DOCUSEAL_COMPANY_NAME`.
@@ -94,7 +114,9 @@ the CRM says what is waiting; nothing pretends to work.
 ## Privacy and safety
 
 - No Social Security number, bank number or ID image ever touches this server
-  or its database. The CRM shows Stripe's yes/no answers and the last four.
+  or its database: they are typed into DocuSeal's own page and stay in
+  DocuSeal, where Glenn opens the signed packet to pay. (With Stripe on, the
+  CRM shows Stripe's yes/no answers and the last four.)
 - Invite tokens are stored as SHA-256 hashes; the token leaves the address bar
   as soon as it is used. `/join` pages are `noindex`, `no-referrer`, `no-store`.
 - Every affiliate request is scoped to the signed-in member; one affiliate can

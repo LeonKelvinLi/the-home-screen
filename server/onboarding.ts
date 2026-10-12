@@ -15,14 +15,22 @@
     3. Your information: name, contact, address, individual or business, how
        they will promote BEASTY. Saved as they type, with a revision number so
        a stale save from another tab never overwrites newer typing.
-    4. Get paid: Stripe Connect's own pages take the SSN or EIN, the bank
-       account and the ID photo. We keep only Stripe's yes/no answers.
-    5. Agreement: the DocuSeal template, signed by them, then countersigned by
-       BEASTY. Status comes from DocuSeal, never from a button press.
-    6. Review and submit; Glenn approves in the CRM once he has countersigned.
+    4. Forms & agreement: one DocuSeal packet with the W-9 (SSN or EIN), the
+       direct-deposit form (bank account), a photo of their ID and the
+       affiliate agreement, signed by them, then countersigned by BEASTY.
+       Status comes from DocuSeal, never from a button press.
+    5. Review and submit; Glenn approves in the CRM once he has countersigned,
+       and pays affiliates himself from the forms in the signed packet.
+
+  NO STRIPE FOR AFFILIATES, FOR NOW. Leon, 2026-10-11: "lets not have stripe set
+  up and have that running for now". The Stripe Connect step (Get paid) is still
+  here, behind AFFILIATE_PAYOUTS, and appears only when that is set; with it off
+  the journey is three steps and the tax, bank and ID details travel in the
+  DocuSeal packet instead.
 
   Nothing sensitive is stored here, logged, or emailed: no SSN, no bank number,
-  no ID image. The profile holds contact details only.
+  no ID image. They are typed into DocuSeal's own page and stay in DocuSeal. The
+  profile holds contact details only.
 */
 import type { Express, Request, Response, NextFunction } from 'express'
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
@@ -297,6 +305,11 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     return m
   }
 
+  /* ---- which steps are switched on (public): the welcome page counts them ---- */
+  app.get('/api/onboarding/setup', (_req, res) => {
+    res.json({ payouts: providers.payouts !== 'off', signing: providers.signing !== 'off' })
+  })
+
   /* ---- invite: preview (public) and redeem (signed in) ---- */
 
   async function inviteByToken(token: string) {
@@ -447,6 +460,13 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
           'Business Name': p.kind === 'business' ? p.businessName ?? '' : '',
           Email: p.email ?? '',
           Address: [p.line1, p.line2, p.city, `${p.state ?? ''} ${p.zip ?? ''}`.trim()].filter(Boolean).join(', '),
+          /* The W-9 asks for the address in two lines (its lines 5 and 6). A name
+             the template doesn't have is left out (onboarding-providers.ts). */
+          'Street Address': [p.line1, p.line2].filter(Boolean).join(', '),
+          City: p.city ?? '',
+          State: (p.state ?? '').toUpperCase(),
+          ZIP: p.zip ?? '',
+          Phone: p.phone ?? '',
         },
       })
       const now = Date.now()
@@ -483,7 +503,13 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       s.agreement.available && !s.agreement.affiliateSigned && 'the signed agreement',
     ].filter(Boolean)
     if (missing.length) return res.status(409).json({ error: `Still needed: ${missing.join(', ')}.`, steps: s })
-    const later = [!s.payouts.complete && 'payout setup', !s.agreement.affiliateSigned && 'the agreement'].filter(Boolean) as string[]
+    /* Only steps that exist: with payouts off there is no payout step to come, and
+       the agreement step is the whole packet of forms. */
+    const later = [
+      s.payouts.available && !s.payouts.complete && 'payout setup',
+      !s.agreement.affiliateSigned && (s.payouts.available ? 'the agreement' : 'your forms and agreement'),
+    ].filter(Boolean) as string[]
+    const many = later.length > 1 || later[0] === 'your forms and agreement'
     const now = Date.now()
     await db.prepare("UPDATE onboarding_applications SET status = 'submitted', submitted_at = ?, updated_at = ? WHERE id = ?").run(now, now, a.id)
     await event(a.id, `member:${m.id}`, a.status === 'changes_requested' ? 'resubmitted' : 'submitted')
@@ -497,7 +523,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     void deps.sendEmail(
       a.profile.email,
       'Your BEASTY affiliate application is in',
-      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nThanks for applying to the BEASTY affiliate program. We have your application and will let you know when it's reviewed.${later.length ? `\n\nOne more thing to come: ${later.join(' and ')} open soon, and you'll finish ${later.length > 1 ? 'them' : 'it'} at ${site(req)}/join.` : ''}\n\nYou can check where it stands any time at ${site(req)}/join.\n\nBEASTY Pages`,
+      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nThanks for applying to the BEASTY affiliate program. We have your application and will let you know when it's reviewed.${later.length ? `\n\nOne more thing to come: ${later.join(' and ')} ${many ? 'open' : 'opens'} soon, and you'll finish ${many ? 'them' : 'it'} at ${site(req)}/join.` : ''}\n\nYou can check where it stands any time at ${site(req)}/join.\n\nBEASTY Pages`,
     )
     a = (await appOf(m.id))!
     res.json(bundle(a, d))

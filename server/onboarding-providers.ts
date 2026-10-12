@@ -202,8 +202,16 @@ export function makeProviders(prod: boolean): Providers {
         mockSubmissions.set(ref, { affiliate: false, company: false })
         return { submissionRef: ref, affiliateUrl: `${returnUrl.split('?')[0]}?mock=sign`, companyUrl: '' }
       }
+      const templateId = Number(env('DOCUSEAL_AFFILIATE_TEMPLATE_ID'))
+      /* Only values for fields this template has. DocuSeal's docs don't say what it
+         does with a name it doesn't know, so none is sent; and if the template can't
+         be read, the packet opens empty rather than not at all. */
+      const names = await docuseal<{ fields?: { name?: string }[] }>('GET', `/templates/${templateId}`)
+        .then((t) => new Set((t.fields ?? []).map((f) => f.name ?? '')))
+        .catch(() => new Set<string>())
+      const values = Object.fromEntries(Object.entries(prefill).filter(([k, v]) => names.has(k) && v))
       const submitters = await docuseal<DsSubmitter[]>('POST', '/submissions', {
-        template_id: Number(env('DOCUSEAL_AFFILIATE_TEMPLATE_ID')),
+        template_id: templateId,
         send_email: false,
         order: 'preserved',
         completed_redirect_url: returnUrl,
@@ -213,7 +221,7 @@ export function makeProviders(prod: boolean): Providers {
             name,
             email,
             external_id: applicationId,
-            values: prefill,
+            values,
           },
           {
             role: COMPANY_ROLE(),

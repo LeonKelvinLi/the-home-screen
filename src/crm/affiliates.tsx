@@ -1,13 +1,17 @@
 /*
   Affiliates — the team's side of /join.
 
-  Glenn invites someone, they fill in their details, set up payouts with Stripe
-  and sign the agreement in DocuSeal, then send it in. This is where he sees
-  where each person is, countersigns, and approves (or asks for a change).
+  Glenn invites someone, they fill in their details, then fill in and sign one
+  DocuSeal packet (W-9, direct deposit, a photo of their ID and the agreement),
+  then send it in. This is where he sees where each person is, countersigns,
+  and approves (or asks for a change). He pays affiliates himself from the
+  forms in the signed packet; the Stripe Connect payout step shows here only
+  when AFFILIATE_PAYOUTS switches it on (server/onboarding.ts).
 
-  Nothing sensitive shows here because nothing sensitive is kept: Stripe holds
-  the Social Security number, bank account and ID photo, and this page only
-  shows Stripe's yes/no answers and the last four digits of the account.
+  Nothing sensitive shows here because nothing sensitive is kept: the Social
+  Security number, bank account and ID photo stay in DocuSeal (or with Stripe,
+  when payouts are on, which shows only its yes/no answers and the last four
+  digits of the account).
 */
 import { useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
@@ -128,12 +132,12 @@ function StatusPill({ status }: { status: Status }) {
 }
 
 /** One line of where each of the three steps stands. */
-function progressLine(a: AppRow) {
+function progressLine(a: AppRow, payoutsOn: boolean) {
   const parts = [
     a.profileComplete ? 'Details done' : 'Details not finished',
-    a.payouts === 'complete' ? 'payouts set up' : a.payouts === 'started' ? 'payouts started' : 'no payouts yet',
+    payoutsOn && (a.payouts === 'complete' ? 'payouts set up' : a.payouts === 'started' ? 'payouts started' : 'no payouts yet'),
     a.agreement === 'completed' ? 'agreement signed by both' : a.agreement === 'pending_countersignature' ? 'agreement needs your signature' : a.agreement === 'pending_signature' ? 'agreement not signed' : 'no agreement yet',
-  ]
+  ].filter(Boolean)
   return parts.join(', ')
 }
 
@@ -141,8 +145,8 @@ function ProviderNote({ providers }: { providers: ListData['providers'] }) {
   if (providers.payouts === 'mock' || providers.signing === 'mock')
     return <p className="crm-aff-notice is-test">Test mode. Payouts and signing are pretend here, so nobody is paid and nothing is legally signed.</p>
   const off: string[] = []
-  if (providers.payouts === 'off') off.push('payouts open once Stripe Connect is switched on')
-  if (providers.signing === 'off') off.push('signing opens once the DocuSeal agreement is set up')
+  /* Payouts off is the plan for now, not something waiting: Glenn pays from the forms. */
+  if (providers.signing === 'off') off.push('the forms and agreement open once the DocuSeal packet is set up')
   if (!off.length) return null
   return <p className="crm-aff-notice">People can fill in their details now; {off.join(', and ')}.</p>
 }
@@ -339,7 +343,7 @@ export function Affiliates() {
                     <span className="crm-row-text">
                       <strong>{a.name}</strong>
                       <span>{[a.business, a.email].filter(Boolean).join(', ')}</span>
-                      <span className="crm-row-meta">{progressLine(a)}</span>
+                      <span className="crm-row-meta">{progressLine(a, data.providers.payouts !== 'off')}</span>
                     </span>
                     <span className="crm-row-end">
                       <StatusPill status={a.status} />
@@ -424,7 +428,7 @@ function Decide({ d, reload }: { d: Detail; reload: () => void }) {
             : d.countersignAvailable
               ? `${name} signed the agreement. Countersign it, then approve.`
               : !d.steps.agreement.available
-                ? `${name} sent in their details. Payouts and the agreement open once Stripe Connect and DocuSeal are set up; they finish those then, and you approve after the agreement is signed by both.`
+                ? `${name} sent in their details. The forms and agreement open once the DocuSeal packet is set up; they fill them in then, and you approve after it is signed by both.`
                 : `${name} sent it in. The agreement still needs both signatures before you can approve.`}
         </p>
         {d.countersignAvailable && (
@@ -569,17 +573,17 @@ export function AffiliateDetail({ id }: { id: string }) {
               <StepRow done={s.profile.complete} title="Their details">
                 {s.profile.complete ? 'Name, contact, address and how they will promote BEASTY.' : `Still missing: ${Object.keys(s.profile.problems).length} ${Object.keys(s.profile.problems).length === 1 ? 'field' : 'fields'}.`}
               </StepRow>
+              {s.payouts.available && (
               <StepRow done={s.payouts.complete} title="Payouts with Stripe">
-                {!s.payouts.available
-                  ? 'Opens once Stripe Connect is switched on.'
-                  : s.payouts.complete
+                {s.payouts.complete
                     ? `Identity, tax details and bank account done${s.payouts.bankLast4 ? `, paid to the account ending ${s.payouts.bankLast4}` : ''}.`
                     : s.payouts.started
                       ? `Started. ID: ${CHECK[s.payouts.identity] ?? s.payouts.identity}. Tax: ${CHECK[s.payouts.tax] ?? s.payouts.tax}. Bank: ${CHECK[s.payouts.bank] ?? s.payouts.bank}.`
                       : 'Not started.'}
               </StepRow>
-              <StepRow done={s.agreement.status === 'completed'} title="Affiliate agreement">
-                {!s.agreement.available ? 'Opens once the DocuSeal agreement is set up.' : `${AGREEMENT[s.agreement.status] ?? s.agreement.status}${s.agreement.completedAt ? `, ${dateTime(s.agreement.completedAt)}` : ''}.`}
+              )}
+              <StepRow done={s.agreement.status === 'completed'} title={s.payouts.available ? 'Affiliate agreement' : 'Forms & agreement'}>
+                {!s.agreement.available ? 'Opens once the DocuSeal packet is set up.' : `${AGREEMENT[s.agreement.status] ?? s.agreement.status}${s.agreement.completedAt ? `, ${dateTime(s.agreement.completedAt)}` : ''}.`}
               </StepRow>
             </ul>
             {s.agreement.status === 'completed' && (
@@ -602,7 +606,11 @@ export function AffiliateDetail({ id }: { id: string }) {
             ) : (
               <Empty icon="user">Nothing filled in yet.</Empty>
             )}
-            <p className="crm-note is-quiet">Social Security number, bank account and ID photo go straight to Stripe; BEASTY never sees or keeps them.</p>
+            <p className="crm-note is-quiet">
+              {s.payouts.available
+                ? 'Social Security number, bank account and ID photo go straight to Stripe; BEASTY never sees or keeps them.'
+                : 'Social Security number, bank account and ID photo are on the W-9, direct deposit form and ID in their DocuSeal packet, not in the CRM. Open the signed packet in DocuSeal to pay them.'}
+            </p>
           </Section>
         </div>
 
