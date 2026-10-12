@@ -10841,4 +10841,29 @@ export const LOCAL_SEED: LocalSeed[] = [
       },
     ],
   },
+  {
+    /*
+      GONZALO YESCA, "BEASTY \u2022 Artist / Needs website pilot". Glenn, 2026-10-11,
+      with his Instagram (@gonzaloyesca_76, "Murals \u2022 Airbrush \u2022 Finishes") and
+      its contact sheet: WhatsApp and text on one number, and an email. What he
+      does is his bio's own list. He has no website, so the red ring for the
+      pilot; his type line seats him on BEASTY \u2022 Artists (categories.ts). No
+      Instagram button until Glenn says so.
+    */
+    slug: 'gonzalo-yesca',
+    icon: 'gonzalo-yesca',
+    name: 'Gonzalo Yesca',
+    label: 'Yesca',
+    cuisine: 'Murals, airbrush and custom painting',
+    tagline: 'Murals, airbrush and luxury decorative finishes, around San Jose and the Bay Area.',
+    color: '#C8102E|#FFFFFF',
+    prep: 0,
+    category: 'Artists',
+    needsSite: true,
+    phone: '(661) 293-1219',
+    email: 'ygzalo76@gmail.com',
+    contactOnly:
+      'Murals, airbrush and custom painting, and luxury decorative finishes for interiors and exteriors, cars and motorcycles, around San Jose, Milpitas and the Bay Area. Text or WhatsApp him at (661) 293-1219 for a quote; he publishes no prices.',
+    items: [],
+  },
 ]
