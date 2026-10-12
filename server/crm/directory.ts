@@ -46,6 +46,8 @@ export interface Business {
   instagram: string | null
   channels: Channels
   isIndividual: boolean
+  /** Only on BEASTY • Foodies: a food creator's page, not a business. */
+  isCreator: boolean
   beastyOwner: boolean
   pageUrl: string
   /** The tile's picture, public/icons/<icon>.webp, when the listing has one. */
@@ -121,6 +123,7 @@ function toBusiness(b: BrandLike): Business {
     instagram: b.instagram ?? null,
     channels: channelsOf(b),
     isIndividual: seats.some((s) => s.page === 'Individuals'),
+    isCreator: seats.length > 0 && seats.every((s) => s.page === 'Foodies'),
     beastyOwner: !!b.beastyOwner,
     pageUrl: `/?b=${b.id}`,
     icon: b.logo?.imageUrl?.match(/^\/icons\/(.+)\.webp$/)?.[1] ?? null,

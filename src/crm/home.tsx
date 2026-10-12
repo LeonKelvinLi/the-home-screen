@@ -35,7 +35,7 @@ interface HomeData {
   until: number
   prev: [number, number] | null
   unit: Unit
-  listed: { total: number; needWebsite: number }
+  listed: { total: number; needWebsite: number; added: number; addedBefore: number | null; series: Series[] }
   leads: {
     total: number
     added: number
@@ -201,6 +201,7 @@ export function Home() {
     return keys.map((k) => ({ label: bucketName(k, h.unit), value: by.get(k) ?? 0 }))
   }
   const added = perKey(h.leads.series)
+  const listedAdded = perKey(h.listed.series)
   const reached = perKey(h.leads.reachedSeries)
   const cashBy = new Map(h.money.series.map((x) => [x.bucket, x]))
   const cash = keys.map((k) => ({ label: bucketName(k, h.unit), values: [cashBy.get(k)?.onceCents ?? 0, cashBy.get(k)?.plansCents ?? 0] }))
@@ -304,10 +305,20 @@ export function Home() {
           </ChartCard>
         </div>
 
+        {/* Leon, 2026-10-11: the leads chart was "not right with what I'm adding".
+            This one is what he adds: every business put on BEASTY, by the day it went up. */}
+        <ChartCard
+          title="Businesses added to BEASTY"
+          sub={`Every business put on BEASTY ${per}, ${scope.phrase}, website or not: ${count(h.listed.added)} in all. The ones without a website also become leads, below.`}
+          table={{ head: [h.unit === 'day' ? 'Day' : h.unit === 'week' ? 'Week of' : 'Month', 'Businesses added'], rows: listedAdded.map((x) => [x.label, x.value]) }}
+        >
+          <Line points={listedAdded} color="var(--viz-1)" unit="businesses" name="Added" empty={`No businesses were added ${scope.phrase}.`} />
+        </ChartCard>
+
         <div className="crm-dash-row">
           <ChartCard
             title="Leads added"
-            sub={`New leads ${per}, ${scope.phrase}, including businesses brought in from BEASTY's listings.`}
+            sub={`New leads ${per}, ${scope.phrase}. A business from BEASTY's listings counts on the day it went onto BEASTY.`}
             table={{ head: [h.unit === 'day' ? 'Day' : h.unit === 'week' ? 'Week of' : 'Month', 'Leads added'], rows: added.map((x) => [x.label, x.value]) }}
           >
             <Line points={added} color="var(--viz-1)" unit="leads" empty={`No leads were added ${scope.phrase}.`} />

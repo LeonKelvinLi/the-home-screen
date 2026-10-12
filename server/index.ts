@@ -9,7 +9,7 @@ import { mountOnboarding } from './onboarding'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
 import { businessSlug, flagReferral, isOwnDevice, mountAffiliate } from './affiliate'
 import { crmOpenMode } from './crm/open'
-import { syncSnapshots } from './crm/backfill'
+import { autoImport, syncListedAt, syncSnapshots } from './crm/backfill'
 import { fillGlennDefaults } from './crm/core'
 import { cleanAttribution, isBot, isTestDestination, shortHash, track } from './analytics'
 import { ingest, linkVisitor, markInternal, prune, snapshotDirectory, teamToken } from './intel'
@@ -3760,11 +3760,22 @@ async function start() {
     /* Every blank "who" is Glenn (Leon's rule, 2026-09-22). Only fills blanks. */
     const filled = await fillGlennDefaults()
     if (filled.referrals || filled.owners) console.log(`crm: Glenn filled ${filled.referrals} blank referrals and ${filled.owners} blank owners`)
+    /* Leads from the listings dated by the day their business went onto BEASTY. */
+    const dated = await syncListedAt()
+    if (dated) console.log(`crm: dated ${dated} imported leads by the day their business was added`)
   } catch (err) {
     console.error('crm: snapshot refresh failed:', String((err as Error).message ?? err).slice(0, 200))
   }
     app.listen(PORT, async () => {
     console.log(`api + static on http://localhost:${PORT}`)
+    /* New businesses without a website become leads the day they go live: the
+       CRM service imports them at every boot. One service only, so two boots
+       after the same deploy never race each other into duplicates. */
+    if (CRM_ONLY || process.env.CRM_AUTO_IMPORT === '1') {
+      autoImport()
+        .then((r) => r && console.log(`crm: auto-import brought in ${r.created} businesses and ${r.applications.created} spot requests`))
+        .catch((err) => console.error('crm: auto-import failed:', String((err as Error)?.message ?? err).slice(0, 200)))
+    }
     /* The directory's day and any seats that changed hands, then the raw-event
        retention window (ANALYTICS_RETENTION_DAYS, 395 by default), daily. The
        public service does both; the CRM's own copy of the server does not. */

@@ -137,6 +137,10 @@ ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS referral_default BOOLEAN 
 ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS found_phone TEXT;
 ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS found_email TEXT;
 ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS found_instagram TEXT;
+-- 2026-10-11: when the business went onto BEASTY (src/data/addedOn.ts), for a
+-- lead imported from the listings. "Leads added" counts by this day, not by the
+-- day of the import, so the chart follows what was actually added and when.
+ALTER TABLE crm_opportunities ADD COLUMN IF NOT EXISTS listed_at BIGINT;
 
 CREATE TABLE IF NOT EXISTS crm_stage_history (
   id             TEXT PRIMARY KEY,

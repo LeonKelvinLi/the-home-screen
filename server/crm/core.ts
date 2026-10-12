@@ -264,6 +264,8 @@ export interface NewOpportunity {
   contactName?: string | null
   potentialCents?: number
   backfillRunId?: string | null
+  /** When the business went onto BEASTY (imports from the listings). */
+  listedAt?: number | null
   websiteStatus?: string | null
   note?: string | null
 }
@@ -304,8 +306,8 @@ export const createOpportunity = db.transaction(async (input: NewOpportunity, ac
          phone, email, instagram, opportunity_type, stage, stage_changed_at,
          referrer_id, source_type, campaign, referred_at, referral_note, referral_default,
          assigned_to, contact_name, potential_cents, search_text, backfill_run_id,
-         created_at, updated_at, created_by
-       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
+         created_at, updated_at, created_by, listed_at
+       ) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,
     )
     .run(
       id,
@@ -336,6 +338,7 @@ export const createOpportunity = db.transaction(async (input: NewOpportunity, ac
       t,
       t,
       actor,
+      input.listedAt ?? null,
     )
   await db
     .prepare(

@@ -15,6 +15,13 @@ import { DEFAULT_OFFERS, hasChannel, normEmail, normInstagram, normPhone, qualif
 import { createOpportunity, fillGlennDefaults, nid, now, searchTextOf } from './core'
 import { businessById, seatedBusinesses } from './directory'
 import { cityFromAddress } from './city'
+import { ADDED_ON } from '../../src/data/addedOn'
+
+/** The day a business went onto BEASTY, as a time at noon Pacific (safe either side of DST). */
+export const listedAtOf = (brandId: string | null | undefined): number | null => {
+  const d = brandId ? ADDED_ON[brandId] : undefined
+  return d ? Date.parse(`${d}T12:00:00-07:00`) : null
+}
 
 export interface BackfillReport {
   runId: string
@@ -108,6 +115,11 @@ export async function runBackfill(opts: { dryRun: boolean; actor: string }): Pro
       report.manualReview.push({ id: b.id, name: b.name, reason: 'On BEASTY • Individuals: a person, not assumed to be a website lead' })
       continue
     }
+    /* A food creator's page on BEASTY • Foodies is a reviewer, not a shop (2026-10-11). */
+    if (b.isCreator) {
+      report.manualReview.push({ id: b.id, name: b.name, reason: 'On BEASTY • Foodies: a food creator, not a website lead' })
+      continue
+    }
     if (opts.dryRun) {
       report.created++
       continue
@@ -126,6 +138,7 @@ export async function runBackfill(opts: { dryRun: boolean; actor: string }): Pro
           sourceType: null,
           potentialCents: WEBSITE_POTENTIAL,
           backfillRunId: runId,
+          listedAt: listedAtOf(b.id),
           note: `Imported from the BEASTY listing (website status: ${b.websiteStatus})`,
         },
         'system:backfill',
@@ -307,3 +320,36 @@ export async function syncSnapshots(): Promise<{ checked: number; updated: numbe
   }
   return { checked: rows.length, updated, missing }
 }
+
+/**
+ * Dates leads imported from the listings by the day their business went onto
+ * BEASTY. Only fills a blank, so it is safe at every boot.
+ */
+export async function syncListedAt(): Promise<number> {
+  const rows = await db
+    .prepare('SELECT id, brand_id FROM crm_opportunities WHERE listed_at IS NULL AND backfill_run_id IS NOT NULL AND brand_id IS NOT NULL')
+    .all<{ id: string; brand_id: string }>()
+  let n = 0
+  for (const r of rows) {
+    const at = listedAtOf(r.brand_id)
+    if (at == null) continue
+    await db.prepare('UPDATE crm_opportunities SET listed_at = ? WHERE id = ? AND listed_at IS NULL').run(at, r.id)
+    n++
+  }
+  return n
+}
+
+/**
+ * THE IMPORT, WITHOUT THE BUTTON. Leon, 2026-10-11: the leads chart was "not
+ * right with what I'm adding": the import had run once, on 23 Sep, and every
+ * business added since sat outside the CRM. The CRM service now runs it at
+ * every boot (every deploy), so a business added without a website becomes a
+ * lead the day it goes live. A dry run first: a real run, with its stored
+ * report, only when there is something to bring in.
+ */
+export async function autoImport(): Promise<BackfillReport | null> {
+  const dry = await runBackfill({ dryRun: true, actor: 'system:auto-import' })
+  if (!dry.created && !dry.applications.created) return null
+  return runBackfill({ dryRun: false, actor: 'system:auto-import' })
+}
+

@@ -9,6 +9,8 @@ import { DAY_MS, OPEN_STAGES, STAGES, qualifiesForWebsite, stageOf } from '../..
 import { businessById, researchNotes, seatedBusinesses } from './directory'
 import type { DealRow, OppRow, PersonRow } from './core'
 import { bucketSql } from './users'
+import { listedAtOf } from './backfill'
+import { ADDED_ON } from '../../src/data/addedOn'
 import type { Unit } from './users'
 import { CrmError } from './core'
 
@@ -914,11 +916,34 @@ export async function pipelineSummary() {
  * Counts per day, week or month, in Pacific time, of rows whose `col` falls
  * in [since, until). The screen fills the empty buckets.
  */
-async function perBucket(table: 'members' | 'crm_opportunities', col: 'created_at' | 'first_contacted_at', since: number, until: number, unit: Unit) {
+async function perBucket(table: 'members' | 'crm_opportunities', col: 'created_at' | 'first_contacted_at' | typeof ADDED_AT, since: number, until: number, unit: Unit) {
   const rows = await db
     .prepare(`SELECT ${bucketSql(col, unit)} AS b, COUNT(*) AS n FROM ${table} WHERE ${col} >= ? AND ${col} < ? GROUP BY b ORDER BY b`)
     .all<{ b: string; n: number }>(since, until)
   return rows.map((r) => ({ bucket: r.b, count: num(r.n) }))
+}
+
+/* When a lead was added: the day its business went onto BEASTY for one imported
+   from the listings (listed_at), otherwise the day it was created. */
+const ADDED_AT = 'COALESCE(listed_at, created_at)'
+
+/** Businesses put on BEASTY per day, week or month, from the repo's history (src/data/addedOn.ts). */
+function listedPerBucket(ids: string[], since: number, until: number, unit: Unit) {
+  const counts = new Map<string, number>()
+  for (const id of ids) {
+    const at = listedAtOf(id)
+    if (at == null || at < since || at >= until) continue
+    const d = ADDED_ON[id]
+    let key = d
+    if (unit === 'month') key = `${d.slice(0, 7)}-01`
+    else if (unit === 'week') {
+      const t = new Date(`${d}T12:00:00Z`)
+      t.setUTCDate(t.getUTCDate() - ((t.getUTCDay() + 6) % 7))
+      key = t.toISOString().slice(0, 10)
+    }
+    counts.set(key, (counts.get(key) ?? 0) + 1)
+  }
+  return [...counts].sort((a, b) => a[0].localeCompare(b[0])).map(([bucket, count]) => ({ bucket, count }))
 }
 
 /** Where a lead came from, as one word the home screen can group by. */
@@ -941,8 +966,8 @@ export async function home(since: number, until: number, unit: Unit, prev: [numb
   const leads = await db
     .prepare(
       `SELECT COUNT(*) AS total,
-              COUNT(*) FILTER (WHERE created_at >= ? AND created_at < ?) AS added,
-              COUNT(*) FILTER (WHERE created_at >= ? AND created_at < ?) AS added_before,
+              COUNT(*) FILTER (WHERE ${ADDED_AT} >= ? AND ${ADDED_AT} < ?) AS added,
+              COUNT(*) FILTER (WHERE ${ADDED_AT} >= ? AND ${ADDED_AT} < ?) AS added_before,
               COUNT(*) FILTER (WHERE first_contacted_at IS NOT NULL) AS reached,
               COUNT(*) FILTER (WHERE first_contacted_at >= ? AND first_contacted_at < ?) AS reached_now,
               COUNT(*) FILTER (WHERE first_contacted_at >= ? AND first_contacted_at < ?) AS reached_before,
@@ -976,7 +1001,7 @@ export async function home(since: number, until: number, unit: Unit, prev: [numb
     .all<{ label: string; cents: number; n: number }>(since, until)
   const people_ = await peopleNames()
   const sources = await db
-    .prepare(`SELECT ${ORIGIN} AS origin, o.source_type, COUNT(*) AS n FROM crm_opportunities o WHERE o.created_at >= ? AND o.created_at < ? GROUP BY origin, o.source_type`)
+    .prepare(`SELECT ${ORIGIN} AS origin, o.source_type, COUNT(*) AS n FROM crm_opportunities o WHERE COALESCE(o.listed_at, o.created_at) >= ? AND COALESCE(o.listed_at, o.created_at) < ? GROUP BY origin, o.source_type`)
     .all<{ origin: string; source_type: string | null; n: number }>(since, until)
   const labels = new Map(
     (await db.prepare('SELECT key, label FROM crm_source_types').all<{ key: string; label: string }>()).map((r) => [r.key, r.label]),
@@ -1000,16 +1025,23 @@ export async function home(since: number, until: number, unit: Unit, prev: [numb
   const top = async (col: 'city' | 'category') =>
     (
       await db
-        .prepare(`SELECT COALESCE(NULLIF(${col}, ''), '') AS v, COUNT(*) AS n FROM crm_opportunities WHERE created_at >= ? AND created_at < ? GROUP BY v ORDER BY n DESC, v`)
+        .prepare(`SELECT COALESCE(NULLIF(${col}, ''), '') AS v, COUNT(*) AS n FROM crm_opportunities WHERE ${ADDED_AT} >= ? AND ${ADDED_AT} < ? GROUP BY v ORDER BY n DESC, v`)
         .all<{ v: string; n: number }>(since, until)
     ).map((r) => ({ label: r.v, count: num(r.n) }))
   const stages = await db
-    .prepare('SELECT stage, COUNT(*) AS n FROM crm_opportunities WHERE created_at >= ? AND created_at < ? GROUP BY stage')
+    .prepare(`SELECT stage, COUNT(*) AS n FROM crm_opportunities WHERE ${ADDED_AT} >= ? AND ${ADDED_AT} < ? GROUP BY stage`)
     .all<{ stage: string; n: number }>(since, until)
   const listed = seatedBusinesses()
   const before = (n: unknown) => (prev ? num(n) : null)
   return {
-    listed: { total: listed.length, needWebsite: listed.filter((b) => qualifiesForWebsite(b.websiteStatus)).length },
+    listed: {
+      total: listed.length,
+      needWebsite: listed.filter((b) => qualifiesForWebsite(b.websiteStatus)).length,
+      /* Every business put on BEASTY in the period, website or not, by the day it went up. */
+      added: listed.filter((b) => { const at = listedAtOf(b.id); return at != null && at >= since && at < until }).length,
+      addedBefore: prev ? listed.filter((b) => { const at = listedAtOf(b.id); return at != null && at >= b0 && at < b1 }).length : null,
+      series: listedPerBucket(listed.map((b) => b.id), since, until, unit),
+    },
     leads: {
       total: num(leads?.total),
       added: num(leads?.added),
@@ -1019,7 +1051,7 @@ export async function home(since: number, until: number, unit: Unit, prev: [numb
       reachedBefore: before(leads?.reached_before),
       customers: num(leads?.customers),
       customersInPeriod: num(leads?.customers_now),
-      series: await perBucket('crm_opportunities', 'created_at', since, until, unit),
+      series: await perBucket('crm_opportunities', ADDED_AT, since, until, unit),
       reachedSeries: await perBucket('crm_opportunities', 'first_contacted_at', since, until, unit),
     },
     money: {

@@ -98,6 +98,19 @@ check('and owned by Glenn: no lead is left unassigned', unowned.body.total === 0
 check('a default referral does not count as an uncontacted referral', ovImport.body.attention.find((a) => a.key === 'uncontacted_referrals')?.count === 0)
 const pipe = await call('GET', '/api/crm/pipeline', { j: admin })
 check('the pipeline summary counts every lead once', pipe.status === 200 && pipe.body.stages.reduce((n, st) => n + st.count, 0) === ovImport.body.counts.total)
+/* Leon, 2026-10-11, "not right with what I'm adding": imports are dated by the day
+   their business went onto BEASTY, and Home counts every business added. */
+{
+  const sqlc = new (await import('pg')).default.Client({ connectionString: TESTDB.url })
+  await sqlc.connect()
+  const r = (await sqlc.query('SELECT count(*)::int n, count(listed_at)::int dated, count(*) FILTER (WHERE listed_at < created_at)::int earlier FROM crm_opportunities WHERE backfill_run_id IS NOT NULL AND brand_id IS NOT NULL')).rows[0]
+  check('imported leads carry the day their business went onto BEASTY, not the import day', r.n > 0 && r.dated === r.n && r.earlier > 0, JSON.stringify(r))
+  await sqlc.end()
+  const all = (await call('GET', '/api/crm/home?period=all', { j: admin })).body
+  check('Home counts every business put on BEASTY, by the day it went up', all.listed.added > all.leads.total && all.listed.series.reduce((n, x) => n + x.count, 0) === all.listed.added, `${all.listed.added} businesses, ${all.leads.total} leads`)
+  const today = (await call('GET', '/api/crm/home?period=7d', { j: admin })).body
+  check('and the leads imported today do not all land on today', today.leads.added < ovImport.body.counts.total, `${today.leads.added} of ${ovImport.body.counts.total} in the last 7 days`)
+}
 const runs = await call('GET', '/api/crm/backfill/runs', { j: admin })
 check('each run is recorded with its report', runs.body.runs?.length === 2 && runs.body.runs[0].report)
 
