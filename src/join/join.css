@@ -607,6 +607,16 @@
   background: var(--ink);
   color: #fff;
 }
+/* Three steps (no Stripe step): the last key runs the full width, key beside its words. */
+.onb-pad li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+}
+.onb-pad li:last-child:nth-child(odd) .onb-key {
+  flex: none;
+}
 .onb-pad .onb-key {
   width: 40px;
   height: 40px;
