@@ -2782,14 +2782,23 @@ export const ROSTER_SEED: LocalSeed[] = [
   }),
   /* Cal Burger & More, "Berkeley • Goods" — smash burgers, wings and Crazyades
      on Euclid Avenue. Berkeley's Burgers seat is Dog Haus's, so the yellow
-     sheet at Tier 1. Their site is new and unfinished (a placeholder phone
-     number), so no number is carried. */
+     sheet. Their site is new and unfinished (a placeholder phone number), so no
+     number is carried. It was Tier 1 until Glenn's film of 2026-10-12 ("Clip this
+     video plz / For CalBurger"): a yellow-sheet business with a film gets the
+     whole page. */
   seed('cal-burger', 'Cal Burger & More', 'Cal Burger', 'Smash burgers & wings', '#1B2A4E', {
     icon: 'cal-burger',
     logoTemplate: 'wordmark', logoLines: ['CAL', 'BURGER'], logoFace: 'condensed',
     site: 'https://calbgocrazy.com/',
     siteCta: 'See their menu',
-    tier: 1,
+    clip: {
+      src: '/clips/cal-burger.mp4',
+      poster: '/clips/cal-burger-poster.webp',
+      href: 'https://www.instagram.com/reel/DccevdIRc0g/',
+      credit: 'Filmed by @bayareamunchies510',
+      platform: 'Instagram',
+      by: 'bayareamunchies510',
+    },
   }),
 
   /* ---- 2026-09-17. Research in research/roster/batch26.json. ---- */

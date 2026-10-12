@@ -237,6 +237,8 @@ the most movement — to 540x960 with sound.
 | `pizzeria-cardamomo.mp4` | Pizzeria Cardamomo, Redwood City | instagram.com/reel/DeXPu11oz2S — **an excerpt**, 7s–21s of 81s; posted by @acoupleofcooks (Sara + Andrew), creators — sent on 2026-10-12 with "Clip this video plz for @pizzeriacardamomo" |
 | `da-good-vibes.mp4` | Da Good Vibes, Union City | instagram.com/reel/DeZOJ2hgYM4 — **an excerpt**, 0s–14s of 81s; posted by @shrimpfriedroice (Roice), a food creator — sent on 2026-10-12 with "Clip this video plz" |
 | `cafe-napolina.mp4` | Cafe Napolina, Concord | instagram.com/reel/DNWN4OFSla9 — **an excerpt**, 1.5s–15.5s of 16s; their own post — sent on 2026-10-12 with "Clip this video plz" |
+| `cal-burger.mp4` | Cal Burger & More, Berkeley | instagram.com/reel/DccevdIRc0g — **an excerpt**, 0s–14s of 77s; posted by @bayareamunchies510, a food creator — sent on 2026-10-12 with "Clip this video plz / For CalBurger" |
+| `review-DeUm0sfx2dO.mp4` | Hungry Cow, Fremont (a Foodie review) | instagram.com/reel/DeUm0sfx2dO — **an excerpt**, 20s–34s of 80s; posted by @foodieberrie, a food creator — sent on 2026-10-12 with "Add to BEASTY • AYCE" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

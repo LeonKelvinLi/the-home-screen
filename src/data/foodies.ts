@@ -88,6 +88,9 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'celineeats', place: 'Froyo Park, Krispy Joe’s and Kingpin Donuts', city: 'Berkeley', reel: reel('DdXmljSpM-M'), clip: true },
   { by: 'grubwitmike', place: 'Donut Savant', city: 'Oakland', reel: reel('DdIUO2Jxj1s'), clip: true },
   { by: 'singlecatm0m', place: 'El 2 Carnales Taqueria and Pizzeria', city: 'Stockton', reel: reel('DWwiNxYCSiI'), clip: true },
+  /* Glenn, 2026-10-12, "Add to BEASTY • AYCE", with @foodieberrie's reel at Hungry Cow: its
+     page keeps Grand-O's film, and this one is listed as a review and plays in the feed. */
+  { by: 'foodieberrie', place: 'Hungry Cow', city: 'Fremont', brand: 'b_hungrycow', reel: reel('DeUm0sfx2dO'), clip: true },
   { by: 'thesauceboss_', place: 'Deli Board', city: 'San Francisco', brand: 'b_deliboard', reel: reel('DdVGXn4NxbO'), clip: true },
   { by: 'hella._local.mo', place: 'The Burger Spot Co.', city: 'Richmond', brand: 'b_theburgerspotco', reel: reel('Ddo0xf9MplM'), clip: true },
   { by: 'thesnobbiefoodie', place: 'Mensho', city: 'Walnut Creek', reel: reel('DY6Qf_qJdQV') },

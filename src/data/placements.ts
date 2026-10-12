@@ -1420,6 +1420,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* Cafe Napolina, 2026-10-12 10:01 am, "Concord • Eats": Concord's Italian seat is Fire
      Slice Pizza's, so the yellow sheet, with the whole page for their film. */
   'concord-goods2-2': 'b_cafenapolina',
+  /* Hungry Cow, 2026-10-12 11:37 am, "Add to BEASTY • AYCE": their Signature Set is "all you
+     can eat within a 90-minute table limit" on their own menu. */
+  'beasty-ayce-3': 'b_hungrycow',
+  /* ...and it keeps BEASTY • Eats' Hot pot seat, which it held by its type line until a
+     seat by hand elsewhere on BEASTY took it out of the auto-fill. */
+  'beasty-eats-20': 'b_hungrycow',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */
