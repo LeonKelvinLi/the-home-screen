@@ -423,7 +423,9 @@ function Decide({ d, reload }: { d: Detail; reload: () => void }) {
             ? `${name} finished every step. Approve to make them an affiliate, or ask for a change.`
             : d.countersignAvailable
               ? `${name} signed the agreement. Countersign it, then approve.`
-              : `${name} sent it in. The agreement still needs both signatures before you can approve.`}
+              : !d.steps.agreement.available
+                ? `${name} sent in their details. Payouts and the agreement open once Stripe Connect and DocuSeal are set up; they finish those then, and you approve after the agreement is signed by both.`
+                : `${name} sent it in. The agreement still needs both signatures before you can approve.`}
         </p>
         {d.countersignAvailable && (
           <button type="button" className="crm-btn is-dark is-block" disabled={!!busy} onClick={countersign}>

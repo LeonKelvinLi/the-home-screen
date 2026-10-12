@@ -400,8 +400,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     if (!m) return
     const a = await appOf(m.id)
     if (!a) return res.status(404).json({ error: 'No application yet.' })
-    if (a.status !== 'in_progress' && a.status !== 'changes_requested' && a.status !== 'approved') {
-      return res.status(409).json({ error: 'Your application is under review.' })
+    if (a.status !== 'in_progress' && a.status !== 'changes_requested' && a.status !== 'submitted' && a.status !== 'approved') {
+      return res.status(409).json({ error: 'Your application is closed.' })
     }
     try {
       const base = `${site(req)}/join`
@@ -428,7 +428,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     if (!m) return
     const a = await appOf(m.id)
     if (!a) return res.status(404).json({ error: 'No application yet.' })
-    if (a.status !== 'in_progress' && a.status !== 'changes_requested') return res.status(409).json({ error: 'Your application is under review.' })
+    /* Submitted is allowed: an affiliate who sent their application before signing opened signs afterwards. */
+    if (a.status !== 'in_progress' && a.status !== 'changes_requested' && a.status !== 'submitted') return res.status(409).json({ error: 'Your application is closed.' })
     if (Object.keys(profileProblems(a.profile)).length) return res.status(409).json({ error: 'Finish your information first; the agreement is filled in from it.' })
     let doc = await refreshDoc((await latestDoc(a.id)) ?? null, true)
     if (doc && (doc.status === 'pending_signature') && doc.affiliate_url) return res.json({ url: doc.affiliate_url })
@@ -472,18 +473,32 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     a = await refreshPayouts(a, true)
     const d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
     const s = stepsOf(a, d, providers)
+    /* A step whose service is not switched on yet (Stripe Connect, DocuSeal) cannot be
+       finished, so it does not hold the application back: the affiliate sends what they
+       can, BEASTY receives it, and the step is done after submitting once it opens.
+       Approval still needs the agreement signed by both (the decision route). */
     const missing = [
       !s.profile.complete && 'your information',
-      !s.payouts.complete && 'payout setup',
-      !s.agreement.affiliateSigned && 'the signed agreement',
+      s.payouts.available && !s.payouts.complete && 'payout setup',
+      s.agreement.available && !s.agreement.affiliateSigned && 'the signed agreement',
     ].filter(Boolean)
     if (missing.length) return res.status(409).json({ error: `Still needed: ${missing.join(', ')}.`, steps: s })
+    const later = [!s.payouts.complete && 'payout setup', !s.agreement.affiliateSigned && 'the agreement'].filter(Boolean) as string[]
     const now = Date.now()
     await db.prepare("UPDATE onboarding_applications SET status = 'submitted', submitted_at = ?, updated_at = ? WHERE id = ?").run(now, now, a.id)
     await event(a.id, `member:${m.id}`, a.status === 'changes_requested' ? 'resubmitted' : 'submitted')
     const name = `${a.profile.legalFirst ?? ''} ${a.profile.legalLast ?? ''}`.trim()
-    void deps.sendEmail(deps.leadEmail, `New affiliate application: ${name}`, `${name} has submitted their BEASTY affiliate application.\n\nReview it in the CRM under Affiliates.`)
-    void deps.sendEmail(a.profile.email, 'Your BEASTY affiliate application is in', `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nThanks for applying to the BEASTY affiliate program. We'll review your application and let you know.\n\nYou can check its status any time at ${site(req)}/join.\n\nBEASTY Pages`)
+    const contact = [a.profile.email, a.profile.phone].filter(Boolean).join(' · ')
+    void deps.sendEmail(
+      deps.leadEmail,
+      `New affiliate application: ${name}`,
+      `${name} has submitted their BEASTY affiliate application.\n\n${contact}\n${[a.profile.city, a.profile.state].filter(Boolean).join(', ')}\n${later.length ? `\nStill to come once it opens: ${later.join(' and ')}.\n` : ''}\nReview it in the CRM under People → Affiliates.`,
+    )
+    void deps.sendEmail(
+      a.profile.email,
+      'Your BEASTY affiliate application is in',
+      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nThanks for applying to the BEASTY affiliate program. We have your application and will let you know when it's reviewed.${later.length ? `\n\nOne more thing to come: ${later.join(' and ')} open soon, and you'll finish ${later.length > 1 ? 'them' : 'it'} at ${site(req)}/join.` : ''}\n\nYou can check where it stands any time at ${site(req)}/join.\n\nBEASTY Pages`,
+    )
     a = (await appOf(m.id))!
     res.json(bundle(a, d))
   }))

@@ -29,7 +29,11 @@ The four steps the affiliate sees:
 3. **Agreement.** Opens DocuSeal. The affiliate signs; Glenn countersigns from
    the CRM. "Signed" is only ever what DocuSeal reports (webhook plus a
    re-check on page load), never a button press.
-4. **Review & submit.** Locks the application for review.
+4. **Review & submit.** Locks the application for review and emails it to
+   `LEAD_EMAIL` and the affiliate. A step whose service is not switched on yet
+   (Stripe Connect, DocuSeal) does not block submitting: the affiliate sends
+   their details now, and finishes payouts and signing from their dashboard
+   once those open. Approval still needs the agreement signed by both.
 
 Statuses: `in_progress` → `submitted` → `approved`, or `changes_requested`
 (they edit and send it in again) or `rejected`; `approved` ↔ `suspended`.
@@ -45,8 +49,8 @@ someone down needs a note, which is emailed to them.
 | Step 1 details, autosave, conflict check between two tabs, resume where they left off | Built and working |
 | Team list, filters, search, person page, history of every action (including who opened the record) | Built and working |
 | Approve, ask for a change, turn down, pause, reinstate, with emails | Built and working (emails need `RESEND_API_KEY` and `OTP_FROM_EMAIL`, as for all site email) |
-| Stripe payouts step | Built, **not switched on**: needs Glenn's Stripe account activated and Connect enabled |
-| DocuSeal agreement and countersign | Built, **not switched on**: needs a DocuSeal account and the agreement template |
+| Stripe payouts step | Built, **not switched on**: needs Glenn's Stripe account activated and Connect enabled. Until then it says "opens soon" and does not block submitting |
+| DocuSeal agreement and countersign | Built, **not switched on**: needs a DocuSeal account and the agreement template. Until then it says "opens soon", does not block submitting, and approval waits for it |
 | Agreement wording | **Needs Glenn and a lawyer.** Nothing here invents terms. |
 | Commissions and payouts to affiliates | **Not built.** The dashboard says they aren't switched on yet. |
 | Test mode (`AFFILIATE_PROVIDERS=mock`) | Local and audits only; refused in production. Every test screen is labelled. |

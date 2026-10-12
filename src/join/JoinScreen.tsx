@@ -125,78 +125,92 @@ const Check = () => (
 
 type SaveState = 'idle' | 'saving' | 'saved' | 'error'
 
-function Shell({ children, save, test }: { children: React.ReactNode; save?: SaveState; test?: boolean }) {
+function Bar({ save, test }: { save?: SaveState; test?: boolean }) {
   const label = save === 'saving' ? 'Saving…' : save === 'saved' ? 'All changes saved' : save === 'error' ? 'Not saved — retrying' : ''
   return (
-    <div className="onb">
-      <header className="onb-bar">
-        <a className="onb-mark" href="/" aria-label="BEASTY Pages home">
-          <span className="onb-mark-tile" aria-hidden="true">B•P</span>
-          <span>
-            <span className="onb-mark-name">BEASTY</span> <span className="onb-mark-sub">Affiliates</span>
+    <header className="onb-bar">
+      <a className="onb-mark" href="/" aria-label="BEASTY Pages home">
+        <span className="onb-pill-mark" aria-hidden="true">
+          <span>BEASTY</span>
+          <span>PAGES</span>
+        </span>
+        <span className="onb-mark-sub">Affiliates</span>
+      </a>
+      <div className="onb-bar-right">
+        {test && <span className="onb-test">Test mode</span>}
+        {label && (
+          <span className="onb-save" data-state={save} role="status" aria-live="polite">
+            {label}
           </span>
-        </a>
-        <div className="onb-bar-right">
-          {test && <span className="onb-test">Test mode</span>}
-          {label && (
-            <span className="onb-save" data-state={save} role="status" aria-live="polite">
-              {label}
-            </span>
-          )}
-        </div>
-      </header>
-      {children}
+        )}
+      </div>
+    </header>
+  )
+}
+
+/* Yellow head with the step's name, the white sheet under it, the buttons docked at the bottom. */
+function Page({ save, test, head, children, dock }: { save?: SaveState; test?: boolean; head: React.ReactNode; children: React.ReactNode; dock?: React.ReactNode }) {
+  return (
+    <div className="onb">
+      <Bar save={save} test={test} />
+      <div className="onb-stage">
+        <header className="onb-head">{head}</header>
+        <main className="onb-sheet">
+          {children}
+          {dock && <div className="onb-dock">{dock}</div>}
+        </main>
+      </div>
     </div>
   )
 }
 
 function Loading() {
   return (
-    <Shell>
-      <main className="onb-main" aria-busy="true">
-        <div className="onb-card">
-          <div className="onb-skeleton" style={{ width: '45%', height: 30 }} />
-          <div className="onb-skeleton" style={{ width: '80%' }} />
-          <div className="onb-skeleton" style={{ width: '70%' }} />
-        </div>
-      </main>
-    </Shell>
+    <Page head={<div className="onb-skeleton" style={{ width: '60%', height: 44, background: 'rgba(0,0,0,.12)' }} />}>
+      <div aria-busy="true">
+        <div className="onb-skeleton" style={{ width: '45%', height: 26 }} />
+        <div className="onb-skeleton" style={{ width: '80%' }} />
+        <div className="onb-skeleton" style={{ width: '70%' }} />
+      </div>
+    </Page>
   )
 }
 
 function Message({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <Shell>
-      <main className="onb-main">
-        <div className="onb-card">
-          <h2>{title}</h2>
-          <div className="onb-lede">{children}</div>
-        </div>
-      </main>
-    </Shell>
+    <Page head={<h1 className="onb-title">{title}</h1>}>
+      <p className="onb-copy">{children}</p>
+    </Page>
   )
 }
 
 /* -------------------------------------------------------------- welcome ---- */
 
+const PAD: [string, string][] = [
+  ['Your information', 'Name, contact details and how you’ll share BEASTY.'],
+  ['Get paid', 'Verify your identity, add tax details and a bank account with Stripe.'],
+  ['Agreement', 'Read and sign the BEASTY affiliate agreement.'],
+  ['Review & submit', 'Check everything and send it to BEASTY.'],
+]
+
 function Welcome({ name, onStart }: { name: string; onStart: () => void }) {
   const first = name.trim().split(/\s+/)[0]
   return (
-    <Shell>
-      <main className="onb-main">
-        <section className="onb-hero">
-          {first && <p className="onb-hello">Hi {first},</p>}
-          <h1>Join the BEASTY affiliate program</h1>
-          <p className="onb-lede">Share BEASTY with your people and get paid for the members and businesses you bring in. Four steps, about ten minutes, and you can stop and pick it up later.</p>
-          <ol className="onb-steps">
-            {[
-              ['Your information', 'Name, contact details and how you’ll share BEASTY.'],
-              ['Get paid', 'Verify your identity, add tax details and a bank account with Stripe.'],
-              ['Agreement', 'Read and sign the BEASTY affiliate agreement.'],
-              ['Review & submit', 'Check everything and send it to BEASTY.'],
-            ].map(([t, d], i) => (
+    <div className="onb onb-welcome">
+      <Bar />
+      <main className="onb-hero">
+        <div className="onb-hero-grid">
+          <div>
+            {first && <p className="onb-hello">Hi {first},</p>}
+            <h1>Join the BEASTY affiliate program</h1>
+            <p className="onb-lede">Share BEASTY with your people and get paid for the members and businesses you bring in. Four steps, about ten minutes, and you can stop and pick it up later.</p>
+          </div>
+          <ol className="onb-pad" aria-label="The four steps">
+            {PAD.map(([t, d], i) => (
               <li key={t}>
-                <span className="onb-num">{i + 1}</span>
+                <span className="onb-key" aria-hidden="true">
+                  {i + 1}
+                </span>
                 <div>
                   <b>{t}</b>
                   <span>{d}</span>
@@ -204,21 +218,19 @@ function Welcome({ name, onStart }: { name: string; onStart: () => void }) {
               </li>
             ))}
           </ol>
-          <div className="onb-hero-foot">
-            <button className="onb-btn onb-btn-primary" onClick={onStart}>
-              Get started
-            </button>
-            <span className="onb-quiet" style={{ color: '#a7a7a1' }}>
-              Your progress saves as you go.
-            </span>
-          </div>
-        </section>
+        </div>
+        <div className="onb-hero-cta">
+          <button className="onb-btn onb-btn-primary" onClick={onStart}>
+            Get started
+          </button>
+          <span className="onb-quiet">Your progress saves as you go.</span>
+        </div>
         <div className="onb-trust">
           <Lock />
           <p>Your Social Security number, bank account and ID go straight to Stripe, BEASTY’s payments partner. BEASTY never sees or stores them.</p>
         </div>
       </main>
-    </Shell>
+    </div>
   )
 }
 
@@ -261,80 +273,89 @@ function SignIn({ defaultName, onSignedIn }: { defaultName: string; onSignedIn: 
   }
 
   return (
-    <Shell>
-      <main className="onb-main">
-        <div className="onb-card" style={{ maxWidth: 520, margin: '0 auto' }}>
-          <h2>{sent ? 'Enter your code' : 'Sign in or create your account'}</h2>
+    <Page
+      head={
+        <>
+          <h1 className="onb-title">{sent ? 'Enter your code' : 'Sign in'}</h1>
           <p className="onb-lede">
-            {sent
-              ? `We sent a 6-digit code to ${dest}.`
-              : 'Use your BEASTY account if you have one. If you don’t, this makes one; there’s no password, just a code.'}
+            {sent ? `We sent a 6-digit code to ${dest}.` : 'Use your BEASTY account if you have one. If you don’t, this makes one; there’s no password, just a code.'}
           </p>
-          {!sent ? (
-            <form onSubmit={send} className="onb-section">
-              <div className="onb-fields">
-                <div className="onb-field">
-                  <label htmlFor="j-name">Your name</label>
-                  <input id="j-name" className="onb-input" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} />
-                </div>
-                <div className="onb-choice" role="group" aria-label="Send my code by">
-                  <button type="button" aria-pressed={by === 'phone'} onClick={() => setBy('phone')}>
-                    Text me
-                  </button>
-                  <button type="button" aria-pressed={by === 'email'} onClick={() => setBy('email')}>
-                    Email me
-                  </button>
-                </div>
-                <div className="onb-field">
-                  <label htmlFor="j-dest">{by === 'phone' ? 'Mobile number' : 'Email'}</label>
-                  <input
-                    id="j-dest"
-                    className="onb-input"
-                    type={by === 'phone' ? 'tel' : 'email'}
-                    inputMode={by === 'phone' ? 'tel' : 'email'}
-                    autoComplete={by === 'phone' ? 'tel' : 'email'}
-                    value={dest}
-                    onChange={(e) => setDest(e.target.value)}
-                    required
-                  />
-                </div>
-              </div>
-              {err && <p className="onb-err" role="alert">{err}</p>}
-              <div className="onb-actions">
-                <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || name.trim().length < 2 || !dest.trim()}>
-                  {busy ? 'Sending…' : 'Send my code'}
-                </button>
-              </div>
-            </form>
-          ) : (
-            <form onSubmit={verify} className="onb-section">
-              <div className="onb-field">
-                <label htmlFor="j-code">6-digit code</label>
-                <input
-                  id="j-code"
-                  className="onb-input onb-code"
-                  inputMode="numeric"
-                  autoComplete="one-time-code"
-                  maxLength={6}
-                  value={code}
-                  onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))}
-                  autoFocus
-                />
-              </div>
-              {err && <p className="onb-err" role="alert">{err}</p>}
-              <div className="onb-actions">
-                <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || code.length !== 6}>
-                  {busy ? 'Checking…' : 'Continue'}
-                </button>
-                <button type="button" className="onb-link" onClick={() => { setSent(false); setCode(''); setErr('') }}>
-                  Use a different {by === 'phone' ? 'number' : 'email'}
-                </button>
-              </div>
-            </form>
+        </>
+      }
+    >
+      {!sent ? (
+        <form onSubmit={send}>
+          <div className="onb-fields">
+            <div className="onb-field">
+              <label htmlFor="j-name">Your name</label>
+              <input id="j-name" className="onb-input" autoComplete="name" value={name} onChange={(e) => setName(e.target.value)} required minLength={2} />
+            </div>
+            <div className="onb-choice" role="group" aria-label="Send my code by">
+              <button type="button" aria-pressed={by === 'phone'} onClick={() => setBy('phone')}>
+                Text me
+              </button>
+              <button type="button" aria-pressed={by === 'email'} onClick={() => setBy('email')}>
+                Email me
+              </button>
+            </div>
+            <div className="onb-field">
+              <label htmlFor="j-dest">{by === 'phone' ? 'Mobile number' : 'Email'}</label>
+              <input
+                id="j-dest"
+                className="onb-input"
+                type={by === 'phone' ? 'tel' : 'email'}
+                inputMode={by === 'phone' ? 'tel' : 'email'}
+                autoComplete={by === 'phone' ? 'tel' : 'email'}
+                value={dest}
+                onChange={(e) => setDest(e.target.value)}
+                required
+              />
+            </div>
+          </div>
+          {err && (
+            <p className="onb-err" role="alert" style={{ marginTop: 14 }}>
+              {err}
+            </p>
           )}
-        </div>
-      </main>
-    </Shell>
+          <div className="onb-dock">
+            <button className="onb-btn onb-btn-primary" disabled={busy || name.trim().length < 2 || !dest.trim()}>
+              {busy ? 'Sending…' : 'Send my code'}
+            </button>
+          </div>
+        </form>
+      ) : (
+        <form onSubmit={verify}>
+          <div className="onb-field">
+            <label htmlFor="j-code">6-digit code</label>
+            <input
+              id="j-code"
+              className="onb-input onb-code"
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              maxLength={6}
+              value={code}
+              onChange={(e) => setCode(e.target.value.replace(/\D/g, ''))}
+              autoFocus
+            />
+          </div>
+          {err && (
+            <p className="onb-err" role="alert" style={{ marginTop: 14 }}>
+              {err}
+            </p>
+          )}
+          <p style={{ marginTop: 18 }}>
+            <button type="button" className="onb-link" onClick={() => { setSent(false); setCode(''); setErr('') }}>
+              Use a different {by === 'phone' ? 'number' : 'email'}
+            </button>
+          </p>
+          <div className="onb-dock">
+            <button className="onb-btn onb-btn-primary" disabled={busy || code.length !== 6}>
+              {busy ? 'Checking…' : 'Continue'}
+            </button>
+          </div>
+        </form>
+      )}
+    </Page>
   )
 }
 
@@ -446,7 +467,8 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
     await flush()
     setErr('')
     setStep(n)
-    top.current?.scrollIntoView({ block: 'start' })
+    /* .onb is the scroller (join.css): back to the top, title and step keys in view. */
+    document.querySelector('.onb')?.scrollTo({ top: 0 })
     if (n > 0) void reload()
   }
 
@@ -491,351 +513,389 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
   const a = bundle.steps.agreement
   const tri = (s: Tri | 'needed' | 'complete'): [string, string] =>
     s === 'complete' ? ['Done', 'good'] : s === 'pending' ? ['Stripe is checking', 'warn'] : [p.started ? 'Still needed' : 'Not started', '']
+  /* A step BEASTY has not switched on yet does not hold the application back (server/onboarding.ts). */
+  const canSubmit = profileDone && (p.complete || !p.available) && (a.affiliateSigned || !a.available)
+  const later = [!p.complete && !p.available && 'payout setup', !a.affiliateSigned && !a.available && 'the agreement'].filter(Boolean) as string[]
 
-  return (
-    <Shell save={save} test={bundle.testMode}>
-      <div ref={top} />
-      <div className="onb-progress" aria-hidden="true">
-        <p className="onb-progress-label">
-          Step {step + 1} of 4 — <b>{STEPS[step]}</b>
-        </p>
-        <div className="onb-progress-bar">
+  const back =
+    step > 0 ? (
+      <button className="onb-btn onb-back" onClick={() => void go(step - 1)} aria-label={`Back to ${STEPS[step - 1]}`}>
+        Back
+      </button>
+    ) : null
+
+  const head = (
+    <>
+      <p className="onb-kicker">Step {step + 1} of 4</p>
+      <h1 className="onb-title" id={`s${step}`}>
+        {TITLES[step]}
+      </h1>
+      <p className="onb-lede">{LEDES[step]}</p>
+      <nav className="onb-keys" aria-label="Steps">
+        <ol>
           {STEPS.map((s, i) => (
-            <span key={s} data-on={i === step || undefined} data-done={(done[i] && i !== step) || undefined} />
+            <li key={s}>
+              <button type="button" aria-current={i === step ? 'step' : undefined} aria-label={`Step ${i + 1}, ${s}${done[i] ? ', done' : ''}`} onClick={() => void go(i)}>
+                <span className="onb-key" data-state={i === step ? 'on' : done[i] ? 'done' : undefined} aria-hidden="true">
+                  {done[i] && i !== step ? <Check /> : i + 1}
+                </span>
+                <span className="onb-key-label" aria-hidden="true">
+                  {SHORT[i]}
+                </span>
+              </button>
+            </li>
           ))}
-        </div>
-      </div>
-      <main className="onb-main">
-        <div className="onb-grid">
-          <nav className="onb-rail" aria-label="Onboarding steps">
-            <ol>
-              {STEPS.map((s, i) => (
-                <li key={s}>
-                  <button aria-current={i === step ? 'step' : undefined} onClick={() => void go(i)}>
-                    <span className="onb-num" data-done={done[i] || undefined}>
-                      {done[i] ? <Check /> : i + 1}
-                    </span>
-                    {s}
-                  </button>
-                </li>
-              ))}
-            </ol>
-            <p className="onb-rail-note">Saved as you go. Close this page any time and come back to beastypages.com/join.</p>
-          </nav>
+        </ol>
+      </nav>
+      <p className="onb-head-note">Saved as you go. Close this page any time and come back to beastypages.com/join.</p>
+    </>
+  )
 
-          <div>
-            {bundle.status === 'changes_requested' && (
-              <div className="onb-note" data-tone="warn" role="status" style={{ marginBottom: 16 }}>
-                <div>
-                  <b>BEASTY asked for a change.</b> {bundle.decisionNote}
-                </div>
-              </div>
-            )}
-            {notice && (
-              <div className="onb-note" role="status" style={{ marginBottom: 16 }}>
-                {notice}
-              </div>
-            )}
+  let body: React.ReactNode = null
+  let dock: React.ReactNode = null
 
-            {step === 0 && (
-              <section className="onb-card" aria-labelledby="s0">
-                <h2 id="s0">Your information</h2>
-                <p className="onb-lede">Use your legal name, the one on your ID. It goes on your agreement and your tax form.</p>
-
-                <div className="onb-section">
-                  <h3>About you</h3>
-                  <div className="onb-fields two">
-                    <Field id="p-legalFirst" label="Legal first name" error={show('legalFirst')}>
-                      <input {...input('legalFirst', { autoComplete: 'given-name' })} />
-                    </Field>
-                    <Field id="p-legalLast" label="Legal last name" error={show('legalLast')}>
-                      <input {...input('legalLast', { autoComplete: 'family-name' })} />
-                    </Field>
-                    <Field id="p-preferredName" label="What should we call you?" optional>
-                      <input {...input('preferredName', { autoComplete: 'nickname' })} />
-                    </Field>
-                    <Field id="p-phone" label="Mobile number" error={show('phone')}>
-                      <input {...input('phone', { type: 'tel', inputMode: 'tel', autoComplete: 'tel' })} />
-                    </Field>
-                    <Field id="p-email" label="Email" error={show('email')}>
-                      <input {...input('email', { type: 'email', inputMode: 'email', autoComplete: 'email' })} />
-                    </Field>
-                  </div>
-                </div>
-
-                <div className="onb-section">
-                  <h3>Address</h3>
-                  <div className="onb-fields">
-                    <Field id="p-line1" label="Street address" error={show('line1')}>
-                      <input {...input('line1', { autoComplete: 'address-line1' })} />
-                    </Field>
-                    <Field id="p-line2" label="Apartment, suite, unit" optional>
-                      <input {...input('line2', { autoComplete: 'address-line2' })} />
-                    </Field>
-                  </div>
-                  <div className="onb-fields addr" style={{ marginTop: 16 }}>
-                    <Field id="p-city" label="City" error={show('city')}>
-                      <input {...input('city', { autoComplete: 'address-level2' })} />
-                    </Field>
-                    <Field id="p-state" label="State" error={show('state')}>
-                      <input {...input('state', { autoComplete: 'address-level1', maxLength: 2, style: { textTransform: 'uppercase' } })} />
-                    </Field>
-                    <Field id="p-zip" label="ZIP" error={show('zip')}>
-                      <input {...input('zip', { autoComplete: 'postal-code', inputMode: 'numeric', maxLength: 10 })} />
-                    </Field>
-                  </div>
-                </div>
-
-                <div className="onb-section">
-                  <h3>Joining as</h3>
-                  <div className="onb-choice" role="group" aria-label="Joining as" id="p-kind">
-                    <button type="button" aria-pressed={profile.kind === 'individual'} onClick={() => { set('kind', 'individual'); setTouched((t) => ({ ...t, kind: true })) }}>
-                      An individual
-                    </button>
-                    <button type="button" aria-pressed={profile.kind === 'business'} onClick={() => { set('kind', 'business'); setTouched((t) => ({ ...t, kind: true })) }}>
-                      A business
-                    </button>
-                  </div>
-                  {show('kind') && <p className="onb-err">{show('kind')}</p>}
-                  {profile.kind === 'business' && (
-                    <div className="onb-fields" style={{ marginTop: 16 }}>
-                      <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint="As registered. Your EIN goes to Stripe in the next step, not here.">
-                        <input {...input('businessName', { autoComplete: 'organization' })} />
-                      </Field>
-                    </div>
-                  )}
-                </div>
-
-                <div className="onb-section">
-                  <h3>How you’ll share BEASTY</h3>
-                  <div className="onb-chip-row" role="group" aria-label="How you’ll share BEASTY" id="p-promote">
-                    {PROMOTE.map(([k, l]) => {
-                      const on = !!profile.promote?.includes(k)
-                      return (
-                        <button
-                          key={k}
-                          type="button"
-                          className="onb-chip"
-                          aria-pressed={on}
-                          onClick={() => {
-                            const cur = profile.promote ?? []
-                            set('promote', on ? cur.filter((x) => x !== k) : [...cur, k])
-                            setTouched((t) => ({ ...t, promote: true }))
-                          }}
-                        >
-                          {l}
-                        </button>
-                      )
-                    })}
-                  </div>
-                  {show('promote') && <p className="onb-err">{show('promote')}</p>}
-                  <div className="onb-fields two" style={{ marginTop: 16 }}>
-                    <Field id="p-instagram" label="Instagram" optional>
-                      <input {...input('instagram', { placeholder: '@yourhandle', autoCapitalize: 'none' })} />
-                    </Field>
-                    <Field id="p-tiktok" label="TikTok" optional>
-                      <input {...input('tiktok', { placeholder: '@yourhandle', autoCapitalize: 'none' })} />
-                    </Field>
-                    <Field id="p-youtube" label="YouTube" optional>
-                      <input {...input('youtube', { autoCapitalize: 'none' })} />
-                    </Field>
-                    <Field id="p-website" label="Website" optional>
-                      <input {...input('website', { type: 'url', inputMode: 'url', placeholder: 'https://', autoCapitalize: 'none' })} />
-                    </Field>
-                  </div>
-                  <div className="onb-fields" style={{ marginTop: 16 }}>
-                    <div className="onb-field">
-                      <label htmlFor="p-promoteNote">
-                        Anything else about how you’ll share BEASTY? <small>Optional</small>
-                      </label>
-                      <textarea
-                        id="p-promoteNote"
-                        className="onb-input"
-                        rows={3}
-                        value={profile.promoteNote ?? ''}
-                        maxLength={300}
-                        onChange={(e) => set('promoteNote', e.target.value)}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <div className="onb-actions">
-                  <button className="onb-btn onb-btn-dark" onClick={() => void nextFromProfile()}>
-                    Continue
-                  </button>
-                  {showAll && !profileDone && <p className="onb-err" role="alert">A few things above still need filling in.</p>}
-                </div>
-              </section>
-            )}
-
-            {step === 1 && (
-              <section className="onb-card" aria-labelledby="s1">
-                <h2 id="s1">Get paid</h2>
-                <p className="onb-lede">BEASTY pays affiliates through Stripe. Stripe checks who you are, takes your tax details for your 1099, and adds the bank account your commissions go to.</p>
-                <div className="onb-section">
-                  <ul className="onb-rows">
-                    {(
-                      [
-                        ['Identity check', 'Your legal name, date of birth and, if Stripe asks, a photo of your ID.', p.identity],
-                        ['Tax details', p_kind(bundle) === 'business' ? 'Your business’s EIN, for your 1099.' : 'Your Social Security number, for your 1099.', p.tax],
-                        ['Bank account', p.bankLast4 ? `Account ending ${p.bankLast4}.` : 'Where your commissions are deposited.', p.bank],
-                      ] as [string, string, Tri][]
-                    ).map(([t, d, s]) => {
-                      const [label, tone] = tri(s)
-                      return (
-                        <li key={t}>
-                          <div className="onb-row-text">
-                            <b>{t}</b>
-                            <span>{d}</span>
-                          </div>
-                          <span className="onb-pill" data-tone={tone || undefined}>
-                            {p.available ? label : 'Opens soon'}
-                          </span>
-                        </li>
-                      )
-                    })}
-                  </ul>
-                </div>
-                <div className="onb-trust">
-                  <Lock />
-                  <p>These details go straight to Stripe on Stripe’s own page. BEASTY never sees or stores your SSN, bank account or ID; we only see whether each step is done.</p>
-                </div>
-                {!p.available ? (
-                  <div className="onb-note onb-section" role="status">
-                    <div>
-                      <b>Payout setup opens soon.</b> BEASTY is finishing its Stripe setup. You can keep going with the other steps and come back to this one.
-                    </div>
-                  </div>
-                ) : null}
-                {err && <p className="onb-err" role="alert">{err}</p>}
-                <div className="onb-actions">
-                  <button className="onb-btn onb-btn-ghost onb-back" onClick={() => void go(0)} aria-label="Back to Your information">
-                    Back
-                  </button>
-                  {p.available && !p.complete && (
-                    <button className="onb-btn onb-btn-primary" disabled={busy} onClick={() => void openProvider('/api/onboarding/me/payouts/link')}>
-                      {busy ? 'Opening Stripe…' : p.started ? 'Continue with Stripe' : 'Set up payouts with Stripe'}
-                    </button>
-                  )}
-                  <button className={`onb-btn ${p.complete || !p.available ? 'onb-btn-dark' : 'onb-btn-ghost'}`} onClick={() => void go(2)}>
-                    {p.complete ? 'Continue' : 'Skip for now'}
-                  </button>
-                  {p.available && !p.complete && <p className="onb-quiet">You’ll leave BEASTY for Stripe’s secure page, then come straight back here.</p>}
-                </div>
-              </section>
-            )}
-
-            {step === 2 && (
-              <section className="onb-card" aria-labelledby="s2">
-                <h2 id="s2">Your affiliate agreement</h2>
-                <p className="onb-lede">Read the terms of the partnership and sign. BEASTY countersigns after you, and the signed copy appears on your dashboard.</p>
-                <div className="onb-section">
-                  <h3>What it covers</h3>
-                  <ul className="onb-list">
-                    <li>How you earn commission, and what counts as a qualified referral</li>
-                    <li>When and how you’re paid</li>
-                    <li>Refunds and chargebacks</li>
-                    <li>How you can promote BEASTY</li>
-                    <li>Confidentiality, ending the agreement, and that you’re an independent contractor</li>
-                  </ul>
-                </div>
-                <div className="onb-section">
-                  <ul className="onb-rows">
-                    <li>
-                      <div className="onb-row-text">
-                        <b>Your signature</b>
-                        <span>{a.affiliateSigned ? 'Signed. Thank you.' : a.status === 'declined' ? 'You declined to sign.' : a.status === 'expired' ? 'The signing link expired. Open it again.' : 'Not signed yet.'}</span>
-                      </div>
-                      <span className="onb-pill" data-tone={a.affiliateSigned ? 'good' : a.status === 'declined' || a.status === 'expired' ? 'bad' : undefined}>
-                        {!a.available ? 'Opens soon' : a.affiliateSigned ? 'Signed' : 'To do'}
-                      </span>
-                    </li>
-                    <li>
-                      <div className="onb-row-text">
-                        <b>BEASTY’s countersignature</b>
-                        <span>{a.countersigned ? 'Countersigned.' : 'Added by BEASTY after you sign.'}</span>
-                      </div>
-                      <span className="onb-pill" data-tone={a.countersigned ? 'good' : undefined}>
-                        {a.countersigned ? 'Done' : 'After you'}
-                      </span>
-                    </li>
-                  </ul>
-                </div>
-                {!a.available && (
-                  <div className="onb-note onb-section" role="status">
-                    <div>
-                      <b>The agreement is being finalized.</b> It will be ready to sign here soon. Everything else you’ve entered is saved.
-                    </div>
-                  </div>
-                )}
-                {err && <p className="onb-err" role="alert">{err}</p>}
-                <div className="onb-actions">
-                  <button className="onb-btn onb-btn-ghost onb-back" onClick={() => void go(1)} aria-label="Back to Get paid">
-                    Back
-                  </button>
-                  {a.available && !a.affiliateSigned && (
-                    <button className="onb-btn onb-btn-primary" disabled={busy || !profileDone} onClick={() => void openProvider('/api/onboarding/me/agreement/sign')}>
-                      {busy ? 'Opening…' : 'Review and sign'}
-                    </button>
-                  )}
-                  <button className={`onb-btn ${a.affiliateSigned || !a.available ? 'onb-btn-dark' : 'onb-btn-ghost'}`} onClick={() => void go(3)}>
-                    {a.affiliateSigned ? 'Continue' : 'Skip for now'}
-                  </button>
-                  {a.available && !a.affiliateSigned && (
-                    <p className="onb-quiet">{profileDone ? 'The agreement opens on DocuSeal, our e-signature service, already filled in with your details. You’ll come back here after signing.' : 'Finish your information first; the agreement is filled in from it.'}</p>
-                  )}
-                </div>
-              </section>
-            )}
-
-            {step === 3 && (
-              <section className="onb-card" aria-labelledby="s3">
-                <h2 id="s3">You’re almost there</h2>
-                <p className="onb-lede">Check each part is done, then send your application to BEASTY.</p>
-                <div className="onb-section">
-                  <ul className="onb-rows">
-                    {(
-                      [
-                        ['Your information', profileDone, 0, profileDone ? 'Complete' : 'Needs a few details'],
-                        ['Payout setup', p.complete, 1, p.complete ? `Complete${p.bankLast4 ? `, bank ending ${p.bankLast4}` : ''}` : p.available ? 'Not finished' : 'Opens soon'],
-                        ['Affiliate agreement', a.affiliateSigned, 2, a.affiliateSigned ? 'Signed' : a.available ? 'Not signed yet' : 'Opens soon'],
-                      ] as [string, boolean, number, string][]
-                    ).map(([t, ok, n, d]) => (
-                      <li key={t}>
-                        <div className="onb-row-text">
-                          <b>{t}</b>
-                          <span>{d}</span>
-                        </div>
-                        {ok ? (
-                          <span className="onb-pill" data-tone="good">Done</span>
-                        ) : (
-                          <button className="onb-link" onClick={() => void go(n)}>
-                            Finish
-                          </button>
-                        )}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                {err && <p className="onb-err" role="alert">{err}</p>}
-                <div className="onb-actions">
-                  <button className="onb-btn onb-btn-ghost onb-back" onClick={() => void go(2)} aria-label="Back to Agreement">
-                    Back
-                  </button>
-                  <button className="onb-btn onb-btn-primary" disabled={busy || !(profileDone && p.complete && a.affiliateSigned)} onClick={() => void submit()}>
-                    {busy ? 'Sending…' : 'Submit application'}
-                  </button>
-                  {!(profileDone && p.complete && a.affiliateSigned) && <p className="onb-quiet">Submit opens once every part above is done.</p>}
-                </div>
-              </section>
-            )}
+  if (step === 0) {
+    body = (
+      <>
+        <div className="onb-section">
+          <h3>About you</h3>
+          <div className="onb-fields two">
+            <Field id="p-legalFirst" label="Legal first name" error={show('legalFirst')}>
+              <input {...input('legalFirst', { autoComplete: 'given-name' })} />
+            </Field>
+            <Field id="p-legalLast" label="Legal last name" error={show('legalLast')}>
+              <input {...input('legalLast', { autoComplete: 'family-name' })} />
+            </Field>
+            <Field id="p-preferredName" label="What should we call you?" optional>
+              <input {...input('preferredName', { autoComplete: 'nickname' })} />
+            </Field>
+            <Field id="p-phone" label="Mobile number" error={show('phone')}>
+              <input {...input('phone', { type: 'tel', inputMode: 'tel', autoComplete: 'tel' })} />
+            </Field>
+            <Field id="p-email" label="Email" error={show('email')}>
+              <input {...input('email', { type: 'email', inputMode: 'email', autoComplete: 'email' })} />
+            </Field>
           </div>
         </div>
-      </main>
-    </Shell>
+
+        <div className="onb-section">
+          <h3>Address</h3>
+          <div className="onb-fields">
+            <Field id="p-line1" label="Street address" error={show('line1')}>
+              <input {...input('line1', { autoComplete: 'address-line1' })} />
+            </Field>
+            <Field id="p-line2" label="Apartment, suite, unit" optional>
+              <input {...input('line2', { autoComplete: 'address-line2' })} />
+            </Field>
+          </div>
+          <div className="onb-fields addr">
+            <Field id="p-city" label="City" error={show('city')}>
+              <input {...input('city', { autoComplete: 'address-level2' })} />
+            </Field>
+            <Field id="p-state" label="State" error={show('state')}>
+              <input {...input('state', { autoComplete: 'address-level1', maxLength: 2, style: { textTransform: 'uppercase' } })} />
+            </Field>
+            <Field id="p-zip" label="ZIP" error={show('zip')}>
+              <input {...input('zip', { autoComplete: 'postal-code', inputMode: 'numeric', maxLength: 10 })} />
+            </Field>
+          </div>
+        </div>
+
+        <div className="onb-section">
+          <h3>Joining as</h3>
+          <div className="onb-choice" role="group" aria-label="Joining as" id="p-kind">
+            <button type="button" aria-pressed={profile.kind === 'individual'} onClick={() => { set('kind', 'individual'); setTouched((t) => ({ ...t, kind: true })) }}>
+              An individual
+            </button>
+            <button type="button" aria-pressed={profile.kind === 'business'} onClick={() => { set('kind', 'business'); setTouched((t) => ({ ...t, kind: true })) }}>
+              A business
+            </button>
+          </div>
+          {show('kind') && <p className="onb-err">{show('kind')}</p>}
+          {profile.kind === 'business' && (
+            <div className="onb-fields" style={{ marginTop: 16 }}>
+              <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint="As registered. Your EIN goes to Stripe in the next step, not here.">
+                <input {...input('businessName', { autoComplete: 'organization' })} />
+              </Field>
+            </div>
+          )}
+        </div>
+
+        <div className="onb-section">
+          <h3>How you’ll share BEASTY</h3>
+          <div className="onb-chip-row" role="group" aria-label="How you’ll share BEASTY" id="p-promote">
+            {PROMOTE.map(([k, l]) => {
+              const on = !!profile.promote?.includes(k)
+              return (
+                <button
+                  key={k}
+                  type="button"
+                  className="onb-chip"
+                  aria-pressed={on}
+                  onClick={() => {
+                    const cur = profile.promote ?? []
+                    set('promote', on ? cur.filter((x) => x !== k) : [...cur, k])
+                    setTouched((t) => ({ ...t, promote: true }))
+                  }}
+                >
+                  {l}
+                </button>
+              )
+            })}
+          </div>
+          {show('promote') && <p className="onb-err">{show('promote')}</p>}
+          <div className="onb-fields two" style={{ marginTop: 16 }}>
+            <Field id="p-instagram" label="Instagram" optional>
+              <input {...input('instagram', { placeholder: '@yourhandle', autoCapitalize: 'none' })} />
+            </Field>
+            <Field id="p-tiktok" label="TikTok" optional>
+              <input {...input('tiktok', { placeholder: '@yourhandle', autoCapitalize: 'none' })} />
+            </Field>
+            <Field id="p-youtube" label="YouTube" optional>
+              <input {...input('youtube', { autoCapitalize: 'none' })} />
+            </Field>
+            <Field id="p-website" label="Website" optional>
+              <input {...input('website', { type: 'url', inputMode: 'url', placeholder: 'https://', autoCapitalize: 'none' })} />
+            </Field>
+          </div>
+          <div className="onb-fields">
+            <div className="onb-field">
+              <label htmlFor="p-promoteNote">
+                Anything else about how you’ll share BEASTY? <small>Optional</small>
+              </label>
+              <textarea id="p-promoteNote" className="onb-input" rows={3} value={profile.promoteNote ?? ''} maxLength={300} onChange={(e) => set('promoteNote', e.target.value)} />
+            </div>
+          </div>
+        </div>
+        {showAll && !profileDone && (
+          <p className="onb-err" role="alert" style={{ marginTop: 20 }}>
+            A few things above still need filling in.
+          </p>
+        )}
+      </>
+    )
+    dock = (
+      <button className="onb-btn onb-btn-primary" onClick={() => void nextFromProfile()}>
+        Continue
+      </button>
+    )
+  }
+
+  if (step === 1) {
+    body = (
+      <>
+        <ul className="onb-rows">
+          {(
+            [
+              ['Identity check', 'Your legal name, date of birth and, if Stripe asks, a photo of your ID.', p.identity],
+              ['Tax details', p_kind(bundle) === 'business' ? 'Your business’s EIN, for your 1099.' : 'Your Social Security number, for your 1099.', p.tax],
+              ['Bank account', p.bankLast4 ? `Account ending ${p.bankLast4}.` : 'Where your commissions are deposited.', p.bank],
+            ] as [string, string, Tri][]
+          ).map(([t, d, st]) => {
+            const [label, tone] = tri(st)
+            return (
+              <li key={t}>
+                <div className="onb-row-text">
+                  <b>{t}</b>
+                  <span>{d}</span>
+                </div>
+                <span className="onb-tag" data-tone={(p.available && tone) || undefined}>
+                  {p.available ? label : 'Opens soon'}
+                </span>
+              </li>
+            )
+          })}
+        </ul>
+        <div className="onb-section">
+          {p.available && !p.complete ? (
+            <>
+              <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy} onClick={() => void openProvider('/api/onboarding/me/payouts/link')}>
+                {busy ? 'Opening Stripe…' : p.started ? 'Continue with Stripe' : 'Set up payouts with Stripe'}
+              </button>
+              <p className="onb-quiet" style={{ marginTop: 10 }}>
+                You’ll leave BEASTY for Stripe’s secure page, then come straight back here.
+              </p>
+            </>
+          ) : !p.available ? (
+            <div className="onb-note" role="status">
+              <b>Payout setup opens soon.</b> BEASTY is finishing its Stripe setup. You can send your application without it and finish this step when it opens.
+            </div>
+          ) : null}
+        </div>
+        <div className="onb-section">
+          <div className="onb-trust">
+            <Lock />
+            <p>These details go straight to Stripe on Stripe’s own page. BEASTY never sees or stores your SSN, bank account or ID; we only see whether each step is done.</p>
+          </div>
+        </div>
+        {err && (
+          <p className="onb-err" role="alert" style={{ marginTop: 16 }}>
+            {err}
+          </p>
+        )}
+      </>
+    )
+    dock = (
+      <>
+        {back}
+        <button className={`onb-btn ${p.available && !p.complete ? '' : 'onb-btn-primary'}`} onClick={() => void go(2)}>
+          {p.available && !p.complete ? 'Skip for now' : 'Continue'}
+        </button>
+      </>
+    )
+  }
+
+  if (step === 2) {
+    body = (
+      <>
+        <div className="onb-section">
+          <h3>What it covers</h3>
+          <ul className="onb-list">
+            <li>How you earn commission, and what counts as a qualified referral</li>
+            <li>When and how you’re paid</li>
+            <li>Refunds and chargebacks</li>
+            <li>How you can promote BEASTY</li>
+            <li>Confidentiality, ending the agreement, and that you’re an independent contractor</li>
+          </ul>
+        </div>
+        <div className="onb-section">
+          <ul className="onb-rows">
+            <li>
+              <div className="onb-row-text">
+                <b>Your signature</b>
+                <span>{a.affiliateSigned ? 'Signed. Thank you.' : a.status === 'declined' ? 'You declined to sign.' : a.status === 'expired' ? 'The signing link expired. Open it again.' : 'Not signed yet.'}</span>
+              </div>
+              <span className="onb-tag" data-tone={a.affiliateSigned ? 'good' : a.status === 'declined' || a.status === 'expired' ? 'bad' : undefined}>
+                {!a.available ? 'Opens soon' : a.affiliateSigned ? 'Signed' : 'To do'}
+              </span>
+            </li>
+            <li>
+              <div className="onb-row-text">
+                <b>BEASTY’s countersignature</b>
+                <span>{a.countersigned ? 'Countersigned.' : 'Added by BEASTY after you sign.'}</span>
+              </div>
+              <span className="onb-tag" data-tone={a.countersigned ? 'good' : undefined}>
+                {a.countersigned ? 'Done' : 'After you'}
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="onb-section">
+          {a.available && !a.affiliateSigned ? (
+            <>
+              <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || !profileDone} onClick={() => void openProvider('/api/onboarding/me/agreement/sign')}>
+                {busy ? 'Opening…' : 'Review and sign'}
+              </button>
+              <p className="onb-quiet" style={{ marginTop: 10 }}>
+                {profileDone ? 'The agreement opens on DocuSeal, our e-signature service, already filled in with your details. You’ll come back here after signing.' : 'Finish your information first; the agreement is filled in from it.'}
+              </p>
+            </>
+          ) : !a.available ? (
+            <div className="onb-note" role="status">
+              <b>The agreement is being finalized.</b> You can send your application without it and sign here when it’s ready.
+            </div>
+          ) : null}
+        </div>
+        {err && (
+          <p className="onb-err" role="alert" style={{ marginTop: 16 }}>
+            {err}
+          </p>
+        )}
+      </>
+    )
+    dock = (
+      <>
+        {back}
+        <button className={`onb-btn ${a.available && !a.affiliateSigned ? '' : 'onb-btn-primary'}`} onClick={() => void go(3)}>
+          {a.available && !a.affiliateSigned ? 'Skip for now' : 'Continue'}
+        </button>
+      </>
+    )
+  }
+
+  if (step === 3) {
+    body = (
+      <>
+        <ul className="onb-rows">
+          {(
+            [
+              ['Your information', profileDone, true, 0, profileDone ? 'Complete' : 'Needs a few details'],
+              ['Payout setup', p.complete, p.available, 1, p.complete ? `Complete${p.bankLast4 ? `, bank ending ${p.bankLast4}` : ''}` : p.available ? 'Not finished' : 'Opens soon. You’ll finish it after you send this.'],
+              ['Affiliate agreement', a.affiliateSigned, a.available, 2, a.affiliateSigned ? 'Signed' : a.available ? 'Not signed yet' : 'Opens soon. You’ll sign it after you send this.'],
+            ] as [string, boolean, boolean, number, string][]
+          ).map(([t, ok, open, n, d]) => (
+            <li key={t}>
+              <div className="onb-row-text">
+                <b>{t}</b>
+                <span>{d}</span>
+              </div>
+              {ok ? (
+                <span className="onb-tag" data-tone="good">
+                  Done
+                </span>
+              ) : !open ? (
+                <span className="onb-tag">Later</span>
+              ) : (
+                <button className="onb-link" onClick={() => void go(n)}>
+                  Finish
+                </button>
+              )}
+            </li>
+          ))}
+        </ul>
+        {canSubmit && later.length > 0 && (
+          <p className="onb-quiet" style={{ marginTop: 16 }}>
+            BEASTY gets your application now; {later.join(' and ')} open{later.length > 1 ? '' : 's'} soon and you’ll finish {later.length > 1 ? 'them' : 'it'} from this page.
+          </p>
+        )}
+        {!canSubmit && (
+          <p className="onb-quiet" style={{ marginTop: 16 }}>
+            Submit opens once every part above that’s open is done.
+          </p>
+        )}
+        {err && (
+          <p className="onb-err" role="alert" style={{ marginTop: 16 }}>
+            {err}
+          </p>
+        )}
+      </>
+    )
+    dock = (
+      <>
+        {back}
+        <button className="onb-btn onb-btn-primary" disabled={busy || !canSubmit} onClick={() => void submit()}>
+          {busy ? 'Sending…' : 'Submit application'}
+        </button>
+      </>
+    )
+  }
+
+  return (
+    <Page save={save} test={bundle.testMode} head={head} dock={dock}>
+      <div ref={top} />
+      {bundle.status === 'changes_requested' && (
+        <div className="onb-note" data-tone="warn" role="status" style={{ marginBottom: 20 }}>
+          <b>BEASTY asked for a change.</b> {bundle.decisionNote}
+        </div>
+      )}
+      {notice && (
+        <div className="onb-note" role="status" style={{ marginBottom: 20 }}>
+          {notice}
+        </div>
+      )}
+      <section aria-labelledby={`s${step}`}>{body}</section>
+    </Page>
   )
 }
+
+const TITLES = ['Your information', 'Get paid', 'Your affiliate agreement', 'You’re almost there'] as const
+const LEDES = [
+  'Use your legal name, the one on your ID. It goes on your agreement and your tax form.',
+  'BEASTY pays affiliates through Stripe. Stripe checks who you are, takes your tax details for your 1099, and adds the bank account your commissions go to.',
+  'Read the terms of the partnership and sign. BEASTY countersigns after you, and the signed copy appears on your dashboard.',
+  'Check each part, then send your application to BEASTY.',
+] as const
+const SHORT = ['Details', 'Get paid', 'Agreement', 'Review'] as const
 
 const p_kind = (b: Bundle) => b.profile.kind ?? 'individual'
 
@@ -844,99 +904,170 @@ const p_kind = (b: Bundle) => b.profile.kind ?? 'individual'
 const STATUS_COPY: Record<Bundle['status'], [string, string, string]> = {
   in_progress: ['In progress', '', ''],
   changes_requested: ['Action needed', 'warn', ''],
-  submitted: ['Under review', 'warn', 'Thanks for applying. BEASTY is reviewing your application and will email you when it’s done.'],
+  submitted: ['Under review', 'warn', 'Thanks for applying. BEASTY has your application and will email you when it’s reviewed.'],
   approved: ['Approved', 'good', 'You’re a BEASTY affiliate. Share your code and link from the Earn tab in the BEASTY app.'],
   rejected: ['Not approved', 'bad', 'BEASTY isn’t able to approve your application right now.'],
   suspended: ['Paused', 'bad', 'Your affiliate account is paused. Message BEASTY if you have questions.'],
 }
 
 function Dashboard({ bundle }: { bundle: Bundle }) {
-  const [label, tone, copy] = STATUS_COPY[bundle.status]
+  const [label, , copy] = STATUS_COPY[bundle.status]
   const pr = bundle.profile
   const p = bundle.steps.payouts
   const a = bundle.steps.agreement
   const first = pr.preferredName || pr.legalFirst || ''
+  const [busy, setBusy] = useState(false)
+  const [err, setErr] = useState('')
+  const open = async (path: string) => {
+    setBusy(true)
+    setErr('')
+    try {
+      const r = await api<{ url: string }>(path, { method: 'POST' })
+      window.location.assign(r.url)
+    } catch (x) {
+      setErr(x instanceof ApiErr ? x.message : 'Couldn’t reach BEASTY. Check your connection and try again.')
+      setBusy(false)
+    }
+  }
+  /* Sent in before payouts or signing opened: those are finished from here. */
+  const active = bundle.status === 'submitted' || bundle.status === 'approved'
+  const todo = active && (!p.complete || !a.affiliateSigned)
   return (
-    <Shell test={bundle.testMode}>
-      <main className="onb-main" style={{ maxWidth: 760 }}>
-        <section className="onb-card onb-status">
-          <div className="onb-status-top">
-            <h2>{bundle.status === 'approved' ? `Welcome to BEASTY${first ? `, ${first}` : ''}` : `${first ? `${first}, your` : 'Your'} application`}</h2>
-            <span className="onb-pill" data-tone={tone || undefined}>{label}</span>
-          </div>
-          <p className="onb-lede">{copy}</p>
-          {bundle.decisionNote && <div className="onb-note" style={{ marginTop: 10 }}>{bundle.decisionNote}</div>}
-        </section>
+    <Page
+      test={bundle.testMode}
+      head={
+        <div className="onb-status">
+          <p className="onb-kicker">{bundle.status === 'approved' ? `Welcome to BEASTY${first ? `, ${first}` : ''}` : `${first ? `${first}, your` : 'Your'} application`}</p>
+          <h1 className="onb-title">{label}</h1>
+          {copy && <p className="onb-lede">{copy}</p>}
+        </div>
+      }
+    >
+      {bundle.decisionNote && (
+        <div className="onb-note" style={{ marginBottom: 24 }}>
+          {bundle.decisionNote}
+        </div>
+      )}
 
-        <section className="onb-card">
-          <h3>Documents</h3>
-          <ul className="onb-rows" style={{ marginTop: 14 }}>
-            <li>
-              <div className="onb-row-text">
-                <b>Affiliate agreement</b>
-                <span>{a.countersigned ? 'Signed by you and BEASTY.' : a.affiliateSigned ? 'Signed by you; waiting for BEASTY’s countersignature.' : 'Not signed.'}</span>
-              </div>
-              {a.countersigned && !bundle.testMode ? (
-                <a className="onb-link" href="/api/onboarding/me/agreement.pdf">Download</a>
-              ) : (
-                <span className="onb-pill" data-tone={a.countersigned ? 'good' : a.affiliateSigned ? 'warn' : undefined}>{a.countersigned ? 'Complete' : a.affiliateSigned ? 'Countersigning' : 'Missing'}</span>
-              )}
-            </li>
-            <li>
-              <div className="onb-row-text">
-                <b>Tax details</b>
-                <span>Held by Stripe, which files your 1099.</span>
-              </div>
-              <span className="onb-pill" data-tone={p.tax === 'complete' ? 'good' : undefined}>{p.tax === 'complete' ? 'Complete' : 'Missing'}</span>
-            </li>
-          </ul>
-        </section>
-
-        <section className="onb-card">
-          <h3>Payouts</h3>
-          <dl className="onb-kv" style={{ marginTop: 14 }}>
-            <div>
-              <dt>Paid through</dt>
-              <dd>Stripe</dd>
-            </div>
-            <div>
-              <dt>Bank account</dt>
-              <dd>{p.bankLast4 ? `Ending ${p.bankLast4}` : 'Not added'}</dd>
-            </div>
-          </dl>
-        </section>
-
-        <section className="onb-card">
-          <h3>Commissions</h3>
-          <p className="onb-lede" style={{ fontSize: 15 }}>Commission payments aren’t switched on yet. When they are, what you’ve earned and when it’s paid will show here.</p>
-        </section>
-
-        <section className="onb-card">
-          <h3>Your details</h3>
-          <dl className="onb-kv" style={{ marginTop: 14 }}>
-            <div>
-              <dt>Name</dt>
-              <dd>{`${pr.legalFirst ?? ''} ${pr.legalLast ?? ''}`.trim()}</dd>
-            </div>
-            {pr.kind === 'business' && (
-              <div>
-                <dt>Business</dt>
-                <dd>{pr.businessName}</dd>
-              </div>
+      {todo && (
+        <div className="onb-section">
+          <h3>Still to do</h3>
+          <ul className="onb-rows">
+            {!p.complete && (
+              <li>
+                <div className="onb-row-text">
+                  <b>Payout setup</b>
+                  <span>{p.available ? 'Add your identity, tax details and bank account with Stripe.' : 'Opens soon. BEASTY will let you know.'}</span>
+                </div>
+                {p.available ? (
+                  <button className="onb-btn onb-btn-primary" style={{ minHeight: 44, padding: '0 18px' }} disabled={busy} onClick={() => void open('/api/onboarding/me/payouts/link')}>
+                    {p.started ? 'Continue' : 'Set up'}
+                  </button>
+                ) : (
+                  <span className="onb-tag">Opens soon</span>
+                )}
+              </li>
             )}
-            <div>
-              <dt>Email</dt>
-              <dd>{pr.email}</dd>
+            {!a.affiliateSigned && (
+              <li>
+                <div className="onb-row-text">
+                  <b>Affiliate agreement</b>
+                  <span>{a.available ? 'Read and sign it on DocuSeal, filled in with your details.' : 'Opens soon. BEASTY will let you know.'}</span>
+                </div>
+                {a.available && bundle.status === 'submitted' ? (
+                  <button className="onb-btn onb-btn-primary" style={{ minHeight: 44, padding: '0 18px' }} disabled={busy} onClick={() => void open('/api/onboarding/me/agreement/sign')}>
+                    Sign
+                  </button>
+                ) : (
+                  <span className="onb-tag">Opens soon</span>
+                )}
+              </li>
+            )}
+          </ul>
+          {err && (
+            <p className="onb-err" role="alert" style={{ marginTop: 12 }}>
+              {err}
+            </p>
+          )}
+        </div>
+      )}
+
+      <div className="onb-section">
+        <h3>Documents</h3>
+        <ul className="onb-rows">
+          <li>
+            <div className="onb-row-text">
+              <b>Affiliate agreement</b>
+              <span>{a.countersigned ? 'Signed by you and BEASTY.' : a.affiliateSigned ? 'Signed by you; waiting for BEASTY’s countersignature.' : 'Not signed yet.'}</span>
             </div>
-            <div>
-              <dt>Phone</dt>
-              <dd>{pr.phone}</dd>
+            {a.countersigned && !bundle.testMode ? (
+              <a className="onb-link" href="/api/onboarding/me/agreement.pdf">
+                Download
+              </a>
+            ) : (
+              <span className="onb-tag" data-tone={a.countersigned ? 'good' : a.affiliateSigned ? 'warn' : undefined}>
+                {a.countersigned ? 'Complete' : a.affiliateSigned ? 'Countersigning' : 'Not yet'}
+              </span>
+            )}
+          </li>
+          <li>
+            <div className="onb-row-text">
+              <b>Tax details</b>
+              <span>Held by Stripe, which files your 1099.</span>
             </div>
-          </dl>
-          <p className="onb-quiet" style={{ marginTop: 14 }}>Need to change something? Message BEASTY and we’ll update it with you.</p>
-        </section>
-      </main>
-    </Shell>
+            <span className="onb-tag" data-tone={p.tax === 'complete' ? 'good' : undefined}>
+              {p.tax === 'complete' ? 'Complete' : 'Not yet'}
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div className="onb-section">
+        <h3>Payouts</h3>
+        <dl className="onb-kv">
+          <div>
+            <dt>Paid through</dt>
+            <dd>Stripe</dd>
+          </div>
+          <div>
+            <dt>Bank account</dt>
+            <dd>{p.bankLast4 ? `Ending ${p.bankLast4}` : 'Not added'}</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div className="onb-section">
+        <h3>Commissions</h3>
+        <p className="onb-copy">Commission payments aren’t switched on yet. When they are, what you’ve earned and when it’s paid will show here.</p>
+      </div>
+
+      <div className="onb-section" style={{ paddingBottom: 40 }}>
+        <h3>Your details</h3>
+        <dl className="onb-kv">
+          <div>
+            <dt>Name</dt>
+            <dd>{`${pr.legalFirst ?? ''} ${pr.legalLast ?? ''}`.trim()}</dd>
+          </div>
+          {pr.kind === 'business' && (
+            <div>
+              <dt>Business</dt>
+              <dd>{pr.businessName}</dd>
+            </div>
+          )}
+          <div>
+            <dt>Email</dt>
+            <dd>{pr.email}</dd>
+          </div>
+          <div>
+            <dt>Phone</dt>
+            <dd>{pr.phone}</dd>
+          </div>
+        </dl>
+        <p className="onb-quiet" style={{ marginTop: 14 }}>
+          Need to change something? Message BEASTY and we’ll update it with you.
+        </p>
+      </div>
+    </Page>
   )
 }
 
@@ -956,25 +1087,21 @@ function StandIn({ kind, onDone }: { kind: 'payouts' | 'sign'; onDone: () => voi
     }
   }
   return (
-    <Shell test>
-      <main className="onb-main" style={{ maxWidth: 620 }}>
-        <div className="onb-standin">
-          <span className="onb-test">Test mode</span>
-          <h2>{kind === 'payouts' ? 'Stripe’s payout setup would open here' : 'DocuSeal’s signing page would open here'}</h2>
-          <p className="onb-lede">
-            {kind === 'payouts'
-              ? 'On the live site this is Stripe’s own page, where the affiliate enters their SSN, bank account and ID. In test mode nothing is collected; finishing marks the test account as set up.'
-              : 'On the live site this is the DocuSeal agreement, filled in with the affiliate’s details. In test mode nothing is signed for real; finishing marks the test agreement as signed by the affiliate.'}
-          </p>
-          {err && <p className="onb-err">{err}</p>}
-          <div className="onb-actions">
-            <button className="onb-btn onb-btn-dark" disabled={busy} onClick={() => void finish()}>
-              {kind === 'payouts' ? 'Finish test payout setup' : 'Sign test agreement'}
-            </button>
-          </div>
-        </div>
-      </main>
-    </Shell>
+    <Page test head={<h1 className="onb-title">{kind === 'payouts' ? 'Stripe stand-in' : 'DocuSeal stand-in'}</h1>}>
+      <div className="onb-standin">
+        <span className="onb-test">Test mode</span>
+        <h2>{kind === 'payouts' ? 'Stripe’s payout setup would open here' : 'DocuSeal’s signing page would open here'}</h2>
+        <p className="onb-copy">
+          {kind === 'payouts'
+            ? 'On the live site this is Stripe’s own page, where the affiliate enters their SSN, bank account and ID. In test mode nothing is collected; finishing marks the test account as set up.'
+            : 'On the live site this is the DocuSeal agreement, filled in with the affiliate’s details. In test mode nothing is signed for real; finishing marks the test agreement as signed by the affiliate.'}
+        </p>
+        {err && <p className="onb-err">{err}</p>}
+        <button className="onb-btn onb-btn-primary" disabled={busy} onClick={() => void finish()}>
+          {kind === 'payouts' ? 'Finish test payout setup' : 'Sign test agreement'}
+        </button>
+      </div>
+    </Page>
   )
 }
 

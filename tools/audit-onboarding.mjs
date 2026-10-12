@@ -31,13 +31,13 @@ const TESTDB = await freshTestDb('onboarding')
 const TOKEN = `op_${randomBytes(16).toString('hex')}`
 const HOOK = `whsec_${randomBytes(16).toString('hex')}`
 const freePort = () => new Promise((r) => { const s = createServer(); s.listen(0, () => { const { port } = s.address(); s.close(() => r(port)) }) })
-const port = await freePort()
-const LOG = `/tmp/audit-onboarding-${port}.log`
-const srv = spawn('npx', ['tsx', 'server/index.ts'], {
+let port = await freePort()
+let LOG = `/tmp/audit-onboarding-${port}.log`
+let srv = spawn('npx', ['tsx', 'server/index.ts'], {
   stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
   env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', OPERATOR_TOKEN: TOKEN, RESEND_API_KEY: '', LEAD_EMAIL: '', AFFILIATE_PROVIDERS: 'mock', DOCUSEAL_WEBHOOK_SECRET: HOOK },
 })
-const base = `http://localhost:${port}`
+let base = `http://localhost:${port}`
 let up = false
 for (let i = 0; i < 240 && !up; i++) { try { up = (await fetch(base + '/api/health')).ok } catch { await new Promise((r) => setTimeout(r, 250)) } }
 if (!up) { console.log('FAIL: server never came up'); srv.kill(); process.exit(1) }
@@ -231,6 +231,14 @@ await p.waitForSelector('.onb-save[data-state="saved"]', { timeout: 10000 }).cat
 check('the bar says the changes are saved', (await p.textContent('.onb-save'))?.includes('All changes saved'))
 await shot(p, '3-information')
 check('step 1 fits the phone', await noScroll())
+/* A real swipe, not Playwright's scroll-into-view: on 10 Oct the page could not be
+   scrolled on a phone at all because the app's body does not scroll. */
+await p.mouse.move(196, 600)
+await p.mouse.wheel(0, 1500)
+await p.waitForTimeout(400)
+const swiped = await p.evaluate(() => document.querySelector('.onb').scrollTop)
+check('step 1 scrolls with a swipe, as a phone does', swiped > 200, String(swiped))
+check('and Continue stays docked on screen while it does', await p.evaluate(() => { const r = document.querySelector('.onb-dock').getBoundingClientRect(); return r.top >= 0 && r.bottom <= innerHeight + 1 }))
 await p.reload({ waitUntil: 'networkidle' })
 await p.waitForSelector('#s1', { timeout: 15000 }).catch(() => {})
 check('a reload resumes at her first unfinished step', await p.isVisible('#s1'))
@@ -317,8 +325,83 @@ for (const [w, h, label] of [[1280, 900, 'computer'], [393, 852, 'phone']]) {
 }
 await b.close()
 
+/* ---- the live set-up: Stripe Connect and DocuSeal not switched on yet ----
+   An affiliate sends what they can, BEASTY receives it, and approval waits for the
+   signed agreement. Same database, a second server with no test providers. */
+srv.kill()
+await new Promise((r) => setTimeout(r, 800))
+port = await freePort()
+LOG = `/tmp/audit-onboarding-off-${port}.log`
+srv = spawn('npx', ['tsx', 'server/index.ts'], {
+  stdio: ['ignore', openSync(LOG, 'w'), openSync(LOG, 'a')],
+  env: { ...process.env, PORT: String(port), DATABASE_URL: TESTDB.url, NODE_ENV: 'development', OPERATOR_TOKEN: TOKEN, RESEND_API_KEY: '', LEAD_EMAIL: '', AFFILIATE_PROVIDERS: '', AFFILIATE_PAYOUTS: '', STRIPE_SECRET_KEY: '', DOCUSEAL_API_KEY: '', DOCUSEAL_WEBHOOK_SECRET: HOOK },
+})
+base = `http://localhost:${port}`
+up = false
+for (let i = 0; i < 240 && !up; i++) { try { up = (await fetch(base + '/api/health')).ok } catch { await new Promise((r) => setTimeout(r, 250)) } }
+check('LIVE SET-UP: the server comes up with no payout or signing service', up)
+const glenn = person()
+await glenn.call('POST', '/api/crm/session', { token: TOKEN })
+const liveInv = await glenn.call('POST', '/api/crm/onboarding/invites', { email: 'live.tester@audit.beastypages.dev', name: 'Live Tester' })
+const live = await member('Live Tester')
+const lr = await live.call('POST', `/api/onboarding/invite/${tokenOf(liveInv.body.link)}/redeem`)
+check('LIVE SET-UP: the invite opens an application', lr.status === 201)
+check('LIVE SET-UP: payouts and signing say they are not open', lr.body?.steps?.payouts?.available === false && lr.body?.steps?.agreement?.available === false)
+check('LIVE SET-UP: Stripe is not reachable yet', (await live.call('POST', '/api/onboarding/me/payouts/link')).status === 503)
+const liveEarly = await live.call('POST', '/api/onboarding/me/submit')
+check('LIVE SET-UP: an unfinished form still cannot be sent', liveEarly.status === 409 && /your information/.test(liveEarly.body?.error ?? ''), liveEarly.body?.error)
+const liveFull = { ...lr.body.profile, legalLast: 'Tester', phone: '(415) 555-0100', line1: '1 Market St', city: 'San Francisco', state: 'CA', zip: '94105', kind: 'individual', promote: ['instagram'] }
+check('LIVE SET-UP: the details save', (await live.call('PUT', '/api/onboarding/me/profile', { revision: lr.body.revision, profile: liveFull })).status === 200)
+const sent = await live.call('POST', '/api/onboarding/me/submit')
+check('LIVE SET-UP: with details done, the application can be sent', sent.status === 200 && sent.body?.status === 'submitted', sent.text.slice(0, 160))
+const glist = await glenn.call('GET', '/api/crm/onboarding')
+const liveRow = glist.body?.applications?.find((x) => x.email === 'live.tester@audit.beastypages.dev')
+check('LIVE SET-UP: Glenn receives it in the CRM, waiting for him', liveRow?.status === 'submitted', JSON.stringify(liveRow))
+const gd = await glenn.call('GET', `/api/crm/onboarding/${liveRow?.id}`)
+check('LIVE SET-UP: his page knows signing is not open', gd.body?.steps?.agreement?.available === false && gd.body?.countersignAvailable === false && gd.body?.events?.some((e) => e.kind === 'submitted'))
+check('LIVE SET-UP: approval still waits for the signed agreement', (await glenn.call('POST', `/api/crm/onboarding/${liveRow?.id}/decision`, { action: 'approve' })).status === 409)
+
+/* The same on a phone: the steps that are not open say so, and Submit opens. */
+const ph = await (await chromium.launch()).newContext({ viewport: { width: 393, height: 852 }, deviceScaleFactor: 2, extraHTTPHeaders: { 'x-forwarded-for': '10.9.3.1' } })
+const q = await ph.newPage()
+const liveInv2 = await glenn.call('POST', '/api/crm/onboarding/invites', { email: 'phone.live@audit.beastypages.dev', name: 'Phone Live' })
+await q.goto(liveInv2.body.link, { waitUntil: 'networkidle' })
+await q.getByRole('button', { name: 'Get started' }).click()
+await q.getByRole('button', { name: 'Email me' }).click()
+await q.fill('#j-dest', 'phone.live@audit.beastypages.dev')
+await q.getByRole('button', { name: 'Send my code' }).click()
+await q.waitForSelector('#j-code')
+await q.fill('#j-code', await codeFor('phone.live@audit.beastypages.dev'))
+await q.getByRole('button', { name: 'Continue' }).click()
+await q.waitForSelector('#s0', { timeout: 15000 }).catch(() => {})
+await q.fill('#p-legalLast', 'Live')
+await q.fill('#p-phone', '415 555 0142')
+await q.fill('#p-line1', '1 Market St')
+await q.fill('#p-city', 'San Francisco')
+await q.fill('#p-state', 'CA')
+await q.fill('#p-zip', '94105')
+await q.getByRole('button', { name: 'An individual' }).click()
+await q.getByRole('button', { name: 'Instagram', exact: true }).click()
+await q.waitForSelector('.onb-save[data-state="saved"]', { timeout: 10000 }).catch(() => {})
+await q.getByRole('button', { name: 'Continue' }).click()
+await q.waitForSelector('#s1')
+check('LIVE SET-UP (phone): payout setup says it opens soon', (await q.textContent('.onb-sheet'))?.includes('Payout setup opens soon'))
+await shot(q, '12-live-get-paid')
+await q.getByRole('button', { name: 'Continue' }).click()
+await q.waitForSelector('#s2')
+await q.getByRole('button', { name: 'Continue' }).click()
+await q.waitForSelector('#s3')
+check('LIVE SET-UP (phone): Submit is open with the details done', await q.getByRole('button', { name: 'Submit application' }).isEnabled())
+await shot(q, '13-live-review')
+await q.getByRole('button', { name: 'Submit application' }).click()
+await q.waitForSelector('.onb-status', { timeout: 15000 })
+check('LIVE SET-UP (phone): the dashboard says under review and what is still to come', (await q.textContent('.onb-status'))?.includes('Under review') && (await q.textContent('.onb-sheet'))?.includes('Still to do'))
+check('LIVE SET-UP (phone): fits the phone', await q.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth + 1))
+await shot(q, '14-live-dashboard')
+await ph.browser()?.close()
+
 await db.end()
 srv.kill()
 await TESTDB.drop?.()
 if (fails.length) { console.log(`\nFAIL: ${fails.length} step(s) — ${fails.join('; ')}`); process.exit(1) }
-console.log('\nPASS: affiliates join by invite, finish every step, submit, and Glenn countersigns and approves; nothing sensitive leaves the server.')
+console.log('\nPASS: affiliates join by invite, finish every step, submit, and Glenn countersigns and approves; with payouts and signing not yet switched on they can still send their details and Glenn receives them; nothing sensitive leaves the server.')
