@@ -204,7 +204,8 @@ for (const [id, want, expect] of [
   ['b_zandypekingduck', 'Z & Y Peking Duck', { free: true, call: "(415) 986-1899" }],
   ['b_bibosalon', 'BIBO Salon', { quote: true, call: "(510) 838-2426" }],
   ['b_pizzadeliandgrill', 'Pizza Deli & Grill', { free: true, call: "(510) 343-5336" }],
-  ['b_calburger', 'Cal Burger & More', { free: true }],
+  /* The whole page since 2026-10-12, when Glenn sent its film (a yellow-sheet spot with a film). */
+  ['b_calburger', 'Cal Burger & More', { rows: 39 }],
   ['b_pupcup', 'PupCup', { quote: true }],
   /* 2026-09-17: eight more, two of them with a film. */
   ['b_roasteateryco', 'Roast Eatery Co.', { free: true }],
