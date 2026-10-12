@@ -454,6 +454,31 @@ def m_coffee(rng):
     return composite(img, over, blur=6)
 
 
+def m_bakery(rng):
+    # Glenn, 2026-10-11: "add a New category for BEASTY • Bakery". Oven light from
+    # below, loaves scored across the top, flour dusting the dark.
+    img = gradient("#120a04", "#2e1a08")
+    img = glow(img, W * 0.5, H * 0.95, 1300, "#c2410c", 0.5)
+    over, d = layer()
+    for i in range(16):
+        cx, cy = rng.uniform(80, W - 80), rng.uniform(0, H)
+        rx, ry = rng.uniform(150, 240), rng.uniform(70, 110)
+        tilt = rng.uniform(-0.3, 0.3)
+        pts = [(cx + rx * math.cos(t) * math.cos(tilt) - ry * math.sin(t) * math.sin(tilt),
+                cy + rx * math.cos(t) * math.sin(tilt) + ry * math.sin(t) * math.cos(tilt))
+               for t in np.linspace(0, 2 * math.pi, 48)]
+        d.polygon(pts, outline=rgba("#f5c27a", 0.18), width=10)
+        for k in (-1, 0, 1):
+            sx = cx + k * rx * 0.42
+            d.line([(sx - 40 * math.cos(tilt + 0.9), cy - 40 * math.sin(tilt + 0.9) + k * rx * 0.42 * math.sin(tilt)),
+                    (sx + 40 * math.cos(tilt + 0.9), cy + 40 * math.sin(tilt + 0.9) + k * rx * 0.42 * math.sin(tilt))],
+                   fill=rgba("#fde7c2", 0.14), width=7)
+    for i in range(420):
+        x, y, r = rng.uniform(0, W), rng.uniform(0, H), rng.uniform(2, 5)
+        d.ellipse([x - r, y - r, x + r, y + r], fill=rgba("#fff7ed", 0.18))
+    return composite(img, over, blur=3)
+
+
 MOTIFS = {
     "tattoo": m_tattoo,
     "athletes": m_athletes,
@@ -473,6 +498,7 @@ MOTIFS = {
     "ayce": m_ayce,
     "foodtrucks": m_foodtrucks,
     "coffee": m_coffee,
+    "bakery": m_bakery,
     "pits": m_pits,
     "pets": m_pets,
     "models": m_models,

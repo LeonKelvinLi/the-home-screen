@@ -4024,6 +4024,17 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['MACS', 'BY ICKY'], logoFace: 'script',
     site: 'https://macsbyicky.store/',
     siteCta: 'See their menu',
+    /* Glenn, 2026-10-11, "Clip this video plz for Mac'sbyIcky": @siusvision's reel of
+       @p_lo trying their Strawberry Crunch ice cream taco in one bite, at the
+       Everybody Eats festival on 10 October. */
+    clip: {
+      src: '/clips/macs-by-icky.mp4',
+      poster: '/clips/macs-by-icky-poster.webp',
+      href: 'https://www.instagram.com/reel/DeXPVS5M9jz/',
+      credit: 'Filmed by @siusvision',
+      platform: 'Instagram',
+      by: 'siusvision',
+    },
   }),
   /* The Une, "Union city • Goods / Janelle's friends Restaurant / Give them a
      pink glow": rice plates and noodle soup at 3902 Smith St, next door to

@@ -1400,6 +1400,11 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* HŌM Coffee, 2026-10-11, "BEASTY \u2022 Coffee": it seats itself there by its
      type line; Hercules' Coffee shop seat was open. */
   'hercules-goods-13': 'b_homcoffee',
+  /* Macs by Icky, 2026-10-11: "Also add them to BEASTY • Sweets", with
+     @siusvision's reel of their ice cream taco. Their kinds are taken (Ice cream is
+     Cravingz', Filipino desserts Maymay's, who joined first), so the last open
+     spot, Candy shop: their macarons and treats are confections. */
+  'beasty-sweets-23': 'b_macsbyicky',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

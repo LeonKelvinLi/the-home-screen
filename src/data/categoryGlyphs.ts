@@ -19,6 +19,7 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   sweets: { paths: ['M5 12c0-4 3-6 7-6s7 2 7 6Z', 'M6 12l1.5 9h9L18 12', 'M10 12l.5 9', 'M14 12l-.5 9'], dots: [[12, 3.5, 1.4]] },
   ayce: { paths: ['M3 12h18a9 9 0 0 1-18 0Z', 'M14 9l6-7', 'M17 9l5-5'] },
   coffee: { paths: ['M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z', 'M16 10h2a2 2 0 0 1 0 4h-2', 'M8 3v3', 'M12 3v3', 'M3 22h14'] },
+  bakery: { paths: ['M4 12c0-4 3.6-6 8-6s8 2 8 6v7H4Z', 'M8.5 8.5l1.5 3', 'M12 7.5l1.5 3', 'M15.5 8.5l1.5 3'] },
   foodtrucks: { paths: ['M2 6h12v11H2Z', 'M14 10h4l3 3.5V17h-7', 'M4 9h7'], dots: [[6, 18.5, 2], [17.5, 18.5, 2]] },
   boutiques: { paths: ['M5 8h14l-1 13H6Z', 'M9 8V6a3 3 0 0 1 6 0v2'] },
   services: { paths: ['M15 3a5 5 0 0 0-4.6 6.9L3 17.3 6.7 21l7.4-7.4A5 5 0 0 0 21 9l-3.2 1.1-2.4-2.4L16.5 4.5A5 5 0 0 0 15 3Z'] },
@@ -50,10 +51,14 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   media: { paths: ['M9 3h6v11a3 3 0 0 1-6 0Z', 'M5 11a7 7 0 0 0 14 0', 'M12 18v3', 'M9 21h6'] },
 }
 
-/** The 24 tiles on BEASTY • Pages, in order. Every other category is in Search. */
+/**
+ * The 24 tiles on BEASTY • Pages, in order. Every other category is on More pages
+ * and in Search. Bakery (Glenn, 2026-10-11) sits with the food pages after Coffee,
+ * opening with ten bakeries; Meats, with one business, moved to More pages for it.
+ */
 export const PAGES_TILES: string[] = [
-  'eats', 'sweets', 'ayce', 'coffee', 'foodtrucks', 'boutiques',
-  'services', 'online', 'individuals', 'tattoo', 'barbershops', 'salons',
-  'gyms', 'automotive', 'whips', 'realtors', 'photographers', 'djs',
-  'artists', 'cooks', 'foodies', 'ai', 'athletes', 'meats',
+  'eats', 'sweets', 'ayce', 'coffee', 'bakery', 'foodtrucks',
+  'boutiques', 'services', 'online', 'individuals', 'tattoo', 'barbershops',
+  'salons', 'gyms', 'automotive', 'whips', 'realtors', 'photographers',
+  'djs', 'artists', 'cooks', 'foodies', 'ai', 'athletes',
 ]

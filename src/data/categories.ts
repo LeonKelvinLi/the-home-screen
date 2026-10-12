@@ -91,6 +91,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* "We should create a BEASTY • Coffee page to put into the BEASTY • Pages
      category" — Glenn, 2026-10-03. Boba has its own spot on Sweets. */
   { kind: 'coffee', heading: 'Coffee', about: 'Coffee shops and roasters', wall: wall('coffee'), test: /coffee|espresso|roaster/i, not: /boba|bubble tea|milk tea|ice cream/i },
+  /* "Hey brother, please add a New category for BEASTY • Bakery" — Glenn, 2026-10-11.
+     Bread, pastry and cake shops; a bakery is often a dessert shop too, so it can
+     hold a spot here and on Sweets, the way a café is on Coffee and its city. */
+  { kind: 'bakery', heading: 'Bakery', about: 'Bakeries, bread, pastry and cakes', wall: wall('bakery'), test: /bakery|bakeries|bakeshop|bake shop|boulangerie|patisserie|pâtisserie|panader|bread|croissant|pastr/i, not: /bread winners|breaded/i },
 ]
 
 /** Every category page holds his twenty-four. */

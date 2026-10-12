@@ -10,6 +10,7 @@
  * business's own page instead, which is what that card is for.
  */
 import { BRANDS } from './brands'
+import { FOODIE_PAGES, OTHER_REVIEWS } from './foodies'
 
 export interface Reel {
   brandId: string
@@ -25,7 +26,9 @@ export interface Reel {
   href?: string
 }
 
-export const REELS: Reel[] = BRANDS.filter((b) => b.clip?.src).map((b) => ({
+/* A business with several locations has one film on each page; it plays here once. */
+const seen = new Set<string>()
+const BUSINESS_REELS: Reel[] = BRANDS.filter((b) => b.clip?.src && !seen.has(b.clip.src) && !!seen.add(b.clip.src)).map((b) => ({
   brandId: b.id,
   name: b.name,
   line: b.cuisine,
@@ -35,3 +38,40 @@ export const REELS: Reel[] = BRANDS.filter((b) => b.clip?.src).map((b) => ({
   by: b.clip!.by,
   href: b.clip!.href,
 }))
+
+/*
+  THE FOODIES' OWN CUTS, TOO. Leon, 2026-10-11: "add all those clips in the
+  scrolling reel part". A creator's review of a place that is not on BEASTY
+  (OTHER_REVIEWS) is cut and played on their Foodies page but had no business
+  film to ride in on, so the feed never showed it. Each one is credited to the
+  creator, and its name opens the business when it is on BEASTY, or the
+  creator's own page when it is not.
+*/
+const foodiePage = (handle: string) => {
+  const f = FOODIE_PAGES.find((x) => x.handle === handle)
+  return f ? (f.brand ?? `b_foodie${f.handle.replace(/[^a-z0-9]/g, '')}`) : undefined
+}
+const REVIEW_REELS: Reel[] = OTHER_REVIEWS.flatMap((r) => {
+  const code = r.clip ? /\/reel\/([^/]+)\//.exec(r.reel)?.[1] : undefined
+  const opens = r.brand ?? foodiePage(r.by)
+  if (!code || !opens) return []
+  const who = FOODIE_PAGES.find((f) => f.handle === r.by)?.name ?? `@${r.by}`
+  return [{
+    brandId: opens,
+    name: r.place,
+    line: r.city ? `A Foodie review, ${r.city}` : 'A Foodie review',
+    src: `/clips/review-${code}.mp4`,
+    poster: `/clips/review-${code}-poster.webp`,
+    credit: `Filmed by ${who}`,
+    by: r.by,
+    href: r.reel,
+  }]
+})
+
+/* One review after every few businesses, so they run through the whole feed
+   instead of waiting at the bottom of it. */
+const EVERY = Math.max(2, Math.floor(BUSINESS_REELS.length / Math.max(1, REVIEW_REELS.length)))
+export const REELS: Reel[] = BUSINESS_REELS.flatMap((r, i) => {
+  const review = (i + 1) % EVERY === 0 ? REVIEW_REELS[(i + 1) / EVERY - 1] : undefined
+  return review ? [r, review] : [r]
+}).concat(REVIEW_REELS.slice(Math.floor(BUSINESS_REELS.length / EVERY)))
