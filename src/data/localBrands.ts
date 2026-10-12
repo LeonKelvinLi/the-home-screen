@@ -10866,4 +10866,502 @@ export const LOCAL_SEED: LocalSeed[] = [
       'Murals, airbrush and custom painting, and luxury decorative finishes for interiors and exteriors, cars and motorcycles, around San Jose, Milpitas and the Bay Area. Text or WhatsApp him at (661) 293-1219 for a quote; he publishes no prices.',
     items: [],
   },
+  /*
+    BATCH 45, 2026-10-12: Glenn's links of that morning (research in r1012, built by
+    build45.py). Seats in placements.ts.
+
+    KICKIN FLAVORS 好食鸡, "BEASTY • Eats / Fremont • Eats / Milpitas • Eats", with
+    @ugc.with.frances' reel ("Clip this video plz", "Foodie"). Two shops, one page
+    each, sharing the film: addresses, phones and email from kickinflavors.us, the
+    menu and prices from the pickup ordering page each shop's button opens (the
+    site's own /menu page is a leftover template and is not used). The site sends
+    people to Google Maps for hours, so none are given. The Great Mall shop has no
+    rice combos or rice bowls and pours its teas large.
+
+    DA GOOD VIBES, "Union City • Eats", with @shrimpfriedroice's reel. Address and
+    email from their Instagram, the menus from the images on goodvibeseats.com; no
+    phone or hours are published by them (the number in Glenn's map screenshot is
+    the map's, not theirs). Union City's Filipino seat is Macs by Icky's, so it is
+    on the yellow sheet with the whole page for the film.
+  */
+  {
+    slug: "kickin-flavors-fremont",
+    icon: 'kickin-flavors',
+    name: 'Kickin Flavors',
+    label: 'Kickin Flavors',
+    cuisine: 'Boneless chicken feet',
+    tagline: "Hand-deboned boneless chicken feet in six flavors, from mild lemon to extra spicy, at their Warm Springs Plaza shop.",
+    color: '#E0287A|#FFFFFF',
+    prep: 0,
+    category: 'Asian deli',
+    address: "46537 Mission Blvd, Fremont, CA 94539",
+    phone: "(510) 771-9149",
+    email: 'contact@kickinflavors.us',
+    site: 'https://www.kickinflavors.us/',
+    orderUrl: "https://pos.chowbus.com/online-ordering/store/Kickin-Flavors/22024",
+    menuNote: "Prices from their own pickup ordering page, linked from kickinflavors.us. The braised pork rice prices include tax.",
+    clip: {
+      src: '/clips/kickin-flavors.mp4',
+      poster: '/clips/kickin-flavors-poster.webp',
+      href: 'https://www.instagram.com/reel/DeYuExEs2Tb/',
+      credit: 'Filmed by @ugc.with.frances',
+      platform: 'Instagram',
+      by: 'ugc.with.frances',
+    },
+    sections: [
+      { name: "Boneless Chicken Feet", items: [
+        ["Lemon Boneless Chicken Feet (Mild Spicy)", "", 1399],
+        ["Garlic Boneless Chicken Feet (Mild Spicy)", "", 1399],
+        ["Peppercorn Boneless Chicken Feet (Mild Spicy)", "", 1399],
+        ["Thai Style Boneless Chicken Feet (Medium Spicy)", "", 1399],
+        ["Spicy Boneless Chicken Feet (Very Spicy)", "", 1399],
+        ["Extra Spicy Boneless Chicken Feet (Super Spicy)", "", 1399],
+      ] },
+      { name: "Combos with rice", items: [
+        ["Braised Pork Rice + Boneless Chicken Feet", "Choice of boneless chicken feet flavor: lemon, garlic, peppercorn, Thai, spicy or extra spicy. Tax included.", 2499],
+        ["Braised Pork Rice + Chicken Feet (Bone-In)", "Bone-in chicken feet, braised (non-spicy). Tax included.", 2099],
+        ["Braised Pork Rice + Duck Neck", "Duck neck braised (non-spicy) or spicy mala. Tax included.", 2399],
+        ["Braised Pork Rice + Duck Tongue", "Spicy mala duck tongue. Tax included.", 3099],
+      ] },
+      { name: "Combos with a drink", items: [
+        ["Boneless Chicken Feet + Classic Lemonade", "Lemonade comes in regular size only. Choice of chicken feet flavor.", 1799],
+        ["Boneless Chicken Feet + Iced Lemon Tea", "Iced lemon tea comes in regular and large sizes; large $19.99. Choice of chicken feet flavor.", 1899],
+        ["Boneless Chicken Feet + Jasmine Lime Tea", "Jasmine lime tea comes in regular or large sizes; large $19.99. Choice of chicken feet flavor.", 1899],
+      ] },
+      { name: "Braised cold dishes (Fri-Sun)", items: [
+        ["Spicy Mala Chicken Feet (8-9 Pcs)", "", 999],
+        ["Spicy Mala Duck Neck", "", 1299],
+        ["Spicy Mala Duck Tongue", "", 1999],
+        ["Braised Chicken Feet (8-9 Pcs)", "", 999],
+        ["Braised Duck Neck", "", 1299],
+        ["Braised Duck Tongue", "", 1999],
+      ] },
+      { name: "Rice bowls", items: [
+        ["Signature Braised Pork Rice", "Braised pork rice will be prepared upon your arrival to ensure it's warm and fresh Tax included.", 1199],
+      ] },
+      { name: "Drinks", items: [
+        ["Classic Lemonade", "Only available in regular size", 499],
+        ["Iced Lemon Tea", "Regular $5.99, large $6.99", 599],
+        ["Jasmine Lime Tea", "Regular $5.99, large $6.99", 599],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    slug: "kickin-flavors-milpitas",
+    icon: 'kickin-flavors',
+    name: 'Kickin Flavors',
+    label: 'Kickin Flavors',
+    cuisine: 'Boneless chicken feet',
+    tagline: "Hand-deboned boneless chicken feet in six flavors, from mild lemon to extra spicy, at their Great Mall (Entry 4) shop.",
+    color: '#E0287A|#FFFFFF',
+    prep: 0,
+    category: 'Asian deli',
+    address: "447 Great Mall Dr, Milpitas, CA 95035",
+    phone: "(669) 230-9451",
+    email: 'contact@kickinflavors.us',
+    site: 'https://www.kickinflavors.us/',
+    orderUrl: "https://pos.chowbus.com/online-ordering/store/Kickin-Flavors-Great-Mall/22638",
+    menuNote: "Prices from their own pickup ordering page, linked from kickinflavors.us. The Great Mall shop has no rice combos or rice bowls.",
+    clip: {
+      src: '/clips/kickin-flavors.mp4',
+      poster: '/clips/kickin-flavors-poster.webp',
+      href: 'https://www.instagram.com/reel/DeYuExEs2Tb/',
+      credit: 'Filmed by @ugc.with.frances',
+      platform: 'Instagram',
+      by: 'ugc.with.frances',
+    },
+    sections: [
+      { name: "Boneless Chicken Feet", items: [
+        ["Lemon Boneless Chicken Feet (Mild Spicy)", "", 1399],
+        ["Garlic Boneless Chicken Feet (Mild Spicy)", "", 1399],
+        ["Peppercorn Boneless Chicken Feet (Mild Spicy)", "", 1399],
+        ["Thai Style Boneless Chicken Feet (Medium Spicy)", "", 1399],
+        ["Spicy Boneless Chicken Feet (Very Spicy)", "", 1399],
+        ["Extra Spicy Boneless Chicken Feet (Super Spicy)", "", 1399],
+      ] },
+      { name: "Combos with a drink", items: [
+        ["Boneless Chicken Feet + Classic Lemonade", "Regular lemonade. Choice of chicken feet flavor.", 1799],
+        ["Boneless Chicken Feet + Iced Lemon Tea", "Large iced lemon tea. Choice of chicken feet flavor.", 1999],
+        ["Boneless Chicken Feet + Jasmine Lime Tea", "Large jasmine lime tea. Choice of chicken feet flavor.", 1999],
+      ] },
+      { name: "Braised cold dishes (Fri-Sun)", items: [
+        ["Spicy Mala Chicken Feet (8-9 Pcs)", "", 999],
+        ["Spicy Mala Duck Neck", "", 1299],
+        ["Spicy Mala Duck Tongue", "", 1999],
+        ["Braised Chicken Feet (8-9 Pcs)", "", 999],
+        ["Braised Duck Neck", "", 1299],
+        ["Braised Duck Tongue", "", 1999],
+      ] },
+      { name: "Drinks", items: [
+        ["Classic Lemonade", "Regular", 499],
+        ["Iced Lemon Tea", "Large", 699],
+        ["Jasmine Lime Tea", "Large", 699],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    slug: 'da-good-vibes',
+    icon: 'da-good-vibes',
+    name: 'Da Good Vibes',
+    label: 'Good Vibes',
+    cuisine: 'Modern Filipino',
+    tagline: 'Modern Filipino on Smith Street: oxtail nachos, lumpia sliders, adobo wings and guava-glazed ribs.',
+    color: '#C8102E|#FFFFFF',
+    prep: 0,
+    category: 'Filipino',
+    address: '3821 Smith St, Union City, CA 94587',
+    email: 'info@goodvibeseats.com',
+    site: 'https://goodvibeseats.com/',
+    menuNote: 'Prices from the restaurant, brunch and catering menus on their own site. Catering trays come as a half tray (feeds 15-20) or a full tray (feeds 40-45); the price shown is the half tray.',
+    clip: {
+      src: '/clips/da-good-vibes.mp4',
+      poster: '/clips/da-good-vibes-poster.webp',
+      href: 'https://www.instagram.com/reel/DeZOJ2hgYM4/',
+      credit: 'Filmed by @shrimpfriedroice',
+      platform: 'Instagram',
+      by: 'shrimpfriedroice',
+    },
+    panels: [
+      {
+        head: 'Off-menu specials',
+        body: ['Friday to Sunday from 4:30pm until they sell out, as their own Instagram posts them: salmon and salad, an adobo bowl and vegetable pancit.'],
+      },
+    ],
+    sections: [
+      { name: "Menu", items: [
+        ["Da'Good Vibes Nachos", "Braised beef and oxtail chunks/ house chili/ cotija cheese/ hella good sauce/ sour cream/ pickled atchara/ green onions/ micro cilantro/ nacho chips", 1850],
+        ["Lumpia Sliders + Truffle Fries", "Pork Shanghai patty (contains carrots)/ sweet chili sauce/ coconut charcoal calamansi aioli/ pickled atchara/ green onions/ fried lumpia wrapper/ sweet brioche buns", 1700],
+        ["Crispy Tofu Sliders + Truffle Fries", "Crispy fried organic tofu/ sweet chili sauce/ coconut charcoal calamansi aioli/ pickled atchara/ coconut milk braised taro laing/ sweet brioche buns", 1600],
+        ["Umami Crab Fries", "Umami crab meat (pollock) kewpie salad/ unagi sauce/ hella good sauce/ tobiko/ green onions/ roasted furikake/ french fries", 1850],
+        ["Pinoy Chili Dog + Regular Fries", "Angus all beef hot dog/ house chili/ hella good sauce/ sour cream/ pickled atchara/ green onions/ micro cilantro/ brioche hot dog bun/ french fries", 1400],
+      ] },
+      { name: "Rice Plates", items: [
+        ["Mama Guava Glazed Ribs", "Banana leaf wrapped smoked pork ribs (4 pcs)/ guava glaze/ pickled atchara/ green onions/ steamed rice/ truffle shrimp chips", 1900],
+        ["Chicken Adobo Wings", "Fried chicken wings (6 pcs)/ garlic adobo sauce/ crispy garlic/ pickled atchara/ green onion/ steamed rice/ truffle shrimp chips", 1700],
+        ["Da Good Vibes Chili Over Rice", "Braised beef and oxtail chunks/ house chili/ hella good sauce/ pickled atchara/ green onions/ crispy shallots/ micro cilantro/ steamed rice", 1400],
+        ["Crispy Tofu Over Rice (Vegan)", "Crispy organic tofu (4 pcs)/ sweet chili sauce/ coconut milk braised taro laing/ pickled atchara/ green onions/ steamed rice", 1400],
+      ] },
+      { name: "Kids Stuff + Sides", items: [
+        ["3pcs Chicken Tenders + Seasoned Fries", "", 1200],
+        ["Plain Hot Dog + Fries", "", 1000],
+        ["Truffle Seasoned Fries", "", 800],
+        ["Seasoned Fries", "", 600],
+      ] },
+      { name: "Brunch", items: [
+        ["Bistek Beef Ribs & Sous Vide Egg", "2pcs of crispy beef rib with black garlic miso butter over steamed rice and pan fried sous vide egg, pickled atchara", 2500],
+        ["Pork Belly Sisig Hash & Sous Vide Egg", "Diced pork belly seasoned with calamansi, tamari, onions, roasted potatoes and sweet potatoes over a bed of steamed rice, topped with sous vide egg", 1800],
+        ["Da Good Vibes Oxtail Nachos N' Sous Vide Egg", "House beef chili / nachos / hella good sauce / sour cream / cotija cheese / green onions / oxtail & beef chunk / pickled atchara", 2000],
+        ["Dirty Spam Tots + Sous Vide Egg", "Furikake fried Spam / house chili / tater-tots / egg / hella good sauce / unagi sauce / sour cream / green onions / pickled atchara", 1600],
+        ["Da Good Vibes Oxtail Chili Over Rice + Egg", "House chili / steamed rice / hella good sauce / green onions / pan fried sous vide egg / pickled atchara", 1500],
+      ] },
+      { name: "Brunch sweets", items: [
+        ["Ube Bibingka Pancakes", "2 ea bibingka pancakes / whipped cream / coconut maple syrup / fresh fruit", 1500],
+        ["Turon Parfait", "Crispy lumpia wrapper layered between chia banana pudding. Caramelized banana, and jackfruit puree with whipped coconut cream", 800],
+      ] },
+      { name: "Catering: Starters", items: [
+        ["Veggie Lumpia", "Filipino-style deep fried egg roll with seasoned diced carrots, green beans, garlic, onions, potatoes, and sweet potatoes. 1/2 tray $80, full tray $160.", 8000],
+        ["Pork Shanghai Lumpia", "Marinated ground pork, green onions, shredded carrots, oyster sauce. 1/2 tray $80, full tray $160.", 8000],
+        ["Tofu Musubi", "Fried/glazed tofu cutlet, furikake, and seasoned rice wrapped in nori. 1/2 tray $80, full tray $160.", 8000],
+        ["Spam Musubi", "Glazed Spam, furikake, and seasoned rice wrapped in nori. 1/2 tray $80, full tray $160.", 8000],
+        ["Garlic Adobo Fried Chicken Wings", "Chicken wing segments, adobo marinade, fried garlic, green onions. 1/2 tray $80, full tray $160.", 8000],
+      ] },
+      { name: "Catering: Main Course", items: [
+        ["Dynamite Baked Salmon", "1/2 tray $140, full tray $280.", 14000],
+        ["OH-no Garlic Prawns", "1/2 tray $140, full tray $280.", 14000],
+        ["Black Garlic Miso Butter Beef Short Ribs", "8hr Braised Short Ribs / Caramelized Onions / Roasted Potatoes Truffle Black Garlic Miso Butter / Green Onions. 1/2 tray $200, full tray $400.", 20000],
+        ["Longanisa Linguini", "Linguini with sauteed Longanisa, Cream Sauce, sweet green peas, and grated Parmesan. 1/2 tray $150, full tray $300.", 15000],
+        ["Chicken Adobo", "Stewed chicken thighs, soy sauce, onions, vinegar, black peppercorns, bay leaves. 1/2 tray $100, full tray $200.", 10000],
+      ] },
+      { name: "Catering: Greens + Salads", items: [
+        ["Mac Salad", "Elbow macaroni, house aioli, minced vegetables. 1/2 tray $50, full tray $100.", 5000],
+        ["Organic Fresh Mix Salad", "Assorted mix greens, radishes, cucumbers, and cherry tomatoes. (Ranch or House Vinaigrette) 1/2 tray $50, full tray $100.", 5000],
+        ["Fruit Platter", "Assorted seasonal fruit. 1/2 tray $80, full tray $160.", 8000],
+      ] },
+      { name: "Catering: Sides", items: [
+        ["Cilantro/Coconut Rice", "Listed $80/$160 (larger size $160).", 8000],
+        ["Garlic Rice", "Listed $60/$120 (larger size $120).", 6000],
+        ["Jasmine Rice", "Listed $40/$80 (larger size $80).", 4000],
+        ["Vegetable Pancit", "Listed $60/$120 (larger size $120).", 6000],
+      ] },
+      { name: "Catering: Kids Menu", items: [
+        ["French Fries", "Listed $50/$100 (larger size $100).", 5000],
+        ["Chicken Tenders", "Listed $75/$150 (larger size $150).", 7500],
+        ["Hot Dogs + Buns", "Listed $75/$150 (larger size $150).", 7500],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      THAT'S GOOD PIZZZA PODCAST, "BEASTY • PODCAST — NEW CATEGORY, please create
+      brother. This is a great category that we can collab with." Glenn, 2026-10-12,
+      with their Instagram (@goodpizzzapodcast), their Linktree and a Hot Slicez
+      reel ("Clip this video plz"). Everything is from the Linktree and the pages it
+      links: JPeezy's weekly show, the Patreon tiers, and the merch in stock on
+      goodpizzza.com that day. Nothing first-party places them in the Bay Area
+      (the host is "from the NJ/NYC streets"), which is fine for a page Glenn wants
+      to collab with. Their merch site's phone is a New Jersey number and is left
+      off; the email is theirs. quoteOnly: BEASTY sells none of it.
+    */
+    slug: 'good-pizzza-podcast',
+    icon: 'good-pizzza-podcast',
+    name: 'That’s Good PizzZa Podcast',
+    label: 'Good PizzZa',
+    cuisine: 'Podcast',
+    tagline: 'JPeezy’s weekly podcast: legacy cannabis culture and real-life stories, with OGs, creatives, growers and hip-hop voices.',
+    color: '#C8102E|#FFFFFF',
+    prep: 0,
+    category: 'Podcast',
+    email: 'Journioflifecorp@gmail.com',
+    site: 'https://linktr.ee/goodpizzza',
+    siteCta: 'All their links',
+    clip: {
+      src: '/clips/good-pizzza-podcast.mp4',
+      poster: '/clips/good-pizzza-podcast-poster.webp',
+      href: 'https://www.instagram.com/reel/DeX_u-0pR07/',
+      credit: 'Posted by @hotslicez.psn',
+      platform: 'Instagram',
+    },
+    panels: [
+      {
+        head: 'Listen',
+        body: ['New episodes every week.'],
+        links: [
+          { label: 'Spotify', href: 'https://open.spotify.com/show/2HHXF0ijATYi8eHIq0rDTo' },
+          { label: 'Apple Podcasts', href: 'https://podcasts.apple.com/us/podcast/good-pizzza-podcast/id1622059263' },
+          { label: 'YouTube', href: 'https://www.youtube.com/@GoodPizzza' },
+        ],
+      },
+      {
+        head: 'Patreon and merch',
+        links: [
+          { label: 'Patreon', href: 'https://www.patreon.com/goodpizzza' },
+          { label: 'Good PizzZa merch', href: 'https://www.goodpizzza.com' },
+        ],
+      },
+    ],
+    quoteOnly: 'Join on their Patreon or buy merch at goodpizzza.com; BEASTY doesn’t sell them.',
+    menuNote: 'Patreon tiers from their Patreon; merch prices from goodpizzza.com, in stock on 12 October 2026.',
+    sections: [
+      { name: 'Patreon', items: [
+        ['Associate', 'Early access to unreleased Good PizzZa Podcast episodes', 1500, null, '$15 a month'],
+        ['Soldier', 'Early access episodes and behind-the-scenes footage', 2500, null, '$25 a month'],
+        ['Capo', 'Early access episodes, behind-the-scenes footage and 20% off merch', 5000, null, '$50 a month'],
+      ] },
+      { name: 'Merch', items: [
+        ['Original Good PizzZa Logo Tee, Red OG', '100% preshrunk cotton, relaxed fit', 3000],
+        ['Supreme PizzZa Tee', 'Sizes S to XXXL; on sale, regularly $40 in some sizes', 3000, null, 'from $30'],
+        ['Yankees Colorway Tee', 'The Subway Series drop; sizes S to XXXL', 3000],
+        ['NY Mets Colorway Tee', 'The Subway Series drop; sizes S to XXXL', 3000],
+        ['Graffiti Tag Crew Neck T-Shirt, White', '', 4000],
+        ['PizzZa Script Tee, Purple', '', 4000],
+        ['The Good PizzZa Hoodie ’22, Red Script Logo', '', 4000],
+        ['Good PizzZa Hoodie, Blue & Orange', '', 6000],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      FELIX PRIME CLEANING, "BEASTY • Services". Glenn, 2026-10-12, with their site
+      and their own film ("Clip this video plz"). From felixprimecleaning.com: the
+      founder, Renata Felix; the phone, hours and email; the six services and how
+      they work. They publish no prices (estimates are free, in person or by video
+      call) and name no city beyond California, so none is given. Every BEASTY •
+      Services seat is held, so it is on the yellow sheet behind it with the whole
+      page for the film (placements.ts).
+    */
+    slug: 'felix-prime-cleaning',
+    icon: 'felix-prime-cleaning',
+    name: 'Felix Prime Cleaning',
+    label: 'Felix Prime',
+    cuisine: 'House & office cleaning',
+    tagline: 'Licensed, insured cleaning for homes and offices, led by founder Renata Felix.',
+    color: '#0B1A3A|#C9A24B',
+    prep: 0,
+    category: 'Cleaning',
+    phone: '(925) 382-7893',
+    email: 'contact@felixprimecleaning.com',
+    hours: 'Mon-Fri 9am-5pm',
+    site: 'https://felixprimecleaning.com/',
+    clip: {
+      src: '/clips/felix-prime-cleaning.mp4',
+      poster: '/clips/felix-prime-cleaning-poster.webp',
+      href: 'https://www.instagram.com/p/DZt1S2wgPOz/',
+      credit: 'Posted by Felix Prime Cleaning',
+      platform: 'Instagram',
+    },
+    panels: [
+      {
+        head: 'What they clean',
+        body: [
+          'Homes: kitchens, bathrooms, dusting, vacuuming, floors and trash.',
+          'Regular visits, weekly, every two weeks or monthly.',
+          'Deep cleans: baseboards, blinds, ceiling fans and the hard-to-reach places, recommended for a first visit.',
+          'Move-in and move-out, inside cabinets and appliances, for renters, landlords and sales.',
+          'Offices, clinics and other commercial spaces, and cleaning after construction.',
+        ],
+      },
+      {
+        head: 'How they work',
+        body: [
+          'Licensed, insured and OSHA-certified, with their own trained team rather than contractors.',
+          'A text when they are on the way, colour-coded cloths for each surface, non-toxic products safe for children and pets, and shoe covers and dust sheets in your home.',
+        ],
+        links: [{ label: 'Ask for a free estimate', href: 'https://felixprimecleaning.com/contact' }],
+      },
+    ],
+    contactOnly: 'Home and office cleaning by Renata Felix’s own team. They publish no prices: ask for a free estimate, in person or by video call.',
+    items: [],
+  },
+  {
+    /*
+      CAFE NAPOLINA, "Concord • Eats". Glenn, 2026-10-12, with their Instagram
+      (@cafe_napolina, "Concord's Home for Pizza & Pasta") and their own reel ("Clip
+      this video plz"). Address, phone, email and the menu with prices from their own
+      ordering site, napolinaonline.com (no alcohol is on it). No hours: the site's
+      hours box says every day 11am-9:45pm and its own text says closed Wednesdays.
+      The garlic bread's wording on their page comes from a delivery app, so it is left
+      off. Concord's Italian seat is Fire Slice Pizza's, so it is on the yellow sheet
+      with the whole page for the film.
+    */
+    slug: 'cafe-napolina',
+    icon: 'cafe-napolina',
+    name: 'Cafe Napolina',
+    label: 'Napolina',
+    cuisine: 'Italian pizza & pasta',
+    tagline: 'Sicilian square pies, thin Brooklyn pizza and homemade pasta on Grant Street in Concord.',
+    color: '#FFFFFF|#D7262E',
+    prep: 0,
+    category: 'Pizza',
+    address: '1950 Grant St #B, Concord, CA 94520',
+    phone: '(925) 690-3396',
+    email: 'cafenapolina@gmail.com',
+    site: 'https://napolinaonline.com/',
+    orderUrl: 'https://napolinaonline.com/menu',
+    menuNote: 'Prices from their own online ordering menu. Pizzas are listed at the small 12-inch size, with the larger sizes in each description; online orders add a 5% service fee.',
+    clip: {
+      src: '/clips/cafe-napolina.mp4',
+      poster: '/clips/cafe-napolina-poster.webp',
+      href: 'https://www.instagram.com/reel/DNWN4OFSla9/',
+      credit: 'Posted by Cafe Napolina',
+      platform: 'Instagram',
+    },
+    panels: [
+      {
+        head: 'Catering',
+        body: ['Events around Concord, Pacheco and Pleasant Hill, from an office lunch for 20 to a wedding for 200. They quote each one.'],
+        links: [{ label: 'Ask about catering', href: 'https://napolinaonline.com/catering' }],
+      },
+    ],
+    sections: [
+      { name: "Appetizers", items: [
+        ["Truffle Fries", "Homemade potato wedges with parmesan, & truffle oil, with side of ketchup", 750],
+        ["Onion Rings", "Beer battered onion rings with a side of homemade marinara", 695],
+        ["Piatto Di Freddo", "Cold plate; sliced prosciutto, salami, pepperoni, ham, provolone, kalamata olives, cherry tomatoes, with a side of EVOO", 1795],
+        ["Coconut Shrimp", "Shrimp breaded with panko, served with a side of spicy coconut aioli", 1095],
+        ["Bruschetta", "Sliced and toasted Italian bread with parmesan, tomato, basil, & garlic", 895],
+        ["Cheese Balls", "Homemade cheese balls with side of ketchup", 750],
+        ["Chicken Wings", "Honey garlic, lemon pepper, Buffalo or BBQ. 6 pieces $11.95, 12 pieces $19.95.", 1195],
+        ["Mozzarella Sticks", "", 695],
+        ["Cheesy Garlic Bread", "", 795],
+      ] },
+      { name: "Sicilian pizza (square and thick, imported Italian flour)", items: [
+        ["Margherita Sicilian Pizza", "San Marzano tomato sauce, fresh mozzarella, shaved parmesan, EVOO, & basil. Small 12\" $25.95; Large 16\" $36.95.", 2595],
+        ["Dolce El Picante Sicilian Pizza", "Tomato sauce, charred pepperoni, premium mozzarella, ricotta, hot honey. Small 12\" $27.95; Large 16\" $39.95.", 2795],
+        ["Tartufo Sicilian Pizza", "Truffle cream, premium mozzarella, Italian sausage, mushroom, cherry tomato, & shaved parmesan. Small 12\" $27.95; Large 16\" $39.95.", 2795],
+        ["Napolina Sicilian Pizza", "Our classic cheese pizza topped with cold prosciutto, & arugula. Small 12\" $28.95; Large 16\" $40.95.", 2895],
+        ["Verde Sicilian Pizza", "Vegetarian. San Marzano tomato sauce, premium mozzarella, mushroom, green pepper, onion, & olives. Small 12\" $26.95; Large 16\" $38.95.", 2695],
+        ["Capricciosa Sicilian Pizza", "Classic red sauce, mozzarella, ham, artichoke, olives, & mushroom. Small 12\" $26.95; Large 16\" $38.95.", 2695],
+        ["Tutto Carne Sicilian Pizza", "Tomato sauce, mozzarella, ham, pepperoni, salami, & sausage. Small 12\" $29.95; Large 16\" $41.95.", 2995],
+        ["Nonna Ubriaca Sicilian Pizza", "Creamy tomato vodka sauce, home-grilled chicken, pecorino Romano. Small 12\" $27.95; Large 16\" $39.95.", 2795],
+        ["Tri Colore Sicilian Pizza", "Vegetarian. Fresh mozzarella with stripes of vodka sauce, pesto sauce, tomato sauce, & parmesan. Small 12\" $27.95; Large 16\" $39.95.", 2795],
+        ["Saporito Sicilian Pizza", "Premium mozzarella, tomato sauce, pepperoni, Italian sausage, bell pepper, & parmesan. Small 12\" $26.95; Large 16\" $38.95.", 2695],
+        ["Cheese Sicilian Pizza", "Small 12\" $20.95; Large 16\" $37.95.", 2095],
+      ] },
+      { name: "Brooklyn pizza (round and thin)", items: [
+        ["Margherita Pizza", "San Marzano tomato sauce, fresh mozzarella, shaved parmesan, EVOO, & basil. Small 12\" $21.95; Extra Large 20\" $35.95.", 2195],
+        ["Dolce El Picante Pizza", "Tomato sauce, charred pepperoni, premium mozzarella, ricotta, hot honey. Small 12\" $24.95; Extra Large 20\" $39.95.", 2495],
+        ["Tartufo Pizza", "Truffle cream, premium mozzarella, Italian sausage, mushroom, cherry tomato, & shaved parmesan. Small 12\" $24.95; Extra Large 20\" $39.95.", 2495],
+        ["Napolina Pizza", "Our classic cheese pizza topped with cold prosciutto, & arugula. Small 12\" $25.95; Extra Large 20\" $40.95.", 2595],
+        ["Verde Pizza", "Vegetarian. San Marzano tomato sauce, premium mozzarella, mushroom, green pepper, onion, & olives. Small 12\" $23.95; Extra Large 20\" $38.95.", 2395],
+        ["Capricciosa Pizza", "Classic red sauce, mozzarella, ham, artichoke, olives, & mushroom. Small 12\" $24.95; Extra Large 20\" $39.95.", 2495],
+        ["Tutto Carne Pizza", "Tomato sauce, mozzarella, ham, pepperoni, salami, & sausage. Small 12\" $25.95; Extra Large 20\" $41.95.", 2595],
+        ["Nonna Ubriaca Pizza", "Creamy tomato vodka sauce, home-grilled chicken, pecorino Romano. Small 12\" $23.95; Extra Large 20\" $38.95.", 2395],
+        ["Tri Colore Pizza", "Vegetarian. Fresh mozzarella with stripes of vodka sauce, pesto sauce, tomato sauce, & parmesan. Small 12\" $24.95; Extra Large 20\" $39.95.", 2495],
+        ["Saporito Pizza", "Premium mozzarella, tomato sauce, pepperoni, Italian sausage, bell pepper, & parmesan. Small 12\" $23.95; Extra Large 20\" $38.95.", 2395],
+        ["Cheese Pizza", "Small 12\" $15.95; Extra Large 20\" $29.95.", 1595],
+      ] },
+      { name: "Pasta", items: [
+        ["Alla Bolognese", "Slow cooked ground beef ragu, spaghetti, parmesan, & basil", 2095],
+        ["Garlic Shrimp Fettucine", "Butter garlic, cherry tomatoes, shrimp cooked in white wine, and parsley", 2195],
+        ["Meatball Spaghetti", "Slow cooked tomato sauce with home made beef meatballs", 2195],
+        ["Alfredo Chicken", "Homemade creamy alfredo sauce, parmesan, grilled chicken, & truffle oil", 1995],
+        ["Pesto Chicken", "Home made basil pesto sauce, grilled chicken, & parmesan", 1995],
+        ["Ravioli", "Cheese ravioli with creamy sauce, mushroom, parmesan, & truffle oil", 1995],
+        ["Seafood Linguini", "Shrimp, clams, mussels, squid cooked with garlic, white wine, & basil", 2495],
+        ["Penne Alla Vodka", "Creamy tomato sauce, penne, home grilled chicken, & parmesan", 2195],
+      ] },
+      { name: "Sandwiches and wraps (with fries)", items: [
+        ["Philly Cheese Steak Sandwich", "Lean & clean grilled ribeye steak, provolone, caramelized onion, & bell pepper. Served with a side of crispy fries", 1895],
+        ["Chicken Caesar Wrap", "Grilled chicken, caesar salad, bacon, & parmesan. Served with a side of crispy fries", 1395],
+        ["Chicken Philly Sandwich", "Grilled chicken, provolone, caramelized onion, & bell peppers. Served with a side of crispy fries", 1395],
+        ["Pastrami Sandwich", "Provolone, asiago, pastrami, sauerkraut & honey mustard. Served with a side of crispy fries", 1795],
+        ["Grilled Veggie Wrap", "Roasted bell peppers, onion, zucchini, eggplant, & guacamole. Served with a side of crispy fries", 1395],
+        ["Napolina Burger", "Homemade beef patty, lettuce, tomato, pickle, caramelized onion, bacon, & American cheese. Served with a side of crispy fries", 995],
+        ["Meatball Hero", "Homemade beef meatballs, our signature tomato sauce, provolone, mozzarella & parmesan. Served with a side of crispy fries", 1495],
+        ["Buffalo Chicken Sandwich", "Home grilled chicken drenched in buffalo sauce, caramelized onion, topped with ranch, mozzarella cheese served with a side of crispy fries.", 1395],
+      ] },
+      { name: "Salads", items: [
+        ["Caprese Salad", "Fresh mozzarella, tomatoes, basil, balsamic glaze. Add chicken +$4.95 or shrimp +$5.95.", 1295],
+        ["Caesar Salad", "Lettuce, parmesan, bacon, anchovies, croutons, and caesar dressing. Add chicken +$4.95 or shrimp +$5.95.", 1295],
+        ["Mango Avocado", "Mixed greens, cherry tomatoes, mango, & avocado. Add chicken +$4.95 or shrimp +$5.95.", 1495],
+        ["Watermelon Feta", "Arugula, cherry tomatoes, watermelon, feta cheese, & pine nuts. Add chicken +$4.95 or shrimp +$5.95.", 1495],
+        ["Garden Salad", "Mixed greens, tomato, onions, cucumber, & balsamic vinaigrette. Add chicken +$4.95 or shrimp +$5.95.", 995],
+      ] },
+      { name: "Sides", items: [
+        ["Beef Meatballs (6)", "Homemade beef meat balls simmered in our classic red tomato sauce", 995],
+        ["Broccoli Florets", "", 895],
+        ["Grilled Shrimp (6)", "", 995],
+        ["Side of Grilled Chicken", "", 795],
+        ["Extra Sauce (2 OZ)", "Ranch/buffalo/BBQ/Caesar/marinara/garlic aioli/spicy coconut aioli/hot sauce", 100],
+        ["Toasted Bread", "", 395],
+      ] },
+      { name: "Kids", items: [
+        ["Kids Mac N Cheese", "Creamy and cheesy pasta with cheddar and parmesan", 995],
+        ["Kids Chicken Tenders & Fries", "", 995],
+        ["Butter Pasta", "Penne pasta sautéed in butter and Parmesan", 995],
+      ] },
+      { name: "Desserts", items: [
+        ["Cannoli (2)", "", 750],
+        ["Cheese Cake", "", 750],
+        ["Tiramisu", "", 895],
+        ["Chocolate Cake", "", 850],
+        ["Ricotta Pista Cake", "", 850],
+        ["Ice Cream", "Vanilla or chocolate", 450],
+      ] },
+      { name: "Drinks", items: [
+        ["Fountain Soda", "Coke, Dietcoke, Coke zero, Sprite, Rootbeer, Dr. Pepper", 295],
+        ["Iced Tea", "Sweet or unsweet", 350],
+        ["Lemonade", "", 350],
+        ["San Pellegrino", "", 395],
+        ["Arnold Palmer", "", 450],
+        ["Canned Soda", "Pepsi, Pepsi Zero, Rootbeer, or Dr. Pepper", 197],
+        ["Jumbo Soda (2 Liter)", "Pepsi or Diet Pepsi", 550],
+        ["Jarrito’s", "Pineapple", 325],
+        ["Chocolate Milk Shake", "Premium chocolate ice cream milkshake", 795],
+        ["Vanilla Milk Shake", "Premium vanilla ice cream milk shake", 795],
+        ["Strawberry Milk Shake", "", 795],
+        ["Italian Soda", "Served with whipped cream", 495],
+        ["Blood Orange Soda", "Served with whipped cream", 495],
+        ["Guava Soda", "Served with whipped cream", 495],
+        ["Watermelon Soda", "Topped with whipped cream", 495],
+        ["Peach Soda", "Served with whipped cream", 495],
+        ["Pomegranate Soda", "Served with whipped cream", 495],
+      ] },
+    ],
+    items: [],
+  },
 ]

@@ -55,8 +55,10 @@ The list is in `src/data/categories.ts`: Tattoo, Athletes, AI, Artists, Dancers,
 Donations, DJ's, Chefs, Foodies, Realtors, Media, Photographers, Automotive
 (the first Whips, renamed on 2026-10-04 with the repair shops added), Whips
 (the cars themselves, seated from the centre out: MeterSF in the centre, spot 10, then MrCheeze408 beside it; the order is in `placements.ts`), Pit's, Pets (from 2026-10-09; King Lou is spot 1), Models, Meats, Gyms,
-Barbershops, Salons, AYCE, Food Trucks, Coffee and Bakery (from 2026-10-11:
-bread, pastry and cake shops by their type line; a bakery can be on Sweets too).
+Barbershops, Salons, AYCE, Food Trucks, Coffee, Bakery (from 2026-10-11:
+bread, pastry and cake shops by their type line; a bakery can be on Sweets too)
+and Podcast (from 2026-10-12, "a great category that we can collab with"; a
+podcast fits Media's type line too).
 
 Each category page holds 24 spots. Seat ids look like `beasty-tattoo-0` through
 `beasty-tattoo-23`, the same shape as every other seat.

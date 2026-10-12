@@ -19,6 +19,7 @@ export const CATEGORY_GLYPHS: Record<string, CategoryGlyph> = {
   sweets: { paths: ['M5 12c0-4 3-6 7-6s7 2 7 6Z', 'M6 12l1.5 9h9L18 12', 'M10 12l.5 9', 'M14 12l-.5 9'], dots: [[12, 3.5, 1.4]] },
   ayce: { paths: ['M3 12h18a9 9 0 0 1-18 0Z', 'M14 9l6-7', 'M17 9l5-5'] },
   coffee: { paths: ['M4 9h12v5a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5Z', 'M16 10h2a2 2 0 0 1 0 4h-2', 'M8 3v3', 'M12 3v3', 'M3 22h14'] },
+  podcast: { paths: ['M10 3h4v9a2 2 0 0 1-4 0Z', 'M7 10a5 5 0 0 0 10 0', 'M12 15v5', 'M9 20h6', 'M4.5 7.5a9 9 0 0 0 0 7', 'M19.5 7.5a9 9 0 0 1 0 7'] },
   bakery: { paths: ['M4 12c0-4 3.6-6 8-6s8 2 8 6v7H4Z', 'M8.5 8.5l1.5 3', 'M12 7.5l1.5 3', 'M15.5 8.5l1.5 3'] },
   foodtrucks: { paths: ['M2 6h12v11H2Z', 'M14 10h4l3 3.5V17h-7', 'M4 9h7'], dots: [[6, 18.5, 2], [17.5, 18.5, 2]] },
   boutiques: { paths: ['M5 8h14l-1 13H6Z', 'M9 8V6a3 3 0 0 1 6 0v2'] },

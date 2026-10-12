@@ -94,6 +94,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   /* "Hey brother, please add a New category for BEASTY • Bakery" — Glenn, 2026-10-11.
      Bread, pastry and cake shops; a bakery is often a dessert shop too, so it can
      hold a spot here and on Sweets, the way a café is on Coffee and its city. */
+  /* "BEASTY • PODCAST — NEW CATEGORY, please create brother. This is a great category
+     that we can collab with." — Glenn, 2026-10-12, with That's Good PizzZa Podcast.
+     A podcast also fits Media's type line, so it can hold a spot on both. */
+  { kind: 'podcast', heading: 'Podcast', about: 'Podcasts and shows to collab with', wall: wall('podcast'), test: /\bpodcast/i },
   { kind: 'bakery', heading: 'Bakery', about: 'Bakeries, bread, pastry and cakes', wall: wall('bakery'), test: /bakery|bakeries|bakeshop|bake shop|boulangerie|patisserie|pâtisserie|panader|bread|croissant|pastr/i, not: /bread winners|breaded/i },
 ]
 

@@ -1405,6 +1405,21 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      Cravingz', Filipino desserts Maymay's, who joined first), so the last open
      spot, Candy shop: their macarons and treats are confections. */
   'beasty-sweets-23': 'b_macsbyicky',
+  /* Batch 45, 2026-10-12 (localBrands.ts). Kickin Flavors: BEASTY • Eats' Chinese seat
+     and the Asian food seats in Fremont and Milpitas are taken, so the yellow sheets,
+     each with the whole page for the film: More eats behind BEASTY • Eats and Fremont's
+     for the Warm Springs shop, Milpitas' for the Great Mall one. Felix Prime Cleaning:
+     every BEASTY • Services seat is held, so the sheet behind it. Da Good Vibes: Union
+     City's Filipino seat is Macs by Icky's. That's Good PizzZa Podcast seats itself on
+     the new BEASTY • Podcast (and Media) by its type line. */
+  'beasty-goods2-22': 'b_kickinflavorsfremont',
+  'fremont-goods2-4': 'b_kickinflavorsfremont',
+  'milpitas-goods2-4': 'b_kickinflavorsmilpitas',
+  'beasty-services2-29': 'b_felixprimecleaning',
+  'union-city-goods2-3': 'b_dagoodvibes',
+  /* Cafe Napolina, 2026-10-12 10:01 am, "Concord • Eats": Concord's Italian seat is Fire
+     Slice Pizza's, so the yellow sheet, with the whole page for their film. */
+  'concord-goods2-2': 'b_cafenapolina',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

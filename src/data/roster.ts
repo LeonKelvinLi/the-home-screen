@@ -959,6 +959,16 @@ export const ROSTER_SEED: LocalSeed[] = [
   seed('pizzeria-cardamomo', 'Pizzeria Cardamomo', 'Cardamomo', 'Pizza', '#3E1F1A', {
     logoTemplate: 'monogram', logoInitials: 'PC', logoFace: 'slab',
     site: 'https://pizzeriacardamomo.com/',
+    /* Glenn, 2026-10-12, "Clip this video plz for @pizzeriacardamomo": @acoupleofcooks'
+       date night there, from "From Lake Como to Redwood City" to the pizza. */
+    clip: {
+      src: '/clips/pizzeria-cardamomo.mp4',
+      poster: '/clips/pizzeria-cardamomo-poster.webp',
+      href: 'https://www.instagram.com/reel/DeXPu11oz2S/',
+      credit: 'Filmed by @acoupleofcooks',
+      platform: 'Instagram',
+      by: 'acoupleofcooks',
+    },
     contactOnly:
       'Sent 2026-08-12 with his note "needs branding work. No logo" — so this tile is a ' +
       'monogram rather than their mark, because they do not have one.',

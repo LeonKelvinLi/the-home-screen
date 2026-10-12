@@ -479,6 +479,28 @@ def m_bakery(rng):
     return composite(img, over, blur=3)
 
 
+def m_podcast(rng):
+    # Glenn, 2026-10-12: "BEASTY • PODCAST". A studio mic in red light, its sound
+    # rings spreading out, and the level bars of a recording along the bottom.
+    img = gradient("#0b0610", "#1f0b1a")
+    img = glow(img, W * 0.5, H * 0.4, 1100, "#be123c", 0.42)
+    over, d = layer()
+    cx, cy = W * 0.5, H * 0.4
+    for k in range(1, 9):
+        r = 180 + k * 120
+        d.arc([cx - r, cy - r, cx + r, cy + r], 200, 340, fill=rgba("#fda4af", 0.16 - k * 0.012), width=10)
+        d.arc([cx - r, cy - r, cx + r, cy + r], 20, 160, fill=rgba("#fda4af", 0.16 - k * 0.012), width=10)
+    d.rounded_rectangle([cx - 110, cy - 260, cx + 110, cy + 120], radius=110, outline=rgba("#fecdd3", 0.3), width=14)
+    for y in range(int(cy - 200), int(cy + 80), 46):
+        d.line([(cx - 80, y), (cx + 80, y)], fill=rgba("#fecdd3", 0.12), width=6)
+    d.line([(cx, cy + 120), (cx, cy + 300)], fill=rgba("#fecdd3", 0.3), width=14)
+    d.line([(cx - 130, cy + 300), (cx + 130, cy + 300)], fill=rgba("#fecdd3", 0.3), width=14)
+    for i, x in enumerate(range(40, W, 36)):
+        h = 60 + 220 * abs(math.sin(i * 0.45)) * rng.uniform(0.5, 1)
+        d.rounded_rectangle([x, H - 260 - h, x + 18, H - 260], radius=9, fill=rgba("#fb7185", 0.2))
+    return composite(img, over, blur=3)
+
+
 MOTIFS = {
     "tattoo": m_tattoo,
     "athletes": m_athletes,
@@ -499,6 +521,7 @@ MOTIFS = {
     "foodtrucks": m_foodtrucks,
     "coffee": m_coffee,
     "bakery": m_bakery,
+    "podcast": m_podcast,
     "pits": m_pits,
     "pets": m_pets,
     "models": m_models,
