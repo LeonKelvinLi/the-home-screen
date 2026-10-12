@@ -48,8 +48,8 @@ const CATEGORY_ROWS: CategoryRow[] = ALL_BEASTY_PAGES.map((p) => ({
 })).sort((a, b) => a.heading.localeCompare(b.heading))
 const CITIES_AZ = [...CITY_PAGES].sort((a, b) => a.localeCompare(b))
 
-/** "DJ's" is found by "djs" and "dj", "Pit's" by "pits". */
-const fold = (t: string) => t.toLowerCase().replace(/['’]/g, '')
+/** "DJ's" is found by "djs" and "dj", "Pit's" by "pits", "HŌM" by "hom" and "Café" by "cafe". */
+const fold = (t: string) => t.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['’]/g, '')
 const countLine = (n: number) => (n === 0 ? '24 spots open' : n === 1 ? '1 business' : `${n} businesses`)
 
 /**
@@ -123,7 +123,7 @@ export function SearchApp({ api }: { api: ShellApi }) {
 
     const brandHits = BRANDS.filter(
       (b) =>
-        b.name.toLowerCase().includes(term) ||
+        fold(b.name).includes(fold(term)) ||
         b.cuisine.toLowerCase().includes(term) ||
         b.tagline.toLowerCase().includes(term) ||
         /* "Also make it searchable" — halal, and any other dietary line a

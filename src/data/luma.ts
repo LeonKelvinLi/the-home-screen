@@ -210,6 +210,7 @@ export const ICON_LUMA: Record<string, number> = {
   'hinodeya-ramen-berkeley': 0.5575,
   'hl-peninsula': 0.6496,
   'holbrook-house': 0.0201,
+  'hom-coffee': 0.8514,
   'home-of-chicken-and-waffles': 0.0779,
   'hone-piercing': 0.8131,
   'honey-pot-gelato': 0.7421,

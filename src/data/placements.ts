@@ -1397,6 +1397,9 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-cooks-9': 'b_chefmike',
   'beasty-coffee-2': 'b_sanaacafehayward',
   'hayward-goods-13': 'b_sanaacafehayward',
+  /* HŌM Coffee, 2026-10-11, "BEASTY \u2022 Coffee": it seats itself there by its
+     type line; Hercules' Coffee shop seat was open. */
+  'hercules-goods-13': 'b_homcoffee',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

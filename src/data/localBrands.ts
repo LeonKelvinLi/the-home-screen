@@ -10788,4 +10788,57 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  {
+    /*
+      HŌM COFFEE, "BEASTY \u2022 Coffee". Glenn, 2026-10-11, with their Instagram
+      (@hom__coffee, "pronounced Home"), its contact sheet and homcoffees.com.
+      Everything is from their own site: the Bayfront Blvd address (Locations),
+      and the hours, cup and bag prices, pastry range, Mike's Bites, the
+      no-tipping policy and the discounts from its three notes of November 2024,
+      so the menu note says where the prices come from. The phone is from their
+      Instagram contact sheet. Their online shop lists no products, so there is
+      no shop link. BEASTY \u2022 Coffee seats it by its type line (categories.ts);
+      Hercules' Coffee shop seat was open (placements.ts).
+    */
+    slug: 'hom-coffee',
+    icon: 'hom-coffee',
+    name: 'HŌM Coffee',
+    label: 'HŌM',
+    cuisine: 'Coffee shop',
+    tagline: 'Coffee, teas and pastries by the waterfront in Hercules. Say it "Home".',
+    color: '#FFFFFF|#4A2418',
+    prep: 0,
+    category: 'Coffee',
+    address: '2525 Bayfront Blvd, Suite E, Hercules, CA 94547',
+    phone: '(925) 504-7755',
+    email: 'info@homcoffees.com',
+    hours: 'Daily 6:30am-8pm',
+    site: 'https://homcoffees.com/',
+    menuNote: 'Prices and hours from the notes on their own site (November 2024). Ask them for today\u2019s menu.',
+    items: [
+      ['Coffee, 8 oz', 'Beans from Ethiopia, Colombia, Ecuador and Rwanda, among others', 500],
+      ['Coffee, 12 oz', 'Beans from Ethiopia, Colombia, Ecuador and Rwanda, among others', 800],
+      ['Coffee to take home', 'A 250 g bag of beans', 2300, null, '$23\u2013$26'],
+      ['Pastries and light bites', 'Locally baked goods and their signature pound cake', 400, null, '$4\u2013$13'],
+    ],
+    panels: [
+      {
+        head: 'Teas and matcha',
+        body: ['Organic teas and Japanese matcha, alongside the coffee.'],
+      },
+      {
+        head: "Mike's Bites",
+        body: ['Their menu for children: small pastries, organic milk, fresh juice and fruit cups, at prices for small portions.'],
+      },
+      {
+        head: 'The shop',
+        body: [
+          'Seats for 36, fast internet for working or studying, and room for strollers.',
+          'No tipping: the team shares in the profits instead.',
+          'Discounts for local teachers and civil service workers.',
+        ],
+        links: [{ label: 'Their notes', href: 'https://homcoffees.com/blogs/news' }],
+      },
+    ],
+  },
 ]
