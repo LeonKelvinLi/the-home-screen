@@ -327,6 +327,14 @@ nearly-large-enough one gets a resample.
   DoubleTree at Sierra Point, a TripAdvisor photograph and not ours to use.
   3629x2410, so no super-resolution. The page opened for 7 Mile House.
 
+## 2026-10-13 (morning) — Suisun City
+
+- `suisun-city.webp` — "Suisun City Hall as seen across Suisun Slough between two
+  boats in the harbor", by Kiddo27 on Wikimedia Commons, CC BY-SA 4.0
+  (https://creativecommons.org/licenses/by-sa/4.0). His link was a DuckDuckGo
+  image result of a TripAdvisor photograph, not ours to use; this is the same
+  waterfront. The page opened for G Stacks Custom Smokers.
+
 ## BEASTY category pages (cat-*.webp)
 
 Not photographs. The nineteen `cat-<kind>.webp` backgrounds for the BEASTY

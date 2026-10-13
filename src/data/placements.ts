@@ -1426,6 +1426,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   /* ...and it keeps BEASTY • Eats' Hot pot seat, which it held by its type line until a
      seat by hand elsewhere on BEASTY took it out of the auto-fill. */
   'beasty-eats-20': 'b_hungrycow',
+  /* Batch 46, 2026-10-13 (localBrands.ts). Café 86: Daly City's coffee seat is Penelope's,
+     so the yellow sheet with the whole page for the film. Drunken Monk: Menlo Park's Asian
+     food seat. G Stacks opens Suisun City on seat 0. Ocean Oyster Bar: no seafood seat in
+     Union City or Redwood City, so both yellow sheets, with the film. Shift Arcade: no
+     arcade seat on San Ramon's Services, so its yellow sheet, with the film. Arena of
+     Kleos, Dino's and Niku-Ya seat themselves on Gyms, Food Trucks and AYCE by type line. */
+  'daly-city-goods2-0': 'b_cafe86dalycity',
+  'menlo-park-goods-2': 'b_drunkenmonk',
+  'suisun-city-goods-0': 'b_gstacks',
+  'union-city-goods2-4': 'b_oceanoysterbarunioncity',
+  'redwood-city-goods2-2': 'b_oceanoysterbarredwoodcity',
+  'san-ramon-services2-0': 'b_shiftarcade',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

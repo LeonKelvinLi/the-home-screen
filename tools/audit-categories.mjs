@@ -106,7 +106,7 @@ step('the whole swipe is short: no city pages in it', pagesAtHome > 0 && pagesAt
 const dotOf = async (name) => (await dots(p)).findIndex((l) => l.endsWith(`BEASTY, ${name}`))
 /* BEASTY • Pages: a tile per category, each opening its page. */
 const tiles = await p.evaluate(() => [...(document.querySelector('.home-page:not([inert])')?.querySelectorAll('.home-grid button[aria-label]') ?? [])].map((x) => x.getAttribute('aria-label')))
-step('BEASTY • Pages is a tile per category', tiles.length >= 12 && tiles.includes('BEASTY • Eats') && tiles.includes('BEASTY • Coffee'), `${tiles.length}: ${tiles.slice(0, 5).join(', ')} …`)
+step('BEASTY • Pages is a tile per category', tiles.length >= 12 && tiles.includes('BEASTY • Eats') && tiles.includes('BEASTY • Cafe'), `${tiles.length}: ${tiles.slice(0, 5).join(', ')} …`)
 await shot(p, '0-pages')
 /* Signed out, a tile on the swipe turns to its page; one off the swipe asks
    to sign up first, as Search does (checked again signed in, below). */
@@ -114,7 +114,7 @@ await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Tattoo"]'
 const viaTile = await waitWhere(p, 'BEASTY, Tattoo')
 step('a tile for a category on the swipe turns to its page', !!viaTile?.endsWith('BEASTY, Tattoo'), viaTile)
 await goDot(p, 0)
-await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Coffee"]').first().click()
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Cafe"]').first().click()
 await p.waitForTimeout(600)
 step('signed out, a category off the swipe asks to sign up first', (await p.locator('.gate[role="dialog"]').count()) === 1)
 await p.locator('.gate-scrim').first().click().catch(() => {})
@@ -177,9 +177,9 @@ const openSearch = async () => {
   await p.waitForSelector('.search-drops', { timeout: 10000 }).catch(() => {})
   await p.waitForTimeout(500)
 }
-await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Coffee"]').first().click()
-const coffee = await waitWhere(p, 'BEASTY, Coffee')
-step('signed in, a tile for a category off the swipe opens its page', !!coffee?.endsWith('BEASTY, Coffee'), coffee)
+await p.locator('.home-page:not([inert]) button[aria-label="BEASTY • Cafe"]').first().click()
+const coffee = await waitWhere(p, 'BEASTY, Cafe')
+step('signed in, a tile for a category off the swipe opens its page', !!coffee?.endsWith('BEASTY, Cafe'), coffee)
 await openSearch()
 step('Search has a Categories button and a Cities button', (await p.locator('.search-drop-btn', { hasText: 'Categories' }).count()) === 1 && (await p.locator('.search-drop-btn', { hasText: 'Cities' }).count()) === 1)
 await p.locator('.search-drop-btn', { hasText: 'Categories' }).click()

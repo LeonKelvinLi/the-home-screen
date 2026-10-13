@@ -91,6 +91,8 @@ export const OTHER_REVIEWS: OtherReview[] = [
   /* Glenn, 2026-10-12, "Add to BEASTY • AYCE", with @foodieberrie's reel at Hungry Cow: its
      page keeps Grand-O's film, and this one is listed as a review and plays in the feed. */
   { by: 'foodieberrie', place: 'Hungry Cow', city: 'Fremont', brand: 'b_hungrycow', reel: reel('DeUm0sfx2dO'), clip: true },
+  /* Glenn, 2026-10-13, "Foodie", with @_cynlacson's second reel (her first is on Niku-Ya's page). */
+  { by: '_cynlacson', place: 'Honolulu Sushi Taco at the 626 Night Market', reel: reel('DeW73CTSLlN'), clip: true },
   { by: 'thesauceboss_', place: 'Deli Board', city: 'San Francisco', brand: 'b_deliboard', reel: reel('DdVGXn4NxbO'), clip: true },
   { by: 'hella._local.mo', place: 'The Burger Spot Co.', city: 'Richmond', brand: 'b_theburgerspotco', reel: reel('Ddo0xf9MplM'), clip: true },
   { by: 'thesnobbiefoodie', place: 'Mensho', city: 'Walnut Creek', reel: reel('DY6Qf_qJdQV') },

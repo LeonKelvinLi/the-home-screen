@@ -164,6 +164,13 @@ export const CITY_PAGES = [
   */
   'Fairfield',
   /*
+    Suisun City, opened 2026-10-13 by G Stacks Custom Smokers — "Suisun City •
+    Goods" — next door to Fairfield. His landmark link was a TripAdvisor photo, not
+    ours to use; the wallpaper is City Hall across Suisun Slough, from Commons (see
+    public/wallpapers/CREDITS.md).
+  */
+  'Suisun City',
+  /*
     Oakley, opened 2026-08-22 by Bay Area Power Wash Pros. He first said BEASTY
     • Services and corrected himself a minute later — "actually Oakley •
     Services rather".

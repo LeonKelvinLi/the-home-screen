@@ -95,7 +95,10 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'foodtrucks', heading: 'Food Trucks', about: 'Food trucks and pop-ups', wall: wall('foodtrucks'), test: /food truck|taco truck|\btruck\b/i, not: /brew|taproom|winery/i },
   /* "We should create a BEASTY • Coffee page to put into the BEASTY • Pages
      category" — Glenn, 2026-10-03. Boba has its own spot on Sweets. */
-  { kind: 'coffee', heading: 'Coffee', about: 'Coffee shops and roasters', wall: wall('coffee'), test: /coffee|espresso|roaster/i, not: /boba|bubble tea|milk tea|ice cream/i },
+  /* Glenn, 2026-10-12: "Should we change BEASTY • Coffee to BEASTY • Cafe?", and Leon:
+     "Yeah beasty cafe sounds better". The kind stays 'coffee', so every seat id and the
+     wallpaper carry on; the type line test is unchanged, so no seat moves. */
+  { kind: 'coffee', heading: 'Cafe', about: 'Cafes, coffee shops and roasters', wall: wall('coffee'), test: /coffee|espresso|roaster/i, not: /boba|bubble tea|milk tea|ice cream/i },
   /* "Hey brother, please add a New category for BEASTY • Bakery" — Glenn, 2026-10-11.
      Bread, pastry and cake shops; a bakery is often a dessert shop too, so it can
      hold a spot here and on Sweets, the way a café is on Coffee and its city. */
