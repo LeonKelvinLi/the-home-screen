@@ -12,7 +12,29 @@ The original auto-detected draft (6399448) is superseded by 6399497. Neither has
 
 ## Required before live activation
 
-1. Glenn's account is currently on the free plan. Its API console requires Pro for production API use: $20 per seat per month plus $0.20 per API-signed document. No paid upgrade was purchased.
+Leon chose **free** on 13 October and will discuss the agreement with Glenn.
+Do not purchase Pro or activate the draft packet. A free cloud account can
+create signing requests through its dashboard and collect ID/file uploads;
+production API/embedding is paid. A manual CRM handoff or a different provider
+must be selected before implementing a free production signing integration.
+The choice is pending; a sandbox API is not a production substitute.
+
+### Fillable agreement for review
+
+`tools/build-affiliate-agreement-review.py` creates
+`output/pdf/BEASTY-Affiliate-Agreement-Fillable-DRAFT.pdf`: four pages and 24
+interactive fields for company identity, reward/payment terms, eligibility,
+privacy/retention and legal details. All values are blank, and the signature
+areas are reserved for a separate finalized request. The builder checks the
+canonical fields, widget appearances, and a saved/reopened synthetic fill.
+All four pages were rendered and visually checked.
+
+The same review draft is uploaded in Glenn's account as template **6399923**,
+[BEASTY-Affiliate-Agreement-Fillable-DRAFT](https://docuseal.com/templates/6399923).
+DocuSeal retained all 24 fields. It is saved, has no submissions, and is not
+configured as the portal's applicant signing template.
+
+1. Glenn's account remains free. The API-based path below requires Pro and is reference only unless Leon changes the free-only requirement. No paid upgrade was purchased.
 2. Finalize the agreement: BEASTY's legal entity/address, governing law, privacy/retention notice, and the complete referral reward/payment schedule. Published BARK figures are included as references for review, not treated as a complete approved commission contract.
 3. After Pro is active, apply the four conditional fields: SSN required only when Tax ID Type is SSN; EIN required only when it is EIN; LLC classification required only for LLC; Other classification required only for Other. DocuSeal's free-plan editor refused to save these conditions. Set SSN/EIN validation and a nine-digit routing-number validation. Verify their rendered locations on the W-9 and direct-deposit page.
 4. Use Glenn's live API key on both the site and CRM services, set `DOCUSEAL_AFFILIATE_TEMPLATE_ID` to the finalized template, `DOCUSEAL_COMPANY_EMAIL=glenn@beastypages.com`, and `DOCUSEAL_COMPANY_NAME=Glenn Malicdem`. Keep drafts out of production configuration.
@@ -38,6 +60,12 @@ Build the blank PDFs with the bundled Python runtime (reportlab and pypdf): `pyt
 
 Sources: [IRS W-9](https://www.irs.gov/forms-pubs/about-form-w-9), [DocuSeal API](https://www.docuseal.com/docs/api), [conditional fields](https://www.docuseal.com/resources/add-conditional-fields), [FTC disclosure guide](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers). LOQOL's integration was read only for the provider/status/prefill pattern; its account, templates and keys were not reused.
 
-The release audit also found an existing critical `proxy-addr` advisory (GHSA-jqcg-44mw-7w3h) in the production dependency tree, with a patch available. This branch does not change dependencies. Resolve it before a new code release; the notification configuration redeploy runs the already-deployed main revision.
+The release audit found an existing critical `proxy-addr` advisory
+(GHSA-jqcg-44mw-7w3h). This branch updates it to 2.0.8, also patches the
+development `source-map-js` dependency and overrides vulnerable `shell-quote`
+without changing concurrently's major version. `tools/audit-dependency-security.mjs`
+checks the proxy trust regression and rejection of shell-comment newline input
+without executing shell payloads. The notification configuration redeploy runs
+the already-deployed main revision; the dependency fixes are not live yet.
 
 Chrome QA of the isolated CRM confirmed an invite survives missing mail configuration and shows “Email was not sent; copy the link below.” Production signing remains disabled; this code branch has not been deployed.
