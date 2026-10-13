@@ -203,12 +203,12 @@ export function makeProviders(prod: boolean): Providers {
         return { submissionRef: ref, affiliateUrl: `${returnUrl.split('?')[0]}?mock=sign`, companyUrl: '' }
       }
       const templateId = Number(env('DOCUSEAL_AFFILIATE_TEMPLATE_ID'))
-      /* Only values for fields this template has. DocuSeal's docs don't say what it
-         does with a name it doesn't know, so none is sent; and if the template can't
-         be read, the packet opens empty rather than not at all. */
-      const names = await docuseal<{ fields?: { name?: string }[] }>('GET', `/templates/${templateId}`)
-        .then((t) => new Set((t.fields ?? []).map((f) => f.name ?? '')))
-        .catch(() => new Set<string>())
+      // Refuse a wrong or unreadable template instead of creating a partial packet.
+      const template = await docuseal<{ submitters?: { name: string; uuid: string }[]; fields?: { name: string; submitter_uuid: string }[] }>('GET', `/templates/${templateId}`)
+      const affiliate = template.submitters?.find((s) => s.name === AFFILIATE_ROLE())
+      const companyRole = template.submitters?.find((s) => s.name === COMPANY_ROLE())
+      if (!affiliate || !companyRole || affiliate.uuid === companyRole.uuid) throw new Error('docuseal template signer roles are not configured')
+      const names = new Set((template.fields ?? []).filter((f) => f.submitter_uuid === affiliate.uuid).map((f) => f.name))
       const values = Object.fromEntries(Object.entries(prefill).filter(([k, v]) => names.has(k) && v))
       const submitters = await docuseal<DsSubmitter[]>('POST', '/submissions', {
         template_id: templateId,
@@ -231,8 +231,9 @@ export function makeProviders(prod: boolean): Providers {
           },
         ],
       })
-      const mine = submitters.find((s) => s.role === AFFILIATE_ROLE()) ?? submitters[0]
+      const mine = submitters.find((s) => s.role === AFFILIATE_ROLE())
       const company = submitters.find((s) => s.role === COMPANY_ROLE())
+      if (!mine?.submission_id || !company || mine.submission_id !== company.submission_id || (!mine.embed_src && !mine.slug) || (!company.embed_src && !company.slug)) throw new Error('docuseal submission signer roles are not configured')
       return {
         submissionRef: String(mine.submission_id),
         affiliateUrl: mine.embed_src ?? `${docusealBase().replace('api.', '')}/s/${mine.slug}`,
