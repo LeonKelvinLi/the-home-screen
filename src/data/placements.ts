@@ -1438,6 +1438,12 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'union-city-goods2-4': 'b_oceanoysterbarunioncity',
   'redwood-city-goods2-2': 'b_oceanoysterbarredwoodcity',
   'san-ramon-services2-0': 'b_shiftarcade',
+  /* Batch 47, 2026-10-13 (localBrands.ts): Rise. San Mateo's Italian seat is The Barrel
+     Bistro's, so Rise Woodfire San Mateo is on the yellow sheet with the whole page for the
+     film; Santa Clara's and Burlingame's Italian seats were open. */
+  'san-mateo-goods2-2': 'b_risewoodfiresanmateo',
+  'santa-clara-goods-5': 'b_risewoodfiresantaclara',
+  'burlingame-goods-5': 'b_risepizzeria',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

@@ -394,6 +394,8 @@ export const ICON_LUMA: Record<string, number> = {
   'regent-thai-massage': 0.0222,
   'rg-lounge': 0.8704,
   'richie-rich-2': 0.4154,
+  'rise-pizzeria': 0.083,
+  'rise-woodfire': 0.0718,
   'roast-eatery-co': 0.442,
   'rob-bens-restaurant': 0.0662,
   'rock-n-jump': 0.4497,
