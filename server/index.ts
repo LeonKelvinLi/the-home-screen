@@ -6,6 +6,7 @@ import { dirname, join, sep } from 'node:path'
 import { db, migrate } from './db/schema'
 import { crmOnApplication, mountCrm } from './crm/routes'
 import { mountOnboarding } from './onboarding'
+import { sendEmail as sendLeadEmail } from './email'
 import { bioOf, mountFriends, petsFor, profileExtras, waitingCount } from './friends'
 import { businessSlug, flagReferral, isOwnDevice, mountAffiliate } from './affiliate'
 import { crmOpenMode } from './crm/open'
@@ -1554,40 +1555,6 @@ const EMAIL_SHAPE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/
  * this existed. Best-effort on purpose — the row is on disk before this runs,
  * and a mail failure must never tell the person their message was refused.
  */
-async function sendLeadEmail(
-  toRaw: string | undefined,
-  subject: string,
-  text: string,
-  /* The sender's own address, so Reply in the operator's mail app answers
-     them rather than the no-reply sender. Only ever a validated address. */
-  replyTo?: string,
-): Promise<void> {
-  const key = process.env.RESEND_API_KEY
-  const from = process.env.OTP_FROM_EMAIL
-  const to = String(toRaw ?? '')
-    .split(',')
-    .map((s) => s.trim())
-    .filter((s) => EMAIL_SHAPE.test(s))
-  if (!key || !from || !to.length) return
-  try {
-    const r = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: { authorization: `Bearer ${key}`, 'content-type': 'application/json' },
-      body: JSON.stringify({
-        from,
-        to,
-        subject,
-        text,
-        ...(replyTo && EMAIL_SHAPE.test(replyTo) ? { reply_to: replyTo } : {}),
-      }),
-      signal: AbortSignal.timeout(8000),
-    })
-    // The status, never the body: a provider error can echo the payload back.
-    if (!r.ok) console.error('lead email failed (lead is saved):', r.status)
-  } catch (err) {
-    console.error('lead email failed (lead is saved):', String(err))
-  }
-}
 
 function notifyLead(lead: Record<string, string>) {
   const f = (v: string) => slackSafe(v)

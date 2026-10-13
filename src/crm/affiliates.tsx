@@ -19,6 +19,7 @@ import { api } from './api'
 import { Avatar, dateTime, Empty, Failure, Loading, PageTitle, Section, ago, personName, plural, useApi, useCrm } from './ui'
 import { Icon } from './icons'
 
+type EmailStatus = 'accepted' | 'failed' | 'not_configured'
 type Mode = 'off' | 'mock' | 'live'
 type Status = 'in_progress' | 'submitted' | 'changes_requested' | 'approved' | 'rejected' | 'suspended'
 
@@ -161,11 +162,11 @@ async function copy(text: string) {
 }
 
 /** The link a new invite makes, ready to text or paste. */
-function LinkBox({ link, onDone }: { link: string; onDone: () => void }) {
+function LinkBox({ link, emailStatus, onDone }: { link: string; emailStatus?: EmailStatus; onDone: () => void }) {
   const [copied, setCopied] = useState(false)
   return (
     <div className="crm-aff-link" role="status">
-      <strong>Invite ready. We emailed it too.</strong>
+      <strong>{emailStatus === 'accepted' ? 'Invite ready. Email accepted for delivery.' : 'Invite ready. Email was not sent; copy the link below.'}</strong>
       <span className="crm-aff-link-url">{link}</span>
       <div className="crm-aff-actions">
         <button type="button" className="crm-btn is-dark" onClick={async () => setCopied(await copy(link))}>
@@ -188,13 +189,15 @@ function InviteForm({ onSent }: { onSent: () => void }) {
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState<string | null>(null)
   const [link, setLink] = useState<string | null>(null)
+  const [emailStatus, setEmailStatus] = useState<EmailStatus>()
   const submit = async (e: FormEvent) => {
     e.preventDefault()
     setBusy(true)
     setErr(null)
     try {
-      const r = await api<{ link: string }>('/api/crm/onboarding/invites', { method: 'POST', body: { name, email, note } })
+      const r = await api<{ link: string; emailStatus: EmailStatus }>('/api/crm/onboarding/invites', { method: 'POST', body: { name, email, note } })
       setLink(r.link)
+      setEmailStatus(r.emailStatus)
       setName('')
       setEmail('')
       setNote('')
@@ -205,7 +208,7 @@ function InviteForm({ onSent }: { onSent: () => void }) {
       setBusy(false)
     }
   }
-  if (link) return <LinkBox link={link} onDone={() => setLink(null)} />
+  if (link) return <LinkBox link={link} emailStatus={emailStatus} onDone={() => setLink(null)} />
   return (
     <form className="crm-panel crm-aff-invite" onSubmit={submit}>
       <div className="crm-form">
@@ -232,7 +235,7 @@ function InviteForm({ onSent }: { onSent: () => void }) {
 }
 
 function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: boolean; reload: () => void }) {
-  const [fresh, setFresh] = useState<{ id: string; link: string } | null>(null)
+  const [fresh, setFresh] = useState<{ id: string; link: string; emailStatus?: EmailStatus } | null>(null)
   const [err, setErr] = useState<string | null>(null)
   const open = invites.filter((i) => i.state !== 'redeemed')
   if (!open.length) return null
@@ -240,8 +243,8 @@ function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: b
     if (what === 'revoke' && !window.confirm(`Cancel the invite for ${i.email}? Their link stops working.`)) return
     setErr(null)
     try {
-      const r = await api<{ link?: string }>(`/api/crm/onboarding/invites/${i.id}/${what}`, { method: 'POST' })
-      if (r.link) setFresh({ id: i.id, link: r.link })
+      const r = await api<{ link?: string; emailStatus?: EmailStatus }>(`/api/crm/onboarding/invites/${i.id}/${what}`, { method: 'POST' })
+      if (r.link) setFresh({ id: i.id, link: r.link, emailStatus: r.emailStatus })
       reload()
     } catch (e) {
       setErr((e as Error).message)
@@ -259,8 +262,8 @@ function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: b
                 <strong>{i.name || i.email}</strong>
                 <span>{i.name ? i.email : ''}</span>
                 <span className="crm-row-meta">
-                  {i.state === 'open' ? `Sent ${ago(i.created_at)}, works until ${dateTime(i.expires_at)}` : i.state === 'expired' ? 'Expired' : 'Cancelled'}
-                  {i.sent_count > 1 ? `, sent ${i.sent_count} times` : ''}
+                  {i.state === 'open' ? `Created ${ago(i.created_at)}, works until ${dateTime(i.expires_at)}` : i.state === 'expired' ? 'Expired' : 'Cancelled'}
+                  {i.sent_count > 1 ? `, link renewed ${i.sent_count - 1} times` : ''}
                 </span>
               </span>
               {admin && (
@@ -278,7 +281,7 @@ function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: b
             </div>
             {fresh?.id === i.id && (
               <div className="crm-aff-inline">
-                <LinkBox link={fresh.link} onDone={() => setFresh(null)} />
+                <LinkBox link={fresh.link} emailStatus={fresh.emailStatus} onDone={() => setFresh(null)} />
               </div>
             )}
           </li>

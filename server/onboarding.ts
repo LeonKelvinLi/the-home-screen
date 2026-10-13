@@ -33,6 +33,7 @@
   profile holds contact details only.
 */
 import type { Express, Request, Response, NextFunction } from 'express'
+import type { EmailResult } from './email'
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
 import { db } from './db/schema'
 import { requireCrm, type CrmDeps } from './crm/auth'
@@ -197,7 +198,7 @@ export interface OnboardingDeps {
   origin(req: Request): string
   /** The public site's origin, for invite links made from the CRM's own address. */
   publicUrl: string
-  sendEmail(to: string | undefined, subject: string, text: string, replyTo?: string): Promise<void>
+  sendEmail(to: string | undefined, subject: string, text: string, replyTo?: string): Promise<EmailResult>
   leadEmail: string | undefined
   crm: CrmDeps
   prod: boolean
@@ -463,6 +464,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
           /* The W-9 asks for the address in two lines (its lines 5 and 6). A name
              the template doesn't have is left out (onboarding-providers.ts). */
           'Street Address': [p.line1, p.line2].filter(Boolean).join(', '),
+          'City State ZIP': [p.city, `${(p.state ?? '').toUpperCase()} ${p.zip ?? ''}`.trim()].filter(Boolean).join(', '),
           City: p.city ?? '',
           State: (p.state ?? '').toUpperCase(),
           ZIP: p.zip ?? '',
@@ -669,8 +671,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       .run(id, sha(token), email, name, note, req.crm!.actor, now, now + INVITE_DAYS * 86_400_000)
     await event(null, req.crm!.actor, 'invited', { email }, id)
     const link = `${site(req)}/join/${token}`
-    void deps.sendEmail(email, 'You’re invited to the BEASTY affiliate program', `${name ? `Hi ${name},\n\n` : ''}You've been invited to join the BEASTY affiliate program.\n\nStart here (the link is just for you and works for ${INVITE_DAYS} days):\n${link}\n\nBEASTY Pages`)
-    res.status(201).json({ id, link, expiresAt: now + INVITE_DAYS * 86_400_000 })
+    const emailStatus = await deps.sendEmail(email, 'You’re invited to the BEASTY affiliate program', `${name ? `Hi ${name},\n\n` : ''}You've been invited to join the BEASTY affiliate program.\n\nStart here (the link is just for you and works for ${INVITE_DAYS} days):\n${link}\n\nBEASTY Pages`)
+    res.status(201).json({ id, link, expiresAt: now + INVITE_DAYS * 86_400_000, emailStatus })
   }))
 
   app.post('/api/crm/onboarding/invites/:id/resend', crmWrite, admin, asyncH(async (req, res) => {
@@ -685,8 +687,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       .run(sha(token), now + INVITE_DAYS * 86_400_000, inv.id)
     await event(null, req.crm!.actor, 'invite_resent', { email: inv.email }, inv.id)
     const link = `${site(req)}/join/${token}`
-    void deps.sendEmail(inv.email, 'Your BEASTY affiliate invite', `${inv.name ? `Hi ${inv.name},\n\n` : ''}Here's a fresh link to join the BEASTY affiliate program:\n${link}\n\nBEASTY Pages`)
-    res.json({ link })
+    const emailStatus = await deps.sendEmail(inv.email, 'Your BEASTY affiliate invite', `${inv.name ? `Hi ${inv.name},\n\n` : ''}Here's a fresh link to join the BEASTY affiliate program:\n${link}\n\nBEASTY Pages`)
+    res.json({ link, emailStatus })
   }))
 
   app.post('/api/crm/onboarding/invites/:id/revoke', crmWrite, admin, asyncH(async (req, res) => {
