@@ -1448,6 +1448,18 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'santa-clara-goods-0': 'b_katsuburgersantaclara',
   /* Batch 49, 2026-10-13 evening: Slice of Homage takes Sunnyvale's open Italian seat. */
   'sunnyvale-goods-5': 'b_sohpizza',
+  /* Batch 50, 2026-10-14: Romana Pizzeria (Danville's Italian is The Great Impasta's),
+     tōno coffee project (San Jose's coffee is Coba's) and Addis (no Ethiopian seat) on
+     their yellow sheets with the whole page for the film; Merkado on SF's (Mexican is
+     Underdogs Cantina's), Tier 1, no film yet. Endless Summer Sweets on BEASTY • Food
+     Trucks and the Milkshakes spot of BEASTY • Sweets, by hand; Golden Bay Detailing
+     fills BEASTY • Automotive and tōno BEASTY • Cafe by their type lines. */
+  'danville-goods2-0': 'b_romanapizzeria',
+  'san-jose-goods2-13': 'b_tonocoffeeproject',
+  'oakland-goods2-21': 'b_addisoakland',
+  'san-francisco-goods2-39': 'b_merkadosf',
+  'beasty-foodtrucks-5': 'b_endlesssummersweets',
+  'beasty-sweets-8': 'b_endlesssummersweets',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

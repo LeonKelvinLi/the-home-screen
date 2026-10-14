@@ -12882,4 +12882,587 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  /*
+    BATCH 50, 2026-10-14: Glenn's links of 13 Oct evening and 14 Oct morning (research in
+    r1014, built by build50.py). Seats in placements.ts.
+  */
+  {
+    /*
+      ROMANA PIZZERIA, "Danville • Eats". Glenn, 2026-10-13, with their site and Instagram
+      (@romanapizzeria251) and @alexytravels' reel ("Clip this video plz", "Foodie"), which
+      also counts on her Foodies page. Address, phone, email and the menu with prices from
+      romanadanville.com and its ordering page, plus their catering trays. No hours: the
+      site says Mon 11am-9pm and Fri-Sat until midnight, Instagram says Mon 3-9pm and
+      Fri-Sat until 11pm. Danville's Italian seat is The Great Impasta's, so it is on the
+      yellow sheet with the whole page for the film.
+    */
+    slug: "romana-pizzeria",
+    icon: "romana-pizzeria",
+    name: "Romana Pizzeria",
+    label: "Romana",
+    cuisine: "NY & Roman-style pizza",
+    tagline: "New York and Roman-style pizza on 72-hour dough, with a private backyard on Hartz Avenue.",
+    color: "#111111|#D6222A",
+    prep: 0,
+    category: "Pizza",
+    address: "251 Hartz Ave, Danville, CA 94526",
+    phone: "(925) 406-4729",
+    email: "romanapizzeria251@gmail.com",
+    site: "https://romanadanville.com/",
+    orderUrl: "https://romanadanville.com/menu",
+    menuNote: "Prices from their own ordering menu at romanadanville.com; catering trays are starting prices. Private events for up to 40 guests are booked on their site.",
+    clip: {
+      src: '/clips/romana-pizzeria.mp4',
+      poster: '/clips/romana-pizzeria-poster.webp',
+      href: 'https://www.instagram.com/reel/DbgPHc4p_SJ/',
+      credit: "Filmed by @alexytravels",
+      platform: 'Instagram',
+      by: 'alexytravels',
+    },
+    sections: [
+      { name: "Family Specials", items: [
+        ["2 Medium Cheese Pizzas + Garlic Knots", "", 4000],
+        ["X-Large Cheese Pizza + 6 Wings + Caesar Salad", "", 4500],
+      ] },
+      { name: "Build Your Own", items: [
+        ["Create Your Own Pizza", "Small 12\" $18, Medium 14\" $22, X-Large 18\" $33.", 1800],
+      ] },
+      { name: "Students Back to School Special!", items: [
+        ["2 Cheese Slices", "", 999],
+        ["2 Pepperoni Slices", "", 999],
+      ] },
+      { name: "Appetizers", items: [
+        ["Hot Platter", "3 wings, 4 ravioli and 4 garlic knots. Served with marinara sauce.", 1500],
+        ["Garlic Knots", "With a side of marinara.", 800],
+        ["Meatballs & Ricotta", "With a side of garlic bread.", 1200],
+        ["Chicken Wings", "6 pcs $12.00 | 12 pcs $21.00 • buffalo, BBQ, Asian-style with sweet chili or Salt & Lemon pepper, served with a choice of blue cheese or ranch.", 1200],
+      ] },
+      { name: "Roman Style Pizza (72-Hour Fermented Dough)", items: [
+        ["Grandma Pizza", "Fresh mozzarella, basil, Parmigiano Reggiano, San Marzano marinara sauce. Half $20, Full $38.", 2000],
+        ["Romana Pizza", "72 hour fermented dough with whole wheat & Caputo double 00 flour mozzarella, cherry tomatoes, extra virgin olive oil, oregano fresh basil & Burrata cheese. Half $20, Large $38.", 2000],
+      ] },
+      { name: "Signature Pizza", items: [
+        ["Margherita Pizza", "San marzano, fresh mozzarella, organic fresh basil & parmigiano. Small 12\" $20, Medium $28, X-Large 18\" $38. GF crust +$3.", 2000],
+        ["Calabrese Pizza", "Salami, sausage, calabrian spicy peppers, Feta & mozzarella, topped with arugula. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["Delizia Della Casa Pizza", "Onions, garlic, pepperoni, sausage & mushrooms. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["Hawaiian BBQ Chicken Pizza", "Bacon, pineapple, chicken & BBQ sauce. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["Veggie Pizza", "Onions, garlic, bell peppers, & spinach. Small 12\" $20, Medium $28, X-Large 18\" $38. GF crust +$3.", 2000],
+        ["Meat Lovers Pizza", "Ham, bacon, sausage, pepperoni, salami & garlic. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["Ricotta Vodka Hot Honey Pepperoni Pizza", "Ricotta, vodka sauce, hot honey, pepperoni. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["White Pie", "Caramelized onions, ricotta, mozzarella, parmesan. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["Vegan Pizza", "Spinach, marinara sauce, caramelized onions, cherry tomatoes, and red roasted peppers. Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["4 Cheese Pie", "Fontina, mozzarella, ricotta, Parmigiano Reggiano Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+        ["Romana's Pesto Roni Pizza", "Halal beef pepperoni, pesto, ricotta cheese, mozzarella, finished with hot honey and fresh basil Small 12\" $20, Medium 14\" $28, X-Large 18\" $38.", 2000],
+      ] },
+      { name: "Pizza by the Slice", items: [
+        ["Kid's Cheese Slice Happy Hours", "", 400],
+        ["Slice & Side Salad Combo Happy Hours", "Slice Flavor: Cheese, Margherita, Pepperoni, Delizia Della Casa, Roman Style.", 999],
+      ] },
+      { name: "Vegan Pizza", items: [
+        ["Vegan Verdure Pizza", "Roasted vegetables, tomatoes, onions, garlic, peppers, zucchini, fresh spinach and marinara sauce. Small 12\" $20, Medium $28, X-Large 18\" $38. GF crust +$3.", 2000],
+      ] },
+      { name: "Calzones", items: [
+        ["All Meat Calzone", "Pepperoni, sausage, ham, salami, mozzarella, ricotta.", 2100],
+        ["Cheese Calzone", "Ricotta, mozzarella, parmesan.", 1800],
+        ["Veggie Calzone", "Cherry tomatoes, spinach, roasted peppers, onions, minced garlic, ricotta, mozzarella, parmesan.", 2100],
+      ] },
+      { name: "Pasta", items: [
+        ["Spicy Rigatoni Alla Vodka", "Red peppers, mushrooms, onions & garlic in a creamy vodka sauce.", 1800],
+        ["Linguine Alfredo", "With a creamy alfredo sauce.", 1800],
+        ["Linguine & Meatballs", "With marinara.", 1800],
+        ["Four-Cheese Baked Rigatoni", "Fontina, mozzarella, ricotta, Parmigiano, Reggiano, and marinara sauce", 1800],
+        ["Chicken Parmesan Over Linguine Pasta", "Breaded chicken breast over linguine pasta, melted mozzarella & parmesan.", 2500],
+        ["Linguine Bolognese", "Linguine pasta with meat sauce", 1800],
+      ] },
+      { name: "Salads", items: [
+        ["Caesar Salad", "Romaine heart lettuce, Rosemary focaccia croutons, shredded parmesan cheese with Caesar dressing.", 1000],
+        ["Romana Salad", "Arugula, roasted beets, pears, walnuts, shaved parmesan, basil, balsamic reduction dressing.", 1400],
+        ["Chopped Mediterranean Salad", "Romaine hearts, cherry tomatoes, red roasted peppers, Kalamata olives, pepperoncini peppers, feta cheese, balsamic reduction dressing.", 1500],
+      ] },
+      { name: "Desserts, Shakes", items: [
+        ["Milkshake", "Milkshake: Vanilla, Chocolate, Strawberry.", 800],
+        ["Tiramisu Cup", "", 840],
+        ["Ice Cream", "", 525],
+        ["Cheesecake", "", 630],
+        ["Oreo Cheesecake", "", 630],
+        ["Cannolis", "", 600],
+        ["Ricotta Pistachio Cake", "", 700],
+      ] },
+      { name: "Drinks", items: [
+        ["Coke", "", 300],
+        ["Diet Coke", "", 300],
+        ["7 Up", "", 300],
+        ["Bottled Water", "", 200],
+        ["Sicilian Lemonade", "", 500],
+        ["Root Beer", "", 500],
+        ["Cream Soda", "", 500],
+        ["Ginger Ale", "", 500],
+        ["Water", "", 200],
+        ["Can Soda", "", 300],
+        ["Fountain Soda", "Flavor: Pepsi, Diet Pepsi, Sierra Mist, Dr. Pepper, Mountain Dew.", 300],
+      ] },
+      { name: "Kids Menu", items: [
+        ["Kids Milkshake", "Milkshake: Vanilla, Chocolate, Strawberry.", 500],
+        ["Kids Rigatoni Parmesan & Butter", "", 700],
+        ["Kids Linguine Meatballs", "", 1000],
+        ["Kids Cheese Pizza Slice", "", 500],
+        ["Kids Rigatoni with Meatballs", "", 1050],
+        ["Kids Pepperoni Pizza Slice", "", 399],
+      ] },
+      { name: "Buns", items: [
+        ["Buffalo Chicken Bun", "Chicken breast with buffalo sauce, lettuce, onions & ranch.", 999],
+        ["Capicola Salami Bun", "With fontina cheese & tomatoes.", 999],
+        ["Chicken Caprese Bun", "Chicken, tomatoes, basil, roasted peppers, balsamic reduction & fresh mozzarella.", 999],
+        ["Italian Sub", "Prosciutto cotto (Italian ham), capicola salami & Fontina cheese.", 999],
+        ["Ham & Cheese Bun", "Prosciutto cotto (Italian ham) with fontina cheese & tomatoes.", 999],
+      ] },
+      { name: "Catering: Appetizers & Dessert", items: [
+        ["Garlic Knots", "", 3500, null, "from $35"],
+        ["Chicken Wings", "", 6000, null, "from $60"],
+        ["Cannolis", "30 pieces.", 5000],
+      ] },
+      { name: "Catering: Salads", items: [
+        ["Romana Salad", "", 5000, null, "from $50"],
+        ["Burrata Salad", "", 5000, null, "from $50"],
+        ["Mediterranean Salad", "", 5000, null, "from $50"],
+        ["Caesar Salad", "", 4000, null, "from $40"],
+      ] },
+      { name: "Catering: Pasta Trays", items: [
+        ["Rigatoni Alla Vodka Tray", "Rigatoni, creamy vodka sauce, parmesan.", 8500, null, "from $85"],
+        ["Baked Rigatoni Tray", "Rigatoni, tomato sauce, mozzarella, parmesan.", 8500, null, "from $85"],
+        ["Linguine Alfredo Tray", "Linguine, creamy Alfredo sauce, parmesan.", 8500, null, "from $85"],
+        ["Chicken Parmesan over Pasta Tray", "Breaded chicken, tomato sauce, mozzarella, parmesan over pasta.", 10500, null, "from $105"],
+        ["Chicken Francese over Pasta Tray", "Lemon butter sauce over pasta.", 10500, null, "from $105"],
+        ["Chicken Marsala Tray", "Mushrooms, marsala wine sauce over pasta.", 10500, null, "from $105"],
+        ["Lasagna Tray", "Layers of pasta, meat sauce, ricotta, mozzarella, parmesan.", 8500, null, "from $85"],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      TŌNO COFFEE PROJECT, "San Jose • Goods / BEASTY • Cafe". Glenn, 2026-10-13, with
+      their site and Instagram (@tonocoffeeproject) and @andygravs' reel ("Clip this video
+      plz"). Address and Wed-Sun 8am-5pm hours from their Instagram, the email from
+      tono.coffee. They publish no café drink prices; the items are the bottled coffee,
+      beans and Maison Marou chocolate on their own Square shop (out-of-stock instant left
+      off), which says it is not taking orders, so nothing is sold here. No ZIP published.
+      San Jose's coffee seat is Coba's, so it is on the yellow sheet with the whole page;
+      BEASTY • Cafe seats it by its type line.
+    */
+    slug: "tono-coffee-project",
+    icon: "tono-coffee-project",
+    name: "tōno coffee project",
+    label: "tōno coffee",
+    cuisine: "Specialty coffee",
+    tagline: "Practised movements and immense care: a specialty coffee bar on North 7th Street.",
+    color: "#4A2420|#F3F1EA",
+    prep: 0,
+    category: "Coffee",
+    address: "525 N 7th St, San Jose, CA",
+    email: "hello@tono.coffee",
+    hours: "Wed-Sun 8am-5pm",
+    site: "https://tono.coffee/",
+    quoteOnly: "Their café menu is at the counter. The bottled coffee, beans and chocolate below are from their own online shop, which is not taking orders right now.",
+    clip: {
+      src: '/clips/tono-coffee-project.mp4',
+      poster: '/clips/tono-coffee-project-poster.webp',
+      href: 'https://www.instagram.com/reel/DecpsH_yJHC/',
+      credit: "Filmed by @andygravs",
+      platform: 'Instagram',
+      by: 'andygravs',
+    },
+    sections: [
+      { name: "Bottled coffee", items: [
+        ["WHITE", "milk + coffee, prepared with coffee + Oatly and bottled. feat. Olympia Coffee, 9oz bottle; shake well & keep refrigerated.", 500],
+      ] },
+      { name: "Beans", items: [
+        ["Eshetu, Ethiopia Natural", "From Cup of Excellence-winning producer Eshetu Mergiya Teklegiorgis (Bulga, Sidama), via Olympia Coffee. Traditional natural process; notes of berry, peach, and brown sugar.", 2650],
+      ] },
+      { name: "Maison Marou chocolate", items: [
+        ["vietnamese cacao spread", "Single-origin Vietnamese cacao with roasted Vietnamese cashews; vegan friendly. On sale (regular $24).", 1400],
+        ["Vietnamese cacao powder", "Non-alkalized single-origin cacao powder made in Viet Nam (250g), the base of all their chocolatey drinks. On sale (regular $15).", 1300],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      ADDIS RESTAURANT, "Oakland • Eats". Glenn, 2026-10-13, with their site and Instagram
+      (@addisrestaurantoakland) and @grubwitmike's reel ("Clip this video plz"). Address,
+      phone and email from their Instagram (their site's contact page says Berkeley 94705;
+      the street, Instagram and their own reel say Oakland), the menu with prices from the
+      PDF on addisoakland.com. No hours are published, only the weekday veggie buffet
+      (11:30-2:30) and happy hour (5-7); the buffet price is not. Their ORDER NOW button
+      leads nowhere, so there is no ordering link. No Ethiopian seat in Oakland, so it is
+      on the yellow sheet with the whole page for the film.
+    */
+    slug: "addis-oakland",
+    icon: "addis-oakland",
+    name: "Addis Restaurant",
+    label: "Addis",
+    cuisine: "Ethiopian & Eritrean",
+    tagline: "Oakland roots, Ethiopian soul: Habesha cooking on Telegraph Avenue, with a weekday veggie buffet.",
+    color: "#111111|#C9A04A",
+    prep: 0,
+    category: "Ethiopian",
+    address: "6100 Telegraph Ave, Oakland, CA 94609",
+    phone: "(510) 653-3456",
+    email: "selamkimirob@gmail.com",
+    site: "https://www.addisoakland.com/",
+    menuNote: "Prices from the menu on their own site. A veggie platter buffet runs Monday to Friday, 11:30am to 2:30pm.",
+    clip: {
+      src: '/clips/addis-oakland.mp4',
+      poster: '/clips/addis-oakland-poster.webp',
+      href: 'https://www.instagram.com/reel/DedHA3BRwqh/',
+      credit: "Filmed by @grubwitmike",
+      platform: 'Instagram',
+      by: 'grubwitmike',
+    },
+    sections: [
+      { name: "Starters", items: [
+        ["Injera Roll", "Vegetarian spread rolled in injera. Vegetarian. Vegan.", 1250],
+        ["Addis Roll", "Gomen and ayib rolled in injera.", 1250],
+        ["Mini Kitfo Sliders", "Kitfo served in dinner rolls.", 1550],
+        ["Kategna", "Ethiopian spices butter mixed with berbere and rolled in crispy injera.", 1350],
+        ["Veggie Samosa", "3 pieces Ethiopian style phyllo dough pockets filled with savory lentils, onions & jalapeño fillings.", 1350],
+      ] },
+      { name: "From the Sea", items: [
+        ["Fillet of Fish", "Generous portion of breaded tilapia fillet prepared Ethiopian style. Served with Mesir Wot and Salad.", 2450],
+        ["Shrimp Tibs", "Shrimp sautéed in awaze, onions, garlic, peppers, in Addis’ seasoned butter and fresh herbs.", 2450],
+        ["Fish Goulash", "Fish sautéed in mild awaze sauce, onions, garlic, peppers and fresh herbs.", 2450],
+        ["Fish Kotelette", "Generous portion of fried tilapia and pasta prepared Ethiopian style. Served with selata.", 2575],
+        ["Tuna Kitfo", "Ahi tuna freshly minced and seasoned with mitmita and Addis’ seasoned olive oil.", 2575],
+        ["Salmon Kitfo", "Salmon freshly minced and seasoned with mitmita and Addis’ seasoned olive oil.", 2575],
+      ] },
+      { name: "Vegan-Vegetarian Dishes", items: [
+        ["Fassolia", "Green beans and carrots cooked in a mild sauce of onions, garlic, green pepper and herbed oil.", 2175],
+        ["Tofu Tibs", "Tofu sautéed in Addis’s herb oil with onions, garlic and fresh herbs.", 2175],
+        ["Zucchini Wot", "Zucchini sautéed in tomatoes, onions, garlic, green pepper and fresh herbs.", 2175],
+        ["Eggplant Wot", "Eggplant sautéed in Addis’s traditional red sauce. A vegetarian version of the Ethiopian signature Doro Wot.", 2175],
+        ["Shiro Wot", "Ground split peas cooked slowly in flavorful berbere sauce, a blend of spices, and Addis’ seasoned oil.", 2175],
+        ["Veggie Fir Fir", "Injera tossed in a sauce of sautéed onions, berbere, tomatoes, garlic, green pepper and fresh herbs.", 2100],
+        ["Gomen", "Chopped collard greens cooked in a mild sauce of onions, garlic, green pepper and herb oil.", 2100],
+        ["Yemeser Wot", "Lentils cooked slowly in flavorful berbere sauce, a blend of spices, and herb oil.", 2100],
+        ["Ater Kik", "Split peas cooked slowly in a blend of spices, onions, garlic, turmeric, and herb oil.", 2100],
+        ["Teqel Gomen", "Chunks of cabbage, carrots and potatoes cooked slowly in a blend of spices, onions, garlic, turmeric and herb oil.", 2100],
+        ["Selata", "Green leaf lettuce, onions, and green peppers with house dressing.", 1300],
+        ["Pasta Spaghetti", "A generous portion of spaghetti prepared Ethiopian style. Served with green salad.", 2175],
+      ] },
+      { name: "Combination Plates", items: [
+        ["Vegetarian-Vegan Combination", "A serving of our 4 Ethiopian vegetarian / vegan specialties: Gomen, Mesir Wot, Ater Kik, Teqel Gomen.", 2300],
+        ["Meat Combination", "A serving of our 3 Ethiopian meat specialties: Doro Wot, Sega Wot, and Sega Alicha.", 2400],
+        ["Addis Combination (Serves 2)", "Created to provide the ultimate Ethiopian dining experience. This plate comes adorned with a sampling of our meat and vegetarian dishes. Serves 2 people.", 4500],
+        ["Kornis (Serves 2)", "A sampling of Addis’ old time favorites: Kitfo, Lamb Tibs and Quanta Firfir.", 4400],
+        ["Vegetarian/Vegan Kornis (Serves 2)", "A sampling of Veggie Firfir, Fassolia and Tofu Tibs.", 4300],
+      ] },
+      { name: "Meat Dishes", items: [
+        ["Kitfo", "Very lean USDA Choice beef top round freshly minced and seasoned with Mitmita and Addis’ seasoned butter. Served raw, rare, or cooked.", 2400],
+        ["Kitfo Special", "Kitfo mixed with the right amount of Ayib (Cottage Cheese) and Gomen (Collard Greens).", 2400],
+        ["Kitfo Dulet", "Kitfo infused with diced red onions and green peppers.", 2400],
+        ["Quanta Fir Fir", "Injera tossed in a sauce of quanta (Ethiopian style beef jerky) sautéed in berbere, tomatoes, onions, garlic, green pepper, fresh herbs, and Addis’ seasoned butter.", 2350],
+        ["Banatu", "Injera tossed in a sauce of tender pieces of lean beef sautéed in berbere, tomatoes, onions, garlic, green pepper, fresh herbs, and Addis seasoned butter.", 2350],
+        ["Yesega Wot", "Lean cubes of beef cooked in berbere sauce with a blend of Ethiopian spices.", 2300],
+        ["Yedoro Wot", "Chicken and hard-boiled egg cooked in a flavorful and delicately spiced berbere sauce to create Ethiopia’s favorite dish.", 2300],
+        ["Yesega Alicha", "Lean cubes of beef cooked in a flavorful mild sauce with a blend of Ethiopian spices, onions, ginger, turmeric and garlic.", 2300],
+        ["Lamb Tibs", "Tender pieces of lamb sautéed in Addis spices, onions, garlic, rosemary and fresh herbs.", 2450],
+        ["Chicken Tibs", "Tender pieces of chicken thigh sautéed in Addis spices, onions, garlic, rosemary and fresh herbs.", 2350],
+        ["Rib Eye Tibs", "Tender pieces of USDA Choice rib eye sautéed in Addis spices, onions, garlic, rosemary and fresh herbs.", 2350],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      MERKADO, "San Francisco • Eats". Glenn, 2026-10-14, with their site and Instagram
+      (@merkadosf) and "Clip this video plz", but no reel came with it, so no film yet.
+      Address, phone and email from their site and Instagram; the prices from the Toast
+      pickup page their site links to (the site's own menus carry almost none), so dinner
+      mains, Taco Tuesday, desserts and happy-hour food are left off. No hours: the site
+      says Saturday dinner from 4pm and happy hour Tue-Fri, Instagram Saturday from 3pm and
+      happy hour every day. SF's Mexican seat is Underdogs Cantina's; yellow sheet, Tier 1.
+    */
+    slug: "merkado-sf",
+    icon: "merkado-sf",
+    name: "Merkado",
+    label: "Merkado",
+    cuisine: "Farm-to-table Mexican",
+    tagline: "Farm-to-table Mexican in SoMa, a block from the ballpark.",
+    color: "#E85C45|#0F5B66",
+    prep: 0,
+    category: "Mexican",
+    tier: 1,
+    address: "130 Townsend St, San Francisco, CA 94107",
+    phone: "(415) 874-7902",
+    email: "info@merkadosf.com",
+    site: "https://www.merkadosf.com/",
+    orderUrl: "https://www.toasttab.com/merkado-san-francisco-130-townsend-st",
+    menuNote: "Prices from their own pickup ordering page, linked from their site; a 6% San Francisco employer-mandate surcharge is added. Reservations are on their site.",
+    sections: [
+      { name: "Bites", items: [
+        ["Chips n Salsa", "housemade corn tortilla chips with 2 seasonal salsas (*spicy salsa contains peanuts)", 600],
+        ["Guacamole", "chile, tomato, onion", 1600],
+        ["Aguachile", "mexican wild shrimp, cucumber, red onion, cherry tomato, avocado, agua de chile pequin, chile morita oil, rice chips", 2200],
+        ["Albondigas", "turkey meatballs, hard-boiled quail egg, charred chile sauce, queso frito", 2000],
+        ["Infladita", "braised lengua in puffed corn tortilla, chile piquin salsa, avocado crema, radish salpicon", 1800],
+        ["Pulpo al Carbon", "grilled spanish octopus, achiote negro, baby arugula, heirloom potatoes, macha labneh", 2000],
+      ] },
+      { name: "Starters", items: [
+        ["Ceviche", "seasonal white fish, onion, cucumber, cilantro, mango, tomato, avocado, sangrita, taro chips", 2200],
+        ["Ensalada Merkado", "roasted beets, pickled papaya, red frill mustard, shallot vinaigrette, roasted pistachios, goat cheese", 1600],
+        ["Ensalada Pollo", "grilled chicken, leafy greens, persimmon, cucumber, quinoa, avocado, feta, pomegranate, cranberry vinaigrette", 2000],
+        ["Quesadilla", "squash blossom, huitlacoche, quesillo, green salsa macha, snow pea shoots, chile de arbol salsa, crema", 1400],
+        ["Queso Fundido", "chorizo con papas, queso oaxaca, roasted chile poblano, corn, salsa macha", 1800],
+        ["Sopa Ranchera", "chicken broth, carrot, zucchini, tomato, onion, jalapeño, corn, cabbage, seasonal rice", 1200],
+      ] },
+      { name: "Tacos", items: [
+        ["Puerco", "marinated pork, grilled piña, onion, cilantro, avocado salsa", 1400],
+        ["Pollo", "dry rubbed, grilled chicken, roasted jalapeño salsa, charred red onion", 1400],
+        ["Jardin", "panko-crusted chayote, chile serrano aioli, shredded cabbage and carrots", 1400],
+        ["Pescado", "grilled, achiote fish, cucumber pico de gallo, chile morita aioli, habanero-pickled red onion", 1500],
+        ["Asada", "grilled sirloin steak, chile dulce, red onion, queso frito, salsa tatemada", 1500],
+        ["Barbacoa", "slow-braised goat, chile morita salsa, onion, adobo tortilla, side of consume", 1400],
+        ["Chef", "seasonal taco", 1400],
+      ] },
+      { name: "Tortas", items: [
+        ["Portrero", "10hr braised beef lengua, queso oaxaca, red cabbage, jalapeno pickled carrots, garlic aioli", 2400],
+        ["SOMA", "panko breaded chicken breast, avocado, pickled veggies, house slaw, miso-habanero salsa, quesillo", 2200],
+        ["South Beach", "beer battered shrimp, spicy slaw, chipotle aioli, queso frito", 2400],
+        ["Yerba Buena", "egg-battered, chile poblano filled with queso oaxaca, cabbage escabeche, charred chile-refried beans, crema", 2200],
+      ] },
+      { name: "Mains", items: [
+        ["Enchiladas", "duck carnitas, salsa epazote, pickled red onion, crema, queso fresco", 3000],
+        ["Chz Enchiladas", "", 2600],
+        ["Veg Enchiladas", "", 2600],
+        ["Nogada", "chile poblano filled with picadillo, seasonal fruit, pine nuts, nogada sauce, queso fresco, pomegranate", 3000],
+        ["Poc Chuc", "citrus marinated, pork, charred red onion, grilled tomato salsa, cabbage, avocado, radish, refried beans", 2800],
+        ["Tamal", "house mole almendrado, queso panela, queso oaxaca, pickled onion, crema, seasonal rice", 2000],
+        ["Pollo con Mole", "overnight-brined, roasted chicken, mole almendrado, seasonal rice, toasted almonds. Half $28, full $50.", 2800],
+      ] },
+      { name: "Sides", items: [
+        ["Arroz", "seasonal rice", 600],
+        ["Frijoles", "seasonal beans", 600],
+        ["Combo", "seasonal arroz y frijoles", 600],
+        ["Coliflor", "grilled cauliflower, preserved lemon aioli, green salsa macha", 1200],
+        ["Crema", "", 100],
+        ["Elote", "grilled, whole corn, cotija cheese, salsa macha", 1000],
+        ["Escabeche", "housemade, pickled seasonal veggies", 1000],
+        ["Platanos", "plantain arancini with goat cheese and served with crema", 1200],
+        ["Repollo", "grilled cabbage, salsa nogada, spiced pepitas, chimichurri", 1200],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      GOLDEN BAY DETAILING, "BEASTY • Automotive". Glenn, 2026-10-14, with their site and
+      Instagram (@golden_bay_detailing). Mobile: no address, they come to you across San
+      Francisco, the Peninsula and Marin. Phone, email, daily 8am-8pm hours and every
+      package with its starting price from goldenbaydetailing.com (sedan prices; SUV in the
+      line). Multi-stage paint correction is from $799 on its own page and from $1,199 in
+      their pricing table; the page shows $799. The fall offer (free glass coating, book by
+      Oct 31) was only in Glenn's screenshot, so it is in this note, not on the page. BEASTY
+      • Automotive seats it by its type line.
+    */
+    slug: "golden-bay-detailing",
+    icon: "golden-bay-detailing",
+    name: "Golden Bay Detailing",
+    label: "Golden Bay",
+    cuisine: "Mobile auto detailing",
+    tagline: "Mobile detailing, paint correction and ceramic coatings across SF, the Peninsula and Marin.",
+    color: "#0B0B0B|#F2C230",
+    prep: 0,
+    category: "Auto detailing",
+    phone: "(415) 483-5686",
+    email: "hello@goldenbaydetailing.com",
+    hours: "Daily 8am-8pm",
+    site: "https://goldenbaydetailing.com/",
+    orderUrl: "https://goldenbaydetailing.com/book",
+    quoteOnly: "Starting prices from their own site. They come to you; book on their site or text them for an exact quote.",
+    sections: [
+      { name: "Full Detail Packages", items: [
+        ["Mini Detail", "Standard interior + exterior: pH-neutral foam hand wash, clay bar, interior vacuum & wipe-down, tire & trim, windows inside & out, UV protectant. SUV $299.", 24900, null, "from $249"],
+        ["Full Detail", "Deep interior + exterior: everything in the Mini Detail plus hot-water steam extraction, leather conditioning or fabric shampoo, single-stage paint enhancement, wheel decontamination, glass polish (~4-5 hrs). SUV $449.", 39900, null, "from $399"],
+        ["Maintenance Detail", "Monthly upkeep for existing customers after a first Mini or Full Detail: hand wash, wheels + tire dressing, quick interior vacuum, glass. SUV $199.", 14900, null, "from $149"],
+      ] },
+      { name: "Signature Detail", items: [
+        ["The Signature Detail", "Deep interior detail, wash + clay bar + machine wax (up to 1-year protection) and a free window ceramic coating; $849 value.", 59900],
+      ] },
+      { name: "Interior Packages", items: [
+        ["Deep Interior Clean", "Shampoo + steam, stain & odor treatment, leather conditioning, ~3-4 hrs. SUV $299.", 24900, null, "from $249"],
+      ] },
+      { name: "Exterior Packages", items: [
+        ["Exterior Detail", "Foam pre-wash + two-bucket hand wash, wheel + tire deep clean, spray sealant, door jambs + trim dressed. SUV $199.", 14900, null, "from $149"],
+        ["Clay & Machine Wax", "Everything in the Exterior Detail plus clay bar decontamination and a single-pass machine wax. SUV $349.", 29900, null, "from $299"],
+        ["1-Step Paint Enhancement", "Single-stage machine polish for swirls and light scratches; wash + decontamination included. SUV $599.", 39900, null, "from $399"],
+        ["Clay Add-On", "Clay bar + iron-fallout removal added to the Exterior Detail.", 9900, null, "add $99"],
+      ] },
+      { name: "Paint Correction Packages", items: [
+        ["1-Step Correction", "Removes 50-70% of defects; best for light to moderate swirls. SUV from $599.", 39900, null, "from $399"],
+        ["Multi-Stage Correction", "Removes 80-95% of defects; showroom finish for heavily neglected paint.", 79900, null, "from $799"],
+      ] },
+      { name: "Ceramic Coating Packages", items: [
+        ["2-3 Year Ceramic", "System X or Gyeon, 1-step paint correction included, written care guide. SUVs & trucks add $200.", 79900, null, "from $799"],
+        ["5-Year Graphene (Adam's)", "Adam's Graphene Advanced with a 5-year written warranty, 1-step correction included, 4-6 hr install. $1,199 for SUVs & trucks.", 99900, null, "from $999"],
+        ["6-Year System X Pro+", "1-step correction, 6-year manufacturer warranty registered to your vehicle, wheel-face coating. SUVs & trucks add $200.", 149900, null, "from $1,499"],
+        ["System X Max", "Flagship System X tier: multi-step correction available, optional 2 coating layers + caliper coating. SUVs & trucks add $200.", 249900, null, "from $2,499"],
+      ] },
+      { name: "More Services", items: [
+        ["Headlight Restoration", "Restores cloudy headlights for most vehicles; best value bundled with an exterior detail.", 7900, null, "$79-$119"],
+        ["Lease Return Full Detail", "Deep interior + exterior detail before turn-in; add-ons for scuffs and odors. SUV $449.", 39900, null, "from $399"],
+        ["Burning Man Detail (cars & SUVs)", "Post-playa deep clean: steam, shampoo extraction, exterior wash and underbody rinse.", 79900, null, "from $799"],
+        ["Burning Man Detail (RVs)", "Class B camper van from $1,300, Class C from $1,500, Class A motorhome from $2,000.", 130000, null, "from $1,300"],
+      ] },
+      { name: "RV Detailing", items: [
+        ["RV Wash & Wax", "Road film, bugs and black streaks off, 2-4 hrs. Camper van from $299, Class C $399, Class A/fifth wheel 30-37 ft from $499, diesel pusher 38 ft+ from $649.", 29900, null, "from $299"],
+        ["RV Polish & Protect", "Yearly polish that keeps oxidation from starting; 6-12 months of protection. Class C fixed price; other classes priced by size.", 99900],
+        ["RV Oxidation Removal", "Chalky, faded gelcoat restored to gloss + 6-12 months of wax, 1-2 days. Class C fixed price.", 149900],
+        ["RV Restore + 5-Year Ceramic", "Full restoration then sealed in ceramic for up to 5 years, 2-3 days. Class C fixed price.", 279900],
+      ] },
+    ],
+    items: [],
+  },
+  {
+    /*
+      ENDLESS SUMMER SWEETS, "BEASTY • Sweets / BEASTY • Food Truck". Glenn, 2026-10-14,
+      with their site and Instagram (@endless_summer_sweets_) and @livingvivalakillah's reel
+      ("Clip this video plz", "Foodie"). Carnival food in Berkeley and a trailer they book
+      for events. Address, phone and email from their site; the menu with prices from the
+      menu boards on their site and the catering packages from their catering sheets (their
+      order.online page sat behind a bot check and was not read). No hours: the site says
+      daily 12-10pm, Instagram Wed-Sun 12-10pm. Seated by hand on Food Trucks and on Sweets
+      (the Milkshakes spot).
+    */
+    slug: "endless-summer-sweets",
+    icon: "endless-summer-sweets",
+    name: "Endless Summer Sweets",
+    label: "Endless Summer",
+    cuisine: "Carnival treats & fair food",
+    tagline: "Funnel cakes, corn dogs, caramel apples and milkshakes: the fair, every day, on Shattuck Avenue.",
+    color: "#E8A3C3|#1D1D1D",
+    prep: 0,
+    category: "Dessert",
+    address: "2358 Shattuck Ave, Berkeley, CA 94704",
+    phone: "(510) 356-4154",
+    email: "Info@EndlessSummerSweets.com",
+    site: "https://www.endlesssummersweets.com/",
+    orderUrl: "https://order.online/store/~53254/?hideModal=true",
+    menuNote: "Prices from the menu boards on their own site; their online ordering page may differ. Their trailer is booked for events through their catering page.",
+    clip: {
+      src: '/clips/endless-summer-sweets.mp4',
+      poster: '/clips/endless-summer-sweets-poster.webp',
+      href: 'https://www.instagram.com/reel/DecS6_ghYNK/',
+      credit: "Filmed by @livingvivalakillah",
+      platform: 'Instagram',
+      by: 'livingvivalakillah',
+    },
+    sections: [
+      { name: "Pick Your Dog, Pick Your Style", items: [
+        ["Hand-Dipped Corn Dog", "Choose your meat: all beef, chicken apple, Louisiana hot link, mild link, or cheese on a stick (corn dog only). Add Hot Cheetos to corn dog $2.", 699],
+        ["Grilled Hot Dog", "On King Hawaiian bread w/ shredded cheddar cheese, grilled bell peppers & caramelized onions. Add bacon 1.50 and/or nacho cheese 2.00.", 799],
+      ] },
+      { name: "Combo Meal", items: [
+        ["Corn Dog Combo", "Fresh-cut fries & can drink/water. Upgrades available.", 1500],
+        ["Grilled Hot Dog Combo", "Fresh-cut fries & can drink/water. Upgrades available.", 1600],
+      ] },
+      { name: "Chicken", items: [
+        ["Chicken Tender", "Crispy, hand breaded chicken made to order served with a side of house-made ranch and secret sauce.", 900],
+        ["Chicken Tender Combo Meal", "Fresh-cut fries & can drink/water. Upgrades available.", 1400],
+        ["Chicken Sandwich", "Crispy chicken, Hawaiian bread topped off w/ American cheese, & caramelized onions, mayo and secret sauce.", 1000],
+        ["Chicken Sandwich Combo Meal", "Fresh-cut fries & can drink/water. Upgrades available.", 1600],
+      ] },
+      { name: "Sides & Snacks", items: [
+        ["Fresh Cut Fries", "Fresh cut Kennebec potatoes.", 800],
+        ["Curly Seasoned Fries", "", 1000],
+        ["Nacho Cheese Fries", "", 1000],
+        ["Bacon Cheese Fries", "", 1200],
+        ["Garlic Fries", "Topped w/ fresh garlic & parsley made in olive oil and canola oil. Add shredded cheese +1.50.", 1200],
+        ["Hot Cheetos Nacho Cheese Fries", "", 1200],
+      ] },
+      { name: "Corn", items: [
+        ["Basic Corn on the Cob", "Butter, mayo and cotija cheese.", 600],
+        ["Basic Corn in a Cup", "", 700],
+        ["Hot Cheetos on the Cob", "Butter, mayo, cotija cheese & Hot Cheetos.", 700],
+        ["Hot Cheetos in a Cup", "", 800],
+      ] },
+      { name: "Kids Meal", items: [
+        ["Kids Meal", "Turkey hot dog or corn dog, fries, and apple juice.", 850],
+      ] },
+      { name: "Popcorn", items: [
+        ["Popcorn", "Kettle corn, caramel corn, cheddar, Berkeley mix (caramel w/ cheddar).", 499, null, "$4.99-$26.99"],
+      ] },
+      { name: "Deep Fried Oreo", items: [
+        ["Deep Fried Oreo", "Single deep fried Oreo w/ powdered sugar.", 200],
+        ["Deep Fried Oreo Sundae", "4 Oreos, 1 scoop of vanilla ice cream, homemade whipped cream, & Ghirardelli chocolate. Add strawberries, 2.00.", 1275],
+      ] },
+      { name: "Churro", items: [
+        ["Churros", "", 800, null, "3 for $8"],
+        ["Filled Churros", "Caramel, strawberry or vanilla.", 800, null, "2 for $8"],
+        ["Churro w/ Soft Serve", "Vanilla soft serve in cup, 1 churro & choice of fresh strawberries, Fruity Pebbles, or Oreos. Upgrade to Flavor Burst soft serve for 1.00.", 1000],
+        ["Churro Parfait", "Layers of churro pieces, fresh strawberries, homemade whipped cream, & Ghirardelli caramel.", 1100],
+      ] },
+      { name: "Soft Serve", items: [
+        ["Vanilla Soft Serve", "Cup 9oz $5, cake cone $6, waffle cone $9.", 500],
+        ["Flavor Burst Soft Serve", "Cup 9oz $6, cake cone $7, waffle cone $9. Blue goo, birthday cake, butterscotch, butter pecan, caramel, chocolate, pistachio, strawberry; multiple flavors 1.00 each.", 600],
+      ] },
+      { name: "Caramel Apples", items: [
+        ["Plain Caramel Apple", "", 800],
+        ["Peanut Caramel Apple", "", 900],
+        ["Pecan Caramel Apple", "", 1000],
+        ["Fruity Pebbles Caramel Apple", "Granny Smith apple dipped in caramel and rolled in Fruity Pebbles.", 1050],
+        ["Cheesecake Caramel Apple", "Granny Smith apple, dipped in caramel, white chocolate & graham crackers.", 1050],
+        ["Strawberry Cheesecake Caramel Apple", "Granny Smith apple, dipped in caramel, white chocolate & strawberry crunch.", 1100],
+        ["Oreo Caramel Apple", "Granny Smith apple, dipped in caramel, white chocolate & Oreo crumbs.", 1100],
+      ] },
+      { name: "Banana Split", items: [
+        ["Banana Split", "3 scoops of ice cream - vanilla, chocolate, and strawberry, fresh banana, homemade whipped cream, topped w/ peanuts, & drizzled in Ghirardelli chocolate.", 1200],
+      ] },
+      { name: "Funnel Cake", items: [
+        ["Powdered Sugar Funnel Cake", "Mini $6.50, regular $11.", 650],
+        ["Cinnamon Sugar Funnel Cake", "Mini $6.50, regular $11.", 650],
+        ["Bananas Funnel Cake", "Powdered sugar, fresh bananas, homemade whipped cream, drizzled in Ghirardelli chocolate. Mini $8.50, regular $15.", 850],
+        ["Caramelized Apples Funnel Cake", "Powdered sugar, house made caramelized apples topped w/ homemade whipped cream. Mini $8.50, regular $15.", 850],
+        ["Caramelized Bananas Funnel Cake", "Powdered sugar, caramelized bananas topped w/ homemade whipped cream. Mini $8.50, regular $15.", 850],
+        ["Fresh Strawberries Funnel Cake", "Powdered sugar, fresh strawberries, topped w/ homemade whipped cream. Mini $8.50, regular $15.", 850],
+        ["Fruity Pebbles Funnel Cake", "Powdered sugar, topped w/ homemade whipped cream & sprinkled in Fruity Pebbles. Mini $8.50, regular $15.", 850],
+        ["Oreo Funnel Cake", "Powdered sugar, topped w/ homemade whipped cream & fresh Oreos. Mini $8.50, regular $15.", 850],
+        ["Pecans Funnel Cake", "Powdered sugar, homemade whipped cream, topped w/ pecans & drizzled in Ghirardelli caramel. Mini $8.50, regular $15.", 850],
+      ] },
+      { name: "Milkshakes", items: [
+        ["Vanilla Milkshake", "", 799],
+        ["Chocolate Milkshake", "", 799],
+        ["Strawberry Milkshake", "", 799],
+        ["Oreo Milkshake", "", 1000],
+        ["Banana Milkshake", "", 1000],
+        ["Vanilla w/ Ghirardelli Caramel Milkshake", "", 1000],
+        ["Vanilla w/ Ghirardelli Chocolate Milkshake", "", 1000],
+        ["Fruity Pebbles Milkshake", "", 1000],
+        ["Chocolate & Banana Milkshake", "", 1000],
+        ["Strawberry & Banana Milkshake", "", 1100],
+      ] },
+      { name: "Extreme Sweetz Affair", items: [
+        ["Extreme Strawberry Funnel Cake Topped w/ 4 Deep Fried Oreos", "Regular size strawberry funnel cake towered w/ 4 deep fried Oreos.", 2300],
+        ["Extreme Fruity Pebble Funnel Cake Topped Off w/ a Fruity Pebble Caramel Apple", "Regular size Fruity Pebble funnel cake, vanilla ice cream, homemade whipped cream & a Fruity Pebble caramel apple.", 2600],
+      ] },
+      { name: "Beverages", items: [
+        ["Can Drink/Water", "", 250],
+        ["Snapple", "", 350],
+        ["Gatorade", "", 350],
+        ["Apple Juice", "", 350],
+        ["Fresh Squeezed Lemonade", "", 550],
+        ["Fresh Squeezed Strawberry Lemonade", "", 650],
+      ] },
+      { name: "Cotton Candy", items: [
+        ["Cotton Candy", "", 499],
+      ] },
+      { name: "Catering Packages", items: [
+        ["Classic Carnival Package", "Per guest: hand-dipped corn dog (up to 2 options), fresh-cut fries with house sauces, fresh-squeezed lemonade and a mini funnel cake. 45-guest minimum plus service charge. Add strawberry lemonade $1/person, vanilla ice cream $2.75/person.", 2500, null, "$25 per person"],
+        ["Grilled Carnival Package", "Per guest: grilled hot dog on King's Hawaiian bread with the fixings, fresh-cut fries, fresh-squeezed lemonade and a mini funnel cake. Mobile Food Trailer only. 45-guest minimum plus service charge.", 2600, null, "$26 per person"],
+        ["Sweet Carnival Package", "Mix and match funnel cakes $8.50, churros $2.75, deep-fried Oreos $2, cotton candy $4.50 and popcorn $4.99 each. Plus service charge.", 100000, null, "$1,000 food minimum"],
+        ["Caramel Apple Favor Pack", "10 assorted caramel apples.", 9900],
+        ["Popcorn Party Favor Pack", "10 pre-packaged popcorn bags.", 5000],
+      ] },
+    ],
+    items: [],
+  },
 ]

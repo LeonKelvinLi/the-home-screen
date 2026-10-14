@@ -96,7 +96,7 @@ export const OTHER_REVIEWS: OtherReview[] = [
   { by: 'thesauceboss_', place: 'Deli Board', city: 'San Francisco', brand: 'b_deliboard', reel: reel('DdVGXn4NxbO'), clip: true },
   { by: 'hella._local.mo', place: 'The Burger Spot Co.', city: 'Richmond', brand: 'b_theburgerspotco', reel: reel('Ddo0xf9MplM'), clip: true },
   { by: 'thesnobbiefoodie', place: 'Mensho', city: 'Walnut Creek', reel: reel('DY6Qf_qJdQV') },
-  { by: 'wthellydanyelly', place: 'Romana Pizzeria', city: 'Danville', reel: reel('Dd4StNkNAA1') },
+  { by: 'wthellydanyelly', place: 'Romana Pizzeria', city: 'Danville', brand: 'b_romanapizzeria', reel: reel('Dd4StNkNAA1') },
   { by: 'katfoodsf', place: 'Butter & Crumble', city: 'San Francisco', reel: reel('C1z-YxlvO12') },
   { by: 'charlikestoeat', place: 'Sergeant Ma', city: 'San Francisco', reel: reel('DdIMBHKPfj_') },
   { by: 'imadoniseats', place: 'Capo’s', city: 'San Francisco', reel: reel('Dcg3Bl_B0iX') },

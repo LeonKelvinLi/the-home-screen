@@ -250,6 +250,10 @@ the most movement — to 540x960 with sound.
 | `sweet-pipers.mp4` | Sweet Pipers, Pinole | instagram.com/reel/DecMBslTErN — **an excerpt**, 5s–19s of 82s; posted by @chris.corpz, a food creator — sent on 2026-10-13 with "Clip this video plz" |
 | `katsu-burger.mp4` | Katsu Burger, Santa Clara | instagram.com/reel/DeIconCRmx- — **an excerpt**, 0s–14s of 89s; posted by @grubwitmike, a food creator — sent on 2026-10-13 with "Clip this video plz" |
 | `soh-pizza.mp4` | Slice of Homage Pizza, Sunnyvale | instagram.com/reel/DecUOyRzdMQ — **an excerpt**, 0s–14s of 19s; their own post — sent on 2026-10-13 with "Clip this video plz" |
+| `romana-pizzeria.mp4` | Romana Pizzeria, Danville | instagram.com/reel/DbgPHc4p_SJ — **an excerpt**, 0s–14s of 51s; posted by @alexytravels (Alexy), a food creator — sent on 2026-10-13 with "Clip this video plz", "Foodie" |
+| `tono-coffee-project.mp4` | tōno coffee project, San Jose | instagram.com/reel/DecpsH_yJHC — **an excerpt**, 0s–14s of 58s; posted by @andygravs (Andrew), a food creator — sent on 2026-10-13 with "Clip this video plz" |
+| `addis-oakland.mp4` | Addis Restaurant, Oakland | instagram.com/reel/DedHA3BRwqh — **an excerpt**, 12s–26s of 87s; posted by @grubwitmike, a food creator — sent on 2026-10-13 with "Clip this video plz" |
+| `endless-summer-sweets.mp4` | Endless Summer Sweets, Berkeley (BEASTY • Sweets, Food Trucks) | instagram.com/reel/DecS6_ghYNK — **an excerpt**, 0s–14s of 20s; posted by @livingvivalakillah (Krissy), a food creator — sent on 2026-10-14 with "Clip this video plz", "Foodie" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**
