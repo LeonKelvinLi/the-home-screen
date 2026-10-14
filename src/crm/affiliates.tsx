@@ -13,13 +13,14 @@
   when payouts are on, which shows only its yes/no answers and the last four
   digits of the account).
 */
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { FormEvent, ReactNode } from 'react'
 import { api } from './api'
 import { Avatar, dateTime, Empty, Failure, Loading, PageTitle, Section, ago, personName, plural, useApi, useCrm } from './ui'
 import { Icon } from './icons'
 
-type Mode = 'off' | 'mock' | 'live'
+type EmailStatus = 'accepted' | 'failed' | 'not_configured'
+type Mode = 'off' | 'mock' | 'live' | 'manual'
 type Status = 'in_progress' | 'submitted' | 'changes_requested' | 'approved' | 'rejected' | 'suspended'
 
 interface AppRow {
@@ -62,7 +63,7 @@ interface Detail {
   steps: {
     profile: { complete: boolean; problems: Record<string, string> }
     payouts: { available: boolean; started: boolean; complete: boolean; identity: string; tax: string; bank: string; bankLast4: string | null }
-    agreement: { available: boolean; status: string; affiliateSigned: boolean; countersigned: boolean; completedAt: number | null }
+    agreement: { available: boolean; mode: Mode; status: string; affiliateSigned: boolean; countersigned: boolean; completedAt: number | null }
   }
   submittedAt: number | null
   decidedAt: number | null
@@ -73,6 +74,16 @@ interface Detail {
   payoutState: { detailsSubmitted: boolean; payoutsEnabled: boolean; due: string[] } | null
   events: { actor: string; kind: string; detail: Record<string, unknown>; created_at: number }[]
   countersignAvailable: boolean
+  manualPacket: {
+    revision: number
+    submissionUrl: string
+    affiliateUrl: string
+    companyUrl: string
+    approvedTemplateUrl: string | null
+    verifiedBy: string | null
+    checkedAt: number | null
+    evidence: Partial<Record<'affiliateSigned' | 'companySigned' | 'taxComplete' | 'bankComplete' | 'idUploaded' | 'auditReviewed', boolean>>
+  } | null
 }
 
 const STATUS: Record<Status, { label: string; tone: string }> = {
@@ -96,6 +107,8 @@ const FILTERS: [Status | '', string][] = [
 
 const AGREEMENT: Record<string, string> = {
   not_started: 'Not sent yet',
+  requested: 'Prepare their DocuSeal packet',
+  pending_review: 'They reported completion; check DocuSeal',
   pending_signature: 'Waiting for their signature',
   pending_countersignature: 'Signed by them, needs yours',
   completed: 'Signed by both',
@@ -116,6 +129,10 @@ const EVENT: Record<string, string> = {
   agreement_countersigned: 'Agreement countersigned',
   agreement_declined: 'Declined the agreement',
   agreement_expired: 'Agreement expired',
+  packet_requested: 'Requested their forms',
+  packet_linked: 'DocuSeal request attached by the admin',
+  packet_review_requested: 'Reported finishing; requested a DocuSeal review',
+  packet_verified: 'Packet checked in DocuSeal by the admin',
   submitted: 'Sent it in for review',
   resubmitted: 'Sent it in again',
   approved: 'Approved',
@@ -136,7 +153,7 @@ function progressLine(a: AppRow, payoutsOn: boolean) {
   const parts = [
     a.profileComplete ? 'Details done' : 'Details not finished',
     payoutsOn && (a.payouts === 'complete' ? 'payouts set up' : a.payouts === 'started' ? 'payouts started' : 'no payouts yet'),
-    a.agreement === 'completed' ? 'agreement signed by both' : a.agreement === 'pending_countersignature' ? 'agreement needs your signature' : a.agreement === 'pending_signature' ? 'agreement not signed' : 'no agreement yet',
+    a.agreement === 'requested' ? 'forms requested' : a.agreement === 'pending_review' ? 'packet needs your review' : a.agreement === 'completed' ? 'agreement signed by both' : a.agreement === 'pending_countersignature' ? 'agreement needs your signature' : a.agreement === 'pending_signature' ? 'agreement not signed' : 'no agreement yet',
   ].filter(Boolean)
   return parts.join(', ')
 }
@@ -144,6 +161,7 @@ function progressLine(a: AppRow, payoutsOn: boolean) {
 function ProviderNote({ providers }: { providers: ListData['providers'] }) {
   if (providers.payouts === 'mock' || providers.signing === 'mock')
     return <p className="crm-aff-notice is-test">Test mode. Payouts and signing are pretend here, so nobody is paid and nothing is legally signed.</p>
+  if (providers.signing === 'manual') return <p className="crm-aff-notice">Free DocuSeal handoff: create each applicant’s packet in DocuSeal, attach their private signing link here, then check the documents and signatures before approval.</p>
   const off: string[] = []
   /* Payouts off is the plan for now, not something waiting: Glenn pays from the forms. */
   if (providers.signing === 'off') off.push('the forms and agreement open once the DocuSeal packet is set up')
@@ -161,11 +179,11 @@ async function copy(text: string) {
 }
 
 /** The link a new invite makes, ready to text or paste. */
-function LinkBox({ link, onDone }: { link: string; onDone: () => void }) {
+function LinkBox({ link, emailStatus, onDone }: { link: string; emailStatus?: EmailStatus; onDone: () => void }) {
   const [copied, setCopied] = useState(false)
   return (
     <div className="crm-aff-link" role="status">
-      <strong>Invite ready. We emailed it too.</strong>
+      <strong>{emailStatus === 'accepted' ? 'Invite ready. Email accepted for delivery.' : 'Invite ready. Email was not sent; copy the link below.'}</strong>
       <span className="crm-aff-link-url">{link}</span>
       <div className="crm-aff-actions">
         <button type="button" className="crm-btn is-dark" onClick={async () => setCopied(await copy(link))}>
@@ -188,13 +206,15 @@ function InviteForm({ onSent }: { onSent: () => void }) {
   const [busy, setBusy] = useState(false)
   const [err, setErr] = useState<string | null>(null)
   const [link, setLink] = useState<string | null>(null)
+  const [emailStatus, setEmailStatus] = useState<EmailStatus>()
   const submit = async (e: FormEvent) => {
     e.preventDefault()
     setBusy(true)
     setErr(null)
     try {
-      const r = await api<{ link: string }>('/api/crm/onboarding/invites', { method: 'POST', body: { name, email, note } })
+      const r = await api<{ link: string; emailStatus: EmailStatus }>('/api/crm/onboarding/invites', { method: 'POST', body: { name, email, note } })
       setLink(r.link)
+      setEmailStatus(r.emailStatus)
       setName('')
       setEmail('')
       setNote('')
@@ -205,7 +225,7 @@ function InviteForm({ onSent }: { onSent: () => void }) {
       setBusy(false)
     }
   }
-  if (link) return <LinkBox link={link} onDone={() => setLink(null)} />
+  if (link) return <LinkBox link={link} emailStatus={emailStatus} onDone={() => setLink(null)} />
   return (
     <form className="crm-panel crm-aff-invite" onSubmit={submit}>
       <div className="crm-form">
@@ -232,7 +252,7 @@ function InviteForm({ onSent }: { onSent: () => void }) {
 }
 
 function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: boolean; reload: () => void }) {
-  const [fresh, setFresh] = useState<{ id: string; link: string } | null>(null)
+  const [fresh, setFresh] = useState<{ id: string; link: string; emailStatus?: EmailStatus } | null>(null)
   const [err, setErr] = useState<string | null>(null)
   const open = invites.filter((i) => i.state !== 'redeemed')
   if (!open.length) return null
@@ -240,8 +260,8 @@ function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: b
     if (what === 'revoke' && !window.confirm(`Cancel the invite for ${i.email}? Their link stops working.`)) return
     setErr(null)
     try {
-      const r = await api<{ link?: string }>(`/api/crm/onboarding/invites/${i.id}/${what}`, { method: 'POST' })
-      if (r.link) setFresh({ id: i.id, link: r.link })
+      const r = await api<{ link?: string; emailStatus?: EmailStatus }>(`/api/crm/onboarding/invites/${i.id}/${what}`, { method: 'POST' })
+      if (r.link) setFresh({ id: i.id, link: r.link, emailStatus: r.emailStatus })
       reload()
     } catch (e) {
       setErr((e as Error).message)
@@ -259,8 +279,8 @@ function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: b
                 <strong>{i.name || i.email}</strong>
                 <span>{i.name ? i.email : ''}</span>
                 <span className="crm-row-meta">
-                  {i.state === 'open' ? `Sent ${ago(i.created_at)}, works until ${dateTime(i.expires_at)}` : i.state === 'expired' ? 'Expired' : 'Cancelled'}
-                  {i.sent_count > 1 ? `, sent ${i.sent_count} times` : ''}
+                  {i.state === 'open' ? `Created ${ago(i.created_at)}, works until ${dateTime(i.expires_at)}` : i.state === 'expired' ? 'Expired' : 'Cancelled'}
+                  {i.sent_count > 1 ? `, link renewed ${i.sent_count - 1} times` : ''}
                 </span>
               </span>
               {admin && (
@@ -278,7 +298,7 @@ function InviteList({ invites, admin, reload }: { invites: InviteRow[]; admin: b
             </div>
             {fresh?.id === i.id && (
               <div className="crm-aff-inline">
-                <LinkBox link={fresh.link} onDone={() => setFresh(null)} />
+                <LinkBox link={fresh.link} emailStatus={fresh.emailStatus} onDone={() => setFresh(null)} />
               </div>
             )}
           </li>
@@ -383,6 +403,79 @@ function StepRow({ done, title, children }: { done: boolean; title: string; chil
 }
 
 const CHECK: Record<string, string> = { complete: 'Done', pending: 'Stripe is checking', needed: 'Not yet' }
+
+const REVIEW_CHECKS = [
+  ['affiliateSigned', 'The affiliate signed their own fields'],
+  ['taxComplete', 'The W-9 is completed and signed'],
+  ['bankComplete', 'The bank authorization is completed and signed'],
+  ['idUploaded', 'The required ID image is uploaded and legible'],
+  ['auditReviewed', 'The DocuSeal audit trail matches this applicant and request'],
+  ['companySigned', 'BEASTY has countersigned (check after signing in DocuSeal)'],
+] as const
+type ReviewKey = typeof REVIEW_CHECKS[number][0]
+
+function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<Detail['manualPacket']>; reload: () => void }) {
+  const [submissionUrl, setSubmissionUrl] = useState(packet.submissionUrl)
+  const [affiliateUrl, setAffiliateUrl] = useState(packet.affiliateUrl)
+  const [companyUrl, setCompanyUrl] = useState(packet.companyUrl)
+  const [confirmed, setConfirmed] = useState(false)
+  const [replaceVerified, setReplaceVerified] = useState(false)
+  const [checks, setChecks] = useState(packet.evidence)
+  const [busy, setBusy] = useState(false)
+  const [error, setError] = useState('')
+  const [notice, setNotice] = useState('')
+  const closed = ['approved', 'rejected', 'suspended'].includes(d.status)
+  useEffect(() => {
+    setSubmissionUrl(packet.submissionUrl); setAffiliateUrl(packet.affiliateUrl); setCompanyUrl(packet.companyUrl)
+    setConfirmed(false); setReplaceVerified(false); setChecks(packet.evidence)
+  }, [packet.revision, packet.submissionUrl, packet.affiliateUrl, packet.companyUrl, packet.evidence])
+
+  const save = async (path: string, body: Record<string, unknown>) => {
+    setBusy(true); setError(''); setNotice('')
+    try {
+      const r = await api<{ emailStatus?: EmailStatus }>(`/api/crm/onboarding/${d.id}${path}`, { method: 'POST', body: { ...body, revision: packet.revision } })
+      setNotice(r.emailStatus === 'accepted' ? 'Saved. Notification email accepted for delivery.' : r.emailStatus ? 'Saved. Email was not sent; the applicant can still open their dashboard.' : 'Saved.')
+      reload()
+    } catch (e) {
+      setError((e as Error).message)
+    } finally { setBusy(false) }
+  }
+
+  return <Section title="DocuSeal packet">
+    <div className="crm-aff-manual">
+      <p className="crm-note">DocuSeal stores the documents. This record shows what an admin has checked; it does not automatically detect signatures.</p>
+      {!packet.approvedTemplateUrl ? <p className="crm-aff-notice">The agreement needs Glenn and Leon’s approved terms. Signing links stay locked until the approved template is configured.</p> : (
+        <>
+          <a className="crm-btn" href={packet.approvedTemplateUrl} target="_blank" rel="noopener noreferrer">Open approved template in DocuSeal</a>
+          {!closed && <form className="crm-aff-manual" onSubmit={(e) => {
+            e.preventDefault()
+            void save('/packet', { submissionUrl, affiliateUrl, companyUrl, templateVersion: packet.approvedTemplateUrl!.split('/').pop(), termsApproved: confirmed, recipientConfirmed: confirmed, replaceVerified })
+          }}>
+            <p className="crm-note">Create a separate request for <strong>{String(d.profile.legalFirst || '')} {String(d.profile.legalLast || '')}</strong>, <strong>{String(d.profile.email || '')}</strong>. Use Affiliate and BEASTY roles, with separate signing links. Copy the request dashboard URL and each signer’s private link below.</p>
+            <label className="crm-field"><span>DocuSeal request dashboard URL</span><input type="url" required value={submissionUrl} onChange={e=>setSubmissionUrl(e.target.value)} placeholder="https://docuseal.com/submissions/…" /></label>
+            <label className="crm-field"><span>Affiliate’s private signing link</span><input type="url" required value={affiliateUrl} onChange={e=>setAffiliateUrl(e.target.value)} placeholder="https://docuseal.com/s/…" /></label>
+            <label className="crm-field"><span>BEASTY’s private signing link (optional)</span><input type="url" value={companyUrl} onChange={e=>setCompanyUrl(e.target.value)} placeholder="https://docuseal.com/s/…" /></label>
+            <label className="crm-aff-check"><input type="checkbox" checked={confirmed} onChange={e=>setConfirmed(e.target.checked)} /><span>I checked the approved terms, this applicant’s recipient details, both signer roles, and the W-9, bank and ID fields.</span></label>
+            {d.steps.agreement.affiliateSigned && <label className="crm-aff-check"><input type="checkbox" checked={replaceVerified} onChange={e=>setReplaceVerified(e.target.checked)} /><span>Replacing this packet requires new signatures and review before approval.</span></label>}
+            <button className="crm-btn is-dark" disabled={busy || !confirmed || !d.steps.profile.complete || (d.steps.agreement.affiliateSigned && !replaceVerified)}>{packet.submissionUrl ? 'Replace signing request' : 'Attach signing request'}</button>
+          </form>}
+        </>
+      )}
+      {packet.submissionUrl && <>
+        <a className="crm-btn" href={packet.submissionUrl} target="_blank" rel="noopener noreferrer">Open this request in DocuSeal</a>
+        <p className="crm-note">Check the documents and audit trail there before recording the review below. An ID upload alone does not verify someone’s identity.</p>
+        {REVIEW_CHECKS.map(([key,label])=><label className="crm-aff-check" key={key}>
+          <input type="checkbox" checked={!!checks[key]} disabled={closed || busy || (key==='companySigned' && !!packet.evidence.companySigned)} onChange={e=>setChecks({...checks,[key as ReviewKey]:e.target.checked})} />
+          <span>{label}</span>
+        </label>)}
+        {!closed && <button className="crm-btn is-dark" disabled={busy || REVIEW_CHECKS.slice(0,5).some(([k])=>!checks[k])} onClick={()=>void save('/packet/verify',{...checks,companySigned:!!checks.companySigned})}>Record DocuSeal review</button>}
+        {packet.checkedAt && <p className="crm-note is-quiet">Admin review recorded {dateTime(packet.checkedAt)}. {packet.evidence.companySigned ? 'Both signatures checked.' : 'BEASTY’s countersignature still needs checking.'}</p>}
+      </>}
+      {notice && <p className="crm-aff-notice" role="status">{notice}</p>}
+      {error && <p className="crm-error" role="alert">{error}</p>}
+    </div>
+  </Section>
+}
 
 function Decide({ d, reload }: { d: Detail; reload: () => void }) {
   const [note, setNote] = useState('')
@@ -590,6 +683,8 @@ export function AffiliateDetail({ id }: { id: string }) {
               <p className="crm-note is-quiet">{d.testMode ? 'Test mode: there is no real signed copy.' : 'The signed copy is in DocuSeal, with both signatures and its audit trail.'}</p>
             )}
           </Section>
+
+          {d.manualPacket && <ManualPacket d={d} packet={d.manualPacket} reload={reload} />}
 
           <Section title="Their details">
             {rows.length ? (

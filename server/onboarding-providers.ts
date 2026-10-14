@@ -27,6 +27,7 @@
 import { randomBytes } from 'node:crypto'
 
 export type ProviderMode = 'off' | 'mock' | 'live'
+export type SigningMode = ProviderMode | 'manual'
 
 /** Requirement-level view of a payout account. Nothing in here is sensitive. */
 export interface PayoutState {
@@ -55,7 +56,7 @@ export interface SigningState {
 
 export interface Providers {
   payouts: ProviderMode
-  signing: ProviderMode
+  signing: SigningMode
   /** Create (or reuse) the payout account and return the hosted onboarding link. */
   payoutLink(input: { accountRef: string | null; email: string; returnUrl: string; refreshUrl: string; business: boolean }): Promise<{ accountRef: string; url: string }>
   payoutState(accountRef: string): Promise<PayoutState>
@@ -66,11 +67,11 @@ export interface Providers {
 
 const env = (k: string) => (process.env[k] ?? '').trim()
 
-export function providerModes(prod: boolean): { payouts: ProviderMode; signing: ProviderMode; refusedMock: boolean } {
+export function providerModes(prod: boolean): { payouts: ProviderMode; signing: SigningMode; refusedMock: boolean } {
   const wantsMock = env('AFFILIATE_PROVIDERS') === 'mock'
   const mock = wantsMock && !prod
   const payouts: ProviderMode = mock ? 'mock' : env('AFFILIATE_PAYOUTS') === 'stripe' && env('STRIPE_SECRET_KEY') ? 'live' : 'off'
-  const signing: ProviderMode = mock ? 'mock' : env('DOCUSEAL_API_KEY') && env('DOCUSEAL_AFFILIATE_TEMPLATE_ID') ? 'live' : 'off'
+  const signing: SigningMode = mock ? 'mock' : env('AFFILIATE_SIGNING') === 'manual' ? 'manual' : env('DOCUSEAL_API_KEY') && env('DOCUSEAL_AFFILIATE_TEMPLATE_ID') ? 'live' : 'off'
   return { payouts, signing, refusedMock: wantsMock && prod }
 }
 
@@ -196,19 +197,19 @@ export function makeProviders(prod: boolean): Providers {
     },
 
     async createAgreement({ applicationId, name, email, returnUrl, prefill }) {
-      if (modes.signing === 'off') throw new ProviderOff('signing')
+      if (modes.signing === 'off' || modes.signing === 'manual') throw new ProviderOff('signing')
       if (modes.signing === 'mock') {
         const ref = `sub_test_${randomBytes(6).toString('hex')}`
         mockSubmissions.set(ref, { affiliate: false, company: false })
         return { submissionRef: ref, affiliateUrl: `${returnUrl.split('?')[0]}?mock=sign`, companyUrl: '' }
       }
       const templateId = Number(env('DOCUSEAL_AFFILIATE_TEMPLATE_ID'))
-      /* Only values for fields this template has. DocuSeal's docs don't say what it
-         does with a name it doesn't know, so none is sent; and if the template can't
-         be read, the packet opens empty rather than not at all. */
-      const names = await docuseal<{ fields?: { name?: string }[] }>('GET', `/templates/${templateId}`)
-        .then((t) => new Set((t.fields ?? []).map((f) => f.name ?? '')))
-        .catch(() => new Set<string>())
+      // Refuse a wrong or unreadable template instead of creating a partial packet.
+      const template = await docuseal<{ submitters?: { name: string; uuid: string }[]; fields?: { name: string; submitter_uuid: string }[] }>('GET', `/templates/${templateId}`)
+      const affiliate = template.submitters?.find((s) => s.name === AFFILIATE_ROLE())
+      const companyRole = template.submitters?.find((s) => s.name === COMPANY_ROLE())
+      if (!affiliate || !companyRole || affiliate.uuid === companyRole.uuid) throw new Error('docuseal template signer roles are not configured')
+      const names = new Set((template.fields ?? []).filter((f) => f.submitter_uuid === affiliate.uuid).map((f) => f.name))
       const values = Object.fromEntries(Object.entries(prefill).filter(([k, v]) => names.has(k) && v))
       const submitters = await docuseal<DsSubmitter[]>('POST', '/submissions', {
         template_id: templateId,
@@ -231,8 +232,9 @@ export function makeProviders(prod: boolean): Providers {
           },
         ],
       })
-      const mine = submitters.find((s) => s.role === AFFILIATE_ROLE()) ?? submitters[0]
+      const mine = submitters.find((s) => s.role === AFFILIATE_ROLE())
       const company = submitters.find((s) => s.role === COMPANY_ROLE())
+      if (!mine?.submission_id || !company || mine.submission_id !== company.submission_id || (!mine.embed_src && !mine.slug) || (!company.embed_src && !company.slug)) throw new Error('docuseal submission signer roles are not configured')
       return {
         submissionRef: String(mine.submission_id),
         affiliateUrl: mine.embed_src ?? `${docusealBase().replace('api.', '')}/s/${mine.slug}`,
@@ -252,7 +254,7 @@ export function makeProviders(prod: boolean): Providers {
           documentUrls: s?.affiliate && s?.company ? ['about:blank#test-agreement'] : [],
         }
       }
-      if (modes.signing === 'off') throw new ProviderOff('signing')
+      if (modes.signing === 'off' || modes.signing === 'manual') throw new ProviderOff('signing')
       const sub = await docuseal<DsSubmission>('GET', `/submissions/${encodeURIComponent(submissionRef)}`)
       const role = (r: string) => sub.submitters.find((s) => s.role === r)
       const aff = role(AFFILIATE_ROLE())

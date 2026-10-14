@@ -4115,6 +4115,32 @@ a.crm-row:hover,
   font-size: 15px;
   overflow-wrap: anywhere;
 }
+.crm-aff-manual {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+.crm-aff-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  cursor: pointer;
+  padding: 8px 0;
+}
+.crm-aff-check input {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: var(--ink);
+}
+.crm-aff-manual input[type="url"] {
+  min-width: 0;
+  width: 100%;
+}
 @media (max-width: 560px) {
   /* On a phone the status drops under the name, so the email gets the full width. */
   .crm-aff-row {

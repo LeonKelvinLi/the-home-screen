@@ -33,10 +33,12 @@
   profile holds contact details only.
 */
 import type { Express, Request, Response, NextFunction } from 'express'
+import type { EmailResult } from './email'
 import { createHash, randomBytes, timingSafeEqual } from 'node:crypto'
 import { db } from './db/schema'
 import { requireCrm, type CrmDeps } from './crm/auth'
 import { makeProviders, mockControls, providerModes, ProviderOff, type PayoutState, type Providers } from './onboarding-providers'
+import { approvedManualTemplate, docusealLink, manualEvidence, type ManualEvidence } from './onboarding-manual'
 
 
 /* ------------------------------------------------------------- profile ---- */
@@ -144,6 +146,11 @@ interface DocRow {
   checked_at: number | null
   created_at: number
   updated_at: number
+  submission_url: string
+  manual_revision: number
+  manual_evidence: Partial<ManualEvidence>
+  verified_by: string | null
+  review_requested_at: number | null
 }
 
 const newId = (p: string) => `${p}_${randomBytes(9).toString('base64url')}`
@@ -181,6 +188,9 @@ function stepsOf(app: AppRow, doc: DocRow | null, modes: { payouts: string; sign
     },
     agreement: {
       available: modes.signing !== 'off',
+      mode: modes.signing,
+      linkReady: !!doc?.affiliate_url,
+      reviewRequested: !!doc?.review_requested_at,
       status: doc?.status ?? 'not_started',
       affiliateSigned: signed,
       countersigned: !!doc?.company_signed_at,
@@ -197,7 +207,7 @@ export interface OnboardingDeps {
   origin(req: Request): string
   /** The public site's origin, for invite links made from the CRM's own address. */
   publicUrl: string
-  sendEmail(to: string | undefined, subject: string, text: string, replyTo?: string): Promise<void>
+  sendEmail(to: string | undefined, subject: string, text: string, replyTo?: string): Promise<EmailResult>
   leadEmail: string | undefined
   crm: CrmDeps
   prod: boolean
@@ -257,9 +267,9 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     }
   }
 
-  /** Ask DocuSeal how the agreement stands; the only source of "signed". */
+  /** API packets reconcile with DocuSeal; manual packets require admin review. */
   async function refreshDoc(doc: DocRow | null, force = false): Promise<DocRow | null> {
-    if (!doc || providers.signing === 'off' || doc.status === 'completed') return doc
+    if (!doc || doc.provider === 'manual' || providers.signing === 'off' || doc.status === 'completed') return doc
     if (!force && doc.checked_at && Date.now() - doc.checked_at < 30_000) return doc
     try {
       const st = await providers.signingState(doc.provider_ref)
@@ -295,6 +305,23 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     }
   }
 
+  async function requestManualPacket(a: AppRow, actor: string): Promise<{ doc: DocRow; created: boolean }> {
+    return db.transaction(async () => {
+      // The application lock also serializes request/attach/verify/approval.
+      await db.prepare('SELECT id FROM onboarding_applications WHERE id = ? FOR UPDATE').get(a.id)
+      const existing = await latestDoc(a.id)
+      if (existing) return { doc: existing, created: false }
+      const now = Date.now()
+      await db.prepare(`INSERT INTO onboarding_documents
+        (id, application_id, category, template_version, provider, provider_ref, status, created_at, updated_at)
+        VALUES (?, ?, 'affiliate_agreement', '', 'manual', '', 'requested', ?, ?)`)
+        .run(newId('doc'), a.id, now, now)
+      await db.prepare('UPDATE onboarding_applications SET updated_at = ? WHERE id = ?').run(now, a.id)
+      await event(a.id, actor, 'packet_requested')
+      return { doc: (await latestDoc(a.id))!, created: true }
+    })()
+  }
+
   const member = async (req: Request, res: Response) => {
     const m = await deps.memberFromRequest(req)
     if (!m) {
@@ -307,7 +334,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
 
   /* ---- which steps are switched on (public): the welcome page counts them ---- */
   app.get('/api/onboarding/setup', (_req, res) => {
-    res.json({ payouts: providers.payouts !== 'off', signing: providers.signing !== 'off' })
+    res.json({ payouts: providers.payouts !== 'off', signing: providers.signing !== 'off', signingMode: providers.signing })
   })
 
   /* ---- invite: preview (public) and redeem (signed in) ---- */
@@ -445,6 +472,16 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     if (a.status !== 'in_progress' && a.status !== 'changes_requested' && a.status !== 'submitted') return res.status(409).json({ error: 'Your application is closed.' })
     if (Object.keys(profileProblems(a.profile)).length) return res.status(409).json({ error: 'Finish your information first; the agreement is filled in from it.' })
     let doc = await refreshDoc((await latestDoc(a.id)) ?? null, true)
+    if (providers.signing === 'manual') {
+      const requested = await requestManualPacket(a, `member:${m.id}`)
+      doc = requested.doc
+      if (doc.provider !== 'manual') return res.status(409).json({ error: 'This packet needs BEASTY to review its signing setup.' })
+      if (doc.affiliate_signed_at) return res.status(409).json({ error: 'Your signature has already been verified.' })
+      if (doc.affiliate_url) return res.json({ url: doc.affiliate_url })
+      if (requested.created) void deps.sendEmail(deps.leadEmail, 'BEASTY affiliate forms requested',
+        `An affiliate has requested their forms. Create their approved packet in DocuSeal, then attach its private signing link in CRM under People → Affiliates.\n\nApplication: ${a.id}`)
+      return res.json({ requested: true })
+    }
     if (doc && (doc.status === 'pending_signature') && doc.affiliate_url) return res.json({ url: doc.affiliate_url })
     if (doc && (doc.status === 'pending_countersignature' || doc.status === 'completed')) return res.status(409).json({ error: 'You’ve already signed.' })
     try {
@@ -463,6 +500,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
           /* The W-9 asks for the address in two lines (its lines 5 and 6). A name
              the template doesn't have is left out (onboarding-providers.ts). */
           'Street Address': [p.line1, p.line2].filter(Boolean).join(', '),
+          'City State ZIP': [p.city, `${(p.state ?? '').toUpperCase()} ${p.zip ?? ''}`.trim()].filter(Boolean).join(', '),
           City: p.city ?? '',
           State: (p.state ?? '').toUpperCase(),
           ZIP: p.zip ?? '',
@@ -484,6 +522,25 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     }
   }))
 
+  app.post('/api/onboarding/me/agreement/review', strict, asyncH(async (req, res) => {
+    const m = await member(req, res)
+    if (!m) return
+    const a = await appOf(m.id)
+    if (!a) return res.status(404).json({ error: 'No application yet.' })
+    if (!['in_progress', 'changes_requested', 'submitted'].includes(a.status)) return res.status(409).json({ error: 'Your application is closed.' })
+    const d = await latestDoc(a.id)
+    if (providers.signing !== 'manual' || d?.provider !== 'manual' || !d.affiliate_url) return res.status(409).json({ error: 'BEASTY has not attached your signing request yet.' })
+    const now = Date.now()
+    const updated = await db.prepare(`UPDATE onboarding_documents SET review_requested_at = ?, status = 'pending_review', updated_at = ?
+      WHERE id = ? AND status IN ('pending_signature', 'pending_review') AND review_requested_at IS NULL AND affiliate_signed_at IS NULL`).run(now, now, d.id)
+    if (updated.changes) {
+      await event(a.id, `member:${m.id}`, 'packet_review_requested')
+      void deps.sendEmail(deps.leadEmail, 'BEASTY affiliate packet ready for review',
+        `An affiliate reports they finished their packet. Check their signatures, W-9, bank form and ID inside DocuSeal before recording verification in CRM.\n\nApplication: ${a.id}`)
+    }
+    res.json(bundle(a, await latestDoc(a.id)))
+  }))
+
   app.post('/api/onboarding/me/submit', strict, asyncH(async (req, res) => {
     const m = await member(req, res)
     if (!m) return
@@ -491,7 +548,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     if (!a) return res.status(404).json({ error: 'No application yet.' })
     if (a.status !== 'in_progress' && a.status !== 'changes_requested') return res.status(409).json({ error: 'Already submitted.' })
     a = await refreshPayouts(a, true)
-    const d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
+    let d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
     const s = stepsOf(a, d, providers)
     /* A step whose service is not switched on yet (Stripe Connect, DocuSeal) cannot be
        finished, so it does not hold the application back: the affiliate sends what they
@@ -500,9 +557,10 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     const missing = [
       !s.profile.complete && 'your information',
       s.payouts.available && !s.payouts.complete && 'payout setup',
-      s.agreement.available && !s.agreement.affiliateSigned && 'the signed agreement',
+      providers.signing !== 'manual' && s.agreement.available && !s.agreement.affiliateSigned && 'the signed agreement',
     ].filter(Boolean)
     if (missing.length) return res.status(409).json({ error: `Still needed: ${missing.join(', ')}.`, steps: s })
+    if (providers.signing === 'manual') d = (await requestManualPacket(a, `member:${m.id}`)).doc
     /* Only steps that exist: with payouts off there is no payout step to come, and
        the agreement step is the whole packet of forms. */
     const later = [
@@ -511,19 +569,20 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     ].filter(Boolean) as string[]
     const many = later.length > 1 || later[0] === 'your forms and agreement'
     const now = Date.now()
-    await db.prepare("UPDATE onboarding_applications SET status = 'submitted', submitted_at = ?, updated_at = ? WHERE id = ?").run(now, now, a.id)
+    const submitted = await db.prepare("UPDATE onboarding_applications SET status = 'submitted', submitted_at = ?, updated_at = ? WHERE id = ? AND status IN ('in_progress', 'changes_requested')").run(now, now, a.id)
+    if (!submitted.changes) return res.status(409).json({ error: 'Already submitted.' })
     await event(a.id, `member:${m.id}`, a.status === 'changes_requested' ? 'resubmitted' : 'submitted')
     const name = `${a.profile.legalFirst ?? ''} ${a.profile.legalLast ?? ''}`.trim()
     const contact = [a.profile.email, a.profile.phone].filter(Boolean).join(' · ')
     void deps.sendEmail(
       deps.leadEmail,
       `New affiliate application: ${name}`,
-      `${name} has submitted their BEASTY affiliate application.\n\n${contact}\n${[a.profile.city, a.profile.state].filter(Boolean).join(', ')}\n${later.length ? `\nStill to come once it opens: ${later.join(' and ')}.\n` : ''}\nReview it in the CRM under People → Affiliates.`,
+      `${name} has submitted their BEASTY affiliate application.\n\n${contact}\n${[a.profile.city, a.profile.state].filter(Boolean).join(', ')}\n${later.length ? `\nStill needed: ${later.join(' and ')}.\n` : ''}\nReview it in the CRM under People → Affiliates.`,
     )
     void deps.sendEmail(
       a.profile.email,
       'Your BEASTY affiliate application is in',
-      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nThanks for applying to the BEASTY affiliate program. We have your application and will let you know when it's reviewed.${later.length ? `\n\nOne more thing to come: ${later.join(' and ')} ${many ? 'open' : 'opens'} soon, and you'll finish ${many ? 'them' : 'it'} at ${site(req)}/join.` : ''}\n\nYou can check where it stands any time at ${site(req)}/join.\n\nBEASTY Pages`,
+      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nThanks for applying to the BEASTY affiliate program. We have your application and will let you know when it's reviewed.${later.length ? providers.signing === 'manual' ? `\n\nBEASTY will prepare your forms on DocuSeal. We will email you when they are ready. Complete them and request review at ${site(req)}/join.` : `\n\nOne more thing to come: ${later.join(' and ')} ${many ? 'open' : 'opens'} soon, and you'll finish ${many ? 'them' : 'it'} at ${site(req)}/join.` : ''}\n\nYou can check where it stands any time at ${site(req)}/join.\n\nBEASTY Pages`,
     )
     a = (await appOf(m.id))!
     res.json(bundle(a, d))
@@ -537,6 +596,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     const a = await appOf(m.id)
     const d = a ? await latestDoc(a.id) : null
     if (!a || !d || d.status !== 'completed' || providers.signing === 'off') return res.status(404).json({ error: 'No signed agreement yet.' })
+    if (d.provider === 'manual') return res.redirect(302, d.affiliate_url)
     const st = await providers.signingState(d.provider_ref)
     if (!st.documentUrls[0]) return res.status(404).json({ error: 'No signed agreement yet.' })
     res.redirect(302, st.documentUrls[0])
@@ -651,7 +711,17 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       member: memberRow ? { name: memberRow.name, code: memberRow.referral_code, joinedAt: memberRow.created_at } : null,
       payoutState: a.payout_state ? { ...a.payout_state, accountRef: undefined } : null,
       events,
-      countersignAvailable: !!d && d.status === 'pending_countersignature' && (providers.signing === 'mock' || !!d.company_url),
+      manualPacket: providers.signing === 'manual' && req.crm!.role === 'admin' ? {
+        revision: d?.manual_revision ?? 0,
+        submissionUrl: d?.submission_url ?? '',
+        affiliateUrl: d?.affiliate_url ?? '',
+        companyUrl: d?.company_url ?? '',
+        evidence: d?.manual_evidence ?? {},
+        verifiedBy: d?.verified_by ?? null,
+        checkedAt: d?.checked_at ?? null,
+        approvedTemplateUrl: approvedManualTemplate() ? `https://docuseal.com/templates/${approvedManualTemplate()}` : null,
+      } : null,
+      countersignAvailable: !!d && d.status === 'pending_countersignature' && (providers.signing === 'mock' || !!d.company_url || !!d.submission_url),
     })
   }))
 
@@ -669,8 +739,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       .run(id, sha(token), email, name, note, req.crm!.actor, now, now + INVITE_DAYS * 86_400_000)
     await event(null, req.crm!.actor, 'invited', { email }, id)
     const link = `${site(req)}/join/${token}`
-    void deps.sendEmail(email, 'You’re invited to the BEASTY affiliate program', `${name ? `Hi ${name},\n\n` : ''}You've been invited to join the BEASTY affiliate program.\n\nStart here (the link is just for you and works for ${INVITE_DAYS} days):\n${link}\n\nBEASTY Pages`)
-    res.status(201).json({ id, link, expiresAt: now + INVITE_DAYS * 86_400_000 })
+    const emailStatus = await deps.sendEmail(email, 'You’re invited to the BEASTY affiliate program', `${name ? `Hi ${name},\n\n` : ''}You've been invited to join the BEASTY affiliate program.\n\nStart here (the link is just for you and works for ${INVITE_DAYS} days):\n${link}\n\nBEASTY Pages`)
+    res.status(201).json({ id, link, expiresAt: now + INVITE_DAYS * 86_400_000, emailStatus })
   }))
 
   app.post('/api/crm/onboarding/invites/:id/resend', crmWrite, admin, asyncH(async (req, res) => {
@@ -685,8 +755,8 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       .run(sha(token), now + INVITE_DAYS * 86_400_000, inv.id)
     await event(null, req.crm!.actor, 'invite_resent', { email: inv.email }, inv.id)
     const link = `${site(req)}/join/${token}`
-    void deps.sendEmail(inv.email, 'Your BEASTY affiliate invite', `${inv.name ? `Hi ${inv.name},\n\n` : ''}Here's a fresh link to join the BEASTY affiliate program:\n${link}\n\nBEASTY Pages`)
-    res.json({ link })
+    const emailStatus = await deps.sendEmail(inv.email, 'Your BEASTY affiliate invite', `${inv.name ? `Hi ${inv.name},\n\n` : ''}Here's a fresh link to join the BEASTY affiliate program:\n${link}\n\nBEASTY Pages`)
+    res.json({ link, emailStatus })
   }))
 
   app.post('/api/crm/onboarding/invites/:id/revoke', crmWrite, admin, asyncH(async (req, res) => {
@@ -706,17 +776,96 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       await refreshDoc(d, true)
       return res.json({ ok: true })
     }
-    if (!d.company_url) return res.status(409).json({ error: 'Countersign it in DocuSeal.' })
-    res.json({ url: d.company_url })
+    const url = d.company_url || (d.provider === 'manual' ? d.submission_url : '')
+    if (!url) return res.status(409).json({ error: 'Countersign it in DocuSeal.' })
+    res.json({ url })
+  }))
+
+  /* Free plan: the admin creates a request in DocuSeal's dashboard. Links and
+     review flags are the only data stored here; no vendor API or file fetch. */
+  app.post('/api/crm/onboarding/:id/packet', crmWrite, admin, asyncH(async (req, res) => {
+    if (providers.signing !== 'manual') return res.status(409).json({ error: 'Manual signing is not enabled.' })
+    const template = approvedManualTemplate()
+    if (!template) return res.status(503).json({ error: 'Finalize and approve the agreement with Glenn before linking applicant packets.' })
+    const b = (req.body ?? {}) as Record<string, unknown>
+    if (b.templateVersion !== template) return res.status(409).json({ error: 'Use the approved DocuSeal template shown in CRM.' })
+    if (b.termsApproved !== true || b.recipientConfirmed !== true) return res.status(400).json({ error: 'Confirm approved terms and the correct applicant and signer roles.' })
+    const submissionUrl = docusealLink(b.submissionUrl, 'submission')
+    const affiliateUrl = docusealLink(b.affiliateUrl, 'signer')
+    const companyUrl = b.companyUrl === '' || b.companyUrl == null ? '' : docusealLink(b.companyUrl, 'signer')
+    if (!submissionUrl || !affiliateUrl || companyUrl === null || affiliateUrl === companyUrl) return res.status(400).json({ error: 'Use separate, private DocuSeal signing links and the request’s DocuSeal dashboard address.' })
+    if (!Number.isInteger(b.revision) || Number(b.revision) < 0) return res.status(400).json({ error: 'Missing packet revision. Refresh the record.' })
+    let outcome
+    try {
+      outcome = await db.transaction(async () => {
+        const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(String(req.params.id))
+        if (!a) return { error: 'No such application.', status: 404 }
+        if (!['in_progress', 'submitted', 'changes_requested'].includes(a.status)) return { error: 'This application is closed; its packet cannot be replaced.', status: 409 }
+        if (Object.keys(profileProblems(a.profile)).length) return { error: 'The applicant must finish their details first.', status: 409 }
+        const d = await latestDoc(a.id)
+        if (d && d.provider !== 'manual') return { error: 'This application has an API signing packet. Review its setup first.', status: 409 }
+        if ((d?.manual_revision ?? 0) !== b.revision) return { error: 'The packet changed elsewhere. Refresh before saving.', status: 409 }
+        if (d?.provider_ref === submissionUrl.split('/').pop()) return { error: 'This request is already attached. Create a new request to replace it.', status: 409 }
+        if (d?.affiliate_signed_at && b.replaceVerified !== true) return { error: 'Confirm that replacing this packet requires new signatures and review.', status: 409 }
+        const now = Math.max(Date.now(), (d?.created_at ?? 0) + 1)
+        if (d) await db.prepare("UPDATE onboarding_documents SET status = 'superseded', updated_at = ? WHERE id = ?").run(now, d.id)
+        await db.prepare(`INSERT INTO onboarding_documents
+          (id, application_id, category, template_version, provider, provider_ref, status,
+           affiliate_url, company_url, submission_url, manual_revision, created_at, updated_at)
+          VALUES (?, ?, 'affiliate_agreement', ?, 'manual', ?, 'pending_signature', ?, ?, ?, ?, ?, ?)`)
+          .run(newId('doc'), a.id, template, submissionUrl.split('/').pop(), affiliateUrl, companyUrl, submissionUrl, (d?.manual_revision ?? 0) + 1, now, now)
+        await event(a.id, req.crm!.actor, 'packet_linked', { templateVersion: template, replaced: !!d?.provider_ref })
+        await db.prepare('UPDATE onboarding_applications SET updated_at = ? WHERE id = ?').run(now, a.id)
+        return { application: a }
+      })()
+    } catch (err) {
+      if ((err as { code?: string }).code === '23505') return res.status(409).json({ error: 'This DocuSeal request is already attached to an application.' })
+      throw err
+    }
+    if (outcome.error) return res.status(outcome.status!).json({ error: outcome.error })
+    const a = outcome.application!
+    const emailStatus = await deps.sendEmail(a.profile.email, 'Your BEASTY forms are ready',
+      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\nYour forms are ready. Open ${site(req)}/join, complete your W-9 and bank form, upload your ID on DocuSeal and sign the agreement. Then return to BEASTY and request review.\n\nDo not email taxpayer numbers, bank details or ID photos.\n\nBEASTY Pages`)
+    res.json({ ok: true, emailStatus })
+  }))
+
+  app.post('/api/crm/onboarding/:id/packet/verify', crmWrite, admin, asyncH(async (req, res) => {
+    if (providers.signing !== 'manual') return res.status(409).json({ error: 'Manual signing is not enabled.' })
+    const b = (req.body ?? {}) as Record<string, unknown>
+    const evidence = manualEvidence(b)
+    if (!evidence) return res.status(400).json({ error: 'Check the applicant’s signature, W-9, bank form, ID upload and audit trail in DocuSeal first.' })
+    if (!Number.isInteger(b.revision)) return res.status(400).json({ error: 'Missing packet revision. Refresh the record.' })
+    const outcome = await db.transaction(async () => {
+      const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(String(req.params.id))
+      if (!a) return { error: 'No such application.', status: 404 }
+      if (!['in_progress', 'submitted', 'changes_requested'].includes(a.status)) return { error: 'This application is closed.', status: 409 }
+      const d = await latestDoc(a.id)
+      if (d?.provider !== 'manual' || !d.submission_url || !d.affiliate_url) return { error: 'Attach the DocuSeal request first.', status: 409 }
+      if (d.manual_revision !== b.revision) return { error: 'The packet changed elsewhere. Refresh before recording review.', status: 409 }
+      if (d.company_signed_at && !evidence.companySigned) return { error: 'A completed packet cannot lose its countersignature. Replace the packet if it needs correction.', status: 409 }
+      if (d.affiliate_signed_at && !!d.company_signed_at === evidence.companySigned) return { application: a, changed: false }
+      const now = Date.now()
+      await db.prepare(`UPDATE onboarding_documents SET status = ?, affiliate_signed_at = ?, company_signed_at = ?, completed_at = ?,
+        checked_at = ?, manual_revision = manual_revision + 1, manual_evidence = ?, verified_by = ?, updated_at = ? WHERE id = ?`)
+        .run(evidence.companySigned ? 'completed' : 'pending_countersignature', d.affiliate_signed_at ?? now,
+          evidence.companySigned ? d.company_signed_at ?? now : null, evidence.companySigned ? now : null,
+          now, JSON.stringify(evidence), req.crm!.actor, now, d.id)
+      await event(a.id, req.crm!.actor, 'packet_verified', { ...evidence, source: 'operator_review' })
+      await db.prepare('UPDATE onboarding_applications SET updated_at = ? WHERE id = ?').run(now, a.id)
+      return { application: a, changed: true }
+    })()
+    if (outcome.error) return res.status(outcome.status!).json({ error: outcome.error })
+    const a = outcome.application!
+    const emailStatus = outcome.changed ? await deps.sendEmail(a.profile.email,
+      evidence.companySigned ? 'Your BEASTY packet is signed by both parties' : 'Your BEASTY forms have been checked',
+      `Hi ${a.profile.preferredName || a.profile.legalFirst || ''},\n\n${evidence.companySigned ? 'BEASTY has checked your packet and both signatures. The completed packet is available from your dashboard.' : 'BEASTY has reviewed your signed forms. Your packet is waiting for BEASTY’s countersignature.'}\n\nCheck your application at ${site(req)}/join.\n\nBEASTY Pages`) : undefined
+    res.json({ ok: true, emailStatus })
   }))
 
   app.post('/api/crm/onboarding/:id/decision', crmWrite, admin, asyncH(async (req, res) => {
-    const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ?').get<AppRow>(String(req.params.id))
-    if (!a) return res.status(404).json({ error: 'No such application.' })
     const b = (req.body ?? {}) as { action?: unknown; note?: unknown }
     const action = String(b.action ?? '')
     const note = String(b.note ?? '').trim().slice(0, 600)
-    const d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
     const allowed: Record<string, { from: AppStatus[]; to: AppStatus }> = {
       approve: { from: ['submitted'], to: 'approved' },
       request_changes: { from: ['submitted'], to: 'changes_requested' },
@@ -724,16 +873,25 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       suspend: { from: ['approved'], to: 'suspended' },
       reinstate: { from: ['suspended'], to: 'approved' },
     }
-    const rule = allowed[action]
-    if (!rule) return res.status(400).json({ error: 'Unknown action.' })
-    if (!rule.from.includes(a.status)) return res.status(409).json({ error: `Can’t ${action.replace('_', ' ')} an application that is ${a.status.replace('_', ' ')}.` })
-    if (action === 'approve' && d?.status !== 'completed') return res.status(409).json({ error: 'Countersign the agreement first.' })
-    if ((action === 'request_changes' || action === 'reject') && !note) return res.status(400).json({ error: 'Add a note so they know why.' })
-    const now = Date.now()
-    await db
-      .prepare('UPDATE onboarding_applications SET status = ?, decided_at = ?, decided_by = ?, decision_note = ?, updated_at = ? WHERE id = ?')
-      .run(rule.to, now, req.crm!.actor, note, now, a.id)
-    await event(a.id, req.crm!.actor, action === 'approve' ? 'approved' : action === 'request_changes' ? 'changes_requested' : action === 'reject' ? 'rejected' : action === 'suspend' ? 'suspended' : 'reinstated', note ? { note } : {})
+    const outcome = await db.transaction(async () => {
+      const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(String(req.params.id))
+      if (!a) return { error: 'No such application.', code: 404 }
+      const rule = allowed[action]
+      if (!rule) return { error: 'Unknown action.', code: 400 }
+      if (!rule.from.includes(a.status)) return { error: `Can’t ${action.replace('_', ' ')} an application that is ${a.status.replace('_', ' ')}.`, code: 409 }
+      const d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
+      if (action === 'approve' && d?.status !== 'completed') return { error: 'Countersign the agreement first.', code: 409 }
+      if ((action === 'request_changes' || action === 'reject') && !note) return { error: 'Add a note so they know why.', code: 400 }
+      const now = Date.now()
+      await db
+        .prepare('UPDATE onboarding_applications SET status = ?, decided_at = ?, decided_by = ?, decision_note = ?, updated_at = ? WHERE id = ?')
+        .run(rule.to, now, req.crm!.actor, note, now, a.id)
+      await event(a.id, req.crm!.actor, action === 'approve' ? 'approved' : action === 'request_changes' ? 'changes_requested' : action === 'reject' ? 'rejected' : action === 'suspend' ? 'suspended' : 'reinstated', note ? { note } : {})
+      return { application: a, status: rule.to }
+    })()
+    // Respond and notify only after the transaction has committed.
+    if (outcome.error) return res.status(outcome.code!).json({ error: outcome.error })
+    const a = outcome.application!
     const first = a.profile.preferredName || a.profile.legalFirst || ''
     const msg: Record<string, [string, string]> = {
       approve: ['You’re approved: welcome to BEASTY', `Hi ${first},\n\nYou're approved as a BEASTY affiliate. Your dashboard is at ${site(req)}/join.\n\nBEASTY Pages`],
@@ -741,6 +899,6 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       reject: ['Your BEASTY affiliate application', `Hi ${first},\n\nThanks for applying. We aren't able to approve your application right now.\n\n${note}\n\nBEASTY Pages`],
     }
     if (msg[action]) void deps.sendEmail(a.profile.email, msg[action][0], msg[action][1])
-    res.json({ ok: true, status: rule.to })
+    res.json({ ok: true, status: outcome.status })
   }))
 }

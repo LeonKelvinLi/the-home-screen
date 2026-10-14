@@ -39,3 +39,6 @@ research/menus/raw/
 # Register cards and anything else a tool prints for handing out. Re-creatable,
 # and a folder of 344 PDFs does not belong in history.
 /out/
+
+# Blank review PDFs are regenerated from tools/build-affiliate-agreement-review.py.
+/output/pdf/

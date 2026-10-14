@@ -192,6 +192,17 @@ const w1 = await anon.call('POST', '/api/onboarding/webhooks/docuseal', evt, { '
 const w2 = await anon.call('POST', '/api/onboarding/webhooks/docuseal', evt, { 'x-beasty-webhook-secret': HOOK })
 check('a signed webhook is taken once, and a replay is ignored', w1.status === 200 && !w1.body?.duplicate && w2.status === 200 && w2.body?.duplicate === true)
 
+/* The API checks can run without launching a browser. Browser QA uses the
+   user's installed Chrome extension when that is their required browser. */
+if (process.argv.includes('--api-only')) {
+  check('missing email configuration is reported on an invite', inv.body.emailStatus === 'not_configured')
+  await db.end()
+  srv.kill()
+  await TESTDB.drop()
+  console.log(fails.length ? `FAIL: ${fails.length} onboarding API checks` : 'PASS: onboarding API audit')
+  process.exit(fails.length ? 1 : 0)
+}
+
 /* ---- the portal itself, on a phone ---- */
 const i3 = await admin.call('POST', '/api/crm/onboarding/invites', { email: 'phone.tester@audit.beastypages.dev', name: 'Phone Tester' })
 const SHOTS = process.env.ONBOARDING_SHOTS
