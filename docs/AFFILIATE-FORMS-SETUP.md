@@ -4,11 +4,18 @@ The workflow remains `/join` → details → DocuSeal packet → affiliate signa
 
 ## Uploaded artifact
 
-Glenn Malicdem's account, `glenn@beastypages.com`, owns template **6399497**, [BEASTY-Affiliate-Packet-DRAFT](https://docuseal.com/templates/6399497).
+Glenn Malicdem's account, `glenn@beastypages.com`, owns the redesigned template **6402583**, [BEASTY-Affiliate-Packet-Professional-DRAFT](https://docuseal.com/templates/6402583).
 
 It contains 11 pages: a tax-ID selection cover, the current IRS W-9 and its five instruction pages, direct-deposit authorization, ID upload, and a two-page draft affiliate agreement. The PDF has 32 canonical fields. In DocuSeal, the bank proof is a File field and ID front/back are Image fields. The signer roles are **Affiliate** and **BEASTY**. BEASTY owns only its representative, countersignature and countersigning date. All four date fields use DocuSeal's actual signing date.
 
-The original auto-detected draft (6399448) is superseded by 6399497. Neither has submissions and neither should be sent while the agreement is a draft.
+The earlier drafts (6399448 and 6399497) are preserved. Use 6402583 for layout review; do not send any draft packet to applicants.
+
+The redesign follows the spacing, heading hierarchy, fine rules and consistent
+folios of LOQOL's local report layout, while using BEASTY's existing Inter and
+Oswald font assets and restrained yellow accents. All six original IRS pages
+were rendered and compared pixel-for-pixel with the source; all match. Native
+PDF fields remain editable, and saved/reopened synthetic text, select and radio
+values have visible appearances. Custom pages were rendered and inspected.
 
 ## Required before live activation
 
@@ -35,9 +42,10 @@ areas are reserved for a separate finalized request. The builder checks the
 canonical fields, widget appearances, and a saved/reopened synthetic fill.
 All four pages were rendered and visually checked.
 
-The same review draft is uploaded in Glenn's account as template **6399923**,
-[BEASTY-Affiliate-Agreement-Fillable-DRAFT](https://docuseal.com/templates/6399923).
-DocuSeal retained all 24 fields. It is saved, has no submissions, and is not
+The redesigned review draft is uploaded in Glenn's account as **6402572**,
+[BEASTY-Affiliate-Agreement-Professional-DRAFT](https://docuseal.com/templates/6402572),
+with all 24 fields assigned to **BEASTY Review**. The earlier template 6399923
+has an opened review request and was preserved. Neither review template is
 configured as the portal's applicant signing template.
 
 1. Glenn's account remains free. The API-based path below requires Pro and is reference only unless Leon changes the free-only requirement. No paid upgrade was purchased.
@@ -62,7 +70,18 @@ The invite API now returns `emailStatus` (`accepted`, `failed` or `not_configure
 - `node tools/audit-onboarding.mjs --api-only` passes against a fresh local database. Browser portions require the user's Chrome extension; do not launch a separate Playwright Chromium.
 - `npm run build` passes. No real contract was signed, no applicant bank/ID data was entered, and no hosted signing result is claimed.
 
-Build the blank PDFs with the bundled Python runtime (reportlab and pypdf): `python3 tools/build-affiliate-forms.py`. First download `https://www.irs.gov/pub/irs-pdf/fw9.pdf` into `out/affiliate-forms/irs-w9.pdf`. The script emits draft PDFs, field manifests and an interactive native-upload packet in that ignored directory. These files contain blank forms only.
+Install the document-builder dependencies in an isolated environment using
+`tools/requirements-affiliate-forms.txt`, then run
+`python3 tools/build-affiliate-forms.py` and
+`python3 tools/build-affiliate-agreement-review.py`. The builders use the
+existing font files in `public/fonts`; static PDF fonts are cached in the ignored
+output directory. First download `https://www.irs.gov/pub/irs-pdf/fw9.pdf` into
+`out/affiliate-forms/irs-w9.pdf`. The scripts emit field manifests and blank
+drafts, including the two deliverables in `output/pdf/`:
+`BEASTY-Affiliate-Packet-Professional-DRAFT.pdf` and
+`BEASTY-Affiliate-Agreement-Fillable-DRAFT.pdf`. In DocuSeal, choose **Keep** on
+native-field import, then set the roles, Image/File types and signing dates
+described above; native PDF signatures do not encode upload-field types.
 
 Sources: [IRS W-9](https://www.irs.gov/forms-pubs/about-form-w-9), [DocuSeal API](https://www.docuseal.com/docs/api), [conditional fields](https://www.docuseal.com/resources/add-conditional-fields), [FTC disclosure guide](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers). LOQOL's integration was read only for the provider/status/prefill pattern; its account, templates and keys were not reused.
 
@@ -71,8 +90,10 @@ The release audit found an existing critical `proxy-addr` advisory
 development `source-map-js` dependency and overrides vulnerable `shell-quote`
 without changing concurrently's major version. `tools/audit-dependency-security.mjs`
 checks the proxy trust regression and rejection of shell-comment newline input
-without executing shell payloads. The notification configuration redeploy runs
-the already-deployed main revision; the dependency fixes are not live yet.
+without executing shell payloads. These dependency fixes and the free manual
+handoff were merged in PR #4 and deployed to both Render services at revision
+`522fd58147684330ca1154dc7120fe2503955955`. Both were healthy, with manual
+signing enabled and the approved-template setting unset, on release verification.
 
 Chrome QA of the isolated CRM confirmed an invite survives missing mail configuration and shows “Email was not sent; copy the link below.” Live deployment evidence is stored separately in the ignored `out/affiliate-forms/production-release.json`; do not infer deployment from passing local checks.
 

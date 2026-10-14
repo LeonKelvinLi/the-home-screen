@@ -5,9 +5,8 @@ No economic terms, legal identity, consent or signature is supplied for them.
 """
 from pathlib import Path
 from reportlab.pdfgen import canvas
-from reportlab.lib.colors import HexColor, black, white
-from reportlab.lib.utils import simpleSplit
 from pypdf import PdfReader, PdfWriter
+from affiliate_form_design import header as document_header, section, paragraph as document_paragraph, INK, MUTED, RULE, FIELD, BODY, BOLD
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output/pdf'
@@ -21,72 +20,60 @@ names = []
 
 
 def paragraph(text, y, size=10, width=528):
-    c.setFillColor(black)
-    c.setFont('Helvetica', size)
-    for line in simpleSplit(text, 'Helvetica', size, width):
-        c.drawString(42, y, line)
-        y -= size * 1.45
-    return y - 10
+    return document_paragraph(c, text, 44, y, width, size, leading=size * 1.45)
 
 
 def header(title, subtitle, page):
-    c.setFillColor(HexColor('#f1d600'))
-    c.rect(0, H - 18, W, 18, fill=1, stroke=0)
-    c.setFillColor(black)
-    c.setFont('Helvetica-Bold', 11)
-    c.drawString(42, 744, 'BEASTY PAGES / AGREEMENT REVIEW')
-    c.setFont('Helvetica-Bold', 22)
-    c.drawString(42, 710, title)
-    paragraph(subtitle, 684, 10)
-    c.setFont('Helvetica-Bold', 8)
-    c.drawString(42, 28, 'DRAFT / COMPLETE FOR DISCUSSION / NOT FOR APPLICANT SIGNING')
-    c.setFont('Helvetica', 8)
-    c.drawRightString(570, 28, f'{page} / 4')
+    document_header(c, title, subtitle, draft=True, page=page, total=4, category='Affiliate agreement / review')
 
 
-def field(name, label, y, height=28, x=42, width=528, multiline=False):
+def field(name, label, y, height=28, x=44, width=524, multiline=False):
     names.append(name)
-    c.setFillColor(black)
-    c.setFont('Helvetica-Bold', 9)
+    c.setFillColor(INK)
+    c.setFont(BOLD, 8.7)
     c.drawString(x, y + height + 7, label)
     c.acroForm.textfield(
         name=name, tooltip=label, x=x, y=y, width=width, height=height,
         value='', fontName='Helvetica', fontSize=10,
-        borderColor=HexColor('#9b9b9b'), fillColor=HexColor('#fafafa'),
-        textColor=black, borderWidth=0.7, forceBorder=True,
+        borderColor=RULE, fillColor=FIELD,
+        textColor=INK, borderWidth=0.6, forceBorder=True,
         fieldFlags='multiline' if multiline else '', maxlen=1500 if multiline else 180,
     )
 
 
-header('Company & reward schedule',
-       'Type into the shaded boxes, save a copy, and review it together. All commercial and legal terms are blank for you and Glenn to decide.', 1)
-field('Company legal name', 'BEASTY legal company name', 590)
-field('Company address', 'Company mailing address', 527, 34, multiline=True)
-field('Company representative', 'Authorized representative / title', 468, width=330)
-field('Agreement version', 'Version / review date', 468, x=390, width=180)
-field('Company notices email', 'Company contact / notices email', 409)
-field('User reward', 'Reward per qualifying user referral (amount / points / rate)', 350)
-field('Business reward', 'Reward per qualifying business referral (amount / points / rate)', 291)
-field('Reward basis', 'One-time or recurring; if recurring, duration and calculation', 224, 36, multiline=True)
-field('Point value', 'Value per point / currency (if applicable)', 163, width=252)
-field('Minimum payout', 'Minimum redemption / payout amount', 163, x=318, width=252)
-field('Payout schedule', 'Payout frequency and deadline; who initiates redemption', 85, 45, multiline=True)
+header('Affiliate agreement',
+       'Complete the fields below with Glenn, save a copy, and agree the terms before preparing an applicant signing request.', 1)
+section(c, 1, 'Company details', 617)
+field('Company legal name', 'BEASTY legal company name', 556)
+field('Company address', 'Company mailing address', 496, 36, multiline=True)
+field('Company representative', 'Authorized representative / title', 440, width=328)
+field('Agreement version', 'Version / review date', 440, x=388, width=180)
+field('Company notices email', 'Company contact / notices email', 385)
+section(c, 2, 'Reward schedule', 350)
+field('User reward', 'Per qualifying user referral', 294, width=252)
+field('Business reward', 'Per qualifying business referral', 294, x=316, width=252)
+field('Reward basis', 'Amount, points or rate; one-time or recurring (include duration)', 232, 34, multiline=True)
+field('Point value', 'Value per point / currency, if applicable', 177, width=252)
+field('Minimum payout', 'Minimum redemption / payout amount', 177, x=316, width=252)
+field('Payout schedule', 'Payout frequency, deadline and who initiates redemption', 101, 42, multiline=True)
 c.showPage()
 
 header('Qualification & administration',
        'Complete these rules before using the agreement. Attach a written schedule if more space is needed; identify that schedule below.', 2)
-field('Eligible referral', 'What qualifies a user or business referral? Required activation / payment', 564, 56, multiline=True)
-field('Attribution', 'Referral tracking, attribution window, duplicate / existing customer rules', 469, 56, multiline=True)
-field('Refund rules', 'Cancellations, refunds, fraud, chargebacks and adjustment / dispute rules', 374, 56, multiline=True)
-field('Final payment', 'Earned rewards and payment deadline when participation ends', 291, 44, multiline=True)
-field('Tax deductions', 'Permitted tax withholding / deductions and reporting responsibilities', 208, 44, multiline=True)
-field('Privacy retention', 'Privacy notice URL, document retention, access and deletion contact', 125, 44, multiline=True)
-field('Attached schedule', 'Additional schedule title / version (or none)', 62, 28)
+section(c, 1, 'Referral rules', 617)
+field('Eligible referral', 'Qualifying activation / purchase for user and business referrals', 524, 58, multiline=True)
+field('Attribution', 'Tracking, attribution window and duplicate / existing customer rules', 430, 58, multiline=True)
+field('Refund rules', 'Cancellations, refunds, chargebacks and adjustment / dispute rules', 336, 58, multiline=True)
+section(c, 2, 'Settlement & document handling', 307)
+field('Final payment', 'Earned rewards and final payment when participation ends', 244, 38, multiline=True)
+field('Tax deductions', 'Tax withholding / deductions and reporting responsibilities', 179, 38, multiline=True)
+field('Privacy retention', 'Privacy notice URL, retention period, access and deletion contact', 114, 38, multiline=True)
+field('Attached schedule', 'Additional schedule title / version (or none)', 63, 24)
 c.showPage()
 
-header('Draft agreement',
+header('Agreement terms',
        'The completed terms on pages 1 and 2 become Schedule A. Both parties must review the whole agreement before a final signing request is created.', 3)
-y = 635
+y = 617
 sections = [
     ('1. Parties and purpose',
      'The company identified on page 1, doing business as BEASTY Pages (BEASTY), and the affiliate identified on page 4 agree that the affiliate may promote BEASTY and refer users and businesses. The final agreement takes effect when both parties sign it.'),
@@ -104,29 +91,31 @@ sections = [
      'This agreement and completed Schedule A state the parties\' arrangement. Changes require notice and agreement before affecting future referrals. No guaranteed earnings, exclusivity, automatic payout or promotional multiplier is included unless expressly stated in the completed agreement. Neither party signs on the other\'s behalf.'),
 ]
 for title, text in sections:
-    c.setFont('Helvetica-Bold', 10)
-    c.drawString(42, y, title)
-    y = paragraph(text, y - 17, 10) - 7
+    number, label = title.split('. ', 1)
+    section(c, int(number), label, y)
+    y = document_paragraph(c, text, 44, y - 20, 524, 9.6, leading=13.2) - 7
 assert y > 55, f'Agreement text overflows: {y}'
 c.showPage()
 
-header('Legal details & execution',
+header('Legal details & signatures',
        'Review copy only. Complete the blank terms, approve the final version, then create a separate DocuSeal request for the affiliate and BEASTY to sign.', 4)
-field('Governing law', 'Governing law (jurisdiction)', 589, width=252)
-field('Venue', 'Agreed venue / dispute process', 589, x=318, width=252)
-field('Notice period', 'Termination notice period and notice method', 511, 44, multiline=True)
-field('Additional terms', 'Other agreed terms / exceptions (or none)', 402, 72, multiline=True)
-field('Affiliate name', 'Affiliate legal name (complete when preparing a final request)', 339)
-field('Affiliate notices', 'Affiliate contact / notices address', 267, 40, multiline=True)
-paragraph('Execution in the final DocuSeal request', 229, 12)
-paragraph('Affiliate and BEASTY each sign their own fields. DocuSeal records the signing dates and audit evidence. The blank boxes below are reserved for that final request; this review copy does not collect a signature.', 207, 10)
-for x, label in [(42, 'Affiliate signature'), (318, 'BEASTY authorized signature')]:
-    c.setFont('Helvetica-Bold', 9)
-    c.drawString(x, 138, label)
-    c.setStrokeColor(HexColor('#9b9b9b'))
-    c.rect(x, 91, 252, 38)
-    c.setFont('Helvetica', 8)
-    c.drawString(x, 77, 'Signing date: recorded by DocuSeal')
+section(c, 1, 'Legal terms', 617)
+field('Governing law', 'Governing law (jurisdiction)', 555, width=252)
+field('Venue', 'Agreed venue / dispute process', 555, x=316, width=252)
+field('Notice period', 'Termination notice period and notice method', 473, 44, multiline=True)
+field('Additional terms', 'Other agreed terms / exceptions (or none)', 364, 72, multiline=True)
+section(c, 2, 'Affiliate details', 338)
+field('Affiliate name', 'Affiliate legal name (complete for a final request)', 284)
+field('Affiliate notices', 'Affiliate contact / notices address', 217, 40, multiline=True)
+section(c, 3, 'Execution of the final agreement', 187)
+paragraph('Each party signs their own fields in the finalized DocuSeal request. Its signing dates and audit trail provide the execution record. This review copy does not collect signatures.', 165, 9.5)
+for x, label in [(44, 'Affiliate signature'), (316, 'BEASTY authorized signature')]:
+    c.setFillColor(INK); c.setFont(BOLD, 8.7)
+    c.drawString(x, 99, label)
+    c.setStrokeColor(RULE); c.setLineWidth(0.6)
+    c.line(x, 75, x + 252, 75)
+    c.setFont(BODY, 7.8); c.setFillColor(MUTED)
+    c.drawString(x, 61, 'Date recorded by DocuSeal')
 c.save()
 
 reader = PdfReader(FILE)
