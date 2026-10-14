@@ -7,10 +7,13 @@ from io import BytesIO
 import json
 from reportlab.pdfgen import canvas
 from pypdf import PdfReader, PdfWriter
-from affiliate_form_design import header, section, paragraph, INK, MUTED, RULE, FIELD, BODY, BOLD
+from affiliate_form_design import header, section, paragraph, INK, RULE, FIELD, BOLD
+from affiliate_disclosures import draw_disclosures
 
 OUT = Path(__file__).resolve().parents[1] / 'out/affiliate-forms'
 OUT.mkdir(parents=True, exist_ok=True)
+OUTPUT_PDF=OUT.parents[1]/'output/pdf'
+OUTPUT_PDF.mkdir(parents=True,exist_ok=True)
 W,H=612,792
 records=[]
 
@@ -24,7 +27,7 @@ def tag(c,name,x,y,w,h,kind='text',role='Affiliate',required=True,extra=''):
     records.append({'name':name,'type':kind,'role':role,'required':required,'attributes':extra,'areas':[{'x':x/W,'y':(H-y-h)/H,'w':w/W,'h':h/H,'page':c.getPageNumber()}]})
 
 def head(c,title,sub,draft=False,page=1):
-    header(c,title,sub,draft=draft,page=page,total=11,category='Affiliate onboarding / form packet')
+    header(c,title,sub,draft=draft,page=page,total=13,category='Affiliate onboarding / form packet')
 
 def para(c,text,x,y,w=524,size=10):
     return paragraph(c,text,x,y,w,size,leading=size*1.38)-10
@@ -33,10 +36,6 @@ def field(c,name,label,y,x=44,w=524,h=30,kind='text',role='Affiliate',required=T
     c.setFillColor(INK);c.setFont(BOLD,8.7);c.drawString(x,y+h+7,label)
     c.setStrokeColor(RULE);c.setFillColor(FIELD);c.setLineWidth(0.6)
     c.rect(x,y,w,h,stroke=1,fill=1)
-    hints={'signature':'Sign in DocuSeal','datenow':'Signing date recorded by DocuSeal','image':'Upload image in DocuSeal','file':'Upload file in DocuSeal'}
-    if kind in hints:
-        c.setFillColor(MUTED);c.setFont(BODY,8)
-        c.drawString(x+10,y+h/2-3,hints[kind])
     tag(c,name,x+5,y+3,w-10,h-6,kind,role,required,extra)
 
 def finish(c,file):
@@ -45,7 +44,7 @@ def finish(c,file):
 # W-9: retain all six IRS pages, original language and instructions.
 source=OUT/'irs-w9.pdf'
 r=PdfReader(source);buf=BytesIO();c=canvas.Canvas(buf,pagesize=(W,H))
-tag(c,'Legal Name',58.6,659.967,517.4,14)
+tag(c,'Taxpayer Legal Name',58.6,659.967,517.4,14)
 tag(c,'Business Name',58.6,635.966,517.4,14,required=False)
 # One radio group prevents contradictory classifications.
 for value,x,y in [('Individual/sole proprietor',73,603.719),('C corporation',180,603.719),('S corporation',252,603.719),('Partnership',324,603.719),('Trust/estate',388.8,603.719),('LLC',73,590.47),('Other',73,553.97)]:
@@ -91,7 +90,7 @@ for rec in records:
 p=OUT/'beasty-direct-deposit.pdf';c=canvas.Canvas(str(p),pagesize=(W,H))
 head(c,'Direct deposit authorization','For affiliate commission payments. This authorizes credits to your account; it does not authorize debits.',page=8)
 section(c,1,'Account details',617)
-field(c,'Legal Name','Account holder / legal name',560)
+field(c,'Account Holder Name','Account holder / legal name',560)
 field(c,'Bank Name','Bank or credit union',505)
 field(c,'Routing Number','ABA routing number (9 digits)',450,w=252)
 field(c,'Account Number','Account number',450,x=316,w=252)
@@ -107,30 +106,37 @@ field(c,'Deposit Signing Date','Signing date',100,x=388,w=180,kind='datenow');fi
 p=OUT/'beasty-id-verification.pdf';c=canvas.Canvas(str(p),pagesize=(W,H))
 head(c,'Identity document','For BEASTY to verify who receives affiliate payments. Upload directly to DocuSeal; do not send ID by ordinary email.',page=9)
 section(c,1,'Identity details',617)
-field(c,'Legal Name','Legal name',560)
+field(c,'ID Legal Name','Your legal name as shown on the ID',560)
 field(c,'ID Type','Document type',505,kind='select',extra=";options=Driver's license,State ID,Passport")
 section(c,2,'Document upload',467)
 field(c,'ID Photo','Clear photo of current ID (front or passport identity page)',225,h=214,kind='image')
 field(c,'ID Reverse','Reverse of ID (only if requested by BEASTY)',130,h=50,kind='image',required=False)
 para(c,'Use a legible image showing the relevant identity details. BEASTY will review it; uploading a photo does not automatically verify your identity. Contact glenn@beastypages.com about correcting or replacing this document.',44,104,524,9);finish(c,p)
 
+p=OUT/'beasty-affiliate-disclosures-DRAFT.pdf';c=canvas.Canvas(str(p),pagesize=(W,H))
+c.setTitle('BEASTY affiliate disclosures - review draft');c.setAuthor('BEASTY Pages')
+draw_disclosures(c,start_page=10,total=13,category='Affiliate onboarding / form packet');finish(c,p)
+standalone=canvas.Canvas(str(OUTPUT_PDF/'BEASTY-Affiliate-Disclosures-DRAFT.pdf'),pagesize=(W,H))
+standalone.setTitle('BEASTY affiliate disclosures - review draft');standalone.setAuthor('BEASTY Pages')
+draw_disclosures(standalone);standalone.save()
+
 # Draft agreement: economic and legal setup values are explicitly unresolved.
 p=OUT/'beasty-affiliate-agreement-DRAFT.pdf';c=canvas.Canvas(str(p),pagesize=(W,H))
-head(c,'Affiliate agreement','Draft for Glenn and Leon to review. Replace every [CONFIRM] item before using this agreement.',True,page=10)
+head(c,'Affiliate agreement','Draft for Glenn and Leon to review. BEASTY completes company and payment terms before an applicant receives it.',True,page=12)
 y=617
 sections=[
 ('1. Parties and purpose','This agreement is between [CONFIRM: BEASTY legal entity and mailing address], doing business as BEASTY Pages (BEASTY), and the affiliate identified below. The affiliate may promote BEASTY and refer users and businesses. It becomes effective only when both parties sign.'),
 ('2. Independent relationship','The affiliate controls their own promotional work and expenses. They may not bind BEASTY, collect money for BEASTY, or make promises that BEASTY has not authorized. The parties intend an independent contractor relationship; any legally required classification controls.'),
 ('3. Referral rewards and payment','Only eligible, recorded referrals earn the rewards set out in Schedule A. BEASTY provides a statement showing eligible referrals, adjustments and amounts payable. The affiliate supplies accurate tax and payout information. Schedule A must state the payment date, qualification rules and treatment of cancellations.'),
 ('4. Promotion and disclosures','Promotions must be truthful, comply with applicable laws and clearly disclose the affiliate relationship when recommending BEASTY. Use approved brand assets and current offers. Do not send unsolicited messages, misrepresent earnings, purchase fake referrals or use another person’s identity.'),
-('5. Information and privacy','The affiliate provides their W-9, bank details and ID directly through DocuSeal. BEASTY uses these documents for onboarding, payment and applicable tax reporting and limits access to authorized personnel. Contact glenn@beastypages.com for corrections or secure replacement forms. [CONFIRM: retention period and privacy notice].'),
+('5. Information and disclosures','The affiliate provides their W-9, bank details and ID directly through DocuSeal. The written disclosures in this packet explain electronic signing, document handling, direct deposit and affiliate promotion and form part of this agreement. Contact glenn@beastypages.com for corrections or secure replacement forms. [CONFIRM: BEASTY privacy and retention policy].'),
 ('6. Ending the relationship','Either party may end participation by written notice to the other. BEASTY may suspend participation while reviewing suspected fraud or misuse. Amounts already validly earned remain payable under Schedule A, subject to its documented refund and dispute rules. Stop using BEASTY brand assets when participation ends.'),
-('7. Entire agreement','This agreement and completed Schedule A state the parties’ arrangement. Future changes require notice and agreement before they affect future referrals. [CONFIRM: governing law, venue and any required notice period]. No party signs on the other’s behalf.')]
+('7. Entire agreement','This agreement and completed Schedule A state the parties’ arrangement. Future changes require notice and agreement before they affect future referrals. [CONFIRM: governing law, venue and any required notice period]. Each signer signs only for the party they are authorized to represent.')]
 for title,text in sections:
  number,label=title.split('. ',1)
  section(c,int(number),label,y);y=paragraph(c,text,44,y-20,524,9.6,leading=13.2)-7
 assert y>55, f'Agreement text overflows: {y}'
-c.showPage();head(c,'Schedule A & signatures','DRAFT. BEASTY must confirm the commercial terms and legal entity before an affiliate signs.',True,page=11)
+c.showPage();head(c,'Schedule A & signatures','BEASTY completes this schedule before sending the finalized agreement. Applicants review the terms and sign.',True,page=13)
 y=617
 for number,(title,text) in enumerate([
 ('Published BARK reference (confirm for this agreement)','The project notes and Careers page describe 3 points per referred user, 6 per referred business, $1 per point and redemption from 100 points. These reference figures are not sufficient to define an eligible referral or the payment date. Glenn must confirm whether this agreement uses these figures or a separate commission schedule.'),
@@ -139,7 +145,7 @@ for number,(title,text) in enumerate([
  section(c,number,title,y);y=paragraph(c,text,44,y-20,524,9.5,leading=13.1)-9
 assert y>350, f'Schedule A overlaps signing fields: {y}'
 section(c,4,'Affiliate',338)
-field(c,'Legal Name','Affiliate legal name',286)
+field(c,'Affiliate Legal Name','Affiliate legal name (individual or business)',286)
 field(c,'Affiliate Signature','Affiliate signature',217,w=328,kind='signature')
 field(c,'Affiliate Signing Date','Signing date',217,x=388,w=180,kind='datenow')
 section(c,5,'BEASTY countersignature',184)
@@ -148,16 +154,16 @@ field(c,'BEASTY Signature','BEASTY countersignature',66,w=328,kind='signature',r
 field(c,'BEASTY Signing Date','Countersigning date',66,x=388,w=180,kind='datenow',role='BEASTY');finish(c,p)
 
 writer=PdfWriter()
-for name in ['beasty-w9.pdf','beasty-direct-deposit.pdf','beasty-id-verification.pdf','beasty-affiliate-agreement-DRAFT.pdf']:
+for name in ['beasty-w9.pdf','beasty-direct-deposit.pdf','beasty-id-verification.pdf','beasty-affiliate-disclosures-DRAFT.pdf','beasty-affiliate-agreement-DRAFT.pdf']:
  writer.append(OUT/name)
 with (OUT/'beasty-affiliate-packet-DRAFT.pdf').open('wb') as f:writer.write(f)
-print('Created 4 templates plus a 11-page draft packet in',OUT)
+print('Created 5 templates plus a 13-page draft packet in',OUT)
 
 # Also make the combined upload an actual AcroForm. The Web UI imports these
 # exact names/types/positions instead of guessing fields from page images.
 from pypdf.generic import DictionaryObject, NameObject, TextStringObject, NumberObject, ArrayObject, BooleanObject, FloatObject, DecodedStreamObject
 forms=[];offset=0
-for name in ['beasty-w9.pdf','beasty-direct-deposit.pdf','beasty-id-verification.pdf','beasty-affiliate-agreement-DRAFT.pdf']:
+for name in ['beasty-w9.pdf','beasty-direct-deposit.pdf','beasty-id-verification.pdf','beasty-affiliate-disclosures-DRAFT.pdf','beasty-affiliate-agreement-DRAFT.pdf']:
  for rec in json.loads((OUT/(name+'.fields.json')).read_text()):
   for area in rec['areas']:
    area['page'] += offset
@@ -199,20 +205,21 @@ helvetica=writer._add_object(DictionaryObject({NameObject('/Type'):NameObject('/
 writer.root_object[NameObject('/AcroForm')]=DictionaryObject({NameObject('/Fields'):fields,NameObject('/NeedAppearances'):BooleanObject(False),NameObject('/DA'):TextStringObject('/Helv 10 Tf 0 g'),NameObject('/DR'):DictionaryObject({NameObject('/Font'):DictionaryObject({NameObject('/Helv'):helvetica})})})
 blank_values={name:'' for name,ref in by_name.items() if ref.get_object()['/FT'] in ['/Tx','/Ch']}
 writer.update_page_form_field_values(None,blank_values,auto_regenerate=False)
+writer.update_page_form_field_values(None,{'BEASTY Representative':'Glenn Malicdem'},auto_regenerate=False)
 with (OUT/'BEASTY-Affiliate-Packet-DRAFT.pdf').open('wb') as f:writer.write(f)
 (OUT/'packet-fields.json').write_text(json.dumps(forms,indent=2))
 check=PdfReader(OUT/'BEASTY-Affiliate-Packet-DRAFT.pdf');assert set(check.get_fields())==set(by_name)
-assert len(check.pages)==11
-assert len(by_name)==32
+assert len(check.pages)==13
+assert len(by_name)==35
 widgets=[a.get_object() for page in check.pages for a in page.get('/Annots',[]) if a.get_object().get('/Subtype')=='/Widget']
 assert all(widget.get('/AP',{}).get('/N') for widget in widgets if widget['/Parent'].get_object()['/FT']!='/Sig')
 probe=PdfWriter();probe.clone_document_from_reader(check)
-values={'Legal Name':'TEST NAME - QA ONLY','Bank Name':'TEST BANK - QA ONLY','Tax ID Type':'SSN','Federal Tax Classification':'/C corporation'}
+values={'Taxpayer Legal Name':'TEST TAXPAYER - QA ONLY','Account Holder Name':'TEST ACCOUNT HOLDER - QA ONLY','ID Legal Name':'TEST PERSON - QA ONLY','Affiliate Legal Name':'TEST AFFILIATE - QA ONLY','Bank Name':'TEST BANK - QA ONLY','Tax ID Type':'SSN','Federal Tax Classification':'/C corporation'}
 probe.update_page_form_field_values(None,values,auto_regenerate=False)
 with (OUT/'packet-fill-test.pdf').open('wb') as stream:probe.write(stream)
 filled=PdfReader(OUT/'packet-fill-test.pdf')
 for name,value in values.items():assert filled.get_fields()[name]['/V']==value
-classifications=[a.get_object() for page in filled.pages for a in page.get('/Annots',[]) if a.get_object()['/Parent'].get_object()['/T']=='Federal Tax Classification']
+classifications=[a.get_object() for page in filled.pages for a in page.get('/Annots',[]) if a.get_object().get('/Subtype')=='/Widget' and a.get_object()['/Parent'].get_object()['/T']=='Federal Tax Classification']
 assert sum(w['/AS']=='/C corporation' for w in classifications)==1
 selected_classification=next(w for w in classifications if w['/AS']=='/C corporation')
 assert selected_classification['/AP']['/N']['/C corporation'].get_object().get_data(), 'Selected tax classification must be visible'

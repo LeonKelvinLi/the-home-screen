@@ -1,0 +1,152 @@
+/* The signing step follows the document packet: quiet paper, clear sections,
+   restrained BEASTY yellow. Other applicant pages retain their existing layout. */
+.onb-doc-page {
+  --ink: #20252b;
+  --muted: #59616a;
+  --line: #d3d8dc;
+  --field: #fafbfc;
+  --on-y: #59616a;
+  background: #f5f7f8;
+}
+.onb-doc-page .onb-bar {
+  border-bottom: 1px solid var(--line);
+  background: white;
+}
+.onb-doc-page .onb-title {
+  max-width: 18ch;
+  font-family: var(--text);
+  font-size: clamp(32px, 5vw, 46px);
+  font-weight: 650;
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+.onb-doc-page .onb-sheet {
+  padding: 24px 24px 0;
+  border-top: 1px solid var(--line);
+  border-radius: 16px 16px 0 0;
+}
+.onb-doc-page .onb-dock {
+  margin: 28px -24px 0;
+  padding: 14px 24px calc(14px + env(safe-area-inset-bottom));
+}
+.onb-document-intro {
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+.onb .onb-document-intro h2 {
+  margin: 0;
+  font: 650 24px/1.25 var(--text);
+  letter-spacing: -0.025em;
+}
+.onb-document-intro h2::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 3px;
+  margin-bottom: 16px;
+  background: var(--y);
+}
+.onb-document-intro p,
+.onb-document-contents p,
+.onb-signing-progress p,
+.onb-disclosures p {
+  margin-top: 8px;
+  max-width: 68ch;
+  color: var(--muted);
+  font-size: 14.5px;
+  line-height: 1.65;
+}
+.onb-document-grid {
+  display: grid;
+  gap: 24px;
+  margin-top: 24px;
+}
+.onb-document-contents ul,
+.onb-signing-progress ol {
+  padding: 0;
+  list-style: none;
+}
+.onb-document-contents li {
+  display: flex;
+  gap: 15px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.onb-document-contents li:first-child { padding-top: 0; }
+.onb-document-contents svg { flex: none; margin-top: 2px; color: var(--muted); }
+.onb .onb-document-contents h3,
+.onb .onb-document-action h3,
+.onb .onb-signing-progress h3,
+.onb .onb-disclosures h3 {
+  font-size: 16px;
+  font-weight: 650;
+  line-height: 1.4;
+}
+.onb-document-contents p { margin-top: 5px; }
+.onb .onb-document-privacy {
+  margin-top: 18px;
+  padding-left: 16px;
+  border-left: 3px solid var(--y);
+  font-size: 13.5px;
+}
+.onb-document-action {
+  align-self: start;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--field);
+}
+.onb-document-action .onb-copy { margin-top: 12px; font-size: 14.5px; line-height: 1.65; }
+.onb-document-action .onb-btn { margin-top: 16px; min-height: 48px; font-size: 14px; padding: 10px 16px; }
+.onb-document-action .onb-link { display: inline-block; margin-top: 16px; font-size: 13.5px; }
+.onb-document-action .onb-quiet { margin-top: 14px; font-size: 13px; line-height: 1.6; }
+.onb-document-action .onb-note { padding: 0; background: none; border-radius: 0; font-size: 14.5px; }
+.onb-signing-progress,
+.onb-disclosures { margin-top: 30px; padding-top: 25px; border-top: 1px solid var(--line); }
+.onb-signing-progress ol { margin-top: 10px; }
+.onb-signing-progress li {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--line);
+}
+.onb-signing-progress li:last-child { padding-bottom: 0; border-bottom: 0; }
+.onb-progress-number {
+  display: grid;
+  place-items: center;
+  width: 25px;
+  height: 25px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 600;
+}
+.onb-signing-progress b { font-size: 14.5px; font-weight: 600; }
+.onb-signing-progress p { margin-top: 5px; font-size: 13.5px; }
+.onb-signing-progress .onb-tag { max-width: 114px; white-space: normal; text-align: center; font-size: 12px; }
+.onb-disclosures > p { margin-bottom: 16px; }
+.onb-disclosures details { border-top: 1px solid var(--line); }
+.onb-disclosures summary { padding: 16px 0; font-size: 14px; font-weight: 600; cursor: pointer; }
+.onb-disclosures details p { margin: 0 0 20px; }
+
+@media (max-width: 599px) {
+  .onb-document-action { order: -1; }
+  .onb-signing-progress li { grid-template-columns: 25px minmax(0, 1fr); }
+  .onb-signing-progress .onb-tag { grid-column: 2; justify-self: start; }
+}
+@media (min-width: 960px) {
+  .onb-doc-page .onb-stage {
+    grid-template-columns: minmax(250px, 0.85fr) minmax(0, 2.4fr);
+    gap: 28px;
+    padding: 28px 40px 40px;
+  }
+  .onb-doc-page .onb-head { padding: 16px 0; }
+  .onb-doc-page .onb-head .onb-lede { font-size: 15px; line-height: 1.65; }
+  .onb-doc-page .onb-sheet { padding: 32px 32px 0; border: 1px solid var(--line); border-radius: 12px; }
+  .onb-doc-page .onb-dock { margin: 32px -32px 0; padding: 16px 32px 24px; border-radius: 0 0 12px 12px; }
+}
+@media (min-width: 1280px) {
+  .onb-document-grid { grid-template-columns: minmax(0, 1fr) minmax(260px, 0.8fr); gap: 30px; }
+}

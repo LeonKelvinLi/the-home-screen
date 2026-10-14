@@ -18,6 +18,8 @@ import type { FormEvent, ReactNode } from 'react'
 import { api } from './api'
 import { Avatar, dateTime, Empty, Failure, Loading, PageTitle, Section, ago, personName, plural, useApi, useCrm } from './ui'
 import { Icon } from './icons'
+import { onboardingPrefill } from '../../shared/onboarding-prefill'
+import './affiliate-prefill.css'
 
 type EmailStatus = 'accepted' | 'failed' | 'not_configured'
 type Mode = 'off' | 'mock' | 'live' | 'manual'
@@ -425,6 +427,12 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
   const [error, setError] = useState('')
   const [notice, setNotice] = useState('')
   const closed = ['approved', 'rejected', 'suspended'].includes(d.status)
+  const prefill = onboardingPrefill(Object.fromEntries(Object.entries(d.profile).filter((entry): entry is [string, string] => typeof entry[1] === 'string')))
+  const copyPrefill = async (name: string, value: string) => {
+    setError(''); setNotice('')
+    try { await navigator.clipboard.writeText(value); setNotice(`${name} copied. Paste it into this applicant’s DocuSeal request.`) }
+    catch { setError('Copy was unavailable. Select the displayed value and copy it.') }
+  }
   useEffect(() => {
     setSubmissionUrl(packet.submissionUrl); setAffiliateUrl(packet.affiliateUrl); setCompanyUrl(packet.companyUrl)
     setConfirmed(false); setReplaceVerified(false); setChecks(packet.evidence)
@@ -444,6 +452,14 @@ function ManualPacket({ d, packet, reload }: { d: Detail; packet: NonNullable<De
   return <Section title="DocuSeal packet">
     <div className="crm-aff-manual">
       <p className="crm-note">DocuSeal stores the documents. This record shows what an admin has checked; it does not automatically detect signatures.</p>
+      <details className="crm-aff-prefill">
+        <summary>Prepare saved details for this applicant</summary>
+        <p className="crm-note">Use the approved template’s sender fields to prepare this applicant’s name and address before sending. Keep taxpayer details editable for the applicant to confirm. Tax classification, taxpayer number, bank details, ID and signatures must come from the applicant.</p>
+        {['ID Legal Name', 'Affiliate Legal Name', 'Taxpayer Legal Name', 'Business Name', 'Street Address', 'City State ZIP'].filter(name => prefill[name]).map(name => <div className="crm-aff-prefill-row" key={name}>
+          <div><b>{name}</b><span>{prefill[name]}</span></div>
+          <button className="crm-btn" disabled={busy} onClick={() => void copyPrefill(name, prefill[name])}>Copy {name.toLowerCase()}</button>
+        </div>)}
+      </details>
       {!packet.approvedTemplateUrl ? <p className="crm-aff-notice">The agreement needs Glenn and Leon’s approved terms. Signing links stay locked until the approved template is configured.</p> : (
         <>
           <a className="crm-btn" href={packet.approvedTemplateUrl} target="_blank" rel="noopener noreferrer">Open approved template in DocuSeal</a>

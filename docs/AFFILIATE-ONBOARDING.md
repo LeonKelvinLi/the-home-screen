@@ -89,8 +89,8 @@ Set `AFFILIATE_SIGNING=manual` on **both** site and CRM, keeping affiliate
 Stripe payouts off. No DocuSeal API key or Pro subscription is required.
 
 1. Glenn and Leon finalize the company identity and agreement/payment terms.
-   The redesigned blank review template is in Glenn's account, template 6402572;
-   the packet draft is 6402583. Earlier drafts are preserved. Neither is an
+   The complete review template is in Glenn's account, template 6403162;
+   the packet draft is 6402995. Earlier drafts are preserved. Neither is an
    approved applicant agreement.
 2. Create the finalized packet with Affiliate and BEASTY roles, signed W-9,
    signed direct-deposit authorization and a required ID image upload. Without
