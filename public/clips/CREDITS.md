@@ -249,6 +249,7 @@ the most movement — to 540x960 with sound.
 | `rise-woodfire.mp4` | Rise Woodfire Pizza & Rotisserie, San Mateo and Santa Clara | instagram.com/reel/DecZfHUiGT2 — **an excerpt**, 4s–18s of 42s; posted by @mukbangyourmama, a food creator — sent on 2026-10-13 with "Clip this video plz" |
 | `sweet-pipers.mp4` | Sweet Pipers, Pinole | instagram.com/reel/DecMBslTErN — **an excerpt**, 5s–19s of 82s; posted by @chris.corpz, a food creator — sent on 2026-10-13 with "Clip this video plz" |
 | `katsu-burger.mp4` | Katsu Burger, Santa Clara | instagram.com/reel/DeIconCRmx- — **an excerpt**, 0s–14s of 89s; posted by @grubwitmike, a food creator — sent on 2026-10-13 with "Clip this video plz" |
+| `soh-pizza.mp4` | Slice of Homage Pizza, Sunnyvale | instagram.com/reel/DecUOyRzdMQ — **an excerpt**, 0s–14s of 19s; their own post — sent on 2026-10-13 with "Clip this video plz" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

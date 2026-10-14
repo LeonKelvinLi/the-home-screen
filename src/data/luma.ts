@@ -442,6 +442,7 @@ export const ICON_LUMA: Record<string, number> = {
   'skilletz-cafe': 0.0463,
   'sliceit-pizza': 0.0853,
   'snatched-by-chinita': 0.8588,
+  'soh-pizza': 0.1316,
   'sourdough-eatery': 0.1614,
   'souva-mobile-pet-grooming': 0.1058,
   'state-bird-provisions': 0.9037,

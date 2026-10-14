@@ -12767,4 +12767,119 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  /*
+    BATCH 49, 2026-10-13 evening (research in r1013d). SOH PIZZA, "Sunnyvale • Eats". Glenn,
+    with their Instagram (@sliceofhomage), site and their own reel ("Clip this video plz").
+    Slice of Homage: address, email and phone from sohpizza.com (its ordering page prints the
+    phone with two digits swapped; the website's is used), hours and the menu with prices
+    from the Sunnyvale ordering page their "Order Now" button opens, which may price above
+    the counter, so the note says so. The San Jose shop is not open yet. Their order page's
+    Pickup tile still points at an old San Jose store, so it is not linked. Sunnyvale's
+    Italian seat was open.
+  */
+  {
+    slug: 'soh-pizza',
+    icon: 'soh-pizza',
+    name: 'Slice of Homage Pizza',
+    label: 'SOH Pizza',
+    cuisine: 'Detroit, NY & Sicilian pizza',
+    tagline: 'Craft pizza on El Camino Real: Detroit squares, New York pies, Sicilian and Chicago thin.',
+    color: '#111111|#D7262E',
+    prep: 0,
+    category: 'Pizza',
+    address: "1253 W El Camino Real, Sunnyvale, CA 94087",
+    phone: "(408) 734-5095",
+    email: "info@sohpizza.com",
+    hours: "Sun-Thu 11:30am-9pm, Fri-Sat 11:30am-10pm",
+    site: "https://www.sohpizza.com/",
+    orderUrl: 'https://order.online/store/slice-of-homage-pizza-sunnyvale-35083155',
+    menuNote: 'Prices from their own online ordering page; prices in the shop may differ.',
+    clip: {
+      src: '/clips/soh-pizza.mp4',
+      poster: '/clips/soh-pizza-poster.webp',
+      href: 'https://www.instagram.com/reel/DecUOyRzdMQ/',
+      credit: 'Posted by Slice of Homage Pizza',
+      platform: 'Instagram',
+    },
+    sections: [
+      { name: "Calzone", items: [
+        ["DIY Calzone", "A calzone is an Italian oven-baked turnover, made with leavened dough. It originated in Naples our version includes two types of mozzerella cheese and our signaturre tomato sauce. Our Calzones come with a side of pizza sauce and a side of Ranch.", 2280],
+      ] },
+      { name: "Cheesebread", items: [
+        ["NY Cheese Bread", "Garlic-seasoned breadsticks with mozzarella blend on our New York dough. Includes one pizza sauce and one ranch dressing.", 1920],
+        ["NY Bacon Cheddar Cheesebread", "Garlic-seasoned breadsticks with mozzarella blend, white cheddar, and bacon on our New York dough. Includes one pizza sauce and one ranch dressing.", 2160],
+      ] },
+      { name: "Detroit", items: [
+        ["Detroit vs Everybody", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*, Genoa salami, roasted mushroom, bacon, fresh-pinched Fontanini® sausage, Rosa Grande® pepperoni. Finished with Stanislaus vine-ripe tomato sauce, whipped Ricotta con Latte®, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5400],
+        ["Red Head", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*, Rosa Grande® pepperoni, Swiss American cupping pepperoni. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4560],
+        ["Greek (Vegetarian)", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*, green bell peppers, red onions, artichoke, kalamata olives and feta cheese. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4560],
+        ["Spicy D", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*, green bell peppers, red onions, fresh jalapenos, california black olives, bacon, fresh-pinched Fontanini® sausage, Swiss American cupping pepperoni. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, freshly grated Grana Padano DOP*, and crushed red pepper flakes. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5400],
+        ["CTS", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*, Genoa salami, canadian bacon, bacon, fresh-pinched Fontanini® sausage, Rosa Grande® pepperoni. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5400],
+        ["Margherita", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*, Grande Avorio® fresh mozzarella, basil, fresh chopped garlic, cherry tomato, and red onion. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4080],
+        ["DIY Detroit", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3960],
+        ["Veggie on Evelyn", "Crispy rectangular pizza topped with zucchini slices, cherry tomatoes, olives, and herbs on a cheesy base.", 5160],
+        ["Tricolore (Detroit)", "Serves 3-4 people. Grain Craft flour, SOH Four-Cheese House Blend*. House-made- vodka sauce, Stanislaus vine-ripe tomato sauce, and house-made- pesto. TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4920],
+      ] },
+      { name: "Detroit Minis", items: [
+        ["Detroit vs Everybody - Mini", "Serves 1-2 people. Grain Craft flour, SOH Four-Cheese House Blend*, Genoa salami, roasted mushroom, bacon, fresh-pinched Fontanini® sausage, Rosa Grande® pepperoni. Finished with Stanislaus vine-ripe tomato sauce, whipped Ricotta con Latte®, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4200],
+        ["Red Head - Mini", "Serves 1-2 people. Grain Craft flour, SOH Four-Cheese House Blend*, Rosa Grande® pepperoni, Swiss American cupping pepperoni. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3240],
+        ["Greek (Vegetarian) - Mini", "Serves 1-2 people. Grain Craft flour, SOH Four-Cheese House Blend*, green bell peppers, red onions, artichoke, kalamata olives and feta cheese. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3240],
+        ["Spicy D - Mini", "Serves 1-2 people. Grain Craft flour, SOH Four-Cheese House Blend*, green bell peppers, red onions, fresh jalapenos, california black olives, bacon, fresh-pinched Fontanini® sausage, Swiss American cupping pepperoni. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, freshly grated Grana Padano DOP*, and crushed red pepper flakes. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4200],
+        ["CTS - Mini", "Serves 1-2 people Grain Craft flour, SOH Four-Cheese House Blend*, Genoa salami, canadian bacon, bacon, fresh-pinched Fontanini® sausage, Rosa Grande® pepperoni. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4200],
+        ["Margherita - Mini", "Serves 1-2 people Grain Craft flour, SOH Four-Cheese House Blend*, Grande Avorio® fresh mozzarella, basil, fresh chopped garlic, cherry tomato, and red onion. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 2760],
+        ["DIY Detroit - Mini", "Serves 1-2 people. Grain Craft flour, SOH Four-Cheese House Blend*. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 2640],
+        ["Veggie on Evelyn - Mini", "Bell Pepper, Red Onion, Roasted Mushroom, Black Olive, Grape Tomato, minced garlic, zucchini Serves 1-2 people Grain Craft flour, SOH Four-Cheese House Blend*. Finished with Stanislaus vine-ripe tomato sauce, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*.", 3840],
+        ["Tricolore (Mini Detroit)", "Serves 1-2 people. Grain Craft flour, SOH Four-Cheese House Blend*. House-made- vodka sauce, Stanislaus vine-ripe tomato sauce, and house-made- pesto. TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *SOH Four Cheese House Blend: Point Reyes Farmstead Toma, Buholzer Brothers Wisconsin Brick, Grande East Coast Blend, Monterey Jack and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3240],
+      ] },
+      { name: "New York 14\"", items: [
+        ["Americana Classica - 14\"", "Serves 2-3 people. Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano, Genoa salami, Canadian bacon, bell pepper, red onion, roasted mushroom, California black olives, bacon, scallions, fresh-pinched Fontanini® sausage, Swiss American cupping pepperoni. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4800],
+        ["DIY New York/Cheese - 14\"", "Serves 2-3 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 2640],
+        ["Halla Mahalo - 14\"", "Serves 2-3 people. Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano, Canadian bacon, fresh jalapeno, hand-sliced pineapple, scallions, bacon. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3960],
+        ["Margherita (Vegetarian) - 14\"", "Serves 2-3 people Central Milling® flour, grandma sauce*, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3720],
+        ["The Pep - 14\"", "Serves 2-3 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano, Swiss American cupping pepperoni. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3600],
+        ["Veggie on Evelyn - 14\"", "Bell Pepper, Red Onion, Roasted Mushroom, Black Olive, Grape Tomato, minced garlic, zucchini Serves 2-3 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarellaAvorio® fresh mozzarella® pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana Padano DOP*.", 3960],
+        ["All Roads Lead to AZ - 14\"", "Serves 1-2 people Smoked mozzarella, roasted mushrooms, red onions, Truly extra virgin olive oil, roasted pistachios, Grana Padano, an Homage pizza to the great Chris Bianco", 3840],
+      ] },
+      { name: "New York 18\"", items: [
+        ["American Classica - 18\"", "Serves 4-6 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano, Genoa salami, Canadian bacon, bell pepper, red onion, roasted mushroom, California black olives, bacon, scallions, fresh-pinched Fontanini® sausage, Swiss American cupping pepperoni. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 6120],
+        ["DIY NY / Cheese - 18\"", "Serves 4-6 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 3840],
+        ["Halla Mahalo - 18\"", "Serves 4-6 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano, Canadian bacon, fresh jalapeno, hand-sliced pineapple, scallions, bacon. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5160],
+        ["Margherita (V) - 18\"", "Serves 4-6 people Central Milling® flour, grandma sauce*, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 4800],
+        ["The Pep - 18\"", "Serves 4-6 people Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella, Avorio® fresh mozzarella, Grande® pecorino romano, oregano, Swiss American cupping pepperoni. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana padano DOP*. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5040],
+        ["Veggie on Evelyn - 18\"", "Serves 4-6 Central Milling® flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarellaAvorio® fresh mozzarella® pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO, whole basil leaf, and freshly grated Grana Padano DOP* Bell Pepper, Red Onion, Roasted Mushroom, Black Olive, Grape Tomato, minced garlic, zucchini", 5520],
+        ["All Roads Lead to AZ - 18\"", "Serves 4-6 Smoked mozzarella, roasted mushrooms, red onions, Truly extra virgin olive oil, roasted pistachios, Grana Padano, an Homage pizza to the great Chris Bianco", 5040],
+      ] },
+      { name: "Chicago Cracker Thin", items: [
+        ["DIY 14\" Chicago Cracker-Thin", "Cersota flour, Stanislaus vine-ripe tomato sauce, Grande East Coast blend mozzarella. Grande Pecorino Romano, Calabrian oregano, finished this TRULY 100% garlic-infused EVOO. Serves 1-2 guests.", 2880],
+      ] },
+      { name: "Sicilian", items: [
+        ["Pizza Guy", "Serves 4-6 people. General Mills Supreme flour, grandma sauce*, Grande mozzarella, cupping pepperoni, fresh-pinched Fontanini® sausage, oregano, Grande® pecorino romano. Finished with whipped Ricotta con Latte®, TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 6240],
+        ["Margherita (Vegetarian) Sicilian", "Serves 4-6 people. General Mills Supreme flour, grandma sauce*, Grande whole-milk mozzarella cheese, Avorio® fresh mozzarella, oregano Grande® pecorino romano. Finished with TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5160],
+        ["Post Street (Vegetarian)", "Serves 4-6 people. General Mills Supreme flour, Avorio® fresh mozzarella, oregano, house-made vodka sauce, grandma sauce* drizzle, Grande® pecorino romano. Finished with TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5040],
+        ["DIY Sicilian", "Serves 4-6 people. General Mills Supreme flour, grandma sauce*, Grande whole-milk mozzarella,, Grande pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5160],
+        ["Tricolore (Sicilian)", "Serves 4-6 people. General Mills Supreme flour, grandma sauce*, house-made-vodka sauce, and house-made- pesto, Grande whole-milk mozzarella,, Grande pecorino romano, oregano. Finished with TRULY® 100% garlic-infused EVOO, and freshly grated Grana Padano DOP*. *Grandma Sauce: is a tomato sauce base with roasted onions and roasted garlic. *Grana Padano DOP: is a part-slim hard cheese made from cows milk, aged for at least 9 months.", 5160],
+        ["Veggie on Evelyn (Sicilian)", "Bell Pepper, Red Onion, Roasted Mushroom, Black Olive, Grape Tomato, minced garlic, zucchini Serves 4-6 people. General Mills Supreme flour, grandma sauce*, Grande whole-milk mozzarella cheese, oregano Grande® pecorino romano. Finished with TRULY® 100% garlic-infused EVOO, basil chiffonade, and freshly grated Grana Padano DOP*.", 6240],
+      ] },
+      { name: "Sides", items: [
+        ["Housemade Ranch", "Creamy ranch dressing made in-house with a blend of herbs and spices.", 120],
+        ["Hot Honey Packet", "Sweet honey infused with chilies for a spicy kick, perfect for adding flavor to any dish.", 120],
+        ["BBQ Sauce", "Rich and tangy sauce with a smoky flavor, ideal for complementing various dishes.", 240],
+        ["Buffalo Sauce", "Smooth and tangy blend of hot sauce and butter, offering a spicy kick to complement your meal.", 240],
+        ["Pizza Sauce", "Rich tomato base with herbs and spices, ideal for complementing Italian dishes.", 240],
+        ["Vodka Sauce", "Creamy tomato-based sauce with a hint of vodka, perfect for enhancing pasta dishes with its rich and savory flavor.", 360],
+        ["Pesto Sauce", "A vibrant blend of fresh basil, garlic, pine nuts, Parmesan, and olive oil, creating a rich and aromatic accompaniment.", 300],
+      ] },
+      { name: "Wings", items: [
+        ["Wings", "Choice of Buffalo, Mike's Hot Honey or Jack Daniels, BBQ, served with celery & a side of ranch dressing", 2040],
+      ] },
+      { name: "Drinks", items: [
+        ["Coke", "Classic carbonated soft drink with original cola flavor, offering a familiar and refreshing taste.", 360],
+        ["Coke Zero", "Zero-calorie cola with classic taste, offering a refreshing beverage choice.", 360],
+        ["Sprite", "Lemon-lime flavored soda.", 360],
+        ["Still Saratoga Water", "Pure, balanced natural spring water in a distinctive blue bottle.", 360],
+        ["Sparkling Saratoga Water", "Effervescent Saratoga spring water in a sleek blue bottle.", 360],
+      ] },
+    ],
+    items: [],
+  },
 ]
