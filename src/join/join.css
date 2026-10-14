@@ -770,3 +770,13 @@
     animation: none !important;
   }
 }
+.onb-manual {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 14px;
+}
+.onb-manual .onb-link {
+  align-self: flex-start;
+  min-height: 44px;
+}

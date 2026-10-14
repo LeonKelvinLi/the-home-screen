@@ -31,5 +31,8 @@ delivery. Never sign a real agreement on another person's behalf.
 ## Dependencies
 
 No paid services authorized. Final contract terms remain with Glenn and Leon.
-Free signing handoff choice is pending. Existing DocuSeal draft 6399497 is
+Leon selected the free manual CRM handoff. CRM will record admin-reviewed
+evidence explicitly; an applicant's review request never marks a signature.
+An approved template ID is required before an admin may attach signing links.
+Existing DocuSeal draft 6399497 is
 review material and must not be selected as the live applicant agreement.

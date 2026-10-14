@@ -55,6 +55,13 @@ CREATE TABLE IF NOT EXISTS onboarding_documents (
 );
 CREATE INDEX IF NOT EXISTS onboarding_documents_app ON onboarding_documents (application_id, created_at DESC);
 CREATE INDEX IF NOT EXISTS onboarding_documents_ref ON onboarding_documents (provider, provider_ref);
+-- Free DocuSeal dashboard requests: references and review flags only.
+ALTER TABLE onboarding_documents ADD COLUMN IF NOT EXISTS submission_url TEXT NOT NULL DEFAULT '';
+ALTER TABLE onboarding_documents ADD COLUMN IF NOT EXISTS manual_revision INTEGER NOT NULL DEFAULT 0;
+ALTER TABLE onboarding_documents ADD COLUMN IF NOT EXISTS manual_evidence JSONB NOT NULL DEFAULT '{}'::jsonb;
+ALTER TABLE onboarding_documents ADD COLUMN IF NOT EXISTS verified_by TEXT;
+ALTER TABLE onboarding_documents ADD COLUMN IF NOT EXISTS review_requested_at BIGINT;
+CREATE UNIQUE INDEX IF NOT EXISTS onboarding_manual_submission ON onboarding_documents (provider_ref) WHERE provider = 'manual' AND provider_ref <> '';
 CREATE TABLE IF NOT EXISTS onboarding_events (
   id              BIGSERIAL PRIMARY KEY,
   application_id  TEXT REFERENCES onboarding_applications(id) ON DELETE CASCADE,

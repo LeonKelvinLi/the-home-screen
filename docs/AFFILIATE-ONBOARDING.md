@@ -18,7 +18,7 @@ Stripe Connect step below is still built and appears only when
 |---|---|---|
 | Portal | `src/join/JoinScreen.tsx`, `src/join/join.css` | `beastypages.com/join` and `/join/<invite>`. Welcome, sign in with a code, three steps (four with Stripe payouts on), then the affiliate's dashboard. Autosaves as they type. |
 | API | `server/onboarding.ts` | `/api/onboarding/*` for the affiliate, `/api/crm/onboarding*` for the team, the DocuSeal webhook. |
-| Outside services | `server/onboarding-providers.ts` | DocuSeal (the forms and agreement) and, when switched on, Stripe Connect (payouts, ID, tax, bank). Each is `off`, `mock` or `live`. |
+| Outside services | `server/onboarding-providers.ts`, `server/onboarding-manual.ts` | DocuSeal via a free manual dashboard handoff or a paid API integration, and optional Stripe Connect. |
 | Tables | `server/db/onboarding-schema.ts` | `onboarding_invites`, `onboarding_applications`, `onboarding_documents`, `onboarding_events`, `onboarding_webhook_events`. |
 | CRM pages | `src/crm/affiliates.tsx` | People → Affiliates: the list, invites, one person's page, countersign, approve. |
 | Test | `tools/audit-onboarding.mjs` | The whole journey in test mode, API and browser, phone and computer. |
@@ -36,8 +36,10 @@ The steps the affiliate sees:
 3. **Forms & agreement** (just "Agreement" when Stripe is on). Opens DocuSeal:
    one packet with the W-9, the direct-deposit form, an ID photo upload and the
    agreement, filled in from step 1. The affiliate fills in and signs; Glenn
-   countersigns from the CRM. "Signed" is only ever what DocuSeal reports
-   (webhook plus a re-check on page load), never a button press.
+   countersigns from the CRM. In free manual mode, an admin checks the
+   documents, signatures and audit trail in DocuSeal and records that review.
+   The applicant's "request review" button never marks a signature. In API
+   mode, signatures reconcile from DocuSeal's API and webhook.
 4. **Review & submit.** Locks the application for review and emails it to
    `LEAD_EMAIL` and the affiliate. A step whose service is not switched on yet
    (Stripe Connect, DocuSeal) does not block submitting: the affiliate sends
@@ -59,7 +61,7 @@ someone down needs a note, which is emailed to them.
 | Team list, filters, search, person page, history of every action (including who opened the record) | Built and working |
 | Approve, ask for a change, turn down, pause, reinstate, with emails | Built and working (emails need `RESEND_API_KEY` and `OTP_FROM_EMAIL`, as for all site email) |
 | Stripe payouts step | Built, **off on purpose** (no Stripe for affiliates for now). Hidden while off; the journey is three steps |
-| DocuSeal forms, agreement and countersign | Built, **not switched on**: needs a DocuSeal account and the packet template below. Until then it says "opens soon", does not block submitting, and approval waits for it |
+| Free DocuSeal handoff | Built: request forms, attach separate signing links in CRM, request review, admin checks W-9/bank/ID/audit/signatures, countersign and approve. Approved template configuration is required before linking any applicant packet. |
 | Agreement wording | **Needs Glenn and a lawyer.** Nothing here invents terms. |
 | Commissions and payouts to affiliates | **Not built.** Glenn pays from the W-9 and direct-deposit form in the signed packet; the dashboard says commission tracking isn't switched on yet. |
 | Test mode (`AFFILIATE_PROVIDERS=mock`) | Local and audits only; refused in production. Every test screen is labelled. |
@@ -81,7 +83,56 @@ the CRM says what is waiting; nothing pretends to work.
 4. Optional: in Connect settings, brand the onboarding pages with the BEASTY
    logo and yellow.
 
-### DocuSeal (forms and agreement)
+### Free DocuSeal handoff (Leon's selected approach)
+
+Set `AFFILIATE_SIGNING=manual` on **both** site and CRM, keeping affiliate
+Stripe payouts off. No DocuSeal API key or Pro subscription is required.
+
+1. Glenn and Leon finalize the company identity and agreement/payment terms.
+   The blank review template is in Glenn's account, template 6399923; the
+   packet draft is 6399497. Neither is an approved applicant agreement.
+2. Create the finalized packet with Affiliate and BEASTY roles, signed W-9,
+   signed direct-deposit authorization and a required ID image upload. Without
+   Pro conditional fields, explicitly review that the applicable SSN **or**
+   EIN is completed, and any LLC/Other classification is supplied as needed.
+3. Set the finalized ID as `DOCUSEAL_MANUAL_TEMPLATE_ID` on both services and
+   deploy. Leave this unset while the agreement is a draft. CRM will explain
+   the pending approval and refuse any link attachment without it.
+4. Invite the applicant in CRM. They register using the normal code login,
+   finish their details and request forms or submit their application.
+5. In DocuSeal, create a **separate submission** from the approved template,
+   with the exact applicant email in Affiliate and Glenn in BEASTY. Preserve
+   signer order. Uncheck **Send Email** if CRM will notify them, so there are
+   no duplicate DocuSeal request emails. Copy the dashboard URL
+   (`https://docuseal.com/submissions/<id>`) and the separate private `/s/`
+   signing links into that applicant's CRM record. Confirm the terms,
+   recipient, roles and required forms. CRM emails the applicant a portal
+   link and accurately reports sending failures while keeping the packet.
+6. The applicant opens their packet, uploads ID and any requested bank proof
+   directly to DocuSeal, fills the forms and signs. They return to `/join` and
+   request review. This means **reported finished**, not verified signed.
+7. Glenn opens the request in DocuSeal, checks the affiliate signature,
+   signed W-9, bank authorization, legible ID upload and matching audit trail,
+   and records his review. CRM opens the BEASTY signing link (or dashboard if
+   that link was omitted). After he countersigns, he checks that signature
+   and records the completed packet. Approval then becomes available.
+8. The affiliate can view the completed packet from their dashboard; DocuSeal
+   supplies its download and audit trail. No sensitive file is copied into
+   BEASTY. A replacement request preserves the previous document record and
+   resets verification; new signatures and review are required.
+
+Only CRM admins can attach links or record review. Team members can see
+progress, but do not receive either private signing link or the request URL.
+Links must be HTTPS on `docuseal.com`; shared public template links, arbitrary
+hosts, credentials/query parameters and identical signer links are refused.
+Submission IDs cannot be attached to two applications. Packet revisions prevent
+stale edits. Manual records are never passed to the vendor API or webhook.
+
+DocuSeal's [free plan and API pricing](https://www.docuseal.com/pricing) differ:
+manual dashboard requests and uploads are supported free; production API and
+embedding require Pro. A sandbox API is not a free production substitute.
+
+### DocuSeal API (optional paid path; not selected)
 
 1. Create a DocuSeal account (cloud, or self-hosted and set `DOCUSEAL_URL`).
 2. Make one template, the packet, with two signer roles named **Affiliate** and
@@ -129,8 +180,13 @@ the CRM says what is waiting; nothing pretends to work.
 ## Running the test
 
 ```bash
-node tools/audit-onboarding.mjs
+node tools/audit-onboarding.mjs --api-only
+node tools/audit-onboarding-manual.mjs
 ```
 
 Set `ONBOARDING_SHOTS=<dir>` to save screenshots of each step. It needs the
 local Postgres (`docker start beasty-pg`) and a fresh `npm run build`.
+Use the connected macOS Chrome extension for browser QA, including a phone
+breakpoint; do not run the script's separate Playwright Chromium under Leon's
+browser preference. The manual audit uses synthetic records, tests admin-only
+review and ownership/URL/revision guards, and makes no DocuSeal API calls.

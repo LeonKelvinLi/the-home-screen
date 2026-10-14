@@ -15,9 +15,15 @@ The original auto-detected draft (6399448) is superseded by 6399497. Neither has
 Leon chose **free** on 13 October and will discuss the agreement with Glenn.
 Do not purchase Pro or activate the draft packet. A free cloud account can
 create signing requests through its dashboard and collect ID/file uploads;
-production API/embedding is paid. A manual CRM handoff or a different provider
-must be selected before implementing a free production signing integration.
-The choice is pending; a sandbox API is not a production substitute.
+production API/embedding is paid. Leon selected the free manual CRM handoff.
+See `docs/AFFILIATE-ONBOARDING.md` for its setup and operating instructions.
+A sandbox API is not a production substitute.
+
+The manual handoff uses `AFFILIATE_SIGNING=manual` on both services. An approved
+`DOCUSEAL_MANUAL_TEMPLATE_ID` is required before CRM accepts signing links.
+It remains unset until Glenn and Leon finalize the agreement, so drafts stay
+out of applicant signing. Admin review flags and signer roles are explicit;
+the affiliate can request review but cannot assert a verified signature.
 
 ### Fillable agreement for review
 
@@ -69,3 +75,14 @@ without executing shell payloads. The notification configuration redeploy runs
 the already-deployed main revision; the dependency fixes are not live yet.
 
 Chrome QA of the isolated CRM confirmed an invite survives missing mail configuration and shows “Email was not sent; copy the link below.” Production signing remains disabled; this code branch has not been deployed.
+
+Free handoff validation: 48 isolated manual API checks plus the existing 53
+onboarding API checks pass. Chrome verified a fresh CRM invitation, email-code
+registration, profile autosave, packet request, submission, link attachment,
+opening the actual DocuSeal request, real image/file uploads, and the review
+request returning to a blocked approval state. The portal fit a 390px phone
+viewport without horizontal overflow. DocuSeal QA template 6402084 and request
+12264021 are explicitly synthetic, non-contract upload tests. No real contract
+was signed and no real taxpayer, bank or ID data was entered. Signature,
+countersignature and approval transitions were exercised using synthetic API
+review flags, not represented as a real executed DocuSeal agreement.

@@ -27,6 +27,7 @@
 import { randomBytes } from 'node:crypto'
 
 export type ProviderMode = 'off' | 'mock' | 'live'
+export type SigningMode = ProviderMode | 'manual'
 
 /** Requirement-level view of a payout account. Nothing in here is sensitive. */
 export interface PayoutState {
@@ -55,7 +56,7 @@ export interface SigningState {
 
 export interface Providers {
   payouts: ProviderMode
-  signing: ProviderMode
+  signing: SigningMode
   /** Create (or reuse) the payout account and return the hosted onboarding link. */
   payoutLink(input: { accountRef: string | null; email: string; returnUrl: string; refreshUrl: string; business: boolean }): Promise<{ accountRef: string; url: string }>
   payoutState(accountRef: string): Promise<PayoutState>
@@ -66,11 +67,11 @@ export interface Providers {
 
 const env = (k: string) => (process.env[k] ?? '').trim()
 
-export function providerModes(prod: boolean): { payouts: ProviderMode; signing: ProviderMode; refusedMock: boolean } {
+export function providerModes(prod: boolean): { payouts: ProviderMode; signing: SigningMode; refusedMock: boolean } {
   const wantsMock = env('AFFILIATE_PROVIDERS') === 'mock'
   const mock = wantsMock && !prod
   const payouts: ProviderMode = mock ? 'mock' : env('AFFILIATE_PAYOUTS') === 'stripe' && env('STRIPE_SECRET_KEY') ? 'live' : 'off'
-  const signing: ProviderMode = mock ? 'mock' : env('DOCUSEAL_API_KEY') && env('DOCUSEAL_AFFILIATE_TEMPLATE_ID') ? 'live' : 'off'
+  const signing: SigningMode = mock ? 'mock' : env('AFFILIATE_SIGNING') === 'manual' ? 'manual' : env('DOCUSEAL_API_KEY') && env('DOCUSEAL_AFFILIATE_TEMPLATE_ID') ? 'live' : 'off'
   return { payouts, signing, refusedMock: wantsMock && prod }
 }
 
@@ -196,7 +197,7 @@ export function makeProviders(prod: boolean): Providers {
     },
 
     async createAgreement({ applicationId, name, email, returnUrl, prefill }) {
-      if (modes.signing === 'off') throw new ProviderOff('signing')
+      if (modes.signing === 'off' || modes.signing === 'manual') throw new ProviderOff('signing')
       if (modes.signing === 'mock') {
         const ref = `sub_test_${randomBytes(6).toString('hex')}`
         mockSubmissions.set(ref, { affiliate: false, company: false })
@@ -253,7 +254,7 @@ export function makeProviders(prod: boolean): Providers {
           documentUrls: s?.affiliate && s?.company ? ['about:blank#test-agreement'] : [],
         }
       }
-      if (modes.signing === 'off') throw new ProviderOff('signing')
+      if (modes.signing === 'off' || modes.signing === 'manual') throw new ProviderOff('signing')
       const sub = await docuseal<DsSubmission>('GET', `/submissions/${encodeURIComponent(submissionRef)}`)
       const role = (r: string) => sub.submitters.find((s) => s.role === r)
       const aff = role(AFFILIATE_ROLE())

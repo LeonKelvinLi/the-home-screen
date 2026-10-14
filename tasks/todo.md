@@ -10,7 +10,8 @@
 - [x] Patch runtime proxy-addr and development advisories in an isolated install;
       build, regression probes, provider/email audits and 53 API checks pass;
       npm audit reports zero vulnerabilities.
-- [ ] Resolve and implement a free signing handoff.
+- [x] Implement the selected free DocuSeal handoff with admin review,
+      private link ownership, approved template gate and accurate emails.
 - [ ] Finalize agreement terms supplied by Glenn/Leon.
 - [ ] Verify actual hosted upload/signing/countersigning/download journey.
 - [ ] Complete Chrome whole-flow QA, review and deploy ready changes.

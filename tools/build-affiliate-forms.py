@@ -74,7 +74,7 @@ writer.remove_annotations(subtypes='/Widget');writer.root_object.pop('/AcroForm'
 cover=BytesIO();front=canvas.Canvas(cover,pagesize=(W,H))
 head(front,'Tax information','Complete the attached IRS Form W-9 and retain its instructions. Use this packet only when Form W-9 applies to you.')
 field(front,'Tax ID Type','Which taxpayer identification number will you enter?',536,kind='select',extra=';options=SSN,EIN')
-para(front,'Choose SSN or EIN based on the IRS instructions. Only the corresponding required number field will appear on the W-9. Enter the number for the taxpayer named on line 1. For a pending TIN or a form that does not apply to you, contact glenn@beastypages.com before signing.',42,485)
+para(front,'Choose SSN or EIN based on the IRS instructions. Enter the applicable number in Part I of the W-9 and leave the other number field blank. Enter the number for the taxpayer named on line 1. BEASTY reviews the completed form. For a pending TIN or a form that does not apply to you, contact glenn@beastypages.com before signing.',42,485)
 para(front,'Do not send completed tax forms by ordinary email. Taxpayer numbers are entered on DocuSeal and are not saved in the BEASTY application database.',42,406)
 front.save();cover.seek(0)
 combined=PdfWriter();combined.append(PdfReader(cover))
