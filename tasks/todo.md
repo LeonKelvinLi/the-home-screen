@@ -14,4 +14,8 @@
       private link ownership, approved template gate and accurate emails.
 - [ ] Finalize agreement terms supplied by Glenn/Leon.
 - [ ] Verify actual hosted upload/signing/countersigning/download journey.
-- [ ] Complete Chrome whole-flow QA, review and deploy ready changes.
+- [x] Complete Chrome CRM-to-registration-to-DocuSeal upload/review QA,
+      phone breakpoint, release review and regression checks.
+- Deployment evidence: `out/affiliate-forms/production-release.json` records
+  the merged commit and both Render services; verify this live evidence before
+  claiming a code release. It is separate from the unsigned agreement draft.

@@ -74,9 +74,9 @@ checks the proxy trust regression and rejection of shell-comment newline input
 without executing shell payloads. The notification configuration redeploy runs
 the already-deployed main revision; the dependency fixes are not live yet.
 
-Chrome QA of the isolated CRM confirmed an invite survives missing mail configuration and shows “Email was not sent; copy the link below.” Production signing remains disabled; this code branch has not been deployed.
+Chrome QA of the isolated CRM confirmed an invite survives missing mail configuration and shows “Email was not sent; copy the link below.” Live deployment evidence is stored separately in the ignored `out/affiliate-forms/production-release.json`; do not infer deployment from passing local checks.
 
-Free handoff validation: 48 isolated manual API checks plus the existing 53
+Free handoff validation: 50 isolated manual API checks plus the existing 53
 onboarding API checks pass. Chrome verified a fresh CRM invitation, email-code
 registration, profile autosave, packet request, submission, link attachment,
 opening the actual DocuSeal request, real image/file uploads, and the review

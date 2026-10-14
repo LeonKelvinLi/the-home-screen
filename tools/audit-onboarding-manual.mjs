@@ -131,6 +131,14 @@ try {
   detail=(await admin.call('GET',path)).data
   check('verification actor and checklist remain on record', detail.manualPacket.verifiedBy && detail.manualPacket.evidence.idUploaded && detail.events.some(e=>e.kind==='packet_verified'))
   check('approved packet cannot be replaced', (await admin.call('POST',path+'/packet',{...packet,revision:detail.manualPacket.revision})).status===409)
+  const otherEmail=`other-${port}@example.invalid`
+  const otherInvite=await admin.call('POST','/api/crm/onboarding/invites',{name:'Other QA',email:otherEmail})
+  const otherApp=(await other.call('POST',`/api/onboarding/invite/${otherInvite.data.link.split('/join/')[1]}/redeem`)).data
+  await other.call('PUT','/api/onboarding/me/profile',{revision:otherApp.revision,profile:{...profile,legalFirst:'Other',email:otherEmail}})
+  await other.call('POST','/api/onboarding/me/agreement/sign')
+  check('the same DocuSeal request cannot belong to two applications', (await admin.call('POST',`/api/crm/onboarding/${otherApp.id}/packet`,{...packet,revision:0})).status===409)
+  const immediate=(await affiliate.call('GET','/api/onboarding/me')).data
+  check('the approval response reflects committed state immediately', immediate.status==='approved')
   await signIn(team,`team-${port}@example.invalid`,'Team QA')
   const memberRow=(await database.query('SELECT id FROM members WHERE email=$1',[`team-${port}@example.invalid`])).rows[0]
   await database.query("UPDATE crm_people SET member_id=$1 WHERE id='p_janelle'",[memberRow.id])

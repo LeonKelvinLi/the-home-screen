@@ -862,13 +862,10 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
     res.json({ ok: true, emailStatus })
   }))
 
-  app.post('/api/crm/onboarding/:id/decision', crmWrite, admin, asyncH(async (req, res) => db.transaction(async () => {
-    const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(String(req.params.id))
-    if (!a) return res.status(404).json({ error: 'No such application.' })
+  app.post('/api/crm/onboarding/:id/decision', crmWrite, admin, asyncH(async (req, res) => {
     const b = (req.body ?? {}) as { action?: unknown; note?: unknown }
     const action = String(b.action ?? '')
     const note = String(b.note ?? '').trim().slice(0, 600)
-    const d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
     const allowed: Record<string, { from: AppStatus[]; to: AppStatus }> = {
       approve: { from: ['submitted'], to: 'approved' },
       request_changes: { from: ['submitted'], to: 'changes_requested' },
@@ -876,16 +873,25 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       suspend: { from: ['approved'], to: 'suspended' },
       reinstate: { from: ['suspended'], to: 'approved' },
     }
-    const rule = allowed[action]
-    if (!rule) return res.status(400).json({ error: 'Unknown action.' })
-    if (!rule.from.includes(a.status)) return res.status(409).json({ error: `Can’t ${action.replace('_', ' ')} an application that is ${a.status.replace('_', ' ')}.` })
-    if (action === 'approve' && d?.status !== 'completed') return res.status(409).json({ error: 'Countersign the agreement first.' })
-    if ((action === 'request_changes' || action === 'reject') && !note) return res.status(400).json({ error: 'Add a note so they know why.' })
-    const now = Date.now()
-    await db
-      .prepare('UPDATE onboarding_applications SET status = ?, decided_at = ?, decided_by = ?, decision_note = ?, updated_at = ? WHERE id = ?')
-      .run(rule.to, now, req.crm!.actor, note, now, a.id)
-    await event(a.id, req.crm!.actor, action === 'approve' ? 'approved' : action === 'request_changes' ? 'changes_requested' : action === 'reject' ? 'rejected' : action === 'suspend' ? 'suspended' : 'reinstated', note ? { note } : {})
+    const outcome = await db.transaction(async () => {
+      const a = await db.prepare('SELECT * FROM onboarding_applications WHERE id = ? FOR UPDATE').get<AppRow>(String(req.params.id))
+      if (!a) return { error: 'No such application.', code: 404 }
+      const rule = allowed[action]
+      if (!rule) return { error: 'Unknown action.', code: 400 }
+      if (!rule.from.includes(a.status)) return { error: `Can’t ${action.replace('_', ' ')} an application that is ${a.status.replace('_', ' ')}.`, code: 409 }
+      const d = await refreshDoc((await latestDoc(a.id)) ?? null, true)
+      if (action === 'approve' && d?.status !== 'completed') return { error: 'Countersign the agreement first.', code: 409 }
+      if ((action === 'request_changes' || action === 'reject') && !note) return { error: 'Add a note so they know why.', code: 400 }
+      const now = Date.now()
+      await db
+        .prepare('UPDATE onboarding_applications SET status = ?, decided_at = ?, decided_by = ?, decision_note = ?, updated_at = ? WHERE id = ?')
+        .run(rule.to, now, req.crm!.actor, note, now, a.id)
+      await event(a.id, req.crm!.actor, action === 'approve' ? 'approved' : action === 'request_changes' ? 'changes_requested' : action === 'reject' ? 'rejected' : action === 'suspend' ? 'suspended' : 'reinstated', note ? { note } : {})
+      return { application: a, status: rule.to }
+    })()
+    // Respond and notify only after the transaction has committed.
+    if (outcome.error) return res.status(outcome.code!).json({ error: outcome.error })
+    const a = outcome.application!
     const first = a.profile.preferredName || a.profile.legalFirst || ''
     const msg: Record<string, [string, string]> = {
       approve: ['You’re approved: welcome to BEASTY', `Hi ${first},\n\nYou're approved as a BEASTY affiliate. Your dashboard is at ${site(req)}/join.\n\nBEASTY Pages`],
@@ -893,6 +899,6 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
       reject: ['Your BEASTY affiliate application', `Hi ${first},\n\nThanks for applying. We aren't able to approve your application right now.\n\n${note}\n\nBEASTY Pages`],
     }
     if (msg[action]) void deps.sendEmail(a.profile.email, msg[action][0], msg[action][1])
-    res.json({ ok: true, status: rule.to })
-  })()))
+    res.json({ ok: true, status: outcome.status })
+  }))
 }
