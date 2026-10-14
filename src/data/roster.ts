@@ -1541,8 +1541,21 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'monogram', logoInitials: 'KB', logoFace: 'slab',
     site: 'https://kabab-burger.co/',
   }),
+  /* Glenn, 2026-10-13: @chris.corpz's reel ("Clip this video plz") and "please update their
+     icon. This shop is adjacent to our POD DTG print shop... at some point I will speak to
+     them about getting a website made." Their logo from his screenshot, under a new file
+     name (sweet-pipers-2) so no cached copy of the old one lingers. */
   seed('sweet-pipers', 'Sweet Pipers', 'Sweet Pipers', 'Filipino desserts', '#6B3A7A', {
+    icon: 'sweet-pipers-2',
     logoTemplate: 'monogram', logoInitials: 'SP', logoFace: 'script',
+    clip: {
+      src: '/clips/sweet-pipers.mp4',
+      poster: '/clips/sweet-pipers-poster.webp',
+      href: 'https://www.instagram.com/reel/DecMBslTErN/',
+      credit: 'Filmed by @chris.corpz',
+      platform: 'Instagram',
+      by: 'chris.corpz',
+    },
     phone: '(510) 398-9544',
     address: '2352 A San Pablo Ave, Pinole',
     contactOnly:

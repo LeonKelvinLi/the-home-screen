@@ -12667,4 +12667,104 @@ export const LOCAL_SEED: LocalSeed[] = [
     ],
     items: [],
   },
+  /*
+    BATCH 48, 2026-10-13 afternoon (research in r1013c). KATSU BURGER, "Santa Clara • Eats".
+    Glenn, with their Instagram, site and @grubwitmike's reel ("Clip this video plz"). The
+    Seattle-born Katsu Burger (est. 2011), now on El Camino Real: address, phone, email and
+    Monday-Saturday hours from katsuburgerca.com (neither it nor the ordering page mentions
+    Sunday, so nothing is said about it); the menu with prices from the Snackpass ordering
+    page their site links (it prices the Oreo shake 45 cents above the menu picture on
+    their site). Catering boxes are listed without descriptions: the ordering page's are
+    copied from other items. Santa Clara's Burgers seat was open.
+  */
+  {
+    slug: 'katsu-burger-santa-clara',
+    icon: 'katsu-burger',
+    name: 'Katsu Burger',
+    label: 'Katsu Burger',
+    cuisine: 'Japanese katsu burgers',
+    tagline: 'Panko-fried katsu burgers from Seattle, now on El Camino Real in Santa Clara.',
+    color: '#5B2A86|#F6C531',
+    prep: 0,
+    category: 'Burgers',
+    address: "3006 El Camino Real, Santa Clara, CA 95051",
+    phone: "(408) 816-8713",
+    email: "katsuburgerca@gmail.com",
+    hours: 'Mon-Sat 10:30am-8:30pm',
+    site: "https://www.katsuburgerca.com/",
+    orderUrl: "https://order.snackpass.co/katsuburger",
+    menuNote: 'Prices from their own ordering page, linked from their site. Burgers are priced with chicken, tofu or croquette katsu; beef or pork is $1 more ($2 on the Tokyo Tower).',
+    clip: {
+      src: '/clips/katsu-burger.mp4',
+      poster: '/clips/katsu-burger-poster.webp',
+      href: 'https://www.instagram.com/reel/DeIconCRmx-/',
+      credit: 'Filmed by @grubwitmike',
+      platform: 'Instagram',
+      by: 'grubwitmike',
+    },
+    sections: [
+      { name: "Burgers", items: [
+        ["Tokyo Classic", "The original icon. Simple, clean flavors with our signature katsu, Japanese mayo, and tonkatsu sauce, layered with cabbage, tomato, pickles, and onions on a toasted buttery egg bun. (Recommended with Beef Katsu) Classic Tokyo flavor, done right! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1295],
+        ["Godzilla Attack", "For spicy lovers. Our signature katsu supercharged with pepper jack, 12 spices, jalapeños, spicy mayo, and tonkatsu sauce, packed with crisp vegetables on a toasted buttery egg bun. (Recommended with Beef Katsu) A fiery bite big enough to wake Godzilla! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1450],
+        ["Kyoto Mushroom Melt", "A rich blend of American and Swiss cheeses melting over our signature katsu and sautéed shiitake mushrooms, topped with Japanese mayo, tonkatsu sauce, and fresh veggies on a toasted buttery egg bun. (Recommended with Beef Katsu) A melting moment of Kyoto-inspired flavor! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1695],
+        ["Ninja Deluxe", "A stealth-level crispy katsu teamed up with cheddar cheese, smoky bacon, and Japanese mayo. Finished with tonkatsu sauce, fresh cabbage, tomato, pickles, and onions, all hidden inside a toasted buttery egg bun. (Recommended with Pork Katsu) A flavor attack you’ll never see coming! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1495],
+        ["Katsu Curry", "A crispy signature katsu layered with American cheese, curry mayo, and tonkatsu sauce, finished with cabbage, tomato, pickles, and onions on a toasted buttery egg bun. (Recommended with Pork Katsu) Bold curry warmth meets katsu crunch! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1395],
+        ["Honey Miso Tofu", "Crispy golden tofu katsu paired with our honey miso mustard sauce, balanced with crisp veggies on a toasted buttery egg bun. Sweet miso harmony in every bite!", 1295],
+        ["Veggie Croquette", "Crispy golden potato and vegetable croquette paired with Japanese mayo and tonkatsu sauce, layered with cabbage, tomato, pickles, and onions on a toasted buttery egg bun. Golden, crispy, and packed with comforting flavor!", 1295],
+        ["Wabi Wasabi", "Signature katsu sharpened with wasabi mayo, pepper jack cheese, and tonkatsu sauce, layered with fresh vegetables on a toasted buttery egg bun. (Recommended with Beef Katsu) A clean bite with wabi-sabi simplicity! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1350],
+        ["Samurai Select", "For sweet lovers. Signature katsu paired with bacon and pineapple, sharpened with wasabi mayo and tonkatsu sauce, layered with crisp vegetables on a toasted buttery egg bun. (Recommended with Beef Katsu) A sweet strike, a spicy slash, a clean finish—Samurai approved! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1495],
+        ["Ohayou Gozaimasu", "Rise and shine! Signature katsu with soft egg, bacon, cheddar cheese, Japanese mayo, and tonkatsu sauce, finished with crisp vegetables on a toasted buttery egg bun. (Recommended with Beef Katsu) The good-morning bite you didn’t know you needed! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1595],
+        ["Teriyaki Chicken", "Signature katsu with juicy pineapple, Japanese mayo, and glossy teriyaki sauce, stacked with crisp veggies on a toasted buttery egg bun. (Recommended with Chicken Katsu) Your favorite teriyaki bowl, but in burger form! Chicken breast, tofu or croquette katsu at this price; beef or pork +$1.", 1350],
+        ["Mt. Fuji", "A towering summit of flavor with house-ground Premium Beef katsu, pork katsu, chicken katsu, egg, bacon, and three cheeses - American, cheddar, and pepper jack layered with wasabi mayo, spicy mayo, Japanese mayo, and tonkatsu sauce, finished with crisp veggies on a toasted buttery egg bun. Climb the mountain. Conquer the bite!", 2550],
+        ["Tokyo Tower", "Stack it high! Double katsu and double American cheese with Japanese mayo and tonkatsu sauce, finished with fresh veggies on a toasted buttery egg bun. (Recommended with Beef Katsu) So tall you might need an elevator! Chicken breast, tofu or croquette katsu at this price; beef or pork +$2.", 1750],
+      ] },
+      { name: "Sides", items: [
+        ["Fries", "Crispy shoestring fries, lightly sea-salted, with umami seasoning options: curry, nori, or our 12-spice blend.", 495],
+        ["Banzai Bites", "Karaage-style snackable chicken bites. Crispy, juicy, and impossible to stop eating!", 795],
+        ["Mushroom Bites", "Golden-fried mushrooms coated in crunchy panko, lightly seasoned and fried to perfection. Crispy on the outside, juicy on the inside - a dangerously addictive bite.", 695],
+        ["Croquette", "Two pieces of creamy potato cakes coated in crispy panko and deep-fried to golden perfection!", 550],
+      ] },
+      { name: "Shakes", items: [
+        ["Matcha Shake", "A luxuriously creamy blend of premium matcha and rich milkshake, perfectly smooth with a deep, earthy sweetness.", 695],
+        ["Vanilla Shake", "Sweet, creamy, classic vanilla perfection.", 650],
+        ["Oreo Shake", "A creamy vanilla shake blended with crushed Oreo cookies for a rich, smooth, and perfectly cookie-crunch finish.", 695],
+        ["Mint Chocolate Shake", "A cool and creamy blend of rich chocolate and refreshing mint, perfectly mixed with smooth milk for a refreshingly sweet shake.", 695],
+      ] },
+      { name: "Drinks", items: [
+        ["Coke", "", 249],
+        ["Coke Zero", "", 249],
+        ["Diet Coke", "", 249],
+        ["Sprite", "", 249],
+        ["Japanese Yogurt Drink (Calpico)", "", 399],
+        ["Japanese Green Tea", "", 350],
+        ["Japanese Oolong Tea", "", 350],
+        ["Water Bottle", "", 149],
+      ] },
+      { name: "Sauces", items: [
+        ["Japanese Mayo", "", 65],
+        ["Spicy Mayo", "", 65],
+        ["Wasabi Mayo", "", 65],
+        ["Curry Mayo", "", 65],
+        ["Tonkatsu Sauce", "", 65],
+        ["Honey Miso Mustard", "", 65],
+      ] },
+      { name: "Catering", items: [
+        ["Tokyo Classic Box - Half Dozen (5% off)", "", 7382],
+        ["Tokyo Classic Box - Dozen (10% off)", "", 13986],
+        ["Godzilla Attack Box - Half Dozen (5% off)", "", 8265],
+        ["Godzilla Attack Box - Dozen (10% off)", "", 15660],
+        ["Kyoto Mushroom Melt Box - Half Dozen (5% off)", "", 9661],
+        ["Kyoto Mushroom Melt Box - Dozen (10% off)", "", 18306],
+        ["Ninja Deluxe Box - Half Dozen (5% off)", "", 8522],
+        ["Ninja Deluxe Box - Dozen (10% off)", "", 16146],
+        ["Honey Miso Tofu Box - Half Dozen (5% off)", "", 7382],
+        ["Honey Miso Tofu Box - Dozen (10% off)", "", 13986],
+        ["Veggie Croquette Box - Half Dozen (5% off)", "", 7382],
+        ["Veggie Croquette Box - Dozen (10% off)", "", 13986],
+        ["Katsu Curry Box - Half Dozen (5% off)", "", 7952],
+        ["Katsu Curry Box - Dozen (10% off)", "", 15066],
+      ] },
+    ],
+    items: [],
+  },
 ]

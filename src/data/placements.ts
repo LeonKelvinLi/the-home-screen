@@ -1444,6 +1444,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-mateo-goods2-2': 'b_risewoodfiresanmateo',
   'santa-clara-goods-5': 'b_risewoodfiresantaclara',
   'burlingame-goods-5': 'b_risepizzeria',
+  /* Batch 48, 2026-10-13 afternoon: Katsu Burger takes Santa Clara's open Burgers seat. */
+  'santa-clara-goods-0': 'b_katsuburgersantaclara',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */
