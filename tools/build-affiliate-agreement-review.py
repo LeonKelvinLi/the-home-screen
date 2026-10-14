@@ -7,6 +7,7 @@ from pathlib import Path
 from reportlab.pdfgen import canvas
 from pypdf import PdfReader, PdfWriter
 from affiliate_form_design import header as document_header, section, paragraph as document_paragraph, INK, MUTED, RULE, FIELD, BODY, BOLD
+from affiliate_disclosures import draw_disclosures
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'output/pdf'
@@ -17,6 +18,15 @@ c = canvas.Canvas(str(FILE), pagesize=(W, H))
 c.setTitle('BEASTY affiliate agreement - fillable review draft')
 c.setAuthor('BEASTY Pages')
 names = []
+defaults = {
+    'Company representative': 'Glenn Malicdem',
+    'Company notices email': 'glenn@beastypages.com',
+    'Agreement version': 'Review draft 2026-10-13',
+    'User reward': 'Published BARK reference: 3 points',
+    'Business reward': 'Published BARK reference: 6 points',
+    'Point value': 'Published reference: USD 1 per point',
+    'Minimum payout': 'Published reference: 100 points',
+}
 
 
 def paragraph(text, y, size=10, width=528):
@@ -24,7 +34,7 @@ def paragraph(text, y, size=10, width=528):
 
 
 def header(title, subtitle, page):
-    document_header(c, title, subtitle, draft=True, page=page, total=4, category='Affiliate agreement / review')
+    document_header(c, title, subtitle, draft=True, page=page, total=6, category='Affiliate agreement / review')
 
 
 def field(name, label, y, height=28, x=44, width=524, multiline=False):
@@ -34,7 +44,7 @@ def field(name, label, y, height=28, x=44, width=524, multiline=False):
     c.drawString(x, y + height + 7, label)
     c.acroForm.textfield(
         name=name, tooltip=label, x=x, y=y, width=width, height=height,
-        value='', fontName='Helvetica', fontSize=10,
+        value=defaults.get(name, ''), fontName='Helvetica', fontSize=10,
         borderColor=RULE, fillColor=FIELD,
         textColor=INK, borderWidth=0.6, forceBorder=True,
         fieldFlags='multiline' if multiline else '', maxlen=1500 if multiline else 180,
@@ -84,11 +94,11 @@ sections = [
     ('4. Promotion and disclosures',
      'Promotions must be truthful, comply with applicable laws, and clearly disclose the affiliate relationship when recommending BEASTY. Use approved brand assets and current offers. Do not misrepresent earnings, buy fake referrals, misuse another person\'s identity or send unlawful unsolicited messages.'),
     ('5. Information and privacy',
-     'The affiliate provides tax forms, bank details and requested ID directly through DocuSeal. BEASTY uses these documents for onboarding, payment and applicable tax reporting, with access limited to authorized personnel. The privacy notice, retention period and correction contact are stated in Schedule A. Do not send completed sensitive forms by ordinary email.'),
+     'The affiliate provides tax forms, bank details and requested ID directly through DocuSeal. The written disclosures on pages 5 and 6 explain electronic signing, document handling, direct deposit and affiliate promotion and form part of this agreement. BEASTY confirms its privacy and retention terms in Schedule A. Do not send completed sensitive forms by ordinary email.'),
     ('6. Ending participation',
      'Either party may end participation by written notice, subject to the notice period on page 4. BEASTY may suspend participation while reviewing suspected fraud or misuse. Validly earned amounts remain payable under Schedule A and its agreed adjustment rules. The affiliate stops using BEASTY brand assets when participation ends.'),
     ('7. Entire agreement and changes',
-     'This agreement and completed Schedule A state the parties\' arrangement. Changes require notice and agreement before affecting future referrals. No guaranteed earnings, exclusivity, automatic payout or promotional multiplier is included unless expressly stated in the completed agreement. Neither party signs on the other\'s behalf.'),
+     'This agreement and completed Schedule A state the parties\' arrangement. Changes require agreement before affecting future referrals. No guaranteed earnings, exclusivity, automatic payout or promotional multiplier is included unless expressly stated. Sign only for the party you are authorized to represent.'),
 ]
 for title, text in sections:
     number, label = title.split('. ', 1)
@@ -116,12 +126,14 @@ for x, label in [(44, 'Affiliate signature'), (316, 'BEASTY authorized signature
     c.line(x, 75, x + 252, 75)
     c.setFont(BODY, 7.8); c.setFillColor(MUTED)
     c.drawString(x, 61, 'Date recorded by DocuSeal')
+c.showPage()
+draw_disclosures(c,start_page=5,total=6,category='Affiliate agreement / review')
 c.save()
 
 reader = PdfReader(FILE)
-assert len(reader.pages) == 4
+assert len(reader.pages) == 6
 assert set(reader.get_fields()) == set(names)
-assert all(not f.get('/V') for f in reader.get_fields().values())
+assert all(f.get('/V', '') == defaults.get(name, '') for name, f in reader.get_fields().items())
 widgets = [a.get_object() for p in reader.pages for a in p.get('/Annots', [])
            if a.get_object().get('/Subtype') == '/Widget']
 assert len(widgets) == len(names)
@@ -145,4 +157,15 @@ for name, value in values.items():
                 if a.get_object().get('/T') == name]
     assert len(matching) == 1 and matching[0]['/V'] == value
     assert matching[0]['/AP']['/N'].get_object().get_data()
-print(f'Created {FILE}: 4 pages, {len(names)} interactive fields; persisted fill test passed.')
+
+# Import empty widgets, then apply editable defaults in DocuSeal's editor.
+# Its PDF importer otherwise turns filled widgets into fixed page content.
+cloud = ROOT / 'out/affiliate-forms/beasty-affiliate-review-cloud-import-DRAFT.pdf'
+import_writer = PdfWriter(); import_writer.clone_document_from_reader(reader)
+import_writer.update_page_form_field_values(None, {name: '' for name in names}, auto_regenerate=False)
+with cloud.open('wb') as stream:
+    import_writer.write(stream)
+cloud_reader = PdfReader(cloud)
+assert len(cloud_reader.get_fields()) == 24
+assert all(not field.get('/V') for field in cloud_reader.get_fields().values())
+print(f'Created {FILE}: 6 pages, {len(names)} interactive fields; persisted fill test passed.')

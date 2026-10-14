@@ -39,6 +39,7 @@ import { db } from './db/schema'
 import { requireCrm, type CrmDeps } from './crm/auth'
 import { makeProviders, mockControls, providerModes, ProviderOff, type PayoutState, type Providers } from './onboarding-providers'
 import { approvedManualTemplate, docusealLink, manualEvidence, type ManualEvidence } from './onboarding-manual'
+import { onboardingPrefill } from '../shared/onboarding-prefill'
 
 
 /* ------------------------------------------------------------- profile ---- */
@@ -492,20 +493,7 @@ export function mountOnboarding(app: Express, deps: OnboardingDeps, providers: P
         name,
         email: p.email || m.email,
         returnUrl: `${site(req)}/join?agreement=return`,
-        prefill: {
-          'Legal Name': name,
-          'Business Name': p.kind === 'business' ? p.businessName ?? '' : '',
-          Email: p.email ?? '',
-          Address: [p.line1, p.line2, p.city, `${p.state ?? ''} ${p.zip ?? ''}`.trim()].filter(Boolean).join(', '),
-          /* The W-9 asks for the address in two lines (its lines 5 and 6). A name
-             the template doesn't have is left out (onboarding-providers.ts). */
-          'Street Address': [p.line1, p.line2].filter(Boolean).join(', '),
-          'City State ZIP': [p.city, `${(p.state ?? '').toUpperCase()} ${p.zip ?? ''}`.trim()].filter(Boolean).join(', '),
-          City: p.city ?? '',
-          State: (p.state ?? '').toUpperCase(),
-          ZIP: p.zip ?? '',
-          Phone: p.phone ?? '',
-        },
+        prefill: onboardingPrefill(p),
       })
       const now = Date.now()
       const id = newId('doc')

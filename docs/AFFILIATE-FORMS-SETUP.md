@@ -4,11 +4,11 @@ The workflow remains `/join` → details → DocuSeal packet → affiliate signa
 
 ## Uploaded artifact
 
-Glenn Malicdem's account, `glenn@beastypages.com`, owns the redesigned template **6402583**, [BEASTY-Affiliate-Packet-Professional-DRAFT](https://docuseal.com/templates/6402583).
+Glenn Malicdem's account, `glenn@beastypages.com`, owns the complete template **6402995**, [BEASTY-Affiliate-Packet-and-Disclosures-DRAFT](https://docuseal.com/templates/6402995).
 
-It contains 11 pages: a tax-ID selection cover, the current IRS W-9 and its five instruction pages, direct-deposit authorization, ID upload, and a two-page draft affiliate agreement. The PDF has 32 canonical fields. In DocuSeal, the bank proof is a File field and ID front/back are Image fields. The signer roles are **Affiliate** and **BEASTY**. BEASTY owns only its representative, countersignature and countersigning date. All four date fields use DocuSeal's actual signing date.
+It contains 13 pages: a tax-ID selection cover, the current IRS W-9 and its five instruction pages, direct-deposit authorization, ID upload, two pages of written disclosures, and a two-page draft affiliate agreement. The PDF has 35 canonical fields. Taxpayer, account-holder, ID-holder and affiliate names are separate so a business's details do not overwrite the individual's identity. In DocuSeal, the bank proof is a File field and ID front/back are Image fields. The signer roles are **Affiliate** and **BEASTY**. Glenn's representative name is prepared in the PDF and imports as fixed page content, leaving 32 Affiliate fields and two BEASTY fields (countersignature/date). All four date fields use DocuSeal's actual signing date.
 
-The earlier drafts (6399448 and 6399497) are preserved. Use 6402583 for layout review; do not send any draft packet to applicants.
+The earlier drafts (6399448, 6399497 and 6402583) are preserved. Use 6402995 for packet review; do not send any draft packet to applicants.
 
 The redesign follows the spacing, heading hierarchy, fine rules and consistent
 folios of LOQOL's local report layout, while using BEASTY's existing Inter and
@@ -35,18 +35,44 @@ the affiliate can request review but cannot assert a verified signature.
 ### Fillable agreement for review
 
 `tools/build-affiliate-agreement-review.py` creates
-`output/pdf/BEASTY-Affiliate-Agreement-Fillable-DRAFT.pdf`: four pages and 24
+`output/pdf/BEASTY-Affiliate-Agreement-Fillable-DRAFT.pdf`: six pages and 24
 interactive fields for company identity, reward/payment terms, eligibility,
-privacy/retention and legal details. All values are blank, and the signature
+privacy/retention and legal details, followed by the written disclosures. Known
+representative/contact details and published BARK references are prepared for
+review. Unconfirmed company/payment terms remain blank, and the signature
 areas are reserved for a separate finalized request. The builder checks the
 canonical fields, widget appearances, and a saved/reopened synthetic fill.
-All four pages were rendered and visually checked.
+All six pages were rendered and visually checked.
 
-The redesigned review draft is uploaded in Glenn's account as **6402572**,
-[BEASTY-Affiliate-Agreement-Professional-DRAFT](https://docuseal.com/templates/6402572),
+The complete review draft is uploaded in Glenn's account as **6403162**,
+[BEASTY-Affiliate-Agreement-and-Disclosures-DRAFT](https://docuseal.com/templates/6403162),
 with all 24 fields assigned to **BEASTY Review**. The earlier template 6399923
-has an opened review request and was preserved. Neither review template is
+has an opened review request and was preserved, as was 6402572. No review template is
 configured as the portal's applicant signing template.
+
+### Reduce applicant typing on the free plan
+
+Template 6402995 has four sender form fields: **ID Legal Name**, **Affiliate Legal
+Name**, **Street Address** and **City State ZIP**. The CRM's admin-only packet
+panel offers copy controls for the known application details. The sender prepares
+these four fields for each separate request; they remain editable so the signer
+can correct them before signing. Glenn's company recipient email is preset, and
+the recipients' order is enforced. Do not put an applicant's defaults into the
+shared master template, where another applicant could receive them.
+
+Applicants read the prepared agreement/disclosures; they do not write company
+terms or disclosure text. Tax classification, the applicable taxpayer number,
+bank/account-holder details, ID images and signatures require their own input.
+The helper does not infer a business taxpayer name from the application type.
+Automatic API prefilling and spreadsheet bulk sending remain paid features;
+the selected workflow uses the free dashboard's sender preparation fields.
+
+`src/join/disclosures.json` is the shared text for the applicant page and PDFs.
+It covers electronic records/copies/withdrawal, W-9 accuracy, credit-only bank
+authorization, ID review, document access/corrections/retention, affiliate
+promotion disclosures, truthful claims/reward terms, and application contact.
+It is proposed company policy for Glenn's approval with the final agreement.
+The standalone two-page copy is `output/pdf/BEASTY-Affiliate-Disclosures-DRAFT.pdf`.
 
 1. Glenn's account remains free. The API-based path below requires Pro and is reference only unless Leon changes the free-only requirement. No paid upgrade was purchased.
 2. Finalize the agreement: BEASTY's legal entity/address, governing law, privacy/retention notice, and the complete referral reward/payment schedule. Published BARK figures are included as references for review, not treated as a complete approved commission contract.
@@ -77,11 +103,17 @@ Install the document-builder dependencies in an isolated environment using
 existing font files in `public/fonts`; static PDF fonts are cached in the ignored
 output directory. First download `https://www.irs.gov/pub/irs-pdf/fw9.pdf` into
 `out/affiliate-forms/irs-w9.pdf`. The scripts emit field manifests and blank
-drafts, including the two deliverables in `output/pdf/`:
+drafts, including the three deliverables in `output/pdf/`:
 `BEASTY-Affiliate-Packet-Professional-DRAFT.pdf` and
-`BEASTY-Affiliate-Agreement-Fillable-DRAFT.pdf`. In DocuSeal, choose **Keep** on
+`BEASTY-Affiliate-Agreement-Fillable-DRAFT.pdf`, plus
+`BEASTY-Affiliate-Disclosures-DRAFT.pdf`. In DocuSeal, choose **Keep** on
 native-field import, then set the roles, Image/File types and signing dates
 described above; native PDF signatures do not encode upload-field types.
+For the review agreement, upload the builder's empty-widget intermediate
+`out/affiliate-forms/beasty-affiliate-review-cloud-import-DRAFT.pdf`, choose
+**Keep**, name the role **BEASTY Review**, and set its seven prepared values as
+editable field defaults. This preserves all 24 fields instead of flattening
+filled widgets during import.
 
 Sources: [IRS W-9](https://www.irs.gov/forms-pubs/about-form-w-9), [DocuSeal API](https://www.docuseal.com/docs/api), [conditional fields](https://www.docuseal.com/resources/add-conditional-fields), [FTC disclosure guide](https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers). LOQOL's integration was read only for the provider/status/prefill pattern; its account, templates and keys were not reused.
 
@@ -107,3 +139,12 @@ viewport without horizontal overflow. DocuSeal QA template 6402084 and request
 was signed and no real taxpayer, bank or ID data was entered. Signature,
 countersignature and approval transitions were exercised using synthetic API
 review flags, not represented as a real executed DocuSeal agreement.
+
+The disclosure/page update also passes `tools/audit-affiliate-prefill.ts`, the
+role-scoped provider audit, and the existing onboarding API audit. Chrome
+verified the CRM invitation, email-code signup, business profile autosave,
+packet request, application submission, the redesigned submitted dashboard,
+admin copy controls and readable disclosures at 390px without horizontal
+overflow. A mutation that inferred a business taxpayer name was caught by the
+prefill audit. Production evidence for this update is recorded separately from
+the local checks.

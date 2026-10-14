@@ -16,6 +16,7 @@
 */
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import './join.css'
+import { FormsOverview } from './FormsOverview'
 
 /* ------------------------------------------------------------------ api ---- */
 
@@ -156,9 +157,9 @@ function Bar({ save, test }: { save?: SaveState; test?: boolean }) {
 }
 
 /* Yellow head with the step's name, the white sheet under it, the buttons docked at the bottom. */
-function Page({ save, test, head, children, dock }: { save?: SaveState; test?: boolean; head: React.ReactNode; children: React.ReactNode; dock?: React.ReactNode }) {
+function Page({ save, test, head, children, dock, documents }: { save?: SaveState; test?: boolean; head: React.ReactNode; children: React.ReactNode; dock?: React.ReactNode; documents?: boolean }) {
   return (
-    <div className="onb">
+    <div className={`onb${documents ? ' onb-doc-page' : ''}`}>
       <Bar save={save} test={test} />
       <div className="onb-stage">
         <header className="onb-head">{head}</header>
@@ -239,7 +240,7 @@ function Welcome({ name, payouts, onStart }: { name: string; payouts: boolean; o
           <p>
             {payouts
               ? 'Your Social Security number, bank account and ID go straight to Stripe, BEASTY’s payments partner. BEASTY never sees or stores them.'
-              : 'Your Social Security number, bank details and ID photo go on DocuSeal’s secure forms, never into the BEASTY app. BEASTY uses them only to pay you and to file your 1099.'}
+              : 'Your taxpayer number, bank details and ID photo go directly to DocuSeal. BEASTY reviews the documents for onboarding, payment and applicable tax reporting.'}
           </p>
         </div>
       </main>
@@ -462,7 +463,7 @@ function ManualForms({ bundle, reload, beforeAction }: { bundle: Bundle; reload:
       ? a.countersigned ? 'BEASTY checked your forms and both signatures in DocuSeal.' : 'BEASTY checked your signed forms. Your packet is waiting for BEASTY’s countersignature.'
       : a.reviewRequested ? 'You reported finishing your packet. BEASTY will check the forms, ID upload and signature in DocuSeal.'
       : a.linkReady ? 'Your private packet is ready. Fill it in and upload your ID on DocuSeal. After signing, return to this page and request review.'
-      : a.status === 'requested' ? 'BEASTY is preparing your packet using the approved agreement. We will email you when it is ready. You can send your application details now.'
+      : a.status === 'requested' ? 'BEASTY has your request and will prepare your private packet once the agreement is finalized. We will email you when it is ready. You can send your application details now.'
       : 'Request your forms and BEASTY will prepare your private DocuSeal packet. You can send your application details while it is being prepared.'}</p>
     {!a.affiliateSigned && (a.linkReady || a.status === 'not_started') && <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || !bundle.steps.profile.complete} onClick={()=>void run('open')}>
       {busy ? 'Opening…' : a.linkReady ? 'Open forms in DocuSeal' : 'Request my forms'}
@@ -669,7 +670,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
           {show('kind') && <p className="onb-err">{show('kind')}</p>}
           {profile.kind === 'business' && (
             <div className="onb-fields" style={{ marginTop: 16 }}>
-              <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint={forms ? 'As registered. Your EIN goes on your W-9 in the next step, not here.' : 'As registered. Your EIN goes to Stripe in the next step, not here.'}>
+              <Field id="p-businessName" label="Business legal name" error={show('businessName')} hint={forms ? 'As registered. Complete your tax classification and applicable SSN or EIN on the W-9.' : 'As registered. Complete your tax details with Stripe in the next step.'}>
                 <input {...input('businessName', { autoComplete: 'organization' })} />
               </Field>
             </div>
@@ -803,37 +804,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
   if (step === 2) {
     body = (
       <>
-        <div className="onb-section">
-          <h3>{forms ? 'What’s in it' : 'What it covers'}</h3>
-          <ul className="onb-list">
-            {(forms ? PACKET : COVERS).map((t) => (
-              <li key={t}>{t}</li>
-            ))}
-          </ul>
-        </div>
-        <div className="onb-section">
-          <ul className="onb-rows">
-            <li>
-              <div className="onb-row-text">
-                <b>{forms ? 'Your forms and signature' : 'Your signature'}</b>
-                <span>{a.affiliateSigned ? (forms ? 'Filled in and signed. Thank you.' : 'Signed. Thank you.') : a.mode === 'manual' && a.reviewRequested ? 'Waiting for BEASTY to check your packet.' : a.mode === 'manual' && a.status === 'requested' ? 'BEASTY is preparing your forms.' : a.status === 'declined' ? 'You declined to sign.' : a.status === 'expired' ? 'The signing link expired. Open it again.' : forms ? 'Not filled in yet.' : 'Not signed yet.'}</span>
-              </div>
-              <span className="onb-tag" data-tone={a.affiliateSigned ? 'good' : a.status === 'declined' || a.status === 'expired' ? 'bad' : undefined}>
-                {!a.available ? 'Opens soon' : a.affiliateSigned ? 'Signed' : a.mode === 'manual' && a.reviewRequested ? 'In review' : a.mode === 'manual' && a.status === 'requested' ? 'Preparing' : 'To do'}
-              </span>
-            </li>
-            <li>
-              <div className="onb-row-text">
-                <b>BEASTY’s countersignature</b>
-                <span>{a.countersigned ? 'Countersigned.' : 'Added by BEASTY after you sign.'}</span>
-              </div>
-              <span className="onb-tag" data-tone={a.countersigned ? 'good' : undefined}>
-                {a.countersigned ? 'Done' : 'After you'}
-              </span>
-            </li>
-          </ul>
-        </div>
-        <div className="onb-section">
+        <FormsOverview forms={forms} agreement={a} action={<>
           {a.mode === 'manual' ? <ManualForms bundle={bundle} reload={reload} beforeAction={flush} /> : a.available && !a.affiliateSigned ? (
             <>
               <button className="onb-btn onb-btn-primary onb-btn-block" disabled={busy || !profileDone} onClick={() => void openProvider('/api/onboarding/me/agreement/sign')}>
@@ -860,15 +831,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
               )}
             </div>
           ) : null}
-        </div>
-        {forms && (
-          <div className="onb-section">
-            <div className="onb-trust">
-              <Lock />
-              <p>You type your Social Security number, bank details and ID photo into DocuSeal’s secure page, never into the BEASTY app. BEASTY uses them only to pay you and to file your 1099.</p>
-            </div>
-          </div>
-        )}
+        </>} />
         {err && (
           <p className="onb-err" role="alert" style={{ marginTop: 16 }}>
             {err}
@@ -944,7 +907,7 @@ function Onboarding({ bundle, setBundle, reload }: { bundle: Bundle; setBundle: 
   }
 
   return (
-    <Page save={save} test={bundle.testMode} head={head} dock={dock}>
+    <Page save={save} test={bundle.testMode} head={head} dock={dock} documents={step === 2}>
       <div ref={top} />
       {bundle.status === 'changes_requested' && (
         <div className="onb-note" data-tone="warn" role="status" style={{ marginBottom: 20 }}>
@@ -974,19 +937,6 @@ const WITH_STRIPE: Record<number, [string, string, string]> = {
   0: ['Your information', 'Use your legal name, the one on your ID. It goes on your agreement and your tax form.', 'Details'],
   2: ['Your affiliate agreement', 'Read the terms of the partnership and sign. BEASTY countersigns after you, and the signed copy appears on your dashboard.', 'Agreement'],
 }
-const PACKET = [
-  'Form W-9: your legal name, address, and Social Security number or EIN, for your 1099',
-  'Direct deposit: the bank account your commissions are paid into',
-  'A photo of your driver’s license, state ID or passport',
-  'The affiliate agreement: how you earn and are paid, how you can promote BEASTY, and that you’re an independent contractor',
-]
-const COVERS = [
-  'How you earn commission, and what counts as a qualified referral',
-  'When and how you’re paid',
-  'Refunds and chargebacks',
-  'How you can promote BEASTY',
-  'Confidentiality, ending the agreement, and that you’re an independent contractor',
-]
 function copyOf(i: number, forms: boolean): { title: string; lede: string; short: string } {
   const [title, lede, short] = (!forms && WITH_STRIPE[i]) || [TITLES[i], LEDES[i], SHORT[i]]
   return { title, lede, short }
@@ -1032,6 +982,7 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
   return (
     <Page
       test={bundle.testMode}
+      documents={forms && a.mode === 'manual' && todo}
       head={
         <div className="onb-status">
           <p className="onb-kicker">{bundle.status === 'approved' ? `Welcome to BEASTY${first ? `, ${first}` : ''}` : `${first ? `${first}, your` : 'Your'} application`}</p>
@@ -1048,6 +999,7 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
 
       {todo && (
         <div className="onb-section">
+          {!(forms && a.mode === 'manual' && bundle.status === 'submitted') && <>
           <h3>Still to do</h3>
           <ul className="onb-rows">
             {!forms && !p.complete && (
@@ -1077,7 +1029,10 @@ function Dashboard({ bundle, reload }: { bundle: Bundle; reload: (refresh?: bool
               </li>
             )}
           </ul>
-          {a.mode === 'manual' && bundle.status === 'submitted' && <ManualForms bundle={bundle} reload={reload} />}
+          </>}
+          {a.mode === 'manual' && bundle.status === 'submitted' && (forms
+            ? <FormsOverview forms agreement={a} action={<ManualForms bundle={bundle} reload={reload} />} />
+            : <ManualForms bundle={bundle} reload={reload} />)}
           {err && (
             <p className="onb-err" role="alert" style={{ marginTop: 12 }}>
               {err}
