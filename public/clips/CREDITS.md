@@ -262,6 +262,7 @@ the most movement — to 540x960 with sound.
 | `supreme-crab-ayce.mp4` | Supreme Crab AYCE, San Jose (BEASTY • AYCE) | instagram.com/reel/DefiHqVPl3W — **an excerpt**, 2s–26s of 44s; posted by @eighty6ix_, a food creator — sent on 2026-10-15 with "Clip this video plz", "Foodie" |
 | `6th-street-burger.mp4` | Sixth Street Burger, San Jose | instagram.com/reel/DehFfrNgtmW — **an excerpt**, 23s–47s of 98s; posted by @shrimpfriedroice, a food creator — sent on 2026-10-15 with "Clip this video plz" |
 | `tarts-de-feybesse.mp4` | Tarts de Feybesse, Oakland (BEASTY • Sweets) | instagram.com/reel/Dee3vLyBHeD — **an excerpt**, 1s–25s of 33s; posted by @livingvivalakillah (Krissy), a food creator — sent on 2026-10-15 with "Clip this video plz", "Foodie" |
+| `isla-filipino.mp4` | Isla Filipino Restaurant, Pleasant Hill (BEASTY • AYCE) | instagram.com/reel/Def-2mSlJDF — **an excerpt**, 29s–53s of 59s; their own post — sent on 2026-10-15 with "Clip this video plz", "Please update page & icon" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

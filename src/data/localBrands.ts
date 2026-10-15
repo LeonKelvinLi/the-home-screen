@@ -2021,8 +2021,16 @@ export const LOCAL_SEED: LocalSeed[] = [
       Directions button has to reach the branch he actually sold.
 
       NOT ONE PRICE ANYWHERE on their site, so nothing is priced here.
+
+      2026-10-15: "BEASTY • AYCE / Please update page & icon", with their logo, their
+      locations page and their own reel ("Clip this video plz") of the weekend breakfast
+      buffet at Isla Grand. The icon is their logo under a new file name; the hours are
+      the Pleasant Hill ones on their site; the buffet and its October price are from
+      the reel's own caption. Seated by hand on BEASTY • AYCE. The beers that were on
+      the drinks list are off, as alcohol is everywhere else.
     */
     slug: 'isla-filipino',
+    icon: 'isla-filipino-2',
     logoTemplate: 'wordmark',
     logoLines: ['Isla', 'FILIPINO RESTAURANT'],
     logoFace: 'script',
@@ -2037,19 +2045,25 @@ export const LOCAL_SEED: LocalSeed[] = [
     phone: '(925) 849-6255',
     address: '548 Contra Costa Blvd., STE M, Pleasant Hill, CA 94523',
     siteNote: 'Isla Grand, their banquet room in Pleasant Hill, takes event bookings',
+    hours: 'Mon-Thu 11am-9pm, Fri 11am-11pm, Sat 8:30am-11pm, Sun 8:30am-9pm',
+    clip: {
+      src: '/clips/isla-filipino.mp4',
+      poster: '/clips/isla-filipino-poster.webp',
+      href: 'https://www.instagram.com/reel/Def-2mSlJDF/',
+      credit: 'Filmed by Isla Filipino Restaurant',
+      platform: 'Instagram',
+    },
     items: [],
     /* Their published menu, read from the menu pages of islafilipinorestaurant.com on 2026-09-09; sections as they publish them. */
     sections: [
+      { name: "Weekend breakfast buffet", items: [
+        ["Breakfast Buffet", "Every Saturday and Sunday, 8:30 to 11am (last seating 10:30) at Isla Grand: sopas, arroz caldo, chocolate and ube champorado, garlic and adobo rice, pancit palabok and canton, pork chop, longganisa, tocino, beef tapa, chicken adobo, lemongrass chicken, daing na bangus, sisig, lumpia, pancakes, waffles and more. $19.98 through October; regularly $27.98.", 2798, null, "$19.98 in October"],
+      ]},
       { name: "Drinks", items: [
         ["Black Gulaman", "Black gulaman with jelly, coconut meat and crushed ice", 798],
         ["Fountain Soda (Bottomless)", "", 448],
         ["Hot Tea (Per Cup)", "", 398],
         ["Coffee", "", 498],
-        ["Corona", "", 798],
-        ["Heineken", "", 798],
-        ["San Miguel Light", "", 798],
-        ["San Miguel Pilsen", "", 798],
-        ["Redhorse", "", 798],
       ]},
       { name: "Appetizers", items: [
         ["Original Sisig Kapampangan", "Spicy grilled minced pork sauteed and spiced, served sizzling (add $1 for chicharon or egg)", 1898],

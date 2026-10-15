@@ -1481,6 +1481,8 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'beasty-individuals-19': 'b_cheeenoh',
   'beasty-juice-0': 'b_gofresh',
   'beasty-bars-0': 'b_jalounge',
+  /* Glenn, 2026-10-15 10:36 am: Isla on BEASTY • AYCE, for Isla Grand's weekend breakfast buffet. */
+  'beasty-ayce-6': 'b_islafilipino',
   'san-jose-goods2-14': 'b_supremecrabayce',
   'san-jose-goods2-15': 'b_sixthstreetburger',
   'oakland-goods2-23': 'b_tartsdefeybesse',
