@@ -1460,6 +1460,34 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'san-francisco-goods2-39': 'b_merkadosf',
   'beasty-foodtrucks-5': 'b_endlesssummersweets',
   'beasty-sweets-8': 'b_endlesssummersweets',
+  /* Batch 51, 2026-10-15: Glenn's links of 14 Oct 10am to 15 Oct 8am. Café Carrusel on
+     More eats (no brunch spot on BEASTY • Eats) and Santa Rosa's yellow sheet; The Olive
+     Market and Nawah on the open Sandwiches seats of Pleasanton and Oakland; Sasa (sushi
+     taken), Supreme Crab, Sixth Street Burger (burgers taken), Go Fresh and Tarts de Feybesse (bakery
+     taken) and J&A Lounge on their cities' yellow sheets; D&S Body Shop on San Ramon's
+     mechanic seat; Stefano's on the open Italian seats of Petaluma and San Rafael.
+     By hand on BEASTY's own pages: Sundrip on Food Trucks, Tarts de Feybesse on the Tarts
+     spot of Sweets, Cheeenoh on Individuals, and the two businesses Glenn opened the new
+     pages with in spot 1: Go Fresh on Juice, J&A Lounge on Bar/Lounge. Juice, Bar/Lounge, Events, Youth, Dancers,
+     Artists, Automotive, Bakery and AYCE seat the rest by their type lines. */
+  'beasty-goods2-23': 'b_cafecarrusel',
+  'santa-rosa-goods2-1': 'b_cafecarrusel',
+  'pleasanton-goods-6': 'b_theolivemarket',
+  'walnut-creek-goods2-12': 'b_sasawalnutcreek',
+  'san-ramon-services-5': 'b_dsbodyshop',
+  'beasty-foodtrucks-6': 'b_sundripevents',
+  'oakland-goods2-22': 'b_gofresh',
+  'santa-rosa-goods2-2': 'b_jalounge',
+  'beasty-individuals-19': 'b_cheeenoh',
+  'beasty-juice-0': 'b_gofresh',
+  'beasty-bars-0': 'b_jalounge',
+  'san-jose-goods2-14': 'b_supremecrabayce',
+  'san-jose-goods2-15': 'b_sixthstreetburger',
+  'oakland-goods2-23': 'b_tartsdefeybesse',
+  'beasty-sweets-14': 'b_tartsdefeybesse',
+  'oakland-goods-6': 'b_nawahmarket',
+  'petaluma-goods-5': 'b_stefanossolarpizzapetaluma',
+  'san-rafael-goods-5': 'b_stefanossolarpizzasanrafael',
   /* 2026-10-08, evening: Brenda's French Soul Food on San Francisco's yellow
      sheet (no Cajun seat; the whole page for the reel), and Karilagan, which is
      in South San Francisco, on its open Filipino food seat. */

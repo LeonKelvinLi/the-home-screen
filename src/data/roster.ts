@@ -212,6 +212,18 @@ export const ROSTER_SEED: LocalSeed[] = [
        harumisushihibachi.com, an auto-generated booking site (checked
        2026-09-13). The tile's outline says so until they have one. */
     logoTemplate: 'band', logoLines: ['HARUMI', 'AYCE'],
+    /* "Please update icon for this place" — Glenn, 2026-10-15, with a screenshot of
+       their profile picture (the 晴海 mark) and @zarina.nawabi's reel ("Clip this video
+       plz"). A new file name so no phone keeps the old tile from its cache. */
+    icon: 'harumi-ayce-2',
+    clip: {
+      src: '/clips/harumi-ayce.mp4',
+      poster: '/clips/harumi-ayce-poster.webp',
+      href: 'https://www.instagram.com/reel/DNYa_Wlx1G2/',
+      credit: 'Filmed by @zarina.nawabi',
+      platform: 'Instagram',
+      by: 'zarina.nawabi',
+    },
   }),
   /*
     Lucky Three Seven, Oakland. Filled out 2026-08-20 from the Instagram profile
@@ -974,6 +986,9 @@ export const ROSTER_SEED: LocalSeed[] = [
       'monogram rather than their mark, because they do not have one.',
   }),
   seed('great-impasta', 'Great Impasta', 'Great Impasta', 'Italian', '#2E4A2A', {
+    /* "Please update their icon" — Glenn, 2026-10-15, with their own round logo (the
+       street signs, Since 1992, Danville Livery). It replaces the GI monogram. */
+    icon: 'great-impasta-2',
     logoTemplate: 'monogram', logoInitials: 'GI', logoFace: 'script',
     site: 'https://greatimpastadanville.com/',
   }),

@@ -501,6 +501,102 @@ def m_podcast(rng):
     return composite(img, over, blur=3)
 
 
+def m_juice(rng):
+    # Glenn, 2026-10-14: "New category BEASTY • Juice", with Go Fresh. Citrus slices
+    # drifting in green and orange light, and a tall cup with its straw.
+    img = gradient("#04110a", "#0d1f0a")
+    img = glow(img, W * 0.45, H * 0.38, 1100, "#16a34a", 0.36)
+    img = glow(img, W * 0.7, H * 0.7, 800, "#f97316", 0.22)
+    over, d = layer()
+    for _ in range(14):
+        cx, cy, r = rng.uniform(0, W), rng.uniform(0, H), rng.uniform(70, 170)
+        d.ellipse([cx - r, cy - r, cx + r, cy + r], outline=rgba("#fdba74", 0.16), width=10)
+        for k in range(8):
+            a = k * math.pi / 4
+            d.line([(cx, cy), (cx + r * 0.85 * math.cos(a), cy + r * 0.85 * math.sin(a))], fill=rgba("#fdba74", 0.1), width=6)
+    cx, cy = W * 0.5, H * 0.42
+    d.polygon([(cx - 220, cy - 300), (cx + 220, cy - 300), (cx + 170, cy + 320), (cx - 170, cy + 320)], outline=rgba("#bbf7d0", 0.3), width=14)
+    d.line([(cx - 205, cy - 120), (cx + 205, cy - 120)], fill=rgba("#bbf7d0", 0.2), width=10)
+    d.line([(cx + 40, cy - 300), (cx + 140, cy - 560), (cx + 260, cy - 560)], fill=rgba("#bbf7d0", 0.3), width=16)
+    return composite(img, over, blur=3)
+
+
+def m_bars(rng):
+    # Glenn, 2026-10-14: "New Category BEASTY • Bar/lounge", with J&A Lounge. A coupe
+    # glass in amber light over a row of bottles, the bokeh of a dim room behind.
+    img = gradient("#0c0704", "#1c0f05")
+    img = glow(img, W * 0.5, H * 0.4, 1100, "#b45309", 0.4)
+    over, d = layer()
+    for _ in range(40):
+        x, y, r = rng.uniform(0, W), rng.uniform(0, H * 0.7), rng.uniform(20, 70)
+        d.ellipse([x - r, y - r, x + r, y + r], fill=rgba("#fcd34d", rng.uniform(0.03, 0.08)))
+    cx, cy = W * 0.5, H * 0.38
+    d.polygon([(cx - 300, cy - 200), (cx + 300, cy - 200), (cx, cy + 120)], outline=rgba("#fde68a", 0.32), width=14)
+    d.line([(cx - 230, cy - 120), (cx + 230, cy - 120)], fill=rgba("#fde68a", 0.18), width=10)
+    d.line([(cx, cy + 120), (cx, cy + 480)], fill=rgba("#fde68a", 0.32), width=14)
+    d.line([(cx - 180, cy + 480), (cx + 180, cy + 480)], fill=rgba("#fde68a", 0.32), width=14)
+    base = H - 300
+    x = 60
+    while x < W - 60:
+        w, h = rng.uniform(70, 110), rng.uniform(260, 460)
+        d.rounded_rectangle([x, base - h, x + w, base], radius=18, outline=rgba("#fbbf24", 0.16), width=8)
+        d.rectangle([x + w * 0.35, base - h - 90, x + w * 0.65, base - h], outline=rgba("#fbbf24", 0.16), width=8)
+        x += w + rng.uniform(30, 60)
+    d.line([(0, base + 8), (W, base + 8)], fill=rgba("#fbbf24", 0.2), width=10)
+    return composite(img, over, blur=3)
+
+
+def m_events(rng):
+    # Glenn, 2026-10-14: "New Category BEASTY • Events". Confetti and string lights
+    # over a night sky in violet, the way a party looks from across the room.
+    img = gradient("#08051a", "#1a0b2e")
+    img = glow(img, W * 0.5, H * 0.35, 1100, "#7c3aed", 0.38)
+    img = glow(img, W * 0.25, H * 0.75, 700, "#db2777", 0.2)
+    over, d = layer()
+    for row in range(3):
+        y0 = 260 + row * 420
+        pts = [(x, y0 + 120 * math.sin(x / W * math.pi)) for x in range(-40, W + 60, 40)]
+        d.line(pts, fill=rgba("#e9d5ff", 0.14), width=6)
+        for i in range(2, len(pts), 3):
+            x, y = pts[i]
+            d.ellipse([x - 16, y + 6, x + 16, y + 38], fill=rgba("#fde68a", 0.22))
+    cols = ["#f9a8d4", "#fde68a", "#a5f3fc", "#c4b5fd", "#86efac"]
+    for _ in range(170):
+        x, y = rng.uniform(0, W), rng.uniform(H * 0.25, H)
+        w, h, a = rng.uniform(14, 34), rng.uniform(6, 14), rng.uniform(0, math.pi)
+        c, s = math.cos(a), math.sin(a)
+        pts = [(x + dx * c - dy * s, y + dx * s + dy * c) for dx, dy in ((-w, -h), (w, -h), (w, h), (-w, h))]
+        d.polygon(pts, fill=rgba(rng.choice(cols), rng.uniform(0.1, 0.22)))
+    return composite(img, over, blur=2)
+
+
+def m_youth(rng):
+    # Glenn, 2026-10-15: "New category BEASTY • Youth", with a picture of two kids,
+    # arms up. Two of them here in sky-blue light, a ball and chalk stars around them.
+    img = gradient("#03101c", "#071a2e")
+    img = glow(img, W * 0.5, H * 0.4, 1100, "#0284c7", 0.4)
+    over, d = layer()
+    for cx in (W * 0.33, W * 0.67):
+        cy = H * 0.36
+        d.ellipse([cx - 90, cy - 330, cx + 90, cy - 150], outline=rgba("#bae6fd", 0.32), width=16)
+        d.line([(cx, cy - 150), (cx, cy + 150)], fill=rgba("#bae6fd", 0.32), width=18)
+        d.line([(cx - 200, cy - 280), (cx, cy - 60), (cx + 200, cy - 280)], fill=rgba("#bae6fd", 0.32), width=18, joint="curve")
+        d.line([(cx - 120, cy + 420), (cx, cy + 150), (cx + 120, cy + 420)], fill=rgba("#bae6fd", 0.32), width=18, joint="curve")
+    bx, by = W * 0.5, H * 0.72
+    d.ellipse([bx - 120, by - 120, bx + 120, by + 120], outline=rgba("#fde68a", 0.24), width=12)
+    d.arc([bx - 220, by - 120, bx + 20, by + 120], -60, 60, fill=rgba("#fde68a", 0.18), width=10)
+    d.arc([bx - 20, by - 120, bx + 220, by + 120], 120, 240, fill=rgba("#fde68a", 0.18), width=10)
+    for _ in range(26):
+        x, y, r = rng.uniform(0, W), rng.uniform(0, H), rng.uniform(22, 48)
+        pts = []
+        for k in range(10):
+            a = -math.pi / 2 + k * math.pi / 5
+            rr = r if k % 2 == 0 else r * 0.45
+            pts.append((x + rr * math.cos(a), y + rr * math.sin(a)))
+        d.polygon(pts, outline=rgba("#e0f2fe", 0.14), width=5)
+    return composite(img, over, blur=3)
+
+
 MOTIFS = {
     "tattoo": m_tattoo,
     "athletes": m_athletes,
@@ -522,6 +618,10 @@ MOTIFS = {
     "coffee": m_coffee,
     "bakery": m_bakery,
     "podcast": m_podcast,
+    "juice": m_juice,
+    "bars": m_bars,
+    "events": m_events,
+    "youth": m_youth,
     "pits": m_pits,
     "pets": m_pets,
     "models": m_models,

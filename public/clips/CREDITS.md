@@ -254,6 +254,14 @@ the most movement — to 540x960 with sound.
 | `tono-coffee-project.mp4` | tōno coffee project, San Jose | instagram.com/reel/DecpsH_yJHC — **an excerpt**, 0s–14s of 58s; posted by @andygravs (Andrew), a food creator — sent on 2026-10-13 with "Clip this video plz" |
 | `addis-oakland.mp4` | Addis Restaurant, Oakland | instagram.com/reel/DedHA3BRwqh — **an excerpt**, 12s–26s of 87s; posted by @grubwitmike, a food creator — sent on 2026-10-13 with "Clip this video plz" |
 | `endless-summer-sweets.mp4` | Endless Summer Sweets, Berkeley (BEASTY • Sweets, Food Trucks) | instagram.com/reel/DecS6_ghYNK — **an excerpt**, 0s–14s of 20s; posted by @livingvivalakillah (Krissy), a food creator — sent on 2026-10-14 with "Clip this video plz", "Foodie" |
+| `cafe-carrusel.mp4` | Café Carrusel, Santa Rosa (BEASTY • Eats) | instagram.com/reel/Dee2mFcoxRl — **an excerpt**, 91s–115s of 118s; posted by @thesnacksensei (Grand-O), a food creator — sent on 2026-10-14 with "Clip this video plz" |
+| `the-olive-market.mp4` | The Olive Market, Pleasanton | instagram.com/reel/DcMvPCJBeqC — **an excerpt**, 1s–25s of 87s; posted by @grubwitmike, a food creator — sent on 2026-10-14 with "Clip this video plz" |
+| `sasa-walnut-creek.mp4` | Sasa, Walnut Creek | instagram.com/reel/DeSvFGCBgWp — **an excerpt**, 4s–28s of 30s (their closing black card left off); their own post — sent on 2026-10-14 with "Clip this video plz" |
+| `sundrip-events.mp4` | Sundrip Events (BEASTY • Food Trucks, Events) | instagram.com/reel/DeezVC-hRpM — **an excerpt**, 37s–61s of 62s; their own post — sent on 2026-10-14 with "Clip this video plz" |
+| `harumi-ayce.mp4` | Harumi, Livermore (BEASTY • Eats, AYCE) | instagram.com/reel/DNYa_Wlx1G2 — **an excerpt**, 2s–26s of 40s; posted by @zarina.nawabi, a food creator — sent on 2026-10-15 with "Clip this video plz", "Please update icon for this place" |
+| `supreme-crab-ayce.mp4` | Supreme Crab AYCE, San Jose (BEASTY • AYCE) | instagram.com/reel/DefiHqVPl3W — **an excerpt**, 2s–26s of 44s; posted by @eighty6ix_, a food creator — sent on 2026-10-15 with "Clip this video plz", "Foodie" |
+| `6th-street-burger.mp4` | Sixth Street Burger, San Jose | instagram.com/reel/DehFfrNgtmW — **an excerpt**, 23s–47s of 98s; posted by @shrimpfriedroice, a food creator — sent on 2026-10-15 with "Clip this video plz" |
+| `tarts-de-feybesse.mp4` | Tarts de Feybesse, Oakland (BEASTY • Sweets) | instagram.com/reel/Dee3vLyBHeD — **an excerpt**, 1s–25s of 33s; posted by @livingvivalakillah (Krissy), a food creator — sent on 2026-10-15 with "Clip this video plz", "Foodie" |
 
 **Filmed by someone other than the business, credited to the film-maker on the card,
 and used the same narrow way as Lucky Three Seven — nobody has told us we may:**

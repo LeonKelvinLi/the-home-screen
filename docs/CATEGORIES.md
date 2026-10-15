@@ -57,8 +57,12 @@ Donations, DJ's, Chefs, Foodies, Realtors, Media, Photographers, Automotive
 (the cars themselves, seated from the centre out: MeterSF in the centre, spot 10, then MrCheeze408 beside it; the order is in `placements.ts`), Pit's, Pets (from 2026-10-09; King Lou is spot 1), Models, Meats, Gyms,
 Barbershops, Salons, AYCE, Food Trucks, Cafe (Coffee until 2026-10-12), Bakery (from 2026-10-11:
 bread, pastry and cake shops by their type line; a bakery can be on Sweets too)
-and Podcast (from 2026-10-12, "a great category that we can collab with"; a
-podcast fits Media's type line too).
+Podcast (from 2026-10-12, "a great category that we can collab with"; a
+podcast fits Media's type line too), and four from the night of 2026-10-14: Juice
+(juice bars, smoothies, açaí; Go Fresh in Oakland first), Bar/Lounge (bars, lounges,
+taprooms; J&A Lounge in Santa Rosa with it), Events (rentals, mobile bars, planners)
+and Youth (kids' clubs, classes, camps and play; not dog daycare). All four are on
+More pages and in Search, not on BEASTY • Pages.
 
 Each category page holds 24 spots. Seat ids look like `beasty-tattoo-0` through
 `beasty-tattoo-23`, the same shape as every other seat.
