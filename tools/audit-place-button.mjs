@@ -111,23 +111,26 @@ for (const [what, id, want, lands] of cases) {
   await p.close()
 }
 
-/* HOME IS BEASTY • GOODS, from any business page. Glenn, 2026-09-24: "when
-   you tap HOME on anyone's page it goes directly to BEASTY • Goods as the HOME
-   page". Checked from the hardest case: a business opened from its own tile
-   on its city page, where Home used to return to that city page. */
+/* Glenn, 2026-10-15: a business opened from a grid says Back and returns to
+   that exact page. Direct links keep Home and return to BEASTY • Pages. */
 {
   const p = await page()
   await open(p, 'b_zadnagrill')
   await p.click('.nav-place')
   await waitWhere(p, 'Redwood City, Goods')
+    const before = await where(p)
   await p.locator('button[aria-label^="Zadna Grill"]').first().click()
   await p.waitForSelector('.nav-back', { timeout: 20000 }).catch(() => {})
   await p.waitForTimeout(800)
+    step('a city-grid launch says Back', /Back/.test(await p.locator('.nav-back').textContent()))
   await p.click('.nav-back')
-  /* Since 2026-10-05 the first page is BEASTY • Pages ("make the Home Screen
-     BEASTY • Pages", Glenn, 2026-10-03). */
-  const w = await waitWhere(p, 'BEASTY, Pages')
-  step('Home goes to BEASTY • Pages (the first page), even from a city tile', !!w && /^Page 1 of \d+, BEASTY, Pages$/.test(w), `${w}`)
+    const back = await waitWhere(p, 'Redwood City, Goods')
+    step('Back returns to the exact city grid page', back === before, `${before} -> ${back}`)
+    await open(p, 'b_zadnagrill')
+    step('a direct business link keeps Home', /Home/.test(await p.locator('.nav-back').textContent()))
+    await p.click('.nav-back')
+    const w = await waitWhere(p, 'BEASTY, Pages')
+    step('Home from a direct link goes to BEASTY • Pages', !!w && /^Page 1 of \d+, BEASTY, Pages$/.test(w), `${w}`)
   await p.close()
 }
 
