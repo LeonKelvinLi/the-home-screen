@@ -143,7 +143,8 @@ for (const [id, want, expect] of [
   ['b_gumbosocial', 'Gumbo Social', { free: true, call: '(415) 655-9195' }],
   /* 2026-09-14. */
   ['b_sushiuma', 'Sushi Uma', { rows: 100, call: '(415) 968-9933', hours: 'Daily 11:00 am' }],
-  ['b_acekingbbq', 'Ace King BBQ', { free: true, call: '510-323-4987' }],
+  /* Glenn, 2026-10-16: the requested creator film upgrades this to a whole page. */
+  ['b_acekingbbq', 'Ace King BBQ', { call: '510-323-4987', reviewBy: 'victoria.pham17' }],
   ['b_harborviewsf', 'Harborview Restaurant & Bar', { free: true, call: '(415) 399-1200' }],
   ['b_theseabyash', "The Sea by Alexander's Steakhouse", { free: true, call: '(650) 213-1111' }],
   ['b_looki', 'Looki', { quote: true, photos: 1 }],
@@ -367,6 +368,7 @@ for (const [id, want, expect] of [
       /* The free listing, Tier 1: the note is there and the menu is not. */
       free: !!document.querySelector('.brand-free'),
       menuBar: !!document.querySelector('.brand-menu-drop'),
+      reviewBar: txt('.brand-clip-drop .menu-picks-bar'),
     }
   })
   console.log(`${id.padEnd(22)}: ${got.title} | ${got.hours || '-'} | ${got.rows} rows${got.quotePad !== null ? ` | note at x=${got.quotePad}` : ''}`)
@@ -378,6 +380,7 @@ for (const [id, want, expect] of [
   if (expect.photos && got.photos < expect.photos) fails.push(`${id}: ${got.photos} pictures in the strip, expected ${expect.photos}`)
   if (expect.free && !got.free) fails.push(`${id}: a yellow-sheet spot should be drawn as the free Tier 1 listing`)
   if (expect.free && got.menuBar) fails.push(`${id}: the free listing must not carry the menu`)
+  if (expect.reviewBy && !got.reviewBar.includes(`@${expect.reviewBy}`)) fails.push(`${id}: the requested review is missing its creator credit`)
 }
 
 // ---- the reviewer's film, his 2026-09-09 protocol ----------------------
