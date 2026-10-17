@@ -164,3 +164,28 @@ its own), or add a line to `OTHER_REVIEWS`. `tools/audit-foodies.mjs` checks it.
 | 10 Oct | @lifebyvivien (Vivien) | Kodawari Japanese Cuisine, San Mateo | **Yes.** On its page |
 | 10 Oct | @singlecatm0m (Tiffany) | Com Tam Thien Huong, San Jose | **Yes.** On its page and her Foodies page |
 | 11 Oct | @andre___lucas (André Lucas) | Rize Up Bakery, San Francisco (his Fusion Dumpling film is on Fusion Dumpling's page) | Listed in OTHER_REVIEWS |
+
+
+### Batch 52 — 15–16 October 2026
+
+All primary films were checked against their captions. Several “Clip this video” posts are creator reviews and carry `by` and a credit accordingly.
+
+| Sent | Creator | What the reel shows | On BEASTY? |
+|---|---|---|---|
+| 15–16 Oct 2026 | @bayarea.maganda.eats | Manakish Oven & Grill — [DdaVo6WMaMH](https://www.instagram.com/reel/DdaVo6WMaMH/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @forkmeetsfood | Poesia Osteria Italiana — [DeFbH0cSKzU](https://www.instagram.com/reel/DeFbH0cSKzU/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @foodiesnflightss | Wilfred’s Lounge — [DcMhOfJSaEP](https://www.instagram.com/reel/DcMhOfJSaEP/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @grubwitmike | yo-sushi — [DeiOoYbxiut](https://www.instagram.com/reel/DeiOoYbxiut/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @carlaylayyy | Frymazing — [DeiHhp3uzRo](https://www.instagram.com/reel/DeiHhp3uzRo/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @bayarea_fooddreamz | D. Monaghans On The Hill — [Deh-8JOB_cx](https://www.instagram.com/reel/Deh-8JOB_cx/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @jbrenes_ | benicia-grill — [DZ8VTQuS-XB](https://www.instagram.com/reel/DZ8VTQuS-XB/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @shua.tangco | Crazy Block Cheesecakes — [Ddnfmh-O9-w](https://www.instagram.com/reel/Ddnfmh-O9-w/) | **Yes.** Credited review on the business’s page |
+| 15–16 Oct 2026 | @victoria.pham17 | ace-king-bbq — [DeNbo-hynOi](https://www.instagram.com/reel/DeNbo-hynOi/) | **Yes.** Credited review on the business’s page |
+
+Secondary and unavailable links:
+
+- `DeX8snzS-Ae` for Manakish Oven & Grill: Football/invitation post by @maganda.leslieann; caption does not identify Manakish. Held for corrected link.
+- `DeNBS2rSB-3` for Poesia: @forkmeetsfood explicitly identifies Mala Tavern in Lahaina, Maui. Excluded.
+- `Ddxk-6MBHSr` for Crazy Block Cheesecakes: @shua.tangco caption explicitly says New York City and New Jersey; excluded.
+- `DeODcFCCMKM` for Dolores Deluxe: Instagram returned empty media response. Not published as a broken film.
+- `DeF-p4_hm_4` for Wilfred’s Lounge: Instagram returned empty media response for the secondary review. Main verified film is published.

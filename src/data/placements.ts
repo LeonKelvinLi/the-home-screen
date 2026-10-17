@@ -1506,4 +1506,27 @@ export const CITY_PLACEMENTS: Record<string, string> = {
      Philomena's; the whole page for the reel). Lil Hawaii fills BEASTY •
      Dancers by his type line. */
   'oakland-goods2-20': 'b_mamasboypizza',
+  /* Batch 52, Glenn, 15–16 October 2026: “Walnut Creek • Eats”, “San Francisco • Eats”,
+     “BEASTY • Games / New Category”, “Fairfield • Eats”, “Oakland • Eats / Also put in
+     BEASTY • Bar/Lounge”, “Antioch • Eats / Oakley • Eats”, “Fremont • Eats”.
+     Occupied cuisine seats stay with their businesses; overflow uses the yellow sheet.
+     Parliament: Bar/Lounge plus Rohnert Park's yellow Eats sheet (the existing city
+     model has no separate Bar/Lounge sheet). Crazy Block: Oakland and BEASTY More eats;
+     the Cheesecakes seat on BEASTY • Sweets is already Basq Haus's. No eviction. */
+  'walnut-creek-goods2-13': 'b_manakishoven',
+  'san-francisco-goods2-40': 'b_poesiasf',
+  'san-francisco-goods2-41': 'b_doloresdeluxe',
+  'beasty-bars-1': 'b_wilfredslounge',
+  'beasty-games-0': 'b_supersavagegames',
+  'fairfield-goods-7': 'b_frymazing',
+  'oakland-goods2-24': 'b_dmonaghans',
+  'beasty-bars-2': 'b_dmonaghans',
+  'antioch-goods2-3': 'b_wtfantioch',
+  'oakley-goods2-0': 'b_wtfoakley',
+  'oakland-goods2-25': 'b_crazyblockcheesecakes',
+  'beasty-goods2-24': 'b_crazyblockcheesecakes',
+  'beasty-bars-3': 'b_parliamentbrewing',
+  'rohnert-park-goods2-0': 'b_parliamentbrewing',
+  'fremont-goods2-5': 'b_lucyscrepes',
+
 }

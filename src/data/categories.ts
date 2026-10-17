@@ -45,6 +45,7 @@ const wall = (kind: string) => `/wallpapers/cat-${kind}.webp`
 
 /** In the order Glenn listed them on 2026-09-30, with Tattoo from his example. */
 export const BEASTY_CATEGORIES: BeastyCategory[] = [
+  { kind: 'games', heading: 'Games', about: 'Video games, consoles and trade-ins', wall: wall('games'), test: /video game|gaming|arcade|console|comics and games/i },
   { kind: 'tattoo', heading: 'Tattoo', about: 'Tattoo artists and studios', wall: wall('tattoo'), test: /tattoo/i },
   { kind: 'athletes', heading: 'Athletes', about: 'Athletes and the brands they run', wall: wall('athletes'), test: /\bathlete/i },
   { kind: 'ai', heading: 'AI', about: 'AI products and the people building them', wall: wall('ai'), test: /\bAI\b|artificial intelligence/ },

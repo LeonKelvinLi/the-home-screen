@@ -211,13 +211,13 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
       <AppChrome
         title={brand.name}
         /*
-          HOME IS BEASTY • GOODS. Glenn, 2026-09-24: "when you tap HOME on
-          anyone's page it goes directly to BEASTY • Goods as the HOME page".
-          It used to return to whichever page the home screen was on, so from a
-          city tile it went back to that city. The button opposite now covers
-          "the page this business is on"; Home always means the front page.
+          Glenn, 2026-10-15: business tiles should return to the exact grid
+          they opened from, to compare businesses. HomeScreen stays mounted,
+          so closeApp preserves the category and its pagination. Direct links
+          and opens from Search keep Home and go to BEASTY • Pages.
         */
-        onBack={() => api.goToCity('BEASTY')}
+        backLabel={api.backToGrid ? 'Back' : 'Home'}
+        onBack={() => api.backToGrid ? api.closeApp() : api.goToCity('BEASTY')}
         tint={brand.logo.bg.split('|')[0]}
         className={place ? 'has-place' : undefined}
         right={
@@ -459,8 +459,14 @@ export function BrandApp({ brandId, api }: { brandId: string; api: ShellApi }) {
             </div>
             {/* prepMinutes is an estimate by category, not sourced, so it is
                 hedged — and suppressed entirely where there is nothing to cook. */}
-            {((brand.prepMinutes > 0 && !brand.contactOnly) || brand.dietary?.length) && (
+            {((brand.prepMinutes > 0 && !brand.contactOnly) || brand.dietary?.length || brand.dogFriendly) && (
               <div className="brand-chips">
+                {brand.dogFriendly && (
+                  <span className="chip chip-dog-friendly" style={{ background: ink.isDark ? 'rgba(255,255,255,0.18)' : 'rgba(0,0,0,0.08)', color: ink.fg }}>
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><ellipse cx="12" cy="16" rx="6" ry="5"/><ellipse cx="5" cy="10" rx="2.5" ry="3"/><ellipse cx="10" cy="5.5" rx="2.5" ry="3"/><ellipse cx="16" cy="5.5" rx="2.5" ry="3"/><ellipse cx="20" cy="11" rx="2.5" ry="3"/></svg>
+                    Dog friendly
+                  </span>
+                )}
                 {brand.dietary?.map((d) => (
                   <span
                     className={isHalal([d]) ? 'chip chip-halal' : 'chip'}

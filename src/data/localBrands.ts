@@ -204,6 +204,8 @@ export interface LocalSeed {
   groups?: { name: string; items: [string, string, number, string?][] }[]
   /** Kitchen's own dietary description, e.g. ['Halal']. Never a certification. */
   dietary?: string[]
+  /** Dog-friendly venue, confirmed by the business or operator. */
+  dogFriendly?: boolean
   /** Partner discount. Headline states the guaranteed floor, not a range. */
   perk?: { headline: string; detail: string }
   /**
@@ -2030,7 +2032,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       the drinks list are off, as alcohol is everywhere else.
     */
     slug: 'isla-filipino',
-    icon: 'isla-filipino-2',
+    icon: 'isla-filipino-3',
     logoTemplate: 'wordmark',
     logoLines: ['Isla', 'FILIPINO RESTAURANT'],
     logoFace: 'script',
@@ -2236,6 +2238,7 @@ export const LOCAL_SEED: LocalSeed[] = [
       him confirming.
     */
     slug: 'fun-cloud-events',
+    icon: 'fun-cloud-events-2',
     logoTemplate: 'wordmark',
     logoLines: ['Fun Cloud', 'EVENTS'],
     logoFace: 'grotesk',
@@ -2252,6 +2255,13 @@ export const LOCAL_SEED: LocalSeed[] = [
     contactOnly:
       'Children\u2019s party entertainment across the Bay Area, Napa and Santa Rosa: balloon twisting, a bubble show, nerf battles, mascots, and a live show built around an eight-foot transformer. Booked by enquiry, so nothing is priced here.',
     items: [],
+    clip: {
+        "src": "/clips/fun-cloud-events.mp4",
+        "poster": "/clips/fun-cloud-events-poster.webp",
+        "href": "https://www.instagram.com/reel/DLdf9WHBejy/",
+        "credit": "Posted by @funcloud_kidsevents",
+        "platform": "Instagram"
+    },
   },
   {
     /*
@@ -14752,5 +14762,1262 @@ export const LOCAL_SEED: LocalSeed[] = [
       ] },
     ],
     items: [],
+  },
+  /* BATCH 52, 2026-10-16: verified official-site facts and reel captions.
+     Sources, conflicts and unavailable assets: research/roster/batch52.json. */
+  {
+      "slug": "manakish-oven",
+      "name": "Manakish Oven & Grill",
+      "label": "Manakish",
+      "cuisine": "Mediterranean & manakish",
+      "color": "#f2e9d3",
+      "icon": "manakish-oven",
+      "site": "https://manakishoven.com/",
+      "tagline": "Manakish, shawarma and Mediterranean recipes in Walnut Creek.",
+      "prep": 0,
+      "category": "Mediterranean & manakish",
+      "items": [],
+      "address": "2905 N Main St, Walnut Creek, CA 94597",
+      "phone": "(925) 949-8334",
+      "email": "connect@manakishoven.com",
+      "hours": "Sun–Thu 8am–9pm; Fri–Sat 8am–9:30pm",
+      "dietary": [
+          "Halal"
+      ],
+      "contactOnly": "Manakish, shawarma, kebabs and Mediterranean plates. View the restaurant’s own menu for current choices and prices.",
+      "panels": [
+          {
+              "head": "Menu & ordering",
+              "links": [
+                  {
+                      "label": "Current menu at Manakish",
+                      "href": "https://manakishoven.com/menu"
+                  }
+              ]
+          },
+          {
+              "head": "Other location",
+              "body": [
+                  "The business also lists a San Jose restaurant at 670 Stockton Ave. This page is for the Walnut Creek location."
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/manakish-oven.mp4",
+          "poster": "/clips/manakish-oven-poster.webp",
+          "href": "https://www.instagram.com/reel/DdaVo6WMaMH/",
+          "credit": "Filmed by @bayarea.maganda.eats",
+          "platform": "Instagram",
+          "by": "bayarea.maganda.eats"
+      }
+  },
+  {
+      "slug": "poesia-sf",
+      "name": "Poesia Osteria Italiana",
+      "label": "Poesia",
+      "cuisine": "Italian restaurant & cafe",
+      "color": "#9d242d",
+      "icon": "poesia-sf",
+      "site": "https://poesiasf.com/",
+      "tagline": "Italian cooking in the heart of the Castro.",
+      "prep": 0,
+      "category": "Italian restaurant & cafe",
+      "items": [],
+      "address": "4072 18th St, San Francisco, CA 94114",
+      "phone": "(415) 252-9325",
+      "email": "info@poesiasf.com",
+      "hours": "Daily 5pm–9:30pm",
+      "sections": [
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "Pane & Olio",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Olive Marinate",
+                      "",
+                      900
+                  ],
+                  [
+                      "Soup of the Day",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Burrata di Puglia",
+                      "",
+                      2200
+                  ],
+                  [
+                      "Giardino di Verdure",
+                      "",
+                      2200
+                  ],
+                  [
+                      "Insalata Mista",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Sardine alla Griglia",
+                      "",
+                      2200
+                  ],
+                  [
+                      "Capesante in Saor",
+                      "",
+                      2600
+                  ],
+                  [
+                      "Zuppetta di Pesce",
+                      "",
+                      2200
+                  ],
+                  [
+                      "Tagliere Salumi e Formaggi",
+                      "",
+                      3800
+                  ],
+                  [
+                      "Vitello Tonnato",
+                      "",
+                      2200
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Cavolini Saltati",
+                      "",
+                      1100
+                  ],
+                  [
+                      "Broccolini Aglio Olio e Pepperoncino",
+                      "",
+                      1100
+                  ],
+                  [
+                      "Broccoli Bagna Cauda",
+                      "",
+                      1100
+                  ],
+                  [
+                      "Terrina di Rape",
+                      "",
+                      1100
+                  ]
+              ]
+          },
+          {
+              "name": "Pasta",
+              "items": [
+                  [
+                      "Pici con Pomodoro e Burrata",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Tagliolini alle Vongole e Bottarga",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Ravioli di Ricotta di Pecora",
+                      "",
+                      3100
+                  ],
+                  [
+                      "Pappardelle Verdi al Ragù della Nonna",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Agnolotti al Plin",
+                      "",
+                      3000
+                  ],
+                  [
+                      "Paccheri allo Spada in Puttanesca",
+                      "",
+                      3000
+                  ]
+              ]
+          },
+          {
+              "name": "Entrees",
+              "items": [
+                  [
+                      "Filetto di Maiale",
+                      "",
+                      3700
+                  ],
+                  [
+                      "Petto d’Anatra",
+                      "",
+                      4200
+                  ],
+                  [
+                      "Parmigiana di Melanzane",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Trancio di Pesce",
+                      "",
+                      4200
+                  ]
+              ]
+          }
+      ],
+      "siteNote": "Food prices from Poesia’s own published menu, checked 16 October 2026; their menu is subject to change.",
+      "clip": {
+          "src": "/clips/poesia-sf.mp4",
+          "poster": "/clips/poesia-sf-poster.webp",
+          "href": "https://www.instagram.com/reel/DeFbH0cSKzU/",
+          "credit": "Filmed by @forkmeetsfood",
+          "platform": "Instagram",
+          "by": "forkmeetsfood"
+      }
+  },
+  {
+      "slug": "dolores-deluxe",
+      "name": "Dolores Deluxe",
+      "label": "Dolores Deluxe",
+      "cuisine": "Corner store & sandwiches",
+      "color": "#244b39",
+      "icon": "dolores-deluxe",
+      "site": "https://www.doloresdeluxe.com/",
+      "tagline": "A neighborhood corner store in Dolores Heights, established in 1911.",
+      "prep": 0,
+      "category": "Corner store & sandwiches",
+      "items": [],
+      "address": "3500 22nd St, San Francisco, CA 94114",
+      "phone": "(415) 875-9136",
+      "email": "info@doloresdeluxe.com",
+      "contactOnly": "Neighborhood sandwiches, groceries and wine. Check their daily food menu for current availability.",
+      "panels": [
+          {
+              "head": "Food menus & wine club",
+              "links": [
+                  {
+                      "label": "Daily food menus",
+                      "href": "https://www.doloresdeluxe.com/todays-menu"
+                  },
+                  {
+                      "label": "Deluxe Wine Club",
+                      "href": "https://dolores-deluxe.thethirdplace.is/"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "wilfreds-lounge",
+      "name": "Wilfred’s Lounge",
+      "label": "Wilfred’s",
+      "cuisine": "Tiki bar & Polynesian cuisine",
+      "color": "#153e39",
+      "icon": "wilfreds-lounge",
+      "site": "https://www.wilfredslounge.com/",
+      "tagline": "Island-inspired plates and tiki cocktails on the Napa River.",
+      "prep": 0,
+      "category": "Tiki bar & Polynesian cuisine",
+      "items": [],
+      "address": "967 First St, Napa, CA 94559",
+      "phone": "(707) 690-9957",
+      "email": "aloha@wilfredslounge.com",
+      "hours": "Wed–Sat noon–10pm; Sun 11am–9pm; Mon–Tue closed",
+      "dogFriendly": true,
+      "sections": [
+          {
+              "name": "Pupus",
+              "items": [
+                  [
+                      "Spam Fries",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Natsubi",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Fried Pickles",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Chicken Wings",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Coconut Shrimp",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Spam Musubi",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Fried Plantains",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Vegetable Potstickers",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Kalua Pork Sliders",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Pupu Sampler Platter",
+                      "",
+                      3500
+                  ]
+              ]
+          },
+          {
+              "name": "Poke Bowls",
+              "items": [
+                  [
+                      "Ahi Tuna Poke Bowl",
+                      "",
+                      2300
+                  ],
+                  [
+                      "Tofu Poke Bowl",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Creamy Salmon Poke Bowl",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Chicken Teriyaki Poke Bowl",
+                      "",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Sesame Wonton Salad",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Caesar Salad",
+                      "",
+                      1800
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "Honolulu Burger",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Truffalo Sandwich",
+                      "",
+                      2300
+                  ],
+                  [
+                      "Smash Burger",
+                      "",
+                      2500
+                  ],
+                  [
+                      "BLT",
+                      "",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Entrees",
+              "items": [
+                  [
+                      "Orange Chicken",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Chicken Katsu",
+                      "",
+                      2300
+                  ],
+                  [
+                      "Pineapple Fried Rice",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Kalua Pork",
+                      "",
+                      2700
+                  ],
+                  [
+                      "Airline Chicken",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Five-Spice Ribs",
+                      "",
+                      3900
+                  ],
+                  [
+                      "Teriyaki Salmon",
+                      "",
+                      3600
+                  ],
+                  [
+                      "Flatiron Steak",
+                      "",
+                      4200
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Firecracker Green Beans",
+                      "",
+                      900
+                  ],
+                  [
+                      "Seasonal Vegetables",
+                      "",
+                      900
+                  ],
+                  [
+                      "Sweet Potato Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "Macaroni Salad",
+                      "",
+                      700
+                  ],
+                  [
+                      "Side Salad",
+                      "",
+                      600
+                  ],
+                  [
+                      "Steamed Rice",
+                      "",
+                      600
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "‘Ono Pie",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Pineapple Upside-Down Cake",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Key Lime Pie",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Flourless Chocolate Torte",
+                      "",
+                      1200
+                  ]
+              ]
+          }
+      ],
+      "siteNote": "Food prices from Wilfred’s own menu, checked 16 October 2026. The restaurant states a 3% benefits charge on all checks. Contact the venue for current policies.",
+      "clip": {
+          "src": "/clips/wilfreds-lounge.mp4",
+          "poster": "/clips/wilfreds-lounge-poster.webp",
+          "href": "https://www.instagram.com/reel/DcMhOfJSaEP/",
+          "credit": "Filmed by @foodiesnflightss",
+          "platform": "Instagram",
+          "by": "foodiesnflightss"
+      }
+  },
+  {
+      "slug": "super-savage-games",
+      "name": "Super Savage Games",
+      "label": "Super Savage",
+      "cuisine": "Video games & collectibles",
+      "color": "#101014",
+      "icon": "super-savage-games",
+      "site": "https://www.supersavagegames.com/home",
+      "tagline": "Buy, sell and trade games, consoles and collectibles.",
+      "prep": 0,
+      "category": "Video games & collectibles",
+      "items": [],
+      "address": "1375 E 14th St, San Leandro, CA 94577",
+      "hours": "Tue–Sun noon–8pm; Mon closed",
+      "contactOnly": "Video games, game systems, comics, Funko, Pokémon cards and other collectibles. Buy, sell and trade in store; ask about current stock and game-disc or system repairs.",
+      "panels": [
+          {
+              "head": "Visit & trade",
+              "body": [
+                  "Open Tuesday through Sunday, noon to 8pm. The owner’s FAQ lists Wednesday through Sunday as the owner’s in-store days."
+              ],
+              "links": [
+                  {
+                      "label": "Trade or sell",
+                      "href": "https://www.supersavagegames.com/home/trade-or-sell"
+                  },
+                  {
+                      "label": "Store FAQ",
+                      "href": "https://www.supersavagegames.com/home/faq"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "frymazing",
+      "name": "Frymazing",
+      "label": "Frymazing",
+      "cuisine": "Korean fusion & wings",
+      "color": "#151515",
+      "icon": "frymazing",
+      "site": "https://frymazing.com/",
+      "tagline": "Korean fried wings, loaded fries and rice bowls in Fairfield.",
+      "prep": 0,
+      "category": "Korean fusion & wings",
+      "items": [],
+      "address": "4455 Central Way, Suite D, Fairfield, CA 94534",
+      "phone": "(707) 673-2090",
+      "email": "hi@frymazing.com",
+      "hours": "Mon–Sat 10:30am–7pm; Sun closed",
+      "contactOnly": "Korean fusion and wings, bulgogi rice bowls and loaded fries. Open their own menu for current prices and ordering.",
+      "panels": [
+          {
+              "head": "Menu & ordering",
+              "links": [
+                  {
+                      "label": "Current Frymazing menu",
+                      "href": "https://frymazing.com/menu"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/frymazing.mp4",
+          "poster": "/clips/frymazing-poster.webp",
+          "href": "https://www.instagram.com/reel/DeiHhp3uzRo/",
+          "credit": "Filmed by @carlaylayyy",
+          "platform": "Instagram",
+          "by": "carlaylayyy"
+      }
+  },
+  {
+      "slug": "d-monaghans",
+      "name": "D. Monaghans On The Hill",
+      "label": "D. Monaghans",
+      "cuisine": "American restaurant & sports bar",
+      "color": "#24452f",
+      "icon": "d-monaghans",
+      "site": "https://dmonaghansoakland.com/",
+      "tagline": "A neighborhood restaurant and sports bar in the Oakland Hills.",
+      "prep": 0,
+      "category": "American restaurant & sports bar",
+      "items": [],
+      "address": "2820 Mountain Blvd, Oakland, CA 94602",
+      "phone": "(510) 482-2500",
+      "email": "dmonaghansonthehill@gmail.com",
+      "hours": "Mon–Sat 3pm–10pm; Sun 1:30pm–10pm",
+      "sections": [
+          {
+              "name": "Small Plates",
+              "items": [
+                  [
+                      "Buffalo Cauliflower",
+                      "",
+                      1225
+                  ],
+                  [
+                      "Garden Vegetable Sliders",
+                      "",
+                      1495
+                  ],
+                  [
+                      "Street Corn Wedges",
+                      "",
+                      1025
+                  ],
+                  [
+                      "Cheese Quesadilla",
+                      "",
+                      995
+                  ],
+                  [
+                      "Baked Potato Skins",
+                      "",
+                      1195
+                  ],
+                  [
+                      "Just Chicken Tenders",
+                      "",
+                      1395
+                  ],
+                  [
+                      "Original Fried Catfish",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Nachos",
+                      "",
+                      1095
+                  ],
+                  [
+                      "Fried Pickles",
+                      "",
+                      995
+                  ],
+                  [
+                      "Grilled Brussels Sprouts",
+                      "",
+                      1295
+                  ]
+              ]
+          },
+          {
+              "name": "Soup",
+              "items": [
+                  [
+                      "Miguel’s Famous Onion Soup",
+                      "",
+                      995
+                  ],
+                  [
+                      "Clam Chowder",
+                      "",
+                      995
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Spinach Salad",
+                      "",
+                      1095
+                  ],
+                  [
+                      "Beets Salad",
+                      "",
+                      1095
+                  ],
+                  [
+                      "Caesar Salad",
+                      "",
+                      1095
+                  ],
+                  [
+                      "Mixed Greens",
+                      "",
+                      1095
+                  ],
+                  [
+                      "House Cobb",
+                      "",
+                      1195
+                  ],
+                  [
+                      "Avocado Chopped Salad",
+                      "",
+                      1295
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "Chicken Sandwich",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Pesto Chicken Sandwich",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Steak Sandwich",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Pork Sliders (3 pcs)",
+                      "",
+                      1595
+                  ],
+                  [
+                      "Grilled Shrimp Sandwich",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Catfish Sliders (3 pcs)",
+                      "",
+                      1795
+                  ],
+                  [
+                      "BLT Salmon Sandwich",
+                      "",
+                      1795
+                  ]
+              ]
+          },
+          {
+              "name": "Gourmet Burger Bar",
+              "items": [
+                  [
+                      "Smoke Burger",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Blue Cheese Burger",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Mushroom Bacon Burger",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Goat Cheese Burger",
+                      "",
+                      1795
+                  ],
+                  [
+                      "HWY 13 Turkey Burger",
+                      "",
+                      1295
+                  ],
+                  [
+                      "HWY 13 Impossible Burger",
+                      "",
+                      1295
+                  ],
+                  [
+                      "HWY 13 Burger",
+                      "",
+                      1195
+                  ]
+              ]
+          },
+          {
+              "name": "Seafood",
+              "items": [
+                  [
+                      "DMonaghans Catfish Dinner",
+                      "",
+                      2195
+                  ],
+                  [
+                      "Grilled Catfish",
+                      "",
+                      2295
+                  ],
+                  [
+                      "Salmon",
+                      "",
+                      2395
+                  ],
+                  [
+                      "Tilapia Piccata",
+                      "",
+                      1895
+                  ],
+                  [
+                      "Fish N Chips",
+                      "",
+                      1795
+                  ],
+                  [
+                      "Catfish on Romaine",
+                      "",
+                      1895
+                  ]
+              ]
+          },
+          {
+              "name": "Chicken",
+              "items": [
+                  [
+                      "Chicken Marsala",
+                      "",
+                      2295
+                  ],
+                  [
+                      "Chicken Tenders",
+                      "",
+                      1695
+                  ],
+                  [
+                      "Tequila Lime Chicken",
+                      "",
+                      2095
+                  ]
+              ]
+          },
+          {
+              "name": "Pasta",
+              "items": [
+                  [
+                      "Shrimp Pesto Pasta",
+                      "",
+                      2195
+                  ],
+                  [
+                      "Chicken Fettuccine Pasta",
+                      "",
+                      2195
+                  ]
+              ]
+          },
+          {
+              "name": "Beef & Pork",
+              "items": [
+                  [
+                      "Steak (12 oz)",
+                      "",
+                      2695
+                  ],
+                  [
+                      "St. Louis BBQ Ribs",
+                      "",
+                      2095
+                  ]
+              ]
+          },
+          {
+              "name": "Desserts",
+              "items": [
+                  [
+                      "Homemade Bread Pudding",
+                      "",
+                      995
+                  ],
+                  [
+                      "NY Cheesecake",
+                      "",
+                      895
+                  ],
+                  [
+                      "Chocolate Lava Cake",
+                      "",
+                      895
+                  ],
+                  [
+                      "Pound Buziness Flavor of the Month Cake",
+                      "",
+                      695
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Other menu choices",
+              "body": [
+                  "Chicken wings: 8 for $17.95 or 16 for $28.95. Fries: small $5.95, large $7.95; garlic fries: small $6.95, large $8.95. Onion rings: small $5.95, large $7.95. Add-ons and Tuesday-only specials are listed on the original menu."
+              ],
+              "links": [
+                  {
+                      "label": "Complete restaurant menu",
+                      "href": "https://dmonaghansoakland.com/oakland-d-monaghans-on-the-hill-food-menu"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Food prices from their own menu, checked 16 October 2026. Groups of six or more carry an automatic 20% gratuity at the restaurant.",
+      "clip": {
+          "src": "/clips/d-monaghans.mp4",
+          "poster": "/clips/d-monaghans-poster.webp",
+          "href": "https://www.instagram.com/reel/Deh-8JOB_cx/",
+          "credit": "Filmed by @bayarea_fooddreamz",
+          "platform": "Instagram",
+          "by": "bayarea_fooddreamz"
+      }
+  },
+  {
+      "slug": "wtf-antioch",
+      "name": "Whiskey Tango Foxtrot — Antioch",
+      "label": "WTF Antioch",
+      "cuisine": "American bar & grill",
+      "color": "#142b54",
+      "icon": "wtf",
+      "site": "https://wtfrestaurantbargrill.com/",
+      "tagline": "Bold bites and strong spirits.",
+      "prep": 0,
+      "category": "American bar & grill",
+      "items": [],
+      "address": "2737 Hillcrest Ave, Antioch, CA 94531",
+      "phone": "(925) 732-7467",
+      "email": "admin@wtfrestaurantbargrill.com",
+      "hours": "Mon–Thu 10:30am–9pm; Fri–Sun 9am–9pm",
+      "tier": 1,
+      "contactOnly": "Comfort food, burgers, steaks, seafood and a full bar. Call this location or open their own site for the current menu.",
+      "panels": [
+          {
+              "head": "Other location",
+              "body": [
+                  "6346 Bridgehead Rd, Oakley, CA 94561",
+                  "(925) 658-5600"
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "wtf-oakley",
+      "name": "Whiskey Tango Foxtrot — Oakley",
+      "label": "WTF Oakley",
+      "cuisine": "American bar & grill",
+      "color": "#142b54",
+      "icon": "wtf",
+      "site": "https://wtfrestaurantbargrill.com/",
+      "tagline": "Bold bites and strong spirits.",
+      "prep": 0,
+      "category": "American bar & grill",
+      "items": [],
+      "address": "6346 Bridgehead Rd, Oakley, CA 94561",
+      "phone": "(925) 658-5600",
+      "email": "admin@wtfrestaurantbargrill.com",
+      "hours": "Mon–Thu 10:30am–9pm; Fri 9am–11pm; Sat 8am–10pm; Sun 8am–9pm",
+      "tier": 1,
+      "contactOnly": "Comfort food, burgers, steaks, seafood and a full bar. Call this location or open their own site for the current menu.",
+      "panels": [
+          {
+              "head": "Other location",
+              "body": [
+                  "2737 Hillcrest Ave, Antioch, CA 94531",
+                  "(925) 732-7467"
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "crazy-block-cheesecakes",
+      "name": "Crazy Block Cheesecakes",
+      "label": "Crazy Block",
+      "cuisine": "Cheesecakes, BBQ & latkes",
+      "color": "#ac1f28",
+      "icon": "crazy-block-cheesecakes",
+      "site": "https://www.crazyblockcheesecakes.com/",
+      "tagline": "BBQ, latkes and cheesecake on Lakeshore Avenue.",
+      "prep": 0,
+      "category": "Cheesecakes, BBQ & latkes",
+      "items": [],
+      "address": "3355 Lakeshore Ave, Oakland, CA 94610",
+      "hours": "Mon, Wed–Fri 11am–9pm; Sat 9am–9pm; Sun 9am–6pm; Tue closed",
+      "quoteOnly": "Sizes and prices vary by item. Order directly with Crazy Block Cheesecakes; ranges below are their published prices, not a fixed-size quote.",
+      "groups": [
+          {
+              "name": "Cheesecakes",
+              "items": [
+                  [
+                      "OG N.Y. Style Cheesecake",
+                      "Published price range; choose size on their site.",
+                      499,
+                      "$4.99–26.99"
+                  ],
+                  [
+                      "Cookies & Cream Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Ube Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Vietnamese Coffee Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Banilla Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Strawberry Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Lemon Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Passionfruit Cheesecake",
+                      "Published price range; choose size on their site.",
+                      599,
+                      "$5.99–29.99"
+                  ],
+                  [
+                      "Henny Praline Cheesecake",
+                      "Published price range; choose size on their site.",
+                      699,
+                      "$6.99–31.99"
+                  ],
+                  [
+                      "Cheesecake Sampler",
+                      "Published price range; choose size on their site.",
+                      2999,
+                      "$29.99"
+                  ]
+              ]
+          },
+          {
+              "name": "Sides & Latkes",
+              "items": [
+                  [
+                      "Coleslaw",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99–19.99"
+                  ],
+                  [
+                      "Candy Yams",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99–19.99"
+                  ],
+                  [
+                      "Brisket Baked Beans",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99–19.99"
+                  ],
+                  [
+                      "Collard Greens",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99–19.99"
+                  ],
+                  [
+                      "Veggie Baked Beans",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99–19.99"
+                  ],
+                  [
+                      "Mac N Cheese",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99–19.99"
+                  ],
+                  [
+                      "Corn Bread",
+                      "Published price; size-dependent where a range is shown.",
+                      299,
+                      "$2.99"
+                  ],
+                  [
+                      "Cheddar Corn Bread",
+                      "Published price; size-dependent where a range is shown.",
+                      299,
+                      "$2.99"
+                  ],
+                  [
+                      "Latkes",
+                      "Published price; size-dependent where a range is shown.",
+                      375,
+                      "$3.75–35.99"
+                  ],
+                  [
+                      "Fries",
+                      "Published price; size-dependent where a range is shown.",
+                      499,
+                      "$4.99"
+                  ],
+                  [
+                      "Garlic Fries",
+                      "Published price; size-dependent where a range is shown.",
+                      599,
+                      "$5.99"
+                  ],
+                  [
+                      "Loaded Fries",
+                      "Published price; size-dependent where a range is shown.",
+                      799,
+                      "$7.99–19.98"
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "BBQ plates & sandwiches",
+              "body": [
+                  "Brisket, chicken, lamb, beef ribs and jackfruit plates; brisket, chicken, lamb, jackfruit and house-made link sandwiches. Check their site for portions, availability and current prices."
+              ],
+              "links": [
+                  {
+                      "label": "Full menu & direct ordering",
+                      "href": "https://www.crazyblockcheesecakes.com/"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Prices and ranges from their own ordering site, checked 16 October 2026. No single serving size is assumed for a price range.",
+      "clip": {
+          "src": "/clips/crazy-block-cheesecakes.mp4",
+          "poster": "/clips/crazy-block-cheesecakes-poster.webp",
+          "href": "https://www.instagram.com/reel/Ddnfmh-O9-w/",
+          "credit": "Filmed by @shua.tangco",
+          "platform": "Instagram",
+          "by": "shua.tangco"
+      }
+  },
+  {
+      "slug": "parliament-brewing",
+      "name": "Parliament Brewing Company",
+      "label": "Parliament",
+      "cuisine": "Brewery & taproom",
+      "color": "#e7e5d7",
+      "icon": "parliament-brewing",
+      "site": "https://www.parliamentbrewing.com/",
+      "tagline": "Family-owned brewery and community taproom in Rohnert Park.",
+      "prep": 0,
+      "category": "Brewery & taproom",
+      "items": [],
+      "address": "5865 Labath Ave, Unit 9, Rohnert Park, CA 94928",
+      "phone": "(707) 776-6779",
+      "email": "info@parliament.beer",
+      "contactOnly": "Family-owned brewery and taproom with a rotating food-vendor schedule. Check their site for this week’s hours, beer list and visiting food vendors.",
+      "panels": [
+          {
+              "head": "Food vendors & beer",
+              "links": [
+                  {
+                      "label": "Food vendor schedule",
+                      "href": "https://www.parliamentbrewing.com/food-schedule"
+                  },
+                  {
+                      "label": "Current draft beer menu",
+                      "href": "https://www.parliamentbrewing.com/draftbeer"
+                  },
+                  {
+                      "label": "Weekly hours",
+                      "href": "https://www.parliamentbrewing.com/"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "lucys-crepes",
+      "name": "Lucy’s Crepes",
+      "label": "Lucy’s Crepes",
+      "cuisine": "Sweet & savory crepes",
+      "color": "#315b38",
+      "icon": "lucys-crepes",
+      "site": "https://www.lucyscrepes.com/",
+      "tagline": "Made-from-scratch sweet and savory crepes in Fremont.",
+      "prep": 0,
+      "category": "Sweet & savory crepes",
+      "items": [],
+      "address": "39459 Fremont Blvd, Fremont, CA 94538",
+      "phone": "(510) 358-2276",
+      "email": "info@lucyshomemadegoods.com",
+      "hours": "Tue 10am–5pm; Wed–Fri 10am–9pm; Sat 9am–8pm; Sun 9am–5pm; Mon closed",
+      "contactOnly": "Sweet and savory crepes, soups, desserts, smoothies and coffee, with vegan, vegetarian and gluten-free options. Open their current menu for choices and prices.",
+      "panels": [
+          {
+              "head": "Current menu",
+              "links": [
+                  {
+                      "label": "Lucy’s full menu",
+                      "href": "https://www.lucyscrepes.com/menu"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/lucys-crepes.mp4",
+          "poster": "/clips/lucys-crepes-poster.webp",
+          "href": "https://www.instagram.com/reel/DeZwwd4IIQN/",
+          "credit": "Posted by @lucys_crepes",
+          "platform": "Instagram"
+      }
+  },
+  /* Verified directory page; the unnamed new category in Glenn’s export remains pending. */
+  {
+      "slug": "real-presa",
+      "name": "Cabeza Grande Kennel (Real Presa)",
+      "label": "Real Presa",
+      "cuisine": "Presa Canario kennel",
+      "tagline": "Cabeza Grande Kennel in Pocahontas, Illinois.",
+      "color": "#242424",
+      "prep": 0,
+      "category": "Kennel",
+      "site": "https://realpresa.com/contact-us/",
+      "address": "Pocahontas, IL 62275",
+      "phone": "(314) 304-0869",
+      "hours": "Daily 9am–10pm",
+      "contactOnly": "Presa Canario kennel. View their own site for breed information and kennel contact details.",
+      "items": [],
+      "panels": [
+          {
+              "head": "About the kennel",
+              "body": [
+                  "The supplied Real Presa website identifies the business as Cabeza Grande Kennel in Pocahontas, Illinois."
+              ],
+              "links": [
+                  {
+                      "label": "Breed information",
+                      "href": "https://realpresa.com/breed-info/"
+                  }
+              ]
+          }
+      ]
   },
 ]

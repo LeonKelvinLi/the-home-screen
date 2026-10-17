@@ -597,7 +597,23 @@ def m_youth(rng):
     return composite(img, over, blur=3)
 
 
+def m_games(rng):
+    img = gradient('#17213e', '#211139')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    for x, y, scale in [(W * .5, H * .30, 1.2), (W * .28, H * .66, .8), (W * .76, H * .83, .7)]:
+        w, h = 300 * scale, 150 * scale
+        d.rounded_rectangle((x-w, y-h, x+w, y+h), radius=80 * scale, outline=rgba('#a5b4fc', .24), width=12)
+        d.line((x-w*.65, y, x-w*.18, y), fill=rgba('#a5b4fc', .3), width=12)
+        d.line((x-w*.42, y-h*.47, x-w*.42, y+h*.47), fill=rgba('#a5b4fc', .3), width=12)
+        for dx, dy in [(.35, -.25), (.65, .25)]:
+            cx, cy = x+w*dx, y+h*dy
+            d.ellipse((cx-16, cy-16, cx+16, cy+16), fill=rgba('#f9a8d4', .3))
+    return composite(img, over, blur=3)
+
+
 MOTIFS = {
+    "games": m_games,
     "tattoo": m_tattoo,
     "athletes": m_athletes,
     "ai": m_ai,

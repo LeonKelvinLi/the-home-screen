@@ -27,6 +27,8 @@ export interface ShellApi {
   closeApp: () => void
   /** Route inside the currently open app (menu -> item -> checkout). */
   currentAppId: string | null
+  /** This business was opened directly from a grid; closing preserves that grid's page. */
+  backToGrid?: boolean
   /**
    * Close whatever is open and move the home screen to a city's page.
    *
@@ -72,6 +74,7 @@ export function Device({ renderApp, openOnMount }: Props) {
   const [style, setStyle] = useState<WindowTransform>(expanded)
   const [animating, setAnimating] = useState(false)
   const [recents, setRecents] = useState<string[]>([])
+  const [backToGrid, setBackToGrid] = useState(false)
 
   const screenRef = useRef<HTMLDivElement>(null)
   const screen = useMeasuredScreen(screenRef)
@@ -172,6 +175,7 @@ export function Device({ renderApp, openOnMount }: Props) {
 
   const openApp = useCallback(
     (id: string, rect?: IconRect) => {
+      setBackToGrid(!!rect && appById(id)?.kind === 'brand')
       generation.current++
       clearTimers()
       /* The buttons Glenn asked to see on the dashboard (2026-10-03): "will it
@@ -377,6 +381,7 @@ export function Device({ renderApp, openOnMount }: Props) {
     openApp: (id) => openApp(id),
     closeApp,
     currentAppId: appId,
+    backToGrid,
     goToCity: (city, appId, kind) => {
       setJumpCity({ city, appId, kind })
       closeApp()

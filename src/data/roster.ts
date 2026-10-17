@@ -766,8 +766,17 @@ export const ROSTER_SEED: LocalSeed[] = [
     siteCta: 'Order online',
   }),
   seed('maymays-cravings', 'Maymay’s Cravings', 'Maymay’s', 'Filipino desserts', '#8C2F5A', {
+    icon: 'maymays-cravings-2',
     logoTemplate: 'monogram', logoInitials: 'MC', logoFace: 'script',
     site: 'https://order.online/store/35787203',
+    /* Glenn, 2026-10-15/16: requested film; caption confirms this business. */
+    clip: {
+        "src": "/clips/maymays-cravings.mp4",
+        "poster": "/clips/maymays-cravings-poster.webp",
+        "href": "https://www.instagram.com/reel/DeiOY86oJv1/",
+        "credit": "Posted by @maymayscravings",
+        "platform": "Instagram"
+    },
   }),
   seed('banh-mi-xpress', 'Banh Mi Xpress', 'Banh Mi X…', 'Vietnamese sandwiches', '#1F5F3F', {
     logoTemplate: 'monogram', logoInitials: 'BX', logoFace: 'condensed',
@@ -788,9 +797,18 @@ export const ROSTER_SEED: LocalSeed[] = [
     address: '2468 San Ramon Valley Blvd, San Ramon',
   }),
   seed('benicia-grill', 'Benicia Grill', 'Benicia Grill', 'American grill', '#8C3A1E', {
-    icon: 'benicia-grill',
+    icon: 'benicia-grill-2',
     logoTemplate: 'monogram', logoInitials: 'BG', logoFace: 'slab',
     site: 'http://www.benicia-grill.com/',
+    /* Glenn, 2026-10-15/16: requested film; caption confirms this business. */
+    clip: {
+        "src": "/clips/benicia-grill.mp4",
+        "poster": "/clips/benicia-grill-poster.webp",
+        "href": "https://www.instagram.com/reel/DZ8VTQuS-XB/",
+        "credit": "Filmed by @jbrenes_",
+        "platform": "Instagram",
+        "by": "jbrenes_"
+    },
   }),
   seed('intl-kitchen', 'INTL Kitchen', 'INTL Kitchen', 'Asian takeout', '#C0261F', {
     icon: 'intl-kitchen',
@@ -2466,7 +2484,16 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['ACE', 'KING'], logoFace: 'condensed',
     site: 'https://www.acekingbbqus.com/',
     siteCta: 'Order online',
-    tier: 1,
+    tier: 3,
+    /* Glenn, 2026-10-15/16: requested film; caption confirms this business. */
+    clip: {
+        "src": "/clips/ace-king-bbq.mp4",
+        "poster": "/clips/ace-king-bbq-poster.webp",
+        "href": "https://www.instagram.com/reel/DeNbo-hynOi/",
+        "credit": "Filmed by @victoria.pham17",
+        "platform": "Instagram",
+        "by": "victoria.pham17"
+    },
   }),
   /* Sushi Uma, sent as their Instagram post with "gather as much information
      maybe on yelp and make them a page. They will be a good candidate to get
@@ -3930,6 +3957,15 @@ export const ROSTER_SEED: LocalSeed[] = [
     logoTemplate: 'wordmark', logoLines: ['YO', 'SUSHI'], logoFace: 'grotesk',
     site: 'https://yosushivacaville.com/',
     siteCta: 'See their menu',
+    /* Glenn, 2026-10-15/16: requested film; caption confirms this business. */
+    clip: {
+        "src": "/clips/yo-sushi.mp4",
+        "poster": "/clips/yo-sushi-poster.webp",
+        "href": "https://www.instagram.com/reel/DeiOoYbxiut/",
+        "credit": "Filmed by @grubwitmike",
+        "platform": "Instagram",
+        "by": "grubwitmike"
+    },
   }),
   /* ABVE the Basics, "San Jose • Services", 2026-09-22, 9:28 pm, with their
      site and screenshots of it and of their Instagram (@abvethebasicscatering).

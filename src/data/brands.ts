@@ -246,6 +246,8 @@ export interface Brand {
    * certifier's name so it can be checked, not this one.
    */
   dietary?: string[]
+  /** Dog-friendly venue, confirmed by the business or operator. */
+  dogFriendly?: boolean
   /**
    * A partner perk — a discount this business honours for customers who came
    * from here.
@@ -1283,6 +1285,7 @@ export const BRANDS: Brand[] = [
     hours: s.hours,
     siteCta: s.siteCta,
     dietary: s.dietary,
+    dogFriendly: s.dogFriendly,
     perk: s.perk,
     email: s.email,
     offers: s.offers,

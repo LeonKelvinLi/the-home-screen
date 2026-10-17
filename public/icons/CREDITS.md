@@ -135,3 +135,26 @@ exists to prevent.
 **To replace it:** drop in their real artwork under the same filename. The
 tile picks it up with no other change, and this section should then be
 deleted along with the row above.
+
+
+## Batch 52 — 16 October 2026
+
+Original business artwork; no third-party stock or invented business logos. Isla uses the requested white ground, with a larger centered mark. Lucy’s textured badge keeps its original artwork, with its own dark green in the tile corners. The kennel has no supplied artwork and uses the app’s plain initials fallback.
+
+| Tile | Source | Treatment |
+|---|---|---|
+| `manakish-oven.webp` | [Original artwork](https://manakishoven.com/pluto-images/funnel/images/0db74b2c-561b-4a1a-ba9c-b59e325e74ab?w=1200) | Their own mark, cropped/resized onto its brand ground. |
+| `poesia-sf.webp` | [Original artwork](https://poesiasf.com/wp-content/uploads/2025/11/squarelogo-150x150-1.png) | Their own mark, cropped/resized onto its brand ground. |
+| `dolores-deluxe.webp` | [Original artwork](https://images.squarespace-cdn.com/content/v1/6317ae417f32497144fea3bc/7d34e5e6-a413-4d15-82da-886699e6f319/DD_Logo_Stamp-2.png?format=1500w) | Their own mark, cropped/resized onto its brand ground. |
+| `wilfreds-lounge.webp` | [Original artwork](https://www.wilfredslounge.com/wp-content/uploads/2021/10/Wilfred_Logo-light.png) | Their own mark, cropped/resized onto its brand ground. |
+| `super-savage-games.webp` | [Original artwork](https://www.supersavagegames.com/home) | Their own mark, cropped/resized onto its brand ground. |
+| `frymazing.webp` | [Original artwork](https://frymazing.com/pluto-images/funnel/images/6d6dd38b-525b-482d-a997-49e1391405d8?w=1200) | Their own mark, cropped/resized onto its brand ground. |
+| `d-monaghans.webp` | [Original artwork](https://static.spotapps.co/website_images/ab_websites/211068_website_v1/logo_2.png) | Their own mark, cropped/resized onto its brand ground. |
+| `wtf.webp` | [Original artwork](https://framerusercontent.com/images/IH8pqVimk90TQDDEfBTRstHLo.png?width=500&height=500) | Their own mark, cropped/resized onto its brand ground. |
+| `lucys-crepes.webp` | [Original artwork](https://www.lucyscrepes.com/) | Their own mark, cropped/resized onto its brand ground. |
+| `fun-cloud-events-2.webp` | [Original artwork](https://static.wixstatic.com/media/23a15f_3b9be19c022147bfa5c6d4b9db54f33e~mv2.png) | Their own mark, cropped/resized onto its brand ground. |
+| `isla-filipino-3.webp` | [Original artwork](https://images.squarespace-cdn.com/content/v1/665fa68006940e5d72b4e765/45f31bf9-542c-4377-8eea-5f4203281710/Isla+Logo+2024.png?format=1500w) | Their own mark, cropped/resized onto its brand ground. |
+| `maymays-cravings-2.webp` | [Original artwork](https://static.wixstatic.com/media/3dff99_43ebae768a2549c4bcfd66a3701a4d0f~mv2.jpg) | Their own mark, cropped/resized onto its brand ground. |
+| `crazy-block-cheesecakes.webp` | [Original artwork](https://7f247f9601cc5f53e2ea.cdn6.editmysite.com/uploads/b/7f247f9601cc5f53e2ea6b659aeb79280fd06a2a973c4d40bd42e2ceacba47c1/LOGO%20DBZ_1625590066.jpg?width=1200) | Their own mark, cropped/resized onto its brand ground. |
+| `benicia-grill-2.webp` | [Original artwork](https://www.instagram.com/benicia.grill/) | Their own mark, cropped/resized onto its brand ground. |
+| `parliament-brewing.webp` | [Original artwork](https://www.instagram.com/parliamentbeer/) | Their own mark, cropped/resized onto its brand ground. |

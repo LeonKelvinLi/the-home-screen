@@ -119,3 +119,6 @@ reads the page kinds from `PAGE_KINDS` in `src/data/slots.ts`.
 
 To change which nine are on the home screen, edit `HOME_KINDS`, then update the
 list in `tools/audit-categories.mjs` and `tools/live-verify.mjs` to match.
+
+
+Games was added on 16 October 2026, opened by Super Savage Games in spot 1. It covers video games, consoles, arcades and game shops, with its own controller glyph and wallpaper, and appears in More pages and Search. Existing businesses that match fill remaining spots automatically.

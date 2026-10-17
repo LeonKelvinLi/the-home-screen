@@ -271,3 +271,21 @@ Ofie's Kitchen (@itsmeloslab), Phosho Dough (@grubwitmike), Paulo Sausage Co
 (@justmostie), House of Raha (@smackinfood), Cambodian Street Food (Jay Chan,
 @JayChanMuzik on YouTube — a 24-second excerpt of a 23-minute vlog, 845s–869s), Belly and Deli Board (@antoinetterzz), The Local (@thespoonlist), Golden Gate Market & Deli (@thesnacksensei), Lovely's Burgers (@samserved), Jonny's Italian Ice (@peggy_shoo), Cravingz (@grubwitmike), Yank Sing (@sherryeatworld), Carlyle's Chicken Wings (@booziebrunch), King Katsu Land (@kimjsseats), Basq Haus (@hungrydanz), House of Silog (@justmostie), Little Sheep (@iamnikkieg), Chef Jeff's Smash Burger (@takeoutwithtuck), Sea Wagyu House (@mukbangyourmama), Vesta (@wanderingstefany), Kodawari (@lifebyvivien), Com Tam Thien Huong (@singlecatm0m), HELLA GOOD BURGER (@bayarea_fooddreamz), Fusion Dumpling (@andre___lucas), Chef Mike (@festusfeasts), Macs by Icky (@siusvision), Kickin Flavors (@ugc.with.frances), Pizzeria Cardamomo (@acoupleofcooks), Da Good Vibes (@shrimpfriedroice), Cal Burger (@bayareamunchies510), Café 86 (@iamnikkieg), Ocean Oyster Bar (@bayarea_fooddreamz), Niku-Ya (@_cynlacson), Rise Woodfire (@mukbangyourmama), Sweet Pipers (@chris.corpz) and Katsu Burger (@grubwitmike). Bollywood Pizza's is their own. Real Cutie Pies' film is their own post of a KTVU FOX 2 news segment about them.
 Worth him confirming with each. The rest are the businesses' own posts.
+
+
+## Batch 52 — 16 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `manakish-oven.mp4` | Manakish Oven & Grill | [DdaVo6WMaMH](https://www.instagram.com/reel/DdaVo6WMaMH/) | 8s-32s of 58s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @bayarea.maganda.eats. |
+| `poesia-sf.mp4` | Poesia Osteria Italiana | [DeFbH0cSKzU](https://www.instagram.com/reel/DeFbH0cSKzU/) | 6s-30s of 30s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @forkmeetsfood. |
+| `wilfreds-lounge.mp4` | Wilfred’s Lounge | [DcMhOfJSaEP](https://www.instagram.com/reel/DcMhOfJSaEP/) | 16s-40s of 41s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @foodiesnflightss. |
+| `fun-cloud-events.mp4` | Fun Cloud Events | [DLdf9WHBejy](https://www.instagram.com/reel/DLdf9WHBejy/) | 1s-6s of 6s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Posted by @funcloud_kidsevents. |
+| `yo-sushi.mp4` | Yo Sushi & Ramen, Vacaville | [DeiOoYbxiut](https://www.instagram.com/reel/DeiOoYbxiut/) | 6s-30s of 85s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @grubwitmike. |
+| `frymazing.mp4` | Frymazing | [DeiHhp3uzRo](https://www.instagram.com/reel/DeiHhp3uzRo/) | 1s-25s of 69s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @carlaylayyy. |
+| `d-monaghans.mp4` | D. Monaghans On The Hill | [Deh-8JOB_cx](https://www.instagram.com/reel/Deh-8JOB_cx/) | 4s-28s of 39s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @bayarea_fooddreamz. |
+| `benicia-grill.mp4` | Benicia Grill | [DZ8VTQuS-XB](https://www.instagram.com/reel/DZ8VTQuS-XB/) | 1s-25s of 102s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @jbrenes_. |
+| `maymays-cravings.mp4` | Maymay’s Cravings | [DeiOY86oJv1](https://www.instagram.com/reel/DeiOY86oJv1/) | 17s-41s of 41s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Posted by @maymayscravings. |
+| `crazy-block-cheesecakes.mp4` | Crazy Block Cheesecakes | [Ddnfmh-O9-w](https://www.instagram.com/reel/Ddnfmh-O9-w/) | 1s-25s of 77s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @shua.tangco. |
+| `lucys-crepes.mp4` | Lucy’s Crepes | [DeZwwd4IIQN](https://www.instagram.com/reel/DeZwwd4IIQN/) | 0s-8s of 8s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Posted by @lucys_crepes. |
+| `ace-king-bbq.mp4` | Ace King BBQ | [DeNbo-hynOi](https://www.instagram.com/reel/DeNbo-hynOi/) | 19s-43s of 68s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @victoria.pham17. |
