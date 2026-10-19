@@ -312,3 +312,9 @@ Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Tac
 | `radiant-med-spa.mp4` | Radiant Med Spas, Fremont | [DedNsn3AGGP](https://www.instagram.com/p/DedNsn3AGGP/) | 12s-36s of 117s | Glenn, 18 Oct 2026: “Clip this video plz”; Posted by @radiantmedspas. |
 | `cuppayo-danville.mp4` | Cuppayo, Danville | [Deo3aDjplnw](https://www.instagram.com/reel/Deo3aDjplnw/) | 7s-31s of 31s | Glenn, 18 Oct 2026: “Clip this video plz”; Filmed by @hungere.for.diy. |
 | `jackies-place-review.mp4` | Jackie's Place | [DdrbZx1s5mo](https://www.instagram.com/reel/DdrbZx1s5mo/) | 21s-45s of 108s | Glenn, 18 Oct 2026: “Foodie”; Filmed by @daeatzwitbri. |
+
+## Batch 55 — 19 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `dps-hauling.mp4` | DP's Hauling, Oakland | [DYDwnUxJLvA](https://www.instagram.com/reel/DYDwnUxJLvA/) | 10.35s-35.95s of 64s | Glenn, 19 Oct 2026: “Clip this video plz”; Posted by @dps.hauling (shot by @shotbyadamkg). |

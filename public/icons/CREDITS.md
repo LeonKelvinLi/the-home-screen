@@ -178,3 +178,5 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `kerusha-tattoo.webp` | [Original artwork](https://www.instagram.com/by_keroosha/) | Her own mark, cropped inside its disc onto its own black. |
 | `radiant-med-spa.webp` | [Original artwork](https://radiantmedspas.com/) | Their own mark on its own cream. |
 | `cuppayo-danville.webp` | [Original artwork](https://www.cuppayo.com/) | Their own badge on their own orange. |
+| `dps-hauling.webp` | [Original artwork](https://dpshauling.com/) | Their own mark on its own black. |
+| `matts-motivated-movers.webp` | [Original artwork](https://www.mattsmotivatedmovers.com/) | Their own site icon, on its own white. |

@@ -343,3 +343,13 @@ category pages (Tattoo, Whips, Gyms and the rest, 2026-09-30) are drawn by
 licence to check. Glenn asked for "an appropriate background for each
 category"; any of them can be replaced by a photograph under the same file name.
 The `-thumb.webp` files are 132px squares of each for Search's Categories list.
+
+## 2026-10-19 — Bay Area
+
+- `bay-area.webp` — "San Francisco Bay Area L8 432 pan crop 15", Landsat 8 data
+  courtesy of the U.S. Geological Survey, processed by Pierre Markuse, on
+  Wikimedia Commons (from Flickr), CC BY 2.0
+  (https://creativecommons.org/licenses/by/2.0). Cropped to a portrait window
+  over the Bay, with the original's caption band removed. The page is Glenn's
+  "New Location that covers basically the Bay Area", opened for Matt's
+  Motivated Movers.

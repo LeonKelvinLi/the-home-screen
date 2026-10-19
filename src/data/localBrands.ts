@@ -19489,4 +19489,133 @@ export const LOCAL_SEED: LocalSeed[] = [
           "by": "hungere.for.diy"
       }
   },
+  /* BATCH 55, 2026-10-19: Glenn's 19 October sends. Official-site facts only;
+     sources, conflicts and left-out items: research/roster/batch55.json. */
+  {
+      "slug": "dps-hauling",
+      "name": "DP’s Hauling",
+      "label": "DP’s Hauling",
+      "cuisine": "Junk removal & hauling",
+      "color": "#000000",
+      "icon": "dps-hauling",
+      "site": "https://dpshauling.com/",
+      "tagline": "Black-owned, eco-friendly junk removal founded in Oakland, with same-day service across the Bay Area.",
+      "prep": 0,
+      "category": "Junk removal & hauling",
+      "items": [],
+      "phone": "(510) 301-4488",
+      "email": "dpshauling@gmail.com",
+      "hours": "Daily 8am–7pm",
+      "contactOnly": "DP’s Hauling estimates every job and publishes no prices. Schedule an estimate on their site, or call (510) 301-4488. They work every day, 8am to 7pm.",
+      "siteCta": "Schedule an estimate",
+      "panels": [
+          {
+              "head": "What they haul",
+              "body": [
+                  "Junk removal: anything from a single item to clearing out a whole house.",
+                  "Commercial clear-outs: offices, retail spaces and industrial sites.",
+                  "Appliance and furniture removal, any size.",
+                  "Demolition: sheds, chimneys, houses. Demolition jobs up to 3,000 square feet.",
+                  "Specialty removals: pianos, pools, hot tubs, safes, pool tables and more.",
+                  "They recycle, repurpose and donate items wherever they can."
+              ]
+          },
+          {
+              "head": "Service area",
+              "body": [
+                  "Founded in Oakland. Same-day junk removal across the whole Bay Area."
+              ]
+          },
+          {
+              "head": "Get an estimate",
+              "links": [
+                  {
+                      "label": "Schedule an estimate",
+                      "href": "https://dpshauling.com/contact/"
+                  },
+                  {
+                      "label": "Email DP’s Hauling",
+                      "href": "mailto:dpshauling@gmail.com"
+                  },
+                  {
+                      "label": "@dps.hauling on Instagram",
+                      "href": "https://www.instagram.com/dps.hauling/"
+                  },
+                  {
+                      "label": "@dps.hauling on TikTok",
+                      "href": "https://www.tiktok.com/@dps.hauling"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/dps-hauling.mp4",
+          "poster": "/clips/dps-hauling-poster.webp",
+          "href": "https://www.instagram.com/reel/DYDwnUxJLvA/",
+          "credit": "Posted by @dps.hauling",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "matts-motivated-movers",
+      "name": "Matt’s Motivated Movers",
+      "label": "Matt’s Movers",
+      "cuisine": "Movers: local & long-distance moving",
+      "color": "#ffffff",
+      "icon": "matts-motivated-movers",
+      "site": "https://www.mattsmotivatedmovers.com/",
+      "tagline": "Local and long-distance moves for Bay Area homes and businesses, with 1000+ moves done.",
+      "prep": 0,
+      "category": "Movers: local & long-distance moving",
+      "items": [],
+      "phone": "(510) 506-9356",
+      "email": "Mattdunsco@gmail.com",
+      "contactOnly": "Every move is quoted, and no prices are published. Send your from and to zip codes, the date and the size of the move through their quote form and they get back to you within 24 hours, or call (510) 506-9356.",
+      "siteCta": "Get a quote",
+      "panels": [
+          {
+              "head": "What they do",
+              "body": [
+                  "Local moving across the Bay Area, and long-distance moves straight to your new state.",
+                  "Residential moves, from studio apartments to family estates, and commercial and office moves worked around your schedule.",
+                  "Packing: full-service, partial (fragile or difficult items), or self-packing with boxes and materials they provide.",
+                  "Storage: they pick up, store your things in private sealed wooden vaults in a temperature-regulated warehouse, and deliver when you are ready. Month-to-month; ask for storage rates when you book.",
+                  "They disassemble and reassemble furniture. Fully licensed and insured, and they move 7 days a week."
+              ]
+          },
+          {
+              "head": "Service area",
+              "body": [
+                  "The whole Bay Area, including San Francisco, Oakland, San Jose, Berkeley and surrounding cities.",
+                  "Long-distance moves anywhere in the continental United States."
+              ]
+          },
+          {
+              "head": "Before you book",
+              "body": [
+                  "Book 2–4 weeks ahead for the best availability; they take last-minute moves when they can.",
+                  "Date changed? Tell them at least 2 days before the move. Some changes may affect pricing.",
+                  "Payment is typically due when the move is done: cash, Visa, Mastercard, American Express, Venmo, Zelle, or check with approved credit.",
+                  "They cannot move hazardous materials, perishables (food, plants), valuables (cash, jewelry, important documents), weapons or grand pianos."
+              ]
+          },
+          {
+              "head": "Get a quote",
+              "links": [
+                  {
+                      "label": "Get a free quote",
+                      "href": "https://www.mattsmotivatedmovers.com/get-a-quote"
+                  },
+                  {
+                      "label": "Email Matt’s Motivated Movers",
+                      "href": "mailto:Mattdunsco@gmail.com"
+                  },
+                  {
+                      "label": "@mattsmotivatedmovers on Instagram",
+                      "href": "https://www.instagram.com/mattsmotivatedmovers/"
+                  }
+              ]
+          }
+      ]
+  },
 ]

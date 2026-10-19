@@ -1,0 +1,190 @@
+[
+ {
+  "id": "b_dpshauling",
+  "name_exact": "DP’s Hauling",
+  "checked_on": "2026-10-19",
+  "sources": [],
+  "facts": {
+   "slug": "dps-hauling",
+   "name": "DP’s Hauling",
+   "label": "DP’s Hauling",
+   "cuisine": "Junk removal & hauling",
+   "color": "#000000",
+   "icon": "dps-hauling",
+   "site": "https://dpshauling.com/",
+   "tagline": "Black-owned, eco-friendly junk removal founded in Oakland, with same-day service across the Bay Area.",
+   "prep": 0,
+   "category": "Junk removal & hauling",
+   "items": [],
+   "phone": "(510) 301-4488",
+   "email": "dpshauling@gmail.com",
+   "hours": "Daily 8am–7pm",
+   "contactOnly": "DP’s Hauling estimates every job and publishes no prices. Schedule an estimate on their site, or call (510) 301-4488. They work every day, 8am to 7pm.",
+   "siteCta": "Schedule an estimate",
+   "panels": [
+    {
+     "head": "What they haul",
+     "body": [
+      "Junk removal: anything from a single item to clearing out a whole house.",
+      "Commercial clear-outs: offices, retail spaces and industrial sites.",
+      "Appliance and furniture removal, any size.",
+      "Demolition: sheds, chimneys, houses. Demolition jobs up to 3,000 square feet.",
+      "Specialty removals: pianos, pools, hot tubs, safes, pool tables and more.",
+      "They recycle, repurpose and donate items wherever they can."
+     ]
+    },
+    {
+     "head": "Service area",
+     "body": [
+      "Founded in Oakland. Same-day junk removal across the whole Bay Area."
+     ]
+    },
+    {
+     "head": "Get an estimate",
+     "links": [
+      {
+       "label": "Schedule an estimate",
+       "href": "https://dpshauling.com/contact/"
+      },
+      {
+       "label": "Email DP’s Hauling",
+       "href": "mailto:dpshauling@gmail.com"
+      },
+      {
+       "label": "@dps.hauling on Instagram",
+       "href": "https://www.instagram.com/dps.hauling/"
+      },
+      {
+       "label": "@dps.hauling on TikTok",
+       "href": "https://www.tiktok.com/@dps.hauling"
+      }
+     ]
+    }
+   ],
+   "clip": {
+    "src": "/clips/dps-hauling.mp4",
+    "poster": "/clips/dps-hauling-poster.webp",
+    "href": "https://www.instagram.com/reel/DYDwnUxJLvA/",
+    "credit": "Posted by @dps.hauling",
+    "platform": "Instagram"
+   }
+  },
+  "placements": [
+   "oakland-services2-3",
+   "beasty-services2-30"
+  ],
+  "glenn": {
+   "glenn": [
+    "Oakland • Services",
+    "BEASTY • Services"
+   ],
+   "baseCity": "Oakland",
+   "serviceArea": "Entire Bay Area (same-day service)"
+  },
+  "flags": [
+   "Sources: dpshauling.com home, /about/, /services/, /contact/ (fetched 2026-10-18); Instagram @dps.hauling profile and contact sheet in Glenn's screenshots IMG_7202/7203; reel DYDwnUxJLvA info.json.",
+   "Phone (510) 301-4488 and email dpshauling@gmail.com match on site, IG bio, IG contact sheet and the reel caption.",
+   "Hours: site header and footer on every page both say 'All Days 8am - 7pm', one schedule, so it is set.",
+   "ADDRESS LEFT OUT ON PURPOSE: the site publishes '200 2nd street Oakland CA apt#114 94607' (header and footer). It is an apartment unit and customers never go there (they come to you), so the page carries Oakland + service area in a panel instead. If the lead wants it anyway it is theirs to print: '200 2nd St, Apt 114, Oakland, CA 94607'.",
+   "No prices published anywhere on the site, so contactOnly, not quoteOnly. 'Affordable'/'best prices' claims not repeated as facts.",
+   "Name: site copy writes DP’S Hauling, logo writes DP's, page title 'DPS Hauling'. Used DP’s Hauling to match the logo.",
+   "Left out: the website's homepage counter block (all zeros, broken counters), testimonials (third-party quotes), 'fastest growing' IG claim, IG category 'Cleaning Service', the owner's name (only heard in the reel, spelling uncertain).",
+   "Glenn's IG screenshot shows a krbn.app 'What needs to go?' quote sheet overlaid; it is not linked from dpshauling.com and could not be confirmed as theirs, so it is not linked.",
+   "Icon: their own transparent logo file from the site (wp-content/uploads/2024/09/DPS-Hauling-LR-SKR-REV-04-FF-1-1.png) flattened on solid black, the colour it sits on on their site and IG avatar; 512x512.",
+   "Clip: reel posted by @dps.hauling itself (uploader 'DP’S Hauling', channel dps.hauling, 2026-05-08); caption credits 'Shot by: @shotbyadamkg'. The reel is a landscape 1440x1080 owner interview; the motion pick (1s-25s) put his name lower-third in the 9:16 centre crop as clipped fragments, so the window was set by hand to 10.35s-35.95s of 64s, after the lower-third, on sentence boundaries: 'We donate, we recycle ... we can take care of it.'"
+  ]
+ },
+ {
+  "id": "b_mattsmotivatedmovers",
+  "name_exact": "Matt’s Motivated Movers",
+  "checked_on": "2026-10-19",
+  "sources": [],
+  "facts": {
+   "slug": "matts-motivated-movers",
+   "name": "Matt’s Motivated Movers",
+   "label": "Matt’s Movers",
+   "cuisine": "Movers: local & long-distance moving",
+   "color": "#ffffff",
+   "icon": "matts-motivated-movers",
+   "site": "https://www.mattsmotivatedmovers.com/",
+   "tagline": "Local and long-distance moves for Bay Area homes and businesses, with 1000+ moves done.",
+   "prep": 0,
+   "category": "Movers: local & long-distance moving",
+   "items": [],
+   "phone": "(510) 506-9356",
+   "email": "Mattdunsco@gmail.com",
+   "contactOnly": "Every move is quoted, and no prices are published. Send your from and to zip codes, the date and the size of the move through their quote form and they get back to you within 24 hours, or call (510) 506-9356.",
+   "siteCta": "Get a quote",
+   "panels": [
+    {
+     "head": "What they do",
+     "body": [
+      "Local moving across the Bay Area, and long-distance moves straight to your new state.",
+      "Residential moves, from studio apartments to family estates, and commercial and office moves worked around your schedule.",
+      "Packing: full-service, partial (fragile or difficult items), or self-packing with boxes and materials they provide.",
+      "Storage: they pick up, store your things in private sealed wooden vaults in a temperature-regulated warehouse, and deliver when you are ready. Month-to-month; ask for storage rates when you book.",
+      "They disassemble and reassemble furniture. Fully licensed and insured, and they move 7 days a week."
+     ]
+    },
+    {
+     "head": "Service area",
+     "body": [
+      "The whole Bay Area, including San Francisco, Oakland, San Jose, Berkeley and surrounding cities.",
+      "Long-distance moves anywhere in the continental United States."
+     ]
+    },
+    {
+     "head": "Before you book",
+     "body": [
+      "Book 2–4 weeks ahead for the best availability; they take last-minute moves when they can.",
+      "Date changed? Tell them at least 2 days before the move. Some changes may affect pricing.",
+      "Payment is typically due when the move is done: cash, Visa, Mastercard, American Express, Venmo, Zelle, or check with approved credit.",
+      "They cannot move hazardous materials, perishables (food, plants), valuables (cash, jewelry, important documents), weapons or grand pianos."
+     ]
+    },
+    {
+     "head": "Get a quote",
+     "links": [
+      {
+       "label": "Get a free quote",
+       "href": "https://www.mattsmotivatedmovers.com/get-a-quote"
+      },
+      {
+       "label": "Email Matt’s Motivated Movers",
+       "href": "mailto:Mattdunsco@gmail.com"
+      },
+      {
+       "label": "@mattsmotivatedmovers on Instagram",
+       "href": "https://www.instagram.com/mattsmotivatedmovers/"
+      }
+     ]
+    }
+   ]
+  },
+  "placements": [
+   "bay-area-services2-0",
+   "beasty-services2-31"
+  ],
+  "glenn": {
+   "glenn": [
+    "Bay Area • Services",
+    "BEASTY • Services",
+    "New Location that covers basically the Bay Area."
+   ],
+   "baseCity": "Bay Area (no city published; IG says 'Bay Area California')",
+   "serviceArea": "Entire Bay Area (SF, Oakland, San Jose, Berkeley and surrounding cities); long-distance across the continental US"
+  },
+  "flags": [
+   "Sources: mattsmotivatedmovers.com home, /about-us, /contact, /faq, /get-a-quote, /services/* (fetched 2026-10-18); Instagram @mattsmotivatedmovers (verified) profile in Glenn's screenshot IMG_7204; site contact screenshot IMG_7206.",
+   "Phone (510) 506-9356 matches site and IG bio. Email Mattdunsco@gmail.com is the site's own published contact address (kept in their capitalisation).",
+   "No address: the site and IG publish a service area only ('Bay Area California'), so address is left out and the area is a panel.",
+   "No hours: the site says '7 Days a week' and '24/7 Support' but no opening hours, so hours is unset; '7 days a week' is in the panel as their claim.",
+   "No prices anywhere (the FAQ says contact for a free quote), so contactOnly. 'Free quote' is the site's own wording.",
+   "Conflict: the contact page says 'Licensed and insured for moves across all fifty states'; the home page and FAQ say long-distance moves go 'anywhere in the continental United States'. Used the continental-US wording (two places, and the narrower claim).",
+   "Left out: 'Rated 5 ★ on Google' (a third-party rating), testimonials, '7+ years' (stated on the about page, but kept off to avoid a number that ages), CEO handle @officialmattduns.",
+   "Label 'Matt’s Movers' is a shortening for the tile; the full name is too long for a label. Swap if the lead prefers 'Motivated Movers'.",
+   "Icon: their own 256px webclip from the site (6965abed4a841e44b2f43c27_256.png): the stacked logo, blue on white, already bled to the edge. Upscaled once to 464px and set on 512 white so the wordmark clears rounded corners. Colour is therefore #ffffff (the tile background); the brand blue is #0080ff. Their IG avatar is the reversed white-on-blue mark, but no file of it exists on the site and the screenshot copy is ~140px with a story ring, too small to use.",
+   "No clip: Glenn sent no reel."
+  ]
+ }
+]

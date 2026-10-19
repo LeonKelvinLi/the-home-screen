@@ -330,4 +330,11 @@ export const CITY_PAGES = [
     town — see public/wallpapers/CREDITS.md.
   */
   'Brisbane',
+  /*
+    2026-10-19: "New Location that covers basically the Bay Area. Bay Area" —
+    Glenn, with Matt's Motivated Movers ("Bay Area • Services"). Not a city: a
+    page for businesses that serve the whole region rather than one town. The
+    wallpaper is the whole Bay from Landsat 8 — see public/wallpapers/CREDITS.md.
+  */
+  'Bay Area',
 ] as const

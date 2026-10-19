@@ -1573,4 +1573,13 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'danville-goods-11': 'b_cuppayodanville',
   'beasty-goods2-29': 'b_cuppayodanville',
 
+  /* Batch 55, Glenn, 19 October 2026: "Oakland • Services / BEASTY • Services" and "Bay Area •
+     Services / BEASTY • Services", with "New Location that covers basically the Bay Area".
+     Hauling and moving have no numbered seat (PJ's Junk Removal precedent), so both take
+     the yellow sheets; BEASTY • Services' 24 are all held. */
+  'oakland-services2-3': 'b_dpshauling',
+  'beasty-services2-30': 'b_dpshauling',
+  'bay-area-services2-0': 'b_mattsmotivatedmovers',
+  'beasty-services2-31': 'b_mattsmotivatedmovers',
+
 }
