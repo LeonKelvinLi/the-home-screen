@@ -14,3 +14,5 @@ Hauling and moving have no numbered seat on a city page (the PJ's Junk Removal p
 ## Verification
 
 `tsc -b`, `npm run build`, the data audit (0 errors), icons checked by eye. `tools/audit-batch55.mjs` against a local build passed 10 checks: both pages, images and the DP's film, both city seats, and Matt's place button reading Bay Area.
+
+Production release `59ebb5b`, auto-deployed on Render on 19 October 2026. The audit passed **10 checks on beastypages.com**. The first run straight after the deploy timed out loading the first page while the server warmed up; the rerun passed.
