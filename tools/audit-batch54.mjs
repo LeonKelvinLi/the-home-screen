@@ -46,10 +46,21 @@ try{
   check('Jackie’s Place review decodes',await p.locator('.brand-clip-drop video').evaluate(v=>v.videoWidth===540&&v.duration>0))
   check('Jackie’s Place review credits @daeatzwitbri',(await p.locator('.brand-clip-drop').innerText()).includes('@daeatzwitbri'))}
  await open('b_radiantmedspa');await p.getByRole('button',{name:'Home'}).first().click().catch(()=>{});await p.waitForTimeout(600)
+ if(live){
+  // Search is members-only on the live site and live mode never signs in, so read the deployed bundle instead.
+  const html=await (await fetch(base+'/')).text();const js=[...html.matchAll(/src="(\/assets\/[^"]+\.js)"/g)].map(m=>m[1])
+  let code=(await Promise.all(js.map(async s=>(await fetch(base+s)).text()))).join('')
+  // The category data sits in lazily loaded chunks; follow one level of imports.
+  const more=[...new Set([...code.matchAll(/assets\/[\w.-]+\.js/g)].map(m=>'/'+m[0]))].filter(s=>!js.includes(s))
+  code+=(await Promise.all(more.map(async s=>(await fetch(base+s)).text()))).join('')
+  check('Deployed app carries BEASTY • Health/Beauty',code.includes('Health/Beauty')&&code.includes('/wallpapers/cat-'))
+  check('Health wallpaper is served',(await fetch(base+'/wallpapers/cat-health.webp')).ok)
+ }else{
  await p.getByRole('button',{name:'Search',exact:true}).first().click();await p.locator('.search-drop-btn',{hasText:'Categories'}).click()
  const hb=p.locator('#search-drop-categories .search-brand',{hasText:'BEASTY • Health/Beauty'});check('Search lists BEASTY • Health/Beauty',await hb.count()===1)
  if(await hb.count()){await hb.click();await p.waitForTimeout(800);check('Health/Beauty grid opens',/Health\/Beauty$/.test(await where()))
   check('Radiant Med Spa holds Health/Beauty spot 1',((await p.locator('.home-page:not([inert]) .home-grid button').first().getAttribute('aria-label'))||'').includes('Radiant'))}
+ }
 }catch(e){fails.push(e.message);console.log('FAIL',e.stack)}finally{await b.close();srv?.kill();await db?.drop()}
 if(fails.length){console.log(`FAIL: ${fails.length} batch 54 checks`);process.exit(1)}
 console.log('PASS: batch 54 business pages, films, credits and city seats.')

@@ -21,3 +21,5 @@ Glenn's 18 October sends: nine business pages, a new BEASTY • Health/Beauty pa
 ## Verification
 
 `tsc -b`, `npm run build`, the data audit (0 errors), and every new icon checked by eye and against the icon audit. `tools/audit-batch54.mjs` against a local build passed 49 checks: every page, image and film, creator credits, city seats, the Jackie's Place review, and Health/Beauty in Search with Radiant in spot 1.
+
+Production release `21eab9b`, auto-deployed on Render on 18 October 2026. The audit passed **48 checks on beastypages.com**. Search is members-only on the live site and the live run never signs in, so there it confirms Health/Beauty from the deployed code and wallpaper instead of through Search.
