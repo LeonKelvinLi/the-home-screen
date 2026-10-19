@@ -28,4 +28,4 @@ Not listings: the Mission Blvd, Hayward map pin (a gas-pump photo), and the 20:2
 
 ## Verification
 
-`tsc -b`, `npm run build`, the data audit (0 errors) and the icon audit (no hard flags on the new tiles; each tile was also checked by eye). `tools/audit-batch53.mjs` against a local build of the site passed 58 checks: every page opens, images load, all six films decode at 540 wide, creators are credited, every business sits on its city grid, and The Fat Lady shows the dog-friendly badge. The live run is recorded below once deployed.
+`tsc -b`, `npm run build`, the data audit (0 errors) and the icon audit (no hard flags on the new tiles; each tile was also checked by eye). `tools/audit-batch53.mjs` against a local build of the site passed 58 checks: every page opens, images load, all six films decode at 540 wide, creators are credited, every business sits on its city grid, and The Fat Lady shows the dog-friendly badge. Production release `f6b69db`, auto-deployed on Render on 18 October 2026. The same audit passed **58 checks on beastypages.com**.
