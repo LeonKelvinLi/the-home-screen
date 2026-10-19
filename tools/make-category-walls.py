@@ -597,6 +597,19 @@ def m_youth(rng):
     return composite(img, over, blur=3)
 
 
+def m_health(rng):
+    img = gradient('#3b1f2b', '#1f2d3a')
+    over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
+    d = ImageDraw.Draw(over)
+    for x, y, s in [(W * .5, H * .30, 1.1), (W * .25, H * .64, .75), (W * .76, H * .82, .65)]:
+        r = 120 * s
+        d.ellipse((x - 2 * r, y - r * 1.4, x, y + r * .6), outline=rgba('#fbcfe8', .22), width=12)
+        d.ellipse((x, y - r * 1.4, x + 2 * r, y + r * .6), outline=rgba('#fbcfe8', .22), width=12)
+        d.line((x, y - r * .3, x, y + r * .9), fill=rgba('#99f6e4', .3), width=12)
+        d.line((x - r * .6, y + r * .3, x + r * .6, y + r * .3), fill=rgba('#99f6e4', .3), width=12)
+    return composite(img, over, blur=3)
+
+
 def m_games(rng):
     img = gradient('#17213e', '#211139')
     over = Image.new('RGBA', (W, H), (0, 0, 0, 0))
@@ -613,6 +626,7 @@ def m_games(rng):
 
 
 MOTIFS = {
+    "health": m_health,
     "games": m_games,
     "tattoo": m_tattoo,
     "athletes": m_athletes,

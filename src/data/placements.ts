@@ -1556,4 +1556,21 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'hayward-goods2-0': 'b_cheesecakelabsf',
   'beasty-goods2-27': 'b_cheesecakelabsf',
 
+  /* Batch 54, Glenn, 18 October 2026: "BEASTY • Cafe / San Jose • Goods", "Berkeley • Eats /
+     BEASTY • Eats", "BEASTY • Bar/Lounge", "BEASTY • Gyms / Danville • Services", "Oakland •
+     Services / BEASTY • Salons", "New category Health/Beauty" with "BEASTY • Health/Beauty /
+     Fremont • Services", "BEASTY • Sweets / Danville • Sweets". Salons, Tattoo, Cafe and Gyms
+     fill by type line. BEASTY • Eats Sandwiches and Sweets Soft serve are held, so World of
+     Hoagies and Cuppayo go to More eats. Radiant opens Health/Beauty in spot 1. */
+  'san-jose-goods2-18': 'b_soulsip',
+  'berkeley-goods2-9': 'b_worldofhoagies',
+  'beasty-goods2-28': 'b_worldofhoagies',
+  'beasty-bars-5': 'b_normanrosetavern',
+  'danville-services-4': 'b_encoremovement',
+  'oakland-services-1': 'b_polishedonpark',
+  'beasty-health-0': 'b_radiantmedspa',
+  'fremont-services-2': 'b_radiantmedspa',
+  'danville-goods-11': 'b_cuppayodanville',
+  'beasty-goods2-29': 'b_cuppayodanville',
+
 }

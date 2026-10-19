@@ -5816,6 +5816,15 @@ export const LOCAL_SEED: LocalSeed[] = [
   {
     slug: 'jackies-place',
     icon: 'jackies-place',
+    /* Glenn, 2026-10-18: "Foodie" — a creator's review of Jackie's Place. */
+    clip: {
+      src: '/clips/jackies-place-review.mp4',
+      poster: '/clips/jackies-place-review-poster.webp',
+      href: 'https://www.instagram.com/reel/DdrbZx1s5mo/',
+      credit: 'Filmed by @daeatzwitbri',
+      platform: 'Instagram',
+      by: 'daeatzwitbri',
+    },
     name: "Jackie's Place",
     label: "Jackie's Place",
     cuisine: 'Soul food',
@@ -17969,6 +17978,1515 @@ export const LOCAL_SEED: LocalSeed[] = [
           "href": "https://www.instagram.com/reel/DehwZctgf4L/",
           "credit": "Posted by @thecheesecakelabsf",
           "platform": "Instagram"
+      }
+  },
+  /* BATCH 54, 2026-10-18: Glenn's 18 October sends. Official-site facts only;
+     sources, conflicts and left-out items: research/roster/batch54.json. */
+  {
+      "slug": "soulsip",
+      "name": "Soulsip",
+      "label": "Soulsip",
+      "cuisine": "Matcha & coffee bar",
+      "color": "#6398bf",
+      "icon": "soulsip",
+      "tagline": "More than a drink. Ceremonial grade matcha and coffee on Alum Rock Ave, open till midnight.",
+      "prep": 0,
+      "category": "Matcha & coffee bar",
+      "items": [],
+      "address": "2002 Alum Rock Ave, San Jose, CA",
+      "phone": "(408) 449-5893",
+      "hours": "Mon–Sun 7am–12am",
+      "contactOnly": "Ceremonial grade A matcha, coffee, handcrafted milk tea, juices, smoothies and snacks. They have not published a menu yet, so call the shop or message them on Instagram.",
+      "siteCta": "Open their Instagram",
+      "needsSite": true,
+      "panels": [
+          {
+              "head": "Find them",
+              "body": [
+                  "2002 Alum Rock Ave, San Jose. Open 7am to midnight, Monday to Sunday."
+              ],
+              "links": [
+                  {
+                      "label": "@soulsip.us on Instagram",
+                      "href": "https://www.instagram.com/soulsip.us/"
+                  }
+              ]
+          }
+      ]
+  },
+  {
+      "slug": "world-of-hoagies",
+      "name": "Hoagie's World of Hoagies",
+      "label": "World of Hoagies",
+      "cuisine": "Philly hoagie & sandwich shop",
+      "color": "#ee4036",
+      "icon": "world-of-hoagies",
+      "site": "https://www.worldofhoagies.com/",
+      "tagline": "A proper hoagie shop on Telegraph Ave in Berkeley.",
+      "prep": 0,
+      "category": "Philly hoagie & sandwich shop",
+      "items": [],
+      "address": "2618 Telegraph Ave, Berkeley, CA 94704",
+      "phone": "(510) 529-4194",
+      "email": "info@worldofhoagies.com",
+      "hours": "Daily 11am–7pm",
+      "sections": [
+          {
+              "name": "Hoagies",
+              "items": [
+                  [
+                      "Italian",
+                      "Ham, capicola, salami, provolone, LTO, sweet and hot peppers, oil, vinegar, oregano",
+                      1600
+                  ],
+                  [
+                      "Cheesesteak",
+                      "Sliced steak, white American cheese, with or without onions. Add peppers or pickles $1 each. Vegan version available with vegan provolone, mushrooms, peppers and onions",
+                      1900
+                  ],
+                  [
+                      "World Hoagie of the Month",
+                      "Chicken tikka masala, paneer cheese, onions",
+                      2000
+                  ],
+                  [
+                      "Roast Pork",
+                      "Sliced pork, provolone, broccoli rabe, jus",
+                      2000
+                  ],
+                  [
+                      "Meatball",
+                      "Housemade meatballs, provolone, marinara, Pecorino Romano",
+                      1800
+                  ],
+                  [
+                      "Turkey",
+                      "Amoroso roll smeared with garlic mayo, sliced turkey, havarti, lettuce, tomato, onion, pickles",
+                      1800
+                  ],
+                  [
+                      "Vegan Jawn",
+                      "Vegan provolone, Prime Roots ham, Prime Roots salami, zucchini, sweet and hot peppers, pickles, lettuce, tomato, onion, oil and vinegar, oregano",
+                      1600
+                  ],
+                  [
+                      "The Lil' Jabroni",
+                      "Half-size any hoagie",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks",
+              "items": [
+                  [
+                      "Cans",
+                      "Vintage Cola, Root Beer, Cream Soda, Orange, Grape, Cherry Vanilla, Lemon-Lime, Ginger Ale",
+                      300
+                  ],
+                  [
+                      "Water",
+                      "Pellegrino",
+                      300
+                  ]
+              ]
+          },
+          {
+              "name": "Novelties",
+              "items": [
+                  [
+                      "Herr's Chips",
+                      "Assorted flavors",
+                      300
+                  ],
+                  [
+                      "Strauss Soft Serve",
+                      "Chocolate, vanilla or twist, cone or cup",
+                      400
+                  ],
+                  [
+                      "Shakes",
+                      "Chocolate or vanilla",
+                      800
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://order.snackpass.co/worldofhoagies",
+      "panels": [
+          {
+              "head": "Good to know",
+              "body": [
+                  "UDI's gluten-free roll available on any hoagie, no extra charge.",
+                  "Free delivery for orders over $50 on Snackpass."
+              ]
+          },
+          {
+              "head": "Order online",
+              "links": [
+                  {
+                      "label": "Pickup or delivery on Snackpass",
+                      "href": "https://order.snackpass.co/worldofhoagies"
+                  },
+                  {
+                      "label": "Catering on ezCater",
+                      "href": "https://www.ezcater.com/catering/hoagies-world-of-hoagies-3"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Menu and prices from their own website, checked 18 October 2026.",
+      "clip": {
+          "src": "/clips/world-of-hoagies.mp4",
+          "poster": "/clips/world-of-hoagies-poster.webp",
+          "href": "https://www.instagram.com/reel/DehQKFyt6xs/",
+          "credit": "Filmed by @wthellydanyelly",
+          "platform": "Instagram",
+          "by": "wthellydanyelly"
+      }
+  },
+  {
+      "slug": "norman-rose-tavern",
+      "name": "Norman Rose Tavern",
+      "label": "Norman Rose",
+      "cuisine": "American tavern & restaurant",
+      "color": "#9e1d23",
+      "icon": "norman-rose-tavern",
+      "site": "https://normanrosetavern.com/",
+      "tagline": "A neighborhood tavern in Napa with a seasonally inspired menu.",
+      "prep": 0,
+      "category": "American tavern & restaurant",
+      "items": [],
+      "address": "1401 First Street, Napa, CA 94559",
+      "phone": "(707) 258-1516",
+      "email": "info@normanrosenapa.com",
+      "hours": "Mon–Thu 11:30am–8:30pm; Fri–Sat 11:30am–9:30pm; Sun 10am–8:30pm",
+      "sections": [
+          {
+              "name": "Starters",
+              "items": [
+                  [
+                      "Spinach and Cheese Dip",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Buffalo Wings",
+                      "",
+                      2000
+                  ],
+                  [
+                      "12 Wings",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Fried Pickles",
+                      "",
+                      900
+                  ],
+                  [
+                      "Calamari",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Mussels",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Pulled Pork Nachos",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Thai Cauliflower Wings",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Pork Meatballs",
+                      "",
+                      900
+                  ]
+              ]
+          },
+          {
+              "name": "Bowls",
+              "items": [
+                  [
+                      "Mac n Cheese",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Vegetable Soup",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "Green Goddess Salad",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Iceberg Wedge",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Grilled Chicken Salad",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Mix Greens Salad",
+                      "",
+                      900,
+                      null,
+                      "$9.00–$15.00"
+                  ],
+                  [
+                      "Shrimp Louie",
+                      "",
+                      2600
+                  ],
+                  [
+                      "Chicory Apple Salad",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Roast Beet Salad",
+                      "",
+                      1900
+                  ]
+              ]
+          },
+          {
+              "name": "Burgers and Sandwiches",
+              "items": [
+                  [
+                      "Hamburger",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Bean Burger",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Lamb Burger",
+                      "",
+                      2400
+                  ],
+                  [
+                      "French Dip Sandwich",
+                      "",
+                      2300
+                  ],
+                  [
+                      "BLT",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Fish Sandwich",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Fried Chicken Sandwich",
+                      "",
+                      1900
+                  ],
+                  [
+                      "Egg Sandwich",
+                      "",
+                      1800
+                  ],
+                  [
+                      "Grilled Cheese",
+                      "",
+                      995
+                  ]
+              ]
+          },
+          {
+              "name": "Plates",
+              "items": [
+                  [
+                      "Fish and Chips",
+                      "",
+                      2900
+                  ],
+                  [
+                      "NRT 3 Meat Loaf",
+                      "",
+                      2900
+                  ],
+                  [
+                      "Roasted Salmon",
+                      "",
+                      3400
+                  ],
+                  [
+                      "Wienerschnitzel",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Baja Taco",
+                      "",
+                      2100
+                  ],
+                  [
+                      "Short Rib",
+                      "",
+                      3900
+                  ],
+                  [
+                      "Shrimp Fettuccine",
+                      "",
+                      2800
+                  ],
+                  [
+                      "Grilled Hanger Steak",
+                      "",
+                      3800
+                  ],
+                  [
+                      "Chicken Parmesan",
+                      "",
+                      2400
+                  ],
+                  [
+                      "Sunrise Pasta",
+                      "",
+                      2700
+                  ]
+              ]
+          },
+          {
+              "name": "Fries",
+              "items": [
+                  [
+                      "Fries",
+                      "",
+                      700
+                  ],
+                  [
+                      "Truffle and Parmesan Fries",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Sweet Potato Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "Garlic Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "BBQ Fries",
+                      "",
+                      800
+                  ],
+                  [
+                      "Onion Rings",
+                      "",
+                      800
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Brussel Sprouts",
+                      "",
+                      1300
+                  ],
+                  [
+                      "Side Mixed Green",
+                      "",
+                      900
+                  ],
+                  [
+                      "Side Mashed Potatoes",
+                      "",
+                      800
+                  ],
+                  [
+                      "Side Green Beans",
+                      "",
+                      900
+                  ],
+                  [
+                      "Side Spinach",
+                      "",
+                      900
+                  ],
+                  [
+                      "Side Risotto",
+                      "",
+                      1700
+                  ],
+                  [
+                      "Side Salmon",
+                      "",
+                      1600
+                  ],
+                  [
+                      "Side Chicken",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Side Potato Salad",
+                      "",
+                      900
+                  ],
+                  [
+                      "House Made Pickled Vegetables",
+                      "",
+                      600
+                  ],
+                  [
+                      "Burger Patty",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Side Bacon",
+                      "",
+                      400
+                  ],
+                  [
+                      "Side Potato Chips",
+                      "",
+                      400
+                  ],
+                  [
+                      "Carrots & Celery",
+                      "",
+                      400
+                  ],
+                  [
+                      "Egg",
+                      "",
+                      500
+                  ],
+                  [
+                      "Toast",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Baguette",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side of Crostini",
+                      "",
+                      300
+                  ],
+                  [
+                      "Side Tortilla Chips",
+                      "",
+                      200
+                  ],
+                  [
+                      "Side of Pickles",
+                      "",
+                      200
+                  ]
+              ]
+          },
+          {
+              "name": "Kids",
+              "items": [
+                  [
+                      "Kids Chicken Tenders",
+                      "",
+                      1200
+                  ],
+                  [
+                      "Kids Grilled Cheese",
+                      "",
+                      900
+                  ],
+                  [
+                      "Kids Pasta",
+                      "",
+                      900
+                  ],
+                  [
+                      "Kids Burgers & Fries",
+                      "",
+                      1200
+                  ]
+              ]
+          }
+      ],
+      "orderUrl": "https://normanrosetavern.com/order/norman-rose-tavern-1-1401-first-street-napa",
+      "panels": [
+          {
+              "head": "The Franklin Room",
+              "body": [
+                  "Their newly renovated private dining room seats up to 20, for birthdays, business meetings or dinner with friends."
+              ],
+              "links": [
+                  {
+                      "label": "Event inquiry",
+                      "href": "https://normanrosetavern.com/event-inquiry"
+                  }
+              ]
+          },
+          {
+              "head": "Order online",
+              "links": [
+                  {
+                      "label": "Pickup from Norman Rose Tavern",
+                      "href": "https://normanrosetavern.com/order/norman-rose-tavern-1-1401-first-street-napa"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Food menu and prices from their own Toast ordering site, checked 18 October 2026.",
+      "clip": {
+          "src": "/clips/norman-rose-tavern.mp4",
+          "poster": "/clips/norman-rose-tavern-poster.webp",
+          "href": "https://www.instagram.com/reel/DelXdIOi0Zl/",
+          "credit": "Filmed by @thekhaysie",
+          "platform": "Instagram",
+          "by": "thekhaysie"
+      }
+  },
+  {
+      "slug": "encore-movement",
+      "name": "Encore Movement Co.",
+      "label": "Encore",
+      "cuisine": "Adult dance & fitness studio",
+      "color": "#000000",
+      "icon": "encore-movement",
+      "site": "https://encoremovementco.square.site/",
+      "tagline": "Your dancing days aren’t over. This is your Encore.",
+      "prep": 0,
+      "category": "Adult dance & fitness studio",
+      "items": [],
+      "address": "Sycamore Clubhouse, 635 Old Orchard Dr, Danville, CA 94526",
+      "email": "encoremovementco5678@gmail.com",
+      "hours": "Classes Wednesdays & Thursdays, 9am–9pm (see the class schedule)",
+      "sections": [
+          {
+              "name": "Adult classes",
+              "items": [
+                  [
+                      "Drop-In Class",
+                      "One adult class: jazz, intermediate jazz, tap, jazz funk/hip-hop, strength & conditioning or stretch & mobility",
+                      3000
+                  ],
+                  [
+                      "4-Class Pack",
+                      "Valid 30 days from purchase. Non-refundable, non-transferable, no sharing, no rollovers",
+                      11000
+                  ],
+                  [
+                      "8-Class Pack",
+                      "Valid 30 days from purchase. Non-refundable, non-transferable, no sharing, no rollovers",
+                      20000
+                  ],
+                  [
+                      "12-Class Pack",
+                      "Valid 30 days from purchase. Non-refundable, non-transferable, no sharing, no rollovers",
+                      27000
+                  ],
+                  [
+                      "Unlimited Monthly",
+                      "Unlimited adult classes for the month",
+                      30000
+                  ],
+                  [
+                      "Bring a Guest",
+                      "Current Encore students may bring a guest to any eligible adult class",
+                      2500
+                  ],
+                  [
+                      "Registration Fee",
+                      "One-time registration fee",
+                      2500
+                  ]
+              ]
+          },
+          {
+              "name": "Sycamore HOA residents",
+              "items": [
+                  [
+                      "Drop-In (1 hour)",
+                      "HOA resident rate. Proof of Sycamore HOA residency required",
+                      2500
+                  ],
+                  [
+                      "4-Class Pass",
+                      "HOA resident rate (save $20)",
+                      9000
+                  ],
+                  [
+                      "8-Class Pass",
+                      "HOA resident rate (save $30)",
+                      17000
+                  ],
+                  [
+                      "12-Class Pass",
+                      "HOA resident rate",
+                      24000
+                  ],
+                  [
+                      "Unlimited Pass (30 days)",
+                      "HOA resident rate. The $25 registration fee still applies",
+                      27500
+                  ]
+              ]
+          },
+          {
+              "name": "Competition training",
+              "items": [
+                  [
+                      "30-Minute Weekly Solo",
+                      "One-on-one supplemental training for competitive dancers: technique, turns and leaps, flexibility, strength, performance and detailed work on their solo. Solo choreography costs extra",
+                      24000,
+                      null,
+                      "$240/month"
+                  ],
+                  [
+                      "Audition Prep Master Class",
+                      "Two hours for intermediate and advanced dancers preparing for competition teams, school dance teams, conventions and auditions. Friday, November 20, 2026, 6–8pm. Experienced dancers only; email Encore to reserve a spot",
+                      8500
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Class schedule",
+              "body": [
+                  "Wednesday: 9–10am jazz funk/hip-hop; 10–11am strength & conditioning; 11am–12pm stretch & mobility; 1–2pm adult jazz; 5–6pm adult tap; 6–7pm strength & conditioning (starts January 6, 2027); 7–8pm jazz funk/hip-hop; 8–9pm intermediate jazz.",
+                  "Thursday: 9–10am strength & conditioning; 10–11am stretch & mobility; 12–1pm adult jazz; 1–2pm adult tap; 2–3pm strength & conditioning; 3–4pm stretch & mobility; 6–7pm strength & conditioning; 7–8pm adult jazz; 8–9pm jazz funk/hip-hop.",
+                  "Holiday closures: November 26–27, December 23–24 and December 31."
+              ]
+          },
+          {
+              "head": "Who it’s for",
+              "body": [
+                  "Adults in their 30s, 40s, 50s and beyond: whether you danced years ago and miss it, have always wanted to try, or don’t feel at home in a traditional gym or dance studio.",
+                  "Competitive dancers from any studio or school dance team: train technique here, compete with your own team.",
+                  "Taught by Tiffany Davis: more than 35 years teaching, choreographing, performing and judging dance competitions.",
+                  "Solo video critiques are also offered: two written critiques from a competition judge. Email to get started.",
+                  "They take Venmo (@encoremovementco) and all major credit cards."
+              ]
+          },
+          {
+              "head": "Book & contact",
+              "links": [
+                  {
+                      "label": "Book a class",
+                      "href": "https://encoremovementco.square.site/s/appointments"
+                  },
+                  {
+                      "label": "Email Encore",
+                      "href": "mailto:encoremovementco5678@gmail.com"
+                  }
+              ]
+          }
+      ],
+      "siteCta": "Book a class"
+  },
+  {
+      "slug": "tip-me-pretty",
+      "name": "Tip Me Pretty Studio",
+      "label": "Tip Me Pretty",
+      "cuisine": "Nail salon: Gel-X, builder gel & nail art",
+      "color": "#ffffff",
+      "icon": "tip-me-pretty",
+      "site": "https://tipmepretty.glossgenius.com/",
+      "needsSite": true,
+      "tagline": "Nails by Queenie in Walnut Creek. Book your glow-up now!",
+      "prep": 0,
+      "category": "Nail salon",
+      "items": [],
+      "address": "1853 Ygnacio Valley Rd, Studio 2 (Sola Salons Ygnacio Plaza), Walnut Creek, CA 94598",
+      "phone": "(510) 646-7789",
+      "hours": "By appointment only; online booking daily 9am–7pm",
+      "sections": [
+          {
+              "name": "Manicure",
+              "items": [
+                  [
+                      "Regular Manicure",
+                      "Nail trim and shaping, cuticle clean, light buffing, base coat, two coats of regular polish and top coat, cuticle oil finish",
+                      3000
+                  ],
+                  [
+                      "Gel Manicure",
+                      "Nail trim and shaping, cuticle clean, light buffing, gel base, color gel polish and gel top coat, cuticle oil finish",
+                      5000
+                  ],
+                  [
+                      "Soft Gel Manicure",
+                      "A thin layer of builder gel to strengthen natural nails and help gel polish last longer, usually 2–3 weeks depending on care",
+                      5500
+                  ]
+              ]
+          },
+          {
+              "name": "Builder Gel",
+              "items": [
+                  [
+                      "Builder Gel Full Set (S Length)",
+                      "Structure gel built on natural nails (no extensions) for length, strength and structure. Can last up to a month without chipping or cracking",
+                      6500,
+                      null,
+                      "from $65"
+                  ],
+                  [
+                      "Builder Gel Full Set (M Length)",
+                      "Structure gel built on natural nails (no extensions) for length, strength and structure. Can last up to a month without chipping or cracking",
+                      7000,
+                      null,
+                      "from $70"
+                  ],
+                  [
+                      "Hard Gel Full Set (S–M Length)",
+                      "Structure gel for nails that need more strength: long or narrow shapes, thin or weak nails",
+                      7500,
+                      null,
+                      "from $75"
+                  ],
+                  [
+                      "Hard Gel Full Set (M–L Length)",
+                      "",
+                      8000,
+                      null,
+                      "from $80"
+                  ]
+              ]
+          },
+          {
+              "name": "Gel Extensions",
+              "items": [
+                  [
+                      "Gel-X Full Set (Short Length)",
+                      "Pre-shaped soft gel tips applied with soft gel and cured under a UV/LED lamp: instant length with a natural, lightweight feel. Soak-off",
+                      7500
+                  ],
+                  [
+                      "Gel-X Full Set (Medium Length)",
+                      "Pre-shaped soft gel tips applied with soft gel and cured under a UV/LED lamp: instant length with a natural, lightweight feel. Soak-off",
+                      8000
+                  ],
+                  [
+                      "Gel-X Full Set (Long Length)",
+                      "Pre-shaped soft gel tips applied with soft gel and cured under a UV/LED lamp: instant length with a natural, lightweight feel. Soak-off",
+                      8500
+                  ]
+              ]
+          },
+          {
+              "name": "Nail Art Designs",
+              "items": [
+                  [
+                      "Short French Tips",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Smile Line French Tips",
+                      "Deep French tips: classic elegance with a modern twist",
+                      2500,
+                      null,
+                      "from $25"
+                  ],
+                  [
+                      "Chrome Nail Designs",
+                      "Classic chrome finish with a metallic shine",
+                      1500
+                  ],
+                  [
+                      "Super Shine Mirror Chrome",
+                      "Ultra-reflective mirror chrome with an intense, glass-like shine",
+                      2000
+                  ],
+                  [
+                      "Marble Nail Designs",
+                      "",
+                      2000,
+                      null,
+                      "from $20"
+                  ],
+                  [
+                      "Ombre Nail Designs",
+                      "Two colors blended from light to dark",
+                      2000
+                  ],
+                  [
+                      "Sparkle Ombre Encapsulated",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Ombre Chrome Nail Designs",
+                      "",
+                      3500
+                  ],
+                  [
+                      "Cat Eyes Nail Designs",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Stone / Charm Nail Designs",
+                      "Stone or charm add-ons",
+                      1000,
+                      null,
+                      "from $10"
+                  ],
+                  [
+                      "3D Nail Art",
+                      "Raised elements, textures and embellishments",
+                      2000,
+                      null,
+                      "from $20"
+                  ]
+              ]
+          },
+          {
+              "name": "Pedicure",
+              "items": [
+                  [
+                      "Regular Pedicure",
+                      "Warm foot soak, nail trim and shaping, cuticle clean-up, light callus smoothing, lotion, mini foot massage, hot towel, regular polish",
+                      4500
+                  ],
+                  [
+                      "Gel Pedicure",
+                      "Warm foot soak, nail trim and shaping, cuticle clean-up, sugar scrub, lotion, mini foot massage, hot towel, gel polish",
+                      5500
+                  ],
+                  [
+                      "Happy Toes Pedicure",
+                      "A full pedicure with gel polish and a cute custom toe design",
+                      6500
+                  ],
+                  [
+                      "Short French Pedicure",
+                      "",
+                      6500
+                  ],
+                  [
+                      "Deep French Pedicure",
+                      "",
+                      7000
+                  ],
+                  [
+                      "Pretty Pamper Pedi (Reg Polish)",
+                      "Botanical foot soak with dried rose and orange, sugar scrub, mask with hot towel wrap, hot stone massage, regular polish",
+                      6500
+                  ],
+                  [
+                      "Pretty Pamper Pedi (Gel Polish)",
+                      "Botanical foot soak with dried rose and orange, sugar scrub, mask with hot towel wrap, hot stone massage, gel polish",
+                      7500
+                  ],
+                  [
+                      "Pretty Perfection Pedi (Reg Polish)",
+                      "Peppermint and eucalyptus Himalayan salt soak, callus treatment, Himalayan scrub and clay mask, hot towel wrap, extended massage with warm candle oil, regular polish",
+                      8500
+                  ],
+                  [
+                      "Pretty Perfection Pedi (Gel Polish)",
+                      "Peppermint and eucalyptus Himalayan salt soak, callus treatment, Himalayan scrub and clay mask, hot towel wrap, extended massage with warm candle oil, gel polish",
+                      9500
+                  ]
+              ]
+          },
+          {
+              "name": "Add-On Services",
+              "items": [
+                  [
+                      "Regular Gel Removal",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Structure / Builder Gel Removal",
+                      "",
+                      2000
+                  ],
+                  [
+                      "Acrylic / Hard Gel / Gel-X Removal",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Cuticle Trim",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Nail Repair",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Gel Polish Change",
+                      "",
+                      3500
+                  ],
+                  [
+                      "TPO-Free, HEMA-Free Gel Polish",
+                      "",
+                      500
+                  ],
+                  [
+                      "Extended Massage",
+                      "",
+                      1500
+                  ],
+                  [
+                      "Himalayan Soothing Scrub",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Himalayan Clay Mask",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Candle Massage Oil",
+                      "",
+                      1000
+                  ],
+                  [
+                      "Callus Treatment",
+                      "",
+                      1200
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "About Queenie",
+              "body": [
+                  "Queenie (Uyen Phu) is a licensed nail technician with 10 years of experience in manicures and nail care: clean, detailed work and nail art from classic nails to intricate designs.",
+                  "Her studio is Studio 2 at Sola Salons Walnut Creek – Ygnacio Plaza. By appointment only; accepting new clients."
+              ]
+          },
+          {
+              "head": "Before you book",
+              "body": [
+                  "Each appointment can be rescheduled once.",
+                  "A 30% cancellation fee applies to cancellations within 48 hours of the appointment; no-shows are charged 100%."
+              ]
+          },
+          {
+              "head": "Book & follow",
+              "links": [
+                  {
+                      "label": "Book with Queenie",
+                      "href": "https://tipmepretty.glossgenius.com/"
+                  },
+                  {
+                      "label": "@tipmepretty.studio on Instagram",
+                      "href": "https://www.instagram.com/tipmepretty.studio/"
+                  }
+              ]
+          }
+      ],
+      "siteCta": "Book an appointment"
+  },
+  {
+      "slug": "polished-on-park",
+      "name": "Polished On Park",
+      "label": "Polished On Park",
+      "cuisine": "Nail salon: Gel-X & builder gel",
+      "color": "#ffffff",
+      "icon": "polished-on-park",
+      "site": "https://polishedonpark.glossgenius.com/",
+      "tagline": "Gel-X extensions, builder gel overlays, manicures, pedicures and nail art on Park Blvd.",
+      "prep": 0,
+      "category": "Nail salon",
+      "items": [],
+      "address": "3814 Park Blvd, Oakland, CA 94602",
+      "phone": "(925) 478-5171",
+      "email": "polishedonpark@gmail.com",
+      "hours": "Tue–Fri 9am–7pm; Sat 9am–4pm; Sun & Mon closed. Appointment only",
+      "sections": [
+          {
+              "name": "Nail Extensions & Overlays",
+              "items": [
+                  [
+                      "Gel-X (Any Length)",
+                      "A manicure to prep the nail plate, Gel-X application, then one solid gel color. Nail art is booked as its own service",
+                      7500
+                  ],
+                  [
+                      "Builder Gel Overlay (S/M/L)",
+                      "Soft, soak-off builder gel over thin natural nails, strong and durable without extensions. Short $70, medium $75, long $80",
+                      7000,
+                      null,
+                      "$70–$80"
+                  ]
+              ]
+          },
+          {
+              "name": "Nail Care",
+              "items": [
+                  [
+                      "Gel Manicure",
+                      "Nail trimming, shaping and cuticle care, buffing and your chosen gel color, with a light hand massage and a hot towel wrap",
+                      6000,
+                      null,
+                      "from $60"
+                  ],
+                  [
+                      "Gel Pedicure",
+                      "Nail trimming, shaping, cuticle care, buffing, sugar scrub exfoliation and your chosen gel color",
+                      7000
+                  ],
+                  [
+                      "Regular Polish Manicure",
+                      "Nail trimming, shaping, cuticle care, buffing and your chosen regular polish or shine buff, with a light hand massage and a hot towel",
+                      5000
+                  ],
+                  [
+                      "Regular Polish Pedicure",
+                      "Nail trimming, shaping, cuticle care, buffing, sugar scrub, light massage and a hot towel, then your chosen color or shine buff",
+                      6000
+                  ],
+                  [
+                      "Nail Repair",
+                      "",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Men’s Nail Care",
+              "items": [
+                  [
+                      "Menicure",
+                      "Nail trimming, filing and cuticle care, finished with a matte or shine buff or a clear coat of gel or regular polish",
+                      4500
+                  ],
+                  [
+                      "Men’s Pedicure",
+                      "Nail trimming, shaping and cuticle care, with gentle exfoliation of the heels and soles",
+                      5000
+                  ]
+              ]
+          },
+          {
+              "name": "Removals",
+              "items": [
+                  [
+                      "Gel-X / Acrylic Removal Only",
+                      "",
+                      2500
+                  ],
+                  [
+                      "Gel Polish Removal Only",
+                      "Removal only; it does not include a manicure",
+                      1500
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "The team",
+              "body": [
+                  "Cidalia Lemus (co-owner), Cristal Garcia-Gil and Francy Roungreuang. Appointment-based only."
+              ]
+          },
+          {
+              "head": "Before you book",
+              "body": [
+                  "A 50% cancellation fee applies to no-shows and to cancellations within 24 hours of the appointment.",
+                  "Running late? Let them know. The grace period is 10 minutes; after that the appointment may have to be cancelled or rescheduled."
+              ]
+          },
+          {
+              "head": "Book & follow",
+              "links": [
+                  {
+                      "label": "Book at Polished On Park",
+                      "href": "https://polishedonpark.glossgenius.com/"
+                  },
+                  {
+                      "label": "@polishedonpark on Instagram",
+                      "href": "https://www.instagram.com/polishedonpark/"
+                  }
+              ]
+          }
+      ],
+      "siteCta": "Book an appointment"
+  },
+  {
+      "slug": "kerusha-tattoo",
+      "name": "Kerusha",
+      "label": "Kerusha",
+      "cuisine": "Ornamental tattoo artist",
+      "color": "#0e0e0e",
+      "icon": "kerusha-tattoo",
+      "tagline": "Bay Area tattoo artist specializing in ornamental tattoos, at True Line Tattoo in Richmond.",
+      "prep": 0,
+      "category": "Ornamental tattoo artist",
+      "items": [],
+      "address": "4820 Bissell Ave, Richmond, CA",
+      "contactOnly": "Kerusha is a Bay Area tattoo artist who specializes in ornamental tattoos. She works out of True Line Tattoo in Richmond. Booking is by Instagram DM, and a deposit is required.",
+      "panels": [
+          {
+              "head": "Book via Instagram DM",
+              "body": [
+                  "DM to book. Deposit required.",
+                  "She tattoos at True Line Tattoo, 4820 Bissell Ave, Richmond. The shop's line: (510) 210-6729."
+              ],
+              "links": [
+                  {
+                      "label": "Message @by_keroosha on Instagram",
+                      "href": "https://www.instagram.com/by_keroosha/"
+                  },
+                  {
+                      "label": "True Line Tattoo (@trueline.tattoo)",
+                      "href": "https://www.instagram.com/trueline.tattoo/"
+                  }
+              ]
+          }
+      ],
+      "needsSite": true
+  },
+  {
+      "slug": "radiant-med-spa",
+      "name": "Radiant Med Spa",
+      "label": "Radiant",
+      "cuisine": "Med spa & aesthetics",
+      "color": "#f8f3ed",
+      "icon": "radiant-med-spa",
+      "site": "https://radiantmedspas.com/",
+      "tagline": "Injectables, skin rejuvenation and wellness in Fremont since 2018.",
+      "prep": 0,
+      "category": "Med spa & aesthetics",
+      "items": [],
+      "address": "210 Fremont Hub Courtyard, Fremont, CA 94538",
+      "phone": "(510) 559-0040",
+      "email": "info@radiantmedspas.com",
+      "quoteOnly": "Treatments are booked, not bought here. Book a consultation with Radiant; prices below are their published regular prices, and candidacy and the final plan are set at consultation.",
+      "siteCta": "Book a consultation",
+      "groups": [
+          {
+              "name": "Injectables",
+              "items": [
+                  [
+                      "Botox / Dysport",
+                      "New patient / Beauty Bank: $11.50 per unit.",
+                      1400,
+                      "$14 / unit"
+                  ],
+                  [
+                      "Dermal Fillers",
+                      "New patient / Beauty Bank: $650.",
+                      79900
+                  ],
+                  [
+                      "Kybella",
+                      "New patient / Beauty Bank: $599.",
+                      75000
+                  ],
+                  [
+                      "PRP and PRF Injections",
+                      "New patient / Beauty Bank: $550.",
+                      69900
+                  ],
+                  [
+                      "PRP Hair / Hair Restoration",
+                      "New patient / Beauty Bank: $550.",
+                      75000
+                  ],
+                  [
+                      "Sculptra",
+                      "New patient / Beauty Bank: $699.",
+                      85000
+                  ],
+                  [
+                      "Butt Lift with Sculptra",
+                      "10 vials. New patient / Beauty Bank: $5,999.",
+                      750000
+                  ],
+                  [
+                      "Skin Vive",
+                      "New patient / Beauty Bank: $399.",
+                      59900
+                  ],
+                  [
+                      "Under Eye Fillers / PRP",
+                      "New patient / Beauty Bank: $550.",
+                      75000
+                  ],
+                  [
+                      "Facial Balancing",
+                      "",
+                      0,
+                      "Priced at consultation"
+                  ]
+              ]
+          },
+          {
+              "name": "Skin Rejuvenation",
+              "items": [
+                  [
+                      "Derma Pen Microneedling",
+                      "New patient / Beauty Bank: $399.",
+                      55000
+                  ],
+                  [
+                      "Exosomes and Growth Factors",
+                      "New patient / Beauty Bank: $350.",
+                      59900
+                  ],
+                  [
+                      "Microneedling with PRP / PRF",
+                      "New patient / Beauty Bank: $550.",
+                      69900
+                  ],
+                  [
+                      "Pico Laser Carbon Glow",
+                      "Per session. New patient / Beauty Bank: $275.",
+                      39900
+                  ],
+                  [
+                      "Pigment & Melasma Treatment",
+                      "New patient / Beauty Bank: $399.",
+                      55000
+                  ],
+                  [
+                      "Radio Frequency Microneedling",
+                      "New patient / Beauty Bank: $550.",
+                      69900
+                  ],
+                  [
+                      "Rejuran Salmon DNA Treatment",
+                      "New patient / Beauty Bank: $450.",
+                      69900
+                  ],
+                  [
+                      "Medical Grade Skincare",
+                      "Beauty Bank: 20% off.",
+                      0,
+                      "Priced at consultation"
+                  ]
+              ]
+          },
+          {
+              "name": "Laser Treatments",
+              "items": [
+                  [
+                      "Laser Acne Treatment",
+                      "New patient / Beauty Bank: $299.",
+                      39900
+                  ],
+                  [
+                      "Laser Carbon Peel Treatment",
+                      "New patient / Beauty Bank: $350.",
+                      55000
+                  ],
+                  [
+                      "Laser Genesis",
+                      "New patient / Beauty Bank: $250.",
+                      39900
+                  ],
+                  [
+                      "Laser Glow Facial",
+                      "New patient / Beauty Bank: $250.",
+                      39900
+                  ],
+                  [
+                      "Pico Laser",
+                      "Package of 5. New patient / Beauty Bank: $1,599.",
+                      259900
+                  ],
+                  [
+                      "XERF Structural Skin Tightening",
+                      "New patient / Beauty Bank: $1,899.",
+                      259900
+                  ],
+                  [
+                      "Candela Laser Hair Removal",
+                      "",
+                      0,
+                      "See current specials"
+                  ],
+                  [
+                      "Laser Tattoo Removal",
+                      "",
+                      0,
+                      "Priced at consultation"
+                  ]
+              ]
+          },
+          {
+              "name": "Body Contouring",
+              "items": [
+                  [
+                      "Body Sculpting",
+                      "Single 90-minute session; $1,899 for a 5-session package. New patient / Beauty Bank: $299 single, $1,399 for 5.",
+                      39900
+                  ],
+                  [
+                      "Cellulite Treatment",
+                      "New patient / Beauty Bank: $199.",
+                      29900
+                  ],
+                  [
+                      "Lymphatic Body Treatment",
+                      "New patient / Beauty Bank: $185.",
+                      27500
+                  ]
+              ]
+          },
+          {
+              "name": "Facials",
+              "items": [
+                  [
+                      "Acne Clarifying Facial",
+                      "New patient / Beauty Bank: $165.",
+                      25000
+                  ],
+                  [
+                      "Deep Cleansing HydraFacial",
+                      "New patient / Beauty Bank: $175.",
+                      22500
+                  ],
+                  [
+                      "Deluxe HydraFacial",
+                      "New patient / Beauty Bank: $199.",
+                      29900
+                  ],
+                  [
+                      "HydraFacial",
+                      "New patient / Beauty Bank: $225.",
+                      32500
+                  ],
+                  [
+                      "Lift, Tight & Bright Facial",
+                      "New patient / Beauty Bank: $175.",
+                      27500
+                  ],
+                  [
+                      "Perfect Derma Peel",
+                      "New patient / Beauty Bank: $275.",
+                      35000
+                  ],
+                  [
+                      "Radiant Signature Facial",
+                      "New patient / Beauty Bank: $199.",
+                      29900
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Book & the Radiant Beauty Bank",
+              "body": [
+                  "The Beauty Bank is a $150/month deposit you use toward eligible treatments, with no separate membership fee. It includes 2 complimentary custom facials, 3 complimentary B12 shots, VIP event access, priority booking and 20% off skincare.",
+                  "They also run limited-time monthly specials, seasonal packages and event promotions. Pricing is subject to change."
+              ],
+              "links": [
+                  {
+                      "label": "Book an appointment",
+                      "href": "https://booking.podium.com/81f34557-4bb5-58aa-bdcf-63430c81276e/d2f81929-831e-568f-b671-baed47da1414"
+                  },
+                  {
+                      "label": "Pricing & membership",
+                      "href": "https://radiantmedspas.com/pricing-membership"
+                  },
+                  {
+                      "label": "Current specials",
+                      "href": "https://radiantmedspas.com/specials"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Prices from their own pricing page, checked 18 October 2026. Regular prices shown; new patient and Beauty Bank prices in each line.",
+      "clip": {
+          "src": "/clips/radiant-med-spa.mp4",
+          "poster": "/clips/radiant-med-spa-poster.webp",
+          "href": "https://www.instagram.com/p/DedNsn3AGGP/",
+          "credit": "Posted by @radiantmedspas",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "cuppayo-danville",
+      "name": "Cuppa Yo Danville",
+      "label": "Cuppa Yo",
+      "cuisine": "Self-serve frozen yogurt",
+      "color": "#f27023",
+      "icon": "cuppayo-danville",
+      "site": "https://www.cuppayo.com/danvilleca",
+      "tagline": "Self-serve frozen yogurt in Danville, locally owned by the Chan family.",
+      "prep": 0,
+      "category": "Self-serve frozen yogurt",
+      "items": [],
+      "address": "730 Camino Ramon, Suite 190, Danville, CA 94526",
+      "phone": "(925) 302-0512",
+      "email": "cuppayodanville@gmail.com",
+      "hours": "Daily 12pm–9pm",
+      "contactOnly": "Self-serve frozen yogurt: pour it, top it, weigh it. Flavors rotate, so check their Instagram or come in to see what's on tap today. Ask the store about events, gift cards and fundraisers.",
+      "siteCta": "Open their Danville page",
+      "panels": [
+          {
+              "head": "Flavors & more",
+              "body": [
+                  "The Danville store is owned by the Chans, local Danville residents who opened it so families, friends and neighbors have somewhere to come together over a simple, joyful treat."
+              ],
+              "links": [
+                  {
+                      "label": "Today's flavors (@cuppayodanville on Instagram)",
+                      "href": "https://www.instagram.com/cuppayodanville/"
+                  },
+                  {
+                      "label": "Full Cuppa Yo flavor list",
+                      "href": "https://www.cuppayo.com/froyo-flavors"
+                  },
+                  {
+                      "label": "Email the Danville store",
+                      "href": "mailto:cuppayodanville@gmail.com"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/cuppayo-danville.mp4",
+          "poster": "/clips/cuppayo-danville-poster.webp",
+          "href": "https://www.instagram.com/reel/Deo3aDjplnw/",
+          "credit": "Filmed by @hungere.for.diy",
+          "platform": "Instagram",
+          "by": "hungere.for.diy"
       }
   },
 ]

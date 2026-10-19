@@ -169,3 +169,12 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `la-caphe.webp` | [Original artwork](https://lacaphe.carrd.co/) | Their own profile picture, cropped inside its circle. |
 | `un-stripped-salon.webp` | [Original artwork](https://www.bbb.so/Un-Stripped.salon) | Their own mark on the taupe of their own link page. |
 | `cheesecake-lab-sf.webp` | [Original artwork](https://www.instagram.com/thecheesecakelabsf/) | Their own badge on its own outer-ring red. |
+| `soulsip.webp` | [Original artwork](https://www.instagram.com/soulsip.us/) | Their own mark, cropped inside its circle onto its own beige. |
+| `world-of-hoagies.webp` | [Original artwork](https://www.worldofhoagies.com/) | Their own mark in their cream on their red. |
+| `norman-rose-tavern.webp` | [Original artwork](https://normanrosetavern.com/) | Their own badge on their site's red. |
+| `encore-movement.webp` | [Original artwork](https://encoremovementco.square.site/) | Their own wordmark on its own black. |
+| `tip-me-pretty.webp` | [Original artwork](https://www.instagram.com/tipmepretty.studio/) | Isolated from a photo of the logo on her studio wall, at Glenn's request, on white. |
+| `polished-on-park.webp` | [Original artwork](https://polishedonpark.glossgenius.com/) | Their own wordmark on its own white. |
+| `kerusha-tattoo.webp` | [Original artwork](https://www.instagram.com/by_keroosha/) | Her own mark, cropped inside its disc onto its own black. |
+| `radiant-med-spa.webp` | [Original artwork](https://radiantmedspas.com/) | Their own mark on its own cream. |
+| `cuppayo-danville.webp` | [Original artwork](https://www.cuppayo.com/) | Their own badge on their own orange. |

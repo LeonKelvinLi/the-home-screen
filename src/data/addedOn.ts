@@ -718,4 +718,13 @@ export const ADDED_ON: Record<string, string> = {
   b_lacaphe: '2026-10-18',
   b_unstrippedsalon: '2026-10-18',
   b_cheesecakelabsf: '2026-10-18',
+  b_soulsip: '2026-10-18',
+  b_worldofhoagies: '2026-10-18',
+  b_normanrosetavern: '2026-10-18',
+  b_encoremovement: '2026-10-18',
+  b_tipmepretty: '2026-10-18',
+  b_polishedonpark: '2026-10-18',
+  b_kerushatattoo: '2026-10-18',
+  b_radiantmedspa: '2026-10-18',
+  b_cuppayodanville: '2026-10-18',
 }

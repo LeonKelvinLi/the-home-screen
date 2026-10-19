@@ -1,0 +1,1693 @@
+[
+ {
+  "id": "b_soulsip",
+  "name_exact": "Soulsip",
+  "checked_on": "2026-10-18",
+  "sources": [],
+  "facts": {
+   "slug": "soulsip",
+   "name": "Soulsip",
+   "label": "Soulsip",
+   "cuisine": "Matcha & coffee bar",
+   "color": "#6398bf",
+   "icon": "soulsip",
+   "tagline": "More than a drink. Ceremonial grade matcha and coffee on Alum Rock Ave, open till midnight.",
+   "prep": 0,
+   "category": "Matcha & coffee bar",
+   "items": [],
+   "address": "2002 Alum Rock Ave, San Jose, CA",
+   "phone": "(408) 449-5893",
+   "hours": "Mon–Sun 7am–12am",
+   "contactOnly": "Ceremonial grade A matcha, coffee, handcrafted milk tea, juices, smoothies and snacks. They have not published a menu yet, so call the shop or message them on Instagram.",
+   "siteCta": "Open their Instagram",
+   "needsSite": true,
+   "panels": [
+    {
+     "head": "Find them",
+     "body": [
+      "2002 Alum Rock Ave, San Jose. Open 7am to midnight, Monday to Sunday."
+     ],
+     "links": [
+      {
+       "label": "@soulsip.us on Instagram",
+       "href": "https://www.instagram.com/soulsip.us/"
+      }
+     ]
+    }
+   ]
+  },
+  "placements": [
+   "san-jose-goods2-18"
+  ],
+  "glenn": "Glenn: \"BEASTY • Cafe\", \"San Jose • Goods\", \"Needs website\". City: San Jose. Type: matcha and coffee cafe (also serves milk tea, juices, smoothies, snacks).",
+  "flags": "Every fact is from their own Instagram profile (@soulsip.us, Glenn's screenshot att54/1018-1251_IMG_7159.jpg): bio line, '7AM – 12AM | Mon – Sun', (408)-449-5893, 2002 Alum Rock Ave, San Jose. ZIP is not published, so it is left off. They have no website: soulsip.us does not resolve (checked 18 Oct 2026). No menu or prices are published anywhere of their own, so the page is contact-only and has no items. The tagline's 'More than a drink' is the line on their logo. The icon is their profile logo, cropped inside Instagram's story ring by tools/make-brand-icon.py, on the logo's own beige. The colour #6398bf is the blue of their wordmark, sampled from that logo. Type line: 'coffee' matches Cafe; it avoids 'milk tea', 'boba', 'juice' and 'smoothie' so it does not fail Cafe's `not` or land on Juice/Smoothies, which Glenn did not ask for. No reel was given, so there is no clip."
+ },
+ {
+  "id": "b_worldofhoagies",
+  "name_exact": "Hoagie's World of Hoagies",
+  "checked_on": "2026-10-18",
+  "sources": [],
+  "facts": {
+   "slug": "world-of-hoagies",
+   "name": "Hoagie's World of Hoagies",
+   "label": "World of Hoagies",
+   "cuisine": "Philly hoagie & sandwich shop",
+   "color": "#ee4036",
+   "icon": "world-of-hoagies",
+   "site": "https://www.worldofhoagies.com/",
+   "tagline": "A proper hoagie shop on Telegraph Ave in Berkeley.",
+   "prep": 0,
+   "category": "Philly hoagie & sandwich shop",
+   "items": [],
+   "address": "2618 Telegraph Ave, Berkeley, CA 94704",
+   "phone": "(510) 529-4194",
+   "email": "info@worldofhoagies.com",
+   "hours": "Daily 11am–7pm",
+   "sections": [
+    {
+     "name": "Hoagies",
+     "items": [
+      [
+       "Italian",
+       "Ham, capicola, salami, provolone, LTO, sweet and hot peppers, oil, vinegar, oregano",
+       1600
+      ],
+      [
+       "Cheesesteak",
+       "Sliced steak, white American cheese, with or without onions. Add peppers or pickles $1 each. Vegan version available with vegan provolone, mushrooms, peppers and onions",
+       1900
+      ],
+      [
+       "World Hoagie of the Month",
+       "Chicken tikka masala, paneer cheese, onions",
+       2000
+      ],
+      [
+       "Roast Pork",
+       "Sliced pork, provolone, broccoli rabe, jus",
+       2000
+      ],
+      [
+       "Meatball",
+       "Housemade meatballs, provolone, marinara, Pecorino Romano",
+       1800
+      ],
+      [
+       "Turkey",
+       "Amoroso roll smeared with garlic mayo, sliced turkey, havarti, lettuce, tomato, onion, pickles",
+       1800
+      ],
+      [
+       "Vegan Jawn",
+       "Vegan provolone, Prime Roots ham, Prime Roots salami, zucchini, sweet and hot peppers, pickles, lettuce, tomato, onion, oil and vinegar, oregano",
+       1600
+      ],
+      [
+       "The Lil' Jabroni",
+       "Half-size any hoagie",
+       1000
+      ]
+     ]
+    },
+    {
+     "name": "Drinks",
+     "items": [
+      [
+       "Cans",
+       "Vintage Cola, Root Beer, Cream Soda, Orange, Grape, Cherry Vanilla, Lemon-Lime, Ginger Ale",
+       300
+      ],
+      [
+       "Water",
+       "Pellegrino",
+       300
+      ]
+     ]
+    },
+    {
+     "name": "Novelties",
+     "items": [
+      [
+       "Herr's Chips",
+       "Assorted flavors",
+       300
+      ],
+      [
+       "Strauss Soft Serve",
+       "Chocolate, vanilla or twist, cone or cup",
+       400
+      ],
+      [
+       "Shakes",
+       "Chocolate or vanilla",
+       800
+      ]
+     ]
+    }
+   ],
+   "orderUrl": "https://order.snackpass.co/worldofhoagies",
+   "panels": [
+    {
+     "head": "Good to know",
+     "body": [
+      "UDI's gluten-free roll available on any hoagie, no extra charge.",
+      "Free delivery for orders over $50 on Snackpass."
+     ]
+    },
+    {
+     "head": "Order online",
+     "links": [
+      {
+       "label": "Pickup or delivery on Snackpass",
+       "href": "https://order.snackpass.co/worldofhoagies"
+      },
+      {
+       "label": "Catering on ezCater",
+       "href": "https://www.ezcater.com/catering/hoagies-world-of-hoagies-3"
+      }
+     ]
+    }
+   ],
+   "siteNote": "Menu and prices from their own website, checked 18 October 2026.",
+   "clip": {
+    "src": "/clips/world-of-hoagies.mp4",
+    "poster": "/clips/world-of-hoagies-poster.webp",
+    "href": "https://www.instagram.com/reel/DehQKFyt6xs/",
+    "credit": "Filmed by @wthellydanyelly",
+    "platform": "Instagram",
+    "by": "wthellydanyelly"
+   }
+  },
+  "placements": [
+   "berkeley-goods2-9",
+   "beasty-goods2-28"
+  ],
+  "glenn": "Glenn: \"Berkeley • Eats\", \"BEASTY • Eats\". City: Berkeley. Type: Philly-style hoagie/sandwich shop (type line hits the Eats 'Sandwiches' slot).",
+  "flags": "Source: their own site worldofhoagies.com (/, /menu, /about, /order-online), fetched 18 Oct 2026; matches Glenn's screenshots att54/1018-1401_IMG_7161-7163. Name as they write it: 'Hoagie's World of Hoagies' (site footer and IG display name); label 'World of Hoagies' as Glenn sent it. Hours 'OPEN EVERYDAY 11AM To 7PM', address, phone and email from the site footer. Tagline from their IG bio ('A Proper Hoagie Shop | 2618 Telegraph Ave in Berkeley'). The site's 'COMING SEPTEMBER 2026!' banner is out of date (the reel shows them open), so it is not repeated. Menu kept as published, including their spellings 'LTO' and 'Strauss Soft Serve' (the creamery is Straus, but this is how their menu prints it). 'World Hoagie of the Month' is a monthly special: the description is the one listed on 18 Oct 2026 and will go stale. The menu has no alcohol, so nothing was removed. Order link is the Snackpass page their own Order Online page links; that page also links DoorDash, Uber Eats and Grubhub, which are left out. Icon: their own lockup PNG from the site (hoagies_assets_v1-02.png, the Squarespace logoImageUrl), knocked out in their site cream #fffcf7 on their red #ee4036. That is the red/cream pairing of their own site footer, with the same artwork reversed. Red-on-cream as published would trip the audit's 'paper' check, which is why it was not used. The red was sampled from the logo PNG. Clip: reel DehQKFyt6xs was uploaded by @wthellydanyelly ('Bay Area Hidden Gems'), not by the shop; the caption opens with '@world_of_hoagies' and is a review of their Philly cheesesteak and Italian on Telegraph Ave. Window 19s-43s of 43s."
+ },
+ {
+  "id": "b_normanrosetavern",
+  "name_exact": "Norman Rose Tavern",
+  "checked_on": "2026-10-18",
+  "sources": [],
+  "facts": {
+   "slug": "norman-rose-tavern",
+   "name": "Norman Rose Tavern",
+   "label": "Norman Rose",
+   "cuisine": "American tavern & restaurant",
+   "color": "#9e1d23",
+   "icon": "norman-rose-tavern",
+   "site": "https://normanrosetavern.com/",
+   "tagline": "A neighborhood tavern in Napa with a seasonally inspired menu.",
+   "prep": 0,
+   "category": "American tavern & restaurant",
+   "items": [],
+   "address": "1401 First Street, Napa, CA 94559",
+   "phone": "(707) 258-1516",
+   "email": "info@normanrosenapa.com",
+   "hours": "Mon–Thu 11:30am–8:30pm; Fri–Sat 11:30am–9:30pm; Sun 10am–8:30pm",
+   "sections": [
+    {
+     "name": "Starters",
+     "items": [
+      [
+       "Spinach and Cheese Dip",
+       "",
+       1900
+      ],
+      [
+       "Buffalo Wings",
+       "",
+       2000
+      ],
+      [
+       "12 Wings",
+       "",
+       3500
+      ],
+      [
+       "Fried Pickles",
+       "",
+       900
+      ],
+      [
+       "Calamari",
+       "",
+       1900
+      ],
+      [
+       "Mussels",
+       "",
+       2400
+      ],
+      [
+       "Pulled Pork Nachos",
+       "",
+       1700
+      ],
+      [
+       "Thai Cauliflower Wings",
+       "",
+       1600
+      ],
+      [
+       "Pork Meatballs",
+       "",
+       900
+      ]
+     ]
+    },
+    {
+     "name": "Bowls",
+     "items": [
+      [
+       "Mac n Cheese",
+       "",
+       1200
+      ],
+      [
+       "Vegetable Soup",
+       "",
+       1000
+      ]
+     ]
+    },
+    {
+     "name": "Salads",
+     "items": [
+      [
+       "Green Goddess Salad",
+       "",
+       1800
+      ],
+      [
+       "Iceberg Wedge",
+       "",
+       1800
+      ],
+      [
+       "Grilled Chicken Salad",
+       "",
+       2500
+      ],
+      [
+       "Mix Greens Salad",
+       "",
+       900,
+       null,
+       "$9.00–$15.00"
+      ],
+      [
+       "Shrimp Louie",
+       "",
+       2600
+      ],
+      [
+       "Chicory Apple Salad",
+       "",
+       1900
+      ],
+      [
+       "Roast Beet Salad",
+       "",
+       1900
+      ]
+     ]
+    },
+    {
+     "name": "Burgers and Sandwiches",
+     "items": [
+      [
+       "Hamburger",
+       "",
+       2000
+      ],
+      [
+       "Bean Burger",
+       "",
+       1900
+      ],
+      [
+       "Lamb Burger",
+       "",
+       2400
+      ],
+      [
+       "French Dip Sandwich",
+       "",
+       2300
+      ],
+      [
+       "BLT",
+       "",
+       1800
+      ],
+      [
+       "Fish Sandwich",
+       "",
+       2000
+      ],
+      [
+       "Fried Chicken Sandwich",
+       "",
+       1900
+      ],
+      [
+       "Egg Sandwich",
+       "",
+       1800
+      ],
+      [
+       "Grilled Cheese",
+       "",
+       995
+      ]
+     ]
+    },
+    {
+     "name": "Plates",
+     "items": [
+      [
+       "Fish and Chips",
+       "",
+       2900
+      ],
+      [
+       "NRT 3 Meat Loaf",
+       "",
+       2900
+      ],
+      [
+       "Roasted Salmon",
+       "",
+       3400
+      ],
+      [
+       "Wienerschnitzel",
+       "",
+       2400
+      ],
+      [
+       "Baja Taco",
+       "",
+       2100
+      ],
+      [
+       "Short Rib",
+       "",
+       3900
+      ],
+      [
+       "Shrimp Fettuccine",
+       "",
+       2800
+      ],
+      [
+       "Grilled Hanger Steak",
+       "",
+       3800
+      ],
+      [
+       "Chicken Parmesan",
+       "",
+       2400
+      ],
+      [
+       "Sunrise Pasta",
+       "",
+       2700
+      ]
+     ]
+    },
+    {
+     "name": "Fries",
+     "items": [
+      [
+       "Fries",
+       "",
+       700
+      ],
+      [
+       "Truffle and Parmesan Fries",
+       "",
+       1300
+      ],
+      [
+       "Sweet Potato Fries",
+       "",
+       800
+      ],
+      [
+       "Garlic Fries",
+       "",
+       800
+      ],
+      [
+       "BBQ Fries",
+       "",
+       800
+      ],
+      [
+       "Onion Rings",
+       "",
+       800
+      ]
+     ]
+    },
+    {
+     "name": "Sides",
+     "items": [
+      [
+       "Brussel Sprouts",
+       "",
+       1300
+      ],
+      [
+       "Side Mixed Green",
+       "",
+       900
+      ],
+      [
+       "Side Mashed Potatoes",
+       "",
+       800
+      ],
+      [
+       "Side Green Beans",
+       "",
+       900
+      ],
+      [
+       "Side Spinach",
+       "",
+       900
+      ],
+      [
+       "Side Risotto",
+       "",
+       1700
+      ],
+      [
+       "Side Salmon",
+       "",
+       1600
+      ],
+      [
+       "Side Chicken",
+       "",
+       1000
+      ],
+      [
+       "Side Potato Salad",
+       "",
+       900
+      ],
+      [
+       "House Made Pickled Vegetables",
+       "",
+       600
+      ],
+      [
+       "Burger Patty",
+       "",
+       1000
+      ],
+      [
+       "Side Bacon",
+       "",
+       400
+      ],
+      [
+       "Side Potato Chips",
+       "",
+       400
+      ],
+      [
+       "Carrots & Celery",
+       "",
+       400
+      ],
+      [
+       "Egg",
+       "",
+       500
+      ],
+      [
+       "Toast",
+       "",
+       300
+      ],
+      [
+       "Side Baguette",
+       "",
+       300
+      ],
+      [
+       "Side of Crostini",
+       "",
+       300
+      ],
+      [
+       "Side Tortilla Chips",
+       "",
+       200
+      ],
+      [
+       "Side of Pickles",
+       "",
+       200
+      ]
+     ]
+    },
+    {
+     "name": "Kids",
+     "items": [
+      [
+       "Kids Chicken Tenders",
+       "",
+       1200
+      ],
+      [
+       "Kids Grilled Cheese",
+       "",
+       900
+      ],
+      [
+       "Kids Pasta",
+       "",
+       900
+      ],
+      [
+       "Kids Burgers & Fries",
+       "",
+       1200
+      ]
+     ]
+    }
+   ],
+   "orderUrl": "https://normanrosetavern.com/order/norman-rose-tavern-1-1401-first-street-napa",
+   "panels": [
+    {
+     "head": "The Franklin Room",
+     "body": [
+      "Their newly renovated private dining room seats up to 20, for birthdays, business meetings or dinner with friends."
+     ],
+     "links": [
+      {
+       "label": "Event inquiry",
+       "href": "https://normanrosetavern.com/event-inquiry"
+      }
+     ]
+    },
+    {
+     "head": "Order online",
+     "links": [
+      {
+       "label": "Pickup from Norman Rose Tavern",
+       "href": "https://normanrosetavern.com/order/norman-rose-tavern-1-1401-first-street-napa"
+      }
+     ]
+    }
+   ],
+   "siteNote": "Food menu and prices from their own Toast ordering site, checked 18 October 2026.",
+   "clip": {
+    "src": "/clips/norman-rose-tavern.mp4",
+    "poster": "/clips/norman-rose-tavern-poster.webp",
+    "href": "https://www.instagram.com/reel/DelXdIOi0Zl/",
+    "credit": "Filmed by @thekhaysie",
+    "platform": "Instagram",
+    "by": "thekhaysie"
+   }
+  },
+  "placements": [
+   "beasty-bars-5"
+  ],
+  "glenn": "Glenn: \"BEASTY • Bar/Lounge\", \"Needs website\". City: Napa. Type: American restaurant / neighborhood tavern (type line hits the bars test on 'tavern'; avoids 'steak' and 'burger' so it does not land on Eats slots he did not ask for).",
+  "flags": "WEBSITE EXISTS: normanrosenapa.com 302-redirects to normanrosetavern.com, their own Toast-hosted site (menu, online ordering, hours, event space). Following the brief, site is set and needsSite is dropped, even though Glenn wrote 'Needs website'. It is a Toast template site, so the lead may still want needsSite: true for prospecting. The site sits behind Cloudflare (403 to curl), so it was read in Chrome on 18 Oct 2026. Hours are from the site's 'Location and Hours > All hours': Sun 10:00AM-8:30PM; Mon-Thu 11:30AM-8:30PM; Fri-Sat 11:30AM-9:30PM. Address as the site writes it (1401 First Street, Napa, CA 94559; IG says '1401 1st street'). Phone matches IG and site. Email info@normanrosenapa.com is from their IG Contact sheet (att54/1018-1406_IMG_7165.jpg), on their own domain. Menu: names and prices from /menu-2, the same as the /order page. Toast publishes no item descriptions, so the descriptions are blank rather than invented. Tidied only Toast's 'Sd'/'SD' to 'Side' and 'Lamb burger'/'toast' casing; 'Brussel Sprouts' and 'Wienerschnitzel' are kept as they spell them. Mix Greens Salad is published as '$9.00 - $15.00' and carried as a priceLabel. LEFT OUT: the $1 sauce/dressing sides (green goddess, tartar, blue cheese, horseradish, ranch, buffalo, BBQ, peppercorn, vinaigrette) and the $0 Sriracha aioli; four '$0 Menu Item' placeholders; 'To Go Bag $0.25'; the rotating 'Chalkboard' specials (Deviled Egg 3.50, Shishito peppers 13, pulled pork slider 7.77, Mushroom arancini 12, Disco Fries 17, Tuna Melt 19, NY Steak Special 50, Tomahawk 140, 16 oz Ribeye 50), which the lead can add if wanted; the homepage 'Weekend Steak Special', because it is sold with a wine pairing; and their rewards program (1 point per $1, $5 off per 100 points). Alcohol: their online menu lists no drinks, so none appear; the IG bio's cocktails, beer and wine are kept out of the tagline. Reservations: the IG link is OpenTable, but the screenshot truncates the URL, so it is not used; the site's own 'Reserve' button goes to event-inquiry. Icon: their badge logo from the site header (Toast logo IMG_6688.jpg, white disc), cut to its outer ring and set on #9e1d23, the red of their site's theme buttons. Colour #9e1d23 is the same. The IG avatar is a different, older arrangement of the same mark. Clip: reel DelXdIOi0Zl was uploaded by @thekhaysie ('Bay Area Foodie + Travel + Experiences UGC'), not by the restaurant; the caption tags '📍@normanrosetavern' ('Napa's hidden gem... That 3-meat leaf'). Window 0s-18s of 18s (whole reel). Some drinks may be visible on the tables in the reel; it is a clip, not the menu."
+ },
+ {
+  "id": "b_encoremovement",
+  "name_exact": "Encore Movement Co.",
+  "checked_on": "2026-10-18",
+  "sources": [
+   "Sources: their own Square site https://encoremovementco.square.site/ (home and /adult-classes pages, read from the page's own data 2026-10-18) and Glenn's screenshots of @encoremovementco (IMG_7167) and the site (IMG_7168)."
+  ],
+  "facts": {
+   "slug": "encore-movement",
+   "name": "Encore Movement Co.",
+   "label": "Encore",
+   "cuisine": "Adult dance & fitness studio",
+   "color": "#000000",
+   "icon": "encore-movement",
+   "site": "https://encoremovementco.square.site/",
+   "tagline": "Your dancing days aren’t over. This is your Encore.",
+   "prep": 0,
+   "category": "Adult dance & fitness studio",
+   "items": [],
+   "address": "Sycamore Clubhouse, 635 Old Orchard Dr, Danville, CA 94526",
+   "email": "encoremovementco5678@gmail.com",
+   "hours": "Classes Wednesdays & Thursdays, 9am–9pm (see the class schedule)",
+   "sections": [
+    {
+     "name": "Adult classes",
+     "items": [
+      [
+       "Drop-In Class",
+       "One adult class: jazz, intermediate jazz, tap, jazz funk/hip-hop, strength & conditioning or stretch & mobility",
+       3000
+      ],
+      [
+       "4-Class Pack",
+       "Valid 30 days from purchase. Non-refundable, non-transferable, no sharing, no rollovers",
+       11000
+      ],
+      [
+       "8-Class Pack",
+       "Valid 30 days from purchase. Non-refundable, non-transferable, no sharing, no rollovers",
+       20000
+      ],
+      [
+       "12-Class Pack",
+       "Valid 30 days from purchase. Non-refundable, non-transferable, no sharing, no rollovers",
+       27000
+      ],
+      [
+       "Unlimited Monthly",
+       "Unlimited adult classes for the month",
+       30000
+      ],
+      [
+       "Bring a Guest",
+       "Current Encore students may bring a guest to any eligible adult class",
+       2500
+      ],
+      [
+       "Registration Fee",
+       "One-time registration fee",
+       2500
+      ]
+     ]
+    },
+    {
+     "name": "Sycamore HOA residents",
+     "items": [
+      [
+       "Drop-In (1 hour)",
+       "HOA resident rate. Proof of Sycamore HOA residency required",
+       2500
+      ],
+      [
+       "4-Class Pass",
+       "HOA resident rate (save $20)",
+       9000
+      ],
+      [
+       "8-Class Pass",
+       "HOA resident rate (save $30)",
+       17000
+      ],
+      [
+       "12-Class Pass",
+       "HOA resident rate",
+       24000
+      ],
+      [
+       "Unlimited Pass (30 days)",
+       "HOA resident rate. The $25 registration fee still applies",
+       27500
+      ]
+     ]
+    },
+    {
+     "name": "Competition training",
+     "items": [
+      [
+       "30-Minute Weekly Solo",
+       "One-on-one supplemental training for competitive dancers: technique, turns and leaps, flexibility, strength, performance and detailed work on their solo. Solo choreography costs extra",
+       24000,
+       null,
+       "$240/month"
+      ],
+      [
+       "Audition Prep Master Class",
+       "Two hours for intermediate and advanced dancers preparing for competition teams, school dance teams, conventions and auditions. Friday, November 20, 2026, 6–8pm. Experienced dancers only; email Encore to reserve a spot",
+       8500
+      ]
+     ]
+    }
+   ],
+   "panels": [
+    {
+     "head": "Class schedule",
+     "body": [
+      "Wednesday: 9–10am jazz funk/hip-hop; 10–11am strength & conditioning; 11am–12pm stretch & mobility; 1–2pm adult jazz; 5–6pm adult tap; 6–7pm strength & conditioning (starts January 6, 2027); 7–8pm jazz funk/hip-hop; 8–9pm intermediate jazz.",
+      "Thursday: 9–10am strength & conditioning; 10–11am stretch & mobility; 12–1pm adult jazz; 1–2pm adult tap; 2–3pm strength & conditioning; 3–4pm stretch & mobility; 6–7pm strength & conditioning; 7–8pm adult jazz; 8–9pm jazz funk/hip-hop.",
+      "Holiday closures: November 26–27, December 23–24 and December 31."
+     ]
+    },
+    {
+     "head": "Who it’s for",
+     "body": [
+      "Adults in their 30s, 40s, 50s and beyond: whether you danced years ago and miss it, have always wanted to try, or don’t feel at home in a traditional gym or dance studio.",
+      "Competitive dancers from any studio or school dance team: train technique here, compete with your own team.",
+      "Taught by Tiffany Davis: more than 35 years teaching, choreographing, performing and judging dance competitions.",
+      "Solo video critiques are also offered: two written critiques from a competition judge. Email to get started.",
+      "They take Venmo (@encoremovementco) and all major credit cards."
+     ]
+    },
+    {
+     "head": "Book & contact",
+     "links": [
+      {
+       "label": "Book a class",
+       "href": "https://encoremovementco.square.site/s/appointments"
+      },
+      {
+       "label": "Email Encore",
+       "href": "mailto:encoremovementco5678@gmail.com"
+      }
+     ]
+    }
+   ],
+   "siteCta": "Book a class"
+  },
+  "placements": [
+   "danville-services-4"
+  ],
+  "glenn": {
+   "glenn": [
+    "BEASTY • Gyms",
+    "Danville • Services"
+   ],
+   "city": "Danville",
+   "type": "Adult dance & fitness studio (gyms)"
+  },
+  "flags": [
+   "Sources: their own Square site https://encoremovementco.square.site/ (home and /adult-classes pages, read from the page's own data 2026-10-18) and Glenn's screenshots of @encoremovementco (IMG_7167) and the site (IMG_7168).",
+   "Every price is printed on their site: adult pricing block 'Flexible Options. Dance Your Way.' and the 'Sycamore HOA Resident Pricing' table; solo training $240/month; Audition Prep Master Class $85.",
+   "CONFLICT: the standard block says '$25 one-time registration fee'; the HOA table says 'The $25 annual registration fee still applies'. Entry says 'One-time' on the standard row and quotes the HOA wording on the HOA row. Confirm with them.",
+   "The HOA 12-Class Pass row shows 'Save' with no amount, so no saving is stated.",
+   "The site has a stray typo in the schedule ('Strength and (conditioning  ( Start January 6, 2027)'); the /adult-classes page reads cleanly 'starts January 6, 2027' and that wording is used.",
+   "Instagram bio says classes start 11/11/26 (a Wednesday). Not in the hours line because the date passes; the lead may want it in the tagline until then.",
+   "No phone number published anywhere I could read. Email is the only contact on the site (mailto link).",
+   "Left out: Solo Video Critiques price (none published); the Instagram bio's Google Form link (docs.google.com) since its purpose is not stated on the site.",
+   "Booking: the site's 'Book' nav item is Square Appointments at /s/appointments (HTTP 200). Prices there not read; the site's printed prices are used.",
+   "Icon: their own logo PNG from the Square site (/uploads/.../D1A1A6BE-...png, 1254x1254), cropped to ENCORE / MOVEMENT CO. on its own black ground with make-brand-icon.py --square. The tagline script was cropped off because it is unreadable at tile size. Audit: clean. Logo pink samples at #ed2175 if the lead wants an accent.",
+   "Type line 'Adult dance & fitness studio' hits gyms via 'fitness'. It does not hit dancers (/\\bdancers?\\b/), youth, salons or artists."
+  ]
+ },
+ {
+  "id": "b_tipmepretty",
+  "name_exact": "Tip Me Pretty Studio",
+  "checked_on": "2026-10-18",
+  "sources": [
+   "Sources: her own GlossGenius booking site https://tipmepretty.glossgenius.com/ (home and /services, read from the page's own data 2026-10-18); Glenn's screenshots of @tipmepretty.studio (IMG_7169) and her Sola Salons page (IMG_7172, book.solasalonstudios.com)."
+  ],
+  "facts": {
+   "slug": "tip-me-pretty",
+   "name": "Tip Me Pretty Studio",
+   "label": "Tip Me Pretty",
+   "cuisine": "Nail salon: Gel-X, builder gel & nail art",
+   "color": "#ffffff",
+   "icon": "tip-me-pretty",
+   "site": "https://tipmepretty.glossgenius.com/",
+   "needsSite": true,
+   "tagline": "Nails by Queenie in Walnut Creek. Book your glow-up now!",
+   "prep": 0,
+   "category": "Nail salon",
+   "items": [],
+   "address": "1853 Ygnacio Valley Rd, Studio 2 (Sola Salons Ygnacio Plaza), Walnut Creek, CA 94598",
+   "phone": "(510) 646-7789",
+   "hours": "By appointment only; online booking daily 9am–7pm",
+   "sections": [
+    {
+     "name": "Manicure",
+     "items": [
+      [
+       "Regular Manicure",
+       "Nail trim and shaping, cuticle clean, light buffing, base coat, two coats of regular polish and top coat, cuticle oil finish",
+       3000
+      ],
+      [
+       "Gel Manicure",
+       "Nail trim and shaping, cuticle clean, light buffing, gel base, color gel polish and gel top coat, cuticle oil finish",
+       5000
+      ],
+      [
+       "Soft Gel Manicure",
+       "A thin layer of builder gel to strengthen natural nails and help gel polish last longer, usually 2–3 weeks depending on care",
+       5500
+      ]
+     ]
+    },
+    {
+     "name": "Builder Gel",
+     "items": [
+      [
+       "Builder Gel Full Set (S Length)",
+       "Structure gel built on natural nails (no extensions) for length, strength and structure. Can last up to a month without chipping or cracking",
+       6500,
+       null,
+       "from $65"
+      ],
+      [
+       "Builder Gel Full Set (M Length)",
+       "Structure gel built on natural nails (no extensions) for length, strength and structure. Can last up to a month without chipping or cracking",
+       7000,
+       null,
+       "from $70"
+      ],
+      [
+       "Hard Gel Full Set (S–M Length)",
+       "Structure gel for nails that need more strength: long or narrow shapes, thin or weak nails",
+       7500,
+       null,
+       "from $75"
+      ],
+      [
+       "Hard Gel Full Set (M–L Length)",
+       "",
+       8000,
+       null,
+       "from $80"
+      ]
+     ]
+    },
+    {
+     "name": "Gel Extensions",
+     "items": [
+      [
+       "Gel-X Full Set (Short Length)",
+       "Pre-shaped soft gel tips applied with soft gel and cured under a UV/LED lamp: instant length with a natural, lightweight feel. Soak-off",
+       7500
+      ],
+      [
+       "Gel-X Full Set (Medium Length)",
+       "Pre-shaped soft gel tips applied with soft gel and cured under a UV/LED lamp: instant length with a natural, lightweight feel. Soak-off",
+       8000
+      ],
+      [
+       "Gel-X Full Set (Long Length)",
+       "Pre-shaped soft gel tips applied with soft gel and cured under a UV/LED lamp: instant length with a natural, lightweight feel. Soak-off",
+       8500
+      ]
+     ]
+    },
+    {
+     "name": "Nail Art Designs",
+     "items": [
+      [
+       "Short French Tips",
+       "",
+       1500
+      ],
+      [
+       "Smile Line French Tips",
+       "Deep French tips: classic elegance with a modern twist",
+       2500,
+       null,
+       "from $25"
+      ],
+      [
+       "Chrome Nail Designs",
+       "Classic chrome finish with a metallic shine",
+       1500
+      ],
+      [
+       "Super Shine Mirror Chrome",
+       "Ultra-reflective mirror chrome with an intense, glass-like shine",
+       2000
+      ],
+      [
+       "Marble Nail Designs",
+       "",
+       2000,
+       null,
+       "from $20"
+      ],
+      [
+       "Ombre Nail Designs",
+       "Two colors blended from light to dark",
+       2000
+      ],
+      [
+       "Sparkle Ombre Encapsulated",
+       "",
+       2500
+      ],
+      [
+       "Ombre Chrome Nail Designs",
+       "",
+       3500
+      ],
+      [
+       "Cat Eyes Nail Designs",
+       "",
+       2000
+      ],
+      [
+       "Stone / Charm Nail Designs",
+       "Stone or charm add-ons",
+       1000,
+       null,
+       "from $10"
+      ],
+      [
+       "3D Nail Art",
+       "Raised elements, textures and embellishments",
+       2000,
+       null,
+       "from $20"
+      ]
+     ]
+    },
+    {
+     "name": "Pedicure",
+     "items": [
+      [
+       "Regular Pedicure",
+       "Warm foot soak, nail trim and shaping, cuticle clean-up, light callus smoothing, lotion, mini foot massage, hot towel, regular polish",
+       4500
+      ],
+      [
+       "Gel Pedicure",
+       "Warm foot soak, nail trim and shaping, cuticle clean-up, sugar scrub, lotion, mini foot massage, hot towel, gel polish",
+       5500
+      ],
+      [
+       "Happy Toes Pedicure",
+       "A full pedicure with gel polish and a cute custom toe design",
+       6500
+      ],
+      [
+       "Short French Pedicure",
+       "",
+       6500
+      ],
+      [
+       "Deep French Pedicure",
+       "",
+       7000
+      ],
+      [
+       "Pretty Pamper Pedi (Reg Polish)",
+       "Botanical foot soak with dried rose and orange, sugar scrub, mask with hot towel wrap, hot stone massage, regular polish",
+       6500
+      ],
+      [
+       "Pretty Pamper Pedi (Gel Polish)",
+       "Botanical foot soak with dried rose and orange, sugar scrub, mask with hot towel wrap, hot stone massage, gel polish",
+       7500
+      ],
+      [
+       "Pretty Perfection Pedi (Reg Polish)",
+       "Peppermint and eucalyptus Himalayan salt soak, callus treatment, Himalayan scrub and clay mask, hot towel wrap, extended massage with warm candle oil, regular polish",
+       8500
+      ],
+      [
+       "Pretty Perfection Pedi (Gel Polish)",
+       "Peppermint and eucalyptus Himalayan salt soak, callus treatment, Himalayan scrub and clay mask, hot towel wrap, extended massage with warm candle oil, gel polish",
+       9500
+      ]
+     ]
+    },
+    {
+     "name": "Add-On Services",
+     "items": [
+      [
+       "Regular Gel Removal",
+       "",
+       1500
+      ],
+      [
+       "Structure / Builder Gel Removal",
+       "",
+       2000
+      ],
+      [
+       "Acrylic / Hard Gel / Gel-X Removal",
+       "",
+       2500
+      ],
+      [
+       "Cuticle Trim",
+       "",
+       1000
+      ],
+      [
+       "Nail Repair",
+       "",
+       1000
+      ],
+      [
+       "Gel Polish Change",
+       "",
+       3500
+      ],
+      [
+       "TPO-Free, HEMA-Free Gel Polish",
+       "",
+       500
+      ],
+      [
+       "Extended Massage",
+       "",
+       1500
+      ],
+      [
+       "Himalayan Soothing Scrub",
+       "",
+       1000
+      ],
+      [
+       "Himalayan Clay Mask",
+       "",
+       1000
+      ],
+      [
+       "Candle Massage Oil",
+       "",
+       1000
+      ],
+      [
+       "Callus Treatment",
+       "",
+       1200
+      ]
+     ]
+    }
+   ],
+   "panels": [
+    {
+     "head": "About Queenie",
+     "body": [
+      "Queenie (Uyen Phu) is a licensed nail technician with 10 years of experience in manicures and nail care: clean, detailed work and nail art from classic nails to intricate designs.",
+      "Her studio is Studio 2 at Sola Salons Walnut Creek – Ygnacio Plaza. By appointment only; accepting new clients."
+     ]
+    },
+    {
+     "head": "Before you book",
+     "body": [
+      "Each appointment can be rescheduled once.",
+      "A 30% cancellation fee applies to cancellations within 48 hours of the appointment; no-shows are charged 100%."
+     ]
+    },
+    {
+     "head": "Book & follow",
+     "links": [
+      {
+       "label": "Book with Queenie",
+       "href": "https://tipmepretty.glossgenius.com/"
+      },
+      {
+       "label": "@tipmepretty.studio on Instagram",
+       "href": "https://www.instagram.com/tipmepretty.studio/"
+      }
+     ]
+    }
+   ],
+   "siteCta": "Book an appointment"
+  },
+  "placements": [],
+  "glenn": {
+   "glenn": [
+    "BEASTY • Salons",
+    "Needs website"
+   ],
+   "city": "Walnut Creek",
+   "type": "Nail salon (salons)"
+  },
+  "flags": [
+   "Sources: her own GlossGenius booking site https://tipmepretty.glossgenius.com/ (home and /services, read from the page's own data 2026-10-18); Glenn's screenshots of @tipmepretty.studio (IMG_7169) and her Sola Salons page (IMG_7172, book.solasalonstudios.com).",
+   "All 42 services and prices are as listed on GlossGenius; none is hidden-price. Items GlossGenius marks 'price varies' carry priceLabel 'from $X' (GlossGenius itself shows these as '$X+').",
+   "Descriptions are shortened from her own service text; nothing added. Her typo 'Calus Treament' is written 'Callus Treatment'; 'TPO Free - HEMA Free Gel Polish' tidied to 'TPO-Free, HEMA-Free Gel Polish'.",
+   "Address: GlossGenius gives '1853 Ygnacio Valley Road Suite 2, Walnut Creek, CA 94598'; Sola page calls it 'Studio 2 at Sola Salons Walnut Creek - Ygnacio Plaza'. Same place.",
+   "Phone (510) 646-7789 and email phunguyetbaouyen90@gmail.com are the business phone and business email on her GlossGenius page. The email looks personal; the lead may prefer to drop it and keep phone + booking.",
+   "Hours: the Sola page says 'Contact business' and 'Accepting New Clients, By Appointment Only'. GlossGenius business hours are 9am–7pm every day, which is when online booking opens; the hours line says exactly that.",
+   "Left out: the GlossGenius rating (5.0 from 43 reviews); her cover image (a GlossGenius stock image, not hers).",
+   "Type line deliberately avoids her bio's 'Custom Art' wording because /custom art/ would also file her under Artists. 'Nail salon: Gel-X, builder gel & nail art' hits salons only (not barber, artists, bars).",
+   "needsSite: true, per Glenn ('Needs website'); GlossGenius is a booking page, so site is set to it and needsSite keeps her on the prospect list.",
+   "Colour #ffffff is the tile ground Glenn asked for. GlossGenius brand colour if wanted for an accent: #C5898A.",
+   "ICON (Glenn's ask): isolated from the full-res photo of her door decal (Messages attachment IMG_7173.PNG, 1320x2868). Method: local wall background fitted (quadratic) and subtracted in Lab; the ink is the part darker than the wall (the chroma channel was too blurred to use); thresholded at 3x upscale with a soft edge, decal components kept, the pink QR-like square and lamp dropped. Every stroke comes from the photo; nothing redrawn, no font. Ink recoloured flat to its own pink: the median of the Q's most saturated pixels, white-balanced against the wall (the wall photographs cyan-grey), giving #c47393. No perspective correction: the photo is near frontal and the script's slope is the design.",
+   "Legibility: 'Tip Me Pretty' reads, but it is her thin handwritten script, with slightly wobbly edges from the photo's compression. Small at tile size; the crowned Q carries the tile. The 'e' in 'Me' is small in the original too."
+  ]
+ },
+ {
+  "id": "b_polishedonpark",
+  "name_exact": "Polished On Park",
+  "checked_on": "2026-10-18",
+  "sources": [
+   "Sources: their own GlossGenius booking site https://polishedonpark.glossgenius.com/ (home and /services, read from the page's own data 2026-10-18); Glenn's screenshots IMG_7174 (site header and logo), IMG_7175 (@cmvlbeauty, Cidalia: 'Co-Owner of @polishedonpark', 'Oakland, Ca'), IMG_7176 (site footer: address and hours)."
+  ],
+  "facts": {
+   "slug": "polished-on-park",
+   "name": "Polished On Park",
+   "label": "Polished On Park",
+   "cuisine": "Nail salon: Gel-X & builder gel",
+   "color": "#ffffff",
+   "icon": "polished-on-park",
+   "site": "https://polishedonpark.glossgenius.com/",
+   "tagline": "Gel-X extensions, builder gel overlays, manicures, pedicures and nail art on Park Blvd.",
+   "prep": 0,
+   "category": "Nail salon",
+   "items": [],
+   "address": "3814 Park Blvd, Oakland, CA 94602",
+   "phone": "(925) 478-5171",
+   "email": "polishedonpark@gmail.com",
+   "hours": "Tue–Fri 9am–7pm; Sat 9am–4pm; Sun & Mon closed. Appointment only",
+   "sections": [
+    {
+     "name": "Nail Extensions & Overlays",
+     "items": [
+      [
+       "Gel-X (Any Length)",
+       "A manicure to prep the nail plate, Gel-X application, then one solid gel color. Nail art is booked as its own service",
+       7500
+      ],
+      [
+       "Builder Gel Overlay (S/M/L)",
+       "Soft, soak-off builder gel over thin natural nails, strong and durable without extensions. Short $70, medium $75, long $80",
+       7000,
+       null,
+       "$70–$80"
+      ]
+     ]
+    },
+    {
+     "name": "Nail Care",
+     "items": [
+      [
+       "Gel Manicure",
+       "Nail trimming, shaping and cuticle care, buffing and your chosen gel color, with a light hand massage and a hot towel wrap",
+       6000,
+       null,
+       "from $60"
+      ],
+      [
+       "Gel Pedicure",
+       "Nail trimming, shaping, cuticle care, buffing, sugar scrub exfoliation and your chosen gel color",
+       7000
+      ],
+      [
+       "Regular Polish Manicure",
+       "Nail trimming, shaping, cuticle care, buffing and your chosen regular polish or shine buff, with a light hand massage and a hot towel",
+       5000
+      ],
+      [
+       "Regular Polish Pedicure",
+       "Nail trimming, shaping, cuticle care, buffing, sugar scrub, light massage and a hot towel, then your chosen color or shine buff",
+       6000
+      ],
+      [
+       "Nail Repair",
+       "",
+       1000
+      ]
+     ]
+    },
+    {
+     "name": "Men’s Nail Care",
+     "items": [
+      [
+       "Menicure",
+       "Nail trimming, filing and cuticle care, finished with a matte or shine buff or a clear coat of gel or regular polish",
+       4500
+      ],
+      [
+       "Men’s Pedicure",
+       "Nail trimming, shaping and cuticle care, with gentle exfoliation of the heels and soles",
+       5000
+      ]
+     ]
+    },
+    {
+     "name": "Removals",
+     "items": [
+      [
+       "Gel-X / Acrylic Removal Only",
+       "",
+       2500
+      ],
+      [
+       "Gel Polish Removal Only",
+       "Removal only; it does not include a manicure",
+       1500
+      ]
+     ]
+    }
+   ],
+   "panels": [
+    {
+     "head": "The team",
+     "body": [
+      "Cidalia Lemus (co-owner), Cristal Garcia-Gil and Francy Roungreuang. Appointment-based only."
+     ]
+    },
+    {
+     "head": "Before you book",
+     "body": [
+      "A 50% cancellation fee applies to no-shows and to cancellations within 24 hours of the appointment.",
+      "Running late? Let them know. The grace period is 10 minutes; after that the appointment may have to be cancelled or rescheduled."
+     ]
+    },
+    {
+     "head": "Book & follow",
+     "links": [
+      {
+       "label": "Book at Polished On Park",
+       "href": "https://polishedonpark.glossgenius.com/"
+      },
+      {
+       "label": "@polishedonpark on Instagram",
+       "href": "https://www.instagram.com/polishedonpark/"
+      }
+     ]
+    }
+   ],
+   "siteCta": "Book an appointment"
+  },
+  "placements": [
+   "oakland-services-1"
+  ],
+  "glenn": {
+   "glenn": [
+    "Oakland • Services",
+    "BEASTY • Salons"
+   ],
+   "city": "Oakland",
+   "type": "Nail salon (salons)"
+  },
+  "flags": [
+   "Sources: their own GlossGenius booking site https://polishedonpark.glossgenius.com/ (home and /services, read from the page's own data 2026-10-18); Glenn's screenshots IMG_7174 (site header and logo), IMG_7175 (@cmvlbeauty, Cidalia: 'Co-Owner of @polishedonpark', 'Oakland, Ca'), IMG_7176 (site footer: address and hours).",
+   "City confirmed: GlossGenius lists 3814 Park Blvd, Oakland, CA 94602 (the site prints it 'OAKLAND, CA, CA, 94602', a data-entry duplication). Park Blvd, Oakland.",
+   "All 11 services and prices are as listed on GlossGenius. Builder Gel Overlay is one service at $70 marked 'price varies', and its own description gives short $70, medium $75, long $80, so its priceLabel is '$70–$80'. Gel Manicure is $60 marked 'price varies', so 'from $60'.",
+   "Descriptions shortened from their own service text; nothing added. The Regular Polish Manicure description's photo note ('Picture shown is a manicure w/ 2 accent nail art') was left out.",
+   "Hours from the site footer (screenshot IMG_7176) and GlossGenius business hours, which agree. 'Appointment only' is from their About text: 'We are Appointment-based only.'",
+   "GlossGenius lists specialties esthetician, lash/brows and wax, but no such services are listed, so the type line and sections stay nails only.",
+   "Team: the three bookable staff on GlossGenius. 'Co-owner' for Cidalia is from her own Instagram bio (IMG_7175). Cristal and Francy carry no title on the page.",
+   "Left out: the GlossGenius rating (5.0 from 1 review); Cidalia's personal Instagram @cmvlbeauty.",
+   "needsSite: true. Glenn did not write 'Needs website', but their only web presence is the GlossGenius booking page, which counts as having no site of their own under the brief. The lead may want to drop it.",
+   "ICON: their own wordmark ('Polished / ON PARK / NAIL SALON', black on white) cut from the logo band of their GlossGenius cover image (static.glossgenius.com .../website_cover_image/ac505bdd...jpeg, 607x1080). The thin circle around the wordmark is clipped by the photo collage in that image, so the arc pieces were removed and only the wordmark kept on its own white ground. Audit: 'paper' note only, no hard flag. Their Instagram avatar is the same logo with monstera leaves and 'ESTD 2021', but only a 100px copy is fetchable, too small to use.",
+   "Colour #ffffff matches the logo's white ground. Their GlossGenius brand colours, if the lead wants an accent: green #01865D (buttons, gradient from #134032) and the site's pink background #FFCBE4."
+  ]
+ },
+ {
+  "id": "b_kerushatattoo",
+  "name_exact": "Kerusha",
+  "checked_on": "2026-10-18",
+  "sources": [],
+  "facts": {
+   "slug": "kerusha-tattoo",
+   "name": "Kerusha",
+   "label": "Kerusha",
+   "cuisine": "Ornamental tattoo artist",
+   "color": "#0e0e0e",
+   "icon": "kerusha-tattoo",
+   "tagline": "Bay Area tattoo artist specializing in ornamental tattoos, at True Line Tattoo in Richmond.",
+   "prep": 0,
+   "category": "Ornamental tattoo artist",
+   "items": [],
+   "address": "4820 Bissell Ave, Richmond, CA",
+   "contactOnly": "Kerusha is a Bay Area tattoo artist who specializes in ornamental tattoos. She works out of True Line Tattoo in Richmond. Booking is by Instagram DM, and a deposit is required.",
+   "panels": [
+    {
+     "head": "Book via Instagram DM",
+     "body": [
+      "DM to book. Deposit required.",
+      "She tattoos at True Line Tattoo, 4820 Bissell Ave, Richmond. The shop's line: (510) 210-6729."
+     ],
+     "links": [
+      {
+       "label": "Message @by_keroosha on Instagram",
+       "href": "https://www.instagram.com/by_keroosha/"
+      },
+      {
+       "label": "True Line Tattoo (@trueline.tattoo)",
+       "href": "https://www.instagram.com/trueline.tattoo/"
+      }
+     ]
+    }
+   ],
+   "needsSite": true
+  },
+  "placements": [],
+  "glenn": {
+   "glenn": [
+    "BEASTY • Tattoo",
+    "She's at Trueline",
+    "Needs website"
+   ],
+   "city": "Richmond",
+   "type": "Individual tattoo artist (works at True Line Tattoo)"
+  },
+  "flags": "Sources: Glenn's screenshots att54/1018-1450_IMG_7177.jpg (her profile @by_keroosha: 'Kerusha (Bay Area Tattoo Artist)', she/her, category Artist, 'Richmond, CA', 'DM to book, DEPOSIT Required', links @trueline.tattoo; pinned post text 'A tattoo artist located in the Bay Area (Richmond, CA) / I specialize in ornamental tattoos'), IMG_7178 (shop profile @trueline.tattoo: True Line Tattoo, 'Fine line, Black & Grey Realism, Color realism', owners @tattoosbysergiomendez @joey_hella, '4820 bissell ave Richmond', 'Call (510) 210-6729'), IMG_7179 (her logo, used for the icon via make-brand-icon.py --disc; tile is the logo's own black #0e0e0e bled to the edge). No website of her own; Glenn: 'Needs website', 'She's at Trueline'. Address is the shop's; no ZIP is published in the shop bio, so none given. The shop phone is NOT set as her phone (she books by DM) and is only mentioned in the panel as the shop's line. The shop's 'Fine line, Black & Grey Realism, Color realism' describes the shop, not her, so it is not used as her style; her own words are 'ornamental'. No prices, hours, email or rating published; none given. No reel sent, so no clip. Instagram handle carried only in the panel link, not the paid `instagram` field."
+ },
+ {
+  "id": "b_radiantmedspa",
+  "name_exact": "Radiant Med Spa",
+  "checked_on": "2026-10-18",
+  "sources": [],
+  "facts": {
+   "slug": "radiant-med-spa",
+   "name": "Radiant Med Spa",
+   "label": "Radiant",
+   "cuisine": "Med spa & aesthetics",
+   "color": "#f8f3ed",
+   "icon": "radiant-med-spa",
+   "site": "https://radiantmedspas.com/",
+   "tagline": "Injectables, skin rejuvenation and wellness in Fremont since 2018.",
+   "prep": 0,
+   "category": "Med spa & aesthetics",
+   "items": [],
+   "address": "210 Fremont Hub Courtyard, Fremont, CA 94538",
+   "phone": "(510) 559-0040",
+   "email": "info@radiantmedspas.com",
+   "quoteOnly": "Treatments are booked, not bought here. Book a consultation with Radiant; prices below are their published regular prices, and candidacy and the final plan are set at consultation.",
+   "siteCta": "Book a consultation",
+   "groups": [
+    {
+     "name": "Injectables",
+     "items": [
+      [
+       "Botox / Dysport",
+       "New patient / Beauty Bank: $11.50 per unit.",
+       1400,
+       "$14 / unit"
+      ],
+      [
+       "Dermal Fillers",
+       "New patient / Beauty Bank: $650.",
+       79900
+      ],
+      [
+       "Kybella",
+       "New patient / Beauty Bank: $599.",
+       75000
+      ],
+      [
+       "PRP and PRF Injections",
+       "New patient / Beauty Bank: $550.",
+       69900
+      ],
+      [
+       "PRP Hair / Hair Restoration",
+       "New patient / Beauty Bank: $550.",
+       75000
+      ],
+      [
+       "Sculptra",
+       "New patient / Beauty Bank: $699.",
+       85000
+      ],
+      [
+       "Butt Lift with Sculptra",
+       "10 vials. New patient / Beauty Bank: $5,999.",
+       750000
+      ],
+      [
+       "Skin Vive",
+       "New patient / Beauty Bank: $399.",
+       59900
+      ],
+      [
+       "Under Eye Fillers / PRP",
+       "New patient / Beauty Bank: $550.",
+       75000
+      ],
+      [
+       "Facial Balancing",
+       "",
+       0,
+       "Priced at consultation"
+      ]
+     ]
+    },
+    {
+     "name": "Skin Rejuvenation",
+     "items": [
+      [
+       "Derma Pen Microneedling",
+       "New patient / Beauty Bank: $399.",
+       55000
+      ],
+      [
+       "Exosomes and Growth Factors",
+       "New patient / Beauty Bank: $350.",
+       59900
+      ],
+      [
+       "Microneedling with PRP / PRF",
+       "New patient / Beauty Bank: $550.",
+       69900
+      ],
+      [
+       "Pico Laser Carbon Glow",
+       "Per session. New patient / Beauty Bank: $275.",
+       39900
+      ],
+      [
+       "Pigment & Melasma Treatment",
+       "New patient / Beauty Bank: $399.",
+       55000
+      ],
+      [
+       "Radio Frequency Microneedling",
+       "New patient / Beauty Bank: $550.",
+       69900
+      ],
+      [
+       "Rejuran Salmon DNA Treatment",
+       "New patient / Beauty Bank: $450.",
+       69900
+      ],
+      [
+       "Medical Grade Skincare",
+       "Beauty Bank: 20% off.",
+       0,
+       "Priced at consultation"
+      ]
+     ]
+    },
+    {
+     "name": "Laser Treatments",
+     "items": [
+      [
+       "Laser Acne Treatment",
+       "New patient / Beauty Bank: $299.",
+       39900
+      ],
+      [
+       "Laser Carbon Peel Treatment",
+       "New patient / Beauty Bank: $350.",
+       55000
+      ],
+      [
+       "Laser Genesis",
+       "New patient / Beauty Bank: $250.",
+       39900
+      ],
+      [
+       "Laser Glow Facial",
+       "New patient / Beauty Bank: $250.",
+       39900
+      ],
+      [
+       "Pico Laser",
+       "Package of 5. New patient / Beauty Bank: $1,599.",
+       259900
+      ],
+      [
+       "XERF Structural Skin Tightening",
+       "New patient / Beauty Bank: $1,899.",
+       259900
+      ],
+      [
+       "Candela Laser Hair Removal",
+       "",
+       0,
+       "See current specials"
+      ],
+      [
+       "Laser Tattoo Removal",
+       "",
+       0,
+       "Priced at consultation"
+      ]
+     ]
+    },
+    {
+     "name": "Body Contouring",
+     "items": [
+      [
+       "Body Sculpting",
+       "Single 90-minute session; $1,899 for a 5-session package. New patient / Beauty Bank: $299 single, $1,399 for 5.",
+       39900
+      ],
+      [
+       "Cellulite Treatment",
+       "New patient / Beauty Bank: $199.",
+       29900
+      ],
+      [
+       "Lymphatic Body Treatment",
+       "New patient / Beauty Bank: $185.",
+       27500
+      ]
+     ]
+    },
+    {
+     "name": "Facials",
+     "items": [
+      [
+       "Acne Clarifying Facial",
+       "New patient / Beauty Bank: $165.",
+       25000
+      ],
+      [
+       "Deep Cleansing HydraFacial",
+       "New patient / Beauty Bank: $175.",
+       22500
+      ],
+      [
+       "Deluxe HydraFacial",
+       "New patient / Beauty Bank: $199.",
+       29900
+      ],
+      [
+       "HydraFacial",
+       "New patient / Beauty Bank: $225.",
+       32500
+      ],
+      [
+       "Lift, Tight & Bright Facial",
+       "New patient / Beauty Bank: $175.",
+       27500
+      ],
+      [
+       "Perfect Derma Peel",
+       "New patient / Beauty Bank: $275.",
+       35000
+      ],
+      [
+       "Radiant Signature Facial",
+       "New patient / Beauty Bank: $199.",
+       29900
+      ]
+     ]
+    }
+   ],
+   "panels": [
+    {
+     "head": "Book & the Radiant Beauty Bank",
+     "body": [
+      "The Beauty Bank is a $150/month deposit you use toward eligible treatments, with no separate membership fee. It includes 2 complimentary custom facials, 3 complimentary B12 shots, VIP event access, priority booking and 20% off skincare.",
+      "They also run limited-time monthly specials, seasonal packages and event promotions. Pricing is subject to change."
+     ],
+     "links": [
+      {
+       "label": "Book an appointment",
+       "href": "https://booking.podium.com/81f34557-4bb5-58aa-bdcf-63430c81276e/d2f81929-831e-568f-b671-baed47da1414"
+      },
+      {
+       "label": "Pricing & membership",
+       "href": "https://radiantmedspas.com/pricing-membership"
+      },
+      {
+       "label": "Current specials",
+       "href": "https://radiantmedspas.com/specials"
+      }
+     ]
+    }
+   ],
+   "siteNote": "Prices from their own pricing page, checked 18 October 2026. Regular prices shown; new patient and Beauty Bank prices in each line.",
+   "clip": {
+    "src": "/clips/radiant-med-spa.mp4",
+    "poster": "/clips/radiant-med-spa-poster.webp",
+    "href": "https://www.instagram.com/p/DedNsn3AGGP/",
+    "credit": "Posted by @radiantmedspas",
+    "platform": "Instagram"
+   }
+  },
+  "placements": [
+   "beasty-health-0",
+   "fremont-services-2"
+  ],
+  "glenn": {
+   "glenn": [
+    "BEASTY • Health/Beauty",
+    "Fremont • Services"
+   ],
+   "city": "Fremont",
+   "type": "Med spa (services)"
+  },
+  "flags": "Sources (checked 18 Oct 2026): https://radiantmedspas.com/ (address 210 Fremont Hub Courtyard, Fremont, CA 94538; (510) 559-0040; info@radiantmedspas.com; 'Since 2018'; Book buttons all go to the Podium link used above), https://radiantmedspas.com/pricing-membership (every price above, regular price as the cents, 'NEW PATIENT / BEAUTY BANK PRICE' column in each description; Beauty Bank terms), https://radiantmedspas.com/specials, https://radiantmedspas.com/contact-us. Address/phone/email also match Glenn's screenshots att54/1018-1543_IMG_7180-7182. Left out: 'Clean & Glow' (site says 'Pricing to confirm'); 'ZO skincare and Skin Cuteicals' (TBD at consultation, a retail line); the specials list (monthly, changes; linked instead); the '4.8 from 212+ Google Reviews' and '#1 Med Spa Fremont 2025 & 2026' claims (ratings/awards not carried); team names (the site nav still lists 'Dr. Michael Zarrabi', 'Sherry Sanvictores' and 'Rodeo Surgery Center' while the team section lists Prem Tripathi MD, Monika Dhillon and Christine Serrano, so staff are in conflict and omitted); the AI simulator and financing links. No hours published on their site, so none given. Normalised their 'Vail' to 'vials' and 'BODY COUNTOURING' to 'Body Contouring'. Rows with no number ('To be determined @ consultation', 'See current specials') carry cents 0 with a priceLabel. quoteOnly + groups used (not sections) so treatments are not add-to-cart. Icon: their own logo PNG from the site (cdn.prod.website-files.com/.../69e550cf0b15c97409bb17a5_Radiant%20Logo.png), whole, on the logo disc's own cream #f8f3ed bled to the edge; audit-icons reports 'paper' (a note, not a hard flag; the cream is their own ground). Clip: post DedNsn3AGGP is a video post uploaded by @radiantmedspas (Radiant Med Spa) itself, no caption; it shows a client vlogging a visit inside the spa. make-clip window: 12s-36s of 117s."
+ },
+ {
+  "id": "b_cuppayodanville",
+  "name_exact": "Cuppa Yo Danville",
+  "checked_on": "2026-10-18",
+  "sources": [],
+  "facts": {
+   "slug": "cuppayo-danville",
+   "name": "Cuppa Yo Danville",
+   "label": "Cuppa Yo",
+   "cuisine": "Self-serve frozen yogurt",
+   "color": "#f27023",
+   "icon": "cuppayo-danville",
+   "site": "https://www.cuppayo.com/danvilleca",
+   "tagline": "Self-serve frozen yogurt in Danville, locally owned by the Chan family.",
+   "prep": 0,
+   "category": "Self-serve frozen yogurt",
+   "items": [],
+   "address": "730 Camino Ramon, Suite 190, Danville, CA 94526",
+   "phone": "(925) 302-0512",
+   "email": "cuppayodanville@gmail.com",
+   "hours": "Daily 12pm–9pm",
+   "contactOnly": "Self-serve frozen yogurt: pour it, top it, weigh it. Flavors rotate, so check their Instagram or come in to see what's on tap today. Ask the store about events, gift cards and fundraisers.",
+   "siteCta": "Open their Danville page",
+   "panels": [
+    {
+     "head": "Flavors & more",
+     "body": [
+      "The Danville store is owned by the Chans, local Danville residents who opened it so families, friends and neighbors have somewhere to come together over a simple, joyful treat."
+     ],
+     "links": [
+      {
+       "label": "Today's flavors (@cuppayodanville on Instagram)",
+       "href": "https://www.instagram.com/cuppayodanville/"
+      },
+      {
+       "label": "Full Cuppa Yo flavor list",
+       "href": "https://www.cuppayo.com/froyo-flavors"
+      },
+      {
+       "label": "Email the Danville store",
+       "href": "mailto:cuppayodanville@gmail.com"
+      }
+     ]
+    }
+   ],
+   "clip": {
+    "src": "/clips/cuppayo-danville.mp4",
+    "poster": "/clips/cuppayo-danville-poster.webp",
+    "href": "https://www.instagram.com/reel/Deo3aDjplnw/",
+    "credit": "Filmed by @hungere.for.diy",
+    "platform": "Instagram",
+    "by": "hungere.for.diy"
+   }
+  },
+  "placements": [
+   "danville-goods-11",
+   "beasty-goods2-29"
+  ],
+  "glenn": {
+   "glenn": [
+    "BEASTY • Sweets",
+    "Danville • Sweets"
+   ],
+   "city": "Danville",
+   "type": "Frozen yogurt shop (franchise store)"
+  },
+  "flags": "Sources: their own Danville page https://www.cuppayo.com/danvilleca (checked 18 Oct 2026): 730 Camino Ramon, Suite 190, Danville, CA 94526; Phone (925) 302-0512; cuppayodanville@gmail.com; 'Hours: 12PM - 9PM Daily'; 'Flavors on Tap: Check out our Instagram page or come in to see what froyo flavor is brewing today!'; 'Cuppa Yowners' paragraph on the Chans; 'Ask away! Book an event, purchase a gift card or share a fundraiser.' Hours agree with their IG bio ('Open Daily 12PM - 9PM', screenshot att54/1018-2323_IMG_7198.jpg). 'Pour it. Top it. Weigh it.' is on their own badge artwork. Chain: Cuppa Yo HQ is in Bend, OR (937 NW Newport Ave Ste 110); other stores (incl. Dublin, CA) left out, Danville facts only. No prices published on the Danville page or chain site (home page mentions flat-rate pints/quarts, loyalty, Puppa Yo and online ordering chain-wide with 'offers may vary', so none of those are claimed for Danville). Chain flavor list is linked, not copied, because availability varies by store. Icon: their own scalloped badge PNG from cuppayo.com (static.wixstatic.com/media/59a50d_7c59fa932cad4752a7b1e7ce25e16d3e~mv2.png), whole, on the badge's own orange #f27023 bled to the edge. Clip: reel Deo3aDjplnw uploaded by @hungere.for.diy (Hunger E for DIY, a creator); caption 'Have you been to @cuppayodanville in Danville yet? Cuppa Yo 730 Camino Ramon, Suite 190, Danville ... Thank you @cuppayodanville for the sweet treats!' Frames show Cuppa Yo cups, machines and toppings bar. make-clip window: 7s-31s of 31s."
+ }
+]

@@ -302,3 +302,13 @@ Worth him confirming with each. The rest are the businesses' own posts.
 | `cheesecake-lab-sf.mp4` | The Cheesecake Lab SF, Hayward | [DehwZctgf4L](https://www.instagram.com/reel/DehwZctgf4L/) | 0s-7s of 7s | Glenn, 17 Oct 2026: “Clip this video plz”; Posted by @thecheesecakelabsf. |
 
 Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Taco in Oakland, not One’s Cafe.
+
+## Batch 54 — 18 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `world-of-hoagies.mp4` | Hoagie's World of Hoagies, Berkeley | [DehQKFyt6xs](https://www.instagram.com/reel/DehQKFyt6xs/) | 19s-43s of 43s | Glenn, 18 Oct 2026: “Clip this video plz”; Filmed by @wthellydanyelly. |
+| `norman-rose-tavern.mp4` | Norman Rose Tavern, Napa | [DelXdIOi0Zl](https://www.instagram.com/reel/DelXdIOi0Zl/) | 0s-18s of 18s | Glenn, 18 Oct 2026: “Clip this video plz”; Filmed by @thekhaysie. |
+| `radiant-med-spa.mp4` | Radiant Med Spas, Fremont | [DedNsn3AGGP](https://www.instagram.com/p/DedNsn3AGGP/) | 12s-36s of 117s | Glenn, 18 Oct 2026: “Clip this video plz”; Posted by @radiantmedspas. |
+| `cuppayo-danville.mp4` | Cuppayo, Danville | [Deo3aDjplnw](https://www.instagram.com/reel/Deo3aDjplnw/) | 7s-31s of 31s | Glenn, 18 Oct 2026: “Clip this video plz”; Filmed by @hungere.for.diy. |
+| `jackies-place-review.mp4` | Jackie's Place | [DdrbZx1s5mo](https://www.instagram.com/reel/DdrbZx1s5mo/) | 21s-45s of 108s | Glenn, 18 Oct 2026: “Foodie”; Filmed by @daeatzwitbri. |

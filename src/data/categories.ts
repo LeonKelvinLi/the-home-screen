@@ -116,6 +116,9 @@ export const BEASTY_CATEGORIES: BeastyCategory[] = [
   { kind: 'bars', heading: 'Bar/Lounge', about: 'Bars, lounges and taprooms', wall: wall('bars'), test: /\blounge\b|cocktail bar|sports bar|wine bar|\bbar ?& ?(grill|kitchen|restaurant)|brewpub|\bpub\b|tavern|speakeasy|hookah|nightclub|full bar|taproom|beer garden/i, not: /juice|smoothie|oyster|salad|mobile|nail|lash|brow|tea lounge|cigar/i },
   { kind: 'events', heading: 'Events', about: 'Event rentals, mobile bars and planners', wall: wall('events'), test: /event (planning|planner|venue|rental|space)|events? (company|planner|venue|rentals?)|party rentals?|bounce house|mobile (cocktail )?bar|bartending|wedding planner|balloon|party entertain/i },
   { kind: 'youth', heading: 'Youth', about: "Kids' clubs, classes, camps and play", wall: wall('youth'), test: /\byouth\b|\bkids?'?\b|children|tutor|summer camp|after[- ]?school|preschool/i, not: /kids? menu|kid-friendly|\bdogs?\b|\bpets?\b/i },
+  /* "New category Health/Beauty" — Glenn, 2026-10-18, with Radiant Med Spas in Fremont.
+     Med spas, aesthetics and wellness clinics. Hair, nails and lashes stay on Salons. */
+  { kind: 'health', heading: 'Health/Beauty', about: 'Med spas, aesthetics and wellness', wall: wall('health'), test: /med ?spa|medical spa|day spa|aesthetic|botox|injectable|wellness|skin ?care|\biv (therapy|drip)|laser/i, not: /salon|barber|nails?\b|lash|tattoo/i },
 ]
 
 /** Every category page holds his twenty-four. */
