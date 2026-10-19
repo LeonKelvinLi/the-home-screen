@@ -16020,4 +16020,1955 @@ export const LOCAL_SEED: LocalSeed[] = [
           }
       ]
   },
+  /* BATCH 53, 2026-10-18: Glenn's 16–18 October sends. Official-site facts only;
+     sources, conflicts and left-out items: research/roster/batch53.json. */
+  {
+      "slug": "hironori-santa-clara",
+      "name": "HiroNori Craft Ramen — Santa Clara",
+      "label": "HiroNori",
+      "cuisine": "Japanese craft ramen",
+      "color": "#f2ede0",
+      "icon": "hironori-santa-clara",
+      "site": "https://www.hironori.com/santa-clara-bay-area-ramen",
+      "tagline": "Craft ramen with their own noodles, stock and sauce.",
+      "prep": 0,
+      "category": "Japanese craft ramen",
+      "items": [],
+      "address": "4300 Great America Pkwy, Ste 180, Santa Clara, CA 95054",
+      "phone": "(669) 342-5146",
+      "sections": [
+          {
+              "name": "Craft Ramen",
+              "items": [
+                  [
+                      "Tonkotsu Ramen",
+                      "Pork chashu, spinach, green onion, seaweed, bean sprouts, half egg.",
+                      1895
+                  ],
+                  [
+                      "Shoyu Ramen",
+                      "100% chicken broth with 2-year barrel-aged soy sauce, pork chashu, green onion, spinach, bamboo, kaiware sprouts, half egg.",
+                      1750
+                  ],
+                  [
+                      "Vegan Ramen",
+                      "Sesame miso broth, broccolini, corn, bean sprouts, soy meat, tofu, baby kale, chili oil.",
+                      1960
+                  ],
+                  [
+                      "Spicy Cold Dipping Noodle",
+                      "Bonito dashi broth with chili oil, cold noodle with pork chashu, bamboo, kaiware sprouts, bean sprouts, egg, spinach.",
+                      1775
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Edamame",
+                      "Soy beans, sea salt, yuzu.",
+                      500
+                  ],
+                  [
+                      "Vegan Gyoza",
+                      "Deep fried dumplings with soy meat, napa cabbage, ginger, garlic, sesame oil.",
+                      995
+                  ],
+                  [
+                      "Cucumber Crab Salad",
+                      "Cucumber, crab, yuzu dressing.",
+                      895
+                  ],
+                  [
+                      "Green Salad",
+                      "Baby kale, corn, tomato, apple, quinoa, avocado, yuzu dressing.",
+                      1095
+                  ],
+                  [
+                      "Crispy Chicken",
+                      "Garlic, soy marinated fried chicken thigh.",
+                      1245
+                  ],
+                  [
+                      "Crispy Rice with Spicy Tuna (Raw)",
+                      "Spicy tuna, avocado, jalapeño, eel sauce. 2 or 3 pc.",
+                      925,
+                      null,
+                      "$9.25 / $13.85"
+                  ],
+                  [
+                      "Pork Buns",
+                      "Steamed bun, marinated pork belly, pickled onions, hoisin sauce. 2 or 3 pc.",
+                      950,
+                      null,
+                      "$9.50 / $14.25"
+                  ],
+                  [
+                      "Eel Tempura Buns",
+                      "Steamed bun, tempura eel, pickled onions, cucumbers, hoisin sauce. 2 or 3 pc.",
+                      950,
+                      null,
+                      "$9.50 / $14.25"
+                  ]
+              ]
+          },
+          {
+              "name": "Bowls",
+              "items": [
+                  [
+                      "Pork Rice Bowl",
+                      "Pork chashu, green onion, poached egg, spinach, rice.",
+                      1495,
+                      null,
+                      "$14.95 / $17.50"
+                  ],
+                  [
+                      "Chicken Rice Bowl",
+                      "Chicken thigh, soft boiled egg, green onion, spinach, rice.",
+                      1425,
+                      null,
+                      "$14.25 / $17.25"
+                  ],
+                  [
+                      "Spicy Tuna Rice Bowl (Raw)",
+                      "Spicy tuna, baby kale, quinoa, avocado, green onion, rice.",
+                      1495,
+                      null,
+                      "$14.95 / $17.25"
+                  ],
+                  [
+                      "Salmon Poke Bowl (Raw)",
+                      "Marinated salmon, baby kale, quinoa, avocado, rice.",
+                      1495,
+                      null,
+                      "$14.95 / $17.25"
+                  ]
+              ]
+          },
+          {
+              "name": "Toppings",
+              "items": [
+                  [
+                      "Black Garlic Oil",
+                      "",
+                      250
+                  ],
+                  [
+                      "Extra Noodle",
+                      "",
+                      350
+                  ],
+                  [
+                      "Ajitama Egg",
+                      "",
+                      350
+                  ],
+                  [
+                      "Green Onion",
+                      "",
+                      250
+                  ],
+                  [
+                      "Pork Chashu (1/3)",
+                      "",
+                      250,
+                      null,
+                      "$2.50 / $7.50"
+                  ],
+                  [
+                      "Shrimp",
+                      "",
+                      550
+                  ],
+                  [
+                      "Seaweed (4)",
+                      "",
+                      350
+                  ],
+                  [
+                      "Spinach",
+                      "",
+                      350
+                  ],
+                  [
+                      "Tofu",
+                      "",
+                      250
+                  ],
+                  [
+                      "Corn",
+                      "",
+                      275
+                  ],
+                  [
+                      "Broccolini",
+                      "",
+                      295
+                  ],
+                  [
+                      "Bean Sprouts",
+                      "",
+                      150
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks & Dessert",
+              "items": [
+                  [
+                      "Cucumber Yuzunade",
+                      "",
+                      545
+                  ],
+                  [
+                      "Iced Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Hot Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Organic Iced Green Tea",
+                      "",
+                      350
+                  ],
+                  [
+                      "Coke",
+                      "",
+                      350
+                  ],
+                  [
+                      "Diet Coke",
+                      "",
+                      350
+                  ],
+                  [
+                      "Sprite",
+                      "",
+                      350
+                  ],
+                  [
+                      "Lemonade",
+                      "",
+                      350
+                  ],
+                  [
+                      "Arnold Palmer",
+                      "",
+                      350
+                  ],
+                  [
+                      "Mochi Ice Cream",
+                      "Green tea.",
+                      450
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Reservations, pickup & delivery",
+              "body": [
+                  "Due to limited seating, Santa Clara operates on reservations only.",
+                  "Make any ramen a combo with a mini green salad and mini rice bowl for +$7.25 (salmon poke or spicy tuna bowl +$1.00). Choice of thick or thin noodles; chicken or tofu can replace pork. Garlic and house spicy sauce are free on request."
+              ],
+              "links": [
+                  {
+                      "label": "Reserve a table",
+                      "href": "https://www.yelp.com/rez/hironori-craft-ramen-santa-clara?utm_campaign=reservations_redirect&utm_source=mobile_web"
+                  },
+                  {
+                      "label": "Order pickup",
+                      "href": "https://hironoricraftramensantaclara.smartonlineorder.com/"
+                  },
+                  {
+                      "label": "Santa Clara menu (PDF)",
+                      "href": "https://www.hironori.com/s/Santa-Clara.pdf"
+                  }
+              ]
+          },
+          {
+              "head": "Other Bay Area locations",
+              "body": [
+                  "211 E 3rd Ave, San Mateo, CA 94401 — (650) 242-1223",
+                  "10815 N Wolfe Rd, Unit 104, Cupertino, CA 95014 — (408) 982-3820",
+                  "43779 Boswell Rd, Fremont, CA 94538 — (510) 771-9630"
+              ],
+              "links": [
+                  {
+                      "label": "All HiroNori locations",
+                      "href": "https://www.hironori.com/locations"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Prices from their own Santa Clara menu, checked 17 October 2026. Cashless; a 15% service charge applies to dine-in checks.",
+      "clip": {
+          "src": "/clips/hironori-santa-clara.mp4",
+          "poster": "/clips/hironori-santa-clara-poster.webp",
+          "href": "https://www.instagram.com/reel/DeiknWIOpzu/",
+          "credit": "Posted by @hironoriramen_bayarea",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "titos-barrio-chino",
+      "name": "Titos Barrio Chino",
+      "label": "Barrio Chino",
+      "cuisine": "Chinese Latin kitchen",
+      "color": "#1a1a1a",
+      "icon": "titos-barrio-chino",
+      "site": "https://oakland.picnicfood.com/s/barrio-chino/5333-adeline-st-oakland/55a88d54-2413-4650-b3a2-aa57af13fe0d",
+      "tagline": "Chinese Latin kitchen by Armando “Tito” Tam, pickup at Adeline Food Hall.",
+      "prep": 0,
+      "category": "Chinese Latin kitchen",
+      "items": [],
+      "address": "5333 Adeline St, Oakland, CA 94608",
+      "sections": [
+          {
+              "name": "Fried Rice",
+              "items": [
+                  [
+                      "Lechon Fried Rice",
+                      "cabbage, eggs, white rice, slow and low lechon topped with sesame seeds, maduros, chimichurri sauce for the drip.",
+                      1500
+                  ],
+                  [
+                      "Jerk Chicken Fried Rice",
+                      "cabbage, white rice, eggs, jerk chicken topped with sesame seeds, maduros and chimichurri sauce for the drip.",
+                      1500
+                  ],
+                  [
+                      "Chimi Chicken Fried Rice",
+                      "chimichurri grilled chicken, cabbage, egg fried rice, maduros, sesame seeds, maduros, extra chimi for the drip.",
+                      1500
+                  ],
+                  [
+                      "Maduro Fried Rice",
+                      "maduros, eggs, cabbage fried rice with chimichurri sauce",
+                      1400
+                  ]
+              ]
+          },
+          {
+              "name": "Chino Latino",
+              "items": [
+                  [
+                      "Chino Lechon Bowl",
+                      "lechon with, cabbage, egg fried rice topped with sesame seeds, maduro and chimichurri.",
+                      1500
+                  ],
+                  [
+                      "Pollo Picante Bowl",
+                      "grilled jerk chicken, with cabbage, egg fried rice, sesame seeds, side of maduros, chimichurri sauce for the drip.",
+                      1500
+                  ],
+                  [
+                      "Chimichurri Chicken Bowl",
+                      "grilled chicken breast with cabbage, egg fried rice, chimichurri and maduros topped with sesame seeds, extra chimi sauce for the drip.",
+                      1500
+                  ],
+                  [
+                      "Yipsena Bowl",
+                      "roasted chicken charsiu, sauteed cabbae, white rice, ginger scallion sauce, maduro, chimi sauce on side.",
+                      1500
+                  ],
+                  [
+                      "Tam Fung Chick Charsiu Bowl",
+                      "roasted chicken charsiu, scrambled eggs, sauteed cabbage, white rice, ginger scallion sauce, chimi sauce and maduro.",
+                      1500
+                  ],
+                  [
+                      "Guayaba Heat Bowl",
+                      "guava bbq and spicy grilled chicken over egg fried rice, maduros and side of chimichurri sauce.",
+                      1500
+                  ],
+                  [
+                      "Ginger Scalasado",
+                      "grilled pollo asado topped with ginger scallion sauce over egg fried rice, maduros and chimichurri for the drip",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Wings",
+              "items": [
+                  [
+                      "Crispy Wings Chino Bowl",
+                      "4 crispy salt pepper wings, cabbage egg fried rice, sesame seeds, sweet sour sauce for drip.",
+                      1500
+                  ],
+                  [
+                      "Chimi Wings Bowl",
+                      "4 crispy chimichurri sauced wings, cabbage egg fried rice, sesame seed, maduro, chimi sauce on side for drip.",
+                      1500
+                  ],
+                  [
+                      "Jerk Wings Chino Bowl",
+                      "4 crispy jerk sauced wings, cabbage egg fried rice, maduro, chimi sauce on side for drip.",
+                      1500
+                  ],
+                  [
+                      "Sweet Heat Wings Chino Bowl",
+                      "4 crispy wings sauced in our sweet and spicy sauce, egg fried rice chimichurri sauce for the drip and maduro.",
+                      1500
+                  ],
+                  [
+                      "Buffalo Wings Chino Bowl",
+                      "one of Tito's favorite flavors is buffalo sauce, so you get 4 crispy wings sauced in buffalo sauce, egg fried rice, maduro and chimichurri sauce for the drip.",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Empanadillas & Meals",
+              "items": [
+                  [
+                      "2 Empanadillas Jerk Chicken",
+                      "2 spicy jerk chicken, cheese, crispy fried empanada we call empanadilla",
+                      1200
+                  ],
+                  [
+                      "2 Veggie Empanadillas",
+                      "2 veggie, cheese, crispy empanadillas",
+                      1200
+                  ],
+                  [
+                      "2 Empanadillas Lechon",
+                      "2 crispy emapandaillas filled with slow and low lechon and cheese.",
+                      1200
+                  ],
+                  [
+                      "Maduros & Empanadillas Meal",
+                      "sweet plantains with 2 empanadillas of your choice from (jerk chicken, lechon, shittake bokchoy) comes with chimi and mayoketchup sauce. 2 of one, you cant mix match. Thank you",
+                      1600
+                  ],
+                  [
+                      "Jerk Chicken Empanadillas Meal",
+                      "2 jerk chicken crispy empanadillas and side of egg fried rice, chimichurri sauce",
+                      1600
+                  ],
+                  [
+                      "Veggie Empanadilla Meal",
+                      "2 veggie empanadillas with side of egg fried rice & chimichurri sauce.",
+                      1600
+                  ],
+                  [
+                      "Lechon Empanadillas Meal",
+                      "2 lechon crispy empanadillas, side of egg fried rice, chimichurri sauce",
+                      1600
+                  ],
+                  [
+                      "Habanero Empanadilla Meal",
+                      "2 crispy citrus habanero, chicken, cheese empanadillas with egg fried rice, mayo ketchup.",
+                      1600
+                  ],
+                  [
+                      "Guava Heat Empanadilla Meal",
+                      "2 crispy, guava spicy chicken, cheese empanadillas, egg fried rice, mayo ketchup.",
+                      1600
+                  ],
+                  [
+                      "Chimichuirr Empanadillas Meal",
+                      "2 crispy, chicken, cheese, chimichurri empanadillas, egg fried rice, mayo ketchup.",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Breakfast",
+              "items": [
+                  [
+                      "Breakfast BC Basico",
+                      "egg fried rice, cabbage, cheese, maduros and house pink sauce.",
+                      1400
+                  ],
+                  [
+                      "Breakfast BC Tots Basico",
+                      "crispy tater tots, cheddar cheese, scrambled eggs, maduros and house pink sauce.",
+                      1400
+                  ],
+                  [
+                      "Breakfast BC Bacon & Cheese",
+                      "egg fried rice, pepper jack cheese, bacon, maduros and house pink sauce.",
+                      1500
+                  ],
+                  [
+                      "Breakfast BC Tots Bacon Egg & Cheese",
+                      "crispy tater tots, cheddar cheese, scrambled eggs, bacon, maduros and house pink sauce.",
+                      1500
+                  ]
+              ]
+          },
+          {
+              "name": "Drinks & Party Pack",
+              "items": [
+                  [
+                      "Water",
+                      "16 oz bottle",
+                      200
+                  ],
+                  [
+                      "Coke",
+                      "12 oz can",
+                      400
+                  ],
+                  [
+                      "Party Pack",
+                      "A tray that feeds 4-5: egg fried rice, grilled chimichurri chicken, lechon, veggie empanadillas, maduros, chimichurri sauce, mayo ketchup sauce.",
+                      10000
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Order for pickup",
+              "body": [
+                  "Pickup at Adeline Food Hall, 5333 Adeline St, Oakland. Message them on Instagram with questions."
+              ],
+              "links": [
+                  {
+                      "label": "Order from Barrio Chino",
+                      "href": "https://oakland.picnicfood.com/s/barrio-chino/5333-adeline-st-oakland/55a88d54-2413-4650-b3a2-aa57af13fe0d"
+                  },
+                  {
+                      "label": "Instagram @titosbarriochino",
+                      "href": "https://www.instagram.com/titosbarriochino/"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Menu and prices from their own ordering page at Adeline Food Hall, checked 17 October 2026.",
+      "needsSite": true
+  },
+  {
+      "slug": "cafe-de-casa-ssf",
+      "name": "Cafe de Casa — South San Francisco",
+      "label": "Cafe de Casa",
+      "cuisine": "Brazilian café",
+      "color": "#ffffff",
+      "icon": "cafe-de-casa",
+      "site": "https://www.cafedecasa.com/stores/south-san-francisco",
+      "tagline": "Brazilian pastries, açaí, feijoada and fresh juices since 2011.",
+      "prep": 0,
+      "category": "Brazilian café",
+      "items": [],
+      "address": "1165 Airport Blvd, South San Francisco, CA 94080",
+      "phone": "(650) 763-1025",
+      "hours": "Mon–Sat 7am–3pm; Sun closed",
+      "sections": [
+          {
+              "name": "Salgados (pastries)",
+              "items": [
+                  [
+                      "Coxinha",
+                      "Their most traditional Brazilian pastry, filled with creamy chicken and cream cheese",
+                      650
+                  ],
+                  [
+                      "Pão de Queijo Grande",
+                      "Gluten-free cheese bread",
+                      495
+                  ],
+                  [
+                      "Kibe",
+                      "Meat dumpling seasoned with herbs, stuffed with beef",
+                      650
+                  ],
+                  [
+                      "Esfirra de Carne",
+                      "Bread dough made with ground beef, tomato, and olives",
+                      650
+                  ],
+                  [
+                      "Esfirra de Frango",
+                      "Bread dough made with chicken, tomato, and olives",
+                      650
+                  ],
+                  [
+                      "Americano de Presunto",
+                      "Bread dough stuffed with ham, cheese, and tomato",
+                      650
+                  ],
+                  [
+                      "Breguês",
+                      "Bread dough filled with ham, sausage, cheese, and tomato",
+                      650
+                  ],
+                  [
+                      "Disco",
+                      "Breaded beef patty",
+                      650
+                  ]
+              ]
+          },
+          {
+              "name": "Cheese bread sandwiches",
+              "items": [
+                  [
+                      "PDQ Goal Sandwich",
+                      "Their cheese bread stuffed with Calabrese sausage and melted cheese",
+                      1150
+                  ],
+                  [
+                      "PDQ Ham and Cheese",
+                      "Ham and cheese on a cheese bread sandwich",
+                      880
+                  ],
+                  [
+                      "PDQ Brazilian Cream Cheese",
+                      "Brazilian cream cheese on a cheese bread sandwich",
+                      760
+                  ],
+                  [
+                      "PDQ Chicken, Bacon, and Brazilian Cream Cheese",
+                      "Chicken, bacon, and Brazilian cream cheese on a cheese bread sandwich",
+                      1030
+                  ],
+                  [
+                      "PDQ Avocado, Tomato, and Fresh Mozzarella",
+                      "Avocado, tomato, and fresh mozzarella on a cheese bread sandwich",
+                      1000
+                  ],
+                  [
+                      "PDQ Fried Egg, Avocado, and Bacon",
+                      "Fried egg, avocado, and bacon on a cheese bread sandwich",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Tapioca crepes",
+              "items": [
+                  [
+                      "Frango",
+                      "Shredded chicken and Brazilian cream cheese",
+                      1790
+                  ],
+                  [
+                      "Sertaneja",
+                      "Brazilian dried beef, onions, and shredded mozzarella",
+                      1790
+                  ],
+                  [
+                      "Smoked Salmon",
+                      "Smoked salmon, Brazilian cream cheese, avocado, and pumpkin seeds",
+                      1910
+                  ],
+                  [
+                      "Caprese",
+                      "Fresh mozzarella, tomato, and basil",
+                      1550
+                  ],
+                  [
+                      "Vegan",
+                      "Eggplant sauce, tomato, arugula, and olive oil",
+                      1670
+                  ],
+                  [
+                      "Romeu & Julieta",
+                      "Sweet crepe with guava jelly and fresh mozzarella",
+                      1180
+                  ],
+                  [
+                      "Doce de Leite",
+                      "Sweet crepe with sweet milk caramel and cashew nuts",
+                      1180
+                  ]
+              ]
+          },
+          {
+              "name": "Açaí",
+              "items": [
+                  [
+                      "Original",
+                      "Their signature açaí blend with banana, strawberry, and homemade guaraná syrup, topped with banana, strawberry, granola, blueberry, and goji berry",
+                      1380,
+                      null,
+                      "$13.80–16.50"
+                  ],
+                  [
+                      "Peanut Butter",
+                      "Açaí blended with peanut butter, banana, strawberry, and homemade guaraná syrup, topped with banana, strawberry, granola, blueberry, goji berry, and condensed milk",
+                      1430,
+                      null,
+                      "$14.30–17.80"
+                  ],
+                  [
+                      "Açaí Torcida 16oz",
+                      "Their original açaí topped with granola, kiwi, mango, banana, and blueberry",
+                      1725
+                  ],
+                  [
+                      "Açaí Smoothie",
+                      "Açaí blended with banana, strawberry, whole milk, granola, and homemade guaraná syrup",
+                      1150
+                  ]
+              ]
+          },
+          {
+              "name": "Lunch",
+              "items": [
+                  [
+                      "Feijoada (Saturday only)",
+                      "Saturdays only. Black bean stew with pork, orange slices, collard greens and farofa (yucca flour with bacon and raisins)",
+                      2300
+                  ],
+                  [
+                      "Frango à Parmegiana",
+                      "Fried chicken hand-battered in their signature seasoning, topped with homemade tomato sauce and mozzarella, served with rice and French fries",
+                      2600
+                  ],
+                  [
+                      "Escondidinho de Carne Seca",
+                      "Yucca purée, shredded dried beef, and cheese, served with rice and salad",
+                      2815
+                  ],
+                  [
+                      "Escondidinho Vegano",
+                      "Yucca purée made with almond milk, mushrooms, and hearts of palm, topped with vegan cheese, served with rice and salad",
+                      2785
+                  ],
+                  [
+                      "Frango Acebolado",
+                      "Grilled chicken with onions, served with French fries, rice, beans, and salad",
+                      2270
+                  ],
+                  [
+                      "Vegetariano",
+                      "Rice, beans, steamed veggies, and side salad",
+                      1450
+                  ]
+              ]
+          },
+          {
+              "name": "Fresh juices",
+              "items": [
+                  [
+                      "Orange",
+                      "Fresh juice",
+                      875
+                  ],
+                  [
+                      "Orange and Carrot",
+                      "Fresh juice",
+                      1025
+                  ],
+                  [
+                      "Passion Fruit",
+                      "Fresh juice",
+                      940
+                  ],
+                  [
+                      "Cashew",
+                      "Fresh juice",
+                      940
+                  ],
+                  [
+                      "Pineapple and Mint",
+                      "Fresh juice",
+                      965
+                  ],
+                  [
+                      "Green Juice",
+                      "Kale, pineapple, apple, ginger, and coconut water",
+                      1075
+                  ]
+              ]
+          },
+          {
+              "name": "Sweets",
+              "items": [
+                  [
+                      "Bolo de Cenoura",
+                      "Carrot cake covered in chocolate fudge",
+                      840
+                  ],
+                  [
+                      "Pudim (Flan)",
+                      "Brazilian caramel custard",
+                      725
+                  ],
+                  [
+                      "Rosca de Coco",
+                      "Coconut bread",
+                      550
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Order & catering",
+              "links": [
+                  {
+                      "label": "Order pickup (their Square site)",
+                      "href": "https://cafedecasa.square.site/s/order"
+                  },
+                  {
+                      "label": "Catering",
+                      "href": "https://www.cafedecasa.com/catering"
+                  }
+              ]
+          },
+          {
+              "head": "Other locations",
+              "body": [
+                  "Castro: 3985 17th St, San Francisco, CA 94114 · (415) 829-7915",
+                  "Fisherman’s Wharf: 685 Beach St, San Francisco, CA 94109 · (415) 345-1055"
+              ]
+          }
+      ],
+      "siteNote": "Menu and prices from their own ordering site, checked 18 October 2026. One menu is shared by all three cafés; pick this store when you order."
+  },
+  {
+      "slug": "cafe-de-casa-sf",
+      "name": "Cafe de Casa — San Francisco",
+      "label": "Cafe de Casa",
+      "cuisine": "Brazilian café",
+      "color": "#ffffff",
+      "icon": "cafe-de-casa",
+      "site": "https://www.cafedecasa.com/stores",
+      "tagline": "Brazilian pastries, açaí, feijoada and fresh juices since 2011.",
+      "prep": 0,
+      "category": "Brazilian café",
+      "items": [],
+      "address": "3985 17th St, San Francisco, CA 94114",
+      "phone": "(415) 829-7915",
+      "hours": "Mon–Sat 8am–6pm; Sun 8am–5pm",
+      "sections": [
+          {
+              "name": "Salgados (pastries)",
+              "items": [
+                  [
+                      "Coxinha",
+                      "Their most traditional Brazilian pastry, filled with creamy chicken and cream cheese",
+                      650
+                  ],
+                  [
+                      "Pão de Queijo Grande",
+                      "Gluten-free cheese bread",
+                      495
+                  ],
+                  [
+                      "Kibe",
+                      "Meat dumpling seasoned with herbs, stuffed with beef",
+                      650
+                  ],
+                  [
+                      "Esfirra de Carne",
+                      "Bread dough made with ground beef, tomato, and olives",
+                      650
+                  ],
+                  [
+                      "Esfirra de Frango",
+                      "Bread dough made with chicken, tomato, and olives",
+                      650
+                  ],
+                  [
+                      "Americano de Presunto",
+                      "Bread dough stuffed with ham, cheese, and tomato",
+                      650
+                  ],
+                  [
+                      "Breguês",
+                      "Bread dough filled with ham, sausage, cheese, and tomato",
+                      650
+                  ],
+                  [
+                      "Disco",
+                      "Breaded beef patty",
+                      650
+                  ]
+              ]
+          },
+          {
+              "name": "Cheese bread sandwiches",
+              "items": [
+                  [
+                      "PDQ Goal Sandwich",
+                      "Their cheese bread stuffed with Calabrese sausage and melted cheese",
+                      1150
+                  ],
+                  [
+                      "PDQ Ham and Cheese",
+                      "Ham and cheese on a cheese bread sandwich",
+                      880
+                  ],
+                  [
+                      "PDQ Brazilian Cream Cheese",
+                      "Brazilian cream cheese on a cheese bread sandwich",
+                      760
+                  ],
+                  [
+                      "PDQ Chicken, Bacon, and Brazilian Cream Cheese",
+                      "Chicken, bacon, and Brazilian cream cheese on a cheese bread sandwich",
+                      1030
+                  ],
+                  [
+                      "PDQ Avocado, Tomato, and Fresh Mozzarella",
+                      "Avocado, tomato, and fresh mozzarella on a cheese bread sandwich",
+                      1000
+                  ],
+                  [
+                      "PDQ Fried Egg, Avocado, and Bacon",
+                      "Fried egg, avocado, and bacon on a cheese bread sandwich",
+                      1000
+                  ]
+              ]
+          },
+          {
+              "name": "Tapioca crepes",
+              "items": [
+                  [
+                      "Frango",
+                      "Shredded chicken and Brazilian cream cheese",
+                      1790
+                  ],
+                  [
+                      "Sertaneja",
+                      "Brazilian dried beef, onions, and shredded mozzarella",
+                      1790
+                  ],
+                  [
+                      "Smoked Salmon",
+                      "Smoked salmon, Brazilian cream cheese, avocado, and pumpkin seeds",
+                      1910
+                  ],
+                  [
+                      "Caprese",
+                      "Fresh mozzarella, tomato, and basil",
+                      1550
+                  ],
+                  [
+                      "Vegan",
+                      "Eggplant sauce, tomato, arugula, and olive oil",
+                      1670
+                  ],
+                  [
+                      "Romeu & Julieta",
+                      "Sweet crepe with guava jelly and fresh mozzarella",
+                      1180
+                  ],
+                  [
+                      "Doce de Leite",
+                      "Sweet crepe with sweet milk caramel and cashew nuts",
+                      1180
+                  ]
+              ]
+          },
+          {
+              "name": "Açaí",
+              "items": [
+                  [
+                      "Original",
+                      "Their signature açaí blend with banana, strawberry, and homemade guaraná syrup, topped with banana, strawberry, granola, blueberry, and goji berry",
+                      1380,
+                      null,
+                      "$13.80–16.50"
+                  ],
+                  [
+                      "Peanut Butter",
+                      "Açaí blended with peanut butter, banana, strawberry, and homemade guaraná syrup, topped with banana, strawberry, granola, blueberry, goji berry, and condensed milk",
+                      1430,
+                      null,
+                      "$14.30–17.80"
+                  ],
+                  [
+                      "Açaí Torcida 16oz",
+                      "Their original açaí topped with granola, kiwi, mango, banana, and blueberry",
+                      1725
+                  ],
+                  [
+                      "Açaí Smoothie",
+                      "Açaí blended with banana, strawberry, whole milk, granola, and homemade guaraná syrup",
+                      1150
+                  ]
+              ]
+          },
+          {
+              "name": "Lunch",
+              "items": [
+                  [
+                      "Feijoada (Saturday only)",
+                      "Saturdays only. Black bean stew with pork, orange slices, collard greens and farofa (yucca flour with bacon and raisins)",
+                      2300
+                  ],
+                  [
+                      "Frango à Parmegiana",
+                      "Fried chicken hand-battered in their signature seasoning, topped with homemade tomato sauce and mozzarella, served with rice and French fries",
+                      2600
+                  ],
+                  [
+                      "Escondidinho de Carne Seca",
+                      "Yucca purée, shredded dried beef, and cheese, served with rice and salad",
+                      2815
+                  ],
+                  [
+                      "Escondidinho Vegano",
+                      "Yucca purée made with almond milk, mushrooms, and hearts of palm, topped with vegan cheese, served with rice and salad",
+                      2785
+                  ],
+                  [
+                      "Frango Acebolado",
+                      "Grilled chicken with onions, served with French fries, rice, beans, and salad",
+                      2270
+                  ],
+                  [
+                      "Vegetariano",
+                      "Rice, beans, steamed veggies, and side salad",
+                      1450
+                  ]
+              ]
+          },
+          {
+              "name": "Fresh juices",
+              "items": [
+                  [
+                      "Orange",
+                      "Fresh juice",
+                      875
+                  ],
+                  [
+                      "Orange and Carrot",
+                      "Fresh juice",
+                      1025
+                  ],
+                  [
+                      "Passion Fruit",
+                      "Fresh juice",
+                      940
+                  ],
+                  [
+                      "Cashew",
+                      "Fresh juice",
+                      940
+                  ],
+                  [
+                      "Pineapple and Mint",
+                      "Fresh juice",
+                      965
+                  ],
+                  [
+                      "Green Juice",
+                      "Kale, pineapple, apple, ginger, and coconut water",
+                      1075
+                  ]
+              ]
+          },
+          {
+              "name": "Sweets",
+              "items": [
+                  [
+                      "Bolo de Cenoura",
+                      "Carrot cake covered in chocolate fudge",
+                      840
+                  ],
+                  [
+                      "Pudim (Flan)",
+                      "Brazilian caramel custard",
+                      725
+                  ],
+                  [
+                      "Rosca de Coco",
+                      "Coconut bread",
+                      550
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Order & catering",
+              "links": [
+                  {
+                      "label": "Order pickup (their Square site)",
+                      "href": "https://cafedecasa.square.site/s/order"
+                  },
+                  {
+                      "label": "Catering",
+                      "href": "https://www.cafedecasa.com/catering"
+                  }
+              ]
+          },
+          {
+              "head": "Other locations",
+              "body": [
+                  "Fisherman’s Wharf: 685 Beach St, San Francisco, CA 94109 · (415) 345-1055 · Mon–Sat 8am–6pm; Sun 8am–5pm",
+                  "South San Francisco: 1165 Airport Blvd, South San Francisco, CA 94080 · (650) 763-1025 · Mon–Sat 7am–3pm; Sun closed"
+              ]
+          }
+      ],
+      "siteNote": "Menu and prices from their own ordering site, checked 18 October 2026. One menu is shared by all three cafés; pick your store when you order."
+  },
+  {
+      "slug": "slicehouse-brentwood",
+      "name": "Slice House by Tony Gemignani — Brentwood",
+      "label": "Slice House",
+      "cuisine": "Pizza",
+      "color": "#b52c1f",
+      "icon": "slicehouse-brentwood",
+      "site": "https://slicehouse.com/locations/us/california/brentwood/2523-sand-creek-road",
+      "tagline": "New York, Detroit, Grandma and Sicilian pizza from 13-time world pizza champion Tony Gemignani.",
+      "prep": 0,
+      "category": "Pizza",
+      "items": [],
+      "address": "2523 Sand Creek Road, #120, Brentwood, CA 94513",
+      "phone": "(925) 626-8038",
+      "hours": "Sun–Thu 11am–9pm; Fri–Sat 11am–10pm",
+      "contactOnly": "New York, Detroit, Grandma and Sicilian style pizzas, antipasti, salads and desserts, for dine-in, takeout, delivery and catering. Open their menu, or order online and choose the Brentwood store.",
+      "panels": [
+          {
+              "head": "Menu & ordering",
+              "links": [
+                  {
+                      "label": "Slice House menu",
+                      "href": "https://slicehouse.com/menu"
+                  },
+                  {
+                      "label": "Order online",
+                      "href": "https://order.thanx.com/slicehouse"
+                  },
+                  {
+                      "label": "Catering",
+                      "href": "https://slicehouse.com/catering"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/slicehouse-brentwood.mp4",
+          "poster": "/clips/slicehouse-brentwood-poster.webp",
+          "href": "https://www.instagram.com/reel/DeiQQI0zMBg/",
+          "credit": "Filmed by @justmostie",
+          "platform": "Instagram",
+          "by": "justmostie"
+      }
+  },
+  {
+      "slug": "boxing-dept",
+      "name": "Boxing Dept.",
+      "label": "Boxing Dept",
+      "cuisine": "Fight gear shop & custom work",
+      "color": "#000000",
+      "icon": "boxing-dept",
+      "site": "https://boxingdeptsj.com/",
+      "tagline": "South Bay’s boxing supply: gear off the shelf or stitched to spec.",
+      "prep": 0,
+      "category": "Boxing gear",
+      "items": [],
+      "address": "470 S 10th St, San Jose, CA",
+      "phone": "(669) 309-8917",
+      "contactOnly": "Gloves, handwraps, headgear, shoes, coaching gear and merch from Rival, Casanova, Sting, Everlast, Reyes, Hayabusa and more, plus custom rings, heavy bags, fight gear and mouth guards. They have no fixed store schedule right now, so check their Instagram stories or call before you go.",
+      "panels": [
+          {
+              "head": "Custom work",
+              "body": [
+                  "Boxing rings: pro-spec, regulation or custom dimensions.",
+                  "Heavy bags: hand-stitched, filled to your weight.",
+                  "Fight gear: trunks, robes, walkout kits.",
+                  "Mouth guards: molded to your bite, printed with your logo.",
+                  "Team apparel and wholesale pricing for gyms, teams and retailers."
+              ],
+              "links": [
+                  {
+                      "label": "Book a fitting",
+                      "href": "https://boxingdeptsj.com/#book"
+                  },
+                  {
+                      "label": "Instagram (open days posted in stories)",
+                      "href": "https://www.instagram.com/boxing.dept"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/boxing-dept.mp4",
+          "poster": "/clips/boxing-dept-poster.webp",
+          "href": "https://www.instagram.com/reel/Def01WGP-1z/",
+          "credit": "Posted by @boxing.dept",
+          "platform": "Instagram"
+      }
+  },
+  {
+      "slug": "the-fat-lady",
+      "name": "The Fat Lady Bar & Restaurant",
+      "label": "The Fat Lady",
+      "cuisine": "American bar & restaurant",
+      "color": "#ffffff",
+      "icon": "the-fat-lady",
+      "site": "https://thefatladyrestaurant.com/",
+      "tagline": "A family bar and restaurant just off Jack London Square since 1970.",
+      "prep": 0,
+      "category": "Bar & restaurant",
+      "items": [],
+      "address": "201 Washington St, Oakland, CA 94607",
+      "phone": "(510) 465-4996",
+      "email": "info@thefatladyrestaurant.com",
+      "hours": "Tue–Thu 11:30am–9:30pm; Fri 11:30am–11pm; Sat 5pm–11pm; Sun–Mon closed",
+      "dogFriendly": true,
+      "orderUrl": "https://order.toasttab.com/online/fat-lady-201-washington-st",
+      "sections": [
+          {
+              "name": "Salads",
+              "items": [
+                  [
+                      "House Salad",
+                      "Spiced candied pecans, seasonal fruit & currants, vinaigrette or bleu cheese.",
+                      1500
+                  ],
+                  [
+                      "Caesar",
+                      "Lemon anchovy dressing & parmigiano.",
+                      1600
+                  ],
+                  [
+                      "Warm Spinach Salad",
+                      "Caramelized onions & fennel with bacon & roasted fingerling potatoes, topped with a poached egg and a Dijon champagne bacon vinaigrette.",
+                      2200
+                  ],
+                  [
+                      "Caprese",
+                      "Tomatoes, mozzarella, basil & aged balsamic drizzle.",
+                      2000
+                  ]
+              ]
+          },
+          {
+              "name": "Soups",
+              "items": [
+                  [
+                      "Baked French Onion",
+                      "Leeks, red & yellow onions with brandy & gratiné gruyère crouton.",
+                      1500
+                  ],
+                  [
+                      "New England Clam Chowder",
+                      "",
+                      1600
+                  ]
+              ]
+          },
+          {
+              "name": "Appetizers",
+              "items": [
+                  [
+                      "French Fried Zucchini",
+                      "Served with parmesan cheese and roquefort bleu cheese dressing.",
+                      1600
+                  ],
+                  [
+                      "Crispy Fried Calamari",
+                      "Spicy aioli & cocktail sauce.",
+                      2100
+                  ],
+                  [
+                      "Dungeness Crab Cakes",
+                      "Watercress slaw & spicy aioli.",
+                      2100
+                  ],
+                  [
+                      "Greco Lamb Chops",
+                      "Two grilled petite loin chops with feta, organic cherry tomatoes, cucumber & basil.",
+                      2400
+                  ],
+                  [
+                      "Liver Pâté",
+                      "Duck liver with ground walnuts and Rémy Martin VSOP cognac.",
+                      1400
+                  ],
+                  [
+                      "Steamed Manila Clams",
+                      "Garlic & herb broth, served with garlic toast.",
+                      2500
+                  ],
+                  [
+                      "Pancetta Wrapped Prawns",
+                      "Arugula with lemon beurre blanc.",
+                      2200
+                  ]
+              ]
+          },
+          {
+              "name": "Sandwiches",
+              "items": [
+                  [
+                      "The Fat Lady Burger",
+                      "Charcoal-broiled ½ lb house-ground chuck with crispy onion strings & choice of swiss or cheddar. Served with French fried potatoes.",
+                      2600
+                  ],
+                  [
+                      "Prime Rib French Dip",
+                      "Thinly sliced prime rib on toasted sourdough baguette with swiss cheese and au jus. Served with French fried potatoes.",
+                      3200
+                  ],
+                  [
+                      "Veggie Burger",
+                      "Charcoal-broiled with crispy onion strings & choice of swiss or cheddar. Served with French fried potatoes.",
+                      2400
+                  ]
+              ]
+          },
+          {
+              "name": "Entrées",
+              "items": [
+                  [
+                      "Chicken Mediterranean",
+                      "Pan-roasted with oregano & lemon over linguini with olive oil, garlic, grana padano & red pepper flakes.",
+                      3000
+                  ],
+                  [
+                      "Calamari Steak",
+                      "Lemon caper brown butter sauce & fresh sage.",
+                      3200
+                  ],
+                  [
+                      "Seafood Linguini",
+                      "Salmon, clams & prawns with a light cream sauce or marinara.",
+                      3900
+                  ],
+                  [
+                      "Chicken Marsala",
+                      "Chicken breast in a marsala sauce with sautéed mushrooms, mashed potatoes and vegetable of the day.",
+                      3900
+                  ],
+                  [
+                      "Cameroni a la Bolognese",
+                      "Braised ground pork, veal & beef with tomatoes, mirepoix, wild mushrooms, parsley & grana.",
+                      3000
+                  ]
+              ]
+          },
+          {
+              "name": "From the Grill",
+              "items": [
+                  [
+                      "Grilled Filet of Atlantic Salmon",
+                      "Warm orzo salad with arugula, tomatoes, olives & lemon white wine sauce.",
+                      3600
+                  ],
+                  [
+                      "Flat Iron Steak",
+                      "Fingerling potatoes, grilled asparagus & bordelaise sauce.",
+                      4200
+                  ],
+                  [
+                      "Ribeye Steak",
+                      "14 oz, in a balsamic sauce with mushrooms, onions and bacon. Served with mashed potatoes & chef's vegetable.",
+                      5900,
+                      null,
+                      "$59 / 14 oz"
+                  ],
+                  [
+                      "New York Steak & Pommes Frites",
+                      "14 oz, with green peppercorn sauce & roasted garlic bulb.",
+                      6200,
+                      null,
+                      "$62 / 14 oz"
+                  ]
+              ]
+          },
+          {
+              "name": "Sides",
+              "items": [
+                  [
+                      "Market Vegetable",
+                      "",
+                      900
+                  ],
+                  [
+                      "French Fried Potatoes",
+                      "",
+                      800
+                  ],
+                  [
+                      "Garlic Bread",
+                      "With parmesan.",
+                      800
+                  ],
+                  [
+                      "Potato Spears",
+                      "Lemon herb roasted.",
+                      800
+                  ],
+                  [
+                      "Baked Potato",
+                      "Bacon, chives, sour cream & butter.",
+                      1000
+                  ],
+                  [
+                      "Bread Plate",
+                      "Sliced sourdough baguette, crostini, butter & marinated kalamata olives.",
+                      400
+                  ]
+              ]
+          },
+          {
+              "name": "Dessert",
+              "items": [
+                  [
+                      "House-made Traditional Cheesecake",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Warm Cinnamon Bread Pudding",
+                      "Crème anglaise.",
+                      1400
+                  ],
+                  [
+                      "Tiramisu",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Espresso Parfait",
+                      "Espresso, vanilla ice cream, chocolate sauce & chips.",
+                      1400
+                  ],
+                  [
+                      "Crème Brûlée (GF)",
+                      "",
+                      1400
+                  ],
+                  [
+                      "Coconut Pecan Torte (GF)",
+                      "Topped with chantilly cream.",
+                      1400
+                  ],
+                  [
+                      "Baked Cookie Bag",
+                      "Chocolate chip or almond shortbread.",
+                      1400,
+                      null,
+                      "$14 / ¼ lb bag"
+                  ],
+                  [
+                      "Gelato & Sorbet",
+                      "Ask your server for today's selections.",
+                      1400
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Reservations & ordering",
+              "body": [
+                  "Lunch is served Tuesday–Friday, 11:30am–4pm. Prime rib is a Friday and Saturday dinner special.",
+                  "Heated covered patio; dogs welcome there. They suggest parking in the garage across Washington Street."
+              ],
+              "links": [
+                  {
+                      "label": "Reserve a table",
+                      "href": "https://thefatladyrestaurant.com/reservations"
+                  },
+                  {
+                      "label": "Order online (Toast)",
+                      "href": "https://order.toasttab.com/online/fat-lady-201-washington-st"
+                  },
+                  {
+                      "label": "Full menu, lunch and specials",
+                      "href": "https://thefatladyrestaurant.com/food-menu"
+                  },
+                  {
+                      "label": "Parties & catering",
+                      "href": "https://thefatladyrestaurant.com/party"
+                  }
+              ]
+          },
+          {
+              "head": "Since 1970",
+              "body": [
+                  "Opened on May 14, 1970 by Louis Shaterian in a building from 1862, and run by the same family for three generations. The name comes from a painting of a plump lady by Ray Smith that Louis chose to hang in the new restaurant."
+              ],
+              "links": [
+                  {
+                      "label": "Their story",
+                      "href": "https://thefatladyrestaurant.com/story"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Food prices from their own main menu, checked 18 October 2026. Cocktails, wine, beer and happy-hour drinks are left off."
+  },
+  {
+      "slug": "baekjeong-san-jose",
+      "name": "Baekjeong Korean BBQ — San Jose",
+      "label": "Baekjeong",
+      "cuisine": "Korean barbecue",
+      "color": "#000000",
+      "icon": "baekjeong-san-jose",
+      "site": "https://www.baekjeongkbbq.com/",
+      "tagline": "Korean barbecue at Westfield Valley Fair. Baekjeong is Korean for “butcher.”",
+      "prep": 0,
+      "category": "Korean barbecue",
+      "items": [],
+      "address": "2855 Stevens Creek Blvd #1808, San Jose, CA 95050",
+      "phone": "(650) 910-6328",
+      "email": "reservations.sanjose@kijung.com",
+      "hours": "Sun–Thu 11am–10pm; Fri–Sat 11am–12am",
+      "contactOnly": "USDA Prime beef and premium pork grilled at your table, served with banchan, plus stews, bibimbap, cold noodles and more. Their own menu does not list prices. Book on Resy or call the restaurant.",
+      "panels": [
+          {
+              "head": "Reservations",
+              "body": [
+                  "Book a table on Resy. For a party of 9 or more, email reservations.sanjose@kijung.com and allow 24–48 hours for a reply.",
+                  "Takeout and delivery are available through Uber Eats, Grubhub, DoorDash and Postmates."
+              ],
+              "links": [
+                  {
+                      "label": "Reserve on Resy",
+                      "href": "https://resy.com/cities/santa-clara-ca/venues/baekjeong-san-jose"
+                  }
+              ]
+          },
+          {
+              "head": "From their menu",
+              "body": [
+                  "Premium meats: cast-iron prime ribeye, prime boneless short rib, prime beef belly, prime thinly sliced brisket, prime outside skirt, prime marinated seared short rib, prime beef tongue, premium seared pork belly, premium pork jowl, marinated pork collar, and gopchang and intestine combos.",
+                  "Meals & appetizers: stone pot bibimbap, beef brisket soybean paste stew, kimchi stew, seafood soft tofu stew, cold noodles, Hodong ramyun, mountain tripe fried rice, beef tartare, seafood pancake, homemade fried dumplings, steamed egg soup and more."
+              ],
+              "links": [
+                  {
+                      "label": "Baekjeong menu",
+                      "href": "https://www.baekjeongkbbq.com/our-menu/"
+                  }
+              ]
+          },
+          {
+              "head": "Other Baekjeong locations",
+              "body": [
+                  "Buena Park, Irvine, Koreatown LA, Rowland Heights, Temple City and Torrance in Southern California; Lynnwood, WA; and New York."
+              ],
+              "links": [
+                  {
+                      "label": "All locations & hours",
+                      "href": "https://www.baekjeongkbbq.com/locations-2/"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/baekjeong-san-jose.mp4",
+          "poster": "/clips/baekjeong-san-jose-poster.webp",
+          "href": "https://www.instagram.com/reel/DemffCtgpmV/",
+          "credit": "Filmed by @jenny.home.loans",
+          "platform": "Instagram",
+          "by": "jenny.home.loans"
+      }
+  },
+  {
+      "slug": "ones-cafe-bakery",
+      "name": "Ones Cafe & Bakery",
+      "label": "Ones Cafe",
+      "cuisine": "Croissants & pastries",
+      "color": "#dda991",
+      "icon": "ones-cafe-bakery",
+      "site": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a",
+      "tagline": "Coffee, pastries & little moments of joy.",
+      "prep": 0,
+      "category": "Bakery & cafe",
+      "address": "3483 Castro Valley Blvd, Castro Valley, CA",
+      "email": "onescafe2024@gmail.com",
+      "hours": "Wed–Sun from 8am until sold out",
+      "orderUrl": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a",
+      "items": [
+          [
+              "Butter Croissant",
+              "Golden, flaky layers with a rich buttery aroma and a light, airy center.",
+              450
+          ],
+          [
+              "Chocolate Croissant",
+              "Crispy, buttery layers with rich chocolate.",
+              550
+          ],
+          [
+              "Almond Croissant",
+              "Double baked, filled with their signature almond cream and finished with sliced almonds.",
+              650
+          ],
+          [
+              "Strawberry Moon",
+              "Crispy, golden layers filled with silky strawberry cream.",
+              799
+          ],
+          [
+              "Ube Moon",
+              "A crescent croissant made with naturally sweet Hawaiian purple sweet potato, no artificial coloring.",
+              799
+          ],
+          [
+              "Pistachio Croissant",
+              "Filled with their signature pistachio cream, topped with house-made pistachio cream and crunchy pistachio bits.",
+              950
+          ],
+          [
+              "Matcha Custard Stick",
+              "Premium Japanese Uji matcha custard in a golden, crispy crust.",
+              700
+          ],
+          [
+              "Ham & Cheese",
+              "A flaky croissant filled with ham and American cheese, finished with sesame seasoning.",
+              725
+          ]
+      ],
+      "panels": [
+          {
+              "head": "Alameda location",
+              "body": [
+                  "1926 Park St, 1A, Alameda, CA 94501",
+                  "(510) 501-7946"
+              ],
+              "links": [
+                  {
+                      "label": "Order ahead from Alameda (Toast)",
+                      "href": "https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a"
+                  }
+              ]
+          },
+          {
+              "head": "Contact",
+              "body": [
+                  "Text (510) 603-8706",
+                  "onescafe2024@gmail.com"
+              ]
+          }
+      ],
+      "siteNote": "Prices from their Alameda Toast ordering page, checked 18 October 2026. Popular pastries sell out, and some were out of stock when checked.",
+      "needsSite": true
+  },
+  {
+      "slug": "la-caphe",
+      "name": "Lacàphê",
+      "label": "Lacàphê",
+      "cuisine": "Vietnamese coffee & tea",
+      "color": "#d36b84",
+      "icon": "la-caphe",
+      "site": "https://lacaphe.carrd.co/",
+      "tagline": "Happiness you can taste. Vietnamese coffee, matcha and tea, San Jose and Fremont.",
+      "prep": 0,
+      "category": "Vietnamese coffee & tea",
+      "items": [],
+      "address": "740 Story Rd Ste 5, San Jose, CA 95122",
+      "phone": "(408) 564-6237",
+      "email": "lacaphe20@gmail.com",
+      "hours": "Mon–Fri 7am–6pm; Sat–Sun 9am–7pm",
+      "sections": [
+          {
+              "name": "Signature Drinks",
+              "items": [
+                  [
+                      "Signature Saigon",
+                      "Our house blend milk coffee with cloud cream (contains nuts and dairy, no milk substitution)",
+                      725
+                  ],
+                  [
+                      "Eggspresso Hanoi",
+                      "Phin-dripped milk coffee with sweet egg cream",
+                      745
+                  ],
+                  [
+                      "Coco Freeze",
+                      "Coconut milk coffee blended with toasted coconut flakes (contains dairy, no milk substitution)",
+                      700
+                  ],
+                  [
+                      "Peach",
+                      "Black tea infused with peach, orange, lemongrass",
+                      725
+                  ],
+                  [
+                      "Lotus",
+                      "Creamy lotus milk tea with crystal boba (hot version comes with no toppings)",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Coffee",
+              "items": [
+                  [
+                      "Muối",
+                      "Salted phin-dripped milk coffee, cloud cream",
+                      700
+                  ],
+                  [
+                      "Coconut",
+                      "Phin-dripped coffee, coconut cream, grass jelly (contains dairy, no milk substitution)",
+                      700
+                  ],
+                  [
+                      "Ube",
+                      "Phin-dripped coffee, ube fresh milk (contains dairy, no milk substitution)",
+                      650
+                  ],
+                  [
+                      "Nâu",
+                      "Vietnamese coffee with condensed milk",
+                      625
+                  ],
+                  [
+                      "Bạc Xỉu",
+                      "Lighter version of Nâu, less caffeinated",
+                      625
+                  ],
+                  [
+                      "Bơ Latte",
+                      "Classic bạc xỉu coffee topped with fresh avocado paste (contains dairy, no milk substitution)",
+                      745
+                  ]
+              ]
+          },
+          {
+              "name": "Matcha Series",
+              "items": [
+                  [
+                      "Matcha Latte",
+                      "Ceremonial grade matcha, whole milk, standard sweetness recommended",
+                      700
+                  ],
+                  [
+                      "Strawberry Matcha Latte",
+                      "Ceremonial grade matcha, whole milk, strawberry bits, standard sweetness recommended",
+                      725
+                  ],
+                  [
+                      "Banana Matcha Latte",
+                      "Ceremonial grade matcha, whole milk, banana cream, standard sweetness recommended",
+                      745
+                  ],
+                  [
+                      "Ube Matcha Latte",
+                      "Ceremonial grade matcha, whole milk, ube cream, standard sweetness recommended",
+                      745
+                  ]
+              ]
+          },
+          {
+              "name": "Tea & Milk Tea",
+              "items": [
+                  [
+                      "Lychee",
+                      "Premium lotus tea, fresh lychee pulps",
+                      725
+                  ],
+                  [
+                      "Strawberry",
+                      "Full-leaf oolong tea, homemade strawberries",
+                      700
+                  ],
+                  [
+                      "Kumquat Chia",
+                      "Kumquat oolong tea, chia seeds, aloe vera",
+                      700
+                  ],
+                  [
+                      "House Milk Tea",
+                      "Oolong jasmine milk tea, jasmine oolong pearls (hot version comes with no toppings)",
+                      700
+                  ],
+                  [
+                      "Green Cloud",
+                      "Creamy Thai latte with cloud cream",
+                      800
+                  ],
+                  [
+                      "Thai Latte",
+                      "Premium green Thai tea, non-dairy creamer, condensed milk",
+                      700
+                  ],
+                  [
+                      "Thai Lime",
+                      "Premium green Thai tea, freshly squeezed lime and lemon juice",
+                      725
+                  ],
+                  [
+                      "Bơ Milk Tea",
+                      "Creamy lotus milk tea paired with fresh avocado paste",
+                      775
+                  ],
+                  [
+                      "Golden Lotus",
+                      "Full-leaf oolong tea, lotus seeds, cloud cream",
+                      700
+                  ]
+              ]
+          },
+          {
+              "name": "Ice Blended",
+              "items": [
+                  [
+                      "Cocomango",
+                      "Coconut milk blended with fresh mango bits, non-caffeinated (contains dairy, no milk substitution)",
+                      725
+                  ],
+                  [
+                      "Saigon Freeze",
+                      "Signature Saigon but blended (contains nuts and dairy)",
+                      700
+                  ],
+                  [
+                      "Kumquat Salted Plum",
+                      "Kumquat juice blended with salted plum and mint, non-caffeinated",
+                      725
+                  ],
+                  [
+                      "Coco-Bơ",
+                      "Coconut milk blended with fresh avocado paste, non-caffeinated (contains dairy, no milk substitution)",
+                      775
+                  ]
+              ]
+          },
+          {
+              "name": "Seasonal",
+              "items": [
+                  [
+                      "Thơm",
+                      "Floral jasmine tea, pineapple slices, palm seeds",
+                      795
+                  ],
+                  [
+                      "Cookie Coffee",
+                      "Phin-dripped milk coffee, cookie butter cream",
+                      725
+                  ],
+                  [
+                      "Cookie Matcha",
+                      "Ceremonial grade matcha, whole milk, cookie butter cream, standard sweetness recommended",
+                      745
+                  ]
+              ]
+          },
+          {
+              "name": "Merchandise",
+              "items": [
+                  [
+                      "Everyday Tote (Espresso Brown)",
+                      "Hello Fremont tote bag, 100% cotton, with zipper, made in Vietnam",
+                      2500
+                  ],
+                  [
+                      "Everyday Tote (Natural Cream)",
+                      "Hello Fremont tote bag, 100% cotton, with zipper, made in Vietnam",
+                      2500
+                  ]
+              ]
+          }
+      ],
+      "panels": [
+          {
+              "head": "Other location",
+              "body": [
+                  "43941 Hugo Terrace, Fremont, CA 94538",
+                  "Same hours: Mon–Fri 7am–6pm; Sat–Sun 9am–7pm"
+              ]
+          },
+          {
+              "head": "Add-ons",
+              "body": [
+                  "Chia seeds, lychee jelly, aloe vera, grass jelly, strawberry slices or mango bits $0.90; crystal boba or extra coffee shot $1.25; oat milk $0.85; lychee pulps, peach slices, lotus seeds, oolong pearls, pineapple slices & palm seeds, cloud cream, egg cream, banana cream, ube cream or cookie cream $1.50."
+              ]
+          },
+          {
+              "head": "Order online",
+              "links": [
+                  {
+                      "label": "Pickup or delivery from Lacàphê",
+                      "href": "https://lacaphe.square.site/"
+                  }
+              ]
+          }
+      ],
+      "siteNote": "Menu and prices from their own Square ordering site, checked 18 October 2026; both shops list the same prices."
+  },
+  {
+      "slug": "un-stripped-salon",
+      "name": "Un-Stripped Lash + Brow Bar",
+      "label": "Un-Stripped",
+      "cuisine": "Lash & brow salon",
+      "color": "#c3b3a4",
+      "icon": "un-stripped-salon",
+      "site": "https://un-strippedlbb.com/",
+      "tagline": "Award-winning lash and brow specialists in downtown Martinez.",
+      "prep": 0,
+      "category": "Lash & brow salon",
+      "items": [],
+      "address": "825 Main St, Martinez, CA 94553",
+      "phone": "(925) 269-9266",
+      "email": "Bryce@un-strippedlbb.com",
+      "hours": "Tue–Wed 10am–7pm; Fri 10am–7pm; Sat 10am–5pm; Sun, Mon & Thu closed",
+      "contactOnly": "Lash extensions, Korean lash lifts, PMU brows and facials, with a focus on eye hygiene, natural results and client education. Book through their own booking page for current services and prices.",
+      "siteCta": "Book an appointment",
+      "panels": [
+          {
+              "head": "Book & learn",
+              "links": [
+                  {
+                      "label": "Book lashes, brows or a facial",
+                      "href": "https://un-strippedlbb.com/pages/services-booking"
+                  },
+                  {
+                      "label": "Un-Stripped Academy (lash & brow training)",
+                      "href": "https://un-strippedlbb.com/pages/un-stripped-academy"
+                  },
+                  {
+                      "label": "Aftercare & products",
+                      "href": "https://un-strippedlbb.com/pages/shop"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/un-stripped-salon.mp4",
+          "poster": "/clips/un-stripped-salon-poster.webp",
+          "href": "https://www.instagram.com/reel/DeiVpmasbPm/",
+          "credit": "Posted by @un_stripped.academy",
+          "platform": "Instagram",
+          "by": "un_stripped.academy"
+      }
+  },
+  {
+      "slug": "cheesecake-lab-sf",
+      "name": "The Cheesecake Lab SF",
+      "label": "Cheesecake Lab",
+      "cuisine": "Cheesecake jars & desserts",
+      "color": "#7d0305",
+      "icon": "cheesecake-lab-sf",
+      "tagline": "The art of cheesecake. Authentically handcrafted desserts.",
+      "prep": 0,
+      "category": "Cheesecake jars & desserts",
+      "items": [],
+      "address": "23588 Connecticut St STE 3, Hayward, CA",
+      "contactOnly": "Handcrafted cheesecake, baklava, rice pudding and more. Find them at the Japantown Farmers Market or message them on Instagram to order.",
+      "siteCta": "Open their Instagram",
+      "panels": [
+          {
+              "head": "Find them",
+              "body": [
+                  "Japantown Farmers Market, as listed in their Instagram bio."
+              ],
+              "links": [
+                  {
+                      "label": "@thecheesecakelabsf on Instagram",
+                      "href": "https://www.instagram.com/thecheesecakelabsf/"
+                  }
+              ]
+          }
+      ],
+      "clip": {
+          "src": "/clips/cheesecake-lab-sf.mp4",
+          "poster": "/clips/cheesecake-lab-sf-poster.webp",
+          "href": "https://www.instagram.com/reel/DehwZctgf4L/",
+          "credit": "Posted by @thecheesecakelabsf",
+          "platform": "Instagram"
+      }
+  },
 ]

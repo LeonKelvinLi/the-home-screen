@@ -289,3 +289,16 @@ Worth him confirming with each. The rest are the businesses' own posts.
 | `crazy-block-cheesecakes.mp4` | Crazy Block Cheesecakes | [Ddnfmh-O9-w](https://www.instagram.com/reel/Ddnfmh-O9-w/) | 1s-25s of 77s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @shua.tangco. |
 | `lucys-crepes.mp4` | Lucy’s Crepes | [DeZwwd4IIQN](https://www.instagram.com/reel/DeZwwd4IIQN/) | 0s-8s of 8s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Posted by @lucys_crepes. |
 | `ace-king-bbq.mp4` | Ace King BBQ | [DeNbo-hynOi](https://www.instagram.com/reel/DeNbo-hynOi/) | 19s-43s of 68s | Glenn, 15–16 Oct 2026: “Clip this video plz”; Filmed by @victoria.pham17. |
+
+## Batch 53 — 18 October 2026
+
+| File | Business/page | Original reel | Excerpt | Request & credit |
+|---|---|---|---|---|
+| `hironori-santa-clara.mp4` | HiroNori Craft Ramen, Santa Clara | [DeiknWIOpzu](https://www.instagram.com/reel/DeiknWIOpzu/) | 0s-10s of 10s | Glenn, 17 Oct 2026: “Clip this video plz”; Posted by @hironoriramen_bayarea (the reel shows their San Mateo shop). |
+| `slicehouse-brentwood.mp4` | Slice House, Brentwood | [DeiQQI0zMBg](https://www.instagram.com/reel/DeiQQI0zMBg/) | 3s-27s of 42s | Glenn, 17 Oct 2026: “Clip this video plz”; Filmed by @justmostie. |
+| `boxing-dept.mp4` | Boxing Dept, San Jose | [Def01WGP-1z](https://www.instagram.com/reel/Def01WGP-1z/) | 0s-23s of 27s | Glenn, 17 Oct 2026: “Clip this video plz”; Posted by @boxing.dept. |
+| `baekjeong-san-jose.mp4` | Baekjeong, San Jose | [DemffCtgpmV](https://www.instagram.com/reel/DemffCtgpmV/) | 5s-29s of 37s | Glenn, 17 Oct 2026: “Clip this video plz”; Filmed by @jenny.home.loans. |
+| `un-stripped-salon.mp4` | Un-Stripped, Martinez | [DeiVpmasbPm](https://www.instagram.com/reel/DeiVpmasbPm/) | 0s-6s of 6s | Glenn, 17 Oct 2026: “Clip this video plz” (no link sent; their most recent reel); Posted by @un_stripped.academy. |
+| `cheesecake-lab-sf.mp4` | The Cheesecake Lab SF, Hayward | [DehwZctgf4L](https://www.instagram.com/reel/DehwZctgf4L/) | 0s-7s of 7s | Glenn, 17 Oct 2026: “Clip this video plz”; Posted by @thecheesecakelabsf. |
+
+Not used: `DelACp9h8Xf` (sent as “Foodie” with One’s Cafe) reviews Big Taco in Oakland, not One’s Cafe.

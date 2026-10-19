@@ -158,3 +158,14 @@ Original business artwork; no third-party stock or invented business logos. Isla
 | `crazy-block-cheesecakes.webp` | [Original artwork](https://7f247f9601cc5f53e2ea.cdn6.editmysite.com/uploads/b/7f247f9601cc5f53e2ea6b659aeb79280fd06a2a973c4d40bd42e2ceacba47c1/LOGO%20DBZ_1625590066.jpg?width=1200) | Their own mark, cropped/resized onto its brand ground. |
 | `benicia-grill-2.webp` | [Original artwork](https://www.instagram.com/benicia.grill/) | Their own mark, cropped/resized onto its brand ground. |
 | `parliament-brewing.webp` | [Original artwork](https://www.instagram.com/parliamentbeer/) | Their own mark, cropped/resized onto its brand ground. |
+| `hironori-santa-clara.webp` | [Original artwork](https://www.hironori.com/) | Their own mark, cropped inside its disc onto its own cream paper. |
+| `titos-barrio-chino.webp` | [Original artwork](https://www.instagram.com/titosbarriochino/) | Their own mark, cropped inside its disc onto its own black. |
+| `cafe-de-casa.webp` | [Original artwork](https://cafedecasa.square.site/) | Their own wordmark on its own white. |
+| `slicehouse-brentwood.webp` | [Original artwork](https://slicehouse.com/) | Their own mark on their own red. |
+| `boxing-dept.webp` | [Original artwork](https://www.instagram.com/boxing.dept/) | Their own mark on its own black. |
+| `the-fat-lady.webp` | [Original artwork](https://thefatladyrestaurant.com/) | Their own wordmark on its own white. |
+| `baekjeong-san-jose.webp` | [Original artwork](https://www.baekjeongkbbq.com/) | Their own mark on the black of their own site header. |
+| `ones-cafe-bakery.webp` | [Original artwork](https://order.toasttab.com/online/ones-cafe-bakery-alameda-1926-park-st-1a) | Their own profile picture, cropped inside its circle. |
+| `la-caphe.webp` | [Original artwork](https://lacaphe.carrd.co/) | Their own profile picture, cropped inside its circle. |
+| `un-stripped-salon.webp` | [Original artwork](https://www.bbb.so/Un-Stripped.salon) | Their own mark on the taupe of their own link page. |
+| `cheesecake-lab-sf.webp` | [Original artwork](https://www.instagram.com/thecheesecakelabsf/) | Their own badge on its own outer-ring red. |

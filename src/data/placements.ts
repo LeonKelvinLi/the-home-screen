@@ -1529,4 +1529,31 @@ export const CITY_PLACEMENTS: Record<string, string> = {
   'rohnert-park-goods2-0': 'b_parliamentbrewing',
   'fremont-goods2-5': 'b_lucyscrepes',
 
+  /* Batch 53, Glenn, 16–18 October 2026: "Santa Clara • Eats", "Oakland • Eats",
+     Cafe de Casa "3 locations", "Brentwood • Eats / BEASTY • Eats", "San Jose • Goods /
+     BEASTY • Goods", "Oakland • Bar/Lounge", "San Jose • Eats / BEASTY • Eats",
+     "BEASTY • Bakery / Castro Valley • Goods", "BEASTY • Cafe / Fremont • Goods / San Jose
+     • Goods", "BEASTY • Salon / Martinez • Services", "BEASTY • Sweets / Hayward • Sweets".
+     Open cuisine seats where one fits, else the city's yellow sheet; BEASTY • Eats spots
+     for pizza and Korean are held, so those two go to More eats, as does Cheesecake Lab
+     (Basq Haus holds the Cheesecakes spot). Cafe, Bakery and Salons fill by type line. */
+  'santa-clara-goods2-1': 'b_hironorisantaclara',
+  'oakland-goods2-26': 'b_titosbarriochino',
+  'south-san-francisco-goods2-0': 'b_cafedecasassf',
+  'san-francisco-goods2-42': 'b_cafedecasasf',
+  'brentwood-goods-5': 'b_slicehousebrentwood',
+  'beasty-goods2-25': 'b_slicehousebrentwood',
+  'san-jose-goods2-16': 'b_boxingdept',
+  'beasty-boutiques-1': 'b_boxingdept',
+  'beasty-bars-4': 'b_thefatlady',
+  'oakland-goods2-27': 'b_thefatlady',
+  'san-jose-goods-7': 'b_baekjeongsanjose',
+  'beasty-goods2-26': 'b_baekjeongsanjose',
+  'castro-valley-goods-12': 'b_onescafebakery',
+  'san-jose-goods2-17': 'b_lacaphe',
+  'fremont-goods2-6': 'b_lacaphe',
+  'martinez-services-0': 'b_unstrippedsalon',
+  'hayward-goods2-0': 'b_cheesecakelabsf',
+  'beasty-goods2-27': 'b_cheesecakelabsf',
+
 }
